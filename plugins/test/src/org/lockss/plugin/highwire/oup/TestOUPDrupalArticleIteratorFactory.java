@@ -105,12 +105,12 @@ public class TestOUPDrupalArticleIteratorFactory extends ArticleIteratorTestCase
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + "content/1/"), getRootUrls(artIter));
+    assertEquals(ListUtil.list(BASE_URL + "content/"), getRootUrls(artIter));
   }
   
   
   //
-  // We are set up to match any of "<base_url>content/<vol>/<iss>/<pg>.full(.pdf)"
+  // We are set up to match any of "<base_url>content/<vol>/[<iss>/]<pg>"
   //
   
   public void testUrls() throws Exception {
@@ -118,9 +118,9 @@ public class TestOUPDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1");
+    assertMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1");
+    assertMatchesRE(pat, "http://example.oxfordjournals.org/content/example/1/1");
     // but not to ...
-    assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1");
-    assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/example/1/1");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/example/1/1/1");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.full.pdf");

@@ -58,7 +58,7 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
       VOLUME_NAME_KEY, "1");
-  private String BASE_AU_URL = BASE_URL + "content/1/";
+  private String BASE_AU_URL = BASE_URL + "content/";
   private static final int DEFAULT_FILESIZE = 3000;
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   
@@ -119,9 +119,9 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     // but not to ...
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
