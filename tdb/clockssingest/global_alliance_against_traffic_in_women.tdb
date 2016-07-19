@@ -3,6 +3,7 @@
   publisher <
     name = Global Alliance Against Traffic in Women ;
     info[contract] = 2013 ;
+    info[back] = 2012 ;
     info[tester] = 8
   >
   
@@ -21,10 +22,11 @@
       param[base_url] = http://www.antitraffickingreview.org/
       param[journal_id] = atrjournal
       
-      au < finished ; finished ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 ; >
-      au < finished ; finished ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Anti-Trafficking Review Number 3 ; 3 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Anti-Trafficking Review Number 4 ; 4 ; 2016 ; >
+      au < exists ; exists ; 2012 ; Anti-Trafficking Review Number 1 ; 1 ; 2012 ; >
+      au < finished ; finished ; 2013 ; Anti-Trafficking Review Number 2 ; 2 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Anti-Trafficking Review Number 3 ; 3 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Anti-Trafficking Review Number 4-5 ; 4-5 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Anti-Trafficking Review Number 6 ; 6 ; 2016 ; >
 
     }
 
