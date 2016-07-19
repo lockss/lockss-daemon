@@ -146,8 +146,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                                                           findAndReplace,
                                                           false);    
     Reader wspaceFilter = new WhiteSpaceFilter(stringFilter);
-
-    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, findAndReplace, false));    
-
+    
+    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 }
