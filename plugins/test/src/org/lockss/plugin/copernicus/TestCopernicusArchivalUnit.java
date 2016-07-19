@@ -70,13 +70,13 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   // call on the returning strings calls it (but only on the base/home_url params)
   static final String baseRepairList[] =
     {
-        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/amt/[^/]*\\.(gif|png|css|js)$",
+        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/[^/]+/[^/]*\\.(gif|png|css|js)$",
         "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]*\\.(gif|jpe?g|png|tif?f|css|js)$",
     };
   
   static final String journalRepairList[] =
     {
-        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/amt/[^/]*\\.(gif|png|css|js)$",
+        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/[^/]+/[^/]*\\.(gif|png|css|js)$",
         "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]*\\.(gif|jpe?g|png|tif?f|css|js)$",
     };
 

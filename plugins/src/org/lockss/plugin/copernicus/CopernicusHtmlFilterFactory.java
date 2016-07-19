@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,8 +139,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         {"&nbsp;", " "}, 
         // out of sync - some versions have extraneous single spaces, 
         // so ADD a space between tags then use whitespace filter
-        //{"> <", "><"},
-        {"><", "> <"},
+        {"<", " <"},
  
     };
     Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
