@@ -4267,7 +4267,7 @@
         param[base_url] = http://dli.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 >
+        au < manifest ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 >
 
     }
 
