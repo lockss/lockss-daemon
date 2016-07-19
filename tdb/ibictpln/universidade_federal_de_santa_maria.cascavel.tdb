@@ -314,10 +314,10 @@
     param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = revislav
 
-    au < exists ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 ; >
-    au < exists ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 ; >
-    au < exists ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 ; >
-    au < exists ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 ; >
+    au < doNotProcess ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 ; >
+    au < doNotProcess ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 ; >
+    au < doNotProcess ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 ; >
+    au < doNotProcess ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 ; >
     au < superseded ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 [superseded] ; 2012 ; >
     au < superseded ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 [superseded] ; 2013 ; >
     au < superseded ; 2014 ; 2014 ; Revista Digital do LAV Volume 2014 [superseded] ; 2014 ; >
@@ -406,19 +406,19 @@
 
       au < superseded ; 1996 ; 1 ; Cadernos de Comunicação Volume 1996 [superseded] ; 1996 ; >
       au < superseded ; 1997 ; 2 ; Cadernos de Comunicação Volume 1997 [superseded] ; 1997 ; >
-      au < superseded ; 1998 ; 3 ; Cadernos de Comunicação Volume 1998 ; 1998 ; no content >
+      au < superseded ; 1998 ; 3 ; Cadernos de Comunicação Volume 1998 [superseded] ; 1998 ; no content >
       au < superseded ; 1999 ; 4 ; Cadernos de Comunicação Volume 1999 [superseded] ; 1999 ; >
-      au < superseded ; 2000 ; 5 ; Cadernos de Comunicação Volume 2000 ; 2000 ; no content >
+      au < superseded ; 2000 ; 5 ; Cadernos de Comunicação Volume 2000 [superseded] ; 2000 ; no content >
       au < superseded ; 2001 ; 6 ; Cadernos de Comunicação Volume 2001 [superseded] ; 2001 ; >
       au < superseded ; 2002 ; 7 ; Cadernos de Comunicação Volume 2002 [superseded] ; 2002 ; >
       au < superseded ; 2003 ; 8 ; Cadernos de Comunicação Volume 2003 [superseded] ; 2003 ; >
       au < superseded ; 2004 ; 9 ; Cadernos de Comunicação Volume 2004 [superseded] ; 2004 ; >
       au < superseded ; 2005 ; 10 ; Cadernos de Comunicação Volume 2005 [superseded] ; 2005 ; >
-      au < superseded ; 2006 ; 11 ; Cadernos de Comunicação Volume 2006 ; 2006 ; no content >
-      au < superseded ; 2007 ; 12 ; Cadernos de Comunicação Volume 2007 ; 2007 ; no content >
-      au < superseded ; 2008 ; 13 ; Cadernos de Comunicação Volume 2008 ; 2008 ; no content >
-      au < superseded ; 2009 ; 14 ; Cadernos de Comunicação Volume 2009 ; 2009 ; no content >
-      au < superseded ; 2010 ; 15 ; Cadernos de Comunicação Volume 2010 ; 2010 ; no content >
+      au < superseded ; 2006 ; 11 ; Cadernos de Comunicação Volume 2006 [superseded] ; 2006 ; no content >
+      au < superseded ; 2007 ; 12 ; Cadernos de Comunicação Volume 2007 [superseded] ; 2007 ; no content >
+      au < superseded ; 2008 ; 13 ; Cadernos de Comunicação Volume 2008 [superseded] ; 2008 ; no content >
+      au < superseded ; 2009 ; 14 ; Cadernos de Comunicação Volume 2009 [superseded] ; 2009 ; no content >
+      au < superseded ; 2010 ; 15 ; Cadernos de Comunicação Volume 2010 [superseded] ; 2010 ; no content >
       au < superseded ; 2011 ; 16 ; Cadernos de Comunicação Volume 2011 [superseded] ; 2011 ; >
       au < superseded ; 2012 ; 17 ; Cadernos de Comunicação Volume 2012 [superseded] ; 2012 ; >
       au < superseded ; 2013 ; 18 ; Cadernos de Comunicação Volume 2013 [superseded] ; 2013 ; >
@@ -675,9 +675,9 @@
       au < superseded ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 [superseded] ; 2006 ; >
       au < superseded ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 [superseded] ; 2007 ; >
       au < superseded ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 [superseded] ; 2008 ; >
-      au < exists ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 ; >
+      au < doNotProcess ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 ; >
+      au < doNotProcess ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 ; >
+      au < doNotProcess ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 ; >
       au < superseded ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 [superseded] ; 2012 ; >
       au < doNotProcess ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 ; >
       au < doNotProcess ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 ; >
@@ -731,14 +731,14 @@
       au < superseded ; 2001 ; 18 ; Revista Kinesis Volume 2001 [superseded] ; 2001 ; >
       au < superseded ; 2002 ; 19 ; Revista Kinesis Volume 2002 [superseded] ; 2002 ; >
       au < superseded ; 2003 ; 20 ; Revista Kinesis Volume 2003 [superseded] ; 2003 ; >
-      au < exists ; 2004 ; 21 ; Revista Kinesis Volume 2004 ; 2004 ; >
-      au < exists ; 2005 ; 22 ; Revista Kinesis Volume 2005 ; 2005 ; >
-      au < exists ; 2006 ; 23 ; Revista Kinesis Volume 2006 ; 2006 ; >
-      au < exists ; 2007 ; 24 ; Revista Kinesis Volume 2007 ; 2007 ; >
-      au < exists ; 2008 ; 25 ; Revista Kinesis Volume 2008 ; 2008 ; >
-      au < exists ; 2009 ; 26 ; Revista Kinesis Volume 2009 ; 2009 ; >
-      au < exists ; 2010 ; 27 ; Revista Kinesis Volume 2010 ; 2010 ; >
-      au < exists ; 2011 ; 28 ; Revista Kinesis Volume 2011 ; 2011 ; >
+      au < doNotProcess ; 2004 ; 21 ; Revista Kinesis Volume 2004 ; 2004 ; >
+      au < doNotProcess ; 2005 ; 22 ; Revista Kinesis Volume 2005 ; 2005 ; >
+      au < doNotProcess ; 2006 ; 23 ; Revista Kinesis Volume 2006 ; 2006 ; >
+      au < doNotProcess ; 2007 ; 24 ; Revista Kinesis Volume 2007 ; 2007 ; >
+      au < doNotProcess ; 2008 ; 25 ; Revista Kinesis Volume 2008 ; 2008 ; >
+      au < doNotProcess ; 2009 ; 26 ; Revista Kinesis Volume 2009 ; 2009 ; >
+      au < doNotProcess ; 2010 ; 27 ; Revista Kinesis Volume 2010 ; 2010 ; >
+      au < doNotProcess ; 2011 ; 28 ; Revista Kinesis Volume 2011 ; 2011 ; >
       au < superseded ; 2012 ; 29 ; Revista Kinesis Volume 2012 [superseded] ; 2012 ; >
       au < superseded ; 2013 ; 30 ; Revista Kinesis Volume 2013 [superseded] ; 2013 ; >
       au < superseded ; 2014 ; 31 ; Revista Kinesis Volume 2014 [superseded] ; 2014 ; >
