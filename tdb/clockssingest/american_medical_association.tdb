@@ -12,6 +12,22 @@
   {
 
     title <
+      name = JAMA Cardiology ;
+      issn = 2380-6583 ;
+      eissn = 2380-6591 ;
+      issnl = 2380-6583
+    >
+
+    param[base_url] = http://cardiology.jamanetwork.com/
+    param[resource_id] = 184
+    
+    au < exists ; exists ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; >
+  
+  }
+
+  {
+
+    title <
       name = JAMA Dermatology ;
       issn = 0003-987X ;
       eissn = 0096-5359 ;
