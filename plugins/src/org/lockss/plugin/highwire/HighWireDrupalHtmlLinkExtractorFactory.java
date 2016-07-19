@@ -97,8 +97,9 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                                     String volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
                                     if ((volume != null) && !volume.isEmpty()) {
                                       Matcher mat = TOC_PATTERN.matcher(url);
-                                      if (mat.find() && mat.group(1) != volume) {
-                                        log.warning("Not extracting TOC url that does not match AU volume: " + url);
+                                      if (mat.find() && !volume.contentEquals(mat.group(1))) {
+                                        log.warning("Not extracting TOC url that does not match AU volume: "
+                                            + volume + "  " + url);
                                         return;
                                       }
                                     } else {

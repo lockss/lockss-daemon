@@ -66,6 +66,8 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "breadcrumb"), // uncomment if needed
     // Do not crawl issue links (http://pediatrics.aappublications.org/content/137/2/e20154272 link to off-AU article with issue link
     HtmlNodeFilters.tagWithAttributeRegex("a", "class", "issue-link"),
+    // Commentary links found inside
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relationship-manager"),
   };
   
   @Override

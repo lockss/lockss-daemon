@@ -47,12 +47,11 @@ public class HighWireDrupalArticleIteratorFactory
   
   private static final Logger log = Logger.getLogger(HighWireDrupalArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE =
-    "\"%scontent/%s/\", base_url, volume_name";
+  protected static final String ROOT_TEMPLATE = "\"%scontent/\", base_url";
   
-  // <base_url>/content/<v>/<i>/<pg>
+  // <base_url>/content/<v>/[<i>/]<pg> required vol, optional issue, required page, then EOL
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/([^/]+/)([^./?&]+([.]\\d{1,4})?)$\", base_url, volume_name";
+    "\"^%scontent/([^/]+/)([^/]+/)?([^./?&]+([.]\\d{1,4})?)$\", base_url, volume_name";
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
@@ -64,6 +63,8 @@ public class HighWireDrupalArticleIteratorFactory
   // http://bjo.bmj.com/content/96/1/1.extract
   // http://apt.rcpsych.org/content/21/2/74.1
   // http://msb.embopress.org/content/1/1/2005.0001
+  // http://essays.biochemistry.org/content/59/1
+  // http://essays.biochemistry.org/content/59/1.full.pdf
   
   // these kinds of urls are not used as part of the AI
   // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalized)
