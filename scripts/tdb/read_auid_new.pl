@@ -165,6 +165,7 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "AAPDrupalPlugin" ||
            $plugin eq "APSDrupalPlugin" ||
+           $plugin eq "ARFDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
            $plugin eq "BMJDrupalPlugin" ||
            $plugin eq "ERSDrupalPlugin" ||
@@ -174,6 +175,7 @@ while (my $line = <>) {
            $plugin eq "JBJSDrupalPlugin" ||
            $plugin eq "OUPDrupalPlugin" ||
            $plugin eq "PortlandPressDrupalPlugin" ||
+           $plugin eq "RCGPDrupalPlugin" ||
            $plugin eq "RCPsychDrupalPlugin" ||
            $plugin eq "RSPDrupalPlugin" ||
            $plugin eq "HWDrupalPlugin") {
