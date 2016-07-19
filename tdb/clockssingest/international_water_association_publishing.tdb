@@ -67,8 +67,8 @@
     au < doNotProcess ; exists ; 2012 ; Hydrology Research Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Hydrology Research Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Hydrology Research Volume 45 ; 45 ; >
-    au < ready ; exists ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
-    au < ready ; exists ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
 
   }
 
@@ -88,7 +88,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water and Climate Change Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Climate Change Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 ; >
-    au < ready ; exists ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
 
   }
 
@@ -115,7 +115,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water and Health Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Health Volume 12 ; 12 ; >
     au < crawling ; exists ; 2015 ; Journal of Water and Health Volume 13 ; 13 ; >
-    au < ready ; exists ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; >
 
   }
 
@@ -153,7 +153,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 ; >
-    au < ready ; exists ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 ; >
 
   }
 
@@ -216,7 +216,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Hydroinformatics Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hydroinformatics Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 ; >
-    au < ready ; exists ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 ; >
 
   }
   
@@ -240,7 +240,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Water Practice and Technology Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Practice and Technology Volume 9 ; 9 ; >
     au < crawling ; exists ; 2015 ; Water Practice and Technology Volume 10 ; 10 ; >
-    au < ready ; exists ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; >
 
   }
   
@@ -267,7 +267,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Water Policy Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Policy Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; Water Policy Volume 17 ; 17 ; >
-    au < ready ; exists ; 2016 ; Water Policy Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2016 ; Water Policy Volume 18 ; 18 ; >
 
   }
   
@@ -286,7 +286,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 ; >
     au < crawling ; exists ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; >
-    au < ready ; exists ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; >
 
   }
   
@@ -359,7 +359,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Water Science and Technology Volume 70 ; 70 ; >
     au < crawling ; exists ; 2015 ; Water Science and Technology Volume 71 ; 71 ; >
     au < crawling ; exists ; 2015 ; Water Science and Technology Volume 72 ; 72 ; >
-    au < ready ; exists ; 2016 ; Water Science and Technology Volume 73 ; 73 ; >
+    au < crawling ; exists ; 2016 ; Water Science and Technology Volume 73 ; 73 ; >
     au < exists ; exists ; 2016 ; Water Science and Technology Volume 74 ; 74 ; >
 
   }
