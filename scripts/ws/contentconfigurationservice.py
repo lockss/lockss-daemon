@@ -350,6 +350,10 @@ class _ContentConfigurationServiceOptions(object):
     group.add_option('--process-pool', action='store_true', help='use a process pool')
     group.add_option('--thread-pool', action='store_true', help='use a thread pool (default)')
     parser.add_option_group(group)
+    # Other options
+    group = OptionGroup(parser, 'Other options')
+    group.add_option('--batch-size', metavar='SIZE', type='int', default=100, help='size of AUID batches (default: %default)')
+    parser.add_option_group(group)
     return parser
 
   def __init__(self, parser, opts, args):
@@ -401,11 +405,12 @@ class _ContentConfigurationServiceOptions(object):
       self.verbose = opts.verbose
     elif opts.verbose:
       parser.error('--verbose can only be specified with --text-output')
-    # pool_class/pool_size
+    # pool_class/pool_size/batch_size
     if opts.process_pool and opts.thread_pool:
       parser.error('--process-pool and --thread-pool are mutually exclusive')
     self.pool_class = ProcessPool if opts.process_pool else ThreadPool
     self.pool_size = opts.pool_size or len(self.hosts)
+    self.batch_size = opts.batch_size
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
@@ -423,8 +428,8 @@ def _do_au_operation_job(options_host):
   options, host = options_host
   data = dict()
   errors = 0
-  for i in xrange(0, len(options.auids), 100):
-    result = options.au_operation(host, options.auth, options.auids[i:i+100])
+  for i in xrange(0, len(options.auids), options.batch_size):
+    result = options.au_operation(host, options.auth, options.auids[i:i+options.batch_size])
     for r in result:
       if r.IsSuccess: msg = None
       else:
