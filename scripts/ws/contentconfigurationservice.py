@@ -33,104 +33,16 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 
-__tutorial__ = '''\
-INTRODUCTION
-
-This tool can be used to add, delete, activate and deactivate AUs on one or more
-LOCKSS hosts. Invoking the tool consists of four parts:
-
-- Specify the target hosts. Each occurrence of --host=HOST adds the host:port
-pair HOST to the list of target hosts, and each occurrence of --hosts=HFILE adds
-the host:port pairs in the file HFILE to the list of target hosts. HFILE can
-contain comments, which begin at the character '#' and extend to the end of the
-line. At least one target host is required. You will be prompted for a username
-and password unless you pass them via --username and --password.
-
-- Specify the target AUIDs. Likewise, each occurrence of --auid=AUID adds the
-given AUID to the list of target AUIDs, and each occurrence of --auids=AFILE
-adds the AUIDs in the file AFILE to the list of target AUIDs. AFILE can also
-contain comments. At least one target AUID is required.
-
-- Specify the desired operation. This is done by using exactly one of --add-aus,
---delete-aus, --deactivate-aus or --reactivate-aus.
-
-- Optionally specify output options (see below).
-
-OUTPUT
-
-This tool can produce two styles of output: text output with --text-output and
-tabular output with --table-output. By default, --text-output is in effect,
-unless --table-output is explicitly specified.
-
-When --text-output is in effect, unsuccessful operations are output one per line
-on the console, host by host. You can additionally specify --verbose, in which
-case all successful operations are also displayed host by host. The --verbose
-option is only valid if --text-output is in effect.
-
-When --table-output is in effect, a tab-separated table of unsuccessful
-operations is output to the console, one row per target AU with at least one
-unsuccessful operation and one column per target host.
-
-In either output mode, the order of AUs listed (for each host in text mode, for
-the whole table in tabular mode) is dictated by --sort-by-auid (AUID) or
---sort-by-name (AU name). By default, --sort-by-name is in effect, unless
---sort-by-auid is explicitly specified. Likewise, the way AUs are displayed is
-governed by --list-by-auid (show the AUID), --list-by-name (show the AU name),
-or --list-by-both (show the name and the AUID separated by a tab). By default,
---list-by-both is in effect unless another option in this category is specified.
-The listing by name is currently just a string comparison, not a clever library
-sort like in the LOCKSS daemon.
-
-EXAMPLES
-
-$ scripts/ws/contentconfigurationservice --host=foo.university.edu:8081 --auid=aaaaa1  --add-aus
-
-Adds the AUID aaaaa1 to foo.university.edu:8081. Produces text output (the
-default) only if the operation does not succeed.
-
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus
-
-Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. Produces text output (the default) only if some operations do
-not succeed. AUs are sorted by AU name (the default) and displayed as a
-name-AUID pair (the default).
-
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --verbose
-
-Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. Produces text output (the default), both of successful
-operations and unsuccessful operations. AUs are sorted by AU name (the default)
-and displayed as a name-AUID pair (the default).
-
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --list-by-name
-
-Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. Produces text output (the default) only if some operations do
-not succeed. AUs are sorted by AU name (the default) and displayed by AU name.
-
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --sort-by-auid --list-by-auid
-
-Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. Produces text output (the default) only if some operations do
-not succeed. AUs are sorted by AUID and displayed by AUID.
-
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --table-output
-
-Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. If any operation does not succeed, prints a table of
-unsuccessful operations where each row is an AU and each column is a host. The
-rows are sorted by AU name (the default) and displayed as a name-AUID pair (the
-default).'''
-
-__version__ = '0.2.0'
+__version__ = '0.2.2'
 
 import getpass
 import itertools
+from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
 from optparse import OptionGroup, OptionParser
 import os.path
 import sys
-from threading import Thread
+from threading import Lock, Thread
 
 import ContentConfigurationServiceImplService_client
 from wsutil import zsiauth
@@ -301,6 +213,95 @@ def _ws_port(host, auth, tracefile=None):
 # Command line tool
 #
 
+__tutorial__ = '''\
+INTRODUCTION
+
+This tool can be used to add, delete, activate and deactivate AUs on one or more
+LOCKSS hosts. Invoking the tool consists of four parts:
+
+- Specify the target hosts. Each occurrence of --host=HOST adds the host:port
+pair HOST to the list of target hosts, and each occurrence of --hosts=HFILE adds
+the host:port pairs in the file HFILE to the list of target hosts. HFILE can
+contain comments, which begin at the character '#' and extend to the end of the
+line. At least one target host is required. You will be prompted for a username
+and password unless you pass them via --username and --password.
+
+- Specify the target AUIDs. Likewise, each occurrence of --auid=AUID adds the
+given AUID to the list of target AUIDs, and each occurrence of --auids=AFILE
+adds the AUIDs in the file AFILE to the list of target AUIDs. AFILE can also
+contain comments. At least one target AUID is required.
+
+- Specify the desired operation. This is done by using exactly one of --add-aus,
+--delete-aus, --deactivate-aus or --reactivate-aus.
+
+- Optionally specify output options (see below).
+
+OUTPUT
+
+This tool can produce two styles of output: text output with --text-output and
+tabular output with --table-output. By default, --text-output is in effect,
+unless --table-output is explicitly specified.
+
+When --text-output is in effect, unsuccessful operations are output one per line
+on the console, host by host. You can additionally specify --verbose, in which
+case all successful operations are also displayed host by host. The --verbose
+option is only valid if --text-output is in effect.
+
+When --table-output is in effect, a tab-separated table of unsuccessful
+operations is output to the console, one row per target AU with at least one
+unsuccessful operation and one column per target host.
+
+In either output mode, the order of AUs listed (for each host in text mode, for
+the whole table in tabular mode) is dictated by --sort-by-auid (AUID) or
+--sort-by-name (AU name). By default, --sort-by-name is in effect, unless
+--sort-by-auid is explicitly specified. Likewise, the way AUs are displayed is
+governed by --list-by-auid (show the AUID), --list-by-name (show the AU name),
+or --list-by-both (show the name and the AUID separated by a tab). By default,
+--list-by-both is in effect unless another option in this category is specified.
+The listing by name is currently just a string comparison, not a clever library
+sort like in the LOCKSS daemon.
+
+EXAMPLES
+
+$ scripts/ws/contentconfigurationservice --host=foo.university.edu:8081 --auid=aaaaa1  --add-aus
+
+Adds the AUID aaaaa1 to foo.university.edu:8081. Produces text output (the
+default) only if the operation does not succeed.
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AU name (the default) and displayed as a
+name-AUID pair (the default).
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --verbose
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default), both of successful
+operations and unsuccessful operations. AUs are sorted by AU name (the default)
+and displayed as a name-AUID pair (the default).
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --list-by-name
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AU name (the default) and displayed by AU name.
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --sort-by-auid --list-by-auid
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AUID and displayed by AUID.
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --table-output
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. If any operation does not succeed, prints a table of
+unsuccessful operations where each row is an AU and each column is a host. The
+rows are sorted by AU name (the default) and displayed as a name-AUID pair (the
+default).'''
+
 class _ContentConfigurationServiceOptions(object):
   '''An internal object to encapsulate options suitable for this tool.'''
 
@@ -341,11 +342,13 @@ class _ContentConfigurationServiceOptions(object):
     group.add_option('--sort-by-name', action='store_true', help='sort output by AU name (default)')
     group.add_option('--table-output', action='store_true', help='produce tabular output')
     group.add_option('--text-output', action='store_true', help='produce text output (default)')
-    group.add_option('--verbose', action='store_true', default=False, help='make --text-output verbose (default: False)')
+    group.add_option('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %default)')
     parser.add_option_group(group)
-    # Other options
-    group = OptionGroup(parser, 'Other options')
-    group.add_option('--threads', type='int', help='max parallel jobs allowed (default: no limit)')
+    # Job pool
+    group = OptionGroup(parser, 'Job pool')
+    group.add_option('--pool-size', metavar='SIZE', type='int', default=0, help='size of the job pool, 0 for unlimited (default: %default)')
+    group.add_option('--process-pool', action='store_true', help='use a process pool')
+    group.add_option('--thread-pool', action='store_true', help='use a thread pool (default)')
     parser.add_option_group(group)
     return parser
 
@@ -360,6 +363,7 @@ class _ContentConfigurationServiceOptions(object):
     the parser
     '''
     super(_ContentConfigurationServiceOptions, self).__init__()
+    self.errors = 0
     # Special options
     if opts.copyright: print __copyright__
     if opts.license: print __license__
@@ -380,68 +384,81 @@ class _ContentConfigurationServiceOptions(object):
     self.auids = opts.auid[:]
     for f in opts.auids: self.auids.extend(_file_lines(f))
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
-    # add_aus/delete_aus
-    self.add_aus = opts.add_aus
-    self.deactivate_aus = opts.deactivate_aus
-    self.delete_aus = opts.delete_aus
-    self.reactivate_aus = opts.reactivate_aus
+    # au_operation
+    if opts.add_aus: self.au_operation = add_aus_by_id_list
+    elif opts.deactivate_aus: self.au_operation = deactivate_aus_by_id_list
+    elif opts.delete_aus: self.au_operation = delete_aus_by_id_list
+    else: self.au_operation = reactivate_aus_by_id_list
     # table_output/text_output/keysort/keydisplay/verbose
     self.table_output = opts.table_output
     self.text_output = not self.table_output
-    if opts.sort_by_auid: self.keysort = lambda r: (r.Id, r.Name)
-    else: self.keysort = lambda r: (r.Name, r.Id) # default is --sort-by-name
-    if opts.list_by_auid: self.keydisplay = lambda r: (r.Id,) if r else ['AUID']
-    elif opts.list_by_name: self.keydisplay = lambda r: (r.Name,) if r else ['AU name']
-    else: self.keydisplay = lambda r: (r.Name, r.Id) if r else ['AU name', 'AUID'] # default is --list-by-both
+    if opts.sort_by_auid: self.keysort = _sort_by_auid
+    else: self.keysort = _sort_by_name # default is --sort-by-name
+    if opts.list_by_auid: self.keydisplay = _list_by_auid
+    elif opts.list_by_name: self.keydisplay = _list_by_name
+    else: self.keydisplay = _list_by_both # default is --list-by-both
     if self.text_output:
       self.verbose = opts.verbose
     elif opts.verbose:
       parser.error('--verbose can only be specified with --text-output')
-    # threads
-    self.threads = opts.threads or len(self.hosts)
-    # errors
-    self.errors = 0
+    # pool_class/pool_size
+    if opts.process_pool and opts.thread_pool:
+      parser.error('--process-pool and --thread-pool are mutually exclusive')
+    self.pool_class = ProcessPool if opts.process_pool else ThreadPool
+    self.pool_size = opts.pool_size or len(self.hosts)
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
     self.auth = zsiauth(u, p)
 
-def _do_operation(options):
-  '''Performs the requested operation.'''
-  if options.add_aus: f_operation = add_aus_by_id_list
-  elif options.deactivate_aus: f_operation = deactivate_aus_by_id_list
-  elif options.delete_aus: f_operation = delete_aus_by_id_list
-  elif options.reactivate_aus: f_operation = reactivate_aus_by_id_list
-  else: sys.exit('internal error') # should never happen
+# This is to allow pickling, so the process pool works, but this isn't great
+# Have the sort and list params be enums and have keysort and keydisplay be methods?
+def _sort_by_name(t): return t
+def _sort_by_auid(t): return (t[1], t[0])
+def _list_by_auid(t): return (t[1],) if t else ['AUID']
+def _list_by_name(t): return (t[0],) if t else ['AU name']
+def _list_by_both(t): return t if t else ['AU name', 'AUID']
+
+def _do_au_operation_job(options_host):
+  options, host = options_host
   data = dict()
-  for host, result in ThreadPool(options.threads).imap_unordered( \
-      lambda _host: (_host, f_operation(_host, options.auth, options.auids)), \
-      options.hosts):
-    okay, errors, msgs = list(), list(), list()
-    for r in ret:
-      if r.IsSuccess:
-        if options.text_output and options.verbose: okay.append(r)
+  errors = 0
+  for i in xrange(0, len(options.auids), 100):
+    result = options.au_operation(host, options.auth, options.auids[i:i+100])
+    for r in result:
+      if r.IsSuccess: msg = None
       else:
-        options.errors = options.errors + 1
         msg = (r.Message or '').partition(':')[0]
-        if options.text_output:
-          errors.append(r)
-          msgs.append(msg)
-        else:
-          data[(options.keydisplay(r), (host,))] = msg
-    if options.text_output:
-      if options.verbose and len(okay) > 0:
-        _output_record(options, ['Successful on %s:' % (host,)])
-        for r in sorted(okay, key=options.keysort):
-          _output_record(options, options.keydisplay(r))
-        _output_record(options, [])
-      if len(errors) > 0:
+        errors = errors + 1
+      data[((r.Name, r.Id), (host,))] = msg
+  return (host, data, errors)
+
+def _do_au_operation(options):
+  data = dict()
+  pool = options.pool_class(options.pool_size)
+  jobs = [(options, _host) for _host in options.hosts]
+  for host, result, errors in pool.imap_unordered(_do_au_operation_job, jobs):
+    data.update(result)
+    options.errors = options.errors + errors
+  if options.text_output:
+    for host in sorted(options.hosts):
+      hostresults = [(k[0], v) for k, v in data.iteritems() if k[1] == host]
+      if options.verbose:
+        successful = filter(lambda x: x[1] is None, hostresults)
+        if len(successful) > 0:
+          _output_record(options, ['Successful on %s:' % (host,)])
+          for x in sorted(successful, key=options.keysort):
+            _output_record(options, options.keydisplay(x[0]))
+          _output_record(options, [])
+      unsuccessful = filter(lambda x: x[1] is not None, hostresults)
+      if len(unsuccessful) > 0:
         _output_record(options, ['Unsuccessful on %s:' % (host,)])
-        for r, msg in zip(sorted(errors, key=options.keysort), msgs):
-          _output_record(options, options.keydisplay(r) + (msg,))
+        for x in sorted(unsuccessful, key=options.keysort):
+          _output_record(options, options.keydisplay(x[0]) + (x[1],))
         _output_record(options, [])
-  if options.table_output:
-    _output_table(options, data, options.keydisplay(None), [options.hosts])
+  else:
+    display = dict([((options.keydisplay(k[0]), k[1]), v) for k, v in data.iteritems()])
+    _output_table(options, display, options.keydisplay(None), [options.hosts])
 
 # Last modified 2015-08-05
 def _output_record(options, lst):
@@ -472,7 +489,7 @@ def _main():
   (opts, args) = parser.parse_args()
   options = _ContentConfigurationServiceOptions(parser, opts, args)
   # Dispatch
-  t = Thread(target=_do_operation, args=(options,))
+  t = Thread(target=_do_au_operation, args=(options,))
   t.daemon = True
   t.start()
   while True:
