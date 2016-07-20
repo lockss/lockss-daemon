@@ -40520,10 +40520,10 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2011 ; South East Asia Research Volume 19 ; 19 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
-      au < doesNotExist ; doesNotExist ; 2014 ; South East Asia Research Volume 22 ; 22 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
+      au < exists ; exists ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
+      au < exists ; exists ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
+      au < exists ; exists ; 2014 ; South East Asia Research Volume 22 ; 22 ; >
+      au < exists ; exists ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2016 ; South East Asia Research Volume 24 ; 24 ; >
 
   }
@@ -42867,18 +42867,18 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 ; >
-      au < doesNotExist ; doesNotExist ; 2004 ; Tourism Economics Volume 10 ; 10 ; >
-      au < doesNotExist ; doesNotExist ; 2005 ; Tourism Economics Volume 11 ; 11 ; >
-      au < doesNotExist ; doesNotExist ; 2006 ; Tourism Economics Volume 12 ; 12 ; >
-      au < doesNotExist ; doesNotExist ; 2007 ; Tourism Economics Volume 13 ; 13 ; >
-      au < doesNotExist ; doesNotExist ; 2008 ; Tourism Economics Volume 14 ; 14 ; >
-      au < doesNotExist ; doesNotExist ; 2009 ; Tourism Economics Volume 15 ; 15 ; >
-      au < doesNotExist ; doesNotExist ; 2010 ; Tourism Economics Volume 16 ; 16 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; Tourism Economics Volume 17 ; 17 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; Tourism Economics Volume 18 ; 18 ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; Tourism Economics Volume 19 ; 19 ; >
-      au < doesNotExist ; doesNotExist ; 2014 ; Tourism Economics Volume 20 ; 20 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; Tourism Economics Volume 21 ; 21 ; >
+      au < exists ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 ; >
+      au < exists ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 ; >
+      au < exists ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 ; >
+      au < exists ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 ; >
+      au < exists ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; >
+      au < exists ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; >
+      au < exists ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; >
+      au < exists ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 ; >
+      au < exists ; exists ; 2012 ; Tourism Economics Volume 18 ; 18 ; >
+      au < exists ; exists ; 2013 ; Tourism Economics Volume 19 ; 19 ; >
+      au < exists ; exists ; 2014 ; Tourism Economics Volume 20 ; 20 ; >
+      au < exists ; exists ; 2015 ; Tourism Economics Volume 21 ; 21 ; >
       au < exists ; exists ; 2016 ; Tourism Economics Volume 22 ; 22 ; >
 
   }
