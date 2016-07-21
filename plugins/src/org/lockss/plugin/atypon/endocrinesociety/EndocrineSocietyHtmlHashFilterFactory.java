@@ -61,13 +61,6 @@ public class EndocrineSocietyHtmlHashFilterFactory
         // nav journal - current past issues, about, authors
         // http://press.endocrine.org/doi/full/10.1210/en.2012-2147
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "nav-journal"),
-        // toc - breadcrumbs
-        // <div class="widget literatumBreadcrumbs
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumBreadcrumbs"),
-        // from issue toc or article: previous issue / next issue
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumBookIssueNavigation"),
         // toc - free.gif image
         HtmlNodeFilters.tagWithAttributeRegex("img",  "src", "free.gif"),
         // toc - access icon container
@@ -101,13 +94,9 @@ public class EndocrineSocietyHtmlHashFilterFactory
         // <div class="articleMetaDrop publicationContentDropZone" data-pb-dropzone="articleMetaDropZone">
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "articleMetaDrop"),                                              
-        // right column of an article - all except Download Citations
+        // right column of an article - hash doesn't care about download link
         // note: institution banner is inside sidebar-right
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex( 
-                "div", "class", "literatumRightSidebar"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?"))                       
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumRightSidebar"),
     };
     
     // super.createFilteredInputStream adds filters to the baseAtyponFilters

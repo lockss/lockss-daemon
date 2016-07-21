@@ -51,6 +51,9 @@ import org.lockss.util.ReaderInputStream;
 /* 
  * Don't extend BaseAtyponHtmlHashFilterFactory because we need to do more 
  * extensive filtering with spaces, etc.
+ * 
+ * TODO: re-analyze. AMetSoc has changed skins and may now be a candidate
+ * for inheritance
  */
 public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
@@ -78,6 +81,28 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
         HtmlNodeFilters.tagWithTextRegex("h4","^(\\s|(&nbsp;))*$"),
         HtmlNodeFilters.tagWithTextRegex("h5","^(\\s|(&nbsp;))*$"),
         HtmlNodeFilters.tagWithTextRegex("h6","^(\\s|(&nbsp;))*$"),
+        
+        //From CRAWL filter
+        // toc and article page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+        //next-prev on article page
+        HtmlNodeFilters.tagWithAttribute("div", "class", "navigationLinkHolder"),
+        //stuff in the right column - might also be filtered as literatumAd
+        // but for unmarked stuff (Featured Collections)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rightColumnModule"),
+        //TOC - tab for special collections
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "topicalIndex"),
+        // we don't need to leave in the showCitFormats part of this for hashing
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
+        //From base parent CRAWL filter
+        // sections that may show up with this skin                                          
+        // http://www.birpublications.org/toc/bjr/88/1052
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
     };
 
     // super will add in the base nodeset and also do span-id transform

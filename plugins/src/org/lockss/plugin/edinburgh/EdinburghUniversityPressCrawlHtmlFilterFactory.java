@@ -63,8 +63,8 @@ public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHt
         HtmlNodeFilters.tagWithAttribute("div", "id", "mainBreadCrumb"),
         
         //NEW FILTERING to handle new skin - all both TOC and article text
-        // navigation
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBrreadcrumbs"),
+        // navigation - in parent
+        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
         // header section of page
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-header"),
         // tabbed info section below content
@@ -73,8 +73,8 @@ public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHt
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-footer"),
         // right column - containing most read, etc
         HtmlNodeFilters.tagWithAttribute("div", "class", "col-sm-1-3 right-column"),
-        // TOC tabbed section on TOC for listing all issues in journal
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+        // TOC tabbed section on TOC for listing all issues in journal - in parent
+        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
         
     };
     return super.createFilteredInputStream(au, in, encoding, edFilters);

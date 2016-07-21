@@ -39,7 +39,6 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-// Do not filter out Download Citation
 
 public class EndocrineSocietyHtmlCrawlFilterFactory 
   extends BaseAtyponHtmlCrawlFilterFactory {
@@ -51,6 +50,11 @@ public class EndocrineSocietyHtmlCrawlFilterFactory
     //     http://press.endocrine.org/doi/full/10.1210/en.2012-1768
     //     http://press.endocrine.org/doi/full/10.1210/en.2012-1820
     HtmlNodeFilters.tagWithAttribute("a", "class", "ext-link"),
+    // Do not filter out Download Citation
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumRightSidebar"),
+          HtmlNodeFilters.tagWithAttributeRegex(
+                 "a", "href", "/action/showCitFormats\\?")),
          
   };
 

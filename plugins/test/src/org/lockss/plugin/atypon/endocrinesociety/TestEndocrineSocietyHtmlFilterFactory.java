@@ -225,23 +225,29 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</div></div></div></div></div></div>" +
           "</div>";
   
+  private static final String rightColumnCrawlFiltered =
+      // right column of an article - all except Download Citations
+          "<div class=\"block\">" +
+              "<div class=\"widget literatumRightSidebar none right-sidebar " +
+              "widget-none\" id=\"pageRightSidebar\">" +
+              "<div class=\"sidebar sidebar-right\">" +
+              "<div data-pb-dropzone=\"main\">" +
+              "<div class=\"widget-box\" id=\"yyy\">" +
+              "<div class=\"body-box \">" +
+              "<div class=\"artTools\">" +
+              "<ul class=\"linkList\">" +
+              "<li class=\"downloadCitations\">" +
+              "<a href=\"/action/showCitFormats?doi=11.1111%2Fen.2012-1111\">" +
+              "Download Citation</a>" +
+              "</li>" +
+              "</ul>" +
+              "</div></div></div></div></div></div>" +
+              "</div>";      
+  
+  
   // 'id' attributes also removed
-  private static final String rightColumnFiltered = 
+  private static final String rightColumnHashFiltered = 
       " <div class=\"block\">" +
-      " <div class=\"widget literatumRightSidebar none right-sidebar " +
-      "widget-none\" >" +
-      " <div class=\"sidebar sidebar-right\">" +
-      " <div data-pb-dropzone=\"main\">" +
-      " <div class=\"widget-box\" >" +
-      " <div class=\"body-box \">" +
-      " <div class=\"artTools\">" +
-      " <ul class=\"linkList\">" +
-      " <li class=\"downloadCitations\">" +
-      " <a href=\"/action/showCitFormats?doi=11.1111%2Fen.2012-1111\">" +
-      "Download Citation </a>" +
-      " </li>" +
-      " </ul>" +
-      " </div> </div> </div> </div> </div> </div>" +
       " </div>";
   
   // related content near Erratum
@@ -470,6 +476,8 @@ public class TestEndocrineSocietyHtmlFilterFactory
       variantFact = new EndocrineSocietyHtmlCrawlFilterFactory();
       doFilterTest(esau, variantFact, withLiteratumBookIssueNavigation, 
           filteredCrawlStr);
+      doFilterTest(esau, variantFact, withRightColumnExceptDownloadCitation, 
+          rightColumnCrawlFiltered);
       doFilterTest(esau, variantFact, withRelatedLayer, filteredCrawlStr);      
       doFilterTest(esau, variantFact, withRelatedContent, filteredCrawlStr);      
       doFilterTest(esau, variantFact, withExtLink, filteredCrawlStr);      
@@ -483,9 +491,9 @@ public class TestEndocrineSocietyHtmlFilterFactory
       doFilterTest(esau, variantFact, withPageHeader, filteredStr);
       doFilterTest(esau, variantFact, withNavJournal, filteredStr);
       doFilterTest(esau, variantFact, withAccessIconContainer, filteredStr);
-      doFilterTest(esau, variantFact, withGutterless, filteredStr);
       doFilterTest(esau, variantFact, withRightColumnExceptDownloadCitation, 
-                   rightColumnFiltered);
+          rightColumnHashFiltered);
+      doFilterTest(esau, variantFact, withGutterless, filteredStr);
       doFilterTest(esau, variantFact, withPageFooter, filteredStr);
       doFilterTest(esau, variantFact, withLiteratumBreadcrumbs, filteredStr);
       doFilterTest(esau, variantFact, withLiteratumBookIssueNavigation, 

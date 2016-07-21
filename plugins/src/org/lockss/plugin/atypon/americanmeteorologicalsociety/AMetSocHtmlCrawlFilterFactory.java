@@ -45,6 +45,16 @@ public class AMetSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFact
 
     // section with in-line references to commented on article, or article that made comments
     HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_author-notes"),
+    // toc and article page
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+    //next-prev on article page
+    HtmlNodeFilters.tagWithAttribute("div", "class", "navigationLinkHolder"),
+    //stuff in the right column - might also be filtered as literatumAd
+    // but for unmarked stuff (Featured Collections)
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rightColumnModule"),
+    //TOC - tab for special collections
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "topicalIndex"),
   };
 
 

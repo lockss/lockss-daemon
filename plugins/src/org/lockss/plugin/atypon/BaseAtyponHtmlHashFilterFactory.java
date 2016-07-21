@@ -93,7 +93,21 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     
     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-
+    
+    // sections that may show up with this skin - from CRAWL filter   
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
+    // http://www.birpublications.org/toc/bjr/88/1052
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
+    // additional just for hashing - may or may not be necessary
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
+    //http://press.endocrine.org/doi/full/10.1210/en.2013-1159
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "doubleClickAdWidget"),    
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumInstitutionBanner"),    
+    
     // crossref to site library
     HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
     // stylesheets

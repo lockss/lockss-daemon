@@ -63,15 +63,17 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     // toc, abs, full, text and ref right column - most read 
-    // http://www.birpublications.org/toc/bjr/88/1052
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumMostReadWidget"),    
-
     // toc - right column, current issue or book landing page
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumBookIssueNavigation"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumMostCitedWidget"),                                          
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
+
+    // sections that may show up with this skin                                          
+    // http://www.birpublications.org/toc/bjr/88/1052
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
+   
     
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
@@ -109,19 +111,14 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //maney, future-science (also in child...will remove later)
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
 
-    // abs, ref, suppl - all right column except Citation Mgr
+    // abs, ref, suppl - all tools except Citation Mgr
     // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
+    // this may not be in the right column...
     HtmlNodeFilters.allExceptSubtree(
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
           HtmlNodeFilters.tagWithAttributeRegex(
                  "a", "href", "/action/showCitFormats\\?")),
     
-    // toc, abs, ref - right column most read/most cited
-    // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
-    // too restrictive - it relates to any tabbed content, which could be main
-    // see toc on edinburgh
-    //HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-                 
                  
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
