@@ -47,6 +47,11 @@ public class LiverpoolHtmlCrawlFilterFactory
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
     // toc, abs, ref - breadcrumbs
+
+    // toc, abs, ref - right column most read/most cited
+    // too restrictive - it relates to any tabbed content, which could be main
+    // TODO - look for a better solution
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),    
                                              
     // all has been moved up to parent
   };

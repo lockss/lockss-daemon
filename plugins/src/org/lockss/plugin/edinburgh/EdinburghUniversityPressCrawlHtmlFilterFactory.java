@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,11 +35,15 @@ package org.lockss.plugin.edinburgh;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
+
+/*
+ *  Edinburgh changed skins in 2016. Leaving in the old filtering so long as it doesn't
+ *  break anything. Adding in new filtering to cover new content layout
+ */
 
 public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
@@ -57,6 +61,20 @@ public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHt
         HtmlNodeFilters.tagWithAttribute("div", "class", "moduleToolBarPaging"),
         //filter out breadcrumb back to TOC in case of overcrawl
         HtmlNodeFilters.tagWithAttribute("div", "id", "mainBreadCrumb"),
+        
+        //NEW FILTERING to handle new skin - all both TOC and article text
+        // navigation
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBrreadcrumbs"),
+        // header section of page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-header"),
+        // tabbed info section below content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Publication_info_tabs"),
+        // footer section of page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-footer"),
+        // right column - containing most read, etc
+        HtmlNodeFilters.tagWithAttribute("div", "class", "col-sm-1-3 right-column"),
+        // TOC tabbed section on TOC for listing all issues in journal
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
         
     };
     return super.createFilteredInputStream(au, in, encoding, edFilters);

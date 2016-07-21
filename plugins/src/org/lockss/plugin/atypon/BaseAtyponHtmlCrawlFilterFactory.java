@@ -118,7 +118,11 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     
     // toc, abs, ref - right column most read/most cited
     // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+    // too restrictive - it relates to any tabbed content, which could be main
+    // see toc on edinburgh
+    //HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+                 
+                 
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),

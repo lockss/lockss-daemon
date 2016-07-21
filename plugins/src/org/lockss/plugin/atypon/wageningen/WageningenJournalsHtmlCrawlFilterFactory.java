@@ -48,6 +48,11 @@ public class WageningenJournalsHtmlCrawlFilterFactory
     // previous/next article - <td class="journalNavRightTd">
     // toc, abs, ref - breadcrumbs
     
+    // toc, abs, ref - right column most read/most cited
+    // too restrictive - it relates to any tabbed content, which could be main
+    // TODO - look for a better solution
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),        
+    
     // everything is currently moved up to the parent class
 
   };

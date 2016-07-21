@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,11 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
+/*
+ *  Edinburgh changed skins in 2016. Leaving in the old filtering so long as it doesn't
+ *  break anything. Adding in new filtering to cover new content layout
+ */
+
 public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
   @Override
@@ -67,8 +72,25 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         HtmlNodeFilters.tagWithAttribute("div", "class", "panel_top"),
         // removes <a href="/action/addCitationAlert?doi=10.3366%2Fjobs.2011.0020">Track Citations</a>
         //     and <a href="#" class="citationsLink">Track Citations</a>
-        HtmlNodeFilters.tagWithText("a", "Track Citations")
-
+        HtmlNodeFilters.tagWithText("a", "Track Citations"),
+        
+        
+        //NEW FILTERING to handle new skin - all both TOC and article text
+        // also in crawl filter
+        // navigation
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBrreadcrumbs"),
+        // header section of page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-header"),
+        // tabbed info section below content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Publication_info_tabs"),
+        // footer section of page
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-footer"),
+        // right column - containing most read, etc
+        HtmlNodeFilters.tagWithAttribute("div", "class", "col-sm-1-3 right-column"),
+        // TOC tabbed section on TOC for listing all issues in journal
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+        
+        // ONLY in hash filter
 
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters

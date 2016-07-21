@@ -8,6 +8,12 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
+/*
+ *  Edinburgh changed skins in 2016. Leaving in the old filtering so long as it doesn't
+ *  break anything. Adding in new filtering to cover new content layout
+ *  TODO: update the test once the filtering is stable
+ */
+
 public class TestEdinburghHashHtmlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 

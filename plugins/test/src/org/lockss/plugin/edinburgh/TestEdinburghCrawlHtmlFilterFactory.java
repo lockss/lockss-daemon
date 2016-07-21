@@ -4,6 +4,12 @@
 package org.lockss.plugin.edinburgh;
 
 import java.io.*;
+
+/*
+ *  Edinburgh changed skins in 2016. Leaving in the old filtering so long as it doesn't
+ *  break anything. Adding in new filtering to cover new content layout
+ *  TODO: update this test once the filtering is stable
+ */
 import org.lockss.util.*;
 import org.lockss.test.*;
 

@@ -62,6 +62,11 @@ public class PracticalActionJournalsHtmlCrawlFilterFactory
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
         HtmlNodeFilters.tagWithAttributeRegex(
             "img", "alt", "Publication Cover")),
+            
+    // toc, abs, ref - right column most read/most cited
+    // too restrictive - it relates to any tabbed content, which could be main
+    // TODO - look for a better solution
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),                
 
 
   };

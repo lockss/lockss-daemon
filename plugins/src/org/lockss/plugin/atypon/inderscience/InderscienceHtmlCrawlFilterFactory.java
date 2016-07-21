@@ -47,6 +47,12 @@ public class InderscienceHtmlCrawlFilterFactory
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
     // toc, full, abs, ref - breadcrumbs
+    // toc, abs, ref - right column most read/most cited
+
+    // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
+    // can't be in parent - all tabs would get affected, even in content
+    // TODO - look at alternative
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),    
 
 
     // all has been moved up to parent..
