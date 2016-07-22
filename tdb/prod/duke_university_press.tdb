@@ -553,6 +553,8 @@
         au < down ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
         au < down ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
 
+        au < manifest ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 [Project MUSE] ; 36 >
+
       }
 
     }
@@ -621,6 +623,14 @@
 
       {
 
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2011 ; Cultural Politics Volume 7 [Project MUSE] ; 7 >
+
+      }
+
+      {
+
         param[base_url] = http://muse.jhu.edu/
 
         au < down ; 2012 ; Cultural Politics Volume 8 [Project MUSE] ; 8 >
@@ -634,6 +644,8 @@
 
         au < down ; 2014 ; Cultural Politics Volume 10 [Project MUSE] ; 10 >
         au < down ; 2015 ; Cultural Politics Volume 11 [Project MUSE] ; 11 >
+
+        au < manifest ; 2016 ; Cultural Politics Volume 12 [Project MUSE] ; 12 >
 
       }
 
