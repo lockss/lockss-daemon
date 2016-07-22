@@ -3,7 +3,7 @@
  */
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,14 +65,15 @@ public class IgiGlobalSubstancePredicateFactory implements SubstancePredicateFac
     /*
       http://www.igi-global.com/gateway/article/full-text-html/76877 (substance
       http://www.igi-global.com/gateway/article/full-text-pdf/100008  (non-sub
+      http://www.igi-global.com/gateway/chapter/full-text-pdf/50008  (non-sub
       http://www.igi-global.com/gateway/article/73784        (non-sub
       http://www.igi-global.com/pdf.aspx?tid=73783&ptid=71236&ctid=4&t=Engaging+Remote+Employees\
 %3A+The+Moderating+Role+of+%E2%80%9CRemote%E2%80%9D+Status+in+Determining+Employee+Information+Security+Policy+Awareness
      */
     final static Pattern PDF_PATTERN = Pattern.compile("/pdf\\.aspx", Pattern.CASE_INSENSITIVE);
-    final static Pattern PDF_LANDING_PATTERN = Pattern.compile("/gateway/article/full-text-pdf/[0-9]+$", Pattern.CASE_INSENSITIVE);
-    final static Pattern FULL_PATTERN = Pattern.compile("/gateway/article/full-text-html/[0-9]+$", Pattern.CASE_INSENSITIVE);
-    final static Pattern ABSTRACT_ONLY_PATTERN = Pattern.compile("/gateway/article/[0-9]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern PDF_LANDING_PATTERN = Pattern.compile("/gateway/(article|chapter)/full-text-pdf/[0-9]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern FULL_PATTERN = Pattern.compile("/gateway/(article|chapter)/full-text-html/[0-9]+$", Pattern.CASE_INSENSITIVE);
+    final static Pattern ABSTRACT_ONLY_PATTERN = Pattern.compile("/gateway/((article|chapter)|chapter)/[0-9]+$", Pattern.CASE_INSENSITIVE);
     
     
     public IgiGlobalSubstancePredicate (ArchivalUnit au) {

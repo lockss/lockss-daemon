@@ -65,6 +65,7 @@ public class IgiGlobalContentValidator {
     public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
       switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
       case "text/html":
+      case "text/*":
         return new HtmlContentValidator();
       default:
         return null;
