@@ -180,6 +180,8 @@ public class TestClockssELifeDrupalPlugin extends LockssTestCase {
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/2013.html", false, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/elife_2013.html", true, au);
+    // crawl_rule allows following
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2013_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // toc page for an issue, there is no issue
     shouldCacheTest(ROOT_URL + "content/1", false, au);

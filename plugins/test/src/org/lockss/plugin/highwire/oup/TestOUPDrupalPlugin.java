@@ -159,7 +159,7 @@ http://jinsectscience.oxfordjournals.org/highwire/article_citation_preview/61258
     // Test for pages that should get crawled or not
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_303_manifest.html", true, au);
-    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_303_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_303_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // vol and issue
     shouldCacheTest(ROOT_URL + "content/303", false, au);

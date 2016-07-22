@@ -160,6 +160,7 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_303_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_303_manifest.html", true, au);
+// FIXME    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_123_manifest.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // vol and issue
     shouldCacheTest(ROOT_URL + "content/303", false, au);
@@ -185,7 +186,7 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "highwire/article_citation_preview/19403", false, au);
     
     shouldCacheTest(ROOT_URL + "node/34", false, au);
-// XXX   shouldCacheTest(ROOT_URL + "content/by/year", false, au);
+    shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     shouldCacheTest(ROOT_URL + "highwire/powerpoint/2311", false, au);
     shouldCacheTest(ROOT_URL + "content/early/2012/11/09/ex.00163.2012", false, au);
     shouldCacheTest(ROOT_URL + "lookup/external-ref?link_type=GEN", false, au);
