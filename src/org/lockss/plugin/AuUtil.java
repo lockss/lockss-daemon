@@ -39,7 +39,6 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.CuResourceHandler;
-import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.definable.*;
@@ -524,16 +523,8 @@ public class AuUtil {
   public static AuProxyInfo getAuProxyInfo(String auProxySpec,
                                            Configuration config) {
     AuProxyInfo global = new AuProxyInfo();
-    if (config.getBoolean(BaseCrawler.PARAM_PROXY_ENABLED,
-			  BaseCrawler.DEFAULT_PROXY_ENABLED)) {
-      global.host = config.get(BaseCrawler.PARAM_PROXY_HOST);
-      global.port = config.getInt(BaseCrawler.PARAM_PROXY_PORT,
-				  BaseCrawler.DEFAULT_PROXY_PORT);
-      if (StringUtil.isNullString(global.host) || global.port <= 0) {
-	global.host = null;
-	global.port = 0;
-      }
-    }
+    global.host = null;
+    global.port = 0;
 
     if (!StringUtil.isNullString(auProxySpec)) {
       AuProxyInfo res = new AuProxyInfo();

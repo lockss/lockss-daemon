@@ -149,13 +149,6 @@ public interface NodeState {
   public CachedUrlSet getCachedUrlSet();
 
   /**
-   * Returns the current crawl state.  If the node has been deleted, it will
-   * have a {@link CrawlState} with type 'NODE_DELETED'.
-   * @return a {@link CrawlState}
-   */
-  public CrawlState getCrawlState();
-
-  /**
    * Returns an {@link Iterator} of the polls active on this node, if any.
    * @return an {@link Iterator} of {@link PollState}s
    */

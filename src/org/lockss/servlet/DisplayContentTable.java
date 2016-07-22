@@ -1,10 +1,6 @@
 /*
- * $Id DisplayContentTable.java 2012/12/03 14:52:00 rwincewicz $
- */
 
-/*
-
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +30,6 @@ package org.lockss.servlet;
 import java.io.*;
 import java.util.*;
 import java.util.List;
-
-import org.lockss.config.TdbUtil;
-import org.lockss.daemon.Crawler;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.util.Logger;
@@ -254,14 +247,8 @@ public class DisplayContentTable {
             return true;
         } else {
             AuState auState = AuUtil.getAuState(au);
-            if ("neverCrawled".equals(filter)) {
-                return auState.getLastCrawlResult() == Crawler.STATUS_QUEUED || auState.getLastCrawlResult() == -1;
-            } else if ("noSubstance".equals(filter)) {
+            if ("noSubstance".equals(filter)) {
                 return auState.hasNoSubstance();
-            } else if ("noPermission".equals(filter)) {
-                return auState.getLastCrawlResult() == Crawler.STATUS_NO_PUB_PERMISSION;
-            } else if ("serverDown".equals(filter)) {
-                return auState.getLastCrawlResult() == Crawler.STATUS_FETCH_ERROR;
             } else {
                 return true;
             }

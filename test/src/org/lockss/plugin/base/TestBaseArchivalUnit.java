@@ -51,7 +51,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   PluginManager pluginMgr;
   private TestableBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
-  private CrawlRule crawlRule = null;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -73,17 +72,12 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   TestableBaseArchivalUnit makeMbau(String name, String baseUrl, String startUrl)
       throws LockssRegexpException {
     List rules = new LinkedList();
-    // exclude anything which doesn't start with our base url
-    rules.add(new CrawlRules.RE("^" + baseUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    // include the start url
-    rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
-    CrawlRule rule = new CrawlRules.FirstMatch(rules);
     String pkey = PluginManager.pluginKeyFromId(MY_PLUG_ID);
     pluginMgr.ensurePluginLoaded(pkey);
     mplug = (MyMockPlugin)pluginMgr.getPlugin(pkey);
 
     TestableBaseArchivalUnit au =
-      new TestableBaseArchivalUnit(mplug, name, rule, startUrl);
+      new TestableBaseArchivalUnit(mplug, name, startUrl);
     MockNodeManager nm = new MockNodeManager();
     nm.setAuState(new MockAuState(au));
     getMockLockssDaemon().setNodeManager(nm, au);
@@ -665,8 +659,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals(10001, mbau.newContentCrawlIntv);
     assertEquals(AU_NAME, mbau.getName());
     assertEquals(ListUtil.list(START_URL), mbau.getStartUrls());
-    assertTrue(mbau.getCrawlWindow()
-	       instanceof MyMockCrawlWindow);
     assertEquals("1/10s", mbau.findFetchRateLimiter().getRate());
   }
 
@@ -681,8 +673,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals(BaseArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
 		 mbau.newContentCrawlIntv);
     assertEquals(ListUtil.list(START_URL), mbau.getStartUrls());
-    assertTrue(mbau.getCrawlWindow()
-	       instanceof MyMockCrawlWindow);
   }
 
   // Check that setBaseAuParams() doesn't overwrite values already set in
@@ -705,8 +695,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau.setConfiguration(config2);
     assertEquals(55555, mbau.findFetchRateLimiter().getInterval());
     assertEquals(67890, mbau.newContentCrawlIntv);
-    assertTrue(mbau.getCrawlWindow()
-	       instanceof MyMockCrawlWindow);
   }
 
   public void testShouldCallTopLevelPoll() throws IOException {
@@ -958,31 +946,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
   }
-  static class MyMockCrawlWindow implements CrawlWindow {
-    /**
-     * canCrawl
-     *
-     * @return boolean
-     */
-    public boolean canCrawl() {
-      return false;
-    }
-
-    /**
-     * canCrawl
-     *
-     * @param date Date
-     * @return boolean
-     */
-    public boolean canCrawl(Date date) {
-      return false;
-    }
-
-  }
 
   static class TestableBaseArchivalUnit extends BaseArchivalUnit {
     private String m_name = "MockBaseArchivalUnit";
-    private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
     private List permissionPages = null;
@@ -990,12 +956,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     private String mimeTypeCalledWith = null;
 
-    TestableBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules,
-			   String startUrl) {
+    TestableBaseArchivalUnit(Plugin plugin, String name, String startUrl) {
       super(plugin);
       m_name = name;
       m_startUrl = startUrl;
-      m_rules = rules;
    }
 
     public TestableBaseArchivalUnit(Plugin myPlugin) {
@@ -1018,13 +982,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       return mimeTypeCalledWith;
     }
 
-    protected CrawlRule makeRule() throws ConfigurationException {
-      if(m_rules == null) {
-        return new MockCrawlRule();
-      }
-      return m_rules;
-    }
-
     protected String makeStartUrl() {
       return m_startUrl;
     }
@@ -1038,10 +995,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     protected void setPermissionPages(List val) {
       permissionPages = val;
-    }
-
-    protected CrawlWindow makeCrawlWindow() {
-      return new MyMockCrawlWindow();
     }
 
     void doSetAuParams(boolean ena) {

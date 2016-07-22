@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +32,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ExploderHelper;
-import org.lockss.plugin.definable.*;
 
 /** Utilities to wrap plugin classes in error-catching proxy classes */
 public class WrapperUtil {
@@ -76,14 +71,10 @@ public class WrapperUtil {
 			   new LoginPageCheckerWrapper.Factory());
     registerWrapperFactory(PermissionCheckerFactory.class,
 			   new PermissionCheckerFactoryWrapper.Factory());
-    registerWrapperFactory(DefinableArchivalUnit.ConfigurableCrawlWindow.class,
-			   new ConfigurableCrawlWindowWrapper.Factory());
     registerWrapperFactory(org.lockss.util.urlconn.CacheResultHandler.class,
 			   new CacheResultHandlerWrapper.Factory());
     registerWrapperFactory(ExploderHelper.class,
 			   new ExploderHelperWrapper.Factory());
-    registerWrapperFactory(CrawlUrlComparatorFactory.class,
-			   new CrawlUrlComparatorFactoryWrapper.Factory());
     registerWrapperFactory(SubstancePredicateFactory.class,
 			   new SubstancePredicateFactoryWrapper.Factory());
     registerWrapperFactory(AuParamFunctor.class,

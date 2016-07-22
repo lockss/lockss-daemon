@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +31,6 @@ package org.lockss.plugin;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.test.*;
 
 public class TestCuContentIterator extends LockssTestCase {
@@ -53,7 +47,6 @@ public class TestCuContentIterator extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     // Need CrawlManager to check global exclusions
-    getMockLockssDaemon().getCrawlManager();
     mau = new MockArchivalUnit(new MockPlugin(getMockLockssDaemon()));
   }
 
@@ -97,8 +90,6 @@ public class TestCuContentIterator extends LockssTestCase {
     assertEquals(ListUtil.list(cu1, cu4),
 		 ListUtil.fromIterator(CuIterator.forCus(cus)));
 
-    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
-				  "file4\\.html");
     CuIterator cui = CuIterator.forCus(cus);
     assertEquals(ListUtil.list(cu1), ListUtil.fromIterator(cui));
     assertEquals(2, cui.getExcludedCount());

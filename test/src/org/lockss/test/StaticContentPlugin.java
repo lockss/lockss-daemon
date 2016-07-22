@@ -157,10 +157,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       return "[sau: " + cuMap + "]";
     }
 
-    protected CrawlRule makeRule() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
     /**
      * loadDefiningConfig
      *

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,11 +29,9 @@ package org.lockss.plugin.exploded;
 
 import java.util.*;
 import java.net.*;
-
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
 
@@ -121,25 +115,6 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
 
   protected List<String> getPermissionPages() {
     return new ArrayList<String>(permissionPageUrls);
-  }
-
-  protected CrawlRule makeRules() {
-    return new ExplodedCrawlRule();
-  }
-
-  private class ExplodedCrawlRule implements CrawlRule {
-    protected ExplodedCrawlRule() {
-    }
-
-    public int match(String url) {
-      for (String stem : explodedUrlStems) {
-	logger.debug3("match(" + url + ") stem " + stem);
-	if (url.startsWith(stem)) {
-	  return INCLUDE;
-	}
-      }
-      return EXCLUDE;
-    }
   }
 
   /**

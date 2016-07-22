@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -35,7 +31,6 @@ package org.lockss.plugin.definable;
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
@@ -1077,31 +1072,6 @@ public class DefinablePlugin extends BasePlugin {
     }
     
     return urlConsumerFactory;
-  }
-
-  protected CrawlUrlComparatorFactory crawlUrlComparatorFactory = null;
-
-  protected CrawlUrlComparatorFactory getCrawlUrlComparatorFactory() {
-    if (crawlUrlComparatorFactory == null) {
-      String factClass =
-	definitionMap.getString(DefinablePlugin.KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY,
-				null);
-      if (factClass != null) {
-	crawlUrlComparatorFactory =
-	  (CrawlUrlComparatorFactory)newAuxClass(factClass,
-						 CrawlUrlComparatorFactory.class);
-      }
-    }
-    return crawlUrlComparatorFactory;
-  }
-
-  protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
-      throws PluginException.LinkageError {
-    CrawlUrlComparatorFactory fact = getCrawlUrlComparatorFactory();
-    if (fact == null) {
-      return null;
-    }
-    return fact.createCrawlUrlComparator(au);
   }
 
   protected FilterRule constructFilterRule(String contentType) {

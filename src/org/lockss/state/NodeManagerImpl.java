@@ -38,7 +38,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.config.Configuration;
-import org.lockss.crawler.*;
 import org.lockss.alert.*;
 import java.util.ArrayList;
 
@@ -253,10 +252,6 @@ public class NodeManagerImpl
     if (result == Crawler.STATUS_SUCCESSFUL) {
       // checkpoint the top-level nodestate
       NodeState topState = getNodeState(managedAu.getAuCachedUrlSet());
-      CrawlState crawl = topState.getCrawlState();
-      crawl.status = CrawlState.FINISHED;
-      crawl.type = CrawlState.NEW_CONTENT_CRAWL;
-      crawl.startTime = getAuState().getLastCrawlTime();
       historyRepo.storeNodeState(topState);
     }
   }
@@ -349,8 +344,6 @@ public class NodeManagerImpl
     damagedNodes.addToRepair(cus, urls);
 
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls, lock);
-    getDaemon().getCrawlManager().startRepair(managedAu, urls,
-        new ContentRepairCallback(), cookie, lock);
   }
 
   /**
@@ -362,7 +355,6 @@ public class NodeManagerImpl
     LockssRepository repository = getDaemon().getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
     NodeState extraState = getNodeState(cus);
-    extraState.getCrawlState().type = CrawlState.NODE_DELETED;
   }
 
   /**
@@ -555,60 +547,6 @@ public class NodeManagerImpl
           NodeState node = getNodeState(cus);
           boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
           markNodesForRepair(localCol, null, cus, isNamePoll, cusLock);
-        }
-      }
-    }
-  }
-
-  /**
-   * Callback for a content repair crawl.
-   */
-  class ContentRepairCallback implements CrawlManager.Callback {
-    /**
-     * @param success whether the repair was successful or not
-     * @param cookie object used by callback to designate which repair
-     * attempt this is
-     */
-    public void signalCrawlAttemptCompleted(boolean success,
-					    Object cookie,
-					    CrawlerStatus status) {
-      PollCookie pollCookie = (PollCookie)cookie;
-      CachedUrlSet cus = pollCookie.cus;
-
-      //XXX should check success (or get passed in fetched url list)
-
-      Iterator urlIter = pollCookie.urlsToRepair.iterator();
-      while (urlIter.hasNext()) {
-        String url = (String)urlIter.next();
-        logger.debug2("Removing '"+url+"' from repair list...");
-        damagedNodes.removeFromRepair(cus, url);
-      }
-
-      logger.debug("Content crawl completed repair on " + cus.getUrl());
-      // set state properly
-      NodeState state = getNodeState(cus);
-
-      // resume poll (or call new one)
-      if (pollCookie.pollKey!=null) {
-        logger.debug("Resuming poll...");
-        // set state to replaying, since resumed polls don't call 'startPoll()'
-        if (pollCookie.isNamePoll) {
-          state.setState(NodeState.NAME_REPLAYING);
-        } else {
-          state.setState(NodeState.SNCUSS_POLL_REPLAYING);
-        }
-      } else {
-        // if we need to release our lock, make sure we do it.
-        if(pollCookie.lock != null) {
-          pollCookie.lock.expire();
-        }
-        if (pollCookie.isNamePoll) {
-          logger.debug("Calling new name poll...");
-          state.setState(NodeState.WRONG_NAMES);
-        } else {
-          logger.debug("Calling new SNCUSS poll...");
-          state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
-	  callSingleNodeContentPoll(cus);
         }
       }
     }

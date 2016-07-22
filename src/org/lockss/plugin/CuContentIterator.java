@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-import java.util.regex.*;
-
 import org.lockss.util.*;
-import org.lockss.util.Constants.RegexpContext;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.extractor.*;
-
 
 /**
  * Iterator over a possibly filtered set of CachedUrls.
@@ -50,7 +39,6 @@ public class CuContentIterator extends CuIterator {
 
   private Iterator<CachedUrlSetNode> cusIter;
   private CachedUrl nextElement = null;
-  private CrawlManager crawlMgr;
   private int excluded = 0;
 
   public CuContentIterator(Iterator<CachedUrlSetNode> cusIter) {
@@ -97,26 +85,7 @@ public class CuContentIterator extends CuIterator {
     return null;
   }
 
-  CrawlManager getCrawlManager(CachedUrl cu) {
-    if (crawlMgr == null) {
-      crawlMgr = AuUtil.getDaemon(cu.getArchivalUnit()).getCrawlManager();
-    }
-    return crawlMgr;
-  }
-
   protected boolean isIncluded(CachedUrl cu) {
-    if (getOptions().isIncludedOnly() &&
-	!cu.getArchivalUnit().shouldBeCached(cu.getUrl())) {
-      log.debug("Excluding " + cu.getUrl());
-      excluded++;
-      return false;
-    }
-    if (getCrawlManager(cu) != null &&
-	getCrawlManager(cu).isGloballyExcludedUrl(cu.getArchivalUnit(),
-						cu.getUrl())) {
-      excluded++;
-      return false;
-    }
     return true;
   }
 }

@@ -661,10 +661,6 @@ public class NullPlugin {
       return null;
     }
 
-    public Comparator<CrawlUrl> getCrawlUrlComparator() {
-      return null;
-    }
-
     public List<String> getAuFeatureUrls(String auFeature) {
       return null;
     }

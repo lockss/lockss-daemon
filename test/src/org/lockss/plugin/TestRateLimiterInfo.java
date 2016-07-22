@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,6 @@ package org.lockss.plugin;
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 import org.lockss.test.*;
 
 public class TestRateLimiterInfo extends LockssTestCase {
@@ -56,7 +51,6 @@ public class TestRateLimiterInfo extends LockssTestCase {
     assertEquals("bar", rli.getCrawlPoolKey());
     assertSame(map, rli.getMimeRates());
     assertNull(rli.getUrlRates());
-    assertNull(rli.getCond());
   }
 
   public void testUrl() {
@@ -67,29 +61,20 @@ public class TestRateLimiterInfo extends LockssTestCase {
     assertEquals("bar", rli.getCrawlPoolKey());
     assertSame(map, rli.getUrlRates());
     assertNull(rli.getMimeRates());
-    assertNull(rli.getCond());
   }
 
   public void testCond() {
     RateLimiterInfo rli = new RateLimiterInfo("bar", 13000);
-    CrawlWindow win1 = new CrawlWindows.Daily("1:00", "3:00", "GMT");
-    CrawlWindow win2 = new CrawlWindows.Daily("3:00", "1:00", "GMT");
     RateLimiterInfo rli1 = new RateLimiterInfo("one", "2/300");
     RateLimiterInfo rli2 = new RateLimiterInfo("two", "4/500");
     LinkedHashMap map = new LinkedHashMap();
-    map.put(win1, rli1);
-    map.put(win2, rli2);
-    rli.setCond(map);
     assertEquals("1/13000", rli.getDefaultRate());
     assertEquals("bar", rli.getCrawlPoolKey());
     assertNull(rli.getUrlRates());
     assertNull(rli.getMimeRates());
-    Map cond = rli.getCond();
     // the set views returned by LinkedHashMap don't appear to be ordered
     // (as far as CollectionUtil.isOrdered() can tell); only the iterator
     // is ordered.  Make a copy to invoke the iterator.
-    assertIsomorphic(ListUtil.list(win1, win2), new ArrayList(cond.keySet()));
-    assertIsomorphic(ListUtil.list(rli1, rli2), new ArrayList(cond.values()));
   }
 
   String condser = 
@@ -131,20 +116,6 @@ public class TestRateLimiterInfo extends LockssTestCase {
     assertEquals("poolKey", rli.getCrawlPoolKey());
     assertNull(rli.getUrlRates());
     assertNull(rli.getMimeRates());
-    Map cond = rli.getCond();
-    List wins = new ArrayList(cond.keySet());
-    assertClass(CrawlWindows.Never.class, wins.get(0));
-    assertEquals(new CrawlWindows.Daily("22:00", "23:00",
-					"America/Los_Angeles"),
-		 wins.get(1));
-    List<RateLimiterInfo> rlis = new ArrayList(cond.values());
-    RateLimiterInfo rli1 = rlis.get(0);
-    assertEquals("1/4s", rli1.getDefaultRate());
-    assertEquals(MapUtil.map("text/html", "10/1m", "image/*", "5/1s"),
-		 rli1.getMimeRates());
-    RateLimiterInfo rli2 = rlis.get(1);
-    assertEquals("1/12s", rli2.getDefaultRate());
-    assertNull(rli2.getMimeRates());
   }
 
   RateLimiterInfo fromString(String s) throws Exception {

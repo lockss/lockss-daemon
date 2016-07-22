@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -33,11 +29,8 @@
 package org.lockss.plugin.base;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
-import java.text.*;
 import org.apache.commons.lang3.tuple.*;
-
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.state.AuState;
@@ -47,10 +40,7 @@ import org.lockss.alert.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
-import org.lockss.crawler.*;
 import org.lockss.config.*;
-
-import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher

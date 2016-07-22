@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
@@ -126,8 +121,6 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     Configuration auConfig =
       ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     ArchivalUnit au = regPlugin.createAu(auConfig);
-    assertEquals(org.lockss.crawler.FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH,
-		 au.getRefetchDepth());
     // ensure FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH is an appropriate
     // depth
     assertTrue(au.getRefetchDepth() >= 100);

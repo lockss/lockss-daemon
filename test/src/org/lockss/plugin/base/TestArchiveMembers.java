@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +29,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 import java.util.regex.*;
-import java.math.BigInteger;
-import junit.framework.*;
-
 import de.schlichtherle.truezip.file.*;
-
 import org.lockss.plugin.*;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.simulated.*;
@@ -49,7 +40,6 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.truezip.*;
-import org.lockss.repository.*;
 
 /** Tests for CachedUrls that refer to archive members */
 public class TestArchiveMembers extends LockssTestCase {
@@ -76,7 +66,6 @@ public class TestArchiveMembers extends LockssTestCase {
     pluginMgr.startService();
     daemon.getTrueZipManager().startService();
     daemon.getAlertManager();
-    daemon.getCrawlManager();
 
 //     // make and start a UrlManager to set up the URLStreamHandlerFactory
 //     UrlManager uMgr = new UrlManager();

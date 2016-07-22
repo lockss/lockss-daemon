@@ -395,7 +395,6 @@ public class HistoryRepositoryImpl
     // Default value
     return new NodeStateImpl(cus,
                              -1,
-                             new CrawlState(-1, CrawlState.FINISHED, 0),
                              new ArrayList(),
                              this);
   }

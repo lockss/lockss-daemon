@@ -41,7 +41,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
-  private MockCrawlManager crawlManager;
   private HistoryRepository historyRepo;
   private Random random = new Random();
   private MockLockssDaemon theDaemon;
@@ -65,8 +64,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.getNodeManagerManager();
     theDaemon.getPluginManager();
     PluginTestUtil.registerArchivalUnit(mau);
-    crawlManager = new MockCrawlManager();
-    theDaemon.setCrawlManager(crawlManager);
     log.debug("Starting the Identity Manager");
     log.debug("Identity Manager started");
     // create au state so thread doesn't throw null pointers
@@ -96,9 +93,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
-    assertNotNull(node.getCrawlState());
-    assertEquals(-1, node.getCrawlState().getType());
-    assertEquals(CrawlState.FINISHED, node.getCrawlState().getStatus());
     NodeState node2 = nodeManager.getNodeState(cus);
     assertSame(node, node2);
     cus = getCus(mau, TEST_URL + "/branch1");
@@ -120,8 +114,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // add to lockss repository
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
     // store in history repository
-    NodeState node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
-        new ArrayList(), historyRepo);
+    NodeState node = new NodeStateImpl(cus, 123, new ArrayList(), historyRepo);
     historyRepo.storeNodeState(node);
     // should load correctly
     node = nodeManager.getNodeState(cus);
@@ -137,8 +130,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // store in history repository
     ArrayList polls = new ArrayList(1);
     // start the poll
-    NodeStateImpl node = new NodeStateImpl(cus, 123,
-        new CrawlState(-1, -1, -1), polls, historyRepo);
+    NodeStateImpl node = new NodeStateImpl(cus, 123, polls, historyRepo);
     historyRepo.storeNodeState(node);
     // should keep poll active
     node = (NodeStateImpl) nodeManager.getNodeState(cus);
@@ -150,8 +142,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // store in history repository
     polls = new ArrayList(1);
     // don't start the poll
-    node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1), polls,
-        historyRepo);
+    node = new NodeStateImpl(cus, 123, polls, historyRepo);
     historyRepo.storeNodeState(node);
     // should transfer poll to history
     node = (NodeStateImpl) nodeManager.getNodeState(cus);
@@ -237,13 +228,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL + createUrl));
     // make sure repair list is empty
     assertTrue(nodeManager.damagedNodes.getNodesToRepair().isEmpty());
-    // handle names
-    // first repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(TEST_URL
-        + repairUrl));
-    // second repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(TEST_URL
-        + repairUrl2));
     // check that both registered for repair
     assertIsomorphic(
         ListUtil.list(TEST_URL + repairUrl, TEST_URL + repairUrl2),
@@ -281,17 +265,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     HashMap repairNodes = nodeManager.damagedNodes.getNodesToRepair();
     // repair list empty
     assertTrue(repairNodes.isEmpty());
-    // nothing scheduled
-    assertNull(crawlManager.getUrlStatus(url1));
-    assertNull(crawlManager.getUrlStatus(url2));
     // populate list
     repairNodes.put(TEST_URL, ListUtil.list(url1, url2));
     nodeManager.markNodesForRepair(ListUtil.list(url1, url2), null,
         new MockCachedUrlSet(TEST_URL), true, null);
-    // first repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url1));
-    // second repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url2));
   }
 
   public void testRepairAtParentClearsChildren() throws Exception {
@@ -382,16 +359,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
       if (shouldScheduleName) {
       } else if (shouldScheduleContent) {
       } else if (shouldRepair) {
-        if (node.getState() == NodeState.NEEDS_REPAIR) {
-          assertEquals(MockCrawlManager.SCHEDULED, crawlManager
-              .getUrlStatus(TEST_URL));
-        } else if (node.getState() == NodeState.WRONG_NAMES) {
-          String repairUrl = TEST_URL + "/testentry4.html";
-          String repairUrl2 = TEST_URL + "/testentry5.html";
-          assertEquals(MockCrawlManager.SCHEDULED, crawlManager
-              .getUrlStatus(repairUrl));
-          assertNull(crawlManager.getUrlStatus(repairUrl2));
-        }
       }
     }
   }

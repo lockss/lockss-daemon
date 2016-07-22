@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
  Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
@@ -33,8 +29,6 @@ package org.lockss.plugin.definable;
 
 import java.net.*;
 import java.util.*;
-
-import org.apache.commons.collections.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -46,7 +40,6 @@ import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.exploded.ExplodingUrlConsumerFactory;
 import org.lockss.state.AuState;
-
 import static org.lockss.plugin.PrintfConverter.PrintfContext;
 
 /**
@@ -575,92 +568,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     return name;
   }
 
-  protected CrawlRule makeRule() throws ConfigurationException {
-    CrawlRule rule;
-    try {
-      rule = makeRule0();
-    } catch(LockssRegexpException e) {
-      throw new ConfigurationException("Illegal regexp in crawl rules: " +
-          e.getMessage(), e);
-    }
-    if (rule == null
-	|| !CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_INCLUDE_START,
-					  DEFAULT_CRAWL_RULES_INCLUDE_START)) {
-      return rule;
-    }
-    // If any of the the start URLs or permission URLs aren't otherwise
-    // included in the crawl rule, add them explicitly, by wrapping the
-    // rule in one that first checks the start and permission URLs.
-
-    Collection<String> expUrls = new HashSet<String>();
-
-    Collection<String> perms = getPermissionUrls();
-    if (perms != null) {
-      for (String url : perms) {
-	if (rule.match(url) != CrawlRule.INCLUDE) {
-	  expUrls.add(url);
-	}
-      }
-    }
-    Collection<String> starts = getStartUrls();
-    if (starts != null) {
-      for (String url : starts) {
-	if (rule.match(url) != CrawlRule.INCLUDE) {
-	  expUrls.add(url);
-	}
-      }
-    }
-    if (expUrls.isEmpty()) {
-      return rule;
-    } else {
-      if (expUrls.size() < CRAWL_RULE_CONTAINS_SET_THRESHOLD) {
-	expUrls = new ArrayList(expUrls);
-      }
-      // Must check the explicit list first, even though it will hardly
-      // ever match, as main rule could return EXCLUDE
-      return new CrawlRules.FirstMatch(ListUtil.list(new CrawlRules.Contains(expUrls),
-						     rule));
-
-    }
-  }
-
   boolean isCaseIndependentCrawlRules() {
     boolean defaultIgnoreCase =
       CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_IGNORE_CASE,
 				    DEFAULT_CRAWL_RULES_IGNORE_CASE);
     return definitionMap.getBoolean(KEY_AU_CRAWL_RULES_IGNORE_CASE,
 				    defaultIgnoreCase);
-  }
-
-  CrawlRule makeRule0() throws LockssRegexpException {
-    Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
-
-    if (rule instanceof String) {
-	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
-            newAuxClass((String) rule, CrawlRuleFromAuFactory.class);
-	return fact.createCrawlRule(this);
-    }
-    ArrayList rules = null;
-    if (rule instanceof List) {
-      List<String> templates = (List<String>)rule;
-      rules = new ArrayList(templates.size());
-      for (String rule_template : templates) {
-	CrawlRule cr = convertRule(rule_template,
-				   isCaseIndependentCrawlRules());
-	if (cr != null) {
-	  rules.add(cr);
-	}
-      }
-      rules.trimToSize();
-
-      if (rules.size() > 0) {
-	return new CrawlRules.FirstMatch(rules);
-      } else {
-	log.error("No crawl rules found for plugin: " + makeName());
-	return null;
-      }
-    }
-    return null;
   }
 
   public LoginPageChecker getLoginPageChecker() {
@@ -824,48 +737,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   protected List<String> getElementList(String key, String mapkey) {
     return getDefinablePlugin().getElementList(key, mapkey);
   }
-
-  CrawlRule convertRule(String ruleString, boolean ignoreCase)
-      throws LockssRegexpException {
-
-    int pos = ruleString.indexOf(",");
-    int action = Integer.parseInt(ruleString.substring(0, pos));
-    String printfString = ruleString.substring(pos + 1);
-
-    PrintfConverter.MatchPattern mp =
-      convertVariableRegexpString(printfString, RegexpContext.Url);
-    if (mp.getRegexp() == null) {
-      return null;
-    }
-    List<List> matchArgs = mp.getMatchArgs();
-    switch (matchArgs.size()) {
-    case 0:
-      return new CrawlRules.RE(mp.getRegexp(), ignoreCase, action);
-    case 1:
-      List argPair = matchArgs.get(0);
-      AuParamType ptype = mp.getMatchArgTypes().get(0);
-      switch (ptype) {
-      case Range:
-	return new CrawlRules.REMatchRange(mp.getRegexp(),
-					   ignoreCase,
-					   action,
-					   (String)argPair.get(0),
-					   (String)argPair.get(1));
-      case NumRange:
-	return new CrawlRules.REMatchRange(mp.getRegexp(),
-					   ignoreCase,
-					   action,
-					   ((Long)argPair.get(0)).longValue(),
-					   ((Long)argPair.get(1)).longValue());
-      default:
-	throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + ptype);
-      }
-
-    default:
-      throw new LockssRegexpException("Multiple range args not yet supported");
-    }
-  }
-
 
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow()

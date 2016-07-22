@@ -163,7 +163,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null,
                                                 repository);
 
     /*
@@ -199,7 +199,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null,
                                                 repository);
     nodeState.setPollHistoryList(new ArrayList());
     //storing empty vector
@@ -217,7 +217,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 
     mspec = new MockCachedUrlSetSpec("http://www.example2.com", null);
     mcus = new MockCachedUrlSet(mau, mspec);
-    nodeState = new NodeStateImpl(mcus, -1, null, null, repository);
+    nodeState = new NodeStateImpl(mcus, -1, null, repository);
     filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example2.com/");
@@ -549,9 +549,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     TimeBase.setSimulated(100);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(
         "http://www.example.com"));
-    CrawlState crawl = new CrawlState(1, 2, 123);
     List polls = new ArrayList(2);
-    NodeState nodeState = new NodeStateImpl(mcus, 123321, crawl, polls,
+    NodeState nodeState = new NodeStateImpl(mcus, 123321, polls,
                                             repository);
     ((NodeStateImpl)nodeState).setState(NodeState.DAMAGE_AT_OR_BELOW);
     repository.storeNodeState(nodeState);
@@ -567,9 +566,6 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertSame(mcus, nodeState.getCachedUrlSet());
 
     assertEquals(123321, nodeState.getAverageHashDuration());
-    assertEquals(1, nodeState.getCrawlState().getType());
-    assertEquals(2, nodeState.getCrawlState().getStatus());
-    assertEquals(123, nodeState.getCrawlState().getStartTime());
     assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
 
     Iterator pollIt = nodeState.getActivePolls();

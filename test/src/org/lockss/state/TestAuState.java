@@ -31,7 +31,6 @@ package org.lockss.state;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -132,20 +131,16 @@ public class TestAuState extends LockssTestCase {
     assertEquals(1, historyRepo.getAuStateStoreCount());
 
     TimeBase.setSimulated(t2);
-    aus.newCrawlFinished(Crawler.STATUS_ERROR, "Plorg");
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_ERROR, aus.getLastCrawlResult());
     assertEquals("Plorg", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertFalse(aus.hasCrawled());
     assertEquals(2, historyRepo.getAuStateStoreCount());
 
     TimeBase.setSimulated(t3);
-    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
     assertEquals(t3, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertTrue(aus.hasCrawled());
@@ -154,7 +149,6 @@ public class TestAuState extends LockssTestCase {
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
     assertTrue(aus.hasCrawled());
@@ -163,7 +157,6 @@ public class TestAuState extends LockssTestCase {
     aus.newCrawlStarted();
     assertEquals(t3, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertTrue(aus.hasCrawled());
   }
@@ -189,20 +182,16 @@ public class TestAuState extends LockssTestCase {
     aus = aus.simulateStoreLoad();
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastCrawlResult());
     assertFalse(aus.isCrawlActive());
 
     TimeBase.setSimulated(t3);
     aus.newCrawlStarted();
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastCrawlResult());
 
     TimeBase.setSimulated(t4);
-    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Plorg");
     assertEquals(t4, aus.getLastCrawlTime());
     assertEquals(t3, aus.getLastCrawlAttempt());
-    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
   }
 
   public void testPollDuration() throws Exception {

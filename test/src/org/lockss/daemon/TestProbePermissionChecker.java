@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,25 +27,13 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import java.io.*;
-import java.util.*;
-
 import org.lockss.test.*;
-import org.lockss.test.MockCrawler.MockCrawlerFacade;
-import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
-import org.lockss.plugin.*;
-import org.lockss.config.*;
-import org.lockss.crawler.*;
-import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 import org.lockss.daemon.ProbePermissionChecker;
 
 public class TestProbePermissionChecker extends LockssTestCase {
 
   private TestableProbePermissionChecker pc;
   MockArchivalUnit mau;
-  MockCrawlerFacade mcf;
-  MockCrawler crawler;
 
   private static String htmlSourceWOLinkTag =
     "<html>\n"+
@@ -96,8 +80,6 @@ public class TestProbePermissionChecker extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
-    crawler = new MockCrawler(mau);
-    mcf = crawler.new MockCrawlerFacade(mau);
   }
 
   public void testNoLinkTag() {
@@ -106,10 +88,6 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWOProbe);
     
     pc = new TestableProbePermissionChecker();
-    assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(mcf,
-				   new StringReader(htmlSourceWOLinkTag),
-				   url));
     assertNull(pc.getProbeUrl());
   }
 
@@ -119,18 +97,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWOProbe);
 
     pc = new TestableProbePermissionChecker();
-    assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(mcf, new StringReader(htmlSourceWOProbe),
-				   url));
     assertNull(pc.getProbeUrl());
-  }
-
-  StorePermissionScheme getConfigPermissionScheme() {
-    Configuration config = ConfigManager.getCurrentConfig();
-    return (StorePermissionScheme)
-      config.getEnum(StorePermissionScheme.class,
-		     BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
-		     BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
   }
 
   public void testProbeHasPermission() {
@@ -143,11 +110,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(probeUrl, "");
 
     pc = new TestableProbePermissionChecker();
-    assertTrue("Didn't give permission when there was a probe",
-		pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
-				   "http://www.example.com"));
     assertEquals(probeUrl, pc.getProbeUrl());
-    assertTrue(mcf.permProbe.contains(probeUrl));
   }
   
   public void testProbeHasPermissionNotInCrawlRule() {
@@ -160,15 +123,10 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(probeUrl, "");
 
     pc = new TestableProbePermissionChecker();
-    assertFalse("Gave permission when probe was not in rules",
-    pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
-           "http://www.example.com"));
     assertEquals(probeUrl, pc.getProbeUrl());
   }
 
   public void testProbeHasPermission2() {
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
-				  StorePermissionScheme.StoreAllInSpec.toString());
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -178,11 +136,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(probeUrl, "");
 
     pc = new TestableProbePermissionChecker();
-    assertTrue("Didn't give permission when there was a probe",
-		pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
-				   "http://www.example.com"));
     assertEquals(probeUrl, pc.getProbeUrl());
-    assertTrue(mcf.permProbe.contains(probeUrl));
   }
 
   

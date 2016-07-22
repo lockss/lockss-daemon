@@ -30,7 +30,6 @@ package org.lockss.servlet;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
-import org.lockss.daemon.Crawler;
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
@@ -419,15 +418,8 @@ public class DisplayContentTab extends LockssServlet {
             return true;
         } else {
             AuState auState = AuUtil.getAuState(au);
-            if ("neverCrawled".equals(filterKey)) {
-                log.error("Last crawl result: " + auState.getLastCrawlResult());
-                return auState.getLastCrawlResult() == Crawler.STATUS_QUEUED || auState.getLastCrawlResult() == -1;
-            } else if ("noSubstance".equals(filterKey)) {
+            if ("noSubstance".equals(filterKey)) {
                 return auState.hasNoSubstance();
-            } else if ("noPermission".equals(filterKey)) {
-                return auState.getLastCrawlResult() == Crawler.STATUS_NO_PUB_PERMISSION;
-            } else if ("serverDown".equals(filterKey)) {
-                return auState.getLastCrawlResult() == Crawler.STATUS_FETCH_ERROR;
             } else {
                 return true;
             }
@@ -680,11 +672,7 @@ public class DisplayContentTab extends LockssServlet {
         AuState state = AuUtil.getAuState(au);
         int crawlResult = state.getLastCrawlResult();
         String lastCrawlString = showTimeElapsed(lastCrawlTime, "");
-        if (crawlResult == Crawler.STATUS_SUCCESSFUL) {
-            collectedImage = new Image(OK_ICON);
-        } else {
             collectedImage = new Image(CANCEL_ICON);
-        }
         collectedImage.attribute("title", "Last successful crawl: " + lastCrawlString);
         collectedImage.attribute("alt", "Last successful crawl: " + lastCrawlString);
         return collectedImage;

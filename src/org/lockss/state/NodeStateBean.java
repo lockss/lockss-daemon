@@ -35,7 +35,6 @@ import org.lockss.util.LockssSerializable;
  * NodeStateBean is a settable version of the NodeState, to allow marshalling.
  */
 public class NodeStateBean implements LockssSerializable {
-  CrawlStateBean crawlBean;
   List pollBeans = new ArrayList();
   int curState;
   long hashDuration = -1;
@@ -51,26 +50,9 @@ public class NodeStateBean implements LockssSerializable {
    * @param nodeState the NodeState
    */
   NodeStateBean(NodeState nodeState) {
-    this.crawlBean = new CrawlStateBean(nodeState.getCrawlState());
     Iterator polls = nodeState.getActivePolls();
     hashDuration = nodeState.getAverageHashDuration();
     curState = nodeState.getState();
-  }
-
-  /**
-   * Returns the CrawlStateBean.
-   * @return the {@link CrawlStateBean}
-   */
-  public CrawlStateBean getCrawlStateBean() {
-    return crawlBean;
-  }
-
-  /**
-   * Sets the CrawlStateBean
-   * @param newBean the new {@link CrawlStateBean}
-   */
-  public void setCrawlStateBean(CrawlStateBean newBean) {
-    this.crawlBean = newBean;
   }
 
   /**

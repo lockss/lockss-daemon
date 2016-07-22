@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,21 +29,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.exploded;
 
 import java.io.IOException;
-
-import org.lockss.crawler.ArcExploder;
-import org.lockss.crawler.BaseCrawler;
-import org.lockss.crawler.CrawlerStatus;
 import org.lockss.crawler.Exploder;
-import org.lockss.crawler.TarExploder;
-import org.lockss.crawler.WarcExploder;
-import org.lockss.crawler.ZipExploder;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.FetchedUrlData;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.RegexpUtil;
 
@@ -83,15 +68,6 @@ public class ExplodingUrlConsumer extends SimpleUrlConsumer {
     Exploder ret = null;
     String url = toExplode.fetchUrl;
     eh = getHelper();
-    if (url.endsWith(".arc.gz")) {
-      ret = new ArcExploder(toExplode, crawlFacade, getHelper());
-    } else if (url.endsWith(".warc.gz")) {
-      ret = new WarcExploder(toExplode, crawlFacade, getHelper());
-    } else if (url.endsWith(".zip")) {
-      ret = new ZipExploder(toExplode, crawlFacade, getHelper());
-    } else if (url.endsWith(".tar")) {
-      ret = new TarExploder(toExplode, crawlFacade, getHelper());
-    }
     return ret;
   }
   

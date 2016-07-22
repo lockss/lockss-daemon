@@ -38,7 +38,6 @@ import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.util.*;
@@ -2544,10 +2543,6 @@ public class PluginManager
   }
 
   private void queuePluginRegistryCrawls() {
-    CrawlManager crawlMgr = getDaemon().getCrawlManager();
-    for (ArchivalUnit au : getAllRegistryAus()) {
-      crawlMgr.startNewContentCrawl(au, null, null, null);
-    }
   }
 
   /** Return a collection of all RegistryArchivalUnits.  This is a subset
@@ -2693,9 +2688,6 @@ public class PluginManager
 
     BinarySemaphore bs = new BinarySemaphore();
 
-    InitialRegistryCallback regCallback =
-      new InitialRegistryCallback(urls, bs);
-
     List loadAus = new ArrayList();
 
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
@@ -2712,7 +2704,6 @@ public class PluginManager
 	  configureAu(getRegistryPlugin(), auConf, auId);
 	} catch (ArchivalUnit.ConfigurationException ex) {
 	  log.error("Failed to configure AU " + auKey, ex);
-	  regCallback.crawlCompleted(url);
 	  continue;
 	}
 
@@ -2721,10 +2712,8 @@ public class PluginManager
 	loadAus.add(registryAu);
 
 	// Trigger a new content crawl if required.
-	possiblyStartRegistryAuCrawl(registryAu, url, regCallback);
       } else {
 	log.debug2("We already have this AU configured, notifying callback.");
-	regCallback.crawlCompleted(url);
       }
     }
 
@@ -2733,12 +2722,10 @@ public class PluginManager
     log.debug("Waiting for loadable plugins to finish loading...");
     try {
       if (!bs.take(Deadline.in(registryTimeout))) {
-	log.warning("Timed out while waiting for registries to finish loading. " +
-		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
+	log.warning("Timed out while waiting for registries to finish loading. ");
       }
     } catch (InterruptedException ex) {
-      log.warning("Binary semaphore threw InterruptedException while waiting." +
-		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
+      log.warning("Binary semaphore threw InterruptedException while waiting.");
     }
 
     processRegistryAus(loadAus);
@@ -2785,22 +2772,6 @@ public class PluginManager
    */
   public ImportPlugin getImportPlugin() {
     return (ImportPlugin)getInternalPlugin(ImportPlugin.PLUGIN_ID);
-  }
-
-  // Trigger a new content crawl on the registry AU if required.
-  protected void possiblyStartRegistryAuCrawl(ArchivalUnit registryAu,
-					      String url,
-					      InitialRegistryCallback cb) {
-    if (registryAu.shouldCrawlForNewContent(AuUtil.getAuState(registryAu))) {
-      if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
-      getDaemon().getCrawlManager().startNewContentCrawl(registryAu, cb,
-							 url, null);
-    } else {
-      if (log.isDebug2()) log.debug2("No crawl needed: " + registryAu);
-
-      // If we're not going to crawl this AU, let the callback know.
-      cb.crawlCompleted(url);
-    }
   }
 
   // Ensure plugins listed in o.l.plugin.registry or in jars listed in
@@ -3304,61 +3275,6 @@ public class PluginManager
 	  }
 	}
       }
-    }
-  }
-
-  /**
-   * CrawlManager callback that is responsible for handling Registry
-   * AUs when they're finished with their initial crawls.
-   */
-  static class InitialRegistryCallback implements CrawlManager.Callback {
-    private BinarySemaphore bs;
-
-    List registryUrls;
-
-    /*
-     * Set the initial size of the list of registry URLs to process.
-     */
-    public InitialRegistryCallback(List registryUrls, BinarySemaphore bs) {
-      this.registryUrls =
-	Collections.synchronizedList(new ArrayList(registryUrls));
-      this.bs = bs;
-      if (log.isDebug2()) log.debug2("InitialRegistryCallback: " +
-				     registryUrls);
-      if (registryUrls.isEmpty()) {
-	bs.give();
-      }
-    }
-
-    public void signalCrawlAttemptCompleted(boolean success,
-					    Object cookie,
-					    CrawlerStatus status) {
-      String url = (String)cookie;
-
-      crawlCompleted(url);
-    }
-
-    public void crawlCompleted(String url) {
-      // Remove urls from registryUrls as they finish crawling (or it is
-      // determine that they don't need to be crawled).  When registryUrls
-      // is empty signal the waiting process that it may proceed to load
-      // plugins we're done running crawls on all the plugin registries,
-      // and we can load the plugin classes.
-      registryUrls.remove(url);
-      if (log.isDebug2()) log.debug2("Registry crawl complete: " + url +
-				     ", " + registryUrls.size() + " left");
-      if (registryUrls.isEmpty()) {
-	if (log.isDebug2()) log.debug2("Registry crawls complete");
-	bs.give();
-      }
-    }
-
-    /**
-     * Used only in the case that our semaphore throws an Interrupted
-     * exception -- we can print this list to see what was left.
-     */
-    public List getRegistryUrls() {
-      return registryUrls;
     }
   }
 

@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -34,7 +30,6 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -53,7 +48,6 @@ import org.lockss.extractor.*;
  */
 public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config = ConfigManager.EMPTY_CONFIGURATION;
-  private CrawlRule rule;
   private String pluginId = "mock";
   private TitleConfig tc = null;
   private String auId = null;
@@ -107,7 +101,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldRefetchOnCookies = true;
   
   private String perHostPermissionPath;
-  private Comparator<CrawlUrl> crawlUrlCmp;
 
   boolean isBulkContent = false;
   ArchiveFileTypes aft = null;
@@ -140,18 +133,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   public MockArchivalUnit(Plugin plugin, String auId) {
     this.plugin = plugin;
     this.auId = auId;
-  }
-
-  public MockArchivalUnit(CrawlRule rule) {
-    this.rule = rule;
-  }
-
-  public CrawlRule getCrawlRule() {
-    return rule;
-  }
-
-  public void setCrawlRule(CrawlRule rule) {
-    this.rule = rule;
   }
 
   public Collection getUrlStems() {
@@ -723,14 +704,6 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setLinkExtractor(String mimeType, LinkExtractor extractor) {
     extractors.put(mimeType, extractor);
-  }
-
-  public Comparator<CrawlUrl> getCrawlUrlComparator() {
-    return crawlUrlCmp;
-  }
-
-  public void setCrawlUrlComparator(Comparator<CrawlUrl> cmprtr) {
-    crawlUrlCmp = cmprtr;
   }
 
   public List<String> getAuFeatureUrls(String auFeature) {

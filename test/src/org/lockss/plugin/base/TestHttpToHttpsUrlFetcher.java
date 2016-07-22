@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -41,8 +37,6 @@ public class TestHttpToHttpsUrlFetcher extends LockssTestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    MockCrawler mc = new MockCrawler();
-    hthuf = new HttpToHttpsUrlFetcher(mc.new MockCrawlerFacade(), null);
   }
   
   public void testIsHttpToHttpsRedirect() throws Exception {

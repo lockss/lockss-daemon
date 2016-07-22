@@ -37,7 +37,6 @@ import org.lockss.account.AccountManager;
 import org.lockss.account.UserAccount;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.Crawler;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
@@ -48,9 +47,7 @@ import org.lockss.servlet.LockssServlet;
 import org.lockss.servlet.ServletManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockAuState;
 import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.NoCrawlEndActionsFollowLinkCrawler;
 import org.lockss.test.TcpTestUtil;
 import org.lockss.ws.cxf.AuthorizationInterceptor;
 import org.lockss.ws.entities.ContentResult;
@@ -99,10 +96,6 @@ public class FuncContentService extends LockssTestCase {
 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     sau.generateContentTree();
-
-    Crawler crawler =
-	new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
-    crawler.doCrawl();
 
     theDaemon.setAusStarted(true);
 

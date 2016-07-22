@@ -1,10 +1,6 @@
 /*
- * $Id: DispatchingUrlFetcher.java 39864 2015-02-18 09:10:24Z thib_gc $
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,8 +28,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.plugin.ajax.AjaxCrawlArchivalUnit;
-import org.lockss.plugin.ajax.AjaxCrawlFetcher;
 import org.lockss.plugin.base.BaseUrlFetcher;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
@@ -41,23 +35,13 @@ import org.lockss.util.urlconn.CacheException;
 public class DispatchingUrlFetcher extends BaseUrlFetcher
 {
   private static final Logger log = Logger.getLogger("DispatchingUrlFetcher");
-  protected AjaxCrawlFetcher ajaxCrawlFetcher = null;
 
   public DispatchingUrlFetcher(final CrawlerFacade crawlFacade,
                                final String url) {
     super(crawlFacade, url);
-    if(au instanceof AjaxCrawlArchivalUnit) {
-      String ajaxPattern = ((AjaxCrawlArchivalUnit)au).getAjaxPattern();
-      if(url.matches(ajaxPattern)) {
-        ajaxCrawlFetcher = ((AjaxCrawlArchivalUnit) au).getAjaxCrawlFetcher();
-      }
-    }
   }
 
   public FetchResult fetch() throws CacheException {
-    if(ajaxCrawlFetcher != null) {
-      return ajaxCrawlFetcher.fetch();
-    }
     return super.fetch();
   }
 }

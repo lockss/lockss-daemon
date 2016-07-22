@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,10 +31,7 @@ package org.lockss.test;
 import java.util.*;
 import java.io.*;
 import java.security.*;
-
-import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
-import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 
 /** Miscellaneous testing utilities */
@@ -46,16 +39,12 @@ public class MiscTestUtil {
   protected static Logger log = Logger.getLogger("MiscTestUtil");
 
   public static boolean hasPermission(List<PermissionChecker> checkers,
-				      String page,
-				      MockCrawlerFacade mcf)
+				      String page)
       throws IOException {
     Reader rdr = null;
     for (PermissionChecker checker : checkers) {
       if (rdr == null) {
 	rdr = newReader(page);
-      }
-      if (checker.checkPermission(mcf, rdr, "http://example.com/")) {
-	return true;
       }
       try {
         rdr.reset();

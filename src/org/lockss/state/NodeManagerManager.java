@@ -321,11 +321,7 @@ public class NodeManagerManager
 
     // currently unused
     private void filterActiveNodes(List entriesList, NodeState state) {
-      int status = state.getCrawlState().getStatus();
-      if ((status != CrawlState.FINISHED) &&
-          (status != CrawlState.NODE_DELETED)) {
-        entriesList.add(state);
-      }
+      entriesList.add(state);
     }
 
     private Map makeRow(String auId, NodeState state) {
@@ -336,14 +332,6 @@ public class NodeManagerManager
 
       // State
       rowMap.put("State", state.getStateString());
-
-      CrawlState crawl_state = state.getCrawlState();
-      // CrawlTime
-      rowMap.put("CrawlTime", new Long(crawl_state.getStartTime()));
-      // CrawlType
-      rowMap.put("CrawlType", crawl_state.getTypeString());
-      // CrawlStatus
-      rowMap.put("CrawlStatus", crawl_state.getStatusString());
 
       // ActivePolls with a reference to a active poll history table
       StatusTable.Reference ref = PollHistoryStatus.makeNodeRef(

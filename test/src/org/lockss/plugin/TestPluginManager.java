@@ -868,12 +868,6 @@ public class TestPluginManager extends LockssTestCase {
       processOneRegistryJarThrowIf = url;
     }
 
-    protected void possiblyStartRegistryAuCrawl(ArchivalUnit au,
-						String url,
-						PluginManager.InitialRegistryCallback cb) {
-      cb.crawlCompleted(url);
-    }
-
     Map<String,SimpleQueue> findUrlQueues = new HashMap<String,SimpleQueue>();
 
     SimpleQueue ensureFindUrlQueue(String url) {
@@ -1488,23 +1482,13 @@ public class TestPluginManager extends LockssTestCase {
   public void testEmptyInitialRegistryCallback() throws Exception {
     mgr.startService();
     BinarySemaphore bs = new BinarySemaphore();
-    PluginManager.InitialRegistryCallback cb =
-      new PluginManager.InitialRegistryCallback(Collections.EMPTY_LIST, bs);
     assertTrue(bs.take(Deadline.in(0)));
   }
 
   public void testInitialRegistryCallback() throws Exception {
     mgr.startService();
     BinarySemaphore bs = new BinarySemaphore();
-    PluginManager.InitialRegistryCallback cb =
-      new PluginManager.InitialRegistryCallback(ListUtil.list("foo", "bar"),
-						bs);
     assertFalse(bs.take(Deadline.in(0)));
-    cb.crawlCompleted("foo");
-    cb.crawlCompleted("bletch");
-    assertFalse(bs.take(Deadline.in(0)));
-    cb.crawlCompleted("bar");
-    assertTrue(bs.take(Deadline.in(0)));
   }
 
   private void prepareLoadablePluginTests(Properties p) throws Exception {
@@ -1542,47 +1526,6 @@ public class TestPluginManager extends LockssTestCase {
 		 SetUtil.theSet(mgr.getAllRegistryAus()));
     assertEquals(3, mgr.getAllRegistryAus().size());
   }
-
-  public void testCrawlRegistriesOnce() throws Exception {
-    mgr.startService();
-    MockCrawlManager mcm = new MockCrawlManager();
-    theDaemon.setCrawlManager(mcm);
-
-    Properties p = new Properties();
-    prepareLoadablePluginTests(p);
-    List urls = ListUtil.list("http://plug1.example.com/blueplugs/",
-			      "http://plug1.example.com/redplugs/");
-    List urls2 = ListUtil.list("http://plug2.example.com/blueplugs/");
-    assertEmpty(mgr.getAllRegistryAus());
-    assertEmpty(mgr.getAllAus());
-    mgr.initLoadablePluginRegistries(urls);
-    assertEquals(SetUtil.theSet(mgr.getAllAus()),
-		 SetUtil.theSet(mgr.getAllRegistryAus()));
-    assertEquals(2, mgr.getAllRegistryAus().size());
-
-    assertEmpty(mcm.scheduledCrawls);
-    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
-				  "true");
-    assertEquals(SetUtil.theSet(mgr.getAllRegistryAus()),
-		 mcm.scheduledCrawls.keySet());
-    mcm.scheduledCrawls.clear();
-    assertEmpty(mcm.scheduledCrawls);
-    // Set another param that causes PluginManager.setConfig() to run
-    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE + "xx",
-				  "1234");
-    assertEmpty(mcm.scheduledCrawls);
-    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
-				  "true");
-    assertEmpty(mcm.scheduledCrawls);
-    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
-				  "false");
-    assertEmpty(mcm.scheduledCrawls);
-    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
-				  "true");
-    assertEquals(SetUtil.theSet(mgr.getAllRegistryAus()),
-		 mcm.scheduledCrawls.keySet());
-  }
-
 
   /** Test loading a loadable plugin. */
   public void testLoadLoadablePlugin(boolean preferLoadable) throws Exception {

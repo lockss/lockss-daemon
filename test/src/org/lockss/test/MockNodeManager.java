@@ -117,7 +117,6 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void newContentCrawlFinished() {
-    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
   }
 
   public void newContentCrawlFinished(int result, String msg) {

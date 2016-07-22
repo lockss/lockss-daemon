@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,9 +31,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import org.lockss.config.Configuration;
-import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.CrawlRule;
 import org.lockss.daemon.LoginPageChecker;
 import org.lockss.daemon.PermissionChecker;
 import org.lockss.plugin.base.BaseArchivalUnit;
@@ -98,7 +92,7 @@ public class ImportArchivalUnit extends BaseArchivalUnit {
 
   @Override
   public int getRefetchDepth() {
-    return FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH;
+    return 1;
   }
 
   @Override
@@ -109,22 +103,5 @@ public class ImportArchivalUnit extends BaseArchivalUnit {
   @Override
   public String getCookiePolicy() {
     return null;
-  }
-
-  /**
-   * return the collection of crawl rules used to crawl and cache a
-   * list of Plugin JAR files.
-   * @return CrawlRule
-   */
-  @Override
-  protected CrawlRule makeRule() {
-    return new ImportRule();
-  }
-
-  // Import AU crawl rule implementation
-  private class ImportRule implements CrawlRule {
-    public int match(String url) {
-      return CrawlRule.EXCLUDE;
-    }
   }
 }

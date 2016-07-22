@@ -38,7 +38,6 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
-import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
 
@@ -175,13 +174,6 @@ public class ArchivalUnitStatus
 			DEFAULT_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS);
   }
 
-  static CrawlManagerStatus getCMStatus(LockssDaemon daemon) {
-    CrawlManager crawlMgr = daemon.getCrawlManager();
-    CrawlManager.StatusSource source = crawlMgr.getStatusSource();
-    return source.getStatus();
-  }
-
-
   /** By default the AuSummary table omits the size columns.  Specify
    * columns=* to include them */
   static final String DEFAULT_AU_SUMMARY_COLUMNS = "-AuSize;DiskUsage";
@@ -224,12 +216,10 @@ public class ArchivalUnitStatus
 
     private LockssDaemon theDaemon;
     private RepositoryManager repoMgr;
-    private CrawlManagerStatus cmStatus;
 
     AuSummary(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
       repoMgr = theDaemon.getRepositoryManager();
-      cmStatus = getCMStatus(theDaemon);
     }
 
     public String getDisplayName() {
@@ -343,11 +333,6 @@ public class ArchivalUnitStatus
       Object lastCrawlStatus =
 	lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
       if (lastCrawlStatus != null) {
-	if (lastResultCode == Crawler.STATUS_SUCCESSFUL &&
-	    auState.hasNoSubstance()) {
-	  lastCrawlStatus =
-	    new StatusTable.DisplayedValue(lastCrawlStatus).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
-	}
 	rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
       }
 
@@ -360,17 +345,13 @@ public class ArchivalUnitStatus
         // history, so we just show a friendlier message.
         //
         if (auState.getHighestV3Agreement() < 0 ||
-	    auState.getLastTimePollCompleted() <= 0) {
-	  if (cmStatus.isRunningNCCrawl(au)) {
-	    stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
-	  } else {
-	    if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
-	      stat = new OrderedObject("Waiting for Poll",
-				       STATUS_ORDER_WAIT_POLL);
-	    } else {
-	      stat = new OrderedObject("Waiting for Crawl",
-				       STATUS_ORDER_WAIT_CRAWL);
-	    }
+            auState.getLastTimePollCompleted() <= 0) {
+          if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
+            stat = new OrderedObject("Waiting for Poll",
+        	STATUS_ORDER_WAIT_POLL);
+          } else {
+            stat = new OrderedObject("Waiting for Crawl",
+        	STATUS_ORDER_WAIT_CRAWL);
           }
         } else {
           stat = agreeStatus(auState.getHighestV3Agreement());
@@ -702,11 +683,9 @@ public class ArchivalUnitStatus
   abstract static class PerAuTable implements StatusAccessor {
 
     protected LockssDaemon theDaemon;
-    protected CrawlManagerStatus cmStatus;
 
     PerAuTable(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
-      cmStatus = getCMStatus(theDaemon);
     }
 
     public boolean requiresKey() {
@@ -1089,21 +1068,6 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    crawlPool));
       }
-      CrawlManager crawlMgr = theDaemon.getCrawlManager();
-      int crawlPrio = crawlMgr.getAuPriority(au);
-      if (crawlPrio != 0) {
-	String val;
-	if (crawlPrio <= CrawlManagerImpl.ABORT_CRAWL_PRIORITY) {
-	  val = crawlPrio + ": DISABLED, ABORT";
-	} else if (crawlPrio <= CrawlManagerImpl.MIN_CRAWL_PRIORITY) {
-	  val = crawlPrio + ": DISABLED";
-	} else {
-	  val = Integer.toString(crawlPrio);
-	}
-	res.add(new StatusTable.SummaryInfo("Crawl Priority",
-					    ColumnDescriptor.TYPE_STRING,
-					    val));
-      }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,
@@ -1152,11 +1116,7 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_DATE,
 					    new Long(lastIndex)));
       }
-      boolean isCrawling = cmStatus.isRunningNCCrawl(au);
       List lst = new ArrayList();
-      if (isCrawling) {
-	lst.add(makeCrawlRef("Crawling", au));
-      }
       if (!lst.isEmpty()) {
 	res.add(new StatusTable.SummaryInfo("Current Activity",
 					    ColumnDescriptor.TYPE_STRING,
@@ -1935,14 +1895,6 @@ public class ArchivalUnitStatus
   static OrderedObject agreeStatus(double agreement) {
     return new OrderedObject(doubleToPercent(agreement) + "% Agreement",
 			     STATUS_ORDER_AGREE_BASE - agreement);
-  }
-
-
-  public static StatusTable.Reference makeCrawlRef(Object value,
-						   ArchivalUnit au) {
-    return new StatusTable.Reference(value,
-				     CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
-				     au.getAuId());
   }
 
   static int getIntProp(StatusTable table, String name) {

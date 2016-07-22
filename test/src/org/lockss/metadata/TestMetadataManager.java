@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -85,7 +81,6 @@ public class TestMetadataManager extends LockssTestCase {
     pluginManager = theDaemon.getPluginManager();
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
-    theDaemon.getCrawlManager();
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +29,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
-
 import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.*;
 import org.lockss.util.Deadline;
 import org.lockss.util.urlconn.CacheException;
 
-public class MockCrawler extends NullCrawler {
+public class MockCrawler {
   ArchivalUnit au;
   Collection urls;
   boolean followLinks;
@@ -167,13 +162,6 @@ public class MockCrawler extends NullCrawler {
   public void setStatus(CrawlerStatus status) {
     this.status = status;
   }
-
-  public CrawlerStatus getCrawlerStatus() {
-    if (status == null) {
-      status = new MockCrawlStatus();
-    }
-    return status;
-  }
   
   public class MockCrawlerFacade implements Crawler.CrawlerFacade {
     private ArchivalUnit au;
@@ -181,7 +169,6 @@ public class MockCrawler extends NullCrawler {
     private Map<String, UrlFetcher> ufMap;
     public List<String> fetchQueue = new ArrayList<String>();
     public List<String> permProbe = new ArrayList<String>();
-    private PermissionMap permissionMap;
     private List<String> globallyPermittedHosts = Collections.emptyList();
     private List<String> allowedPluginPermittedHost = Collections.emptyList();
 
@@ -206,27 +193,12 @@ public class MockCrawler extends NullCrawler {
     }
     
     public CrawlerStatus getCrawlerStatus() {
-      if(cs == null) {
-        cs = new MockCrawlStatus();
-      }
       return cs;
     }
 
     @Override
     public void addToFailedUrls(String url) {
       //Not used for testing
-    }
-
-    @Override
-    public void addToFetchQueue(CrawlUrlData curl) {
-      fetchQueue.add(curl.getUrl());
-      
-    }
-
-    @Override
-    public void addToParseQueue(CrawlUrlData curl) {
-      throw new UnsupportedOperationException("not implemented");
-      
     }
 
     @Override
@@ -277,29 +249,22 @@ public class MockCrawler extends NullCrawler {
 
     @Override
     public boolean hasPermission(String url) {
-      if(permissionMap != null) {
-        permissionMap.hasPermission(url);
-      }
       return true;
-    }
-    
-    public void setPermissionMap(PermissionMap permMap) {
-      permissionMap = permMap;
     }
     
     @Override
     public long getRetryDelay(CacheException ce) {
-      return BaseCrawler.DEFAULT_DEFAULT_RETRY_DELAY;
+      return 0L;
     }
 
     @Override
     public int getRetryCount(CacheException ce) {
-      return BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT;
+      return 0;
     }
 
     @Override
     public int permissonStreamResetMax() {
-      return BaseCrawler.DEFAULT_PERMISSION_BUF_MAX;
+      return 0;
     }
 
     public void setGloballyPermittedHosts(List<String> hosts) {
@@ -322,11 +287,6 @@ public class MockCrawler extends NullCrawler {
 
     @Override
     public void updateCdnStems(String url) {
-    }
-
-    @Override
-    public CrawlUrl addChild(CrawlUrl curl, String url) {
-      return null;
     }
   }
 }

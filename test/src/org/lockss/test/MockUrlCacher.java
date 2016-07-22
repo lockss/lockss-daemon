@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -34,12 +30,10 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.*;
 
 /**
  * This is a mock version of <code>UrlCacher</code> used for testing

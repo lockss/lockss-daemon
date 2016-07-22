@@ -37,7 +37,6 @@ import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.metadata.MetadataManager;
-import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.db.DbException;
@@ -107,7 +106,6 @@ public class DebugPanel extends LockssServlet {
 
   private LockssDaemon daemon;
   private PluginManager pluginMgr;
-  private CrawlManager crawlMgr;
   private ConfigManager cfgMgr;
   private DbManager dbMgr;
   private MetadataManager metadataMgr;
@@ -139,7 +137,6 @@ public class DebugPanel extends LockssServlet {
     super.init(config);
     daemon = getLockssDaemon();
     pluginMgr = daemon.getPluginManager();
-    crawlMgr = daemon.getCrawlManager();
     cfgMgr = daemon.getConfigManager();
     rmtApi = daemon.getRemoteApi();
     try {
@@ -183,23 +180,8 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_FORCE_START_V3_POLL.equals(action)) {
       forceV3Poll();
     }
-    if (ACTION_START_CRAWL.equals(action)) {
-      doCrawl(false, false);
-    }
-    if (ACTION_FORCE_START_CRAWL.equals(action)) {
-      doCrawl(true, false);
-    }
-    if (ACTION_START_DEEP_CRAWL.equals(action)) {
-      doCrawl(false, true);
-    }
-    if (ACTION_FORCE_START_DEEP_CRAWL.equals(action)) {
-      doCrawl(true, true);
-    }
     if (ACTION_CHECK_SUBSTANCE.equals(action)) {
       doCheckSubstance();
-    }
-    if (ACTION_CRAWL_PLUGINS.equals(action)) {
-      crawlPluginRegistries();
     }
     if (ACTION_FIND_URL.equals(action)) {
       showForm = doFindUrl();
@@ -279,85 +261,6 @@ public class DebugPanel extends LockssServlet {
       log.error("Can't disable metadata indexing", e);
       errMsg = "Error: " + e.toString();
     }
-  }
-
-  private void doCrawl(boolean force, boolean deep) {
-    ArchivalUnit au = getAu();
-    if (au == null) return;
-    try {
-      startCrawl(au, force, deep);
-    } catch (CrawlManagerImpl.NotEligibleException.RateLimiter e) {
-      errMsg = "AU has crawled recently (" + e.getMessage()
-	+ ").  Click again to override.";
-      showForceCrawl = true;
-      return;
-    } catch (CrawlManagerImpl.NotEligibleException e) {
-      errMsg = "Can't enqueue crawl: " + e.getMessage();
-    }
-  }
-
-  private void crawlPluginRegistries() {
-    StringBuilder sb = new StringBuilder();
-    for (ArchivalUnit au : pluginMgr.getAllRegistryAus()) {
-      sb.append(au.getName());
-      sb.append(": ");
-      try {
-	startCrawl(au, true, false);
-	sb.append("Queued.");
-      } catch (CrawlManagerImpl.NotEligibleException e) {
-	sb.append("Failed: ");
-	sb.append(e.getMessage());
-      }
-      sb.append("\n");
-    }
-    statusMsg = sb.toString();
-  }
-
-  private boolean startCrawl(ArchivalUnit au, boolean force, boolean deep)
-      throws CrawlManagerImpl.NotEligibleException {
-    CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
-    if (force) {
-      RateLimiter limit = cmi.getNewContentRateLimiter(au);
-      if (!limit.isEventOk()) {
-	limit.unevent();
-      }
-    }
-    cmi.checkEligibleToQueueNewContentCrawl(au);
-    String delayMsg = "";
-    String deepMsg = "";
-    try {
-      cmi.checkEligibleForNewContentCrawl(au);
-    } catch (CrawlManagerImpl.NotEligibleException e) {
-      delayMsg = ", Start delayed due to: " + e.getMessage();
-    }
-    Configuration config = ConfigManager.getCurrentConfig();
-    int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
-
-    CrawlReq req;
-    try {
-      req = new CrawlReq(au);
-      req.setPriority(pri);
-      if (deep) {
-	int d = Integer.parseInt(formDepth);
-	if (d < 0) {
-	  errMsg = "Illegal refetch depth: " + d;
-	  return false;
-	}
-	req.setRefetchDepth(d);
-	deepMsg = "Deep (" + req.getRefetchDepth() + ") ";
-
-      }
-    } catch (NumberFormatException e) {
-      errMsg = "Illegal refetch depth: " + formDepth;
-      return false;
-    } catch (RuntimeException e) {
-      log.error("Couldn't create CrawlReq: " + au, e);
-      errMsg = "Couldn't create CrawlReq: " + e.toString();
-      return false;
-    }
-    cmi.startNewContentCrawl(req, null);
-    statusMsg = deepMsg + "Crawl requested for " + au.getName() + delayMsg;
-    return true;
   }
 
   private void doCheckSubstance() {

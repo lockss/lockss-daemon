@@ -89,7 +89,6 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
-    theDaemon.getCrawlManager();
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));

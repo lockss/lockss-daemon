@@ -60,8 +60,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     historyRepo.startService();
 
     polls = new ArrayList(3);
-    state = new NodeStateImpl(mcus, -1, new CrawlState(-1, -1, -1), polls,
-                              historyRepo);
+    state = new NodeStateImpl(mcus, -1, polls, historyRepo);
   }
 
   public void tearDown() throws Exception {
@@ -151,7 +150,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   public void testIsInternalNode() {
     MockCachedUrlSet mcus = new MockCachedUrlSet(null, null);
     mcus.setIsLeaf(true);
-    state = new NodeStateImpl(mcus, -1, null, null, null);
+    state = new NodeStateImpl(mcus, -1, null, null);
     assertFalse(state.isInternalNode());
 
     mcus.setIsLeaf(false);

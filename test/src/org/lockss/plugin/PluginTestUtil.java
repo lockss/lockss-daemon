@@ -1,8 +1,6 @@
 /*
- * $Id$
- *
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -253,11 +251,6 @@ public class PluginTestUtil {
 //       log.debug("Creating simulated content tree: " + sau.getParamMap());
       sau.generateContentTree();
     }
-    log.debug("Crawling simulated content");
-    NoCrawlEndActionsFollowLinkCrawler crawler =
-      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
-    //crawler.setCrawlManager(crawlMgr);
-    crawler.doCrawl();
   }
 
 

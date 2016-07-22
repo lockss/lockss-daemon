@@ -27,16 +27,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import java.io.*;
-import java.util.*;
-import org.lockss.state.*;
 import org.lockss.test.*;
-import org.lockss.test.MockCrawler.MockCrawlerFacade;
 
 public class LockssPermissionCheckerTestCase extends LockssTestCase {
 
   protected MockArchivalUnit mau;
-  protected MockCrawlerFacade mcf;
   protected MockAuState aus;
 
   public void setUp() throws Exception {
@@ -49,7 +44,5 @@ public class LockssPermissionCheckerTestCase extends LockssTestCase {
     MockNodeManager nm = new MockNodeManager();
     nm.setAuState(aus);
     daemon.setNodeManager(nm, mau);
-    mcf = new MockCrawler().new MockCrawlerFacade();
-    mcf.setAu(mau);
   }
 }

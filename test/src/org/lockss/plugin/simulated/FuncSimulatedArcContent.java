@@ -33,7 +33,6 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import junit.framework.*;
 
@@ -142,9 +141,6 @@ public class FuncSimulatedArcContent extends LockssTestCase {
 
   protected void crawlContent() {
     log.debug("crawlContent()");
-    Crawler crawler =
-      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
-    crawler.doCrawl();
   }
 
   protected void checkContent() throws IOException {

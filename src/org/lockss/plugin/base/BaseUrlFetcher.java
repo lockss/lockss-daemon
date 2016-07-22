@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -35,7 +31,6 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -686,14 +681,6 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected void addRequestHeaders() {
-    List<String> hdrs =
-      CurrentConfig.getList(CrawlManagerImpl.PARAM_REQUEST_HEADERS,
-			    CrawlManagerImpl.DEFAULT_REQUEST_HEADERS);
-    if (hdrs != null) {
-      for (String hdr : hdrs) {
-	addHdr(hdr);
-      }
-    }
   }
   
   protected void addPluginRequestHeaders() {

@@ -34,7 +34,6 @@ import org.lockss.alert.AlertManager;
 import org.lockss.account.AccountManager;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
@@ -62,7 +61,6 @@ public class MockLockssDaemon extends LockssDaemon {
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
   ServletManager servletManager = null;
-  CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
   NodeManagerManager nodeManagerManager = null;
   PluginManager pluginManager = null;
@@ -110,7 +108,6 @@ public class MockLockssDaemon extends LockssDaemon {
 
     wdogService = null;
     schedService = null;
-    crawlManager = null;
     pluginManager = null;
     metadataManager = null;
     statusService = null;
@@ -306,12 +303,8 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the crawl manager instance
    * @return the CrawlManager
    */
-  public CrawlManager getCrawlManager() {
-    if (crawlManager == null) {
-      crawlManager = (CrawlManager)newManager(LockssDaemon.CRAWL_MANAGER);
-      managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
-    }
-    return crawlManager;
+  public Object getCrawlManager() {
+    return null;
   }
 
   /**
@@ -406,15 +399,6 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.REMOTE_API, remoteApi);
     }
     return remoteApi;
-  }
-
-  /**
-   * Set the CrawlManager
-   * @param crawlMan the new manager
-   */
-  public void setCrawlManager(CrawlManager crawlMan) {
-    crawlManager = crawlMan;
-    managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
   }
 
   /**

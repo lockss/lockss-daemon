@@ -76,7 +76,6 @@ public class NodeStateImpl
 
 
   protected transient CachedUrlSet cus;
-  protected CrawlState crawlState;
   protected List polls;
   protected List activeV3Polls;
   protected List completedV3Polls;
@@ -95,7 +94,6 @@ public class NodeStateImpl
                 HistoryRepository repository) {
     // CASTOR: a priori unneeded after Castor is phased out
     this.cus = cus;
-    this.crawlState = new CrawlState(bean.getCrawlStateBean());
     this.polls = new ArrayList(bean.pollBeans.size());
     this.hashDuration = bean.getAverageHashDuration();
     this.curState = bean.getState();
@@ -110,10 +108,9 @@ public class NodeStateImpl
    * @param polls List of PollState objects
    * @param repository HistoryRepository
    */
-  public NodeStateImpl(CachedUrlSet cus, long hashDuration, CrawlState crawlState,
+  public NodeStateImpl(CachedUrlSet cus, long hashDuration,
                 List polls, HistoryRepository repository) {
     this.cus = cus;
-    this.crawlState = crawlState;
     this.polls = polls;
     this.activeV3Polls = new ArrayList();
     this.completedV3Polls = new ArrayList();
@@ -136,10 +133,6 @@ public class NodeStateImpl
 
   public CachedUrlSet getCachedUrlSet() {
     return cus;
-  }
-
-  public CrawlState getCrawlState() {
-    return crawlState;
   }
 
   public int getState() {

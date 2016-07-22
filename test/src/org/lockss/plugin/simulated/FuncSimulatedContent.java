@@ -210,9 +210,6 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   protected void crawlContent(SimulatedArchivalUnit sau) {
     log.debug("crawlContent()");
-    Crawler crawler =
-      new NoCrawlEndActionsFollowLinkCrawler(sau, new MockAuState());
-    crawler.doCrawl();
   }
 
   protected void checkContent(SimulatedArchivalUnit sau) throws IOException {

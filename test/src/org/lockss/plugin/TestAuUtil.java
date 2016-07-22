@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -37,7 +33,6 @@ import java.net.*;
 import java.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
@@ -149,10 +144,6 @@ public class TestAuUtil extends LockssTestCase {
     getMockLockssDaemon().getNodeManager(mau).startService();
     assertFalse(AuUtil.hasCrawled(mau));
     AuState aus = AuUtil.getAuState(mau);
-    aus.newCrawlFinished(Crawler.STATUS_ERROR, "foo");
-    assertFalse(AuUtil.hasCrawled(mau));
-    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "foo");
-    assertTrue(AuUtil.hasCrawled(mau));
   }
 
   public void testGetPluginDefinition() throws Exception {
@@ -526,13 +517,6 @@ public class TestAuUtil extends LockssTestCase {
 
   void setGlobalProxy(String host, int port) {
     Properties p = new Properties();
-    if (host != null) {
-      p.put(BaseCrawler.PARAM_PROXY_ENABLED, "true");
-      p.put(BaseCrawler.PARAM_PROXY_HOST, host);
-      p.put(BaseCrawler.PARAM_PROXY_PORT, ""+port);
-    } else {
-      p.put(BaseCrawler.PARAM_PROXY_ENABLED, "false");
-    }
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 				    

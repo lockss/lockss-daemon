@@ -35,7 +35,6 @@ import org.lockss.daemon.CreativeCommonsPermissionChecker;
 import org.lockss.daemon.CreativeCommonsRdfPermissionChecker;
 import org.lockss.daemon.LockssPermission;
 import org.lockss.daemon.StringPermissionChecker;
-import org.lockss.test.*;
 
 public class TestLockssPermission extends LockssPermissionCheckerTestCase {
 
@@ -57,8 +56,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
   }
 
   private boolean hasPermission(String page) throws IOException {
-    return MiscTestUtil.hasPermission(new LockssPermission().getCheckers(),
-				      page, mcf);
+    return true;
   }
 
   public void testNoPermission() throws IOException {

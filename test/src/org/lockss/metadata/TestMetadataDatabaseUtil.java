@@ -29,7 +29,6 @@ package org.lockss.metadata;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.util.List;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
@@ -52,7 +51,6 @@ import org.lockss.plugin.simulated.SimulatedPlugin;
 import org.lockss.test.*;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
-import org.lockss.util.MetadataUtil;
 
 /**
  * Test class for org.lockss.metadata.MetadataDatabaseUtil. 
@@ -81,7 +79,6 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
-    theDaemon.getCrawlManager();
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
                                               simAuConfig(tempDirPath + "/0"));

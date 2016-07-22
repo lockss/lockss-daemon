@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,14 +28,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.wrapper;
 
 import java.util.*;
-
-import org.lockss.app.LockssDaemon;
-import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.test.*;
-import org.lockss.util.*;
 
 public class TestWrapperUtil extends LockssTestCase {
 
@@ -96,7 +86,6 @@ public class TestWrapperUtil extends LockssTestCase {
     assertRegistered(org.lockss.extractor.LinkExtractor.class);
     assertRegistered(LoginPageChecker.class);
     assertRegistered(PermissionCheckerFactory.class);
-    assertRegistered(org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow.class);
     assertRegistered(org.lockss.util.urlconn.CacheResultHandler.class);
   }
 

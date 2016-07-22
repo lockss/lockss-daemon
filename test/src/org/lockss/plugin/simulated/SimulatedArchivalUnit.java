@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,14 +32,12 @@ import java.net.*;
 import java.util.*;
 import java.io.File;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.extractor.*;
 import org.lockss.state.*;
 
 /**
@@ -453,23 +447,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit
     paramMap.putString(KEY_AU_TITLE, auName);
 
     titleDbChanged();
-  }
-
-  protected CrawlRule makeRule() throws ConfigurationException {
-    try {
-      CrawlRule rule1 =
-        new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
-      CrawlRule rule2 =
-        new CrawlRules.RE(paramMap.getUrl(KEY_AU_BASE_URL) + ".*",
-  			CrawlRules.RE.MATCH_INCLUDE);
-      return new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
-    } catch(LockssRegexpException ex) {
-      throw new ConfigurationException("problem making crawl rules", ex);
-    }
-  }
-  
-  public void setRule(CrawlRule rule) {
-    this.rule = rule;
   }
   
   /** No longer effective */

@@ -42,7 +42,6 @@ import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
-import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.apache.commons.collections.map.LinkedMap;
 
@@ -105,7 +104,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String STREAM_COMM_MANAGER = "StreamCommManager";
   public static final String ROUTER_MANAGER = "RouterManager";
   public static final String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
-  public static final String CRAWL_MANAGER = "CrawlManager";
   public static final String PLUGIN_MANAGER = "PluginManager";
   public static final String METADATA_MANAGER = "MetadataManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
@@ -146,7 +144,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(KEYSTORE_MANAGER,
                     "org.lockss.daemon.LockssKeyStoreManager"),
     new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
-    new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
     new ManagerDesc(REPOSITORY_MANAGER,
                     "org.lockss.repository.RepositoryManager"),
     // start plugin manager after generic services
@@ -282,15 +279,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public SchedService getSchedService() {
     return (SchedService) getManager(SCHED_SERVICE);
-  }
-
-  /**
-   * return the crawl manager instance
-   * @return the CrawlManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public CrawlManager getCrawlManager() {
-    return (CrawlManager) getManager(CRAWL_MANAGER);
   }
 
   /**
