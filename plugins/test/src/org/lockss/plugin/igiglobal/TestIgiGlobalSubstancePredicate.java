@@ -50,9 +50,10 @@ public class TestIgiGlobalSubstancePredicate extends LockssTestCase {
   
   private static final String BASE_URL = "http://www.igi-global.com/";
   private final String url_abs = BASE_URL + "gateway/article/148741";
-  private final String url_abs2 = BASE_URL + "gateway/article/148742";
+  private final String url_abs2 = BASE_URL + "gateway/chapter/148742";
   private final String url_full = BASE_URL + "gateway/article/full-text-html/148741";
   private final String url_pdf = BASE_URL + "gateway/article/full-text-pdf/148741";
+  private final String url_chapter = BASE_URL + "gateway/chapter/full-text-pdf/148741";
   private final String url_viewtitle = BASE_URL + "viewtitle.aspx?titleid=148741";
   private final String url_pdfAspx = BASE_URL + "pdf.aspx?tid=148741&ptid=118392&ctid=4&t=Call+For+Articles";
   private final String url_pdfAspx2 = BASE_URL + "pdf.aspx?tid=148741&ptid=118392&ctid=4&t=Landing+Page+Again";
@@ -78,8 +79,10 @@ public class TestIgiGlobalSubstancePredicate extends LockssTestCase {
     mau = new MockArchivalUnit();
     mau.setConfiguration(auConfig());
     
-    // This is the same as the IgiGlobalPlugin's substance patterns
+    // This is the same as the IgiGlobal[Books]Plugin's substance patterns
     List subPat = ListUtil.list(
+        "/gateway/chapter/full-text-html/[0-9]+$",
+        "/gateway/chapter/full-text-pdf/[0-9]+$",
         "/gateway/article/full-text-html/[0-9]+$",
         "/gateway/article/full-text-pdf/[0-9]+$",
         "/viewtitle[.]aspx[?]titleid=[0-9]+$", 
@@ -128,11 +131,16 @@ public class TestIgiGlobalSubstancePredicate extends LockssTestCase {
     cu.setContent(goodHtmlContent);
     cu.setContentSize(goodHtmlContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_HTML);
+    cu = mau.addUrl(url_chapter, true, true, htmlHeader);
+    cu.setContent(goodHtmlContent);
+    cu.setContentSize(goodHtmlContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_HTML);
     
     // for igiglobal substance must be full or pdf AND the mime-type
     // must match the type of file 
     assertTrue(subP.isSubstanceUrl(url_full));
     assertTrue(subP.isSubstanceUrl(url_pdf));
+    assertTrue(subP.isSubstanceUrl(url_chapter));
   }
   
   
