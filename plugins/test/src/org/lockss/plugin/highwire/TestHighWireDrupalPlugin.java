@@ -171,7 +171,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     // Test for pages that should get crawled or not
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_2015_manifest.html", true, au);
-    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", false, au);
+    // new inclusive crawl_rule
+    shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
     // toc page for a volume, issue
     shouldCacheTest(ROOT_URL + "content/2015", false, au);
