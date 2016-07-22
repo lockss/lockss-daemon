@@ -42,39 +42,43 @@ import org.lockss.plugin.*;
 // super class for this plugin - variants defined within it
 public class TestIgiGlobalContentValidator extends LockssTestCase {
   
-  static Logger log = Logger.getLogger("TestIgiGlobalMetadataExtractor");
+  static Logger log = Logger.getLogger(TestIgiGlobalContentValidator.class);
   
   private MockLockssDaemon theDaemon;
-  private static ArchivalUnit bau;
   
   private static IgiGlobalContentValidator.HtmlContentValidator contentValidator;
   
+  private static final String BASE_URL = "http://www.igiglobal.com/";
+  private static final String TEXT = "text";
+  private static final int LEN = TEXT.length();
+  private static final String TEXT_CONTENT_TYPE = "text/html; charset=utf-8";
+  
   // variables that will set up for each variant of the test (eg. LOCKSS v. CLOCKSS or JOURNAL v. BOOK
-  private static Configuration AU_CONFIG;
-  private static String PLUGIN_NAME; 
-  private static String BASE_URL = "http://www.igiglobal.com/";
-  private static String URL1_STRING;
-  private static String URL2_STRING;
-  private static String URL3_STRING;
-  private static String URL4_STRING;
+  private ArchivalUnit bau;
+  String pluginName;
+  Configuration AuConfig;
   
+  String urlStr1;
+  String urlStr2;
+  String urlStr3;
+  String urlStr4;
   
-  // variant of the plugin metadata extraction test for the JOURNAL version of the plugin
+  // variant of thurlStr4tadata extraction test for the JOURNAL version of the plugin
   public static class TestJournalPlugin extends TestIgiGlobalContentValidator {
     
     public void setUp() throws Exception {
       
-      PLUGIN_NAME="org.lockss.plugin.igiglobal.IgiGlobalPlugin";  
-      AU_CONFIG = ConfigurationUtil.fromArgs(
+      pluginName = "org.lockss.plugin.igiglobal.IgiGlobalPlugin";  
+      AuConfig = ConfigurationUtil.fromArgs(
           "base_url", BASE_URL,
           "volume", "2",
           "journal_issn","1546-2234" );
       super.setUp();
       
-      URL1_STRING = BASE_URL + "gateway/article/81299";
-      URL2_STRING = BASE_URL + "gateway/article/full-text-html/81299";
-      URL3_STRING = BASE_URL + "gateway/article/full-text-pdf/81299";
-      URL4_STRING = BASE_URL + "pdf.aspx?tid=100015&ptid=71664&ctid=17&t=Call+For+Articles";
+      urlStr1 = BASE_URL + "gateway/article/81299";
+      urlStr2 = BASE_URL + "gateway/article/full-text-html/81299";
+      urlStr3 = BASE_URL + "gateway/article/full-text-pdf/81299";
+      urlStr4 = BASE_URL + "pdf.aspx?tid=100015&ptid=71664&ctid=17&t=Call+For+Articles";
     }
     
   }
@@ -82,19 +86,20 @@ public class TestIgiGlobalContentValidator extends LockssTestCase {
   // variant of the plugin metadata extraction test for the BOOK version of the plugin
   public static class TestBooksPlugin extends TestIgiGlobalContentValidator {
     
+    
     public void setUp() throws Exception {
       // set up stuff explicit to this variant and call parent
-      PLUGIN_NAME="org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin";  
-      AU_CONFIG = ConfigurationUtil.fromArgs(
+      pluginName="org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin";  
+      AuConfig = ConfigurationUtil.fromArgs(
           "base_url", BASE_URL,
           "volume", "464",
           "book_isbn", "9781591407928" );
       super.setUp();
       
-      URL1_STRING = BASE_URL + "gateway/chapter/81299";
-      URL2_STRING = BASE_URL + "gateway/chapter/full-text-html/81299";
-      URL3_STRING = BASE_URL + "gateway/chapter/full-text-pdf/81299";
-      URL4_STRING = BASE_URL + "pdf.aspx?tid=107536&ptid=46985&ctid=15&t=Title+Page";
+      urlStr1 = BASE_URL + "gateway/chapter/81299";
+      urlStr2 = BASE_URL + "gateway/chapter/full-text-html/81299";
+      urlStr3 = BASE_URL + "gateway/chapter/full-text-pdf/81299";
+      urlStr4 = BASE_URL + "pdf.aspx?tid=107536&ptid=46985&ctid=15&t=Title+Page";
     }
     
   }
@@ -112,13 +117,11 @@ public class TestIgiGlobalContentValidator extends LockssTestCase {
     theDaemon.getCrawlManager();
     
     //igiConf is only set up in variants - check before using?
-    assertNotEquals(AU_CONFIG, null);
+    assertNotEquals(AuConfig, null);
     
-    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
+    bau = PluginTestUtil.createAndStartAu(pluginName, AuConfig);
     
     ContentValidatorFactory cvfact = new IgiGlobalContentValidator.Factory();
-    if (cvfact == null) 
-      fail("cvfact == null");
     contentValidator = (IgiGlobalContentValidator.HtmlContentValidator) cvfact.createContentValidator(bau, "text/html");
     if (contentValidator == null) 
       fail("contentValidator == null");
@@ -135,26 +138,28 @@ public class TestIgiGlobalContentValidator extends LockssTestCase {
    * @throws Exception
    */
   public void testForTextContent() throws Exception {
+    MockCachedUrl cu;
+    
     setUp();
-    MockCachedUrl cu = new MockCachedUrl(URL1_STRING, bau);
-    cu.setContent("text");
-    cu.setContentSize("text".length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=utf-8");
+    cu = new MockCachedUrl(urlStr1, bau);
+    cu.setContent(TEXT);
+    cu.setContentSize(LEN);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     contentValidator.validate(cu);
-    cu = new MockCachedUrl(URL2_STRING, bau);
-    cu.setContent("text");
-    cu.setContentSize("text".length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=utf-8");
+    cu = new MockCachedUrl(urlStr2, bau);
+    cu.setContent(TEXT);
+    cu.setContentSize(LEN);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     contentValidator.validate(cu);
-    cu = new MockCachedUrl(URL3_STRING, bau);
-    cu.setContent("text");
-    cu.setContentSize("text".length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=utf-8");
+    cu = new MockCachedUrl(urlStr3, bau);
+    cu.setContent(TEXT);
+    cu.setContentSize(LEN);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     contentValidator.validate(cu);
-    cu = new MockCachedUrl(URL4_STRING, bau);
-    cu.setContent("text");
-    cu.setContentSize("text".length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=utf-8");
+    cu = new MockCachedUrl(urlStr4, bau);
+    cu.setContent(TEXT);
+    cu.setContentSize(LEN);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     try {
       contentValidator.validate(cu);
       fail("Bad cu should throw exception");
