@@ -55,7 +55,7 @@ public class HighWireDrupalCrawlSeed {
   
   private static final Logger log = Logger.getLogger(HighWireDrupalCrawlSeed.class);
   
-  private static final String APS_JN_JRNL = "jn.physiology.org/";
+  private static final String APS_JN_JRNL = "://jn.physiology.org/";
   
   /**
    * <p>
