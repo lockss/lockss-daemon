@@ -19,6 +19,14 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2012 ; Colorado Review Volume 39 ; 39 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < down ; 2013 ; Colorado Review Volume 40 ; 40 >
@@ -31,6 +39,8 @@
 
       au < down ; 2014 ; Colorado Review Volume 41 ; 41 >
       au < down ; 2015 ; Colorado Review Volume 42 ; 42 >
+
+      au < manifest ; 2016 ; Colorado Review Volume 43 ; 43 >
 
     }
 
