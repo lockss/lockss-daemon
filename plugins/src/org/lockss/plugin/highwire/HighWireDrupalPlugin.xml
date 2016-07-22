@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>50</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -114,7 +114,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_[^/_.]+_manifest.dtl", url_host(base_url)</string>
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_[^/_.]+_manifest.html", url_host(base_url)</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)/?|.*/article-.*)$", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required .toc  -->
