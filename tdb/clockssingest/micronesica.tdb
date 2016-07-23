@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Micronesica ;
+    info[contract] = 2014 ;
+    info[tester] = S
+    # University of Guam is involved, but seems to be self-published by Micronesia    
+  >
+
+  {
+    title <
+        name = Micronesica WARC content ;
+        issn = 0026-279X
+    >
+      
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+      
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/micronesica-released/
+    #for smoke test on Content5 only
+    param[base_url] = http://content5.lockss.org/warcfiles/micronesica-released/
+    hidden[proxy] = DIRECT 
+    implicit < status ; status2 ; year ; name ; param[year] >    
+
+    au < testing ; exists ; 2016 ; Micronesica WARC Content 2016 ; 2016 >
+    
+  }    
+}
