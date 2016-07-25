@@ -85,8 +85,6 @@ public class TestDaemonStatusService extends LockssTestCase {
 
     PluginTestUtil.crawlSimAu(sau1);
 
-    theDaemon.getRemoteApi().startService();
-
     service = new DaemonStatusServiceImpl();
   }
 

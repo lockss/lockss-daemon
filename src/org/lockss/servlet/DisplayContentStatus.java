@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
-import org.lockss.remote.RemoteApi;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
@@ -74,7 +73,6 @@ public class DisplayContentStatus extends LockssServlet {
   private java.util.List rules;
   private BitSet tableOptions;
   private PluginManager pluginMgr;
-  private RemoteApi remoteApi;
   private String action;
   private String auName;
   private String deleteMessage;
@@ -88,7 +86,6 @@ public class DisplayContentStatus extends LockssServlet {
     super.init(config);
     statSvc = getLockssDaemon().getStatusService();
     pluginMgr = getLockssDaemon().getPluginManager();
-    remoteApi = getLockssDaemon().getRemoteApi();
   }
   static final Set fixedParams =
           SetUtil.set("text", "output", "options", "table", "key", "sort");
@@ -280,7 +277,6 @@ public class DisplayContentStatus extends LockssServlet {
   }
 
   private void doRemoveAus(java.util.List aus) throws IOException {
-    remoteApi.deleteAus(aus);
   }
 
   private void doHtmlStatusTable() throws IOException {

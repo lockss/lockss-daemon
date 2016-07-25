@@ -38,8 +38,6 @@ import org.apache.commons.lang3.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
 import org.lockss.plugin.PluginManager;
-import org.lockss.remote.RemoteApi;
-import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
 import org.mortbay.html.*;
@@ -114,7 +112,6 @@ public class BatchAuConfigNew extends LockssServlet {
   static final String SESSION_KEY_BACKUP_INFO = "BackupInfo";
 
   private PluginManager pluginMgr;
-  private RemoteApi remoteApi;
 
   String action;			// action request by form
   Verb verb;
@@ -128,7 +125,6 @@ public class BatchAuConfigNew extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
-    remoteApi = getLockssDaemon().getRemoteApi();
   }
 
   protected void lockssHandleRequest() throws IOException {
@@ -173,12 +169,6 @@ public class BatchAuConfigNew extends LockssServlet {
     else if (action.equals(ACTION_RESTORE)) displayRestore();
     else if (action.equals(ACTION_SELECT_AUS)) chooseAus();
     else if (action.equals(ACTION_SELECT_RESTORE_TITLES)) selectRestoreTitles();
-    else if (action.equals(ACTION_ADD_AUS))
-      doAddAus(RemoteApi.BATCH_ADD_ADD);
-    else if (action.equals(ACTION_REACT_AUS))
-      doAddAus(RemoteApi.BATCH_ADD_REACTIVATE);
-    else if (action.equals(ACTION_RESTORE_AUS))
-      doAddAus(RemoteApi.BATCH_ADD_RESTORE);
     else if (action.equals(ACTION_DO_BACKUP)) doBackup();
     else if (action.equals(ACTION_REMOVE_AUS)) doRemoveAus(false);
     else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
@@ -191,8 +181,8 @@ public class BatchAuConfigNew extends LockssServlet {
 
   private Iterator<LinkWithExplanation> getMenuDescriptors() {
     String ACTION = ACTION_TAG + "=";
-    int numActive = remoteApi.getAllAus().size();
-    boolean someInactive = remoteApi.countInactiveAus() > 0;
+    int numActive = 0;
+    boolean someInactive = false;
     ServletDescr myDescr = myServletDescr();
     ArrayList<LinkWithExplanation> list =
 	new ArrayList<LinkWithExplanation>(10); // at most 10 entries
@@ -271,23 +261,12 @@ public class BatchAuConfigNew extends LockssServlet {
 	(verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
       MutableBoolean isAnySelectable = new MutableBoolean(false);
       MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-      Composite chooseSets = ServletUtil.makeChooseSets(this, remoteApi,
-							titleSets.iterator(),
-							verb,
-							KEY_TITLE_SET,
-							doGray,
-							isAnySelectable,
-							"Select AUs",
-							ACTION_SELECT_AUS,
-							buttonNumber, 10);
       submitButtonNumber = buttonNumber.intValue();
 
       if (isAnySelectable.booleanValue()) {
 	// Display set chooser
 	ServletUtil.layoutExplanationBlock(page,
 					   "Select one or more collections of AUs to " + verb.word + ", then click \"Select AUs\".");
-	ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
-				     chooseSets, ACTION_TAG, KEY_VERB, verb);
       } else {
 	// Set chooser not needed
 	String msg = "All AUs in all predefined collections of AUs " +
@@ -311,93 +290,10 @@ public class BatchAuConfigNew extends LockssServlet {
 
     // Find AUs in sets
     Collection sets = findTitleSetsFromNames(setNames);
-    BatchAuStatus bas = verb.findAusInSetsForVerb(remoteApi, sets);
 
-    // Do chooseSets() if none
-    if (bas.getStatusList().isEmpty()) {
       errMsg = "The selected sets contain no AUs.";
       chooseSets(verb);
       return;
-    }
-
-    // Do dontChooseAus() if none OK
-    if (!bas.hasOk()) {
-      dontChooseAus(bas);
-      return;
-    }
-
-    // Continue in next method
-    chooseAus(bas, verb);
-  }
-
-  private void chooseAus(BatchAuStatus bas, Verb verb)
-      throws IOException {
-    // Set up
-    HttpSession session = getSession();
-    session.setAttribute(SESSION_KEY_BACKUP_INFO, bas.getBackupInfo());
-    Map auConfs = new HashMap();
-    session.setAttribute(SESSION_KEY_AUID_MAP, auConfs);
-    List repos = remoteApi.getRepositoryList();
-    boolean repoFlg = verb.isAdd && repos.size() > 1;
-    String buttonText = verb.cap + " Selected AUs";
-
-    // Begin page
-    Page page = newPage();
-    addJavaScript(page);
-    layoutErrorBlock(page);
-
-    // Explanation block
-    String expl;
-    if (repoFlg) {
-      String s = "Select the disk(s) on which you want to place AUs, then select the AUs you wish to "
-        + verb.word + " (or use \"Select All\"). Then click \""
-        + buttonText + "\".";
-      Composite c = new Font(1, true); // how to avoid HTML here?
-      c.add(s);
-      expl = c.toString();
-    }
-    else {
-      expl = "Select the AUs you wish to " + verb.word
-        + ". Then click \"" + buttonText + "\".";
-    }
-    ServletUtil.layoutExplanationBlock(page, expl);
-
-    // Start form
-    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
-    frm.add(new Input(Input.Hidden, ACTION_TAG));
-    frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
-
-    if (verb.isAdd) {
-      // display df for Add even if only one repo
-      Map<String,PlatformUtil.DF> repoMap = remoteApi.getRepositoryMap();
-      frm.add(ServletUtil.makeRepoTable(this, remoteApi,
-					repoMap, KEY_DEFAULT_REPO));
-      if (repoFlg) {
-	session.setAttribute(SESSION_KEY_REPO_MAP, repoMap);
-      }
-    }
-
-    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-    frm.add(ServletUtil.makeChooseAus(this, bas.getStatusList().iterator(),
-        verb, repos, auConfs, KEY_AUID, KEY_REPO, FOOT_REPO_CHOICE,
-        buttonText, buttonNumber, bas.hasAtLeast(LONG_TABLE_AT_LEAST)));
-    submitButtonNumber = buttonNumber.intValue();
-
-    if (bas.hasNotOk()) {
-      frm.add(ServletUtil.makeNonOperableAuTable(
-          "These AUs cannot be " + verb.past, bas.getStatusList().iterator()));
-    }
-    page.add(frm);
-    endPage(page);
-  }
-
-  private void dontChooseAus(BatchAuStatus bas) throws IOException {
-    Page page = newPage();
-    addJavaScript(page);
-    layoutErrorBlock(page);
-    page.add(ServletUtil.makeNonOperableAuTable(
-        "No AUs in set can be " + verb.past, bas.getStatusList().iterator()));
-    endPage(page);
   }
 
   Collection findTitleSetsFromNames(String[] names) {
@@ -421,10 +317,6 @@ public class BatchAuConfigNew extends LockssServlet {
 
     // Get the HTTP session.
     HttpSession session = getSession();
-
-    // Get the backup information stored in the session.
-    RemoteApi.BackupInfo bi =
-      (RemoteApi.BackupInfo)session.getAttribute(SESSION_KEY_BACKUP_INFO);
 
     // Get the repositories stored in the session.
     LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
@@ -457,12 +349,6 @@ public class BatchAuConfigNew extends LockssServlet {
       String repoId = getParameter(KEY_REPO + "_" + auid);
       auRepoIds.put(auid, repoId);
     }
-
-    // Perform the operation.
-    BatchAuStatus bas = remoteApi.batchAddAus(addOp, auids, repoMap, defRepoId,
-	auConfs, auRepoIds, bi);
-
-    displayBatchAuStatus(bas);
   }
 
   private void doRemoveAus(boolean isDeactivate) throws IOException {
@@ -479,14 +365,6 @@ public class BatchAuConfigNew extends LockssServlet {
       return;
     }
     List auids = ListUtil.fromArray(auidArr);
-
-    BatchAuStatus bas;
-    if (isDeactivate) {
-      bas = remoteApi.deactivateAus(auids);
-    } else {
-      bas = remoteApi.deleteAus(auids);
-    }
-    displayBatchAuStatus(bas);
   }
 
   /** Display the Backup page */
@@ -495,9 +373,6 @@ public class BatchAuConfigNew extends LockssServlet {
     addJavaScript(page);
     layoutErrorBlock(page);
     MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-    ServletUtil.layoutBackup(this, page, remoteApi,
-			     ACTION_TAG, KEY_VERB, VERB_BACKUP,
-			     buttonNumber, ACTION_DO_BACKUP);
     submitButtonNumber = buttonNumber.intValue();
     endPage(page);
   }
@@ -506,28 +381,8 @@ public class BatchAuConfigNew extends LockssServlet {
    * application/binary */
   private void doBackup() throws IOException {
     boolean forceCreate = "true".equalsIgnoreCase(req.getParameter("create"));
-    try {
-      InputStream in = remoteApi.getAuConfigBackupFileOrStream(getMachineName(),
-							       forceCreate);
-      try {
-	resp.setContentType("application/binary");
-	resp.setHeader("Content-disposition",
-		       "attachment; filename=\""
-		       + remoteApi.getAuConfigBackupFileName(getMachineName())
-		       + "\"");
-	OutputStream out = resp.getOutputStream();
-	StreamUtil.copy(in, out);
-	out.close();
-      } finally {
-	IOUtil.safeClose(in);
-      }
-    } catch (FileNotFoundException e) {
       errMsg = "No AUs have been configured - nothing to backup";
       displayMenu();
-    } catch (IOException e) {
-      log.warning("doBackup()", e);
-      throw e;
-    }
   }
 
   /** Display the Restore page */
@@ -549,41 +404,10 @@ public class BatchAuConfigNew extends LockssServlet {
       errMsg = "No backup file uploaded";
       displayRestore();
     } else {
-      try {
-	BatchAuStatus bas = remoteApi.processSavedConfig(ins);
-	if (bas.getStatusList().isEmpty()) {
 	  errMsg = "Backup file is empty";
 	  displayRestore();
 	  return;
-	}
-	chooseAus(bas, VERB_RESTORE);
-      } catch (RemoteApi.InvalidAuConfigBackupFile e) {
-	errMsg = "Couldn't restore configuration: " + e.getMessage();
-	displayRestore();
-      }
     }
-  }
-
-  private void displayBatchAuStatus(BatchAuStatus status)
-      throws IOException {
-    List statusList = status.getStatusList();
-    int okCnt = status.getOkCnt();
-    int errCnt = statusList.size() - okCnt;
-
-    Page page = newPage();
-    layoutErrorBlock(page);
-    StringBuilder sb = new StringBuilder();
-    sb.append(okCnt);
-    sb.append(okCnt == 1 ? " AU " : " AUs ");
-    sb.append(verb.past);
-    if (errCnt != 0) {
-      sb.append(" ");
-      sb.append(errCnt);
-      sb.append(" skipped");
-    }
-    ServletUtil.layoutExplanationBlock(page, sb.toString());
-    ServletUtil.layoutAuStatus(this, page, statusList);
-    endPage(page);
   }
 
   /** Common and page adds Back link, footer */
@@ -628,37 +452,6 @@ public class BatchAuConfigNew extends LockssServlet {
       //this.cap = word.substring(0,1).toUpperCase() + word.substring(1);
       //this.past = past;
       //this.isAdd = isAdd;
-    }
-
-    RemoteApi.BatchAuStatus findAusInSetForVerb(RemoteApi remoteApi,
-						 TitleSet ts) {
-      return findAusInSetsForVerb(remoteApi, ListUtil.list(ts));
-    }
-    RemoteApi.BatchAuStatus findAusInSetsForVerb(RemoteApi remoteApi,
-						 Collection sets) {
-      switch (val) {
-      case VV_ADD:
-	return remoteApi.findAusInSetsToAdd(sets);
-      case VV_DEL:
-      case VV_DEACT:
-	return remoteApi.findAusInSetsToDelete(sets);
-      case VV_REACT:
-	return remoteApi.findAusInSetsToActivate(sets);
-      }
-      return null;
-    }
-
-    int countAusInSetForVerb(RemoteApi remoteApi, TitleSet ts) {
-      switch (val) {
-      case VV_ADD:
-	return ts.countTitles(TitleSet.SET_ADDABLE);
-      case VV_DEL:
-      case VV_DEACT:
-	return ts.countTitles(TitleSet.SET_DELABLE);
-      case VV_REACT:
-	return ts.countTitles(TitleSet.SET_REACTABLE);
-      }
-      return 0;
     }
 
     String action() {

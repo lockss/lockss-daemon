@@ -34,7 +34,6 @@ import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.plugin.*;
-import org.lockss.remote.RemoteApi;
 import org.lockss.state.AuState;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
@@ -75,7 +74,6 @@ public class DisplayContentTab extends LockssServlet {
     private List rules;
     private BitSet tableOptions;
     private PluginManager pluginMgr;
-    private RemoteApi remoteApi;
     private String action;
     private Character auStart;
     private Character auEnd;
@@ -114,7 +112,6 @@ public class DisplayContentTab extends LockssServlet {
         super.init(config);
         statSvc = getLockssDaemon().getStatusService();
         pluginMgr = getLockssDaemon().getPluginManager();
-        remoteApi = getLockssDaemon().getRemoteApi();
     }
 
     static final Set fixedParams =

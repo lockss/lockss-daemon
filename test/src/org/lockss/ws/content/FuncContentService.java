@@ -90,7 +90,6 @@ public class FuncContentService extends LockssTestCase {
     pluginMgr = theDaemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
-    theDaemon.getRemoteApi().startService();
     theDaemon.getServletManager().startService();
     pluginMgr.startService();
 

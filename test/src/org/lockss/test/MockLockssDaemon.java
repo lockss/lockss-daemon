@@ -41,7 +41,6 @@ import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
-import org.lockss.remote.RemoteApi;
 import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
 import org.lockss.servlet.*;
@@ -67,7 +66,6 @@ public class MockLockssDaemon extends LockssDaemon {
   MetadataManager metadataManager = null;
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
-  RemoteApi remoteApi = null;
   DbManager dbManager = null;
   Cron cron = null;
   private boolean suppressStartAuManagers = true;
@@ -390,18 +388,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the RemoteApi instance
-   * @return the RemoteApi
-   */
-  public RemoteApi getRemoteApi() {
-    if (remoteApi == null) {
-      remoteApi = (RemoteApi)newManager(LockssDaemon.REMOTE_API);
-      managerMap.put(LockssDaemon.REMOTE_API, remoteApi);
-    }
-    return remoteApi;
-  }
-
-  /**
    * Set the RepositoryManager
    * @param repositoryMan the new manager
    */
@@ -534,15 +520,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setSystemMetrics(SystemMetrics sysMetrics) {
     systemMetrics = sysMetrics;
     managerMap.put(LockssDaemon.SYSTEM_METRICS, sysMetrics);
-  }
-
-  /**
-   * Set the RemoteApi
-   * @param sysMetrics the new metrics
-   */
-  public void setRemoteApi(RemoteApi sysMetrics) {
-    remoteApi = sysMetrics;
-    managerMap.put(LockssDaemon.REMOTE_API, sysMetrics);
   }
 
   /**

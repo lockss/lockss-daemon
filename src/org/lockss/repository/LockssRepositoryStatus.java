@@ -1,39 +1,39 @@
 /*
- * $Id$
- */
 
-/*
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
+
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
+
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
  Except as contained in this notice, the name of Stanford University shall not
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
+
  */
 
 package org.lockss.repository;
 
 import java.io.*;
 import java.util.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
-import org.lockss.remote.RemoteApi;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.*;
 
@@ -330,7 +330,6 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
   static class RepoSpaceStatusAccessor implements StatusAccessor {
     private LockssDaemon daemon;
-    private RemoteApi remoteApi;
     private RepositoryManager repoMgr;
 
     private static final List columnDescriptors = ListUtil.list
@@ -367,36 +366,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     }
 
     private List getRows() {
-      RemoteApi remoteApi = daemon.getRemoteApi();
-      List repos = remoteApi.getRepositoryList();
       List rows = new ArrayList();
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	Map row = new HashMap();
-	String repo = (String)iter.next();
-	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-	row.put("repo", new StatusTable.Reference(repo,
-						  SERVICE_STATUS_TABLE_NAME,
-						  repo));
-	if (df != null) {
-	  row.put("size", orderedKBObj(df.getSize()));
-	  row.put("used", orderedKBObj(df.getUsed()));
-	  Object avail = orderedKBObj(df.getAvail());
-	  double percent = df.getPercent();
-	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
-	    row.put("free", new StatusTable.DisplayedValue(avail).setColor(Constants.COLOR_RED));
-	    row.put("percent", new StatusTable.DisplayedValue(percent).setColor(Constants.COLOR_RED));
-	  } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
-	    row.put("free", new StatusTable.DisplayedValue(avail).setColor(Constants.COLOR_ORANGE));
-	    row.put("percent", new StatusTable.DisplayedValue(percent).setColor(Constants.COLOR_ORANGE));
-	  } else {
-	    row.put("free", avail);
-	    row.put("percent", percent);
-	  }
-	} else {
-	  row.put("size", "unavailable");
-	}
-	rows.add(row);
-      }
       return rows;
     }
 
@@ -428,37 +398,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     }
 
     public Object getOverview(String tableName, BitSet options) {
-      RemoteApi remoteApi = daemon.getRemoteApi();
-      List repos = remoteApi.getRepositoryList();
       List res = new ArrayList();
-      res.add(StringUtil.numberOfUnits(repos.size(), "disk: ", "disks: "));
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	String repo = (String)iter.next();
-	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-	if (df != null) {
-	  StringBuilder sb = new StringBuilder();
-	  sb.append(StringUtil.sizeKBToString(df.getSize()));
-	  sb.append(" (");
-	  sb.append(Long.toString(Math.round(df.getPercent() * 100)));
-	  sb.append("% full, ");
-	  sb.append(StringUtil.sizeKBToString(df.getAvail()));
-	  sb.append(" free)");
-	  Object s = sb.toString();
- 	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
-	    s = new StatusTable.DisplayedValue(s)
-	      .setColor(Constants.COLOR_RED);
-	  } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
-	    s = new StatusTable.DisplayedValue(s)
-	      .setColor(Constants.COLOR_ORANGE);
-	  }
-	  res.add(s);
-	} else {
-	  res.add("???");
-	}
-	if (iter.hasNext()) {
-	  res.add(", ");
-	}
-      }
       return new StatusTable.Reference(res, SPACE_TABLE_NAME);
     }
   }

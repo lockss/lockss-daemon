@@ -35,7 +35,6 @@ import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.plugin.*;
-import org.lockss.remote.RemoteApi;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.mortbay.html.*;
@@ -76,7 +75,6 @@ public class AddContentTab extends LockssServlet {
     private List rules;
     private BitSet tableOptions;
     private PluginManager pluginMgr;
-    private RemoteApi remoteApi;
     private String action;
     private Character auStart;
     private Character auEnd;
@@ -116,7 +114,6 @@ public class AddContentTab extends LockssServlet {
         super.init(config);
         statSvc = getLockssDaemon().getStatusService();
         pluginMgr = getLockssDaemon().getPluginManager();
-        remoteApi = getLockssDaemon().getRemoteApi();
     }
 
     static final Set fixedParams =

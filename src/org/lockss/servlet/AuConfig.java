@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,16 +30,11 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.List;
-
 import javax.servlet.*;
-
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.remote.*;
-import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -92,10 +83,8 @@ public class AuConfig extends LockssServlet {
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
-  private RemoteApi remoteApi;
 
   String action;			// action request by form
-  PluginProxy plugin;			// current plugin
   Configuration auConfig;		// current config from AU
   Configuration formConfig;		// config read from form
   TitleConfig titleConfig;		// config specified by title DB
@@ -105,7 +94,6 @@ public class AuConfig extends LockssServlet {
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
-    plugin = null;
     auConfig = null;
     formConfig = null;
     titleConfig = null;
@@ -119,7 +107,6 @@ public class AuConfig extends LockssServlet {
     super.init(config);
     configMgr = getLockssDaemon().getConfigManager();
     pluginMgr = getLockssDaemon().getPluginManager();
-    remoteApi = getLockssDaemon().getRemoteApi();
   }
 
   protected void lockssHandleRequest() throws IOException {
@@ -153,35 +140,13 @@ public class AuConfig extends LockssServlet {
              || action.equals(ACTION_DO_REACTIVATE)
              || action.equals(ACTION_DELETE)
              || action.equals(ACTION_CONFIRM_DELETE)) {
-      AuProxy au = getAuProxy(auid);
-      if (au == null) {
-	au = getInactiveAuProxy(auid);
-      }
-      if (au == null) {
 	if (auid != null) {
 	  errMsg = "Invalid AuId: " + auid;
 	}
 	displayAuSummary();
-      } else if (action.equals(ACTION_REACTIVATE)) displayReactivateAu(au);
-      else if (action.equals(ACTION_DO_REACTIVATE)) doReactivateAu(au);
-      else if (action.equals(ACTION_DELETE)) confirmDeleteAu(au);
-      else if (action.equals(ACTION_CONFIRM_DELETE)) doDeleteAu(au);
     } else {
-      // all other actions require AU.  If missing, display summary page
-      AuProxy au = getAuProxy(auid);
-      if (au == null) {
 	errMsg = "Invalid AuId: " + auid;
 	displayAuSummary();
-      } else if (action.equals(ACTION_EDIT)) displayEditAu(au);
-      else if (action.equals(ACTION_RESTORE)) displayRestoreAu(au);
-      else if (action.equals(ACTION_DO_RESTORE)) doRestoreAu(au);
-      else if (action.equals("Update")) updateAu(au, "Updated");
-      else if (action.equals(ACTION_DEACTIVATE)) confirmDeactivateAu(au);
-      else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
-      else {
-	errMsg = "Unknown action: " + action;
-	displayAuSummary();
-      }
     }
   }
 
@@ -195,127 +160,23 @@ public class AuConfig extends LockssServlet {
       return;
     }
 
-    // Local variables
-    Collection allAus = remoteApi.getAllAus();
-    Collection inactiveAus = remoteApi.getInactiveAus();
-
     Page page = newPage();
     addJavaScript(page);
     layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page,
-          "Add a new Archival Unit"
-        + (allAus.isEmpty() ? "." : ", or edit an existing one."));
 
     MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-    ServletUtil.layoutAuSummary(this,
-                                buttonNumber,
-                                remoteApi,
-                                page,
-                                srvURL(myServletDescr()),
-                                "AuSummaryForm",
-                                "AuSummaryTable",
-                                ACTION_TAG,
-                                allAus.iterator(),
-                                inactiveAus.iterator(),
-                                "auid",
-                                ACTION_ADD,
-                                ACTION_RESTORE,
-                                ACTION_REACTIVATE,
-                                ACTION_EDIT);
     submitButtonNumber = buttonNumber.intValue();
 
     endPage(page);
-  }
-
-  /** Display form to edit existing AU */
-  private void displayEditAu(AuProxy au) throws IOException {
-    Page page = newPage();
-    fetchAuConfig(au);
-
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page,
-        "Editing configuration of: " + encodedAuName(au));
-
-    List actions = ListUtil.list(ACTION_DEACTIVATE, ACTION_DELETE);
-    if (!getEditKeys().isEmpty()) {
-      actions.add(0, "Update");
-    }
-    Form frm = createAuEditForm(actions, au, true);
-    page.add(frm);
-    endPage(page);
-  }
-
-  /** Display form to restore unconfigured AU */
-  private void displayRestoreAu(AuProxy au) throws IOException {
-    Page page = newPage();
-    fetchAuConfig(au);
-
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page,
-        "Restoring configuration of: " + encodedAuName(au));
-
-    List actions = ListUtil.list(
-        new Input(Input.Hidden, ACTION_TAG, ACTION_DO_RESTORE),
-	new Input(Input.Submit, "button", "Restore"));
-    Form frm = createAuEditForm(actions, au, true);
-    page.add(frm);
-    endPage(page);
-  }
-
-  /** Display form to reactivate deactivated AU */
-  private void displayReactivateAu(AuProxy au) throws IOException {
-    Page page = newPage();
-    addJavaScript(page);
-    fetchAuConfig(au);
-    if (plugin == null) {
-      errMsg = "Unknown plugin: " + au.getPluginId() +
-	"<br>Cannot reactivate: " + encodeText(au.getName());
-      displayAuSummary();
-      return;
-    }
-
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page,
-        "Reactivating: " + encodedAuName(au));
-
-    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-    List actions = ListUtil.list(
-        ServletUtil.submitButton(this, buttonNumber, "Reactivate", ACTION_DO_REACTIVATE),
-        ServletUtil.submitButton(this, buttonNumber, "Delete", ACTION_DELETE));
-    submitButtonNumber = buttonNumber.intValue();
-
-    Form frm = createAuEditForm(actions, au, true);
-    frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
-    page.add(frm);
-    endPage(page);
-  }
-
-  // tk - temporary - should handle more than one plugin for title
-  PluginProxy getTitlePlugin(String title) {
-    Collection c = remoteApi.getTitlePlugins(title);
-    if (c == null || c.isEmpty()) {
-      return null;
-    }
-    return (PluginProxy)c.iterator().next();
   }
 
   /** Display form to add a new AU */
   private void displayEditNew() throws IOException {
     String title = getParameter("Title");
     if (!StringUtil.isNullString(title)) {
-      // tk - need to deal with > 1 plugin for title
-      plugin = getTitlePlugin(title);
-      if (plugin == null) {
 	errMsg = "Unknown title: " + encodeText(title);
 	displayAddAu();
 	return;
-      }
-      titleConfig = plugin.getTitleConfig(title);
-      if (formConfig == null) {
-	if (titleConfig != null) {
-	  formConfig = titleConfig.getConfig();
-	}
-      }
     } else {
       String pid = getParameter("PluginId");
       if (StringUtil.isNullString(pid)) {
@@ -325,8 +186,6 @@ public class AuConfig extends LockssServlet {
 //	  pid = remoteApi.pluginIdFromName(pclass);
 //	}
       }
-      plugin = getPluginProxy(pid);
-      if (plugin == null) {
 	if (StringUtil.isNullString(pid)) {
 	  errMsg = "Please choose a title or a plugin.";
 	} else {
@@ -334,33 +193,7 @@ public class AuConfig extends LockssServlet {
 	}
 	displayAddAu();
 	return;
-      }
     }
-    Page page = newPage();
-    layoutErrorBlock(page);
-
-    StringBuffer exp = new StringBuffer();
-    exp.append("Creating new Archival Unit");
-    if (!StringUtil.isNullString(title)) {
-      exp.append(" of ");
-      exp.append(encodeText(title));
-    }
-    exp.append(" with plugin: ");
-    exp.append(encodeText(plugin.getPluginName()));
-    exp.append("<br>");
-    exp.append(getEditKeys().isEmpty() ? "Confirm" : "Edit");
-    exp.append(" the parameters, ");
-    if (remoteApi.getRepositoryList().size() > 1) {
-      exp.append(" choose a repository, ");
-    }
-    exp.append("then click Create");
-    ServletUtil.layoutExplanationBlock(page, exp.toString());
-
-    Form frm = createAuEditForm(ListUtil.list(ACTION_CREATE), null, true);
-    // Ensure still have title info if come back here on error
-    frm.add(new Input(Input.Hidden, "Title", title));
-    page.add(frm);
-    endPage(page);
   }
 
   /** Display form to select from list of title, or list of plugins, or
@@ -383,46 +216,6 @@ public class AuConfig extends LockssServlet {
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
-    java.util.List titles = remoteApi.findAllTitles();
-    if (!titles.isEmpty()) {
-      boolean includePluginInTitleSelect =
-	CurrentConfig.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
-				      DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
-      tbl.newRow();
-      tbl.newCell("align=center");
-      tbl.add("Choose a title:<br>");
-      Select sel = new Select("Title", false);
-      sel.attribute("onchange",
-		    "cascadeSelectEnable(this,'plugin_sel')");
-      sel.add("-no selection-", true, "");
-      for (Iterator iter = titles.iterator(); iter.hasNext(); ) {
-	String title = (String)iter.next();
-	PluginProxy titlePlugin = getTitlePlugin(title);
-	if (titlePlugin != null) {
-	  TitleConfig tc = titlePlugin.getTitleConfig(title);
-	  if (tc != null && AuUtil.isPubDown(tc)) {
-	    continue;
-	  }
-	}
-	String selText = encodeText(title);
-	String dispText = selText;
-	if (titlePlugin != null) {
-	  String plat = titlePlugin.getPublishingPlatform();
-	  if (plat != null) {
-	    dispText = selText + " (" + plat + ")";
-	  } else if (includePluginInTitleSelect) {
-	    String plugName = titlePlugin.getPluginName();
-	    dispText = selText + " (" + plugName + ")";
-	  }
-	}
-	// always include select value, even if same as display text, so
-	// javascript can find it.  (IE doesn't copy .text to .value)
-	sel.add(dispText, false, selText);
-      }
-      setTabOrder(sel);
-      tbl.add(sel);
-      addOr(tbl);
-    }
 
     Map pMap = getPluginNameMap();
     if (!pMap.isEmpty()) {
@@ -440,8 +233,6 @@ public class AuConfig extends LockssServlet {
       for (Iterator iter = pMap.entrySet().iterator(); iter.hasNext(); ) {
 	Map.Entry entry = (Map.Entry)iter.next();
 	String pName = (String)entry.getKey();
-	PluginProxy p = (PluginProxy)entry.getValue();
-	sel.add(encodeText(pName), false, p.getPluginId());
       }
       setTabOrder(sel);
       tbl.add(sel);
@@ -471,14 +262,6 @@ public class AuConfig extends LockssServlet {
 
   SortedMap getPluginNameMap() {
     SortedMap pMap = new TreeMap();
-    for (Iterator iter = remoteApi.getRegisteredPlugins().iterator();
-	 iter.hasNext(); ) {
-      PluginProxy pp = (PluginProxy)iter.next();
-      String name = pp.getPluginName();
-      if (name != null) {
-	pMap.put(name, pp);
-      }
-    }
     return pMap;
   }
 
@@ -507,97 +290,15 @@ public class AuConfig extends LockssServlet {
     tbl.add(orTbl);
   }
 
-  /** Create a form to edit a (possibly not-yet-existing) AU.
-   * @param actions list of action buttons for bottom of form.  If an
-   * element is a String, a button will be created for it.
-   * @param au the AU
-   * @param editable true if the form should be editable.  (Not all the
-   * fields will be editable in any case).
-   */
-  private Form createAuEditForm(List actions,
-                                AuProxy au,
-				boolean editable)
-      throws IOException {
-
-    boolean isNew = au == null;
-    Collection noEditKeys = Collections.EMPTY_SET;
-    Configuration initVals;
-
-    if (titleConfig != null) {
-      initVals = titleConfig.getConfig();
-      noEditKeys = titleConfig.getUnEditableKeys();
-    }
-    else if (formConfig != null) {
-      initVals = formConfig;
-    }
-    else if (auConfig != null) {
-      initVals = auConfig;
-    }
-    else {
-      initVals = ConfigManager.EMPTY_CONFIGURATION;
-    }
-
-    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
-
-    ServletUtil.layoutAuPropsTable(this,
-                                   frm,
-                                   getAuConfigParams(),
-                                   getDefKeys(),
-                                   initVals,
-                                   noEditKeys,
-                                   isNew,
-                                   getEditKeys(),
-                                   editable);
-
-    if (isNew) {
-      addRepoChoice(frm);
-      addPlugId(frm, plugin);
-    } else {
-      addAuId(frm, au);
-    }
-
-    ServletUtil.layoutAuPropsButtons(this,
-                                     frm,
-                                     actions.iterator(),
-                                     ACTION_TAG);
-
-    return frm;
-  }
-
   void addRepoChoice(Composite comp) {
-    ServletUtil.layoutRepoChoice(this,
-                                 comp,
-                                 remoteApi,
-                                 FOOT_REPOSITORY,
-                                 REPO_TAG);
   }
 
   /** Process the Create button */
   private void createAu() throws IOException {
     String pid = getParameter("PluginId");
-    plugin = getPluginProxy(pid);
-    if (plugin == null) {
       errMsg = "Can't find plugin: " + pid;
       displayAddAu();
       return;
-    }
-    createAuFromPlugin("Created", true);
-  }
-
-  /** Process the DoReactivate button */
-  private void doReactivateAu(AuProxy aup) throws IOException {
-    plugin = aup.getPlugin();
-    if (plugin == null) {
-      errMsg = "Can't find plugin: " + aup.getPluginId();
-      displayAddAu();
-      return;
-    }
-    fetchAuConfig(aup);
-    if (aup.isActiveAu()) {
-      updateAu(aup, "Reactivated");
-    } else {
-      createAuFromPlugin("Reactivated", false);
-    }
   }
 
   private void createAuFromPlugin(String msg, boolean isNew)
@@ -606,87 +307,18 @@ public class AuConfig extends LockssServlet {
     if (isNew) {
       String repo = getParameter(REPO_TAG);
       if (StringUtil.isNullString(repo)) {
-	Map repoMap = remoteApi.getRepositoryMap();
-	repo = remoteApi.findLeastFullRepository(repoMap);
 	formConfig.put(PluginManager.AU_PARAM_REPOSITORY, repo);
       } else {
-	java.util.List repos = remoteApi.getRepositoryList();
-	if (!repos.contains(repo)) {
 	  errMsg = "Nonexistent repository: " + repo;
 	  displayAddAu();
 	  return;
-	}
       }
     }
-    try {
-      AuProxy au =
-	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
-      statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
       displayAuSummary();
       return;
-    } catch (ArchivalUnit.ConfigurationException e) {
-      log.error("Error configuring AU", e);
-      errMsg = "Error configuring AU:<br>" + encodeText(e.getMessage());
-    } catch (IOException e) {
-      log.error("Error saving AU configuration", e);
-      errMsg = "Error saving AU configuration:<br>" +
-	encodeText(e.getMessage());
-    }
-    displayEditNew();
-  }
-
-  private void doRestoreAu(AuProxy au) throws IOException {
-    updateAu0(au, "Restored", true);
-  }
-
-  private void updateAu(AuProxy au, String msg)
-      throws IOException {
-    updateAu0(au, msg, false);
-  }
-
-  /** Process the Update button */
-  private void updateAu0(AuProxy au, String msg, boolean forceUpdate)
-      throws IOException {
-    fetchAuConfig(au);
-    Configuration formAuConfig = getAuConfigFromForm(false);
-    // AU config params set in global props file (for forcing crawl, etc.)
-    // cause latter to see changes even when we don't need to update.
-    // compare new config against current only, not stored config.  AU
-    boolean checkStored = false;
-    if (forceUpdate || isChanged(auConfig, formAuConfig) ||
-	(checkStored &&
-	 isChanged(remoteApi.getStoredAuConfiguration(au), formAuConfig))) {
-      try {
-	remoteApi.setAndSaveAuConfiguration(au, formAuConfig);
-	statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
-	displayAuSummary();
-	return;
-      } catch (ArchivalUnit.ConfigurationException e) {
-	log.error("Couldn't reconfigure AU", e);
-	errMsg = encodeText(e.getMessage());
-      } catch (IOException e) {
-	log.error("Couldn't save AU configuraton", e);
-	errMsg = "Error saving AU:<br>" + encodeText(e.getMessage());
-      }
-    } else {
-      statusMsg = "No changes made.";
-    }
-    displayEditAu(au);
   }
 
   private void doAddByAuid() throws IOException {
-    // Add the archival unit.
-    BatchAuStatus status =
-	remoteApi.addByAuId(getParameter("auid"), getAdditionalAuConfig());
-
-    // Handle the result.
-    BatchAuStatus.Entry statusEntry = status.getStatusList().get(0);
-    if (!statusEntry.isOk() && statusEntry.getExplanation() != null) {
-      log.error("Error configuring AU '" + statusEntry.getName() + "': "
-	  + statusEntry.getExplanation());
-      errMsg = encodeText(statusEntry.getExplanation());
-    }
-
     displayAddResult();
   }
 
@@ -710,86 +342,6 @@ public class AuConfig extends LockssServlet {
     addJavaScript(page);
     layoutErrorBlock(page);
     endPage(page);
-  }
-
-  /** Display the Confirm Delete  page */
-  private void confirmDeleteAu(AuProxy au) throws IOException {
-    String deleteFoot =
-      (remoteApi.isRemoveStoppedAus() ? null :
-       "Delete does not take effect until the next daemon restart.");
-
-    Page page = newPage();
-    fetchAuConfig(au);
-
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page, "Are you sure you want to delete" +
-	addFootnote(deleteFoot) + ": " + encodedAuName(au));
-
-    Form frm = createAuEditForm(ListUtil.list(ACTION_CONFIRM_DELETE),
-				au,
-				false);
-    page.add(frm);
-    endPage(page);
-  }
-
-  /** Process the Confirm Delete button */
-  private void doDeleteAu(AuProxy au) throws IOException {
-    String name = au.getName();
-    try {
-      remoteApi.deleteAu(au);
-      statusMsg = "Deleted " + (au.isActiveAu() ? "" : "Inactive ") +
-	"Archival Unit:<br>" + encodeText(name);
-      displayAuSummary();
-      return;
-    } catch (ArchivalUnit.ConfigurationException e) {
-      log.error("Can't happen", e);
-      errMsg = encodeText(e.getMessage());
-    } catch (IOException e) {
-      log.error("Couldn't save AU configuraton", e);
-      errMsg = "Error deleting AU:<br>" + encodeText(e.getMessage());
-    }
-    confirmDeleteAu(au);
-  }
-
-  /** Display the Confirm Deactivate  page */
-  private void confirmDeactivateAu(AuProxy au) throws IOException {
-    String deactivateFoot =
-      (remoteApi.isRemoveStoppedAus()
-       ? ("A deactivated Archival Unit's contents" +
-	  " will remain in the cache and it can be reactivated at any time.")
-       : ("Deactivate will not take effect until the next daemon restart.  " +
-	  "At that point the Archival Unit will be inactive, but its contents"+
-	  " will remain in the cache and it can be reactivated at any time."));
-
-    Page page = newPage();
-    fetchAuConfig(au);
-
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page, "Are you sure you want to deactivate" +
-        addFootnote(deactivateFoot) + ": " + encodedAuName(au));
-
-    Form frm = createAuEditForm(ListUtil.list("Confirm Deactivate"),
-				au, false);
-    page.add(frm);
-    endPage(page);
-  }
-
-  /** Process the Confirm Deactivate button */
-  private void doDeactivateAu(AuProxy au) throws IOException {
-    String name = au.getName();
-    try {
-      remoteApi.deactivateAu(au);
-      statusMsg = "Deactivated Archival Unit:<br>" + encodeText(name);
-      displayAuSummary();
-      return;
-    } catch (ArchivalUnit.ConfigurationException e) {
-      log.error("Can't happen", e);
-      errMsg = encodeText(e.getMessage());
-    } catch (IOException e) {
-      log.error("Couldn't save AU configuraton", e);
-      errMsg = "Error deactivating AU:<br>" + encodeText(e.getMessage());
-    }
-    confirmDeactivateAu(au);
   }
 
   /** Put a value from the config form into the properties, iff it is set
@@ -853,16 +405,6 @@ public class AuConfig extends LockssServlet {
       : formVal.equals(oldVal);
     }
 
-  /** Add auid to form in a hidden field */
-  private void addAuId(Composite comp, AuProxy au) {
-    ServletUtil.layoutAuId(comp, au, "auid");
-  }
-
-  /** Add plugin id to form in a hidden field */
-  private void addPlugId(Composite comp, PluginProxy plugin) {
-    ServletUtil.layoutPluginId(comp, plugin, "PluginId");
-  }
-
   /** Common and page adds Back link, footer */
   protected void endPage(Page page) throws IOException {
     if (action != null) {
@@ -873,23 +415,12 @@ public class AuConfig extends LockssServlet {
     super.endPage(page);
   }
 
-  /** Return AU name, encoded for html text */
-  String encodedAuName(AuProxy au) {
-    return encodeText(au.getName());
-  }
-
   // make me a link in nav table if not on initial journal config page
   protected boolean linkMeInNav() {
     return action != null;
   }
 
-  private void fetchAuConfig(AuProxy au) {
-    auConfig = au.getConfiguration();
-    plugin = au.getPlugin();
-  }
-
   void prepareConfigParams() {
-    auConfigParams = new ArrayList(plugin.getAuConfigDescrs());
     // let the plugin specify the order
     // Collections.sort(auConfigParams);
     defKeys = new ArrayList();
@@ -935,29 +466,5 @@ public class AuConfig extends LockssServlet {
 
   private String keyFromFormKey(String formKey) {
     return formKey.substring(FORM_PREFIX.length());
-  }
-
-  private AuProxy getAuProxy(String auid) {
-    try {
-      return remoteApi.findAuProxy(auid);
-    } catch (Exception e) {
-      return null;
-    }
-  }
-
-  private InactiveAuProxy getInactiveAuProxy(String auid) {
-    try {
-      return remoteApi.findInactiveAuProxy(auid);
-    } catch (Exception e) {
-      return null;
-    }
-  }
-
-  private PluginProxy getPluginProxy(String pid) {
-    try {
-      return remoteApi.findPluginProxy(pid);
-    } catch (Exception e) {
-      return null;
-    }
   }
 }

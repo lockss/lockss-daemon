@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,14 +28,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import junit.framework.TestCase;
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.remote.*;
 import org.lockss.test.*;
 
 /**
@@ -252,44 +245,6 @@ public class TestCron extends LockssTestCase {
     assertIsDate("1/1/2008 0:00", cron.nextMonth(timeOf("12/7/2007 4:00")));
   }
 
-  public void testCreateBackupFileNextMonth() throws Exception {
-    ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
-				  "monthly");
-    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
-    // time 0 is midnight Jan 1, result s.b. Feb 1
-    assertIsDate("2/1/1970 0:00", task.nextTime(0));
-    assertEquals(31*Constants.DAY, task.nextTime(0));
-    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/1/2005 0:00")));
-    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/3/2005 1:00")));
-    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/31/2005 1:00")));
-    assertIsDate("12/1/2007 0:00", task.nextTime(timeOf("11/30/2007 4:00")));
-    assertIsDate("2/1/2008 0:00", task.nextTime(timeOf("1/7/2008 4:00")));
-    assertIsDate("1/1/2008 0:00", task.nextTime(timeOf("12/7/2007 4:00")));
-  }
-
-  public void testCreateBackupFileNextWeek() throws Exception {
-    ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
-				  "weekly");
-    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
-    // time 0 is midnight Jan 1, result s.b. Jan 5
-    assertEquals(4*Constants.DAY, task.nextTime(0));
-    assertIsDate("1/5/1970 0:00", task.nextTime(timeOf("1/1/1970 0:00")));
-    // sunday
-    assertIsDate("1/3/2005 0:00", task.nextTime(timeOf("1/2/2005 1:00")));
-    // monday
-    assertIsDate("1/10/2005 0:00", task.nextTime(timeOf("1/3/2005 1:00")));
-    assertIsDate("1/10/2005 0:00", task.nextTime(timeOf("1/4/2005 1:00")));
-  }
-
-  public void testCreateBackupFileMail() {
-    MyRemoteApi rmt = new MyRemoteApi();
-    daemon.setRemoteApi(rmt);
-    RemoteApi.CreateBackupFile task = new RemoteApi.CreateBackupFile(daemon);
-    assertFalse(rmt.sent);
-    task.execute();
-    assertTrue(rmt.sent);
-  }
-
   static class MyCron extends Cron {
     Cron.Task task = null;
     SimpleBinarySemaphore execSem;
@@ -373,15 +328,4 @@ public class TestCron extends LockssTestCase {
       this.ret = ret;
     }
   }
-
-
-  static class MyRemoteApi extends RemoteApi {
-    boolean sent = false;
-
-    @Override
-    public void doPeriodicBackupFile() throws IOException {
-      sent = true;
-    }
-  }
-
 }

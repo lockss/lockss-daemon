@@ -53,7 +53,6 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     setUpDiskSpace();
     pluginMgr = getMockLockssDaemon().getPluginManager();
     pluginMgr.startService();
-    getMockLockssDaemon().getRemoteApi().startService();
     String tempDir = getTempDir().getAbsolutePath();
     Properties props = new Properties();
 

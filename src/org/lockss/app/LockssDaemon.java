@@ -42,7 +42,6 @@ import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
-import org.lockss.remote.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -112,7 +111,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String NODE_MANAGER = "NodeManager";
   public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
   public static final String SYSTEM_METRICS = "SystemMetrics";
-  public static final String REMOTE_API = "RemoteApi";
   public static final String URL_MANAGER = "UrlManager";
   public static final String NODE_MANAGER_MANAGER = "NodeManagerManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
@@ -152,8 +150,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
     // start metadata manager after pluggin manager and database manager.
     new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
-    // start proxy and servlets after plugin manager
-    new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
     // Start the job manager.
     new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
@@ -345,15 +341,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public LockssKeyStoreManager getKeystoreManager() {
     return (LockssKeyStoreManager) getManager(KEYSTORE_MANAGER);
-  }
-
-  /**
-   * return the RemoteApi instance.
-   * @return RemoteApi instance.
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public RemoteApi getRemoteApi() {
-    return (RemoteApi) getManager(REMOTE_API);
   }
 
   /**

@@ -49,7 +49,6 @@ public class TestAuConfig extends LockssServletTestCase {
     theDaemon.setPluginManager(pluginMgr);
     theDaemon.getServletManager();
     theDaemon.setDaemonInited(true);
-    theDaemon.getRemoteApi().startService();
     pluginMgr.initService(theDaemon);
     pluginMgr.startService();
 

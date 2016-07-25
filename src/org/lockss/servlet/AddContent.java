@@ -1,10 +1,6 @@
 /*
- * $Id DisplayContentStatus.java 2013/7/02 14:52:00 rwincewicz $
- */
 
-/*
-
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +32,8 @@ import org.lockss.config.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.plugin.*;
-import org.lockss.remote.RemoteApi;
 import org.lockss.util.*;
 import org.mortbay.html.*;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
@@ -80,7 +74,6 @@ public class AddContent extends LockssServlet {
     private List rules;
     private BitSet tableOptions;
     private PluginManager pluginMgr;
-    private RemoteApi remoteApi;
     private String action;
     private Character auStart;
     private Character auEnd;
@@ -98,7 +91,6 @@ public class AddContent extends LockssServlet {
         super.init(config);
         statSvc = getLockssDaemon().getStatusService();
         pluginMgr = getLockssDaemon().getPluginManager();
-        remoteApi = getLockssDaemon().getRemoteApi();
     }
 
     static final Set fixedParams =
@@ -227,7 +219,6 @@ public class AddContent extends LockssServlet {
             if (addAUs != null) {
                 List<String> aus = Arrays.asList(addAUs);
                 log.error("AUs: " + aus);
-                doAddAus(RemoteApi.BATCH_ADD_ADD, aus);
                 actionMessage = createActionMessage(aus, true);
             } else {
                 log.error("No AUs selected");
@@ -296,7 +287,6 @@ public class AddContent extends LockssServlet {
     }
 
     private void doRemoveAus(List<String> aus) throws IOException {
-        remoteApi.deleteAus(aus);
     }
 
     private void doAddAus(int addOp, List<String> auids) throws IOException {
@@ -307,14 +297,10 @@ public class AddContent extends LockssServlet {
             log.error("No session!");
             return;
         }
-        RemoteApi.BackupInfo bi =
-                (RemoteApi.BackupInfo)session.getAttribute(SESSION_KEY_BACKUP_INFO);
         LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
         String defaultRepo = null;
         String defRepoId = getParameter(KEY_DEFAULT_REPO);
         if (StringUtil.isNullString(defRepoId)) {
-            defaultRepo =
-                    remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
         } else if (repoMap != null) {
             try {
                 int n = Integer.parseInt(defRepoId);
@@ -380,10 +366,6 @@ public class AddContent extends LockssServlet {
             createConfig.addAsSubTree(tcConfig, prefix);
         }
         if (log.isDebug2()) log.debug2("createConfig: " + createConfig);
-
-        RemoteApi.BatchAuStatus bas =
-                remoteApi.batchAddAus(addOp, createConfig, bi);
-        log.debug("Batch add status: " + bas.toString());
     }
 
     private void doHtmlStatusTable() throws IOException {

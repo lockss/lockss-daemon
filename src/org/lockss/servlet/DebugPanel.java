@@ -41,7 +41,6 @@ import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.remote.*;
 import org.lockss.plugin.*;
 import org.lockss.account.*;
 
@@ -109,7 +108,6 @@ public class DebugPanel extends LockssServlet {
   private ConfigManager cfgMgr;
   private DbManager dbMgr;
   private MetadataManager metadataMgr;
-  private RemoteApi rmtApi;
 
   boolean showResult;
   boolean showForcePoll;
@@ -138,7 +136,6 @@ public class DebugPanel extends LockssServlet {
     daemon = getLockssDaemon();
     pluginMgr = daemon.getPluginManager();
     cfgMgr = daemon.getConfigManager();
-    rmtApi = daemon.getRemoteApi();
     try {
       dbMgr = daemon.getDbManager();
       metadataMgr = daemon.getMetadataManager();
@@ -201,11 +198,6 @@ public class DebugPanel extends LockssServlet {
   }
 
   private void doMailBackup() {
-    try {
-      rmtApi.createConfigBackupFile(RemoteApi.BackupFileDisposition.Mail);
-    } catch (Exception e) {
-      errMsg = "Error: " + e.getMessage();
-    }
   }
 
   private void doReloadConfig() {
