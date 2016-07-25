@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>116</string>
+    <string>117</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>38</string>
+        <string>39</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -139,7 +139,8 @@
       <!-- may want to fix this: http://www.pnas.org/content/108/12/4748.full gets http://www.pnas.org/content/107/16/7347/suppl/DCSupplemental -->
       <string>1,"^https?://%s/[^?]*DC(Supplemental|[0-9])", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1,"^https?://%s/c?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", url_host(base_url)</string>
+      <!-- Added for eolj, but allows wrong volume manifest page to be crawled -->
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_[^/._]+_manifest.dtl", url_host(base_url)</string>
       <!-- TOCs made up of searches -->
       <string>1,"^https?://%s/search[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", url_host(base_url), volume_name</string>
      </list>

@@ -42,6 +42,7 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.BulletList;
 import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
@@ -103,6 +104,15 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       // PNAS (aggressive filtering)
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
       HtmlNodeFilters.tagWithAttribute("ul", "id", "drop_menu"),
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          if (!(node instanceof BulletList)) return false;
+          String allText = ((CompositeTag)node).toPlainTextString();
+          //using regex for case insensitive match on "current issue"
+          // the "i" is for case insensitivity; the "s" is for accepting newlines
+          return allText.matches("(?is).*current issue.*");
+          }
+      },
       // e.g. BMJ (optional 'sid' query arg in URLs)
       HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-rel"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-soc"),
@@ -229,6 +239,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "responses"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-logo"),
       
+      // found in http://mnrasl.oxfordjournals.org/content/433/1/25.full
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "history-list"),
       // There is an "Impact factor" but it is only ctext in an H3 tag
       // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
       // It's not ideal, but there is no better solution. Seen in occmed.oxfordjournals.org
