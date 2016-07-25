@@ -5,6 +5,8 @@
     info[contract] = 2014 ;
     info[tester] = 8
   >
+  
+    provider = Library & Learning Services, University of North Hampton
 
     param[base_url] = http://journals.northampton.ac.uk/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin

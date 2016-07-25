@@ -4,10 +4,11 @@
     name = Georg Thieme Verlag KG
   >
 
+  provider = Thieme Publishing Group
+
   param[base_url] = https://www.thieme-connect.de/
   plugin = org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPlugin
   implicit < status ; year ; param[volume_name] ; name ; volume >
-
 
    {
     title <
