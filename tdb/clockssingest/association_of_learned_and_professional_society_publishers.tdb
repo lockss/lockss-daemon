@@ -23,6 +23,7 @@
 
     param[journal_id] = lp
     param[journal_issn] = 0953-1513
+    # moved to Wiley
     
     au < manifest ; exists ; 1997 ; Learned Publishing Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Learned Publishing Volume 11 ; 11 ; >
@@ -43,7 +44,6 @@
     au < crawling ; exists ; 2013 ; Learned Publishing Volume 26 ; 26 ; >
     au < finished ; crawling ; 2014 ; Learned Publishing Volume 27 ; 27 ; >
     au < crawling ; exists ; 2015 ; Learned Publishing Volume 28 ; 28 ; >
-    au < expected ; exists ; 2016 ; Learned Publishing Volume 29 ; 29 ; >
 
   }
 }
