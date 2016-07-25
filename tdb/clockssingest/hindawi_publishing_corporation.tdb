@@ -424,7 +424,7 @@
     param[journal_id] = acc
     #journal gone
 
-    au < down ; crawling ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 ; >
+    au < down ; finished ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 ; >
     au < down ; exists ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Critical Care Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2175,7 +2175,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < ready ; exists ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2234,7 +2234,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < ready ; exists ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2538,7 +2538,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Case Reports in Veterinary Medicine Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2750,7 +2750,7 @@
     au < manifest ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Computational Intelligence and Neuroscience Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Computational Intelligence and Neuroscience Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3323,7 +3323,7 @@
     param[journal_id] = ijms
 
     au < manifest ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Indian Journal of Materials Science Volume 2015 ; 2015 ; 2015 ; >
     au < ready ; exists ; 2016 ; Indian Journal of Materials Science Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3595,7 +3595,7 @@
     param[journal_id] = ijbd
 
     au < manifest ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; International Journal of Biodiversity Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Biodiversity Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7559,7 +7559,7 @@
     param[journal_id] = jtc
 
     au < manifest ; exists ; 2013 ; Journal of Theoretical Chemistry Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Theoretical Chemistry Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Theoretical Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Journal of Theoretical Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Theoretical Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8141,7 +8141,7 @@
     au < manifest ; exists ; 2011 ; Obstetrics and Gynecology International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Obstetrics and Gynecology International Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Obstetrics and Gynecology International Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Obstetrics and Gynecology International Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8605,7 +8605,7 @@
     au < manifest ; exists ; 2011 ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Radiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Radiology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Radiology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Radiology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Radiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
 

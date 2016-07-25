@@ -49,7 +49,7 @@
     au < finished ; frozen ; 1992-1993 ; American University International Law Review Volume 8 ; 8 ; >
     au < finished ; frozen ; 1993-1994 ; American University International Law Review Volume 9 ; 9 ; >
     au < finished ; frozen ; 1994-1995 ; American University International Law Review Volume 10 ; 10 ; >
-    au < finished ; crawling ; 1996 ; American University International Law Review Volume 11 ; 11 ; >
+    au < finished ; finished ; 1996 ; American University International Law Review Volume 11 ; 11 ; >
     au < finished ; finished ; 1997 ; American University International Law Review Volume 12 ; 12 ; >
     au < finished ; finished ; 1997-1998 ; American University International Law Review Volume 13 ; 13 ; >
     au < finished ; frozen ; 1998-1999 ; American University International Law Review Volume 14 ; 14 ; >
@@ -83,7 +83,7 @@
 
     param[journal_abbr] = ipbrief
 
-    au < finished ; crawling ; 2010 ; Intellectual Property Brief Issue 1 ; 1 ; >
+    au < finished ; finished ; 2010 ; Intellectual Property Brief Issue 1 ; 1 ; >
     au < finished ; crawling ; 2010 ; Intellectual Property Brief Issue 2 ; 2 ; >
     au < finished ; finished ; 2012 ; Intellectual Property Brief Issue 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Intellectual Property Brief Issue 4 ; 4 ; >
@@ -165,13 +165,13 @@
     au < finished ; crawling ; 1996 ; The Journal of Gender, Social Policy & the Law Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; The Journal of Gender, Social Policy & the Law Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < crawling ; crawling ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 ; >
+    au < crawling ; finished ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 ; >
     au < finished ; crawling ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2002 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < crawling ; crawling ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 ; >
+    au < crawling ; finished ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 ; >
     au < finished ; crawling ; 2004 ; The Journal of Gender, Social Policy & the Law Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 ; >
+    au < finished ; finished ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 ; >
     au < finished ; finished ; 2005-2006 ; The Journal of Gender, Social Policy & the Law Volume 14 ; 14 ; >
     au < finished ; crawling ; 2006-2007 ; The Journal of Gender, Social Policy & the Law Volume 15 ; 15 ; >
     au < finished ; frozen ; 2007-2008 ; The Journal of Gender, Social Policy & the Law Volume 16 ; 16 ; >
@@ -238,9 +238,9 @@
 
     param[journal_abbr] = sdlp
 
-    au < finished ; crawling ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 ; >
+    au < finished ; finished ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 ; >
     au < finished ; finished ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 ; >
+    au < finished ; finished ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 ; >
     au < finished ; finished ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 ; >
     au < finished ; finished ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 ; >
     au < finished ; finished ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 ; >
