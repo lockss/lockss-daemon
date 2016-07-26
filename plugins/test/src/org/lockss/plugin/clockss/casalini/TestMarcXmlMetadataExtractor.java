@@ -128,7 +128,7 @@ public class TestMarcXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.setLevel("debug3");
+        //log.setLevel("debug3");
         log.debug3(mdRecord.ppString(2));
         compareMetadata(mdRecord); // does nothing for the moment
 
