@@ -76,7 +76,7 @@
       param[base_url] = http://www.journals.ufrpe.br/
       param[journal_id] = medicinaveterinaria
 
-      au < exists ; 2014 ; 1 ; Medicina Veterinária Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 1 ; Medicina Veterinária Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 2 ; Medicina Veterinária Volume 2015 ; 2015 ; >
 
   }

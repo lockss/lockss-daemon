@@ -91,12 +91,12 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = rebac
 
-      au < exists ; 2005 ; 1 ; REBAC Volume 1 ; 2005 ; >
-      au < exists ; 2006 ; 2 ; REBAC Volume 2 ; 2006 ; >
-      au < exists ; 2007 ; 3 ; REBAC Volume 3 ; 2007 ; >
-      au < exists ; 2008 ; 4 ; REBAC Volume 4 ; 2008 ; >
-      au < exists ; 2009 ; 5 ; REBAC Volume 5 ; 2009 ; >
-      au < exists ; 2010 ; 6 ; REBAC Volume 6 ; 2010 ; >
+      au < manifest ; 2005 ; 1 ; REBAC Volume 1 ; 2005 ; >
+      au < manifest ; 2006 ; 2 ; REBAC Volume 2 ; 2006 ; >
+      au < manifest ; 2007 ; 3 ; REBAC Volume 3 ; 2007 ; >
+      au < manifest ; 2008 ; 4 ; REBAC Volume 4 ; 2008 ; >
+      au < manifest ; 2009 ; 5 ; REBAC Volume 5 ; 2009 ; >
+      au < manifest ; 2010 ; 6 ; REBAC Volume 6 ; 2010 ; >
 
   }
 
