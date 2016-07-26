@@ -112,7 +112,7 @@
       
       au < manifest ; exists ; 2014 ; International Journal of E-Learning & Distance Education Volume 28-29 ; 28-29 ; 2014 ; >
       au < crawling ; exists ; 2015 ; International Journal of E-Learning & Distance Education Volume 30 ; 30 ; 2015 ; >
-      au < expected ; exists ; 2016 ; International Journal of E-Learning & Distance Education Volume 31 ; 31 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; International Journal of E-Learning & Distance Education Volume 31 ; 31 ; 2016 ; >
 	
      }
   
@@ -209,19 +209,19 @@
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
 
-      au < exists ; exists ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; >
-      au < exists ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
-      au < exists ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
-      au < exists ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
-      au < exists ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
-      au < exists ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
-      au < exists ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
-      au < exists ; exists ; 1990 ; The Trumpeter Volume 7 ; 7 ; 1990 ; >
-      au < exists ; exists ; 1991 ; The Trumpeter Volume 8 ; 8 ; 1991 ; >
-      au < exists ; exists ; 1992 ; The Trumpeter Volume 9 ; 9 ; 1992 ; >
-      au < exists ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
-      au < exists ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
-      au < exists ; exists ; 1995 ; The Trumpeter Volume 12 ; 12 ; 1995 ; >
+      au < manifest ; exists ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; The Trumpeter Volume 7 ; 7 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; The Trumpeter Volume 8 ; 8 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; The Trumpeter Volume 9 ; 9 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; The Trumpeter Volume 12 ; 12 ; 1995 ; >
       au < manifest ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
       au < manifest ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
       au < manifest ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >

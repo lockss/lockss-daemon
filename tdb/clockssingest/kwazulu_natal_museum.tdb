@@ -39,13 +39,13 @@
       param[base_url] = http://www.africaninvertebrates.org/ojs/
       param[journal_id] = AI
  
-      au < exists ; exists ; 2006 ; African Invertebrates Volume 2006 ; 47 ; 2006 ; >
-      au < exists ; exists ; 2007 ; African Invertebrates Volume 2007 ; 48 ; 2007 ; >
-      au < exists ; exists ; 2011 ; African Invertebrates Volume 2011 ; 52 ; 2011 ; >
-      au < exists ; exists ; 2012 ; African Invertebrates Volume 2012 ; 53 ; 2012 ; >
-      au < exists ; exists ; 2013 ; African Invertebrates Volume 2013 ; 54 ; 2013 ; >
-      au < exists ; exists ; 2014 ; African Invertebrates Volume 2014 ; 55 ; 2014 ; >
-      au < exists ; exists ; 2015 ; African Invertebrates Volume 2015 ; 56 ; 2015 ; >
+      au < manifest ; exists ; 2006 ; African Invertebrates Volume 2006 ; 47 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; African Invertebrates Volume 2007 ; 48 ; 2007 ; >
+      au < manifest ; exists ; 2011 ; African Invertebrates Volume 2011 ; 52 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; African Invertebrates Volume 2012 ; 53 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; African Invertebrates Volume 2013 ; 54 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; African Invertebrates Volume 2014 ; 55 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; African Invertebrates Volume 2015 ; 56 ; 2015 ; >
       au < exists ; exists ; 2016 ; African Invertebrates Volume 2016 ; 57 ; 2016 ; >
  
     }
