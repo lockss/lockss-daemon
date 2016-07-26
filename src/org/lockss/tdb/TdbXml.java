@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.5]";
+  public static final String VERSION = "[TdbXml:0.2.6]";
   
   /**
    * <p>
@@ -509,7 +509,7 @@ public class TdbXml {
       }
       
       // Miscellaneous
-      appendOneAttr(sb, "provider", au.getProvider());
+      appendOneAttr(sb, "provider", xmlEscaper.translate(au.getProvider()));
       appendOneAttr(sb, "edition", au.getEdition());
       appendOneAttr(sb, "eisbn", au.getEisbn());
       appendOneAttr(sb, "isbn", au.getIsbn());
