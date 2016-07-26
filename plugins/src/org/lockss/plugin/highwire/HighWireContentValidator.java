@@ -36,37 +36,46 @@ import java.io.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.HeaderUtil;
 
-public class HighWireTextContentValidator {
+public class HighWireContentValidator {
   
   protected static final String PDF_EXT = ".pdf";
   protected static final String PNG_EXT = ".png";
   protected static final String JPG_EXT = ".jpg";
   protected static final String JPEG_EXT = ".jpeg";
   
-  public static class ContentTypeValidator implements ContentValidator {
+  public static class TextTypeValidator implements ContentValidator {
     
     public void validate(CachedUrl cu)
         throws ContentValidationException, PluginException, IOException {
       // validate based on extension (ie .pdf or .jpg)
       String url = cu.getUrl();
-      if (url.endsWith(PDF_EXT) || url.endsWith(JPG_EXT)) {
-        throw new ContentTypeMatchException("Content-type mismatch: " + url);
+      if (url.endsWith(PDF_EXT) ||
+          url.endsWith(PNG_EXT) ||
+          url.endsWith(JPG_EXT) ||
+          url.endsWith(JPEG_EXT)) {
+        throw new TypeException(url);
       }
     }
   }
   
   public static class Factory implements ContentValidatorFactory {
-    public ContentValidator createContentValidator(ArchivalUnit au,
-        String contentType) {
-      return new ContentTypeValidator();
+    public ContentValidator createContentValidator(ArchivalUnit au, String contentType) {
+      switch (HeaderUtil.getMimeTypeFromContentType(contentType)) {
+      case "text/html":
+      case "text/*":
+        return new TextTypeValidator();
+      default:
+        return null;
+      }
     }
   }
   
-  public static class ContentTypeMatchException extends ContentValidationException {
+  public static class TypeException extends ContentValidationException {
     
-    public ContentTypeMatchException(String msg) {
-      super(msg);
+    public TypeException(String msg) {
+      super("Content-type (text) mismatch for: " + msg);
     }
   }
   
