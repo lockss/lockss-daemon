@@ -40,31 +40,51 @@ import org.lockss.util.Logger;
 //
 // Cannot use the generic Zip XML article iterator because don't want the full
 // text XML version of the articles, just the issue TOC XML files
-// Delivery layout has changed since the sample. This is rev 2
-// now they do a per-journal zip within the zip
-//     clockss2016_7.zip!/acpq.zip!/
-// but the content lies immediately within the internal zip
-//     clockss2016_7.zip!/acpq.zip!/acpq_90-3.xml (yes, iterator should find)
-//     clockss2016_7.zip!/acpq.zip!/acpq_2016_0090_0003_0395_0413.pdf
-//     clockss2016_7.zip!/acpq.zip!/acpq_2016_0090_0003_0395_0413.pdf.xml (not metadata, full text xml)
+// Delivery layout has changed since the sample. 
+// 
+// sample was a per-journal subdir, with issue subdirs under that,
+// each of which had an issue XML file and then pdf and xml subdirs for the
+// pdf and full-text XML versions of the articles.
+// now they do a per-journal zip within the zip and no issue subdir, just
+// one or more issue XML files. The content files are at the same level as the XML
+// files.
+// eg
+//     clockss2016_7.zip!/acpq.zip/
+//     clockss2016_7.zip!/acpq.zip/acpq_90-3.xml (yes, iterator should find)
+//     clockss2016_7.zip!/acpq.zip/acpq_2016_0090_0003_0395_0413.pdf
+//     clockss2016_7.zip!/acpq.zip/acpq_2016_0090_0003_0395_0413.pdf.xml (not metadata, full text xml)
 // There could be more than one issue XML within the zip (eg jcathsoc_13-1.xml and jcathsoc_13-2.xml)
 // along with all the corresponding PDF content
 //
 public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
 
   private static final Logger log = Logger.getLogger(PhilDocZipXmlArticleIteratorFactory.class);
+
+  // The iterator pattern supports both the original sample layout of for journal foo of 
+  //   clockss.zip!/foo/foo_3-7/foo_3-7.xml 
+  // as well as the newer, nested zip format of 
+  //   clockss.zip!/foo.zip/foo_3-7.xml
+  // note that the second zip doesn't have a "!" in our cache structure.
+  // This pattern is dependent on the naming of the subdirs and TOC with a consistent 
+  // journal id for the subdir, which may or may not be a zip (eg foo or foo.zip) 
+  // and for the optional issue subdir (foo_3-2/)
+  // before finding the issue toc which will start with the same id (foo_3-3.xml)
+
+  // Now that there is the possibility that the article.pdf.xml file could be in the same
+  // directory as the issue toc XML "file foo_#-#" add the requirement that there
+  // not be a "." in the filename of the XML file. 
     
-  // We do not want to iterate on the full-text XML versions of the articles
-  // just the issue TOC xml metadata
-  //  YES: logos.zip!/logos_19-1.xml 
-  //   NO: logos/logos_19-1/xml/logos_2016_0019_0001_0005_0013.pdf.xml
-  // identify by level under the zip file
+  //2016\/[^/]+\.zip!\/([^/]+)(\.zip)?\/(\1_[^/]+\/)?\1_[^/.]+\.xml$
 
   // exclusion of the "." in the TOC name will exclude the full text XML
   // even if they're in the same directory as the issue XML
   // no "bang" on the second zip in our cache structure.
+  // capture group one will be the journal_id used as the subdir or zip name
+  // expected that the issue XML and optional issue subdir will start with the 
+  // same journal_id
   protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/[^/.]+\\.zip/[^/.]+\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.zip!/([^/]+)(\\.zip)?/(\\1_[^/]+/)?\\1_[^/.]+\\.xml$\", base_url, year";
+  //  "\"%s%d/.*\\.zip!/[^/.]+\\.zip/[^/.]+\\.xml$\", base_url, year";
   
   // Unlike the default, we need to nest two down (top delivery and each journal zip)
   // but exclude any archives below that
