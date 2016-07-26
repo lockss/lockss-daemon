@@ -69,6 +69,9 @@ public class PhilDocXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
     }
 
 
+    
+    // The sample used pdf subdir but the later deposit had the pdf in the same
+    // directory as the XML file - try both
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
@@ -76,8 +79,8 @@ public class PhilDocXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       ArrayList<String> returnList = new ArrayList<String>();
-      // <eisbn>.pdf in the same directory as the XML file
       log.debug3("looking for filename of: " + cuBase + "pdf/" + filenameValue + ".pdf");
+      returnList.add(cuBase + filenameValue + ".pdf");
       returnList.add(cuBase + "pdf/" + filenameValue + ".pdf");
       return returnList;
     }    

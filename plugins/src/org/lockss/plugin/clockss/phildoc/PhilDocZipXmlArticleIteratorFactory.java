@@ -62,13 +62,14 @@ public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIter
 
   // exclusion of the "." in the TOC name will exclude the full text XML
   // even if they're in the same directory as the issue XML
+  // no "bang" on the second zip in our cache structure.
   protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/[^/.]+\\.zip!/[^/.]+\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.zip!/[^/.]+\\.zip/[^/.]+\\.xml$\", base_url, year";
   
   // Unlike the default, we need to nest two down (top delivery and each journal zip)
   // but exclude any archives below that
   protected static final Pattern DEEP_NESTED_ARCHIVE_PATTERN = 
-      Pattern.compile(".*/[^/]+\\.zip!/[^/.]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+      Pattern.compile(".*/[^/]+\\.zip!/[^/.]+\\.zip/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);
 
   @Override
