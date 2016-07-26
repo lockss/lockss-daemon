@@ -32,12 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.clockss.phildoc;
 
+import java.util.regex.Pattern;
+
 import org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 //
 // Cannot use the generic Zip XML article iterator because don't want the full
 // text XML version of the articles, just the issue TOC XML files
+// Delivery layout has changed since the sample. This is rev 2
+// now they do a per-journal zip within the zip
+//     clockss2016_7.zip!/acpq.zip!/
+// but the content lies immediately within the internal zip
+//     clockss2016_7.zip!/acpq.zip!/acpq_90-3.xml (yes, iterator should find)
+//     clockss2016_7.zip!/acpq.zip!/acpq_2016_0090_0003_0395_0413.pdf
+//     clockss2016_7.zip!/acpq.zip!/acpq_2016_0090_0003_0395_0413.pdf.xml (not metadata, full text xml)
+// There could be more than one issue XML within the zip (eg jcathsoc_13-1.xml and jcathsoc_13-2.xml)
+// along with all the corresponding PDF content
 //
 public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
 
@@ -45,15 +56,29 @@ public class PhilDocZipXmlArticleIteratorFactory extends SourceZipXmlArticleIter
     
   // We do not want to iterate on the full-text XML versions of the articles
   // just the issue TOC xml metadata
-  //  YES: logos/logos_19-1/logos_19-1.xml 
+  //  YES: logos.zip!/logos_19-1.xml 
   //   NO: logos/logos_19-1/xml/logos_2016_0019_0001_0005_0013.pdf.xml
   // identify by level under the zip file
 
+  // exclusion of the "." in the TOC name will exclude the full text XML
+  // even if they're in the same directory as the issue XML
   protected static final String ONLY_TOC_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/[^/]+/[^/]+/[^/]+\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.zip!/[^/.]+\\.zip!/[^/.]+\\.xml$\", base_url, year";
+  
+  // Unlike the default, we need to nest two down (top delivery and each journal zip)
+  // but exclude any archives below that
+  protected static final Pattern DEEP_NESTED_ARCHIVE_PATTERN = 
+      Pattern.compile(".*/[^/]+\\.zip!/[^/.]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+          Pattern.CASE_INSENSITIVE);
 
   @Override
   protected String getIncludePatternTemplate() {
     return ONLY_TOC_XML_PATTERN_TEMPLATE ;
+  }
+  
+
+  // We need to allow descending one more layer, but no more below that
+  protected Pattern getExcludeSubTreePattern() {
+    return DEEP_NESTED_ARCHIVE_PATTERN;
   }
 }
