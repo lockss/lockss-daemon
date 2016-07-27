@@ -92,7 +92,11 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div","id","essentential-logos-carousel"), 
         // date class id differs...
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publishedDateAndMsType*"),
-        
+        // The following exclude from the permission page, which we cannot crawl-exclude
+        // but all the content is "current", so may differ from older volumes
+        HtmlNodeFilters.tagWithAttribute("div","id","highlight_articles"),
+        HtmlNodeFilters.tagWithAttribute("div","id","landing_page"),
+
     };
           
     

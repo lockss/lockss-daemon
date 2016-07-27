@@ -192,6 +192,10 @@ private static final String genericIndexContent =
   "NEW GOES HERE" +
   "</div>" +
   "</div>" +
+  "<h2>Highlight articles</h2>" +
+  "<div id=\"highlight_articles\">" +
+  "<span class=\"j-news-item-date\">13 Jul 2016</span>" +
+  "</div>" +
   "</div>" +
   "<div id=\"recent_paper\" class=\"cmsbox j-article j-article-section\">" +
   "<h2 class=\"title\">Recent articles</h2>" +
@@ -225,10 +229,8 @@ private static final String genericIndexContent =
 
 private static final String genericIndexContentFiltered =
 " <div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
-" <div id=\"landing_page\" class=\"cmsbox j-intro-section j-section\">" +
-" generic information about this journal" +
-" </div>" +
 " <div id=\"cmsbox_61812\" class=\"cmsbox \"> <h2>News </h2>" +
+" <h2>Highlight articles </h2>" +
 " </div>" +
 " <div id=\"something else\">" +
 "blah goes here" +
