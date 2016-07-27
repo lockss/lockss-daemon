@@ -86,8 +86,11 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
         
       case 503:
         // http://d1gqps90bl2jsp.cloudfront.net/content/brain/137/12/3284/F7.medium.gif 503 Service Unavailable
+        // http://www.bmj.com/content/351/bmj.h6193/related             503 Service Unavailable
         logger.debug2("503: " + url);
         if (url.contains(".cloudfront.net/")) {
+          return new NoFailRetryableNetworkException_2_10S("503 Service Unavailable (non-fatal)");
+        } else if (url.contains("bmj.") && url.endsWith("/related")) {
           return new NoFailRetryableNetworkException_2_10S("503 Service Unavailable (non-fatal)");
         }
         return new CacheException.RetryableNetworkException_2_10S("503 Service Unavailable");

@@ -55,7 +55,7 @@ public class HighWireContentValidator {
           url.endsWith(PNG_EXT) ||
           url.endsWith(JPG_EXT) ||
           url.endsWith(JPEG_EXT)) {
-        throw new TypeException(url);
+        throw new MimeTypeException(url);
       }
     }
   }
@@ -72,10 +72,11 @@ public class HighWireContentValidator {
     }
   }
   
-  public static class TypeException extends ContentValidationException {
+  public static class MimeTypeException extends ContentValidationException {
     
-    public TypeException(String msg) {
-      super("Content-type (text) mismatch for: " + msg);
+    public MimeTypeException(String msg) {
+      // Not including the URL in msg, too long on AU-Test display and url info is displayed on error page
+      super("URL MIME type mismatch");
     }
   }
   
