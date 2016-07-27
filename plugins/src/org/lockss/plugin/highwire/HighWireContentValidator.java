@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.StringUtil;
 import org.lockss.util.HeaderUtil;
 
 public class HighWireContentValidator {
@@ -51,10 +52,10 @@ public class HighWireContentValidator {
         throws ContentValidationException, PluginException, IOException {
       // validate based on extension (ie .pdf or .jpg)
       String url = cu.getUrl();
-      if (url.endsWith(PDF_EXT) ||
-          url.endsWith(PNG_EXT) ||
-          url.endsWith(JPG_EXT) ||
-          url.endsWith(JPEG_EXT)) {
+      if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
         throw new MimeTypeException(url);
       }
     }
