@@ -41,16 +41,6 @@ import org.lockss.plugin.*;
  */
 public class TestServletUtil extends LockssTestCase {
 
-  public void testBackupFileUrl() throws Exception {
-    assertEquals("http://host.edu:8081/BatchAuConfig?lockssAction=SelectBackup",
-		 ServletUtil.backupFileUrl("host.edu"));
-
-    ConfigurationUtil.setFromArgs(AdminServletManager.PARAM_PORT, "1234");
-    assertEquals("http://lib.edu:1234/BatchAuConfig?lockssAction=SelectBackup",
-		 ServletUtil.backupFileUrl("lib.edu"));
-
-  }
-
   private MockArchivalUnit setUpAu(String name, String manifest,
 				   long lastCrawlTime) {
     MockLockssDaemon daemon = getMockLockssDaemon();

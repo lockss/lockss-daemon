@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,26 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.util.*;
-import org.lockss.jetty.*;
-import org.mortbay.http.*;
 import org.mortbay.http.Authenticator;
-import org.mortbay.http.handler.*;
-import org.mortbay.jetty.servlet.*;
 
 /**
  * Interface for servlet managers
  */
 public interface ServletManager extends LockssManager {
-
-  public static final String SUFFIX_IP_PLATFORM_SUBNET =
-    IpAccessControl.SUFFIX_PLATFORM_ACCESS;
 
   /** Username established during platform config */
   public static final String PARAM_PLATFORM_USERNAME =

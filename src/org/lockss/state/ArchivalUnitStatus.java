@@ -626,14 +626,6 @@ public class ArchivalUnitStatus
 	rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 
 
-	long size = cu.getContentSize();
-	Object val =
-	  new StatusTable.SrvLink(cu.getContentSize(),
-				  AdminServletManager.SERVLET_DISPLAY_CONTENT,
-				  PropUtil.fromArgs("auid", au.getAuId(),
-						    "url", cu.getUrl()));
-	rowMap.put("Size", val);
-
 	int version = cu.getVersion();
 	Object versionObj = new Long(version);
 	if (version > 1) {
@@ -847,10 +839,6 @@ public class ArchivalUnitStatus
 	Properties args = new Properties();
 	args.setProperty("auid", au.getAuId());
 	args.setProperty("url", url);
-	val =
-	  new StatusTable.SrvLink(val,
-				  AdminServletManager.SERVLET_DISPLAY_CONTENT,
-				  args);
       } else {
 	val = url;
       }
@@ -1127,13 +1115,6 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  audef));
-      Object sclink =
-	new StatusTable.SrvLink("Serve AU",
-				AdminServletManager.SERVLET_SERVE_CONTENT,
-				PropUtil.fromArgs("auid", au.getAuId()));
-      res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  sclink));
 
       List peerLinks = new ArrayList();
       peerLinks.add(PeerRepair.makeAuRef("Repair candidates", au.getAuId()));
@@ -1159,84 +1140,11 @@ public class ArchivalUnitStatus
 
       List urlLinks = new ArrayList();
 
-
-      addLink(urlLinks,
-	      new StatusTable
-	      .SrvLink("URLs",
-		       AdminServletManager.SERVLET_LIST_OBJECTS,
-		       PropUtil.fromArgs("type", "urls",
-					 "auid", au.getAuId())));
-
-      addLink(urlLinks,
-	      new StatusTable
-	      .SrvLink("Files",
-		       AdminServletManager.SERVLET_LIST_OBJECTS,
-		       PropUtil.fromArgs("type", "files",
-					 "auid", au.getAuId())));
-      if (au.getArchiveFileTypes() != null) {
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("URLs*",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "urlsm",
-					   "auid", au.getAuId())));
-
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("Files*",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "filesm",
-					   "auid", au.getAuId())));
-      }
-      if (AuUtil.hasSubstancePatterns(au)) {
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("Substance URLs",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "suburls",
-					   "auid", au.getAuId())));
-
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("(detail)",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "suburlsdetail",
-					   "auid", au.getAuId())));
-
-	addLink(urlLinks,
-		new StatusTable
-		.SrvLink("Substance Files",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "subfiles",
-					   "auid", au.getAuId())));
-      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  urlLinks));
 
       List artLinks = new ArrayList();
-      if (ListObjects.hasArticleList(au)) {
-	addLink(artLinks,
-		new StatusTable
-		.SrvLink("Articles",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "articles",
-					   "auid", au.getAuId())));
-      }
-      if (ListObjects.hasArticleMetadata(au)) {
-	addLink(artLinks,
-		new StatusTable
-		.SrvLink("DOIs",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "dois",
-					   "auid", au.getAuId())));
-	addLink(artLinks,
-		new StatusTable
-		.SrvLink("Metadata",
-			 AdminServletManager.SERVLET_LIST_OBJECTS,
-			 PropUtil.fromArgs("type", "metadata",
-					   "auid", au.getAuId())));
-      }
       if (!artLinks.isEmpty()) {
         res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
@@ -1491,11 +1399,6 @@ public class ArchivalUnitStatus
       args.setProperty("auid", au.getAuId());
       args.setProperty("url", url);
       args.setProperty("version", Integer.toString(ver));
-      Object val =
-	new StatusTable.SrvLink(Integer.toString(ver),
-				AdminServletManager.SERVLET_DISPLAY_CONTENT,
-				args);
-      rowMap.put("Version", val);
       rowMap.put("Size", cu.getContentSize());
       Properties cuProps = cu.getProperties();
       long collected =

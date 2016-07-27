@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2004-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2004-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +32,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import javax.net.ssl.KeyManagerFactory;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
-
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -710,7 +704,6 @@ public abstract class BaseServletManager
 
     WebApplicationHandler handler = makeWebAppHandler(context);
     context.addHandler(handler);
-    handler.addServlet("Login", "/LoginForm", "org.lockss.servlet.LoginForm");
     // Log Dir resource
     String dirname = (dir != null) ? dir : "";
     URL url = new URL("file", null,
@@ -742,11 +735,6 @@ public abstract class BaseServletManager
       break;
     }
 
-    ServletHolder holder =
-      handler.addServlet("Resource", "/",
-			 "org.lockss.servlet.LockssResourceServlet");
-    holder.put("dirAllowed", "true");
-
     for (int ix = 0; ix < textMimes.length; ix++) {
       context.setMimeMapping(textMimes[ix], "text/plain");
     }
@@ -771,9 +759,6 @@ public abstract class BaseServletManager
 	  sb.append("/*");
 	}
 	String path = sb.toString();
-	if (!d.isEnabled(getDaemon())) {
-	  cls = ServletDescr.UNCONFIGURED_SERVLET_CLASS;
-	}
 	log.debug2("addServlet("+d.getServletName()+", "+path+
 		   ", "+cls.getName()+")");
 	handler.addServlet(d.getServletName(), path, cls.getName());

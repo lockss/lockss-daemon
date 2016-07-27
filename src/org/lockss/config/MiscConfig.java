@@ -50,7 +50,6 @@ public class MiscConfig {
 	  PluginUtil.setConfig(config, oldConfig, diffs);
 	  AuUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
-	  ExpertConfig.setConfig(config, oldConfig, diffs);
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);

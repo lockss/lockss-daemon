@@ -225,8 +225,6 @@ public class ConfigManager implements LockssManager {
 		  ODLD +"app\\.exit(Once|After|Immediately)$",
 		  Perl5Compiler.quotemeta(PARAM_DAEMON_GROUPS),
 		  Perl5Compiler.quotemeta(PARAM_AUX_PROP_URLS),
-		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
-		  Perl5Compiler.quotemeta(ExportContent.PARAM_ENABLE_EXPORT),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY),
 		  Perl5Compiler.quotemeta(LockssDaemon.PARAM_TESTING_MODE)
@@ -1372,14 +1370,6 @@ public class ConfigManager implements LockssManager {
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
 				SmtpMailService.PARAM_SMTPHOST);
 
-    // Add platform access subnet to access lists if it hasn't already been
-    // accounted for
-    String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
-    appendPlatformAccess(config,
-			 AdminServletManager.PARAM_IP_INCLUDE,
-			 AdminServletManager.PARAM_IP_PLATFORM_SUBNET,
-			 platformSubnet);
-
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (!StringUtil.isNullString(space)) {
       String firstSpace =
@@ -2278,34 +2268,6 @@ public class ConfigManager implements LockssManager {
     this.groupNames = groups;
   }
 
-  // TinyUI comes up on port 8081 if can't complete initial props load
-
-  TinyUi tiny = null;
-  String[] tinyData = new String[1];
-
-  void startTinyUi() {
-    TinyUi t = new TinyUi(tinyData);
-    updateTinyData();
-    t.startTiny();
-    tiny = t;
-  }
-
-  void stopTinyUi() {
-    if (tiny != null) {
-      tiny.stopTiny();
-      tiny = null;
-      // give listener socket a little time to close
-      try {
-	Deadline.in(2 * Constants.SECOND).sleep();
-      } catch (InterruptedException e ) {
-      }
-    }
-  }
-
-  void updateTinyData() {
-    tinyData[0] = recentLoadError;
-  }
-
   // Reload thread
 
   void startHandler() {
@@ -2353,23 +2315,12 @@ public class ConfigManager implements LockssManager {
 	pokeWDog();
 	running = true;
 	if (updateConfig()) {
-	  if (tiny != null) {
-	    stopTinyUi();
-	  }
 	  // true iff loaded config has changed
 	  if (!goOn) {
 	    break;
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //	stopAndOrStartThings(true);
-	} else {
-	  if (lastReload == 0) {
-	    if (tiny == null) {
-	      startTinyUi();
-	    } else {
-	      updateTinyData();
-	    }
-	  }
 	}
 	pokeWDog();			// in case update took a long time
 	long reloadRange = reloadInterval/4;

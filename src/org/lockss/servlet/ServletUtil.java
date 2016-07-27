@@ -44,7 +44,6 @@ import org.lockss.jetty.Button;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
-import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -362,9 +361,6 @@ public class ServletUtil {
   public static void setConfig(Configuration config,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
-    if (diffs.contains(ServeContent.PREFIX)) {
-      ServeContent.setConfig(config, oldConfig, diffs);
-    }
     if (diffs.contains(PREFIX)) {
       thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
       if (thirdPartyLogo != null) {
@@ -397,27 +393,6 @@ public class ServletUtil {
 
   public static boolean isHostNameInTitle() {
     return hostNameInTitle;
-  }
-
-  /** Return the URL of this machine's config backup file to download */
-  // This is a crock.  It's called from RemoteAPI, which has no servlet
-  // instance and thus can't use LockssServlet.srvURL().
-  public static String backupFileUrl(String hostname) {
-    ServletDescr backupServlet = AdminServletManager.SERVLET_BATCH_AU_CONFIG;
-    int port = CurrentConfig.getIntParam(AdminServletManager.PARAM_PORT,
-					 AdminServletManager.DEFAULT_PORT);
-    StringBuffer sb = new StringBuffer();
-    sb.append("http://");
-    sb.append(hostname);
-    sb.append(":");
-    sb.append(port);
-    sb.append("/");
-    sb.append(backupServlet.getPath());
-    sb.append("?");
-    sb.append(BatchAuConfig.ACTION_TAG);
-    sb.append("=");
-    sb.append(BatchAuConfig.ACTION_BACKUP);
-    return sb.toString();
   }
 
   // Common page footer
@@ -568,19 +543,6 @@ public class ServletUtil {
     comp.add(BACKLINK_BEFORE);
     comp.add(destinationLink);
     comp.add(BACKLINK_AFTER);
-  }
-
-  public static void layoutChooseSets(String url,
-                                      Page page,
-                                      Composite chooseSets,
-                                      String hiddenActionName,
-                                      String hiddenVerbName,
-                                      Verb verb) {
-    Form frm = newForm(url);
-    frm.add(new Input(Input.Hidden, hiddenActionName));
-    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
-    frm.add(chooseSets);
-    page.add(frm);
   }
 
   public static void layoutEnablePortRow(LockssServlet servlet,
@@ -881,32 +843,6 @@ public class ServletUtil {
   private static final Format backupFileDf =
     FastDateFormat.getInstance("HH:mm:ss MM/dd/yyyy");
 
-  public static void layoutRestore(LockssServlet servlet,
-                                   Page page,
-                                   String hiddenActionName,
-                                   String hiddenVerbName,
-                                   Verb verb,
-                                   String backupFileFieldName,
-                                   MutableInt buttonNumber,
-                                   String backupFileButtonAction) {
-    Form frm = newForm(servlet.srvURL(servlet.myServletDescr()));
-    frm.attribute("enctype", "multipart/form-data");
-    frm.add(new Input(Input.Hidden, hiddenActionName));
-    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
-    Table tbl = new Table(RESTORE_TABLE_BORDER, RESTORE_TABLE_ATTRIBUTES);
-    tbl.newRow();
-    tbl.newCell(ALIGN_CENTER);
-    tbl.add("Enter name of AU configuration backup file");
-    tbl.newRow();
-    tbl.newCell(ALIGN_CENTER);
-    tbl.add(new Input(Input.File, backupFileFieldName));
-    tbl.newRow();
-    tbl.newCell(ALIGN_CENTER);
-    tbl.add(submitButton(servlet, buttonNumber, "Restore", backupFileButtonAction));
-    frm.add(tbl);
-    page.add(frm);
-  }
-
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
                                         String value,
@@ -977,78 +913,6 @@ public class ServletUtil {
     if (centre) composite.add(CENTRE_OPEN);
     composite.add(button);
     if (centre) composite.add(CENTRE_CLOSE);
-  }
-
-
-  public static Composite makeChooseAus(LockssServlet servlet,
-                                        Iterator basEntryIter,
-                                        Verb verb,
-                                        List repos,
-                                        Map auConfs,
-                                        String keyAuid,
-                                        String keyRepo,
-                                        String repoChoiceFootnote,
-                                        String buttonText,
-                                        MutableInt buttonNumber,
-                                        boolean isLong) {
-    boolean isAdd = verb.isAdd;
-    boolean repoFlg = isAdd && repos.size() > 1;
-    int reposSize = repoFlg ? repos.size() : 0;
-    int maxCols = reposSize + (isAdd ? 3 : 2);
-    Block repoFootElement = null;
-
-    Table tbl = new Table(CHOOSEAUS_BORDER, CHOOSEAUS_ATTRIBUTES);
-
-    if (isLong) {
-      tbl.newRow();
-      tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
-      tbl.add(submitButton(servlet, buttonNumber, buttonText, verb.action()));
-    }
-
-    tbl.newRow();
-    tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
-    Block selAllBlock1 = tbl.cell();
-
-    tbl.newRow();
-    tbl.addHeading(verb.cap + "?", ALIGN_RIGHT + " rowspan=\"2\"");
-    if (repoFlg) {
-      tbl.addHeading("Disk", ALIGN_CENTER + " colspan=\"" + reposSize + "\"");
-      repoFootElement = tbl.cell();
-    }
-    tbl.addHeading("Archival Unit", ALIGN_CENTER + " rowspan=\"2\"");
-    if (isAdd) {
-      tbl.addHeading("Est. size (MB)", ALIGN_CENTER + " rowspan=\"2\"");
-    }
-
-    tbl.newRow(); // for rowspan=2 above
-    for (int ix = 1; ix <= reposSize; ++ix) {
-      tbl.addHeading(Integer.toString(ix), ALIGN_CENTER);
-    }
-
-    boolean isAnyAssignedRepo = false;
-    boolean isAnyNotAssignedRepo = false;
-    while (basEntryIter.hasNext()) {
-      // Get next entry
-    }
-
-    boolean includeOnDiskButton = isAnyAssignedRepo && isAnyNotAssignedRepo;
-    selAllBlock1.add(layoutSelectAllButton(servlet, includeOnDiskButton));
-
-    if (isLong) {
-      tbl.newRow();
-      tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
-      tbl.add(layoutSelectAllButton(servlet, includeOnDiskButton));
-    }
-
-    if (repoFootElement != null && isAnyAssignedRepo) {
-      repoFootElement.add(servlet.addFootnote(repoChoiceFootnote));
-    }
-
-    tbl.newRow();
-    tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
-    tbl.add(submitButton(servlet, buttonNumber, buttonText, verb.action()));
-
-    return tbl;
   }
 
   public static Composite makeNonOperableAuTable(String heading,
