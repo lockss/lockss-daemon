@@ -2518,6 +2518,67 @@
   {
 
     title <
+      name = Journal of Pediatric Biochemistry ;
+      issn = 1879-5390 ;
+      eissn = 1879-5404 ;
+      doi = 10.1055/s-00029022
+
+    >
+    param[journal_id] = 10.1055/s-00029022
+    comment[years] = 2010-current
+
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Epilepsy ;
+      issn = 2146-457X ;
+      eissn = 2146-4588 ;
+      doi = 10.1055/s-00029025
+
+    >
+    param[journal_id] = 10.1055/s-00029025
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Genetics ;
+      issn = 2146-4596 ;
+      eissn = 2146-460X ;
+      doi = 10.1055/s-00029027
+
+    >
+    param[journal_id] = 10.1055/s-00029027
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Reconstructive Microsurgery ;
       issn = 1662-3282 ;
       eissn = 1098-8947 ;
