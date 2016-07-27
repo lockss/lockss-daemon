@@ -2415,6 +2415,21 @@
   {
 
     title <
+      name = The Journal of Hip Surgery ;
+      issn = 2472-8446 ;
+      eissn = 2472-8454 ;
+      doi =  10.1055/s-00031934
+    >
+
+    param[journal_id] = 10.1055/s-00031934 
+
+    au < expected ; exists ; 2016 ; 2016 ; The Journal of Hip Surgery  Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Knee Surgery ;
       issn = 1538-8506 ;
       eissn = 1938-2480 ;
@@ -2573,6 +2588,101 @@
     au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; >
     au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; >
     au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Infectious Diseases ;
+      issn = 1305-7707 ;
+      eissn = 1305-7693 ;
+      doi = 10.1055/s-00029028
+
+    >
+    param[journal_id] = 10.1055/s-00029028
+    comment[years] = 2006-current
+
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; >
+    au < expected ; exists ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Intensive Care ;
+      issn = 2146-4618 ;
+      eissn = 2146-4626 ;
+      doi = 10.1055/s-00029029
+
+    >
+    param[journal_id] = 10.1055/s-00029029
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Intensive Care Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Intensive Care Volume 3 ; 3 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Neurology ;
+      issn = 1304-2580 ;
+      eissn = 1875-9041 ;
+      doi = 10.1055/s-00029030
+
+    >
+    param[journal_id] = 10.1055/s-00029030
+    comment[years] = 2003-current
+
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Pediatric Neurology Volume 1 ; 1 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Pediatric Neurology Volume 3 ; 3 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Neurology Volume 10 ; 10 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Pediatric Neuroradiology ;
+      issn = 1309-6680 ;
+      eissn = 1309-6745 ;
+      doi = 10.1055/s-00029169
+
+    >
+    param[journal_id] = 10.1055/s-00029169
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Neuroradiology Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 ; >
 
   }
 
@@ -3608,6 +3718,22 @@
 
   {
     title <
+      name = Perspectives in Vascular Surgery ;
+      issn = 0894-8046 ;
+      eissn = 1521-5768 ;
+      doi = 10.1055/s-00000053
+
+    >
+    param[journal_id] = 10.1055/s-00000053
+    comment[years] = 2000-2001
+
+    au < exists ; exists ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 ; >
+
+  }
+
+  {
+    title <
       name = pferde spiegel ;
       issn = 1860-3203 ;
       eissn = 1868-0445 ;
@@ -3923,12 +4049,27 @@
 
   {
     title <
+      name = Planta Medica International Open ;
+      eissn = 2509-6656 ;
+      doi = 10.1055/s-00032099
+
+    >
+    param[journal_id] = 10.1055/s-00032099
+    comment[years] = 2016-current
+
+   au < expected ; exists ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 ; >
+
+  }
+
+  {
+    title <
       name = Planta Medica Letters ;
       eissn = 2199-157X ;
       doi = 10.1055/s-00027015
 
     >
     param[journal_id] = 10.1055/s-00027015
+    comment[years] = 2014-current
 
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Letters Volume 2014 ; 1 ; >
    au < crawling ; exists ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 ; >
@@ -4842,6 +4983,26 @@
     au < crawling ; exists ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 2014 ; 40 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 2016 ; 42 ; >
+
+  }
+
+  {
+
+    title <
+      name = Seminars in Vascular Medicine ;
+      issn = 1528-9648 ;
+      eissn = 1529-3505 ;
+      doi = 10.1055/s-00000116
+
+    >
+    param[journal_id] = 10.1055/s-00000116
+    comment[years] = 2001-2005
+
+    au < exists ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
 
   }
 
