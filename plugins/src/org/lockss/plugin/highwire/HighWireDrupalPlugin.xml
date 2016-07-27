@@ -193,10 +193,6 @@
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
   <entry>
-    <string>plugin_substance_predicate_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalSubstancePredicate$Factory</string>
-  </entry>
-  <entry>
     <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
     <string>org.lockss.plugin.highwire.HighWireContentValidator$Factory</string>
