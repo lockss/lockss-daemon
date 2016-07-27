@@ -144,6 +144,7 @@ Args:
 
   <!--  Directories -->
   <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
+  <property name="jre.lib"        value="${env.JAVA_HOME}/jre/lib"/>
   <property name="maven.home"     value="${env.MAVEN_HOME}" />
   <property name="src"            value="${basedir}/src" />
   <property name="classes"        value="${basedir}/classes" />
@@ -216,7 +217,7 @@ Args:
   <!-- Library jars -->
 
   <!-- Needed by Java 8 -->
-  <property name="jdk.rt.jar" value="${env.JAVA_HOME}/jre/lib/rt.jar"/>
+  <property name="jdk.rt.jar" value="${jre.lib}/rt.jar"/>
 
   <property name="rhino.jar"      value="${lib}/rhino.jar"/>
   <property name="js-engine.jar"  value="${lib}/js-engine.jar"/>
@@ -732,9 +733,10 @@ Args:
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"
-	   memoryMaximumSize="256m"
+           memoryMaximumSize="256m"
            >
        <classpath refid="@{cpid}" />
+      <compilerarg value="-XDignore.symbol.file" />
       <javacelem/>
     </javac>
    </sequential>
@@ -1086,6 +1088,12 @@ The target you have selected requires compiling under JDK 1.8.
     <delete dir="${tdb.xml.dir}" quiet="true"/>
   </target>
 
+  <target name="delete-empty-db"
+	  description="Delete prototype empty database." >
+    <delete file="${empty.db.archive}" quiet="true"/>
+  </target>
+
+
   <target name="clean-tmp" depends="prepare,check.contrib"
    description="Delete leftover temp files." >
     <delete quiet="false" includeEmptyDirs="true">
@@ -1212,6 +1220,8 @@ The target you have selected requires compiling under JDK 1.8.
     <copy todir="${plugins.classes}" >
        <fileset dir="${plugins.src}" >
           <include name="**/*.xml"/>   <!-- Definable plugins -->
+          <include name="**/*.dat"/>
+          <include name="**/*.dat.gz"/>   <!-- e.g. Muse URL normalizer mapping -->
        </fileset>
        <fileset dir="${plugins.externals}" erroronmissingdir="false"> <!-- Plugin externals -->
           <include name="**/*.txt"/>
@@ -1547,9 +1557,84 @@ Must specify output dir with -Doutdir=dir
   </target>
 
   <!-- ==================================================================== -->
+  <target name="-validate.plugin.prereq"
+	  depends="-set.junit.available,-set.junit.task.available,check.contrib">
+    <if>
+      <not>
+	<and>
+	  <isset property="junit.available" />
+	  <isset property="junit.task.available" />
+	</and>
+      </not>
+      <then>
+	<fail message="The new plugin validation step requires junit, which is not installed.  Either install junit.jar in Ant's lib/ dir or add  --novalidate  to the command line"/>
+      </then>
+    </if>
+  </target>
+
+  <target name="build-plugin-validate"
+	  depends="-validate.plugin.prereq,build-plugin,validate-plugin-jar"
+	  description="Generate and optionally sign a loadable plugin
+                       JAR file for a single plugin.  Validate the plugin for
+		       well-formedness.">
+  </target>
+
+
+  <target name="validate-plugin-jar"
+	  depends="-validate.plugin.prereq,jar-tests,prepare.run.test"
+	  description="Validate a loadable plugin jar for well-formedness.">
+
+    <!-- Invoke PluginWellformednessTests on the packaged plugin to ensure
+	 all resources it needs are in the jar. -->
+
+    <!-- relies on the properties: plugin-jarfile, plugin-path, and
+	 plugin-file. -->
+
+    <!-- convert the filename to a plugin name -->
+    <property name="plugin.jar" value="${plugins.dir}/${plugin-jarfile}" />
+    <propertyregex property="plugin.pkg.name.0"
+		   input="${plugin-path}/${plugin-file}"
+		   regexp="/"
+		   replace="."
+		   />
+    <propertyregex property="plugin.pkg.name"
+		   input="${plugin.pkg.name.0}"
+		   regexp="\.(xml|class)$"
+		   replace=""
+		   />
+
+    <!-- classpath with the tests and packaged plugin jar -->
+    <path id="pkgd.plugin.test.run.classpath">
+      <path refid="test.run.classpath" />
+      <pathelement path="${plugin.jar}" />
+    </path>
+
+    <echo message="Validating plugin ${plugin.pkg.name}"/>
+    <junit1 fork="${fork}" printsummary="yes"
+	    haltonfailure="${halt}"
+	    filtertrace="${filtertrace}" showoutput="${showoutput}">
+      <test fork="${fork}"
+	    name="org.lockss.test.PluginWellformednessTests" />
+      <jvmarg value="-server"/>
+      <formatter type="plain" usefile="false" />
+      <classpath refid="pkgd.plugin.test.run.classpath" />
+      <jvmarg line="${junit.default.args}"/>
+      <jvmarg line="${jvmargs}"/>
+      <sysproperty key="org.lockss.test.TestPluginNames"
+		   value="${plugin.pkg.name}"/>
+      <sysproperty key="org.lockss.manager.PluginManager"
+		   value="org.lockss.test.NonVersionCheckingPluginManager"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+    </junit1>
+  </target>
+
+
   <target name="build-plugin" depends="compile-plugins,check.contrib"
 	  description="Generate and optionally sign a loadable plugin
-                                   JAR file for a single plugin">
+                       JAR file for a single plugin.  ">
     <!-- relies on the properties: plugin-jarfile, plugin-path,
 	 and plugin-file.  The property titledb is optional. -->
 
@@ -1579,12 +1664,17 @@ Must specify output dir with -Doutdir=dir
       </else>
     </if>
 
-    <jar destfile="${plugins.dir}/${plugin-jarfile}">
+    <property name="plugin.jar" value="${plugins.dir}/${plugin-jarfile}" />
+    <delete file="${plugin.jar}" quiet="true" />
+    <jar destfile="${plugin.jar}">
       <fileset dir="${plugin-root}">
-	<include name="titledb.xml" if="titledb"/>
-	<include name="${plugin-path}/*.class" />
-	<include name="${plugin-path}/*.xml" />
-	<include name="${plugin-path}/*.txt" /> <!-- Plugin externals -->
+        <include name="titledb.xml" if="titledb"/>
+        <include name="${plugin-path}/*.class" />
+        <include name="${plugin-path}/*.xml" />
+        <include name="${plugin-path}/*.dat" />
+        <include name="${plugin-path}/*.dat.gz" />
+	<!-- e.g. Muse URL normalizer mapping -->
+        <include name="${plugin-path}/*.txt" /> <!-- Plugin externals -->
       </fileset>
       <manifest>
 	<section name="${plugin-path}/${plugin-file}">
@@ -1606,7 +1696,7 @@ Must specify output dir with -Doutdir=dir
       <then>
 	<echo>Signing jar file ${plugin-jarfile}...</echo>
 	<signjar keystore="${sign-keystore}"
-		 jar="${plugins.dir}/${plugin-jarfile}"
+		 jar="${plugin.jar}"
 		 keypass="${sign-keypass}"
 		 storepass="${sign-keypass}"
 		 alias="${sign-alias}"/>
