@@ -725,6 +725,21 @@
   }
 
   {
+
+    title <
+      name = Craniomaxillofacial Trauma & Reconstruction Open ;
+      eissn = 2472-7512 ;
+      doi = 10.1055/s-00032027
+
+    >
+    param[journal_id] = 10.1055/s-00032027
+    comment[years] = 2016-current
+
+    au < expected ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 2016 ; 1 ; >
+
+  }
+
+  {
     title <
       name = Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten ;
       issn = 1436-6142 ;
@@ -736,7 +751,7 @@
     comment[years] = 2011-current
     comment[content] = says no articles?
 
-   au < exists ; exists ; 2014 ; 2014 ; Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 0 ; >
+   au < expected ; exists ; 2014 ; 2014 ; Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 0 ; >
 
   }
 
@@ -2375,12 +2390,25 @@
       doi =  10.1055/s-00028776
     >
 
-
     param[journal_id] = 10.1055/s-00028776 
     # https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00028776   Journal of Clinical &amp\; Academic Ophthalmology
-    comment[1] = First issue online will be available soon.
 
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Hand and Microsurgery ;
+      issn = 0974-3227 ;
+      eissn = 0974-6897 ;
+      doi =  10.1055/s-00031417
+    >
+
+    param[journal_id] = 10.1055/s-00031417 
+
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; >
 
   }
 
