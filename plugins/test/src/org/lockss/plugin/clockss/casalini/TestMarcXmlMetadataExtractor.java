@@ -46,8 +46,6 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinablePlugin;
 
 
 public class TestMarcXmlMetadataExtractor extends LockssTestCase {
@@ -60,7 +58,8 @@ public class TestMarcXmlMetadataExtractor extends LockssTestCase {
   private static String PLUGIN_NAME = "org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String YEAR = "2016";
-
+  private static String pdfUrl1 = BASE_URL + YEAR + "/Monographs/ATENEO/2249531/2279431.pdf";
+  private static String pdfUrl2 = BASE_URL + YEAR + "/Monographs/ATENEO/2249531/2279430.pdf";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -105,12 +104,17 @@ public class TestMarcXmlMetadataExtractor extends LockssTestCase {
       IOUtil.safeClose(file_input);
 
       CIProperties xmlHeader = new CIProperties();   
-      String xml_url = BASE_URL + YEAR + "Monographs/TestXML.xml";
+      String xml_url = BASE_URL + YEAR + "/Monographs/TestXML.xml";
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      
+      // Now add two PDF files so they can be "found" 
+      // these aren't opened, so it doens't matter that they have the wrong header type
+      mau.addUrl(pdfUrl1, true, true, xmlHeader);
+      mau.addUrl(pdfUrl2, true, true, xmlHeader);
 
     FileMetadataExtractor me = new CasaliniLibriMarcXmlMetadataExtractorFactory().createFileMetadataExtractor(
         MetadataTarget.Any(), "text/xml");
@@ -168,7 +172,7 @@ public class TestMarcXmlMetadataExtractor extends LockssTestCase {
         pw.print("\t");
         pw.print(mdRecord.get(MetadataField.FIELD_ARTICLE_TYPE));
         pw.print("\t");
-        pw.print(mdRecord.get(MetadataField.FIELD_AUTHOR));
+        pw.print(StringUtil.separatedString(mdRecord.getList(MetadataField.FIELD_AUTHOR), ";"));
         pw.print("\t");
         pw.print(mdRecord.get(MetadataField.FIELD_PUBLISHER));
         pw.print("\t");

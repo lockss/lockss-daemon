@@ -66,6 +66,9 @@ implements SourceXmlSchemaHelper {
   //    <marc:subfield code="d">0001</marc:subfield>
   // </marc:datafield>
   // Define tags/codes here for the bits we can use
+  private static final String ISBN_TAG ="020";
+  private static final String isbn_code ="a";
+  
   private static final String LOCATOR1_TAG ="092";
   private static final String LOCATOR2_TAG ="097";
   private static final String dir_code ="a";
@@ -84,7 +87,7 @@ implements SourceXmlSchemaHelper {
   private static final String name_code ="a";
   
   private static final String ID_TAG ="773";
-    private static final String isbn_code ="z";
+    private static final String isbn_id_code ="z";
   
   
 
@@ -98,8 +101,11 @@ implements SourceXmlSchemaHelper {
   public static String MARC_file =  
       "datafield[@tag = \"" + LOCATOR2_TAG + "\"]" +
           "/subfield[@code = \"" + file_code + "\"]";
-  private static String MARC_isbn =  
+  private static String MARC_id_isbn =  
       "datafield[@tag = \"" + ID_TAG + "\"]" +
+          "/subfield[@code = \"" + isbn_id_code + "\"]";
+  public static String MARC_isbn =  
+      "datafield[@tag = \"" + ISBN_TAG + "\"]" +
           "/subfield[@code = \"" + isbn_code + "\"]";
   private static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
@@ -160,7 +166,8 @@ implements SourceXmlSchemaHelper {
   static private final NodeValue ISBN_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
-      return StringUtils.remove(node.getTextContent(), "-");
+      String justisbn = StringUtils.strip(node.getTextContent(), "(* ");
+      return StringUtils.remove(justisbn, "-");
     }
   };
 
@@ -174,6 +181,7 @@ implements SourceXmlSchemaHelper {
       new HashMap<String,XPathValue>();
   static {
     casalini_articleMap.put(MARC_isbn, ISBN_VALUE);
+    casalini_articleMap.put(MARC_id_isbn, ISBN_VALUE);
     casalini_articleMap.put(MARC_title, TITLE_VALUE);
     casalini_articleMap.put(MARC_subtitle, TITLE_VALUE);
     casalini_articleMap.put(MARC_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -195,7 +203,9 @@ implements SourceXmlSchemaHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
+    // More of the records have this rather than the MARC_isbn
+    // postCookProcess to add in missing values from raw data
+    cookMap.put(MARC_id_isbn, MetadataField.FIELD_ISBN);
     // we will add subtitle/edition as needed in post-cook process
     cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);

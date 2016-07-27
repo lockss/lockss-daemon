@@ -72,26 +72,23 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
     }
     
     
-
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
       
       List <String>pubList = oneAM.getRawList(CasaliniMarcXmlSchemaHelper.MARC_publisher);
       String pubDir = cleanPublisherName(StringUtil.separatedString(pubList, "; "), true);
-      String dirNum = oneAM.getRaw(helper.getFilenameXPathKey());
+      String dirNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_dir);
       String fileNum = oneAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
       // when it's not set then it is the whole book (same dir and filenum)
       // except for two filenumbers which are missing entirely.
       if (dirNum == null) {
         dirNum = fileNum;
       }
-      // this causes the preEmit to assume no need for file
-      return null;
-      //String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      //ArrayList<String> returnList = new ArrayList<String>();
-      //returnList.add(cuBase + pubDir + "/" + dirNum + "/" + fileNum + ".pdf");
-      //return returnList;
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      ArrayList<String> returnList = new ArrayList<String>();
+      returnList.add(cuBase + pubDir + "/" + dirNum + "/" + fileNum + ".pdf");
+      return returnList;
     }    
     
     @Override
@@ -107,6 +104,15 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
         title_br.append(subT);
         thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE,  title_br.toString());
       }
+      
+      // Now clean up any missing ISBN values by pulling in from alternate location
+      if (thisAM.get(MetadataField.FIELD_ISBN) == null) {
+        String alt_isbn = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_isbn);
+        if (alt_isbn != null) {
+          thisAM.put(MetadataField.FIELD_ISBN,  alt_isbn);
+        }
+      }
+      
       //Now clean up the cooked publisher - leave the raw publisher as given
       List <String>pubList = thisAM.getRawList(CasaliniMarcXmlSchemaHelper.MARC_publisher);
       String cleanPubString = cleanPublisherName(StringUtil.separatedString(pubList, "; "), false);
@@ -134,7 +140,6 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       if (dirNum == null) {
         dirNum = fileNum;
       }
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       thisAM.put(MetadataField.FIELD_ACCESS_URL, pubDir + "/" + dirNum + "/" + fileNum + ".pdf");
       // TEMPORARY end debugging only
       
