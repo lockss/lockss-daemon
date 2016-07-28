@@ -53,7 +53,11 @@
         <string>"%sgateway/book/%s", base_url, volume</string>
       </entry>
     </map>
+  </entry>  <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalSubstancePredicateFactory</string>
   </entry>
+  
   <entry>
 <!-- CRAWL RULE COMMENT BLOCK                                                                                                                                           
      start_url is understood and need not be explicitly included
@@ -133,10 +137,6 @@
         <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>plugin_substance_predicate_factory</string>
-    <string>org.lockss.plugin.igiglobal.IgiGlobalSubstancePredicateFactory</string>
   </entry>
   <entry>
     <!-- Validator factory for text MIME types -->
