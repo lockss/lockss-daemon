@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -138,6 +138,10 @@
         <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalSubstancePredicateFactory</string>
   </entry>
   <entry>
     <!-- Validator factory for text MIME types -->
