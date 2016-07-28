@@ -150,7 +150,7 @@
       <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF  -->
-      <string>org.lockss.plugin.highwire.HighWireContentValidator$MimeTypeException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
     </list>
   </entry>
   <entry>
