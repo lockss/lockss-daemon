@@ -17047,6 +17047,20 @@
   {
 
   title <
+    name = International Journal of Engineering Business Management ;
+    eissn = 1847-9790 
+  >
+
+    param[base_url] = http://enb.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; International Journal of Engineering Business Management Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+  title <
     name = International Journal of Entrepreneurship and Innovation ;
     issn = 1465-7503 ;
     eissn = 2043-6882 
@@ -32023,6 +32037,20 @@
       au < doNotProcess ; exists ; 2016 ; Musicae Scientiae Volume 20 ; 20 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Nanomaterials and Nanotechnology ;
+      eissn = 1847-9804
+    >
+
+      param[base_url] = http://nax.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
 
   }
 

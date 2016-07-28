@@ -19278,7 +19278,6 @@
         param[base_url] = http://jer.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-
         au < released ; 2000 ; International Journal of Engine Research Volume 1 ; 1 >
         au < released ; 2001 ; International Journal of Engine Research Volume 2 ; 2 >
         au < released ; 2002 ; International Journal of Engine Research Volume 3 ; 3 >
@@ -19299,6 +19298,21 @@
 
       }
 
+    }
+
+    {
+  
+    title <
+      name = International Journal of Engineering Business Management ;
+      eissn = 1847-9790 
+    >
+  
+      param[base_url] = http://enb.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < expected ; 2016 ; International Journal of Engineering Business Management Volume 1 ; 1 >
+  
     }
 
     {
@@ -35466,6 +35480,21 @@ comment[mpj] = now published by Brill
         au < manifest ; 2016 ; Musicae Scientiae Volume 20 ; 20 >
 
       }
+
+    }
+
+    {
+
+      title <
+        name = Nanomaterials and Nanotechnology ;
+        eissn = 1847-9804
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://nax.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < expected ; 2016 ; Nanomaterials and Nanotechnology Volume 1 ; 1 >
 
     }
 
