@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,12 +33,8 @@
     </map>
   </entry>
   <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkBooksPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>required_daemon_version</string>
+    <string>1.70.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -90,6 +86,15 @@
     <string>"%s/lockss.txt", base_url</string>
   </entry>
   <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%slockss.txt", to_http(base_url)</string>
+      <string>"%slockss.txt", to_https(base_url)</string>
+      <string>"%slockss.txt", download_url</string>
+      <string>"https://api.springer.com/lockss.txt"</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url), url_host(download_url)</string>
@@ -117,6 +122,46 @@
     <string>org.lockss.plugin.springer.link.SpringerLinkJournalsCrawlSeedFactory</string>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.springer.link.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.plugin.springer.link.SpringerLinkHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.springer.link.SpringerLinkHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.springer.link.SpringerLinkHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -124,6 +169,20 @@
         <string>org.lockss.plugin.springer.link.SpringerLinkJournalsHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>(rd|static-content)\.springer\.com</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
   <!-- The css, images, js and sites files have a changing number in the url for journals -->    
   <!-- eg:(base_url)static/201602081740-1199/css/print.css -->  
@@ -140,5 +199,5 @@
       <string>"/static/.*\.(png|css|js|gif)$", 0</string>
       <string>"/article/[^/]+/[^/.]+/fulltext.html$", 0</string>
     </list>
-  </entry> 
+  </entry>
 </map>

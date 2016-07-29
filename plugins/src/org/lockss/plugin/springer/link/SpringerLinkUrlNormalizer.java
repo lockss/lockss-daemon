@@ -40,7 +40,7 @@ import org.lockss.util.StringUtil;
 
 /**
  */
-public class SpringerLinkUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class SpringerLinkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   public static final String SLASH_ENCODED = "%2F";
   public static final String SLASH = "/";

@@ -38,6 +38,7 @@ import java.util.regex.Pattern;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
 import org.lockss.util.urlconn.CacheException;
 
 /**
@@ -49,7 +50,7 @@ import org.lockss.util.urlconn.CacheException;
  * 
  * @since 1.67.5
  */
-public class SpringerLinkUrlConsumer extends HttpToHttpsUtil.HttpToHttpsUrlConsumer {
+public class SpringerLinkUrlConsumer extends HttpToHttpsUrlConsumer {
   
   public static final String DOWNLOAD_URL_KEY = "download_url";
   public static final String ACCESS_STRING = "accesspage";

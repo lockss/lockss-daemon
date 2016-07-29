@@ -44,6 +44,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -89,7 +90,7 @@ public class SpringerLinkJournalsHtmlMetadataExtractorFactory
         url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
     }
   }

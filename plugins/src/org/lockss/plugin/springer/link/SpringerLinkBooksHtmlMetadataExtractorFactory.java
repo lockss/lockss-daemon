@@ -117,7 +117,7 @@ public class SpringerLinkBooksHtmlMetadataExtractorFactory
         url = cu.getUrl();
       }
       ret.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return ret;
     }
     
