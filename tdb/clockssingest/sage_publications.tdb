@@ -16396,6 +16396,20 @@
   {
 
     title <
+      name = International Journal of Advanced Robotic Systems ;
+      eissn = 1729-8814 
+    >
+
+      param[base_url] = http://arx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < expected ; exists ; 2016 ; International Journal of Advanced Robotic Systems Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Aeroacoustics ;
       issn = 1475-472X ;
       eissn = 2048-4003 
