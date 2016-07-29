@@ -1045,9 +1045,9 @@
 
         au < down ; 2014 ; Journal of Feminist Studies in Religion Volume 30 ; 30 >
         au < down ; 2015 ; Journal of Feminist Studies in Religion Volume 31 ; 31 >
+        au < manifest ; 2016 ; Journal of Feminist Studies in Religion Volume 32 ; 32 >
 
       }
-
 
     }
 
@@ -1113,9 +1113,9 @@
 
         au < down ; 2014 ; Journal of Folklore Research Volume 51 ; 51 >
         au < down ; 2015 ; Journal of Folklore Research Volume 52 ; 52 >
+        au < manifest ; 2016 ; Journal of Folklore Research Volume 53 ; 53 >
 
       }
-
 
     }
 
@@ -1175,9 +1175,9 @@
 
         au < down ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 >
         au < down ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
+        au < manifest ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 >
 
       }
-
 
     }
 
@@ -1217,8 +1217,6 @@
       attr[journal_id] = jml
       implicit < status ; year ; name ; param[volume] >
 
-      comment[jml31_32] = 500 errors
-
       {
 
         param[base_url] = http://muse.jhu.edu/
@@ -1247,9 +1245,9 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Journal of Modern Literature Volume 38 ; 38 >
+        au < manifest ; 2015-2016 ; Journal of Modern Literature Volume 39 ; 39 >
 
       }
-
 
     }
 
