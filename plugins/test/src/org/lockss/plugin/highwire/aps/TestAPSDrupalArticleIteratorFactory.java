@@ -122,6 +122,7 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     // but not to ...
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1.toc");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
@@ -165,6 +166,13 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     String rep2e = "/content/ajpendo/1/$1/C$2.full.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2);
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2e);
+    
+    String pat3 = "(?!branch)00([1])file[.]html";
+    // turn xxfile.html into toc
+    String rep3 = "/content/1/$1";
+    String rep3t = "/content/1/$1.toc";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3);
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3t);
     
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;

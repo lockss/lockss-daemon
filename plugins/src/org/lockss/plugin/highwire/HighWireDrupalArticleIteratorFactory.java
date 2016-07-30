@@ -89,7 +89,24 @@ public class HighWireDrupalArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au) {
+      
+      @Override
+      protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
+        return new BuildableSubTreeArticleIterator(au, spec) {
+          
+          @Override
+          protected ArticleFiles createArticleFiles(CachedUrl cu) {
+            ArchivalUnit au = cu.getArchivalUnit();
+            CachedUrl toc = au.makeCachedUrl(cu.getUrl() + ".toc");
+            if ((toc != null) && toc.hasContent()) {
+              return null;
+            }
+            return super.createArticleFiles(cu);
+          }
+        };
+      }
+    };
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
@@ -122,7 +139,7 @@ public class HighWireDrupalArticleIteratorFactory
     
     // set up figures-only to be an aspect
     builder.addAspect(FIGURES_REPLACEMENT,
-        ArticleFiles.ROLE_FIGURES_TABLES);
+        ArticleFiles.ROLE_FIGURES);
     
     // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(

@@ -155,7 +155,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_321_manifest.html", true, au);
     // should not get crawled - wrong journal/vol
-//  FIXME  shouldCacheTest(ROOT_URL + "lockss-manifest/vol_347_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL + "lockss-manifest/vol_347_manifest.html", false, au);
     // toc page for an issue
     shouldCacheTest(ROOT_URL + "content/321/7915.toc", true, au);
     shouldCacheTest(ROOT_URL + "content/321/7915", true, au);
