@@ -30,13 +30,13 @@
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2007 ; Clays and Clay Minerals Volume 55 ; 55 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; Clays and Clay Minerals Volume 56 ; 56 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2009 ; Clays and Clay Minerals Volume 57 ; 57 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Clays and Clay Minerals Volume 60 ; 60 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Clays and Clay Minerals Volume 61 ; 61 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Clays and Clay Minerals Volume 62 ; 62 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; Clays and Clay Minerals Volume 63 ; 63 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 ; >
 
   }
 

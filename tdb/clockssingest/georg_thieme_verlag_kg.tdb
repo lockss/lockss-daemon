@@ -2408,7 +2408,7 @@
 
     param[journal_id] = 10.1055/s-00031417 
 
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 ; >
 
   }
 
@@ -2542,12 +2542,12 @@
     param[journal_id] = 10.1055/s-00029022
     comment[years] = 2010-current
 
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ; >
 
   }
 
@@ -2563,11 +2563,11 @@
     param[journal_id] = 10.1055/s-00029025
     comment[years] = 2012-current
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; >
 
   }
 
@@ -2583,11 +2583,11 @@
     param[journal_id] = 10.1055/s-00029027
     comment[years] = 2012-current
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; >
 
   }
 
@@ -2603,16 +2603,16 @@
     param[journal_id] = 10.1055/s-00029028
     comment[years] = 2006-current
 
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
-    au < exists ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; >
     au < expected ; exists ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; >
 
   }
@@ -2629,11 +2629,11 @@
     param[journal_id] = 10.1055/s-00029029
     comment[years] = 2012-current
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Intensive Care Volume 1 ; 1 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Intensive Care Volume 3 ; 3 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Intensive Care Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Intensive Care Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; >
 
   }
 
@@ -2649,20 +2649,20 @@
     param[journal_id] = 10.1055/s-00029030
     comment[years] = 2003-current
 
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Pediatric Neurology Volume 1 ; 1 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Pediatric Neurology Volume 3 ; 3 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
-    au < exists ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Neurology Volume 10 ; 10 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Pediatric Neurology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Pediatric Neurology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Neurology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; >
 
   }
 
@@ -2678,11 +2678,11 @@
     param[journal_id] = 10.1055/s-00029169
     comment[years] = 2012-current
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Pediatric Neuroradiology Volume 1 ; 1 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Pediatric Neuroradiology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 ; >
 
   }
 
@@ -3727,8 +3727,8 @@
     param[journal_id] = 10.1055/s-00000053
     comment[years] = 2000-2001
 
-    au < exists ; exists ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 ; >
 
   }
 
@@ -4998,11 +4998,11 @@
     param[journal_id] = 10.1055/s-00000116
     comment[years] = 2001-2005
 
-    au < exists ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
 
   }
 

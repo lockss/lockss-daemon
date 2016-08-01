@@ -375,45 +375,45 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #volumes 1-41 use probe link for old H10 plugin
 
-      au < exists ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; >
-      au < exists ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; >
-      au < exists ; exists ; 1971 ; Administration & Society Volume 3 ; 3 ; >
-      au < exists ; exists ; 1972 ; Administration & Society Volume 4 ; 4 ; >
-      au < exists ; exists ; 1973 ; Administration & Society Volume 5 ; 5 ; >
-      au < exists ; exists ; 1974 ; Administration & Society Volume 6 ; 6 ; >
-      au < exists ; exists ; 1975 ; Administration & Society Volume 7 ; 7 ; >
-      au < exists ; exists ; 1976 ; Administration & Society Volume 8 ; 8 ; >
-      au < exists ; exists ; 1977 ; Administration & Society Volume 9 ; 9 ; >
-      au < exists ; exists ; 1978 ; Administration & Society Volume 10 ; 10 ; >
-      au < exists ; exists ; 1979 ; Administration & Society Volume 11 ; 11 ; >
-      au < exists ; exists ; 1980 ; Administration & Society Volume 12 ; 12 ; >
-      au < exists ; exists ; 1981 ; Administration & Society Volume 13 ; 13 ; >
-      au < exists ; exists ; 1982 ; Administration & Society Volume 14 ; 14 ; >
-      au < exists ; exists ; 1983 ; Administration & Society Volume 15 ; 15 ; >
-      au < exists ; exists ; 1984 ; Administration & Society Volume 16 ; 16 ; >
-      au < exists ; exists ; 1985 ; Administration & Society Volume 17 ; 17 ; >
-      au < exists ; exists ; 1986 ; Administration & Society Volume 18 ; 18 ; >
-      au < exists ; exists ; 1987 ; Administration & Society Volume 19 ; 19 ; >
-      au < exists ; exists ; 1988 ; Administration & Society Volume 20 ; 20 ; >
-      au < exists ; exists ; 1989 ; Administration & Society Volume 21 ; 21 ; >
-      au < exists ; exists ; 1990 ; Administration & Society Volume 22 ; 22 ; >
-      au < exists ; exists ; 1991 ; Administration & Society Volume 23 ; 23 ; >
-      au < exists ; exists ; 1992 ; Administration & Society Volume 24 ; 24 ; >
-      au < exists ; exists ; 1993 ; Administration & Society Volume 25 ; 25 ; >
-      au < exists ; exists ; 1994 ; Administration & Society Volume 26 ; 26 ; >
-      au < exists ; exists ; 1995 ; Administration & Society Volume 27 ; 27 ; >
-      au < exists ; exists ; 1996 ; Administration & Society Volume 28 ; 28 ; >
-      au < exists ; exists ; 1997 ; Administration & Society Volume 29 ; 29 ; >
-      au < exists ; exists ; 1998 ; Administration & Society Volume 30 ; 30 ; >
-      au < exists ; exists ; 1999 ; Administration & Society Volume 31 ; 31 ; >
-      au < exists ; exists ; 2000 ; Administration & Society Volume 32 ; 32 ; >
-      au < exists ; exists ; 2001 ; Administration & Society Volume 33 ; 33 ; >
-      au < exists ; exists ; 2002 ; Administration & Society Volume 34 ; 34 ; >
-      au < exists ; exists ; 2003 ; Administration & Society Volume 35 ; 35 ; >
-      au < exists ; exists ; 2004 ; Administration & Society Volume 36 ; 36 ; >
-      au < exists ; exists ; 2005 ; Administration & Society Volume 37 ; 37 ; >
-      au < exists ; exists ; 2006 ; Administration & Society Volume 38 ; 38 ; >
-      au < exists ; exists ; 2007 ; Administration & Society Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1971 ; Administration & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1972 ; Administration & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1973 ; Administration & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1974 ; Administration & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1975 ; Administration & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1976 ; Administration & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1977 ; Administration & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1978 ; Administration & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1979 ; Administration & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1980 ; Administration & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1981 ; Administration & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1982 ; Administration & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1983 ; Administration & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1984 ; Administration & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1985 ; Administration & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1986 ; Administration & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1987 ; Administration & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1988 ; Administration & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1989 ; Administration & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1990 ; Administration & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1991 ; Administration & Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1992 ; Administration & Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1993 ; Administration & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1994 ; Administration & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1995 ; Administration & Society Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1996 ; Administration & Society Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1997 ; Administration & Society Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1998 ; Administration & Society Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1999 ; Administration & Society Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2000 ; Administration & Society Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2001 ; Administration & Society Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2002 ; Administration & Society Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2003 ; Administration & Society Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2004 ; Administration & Society Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2005 ; Administration & Society Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2006 ; Administration & Society Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2007 ; Administration & Society Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Administration & Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Administration & Society Volume 41 ; 41 ; >
       au < zapped ; finished ; 2010 ; Administration & Society Volume 42 ; 42 ; >
@@ -12161,7 +12161,7 @@
       au < finished ; finished ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
       au < finished ; finished ; 2014 ; Evaluation Review Volume 38 ; 38 ; >
       au < crawling ; exists ; 2015 ; Evaluation Review Volume 39 ; 39 ; >
-      au < expected ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; >
 
     }
 
@@ -35422,7 +35422,7 @@
         au < finished ; crawling ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 ; >
         au < crawling ; exists ; 2015 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 4 ; 4 ; >
-        au < expected ; exists ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 5 ; 5 ; >
 
     }
 
@@ -46177,7 +46177,7 @@
     au < finished ; finished ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; >
     au < crawling ; exists ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; >
-    au < expected ; exists ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; >
 
     }
 
