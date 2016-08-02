@@ -393,7 +393,7 @@ while (my $line = <>) {
                 }
                 $result = "Manifest"
             } else {
-                $result = "--NO_TAG--"
+                $result = "--NO_TAG--";
                 if (!defined($man_contents)) {
                     $result = "--NO_CONT--";
                 } elsif (($man_contents !~ m/$lockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
