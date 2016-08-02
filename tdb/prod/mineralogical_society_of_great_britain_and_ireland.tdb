@@ -7,7 +7,7 @@
   # Publisher prefers to preserve content from HW. See RT 2695
 
 
-    pluginPrefix = org.lockss.plugin.highwire.HighWirePressH20Plugin 
+    pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
  
   {
