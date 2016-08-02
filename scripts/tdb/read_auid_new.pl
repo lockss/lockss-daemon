@@ -394,13 +394,13 @@ while (my $line = <>) {
                 $result = "Manifest"
             } else {
                 $result = "--NO_TAG--"
-                #if (!defined($man_contents)) {
-                #    $result = "--NO_CONT--";
-                #} elsif ((!$man_contents =~ m/$lockss_tag/) && (!$man_contents =~ m/$oa_tag/)) {
-                #    $result = "--NO_TAG--";
-                #} elsif ((!$man_contents =~ m/\($param{year}\)/) && (!$man_contents =~ m/: $param{year}/)) {
-                #    $result = "--NO_YEAR--";
-                #}
+                if (!defined($man_contents)) {
+                    $result = "--NO_CONT--";
+                } elsif (($man_contents !~ m/$lockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
+                    $result = "--NO_TAG--";
+                } elsif (($man_contents !~ m/\($param{year}\)/) && ($man_contents !~ m/: $param{year}/)) {
+                    $result = "--NO_YEAR--";
+                }
             }
         } else {
             $result = "--REQ_FAIL--"
@@ -437,10 +437,10 @@ while (my $line = <>) {
             } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
                 $result = "Manifest"
             } else {
-                $result = "--"
+                $result = "--NO_TAG--"
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
