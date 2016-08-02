@@ -100,12 +100,13 @@
 
       param[journal_id] = hindsight
       comment[continues] = 1948-4984 (1999-2009)
+      # testing revealed subscriptions needed. V2016. 
 
       au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2012 ; 2012 ; Hindsight: Journal of Optemetry History Volume 43 ; 43 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2013 ; 2013 ; Hindsight: Journal of Optemetry History Volume 44 ; 44 ; https://scholarworks.iu.edu/journals/ ; >
-      au < testing ; exists ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; https://scholarworks.iu.edu/journals/ ; >
+      au < notReady ; exists ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
