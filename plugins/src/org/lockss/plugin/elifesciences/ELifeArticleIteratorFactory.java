@@ -51,14 +51,14 @@ public class ELifeArticleIteratorFactory
     "\"%scontent/\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/[0-9]+/[^/.]+\", base_url";
+    "\"^%scontent/[0-9]+/[^/.?]+\", base_url";
   // various aspects of an article
   // http://elifesciences.org/content/4/e04024v1
-  // https://elife-publishing-cdn.s3.amazonaws.com/04024/elife-04024-v1-download.pdf
+  // http://elifesciences.org/content/4/e04024v1-download.pdf
  
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
-      "/([0-9]+/[^/.]+)$", Pattern.CASE_INSENSITIVE);
+      "/([0-9]+/[^/.?]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String LANDING_REPLACEMENT = "/$1";
@@ -86,7 +86,7 @@ public class ELifeArticleIteratorFactory
     
     // set up figures-only to be an aspect
     builder.addAspect(FIGURES_REPLACEMENT,
-        ArticleFiles.ROLE_FIGURES_TABLES);
+        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
     
     builder.addAspect(PDF_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
