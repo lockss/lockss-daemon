@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -78,7 +78,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://elife-publishing-cdn\.s3\.amazonaws\.com/[0-9]+/[^/+]+\.pdf$"</string>
+      <string>"%scontent/[0-9]+/[^/+]-downlaod\.pdf$", base_url</string>
     </list>
   </entry>
     <entry>
