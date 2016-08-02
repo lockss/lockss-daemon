@@ -808,6 +808,48 @@
   }
 
   {
+
+    title <
+      name = IJFAB: International Journal of Feminist Approaches to Bioethics ;
+      issn = 1937-4585 ;
+      eissn = 1937-4577
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
+      attr[journal_id] = ijf
+      implicit < status ; year ; name ; param[volume] >
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < down ; 2008 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+        au < down ; 2009 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+        au < down ; 2010 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
+        au < down ; 2011 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 4 ; 4 >
+        au < down ; 2012 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 5 ; 5 >
+        au < down ; 2013 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 6 ; 6 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < down ; 2014 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 7 ; 7 >
+        au < down ; 2015 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 8 ; 8 >
+        au < manifest ; 2016 ; IJFAB: International Journal of Feminist Approaches to Bioethics Volume 9 ; 9 >
+
+      }
+
+    }
+
+  }
+
+  {
   
     title <
       name = Journal of Canadian Studies / Revue d'études canadiennes ;
