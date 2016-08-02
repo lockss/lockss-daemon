@@ -21252,29 +21252,6 @@
 
     {
 
-    title <
-      name = The Journal of Computational Multiphase Flows ;
-      issn = 1757-482X ;
-      eissn = 1757-4838 
-    >
-
-      param[base_url] = http://cmf.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
-      au < exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
-      au < exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
-      au < exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
-      au < exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
-      au < exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
-      au < released ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
-      au < manifest ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 >
-
-    }
-
-    {
-
       title <
         name = Journal for the Study of the New Testament ;
         issn = 0142-064X ;
@@ -23579,35 +23556,50 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
-  {
+    {
+  
+      title <
+        name = Journal of Christian Education ;
+        issn = 0021-9657 ;
+        issnl = 0021-9657
+      >
+  
+        param[base_url] = http://ice.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        comment[merged_into] = 2056-9971
+        # content available 1974 volume 17, missing content from 1975 to 2000
+        
+        au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
+        au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
+        au < exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 >
+        au < exists ; 2004 ; Journal of Christian Education Volume 47 ; 47 >
+        au < exists ; 2005 ; Journal of Christian Education Volume 48 ; 48 >
+        au < exists ; 2006 ; Journal of Christian Education Volume 49 ; 49 >
+        au < exists ; 2007 ; Journal of Christian Education Volume 50 ; 50 >
+        au < exists ; 2008 ; Journal of Christian Education Volume 51 ; 51 >
+        au < exists ; 2009 ; Journal of Christian Education Volume 52 ; 52 >
+        au < exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 >
+        au < exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 >
+        au < exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 >
+        
+    }
 
-    title <
-      name = Journal of Christian Education ;
-      issn = 0021-9657 ;
-      issnl = 0021-9657
-    >
-
-      param[base_url] = http://ice.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[merged_into] = 2056-9971
-      # content available 1974 volume 17, missing content from 1975 to 2000
-      
-      au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
-      au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
-      au < exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 >
-      au < exists ; 2004 ; Journal of Christian Education Volume 47 ; 47 >
-      au < exists ; 2005 ; Journal of Christian Education Volume 48 ; 48 >
-      au < exists ; 2006 ; Journal of Christian Education Volume 49 ; 49 >
-      au < exists ; 2007 ; Journal of Christian Education Volume 50 ; 50 >
-      au < exists ; 2008 ; Journal of Christian Education Volume 51 ; 51 >
-      au < exists ; 2009 ; Journal of Christian Education Volume 52 ; 52 >
-      au < exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 >
-      au < exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 >
-      au < exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 >
-      
-  }
-
+    {
+  
+      title <
+        name = Journal of Circulating Biomarkers ;
+        eissn = 1849-4544
+      >
+  
+        param[base_url] = http://cbx.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < expected ; 2016 ; Journal of Circulating Biomarkers Volume 1 ; 1 >
+  
+    }
+  
     {
 
       title <
@@ -24083,6 +24075,29 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
 
+    title <
+      name = The Journal of Computational Multiphase Flows ;
+      issn = 1757-482X ;
+      eissn = 1757-4838 
+    >
+
+      param[base_url] = http://cmf.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
+      au < exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
+      au < exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
+      au < exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
+      au < exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
+      au < exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
+      au < released ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
+      au < manifest ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 >
+
+    }
+
+    {
+
       title <
         name = Journal of Conflict Resolution ;
         issn = 0022-0027 ;
@@ -24096,7 +24111,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcr.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
-
 
         au < down ; 2006 ; Journal of Conflict Resolution Volume 50 ; 50 >
 

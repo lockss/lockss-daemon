@@ -19214,28 +19214,6 @@
   {
 
     title <
-      name = The Journal of Computational Multiphase Flows ;
-      issn = 1757-482X ;
-      eissn = 1757-4838 
-    >
-
-      param[base_url] = http://cmf.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < exists ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; >
-      au < exists ; exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; >
-      au < exists ; exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 ; >
-      au < exists ; exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; >
-      au < exists ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
-      au < exists ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 ; >
-      au < doNotProcess ; exists ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 ; >
-
-  }
-
-    {
-
-    title <
       name = Journal for the Study of the New Testament ;
       issn = 0142-064X ;
       eissn = 1745-5294
@@ -21069,6 +21047,20 @@
   {
 
     title <
+      name = Journal of Circulating Biomarkers ;
+      eissn = 1849-4544
+    >
+
+      param[base_url] = http://cbx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; Journal of Circulating Biomarkers Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Classical Sociology ;
       issn = 1468-795X ;
       eissn = 1741-2897
@@ -21458,6 +21450,28 @@
       au < doNotProcess ; exists ; 2016 ; Journal of Composite Materials Volume 50 ; 50 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Computational Multiphase Flows ;
+      issn = 1757-482X ;
+      eissn = 1757-4838 
+    >
+
+      param[base_url] = http://cmf.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; >
+      au < exists ; exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; >
+      au < exists ; exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 ; >
+      au < exists ; exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; >
+      au < exists ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
+      au < exists ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 ; >
 
   }
 
