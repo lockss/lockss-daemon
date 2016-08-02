@@ -817,10 +817,10 @@
 
     {
 
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      #plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
       attr[journal_id] = ijf
-      implicit < status ; year ; name ; param[volume] >
+      #implicit < status ; year ; name ; param[volume] >
 
       {
 
