@@ -731,11 +731,11 @@
     au < doNotProcess ; exists ; 2009 ; Drug, Healthcare and Patient Safety Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Drug, Healthcare and Patient Safety Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Drug, Healthcare and Patient Safety Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Drug, Healthcare and Patient Safety Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Drug, Healthcare and Patient Safety Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Drug, Healthcare and Patient Safety Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Drug, Healthcare and Patient Safety Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Drug, Healthcare and Patient Safety Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Drug, Healthcare and Patient Safety Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -772,11 +772,11 @@
     au < doNotProcess ; exists ; 2009 ; International Medical Case Reports Journal Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; International Medical Case Reports Journal Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Medical Case Reports Journal Volume 4 ; 4 ; 2011 ; >
-    au < testing ; exists ; 2012 ; International Medical Case Reports Journal Volume 5 ; 5 ; 2012 ; >
-    au < testing ; exists ; 2013 ; International Medical Case Reports Journal Volume 6 ; 6 ; 2013 ; >
+    au < ready ; exists ; 2012 ; International Medical Case Reports Journal Volume 5 ; 5 ; 2012 ; >
+    au < ready ; exists ; 2013 ; International Medical Case Reports Journal Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; International Medical Case Reports Journal Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Medical Case Reports Journal Volume 8 ; 8 ; 2015 ; >
-    au < testing ; exists ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; >
+    au < ready ; exists ; 2016 ; International Medical Case Reports Journal Volume 9 ; 9 ; 2016 ; >
     
   }
 
@@ -792,11 +792,11 @@
     au < doNotProcess ; exists ; 2009 ; Open Access Emergency Medicine Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Open Access Emergency Medicine Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Emergency Medicine Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Open Access Emergency Medicine Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Open Access Emergency Medicine Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Open Access Emergency Medicine Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Emergency Medicine Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Emergency Medicine Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Open Access Emergency Medicine Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Open Access Emergency Medicine Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -812,11 +812,11 @@
     au < doNotProcess ; exists ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; International Journal of Interferon, Cytokine and Mediator Research Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; International Journal of Interferon, Cytokine and Mediator Research Volume 6 ; 6 ; 2014 ; >
+    au < ready ; exists ; 2014 ; International Journal of Interferon, Cytokine and Mediator Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Interferon, Cytokine and Mediator Research Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; International Journal of Interferon, Cytokine and Mediator Research Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -833,11 +833,11 @@
     au < doNotProcess ; exists ; 2009 ; Reports in Medical Imaging Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Reports in Medical Imaging Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Reports in Medical Imaging Volume 4 ; 4 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Reports in Medical Imaging Volume 5 ; 5 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Reports in Medical Imaging Volume 6 ; 6 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Reports in Medical Imaging Volume 5 ; 5 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Reports in Medical Imaging Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Reports in Medical Imaging Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Medical Imaging Volume 8 ; 8 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Reports in Medical Imaging Volume 9 ; 9 ; 2016 ; >
     
   }
 
@@ -853,8 +853,8 @@
     au < doNotProcess ; exists ; 2009 ; Research and Reports in Urology Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Research and Reports in Urology Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Research and Reports in Urology Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Research and Reports in Urology Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Research and Reports in Urology Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Research and Reports in Urology Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Research and Reports in Urology Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Research and Reports in Urology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Urology Volume 7 ; 7 ; 2015 ; >
     au < testing ; exists ; 2016 ; Research and Reports in Urology Volume 8 ; 8 ; 2016 ; >
@@ -873,11 +873,11 @@
     au < doNotProcess ; exists ; 2009 ; Open Access Journal of Clinical Trials Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Open Access Journal of Clinical Trials Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Clinical Trials Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Open Access Journal of Clinical Trials Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Open Access Journal of Clinical Trials Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Open Access Journal of Clinical Trials Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Journal of Clinical Trials Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Journal of Clinical Trials Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Open Access Journal of Clinical Trials Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -893,9 +893,9 @@
     au < doNotProcess ; exists ; 2009 ; International Journal of Wine Research Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; International Journal of Wine Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Journal of Wine Research Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; International Journal of Wine Research Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; International Journal of Wine Research Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
+    au < ready ; exists ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Wine Research Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; International Journal of Wine Research Volume 8 ; 8 ; 2016 ; >
     
@@ -914,8 +914,8 @@
     au < doNotProcess ; exists ; 2009 ; Psychology Research and Behavior Management Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 4 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 5 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 5 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Psychology Research and Behavior Management Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Psychology Research and Behavior Management Volume 8 ; 8 ; 2015 ; >
     au < ready ; exists ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; >
@@ -934,8 +934,8 @@
     au < doNotProcess ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dentistry Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dentistry Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dentistry Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dentistry Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Clinical, Cosmetic and Investigational Dentistry Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dentistry Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Clinical, Cosmetic and Investigational Dentistry Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Clinical, Cosmetic and Investigational Dentistry Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dentistry Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Clinical, Cosmetic and Investigational Dentistry Volume 8 ; 8 ; 2016 ; >
@@ -954,8 +954,8 @@
     au < doNotProcess ; exists ; 2009 ; Cancer Management and Research Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Cancer Management and Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Cancer Management and Research Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Cancer Management and Research Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Cancer Management and Research Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Cancer Management and Research Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Cancer Management and Research Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Cancer Management and Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Cancer Management and Research Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Cancer Management and Research Volume 8 ; 8 ; 2016 ; >
@@ -975,8 +975,8 @@
     au < doNotProcess ; exists ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 4 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 5 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Risk Management and Healthcare Policy Volume 6 ; 6 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 5 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Risk Management and Healthcare Policy Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Risk Management and Healthcare Policy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Risk Management and Healthcare Policy Volume 8 ; 7 ; 2015 ; >
     au < testing ; exists ; 2016 ; Risk Management and Healthcare Policy Volume 9 ; 9 ; 2016 ; >
@@ -999,7 +999,7 @@
     au < ready ; exists ; 2013 ; Transplant Research and Risk Management Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Transplant Research and Risk Management Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Transplant Research and Risk Management Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Transplant Research and Risk Management Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Transplant Research and Risk Management Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1015,11 +1015,11 @@
     au < doNotProcess ; exists ; 2009 ; Cell Health and Cytoskeleton Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Cell Health and Cytoskeleton Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Cell Health and Cytoskeleton Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Cell Health and Cytoskeleton Volume 6 ; 6 ; 2014 ; >
+    au < ready ; exists ; 2014 ; Cell Health and Cytoskeleton Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Cell Health and Cytoskeleton Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Cell Health and Cytoskeleton Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Cell Health and Cytoskeleton Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1035,11 +1035,11 @@
     au < doNotProcess ; exists ; 2009 ; Open Access Rheumatology: Research and Reviews Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Open Access Rheumatology: Research and Reviews Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Rheumatology: Research and Reviews Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Open Access Rheumatology: Research and Reviews Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Open Access Rheumatology: Research and Reviews Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Rheumatology: Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Rheumatology: Research and Reviews Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Open Access Rheumatology: Research and Reviews Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1055,9 +1055,9 @@
     au < doNotProcess ; exists ; 2009 ; Virus Adaptation and Treatment Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Virus Adaptation and Treatment Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Virus Adaptation and Treatment Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Virus Adaptation and Treatment Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Virus Adaptation and Treatment Volume 6 ; 6 ; 2014 ; >
+    au < ready ; exists ; 2014 ; Virus Adaptation and Treatment Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Virus Adaptation and Treatment Volume 7 ; 7 ; 2015 ; >
     au < expected ; exists ; 2016 ; Virus Adaptation and Treatment Volume 8 ; 8 ; 2016 ; >
     
@@ -1075,8 +1075,8 @@
     au < doNotProcess ; exists ; 2009 ; Hepatic Medicine: Evidence and Research Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Hepatic Medicine: Evidence and Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Hepatic Medicine: Evidence and Research Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Hepatic Medicine: Evidence and Research Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Hepatic Medicine: Evidence and Research Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Hepatic Medicine: Evidence and Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Hepatic Medicine: Evidence and Research Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Hepatic Medicine: Evidence and Research Volume 8 ; 8 ; 2016 ; >
@@ -1109,8 +1109,8 @@
 
     au < doNotProcess ; exists ; 2010 ; Open Access Journal of Sports Medicine Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 3 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Open Access Journal of Sports Medicine Volume 4 ; 4 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 3 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Open Access Journal of Sports Medicine Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Journal of Sports Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Journal of Sports Medicine Volume 6 ; 6 ; 2015 ; >
     au < ready ; exists ; 2016 ; Open Access Journal of Sports Medicine Volume 7 ; 7 ; 2016 ; >
@@ -1129,11 +1129,11 @@
     au < doNotProcess ; exists ; 2009 ; Clinical Pharmacology: Advances and Applications Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical Pharmacology: Advances and Applications Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Pharmacology: Advances and Applications Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Clinical Pharmacology: Advances and Applications Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Clinical Pharmacology: Advances and Applications Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Clinical Pharmacology: Advances and Applications Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Clinical Pharmacology: Advances and Applications Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Pharmacology: Advances and Applications Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Clinical Pharmacology: Advances and Applications Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Clinical Pharmacology: Advances and Applications Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1149,9 +1149,9 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Experimental Pharmacology Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Experimental Pharmacology Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Experimental Pharmacology Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Journal of Experimental Pharmacology Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Journal of Experimental Pharmacology Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Journal of Experimental Pharmacology Volume 6 ; 6 ; 2014 ; >
+    au < ready ; exists ; 2012 ; Journal of Experimental Pharmacology Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Journal of Experimental Pharmacology Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2014 ; Journal of Experimental Pharmacology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Experimental Pharmacology Volume 7 ; 7 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Experimental Pharmacology Volume 8 ; 8 ; 2016 ; >
     
@@ -1169,8 +1169,8 @@
     au < doNotProcess ; exists ; 2009 ; HIV/AIDS - Research and Palliative Care Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; HIV/AIDS - Research and Palliative Care Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; HIV/AIDS - Research and Palliative Care Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; HIV/AIDS - Research and Palliative Care Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; HIV/AIDS - Research and Palliative Care Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; HIV/AIDS - Research and Palliative Care Volume 8 ; 8 ; 2016 ; >
@@ -1189,8 +1189,8 @@
     au < doNotProcess ; exists ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Breast Cancer: Targets and Therapy Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Breast Cancer: Targets and Therapy Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Breast Cancer: Targets and Therapy Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Breast Cancer: Targets and Therapy Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Breast Cancer: Targets and Therapy Volume 8 ; 8 ; 2016 ; >
@@ -1209,11 +1209,11 @@
     au < doNotProcess ; exists ; 2009 ; Nutrition and Dietary Supplements Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Nutrition and Dietary Supplements Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Nutrition and Dietary Supplements Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nutrition and Dietary Supplements Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1229,11 +1229,11 @@
     au < doNotProcess ; exists ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Orthopedic Research and Reviews Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Orthopedic Research and Reviews Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Orthopedic Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Orthopedic Research and Reviews Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Orthopedic Research and Reviews Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Orthopedic Research and Reviews Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1249,8 +1249,8 @@
     au < doNotProcess ; exists ; 2009 ; Nature and Science of Sleep Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Nature and Science of Sleep Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Nature and Science of Sleep Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; >
+    au < ready ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Nature and Science of Sleep Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nature and Science of Sleep Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Nature and Science of Sleep Volume 8 ; 8 ; 2016 ; >
@@ -1268,7 +1268,7 @@
 
     au < doNotProcess ; exists ; 2010 ; Open Access Journal of Contraception Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 3 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 3 ; 2012 ; >
     au < ready ; exists ; 2013 ; Open Access Journal of Contraception Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Journal of Contraception Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Journal of Contraception Volume 6 ; 6 ; 2015 ; >
@@ -1288,11 +1288,11 @@
     au < doNotProcess ; exists ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Neurobehavioral HIV Medicine Volume 5 ; 5 ; 2013 ; >
     au < testing ; exists ; 2014 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 7 ; 7 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Neurobehavioral HIV Medicine Volume 8 ; 8 ; 2016 ; >
+    au < ready ; exists ; 2016 ; Neurobehavioral HIV Medicine Volume 8 ; 8 ; 2016 ; >
     
   }
 
@@ -1308,7 +1308,7 @@
     au < doNotProcess ; exists ; 2009 ; Clinical Optometry Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical Optometry Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Optometry Volume 3 ; 3 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Clinical Optometry Volume 4 ; 4 ; 2012 ; >
+    au < ready ; exists ; 2012 ; Clinical Optometry Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Clinical Optometry Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Clinical Optometry Volume 6 ; 6 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Clinical Optometry Volume 7 ; 7 ; 2015 ; >
