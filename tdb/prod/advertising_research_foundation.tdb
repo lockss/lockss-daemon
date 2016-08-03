@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Advertising Research Foundation
+    name = Advertising Research Foundation ;
+    info[tester] = 2
   >
 
     plugin = org.lockss.plugin.highwire.arf.ARFDrupalPlugin

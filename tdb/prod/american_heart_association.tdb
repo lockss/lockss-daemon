@@ -1,6 +1,7 @@
 {
   publisher <
-    name = American Heart Association
+    name = American Heart Association ;
+    info[tester] = 2
   >
 
       pluginPrefix = org.lockss.plugin.highwire.

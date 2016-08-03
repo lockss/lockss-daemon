@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = International Water Association Publishing
+    name = International Water Association Publishing ;
+    info[tester] = 2
   >
   
     plugin = org.lockss.plugin.highwire.iwa.IWADrupalPlugin
