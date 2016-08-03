@@ -711,6 +711,16 @@ public abstract class BasePlugin
     return newAuxClass(className, expectedType, expectedType);
   }
 
+  protected <T> Class loadPluginClass(String className, Class<T> expectedType)
+      throws ClassNotFoundException {
+    if (classLoader != null) {
+      return Class.forName(className, true, classLoader);
+    } else {
+      return Class.forName(className);
+    }
+  }
+
+
   /** Create and return a new instance of a plugin auxilliary class.
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
@@ -721,11 +731,7 @@ public abstract class BasePlugin
 			   Class<T> wrapperType) {
     T obj = null;
     try {
-      if (classLoader != null) {
-	obj = ((Class<T>)Class.forName(className, true, classLoader)).newInstance();
-      } else {
-	obj = ((Class<T>)Class.forName(className)).newInstance();
-      }
+      obj = ((Class<T>)loadPluginClass(className, expectedType)).newInstance();
     } catch (ExceptionInInitializerError e) {
       throw auxErr("Error initializing dynamically loaded class "
 		   + className

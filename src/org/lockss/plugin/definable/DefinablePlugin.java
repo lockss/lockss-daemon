@@ -798,7 +798,7 @@ public class DefinablePlugin extends BasePlugin {
 				       val);
 	    } else {
 	      try {
-		Class eClass = Class.forName(first);
+ 		Class eClass = loadPluginClass(first, Exception.class);
 		// If a class name, it should be an exception class
 		if (Exception.class.isAssignableFrom(eClass)) {
 		  hResultMap.storeMapEntry(eClass, val);
