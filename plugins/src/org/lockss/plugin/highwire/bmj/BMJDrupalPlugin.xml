@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -72,4 +72,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.bmj.BMJDrupalHtmlCrawlFilterFactory</string>
   </entry>
-  </map>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>static[^.]*[.]bmj[.]com</string>
+  </entry>
+</map>

@@ -57,9 +57,7 @@ public class BMJDrupalUrlNormalizer extends HighWireDrupalUrlNormalizer {
     if (url.contains(BMJ_UN_STATIC) && url.contains(BMJ_UN_PARTIAL)) {
       Matcher mat = BMJ_UN_PREFIX_PAT.matcher(url);
       if (mat.find()) {
-        log.warning(url);
         url = mat.replaceFirst(BMJ_UN_REPLACE);
-        log.warning(url);
       }
     }
     
