@@ -829,12 +829,12 @@ public class ServletUtil {
     Composite block = new Composite();
     if (errMsg != null) {
       block.add(ERRORBLOCK_ERROR_BEFORE);
-      block.add(multiline(errMsg));
+      block.add(encodeText(errMsg));
       block.add(ERRORBLOCK_ERROR_AFTER);
     }
     if (statusMsg != null) {
       block.add(ERRORBLOCK_STATUS_BEFORE);
-      block.add(multiline(statusMsg));
+      block.add(encodeText(statusMsg));
       block.add(ERRORBLOCK_STATUS_AFTER);
     }
     composite.add(block);

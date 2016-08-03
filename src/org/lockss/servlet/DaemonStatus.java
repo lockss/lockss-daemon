@@ -328,8 +328,8 @@ public class DaemonStatus extends LockssServlet {
     }
     java.util.List colList = statTable.getColumnDescriptors();
     java.util.List rowList = getRowList(statTable);
-    String title0 = statTable.getTitle();
-    String titleFoot = statTable.getTitleFootnote();
+    String title0 = htmlEncode(statTable.getTitle());
+    String titleFoot = htmlEncode(statTable.getTitleFootnote());
 
     page = newTablePage();
     Table table = null;
@@ -403,6 +403,13 @@ public class DaemonStatus extends LockssServlet {
       page.add("<br>");
     }
     return page;
+  }
+
+  private String htmlEncode(String s) {
+    if (s == null) {
+      return null;
+    }
+    return HtmlUtil.htmlEncode(s);
   }
 
   /** Prepend table name to servlet-specfici part of page title */
