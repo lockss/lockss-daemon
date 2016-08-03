@@ -337,9 +337,9 @@
 
       au < down ; 2014 ; Leonardo Volume 47 ; 47 >
       au < down ; 2015 ; Leonardo Volume 48 ; 48 >
+      au < manifest ; 2016 ; Leonardo Volume 49 ; 49 >
 
     }
-
 
   }
 
@@ -353,6 +353,22 @@
 
     param[journal_dir] = leonardo_music_journal
     attr[journal_id] = lmj
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1991 ; Leonardo Music Journal Volume 1 ; 1 >
+      au < manifest ; 1992 ; Leonardo Music Journal Volume 2 ; 2 >
+      au < manifest ; 1993 ; Leonardo Music Journal Volume 3 ; 3 >
+      au < manifest ; 1994 ; Leonardo Music Journal Volume 4 ; 4 >
+      au < manifest ; 1995 ; Leonardo Music Journal Volume 5 ; 5 >
+      au < manifest ; 1996 ; Leonardo Music Journal Volume 6 ; 6 >
+      au < manifest ; 1997 ; Leonardo Music Journal Volume 7 ; 7 >
+      au < manifest ; 1998 ; Leonardo Music Journal Volume 8 ; 8 >
+      au < manifest ; 1999 ; Leonardo Music Journal Volume 9 ; 9 >
+
+    }
 
     {
 
@@ -383,7 +399,6 @@
       au < down ; 2015 ; Leonardo Music Journal Volume 25 ; 25 >
 
     }
-
 
   }
 
