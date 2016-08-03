@@ -1599,7 +1599,7 @@ Must specify output dir with -Doutdir=dir
     <!-- classpath with the tests and packaged plugin jar -->
     <path id="pkgd.plugin.test.run.classpath">
       <path refid="test.run.classpath" />
-      <pathelement path="${plugin.jar}" />
+<!--       <pathelement path="${plugin.jar}" /> -->
     </path>
 
     <echo message="Validating plugin ${plugin.pkg.name}"/>
@@ -1615,6 +1615,8 @@ Must specify output dir with -Doutdir=dir
       <jvmarg line="${jvmargs}"/>
       <sysproperty key="org.lockss.test.TestPluginNames"
 		   value="${plugin.pkg.name}"/>
+      <sysproperty key="org.lockss.test.TestPluginJar"
+		   value="${plugin.jar}"/>
       <sysproperty key="org.lockss.manager.PluginManager"
 		   value="org.lockss.test.NonVersionCheckingPluginManager"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>

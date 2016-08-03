@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 import org.apache.commons.lang3.tuple.*;
@@ -45,7 +45,12 @@ import org.lockss.extractor.*;
 /** Performs basic well-formedness tests on one or more plugins.  The list
  * of plugins may be supplied as a semicolon-separated list in the System
  * property org.lockss.test.TestPluginNames or, if invoked directly (i.e.,
- * not as a junit test), on the command line. */
+ * not as a junit test), on the command line.  If a plugin jar name is
+ * supplied (with org.lockss.test.TestPluginNames or -pj on the command
+ * line) it is loaded as a normal packaged plugin jar and the plugins are
+ * assumed to be contained in it.
+
+ */
 
 public final class PluginWellformednessTests extends LockssTestCase {
   static Logger log = Logger.getLogger("PluginWellformednessTests");
@@ -53,31 +58,56 @@ public final class PluginWellformednessTests extends LockssTestCase {
   /** The System property under which this class expects to find a
    * semicolon-separated list of plugin names. */
   public static String PLUGIN_NAME_PROP = "org.lockss.test.TestPluginNames";
+  public static String PLUGIN_JAR_PROP = "org.lockss.test.TestPluginJar";
 
   protected MockLockssDaemon daemon;
+  protected MyPluginManager pluginMgr;
   protected String pluginName;
   protected Plugin plugin;
+  protected boolean jarLoaded = false;
 
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
 
     daemon = getMockLockssDaemon();
-    daemon.getPluginManager().startService();
+    pluginMgr = new MyPluginManager();
+    daemon.setPluginManager(pluginMgr);
+    pluginMgr.initService(daemon);
+    pluginMgr.startService();
   }
 
   public void tearDown() throws Exception {
     super.tearDown();
   }
 
-  protected Plugin getPlugin() {
+  protected Plugin getPlugin() throws IOException {
     if (plugin == null) {
-      plugin = PluginTestUtil.findPlugin(pluginName);
+      String jarProp = System.getProperty(PLUGIN_JAR_PROP);
+      if (StringUtil.isNullString(jarProp)) {
+	plugin = PluginTestUtil.findPlugin(pluginName);
+      } else {
+	if (!jarLoaded) {
+	  loadJar(jarProp);
+	  jarLoaded = true;
+	}	  
+	plugin = pluginMgr.getPluginFromId(pluginName);
+      }
     }
     return plugin;
   }
 
-  protected Configuration getSampleAuConfig() {
+  protected void loadJar(String jarName) throws IOException {
+    Map infoMap = new HashMap();
+    File jarFile = new File(jarName);
+    String jarUrl = FileTestUtil.urlOfFile(jarName);
+    MockCachedUrl mcu = new MockCachedUrl(jarUrl, jarName, false);
+    MockArchivalUnit mau = new MockArchivalUnit();
+    pluginMgr.loadPluginsFromJar(jarFile, jarUrl, mau, mcu, infoMap);
+    pluginMgr.installPlugins(infoMap);
+  }
+
+  protected Configuration getSampleAuConfig() throws IOException {
     Configuration config = ConfigManager.newConfiguration();
     for (ConfigParamDescr descr : getPlugin().getAuConfigDescrs()) {
       config.put(descr.getKey(), descr.getSampleValue());
@@ -86,7 +116,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
   }
 
   protected ArchivalUnit createAu()
-      throws ArchivalUnit.ConfigurationException {
+      throws ArchivalUnit.ConfigurationException, IOException {
     ArchivalUnit au = PluginTestUtil.createAu(pluginName, getSampleAuConfig());
     daemon.setNodeManager(new MockNodeManager(), au);
     daemon.setLockssRepository(new MockLockssRepository(), au);
@@ -218,16 +248,67 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.getUrlConsumerFactory();
   }
 
+  private class MyPluginManager extends PluginManager {
+    CachedUrl cu;
+    protected void processOneRegistryJar(CachedUrl cu, String url,
+					 ArchivalUnit au, Map tmpMap) {
+      super.processOneRegistryJar(cu, url, au, tmpMap);
+    }
+
+    protected void loadPluginsFromJar(File jarFile, String url,
+				      ArchivalUnit au, CachedUrl cu,
+				      Map tmpMap) {
+      super.loadPluginsFromJar(jarFile, url, au, cu, tmpMap);
+    }
+    
+    void installPlugins(Map<String,PluginInfo> map) {
+      for (Map.Entry<String,PluginInfo> entry : map.entrySet()) {
+	String key = entry.getKey();
+	log.debug2("Adding to plugin map: " + key);
+	PluginInfo info = entry.getValue();
+	Plugin newPlug = info.getPlugin();
+	setPlugin(key, newPlug);
+      }
+    }      
+  }
+
   public static class PluginFailedToLoadException extends Exception {
   }
 
   public static void main(String[] argv) {
     if (argv.length > 0) {
-      String pluginNames = StringUtil.separatedString(argv, ";");
+      int ix = 0;
+      try {
+	for (ix = 0; ix < argv.length; ix++) {
+	  String arg = argv[ix];
+	  if (!arg.startsWith("-")) {
+	    break;
+	  }
+	  if (arg.equals("-pj")) {
+	    String jarName = argv[++ix];
+	    System.setProperty(PLUGIN_JAR_PROP, jarName);
+	  } else {
+	    usage();
+	  }
+	}
+      } catch (ArrayIndexOutOfBoundsException e) {
+	usage();
+      }
+      String pluginNames =
+	StringUtil.separatedString(Arrays.copyOfRange(argv, ix, argv.length-1),
+				   ";");
       System.setProperty(PLUGIN_NAME_PROP, pluginNames);
+
     }
     junit.textui.TestRunner.main(new String[] {
 	PluginWellformednessTests.class.getName() });
   }
 
+  private static void usage() {
+    PrintStream o = System.out;
+    o.println("Usage: java PluginWellformednessTests " +
+	      " [-pj plugin_jar] plugin_id_1 plugin_id_2 ...");
+    o.println("   -pj plugin_jar     packaged plugin jar");
+    System.exit(2);
+  }
 }

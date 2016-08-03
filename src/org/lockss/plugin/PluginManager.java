@@ -3031,7 +3031,7 @@ public class PluginManager
     jarValidator.allowExpired(acceptExpiredCertificates);
 
     // Create temporary plugin and classloader maps
-    HashMap tmpMap = new HashMap();
+    HashMap<String,PluginInfo> tmpMap = new HashMap<String,PluginInfo>();
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
@@ -3050,12 +3050,10 @@ public class PluginManager
     List<ArchivalUnit> needRestartAus = new ArrayList();
     List<String> changedPluginKeys = new ArrayList<String>();
 
-    for (Iterator pluginIter = tmpMap.entrySet().iterator();
-	 pluginIter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)pluginIter.next();
-      String key = (String)entry.getKey();
+    for (Map.Entry<String,PluginInfo> entry : tmpMap.entrySet()) {
+      String key = entry.getKey();
       log.debug2("Adding to plugin map: " + key);
-      PluginInfo info = (PluginInfo)entry.getValue();
+      PluginInfo info = entry.getValue();
       pluginfoMap.put(key, info);
       classloaders.add(info.getClassLoader());
 
@@ -3157,55 +3155,63 @@ public class PluginManager
     cuNodeVersionMap.put(url, curVersion);
 
     if (blessedJar != null) {
-      // Get the list of plugins to load from this jar.
-      List loadPlugins = null;
+      loadPluginsFromJar(blessedJar, url, au, cu, tmpMap);
+    }
+  }
+
+  protected void loadPluginsFromJar(File jarFile, String url,
+				    ArchivalUnit au, CachedUrl cu,
+				    Map tmpMap) {
+    // Get the list of plugins to load from this jar.
+    List loadPlugins = null;
+    try {
+      loadPlugins = getJarPluginClasses(jarFile);
+    } catch (IOException ex) {
+      log.error("Error while getting list of plugins for " +
+		jarFile);
+      return; // skip this CU.
+
+    }
+    log.debug2("Blessed jar: " + jarFile + ", plugins: " + loadPlugins);
+
+    // Although this -should- never happen, it's possible.
+    if (loadPlugins.size() == 0) {
+      log.warning("Jar " + jarFile +
+		  " does not contain any plugins.  Skipping...");
+      return; // skip this CU.
+    }
+
+    // Load the plugin classes
+    ClassLoader pluginLoader = null;
+    URL blessedUrl;
+    try {
+      blessedUrl = jarFile.toURL();
+      URL[] urls = new URL[] { blessedUrl };
+      pluginLoader =
+	preferLoadablePlugin
+	? new LoadablePluginClassLoader(urls)
+	: new URLClassLoader(urls);
+    } catch (MalformedURLException ex) {
+      log.error("Malformed URL exception attempting to create " +
+		"classloader for plugin JAR " + jarFile);
+      return; // skip this CU.
+    }
+
+    String pluginName = null;
+
+    for (Iterator pluginIter = loadPlugins.iterator();
+	 pluginIter.hasNext();) {
+      pluginName = (String)pluginIter.next();
+      String key = pluginKeyFromName(pluginName);
+
+      Plugin plugin;
+      PluginInfo info;
       try {
-	loadPlugins = getJarPluginClasses(blessedJar);
-      } catch (IOException ex) {
-	log.error("Error while getting list of plugins for " +
-		  blessedJar);
-	return; // skip this CU.
-
-      }
-      log.debug2("Blessed jar: " + blessedJar + ", plugins: " + loadPlugins);
-
-      // Although this -should- never happen, it's possible.
-      if (loadPlugins.size() == 0) {
-	log.warning("Jar " + blessedJar +
-		    " does not contain any plugins.  Skipping...");
-	return; // skip this CU.
-      }
-
-      // Load the plugin classes
-      ClassLoader pluginLoader = null;
-      URL blessedUrl;
-      try {
-	blessedUrl = blessedJar.toURL();
-	URL[] urls = new URL[] { blessedUrl };
-	pluginLoader =
-	  preferLoadablePlugin
-	  ? new LoadablePluginClassLoader(urls)
-	  : new URLClassLoader(urls);
-      } catch (MalformedURLException ex) {
-	log.error("Malformed URL exception attempting to create " +
-		  "classloader for plugin JAR " + blessedJar);
-	return; // skip this CU.
-      }
-
-      String pluginName = null;
-
-      for (Iterator pluginIter = loadPlugins.iterator();
-	   pluginIter.hasNext();) {
-	pluginName = (String)pluginIter.next();
-	String key = pluginKeyFromName(pluginName);
-
-	Plugin plugin;
-	PluginInfo info;
-	try {
-	  info = retrievePlugin(pluginName, pluginLoader);
-	  if (info == null) {
-	    log.warning("Probable plugin packaging error: plugin " +
-			pluginName + " not found in " + cu.getUrl());
+	info = retrievePlugin(pluginName, pluginLoader);
+	if (info == null) {
+	  log.warning("Probable plugin packaging error: plugin " +
+			pluginName + " could not be loaded from " +
+			cu.getUrl());
 	    continue;
 	  } else {
 	    info.setCuUrl(url);
@@ -3291,7 +3297,6 @@ public class PluginManager
 	}
       }
     }
-  }
 
   /**
    * CrawlManager callback that is responsible for handling Registry
