@@ -727,4 +727,33 @@
 
   }
   
+  {
+  
+    title <
+      name = Emergingtoplcs in life Sciences ;
+      issn = 2397-8554 ;
+      eissn = 2397-8562 ;
+      issnl = 2397-8554
+    >
+
+    param[base_url] = http://www.emergtoplifesci.org/
+
+    au < expected ; exists ; 2016 ; Emergingtoplcs in life Sciences Volume 1 ; 1 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Neuronal Signaling ;
+      eissn = 2059-6553 ;
+      issnl = 2059-6553
+    >
+
+    param[base_url] = http://www.neuronalsignaling.org/
+
+    au < expected ; exists ; 2016 ; Neuronal Signaling Volume 1 ; 1 ; >
+
+  }
+  
 }
