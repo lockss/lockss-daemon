@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,14 @@ import java.util.*;
 
 import junit.framework.Test;
 
+import org.htmlparser.NodeFilter;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.servlet.*;
 import org.lockss.filter.html.*;
+import org.lockss.filter.html.HtmlNodeFilters.*;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
@@ -543,6 +545,54 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "content=\"http:triggered.clockss.orgLPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ffoo.pdf\">\n" +
     "</head></html>\n";
 
+  static final String assorted_attrs_orig =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<a href=\"path/href.html\" " +
+    "attr_2=\"path/attr_2.html\" " +
+    "attr_3=\"path/attr_3.html\">rel link</a>\n" +
+    "</head></html>\n";
+
+  static final String assorted_attrs_xformed_href_only =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Fhref.html\" " +
+    "attr_2=\"path/attr_2.html\" " +
+    "attr_3=\"path/attr_3.html\">rel link</a>\n" +
+    "</head></html>\n";
+
+  static final String assorted_attrs_xformed_href_attr_2 =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Fhref.html\" " +
+    "attr_2=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Fattr_2.html\" " +
+    "attr_3=\"path/attr_3.html\">rel link</a>\n" +
+    "</head></html>\n";
+
+  static final String assorted_attrs_xformed_attr_2_attr_3 =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<a href=\"path/href.html\" " +
+    "attr_2=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Fattr_2.html\" " +
+    "attr_3=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Fattr_3.html\">rel link</a>\n" +
+    "</head></html>\n";
+
+  static final String add_xform_orig =
+    "<html><head>\n" +
+    "<a href=\"CPROTO://www.example.com/path/pre1\">pre1</a>\n" +
+    "<a href=\"CPROTO://www.example.com/path/pre2\">pre2</a>\n" +
+    "<a href=\"CPROTO://www.example.com/path/post1\">post1</a>\n" +
+    "<a href=\"CPROTO://www.example.com/path/post2\">post2</a>\n" +
+    "</head></html>\n";
+
+  static final String add_xform_xformed =
+    "<html><head>\n" +
+    "<a href=\"CPROTO://www.different.com/path/pre1\">pre1</a>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fpath%2Fpre2\">pre2</a>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.different.com%2Fpath%2Fpost1\">post1</a>\n" +
+    "<a href=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fpath%2Fpost2\">post2</a>\n" +
+    "</head></html>\n";
+
 
     public void setUp() throws Exception {
       super.setUp();
@@ -558,6 +608,62 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       nfhlrf.setMetaNames(ListUtil.list("citation_url"));
     }
   
+    public void testAddAttrs() throws Exception {
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick"),
+		   nfhlrf.getAttrList());
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+      nfhlrf.addAttrToRewrite("new_attr");
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick",
+				 "new_attr").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+      nfhlrf.addAttrToRewrite("new_attr_2");
+      nfhlrf.addAttrToRewrite("new_attr");
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick",
+				 "new_attr", "new_attr_2").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+    }
+  
+    public void testRemoveAttrs() throws Exception {
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick"),
+		   nfhlrf.getAttrList());
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+      assertFalse(nfhlrf.removeAttrToRewrite("new_attr"));
+      assertTrue(nfhlrf.removeAttrToRewrite("action"));
+      assertEquals(ListUtil.list("href", "src",
+				 "background", "onclick").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+      assertFalse(nfhlrf.removeAttrToRewrite("action"));
+      assertEquals(ListUtil.list("href", "src",
+				 "background", "onclick").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+    }
+  
+    public void testSetAttrs() throws Exception {
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick"),
+		   nfhlrf.getAttrList());
+      assertEquals(ListUtil.list("href", "src", "action",
+				 "background", "onclick").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+      nfhlrf.setAttrsToRewrite(ListUtil.list("mostly", "different",
+						 "src", "attrs"));
+      assertEquals(ListUtil.list("mostly", "different",
+				 "src", "attrs"),
+		   nfhlrf.getAttrList());
+      assertEquals(ListUtil.list("mostly", "different",
+				 "src", "attrs").toArray(),
+		   nfhlrf.getAttrsToRewrite());
+    }
+  
+
     public void testRewriting(String msg,
 			      String src0, String srcCharset,
 			      String exp0, boolean hostRel)
@@ -661,6 +767,54 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       testRewriting("Meta tag abs", meta_orig, ISO, meta_xformed_abs, true);
     }
   
+    public void testAssortedAttrs_href() throws Exception {
+      testRewriting("Default attrs", assorted_attrs_orig, ISO, assorted_attrs_xformed_href_only, true);
+    }
+
+    public void testAssortedAttrs_add_attr2() throws Exception {
+      nfhlrf.addAttrToRewrite("attr_2");
+      testRewriting("Add attr_2", assorted_attrs_orig, ISO, assorted_attrs_xformed_href_attr_2, true);
+      try {
+	nfhlrf.addAttrToRewrite("foo");
+	fail("Adding attr to rewrite after rewriting has begun should throw");
+      } catch (IllegalStateException e) {
+      }
+    }
+  
+    public void testAssortedAttrs_del_href_add_attr23() throws Exception {
+      nfhlrf.removeAttrToRewrite("href");
+      nfhlrf.addAttrToRewrite("attr_2");
+      nfhlrf.addAttrToRewrite("attr_3");
+      testRewriting("Del href, add attr_2, attr_3", assorted_attrs_orig, ISO, assorted_attrs_xformed_attr_2_attr_3, true);
+      try {
+	nfhlrf.removeAttrToRewrite("foo");
+	fail("Removing attr to rewrite after rewriting has begun should throw");
+      } catch (IllegalStateException e) {
+      }
+    }
+  
+    public void testAssortedAttrs_set_attr23() throws Exception {
+      nfhlrf.setAttrsToRewrite(ListUtil.list("attr_2", "attr_3"));
+      testRewriting("Set attr_2, attr_3", assorted_attrs_orig, ISO, assorted_attrs_xformed_attr_2_attr_3, true);
+      try {
+	nfhlrf.setAttrsToRewrite(ListUtil.list("foo"));
+	fail("Setting attrs to rewrite after rewriting has begun should throw");
+      } catch (IllegalStateException e) {
+      }
+    }
+
+    public void testPrePostTransform() throws Exception {
+      NodeFilter pre1 = new LinkRegexXform("pre1", false,
+					 "example\\.com", "different.com",
+					 new String[] {"href"});
+      NodeFilter post1 = new LinkRegexXform("post1", false,
+					    "example\\.com", "different.com",
+					    new String[] {"href"});
+      nfhlrf.addPreXform(pre1);
+      nfhlrf.addPostXform(post1);
+      testRewriting("Pre post", add_xform_orig, ISO, add_xform_xformed, true);
+    }      
+
 
     void setupProtos(String cproto, String lproto) {
       this.cproto = cproto;

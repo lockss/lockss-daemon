@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,7 +69,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   /*
    * These are the attributes of HTML tags that can contain URLs to rewrite.
    */
-  private static final String[] attrs = {
+  private static final String[] DEFAULT_ATTRS = {
     "href",
     "src",
     "action",
@@ -87,6 +87,12 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // "classid",  // object
     // "data",     // object
   };
+
+  private List<String> attrList = null;
+  private String[] attrs = DEFAULT_ATTRS;
+  private boolean executed = false;
+  private List<NodeFilter> preXforms = new ArrayList<NodeFilter>();
+  private List<NodeFilter> postXforms = new ArrayList<NodeFilter>();;
 
   // Legal start to non-server relative path in relative URL  
   static final String relChar = "[-a-zA-Z0-9$_@.&+!*\"\'(),%?#]";
@@ -111,6 +117,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
                                         final ServletUtil.LinkTransform srvLink)
       throws PluginException, IOException {
     logger.debug2("Rewriting " + url + " in AU " + au);
+    executed = true;
     final String targetStem = srvLink.rewrite("");  // XXX - should have better xform
     logger.debug2("targetStem: " + targetStem);
     Collection<String> urlStems = au.getUrlStems();
@@ -141,7 +148,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Create a LinkRegexXform pipeline
     NodeFilter absLinkXform =
       HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
-                                         rwTarget1, attrs);
+                                         rwTarget1, getAttrsToRewrite());
 
     HtmlBaseProcessor base = new HtmlBaseProcessor();
     List<RelXform> relXforms = new ArrayList<RelXform>();
@@ -151,7 +158,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     RelLinkRegexXform relLinkXforms[] = {
       // transforms site-relative link URLs
       new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
-                            true, "^/", attrs) {
+                            true, "^/", getAttrsToRewrite()) {
         /** Specify the "replace" property using the baseUrl param */
         public void setBaseUrl(String baseUrl)
             throws MalformedURLException {
@@ -159,7 +166,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
         }},
       // transforms path-relative link URLs
       new RelLinkRegexXform(protocolPrefixPat, // negated, matches relative URL
-                            true, "^(" + relChar + ")", attrs) {
+                            true, "^(" + relChar + ")", getAttrsToRewrite()) {
         /** Specify the "replace" property using the baseUrl param */
         public void setBaseUrl(String baseUrl)
             throws MalformedURLException {
@@ -273,18 +280,20 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     base.setXforms(relXforms);
 
     // Combine the pipes
-    List<NodeFilter> filters =
-      ListUtil.list(base,
-		    relLinkXform,
-		    absLinkXform,
-		    styleTagXform,
-		    styleAttrXform,
-		    scriptXform,
-		    relRefreshXform,
-		    absRefreshXform);
+    List<NodeFilter> filters = new ArrayList<NodeFilter>();
+    filters.addAll(preXforms);
+    filters.addAll(ListUtil.list(base,
+				 relLinkXform,
+				 absLinkXform,
+				 styleTagXform,
+				 styleAttrXform,
+				 scriptXform,
+				 relRefreshXform,
+				 absRefreshXform));
     if (metaTagXform != null) {
       filters.add(metaTagXform);
     };
+    filters.addAll(postXforms);
 
     NodeFilter linkXform = new OrFilter(filters.toArray(new NodeFilter[0]));
     // Create a transform to apply them
@@ -306,6 +315,66 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
                                                    htmlXform);
     return result;
   }
+
+  
+ List<String> getAttrList() {
+    if (attrList == null) {
+      attrList = new ArrayList(Arrays.asList(DEFAULT_ATTRS));
+    }
+    return attrList;
+  }
+
+  protected String[] getAttrsToRewrite() {
+    if (attrs == null) {
+      attrs = attrList.toArray(new String[0]);
+    }
+    return attrs;
+  }
+
+  private void checkExecuted() {
+    if (executed) {
+      throw new IllegalStateException("Can't alter xforms or attributes once rewriting has begun");
+    }
+  }
+
+  /** Add to the default list of tag attributes whose values are rewritten
+   * using the standard rules. */
+  public void addAttrToRewrite(String attr) {
+    checkExecuted();
+    if (!getAttrList().contains(attr)) {
+      attrs = null;
+      getAttrList().add(attr);
+    }
+  }
+
+  /** Remove one of the default tag attributes whose values are rewritten
+   * using the standard rules. */
+  public boolean removeAttrToRewrite(String attr) {
+    checkExecuted();
+    attrs = null;
+    return getAttrList().remove(attr);
+  }
+
+  /** Replace the list of tag attributes whose values are rewritten using
+   * the standard rules. */
+  public void setAttrsToRewrite(List<String> newAttrs) {
+    checkExecuted();
+    attrs = null;
+    attrList = newAttrs;
+  }
+
+  /** Add a NodeFilter to be applied to each node before the standard set */
+  public void addPreXform(NodeFilter xform) {
+    checkExecuted();
+    preXforms.add(xform);
+  }
+
+  /** Add a NodeFilter to be applied to each node after the standard set */
+  public void addPostXform(NodeFilter xform) {
+    checkExecuted();
+    postXforms.add(xform);
+  }
+
 
   // Overridden by unit test
   protected List<String> getMetaNamesToRewrite(ArchivalUnit au) {
