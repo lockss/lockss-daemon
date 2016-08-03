@@ -41,7 +41,7 @@ import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.test.*;
 
-public class TestNewIngentaHtmlLinkRewriterFactory extends LockssTestCase {
+public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
   IngentaHtmlLinkRewriterFactory hfact;

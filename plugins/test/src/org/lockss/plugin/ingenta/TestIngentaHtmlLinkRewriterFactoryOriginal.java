@@ -41,7 +41,7 @@ import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.test.*;
 
-public class TestOriginalIngentaHtmlLinkRewriterFactory extends LockssTestCase {
+public class TestIngentaHtmlLinkRewriterFactoryOriginal extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
   
   private static final String BOOK_PLUGIN = "org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin";
