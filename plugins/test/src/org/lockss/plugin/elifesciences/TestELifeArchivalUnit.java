@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
+import org.lockss.state.SubstanceChecker;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -118,6 +119,14 @@ public class TestELifeArchivalUnit extends LockssTestCase {
     shouldCacheTest(REAL_ROOT+"panels_ajax_tab/elife_article_figdata/node:51048/1", false, msau,cus);    
     shouldCacheTest(REAL_ROOT+"panels_ajax_tab/elife_article/node:97986/0", false, msau,cus);    
 
+  }
+  
+  public void testSubstancePattern() throws Exception {
+	ArchivalUnit  msau = makeAu(new URL(ROOT_URL), "2015/04");
+	SubstanceChecker checker = new SubstanceChecker(msau);
+    
+    assertFalse(checker.isSubstanceUrl(ROOT_URL + "content/4/e05959"));
+    assertTrue(checker.isSubstanceUrl(ROOT_URL + "content/4/e05959-download.pdf"));
   }
 
   private void shouldCacheTest(String url, boolean shouldCache,
