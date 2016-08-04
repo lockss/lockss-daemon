@@ -2876,6 +2876,19 @@
 
       {
 
+        param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2006 ; Tikkun Volume 21 [Project MUSE] ; 21 >
+      au < exists ; 2007 ; Tikkun Volume 22 [Project MUSE] ; 22 >
+      au < exists ; 2008 ; Tikkun Volume 23 [Project MUSE] ; 23 >
+      au < exists ; 2009 ; Tikkun Volume 24 [Project MUSE] ; 24 >
+      au < exists ; 2010 ; Tikkun Volume 25 [Project MUSE] ; 25 >
+      au < manifest ; 2012 ; Tikkun Volume 26 [Project MUSE] ; 26 >
+
+      }
+
+      {
+
         param[base_url] = http://muse.jhu.edu/
 
       au < down ; 2012 ; Tikkun Volume 27 [Project MUSE] ; 27 >
@@ -2892,7 +2905,6 @@
       au < manifest ; 2016 ; Tikkun Volume 31 [Project MUSE] ; 31 >
 
       }
-
 
     }
 
