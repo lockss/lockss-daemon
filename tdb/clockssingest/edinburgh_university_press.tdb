@@ -819,6 +819,22 @@
   {
 
     title <
+      name = Moreana ;
+      issn = 0047-8105 ;
+      eissn = 2398-4961 ;
+      issnl = 0047-8105 
+     >
+
+    param[journal_id] = more
+    #Effective Transfer Date: 2017-01-01 
+
+    au < expected ; exists ; 2016 ; Moreana Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = The New Soundtrack ;
       issn = 2042-8855 ;
       eissn = 2042-8863 ;
