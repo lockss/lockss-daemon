@@ -32,27 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.keystore;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.security.*;
-import java.security.cert.*;
-import javax.net.ssl.*;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-import sun.security.x509.AlgorithmId;
-import sun.security.x509.X509CertImpl;
-import sun.security.x509.X509CertInfo;
+import sun.security.tools.keytool.CertAndKeyGen;
 import sun.security.x509.X500Name;
-import sun.security.x509.CertAndKeyGen;
-import sun.security.x509.CertificateSubjectName;
-import sun.security.x509.CertificateIssuerName;
-import sun.security.x509.CertificateValidity;
-import sun.security.x509.CertificateSerialNumber;
-import sun.security.x509.CertificateAlgorithmId;
-import sun.security.x509.X509Key;
-import sun.security.pkcs.PKCS10;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.PrivateKey;
+import java.security.SecureRandom;
+import java.security.SignatureException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 
 /**
  * A tool to build key stores for V3 over SSL support in CLOCKSS

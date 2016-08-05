@@ -31,27 +31,45 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.hasher;
 
-import java.io.*;
-import java.security.*;
+import org.apache.commons.lang3.StringUtils;
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
+import org.lockss.daemon.AuCachedUrlSetSpec;
+import org.lockss.daemon.CachedUrlSetHasher;
+import org.lockss.daemon.LockssRunnable;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.poller.Poll;
+import org.lockss.poller.PollSpec;
+import org.lockss.protocol.LcapMessage;
+import org.lockss.servlet.ServletUtil;
+import org.lockss.util.ByteArray;
+import org.lockss.util.Constants;
+import org.lockss.util.FileUtil;
+import org.lockss.util.IOUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.RecordingMessageDigest;
+import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.mortbay.util.B64Code;
-import org.apache.commons.lang3.StringUtils;
-import org.lockss.servlet.ServletUtil;
-import org.lockss.util.*;
-import org.lockss.plugin.*;
-import org.lockss.poller.Poll;
-import org.lockss.poller.PollSpec;
-import org.lockss.protocol.LcapMessage;
-import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
-import org.lockss.daemon.*;
 
 /** Utilitiy class to hash a CUS as a single batch and record the results
  * in a file.  By default the content is *not* filtered; use setFiltered()
@@ -305,7 +323,7 @@ public class SimpleHasher {
 
     String byteString(byte[] a) {
       if (isBase64) {
-        return String.valueOf(B64Code.encode(a));
+        return String.valueOf(Base64.getEncoder().encode(a));
       } else {
         return ByteArray.toHexString(a);
       }
@@ -667,7 +685,7 @@ public class SimpleHasher {
       return null;
     }
 
-    return B64Code.decode(encodedText.toCharArray());
+    return Base64.getDecoder().decode(encodedText);
   }
 
   /**
@@ -889,7 +907,7 @@ public class SimpleHasher {
   public static String byteString(byte[] theBytes, ResultEncoding encoding) {
     switch (encoding) {
     case Base64:
-      return String.valueOf(B64Code.encode(theBytes));
+      return String.valueOf(Base64.getEncoder().encode(theBytes));
     default:
     case Hex:
       return ByteArray.toHexString(theBytes);

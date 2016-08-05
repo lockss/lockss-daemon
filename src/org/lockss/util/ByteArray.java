@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.*;
 import java.math.BigInteger;
 import java.util.Comparator;
+import java.util.Base64;
 
-import org.mortbay.util.*;
 
 /**
  * Byte array utilities
@@ -155,7 +154,7 @@ public class ByteArray {
 
   /** Return a Base64 encoded representation of bytes in array */
   public static String toBase64(byte[] b) {
-    return String.valueOf(B64Code.encode(b));
+    return String.valueOf(Base64.getEncoder().encode(b));
   }
 
   /** Return hex representation of bytes in array */
