@@ -3117,10 +3117,10 @@
       au < down ; 2013 ; SAIS Review of International Affairs Volume 33 ; 33 >
       au < down ; 2014 ; SAIS Review of International Affairs Volume 34 ; 34 >
       au < down ; 2015 ; SAIS Review of International Affairs Volume 35 ; 35 >
+      au < manifest ; 2016 ; SAIS Review of International Affairs Volume 36 ; 36 >
 
     }
 
-    
   }
 
   {
@@ -3162,9 +3162,9 @@
 
       au < down ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
       au < down ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 ; 55 >
+      au < manifest ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 ; 56 >
 
     }
-
 
   }
 
@@ -3199,10 +3199,10 @@
 
       au < down ; 2014 ; Sewanee Review Volume 122 ; 122 >
       au < down ; 2015 ; Sewanee Review Volume 123 ; 123 >
+      au < manifest ; 2016 ; Sewanee Review Volume 124 ; 124 >
 
     }
 
-    
   }
 
   {
@@ -3237,9 +3237,9 @@
 
       au < down ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
       au < down ; 2015 ; Shakespeare Bulletin Volume 33 ; 33 >
+      au < manifest ; 2016 ; Shakespeare Bulletin Volume 34 ; 34 >
 
     }
-
 
   }
 
@@ -3343,10 +3343,10 @@
       au < down ; 2013 ; Social Research: An International Quarterly Volume 80 ; 80 >
       au < down ; 2014 ; Social Research: An International Quarterly Volume 81 ; 81 >
       au < down ; 2015 ; Social Research: An International Quarterly Volume 82 ; 82 >
+      au < manifest ; 2016 ; Social Research: An International Quarterly Volume 83 ; 83 >
 
     }
 
-  
   }
 
   {
@@ -3384,10 +3384,10 @@
 
       au < down ; 2014 ; South Central Review Volume 31 ; 31 >
       au < down ; 2015 ; South Central Review Volume 32 ; 32 >
+      au < manifest ; 2016 ; South Central Review Volume 33 ; 33 >
 
     }
 
-    
   }
 
   {
@@ -3427,9 +3427,9 @@
 
       au < down ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
       au < down ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15 ; 15 >
+      au < manifest ; 2016 ; Spiritus: A Journal of Christian Spirituality Volume 16 ; 16 >
 
     }
-
 
   }
 
@@ -3490,7 +3490,6 @@
 
       param[base_url] = http://muse.jhu.edu/
       
-      # no volume in 2009
       au < down ; 2010 ; Studies in American Fiction Volume 37 ; 37 >
       au < down ; 2011 ; Studies in American Fiction Volume 38 ; 38 >
       au < down ; 2012 ; Studies in American Fiction Volume 39 ; 39 >
@@ -3504,6 +3503,7 @@
 
       au < down ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
       au < down ; 2015 ; Studies in American Fiction Volume 42 ; 42 >
+      au < manifest ; 2016 ; Studies in American Fiction Volume 43 ; 43 >
 
     }
 
@@ -3556,9 +3556,9 @@
 
       au < down ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
       au < down ; 2015 ; Studies in Eighteenth-Century Culture Volume 44 ; 44 >
+      au < manifest ; 2016 ; Studies in Eighteenth-Century Culture Volume 45 ; 45 >
 
     }
-
 
   }
   
@@ -4025,7 +4025,7 @@
 
   {
     title <
-      name = Transactions of the American Philological Association ;
+      name = TAPA ;
       issn = 0360-5949 ;
       eissn = 1533-0699 ;
       issnl = 0360-5949
@@ -4033,6 +4033,7 @@
 
     param[journal_dir] = transactions_of_the_american_philological_association
     attr[journal_id] = apa
+    #formerly Transactions of the American Philological Association
 
     {
 
@@ -4060,10 +4061,10 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
-      au < down ; 2015 ; Transactions of the American Philological Association Volume 145 ; 145 >
+      au < down ; 2015 ; TAPA Volume 145 ; 145 >
+      au < manifest ; 2016 ; TAPA Volume 146 ; 146 >
 
     }
-
 
   }
   
