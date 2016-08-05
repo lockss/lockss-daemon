@@ -135,7 +135,7 @@
   {
   
     title <
-      name = Journal of Individual Psychology ;
+      name = The Journal of Individual Psychology ;
       issn = 1522-2527 ;
       eissn = 2332-0583 ;
       issnl = 1522-2527
@@ -148,11 +148,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2014 ; Journal of Individual Psychology Volume 70 ; 70 >
-      au < down ; 2015 ; Journal of Individual Psychology Volume 71 ; 71 >
+      au < down ; 2014 ; The Journal of Individual Psychology Volume 70 ; 70 >
+      au < down ; 2015 ; The Journal of Individual Psychology Volume 71 ; 71 >
+      au < manifest ; 2016 ; The Journal of Individual Psychology Volume 72 ; 72 >
 
     }
-
 
   }
 
@@ -335,6 +335,7 @@
 
       au < down ; 2014 ; Texas Studies in Literature and Language Volume 56 ; 56 >
       au < down ; 2015 ; Texas Studies in Literature and Language Volume 57 ; 57 >
+      au < manifest ; 2016 ; Texas Studies in Literature and Language Volume 58 ; 58 >
 
     }
 
