@@ -1,0 +1,148 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/year/%d/", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>2,"^https?://%s%sjms/public/journals/1/journalFavicon_en_US.ico$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sarticles/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>"^https?://%s%sarticles/[^/?]+/[^/?]+/galley/[^/?]+/download/?$", url_host(base_url), url_path(base_url)</string>
+      </list>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"%slogin", base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Ubiquity Partner Network Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Ubiquity Partner Network Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkArticleIteratorFactory</string>
+  </entry>
+ <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- manifest to articles -->
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts= -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.cloudfront\.net</string>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.gstatic\.com</string>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.jquery\.com</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/(lib|site|images|js|public|ads|static)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&amp;]+)?$</string>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/(lib|site|images|js|public|ads|static)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
+    </list>
+  </entry>
+</map>
