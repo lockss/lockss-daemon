@@ -33,18 +33,22 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.mail;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-
-import org.lockss.config.*;
-import org.lockss.util.*;
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
+import org.lockss.util.Constants;
+import org.lockss.util.Logger;
+import org.lockss.util.PlatformUtil;
 
 import sun.net.TransferProtocolClient;
+
+import java.io.IOException;
+
+
 
 /**
  * Simple SMTP client.
  */
-public class SmtpClient extends TransferProtocolClient  {
+public class SmtpClient extends TransferProtocolClient {
   protected static Logger log = Logger.getLogger("SmtpClient");
 
   static final String TIMEOUT_PREFIX =

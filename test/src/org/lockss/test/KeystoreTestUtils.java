@@ -32,15 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.*;
-import java.io.*;
-import java.util.jar.*;
-import org.lockss.util.*;
-import java.security.*;
-import java.security.cert.*;
-
 import org.lockss.util.KeyStoreUtil.CertAndKeyGen;
 import org.lockss.util.KeyStoreUtil.X500Name;
+import org.lockss.util.Logger;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.security.InvalidKeyException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.PrivateKey;
+import java.security.SignatureException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 
 public class KeystoreTestUtils {
 
