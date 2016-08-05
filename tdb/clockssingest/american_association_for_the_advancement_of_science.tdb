@@ -33,10 +33,10 @@
       au < notReady ;  exists ; 2014 ; Science Volume 344 ; 344 ; >
       au < crawling ;  exists ; 2014 ; Science Volume 345 ; 345 ; >
       au < crawling ;  exists ; 2014 ; Science Volume 346 ; 346 ; >
-      au < crawling ;  exists ; 2015 ; Science Volume 347 ; 347 ; >
-      au < crawling ;  exists ; 2015 ; Science Volume 348 ; 348 ; >
-      au < crawling ;  exists ; 2015 ; Science Volume 349 ; 349 ; >
-      au < crawling ;  exists ; 2015 ; Science Volume 350 ; 350 ; >
+      au < deepCrawl ;  exists ; 2015 ; Science Volume 347 ; 347 ; >
+      au < deepCrawl ;  exists ; 2015 ; Science Volume 348 ; 348 ; >
+      au < deepCrawl ;  exists ; 2015 ; Science Volume 349 ; 349 ; >
+      au < deepCrawl ;  exists ; 2015 ; Science Volume 350 ; 350 ; >
       au < manifest ; exists ; 2016 ; Science Volume 351 ; 351 ; >
       au < manifest ; exists ; 2016 ; Science Volume 352 ; 352 ; >
       au < manifest ; exists ; 2016 ; Science Volume 353 ; 353 ; >
@@ -61,7 +61,7 @@
       au < manifest ; exists ; 2012 ; Science Signaling Volume 5 ; 5 ; >
       au < manifest ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
       au < crawling ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
-      au < crawling ;  exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
+      au < deepCrawl ;  exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
       au < expected ; exists ; 2016 ; Science Signaling Volume 9 ; 9 ; >
 
   }
@@ -82,7 +82,7 @@
       au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < manifest ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < crawling ;  exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
       au < manifest ; exists ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; >
 
   }
@@ -96,7 +96,7 @@
     
       param[base_url] = http://advances.sciencemag.org/
 
-      au < crawling ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
+      au < deepCrawl ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Science Advances Volume 2 ; 2 ; >
 
   }
