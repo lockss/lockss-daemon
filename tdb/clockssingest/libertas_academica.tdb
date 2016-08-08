@@ -24,7 +24,7 @@
     au < finished ; finished ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 ; 2011 ; >
     au < finished ; finished ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Tumor Virology Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -46,7 +46,7 @@
     au < finished ; finished ; 2012 ; Air, Soil & Water Research Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 ; >
     au < ready ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -111,7 +111,7 @@
     au < finished ; finished ; 2012 ; Biochemistry Insights Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -134,7 +134,7 @@
     au < finished ; finished ; 2012 ; Bioinformatics and Biology Insights Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; >
     au < ready ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -179,7 +179,7 @@
     au < finished ; finished ; 2012 ; Biomarkers in Cancer Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -220,7 +220,7 @@
     au < finished ; finished ; 2011 ; Biomedical Informatics Insights Volume 4 ; 4 ; 2011 ; >
     au < finished ; finished ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Biomedical Informatics Insights Volume 6 (Suppl. 1) ; 6 ; 2013 ; >
-    au < deepCrawl ; exists ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -241,7 +241,7 @@
     au < manifest ; exists ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 3 ; 2010 ; >
     au < finished ; finished ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 ; >
     au < ready ; exists ; 2016 ; Bone and Tissue Regeneration Insights Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -263,7 +263,7 @@
     au < finished ; finished ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -333,7 +333,7 @@
     au < finished ; finished ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Cell & Tissue Transplantation & Therapy Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -370,7 +370,7 @@
     au < finished ; finished ; 2012 ; Cell Communication Insights Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -613,7 +613,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Oncology Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -635,7 +635,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pathology Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; 2015 ; >
     au < ready ; exists ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -678,7 +678,7 @@
     au < finished ; finished ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 3 ; 2011 ; >
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; 2015 ; >
     au < ready ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -700,7 +700,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Reproductive Health Volume 7 ; 7 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Clinical Medicine Insights: Reproductive Health Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; 2015 ; >
     au < ready ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -742,7 +742,7 @@
     au < finished ; crawling ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 3 ; 2010 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; >
     au < ready ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -913,7 +913,7 @@
     au < finished ; finished ; 2012 ; Environmental Health Insights Volume 6 ; 6 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Environmental Health Insights Volume 7 ; 7 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; Environmental Health Insights Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Environmental Health Insights Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -938,7 +938,7 @@
     au < finished ; finished ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 8 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Evolutionary Bioinformatics Volume 9 ; 9 ; 2013 ; >
     au < finished ; finished ; 2014 ; Evolutionary Bioinformatics Volume 10 ; 10 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Evolutionary Bioinformatics Volume 12 ; 12 ; 2016 ; >
 
   }
@@ -959,7 +959,7 @@
     au < manifest ; exists ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 3 ; 2010 ; >
     au < crawling ; exists ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Gene Expression to Genetical Genomics Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Gene Expression to Genetical Genomics Volume 8 ; 8 ; 2015 ; >
     au < expected ; exists ; 2016 ; Gene Expression to Genetical Genomics Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1004,7 +1004,7 @@
     au < finished ; finished ; 2012 ; Genetics & Epigenetics Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Genetics & Epigenetics Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Genetics & Epigenetics Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Genetics & Epigenetics Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1026,7 +1026,7 @@
     au < finished ; finished ; 2012 ; Genomics Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Genomics Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 ; >
     au < ready ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1089,7 +1089,7 @@
     au < finished ; finished ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Healthy Aging & Clinical Care in the Elderly Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Healthy Aging & Clinical Care in the Elderly Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Healthy Aging & Clinical Care in the Elderly Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Healthy Aging & Clinical Care in the Elderly Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Healthy Aging & Clinical Care in the Elderly Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1110,7 +1110,7 @@
     au < finished ; finished ; 2011 ; Human Parasitic Diseases Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1131,7 +1131,7 @@
     au < finished ; finished ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1215,7 +1215,7 @@
     au < finished ; finished ; 2012 ; Integrative Medicine Insights Volume 7 ; 7 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Integrative Medicine Insights Volume 8 ; 8 ; 2013 ; >
     au < finished ; finished ; 2014 ; Integrative Medicine Insights Volume 9 ; 9 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 ; >
     au < ready ; exists ; 2016 ; Integrative Medicine Insights Volume 11 ; 11 ; 2016 ; >
 
   }
@@ -1300,7 +1300,7 @@
     au < finished ; finished ; 2012 ; Journal of Cell Death Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Cell Death Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Cell Death Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; >
     au < ready ; exists ; 2016 ; Journal of Cell Death Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1321,7 +1321,7 @@
     au < crawling ; finished ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Central Nervous System Disease Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Central Nervous System Disease Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; >
     au < ready ; exists ; 2016 ; Journal of Central Nervous System Disease Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1378,7 +1378,7 @@
     param[journal_id] = 174
 
     au < finished ; finished ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; 2016 ; >
 
 
@@ -1485,7 +1485,7 @@
     au < finished ; finished ; 2012 ; Microbiology Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Microbiology Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Microbiology Insights Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Microbiology Insights Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Microbiology Insights Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Microbiology Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1591,7 +1591,7 @@
     au < finished ; finished ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Palliative Care: Research and Treatment Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Palliative Care: Research and Treatment Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Palliative Care: Research and Treatment Volume 9 ; 9 ; 2015 ; >
     au < expected ; exists ; 2016 ; Palliative Care: Research and Treatment Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -1739,7 +1739,7 @@
     au < finished ; finished ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; >
     au < expected ; exists ; 2016 ; Retrovirology: Research and Treatment Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1758,7 +1758,7 @@
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 ; >
     au < finished ; finished ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; 2016 ; >
 
   }
@@ -1780,7 +1780,7 @@
     au < finished ; crawling ; 2012 ; Substance Abuse: Research and Treatment Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Substance Abuse: Research and Treatment Volume 7 ; 7 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Substance Abuse: Research and Treatment Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Substance Abuse: Research and Treatment Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Substance Abuse: Research and Treatment Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -1802,7 +1802,7 @@
     au < finished ; finished ; 2012 ; Tobacco Use Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1824,7 +1824,7 @@
     au < manifest ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; >
     au < finished ; finished ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; >
     au < expected ; exists ; 2016 ; Translational Oncogenomics Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1845,7 +1845,7 @@
     au < manifest ; exists ; 2010 ; Virology: Research and Treatment Volume 2 ; 2 ; 2010 ; >
     au < crawling ; exists ; 2013 ; Virology: Research and Treatment Volume 4 ; 4 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Virology: Research and Treatment Volume 5 ; 5 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; 2016 ; >
 
   }

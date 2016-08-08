@@ -888,7 +888,7 @@
    au < finished ; crawling ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 ; >
    au < finished ; finished ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 ; reingest1.clockss.org:8082 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Diabetologie und Stoffwechsel Volume 2016 ; 11 ; >
 
   }
@@ -1500,7 +1500,7 @@
     comment[years] = 2013
 
     au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 3 ; 3 ; >
 
   }
@@ -1549,7 +1549,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 ; >
    au < finished ; finished ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 ; >
    au < finished ; finished ; 2014 ; 2014 ; Facial Plastic Surgery Volume 2014 ; 28 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Facial Plastic Surgery Volume 2015 ; 29 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Facial Plastic Surgery Volume 2015 ; 29 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Facial Plastic Surgery Volume 2016 ; 30 ; >
 
   }
@@ -2525,7 +2525,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 ; >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 ; >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 2016 ; 77 ; >
 
   }
@@ -2766,7 +2766,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 3 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 2015 ; 4 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 2015 ; 4 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 2016 ; 5 ; >
 
   }
@@ -3937,7 +3937,7 @@
     au < finished ; finished ; 2012 ; 2012 ; PiD - Psychotherapie im Dialog Volume 2012 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; PiD - Psychotherapie im Dialog Volume 2013 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 2014 ; 15 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 ; >
     au < manifest ; exists ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 2016 ; 17 ; >
 
   }
@@ -4135,7 +4135,7 @@
    au < finished ; finished ; 2012 ; 2012 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2012 ; 62 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 2013 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2013 ; 63 ; >
    au < finished ; finished ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2014 ; 64 ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2015 ; 65 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2015 ; 65 ; >
    au < manifest ; exists ; 2016 ; 2016 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2016 ; 66 ; >
 
   }
@@ -4184,7 +4184,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Psych Pflege Heute Volume 2012 ; 18 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Psych Pflege Heute Volume 2013 ; 19 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Psych Pflege Heute Volume 2014 ; 20 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Psych Pflege Heute Volume 2015 ; 21 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Psych Pflege Heute Volume 2015 ; 21 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Psych Pflege Heute Volume 2016 ; 22 ; >
 
   }
@@ -4361,7 +4361,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Rehabilitation Die Volume 2012 ; 51 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 ; >
    au < finished ; finished ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Rehabilitation Die Volume 2016 ; 55 ; >
 
   }
@@ -4577,7 +4577,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 ; >
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 2016 ; 33 ; >
 
   }
@@ -4663,7 +4663,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Musculoskeletal Radiology Volume 2012 ; 16 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Musculoskeletal Radiology Volume 2013 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 2014 ; 18 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 2016 ; 20 ; >
 
   }
@@ -4714,7 +4714,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Neurology Volume 2012 ; 32 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Neurology Volume 2013 ; 33 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Neurology Volume 2014 ; 34 ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Seminars in Neurology Volume 2015 ; 35 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Seminars in Neurology Volume 2015 ; 35 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Seminars in Neurology Volume 2016 ; 36 ; >
 
   }
@@ -5117,7 +5117,7 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Sportphysio Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Sportphysio Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 ; >
 
   }
@@ -5597,7 +5597,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2012 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 ; >
     au < finished ; finished ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2016 ; 37 ; >
 
   }
@@ -5612,7 +5612,7 @@
     >
     param[journal_id] = 10.1055/s-00028422
 
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
 
   }
@@ -5797,7 +5797,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2012 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2013 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 ; >
     au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2016 ; 30 ; >
 
   }
