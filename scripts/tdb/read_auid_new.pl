@@ -695,8 +695,8 @@ while (my $line = <>) {
                   my $bresp = $ua->request($breq);
 		  if ($bresp->is_success) {
 		      my $b_contents = $bresp->content;
-		      # what we're looking for on the page is href="/doi/pdf/doi1/doi2"
-		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf\/${doi1}\/${doi2}/)) {
+		      # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
+		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|pdfplus)\/${doi1}\/${doi2}/)) {
                         $result = "Manifest";
 		      }
 		  }
