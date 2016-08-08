@@ -71,9 +71,9 @@
       >
       # notReady: 9780080456041 9780857245670 hashing issues outside our control.
 
-      au < exists ; exists ; 2001 ; 978-0-08-043595-4 ; 978-1-61583-246-0 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control (978-1-61583-246-0) ; >
-      au < exists ; exists ; 2003 ; 978-0-08-044103-0 ; 978-1-78635-969-8 ; 9781786359698 ; Handbook of Transport and the Environment (978-1-78635-969-8) ; >
-      au < exists ; exists ; 2004 ; 978-0-08-044108-5 ; 978-1-61583-253-8 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (978-1-61583-253-8) ; >
+      au < manifest ; exists ; 2001 ; 978-0-08-043595-4 ; 978-1-61583-246-0 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control (978-1-61583-246-0) ; >
+      au < manifest ; exists ; 2003 ; 978-0-08-044103-0 ; 978-1-78635-969-8 ; 9781786359698 ; Handbook of Transport and the Environment (978-1-78635-969-8) ; >
+      au < manifest ; exists ; 2004 ; 978-0-08-044108-5 ; 978-1-61583-253-8 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (978-1-61583-253-8) ; >
       au < notReady ; exists ; 2005 ; 978-0-08-044115-3 ; 978-0-08-045604-1 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (978-0-08-045604-1) ; >
       au < notReady ; exists ; 2007 ; 978-0-08-045376-7 ; 978-0-85724-567-0 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (978-0-85724-567-0) ; >
 
@@ -89,10 +89,10 @@
 
       param[journal_issn] = 1877-6361
 
-      au < exists ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
-      au < exists ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
-      au < exists ; exists ; 2011 ;  ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
-      au < exists ; exists ; 2012 ;  ; 9781780526744 ; 9781780526744 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
+      au < manifest ; exists ; 2011 ;  ; 9780857249739 ; 9780857249739 ; Electronic HRM in Theory and Practice Volume 8 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780526744 ; 9781780526744 ; Commercial Diplomacy and International Business: A Conceptual and Empirical Exploration Volume 9 ; >
 
   }
 
@@ -106,18 +106,18 @@
 
       param[journal_issn] = 1475-1488
 
-      au < exists ; exists ; 2000 ;  ; 9780762306688 ; 9780762306688 ; Advances in Accounting Behavioral Research Volume 3 ; >
-      au < exists ; exists ; 2001 ;  ; 9780762307845 ; 9780762307845 ; Advances in Accounting Behavioral Research Volume 4 ; >
-      au < exists ; exists ; 2002 ;  ; 9780762309535 ; 9780762309535 ; Advances in Accounting Behavioral Research Volume 5 ; >
-      au < exists ; exists ; 2003 ;  ; 9780762310470 ; 9780762310470 ; Advances in Accounting Behavioral Research Volume 6 ; >
-      au < exists ; exists ; 2004 ;  ; 9780762311170 ; 9780762311170 ; Advances in Accounting Behavioral Research Volume 7 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762312184 ; 9780762312184 ; Advances in Accounting Behavioral Research Volume 8 ; >
-      au < exists ; exists ; 2006 ;  ; 9780762313532 ; 9780762313532 ; Advances in Accounting Behavioral Research Volume 9 ; >
-      au < exists ; exists ; 2008 ;  ; 9781846639609 ; 9781846639609 ; Advances in Accounting Behavioral Research Volume 11 ; >
-      au < exists ; exists ; 2009 ;  ; 9781848557383 ; 9781848557383 ; Advances in Accounting Behavioral Research Volume 12 ; >
-      au < exists ; exists ; 2010 ;  ; 9780857241375 ; 9780857241375 ; Advances in Accounting Behavioral Research Volume 13 ; >
-      au < exists ; exists ; 2011 ;  ; 9781780520865 ; 9781780520865 ; Advances in Accounting Behavioral Research Volume 14 ; >
-      au < exists ; exists ; 2012 ;  ; 9781780527581 ; 9781780527581 ; Advances in Accounting Behavioral Research Volume 15 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762306688 ; 9780762306688 ; Advances in Accounting Behavioral Research Volume 3 ; >
+      au < manifest ; exists ; 2001 ;  ; 9780762307845 ; 9780762307845 ; Advances in Accounting Behavioral Research Volume 4 ; >
+      au < manifest ; exists ; 2002 ;  ; 9780762309535 ; 9780762309535 ; Advances in Accounting Behavioral Research Volume 5 ; >
+      au < manifest ; exists ; 2003 ;  ; 9780762310470 ; 9780762310470 ; Advances in Accounting Behavioral Research Volume 6 ; >
+      au < manifest ; exists ; 2004 ;  ; 9780762311170 ; 9780762311170 ; Advances in Accounting Behavioral Research Volume 7 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762312184 ; 9780762312184 ; Advances in Accounting Behavioral Research Volume 8 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762313532 ; 9780762313532 ; Advances in Accounting Behavioral Research Volume 9 ; >
+      au < manifest ; exists ; 2008 ;  ; 9781846639609 ; 9781846639609 ; Advances in Accounting Behavioral Research Volume 11 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848557383 ; 9781848557383 ; Advances in Accounting Behavioral Research Volume 12 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857241375 ; 9780857241375 ; Advances in Accounting Behavioral Research Volume 13 ; >
+      au < manifest ; exists ; 2011 ;  ; 9781780520865 ; 9781780520865 ; Advances in Accounting Behavioral Research Volume 14 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780527581 ; 9781780527581 ; Advances in Accounting Behavioral Research Volume 15 ; >
 
   }
 
@@ -131,18 +131,18 @@
 
       param[journal_issn] = 1085-4622
 
-      au < exists ; exists ; 2000 ;  ; 9780762305155 ; 9780762305155 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
-      au < exists ; exists ; 2000 ;  ; 9780762307586 ; 9780762307586 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
-      au < exists ; exists ; 2002 ;  ; 9780762308569 ; 9780762308569 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 ; >
-      au < exists ; exists ; 2003 ;  ; 9780762310357 ; 9780762310357 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 ; >
-      au < exists ; exists ; 2004 ;  ; 9780762311439 ; 9780762311439 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762312696 ; 9780762312696 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 ; >
-      au < exists ; exists ; 2007 ;  ; 9780762314478 ; 9780762314478 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 ; >
-      au < exists ; exists ; 2008 ;  ; 9780762314584 ; 9780762314584 ; Advances in Accounting Education Volume 9 ; >
-      au < exists ; exists ; 2009 ;  ; 9781848558823 ; 9781848558823 ; Advances in Accounting Education Volume 10 ; >
-      au < exists ; exists ; 2010 ;  ; 9780857242914 ; 9780857242914 ; Advances in Accounting Education Volume 11 ; >
-      au < exists ; exists ; 2011 ;  ; 9781780522227 ; 9781780522227 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 ; >
-      au < exists ; exists ; 2012 ;  ; 9781780527567 ; 9781780527567 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762305155 ; 9780762305155 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762307586 ; 9780762307586 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
+      au < manifest ; exists ; 2002 ;  ; 9780762308569 ; 9780762308569 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 4 ; >
+      au < manifest ; exists ; 2003 ;  ; 9780762310357 ; 9780762310357 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 5 ; >
+      au < manifest ; exists ; 2004 ;  ; 9780762311439 ; 9780762311439 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 6 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762312696 ; 9780762312696 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 7 ; >
+      au < manifest ; exists ; 2007 ;  ; 9780762314478 ; 9780762314478 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 8 ; >
+      au < manifest ; exists ; 2008 ;  ; 9780762314584 ; 9780762314584 ; Advances in Accounting Education Volume 9 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848558823 ; 9781848558823 ; Advances in Accounting Education Volume 10 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857242914 ; 9780857242914 ; Advances in Accounting Education Volume 11 ; >
+      au < manifest ; exists ; 2011 ;  ; 9781780522227 ; 9781780522227 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 12 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780527567 ; 9781780527567 ; Advances in Accounting Education: Teaching and Curriculum Innovations Volume 13 ; >
 
   }
 
@@ -156,8 +156,8 @@
 
       param[journal_issn] = 1569-4933
 
-      au < exists ; exists ; 2000 ;  ; 9780762306121 ; 9780762306121 ; New Frontiers in Agricultural History Volume 1 ; >
-      au < exists ; exists ; 2003 ;  ; 9780762310012 ; 9780762310012 ; Advances in Agricultural Economic History Volume 2 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762306121 ; 9780762306121 ; New Frontiers in Agricultural History Volume 1 ; >
+      au < manifest ; exists ; 2003 ;  ; 9780762310012 ; 9780762310012 ; Advances in Agricultural Economic History Volume 2 ; >
 
   }
 
@@ -171,7 +171,7 @@
 
       param[journal_issn] = 2212-1609
 
-      au < exists ; exists ; 2012 ;  ; 9781780524689 ; 9781780524689 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781780524689 ; 9781780524689 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
 
   }
 
@@ -185,12 +185,12 @@
 
       param[journal_issn] = 0749-6826
 
-      au < exists ; exists ; 2005 ;  ; 9780762311682 ; 9780762311682 ; Competence Perspective on Managing Internal Process Volume 7 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762311699 ; 9780762311699 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762311705 ; 9780762311705 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 ; >
-      au < exists ; exists ; 2008 ;  ; 9780762314720 ; 9780762314720 ; Advances in Applied Business Strategy Volume 10 ; >
-      au < exists ; exists ; 2008 ;  ; 9780762314669 ; 9780762314669 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 ; >
-      au < exists ; exists ; 2010 ;  ; 9781848558762 ; 9781848558762 ; Enhancing Competences for Competitive Advantage Volume 12 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762311682 ; 9780762311682 ; Competence Perspective on Managing Internal Process Volume 7 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762311699 ; 9780762311699 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762311705 ; 9780762311705 ; Competence Perspectives on Resources, Stakeholders and Renewal Volume 9 ; >
+      au < manifest ; exists ; 2008 ;  ; 9780762314720 ; 9780762314720 ; Advances in Applied Business Strategy Volume 10 ; >
+      au < manifest ; exists ; 2008 ;  ; 9780762314669 ; 9780762314669 ; Competence Building and Leveraging in Interorganizational Relations Volume 11 ; >
+      au < manifest ; exists ; 2010 ;  ; 9781848558762 ; 9781848558762 ; Enhancing Competences for Competitive Advantage Volume 12 ; >
 
   }
 
@@ -204,13 +204,13 @@
 
       param[journal_issn] = 0278-0984
 
-      au < exists ; exists ; 2000 ;  ; 9780762305766 ; 9780762305766 ; Advances in Applied Microeconomics Volume 8 ; >
-      au < exists ; exists ; 2000 ;  ; 9780762306879 ; 9780762306879 ; Industrial Organization Volume 9 ; >
-      au < exists ; exists ; 2001 ;  ; 9780762308231 ; 9780762308231 ; Advertising and Differentiated Products Volume 10 ; >
-      au < exists ; exists ; 2002 ;  ; 9780762309719 ; 9780762309719 ; The Economics of the Internet and E-commerce Volume 11 ; >
-      au < exists ; exists ; 2003 ;  ; 9780762310814 ; 9780762310814 ; Organizing the New Industrial Economy Volume 12 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762311941 ; 9780762311941 ; Experimental and Behavioral Economics Volume 13 ; >
-      au < exists ; exists ; 2006 ;  ; 9780762313518 ; 9780762313518 ; Improving School Accountability Volume 14 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762305766 ; 9780762305766 ; Advances in Applied Microeconomics Volume 8 ; >
+      au < manifest ; exists ; 2000 ;  ; 9780762306879 ; 9780762306879 ; Industrial Organization Volume 9 ; >
+      au < manifest ; exists ; 2001 ;  ; 9780762308231 ; 9780762308231 ; Advertising and Differentiated Products Volume 10 ; >
+      au < manifest ; exists ; 2002 ;  ; 9780762309719 ; 9780762309719 ; The Economics of the Internet and E-commerce Volume 11 ; >
+      au < manifest ; exists ; 2003 ;  ; 9780762310814 ; 9780762310814 ; Organizing the New Industrial Economy Volume 12 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762311941 ; 9780762311941 ; Experimental and Behavioral Economics Volume 13 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762313518 ; 9780762313518 ; Improving School Accountability Volume 14 ; >
 
   }
 
@@ -224,9 +224,9 @@
 
       param[journal_issn] = 1475-9152
 
-      au < exists ; exists ; 2004 ;  ; 9780762308927 ; 9780762308927 ; Constructive Discourse and Human Organization Volume 1 ; >
-      au < exists ; exists ; 2007 ;  ; 9780762312870 ; 9780762312870 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
-      au < exists ; exists ; 2010 ;  ; 9780857243690 ; 9780857243690 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 ; >
+      au < manifest ; exists ; 2004 ;  ; 9780762308927 ; 9780762308927 ; Constructive Discourse and Human Organization Volume 1 ; >
+      au < manifest ; exists ; 2007 ;  ; 9780762312870 ; 9780762312870 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857243690 ; 9780857243690 ; Positive Design and Appreciative Construction: From Sustainable Development to Sustainable Value Volume 3 ; >
 
   }
 
@@ -240,21 +240,21 @@
 
       param[journal_issn] = 1529-2134
 
-      au < exists ; exists ; 1995 ;  ; 9781559385312 ; 9781559385312 ; Advances in Austrian Economics Volume 2 Part 2 ; >
-      au < exists ; exists ; 1996 ;  ; 9780762300556 ; 9780762300556 ; Advances in Austrian Economics Volume 3 ; >
-      au < exists ; exists ; 1997 ;  ; 9780762301980 ; 9780762301980 ; Advances in Austrian Economics Volume 4 ; >
-      au < exists ; exists ; 2003 ;  ; 9780762310418 ; 9780762310418 ; Austrian Economics and Entrepreneurial Studies Volume 6 ; >
-      au < exists ; exists ; 2004 ;  ; 9780762310531 ; 9780762310531 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 ; >
-      au < exists ; exists ; 2005 ;  ; 9781849502948 ; 9781849502948 ; Evolutionary Psychology and Economic Theory Volume 7 ; >
-      au < exists ; exists ; 2006 ;  ; 9780762313785 ; 9780762313785 ; Cognition and Economics Volume 9 ; >
-      au < exists ; exists ; 2007 ;  ; 9780762314522 ; 9780762314522 ; The Evolution of Consumption: Theories and Practices Volume 10 ; >
-      au < exists ; exists ; 2008 ;  ; 9781848553309 ; 9781848553309 ; Explorations in Austrian Economics Volume 11 ; >
-      au < exists ; exists ; 2009 ;  ; 9781848559981 ; 9781848559981 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 ; >
-      au < exists ; exists ; 2010 ;  ; 9781849509749 ; 9781849509749 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 ; >
-      au < exists ; exists ; 2010 ;  ; 9780857242617 ; 9780857242617 ; What is so Austrian about Austrian Economics? Volume 14 ; >
-      au < exists ; exists ; 2011 ;  ; 9781780523989 ; 9781780523989 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 ; >
-      au < exists ; exists ; 2012 ;  ; 9781781900062 ; 9781781900062 ; The Spatial Market Process Volume 16 ; >
-      au < exists ; exists ; 2012 ;  ; 9781781902165 ; 9781781902165 ; Experts and Epistemic Monopolies Volume 17 ; >
+      au < manifest ; exists ; 1995 ;  ; 9781559385312 ; 9781559385312 ; Advances in Austrian Economics Volume 2 Part 2 ; >
+      au < manifest ; exists ; 1996 ;  ; 9780762300556 ; 9780762300556 ; Advances in Austrian Economics Volume 3 ; >
+      au < manifest ; exists ; 1997 ;  ; 9780762301980 ; 9780762301980 ; Advances in Austrian Economics Volume 4 ; >
+      au < manifest ; exists ; 2003 ;  ; 9780762310418 ; 9780762310418 ; Austrian Economics and Entrepreneurial Studies Volume 6 ; >
+      au < manifest ; exists ; 2004 ;  ; 9780762310531 ; 9780762310531 ; The Dynamics of Intervention: Regulation and Redistribution in the Mixed Economy Volume 8 ; >
+      au < manifest ; exists ; 2005 ;  ; 9781849502948 ; 9781849502948 ; Evolutionary Psychology and Economic Theory Volume 7 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762313785 ; 9780762313785 ; Cognition and Economics Volume 9 ; >
+      au < manifest ; exists ; 2007 ;  ; 9780762314522 ; 9780762314522 ; The Evolution of Consumption: Theories and Practices Volume 10 ; >
+      au < manifest ; exists ; 2008 ;  ; 9781848553309 ; 9781848553309 ; Explorations in Austrian Economics Volume 11 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848559981 ; 9781848559981 ; Unexplored Dimensions: Karl Mengeron Economics and Philosophy (1923-1938) Volume 12 ; >
+      au < manifest ; exists ; 2010 ;  ; 9781849509749 ; 9781849509749 ; The Social Science of Hayek's 'The Sensory Order' Volume 13 ; >
+      au < manifest ; exists ; 2010 ;  ; 9780857242617 ; 9780857242617 ; What is so Austrian about Austrian Economics? Volume 14 ; >
+      au < manifest ; exists ; 2011 ;  ; 9781780523989 ; 9781780523989 ; Hayek in Mind: Hayek's Philosophical Psychology Volume 15 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781781900062 ; 9781781900062 ; The Spatial Market Process Volume 16 ; >
+      au < manifest ; exists ; 2012 ;  ; 9781781902165 ; 9781781902165 ; Experts and Epistemic Monopolies Volume 17 ; >
 
   }
 
@@ -268,12 +268,12 @@
 
       param[journal_issn] = 1479-3709
 
-      au < exists ; exists ; 2001 ;  ; 9780762307579 ; 9780762307579 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 ; >
-      au < exists ; exists ; 2001 ;  ; 9780762307647 ; 9780762307647 ; The Ethics of Organ Transplantation Volume 7 ; >
-      au < exists ; exists ; 2005 ;  ; 9780762312061 ; 9780762312061 ; Taking Life and Death Seriously - Bioethics from Japan Volume 8 ; >
-      au < exists ; exists ; 2006 ;  ; 9780762313112 ; 9780762313112 ; Ethics and Epidemics Volume 9 ; >
-      au < exists ; exists ; 2006 ;  ; 9780762311965 ; 9780762311965 ; Lost Virtue Volume 10 ; >
-      au < exists ; exists ; 2007 ;  ; 9780762312665 ; 9780762312665 ; Empirical Methods for Bioethics: A Primer Volume 11 ; >
+      au < manifest ; exists ; 2001 ;  ; 9780762307579 ; 9780762307579 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 ; >
+      au < manifest ; exists ; 2001 ;  ; 9780762307647 ; 9780762307647 ; The Ethics of Organ Transplantation Volume 7 ; >
+      au < manifest ; exists ; 2005 ;  ; 9780762312061 ; 9780762312061 ; Taking Life and Death Seriously - Bioethics from Japan Volume 8 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762313112 ; 9780762313112 ; Ethics and Epidemics Volume 9 ; >
+      au < manifest ; exists ; 2006 ;  ; 9780762311965 ; 9780762311965 ; Lost Virtue Volume 10 ; >
+      au < manifest ; exists ; 2007 ;  ; 9780762312665 ; 9780762312665 ; Empirical Methods for Bioethics: A Primer Volume 11 ; >
 
   }
 
@@ -287,8 +287,8 @@
 
       param[journal_issn] = 1477-4070
 
-      au < exists ; exists ; 2008 ;  ; 9780762314782 ; 9780762314782 ; Advances in Business and Management Forecasting Volume 5 ; >
-      au < exists ; exists ; 2009 ;  ; 9781848555488 ; 9781848555488 ; Advances in Business and Management Forecasting Volume 6 ; >
+      au < manifest ; exists ; 2008 ;  ; 9780762314782 ; 9780762314782 ; Advances in Business and Management Forecasting Volume 5 ; >
+      au < manifest ; exists ; 2009 ;  ; 9781848555488 ; 9781848555488 ; Advances in Business and Management Forecasting Volume 6 ; >
       au < exists ; exists ; 2010 ;  ; 9780857242013 ; 9780857242013 ; Advances in Business and Management Forecasting Volume 7 ; >
       au < exists ; exists ; 2011 ;  ; 9780857249593 ; 9780857249593 ; Advances in Business and Management Forecasting Volume 8 ; >
       au < exists ; exists ; 2013 ;  ; 9781781903315 ; 9781781903315 ; Advances in Business and Management Forecasting Volume 9 ; >
