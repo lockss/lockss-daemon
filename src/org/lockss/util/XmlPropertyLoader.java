@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -435,7 +431,7 @@ public class XmlPropertyLoader {
 	} else if ((m_tdb != null) && (titlePropName == null)) {
           String propName = getPropname();
           if (propName.startsWith(ConfigManager.PREFIX_TITLE_DB)) {
-            if (propName.indexOf(ConfigManager.PREFIX_TITLE_DB.length(), '.') < 0) {
+            if (propName.indexOf(".", ConfigManager.PREFIX_TITLE_DB.length()) < 0) {
               // create Properties for new title.
               titlePropName = propName;
               titleProps = new Properties();
