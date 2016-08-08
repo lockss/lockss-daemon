@@ -135,7 +135,7 @@
     au < finished ; finished ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -180,7 +180,7 @@
     au < finished ; finished ; 2013 ; Biomarkers in Cancer Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Biomarkers in Cancer Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Biomarkers in Cancer Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Biomarkers in Cancer Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -311,7 +311,7 @@
     au < finished ; finished ; 2013 ; Cancer Informatics Volume 12 ; 12 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Cancer Informatics Volume 13 ; 13 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; 2016 ; >
 
 
   }
@@ -371,7 +371,7 @@
     au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -415,7 +415,7 @@
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -483,7 +483,7 @@
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 8 ; 8 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 9 ; 9 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -548,7 +548,7 @@
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 7 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -701,7 +701,7 @@
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Reproductive Health Volume 7 ; 7 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Clinical Medicine Insights: Reproductive Health Volume 8 ; 8 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Reproductive Health Volume 9 ; 9 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -743,7 +743,7 @@
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -892,7 +892,7 @@
     au < crawling ; exists ; 2013 ; Drug Target Insights Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Drug Target Insights Volume 8 ; 8 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Drug Target Insights Volume 9 ; 9 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -1005,7 +1005,7 @@
     au < finished ; finished ; 2013 ; Genetics & Epigenetics Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Genetics & Epigenetics Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Genetics & Epigenetics Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Genetics & Epigenetics Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1027,7 +1027,7 @@
     au < crawling ; exists ; 2013 ; Genomics Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Genomics Insights Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -1069,7 +1069,7 @@
     au < crawling ; exists ; 2013 ; Health Services Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Health Services Insights Volume 7 ; 7 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Health Services Insights Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Health Services Insights Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Health Services Insights Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -1111,7 +1111,7 @@
     au < crawling ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1132,7 +1132,7 @@
     au < finished ; finished ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1301,7 +1301,7 @@
     au < crawling ; exists ; 2013 ; Journal of Cell Death Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Cell Death Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Cell Death Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Cell Death Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -1322,7 +1322,7 @@
     au < crawling ; exists ; 2013 ; Journal of Central Nervous System Disease Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Central Nervous System Disease Volume 6 ; 6 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Central Nervous System Disease Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Central Nervous System Disease Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1344,7 +1344,7 @@
     au < crawling ; exists ; 2013 ; Journal of Experimental Neuroscience Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Experimental Neuroscience Volume 8 ; 8 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Experimental Neuroscience Volume 9 ; 9 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Experimental Neuroscience Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -1529,7 +1529,7 @@
     au < finished ; finished ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 7 ; 2014 ; >
-    au < ready ; exists ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Open Journal of Cardiovascular Surgery Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1550,7 +1550,7 @@
     au < crawling ; exists ; 2013 ; Ophthalmology and Eye Diseases Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Ophthalmology and Eye Diseases Volume 6 ; 6 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Ophthalmology and Eye Diseases Volume 7 ; 7 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Ophthalmology and Eye Diseases Volume 8 ; 8 ; 2016 ; >
 
   }
 
@@ -1678,7 +1678,7 @@
     au < finished ; finished ; 2011 ; Proteomics Insights Volume 4 ; 4 ; 2011 ; >
     au < finished ; finished ; 2012 ; Proteomics Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Proteomics Insights Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2016 ; Proteomics Insights Volume 7 ; 7 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Proteomics Insights Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -1697,7 +1697,7 @@
     au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 ; >
     au < finished ; finished ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; 2016 ; >
 
   }
 
@@ -1719,7 +1719,7 @@
     au < crawling ; exists ; 2013 ; Reproductive Biology Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Reproductive Biology Insights Volume 7 ; 7 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; >
 
   }
 
