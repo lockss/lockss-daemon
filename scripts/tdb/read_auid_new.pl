@@ -216,12 +216,13 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "ClockssAAPDrupalPlugin" ||
+           $plugin eq "ClockssADADrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
            $plugin eq "ClockssAAASDrupalPlugin" ||
            $plugin eq "ClockssERSDrupalPlugin" ||
            $plugin eq "ClockssGSLDrupalPlugin" ||
            $plugin eq "ClockssIWADrupalPlugin" ||
-           $plugin eq "ClockssOUPDrupalPluginn" ||
+           $plugin eq "ClockssOUPDrupalPlugin" ||
            $plugin eq "ClockssPortlandPressDrupalPlugin" ||
            $plugin eq "ClockssRSPDrupalPlugin" ||
            $plugin eq "ClockssHWDrupalPlugin") {
