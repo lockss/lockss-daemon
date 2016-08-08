@@ -242,12 +242,8 @@ public abstract class BaseCrawler implements Crawler {
         DEFAULT_DEFAULT_RETRY_DELAY);
     minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
         DEFAULT_MIN_RETRY_DELAY);
-
     sendReferrer = config.getBoolean(PARAM_SEND_REFERRER,
 				     DEFAULT_SEND_REFERRER);
-
-    minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
-        DEFAULT_MIN_RETRY_DELAY);
 
     streamResetMax =
       config.getInt(PARAM_PERMISSION_BUF_MAX, DEFAULT_PERMISSION_BUF_MAX);
