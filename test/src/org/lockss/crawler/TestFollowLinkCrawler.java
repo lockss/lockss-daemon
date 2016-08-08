@@ -1008,7 +1008,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
     return res;
   }
-  //XXX: this is horrible
+
   public void testMyLinkExtractorCallback() {
     final String prefix = "http://www.example.com/"; // pseudo crawl rule
     MockArchivalUnit mau = new MockArchivalUnit() {
@@ -1029,8 +1029,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mfuc.foundLink("http://www.example.com/foo.bar");
     mfuc.foundLink("http://www.example.com/SESSION/foo.bar");
     mfuc.foundLink("HTTP://www.example.com/SESSION/foo.bar");
-    assertEquals(ListUtil.list("http://www.example.com/foo.bar"),
-		 queueUrlList(cq));
+    List<CrawlUrl> queue = queueList(cq);
+    CrawlUrlData qcurl = (CrawlUrlData)queue.get(0);
+    assertEquals("http://www.example.com/foo.bar", qcurl.getUrl());
+    assertEquals("referring.url", qcurl.getReferrer());
+    assertEquals(1, qcurl.getDepth());
+
     // illegal url gets added depending on path traversal action
     mfuc.foundLink("http://www.example.com/foo/../..");
     switch (CurrentConfig.getIntParam(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,

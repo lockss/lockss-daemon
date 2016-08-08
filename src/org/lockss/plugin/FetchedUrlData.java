@@ -111,4 +111,19 @@ public class FetchedUrlData {
   public UrlData getUrlData() {
     return new UrlData(input, headers, origUrl);
   }
+
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("[fud: ");
+    sb.append(origUrl);
+    if(redirectUrls != null && !redirectUrls.isEmpty()) {
+      sb.append(", red: ");
+      sb.append(redirectUrls);
+    }
+    sb.append(", hdrs: ");
+    sb.append(headers);
+    sb.append("]");
+    return sb.toString();
+  }
+
 }

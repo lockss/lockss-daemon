@@ -55,6 +55,13 @@ public class TestCrawlUrlData extends LockssTestCase {
     }
   }
 
+  public void testReferrer() {
+    CrawlUrlData curl = new CrawlUrlData("foo", 7);
+    assertNull(curl.getReferrer());
+    curl.setReferrer("umpire");
+    assertEquals("umpire", curl.getReferrer());
+  }
+
   public void testFlags() {
     CrawlUrlData curl = new CrawlUrlData("foo", 7);
     assertFalse(curl.isFetched());
