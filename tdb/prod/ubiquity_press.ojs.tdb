@@ -4,35 +4,36 @@
     name = Ubiquity Press
   >
 
+  provider = Ubiquity Press
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; volume ; param[year] >
   comment[year] = even though bibliographic year is e.g. 2006-2007, the manifest year is 2006.
 
   {
-  
-    title < 
+
+    title <
       name = Ancient Asia ;
-      eissn = 2042-5937 
+      eissn = 2042-5937
     >
-    
+
     param[base_url] = http://www.ancient-asia-journal.com/
     param[journal_id] = aa
 
     au < down ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
     au < down ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Archaeology International ;
-      eissn = 2048-4194 
+      eissn = 2048-4194
     >
-    
+
     param[base_url] = http://www.ai-journal.com/
     param[journal_id] = ai
-    comment[superseded] = 2011 and 2012 manifest pages both refer to volume15 
+    comment[superseded] = 2011 and 2012 manifest pages both refer to volume15
 
     au < down ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < down ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
@@ -43,16 +44,16 @@
     au < down ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
     au < exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
     au < expected ; 2014-2015 ; Archaeology International Volume 18 ; 18 ; 2015 >
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Architectural Histories ;
-      eissn = 2050-5833 
+      eissn = 2050-5833
     >
-    
+
     param[base_url] = http://journal.eahn.org/
     param[journal_id] = ah
 
@@ -60,19 +61,19 @@
     au < exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
     au < exists ; 2015 ; Architectural Histories Volume 3 ; 3 ; 2015 >
     au < exists ; 2016 ; Architectural Histories Volume 4 ; 4 ; 2016 >
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = The Bulletin of the History of Archaeology ;
       issn = 1062-4740 ;
-      eissn = 2047-6930 
+      eissn = 2047-6930
     >
-    
+
     {
-    
+
       param[base_url] = http://www.archaeologybulletin.org/
       param[journal_id] = bha
 
@@ -101,18 +102,18 @@
       au < down ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
       au < exists ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
       au < expected ; 2015 ; The Bulletin of the History of Archaeology Volume 25 ; 25 ; 2015 >
-    
+
     }
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Governance in Africa ;
       eissn = 2053-4825
     >
-    
+
     param[base_url] = http://www.govafricajournal.org/
     param[journal_id] = unknown
 
@@ -121,12 +122,12 @@
   }
 
   {
-  
-    title < 
+
+    title <
       name = Journal of Conservation and Museum Studies ;
-      eissn = 1364-0429 
+      eissn = 1364-0429
     >
-    
+
     param[base_url] = http://www.jcms-journal.com/
     param[journal_id] = jcms
 
@@ -141,16 +142,16 @@
     au < down ; 2013 ; Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
     au < exists ; 2014 ; Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     au < expected ; 2015 ; Journal of Conservation and Museum Studies Volume 13 ; 13 ; 2015 >
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = Journal of Circadian Rhythms ;
       eissn = 1740-3391
     >
-    
+
     param[base_url] = http://www.jcircadianrhythms.com/
     param[journal_id] = jcr
 
@@ -170,11 +171,11 @@
   }
 
   {
-  
-    title < 
-      name = Journal of Cosmology 
+
+    title <
+      name = Journal of Cosmology
     >
-    
+
     param[base_url] = http://journalofcosmology.com/
     param[journal_id] = joc
     # needs review on web structure, http://journalofcosmology.com/JOC22/indexVol22CONTENTS.htm
@@ -182,12 +183,12 @@
   }
 
   {
-  
-    title < 
+
+    title <
       name = Journal of European Psychology Students ;
       eissn = 2222-6931
     >
-    
+
     param[base_url] = http://jeps.efpsa.org/
     param[journal_id] = jeps
     # no issue in 2011
@@ -198,114 +199,114 @@
     au < down ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     au < expected ; 2015 ; Journal of European Psychology Students Volume 6 ; 6 ; 2015 >
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = Journal of Open Archaeology Data ;
-      eissn = 2049-1565 
+      eissn = 2049-1565
     >
-    
+
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
-    
+
     au < down ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
     au < down ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
     au < exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
     au < expected ; 2015 ; Journal of Open Archaeology Data Volume 4 ; 4 ; 2015 >
 
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Journal of Open Public Health Data ;
-      eissn = 2053-2407 
+      eissn = 2053-2407
     >
-    
+
     param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
-    
+
     au < down ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
     au < exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
     au < expected ; 2015 ; Journal of Open Public Health Data Volume 3 ; 3 ; 2015 >
 
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Journal of Open Psychology Data ;
-      eissn = 2050-9863 
+      eissn = 2050-9863
     >
-    
+
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
-    
+
     au < down ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
     au < exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
     au < expected ; 2015 ; Journal of Open Psychology Data Volume 3 ; 3 ; 2015 >
 
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Journal of Open Research Software ;
-      eissn = 2049-9647 
+      eissn = 2049-9647
     >
-    
+
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
 
     au < down ; 2013 ; Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < exists ; 2014 ; Journal of Open Research Software Volume 2 ; 2 ; 2014 >
     au < expected ; 2015 ; Journal of Open Research Software Volume 3 ; 3 ; 2015 >
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Journal of Portuguese Linguistics ;
       issn = 1645-4537 ;
-      eissn = 2397-5563 
+      eissn = 2397-5563
     >
-    
+
     param[base_url] = http://jpl.letras.ulisboa.pt/
     param[journal_id] = jpl
-    
+
     au < exists ; 2015 ; Journal of Portuguese Linguistics Volume 15 ; 15 ; 2015 >
 
   }
 
   {
-  
-    title < 
+
+    title <
       name = Open Journal of Bioresources ;
       eissn = 2056-5542
     >
-    
+
     param[base_url] = http://openbioresources.metajnl.com/
     param[journal_id] = ojb
 
-    
+
     au < exists ; 2014 ; Open Journal of Bioresources Volume 1 ; 1 ; 2014 >
     au < expected ; 2015 ; Open Journal of Bioresources Volume 2 ; 2 ; 2015 >
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = Opticon1826 ;
-      eissn = 2049-8128 
+      eissn = 2049-8128
     >
-    
+
     # moving to UCL Press https://www.ucl.ac.uk/ucl-press/journals
-    
+
     param[base_url] = http://www.opticon1826.com/
     param[journal_id] = opt
 
@@ -317,29 +318,29 @@
     au < down ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
     au < down ; 2012 ; Opticon1826 Volume 12-14 ; 12-14 ; 2012 >
     au < down ; 2013 ; Opticon1826 Volume 15 ; 15 ; 2013 >
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Papers from the Institute of Archaeology ;
-      eissn = 2041-9015 
+      eissn = 2041-9015
     >
-    
+
     {
-    
+
       param[base_url] = http://pia-journal.co.uk/
       param[journal_id] = pia
 
       au < superseded ; 2009 ; Papers from the Institute of Archaeology Volume 19 [superseded] ; 19 ; 2009 >
       au < superseded ; 2010 ; Papers from the Institute of Archaeology Volume 20 [superseded] ; 20 ; 2010 >
       au < superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
-    
+
     }
-    
+
     {
-    
+
       param[base_url] = http://www.pia-journal.co.uk/
       param[journal_id] = pia
 
@@ -368,19 +369,19 @@
       au < down ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
       au < exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
       au < expected ; 2015 ; Papers from the Institute of Archaeology Volume 25 ; 25 ; 2015 >
-    
+
     }
-    
+
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Present Pasts ;
       eissn = 1759-2941
     >
     {
-    
+
       param[base_url] = http://www.presentpasts.info/
       param[journal_id] = pp
 
@@ -391,18 +392,18 @@
       au < down ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
       au < exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
       au < expected ; 2015 ; Present Pasts Volume 7 ; 7 ; 2015 >
-    
+
     }
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = Psychologica Belgica ;
-      eissn = 2054-670X 
+      eissn = 2054-670X
     >
-    
+
     param[base_url] = http://www.psychologicabelgica.com/
     param[journal_id] = pb
 
@@ -421,29 +422,29 @@
   }
 
   {
-  
-    title < 
+
+    title <
       name = Secularism and Nonreligion ;
-      eissn = 2053-6712 
+      eissn = 2053-6712
     >
-    
+
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
-    
+
     au < down ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
     au < down ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
     au < exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
     au < expected ; 2015 ; Secularism and Nonreligion Volume 4 ; 4 ; 2015 >
 
   }
-  
+
   {
-  
-    title < 
+
+    title <
       name = Stability: International Journal of Security & Development ;
       eissn = 2165-2627
     >
-    
+
     param[base_url] = http://www.stabilityjournal.org/
     param[journal_id] = sta
     # moved to new platform.
@@ -451,16 +452,16 @@
     au < down ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
     au < down ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
     au < doNotProcess ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 >
-    
+
   }
 
   {
-  
-    title < 
+
+    title <
       name = Utrecht Journal of International and European Law ;
       eissn = 2053-5341
     >
-    
+
     param[base_url] = http://www.utrechtjournal.org/
     param[journal_id] = ujiel
 
@@ -472,4 +473,3 @@
   }
 
 }
-
