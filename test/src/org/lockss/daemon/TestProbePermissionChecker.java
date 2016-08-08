@@ -162,6 +162,8 @@ public class TestProbePermissionChecker
   }
 
   public void testProbeHasPermission() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "First");
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -170,12 +172,16 @@ public class TestProbePermissionChecker
     mau.addUrl(probeUrl, true, true);
     mau.addContent(probeUrl, "");
 
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "a type");
+    mcf.setCrawlerStatus(cs);
+
     pc = new TestableProbePermissionChecker();
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(mcf, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
     assertEquals(probeUrl, pc.getProbeUrl());
     assertTrue(mcf.permProbe.contains(probeUrl));
+    assertEquals(ListUtil.list(probeUrl), cs.getReferrers(url));
   }
   
   public void testProbeHasPermissionNotInCrawlRule() {
