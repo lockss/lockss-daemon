@@ -736,6 +736,7 @@ Args:
            memoryMaximumSize="256m"
            >
        <classpath refid="@{cpid}" />
+      <compilerarg value="-XDignore.symbol.file" />
       <javacelem/>
     </javac>
    </sequential>
@@ -943,7 +944,6 @@ Java ${my.ant.java.version} found, 1.8 required
     <condition property="detected.os" value="windows">
       <os family="dos"/>
     </condition>
-    <echo message="building with java version ${my.ant.java.version}"/>
   </target>
 
   <target name="require.release.java.version" depends="prepare">
