@@ -58,6 +58,7 @@ public class MockUrlFetcher implements UrlFetcher {
   private String url;
   private InputStream uncachedIS;
   private CIProperties uncachedProp;
+  private Map<String,String> reqProps = new HashMap();
 
   private boolean shouldBeCached = false;
   private IOException cachingException = null;
@@ -143,6 +144,11 @@ public class MockUrlFetcher implements UrlFetcher {
   }
 
   public void setRequestProperty(String key, String value) {
+    reqProps.put(key, value);
+  }
+
+  public String getRequestProperty(String key) {
+    return reqProps.get(key);
   }
 
   public void setRedirectScheme(RedirectScheme scheme) {

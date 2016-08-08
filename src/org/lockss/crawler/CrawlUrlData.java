@@ -46,6 +46,7 @@ public class CrawlUrlData implements CrawlUrl {
   public static final int IS_START_URL = 8;
 
   private final String url;
+  private String referrerUrl;
   private int depth;
   private int flags;
   private ArrayList<CrawlUrlData> children;
@@ -65,6 +66,16 @@ public class CrawlUrlData implements CrawlUrl {
   /** Return the minimum depth at which this URL has been seen */
   public int getDepth() {
     return depth;
+  }
+
+  /** Set the referrer URL */
+  public void setReferrer(String referrerUrl) {
+    this.referrerUrl = referrerUrl;
+  }
+
+  /** Return the referrer URL or null if not known */
+  public String getReferrer() {
+    return referrerUrl;
   }
 
   public boolean isFetched() {
@@ -190,6 +201,10 @@ public class CrawlUrlData implements CrawlUrl {
     if (flags != 0) {
       sb.append(", f=");
       sb.append(flags);
+    }
+    if (referrerUrl != null) {
+      sb.append(", r=");
+      sb.append(referrerUrl);
     }
     sb.append("]");
     return sb.toString();

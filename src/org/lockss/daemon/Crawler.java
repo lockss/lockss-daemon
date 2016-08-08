@@ -164,7 +164,8 @@ public interface Crawler {
     
     public void addToParseQueue(CrawlUrlData curl);
     
-    public void addToPermissionProbeQueue(String probeUrl);
+    public void addToPermissionProbeQueue(String probeUrl,
+					  String referrerUrl);
 
     public void setPreviousContentType(String previousContentType);
     

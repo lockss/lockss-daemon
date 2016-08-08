@@ -101,7 +101,7 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
     if (probeUrl != null) {
       if (au.shouldBeCached(probeUrl)) {
-        crawlFacade.addToPermissionProbeQueue(probeUrl);
+        crawlFacade.addToPermissionProbeQueue(probeUrl, permissionUrl);
         return true;
       } else {
         String errorMsg = "Probe url: " + probeUrl + " outside of crawl spec counting as no"

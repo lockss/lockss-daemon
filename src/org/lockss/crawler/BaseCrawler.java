@@ -126,6 +126,10 @@ public abstract class BaseCrawler implements Crawler {
     PREFIX + "proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
   
+  /** If true, send Referer header when referring URL is known */
+  public static final String PARAM_SEND_REFERRER = PREFIX + "sendReferrer";
+  public static final boolean DEFAULT_SEND_REFERRER = true;
+  
   public static final String ABORTED_BEFORE_START_MSG = "Crawl aborted before start";
   
   protected int streamResetMax = DEFAULT_PERMISSION_BUF_MAX;
@@ -133,6 +137,7 @@ public abstract class BaseCrawler implements Crawler {
   protected int maxRetries = DEFAULT_MAX_RETRY_COUNT;
   protected long defaultRetryDelay = DEFAULT_DEFAULT_RETRY_DELAY;
   protected long minRetryDelay = DEFAULT_MIN_RETRY_DELAY;
+  protected boolean sendReferrer = DEFAULT_SEND_REFERRER;
   protected Set<String> origStems;
   protected Set<String> cdnStems;
   
@@ -235,6 +240,12 @@ public abstract class BaseCrawler implements Crawler {
         DEFAULT_MAX_RETRY_COUNT);
     defaultRetryDelay = config.getLong(PARAM_DEFAULT_RETRY_DELAY,
         DEFAULT_DEFAULT_RETRY_DELAY);
+    minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
+        DEFAULT_MIN_RETRY_DELAY);
+
+    sendReferrer = config.getBoolean(PARAM_SEND_REFERRER,
+				     DEFAULT_SEND_REFERRER);
+
     minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
         DEFAULT_MIN_RETRY_DELAY);
 
@@ -607,6 +618,9 @@ public abstract class BaseCrawler implements Crawler {
   public UrlFetcher makeUrlFetcher(CrawlUrlData curl) {
     UrlFetcher uf = makeUrlFetcher(curl.getUrl());
     uf.setCrawlUrl(curl);
+    if (sendReferrer && curl.getReferrer() != null) {
+      uf.setRequestProperty(Constants.HTTP_REFERER, curl.getReferrer());
+    }
     return uf;
   }
 
@@ -776,7 +790,8 @@ public abstract class BaseCrawler implements Crawler {
           "This crawler has no parse queue");
     }
 
-    public void addToPermissionProbeQueue(String probeUrl) {
+    public void addToPermissionProbeQueue(String probeUrl,
+					  String referrerUrl) {
       throw new UnsupportedOperationException(
           "This crawler has no permission probe url set");      
     }
@@ -824,6 +839,7 @@ public abstract class BaseCrawler implements Crawler {
     public CrawlUrl addChild(CrawlUrl curl, String url) {
       CrawlUrlData curld = (CrawlUrlData)curl;
       CrawlUrlData child = new CrawlUrlData(url, curld.getDepth()+1);
+      child.setReferrer(curl.getUrl());
       curld.addChild(child);
       return child;
     }

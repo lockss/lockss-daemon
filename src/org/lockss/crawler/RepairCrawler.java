@@ -87,6 +87,13 @@ public class RepairCrawler extends BaseCrawler {
     Configuration.PREFIX + "crawler.maxRepairsOutsideWindow";
   public static final int DEFAULT_MAX_REPAIRS_OUTSIDE_WINDOW = 0;
 
+  /** If true and the referrer is known, send it with repair request.  This
+   * is possible only if a version of the file already exists and its
+   * properties intact, and if the referrer was sent and recorded by a new
+   * content crawl (daemon 1.71 and later). */
+  public static final String PARAM_SEND_REFERRER =
+    Configuration.PREFIX + "crawler.repair.sendReferrer";
+  public static final boolean DEFAULT_SEND_REFERRER = true;
 
 
   /** Poller requires fetched URLs to be kept in status */
@@ -95,6 +102,7 @@ public class RepairCrawler extends BaseCrawler {
   boolean repairNeedsPermission;
 //   int numPubRetries = DEFAULT_NUM_RETRIES_FROM_PUBLISHER;
   int maxRepairsOutsideWindow;
+  protected boolean sendReferrer = DEFAULT_SEND_REFERRER;
 
   public RepairCrawler(ArchivalUnit au, AuState aus,
       Collection<String> repairUrls) {
@@ -116,7 +124,8 @@ public class RepairCrawler extends BaseCrawler {
                                               DEFAULT_REPAIR_NEEDS_PERMISSION);
     maxRepairsOutsideWindow = config.getInt(PARAM_MAX_REPAIRS_OUTSIDE_WINDOW,
                                             DEFAULT_MAX_REPAIRS_OUTSIDE_WINDOW);
-
+    sendReferrer = config.getBoolean(PARAM_SEND_REFERRER,
+				     DEFAULT_SEND_REFERRER);
   }
 
   public boolean isWholeAU() {
@@ -141,6 +150,24 @@ public class RepairCrawler extends BaseCrawler {
     BitSet fetchFlags = uf.getFetchFlags();
     fetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(fetchFlags);
+    if (sendReferrer) {
+      CachedUrl currentCu = null;
+      try {
+	currentCu = au.makeCachedUrl(url);
+	if ((currentCu != null) && currentCu.hasContent()) {
+	  CIProperties cachedProps = currentCu.getProperties();
+	  String referrer =
+	    cachedProps.getProperty(CachedUrl.PROPERTY_REQ_REFERRER);
+	  if (!StringUtil.isNullString(referrer)) {
+	    uf.setRequestProperty(Constants.HTTP_REFERER, referrer);
+	  }
+	}
+      } catch (Exception e) {
+	logger.warning("Error looking up Referer for repair", e);
+      } finally {
+	AuUtil.safeRelease(currentCu);
+      }
+    }
     return uf;
   }
 

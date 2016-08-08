@@ -218,9 +218,9 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2,
                                     repairUrl3, repairUrl4);
     mau.setStartUrls(startUrls);
-mau.setPermissionUrls( permissionPages);
-mau.setCrawlRule(crawlRule);
-mau.setRefetchDepth( 1);
+    mau.setPermissionUrls( permissionPages);
+    mau.setCrawlRule(crawlRule);
+    mau.setRefetchDepth( 1);
     mau.setCrawlWindow(new MyMockCrawlWindow());
     crawler = new MyRepairCrawler(mau, aus, repairUrls);
     crawler.setCrawlManager(crawlMgr);
@@ -467,6 +467,31 @@ mau.setRefetchDepth( 1);
     assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
 
+  public void testReferrer() {
+    String repairUrl1 = "http://example.com/blah.html";
+    String repairUrl2 = "http://example.com/blah2.html";
+
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
+
+    TestableRepairCrawler crawler =
+      makeCrawlerWPermission(mau, aus,
+                             ListUtil.list(repairUrl1, repairUrl2));
+    crawler.setCrawlManager(crawlMgr);
+    crawler.setDaemonPermissionCheckers(
+      ListUtil.list(new MockPermissionChecker(100)));
+
+    CIProperties props = new CIProperties();
+    props.setProperty(CachedUrl.PROPERTY_REQ_REFERRER, "http://foo.bar/refer");
+    mau.addUrl(repairUrl1, true, true, props);
+    CachedUrl ccc = mau.makeCachedUrl(repairUrl1);
+    MockUrlFetcher muf = 
+        (MockUrlFetcher)crawler.makeRepairUrlFetcher(repairUrl1);
+    assertEquals("http://foo.bar/refer",
+		 muf.getRequestProperty(Constants.HTTP_REFERER));
+  }
+
+
   private TestableRepairCrawler makeCrawlerWPermission(ArchivalUnit au,
                                                  AuState aus,
                                                  Collection repairUrls) {
@@ -694,7 +719,7 @@ mau.setRefetchDepth( 1);
         uf.setCachingException(new CacheException("Expected from publisher"), 1);
         return uf;
       } else {
-        return super.makePermissionUrlFetcher(url);
+        return super.makeRepairUrlFetcher(url);
       }
     }
 
