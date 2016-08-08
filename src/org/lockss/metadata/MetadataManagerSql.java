@@ -960,6 +960,7 @@ public class MetadataManagerSql {
       + " group by subq." + NAME_COLUMN
       + " having count(subq." + NAME_COLUMN + ") > 2)"
       + " order by mn." + NAME_COLUMN
+      + ", issn." + MD_ITEM_SEQ_COLUMN
       + ", issn." + ISSN_COLUMN
       + ", issn." + ISSN_TYPE_COLUMN;
 
