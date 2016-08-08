@@ -102,6 +102,8 @@ public class ProbePermissionChecker implements PermissionChecker {
     if (probeUrl != null) {
       if (au.shouldBeCached(probeUrl)) {
         crawlFacade.addToPermissionProbeQueue(probeUrl, permissionUrl);
+        crawlStatus.signalReferrer(permissionUrl, probeUrl,
+				   CrawlerStatus.ReferrerType.Included);
         return true;
       } else {
         String errorMsg = "Probe url: " + probeUrl + " outside of crawl spec counting as no"
