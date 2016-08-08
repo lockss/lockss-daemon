@@ -5,7 +5,7 @@
     info[tester] = 2
   >
 
-	pluginPrefix = org.lockss.plugin.highwire. 
+    pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
   {
@@ -18,8 +18,7 @@
     >
     
     param[base_url] = http://ccm.geoscienceworld.org/
-  
-  
+    
     au < gsw.GSWDrupalPlugin ; manifest ; 2000 ; Clays and Clay Minerals Volume 48 ; 48 >
     au < gsw.GSWDrupalPlugin ; manifest ; 2001 ; Clays and Clay Minerals Volume 49 ; 49 >
     au < gsw.GSWDrupalPlugin ; manifest ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >

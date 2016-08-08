@@ -9,6 +9,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
+  
     title <
       name = Bulletin of the Seismological Society of America ;
       issn = 0037-1106 ;
@@ -125,10 +126,10 @@
       au < HighWirePressH20Plugin ; released ; 2015 ; Bulletin of the Seismological Society of America Volume 105 ; 105 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Bulletin of the Seismological Society of America Volume 106 ; 106 >
 
-    }
+  }
 
-    {
-    
+  {
+
     title <
       name = Seismological Research Letters ;
       issn = 0895-0695 ;
@@ -226,6 +227,5 @@
     au < gsw.GSWDrupalPlugin ; manifest ; 2016 ; Seismological Research Letters Volume 87 ; 87 >
 
   }
-
+  
 }
-
