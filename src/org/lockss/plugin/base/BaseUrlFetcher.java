@@ -77,6 +77,13 @@ public class BaseUrlFetcher implements UrlFetcher {
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
   
+  /** If true, any Referer sent with the request will be recorded in the
+   * {@value CachedUrl.PROPERTY_REQ_REFERRER property.  Used by repair
+   * crawler */
+  public static final String PARAM_RECORD_REFERRER =
+    Configuration.PREFIX + "baseuc.recordReferrer";
+  public static final boolean DEFAULT_RECORD_REFERRER = true;
+
   /** If true, X-Lockss-Auid: header will be included in proxy requests.
    * Use in order to get an accurate copy of an AU from the audit proxy. */
   public static final String PARAM_PROXY_BY_AUID =
@@ -821,6 +828,15 @@ public class BaseUrlFetcher implements UrlFetcher {
 	// set to the first url in a chain of redirects that led to content,
 	// which could be different depending on fetch order.
 	props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
+      }
+      if (reqProps != null) {
+	String referrer = reqProps.getProperty(Constants.HTTP_REFERER);
+	if (CurrentConfig.getBooleanParam(PARAM_RECORD_REFERRER,
+					  DEFAULT_RECORD_REFERRER) &&
+	    !StringUtil.isNullString(referrer)) {
+	  props.setProperty(CachedUrl.PROPERTY_REQ_REFERRER,
+			    referrer);
+	}
       }
       conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
       String actualURL = conn.getActualUrl();

@@ -93,6 +93,10 @@ public interface CachedUrl extends CachedUrlSetNode {
    * but cannot be changed. */
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
+  /** Referer header that was sent with the request for this URL, if any.
+      Used by the repair crawler */
+  public static final String PROPERTY_REQ_REFERRER = "X-Lockss-referrer";
+
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
 
   /** Checksum: The checksum (hash) of the content in <alg>:<hash> format */

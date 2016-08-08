@@ -446,6 +446,42 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertEquals("555666", props.get(CachedUrl.PROPERTY_FETCH_TIME));
   }
 
+  public void testReferrer() throws IOException {
+    String refrr = "http://example.com/referer1";
+    TimeBase.setSimulated(555666);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    mconn.setResponseContentType(null);
+    muf.setRequestProperty(Constants.HTTP_REFERER, refrr);
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    Properties props = muf.getUncachedProperties();
+    // ensure Referer was set in HTTP request
+    assertEquals(refrr, mconn.getRequestProperty(Constants.HTTP_REFERER));
+    // and in stored properties
+    assertEquals(refrr, props.getProperty(CachedUrl.PROPERTY_REQ_REFERRER));
+  }
+
+  public void testReferrerNoRecord() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlFetcher.PARAM_RECORD_REFERRER,
+				  "false");
+    String refrr = "http://example.com/referer1";
+    TimeBase.setSimulated(555666);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    mconn.setResponseContentType(null);
+    muf.setRequestProperty(Constants.HTTP_REFERER, refrr);
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    Properties props = muf.getUncachedProperties();
+    // ensure Referer was set in HTTP request
+    assertEquals(refrr, mconn.getRequestProperty(Constants.HTTP_REFERER));
+    // and in stored properties
+    assertNull(refrr, props.getProperty(CachedUrl.PROPERTY_REQ_REFERRER));
+  }
+
   // Ensure no compression performed on receipt
   public void testGzippedFetch() throws IOException {
     String testString = "test gzipped content";

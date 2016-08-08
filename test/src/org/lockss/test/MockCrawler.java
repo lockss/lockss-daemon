@@ -230,7 +230,7 @@ public class MockCrawler extends NullCrawler {
     }
 
     @Override
-    public void addToPermissionProbeQueue(String probeUrl) {
+    public void addToPermissionProbeQueue(String probeUrl, String referrerUrl) {
       permProbe.add(probeUrl);
       
     }

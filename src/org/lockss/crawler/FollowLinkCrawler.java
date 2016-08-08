@@ -835,6 +835,7 @@ public class FollowLinkCrawler extends BaseCrawler {
 	      }
 	      signalReferrer(normUrl, ReferrerType.Included);
 	      child = newCrawlUrlData(normUrl, curl.getDepth() + 1);
+	      child.setReferrer(curl.getUrl());
 	      if (child.getDepth() > maxDepth) {
 		maxDepthUrls.put(normUrl, child);
 	      } else {
@@ -952,8 +953,13 @@ public class FollowLinkCrawler extends BaseCrawler {
     }
 
     @Override
-    public void addToPermissionProbeQueue(String probeUrl) {
-      permissionProbeUrls.add(new CrawlUrlData(probeUrl, 0));
+    public void addToPermissionProbeQueue(String probeUrl,
+					  String referrerUrl) {
+      CrawlUrlData pcurl = new CrawlUrlData(probeUrl, 0);
+      if (referrerUrl != null) {
+	pcurl.setReferrer(referrerUrl);
+      }
+      permissionProbeUrls.add(pcurl);
     }
 
   }
