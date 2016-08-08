@@ -20,23 +20,23 @@
     param[base_url] = http://ccm.geoscienceworld.org/
   
   
-    au < HWDrupalPlugin ; manifest ; 2000 ; Clays and Clay Minerals Volume 48 ; 48 >
-    au < HWDrupalPlugin ; manifest ; 2001 ; Clays and Clay Minerals Volume 49 ; 49 >
-    au < HWDrupalPlugin ; manifest ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
-    au < HWDrupalPlugin ; manifest ; 2003 ; Clays and Clay Minerals Volume 51 ; 51 >
-    au < HWDrupalPlugin ; manifest ; 2004 ; Clays and Clay Minerals Volume 52 ; 52 >
-    au < HWDrupalPlugin ; manifest ; 2005 ; Clays and Clay Minerals Volume 53 ; 53 >
-    au < HWDrupalPlugin ; manifest ; 2006 ; Clays and Clay Minerals Volume 54 ; 54 >
-    au < HWDrupalPlugin ; manifest ; 2007 ; Clays and Clay Minerals Volume 55 ; 55 >
-    au < HWDrupalPlugin ; manifest ; 2008 ; Clays and Clay Minerals Volume 56 ; 56 >
-    au < HWDrupalPlugin ; manifest ; 2009 ; Clays and Clay Minerals Volume 57 ; 57 >
-    au < HWDrupalPlugin ; manifest ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 >
-    au < HWDrupalPlugin ; manifest ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2000 ; Clays and Clay Minerals Volume 48 ; 48 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2001 ; Clays and Clay Minerals Volume 49 ; 49 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2003 ; Clays and Clay Minerals Volume 51 ; 51 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2004 ; Clays and Clay Minerals Volume 52 ; 52 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2005 ; Clays and Clay Minerals Volume 53 ; 53 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2006 ; Clays and Clay Minerals Volume 54 ; 54 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2007 ; Clays and Clay Minerals Volume 55 ; 55 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2008 ; Clays and Clay Minerals Volume 56 ; 56 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2009 ; Clays and Clay Minerals Volume 57 ; 57 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Clays and Clay Minerals Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Clays and Clay Minerals Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Clays and Clay Minerals Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Clays and Clay Minerals Volume 63 ; 63 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 >
+    au < gsw.GSWDrupalPlugin ; manifest ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 >
 
   }
 
