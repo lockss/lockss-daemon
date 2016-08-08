@@ -8,6 +8,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+  #moving to drupal 9/2016
 
   {
 
@@ -233,7 +234,7 @@
     au < crawling ; exists ; 2016 ; The Journal of Cell Biology Volume 212 ; 212 ; >
     au < crawling ; exists ; 2016 ; The Journal of Cell Biology Volume 213 ; 213 ; >
     au < manifest ; exists ; 2016 ; The Journal of Cell Biology Volume 214 ; 214 ; >
-    au < expected ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; >
+    au < doNotProcess ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; >
 
   }
 
@@ -621,7 +622,7 @@
     au < crawling ; exists ; 2015 ; The Journal of General Physiology Volume 145 ; 145 ; >
     au < crawling ; exists ; 2015 ; The Journal of General Physiology Volume 146 ; 146 ; >
     au < crawling ; exists ; 2016 ; The Journal of General Physiology Volume 147 ; 147 ; >
-    au < manifest ; exists ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; >
+    au < doNotProcess ; exists ; 2016 ; The Journal of General Physiology Volume 148 ; 148 ; >
 
   }
 
