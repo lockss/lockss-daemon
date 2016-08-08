@@ -1,0 +1,1482 @@
+{
+  publisher <
+    name = Martin Paul Eve
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Orbit: Writing Around Pynchon ;
+        eissn = 2047-2870
+      >
+
+      comment[publisher] = Martin Paul Eve
+      param[base_url] = https://www.pynchon.net/
+
+      au < exists ; exists ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Open Library of the Humanities
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = 19: Interdisciplinary Studies in the Long Nineteenth Century ;
+        eissn = 1755-1560
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://www.19.bbk.ac.uk/
+
+      au < exists ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = ASIANetwork Exchange ;
+        eissn = 1943-9946
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://www.ancient-asia-journal.com/
+
+      au < exists ; exists ; 2006 ; 1 ; ASIANetwork Exchange Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; ASIANetwork Exchange Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 3 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 4 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 5 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 6 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 7 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 8 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 9 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 10 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 11 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = C21 Literature: journal of 21st-century writings ;
+        eissn = 2045-5224
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://c21.openlibhums.org/
+
+      au < expected ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Glossa: a journal of general linguistics ;
+        eissn = 2397-1835
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://www.glossa-journal.org/
+
+      au < expected ; exists ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of British and Irish Innovative Poetry ;
+        eissn = 1758-972X
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = https://poetry.openlibhums.org/
+
+      au < exists ; exists ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Open Library of Humanities ;
+        eissn = 2056-6700
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://olh.openlibhums.org/
+
+      au < exists ; exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Studies in the Maternal ;
+        eissn = 1759-0434
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://www.mamsie.bbk.ac.uk/
+
+      au < exists ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Comics Grid: Journal of Comics Scholarship ;
+        eissn = 2048-0792
+      >
+
+      comment[publisher] = Open Library of the Humanities
+      param[base_url] = http://www.comicsgrid.com/
+
+      au < exists ; exists ; 2013 ; 1 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Stockholm University Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Designs for Learning ;
+        eissn = 2001-7480
+      >
+
+      comment[publisher] = Stockholm University Press
+      param[base_url] = http://www.designsforlearning.nu/
+
+      au < exists ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 8 ; Designs for Learning Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 9 ; Designs for Learning Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Rural Landscapes: Society, Environment, History ;
+        eissn = 2002-0104
+      >
+
+      comment[publisher] = Stockholm University Press
+      param[base_url] = http://www.rurallandscapesjournal.com/
+
+      au < exists ; exists ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Scandinavian Journal of Work and Organizational Psychology ;
+        eissn = 2002-2867
+      >
+
+      comment[publisher] = Stockholm University Press
+      param[base_url] = http://www.sjwop.com/
+
+      au < expected ; exists ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Ubiquity Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Ancient Asia ;
+        eissn = 2042-5937
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.ancient-asia-journal.com/
+
+      au < exists ; exists ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 3 ; Ancient Asia Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 4 ; Ancient Asia Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 5 ; Ancient Asia Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Ancient Asia Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 8 ; Ancient Asia Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Archaeology International ;
+        eissn = 2048-4194
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.ai-journal.com/
+
+      au < exists ; exists ; 2006 ; 1 ; Archaeology International Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; Archaeology International Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 3 ; Archaeology International Volume 2008 ; 2008 ; >
+      au < doNotProcess ; exists ; 2009 ; 4 ; Archaeology International Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 5 ; Archaeology International Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 6 ; Archaeology International Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 7 ; Archaeology International Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 8 ; Archaeology International Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 9 ; Archaeology International Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 10 ; Archaeology International Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Architectural Histories ;
+        eissn = 2050-5833
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://journal.eahn.org/
+
+      au < exists ; exists ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = ARENA Journal of Architectural Research ;
+        eissn = 2397-0820
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://ajar.arena-architecture.eu/
+
+      au < expected ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Bulletin of the History of Archaeology ;
+        issn = 1062-4740 ;
+        eissn = 2047-6930
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.archaeologybulletin.org/
+
+      au < exists ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; >
+      au < exists ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; >
+      au < exists ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; >
+      au < exists ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Citizen Science: Theory and Practice ;
+        eissn = 2057-4991
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
+
+      au < expected ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Data Science Journal ;
+        eissn = 1683-1470
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://datascience.codata.org/
+
+      au < exists ; exists ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Glocality: Undergraduate Academic Journal ;
+        eissn = 2059-2949
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.glocality.eu/
+
+      au < exists ; exists ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Governance in Africa ;
+        eissn = 2053-4825
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.govafricajournal.org/
+
+      au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Integrated Care ;
+        eissn = 1568-4156
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.ijic.org/
+
+      au < exists ; exists ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Review of Social Psychology ;
+        eissn = 2119-4130
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.rips-irsp.com/
+
+      au < expected ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Circadian Rhythms ;
+        eissn = 1740-3391
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.jcircadianrhythms.com/
+
+      au < exists ; exists ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; >
+      au < doNotProcess ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; >
+      au < doNotProcess ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; >
+      au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Conservation and Museum Studies ;
+        eissn = 1364-0429
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.jcms-journal.com/
+
+      au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 2 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 3 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 4 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 5 ; Journal of Conservation and Museum Studies Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 6 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 7 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 8 ; Journal of Conservation and Museum Studies Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 9 ; Journal of Conservation and Museum Studies Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 10 ; Journal of Conservation and Museum Studies Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 11 ; Journal of Conservation and Museum Studies Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 12 ; Journal of Conservation and Museum Studies Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 13 ; Journal of Conservation and Museum Studies Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 14 ; Journal of Conservation and Museum Studies Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 15 ; Journal of Conservation and Museum Studies Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 16 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 17 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 18 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 19 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of European Psychology Students ;
+        eissn = 2222-6931
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://jeps.efpsa.org/
+
+      au < exists ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 3 ; Journal of European Psychology Students Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 4 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 5 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Interactive Media in Education ;
+        eissn = 1365-893X
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www-jime.open.ac.uk/
+
+      au < exists ; exists ; 1998 ; 1 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 2 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 3 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 4 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 5 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 6 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 7 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 8 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 9 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 10 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 11 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 12 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 13 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 14 ; Journal of Interactive Media in Education Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 15 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 16 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 17 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 18 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 19 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Molecular Signaling ;
+        eissn = 1750-2187
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.jmolecularsignaling.com/
+
+      au < exists ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Archaeology Data ;
+        eissn = 2049-1565
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openarchaeologydata.metajnl.com/
+
+      au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Health Data ;
+        eissn = 2054-7102
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openhealthdata.metajnl.com/
+
+      au < exists ; exists ; 2013 ; 1 ; Journal of Open Health Data Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Humanities Data ;
+        eissn = 2059-481X
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openhumanitiesdata.metajnl.com/
+
+      au < exists ; exists ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Psychology Data ;
+        eissn = 2050-9863
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openpsychologydata.metajnl.com/
+
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Public Health Data ;
+        eissn = 2053-2407
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openhealthdata.metajnl.com/
+
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Public Health Data Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; Journal of Open Public Health Data Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; Journal of Open Public Health Data Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Open Research Software ;
+        eissn = 2049-9647
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openresearchsoftware.metajnl.com/
+
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Portuguese Linguistics ;
+        issn = 1645-4537 ;
+        eissn = 2397-5563
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://jpl.letras.ulisboa.pt/
+
+      au < exists ; exists ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of the Belgian Society of Radiology ;
+        eissn = 1780-2393
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.jbsr.be/
+
+      au < exists ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
+        eissn = 1868-6354
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.journal-labphon.org/
+
+      au < expected ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = MaHKUscript: Journal of Fine Art Research ;
+        eissn = 2397-0863
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.mahkuscript.com/
+
+      au < expected ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Open Journal of Bioresources ;
+        eissn = 2056-5542
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://openbioresources.metajnl.com/
+
+      au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Open Quaternary ;
+        eissn = 2055-298X
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.openquaternary.com/
+
+      au < exists ; exists ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Opticon1826 ;
+        eissn = 2049-8128
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.opticon1826.com/
+
+      au < exists ; exists ; 2006 ; 1 ; Opticon1826 Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; Opticon1826 Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 3 ; Opticon1826 Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 4 ; Opticon1826 Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 5 ; Opticon1826 Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 6 ; Opticon1826 Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 7 ; Opticon1826 Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 8 ; Opticon1826 Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 9 ; Opticon1826 Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 10 ; Opticon1826 Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 11 ; Opticon1826 Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Papers from the Institute of Archaeology ;
+        eissn = 2041-9015
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.pia-journal.co.uk/
+
+      au < exists ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
+      au < exists ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; >
+      au < exists ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; >
+      au < exists ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; >
+      au < exists ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Present Pasts ;
+        eissn = 1759-2941
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.presentpasts.info/
+
+      au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Psychologica Belgica ;
+        eissn = 2054-670X
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.psychologicabelgica.com/
+
+      au < exists ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Secularism and Nonreligion ;
+        eissn = 2053-6712
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.secularismandnonreligion.org/
+
+      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Stability: International Journal of Security & Development ;
+        issn = 2165-2627
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.stabilityjournal.org/
+
+      au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Utrecht Journal of International and European Law ;
+        eissn = 2053-5341
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = http://www.utrechtjournal.org/
+
+      au < exists ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
+      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = United Kingdom Serials Group
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Insights: the UKSG journal ;
+        eissn = 2048-7754
+      >
+
+      comment[publisher] = United Kingdom Serials Group
+      param[base_url] = http://insights.uksg.org/
+
+      au < exists ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Serials: The Journal for the Serials Community ;
+        eissn = 1475-3308
+      >
+
+      comment[publisher] = United Kingdom Serials Group
+      param[base_url] = http://serials.uksg.org/
+
+      au < exists ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; >
+      au < exists ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; >
+      au < exists ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; >
+      au < exists ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; >
+      au < exists ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; >
+      au < exists ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; >
+      au < exists ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = University of Westminster Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Entertainment and Sports Law Journal ;
+        eissn = 1748-944X
+      >
+
+      comment[publisher] = University of Westminster Press
+      param[base_url] = http://www.entsportslawjournal.com/
+
+      au < exists ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 3 ; Entertainment and Sports Law Journal Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 4 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 5 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 6 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 7 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 8 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 9 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 10 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 11 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 12 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 15 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Westminster Papers in Communication and Culture ;
+        eissn = 1744-6716
+      >
+
+      comment[publisher] = University of Westminster Press
+      param[base_url] = http://www.westminsterpapers.org/
+
+      au < exists ; exists ; 2014 ; 1 ; Westminster Papers in Communication and Culture Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 3 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; >
+
+  }
+
+}
+{
+  publisher <
+    name = Utrecht University Library
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = BMGN - Low Countries Historical Review ;
+        eissn = 2211-2898
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = http://www.bmgn-lchr.nl/
+
+      au < exists ; exists ; 1970 ; 1 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; >
+      au < exists ; exists ; 1971 ; 2 ; BMGN - Low Countries Historical Review Volume 1971 ; 1971 ; >
+      au < exists ; exists ; 1972 ; 3 ; BMGN - Low Countries Historical Review Volume 1972 ; 1972 ; >
+      au < exists ; exists ; 1973 ; 4 ; BMGN - Low Countries Historical Review Volume 1973 ; 1973 ; >
+      au < exists ; exists ; 1974 ; 5 ; BMGN - Low Countries Historical Review Volume 1974 ; 1974 ; >
+      au < exists ; exists ; 1975 ; 6 ; BMGN - Low Countries Historical Review Volume 1975 ; 1975 ; >
+      au < exists ; exists ; 1976 ; 7 ; BMGN - Low Countries Historical Review Volume 1976 ; 1976 ; >
+      au < exists ; exists ; 1977 ; 8 ; BMGN - Low Countries Historical Review Volume 1977 ; 1977 ; >
+      au < exists ; exists ; 1978 ; 9 ; BMGN - Low Countries Historical Review Volume 1978 ; 1978 ; >
+      au < exists ; exists ; 1979 ; 10 ; BMGN - Low Countries Historical Review Volume 1979 ; 1979 ; >
+      au < exists ; exists ; 1980 ; 11 ; BMGN - Low Countries Historical Review Volume 1980 ; 1980 ; >
+      au < exists ; exists ; 1981 ; 12 ; BMGN - Low Countries Historical Review Volume 1981 ; 1981 ; >
+      au < exists ; exists ; 1982 ; 13 ; BMGN - Low Countries Historical Review Volume 1982 ; 1982 ; >
+      au < exists ; exists ; 1983 ; 14 ; BMGN - Low Countries Historical Review Volume 1983 ; 1983 ; >
+      au < exists ; exists ; 1984 ; 15 ; BMGN - Low Countries Historical Review Volume 1984 ; 1984 ; >
+      au < exists ; exists ; 1985 ; 16 ; BMGN - Low Countries Historical Review Volume 1985 ; 1985 ; >
+      au < exists ; exists ; 1986 ; 17 ; BMGN - Low Countries Historical Review Volume 1986 ; 1986 ; >
+      au < exists ; exists ; 1987 ; 18 ; BMGN - Low Countries Historical Review Volume 1987 ; 1987 ; >
+      au < exists ; exists ; 1988 ; 19 ; BMGN - Low Countries Historical Review Volume 1988 ; 1988 ; >
+      au < exists ; exists ; 1989 ; 20 ; BMGN - Low Countries Historical Review Volume 1989 ; 1989 ; >
+      au < exists ; exists ; 1990 ; 21 ; BMGN - Low Countries Historical Review Volume 1990 ; 1990 ; >
+      au < exists ; exists ; 1991 ; 22 ; BMGN - Low Countries Historical Review Volume 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; 23 ; BMGN - Low Countries Historical Review Volume 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; 24 ; BMGN - Low Countries Historical Review Volume 1993 ; 1993 ; >
+      au < exists ; exists ; 1994 ; 25 ; BMGN - Low Countries Historical Review Volume 1994 ; 1994 ; >
+      au < exists ; exists ; 1995 ; 26 ; BMGN - Low Countries Historical Review Volume 1995 ; 1995 ; >
+      au < exists ; exists ; 1996 ; 27 ; BMGN - Low Countries Historical Review Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 28 ; BMGN - Low Countries Historical Review Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 29 ; BMGN - Low Countries Historical Review Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 30 ; BMGN - Low Countries Historical Review Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 31 ; BMGN - Low Countries Historical Review Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 32 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 33 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 34 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 36 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 37 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 39 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 40 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief ;
+        eissn = 2212-7402
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.de-zeventiende-eeuw.nl/
+
+      au < exists ; exists ; 2011 ; 1 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 2 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 3 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 4 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 5 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 6 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = ERLACS ;
+        eissn = 1879-4750
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = http://www.erlacs.org/
+
+      au < exists ; exists ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Incontri. Rivista europea di studi italiani ;
+        eissn = 2214-7705
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = http://www.rivista-incontri.nl/
+
+      au < exists ; exists ; 2011 ; 1 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 2 ; Incontri. Rivista europea di studi italiani Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 5 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal for Court Administration ;
+        eissn = 2156-7964
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = http://www.iacajournal.org/
+
+      au < exists ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal for History, Culture and Modernity ;
+        eissn = 2213-0624
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.history-culture-modernity.org/
+
+      au < exists ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of the Commons ;
+        eissn = 1875-0281
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.thecommonsjournal.org/
+
+      au < exists ; exists ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Social Intervention ;
+        eissn = 1876-8830
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.journalsi.org/
+
+      au < exists ; exists ; 2005 ; 1 ; Journal of Social Intervention Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 2 ; Journal of Social Intervention Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 3 ; Journal of Social Intervention Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 4 ; Journal of Social Intervention Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 5 ; Journal of Social Intervention Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = LIBER Quarterly ;
+        eissn = 2213-056X
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.liberquarterly.eu/
+
+      au < exists ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE ;
+        eissn = 1873-5045
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.revue-relief.org/
+
+      au < exists ; exists ; 2007 ; 1 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 2 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 3 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Religion and Gender ;
+        eissn = 1878-5417
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.religionandgender.org/
+
+      au < exists ; exists ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Studium ;
+        eissn = 2212-7283
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = http://www.gewina-studium.nl/
+
+      au < exists ; exists ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Tijdschrift voor Tijdschriftstudies ;
+        eissn = 2214-8965
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.tijdschriftstudies.nl/
+
+      au < exists ; exists ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; >
+      au < exists ; exists ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 20 ; Tijdschrift voor Tijdschriftstudies Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Utrecht Law Review ;
+        eissn = 1871-515X
+      >
+
+      comment[publisher] = Utrecht University Library
+      param[base_url] = https://www.utrechtlawreview.org/
+
+      au < exists ; exists ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; >
+
+  }
+
+}
