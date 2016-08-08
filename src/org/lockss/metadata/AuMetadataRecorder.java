@@ -325,10 +325,16 @@ public class AuMetadataRecorder {
       ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mdInfo);
 
       // Store the metadata fields in the database.
-      storeMetadata(conn, normalizedMdInfo);
+      boolean addedNewItem = storeMetadata(conn, normalizedMdInfo);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "addedNewItem = " + addedNewItem);
 
-      // Count the processed article.
-      task.incrementUpdatedArticleCount();
+      // Check whether the item was added.
+      if (addedNewItem) {
+	// Yes: Count the added article.
+	task.incrementUpdatedArticleCount();
+      }
+
       log.debug3(DEBUG_HEADER + "updatedArticleCount = "
 	  + task.getUpdatedArticleCount());
     }
@@ -1053,12 +1059,14 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @return a boolean with <code>true</code> if the item stored in the database
+   *         has been newly added, <code>false</code> otherwise.
    * @throws MetadataException
    *           if any problem is detected with the passed metadata.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
+  boolean storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
       throws MetadataException, DbException {
     final String DEBUG_HEADER = "storeMetadata(): ";
     if (log.isDebug3()) {
@@ -1175,7 +1183,7 @@ public class AuMetadataRecorder {
   	parentMdItemType == null) {
         if (log.isDebug3()) log.debug3(DEBUG_HEADER
   	  + "Done: publicationSeq or parentSeq or parentMdItemType is null.");
-        return;
+        return false;
       }
 
       // Replace any unknown series titles with this series title
@@ -1238,9 +1246,10 @@ public class AuMetadataRecorder {
     }
 
     // Replace or create the metadata item.
-    replaceOrCreateMdItem(conn, mdinfo);
-
-    log.debug3(DEBUG_HEADER + "Done.");
+    boolean addedNewItem = replaceOrCreateMdItem(conn, mdinfo);
+    if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "addedNewItem = " + addedNewItem);
+    return addedNewItem;
   }
 
   /**
@@ -1490,13 +1499,17 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @return a boolean with <code>true</code> if the metadata stored in the
+   *         database has been newly added, <code>false</code> otherwise.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void replaceOrCreateMdItem(Connection conn,
+  private boolean replaceOrCreateMdItem(Connection conn,
       ArticleMetadataInfo mdinfo) throws DbException {
     final String DEBUG_HEADER = "replaceOrCreateMdItem(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    boolean addedNewItem = false;
 
     // Get the publication date received in the metadata.
     String date = mdinfo.pubDate;
@@ -1561,7 +1574,9 @@ public class AuMetadataRecorder {
     if (StringUtil.isNullString(mdItemType)) {
       // Skip it if the parent type is not a book or journal.
       log.error(DEBUG_HEADER + "Unknown mdItemType = " + mdItemType);
-      return;
+      if (log.isDebug2())
+  	log.debug2(DEBUG_HEADER + "addedNewItem = " + addedNewItem);
+      return addedNewItem;
     }
     
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
@@ -1574,7 +1589,9 @@ public class AuMetadataRecorder {
     // sanity check -- type should be known in database
     if (mdItemTypeSeq == null) {
       log.error(DEBUG_HEADER + "Unknown articleType = " + mdItemType);
-      return;
+      if (log.isDebug2())
+  	log.debug2(DEBUG_HEADER + "addedNewItem = " + addedNewItem);
+      return addedNewItem;
     }
     
     Long mdItemSeq = null;
@@ -1592,7 +1609,17 @@ public class AuMetadataRecorder {
 	    mdManagerSql.removeAuChildMetadataItem(conn, auMdSeq, mdItemSeq);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "deletedCount = " + deletedCount);
+      } else {
+	// No: Remember that the item was added to the database.
+	addedNewItem = true;
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "New item: addedNewItem = " + addedNewItem);
       }
+    } else {
+      // No: Remember that the item was added to the database.
+      addedNewItem = true;
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "New AU: addedNewItem = " + addedNewItem);
     }
 
     // Create the new metadata item in the database.
@@ -1636,7 +1663,9 @@ public class AuMetadataRecorder {
     mdManager.addMdItemDoi(conn, mdItemSeq, doi);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem DOI.");
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "addedNewItem = " + addedNewItem);
+    return addedNewItem;
   }
 
   /**
