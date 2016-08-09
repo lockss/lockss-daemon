@@ -32,18 +32,29 @@
 
 package org.lockss.poller.v3;
 
-import java.io.*;
-import java.util.*;
-
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
-import org.lockss.plugin.base.DefaultUrlCacher;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.PeerIdentity;
+import org.lockss.protocol.PeerIdentityStatus;
+import org.lockss.protocol.V3LcapMessage;
 import org.lockss.protocol.V3LcapMessage.PollNak;
-import org.lockss.protocol.psm.*;
-import org.lockss.protocol.*;
-import org.lockss.state.*;
-import org.lockss.util.*;
+import org.lockss.protocol.VoteBlocks;
+import org.lockss.protocol.psm.PsmEvent;
+import org.lockss.protocol.psm.PsmInterp;
+import org.lockss.protocol.psm.PsmMsgEvent;
+import org.lockss.protocol.psm.ReturnEvents;
+import org.lockss.protocol.psm.SendMessages;
+import org.lockss.state.SubstanceChecker;
+import org.lockss.util.ByteArray;
+import org.lockss.util.CIProperties;
+import org.lockss.util.Logger;
+import org.lockss.util.TimeBase;
+
+import java.io.IOException;
+import java.util.BitSet;
+import java.util.List;
 
 public class PollerActions {
 

@@ -32,21 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
-import java.security.*;
-import java.util.*;
-
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.util.*;
-import org.lockss.hasher.HashService;
-import org.mortbay.util.B64Code;
-
 /**
- * <p>Class that creates V1 Poll objects</p>
+ * <p>Marker for V1/V3 Factory for Poll objects</p>
  * @author David Rosenthal
  * @version 1.0
  */
