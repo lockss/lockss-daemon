@@ -4,8 +4,8 @@
     name = European Association for Geochemistry
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; year ; name ; param[volume_name] >
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
 
@@ -18,11 +18,11 @@
 
     param[base_url] = http://perspectives.geoscienceworld.org/
     
-    au < released ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
-    au < released ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
-    au < released ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
-    au < released ; 2015 ; Geochemical Perspectives Volume 4 ; 4 >
-    au < expected ; 2016 ; Geochemical Perspectives Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2015 ; Geochemical Perspectives Volume 4 ; 4 >
+    au < gsw.GSWDrupalPlugin ; expected ; 2016 ; Geochemical Perspectives Volume 5 ; 5 >
     
   }
 
