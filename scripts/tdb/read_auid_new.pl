@@ -171,6 +171,7 @@ while (my $line = <>) {
            $plugin eq "ERSDrupalPlugin" ||
            $plugin eq "GeneticsSocietyDrupalPlugin" ||
            $plugin eq "GSLDrupalPlugin" ||
+           $plugin eq "GSWDrupalPlugin" ||
            $plugin eq "IWADrupalPlugin" ||
            $plugin eq "JBJSDrupalPlugin" ||
            $plugin eq "OUPDrupalPlugin" ||
@@ -221,6 +222,7 @@ while (my $line = <>) {
            $plugin eq "ClockssAAASDrupalPlugin" ||
            $plugin eq "ClockssERSDrupalPlugin" ||
            $plugin eq "ClockssGSLDrupalPlugin" ||
+           $plugin eq "ClockssGSWDrupalPlugin" ||
            $plugin eq "ClockssIWADrupalPlugin" ||
            $plugin eq "ClockssOUPDrupalPlugin" ||
            $plugin eq "ClockssPortlandPressDrupalPlugin" ||
