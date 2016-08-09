@@ -176,4 +176,34 @@
     
   }
 
+  {
+  
+    title <
+      name = CODEE Journal ;
+      eissn = 2160-5211
+    >
+    
+    param[journal_abbr] = codee
+
+    au < exists ; 2012 ; CODEE Journal Volume 7 ; 7 >
+    au < exists ; 2013 ; CODEE Journal Volume 8 ; 8 >
+    au < exists ; 2014 ; CODEE Journal Volume 9 ; 9 >
+    au < exists ; 2015 ; CODEE Journal Volume 10 ; 10 >
+    au < exists ; 2016 ; CODEE Journal Volume 11 ; 11 >
+    
+  }
+
+  {
+  
+    title <
+      name = Humanistic Mathematics Network Journal (HMNJ) ;
+      eissn = 2160-5211
+    >
+    # no more content after 2016.
+    param[journal_abbr] = hmnj
+
+    au < exists ; 2016 ; Humanistic Mathematics Network Journal (HMNJ) Volume 1 ; 1 >
+    
+  }
+
 }
