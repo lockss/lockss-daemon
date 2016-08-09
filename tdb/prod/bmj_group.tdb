@@ -495,7 +495,7 @@
 
       au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; exists ; 2016 ; BMJ Open Diabetes Research & Care Volume 4 ; 4 >
 
   }
@@ -1946,8 +1946,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://lupus.bmj.com/
 
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
     
