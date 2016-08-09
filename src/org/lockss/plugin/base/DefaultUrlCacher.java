@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -37,16 +33,13 @@ import java.util.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import org.apache.commons.lang3.tuple.*;
-
 import org.lockss.state.*;
-import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
-
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -329,11 +322,7 @@ public class DefaultUrlCacher implements UrlCacher {
         aus.contentChanged();
       }
       if (alreadyHasContent) {
-	Alert alert = Alert.auAlert(Alert.NEW_FILE_VERSION, au);
-	alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
-	String msg = "Collected an additional version: " + getFetchUrl();
-	alert.setAttribute(Alert.ATTR_TEXT, msg);
-	raiseAlert(alert);
+	logger.warning("Collected an additional version: " + getFetchUrl());
       }
     } catch (StreamUtil.OutputException ex) {
       abandonNewVersion(leaf);
@@ -385,13 +374,10 @@ public class DefaultUrlCacher implements UrlCacher {
     // First check actual length = Content-Length header if any
     long contLen = getContentLength();
     if (contLen >= 0 && contLen != size) {
-      Alert alert = Alert.auAlert(Alert.FILE_VERIFICATION, au);
-      alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
       String msg = "File size (" + size +
 	") differs from Content-Length header (" + contLen + "): "
 	+ getFetchUrl();
-      alert.setAttribute(Alert.ATTR_TEXT, msg);
-      raiseAlert(alert);
+      logger.warning(msg);
       validationFailures.add(new ImmutablePair(getUrl(),
 				      new ContentValidationException.WrongLength(msg)));
     }
@@ -456,15 +442,6 @@ public class DefaultUrlCacher implements UrlCacher {
     }
     Pair<String,Exception> first = exps.get(0);
     return resultMap.mapException(au, first.getLeft(), first.getRight(), null);
-  }
-
-
-  private void raiseAlert(Alert alert) {
-    try {
-      au.getPlugin().getDaemon().getAlertManager().raiseAlert(alert);
-    } catch (RuntimeException e) {
-      logger.error("Couldn't raise alert", e);
-    }
   }
 
   public long getContentLength() {

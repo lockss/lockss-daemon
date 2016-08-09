@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,15 +31,11 @@ package org.lockss.account;
 import java.io.*;
 import java.util.*;
 import java.security.*;
-
 import org.lockss.app.*;
 import org.lockss.daemon.status.*;
 import org.lockss.config.*;
 import org.lockss.servlet.*;
 import org.lockss.util.*;
-import org.lockss.alert.*;
-import org.lockss.mail.*;
-
 import static org.lockss.servlet.BaseServletManager.SUFFIX_AUTH_TYPE;
 import static org.lockss.servlet.BaseServletManager.SUFFIX_ENABLE_DEBUG_USER;
 import static org.lockss.servlet.BaseServletManager.SUFFIX_USE_SSL;
@@ -99,10 +91,6 @@ public class AccountManager
     PREFIX + "passwordCheck.frequency";
   public static final String DEFAULT_PASSWORD_CHECK_FREQ = "daily";
 
-  /** Alertconfig set by AccountManager */
-  public static final String PARAM_PASSWORD_REMINDER_ALERT_CONFIG =
-    AlertManagerImpl.PARAM_CONFIG + ".acct";
-
   private static String PASSWORD_REMINDER_ALERT_CONFIG =
     "<org.lockss.alert.AlertConfig>" +
     "  <filters>" +
@@ -142,11 +130,7 @@ public class AccountManager
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "LC",
     PARAM_CONDITIONAL_PLATFORM_USER, "true",
-    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     PARAM_MAIL_ENABLED, "true",
-    MailService.PARAM_ENABLED, "true",
-    AlertManager.PARAM_ALERTS_ENABLED, "true",
-    AlertActionMail.PARAM_ENABLED, "true",
     UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
     UI_PREFIX + SUFFIX_ENABLE_DEBUG_USER, "false",
     UI_PREFIX + SUFFIX_USE_SSL, "true",
@@ -156,7 +140,6 @@ public class AccountManager
   public static String[] POLICY_SSL = {
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
-    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
     UI_PREFIX + SUFFIX_USE_SSL, "true",
   };
@@ -165,7 +148,6 @@ public class AccountManager
   public static String[] POLICY_FORM = {
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
-    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
     UI_PREFIX + SUFFIX_USE_SSL, "false",
   };
@@ -174,7 +156,6 @@ public class AccountManager
   public static String[] POLICY_BASIC = {
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
-    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     UI_PREFIX + SUFFIX_AUTH_TYPE, "Basic",
     UI_PREFIX + SUFFIX_USE_SSL, "false",
   };
@@ -183,7 +164,6 @@ public class AccountManager
   public static String[] POLICY_COMPAT = {
     PARAM_ENABLED, "false",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
-    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     UI_PREFIX + SUFFIX_AUTH_TYPE, "Basic",
     UI_PREFIX + SUFFIX_USE_SSL, "false",
   };
@@ -642,17 +622,11 @@ public class AccountManager
   }
 
   public void auditableEvent(String msg) {
-    AlertManager alertMgr = getDaemon().getAlertManager();
-    if (alertMgr != null) {
-      Alert alert = Alert.cacheAlert(Alert.AUDITABLE_EVENT);
-      alertMgr.raiseAlert(alert, msg);
-    } else {
       log.warning(msg);
-    }
   }
 
   /** Send an alert email to the owner of the account */
-  void alertUser(UserAccount acct, Alert alert, String text) {
+  void alertUser(UserAccount acct, String text) {
     if (!mailEnabled) {
       return;
     }
@@ -662,12 +636,10 @@ public class AccountManager
 	to = adminEmail;
       }
       if (StringUtil.isNullString(to)) {
-	log.warning("Can't find address to send alert: " + alert);
+	log.warning("Can't find address to send alert: " + text);
 	return;
       }
-      alert.setAttribute(Alert.ATTR_EMAIL_TO, to);
-      AlertManager alertMgr = getDaemon().getAlertManager();
-      alertMgr.raiseAlert(alert, text);
+      log.warning(text);
     } catch (Exception e) {
       // ignored, expected during testing
     }

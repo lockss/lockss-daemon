@@ -30,7 +30,6 @@ package org.lockss.app;
 import java.util.*;
 import org.apache.commons.lang3.*;
 import org.lockss.util.*;
-import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
 import org.lockss.account.*;
@@ -97,7 +96,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ACCOUNT_MANAGER = "AccountManager";
   public static final String KEYSTORE_MANAGER = "KeystoreManager";
   public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
-  public static final String ALERT_MANAGER = "AlertManager";
   public static final String TIMER_SERVICE = "TimerService";
   public static final String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
   public static final String STREAM_COMM_MANAGER = "StreamCommManager";
@@ -118,7 +116,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String PLATFORM_CONFIG_STATUS = "PlatformConfigStatus";
   public static final String CONFIG_STATUS = "ConfigStatus";
   public static final String OVERVIEW_STATUS = "OverviewStatus";
-  public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
@@ -129,8 +126,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected final ManagerDesc[] managerDescs = {
     new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
-    new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
-    new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
     new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
@@ -258,15 +253,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   // LockssManager accessors
-
-  /**
-   * return the alert manager instance
-   * @return the AlertManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public AlertManager getAlertManager() {
-    return (AlertManager)getManager(ALERT_MANAGER);
-  }
 
   /**
    * return the sched service instance
@@ -687,12 +673,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     log.info("Started");
     ausStarted.fill();
-
-    AlertManager alertMgr = getAlertManager();
-    alertMgr.raiseAlert(Alert.cacheAlert(Alert.DAEMON_STARTED),
-			"LOCKSS daemon " +
-			ConfigManager.getDaemonVersion().displayString() +
-			" started");
   }
 
 

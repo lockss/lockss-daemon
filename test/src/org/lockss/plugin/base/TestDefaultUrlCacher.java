@@ -36,7 +36,6 @@ import org.lockss.daemon.*;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.app.*;
-import org.lockss.alert.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
@@ -59,7 +58,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
-  private MockAlertManager alertMgr;
   private int pauseBeforeFetchCounter;
   private UrlData ud;
   private MockNodeManager nodeMgr = new MockNodeManager();
@@ -102,8 +100,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     mau.setAuCachedUrlSet(mcus);
     saveDefaultSuppressStackTrace =
       CacheException.setDefaultSuppressStackTrace(false);
-    alertMgr = new MockAlertManager();
-    getMockLockssDaemon().setAlertManager(alertMgr);
     
     theDaemon.setNodeManager(nodeMgr, mau);
     maus = new MockAuState(mau);
@@ -530,16 +526,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       assertFalse(cacher.wasStored);
       break;
     }
-
-    assertEquals(1, alertMgr.getAlerts().size());
-    Alert alert = alertMgr.getAlerts().get(0);
-    assertEquals("FileVerification", alert.getAttribute(Alert.ATTR_NAME));
-    assertEquals(mau.getAuId(), alert.getAttribute(Alert.ATTR_AUID));
-    assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
-    assertEquals(Alert.SEVERITY_WARNING,
-		 alert.getAttribute(Alert.ATTR_SEVERITY));
-    assertEquals("File size (9) differs from Content-Length header (8): " + TEST_URL,
-		 alert.getAttribute(Alert.ATTR_TEXT));
   }
 
   public void testCacheSizeDisagreesDefault() throws IOException {
@@ -564,19 +550,9 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
-    assertEquals(0, alertMgr.getAlerts().size());
     ud = new UrlData(new StringInputStream("987"), props, TEST_URL);
     cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
-    assertEquals(1, alertMgr.getAlerts().size());
-    Alert alert = alertMgr.getAlerts().get(0);
-    assertEquals("NewFileVersion", alert.getAttribute(Alert.ATTR_NAME));
-    assertEquals(mau.getAuId(), alert.getAttribute(Alert.ATTR_AUID));
-    assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
-    assertEquals(Alert.SEVERITY_INFO,
-		 alert.getAttribute(Alert.ATTR_SEVERITY));
-    assertEquals("Collected an additional version: " + TEST_URL,
-		 alert.getAttribute(Alert.ATTR_TEXT));
   }
 
   public void testCacheSizeAgrees() throws IOException {
@@ -586,7 +562,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
-    assertEquals(0, alertMgr.getAlerts().size());
   }
 
   public void testFileCache() throws IOException {

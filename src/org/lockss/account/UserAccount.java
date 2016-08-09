@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,13 +35,10 @@ import org.apache.oro.text.regex.*;
 import org.apache.commons.lang3.*;
 import org.apache.commons.lang3.time.*;
 import org.mortbay.util.Credential;
-
 import javax.servlet.http.*;
-
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
-import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.servlet.*;
 
@@ -420,14 +413,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   public void auditableEvent(String text) {
     if (acctMgr != null) {
-      AlertManager alertMgr = acctMgr.getDaemon().getAlertManager();
       String msg = "User " + userName + " " + text;
-      if (alertMgr != null) {
-	Alert alert = Alert.cacheAlert(Alert.AUDITABLE_EVENT);
-	alertMgr.raiseAlert(alert, msg);
-      } else {
 	log.warning(msg);
-      }
     }
   }
 
@@ -526,8 +513,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     if (isPasswordExpired()) {
       if (lastPasswordReminderTime < getPasswordExpiration()) {
 	// send now disabled
-	alertAndUpdate(Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
-		       "User '" + getName()
+	alertAndUpdate("User '" + getName()
 		       + "' disabled because password has expired.");
       }
     } else {
@@ -540,8 +526,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 	// send reminder now
 	if (TimeBase.nowMs() >= reminderTime
 	    && lastPasswordReminderTime < reminderTime) {
-	  alertAndUpdate(Alert.cacheAlert(Alert.PASSWORD_REMINDER),
-			 "The password for user '" + getName()
+	  alertAndUpdate("The password for user '" + getName()
 			 + "' will expire at "
 			 + expireDf.format(lastPasswordChange
 					   + expireInterval)
@@ -696,8 +681,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 	    < getFailedAttemptResetInterval()));
   }
 
-  void alertAndUpdate(Alert alert, String msg) {
-    acctMgr.alertUser(this, alert, msg);
+  void alertAndUpdate(String msg) {
+    acctMgr.alertUser(this, msg);
     lastPasswordReminderTime = TimeBase.nowMs();
     storeUser();
   }

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ package org.lockss.app;
 
 import java.util.*;
 import org.lockss.util.*;
-import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -76,7 +71,6 @@ public abstract class LockssApp {
 
   // Parameter keys for common managers
   public static final String WATCHDOG_SERVICE = "WatchdogService";
-  public static final String MAIL_SERVICE = "MailService";
   public static final String STATUS_SERVICE = "StatusService";
   public static final String SCHED_SERVICE = "SchedService";
   public static final String RESOURCE_MANAGER = "ResourceManager";
@@ -85,8 +79,6 @@ public abstract class LockssApp {
   // default classes for common managers
   protected static final String DEFAULT_WATCHDOG_SERVICE =
     "org.lockss.daemon.WatchdogService";
-  protected static final String DEFAULT_MAIL_SERVICE =
-    "org.lockss.mail.SmtpMailService";
   protected static final String DEFAULT_STATUS_SERVICE =
     "org.lockss.daemon.status.StatusServiceImpl";
   protected static final String DEFAULT_SCHED_SERVICE =
@@ -255,15 +247,6 @@ public abstract class LockssApp {
    */
   public WatchdogService getWatchdogService() {
     return (WatchdogService)getManager(WATCHDOG_SERVICE);
-  }
-
-  /**
-   * return the mail manager instance
-   * @return the MailService
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public MailService getMailService() {
-    return (MailService)getManager(MAIL_SERVICE);
   }
 
   /**

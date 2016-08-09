@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,17 +28,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.account;
 
-import org.lockss.account.UserAccount.IllegalPassword;
 import org.lockss.account.UserAccount.IllegalPasswordChange;
-
-import junit.framework.TestCase;
-import java.io.*;
 import java.util.*;
-import java.lang.reflect.*;
-
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.alert.*;
 
 /**
  * Test class for org.lockss.account.LCUserAccount
@@ -392,12 +381,10 @@ public class TestLCUserAccount extends LockssTestCase {
 
   static class AlertEvent {
     UserAccount acct;
-    Alert alert;
     String text;
 
-    AlertEvent(UserAccount acct, Alert alert, String text) {
+    AlertEvent(UserAccount acct, String text) {
       this.acct = acct;
-      this.alert = alert;
       this.text = text;
     }
   }
@@ -414,8 +401,8 @@ public class TestLCUserAccount extends LockssTestCase {
     }
 
     @Override
-    void alertUser(UserAccount acct, Alert alert, String text) {
-      alerts.add(new AlertEvent(acct, alert, text));
+    void alertUser(UserAccount acct, String text) {
+      alerts.add(new AlertEvent(acct, text));
     }
   }
 }

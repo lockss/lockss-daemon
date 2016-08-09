@@ -37,7 +37,6 @@ import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.account.*;
 import org.lockss.daemon.*;
-import org.lockss.mail.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
@@ -1364,11 +1363,6 @@ public class ConfigManager implements LockssManager {
       platformOverride(config, FileTarget.PARAM_FILE,
 		       new File(logdir, logfile).toString());
     }
-
-    conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_PORT,
-				SmtpMailService.PARAM_SMTPPORT);
-    conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
-				SmtpMailService.PARAM_SMTPHOST);
 
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (!StringUtil.isNullString(space)) {

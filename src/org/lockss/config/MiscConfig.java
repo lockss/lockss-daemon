@@ -54,7 +54,6 @@ public class MiscConfig {
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);
 	  CreativeCommonsPermissionChecker.setConfig(config, oldConfig, diffs);
-	  org.lockss.alert.Alert.setConfig(config, oldConfig, diffs);
 		CharsetUtil.setConfig(config,oldConfig,diffs);
 	}
       };

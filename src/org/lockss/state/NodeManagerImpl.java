@@ -38,7 +38,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.config.Configuration;
-import org.lockss.alert.*;
 import java.util.ArrayList;
 
 /**
@@ -113,10 +112,6 @@ public class NodeManagerImpl
 
   NodeManagerManager getNodeManagerManager() {
     return theDaemon.getNodeManagerManager();
-  }
-
-  AlertManager getAlertManager() {
-    return theDaemon.getAlertManager();
   }
 
   ActivityRegulator getActivityRegulator() {

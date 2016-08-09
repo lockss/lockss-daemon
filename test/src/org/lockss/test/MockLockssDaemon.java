@@ -30,14 +30,12 @@ package org.lockss.test;
 
 import java.util.List;
 import org.apache.commons.collections.map.LinkedMap;
-import org.lockss.alert.AlertManager;
 import org.lockss.account.AccountManager;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
-import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
@@ -52,8 +50,6 @@ public class MockLockssDaemon extends LockssDaemon {
 
   ResourceManager resourceManager = null;
   WatchdogService wdogService = null;
-  MailService mailService = null;
-  AlertManager alertManager = null;
   AccountManager accountManager = null;
   RandomManager randomManager = null;
   LockssKeyStoreManager keystoreManager = null;
@@ -170,18 +166,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the mail manager instance
-   * @return the MailService
-   */
-  public MailService getMailService() {
-    if (mailService == null) {
-      mailService = new NullMailService();
-      managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
-    }
-    return mailService;
-  }
-
-  /**
    * return the resource manager instance
    * @return the ResourceManager
    */
@@ -197,12 +181,8 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the alert manager instance
    * @return the AlertManager
    */
-  public AlertManager getAlertManager() {
-    if (alertManager == null) {
-      alertManager = new NullAlertManager();
-      managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
-    }
-    return alertManager;
+  public Object getAlertManager() {
+    return null;
   }
 
   /**
@@ -412,24 +392,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setWatchdogService(WatchdogService wdogService) {
     this.wdogService = wdogService;
     managerMap.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
-  }
-
-  /**
-   * Set the MailService
-   * @param mailMan the new manager
-   */
-  public void setMailService(MailService mailMan) {
-    mailService = mailMan;
-    managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
-  }
-
-  /**
-   * Set the AlertManager
-   * @param alertMan the new manager
-   */
-  public void setAlertManager(AlertManager alertMan) {
-    alertManager = alertMan;
-    managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
   }
 
   /**

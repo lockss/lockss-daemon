@@ -35,7 +35,6 @@ import java.util.*;
 import java.util.jar.*;
 import java.util.regex.*;
 import org.apache.commons.collections.map.*;
-import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -314,7 +313,6 @@ public class PluginManager
     DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES;
 
   private ConfigManager configMgr;
-  private AlertManager alertMgr;
 
   private File pluginDir = null;
   private AuOrderComparator auComparator = new AuOrderComparator();
@@ -412,7 +410,6 @@ public class PluginManager
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
-    alertMgr = getDaemon().getAlertManager();
     // Initialize the plugin directory.
     initPluginDir();
     configureDefaultTitleSets();
@@ -1142,10 +1139,8 @@ public class PluginManager
     }
   }
 
-  protected void raiseAlert(Alert alert, String msg) {
-    if (alertMgr != null) {
-      alertMgr.raiseAlert(alert, msg);
-    }
+  protected void raiseAlert(String msg) {
+      log.warning(msg);
   }
 
   void signalAuEvent(final ArchivalUnit au,
@@ -1155,7 +1150,7 @@ public class PluginManager
 
     switch (how.getType()) {
     case Create:
-      raiseAlert(Alert.auAlert(Alert.AU_CREATED, au), "AU created");
+      raiseAlert("AU created");
       // falls through
     case RestartCreate:
     case StartupCreate:
@@ -1170,7 +1165,7 @@ public class PluginManager
 	  }});
       break;
     case Delete:
-      raiseAlert(Alert.auAlert(Alert.AU_DELETED, au), "AU deleted");
+      raiseAlert("AU deleted");
       // falls through
     case Deactivate:
     case RestartDelete:
@@ -1742,8 +1737,7 @@ public class PluginManager
   }
 
   void alert0(String pluginName, String msg, String emsg) {
-    raiseAlert(Alert.cacheAlert(Alert.PLUGIN_NOT_LOADED), 
-	       String.format("%s: %s\n%s", msg, pluginName, emsg));
+    raiseAlert(String.format("%s: %s\n%s", msg, pluginName, emsg));
   }
 
   /**

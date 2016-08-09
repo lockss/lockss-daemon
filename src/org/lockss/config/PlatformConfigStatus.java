@@ -103,12 +103,6 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       addSum(res, "Project", config.get(PARAM_PLATFORM_PROJECT));
       addSum(res, "V3 Identity", config.get(PARAM_PLATFORM_LOCAL_V3_IDENTITY));
       String smtpHost = config.get(PARAM_PLATFORM_SMTP_HOST);
-      if (smtpHost != null) {
-	int smtpPort =
-	  config.getInt(PARAM_PLATFORM_SMTP_PORT,
-			org.lockss.mail.SmtpMailService.DEFAULT_SMTPPORT);
-	addSum(res, "Mail Relay", smtpHost + ":" + smtpPort);
-      }
       addSum(res, "Admin Email", config.get(PARAM_PLATFORM_ADMIN_EMAIL));
       addSum(res, "Disks",
 	     seplist(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
