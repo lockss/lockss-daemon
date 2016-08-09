@@ -1,0 +1,179 @@
+{
+
+  publisher <
+    name = Claremont College Library
+  >
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://scholarship.claremont.edu/
+
+  {
+  
+    title <
+      name = Aliso: A Journal of Systematic and Evolutionary Botany ;
+      issn = 0065-6275 ;
+      eissn = 2327-2929
+    >
+    
+    param[journal_abbr] = aliso
+
+    au < exists ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 23 ; 23 >
+    au < exists ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 24 ; 24 >
+    au < exists ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 25 ; 25 >
+    au < exists ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 26 ; 26 >
+    au < exists ; 2009 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 27 ; 27 >
+    au < exists ; 2010 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 28 ; 28 >
+    au < exists ; 2011 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 29 ; 29 >
+    au < exists ; 2012 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 30 ; 30 >
+    au < exists ; 2013 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 31 ; 31 >
+    au < exists ; 2014 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 32 ; 32 >
+    au < exists ; 2015 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 33 ; 33 >
+    au < exists ; 2016 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 34 ; 34 >
+    
+  }
+
+  {
+  
+    title <
+      name = The European Union Center of California ;
+      issn = 2152-8713 ;
+      eissn = 2154-5731
+    >
+    
+    param[journal_abbr] = urceu
+
+    au < exists ; 2007 ; The European Union Center of California Volume 2007 ; 2007 >
+    au < exists ; 2008 ; The European Union Center of California Volume 2008 ; 2008 >
+    au < exists ; 2009 ; The European Union Center of California Volume 2009 ; 2009 >
+    au < exists ; 2010 ; The European Union Center of California Volume 2010 ; 2010 >
+    au < exists ; 2011 ; The European Union Center of California Volume 2011 ; 2011 >
+    au < exists ; 2012 ; The European Union Center of California Volume 2012 ; 2012 >
+    au < exists ; 2013 ; The European Union Center of California Volume 2013 ; 2013 >
+    au < exists ; 2014 ; The European Union Center of California Volume 2014 ; 2014 >
+    au < exists ; 2015 ; The European Union Center of California Volume 2015 ; 2015 >
+    au < expected ; 2016 ; The European Union Center of California Volume 2016 ; 2016 >
+    
+  }
+
+  {
+  
+    title <
+      name = FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing ;
+      eissn = 2169-3722
+    >
+    
+    param[journal_abbr] = five
+
+    au < exists ; 2012 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 1 ; 1 >
+    au < exists ; 2013 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 2 ; 2 >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Humanistic Mathematics ;
+      eissn = 2159-8118
+    >
+    
+    param[journal_abbr] = jhm
+
+    au < exists ; 2011 ; Journal of Humanistic Mathematics Volume 1 ; 1 >
+    au < exists ; 2012 ; Journal of Humanistic Mathematics Volume 2 ; 2 >
+    au < exists ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 >
+    au < exists ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 >
+    au < exists ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
+    au < exists ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
+    
+  }
+
+  {
+  
+    title <
+      name = LUX: A Journal of Transdisciplinary Writing and Research ;
+      eissn = 2327-3895
+    >
+    
+    param[journal_abbr] = lux
+
+    au < exists ; 2011 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 1 ; 1 >
+    au < exists ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 >
+    au < exists ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 >
+    
+  }
+
+  {
+  
+    title <
+      name = Mime Journal ;
+      issn = 0145-787X ;
+      eissn = 2327-5650
+    >
+    
+    param[journal_abbr] = mimejournal
+
+    au < exists ; 2003 ; Mime Journal Volume 25 ; 25 >
+    au < exists ; 2013 ; Mime Journal Volume 24 ; 24 >
+    au < exists ; 2014 ; Mime Journal Volume 25 ; 25 >
+    
+  }
+
+  {
+  
+    title <
+      name = Passwords ;
+      eissn = 2169-382X
+    >
+    
+    param[journal_abbr] = passwords
+
+    au < exists ; 2009 ; Passwords Volume 10 ; 10 >
+    au < exists ; 2010 ; Passwords Volume 11 ; 11 >
+    au < exists ; 2011 ; Passwords Volume 12 ; 12 >
+    au < exists ; 2012 ; Passwords Volume 13 ; 13 >
+    
+  }
+
+  {
+  
+    title <
+      name = Performance Practice Review ;
+      issn = 1044-1638 ;
+      eissn = 2166-8205
+    >
+    
+    param[journal_abbr] = ppr
+
+    au < exists ; 2003 ; Performance Practice Review Volume 8 ; 8 >
+    au < exists ; 2004 ; Performance Practice Review Volume 9 ; 9 >
+    au < exists ; 2005 ; Performance Practice Review Volume 10 ; 10 >
+    au < exists ; 2006 ; Performance Practice Review Volume 11 ; 11 >
+    au < exists ; 2007 ; Performance Practice Review Volume 12 ; 12 >
+    au < exists ; 2008 ; Performance Practice Review Volume 13 ; 13 >
+    au < exists ; 2009 ; Performance Practice Review Volume 14 ; 14 >
+    au < exists ; 2010 ; Performance Practice Review Volume 15 ; 15 >
+    au < exists ; 2011 ; Performance Practice Review Volume 16 ; 16 >
+    au < exists ; 2012 ; Performance Practice Review Volume 17 ; 17 >
+    au < exists ; 2013 ; Performance Practice Review Volume 18 ; 18 >
+    au < exists ; 2014 ; Performance Practice Review Volume 19 ; 19 >
+    au < exists ; 2015 ; Performance Practice Review Volume 20 ; 20 >
+    au < expected ; 2016 ; Performance Practice Review Volume 21 ; 21 >
+    
+  }
+
+  {
+  
+    title <
+      name = The STEAM Journal ;
+      eissn = 2327-2074
+    >
+    
+    param[journal_abbr] = steam
+
+    au < exists ; 2014 ; The STEAM Journal Volume 1 ; 1 >
+    au < exists ; 2015 ; The STEAM Journal Volume 2 ; 2 >
+    au < exists ; 2016 ; The STEAM Journal Volume 3 ; 3 >
+    
+  }
+
+}
