@@ -31,11 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.poller;
 
-import org.lockss.config.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.protocol.LcapMessage;
+import org.lockss.util.Deadline;
 
+/**
+ * Interface for Poll objects containing constants
+ */
 public interface Poll {
   // Poll type names
   public static final String[] POLL_NAME = {
