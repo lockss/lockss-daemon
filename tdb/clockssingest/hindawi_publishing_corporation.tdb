@@ -96,7 +96,7 @@
     au < manifest ; exists ; 2013 ; Active and Passive Electronic Components Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Active and Passive Electronic Components Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Active and Passive Electronic Components Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Active and Passive Electronic Components Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Active and Passive Electronic Components Volume 2016 ; 2016 ; 2016 ; >
 
   }
   
@@ -805,7 +805,7 @@
 
     au < finished ; crawling ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Advances in Medicine Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Advances in Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Advances in Medicine Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -826,7 +826,7 @@
     au < manifest ; exists ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Advances in Meteorology Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Advances in Meteorology Volume 2016 ; 2016 ; 2016 ; >
 
 
   }
@@ -1417,7 +1417,7 @@
     au < manifest ; exists ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; AIDS Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; AIDS Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
       
   }
   
@@ -1654,7 +1654,7 @@
     au < manifest ; exists ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Autism Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Autism Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Autism Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Autism Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -2177,7 +2177,7 @@
     au < manifest ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -2236,7 +2236,7 @@
     au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -2560,7 +2560,7 @@
     au < manifest ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     
   }
   
@@ -3484,7 +3484,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 ; >
     au < deepCrawl ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Analysis Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; International Journal of Analysis Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Analysis Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -3775,7 +3775,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Chronic Diseases Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; International Journal of Chronic Diseases Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Chronic Diseases Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -3854,7 +3854,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Corrosion Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; International Journal of Corrosion Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Corrosion Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -4759,7 +4759,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Population Research Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; International Journal of Population Research Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Population Research Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5339,7 +5339,7 @@
     au < manifest ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Anthropology Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Anthropology Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Anthropology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5494,7 +5494,7 @@
     au < manifest ; exists ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Biophysics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Biophysics Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Biophysics Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Biophysics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5652,7 +5652,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 ; >
-    au < ready ; exists ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5678,7 +5678,7 @@
     au < manifest ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Chemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Chemistry Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -6154,7 +6154,7 @@
     au < manifest ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < deepCrawl ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -6482,7 +6482,7 @@
     au < manifest ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7196,7 +7196,7 @@
     au < manifest ; exists ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Probability and Statistics Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Probability and Statistics Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Probability and Statistics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7302,7 +7302,7 @@
     au < manifest ; exists ; 2013 ; Journal of Robotics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Robotics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Robotics Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Journal of Robotics Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Journal of Robotics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7934,7 +7934,7 @@
     au < manifest ; exists ; 2013 ; Minimally Invasive Surgery Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Minimally Invasive Surgery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Minimally Invasive Surgery Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Minimally Invasive Surgery Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -8071,7 +8071,7 @@
     au < manifest ; exists ; 2013 ; Neurology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Neurology Research International Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Neurology Research International Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Neurology Research International Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Neurology Research International Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -8180,7 +8180,7 @@
     au < manifest ; exists ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Organic Chemistry International Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Organic Chemistry International Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Organic Chemistry International Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Organic Chemistry International Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -8223,7 +8223,7 @@
     au < manifest ; exists ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Pain Research and Management Volume 20 (2015) ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Pain Research and Management Volume 21 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Pain Research and Management Volume 21 ; 2016 ; 2016 ; >
     
   }
 
@@ -8298,7 +8298,7 @@
     au < manifest ; exists ; 2013 ; Pathology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Pathology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Pathology Research International Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Pathology Research International Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Pathology Research International Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -8358,7 +8358,7 @@
     au < manifest ; exists ; 2013 ; Plastic Surgery International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Plastic Surgery International Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Plastic Surgery International Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Plastic Surgery International Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Plastic Surgery International Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -8802,7 +8802,7 @@
     au < manifest ; exists ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 ; >
     au < crawling ; exists ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Shock and Vibration Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Shock and Vibration Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Shock and Vibration Volume 2016 ; 2016 ; 2016 ; >
 
   }
   
@@ -9040,7 +9040,7 @@
     au < manifest ; exists ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Veterinary Medicine International Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Veterinary Medicine International Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; >
     
   }
 
@@ -9078,7 +9078,7 @@
     au < manifest ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 ; >
-    au < ready ; exists ; 2016 ; VLSI Design Volume 2016 ; 2016 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; VLSI Design Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
