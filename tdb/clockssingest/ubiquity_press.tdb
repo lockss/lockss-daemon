@@ -68,19 +68,17 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://www.ancient-asia-journal.com/
+      param[base_url] = http://www.asianetworkexchange.org/
 
-      au < exists ; exists ; 2006 ; 1 ; ASIANetwork Exchange Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 2 ; ASIANetwork Exchange Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 3 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 4 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 5 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 6 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; 7 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 8 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 9 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 10 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 11 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
+      au < expected ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
 
   }
 
@@ -650,8 +648,8 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = http://openhealthdata.metajnl.com/
+      # continues Journal of Open Public Health Data
 
-      au < exists ; exists ; 2013 ; 1 ; Journal of Open Health Data Volume 2013 ; 2013 ; >
       au < exists ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
       au < exists ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
       au < expected ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
@@ -699,11 +697,9 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = http://openhealthdata.metajnl.com/
+      # continued by Journal of Open Health Data
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
-      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Public Health Data Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 3 ; Journal of Open Public Health Data Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 4 ; Journal of Open Public Health Data Volume 2016 ; 2016 ; >
 
   }
 
