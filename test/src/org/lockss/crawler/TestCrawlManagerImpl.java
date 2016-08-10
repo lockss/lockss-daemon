@@ -292,16 +292,17 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEmpty(abortLst);
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
 				    "(4|5),-25000");
-      assertEquals(ListUtil.list(aus[4]), abortLst);
+      assertSameElements(ListUtil.list(aus[4]), abortLst);
       crawlManager.addToRunningCrawls(aus[4],
 				      new AbortRecordingCrawler(abortLst,
 								aus[4]));
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
 				    "(3|4|5),-25000");
-      assertEquals(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
+      // CrawlManagerImpl processes running crawls in indeterminate order
+      assertSameElements(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
 				    "(3|4|5),-25000;(xx|yy),-26000");
-      assertEquals(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
+      assertSameElements(ListUtil.list(aus[4], aus[3], aus[4]), abortLst);
     }
 
     private void setNewContentRateLimit(String rate, String startRate,
