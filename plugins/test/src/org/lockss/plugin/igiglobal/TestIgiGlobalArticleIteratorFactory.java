@@ -201,12 +201,12 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         null,
         BASE_URL + "gateway/article/11111"};
     
-    String [] af3 = {BASE_URL + "gateway/article/full-text-pdf/55656",
+    String [] af3 = {BASE_URL + "gateway/article/full-text-html/55656",
         BASE_URL + "gateway/article/full-text-pdf/55656",
         BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         BASE_URL + "gateway/article/55656"};
     
-    String [] af4 = {BASE_URL + "gateway/article/full-text-pdf/12345",
+    String [] af4 = {BASE_URL + "gateway/article/full-text-html/12345",
         BASE_URL + "gateway/article/full-text-pdf/12345",
         BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         null};
