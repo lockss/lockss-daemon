@@ -1056,9 +1056,9 @@
       comment[publisher] = University of Alberta
       param[journal_id] = ewjus
 
-      au < testing ; 2014 ; East/West: Journal of Ukrainian Studies Volume 2014 ; 2014 ; 1 ; http://www.ewjus.com/ >
-      au < testing ; 2015 ; East/West: Journal of Ukrainian Studies Volume 2015 ; 2015 ; 2 ; http://www.ewjus.com/ >
-      au < testing ; 2016 ; East/West: Journal of Ukrainian Studies Volume 2016 ; 2016 ; 3 ; http://www.ewjus.com/ >
+      au < ready ; 2014 ; East/West: Journal of Ukrainian Studies Volume 2014 ; 2014 ; 1 ; http://www.ewjus.com/ >
+      au < ready ; 2015 ; East/West: Journal of Ukrainian Studies Volume 2015 ; 2015 ; 2 ; http://www.ewjus.com/ >
+      au < ready ; 2016 ; East/West: Journal of Ukrainian Studies Volume 2016 ; 2016 ; 3 ; http://www.ewjus.com/ >
 
   }
 
@@ -1076,7 +1076,7 @@
       au < ready ; 2007 ; Éducation Francophone en Milieu Minoritaire Volume 2007 ; 2007 ; 2 ; https://journals.library.ualberta.ca/reefmm/ >
       au < ready ; 2008 ; Éducation Francophone en Milieu Minoritaire Volume 2008 ; 2008 ; 3 ; https://journals.library.ualberta.ca/reefmm/ >
       au < ready ; 2009 ; Éducation Francophone en Milieu Minoritaire Volume 2009 ; 2009 ; 4 ; https://journals.library.ualberta.ca/reefmm/ >
-      au < testing ; 2010 ; Éducation Francophone en Milieu Minoritaire Volume 2010 ; 2010 ; 5 ; https://journals.library.ualberta.ca/reefmm/ >
+      au < ready ; 2010 ; Éducation Francophone en Milieu Minoritaire Volume 2010 ; 2010 ; 5 ; https://journals.library.ualberta.ca/reefmm/ >
       au < ready ; 2011 ; Éducation Francophone en Milieu Minoritaire Volume 2011 ; 2011 ; 6 ; https://journals.library.ualberta.ca/reefmm/ >
       au < ready ; 2012 ; Éducation Francophone en Milieu Minoritaire Volume 2012 ; 2012 ; 7 ; https://journals.library.ualberta.ca/reefmm/ >
       au < ready ; 2013 ; Éducation Francophone en Milieu Minoritaire Volume 2013 ; 2013 ; 8 ; https://journals.library.ualberta.ca/reefmm/ >
