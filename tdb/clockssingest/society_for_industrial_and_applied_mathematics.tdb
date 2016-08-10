@@ -31,7 +31,7 @@
     au < crawling ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 ; >
     au < finished ; crawling ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 ; >
     au < finished ; crawling ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; Multiscale Modeling and Simulation Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2014 ; Multiscale Modeling and Simulation Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2015 ; Multiscale Modeling and Simulation Volume 13 ; 13 ; >
     au < manifest ; exists ; 2016 ; Multiscale Modeling and Simulation Volume 14 ; 14 ; >
 
@@ -57,7 +57,7 @@
     au < crawling ; exists ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 ; >
     au < finished ; crawling ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Applied Dynamical Systems Volume 14 ; 14 ; >
     au < manifest ; exists ; 2016 ; Journal on Applied Dynamical Systems Volume 15 ; 15 ; >
 
@@ -146,7 +146,7 @@
     au < finished ; crawling ; 2011 ; Journal on Applied Mathematics Volume 71 ; 71 ; >
     au < finished ; crawling ; 2012 ; Journal on Applied Mathematics Volume 72 ; 72 ; >
     au < crawling ; exists ; 2013 ; Journal on Applied Mathematics Volume 73 ; 73 ; >
-    au < crawling ; exists ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Applied Mathematics Volume 75 ; 75 ; >
     au < manifest ; exists ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 ; >
 
@@ -172,7 +172,7 @@
     au < finished ; finished ; 2011 ; Journal on Computing Volume 40 ; 40 ; >
     au < finished ; finished ; 2012 ; Journal on Computing Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Journal on Computing Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2014 ; Journal on Computing Volume 43 ; 43 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Computing Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Computing Volume 44 ; 44 ; >
     au < manifest ; exists ; 2016 ; Journal on Computing Volume 45 ; 45 ; >
 
@@ -226,7 +226,7 @@
     au < finished ; finished ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 ; >
     au < finished ; crawling ; 2012 ; Journal on Discrete Mathematics Volume 26 ; 26 ; >
     au < finished ; crawling ; 2013 ; Journal on Discrete Mathematics Volume 27 ; 27 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; Journal on Discrete Mathematics Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Discrete Mathematics Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Discrete Mathematics Volume 29 ; 29 ; >
     au < manifest ; exists ; 2016 ; Journal on Discrete Mathematics Volume 30 ; 30 ; >
 
@@ -245,7 +245,7 @@
     au < finished ; finished ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 ; >
     au < finished ; finished ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Financial Mathematics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal on Financial Mathematics Volume 7 ; 7 ; >
 
@@ -293,7 +293,7 @@
     au < crawling ; exists ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 ; >
     au < crawling ; exists ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 ; >
+    au < deepCrawl ; exists ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2015 ; Journal on Mathematical Analysis Volume 47 ; 47 ; >
     au < manifest ; exists ; 2016 ; Journal on Mathematical Analysis Volume 48 ; 48 ; >
 
@@ -442,7 +442,7 @@
     au < crawling ; exists ; 2011 ; SIAM Review Volume 53 ; 53 ; >
     au < crawling ; exists ; 2012 ; SIAM Review Volume 54 ; 54 ; >
     au < crawling ; exists ; 2013 ; SIAM Review Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2014 ; SIAM Review Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2014 ; SIAM Review Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2015 ; SIAM Review Volume 57 ; 57 ; >
     au < manifest ; exists ; 2016 ; SIAM Review Volume 58 ; 58 ; >
 
@@ -469,7 +469,7 @@
     au < finished ; finished ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 ; >
     au < finished ; crawling ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2015 ; Theory of Probability and its Applications Volume 59 ; 59 ; >
     au < manifest ; exists ; 2016 ; Theory of Probability and its Applications Volume 60 ; 60 ; >
 

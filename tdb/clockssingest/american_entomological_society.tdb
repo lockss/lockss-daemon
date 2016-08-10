@@ -30,9 +30,9 @@
       au < crawling ; exists ; 2009 ; Entomological News Volume 120 ; 120 ; >
       au < crawling ; exists ; 2010 ; Entomological News Volume 121 ; 121 ; >
       au < crawling ; exists ; 2011-2012 ; Entomological News Volume 122 ; 122 ; >
-      au < crawling ; exists ; 2013-2014 ; Entomological News Volume 123 ; 123 ; >
-      au < crawling ; exists ; 2014-2015 ; Entomological News Volume 124 ; 124 ; >
-      au < crawling ; exists ; 2015-2016 ; Entomological News Volume 125 ; 125 ; >
+      au < deepCrawl ; exists ; 2013-2014 ; Entomological News Volume 123 ; 123 ; >
+      au < deepCrawl ; exists ; 2014-2015 ; Entomological News Volume 124 ; 124 ; >
+      au < deepCrawl ; exists ; 2015-2016 ; Entomological News Volume 125 ; 125 ; >
       au < manifest ; exists ; 2016-2017 ; Entomological News Volume 126 ; 126 ; >
 
     }
@@ -57,8 +57,8 @@
       au < crawling ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 ; >
       au < crawling ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 ; >
       au < finished ; finished ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 ; >
-      au < crawling ; exists ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 ; >
-      au < crawling ; exists ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 ; >
+      au < deepCrawl ; exists ; 2014 ; Transactions of the American Entomological Society Volume 140 ; 140 ; >
+      au < deepCrawl ; exists ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 ; >
       au < manifest ; exists ; 2016 ; Transactions of the American Entomological Society Volume 142 ; 142 ; >
 
     }
