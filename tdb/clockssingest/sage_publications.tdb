@@ -1225,7 +1225,7 @@
       au < finished ; finished ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
       au < finished ; crawling ; 2013 ; American Journal of Alzheimer's Disease and Other Dementias Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; American Journal of Alzheimer's Disease and Other Dementias Volume 29 ; 29 ; >
-      au < deepCrawl ; exists ; 2015 ; American Journal of Alzheimer's Disease and Other Dementias Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2015 ; American Journal of Alzheimer's Disease and Other Dementias Volume 30 ; 30 ; >
       au < doNotProcess ; exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; >
 
     }
@@ -3240,7 +3240,7 @@
     param[base_url] = http://ale.sagepub.com/
 
     au < finished ; finished ; 2014 ; Asian Journal of Legal Education Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2016 ; Asian Journal of Legal Education Volume 3 ; 3 ; >
 
   }
@@ -7603,7 +7603,7 @@
       au < finished ; finished ; 2012 ; Contributions to Indian Sociology Volume 46 ; 46 ; >
       au < finished ; crawling ; 2013 ; Contributions to Indian Sociology Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Contributions to Indian Sociology Volume 48 ; 48 ; >
-      au < deepCrawl ; exists ; 2015 ; Contributions to Indian Sociology Volume 49 ; 49 ; >
+      au < frozen ; exists ; 2015 ; Contributions to Indian Sociology Volume 49 ; 49 ; >
       au < doNotProcess ; exists ; 2016 ; Contributions to Indian Sociology Volume 50 ; 50 ; >
 
     }
@@ -7820,7 +7820,7 @@
       au < finished ; finished ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; >
       au < finished ; finished ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; >
       au < finished ; finished ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; >
-      au < deepCrawl ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
+      au < frozen ; exists ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; >
       au < doNotProcess ; exists ; 2016 ; Cornell Hospitality Quarterly Volume 57 ; 57 ; >
 
     }
@@ -9133,7 +9133,7 @@
       au < finished ; finished ; 2012 ; Dementia Volume 11 ; 11 ; >
       au < finished ; crawling ; 2013 ; Dementia Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Dementia Volume 13 ; 13 ; >
-      au < deepCrawl ; exists ; 2015 ; Dementia Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2015 ; Dementia Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Dementia Volume 15 ; 15 ; >
 
     }
@@ -10746,7 +10746,7 @@
       au < finished ; finished ; 2012 ; Environment and Behavior Volume 44 ; 44 ; >
       au < finished ; crawling ; 2013 ; Environment and Behavior Volume 45 ; 45 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Environment and Behavior Volume 46 ; 46 ; >
-      au < deepCrawl ; exists ; 2015 ; Environment and Behavior Volume 47 ; 47 ; >
+      au < frozen ; exists ; 2015 ; Environment and Behavior Volume 47 ; 47 ; >
       au < doNotProcess ; exists ; 2016 ; Environment and Behavior Volume 48 ; 48 ; >
 
     }
@@ -10912,7 +10912,7 @@
       au < finished ; finished ; 2012 ; Environment and Urbanization Volume 24 ; 24 ; >
       au < finished ; crawling ; 2013 ; Environment and Urbanization Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Environment and Urbanization Volume 26 ; 26 ; >
-      au < deepCrawl ; exists ; 2015 ; Environment and Urbanization Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2015 ; Environment and Urbanization Volume 27 ; 27 ; >
       au < doNotProcess ; exists ; 2016 ; Environment and Urbanization Volume 28 ; 28 ; >
 
     }
@@ -11100,7 +11100,7 @@
       au < finished ; finished ; 2012 ; Ethnography Volume 13 ; 13 ; >
       au < finished ; finished ; 2013 ; Ethnography Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Ethnography Volume 15 ; 15 ; >
-      au < deepCrawl ; exists ; 2015 ; Ethnography Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2015 ; Ethnography Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 2016 ; Ethnography Volume 17 ; 17 ; >
 
     }
@@ -11425,7 +11425,7 @@
       au < finished ; finished ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
       au < finished ; finished ; 2013 ; European Journal of Communication Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; European Journal of Communication Volume 29 ; 29 ; >
-      au < deepCrawl ; exists ; 2015 ; European Journal of Communication Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2015 ; European Journal of Communication Volume 30 ; 30 ; >
       au < doNotProcess ; exists ; 2016 ; European Journal of Communication Volume 31 ; 31 ; >
 
     }
@@ -11644,7 +11644,7 @@
       au < finished ; finished ; 2012 ; European Journal of International Relations Volume 18 ; 18 ; >
       au < finished ; crawling ; 2013 ; European Journal of International Relations Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; European Journal of International Relations Volume 20 ; 20 ; >
-      au < deepCrawl ; exists ; 2015 ; European Journal of International Relations Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2015 ; European Journal of International Relations Volume 21 ; 21 ; >
       au < doNotProcess ; exists ; 2016 ; European Journal of International Relations Volume 22 ; 22 ; >
 
     }
@@ -11809,7 +11809,7 @@
       au < finished ; frozen ; 2012 ; European Journal of Women's Studies Volume 19 ; 19 ; >
       au < finished ; finished ; 2013 ; European Journal of Women's Studies Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; European Journal of Women's Studies Volume 21 ; 21 ; >
-      au < deepCrawl ; exists ; 2015 ; European Journal of Women's Studies Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2015 ; European Journal of Women's Studies Volume 22 ; 22 ; >
       au < doNotProcess ; exists ; 2016 ; European Journal of Women's Studies Volume 23 ; 23 ; >
 
     }
@@ -11958,7 +11958,7 @@
       au < finished ; finished ; 2012 ; European Urban and Regional Studies Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; European Urban and Regional Studies Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; European Urban and Regional Studies Volume 21 ; 21 ; >
-      au < deepCrawl ; exists ; 2015 ; European Urban and Regional Studies Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2015 ; European Urban and Regional Studies Volume 22 ; 22 ; >
       au < doNotProcess ; exists ; 2016 ; European Urban and Regional Studies Volume 23 ; 23 ; >
 
     }
@@ -14130,7 +14130,7 @@
       au < finished ; finished ; 2012 ; Health Education Journal Volume 71 ; 71 ; >
       au < finished ; crawling ; 2013 ; Health Education Journal Volume 72 ; 72 ; >
       au < finished ; finished ; 2014 ; Health Education Journal Volume 73 ; 73 ; >
-      au < deepCrawl ; exists ; 2015 ; Health Education Journal Volume 74 ; 74 ; >
+      au < frozen ; exists ; 2015 ; Health Education Journal Volume 74 ; 74 ; >
       au < doNotProcess ; exists ; 2016 ; Health Education Journal Volume 75 ; 75 ; >
 
     }
@@ -14181,7 +14181,7 @@
       au < finished ; finished ; 2012 ; Health Informatics Journal Volume 18 ; 18 ; >
       au < finished ; crawling ; 2013 ; Health Informatics Journal Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Health Informatics Journal Volume 20 ; 20 ; >
-      au < deepCrawl ; exists ; 2015 ; Health Informatics Journal Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2015 ; Health Informatics Journal Volume 21 ; 21 ; >
       au < doNotProcess ; exists ; 2016 ; Health Informatics Journal Volume 22 ; 22 ; >
 
     }
@@ -16071,7 +16071,7 @@
       au < exists ; exists ; 2012 ; Insight on Africa Volume 4 ; 4 ; >
       au < finished ; finished ; 2013 ; Insight on Africa Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Insight on Africa Volume 6 ; 6 ; >
-      au < deepCrawl ; exists ; 2015 ; Insight on Africa Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2015 ; Insight on Africa Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2016 ; Insight on Africa Volume 8 ; 8 ; >
 
   }
@@ -16224,7 +16224,7 @@
       au < finished ; finished ; 2012 ; Integrative Cancer Therapies Volume 11 ; 11 ; >
       au < finished ; finished ; 2013 ; Integrative Cancer Therapies Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; Integrative Cancer Therapies Volume 13 ; 13 ; >
-      au < deepCrawl ; exists ; 2015 ; Integrative Cancer Therapies Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2015 ; Integrative Cancer Therapies Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Integrative Cancer Therapies Volume 15 ; 15 ; >
 
     }
@@ -16785,7 +16785,7 @@
       au < finished ; finished ; 2012 ; International Journal of Comparative Sociology Volume 53 ; 53 ; >
       au < finished ; crawling ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Comparative Sociology Volume 56 ; 56 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Comparative Sociology Volume 56 ; 56 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
 
     }
@@ -17017,7 +17017,7 @@
      au < exists ; exists ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 ; >
      au < exists ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; >
      au < finished ; crawling ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
-     au < deepCrawl ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
+     au < frozen ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
      au < doNotProcess ; exists ; 2016 ; International Journal of Electrical Engineering Education Volume 53 ; 53 ; >
 
     }
@@ -17267,7 +17267,7 @@
       au < exists ; exists ; 2012 ; International Journal of Immunopathology and Pharmacology Volume 25 ; 25 ; >
       au < exists ; exists ; 2013 ; International Journal of Immunopathology and Pharmacology Volume 26 ; 26 ; >
       au < exists ; exists ; 2014 ; International Journal of Immunopathology and Pharmacology Volume 27 ; 27 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Immunopathology and Pharmacology Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Immunopathology and Pharmacology Volume 28 ; 28 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Immunopathology and Pharmacology Volume 29 ; 29 ; >
 
   }
@@ -17449,7 +17449,7 @@
       au < finished ; finished ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; >
       au < finished ; finished ; 2013 ; International Journal of Music Education Volume 31 ; 31 ; >
       au < finished ; finished ; 2014 ; International Journal of Music Education Volume 32 ; 32 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Music Education Volume 33 ; 33 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Music Education Volume 33 ; 33 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Music Education Volume 34 ; 34 ; >
 
     }
@@ -18409,7 +18409,7 @@
       au < finished ; finished ; 2012 ; International Relations Volume 26 ; 26 ; >
       au < finished ; finished ; 2013 ; International Relations Volume 27 ; 27 ; >
       au < finished ; finished ; 2014 ; International Relations Volume 28 ; 28 ; >
-      au < deepCrawl ; exists ; 2015 ; International Relations Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2015 ; International Relations Volume 29 ; 29 ; >
       au < doNotProcess ; exists ; 2016 ; International Relations Volume 30 ; 30 ; >
 
     }
@@ -20644,7 +20644,7 @@
       au < finished ; finished ; 2012 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 17 ; 17 ; >
       au < finished ; crawling ; 2013 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 19 ; 19 ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2015 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 20 ; 20 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 21 ; 21 ; >
 
     }
@@ -22054,7 +22054,7 @@
       au < doesNotExist ; doesNotExist ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; >
       au < finished ; crawling ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Cutaneous Medicine and Surgery Volume 20 ; 20 ; >
       
   }
@@ -23558,7 +23558,7 @@
       au < finished ; finished ; 2012 ; Journal of Family History Volume 37 ; 37 ; >
       au < finished ; crawling ; 2013 ; Journal of Family History Volume 38 ; 38 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Family History Volume 39 ; 39 ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Family History Volume 40 ; 40 ; >
+      au < frozen ; exists ; 2015 ; Journal of Family History Volume 40 ; 40 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Family History Volume 41 ; 41 ; >
 
     }
@@ -23842,7 +23842,7 @@
       au < finished ; finished ; 2012 ; Journal of Fire Sciences Volume 30 ; 30 ; >
       au < finished ; crawling ; 2013 ; Journal of Fire Sciences Volume 31 ; 31 ; >
       au < finished ; finished ; 2014 ; Journal of Fire Sciences Volume 32 ; 32 ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Fire Sciences Volume 33 ; 33 ; >
+      au < frozen ; exists ; 2015 ; Journal of Fire Sciences Volume 33 ; 33 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Fire Sciences Volume 34 ; 34 ; >
 
     }
@@ -25396,7 +25396,7 @@
       au < finished ; finished ; 2012 ; Journal of Language and Social Psychology Volume 31 ; 31 ; >
       au < finished ; crawling ; 2013 ; Journal of Language and Social Psychology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Language and Social Psychology Volume 33 ; 33 ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Language and Social Psychology Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2015 ; Journal of Language and Social Psychology Volume 34 ; 34 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Language and Social Psychology Volume 35 ; 35 ; >
 
     }
@@ -26975,7 +26975,7 @@
       au < finished ; finished ; 2012 ; Journal of Primary Care & Community Health Volume 3 ; 3 ; >
       au < finished ; finished ; 2013 ; Journal of Primary Care & Community Health Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; Journal of Primary Care & Community Health Volume 5 ; 5 ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Primary Care & Community Health Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2015 ; Journal of Primary Care & Community Health Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Primary Care & Community Health Volume 7 ; 7 ; >
 
     }
@@ -27243,7 +27243,7 @@
       au < finished ; frozen ; 2012 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 13 ; 13 ; >
       au < finished ; finished ; 2013 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 14 ; 14 ; >
       au < finished ; crawling ; 2014 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2015 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 17 ; 17 ; >
 
     }
@@ -28273,7 +28273,7 @@
       param[base_url] = http://jsc.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < deepCrawl ; exists ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Journal of Strategic Contracting and Negotiation Volume 2 ; 2 ; >
 
   }
@@ -29522,7 +29522,7 @@
         au < finished ; finished ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
         au < finished ; crawling ; 2013 ; Journalism & Mass Communication Educator Volume 68 ; 68 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; Journalism & Mass Communication Educator Volume 69 ; 69 ; >
-        au < deepCrawl ; exists ; 2015 ; Journalism & Mass Communication Educator Volume 70 ; 70 ; >
+        au < frozen ; exists ; 2015 ; Journalism & Mass Communication Educator Volume 70 ; 70 ; >
         au < doNotProcess ; exists ; 2016 ; Journalism & Mass Communication Educator Volume 71 ; 71 ; >
 
       }
@@ -30104,7 +30104,7 @@
       au < finished ; frozen ; 2012 ; Latin American Perspectives Volume 39 ; 39 ; >
       au < finished ; crawling ; 2013 ; Latin American Perspectives Volume 40 ; 40 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Latin American Perspectives Volume 41 ; 41 ; >
-      au < deepCrawl ; exists ; 2015 ; Latin American Perspectives Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2015 ; Latin American Perspectives Volume 42 ; 42 ; >
       au < doNotProcess ; exists ; 2016 ; Latin American Perspectives Volume 43 ; 43 ; >
 
     }
@@ -30427,7 +30427,7 @@
       au < finished ; finished ; 2012 ; Lupus Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Lupus Volume 22 ; 22 ; >
       au < finished ; finished ; 2014 ; Lupus Volume 23 ; 23 ; >
-      au < deepCrawl ; exists ; 2015 ; Lupus Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2015 ; Lupus Volume 24 ; 24 ; >
       au < doNotProcess ; exists ; 2016 ; Lupus Volume 25 ; 25 ; >
 
     }
@@ -32061,7 +32061,7 @@
       au < finished ; finished ; 2012 ; Musicae Scientiae Volume 16 ; 16 ; >
       au < finished ; finished ; 2013 ; Musicae Scientiae Volume 17 ; 17 ; >
       au < finished ; finished ; 2014 ; Musicae Scientiae Volume 18 ; 18 ; >
-      au < deepCrawl ; exists ; 2015 ; Musicae Scientiae Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2015 ; Musicae Scientiae Volume 19 ; 19 ; >
       au < doNotProcess ; exists ; 2016 ; Musicae Scientiae Volume 20 ; 20 ; >
 
     }
@@ -32966,7 +32966,7 @@
       au < finished ; finished ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
       au < finished ; finished ; 2013 ; Nonprofit and Voluntary Sector Quarterly Volume 42 ; 42 ; >
       au < finished ; finished ; 2014 ; Nonprofit and Voluntary Sector Quarterly Volume 43 ; 43 ; >
-      au < deepCrawl ; exists ; 2015 ; Nonprofit and Voluntary Sector Quarterly Volume 44 ; 44 ; >
+      au < frozen ; exists ; 2015 ; Nonprofit and Voluntary Sector Quarterly Volume 44 ; 44 ; >
       au < doNotProcess ; exists ; 2016 ; Nonprofit and Voluntary Sector Quarterly Volume 45 ; 45 ; >
 
     }
@@ -33298,7 +33298,7 @@
       au < finished ; finished ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
       au < crawling ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
       au < finished ; finished ; 2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
-      au < deepCrawl ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
+      au < frozen ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
       au < doNotProcess ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; >
       au < doNotProcess ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; >
 
@@ -33993,7 +33993,7 @@
       au < finished ; frozen ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 ; >
       au < finished ; finished ; 2013 ; Personality and Social Psychology Bulletin Volume 39 ; 39 ; >
       au < finished ; crawling ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; >
+      au < frozen ; exists ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; >
       au < doNotProcess ; exists ; 2016 ; Personality and Social Psychology Bulletin Volume 42 ; 42 ; >
 
     }
@@ -35073,7 +35073,7 @@
       au < finished ; finished ; 2012 ; Politics & Society Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; Politics & Society Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; Politics & Society Volume 42 ; 42 ; >
-      au < deepCrawl ; exists ; 2015 ; Politics & Society Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2015 ; Politics & Society Volume 43 ; 43 ; >
       au < doNotProcess ; exists ; 2016 ; Politics & Society Volume 44 ; 44 ; >
 
     }
@@ -35644,7 +35644,7 @@
       au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 ; >
       au < finished ; crawling ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 227 ; 227 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 228 ; 228 ; >
-      au < deepCrawl ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 229 ; 229 ; >
+      au < frozen ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 229 ; 229 ; >
       au < doNotProcess ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 230 ; 230 ; >
 
     }
@@ -35738,7 +35738,7 @@
       au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 226 ; 226 ; >
       au < finished ; finished ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 227 ; 227 ; >
       au < finished ; finished ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 228 ; 228 ; >
-      au < deepCrawl ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 229 ; 229 ; >
+      au < frozen ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 229 ; 229 ; >
       au < doNotProcess ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 230 ; 230 ; >
 
     }
@@ -36247,7 +36247,7 @@
       au < finished ; finished ; 2012 ; Progress in Human Geography Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; Progress in Human Geography Volume 37 ; 37 ; >
       au < finished ; finished ; 2014 ; Progress in Human Geography Volume 38 ; 38 ; >
-      au < deepCrawl ; exists ; 2015 ; Progress in Human Geography Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2015 ; Progress in Human Geography Volume 39 ; 39 ; >
       au < doNotProcess ; exists ; 2016 ; Progress in Human Geography Volume 40 ; 40 ; >
 
     }
@@ -37387,7 +37387,7 @@
       au < finished ; finished ; 2012 ; Race and Justice Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Race and Justice Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Race and Justice Volume 4 ; 4 ; >
-      au < deepCrawl ; exists ; 2015 ; Race and Justice Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2015 ; Race and Justice Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2016 ; Race and Justice Volume 6 ; 6 ; >
 
     }
@@ -38860,7 +38860,7 @@
       au < finished ; finished ; 2012 ; Science Communication Volume 34 ; 34 ; >
       au < finished ; finished ; 2013 ; Science Communication Volume 35 ; 35 ; >
       au < finished ; crawling ; 2014 ; Science Communication Volume 36 ; 36 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2015 ; Science Communication Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2015 ; Science Communication Volume 37 ; 37 ; >
       au < doNotProcess ; exists ; 2016 ; Science Communication Volume 38 ; 38 ; >
 
     }
@@ -39754,7 +39754,7 @@
       au < finished ; finished ; 2012 ; Social Compass Volume 59 ; 59 ; >
       au < finished ; finished ; 2013 ; Social Compass Volume 60 ; 60 ; >
       au < finished ; finished ; 2014 ; Social Compass Volume 61 ; 61 ; >
-      au < deepCrawl ; exists ; 2015 ; Social Compass Volume 62 ; 62 ; >
+      au < frozen ; exists ; 2015 ; Social Compass Volume 62 ; 62 ; >
       au < doNotProcess ; exists ; 2016 ; Social Compass Volume 63 ; 63 ; >
 
     }
@@ -40924,7 +40924,7 @@
       au < finished ; finished ; 2012 ; Structural Health Monitoring Volume 11 ; 11 ; >
       au < finished ; crawling ; 2013 ; Structural Health Monitoring Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Structural Health Monitoring Volume 13 ; 13 ; >
-      au < deepCrawl ; exists ; 2015 ; Structural Health Monitoring Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2015 ; Structural Health Monitoring Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Structural Health Monitoring Volume 15 ; 15 ; >
 
     }
@@ -44654,7 +44654,7 @@
       au < exists ; exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; >
       au < doNotProcess ; exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; >
       au < crawling ; exists ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; >
-      au < deepCrawl ; exists ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; >
       au < doNotProcess ; exists ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; >
 
   }
@@ -47914,7 +47914,7 @@
         au < finished ; finished ; 2012 ; International Journal of Maritime History Volume 24 ; 24 ; >
         au < finished ; finished ; 2013 ; International Journal of Maritime History Volume 25 ; 25 ; >
         au < finished ; crawling ; 2014 ; International Journal of Maritime History Volume 26 ; 26 ; >
-        au < deepCrawl ; exists ; 2015 ; International Journal of Maritime History Volume 27 ; 27 ; >
+        au < frozen ; exists ; 2015 ; International Journal of Maritime History Volume 27 ; 27 ; >
         au < doNotProcess ; exists ; 2016 ; International Journal of Maritime History Volume 28 ; 28 ; >
 
   }

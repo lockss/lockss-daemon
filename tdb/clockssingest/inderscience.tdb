@@ -641,7 +641,7 @@
       param[journal_id] = ijans
 
       au < crawling ; exists ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; >
 
     }
@@ -1127,7 +1127,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2011-2013 ; International Journal of Biotechnology Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; International Journal of Biotechnology Volume 13 ; 13 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Biotechnology Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Biotechnology Volume 14 ; 14 ; >
       au < expected ; exists ; 2016 ; International Journal of Biotechnology Volume 15 ; 15 ; >
 
     }
@@ -1338,7 +1338,7 @@
       param[journal_id] = ijbfmi
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; >
       #issue 2-4 are not available
 
     }
@@ -1991,7 +1991,7 @@
       au < finished ; finished ; 2014 ; International Journal of Computer Applications in Technology Volume 49 ; 49 ; >
       au < frozen ; exists ; 2014 ; International Journal of Computer Applications in Technology Volume 50 ; 50 ; >
       au < frozen ; exists ; 2015 ; International Journal of Computer Applications in Technology Volume 51 ; 51 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Computer Applications in Technology Volume 52 ; 52 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Computer Applications in Technology Volume 52 ; 52 ; >
       au < crawling ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 53 ; 53 ; >
       au < crawling ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 54 ; 54 ; >
 
@@ -2341,7 +2341,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 ; >
       au < expected ; exists ; 2016 ; International Journal of Design Engineering Volume 7 ; 7 ; >
 
     }
@@ -4271,7 +4271,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 ; >
       au < finished ; finished ; 2012-2013 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 ; >
-      au < deepCrawl ; exists ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 ; >
       au < expected ; exists ; 2016-2017 ; International Journal of Information Technology, Communications and Convergence Volume 4 ; 4 ; >
 
     }
@@ -4689,7 +4689,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 ; >
       au < expected ; exists ; 2016 ; International Journal of Internet Technology and Secured Transactions Volume 7 ; 7 ; >
 
     }
@@ -4862,7 +4862,7 @@
 
       param[journal_id] = ijler
 
-      au < deepCrawl ; exists ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
 
     }
@@ -5141,7 +5141,7 @@
       au < finished ; finished ; 2014 ; International Journal of Machining and Machinability of Materials Volume 15 ; 15 ; >
       au < finished ; finished ; 2014 ; International Journal of Machining and Machinability of Materials Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2015 ; International Journal of Machining and Machinability of Materials Volume 17 ; 17 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Machining and Machinability of Materials Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Machining and Machinability of Materials Volume 18 ; 18 ; >
       au < expected ; exists ; 2016 ; International Journal of Machining and Machinability of Materials Volume 19 ; 19 ; >
       au < expected ; exists ; 2016 ; International Journal of Machining and Machinability of Materials Volume 20 ; 20 ; >
 
@@ -6080,7 +6080,7 @@
 
       param[journal_id] = ijns
 
-      au < deepCrawl ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; International Journal of Network Science Volume 2 ; 2 ; >
 
     }
@@ -6281,7 +6281,7 @@
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; >
       au < crawling ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 ; >
       au < crawling ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 ; >
       au < manifest ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 13 ; 13 ; >
@@ -6860,7 +6860,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 ; >
       au < crawling ; exists ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; International Journal of Quantitative Research in Education Volume 4 ; 4 ; >
 
     }
@@ -6899,7 +6899,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 ; >
       au < crawling ; exists ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; >
       au < expected ; exists ; 2016 ; International Journal of Rapid Manufacturing Volume 6 ; 6 ; >
 
     }
@@ -7132,7 +7132,7 @@
       param[journal_id] = ijscom
 
       au < finished ; finished ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 ; >
 
     }
@@ -7296,7 +7296,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Services, Economics and Management Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Services, Economics and Management Volume 5 ; 5 ; >
       au < crawling ; exists ; 2014 ; International Journal of Services, Economics and Management Volume 6 ; 6 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Services, Economics and Management Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Services, Economics and Management Volume 7 ; 7 ; >
       au < expected ; exists ; 2016 ; International Journal of Services, Economics and Management Volume 8 ; 8 ; >
 
     }
@@ -7439,7 +7439,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Social Entrepreneurship and Innovation Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Entrepreneurship and Innovation Volume 2 ; 2 ; >
-      au < deepCrawl ; exists ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 ; >
       au < manifest ; exists ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 ; >
 
     }
@@ -7922,7 +7922,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; International Journal of Teaching and Case Studies Volume 5 ; 5 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Teaching and Case Studies Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Teaching and Case Studies Volume 6 ; 6 ; >
       au < crawling ; exists ; 2016 ; International Journal of Teaching and Case Studies Volume 7 ; 7 ; >
 
     }
@@ -8113,8 +8113,8 @@
       au < finished ; finished ; 2014 ; International Journal of Technology Management Volume 64 ; 64 ; >
       au < finished ; manifest ; 2014 ; International Journal of Technology Management Volume 65 ; 65 ; >
       au < frozen ; exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Technology Management Volume 67 ; 67 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Technology Management Volume 68 ; 68 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 67 ; 67 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 68 ; 68 ; >
       au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 69 ; 69 ; >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 70 ; 70 ; >
       au < manifest ; exists ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; >
@@ -8160,7 +8160,7 @@
       param[journal_id] = ijtpl
 
       au < finished ; finished ; 2012-2014 ; International Journal of Technology Policy and Law Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Technology Policy and Law Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Technology Policy and Law Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; International Journal of Technology Policy and Law Volume 3 ; 3 ; >
 
     }
@@ -8271,7 +8271,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Tourism Anthropology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Tourism Anthropology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Tourism Anthropology Volume 4 ; 4 ; >
       au < crawling ; exists ; 2016 ; International Journal of Tourism Anthropology Volume 5 ; 5 ; >
 
     }
@@ -8483,7 +8483,7 @@
       au < finished ; finished ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 ; >
       au < crawling ; exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 ; >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Design Volume 66 ; 66 ; >
-      au < deepCrawl ; exists ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 ; >
       au < frozen ; exists ; 2015 ; International Journal of Vehicle Design Volume 68 ; 68 ; >
       au < frozen ; exists ; 2015 ; International Journal of Vehicle Design Volume 69 ; 69 ; >
       au < crawling ; exists ; 2016 ; International Journal of Vehicle Design Volume 70 ; 70 ; >
@@ -8815,7 +8815,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Interdisciplinary Environmental Review Volume 15 ; 15 ; >
-      au < deepCrawl ; exists ; 2015 ; Interdisciplinary Environmental Review Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2015 ; Interdisciplinary Environmental Review Volume 16 ; 16 ; >
       au < crawling ; exists ; 2016 ; Interdisciplinary Environmental Review Volume 17 ; 17 ; >
 
     }
@@ -8838,7 +8838,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal for Global Business Advancement Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; Journal for Global Business Advancement Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2015 ; Journal for Global Business Advancement Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; Journal for Global Business Advancement Volume 8 ; 8 ; >
       au < crawling ; exists ; 2016 ; Journal for Global Business Advancement Volume 9 ; 9 ; >
 
     }
@@ -8906,7 +8906,7 @@
       param[journal_id] = lajmsd
 
       au < finished ; finished ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 ; >
-      au < deepCrawl ; exists ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Latin American Journal of Management for Sustainable Development Volume 3 ; 3 ; >
 
     }
@@ -8952,7 +8952,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Progress in Computational Fluid Dynamics, An International Journal Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Progress in Computational Fluid Dynamics, An International Journal Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Progress in Computational Fluid Dynamics, An International Journal Volume 14 ; 14 ; >
-      au < deepCrawl ; exists ; 2015 ; Progress in Computational Fluid Dynamics, An International Journal Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2015 ; Progress in Computational Fluid Dynamics, An International Journal Volume 15 ; 15 ; >
       au < crawling ; exists ; 2016 ; Progress in Computational Fluid Dynamics, An International Journal Volume 16 ; 16 ; >
 
     }

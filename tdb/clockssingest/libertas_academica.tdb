@@ -310,7 +310,7 @@
     au < finished ; finished ; 2012 ; Cancer Informatics Volume 11 ; 11 ; 2012 ; >
     au < finished ; finished ; 2013 ; Cancer Informatics Volume 12 ; 12 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Cancer Informatics Volume 13 ; 13 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; 2016 ; >
 
 
@@ -657,7 +657,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Pediatrics Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pediatrics Volume 8 ; 8 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -1718,7 +1718,7 @@
     au < finished ; finished ; 2011 ; Reproductive Biology Insights Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2013 ; Reproductive Biology Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Reproductive Biology Insights Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; >
 
   }
