@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,14 +67,12 @@ public class IgiGlobalArticleIteratorFactory
       "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sgateway/(?:article|chapter)(?!/full-text-(?:html|pdf))/[0-9]+\", base_url";
+      "\"^%sgateway/(?:article|chapter)/[0-9]+$\", base_url";
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected static final String ABSTRACT_REPLACEMENT = "$1/$2";
   
-//  protected static final Pattern FULLTEXT_HTML_PATTERN = Pattern.compile(
-//      "(article|chapter)/full-text-html/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected static final String FULLTEXT_HTML_REPLACEMENT = "$1/full-text-html/$2";
   
   protected static final Pattern FULLTEXT_PDF_PATTERN = Pattern.compile(
@@ -98,7 +96,7 @@ public class IgiGlobalArticleIteratorFactory
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a 
     // FULL_TEXT_CU until this is deprecated
-    // the abstract would only be considered FT iff there is no pdf landing nor FT html
+    // the abstract would only be considered FT iff there is no pdf (landing) nor FT html
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
@@ -112,9 +110,9 @@ public class IgiGlobalArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.setFullTextFromRoles(Arrays.asList(
-        ArticleFiles.ROLE_FULL_TEXT_PDF, 
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, 
         ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
         ArticleFiles.ROLE_ABSTRACT));
     
     return builder.getSubTreeArticleIterator();
