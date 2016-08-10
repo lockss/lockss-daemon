@@ -186,7 +186,7 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
         BASE_URL + "gateway/chapter/55656"};
     
     expStack.push(af4);
-    expStack.push(af3);
+//    expStack.push(af3); // no abstract chapter aspect
     expStack.push(af2);
     expStack.push(af1);
     

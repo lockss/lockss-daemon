@@ -67,14 +67,14 @@ public class IgiGlobalArticleIteratorFactory
       "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sgateway/(?:article|chapter)(?:/full-text-(?:html|pdf))?/[0-9]+\", base_url";
+      "\"^%sgateway/(?:article|chapter)(?!/full-text-(?:html|pdf))/[0-9]+\", base_url";
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected static final String ABSTRACT_REPLACEMENT = "$1/$2";
   
-  protected static final Pattern FULLTEXT_HTML_PATTERN = Pattern.compile(
-      "(article|chapter)/full-text-html/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+//  protected static final Pattern FULLTEXT_HTML_PATTERN = Pattern.compile(
+//      "(article|chapter)/full-text-html/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   protected static final String FULLTEXT_HTML_REPLACEMENT = "$1/full-text-html/$2";
   
   protected static final Pattern FULLTEXT_PDF_PATTERN = Pattern.compile(
@@ -95,14 +95,6 @@ public class IgiGlobalArticleIteratorFactory
         Arrays.asList(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE),
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    builder.addAspect(
-        FULLTEXT_HTML_PATTERN, FULLTEXT_HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
-    
-    builder.addAspect(
-        FULLTEXT_PDF_PATTERN, FULLTEXT_PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
-    
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a 
     // FULL_TEXT_CU until this is deprecated
@@ -111,6 +103,20 @@ public class IgiGlobalArticleIteratorFactory
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
     
+    builder.addAspect(
+        FULLTEXT_HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.addAspect(
+        FULLTEXT_PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    builder.setFullTextFromRoles(Arrays.asList(
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, 
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ABSTRACT));
+    
     return builder.getSubTreeArticleIterator();
   }
   
@@ -118,23 +124,22 @@ public class IgiGlobalArticleIteratorFactory
     return new SubTreeArticleIteratorBuilder(au) {
       
       @Override
-      protected void maybeMakeSubTreeArticleIterator() {
-        if (au != null && spec != null && iterator == null) {
-          this.iterator = new BuildableSubTreeArticleIterator(au, spec) {
+      protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
+        
+        return new BuildableSubTreeArticleIterator(au, spec) {
+          
+          @Override
+          protected ArticleFiles createArticleFiles(CachedUrl cu) {
+            // Since 1.64 createArticleFiles can return ArticleFiles
+            ArticleFiles af = super.createArticleFiles(cu);
             
-            @Override
-            protected ArticleFiles createArticleFiles(CachedUrl cu) {
-              // Since 1.64 createArticleFiles can return ArticleFiles
-              ArticleFiles af = super.createArticleFiles(cu);
-              
-              if (af != null && 
-                  spec.getTarget() != null && !spec.getTarget().isArticle()) {
-                guessPdf(af);
-              }
-              return af;
+            if (af != null && 
+                spec.getTarget() != null && !spec.getTarget().isArticle()) {
+              guessPdf(af);
             }
-          };
-        }
+            return af;
+          }
+        };
       }
       
       //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
