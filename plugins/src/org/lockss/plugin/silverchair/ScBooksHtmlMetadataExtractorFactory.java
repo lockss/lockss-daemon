@@ -16,6 +16,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.HtmlUtil;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -80,70 +81,79 @@ public class ScBooksHtmlMetadataExtractorFactory extends ScHtmlMetadataExtractor
 
       // now we check each of our fields and if they aren't found we extract them using jsoup
       if(cu.getContentSize() > 0) {
-        InputStream in = cu.getUnfilteredInputStream();
-        Document doc = Jsoup.parse(in, null, cu.getUrl());
-        if(log.isDebug3()) log.debug3("begin parse...");
-        // add the missing items
-        String value;
-        value = extractSelector(doc, TITLE_SELECTOR,null);
-        if(!StringUtil.isNullString(value)) am.putRaw("citation_title", value);
-        // authors
-        value = extractSelector(doc,AUTHORS_SELECTOR,"Author(s):");
-        if(!StringUtil.isNullString(value)) {
+        InputStream in = null;
+        try {
+          // try-finally block to ensure closure of input stream
+          in = cu.getUnfilteredInputStream();
+          Document doc = Jsoup.parse(in, null, cu.getUrl());
+          if(log.isDebug3()) log.debug3("begin parse...");
+          // add the missing items
+          String value;
+          value = extractSelector(doc, TITLE_SELECTOR,null);
+          if(!StringUtil.isNullString(value)) am.putRaw("citation_title", value);
+          // authors
+          value = extractSelector(doc,AUTHORS_SELECTOR,"Author(s):");
+          if(!StringUtil.isNullString(value)) {
 
-          Vector<String> authors = StringUtil.breakAt(value,";",0,true,true);
-          for(String author : authors) {
-            am.putRaw("citation_author", author);
-            if(log.isDebug3()) log.debug3("added author: " + author);
+            Vector<String> authors = StringUtil.breakAt(value,";",0,true,true);
+            for(String author : authors) {
+              am.putRaw("citation_author", author);
+              if(log.isDebug3()) log.debug3("added author: " + author);
+            }
           }
-        }
-        // publication_date
-        value = extractSelector(doc,DATE_SELECTOR,"Published:");
-        if(!StringUtil.isNullString(value)) {
-          am.putRaw("citation_date",value);
-          if(log.isDebug3()) log.debug3("added date: " + value);
-        }
-        // doi
-        value = extractSelector(doc, DOI_SELECTOR,"DOI:");
-        if(!StringUtil.isNullString(value)) {
-          am.putRaw("citation_doi",value);
-          if(log.isDebug3()) log.debug3("added doi:" + value);
-        }
-         // citations
-        value = extractSelector(doc, CITATION_SELECTOR, null);
-        Vector<String> cits = StringUtil.breakAt(value,"|",0,false,true);
-        for(String cit_value: cits) {
-          int idx;
-          // eISBN
-          if (cit_value.contains("eISBN:")) {
-            idx = cit_value.indexOf("eISBN:");
-            if (idx >= 0) {
-              value = cit_value.substring(idx + "eISBN:".length());
-              if (!StringUtil.isNullString(value)) {
-                am.putRaw("citation_eisbn", value);
-                if(log.isDebug3()) log.debug3("added eisbn: "+value);
+          // publication_date
+          value = extractSelector(doc,DATE_SELECTOR,"Published:");
+          if(!StringUtil.isNullString(value)) {
+            am.putRaw("citation_date",value);
+            if(log.isDebug3()) log.debug3("added date: " + value);
+          }
+          // doi
+          value = extractSelector(doc, DOI_SELECTOR,"DOI:");
+          if(!StringUtil.isNullString(value)) {
+            am.putRaw("citation_doi",value);
+            if(log.isDebug3()) log.debug3("added doi:" + value);
+          }
+          // citations
+          value = extractSelector(doc, CITATION_SELECTOR, null);
+          Vector<String> cits = StringUtil.breakAt(value,"|",0,false,true);
+          for(String cit_value: cits) {
+            int idx;
+            // eISBN
+            if (cit_value.contains("eISBN:")) {
+              idx = cit_value.indexOf("eISBN:");
+              if (idx >= 0) {
+                value = cit_value.substring(idx + "eISBN:".length());
+                if (!StringUtil.isNullString(value)) {
+                  am.putRaw("citation_eisbn", value);
+                  if(log.isDebug3()) log.debug3("added eisbn: "+value);
+                }
+              }
+            }
+            else if (cit_value.contains("ISBN13:")) {
+              // ISBN = cits[1]
+              idx = cit_value.indexOf("ISBN13:");
+              if (idx >= 0) {
+                value = cit_value.substring(idx + "ISBN13:".length());
+                if (!StringUtil.isNullString(value)) {
+                  am.putRaw("citation_isbn", value);
+                  if(log.isDebug3()) log.debug3("added isbn: "+value);
+                }
               }
             }
           }
-          else if (cit_value.contains("ISBN13:")) {
-            // ISBN = cits[1]
-            idx = cit_value.indexOf("ISBN13:");
-            if (idx >= 0) {
-              value = cit_value.substring(idx + "ISBN13:".length());
-              if (!StringUtil.isNullString(value)) {
-                am.putRaw("citation_isbn", value);
-                if(log.isDebug3()) log.debug3("added isbn: "+value);
-              }
-            }
+          // description
+          value = extractSelector(doc,DESCRIPTION_SELECTOR,null);
+          if(!StringUtil.isNullString(value)) {
+            am.putRaw("citation_abstract", value);
+            if(log.isDebug3()) log.debug3("added abstract: "+ value);
           }
         }
-        // description
-        value = extractSelector(doc,DESCRIPTION_SELECTOR,null);
-        if(!StringUtil.isNullString(value)) {
-          am.putRaw("citation_abstract", value);
-          if(log.isDebug3()) log.debug3("added abstract: "+ value);
+
+        finally {
+          IOUtil.safeClose(in);
         }
-       }
+        //foo
+      }
       am.cook(cookMap);
 
       TdbAu tdbau = cu.getArchivalUnit().getTdbAu(); // returns null if titleConfig is null
