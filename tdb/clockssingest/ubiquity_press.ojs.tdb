@@ -90,7 +90,7 @@
   {
   
     title < 
-      name = The Bulletin of the History of Archaeology ;
+      name = Bulletin of the History of Archaeology ;
       issn = 1062-4740 ;
       eissn = 2047-6930 
     >
@@ -101,37 +101,37 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < superseded ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 [to delete] ; 20 ; 2010 ; >
-       au < superseded ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 ; >
+       au < superseded ; exists ; 2010 ; Bulletin of the History of Archaeology Volume 20 [to delete] ; 20 ; 2010 ; >
+       au < superseded ; exists ; 2011 ; Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 ; >
     }
     {
        plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
-       au < doNotProcess ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 ; >
-       au < doNotProcess ; exists ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 ; >
-       au < doNotProcess ; exists ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 ; >
-       au < doNotProcess ; exists ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 ; >
-       au < doNotProcess ; exists ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 ; >
-       au < doNotProcess ; exists ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 ; >
-       au < doNotProcess ; exists ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 ; >
-       au < doNotProcess ; exists ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 ; >
-       au < doNotProcess ; exists ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 ; >
-       au < doNotProcess ; exists ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 ; >
-       au < doNotProcess ; exists ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 ; >
-       au < doNotProcess ; exists ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 ; >
-       au < doNotProcess ; exists ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 ; >
-       au < doNotProcess ; exists ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 ; >
-       au < doNotProcess ; exists ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 ; >
-       au < doNotProcess ; exists ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 ; >
-       au < doNotProcess ; exists ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 ; >
-       au < doNotProcess ; exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 ; >
-       au < doNotProcess ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 ; >
-       au < doNotProcess ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 ; >
-       au < down ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; >
-       au < down ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 ; >
-       au < down ; exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 ; >
-       au < down ; exists ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 ; >
-       au < doNotProcess ; exists ; 2015 ; The Bulletin of the History of Archaeology Volume 25 ; 25 ; 2015 ; >
+       au < doNotProcess ; exists ; 1991 ; Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 ; >
+       au < doNotProcess ; exists ; 1992 ; Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 ; >
+       au < doNotProcess ; exists ; 1993 ; Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 ; >
+       au < doNotProcess ; exists ; 1994 ; Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 ; >
+       au < doNotProcess ; exists ; 1995 ; Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 ; >
+       au < doNotProcess ; exists ; 1996 ; Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 ; >
+       au < doNotProcess ; exists ; 1997 ; Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 ; >
+       au < doNotProcess ; exists ; 1998 ; Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 ; >
+       au < doNotProcess ; exists ; 1999 ; Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 ; >
+       au < doNotProcess ; exists ; 2000 ; Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 ; >
+       au < doNotProcess ; exists ; 2001 ; Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 ; >
+       au < doNotProcess ; exists ; 2002 ; Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 ; >
+       au < doNotProcess ; exists ; 2003 ; Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 ; >
+       au < doNotProcess ; exists ; 2004 ; Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 ; >
+       au < doNotProcess ; exists ; 2005 ; Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 ; >
+       au < doNotProcess ; exists ; 2006 ; Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 ; >
+       au < doNotProcess ; exists ; 2007 ; Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 ; >
+       au < doNotProcess ; exists ; 2008 ; Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 ; >
+       au < doNotProcess ; exists ; 2009 ; Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 ; >
+       au < doNotProcess ; exists ; 2010 ; Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 ; >
+       au < down ; exists ; 2011 ; Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 ; >
+       au < down ; exists ; 2012 ; Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 ; >
+       au < down ; exists ; 2013 ; Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 ; >
+       au < down ; exists ; 2014 ; Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 ; >
+       au < doNotProcess ; exists ; 2015 ; Bulletin of the History of Archaeology Volume 25 ; 25 ; 2015 ; >
     }
   }
   

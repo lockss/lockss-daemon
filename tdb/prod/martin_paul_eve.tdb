@@ -26,7 +26,7 @@
   
     title < 
       name = Orbit: Writing Around Pynchon ;
-      issn = 2047-2870 
+      eissn = 2047-2870 
     >
      plugin = org.lockss.plugin.ojs2.OJS2Plugin
      param[base_url] = https://www.pynchon.net/
