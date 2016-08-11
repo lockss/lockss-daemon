@@ -1290,7 +1290,7 @@
     au < doNotProcess ; exists ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Neurobehavioral HIV Medicine Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2014 ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; Neurobehavioral HIV Medicine Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Neurobehavioral HIV Medicine Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Neurobehavioral HIV Medicine Volume 8 ; 8 ; 2016 ; >
     
@@ -1466,8 +1466,8 @@
     au < doNotProcess ; exists ; 2010 ; Open Access Insect Physiology Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Insect Physiology Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Open Access Insect Physiology Volume 4 ; 4 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Open Access Insect Physiology Volume 5 ; 5 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Open Access Insect Physiology Volume 6 ; 6 ; 2014 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Open Access Insect Physiology Volume 5 ; 5 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; Open Access Insect Physiology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Insect Physiology Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Insect Physiology Volume 8 ; 8 ; 2016 ; >
     
@@ -2045,7 +2045,7 @@
     au < doNotProcess ; exists ; 2011 ; Reports in Parasitology Volume 1 ; 1 ; 2011 ; >
     au < ready ; exists ; 2012 ; Reports in Parasitology Volume 2 ; 2 ; 2012 ; >
     au < ready ; exists ; 2013 ; Reports in Parasitology Volume 3 ; 3 ; 2013 ; >
-    au < testing ; exists ; 2014 ; Reports in Parasitology Volume 4 ; 4 ; 2014 ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; Reports in Parasitology Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Reports in Parasitology Volume 5 ; 5 ; 2015 ; >
     au < ready ; exists ; 2016 ; Reports in Parasitology Volume 6 ; 6 ; 2016 ; >
    
@@ -2080,7 +2080,7 @@
 
     au < doNotProcess ; exists ; 2011 ; Antibody Technology Journal Volume 1 ; 1 ; 2011 ; >
     au < ready ; exists ; 2012 ; Antibody Technology Journal Volume 2 ; 2 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Antibody Technology Journal Volume 3 ; 3 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Antibody Technology Journal Volume 3 ; 3 ; 2013 ; >
     au < ready ; exists ; 2014 ; Antibody Technology Journal Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Antibody Technology Journal Volume 5 ; 5 ; 2015 ; >
     au < ready ; exists ; 2016 ; Antibody Technology Journal Volume 6 ; 6 ; 2016 ; >
@@ -2273,7 +2273,7 @@
     param[journal_id] = 137
 
     au < ready ; exists ; 2012 ; Nanobiosensors in Disease Diagnosis Volume 1 ; 1 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Nanobiosensors in Disease Diagnosis Volume 2 ; 2 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Nanobiosensors in Disease Diagnosis Volume 2 ; 2 ; 2013 ; >
     au < ready ; exists ; 2014 ; Nanobiosensors in Disease Diagnosis Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nanobiosensors in Disease Diagnosis Volume 4 ; 4 ; 2015 ; >
     au < ready ; exists ; 2016 ; Nanobiosensors in Disease Diagnosis Volume 5 ; 5 ; 2016 ; >
@@ -2357,7 +2357,7 @@
     param[journal_id] = 143
 
     au < ready ; exists ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 1 ; 2012 ; >
-    au < testing ; exists ; 2013 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2013 ; >
+    au < doesNotExist ; doesNotExist ; 2013 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2013 ; >
     au < ready ; exists ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Biorepository Science for Applied Medicine Volume 4 ; 4 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2016 ; >
