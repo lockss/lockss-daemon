@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java 39864 2015-02-18 09:10:24Z thib_gc $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,21 +28,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.associationforcomputingmachinery;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.*;
 
-import org.lockss.repository.LockssRepository;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 /*
@@ -713,7 +708,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
       assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      assertEquals(GOOD_ARTICLE_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+      assertEquals(GOOD_JOURNAL_CODE, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {
@@ -724,7 +719,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
   public void testExtractFromBasicProceedingContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
     try {
-      String xml_url = BASE_URL + "basic.xml";
+      String xml_url = BASE_URL + "NEW-PROC-FOO-basic.xml";
       String pdf_url = BASE_URL + "12-authorname.pdf";
       String html_url = BASE_URL + htmlUrl;
 
@@ -763,7 +758,7 @@ log.info("1: "+GOOD_PROCEEDINGS_TITLE);
 log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
       assertEquals(GOOD_PROCEEDINGS_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      assertEquals(GOOD_ARTICLE_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+      assertEquals("FOO", md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {
@@ -773,7 +768,7 @@ log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
   public void testExtractFromAmperContent() throws Exception {
     CIProperties xmlHeader = new CIProperties();
     try {
-      String xml_url = BASE_URL + "basic.xml";
+      String xml_url = BASE_URL + "UPD-PROC-FOO-basic.xml";
       String pdf_url = BASE_URL + "12-authorname.pdf";
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
@@ -804,6 +799,7 @@ log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //IOUtil.safeClose(file_input);
     }
   }
+  
   String realXMLFile = "testacm_backslash.xml";
   public void testFromRealXMLFile() throws Exception {
     CIProperties xmlHeader = new CIProperties();
@@ -844,6 +840,83 @@ log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
 
   }
   
+  //The values we expect are:
+  String FullBookName = "Smarter Than Others";
+  String BookISBN = "978-1-66666-111-1";
+  String BookDate = "2015";
+  String BookAuthors = "Author, John; Schreiber, Sebastian Q.";
+  
+
+  String bookXMLFile = "acmbook.xml";
+  public void testFromBookXMLFile() throws Exception {
+    CIProperties xmlHeader = new CIProperties();
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(bookXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      String xml_url = BASE_URL + "book.xml";
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
+      // need to check for this file before emitting
+      mau.addUrl(BASE_URL + "test-final-preface.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-intro.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-1.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-2.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-3.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-4.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      //do not provide one of the pdf files to make sure that will not emit 
+      //mau.addUrl(BASE_URL + "test-final-5.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-6.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-7.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      mau.addUrl(BASE_URL + "test-final-8.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      // this one is for the whole book which uses an alternate article roo
+      mau.addUrl(BASE_URL + "test-final-all.pdf", true, true, xmlHeader); //doesn't matter what content-type
+      
+      cu.setContent(string_input);
+      cu.setContentSize(string_input.length());
+      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+      // setting content (non-pdf) just so the check can find content
+
+      FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+      assertNotEmpty(mdlist);
+      // 10 chapters, but one has no pdf associated
+      // 1 full book
+      assertEquals(10, mdlist.size());
+      
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        log.debug3(mdRecord.ppString(2));
+        // global data should be in each one of the amlist
+        assertEquals(FullBookName, mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals(BookISBN, mdRecord.get(MetadataField.FIELD_ISBN));
+        assertEquals(BookDate, mdRecord.get(MetadataField.FIELD_DATE));
+        //assertEquals(BookAuthors, mdRecord.get(MetadataField.FIELD_AUTHOR));
+        assertEquals(MetadataField.PUBLICATION_TYPE_BOOK, mdRecord.get(MetadataField.FIELD_PUBLICATION_TYPE));
+        // now per-chapter check
+        String btype = mdRecord.get(MetadataField.FIELD_ARTICLE_TYPE);
+        if ((mdRecord.get(MetadataField.FIELD_ACCESS_URL)).contains("test-final-all.pdf")) {
+          assertEquals(MetadataField.ARTICLE_TYPE_BOOKVOLUME, btype); 
+        } else {
+          assertEquals(MetadataField.ARTICLE_TYPE_BOOKCHAPTER, btype);
+        }                
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
+  
+ 
+  
   public void testProceedingsTitles() throws Exception {
     String acro = "ABC";
     String desc = "1st Workshop";
@@ -871,5 +944,5 @@ log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNotEmpty(resultsList);
     
   }
-  
+
 }

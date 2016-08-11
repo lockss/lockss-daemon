@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: ACMXmlSchemaHelper.java 43117 2015-07-10 03:16:05Z alexandraohlson $
  */
 
 /*
@@ -353,13 +353,11 @@ implements SourceXmlSchemaHelper {
     cookMap.put(ACM_doi, MetadataField.FIELD_DOI);    
 
     // ACM_journal_name is used for both/either periodical or proceeding name
-    //cookMap.put(ACM_journal_name, MetadataField.FIELD_PUBLICATION_TITLE);
-    // using deprecated FIELD_JOURNAL_TITLE until updated everywhere
-    cookMap.put(ACM_journal_name, MetadataField.FIELD_JOURNAL_TITLE);
+    cookMap.put(ACM_journal_name, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(ACM_article_title, MetadataField.FIELD_ARTICLE_TITLE);
-    cookMap.put(ACM_article_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+    // the FIELD_PROPRIETARY_IDENTIFIER is for a publisher specified JOURNAL identifier
+    cookMap.put(ACM_journal_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
     cookMap.put(ACM_author, MetadataField.FIELD_AUTHOR);
-    // taking out publisher name - will be added from TDB
     cookMap.put(ACM_publisher_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ACM_art_pubdate, MetadataField.FIELD_DATE);
     // these "urls" are relative filenames - must fill in later

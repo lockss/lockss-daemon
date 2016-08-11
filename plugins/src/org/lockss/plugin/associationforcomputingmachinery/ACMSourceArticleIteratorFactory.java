@@ -50,10 +50,11 @@ public class ACMSourceArticleIteratorFactory
    * acm-released/2012/6dec2011/NEW-PROC-IMMPD11-2072561/NEW-PROC-IMMPD11-2072561.xml
    * exclude:
    * acm-released/2012/nsa_backfiles[_old]/PROC-ICCAD02-774572/PROC-ICCAD02-774572.xml
+   * acm-released/2016/ACM_Books/author/author.xml
    */
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   protected static final String PATTERN_TEMPLATE = 
-    "\"%s%d/(\\d+[^/]+\\d+)/([^/]+-\\d+)/.*\\.xml$\",base_url,year";
+    "\"%s%d/(\\d+[^/]+\\d+|ACM_Books)/([^/]+)/.*\\.xml$\",base_url,year";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
