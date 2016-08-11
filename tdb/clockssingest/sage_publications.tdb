@@ -5239,6 +5239,21 @@
   {
 
     title <
+      name = Canadian Journal of Nursing Research ;
+      issn = 0844-5621 ;
+      eissn = 1705-7051
+    >
+
+      param[base_url] = http://cjn.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < expected ; exists ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 ; >
+
+  }
+
+  {
+
+    title <
       name = Canadian Journal of School Psychology ;
       issn = 0829-5735 ;
       eissn = 2154-3984
