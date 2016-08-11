@@ -99,10 +99,9 @@
     >
 
       param[journal_id] = hindsight
-      comment[continues] = 1948-4984 (1999-2009)
+      comment[continues] = 1948-4984 (1999-2009). This journal starts 2010.
       # content in embargo for at least 12 months. 2014 under embargo as of 8/2016 
 
-      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: Journal of Optemetry History Volume 40 ; 40 ; https://scholarworks.iu.edu/journals/ ; >
       au < ready ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 ; https://scholarworks.iu.edu/journals/ ; >
       au < ready ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 ; https://scholarworks.iu.edu/journals/ ; >
       au < ready ; exists ; 2012 ; 2012 ; Hindsight: Journal of Optemetry History Volume 43 ; 43 ; https://scholarworks.iu.edu/journals/ ; >

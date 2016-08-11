@@ -112,7 +112,7 @@
     
     param[journal_abbr] = mimejournal
 
-    au < exists ; 2003 ; Mime Journal Volume 25 ; 25 >
+    au < exists ; 2003 ; Mime Journal Volume 23 ; 23 >
     au < manifest ; 2013 ; Mime Journal Volume 24 ; 24 >
     au < manifest ; 2014 ; Mime Journal Volume 25 ; 25 >
     
@@ -197,7 +197,7 @@
   
     title <
       name = Humanistic Mathematics Network Journal (HMNJ) ;
-      eissn = 2160-5211
+      eissn = 1065-8297
     >
     # no more content after 2016.
     param[journal_abbr] = hmnj

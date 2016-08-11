@@ -70,10 +70,10 @@
      au < doNotProcess ; doNotProcess ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 ; >
      au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 ; >
      au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 ; >
-     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 ; >
-     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 ; >
-     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 ; >
-     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 ; >
+     au < superseded ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 [superseded] ; 79 ; >
+     au < superseded ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 [superseded] ; 80 ; >
+     au < superseded ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 [superseded] ; 81 ; >
+     au < superseded ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 [superseded] ; 82 ; >
      au < superseded ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 [superseded] ; 83 ; >
      au < superseded ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 [superseded] ; 84 ; >
      au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
@@ -273,9 +273,9 @@
      au < doNotProcess ; doNotProcess ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
-     au < down ; finished ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
-     au < down ; finished ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
-     au < down ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
+     au < superseded ; finished ; 2011 ; Journal of Adult and Continuing Education Volume 17 [superseded] ; 17 ; >
+     au < superseded ; finished ; 2012 ; Journal of Adult and Continuing Education Volume 18 [superseded] ; 18 ; >
+     au < superseded ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 [superseded] ; 19 ; >
      au < doNotProcess ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
    
     }
