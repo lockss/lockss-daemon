@@ -14,7 +14,7 @@
     
     {
     
-      provider = Laser Institute of America    
+      provider = American Institute of Physics    
       plugin = org.lockss.plugin.clockss.avs.ClockssAmericanVacuumSocietySourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/avsjats-released/
       hidden[proxy] = DIRECT
