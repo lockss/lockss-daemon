@@ -106,11 +106,15 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat = ABSTRACT_PATTERN.matcher(url);
-      if (mat.find() && (!url.contains("fulltext-article"))) {
-	return processAbstract(cu, mat);
+      if (mat.find()) {
+        if (!url.contains("fulltext-article")) {
+          return processAbstract(cu, mat);
+        } 
+      } else {
+        // we want to filter out fulltext version (we iterate on the abstract)
+        // but if it failed for any reason, log a warning
+        log.warning("Mismatch between article iterator factory and article iterator: " + url);
       }
-
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
     }
     
