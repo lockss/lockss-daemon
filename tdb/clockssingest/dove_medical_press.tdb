@@ -210,9 +210,9 @@
     au < doNotProcess ; exists ; 2009 ; Clinical Ophthalmology Volume 3 ; 3 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical Ophthalmology Volume 4 ; 4 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Ophthalmology Volume 5 ; 5 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Clinical Ophthalmology Volume 6 ; 6 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Clinical Ophthalmology Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Ophthalmology Volume 7 ; 7 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Clinical Ophthalmology Volume 8 ; 8 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Clinical Ophthalmology Volume 8 ; 8 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Ophthalmology Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Ophthalmology Volume 10 ; 10 ; 2016 ; >
     
@@ -233,7 +233,7 @@
     au < doNotProcess ; exists ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 5 ; 2012 ; >
     au < notReady ; exists ; 2013 ; Nanotechnology, Science and Applications Volume 6 ; 6 ; 2013 ; > #no substance
-    au < ready ; exists ; 2014 ; Nanotechnology, Science and Applications Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Nanotechnology, Science and Applications Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nanotechnology, Science and Applications Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Nanotechnology, Science and Applications Volume 9 ; 9 ; 2016 ; >
     
@@ -296,7 +296,7 @@
     au < doNotProcess ; exists ; 2009 ; OncoTargets and Therapy Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; OncoTargets and Therapy Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; OncoTargets and Therapy Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; OncoTargets and Therapy Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; OncoTargets and Therapy Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; OncoTargets and Therapy Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; OncoTargets and Therapy Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; OncoTargets and Therapy Volume 8 ; 8 ; 2015 ; >
@@ -320,7 +320,7 @@
     au < doNotProcess ; exists ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Medical Devices: Evidence and Research Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Medical Devices: Evidence and Research Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Medical Devices: Evidence and Research Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Medical Devices: Evidence and Research Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Medical Devices: Evidence and Research Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Medical Devices: Evidence and Research Volume 9 ; 9 ; 2016 ; >
     
@@ -339,8 +339,8 @@
     au < doNotProcess ; exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 5 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Advances and Applications in Bioinformatics and Chemistry Volume 6 ; 6 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Advances and Applications in Bioinformatics and Chemistry Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; >
@@ -362,7 +362,7 @@
     au < doNotProcess ; exists ; 2011 ; Stem Cells and Cloning: Advances and Applications Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Stem Cells and Cloning: Advances and Applications Volume 5 ; 5 ; 2012 ; >
     au < ready ; exists ; 2013 ; Stem Cells and Cloning: Advances and Applications Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Stem Cells and Cloning: Advances and Applications Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Stem Cells and Cloning: Advances and Applications Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Stem Cells and Cloning: Advances and Applications Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Stem Cells and Cloning: Advances and Applications Volume 9 ; 9 ; 2016 ; >
     
@@ -381,7 +381,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Journal of Asthma and Allergy Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Asthma and Allergy Volume 6 ; 6 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Journal of Asthma and Allergy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Asthma and Allergy Volume 8 ; 8 ; 2015 ; >
@@ -404,7 +404,7 @@
     au < doNotProcess ; exists ; 2011 ; Infection and Drug Resistance Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Infection and Drug Resistance Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Infection and Drug Resistance Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Infection and Drug Resistance Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Infection and Drug Resistance Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Infection and Drug Resistance Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Infection and Drug Resistance Volume 9 ; 9 ; 2016 ; >
     
@@ -423,7 +423,7 @@
     au < doNotProcess ; exists ; 2010 ; ClinicoEconomics and Outcomes Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; ClinicoEconomics and Outcomes Research Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; ClinicoEconomics and Outcomes Research Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; ClinicoEconomics and Outcomes Research Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; ClinicoEconomics and Outcomes Research Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; ClinicoEconomics and Outcomes Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; ClinicoEconomics and Outcomes Research Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; ClinicoEconomics and Outcomes Research Volume 8 ; 8 ; 2016 ; >
@@ -502,8 +502,8 @@
     au < doNotProcess ; exists ; 2009 ; Clinical, Cosmetic and Investigational Dermatology Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dermatology Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dermatology Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 5 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Clinical, Cosmetic and Investigational Dermatology Volume 6 ; 6 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Clinical, Cosmetic and Investigational Dermatology Volume 6 ; 6 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Clinical, Cosmetic and Investigational Dermatology Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical, Cosmetic and Investigational Dermatology Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical, Cosmetic and Investigational Dermatology Volume 9 ; 9 ; 2016 ; >
@@ -544,7 +544,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Inflammation Research Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Inflammation Research Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Inflammation Research Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Journal of Inflammation Research Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Journal of Inflammation Research Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Inflammation Research Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Journal of Inflammation Research Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Inflammation Research Volume 8 ; 8 ; 2015 ; >
@@ -588,7 +588,7 @@
     au < doNotProcess ; exists ; 2011 ; International Journal of Nephrology and Renovascular Disease Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2012 ; International Journal of Nephrology and Renovascular Disease Volume 5 ; 5 ; 2012 ; >
     au < ready ; exists ; 2013 ; International Journal of Nephrology and Renovascular Disease Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; International Journal of Nephrology and Renovascular Disease Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; International Journal of Nephrology and Renovascular Disease Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Nephrology and Renovascular Disease Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Nephrology and Renovascular Disease Volume 9 ; 9 ; 2016 ; >
     
@@ -609,7 +609,7 @@
     au < doNotProcess ; exists ; 2011 ; Pharmacogenomics and Personalized Medicine Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Pharmacogenomics and Personalized Medicine Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Pharmacogenomics and Personalized Medicine Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Pharmacogenomics and Personalized Medicine Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Pharmacogenomics and Personalized Medicine Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pharmacogenomics and Personalized Medicine Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pharmacogenomics and Personalized Medicine Volume 9 ; 9 ; 2016 ; >
     
@@ -649,9 +649,9 @@
     au < doNotProcess ; exists ; 2009 ; Open Access Surgery Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Open Access Surgery Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Surgery Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Open Access Surgery Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Open Access Surgery Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Open Access Surgery Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Open Access Surgery Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Open Access Surgery Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Surgery Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Surgery Volume 9 ; 9 ; 2016 ; >
     
@@ -670,8 +670,8 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Pain Research Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Pain Research Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Pain Research Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Journal of Pain Research Volume 5 ; 5 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Pain Research Volume 6 ; 6 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Journal of Pain Research Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Journal of Pain Research Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Journal of Pain Research Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Pain Research Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Pain Research Volume 9 ; 9 ; 2016 ; >
@@ -692,8 +692,8 @@
     au < doNotProcess ; exists ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Integrated Blood Pressure Control Volume 5 ; 5 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Integrated Blood Pressure Control Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Integrated Blood Pressure Control Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; Integrated Blood Pressure Control Volume 6 ; 6 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Integrated Blood Pressure Control Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Integrated Blood Pressure Control Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Integrated Blood Pressure Control Volume 9 ; 9 ; 2016 ; >
     
@@ -894,8 +894,8 @@
     au < doNotProcess ; exists ; 2010 ; International Journal of Wine Research Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Journal of Wine Research Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; International Journal of Wine Research Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Wine Research Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; International Journal of Wine Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Wine Research Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Wine Research Volume 8 ; 8 ; 2016 ; >
     
@@ -915,7 +915,7 @@
     au < doNotProcess ; exists ; 2010 ; Psychology Research and Behavior Management Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Psychology Research and Behavior Management Volume 4 ; 4 ; 2011 ; >
     au < ready ; exists ; 2012 ; Psychology Research and Behavior Management Volume 5 ; 5 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Psychology Research and Behavior Management Volume 6 ; 6 ; 2013 ; >
     au < ready ; exists ; 2014 ; Psychology Research and Behavior Management Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Psychology Research and Behavior Management Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Psychology Research and Behavior Management Volume 9 ; 9 ; 2016 ; >
@@ -977,7 +977,7 @@
     au < doNotProcess ; exists ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 5 ; 2012 ; >
     au < ready ; exists ; 2013 ; Risk Management and Healthcare Policy Volume 6 ; 6 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Risk Management and Healthcare Policy Volume 7 ; 7 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Risk Management and Healthcare Policy Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Risk Management and Healthcare Policy Volume 8 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Risk Management and Healthcare Policy Volume 9 ; 9 ; 2016 ; >
     
@@ -1016,8 +1016,8 @@
     au < doNotProcess ; exists ; 2010 ; Cell Health and Cytoskeleton Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Cell Health and Cytoskeleton Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Cell Health and Cytoskeleton Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Cell Health and Cytoskeleton Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Cell Health and Cytoskeleton Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; Cell Health and Cytoskeleton Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Cell Health and Cytoskeleton Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Cell Health and Cytoskeleton Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Cell Health and Cytoskeleton Volume 8 ; 8 ; 2016 ; >
     
@@ -1035,7 +1035,7 @@
     au < doNotProcess ; exists ; 2009 ; Open Access Rheumatology: Research and Reviews Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Open Access Rheumatology: Research and Reviews Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Rheumatology: Research and Reviews Volume 3 ; 3 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 4 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Open Access Rheumatology: Research and Reviews Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Open Access Rheumatology: Research and Reviews Volume 5 ; 5 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Open Access Rheumatology: Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Rheumatology: Research and Reviews Volume 7 ; 7 ; 2015 ; >
@@ -1055,7 +1055,7 @@
     au < doNotProcess ; exists ; 2009 ; Virus Adaptation and Treatment Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Virus Adaptation and Treatment Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Virus Adaptation and Treatment Volume 3 ; 3 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 4 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Virus Adaptation and Treatment Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Virus Adaptation and Treatment Volume 5 ; 5 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Virus Adaptation and Treatment Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Virus Adaptation and Treatment Volume 7 ; 7 ; 2015 ; >
@@ -1077,7 +1077,7 @@
     au < doNotProcess ; exists ; 2011 ; Hepatic Medicine: Evidence and Research Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Hepatic Medicine: Evidence and Research Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Hepatic Medicine: Evidence and Research Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Hepatic Medicine: Evidence and Research Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Hepatic Medicine: Evidence and Research Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Hepatic Medicine: Evidence and Research Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Hepatic Medicine: Evidence and Research Volume 8 ; 8 ; 2016 ; >
     
@@ -1109,8 +1109,8 @@
 
     au < doNotProcess ; exists ; 2010 ; Open Access Journal of Sports Medicine Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Open Access Journal of Sports Medicine Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Open Access Journal of Sports Medicine Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Open Access Journal of Sports Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Journal of Sports Medicine Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Journal of Sports Medicine Volume 7 ; 7 ; 2016 ; >
@@ -1170,7 +1170,7 @@
     au < doNotProcess ; exists ; 2010 ; HIV/AIDS - Research and Palliative Care Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; HIV/AIDS - Research and Palliative Care Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; HIV/AIDS - Research and Palliative Care Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; HIV/AIDS - Research and Palliative Care Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; HIV/AIDS - Research and Palliative Care Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; HIV/AIDS - Research and Palliative Care Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; HIV/AIDS - Research and Palliative Care Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; HIV/AIDS - Research and Palliative Care Volume 8 ; 8 ; 2016 ; >
@@ -1210,7 +1210,7 @@
     au < doNotProcess ; exists ; 2010 ; Nutrition and Dietary Supplements Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Nutrition and Dietary Supplements Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Nutrition and Dietary Supplements Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Nutrition and Dietary Supplements Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Nutrition and Dietary Supplements Volume 5 ; 5 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Nutrition and Dietary Supplements Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nutrition and Dietary Supplements Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Nutrition and Dietary Supplements Volume 8 ; 8 ; 2016 ; >
@@ -1229,7 +1229,7 @@
     au < doNotProcess ; exists ; 2009 ; Orthopedic Research and Reviews Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Orthopedic Research and Reviews Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Orthopedic Research and Reviews Volume 3 ; 3 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 4 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Orthopedic Research and Reviews Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Orthopedic Research and Reviews Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Orthopedic Research and Reviews Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Orthopedic Research and Reviews Volume 7 ; 7 ; 2015 ; >
@@ -1249,7 +1249,7 @@
     au < doNotProcess ; exists ; 2009 ; Nature and Science of Sleep Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Nature and Science of Sleep Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Nature and Science of Sleep Volume 3 ; 3 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 4 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Nature and Science of Sleep Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Nature and Science of Sleep Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Nature and Science of Sleep Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nature and Science of Sleep Volume 7 ; 7 ; 2015 ; >
@@ -1309,7 +1309,7 @@
     au < doNotProcess ; exists ; 2010 ; Clinical Optometry Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Optometry Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Clinical Optometry Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Clinical Optometry Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Clinical Optometry Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Clinical Optometry Volume 6 ; 6 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Clinical Optometry Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Optometry Volume 8 ; 8 ; 2016 ; >
@@ -1328,7 +1328,7 @@
     au < doNotProcess ; exists ; 2009 ; Eye and Brain Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Eye and Brain Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Eye and Brain Volume 3 ; 3 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Eye and Brain Volume 4 ; 4 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Eye and Brain Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Eye and Brain Volume 5 ; 5 ; 2013 ; >
     au < ready ; exists ; 2014 ; Eye and Brain Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Eye and Brain Volume 7 ; 7 ; 2015 ; >
@@ -1349,8 +1349,8 @@
     au < doNotProcess ; exists ; 2010 ; Pathology and Laboratory Medicine International Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Pathology and Laboratory Medicine International Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Pathology and Laboratory Medicine International Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Pathology and Laboratory Medicine International Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Pathology and Laboratory Medicine International Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; Pathology and Laboratory Medicine International Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Pathology and Laboratory Medicine International Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pathology and Laboratory Medicine International Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pathology and Laboratory Medicine International Volume 8 ; 8 ; 2016 ; >
     
@@ -1370,7 +1370,7 @@
     au < doNotProcess ; exists ; 2011 ; Open Access Bioinformatics Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Open Access Bioinformatics Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Open Access Bioinformatics Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Open Access Bioinformatics Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Open Access Bioinformatics Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Bioinformatics Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Bioinformatics Volume 8 ; 8 ; 2016 ; >
     
@@ -1409,7 +1409,7 @@
     au < doNotProcess ; exists ; 2011 ; Lung Cancer: Targets and Therapy Volume 2 ; 2 ; 2011 ; >
     au < ready ; exists ; 2012 ; Lung Cancer: Targets and Therapy Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Lung Cancer: Targets and Therapy Volume 4 ; 4 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Lung Cancer: Targets and Therapy Volume 5 ; 5 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Lung Cancer: Targets and Therapy Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Lung Cancer: Targets and Therapy Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Lung Cancer: Targets and Therapy Volume 7 ; 7 ; 2016 ; >
     
@@ -1426,7 +1426,7 @@
 
     au < doNotProcess ; exists ; 2010 ; Patient Related Outcome Measures Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Patient Related Outcome Measures Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Patient Related Outcome Measures Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Patient Related Outcome Measures Volume 3 ; 3 ; 2012 ; >
     au < ready ; exists ; 2013 ; Patient Related Outcome Measures Volume 4 ; 4 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Patient Related Outcome Measures Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Related Outcome Measures Volume 6 ; 6 ; 2015 ; >
@@ -1446,7 +1446,7 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Blood Medicine Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Blood Medicine Volume 2 ; 2 ; 2011 ; >
     au < ready ; exists ; 2012 ; Journal of Blood Medicine Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Blood Medicine Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Blood Medicine Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Journal of Blood Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Blood Medicine Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Blood Medicine Volume 7 ; 7 ; 2016 ; >
@@ -1510,7 +1510,7 @@
     au < doNotProcess ; exists ; 2010 ; Core Evidence Volume 5 ; 5 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Core Evidence Volume 6 ; 6 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Core Evidence Volume 7 ; 7 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Core Evidence Volume 8 ; 8 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Core Evidence Volume 8 ; 8 ; 2013 ; >
     au < ready ; exists ; 2014 ; Core Evidence Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; Core Evidence Volume 10 ; 10 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Core Evidence Volume 11 ; 11 ; 2016 ; >
@@ -1529,7 +1529,7 @@
     au < doNotProcess ; exists ; 2010 ; Adolescent Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; >
     au < ready ; exists ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Adolescent Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Adolescent Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Adolescent Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Adolescent Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; >
@@ -1549,7 +1549,7 @@
     au < doNotProcess ; exists ; 2010 ; Patient Intelligence Volume 2 ; 2 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Patient Intelligence Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Patient Intelligence Volume 4 ; 4 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Patient Intelligence Volume 5 ; 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Patient Intelligence Volume 5 ; 5 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Patient Intelligence Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Patient Intelligence Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Patient Intelligence Volume 8 ; 8 ; 2016 ; >
@@ -1570,7 +1570,7 @@
     au < doNotProcess ; exists ; 2011 ; Journal of Healthcare Leadership Volume 3 ; 3 ; 2011 ; >
     au < ready ; exists ; 2012 ; Journal of Healthcare Leadership Volume 4 ; 4 ; 2012 ; >
     au < ready ; exists ; 2013 ; Journal of Healthcare Leadership Volume 5 ; 5 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Journal of Healthcare Leadership Volume 6 ; 6 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Journal of Healthcare Leadership Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Healthcare Leadership Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Healthcare Leadership Volume 8 ; 8 ; 2016 ; >
     
@@ -1606,8 +1606,8 @@
 
     au < doNotProcess ; exists ; 2010 ; Research and Reports in Tropical Medicine Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Research and Reports in Tropical Medicine Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Research and Reports in Tropical Medicine Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Research and Reports in Tropical Medicine Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Research and Reports in Tropical Medicine Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Research and Reports in Tropical Medicine Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Tropical Medicine Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Research and Reports in Tropical Medicine Volume 7 ; 7 ; 2016 ; >
@@ -1626,8 +1626,8 @@
     au < doNotProcess ; exists ; 2010 ; Research and Reports in Biology Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Research and Reports in Biology Volume 2 ; 2 ; 2011 ; >
     au < ready ; exists ; 2012 ; Research and Reports in Biology Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Research and Reports in Biology Volume 4 ; 4 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Research and Reports in Biology Volume 5 ; 5 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; Research and Reports in Biology Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Research and Reports in Biology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Biology Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Research and Reports in Biology Volume 7 ; 7 ; 2016 ; >
     
@@ -1644,9 +1644,9 @@
 
     au < doNotProcess ; exists ; 2010 ; Pragmatic and Observational Research Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Pragmatic and Observational Research Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Pragmatic and Observational Research Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Pragmatic and Observational Research Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Pragmatic and Observational Research Volume 4 ; 4 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Pragmatic and Observational Research Volume 5 ; 5 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Pragmatic and Observational Research Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pragmatic and Observational Research Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pragmatic and Observational Research Volume 7 ; 7 ; 2016 ; >
     
@@ -1663,7 +1663,7 @@
 
     au < doNotProcess ; exists ; 2010 ; Research Reports in Clinical Cardiology Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Research Reports in Clinical Cardiology Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Research Reports in Clinical Cardiology Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Research Reports in Clinical Cardiology Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Research Reports in Clinical Cardiology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research Reports in Clinical Cardiology Volume 6 ; 6 ; 2015 ; >
@@ -1683,7 +1683,7 @@
     au < doNotProcess ; exists ; 2011 ; Comparative Effectiveness Research Volume 1 ; 1 ; 2011 ; >
     au < ready ; exists ; 2012 ; Comparative Effectiveness Research Volume 2 ; 2 ; 2012 ; >
     au < ready ; exists ; 2013 ; Comparative Effectiveness Research Volume 3 ; 3 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Comparative Effectiveness Research Volume 4 ; 4 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Comparative Effectiveness Research Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Comparative Effectiveness Research Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Comparative Effectiveness Research Volume 6 ; 6 ; 2016 ; >
    
@@ -1700,9 +1700,9 @@
 
     au < doNotProcess ; exists ; 2010 ; Substance Abuse and Rehabilitation Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Substance Abuse and Rehabilitation Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Substance Abuse and Rehabilitation Volume 3 ; 3 ; 2012 ; >
     au < ready ; exists ; 2013 ; Substance Abuse and Rehabilitation Volume 4 ; 4 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Substance Abuse and Rehabilitation Volume 5 ; 5 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; Substance Abuse and Rehabilitation Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Substance Abuse and Rehabilitation Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Substance Abuse and Rehabilitation Volume 7 ; 7 ; 2016 ; >
     
@@ -1719,7 +1719,7 @@
 
     au < doNotProcess ; exists ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 1 ; 2011 ; >
     au < ready ; exists ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Degenerative Neurological and Neuromuscular Disease Volume 3 ; 3 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Degenerative Neurological and Neuromuscular Disease Volume 3 ; 3 ; 2013 ; >
     au < ready ; exists ; 2014 ; Degenerative Neurological and Neuromuscular Disease Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Degenerative Neurological and Neuromuscular Disease Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Degenerative Neurological and Neuromuscular Disease Volume 6 ; 6 ; 2016 ; >
@@ -1791,8 +1791,8 @@
 
     au < doNotProcess ; exists ; 2010 ; Pediatric Health, Medicine and Therapeutics Volume 1 ; 1 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Pediatric Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Pediatric Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
     au < ready ; exists ; 2014 ; Pediatric Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pediatric Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pediatric Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; >
@@ -1863,9 +1863,9 @@
     param[journal_id] = 107
 
     au < doNotProcess ; exists ; 2011 ; ChronoPhysiology and Therapy Volume 1 ; 1 ; 2011 ; >
-    au < ready ; exists ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; ChronoPhysiology and Therapy Volume 2 ; 2 ; 2012 ; >
     au < ready ; exists ; 2013 ; ChronoPhysiology and Therapy Volume 3 ; 3 ; 2013 ; >
-    au < ready ; exists ; 2014 ; ChronoPhysiology and Therapy Volume 4 ; 4 ; 2014 ; >
+    au < crawling ; exists ; 2014 ; ChronoPhysiology and Therapy Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; ChronoPhysiology and Therapy Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; ChronoPhysiology and Therapy Volume 6 ; 6 ; 2016 ; >
    
@@ -1918,7 +1918,7 @@
     param[journal_id] = 110
 
     au < doNotProcess ; exists ; 2011 ; Research and Reports in Endocrine Disorders Volume 1 ; 1 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Research and Reports in Endocrine Disorders Volume 2 ; 2 ; 2012 ; >
     au < ready ; exists ; 2013 ; Research and Reports in Endocrine Disorders Volume 3 ; 3 ; 2013 ; >
     au < ready ; exists ; 2014 ; Research and Reports in Endocrine Disorders Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research and Reports in Endocrine Disorders Volume 5 ; 5 ; 2015 ; >
