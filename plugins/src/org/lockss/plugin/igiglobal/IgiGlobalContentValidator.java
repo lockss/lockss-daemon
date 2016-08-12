@@ -51,7 +51,7 @@ public class IgiGlobalContentValidator {
       // check the file name for /pdf.aspx
       String url = cu.getUrl();
       if (url.contains(PDF_EXT)) {
-        throw new PdfMimeTypeException(url);
+        throw new ContentValidationException("URL MIME type mismatch");
       }
     }
   }
@@ -70,14 +70,6 @@ public class IgiGlobalContentValidator {
       default:
         return null;
       }
-    }
-  }
-  
-  public static class PdfMimeTypeException extends ContentValidationException {
-    
-    public PdfMimeTypeException(String msg) {
-      // Not including the URL in msg, too long on AU-Test display and url info is displayed on error page
-      super("URL MIME type mismatch");
     }
   }
   
