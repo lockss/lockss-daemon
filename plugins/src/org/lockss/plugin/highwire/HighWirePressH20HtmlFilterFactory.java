@@ -224,8 +224,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       // Beginning and end markers were added, e.g. Royal Society Interface
       HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-start"),
       HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-end"),
-      //sage - toc may have extra div block within this <div class="gca-buttons">
-      HtmlNodeFilters.tagWithAttribute("div", "class", "gca-buttons"),
+      // sage - toc may have extra div block within this <div class="gca-buttons">
+      // oup - <div class="gca-buttons-bulk-cit-toc">
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "gca-buttons"),
       // <div id="trendmd-suggestions"> http://cjasn.asnjournals.org/content/10/1/111.short
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trend"),
       // Extreme filtering for http://heart.bmj.com/content/101/16/1309
@@ -238,6 +239,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "rss"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "responses"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-logo"),
+      
+      // <div class="gca-buttons-bulk-cit-toc">
       
       // found in http://mnrasl.oxfordjournals.org/content/433/1/25.full
       HtmlNodeFilters.tagWithAttribute("ul", "class", "history-list"),
