@@ -240,8 +240,6 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "responses"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-logo"),
       
-      // <div class="gca-buttons-bulk-cit-toc">
-      
       // found in http://mnrasl.oxfordjournals.org/content/433/1/25.full
       HtmlNodeFilters.tagWithAttribute("ul", "class", "history-list"),
       // There is an "Impact factor" but it is only ctext in an H3 tag
