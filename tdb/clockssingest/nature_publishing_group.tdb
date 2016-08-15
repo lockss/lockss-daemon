@@ -844,7 +844,7 @@
     au < finished ; crawling ; 2012 ; Eye Volume 26 ; 2012 ; 26 ; >
     au < crawling ; exists ; 2013 ; Eye Volume 27 ; 2013 ; 27 ; >
     au < finished ; finished ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
+    au < frozen ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
     au < manifest ; exists ; 2016 ; Eye Volume 30 ; 2016 ; 30 ; >
 
 
@@ -1197,7 +1197,7 @@
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
     au < finished ; finished ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 ; >
     au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
+    au < frozen ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
     au < manifest ; exists ; 2016 ; Immunology & Cell Biology Volume 94 ; 2016 ; 94 ; >
   }
 
@@ -1505,7 +1505,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; >
     au < finished ; crawling ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
+    au < frozen ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
     au < manifest ; exists ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; >
 
   }
@@ -1539,7 +1539,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 ; >
     au < finished ; crawling ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 ; >
     au < finished ; crawling ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; >
+    au < frozen ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; >
     au < manifest ; exists ; 2016 ; Journal of Human Hypertension Volume 30 ; 2016 ; 30 ; >
 
   }
@@ -1913,7 +1913,7 @@
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
+    au < frozen ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
     au < manifest ; exists ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; >
 
   }
