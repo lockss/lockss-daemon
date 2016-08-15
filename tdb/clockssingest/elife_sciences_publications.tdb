@@ -19,7 +19,7 @@
       param[base_url] = https://elifesciences.org/
 
       au < crawling ; exists ; 2014 ; eLife January 2014 ; 2014/01 ; >
-      au < testing ; exists ; 2014 ; eLife February 2014 ; 2014/02 ; >
+      au < ready ; exists ; 2014 ; eLife February 2014 ; 2014/02 ; >
       au < crawling ; exists ; 2014 ; eLife March 2014 ; 2014/03 ; >
       au < crawling ; exists ; 2014 ; eLife April 2014 ; 2014/04 ; >
       au < crawling ; exists ; 2014 ; eLife May 2014 ; 2014/05 ; >
@@ -47,9 +47,9 @@
       au < crawling ; exists ; 2016 ; eLife January 2016 ; 2016/01 ; >
       au < crawling ; exists ; 2016 ; eLife February 2016 ; 2016/02 ; >
       au < crawling ; exists ; 2016 ; eLife March 2016 ; 2016/03 ; >
-      au < testing ; exists ; 2016 ; eLife April 2016 ; 2016/04 ; >
-      au < testing ; exists ; 2016 ; eLife May 2016 ; 2016/05 ; >
-      au < expected ; exists ; 2016 ; eLife June 2016 ; 2016/06 ; >
+      au < ready ; exists ; 2016 ; eLife April 2016 ; 2016/04 ; >
+      au < ready ; exists ; 2016 ; eLife May 2016 ; 2016/05 ; >
+      au < manifest ; exists ; 2016 ; eLife June 2016 ; 2016/06 ; >
       au < expected ; exists ; 2016 ; eLife July 2016 ; 2016/07 ; >
       au < expected ; exists ; 2016 ; eLife August 2016 ; 2016/08 ; >
       au < expected ; exists ; 2016 ; eLife September 2016 ; 2016/09 ; >
