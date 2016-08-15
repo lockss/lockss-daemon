@@ -603,7 +603,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Applied Decision Sciences Volume 6 ; 6 ; >
       au < finished ; crawling ; 2014 ; International Journal of Applied Decision Sciences Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; International Journal of Applied Decision Sciences Volume 8 ; 8 ; >
-      au < expected ; exists ; 2016 ; International Journal of Applied Decision Sciences Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Applied Decision Sciences Volume 9 ; 9 ; >
 
     }
 
@@ -756,7 +756,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 ; >
       au < frozen ; exists ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015-2016 ; International Journal of Auditing Technology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2015-2016 ; International Journal of Auditing Technology Volume 3 ; 3 ; >
 
     }
 
@@ -3224,7 +3224,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environmental Engineering Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; International Journal of Environmental Engineering Volume 6 ; 6 ; >
       au < frozen ; exists ; 2015 ; International Journal of Environmental Engineering Volume 7 ; 7 ; >
-      au < expected ; exists ; 2016 ; International Journal of Environmental Engineering Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Environmental Engineering Volume 8 ; 8 ; >
 
     }
 
@@ -4863,7 +4863,7 @@
       param[journal_id] = ijler
 
       au < frozen ; exists ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
 
     }
 
@@ -7583,7 +7583,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Strategic Business Alliances Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Strategic Business Alliances Volume 3 ; 3 ; >
       au < frozen ; exists ; 2015 ; International Journal of Strategic Business Alliances Volume 4 ; 4 ; >
-      au < expected ; exists ; 2016 ; International Journal of Strategic Business Alliances Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Strategic Business Alliances Volume 5 ; 5 ; >
 
     }
 
