@@ -91,6 +91,10 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
 		 getRootUrls(artIter));
   }
 
+  
+  /*
+   * The article iterator has been generalized to also handle books so it is much more permissive now
+   */
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
@@ -98,24 +102,24 @@ public class TestSpringerSourceArticleIteratorFactory extends ArticleIteratorTes
     assertNotMatchesRE(pat, "http://www.wrong.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/1066/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.wrong!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/BodyRef/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/PDF/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.wrong");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/wrong/article.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/wrong/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/wrong=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/wrong=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/wrong=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/wrong=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/DIFF-STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=3/ART=2012_53/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=23/VOL=2012.2/ISU=8/ART=2012_23/BodyRef/PDF/article.pdf");
     assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=2/VOL=2012.3/ISU=2-3/ART=2012_53/BodyRef/PDF/random_article.pdf");
-   }
+    
+    assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/BSE=0304/BOK=978-3-540-35043-9/CHP=10_10.1007BFb0103161/BodyRef/PDF/978-3-540-35043-9_Chapter_10.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/BSE=8913/BOK=978-94-6265-114-2/PRT=1/CHP=7_10.1007978-94-6265-114-2_7/BodyRef/PDF/978-94-6265-114-2_Chapter_7.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/BOK=978-981-10-0886-3/PRT=4/CHP=12_10.1007978-981-10-0886-3_12/BodyRef/PDF/978-981-10-0886-3_Chapter_12.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/BOK=978-981-10-0886-3/CHP=1_10.1007978-981-10-0886-3_1/BodyRef/PDF/978-981-10-0886-3_Chapter_1.pdf");
+    // but not other pdfs
+    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=40273/VOL=2016.34/ISU=9/ART=430/MediaObjects/40273_2016_430_MOESM2_ESM.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/STUFF_07-26-12.zip!/JOU=12919/VOL=2016.10/ISU=S6/ART=6/12919_2016_6_CTS.pdf");
+  }
 
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);

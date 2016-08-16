@@ -34,6 +34,7 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -43,7 +44,17 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   protected static Logger log = Logger.getLogger(SpringerSourceArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
+  // find anyfiles that end in "BodyRef/PDF/XXX.pdf"
+  // We do not know how many levels down because the book/journal might be at various levels
+  // book series
+  //BSE=0304/BOK=978-3-540-35043-9/CHP=10_10.1007BFb0103161/BodyRef/PDF/978-3-540-35043-9_Chapter_10.pdf
+  //BSE=8913/BOK=978-94-6265-114-2/PRT=1/CHP=7_10.1007978-94-6265-114-2_7/BodyRef/PDF/978-94-6265-114-2_Chapter_7.pdf
+  // book
+  //BOK=978-981-10-0886-3/PRT=4/CHP=12_10.1007978-981-10-0886-3_12/BodyRef/PDF/978-981-10-0886-3_Chapter_12.pdf
+  //BOK=978-981-10-0886-3/CHP=1_10.1007978-981-10-0886-3_1/BodyRef/PDF/978-981-10-0886-3_Chapter_1.pdf
+  // journal
+  //JOU=13678/VOL=2012.1/ISU=1/ART=12/BodyRef/PDF/13678_2012_Article_12.pdf
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/[A-Z]+=.*/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
   protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url,year";
  
   @Override
@@ -59,8 +70,9 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   }
   
   protected static class SpringerArticleIterator extends SubTreeArticleIterator {
-	 
-    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+	
+    // break it in to three parts in order to find the corresponding xml.Meta file
+    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/[A-Z]+=.*/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
     
     protected SpringerArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -98,12 +110,20 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
       log.debug3("guessAdditionalFiles metadataCu: " + metadataCu);
       CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
 
+      boolean setMD = false;
       if ((metadataCu != null) && (metadataCu.hasContent())) {
+        setMD = true;
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
         log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
       }
       
       if ((xmlCu != null) && (xmlCu.hasContent())) {
+        // this will be our backup if the ".xml.Meta wasn't there
+        if (!setMD) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
+          log.debug3("setting ROLE_ARTICLE_METADATA: " + xmlCu.getUrl());
+        }
+        // and make it your full-text xml
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
         log.debug3("setting ROLE_FULL_TEXT_HTML: " + xmlCu.getUrl());
       }
@@ -112,6 +132,7 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
 	      throws PluginException {
-	    return new SpringerSourceArticleMetadataExtractor();
+    // the custom ArticleMetadataExtractor wasn't adding unique value over Base... 
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }

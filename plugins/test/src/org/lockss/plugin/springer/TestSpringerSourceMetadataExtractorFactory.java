@@ -115,7 +115,7 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   String goodLanguage = "Language";
   String goodStart = "Start";
   String goodEnd = "End";
-  String hardwiredPublisher = "Springer-Verlag";
+  String hardwiredPublisher = "Springer";
   String genJournalTitle = "UNKNOWN_TITLE/journalId=00238";
     
   String goodContent = 
@@ -424,30 +424,6 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     goodDescription + " </div>\n";
 
 
-  public void testExtractFromEmptyContent() throws Exception {
-      
-    String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
-    MockCachedUrl cu = new MockCachedUrl(url, ssau);
-    cu.setContent(emptyContent);
-    cu.setContentSize(emptyContent.length());
-    
-    FileMetadataExtractor me =
-      new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_DATE));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
-    assertNull(md.get(MetadataField.FIELD_DOI));
-  }
   
   public void testExtractFromBadContent() throws Exception {
       
@@ -463,15 +439,6 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_DATE));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
-    assertNull(md.get(MetadataField.FIELD_DOI));
   }
 
   public void testExtractFromNoTittleIssnEissnJournalIdContent() throws Exception {
@@ -533,7 +500,7 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
     assertEquals(goodStart, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodEnd, md.get(MetadataField.FIELD_END_PAGE));

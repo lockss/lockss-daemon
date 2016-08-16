@@ -38,8 +38,16 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.associationforcomputingmachinery.ACMBooksXmlSchemaHelper;
+import org.lockss.plugin.associationforcomputingmachinery.ACMXmlSchemaHelper;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor;
+import org.lockss.plugin.clockss.markallen.MarkAllenWorksheetXmlSchemaHelper;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.util.*;
@@ -47,6 +55,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections.map.*;
+import org.apache.commons.io.FilenameUtils;
+
 import javax.xml.xpath.XPathExpressionException;
 
 /**
@@ -57,8 +67,11 @@ import javax.xml.xpath.XPathExpressionException;
  */
 
 public class SpringerSourceMetadataExtractorFactory
-  implements FileMetadataExtractorFactory {
+                   extends SourceXmlMetadataExtractorFactory  {
   static Logger log = Logger.getLogger(SpringerSourceMetadataExtractorFactory.class);
+  
+  private static SourceXmlSchemaHelper journalHelper = null;
+  private static SourceXmlSchemaHelper booksHelper = null;
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -67,7 +80,56 @@ public class SpringerSourceMetadataExtractorFactory
   }
   
   public static class SpringerSourceMetadataExtractor
-    implements FileMetadataExtractor {
+         extends SourceXmlMetadataExtractor {
+ 
+    /*
+     * The top node for all schema will be <Publisher>
+     * It's the second node that will determine the type - either
+     * /Publisher/Series or /Publisher/Book for a book chapter
+     *and
+     * /Publisher/Journal for a journal article
+     */
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
+      //look at the top node of the Document to identify the schema
+      Element top_element = xmlDoc.getDocumentElement();
+      String element_name = top_element.getNodeName();
+      NodeList elementChildren = top_element.getChildNodes();
+      
+      log.info("I'm here");
+
+      if ("Publisher".equals(element_name)
+          && elementChildren != null) { 
+        // look at each child until we either run out of children or
+        // find one of "Series", "Book" or "Journal"
+        for (int j = 0; j < elementChildren.getLength(); j++) {
+          Node cnode = elementChildren.item(j);
+          String nodeName = cnode.getNodeName();
+          if ("Book".equals(nodeName) || "Series".equals(nodeName)) {
+            if (booksHelper == null) {
+              booksHelper = new SpringerBookSourceSchemaHelper();
+            }
+            return booksHelper;
+          } else if ("Journal".equals(nodeName)) {
+            if(journalHelper == null) {
+              journalHelper = new SpringerJournalSourceSchemaHelper();
+            }
+            return journalHelper;
+          }
+        }
+      }
+      // the only way you get here is if you could not figure out which
+      // schema to use
+      throw new ShouldNotHappenException("This does not match expected schema");
+    }
+
+    
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
+    }
+        
+    
     
     private Map<String, String> journalTitleMap;
     
@@ -77,103 +139,17 @@ public class SpringerSourceMetadataExtractorFactory
     public SpringerSourceMetadataExtractor() {
       journalTitleMap = new HashMap<String, String>();
     }
-
-	  
-    /** NodeValue for creating value of subfields from AuthorName tag */
-    static private final NodeValue AUTHOR_VALUE = new NodeValue() {
-      @Override
-      public String getValue(Node node) {
-        if (node == null) {
-          return null;
-        }
-        
-        NodeList nameNodes = node.getChildNodes();
-        String givenName = "", familyName = "";
-        for (int k = 0; k < nameNodes.getLength(); k++) {
-          Node nameNode = nameNodes.item(k);
-          if (nameNode.getNodeName().equals("GivenName")) {
-            givenName += nameNode.getTextContent();
-          } else if (nameNode.getNodeName().equals("FamilyName")) {
-            familyName += nameNode.getTextContent();
-          }
-        }
-        return familyName + ", " + givenName;
-      }
-    };
-	    
-    /** NodeValue for creating value of subfields from OnlineDate tag **/
-    static private final NodeValue DATE_VALUE = new NodeValue() {
-      @Override
-      public String getValue(Node node) {
-        if (node == null) {
-          return null;
-        }
-        
-        NodeList nameNodes = node.getChildNodes();
-        String year = null, month = null, day = null;
-        for (int k = 0; k < nameNodes.getLength(); k++) {
-          Node nameNode = nameNodes.item(k);
-          if (nameNode.getNodeName().equals("Year")) {
-            year = nameNode.getTextContent();
-          } else if (nameNode.getNodeName().equals("Month")) {
-            month = nameNode.getTextContent();
-          } else if (nameNode.getNodeName().equals("Day")) {
-            day = nameNode.getTextContent();
-          }
-        }
-        
-        return year + "-" + month + (day != null ? "-" + day : "");
-      }
-    };
-	    
-    /** Map of raw xpath key to node value function */
-    static private final Map<String,XPathValue> nodeMap = 
-        new HashMap<String,XPathValue>();
-    static {
-      // normal journal article schema
-      //nodeMap.put("/Publisher/PublisherInfo/PublisherName", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/JournalInfo/JournalID", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/JournalInfo/JournalTitle", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", DATE_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueCopyright/CopyrightYear", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle/@Language", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleFirstPage", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author/AuthorName", AUTHOR_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/KeywordGroup/Keyword", XmlDomMetadataExtractor.TEXT_VALUE);
-    }
-
-    /** Map of raw xpath key to cooked MetadataField */
-    static private final MultiValueMap xpathMap = new MultiValueMap();
-    static {
-      // normal journal article schema
-      //xpathMap.put("/Publisher/PublisherInfo/PublisherName", MetadataField.FIELD_PUBLISHER);
-      xpathMap.put("/Publisher/Journal/JournalInfo/JournalID", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
-      xpathMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", MetadataField.FIELD_ISSN);
-      xpathMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", MetadataField.FIELD_EISSN);
-      xpathMap.put("/Publisher/Journal/JournalInfo/JournalTitle", MetadataField.FIELD_JOURNAL_TITLE);
-      xpathMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", MetadataField.FIELD_VOLUME);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", MetadataField.FIELD_ISSUE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", MetadataField.FIELD_DATE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueCopyright/CopyrightYear", MetadataField.DC_FIELD_RIGHTS);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI", MetadataField.FIELD_DOI);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle/@Language", MetadataField.DC_FIELD_LANGUAGE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle", MetadataField.FIELD_ARTICLE_TITLE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleFirstPage", MetadataField.FIELD_START_PAGE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage", MetadataField.FIELD_END_PAGE);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author/AuthorName", MetadataField.FIELD_AUTHOR);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para", MetadataField.DC_FIELD_DESCRIPTION);
-      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/KeywordGroup/Keyword", MetadataField.FIELD_KEYWORDS);
-    }
-    
+	   
     /**
+     * 
+     * TODO: This is legacy and I don't think it sticks around between 
+     * XML files so there wouldnt' be any way to keep track of jid-issn-title
+     * information from extraction to extraction 
+     * without creating an ArticleMetadataExtractor and storing it between
+     * emits...
+     * This may have worked back before this was partially integrated with 
+     * the framework - 
+     * 
      * Get the journal ID from from the article metadata. If not set, gets
      * journal id from the URL and adds it to the article metadata.
      *  
@@ -211,7 +187,7 @@ public class SpringerSourceMetadataExtractorFactory
      * @return the journal title or null if not available
      */
     private String getJournalTitle(String url, ArticleMetadata am) {
-      String journalTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
+      String journalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
       String journalId = getJournalId(url, am);
       String issn = am.get(MetadataField.FIELD_ISSN);
       String eissn = am.get(MetadataField.FIELD_EISSN);
@@ -278,7 +254,7 @@ public class SpringerSourceMetadataExtractorFactory
           journalTitle = genTitle;
         }
         if (!StringUtil.isNullString(journalTitle)) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, journalTitle);
         }
         log.debug3("getJournalTitle() journalTitle: " + journalTitle);
       }
@@ -286,56 +262,82 @@ public class SpringerSourceMetadataExtractorFactory
     }
 
     /**
-     * Use XmlMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
-     * 
-     * @param target the MetadataTarget
-     * @param cu the CachedUrl from which to read input
-     * @param emitter the emiter to output the resulting ArticleMetadata
+     * Post-cook process after extraction and cooking....
+     */
+    
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("postEmitProcess for cu: " + cu);
+      // hardwire publisher for board report (look at imprints later)
+      thisAM.put(MetadataField.FIELD_PUBLISHER, "Springer");
+      
+      if (schemaHelper == journalHelper ) {
+        // emit only if journal title exists, otherwise report site error
+        // TODO: legacy - I'm pretty sure this is useless, but to minimize
+        // instability as I add in books, I will leave it in for journals.
+        String journalTitle = getJournalTitle(cu.getUrl(), thisAM);
+        if (!StringUtil.isNullString(journalTitle)) {
+          log.debug3("found or created a journal title");
+        } else {
+          log.siteError("Missing journal title: " + cu.getUrl());
+        }
+      } else {
+        // we are a book
+        String subT = thisAM.getRaw(SpringerBookSourceSchemaHelper.bookSubTitle);  
+        if (subT != null) {
+          StringBuilder title_br = new StringBuilder(thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE));
+          title_br.append(": ");
+          title_br.append(subT);
+          thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE,  title_br.toString());        
+        }
+        subT = thisAM.getRaw(SpringerBookSourceSchemaHelper.chapterSubTitle);  
+        if (subT != null) {
+          StringBuilder title_br = new StringBuilder(thisAM.get(MetadataField.FIELD_ARTICLE_TITLE));
+          title_br.append(": ");
+          title_br.append(subT);
+          thisAM.replace(MetadataField.FIELD_ARTICLE_TITLE,  title_br.toString());        
+        }
+        
+        if (thisAM.get(MetadataField.FIELD_AUTHOR) == null) {
+          // too many option... try a book level info... and if not, then just move on
+          String othergroup = thisAM.getRaw(SpringerBookSourceSchemaHelper.bookAuthorAu);
+          if (othergroup == null) { othergroup = thisAM.getRaw(SpringerBookSourceSchemaHelper.bookAuthorEd);}
+          if (othergroup == null) { othergroup = thisAM.getRaw(SpringerBookSourceSchemaHelper.bookAuthorCo);}
+          if (othergroup != null) {
+            thisAM.put(MetadataField.FIELD_AUTHOR, othergroup);
+          }
+        }
+      }
+
+    }  
+    
+    /* In this case, the filename is the same as the xml filename but
+     * in the BodyRef/PDF/ subdirectory
      */
     @Override
-    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-        throws IOException, PluginException {
-      log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
-      ArticleMetadata am = do_extract(target, cu, emitter);
-      
-      // hardwire publisher for board report (look at imprints later)
-      am.put(MetadataField.FIELD_PUBLISHER, "Springer-Verlag");
-      
-      // emit only if journal title exists, otherwise report site error
-      String journalTitle = getJournalTitle(cu.getUrl(), am);
-      if (!StringUtil.isNullString(journalTitle)) {
-        emitter.emitMetadata(cu, am);
-      } else {
-        log.siteError("Missing journal title: " + cu.getUrl());
-      }
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+      /*
+       * Returning null indicates that we do not need to check for existence
+       * of the pdf that maps to this metadata. 
+       * This is because our article iterator actually started by finding the PDF
+       * and from that calculated the XML. So we already know the PDF exists
+       * and will get set to the ACCESS_URL and FULL_TEXT_PDF
+       */
+      return null;
+/*
+      String xml_url = cu.getUrl();
+      String cuBase = FilenameUtils.getFullPath(xml_url);
+      String filenameValue = FilenameUtils.getBaseName(xml_url);
+      ArrayList<String> returnList = new ArrayList<String>();
+      log.debug3("looking for filename of: " + cuBase + "BodyRef/PDF/" + filenameValue + ".pdf");
+      returnList.add(cuBase + "BodyRef/PDF/" + filenameValue + ".pdf");
+      return returnList;
+*/      
     }
 	    
-    /**
-     * Use XmlMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
-     * 
-     * @param target the MetadataTarget
-     * @param in the Xml input stream to parse
-     * @param emitter the emitter to output the resulting ArticleMetadata
-     */
-    public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
-        throws IOException, PluginException {
-      try {
-        ArticleMetadata am; 
-        try {
-          am = new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
-        } finally {
-          AuUtil.safeRelease(cu);
-        }
-        am.cook(xpathMap);
-        return am;
-      } catch (XPathExpressionException ex) {
-        PluginException ex2 = new PluginException("Error parsing XPaths");
-        ex2.initCause(ex);
-        throw ex2;
-      }
-    }
 	  
   } // SpringerSourceMetadataExtractor
   
