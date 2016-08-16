@@ -30,8 +30,8 @@
   {
   
     title <
-      name = Aswan Heart Centre: Science and Practice Series ;
-      eissn = 2220-2730
+      name = Global Cardiology Science and Practice ;
+      eissn = 2305-7823
     >
     
     {
@@ -48,11 +48,11 @@
       param[journal_id] = gcsp
  
       au < doNotProcess ; doNotProcess ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 ; >
-      au < frozen ; crawling ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 ; 2013 ; > 
-      au < finished ; finished ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 ; > 
-      au < frozen ; exists ; 2015 ; Aswan Heart Centre: Science and Practice Series Volume 2015 ; 2015 ; > 
-      au < expected ; exists ; 2016 ; Aswan Heart Centre: Science and Practice Series Volume 2016 ; 2016 ; > 
+      au < frozen ; exists ; 2012 ; Global Cardiology Science and Practice Volume 2012 ; 2012 ; >
+      au < frozen ; crawling ; 2013 ; Global Cardiology Science and Practice Volume 2013 ; 2013 ; > 
+      au < finished ; finished ; 2014 ; Global Cardiology Science and Practice Volume 2014 ; 2014 ; > 
+      au < frozen ; exists ; 2015 ; Global Cardiology Science and Practice Volume 2015 ; 2015 ; > 
+      au < expected ; exists ; 2016 ; Global Cardiology Science and Practice Volume 2016 ; 2016 ; > 
       
     }
   }
@@ -107,7 +107,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2015 ; Contemporary Islamic Studies Volume 2015 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Contemporary Islamic Studies Volume 2015 ; 2015 ; >
 
     }
   }
@@ -126,6 +126,20 @@
     au < finished ; finished ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; DIFI Family Research and Proceedings Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Engineering Education Letters ;
+      eissn = 2310-516X
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = eel
+
+    au < exists ; exists ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 ; >
 
   }
 
@@ -171,6 +185,20 @@
   {
   
     title <
+      name = International Journal for Undergraduate Research - Science, Engineering & Technology ;
+      eissn = 2227-1929
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = ijurset
+
+    au < expected ; exists ; 2016 ; International Journal for Undergraduate Research - Science, Engineering & Technology Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+  
+    title <
       name = Journal of Emergency Medicine, Trauma and Acute Care ;
       eissn = 1999-7086
     >
@@ -183,6 +211,21 @@
     au < finished ; finished ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 ; >
     au < manifest ; exists ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association ;
+      eissn = 2311-8148
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = messa
+
+    au < exists ; exists ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 ; >
+    au < exists ; exists ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 ; >
 
   }
 

@@ -27,18 +27,20 @@
   {
   
     title <
-      name = Aswan Heart Centre: Science and Practice Series ;
-      eissn = 2220-2730 ;
-      comment = journal id changed from ahcsps to gcsp starting in 2012
+      name = Global Cardiology Science and Practice  ;
+      eissn = 2305-7823
     >
     
+    # journal id changed from ahcsps to gcsp starting in 2012
+    # formerly Aswan Heart Centre: Science and Practice Series. 2220-2730
     param[journal_id] = gcsp
  
     au < released ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-    au < released ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 ; 2013 >
-    au < released ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 >
-    au < ready ; 2015 ; Aswan Heart Centre: Science and Practice Series Volume 2015 ; 2015 >
+    au < released ; 2012 ; Global Cardiology Science and Practice Volume 2012 ; 2012 >
+    au < manifest ; 2013 ; Global Cardiology Science and Practice Volume 2013 ; 2013 >
+    au < released ; 2014 ; Global Cardiology Science and Practice Volume 2014 ; 2014 >
+    au < ready ; 2015 ; Global Cardiology Science and Practice Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Global Cardiology Science and Practice Volume 2016 ; 2016 >
 
   }
 
@@ -57,6 +59,7 @@
     au < ready ; 2013 ; Avicenna Volume 2013 ; 2013 >
     au < released ; 2014 ; Avicenna Volume 2014 ; 2014 >
     au < ready ; 2015 ; Avicenna Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Avicenna Volume 2016 ; 2016 >
 
   }
 
@@ -87,6 +90,20 @@
     au < ready ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
     au < released ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
     au < ready ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 >
+    au < expected ; 2016 ; DIFI Family Research and Proceedings Volume 2016 ; 2016 >
+
+  }
+
+  {
+  
+    title <
+      name = Engineering Education Letters ;
+      eissn = 2310-516X
+    >
+    
+    param[journal_id] = eel
+
+    au < exists ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 >
 
   }
 
@@ -110,6 +127,19 @@
   {
   
     title <
+      name = International Journal for Undergraduate Research - Science, Engineering & Technology ;
+      eissn = 2227-1929
+    >
+    
+    param[journal_id] = ijurset
+
+    au < expected ; 2016 ; International Journal for Undergraduate Research - Science, Engineering & Technology Volume 2016 ; 2016 >
+
+  }
+
+  {
+  
+    title <
       name = International Review of Law ;
       eissn = 2223-859X
     >
@@ -122,6 +152,7 @@
     au < exists ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence >
     au < released ; 2014 ; International Review of Law Volume 2014 ; 2014 >
     au < ready ; 2015 ; International Review of Law Volume 2015 ; 2015 >
+    au < expected ; 2016 ; International Review of Law Volume 2016 ; 2016 >
 
   }
 
@@ -138,6 +169,21 @@
     au < released ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
     au < released ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
     au < ready ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 >
+    au < exists ; 2016 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2016 ; 2016 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association ;
+      eissn = 2311-8148
+    >
+    
+    param[journal_id] = messa
+
+    au < exists ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 >
+    au < exists ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 >
 
   }
 
@@ -152,6 +198,7 @@
 
     au < released ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
     au < ready ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Local and Global Health Perspectives Volume 2016 ; 2016 >
 
   }
 
@@ -168,6 +215,7 @@
     au < released ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
     au < released ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
     au < ready ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Local and Global Health Science Volume 2016 ; 2016 >
 
   }
 
@@ -188,6 +236,7 @@
     au < released ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 ; 2013 >
     au < released ; 2014 ; Near and Middle Eastern Journal of Research in Education Volume 2014 ; 2014 >
     au < ready ; 2015 ; Near and Middle Eastern Journal of Research in Education Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Near and Middle Eastern Journal of Research in Education Volume 2016 ; 2016 >
 
   }
 
@@ -253,6 +302,7 @@
     au < released ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 >
     au < ready ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 >
     au < ready ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Qatar Medical Journal Volume 2016 ; 2016 >
 
   }
 
@@ -269,6 +319,7 @@
     au < ready ; 2013 ; QScience Connect Volume 2013 ; 2013 >
     au < ready ; 2014 ; QScience Connect Volume 2014 ; 2014 >
     au < ready ; 2015 ; QScience Connect Volume 2015 ; 2015 >
+    au < expected ; 2016 ; QScience Connect Volume 2016 ; 2016 >
      
   }
 
@@ -286,6 +337,7 @@
     au < ready ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
     au < released ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
     au < ready ; 2015 ; QScience Proceedings Volume 2015 ; 2015 >
+    au < expected ; 2016 ; QScience Proceedings Volume 2016 ; 2016 >
 
   }
 
@@ -301,6 +353,7 @@
     au < ready ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 >
     au < ready ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 >
     au < ready ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Religions: A Scholarly Journal Volume 2016 ; 2016 >
 
   }
 
@@ -318,7 +371,7 @@
     au < manifest ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
     au < manifest ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
     au < exists ; 2012 ; Sustainable Technologies, Systems and Policies Volume CCS+Workshop ; CCS+Workshop >
-         
+
   }
 
   {
@@ -332,6 +385,7 @@
 
     au < released ; 2014 ; Tasmeem Volume 2014 ; 2014 >
     au < ready ; 2015 ; Tasmeem Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Tasmeem Volume 2016 ; 2016 >
 
   }
 
