@@ -151,7 +151,7 @@
 
     param[base_url] = http://www.eht-journal.net/
     param[journal_id] = ehtj
-    # vol. 4 includes Supplements 1
+    # vol. 4 includes Supplements 1. Discontinued. Last article published in 2015.
 
     au < finished ; finished ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 ; >
     au < finished ; finished ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 ; >
@@ -160,8 +160,7 @@
     au < finished ; finished ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Emerging Health Threats Journal [including Supplements] Volume 9 ; 9 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 ; 2015 ; >
 
   } 
     
