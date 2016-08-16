@@ -77,7 +77,10 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtm
       // download of image now seems to be ppt slides which can cause hash issues
       // and are currently causing 500 errors. Just dont' collect
       HtmlNodeFilters.tagWithAttribute("a",  "id", "pptLink"),
-      
+      // the references section on the full text and abstract page is not well
+      // identified but it contains direct links that lead to overcrawling when
+      // from the same site
+      HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "ref(g)?[0-9]+"),
     };
     @Override
     public InputStream createFilteredInputStream(ArchivalUnit au,

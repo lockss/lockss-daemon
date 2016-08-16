@@ -143,8 +143,6 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           "<li></li>" +
           "</ul><!-- abstract content -->" +
           "<h2 id=\"ttl12\">References</h2><ul class=\"no-bullet no-padding\">" +
-          "<li id=\"ref1\"><span class=\"numbering\"></span>" +
-          "</li>" +
           "</ul>";
 
   private static final String articleNav=
@@ -194,6 +192,25 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>foo";
   private static final String rightSidebarAdsFiltered="foo";
+  
+  private static final String referencesWithLinks =
+      "<div>" +
+          "<h2 id=\"ttl6\">References</h2>" +
+          "<ul class=\"no-bullet no-padding\">" +
+          "<li id=\"refg1\">" +
+          "<span class=\"numbering\"> </span>" +
+          "<div id=\"ref1\" style=\"display:inline\">Foo</div>" +
+          "</li> " +
+          "<li id=\"refg6\"><span class=\"numbering\"> </span><div id=\"ref6\" style=\"display:inline\"> " +
+          " 993-1001 <a href=\"/doi/10.1139/x99-030\">Link" +
+          "</a></div></li></ul>" +
+          "</div>";
+  private static final String referencesFiltered=
+      "<div>" +
+          "<h2 id=\"ttl6\">References</h2>" +
+          "<ul class=\"no-bullet no-padding\">" +
+          " </ul>" +
+          "</div>";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -248,6 +265,10 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
         new StringInputStream(rightSidebarAds), Constants.DEFAULT_ENCODING);
     assertEquals(rightSidebarAdsFiltered, StringUtil.fromInputStream(actIn1));
 
+    actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(referencesWithLinks), Constants.DEFAULT_ENCODING);
+    assertEquals(referencesFiltered, StringUtil.fromInputStream(actIn1));
+    
 
   }
 
