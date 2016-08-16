@@ -131,7 +131,8 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
     // EU-style cookies disclosure banner
     HtmlNodeFilters.tagWithAttribute("div", "id", "cookiesAlert"), // http://ojs.statsbiblioteket.dk/
     //Stats
-    HtmlNodeFilters.tagWithAttribute("div", "class", "stat-number"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "stat-"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "article-stats"),
   };
   
   @Override
