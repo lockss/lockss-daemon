@@ -164,6 +164,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "AAPDrupalPlugin" ||
+           $plugin eq "AHADrupalPlugin" ||
            $plugin eq "APSDrupalPlugin" ||
            $plugin eq "ARFDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
