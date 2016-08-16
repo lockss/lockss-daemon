@@ -3453,10 +3453,10 @@
 
       param[base_url] = http://apn.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #moved to UNLV
 
       au < finished ; crawling ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 ; >
 
   }
 

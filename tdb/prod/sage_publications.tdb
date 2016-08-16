@@ -3825,10 +3825,10 @@
       param[base_url] = http://apn.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
+      #moved to UNLV
 
-      au < ready ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < ready ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
-      au < expected ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < doNotProcess ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
 
   }
 
