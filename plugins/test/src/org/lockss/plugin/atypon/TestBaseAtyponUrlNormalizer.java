@@ -87,6 +87,12 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
 
     assertEquals("http://www.ajronline.org/action/downloadCitation?doi=10.2214%2FAJR.12.10039&format=ris&include=cit",
         normalizer.normalizeUrl("http://www.ajronline.org/action/downloadCitation?direct=true&doi=10.2214%2FAJR.12.10039&downloadFileName=arrs_ajr201_1204&include=cit&submit=Download+publication+citation+data", null));
+
+    assertEquals("http://www.euppublishing.com/toc/ajicl/23/1",
+        normalizer.normalizeUrl("http://www.euppublishing.com/toc/ajicl/23/1?widget=aboutthisjournal", null));
+    assertEquals("http://www.euppublishing.com/toc/ajicl/23/1",
+        normalizer.normalizeUrl("http://www.euppublishing.com/toc/ajicl/23/1?widget=journaleditorialboard", null));
+
   }
   
   public void testCssArgumentNormalizer() throws Exception {

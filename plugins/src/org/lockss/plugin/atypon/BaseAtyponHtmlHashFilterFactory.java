@@ -114,6 +114,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
     // these are only on issue toc pages
     HtmlNodeFilters.tagWithAttributeRegex("img", "class", "^accessIcon"),
+    // first seen in Edinburgh august 2016 toc
+    HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
     // Contains the changeable list of citations
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     // some size notes are within an identifying span

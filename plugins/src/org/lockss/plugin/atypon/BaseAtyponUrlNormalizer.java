@@ -44,6 +44,8 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       Logger.getLogger(BaseAtyponUrlNormalizer.class);
   protected static final String SUFFIX = "?cookieSet=1";
   protected static final String BEAN_SUFFIX = "?queryID=%24%7BresultBean.queryID%7D";
+  // on TOC used as anchor...eg http://www.euppublishing.com/toc/ajicl/23/1?widget=aboutthisjournal
+  protected static final String WIDGET_SUFFIX = "?widget=";  
   protected static final Pattern HASH_ARG_PATTERN = Pattern.compile("(\\.css|js)\\?\\d+$");
   protected static final String  NO_ARG_REPLACEMENT = "";
 
@@ -167,6 +169,7 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
     if (qmark >= 0) {
       url = StringUtils.substringBeforeLast(url, BEAN_SUFFIX);
       url = StringUtils.substringBeforeLast(url, SUFFIX);
+      url = StringUtils.substringBeforeLast(url, WIDGET_SUFFIX);
     }
     return url;
   }

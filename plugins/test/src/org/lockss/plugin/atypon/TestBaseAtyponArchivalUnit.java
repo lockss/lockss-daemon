@@ -65,13 +65,13 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   static final String baseRepairList[] = 
     {
-    "://[^/]+/(templates/jsp|(css|img|js)Jawr|sda)/",
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
     "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     };
 
   static final String bookRepairList[] = 
     {
-    "://[^/]+/(templates/jsp|(css|img|js)Jawr|sda)/",
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
     "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     };
 
@@ -419,7 +419,11 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/templates/jsp/images/sfxbutton.gif",
         "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
         "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
-        "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
+        "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css",
+        "http://www.emeraldinsight.com/pb-assets/global-images/journals-blog-back.png",
+        "http://www.emeraldinsight.com/pb-assets/icons/graphics.png",
+        "http://www.emeraldinsight.com/resources/page-builder/newimg/playPause.gif",
+        "http://www.emeraldinsight.com/wro/product.css");
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
      Matcher m0, m1;
