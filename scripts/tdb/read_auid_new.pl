@@ -311,6 +311,31 @@ while (my $line = <>) {
       }
       sleep(5);
 
+  } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
+      $url = sprintf("%slockss/year/%d/",
+          $param{base_url}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+              if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+                  $vol_title = $1;
+              }
+              if ($man_contents =~ m/\/articles\//) {
+                  $result = "Manifest";
+              } else {
+                  $result = "--NO_CONT--";
+              }
+          } else {
+              $result = "--NO_TAG--";
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(5);
+
   } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
       $url = sprintf("%slockss/year/%d/",
           $param{base_url}, $param{year});
