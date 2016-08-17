@@ -329,7 +329,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://ajar.arena-architecture.eu/
 
-      au < expected ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
 
   }
 
@@ -344,32 +344,32 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.archaeologybulletin.org/
 
-      au < exists ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; >
-      au < exists ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; >
-      au < exists ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; >
-      au < exists ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; >
-      au < exists ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
 
   }
 
@@ -383,7 +383,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
 
-      au < expected ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
 
   }
 
@@ -398,20 +398,20 @@
       param[base_url] = http://datascience.codata.org/
 
       au < exists ; exists ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
       au < exists ; exists ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -426,7 +426,7 @@
       param[base_url] = http://www.glocality.eu/
 
       au < ready ; exists ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -442,7 +442,7 @@
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
 
   }
 
@@ -486,7 +486,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.rips-irsp.com/
 
-      au < expected ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
 
   }
 
@@ -500,11 +500,11 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.jcircadianrhythms.com/
 
-      au < exists ; exists ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; >
       au < doNotProcess ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; >
       au < doNotProcess ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; >
       au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; >
@@ -513,7 +513,7 @@
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
 
@@ -527,13 +527,13 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.jcms-journal.com/
 
-      au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; 2 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; >
-      au < exists ; exists ; 1998 ; 3 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 4 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 2 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 3 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 4 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; >
       au < exists ; exists ; 2000 ; 5 ; Journal of Conservation and Museum Studies Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; 6 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; 7 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2001 ; 6 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 7 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; >
       au < exists ; exists ; 2003 ; 8 ; Journal of Conservation and Museum Studies Volume 2003 ; 2003 ; >
       au < exists ; exists ; 2004 ; 9 ; Journal of Conservation and Museum Studies Volume 2004 ; 2004 ; >
       au < exists ; exists ; 2005 ; 10 ; Journal of Conservation and Museum Studies Volume 2005 ; 2005 ; >
@@ -547,7 +547,7 @@
       au < doNotProcess ; exists ; 2013 ; 18 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 19 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
 
   }
 
@@ -561,14 +561,14 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://jeps.efpsa.org/
 
-      au < exists ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
       au < exists ; exists ; 2011 ; 3 ; Journal of European Psychology Students Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 4 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
 
   }
 
@@ -614,17 +614,17 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.jmolecularsignaling.com/
 
-      au < exists ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
   }
 
@@ -642,7 +642,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -657,9 +657,9 @@
       param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < exists ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -674,7 +674,7 @@
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
       au < ready ; exists ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -691,7 +691,7 @@
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -723,7 +723,7 @@
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
 
   }
 
@@ -739,7 +739,7 @@
       param[base_url] = http://jpl.letras.ulisboa.pt/
 
       au < ready ; exists ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
 
   }
 
@@ -753,13 +753,13 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.jbsr.be/
 
-      au < exists ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; >
 
   }
 
@@ -773,7 +773,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.journal-labphon.org/
 
-      au < expected ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; >
 
   }
 
@@ -787,7 +787,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.mahkuscript.com/
 
-      au < expected ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; >
 
   }
 
@@ -803,7 +803,7 @@
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
 
   }
 
@@ -818,7 +818,7 @@
       param[base_url] = http://www.openquaternary.com/
 
       au < ready ; exists ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
 
   }
 
@@ -832,33 +832,33 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.pia-journal.co.uk/
 
-      au < exists ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
-      au < exists ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; >
-      au < exists ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; >
-      au < exists ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; >
-      au < exists ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; >
-      au < exists ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
       au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
 
   }
 
@@ -873,13 +873,13 @@
       param[base_url] = http://www.presentpasts.info/
 
       au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
 
   }
 
@@ -893,18 +893,18 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.psychologicabelgica.com/
 
-      au < exists ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
 
   }
 
@@ -922,7 +922,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
 
   }
 
@@ -940,7 +940,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
 
   }
 
@@ -954,13 +954,13 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.utrechtjournal.org/
 
-      au < exists ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
 
   }
 
@@ -986,11 +986,11 @@
       comment[publisher] = United Kingdom Serials Group
       param[base_url] = http://insights.uksg.org/
 
-      au < exists ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -1005,30 +1005,30 @@
       comment[publisher] = United Kingdom Serials Group
       param[base_url] = http://serials.uksg.org/
 
-      au < exists ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; >
       au < exists ; exists ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; >
       au < exists ; exists ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; >
       au < exists ; exists ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; >
       au < exists ; exists ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; >
       au < exists ; exists ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; >
       au < exists ; exists ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; >
-      au < exists ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; >
-      au < exists ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; >
-      au < exists ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; >
       au < exists ; exists ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; >
       au < exists ; exists ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
 
   }
 
@@ -1054,21 +1054,21 @@
       comment[publisher] = University of Westminster Press
       param[base_url] = http://www.entsportslawjournal.com/
 
-      au < exists ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
       au < exists ; exists ; 2004 ; 3 ; Entertainment and Sports Law Journal Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 4 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 5 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 6 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 7 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 8 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; >
-      au < exists ; exists ; 2010 ; 9 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; 10 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; 11 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 12 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2005 ; 4 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 5 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 6 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 7 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 8 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 9 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 10 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 11 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 12 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 15 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 15 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
 
   }
 
