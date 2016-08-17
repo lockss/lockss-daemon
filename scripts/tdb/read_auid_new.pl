@@ -329,7 +329,7 @@ while (my $line = <>) {
                   $vol_title = $1;
               }
               my $man_contents = $resp->content;
-              if (defined($man_contents) && ($man_contents =~ m/\($param{year}\)\s*<\/a>/)) {
+              if (defined($man_contents) && ($man_contents =~ m/\/articles\//)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
