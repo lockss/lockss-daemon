@@ -312,24 +312,24 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
-      $url = sprintf("%sabout",
-          $param{base_url});
+      $url = sprintf("%slockss/year/%d/",
+          $param{base_url}, $param{year});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
-      $url_p = sprintf("%slockss/year/%d/",
-          $param{base_url}, $param{year});
+      $url_p = sprintf("%sabout",
+          $param{base_url});
       $man_url_p = uri_unescape($url_p);
       my $req_p = HTTP::Request->new(GET, $man_url_p);
       my $resp_p = $ua->request($req_p);
       if ($resp->is_success) {
-          my $man_contents = $resp->content;
-          if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-              if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          my $man_contents_p = $resp_p->content;
+          if (defined($man_contents_p) && ($man_contents_p =~ m/$clockss_tag/)) {
+              if ($man_contents_p =~ m/<title>\s*(.*)\s*<\/title>/si) {
                   $vol_title = $1;
               }
-              my $man_contents_p = $resp_p->content;
-              if (defined($man_contents_p) && ($man_contents_p =~ m/\($param{year}\)\s*<\/a>/)) {
+              my $man_contents = $resp->content;
+              if (defined($man_contents) && ($man_contents =~ m/\($param{year}\)\s*<\/a>/)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
