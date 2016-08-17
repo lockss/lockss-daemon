@@ -471,7 +471,7 @@
     
     param[journal_id] = ije
 
-    au < deepCrawl ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; >
     au < frozen ; exists ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; >
     au < manifest ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; >
 
@@ -559,7 +559,7 @@
     
     param[journal_id] = mmt
 
-    au < deepCrawl ; exists ; 2014 ; Melanoma Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2014 ; Melanoma Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 2015 ; Melanoma Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 2016 ; Melanoma Management Volume 3 ; 3 ; >
 
