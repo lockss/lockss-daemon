@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,59 +32,46 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.georgthiemeverlag;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
-import org.apache.pdfbox.exceptions.CryptographyException;
-import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDDocumentInformation;
-import org.lockss.filter.pdf.PdfTransform;
+import org.apache.pdfbox.pdmodel.*;
 import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
-import org.lockss.pdf.pdfbox.PdfBoxDocument;
-import org.lockss.pdf.pdfbox.PdfBoxDocumentFactory;
+import org.lockss.pdf.pdfbox.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.IOUtil;
+import org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfFilterFactory.GtvPdfDocumentFactory.GtvPdfBoxDocument;
 import org.lockss.util.Logger;
 
 public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
 
-  private static final String PDFDATE = "pdfDate";
-  private static final String PDFUSER = "pdfUser";
-  
-  private static final PdfDocumentFactory factory = new PdfBoxDocumentFactory() {
-    @Override
-    public PdfDocument parse(InputStream pdfInputStream) 
-        throws IOException, PdfCryptographyException, PdfException {
-      try {
-        // Parse the input stream
-        PDFParser pdfParser = new PDFParser(pdfInputStream);
-        pdfParser.parse(); // Probably closes the input stream
-        PDDocument pdDocument = pdfParser.getPDDocument();
-        processAfterParse(pdDocument);
-        return new GTVPdfBoxDocument(pdDocument);
+  /** @since 1.70.3 */
+  protected static class GtvPdfDocumentFactory extends PdfBoxDocumentFactory {
+   
+    /** @since 1.70.3 */
+    protected static class GtvPdfBoxDocument extends PdfBoxDocument {
+      public static final String PDFDATE = "pdfDate";
+      public static final String PDFUSER = "pdfUser";
+      public GtvPdfBoxDocument(PdfBoxDocumentFactory pdfBoxDocumentFactory, PDDocument pdDocument) {
+        super(pdfBoxDocumentFactory, pdDocument);
       }
-      catch (CryptographyException ce) {
-        throw new PdfCryptographyException(ce);
-      }
-      catch (IOException ioe) {
-        throw new PdfException(ioe);
-      }
-      finally {
-        // PDFBox normally closes the input stream, but just in case
-        IOUtil.safeClose(pdfInputStream);
+      public PDDocumentInformation getPdDocumentInformation() {
+        return pdDocument.getDocumentInformation();
       }
     }
-  };
+    
+    @Override
+    public PdfBoxDocument makeDocument(PdfDocumentFactory pdfDocumentFactory, Object pdfDocumentObject) throws PdfException {
+      return new GtvPdfBoxDocument(this, (PDDocument)pdfDocumentObject);
+    }
+    
+  }
   
   public GeorgThiemeVerlagPdfFilterFactory() {
-    super(factory);
+    super(new GtvPdfDocumentFactory());
   }
   
   public GeorgThiemeVerlagPdfFilterFactory(PdfDocumentFactory pdfDocumentFactory) {
-    super(factory);
+    super(new GtvPdfDocumentFactory());
   }
   
   private static final Logger log = Logger.getLogger(GeorgThiemeVerlagPdfFilterFactory.class);
@@ -93,19 +80,15 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    
     pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);
     pdfDocument.unsetMetadata();
-    if (pdfDocument instanceof GTVPdfBoxDocument) {
-      PDDocumentInformation pdDocInfo = ((GTVPdfBoxDocument)pdfDocument).
-          getPdDocument().getDocumentInformation();
-      if (pdDocInfo.getCustomMetadataValue(PDFDATE) != null) {
-        pdDocInfo.setCustomMetadataValue(PDFDATE, null);
-      }
-      if (pdDocInfo.getCustomMetadataValue(PDFUSER) != null) {
-        pdDocInfo.setCustomMetadataValue(PDFUSER, null);
-      }
+    PDDocumentInformation pdDocInfo = ((GtvPdfBoxDocument)pdfDocument).getPdDocumentInformation();
+    if (pdDocInfo.getCustomMetadataValue(GtvPdfBoxDocument.PDFDATE) != null) {
+      pdDocInfo.setCustomMetadataValue(GtvPdfBoxDocument.PDFDATE, null);
+    }
+    if (pdDocInfo.getCustomMetadataValue(GtvPdfBoxDocument.PDFUSER) != null) {
+      pdDocInfo.setCustomMetadataValue(GtvPdfBoxDocument.PDFUSER, null);
     }
     
     PdfStateMachineWorker worker = new PdfStateMachineWorker();
@@ -163,17 +146,6 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       }
     }
     
-  }
-}
-
-class GTVPdfBoxDocument extends PdfBoxDocument {
-  
-  protected GTVPdfBoxDocument(PDDocument pdDocument) {
-    super(pdDocument);
-  }
-
-  public PDDocument getPdDocument() {
-    return pdDocument;
   }
   
 }
