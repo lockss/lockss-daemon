@@ -311,6 +311,25 @@ while (my $line = <>) {
       }
       sleep(5);
 
+  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
+      $url = sprintf("%sabout",
+      $param{base_url});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+              #$vol_title = $param{collection_id};
+              $result = "Manifest"
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(5);
+
   } elsif ($plugin eq "BePressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html",
             $param{base_url}, $param{journal_abbr}, $param{volume});
