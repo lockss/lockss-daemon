@@ -36,8 +36,7 @@ import java.util.*;
 import java.io.*;
 import java.security.*;
 import java.security.cert.*;
-
-import sun.security.x509.*;
+import java.lang.reflect.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -754,6 +753,134 @@ public class KeyStoreUtil {
       log.debug("end of key store for "+ domainNames[i]);
     } catch (Exception ex) {
       log.error("listKeyStore() threw " + ex);
+    }
+  }
+
+  // Quick fix for Java 1.7.0_111.  Wrappers for CertAndKeyGen and X500Name
+  // which dispatch to whichever of sun.security.x509 or
+  // sun.security.tools.keytool exists at runtime.
+
+  static final String PKG_NAME_1 = "sun.security.x509.";
+  static final String PKG_NAME_2 = "sun.security.tools.keytool.";
+  static final String CertAndKeyGenName = "CertAndKeyGen";
+  static final String X500NameName = "X500Name";
+
+  static Class cakgClass;
+  static Class x500Class;
+  static {
+    cakgClass = firstClass(new String[] {PKG_NAME_1 + CertAndKeyGenName,
+					 PKG_NAME_2 + CertAndKeyGenName});
+    x500Class = firstClass(new String[] {PKG_NAME_1 + X500NameName,
+					 PKG_NAME_2 + X500NameName});
+  }
+
+  static Class firstClass(String[] names) {
+    for (String name : names) {
+      try {
+	return Class.forName(name);
+      } catch (ClassNotFoundException e) {
+      }
+    }
+    return null;
+  }
+
+  public static class CertAndKeyGen {
+    Object cakg;
+
+    public CertAndKeyGen(String keyType, String sigAlg)
+	throws NoSuchAlgorithmException {
+      try {
+	Constructor constr = cakgClass.getConstructor(String.class,
+						      String.class);
+	cakg = constr.newInstance(keyType, sigAlg);
+      } catch (NoSuchMethodException |
+	       InstantiationException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke CertAndKeyGen constructor", e);
+	throw new IllegalStateException(e);
+      }
+    }
+
+    public void generate(int keyBits) throws InvalidKeyException {
+      try {
+	Method meth = cakgClass.getMethod("generate", int.class);
+	meth.invoke(cakg, keyBits);
+      } catch (NoSuchMethodException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke CertAndKeyGen.generate()", e);
+	throw new IllegalStateException(e);
+      }
+    }
+
+    public PrivateKey getPrivateKey () {
+      try {
+	Method meth = cakgClass.getMethod("getPrivateKey");
+	return (PrivateKey)meth.invoke(cakg);
+      } catch (NoSuchMethodException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke CertAndKeyGen.getPrivateKey()", e);
+	throw new IllegalStateException(e);
+      }
+    }
+
+    public X509Certificate getSelfCertificate(X500Name myname, long validity) {
+      try {
+	Method meth = cakgClass.getMethod("getSelfCertificate",
+					  x500Class, long.class);
+ 	return
+	  (X509Certificate)meth.invoke(cakg, myname.getX500Name(), validity);
+      } catch (NoSuchMethodException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke CertAndKeyGen.getSelfCertificate()", e);
+	throw new IllegalStateException(e);
+      }
+    }
+  }
+
+  public static class X500Name {
+    Object x5n;
+
+    X500Name(String name) {
+      try {
+	Constructor constr = x500Class.getConstructor(String.class);
+	x5n = constr.newInstance(name);
+      } catch (NoSuchMethodException |
+	       InstantiationException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke X500Name constructor", e);
+	throw new IllegalStateException(e);
+      }
+    }
+
+    public X500Name(String commonName, String organizationUnit,
+                    String organizationName, String localityName,
+                    String stateName, String country) {
+      try {
+	Constructor constr = x500Class.getConstructor(String.class,
+						      String.class,
+						      String.class,
+						      String.class,
+						      String.class,
+						      String.class);
+	x5n = constr.newInstance(commonName, organizationUnit,
+				 organizationName, localityName,
+				 stateName, country);
+      } catch (NoSuchMethodException |
+	       InstantiationException |
+	       InvocationTargetException |
+	       IllegalAccessException e) {
+	log.error("Couldn't invoke X500Name constructor", e);
+	throw new IllegalStateException(e);
+      }
+    }
+
+    Object getX500Name() {
+      return x5n;
     }
   }
 }

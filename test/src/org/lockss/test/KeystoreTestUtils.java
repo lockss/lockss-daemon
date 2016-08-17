@@ -39,7 +39,8 @@ import org.lockss.util.*;
 import java.security.*;
 import java.security.cert.*;
 
-import sun.security.x509.*;
+import org.lockss.util.KeyStoreUtil.CertAndKeyGen;
+import org.lockss.util.KeyStoreUtil.X500Name;
 
 public class KeystoreTestUtils {
 
