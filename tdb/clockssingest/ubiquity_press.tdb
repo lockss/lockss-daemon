@@ -124,7 +124,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://poetry.openlibhums.org/
 
-      au < ready ; exists ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
 
   }
@@ -210,7 +210,7 @@
       au < manifest ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
-      au < ready ; exists ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
       au < manifest ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
 
   }
@@ -297,7 +297,7 @@
       au < doNotProcess ; exists ; 2012 ; 7 ; Archaeology International Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 8 ; Archaeology International Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 9 ; Archaeology International Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 10 ; Archaeology International Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 10 ; Archaeology International Volume 2015 ; 2015 ; >
       au < expected ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; >
 
   }
@@ -512,7 +512,7 @@
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
@@ -567,7 +567,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
 
   }
@@ -623,7 +623,7 @@
       au < manifest ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
   }
@@ -673,7 +673,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
-      au < ready ; exists ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
 
   }
@@ -690,7 +690,7 @@
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
 
   }
@@ -857,7 +857,7 @@
       au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
 
   }
@@ -903,7 +903,7 @@
       au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
 
   }
@@ -939,7 +939,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
 
   }
@@ -1067,7 +1067,7 @@
       au < manifest ; exists ; 2012 ; 11 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 12 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 15 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
 
   }
