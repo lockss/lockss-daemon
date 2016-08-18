@@ -36,19 +36,6 @@ import java.security.cert.*;
 import java.security.spec.*;
 import javax.net.ssl.*;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-import sun.security.x509.AlgorithmId;
-import sun.security.x509.X509CertImpl;
-import sun.security.x509.X509CertInfo;
-import sun.security.x509.X500Name;
-import sun.security.x509.CertificateSubjectName;
-import sun.security.x509.CertificateIssuerName;
-import sun.security.x509.CertificateValidity;
-import sun.security.x509.CertificateSerialNumber;
-import sun.security.x509.CertificateAlgorithmId;
-import sun.security.x509.X509Key;
-
 /**
  * This program is invoked with a list of domain names.  For each
  * domain name,  it loads the keystore from the file with extension

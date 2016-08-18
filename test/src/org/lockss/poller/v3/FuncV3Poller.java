@@ -55,8 +55,6 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.Queue;
 
-import sun.security.krb5.internal.*;
-
 /**
  * Functional tests for the V3Poller.
  */

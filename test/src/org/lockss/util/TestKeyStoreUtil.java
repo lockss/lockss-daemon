@@ -126,6 +126,56 @@ public class TestKeyStoreUtil extends LockssTestCase {
     assertEquals("JCEKS", ks2.getType());
   }
 
+  public void testCreateIllType() throws Exception {
+    File dir = getTempDir();
+    File file = new File(dir, "test.ks");
+    Properties p = initProps();
+    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, file.toString());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_TYPE, "foobar");
+    p.put(KeyStoreUtil.PROP_KEYSTORE_PROVIDER, "");
+    assertFalse(file.exists());
+    try {
+      KeyStoreUtil.createKeyStore(p);
+      fail("Illegal keystore type should throw");
+    } catch (KeyStoreException e) {
+    }
+    assertFalse(file.exists());
+  }
+
+  public void testCreateIllProv() throws Exception {
+    File dir = getTempDir();
+    File file = new File(dir, "test.ks");
+    Properties p = initProps();
+    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, file.toString());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_TYPE, "JKS");
+    p.put(KeyStoreUtil.PROP_KEYSTORE_PROVIDER, "not_a_provider");
+    assertFalse(file.exists());
+    try {
+      KeyStoreUtil.createKeyStore(p);
+      fail("Illegal keystore type should throw");
+    } catch (NoSuchProviderException e) {
+    }
+    assertFalse(file.exists());
+  }
+
+  public void testCreateIllAlg() throws Exception {
+    File dir = getTempDir();
+    File file = new File(dir, "test.ks");
+    Properties p = initProps();
+    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, file.toString());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_TYPE, "JKS");
+    p.put(KeyStoreUtil.PROP_KEYSTORE_PROVIDER, "");
+    p.put(KeyStoreUtil.PROP_SIG_ALGORITHM, "sdflkjsdf");
+
+    assertFalse(file.exists());
+    try {
+      KeyStoreUtil.createKeyStore(p);
+      fail("Illegal keystore type should throw");
+    } catch (NoSuchAlgorithmException e) {
+    }
+    assertFalse(file.exists());
+  }
+
   KeyStore loadKeyStore(String type, String file, String passwd)
       throws Exception {
     return loadKeyStore(type, new File(file), passwd);

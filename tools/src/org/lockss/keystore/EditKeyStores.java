@@ -39,21 +39,6 @@ import java.security.*;
 import java.security.cert.*;
 import javax.net.ssl.*;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-import sun.security.x509.AlgorithmId;
-import sun.security.x509.X509CertImpl;
-import sun.security.x509.X509CertInfo;
-import sun.security.x509.X500Name;
-import sun.security.x509.CertAndKeyGen;
-import sun.security.x509.CertificateSubjectName;
-import sun.security.x509.CertificateIssuerName;
-import sun.security.x509.CertificateValidity;
-import sun.security.x509.CertificateSerialNumber;
-import sun.security.x509.CertificateAlgorithmId;
-import sun.security.x509.X509Key;
-import sun.security.pkcs.PKCS10;
-
 import org.lockss.util.*;
 
 /**

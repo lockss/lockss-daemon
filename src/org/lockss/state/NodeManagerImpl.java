@@ -43,8 +43,6 @@ import org.lockss.crawler.*;
 import org.lockss.alert.*;
 import java.util.ArrayList;
 
-import sun.security.krb5.internal.*;
-
 /**
  * Implementation of the NodeManager.
  */
