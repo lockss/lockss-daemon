@@ -2,7 +2,8 @@
   publisher <
     name = Microbiology Society ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    #info[tester] = 5
+    info[tester] = 3
   >
 
     comment[moved] = from HW to Pub2Web

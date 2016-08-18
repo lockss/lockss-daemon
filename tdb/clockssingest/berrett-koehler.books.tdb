@@ -4,7 +4,7 @@
     name = Berrett-Koehler ;
     info[contract] = 2016 ;
     info[back] = 1900 ;
-    info[tester] = 8
+    info[tester] = 3
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
