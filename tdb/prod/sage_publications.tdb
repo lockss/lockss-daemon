@@ -46958,6 +46958,21 @@ comment[mpj] = now published by Brill
 
   }
 
+  {
+
+      title <
+        name = Translational Research in Oral Oncology ;
+        eissn = 2057-178X
+    >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://too.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < manifest ; 2016 ; Translational Research in Oral Oncology Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
