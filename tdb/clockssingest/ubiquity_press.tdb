@@ -139,7 +139,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://olh.openlibhums.org/
 
-      au < ready ; exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
@@ -273,7 +273,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Ancient Asia Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Ancient Asia Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Ancient Asia Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 8 ; Ancient Asia Volume 2016 ; 2016 ; >
 
   }
@@ -410,7 +410,7 @@
       au < manifest ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
 
   }
@@ -546,7 +546,7 @@
       au < doNotProcess ; exists ; 2012 ; 17 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 18 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 19 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
 
   }
@@ -641,7 +641,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
 
   }
@@ -658,7 +658,7 @@
       # continues Journal of Open Public Health Data
 
       au < manifest ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
   }
@@ -738,7 +738,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://jpl.letras.ulisboa.pt/
 
-      au < ready ; exists ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
 
   }
@@ -817,7 +817,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.openquaternary.com/
 
-      au < ready ; exists ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
 
   }
@@ -878,7 +878,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
 
   }
@@ -921,7 +921,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
 
   }
@@ -989,7 +989,7 @@
       au < manifest ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
 
   }
@@ -1083,7 +1083,7 @@
       param[base_url] = http://www.westminsterpapers.org/
 
       au < exists ; exists ; 2014 ; 1 ; Westminster Papers in Communication and Culture Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; >
       au < expected ; exists ; 2016 ; 3 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; >
 
   }
