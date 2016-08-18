@@ -42,7 +42,6 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 
-
 /**
  * Utilities for creating keystores
  */
@@ -795,10 +794,20 @@ public class KeyStoreUtil {
 	cakg = constr.newInstance(keyType, sigAlg);
       } catch (NoSuchMethodException |
 	       InstantiationException |
-	       InvocationTargetException |
 	       IllegalAccessException e) {
 	log.error("Couldn't invoke CertAndKeyGen constructor", e);
 	throw new IllegalStateException(e);
+      } catch (InvocationTargetException e) {
+	Throwable cause = e.getCause();
+	try {
+	  throw cause;
+	} catch (NoSuchAlgorithmException cc) {
+	  throw cc;
+	} catch (RuntimeException cc) {
+	  throw cc;
+	} catch (Throwable cc) {
+	  throw new IllegalStateException(cc);
+	}
       }
     }
 
@@ -807,10 +816,20 @@ public class KeyStoreUtil {
 	Method meth = cakgClass.getMethod("generate", int.class);
 	meth.invoke(cakg, keyBits);
       } catch (NoSuchMethodException |
-	       InvocationTargetException |
 	       IllegalAccessException e) {
 	log.error("Couldn't invoke CertAndKeyGen.generate()", e);
 	throw new IllegalStateException(e);
+      } catch (InvocationTargetException e) {
+	Throwable cause = e.getCause();
+	try {
+	  throw cause;
+	} catch (InvalidKeyException cc) {
+	  throw cc;
+	} catch (RuntimeException cc) {
+	  throw cc;
+	} catch (Throwable cc) {
+	  throw new IllegalStateException(cc);
+	}
       }
     }
 
@@ -826,17 +845,37 @@ public class KeyStoreUtil {
       }
     }
 
-    public X509Certificate getSelfCertificate(X500Name myname, long validity) {
+    public X509Certificate getSelfCertificate(X500Name myname, long validity)
+	throws CertificateException, InvalidKeyException, SignatureException,
+	       NoSuchAlgorithmException, NoSuchProviderException {
       try {
 	Method meth = cakgClass.getMethod("getSelfCertificate",
 					  x500Class, long.class);
  	return
 	  (X509Certificate)meth.invoke(cakg, myname.getX500Name(), validity);
       } catch (NoSuchMethodException |
-	       InvocationTargetException |
 	       IllegalAccessException e) {
 	log.error("Couldn't invoke CertAndKeyGen.getSelfCertificate()", e);
 	throw new IllegalStateException(e);
+      } catch (InvocationTargetException e) {
+	Throwable cause = e.getCause();
+	try {
+	  throw cause;
+	} catch (CertificateException cc) {
+	  throw cc;
+	} catch (InvalidKeyException cc) {
+	  throw cc;
+	} catch (SignatureException cc) {
+	  throw cc;
+	} catch (NoSuchAlgorithmException cc) {
+	  throw cc;
+	} catch (NoSuchProviderException cc) {
+	  throw cc;
+	} catch (RuntimeException cc) {
+	  throw cc;
+	} catch (Throwable cc) {
+	  throw new IllegalStateException(cc);
+	}
       }
     }
   }
@@ -844,22 +883,33 @@ public class KeyStoreUtil {
   public static class X500Name {
     Object x5n;
 
-    X500Name(String name) {
+    public X500Name(String name) throws IOException {
       try {
 	Constructor constr = x500Class.getConstructor(String.class);
 	x5n = constr.newInstance(name);
       } catch (NoSuchMethodException |
 	       InstantiationException |
-	       InvocationTargetException |
 	       IllegalAccessException e) {
 	log.error("Couldn't invoke X500Name constructor", e);
 	throw new IllegalStateException(e);
+      } catch (InvocationTargetException e) {
+	Throwable cause = e.getCause();
+	try {
+	  throw cause;
+	} catch (IOException cc) {
+	  throw cc;
+	} catch (RuntimeException cc) {
+	  throw cc;
+	} catch (Throwable cc) {
+	  throw new IllegalStateException(cc);
+	}
       }
     }
 
     public X500Name(String commonName, String organizationUnit,
                     String organizationName, String localityName,
-                    String stateName, String country) {
+                    String stateName, String country)
+	throws IOException {
       try {
 	Constructor constr = x500Class.getConstructor(String.class,
 						      String.class,
@@ -872,10 +922,20 @@ public class KeyStoreUtil {
 				 stateName, country);
       } catch (NoSuchMethodException |
 	       InstantiationException |
-	       InvocationTargetException |
 	       IllegalAccessException e) {
 	log.error("Couldn't invoke X500Name constructor", e);
 	throw new IllegalStateException(e);
+      } catch (InvocationTargetException e) {
+	Throwable cause = e.getCause();
+	try {
+	  throw cause;
+	} catch (IOException cc) {
+	  throw cc;
+	} catch (RuntimeException cc) {
+	  throw cc;
+	} catch (Throwable cc) {
+	  throw new IllegalStateException(cc);
+	}
       }
     }
 
