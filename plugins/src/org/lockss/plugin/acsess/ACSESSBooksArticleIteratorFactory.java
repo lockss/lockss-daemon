@@ -52,7 +52,7 @@ public class ACSESSBooksArticleIteratorFactory
   // pattern template must include all primary aspects
   // abstracts, preview pdf abstracts, html full text, and pdf full text  
   private static final String PATTERN_TEMPLATE = 
-      "\"^%spublications/books/(abstracts|articles|pdfs)/(%s)/(%s)([^?]*)(/preview)?$\", base_url, journal_id, volume_name";
+      "\"^%spublications/books/(abstracts|articles|pdfs)/(%s)/(%s)([^?]*)(/preview)?$\", base_url, series_id, book_id";
   
   // primary aspects need their own patterns
   private Pattern HTML_PATTERN = Pattern.compile(      

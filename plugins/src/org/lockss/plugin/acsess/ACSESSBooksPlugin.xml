@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
     <entry>
     <string>plugin_name</string>
@@ -20,7 +20,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -45,17 +45,16 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
+        <key>series_id</key>
+        <displayName>Book Series Identifier</displayName>
         <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
+        <key>book_id</key>
+        <displayName>Book Identifier</displayName>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
@@ -65,12 +64,12 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Alliance of Crop, Soil, and Environmental Science Societies Books Plugin, Base URL %s, Series %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Alliance of Crop, Soil, and Environmental Science Societies Books Plugin, Base URL %s, Series %s, Volume %s", base_url, series_id, book_id</string>
   </entry>
   <entry>
-    <!-- https://dl.sciencesocieties.org/publications/aj/tocs/103 -->
+    <!-- https://dl.sciencesocieties.org/publications/books/tocs/sssaspecialpubl/sssaspecpub63 -->
     <string>au_start_url</string>
-    <string>"%spublications/books/tocs/%s/%s", base_url, journal_id, volume_name</string>
+    <string>"%spublications/books/tocs/%s/%s", base_url, series_id, book_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -79,13 +78,13 @@
       <!-- /webscripts/acs.js?D -->
       <string>1,"^%s.*\.(bmp|css(\?D)?|gif|ico|jpe?g|js(\?D)?|png|tif?f|swf)(\?Y)?$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%spublications/books/(tocs|articles|pdfs|abstracts)/%s/%s(/[0-9]+)?(/preview)?", base_url, journal_id, volume_name</string>    
+      <string>1,"^%spublications/books/(tocs|articles|pdfs|abstracts)/%s/%s(/[0-9]+)?(/preview)?", base_url, series_id, book_id</string>    
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%spublications/books/(articles|pdfs)/%s/%s[^?]*", base_url, journal_id, volume_name</string>
+      <string>"^%spublications/books/(articles|pdfs)/%s/%s[^?]*", base_url, series_id, book_id</string>
     </list>
   </entry>
   <entry>
@@ -115,41 +114,11 @@
     <string>org.lockss.plugin.acsess.ACSESSJournalsArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>text/plain_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>  
-  <!-- ACSESS ris Content-Type: application/x-Research-Info-Systems
-       Note capital RIS in Research-Info-Systems, hence a duplicate
-       entry for ris, one lower case and other capitalized -->
-  <entry>
-    <string>application/x-Research-Info-Systems_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.acsess.ACSESSJournalsRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>  
-  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.acsess.ACSESSJournalsHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.acsess.ACSESSBooksHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>  
