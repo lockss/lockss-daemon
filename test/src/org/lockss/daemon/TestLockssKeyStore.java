@@ -42,8 +42,6 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-import sun.security.x509.*;
-
 import static org.lockss.daemon.LockssKeyStore.LocationType;
 
 public class TestLockssKeyStore extends LockssTestCase {

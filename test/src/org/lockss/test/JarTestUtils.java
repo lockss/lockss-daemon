@@ -39,8 +39,6 @@ import org.lockss.util.*;
 import java.security.*;
 import java.security.cert.*;
 
-import sun.security.x509.*;
-
 public class JarTestUtils {
   private static Logger log = Logger.getLogger("JarTestUtils");
 

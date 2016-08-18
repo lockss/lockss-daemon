@@ -47,8 +47,6 @@ import org.lockss.util.*;
 import org.lockss.util.Queue;
 import org.lockss.test.*;
 
-import sun.security.x509.*;
-
 /**
  * This is the test class for org.lockss.protocol.BlockingStreamComm
  * using SSL
