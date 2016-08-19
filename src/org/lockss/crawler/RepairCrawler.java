@@ -93,7 +93,7 @@ public class RepairCrawler extends BaseCrawler {
    * content crawl (daemon 1.71 and later). */
   public static final String PARAM_SEND_REFERRER =
     Configuration.PREFIX + "crawler.repair.sendReferrer";
-  public static final boolean DEFAULT_SEND_REFERRER = true;
+  public static final boolean DEFAULT_SEND_REFERRER = false;
 
 
   /** Poller requires fetched URLs to be kept in status */

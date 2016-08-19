@@ -82,7 +82,7 @@ public class BaseUrlFetcher implements UrlFetcher {
    * crawler */
   public static final String PARAM_RECORD_REFERRER =
     Configuration.PREFIX + "baseuc.recordReferrer";
-  public static final boolean DEFAULT_RECORD_REFERRER = true;
+  public static final boolean DEFAULT_RECORD_REFERRER = false;
   
   /** If true, X-Lockss-Auid: header will be included in proxy requests.
    * Use in order to get an accurate copy of an AU from the audit proxy. */

@@ -128,7 +128,7 @@ public abstract class BaseCrawler implements Crawler {
   
   /** If true, send Referer header when referring URL is known */
   public static final String PARAM_SEND_REFERRER = PREFIX + "sendReferrer";
-  public static final boolean DEFAULT_SEND_REFERRER = true;
+  public static final boolean DEFAULT_SEND_REFERRER = false;
   
   public static final String ABORTED_BEFORE_START_MSG = "Crawl aborted before start";
   

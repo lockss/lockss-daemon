@@ -468,6 +468,8 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testReferrer() {
+    ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_SEND_REFERRER,
+				  "true");
     String repairUrl1 = "http://example.com/blah.html";
     String repairUrl2 = "http://example.com/blah2.html";
 
@@ -478,6 +480,7 @@ public class TestRepairCrawler extends LockssTestCase {
       makeCrawlerWPermission(mau, aus,
                              ListUtil.list(repairUrl1, repairUrl2));
     crawler.setCrawlManager(crawlMgr);
+    crawler.setCrawlConfig(org.lockss.config.ConfigManager.getCurrentConfig());
     crawler.setDaemonPermissionCheckers(
       ListUtil.list(new MockPermissionChecker(100)));
 

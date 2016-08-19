@@ -447,6 +447,8 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   public void testReferrer() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlFetcher.PARAM_RECORD_REFERRER,
+				  "true");
     String refrr = "http://example.com/referer1";
     TimeBase.setSimulated(555666);
     MockConnectionBaseUrlFetcher muf =
