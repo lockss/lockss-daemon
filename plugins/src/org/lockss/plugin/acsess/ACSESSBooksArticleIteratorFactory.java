@@ -56,16 +56,16 @@ public class ACSESSBooksArticleIteratorFactory
   
   // primary aspects need their own patterns
   private Pattern HTML_PATTERN = Pattern.compile(      
-      "/publications/books/articles/([^/]+)/([^/?]+)([^?]*)$", Pattern.CASE_INSENSITIVE);
+      "/publications/books/articles/([^/]+)/([^/?]+)((?:/)?[^/?]*)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/publications/books/articles/$1/$2$3";
   private Pattern ABSTRACT_PATTERN = Pattern.compile(      
-      "/publications/books/abstracts/([^/]+)/([^/]+)([^?]*)$", Pattern.CASE_INSENSITIVE);
-  private static final String ABSTRACT_REPLACEMENT = "/publications/$1/abstracts/books/$2$3";    
+      "/publications/books/abstracts/([^/]+)/([^/?]+)((?:/)?[^/?]*)$", Pattern.CASE_INSENSITIVE);
+  private static final String ABSTRACT_REPLACEMENT = "/publications/books/abstracts/$1/$2$3";    
   private Pattern PREVIEW_PDF_ABSTRACT_PATTERN = Pattern.compile(      
-      "/publications/books/abstracts/([^/]+)/([^/]+)([^?]*)/preview$", Pattern.CASE_INSENSITIVE);
+      "/publications/books/abstracts/([^/]+)/([^/?]+)((?:/)?[^/?]*)/preview$", Pattern.CASE_INSENSITIVE);
   private static final String PREVIEW_HTML_LANDING_REPLACEMENT = "/publications/books/abstracts/$1/$2$3/preview";
   private Pattern PDF_PATTERN = Pattern.compile(      
-      "/publications/books/pdfs/([^/]+)/([^/]+)([^?]*)$", Pattern.CASE_INSENSITIVE);
+      "/publications/books/pdfs/([^/]+)/([^/?]+)((?:/)?[^/?]*)$", Pattern.CASE_INSENSITIVE);
   private static final String PDF_REPLACEMENT = "/publications/books/pdfs/$1/$2$3";
  
   @Override

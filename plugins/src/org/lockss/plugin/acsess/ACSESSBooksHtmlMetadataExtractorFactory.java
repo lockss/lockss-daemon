@@ -84,6 +84,7 @@ public class ACSESSBooksHtmlMetadataExtractorFactory
       log.debug3("Metadata - cachedurl cu:" + cu.getUrl());
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
       am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
       return am;
     }
