@@ -29,7 +29,7 @@
     au < manifest ; exists ; 2008-2009 ; Multiscale Modeling and Simulation Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009-2010 ; Multiscale Modeling and Simulation Volume 8 ; 8 ; >
     au < crawling ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 ; >
+    au < finished ; finished ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 ; >
     au < finished ; crawling ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; Multiscale Modeling and Simulation Volume 12 ; 12 ; >
     au < frozen ; exists ; 2015 ; Multiscale Modeling and Simulation Volume 13 ; 13 ; >
@@ -144,7 +144,7 @@
     au < manifest ; exists ; 2008-2009 ; Journal on Applied Mathematics Volume 69 ; 69 ; >
     au < manifest ; exists ; 2009-2010 ; Journal on Applied Mathematics Volume 70 ; 70 ; >
     au < finished ; crawling ; 2011 ; Journal on Applied Mathematics Volume 71 ; 71 ; >
-    au < finished ; crawling ; 2012 ; Journal on Applied Mathematics Volume 72 ; 72 ; >
+    au < finished ; finished ; 2012 ; Journal on Applied Mathematics Volume 72 ; 72 ; >
     au < crawling ; exists ; 2013 ; Journal on Applied Mathematics Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 ; >
     au < frozen ; exists ; 2015 ; Journal on Applied Mathematics Volume 75 ; 75 ; >
@@ -370,7 +370,7 @@
     au < manifest ; exists ; 2008 ; Journal on Optimization Volume 19 ; 19 ; >
     au < manifest ; exists ; 2009 ; Journal on Optimization Volume 20 ; 20 ; >
     au < finished ; crawling ; 2011 ; Journal on Optimization Volume 21 ; 21 ; >
-    au < finished ; crawling ; 2012 ; Journal on Optimization Volume 22 ; 22 ; >
+    au < finished ; finished ; 2012 ; Journal on Optimization Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal on Optimization Volume 23 ; 23 ; >
     au < finished ; crawling ; 2014 ; Journal on Optimization Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal on Optimization Volume 25 ; 25 ; >
@@ -467,7 +467,7 @@
     au < manifest ; exists ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 ; >
     au < manifest ; exists ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 ; >
     au < finished ; finished ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 ; >
-    au < finished ; crawling ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 ; >
+    au < finished ; finished ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 ; >
     au < frozen ; exists ; 2015 ; Theory of Probability and its Applications Volume 59 ; 59 ; >

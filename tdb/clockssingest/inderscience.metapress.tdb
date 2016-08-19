@@ -136,7 +136,7 @@
       au < doNotProcess ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 ; >
       au < down ; finished ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 ; >
       au < zapped ; finished ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 ; >
-      au < down ; crawling ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 ; >
+      au < down ; finished ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 ; >
       au < down ; exists ; 2013 ; Electronic Government, an International Journal Volume 10 ; 10 ; >
       au < doNotProcess ; exists ; 2014-2015 ; Electronic Government, an International Journal Volume 11 ; 11 ; >
 
@@ -197,7 +197,7 @@
       au < doNotProcess ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 ; >
       au < down ; finished ; 2010 ; European Journal of International Management Volume 4 ; 4 ; >
       au < zapped ; finished ; 2011 ; European Journal of International Management Volume 5 ; 5 ; >
-      au < down ; crawling ; 2012 ; European Journal of International Management Volume 6 ; 6 ; >
+      au < down ; finished ; 2012 ; European Journal of International Management Volume 6 ; 6 ; >
       au < down ; exists ; 2013 ; European Journal of International Management Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2014 ; European Journal of International Management Volume 8 ; 8 ; >
 
@@ -4498,7 +4498,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Management and Decision Making Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Management and Decision Making Volume 10 ; 10 ; >
       au < down ; finished ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 ; >
-      au < down ; frozen ; 2012-2013 ; International Journal of Management and Decision Making Volume 12 ; 12 ; >
+      au < down ; finished ; 2012-2013 ; International Journal of Management and Decision Making Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Management and Decision Making Volume 13 ; 13 ; >
 
     }
@@ -5041,7 +5041,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Mining and Mineral Engineering Volume 1 ; 1 ; >
       au < down ; exists ; 2010 ; International Journal of Mining and Mineral Engineering Volume 2 ; 2 ; >
       au < zapped ; finished ; 2011 ; International Journal of Mining and Mineral Engineering Volume 3 ; 3 ; >
-      au < down ; frozen ; 2012-2013 ; International Journal of Mining and Mineral Engineering Volume 4 ; 4 ; >
+      au < down ; finished ; 2012-2013 ; International Journal of Mining and Mineral Engineering Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Mining and Mineral Engineering Volume 5 ; 5 ; >
 
     }
@@ -6650,7 +6650,7 @@
 
       param[journal_issn] = 1759-9741
       
-      au < down ; frozen ; 2012-2013 ; International Journal of Strategic Engineering Asset Management Volume 1 ; 1 ; >
+      au < down ; finished ; 2012-2013 ; International Journal of Strategic Engineering Asset Management Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Strategic Engineering Asset Management Volume 2 ; 2 ; >
 
     }
@@ -7322,7 +7322,7 @@
 
       param[journal_issn] = 2048-8386
       
-      au < down ; frozen ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; >
+      au < down ; finished ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 ; >
 
     }

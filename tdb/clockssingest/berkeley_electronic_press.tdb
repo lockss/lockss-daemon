@@ -158,7 +158,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bis
 
-    au < down ; crawling ; 2006 ; Basic Income Studies Volume 1 ; 1 ; >
+    au < down ; finished ; 2006 ; Basic Income Studies Volume 1 ; 1 ; >
     au < down ; finished ; 2007 ; Basic Income Studies Volume 2 ; 2 ; >
     au < zapped ; finished ; 2008 ; Basic Income Studies Volume 3 ; 3 ; >
     au < zapped ; finished ; 2009 ; Basic Income Studies Volume 4 ; 4 ; >
@@ -275,7 +275,7 @@
 
     au < doesNotExist ; doesNotExist ; 1999 ; Business and Politics Volume 1 ; 1 ; >
     au < zapped ; finished ; 2000 ; Business and Politics Volume 2 ; 2 ; >
-    au < down ; crawling ; 2001 ; Business and Politics Volume 3 ; 3 ; >
+    au < down ; finished ; 2001 ; Business and Politics Volume 3 ; 3 ; >
     au < down ; finished ; 2002 ; Business and Politics Volume 4 ; 4 ; >
     au < down ; finished ; 2003 ; Business and Politics Volume 5 ; 5 ; >
     au < zapped ; finished ; 2004 ; Business and Politics Volume 6 ; 6 ; >
@@ -487,7 +487,7 @@
     au < doesNotExist ; doesNotExist ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 ; >
     au < down ; crawling ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 ; >
     au < zapped ; finished ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 ; >
-    au < down ; crawling ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 ; >
+    au < down ; finished ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 ; >
     au < down ; crawling ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 ; >
     au < down ; crawling ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 ; >
     au < zapped ; finished ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 ; >
@@ -570,7 +570,7 @@
     au < down ; finished ; 2002 ; Global Economy Journal Volume 3 ; 3 ; >
     au < down ; finished ; 2004 ; Global Economy Journal Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Global Economy Journal Volume 5 ; 5 ; >
-    au < down ; frozen ; 2006 ; Global Economy Journal Volume 6 ; 6 ; >
+    au < down ; finished ; 2006 ; Global Economy Journal Volume 6 ; 6 ; >
     au < down ; finished ; 2007 ; Global Economy Journal Volume 7 ; 7 ; >
     au < zapped ; finished ; 2008 ; Global Economy Journal Volume 8 ; 8 ; >
     au < zapped ; finished ; 2009 ; Global Economy Journal Volume 9 ; 9 ; >
@@ -760,7 +760,7 @@
     au < zapped ; finished ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; >    
     au < down ; finished ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; >
     au < zapped ; finished ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; >    
-    au < down ; crawling ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; >
+    au < down ; finished ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; >
     au < zapped ; finished ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; >
     
   }
@@ -780,7 +780,7 @@
     au < zapped ; finished ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 ; >
     au < down ; finished ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 ; >
     au < down ; finished ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 ; >
-    au < down ; crawling ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 ; >
+    au < down ; finished ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 ; >
     au < zapped ; finished ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 ; >
     au < zapped ; finished ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 ; >
     au < zapped ; finished ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 ; >
@@ -979,7 +979,7 @@
     au < zapped ; finished ; 2007 ; Journal of Industrial Organization Education Volume 2 ; 2 ; >
     au < zapped ; finished ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 ; >
     au < zapped ; finished ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 ; >
-    au < down ; crawling ; 2010 ; Journal of Industrial Organization Education Volume 5 ; 5 ; >
+    au < down ; finished ; 2010 ; Journal of Industrial Organization Education Volume 5 ; 5 ; >
 
   }
 
@@ -1139,7 +1139,7 @@
 
     au < down ; finished ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 ; >
     au < down ; finished ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 ; >
-    au < down ; crawling ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 ; >
+    au < down ; finished ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 ; >
     au < zapped ; finished ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 ; >
     au < zapped ; finished ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 ; >
@@ -1178,7 +1178,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ngs
 
-    au < down ; crawling ; 2007 ; New Global Studies Volume 1 ; 1 ; >
+    au < down ; finished ; 2007 ; New Global Studies Volume 1 ; 1 ; >
     au < zapped ; finished ; 2008 ; New Global Studies Volume 2 ; 2 ; >
     au < zapped ; finished ; 2009 ; New Global Studies Volume 3 ; 3 ; >
     au < down ; finished ; 2010 ; New Global Studies Volume 4 ; 4 ; >
@@ -1433,7 +1433,7 @@
     au < zapped ; finished ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 ; >
     au < down ; finished ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 ; >
     au < down ; finished ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 ; >
-    au < down ; crawling ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 ; >
+    au < down ; finished ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 ; >
     au < zapped ; finished ; 2007 ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 ; >
     au < zapped ; finished ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 ; >
     au < zapped ; finished ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 ; >

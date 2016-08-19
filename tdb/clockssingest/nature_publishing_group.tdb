@@ -29,7 +29,7 @@
     au < finished ; frozen ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 ; >
     au < finished ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; frozen ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
-    au < finished ; crawling ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
     au < deepCrawl ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; >
     au < manifest ; exists ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; >
@@ -581,7 +581,7 @@
 
     param[journal_id] = ctg
 
-    au < finished ; crawling ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 ; >
+    au < finished ; finished ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 ; >
     au < finished ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
     au < finished ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 ; >
     au < finished ; crawling ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 ; >
@@ -603,8 +603,8 @@
     param[journal_id] = clpt
     comment[publisher] = moving to Wiley Blackwell, effective on 2015-01-01
 
-    au < down ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 ; >
-    au < down ; frozen ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 ; >
+    au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 ; >
+    au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 ; >
     au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 ; >
     au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 ; >
     au < down ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 ; >
@@ -1450,7 +1450,7 @@
     au < finished ; frozen ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 ; >
     au < finished ; crawling ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 ; >
     au < finished ; crawling ; 2013 ; Journal of Exposure Science and Environmental Epidemiology Volume 23 ; 2013 ; 23 ; >
-    au < finished ; crawling ; 2014 ; Journal of Exposure Science and Environmental Epidemiology Volume 24 ; 2014 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Exposure Science and Environmental Epidemiology Volume 24 ; 2014 ; 24 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Exposure Science and Environmental Epidemiology Volume 25 ; 2015 ; 25 ; >
     au < manifest ; exists ; 2016 ; Journal of Exposure Science and Environmental Epidemiology Volume 26 ; 2016 ; 26 ; >
 
@@ -1504,7 +1504,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 ; >
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; >
-    au < finished ; crawling ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
     au < manifest ; exists ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; >
 
@@ -1945,7 +1945,7 @@
     au < finished ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 ; >
     au < finished ; finished ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 ; >
     au < finished ; frozen ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 ; >
-    au < finished ; crawling ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; >
     au < manifest ; exists ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; >

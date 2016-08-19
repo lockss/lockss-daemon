@@ -574,7 +574,7 @@
     au < frozen ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 ; >
     au < frozen ; exists ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 ; >
-    au < down ; crawling ; 2014 ; Canadian Metallurgical Quarterly Volume 53 ; 53 ; >
+    au < down ; finished ; 2014 ; Canadian Metallurgical Quarterly Volume 53 ; 53 ; >
     au < frozen ; exists ; 2015 ; Canadian Metallurgical Quarterly Volume 54 ; 54 ; >
 
   }
@@ -971,7 +971,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Dix-Neuf Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Dix-Neuf Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Dix-Neuf Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2013 ; Dix-Neuf Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Dix-Neuf Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < down ; finished ; 2014 ; Dix-Neuf Volume 18 ; 18 ; >
     au < frozen ; exists ; 2015 ; Dix-Neuf Volume 19 ; 19 ; >
 
@@ -1348,7 +1348,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 ; > 
     au < doNotProcess ; doNotProcess ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 ; >
     au < frozen ; exists ; 2013 ; Folk Life: Journal of Ethnological Studies Volume 51 ; 51 ; >
-    au < finished ; crawling ; 2014 ; Folk Life: Journal of Ethnological Studies Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Folk Life: Journal of Ethnological Studies Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Folk Life: Journal of Ethnological Studies Volume 53 ; 53 ; >
 
   }
@@ -2313,7 +2313,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Field Archaeology Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 ; >
     au < frozen ; exists ; 2013 ; Journal of Field Archaeology Volume 38 ; 38 ; >
-    au < finished ; crawling ; 2014 ; Journal of Field Archaeology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Field Archaeology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Field Archaeology Volume 40 ; 40 ; >
 
   }
@@ -2698,7 +2698,7 @@
     au < frozen ; exists ; 2011 ; Levant Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Levant Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Levant Volume 45 ; 45 ; >
-    au < down ; crawling ; 2014 ; Levant Volume 46 ; 46 ; >
+    au < down ; finished ; 2014 ; Levant Volume 46 ; 46 ; >
     au < frozen ; exists ; 2015 ; Levant Volume 47 ; 47 ; >
 
   }
@@ -4269,7 +4269,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; T'ang Studies Volume 2010 ; 2010 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; T'ang Studies Volume 2011 ; 2011 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; T'ang Studies Volume 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; T'ang Studies Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2013 ; T'ang Studies Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; T'ang Studies Volume 2014 ; 2014 ; >
     au < doNotProcess ; exists ; 2015 ; T'ang Studies Volume 2015 ; 2015 ; >
 
@@ -4396,7 +4396,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 ; >
     au < finished ; crawling ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-    au < down ; crawling ; 2014 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 46 ; 46 ; >
+    au < down ; finished ; 2014 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 46 ; 46 ; >
     au < frozen ; exists ; 2015 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 47 ; 47 ; >
 
   }
@@ -4714,7 +4714,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Vernacular Architecture Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Vernacular Architecture Volume 43 ; 43 ; >
     au < finished ; crawling ; 2013 ; Vernacular Architecture Volume 44 ; 44 ; >
-    au < down ; crawling ; 2014 ; Vernacular Architecture Volume 45 ; 45 ; >
+    au < down ; finished ; 2014 ; Vernacular Architecture Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2015 ; Vernacular Architecture Volume 46 ; 46 ; >
 
   }

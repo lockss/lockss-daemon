@@ -199,7 +199,7 @@
     param[base_url] = http://www.ecrj.net/
     param[journal_id] = ecrj
 
-    au < finished ; crawling ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 ; >
+    au < finished ; finished ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; 2016 ; >
 
@@ -354,7 +354,7 @@
     au < finished ; finished ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 ; >
     au < finished ; finished ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 ; >
     au < finished ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 ; >
-    au < finished ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 ; >
+    au < finished ; finished ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 ; >
     au < finished ; finished ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 ; >
     au < finished ; finished ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 ; >
     au < finished ; crawling ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; 2014 ; >
@@ -375,7 +375,7 @@
 
     au < finished ; finished ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 ; >
     au < finished ; finished ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 ; >
-    au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 ; >
     au < finished ; finished ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 ; >
@@ -625,8 +625,8 @@
     param[base_url] = http://www.nano-reviews.net/
     param[journal_id] = nano
 
-    au < finished ; frozen ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 ; >
-    au < finished ; frozen ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 ; >
+    au < finished ; finished ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 ; >
+    au < finished ; finished ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 ; >
     au < finished ; finished ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 ; >
@@ -733,7 +733,7 @@
     au < finished ; crawling ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 ; >
     au < finished ; crawling ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 ; >
     au < finished ; crawling ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 ; >
-    au < finished ; crawling ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 ; >
+    au < finished ; finished ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 ; >
@@ -801,7 +801,7 @@
 
     au < finished ; finished ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 ; >
     au < finished ; finished ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; 2016 ; >
@@ -883,9 +883,9 @@
     au < finished ; frozen ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 ; >
     au < finished ; frozen ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 ; >
     au < finished ; frozen ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 ; >
-    au < finished ; frozen ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 ; >
+    au < finished ; finished ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 ; >
     au < finished ; finished ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; 2016 ; >
 
@@ -926,11 +926,11 @@
     au < finished ; frozen ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; 2003 ; >
     au < finished ; finished ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; 2004 ; >
     au < finished ; finished ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 ; >
-    au < finished ; frozen ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; 2006 ; >
-    au < finished ; frozen ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 ; >
+    au < finished ; finished ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; 2006 ; >
+    au < finished ; finished ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 ; >
     au < finished ; crawling ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 ; >
     au < finished ; finished ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 ; >
-    au < finished ; frozen ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 ; >
+    au < finished ; finished ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 ; >
     au < finished ; frozen ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 ; >
     au < finished ; frozen ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; 2013 ; >

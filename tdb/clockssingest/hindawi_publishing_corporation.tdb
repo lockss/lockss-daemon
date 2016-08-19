@@ -316,7 +316,7 @@
     param[journal_id] = abm
     #archived
 
-    au < finished ; crawling ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -521,7 +521,7 @@
 
     param[journal_id] = aem
 
-    au < finished ; crawling ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1141,7 +1141,7 @@
     au < manifest ; exists ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Advances in Physical Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Physical Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1395,7 +1395,7 @@
 
     param[journal_id] = az
 
-    au < finished ; crawling ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Zoology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1632,7 +1632,7 @@
     param[journal_id] = ajn
 
     au < manifest ; exists ; 2013 ; Asian Journal of Neuroscience Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Asian Journal of Neuroscience Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2023,7 +2023,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2310,7 +2310,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2767,7 +2767,7 @@
     param[journal_id] = cpis
 
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Conference Papers in Science Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2880,7 +2880,7 @@
     au < manifest ; exists ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Dermatology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Dermatology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     
@@ -2960,7 +2960,7 @@
     au < manifest ; exists ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Discrete Dynamics in Nature and Society Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Discrete Dynamics in Nature and Society Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3079,7 +3079,7 @@
     au < manifest ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Enzyme Research Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Enzyme Research Volume 2016 ; 2016 ; 2016 ; >
     
@@ -4872,7 +4872,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Rotating Machinery Volume 2016 ; 2016 ; 2016 ; >
 
@@ -5161,7 +5161,7 @@
     param[journal_id] = jaer
     #archived
 
-    au < finished ; crawling ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 ; >
 
   }
 
@@ -6040,7 +6040,7 @@
     param[journal_id] = jdm
     
     au < manifest ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6189,7 +6189,7 @@
     param[journal_id] = jep
     #journal gone
     
-    au < down ; crawling ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 ; >
+    au < down ; finished ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 ; >
     au < down ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Experimental Physics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6925,7 +6925,7 @@
     au < manifest ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Ophthalmology Volume 2016 ; 2016 ; 2016 ; >
     
@@ -7600,7 +7600,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thyroid Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Thyroid Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Thyroid Research Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Thyroid Research Volume 2016 ; 2016 ; 2016 ; >
     
@@ -7659,7 +7659,7 @@
     au < manifest ; exists ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Transplantation Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Transplantation Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7747,7 +7747,7 @@
     param[journal_id] = jwm
 
     au < manifest ; exists ; 2013 ; Journal of Waste Management Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Waste Management Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Waste Management Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7783,7 +7783,7 @@
     au < manifest ; exists ; 2011 ; Leukemia Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Leukemia Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Leukemia Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Leukemia Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Leukemia Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Leukemia Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
 
@@ -9076,7 +9076,7 @@
     au < manifest ; exists ; 2011 ; VLSI Design Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; VLSI Design Volume 2016 ; 2016 ; 2016 ; >
 

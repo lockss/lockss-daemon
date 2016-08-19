@@ -138,7 +138,7 @@
     comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
 
-    au < finished ; crawling ; 2012 ; Clinical Practice Volume 9 ; 9 ; >
+    au < finished ; finished ; 2012 ; Clinical Practice Volume 9 ; 9 ; >
     au < crawling ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2014 ; Clinical Practice Volume 11 ; 11 ; >
     
@@ -259,7 +259,7 @@
     au < manifest ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Future Microbiology Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Future Microbiology Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2014 ; Future Microbiology Volume 9 ; 9 ; >
+    au < finished ; finished ; 2014 ; Future Microbiology Volume 9 ; 9 ; >
     au < frozen ; exists ; 2015 ; Future Microbiology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2016 ; Future Microbiology Volume 11 ; 11 ; >
     
@@ -363,7 +363,7 @@
     
     param[journal_id] = hep
 
-    au < finished ; crawling ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; >
+    au < finished ; finished ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; >
     au < frozen ; exists ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; >
     au < manifest ; exists ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; >
     

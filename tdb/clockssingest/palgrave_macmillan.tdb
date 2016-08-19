@@ -374,7 +374,7 @@
       param[journal_id] = iga
 
       au < exists ; exists ; 2012 ; Interest Groups & Advocacy Volume 1 ; 2012 ; 1 ; >
-      au < finished ; crawling ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 ; >
+      au < finished ; finished ; 2013 ; Interest Groups & Advocacy Volume 2 ; 2013 ; 2 ; >
       au < finished ; finished ; 2014 ; Interest Groups & Advocacy Volume 3 ; 2014 ; 3 ; >
       au < down ; exists ; 2015 ; Interest Groups & Advocacy Volume 4 ; 2015 ; 4 ; >
       au < expected ; exists ; 2016 ; Interest Groups & Advocacy Volume 5 ; 2016 ; 5 ; >
@@ -529,7 +529,7 @@
       au < doNotProcess ; exists ; 2011 ; Journal of Banking Regulation Volume 12 (2011) ; 2011 ; 12 ; >
       au < finished ; finished ; 2012 ; Journal of Banking Regulation Volume 13 ; 2012 ; 13 ; >
       au < down ; exists ; 2013 ; Journal of Banking Regulation Volume 14 ; 2013 ; 14 ; >
-      au < finished ; crawling ; 2014 ; Journal of Banking Regulation Volume 15 ; 2014 ; 15 ; >
+      au < finished ; finished ; 2014 ; Journal of Banking Regulation Volume 15 ; 2014 ; 15 ; >
       au < down ; exists ; 2015 ; Journal of Banking Regulation Volume 16 ; 2015 ; 16 ; >
       au < expected ; exists ; 2016 ; Journal of Banking Regulation Volume 17 ; 2016 ; 17 ; >
 
@@ -1230,7 +1230,7 @@
       au < doNotProcess ; exists ; 2010 ; Subjectivity Volume 3 ; 2010 ; 3 ; >
       au < doNotProcess ; exists ; 2011 ; Subjectivity Volume 4 ; 2011 ; 4 ; >
       au < finished ; finished ; 2012 ; Subjectivity Volume 5 ; 2012 ; 5 ; >
-      au < finished ; crawling ; 2013 ; Subjectivity Volume 6 ; 2013 ; 6 ; >
+      au < finished ; finished ; 2013 ; Subjectivity Volume 6 ; 2013 ; 6 ; >
       au < finished ; finished ; 2014 ; Subjectivity Volume 7 ; 2014 ; 7 ; >
       au < down ; exists ; 2015 ; Subjectivity Volume 8 ; 2015 ; 8 ; >
       au < expected ; exists ; 2016 ; Subjectivity Volume 9 ; 2016 ; 9 ; >
