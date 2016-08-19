@@ -2027,7 +2027,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 ; >
    au < finished ; finished ; 2013 ; 2013 ; Im OP Volume 2013 ; 3 ; >
    au < finished ; finished ; 2014 ; 2014 ; Im OP Volume 2014 ; 4 ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Im OP Volume 2015 ; 5 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Im OP Volume 2015 ; 5 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Im OP Volume 2016 ; 6 ; >
 
   }
@@ -2183,7 +2183,7 @@
    au < finished ; finished ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 ; >
    au < crawling ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 ; >
    au < finished ; crawling ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; >
    au < manifest ; exists ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 ; >
 
   }
@@ -2314,7 +2314,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 ; >
     au < finished ; crawling ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Journal Club AINS Volume 5 ; 5 ; >
 
   }
@@ -2376,7 +2376,7 @@
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 ; >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; reingest5.clockss.org:8082 >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
    au < manifest ; exists ; 2016 ; 2016 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2016 ; 11 ; >
 
   }
@@ -3040,7 +3040,7 @@
    au < finished ; crawling ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 2014 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2015 ; 2015 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2015 ; 2015 ; >
    au < manifest ; exists ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2016 ; 2016 ; >
 
   }
@@ -3369,7 +3369,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 43 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Neuropediatrics Volume 2016 ; 47 ; >
 
   }
@@ -3390,7 +3390,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 ; >
     au < finished ; crawling ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Neuroradiologie Scan Volume 2016 ; 6 ; >
 
   }
@@ -3880,7 +3880,7 @@
     au < finished ; finished ; 2012 ; 2012 ; physiopraxis Volume 2012 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 ; >
     au < manifest ; exists ; 2016 ; 2016 ; physiopraxis Volume 2016 ; 14 ; >
 
   }
@@ -3906,7 +3906,7 @@
     au < finished ; finished ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 ; >
     au < finished ; crawling ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; >
     au < manifest ; exists ; 2016 ; 2016 ; physioscience Volume 2016 ; 12 ; >
 
   }
@@ -5243,7 +5243,7 @@
     param[journal_id] = 10.1055/s-00028781
     comment[years] = 2015-present
 
-    au < deepCrawl ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; >
 
   }
@@ -5356,7 +5356,7 @@
    au < finished ; finished ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 ; >
    au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 ; >
    au < crawling ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 ; >
-   au < deepCrawl ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 ; >
+   au < frozen ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 ; >
    au < manifest ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 2016 ; 48 ; >
 
   }
@@ -5474,7 +5474,7 @@
     au < finished ; finished ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; >
     au < expected ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
 
   }
@@ -5772,7 +5772,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; >
     au < testing ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 2016 ; 10 ; >
 
   }
