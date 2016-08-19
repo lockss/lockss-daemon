@@ -148,6 +148,7 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     /* 
      * Do a better job of identifying the type of content based on information in 
      * the schema or CU
+     * Identify the PROC- items as proceedings now so they will differentiate from books
      *    
      */
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
@@ -189,9 +190,10 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
           thisAM.put(MetadataField.FIELD_ARTICLE_TITLE,  thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE));
         }
       } else {
+        // Now that we support proceedings, make them such.  It will take a while to percolate through to the database
         if ("PROC".equals(itemType)) {
-          publicationType = MetadataField.PUBLICATION_TYPE_BOOK;
-          articleType = MetadataField.ARTICLE_TYPE_BOOKCHAPTER;
+          publicationType = MetadataField.PUBLICATION_TYPE_PROCEEDINGS;
+          articleType = MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE;
         } else {
           articleType = MetadataField.ARTICLE_TYPE_JOURNALARTICLE; 
           publicationType = MetadataField.PUBLICATION_TYPE_JOURNAL;
