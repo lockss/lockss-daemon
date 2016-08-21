@@ -713,13 +713,8 @@
     au < doNotProcess ; exists ; 2011 ; Clinical Epidemiology Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Clinical Epidemiology Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Epidemiology Volume 5 ; 5 ; 2013 ; >
-<<<<<<< HEAD
-    au < crawling ; exists ; 2014 ; Clinical Epidemiology Volume 6 ; 6 ; 2014 ; >
-    au < finished ; finished ; 2015 ; Clinical Epidemiology Volume 7 ; 7 ; 2015 ; >
-=======
     au < deepCrawl ; exists ; 2014 ; Clinical Epidemiology Volume 6 ; 6 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Clinical Epidemiology Volume 7 ; 7 ; 2015 ; >
->>>>>>> Update deepCrawl
+    au < finished ; finished ; 2015 ; Clinical Epidemiology Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Epidemiology Volume 8 ; 8 ; 2016 ; >
   
   }
