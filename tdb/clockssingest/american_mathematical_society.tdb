@@ -160,7 +160,7 @@
     au < finished ; finished ; 2012 ; Bulletin of the American Mathematical Society Volume 49 (2012) ; 2012 ; >
     au < finished ; crawling ; 2013 ; Bulletin of the American Mathematical Society Volume 50 (2013) ; 2013 ; >
     au < finished ; crawling ; 2014 ; Bulletin of the American Mathematical Society Volume 51 (2014) ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Bulletin of the American Mathematical Society Volume 52 (2015) ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Bulletin of the American Mathematical Society Volume 52 (2015) ; 2015 ; >
     au < crawling ; exists ; 2016 ; Bulletin of the American Mathematical Society Volume 53 (2016) ; 2016 ; >
      
   }
@@ -194,7 +194,7 @@
     au < finished ; crawling ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 2012 ; >
     au < finished ; finished ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 2013 ; >
     au < finished ; finished ; 2014 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 18 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 19 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 19 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 20 ; 2016 ; >
 
   }
@@ -238,7 +238,7 @@
     au < finished ; finished ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of the American Mathematical Society Volume 26 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of the American Mathematical Society Volume 27 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of the American Mathematical Society Volume 28 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Journal of the American Mathematical Society Volume 28 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of the American Mathematical Society Volume 29 ; 2016 ; >
       
   }
@@ -327,7 +327,7 @@
     au < finished ; finished ; 2012 ; Mathematics of Computation Volume 81 ; 2012 ; >
     au < finished ; finished ; 2013 ; Mathematics of Computation Volume 82 ; 2013 ; >
     au < finished ; finished ; 2014 ; Mathematics of Computation Volume 83 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Mathematics of Computation Volume 84 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Mathematics of Computation Volume 84 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Mathematics of Computation Volume 85 ; 2016 ; >
 
   }
@@ -387,7 +387,7 @@
     au < finished ; finished ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Proceedings of the American Mathematical Society Volume 142 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Proceedings of the American Mathematical Society Volume 143 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Proceedings of the American Mathematical Society Volume 143 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Proceedings of the American Mathematical Society Volume 144 ; 2016 ; >
 
   }
@@ -404,7 +404,7 @@
     param[journal_id] = bproc
       
     au < finished ; crawling ; 2014 ; Proceedings of the American Mathematical Society B Volume 1 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Proceedings of the American Mathematical Society B Volume 2 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Proceedings of the American Mathematical Society B Volume 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Proceedings of the American Mathematical Society B Volume 3 ; 2016 ; >
 
   }
@@ -439,7 +439,7 @@
     au < finished ; finished ; 2012 ; Representation Theory Volume 16 ; 2012 ; >
     au < finished ; finished ; 2013 ; Representation Theory Volume 17 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Representation Theory Volume 18 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Representation Theory Volume 19 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Representation Theory Volume 19 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Representation Theory Volume 20 ; 2016 ; >
 
   }
@@ -467,7 +467,7 @@
     au < finished ; finished ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 2012 ; >
     au < finished ; finished ; 2013 ; St. Petersburg Mathematical Journal Volume 24 ; 2013 ; >
     au < finished ; crawling ; 2014 ; St. Petersburg Mathematical Journal Volume 25 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; St. Petersburg Mathematical Journal Volume 26 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; St. Petersburg Mathematical Journal Volume 26 ; 2015 ; >
     au < crawling ; exists ; 2016 ; St. Petersburg Mathematical Journal Volume 27 ; 2016 ; >
 
   }
@@ -495,7 +495,7 @@
     au < finished ; finished ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 2012 ; >
     au < finished ; finished ; 2013 ; Theory of Probability and Mathematical Statistics Volume 85 ; 2013 ; >
     au < finished ; finished ; 2014 ; Theory of Probability and Mathematical Statistics Volume 86 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Theory of Probability and Mathematical Statistics Volume 87 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Theory of Probability and Mathematical Statistics Volume 87 ; 2015 ; >
     au < manifest ; exists ; 2016 ; Theory of Probability and Mathematical Statistics Volume 88 ; 2016 ; >
 
   }   
@@ -518,9 +518,9 @@
     au < manifest ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 2011 ; >
     au < finished ; finished ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 2012 ; >
-    au < deepCrawl ; exists ; 2013 ; Transactions of the American Mathematical Society Volume 365 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Transactions of the American Mathematical Society Volume 365 ; 2013 ; >
     au < finished ; finished ; 2014 ; Transactions of the American Mathematical Society Volume 366 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Transactions of the American Mathematical Society Volume 367 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Transactions of the American Mathematical Society Volume 367 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Transactions of the American Mathematical Society Volume 368 ; 2016 ; >
 
   }
@@ -537,7 +537,7 @@
     param[journal_id] = btran
 
     au < finished ; finished ; 2014 ; Transactions of the American Mathematical Society B Volume 1 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Transactions of the American Mathematical Society B Volume 2 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Transactions of the American Mathematical Society B Volume 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Transactions of the American Mathematical Society B Volume 3 ; 2016 ; >
 
   }
@@ -563,7 +563,7 @@
     au < finished ; crawling ; 2012 ; Transactions of the Moscow Mathematical Society Volume 73 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Transactions of the Moscow Mathematical Society Volume 74 ; 2013 ; >
     au < finished ; finished ; 2014 ; Transactions of the Moscow Mathematical Society Volume 75 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Transactions of the Moscow Mathematical Society Volume 76 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Transactions of the Moscow Mathematical Society Volume 76 ; 2015 ; >
     au < expected ; exists ; 2016 ; Transactions of the Moscow Mathematical Society Volume 77 ; 2016 ; >
 
   }
