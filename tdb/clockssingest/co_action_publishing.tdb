@@ -136,7 +136,7 @@
     au < finished ; finished ; 2012 ; Education Inquiry Volume 3 ; 3 ; 2012 ; >
     au < notReady ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Education Inquiry Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -284,7 +284,7 @@
     au < finished ; crawling ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; 2016 ; >
   }
 
@@ -398,7 +398,7 @@
     au < finished ; finished ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -483,7 +483,7 @@
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 ; >
     au < finished ; finished ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; 2016 ; >
 
   }
@@ -566,7 +566,7 @@
       au < finished ; finished ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 ; >
       au < finished ; finished ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 ; >
       au < finished ; finished ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 ; >
-      au < deepCrawl ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Medical Education Online Volume 21 ; 21 ; 2016 ; >
       
     }
@@ -699,7 +699,7 @@
     au < finished ; crawling ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 ; 2013 ; >
     au < finished ; finished ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; 2016 ; >
 
   }
@@ -886,7 +886,7 @@
     au < finished ; finished ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 ; >
     au < finished ; finished ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 ; >
     au < finished ; finished ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; 2016 ; >
 
   }
@@ -935,7 +935,7 @@
     au < finished ; frozen ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; 2013 ; >
     au < finished ; finished ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 ; >
+    au < frozen ; exists ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 ; 2016 ; >
 
   }
