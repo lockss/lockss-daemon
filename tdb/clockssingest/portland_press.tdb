@@ -477,21 +477,21 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemical Journal Volume 455 ; 455 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemical Journal Volume 456 ; 456 ; >
     au < finished ; crawling ; 2014 ; Biochemical Journal Volume 457 ; 457 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2014 ; Biochemical Journal Volume 458 ; 458 ; >
+    au < finished ; manifest ; 2014 ; Biochemical Journal Volume 458 ; 458 ; >
     au < finished ; crawling ; 2014 ; Biochemical Journal Volume 459 ; 459 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Biochemical Journal Volume 460 ; 460 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; Biochemical Journal Volume 461 ; 461 ; >
-    au < frozen ; exists ; 2014 ; Biochemical Journal Volume 462 ; 462 ; >
+    au < finished ; manifest ; 2014 ; Biochemical Journal Volume 461 ; 461 ; >
+    au < finished ; manifest ; 2014 ; Biochemical Journal Volume 462 ; 462 ; >
     au < finished ; finished ; 2014 ; Biochemical Journal Volume 463 ; 463 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Biochemical Journal Volume 464 ; 464 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 465 ; 465 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 466 ; 466 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 467 ; 467 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 468 ; 468 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 469 ; 469 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 470 ; 470 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 471 ; 471 ; >
-    au < frozen ; exists ; 2015 ; Biochemical Journal Volume 472 ; 472 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 465 ; 465 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 466 ; 466 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 467 ; 467 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 468 ; 468 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 469 ; 469 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 470 ; 470 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 471 ; 471 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Journal Volume 472 ; 472 ; >
     au < manifest ; exists ; 2016 ; Biochemical Journal Volume 473 ; 473 ; >
     au < exists ; exists ; 2016 ; Biochemical Journal Volume 474 ; 474 ; >
     au < expected ; exists ; 2016 ; Biochemical Journal Volume 475 ; 475 ; >
@@ -556,7 +556,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Biochemical Society Transactions Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemical Society Transactions Volume 41 ; 41 ; >
     au < finished ; crawling ; 2014 ; Biochemical Society Transactions Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; >
     au < exists ; exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; >
     
   }
@@ -694,10 +694,10 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Essays in Biochemistry Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Essays in Biochemistry Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Essays in Biochemistry Volume 55 ; 55 ; >
-    au < frozen ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 56 ; >
-    au < frozen ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; >
-    au < frozen ; exists ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; >
-    au < frozen ; exists ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; >
+    au < finished ; manifest ; 2014 ; Essays in Biochemistry Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; >
+    au < finished ; manifest ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; >
+    au < finished ; manifest ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; >
     au < expected ; exists ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; >
     au < expected ; exists ; 2016 ; Essays in Biochemistry Volume 61 ; 61 ; >
 
