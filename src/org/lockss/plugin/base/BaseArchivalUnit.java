@@ -494,6 +494,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return plugin.storeProbePermission();
   }
   
+  public boolean sendReferrer() {
+    return plugin.sendReferrer();
+  }
+
   public boolean shouldRefetchOnCookies() {
     return shouldRefetchOnCookies;
   }

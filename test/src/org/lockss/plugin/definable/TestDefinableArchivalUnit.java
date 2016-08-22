@@ -656,6 +656,34 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 			 configProps);
   }  
 
+  public void testShouldStoreProbePermission() {
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_STORE_PROBE_PERMISSION, true);
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_SEND_REFERRER, true);
+    setupAu();
+    assertTrue(cau.storeProbePermission());
+    assertTrue(cau.sendReferrer());
+  }
+
+  public void testShouldntStoreProbePermission() {
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_STORE_PROBE_PERMISSION, false);
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_SEND_REFERRER, true);
+    setupAu();
+    assertFalse(cau.storeProbePermission());
+    assertTrue(cau.sendReferrer());
+  }
+
+  public void testShouldSendReferrer() {
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_SEND_REFERRER, true);
+    setupAu();
+    assertTrue(cau.sendReferrer());
+  }
+
+  public void testShouldntSendReferrer() {
+    defMap.putBoolean(DefinablePlugin.KEY_PLUGIN_SEND_REFERRER, false);
+    setupAu();
+    assertFalse(cau.sendReferrer());
+  }
+
   public void testUserMessage() throws Exception {
     String str = "test user msg";
     setStdConfigProps();
@@ -1487,6 +1515,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 aft.getExtMimeMap());
 
     assertTrue(au.isBulkContent());
+    assertFalse(au.storeProbePermission());
+    assertFalse(au.sendReferrer());
+
     assertEquals(ListUtil.list("uid=gingerbread", "s_vi=[CS]v1|26-60[CE]"),
 		 au.getHttpCookies());
     assertEquals(ListUtil.list("Accept-Language:Klingon",

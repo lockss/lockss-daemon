@@ -166,6 +166,14 @@ public abstract class BasePlugin
   }
 
   /**
+   * Should crawler send Referrer header
+   * @return true
+   */
+  public boolean sendReferrer() {
+    return true;
+  }
+
+  /**
    * Default implementation collects keys from titleConfigMap.
    * @return a List
    */

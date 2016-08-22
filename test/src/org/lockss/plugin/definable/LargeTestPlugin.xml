@@ -282,6 +282,14 @@
     <boolean>true</boolean>
   </entry>
   <entry>
+    <string>plugin_send_referrer</string>
+    <boolean>false</boolean>
+  </entry>
+  <entry>
+    <string>plugin_store_probe_permission</string>
+    <boolean>false</boolean>
+  </entry>
+  <entry>
     <string>plugin_archive_file_types</string>
     <org.lockss.plugin.ArchiveFileTypes>
       <extMimeMap>

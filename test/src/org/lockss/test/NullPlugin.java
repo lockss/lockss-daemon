@@ -750,6 +750,10 @@ public class NullPlugin {
     public boolean storeProbePermission() {
       return false;
     }
+
+    public boolean sendReferrer() {
+      return true;
+    }
   }
 
   /**

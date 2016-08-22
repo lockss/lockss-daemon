@@ -150,7 +150,7 @@ public class RepairCrawler extends BaseCrawler {
     BitSet fetchFlags = uf.getFetchFlags();
     fetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(fetchFlags);
-    if (sendReferrer) {
+    if (sendReferrer && au.sendReferrer()) {
       CachedUrl currentCu = null;
       try {
 	currentCu = au.makeCachedUrl(url);

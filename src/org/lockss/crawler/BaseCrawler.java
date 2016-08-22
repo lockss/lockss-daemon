@@ -614,7 +614,7 @@ public abstract class BaseCrawler implements Crawler {
   public UrlFetcher makeUrlFetcher(CrawlUrlData curl) {
     UrlFetcher uf = makeUrlFetcher(curl.getUrl());
     uf.setCrawlUrl(curl);
-    if (sendReferrer && curl.getReferrer() != null) {
+    if (sendReferrer && au.sendReferrer() && curl.getReferrer() != null) {
       uf.setRequestProperty(Constants.HTTP_REFERER, curl.getReferrer());
     }
     return uf;

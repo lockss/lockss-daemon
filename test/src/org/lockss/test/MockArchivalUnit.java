@@ -838,5 +838,9 @@ public class MockArchivalUnit implements ArchivalUnit {
     return true;
   }
 
+  public boolean sendReferrer() {
+    return true;
+  }
+
 }
 

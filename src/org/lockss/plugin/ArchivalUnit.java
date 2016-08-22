@@ -152,6 +152,12 @@ public interface ArchivalUnit {
   public boolean storeProbePermission();
 
   /**
+   * Does the associated plugin want the crawler to send Referer headers
+   * @return true if Referer header should be sent
+   */
+  public boolean sendReferrer();
+
+  /**
    * Return true if the URL is that of a login page.
    * @param url the url to test
    * @return true if login page URL
