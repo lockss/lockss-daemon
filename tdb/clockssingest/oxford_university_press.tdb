@@ -3092,7 +3092,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
     au < zapped ; finished ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; >
     au < zapped ; finished ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 ; >
-    au < finished ; crawling ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
+    au < finished ; finished ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
     au < finished ; frozen ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 ; >
     au < frozen ; exists ; 2013 ; The British Journal of Criminology: An International Review of Crime and Society Volume 53 ; 53 ; >
     au < finished ; finished ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 ; >
@@ -3409,7 +3409,7 @@
     au < finished ; manifest ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
     au < finished ; crawling ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
     au < finished ; finished ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
-    au < finished ; crawling ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
+    au < finished ; finished ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
     au < frozen ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
     au < frozen ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
     au < frozen ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
@@ -5516,7 +5516,7 @@
     au < finished ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; >
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < finished ; crawling ; 2013 ; ELT Journal Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; ELT Journal Volume 68 ; 68 ; >
+    au < finished ; finished ; 2014 ; ELT Journal Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2015 ; ELT Journal Volume 69 ; 69 ; >
     au < manifest ; exists ; 2016 ; ELT Journal Volume 70 ; 70 ; >
 
@@ -8817,7 +8817,7 @@
     au < manifest ; exists ; 2007 ; Human Reproduction Update Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
     au < finished ; finished ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; >
-    au < finished ; crawling ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
+    au < finished ; finished ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
     au < finished ; finished ; 2011 ; Human Reproduction Update Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; Human Reproduction Update Volume 18 ; 18 ; >
     au < finished ; finished ; 2013 ; Human Reproduction Update Volume 19 ; 19 ; >
@@ -9928,7 +9928,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Constitutional Law Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 ; >
+    au < finished ; finished ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 ; >
     au < finished ; finished ; 2011 ; International Journal of Constitutional Law Volume 9 ; 9 ; >
     au < finished ; finished ; 2012 ; International Journal of Constitutional Law Volume 10 ; 10 ; >
     au < finished ; finished ; 2013 ; International Journal of Constitutional Law Volume 11 ; 11 ; >
@@ -12212,7 +12212,7 @@
     au < manifest ; exists ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
     au < finished ; crawling ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
-    au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
+    au < finished ; finished ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < frozen ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < finished ; finished ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
@@ -16964,7 +16964,7 @@
     au < finished ; crawling ; 2011 ; The Monist Volume 94 ; 94 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; The Monist Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < finished ; crawling ; 2014 ; The Monist Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; The Monist Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
     au < manifest ; exists ; 2016 ; The Monist Volume 99 ; 99 ; >
 
@@ -19657,7 +19657,7 @@
     param[base_url] = http://pcp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; frozen ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
+    au < down ; finished ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
     au < superseded ; down ; 2009 ; Plant and Cell Physiology Volume 50 [superseded] ; 50 ; >
 
     }
@@ -21396,7 +21396,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < finished ; crawling ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2015 ; Review of Corporate Finance Studies Volume 4 ; 4 ; >
@@ -24402,7 +24402,7 @@
       au < manifest ; exists ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 ; >
       au < finished ; finished ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
       au < finished ; finished ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
-      au < finished ; frozen ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
+      au < finished ; finished ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < finished ; finished ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < frozen ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
       au < frozen ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >

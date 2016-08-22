@@ -788,7 +788,7 @@
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePlugin ; down ; crawling ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePlugin ; down ; finished ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 235 ; 235 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 236 ; 236 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 237 ; 237 ; reingest4.clockss.org:8082 >
@@ -1576,10 +1576,10 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; reingest3.clockss.org:8083 >
-      au < aps.ClockssAPSDrupalPlugin ; finished ; crawling ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; reingest1.clockss.org:8082 >
+      au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 308 ; 308 ; >
@@ -2518,7 +2518,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1942 ; Physiological Reviews Volume 22 ; 22 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1943 ; Physiological Reviews Volume 23 ; 23 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1944 ; Physiological Reviews Volume 24 ; 24 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1946 ; Physiological Reviews Volume 26 ; 26 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1947 ; Physiological Reviews Volume 27 ; 27 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1948 ; Physiological Reviews Volume 28 ; 28 ; >

@@ -265,7 +265,7 @@
 
     au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
     au < finished ; crawling ; 2009 ; The Plant Genome Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < finished ; crawling ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >

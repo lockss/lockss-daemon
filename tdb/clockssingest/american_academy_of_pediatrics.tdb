@@ -468,7 +468,7 @@
       param[base_url] = http://redbookarchive.aappublications.org/
 
       au < ClockssHighWirePlugin ; down ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 ; >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
     }

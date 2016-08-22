@@ -155,17 +155,17 @@
       
       param[journal_id] = gtm
    
-     au < finished ; crawling ; 1998 ; Geometry & Topology Monographs in 1998 ; 1 ; 1998 ; reingest1.clockss.org:8082 >
+     au < finished ; finished ; 1998 ; Geometry & Topology Monographs in 1998 ; 1 ; 1998 ; reingest1.clockss.org:8082 >
      au < finished ; crawling ; 1999 ; Geometry & Topology Monographs in 1999 ; 2 ; 1999 ; reingest1.clockss.org:8082 >
-     au < finished ; crawling ; 2000 ; Geometry & Topology Monographs in 2000 ; 3 ; 2000 ; reingest1.clockss.org:8082 >
-     au < finished ; crawling ; 2002 ; Geometry & Topology Monographs in 2002 ; 4-5 ; 2002 ; reingest2.clockss.org:8085 >
+     au < finished ; finished ; 2000 ; Geometry & Topology Monographs in 2000 ; 3 ; 2000 ; reingest1.clockss.org:8082 >
+     au < finished ; finished ; 2002 ; Geometry & Topology Monographs in 2002 ; 4-5 ; 2002 ; reingest2.clockss.org:8085 >
      au < doNotProcess ; doNotProcess ; 2003 ; Geometry & Topology Monographs in 2003 ; 6 ; 2003 ; > #publisher reports that this AU will always have notation: notice of content being replaced
      au < finished ; crawling ; 2004 ; Geometry & Topology Monographs in 2004 ; 7 ; 2004 ; reingest1.clockss.org:8082 >
      au < finished ; crawling ; 2006 ; Geometry & Topology Monographs in 2006 ; 8-9 ; 2006 ; reingest2.clockss.org:8085 >
      au < finished ; crawling ; 2007 ; Geometry & Topology Monographs in 2007 ; 10-12 ; 2007 ; >
      au < finished ; crawling ; 2008 ; Geometry & Topology Monographs in 2008 ; 13-15 ; 2008 ; reingest2.clockss.org:8085 >
      au < crawling ; exists ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; >
-     au < finished ; crawling ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; >
+     au < finished ; finished ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; >
      au < finished ; crawling ; 2012 ; Geometry & Topology Monographs in 2012 ; 18 ; 2012 ; reingest2.clockss.org:8085 >
      au < crawling ; exists ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; >
      au < expected ; exists ; 2016 ; Geometry & Topology Monographs in 2016 ; 20 ; 2016 ; >
@@ -229,7 +229,7 @@
      au < manifest ; exists ; 2009 ; Journal of Software for Algebra and Geometry Volume 1 ; 1 ; 2009 ; >
      au < manifest ; exists ; 2010 ; Journal of Software for Algebra and Geometry Volume 2 ; 2 ; 2010 ; >
      au < manifest ; exists ; 2011 ; Journal of Software for Algebra and Geometry Volume 3 ; 3 ; 2011 ; >
-     au < finished ; crawling ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
+     au < finished ; finished ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 ; >
      au < finished ; finished ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 ; >
      au < crawling ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 ; >
