@@ -67,14 +67,15 @@ END {
   s[5] = "notReady"
   s[6] = "ready"
   s[7] = "crawling"
-  s[8] = "frozen"
-  s[9] = "ingNotReady"
-  s[10] = "finished"
-  s[11] = "down"
-  s[12] = "superseded"
-  s[13] = "zapped"
-  s[14] = "doNotProcess"
-  sn = 15
+  s[8] = "deepCrawl"
+  s[9] = "frozen"
+  s[10] = "ingNotReady"
+  s[11] = "finished"
+  s[12] = "down"
+  s[13] = "superseded"
+  s[14] = "zapped"
+  s[15] = "doNotProcess"
+  sn = 16
   
   sc[0] = "expe"
   sc[1] = "exis"
@@ -84,14 +85,15 @@ END {
   sc[5] = "notR"
   sc[6] = "read"
   sc[7] = "craw"
-  sc[8] = "froz"
-  sc[9] = "ingN"
-  sc[10] = "fini"
-  sc[11] = "down"
-  sc[12] = "supe"
-  sc[13] = "zapp"
-  sc[14] = "doNP"
-  scn = 15
+  sc[8] = "deep"
+  sc[9] = "froz"
+  sc[10] = "ingN"
+  sc[11] = "fini"
+  sc[12] = "down"
+  sc[13] = "supe"
+  sc[14] = "zapp"
+  sc[15] = "doNP"
+  scn = 16
 
   #print out header
   printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tTotal"
