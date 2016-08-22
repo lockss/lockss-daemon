@@ -68,7 +68,7 @@
     au < finished ; finished ; 2012 ; American University International Law Review Volume 27 ; 27 ; >
     au < finished ; finished ; 2013 ; American University International Law Review Volume 28 ; 28 ; >
     au < finished ; finished ; 2014 ; American University International Law Review Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2015 ; American University International Law Review Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2015 ; American University International Law Review Volume 30 ; 30 ; >
     au < expected ; exists ; 2016 ; American University International Law Review Volume 31 ; 31 ; >
 
   }
@@ -88,7 +88,7 @@
     au < finished ; finished ; 2012 ; Intellectual Property Brief Issue 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Intellectual Property Brief Issue 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Intellectual Property Brief Issue 5 ; 5 ; >
-    au < crawling ; exists ; 2015 ; Intellectual Property Brief Issue 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2015 ; Intellectual Property Brief Issue 6 ; 6 ; >
     au < expected ; exists ; 2016 ; Intellectual Property Brief Issue 7 ; 7 ; >
 
   }
@@ -106,7 +106,7 @@
     au < finished ; finished ; 2012 ; American University Labor & Employment Law Forum Volume 2 ; 2 ; >
     au < finished ; finished ; 2013 ; American University Labor & Employment Law Forum Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; American University Labor & Employment Law Forum Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2015 ; American University Labor & Employment Law Forum Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2015 ; American University Labor & Employment Law Forum Volume 5 ; 5 ; >
     au < manifest ; exists ; 2016 ; American University Labor & Employment Law Forum Volume 6 ; 6 ; >
 
   }
@@ -160,16 +160,16 @@
     # Volumes 1-7 have no substance on some ingest machines. Need recrawling.
 
     au < finished ; crawling ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < crawling ; finished ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 ; >
+    au < deepCrawl ; finished ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 ; >
     au < finished ; crawling ; 1995 ; The Journal of Gender, Social Policy & the Law Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; The Journal of Gender, Social Policy & the Law Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; The Journal of Gender, Social Policy & the Law Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < crawling ; finished ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 ; >
+    au < deepCrawl ; finished ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 ; >
     au < finished ; crawling ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2001 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2002 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < crawling ; finished ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 ; >
+    au < deepCrawl ; finished ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 ; >
     au < finished ; crawling ; 2004 ; The Journal of Gender, Social Policy & the Law Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 ; >
     au < finished ; finished ; 2005-2006 ; The Journal of Gender, Social Policy & the Law Volume 14 ; 14 ; >
@@ -181,8 +181,8 @@
     au < finished ; finished ; 2012 ; The Journal of Gender, Social Policy & the Law Volume 20 ; 20 ; >
     au < finished ; finished ; 2013 ; The Journal of Gender, Social Policy & the Law Volume 21 ; 21 ; >
     au < finished ; finished ; 2014 ; The Journal of Gender, Social Policy & the Law Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2015 ; The Journal of Gender, Social Policy & the Law Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2016 ; The Journal of Gender, Social Policy & the Law Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2015 ; The Journal of Gender, Social Policy & the Law Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2016 ; The Journal of Gender, Social Policy & the Law Volume 24 ; 24 ; >
 
   }
 
@@ -222,7 +222,7 @@
     au < finished ; finished ; 2009 ; The Modern American Volume 5 ; 5 ; >
     au < finished ; finished ; 2010 ; The Modern American Volume 6 ; 6 ; >
     au < finished ; finished ; 2011 ; The Modern American Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2013 ; The Modern American Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2013 ; The Modern American Volume 8 ; 8 ; >
     au < finished ; finished ; 2013 ; The Modern American Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2015 ; The Modern American Volume 10 ; 10 ; >
     au < expected ; exists ; 2016 ; The Modern American Volume 11 ; 11 ; >
@@ -250,9 +250,9 @@
     au < finished ; finished ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 ; >
     au < finished ; finished ; 2010-2011 ; Sustainable Development Law & Policy Volume 11 ; 11 ; >
     au < finished ; finished ; 2011-2012 ; Sustainable Development Law & Policy Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2012 ; Sustainable Development Law & Policy Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2012 ; Sustainable Development Law & Policy Volume 13 ; 13 ; >
     au < finished ; finished ; 2014 ; Sustainable Development Law & Policy Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2015 ; Sustainable Development Law & Policy Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2015 ; Sustainable Development Law & Policy Volume 15 ; 15 ; >
     au < expected ; exists ; 2016 ; Sustainable Development Law & Policy Volume 16 ; 16 ; >
 
   }

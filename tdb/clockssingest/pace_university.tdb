@@ -73,10 +73,10 @@
     au < finished ; finished ; 2009-2010 ; Pace Environmental Law Review Volume 27 ; 27 ; >
     au < finished ; crawling ; 2011 ; Pace Environmental Law Review Volume 28 ; 28 ; >
     au < finished ; frozen ; 2012 ; Pace Environmental Law Review Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2013 ; Pace Environmental Law Review Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2013 ; Pace Environmental Law Review Volume 30 ; 30 ; >
     au < finished ; finished ; 2014 ; Pace Environmental Law Review Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2015 ; Pace Environmental Law Review Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2016 ; Pace Environmental Law Review Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2015 ; Pace Environmental Law Review Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2016 ; Pace Environmental Law Review Volume 33 ; 33 ; >
 
   }
 
@@ -96,8 +96,8 @@
     au < finished ; frozen ; 2012 ; Pace Environmental Law Review Online Companion Volume 2 ; 2 ; >
     au < finished ; finished ; 2013 ; Pace Environmental Law Review Online Companion Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Pace Environmental Law Review Online Companion Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2015 ; Pace Environmental Law Review Online Companion Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2016 ; Pace Environmental Law Review Online Companion Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2015 ; Pace Environmental Law Review Online Companion Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2016 ; Pace Environmental Law Review Online Companion Volume 6 ; 6 ; >
 
   }
 
@@ -139,7 +139,7 @@
     au < finished ; finished ; 2012 ; Pace International Law Review Volume 24 ; 24 ; >
     au < finished ; finished ; 2013 ; Pace International Law Review Volume 25 ; 25 ; >
     au < finished ; finished ; 2014 ; Pace International Law Review Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2015 ; Pace International Law Review Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2015 ; Pace International Law Review Volume 27 ; 27 ; >
     au < manifest ; exists ; 2016 ; Pace International Law Review Volume 28 ; 28 ; >
 
   }
@@ -191,7 +191,7 @@
     au < finished ; finished ; 2012-2013 ; Pace Law Review Volume 33 ; 33 ; >
     au < finished ; finished ; 2013-2014 ; Pace Law Review Volume 34 ; 34 ; >
     au < finished ; finished ; 2014-2015 ; Pace Law Review Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2015-2016 ; Pace Law Review Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2015-2016 ; Pace Law Review Volume 36 ; 36 ; >
     au < expected ; exists ; 2016-2017 ; Pace Law Review Volume 37 ; 37 ; >
 
   }
@@ -210,10 +210,10 @@
 
     au < finished ; finished ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 ; >
     au < finished ; finished ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Pace I.P., Sports & Entertainment Law Forum Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2013 ; Pace I.P., Sports & Entertainment Law Forum Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Pace I.P., Sports & Entertainment Law Forum Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2015 ; Pace I.P., Sports & Entertainment Law Forum Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2016 ; Pace I.P., Sports & Entertainment Law Forum Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2015 ; Pace I.P., Sports & Entertainment Law Forum Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2016 ; Pace I.P., Sports & Entertainment Law Forum Volume 6 ; 6 ; >
 
   }
 
