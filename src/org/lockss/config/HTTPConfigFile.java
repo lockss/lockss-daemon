@@ -34,6 +34,8 @@ package org.lockss.config;
 
 import java.io.*;
 import java.net.*;
+import java.util.zip.GZIPOutputStream;
+import org.apache.commons.io.input.TeeInputStream;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -245,6 +247,11 @@ public class HTTPConfigFile extends BaseConfigFile {
   }
 
   protected InputStream openInputStream() throws IOException {
+
+    return openInputStream0();
+  }
+
+  protected InputStream openInputStream0() throws IOException {
     InputStream in = null;
     m_IOException = null;
 
@@ -280,7 +287,18 @@ public class HTTPConfigFile extends BaseConfigFile {
     } else {
       in = getUrlInputStream(m_fileUrl);
     }
-    return in;
+    File tmpCacheFile;
+    // If so configured, save the contents of the remote file in a locally
+    // cached copy.
+    if ((tmpCacheFile = m_cfgMgr.getTempCacheFile(m_fileUrl)) != null) {
+      OutputStream out =
+	new BufferedOutputStream(new FileOutputStream(tmpCacheFile));
+      out = new GZIPOutputStream(out, true);
+      InputStream wrapped = new TeeInputStream(in, out, true);
+      return wrapped;
+    } else {
+      return in;
+    }
   }
 
   protected String calcNewLastModified() {

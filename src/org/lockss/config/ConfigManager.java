@@ -207,6 +207,19 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
+  /** If true, local copies of remote config files will be maintined, to
+   * allow daemon to start when config server isn't available. */
+  public static final String PARAM_REMOTE_CONFIG_COPY = PLATFORM +
+    "remoteConfigCopy";
+  public static final boolean DEFAULT_REMOTE_CONFIG_COPY = false;
+
+  /** Dir in which to store local copies of remote config files. */
+  public static final String PARAM_REMOTE_CONFIG_COPY_DIR = PLATFORM +
+    "remoteConfigCopyDir";
+  public static final String DEFAULT_REMOTE_CONFIG_COPY_DIR = "remoteCopy";
+
+
+
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
   public static final String CONFIG_FILE_PROXY_IP_ACCESS =
     "proxy_ip_access.txt";
@@ -225,6 +238,9 @@ public class ConfigManager implements LockssManager {
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
+
+  public static final String REMOTE_CONFIG_COPY_FILENAME =
+    "remote_config_copy_info.xml";
 
   /** If set to a list of regexps, matching parameter names will be allowed
    * to be set in expert config.  */
@@ -976,6 +992,7 @@ public class ConfigManager implements LockssManager {
     if (currentConfig.isEmpty()) {
       // first load preceded by platform config setup
       setupPlatformConfig(urls);
+      
     }
     if (currentConfig.isEmpty() ||
 	TimeBase.msSince(lastSendVersion) >= sendVersionEvery) {
@@ -1695,6 +1712,18 @@ public class ConfigManager implements LockssManager {
       return;
     }
     cacheConfigDir = findRelDataDir(v, relConfigPath, true);
+
+    // Set up local copy mechanism
+    Configuration plat = getPlatformConfig();
+    if (plat.getBoolean(PARAM_REMOTE_CONFIG_COPY, DEFAULT_REMOTE_CONFIG_COPY)) {
+      remoteCopyDir =
+	new File(cacheConfigDir, plat.get(PARAM_REMOTE_CONFIG_COPY_DIR,
+					  DEFAULT_REMOTE_CONFIG_COPY_DIR));
+      remoteCopyInfoFile = new File(cacheConfigDir,
+				    REMOTE_CONFIG_COPY_FILENAME);
+      loadLocalCopyConfigMap();
+    }
+
     cacheConfigInited = true;
   }
 
@@ -2318,6 +2347,64 @@ public class ConfigManager implements LockssManager {
     // Write out file
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
+
+  // Maintain local copy of remote config files
+
+  /** Maps URL to rel filename */
+  class LocalCopyInfo implements LockssSerializable {
+    Map<String,String> map = new HashMap<String,String>();
+
+    String put(String url, String file) {
+      return map.put(url, file);
+    }
+
+    String get(String url) {
+      return map.get(url);
+    }
+  }
+
+  File remoteCopyDir;
+  File remoteCopyInfoFile;
+  LocalCopyInfo lci;
+
+//     storeLocalCopyInfo(file, lci);
+
+  public File getTempCacheFile(String foo) {
+    return null;
+  }
+
+  void storeLocalCopyInfo(File file, LocalCopyInfo localCopy)
+      throws Exception {
+    try {
+      ObjectSerializer serializer = new XStreamSerializer();
+      serializer.serialize(file, localCopy);
+    } catch (Exception e) {
+      log.error("Could not store local copy info", e);
+      throw e;
+    }
+  }
+
+  /**
+   * <p>Load a LocalCopyInfo object from a file
+   * @param file         A source file.
+   * @return A LocalCopyInfo instance loaded from file (or a default
+   *         value).
+   */
+  LocalCopyInfo loadLocalCopyConfigMap() {
+    try {
+      log.debug3("Loading LocalCopyInfo");
+      ObjectSerializer deserializer = new XStreamSerializer();
+      return (LocalCopyInfo)deserializer.deserialize(remoteCopyInfoFile);
+    } catch (SerializationException se) {
+      log.error(
+          "Marshalling exception for LocalCopyInfo", se);
+      return new LocalCopyInfo();
+    } catch (Exception e) {
+      log.error("Could not load LocalCopyInfo", e);
+      throw new RuntimeException("Could not load LocalCopyInfo", e);
+    }
+  }
+
 
   // Testing assistance
 
