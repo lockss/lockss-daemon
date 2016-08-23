@@ -3,6 +3,7 @@
   publisher <
     name = Alliance of Crop, Soil, and Environmental Science Societies ;
     info[contract] = 2013 ;
+    info[back] = 1900 ;
     info[tester] = 5
   >
   
@@ -19,12 +20,12 @@
     
     param[series_id] = advancesinagric
 
-    au < testing ; exists ; 2013 ; 978-0-89118-339-6 ; Enhancing Understanding and Quantification of Soil–Root Growth Interactions ; enhancingunder ; >
-    au < testing ; exists ; 2016 ; 978-0-89118-352-5 ; Improving Modeling Tools to Assess Climate Change Effects on Crop Response ; advagricsystmodel7 ; >
-    au < testing ; exists ; 2011 ; 978-0-89118-196-5 ; Methods of Introducing System Models into Agricultural Research ; methodsofintrod ; >
-    au < testing ; exists ; 2014 ; 978-0-89118-344-0 ; Practical Applications of Agricultural System Models to Optimize the Use of Limited Water ; practicalapplic ; >
-    au < testing ; exists ; 2013 ; 978-0-89118-957-2 ; Quantifying and Modeling Soil Structure Dynamics ; quantifyingandm ; >
     au < testing ; exists ; 2008 ; 978-0-89118-188-0 ; Response of Crops to Limited Water: Understanding and Modeling Water Stress Effects on Plant Growth Processes ; responseofcrops ; >
+    au < testing ; exists ; 2011 ; 978-0-89118-196-5 ; Methods of Introducing System Models into Agricultural Research ; methodsofintrod ; >
+    au < testing ; exists ; 2013 ; 978-0-89118-339-6 ; Enhancing Understanding and Quantification of Soil–Root Growth Interactions ; enhancingunder ; >
+    au < testing ; exists ; 2013 ; 978-0-89118-957-2 ; Quantifying and Modeling Soil Structure Dynamics ; quantifyingandm ; >
+    au < testing ; exists ; 2014 ; 978-0-89118-344-0 ; Practical Applications of Agricultural System Models to Optimize the Use of Limited Water ; practicalapplic ; >
+    au < testing ; exists ; 2016 ; 978-0-89118-352-5 ; Improving Modeling Tools to Assess Climate Change Effects on Crop Response ; advagricsystmodel7 ; >
     au < testing ; exists ; 2016 ; 978-0-89118-346-4 ; Synthesis and Modeling of Greenhouse Gas Emissions and Carbon Storage in Agricultural and Forest Systems to Guide Mitigation and Adaptation ; advagricsystmodel6 ; >
 
   }
@@ -38,60 +39,60 @@
     
     param[series_id] = agronomymonogra
     
-    au < testing ; exists ; 1999 ; 978-0-89118-230-6 ; Agricultural Drainage ; agriculturaldra ; >
-    au < testing ; exists ; 2004 ; 978-0-89118-235-1 ; Agroecosystems Analysis ; agroecosystemsa ; >
-    au < testing ; exists ; 1988 ; 978-0-89118-222-1 ; Alfalfa and Alfalfa Improvement ; alfalfaandalfal ; >
-    au < testing ; exists ; 1972 ; 978-0-89118-210-8 ; Alfalfa Science and Technology ; alfalfasciencet ; >
-    au < testing ; exists ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; >
-    au < testing ; exists ; 1999 ; 978-0-89118-229-0 ; Bioremediation of Contaminated Soils ; bioremediationo ; >
-    au < testing ; exists ; 1985 ; 978-0-89118-218-4 ; Clover Science and Technology ; cloversciencean ; >
-    au < testing ; exists ; 1996 ; 978-0-89118-226-9 ; Cool-Season Forage Grasses ; coolseasonforag ; >
-    au < testing ; exists ; 1988 ; 978-0-89118-212-2 ; Corn and Corn Improvement ; cornandcornimpr ; >
-    au < testing ; exists ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; >
-    au < testing ; exists ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; >
-    au < testing ; exists ; 2000 ; 978-0-89118-232-0 ; Designing Crops for Added Value ; designingcropsf ; >
-    au < testing ; exists ; 1974 ; 978-0-89118-211-5 ; Drainage for Agriculture ; drainageforagri ; >
     au < testing ; exists ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; >
-    au < testing ; exists ; 2006 ; 978-0-89118-265-8 ; Dryland Agriculture ; drylandagricult ; >
-    au < testing ; exists ; 2007 ; 978-0-89118-264-1 ; Irrigation of Agricultural Crops ; irrigationofagr2 ; >
-    au < testing ; exists ; 1967 ; 978-0-89118-206-1 ; Irrigation of Agricultural Lands ; irrigationofagr ; >
-    au < testing ; exists ; 2000 ; 978-0-89118-231-3 ; Managing Soils in an Urban Environment ; managingsoilsin ; >
+    au < testing ; exists ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; >
+    au < testing ; exists ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; >
     au < testing ; exists ; 1965 ; 978-0-89118-202-3 ; Methods of Soil Analysis. Part 1. Physical and Mineralogical Properties, Including Statistics of Measurement and Sampling ; methodsofsoilana ; >
     au < testing ; exists ; 1965 ; 978-0-89118-204-7 ; Methods of Soil Analysis. Part 2. Chemical and Microbiological Properties ; methodsofsoilanb ; >
-    au < testing ; exists ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; >
-    au < testing ; exists ; 2005 ; 978-0-89118-268-9 ; Micrometeorology in Agricultural Systems ; micrometeorolog ; >
-    au < testing ; exists ; 1991 ; 978-0-89118-223-8 ; Modeling Plant and Soil Systems ; modelingplantan ; >
-    au < testing ; exists ; 2004 ; 978-0-89118-236-8 ; Near-Infrared Spectroscopy in Agriculture ; nearinfraredspe ; >
-    au < testing ; exists ; 2009 ; 978-0-89118-192-7 ; Nitrogen Fixation in Crop Production ; nitrogenfixatio ; >
-    au < testing ; exists ; 1982 ; 978-0-89118-216-0 ; Nitrogen in Agricultural Soils ; nitrogeninagrics ; >
-    au < testing ; exists ; 1987 ; 978-0-89118-221-4 ; Nutritional Quality of Cereal Grains: Genetic and Agronomic Improvement ; nutritionalqual ; >
-    au < testing ; exists ; 1992 ; 978-0-89118-225-2 ; Oat Science and Technology ; oatscienceandte ; >
-    au < testing ; exists ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; >
-    au < testing ; exists ; 2005 ; 978-0-89118-269-6 ; Phosphorus: Agriculture and the Environment ; phosphorusagric ; >
-    au < testing ; exists ; 1979 ; 978-0-89118-215-3 ; Planning the Uses and Management of Land ; planningtheuses ; >
-    au < testing ; exists ; 1998 ; 978-0-89118-228-3 ; Plant and Nematode Interactions ; plantandnematod ; >
-    au < testing ; exists ; 2000 ; 978-0-89118-233-7 ; Reclamation of Drastically Disturbed Lands ; reclamationofdr ; >
-    au < testing ; exists ; 2005 ; 978-0-89118-267-2 ; Roots and Soil Management: Interactions between Roots and the Soil ; rootsandsoilman ; >
-    au < testing ; exists ; 2003 ; 978-0-89118-234-4 ; Silage Science and Technology ; silagesciencean ; >
-    au < testing ; exists ; 1984 ; 978-0-89118-207-8 ; Soil Acidity and Liming ; soilacidityandl ; >
-    au < testing ; exists ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; >
-    au < testing ; exists ; 2004 ; 978-0-89118-266-5 ; Soybeans: Improvement, Production, and Uses ; soybeansimprove ; >
-    au < testing ; exists ; 1986 ; 978-0-89118-220-7 ; Sulfur in Agriculture ; sulfurinagricul ; >
-    au < testing ; exists ; 1978 ; 978-0-89118-213-9 ; Sunflower Science and Technology ; sunflowerscienc ; >
-    au < testing ; exists ; 1997 ; 978-0-89118-227-6 ; Sunflower Technology and Production ; sunflowertechno ; >
-    au < testing ; exists ; 1979 ; 978-0-89118-214-6 ; Tall Fescue ; tallfescue ; >
-    au < testing ; exists ; 1992 ; 978-0-89118-224-5 ; Turfgrass ; turfgrass ; >
+    au < testing ; exists ; 1967 ; 978-0-89118-206-1 ; Irrigation of Agricultural Lands ; irrigationofagr ; >
     au < testing ; exists ; 1969 ; 978-0-89118-209-2 ; Turfgrass Science ; turfgrassscienc ; >
-    au < testing ; exists ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; >
-    au < testing ; exists ; 2004 ; 978-0-89118-237-5 ; Warm-Season (C4) Grasses ; warmseasonc4gra ; >
+    au < testing ; exists ; 1972 ; 978-0-89118-210-8 ; Alfalfa Science and Technology ; alfalfasciencet ; >
+    au < testing ; exists ; 1974 ; 978-0-89118-211-5 ; Drainage for Agriculture ; drainageforagri ; >
+    au < testing ; exists ; 1978 ; 978-0-89118-213-9 ; Sunflower Science and Technology ; sunflowerscienc ; >
+    au < testing ; exists ; 1979 ; 978-0-89118-215-3 ; Planning the Uses and Management of Land ; planningtheuses ; >
+    au < testing ; exists ; 1979 ; 978-0-89118-214-6 ; Tall Fescue ; tallfescue ; >
+    au < testing ; exists ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; >
+    au < testing ; exists ; 1982 ; 978-0-89118-216-0 ; Nitrogen in Agricultural Soils ; nitrogeninagrics ; >
+    au < testing ; exists ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; >
+    au < testing ; exists ; 1984 ; 978-0-89118-207-8 ; Soil Acidity and Liming ; soilacidityandl ; >
+    au < testing ; exists ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; >
+    au < testing ; exists ; 1985 ; 978-0-89118-218-4 ; Clover Science and Technology ; cloversciencean ; >
+    au < testing ; exists ; 1986 ; 978-0-89118-220-7 ; Sulfur in Agriculture ; sulfurinagricul ; >
     au < testing ; exists ; 1987 ; 978-0-89118-208-5 ; Wheat and Wheat Improvement ; wheatandwheatim ; >
+    au < testing ; exists ; 1987 ; 978-0-89118-221-4 ; Nutritional Quality of Cereal Grains: Genetic and Agronomic Improvement ; nutritionalqual ; >
+    au < testing ; exists ; 1988 ; 978-0-89118-222-1 ; Alfalfa and Alfalfa Improvement ; alfalfaandalfal ; >
+    au < testing ; exists ; 1988 ; 978-0-89118-212-2 ; Corn and Corn Improvement ; cornandcornimpr ; >
+    au < testing ; exists ; 1991 ; 978-0-89118-223-8 ; Modeling Plant and Soil Systems ; modelingplantan ; >
+    au < testing ; exists ; 1992 ; 978-0-89118-225-2 ; Oat Science and Technology ; oatscienceandte ; >
+    au < testing ; exists ; 1992 ; 978-0-89118-224-5 ; Turfgrass ; turfgrass ; >
+    au < testing ; exists ; 1996 ; 978-0-89118-226-9 ; Cool-Season Forage Grasses ; coolseasonforag ; >
+    au < testing ; exists ; 1997 ; 978-0-89118-227-6 ; Sunflower Technology and Production ; sunflowertechno ; >
+    au < testing ; exists ; 1998 ; 978-0-89118-228-3 ; Plant and Nematode Interactions ; plantandnematod ; >
+    au < testing ; exists ; 1999 ; 978-0-89118-229-0 ; Bioremediation of Contaminated Soils ; bioremediationo ; >
+    au < testing ; exists ; 1999 ; 978-0-89118-230-6 ; Agricultural Drainage ; agriculturaldra ; >
+    au < testing ; exists ; 2000 ; 978-0-89118-232-0 ; Designing Crops for Added Value ; designingcropsf ; >
+    au < testing ; exists ; 2000 ; 978-0-89118-231-3 ; Managing Soils in an Urban Environment ; managingsoilsin ; >
+    au < testing ; exists ; 2000 ; 978-0-89118-233-7 ; Reclamation of Drastically Disturbed Lands ; reclamationofdr ; >
+    au < testing ; exists ; 2003 ; 978-0-89118-234-4 ; Silage Science and Technology ; silagesciencean ; >
+    au < testing ; exists ; 2004 ; 978-0-89118-235-1 ; Agroecosystems Analysis ; agroecosystemsa ; >
+    au < testing ; exists ; 2004 ; 978-0-89118-236-8 ; Near-Infrared Spectroscopy in Agriculture ; nearinfraredspe ; >
+    au < testing ; exists ; 2005 ; 978-0-89118-268-9 ; Micrometeorology in Agricultural Systems ; micrometeorolog ; >
+    au < testing ; exists ; 2005 ; 978-0-89118-267-2 ; Roots and Soil Management: Interactions between Roots and the Soil ; rootsandsoilman ; >
+    au < testing ; exists ; 2005 ; 978-0-89118-269-6 ; Phosphorus: Agriculture and the Environment ; phosphorusagric ; >
+    au < testing ; exists ; 2004 ; 978-0-89118-266-5 ; Soybeans: Improvement, Production, and Uses ; soybeansimprove ; >
+    au < testing ; exists ; 2004 ; 978-0-89118-237-5 ; Warm-Season (C4) Grasses ; warmseasonc4gra ; >
+    au < testing ; exists ; 2006 ; 978-0-89118-265-8 ; Dryland Agriculture ; drylandagricult ; >
+    au < testing ; exists ; 2007 ; 978-0-89118-264-1 ; Irrigation of Agricultural Crops ; irrigationofagr2 ; >
     au < testing ; exists ; 2008 ; 978-0-89118-191-0 ; Nitrogen in Agricultural Systems ; nitrogeninagric ; >
-    au < testing ; exists ; 2009 ; 978-0-89118-189-7 ; Organic Farming: The Ecological System ; organicfarmingt ; >
-    au < testing ; exists ; 2016 ; 978-0-89118-628-1 ; Sorghum: State of the Art and Future Perspectives ; agronmonogr58 ; >
     au < testing ; exists ; 2008 ; 978-0-89118-186-6 ; Sulfur: A Missing Link between Soils, Crops, and Nutrition ; sulfuramissingl ; >
+    au < testing ; exists ; 2009 ; 978-0-89118-189-7 ; Organic Farming: The Ecological System ; organicfarmingt ; >
     au < testing ; exists ; 2009 ; 978-0-89118-185-9 ; Tall Fescue for the Twenty-first Century ; tallfescueforth ; >
-    au < testing ; exists ; 2010 ; 978-0-89118-181-1 ; Urban Ecosystem Ecology ; urbanecosysteme ; >
     au < testing ; exists ; 2009 ; 978-0-89118-187-3 ; Modification of Seed Composition to Promote Health and Nutrition ; modificationofs ; >
+    au < testing ; exists ; 2009 ; 978-0-89118-192-7 ; Nitrogen Fixation in Crop Production ; nitrogenfixatio ; >
+    au < testing ; exists ; 2010 ; 978-0-89118-181-1 ; Urban Ecosystem Ecology ; urbanecosysteme ; >
+    au < testing ; exists ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; >
+    au < testing ; exists ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; >
+    au < testing ; exists ; 2016 ; 978-0-89118-628-1 ; Sorghum: State of the Art and Future Perspectives ; agronmonogr58 ; >
     
     
   }
@@ -410,7 +411,6 @@
     au < testing ; exists ; 1981 ; 978-0-89118-881-0 ; Soil and Water Resources: Research Priorities for the Nation ; soilandwaterres ; >
     au < testing ; exists ; 2015 ; 978-0-89118-965-7 ; Soil Ecosystems Services ; soilecosystemsservices ; >
     au < testing ; exists ; 1985 ; 978-0-89118-309-9 ; Soil Erosion and Conservation in the Tropics ; soilerosionandc ; >
-    au < testing ; exists ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; >
     au < testing ; exists ; 2011 ; 978-0-89118-195-8 ; Soil Management: Building a Stable Base for Agriculture ; soilmanagementb ; >
     au < testing ; exists ; 2008 ; 978-0-89118-856-8 ; Soil Science Step-by-Step Field Analysis ; soilsciencestep ; >
     au < testing ; exists ; 1966 ; 978-0-89118-889-6 ; Soil Surveys and Land Use Planning ; soilsurveysandl ; >
@@ -427,8 +427,9 @@
     au < testing ; exists ; 1968 ; 978-0-89118-250-4 ; The Role of Potassium in Agriculture ; theroleofpotass ; >
     au < testing ; exists ; 1997 ; 978-0-89118-262-7 ; The State of Site-Specific Management for Agriculture ; thestateofsites ; >
     au < testing ; exists ; 1994 ; 978-0-89118-578-9 ; Turf Weeds and Their Control ; turfweedsandthe ; >
-    au < testing ; exists ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; >
     au < testing ; exists ; 1986 ; 978-0-89118-886-5 ; Utilization, Treatment, and Disposal of Waste on Land ; utilizationtrea ; >
+    au < testing ; exists ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; >
+    au < testing ; exists ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; >
     
   }
   
