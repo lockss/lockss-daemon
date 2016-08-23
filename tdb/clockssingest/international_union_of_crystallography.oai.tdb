@@ -37,9 +37,9 @@
     au < deepCrawl ; exists ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 October ; 2015-10 ; >
     au < deepCrawl ; exists ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 November ; 2015-11 ; >
     au < deepCrawl ; exists ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 December ; 2015-12 ; >
-    au < manifest ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 January ; 2016-01 ; >
-    au < manifest ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 February ; 2016-02 ; >
-    au < manifest ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 March ; 2016-03 ; >
+    au < testing ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 January ; 2016-01 ; >
+    au < testing ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 February ; 2016-02 ; >
+    au < testing ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 March ; 2016-03 ; >
     au < expected ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 April ; 2016-04 ; >
     au < expected ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 May ; 2016-05 ; >
     au < expected ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 June ; 2016-06 ; >
@@ -170,9 +170,9 @@
     au < finished ; manifest ; 2015 ; 2 ; IUCrJ Volume 2 October ; 2015-10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2 ; IUCrJ Volume 2 November ; 2015-11 ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2015 ; 2 ; IUCrJ Volume 2 December ; 2015-12 ; > #no substance
-    au < manifest ; exists ; 2016 ; 3 ; IUCrJ Volume 3 January ; 2016-01 ; >
-    au < manifest ; exists ; 2016 ; 3 ; IUCrJ Volume 3 February ; 2016-02 ; >
-    au < manifest ; exists ; 2016 ; 3 ; IUCrJ Volume 3 March ; 2016-03 ; >
+    au < testing ; exists ; 2016 ; 3 ; IUCrJ Volume 3 January ; 2016-01 ; >
+    au < testing ; exists ; 2016 ; 3 ; IUCrJ Volume 3 February ; 2016-02 ; >
+    au < testing ; exists ; 2016 ; 3 ; IUCrJ Volume 3 March ; 2016-03 ; >
     au < expected ; exists ; 2016 ; 3 ; IUCrJ Volume 3 April ; 2016-04 ; >
     au < expected ; exists ; 2016 ; 3 ; IUCrJ Volume 3 May ; 2016-05 ; >
     au < expected ; exists ; 2016 ; 3 ; IUCrJ Volume 3 June ; 2016-06 ; >
