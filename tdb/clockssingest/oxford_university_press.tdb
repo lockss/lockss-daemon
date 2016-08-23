@@ -11946,7 +11946,7 @@
     param[base_url] = http://jcsl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; Journal of Conflict and Security Law Volume 13 [superseded] ; 13 ; >
+    au < superseded ; finished ; 2008 ; Journal of Conflict and Security Law Volume 13 [superseded] ; 13 ; >
     au < zapped ; superseded ; 2009 ; Journal of Conflict and Security Law Volume 14 [superseded] ; 14 ; >
 
     }
@@ -13559,7 +13559,7 @@
     param[base_url] = http://jis.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; Journal of Islamic Studies Volume 19 [superseded] ; 19 ; >
+    au < superseded ; finished ; 2008 ; Journal of Islamic Studies Volume 19 [superseded] ; 19 ; >
     au < zapped ; finished ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
     }
@@ -13778,7 +13778,7 @@
     param[base_url] = http://jlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; Journal of the London Mathematical Society Volume 77 [superseded] ; 77 ; >
+    au < superseded ; finished ; 2008 ; Journal of the London Mathematical Society Volume 77 [superseded] ; 77 ; >
     au < zapped ; finished ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < superseded ; down ; 2009 ; Journal of the London Mathematical Society Volume 79 [superseded] ; 79 ; >
     au < zapped ; finished ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
@@ -16293,7 +16293,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
-    au < superseded ; down ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 [superseded] ; 26 ; >
+    au < superseded ; finished ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 [superseded] ; 26 ; >
 
     }
 
@@ -19235,9 +19235,9 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < superseded ; down ; 2008 ; Past & Present Volume 199 [superseded] ; 199 ; >
+    au < superseded ; finished ; 2008 ; Past & Present Volume 199 [superseded] ; 199 ; >
     au < zapped ; finished ; 2008 ; Past & Present Volume 200 ; 200 ; >
-    au < superseded ; down ; 2008 ; Past & Present Volume 201 [superseded] ; 201 ; >
+    au < superseded ; finished ; 2008 ; Past & Present Volume 201 [superseded] ; 201 ; >
     au < zapped ; finished ; 2009 ; Past & Present Volume 202 ; 202 ; >
     au < zapped ; finished ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
@@ -20884,7 +20884,7 @@
     param[base_url] = http://qjmam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 [superseded] ; 61 ; >
+    au < superseded ; finished ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 [superseded] ; 61 ; >
     au < superseded ; down ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 [superseded] ; 62 ; >
 
     }
@@ -22920,11 +22920,11 @@
     param[base_url] = http://toxsci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 101 [superseded] ; 101 ; >
+    au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 101 [superseded] ; 101 ; >
     au < down ; finished ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
     au < superseded ; down ; 2008 ; Toxicological Sciences Volume 103 [superseded] ; 103 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
+    au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
