@@ -1139,7 +1139,7 @@
   {
 
     title <
-      name = Gastronomica: The Journal of Food and Culture ;
+      name = Gastronomica: The Journal of Critical Food Studies ;
       issn = 1529-3262 ;
       eissn = 1533-8622 ;
       issnl = 1529-3262
@@ -1152,16 +1152,16 @@
       param[journal_id] = gfc
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 2001 ; Gastronomica: The Journal of Food and Culture Volume 1 ; 1 >
-      au < down ; 2002 ; Gastronomica: The Journal of Food and Culture Volume 2 ; 2 >
-      au < down ; 2003 ; Gastronomica: The Journal of Food and Culture Volume 3 ; 3 >
-      au < down ; 2004 ; Gastronomica: The Journal of Food and Culture Volume 4 ; 4 >
-      au < down ; 2005 ; Gastronomica: The Journal of Food and Culture Volume 5 ; 5 >
-      au < down ; 2006 ; Gastronomica: The Journal of Food and Culture Volume 6 ; 6 >
-      au < down ; 2007 ; Gastronomica: The Journal of Food and Culture Volume 7 ; 7 >
-      au < down ; 2008 ; Gastronomica: The Journal of Food and Culture Volume 8 ; 8 >
-      au < down ; 2009 ; Gastronomica: The Journal of Food and Culture Volume 9 ; 9 >
-      au < down ; 2010 ; Gastronomica: The Journal of Food and Culture Volume 10 ; 10 >
+      au < down ; 2001 ; Gastronomica: The Journal of Critical Food Studies Volume 1 ; 1 >
+      au < down ; 2002 ; Gastronomica: The Journal of Critical Food Studies Volume 2 ; 2 >
+      au < down ; 2003 ; Gastronomica: The Journal of Critical Food Studies Volume 3 ; 3 >
+      au < down ; 2004 ; Gastronomica: The Journal of Critical Food Studies Volume 4 ; 4 >
+      au < down ; 2005 ; Gastronomica: The Journal of Critical Food Studies Volume 5 ; 5 >
+      au < down ; 2006 ; Gastronomica: The Journal of Critical Food Studies Volume 6 ; 6 >
+      au < down ; 2007 ; Gastronomica: The Journal of Critical Food Studies Volume 7 ; 7 >
+      au < down ; 2008 ; Gastronomica: The Journal of Critical Food Studies Volume 8 ; 8 >
+      au < down ; 2009 ; Gastronomica: The Journal of Critical Food Studies Volume 9 ; 9 >
+      au < down ; 2010 ; Gastronomica: The Journal of Critical Food Studies Volume 10 ; 10 >
 
     }
 
@@ -3164,7 +3164,7 @@
   {
 
     title <
-      name = Rhetorica ;
+      name = Rhetorica: A Journal of the History of Rhetoric ;
       issn = 0734-8584 ;
       eissn = 1533-8541 ;
       issnl = 0734-8584
@@ -3177,34 +3177,34 @@
       param[journal_id] = rh
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 1983 ; Rhetorica Volume 1 ; 1 >
-      au < down ; 1984 ; Rhetorica Volume 2 ; 2 >
-      au < down ; 1985 ; Rhetorica Volume 3 ; 3 >
-      au < down ; 1986 ; Rhetorica Volume 4 ; 4 >
-      au < down ; 1987 ; Rhetorica Volume 5 ; 5 >
-      au < down ; 1988 ; Rhetorica Volume 6 ; 6 >
-      au < down ; 1989 ; Rhetorica Volume 7 ; 7 >
-      au < down ; 1990 ; Rhetorica Volume 8 ; 8 >
-      au < down ; 1991 ; Rhetorica Volume 9 ; 9 >
-      au < down ; 1992 ; Rhetorica Volume 10 ; 10 >
-      au < down ; 1993 ; Rhetorica Volume 11 ; 11 >
-      au < down ; 1994 ; Rhetorica Volume 12 ; 12 >
-      au < down ; 1995 ; Rhetorica Volume 13 ; 13 >
-      au < down ; 1996 ; Rhetorica Volume 14 ; 14 >
-      au < down ; 1997 ; Rhetorica Volume 15 ; 15 >
-      au < down ; 1998 ; Rhetorica Volume 16 ; 16 >
-      au < down ; 1999 ; Rhetorica Volume 17 ; 17 >
-      au < down ; 2000 ; Rhetorica Volume 18 ; 18 >
-      au < down ; 2001 ; Rhetorica Volume 19 ; 19 >
-      au < down ; 2002 ; Rhetorica Volume 20 ; 20 >
-      au < down ; 2003 ; Rhetorica Volume 21 ; 21 >
-      au < down ; 2004 ; Rhetorica Volume 22 ; 22 >
-      au < down ; 2005 ; Rhetorica Volume 23 ; 23 >
-      au < down ; 2006 ; Rhetorica Volume 24 ; 24 >
-      au < down ; 2007 ; Rhetorica Volume 25 ; 25 >
-      au < down ; 2008 ; Rhetorica Volume 26 ; 26 >
-      au < down ; 2009 ; Rhetorica Volume 27 ; 27 >
-      au < down ; 2010 ; Rhetorica Volume 28 ; 28 >
+      au < down ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
+      au < down ; 1984 ; Rhetorica: A Journal of the History of Rhetoric Volume 2 ; 2 >
+      au < down ; 1985 ; Rhetorica: A Journal of the History of Rhetoric Volume 3 ; 3 >
+      au < down ; 1986 ; Rhetorica: A Journal of the History of Rhetoric Volume 4 ; 4 >
+      au < down ; 1987 ; Rhetorica: A Journal of the History of Rhetoric Volume 5 ; 5 >
+      au < down ; 1988 ; Rhetorica: A Journal of the History of Rhetoric Volume 6 ; 6 >
+      au < down ; 1989 ; Rhetorica: A Journal of the History of Rhetoric Volume 7 ; 7 >
+      au < down ; 1990 ; Rhetorica: A Journal of the History of Rhetoric Volume 8 ; 8 >
+      au < down ; 1991 ; Rhetorica: A Journal of the History of Rhetoric Volume 9 ; 9 >
+      au < down ; 1992 ; Rhetorica: A Journal of the History of Rhetoric Volume 10 ; 10 >
+      au < down ; 1993 ; Rhetorica: A Journal of the History of Rhetoric Volume 11 ; 11 >
+      au < down ; 1994 ; Rhetorica: A Journal of the History of Rhetoric Volume 12 ; 12 >
+      au < down ; 1995 ; Rhetorica: A Journal of the History of Rhetoric Volume 13 ; 13 >
+      au < down ; 1996 ; Rhetorica: A Journal of the History of Rhetoric Volume 14 ; 14 >
+      au < down ; 1997 ; Rhetorica: A Journal of the History of Rhetoric Volume 15 ; 15 >
+      au < down ; 1998 ; Rhetorica: A Journal of the History of Rhetoric Volume 16 ; 16 >
+      au < down ; 1999 ; Rhetorica: A Journal of the History of Rhetoric Volume 17 ; 17 >
+      au < down ; 2000 ; Rhetorica: A Journal of the History of Rhetoric Volume 18 ; 18 >
+      au < down ; 2001 ; Rhetorica: A Journal of the History of Rhetoric Volume 19 ; 19 >
+      au < down ; 2002 ; Rhetorica: A Journal of the History of Rhetoric Volume 20 ; 20 >
+      au < down ; 2003 ; Rhetorica: A Journal of the History of Rhetoric Volume 21 ; 21 >
+      au < down ; 2004 ; Rhetorica: A Journal of the History of Rhetoric Volume 22 ; 22 >
+      au < down ; 2005 ; Rhetorica: A Journal of the History of Rhetoric Volume 23 ; 23 >
+      au < down ; 2006 ; Rhetorica: A Journal of the History of Rhetoric Volume 24 ; 24 >
+      au < down ; 2007 ; Rhetorica: A Journal of the History of Rhetoric Volume 25 ; 25 >
+      au < down ; 2008 ; Rhetorica: A Journal of the History of Rhetoric Volume 26 ; 26 >
+      au < down ; 2009 ; Rhetorica: A Journal of the History of Rhetoric Volume 27 ; 27 >
+      au < down ; 2010 ; Rhetorica: A Journal of the History of Rhetoric Volume 28 ; 28 >
 
     }
 
