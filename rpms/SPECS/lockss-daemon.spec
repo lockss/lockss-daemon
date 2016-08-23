@@ -68,5 +68,5 @@ if [ -s /etc/lockss/config.dat ]; then /etc/init.d/lockss start ; echo "Started 
 /usr/share/lockss
 %attr(755,root,root) /etc/lockss
 %attr(755,root,root) /etc/init.d/lockss
-%attr(644,root,root) /etc/logrotate.d/lockss
+%attr(644,root,root) %config(noreplace) /etc/logrotate.d/lockss
 
