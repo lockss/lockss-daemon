@@ -2975,7 +2975,7 @@
         au < manifest ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 664 ; 664 >
         au < manifest ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 665 ; 665 >
         au < manifest ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 666 ; 666 >
-        au < expected ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 667 ; 667 >
+        au < manifest ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 667 ; 667 >
         au < expected ; 2016 ; The ANNALS of the American Academy of Political and Social Science Volume 668 ; 668 >
 
       }
@@ -6724,7 +6724,7 @@
         au < exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 >
         au < released ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 >
         au < released ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
-        au < expected ; 2016 ; Citizenship, Social and Economics Education Volume 15 ; 15 >
+        au < manifest ; 2016 ; Citizenship, Social and Economics Education Volume 15 ; 15 >
 
     }
 
@@ -21343,7 +21343,7 @@
         au < released ; 2013-2014 ; Journal for the Study of the New Testament Volume 36 ; 36 >
         au < released ; 2014-2015 ; Journal for the Study of the New Testament Volume 37 ; 37 >
         au < manifest ; 2015-2016 ; Journal for the Study of the New Testament Volume 38 ; 38 >
-        au < expected ; 2016-2017 ; Journal for the Study of the New Testament Volume 39 ; 39 >
+        au < manifest ; 2016-2017 ; Journal for the Study of the New Testament Volume 39 ; 39 >
 
       }
 
@@ -27001,7 +27001,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < expected ; 2016 ; Journal of Heritage Management Volume 1 ; 1 >
+        au < manifest ; 2016 ; Journal of Heritage Management Volume 1 ; 1 >
   
     }
 
