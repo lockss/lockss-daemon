@@ -156,7 +156,7 @@
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjrcr
 
-      au < deepCrawl ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 ; >
       au < crawling ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 ; >
 
   }
@@ -233,7 +233,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; > 
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
-      au < deepCrawl ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
       au < frozen ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
       au < crawling ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
 

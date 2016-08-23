@@ -56,7 +56,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2016 ; 2016 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2016 ; 2016 ; >
 
     }
@@ -152,7 +152,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Social Work and Social Sciences Review Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Social Work and Social Sciences Review Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; 2014 ; Social Work and Social Sciences Review Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2016 ; 2016 ; Social Work and Social Sciences Review Volume 2016 ; 2016 ; >
 
     }
