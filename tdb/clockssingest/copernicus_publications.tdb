@@ -62,7 +62,7 @@
       au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 ; >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; >
 
    }
@@ -187,7 +187,7 @@
       {
       param[base_url] = http://www.arch-anim-breed.net/
 
-      au < frozen ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; >
 
       }
@@ -353,7 +353,7 @@
       au < finished ; finished ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 ; >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; >
       au < testing ; exists ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; >
 
    }
@@ -814,7 +814,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
       au < finished ; crawling ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; >
 
    }
@@ -905,7 +905,7 @@
       au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 ; >
       au < deepCrawl ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; >
       au < testing ; exists ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; >
 
    }
@@ -1507,7 +1507,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; >
       au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; >
       au < finished ; crawling ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; >
       au < manifest ; exists ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; >
 
    }
