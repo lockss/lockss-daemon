@@ -190,7 +190,7 @@
     au < finished ; finished ; 2012 ; Comma Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Comma Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Comma Volume 2014 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Comma Volume 2015 ; 2015 ; >
+    au < finished ; crawling ; 2015 ; Comma Volume 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Comma Volume 2016 ; 2016 ; >
 
   }
@@ -217,7 +217,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Contemporary French Civilization Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Contemporary French Civilization Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2014 ; Contemporary French Civilization Volume 39 ; 39 ; >
-    au < finished ; manifest ; 2015 ; Contemporary French Civilization Volume 40 ; 40 ; >
+    au < finished ; crawling ; 2015 ; Contemporary French Civilization Volume 40 ; 40 ; >
     au < manifest ; exists ; 2016 ; Contemporary French Civilization Volume 41 ; 41 ; >
 
   }
@@ -364,7 +364,7 @@
     au < finished ; crawling ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 ; >
+    au < finished ; crawling ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 ; >
     au < expected ; exists ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; >
 
   }
@@ -432,8 +432,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 ; >
-    au < finished ; manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; >
-    au < finished ; manifest ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 ; >
+    au < finished ; crawling ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; >
+    au < finished ; crawling ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 ; >
 
   }
@@ -458,8 +458,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Labour History Review Volume 76 [Atypon]; 76 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Labour History Review Volume 77 [Atypon]; 77 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Labour History Review Volume 78 [Atypon]; 78 ; >
-    au < finished ; manifest ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 ; >
-    au < finished ; manifest ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 ; >
+    au < finished ; crawling ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 ; >
+    au < finished ; crawling ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 ; >
     au < manifest ; exists ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 ; >
 
   }
@@ -554,8 +554,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 ; >
-    au < finished ; manifest ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 ; >
-    au < finished ; manifest ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 ; >
+    au < finished ; crawling ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 ; >
+    au < finished ; crawling ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 ; >
 
   }
@@ -573,7 +573,7 @@
     au < finished ; finished ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 ; >
     au < finished ; finished ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 ; >
     au < frozen ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 ; >
-    au < finished ; manifest ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 ; >
+    au < finished ; crawling ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 ; >
     au < manifest ; exists ; 2016 ; Newsletter of the Gypsy Lore Society Volume 39 ; 39 ; >
 
   }
@@ -596,7 +596,7 @@
     au < finished ; crawling ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
+    au < finished ; crawling ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
     au < manifest ; exists ; 2016-2017 ; Quaker Studies Volume 21 ; 21 ; >
 
   }
@@ -656,10 +656,10 @@
     au < finished ; crawling ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Quebec Studies Volume 55 ; 55 ; >
     au < finished ; finished ; 2013 ; Quebec Studies Volume 56 ; 56 ; >
-    au < finished ; manifest ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
+    au < finished ; crawling ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
     au < finished ; finished ; 2014 ; Quebec Studies Volume 58 ; 58 ; >
-    au < finished ; manifest ; 2015 ; Quebec Studies Volume 59 ; 59 ; >
-    au < finished ; manifest ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
+    au < finished ; crawling ; 2015 ; Quebec Studies Volume 59 ; 59 ; >
+    au < finished ; crawling ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
     au < manifest ; exists ; 2016 ; Quebec Studies Volume 61 ; 61 ; >
     au < expected ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; >
 
@@ -730,7 +730,7 @@
     au < finished ; crawling ; 2012 ; Studia Hibernica Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Studia Hibernica Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Studia Hibernica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
+    au < finished ; crawling ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
     au < expected ; exists ; 2016 ; Studia Hibernica Volume 42 ; 42 ; >
 
   }
@@ -853,7 +853,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Town Planning Review Volume 82 ; 82 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Town Planning Review Volume 83 ; 83 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Town Planning Review Volume 84 ; 84 ; >
-    au < finished ; manifest ; 2014 ; Town Planning Review Volume 85 ; 85 ; >
+    au < finished ; crawling ; 2014 ; Town Planning Review Volume 85 ; 85 ; >
     au < frozen ; exists ; 2015 ; Town Planning Review Volume 86 ; 86 ; >
     au < manifest ; exists ; 2016 ; Town Planning Review Volume 87 ; 87 ; >
 
