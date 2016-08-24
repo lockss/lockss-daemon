@@ -167,6 +167,8 @@ public class JarValidator {
     }
   }
 
+  private Set<X509Certificate> checkedCerts = new HashSet<X509Certificate>();
+
   /**
    * Check the validity of each of the supplied certificates.  If
    * at least one certificate is a valid, trusted X509 certificate
@@ -196,23 +198,25 @@ public class JarValidator {
 
     for (int i = 0; i < certs.length; i++) {
       X509Certificate jarEntryCert = (X509Certificate)certs[i];
-      try {
-	jarEntryCert.checkValidity();
-      } catch (CertificateExpiredException ex) {
-	log.warning("Certificate is no longer valid.");
-        
-        if (m_allowExpired) {
-          log.warning("...but we're allowing it anyway.");
-        } else {
-          throw new JarValidationException("Jar entry " + je.getName() + " is no longer valid." +
-            "Invalid certificates are not allowed.");
-        }
-      } catch (CertificateNotYetValidException ex) {
-	log.warning("Certificate is not yet valid.");
-        throw new JarValidationException("Jar entry " + je.getName() + " is not yet valid." +
-            "Invalid certificates are not allowed.");
+      if (!checkedCerts.contains(jarEntryCert)) {
+	try {
+	  jarEntryCert.checkValidity();
+	} catch (CertificateExpiredException ex) {
+	  log.warning("Certificate is no longer valid: " + ex.getMessage() +
+		      ": " + jarEntryCert.getSubjectX500Principal());
+	  if (m_allowExpired) {
+	    log.warning("...but we're allowing it anyway.");
+	  } else {
+	    throw new JarValidationException("Jar entry " + je.getName() + " is no longer valid." +
+					     "Invalid certificates are not allowed.");
+	  }
+	} catch (CertificateNotYetValidException ex) {
+	  log.warning("Certificate is not yet valid.");
+	  throw new JarValidationException("Jar entry " + je.getName() + " is not yet valid." +
+					   "Invalid certificates are not allowed.");
+	}
+	checkedCerts.add(jarEntryCert);
       }
-
       X509Certificate issuerCert = null;
 
       try {
