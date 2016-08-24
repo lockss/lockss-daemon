@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Cushman Foundation for Foraminiferal Research ;
-    info[tester] = 2
+    name = Cushman Foundation for Foraminiferal Research
   >
     
     plugin = org.lockss.plugin.highwire.gsw.GSWDrupalPlugin
