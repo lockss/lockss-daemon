@@ -825,7 +825,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     List<String> urls = ListUtil.list(startUrl,
 				      url1, url2, url3, url4, url5,
 				      url6, url7, url8, url9, url10);
-    extractor.addUrlsToReturn(startUrl, ListUtil.list(url4, url1));
+    extractor.addUrlsToReturn(startUrl, ListUtil.list(url1, url4));
     extractor.addUrlsToReturn(url1, ListUtil.list(url2, url3));
     extractor.addUrlsToReturn(url2, ListUtil.list(url7));
     extractor.addUrlsToReturn(url7, ListUtil.list(url8));
