@@ -473,7 +473,7 @@
 
     au < frozen ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; >
     au < finished ; manifest ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; >
 
   }
 
@@ -490,7 +490,7 @@
     au < crawling ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; >
-    au < testing ; exists ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; >
+    au < ready ; exists ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; >
     
   }
 
@@ -545,7 +545,7 @@
     au < crawling ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; >
-    au < testing ; exists ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; >
     
   }
 
@@ -561,7 +561,7 @@
 
     au < frozen ; exists ; 2014 ; Melanoma Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 2015 ; Melanoma Management Volume 2 ; 2 ; >
-    au < testing ; exists ; 2016 ; Melanoma Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 2016 ; Melanoma Management Volume 3 ; 3 ; >
 
   }
 
@@ -604,7 +604,7 @@
     au < crawling ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; >
-    au < testing ; exists ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; >
+    au < ready ; exists ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; >
 
   }
 
