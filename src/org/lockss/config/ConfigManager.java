@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 
 import org.apache.commons.collections.Predicate;
+import org.apache.commons.io.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.*;
 
@@ -207,6 +208,19 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
+  /** If true, local copies of remote config files will be maintined, to
+   * allow daemon to start when config server isn't available. */
+  public static final String PARAM_REMOTE_CONFIG_COPY = PLATFORM +
+    "remoteConfigCopy";
+  public static final boolean DEFAULT_REMOTE_CONFIG_COPY = false;
+
+  /** Dir in which to store local copies of remote config files. */
+  public static final String PARAM_REMOTE_CONFIG_COPY_DIR = PLATFORM +
+    "remoteConfigCopyDir";
+  public static final String DEFAULT_REMOTE_CONFIG_COPY_DIR = "remoteCopy";
+
+
+
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
   public static final String CONFIG_FILE_PROXY_IP_ACCESS =
     "proxy_ip_access.txt";
@@ -225,6 +239,9 @@ public class ConfigManager implements LockssManager {
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
+
+  public static final String REMOTE_CONFIG_COPY_FILENAME =
+    "remote_config_copy_info.xml";
 
   /** If set to a list of regexps, matching parameter names will be allowed
    * to be set in expert config.  */
@@ -958,6 +975,8 @@ public class ConfigManager implements LockssManager {
       haveConfig.fill();
     }
     connPool.closeIdleConnections(0);
+    updateRemoteConfigCopy();
+
     return res;
   }
 
@@ -1115,6 +1134,8 @@ public class ConfigManager implements LockssManager {
     // group) in initial config get into platformConfig even during testing.
     platConfig.seal();
     platformConfig = platConfig;
+    initCacheConfig(platConfig);
+    setUpRemoteConfigCopy();
   }
 
   // If a keystore was specified for 
@@ -2318,6 +2339,238 @@ public class ConfigManager implements LockssManager {
     // Write out file
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
+
+  // Maintain local copy of remote config files
+
+  File remoteCopyDir;
+  File remoteCopyInfoFile;
+  RemoteConfigCopyMap rccm;
+
+  static class RemoteConfigCopyInfo implements LockssSerializable {
+    final String url;
+    String filename;
+    long date;
+    transient File dir;
+    transient File tempfile;
+    transient int seq;
+
+    RemoteConfigCopyInfo(String url, File dir, int seq) {
+      this.dir = dir;
+      this.url = url;
+      this.seq = seq;
+    }
+
+    void setRemoteCopyDir(File dir) {
+      this.dir = dir;
+    }
+
+    String getUrl() {
+      return url;
+    }
+
+    String getFilename() {
+      return filename;
+    }
+
+    File getTempFile() {
+      return tempfile;
+    }
+
+    void setTempFile(File tempfile) {
+      this.tempfile = tempfile;
+    }
+
+    boolean update() {
+      if (tempfile != null) {
+	log.debug("Rename " + tempfile + " -> " + getPermFileAbs());
+	PlatformUtil.updateAtomically(tempfile, getPermFileAbs());
+	tempfile = null;
+	date = TimeBase.nowMs();
+	return true;
+      } else {
+	return false;
+      }
+    }
+
+    File getPermFileAbs() {
+      return new File(dir, getPermFilename());
+    }
+
+    File getPermFile() {
+      return new File(getPermFilename());
+    }
+
+    long getDate() {
+      return date;
+    }
+
+    String getPermFilename() {
+      if (filename == null) {
+	try {
+	  log.debug("Getting perm filename from: " + url);
+	  String path = UrlUtil.getPath(url);
+	  String name = FilenameUtils.getBaseName(path);
+	  String ext = FilenameUtils.getExtension(path);
+	  filename = String.format("%02d-%s.%s.gz", seq, name, ext);
+	} catch (MalformedURLException e) {
+	  filename = String.format("%02d-config-file.gz", seq);
+	}
+      }
+      log.debug("Perm filename: " + filename);
+      return filename;
+    }
+
+  }
+
+  /** Maps URL to rel filename */
+  static class RemoteConfigCopyMap implements LockssSerializable {
+    Map<String,RemoteConfigCopyInfo> map =
+      new HashMap<String,RemoteConfigCopyInfo>();
+    int seq;
+
+    RemoteConfigCopyInfo put(String url, RemoteConfigCopyInfo rcci) {
+      return map.put(url, rcci);
+    }
+
+    RemoteConfigCopyInfo get(String url) {
+      return map.get(url);
+    }
+
+    int nextSeq() {
+      return ++seq;
+    }
+
+    Collection<RemoteConfigCopyInfo> getColl() {
+      return map.values();
+    }
+
+    boolean update() {
+      boolean isModified = false;
+      for (RemoteConfigCopyInfo rcci : getColl()) {
+	isModified |= rcci.update();
+      }
+      return isModified;
+    }
+
+    void setRemoteCopyDir(File dir) {
+      for (RemoteConfigCopyInfo rcci : getColl()) {
+	rcci.setRemoteCopyDir(dir);
+      }
+    }
+
+  }
+
+  void setUpRemoteConfigCopy() {
+    // Set up local copy mechanism
+    Configuration plat = getPlatformConfig();
+    if (plat.getBoolean(PARAM_REMOTE_CONFIG_COPY, DEFAULT_REMOTE_CONFIG_COPY)) {
+      remoteCopyDir =
+	new File(cacheConfigDir, plat.get(PARAM_REMOTE_CONFIG_COPY_DIR,
+					  DEFAULT_REMOTE_CONFIG_COPY_DIR));
+      if (FileUtil.ensureDirExists(remoteCopyDir)) {
+	remoteCopyInfoFile = new File(cacheConfigDir,
+				      REMOTE_CONFIG_COPY_FILENAME);
+	rccm = loadRemoteConfigCopyMap();
+      } else {
+	log.error("Can't create remove config copy dir: " + remoteCopyDir);
+	remoteCopyDir = null;
+	rccm = null;
+      }
+    } else {
+      remoteCopyDir = null;
+      rccm = null;
+    }
+  }
+
+  public boolean isRemoteConfigCopyEnabled() {
+    return rccm != null;
+  }
+
+  RemoteConfigCopyInfo getRcci(String url) {
+    RemoteConfigCopyInfo rcci = rccm.get(url);
+    if (rcci == null) {
+      rcci = new RemoteConfigCopyInfo(url, remoteCopyDir, rccm.nextSeq());
+      rccm.put(url, rcci);
+    }
+    return rcci;
+  }
+
+  public File getRemoteCopyFile(String url) {
+    if (!isRemoteConfigCopyEnabled()) return null;
+    RemoteConfigCopyInfo rcci = getRcci(url);
+    log.critical("foo: " + url + ": " + rcci);
+    return rcci == null ? null : new File(remoteCopyDir, rcci.getFilename());
+  }    
+
+  public File getTempRemoteCopyFile(String url) {
+    if (!isRemoteConfigCopyEnabled()) return null;
+    RemoteConfigCopyInfo rcci = getRcci(url);
+    File tempfile = rcci.getTempFile();
+    if (tempfile != null) {
+      log.warning("getTempRemoteCopyFile: temp file already exists for " + url);
+      FileUtil.safeDeleteFile(tempfile);
+      rcci.setTempFile(null);
+    }
+    try {
+      tempfile =
+	FileUtil.createTempFile("remote_config", ".tmp", remoteCopyDir);
+    } catch (IOException e) {
+      log.error("Can't create temp file for remote config copy of "
+		+ url + " in " + remoteCopyDir, e);
+    }
+    rcci.setTempFile(tempfile);
+    return tempfile;
+  }
+
+  void updateRemoteConfigCopy() {
+    if (!isRemoteConfigCopyEnabled()) return;
+    if (rccm.update()) {
+      try {
+	storeRemoteConfigCopyMap(remoteCopyInfoFile);
+      } catch (IOException | SerializationException e) {
+	log.error("Error storing remote config copy map", e);
+      }
+    }
+  }
+
+  void storeRemoteConfigCopyMap(File file)
+      throws IOException, SerializationException {
+    log.debug("storeRemoteConfigCopyMap: " + file);
+    try {
+      ObjectSerializer serializer = new XStreamSerializer();
+      serializer.serialize(file, rccm);
+    } catch (Exception e) {
+      log.error("Could not store remote config copy map", e);
+      throw e;
+    }
+  }
+
+  /**
+   * Load RemoteConfigCopyMap from a file
+   * @param file         A source file.
+   * @return RemoteConfigCopyMap instance loaded from file (or a default
+   *         value).
+   */
+  RemoteConfigCopyMap loadRemoteConfigCopyMap() {
+    try {
+      log.debug3("Loading RemoteConfigCopyMap");
+      ObjectSerializer deserializer = new XStreamSerializer();
+      RemoteConfigCopyMap map =
+	(RemoteConfigCopyMap)deserializer.deserialize(remoteCopyInfoFile);
+      map.setRemoteCopyDir(remoteCopyDir);
+      return map;
+    } catch (SerializationException.FileNotFound se) {
+      log.debug("No RemoteConfigCopyMap, creating new one");
+      return new RemoteConfigCopyMap();
+    } catch (SerializationException se) {
+      log.error("Marshalling exception for RemoteConfigCopyMap", se);
+      return new RemoteConfigCopyMap();
+    } catch (Exception e) {
+      log.error("Could not load RemoteConfigCopyMap", e);
+      throw new RuntimeException("Could not load RemoteConfigCopyMap", e);
+    }
+  }
+
 
   // Testing assistance
 

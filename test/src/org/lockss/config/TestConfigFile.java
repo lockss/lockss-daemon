@@ -404,6 +404,21 @@ public abstract class TestConfigFile extends LockssTestCase {
     assertEqualsNotSame(gen.getConfig(), gen2.getConfig());
   }
 
+  String gzippedTempFileUrl(String content, String ext) throws IOException {
+    return gzippedTempFile(content, ext).toURI().toURL().toString();
+  }
+
+  File gzippedTempFile(String content, String ext) throws IOException {
+    File tmpFile = getTempFile("config", ext + ".gz");
+    OutputStream out =
+      new BufferedOutputStream(new FileOutputStream(tmpFile));
+    out = new GZIPOutputStream(out, true);
+    Writer wrtr = new OutputStreamWriter(out, Constants.DEFAULT_ENCODING);
+    wrtr.write(content);
+    wrtr.close();
+    return tmpFile;
+  }
+
   /** Test FileConfigFile */
   public static class TestFile extends TestConfigFile {
     public TestFile(String name) {
@@ -432,6 +447,26 @@ public abstract class TestConfigFile extends LockssTestCase {
     public void testNotFound() throws IOException {
       testCantRead(new FileConfigFile("/file/not/found"),
 		   "FileNotFoundException");
+    }
+
+    public void testGzip() throws IOException {
+      FileConfigFile fcf =
+	new FileConfigFile(gzippedTempFileUrl(text1, ".txt"));
+      Configuration config = fcf.getConfiguration();
+      assertTrue(fcf.isLoaded());
+      assertEquals("foo", config.get("prop.1"));
+      assertEquals("bar", config.get("prop.2"));
+      assertEquals("baz", config.get("prop.3"));
+    }
+
+    public void testGzipXml() throws IOException {
+      FileConfigFile fcf =
+	new FileConfigFile(gzippedTempFileUrl(xml1, ".xml"));
+      Configuration config = fcf.getConfiguration();
+      assertTrue(fcf.isLoaded());
+      assertEquals("foo", config.get("prop.7"));
+      assertEquals("bar", config.get("prop.8"));
+      assertEquals("baz", config.get("prop.9"));
     }
 
     // Ensure storedConfig() of a sealed config doesn't make a copy
@@ -635,6 +670,64 @@ public abstract class TestConfigFile extends LockssTestCase {
       assertEquals(pport, hcf.proxyPort);
     }
 
+    public void testMakeRemoteCopy() throws IOException {
+      String url1 = "http://foo.bar/lockss.xml";
+      InputStream in = new StringInputStream(xml1);
+      MyHttpConfigFile hcf = new MyHttpConfigFile(url1, in);
+      MyConfigManager mcm = new MyConfigManager();
+      File tmpFile = getTempFile("configtmp", "");
+      FileUtil.safeDeleteFile(tmpFile);
+      assertFalse(tmpFile.exists());
+      mcm.setTempFile(url1, tmpFile);
+      hcf.setConfigManager(mcm);
+
+      Configuration config = hcf.getConfiguration();
+      assertTrue(tmpFile.exists());
+      assertReaderMatchesString(xml1,
+				new InputStreamReader(new GZIPInputStream(new FileInputStream(tmpFile))));
+      assertEquals("foo", config.get("prop.7"));
+      assertEquals("bar", config.get("prop.8"));
+      assertEquals("baz", config.get("prop.9"));
+    }
+
+    public void testLocalFailover() throws IOException {
+      String url1 = "http://foo.bar/lockss.xml";
+      File remoteCopy = gzippedTempFile(xml1, ".xml");
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile(url1, new StringInputStream(""));
+      MyConfigManager mcm = new MyConfigManager();
+      mcm.setPermFile(url1, remoteCopy);
+      hcf.setConfigManager(mcm);
+      hcf.setResponseCode(404);
+      assertTrue(remoteCopy.exists());
+      Configuration config = hcf.getConfiguration();
+      assertEquals("foo", config.get("prop.7"));
+      assertEquals("bar", config.get("prop.8"));
+      assertEquals("baz", config.get("prop.9"));
+    }
+
+    public void testNoLocalFailover() throws IOException {
+      String url1 = "http://foo.bar/lockss.xml";
+      String url2 = "http://bar.foo/lockss.xml";
+      File remoteCopy = gzippedTempFile(xml1, ".xml");
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile(url2, new StringInputStream(""));
+      MyConfigManager mcm = new MyConfigManager();
+      mcm.setPermFile(url1, remoteCopy);
+      hcf.setConfigManager(mcm);
+      hcf.setResponseCode(404);
+      hcf.setResponseMessage("knocking at your door");
+      assertTrue(remoteCopy.exists());
+      try {
+	Configuration config = hcf.getConfiguration();
+	fail("Without local failover, should throw FileNotFoundException");
+      } catch (FileNotFoundException e) {
+	// Should throw original exception
+	assertMatchesRE("404: knocking at your door", e.getMessage());
+      }
+    }
+
+
   }
 
   /** HTTPConfigFile that uses a programmable MockLockssUrlConnection */
@@ -763,6 +856,28 @@ public abstract class TestConfigFile extends LockssTestCase {
 	MyHttpConfigFile.this.proxyHost = host;
 	MyHttpConfigFile.this.proxyPort = port;
       }
+    }
+  }
+
+  // Just enough ConfigManager for HTTPConfigFile to save and load remote
+  // config copy files
+  static class MyConfigManager extends ConfigManager {
+    Map<String,File> tempfiles = new HashMap<String,File>();
+    Map<String,File> permfiles = new HashMap<String,File>();
+
+    public File getTempRemoteCopyFile(String url) {
+      return tempfiles.get(url);
+    }
+    public File getRemoteCopyFile(String url) {
+      return permfiles.get(url);
+    }
+
+    void setTempFile(String url, File file) {
+      tempfiles.put(url, file);
+    }
+
+    void setPermFile(String url, File file) {
+      permfiles.put(url, file);
     }
   }
 
