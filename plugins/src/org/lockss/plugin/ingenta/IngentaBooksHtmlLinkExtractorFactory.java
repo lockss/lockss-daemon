@@ -54,7 +54,7 @@ import org.lockss.util.StringUtil;
  *    onclick="javascript:popup('/search/download?pub=infobike%3a%2f%2fbkpub%2f2ouacs%2f2015%2f00000001%2f00000001%2fart00001&mimetype=application%2fpdf&exitTargetId=1463607913143','downloadWindow','900','800')" title="PDF download of Dare to Serve" class="no-underline contain" >
  * and extracts from the javascript the link
  *   <base>/search/download?pub=infobike%3a%2f%2fbkpub%2f2ouacs%2f2015%2f00000001%2f00000001%2fart00001&mimetype=application%2fpdf&exitTargetId=1463607913143
- * which is normalized to the crawler stable version of the PDF
+ * which is URL normalized to the crawler stable version of the PDF
  * 
  */
 public class IngentaBooksHtmlLinkExtractorFactory 

@@ -56,6 +56,8 @@ import org.lockss.util.Logger;
  *    becomes
  *    http://www.ingentaconnect.com/content/bkpub/2ouacs/2015/00000001/00000001/art00001?crawler=true&mimetype=application/pdf       
  *     
+ *   NOTE - the official crawler stable version is at api.ingentaconnect.com but it is also available at
+ *   www.ingentaconnect.com so we create that one instead.
  */
 
 public class IngentaBooksUrlNormalizer implements UrlNormalizer {
