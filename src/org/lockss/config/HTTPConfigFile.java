@@ -246,12 +246,40 @@ public class HTTPConfigFile extends BaseConfigFile {
     }
   }
 
-  protected InputStream openInputStream() throws IOException {
+  FileConfigFile failoverFcf;
 
-    return openInputStream0();
+  /** Return an InputStream open on the HTTP url.  If in accessible and a
+      local copy of the remote file exists, failover to it. */
+  protected InputStream openInputStream() throws IOException {
+    try {
+      InputStream in = openHttpInputStream();
+      if (in != null) {
+	// If we got remote content, clear any local failover copy as it
+	// may now be obsolete
+	failoverFcf = null;
+      }
+      return in;
+    } catch (IOException e) {
+      // The HTTP fetch failed.  First see if we already found a failover
+      // file.
+      if (failoverFcf == null) {
+	if (m_cfgMgr == null) {
+	  throw e;
+	}
+	File fileCopy = m_cfgMgr.getRemoteCopyFile(m_fileUrl);
+	if (fileCopy == null) {
+	  throw e;
+	}
+	// Found one, 
+	log.info("Couldn't load remote config URL: " + m_fileUrl);
+	log.info("Substituting local copy: " + fileCopy);
+	failoverFcf = new FileConfigFile(fileCopy.getPath());
+      }
+      return failoverFcf.openInputStream();
+    }
   }
 
-  protected InputStream openInputStream0() throws IOException {
+  protected InputStream openHttpInputStream() throws IOException {
     InputStream in = null;
     m_IOException = null;
 
@@ -287,18 +315,27 @@ public class HTTPConfigFile extends BaseConfigFile {
     } else {
       in = getUrlInputStream(m_fileUrl);
     }
-    File tmpCacheFile;
-    // If so configured, save the contents of the remote file in a locally
-    // cached copy.
-    if ((tmpCacheFile = m_cfgMgr.getTempCacheFile(m_fileUrl)) != null) {
-      OutputStream out =
-	new BufferedOutputStream(new FileOutputStream(tmpCacheFile));
-      out = new GZIPOutputStream(out, true);
-      InputStream wrapped = new TeeInputStream(in, out, true);
-      return wrapped;
-    } else {
-      return in;
+    if (in != null) {
+      File tmpCacheFile;
+      // If so configured, save the contents of the remote file in a locally
+      // cached copy.
+      if (m_cfgMgr != null &&
+	  (tmpCacheFile = m_cfgMgr.getTempRemoteCopyFile(m_fileUrl)) != null) {
+	try {
+	  log.debug("Copying remote config: " + m_fileUrl);
+	  OutputStream out =
+	    new BufferedOutputStream(new FileOutputStream(tmpCacheFile));
+	  out = new GZIPOutputStream(out, true);
+	  InputStream wrapped = new TeeInputStream(in, out, true);
+	  return wrapped;
+	} catch (IOException e) {
+	  log.error("Error opening remote config copy temp file: " +
+		    tmpCacheFile, e);
+	  return in;
+	}
+      }
     }
+    return in;
   }
 
   protected String calcNewLastModified() {
