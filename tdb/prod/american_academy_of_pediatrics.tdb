@@ -51,7 +51,7 @@
       au < HighWirePressH20Plugin ; down ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
       au < aap.AAPDrupalPlugin ; manifest ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
       au < aap.AAPDrupalPlugin ; manifest ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
-      au < aap.AAPDrupalPlugin ; testing ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
+      au < aap.AAPDrupalPlugin ; manifest ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
       au < aap.AAPDrupalPlugin ; manifest ; 2016 ; AAP Grand Rounds Volume 35 ; 35 >
       au < aap.AAPDrupalPlugin ; manifest ; 2016 ; AAP Grand Rounds Volume 36 ; 36 >
 
@@ -132,7 +132,7 @@
       au < HighWirePressH20Plugin ; down ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
-      au < aap.AAPDrupalPlugin ; testing ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
+      au < aap.AAPDrupalPlugin ; manifest ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
       au < aap.AAPDrupalPlugin ; manifest ; 2016 ; Hospital Pediatrics Volume 6 ; 6 >
 
     }

@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Portland Press ;
-    info[tester] = 8
+    name = Portland Press
   >
   
   plugin = org.lockss.plugin.highwire.portlandpress.PortlandPressDrupalPlugin
@@ -513,7 +512,7 @@ comment[bj1] = no permission from publisher
     au < ready ; 2015 ; Biochemical Journal Volume 469 ; 469 >
     au < ready ; 2015 ; Biochemical Journal Volume 470 ; 470 >
     au < ready ; 2015 ; Biochemical Journal Volume 471 ; 471 >
-    au < testing ; 2015 ; Biochemical Journal Volume 472 ; 472 >
+    au < manifest ; 2015 ; Biochemical Journal Volume 472 ; 472 >
     au < manifest ; 2016 ; Biochemical Journal Volume 473 ; 473 >
     au < exists ; 2016 ; Biochemical Journal Volume 474 ; 474 >
     au < expected ; 2016 ; Biochemical Journal Volume 475 ; 475 >
@@ -586,7 +585,7 @@ comment[bj1] = no permission from publisher
     au < doNotProcess ; 2012 ; Biochemical Society Transactions Volume 40 ; 40 >
     au < doNotProcess ; 2013 ; Biochemical Society Transactions Volume 41 ; 41 >
     au < ready ; 2014 ; Biochemical Society Transactions Volume 42 ; 42 >
-    au < testing ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 >
+    au < manifest ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 >
     au < exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 >
     
   }

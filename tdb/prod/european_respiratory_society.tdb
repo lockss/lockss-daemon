@@ -25,7 +25,7 @@
     au < ers.ERSDrupalPlugin ; manifest ; 2011-2012 ; Breathe Volume 8 ; 8 >
     au < ers.ERSDrupalPlugin ; manifest ; 2012-2013 ; Breathe Volume 9 ; 9 >
     au < ers.ERSDrupalPlugin ; manifest ; 2014 ; Breathe Volume 10 ; 10 >
-    au < ers.ERSDrupalPlugin ; testing ; 2015 ; Breathe Volume 11 ; 11 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2015 ; Breathe Volume 11 ; 11 >
     au < ers.ERSDrupalPlugin ; manifest ; 2016 ; Breathe Volume 12 ; 12 >
     
   }
@@ -40,7 +40,7 @@
 
     param[base_url] = http://openres.ersjournals.com/
 
-    au < ers.ERSDrupalPlugin ; testing ; 2015 ; ERJ Open Research Volume 1 ; 1 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2015 ; ERJ Open Research Volume 1 ; 1 >
     au < ers.ERSDrupalPlugin ; manifest ; 2016 ; ERJ Open Research Volume 2 ; 2 >
     
   }

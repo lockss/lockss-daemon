@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Advertising Research Foundation ;
-    info[tester] = 2
+    name = Advertising Research Foundation 
   >
 
     plugin = org.lockss.plugin.highwire.arf.ARFDrupalPlugin
@@ -33,8 +32,8 @@
     au < manifest ; 2011 ; Journal of Advertising Research Volume 51 ; 51 >
     au < manifest ; 2012 ; Journal of Advertising Research Volume 52 ; 52 >
     au < manifest ; 2013 ; Journal of Advertising Research Volume 53 ; 53 >
-    au < testing ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
-    au < testing ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
+    au < manifest ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
+    au < manifest ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
     au < manifest ; 2016 ; Journal of Advertising Research Volume 56 ; 56 >
 
   }
