@@ -1783,4 +1783,74 @@
     
   }
   
+    {
+  
+      title <
+        name = Costume ;
+        issn = 0590-8876 ;
+        eissn = 1749-6306 ;
+        issnl = 0590-8876 
+      >
+  
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      param[journal_id] = cost
+      #move to Edinburgh University Press (EUP) in 2017
+
+      au < cost ; 1965-1967 ; Costume Volume 1 ; 1 >
+      au < cost ; 1968 ; Costume Volume 2 ; 2 >
+      au < cost ; 1969 ; Costume Volume 3 ; 3 >
+      au < cost ; 1970 ; Costume Volume 4 ; 4 >
+      au < cost ; 1971 ; Costume Volume 5 ; 5 >
+      au < cost ; 1972 ; Costume Volume 6 ; 6 >
+      au < cost ; 1973 ; Costume Volume 7 ; 7 >
+      au < cost ; 1974 ; Costume Volume 8 ; 8 >
+      au < cost ; 1975 ; Costume Volume 9 ; 9 >
+      au < cost ; 1976 ; Costume Volume 10 ; 10 >
+      au < cost ; 1977 ; Costume Volume 11 ; 11 >
+      au < cost ; 1978 ; Costume Volume 12 ; 12 >
+      au < cost ; 1979 ; Costume Volume 13 ; 13 >
+      au < cost ; 1980 ; Costume Volume 14 ; 14 >
+      au < cost ; 1981 ; Costume Volume 15 ; 15 >
+      au < cost ; 1982 ; Costume Volume 16 ; 16 >
+      au < cost ; 1983 ; Costume Volume 17 ; 17 >
+      au < cost ; 1984 ; Costume Volume 18 ; 18 >
+      au < cost ; 1985 ; Costume Volume 19 ; 19 >
+      au < cost ; 1986 ; Costume Volume 20 ; 20 >
+      au < cost ; 1987 ; Costume Volume 21 ; 21 >
+      au < cost ; 1988 ; Costume Volume 22 ; 22 >
+      au < cost ; 1989 ; Costume Volume 23 ; 23 >
+      au < cost ; 1990 ; Costume Volume 24 ; 24 >
+      au < cost ; 1991 ; Costume Volume 25 ; 25 >
+      au < cost ; 1992 ; Costume Volume 26 ; 26 >
+      au < cost ; 1993 ; Costume Volume 27 ; 27 >
+      au < cost ; 1994 ; Costume Volume 28 ; 28 >
+      au < cost ; 1995 ; Costume Volume 29 ; 29 >
+      au < cost ; 1996 ; Costume Volume 30 ; 30 >
+      au < cost ; 1997 ; Costume Volume 31 ; 31 >
+      au < cost ; 1998 ; Costume Volume 32 ; 32 >
+      au < cost ; 1999 ; Costume Volume 33 ; 33 >
+      au < cost ; 2000 ; Costume Volume 34 ; 34 >
+      au < cost ; 2001 ; Costume Volume 35 ; 35 >
+      au < cost ; 2002 ; Costume Volume 36 ; 36 >
+      au < cost ; 2003 ; Costume Volume 37 ; 37 >
+      au < cost ; 2004 ; Costume Volume 38 ; 38 >
+      au < cost ; 2005 ; Costume Volume 39 ; 39 >
+      au < cost ; 2006 ; Costume Volume 40 ; 40 >
+      au < cost ; 2007 ; Costume Volume 41 ; 41 >
+      au < cost ; 2008 ; Costume Volume 42 ; 42 >
+      au < cost ; 2009 ; Costume Volume 43 ; 43 >
+      au < doNotProcess ; 2010 ; Costume Volume 44 ; 44 >
+      au < doNotProcess ; 2011 ; Costume Volume 45 ; 45 >
+      au < doNotProcess ; 2012 ; Costume Volume 46 ; 46 >
+      au < doNotProcess ; 2013 ; Costume Volume 47 ; 47 >
+      au < doNotProcess ; 2014 ; Costume Volume 48 ; 48 >
+      au < doNotProcess ; 2015 ; Costume Volume 49 ; 49 >
+      au < doNotProcess ; 2016 ; Costume Volume 50 ; 50 >
+      au < expected ; 2017 ; Costume Volume 51 ; 51 > #moving to Edinburgh
+  
+    }
+  
 }

@@ -1490,6 +1490,21 @@ public class MetadataManagerSql {
       + " and am." + AU_MD_SEQ_COLUMN + " = ?"
       + ")";
 
+  // Query to update the unknown provider of an Archival Unit using MySQL.
+  private static final String UPDATE_AU_MD_UNKNOWN_PROVIDER_MYSQL_QUERY =
+      "update " + AU_MD_TABLE
+      + " set " + PROVIDER_SEQ_COLUMN + " = ?"
+      + " where " + AU_MD_SEQ_COLUMN + " IN ("
+      + "select am." + AU_MD_SEQ_COLUMN
+      + " from ("
+      + "select " + AU_MD_SEQ_COLUMN + "," + PROVIDER_SEQ_COLUMN
+      + " from " + AU_MD_TABLE + ") as am"
+      + "," + PROVIDER_TABLE + " p"
+      + " where am." + PROVIDER_SEQ_COLUMN + " = p." + PROVIDER_SEQ_COLUMN
+      + " and p." + PROVIDER_NAME_COLUMN + " = '" + UNKNOWN_PROVIDER_NAME + "'"
+      + " and am." + AU_MD_SEQ_COLUMN + " = ?"
+      + ")";
+
   // Query to retrieve all the Archival Units with no metadata items.
   private static final String GET_NO_ITEMS_AUS_QUERY = "select"
       + " pl." + PLUGIN_ID_COLUMN
@@ -6759,11 +6774,18 @@ public class MetadataManagerSql {
       log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     }
 
+    String sql = null;
     int updatedCount = -1;
-    PreparedStatement updateUnknownProvider =
-	dbManager.prepareStatement(conn, UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY);
+    PreparedStatement updateUnknownProvider = null;
 
     try {
+      sql = UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY;
+
+      if (dbManager.isTypeMysql()) {
+  	sql = UPDATE_AU_MD_UNKNOWN_PROVIDER_MYSQL_QUERY;
+      }
+
+      updateUnknownProvider = dbManager.prepareStatement(conn, sql);
       updateUnknownProvider.setLong(1, providerSeq);
       updateUnknownProvider.setLong(2, auMdSeq);
       updatedCount = dbManager.executeUpdate(updateUnknownProvider);
@@ -6774,7 +6796,7 @@ public class MetadataManagerSql {
       log.error(message, sqle);
       log.error("auMdSeq = '" + auMdSeq + "'.");
       log.error("providerSeq = '" + providerSeq + "'.");
-      log.error("SQL = '" + UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY + "'.");
+      log.error("SQL = '" + sql + "'.");
       throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseStatement(updateUnknownProvider);
