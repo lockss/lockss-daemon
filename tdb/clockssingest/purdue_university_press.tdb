@@ -102,7 +102,7 @@
     au < manifest ; exists ; 2010 ; Data Curation Profile Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Data Curation Profile Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; Data Curation Profile Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2013 ; Data Curation Profile Volume 5 ; 5 ; >
+    au < released ; manifest ; 2013 ; Data Curation Profile Volume 5 ; 5 ; >
     au < expected ; exists ; 2016 ; Data Curation Profile Volume 6 ; 6 ; >
 
   }
@@ -125,7 +125,7 @@
     au < manifest ; exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; >
     au < finished ; finished ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; >
+    au < released ; manifest ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; >
     au < finished ; finished ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; >
     au < released ; manifest ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; >
     au < crawling ; exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; >
@@ -193,7 +193,7 @@
     au < finished ; finished ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; >
+    au < released ; manifest ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; >
     au < crawling ; exists ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; >
     
   }
