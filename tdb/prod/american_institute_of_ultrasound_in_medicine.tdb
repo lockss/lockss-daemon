@@ -15,6 +15,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jultrasoundmed.org/
+      # moving to wiley
       implicit < status ; year ; name ; param[volume_name] >
 
       {
@@ -56,7 +57,8 @@
       au < released ; 2013 ; Journal of Ultrasound in Medicine Volume 32 ; 32 >
       au < released ; 2014 ; Journal of Ultrasound in Medicine Volume 33 ; 33 >
       au < released ; 2015 ; Journal of Ultrasound in Medicine Volume 34 ; 34 >
-      au < manifest ; 2016 ; Journal of Ultrasound in Medicine Volume 35 ; 35 >
+      au < wanted ; 2016 ; Journal of Ultrasound in Medicine Volume 35 ; 35 >
+      au < doNotProcess ; 2017 ; Journal of Ultrasound in Medicine Volume 36 ; 36 > #moving to wiley 1/1/2017
 
     }
 
