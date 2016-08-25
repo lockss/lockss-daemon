@@ -78,7 +78,7 @@
       au < manifest ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
       au < testing ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
       au < testing ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
@@ -156,8 +156,8 @@
 
       au < manifest ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
@@ -178,7 +178,7 @@
       au < crawling ; exists ; 2013 ; 1 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
 
   }
 
@@ -274,7 +274,7 @@
       au < doNotProcess ; exists ; 2013 ; 5 ; Ancient Asia Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Ancient Asia Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 8 ; Ancient Asia Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 8 ; Ancient Asia Volume 2016 ; 2016 ; >
 
   }
 
@@ -407,7 +407,7 @@
       au < manifest ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
       au < testing ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
@@ -620,7 +620,7 @@
       au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
       au < testing ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
@@ -754,8 +754,8 @@
       param[base_url] = http://www.jbsr.be/
 
       au < manifest ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
@@ -803,7 +803,7 @@
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
 
   }
 
@@ -818,7 +818,7 @@
       param[base_url] = http://www.openquaternary.com/
 
       au < crawling ; exists ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
 
   }
 
@@ -858,7 +858,7 @@
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
 
   }
 
@@ -879,7 +879,7 @@
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
 
   }
 
@@ -904,7 +904,7 @@
       au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
 
   }
 
@@ -922,7 +922,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
 
   }
 
@@ -960,7 +960,7 @@
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
 
   }
 
@@ -990,7 +990,7 @@
       au < crawling ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -1028,7 +1028,7 @@
       au < manifest ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
 
   }
 
