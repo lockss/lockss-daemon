@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -100,9 +100,11 @@
     http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/1/183.html?itemId=/content/journal/jgv/10.1099/vir.0.064816-0&mimeType=html&fmt=ahah
          …but we normalize this to the ?crawler=true version and take off the isFastTrackArticle…
     http://www.asmscience.org/deliver/fulltext/ecosalplus/6/1/ESP-0007-2013.pdf?itemId=/content/journal/ecosalplus/10.1128/ecosalplus.ESP-0007-2013&mimeType=pdf&isFastTrackArticle=
-  Other pdf links go through a one-time expiring URL which we swallow (consumer) but which must be allowed
+  Other pdf, such as supplementary data, links go through a one-time expiring URL which we swallow (consumer) but which must be allowed
     <otherbase>/docserver/ahah/fulltext/jmm/64/11/1270.html?expires=1455321894&id=id&accname=sgid025717&checksum=42B1AAC0FBAC08BB4EF42D7D0BED4696
     http://www.asmscience.org/docserver/fulltext/ecosalplus/6/1/ESP-0007-2013.pdf?expires=1461707510&id=id&accname=4398&checksum=4542D3794C6722983E7694ABD8C01AE0
+  unexpected supplementary data doesn't use jid/vol in url
+        http://www.microbiologyresearch.org/docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472240991&id=id&accname=guest&checksum=434E9BA3F2CE85F29BD9C813F730F1AA    
   citation:
     http://jmm.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000171/cite/(bibtex, endnote, plaintext, refworks)
     but don't pick up the citation links (which are bogus) at the toc level         
@@ -133,6 +135,8 @@
       <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
       <!--  some content - images, supp data, etc -->
       <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <!--  inconsistent for some supplementary data, restrict to start with supp?? -->
+      <string>1,"^%sdocserver(/ahah)?/fulltext/supp", base_url</string>
     </list>
   </entry>
   <entry>
