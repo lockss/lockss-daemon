@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>8</string>
   </entry>
     <entry>
     <string>plugin_name</string>
@@ -76,8 +76,9 @@
     <list>
       <!-- /sites/all/modules/cck/theme/content-module.css?D -->
       <!-- /webscripts/acs.js?D -->
-      <string>1,"^%s.*\.(bmp|css(\?D)?|gif|ico|jpe?g|js(\?D)?|png|tif?f|swf)(\?Y)?$", base_url</string>
+      <string>1,"^%s.*[^/]+\.(bmp|css(\?D)?|gif|ico|jpe?g|js(\?D)?|png|tif?f|swf)(\?Y)?$", base_url</string>
       <string>4,"^%s", base_url</string>
+      <string>2,"/\.direc"</string>
       <string>1,"^%spublications/books/(tocs|articles|pdfs|abstracts)/%s/%s(/[0-9]+)?(/preview)?", base_url, series_id, book_id</string>    
     </list>
   </entry>
