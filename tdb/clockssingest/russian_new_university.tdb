@@ -3,26 +3,27 @@
   publisher <
     name = Russian New University ;
     info[contract] = 2013 ;
-    info[tester] = 8
+    info[tester] = S
   >
-  
+
   {
   
-    title < 
-      name = Cardiometry ;
+    title <
+      name = Cardiometry WARC Content ;
       issn = 2304-7232 
     >
     
-    plugin = needs.plugin
-    param[base_url] = http://www.cardiometry.net/
-    param[journal_id] = cardiometry
-    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
-    comment[nR] = publisher changing platforms
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
     
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2013 ; 2013 ; Cardiometry Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; Cardiometry Volume 3 ; 3 ; >
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/cardiometry-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/cardiometry-released/
+    hidden[proxy] = DIRECT 
+    implicit < status ; status2 ; year ; name ; param[year] >    
+
+    au < exists ; exists ; 2016 ; Cardiometry WARC Content 2016 ; 2016 >
     
-  }
- 
+  }  
+
 }

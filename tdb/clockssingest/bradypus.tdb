@@ -1,0 +1,81 @@
+{
+
+  publisher <
+    name = BraDypUS ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+  {
+  
+    title <
+      name =  Cartografare il presente WARC Content ;
+      issn = 2421-3101
+    >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/cartografare-il-presente-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/cartografare-il-presente-released/
+
+    au < exists ; exists ; 2016 ; Cartografare il present WARC Content 2016 ; 2016 >
+    
+  }  
+  
+ {
+  
+    title <
+      name =  Novecento WARC Content ;
+      issn =  2283-6837
+      
+    >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/novecento-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/novecento-released/
+
+    au < exists ; exists ; 2016 ; Novecentot WARC Content 2016 ; 2016 >
+    
+  }  
+  
+ {
+  
+    title <
+      name =  Storicamente WARC Content ;
+      issn = 1825-411X
+    >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/storicamente-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/storicamente-released/
+
+    au < exists ; exists ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
+    
+  }      
+
+ {
+  
+    title <
+      name =  E-Review WARC Content ;
+      issn =  2282-4979
+    >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
+
+    au < exists ; exists ; 2016 ; E-Review WARC Content 2016 ; 2016 >
+    
+  } 
+
+}
