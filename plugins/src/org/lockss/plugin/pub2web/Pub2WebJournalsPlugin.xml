@@ -133,6 +133,8 @@
       <string>1,"^%scontent/%s/[0-9]{2}\.[0-9]{4}/[^/]+\.(ufig|fig||tab|T)[A-Za-z0-9-]+$", base_url, journal_id</string>
       <!-- deliver/fulltext is starting URL for full-text - we normalize it to something else -->
       <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <!--  some oddball supplementary data, restrict to start with supp? -->
+      <string>1,"^%sdeliver/fulltext/supp", base_url</string>
       <!--  some content - images, supp data, etc -->
       <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
       <!--  inconsistent for some supplementary data, restrict to start with supp?? -->
