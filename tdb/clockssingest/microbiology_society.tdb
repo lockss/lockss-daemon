@@ -221,7 +221,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; >
-      au < notReady ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; > #fetch error
+      au < testing ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; > #fetch error
       au < manifest ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; >
 
     }
@@ -745,7 +745,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; >
-      au < manifest ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
+      au < testing ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
       au < manifest ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; >
 
     }
@@ -901,7 +901,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; >
-      au < testing ; exists ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; >
       au < manifest ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; >
 
     }
@@ -922,7 +922,7 @@
       param[journal_id] = jmmcr
 
       au < manifest ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; JMM Case Reports Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; JMM Case Reports Volume 2 ; 2 ; >
       au < manifest ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; >
 
     }
@@ -942,7 +942,7 @@
       param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
 
-      au < testing ; exists ; 2015 ; Microbial Genomics Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Microbial Genomics Volume 1 ; 1 ; >
       au < manifest ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; >
 
     }
@@ -1016,7 +1016,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; >
-      au < testing ; exists ; 2015 ; Microbiology Volume 161 ; 161 ; >
+      au < crawling ; exists ; 2015 ; Microbiology Volume 161 ; 161 ; >
       au < manifest ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; >
 
     }
