@@ -69,6 +69,9 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("ol",  "class", "breadcrumb"),
     HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "banner-container journal-banner"),
     HtmlNodeFilters.tagWithAttribute("nav",  "class", "pillscontainer"),
+    //the "Cited by" tab lists a number that can change
+    HtmlNodeFilters.tagWithAttribute("li",  "id", "cite"),
+    
     //remove the TOC navigation links except the full TOC pdf
 
     //remove article landing page navigation links
