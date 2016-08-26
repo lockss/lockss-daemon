@@ -133,7 +133,7 @@
 
     au < crawling ; exists ; 2013 ; Pharmaceutical Bioprocessing Volume 1 ; 1 ; >
     au < frozen ; exists ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 ; >
-    au < finished ; manifest ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2016 ; Pharmaceutical Bioprocessing Volume 4 ; 4 ; >
     
   }
@@ -150,7 +150,7 @@
     au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 ; >
     
   }

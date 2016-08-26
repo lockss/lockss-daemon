@@ -302,7 +302,7 @@
     au < manifest ; exists ; 2012 ; Dental Nursing Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Dental Nursing Volume 9 ; 9 ; >
     au < frozen ; exists ; 2014 ; Dental Nursing Volume 10 ; 10 ; >
-    au < finished ; manifest ; 2015 ; Dental Nursing Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Dental Nursing Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2016 ; Dental Nursing Volume 12 ; 12 ; >
 
   }
@@ -346,7 +346,7 @@
     au < manifest ; exists ; 2012 ; Independent Nurse Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Independent Nurse Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Independent Nurse Volume 2014 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Independent Nurse Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Independent Nurse Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2016 ; Independent Nurse Volume 2016 ; 2016 ; >
 
   }
@@ -366,7 +366,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Ophthalmic Practice Volume 3 ; 3 ; >
     au < finished ; crawling ; 2013 ; International Journal of Ophthalmic Practice Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; International Journal of Ophthalmic Practice Volume 5 ; 5 ; >
-    au < finished ; manifest ; 2015 ; International Journal of Ophthalmic Practice Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; International Journal of Ophthalmic Practice Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2016 ; International Journal of Ophthalmic Practice Volume 7 ; 7 ; >
 
   }
@@ -388,7 +388,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 ; >
     au < finished ; crawling ; 2014 ; International Journal of Palliative Nursing Volume 20 ; 20 ; >
-    au < finished ; manifest ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2016 ; International Journal of Palliative Nursing Volume 22 ; 22 ; >
 
   }
@@ -449,7 +449,7 @@
     au < manifest ; exists ; 2012 ; Journal of Aesthetic Nursing Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of Aesthetic Nursing Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; Journal of Aesthetic Nursing Volume 3 ; 3 ; >
-    au < finished ; manifest ; 2015 ; Journal of Aesthetic Nursing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Aesthetic Nursing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Journal of Aesthetic Nursing Volume 5 ; 5 ; >
 
   }
@@ -482,7 +482,7 @@
 
     au < crawling ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 ; >
     au < frozen ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 ; >
-    au < finished ; manifest ; 2015 ; Journal of Health Visiting Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Health Visiting Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Journal of Health Visiting Volume 4 ; 4 ; >
 
   }
@@ -524,7 +524,7 @@
     au < manifest ; exists ; 2012 ; Journal of Renal Nursing Volume 4 ; 4 ; >
     au < finished ; crawling ; 2013 ; Journal of Renal Nursing Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of Renal Nursing Volume 6 ; 6 ; >
-    au < finished ; manifest ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Renal Nursing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Journal of Renal Nursing Volume 8 ; 8 ; >
 
   }
@@ -568,7 +568,7 @@
     au < manifest ; exists ; 2012 ; Nurse Prescribing Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 ; >
     au < finished ; crawling ; 2014 ; Nurse Prescribing Volume 12 ; 12 ; >
-    au < finished ; manifest ; 2015 ; Nurse Prescribing Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Nurse Prescribing Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; >
 
   }
@@ -615,7 +615,7 @@
     au < manifest ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 ; >
     au < frozen ; exists ; 2014 ; Practice Nursing Volume 25 ; 25 ; >
-    au < finished ; manifest ; 2015 ; Practice Nursing Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Practice Nursing Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < testing ; exists ; 2016 ; Practice Nursing Volume 27 ; 27 ; >
 
   }
@@ -654,7 +654,7 @@
     au < manifest ; exists ; 2012 ; Equine Health Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Equine Health Volume 2014 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Equine Health Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Equine Health Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Equine Health Volume 2016 ; 2016 ; >
 
   }
@@ -693,7 +693,7 @@
     au < manifest ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 ; >
     au < finished ; crawling ; 2014 ; The Veterinary Nurse Volume 5 ; 5 ; >
-    au < finished ; manifest ; 2015 ; The Veterinary Nurse Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; The Veterinary Nurse Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2016 ; The Veterinary Nurse Volume 7 ; 7 ; >
 
   }
@@ -730,7 +730,7 @@
     au < manifest ; exists ; 2012 ; Child Care Volume 9 ; 9 ; >
     au < finished ; crawling ; 2013 ; Child Care Volume 10 ; 10 ; >
     au < finished ; crawling ; 2014 ; Child Care Volume 11 ; 11 ; >
-    au < finished ; manifest ; 2015 ; Child Care Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Child Care Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Child Care Volume 13 ; 13 ; >
 
   }
@@ -752,7 +752,7 @@
     au < manifest ; exists ; 2012 ; Early Years Educator (EYE) Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Early Years Educator (EYE) Volume 14 ; 14 ; >
     au < finished ; crawling ; 2014 ; Early Years Educator (EYE) Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; >
     au < testing ; exists ; 2016 ; Early Years Educator (EYE) Volume 18 ; 18 ; >
 
@@ -770,7 +770,7 @@
 
     au < crawling ; exists ; 2013 ; Fundraising for Schools Volume 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Fundraising for Schools Volume 2014 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Fundraising for Schools Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Fundraising for Schools Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2016 ; Fundraising for Schools Volume 2016 ; 2016 ; >
 
   }
@@ -856,7 +856,7 @@
     au < manifest ; exists ; 2012 ; Primary Teacher Update Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Primary Teacher Update Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Primary Teacher Update Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < testing ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; >
 
   }

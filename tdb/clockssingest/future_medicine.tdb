@@ -472,7 +472,7 @@
     param[journal_id] = ije
 
     au < frozen ; exists ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; >
-    au < finished ; manifest ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; >
 
   }
