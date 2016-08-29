@@ -6,6 +6,9 @@
     info[tester] = 1
     
   >
+  
+  # all springer content should be attributed to "Springer"
+  provider = Springer  
 
   plugin = org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin
   param[base_url] = http://www.springerlink.com/

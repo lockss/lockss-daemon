@@ -5,6 +5,8 @@
     info[tester] = 5
   >
   
+  # all springer content should be attributed to "Springer"
+  provider = Springer
   comment[contract] = Contract for Springer is 2008. Collect from 2013 for new publisher?
 
   rights = openaccess
