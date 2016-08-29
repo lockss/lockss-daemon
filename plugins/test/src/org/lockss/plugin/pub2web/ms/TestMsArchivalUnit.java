@@ -152,7 +152,7 @@ public class TestMsArchivalUnit extends LockssTestCase {
     //trickier supplementary data from jmmcr (Case Reports)
     shouldCacheTest(REAL_ROOT+"deliver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?itemId=/content/jmmcr.0.000015&mimeType=pdf", true, msau,cus);
     //which redirects to
-    shouldCacheTest(REAL_ROOT+"docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472242012&id=id&accname=guest&checksum=07327FDAFD1DAE43172F16234A39DEC7", true, msau,cus);
+    shouldCacheTest(OTHER_ROOT+"docserver/fulltext/supplementary-figures_jmmcr.0.000015.pdf?expires=1472242012&id=id&accname=guest&checksum=07327FDAFD1DAE43172F16234A39DEC7", true, msau,cus);
     
     // images (etc.) 
     shouldCacheTest(REAL_ROOT+"content/jgv/10.1099/vir.0.000205.vir000205-f01", true, msau, cus);

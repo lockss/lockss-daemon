@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>13</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -119,7 +119,8 @@
     -->
     <list>
       <!-- treat Microbiology Society shared host as a cdn, but only for fulltext -->
-      <string>1,"^https?://www.microbiologyresearch.org/docserver(/ahah)?/fulltext/%s/%s/", journal_id, volume_name</string>    
+      <!--  inconsistent for some supplementary data, doesn't use jid/volume, uses supplementary-data -->
+      <string>1,"^https?://www.microbiologyresearch.org/docserver(/ahah)?/fulltext/(supp|%s/%s/)", journal_id, volume_name</string>    
       <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
       <string>2,"^%scontent/journal/%s/%s/[^/]+/cite/", base_url, journal_id, volume_name</string>
       <!--  toc and subsections -->
