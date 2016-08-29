@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.2'
+__version__ = '0.5.3'
 
 import getpass
 import itertools
@@ -40,6 +40,9 @@ import optparse
 import os.path
 import sys
 from threading import Thread
+
+try: import ZSI
+except ImportError: sys.exit('The Python ZSI module must be installed (or on the PYTHONPATH)')
 
 import DaemonStatusServiceImplService_client
 from wsutil import datems, datetimems, durationms, zsiauth
@@ -50,7 +53,8 @@ from wsutil import datems, datetimems, durationms, zsiauth
 
 def get_au_status(host, auth, auid):
   '''Performs a getAuStatus operation on the given host for the given AUID, and
-  returns a record with these fields:
+  returns a record with these fields (or None if ZSI.FaultException starting
+  with 'No Archival Unit with provided identifier' is raised):
   - AccessType (string)
   - AvailableFromPublisher (boolean)
   - ContentSize (numeric)
@@ -86,7 +90,13 @@ def get_au_status(host, auth, auid):
   '''
   req = DaemonStatusServiceImplService_client.getAuStatus()
   req.AuId = auid
-  return _ws_port(host, auth).getAuStatus(req).Return
+  try:
+    ret = _ws_port(host, auth).getAuStatus(req)
+    return ret.Return
+  except ZSI.FaultException as e:
+    if str(e).startswith('No Archival Unit with provided identifier'):
+      return None
+    raise
 
 def get_au_urls(host, auth, auid, prefix=None):
   '''Performs a getAuUrls operation on the given host for the given AUID and
