@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -52,9 +52,5 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalCrawlSeed$Factory</string>
   </entry>
 </map>
