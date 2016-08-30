@@ -77,12 +77,12 @@
       au < manifest ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
 
   }
 
@@ -96,7 +96,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = http://c21.openlibhums.org/
 
-      au < testing ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 1 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
 
   }
 
@@ -125,7 +125,7 @@
       param[base_url] = https://poetry.openlibhums.org/
 
       au < crawling ; exists ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
 
   }
 
@@ -140,7 +140,7 @@
       param[base_url] = https://olh.openlibhums.org/
 
       au < crawling ; exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
 
@@ -161,7 +161,7 @@
       au < crawling ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
 
   }
 
@@ -207,11 +207,11 @@
       au < manifest ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
-      au < testing ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
 
   }
 
@@ -225,9 +225,9 @@
       comment[publisher] = Stockholm University Press
       param[base_url] = http://www.rurallandscapesjournal.com/
 
-      au < testing ; exists ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
 
   }
 
@@ -241,7 +241,7 @@
       comment[publisher] = Stockholm University Press
       param[base_url] = http://www.sjwop.com/
 
-      au < testing ; exists ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; >
 
   }
 
@@ -329,7 +329,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://ajar.arena-architecture.eu/
 
-      au < testing ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
 
   }
 
@@ -369,7 +369,7 @@
       au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
 
   }
 
@@ -383,7 +383,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://theoryandpractice.citizenscienceassociation.org/
 
-      au < testing ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
 
   }
 
@@ -411,7 +411,7 @@
       au < crawling ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -426,7 +426,7 @@
       param[base_url] = http://www.glocality.eu/
 
       au < crawling ; exists ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
 
   }
 
@@ -442,7 +442,7 @@
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
 
   }
 
@@ -486,7 +486,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.rips-irsp.com/
 
-      au < testing ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
 
   }
 
@@ -513,7 +513,7 @@
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
 
@@ -547,7 +547,7 @@
       au < doNotProcess ; exists ; 2013 ; 18 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 19 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
 
   }
 
@@ -568,7 +568,7 @@
       au < doNotProcess ; exists ; 2013 ; 5 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
 
   }
 
@@ -619,12 +619,12 @@
       au < manifest ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
   }
 
@@ -642,7 +642,7 @@
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -657,9 +657,9 @@
       param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < testing ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -674,7 +674,7 @@
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
       au < crawling ; exists ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -691,7 +691,7 @@
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
 
   }
 
@@ -739,7 +739,7 @@
       param[base_url] = http://jpl.letras.ulisboa.pt/
 
       au < crawling ; exists ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
 
   }
 
