@@ -42,7 +42,7 @@
       param[base_url] = http://www.innovationandentrepreneurship.net/
       param[journal_id] = aie
 
-      au < superseded ; down ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 [superseded] ; 1 ; 2010 ; >
+      au < superseded ; finished ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 [superseded] ; 1 ; 2010 ; >
       au < superseded ; finished ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 [superseded] ; 2 ; 2011 ; >
       au < superseded ; finished ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 [superseded] ; 3 ; 2012 ; >
     
@@ -257,7 +257,7 @@
     au < finished ; crawling ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 ; >
-    au < finished ; frozen ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 ; >
+    au < finished ; finished ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 ; >
@@ -353,7 +353,7 @@
     au < finished ; finished ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 ; >
     au < finished ; finished ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 ; >
     au < finished ; finished ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 ; >
-    au < finished ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 ; >
+    au < finished ; finished ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 ; >
     au < finished ; finished ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 ; >
     au < finished ; finished ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 ; >
     au < finished ; finished ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; 2013 ; >
@@ -503,7 +503,7 @@
     # V4 no substance
     # discontinued in 2014
 
-    au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 ; >
+    au < finished ; finished ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 ; >
     au < finished ; finished ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 ; >
     au < finished ; finished ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; 2012 ; >
     au < notReady ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; 2013 ; >
@@ -757,7 +757,7 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
 
-    au < finished ; frozen ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; 2006 ; >
+    au < finished ; finished ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; 2006 ; >
     au < finished ; crawling ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; 2007 ; >
 
   }

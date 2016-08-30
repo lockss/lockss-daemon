@@ -456,7 +456,7 @@
     au < finished ; frozen ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 ; >
     au < superseded ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 ; >
     au < finished ; crawling ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 ; >
-    au < finished ; crawling ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 ; >
+    au < finished ; finished ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 ; >
     au < deepCrawl ; exists ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 ; >
     au < testing ; exists ; 2016 ; Cancer Gene Therapy Volume 23 ; 2016 ; 23 ; >
 
@@ -582,7 +582,7 @@
     param[journal_id] = ctg
 
     au < finished ; finished ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 ; >
-    au < finished ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
+    au < finished ; finished ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
     au < finished ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 ; >
     au < finished ; crawling ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 ; >
     au < crawling ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; >
@@ -605,7 +605,7 @@
 
     au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 ; >
     au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 ; >
-    au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 ; >
+    au < down ; finished ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 ; >
     au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 ; >
     au < down ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 ; >
     au < down ; finished ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 ; >
@@ -629,7 +629,7 @@
 
     au < finished ; crawling ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 ; >
     au < finished ; crawling ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 ; >
-    au < finished ; crawling ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
+    au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
     au < frozen ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; >
     au < testing ; exists ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; >
 
@@ -771,7 +771,7 @@
     
     param[journal_id] = ebd
 
-    au < finished ; crawling ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 ; >
+    au < finished ; finished ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 ; >
     au < finished ; crawling ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 ; >
     au < finished ; crawling ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 ; >
     au < finished ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 ; >
@@ -878,7 +878,7 @@
     au < finished ; crawling ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 ; >
     au < finished ; frozen ; 2012 ; Gene Therapy Volume 19 ; 2012 ; 19 ; >
     au < finished ; crawling ; 2013 ; Gene Therapy Volume 20 ; 2013 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Gene Therapy Volume 21 ; 2014 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Gene Therapy Volume 21 ; 2014 ; 21 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Gene Therapy Volume 22 ; 2015 ; 22 ; >
     au < ready ; exists ; 2016 ; Gene Therapy Volume 23 ; 2016 ; 23 ; >
 
@@ -1059,8 +1059,8 @@
     au < finished ; crawling ; 2012 ; Heredity Volume 109 ; 2012 ; 109 ; >
     au < finished ; crawling ; 2013 ; Heredity Volume 110 ; 2013 ; 110 ; >
     au < crawling ; exists ; 2013 ; Heredity Volume 111 ; 2013 ; 111 ; >
-    au < finished ; crawling ; 2014 ; Heredity Volume 112 ; 2014 ; 112 ; >
-    au < finished ; crawling ; 2014 ; Heredity Volume 113 ; 2014 ; 113 ; >
+    au < finished ; finished ; 2014 ; Heredity Volume 112 ; 2014 ; 112 ; >
+    au < finished ; finished ; 2014 ; Heredity Volume 113 ; 2014 ; 113 ; >
     au < deepCrawl ; exists ; 2015 ; Heredity Volume 114 ; 2015 ; 114 ; >
     au < manifest ; exists ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; >
     au < testing ; exists ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; >
@@ -1283,7 +1283,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Obesity Supplements Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 ; >
+    au < finished ; finished ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 ; >
     au < expected ; exists ; 2016 ; International Journal of Obesity Supplements Volume 6 ; 2016 ; 6 ; >
 
@@ -1751,7 +1751,7 @@
     au < down ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; >
     au < finished ; finished ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; >
     au < down ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 ; >
 
@@ -2859,7 +2859,7 @@
     au < finished ; crawling ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 ; >
     au < crawling ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 ; >
     au < crawling ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 ; >
-    au < finished ; crawling ; 2014 ; Nature Nanotechnology Volume 9 ; 2014 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Nature Nanotechnology Volume 9 ; 2014 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 ; >
     au < testing ; exists ; 2016 ; Nature Nanotechnology Volume 11 ; 2016 ; 11 ; >
 
@@ -3081,7 +3081,7 @@
     au < finished ; crawling ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 ; >
     au < finished ; crawling ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 ; >
-    au < finished ; crawling ; 2014 ; Nature Reviews Drug Discovery Volume 13 ; 2014 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Nature Reviews Drug Discovery Volume 13 ; 2014 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Drug Discovery Volume 14 ; 2015 ; 14 ; >
     au < testing ; exists ; 2016 ; Nature Reviews Drug Discovery Volume 15 ; 2016 ; 15 ; >
 
@@ -3301,7 +3301,7 @@
     au < manifest ; exists ; 2005 ; Nature Reviews Neurology Volume 1 ; 2005 ; 1 ; >
     au < manifest ; exists ; 2006 ; Nature Reviews Neurology Volume 2 ; 2006 ; 2 ; >
     au < manifest ; exists ; 2007 ; Nature Reviews Neurology Volume 3 ; 2007 ; 3 ; >
-    au < finished ; crawling ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 ; >
+    au < finished ; finished ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 ; >
     au < finished ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
@@ -3508,7 +3508,7 @@
 
     param[journal_id] = nutd
     
-    au < finished ; crawling ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 ; >
+    au < finished ; finished ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 ; >
@@ -3980,7 +3980,7 @@
     au < finished ; crawling ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 ; >
     au < zapped ; finished ; 2009 ; Vital Volume 6 (2009) ; 2009 ; 6 ; >
     au < zapped ; finished ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 ; >
-    au < finished ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 ; >
+    au < finished ; finished ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Vital Volume 8 ; 2011 ; 8 ; >
     au < zapped ; finished ; 2011 ; Vital Volume 9 (2011) ; 2011 ; 9 ; >
     au < finished ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 ; >

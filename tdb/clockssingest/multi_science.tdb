@@ -66,7 +66,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
-    au < superseded ; down ; 2014 ; Advances in Structural Engineering Volume 17 [superseded] ; 17 ; >
+    au < superseded ; finished ; 2014 ; Advances in Structural Engineering Volume 17 [superseded] ; 17 ; >
     au < superseded ; down ; 2015 ; Advances in Structural Engineering Volume 18 [superseded] ; 18 ; >
 
   }
@@ -97,7 +97,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Building Acoustics Volume 20 ; 20 ; >
-    au < finished ; crawling ; 2014 ; Building Acoustics Volume 21 [Multi-Science] ; 21 ; >
+    au < finished ; finished ; 2014 ; Building Acoustics Volume 21 [Multi-Science] ; 21 ; >
     au < down ; exists ; 2015 ; Building Acoustics Volume 22 [Multi-Science] ; 22 ; >
     #no volumes after 2015.
 
@@ -204,7 +204,7 @@
     param[journal_id] = ijai
     # triggering
 
-    au < finished ; frozen ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -251,7 +251,7 @@
     param[journal_id] = ijemf
     # triggering
 
-    au < finished ; frozen ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
 
@@ -271,7 +271,7 @@
     au < finished ; frozen ; 2009 ; International Journal of Flow Control Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; International Journal of Flow Control Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; International Journal of Flow Control Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2012 ; International Journal of Flow Control Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; International Journal of Flow Control Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; International Journal of Flow Control Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Journal of Flow Control Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; International Journal of Flow Control Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -310,7 +310,7 @@
     # triggering
 
     au < finished ; frozen ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -370,7 +370,7 @@
     # triggering
 
     au < finished ; finished ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -392,7 +392,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Protective Structures Volume 5 [Multi-Science] ; 5 ; >
+    au < finished ; finished ; 2014 ; International Journal of Protective Structures Volume 5 [Multi-Science] ; 5 ; >
     au < down ; exists ; 2015 ; International Journal of Protective Structures Volume 6 [Multi-Science] ; 6 ; >
 
   }
@@ -530,9 +530,9 @@
     param[journal_id] = jhe
     # transfering to Hindawi Publishing
 
-    au < finished ; crawling ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 ; >
+    au < finished ; finished ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 ; >
     au < finished ; finished ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 ; >
     au < down ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 ; >
@@ -552,7 +552,7 @@
 
     au < finished ; finished ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
     au < finished ; finished ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
+    au < finished ; finished ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
     au < down ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
@@ -580,7 +580,7 @@
     au < finished ; finished ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 ; >
     au < finished ; finished ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 ; >
     au < finished ; finished ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; >
+    au < finished ; finished ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 ; >
@@ -628,7 +628,7 @@
     au < finished ; finished ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Noise Notes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
@@ -717,7 +717,7 @@
 
     au < finished ; finished ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
     au < finished ; finished ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
-    au < finished ; crawling ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
+    au < finished ; finished ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
     au < finished ; crawling ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
     au < finished ; crawling ; 2004 ; Wind Engineering Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2005 ; Wind Engineering Volume 29 ; 29 ; >

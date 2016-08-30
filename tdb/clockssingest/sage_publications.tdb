@@ -118,7 +118,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
+      au < down ; finished ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
 
     }
 
@@ -266,7 +266,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
+      au < down ; finished ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
       au < down ; crawling ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
 
     }
@@ -506,7 +506,7 @@
       au < finished ; finished ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
       au < finished ; finished ; 2010 ; Advances in Mechanical Engineering Volume 2 ; 2 ; >
       au < finished ; finished ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
+      au < finished ; finished ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
       au < deepCrawl ; exists ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; >
@@ -772,11 +772,11 @@
       au < manifest ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
       au < manifest ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
       au < manifest ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 ; >
+      au < finished ; finished ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 ; >
       au < finished ; crawling ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
       au < finished ; finished ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
       au < finished ; crawling ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
       au < finished ; crawling ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; reingest2.clockss.org:8085 >
@@ -1479,7 +1479,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
       au < zapped ; finished ; 2010 ; American Journal of Lifestyle Medicine Volume 4 ; 4 ; >
-      au < finished ; frozen ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
+      au < finished ; finished ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; American Journal of Lifestyle Medicine Volume 6 ; 6 ; >
       au < finished ; finished ; 2013 ; American Journal of Lifestyle Medicine Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; American Journal of Lifestyle Medicine Volume 8 ; 8 ; >
@@ -1578,7 +1578,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
       au < finished ; finished ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
+      au < finished ; finished ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
       au < finished ; frozen ; 2012 ; American Journal of Men's Health Volume 6 ; 6 ; >
       au < finished ; finished ; 2013 ; American Journal of Men's Health Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; American Journal of Men's Health Volume 8 ; 8 ; >
@@ -1943,8 +1943,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Animation Volume 3 ; 3 ; >
-      au < down ; crawling ; 2009 ; Animation Volume 4 ; 4 ; >
+      au < down ; finished ; 2008 ; Animation Volume 3 ; 3 ; >
+      au < down ; finished ; 2009 ; Animation Volume 4 ; 4 ; >
 
     }
 
@@ -1983,7 +1983,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 ; >
+      au < down ; finished ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 ; >
       au < down ; crawling ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 ; >
       au < down ; finished ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 ; >
       au < down ; crawling ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 ; >
@@ -2626,9 +2626,9 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
-      au < finished ; crawling ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
+      au < finished ; finished ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
       au < finished ; finished ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ; >
-      au < finished ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
+      au < finished ; finished ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
       au < finished ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ; >
       au < finished ; finished ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ; >
       au < zapped ; finished ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 631 ; 631 ; >
@@ -2888,12 +2888,12 @@
       au < manifest ; exists ; 2006 ; Applied Biosafety Volume 11 ; 11 ; >
       au < manifest ; exists ; 2007 ; Applied Biosafety Volume 12 ; 12 ; >
       au < manifest ; exists ; 2008 ; Applied Biosafety Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
+      au < finished ; finished ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
       au < finished ; finished ; 2010 ; Applied Biosafety Volume 15 ; 15 ; >
       au < finished ; crawling ; 2011 ; Applied Biosafety Volume 16 ; 16 ; >
       au < finished ; crawling ; 2012 ; Applied Biosafety Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Applied Biosafety Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
+      au < finished ; finished ; 2013 ; Applied Biosafety Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
       au < finished ; crawling ; 2015 ; Applied Biosafety Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; >
 
@@ -2956,7 +2956,7 @@
       au < manifest ; exists ; 2007 ; Applied Psychological Measurement Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
-      au < finished ; crawling ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ; >
+      au < finished ; finished ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ; >
       au < finished ; finished ; 2011 ; Applied Psychological Measurement Volume 35 ; 35 ; >
       au < finished ; finished ; 2012 ; Applied Psychological Measurement Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; Applied Psychological Measurement Volume 37 ; 37 ; >
@@ -3105,8 +3105,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
-      au < down ; crawling ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
+      au < down ; finished ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
+      au < down ; finished ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
 
     }
 
@@ -3202,8 +3202,8 @@
     au < finished ; finished ; 2008 ; Asian Cardiovascular and Thoracic Annals Volume 16 ; 16 ; >
     au < finished ; finished ; 2009 ; Asian Cardiovascular and Thoracic Annals Volume 17 ; 17 ; >
     au < crawling ; exists ; 2010 ; Asian Cardiovascular and Thoracic Annals Volume 18 ; 18 ; >
-    au < finished ; crawling ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
-    au < finished ; crawling ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
+    au < finished ; finished ; 2011 ; Asian Cardiovascular and Thoracic Annals Volume 19 ; 19 ; >
+    au < finished ; finished ; 2012 ; Asian Cardiovascular and Thoracic Annals Volume 20 ; 20 ; >
     au < finished ; finished ; 2013 ; Asian Cardiovascular and Thoracic Annals Volume 21 ; 21 ; >
     au < finished ; finished ; 2014 ; Asian Cardiovascular and Thoracic Annals Volume 22 ; 22 ; >
     au < finished ; crawling ; 2015 ; Asian Cardiovascular and Thoracic Annals Volume 23 ; 23 ; reingest1.clockss.org:8082 >
@@ -3260,7 +3260,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Asian Journal of Management Cases Volume 5 [superseded] ; 5 ; >
+      au < superseded ; finished ; 2008 ; Asian Journal of Management Cases Volume 5 [superseded] ; 5 ; >
       au < superseded ; down ; 2009 ; Asian Journal of Management Cases Volume 6 [superseded] ; 6 ; >
 
     }
@@ -3436,7 +3436,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < finished ; finished ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
-      au < finished ; crawling ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
+      au < finished ; finished ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
       au < finished ; finished ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 ; >
       au < crawling ; exists ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 ; >
@@ -3455,7 +3455,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #moved to UNLV
 
-      au < finished ; crawling ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
@@ -4104,7 +4104,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Biological Research For Nursing Volume 11 ; 11 ; >
+      au < down ; finished ; 2009 ; Biological Research For Nursing Volume 11 ; 11 ; >
 
     }
 
@@ -4176,7 +4176,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Body & Society Volume 15 ; 15 ; >
+      au < down ; finished ; 2009 ; Body & Society Volume 15 ; 15 ; >
 
     }
 
@@ -4434,7 +4434,7 @@
       au < finished ; crawling ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
       au < finished ; crawling ; 2012 ; The British Journal of Politics and International Relations Volume 14 ; 14 ; >
       au < finished ; finished ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; >
-      au < finished ; crawling ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
+      au < finished ; finished ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
       au < finished ; crawling ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; >
 
@@ -4549,7 +4549,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; British Journalism Review Volume 20 ; 20 ; >
       au < zapped ; finished ; 2010 ; British Journalism Review Volume 21 ; 21 ; >
       au < finished ; finished ; 2011 ; British Journalism Review Volume 22 ; 22 ; >
-      au < finished ; frozen ; 2012 ; British Journalism Review Volume 23 ; 23 ; >
+      au < finished ; finished ; 2012 ; British Journalism Review Volume 23 ; 23 ; >
       au < finished ; finished ; 2013 ; British Journalism Review Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; British Journalism Review Volume 25 ; 25 ; >
       au < finished ; crawling ; 2015 ; British Journalism Review Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -4926,7 +4926,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Business & Society Volume 47 ; 47 ; >
-      au < down ; crawling ; 2009 ; Business & Society Volume 48 ; 48 ; >
+      au < down ; finished ; 2009 ; Business & Society Volume 48 ; 48 ; >
 
     }
 
@@ -5010,7 +5010,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Business Communication Quarterly Volume 71 ; 71 ; >
-      au < down ; crawling ; 2009 ; Business Communication Quarterly Volume 72 ; 72 ; >
+      au < down ; finished ; 2009 ; Business Communication Quarterly Volume 72 ; 72 ; >
 
     }
 
@@ -5192,7 +5192,7 @@
       au < crawling ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 ; >
       au < finished ; crawling ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
+      au < finished ; finished ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
       au < finished ; finished ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
       au < deepCrawl ; exists ; 2015 ; Cahiers Élisabéthains Volume 87 ; 87 ; >
       au < finished ; crawling ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; reingest4.clockss.org:8082 >
@@ -5225,7 +5225,7 @@
       au < manifest ; exists ; 2006 ; The Canadian Journal of Psychiatry Volume 51 ; 51 ; >
       au < manifest ; exists ; 2007 ; The Canadian Journal of Psychiatry Volume 52 ; 52 ; >
       au < manifest ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
-      au < finished ; crawling ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
+      au < finished ; finished ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
       au < crawling ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
       au < finished ; crawling ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
       au < finished ; finished ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; reingest1.clockss.org:8082 >
@@ -5353,7 +5353,7 @@
       au < finished ; finished ; 2010 ; Capital & Class Volume 34 ; 34 ; >
       au < finished ; finished ; 2011 ; Capital & Class Volume 35 ; 35 ; >
       au < finished ; finished ; 2012 ; Capital & Class Volume 36 ; 36 ; >
-      au < finished ; crawling ; 2013 ; Capital & Class Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Capital & Class Volume 37 ; 37 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Capital & Class Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2015 ; Capital & Class Volume 39 ; 39 ; >
       au < doNotProcess ; exists ; 2016 ; Capital & Class Volume 40 ; 40 ; >
@@ -5482,7 +5482,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cde.sagepub.com/
 
-        au < finished ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
+        au < finished ; finished ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
         au < finished ; crawling ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; >
         au < finished ; crawling ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; reingest2.clockss.org:8085 >
@@ -5596,7 +5596,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Child Language Teaching and Therapy Volume 24 ; 24 ; >
+      au < down ; finished ; 2008 ; Child Language Teaching and Therapy Volume 24 ; 24 ; >
       au < zapped ; finished ; 2009 ; Child Language Teaching and Therapy Volume 25 ; 25 ; >
 
     }
@@ -6219,7 +6219,7 @@
       au < zapped ; finished ; 2010 ; Clinical and Applied Thrombosis/Hemostasis Volume 16 ; 16 ; >
       au < finished ; finished ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 ; >
       au < finished ; finished ; 2012 ; Clinical and Applied Thrombosis/Hemostasis Volume 18 ; 18 ; >
-      au < finished ; crawling ; 2013 ; Clinical and Applied Thrombosis/Hemostasis Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Clinical and Applied Thrombosis/Hemostasis Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Clinical and Applied Thrombosis/Hemostasis Volume 20 ; 20 ; >
       au < finished ; crawling ; 2015 ; Clinical and Applied Thrombosis/Hemostasis Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Clinical and Applied Thrombosis/Hemostasis Volume 22 ; 22 ; >
@@ -6639,7 +6639,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
       au < finished ; finished ; 2010 ; Clinical Trials Volume 7 ; 7 ; >
       au < finished ; finished ; 2011 ; Clinical Trials Volume 8 ; 8 ; >
-      au < finished ; frozen ; 2012 ; Clinical Trials Volume 9 ; 9 ; >
+      au < finished ; finished ; 2012 ; Clinical Trials Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; Clinical Trials Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; Clinical Trials Volume 11 ; 11 ; >
       au < deepCrawl ; exists ; 2015 ; Clinical Trials Volume 12 ; 12 ; >
@@ -6961,7 +6961,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Community College Review Volume 37 ; 37 ; >
       au < zapped ; finished ; 2010 ; Community College Review Volume 38 ; 38 ; >
       au < finished ; finished ; 2011 ; Community College Review Volume 39 ; 39 ; >
-      au < finished ; crawling ; 2012 ; Community College Review Volume 40 ; 40 ; >
+      au < finished ; finished ; 2012 ; Community College Review Volume 40 ; 40 ; >
       au < finished ; finished ; 2013 ; Community College Review Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; Community College Review Volume 42 ; 42 ; >
       au < deepCrawl ; exists ; 2015 ; Community College Review Volume 43 ; 43 ; >
@@ -8365,7 +8365,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Critical Social Policy Volume 28 ; 28 ; >
+      au < down ; finished ; 2008 ; Critical Social Policy Volume 28 ; 28 ; >
       au < zapped ; finished ; 2009 ; Critical Social Policy Volume 29 ; 29 ; reingest1.clockss.org:8082 >
 
     }
@@ -8497,7 +8497,7 @@
       param[base_url] = http://cst.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < finished ; crawling ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
+      au < finished ; finished ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
       au < superseded ; exists ; 2011 ; Critical Studies in Television Volume 6 [superseded] ; 6 ; >
       au < superseded ; exists ; 2012 ; Critical Studies in Television Volume 7 [superseded] ; 7 ; >
       au < finished ; crawling ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -8666,7 +8666,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Cultural Dynamics Volume 20 ; 20 ; >
+      au < down ; finished ; 2008 ; Cultural Dynamics Volume 20 ; 20 ; >
       au < zapped ; finished ; 2009 ; Cultural Dynamics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
@@ -9082,7 +9082,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
-      au < down ; crawling ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
+      au < down ; finished ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
       au < zapped ; finished ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
 
     }
@@ -9185,7 +9185,7 @@
       au < manifest ; exists ; 2007 ; Diabetes and Vascular Disease Research Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Diabetes and Vascular Disease Research Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Diabetes and Vascular Disease Research Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2010 ; Diabetes and Vascular Disease Research Volume 7 ; 7 ; >
+      au < finished ; finished ; 2010 ; Diabetes and Vascular Disease Research Volume 7 ; 7 ; >
       au < zapped ; finished ; 2011 ; Diabetes and Vascular Disease Research Volume 8 ; 8 ; >
       au < finished ; crawling ; 2012 ; Diabetes and Vascular Disease Research Volume 9 ; 9 ; >
       au < finished ; finished ; 2013 ; Diabetes and Vascular Disease Research Volume 10 ; 10 ; >
@@ -9525,7 +9525,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Discourse Studies Volume 11 ; 11 ; >
       au < finished ; crawling ; 2010 ; Discourse Studies Volume 12 ; 12 ; >
       au < finished ; finished ; 2011 ; Discourse Studies Volume 13 ; 13 ; >
-      au < finished ; frozen ; 2012 ; Discourse Studies Volume 14 ; 14 ; >
+      au < finished ; finished ; 2012 ; Discourse Studies Volume 14 ; 14 ; >
       au < finished ; finished ; 2013 ; Discourse Studies Volume 15 ; 15 ; >
       au < finished ; finished ; 2014 ; Discourse Studies Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2015 ; Discourse Studies Volume 17 ; 17 ; >
@@ -9766,7 +9766,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Economic and Industrial Democracy Volume 29 ; 29 ; >
+      au < down ; finished ; 2008 ; Economic and Industrial Democracy Volume 29 ; 29 ; >
       au < down ; crawling ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
     }
@@ -10109,7 +10109,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Educational Administration Quarterly Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 ; >
       au < finished ; crawling ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 ; >
+      au < finished ; finished ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 ; >
       au < finished ; finished ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 ; >
       au < finished ; finished ; 2013 ; Educational Administration Quarterly Volume 49 ; 49 ; >
       au < finished ; finished ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; >
@@ -10282,7 +10282,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 ; >
       au < finished ; crawling ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 ; >
       au < finished ; frozen ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 ; >
-      au < finished ; frozen ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
+      au < finished ; finished ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
       au < finished ; crawling ; 2013 ; Educational Evaluation and Policy Analysis Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Educational Evaluation and Policy Analysis Volume 36 ; 36 ; >
       au < deepCrawl ; exists ; 2015 ; Educational Evaluation and Policy Analysis Volume 37 ; 37 ; >
@@ -10326,7 +10326,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; >
+      au < down ; finished ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; >
       au < zapped ; finished ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
     }
@@ -10506,7 +10506,7 @@
       au < finished ; finished ; 2008 ; Educational Researcher Volume 37 ; 37 ; >
       au < finished ; finished ; 2009 ; Educational Researcher Volume 38 ; 38 ; >
       au < zapped ; finished ; 2010 ; Educational Researcher Volume 39 ; 39 ; >
-      au < finished ; frozen ; 2011 ; Educational Researcher Volume 40 ; 40 ; >
+      au < finished ; finished ; 2011 ; Educational Researcher Volume 40 ; 40 ; >
       au < finished ; frozen ; 2012 ; Educational Researcher Volume 41 ; 41 ; >
       au < finished ; crawling ; 2013 ; Educational Researcher Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Educational Researcher Volume 43 ; 43 ; >
@@ -10870,7 +10870,7 @@
       au < finished ; finished ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 ; >
       au < finished ; finished ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 ; >
       au < finished ; finished ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 ; >
-      au < finished ; crawling ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 ; >
+      au < finished ; finished ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 ; >
       au < finished ; finished ; 2013 ; Environment and Planning D: Society and Space Volume 31 ; 31 ; >
       au < crawling ; exists ; 2014 ; Environment and Planning D: Society and Space Volume 32 ; 32 ; >
       au < finished ; crawling ; 2015 ; Environment and Planning D: Society and Space Volume 33 ; 33 ; reingest2.clockss.org:8085 >
@@ -11091,7 +11091,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; frozen ; 2008 ; Ethnography Volume 9 ; 9 ; >
+      au < down ; finished ; 2008 ; Ethnography Volume 9 ; 9 ; >
       au < zapped ; finished ; 2009 ; Ethnography Volume 10 ; 10 ; reingest3.clockss.org:8083 >
 
     }
@@ -11821,7 +11821,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; European Journal of Women's Studies Volume 17 ; 17 ; >
       au < finished ; finished ; 2011 ; European Journal of Women's Studies Volume 18 ; 18 ; >
-      au < finished ; frozen ; 2012 ; European Journal of Women's Studies Volume 19 ; 19 ; >
+      au < finished ; finished ; 2012 ; European Journal of Women's Studies Volume 19 ; 19 ; >
       au < finished ; finished ; 2013 ; European Journal of Women's Studies Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; European Journal of Women's Studies Volume 21 ; 21 ; >
       au < finished ; crawling ; 2015 ; European Journal of Women's Studies Volume 22 ; 22 ; reingest3.clockss.org:8083 >
@@ -11918,7 +11918,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Union Politics Volume 10 ; 10 ; >
       au < finished ; finished ; 2010 ; European Union Politics Volume 11 ; 11 ; >
       au < finished ; crawling ; 2011 ; European Union Politics Volume 12 ; 12 ; >
-      au < finished ; frozen ; 2012 ; European Union Politics Volume 13 ; 13 ; >
+      au < finished ; finished ; 2012 ; European Union Politics Volume 13 ; 13 ; >
       au < finished ; finished ; 2013 ; European Union Politics Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; European Union Politics Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2015 ; European Union Politics Volume 16 ; 16 ; >
@@ -12171,7 +12171,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Evaluation Review Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Evaluation Review Volume 33 ; 33 ; >
       au < finished ; finished ; 2010 ; Evaluation Review Volume 34 ; 34 ; >
-      au < finished ; crawling ; 2011 ; Evaluation Review Volume 35 ; 35 ; >
+      au < finished ; finished ; 2011 ; Evaluation Review Volume 35 ; 35 ; >
       au < finished ; finished ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
       au < finished ; finished ; 2014 ; Evaluation Review Volume 38 ; 38 ; >
@@ -12531,7 +12531,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Feminism & Psychology Volume 18 ; 18 ; >
+      au < down ; finished ; 2008 ; Feminism & Psychology Volume 18 ; 18 ; >
       au < zapped ; finished ; 2009 ; Feminism & Psychology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
     }
@@ -12586,7 +12586,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Feminist Criminology Volume 3 ; 3 ; >
+      au < down ; finished ; 2008 ; Feminist Criminology Volume 3 ; 3 ; >
       au < zapped ; finished ; 2009 ; Feminist Criminology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
     }
@@ -12784,7 +12784,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; First Language Volume 28 ; 28 ; >
-      au < down ; crawling ; 2009 ; First Language Volume 29 ; 29 ; >
+      au < down ; finished ; 2009 ; First Language Volume 29 ; 29 ; >
 
     }
 
@@ -12849,7 +12849,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2008 ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 ; >
-      au < down ; crawling ; 2009 ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 ; >
+      au < down ; finished ; 2009 ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 ; >
 
     }
 
@@ -12976,7 +12976,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Foot & Ankle Specialist Volume 1 ; 1 ; >
-      au < down ; crawling ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 ; >
+      au < down ; finished ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 ; >
 
     }
 
@@ -13014,7 +13014,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; French Cultural Studies Volume 19 ; 19 ; >
-      au < down ; crawling ; 2009 ; French Cultural Studies Volume 20 ; 20 ; >
+      au < down ; finished ; 2009 ; French Cultural Studies Volume 20 ; 20 ; >
 
     }
 
@@ -13070,7 +13070,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2008 ; Games and Culture Volume 3 ; 3 ; >
-      au < down ; crawling ; 2009 ; Games and Culture Volume 4 ; 4 ; >
+      au < down ; finished ; 2009 ; Games and Culture Volume 4 ; 4 ; >
 
     }
 
@@ -13271,7 +13271,7 @@
 
       au < zapped ; finished ; 2010 ; Genes & Cancer Volume 1 ; 1 ; >
       au < finished ; crawling ; 2011 ; Genes & Cancer Volume 2 ; 2 ; >
-      au < finished ; frozen ; 2012 ; Genes & Cancer Volume 3 ; 3 ; >
+      au < finished ; finished ; 2012 ; Genes & Cancer Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; Genes & Cancer Volume 4 ; 4 ; >
 
     }
@@ -13329,7 +13329,7 @@
       au < finished ; finished ; 2009 ; German Journal of Human Resource Management Volume 23 ; 23 ; >
       au < finished ; finished ; 2010 ; German Journal of Human Resource Management Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; German Journal of Human Resource Management Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2012 ; German Journal of Human Resource Management Volume 26 ; 26 ; >
+      au < finished ; finished ; 2012 ; German Journal of Human Resource Management Volume 26 ; 26 ; >
       au < finished ; crawling ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 ; >
       au < finished ; crawling ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 ; reingest2.clockss.org:8085 >
@@ -13795,7 +13795,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Group & Organization Management Volume 33 ; 33 ; >
+      au < down ; finished ; 2008 ; Group & Organization Management Volume 33 ; 33 ; >
       au < down ; finished ; 2009 ; Group & Organization Management Volume 34 ; 34 ; >
 
     }
@@ -14168,7 +14168,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Health Informatics Journal Volume 14 ; 14 ; >
-      au < down ; crawling ; 2009 ; Health Informatics Journal Volume 15 ; 15 ; >
+      au < down ; finished ; 2009 ; Health Informatics Journal Volume 15 ; 15 ; >
 
     }
 
@@ -14517,7 +14517,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 ; >
+      au < down ; finished ; 2008 ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 ; >
       au < zapped ; finished ; 2009 ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 ; reingest1.clockss.org:8082 >
 
     }
@@ -14686,7 +14686,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; History of the Human Sciences Volume 21 ; 21 ; >
+      au < down ; finished ; 2008 ; History of the Human Sciences Volume 21 ; 21 ; >
       au < zapped ; finished ; 2009 ; History of the Human Sciences Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
     }
@@ -15030,7 +15030,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 51 ; 51 ; >
       au < zapped ; finished ; 2010 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 52 ; 52 ; >
       au < finished ; finished ; 2011 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 53 ; 53 ; >
-      au < finished ; crawling ; 2012 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 54 ; 54 ; >
+      au < finished ; finished ; 2012 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 54 ; 54 ; >
       au < finished ; finished ; 2013 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 55 ; 55 ; >
       au < finished ; finished ; 2014 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 56 ; 56 ; >
       au < deepCrawl ; exists ; 2015 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 57 ; 57 ; >
@@ -15176,7 +15176,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Human Resource Development Review Volume 7 ; 7 ; >
+      au < down ; finished ; 2008 ; Human Resource Development Review Volume 7 ; 7 ; >
       au < zapped ; finished ; 2009 ; Human Resource Development Review Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
@@ -15503,7 +15503,7 @@
       au < exists ; exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 ; >
       au < exists ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; >
       au < finished ; finished ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
+      au < finished ; finished ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; >
       au < crawling ; exists ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; >
       au < manifest ; exists ; 2016-2017 ; Imagination, Cognition and Personality Volume 36 ; 36 ; >
 
@@ -16612,7 +16612,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; International Journal of Bilingualism Volume 12 [superseded] ; 12 ; >
+      au < superseded ; finished ; 2008 ; International Journal of Bilingualism Volume 12 [superseded] ; 12 ; >
       au < zapped ; finished ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
@@ -16798,7 +16798,7 @@
       au < finished ; finished ; 2010 ; International Journal of Comparative Sociology Volume 51 ; 51 ; >
       au < finished ; finished ; 2011 ; International Journal of Comparative Sociology Volume 52 ; 52 ; >
       au < finished ; finished ; 2012 ; International Journal of Comparative Sociology Volume 53 ; 53 ; >
-      au < finished ; crawling ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
       au < frozen ; exists ; 2015 ; International Journal of Comparative Sociology Volume 56 ; 56 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
@@ -17918,7 +17918,7 @@
       au < zapped ; finished ; 2010 ; International Journal of Social Psychiatry Volume 56 ; 56 ; >
       au < finished ; finished ; 2011 ; International Journal of Social Psychiatry Volume 57 ; 57 ; >
       au < finished ; finished ; 2012 ; International Journal of Social Psychiatry Volume 58 ; 58 ; >
-      au < finished ; crawling ; 2013 ; International Journal of Social Psychiatry Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; International Journal of Social Psychiatry Volume 59 ; 59 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; International Journal of Social Psychiatry Volume 60 ; 60 ; >
       au < deepCrawl ; exists ; 2015 ; International Journal of Social Psychiatry Volume 61 ; 61 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Social Psychiatry Volume 62 ; 62 ; >
@@ -18587,7 +18587,7 @@
       au < manifest ; exists ; 2005 ; International Review of Administrative Sciences Volume 71 ; 71 ; >
       au < manifest ; exists ; 2006 ; International Review of Administrative Sciences Volume 72 ; 72 ; >
       au < manifest ; exists ; 2007 ; International Review of Administrative Sciences Volume 73 ; 73 ; >
-      au < finished ; crawling ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 ; >
+      au < finished ; finished ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ; >
       au < finished ; finished ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 ; >
       au < finished ; finished ; 2011 ; International Review of Administrative Sciences Volume 77 ; 77 ; >
@@ -18808,7 +18808,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; International Sociology Volume 23 ; 23 ; >
+      au < down ; finished ; 2008 ; International Sociology Volume 23 ; 23 ; >
       au < zapped ; finished ; 2009 ; International Sociology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
 
     }
@@ -18843,7 +18843,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Sociology Volume 24 ; 24 ; >
       au < zapped ; finished ; 2010 ; International Sociology Volume 25 ; 25 ; >
       au < finished ; finished ; 2011 ; International Sociology Volume 26 ; 26 ; >
-      au < finished ; frozen ; 2012 ; International Sociology Volume 27 ; 27 ; >
+      au < finished ; finished ; 2012 ; International Sociology Volume 27 ; 27 ; >
       au < finished ; finished ; 2013 ; International Sociology Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; International Sociology Volume 29 ; 29 ; >
       au < finished ; crawling ; 2015 ; International Sociology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
@@ -19086,8 +19086,8 @@
       au < finished ; finished ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
       au < finished ; finished ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
-      au < finished ; crawling ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
+      au < finished ; finished ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
+      au < finished ; finished ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
       au < finished ; crawling ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 ; >
 
@@ -19638,7 +19638,7 @@
       au < manifest ; exists ; 2007 ; Journal of Aging and Health Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Aging and Health Volume 20 ; 20 ; >
       au < finished ; finished ; 2009 ; Journal of Aging and Health Volume 21 ; 21 ; >
-      au < finished ; frozen ; 2010 ; Journal of Aging and Health Volume 22 ; 22 ; >
+      au < finished ; finished ; 2010 ; Journal of Aging and Health Volume 22 ; 22 ; >
       au < finished ; finished ; 2011 ; Journal of Aging and Health Volume 23 ; 23 ; >
       au < finished ; finished ; 2012 ; Journal of Aging and Health Volume 24 ; 24 ; >
       au < finished ; crawling ; 2013 ; Journal of Aging and Health Volume 25 ; 25 ; reingest5.clockss.org:8082 >
@@ -19745,7 +19745,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Applied Behavioral Science Volume 45 ; 45 ; >
       au < zapped ; finished ; 2010 ; The Journal of Applied Behavioral Science Volume 46 ; 46 ; >
       au < finished ; finished ; 2011 ; The Journal of Applied Behavioral Science Volume 47 ; 47 ; >
-      au < finished ; frozen ; 2012 ; The Journal of Applied Behavioral Science Volume 48 ; 48 ; >
+      au < finished ; finished ; 2012 ; The Journal of Applied Behavioral Science Volume 48 ; 48 ; >
       au < finished ; finished ; 2013 ; The Journal of Applied Behavioral Science Volume 49 ; 49 ; >
       au < finished ; finished ; 2014 ; The Journal of Applied Behavioral Science Volume 50 ; 50 ; >
       au < deepCrawl ; exists ; 2015 ; The Journal of Applied Behavioral Science Volume 51 ; 51 ; >
@@ -20179,10 +20179,10 @@
       au < finished ; finished ; 2007-2008 ; Journal of Biomaterials Applications Volume 22 ; 22 ; >
       au < finished ; finished ; 2008-2009 ; Journal of Biomaterials Applications Volume 23 ; 23 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009-2010 ; Journal of Biomaterials Applications Volume 24 ; 24 ; >
-      au < finished ; frozen ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
+      au < finished ; finished ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
       au < finished ; finished ; 2011-2012 ; Journal of Biomaterials Applications Volume 26 ; 26 ; >
       au < finished ; finished ; 2012-2013 ; Journal of Biomaterials Applications Volume 27 ; 27 ; >
-      au < finished ; crawling ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 ; >
       au < crawling ; exists ; 2015-2016 ; Journal of Biomaterials Applications Volume 30 ; 30 ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 ; >
@@ -20207,7 +20207,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; down ; 2008 ; Journal of Biomolecular Screening Volume 13 [superseded] ; 13 ; >
-      au < down ; crawling ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 ; >
+      au < down ; finished ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 ; >
 
     }
 
@@ -20256,7 +20256,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Black Psychology Volume 34 ; 34 ; >
+      au < down ; finished ; 2008 ; Journal of Black Psychology Volume 34 ; 34 ; >
       au < down ; crawling ; 2009 ; Journal of Black Psychology Volume 35 ; 35 ; >
 
     }
@@ -20472,7 +20472,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; down ; 2008 ; Journal of Business and Technical Communication Volume 22 [superseded] ; 22 ; >
-      au < down ; crawling ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 ; >
+      au < down ; finished ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 ; >
 
     }
 
@@ -20531,7 +20531,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; >
+      au < down ; finished ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; >
       au < down ; finished ; 2009 ; Journal of Business Communication Volume 46 ; 46 ; >
 
     }
@@ -20942,7 +20942,7 @@
       au < finished ; crawling ; 2009 ; Journal of Cerebral Blood Flow & Metabolism Volume 29 ; 29 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2010 ; Journal of Cerebral Blood Flow & Metabolism Volume 30 ; 30 ; >
       au < crawling ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
-      au < finished ; crawling ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
       au < finished ; crawling ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; reingest2.clockss.org:8085 >
@@ -21089,7 +21089,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; down ; 2008 ; Journal of Classical Sociology Volume 8 [superseded] ; 8 ; >
-      au < down ; crawling ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
+      au < down ; finished ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
 
     }
 
@@ -21457,7 +21457,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Composite Materials Volume 42 ; 42 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Composite Materials Volume 43 ; 43 ; >
       au < zapped ; finished ; 2010 ; Journal of Composite Materials Volume 44 ; 44 ; >
-      au < finished ; crawling ; 2011 ; Journal of Composite Materials Volume 45 ; 45 ; >
+      au < finished ; finished ; 2011 ; Journal of Composite Materials Volume 45 ; 45 ; >
       au < finished ; finished ; 2012 ; Journal of Composite Materials Volume 46 ; 46 ; >
       au < finished ; crawling ; 2013 ; Journal of Composite Materials Volume 47 ; 47 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Journal of Composite Materials Volume 48 ; 48 ; reingest1.clockss.org:8082 >
@@ -21505,7 +21505,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
+      au < down ; finished ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
       au < superseded ; down ; 2009 ; Journal of Conflict Resolution Volume 53 [superseded] ; 53 ; >
 
     }
@@ -21920,7 +21920,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
+      au < down ; finished ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
 
     }
 
@@ -21988,7 +21988,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
+      au < down ; finished ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
       au < zapped ; finished ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 ; >
 
     }
@@ -22674,7 +22674,7 @@
       au < finished ; crawling ; 2010 ; Journal of Early Childhood Research Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Journal of Early Childhood Research Volume 9 ; 9 ; >
       au < finished ; finished ; 2012 ; Journal of Early Childhood Research Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2013 ; Journal of Early Childhood Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Journal of Early Childhood Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Early Childhood Research Volume 12 ; 12 ; >
       au < finished ; crawling ; 2015 ; Journal of Early Childhood Research Volume 13 ; 13 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Early Childhood Research Volume 14 ; 14 ; >
@@ -22699,7 +22699,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ; >
+      au < down ; finished ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ; >
 
     }
 
@@ -22766,7 +22766,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 ; >
-      au < down ; crawling ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 ; >
+      au < down ; finished ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 ; >
 
     }
 
@@ -23296,7 +23296,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 ; >
-      au < down ; crawling ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
+      au < down ; finished ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
 
     }
 
@@ -23724,7 +23724,7 @@
       au < finished ; finished ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
       au < finished ; finished ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
       au < finished ; finished ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
+      au < finished ; finished ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; Journal of Feline Medicine and Surgery Volume 15 ; 15 ; >
       au < finished ; crawling ; 2014 ; Journal of Feline Medicine and Surgery Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; Journal of Feline Medicine and Surgery Volume 17 ; 17 ; >
@@ -24314,11 +24314,11 @@
       au < manifest ; exists ; 2005-2006 ; Journal of Historical Research in Music Education Volume 27 ; 27 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Historical Research in Music Education Volume 28 ; 28 ; >
       au < finished ; crawling ; 2007-2008 ; Journal of Historical Research in Music Education Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2008-2009 ; Journal of Historical Research in Music Education Volume 30 ; 30 ; >
+      au < finished ; finished ; 2008-2009 ; Journal of Historical Research in Music Education Volume 30 ; 30 ; >
       au < finished ; finished ; 2009-2010 ; Journal of Historical Research in Music Education Volume 31 ; 31 ; >
       au < finished ; crawling ; 2010-2011 ; Journal of Historical Research in Music Education Volume 32 ; 32 ; >
       au < finished ; crawling ; 2011-2012 ; Journal of Historical Research in Music Education Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
+      au < finished ; finished ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
       au < finished ; finished ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; >
       au < finished ; finished ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; >
       au < crawling ; exists ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; >
@@ -24928,7 +24928,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; down ; 2008 ; Journal of Information Science Volume 34 [superseded] ; 34 ; >
-      au < down ; crawling ; 2009 ; Journal of Information Science Volume 35 ; 35 ; >
+      au < down ; finished ; 2009 ; Journal of Information Science Volume 35 ; 35 ; >
 
     }
 
@@ -24998,7 +24998,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Intellectual Disabilities Volume 12 ; 12 ; >
+      au < down ; finished ; 2008 ; Journal of Intellectual Disabilities Volume 12 ; 12 ; >
       au < down ; crawling ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 ; >
 
     }
@@ -25103,7 +25103,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Intensive Care Medicine Volume 23 ; 23 ; >
+      au < down ; finished ; 2008 ; Journal of Intensive Care Medicine Volume 23 ; 23 ; >
       au < zapped ; finished ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 ; >
 
     }
@@ -25438,7 +25438,7 @@
       au < manifest ; exists ; 2005 ; The Journal of Law, Medicine & Ethics Volume 33 ; 33 ; >
       au < manifest ; exists ; 2006 ; The Journal of Law, Medicine & Ethics Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; The Journal of Law, Medicine & Ethics Volume 35 ; 35 ; >
-      au < finished ; crawling ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       au < exists ; exists ; 2009 ; The Journal of Law, Medicine & Ethics Volume 37 ; 37 ; >
       au < exists ; exists ; 2010 ; The Journal of Law, Medicine & Ethics Volume 38 ; 38 ; >
       au < finished ; finished ; 2011 ; The Journal of Law, Medicine & Ethics Volume 39 ; 39 ; >
@@ -25516,8 +25516,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Learning Disabilities Volume 41 ; 41 ; >
-      au < down ; crawling ; 2009 ; Journal of Learning Disabilities Volume 42 ; 42 ; >
+      au < down ; finished ; 2008 ; Journal of Learning Disabilities Volume 41 ; 41 ; >
+      au < down ; finished ; 2009 ; Journal of Learning Disabilities Volume 42 ; 42 ; >
 
     }
 
@@ -25594,7 +25594,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Librarianship and Information Science Volume 40 ; 40 ; >
+      au < down ; finished ; 2008 ; Journal of Librarianship and Information Science Volume 40 ; 40 ; >
       au < down ; crawling ; 2009 ; Journal of Librarianship and Information Science Volume 41 ; 41 ; >
 
     }
@@ -25765,7 +25765,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Macromarketing Volume 28 ; 28 ; >
+      au < down ; finished ; 2008 ; Journal of Macromarketing Volume 28 ; 28 ; >
       au < down ; finished ; 2009 ; Journal of Macromarketing Volume 29 ; 29 ; >
 
     }
@@ -25831,7 +25831,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Journal of Management Volume 34 ; 34 ; >
-      au < down ; crawling ; 2009 ; Journal of Management Volume 35 ; 35 ; >
+      au < down ; finished ; 2009 ; Journal of Management Volume 35 ; 35 ; >
 
     }
 
@@ -25902,7 +25902,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2008 ; Journal of Management Education Volume 32 ; 32 ; >
-      au < down ; crawling ; 2009 ; Journal of Management Education Volume 33 ; 33 ; >
+      au < down ; finished ; 2009 ; Journal of Management Education Volume 33 ; 33 ; >
 
     }
 
@@ -25971,7 +25971,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Journal of Management Inquiry Volume 17 ; 17 ; >
-      au < down ; crawling ; 2009 ; Journal of Management Inquiry Volume 18 ; 18 ; >
+      au < down ; finished ; 2009 ; Journal of Management Inquiry Volume 18 ; 18 ; >
 
     }
 
@@ -26712,7 +26712,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Planning Education and Research Volume 28 ; 28 ; >
+      au < down ; finished ; 2008 ; Journal of Planning Education and Research Volume 28 ; 28 ; >
 
     }
 
@@ -26752,7 +26752,7 @@
       au < finished ; finished ; 2010 ; Journal of Planning Education and Research Volume 30 ; 30 ; >
       au < finished ; finished ; 2011 ; Journal of Planning Education and Research Volume 31 ; 31 ; >
       au < finished ; finished ; 2012 ; Journal of Planning Education and Research Volume 32 ; 32 ; >
-      au < finished ; crawling ; 2013 ; Journal of Planning Education and Research Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Journal of Planning Education and Research Volume 33 ; 33 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Journal of Planning Education and Research Volume 35 ; 35 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 ; >
@@ -27657,7 +27657,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of School Nursing Volume 25 ; 25 ; >
       au < finished ; finished ; 2010 ; The Journal of School Nursing Volume 26 ; 26 ; >
       au < finished ; finished ; 2011 ; The Journal of School Nursing Volume 27 ; 27 ; >
-      au < finished ; crawling ; 2012 ; The Journal of School Nursing Volume 28 ; 28 ; >
+      au < finished ; finished ; 2012 ; The Journal of School Nursing Volume 28 ; 28 ; >
       au < finished ; finished ; 2013 ; The Journal of School Nursing Volume 29 ; 29 ; >
       au < finished ; finished ; 2014 ; The Journal of School Nursing Volume 30 ; 30 ; >
       au < frozen ; exists ; 2015 ; The Journal of School Nursing Volume 31 ; 31 ; >
@@ -27963,8 +27963,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of South Asian Development Volume 3 ; 3 ; >
-      au < down ; crawling ; 2009 ; Journal of South Asian Development Volume 4 ; 4 ; >
+      au < down ; finished ; 2008 ; Journal of South Asian Development Volume 3 ; 3 ; >
+      au < down ; finished ; 2009 ; Journal of South Asian Development Volume 4 ; 4 ; >
 
     }
 
@@ -28333,7 +28333,7 @@
       au < finished ; finished ; 2010 ; Journal of Studies in International Education Volume 14 ; 14 ; >
       au < finished ; finished ; 2011 ; Journal of Studies in International Education Volume 15 ; 15 ; >
       au < finished ; finished ; 2012 ; Journal of Studies in International Education Volume 16 ; 16 ; >
-      au < finished ; crawling ; 2013 ; Journal of Studies in International Education Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; Journal of Studies in International Education Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Studies in International Education Volume 18 ; 18 ; >
       au < finished ; crawling ; 2015 ; Journal of Studies in International Education Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Studies in International Education Volume 20 ; 20 ; >
@@ -28531,7 +28531,7 @@
       au < manifest ; exists ; 2007 ; Journal of the American Psychiatric Nurses Association Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of the American Psychiatric Nurses Association Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 ; >
-      au < finished ; crawling ; 2010 ; Journal of the American Psychiatric Nurses Association Volume 16 ; 16 ; >
+      au < finished ; finished ; 2010 ; Journal of the American Psychiatric Nurses Association Volume 16 ; 16 ; >
       au < finished ; finished ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 ; >
       au < finished ; frozen ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 ; >
       au < finished ; finished ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 ; >
@@ -28880,7 +28880,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 ; >
-      au < down ; crawling ; 2009 ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 ; >
+      au < down ; finished ; 2009 ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 ; >
 
     }
 
@@ -29343,8 +29343,8 @@
       au < zapped ; finished ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 ; >
       au < zapped ; finished ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 ; >
       au < finished ; frozen ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 ; >
-      au < finished ; crawling ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 ; >
-      au < finished ; frozen ; 2012 ; Journal of Veterinary Diagnostic Investigation Volume 24 ; 24 ; >
+      au < finished ; finished ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 ; >
+      au < finished ; finished ; 2012 ; Journal of Veterinary Diagnostic Investigation Volume 24 ; 24 ; >
       au < finished ; finished ; 2013 ; Journal of Veterinary Diagnostic Investigation Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Veterinary Diagnostic Investigation Volume 26 ; 26 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Veterinary Diagnostic Investigation Volume 27 ; 27 ; >
@@ -29422,7 +29422,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Visual Culture Volume 7 ; 7 ; >
+      au < down ; finished ; 2008 ; Journal of Visual Culture Volume 7 ; 7 ; >
       au < zapped ; finished ; 2009 ; Journal of Visual Culture Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
@@ -30044,7 +30044,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Language Testing Volume 26 ; 26 ; >
       au < finished ; finished ; 2010 ; Language Testing Volume 27 ; 27 ; >
       au < finished ; finished ; 2011 ; Language Testing Volume 28 ; 28 ; >
-      au < finished ; crawling ; 2012 ; Language Testing Volume 29 ; 29 ; >
+      au < finished ; finished ; 2012 ; Language Testing Volume 29 ; 29 ; >
       au < finished ; finished ; 2013 ; Language Testing Volume 30 ; 30 ; >
       au < finished ; finished ; 2014 ; Language Testing Volume 31 ; 31 ; >
       au < deepCrawl ; exists ; 2015 ; Language Testing Volume 32 ; 32 ; >
@@ -30117,7 +30117,7 @@
       au < finished ; finished ; 2010 ; Latin American Perspectives Volume 37 ; 37 ; >
       au < finished ; finished ; 2011 ; Latin American Perspectives Volume 38 ; 38 ; >
       au < finished ; frozen ; 2012 ; Latin American Perspectives Volume 39 ; 39 ; >
-      au < finished ; crawling ; 2013 ; Latin American Perspectives Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Latin American Perspectives Volume 40 ; 40 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Latin American Perspectives Volume 41 ; 41 ; >
       au < frozen ; exists ; 2015 ; Latin American Perspectives Volume 42 ; 42 ; >
       au < doNotProcess ; exists ; 2016 ; Latin American Perspectives Volume 43 ; 43 ; >
@@ -30223,7 +30223,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; >
+      au < down ; finished ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; >
       au < zapped ; finished ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
     }
@@ -30385,7 +30385,7 @@
       au < zapped ; finished ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 [Sage] ; 24 ; >
       au < finished ; finished ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 [Sage] ; 25 ; >
       au < finished ; crawling ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 [Sage] ; 26 ; >
-      au < finished ; frozen ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 [Sage] ; 27 ; >
+      au < finished ; finished ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 [Sage] ; 27 ; >
       au < finished ; finished ; 2013 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 28 [Sage] ; 28 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 29 [Sage] ; 29 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 30 [Sage] ; 30 ; >
@@ -30572,7 +30572,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Management Communication Quarterly Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Management Communication Quarterly Volume 23 ; 23 ; >
       au < finished ; finished ; 2010 ; Management Communication Quarterly Volume 24 ; 24 ; >
-      au < finished ; crawling ; 2011 ; Management Communication Quarterly Volume 25 ; 25 ; >
+      au < finished ; finished ; 2011 ; Management Communication Quarterly Volume 25 ; 25 ; >
       au < finished ; finished ; 2012 ; Management Communication Quarterly Volume 26 ; 26 ; >
       au < finished ; crawling ; 2013 ; Management Communication Quarterly Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Management Communication Quarterly Volume 28 ; 28 ; >
@@ -30631,7 +30631,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Management in Education Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Management in Education Volume 23 ; 23 ; >
       au < zapped ; finished ; 2010 ; Management in Education Volume 24 ; 24 ; >
-      au < finished ; crawling ; 2011 ; Management in Education Volume 25 ; 25 ; >
+      au < finished ; finished ; 2011 ; Management in Education Volume 25 ; 25 ; >
       au < finished ; finished ; 2012 ; Management in Education Volume 26 ; 26 ; >
       au < finished ; finished ; 2013 ; Management in Education Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Management in Education Volume 28 ; 28 ; >
@@ -30709,7 +30709,7 @@
       au < finished ; finished ; 2010 ; Management Learning Volume 41 ; 41 ; >
       au < finished ; finished ; 2011 ; Management Learning Volume 42 ; 42 ; >
       au < finished ; finished ; 2012 ; Management Learning Volume 43 ; 43 ; >
-      au < finished ; crawling ; 2013 ; Management Learning Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Management Learning Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Management Learning Volume 45 ; 45 ; >
       au < finished ; crawling ; 2015 ; Management Learning Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Management Learning Volume 47 ; 47 ; >
@@ -31106,14 +31106,14 @@
       au < finished ; finished ; 2008 ; Media International Australia Volume 127 ; 127 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Media International Australia Volume 128 ; 128 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; >
-      au < finished ; crawling ; 2009 ; Media International Australia Volume 130 ; 130 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Media International Australia Volume 130 ; 130 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Media International Australia Volume 131 ; 131 ; >
       au < finished ; finished ; 2009 ; Media International Australia Volume 132 ; 132 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; Media International Australia Volume 133 ; 133 ; >
       au < finished ; crawling ; 2010 ; Media International Australia Volume 134 ; 134 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Media International Australia Volume 135 ; 135 ; >
       au < finished ; crawling ; 2010 ; Media International Australia Volume 136 ; 136 ; >
-      au < finished ; crawling ; 2010 ; Media International Australia Volume 137 ; 137 ; >
+      au < finished ; finished ; 2010 ; Media International Australia Volume 137 ; 137 ; >
       au < finished ; crawling ; 2011 ; Media International Australia Volume 138 ; 138 ; >
       au < finished ; crawling ; 2011 ; Media International Australia Volume 139 ; 139 ; >
       au < finished ; finished ; 2011 ; Media International Australia Volume 140 ; 140 ; reingest2.clockss.org:8085 >
@@ -31123,11 +31123,11 @@
       au < finished ; finished ; 2012 ; Media International Australia Volume 144 ; 144 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Media International Australia Volume 145 ; 145 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Media International Australia Volume 146 ; 146 ; >
-      au < finished ; crawling ; 2013 ; Media International Australia Volume 147 ; 147 ; >
+      au < finished ; finished ; 2013 ; Media International Australia Volume 147 ; 147 ; >
       au < finished ; finished ; 2013 ; Media International Australia Volume 148 ; 148 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; Media International Australia Volume 149 ; 149 ; >
+      au < finished ; finished ; 2013 ; Media International Australia Volume 149 ; 149 ; >
       au < finished ; crawling ; 2014 ; Media International Australia Volume 150 ; 150 ; >
-      au < finished ; crawling ; 2014 ; Media International Australia Volume 151 ; 151 ; >
+      au < finished ; finished ; 2014 ; Media International Australia Volume 151 ; 151 ; >
       au < finished ; finished ; 2014 ; Media International Australia Volume 152 ; 152 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; >
       au < finished ; crawling ; 2015 ; Media International Australia Volume 154 ; 154 ; reingest2.clockss.org:8085 >
@@ -31232,7 +31232,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; >
       au < finished ; finished ; 2010 ; Medical Care Research and Review Volume 67 ; 67 ; >
-      au < finished ; crawling ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; >
+      au < finished ; finished ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; >
       au < finished ; finished ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; >
       au < finished ; finished ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; >
       au < finished ; finished ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; >
@@ -31527,7 +31527,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Memory Studies Volume 1 ; 1 ; >
+      au < down ; finished ; 2008 ; Memory Studies Volume 1 ; 1 ; >
       au < zapped ; finished ; 2009 ; Memory Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
     }
@@ -31807,8 +31807,8 @@
       au < manifest ; exists ; 2005 ; Molecular Pain Volume 1 ; 1 ; >
       au < manifest ; exists ; 2006 ; Molecular Pain Volume 2 ; 2 ; >
       au < manifest ; exists ; 2007 ; Molecular Pain Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2008 ; Molecular Pain Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
+      au < finished ; finished ; 2008 ; Molecular Pain Volume 4 ; 4 ; >
+      au < finished ; finished ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
       au < finished ; crawling ; 2010 ; Molecular Pain Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; Molecular Pain Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
@@ -32288,10 +32288,10 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; National Institute Economic Review Volume 203 ; 203 ; >
+      au < down ; finished ; 2008 ; National Institute Economic Review Volume 203 ; 203 ; >
       au < zapped ; finished ; 2008 ; National Institute Economic Review Volume 204 ; 204 ; >
       au < down ; finished ; 2008 ; National Institute Economic Review Volume 205 ; 205 ; >
-      au < down ; crawling ; 2008 ; National Institute Economic Review Volume 206 ; 206 ; >
+      au < down ; finished ; 2008 ; National Institute Economic Review Volume 206 ; 206 ; >
       au < zapped ; finished ; 2009 ; National Institute Economic Review Volume 207 ; 207 ; reingest3.clockss.org:8083 >
       au < zapped ; finished ; 2009 ; National Institute Economic Review Volume 208 ; 208 ; reingest3.clockss.org:8083 >
       au < zapped ; finished ; 2009 ; National Institute Economic Review Volume 209 ; 209 ; reingest3.clockss.org:8083 >
@@ -32779,9 +32779,9 @@
       au < manifest ; exists ; 2007 ; New Media & Society Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; New Media & Society Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; New Media & Society Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2010 ; New Media & Society Volume 12 ; 12 ; >
+      au < finished ; finished ; 2010 ; New Media & Society Volume 12 ; 12 ; >
       au < finished ; crawling ; 2011 ; New Media & Society Volume 13 ; 13 ; >
-      au < finished ; crawling ; 2012 ; New Media & Society Volume 14 ; 14 ; >
+      au < finished ; finished ; 2012 ; New Media & Society Volume 14 ; 14 ; >
       au < finished ; crawling ; 2013 ; New Media & Society Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; New Media & Society Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2015 ; New Media & Society Volume 17 ; 17 ; >
@@ -32906,9 +32906,9 @@
       au < crawling ; exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
       au < finished ; crawling ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
-      au < finished ; crawling ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
+      au < finished ; finished ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
       au < finished ; crawling ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
-      au < finished ; crawling ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
+      au < finished ; finished ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
       au < finished ; crawling ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Noise & Vibration Worldwide Volume 47 ; 47 ; >
 
@@ -32977,7 +32977,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ; >
       au < finished ; finished ; 2010 ; Nonprofit and Voluntary Sector Quarterly Volume 39 ; 39 ; >
-      au < finished ; frozen ; 2011 ; Nonprofit and Voluntary Sector Quarterly Volume 40 ; 40 ; >
+      au < finished ; finished ; 2011 ; Nonprofit and Voluntary Sector Quarterly Volume 40 ; 40 ; >
       au < finished ; finished ; 2012 ; Nonprofit and Voluntary Sector Quarterly Volume 41 ; 41 ; >
       au < finished ; finished ; 2013 ; Nonprofit and Voluntary Sector Quarterly Volume 42 ; 42 ; >
       au < finished ; finished ; 2014 ; Nonprofit and Voluntary Sector Quarterly Volume 43 ; 43 ; >
@@ -34030,7 +34030,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 ; >
+      au < down ; finished ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 ; >
       au < zapped ; finished ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 ; reingest3.clockss.org:8083 >
 
     }
@@ -34614,7 +34614,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; finished ; 2008 ; Police Quarterly Volume 11 ; 11 ; >
-      au < down ; crawling ; 2009 ; Police Quarterly Volume 12 ; 12 ; >
+      au < down ; finished ; 2009 ; Police Quarterly Volume 12 ; 12 ; >
 
     }
 
@@ -34753,7 +34753,7 @@
       au < finished ; crawling ; 2011 ; Political Insight Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Political Insight Volume 3 ; 3 ; >
       au < finished ; finished ; 2013 ; Political Insight Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2014 ; Political Insight Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; Political Insight Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Political Insight Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Political Insight Volume 7 ; 7 ; >
 
@@ -34883,7 +34883,7 @@
       au < finished ; finished ; 2011 ; Political Studies Volume 59 ; 59 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Political Studies Volume 60 ; 60 ; >
       au < finished ; crawling ; 2013 ; Political Studies Volume 61 ; 61 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Political Studies Volume 62 ; 62 ; >
+      au < finished ; finished ; 2014 ; Political Studies Volume 62 ; 62 ; >
       au < finished ; crawling ; 2015 ; Political Studies Volume 63 ; 63 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Political Studies Volume 64 ; 64 ; >
 
@@ -35011,11 +35011,11 @@
       au < manifest ; exists ; 2006 ; politics Volume 26 ; 26 ; >
       au < manifest ; exists ; 2007 ; politics Volume 27 ; 27 ; >
       au < finished ; crawling ; 2008 ; politics Volume 28 ; 28 ; >
-      au < finished ; crawling ; 2009 ; politics Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; politics Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; politics Volume 30 ; 30 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; politics Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; politics Volume 32 ; 32 ; >
-      au < finished ; crawling ; 2013 ; politics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; politics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; politics Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; politics Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; politics Volume 36 ; 36 ; >
@@ -35084,7 +35084,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Politics & Society Volume 36 ; 36 ; >
       au < finished ; finished ; 2009 ; Politics & Society Volume 37 ; 37 ; >
       au < finished ; finished ; 2010 ; Politics & Society Volume 38 ; 38 ; >
-      au < finished ; crawling ; 2011 ; Politics & Society Volume 39 ; 39 ; >
+      au < finished ; finished ; 2011 ; Politics & Society Volume 39 ; 39 ; >
       au < finished ; finished ; 2012 ; Politics & Society Volume 40 ; 40 ; >
       au < crawling ; exists ; 2013 ; Politics & Society Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; Politics & Society Volume 42 ; 42 ; >
@@ -35110,8 +35110,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 ; >
-      au < down ; crawling ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 ; >
+      au < down ; finished ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 ; >
+      au < down ; finished ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 ; >
 
     }
 
@@ -35497,7 +35497,7 @@
       au < zapped ; finished ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; >
       au < zapped ; finished ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; >
       au < finished ; finished ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; >
-      au < finished ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
+      au < finished ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
       au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
       au < finished ; finished ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; >
       au < finished ; crawling ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; >
@@ -35551,7 +35551,7 @@
       au < finished ; finished ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 ; >
       au < finished ; finished ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
       au < finished ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 ; >
-      au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 ; >
+      au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 ; >
       au < finished ; crawling ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 227 ; 227 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 228 ; 228 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 229 ; 229 ; reingest2.clockss.org:8085 >
@@ -35655,8 +35655,8 @@
       au < finished ; finished ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 ; >
       au < zapped ; finished ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 ; >
       au < zapped ; finished ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 224 ; 224 ; >
-      au < finished ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 ; >
-      au < finished ; frozen ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 ; >
+      au < finished ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 ; >
+      au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 ; >
       au < finished ; finished ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 227 ; 227 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 228 ; 228 ; >
       au < frozen ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 229 ; 229 ; >
@@ -36365,7 +36365,7 @@
       au < finished ; finished ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
       au < finished ; finished ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
       au < finished ; crawling ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; reingest2.clockss.org:8085 >
@@ -36524,7 +36524,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ; >
+      au < down ; finished ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ; >
       au < zapped ; finished ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
@@ -36884,7 +36884,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
-      au < down ; crawling ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
+      au < down ; finished ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
 
     }
 
@@ -37072,7 +37072,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
+      au < down ; finished ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
       au < superseded ; down ; 2009 ; Punishment & Society Volume 11 [superseded] ; 11 ; >
 
     }
@@ -37174,7 +37174,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Qualitative Inquiry Volume 14 [superseded] ; 14 ; >
+      au < superseded ; finished ; 2008 ; Qualitative Inquiry Volume 14 [superseded] ; 14 ; >
       au < down ; crawling ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
     }
@@ -37484,7 +37484,7 @@
         au < finished ; finished ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 ; >
         au < finished ; finished ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 ; reingest2.clockss.org:8085 >
         au < exists ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 ; >
-        au < finished ; crawling ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+        au < finished ; finished ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 ; >
         au < deepCrawl ; exists ; 2015 ; Recherche et Applications en Marketing (English Edition) Volume 30 ; 30 ; >
         au < doNotProcess ; exists ; 2016 ; Recherche et Applications en Marketing (English Edition) Volume 31 ; 31 ; >
@@ -37582,7 +37582,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; RELC Journal Volume 39 ; 39 ; >
+      au < down ; finished ; 2008 ; RELC Journal Volume 39 ; 39 ; >
       au < zapped ; finished ; 2009 ; RELC Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
 
     }
@@ -38804,7 +38804,7 @@
       au < manifest ; exists ; 2007 ; School Psychology International Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; School Psychology International Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; School Psychology International Volume 30 ; 30 ; >
-      au < finished ; crawling ; 2010 ; School Psychology International Volume 31 ; 31 ; >
+      au < finished ; finished ; 2010 ; School Psychology International Volume 31 ; 31 ; >
       au < finished ; finished ; 2011 ; School Psychology International Volume 32 ; 32 ; >
       au < finished ; finished ; 2012 ; School Psychology International Volume 33 ; 33 ; >
       au < finished ; finished ; 2013 ; School Psychology International Volume 34 ; 34 ; >
@@ -39128,7 +39128,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Security Dialogue Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Security Dialogue Volume 40 ; 40 ; >
       au < zapped ; finished ; 2010 ; Security Dialogue Volume 41 ; 41 ; >
-      au < finished ; crawling ; 2011 ; Security Dialogue Volume 42 ; 42 ; >
+      au < finished ; finished ; 2011 ; Security Dialogue Volume 42 ; 42 ; >
       au < finished ; finished ; 2012 ; Security Dialogue Volume 43 ; 43 ; >
       au < finished ; finished ; 2013 ; Security Dialogue Volume 44 ; 44 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Security Dialogue Volume 45 ; 45 ; >
@@ -39154,7 +39154,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ; >
+      au < down ; finished ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ; >
       au < zapped ; finished ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
     }
@@ -39372,7 +39372,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; SIMULATION Volume 84 ; 84 ; >
+      au < down ; finished ; 2008 ; SIMULATION Volume 84 ; 84 ; >
       au < zapped ; finished ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
 
     }
@@ -39569,7 +39569,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Small Group Research Volume 39 ; 39 ; >
+      au < down ; finished ; 2008 ; Small Group Research Volume 39 ; 39 ; >
       au < zapped ; finished ; 2009 ; Small Group Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
 
     }
@@ -39699,7 +39699,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Social Compass Volume 55 ; 55 ; >
+      au < down ; finished ; 2008 ; Social Compass Volume 55 ; 55 ; >
       au < zapped ; finished ; 2009 ; Social Compass Volume 56 ; 56 ; reingest1.clockss.org:8082 >
 
     }
@@ -40267,7 +40267,7 @@
       au < finished ; finished ; 2010 ; Sociology Volume 44 ; 44 ; >
       au < finished ; finished ; 2011 ; Sociology Volume 45 ; 45 ; >
       au < finished ; finished ; 2012 ; Sociology Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2013 ; Sociology Volume 47 ; 47 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Sociology Volume 47 ; 47 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Sociology Volume 48 ; 48 ; >
       au < finished ; crawling ; 2015 ; Sociology Volume 49 ; 49 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Sociology Volume 50 ; 50 ; >
@@ -40574,7 +40574,7 @@
       au < zapped ; finished ; 2010 ; South Asian Survey Volume 17 ; 17 ; >
       au < finished ; finished ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
       au < finished ; finished ; 2012 ; South Asian Survey Volume 19 ; 19 ; >
-      au < finished ; crawling ; 2013 ; South Asian Survey Volume 20 ; 20 ; >
+      au < finished ; finished ; 2013 ; South Asian Survey Volume 20 ; 20 ; >
 
     }
 
@@ -40626,7 +40626,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Space and Culture Volume 11 ; 11 ; >
+      au < down ; finished ; 2008 ; Space and Culture Volume 11 ; 11 ; >
       au < zapped ; finished ; 2009 ; Space and Culture Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
     }
@@ -41019,7 +41019,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Studies in History Volume 24 ; 24 ; >
+      au < down ; finished ; 2008 ; Studies in History Volume 24 ; 24 ; >
 
     }
 
@@ -41647,7 +41647,7 @@
       au < manifest ; exists ; 2007 ; Textile Research Journal Volume 77 ; 77 ; >
       au < finished ; finished ; 2008 ; Textile Research Journal Volume 78 ; 78 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Textile Research Journal Volume 79 ; 79 ; >
-      au < finished ; crawling ; 2010 ; Textile Research Journal Volume 80 ; 80 ; >
+      au < finished ; finished ; 2010 ; Textile Research Journal Volume 80 ; 80 ; >
       au < finished ; finished ; 2011 ; Textile Research Journal Volume 81 ; 81 ; >
       au < finished ; finished ; 2012 ; Textile Research Journal Volume 82 ; 82 ; >
       au < finished ; finished ; 2013 ; Textile Research Journal Volume 83 ; 83 ; reingest3.clockss.org:8083 >
@@ -42028,7 +42028,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Theoretical Criminology Volume 12 ; 12 ; >
+      au < down ; finished ; 2008 ; Theoretical Criminology Volume 12 ; 12 ; >
       au < zapped ; finished ; 2009 ; Theoretical Criminology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
     }
@@ -42106,7 +42106,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Theory & Psychology Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Theory & Psychology Volume 19 ; 19 ; >
       au < finished ; crawling ; 2010 ; Theory & Psychology Volume 20 ; 20 ; >
-      au < finished ; frozen ; 2011 ; Theory & Psychology Volume 21 ; 21 ; >
+      au < finished ; finished ; 2011 ; Theory & Psychology Volume 21 ; 21 ; >
       au < finished ; finished ; 2012 ; Theory & Psychology Volume 22 ; 22 ; >
       au < finished ; crawling ; 2013 ; Theory & Psychology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Theory & Psychology Volume 24 ; 24 ; >
@@ -42148,7 +42148,7 @@
       au < manifest ; exists ; 2007 ; Theory and Research in Education Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Theory and Research in Education Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Theory and Research in Education Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2010 ; Theory and Research in Education Volume 8 ; 8 ; >
+      au < finished ; finished ; 2010 ; Theory and Research in Education Volume 8 ; 8 ; >
       au < zapped ; finished ; 2011 ; Theory and Research in Education Volume 9 ; 9 ; >
       au < finished ; finished ; 2012 ; Theory and Research in Education Volume 10 ; 10 ; >
       au < finished ; finished ; 2013 ; Theory and Research in Education Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -42457,7 +42457,7 @@
       au < zapped ; finished ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; Therapeutic Advances in Musculoskeletal Disease Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; Therapeutic Advances in Musculoskeletal Disease Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Therapeutic Advances in Musculoskeletal Disease Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Therapeutic Advances in Musculoskeletal Disease Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Therapeutic Advances in Musculoskeletal Disease Volume 8 ; 8 ; >
 
@@ -42591,7 +42591,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 ; >
+      au < finished ; finished ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 ; >
       au < finished ; frozen ; 2011 ; Therapeutic Advances in Urology Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; Therapeutic Advances in Urology Volume 4 ; 4 ; >
       au < finished ; finished ; 2013 ; Therapeutic Advances in Urology Volume 5 ; 5 ; >
@@ -42903,7 +42903,7 @@
       au < finished ; finished ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
       au < zapped ; finished ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 ; >
       au < finished ; finished ; 2012 ; Topics in Early Childhood Special Education Volume 32 ; 32 ; >
-      au < finished ; crawling ; 2013 ; Topics in Early Childhood Special Education Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; Topics in Early Childhood Special Education Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Topics in Early Childhood Special Education Volume 34 ; 34 ; >
       au < deepCrawl ; exists ; 2015 ; Topics in Early Childhood Special Education Volume 35 ; 35 ; >
       au < doNotProcess ; exists ; 2016 ; Topics in Early Childhood Special Education Volume 36 ; 36 ; >
@@ -43005,7 +43005,7 @@
       au < manifest ; exists ; 2007 ; Tourist Studies Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Tourist Studies Volume 8 ; 8 ; >
       au < zapped ; finished ; 2009 ; Tourist Studies Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
+      au < finished ; finished ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
       au < finished ; finished ; 2011 ; Tourist Studies Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; Tourist Studies Volume 12 ; 12 ; >
       au < finished ; finished ; 2013 ; Tourist Studies Volume 13 ; 13 ; >
@@ -43287,7 +43287,7 @@
       au < manifest ; exists ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
+      au < finished ; finished ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
       au < finished ; finished ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; >
       au < finished ; crawling ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; >
       au < crawling ; exists ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; >
@@ -43912,7 +43912,7 @@
       au < manifest ; exists ; 2007 ; Urban Studies Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Urban Studies Volume 45 ; 45 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Urban Studies Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2010 ; Urban Studies Volume 47 ; 47 ; >
+      au < finished ; finished ; 2010 ; Urban Studies Volume 47 ; 47 ; >
       au < zapped ; finished ; 2011 ; Urban Studies Volume 48 ; 48 ; >
       au < finished ; frozen ; 2012 ; Urban Studies Volume 49 ; 49 ; >
       au < finished ; crawling ; 2013 ; Urban Studies Volume 50 ; 50 ; reingest1.clockss.org:8082 >
@@ -44136,7 +44136,7 @@
       au < finished ; finished ; 2009 ; Veterinary Pathology Volume 46 ; 46 ; >
       au < finished ; finished ; 2010 ; Veterinary Pathology Volume 47 ; 47 ; >
       au < finished ; frozen ; 2011 ; Veterinary Pathology Volume 48 ; 48 ; >
-      au < finished ; frozen ; 2012 ; Veterinary Pathology Volume 49 ; 49 ; >
+      au < finished ; finished ; 2012 ; Veterinary Pathology Volume 49 ; 49 ; >
       au < finished ; crawling ; 2013 ; Veterinary Pathology Volume 50 ; 50 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2014 ; Veterinary Pathology Volume 51 ; 51 ; >
       au < deepCrawl ; exists ; 2015 ; Veterinary Pathology Volume 52 ; 52 ; >
@@ -44300,7 +44300,7 @@
       au < finished ; finished ; 2009 ; War in History Volume 16 ; 16 ; >
       au < zapped ; finished ; 2010 ; War in History Volume 17 ; 17 ; >
       au < zapped ; finished ; 2011 ; War in History Volume 18 ; 18 ; >
-      au < finished ; frozen ; 2012 ; War in History Volume 19 ; 19 ; >
+      au < finished ; finished ; 2012 ; War in History Volume 19 ; 19 ; >
       au < finished ; finished ; 2013 ; War in History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; War in History Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; War in History Volume 22 ; 22 ; >
@@ -44366,7 +44366,7 @@
       au < zapped ; finished ; 2011 ; Waste Management & Research Volume 29 ; 29 ; >
       au < finished ; finished ; 2012 ; Waste Management & Research Volume 30 ; 30 ; >
       au < finished ; crawling ; 2013 ; Waste Management & Research Volume 31 ; 31 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Waste Management & Research Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Waste Management & Research Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Waste Management & Research Volume 33 ; 33 ; >
       au < doNotProcess ; exists ; 2016 ; Waste Management & Research Volume 34 ; 34 ; >
 
@@ -44429,7 +44429,7 @@
       au < manifest ; exists ; 2006 ; Western Journal of Nursing Research Volume 28 ; 28 ; >
       au < manifest ; exists ; 2007 ; Western Journal of Nursing Research Volume 29 ; 29 ; >
       au < zapped ; finished ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
-      au < finished ; crawling ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
+      au < finished ; finished ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
       au < finished ; finished ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ; >
       au < finished ; finished ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 ; >
       au < finished ; finished ; 2012 ; Western Journal of Nursing Research Volume 34 ; 34 ; >
@@ -44652,7 +44652,7 @@
       au < finished ; finished ; 2010 ; Work, Employment & Society Volume 24 ; 24 ; >
       au < zapped ; finished ; 2011 ; Work, Employment & Society Volume 25 ; 25 ; >
       au < finished ; frozen ; 2012 ; Work, Employment & Society Volume 26 ; 26 ; >
-      au < finished ; crawling ; 2013 ; Work, Employment & Society Volume 27 ; 27 ; >
+      au < finished ; finished ; 2013 ; Work, Employment & Society Volume 27 ; 27 ; >
       au < finished ; finished ; 2014 ; Work, Employment & Society Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2015 ; Work, Employment & Society Volume 29 ; 29 ; >
       au < doNotProcess ; exists ; 2016 ; Work, Employment & Society Volume 30 ; 30 ; >
@@ -44735,7 +44735,7 @@
       au < zapped ; finished ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < zapped ; finished ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
       au < down ; finished ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
-      au < down ; frozen ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < down ; finished ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
       au < down ; finished ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
       au < down ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
       au < down ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
@@ -44849,7 +44849,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Young Volume 17 ; 17 ; >
       au < zapped ; finished ; 2010 ; Young Volume 18 ; 18 ; >
       au < zapped ; finished ; 2011 ; Young Volume 19 ; 19 ; >
-      au < finished ; crawling ; 2012 ; Young Volume 20 ; 20 ; >
+      au < finished ; finished ; 2012 ; Young Volume 20 ; 20 ; >
       au < finished ; finished ; 2013 ; Young Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Young Volume 22 ; 22 ; >
       au < deepCrawl ; exists ; 2015 ; Young Volume 23 ; 23 ; >
@@ -46901,7 +46901,7 @@
         au < down ; crawling ; 2009 ; InnovAiT: The RCGP Journal for Associates in Training Volume 2 ; 2 ; >
         au < down ; crawling ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
         au < down ; finished ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 ; >
-        au < down ; crawling ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
+        au < down ; finished ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
 
       }
 
@@ -46960,7 +46960,7 @@
     au < finished ; finished ; 2011 ; Missiology: An International Review Volume 39 ; 39 ; >
     au < finished ; finished ; 2012 ; Missiology: An International Review Volume 40 ; 40 ; >
     au < finished ; finished ; 2013 ; Missiology: An International Review Volume 41 ; 41 ; >
-    au < finished ; crawling ; 2014 ; Missiology: An International Review Volume 42 ; 42 ; >
+    au < finished ; finished ; 2014 ; Missiology: An International Review Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2015 ; Missiology: An International Review Volume 43 ; 43 ; >
     au < doNotProcess ; exists ; 2016 ; Missiology: An International Review Volume 44 ; 44 ; >
 
@@ -47378,7 +47378,7 @@
         au < manifest ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
         au < finished ; finished ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
         au < crawling ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 ; >
-        au < finished ; crawling ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
+        au < finished ; finished ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
         au < finished ; finished ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
         au < crawling ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
@@ -48038,7 +48038,7 @@
         au < finished ; finished ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
         au < finished ; finished ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
         au < finished ; finished ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
-        au < finished ; crawling ; 2014 ; Journal of Medical Biography Volume 22 ; 22 ; >
+        au < finished ; finished ; 2014 ; Journal of Medical Biography Volume 22 ; 22 ; >
         au < deepCrawl ; exists ; 2015 ; Journal of Medical Biography Volume 23 ; 23 ; >
         au < doNotProcess ; exists ; 2016 ; Journal of Medical Biography Volume 24 ; 24 ; >
 

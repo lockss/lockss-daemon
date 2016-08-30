@@ -701,7 +701,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; European Journal of Physics Volume 27 ; 27 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; European Journal of Physics Volume 28 ; 28 ; > 
     au < down ; crawling ; 2008 ; European Journal of Physics Volume 29 ; 29 ; > 
-    au < down ; crawling ; 2009 ; European Journal of Physics Volume 30 ; 30 ; > 
+    au < down ; finished ; 2009 ; European Journal of Physics Volume 30 ; 30 ; > 
     au < down ; crawling ; 2010 ; European Journal of Physics Volume 31 ; 31 ; > 
     au < down ; finished ; 2011 ; European Journal of Physics Volume 32 ; 32 ; > 
     au < down ; crawling ; 2012 ; European Journal of Physics Volume 33 ; 33 ; > 
@@ -833,9 +833,9 @@
     comment[param] = eissn preferred
     comment[au_start_url] = redirects to issue toc, permission statement found in page source
 
-    au < down ; crawling ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 ; > 
-    au < down ; crawling ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 ; > 
-    au < down ; crawling ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 ; > 
+    au < down ; finished ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 ; > 
+    au < down ; finished ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 ; > 
+    au < down ; finished ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 ; > 
     au < down ; crawling ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 5 ; 5 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 6 ; 6 ; > 
@@ -870,16 +870,16 @@
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 2 ; 2 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 3 ; 3 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 4 ; 4 ; >
-    au < down ; crawling ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 5 ; 5 ; > 
+    au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 5 ; 5 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 6 ; 6 ; > 
-    au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 ; > 
+    au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 ; > 
     au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 ; > 
-    au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 ; > 
+    au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 ; > 
     au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 10 ; 10 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 12 ; 12 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 13 ; 13 ; >
-    au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 14 ; 14 ; > 
+    au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 14 ; 14 ; > 
     au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 15 ; 15 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 16 ; 16 ; > 
     au < down ; finished ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 17 ; 17 ; >
@@ -892,7 +892,7 @@
     au < down ; finished ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 24 ; 24 ; >
     au < down ; finished ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 25 ; 25 ; >
     au < down ; finished ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 26 ; 26 ; >
-    au < down ; crawling ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 27 ; 27 ; >
+    au < down ; finished ; 2011 ; IOP Conference Series: Materials Science and Engineering Volume 27 ; 27 ; >
     au < down ; exists ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 28 ; 28 ; > 
     au < down ; exists ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 29 ; 29 ; > 
     au < down ; exists ; 2012 ; IOP Conference Series: Materials Science and Engineering Volume 30 ; 30 ; > 
@@ -1160,7 +1160,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Instrumentation Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Instrumentation Volume 2 ; 2 ; > 
     au < down ; crawling ; 2008 ; Journal of Instrumentation Volume 3 ; 3 ; > 
-    au < down ; crawling ; 2009 ; Journal of Instrumentation Volume 4 ; 4 ; > 
+    au < down ; finished ; 2009 ; Journal of Instrumentation Volume 4 ; 4 ; > 
     au < down ; crawling ; 2010 ; Journal of Instrumentation Volume 5 ; 5 ; > 
     au < down ; crawling ; 2011 ; Journal of Instrumentation Volume 6 ; 6 ; > 
     au < down ; crawling ; 2012 ; Journal of Instrumentation Volume 7 ; 7 ; > 
@@ -1230,7 +1230,7 @@
     au < down ; finished ; 2008 ; Journal of Neural Engineering Volume 5 ; 5 ; >
     au < down ; finished ; 2009 ; Journal of Neural Engineering Volume 6 ; 6 ; > 
     au < down ; crawling ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 ; > 
-    au < down ; crawling ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 ; > 
+    au < down ; finished ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 ; > 
     au < down ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 ; > 
     au < down ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 ; > 
     au < down ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 ; > 
@@ -1949,7 +1949,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics: Conference Series Volume 91 ; 91 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics: Conference Series Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics: Conference Series Volume 93 ; 93 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 ; >
@@ -1961,7 +1961,7 @@
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 103 ; 103 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 104 ; 104 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 105 ; 105 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 106 ; 106 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 106 ; 106 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 107 ; 107 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 108 ; 108 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 109 ; 109 ; >
@@ -1969,8 +1969,8 @@
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 111 ; 111 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 112 ; 112 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 113 ; 113 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 114 ; 114 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 115 ; 115 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 114 ; 114 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 115 ; 115 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 116 ; 116 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 117 ; 117 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 118 ; 118 ; >
@@ -1981,7 +1981,7 @@
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 123 ; 123 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 124 ; 124 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 125 ; 125 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 126 ; 126 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 127 ; 127 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 128 ; 128 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 129 ; 129 ; >
@@ -1989,14 +1989,14 @@
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 131 ; 131 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 132 ; 132 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 133 ; 133 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 134 ; 134 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 134 ; 134 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 135 ; 135 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 136 ; 136 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 137 ; 137 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 138 ; 138 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 139 ; 139 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 140 ; 140 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 141 ; 141 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 141 ; 141 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 142 ; 142 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 143 ; 143 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 144 ; 144 ; >
@@ -2006,13 +2006,13 @@
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 148 ; 148 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 149 ; 149 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 150 ; 150 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 151 ; 151 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 151 ; 151 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 152 ; 152 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 153 ; 153 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 154 ; 154 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 155 ; 155 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 155 ; 155 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 156 ; 156 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 157 ; 157 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 157 ; 157 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 158 ; 158 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 159 ; 159 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 160 ; 160 ; >
@@ -2022,11 +2022,11 @@
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 164 ; 164 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 165 ; 165 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 166 ; 166 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 167 ; 167 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 167 ; 167 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 168 ; 168 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 169 ; 169 ; >
     au < ingNotReady ; exists ; 2009 ; Journal of Physics: Conference Series Volume 170 ; 170 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 171 ; 171 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 171 ; 171 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 172 ; 172 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 173 ; 173 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 174 ; 174 ; >
@@ -2036,7 +2036,7 @@
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 178 ; 178 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 179 ; 179 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 180 ; 180 ; >
-    au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 181 ; 181 ; >
+    au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 181 ; 181 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 182 ; 182 ; >
     au < down ; finished ; 2009 ; Journal of Physics: Conference Series Volume 183 ; 183 ; >
     au < down ; crawling ; 2009 ; Journal of Physics: Conference Series Volume 184 ; 184 ; >
@@ -2069,31 +2069,31 @@
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 211 ; 211 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 212 ; 212 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 213 ; 213 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 214 ; 214 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 214 ; 214 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 215 ; 215 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 216 ; 216 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 217 ; 217 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 218 ; 218 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 219 ; 219 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 220 ; 220 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 221 ; 221 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 221 ; 221 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 222 ; 222 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 223 ; 223 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 224 ; 224 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 225 ; 225 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 226 ; 226 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 227 ; 227 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 227 ; 227 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 228 ; 228 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 229 ; 229 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 230 ; 230 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 231 ; 231 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 232 ; 232 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 233 ; 233 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 233 ; 233 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 234 ; 234 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 235 ; 235 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 236 ; 236 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 237 ; 237 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 238 ; 238 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 238 ; 238 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 239 ; 239 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 240 ; 240 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 241 ; 241 ; >
@@ -2155,12 +2155,12 @@
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 297 ; 297 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 298 ; 298 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 299 ; 299 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 300 ; 300 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 300 ; 300 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 301 ; 301 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 302 ; 302 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 303 ; 303 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 304 ; 304 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 305 ; 305 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 304 ; 304 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 305 ; 305 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 306 ; 306 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 307 ; 307 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 308 ; 308 ; >
@@ -2184,14 +2184,14 @@
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 326 ; 326 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 327 ; 327 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 328 ; 328 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 329 ; 329 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 329 ; 329 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 330 ; 330 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 331 ; 331 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 332 ; 332 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 333 ; 333 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 334 ; 334 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 335 ; 335 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 336 ; 336 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 335 ; 335 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 336 ; 336 ; >
     au < down ; crawling ; 2012 ; Journal of Physics: Conference Series Volume 337 ; 337 ; >
     au < down ; finished ; 2012 ; Journal of Physics: Conference Series Volume 338 ; 338 ; >
     au < down ; finished ; 2012 ; Journal of Physics: Conference Series Volume 339 ; 339 ; >
@@ -2335,23 +2335,23 @@
     au < down ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 ; >
     au < down ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 ; >
     au < down ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 480 ; 480 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 481 ; 481 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 482 ; 482 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 483 ; 483 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 484 ; 484 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 485 ; 485 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 486 ; 486 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 487 ; 487 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 488 ; 488 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 489 ; 489 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 490 ; 490 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 491 ; 491 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 492 ; 492 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 493 ; 493 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 498 ; 498 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 499 ; 499 ; >
@@ -2360,7 +2360,7 @@
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 502 ; 502 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 503 ; 503 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 504 ; 504 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 505 ; 505 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 506 ; 506 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 507 ; 507 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 508 ; 508 ; >
@@ -2383,11 +2383,11 @@
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 525 ; 525 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 530 ; 530 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 531 ; 531 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 532 ; 532 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 532 ; 532 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 533 ; 533 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 534 ; 534 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 535 ; 535 ; >
@@ -2407,10 +2407,10 @@
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 549 ; 549 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 550 ; 550 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 551 ; 551 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 552 ; 552 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 552 ; 552 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 553 ; 553 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 554 ; 554 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 556 ; 556 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 ; >
@@ -3064,7 +3064,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Nuclear Fusion Volume 47 ; 47 ; > 
     au < down ; crawling ; 2008 ; Nuclear Fusion Volume 48 ; 48 ; > 
     au < down ; crawling ; 2009 ; Nuclear Fusion Volume 49 ; 49 ; > 
-    au < down ; crawling ; 2010 ; Nuclear Fusion Volume 50 ; 50 ; > 
+    au < down ; finished ; 2010 ; Nuclear Fusion Volume 50 ; 50 ; > 
     au < down ; crawling ; 2011 ; Nuclear Fusion Volume 51 ; 51 ; > 
     au < down ; crawling ; 2012 ; Nuclear Fusion Volume 52 ; 52 ; > 
     au < down ; exists ; 2013 ; Nuclear Fusion Volume 53 ; 53 ; > 
@@ -3521,11 +3521,11 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Plasma Science and Technology Volume 9 ; 9 ; > 
     au < down ; finished ; 2008 ; Plasma Science and Technology Volume 10 ; 10 ; > 
     au < down ; finished ; 2009 ; Plasma Science and Technology Volume 11 ; 11 ; > 
-    au < down ; crawling ; 2010 ; Plasma Science and Technology Volume 12 ; 12 ; > 
+    au < down ; finished ; 2010 ; Plasma Science and Technology Volume 12 ; 12 ; > 
     au < down ; crawling ; 2011 ; Plasma Science and Technology Volume 13 ; 13 ; > 
     au < down ; crawling ; 2012 ; Plasma Science and Technology Volume 14 ; 14 ; > 
     au < down ; exists ; 2013 ; Plasma Science and Technology Volume 15 ; 15 ; > 
-    au < down ; crawling ; 2014 ; Plasma Science and Technology Volume 16 ; 16 ; > 
+    au < down ; finished ; 2014 ; Plasma Science and Technology Volume 16 ; 16 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Plasma Science and Technology Volume 17 ; 17 ; > 
 
   }
@@ -4021,7 +4021,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Semiconductor Science and Technology Volume 21 ; 21 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; Semiconductor Science and Technology Volume 22 ; 22 ; > 
     au < down ; finished ; 2008 ; Semiconductor Science and Technology Volume 23 ; 23 ; > 
-    au < down ; crawling ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 ; > 
+    au < down ; finished ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 ; > 
     au < down ; crawling ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 ; > 
     au < down ; finished ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 ; > 
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 ; > 

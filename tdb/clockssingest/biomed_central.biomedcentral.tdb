@@ -233,7 +233,7 @@
       au < down ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 ; >
       au < down ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 ; >
       au < down ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 ; >
-      au < down ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 ; >
+      au < down ; finished ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 ; >
       au < down ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 ; >
       au < down ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 ; >
       au < down ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 ; >
@@ -352,10 +352,10 @@
 
       au < down ; exists ; 2009-2010 ; Archives of Public Health Volume 67 ; 67 ; >
       au < down ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 ; >
-      au < down ; crawling ; 2011 ; Archives of Public Health Volume 69 ; 69 ; >
+      au < down ; finished ; 2011 ; Archives of Public Health Volume 69 ; 69 ; >
       au < down ; crawling ; 2012 ; Archives of Public Health Volume 70 ; 70 ; >
       au < down ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 ; >
-      au < down ; crawling ; 2014 ; Archives of Public Health Volume 72 ; 72 ; >
+      au < down ; finished ; 2014 ; Archives of Public Health Volume 72 ; 72 ; >
       au < down ; exists ; 2015 ; Archives of Public Health Volume 73 ; 73 ; >
 
     }
@@ -494,7 +494,7 @@
       au < down ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 ; >
       au < down ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 ; >
       au < down ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 ; >
-      au < down ; crawling ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 ; >
+      au < down ; finished ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 ; >
       au < down ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 ; >
       au < doNotProcess ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 ; >
@@ -611,7 +611,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       #stop publishing after 2015
 
       au < down ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 ; >
-      au < down ; crawling ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 ; >
+      au < down ; finished ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 ; >
       au < down ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 ; >
       au < down ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 ; >
       au < down ; exists ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 ; >
@@ -711,7 +711,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; BioMedical Engineering OnLine Volume 6 ; 6 ; >
       au < finished ; frozen ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 ; >
       au < down ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 ; >
-      au < down ; crawling ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 ; >
+      au < down ; finished ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 ; >
       au < down ; crawling ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 ; >
       au < down ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 ; >
       au < down ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 ; >
@@ -734,7 +734,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 ; >
       au < down ; finished ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 ; >
       au < down ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 ; >
-      au < down ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 ; >
+      au < down ; finished ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 ; >
       au < down ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 ; >
       au < down ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 ; >
       au < down ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 ; >
@@ -1164,7 +1164,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2008 ; Chinese Medicine Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Chinese Medicine Volume 4 ; 4 ; >
       au < down ; crawling ; 2010 ; Chinese Medicine Volume 5 ; 5 ; >
-      au < down ; crawling ; 2011 ; Chinese Medicine Volume 6 ; 6 ; >
+      au < down ; finished ; 2011 ; Chinese Medicine Volume 6 ; 6 ; >
       au < down ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 ; >
       au < down ; finished ; 2013 ; Chinese Medicine Volume 8 ; 8 ; >
       au < down ; finished ; 2014 ; Chinese Medicine Volume 9 ; 9 ; >
@@ -1363,7 +1363,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 ; >
       au < down ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 ; >
       au < down ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 ; >
-      au < down ; crawling ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 ; >
+      au < down ; finished ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 ; >
       au < down ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 ; >
 
     }
@@ -1946,7 +1946,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Genetic Vaccines and Therapy Volume 5 ; 5 ; >
       au < down ; exists ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 ; >
       au < down ; exists ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 ; >
-      au < down ; crawling ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 ; >
+      au < down ; finished ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 ; >
       au < down ; exists ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 ; >
       au < down ; exists ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 ; >
 
@@ -4314,7 +4314,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 ; >
       au < down ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; >
       au < down ; crawling ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 ; >
-      au < down ; crawling ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 ; >
+      au < down ; finished ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 ; >
       au < down ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 ; >
       au < down ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 ; >
       au < down ; exists ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 ; >
@@ -4354,7 +4354,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 ; >
       au < down ; exists ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 ; >
-      au < down ; crawling ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 ; >
+      au < down ; finished ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 ; >
       au < down ; crawling ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 ; >
       au < down ; exists ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 ; >
       au < down ; exists ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 ; >

@@ -200,7 +200,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 ; > 
     au < finished ; finished ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 ; > 
-    au < finished ; crawling ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 ; > 
+    au < finished ; finished ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 ; > 
     au < finished ; crawling ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 121 ; 121 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Applied Earth Science: IMM Transactions section B Volume 122 ; 122 ; > 
 
@@ -566,7 +566,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Cartographic Journal Volume 46 ; 46 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; The Cartographic Journal Volume 47 ; 47 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; The Cartographic Journal Volume 48 ; 48 ; > 
-    au < finished ; crawling ; 2012 ; The Cartographic Journal Volume 49 ; 49 ; > 
+    au < finished ; finished ; 2012 ; The Cartographic Journal Volume 49 ; 49 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; The Cartographic Journal Volume 50 ; 50 ; > 
 
   }
@@ -609,7 +609,7 @@
     param[journal_id] = tcr
     param[journal_issn] = 1547-402X
    
-    au < finished ; crawling ; 2011 ; The Chinese Historical Review Volume 18 ; 18 ; >  
+    au < finished ; finished ; 2011 ; The Chinese Historical Review Volume 18 ; 18 ; >  
     au < finished ; crawling ; 2012 ; The Chinese Historical Review Volume 19 ; 19 ; >   
     au < doNotProcess ; doNotProcess ; 2013 ; The Chinese Historical Review Volume 20 ; 20 ; >   
     
@@ -1215,7 +1215,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Hispanic Research Journal Volume 10 ; 10 ; > 
     au < finished ; finished ; 2010 ; Hispanic Research Journal Volume 11 ; 11 ; > 
     au < finished ; finished ; 2011 ; Hispanic Research Journal Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2012 ; Hispanic Research Journal Volume 13 ; 13 ; > 
+    au < finished ; finished ; 2012 ; Hispanic Research Journal Volume 13 ; 13 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Hispanic Research Journal Volume 14 ; 14 ; > 
 
   }
@@ -3295,7 +3295,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Plastics, Rubber and Composites Volume 37 ; 37 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Plastics, Rubber and Composites Volume 38 ; 38 ; > 
     au < finished ; finished ; 2010 ; Plastics, Rubber and Composites Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2011 ; Plastics, Rubber and Composites Volume 40 ; 40 ; > 
+    au < finished ; finished ; 2011 ; Plastics, Rubber and Composites Volume 40 ; 40 ; > 
     au < finished ; crawling ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Plastics, Rubber and Composites Volume 42 ; 42 ; > 
 
@@ -3611,7 +3611,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Seventeenth-Century French Studies Volume 31 ; 31 ; > 
     au < finished ; finished ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 ; >
     au < finished ; finished ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 ; > 
-    au < finished ; crawling ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 ; > 
+    au < finished ; finished ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Seventeenth-Century French Studies Volume 35 ; 35 ; > 
 
   }
@@ -4074,7 +4074,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Twentieth-Century China Volume 32 ; 32 ; > 
     au < doNotProcess ; doNotProcess ; 2008 ; Twentieth-Century China Volume 33 ; 33 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Twentieth-Century China Volume 34 ; 34 ; > 
-    au < finished ; frozen ; 2010 ; Twentieth-Century China Volume 35 ; 35 ; > 
+    au < finished ; finished ; 2010 ; Twentieth-Century China Volume 35 ; 35 ; > 
     au < finished ; finished ; 2011 ; Twentieth-Century China Volume 36 ; 36 ; > 
     au < finished ; finished ; 2012 ; Twentieth-Century China Volume 37 ; 37 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Twentieth-Century China Volume 38 ; 38 ; > 
@@ -4154,7 +4154,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Vernacular Architecture Volume 39 ; 39 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Vernacular Architecture Volume 40 ; 40 ; > 
     au < finished ; finished ; 2010 ; Vernacular Architecture Volume 41 ; 41 ; > 
-    au < finished ; crawling ; 2011 ; Vernacular Architecture Volume 42 ; 42 ; > 
+    au < finished ; finished ; 2011 ; Vernacular Architecture Volume 42 ; 42 ; > 
     au < finished ; finished ; 2012 ; Vernacular Architecture Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Vernacular Architecture Volume 44 ; 44 ; >
 

@@ -215,7 +215,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Arms & Armour Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Arms & Armour Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Arms & Armour Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2013 ; Arms & Armour Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Arms & Armour Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; Arms & Armour Volume 11 ; 11 ; >
     au < frozen ; exists ; 2015 ; Arms & Armour Volume 12 ; 12 ; >
 
@@ -668,7 +668,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Central Europe Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Central Europe Volume 10 ; 10 ; >
     au < finished ; crawling ; 2013 ; Central Europe Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < down ; crawling ; 2014 ; Central Europe Volume 12 ; 12 ; >
+    au < down ; finished ; 2014 ; Central Europe Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2015 ; Central Europe Volume 13 ; 13 ; >
 
   }
@@ -3320,7 +3320,7 @@
 
     au < frozen ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2013 ; New Journal of Botany Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; New Journal of Botany Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; New Journal of Botany Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; New Journal of Botany Volume 5 ; 5 ; >
 
@@ -3416,7 +3416,7 @@
     au < finished ; finished ; 2011 ; Nutritional Neuroscience Volume 14 ; 14 ; reingest3.clockss.org:8083 > 
     au < doNotProcess ; doNotProcess ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 ; >
     au < finished ; crawling ; 2013 ; Nutritional Neuroscience Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < down ; crawling ; 2014 ; Nutritional Neuroscience Volume 17 ; 17 ; >
+    au < down ; finished ; 2014 ; Nutritional Neuroscience Volume 17 ; 17 ; >
     au < frozen ; exists ; 2015 ; Nutritional Neuroscience Volume 18 ; 18 ; >
 
   }
@@ -3602,7 +3602,7 @@
     param[journal_id] = pgh
     comment[continues] = 0003-4983
     
-    au < finished ; crawling ; 2012 ; Pathogens and Global Health Volume 106 ; 106 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Pathogens and Global Health Volume 106 ; 106 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 ; >
     au < finished ; crawling ; 2014 ; Pathogens and Global Health Volume 108 ; 108 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Pathogens and Global Health Volume 109 ; 109 ; >
@@ -4635,7 +4635,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Twentieth-Century China Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Twentieth-Century China Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Twentieth-Century China Volume 37 ; 37 ; >
-    au < finished ; crawling ; 2013 ; Twentieth-Century China Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Twentieth-Century China Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; Twentieth-Century China Volume 39 ; 39 ; >
     au < frozen ; exists ; 2015 ; Twentieth-Century China Volume 40 ; 40 ; >
 

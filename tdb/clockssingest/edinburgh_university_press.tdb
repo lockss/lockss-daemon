@@ -159,7 +159,7 @@
     au < finished ; finished ; 2008 ; Ben Jonson Journal Volume 15 ; 15 ; >
     au < finished ; finished ; 2009 ; Ben Jonson Journal Volume 16 ; 16 ; >
     au < finished ; finished ; 2010 ; Ben Jonson Journal Volume 17 ; 17 ; >
-    au < finished ; crawling ; 2011 ; Ben Jonson Journal Volume 18 ; 18 ; >
+    au < finished ; finished ; 2011 ; Ben Jonson Journal Volume 18 ; 18 ; >
     au < finished ; finished ; 2012 ; Ben Jonson Journal Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; Ben Jonson Journal Volume 20 ; 20 ; >
     au < finished ; crawling ; 2014 ; Ben Jonson Journal Volume 21 ; 21 ; >
@@ -182,7 +182,7 @@
     au < superseded ; down ; 2008-2009 ; Britain and the World Volume 1 [superseded] ; 1 ; >
     au < superseded ; down ; 2009-2010 ; Britain and the World Volume 2 [superseded] ; 2 ; >
     au < superseded ; down ; 2010 ; Britain and the World Volume 3 [superseded] ; 3 ; >
-    au < finished ; crawling ; 2011 ; Britain and the World Volume 4 ; 4 ; >
+    au < finished ; finished ; 2011 ; Britain and the World Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Britain and the World Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Britain and the World Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Britain and the World Volume 7 ; 7 ; >
@@ -404,7 +404,7 @@
     au < finished ; finished ; 2011 ; Holy Land Studies Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Holy Land Studies Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Holy Land Studies Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2014 ; Holy Land Studies Volume 13 ; 13 ; >
+    au < finished ; finished ; 2014 ; Holy Land Studies Volume 13 ; 13 ; >
     au < superseded ; exists ; 2015 ; Holy Land Studies Volume 14 [superseded] ; 14 ; >
     # title name and issn changed.
 
@@ -473,7 +473,7 @@
     
     au < crawling ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 ; >
     au < crawling ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 ; >
-    au < crawling ; crawling ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
+    au < crawling ; finished ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
     au < crawling ; crawling ; 1997 ; History and Computing Volume 9 (1997) ; 9 ; >
     au < doNotProcess ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 ; > # no substance
     au < crawling ; finished ; 1999 ; History and Computing Volume 11 (1999) ; 11 ; >
@@ -671,7 +671,7 @@
     au < finished ; finished ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 ; >
     au < finished ; crawling ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 ; >
     au < finished ; crawling ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 ; >
+    au < finished ; finished ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Qur'anic Studies Volume 15 ; 15 ; >
     au < finished ; crawling ; 2014 ; Journal of Qur'anic Studies Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; Journal of Qur'anic Studies Volume 17 ; 17 ; >
@@ -1022,7 +1022,7 @@
     au < finished ; crawling ; 2006 ; Psychoanalysis and History Volume 8 ; 8 ; >
     au < finished ; crawling ; 2007 ; Psychoanalysis and History Volume 9 ; 9 ; >
     au < finished ; crawling ; 2008 ; Psychoanalysis and History Volume 10 ; 10 ; >
-    au < finished ; crawling ; 2009 ; Psychoanalysis and History Volume 11 ; 11 ; >
+    au < finished ; finished ; 2009 ; Psychoanalysis and History Volume 11 ; 11 ; >
     au < finished ; crawling ; 2010 ; Psychoanalysis and History Volume 12 ; 12 ; >
     au < finished ; crawling ; 2011 ; Psychoanalysis and History Volume 13 ; 13 ; >
     au < finished ; crawling ; 2012 ; Psychoanalysis and History Volume 14 ; 14 ; >
@@ -1051,7 +1051,7 @@
     au < finished ; crawling ; 2005 ; Romanticism Volume 11 ; 11 ; >
     au < finished ; crawling ; 2006 ; Romanticism Volume 12 ; 12 ; >
     au < finished ; finished ; 2007 ; Romanticism Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2008 ; Romanticism Volume 14 ; 14 ; >
+    au < finished ; finished ; 2008 ; Romanticism Volume 14 ; 14 ; >
     au < finished ; finished ; 2009 ; Romanticism Volume 15 ; 15 ; >
     au < finished ; finished ; 2010 ; Romanticism Volume 16 ; 16 ; >
     au < finished ; finished ; 2011 ; Romanticism Volume 17 ; 17 ; >
@@ -1226,7 +1226,7 @@
     au < superseded ; down ; 1996 ; Scottish Archaeological Journal Volume 20 [to delete] ; 20 ; >
     au < superseded ; down ; 1998 ; Scottish Archaeological Journal Volume 21 [to delete] ; 21 ; >
     au < finished ; crawling ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 ; >
-    au < finished ; crawling ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 ; >
+    au < finished ; finished ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 ; >
     au < finished ; crawling ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 ; >
     au < finished ; finished ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 ; >
     au < finished ; finished ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 ; >
@@ -1282,7 +1282,7 @@
     param[journal_id] = swc
 
     au < finished ; finished ; 2001 ; Studies in World Christianity Volume 7 ; 7 ; >
-    au < finished ; frozen ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; >
+    au < finished ; finished ; 2002 ; Studies in World Christianity Volume 8 ; 8 ; >
     au < finished ; crawling ; 2003 ; Studies in World Christianity Volume 9 ; 9 ; >
     au < finished ; finished ; 2004 ; Studies in World Christianity Volume 10 ; 10 ; >
     au < finished ; finished ; 2005 ; Studies in World Christianity Volume 11 ; 11 ; >

@@ -578,13 +578,13 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
-      au < finished ; crawling ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; >
+      au < finished ; finished ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; >
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; >
       au < finished ; finished ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; >
       au < finished ; crawling ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 ; >
 
       au < finished ; crawling ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 ; >
-      au < finished ; crawling ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 ; >
+      au < finished ; finished ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 ; >
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 ; >
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; >
@@ -1062,7 +1062,7 @@
       au < crawling ; exists ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 ; >
-      au < finished ; crawling ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 ; >
+      au < finished ; finished ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 ; >
       au < testing ; exists ; 2016 ; Metallomics Volume 8 ; 8 ; 2016 ; >
 
