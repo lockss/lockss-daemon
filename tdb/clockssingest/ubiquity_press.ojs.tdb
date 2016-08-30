@@ -396,7 +396,7 @@
        plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
        param[journal_id] = pia
 
-       au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 ; >
+       au < superseded ; finished ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 ; >
     }
     {
       param[base_url] = http://www.pia-journal.co.uk/

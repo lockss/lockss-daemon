@@ -394,7 +394,7 @@
     param[base_url] = http://www.jchimp.net/
     param[journal_id] = jchimp
 
-    au < finished ; crawling ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 ; >
+    au < finished ; finished ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 ; >
     au < finished ; finished ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
@@ -477,7 +477,7 @@
     au < finished ; crawling ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 ; >
     au < finished ; crawling ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 ; >
     au < finished ; crawling ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 ; >
-    au < finished ; frozen ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 ; >
+    au < finished ; finished ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 ; >
     au < finished ; finished ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 ; >
@@ -680,7 +680,7 @@
     au < finished ; finished ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 ; >
     au < finished ; crawling ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 ; >
     au < finished ; crawling ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 ; reingest2.clockss.org:8085 >

@@ -303,7 +303,7 @@
     au < manifest ; exists ; 2009 ; Annals of Tropical Medicine and Public Health Volume 2 ; 2009 ; 2 ; >
     au < manifest ; exists ; 2010 ; Annals of Tropical Medicine and Public Health Volume 3 ; 2010 ; 3 ; >
     au < crawling ; exists ; 2011 ; Annals of Tropical Medicine and Public Health Volume 4 ; 2011 ; 4 ; >
-    au < finished ; crawling ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; >
+    au < finished ; finished ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; >
     au < crawling ; exists ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 ; >
     au < deepCrawl ; exists ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 ; >
     au < frozen ; exists ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; >
@@ -413,7 +413,7 @@
 
     au < crawling ; exists ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; >
+    au < finished ; finished ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 ; >
     au < frozen ; exists ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; >
     au < crawling ; exists ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; >
@@ -1396,7 +1396,7 @@
     au < manifest ; exists ; 2010 ; Indian Journal of Palliative Care Volume 16 ; 2010 ; 16 ; >
     au < crawling ; exists ; 2011 ; Indian Journal of Palliative Care Volume 17 ; 2011 ; 17 ; >
     au < finished ; crawling ; 2012 ; Indian Journal of Palliative Care Volume 18 ; 2012 ; 18 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; >
+    au < finished ; finished ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; >
     au < deepCrawl ; exists ; 2014 ; Indian Journal of Palliative Care Volume 20 ; 2014 ; 20 ; >
     au < deepCrawl ; exists ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; >
     au < crawling ; exists ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; >
@@ -1859,7 +1859,7 @@
     au < manifest ; exists ; 2009 ; Industrial Psychiatry Journal Volume 18 ; 2009 ; 18 ; >
     au < manifest ; exists ; 2010 ; Industrial Psychiatry Journal Volume 19 ; 2010 ; 19 ; >
     au < crawling ; exists ; 2011 ; Industrial Psychiatry Journal Volume 20 ; 2011 ; 20 ; >
-    au < finished ; crawling ; 2012 ; Industrial Psychiatry Journal Volume 21 ; 2012 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Industrial Psychiatry Journal Volume 21 ; 2012 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Industrial Psychiatry Journal Volume 22 ; 2013 ; 22 ; reingest1.clockss.org:8082 >
 
   }
@@ -2764,7 +2764,7 @@
     param[journal_issn] = 2229-5194
 
     au < crawling ; exists ; 2011 ; Journal of Interdisciplinary Dentistry Volume 1 ; 2011 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Journal of Interdisciplinary Dentistry Volume 2 ; 2012 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Journal of Interdisciplinary Dentistry Volume 2 ; 2012 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Journal of Interdisciplinary Dentistry Volume 3 ; 2013 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Journal of Interdisciplinary Dentistry Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Interdisciplinary Dentistry Volume 5 ; 2015 ; 5 ; >
@@ -2806,7 +2806,7 @@
     au < manifest ; exists ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 2009 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2010 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 2011 ; 3 ; >
-    au < finished ; crawling ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 2013 ; 5 ; >
     au < deepCrawl ; exists ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 2014 ; 6 ; >
     au < finished ; crawling ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 2015 ; 7 ; reingest4.clockss.org:8082 >
@@ -3304,7 +3304,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; >
-    au < finished ; crawling ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; >
+    au < finished ; finished ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; >
     au < finished ; crawling ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 ; reingest2.clockss.org:8085 >
 
   }
@@ -3566,7 +3566,7 @@
     au < crawling ; exists ; 2011 ; Nigerian Journal of Surgery Volume 17 ; 2011 ; 17 ; >
     au < crawling ; exists ; 2012 ; Nigerian Journal of Surgery Volume 18 ; 2012 ; 18 ; >
     au < finished ; finished ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 ; >
-    au < finished ; crawling ; 2014 ; Nigerian Journal of Surgery Volume 20 ; 2014 ; 20 ; >
+    au < finished ; finished ; 2014 ; Nigerian Journal of Surgery Volume 20 ; 2014 ; 20 ; >
     au < deepCrawl ; exists ; 2015 ; Nigerian Journal of Surgery Volume 21 ; 2015 ; 21 ; >
     au < crawling ; exists ; 2016 ; Nigerian Journal of Surgery Volume 22 ; 2016 ; 22 ; >
 
