@@ -2667,7 +2667,7 @@
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 664 ; 664 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 665 ; 665 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
-      au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; >
+      au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; >
 
     }
@@ -6091,7 +6091,7 @@
         au < doNotProcess ; exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 ; >
         au < crawling ; exists ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 ; >
         au < finished ; crawling ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-        au < expected ; exists ; 2016 ; Citizenship, Social and Economics Education Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2016 ; Citizenship, Social and Economics Education Volume 15 ; 15 ; >
 
     }
 
@@ -13249,7 +13249,7 @@
       au < finished ; finished ; 2013-2014 ; General Music Today Volume 27 ; 27 ; >
       au < finished ; finished ; 2014-2015 ; General Music Today Volume 28 ; 28 ; >
       au < crawling ; exists ; 2015-2016 ; General Music Today Volume 29 ; 29 ; >
-      au < expected ; exists ; 2016-2017 ; General Music Today Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2016-2017 ; General Music Today Volume 30 ; 30 ; >
 
     }
 
@@ -19287,7 +19287,7 @@
       au < finished ; finished ; 2013-2014 ; Journal for the Study of the New Testament Volume 36 ; 36 ; >
       au < finished ; crawling ; 2014-2015 ; Journal for the Study of the New Testament Volume 37 ; 37 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2015-2016 ; Journal for the Study of the New Testament Volume 38 ; 38 ; >
-      au < expected ; exists ; 2016-2017 ; Journal for the Study of the New Testament Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2016-2017 ; Journal for the Study of the New Testament Volume 39 ; 39 ; >
 
     }
 
@@ -43425,7 +43425,7 @@
       param[base_url] = http://too.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2016 ; Translational Research in Oral Oncology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Translational Research in Oral Oncology Volume 1 ; 1 ; >
 
   }
 
@@ -43675,7 +43675,7 @@
       au < finished ; finished ; 2013 ; Update: Applications of Research in Music Education Volume 32 ; 32 ; >
       au < finished ; finished ; 2014 ; Update: Applications of Research in Music Education Volume 33 ; 33 ; >
       au < deepCrawl ; exists ; 2015 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; >
-      au < expected ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 ; 35 ; >
 
     }
 
