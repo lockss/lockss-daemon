@@ -644,21 +644,21 @@
 
     param[journal_id] = qs
 
-    au < manifest ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < manifest ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < manifest ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < manifest ; 2009 ; Quebec Studies Volume 48 ; 48 >
-    au < manifest ; 2010 ; Quebec Studies Volume 49 ; 49 >
+    au < ready ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < ready ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < ready ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < ready ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < ready ; 2010 ; Quebec Studies Volume 49 ; 49 >
     au < ready ; 2010 ; Quebec Studies Volume 50 ; 50 >
     au < ready ; 2011 ; Quebec Studies Volume 51 ; 51 >
-    au < manifest ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < manifest ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < manifest ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < manifest ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
-    au < manifest ; 2013 ; Quebec Studies Volume 55 ; 55 >
-    au < manifest ; 2013 ; Quebec Studies Volume 56 ; 56 >
+    au < ready ; 2011 ; Quebec Studies Volume 52 ; 52 >
+    au < ready ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < ready ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < ready ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < ready ; 2013 ; Quebec Studies Volume 55 ; 55 >
+    au < ready ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < ready ; 2014 ; Quebec Studies Volume 57 ; 57 >
-    au < manifest ; 2014 ; Quebec Studies Volume 58 ; 58 >
+    au < ready ; 2014 ; Quebec Studies Volume 58 ; 58 >
     au < ready ; 2015 ; Quebec Studies Volume 59 ; 59 >
     au < ready ; 2015 ; Quebec Studies Volume 60 ; 60 >
     au < manifest ; 2016 ; Quebec Studies Volume 61 ; 61 >
@@ -728,9 +728,9 @@
     param[journal_id] = studia
 
     au < ready ; 2011 ; Studia Hibernica Volume 37 ; 37 >
-    au < manifest ; 2012 ; Studia Hibernica Volume 38 ; 38 >
-    au < manifest ; 2013 ; Studia Hibernica Volume 39 ; 39 >
-    au < manifest ; 2014 ; Studia Hibernica Volume 40 ; 40 >
+    au < ready ; 2012 ; Studia Hibernica Volume 38 ; 38 >
+    au < ready ; 2013 ; Studia Hibernica Volume 39 ; 39 >
+    au < ready ; 2014 ; Studia Hibernica Volume 40 ; 40 >
     au < ready ; 2015 ; Studia Hibernica Volume 41 ; 41 >
     au < expected ; 2016 ; Studia Hibernica Volume 42 ; 42 >
 
