@@ -47,7 +47,7 @@
     au < finished ; finished ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 51 ; 51 ; >
 
   }
@@ -102,7 +102,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; >
 
   }
@@ -132,7 +132,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Ernährungsmedizin Volume 41 ; 41 ; >
 
   }
@@ -151,7 +151,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; >
 
   }
@@ -251,7 +251,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 ; >
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; >
 
   }
@@ -559,7 +559,7 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 ; >
     au < finished ; finished ; 2014 ; 2014 ; Drug Research Volume 2014 ; 64 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Drug Research Volume 2016 ; 66 ; >
 
    }
@@ -606,7 +606,7 @@
         au < finished ; crawling ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 ; >
         au < finished ; finished ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 ; >
-        au < finished ; crawling ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 ; reingest5.clockss.org:8082 >
         au < manifest ; exists ; 2016 ; 2016 ; B&G Bewegungstherapie und Gesundheitssport Volume 2016 ; 32 ; >
 
   }
@@ -637,7 +637,7 @@
         au < finished ; finished ; 2012 ; 2012 ; Balint Journal Volume 2012 ; 13 ; reingest4.clockss.org:8082 >
         au < finished ; finished ; 2013 ; 2013 ; Balint Journal Volume 2013 ; 14 ; >
         au < finished ; finished ; 2014 ; 2014 ; Balint Journal Volume 2014 ; 15 ; >
-        au < finished ; crawling ; 2015 ; 2015 ; Balint Journal Volume 2015 ; 16 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2015 ; 2015 ; Balint Journal Volume 2015 ; 16 ; reingest5.clockss.org:8082 >
         au < manifest ; exists ; 2016 ; 2016 ; Balint Journal Volume 2016 ; 17 ; >
 
   }
@@ -695,7 +695,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Clinics in Colon and Rectal Surgery Volume 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 2013 ; 026 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 2014 ; 027 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ; 028 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ; 028 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 2016 ; 029 ; >
 
   }
@@ -912,7 +912,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 ; >
    au < finished ; finished ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 ; >
    au < finished ; finished ; 2014 ; 2014 ; Dialyse aktuell Volume 2014 ; 9 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Dialyse aktuell Volume 2015 ; 10 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Dialyse aktuell Volume 2015 ; 10 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Dialyse aktuell Volume 2016 ; 11 ; >
 
   }
@@ -1068,7 +1068,7 @@
    au < finished ; finished ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 ; >
    au < crawling ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 2016 ; 142 ; >
 
   }
@@ -1262,7 +1262,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 ; >
    au < finished ; finished ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 63 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 2015 ; 64 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 2015 ; 64 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Erfahrungsheilkunde Volume 2016 ; 65 ; >
 
   }
@@ -1335,7 +1335,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 27 ; >
    au < finished ; finished ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ; 028 ; >
    au < finished ; finished ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ; 029 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Ernährung & Medizin Volume 2015 ; 030 ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2015 ; 2015 ; Ernährung & Medizin Volume 2015 ; 030 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Ernährung & Medizin Volume 2016 ; 031 ; >
 
   }
@@ -1377,7 +1377,7 @@
    au < finished ; finished ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 ; >
    au < finished ; finished ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 ; >
    au < crawling ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Volume 2014 ; 24 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; European Journal of Pediatric Surgery Volume 2015 ; 25 ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2015 ; 2015 ; European Journal of Pediatric Surgery Volume 2015 ; 25 ; reingest4.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; European Journal of Pediatric Surgery Volume 2016 ; 26 ; >
 
   }
@@ -1573,7 +1573,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2012 ; 19 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 20 ; >
    au < finished ; finished ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2014 ; 21 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2015 ; 22 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2015 ; 22 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2016 ; 23 ; >
 
 
@@ -1649,7 +1649,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Frauenheilkunde up2date Volume 2012 ; 6 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; Frauenheilkunde up2date Volume 2013 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Frauenheilkunde up2date Volume 2014 ; 8 ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 2015 ; 9 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 2015 ; 9 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Frauenheilkunde up2date Volume 2016 ; 10 ; >
 
    }
@@ -1743,7 +1743,7 @@
     param[journal_id] = 10.1055/s-00027304
 
    au < finished ; finished ; 2014 ; 2014 ; Gefäßmedizin Scan Volume 2014 ; 1 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2015 ; 2 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Gefäßmedizin Scan Volume 2015 ; 2 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Gefäßmedizin Scan Volume 2016 ; 3 ; >
 
   }
@@ -1773,7 +1773,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2012 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 18 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2014 ; 19 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2015 ; 20 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2015 ; 20 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2016 ; 21 ; >
 
   }
@@ -1857,7 +1857,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2012 ; 44 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2013 ; 45 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2014 ; 46 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2015 ; 47 ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2015 ; 47 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2016 ; 48 ; >
 
   }
@@ -2138,7 +2138,7 @@
     au < finished ; finished ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 ; >
     au < crawling ; exists ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; intensiv Volume 2016 ; 24 ; >
 
   }
@@ -3298,7 +3298,7 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 ; >
 
   }
@@ -3444,7 +3444,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 28 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Notarzt Der Volume 2015 ; 31 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Notarzt Der Volume 2015 ; 31 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Notarzt Der Volume 2016 ; 32 ; >
 
   }
@@ -3755,7 +3755,7 @@
     au < finished ; finished ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 ; >
     au < finished ; finished ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; pferde spiegel Volume 2016 ; 19 ; >
 
   }
@@ -3937,7 +3937,7 @@
     au < finished ; finished ; 2012 ; 2012 ; PiD - Psychotherapie im Dialog Volume 2012 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; PiD - Psychotherapie im Dialog Volume 2013 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 2014 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 2015 ; 16 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 2016 ; 17 ; >
 
   }
@@ -4072,7 +4072,7 @@
     comment[years] = 2014-current
 
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Letters Volume 2014 ; 1 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 ; reingest1.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Planta Medica Letters Volume 2016 ; 3 ; >
 
   }
@@ -4154,7 +4154,7 @@
     au < finished ; finished ; 2012 ; 2012 ; PSYCH up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; PSYCH up2date Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; PSYCH up2date Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; PSYCH up2date Volume 10 ; 10 ; >
 
   }
@@ -4330,7 +4330,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Radiopraxis Volume 2012 ; 5 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Radiopraxis Volume 2014 ; 7 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2015 ; 2015 ; Radiopraxis Volume 2015 ; 8 ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2015 ; 2015 ; Radiopraxis Volume 2015 ; 8 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Radiopraxis Volume 2016 ; 9 ; >
 
   }
@@ -4361,7 +4361,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Rehabilitation Die Volume 2012 ; 51 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 ; >
    au < finished ; finished ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 ; reingest3.clockss.org:8083 >
    au < manifest ; exists ; 2016 ; 2016 ; Rehabilitation Die Volume 2016 ; 55 ; >
 
   }
@@ -4480,7 +4480,7 @@
     au < finished ; finished ; 2012 ; 2012 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2012 ; 184 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 ; >
     au < finished ; finished ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2016 ; 188 ; >
 
   }
@@ -4663,7 +4663,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Musculoskeletal Radiology Volume 2012 ; 16 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Musculoskeletal Radiology Volume 2013 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 2014 ; 18 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 ; reingest4.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 2016 ; 20 ; >
 
   }
@@ -5453,7 +5453,7 @@
     au < finished ; finished ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 ; >
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 2016 ; 64 ; >
 
   }
@@ -5513,7 +5513,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2016 ; 6 ; >
 
   }
@@ -5545,7 +5545,7 @@
     au < finished ; finished ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 ; >
     au < finished ; finished ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 ; >
     au < finished ; finished ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 2016 ; 37 ; >
 
   }
@@ -5612,7 +5612,7 @@
     >
     param[journal_id] = 10.1055/s-00028422
 
-   au < finished ; crawling ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
 
   }
@@ -5629,7 +5629,7 @@
     param[journal_id] = 10.1055/s-00026982
 
    au < finished ; finished ; 2014 ; 2014 ; Urologie Scan Volume 2014 ; 1 ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Urologie Scan Volume 2016 ; 3 ; >
 
   }
@@ -5658,7 +5658,7 @@
     au < finished ; finished ; 2012 ; 2012 ; veterinär spiegel Volume 2012 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 ; >
     au < finished ; finished ; 2014 ; 2014 ; veterinär spiegel Volume 2014 ; 24 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; 2016 ; veterinär spiegel Volume 2016 ; 26 ; >
 
   }
@@ -5772,7 +5772,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 2016 ; 10 ; >
 
   }
@@ -5797,7 +5797,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2012 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2013 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2016 ; 30 ; >
 
   }
@@ -5861,7 +5861,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2012 ; 216 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2013 ; 217 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2014 ; 218 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2015 ; 219 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2015 ; 219 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2016 ; 220 ; >
 
   }
@@ -5960,7 +5960,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Komplementärmedizin Volume 2012 ; 4 ; >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Komplementärmedizin Volume 2013 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 2014 ; 6 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 2016 ; 8 ; >
 
   }
@@ -5985,7 +5985,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Orthomolekulare Medizin Volume 2012 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthomolekulare Medizin Volume 2013 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 2014 ; 12 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 2015 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 2015 ; 13 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 2016 ; 14 ; >
 
   }
@@ -6010,7 +6010,7 @@
     au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 ; >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 ; >
-    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2016 ; 154 ; >
 
   }
