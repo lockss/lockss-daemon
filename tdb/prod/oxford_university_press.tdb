@@ -25857,6 +25857,7 @@
       param[base_url] = http://mmcts.oxfordjournals.org/
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
+      #move to European Association for Cardio-Thoracic Surgery in 2017 
 
       au < manifest ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 >
       au < manifest ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 >
