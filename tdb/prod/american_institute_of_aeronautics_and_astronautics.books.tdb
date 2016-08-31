@@ -1,8 +1,6 @@
 {
   publisher <
-    name = American Institute of Aeronautics and Astronautics ;
-    info[contract] = 2014 ;
-    info[tester] = 5
+    name = American Institute of Aeronautics and Astronautics
   >
 
   plugin = org.lockss.plugin.atypon.aiaa.AIAABooksPlugin
@@ -21,7 +19,7 @@
     au < released ; 1988 ; 9780930403287 ; 9781600861291 ; 9781600861291 ; Advanced Classical Thermodynamics (9781600861291) >
     au < ready ; 1988 ; 9780930403454 ; 9781600861888 ; 9781600861888 ; Gust Loads on Aircraft: Concepts and Applications (9781600861888) >
     au < ready ; 1988 ; 9780930403331 ; 9781600862342 ; 9781600862342 ; Re-Entry Aerodynamics (9781600862342) >
-    au < manifest ; 1989 ; 9780930403249 ; 9781600861499 ; 9781600861499 ; Aircraft Propulsion Systems Technology and Design (9781600861499) >
+    au < wanted ; 1989 ; 9780930403249 ; 9781600861499 ; 9781600861499 ; Aircraft Propulsion Systems Technology and Design (9781600861499) >
     au < ready ; 1992 ; 9781563470332 ; 9781600862199 ; 9781600862199 ; Nonlinear Analysis of Shell Structures (9781600862199) >
     au < ready ; 1992 ; 9781563470400 ; 9781600862229 ; 9781600862229 ; Optimization of Observation and Control Processes (9781600862229) >
     au < ready ; 1993 ; 9781563470547 ; 9781600862076 ; 9781600862076 ; Introduction to Dynamics and Control of Flexible Structures (9781600862076) >
@@ -148,7 +146,7 @@
     au < ready ; 1971 ; 9780262120425 ; 9781600864988 ; 9781600864988 ; Heat Transfer and Spacecraft Thermal Control (9781600864988) >
     au < ready ; 1971 ; 9780262060448 ; 9781600864995 ; 9781600864995 ; Communications Satellites for the 70's: Technology (9781600864995) >
     au < ready ; 1971 ; 9780262060455 ; 9781600865008 ; 9781600865008 ; Communications Satellites for the 70’s: Systems (9781600865008) >
-    au < manifest ; 1971 ; 9780262060561 ; 9781600865077 ; 9781600865077 ; Instrumentation for Airbreathing Propulsion (9781600865077) >
+    au < wanted ; 1971 ; 9780262060561 ; 9781600865077 ; 9781600865077 ; Instrumentation for Airbreathing Propulsion (9781600865077) >
     au < ready ; 1972 ; 9780262230537 ; 9781600865015 ; 9781600865015 ; Thermospheric Circulation (9781600865015) >
     au < ready ; 1972 ; 9780262120586 ; 9781600865022 ; 9781600865022 ; Thermal Characteristics of the Moon (9781600865022) >
     au < ready ; 1972 ; 9780262120593 ; 9781600865039 ; 9781600865039 ; Fundamentals of Spacecraft Thermal Design (9781600865039) >
@@ -229,7 +227,7 @@
     au < released ; 1986 ; 9780930403171 ; 9781600865817 ; 9781600865817 ; Spacecraft Dielectric Material Properties and Spacecraft Charging (9781600865817) >
     au < ready ; 1986 ; 9780930403188 ; 9781600865824 ; 9781600865824 ; Opportunities for Academic Research in a Low-Gravity Environment (9781600865824) >
     au < released ; 1988 ; 9780930403447 ; 9781600865831 ; 9781600865831 ; Current Trends in Turbulence Research (9781600865831) >
-    au < manifest ; 1988 ; 9780930403393 ; 9781600865855 ; 9781600865855 ; Commercial Opportunities in Space (9781600865855) >
+    au < wanted ; 1988 ; 9780930403393 ; 9781600865855 ; 9781600865855 ; Commercial Opportunities in Space (9781600865855) >
     au < released ; 1988 ; 9780930403430 ; 9781600865862 ; 9781600865862 ; Liquid Metal Flows: Magnetohydrodynamics and Application (9781600865862) >
     au < released ; 1988 ; 9780930403461 ; 9781600865879 ; 9781600865879 ; "Dynamics of Reactive Systems Part I: Flames; Part II: Heterogeneous Combustion and Applications (9781600865879)" >
     au < released ; 1988 ; 9780930403478 ; 9781600865886 ; 9781600865886 ; Dynamics of Explosions (9781600865886) >
@@ -269,7 +267,7 @@
     au < ready ; 1993 ; 9781563470578 ; 9781600866265 ; 9781600866265 ; Dynamic Aspects of Detonations (9781600866265) >
     au < ready ; 1993 ; 9781563470592 ; 9781600866272 ; 9781600866272 ; Dynamic Aspects of Explosion Phenomena (9781600866272) >
     au < ready ; 1993 ; 9781563470684 ; 9781600866296 ; 9781600866296 ; Toward a Science of Command, Control, and Communications (9781600866296) >
-    au < manifest ; 1994 ; 9781563470790 ; 9781600866302 ; 9781600866302 ; Rarefied Gas Dynamics: Experimental Techniques and Physical Systems (9781600866302) >
+    au < wanted ; 1994 ; 9781563470790 ; 9781600866302 ; 9781600866302 ; Rarefied Gas Dynamics: Experimental Techniques and Physical Systems (9781600866302) >
     au < released ; 1994 ; 9781563470806 ; 9781600866319 ; 9781600866319 ; Rarefied Gas Dynamics: Theory and Simulations (9781600866319) >
     au < released ; 1994 ; 9781563470813 ; 9781600866326 ; 9781600866326 ; Rarefied Gas Dynamics: Space Science and Engineering (9781600866326) >
     au < released ; 1994 ; 9781563470950 ; 9781600866333 ; 9781600866333 ; Teleoperation and Robotics in Space (9781600866333) >
