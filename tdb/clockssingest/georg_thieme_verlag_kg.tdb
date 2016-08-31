@@ -2467,7 +2467,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2015-current
 
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
 
   }
@@ -5729,8 +5729,8 @@
     param[journal_id] = 10.1055/s-00029347
     comment[years] = 2015-current
 
-    au < testing ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
-    au < testing ; exists ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
+    au < ready ; exists ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; >
 
   }
 
@@ -5773,7 +5773,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 2016 ; 10 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 2016 ; 10 ; >
 
   }
 
@@ -5798,7 +5798,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2013 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2015 ; 29 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2016 ; 30 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 2016 ; 30 ; >
 
   }
 
@@ -5862,7 +5862,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2013 ; 217 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2014 ; 218 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2015 ; 219 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2016 ; 220 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 2016 ; 220 ; >
 
   }
 
@@ -5938,7 +5938,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Klassische Homöopathie Volume 2013 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 2014 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 2015 ; 59 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 2016 ; 60 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 2016 ; 60 ; >
 
   }
 
@@ -5961,7 +5961,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Komplementärmedizin Volume 2013 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 2014 ; 6 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 2016 ; 8 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Komplementärmedizin Volume 2016 ; 8 ; >
 
   }
 
@@ -5986,7 +5986,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthomolekulare Medizin Volume 2013 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthomolekulare Medizin Volume 2014 ; 12 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthomolekulare Medizin Volume 2015 ; 13 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 2016 ; 14 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Orthomolekulare Medizin Volume 2016 ; 14 ; >
 
   }
 
@@ -6011,7 +6011,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2016 ; 154 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2016 ; 154 ; >
 
   }
 
@@ -6087,7 +6087,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Palliativmedizin Volume 2013 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 2014 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 2015 ; 16 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Palliativmedizin Volume 2016 ; 17 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Palliativmedizin Volume 2016 ; 17 ; >
 
   }
 
@@ -6114,7 +6114,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Phytotherapie Volume 2013 ; 34 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Phytotherapie Volume 2014 ; 35 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Phytotherapie Volume 2015 ; 36 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 2016 ; 37 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Zeitschrift für Phytotherapie Volume 2016 ; 37 ; >
 
   }
 
