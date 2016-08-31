@@ -505,7 +505,8 @@ public class OpenUrlResolver {
    * @return a url or <code>null</code> if not found
    */
   public OpenUrlInfo resolveOpenUrl(Map<String,String> params) {
-    log.debug3("params = " + params);
+    final String DEBUG_HEADER = "resolveOpenUrl(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "params = " + params);
 
     OpenUrlInfo resolvedDirectly = noOpenUrlInfo;
     if (params.containsKey("rft_id")) {
@@ -516,14 +517,16 @@ public class OpenUrlResolver {
         if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
           return resolvedDirectly;
         }
-        log.debug3("Failed to resolve from URL: " + rft_id);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "Failed to resolve from URL: " + rft_id);
       } else if (rft_id.startsWith("info:doi/")) {
         String doi = rft_id.substring("info:doi/".length());
         resolvedDirectly = resolveFromDOI(doi); 
         if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
           return resolvedDirectly;
         }
-        log.debug3("Failed to resolve from DOI: " + doi);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "Failed to resolve from DOI: " + doi);
       }
     }
     
@@ -1036,7 +1039,10 @@ public class OpenUrlResolver {
    * @return OpenURLInfo with resolved URL
    */
   public OpenUrlInfo resolveFromUrl(String aUrl, String proxySpec) {
+    final String DEBUG_HEADER = "resolveFromUrl(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aUrl = " + aUrl);
     String url = resolveUrl(aUrl, proxySpec);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
     if (url != null) {
       CachedUrl cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
       if (cu != null) {
@@ -1117,6 +1123,8 @@ public class OpenUrlResolver {
    * @return the article url
    */
   public OpenUrlInfo resolveFromDOI(String doi) {
+    final String DEBUG_HEADER = "resolveFromDOI(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "doi = " + doi);
     if (!MetadataUtil.isDoi(doi)) {
       return noOpenUrlInfo;
     }
@@ -1234,6 +1242,8 @@ public class OpenUrlResolver {
    * @return the OpenUrlInfo
    */
   private OpenUrlInfo resolveFromDoi(DbManager dbMgr, String doi) {
+    final String DEBUG_HEADER = "resolveFromDoi(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "doi = " + doi);
     Connection conn = null;
     try {
       conn = dbMgr.getConnection();
@@ -1249,6 +1259,7 @@ public class OpenUrlResolver {
       ResultSet resultSet = dbMgr.executeQuery(stmt);
       if (resultSet.next()) {
         String url = resultSet.getString(1);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
         OpenUrlInfo resolved = resolveFromUrl(url);
         return resolved;
         
@@ -1354,14 +1365,30 @@ public class OpenUrlResolver {
       DbManager dbMgr,
       String issn, String pub, String date, String volume, String issue, 
       String spage, String artnum, String author, String atitle) {
-          
+    final String DEBUG_HEADER = "resolveFromIssn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "issn = " + issn);
+      log.debug2(DEBUG_HEADER + "pub = " + pub);
+      log.debug2(DEBUG_HEADER + "date = " + date);
+      log.debug2(DEBUG_HEADER + "volume = " + volume);
+      log.debug2(DEBUG_HEADER + "issue = " + issue);
+      log.debug2(DEBUG_HEADER + "spage = " + spage);
+      log.debug2(DEBUG_HEADER + "artnum = " + artnum);
+      log.debug2(DEBUG_HEADER + "author = " + author);
+      log.debug2(DEBUG_HEADER + "atitle = " + atitle);
+    }
+
     // true if properties specified a journal item
     boolean hasJournalSpec =
         (date != null) || (volume != null) || (issue != null);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "hasJournalSpec = " + hasJournalSpec);
 
     // true if properties specify an article
     boolean hasArticleSpec =    (spage != null) || (artnum != null) 
                              || (author != null) || (atitle != null);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "hasArticleSpec = " + hasArticleSpec);
 
     Connection conn = null;
     OpenUrlInfo resolved = null;
@@ -1501,10 +1528,15 @@ public class OpenUrlResolver {
       }
       
       String qstr = select.toString() + from.toString() + where.toString();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "qstr = " + qstr);
       // only one value expected; any more and the query was under-specified
       int maxPublishersPerArticle = getMaxPublishersPerArticle();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "maxPublishersPerArticle = " + maxPublishersPerArticle);
+
       String[][] results = new String[maxPublishersPerArticle+1][11];
       int count = resolveFromQuery(conn, qstr, args, results);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
       if (count <= maxPublishersPerArticle) {
         // ensure at most one result per publisher+provider in case
         // more than one publisher+provider publishes the same serial
@@ -1512,10 +1544,13 @@ public class OpenUrlResolver {
         for (int i = 0; i < count; i++) {
           // combine publisher and provider columns to determine uniqueness
           if (!pubs.add(results[i][1] + results[i][10])) {
+            if (log.isDebug2())
+              log.debug2(DEBUG_HEADER + "return " + noOpenUrlInfo);
             return noOpenUrlInfo;
           }
           OpenUrlInfo info = OpenUrlInfo.newInstance(results[i][0], null, 
                                                 OpenUrlInfo.ResolvedTo.ARTICLE);
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "info = " + info);
           if (resolved == null) {
             resolved = info;
           } else {
@@ -1528,6 +1563,7 @@ public class OpenUrlResolver {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "resolved = " + resolved);
     return (resolved == null) ? noOpenUrlInfo : resolved;
   }
 
@@ -1558,7 +1594,7 @@ public class OpenUrlResolver {
   private int resolveFromQuery(Connection conn, String query,
       List<String> args, String[][] results) throws DbException {
     final String DEBUG_HEADER = "resolveFromQuery(): ";
-    log.debug3(DEBUG_HEADER + "query: " + query);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "query: " + query);
 
     PreparedStatement stmt =
 	daemon.getDbManager().prepareStatement(conn, query);
