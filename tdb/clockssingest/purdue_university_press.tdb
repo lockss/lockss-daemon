@@ -45,7 +45,7 @@
     au < manifest ; exists ; 2009 ; Against the Grain Volume 21 ; 21 ; >
     au < manifest ; exists ; 2010 ; Against the Grain Volume 22 ; 22 ; >
     au < finished ; finished ; 2011 ; Against the Grain Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Against the Grain Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2012 ; Against the Grain Volume 24 ; 24 ; >
     au < expected ; exists ; 2013 ; Against the Grain Volume 25 ; 25 ; >
     au < expected ; exists ; 2014 ; Against the Grain Volume 26 ; 26 ; >
     au < expected ; exists ; 2015 ; Against the Grain Volume 27 ; 27 ; > #embargoed 4 years.
@@ -75,11 +75,11 @@
     au < manifest ; exists ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 8 ; >
     au < finished ; finished ; 2007 ; CLCWeb: Comparative Literature and Culture Volume 9 ; 9 ; >
     au < finished ; finished ; 2008 ; CLCWeb: Comparative Literature and Culture Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2009 ; CLCWeb: Comparative Literature and Culture Volume 11 ; 11 ; >
     au < finished ; finished ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 ; >
     au < finished ; finished ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 ; >
     au < finished ; frozen ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; >
     au < finished ; finished ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; >
     au < expected ; exists ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; >
@@ -191,7 +191,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; >
     au < finished ; finished ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; >
     au < finished ; crawling ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; >
     au < crawling ; exists ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; >
