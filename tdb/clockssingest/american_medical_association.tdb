@@ -40,7 +40,7 @@
     au < crawling ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; >
     au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; >
+    au < deepCrawl ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; >
     au < manifest ; exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; >
   
   }
@@ -172,7 +172,7 @@
     au < crawling ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; >
     au < crawling ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
+    au < deepCrawl ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
     au < manifest ; exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; >
     
   }

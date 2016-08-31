@@ -139,7 +139,7 @@
     au < finished ; frozen ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 ; >
-    au < frozen ; exists ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 ; >
+    au < deepCrawl ; exists ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 ; >
     au < testing ; exists ; 2016 ; Blood Cancer Journal Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -630,7 +630,7 @@
     au < finished ; crawling ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 ; >
     au < finished ; crawling ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
-    au < frozen ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; >
+    au < deepCrawl ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; >
     au < testing ; exists ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; >
 
   }
@@ -722,7 +722,7 @@
     au < finished ; crawling ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 ; >
     au < finished ; crawling ; 2013 ; European Journal of Clinical Nutrition Volume 67 ; 2013 ; 67 ; >
     au < finished ; crawling ; 2014 ; European Journal of Clinical Nutrition Volume 68 ; 2014 ; 68 ; >
-    au < frozen ; exists ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 ; >
+    au < deepCrawl ; exists ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 ; >
     au < testing ; exists ; 2016 ; European Journal of Clinical Nutrition Volume 70 ; 2016 ; 70 ; >
 
   }
@@ -844,7 +844,7 @@
     au < finished ; crawling ; 2012 ; Eye Volume 26 ; 2012 ; 26 ; >
     au < crawling ; exists ; 2013 ; Eye Volume 27 ; 2013 ; 27 ; >
     au < finished ; finished ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
+    au < deepCrawl ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
     au < testing ; exists ; 2016 ; Eye Volume 30 ; 2016 ; 30 ; >
 
 
@@ -1089,7 +1089,7 @@
     au < finished ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 ; >
     au < finished ; crawling ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
-    au < frozen ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
+    au < deepCrawl ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
     au < testing ; exists ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; >
  
   }
@@ -1197,7 +1197,7 @@
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
     au < finished ; finished ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 ; >
     au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
+    au < deepCrawl ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
     au < ready ; exists ; 2016 ; Immunology & Cell Biology Volume 94 ; 2016 ; 94 ; >
   }
 
@@ -1505,7 +1505,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; >
     au < finished ; finished ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
+    au < deepCrawl ; exists ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; >
     au < testing ; exists ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; >
 
   }
@@ -1539,7 +1539,7 @@
     au < finished ; crawling ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 ; >
     au < finished ; crawling ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 ; >
     au < finished ; crawling ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 ; >
-    au < frozen ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; >
+    au < deepCrawl ; exists ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; >
     au < testing ; exists ; 2016 ; Journal of Human Hypertension Volume 30 ; 2016 ; 30 ; >
 
   }
@@ -1913,7 +1913,7 @@
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
+    au < deepCrawl ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
     au < ready ; exists ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; >
 
   }
@@ -2413,15 +2413,15 @@
     au < crawling ; exists ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; >
     au < crawling ; exists ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 517 ; 2015 ; 517 ; >
-    au < frozen ; exists ; 2015 ; Nature Volume 518 ; 2015 ; 518 ; >
+    au < deepCrawl ; exists ; 2015 ; Nature Volume 518 ; 2015 ; 518 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 519 ; 2015 ; 519 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 520 ; 2015 ; 520 ; >
-    au < frozen ; exists ; 2015 ; Nature Volume 521 ; 2015 ; 521 ; >
+    au < deepCrawl ; exists ; 2015 ; Nature Volume 521 ; 2015 ; 521 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 522 ; 2015 ; 522 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 523 ; 2015 ; 523 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 524 ; 2015 ; 524 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 525 ; 2015 ; 525 ; >
-    au < frozen ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 ; >
+    au < deepCrawl ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 ; >
     au < testing ; exists ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; >
@@ -2582,7 +2582,7 @@
     au < finished ; crawling ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; >
-    au < frozen ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; >
+    au < deepCrawl ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; >
     au < testing ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -3225,7 +3225,7 @@
     au < crawling ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
-    au < frozen ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
+    au < deepCrawl ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
     au < testing ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
 
   }
@@ -3719,7 +3719,7 @@
     au < finished ; frozen ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 ; >
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; crawling ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
-    au < frozen ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
+    au < deepCrawl ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
     au < testing ; exists ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; >
 
   }
