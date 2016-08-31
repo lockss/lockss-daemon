@@ -29,7 +29,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.maffey;
 
 import java.io.File;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.apache.oro.text.regex.Perl5Compiler;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
@@ -41,6 +47,8 @@ import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.util.TimeBase;
 
 public class TestMaffeyPlugin extends LockssPluginTestCase {
@@ -50,7 +58,7 @@ public class TestMaffeyPlugin extends LockssPluginTestCase {
 	static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
 	static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
 	static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-	private final String BASE_URL = "http://www.example.com/";
+	static final String BASE_URL = "http://www.example.com/";
 	private final String YEAR = "2010";
 	private final String JOURNAL_ID = "11";
 	private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(BASE_URL_KEY,
@@ -182,6 +190,50 @@ public class TestMaffeyPlugin extends LockssPluginTestCase {
 	  public void testGetName() throws Exception {
 	    ArchivalUnit au = createAu();
 	    assertEquals("Libertas Academica Plugin, Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Year " + YEAR, au.getName());
+	  }
+	  
+	  // need to call quotemeta on the base/home_urls because the RegexpUtil.regexpCollection 
+	  // call on the returning strings calls it (but only on the base/home_url params)
+	  static final String baseRepairList[] =
+	    {
+	        "^"+Perl5Compiler.quotemeta(BASE_URL)+"(css|images)/",
+	    };
+
+	  public void testRepairList() throws Exception {
+	    URL base = new URL(BASE_URL);
+	    ArchivalUnit ABAu = createAu();
+
+	    assertEquals(Arrays.asList(baseRepairList), RegexpUtil.regexpCollection(ABAu.makeRepairFromPeerIfMissingUrlPatterns()));
+
+	    // make sure that's the regexp that will match to the expected url string
+	    // this also tests the regexp (which is the same) for the weighted poll map
+	    List <String> repairList = ListUtil.list(   
+	      BASE_URL+"css/foo.css",
+	      BASE_URL+"css/zip.js",
+	      BASE_URL+"images/hello.jpg",
+	      BASE_URL + "css/grid.css?1333744447",
+	      BASE_URL+"images/test.gif"
+	     );
+	    
+	    Pattern p0 = Pattern.compile(baseRepairList[0]);
+	    Matcher m0;
+	    for (String urlString : repairList) {
+	      m0 = p0.matcher(urlString);
+	      assertEquals(true, m0.find());
+	    }
+	    
+	    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+	    String notString =BASE_URL+"missing_file.html";
+	    m0 = p0.matcher(notString);
+	    assertEquals(false, m0.find());
+
+	   PatternFloatMap urlPollResults = ABAu.makeUrlPollResultWeightMap();
+	   assertNotNull(urlPollResults);
+	   for (String urlString : repairList) {
+	     assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+	   }
+	   assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+	   
 	  }
 
 }
