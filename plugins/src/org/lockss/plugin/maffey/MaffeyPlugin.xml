@@ -15,14 +15,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -114,7 +114,9 @@
   <!-- don't count it in the poll, but do collect and share versions -->  
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
     <string>"^%s(css|images)/", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
