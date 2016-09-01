@@ -102,7 +102,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; >
 
   }
@@ -1068,7 +1068,7 @@
    au < finished ; finished ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 ; >
    au < crawling ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 ; >
-   au < finished ; manifest ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; reingest5.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 2016 ; 142 ; >
 
   }
@@ -4072,7 +4072,7 @@
     comment[years] = 2014-current
 
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Letters Volume 2014 ; 1 ; >
-   au < finished ; manifest ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2015 ; 2015 ; Planta Medica Letters Volume 2015 ; 2 ; reingest1.clockss.org:8082 >
    au < manifest ; exists ; 2016 ; 2016 ; Planta Medica Letters Volume 2016 ; 3 ; >
 
   }
@@ -5772,7 +5772,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 2016 ; 10 ; >
 
   }

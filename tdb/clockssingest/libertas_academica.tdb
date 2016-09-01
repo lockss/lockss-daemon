@@ -310,7 +310,7 @@
     au < finished ; finished ; 2012 ; Cancer Informatics Volume 11 ; 11 ; 2012 ; >
     au < finished ; finished ; 2013 ; Cancer Informatics Volume 12 ; 12 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Cancer Informatics Volume 13 ; 13 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; 2016 ; >
 
 
@@ -414,7 +414,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Blood Disorders Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Blood Disorders Volume 7 ; 7 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Clinical Medicine Insights: Blood Disorders Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -525,7 +525,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 7 ; 7 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -657,7 +657,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Pediatrics Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pediatrics Volume 8 ; 8 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Clinical Medicine Insights: Pediatrics Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -763,7 +763,7 @@
     au < finished ; finished ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 5 ; 2011 ; >
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 7 ; 2013 ; >
-    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Clinical Medicine Insights: Urology Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -891,7 +891,7 @@
     au < finished ; finished ; 2012 ; Drug Target Insights Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Drug Target Insights Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Drug Target Insights Volume 8 ; 8 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Drug Target Insights Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Drug Target Insights Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Drug Target Insights Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -982,7 +982,7 @@
     au < finished ; finished ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Gene Regulation and Systems Biology Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Gene Regulation and Systems Biology Volume 8 ; 8 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Gene Regulation and Systems Biology Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Gene Regulation and Systems Biology Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Gene Regulation and Systems Biology Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -1278,7 +1278,7 @@
     au < finished ; finished ; 2012 ; Japanese Clinical Medicine Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Japanese Clinical Medicine Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Japanese Clinical Medicine Volume 5 ; 5 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Japanese Clinical Medicine Volume 6 ; 6 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Japanese Clinical Medicine Volume 6 ; 6 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Japanese Clinical Medicine Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -1421,7 +1421,7 @@
     au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 ; >
     au < crawling ; exists ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Lymphona and Chronic Lymphocytic Leukemias Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -1569,7 +1569,7 @@
     au < manifest ; exists ; 2009 ; Organic Chemistry Insights Volume 2 ; 2 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Organic Chemistry Insights Volume 3 ; 3 ; 2010 ; >
     au < finished ; finished ; 2012 ; Organic Chemistry Insights Volume 4 ; 4 ; 2012 ; >
-    au < finished ; manifest ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Organic Chemistry Insights Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -1636,7 +1636,7 @@
     au < manifest ; exists ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 4 ; 2010 ; >
     au < finished ; finished ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 5 ; 2011 ; >
     au < finished ; finished ; 2014 ; Perspectives in Medicinal Chemistry Volume 6 ; 6 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Perspectives in Medicinal Chemistry Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Perspectives in Medicinal Chemistry Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1718,7 +1718,7 @@
     au < finished ; finished ; 2011 ; Reproductive Biology Insights Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2013 ; Reproductive Biology Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Reproductive Biology Insights Volume 7 ; 7 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; >
 
   }

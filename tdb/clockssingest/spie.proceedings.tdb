@@ -18,9 +18,9 @@
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
     param[base_url] = http://proceedings.spiedigitallibrary.org/
 
-    au < finished ; manifest ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1964 ; SPIE Proceedings 1964 ; 1964 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1965 ; SPIE Proceedings 1965 ; 1965 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1964 ; SPIE Proceedings 1964 ; 1964 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1965 ; SPIE Proceedings 1965 ; 1965 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1966 ; SPIE Proceedings 1966 ; 1966 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1967 ; SPIE Proceedings 1967 ; 1967 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1968 ; SPIE Proceedings 1968 ; 1968 ; reingest2.clockss.org:8085 >
@@ -29,13 +29,13 @@
     au < deepCrawl ; manifest ; 1971 ; SPIE Proceedings 1971 ; 1971 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1972 ; SPIE Proceedings 1972 ; 1972 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1973 ; SPIE Proceedings 1973 ; 1973 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1974 ; SPIE Proceedings 1974 ; 1974 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1974 ; SPIE Proceedings 1974 ; 1974 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1975 ; SPIE Proceedings 1975 ; 1975 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1976 ; SPIE Proceedings 1976 ; 1976 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1977 ; SPIE Proceedings 1977 ; 1977 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1978 ; SPIE Proceedings 1978 ; 1978 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1979 ; SPIE Proceedings 1979 ; 1979 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1980 ; SPIE Proceedings 1980 ; 1980 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1980 ; SPIE Proceedings 1980 ; 1980 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1981 ; SPIE Proceedings 1981 ; 1981 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1982 ; SPIE Proceedings 1982 ; 1982 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; manifest ; 1983 ; SPIE Proceedings 1983 ; 1983 ; reingest1.clockss.org:8082 >
