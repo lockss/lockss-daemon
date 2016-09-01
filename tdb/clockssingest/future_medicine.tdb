@@ -528,7 +528,7 @@
     au < crawling ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; >
-    au < ready ; exists ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; >
     
   }
 
@@ -585,7 +585,7 @@
     au < crawling ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 ; >
     au < finished ; crawling ; 2014 ; Nanomedicine Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2015 ; Nanomedicine Volume 10 ; 10 ; >
-    au < ready ; exists ; 2016 ; Nanomedicine Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2016 ; Nanomedicine Volume 11 ; 11 ; >
     
   }
 
@@ -638,7 +638,7 @@
     au < crawling ; exists ; 2013 ; Pain Management Volume 3 ; 3 ; >
     au < finished ; crawling ; 2014 ; Pain Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Pain Management Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; Pain Management Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2016 ; Pain Management Volume 6 ; 6 ; >
     
   }
 
@@ -712,7 +712,7 @@
     au < crawling ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; >
     au < frozen ; exists ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; >
     au < frozen ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; >
-    au < ready ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; >
     
   }
 
@@ -761,7 +761,7 @@
     au < crawling ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2015 ; Women's Health Volume 11 ; 11 ; >
-    au < ready ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
     
   }
 
