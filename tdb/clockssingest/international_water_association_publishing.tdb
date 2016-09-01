@@ -3,7 +3,7 @@
   publisher <
     name = International Water Association Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 2
+    info[tester] = 5
   >
   
     plugin = org.lockss.plugin.highwire.iwa.ClockssIWADrupalPlugin
