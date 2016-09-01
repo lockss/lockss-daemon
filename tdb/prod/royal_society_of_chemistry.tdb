@@ -1494,4 +1494,26 @@
     }
   }
 
+  {
+
+    title <
+      name = Sustainable Energy & Fuels ;
+      eissn = 2398-4902
+    >
+
+    param[journal_code] = se
+
+    {
+      pluginSuffix = ClockssRSC2014Plugin
+      param[base_url] = http://pubs.rsc.org/
+      param[resolver_url] = http://xlink.rsc.org/
+      param[graphics_url] = http://sod-a.rsc-cdn.org/
+      param[base_url2] = http://www.rsc.org/
+
+      au < expected ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 >
+
+    }
+    
+  }
+  
 }
