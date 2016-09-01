@@ -3362,7 +3362,8 @@
       param[journal_id] = ijferm
 
       au < finished ; manifest ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; International Journal of Financial Engineering and Risk Management Volume 3 ; 3 ; >
 
     }
@@ -3677,7 +3678,8 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 5 ; 5 ; >
 
     }
@@ -3881,7 +3883,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Human Factors Modelling and Simulation Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Factors Modelling and Simulation Volume 3 ; 3 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Human Factors Modelling and Simulation Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Human Factors Modelling and Simulation Volume 5 ; 5 ; >
       au < expected ; exists ; 2016 ; International Journal of Human Factors Modelling and Simulation Volume 6 ; 6 ; >
 
     }
@@ -4151,7 +4154,8 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; >
       au < expected ; exists ; 2016 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; >
 
     }
@@ -4187,7 +4191,8 @@
       au < doNotProcess ; exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Information Quality Volume 4 ; 4 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Information Quality Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Information Quality Volume 5 ; 5 ; >
 
     }
@@ -4369,7 +4374,8 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2012 ; International Journal of Innovation in Education Volume 1 ; 1 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Innovation in Education Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; International Journal of Innovation in Education Volume 4 ; 4 ; >
 
     }
@@ -4621,7 +4627,8 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 ; >
       au < finished ; finished ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; >
 
     }
@@ -5093,7 +5100,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Low Radiation Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Low Radiation Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Low Radiation Volume 10 ; 10 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Low Radiation Volume 10 ; 10 ; >
       au < expected ; exists ; 2016 ; International Journal of Low Radiation Volume 11 ; 11 ; >
 
     }
@@ -5833,7 +5841,8 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Mobile Network Design and Innovation Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mobile Network Design and Innovation Volume 4 ; 4 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Mobile Network Design and Innovation Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 ; >
       au < expected ; exists ; 2016 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; >
 
     }
@@ -8335,7 +8344,8 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 ; >
       au < finished ; crawling ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
 
     }
@@ -8549,7 +8559,8 @@
       param[journal_id] = ijvp
 
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
+      # below au was incorrectly moved to production too early - take it down until year span over
+      au < crawling ; down ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
 
     }
 
