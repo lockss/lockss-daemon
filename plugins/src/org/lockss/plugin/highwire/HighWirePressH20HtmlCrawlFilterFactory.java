@@ -58,6 +58,16 @@ public class HighWirePressH20HtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "col-3"),
     // <div id="rel-related-article" class="relmgr-relation related">
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(related|cited-by)"),
+    // found hidden author index link after requesting HW fix links that 
+    // resulted in 503 or connection reset fatal errors
+    // <li class="aindex" style="display: none;">
+    new AndFilter(
+        HtmlNodeFilters.tagWithAttribute("li", "class", "aindex"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "style", "display: *none")),
+    // <a rel="issue-aindex" title="Index by Author" href="...author-index" style="display: none;">
+    new AndFilter(
+        HtmlNodeFilters.tagWithAttribute("a", "rel", "issue-aindex"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "style", "display: *none")),
   };
   
   @Override

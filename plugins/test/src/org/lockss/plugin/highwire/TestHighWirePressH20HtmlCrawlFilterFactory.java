@@ -125,6 +125,28 @@ public class TestHighWirePressH20HtmlCrawlFilterFactory extends LockssTestCase {
   private static final String col3Filtered = // div attributes are removed
       " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
       "</div>";
+  
+  private static final String withHiddenLink =
+      " <div>" +
+      "<p class=\"contents_label\">\n" + 
+      "<a rel=\"issue-aindex\" title=\"Index by Author1\" href=\"/content/54/10.author-index\">[Author index1]</a>" + 
+      "<a rel=\"issue-aindex\" title=\"Index by Author2\" href=\"/content/54/10.author-index\" style=\"display: none;\">[Author index2]</a>" +
+      "<ul class=\"toc-links\">" + 
+      "  <li class=\"aindex\" style=\"display: none;\"><a rel=\"issue-aindex\" title=\"Index by Author\" href=\"/content/22/Suppl_1_Pt_1.author-index\">Index By Author</a></li>\n" + 
+      "  <li><a rel=\"alternate\" title=\"TOC (PDF)\" href=\"/content/22/Suppl_1_Pt_1.toc.pdf\">Table of Contents (PDF)</a></li>\n" + 
+      "</ul>" + 
+      "</p>" +
+      "</div>";
+  private static final String withoutHiddenLink = // author index link is removed
+      " <div>" +
+      "<p class=\"contents_label\">\n" + 
+      "<a rel=\"issue-aindex\" title=\"Index by Author1\" href=\"/content/54/10.author-index\">[Author index1]</a>" + 
+      "<ul class=\"toc-links\">" + 
+      "  \n" + 
+      "  <li><a rel=\"alternate\" title=\"TOC (PDF)\" href=\"/content/22/Suppl_1_Pt_1.toc.pdf\">Table of Contents (PDF)</a></li>\n" + 
+      "</ul>" + 
+      "</p>" +
+      "</div>";
 
   
   public void testFiltering() throws Exception {
@@ -132,6 +154,7 @@ public class TestHighWirePressH20HtmlCrawlFilterFactory extends LockssTestCase {
     assertFilterToSame(withAds, withoutAds);
     assertFilterToSame(withRefList, withoutRefList);
     assertFilterToSame(withNavArticle, withoutNavArticle);
+    assertFilterToSame(withHiddenLink, withoutHiddenLink);
     
     assertFilterToString(col3Html, col3Filtered);
   }
