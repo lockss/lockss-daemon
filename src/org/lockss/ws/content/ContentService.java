@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +53,7 @@ public interface ContentService {
   @WebMethod
   ContentResult fetchFile(@WebParam(name = "url") String url,
       @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
   /**
    * Provides the content defined by a URL, an Archival Unit and a version.
    * 
@@ -88,4 +85,38 @@ public interface ContentService {
   @WebMethod
   List<FileWsResult> getVersions(@WebParam(name = "url") String url,
       @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Provides an indication of whether the content defined by a URL and Archival
+   * Unit is cached.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a boolean with the indication.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  boolean isUrlCached(@WebParam(name = "url") String url,
+      @WebParam(name = "auId") String auId) throws LockssWebServicesFault;
+
+  /**
+   * Provides an indication of whether the content defined by a URL, an Archival
+   * Unit and a version is cached.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @param version
+   *          An Integer with the requested version of the content.
+   * @return a boolean with the indication.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  boolean isUrlVersionCached(@WebParam(name = "url") String url,
+      @WebParam(name = "auId") String auId,
+      @WebParam(name = "version") Integer version)
+	  throws LockssWebServicesFault;
 }
