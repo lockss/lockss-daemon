@@ -64,10 +64,12 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
          * Broad area filtering
          */
         // Header
-        // HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
-        // HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header", true),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
         HtmlNodeFilters.tag("header"),
+        // navbar
+        HtmlNodeFilters.tag("nav"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "navbar"),
         // Left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarLeft"), // (old)
