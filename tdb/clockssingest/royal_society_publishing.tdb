@@ -80,7 +80,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
     au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
 
@@ -106,7 +106,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Biology Letters Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Letters Volume 9 ; 9 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2016 ; Biology Letters Volume 12 ; 12 ; >
 
@@ -261,7 +261,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 ; >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2016 ; Open Biology Volume 6 ; 6 ; >
     
