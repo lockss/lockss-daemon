@@ -64,8 +64,10 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
          * Broad area filtering
          */
         // Header
-        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
+        // HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
+        // HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header", true),
+        HtmlNodeFilters.tag("header"),
         // Left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarLeft"), // (old)
@@ -74,17 +76,18 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
         
+        
         /*
          * Hash filter
          */
         // Contains ad-specific cookies
-        new TagNameFilter("script"),
+        HtmlNodeFilters.tag("script"),
         // Contains dynamic css URLs
-        new TagNameFilter("link"),
+        HtmlNodeFilters.tag("link"),
         // Changed from "IGI Global - Foo" to "Foo | IGI Global"
-        new TagNameFilter("title"),
+        HtmlNodeFilters.tag("title"),
         // Various <br> tags added or removed over time
-        new TagNameFilter("br"),
+        HtmlNodeFilters.tag("br"),
         //comments
         HtmlNodeFilters.comment(),
 
@@ -144,8 +147,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
           }
         },
         // <h3> replaced <h4> or vice versa at one point
-        new TagNameFilter("h3"),
-        new TagNameFilter("h4"),
+        HtmlNodeFilters.tag("h3"),
+        HtmlNodeFilters.tag("h4"),
         
     };
     
