@@ -232,7 +232,7 @@
     au < finished ; finished ; 2012 ; 10.1130/9780813712093 ; 978-0-8137-1209-3 ; Geological Society of America Memoirs Volume 209 ; 209 ; >
     au < finished ; finished ; 2013 ; 10.1130/9780813712109 ; 978-0-8137-1210-9 ; Geological Society of America Memoirs Volume 210 ; 210 ; >
     au < finished ; finished ; 2014 ; 10.1130/9780813712116 ; 978-0-8137-1211-6 ; Geological Society of America Memoirs Volume 211 ; 211 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813712123 ; 978-0-8137-1212-3 ; Geological Society of America Memoirs Volume 212 ; 212 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813712123 ; 978-0-8137-1212-3 ; Geological Society of America Memoirs Volume 212 ; 212 ; >
     au < expected ; exists ; 2015 ;  ;  ; Geological Society of America Memoirs Volume 213 ; 213 ; >
       
   }
@@ -757,16 +757,16 @@
     au < finished ; finished ; 2014 ; 10.1130/9780813725079 ; 978-0-8137-2507-9 ; Geological Society of America Special Papers Volume 507 ; 507 ; >
     au < finished ; finished ; 2014 ; 10.1130/9780813725086 ; 978-0-8137-2508-6 ; Geological Society of America Special Papers Volume 508 ; 508 ; >
     au < frozen ; exists ; 2015 ; 10.1130/9780813725093 ; 978-0-8137-2509-3 ; Geological Society of America Special Papers Volume 509 ; 509 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725109 ; 978-0-8137-2510-9 ; Geological Society of America Special Papers Volume 510 ; 510 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725116 ; 978-0-8137-2511-6 ; Geological Society of America Special Papers Volume 511 ; 511 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725123 ; 978-0-8137-2512-3 ; Geological Society of America Special Papers Volume 512 ; 512 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725130 ; 978-0-8137-2513-0 ; Geological Society of America Special Papers Volume 513 ; 513 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725147 ; 978-0-8137-2514-7 ; Geological Society of America Special Papers Volume 514 ; 514 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725154 ; 978-0-8137-2515-4 ; Geological Society of America Special Papers Volume 515 ; 515 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725161 ; 978-0-8137-2516-1 ; Geological Society of America Special Papers Volume 516 ; 516 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725178 ; 978-0-8137-2517-8 ; Geological Society of America Special Papers Volume 517 ; 517 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725185 ; 978-0-8137-2518-5 ; Geological Society of America Special Papers Volume 518 ; 518 ; >
-    au < deepCrawl ; exists ; 2015 ; 10.1130/9780813725192 ; 978-0-8137-2519-2 ; Geological Society of America Special Papers Volume 519 ; 519 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725109 ; 978-0-8137-2510-9 ; Geological Society of America Special Papers Volume 510 ; 510 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725116 ; 978-0-8137-2511-6 ; Geological Society of America Special Papers Volume 511 ; 511 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725123 ; 978-0-8137-2512-3 ; Geological Society of America Special Papers Volume 512 ; 512 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725130 ; 978-0-8137-2513-0 ; Geological Society of America Special Papers Volume 513 ; 513 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725147 ; 978-0-8137-2514-7 ; Geological Society of America Special Papers Volume 514 ; 514 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725154 ; 978-0-8137-2515-4 ; Geological Society of America Special Papers Volume 515 ; 515 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725161 ; 978-0-8137-2516-1 ; Geological Society of America Special Papers Volume 516 ; 516 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725178 ; 978-0-8137-2517-8 ; Geological Society of America Special Papers Volume 517 ; 517 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725185 ; 978-0-8137-2518-5 ; Geological Society of America Special Papers Volume 518 ; 518 ; >
+    au < frozen ; exists ; 2015 ; 10.1130/9780813725192 ; 978-0-8137-2519-2 ; Geological Society of America Special Papers Volume 519 ; 519 ; >
     au < crawling ; exists ; 2016 ;  ;  ; Geological Society of America Special Papers Volume 520 ; 520 ; >
     au < crawling ; exists ; 2016 ;  ;  ; Geological Society of America Special Papers Volume 521 ; 521 ; >
 
@@ -821,7 +821,7 @@
     au < finished ; finished ; 2014 ; 978-0-8137-0037-3 ; GSA Field Guides Volume 37 ; 37 ; >
     au < finished ; finished ; 2014 ; 978-0-8137-0038-0 ; GSA Field Guides Volume 38 ; 38 ; >
     au < frozen ; exists ; 2015 ; 978-0-8137-0039-7 ; GSA Field Guides Volume 39 ; 39 ; >
-    au < deepCrawl ; exists ; 2015 ; 978-0-8137-0040-3 ; GSA Field Guides Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2015 ; 978-0-8137-0040-3 ; GSA Field Guides Volume 40 ; 40 ; >
     au < testing ; exists ; 2015 ;  ; GSA Field Guides Volume 41 ; 41 ; >
 
   }
