@@ -72,14 +72,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     rule = new MockCrawlRule();
 
     theDaemon = getMockLockssDaemon();
-    crawlManager = new TestableCrawlManagerImpl();
-    theDaemon.setCrawlManager(crawlManager);
-    statusSource = (CrawlManager.StatusSource)crawlManager;
     nodeManager = new MockNodeManager();
 
     pluginMgr = new MyPluginManager();
     pluginMgr.initService(theDaemon);
     theDaemon.setPluginManager(pluginMgr);
+    crawlManager = new TestableCrawlManagerImpl(pluginMgr);
+    theDaemon.setCrawlManager(crawlManager);
+    statusSource = (CrawlManager.StatusSource)crawlManager;
 
     crawlManager.initService(theDaemon);
 
@@ -126,6 +126,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
     MockNodeManager nodeMgr = new MockNodeManager();
     theDaemon.setNodeManager(nodeMgr, mau);
+    nodeManager.setAuState(new MockAuState());
     return mau;
   }
 
@@ -147,13 +148,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
-    MockArchivalUnit[] makeMockAus(int n) {
-      MockArchivalUnit[] res = new MockArchivalUnit[n];
-      for (int ix = 0; ix < n; ix++) {
-	res[ix] = newMockArchivalUnit("mau" + ix);
-      }
-      return res;
+  MockArchivalUnit[] makeMockAus(int n) {
+    MockArchivalUnit[] res = new MockArchivalUnit[n];
+    for (int ix = 0; ix < n; ix++) {
+      res[ix] = newMockArchivalUnit("mau" + ix);
     }
+    return res;
+  }
 
   public static class TestsWithAutoStart extends TestCrawlManagerImpl {
     public void setUp() throws Exception {
@@ -217,7 +218,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       waitForCrawlToFinish(sem);
       assertTrue("doCrawl() not called", crawler.doCrawlCalled());
 
-      crawlManager.auEventDeleted(mau);
+      crawlManager.auEventDeleted(new AuEvent(AuEvent.Type.Delete, false), mau);
 
       assertFalse(crawler.wasAborted());
     }
@@ -245,7 +246,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 		 sem1.take(TIMEOUT_SHOULDNT));
       //we know that doCrawl started
 
-      crawlManager.auEventDeleted(mau);
+      crawlManager.auEventDeleted(new AuEvent(AuEvent.Type.Delete, false), mau);
 
       assertTrue(crawler.wasAborted());
     }
@@ -1011,6 +1012,35 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertTrue(crawlManager.isAllowedPluginPermittedHost("baz42.edu"));
       assertFalse(crawlManager.isAllowedPluginPermittedHost("foo27.com;baz42.edu"));
     }
+
+    public void testDeleteRemovesFromHighPriorityQueue() {
+      crawlManager.disableCrawlStarter();
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_USE_ODC, "true");
+      MockArchivalUnit mau1 = newMockArchivalUnit("foo1");
+      PluginTestUtil.registerArchivalUnit(plugin, mau1);
+      CrawlReq req = new CrawlReq(mau1);
+      req.setPriority(8);
+      req.setRefetchDepth(1232);
+      crawlManager.enqueueHighPriorityCrawl(req);
+      //startNewContentCrawl
+      List<ArchivalUnit> quas = crawlManager.getHighPriorityAus();
+      assertEquals(ListUtil.list(mau1), quas);
+      crawlManager.auEventDeleted(new AuEvent(AuEvent.Type.Delete, false),
+				  mau1);
+      assertEmpty(crawlManager.getHighPriorityAus());
+      crawlManager.auEventCreated(new AuEvent(AuEvent.Type.Create, false),
+				  mau1);
+      assertEmpty(crawlManager.getHighPriorityAus());
+      crawlManager.enqueueHighPriorityCrawl(req);
+      assertEquals(ListUtil.list(mau1), crawlManager.getHighPriorityAus());
+      crawlManager.auEventDeleted(new AuEvent(AuEvent.Type.RestartDelete, false),
+				  mau1);
+      assertEmpty(crawlManager.getHighPriorityAus());
+      crawlManager.auEventCreated(new AuEvent(AuEvent.Type.Create, false),
+				  mau1);
+      assertEquals(ListUtil.list(mau1), crawlManager.getHighPriorityAus());
+    }
+
   }
 
   public static class TestsWithoutAutoStart extends TestCrawlManagerImpl {
@@ -1284,7 +1314,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     CrawlReq[] makeReqs(int n) {
       CrawlReq[] res = new CrawlReq[n];
       for (int ix = 0; ix < n; ix++) {
-	MockArchivalUnit mau = newMockArchivalUnit("mau" + ix);
+	MockArchivalUnit mau = newMockArchivalUnit(String.format("mau%2d", ix));
 	MockNodeManager nm = new MockNodeManager();
 	theDaemon.setNodeManager(nm, mau);
 	maus = new MockAuState();
@@ -1305,7 +1335,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 		long crawlAttempt, long crawlFinish,
 		String limiterKey) {
       req.priority = pri;
-      setAu((MockArchivalUnit)req.au,
+      setAu((MockArchivalUnit)req.getAu(),
 	    crawlResult, crawlAttempt, crawlFinish, limiterKey);
     }
 
@@ -1341,6 +1371,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       for (int ix = 0; ix <= 5; ix++) {
 	TreeSet sorted = new TreeSet(cmprtr());
 	sorted.addAll(CollectionUtil.randomPermutation(lst)); 
+	sorted.add(reqs[0]);
 	assertIsomorphic(reqs, sorted);
       }
     }
@@ -1348,7 +1379,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public void testCrawlPriorityComparator1() {
       ConfigurationUtil.setFromArgs(CrawlManagerImpl.PARAM_RESTART_AFTER_CRASH,
 				    "true"); 
-      CrawlReq[] reqs = makeReqs(8);
+      CrawlReq[] reqs = makeReqs(11);
       setReq(reqs[0], 1, Crawler.STATUS_WINDOW_CLOSED, 9999, 9999);
       setReq(reqs[1], 1, 0, 5000, 5000);
       setReq(reqs[2], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
@@ -1357,6 +1388,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setReq(reqs[5], 0, 0, -1, 500);
       setReq(reqs[6], 0, 0, 123, -1);
       setReq(reqs[7], 0, 0, 123, 456);
+      setReq(reqs[8], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setReq(reqs[9], 0, 0, -1, 500);
+      setReq(reqs[10], 1, 0, 5000, 5000);
+      for (int ix=8; ix<=10; ix++) {
+	reqs[ix].auDeleted();
+      }
+      assertFalse(reqs[8].isActive());
+      assertTrue(reqs[7].isActive());
       testCrawlPriorityComparator(reqs);
     }
 
@@ -1376,7 +1415,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     void setAuCreationTime(CrawlReq req, long time) {
-      MockAuState aus = (MockAuState)AuUtil.getAuState(req.au);
+      MockAuState aus = (MockAuState)AuUtil.getAuState(req.getAu());
       aus.setAuCreationTime(time);
     }
 
@@ -1450,7 +1489,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[14], 0, 125, 458, "bar");	// repair
 
       assertEquals(0, crawlManager.rebuildCount);
-      assertEquals(aus[5], crawlManager.nextReq().au);
+      assertEquals(aus[5], crawlManager.nextReq().getAu());
       assertEquals(1, crawlManager.rebuildCount);
       MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
 
@@ -1470,51 +1509,51 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       // Add a repair in pool bar
       MockCrawler cr14 = crawlManager.addToRunningRateKeys(aus[14], false);
 
-      assertEquals(aus[10], crawlManager.nextReq().au);
+      assertEquals(aus[10], crawlManager.nextReq().getAu());
       MockCrawler cr10 = crawlManager.addToRunningRateKeys(aus[10]);
       assertNotNull(getCrl(cr10));
       assertSame(getCrl(cr10), getCrl(cr14));
 
-      assertEquals(aus[0], crawlManager.nextReq().au);
-      assertEquals(aus[1], crawlManager.nextReq().au);
+      assertEquals(aus[0], crawlManager.nextReq().getAu());
+      assertEquals(aus[1], crawlManager.nextReq().getAu());
       crawlManager.delFromRunningRateKeys(aus[10]);
-      assertEquals(aus[11], crawlManager.nextReq().au);
+      assertEquals(aus[11], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[11]);
       aus[5].setShouldCrawlForNewContent(false);
       aus[10].setShouldCrawlForNewContent(false);
       aus[0].setShouldCrawlForNewContent(false);
       aus[1].setShouldCrawlForNewContent(false);
       aus[11].setShouldCrawlForNewContent(false);
-      assertEquals(aus[2], crawlManager.nextReq().au);
+      assertEquals(aus[2], crawlManager.nextReq().getAu());
       crawlManager.delFromRunningRateKeys(aus[5]);
-      assertEquals(aus[6], crawlManager.nextReq().au);
+      assertEquals(aus[6], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[6]);
       aus[2].setShouldCrawlForNewContent(false);
       aus[6].setShouldCrawlForNewContent(false);
       assertEquals(1, crawlManager.rebuildCount);
-      assertEquals(aus[3], crawlManager.nextReq().au);
+      assertEquals(aus[3], crawlManager.nextReq().getAu());
       assertEquals(2, crawlManager.rebuildCount);
-      assertEquals(aus[4], crawlManager.nextReq().au);
+      assertEquals(aus[4], crawlManager.nextReq().getAu());
       aus[3].setShouldCrawlForNewContent(false);
       aus[4].setShouldCrawlForNewContent(false);
       assertEquals(null, crawlManager.nextReq());
       crawlManager.delFromRunningRateKeys(aus[11]);
-      assertEquals(aus[12], crawlManager.nextReq().au);
+      assertEquals(aus[12], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[12]);
       assertEquals(null, crawlManager.nextReq());
       crawlManager.delFromRunningRateKeys(aus[12]);
       crawlManager.delFromRunningRateKeys(aus[6]);
       PluginTestUtil.registerArchivalUnit(plugin, auPri);
-      assertEquals(aus[7], crawlManager.nextReq().au);
+      assertEquals(aus[7], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[7]);
       aus[12].setShouldCrawlForNewContent(false);
       aus[7].setShouldCrawlForNewContent(false);
       auPri.setShouldCrawlForNewContent(false);
       crawlManager.startNewContentCrawl(auPri, 1, null, null, null);
-      assertEquals(auPri, crawlManager.nextReq().au);
+      assertEquals(auPri, crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(auPri);
       auPri.setShouldCrawlForNewContent(false);
-      assertEquals(aus[13], crawlManager.nextReq().au);
+      assertEquals(aus[13], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[13]);
       assertEquals(null, crawlManager.nextReq());
     }
@@ -1552,16 +1591,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[14], 0, 0, 4003, "bar"); // repair
 
       assertFalse(crawlManager.isWorthRebuildingQueue());
-      assertEquals(aus[10], crawlManager.nextReq().au);
+      assertEquals(aus[10], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[10]);
       aus[10].setShouldCrawlForNewContent(false);
       assertTrue(crawlManager.isWorthRebuildingQueue());
-      assertEquals(aus[5], crawlManager.nextReq().au);
+      assertEquals(aus[5], crawlManager.nextReq().getAu());
       MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
 
-      assertEquals(aus[0], crawlManager.nextReq().au);
+      assertEquals(aus[0], crawlManager.nextReq().getAu());
       aus[0].setShouldCrawlForNewContent(false);
-      assertEquals(aus[11], crawlManager.nextReq().au);
+      assertEquals(aus[11], crawlManager.nextReq().getAu());
       MockCrawler cr11 = crawlManager.addToRunningRateKeys(aus[11]);
       aus[11].setShouldCrawlForNewContent(false);
       assertNotSame(getCrl(cr5), getCrl(cr11));
@@ -1571,28 +1610,28 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertNotSame(getCrl(cr5), getCrl(cr8));
 
       // Next nc in foo should get same crl as repair
-      assertEquals(aus[6], crawlManager.nextReq().au);
+      assertEquals(aus[6], crawlManager.nextReq().getAu());
       MockCrawler cr6 = crawlManager.addToRunningRateKeys(aus[6]);
       aus[6].setShouldCrawlForNewContent(false);
       assertSame(getCrl(cr8), getCrl(cr6));
 
-      assertEquals(aus[12], crawlManager.nextReq().au);
+      assertEquals(aus[12], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[12]);
       aus[12].setShouldCrawlForNewContent(false);
-      assertEquals(aus[1], crawlManager.nextReq().au);
+      assertEquals(aus[1], crawlManager.nextReq().getAu());
       aus[1].setShouldCrawlForNewContent(false);
       crawlManager.delFromRunningRateKeys(aus[5]);
-      assertEquals(aus[7], crawlManager.nextReq().au);
+      assertEquals(aus[7], crawlManager.nextReq().getAu());
       crawlManager.addToRunningRateKeys(aus[7]);
       aus[7].setShouldCrawlForNewContent(false);
-      assertEquals(aus[2], crawlManager.nextReq().au);
+      assertEquals(aus[2], crawlManager.nextReq().getAu());
       aus[2].setShouldCrawlForNewContent(false);
-      assertEquals(aus[3], crawlManager.nextReq().au);
+      assertEquals(aus[3], crawlManager.nextReq().getAu());
       aus[3].setShouldCrawlForNewContent(false);
       crawlManager.delFromRunningRateKeys(aus[10]);
-      assertEquals(aus[13], crawlManager.nextReq().au);
-      assertEquals(aus[14], crawlManager.nextReq().au);
-      assertEquals(aus[4], crawlManager.nextReq().au);
+      assertEquals(aus[13], crawlManager.nextReq().getAu());
+      assertEquals(aus[14], crawlManager.nextReq().getAu());
+      assertEquals(aus[4], crawlManager.nextReq().getAu());
       assertNull(crawlManager.nextReq());
       assertFalse(crawlManager.isWorthRebuildingQueue());
 
@@ -1776,6 +1815,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	}
       }
     }
+
+
   }
 
   RegistryPlugin regplugin;
@@ -1883,6 +1924,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private Map<ArchivalUnit,Crawler> auCrawlerMap =
       new HashMap<ArchivalUnit,Crawler>();
 
+    TestableCrawlManagerImpl(PluginManager pmgr) {
+      pluginMgr = pmgr;
+    }
+
     protected Crawler makeFollowLinkCrawler(ArchivalUnit au) {
       MockCrawler crawler = getCrawler(au);
       crawler.setAu(au);
@@ -1945,7 +1990,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       mc.setAu(au);
       addToRunningCrawls(au, mc);
       auCrawlerMap.put(au, mc);
-      highPriorityCrawlRequests.remove(au);
+      highPriorityCrawlRequests.remove(au.getAuId());
       return mc;
     }
 

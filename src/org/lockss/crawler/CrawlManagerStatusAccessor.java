@@ -52,6 +52,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private static final String AU_COL_NAME = "au";
   private static final String CRAWL_TYPE = "crawl_type";
+  private static final String CRAWL_PRIORITY = "crawl_priority";
+  private static final String CRAWL_DEPTH = "crawl_depth";
   private static final String PLUGIN = "plugin";
   private static final String START_TIME_COL_NAME = "start";
 //   private static final String END_TIME_COL_NAME = "end";
@@ -85,6 +87,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     ListUtil.list(new StatusTable.SortRule(SORT_KEY1, true),
 		  new StatusTable.SortRule(SORT_KEY2, false));
 
+  private final List DEF_OMITTED =
+    ListUtil.list(PLUGIN, CRAWL_PRIORITY, CRAWL_DEPTH);
+
   private List<ColumnDescriptor> colDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
       new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
@@ -94,6 +99,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
 			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(CRAWL_PRIORITY, "Priority",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(CRAWL_DEPTH, "Depth",
+			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
 			   ColumnDescriptor.TYPE_DATE),
 //       new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
@@ -170,7 +179,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     table.setRows(getRows(cms, key, includeInternalAus, ct));
     table.setDefaultSortRules(sortRules);
     table.setColumnDescriptors(getColDescs(cms, ct),
-			       "-" + PLUGIN);
+			       "-" + StringUtil.separatedString(DEF_OMITTED,
+								";"));
     table.setSummaryInfo(getSummaryInfo(cms, ct));
   }
 
@@ -221,9 +231,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     Collection<CrawlReq> pendingQ = statusSource.getPendingQueue();
     if (pendingQ != null) {
       for (CrawlReq req : pendingQ) {
-	if (!includeInternalAus && pluginMgr.isInternalAu(req.au)) {
+	if (!includeInternalAus && pluginMgr.isInternalAu(req.getAu())) {
 	  continue;
-	} else if (key != null && !key.equals(req.au.getAuId())) {
+	} else if (key != null && !key.equals(req.getAuId())) {
 	  continue;
 	}
 	ct.waiting++;
@@ -235,14 +245,28 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private Map makeRow(CrawlReq req, Counts ct, int rowNum) {
     Map row = new HashMap();
-    ArchivalUnit au = req.au;
-    row.put(AU_COL_NAME,
-	    new StatusTable.Reference(au.getName(),
-				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-				      au.getAuId()));
-    row.put(PLUGIN, au.getPlugin().getPluginName());
+    ArchivalUnit au = req.getAu();
+    if (au != null) {
+      row.put(AU_COL_NAME,
+	      new StatusTable.Reference(au.getName(),
+					ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+					au.getAuId()));
+      row.put(PLUGIN, au.getPlugin().getPluginName());
+      row.put(CRAWL_STATUS, "Pending");
+    } else {
+      row.put(AU_COL_NAME, req.getAuName());
+      String auid = req.getAuId();
+      Plugin plug = pluginMgr.getPluginFromAuId(auid);
+      if (plug != null) {
+	row.put(PLUGIN, plug.getPluginName());
+      } else {
+	row.put(PLUGIN, PluginManager.pluginNameFromAuId(auid));
+      }
+      row.put(CRAWL_STATUS, "Inactive");
+    }
     row.put(CRAWL_TYPE, "New Content");
-    row.put(CRAWL_STATUS, "Pending");
+    row.put(CRAWL_PRIORITY, req.getPriority());
+    row.put(CRAWL_DEPTH, req.getRefetchDepth());
     row.put(SORT_KEY1, SORT_BASE_WAITING);
     row.put(SORT_KEY2, Integer.MAX_VALUE - rowNum);
     ct.waiting++;
@@ -264,6 +288,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       row.put(PLUGIN, au.getPlugin().getPluginName());
     }
     row.put(CRAWL_TYPE, status.getType());
+    row.put(CRAWL_PRIORITY, status.getPriority());
+    row.put(CRAWL_DEPTH, status.getRefetchDepth());
     if (status.getStartTime() > 0) {
       row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
       row.put(CONTENT_BYTES_FETCHED,

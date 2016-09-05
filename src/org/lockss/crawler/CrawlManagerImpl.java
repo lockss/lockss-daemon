@@ -289,7 +289,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String SINGLE_CRAWL_STATUS_TABLE =
                                     "single_crawl_status_table";
 
-  private PluginManager pluginMgr;
+  protected PluginManager pluginMgr;
   private AlertManager alertMgr;
 
   //Tracking crawls for the status info
@@ -383,10 +383,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     // register our AU event handler
     auCreateDestroyHandler = new AuEventHandler.Base() {
 	@Override public void auDeleted(AuEvent event, ArchivalUnit au) {
-	  auEventDeleted(au);
+	  auEventDeleted(event, au);
 	}
 	@Override public void auCreated(AuEvent event, ArchivalUnit au) {
-	  rebuildQueueSoon();
+	  auEventCreated(event, au);
 	}
       };
     pluginMgr.registerAuEventHandler(auCreateDestroyHandler);
@@ -848,7 +848,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }      
     }
     synchronized (highPriorityCrawlRequests) {
-      highPriorityCrawlRequests.remove(au);
+      highPriorityCrawlRequests.remove(au.getAuId());
     }
   }
 
@@ -900,8 +900,20 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  void auEventDeleted(ArchivalUnit au) {
-    removeAuFromQueues(au);
+  void auEventDeleted(AuEvent event, ArchivalUnit au) {
+    switch (event.getType()) {
+    case RestartDelete:
+    case Deactivate:
+      // Don't remove if being deleted due to plugin reload, but clear
+      // objects that will be re-instantiated
+      CrawlReq req = highPriorityCrawlRequests.get(au.getAuId());
+      if (req != null) {
+	req.auDeleted();
+      }
+      break;
+    default:
+      removeAuFromQueues(au);
+    }
     synchronized(runningCrawlersLock) {
       for (PoolCrawlers pc : poolMap.values()) {
 	for (Crawler crawler : pc.getCrawlers()) {
@@ -915,6 +927,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     for (CrawlerStatus status : cmStatus.getCrawlerStatusList()) {
       status.auDeleted(au);
     }
+  }
+
+  void auEventCreated(AuEvent event, ArchivalUnit au) {
+    // Check whether this AU was on the high priority queue when it was
+    // deactivated.  (Should be necessary only for RestartCreate but cheap
+    // to do always.)
+    CrawlReq req = highPriorityCrawlRequests.get(au.getAuId());
+    if (req != null) {
+      logger.debug2("Refresh: " + au + ", " + AuUtil.getAuState(au));
+      req.refresh(au, AuUtil.getAuState(au));
+    }
+
+    rebuildQueueSoon();
   }
 
   /** For all running crawls, collect those whose AU's priority is <=
@@ -1178,7 +1203,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void handReqToPool(CrawlReq req) {
-    ArchivalUnit au = req.au;
+    if (!req.isActive()) {
+      logger.warning("Inactive req: " + req);
+      return;
+    }
+
+    ArchivalUnit au = req.getAu();
     CrawlManager.Callback cb = req.cb;
     Object cookie = req.cookie;
     ActivityRegulator.Lock lock = req.lock;
@@ -1589,7 +1619,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   Deadline timeToRebuildCrawlQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
-  Map<ArchivalUnit,CrawlReq> highPriorityCrawlRequests = new ListOrderedMap();
+  Map<String,CrawlReq> highPriorityCrawlRequests = new ListOrderedMap();
   Comparator CPC = new CrawlPriorityComparator();
 
   Object queueLock = new Object();	// lock for sharedRateReqs and
@@ -1618,7 +1648,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   // ever happens
   void removeAuFromQueues(ArchivalUnit au) {
     synchronized (highPriorityCrawlRequests) {
-      highPriorityCrawlRequests.remove(au);
+      highPriorityCrawlRequests.remove(au.getAuId());
     }
     forceQueueRebuild();
   }
@@ -1766,6 +1796,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public Collection<CrawlReq> getPendingQueue() {
     Collection runKeys = copyRunKeys();
     TreeSet<CrawlReq> finalSort = new TreeSet(CPC);
+    synchronized (highPriorityCrawlRequests) {
+      finalSort.addAll(highPriorityCrawlRequests.values());
+    }
     synchronized (queueLock) {
       for (Iterator iter = sharedRateReqs.entrySet().iterator();
 	   iter.hasNext();) {
@@ -1782,9 +1815,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void enqueueHighPriorityCrawl(CrawlReq req) {
-    logger.debug("enqueueHighPriorityCrawl(" + req.au + ")");
+    logger.debug("enqueueHighPriorityCrawl(" + req.getAu() + ")");
     synchronized (highPriorityCrawlRequests) {
-      highPriorityCrawlRequests.put(req.au, req);
+      highPriorityCrawlRequests.put(req.getAuId(), req);
     }
     forceQueueRebuild();
     startOneWait.expire();
@@ -1825,7 +1858,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	try {
 	  CrawlReq req;
 	  synchronized (highPriorityCrawlRequests) {
-	    req = highPriorityCrawlRequests.get(au);
+	    req = highPriorityCrawlRequests.get(au.getAuId());
+	    if (req != null && !req.isActive()) {
+	      logger.warning("Found inactive req on queue: " + req);
+	      continue;
+	    }
 	  }
 	  if ((req != null || shouldCrawlForNewContent(au))) {
 	    ausWantCrawl++;
@@ -1893,7 +1930,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   List<ArchivalUnit> getHighPriorityAus() {
     synchronized (highPriorityCrawlRequests) {
-      return new ArrayList(highPriorityCrawlRequests.keySet());
+      List<ArchivalUnit> res = new ArrayList<ArchivalUnit>();
+      for (CrawlReq req : highPriorityCrawlRequests.values()) {
+	if (req.isActive()) {
+	  res.add(req.getAu());
+	}
+      }
+      return res;
     }
   }
 
@@ -1934,10 +1977,29 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     public int compare(Object o1, Object o2) {
       CrawlReq r1 = (CrawlReq)o1;
       CrawlReq r2 = (CrawlReq)o2;
-      ArchivalUnit au1 = r1.au;
-      ArchivalUnit au2 = r2.au;
-      AuState aus1 = r1.aus;
-      AuState aus2 = r2.aus;
+
+      if (r1 == r2) {
+	return 0;
+      }
+      // Avoid NPEs, and ensure reqs representing inactive AUs sort last
+      if (!r1.isActive()) {
+	if (!r2.isActive()) {
+	  // doesn't matter, but must return consistent order
+	  return r1.getAuId().compareTo(r2.getAuId());
+	} else {
+	  return 1;
+	}
+      } else {
+	if (!r2.isActive()) {
+	  return -1;
+	}
+      }
+
+      ArchivalUnit au1 = r1.getAu();
+      ArchivalUnit au2 = r2.getAu();
+      AuState aus1 = r1.getAuState();
+      AuState aus2 = r2.getAuState();
+
       CompareToBuilder ctb = 
 	new CompareToBuilder()
 	.append(-r1.priority, -r2.priority)
@@ -2048,7 +2110,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void startCrawl(CrawlReq req) {
-    ArchivalUnit au = req.au;
+    ArchivalUnit au = req.getAu();
     try {
       // doesn't return until thread available for next request
       handReqToPool(req);

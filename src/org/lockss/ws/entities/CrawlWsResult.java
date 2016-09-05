@@ -41,6 +41,7 @@ import java.util.List;
 public class CrawlWsResult {
   private String auId;
   private String auName;
+  private Integer priority;
   private String crawlKey;
   private String crawlType;
   private Long startTime;
@@ -89,6 +90,18 @@ public class CrawlWsResult {
   }
   public void setAuName(String auName) {
     this.auName = auName;
+  }
+
+  /**
+   * Provides the Archival Unit name.
+   * 
+   * @return a String with the name.
+   */
+  public Integer getPriority() {
+    return priority;
+  }
+  public void setPriority(Integer priority) {
+    this.priority = priority;
   }
 
   /**
@@ -394,7 +407,8 @@ public String getCrawlType() {
 
   @Override
   public String toString() {
-    return "CrawlWsResult [auId=" + auId + ", auName=" + auName + ", crawlKey="
+    return "CrawlWsResult [auId=" + auId + ", auName=" + auName
+        + ", priority=" + priority + ", crawlKey="
 	+ crawlKey + ", crawlType=" + crawlType + ", startTime=" + startTime
 	+ ", duration=" + duration + ", crawlStatus=" + crawlStatus
 	+ ", bytesFetchedCount=" + bytesFetchedCount + ", pagesFetchedCount="

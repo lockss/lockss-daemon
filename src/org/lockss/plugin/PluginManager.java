@@ -1864,6 +1864,10 @@ public class PluginManager
     return getPlugin(pluginKeyFromId(pluginId));
   }
 
+  public Plugin getPluginFromAuId(String auid) {
+    return getPlugin(pluginKeyFromId(pluginIdFromAuId(auid)));
+  }
+
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +

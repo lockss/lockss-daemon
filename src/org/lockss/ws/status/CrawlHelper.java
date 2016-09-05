@@ -65,6 +65,7 @@ public class CrawlHelper {
   //
   static String AU_ID = "auId";
   static String AU_NAME = "auName";
+  static String PRIORITY = "priority";
   static String CRAWL_KEY = "crawlKey";
   static String CRAWL_TYPE = "crawlType";
   static String START_TIME = "startTime";
@@ -99,6 +100,7 @@ public class CrawlHelper {
     {
       add(AU_ID);
       add(AU_NAME);
+      add(PRIORITY);
       add(CRAWL_KEY);
       add(CRAWL_TYPE);
       add(START_TIME);
@@ -223,6 +225,16 @@ public class CrawlHelper {
       }
 
       builder.append("auName=").append(result.getAuName());
+    }
+
+    if (result.getPriority() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("priority=").append(result.getPriority());
     }
 
     if (result.getCrawlKey() != null) {

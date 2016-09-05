@@ -53,6 +53,7 @@ public class CrawlWsSource extends CrawlWsResult {
 
   private boolean auIdPopulated = false;
   private boolean auNamePopulated = false;
+  private boolean priorityPopulated = false;
   private boolean crawlKeyPopulated = false;
   private boolean crawlTypePopulated = false;
   private boolean startTimePopulated = false;
@@ -119,6 +120,21 @@ public class CrawlWsSource extends CrawlWsResult {
     }
 
     return super.getAuName();
+  }
+
+  @Override
+  public Integer getPriority() {
+    if (!priorityPopulated) {
+      if (isStatus) {
+	setPriority(crawlerStatus.getPriority());
+      } else {
+	setPriority(crawlerRequest.getPriority());
+      }
+
+      priorityPopulated = true;
+    }
+
+    return super.getPriority();
   }
 
   @Override
@@ -502,6 +518,8 @@ public class CrawlWsSource extends CrawlWsResult {
 	    setRefetchDepth(Integer.valueOf(crawlerStatus.getRefetchDepth()));
 	  }
 	}
+      } else {
+	setRefetchDepth(Integer.valueOf(crawlerRequest.getRefetchDepth()));
       }
 
       refetchDepthPopulated = true;

@@ -360,6 +360,9 @@ public abstract class BaseCrawler implements Crawler {
     }
     setCrawlConfig(ConfigManager.getCurrentConfig());
     crawlStatus.setProxy(proxyStatus);
+    if (req != null) {
+      crawlStatus.setPriority(req.getPriority());
+    }
     // do this even if already aborted, so status doesn't get confused
     crawlStatus.signalCrawlStarted();
     try {

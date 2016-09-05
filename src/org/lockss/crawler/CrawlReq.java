@@ -37,11 +37,13 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 
 public class CrawlReq {
-  ArchivalUnit au;
+  private ArchivalUnit au;
+  String auid;
+  String auName;
   CrawlManager.Callback cb;
   Object cookie;
   ActivityRegulator.Lock lock;
-  AuState aus = null;
+  private AuState aus = null;
   Object rateKey;
   int priority = 0;
   int refetchDepth = -1;
@@ -53,6 +55,8 @@ public class CrawlReq {
   public CrawlReq(ArchivalUnit au, CrawlManager.Callback cb,
 	   Object cookie, ActivityRegulator.Lock lock) {
     this.au = au;
+    this.auid = au.getAuId();
+    this.auName = au.getName();
     this.cb = cb;
     this.cookie = cookie;
     this.lock = lock;
@@ -64,8 +68,30 @@ public class CrawlReq {
     priority = val;
   }
 
+  public void auDeleted() {
+    this.au = null;
+    this.aus = null;
+  }
+
+  public void refresh(ArchivalUnit au, AuState aus) {
+    this.au = au;
+    this.aus = aus;
+  }
+
+  public String getAuName() {
+    return auName;
+  }
+
+  public boolean isActive() {
+    return au != null /* && aus != null */;
+  }
+
   public void setCb(CrawlManager.Callback cb) {
     this.cb = cb;
+  }
+
+  public String getAuId() {
+    return auid;
   }
 
   public ArchivalUnit getAu() {
@@ -110,8 +136,18 @@ public class CrawlReq {
 
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("[CrawlReq: ");
-    sb.append(au);
+    sb.append("[CrawlReq");
+    if (au == null) {
+      sb.append("(I): ");
+      if (auName != null) {
+	sb.append(auName);
+      } else {
+	sb.append(auid);
+      }
+    } else {
+      sb.append(": ");
+      sb.append(au);
+    }
     sb.append(", pri: ");
     sb.append(priority);
     sb.append(", cb: ");

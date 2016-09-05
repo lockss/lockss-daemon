@@ -47,6 +47,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String AU_COL_NAME = "au";
   private static final String PLUGIN = "plugin";
   private static final String CRAWL_TYPE = "crawl_type";
+  private static final String CRAWL_PRIORITY = "crawl_priority";
+  private static final String CRAWL_DEPTH = "crawl_depth";
   private static final String START_TIME_COL_NAME = "start";
   private static final String END_TIME_COL_NAME = "end";
   private static final String DURATION_COL_NAME = "dur";
@@ -114,6 +116,10 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     ListUtil.fromArray(new ColumnDescriptor[] {
       new ColumnDescriptor(PLUGIN, "Plugin",
 			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(CRAWL_PRIORITY, "Priority",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(CRAWL_DEPTH, "Depth",
+			   ColumnDescriptor.TYPE_INT),
     });
 
 
