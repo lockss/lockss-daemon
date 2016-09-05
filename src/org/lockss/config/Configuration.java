@@ -353,10 +353,12 @@ public abstract class Configuration {
   static {
     boolStrings.put("true", Boolean.TRUE);
     boolStrings.put("yes", Boolean.TRUE);
+    boolStrings.put("y", Boolean.TRUE);
     boolStrings.put("on", Boolean.TRUE);
     boolStrings.put("1", Boolean.TRUE);
     boolStrings.put("false", Boolean.FALSE);
     boolStrings.put("no", Boolean.FALSE);
+    boolStrings.put("n", Boolean.FALSE);
     boolStrings.put("off", Boolean.FALSE);
     boolStrings.put("0", Boolean.FALSE);
   }
@@ -392,7 +394,7 @@ public abstract class Configuration {
    */
   public boolean getBoolean(String key, boolean dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     Boolean bool = stringToBool(val);
@@ -422,7 +424,7 @@ public abstract class Configuration {
    */
   public int getInt(String key, int dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     try {
@@ -495,7 +497,7 @@ public abstract class Configuration {
    */
   public long getLong(String key, long dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     try {
@@ -536,7 +538,7 @@ public abstract class Configuration {
    */
   public long getTimeInterval(String key, long dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     try {
@@ -573,7 +575,7 @@ public abstract class Configuration {
    */
   public long getSize(String key, long dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     try {
@@ -649,7 +651,7 @@ public abstract class Configuration {
    */
   public double getDouble(String key, double dfault) {
     String val = get(key);
-    if (val == null) {
+    if (StringUtil.isNullString(val)) {
       return dfault;
     }
     try {

@@ -127,6 +127,13 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("def", CurrentConfig.getParam("noprop", "def"));
   }
 
+  public void testHaveConfig() throws IOException {
+    assertFalse(mgr.haveConfig());
+    String u1 = FileTestUtil.urlOfString(c1);
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    assertTrue(mgr.haveConfig());
+  }
+
   volatile Configuration.Differences cbDiffs = null;
   List<Configuration> configs;
 
@@ -1462,25 +1469,26 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("false", config.get("bar"));
   }
 
-  public void testNoRemoteConfigCopy() throws Exception {
+  public void testNoRemoteConfigFailover() throws Exception {
     String url1 = "http://one/xxx.xml";
 
     assertFalse(mgr.hasLocalCacheConfig());
     // set up local config dir
     String tmpdir = getTempDir().toString();
-    Properties props = new Properties();
-    props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    mgr.setUpRemoteConfigCopy();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir,
+				  ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER,
+				  "false");
+    mgr.setUpRemoteConfigFailover();
 
     String relConfigPath =
       CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
                              ConfigManager.DEFAULT_CONFIG_PATH);
-    assertNull(mgr.getTempRemoteCopyFile(url1));
-    assertNull(mgr.getRemoteCopyFile(url1));
+    assertNull(mgr.getRemoteConfigFailoverTempFile(url1));
+    assertNull(mgr.getRemoteConfigFailoverFile(url1));
   }
 
-  public void testRemoteConfigCopyMap() throws Exception {
+  public void testRemoteConfigFailoverMap() throws Exception {
     String url1 = "http://one/xxx.xml";
     String url2 = "http://one/yyy.txt";
 
@@ -1491,33 +1499,33 @@ public class TestConfigManager extends LockssTestCase {
     props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
     ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir,
-				  ConfigManager.PARAM_REMOTE_CONFIG_COPY,
+				  ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER,
 				  "true");
-    mgr.setUpRemoteConfigCopy();
+    mgr.setUpRemoteConfigFailover();
     String relConfigPath =
       CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
                              ConfigManager.DEFAULT_CONFIG_PATH);
-    File tf1 = mgr.getTempRemoteCopyFile(url1);
+    File tf1 = mgr.getRemoteConfigFailoverTempFile(url1);
     assertMatchesRE("^" + tmpdir + ".*\\.tmp$", tf1.getPath());
     String sss = "sasdflkajsdlfj content dfljasdfl;ajsdf";
     StringUtil.toFile(tf1, sss);
     assertTrue(tf1.exists());
-    mgr.updateRemoteConfigCopy();
-    File pf1 = mgr.getRemoteCopyFile(url1);
+    mgr.updateRemoteConfigFailover();
+    File pf1 = mgr.getRemoteConfigFailoverFile(url1);
     assertTrue(pf1.exists());
     assertFalse(tf1.exists());
     assertMatchesRE("^" + tmpdir + ".*\\.xml\\.gz", pf1.getPath());
     assertReaderMatchesString(sss, new FileReader(pf1));
 
-    RemoteConfigCopyMap rccm = mgr.loadRemoteConfigCopyMap();
-    RemoteConfigCopyInfo rcci = rccm.get(url1);
+    RemoteConfigFailoverMap rccm = mgr.loadRemoteConfigFailoverMap();
+    RemoteConfigFailoverInfo rcci = rccm.get(url1);
     assertEquals(url1, rcci.getUrl());
     assertEquals(pf1.getName(), rcci.getFilename());
     assertEquals("01-xxx.xml.gz", rcci.getFilename());
 
-    File tf2 = mgr.getTempRemoteCopyFile(url2);
-    mgr.updateRemoteConfigCopy();
-    File pf2 = mgr.getRemoteCopyFile(url2);
+    File tf2 = mgr.getRemoteConfigFailoverTempFile(url2);
+    mgr.updateRemoteConfigFailover();
+    File pf2 = mgr.getRemoteConfigFailoverFile(url2);
     assertMatchesRE("02-yyy.txt.gz$", pf2.getPath());
   }
 

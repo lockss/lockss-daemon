@@ -86,8 +86,14 @@ public class MemoryConfigFile implements ConfigFile {
   public void setProperty(String key, Object val) {
   }
 
+  @Override
   public String getFileUrl() {
     return url;
+  }
+
+  @Override
+  public String getLoadedUrl() {
+    return getFileUrl();
   }
 
   public boolean isPlatformFile() {

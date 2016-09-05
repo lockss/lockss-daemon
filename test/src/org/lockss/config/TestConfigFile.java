@@ -167,6 +167,9 @@ public abstract class TestConfigFile extends LockssTestCase {
     super(name);
   }
 
+  /** subless should set this to the URL it generates */
+  protected String expectedUrl;
+
   /** subclass must implement to create a ConfigFile instance of the
    * appropriate type, with the specified content
    */
@@ -213,6 +216,8 @@ public abstract class TestConfigFile extends LockssTestCase {
 
     Configuration config = cf.getConfiguration();
     assertTrue(cf.isLoaded());
+    assertEquals(expectedUrl, cf.getFileUrl());
+    assertEquals(expectedUrl, cf.getLoadedUrl());
     String last = cf.getLastModified();
     assertNotNull("last modified shouldn't be null", last);
     assertNotEquals(prevAttempt, lastAttempt = cf.getLastAttemptTime());
@@ -427,8 +432,8 @@ public abstract class TestConfigFile extends LockssTestCase {
 
     protected ConfigFile makeConfigFile(String contents, boolean isXml)
 	throws IOException {
-      return new FileConfigFile(FileTestUtil.urlOfString(contents,
-							 suff(isXml)));
+      expectedUrl = FileTestUtil.urlOfString(contents, suff(isXml));
+      return new FileConfigFile(expectedUrl);
     }
 
     protected void updateLastModified(ConfigFile cf, long time)
@@ -508,8 +513,8 @@ public abstract class TestConfigFile extends LockssTestCase {
       Map entries = new HashMap();
       entries.put(entryName, contents);
       JarTestUtils.createStringJar(jarName, entries);
-      String url = UrlUtil.makeJarFileUrl(jarName, entryName);
-      return new JarConfigFile(url);
+      expectedUrl = UrlUtil.makeJarFileUrl(jarName, entryName);
+      return new JarConfigFile(expectedUrl);
     }
 
     protected void updateLastModified(ConfigFile cf, long time)
@@ -550,8 +555,8 @@ public abstract class TestConfigFile extends LockssTestCase {
 
     protected ConfigFile makeConfigFile(String contents, boolean isXml)
 	throws IOException {
-      return new MyHttpConfigFile("http://foo.bar/lockss" + suff(isXml),
-				  contents);
+      expectedUrl = "http://foo.bar/lockss" + suff(isXml);
+      return new MyHttpConfigFile(expectedUrl, contents);
     }
 
     protected void updateLastModified(ConfigFile cf, long time)
@@ -704,6 +709,20 @@ public abstract class TestConfigFile extends LockssTestCase {
       assertEquals("foo", config.get("prop.7"));
       assertEquals("bar", config.get("prop.8"));
       assertEquals("baz", config.get("prop.9"));
+      assertEquals(url1, hcf.getFileUrl());
+      assertMatchesRE("config\\d+\\.xml\\.gz", hcf.getLoadedUrl());
+
+      // Make sure it reloads successfully when site returns
+      hcf.setResponseCode(200);
+      hcf.setContent(xml1);
+      hcf.setNeedsReload();
+      Configuration config2 = hcf.getConfiguration();
+      assertNotSame(config, config2);
+      assertEquals("foo", config2.get("prop.7"));
+      assertEquals("bar", config2.get("prop.8"));
+      assertEquals("baz", config2.get("prop.9"));
+      assertEquals(url1, hcf.getFileUrl());
+      assertEquals(url1, hcf.getLoadedUrl());
     }
 
     public void testNoLocalFailover() throws IOException {
@@ -756,6 +775,10 @@ public abstract class TestConfigFile extends LockssTestCase {
       super(url);
       map.put(url, content);
       lastModified = dateString(TimeBase.nowMs());
+    }
+
+    public void setContent(String content) {
+      map.put(getFileUrl(), content);
     }
 
     protected LockssUrlConnection openUrlConnection(String url)
@@ -860,16 +883,25 @@ public abstract class TestConfigFile extends LockssTestCase {
   }
 
   // Just enough ConfigManager for HTTPConfigFile to save and load remote
-  // config copy files
+  // config failover files
   static class MyConfigManager extends ConfigManager {
     Map<String,File> tempfiles = new HashMap<String,File>();
     Map<String,File> permfiles = new HashMap<String,File>();
 
-    public File getTempRemoteCopyFile(String url) {
+    public File getRemoteConfigFailoverTempFile(String url) {
       return tempfiles.get(url);
     }
-    public File getRemoteCopyFile(String url) {
+    public File getRemoteConfigFailoverFile(String url) {
       return permfiles.get(url);
+    }
+    public RemoteConfigFailoverInfo getRcfi(String url) {
+      RemoteConfigFailoverInfo rcfi =
+	new RemoteConfigFailoverInfo(url, new File("remotedir/"), 1);
+      File perm = getRemoteConfigFailoverFile(url);
+      if (perm != null) {
+	rcfi.filename = perm.getName();
+      }
+      return rcfi;
     }
 
     void setTempFile(String url, File file) {

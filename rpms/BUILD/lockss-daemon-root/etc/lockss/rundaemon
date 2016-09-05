@@ -160,6 +160,8 @@ org.lockss.platform.watchdog.file=${WATCHDOG}
 org.lockss.platform.watchdog.interval=${WATCHDOG_SECS}s
 org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 org.lockss.config.serverAuthKeystore=${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}
+org.lockss.platform.remoteConfigFailover=${LOCKSS_CONFIG_FAILOVER_ENABLE}
+org.lockss.platform.remoteConfigFailoverMaxAge=${LOCKSS_CONFIG_FAILOVER_MAX_AGE}
 EOF
 cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOG_FILE}

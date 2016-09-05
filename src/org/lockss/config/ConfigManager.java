@@ -208,16 +208,23 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
-  /** If true, local copies of remote config files will be maintined, to
+  /** If true, local copies of remote config files will be maintained, to
    * allow daemon to start when config server isn't available. */
-  public static final String PARAM_REMOTE_CONFIG_COPY = PLATFORM +
-    "remoteConfigCopy";
-  public static final boolean DEFAULT_REMOTE_CONFIG_COPY = false;
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER = PLATFORM +
+    "remoteConfigFailover";
+  public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER = true;
 
   /** Dir in which to store local copies of remote config files. */
-  public static final String PARAM_REMOTE_CONFIG_COPY_DIR = PLATFORM +
-    "remoteConfigCopyDir";
-  public static final String DEFAULT_REMOTE_CONFIG_COPY_DIR = "remoteCopy";
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_DIR = PLATFORM +
+    "remoteConfigFailoverDir";
+  public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_DIR = "remoteCopy";
+
+  /** Maximum acceptable age of a remote config failover file, specified as
+   * an integer followed by h, d, w or y for hours, days, weeks and years.
+   * Zero means no age limit. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_MAX_AGE = PLATFORM +
+    "remoteConfigFailoverMaxAge";
+  public static final long DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE = 0;
 
 
 
@@ -240,8 +247,8 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
 
-  public static final String REMOTE_CONFIG_COPY_FILENAME =
-    "remote_config_copy_info.xml";
+  public static final String REMOTE_CONFIG_FAILOVER_FILENAME =
+    "remote_config_failover_info.xml";
 
   /** If set to a list of regexps, matching parameter names will be allowed
    * to be set in expert config.  */
@@ -464,6 +471,11 @@ public class ConfigManager implements LockssManager {
   private List pluginTitledbUrlList;	// list of titledb urls (usually
 					// jar:) specified by plugins
   private List userTitledbUrlList;	// titledb urls added from UI
+
+  private List<String> loadedUrls = Collections.EMPTY_LIST;
+  private List<String> specUrls = Collections.EMPTY_LIST;
+
+
   private String groupNames;		// daemon group names
 
   // Maps name of params holding included config URLs to the URL of the
@@ -712,6 +724,11 @@ public class ConfigManager implements LockssManager {
     return haveConfig.isFull();
   }
 
+  /** Return true if the first config load has completed. */
+  public boolean haveConfig() {
+    return haveConfig.isFull();
+  }
+
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
    * time a configuration has been loaded.) */
   public boolean waitConfig() {
@@ -803,6 +820,23 @@ public class ConfigManager implements LockssManager {
    */
   public List getConfigUrlList() {
     return configUrlList;
+  }
+
+  /**
+   * @return the List of config urls, including auxilliary files (e.g.,
+   * specified by {@value PARAM_TITLE_DB_URLS}).
+   */
+  public List getSpecUrlList() {
+    return specUrls;
+  }
+
+  /**
+   * @return the List of urls from which the config was actually loaded.
+   * This differs from {@link #getSpecUrlList()} in that it reflects any
+   * failover to local copies.
+   */
+  public List getLoadedUrlList() {
+    return loadedUrls;
   }
 
   ConfigFile.Generation getConfigGeneration(String url, boolean required,
@@ -975,7 +1009,7 @@ public class ConfigManager implements LockssManager {
       haveConfig.fill();
     }
     connPool.closeIdleConnections(0);
-    updateRemoteConfigCopy();
+    updateRemoteConfigFailover();
 
     return res;
   }
@@ -1007,6 +1041,10 @@ public class ConfigManager implements LockssManager {
     List gens;
     try {
       gens = getStandardConfigGenerations(urls, reload);
+    } catch (SocketException | UnknownHostException | FileNotFoundException e) {
+      log.error("Error loading config: " + e.toString());
+//       recentLoadError = e.toString();
+      return false;
     } catch (IOException e) {
       log.error("Error loading config", e);
 //       recentLoadError = e.toString();
@@ -1135,7 +1173,7 @@ public class ConfigManager implements LockssManager {
     platConfig.seal();
     platformConfig = platConfig;
     initCacheConfig(platConfig);
-    setUpRemoteConfigCopy();
+    setUpRemoteConfigFailover();
   }
 
   // If a keystore was specified for 
@@ -1212,7 +1250,7 @@ public class ConfigManager implements LockssManager {
     initCacheConfig(newConfig);
     setCurrentConfig(newConfig);
     updateGenerations(gens);
-    logConfigLoaded(newConfig, oldConfig, diffs, gens);
+    recordConfigLoaded(newConfig, oldConfig, diffs, gens);
     startCallbacksTime = TimeBase.nowMs();
     runCallbacks(newConfig, oldConfig, diffs);
     return true;
@@ -1293,21 +1331,42 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  private void buildLoadedFileLists(List<ConfigFile.Generation> gens) {
+    if (gens != null && !gens.isEmpty()) {
+      List<String> specNames = new ArrayList<String>(gens.size());
+      List<String> loadedNames = new ArrayList<String>(gens.size());
+      for (ConfigFile.Generation gen : gens) {
+	if (gen != null) {
+	  loadedNames.add(gen.getConfigFile().getLoadedUrl());
+	  specNames.add(gen.getConfigFile().getFileUrl());
+	}
+      }
+      loadedUrls = loadedNames;
+      specUrls = specNames;
+    } else {
+      loadedUrls = Collections.EMPTY_LIST;
+      specUrls = Collections.EMPTY_LIST;
+    }
+  }
+
+  private void recordConfigLoaded(Configuration newConfig,
+				  Configuration oldConfig,
+				  Configuration.Differences diffs,
+				  List gens) {
+    buildLoadedFileLists(gens);    
+    logConfigLoaded(newConfig, oldConfig, diffs, loadedUrls);
+  }
+
+  
+
   private void logConfigLoaded(Configuration newConfig,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs,
-			       List gens) {
+			       List<String> names) {
     StringBuffer sb = new StringBuffer("Config updated, ");
     sb.append(newConfig.keySet().size());
     sb.append(" keys");
-    if (gens != null && !gens.isEmpty()) {
-      List names = new ArrayList(gens.size());
-      for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-	ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
-	if (gen != null) {
-	  names.add(gen.getUrl());
-	}
-      }
+    if (!names.isEmpty()) {
       sb.append(" from ");
       sb.append(StringUtil.separatedString(names, ", "));
     }
@@ -2340,13 +2399,16 @@ public class ConfigManager implements LockssManager {
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
 
-  // Maintain local copy of remote config files
+  // Remote config failover mechanism maintain local copy of remote config
+  // files, uses them on daemon startup if origin file not available
 
-  File remoteCopyDir;
-  File remoteCopyInfoFile;
-  RemoteConfigCopyMap rccm;
+  File remoteConfigFailoverDir;			// Copies written to this dir
+  File remoteConfigFailoverInfoFile;		// State file
+  RemoteConfigFailoverMap rcfm;
+  long remoteConfigFailoverMaxAge = DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE;
 
-  static class RemoteConfigCopyInfo implements LockssSerializable {
+  /** Records state of one config failover file */
+  static class RemoteConfigFailoverInfo implements LockssSerializable {
     final String url;
     String filename;
     long date;
@@ -2354,13 +2416,13 @@ public class ConfigManager implements LockssManager {
     transient File tempfile;
     transient int seq;
 
-    RemoteConfigCopyInfo(String url, File dir, int seq) {
+    RemoteConfigFailoverInfo(String url, File dir, int seq) {
       this.dir = dir;
       this.url = url;
       this.seq = seq;
     }
 
-    void setRemoteCopyDir(File dir) {
+    void setRemoteConfigFailoverDir(File dir) {
       this.dir = dir;
     }
 
@@ -2382,7 +2444,7 @@ public class ConfigManager implements LockssManager {
 
     boolean update() {
       if (tempfile != null) {
-	log.debug("Rename " + tempfile + " -> " + getPermFileAbs());
+	log.debug2("Rename " + tempfile + " -> " + getPermFileAbs());
 	PlatformUtil.updateAtomically(tempfile, getPermFileAbs());
 	tempfile = null;
 	date = TimeBase.nowMs();
@@ -2407,32 +2469,33 @@ public class ConfigManager implements LockssManager {
     String getPermFilename() {
       if (filename == null) {
 	try {
-	  log.debug("Getting perm filename from: " + url);
+	  log.debug2("Getting perm filename from: " + url);
 	  String path = UrlUtil.getPath(url);
 	  String name = FilenameUtils.getBaseName(path);
 	  String ext = FilenameUtils.getExtension(path);
 	  filename = String.format("%02d-%s.%s.gz", seq, name, ext);
 	} catch (MalformedURLException e) {
+	  log.warning("Error building fialover filename", e);
 	  filename = String.format("%02d-config-file.gz", seq);
 	}
       }
-      log.debug("Perm filename: " + filename);
+      log.debug2("Perm filename: " + filename);
       return filename;
     }
 
   }
 
   /** Maps URL to rel filename */
-  static class RemoteConfigCopyMap implements LockssSerializable {
-    Map<String,RemoteConfigCopyInfo> map =
-      new HashMap<String,RemoteConfigCopyInfo>();
+  static class RemoteConfigFailoverMap implements LockssSerializable {
+    Map<String,RemoteConfigFailoverInfo> map =
+      new HashMap<String,RemoteConfigFailoverInfo>();
     int seq;
 
-    RemoteConfigCopyInfo put(String url, RemoteConfigCopyInfo rcci) {
-      return map.put(url, rcci);
+    RemoteConfigFailoverInfo put(String url, RemoteConfigFailoverInfo rcfi) {
+      return map.put(url, rcfi);
     }
 
-    RemoteConfigCopyInfo get(String url) {
+    RemoteConfigFailoverInfo get(String url) {
       return map.get(url);
     }
 
@@ -2440,134 +2503,155 @@ public class ConfigManager implements LockssManager {
       return ++seq;
     }
 
-    Collection<RemoteConfigCopyInfo> getColl() {
+    Collection<RemoteConfigFailoverInfo> getColl() {
       return map.values();
     }
 
     boolean update() {
       boolean isModified = false;
-      for (RemoteConfigCopyInfo rcci : getColl()) {
-	isModified |= rcci.update();
+      for (RemoteConfigFailoverInfo rcfi : getColl()) {
+	isModified |= rcfi.update();
       }
       return isModified;
     }
 
-    void setRemoteCopyDir(File dir) {
-      for (RemoteConfigCopyInfo rcci : getColl()) {
-	rcci.setRemoteCopyDir(dir);
+    void setRemoteConfigFailoverDir(File dir) {
+      for (RemoteConfigFailoverInfo rcfi : getColl()) {
+	rcfi.setRemoteConfigFailoverDir(dir);
       }
     }
-
   }
 
-  void setUpRemoteConfigCopy() {
-    // Set up local copy mechanism
+  void setUpRemoteConfigFailover() {
     Configuration plat = getPlatformConfig();
-    if (plat.getBoolean(PARAM_REMOTE_CONFIG_COPY, DEFAULT_REMOTE_CONFIG_COPY)) {
-      remoteCopyDir =
-	new File(cacheConfigDir, plat.get(PARAM_REMOTE_CONFIG_COPY_DIR,
-					  DEFAULT_REMOTE_CONFIG_COPY_DIR));
-      if (FileUtil.ensureDirExists(remoteCopyDir)) {
-	remoteCopyInfoFile = new File(cacheConfigDir,
-				      REMOTE_CONFIG_COPY_FILENAME);
-	rccm = loadRemoteConfigCopyMap();
+    if (plat.getBoolean(PARAM_REMOTE_CONFIG_FAILOVER,
+			DEFAULT_REMOTE_CONFIG_FAILOVER)) {
+      remoteConfigFailoverDir =
+	new File(cacheConfigDir, plat.get(PARAM_REMOTE_CONFIG_FAILOVER_DIR,
+					  DEFAULT_REMOTE_CONFIG_FAILOVER_DIR));
+      if (FileUtil.ensureDirExists(remoteConfigFailoverDir)) {
+	if (remoteConfigFailoverDir.canWrite()) {
+	  remoteConfigFailoverInfoFile =
+	    new File(cacheConfigDir, REMOTE_CONFIG_FAILOVER_FILENAME);
+	  rcfm = loadRemoteConfigFailoverMap();
+	  remoteConfigFailoverMaxAge =
+	    plat.getTimeInterval(PARAM_REMOTE_CONFIG_FAILOVER_MAX_AGE,
+				 DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE);
+	} else {
+	  log.error("Can't write to remote config failover dir: " +
+		    remoteConfigFailoverDir);
+	  remoteConfigFailoverDir = null;
+	  rcfm = null;
+	}
       } else {
-	log.error("Can't create remove config copy dir: " + remoteCopyDir);
-	remoteCopyDir = null;
-	rccm = null;
+	log.error("Can't create remote config failover dir: " +
+		  remoteConfigFailoverDir);
+	remoteConfigFailoverDir = null;
+	rcfm = null;
       }
     } else {
-      remoteCopyDir = null;
-      rccm = null;
+      remoteConfigFailoverDir = null;
+      rcfm = null;
     }
   }
 
-  public boolean isRemoteConfigCopyEnabled() {
-    return rccm != null;
+  public boolean isRemoteConfigFailoverEnabled() {
+    return rcfm != null;
   }
 
-  RemoteConfigCopyInfo getRcci(String url) {
-    RemoteConfigCopyInfo rcci = rccm.get(url);
-    if (rcci == null) {
-      rcci = new RemoteConfigCopyInfo(url, remoteCopyDir, rccm.nextSeq());
-      rccm.put(url, rcci);
+  RemoteConfigFailoverInfo getRcfi(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = rcfm.get(url);
+    if (rcfi == null) {
+      rcfi = new RemoteConfigFailoverInfo(url,
+					  remoteConfigFailoverDir,
+					  rcfm.nextSeq());
+      rcfm.put(url, rcfi);
     }
-    return rcci;
+    return rcfi;
   }
 
-  public File getRemoteCopyFile(String url) {
-    if (!isRemoteConfigCopyEnabled()) return null;
-    RemoteConfigCopyInfo rcci = getRcci(url);
-    log.critical("foo: " + url + ": " + rcci);
-    return rcci == null ? null : new File(remoteCopyDir, rcci.getFilename());
+  public File getRemoteConfigFailoverFile(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    if (remoteConfigFailoverMaxAge > 0 &&
+	TimeBase.msSince(rcfi.getDate()) > remoteConfigFailoverMaxAge) {
+      log.error("Remote config failover file is too old (" +
+		StringUtil.timeIntervalToString(TimeBase.msSince(rcfi.getDate())) +
+		" > " + StringUtil.timeIntervalToString(remoteConfigFailoverMaxAge) +
+		"): " + url);
+      return null;
+    }
+    return rcfi.getPermFileAbs();
   }    
 
-  public File getTempRemoteCopyFile(String url) {
-    if (!isRemoteConfigCopyEnabled()) return null;
-    RemoteConfigCopyInfo rcci = getRcci(url);
-    File tempfile = rcci.getTempFile();
+  public File getRemoteConfigFailoverTempFile(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    File tempfile = rcfi.getTempFile();
     if (tempfile != null) {
-      log.warning("getTempRemoteCopyFile: temp file already exists for " + url);
+      log.warning("getRemoteConfigFailoverTempFile: temp file already exists for " + url);
       FileUtil.safeDeleteFile(tempfile);
-      rcci.setTempFile(null);
+      rcfi.setTempFile(null);
     }
     try {
       tempfile =
-	FileUtil.createTempFile("remote_config", ".tmp", remoteCopyDir);
+	FileUtil.createTempFile("remote_config", ".tmp",
+				remoteConfigFailoverDir);
     } catch (IOException e) {
-      log.error("Can't create temp file for remote config copy of "
-		+ url + " in " + remoteCopyDir, e);
+      log.error("Can't create temp file for remote config failover copy of "
+		+ url + " in " + remoteConfigFailoverDir, e);
     }
-    rcci.setTempFile(tempfile);
+    rcfi.setTempFile(tempfile);
     return tempfile;
   }
 
-  void updateRemoteConfigCopy() {
-    if (!isRemoteConfigCopyEnabled()) return;
-    if (rccm.update()) {
+  void updateRemoteConfigFailover() {
+    if (!isRemoteConfigFailoverEnabled()) return;
+    if (rcfm.update()) {
       try {
-	storeRemoteConfigCopyMap(remoteCopyInfoFile);
+	storeRemoteConfigFailoverMap(remoteConfigFailoverInfoFile);
       } catch (IOException | SerializationException e) {
-	log.error("Error storing remote config copy map", e);
+	log.error("Error storing remote config failover map", e);
       }
     }
   }
 
-  void storeRemoteConfigCopyMap(File file)
+  void storeRemoteConfigFailoverMap(File file)
       throws IOException, SerializationException {
-    log.debug("storeRemoteConfigCopyMap: " + file);
+    log.debug2("storeRemoteConfigFailoverMap: " + file);
     try {
       ObjectSerializer serializer = new XStreamSerializer();
-      serializer.serialize(file, rccm);
+      serializer.serialize(file, rcfm);
     } catch (Exception e) {
-      log.error("Could not store remote config copy map", e);
+      log.error("Could not store remote config failover map", e);
       throw e;
     }
   }
 
   /**
-   * Load RemoteConfigCopyMap from a file
+   * Load RemoteConfigFailoverMap from a file
    * @param file         A source file.
-   * @return RemoteConfigCopyMap instance loaded from file (or a default
+   * @return RemoteConfigFailoverMap instance loaded from file (or a default
    *         value).
    */
-  RemoteConfigCopyMap loadRemoteConfigCopyMap() {
+  RemoteConfigFailoverMap loadRemoteConfigFailoverMap() {
     try {
-      log.debug3("Loading RemoteConfigCopyMap");
+      log.debug2("Loading RemoteConfigFailoverMap");
       ObjectSerializer deserializer = new XStreamSerializer();
-      RemoteConfigCopyMap map =
-	(RemoteConfigCopyMap)deserializer.deserialize(remoteCopyInfoFile);
-      map.setRemoteCopyDir(remoteCopyDir);
+      RemoteConfigFailoverMap map =
+	(RemoteConfigFailoverMap)deserializer.deserialize(remoteConfigFailoverInfoFile);
+      map.setRemoteConfigFailoverDir(remoteConfigFailoverDir);
       return map;
     } catch (SerializationException.FileNotFound se) {
-      log.debug("No RemoteConfigCopyMap, creating new one");
-      return new RemoteConfigCopyMap();
+      log.debug("No RemoteConfigFailoverMap, creating new one");
+      return new RemoteConfigFailoverMap();
     } catch (SerializationException se) {
-      log.error("Marshalling exception for RemoteConfigCopyMap", se);
-      return new RemoteConfigCopyMap();
+      log.error("Marshalling exception for RemoteConfigFailoverMap", se);
+      return new RemoteConfigFailoverMap();
     } catch (Exception e) {
-      log.error("Could not load RemoteConfigCopyMap", e);
-      throw new RuntimeException("Could not load RemoteConfigCopyMap", e);
+      log.error("Could not load RemoteConfigFailoverMap", e);
+      throw new RuntimeException("Could not load RemoteConfigFailoverMap", e);
     }
   }
 

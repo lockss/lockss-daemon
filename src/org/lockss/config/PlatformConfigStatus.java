@@ -142,9 +142,15 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       
       addSum(res, "Cwd",
 	     PlatformUtil.getInstance().getCwd());
-      List propsUrls = ConfigManager.getConfigManager().getConfigUrlList();
+      ConfigManager mgr = ConfigManager.getConfigManager();
+      List propsUrls = mgr.getSpecUrlList();
+      List loadedUrls = mgr.getLoadedUrlList();
       if (propsUrls != null) {
 	addSum(res, "Props", StringUtil.separatedString(propsUrls, ", "));
+	if (!propsUrls.equals(loadedUrls)) {
+	  addSum(res, "Loaded from local failover",
+		 StringUtil.separatedString(loadedUrls, ", "));
+	}
       }
       return res;
     }

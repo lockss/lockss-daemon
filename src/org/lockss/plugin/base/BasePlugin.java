@@ -224,7 +224,10 @@ public abstract class BasePlugin
 			   Configuration.Differences diffs) {
     // PJG: should we get this from the changedKeys?
     if (diffs.containsTdbPluginId(getPluginId())) {
-      setTitleConfigs(newConfig.getTdb());
+      Tdb tdb = newConfig.getTdb();
+      if (tdb != null) {
+	setTitleConfigs(tdb);
+      }
     }
   }
 

@@ -53,6 +53,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected String m_lastModified;
   // FileConfigFile assumes the url doesn't change
   protected String m_fileUrl;
+  protected String m_loadedUrl;
   protected String m_loadError = "Not yet loaded";
   protected IOException m_IOException;
   protected long m_lastAttempt;
@@ -81,8 +82,14 @@ public abstract class BaseConfigFile implements ConfigFile {
     m_cfgMgr = configMgr;
   }
 
+  @Override
   public String getFileUrl() {
     return m_fileUrl;
+  }
+
+  @Override
+  public String getLoadedUrl() {
+    return m_loadedUrl != null ? m_loadedUrl : m_fileUrl;
   }
 
   /** Return true if this file might contain platform values that are

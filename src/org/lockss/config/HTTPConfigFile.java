@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 import java.util.zip.GZIPOutputStream;
 import org.apache.commons.io.input.TeeInputStream;
 
@@ -266,14 +267,17 @@ public class HTTPConfigFile extends BaseConfigFile {
 	if (m_cfgMgr == null) {
 	  throw e;
 	}
-	File fileCopy = m_cfgMgr.getRemoteCopyFile(m_fileUrl);
-	if (fileCopy == null) {
+	File failoverFile = m_cfgMgr.getRemoteConfigFailoverFile(m_fileUrl);
+	if (failoverFile == null) {
 	  throw e;
 	}
 	// Found one, 
+	ConfigManager.RemoteConfigFailoverInfo rcfi = m_cfgMgr.getRcfi(m_fileUrl);
+	long date = rcfi.getDate();
 	log.info("Couldn't load remote config URL: " + m_fileUrl);
-	log.info("Substituting local copy: " + fileCopy);
-	failoverFcf = new FileConfigFile(fileCopy.getPath());
+	log.info("Substituting local copy created: " + new Date(date));
+	failoverFcf = new FileConfigFile(failoverFile.getPath());
+	m_loadedUrl = failoverFile.getPath();
       }
       return failoverFcf.openInputStream();
     }
@@ -316,20 +320,25 @@ public class HTTPConfigFile extends BaseConfigFile {
       in = getUrlInputStream(m_fileUrl);
     }
     if (in != null) {
+      m_loadedUrl = null; // we're no longer loaded from failover, if we were.
       File tmpCacheFile;
       // If so configured, save the contents of the remote file in a locally
       // cached copy.
       if (m_cfgMgr != null &&
-	  (tmpCacheFile = m_cfgMgr.getTempRemoteCopyFile(m_fileUrl)) != null) {
+	  (tmpCacheFile =
+	   m_cfgMgr.getRemoteConfigFailoverTempFile(m_fileUrl)) != null) {
 	try {
-	  log.debug("Copying remote config: " + m_fileUrl);
+	  log.log((  m_cfgMgr.haveConfig()
+		     ? Logger.LEVEL_DEBUG
+		     : Logger.LEVEL_INFO),
+		  "Copying remote config: " + m_fileUrl);
 	  OutputStream out =
 	    new BufferedOutputStream(new FileOutputStream(tmpCacheFile));
 	  out = new GZIPOutputStream(out, true);
 	  InputStream wrapped = new TeeInputStream(in, out, true);
 	  return wrapped;
 	} catch (IOException e) {
-	  log.error("Error opening remote config copy temp file: " +
+	  log.error("Error opening remote config failover temp file: " +
 		    tmpCacheFile, e);
 	  return in;
 	}
