@@ -809,6 +809,7 @@ Test results in ${test.results}
      </if>
     <junit1 fork="${fork}" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
+         tempdir="${tmpdir}"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <junitelem/>
       <jvmarg value="-server"/>
