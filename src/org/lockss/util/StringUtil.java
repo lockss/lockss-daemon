@@ -1460,7 +1460,7 @@ public class StringUtil {
 
   /** Parse a string as a time interval.  An interval is specified as an
    * integer with an optional suffix.  No suffix means milliseconds, s, m,
-   * h, d, w indicates seconds, minutes, hours, days and weeks
+   * h, d, w, y indicates seconds, minutes, hours, days, weeks and years
    * respectively.  As a special case, "ms" means milliseconds.
    * @param str the interval string
    * @return interval in milliseconds
@@ -1487,7 +1487,8 @@ public class StringUtil {
 	  case 'W': mult = Constants.WEEK; break;
 	  case 'Y': mult = Constants.YEAR; break;
 	  default:
-	    throw new NumberFormatException("Illegal time interval suffix");
+	    throw new NumberFormatException("Illegal time interval suffix: " +
+					    str);
 	  }
 	}
       }
