@@ -6,6 +6,7 @@
     info[contract] = 2013 ;
     info[tester] = 5
   >
+  # all titles moved to Sage April 2016.
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/
@@ -26,6 +27,7 @@
 
     param[journal_id] = ihe
     param[journal_issn] = 0950-4222
+    # moved to Sage April 2016.
 
     au < manifest ; exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 ; >
     au < manifest ; exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 ; >
@@ -59,6 +61,7 @@
 
     param[journal_id] = ije
     param[journal_issn] = 1465-7503
+    # moved to Sage April 2016.
 
     au < manifest ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
@@ -91,6 +94,7 @@
 
     param[journal_id] = ooa
     param[journal_issn] = 0030-7270
+    # moved to Sage April 2016.
 
     au < manifest ; exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 ; >
     au < manifest ; exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 ; >
@@ -124,6 +128,7 @@
 
     param[journal_id] = sear
     param[journal_issn] = 0967-828X
+    # moved to Sage April 2016.
 
     au < manifest ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; >
     au < manifest ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; >
@@ -156,6 +161,7 @@
 
     param[journal_id] = tec
     param[journal_issn] = 1354-8166
+    # moved to Sage April 2016.
 
     au < manifest ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 ; >
