@@ -589,6 +589,36 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 		 alert.getAttribute(Alert.ATTR_TEXT));
   }
 
+  public void testNoNewVersionAlertIfIdentcal() throws IOException {
+    String content = "123456789";
+    CIProperties props = new CIProperties();
+    assertEquals(0, alertMgr.getAlerts().size());
+
+    ud = new UrlData(new StringInputStream(content), props, TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertTrue(cacher.wasStored);
+    assertEquals(0, alertMgr.getAlerts().size());
+    ud = new UrlData(new StringInputStream(content), props, TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    cacher.storeContent();
+    assertEquals(0, alertMgr.getAlerts().size());
+
+    ud = new UrlData(new StringInputStream(content + "diff"), props, TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    cacher.storeContent();
+
+    assertEquals(1, alertMgr.getAlerts().size());
+    Alert alert = alertMgr.getAlerts().get(0);
+    assertEquals("NewFileVersion", alert.getAttribute(Alert.ATTR_NAME));
+    assertEquals(mau.getAuId(), alert.getAttribute(Alert.ATTR_AUID));
+    assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
+    assertEquals(Alert.SEVERITY_INFO,
+		 alert.getAttribute(Alert.ATTR_SEVERITY));
+    assertEquals("Collected an additional version: " + TEST_URL,
+		 alert.getAttribute(Alert.ATTR_TEXT));
+  }
+
   public void testCacheSizeAgrees() throws IOException {
     CIProperties props = new CIProperties();
     props.setProperty("Content-Length", "9");

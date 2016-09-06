@@ -54,6 +54,7 @@ public class MockRepositoryNode implements RepositoryNode {
   public Properties curProps;
   public int currentVersion = -1;
   public HashSet agreeingPeers = new HashSet();
+  boolean isIdenticalVersion = false;
 
   public String url;
   public String nodeLocation;
@@ -152,6 +153,14 @@ public class MockRepositoryNode implements RepositoryNode {
     newOutputCalled = false;
     newPropsSet = false;
     newVersionOpen = false;
+  }
+
+  public boolean isIdenticalVersion() {
+    return isIdenticalVersion;
+  }
+
+  public void setIdenticalVersion(boolean val) {
+    isIdenticalVersion = val;
   }
 
   public synchronized void deactivateContent() {

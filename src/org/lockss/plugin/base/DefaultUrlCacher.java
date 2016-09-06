@@ -328,7 +328,7 @@ public class DefaultUrlCacher implements UrlCacher {
       if (aus != null && markLastContentChanged) {
         aus.contentChanged();
       }
-      if (alreadyHasContent) {
+      if (alreadyHasContent && !leaf.isIdenticalVersion()) {
 	Alert alert = Alert.auAlert(Alert.NEW_FILE_VERSION, au);
 	alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
 	String msg = "Collected an additional version: " + getFetchUrl();

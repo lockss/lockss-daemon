@@ -791,25 +791,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
     versionTimeout = Deadline.in(
       CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
                                  DEFAULT_VERSION_TIMEOUT));
+    isIdenticalVersion = false;
+  }
+
+  private boolean isIdenticalVersion = false;
+
+  public boolean isIdenticalVersion() {
+    return isIdenticalVersion;
   }
 
   public synchronized void sealNewVersion() {
-    sealNewVersion(false);
-  }
-
-  public synchronized void sealNewVersion(boolean identicalVersion) {
     try {
-      if (!identicalVersion) {
-	if (curOutputStream==null) {
-	  throw new UnsupportedOperationException("getNewOutputStream() not called.");
-	} else {
-	  try {
-	    // make sure outputstream was closed
-	    curOutputStream.close();
-	  } catch (IOException ignore) { }
-	  curOutputStream = null;
-	}
+      if (curOutputStream==null) {
+	throw new UnsupportedOperationException("getNewOutputStream() not called, or already sealed.");
       }
+      // make sure outputstream was closed
+      IOUtil.safeClose(curOutputStream);
+      curOutputStream = null;
+
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
       }
@@ -858,7 +857,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // check temp vs. last version, so as not to duplicate identical versions
-      if (!identicalVersion && currentCacheFile.exists()) {
+      if (currentCacheFile.exists()) {
         try {
           // if identical, don't rename
           if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
@@ -867,7 +866,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	      logger.debug2("New version identical to old: " +
 			    currentCacheFile);
 	    }
-            identicalVersion = true;
+            isIdenticalVersion = true;
           } else if (!PlatformUtil.updateAtomically(currentCacheFile,
                                                     getVersionedCacheFile(currentVersion))) {
             String err = "Couldn't rename current content file: " + url;
@@ -884,7 +883,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // get versioned props file
       File verPropsFile;
       // name 'identical version' props differently
-      if (identicalVersion) {
+      if (isIdenticalVersion) {
         // rename to dated property version, using 'File.lastModified()'
         long date = currentPropsFile.lastModified();
         verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
@@ -899,7 +898,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE,
                                         DEFAULT_KEEP_ALL_PROPS_FOR_DUP_FILE)
-                                        || !identicalVersion) {
+                                        || !isIdenticalVersion) {
 	// rename current properties to chosen file name
 	if (currentPropsFile.exists() &&
 	    !PlatformUtil.updateAtomically(currentPropsFile,
@@ -911,7 +910,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // if not identical, rename content from 'temp' to 'current'
-      if (!identicalVersion) {
+      if (!isIdenticalVersion) {
         // rename new content file (if non-identical)
         if (!PlatformUtil.updateAtomically(tempCacheFile,
                                            currentCacheFile)) {
@@ -964,7 +963,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       newVersionOpen = false;
       versionTimeout.expire();
       // blank the stored sizes for this and its parents
-      if (!identicalVersion ||
+      if (!isIdenticalVersion ||
 	  CurrentConfig.getBooleanParam(PARAM_INVALIDATE_CACHED_SIZE_ON_DUP_STORE,
                                         DEFAULT_INVALIDATE_CACHED_SIZE_ON_DUP_STORE)) {
         invalidateCachedValues(true);

@@ -437,6 +437,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     os.close();
     leaf.setNewProperties(new Properties());
     leaf.sealNewVersion();
+    assertFalse(leaf.isIdenticalVersion());
     testFile = new File(tempDirPath + "/#content/1");
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/1.props");
@@ -491,6 +492,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testDeleteFileLocation() throws Exception {
@@ -541,6 +543,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testListEntriesNonexistentDir() throws Exception {
@@ -978,6 +981,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
     assertTrue(leaf.hasContent());
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testVersionTimeout() throws Exception {
@@ -1092,6 +1096,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
     assertEquals(2, leaf.getCurrentVersion());
+    assertFalse(leaf.isIdenticalVersion());
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
@@ -1165,6 +1170,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test content 22222");
     leaf.setNewProperties(props2);
     leaf.sealNewVersion();
+    assertFalse(leaf.isIdenticalVersion());
 
     assertTrue(testFile.exists());
     int expver = 2;
@@ -1231,6 +1237,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(2, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testMakeNewIdenticalVersionDefault() throws Exception {
@@ -1250,6 +1257,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream");
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
+    assertTrue(leaf.isIdenticalVersion());
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
@@ -1270,6 +1278,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(testFile.exists());
 //    testFile = new File(testFileDir, "1.props-123321");
 //    assertFalse(testFile.exists());
+
+    // ensure non-identical version clears isIdenticalVersion()
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream not the same");
+    leaf.sealNewVersion();
+    assertEquals(2, leaf.getCurrentVersion());
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testMakeNewIdenticalVersionOldWay() throws Exception {
@@ -1293,6 +1309,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream");
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
+    assertTrue(leaf.isIdenticalVersion());
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
@@ -1336,6 +1353,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream");
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
+    assertTrue(leaf.isIdenticalVersion());
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
@@ -1375,6 +1393,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     // fixes error state, even though identical
     assertEquals(1, leaf.getCurrentVersion());
+    assertTrue(leaf.isIdenticalVersion());
   }
 
   public void testMakeNewVersionFixesVersionError() throws Exception {
@@ -1393,6 +1412,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     // fixes error state
     assertEquals(1, leaf.getCurrentVersion());
+    assertFalse(leaf.isIdenticalVersion());
   }
 
   public void testUnsealedRnc() throws Exception {
@@ -1426,6 +1446,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     leaf.setNewProperties(props);
     leaf.sealNewVersion();
+    assertFalse(leaf.isIdenticalVersion());
     try {
       rnc.getInputStream();
       fail("Should throw");

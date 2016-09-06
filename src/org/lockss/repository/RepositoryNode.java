@@ -135,6 +135,11 @@ public interface RepositoryNode extends RepositoryNodeVersion {
   public void abandonNewVersion();
 
   /**
+   * Return true if the already-sealed node was identical to the previous
+   * version and was not stored. */
+  public boolean isIdenticalVersion();
+
+  /**
    * Deactivates the node.  This marks its content as inactive, but still allows
    * it to be present if it has children.  Throws if called while a version is
    * open.  To reactivate, call <code>restoreLastVersion()</code> or make a new
