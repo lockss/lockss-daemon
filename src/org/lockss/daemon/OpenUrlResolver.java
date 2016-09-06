@@ -130,6 +130,33 @@ public class OpenUrlResolver {
    */
   public static final int DEFAULT_MAX_PUBLISHERS_PER_ARTICLE = 10;
 
+  /**
+   * If true, use a web service, instead of the repository, to get the cached
+   * URLs.
+   */
+  public static final String PARAM_URL_CACHE_FROM_WS =
+      PREFIX + "urlCacheFromWs";
+  public static final boolean DEFAULT_URL_CACHE_FROM_WS = false;
+
+  /**
+   * The parameters of the web service used, instead of the repository, to
+   * obtain an indication of whether a URL is cached, if so configured.
+   */
+  public static final String IS_URL_CACHED_WS_PREFIX = PARAM_URL_CACHE_FROM_WS
+      + ".isUrlCachedWs.";
+  public static final String PARAM_IS_URL_CACHED_WS_USER_NAME =
+      IS_URL_CACHED_WS_PREFIX + "userName";
+  public static final String PARAM_IS_URL_CACHED_WS_PASSWORD =
+      IS_URL_CACHED_WS_PREFIX + "password";
+  public static final String PARAM_IS_URL_CACHED_WS_ADDRESS_LOCATION =
+      IS_URL_CACHED_WS_PREFIX + "addressLocation";
+  public static final String PARAM_IS_URL_CACHED_WS_TARGET_NAMESPACE =
+      IS_URL_CACHED_WS_PREFIX + "targetNameSpace";
+  public static final String PARAM_IS_URL_CACHED_WS_SERVICE_NAME =
+      IS_URL_CACHED_WS_PREFIX + "serviceName";
+  public static final String PARAM_IS_URL_CACHED_WS_TIMEOUT_VALUE =
+      IS_URL_CACHED_WS_PREFIX + "timeoutValue";
+  public static final int DEFAULT_IS_URL_CACHED_WS_TIMEOUT_VALUE = 600;
   
   private static final class FeatureEntry {
     final String auFeatureKey;
@@ -506,17 +533,39 @@ public class OpenUrlResolver {
    */
   public OpenUrlInfo resolveOpenUrl(Map<String,String> params) {
     final String DEBUG_HEADER = "resolveOpenUrl(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "params = " + params);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "params = " + params);
 
     OpenUrlInfo resolvedDirectly = noOpenUrlInfo;
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
       if (UrlUtil.isHttpOrHttpsUrl(rft_id)) {
-        resolvedDirectly = resolveFromUrl(rft_id);
-        if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
-          return resolvedDirectly;
+        boolean isUrlCachedFromWs = ConfigManager.getCurrentConfig()
+            .getBoolean(PARAM_URL_CACHE_FROM_WS, DEFAULT_URL_CACHE_FROM_WS);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "isUrlCachedFromWs = " + isUrlCachedFromWs);
+
+	if (isUrlCachedFromWs) {
+	  boolean isUrlCached = false;
+
+	  try {
+	    isUrlCached = new IsUrlCachedClient().isUrlCached(rft_id);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "isUrlCached = " + isUrlCached);
+	  } catch (Exception e) {
+	    log.warning("IsUrlCachedClient().isCached() threw: ", e);
+          }
+
+	  if (isUrlCached) {
+	    return OpenUrlInfo.newInstance(rft_id, null);
+	  }
+        } else {
+          resolvedDirectly = resolveFromUrl(rft_id);
+          if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
+            return resolvedDirectly;
+          }
         }
+
         if (log.isDebug3())
           log.debug3(DEBUG_HEADER + "Failed to resolve from URL: " + rft_id);
       } else if (rft_id.startsWith("info:doi/")) {
@@ -525,6 +574,7 @@ public class OpenUrlResolver {
         if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
           return resolvedDirectly;
         }
+
         if (log.isDebug3())
           log.debug3(DEBUG_HEADER + "Failed to resolve from DOI: " + doi);
       }
@@ -1039,10 +1089,7 @@ public class OpenUrlResolver {
    * @return OpenURLInfo with resolved URL
    */
   public OpenUrlInfo resolveFromUrl(String aUrl, String proxySpec) {
-    final String DEBUG_HEADER = "resolveFromUrl(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aUrl = " + aUrl);
     String url = resolveUrl(aUrl, proxySpec);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
     if (url != null) {
       CachedUrl cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
       if (cu != null) {
@@ -1123,8 +1170,6 @@ public class OpenUrlResolver {
    * @return the article url
    */
   public OpenUrlInfo resolveFromDOI(String doi) {
-    final String DEBUG_HEADER = "resolveFromDOI(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "doi = " + doi);
     if (!MetadataUtil.isDoi(doi)) {
       return noOpenUrlInfo;
     }
@@ -1244,6 +1289,7 @@ public class OpenUrlResolver {
   private OpenUrlInfo resolveFromDoi(DbManager dbMgr, String doi) {
     final String DEBUG_HEADER = "resolveFromDoi(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "doi = " + doi);
+
     Connection conn = null;
     try {
       conn = dbMgr.getConnection();
@@ -1260,9 +1306,31 @@ public class OpenUrlResolver {
       if (resultSet.next()) {
         String url = resultSet.getString(1);
         if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
-        OpenUrlInfo resolved = resolveFromUrl(url);
-        return resolved;
-        
+
+        boolean isUrlCachedFromWs = ConfigManager.getCurrentConfig()
+            .getBoolean(PARAM_URL_CACHE_FROM_WS, DEFAULT_URL_CACHE_FROM_WS);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "isUrlCachedFromWs = " + isUrlCachedFromWs);
+
+        if (isUrlCachedFromWs) {
+          boolean isUrlCached = false;
+
+          try {
+            isUrlCached = new IsUrlCachedClient().isUrlCached(url);
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "isUrlCached = " + isUrlCached);
+          } catch (Exception e) {
+	    log.warning("IsUrlCachedClient().isCached() threw: ", e);
+            return noOpenUrlInfo;
+          }
+
+          if (isUrlCached) {
+            return OpenUrlInfo.newInstance(url, null);
+          }
+        } else {
+          OpenUrlInfo resolved = resolveFromUrl(url);
+          return resolved;
+        }
       }
     } catch (SQLException ex) {
       log.error("Getting DOI:" + doi, ex);
@@ -1365,30 +1433,14 @@ public class OpenUrlResolver {
       DbManager dbMgr,
       String issn, String pub, String date, String volume, String issue, 
       String spage, String artnum, String author, String atitle) {
-    final String DEBUG_HEADER = "resolveFromIssn(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "issn = " + issn);
-      log.debug2(DEBUG_HEADER + "pub = " + pub);
-      log.debug2(DEBUG_HEADER + "date = " + date);
-      log.debug2(DEBUG_HEADER + "volume = " + volume);
-      log.debug2(DEBUG_HEADER + "issue = " + issue);
-      log.debug2(DEBUG_HEADER + "spage = " + spage);
-      log.debug2(DEBUG_HEADER + "artnum = " + artnum);
-      log.debug2(DEBUG_HEADER + "author = " + author);
-      log.debug2(DEBUG_HEADER + "atitle = " + atitle);
-    }
-
+          
     // true if properties specified a journal item
     boolean hasJournalSpec =
         (date != null) || (volume != null) || (issue != null);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "hasJournalSpec = " + hasJournalSpec);
 
     // true if properties specify an article
     boolean hasArticleSpec =    (spage != null) || (artnum != null) 
                              || (author != null) || (atitle != null);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "hasArticleSpec = " + hasArticleSpec);
 
     Connection conn = null;
     OpenUrlInfo resolved = null;
@@ -1528,15 +1580,10 @@ public class OpenUrlResolver {
       }
       
       String qstr = select.toString() + from.toString() + where.toString();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "qstr = " + qstr);
       // only one value expected; any more and the query was under-specified
       int maxPublishersPerArticle = getMaxPublishersPerArticle();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + "maxPublishersPerArticle = " + maxPublishersPerArticle);
-
       String[][] results = new String[maxPublishersPerArticle+1][11];
       int count = resolveFromQuery(conn, qstr, args, results);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
       if (count <= maxPublishersPerArticle) {
         // ensure at most one result per publisher+provider in case
         // more than one publisher+provider publishes the same serial
@@ -1544,13 +1591,10 @@ public class OpenUrlResolver {
         for (int i = 0; i < count; i++) {
           // combine publisher and provider columns to determine uniqueness
           if (!pubs.add(results[i][1] + results[i][10])) {
-            if (log.isDebug2())
-              log.debug2(DEBUG_HEADER + "return " + noOpenUrlInfo);
             return noOpenUrlInfo;
           }
           OpenUrlInfo info = OpenUrlInfo.newInstance(results[i][0], null, 
                                                 OpenUrlInfo.ResolvedTo.ARTICLE);
-          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "info = " + info);
           if (resolved == null) {
             resolved = info;
           } else {
@@ -1563,7 +1607,6 @@ public class OpenUrlResolver {
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "resolved = " + resolved);
     return (resolved == null) ? noOpenUrlInfo : resolved;
   }
 
@@ -1594,7 +1637,7 @@ public class OpenUrlResolver {
   private int resolveFromQuery(Connection conn, String query,
       List<String> args, String[][] results) throws DbException {
     final String DEBUG_HEADER = "resolveFromQuery(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "query: " + query);
+    log.debug3(DEBUG_HEADER + "query: " + query);
 
     PreparedStatement stmt =
 	daemon.getDbManager().prepareStatement(conn, query);

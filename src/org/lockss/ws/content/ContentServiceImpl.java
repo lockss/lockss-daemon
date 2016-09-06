@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -289,6 +285,122 @@ public class ContentServiceImpl implements ContentService {
 	} finally {
 	  AuUtil.safeRelease(versionedCu);
 	}
+      }
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+      throw new LockssWebServicesFault(e);
+    } finally {
+      AuUtil.safeRelease(cu);
+    }
+  }
+
+  /**
+   * Provides an indication of whether the content defined by a URL and Archival
+   * Unit is cached.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return a boolean with the indication.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public boolean isUrlCached(String url, String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "isUrlCached(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "url = " + url);
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+    }
+
+    if (StringUtil.isNullString(url)) {
+      throw new LockssWebServicesFault("Missing required URL");
+    }
+
+    return isUrlVersionCached(url, auId, null);
+  }
+
+  /**
+   * Provides an indication of whether the content defined by a URL, an Archival
+   * Unit and a version is cached.
+   * 
+   * @param url
+   *          A String with the URL.
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @param version
+   *          An Integer with the requested version of the content.
+   * @return a boolean with the indication.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public boolean isUrlVersionCached(String url, String auId, Integer version)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "isUrlVersionCached(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "url = " + url);
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "version = " + version);
+    }
+
+    if (StringUtil.isNullString(url)) {
+      throw new LockssWebServicesFault("Missing required URL");
+    }
+
+    if (StringUtil.isNullString(auId) && version != null) {
+      throw new LockssWebServicesFault("To check a specific version, the "
+	  + "Archival Unit identifier (auId) is required");
+    }
+
+    boolean result = true;
+    CachedUrl cu = null;
+
+    try {
+      PluginManager pluginMgr =
+	  LockssDaemon.getLockssDaemon().getPluginManager();
+
+      if (StringUtil.isNullString(auId)) {
+        // Find a CU with content.
+        cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+
+        result = !(cu == null);
+      } else {
+	ArchivalUnit au = pluginMgr.getAuFromId(auId);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+        if (au == null) {
+          result = false;
+        } else {
+          cu = au.makeCachedUrl(url);
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+
+          if (cu == null) {
+            result = false;
+          } else {
+            // Check whether a specific version has been requested that is not
+            // the version of the current CachedUrl.
+            if (version != null && version.intValue() != cu.getVersion()) {
+              // Yes: Get the requested version CachedUrl.
+              CachedUrl versionedCu = cu.getCuVersion(version);
+
+              // Check whether the requested version CachedUrl does not exist.
+              if (versionedCu == null) {
+        	// Yes: Report the problem.
+        	result = false;
+              } else {
+        	// No: Replace the current CachedUrl with the versioned one.
+        	AuUtil.safeRelease(cu);
+        	cu = versionedCu;
+        	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+              }
+            }
+          }
+        }
       }
 
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
