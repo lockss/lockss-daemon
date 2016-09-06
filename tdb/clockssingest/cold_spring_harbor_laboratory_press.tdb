@@ -45,8 +45,8 @@
       au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; >
       au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 ; >
       au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; >
+      au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; >
       au < crawling ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; >
 
     }
@@ -69,7 +69,7 @@
       au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 ; >
       au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 ; >
       au < crawling ; exists ; 2016 ; Cold Spring Harbor Perspectives in Medicine Volume 6 ; 6 ; >
 
     }
@@ -98,7 +98,7 @@
       au < exists ; exists ; 2012 ; Cold Spring Harbor Protocols Volume 2012 ; 2012 ; >
       au < exists ; exists ; 2013 ; Cold Spring Harbor Protocols Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; Cold Spring Harbor Protocols Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; >
+      au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; >
       
     }
@@ -247,7 +247,7 @@
       au < exists ; exists ; 2012 ; Genes & Development Volume 26 ; 26 ; >
       au < exists ; exists ; 2013 ; Genes & Development Volume 27 ; 27 ; >
       au < finished ; finished ; 2014 ; Genes & Development Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2015 ; Genes & Development Volume 29 ; 29 ; >
+      au < deepCrawl ; exists ; 2015 ; Genes & Development Volume 29 ; 29 ; >
       au < crawling ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
 
     }
@@ -291,7 +291,7 @@
       au < exists ; exists ; 2012 ; Genome Research Volume 22 ; 22 ; >
       au < exists ; exists ; 2013 ; Genome Research Volume 23 ; 23 ; >
       au < frozen ; exists ; 2014 ; Genome Research Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; >
+      au < deepCrawl ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; >
       au < crawling ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; >
 
     }
@@ -332,7 +332,7 @@
       au < exists ; exists ; 2012 ; Learning & Memory Volume 19 ; 19 ; >
       au < exists ; exists ; 2013 ; Learning & Memory Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Learning & Memory Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2015 ; Learning & Memory Volume 22 ; 22 ; >
+      au < deepCrawl ; exists ; 2015 ; Learning & Memory Volume 22 ; 22 ; >
       au < crawling ; exists ; 2016 ; Learning & Memory Volume 23 ; 23 ; >
 
     }
@@ -371,8 +371,8 @@
       au < exists ; exists ; 2011 ; RNA Volume 17 ; 17 ; >
       au < exists ; exists ; 2012 ; RNA Volume 18 ; 18 ; >
       au < exists ; exists ; 2013 ; RNA Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2014 ; RNA Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2015 ; RNA Volume 21 ; 21 ; >
+      au < deepCrawl ; exists ; 2014 ; RNA Volume 20 ; 20 ; >
+      au < deepCrawl ; exists ; 2015 ; RNA Volume 21 ; 21 ; >
       au < crawling ; exists ; 2016 ; RNA Volume 22 ; 22 ; >
 
     }

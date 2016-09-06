@@ -101,8 +101,8 @@
       au < manifest ; exists ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 ; >
       au < crawling ; exists ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 ; >
       au < crawling ; exists ; 2013 ; Journal of Sedimentary Research Volume 83 ; 83 ; >
-      au < crawling ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 ; >
-      au < crawling ; exists ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 ; >
+      au < deepCrawl ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 ; >
+      au < deepCrawl ; exists ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 ; >
       au < crawling ; exists ; 2016 ; Journal of Sedimentary Research Volume 86 ; 86 ; >
 
   }
@@ -145,7 +145,7 @@
       au < crawling ; exists ; 2012 ; PALAIOS Volume 27 ; 27 ; >
       au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2015 ; PALAIOS Volume 30 ; 30 ; >
+      au < deepCrawl ; exists ; 2015 ; PALAIOS Volume 30 ; 30 ; >
       au < crawling ; exists ; 2016 ; PALAIOS Volume 31 ; 31 ; >
 
   }
