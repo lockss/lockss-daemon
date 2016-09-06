@@ -48,7 +48,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.2.4]";
+  public static final String VERSION = "[TdbOut:0.2.5]";
   
   /**
    * <p>
@@ -606,7 +606,7 @@ public class TdbOut {
       options.put(KEY_STYLE, STYLE_CSV.equals(style) ? STYLE_CSV : STYLE_TSV);
     }
     if (cmd.hasOption(KEY_FIELDS)) {
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValues(KEY_FIELDS)));
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_FIELDS).split(",")));
     }
 
     if (getStyle(options) != null) {
