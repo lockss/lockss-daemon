@@ -301,7 +301,7 @@
       au < crawling ; exists ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 ; >
       au < finished ; crawling ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; >
 
     }
   }
@@ -502,7 +502,7 @@
       au < crawling ; exists ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 ; >
       au < finished ; crawling ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 ; >
 
     }
   }
@@ -628,9 +628,9 @@
 
       au < testing ; exists ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 ; >
       au < testing ; exists ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 ; >
-      au < testing ; exists ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; >
-      au < testing ; exists ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; >
-      au < testing ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
       au < exists ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
       au < exists ; exists ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; >
       au < exists ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
@@ -703,7 +703,7 @@
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; >
 
     }
   }
@@ -740,7 +740,7 @@
       au < crawling ; exists ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
 
     }
   }
@@ -788,7 +788,7 @@
       au < finished ; finished ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 ; >
       au < finished ; finished ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 ; >
 
     }
   }
@@ -938,7 +938,7 @@
       au < crawling ; exists ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Journal of Environmental Monitoring Volume 18 ; 18 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Journal of Environmental Monitoring Volume 18 ; 18 ; 2016 ; >
 
     }
   }
@@ -1027,7 +1027,7 @@
       au < crawling ; exists ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 ; >
 
     }
   }
@@ -1064,7 +1064,7 @@
       au < crawling ; exists ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 ; >
       au < finished ; finished ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Metallomics Volume 8 ; 8 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Metallomics Volume 8 ; 8 ; 2016 ; >
 
     }
   }
@@ -1104,7 +1104,7 @@
       au < crawling ; exists ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 ; >
       au < finished ; crawling ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Molecular BioSystems Volume 12 ; 12 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Molecular BioSystems Volume 12 ; 12 ; 2016 ; >
 
     }
   }
