@@ -87,11 +87,19 @@ public interface CrawlManager {
 				   CrawlManager.Callback cb,
 				   Object cookie, ActivityRegulator.Lock lock);
 
+  /**
+   * Starts a new content crawl specified by a CrawlReq
+   *
+   * @param req
+   * @param lock the activity lock (can be null)
+   */
+  public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock);
+
   /** Return the CrawlRateLimiter assigned to the crawler. */
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler);
 
   /** Return true if the periodic crawl starter is running */
-  public boolean isCrawlStarterEnabled();
+  public boolean isCrawlStarterRunning();
 
   /** Return the StatusSource */
   public StatusSource getStatusSource();
@@ -135,6 +143,9 @@ public interface CrawlManager {
 
     /** Return true if the crawler is enabled */
     public boolean isCrawlerEnabled();
+
+    /** Return true if the crawl starter is enabled */
+    public boolean isCrawlStarterEnabled();
 
     /** Return collection of pending CrawlReq */
     Collection<CrawlReq> getPendingQueue();

@@ -236,7 +236,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	} else if (key != null && !key.equals(req.getAuId())) {
 	  continue;
 	}
-	ct.waiting++;
 	rows.add(makeRow(req, ct, rowNum++));
       }
     }
@@ -407,22 +406,28 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       }	
     }
 
-    Deadline nextStarter = cms.getNextCrawlStarter();
     if (!statusSource.isCrawlerEnabled()) {
       res.add(new StatusTable.SummaryInfo("Crawler is disabled",
 					  ColumnDescriptor.TYPE_STRING,
 					  null));
-    } else if (nextStarter != null) {
-      String instr;
-      long in = TimeBase.msUntil(nextStarter.getExpirationTime());
-      if (in > 0) {
-	instr = StringUtil.timeIntervalToString(in);
-      } else {
-	instr = "running";
-      }
-      res.add(new StatusTable.SummaryInfo("Crawl Starter",
+    } else if (!statusSource.isCrawlStarterEnabled()) {
+      res.add(new StatusTable.SummaryInfo("Crawler starter is disabled",
 					  ColumnDescriptor.TYPE_STRING,
-					  instr));
+					  null));
+    } else {
+      Deadline nextStarter = cms.getNextCrawlStarter();
+      if (nextStarter != null) {
+	String instr;
+	long in = TimeBase.msUntil(nextStarter.getExpirationTime());
+	if (in > 0) {
+	  instr = StringUtil.timeIntervalToString(in);
+	} else {
+	  instr = "running";
+	}
+	res.add(new StatusTable.SummaryInfo("Crawl Starter",
+					    ColumnDescriptor.TYPE_STRING,
+					    instr));
+      }
     }
     return res;
   }

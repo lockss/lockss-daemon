@@ -92,6 +92,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "enabled";
   static final boolean DEFAULT_CRAWLER_ENABLED = true;
 
+  /** Set false to prevent the crawl starter from starting queued crawls.
+   * Allows queues to be built, which {@value #PARAM_CRAWLER_ENABLED}
+   * doesn't. */
+  public static final String PARAM_CRAWL_STARTER_ENABLED =
+    PREFIX + "starterEnabled";
+  static final boolean DEFAULT_CRAWL_STARTER_ENABLED = true;
+
   /** Use thread pool and queue if true, start threads directly if false.
    * Only takes effect at startup. */
   public static final String PARAM_CRAWLER_QUEUE_ENABLED =
@@ -314,6 +321,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long repairCrawlExpiration;
   private float percentRepairFromCache;
   private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
+  private boolean crawlStarterEnabled = DEFAULT_CRAWL_STARTER_ENABLED;
   private boolean paramQueueEnabled = DEFAULT_CRAWLER_QUEUE_ENABLED;
   private int paramMaxPoolSize = DEFAULT_CRAWLER_THREAD_POOL_MAX;
   private boolean paramOdc = DEFAULT_USE_ODC;
@@ -459,6 +467,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crawlerEnabled =
 	config.getBoolean(PARAM_CRAWLER_ENABLED,
 			  DEFAULT_CRAWLER_ENABLED);
+      crawlStarterEnabled =
+	config.getBoolean(PARAM_CRAWL_STARTER_ENABLED,
+			  DEFAULT_CRAWL_STARTER_ENABLED);
 
       paramQueueEnabled =
 	config.getBoolean(PARAM_CRAWLER_QUEUE_ENABLED,
@@ -903,7 +914,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   void auEventDeleted(AuEvent event, ArchivalUnit au) {
     switch (event.getType()) {
     case RestartDelete:
-    case Deactivate:
       // Don't remove if being deleted due to plugin reload, but clear
       // objects that will be re-instantiated
       CrawlReq req = highPriorityCrawlRequests.get(au.getAuId());
@@ -1490,18 +1500,22 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   // Crawl starter thread.
 
   private CrawlStarter crawlStarter = null;
-  private boolean isCrawlStarterEnabled = false;
+  private boolean isCrawlStarterRunning = false;
+
+  public boolean isCrawlStarterEnabled() {
+    return crawlStarterEnabled;
+  }
 
   public void enableCrawlStarter() {
     if (crawlStarter != null) {
       logger.debug("Crawl starter already running; stopping old one first");
       disableCrawlStarter();
     }
-    if (paramStartCrawlsInterval > 0) {
+    if (crawlStarterEnabled && paramStartCrawlsInterval > 0) {
       logger.info("Starting crawl starter");
       crawlStarter = new CrawlStarter();
       new Thread(crawlStarter).start();
-      isCrawlStarterEnabled = true;
+      isCrawlStarterRunning = true;
     } else {
       logger.info("Crawl starter not enabled");
     }
@@ -1514,11 +1528,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crawlStarter.waitExited(Deadline.in(Constants.SECOND));
       crawlStarter = null;
     }
-    isCrawlStarterEnabled = false;
+    isCrawlStarterRunning = false;
   }
 
-  public boolean isCrawlStarterEnabled() {
-    return isCrawlStarterEnabled;
+  public boolean isCrawlStarterRunning() {
+    return isCrawlStarterRunning;
   }
 
   /** Orders CrawlRunners according to the sort order they specify */

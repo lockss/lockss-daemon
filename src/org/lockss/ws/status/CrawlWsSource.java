@@ -98,7 +98,7 @@ public class CrawlWsSource extends CrawlWsResult {
       if (isStatus) {
 	setAuId(crawlerStatus.getAuId());
       } else {
-	setAuId(crawlerRequest.getAu().getAuId());
+	setAuId(crawlerRequest.getAuId());
       }
 
       auIdPopulated = true;
@@ -113,7 +113,7 @@ public class CrawlWsSource extends CrawlWsResult {
       if (isStatus) {
 	setAuName(crawlerStatus.getAuName());
       } else {
-	setAuName(crawlerRequest.getAu().getName());
+	setAuName(crawlerRequest.getAuName());
       }
 
       auNamePopulated = true;
@@ -206,7 +206,7 @@ public class CrawlWsSource extends CrawlWsResult {
       if (isStatus) {
 	setCrawlStatus(crawlerStatus.getCrawlStatusMsg());
       } else {
-	setCrawlStatus("Pending");
+	setCrawlStatus(crawlerRequest.isActive() ? "Pending" : "Inactive");
       }
 
       crawlStatusPopulated = true;

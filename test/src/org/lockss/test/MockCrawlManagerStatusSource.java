@@ -84,6 +84,10 @@ public class MockCrawlManagerStatusSource
     return true;
   }
 
+  public boolean isCrawlStarterEnabled() {
+    return true;
+  }
+
   public Collection<CrawlReq> getPendingQueue() {
     return new ArrayList();
   }

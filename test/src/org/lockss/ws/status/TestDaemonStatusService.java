@@ -37,27 +37,21 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
+import org.lockss.crawler.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.Plugin;
-import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.PluginTestUtil;
-import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedDefinablePlugin;
 import org.lockss.protocol.IdentityManager;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.ws.entities.AuWsResult;
+import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.PlatformConfigurationWsResult;
@@ -77,9 +71,11 @@ public class TestDaemonStatusService extends LockssTestCase {
   static String TEST_LOCAL_IP = "127.1.2.3";
 
   private MockLockssDaemon theDaemon;
+  private PluginManager pluginManager;
   private DaemonStatusServiceImpl service;
   private String tempDirPath;
   private SimulatedArchivalUnit sau0, sau1;
+  private Plugin m_plug;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -92,7 +88,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
 
-    PluginManager pluginManager = theDaemon.getPluginManager();
+    pluginManager = theDaemon.getPluginManager();
     pluginManager.startService();
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
@@ -108,6 +104,9 @@ public class TestDaemonStatusService extends LockssTestCase {
     theDaemon.getRemoteApi().startService();
 
     service = new DaemonStatusServiceImpl();
+
+    m_plug = new MockPlugin(theDaemon);
+
   }
 
   /**
@@ -586,6 +585,76 @@ public class TestDaemonStatusService extends LockssTestCase {
     query = "select * where internal = 'true'";
     repositories = service.queryRepositories(query);
     assertEquals(0, repositories.size());
+  }
+
+
+  CrawlManager startCrawlManager() {
+    CrawlManagerImpl mgr = new CrawlManagerImpl();
+    theDaemon.setCrawlManager(mgr);
+    mgr.initService(theDaemon);
+    mgr.startService();
+    return mgr;
+  }
+
+  MockArchivalUnit newMockArchivalUnit(String auid) {
+    MockArchivalUnit mau = new MockArchivalUnit(m_plug, auid);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
+    PluginTestUtil.registerArchivalUnit(m_plug, mau);
+    nodeMgr.setAuState(new MockAuState());
+    return mau;
+  }
+
+  public void testQueryCrawls() throws Exception {
+    CrawlManager crawlMgr = startCrawlManager();
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_STARTER_ENABLED,
+				  "false",
+				  CrawlManagerImpl.PARAM_USE_ODC,
+				  "true"); 
+
+    ArchivalUnit sau2 =
+      PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
+					 simAuConfig(tempDirPath + "/2"));
+    CrawlReq req1 = new CrawlReq(sau1);
+    req1.setPriority(8);
+    req1.setRefetchDepth(1232);
+    crawlMgr.startNewContentCrawl(req1, null);
+
+    CrawlReq req2 = new CrawlReq(sau2);
+    req2.setPriority(9);
+    req2.setRefetchDepth(1231);
+    crawlMgr.startNewContentCrawl(req2, null);
+
+
+    String query = "select *";
+    List<CrawlWsResult> crawls = service.queryCrawls(query);
+    assertEquals(2, crawls.size());
+    CrawlWsResult r1 = crawls.get(0);
+    CrawlWsResult r2 = crawls.get(1);
+    if (sau2.getAuId().equals(r1.getAuId())) {
+      r1 = crawls.get(1);
+      r2 = crawls.get(0);
+    }      
+    assertEquals(sau1.getAuId(), r1.getAuId());
+    assertEquals(1232, (int)r1.getRefetchDepth());
+    assertEquals(8, (int)r1.getPriority());
+    assertEquals("Pending", r1.getCrawlStatus());
+
+    assertEquals(sau2.getAuId(), r2.getAuId());
+    assertEquals(1231, (int)r2.getRefetchDepth());
+    assertEquals(9, (int)r2.getPriority());
+    assertEquals("Pending", r2.getCrawlStatus());
+
+    pluginManager.stopAu(sau1, new AuEvent(AuEvent.Type.RestartDelete, false));
+    pluginManager.stopAu(sau2, new AuEvent(AuEvent.Type.Deactivate, false));
+
+    List<CrawlWsResult> crawls2 = service.queryCrawls(query);
+    assertEquals(1, crawls2.size());
+    CrawlWsResult s1 = crawls2.get(0);
+    assertEquals(sau1.getAuId(), s1.getAuId());
+    assertEquals(1232, (int)s1.getRefetchDepth());
+    assertEquals(8, (int)s1.getPriority());
+    assertEquals("Inactive", s1.getCrawlStatus());
   }
 
   /**

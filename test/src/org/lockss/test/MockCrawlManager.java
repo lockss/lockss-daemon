@@ -102,6 +102,9 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduleNewContentCrawl(au, cb, cookie);
   }
 
+  public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock) {
+  }
+
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
     if (crl != null) {
       return crl;
@@ -114,6 +117,10 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public boolean isCrawlStarterEnabled() {
+    return false;
+  }
+
+  public boolean isCrawlStarterRunning() {
     return false;
   }
 
