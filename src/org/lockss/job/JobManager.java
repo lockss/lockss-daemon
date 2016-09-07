@@ -43,6 +43,7 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.metadata.ReindexingTask;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.scheduler.StepTask;
 import org.lockss.util.Logger;
 
 /**
@@ -601,6 +602,11 @@ public class JobManager extends BaseLockssDaemonManager implements
    * @param auId
    *          A String with the identifier of the Archival Unit whose metadata
    *          is being extracted.
+   * @param status
+   *          A ReindexingStatus with the status of the event.
+   * @param exception
+   *          An Exception with the exception (if any) thrown by the job and to
+   *          be recorded as part of the status of the job.
    */
   public void handlePutAuJobFinishEvent(String auId, ReindexingStatus status,
       Exception exception) {
@@ -640,11 +646,18 @@ public class JobManager extends BaseLockssDaemonManager implements
 	DbManager.commitOrRollback(conn, log);
       }
 
+      // Loop through all the tasks.
       for (JobTask jobTask : tasks) {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "jobTask = " + jobTask);
 
-	if (auId.equals(
-	    ((ReindexingTask)(jobTask.getStepTask())).getAuId())) {
+	// Get its step task.
+	StepTask stepTask = jobTask.getStepTask();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "stepTask = " + stepTask);
+
+	// Check whether this is the task linked to the finishing event.  
+	if (stepTask != null
+	    && auId.equals(((ReindexingTask)stepTask).getAuId())) {
+	  // Yes: Mark this task as finished.
 	  jobTask.notifyJobFinish();
 	  break;
 	}
