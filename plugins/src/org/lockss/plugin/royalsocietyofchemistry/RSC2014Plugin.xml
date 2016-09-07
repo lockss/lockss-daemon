@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.63.0</string>
+    <string>1.70.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -203,5 +203,16 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>"%s/pubs-core/", graphics_url</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+    <string>"%s/pubs-core/", graphics_url, 0</string>
   </entry>
 </map>

@@ -92,6 +92,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       ", <span class=\"italic\">Jnl.</span>, year, <span class=\"bold\">2</span>(1), 80 87" +
       "<a target=\"_blank\" class=\"Links\" href=\"http://www.rsc.org/\" " +
       "title=\"Left in text\">Left</a>" +
+      "<img src=\"http://sod-a.rsc-cdn.org/pubs-core/rel_ver/content/NewImages/pdf_icon_small.gif\">" +
+      "<img src=\"https://sod-a.rsc-cdn.org/pubs-core/rel_ver/content/NewImages/pdf_icon_small.gif\">" +
       "<a target=\"_blank\" class=\"URLLinks\" href=\"http://pubs.rsc.org/\" " +
       "title=\"Link via OpenURL Resolver\"><img src=\"http://pubs.rsc.org/en\"></a>.";
   
