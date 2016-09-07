@@ -104,6 +104,7 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
                                                String encoding)
       throws PluginException {
+    // String gurl = au.getConfiguration().get("graphics_url");
     NodeFilter[] filters = new NodeFilter[] {
         // Contains the current year.
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
@@ -116,7 +117,7 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         // <div id="top" class="navigation"  access links intermittent http://xlink.rsc.org/?doi=c3dt52391h
         HtmlNodeFilters.tagWithAttribute("div", "class", "navigation"),
         // Contains images that can change
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "https?://sod-a\\.rsc-cdn\\.org/pubs-core/"),
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "https?://[^/]+/pubs-core/"),
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
