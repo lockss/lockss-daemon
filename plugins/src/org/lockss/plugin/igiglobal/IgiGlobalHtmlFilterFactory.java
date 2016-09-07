@@ -77,6 +77,7 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
+        HtmlNodeFilters.tag("footer"),
         
         
         /*
@@ -95,7 +96,7 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
 
         HtmlNodeFilters.tagWithAttributeRegex("span", "id", "CenterContent.*Header"),
         //hidden inputs with changing keys
-        HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
+        HtmlNodeFilters.tagWithAttributeRegex("input", "id", "__VIEWSTATE"),
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
         // Pre-made citations of the article that include an access date
         HtmlNodeFilters.tagWithAttribute("div", "id", "citation"),
@@ -151,6 +152,11 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // <h3> replaced <h4> or vice versa at one point
         HtmlNodeFilters.tag("h3"),
         HtmlNodeFilters.tag("h4"),
+        
+        // hidden, hashed, and still not relevant
+        new AndFilter(
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(indices|citations|search-results)-content"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display: *none")),
         
     };
     

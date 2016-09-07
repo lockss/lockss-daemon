@@ -140,7 +140,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 
   public static final String footerWithSponsorFiltered =
       " ";
-	
+  
   public static final String citedCitedByFavoriteButtons =
     "<!--[if lte IE 7]><body class=\"MainBody ie7\"><![endif]--><!--[if gt IE 7]><body class=\"MainBody ie8\"><![endif]--><!--[if !IE]> --><body class=\"MainBody\"><!-- <![endif]--><p> Hello World </p><span style=\"display:inline-block;\">" +
     "<span style=\"display:inline-block;margin-right:5px;float:left;\">"+
@@ -150,7 +150,15 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
     "<span id=\"ctl00_ctl00_cphMain_cphCenterContent_ucCiteContent_iconCiteContent\" class=\"icon icon-inactive ui-icon-extlink\"></span>"+
     "</span></span>";
   public static final String citedCitedByFavoriteButtonsFiltered = " Hello World ";
+  // 
+  public static final String hiddenDivTag = 
+      "<div id=\"Foo-search-results-content-x\" style=\"display:none\">X</div>" +
+      "<div id=\"Foo-search-results-content-x\" style=\"other: stuff display: none; foo:bar \">Y</div>" +
+      "\n<div>";
 
+  public static final String hiddenDivTagFiltered =
+      " ";
+  
   public void testSidebarFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(sidebarHtml),
@@ -211,5 +219,13 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
                                                        Constants.DEFAULT_ENCODING);
 
     assertEquals(citedCitedByFavoriteButtonsFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testHiddenTagFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(null,
+                                                       new StringInputStream(hiddenDivTag), 
+                                                       Constants.DEFAULT_ENCODING);
+    
+    assertEquals(hiddenDivTagFiltered, StringUtil.fromInputStream(actIn));
   }
 }
