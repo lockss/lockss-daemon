@@ -2431,7 +2431,7 @@
     au < crawling ; exists ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; >
     au < ready ; exists ; 2016 ; Nature Volume 534 ; 2016 ; 534 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; >
-    au < ready ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
     au < manifest ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
     au < expected ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
     au < expected ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
@@ -2583,7 +2583,7 @@
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; >
-    au < ready ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; >
+    au < crawling ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -2628,7 +2628,7 @@
     au < finished ; finished ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; >
-    au < ready ; exists ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3027,7 +3027,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Cardiology Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Cardiology Volume 12 ; 2015 ; 12 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3054,7 +3054,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Clinical Oncology Volume 10 ; 2013 ; 10 ; >
     au < crawling ; exists ; 2014 ; Nature Reviews Clinical Oncology Volume 11 ; 2014 ; 11 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Clinical Oncology Volume 12 ; 2015 ; 12 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Clinical Oncology Volume 13 ; 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Clinical Oncology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3109,7 +3109,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3136,7 +3136,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; >
     au < crawling ; exists ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3309,7 +3309,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Neurology Volume 12 ; 2016 ; 12 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Neurology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3366,7 +3366,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Rheumatology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Rheumatology Volume 11 ; 2015 ; 11 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Rheumatology Volume 12 ; 2016 ; 12 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Rheumatology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3393,7 +3393,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Urology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Urology Volume 12 ; 2015 ; 12 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Urology Volume 13 ; 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Urology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3475,7 +3475,7 @@
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; >
     au < finished ; crawling ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Neuropsychopharmacology Volume 40 ; 2015 ; 40 ; >
-    au < ready ; exists ; 2016 ; Neuropsychopharmacology Volume 41 ; 2016 ; 41 ; >
+    au < crawling ; exists ; 2016 ; Neuropsychopharmacology Volume 41 ; 2016 ; 41 ; >
 
   }
   
@@ -3513,7 +3513,7 @@
     au < crawling ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 ; >
-    au < ready ; exists ; 2016 ; Nutrition & Diabetes Volume 6 ; 2016 ; 6 ; >
+    au < crawling ; exists ; 2016 ; Nutrition & Diabetes Volume 6 ; 2016 ; 6 ; >
   
   }
     
@@ -3597,7 +3597,7 @@
     au < finished ; crawling ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 ; >
     au < finished ; crawling ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 ; >
-    au < ready ; exists ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -3689,7 +3689,7 @@
     au < finished ; crawling ; 2014 ; Pediatric Research Volume 76 ; 2014 ; 76 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
     au < deepCrawl ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
-    au < ready ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
+    au < crawling ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
     au < exists ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
 
   }
@@ -3720,7 +3720,7 @@
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; crawling ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
     au < deepCrawl ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
-    au < ready ; exists ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; >
+    au < crawling ; exists ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -3744,7 +3744,7 @@
     au < finished ; finished ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 ; >
     au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 ; >
     au < deepCrawl ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; >
-    au < ready ; exists ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; >
+    au < crawling ; exists ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; >
 
   }
 
@@ -3778,7 +3778,7 @@
     au < crawling ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; >
     au < finished ; crawling ; 2014 ; Prostate Cancer and Prostatic Diseases Volume 17 ; 2014 ; 17 ; >
     au < deepCrawl ; exists ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; >
-    au < ready ; exists ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; >
+    au < crawling ; exists ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; >
 
   }
 
