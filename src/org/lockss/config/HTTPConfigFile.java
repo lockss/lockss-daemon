@@ -267,12 +267,16 @@ public class HTTPConfigFile extends BaseConfigFile {
 	if (m_cfgMgr == null) {
 	  throw e;
 	}
-	File failoverFile = m_cfgMgr.getRemoteConfigFailoverFile(m_fileUrl);
+	ConfigManager.RemoteConfigFailoverInfo rcfi =
+	  m_cfgMgr.getRcfi(m_fileUrl);
+	if (rcfi == null || !rcfi.exists()) {
+	  throw e;
+	}
+	File failoverFile = rcfi.getPermFileAbs();
 	if (failoverFile == null) {
 	  throw e;
 	}
 	// Found one, 
-	ConfigManager.RemoteConfigFailoverInfo rcfi = m_cfgMgr.getRcfi(m_fileUrl);
 	long date = rcfi.getDate();
 	log.info("Couldn't load remote config URL: " + m_fileUrl);
 	log.info("Substituting local copy created: " + new Date(date));

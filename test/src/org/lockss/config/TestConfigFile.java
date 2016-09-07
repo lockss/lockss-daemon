@@ -900,6 +900,7 @@ public abstract class TestConfigFile extends LockssTestCase {
       File perm = getRemoteConfigFailoverFile(url);
       if (perm != null) {
 	rcfi.filename = perm.getName();
+	rcfi.dir = perm.getParentFile();
       }
       return rcfi;
     }

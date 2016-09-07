@@ -2434,6 +2434,10 @@ public class ConfigManager implements LockssManager {
       return filename;
     }
 
+    boolean exists() {
+      return filename != null && getPermFileAbs().exists();
+    }
+
     File getTempFile() {
       return tempfile;
     }
@@ -2444,10 +2448,13 @@ public class ConfigManager implements LockssManager {
 
     boolean update() {
       if (tempfile != null) {
-	log.debug2("Rename " + tempfile + " -> " + getPermFileAbs());
-	PlatformUtil.updateAtomically(tempfile, getPermFileAbs());
+	String pname = getOrMakePermFilename();
+	File pfile = new File(dir, pname);
+	log.debug2("Rename " + tempfile + " -> " + pfile);
+	PlatformUtil.updateAtomically(tempfile, pfile);
 	tempfile = null;
 	date = TimeBase.nowMs();
+	filename = pname;
 	return true;
       } else {
 	return false;
@@ -2455,34 +2462,31 @@ public class ConfigManager implements LockssManager {
     }
 
     File getPermFileAbs() {
-      return new File(dir, getPermFilename());
-    }
-
-    File getPermFile() {
-      return new File(getPermFilename());
+      if (filename == null) {
+	return null;
+      }
+      return new File(dir, filename);
     }
 
     long getDate() {
       return date;
     }
 
-    String getPermFilename() {
-      if (filename == null) {
-	try {
-	  log.debug2("Getting perm filename from: " + url);
-	  String path = UrlUtil.getPath(url);
-	  String name = FilenameUtils.getBaseName(path);
-	  String ext = FilenameUtils.getExtension(path);
-	  filename = String.format("%02d-%s.%s.gz", seq, name, ext);
-	} catch (MalformedURLException e) {
-	  log.warning("Error building fialover filename", e);
-	  filename = String.format("%02d-config-file.gz", seq);
-	}
+    String getOrMakePermFilename() {
+      if (filename != null) {
+	return filename;
       }
-      log.debug2("Perm filename: " + filename);
-      return filename;
+      try {
+	log.debug2("Making perm filename from: " + url);
+	String path = UrlUtil.getPath(url);
+	String name = FilenameUtils.getBaseName(path);
+	String ext = FilenameUtils.getExtension(path);
+	return String.format("%02d-%s.%s.gz", seq, name, ext);
+      } catch (MalformedURLException e) {
+	log.warning("Error building fialover filename", e);
+	return String.format("%02d-config-file.gz", seq);
+      }
     }
-
   }
 
   /** Maps URL to rel filename */
@@ -2574,6 +2578,9 @@ public class ConfigManager implements LockssManager {
   public File getRemoteConfigFailoverFile(String url) {
     if (!isRemoteConfigFailoverEnabled()) return null;
     RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    if (rcfi == null || !rcfi.exists()) {
+      return null;
+    }
     if (remoteConfigFailoverMaxAge > 0 &&
 	TimeBase.msSince(rcfi.getDate()) > remoteConfigFailoverMaxAge) {
       log.error("Remote config failover file is too old (" +
@@ -2588,6 +2595,9 @@ public class ConfigManager implements LockssManager {
   public File getRemoteConfigFailoverTempFile(String url) {
     if (!isRemoteConfigFailoverEnabled()) return null;
     RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    if (rcfi == null) {
+      return null;
+    }
     File tempfile = rcfi.getTempFile();
     if (tempfile != null) {
       log.warning("getRemoteConfigFailoverTempFile: temp file already exists for " + url);

@@ -1469,7 +1469,7 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("false", config.get("bar"));
   }
 
-  public void testNoRemoteConfigFailover() throws Exception {
+  public void testRemoteConfigFailoverDisabled() throws Exception {
     String url1 = "http://one/xxx.xml";
 
     assertFalse(mgr.hasLocalCacheConfig());
@@ -1486,6 +1486,29 @@ public class TestConfigManager extends LockssTestCase {
                              ConfigManager.DEFAULT_CONFIG_PATH);
     assertNull(mgr.getRemoteConfigFailoverTempFile(url1));
     assertNull(mgr.getRemoteConfigFailoverFile(url1));
+  }
+
+  public void testRemoteConfigFailoverNotExist() throws Exception {
+    String url1 = "http://one/xxx.xml";
+
+    assertFalse(mgr.hasLocalCacheConfig());
+    // set up local config dir
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir,
+				  ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER,
+				  "true");
+    mgr.setUpRemoteConfigFailover();
+
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    assertEquals(null, mgr.getRemoteConfigFailoverFile(url1));
+
+    File tf1 = mgr.getRemoteConfigFailoverTempFile(url1);
+    assertMatchesRE("^" + tmpdir + ".*\\.tmp$", tf1.getPath());
+
+    assertEquals(null, mgr.getRemoteConfigFailoverFile(url1));
   }
 
   public void testRemoteConfigFailoverMap() throws Exception {
