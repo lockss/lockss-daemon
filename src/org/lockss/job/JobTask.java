@@ -43,8 +43,8 @@ import org.lockss.util.Logger;
  */
 public class JobTask implements Runnable {
   private static final Logger log = Logger.getLogger(JobTask.class);
-  private static final long sleepMs = 60000;
 
+  private long sleepMs = 60000;
   private String baseTaskName;
   private String taskName;
   private Long jobSeq = null;
@@ -65,6 +65,7 @@ public class JobTask implements Runnable {
     this.dbManager = dbManager;
     this.mdManager = mdManager;
     this.jobManager = jobManager;
+    sleepMs = jobManager.getSleepDelaySeconds() * 1000L;
   }
 
   /**

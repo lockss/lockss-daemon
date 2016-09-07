@@ -57,7 +57,43 @@ public class JobManager extends BaseLockssDaemonManager implements
   /**
    * Prefix for configuration properties.
    */
-  public static final String PREFIX = Configuration.PREFIX + "jobmanager.";
+  public static final String PREFIX = Configuration.PREFIX + "jobManager.";
+
+  /**
+   * Set to true to allow JobManager to run.
+   */
+  public static final String PARAM_JOBMANAGER_ENABLED = PREFIX + "enabled";
+  public static final boolean DEFAULT_JOBMANAGER_ENABLED = false;
+
+  /**
+   * The number of job processing tasks.
+   */
+  public static final String PARAM_TASK_LIST_SIZE = PREFIX + "taskListSize";
+
+  /** 
+   * The default number of job processing tasks.
+   */
+  public static final int DEFAULT_TASK_LIST_SIZE = 1;
+
+  /**
+   * The sleep delay when no jobs are ready.
+   */
+  public static final String PARAM_SLEEP_DELAY_SECONDS =
+      PREFIX + "sleepDelaySeconds";
+
+  /** 
+   * The default sleep delay when no jobs are ready.
+   */
+  public static final long DEFAULT_SLEEP_DELAY_SECONDS = 60;
+
+  // An indication of whether this object has been enabled.
+  private boolean jobManagerEnabled = DEFAULT_JOBMANAGER_ENABLED;
+
+  // The task list size.
+  private int taskCount = DEFAULT_TASK_LIST_SIZE;
+
+  // The sleep delay when no jobs are ready.
+  private long sleepDelaySeconds = DEFAULT_SLEEP_DELAY_SECONDS;
 
   // The database manager.
   private DbManager dbManager = null;
@@ -68,7 +104,6 @@ public class JobManager extends BaseLockssDaemonManager implements
   // The SQL code executor.
   private JobManagerSql jobManagerSql;
 
-  private int taskCount = 1;
   private ExecutorService taskExecutor = null;
   private List<JobTask> tasks = null;
 
@@ -90,6 +125,19 @@ public class JobManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     if (changedKeys.contains(PREFIX)) {
+      jobManagerEnabled = config.getBoolean(PARAM_JOBMANAGER_ENABLED,
+	  DEFAULT_JOBMANAGER_ENABLED);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "jobManagerEnabled = " + jobManagerEnabled);
+
+      taskCount = Math.max(0, config.getInt(PARAM_TASK_LIST_SIZE,
+	  DEFAULT_TASK_LIST_SIZE));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "taskCount = " + taskCount);
+
+      sleepDelaySeconds = Math.max(0, config.getLong(PARAM_SLEEP_DELAY_SECONDS,
+	  DEFAULT_SLEEP_DELAY_SECONDS));
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "sleepDelaySeconds = " + sleepDelaySeconds);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -102,6 +150,12 @@ public class JobManager extends BaseLockssDaemonManager implements
   public void startService() {
     final String DEBUG_HEADER = "startService(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting JobManager");
+
+    // Do nothing if not enabled
+    if (!jobManagerEnabled) {
+      log.info("JobManager not enabled.");
+      return;
+    }
 
     dbManager = getDaemon().getDbManager();
     mdManager = getDaemon().getMetadataManager();
@@ -121,14 +175,19 @@ public class JobManager extends BaseLockssDaemonManager implements
     }
 
     // Create and get running the processing tasks.
-    taskExecutor = Executors.newSingleThreadExecutor();
+    taskExecutor = Executors.newFixedThreadPool(taskCount);
     tasks = new ArrayList<JobTask>(taskCount);
 
     for (int i = 0; i < taskCount; i++) {
       JobTask task = new JobTask(dbManager, mdManager, this);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "task = " + task);
+
       taskExecutor.submit(task);
       tasks.add(task);
     }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "tasks.size() = " + tasks.size());
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "JobManager service successfully started");
@@ -819,5 +878,14 @@ public class JobManager extends BaseLockssDaemonManager implements
     // It does not exist: Report the problem.
     log.error(message);
     throw new IllegalArgumentException(message);
+  }
+
+  /**
+   * Provides the sleep delay in seconds when no jobs are ready.
+   * 
+   * @return a long with the sleep delay in seconds when no jobs are ready.
+   */
+  long getSleepDelaySeconds() {
+    return sleepDelaySeconds;
   }
 }
