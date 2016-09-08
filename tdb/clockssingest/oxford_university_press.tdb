@@ -3586,10 +3586,10 @@
     au < manifest ; exists ; 2002 ; Bulletin of the London Mathematical Society Volume 34 ; 34 ; >
     au < manifest ; exists ; 2003 ; Bulletin of the London Mathematical Society Volume 35 ; 35 ; >
     au < manifest ; exists ; 2004 ; Bulletin of the London Mathematical Society Volume 36 ; 36 ; >
-    au < ready ; exists ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; >
-    au < ready ; exists ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; >
-    au < ready ; exists ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; >
-    au < ready ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2005 ; Bulletin of the London Mathematical Society Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
     au < finished ; crawling ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
@@ -13907,12 +13907,12 @@
     au < manifest ; exists ; 2004 ; Journal of the London Mathematical Society Volume 69 ; 69 ; >
     au < manifest ; exists ; 2004 ; Journal of the London Mathematical Society Volume 70 ; 70 ; >
     au < crawling ; exists ; 2005 ; Journal of the London Mathematical Society Volume 71 ; 71 ; >
-    au < ready ; exists ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; >
     au < crawling ; exists ; 2006 ; Journal of the London Mathematical Society Volume 73 ; 73 ; >
-    au < ready ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
-    au < ready ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
     au < crawling ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
-    au < ready ; exists ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
+    au < crawling ; exists ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < finished ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
@@ -13928,8 +13928,8 @@
     au < finished ; finished ; 2014 ; Journal of the London Mathematical Society Volume 90 ; 90 ; >
     au < finished ; crawling ; 2015 ; Journal of the London Mathematical Society Volume 91 ; 91 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of the London Mathematical Society Volume 92 ; 92 ; >
-    au < ready ; exists ; 2016 ; Journal of the London Mathematical Society Volume 93 ; 93 ; >
-    au < ready ; exists ; 2016 ; Journal of the London Mathematical Society Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2016 ; Journal of the London Mathematical Society Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2016 ; Journal of the London Mathematical Society Volume 94 ; 94 ; >
     au < doNotProcess ; exists ; 2017 ; Journal of the London Mathematical Society Volume 95 ; 95 ; > #moving to wiley
 
     }
@@ -20031,9 +20031,9 @@
     au < manifest ; exists ; 2003 ; Proceedings of the London Mathematical Society Volume 87 ; 87 ; >
     au < manifest ; exists ; 2004 ; Proceedings of the London Mathematical Society Volume 88 ; 88 ; >
     au < manifest ; exists ; 2004 ; Proceedings of the London Mathematical Society Volume 89 ; 89 ; >
-    au < ready ; exists ; 2005 ; Proceedings of the London Mathematical Society Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2005 ; Proceedings of the London Mathematical Society Volume 90 ; 90 ; >
     au < crawling ; exists ; 2005 ; Proceedings of the London Mathematical Society Volume 91 ; 91 ; >
-    au < ready ; exists ; 2006 ; Proceedings of the London Mathematical Society Volume 92 ; 92 ; >
+    au < crawling ; exists ; 2006 ; Proceedings of the London Mathematical Society Volume 92 ; 92 ; >
     au < wanted ; exists ; 2006 ; Proceedings of the London Mathematical Society Volume 93 ; 93 ; >
     au < wanted ; exists ; 2007 ; Proceedings of the London Mathematical Society Volume 94 ; 94 ; >
     au < wanted ; exists ; 2007 ; Proceedings of the London Mathematical Society Volume 95 ; 95 ; >
@@ -20054,7 +20054,7 @@
     au < deepCrawl ; exists ; 2015 ; Proceedings of the London Mathematical Society Volume 110 ; 110 ; >
     au < deepCrawl ; exists ; 2015 ; Proceedings of the London Mathematical Society Volume 111 ; 111 ; >
     au < wanted ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 112 ; 112 ; >
-    au < ready ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 113 ; 113 ; >
+    au < crawling ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 113 ; 113 ; >
     au < doNotProcess ; exists ; 2017 ; Proceedings of the London Mathematical Society Volume 114 ; 114 ; > #moving to wiley
 
     }
@@ -23115,7 +23115,7 @@
 
     au < finished ; finished ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
-    au < ready ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2017 ; Transactions of the London Mathematical Society Volume 4 ; 4 ; > #moving to wiley.
 
   }
@@ -23230,9 +23230,9 @@
     au < manifest ; exists ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 ; >
     au < manifest ; exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 ; >
     au < manifest ; exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 ; >
-    au < ready ; exists ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; >
+    au < crawling ; exists ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 ; >
     au < wanted ; exists ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 ; >
-    au < ready ; exists ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; >
     au < finished ; finished ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
     au < frozen ; exists ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 ; >
     au < frozen ; exists ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; >
@@ -25025,7 +25025,7 @@
 
       au < crawling ; exists ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 ; >
       au < crawling ; exists ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 ; >
-      au < ready ; exists ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 ; >
       au < wanted ; exists ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 ; >
       au < finished ; crawling ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2010 ; 2010 ; >
