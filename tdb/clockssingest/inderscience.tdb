@@ -959,7 +959,7 @@
       param[journal_id] = ijbdi
 
       au < frozen ; exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 ; >
 
     }
@@ -7950,7 +7950,7 @@
 
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2015 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2015 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Technoentrepreneurship Volume 4 ; 4 ; >
 
     }
