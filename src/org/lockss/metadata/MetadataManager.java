@@ -506,7 +506,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
 
 	  for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(pluginId)) {
-	    String auId = tdbAuId.toString();
+	    String auId = tdbAuId.toString().replaceAll("&pub_down~true", "");
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
 
 	    TdbAu tdbAu = tdb.getTdbAuById(tdbAuId);

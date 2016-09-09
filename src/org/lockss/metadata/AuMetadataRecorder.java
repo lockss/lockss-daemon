@@ -41,7 +41,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.MetadataField;
@@ -2599,10 +2599,21 @@ public class AuMetadataRecorder {
     final String DEBUG_HEADER = "addAuMd(): ";
     long creationTime = 0;
 
-    // Check whether it is possible to obtain the Archival Unit creation time.
-    if (au != null && AuUtil.getAuState(au) != null) {
-      // Yes: Get it.
-      creationTime = AuUtil.getAuCreationTime(au);
+    // Check whether the content is obtained via web services, not from the
+    // local repository.
+    if (!ConfigManager.getCurrentConfig()
+	.getBoolean(PluginManager.PARAM_AU_CONTENT_FROM_WS,
+	    PluginManager.DEFAULT_AU_CONTENT_FROM_WS)) {
+      // Yes: Check whether it is possible to obtain the Archival Unit creation
+      // time.
+      if (au != null &&AuUtil.getAuState(au) != null) {
+	// Yes: Get it.
+	creationTime = AuUtil.getAuCreationTime(au);
+      }
+    } else {
+      // No.
+      if (log.isDebug()) log.debug(DEBUG_HEADER
+	  + "Not storing the (unavailable) Archival Unit creation time.");
     }
 
     // Get the unknown provider, as it can only be obtained from the metadata.
