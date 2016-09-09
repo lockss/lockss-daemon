@@ -19,8 +19,7 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     
-    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/cartografare-il-presente-released/
-    param[base_url] = http://content5.lockss.org/warcfiles/cartografare-il-presente-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/cartografare-il-presente-released/
 
     au < testing ; exists ; 2016 ; Cartografare il present WARC Content 2016 ; 2016 >
     
@@ -54,8 +53,7 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     
-    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/storicamente-released/
-    param[base_url] = http://content5.lockss.org/warcfiles/storicamente-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/storicamente-released/
 
     au < testing ; exists ; 2016 ; Storicamente WARC Content 2016 ; 2016 >
     
@@ -71,8 +69,7 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     
-    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
-    param[base_url] = http://content5.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/e-review-rivista-degli-istituti-storici-dell-emilia-romagna-in-rete-released/
 
     au < testing ; exists ; 2016 ; E-Review WARC Content 2016 ; 2016 >
     
