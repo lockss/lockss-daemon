@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -116,6 +116,11 @@
         <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCContentValidator$Factory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
