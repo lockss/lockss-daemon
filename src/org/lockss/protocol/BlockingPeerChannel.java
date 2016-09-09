@@ -935,7 +935,11 @@ class BlockingPeerChannel implements PeerChannel {
 	    // now sending message
 	    // No longer can send messages so must dissociate now
 	    scomm.dissociateChannelFromPeer(this, peer, null);
-	    reader.setTimeout(scomm.getDrainInputTime() / 2);
+	    // guard against exiting reader
+	    ChannelReader tmprdr = reader;
+	    if (tmprdr != null) {
+	      reader.setTimeout(scomm.getDrainInputTime() / 2);
+	    }
 	    try {
 	      log.debug2("Shutdown output");
 	      sock.shutdownOutput();
