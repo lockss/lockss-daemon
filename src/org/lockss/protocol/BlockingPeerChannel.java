@@ -938,7 +938,7 @@ class BlockingPeerChannel implements PeerChannel {
 	    // guard against exiting reader
 	    ChannelReader tmprdr = reader;
 	    if (tmprdr != null) {
-	      reader.setTimeout(scomm.getDrainInputTime() / 2);
+	      tmprdr.setTimeout(scomm.getDrainInputTime() / 2);
 	    }
 	    try {
 	      log.debug2("Shutdown output");
