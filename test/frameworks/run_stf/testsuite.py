@@ -83,11 +83,13 @@ class LockssTestCases( unittest.TestCase ):
         errorLogs = self.framework.checkForLogErrors()
         if errorLogs:
             log.error( 'Errors detected in log!' )
+            self.framework.stop()
             self.fail( 'Failing due to log errors.  Check the following log file(s): ' + ', '.join( errorLogs ) )
         # Dump threads and look for deadlocks (independent of success)
         deadlockLogs = self.framework.checkForDeadlock()
         if deadlockLogs:
             log.error( 'Deadlocks detected!' )
+            self.framework.stop()
             self.fail( 'Failing due to deadlock detection.  Check the following log file(s): ' + ', '.join( deadlockLogs ) )
         else:
             log.info( 'No deadlocks detected' )
