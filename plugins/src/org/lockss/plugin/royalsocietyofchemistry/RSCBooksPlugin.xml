@@ -130,6 +130,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>400=org.lockss.util.urlconn.CacheException$RetrySameUrlException</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
     </list>
   </entry>
   <entry>

@@ -197,6 +197,12 @@
     <string>org.lockss.plugin.royalsocietyofchemistry.RSC2014UrlNormalizer</string>
   </entry>
   <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
