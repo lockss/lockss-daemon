@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,7 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
      //filter out script, noscript
      HtmlNodeFilters.tag("script"),
+     HtmlNodeFilters.tag("head"),
      HtmlNodeFilters.tagWithAttribute("header", "class", "section-header"),
      HtmlNodeFilters.tagWithAttribute("header", "id", "section-header"),
      HtmlNodeFilters.tagWithAttribute("footer", "id", "section-footer"),

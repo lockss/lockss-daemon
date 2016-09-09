@@ -54,6 +54,9 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
   //      <!-- html comments --> , <button id="chat-widget">
   //       <button class="StickySideButton_left StickySideButton_left--feedback">Support</button>
   private static final String withStuffToHashOut =
+      "<head prefix=\"og: http://ogp.me/ns#\" >" + 
+      "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />" +
+      "</head>" +
       "<script type=\"text/javascript\" src=\"http://hello.org/sites/stuff.js\"></script>" +
       "<header id=\"section-header\" class=\"section section-header\">" +
       "</header>" +
