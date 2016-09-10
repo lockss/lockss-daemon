@@ -34,21 +34,12 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
-import org.htmlparser.Node;
-import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
+import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.tags.BodyTag;
-import org.htmlparser.tags.Bullet;
-import org.htmlparser.tags.BulletList;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
-import org.htmlparser.tags.LinkTag;
-import org.htmlparser.tags.Span;
-import org.htmlparser.util.NodeList;
+import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -208,34 +199,30 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       )
     );
     
+    
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
-    Reader stringFilter = StringFilter.makeNestedFilter(reader,
-                                                        new String[][] {
-        // Markup changes over time
-        {"&nbsp;", " "},
-        {"&amp;", "&"},
-        {"\\", ""}, // e.g. \(, \-, present during encoding glitch (or similar)
-    }, true);
-
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(stringFilter,
-                                                      Arrays.asList(
+    LineRewritingReader rewritingReader = new LineRewritingReader(reader) {
+      @Override
+      public String rewriteLine(String line) {
+        // Markup changes over time [anywhere]
+        line = PAT_NBSP.matcher(line).replaceAll(REP_NBSP);
+        line = PAT_AMP.matcher(line).replaceAll(REP_AMP);
+        line = PAT_BACKSLASH.matcher(line).replaceAll(REP_BACKSLASH); // e.g. \(, \-, during encoding glitch (or similar)
+        line = PAT_BACKSLASH.matcher(line).replaceAll(REP_BACKSLASH); // e.g. \(, \-, during encoding glitch (or similar)
         // Alternate forms of citation links [article block]
-        new TagPair("<li><div><strong>Citing Articles:", "</li>", true), // current
-        new TagPair("<li><strong>Citations:", "</li>", true), // old?
-        new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true), // old?
-        new TagPair("<li><strong>Citation information:", "</li>", true), // old?
+        line = PAT_CITING_ARTICLES.matcher(line).replaceAll(REP_CITING_ARTICLES);
         // Wording change over time, and publication dates get fixed much later [article block, abs/full/ref/suppl overview]
         // For older versions with plain text instead of <div class="articleDates">
-        new TagPair("Published online:", ">", true), // current
-        new TagPair("Available online:", ">", true), // old
-        new TagPair("Version of record first published:", ">", true), // old
+        line = PAT_PUBLISHED_ONLINE.matcher(line).replaceAll(REP_PUBLISHED_ONLINE);
         // Leftover commas after outgoing/SFX links removed [full/ref referencesPanel]
-        new TagPair("</pub-id>", "</li>", true)
-    ));
-    
+        line = PAT_PUB_ID.matcher(line).replaceAll(REP_PUB_ID);
+        return line;
+      }
+    };
+
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(tagFilter, "<", " <"), new TagPair("<", ">"));
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(rewritingReader, "<", " <"), new TagPair("<", ">"));
     
     // Remove white space
     Reader noWhiteSpace = new WhiteSpaceFilter(noTagFilter);
@@ -257,5 +244,19 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       }
     };
   }
+  
+  public static final String REP_EMPTY_STRING = "";
+  public static final Pattern PAT_NBSP = Pattern.compile("&nbsp;", Pattern.CASE_INSENSITIVE);
+  public static final String REP_NBSP = " ";
+  public static final Pattern PAT_AMP = Pattern.compile("&amp;", Pattern.CASE_INSENSITIVE);
+  public static final String REP_AMP = "&";
+  public static final Pattern PAT_BACKSLASH = Pattern.compile("\\\\", Pattern.CASE_INSENSITIVE);
+  public static final String REP_BACKSLASH = REP_EMPTY_STRING;
+  public static final Pattern PAT_CITING_ARTICLES = Pattern.compile("<li>(<div>)?(<strong>)?(Citing Articles:|Citations:|Citation information:|<a href=\"/doi/citedby/).*?</li>", Pattern.CASE_INSENSITIVE); 
+  public static final String REP_CITING_ARTICLES = REP_EMPTY_STRING;
+  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(Published online:|Available online:|Version of record first published:).*?>", Pattern.CASE_INSENSITIVE); 
+  public static final String REP_PUBLISHED_ONLINE = REP_EMPTY_STRING;
+  public static final Pattern PAT_PUB_ID = Pattern.compile("</pub-id>.*?</li>", Pattern.CASE_INSENSITIVE); 
+  public static final String REP_PUB_ID = REP_EMPTY_STRING;
 
 }
