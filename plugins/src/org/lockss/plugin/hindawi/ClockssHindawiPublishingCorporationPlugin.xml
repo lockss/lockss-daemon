@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -30,7 +30,8 @@
   <entry>
     <string>au_permission_url</string>
     <list>
-      <string>"%sclockss.html", base_url</string>
+      <string>"%sclockss.html", to_http(base_url)</string>
+      <string>"%sclockss.html", to_https(base_url)</string>
       <string>"%sclockss.html", download_url</string>
     </list>
   </entry>
