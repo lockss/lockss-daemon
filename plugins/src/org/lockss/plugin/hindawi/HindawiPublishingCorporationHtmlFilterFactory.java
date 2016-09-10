@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -48,7 +49,7 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
-                                               String encoding)                                     
+                                               String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains changing <meta> tags, <link> tags for CSS, etc.
@@ -75,17 +76,20 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
     InputStream afterHtmlParser = new HtmlFilterInputStream(in,
                                                             encoding,
                                                             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    Reader filteredReader = FilterUtil.getReader(afterHtmlParser, encoding);
+    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
     List<TagPair> tagPairs = Arrays.asList(// DOCTYPE varies and may include entity embedded definitions
                                            new TagPair("[><!ENTITY", ">"), // Extra '>' added spuriously by HtmlParser
                                            new TagPair("<!DOCTYPE", ">"),
                                            // SVG markup style changed over time
                                            new TagPair("<svg", "</svg>"),
                                            // DOI became a link
+                                           new TagPair("<br /><a href=\"https://dx.doi.org/", "</pre>"),
                                            new TagPair("<br /><a href=\"http://dx.doi.org/", "</pre>"),
                                            new TagPair("<br />doi:", "</pre>"),
                                            // Aggressive filtering
                                            new TagPair("<", ">"));
-    HtmlTagFilter afterRemovingTags = HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(afterHtmlParser, encoding),
+    HtmlTagFilter afterRemovingTags = HtmlTagFilter.makeNestedFilter(httpFilter,
                                                                      tagPairs);
     WhiteSpaceFilter afterRemovingWhiteSpace = new WhiteSpaceFilter(afterRemovingTags);
     return new ReaderInputStream(afterRemovingWhiteSpace);

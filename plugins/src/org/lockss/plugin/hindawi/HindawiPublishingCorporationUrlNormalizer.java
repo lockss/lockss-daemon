@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,10 +35,9 @@ package org.lockss.plugin.hindawi;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
-public class HindawiPublishingCorporationUrlNormalizer implements UrlNormalizer {
+public class HindawiPublishingCorporationUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
-  public String normalizeUrl(String url,
-                             ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     // Do not incur unnecessary work
     if (url.indexOf('\\') < 0) {

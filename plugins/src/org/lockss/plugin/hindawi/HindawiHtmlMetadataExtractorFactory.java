@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,12 +43,14 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 public class HindawiHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("HindawiHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(HindawiHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
@@ -86,7 +88,7 @@ public class HindawiHtmlMetadataExtractorFactory implements
     // Map Hindawi-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
@@ -108,7 +110,14 @@ public class HindawiHtmlMetadataExtractorFactory implements
       ArticleMetadata am =
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-
+      
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL, AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+      
       // Since we know it and since Metadata requires it, set it manually if necessary
       if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
         am.put(MetadataField.FIELD_PUBLISHER, "Hindawi Publishing Corporation");

@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.69.4</string>  <!-- au_url_poll_result_weight -->
+    <string>1.70.0</string>  <!-- HTTP-To-HTTPS -->
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -72,19 +72,20 @@
   <entry>
     <string>au_permission_url</string>
     <list>
-      <string>"%slockss.html", base_url</string>
+      <string>"%slockss.html", to_https(base_url)</string>
+      <string>"%slockss.html", to_http(base_url)</string>
       <string>"%slockss.html", download_url</string>
     </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?ver=.*)?$", base_url_host, download_url_host</string>
-      <string>4,"^(%s|%s)", base_url, download_url</string>
-      <string>1,"^(%s|%s)lockss.html$", base_url, download_url</string>
-      <string>2,"^(%s|%s)journals/%s/%s/[^/]+/citations/?$", base_url, download_url, journal_id, volume_name</string>
-      <string>1,"^(%s|%s)journals/%s/%s($|/)", base_url, download_url, journal_id, volume_name</string>
-      <string>1,"^%sfloats/[^/]+/figures/", base_url</string>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?ver=.*)?$", url_host(base_url), url_host(download_url)</string>
+      <string>4,"^https?://(%s|%s)/", url_host(base_url), url_host(download_url)</string>
+      <string>1,"^https?://(%s|%s)/lockss.html$", url_host(base_url), url_host(download_url)</string>
+      <string>2,"^https?://(%s|%s)/journals/%s/%s/[^/]+/citations/?$", url_host(base_url), url_host(download_url), journal_id, volume_name</string>
+      <string>1,"^https?://(%s|%s)/journals/%s/%s($|/)", url_host(base_url), url_host(download_url), journal_id, volume_name</string>
+      <string>1,"^https?://(%s)/floats/[^/]+/figures/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -132,6 +133,14 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+    <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
