@@ -234,7 +234,6 @@
     >
 
     param[journal_id] = 120
-    # skips years 2011, 2012
 
     au < manifest ; exists ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2 ; 2009 ; >
@@ -313,7 +312,6 @@
     au < finished ; crawling ; 2015 ; Cancer Informatics Volume 14 ; 14 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cancer Informatics Volume 15 ; 15 ; 2016 ; >
 
-
   }
 
   {
@@ -325,7 +323,6 @@
     >
 
     param[journal_id] = 125
-    # skips year 2011
 
     au < manifest ; exists ; 2008 ; Cell & Tissue Transplantation & Therapy Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2 ; 2009 ; >
@@ -362,7 +359,6 @@
     >
 
     param[journal_id] = 140
-    # no issue in 2011
 
     au < manifest ; exists ; 2008 ; Cell Communication Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Cell Communication Insights Volume 2 ; 2 ; 2009 ; >
@@ -996,7 +992,6 @@
     >
 
     param[journal_id] = 127
-    # no years 2011 as of 10/4/13
 
     au < manifest ; exists ; 2008 ; Genetics & Epigenetics Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Genetics & Epigenetics Volume 2 ; 2 ; 2009 ; >
@@ -1040,7 +1035,6 @@
     >
 
     param[journal_id] = 153
-    # skips 2013
 
     au < manifest ; exists ; 2009 ; Glycobiology Insights Volume 1 ; 1 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Glycobiology Insights Volume 2 ; 2 ; 2010 ; >
@@ -1381,9 +1375,7 @@
     au < frozen ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; 2016 ; >
 
-
   }
-
 
   {
 
@@ -1415,7 +1407,6 @@
     >
 
     param[journal_id] = 147
-    # no issue in 2011, 2012
 
     au < manifest ; exists ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 1 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 ; >
@@ -1456,7 +1447,6 @@
     >
 
     param[journal_id] = 98
-    # no years 2011, 2013 as of 10/4/13
 
     au < manifest ; exists ; 2008 ; Medical Equipment Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Medical Equipment Insights Volume 2 ; 2 ; 2009 ; >
@@ -1563,7 +1553,6 @@
     >
 
     param[journal_id] = 104
-    # no years 2011, 2013, 2014 as of 04/02/15
 
     au < manifest ; exists ; 2008 ; Organic Chemistry Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Organic Chemistry Insights Volume 2 ; 2 ; 2009 ; >
@@ -1605,7 +1594,6 @@
     >
 
     param[journal_id] = 105
-    # no years 2014 as of 04/02/15
     #small differences among production boxes - global files; post-correction orphans - okay for trigger
 
     au < finished ; finished ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
@@ -1628,7 +1616,6 @@
     >
 
     param[journal_id] = 25
-    comment[0]= no 2012, 2013 as of 4/25/13
 
     au < manifest ; exists ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 1 ; 2007 ; >
     au < manifest ; exists ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2 ; 2008 ; >
@@ -1650,7 +1637,6 @@
     >
 
     param[journal_id] = 135
-    comment[0]= no 2011, 2013 as of 4/25/13
 
     au < manifest ; exists ; 2009 ; Primary Prevention Insights Volume 1 ; 1 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 ; >
@@ -1670,7 +1656,6 @@
     >
 
     param[journal_id] = 106
-    # no 2014 as of 04/02/15
 
     au < manifest ; exists ; 2008 ; Proteomics Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Proteomics Insights Volume 2 ; 2 ; 2009 ; >
@@ -1691,7 +1676,6 @@
     >
 
     param[journal_id] = 134
-    # skips 2009, no 2011, 2012, 2013 as of 4/25/13
 
     au < manifest ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 ; >
@@ -1753,7 +1737,6 @@
     >
 
     param[journal_id] = 102
-    # no 2011, 2012, or 2013, as of 4/25/2013
 
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 ; >
@@ -1816,7 +1799,6 @@
     >
 
     param[journal_id] = 19
-    # skips 2011, 2013 as of 10/4/13
 
     au < manifest ; exists ; 2006 ; Translational Oncogenomics Volume 1 ; 1 ; 2006 ; >
     au < manifest ; exists ; 2007 ; Translational Oncogenomics Volume 2 ; 2 ; 2007 ; >
@@ -1838,7 +1820,6 @@
     >
 
     param[journal_id] = 50
-
     # skips 2009, 2011, 2012 and there is no volume 3
 
     au < manifest ; exists ; 2008 ; Virology: Research and Treatment Volume 1 ; 1 ; 2008 ; >

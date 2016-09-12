@@ -117,6 +117,8 @@
 
       au < doNotProcess ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < doNotProcess ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 >
+      au < exists ; 2015 ; The Botulinum Journal Volume 3 ; 3 >
+      au < expected ; 2016 ; The Botulinum Journal Volume 4 ; 4 >
 
     }
 
@@ -344,6 +346,7 @@
       au < released ; 2015 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 20 ; 20 >
       au < manifest ; 2016 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 21 ; 21 >
       au < manifest ; 2016 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 22 ; 22 >
+      au < exists ; 2016 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 23 ; 23 >
 
     }
 
@@ -755,6 +758,7 @@
 
       au < doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 >
       au < released ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 >
+      au < exists ; 2015-2016 ; International Journal of Auditing Technology Volume 3 ; 3 >
 
     }
 
@@ -1059,6 +1063,7 @@
       au < released ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 19 ; 19 >
       au < manifest ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 20 ; 20 >
       au < manifest ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 21 ; 21 >
+      au < expected ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 22 ; 22 >
 
     }
 
@@ -1398,6 +1403,7 @@
       au < released ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
       au < manifest ; 2016 ; International Journal of Business Information Systems Volume 21 ; 21 >
       au < manifest ; 2016 ; International Journal of Business Information Systems Volume 22 ; 22 >
+      au < exists ; 2016 ; International Journal of Business Information Systems Volume 23 ; 23 >
 
     }
 
@@ -1522,6 +1528,7 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 >
       au < doNotProcess ; 2012-2013 ; International Journal of Business Process Integration and Management Volume 6 ; 6 >
       au < released ; 2014-2015 ; International Journal of Business Process Integration and Management Volume 7 ; 7 >
+      au < expected ; 2015-2016 ; International Journal of Business Process Integration and Management Volume 8 ; 8 >
 
     }
 
@@ -1539,6 +1546,7 @@
       au < doNotProcess ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
       au < released ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
+      au < expected ; 2016 ; International Journal of Chinese Culture and Management Volume 4 ; 4 >
 
     }
 
@@ -1638,6 +1646,7 @@
       param[journal_id] = ijci
 
       au < released ; 2014-2015 ; International Journal of Collaborative Intelligence Volume 1 ; 1 >
+      au < expected ; 2016 ; International Journal of Collaborative Intelligence Volume 2 ; 2 >
 
     }
 
@@ -2254,6 +2263,7 @@
       au < ready ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
       au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 >
       au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 15 ; 15 >
+      au < expected ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 16 ; 16 >
 
     }
 
@@ -2487,6 +2497,7 @@
       au < released ; 2015 ; International Journal of Economics and Business Research Volume 9 ; 9 >
       au < released ; 2015 ; International Journal of Economics and Business Research Volume 10 ; 10 >
       au < manifest ; 2016 ; International Journal of Economics and Business Research Volume 11 ; 11 >
+      au < exists ; 2016 ; International Journal of Economics and Business Research Volume 12 ; 12 >
 
     }
 
@@ -3020,6 +3031,7 @@
       au < released ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 26 ; 26 >
       au < manifest ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 27 ; 27 >
       au < manifest ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 28 ; 28 >
+      au < exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 29 ; 29 >
 
     }
 
@@ -3176,6 +3188,7 @@
       au < released ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 >
       au < released ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 >
       au < manifest ; 2016 ; International Journal of Environment and Waste Management Volume 17 ; 17 >
+      au < expected ; 2016 ; International Journal of Environment and Waste Management Volume 18 ; 18 >
 
     }
 
@@ -3299,6 +3312,7 @@
       au < released ; 2015 ; International Journal of Exergy Volume 18 ; 18 >
       au < manifest ; 2016 ; International Journal of Exergy Volume 19 ; 19 >
       au < manifest ; 2016 ; International Journal of Exergy Volume 20 ; 20 >
+      au < exists ; 2016 ; International Journal of Exergy Volume 21 ; 21 >
 
     }
 
@@ -5136,6 +5150,7 @@
       au < released ; 2015 ; International Journal of Machining and Machinability of Materials Volume 17 ; 17 >
       au < released ; 2015 ; International Journal of Machining and Machinability of Materials Volume 18 ; 18 >
       au < expected ; 2016 ; International Journal of Machining and Machinability of Materials Volume 19 ; 19 >
+      au < expected ; 2016 ; International Journal of Machining and Machinability of Materials Volume 20 ; 20 >
 
     }
 
@@ -6107,6 +6122,7 @@
       au < released ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
       au < released ; 2015 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 >
       au < expected ; 2016 ; International Journal of Networking and Virtual Organisations Volume 17 ; 17 >
+      au < expected ; 2016 ; International Journal of Networking and Virtual Organisations Volume 18 ; 18 >
 
     }
 
@@ -6800,6 +6816,7 @@
 
       au < doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 >
       au < released ; 2012-2015 ; International Journal of Public Sector Performance Management Volume 2 ; 2 >
+      au < expected ; 2016 ; International Journal of Public Sector Performance Management Volume 3 ; 3 >
 
     }
 
@@ -7555,6 +7572,7 @@
       au < manifest ; 2013 ; International Journal of Sport Management and Marketing Volume 14 ; 14 >
       au < released ; 2014 ; International Journal of Sport Management and Marketing Volume 15 ; 15 >
       au < released ; 2015 ; International Journal of Sport Management and Marketing Volume 16 ; 16 >
+      au < expected ; 2016 ; International Journal of Sport Management and Marketing Volume 17 ; 17 >
 
     }
 
@@ -8744,6 +8762,7 @@
       au < released ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 >
       au < released ; 2015 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 >
       au < manifest ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 >
+      au < expected ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 >
 
     }
 
@@ -8759,6 +8778,7 @@
       param[journal_id] = ijwi
 
       au < released ; 2012-2015 ; International Journal of Work Innovation Volume 1 ; 1 >
+      au < expected ; 2016 ; International Journal of Work Innovation Volume 2 ; 2 >
 
     }
 
