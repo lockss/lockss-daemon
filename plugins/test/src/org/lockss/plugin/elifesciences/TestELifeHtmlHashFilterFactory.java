@@ -82,16 +82,16 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "</ul>" +
       "<div class=\"form-item hello-world-select form-item-jump\">" +
       "</div>" +
-      "<div id=\"content\">" +
+      "<div id=\"content\">X" +
            "</div> ";
   private static final String withoutStuffToHashOut =
-      "<div id=\"content\">" +
+      "<div>X" +
       "</div> ";
   
   private static final String withCommentSection=
-      "<div class=\"ctools-collapsible-container\">" +
+      "<div>" +
       "<h2 class=\"pane-title ctools-collapsible-handle\">Comments</h2>"+
-      "<div class=\"ctools-collapsible-content\">" +
+      "<div>" +
       "Blahblah"+
       "<div id=\"disqus_thread\"><noscript><p><a href=\"http://elifesciences.disqus.com/?url=http%3A%2F%2Felifesciences.org%2Fcontent%2F4%2Fe04316\">View the discussion thread.</a>"+
       "</p></noscript>" +
@@ -99,9 +99,9 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "</div>" +
       "</div>" ;
   private static final String withoutCommentSection =
-      "<div class=\"ctools-collapsible-container\">" +
+      "<div>" +
       "<h2 class=\"pane-title ctools-collapsible-handle\">Comments</h2>"+
-      "<div class=\"ctools-collapsible-content\">" +
+      "<div>" +
       "Blahblah"+
       "</div>" +
       "</div>" ;

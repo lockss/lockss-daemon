@@ -32,18 +32,67 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elifesciences;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
+import java.util.Vector;
 
+import org.htmlparser.Attribute;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class ELifeHtmlHashFilterFactory implements FilterFactory {
 	
   private static final Logger log = Logger.getLogger(ELifeHtmlHashFilterFactory.class);
-
+  
+  // Transform to remove attributes from some tags
+  // some attributes changed over time, either arbitrarily or sequentially
+  protected static HtmlTransform xform = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            String tagName = tag.getTagName().toLowerCase();
+            try {
+              if ("input".equals(tagName) ||
+                  "div".equals(tagName)) {
+                Attribute a = tag.getAttributeEx(tagName);
+                Vector<Attribute> v = new Vector<Attribute>();
+                v.add(a);
+                if (tag.isEmptyXmlTag()) {
+                  Attribute end = tag.getAttributeEx("/");
+                  v.add(end);
+                }
+                tag.setAttributesEx(v);
+              }
+            }
+            catch (Exception exc) {
+              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+            }
+            // Always
+            super.visitTag(tag);
+          }
+        });
+      }
+      catch (ParserException pe) {
+        log.debug2("Internal error (parser)", pe); // Bail
+      }
+      return nodeList;
+    }
+  };
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
@@ -78,9 +127,9 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread")
 
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+    return filtered;
   }
 
 }
