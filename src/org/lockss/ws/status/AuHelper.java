@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -98,6 +94,7 @@ public class AuHelper {
   static String LAST_COMPLETED_CRAWL = "lastCompletedCrawl";
   static String LAST_CRAWL = "lastCrawl";
   static String LAST_CRAWL_RESULT = "lastCrawlResult";
+  static String LAST_METADATA_INDEX = "lastMetadataIndex";
   static String LAST_COMPLETED_POLL = "lastCompletedPoll";
   static String LAST_POLL = "lastPoll";
   static String LAST_POLL_RESULT = "lastPollResult";
@@ -143,6 +140,7 @@ public class AuHelper {
       add(LAST_COMPLETED_CRAWL);
       add(LAST_CRAWL);
       add(LAST_CRAWL_RESULT);
+      add(LAST_METADATA_INDEX);
       add(LAST_COMPLETED_POLL);
       add(LAST_POLL);
       add(LAST_POLL_RESULT);
@@ -300,6 +298,8 @@ public class AuHelper {
       result.setLastCrawl(lastCrawlAttempt);
       result.setLastCrawlResult(state.getLastCrawlResultMsg());
     }
+
+    result.setLastMetadataIndex(state.getLastMetadataIndex());
 
     long lastTopLevelPollTime = state.getLastTopLevelPollTime();
 
@@ -640,6 +640,17 @@ public class AuHelper {
       }
 
       builder.append("lastCrawlResult=").append(result.getLastCrawlResult());
+    }
+
+    if (result.getLastMetadataIndex() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("lastMetadataIndex=")
+      .append(result.getLastMetadataIndex());
     }
 
     if (result.getLastCompletedPoll() != null) {

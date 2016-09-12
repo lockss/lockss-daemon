@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -107,6 +103,7 @@ public class AuWsSource extends AuWsResult {
   private boolean lastCompletedCrawlPopulated = false;
   private boolean lastCrawlPopulated = false;
   private boolean lastCrawlResultPopulated = false;
+  private boolean lastMetadataIndexPopulated = false;
   private boolean lastCompletedPollPopulated = false;
   private boolean lastPollPopulated = false;
   private boolean lastPollResultPopulated = false;
@@ -425,6 +422,21 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getLastCrawlResult();
+  }
+
+  @Override
+  public Long getLastMetadataIndex() {
+    if (!lastMetadataIndexPopulated) {
+      long lastMetadataIndex = getState().getLastMetadataIndex();
+
+      if (lastMetadataIndex > 0) {
+	setLastMetadataIndex(Long.valueOf(lastMetadataIndex));
+      }
+
+      lastMetadataIndexPopulated = true;
+    }
+
+    return super.getLastMetadataIndex();
   }
 
   @Override
