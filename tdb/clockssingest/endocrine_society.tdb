@@ -121,7 +121,7 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://endo.endojournals.org/
 
-      au < down ; frozen ; 2012 ; Endocrinology Volume 153 ; 153 ; >
+      au < down ; finished ; 2012 ; Endocrinology Volume 153 ; 153 ; >
       au < down ; exists ; 2013 ; Endocrinology Volume 154 ; 154 ; >
 
     }

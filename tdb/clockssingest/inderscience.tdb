@@ -1609,7 +1609,7 @@
 
       param[journal_id] = ijce
 
-      au < finished ; crawling ; 2009-2014 ; International Journal of Collaborative Engineering Volume 1 ; 1 ; >
+      au < finished ; finished ; 2009-2014 ; International Journal of Collaborative Engineering Volume 1 ; 1 ; >
 
     }
 
@@ -2010,7 +2010,7 @@
       param[journal_id] = ijcih
 
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Computers in Healthcare Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2014-2015 ; International Journal of Computers in Healthcare Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014-2015 ; International Journal of Computers in Healthcare Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       #issue3 & 4 not online yet
 
     }
@@ -5001,7 +5001,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Liability and Scientific Enquiry Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Liability and Scientific Enquiry Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Liability and Scientific Enquiry Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Liability and Scientific Enquiry Volume 7 ; 7 ; reingest1.clockss.org:8082 > 
+      au < finished ; finished ; 2014 ; International Journal of Liability and Scientific Enquiry Volume 7 ; 7 ; reingest1.clockss.org:8082 > 
 
     }
 

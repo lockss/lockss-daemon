@@ -89,7 +89,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 ; >
       au < finished ; crawling ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; >
       au < expected ; exists ; 2016 ; 2016 ; Advances in Radio Science 2014 Volume 14 ; 14 ; >
 
    }
@@ -115,7 +115,7 @@
       au < doesNotExist ; doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; >
 
    }
@@ -130,7 +130,7 @@
       param[base_url] = http://www.adv-stat-clim-meteorol-oceanogr.net/
       param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
 
-      au < finished ; crawling ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; >
 
    }
@@ -487,7 +487,7 @@
 
       au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; >
 
    }
@@ -523,7 +523,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; >
 
    }
@@ -563,7 +563,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; >
 
    }
@@ -774,7 +774,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; >
 
    }
@@ -966,7 +966,7 @@
       au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1/W1 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2/W2 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; >
+      au < finished ; finished ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3/W5 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4/W2 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5/W3 ; >
@@ -1071,12 +1071,12 @@
       au < frozen ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 ; >
       au < frozen ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 ; >
       au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 ; >
+      au < finished ; finished ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 ; >
       au < finished ; finished ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 ; >
       au < finished ; finished ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 ; >
       au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 ; >
       au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 ; >
+      au < finished ; finished ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 ; >
       au < finished ; crawling ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 ; >
       # may reposition these
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W4 ; XL-7-W4 ; >
@@ -1124,7 +1124,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 ; >
 
    }
@@ -1245,7 +1245,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; >
 
    }
@@ -1287,7 +1287,7 @@
       #cease publishing 2014
 
       au < finished ; finished ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 ; >
+      au < finished ; finished ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 ; >
 
    }
 
@@ -1320,10 +1320,10 @@
       param[home_url] = http://www.proceedings-international-association-of-hydrological-sciences.net/
 
       au < finished ; crawling ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 ; >
       au < finished ; crawling ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 ; >
       au < ready ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 369 ; 369 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 370 ; 370 ; >
       au < ready ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; >
@@ -1434,7 +1434,7 @@
       au < finished ; finished ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
 
    }
@@ -1559,7 +1559,7 @@
       au < finished ; crawling ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; >
+      au < finished ; finished ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; >
 
    }
