@@ -34,7 +34,6 @@ package org.lockss.plugin.elifesciences;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 import java.util.Vector;
 
 import org.htmlparser.Attribute;
@@ -44,12 +43,9 @@ import org.htmlparser.filters.*;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
 public class ELifeHtmlHashFilterFactory implements FilterFactory {
 	
@@ -67,7 +63,8 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
             String tagName = tag.getTagName().toLowerCase();
             try {
               if ("input".equals(tagName) ||
-                  "div".equals(tagName)) {
+                  "div".equals(tagName) ||
+                  "a".equals(tagName)) {
                 Attribute a = tag.getAttributeEx(tagName);
                 Vector<Attribute> v = new Vector<Attribute>();
                 v.add(a);
