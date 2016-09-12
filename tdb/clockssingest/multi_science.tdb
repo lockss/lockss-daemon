@@ -179,10 +179,10 @@
     au < down ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
     au < down ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 ; >
     au < down ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < down ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 ; >
     au < down ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < down ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; >
@@ -328,7 +328,7 @@
     au < down ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
     au < finished ; finished ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
     au < down ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
@@ -415,7 +415,7 @@
     au < down ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 ; >
     au < down ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 ; >
     au < down ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 ; >
-    au < finished ; crawling ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < down ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 ; >
     au < down ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; >
     au < down ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; >
@@ -573,7 +573,7 @@
 
     au < finished ; crawling ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
-    au < finished ; crawling ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
+    au < finished ; finished ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
     au < finished ; finished ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
     au < finished ; finished ; 2004 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 ; >
     au < finished ; finished ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 ; >
@@ -624,14 +624,14 @@
     param[journal_id] = nn
     # triggering
 
-    au < finished ; frozen ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Noise Notes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; Noise Notes Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Noise Notes Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Noise Notes Volume 11 ; 11 ; reingest3.clockss.org:8083 >
@@ -654,7 +654,7 @@
     au < finished ; finished ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 ; >
     au < finished ; finished ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 ; >
     au < finished ; finished ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 ; >
+    au < finished ; finished ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 ; >
     au < finished ; finished ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 ; >
     au < finished ; finished ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 ; >
@@ -718,7 +718,7 @@
     au < finished ; finished ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
     au < finished ; finished ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
     au < finished ; finished ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
-    au < finished ; crawling ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
+    au < finished ; finished ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
     au < finished ; crawling ; 2004 ; Wind Engineering Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
     au < finished ; finished ; 2006 ; Wind Engineering Volume 30 ; 30 ; >

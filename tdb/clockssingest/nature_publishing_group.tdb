@@ -64,7 +64,7 @@
     au < finished ; frozen ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 ; >
     au < superseded ; exists ; 2013 ; American Journal of Gastroenterology Volume 107 [to delete] ; 2013 ; 107 ; >
     au < crawling ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 ; >
-    au < finished ; crawling ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 ; >
+    au < finished ; finished ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 ; >
     au < deepCrawl ; exists ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; >
     au < crawling ; exists ; 2016 ; American Journal of Gastroenterology Volume 111 ; 2016 ; 111 ; >
 
@@ -100,7 +100,7 @@
     au < superseded ; exists ; 2008 ; American Journal of Hypertension Volume 21 [to delete] ; 2008 ; 21 ; >
     au < superseded ; exists ; 2009 ; American Journal of Hypertension Volume 22 [to delete] ; 2009 ; 22 ; >
     au < superseded ; finished ; 2010 ; American Journal of Hypertension Volume 23 [superseded] ; 2010 ; 23 ; >
-    au < superseded ; down ; 2011 ; American Journal of Hypertension Volume 24 [superseded] ; 2011 ; 24 ; >
+    au < superseded ; finished ; 2011 ; American Journal of Hypertension Volume 24 [superseded] ; 2011 ; 24 ; >
     au < superseded ; down ; 2012 ; American Journal of Hypertension Volume 25 [superseded] ; 2012 ; 25 ; >
 
   }
@@ -121,7 +121,7 @@
     au < down ; finished ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 ; >
     au < down ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 ; >
     au < down ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 ; >
-    au < down ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 ; >
+    au < down ; finished ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 ; >
     au < down ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 ; >
 
   }
@@ -285,7 +285,7 @@
     au < finished ; crawling ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
     au < finished ; crawling ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 ; >
     au < finished ; crawling ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
-    au < finished ; crawling ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
@@ -490,7 +490,7 @@
     au < finished ; frozen ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 ; >
     au < finished ; frozen ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 ; >
     au < crawling ; exists ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 ; >
-    au < finished ; crawling ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 ; >
+    au < finished ; finished ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 ; >
     au < deepCrawl ; exists ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 ; >
     au < crawling ; exists ; 2016 ; Cell Death and Differentiation Volume 23 ; 2016 ; 23 ; >
 
@@ -542,7 +542,7 @@
     au < finished ; frozen ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 ; >
     au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 ; >
-    au < finished ; crawling ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 ; >
+    au < finished ; finished ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 ; >
     au < finished ; crawling ; 2015 ; Cell Research Volume 25 ; 2015 ; 25 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cell Research Volume 26 ; 2016 ; 26 ; >
 
@@ -560,7 +560,7 @@
     param[journal_id] = cmi
 
     au < finished ; crawling ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 ; >
-    au < finished ; crawling ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 ; >
+    au < finished ; finished ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
     au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
@@ -606,7 +606,7 @@
     au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 ; >
     au < down ; finished ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 ; >
     au < down ; finished ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 ; >
-    au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 ; >
+    au < down ; finished ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 ; >
     au < down ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 ; >
     au < down ; finished ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 ; >
     au < zapped ; finished ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 ; >
@@ -837,7 +837,7 @@
     au < manifest ; exists ; 2005 ; Eye Volume 19 ; 2005 ; 19 ; >
     au < manifest ; exists ; 2006 ; Eye Volume 20 ; 2006 ; 20 ; >
     au < manifest ; exists ; 2007 ; Eye Volume 21 ; 2007 ; 21 ; >
-    au < finished ; frozen ; 2008 ; Eye Volume 22 ; 2008 ; 22 ; >
+    au < finished ; finished ; 2008 ; Eye Volume 22 ; 2008 ; 22 ; >
     au < finished ; crawling ; 2009 ; Eye Volume 23 ; 2009 ; 23 ; >
     au < finished ; crawling ; 2010 ; Eye Volume 24 ; 2010 ; 24 ; >
     au < finished ; crawling ; 2011 ; Eye Volume 25 ; 2011 ; 25 ; >
@@ -1056,7 +1056,7 @@
     au < finished ; finished ; 2011 ; Heredity Volume 106 ; 2011 ; 106 ; >
     au < finished ; finished ; 2011 ; Heredity Volume 107 ; 2011 ; 107 ; >
     au < finished ; frozen ; 2012 ; Heredity Volume 108 ; 2012 ; 108 ; >
-    au < finished ; crawling ; 2012 ; Heredity Volume 109 ; 2012 ; 109 ; >
+    au < finished ; finished ; 2012 ; Heredity Volume 109 ; 2012 ; 109 ; >
     au < finished ; crawling ; 2013 ; Heredity Volume 110 ; 2013 ; 110 ; >
     au < crawling ; exists ; 2013 ; Heredity Volume 111 ; 2013 ; 111 ; >
     au < finished ; finished ; 2014 ; Heredity Volume 112 ; 2014 ; 112 ; >
@@ -1087,7 +1087,7 @@
     au < finished ; frozen ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 ; >
     au < finished ; frozen ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 ; >
     au < finished ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 ; >
-    au < finished ; crawling ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
     au < deepCrawl ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
     au < testing ; exists ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; >
@@ -1322,7 +1322,7 @@
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 ; >
-    au < finished ; frozen ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 ; >
+    au < finished ; finished ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 ; >
     au < finished ; frozen ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 ; >
     au < finished ; frozen ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 ; >
     au < zapped ; finished ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 ; >
@@ -1421,7 +1421,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 ; >
     au < finished ; frozen ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 ; >
-    au < finished ; frozen ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 ; >
+    au < finished ; finished ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 ; >
     au < finished ; frozen ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 ; >
     au < finished ; crawling ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 ; >
     au < finished ; crawling ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 ; >
@@ -1720,7 +1720,7 @@
     au < finished ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 ; >
     au < finished ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 ; >
     au < finished ; crawling ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
+    au < finished ; finished ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 ; >
     au < crawling ; exists ; 2016 ; Journal of Perinatology Volume 36 ; 2016 ; 36 ; >
  
@@ -1808,7 +1808,7 @@
     param[journal_id] = labinvest
 
     au < finished ; frozen ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 ; >
-    au < finished ; frozen ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 ; >
+    au < finished ; finished ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 ; >
     au < finished ; crawling ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 ; >
     au < finished ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 ; >
     au < finished ; crawling ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 ; >
@@ -2403,7 +2403,7 @@
     au < crawling ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; >
     au < crawling ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; >
     au < crawling ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 ; >
-    au < finished ; crawling ; 2014 ; Nature Volume 508 ; 2014 ; 508 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Nature Volume 508 ; 2014 ; 508 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Nature Volume 509 ; 2014 ; 509 ; >
     au < finished ; crawling ; 2014 ; Nature Volume 510 ; 2014 ; 510 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; >
@@ -3104,7 +3104,7 @@
     au < zapped ; finished ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 ; >
     au < finished ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 ; >
-    au < finished ; crawling ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
@@ -3305,7 +3305,7 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 ; >
     au < finished ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; >
@@ -3361,7 +3361,7 @@
     au < zapped ; finished ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 ; >
     au < finished ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 ; >
-    au < finished ; crawling ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 ; >
+    au < finished ; finished ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 ; >
     au < crawling ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Rheumatology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
@@ -3388,7 +3388,7 @@
     au < finished ; crawling ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 ; >
-    au < finished ; crawling ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 ; >
+    au < finished ; finished ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 ; >
     au < finished ; crawling ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Urology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
@@ -3595,7 +3595,7 @@
     
     au < finished ; finished ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 ; >
     au < finished ; crawling ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 ; >
-    au < finished ; crawling ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 ; >
     au < crawling ; exists ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; >
 
@@ -3678,7 +3678,7 @@
     au < finished ; crawling ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 ; >
     au < finished ; crawling ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; >
-    au < finished ; crawling ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 ; >
     au < crawling ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 ; >
     au < finished ; frozen ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 ; >
@@ -3737,10 +3737,10 @@
 	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 ; >
     au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 ; >
     au < finished ; crawling ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 ; >
-    au < finished ; crawling ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 ; >
+    au < finished ; finished ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 ; >
     au < finished ; frozen ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 ; >
-    au < finished ; frozen ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 ; >
-    au < finished ; frozen ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 ; >
+    au < finished ; finished ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 ; >
+    au < finished ; finished ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 ; >
     au < finished ; finished ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 ; >
     au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 ; >
     au < deepCrawl ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; >

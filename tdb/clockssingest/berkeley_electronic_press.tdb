@@ -462,7 +462,7 @@
 
     au < zapped ; finished ; 2002-2003 ; The Forum Volume 1 ; 1 ; >
     au < down ; finished ; 2004 ; The Forum Volume 2 ; 2 ; >
-    au < down ; crawling ; 2005-2006 ; The Forum Volume 3 ; 3 ; >
+    au < down ; finished ; 2005-2006 ; The Forum Volume 3 ; 3 ; >
     au < down ; finished ; 2006 ; The Forum Volume 4 ; 4 ; >
     au < down ; finished ; 2007-2008 ; The Forum Volume 5 ; 5 ; >
     au < zapped ; finished ; 2008 ; The Forum Volume 6 ; 6 ; >
@@ -485,7 +485,7 @@
 
     au < down ; crawling ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 ; >
-    au < down ; crawling ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 ; >
+    au < down ; finished ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 ; >
     au < zapped ; finished ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 ; >
     au < down ; finished ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 ; >
     au < down ; crawling ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 ; >
@@ -496,7 +496,7 @@
     au < zapped ; finished ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 ; >
     au < zapped ; finished ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 ; >
     au < zapped ; finished ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 ; >
-    au < down ; crawling ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 ; >
+    au < down ; finished ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 ; >
 
   }
 
@@ -659,7 +659,7 @@
     param[journal_abbr] = ijcre
 
     au < down ; finished ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 ; >
-    au < down ; crawling ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 ; >
+    au < down ; finished ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 ; >
     au < down ; finished ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 ; >
     au < zapped ; finished ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 ; >
     au < zapped ; finished ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 ; >
@@ -728,7 +728,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijnes
 
-    au < down ; crawling ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 ; >
+    au < down ; finished ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 ; >
     au < zapped ; finished ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 ; >
     au < down ; finished ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 ; >
     au < zapped ; finished ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 ; >
@@ -1143,7 +1143,7 @@
     au < zapped ; finished ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 ; >
     au < zapped ; finished ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 ; >
-    au < down ; crawling ; 2010-2011 ; Muslim World Journal of Human Rights Volume 7 ; 7 ; >   
+    au < down ; finished ; 2010-2011 ; Muslim World Journal of Human Rights Volume 7 ; 7 ; >   
 
   }
   
@@ -1645,7 +1645,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = wpsr
 
-    au < down ; crawling ; 2005 ; World Political Science Review Volume 1 ; 1 ; >
+    au < down ; finished ; 2005 ; World Political Science Review Volume 1 ; 1 ; >
     au < down ; finished ; 2006 ; World Political Science Review Volume 2 ; 2 ; >
     au < down ; finished ; 2007 ; World Political Science Review Volume 3 ; 3 ; >
     au < zapped ; finished ; 2008 ; World Political Science Review Volume 4 ; 4 ; >

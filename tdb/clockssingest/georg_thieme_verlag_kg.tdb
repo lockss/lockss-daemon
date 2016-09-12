@@ -1823,7 +1823,7 @@
 
    au < finished ; finished ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 ; >
    au < finished ; finished ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 4 ; >
    au < finished ; crawling ; 2015 ; 2015 ; Global Spine Journal Volume 2015 ; 5 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Global Spine Journal Volume 2016 ; 6 ; >
@@ -2375,7 +2375,7 @@
    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2011 ; 6 ; >
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 ; >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 ; >
-   au < finished ; crawling ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
    au < crawling ; exists ; 2016 ; 2016 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2016 ; 11 ; >
 
@@ -2487,7 +2487,7 @@
     comment[1] = Minimally Invasive Neurosurgery was merged with this journal
 
     au < finished ; finished ; 2012 ; 2012 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2012 ; 73 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 74 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 74 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2014 ; 75 ; reingest4.clockss.org:8082 >
 
   }
@@ -3037,7 +3037,7 @@
 
    au < finished ; crawling ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
-   au < finished ; crawling ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 2014 ; >
    au < finished ; crawling ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
@@ -3516,7 +3516,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Notfallmedizin up2date Volume 2008 ; 3 ; >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Notfallmedizin up2date Volume 2009 ; 4 ; >
     au < finished ; finished ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Notfallmedizin up2date Volume 2012 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Notfallmedizin up2date Volume 2014 ; 9 ; >
@@ -4379,7 +4379,7 @@
 
    au < finished ; finished ; 2012 ; 2012 ; retten! Volume 2012 ; 1 ; >
    au < finished ; finished ; 2013 ; 2013 ; retten! Volume 2013 ; 2 ; >
-   au < finished ; crawling ; 2014 ; 2014 ; retten! Volume 2014 ; 3 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2014 ; 2014 ; retten! Volume 2014 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; retten! Volume 2015 ; 4 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; retten! Volume 2016 ; 5 ; >
 
@@ -5025,7 +5025,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2008 ; 5 ; >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; 2010 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2010 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 ; >
+    au < finished ; finished ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; 2012 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2012 ; 9 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2014 ; 11 ; >

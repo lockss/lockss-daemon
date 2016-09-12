@@ -113,7 +113,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Ambix Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Ambix Volume 56 ; 56 ; >
     au < finished ; finished ; 2010 ; Ambix Volume 57 ; 57 ; >
-    au < finished ; crawling ; 2011 ; Ambix Volume 58 ; 58 ; >
+    au < finished ; finished ; 2011 ; Ambix Volume 58 ; 58 ; >
     au < finished ; finished ; 2012 ; Ambix Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Ambix Volume 60 ; 60 ; >
 
@@ -356,7 +356,7 @@
 
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 ; > 
     au < down ; crawling ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
-    au < down ; crawling ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
+    au < down ; finished ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 ; > 
 
@@ -431,7 +431,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 ; >
     au < finished ; finished ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 ; >
-    au < finished ; crawling ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 ; >
+    au < finished ; finished ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 ; >
     au < finished ; finished ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Byzantine and Modern Greek Studies Volume 37 ; 37 ; >
 
@@ -639,7 +639,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Cochlear Implants International Volume 10 ; 10 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Cochlear Implants International Volume 11 ; 11 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Cochlear Implants International Volume 12 ; 12 ; > 
-    au < finished ; frozen ; 2012 ; Cochlear Implants International Volume 13 ; 13 ; > 
+    au < finished ; finished ; 2012 ; Cochlear Implants International Volume 13 ; 13 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Cochlear Implants International Volume 14 ; 14 ; > 
 
   }
@@ -1387,7 +1387,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Heat Treatment & Surface Engineering Volume 3 ; 3 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; International Heat Treatment & Surface Engineering Volume 4 ; 4 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; International Heat Treatment & Surface Engineering Volume 5 ; 5 ; > 
-    au < finished ; frozen ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 ; > 
+    au < finished ; finished ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Heat Treatment & Surface Engineering Volume 7 ; 7 ; > 
 
   }
@@ -1516,7 +1516,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Materials Reviews Volume 54 ; 54 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; International Materials Reviews Volume 55 ; 55 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; International Materials Reviews Volume 56 ; 56 ; > 
-    au < finished ; frozen ; 2012 ; International Materials Reviews Volume 57 ; 57 ; > 
+    au < finished ; finished ; 2012 ; International Materials Reviews Volume 57 ; 57 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Materials Reviews Volume 58 ; 58 ; > 
 
   }
@@ -2354,7 +2354,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Levant Volume 41 ; 41 ; > 
     au < finished ; finished ; 2010 ; Levant Volume 42 ; 42 ; >
     au < superseded ; exists ; 2011 ; Levant Volume 43 [superseded] ; 43 ; > 
-    au < finished ; crawling ; 2012 ; Levant Volume 44 ; 44 ; > 
+    au < finished ; finished ; 2012 ; Levant Volume 44 ; 44 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Levant Volume 45 ; 45 ; > 
 
   }
@@ -2595,7 +2595,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Medieval Archaeology Volume 53 ; 53 ; > 
     au < down ; finished ; 2010 ; Medieval Archaeology Volume 54 ; 54 ; > 
     au < down ; finished ; 2011 ; Medieval Archaeology Volume 55 ; 55 ; >
-    au < down ; frozen ; 2012 ; Medieval Archaeology Volume 56 ; 56 ; > 
+    au < down ; finished ; 2012 ; Medieval Archaeology Volume 56 ; 56 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Medieval Archaeology Volume 57 ; 57 ; > 
 
     }
@@ -2824,7 +2824,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Ming Studies Volume 2009 ; 2009 ; > 
     au < finished ; finished ; 2010 ; Ming Studies Volume 2010 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Ming Studies Volume 2011 ; 2011 ; > 
-    au < finished ; crawling ; 2012 ; Ming Studies Volume 2012 ; 2012 ; > 
+    au < finished ; finished ; 2012 ; Ming Studies Volume 2012 ; 2012 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Ming Studies Volume 2013 ; 2013 ; > 
 
   }
@@ -2924,7 +2924,7 @@
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2011 ; New Journal of Botany Volume 1 ; 1 ; > 
-    au < finished ; crawling ; 2012 ; New Journal of Botany Volume 2 ; 2 ; > 
+    au < finished ; finished ; 2012 ; New Journal of Botany Volume 2 ; 2 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; New Journal of Botany Volume 3 ; 3 ; > 
 
   }
@@ -3074,8 +3074,8 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford German Studies Volume 37 ; 37 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford German Studies Volume 38 ; 38 ; > 
     au < finished ; finished ; 2010 ; Oxford German Studies Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2011 ; Oxford German Studies Volume 40 ; 40 ; > 
-    au < finished ; crawling ; 2012 ; Oxford German Studies Volume 41 ; 41 ; > 
+    au < finished ; finished ; 2011 ; Oxford German Studies Volume 40 ; 40 ; > 
+    au < finished ; finished ; 2012 ; Oxford German Studies Volume 41 ; 41 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Oxford German Studies Volume 42 ; 42 ; > 
 
   }
@@ -3319,7 +3319,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Post-Medieval Archaeology Volume 42 ; 42 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Post-Medieval Archaeology Volume 43 ; 43 ; > 
     au < finished ; finished ; 2010 ; Post-Medieval Archaeology Volume 44 ; 44 ; > 
-    au < finished ; crawling ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 ; > 
+    au < finished ; finished ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 ; > 
     au < finished ; finished ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Post-Medieval Archaeology Volume 47 ; 47 ; > 
 

@@ -45,9 +45,9 @@
       au < doNotProcess ; exists ; 2005 ; Acta Veterinaria Scandinavica Volume 47 ; 47 ; >
       au < doNotProcess ; exists ; 2006 ; Acta Veterinaria Scandinavica Volume 48 ; 48 ; >
       au < doNotProcess ; exists ; 2007 ; Acta Veterinaria Scandinavica Volume 49 ; 49 ; >
-      au < down ; crawling ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 ; >
+      au < down ; finished ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 ; >
       au < down ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 ; >
-      au < finished ; frozen ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 ; >
+      au < finished ; finished ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 ; >
       au < down ; crawling ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 ; >
       au < down ; crawling ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 ; >
       au < down ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 ; >
@@ -107,7 +107,7 @@
       au < doNotProcess ; exists ; 2005 ; AIDS Research and Therapy Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; AIDS Research and Therapy Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; AIDS Research and Therapy Volume 4 ; 4 ; >
-      au < down ; crawling ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 ; >
+      au < down ; finished ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 ; >
       au < down ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 ; >
       au < down ; finished ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 ; >
       au < down ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 ; >
@@ -159,7 +159,7 @@
       au < down ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 ; >
       au < down ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 ; >
       au < down ; finished ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 ; >
-      au < down ; crawling ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 ; >
+      au < down ; finished ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 ; >
       au < down ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 ; >
       au < down ; exists ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 ; 11 ; >
@@ -189,7 +189,7 @@
 
       au < down ; exists ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 ; >
       au < down ; exists ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 ; >
-      au < down ; crawling ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 ; >
+      au < down ; finished ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 ; >
       au < down ; crawling ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 ; >
       au < down ; exists ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 ; >
       au < down ; exists ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 ; >
@@ -231,7 +231,7 @@
       au < doNotProcess ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 ; >
       au < down ; crawling ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 ; >
       au < down ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 ; >
-      au < down ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 ; >
+      au < down ; finished ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 ; >
       au < down ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 ; >
       au < down ; finished ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 ; >
       au < down ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 ; >
@@ -455,7 +455,7 @@
       au < doNotProcess ; exists ; 2007 ; Australia and New Zealand Health Policy Volume 4 ; 4 ; >
       au < down ; crawling ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 ; >
       au < down ; finished ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 ; >
-      au < down ; crawling ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 ; >
+      au < down ; finished ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 ; >
       au < superseded ; down ; 0 ; Australia and New Zealand Health Policy Volume 8 [superseded] ; 8 ; >
 
     }
@@ -688,7 +688,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.biomaterialsres.com/
       param[journal_issn] = 2055-7124
 
-      au < down ; crawling ; 2014 ; Biomaterials Research Volume 18 ; 18 ; >
+      au < down ; finished ; 2014 ; Biomaterials Research Volume 18 ; 18 ; >
       au < down ; exists ; 2015 ; Biomaterials Research Volume 19 ; 19 ; >
       
     }
@@ -709,7 +709,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; BioMedical Engineering OnLine Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2006 ; BioMedical Engineering OnLine Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; BioMedical Engineering OnLine Volume 6 ; 6 ; >
-      au < finished ; frozen ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 ; >
+      au < finished ; finished ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 ; >
       au < down ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 ; >
       au < down ; finished ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 ; >
       au < down ; crawling ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 ; >
@@ -845,7 +845,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2049-3002
 
       au < down ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 ; >
-      au < down ; crawling ; 2014 ; Cancer & Metabolism Volume 2 ; 2 ; >
+      au < down ; finished ; 2014 ; Cancer & Metabolism Volume 2 ; 2 ; >
       au < down ; exists ; 2015 ; Cancer & Metabolism Volume 3 ; 3 ; >
 
     }
@@ -923,7 +923,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Carbon Balance and Management Volume 2 ; 2 ; >
       au < down ; finished ; 2008 ; Carbon Balance and Management Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 ; >
-      au < down ; crawling ; 2010 ; Carbon Balance and Management Volume 5 ; 5 ; >
+      au < down ; finished ; 2010 ; Carbon Balance and Management Volume 5 ; 5 ; >
       au < down ; crawling ; 2011 ; Carbon Balance and Management Volume 6 ; 6 ; >
       au < down ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 ; >
       au < down ; finished ; 2013 ; Carbon Balance and Management Volume 8 ; 8 ; >
@@ -998,7 +998,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < down ; exists ; 2008 ; Cases Journal Volume 1 ; 1 ; >
       au < down ; exists ; 2009 ; Cases Journal Volume 2 ; 2 ; >
-      au < down ; crawling ; 2010 ; Cases Journal Volume 3 ; 3 ; >
+      au < down ; finished ; 2010 ; Cases Journal Volume 3 ; 3 ; >
       au < superseded ; down ; 2011 ; Cases Journal Volume 4 [superseded] ; 4 ; >
 
     }
@@ -1036,7 +1036,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Cell Communication and Signaling Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Cell Communication and Signaling Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Cell Communication and Signaling Volume 5 ; 5 ; >
-      au < down ; crawling ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 ; >
+      au < down ; finished ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 ; >
       au < down ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 ; >
       au < finished ; frozen ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 ; >
       au < down ; crawling ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 ; >
@@ -1163,7 +1163,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Chinese Medicine Volume 2 ; 2 ; >
       au < down ; exists ; 2008 ; Chinese Medicine Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Chinese Medicine Volume 4 ; 4 ; >
-      au < down ; crawling ; 2010 ; Chinese Medicine Volume 5 ; 5 ; >
+      au < down ; finished ; 2010 ; Chinese Medicine Volume 5 ; 5 ; >
       au < down ; finished ; 2011 ; Chinese Medicine Volume 6 ; 6 ; >
       au < down ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 ; >
       au < down ; finished ; 2013 ; Chinese Medicine Volume 8 ; 8 ; >
@@ -1286,7 +1286,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ctajournal.com/
       param[journal_issn] = 2045-7022
 
-      au < down ; crawling ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 ; >
+      au < down ; finished ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 ; >
       au < down ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 ; >
       au < down ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 ; >
       au < down ; finished ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 ; >
