@@ -24,7 +24,7 @@
     au < finished ; finished ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 ; 2011 ; >
     au < finished ; finished ; 2013 ; Advances in Tumor Virology Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Tumor Virology Volume 4 ; 4 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Tumor Virology Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Tumor Virology Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -46,7 +46,7 @@
     au < finished ; finished ; 2012 ; Air, Soil & Water Research Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Air, Soil & Water Research Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Air, Soil & Water Research Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Air, Soil & Water Research Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Air, Soil & Water Research Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -111,7 +111,7 @@
     au < finished ; finished ; 2012 ; Biochemistry Insights Volume 5 ; 5 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Biochemistry Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Biochemistry Insights Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Biochemistry Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biochemistry Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -220,7 +220,7 @@
     au < finished ; finished ; 2011 ; Biomedical Informatics Insights Volume 4 ; 4 ; 2011 ; >
     au < finished ; finished ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Biomedical Informatics Insights Volume 6 (Suppl. 1) ; 6 ; 2013 ; >
-    au < frozen ; exists ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Biomedical Informatics Insights Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biomedical Informatics Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -262,7 +262,7 @@
     au < finished ; finished ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Breast Cancer: Basic and Clinical Research Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Breast Cancer: Basic and Clinical Research Volume 8 ; 8 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Breast Cancer: Basic and Clinical Research Volume 9 ; 9 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Breast Cancer: Basic and Clinical Research Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -433,7 +433,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Cardiology Volume 7 ; 7 ; 2013 ; >
     au < finished ; manifest ; 2014 ; Clinical Medicine Insights: Cardiology Volume 8 ; 8 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Cardiology Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -609,7 +609,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Oncology Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Oncology Volume 8 ; 8 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Oncology Volume 9 ; 9 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -909,7 +909,7 @@
     au < finished ; finished ; 2012 ; Environmental Health Insights Volume 6 ; 6 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Environmental Health Insights Volume 7 ; 7 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2014 ; Environmental Health Insights Volume 8 ; 8 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Environmental Health Insights Volume 9 ; 9 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Environmental Health Insights Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -934,7 +934,7 @@
     au < finished ; finished ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 8 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Evolutionary Bioinformatics Volume 9 ; 9 ; 2013 ; >
     au < finished ; finished ; 2014 ; Evolutionary Bioinformatics Volume 10 ; 10 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Evolutionary Bioinformatics Volume 11 ; 11 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Evolutionary Bioinformatics Volume 12 ; 12 ; 2016 ; >
 
   }
@@ -999,7 +999,7 @@
     au < finished ; finished ; 2012 ; Genetics & Epigenetics Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Genetics & Epigenetics Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Genetics & Epigenetics Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Genetics & Epigenetics Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1083,7 +1083,7 @@
     au < finished ; finished ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Healthy Aging & Clinical Care in the Elderly Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Healthy Aging & Clinical Care in the Elderly Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Healthy Aging & Clinical Care in the Elderly Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Healthy Aging & Clinical Care in the Elderly Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Healthy Aging & Clinical Care in the Elderly Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1104,7 +1104,7 @@
     au < finished ; finished ; 2011 ; Human Parasitic Diseases Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1125,7 +1125,7 @@
     au < finished ; finished ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Immunology and Immunogenetics Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Immunology and Immunogenetics Insights Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Immunology and Immunogenetics Insights Volume 7 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Immunology and Immunogenetics Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1209,7 +1209,7 @@
     au < finished ; finished ; 2012 ; Integrative Medicine Insights Volume 7 ; 7 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Integrative Medicine Insights Volume 8 ; 8 ; 2013 ; >
     au < finished ; finished ; 2014 ; Integrative Medicine Insights Volume 9 ; 9 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Integrative Medicine Insights Volume 11 ; 11 ; 2016 ; >
 
   }
@@ -1294,7 +1294,7 @@
     au < finished ; finished ; 2012 ; Journal of Cell Death Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Cell Death Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Cell Death Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Cell Death Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Cell Death Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1315,7 +1315,7 @@
     au < crawling ; finished ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Central Nervous System Disease Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Central Nervous System Disease Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Central Nervous System Disease Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Central Nervous System Disease Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1372,7 +1372,7 @@
     param[journal_id] = 174
 
     au < finished ; finished ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Medical Education and Curricular Development Volume 2 ; 2 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Medical Education and Curricular Development Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -1723,7 +1723,7 @@
     au < finished ; finished ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2016 ; Retrovirology: Research and Treatment Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -1741,7 +1741,7 @@
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 ; >
     au < finished ; finished ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Signal Transduction Insights Volume 5 ; 5 ; 2016 ; >
 
   }
@@ -1785,7 +1785,7 @@
     au < finished ; finished ; 2012 ; Tobacco Use Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Tobacco Use Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Tobacco Use Insights Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Tobacco Use Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Tobacco Use Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1806,7 +1806,7 @@
     au < manifest ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; >
     au < finished ; finished ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; Translational Oncogenomics Volume 8 ; 8 ; 2016 ; >
 
   }

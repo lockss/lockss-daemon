@@ -1186,7 +1186,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 ; >
    au < crawling ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 ; >
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Endoscopy Volume 2016 ; 48 ; >
 
   }
@@ -1804,7 +1804,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitswesen Das Volume 2012 ; 76 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Gesundheitswesen Das Volume 2013 ; 75 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Gesundheitswesen Das Volume 2014 ; 76 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Gesundheitswesen Das Volume 2015 ; 77 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Gesundheitswesen Das Volume 2015 ; 77 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Gesundheitswesen Das Volume 2016 ; 78 ; >
 
   }
@@ -2090,7 +2090,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 ; reingest3.clockss.org:8083 >
-   au < frozen ; exists ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2016 ; 48 ; >
 
   }
@@ -2275,7 +2275,7 @@
     au < finished ; finished ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 ; >
     au < finished ; crawling ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 2016 ; 37 ; >
 
   }
@@ -2294,7 +2294,7 @@
 
     au < finished ; crawling ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Interventionelle Radiologie Scan Volume 4 ; 4 ; >
 
   }
@@ -2334,7 +2334,7 @@
     au < finished ; crawling ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal Club Schmerzmedizin Volume 5 ; 5 ; >
 
   }
@@ -2376,7 +2376,7 @@
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 ; >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 ; >
    au < finished ; finished ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; reingest5.clockss.org:8082 >
-   au < frozen ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2016 ; 2016 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2016 ; 11 ; >
 
   }
@@ -2969,7 +2969,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 2016 ; 47 ; >
 
   }
@@ -3146,7 +3146,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 93 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 2016 ; 95 ; >
 
   }
@@ -3193,7 +3193,7 @@
     au < finished ; finished ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ; 17 ; >
     au < finished ; finished ; 2014 ; 2014 ; manuelletherapie Volume 2014 ; 18 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 2015 ; manuelletherapie Volume 2015 ; 19 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; manuelletherapie Volume 2015 ; 19 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; manuelletherapie Volume 2016 ; 20 ; >
 
   }
@@ -3390,7 +3390,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 ; >
     au < finished ; crawling ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Neuroradiologie Scan Volume 2016 ; 6 ; >
 
   }
@@ -3819,7 +3819,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Pharmacopsychiatry Volume 2016 ; 49 ; >
 
   }
@@ -4042,7 +4042,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Planta Medica Volume 2016 ; 82 ; >
 
   }
@@ -4981,7 +4981,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Seminars in Thrombosis and Hemostasis Volume 2012 ; 38 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Seminars in Thrombosis and Hemostasis Volume 2013 ; 39 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 2014 ; 40 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 ; reingest5.clockss.org:8082 >
     au < testing ; exists ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 2016 ; 42 ; >
 
   }
@@ -5270,7 +5270,7 @@
    au < finished ; finished ; 2012 ; 2012 ; SYNFACTS Volume 2012 ; 8 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2014 ; 2014 ; SYNFACTS Volume 2014 ; 10 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; SYNFACTS Volume 2015 ; 11 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; SYNFACTS Volume 2015 ; 11 ; reingest2.clockss.org:8085 >
    au < manifest ; exists ; 2016 ; 2016 ; SYNFACTS Volume 2016 ; 12 ; >
 
   }
