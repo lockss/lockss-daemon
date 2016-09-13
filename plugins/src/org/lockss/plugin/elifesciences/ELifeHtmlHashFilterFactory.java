@@ -37,9 +37,11 @@ import java.io.InputStream;
 import java.util.Vector;
 
 import org.htmlparser.Attribute;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
@@ -121,8 +123,29 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      // Remove from TOC 
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "form-item"),
      // Remove the changeable portion of "Comments" section
-     HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread")
-
+     HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread"),
+     // Found a Comments section div that did not have an id attribute of "comments"
+     new AndFilter(
+         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ctools-collapsible-"),
+         new NodeFilter() {
+           @Override
+           public boolean accept(Node node) {
+             if (!(node instanceof Div)) return false;
+             Node childNode = node.getFirstChild();
+             while (childNode != null) {
+               if (childNode instanceof Tag) {
+                 if (((Tag) childNode).getTagName().equalsIgnoreCase("h2") && 
+                     childNode.toPlainTextString().equalsIgnoreCase("comments")) {
+                   return true;
+                 }
+               }
+               childNode = childNode.getNextSibling();
+             }
+             return false;
+           }
+         }
+         ),
+     
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
