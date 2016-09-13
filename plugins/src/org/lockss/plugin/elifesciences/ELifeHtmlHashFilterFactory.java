@@ -125,6 +125,7 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      // Remove the changeable portion of "Comments" section
      HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread"),
      // Found a Comments section div that did not have an id attribute of "comments"
+     HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
      new AndFilter(
          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ctools-collapsible-"),
          new NodeFilter() {

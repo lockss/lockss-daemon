@@ -89,6 +89,7 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "</div> ";
   
   private static final String withCommentSection=
+      "<div class=\"panel-separator\"></div>" +
       "<div class=\"ctools-collapsible-container ctools-collapsible-processed\">" +
       "<span class=\"ctools-toggle\"></span>" +
       "<h2 class=\"pane-title ctools-collapsible-handle\">Comments</h2>" +
