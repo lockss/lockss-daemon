@@ -5840,7 +5840,7 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < expected ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 >
+        au < manifest ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 >
 
     }
 
@@ -21517,7 +21517,7 @@
         au < released ; 2013-2014 ; Journal for the Study of the Pseudepigrapha Volume 23 ; 23 >
         au < released ; 2014-2015 ; Journal for the Study of the Pseudepigrapha Volume 24 ; 24 >
         au < manifest ; 2015-2016 ; Journal for the Study of the Pseudepigrapha Volume 25 ; 25 >
-        au < expected ; 2016-2017 ; Journal for the Study of the Pseudepigrapha Volume 26 ; 26 >
+        au < manifest ; 2016-2017 ; Journal for the Study of the Pseudepigrapha Volume 26 ; 26 >
 
       }
 
@@ -34811,7 +34811,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Medical Law International Volume 13 ; 13 >
         au < released ; 2014 ; Medical Law International Volume 14 ; 14 >
         au < released ; 2015 ; Medical Law International Volume 15 ; 15 >
-        au < expected ; 2016 ; Medical Law International Volume 16 ; 16 >
+        au < manifest ; 2016 ; Medical Law International Volume 16 ; 16 >
 
       }
 
@@ -38814,7 +38814,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 >
         au < released ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 >
         au < released ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 >
-        au < expected ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 >
+        au < manifest ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 >
 
       }
 
