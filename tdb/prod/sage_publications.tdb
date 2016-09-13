@@ -5753,13 +5753,42 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 >
-        au < exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 >
-        au < exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 >
-        au < exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 >
-        au < exists ; 2014 ; Cahiers Élisabéthains Volume 87 ; 87 >
+        au < exists ; 1999 ; Cahiers Élisabéthains Volume 55 ; 55 >
+        au < exists ; 1999 ; Cahiers Élisabéthains Volume 56 ; 56 >
+        au < exists ; 2000 ; Cahiers Élisabéthains Volume 57 ; 57 >
+        au < exists ; 2000 ; Cahiers Élisabéthains Volume 58 ; 58 >
+        au < exists ; 2001 ; Cahiers Élisabéthains Volume 59 ; 59 >
+        au < exists ; 2001 ; Cahiers Élisabéthains Volume 60 ; 60 >
+        au < exists ; 2002 ; Cahiers Élisabéthains Volume 61 ; 61 >
+        au < exists ; 2002 ; Cahiers Élisabéthains Volume 62 ; 62 >
+        au < exists ; 2003 ; Cahiers Élisabéthains Volume 63 ; 63 >
+        au < exists ; 2003 ; Cahiers Élisabéthains Volume 64 ; 64 >
+        au < exists ; 2004 ; Cahiers Élisabéthains Volume 65 ; 65 >
+        au < exists ; 2004 ; Cahiers Élisabéthains Volume 66 ; 66 >
+        au < exists ; 2005 ; Cahiers Élisabéthains Volume 67 ; 67 >
+        au < exists ; 2005 ; Cahiers Élisabéthains Volume 68 ; 68 >
+        au < exists ; 2006 ; Cahiers Élisabéthains Volume 69 ; 69 >
+        au < exists ; 2006 ; Cahiers Élisabéthains Volume 70 ; 70 >
+        au < exists ; 2007 ; Cahiers Élisabéthains Volume 71 ; 71 >
+        au < exists ; 2007 ; Cahiers Élisabéthains Volume 72 ; 72 >
+        au < exists ; 2008 ; Cahiers Élisabéthains Volume 73 ; 73 >
+        au < exists ; 2008 ; Cahiers Élisabéthains Volume 74 ; 74 >
+        au < exists ; 2009 ; Cahiers Élisabéthains Volume 75 ; 75 >
+        au < exists ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 >
+        au < exists ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 >
+        au < exists ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 >
+        au < exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 >
+        au < exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 >
+        au < exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 >
+        au < exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
+        au < exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
+        au < exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
+        au < exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
+        au < exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
+        au < exists ; 2015 ; Cahiers Élisabéthains Volume 87 ; 87 >
         au < ready ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 >
         au < manifest ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 >
+        au < exists ; 2016 ; Cahiers Élisabéthains Volume 90 ; 90 >
   
     }
 
@@ -46495,27 +46524,27 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1996 ; Tourism Economics Volume 2 ; 2 >
+        au < exists ; 1996 ; Tourism Economics Volume 2 [Sage] ; 2 >
         au < doesNotExist ; 1997 ; Tourism Economics Volume 3 ; 3 >
         au < doesNotExist ; 1998 ; Tourism Economics Volume 4 ; 4 >
         au < doesNotExist ; 1999 ; Tourism Economics Volume 5 ; 5 >
-        au < exists ; 2000 ; Tourism Economics Volume 6 ; 6 >
-        au < exists ; 2001 ; Tourism Economics Volume 7 ; 7 >
-        au < exists ; 2002 ; Tourism Economics Volume 8 ; 8 >
-        au < exists ; 2003 ; Tourism Economics Volume 9 ; 9 >
-        au < exists ; 2004 ; Tourism Economics Volume 10 ; 10 >
-        au < exists ; 2005 ; Tourism Economics Volume 11 ; 11 >
-        au < exists ; 2006 ; Tourism Economics Volume 12 ; 12 >
-        au < exists ; 2007 ; Tourism Economics Volume 13 ; 13 >
-        au < exists ; 2008 ; Tourism Economics Volume 14 ; 14 >
-        au < exists ; 2009 ; Tourism Economics Volume 15 ; 15 >
-        au < exists ; 2010 ; Tourism Economics Volume 16 ; 16 >
-        au < exists ; 2011 ; Tourism Economics Volume 17 ; 17 >
-        au < exists ; 2012 ; Tourism Economics Volume 18 ; 18 >
-        au < exists ; 2013 ; Tourism Economics Volume 19 ; 19 >
-        au < exists ; 2014 ; Tourism Economics Volume 20 ; 20 >
-        au < exists ; 2015 ; Tourism Economics Volume 21 ; 21 >
-        au < manifest ; 2016 ; Tourism Economics Volume 22 ; 22 >
+        au < exists ; 2000 ; Tourism Economics Volume 6 [Sage] ; 6 >
+        au < exists ; 2001 ; Tourism Economics Volume 7 [Sage] ; 7 >
+        au < exists ; 2002 ; Tourism Economics Volume 8 [Sage] ; 8 >
+        au < exists ; 2003 ; Tourism Economics Volume 9 [Sage] ; 9 >
+        au < exists ; 2004 ; Tourism Economics Volume 10 [Sage] ; 10 >
+        au < exists ; 2005 ; Tourism Economics Volume 11 [Sage] ; 11 >
+        au < exists ; 2006 ; Tourism Economics Volume 12 [Sage] ; 12 >
+        au < exists ; 2007 ; Tourism Economics Volume 13 [Sage] ; 13 >
+        au < exists ; 2008 ; Tourism Economics Volume 14 [Sage] ; 14 >
+        au < exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 >
+        au < exists ; 2010 ; Tourism Economics Volume 16 [Sage] ; 16 >
+        au < exists ; 2011 ; Tourism Economics Volume 17 [Sage] ; 17 >
+        au < exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 >
+        au < exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 >
+        au < exists ; 2014 ; Tourism Economics Volume 20 [Sage] ; 20 >
+        au < exists ; 2015 ; Tourism Economics Volume 21 [Sage] ; 21 >
+        au < manifest ; 2016 ; Tourism Economics Volume 22 [Sage] ; 22 >
   
     }
 
