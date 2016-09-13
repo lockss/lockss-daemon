@@ -423,7 +423,7 @@
 
      param[journal_id] = hlps
 
-     au < finished ; crawling ; 2015 ; Holy Land and Palistine Studies Volume 14 ; 14 ; >
+     au < finished ; finished ; 2015 ; Holy Land and Palistine Studies Volume 14 ; 14 ; >
      au < manifest ; exists ; 2016 ; Holy Land and Palistine Studies Volume 15 ; 15 ; >
 
   }
@@ -1058,7 +1058,7 @@
     au < finished ; finished ; 2012 ; Romanticism Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Romanticism Volume 19 ; 19 ; >
     au < finished ; finished ; 2014 ; Romanticism Volume 20 ; 20 ; >
-    au < finished ; crawling ; 2015 ; Romanticism Volume 21 ; 21 ; >
+    au < finished ; finished ; 2015 ; Romanticism Volume 21 ; 21 ; >
     au < manifest ; exists ; 2016 ; Romanticism Volume 22 ; 22 ; >
 
   }
@@ -1157,7 +1157,7 @@
       au < doNotProcess ; exists ; 2012 ; Scottish Affairs (First Series) Volume 81 ; 81+(First+Series) ; >
 
       au < finished ; finished ; 2014 ; Scottish Affairs Volume 23 ; 23 ; >
-      au < finished ; crawling ; 2015 ; Scottish Affairs Volume 24 ; 24 ; >
+      au < finished ; finished ; 2015 ; Scottish Affairs Volume 24 ; 24 ; >
       au < manifest ; exists ; 2016 ; Scottish Affairs Volume 25 ; 25 ; >
     
   }
@@ -1265,7 +1265,7 @@
     au < finished ; finished ; 2012 ; Scottish Historical Review Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Scottish Historical Review Volume 92 ; 92 ; >
     au < finished ; crawling ; 2014 ; Scottish Historical Review Volume 93 ; 93 ; >
-    au < finished ; crawling ; 2015 ; Scottish Historical Review Volume 94 ; 94 ; >
+    au < finished ; finished ; 2015 ; Scottish Historical Review Volume 94 ; 94 ; >
     au < manifest ; exists ; 2016 ; Scottish Historical Review Volume 95 ; 95 ; >
 
   }
