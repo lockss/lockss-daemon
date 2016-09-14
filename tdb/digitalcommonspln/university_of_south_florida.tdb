@@ -118,10 +118,8 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     
     au < released ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 >
-    au < released ; 2013 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
-    au < expected ; 2014 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
-    au < expected ; 2015 ; 4 ; Journal of African Conflicts and Peace Studies Volume 4 ; 4 >
-    au < expected ; 2016 ; 5 ; Journal of African Conflicts and Peace Studies Volume 5 ; 5 >
+    au < released ; 2013-2015 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
+    au < manifest ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
   
   }
 
