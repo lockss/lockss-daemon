@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,19 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import org.lockss.pdf.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory;
+import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 
-public class TafPdfFilterFactory extends BaseAtyponPdfFilterFactory {
+public class TafPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
 
-  // Do what BaseAtypon does, plus one additional transformation
   @Override
-  public void transform(ArchivalUnit au,
-                        PdfDocument pdfDocument)
-      throws PdfException {
-    super.transform(au, pdfDocument);
-    PdfUtil.normalizePageTokenStreams(pdfDocument);
+  public boolean doRemoveAllDocumentInfo() {
+    return true;
   }
   
 }
