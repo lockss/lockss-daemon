@@ -24030,7 +24030,7 @@
 
     au < released ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 >
     au < released ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 >
-    au < wanted ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 >
+    au < ready ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 >
     au < doNotProcess ; 2017 ; Transactions of the London Mathematical Society Volume 4 ; 4 > #moving to wiley
 
   }
@@ -25873,10 +25873,10 @@
       implicit < status ; year ; name ; param[volume_name] >
       #move to European Association for Cardio-Thoracic Surgery in 2017 
 
-      au < wanted ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 >
-      au < wanted ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 >
-      au < wanted ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 >
-      au < wanted ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 >
+      au < ready ; 2005 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2005 ; 2005 >
+      au < ready ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 >
+      au < ready ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 >
+      au < ready ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 >
       au < released ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 >
       au < released ; 2010 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2010 ; 2010 >
       au < released ; 2011 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2011 ; 2011 >
