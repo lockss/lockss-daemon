@@ -110,6 +110,7 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
      // The next filter is not needed, we care about the correction for the hash
      // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-(criticalrelation)"),
      // Decision-letter, author response & comments are dynamic and change
      //  http://elifesciences.org/content/3/e04094.full
      HtmlNodeFilters.tagWithAttribute("div", "id", "decision-letter"),

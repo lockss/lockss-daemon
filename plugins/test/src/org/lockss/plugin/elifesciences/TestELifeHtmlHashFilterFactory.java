@@ -82,9 +82,15 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "</ul>" +
       "<div class=\"form-item hello-world-select form-item-jump\">" +
       "</div>" +
+      "<div class=\"elife-article-corrections\">" +
+      "</div>" +
+      "<div class=\"elife-article-criticalrelation\">" +
+      "</div>" +
       "<div id=\"content\">X" +
-           "</div> ";
+      "</div> ";
   private static final String withoutStuffToHashOut =
+      "<div>" + // attribute stripped class=\"elife-article-corrections\"
+      "</div>" +
       "<div>X" +
       "</div> ";
   
