@@ -64,7 +64,11 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
     }
       
   }
-  
+
+//
+//  TODO - after Sept 29,2016 - remove static from the following methods
+//    subclassed version of these would not take precedent
+//    no subclasses currently exist that use these, should be okay to clean up
   public static boolean doRemoveAllDocumentInfo() {
     return false;
   }
