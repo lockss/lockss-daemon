@@ -147,11 +147,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("span", "class", "subj-group"),
             // DROP non-access box article links (e.g. "View full text"->"Full text HTML") [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "top_article_links"),
-            // DROP outgoing links and SFX links [article block, full, ref]
+            // DROP outgoing links and SFX links [article block, full, ref, probably showPopup]
             HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttribute("span", "class", "referenceDiv"),
                                              HtmlNodeFilters.tagWithAttribute("a", "class", "dropDownLabel")), // popup at each inline citation [full]
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"), // [article block, full/ref referencesPanel]
             HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"), // [article block, full/ref referencesPanel]
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "javascript:newWindow\\('http://dx.doi.org/"), // [showPopup, probably article block, full/ref referencesPanel]
             // DROP "Jump to section" popup menus [full]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationNavigation"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "title", "(Next|Previous) issue"),
@@ -208,8 +209,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // Markup changes over time [anywhere]
         line = PAT_NBSP.matcher(line).replaceAll(REP_NBSP);
         line = PAT_AMP.matcher(line).replaceAll(REP_AMP);
-        line = PAT_BACKSLASH.matcher(line).replaceAll(REP_BACKSLASH); // e.g. \(, \-, during encoding glitch (or similar)
-        line = PAT_BACKSLASH.matcher(line).replaceAll(REP_BACKSLASH); // e.g. \(, \-, during encoding glitch (or similar)
+        line = PAT_PUNCTUATION.matcher(line).replaceAll(REP_PUNCTUATION); // e.g. \(, \-, during encoding glitch (or similar)
         // Alternate forms of citation links [article block]
         line = PAT_CITING_ARTICLES.matcher(line).replaceAll(REP_CITING_ARTICLES);
         // Wording change over time, and publication dates get fixed much later [article block, abs/full/ref/suppl overview]
@@ -245,18 +245,24 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     };
   }
   
-  public static final String REP_EMPTY_STRING = "";
+  public static final String EMPTY_STRING = "";
+
   public static final Pattern PAT_NBSP = Pattern.compile("&nbsp;", Pattern.CASE_INSENSITIVE);
   public static final String REP_NBSP = " ";
+  
   public static final Pattern PAT_AMP = Pattern.compile("&amp;", Pattern.CASE_INSENSITIVE);
   public static final String REP_AMP = "&";
-  public static final Pattern PAT_BACKSLASH = Pattern.compile("\\\\", Pattern.CASE_INSENSITIVE);
-  public static final String REP_BACKSLASH = REP_EMPTY_STRING;
+  
+  public static final Pattern PAT_PUNCTUATION = Pattern.compile("[,\\\\]", Pattern.CASE_INSENSITIVE);
+  public static final String REP_PUNCTUATION = EMPTY_STRING;
+  
   public static final Pattern PAT_CITING_ARTICLES = Pattern.compile("<li>(<div>)?(<strong>)?(Citing Articles:|Citations:|Citation information:|<a href=\"/doi/citedby/).*?</li>", Pattern.CASE_INSENSITIVE); 
-  public static final String REP_CITING_ARTICLES = REP_EMPTY_STRING;
+  public static final String REP_CITING_ARTICLES = EMPTY_STRING;
+  
   public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(Published online:|Available online:|Version of record first published:).*?>", Pattern.CASE_INSENSITIVE); 
-  public static final String REP_PUBLISHED_ONLINE = REP_EMPTY_STRING;
+  public static final String REP_PUBLISHED_ONLINE = EMPTY_STRING;
+  
   public static final Pattern PAT_PUB_ID = Pattern.compile("</pub-id>.*?</li>", Pattern.CASE_INSENSITIVE); 
-  public static final String REP_PUB_ID = REP_EMPTY_STRING;
+  public static final String REP_PUB_ID = EMPTY_STRING;
 
 }

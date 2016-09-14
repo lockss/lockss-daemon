@@ -65,7 +65,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 
  
   private static final String withoutPrevNext =
-      " Volume 47 , ";
+      " Volume 47 ";
   
   private static final String manifest =
 "<!DOCTYPE html>\n"+
