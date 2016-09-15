@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -84,6 +80,49 @@ public class MetadataControlServiceImpl implements MetadataControlService {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Invoked.");
 	boolean deleted = getMetadataManager().deletePublicationIssn(mdItemSeq,
 	    issn.trim(), issnType.trim());
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "deleted = " + deleted);
+	result = new MetadataControlResult(Boolean.valueOf(deleted), null);
+      } catch (Exception e) {
+	result = new MetadataControlResult(Boolean.FALSE, e.getMessage());
+      }
+    }
+
+    if (log.isDebug2()) log.debug3(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Deletes an Archival Unit and its metadata.
+   * 
+   * @param auSeq
+   *          A Long with the Archival Unit database identifier.
+   * @param auKey
+   *          A String with the Archival Unit key identifier.
+   * @return a MetadataControlResult with the result of the operation.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public MetadataControlResult deleteAu(Long auSeq, String auKey)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "deleteAu(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+    }
+
+    MetadataControlResult result = null;
+
+    if (auSeq == null) {
+      result = new MetadataControlResult(Boolean.FALSE,
+	  "The Archival Unit database identifier cannot be null");
+    } else if (auKey == null || auKey.trim().length() == 0) {
+      result = new MetadataControlResult(Boolean.FALSE,
+	  "The value of the Archival Unit key identifier cannot be empty");
+    } else {
+      try {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Invoked.");
+	boolean deleted = getMetadataManager().deleteDbAu(auSeq, auKey.trim());
 
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "deleted = " + deleted);
 	result = new MetadataControlResult(Boolean.valueOf(deleted), null);

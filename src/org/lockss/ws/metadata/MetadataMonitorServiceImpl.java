@@ -1114,6 +1114,58 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
   }
 
   /**
+   * Provides the Archival Units that exist in the database but that have been
+   * deleted from the daemon.
+   * 
+   * @return a List<AuMetadataWsResult> with the Archival unit data.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<AuMetadataWsResult> getDbArchivalUnitsDeletedFromDaemon()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getDbArchivalUnitsDeletedFromDaemon(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      Collection<Map<String, Object>> dbResults =
+	  getMetadataManager().getDbArchivalUnitsDeletedFromDaemon();
+
+      if (dbResults == null) {
+	return null;
+      }
+
+      List<AuMetadataWsResult> results = new ArrayList<AuMetadataWsResult>();
+
+      for (Map<String, Object> auProperties : dbResults) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "auProperties = " + auProperties);
+
+	AuMetadataWsResult result = new AuMetadataWsResult();
+
+	result.setAuId(PluginManager.generateAuId(
+	    (String)auProperties.get(PLUGIN_ID_COLUMN),
+	    (String)auProperties.get(AU_KEY_COLUMN)));
+
+	result.setAuSeq((Long)auProperties.get(AU_SEQ_COLUMN));
+	result.setMdVersion((Integer)auProperties.get(MD_VERSION_COLUMN));
+	result.setExtractTime((Long)auProperties.get(EXTRACT_TIME_COLUMN));
+	result.setCreationTime((Long)auProperties.get(CREATION_TIME_COLUMN));
+	result.setProviderName((String)auProperties.get(PROVIDER_NAME_COLUMN));
+	result.setItemCount((Integer)auProperties.get("item_count"));
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+
+	results.add(result);
+      }
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+      return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
    * Provides the metadata manager.
    * 
    * @return a MetadataManager with the metadata manager.

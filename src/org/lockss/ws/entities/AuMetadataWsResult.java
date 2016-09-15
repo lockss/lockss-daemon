@@ -38,6 +38,8 @@ public class AuMetadataWsResult {
   private Long extractTime;
   private Long creationTime;
   private Long providerSeq;
+  private String providerName;
+  private Integer itemCount;
 
   public String getAuId() {
     return auId;
@@ -88,11 +90,26 @@ public class AuMetadataWsResult {
     this.providerSeq = providerSeq;
   }
 
+  public String getProviderName() {
+    return providerName;
+  }
+  public void setProviderName(String providerName) {
+    this.providerName = providerName;
+  }
+
+  public Integer getItemCount() {
+    return itemCount;
+  }
+  public void setItemCount(Integer itemCount) {
+    this.itemCount = itemCount;
+  }
+
   @Override
   public String toString() {
     return "[AuMetadataWsResult auId=" + auId + ", auSeq=" + auSeq
 	+ ", auMdSeq=" + auMdSeq + ", mdVersion=" + mdVersion
 	+ ", extractTime=" + extractTime + ", creationTime=" + creationTime
-	+ ", providerSeq=" + providerSeq + "]";
+	+ ", providerSeq=" + providerSeq + ", providerName=" + providerName
+	+ ", itemCount=" + itemCount + "]";
   }
 }
