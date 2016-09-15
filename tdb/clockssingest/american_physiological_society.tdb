@@ -2014,8 +2014,8 @@
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2015 ; Journal of Applied Physiology Volume 118 ; 118 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; >
-      au < aps.ClockssAPSDrupalPlugin ; testing ; exists ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; >
-      au < aps.ClockssAPSDrupalPlugin ; testing ; exists ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; >
+      au < aps.ClockssAPSDrupalPlugin ; notReady ; exists ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; > #Unable to fetch probe permission page
+      au < aps.ClockssAPSDrupalPlugin ; notReady ; exists ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; > #Unable to fetch probe permission page
 
     }
 
