@@ -77,6 +77,9 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "artAuthors"),
         // removing a doi link that sometimes has a class name
         HtmlNodeFilters.tagWithAttribute("a", "class", "ShowPdfGa"),
+        // the addition of "Abstract:" between authors and actual text, seems the only usage
+        // oddly, it doesn't always show on the screen, but it's there
+        HtmlNodeFilters.tagWithAttribute("h2", "class", "display"),
 
     };
     
