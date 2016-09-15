@@ -262,8 +262,9 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Abrasive Technology Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Abrasive Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; International Journal of Abrasive Technology Volume 8 ; 8 ; >
+      # pub added 2016 issue to vol7 late -  bring production down, may not need proxy once when it goes up
+      au < crawling ; down ; 2015-2016 ; International Journal of Abrasive Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < expected ; exists ; 2017 ; International Journal of Abrasive Technology Volume 8 ; 8 ; >
 
     }
 
