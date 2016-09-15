@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,8 +34,6 @@ import java.security.KeyStore;
 import java.util.*;
 import java.util.jar.*;
 import java.util.regex.*;
-
-import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -1864,6 +1858,10 @@ public class PluginManager
     return getPlugin(pluginKeyFromId(pluginId));
   }
 
+  public Plugin getPluginFromAuId(String auid) {
+    return getPlugin(pluginKeyFromId(pluginIdFromAuId(auid)));
+  }
+
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
@@ -3297,6 +3295,24 @@ public class PluginManager
 	}
       }
     }
+
+  /**
+   * Convenience method to provide an indication of whether an Archival Unit is
+   * not configured in the daemon and it's not inactive.
+   * 
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a boolean with <code>true</code> if the Archival Unit is not
+   *         configured in the daemon and it's not inactive, <code>false</code>
+   *         otherwise.
+   */
+  public boolean isNotConfiguredAndNotInactive(String auId) {
+    // The third element of the intersection below is there to handle the
+    // potential race condition triggered by the Archival Unit being reactivated
+    // between the first two calls.
+    return getAuFromId(auId) == null && !isInactiveAuId(auId)
+	&& getAuFromId(auId) == null;
+  }
 
   /**
    * CrawlManager callback that is responsible for handling Registry

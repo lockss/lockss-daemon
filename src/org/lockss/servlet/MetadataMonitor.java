@@ -29,8 +29,10 @@ package org.lockss.servlet;
 
 import static org.lockss.servlet.MetadataControl.*;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
@@ -184,6 +186,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the Archival Units that have no metadata items";
   private static final String LIST_AUS_WITHOUT_ITEMS_HEADER =
       "Archival Units Without Metadata Items";
+  private static final String LIST_DB_AUS_DELETED_IN_DAEMON_LINK =
+      "Archival Units In DB But Deleted in Daemon";
+  private static final String LIST_DB_AUS_DELETED_IN_DAEMON_ACTION =
+      "listDbAusDeletedInDaemon";
+  private static final String LIST_DB_AUS_DELETED_IN_DAEMON_HELP =
+      "Lists the Archival Units in the DB that have been deleted in the daemon";
+  private static final String LIST_DB_AUS_DELETED_IN_DAEMON_HEADER =
+      "Archival Units In DB But Deleted in Daemon";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -257,6 +267,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMetadataItemsWithoutAccessUrl();
       } else if (LIST_AUS_WITHOUT_ITEMS_ACTION.equals(action)) {
 	listAusWithoutMetadataItems();
+      } else if (LIST_DB_AUS_DELETED_IN_DAEMON_ACTION.equals(action)) {
+	listDbAusDeletedInDaemon();
       } else {
 	if (action != null) {
 	  errMsg = "Invalid operation '" + action + "'";
@@ -386,6 +398,13 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_AUS_WITHOUT_ITEMS_LINK,
 	ACTION + LIST_AUS_WITHOUT_ITEMS_ACTION,
 	LIST_AUS_WITHOUT_ITEMS_HELP));
+
+    // List the Archival Units in the database that have been deleted in the
+    // daemon.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_DB_AUS_DELETED_IN_DAEMON_LINK,
+	ACTION + LIST_DB_AUS_DELETED_IN_DAEMON_ACTION,
+	LIST_DB_AUS_DELETED_IN_DAEMON_HELP));
 
     return list.iterator();
   }
@@ -1935,6 +1954,146 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_AUS_WITHOUT_ITEMS_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the Archival Units that appear in the database but that have been
+   * deleted from the daemon.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listDbAusDeletedInDaemon() throws DbException, IOException {
+    final String DEBUG_HEADER = "listDbAusDeletedInDaemon(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Form form = null;
+
+    // Determine whether the user is allowed to make changes.
+    boolean isMutable =
+	isServletAllowed(AdminServletManager.SERVLET_MD_CONTROL);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isMutable = " + isMutable);
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Plugin ID");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("AU Key");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Creation Time");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Metadata Version");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Extraction Time");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Provider");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Article/Chapter Count");
+
+    // Get the Archival Units that exist in the database but that have been
+    // deleted from the daemon.
+    Collection<Map<String, Object>> deletedAus =
+	mdManager.getDbArchivalUnitsDeletedFromDaemon();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER	+ "deletedAus.size() = " + deletedAus.size());
+
+    // Check whether there are results to display.
+    if (deletedAus.size() > 0) {
+      // Yes: Check whether the user is allowed to make changes.
+      if (isMutable) {
+	// Yes: Create the form that allows the user to delete an Archival Unit
+	// from the database.
+	form = ServletUtil.newForm(
+	    srvURL(AdminServletManager.SERVLET_MD_CONTROL,
+		"lockssAction=" + DELETE_DB_AU_ACTION));
+
+	// Create the hidden text field with the redirect URL.
+	String redirectTo = srvURL(myServletDescr(),
+	    "lockssAction=" + req.getParameter(ACTION_TAG));
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "redirectTo = " + redirectTo);
+
+	Input redirectUrl =
+	    new Input(Input.Hidden, REDIRECT_URL_TAG, redirectTo);
+	results.add(redirectUrl);
+
+	// Create the hidden text fields that will post the data to be deleted.
+	Input auSeq = new Input(Input.Hidden, "auSeq", "unset");
+	auSeq.attribute("id", "auSeq");
+	results.add(auSeq);
+
+	Input auKey = new Input(Input.Hidden, "auKey", "unset");
+	auKey.attribute("id", "auKey");
+	results.add(auKey);
+      }
+
+      SimpleDateFormat TIMESTAMP_FORMAT =
+	  new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
+
+      // Loop through the deleted Archival Units.
+      for (Map<String, Object> auProperties : deletedAus) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "auProperties = " + auProperties);
+
+	results.newRow();
+
+	results.newCell("align=\"center\"");
+	results.add(auProperties.get("plugin_id"));
+	results.newCell("align=\"center\"");
+	results.add(auProperties.get("au_key"));
+	results.newCell("align=\"center\"");
+	results.add(TIMESTAMP_FORMAT
+	    .format(new Date((Long)auProperties.get("creation_time"))));
+	results.newCell("align=\"center\"");
+	results.add(auProperties.get("md_version"));
+	results.newCell("align=\"center\"");
+	results.add(TIMESTAMP_FORMAT
+	    .format(new Date((Long)auProperties.get("extract_time"))));
+	results.newCell("align=\"center\"");
+	results.add(auProperties.get("provider_name"));
+	results.newCell("align=\"center\"");
+	results.add(auProperties.get("item_count"));
+
+	// Check whether the user is allowed to make changes.
+	if (isMutable) {
+	  // Yes: Add the 'Delete' button.
+	  results.newCell("align=\"center\"");
+
+	  Input deleteAu =
+	      new Input(Input.Submit, "action", "Delete Archival Unit");
+
+	  deleteAu.attribute("onClick",
+	      "setMonCtrlParams('auSeq', '" + auProperties.get("au_seq")
+		+ "', 'auKey', '" + auProperties.get("au_key") + "')");
+
+	  setTabOrder(deleteAu);
+	  results.add(deleteAu);
+	}
+      }
+
+      // Check whether the user is allowed to make changes.
+      if (isMutable) {
+	// Yes: Add the table to the form.
+	form.add(results);
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"7\" align=\"center\"");
+      results.add("No Archival Units in the database have been deleted from "
+	  + "the daemon");
+    }
+
+    makePage(LIST_DB_AUS_DELETED_IN_DAEMON_HEADER, form, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
