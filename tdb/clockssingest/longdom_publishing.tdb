@@ -3,39 +3,70 @@
   publisher <
     name = Longdom Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 0 ;
+    info[tester] = S ;
     comment[platform] = custom
   >
   
-  plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >  
+  {
+    title <
+      name = Advances in Pediatric Research WARC Content; 
+      issn = 2385-4529
+    >
+
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-pediatric-research-released/
+
+    au < testing ; exists ; 2016 ; Advances in Pediatric Research WARC Content 2016 ; 2016 >
+    
+  }
+  
   
   {
     title <
-      name = Advances in Pediatric Research
+      name = Advances in Medical Ethics WARC Content ;
+      issn =  2385-5495
     >
-    param[base_url] = http://www.apr-journal.com/
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-medical-ethics-released/
+
+    au < testing ; exists ; 2016 ; Advances in Medical Ethics WARC Content 2016 ; 2016 >
+    
   }
   
   {
     title <
-      name = Advances in Legal Medicine
+      name = Advances in Rare Diseases WARC Content ;
+      issn = 2385-5290
+      
     >
-    param[base_url] = http://www.alm-journal.com/
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-rare-diseases-released/
+
+    au < testing ; exists ; 2016 ; Advances in Rare Diseases WARC Content 2016 ; 2016 >
+    
   }
   
   {
     title <
-      name = Advances in Medical Ethics
+      name = Healthy Aging Research WARC Content ;
+      issn = 2261-7434
+      
     >
-    param[base_url] = http://www.ame-journal.com/
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/healthy-aging-research-released/
+
+    au < testing ; exists ; 2016 ; Healthy Aging Research WARC Content 2016 ; 2016 >
+    
   }
-  
-  {
-    title <
-      name = Advances in Rare Diseases
-    >
-    param[base_url] = http://www.ard-journal.com/
-  }
-  
 }

@@ -3,36 +3,35 @@
   publisher <
     name = Museum Victoria ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = S
   >
-    
+  
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >      
   {
-
     title <
-      name = Memoirs of Museum Victoria ;
+      name = Memoirs of Museum Victoria WARC Content ;
       issn = 1447-2546 ;
       eissn = 1447-2554 
     >
     
-    {
-      plugin = needs.wget
-      param[base_url] = http://museumvictoria.com.au/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
+
+    au < testing ; exists ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
       
-    }
   }
 
-    {
+  {
 
     title <
-      name = Museum Victoria Science Reports ;
+      name = Museum Victoria Science Reports WARC Content ;
       issn = 1833-0290  
     >
     
-    {
-      plugin = needs.plugin
-      param[base_url] = http://www.museum.vic.gov.au/sciencereports/
-      
-    }
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
+
+    au < testing ; exists ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
     
   }
   

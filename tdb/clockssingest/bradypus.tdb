@@ -36,8 +36,7 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     
-    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/novecento-released/
-    param[base_url] = http://content5.lockss.org/warcfiles/novecento-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/novecento-released/
 
     au < testing ; exists ; 2016 ; Novecento WARC Content 2016 ; 2016 >
     
