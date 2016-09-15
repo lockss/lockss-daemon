@@ -13365,7 +13365,7 @@
     param[base_url] = http://integrablesystems.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < notReady ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; > #PD-1731 probe link error
+    au < ready ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 ; >
 
     }
@@ -25184,8 +25184,8 @@
       au < manifest ; exists ; 2011 ; Western Historical Quarterly Volume 42 ; 42 ; >
       au < manifest ; exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 ; >
       au < manifest ; exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
-      au < notReady ; exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; > #PD-1731 probe link error
-      au < notReady ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; > #PD-1731 probe link error
+      au < ready ; exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; >
+      au < ready ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; >
       au < manifest ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
 
   }
