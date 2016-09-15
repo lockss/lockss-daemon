@@ -18635,7 +18635,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < finished ; crawling ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
 
   }
