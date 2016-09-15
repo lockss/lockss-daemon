@@ -67,6 +67,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
     "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/covergifs/.*\\.jpg$",
     };
 
   static final String bookRepairList[] = 
@@ -423,20 +424,25 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/pb-assets/global-images/journals-blog-back.png",
         "http://www.emeraldinsight.com/pb-assets/icons/graphics.png",
         "http://www.emeraldinsight.com/resources/page-builder/newimg/playPause.gif",
+        "http://www.inderscienceonline.com/na102/home/readonly/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
+        "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
         "http://www.emeraldinsight.com/wro/product.css");
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
-     Matcher m0, m1;
+     Pattern p2 = Pattern.compile(baseRepairList[2]);
+     Matcher m0, m1, m2;
      for (String urlString : repairList) {
        m0 = p0.matcher(urlString);
        m1 = p1.matcher(urlString);
-       assertEquals(urlString, true, m0.find() || m1.find());
+       m2 = p2.matcher(urlString);
+       assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
      }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
      m0 = p0.matcher(notString);
      m1 = p1.matcher(notString);
-     assertEquals(false, m0.find() && m1.find());
+     m2 = p2.matcher(notString);
+     assertEquals(false, m0.find() && m1.find() && m2.find());
 
      
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
