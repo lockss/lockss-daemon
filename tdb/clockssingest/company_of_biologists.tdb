@@ -166,7 +166,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 1997 ; Development Volume 124 ; 124 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 1998 ; Development Volume 125 ; 125 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; doNotProcess ; exists ; 1999 ; Development Volume 126 ; 126 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2000 ; Development Volume 127 ; 127 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2000 ; Development Volume 127 ; 127 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2001 ; Development Volume 128 ; 128 ; >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2002 ; Development Volume 129 ; 129 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2003 ; Development Volume 130 ; 130 ; >
@@ -197,7 +197,7 @@
 
     param[base_url] = http://dmm.biologists.org/
 
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; >
@@ -335,10 +335,10 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; doNotProcess ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 ; >
@@ -567,10 +567,10 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; doNotProcess ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; doNotProcess ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; ready ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; testing ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; >

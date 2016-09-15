@@ -252,7 +252,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 ; >
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; >
 
   }
 
@@ -411,7 +411,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 ; >
     au < deepCrawl ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 2016 ; 10 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 2016 ; 10 ; >
 
    }
 
@@ -495,7 +495,7 @@
     comment[years] = 2015-current
 
    au < finished ; crawling ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 34 ; 34 ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 35 ; 35 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 35 ; 35 ; >
 
    }
 
@@ -1069,7 +1069,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 ; >
    au < finished ; crawling ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; reingest5.clockss.org:8082 >
-   au < ready ; exists ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 2016 ; 142 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 2016 ; 142 ; >
 
   }
 
@@ -2467,7 +2467,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2015-current
 
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
 
   }
@@ -2544,7 +2544,7 @@
 
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ; >
@@ -2566,7 +2566,7 @@
     au < ready ; exists ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; >
     au < ready ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; >
 
   }
@@ -2608,10 +2608,10 @@
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; >
     au < ready ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; >
     au < ready ; exists ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; >
 
@@ -4530,7 +4530,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Hearing Volume 2013 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Hearing Volume 2014 ; 35 ; >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Hearing Volume 2015 ; 36 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Hearing Volume 2016 ; 37 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Hearing Volume 2016 ; 37 ; >
 
   }
 
@@ -4578,7 +4578,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 2016 ; 33 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 2016 ; 33 ; >
 
   }
 
@@ -4629,7 +4629,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 ; >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Liver Disease Volume 2014 ; 34 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Liver Disease Volume 2015 ; 35 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Liver Disease Volume 2016 ; 36 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Liver Disease Volume 2016 ; 36 ; >
 
   }
 
@@ -4664,7 +4664,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Musculoskeletal Radiology Volume 2013 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 2014 ; 18 ; >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 ; reingest4.clockss.org:8082 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 2016 ; 20 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 2016 ; 20 ; >
 
   }
 
@@ -4715,7 +4715,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Neurology Volume 2013 ; 33 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Neurology Volume 2014 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Neurology Volume 2015 ; 35 ; reingest1.clockss.org:8082 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Neurology Volume 2016 ; 36 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Neurology Volume 2016 ; 36 ; >
 
   }
 
@@ -4775,7 +4775,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Plastic Surgery Volume 2013 ; 27 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Plastic Surgery Volume 2015 ; 29 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Plastic Surgery Volume 2016 ; 30 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Plastic Surgery Volume 2016 ; 30 ; >
 
   }
 
@@ -4838,7 +4838,7 @@
    au < finished ; finished ; 2013 ; 2013 ; Seminars in Reproductive Medicine Volume 2013 ; 31 ; >
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Reproductive Medicine Volume 2014 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Reproductive Medicine Volume 2015 ; 33 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Reproductive Medicine Volume 2016 ; 34 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Reproductive Medicine Volume 2016 ; 34 ; >
 
   }
 
@@ -4876,7 +4876,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Respiratory and Critical Care Medicine Volume 2013 ; 34 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Seminars in Respiratory and Critical Care Medicine Volume 2014 ; 35 ; >
    au < frozen ; exists ; 2015 ; 2015 ; Seminars in Respiratory and Critical Care Medicine Volume 2015 ; 36 ; >
-   au < ready ; exists ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 2016 ; 37 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 2016 ; 37 ; >
 
   }
 
@@ -4924,7 +4924,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Seminars in Speech and Language Volume 2013 ; 34 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Seminars in Speech and Language Volume 2014 ; 35 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Seminars in Speech and Language Volume 2015 ; 36 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2016 ; 2016 ; Seminars in Speech and Language Volume 2016 ; 37 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Speech and Language Volume 2016 ; 37 ; >
 
   }
 
@@ -4982,7 +4982,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Seminars in Thrombosis and Hemostasis Volume 2013 ; 39 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 2014 ; 40 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 2016 ; 42 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 2016 ; 42 ; >
 
   }
 
@@ -5030,7 +5030,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2014 ; 11 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2015 ; 12 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2016 ; 13 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2016 ; 13 ; >
 
   }
 
@@ -5118,7 +5118,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Sportphysio Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Sportphysio Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 ; >
 
   }
 
@@ -5163,7 +5163,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 2013 ; 27 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 2014 ; 28 ; >
    au < finished ; crawling ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 2015 ; 29 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 2016 ; 30 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 2016 ; 30 ; >
 
    }
 
@@ -5195,7 +5195,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; Sprache Stimme Gehör Volume 2013 ; 37 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 2014 ; 38 ; >
    au < deepCrawl ; exists ; 2015 ; 2015 ; Sprache Stimme Gehör Volume 2015 ; 39 ; >
-   au < ready ; exists ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 2016 ; 40 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 2016 ; 40 ; >
 
   }
 
@@ -5227,7 +5227,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; Suchttherapie Volume 2013 ; 14 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Suchttherapie Volume 2014 ; 15 ; >
    au < finished ; crawling ; 2015 ; 2015 ; Suchttherapie Volume 2015 ; 16 ; reingest3.clockss.org:8083 >
-   au < ready ; exists ; 2016 ; 2016 ; Suchttherapie Volume 2016 ; 17 ; >
+   au < crawling ; exists ; 2016 ; 2016 ; Suchttherapie Volume 2016 ; 17 ; >
 
   }
 
@@ -5244,7 +5244,7 @@
     comment[years] = 2015-present
 
     au < finished ; crawling ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; >
 
   }
 
@@ -5729,7 +5729,7 @@
     param[journal_id] = 10.1055/s-00029347
     comment[years] = 2015-current
 
-    au < ready ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
     au < crawling ; exists ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; >
 
   }

@@ -1356,7 +1356,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 ; >
       au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 ; >
       au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 ; >
-      au < ready ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 369 ; 369 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 369 ; 369 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 370 ; 370 ; >
       au < ready ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; >
       au < ready ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 372 ; 372 ; >
@@ -1432,7 +1432,7 @@
       param[home_url] = http://www.soil-journal.net/
 
       au < finished ; finished ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; >
 
    }
 
@@ -1467,7 +1467,7 @@
       au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
       au < finished ; finished ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
-      au < ready ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
 
    }
 
