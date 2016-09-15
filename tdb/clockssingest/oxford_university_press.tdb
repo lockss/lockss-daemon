@@ -23917,7 +23917,7 @@
       au < frozen ; exists ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ; >
       au < finished ; crawling ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; >
+      au < testing ; exists ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; >
 
     }
 
@@ -24007,7 +24007,7 @@
       au < finished ; finished ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 ; >
       au < finished ; crawling ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 ; >
+      au < testing ; exists ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 ; >
 
     }
 
@@ -24412,7 +24412,7 @@
       au < frozen ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
       au < frozen ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
       au < finished ; crawling ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 ; >
+      au < testing ; exists ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 ; >
 
     }
 
@@ -24496,7 +24496,7 @@
     au < finished ; crawling ; 2013 ; Interacting with Computers Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2015 ; Interacting with Computers Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2016 ; Interacting with Computers Volume 28 ; 28 ; >
+    au < testing ; exists ; 2016 ; Interacting with Computers Volume 28 ; 28 ; >
 
   }
   {
@@ -24609,7 +24609,7 @@
     au < finished ; crawling ; 2013 ; BioScience Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; BioScience Volume 64 ; 64 ; >
     au < finished ; crawling ; 2015 ; BioScience Volume 65 ; 65 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2016 ; BioScience Volume 66 ; 66 ; >
+    au < testing ; exists ; 2016 ; BioScience Volume 66 ; 66 ; >
 
   }
 
@@ -24728,7 +24728,7 @@
     au < finished ; crawling ; 2013 ; Poultry Science Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; Poultry Science Volume 93 ; 93 ; >
     au < finished ; crawling ; 2015 ; Poultry Science Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2016 ; Poultry Science Volume 95 ; 95 ; >
+    au < testing ; exists ; 2016 ; Poultry Science Volume 95 ; 95 ; >
 
   }
 
@@ -24756,7 +24756,7 @@
       au < finished ; crawling ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
       au < finished ; crawling ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
+      au < testing ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
 
   }
 
@@ -24786,7 +24786,7 @@
       au < finished ; crawling ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
+      au < testing ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
 
   }
 
@@ -24841,7 +24841,7 @@
       au < crawling ; exists ; 2013 ; Critical Values Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; Critical Values Volume 7 ; 7 ; >
       au < finished ; crawling ; 2015 ; Critical Values Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
+      au < testing ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
 
   }
 
@@ -24890,7 +24890,7 @@
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
       au < exists ; exists ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ; >
 
   }
 
@@ -24906,7 +24906,7 @@
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
       au < finished ; crawling ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
 
   }
 
@@ -24939,7 +24939,7 @@
       param[base_url] = http://jole.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-      au < manifest ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
+      au < testing ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
 
   }
 
@@ -24971,7 +24971,7 @@
       au < testing ; exists ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ; >
       au < crawling ; exists ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 ; >
       au < finished ; crawling ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 ; >
+      au < testing ; exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 ; >
 
   }
 
@@ -25008,7 +25008,7 @@
       au < finished ; crawling ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 ; >
       au < deepCrawl ; exists ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 ; >
       au < finished ; crawling ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 ; >
+      au < testing ; exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 ; >
 
   }
 
@@ -25092,7 +25092,7 @@
       au < crawling ; exists ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2014 ; Pain Medicine Volume 15 ; 15 ; >
       au < finished ; crawling ; 2015 ; Pain Medicine Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
+      au < testing ; exists ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
 
   }
 
@@ -25124,7 +25124,7 @@
       au < finished ; crawling ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; >
       au < finished ; crawling ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
+      au < testing ; exists ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
 
   }
 
@@ -25179,14 +25179,14 @@
       au < manifest ; exists ; 2006 ; Western Historical Quarterly Volume 37 ; 37 ; >
       au < manifest ; exists ; 2007 ; Western Historical Quarterly Volume 38 ; 38 ; >
       au < manifest ; exists ; 2008 ; Western Historical Quarterly Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2009 ; Western Historical Quarterly Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2010 ; Western Historical Quarterly Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2011 ; Western Historical Quarterly Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
+      au < testing ; exists ; 2009 ; Western Historical Quarterly Volume 40 ; 40 ; >
+      au < testing ; exists ; 2010 ; Western Historical Quarterly Volume 41 ; 41 ; >
+      au < testing ; exists ; 2011 ; Western Historical Quarterly Volume 42 ; 42 ; >
+      au < testing ; exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 ; >
+      au < testing ; exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
       au < crawling ; exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; >
       au < crawling ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
+      au < testing ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
 
   }
 
