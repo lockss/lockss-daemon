@@ -158,14 +158,14 @@
     
       param[base_url] = http://www.lltjournal.ca/
       param[journal_id] = llt
-      comment[notReady] = V2014. V2015. manifest page redirected to a login page.
+      comment[notReady] = # one year delayed Open Access policy -- one year embargo.
 
       au < manifest ; exists ; 2009 ; Labour / Le Travail Volume 63-64 ; 63-64 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Labour / Le Travail Volume 65-66 ; 65-66 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Labour / Le Travail Volume 67-68 ; 67-68 ; 2011 ; >
       au < finished ; finished ; 2012 ; Labour / Le Travail Volume 69-70 ; 69-70 ; 2012 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Labour / Le Travail Volume 71-72 ; 71-72 ; 2013 ; >
-      au < notReady ; exists ; 2014  ; Labour / Le Travail Volume 73-74 ; 73-74 ; 2014 ; >
+      au < exists ; exists ; 2014  ; Labour / Le Travail Volume 73-74 ; 73-74 ; 2014 ; >
       au < notReady ; exists ; 2015 ; Labour / Le Travail Volume 75-76 ; 75-76 ; 2015 ; >
       au < notReady ; exists ; 2016 ; Labour / Le Travail Volume 77-78 ; 77-78 ; 2016 ; >
 
@@ -184,7 +184,7 @@
     {
       param[base_url] = http://www.oralhistoryforum.ca/
       param[journal_id] = ohf
-      # V35-36 2015-2016. Redirected to login page.
+      # one year delayed Open Access policy -- one year embargo.
 
       au < manifest ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
