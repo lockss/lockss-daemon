@@ -61,7 +61,7 @@
     au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
-    au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 ; > #malformed url. 403 error
+    au < deepCrawl ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 ; > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
 
   }
@@ -89,7 +89,7 @@
     au < doNotProcess ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 ; > #no issues on manifest page.
     au < finished ; finished ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
 
 
@@ -118,7 +118,7 @@
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
     au < finished ; crawling ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Crop Science Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; > #malformed url. 403 error
+    au < deepCrawl ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
 
   }
@@ -146,7 +146,7 @@
     au < doNotProcess ; exists ; 2012 ; CSA News Volume 57 ; 57 ; > # no issues on manifest page
     au < finished ; crawling ; 2013 ; CSA News Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; CSA News Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2015 ; CSA News Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2015 ; CSA News Volume 60 ; 60 ; >
     au < crawling ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
 
   }
@@ -175,7 +175,7 @@
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; >
     au < crawling ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
 
 
@@ -201,7 +201,7 @@
     au < finished ; crawling ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; >
     au < notReady ; exists ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; >
 
   }
@@ -246,7 +246,7 @@
     au < finished ; finished ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; >
     au < crawling ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
 
   }
@@ -269,8 +269,8 @@
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < finished ; finished ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
     au < crawling ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
 
   }
@@ -297,7 +297,7 @@
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < finished ; finished ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 ; >
     au < notReady ; exists ; 2016 ; Soil Horizons Volume 57 ; 57 ; > #content not online
 
   }
@@ -326,7 +326,7 @@
     au < finished ; crawling ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
-    au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
+    au < deepCrawl ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
     au < crawling ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
 
   }
@@ -353,8 +353,8 @@
     au < finished ; finished ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < finished ; crawling ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
 
   }
