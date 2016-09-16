@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>55</string>
+    <string>56</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -76,13 +76,14 @@
   <entry>
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
+    - lots of variable versioning at the end of fonts/images (_v9,?v=1.2.4,?1nc2qbv)
     - googleAnalyticsPlugin.js : TMP: ASCE recursing ever deeper incorrectly relative url
     - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
     - include all content from cdn (eg js, css and common images) cdn.nejm.org
     -     as well as foo.global.prod.fastly.net (emeraldinsight) 
       (For now, OR in other global urls eg mathjax)
     - specifically include images/figures/tables that live under
-         <base>/na101/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
+         <base>/na10#/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
          in case it has a suffix not covered by the first rule
     - do not need to explicitly include the start_url
     - include the TOC using the journal__id and volume_name to keep from leaking in to other volumes
@@ -99,7 +100,8 @@
     - The following may not be needed by all Atypon publishers, but won't hurt:
     - exclude the article ending with a suffix that is now normalized off to handle previously collected
     - allow only downloadCitation format=ris and include=cit or abs in order to ignore previously collected mismatch
-    - allow the download of a figure (this is how ppt version of image comes down - 
+    - allow the download of a figure (this is how ppt version of image comes down -
+    - allow the download of a Table, which now might come with a csv version (T&F)
     - see http://www.nrcresearchpress.com/action/downloadFigures?doi=10.1139/p2012-099&id=f5
     - exclude a doi/<type>/<DOIprefix>/null?sequence=.... (taylor&francis)
     - exclude the popup image if the id is null (bioOneAtypon)        
@@ -110,7 +112,7 @@
     <list>
       <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
       <string>2,"^%sdoi/.*/googleAnalyticsPlugin\.js$", base_url</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>1,"^%sna[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
@@ -120,7 +122,8 @@
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
-      <string>1,"^%saction/downloadFigures\?doi=.+&amp;id=[^&amp;]+$", base_url</string>          
+      <string>1,"^%saction/downloadFigures\?doi=.+&amp;id=[^&amp;]+$", base_url</string>        
+      <string>1,"^%saction/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", base_url</string>          
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
     </list>
   </entry>

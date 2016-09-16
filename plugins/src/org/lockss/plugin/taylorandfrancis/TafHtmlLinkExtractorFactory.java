@@ -41,22 +41,39 @@ import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
+import org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyBooksHtmlLinkExtractorFactory.EndocrineBooksLinkTagLinkExtractor;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 public class TafHtmlLinkExtractorFactory extends BaseAtyponHtmlLinkExtractorFactory {
+  private static final Logger log = Logger.getLogger(TafHtmlLinkExtractorFactory.class);
 
   private static final String P_TAG = "p";
-
   private static final String ONCLICK_ATTR = "onclick";
 
+  private static final String LINK_TAG = "a";
+  private static final String HREF_ATTR = "href";
+  
   /* in addition to the default extractors set up by BaseAtypon,
    * add one for "p" tag
+   * 
+   * TODO: Possibly temporary
+   * The current form link extraactor does not "see" the form submit which uses a a javascript
+   * method instead of an <input type="submit" > tag. So to work around this, 
+   * generate the downloadCitation from the showCitations link
+   *   <a href="action/showCitFormats?doi=10.1080%2F21640629.2015.1091169"
+   * The additional link we need to generate is
+   *   <a href="action/downloadCitation?doi=10.1080%2F21640629.2015.1091169&format=ris&include=cit"
    */
+
+
   protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
 
     super.registerExtractors(extractor);
     // register extractor for 'onclick' attribute of 'p' tag 
     extractor.registerTagExtractor(P_TAG, new TafPOnclickExtractor());
+    // used to generate the downloadCitations link
+    extractor.registerTagExtractor(LINK_TAG, new TafLinkExtractor());
   }
 
   public static class TafPOnclickExtractor extends SimpleTagLinkExtractor {
@@ -98,6 +115,51 @@ public class TafHtmlLinkExtractorFactory extends BaseAtyponHtmlLinkExtractorFact
         }
       }
 
+      super.tagBegin(node, au, cb);
+    }
+  }
+  
+  public static class TafLinkExtractor extends SimpleTagLinkExtractor {
+    
+    private static final String CIT_SUFFIX = "&format=ris&include=cit";
+    private static final String DOWNCIT_ACTION = "action/downloadCitation";
+    // the acttion subdir is only one level down, but this is simpler
+    private static final Pattern SHOWCIT_PATTERN = Pattern.compile("action/showCitFormats(\\?doi=[^?&]+)$");
+    private static final Pattern PAGE_PATTERN = Pattern.compile("^(https?://[^/]+/)doi/");
+
+
+    public TafLinkExtractor() {
+      super(HREF_ATTR);
+      // TODO Auto-generated constructor stub
+    }
+
+ /*
+  * When we find an
+  * <a href="/action/showCitFormats?doi=10.1080%2F21640629.2015.1106145">Download citation</a>
+  * first generate a matching
+  *   action/downloadCitation?doi=THEDOI&&format=ris&include=cit link
+  * and then call super to get the original
+  * 
+  */
+    public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+      String srcUrl = node.baseUri();
+      Matcher pageMatch = PAGE_PATTERN.matcher(srcUrl);
+      if (LINK_TAG.equals(node.nodeName())) {
+        String hrefUrl = node.attr(HREF_ATTR);
+        if (!StringUtil.isNullString(hrefUrl)) {
+          Matcher showCitMatcher = SHOWCIT_PATTERN.matcher(hrefUrl);
+          if (showCitMatcher.find() && (srcUrl != null) && pageMatch.find()) {
+            log.debug3("found a link tag with an href that includes action/showCitFormats...");
+            String newUrl = pageMatch.group(1) + DOWNCIT_ACTION + showCitMatcher.group(1) + CIT_SUFFIX;
+            log.debug3("created a downloadCitations link: " + newUrl);
+            if (!StringUtil.isNullString(newUrl)) {
+              cb.foundLink(newUrl);
+              // continue on to find the actual link now
+            }
+          }
+        }
+      }
+      // now pick up the link that was actually there and continue
       super.tagBegin(node, au, cb);
     }
   }

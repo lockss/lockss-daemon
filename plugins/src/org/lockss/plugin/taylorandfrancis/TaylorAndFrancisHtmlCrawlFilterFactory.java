@@ -33,71 +33,73 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.InputStream;
-import java.util.regex.Pattern;
-
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-/*STANDALONE - DOES NOT INHERIT FROM BASE ATYPON */
-public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
+/* Changing this to inherit from the BaseAtypon crawl filter. 
+ allows for inheritance of various Atypon elements to avoid future issues with
+ skin changes
+ There is also the option to turn on WS filtering or tag removal as needed.
+ */
+public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
-  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction", Pattern.CASE_INSENSITIVE);
-  
+  static NodeFilter[] filters = new NodeFilter[]{
+    
+    /*******based on analysis on 9/15/16*****************/
+    
+    // http://www.tandfonline.com/toc/twst20/29/1
+    // TOC left side column stuff - literatumAd handled by parent
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalMenuWidget"), 
+    // TOC main column stuff - handled in parent 
+    // literatumMostRecentWidget, literatumMostRead, literatumMostCited
+    // literatumListOfIssuesRepsonsiveWidget, literatumOpenAccessWidget 
+    
+    // http://www.tandfonline.com/doi/full/10.1080/02678373.2015.1004225
+    // article page - top navigation
+    // id=relatedContent, id=metrics-content
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publicationSerialHeader"),
+    // article - right column with relatedArt, relatedItem, etc
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "combinedRecommendationsWidget"), 
+    // don't need to worry about pageFooter, pageHeader for crawling
+    
+    /********below are from original T&F crawl filter *********************/
+    // News articles
+    HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
+    // Related and most read articles
+    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
+    //Ads from the publisher
+    HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
+    // links to T&F articles go directly to other article
+    HtmlNodeFilters.tagWithAttribute("div",  "id", "referencesPanel"),
+    // If cited by other T&F could go directly to other article 
+    HtmlNodeFilters.tagWithAttribute("div",  "id", "citationsPanel"), 
+    //full article has in-line references with direct links 
+    //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
+    // reference #20
+    HtmlNodeFilters.tagWithAttribute("span",  "class", "referenceDiv"),     
+    // full page with references in a list at the bottom - some with direct links, see
+    //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
+    // reference #20
+    HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
+    // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
+    HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
+
+    //do not follow breadcrumb back to TOC in case of overcrawl to article
+    HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
+    //and if you get to TOC, don't follow links in header (next/prev)
+    HtmlNodeFilters.tagWithAttribute("div", "class", "hd"),
+
+  };
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // News articles
-        HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
-        // Related and most read articles
-        HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
-        //Ads from the publisher
-        HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
-        // links to T&F articles go directly to other article
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "referencesPanel"),
-        // If cited by other T&F could go directly to other article 
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "citationsPanel"), 
-        //full article has in-line references with direct links 
-        //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
-        // reference #20
-        HtmlNodeFilters.tagWithAttribute("span",  "class", "referenceDiv"),     
-        // full page with references in a list at the bottom - some with direct links, see
-        //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
-        // reference #20
-        HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
-        // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
-        HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
-        
-        //do not follow breadcrumb back to TOC in case of overcrawl to article
-        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
-        //and if you get to TOC, don't follow links in header (next/prev)
-        HtmlNodeFilters.tagWithAttribute("div", "class", "hd"),
-        
-        // on a Corrigendum abstract or full text page, there will be a link to "Original Article"
-        // and on the Original Article page there will be a link back to the "Corrigendum"
-        // No obvious attributes, so just look for the text
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            if (!(node instanceof LinkTag)) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            return corrections.matcher(allText).find();
-//            //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
-//            return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") 
-//                || allText.matches("(?is).*Correction.*"));
-          }
-        },
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+      InputStream in,
+      String encoding)
+          throws PluginException {
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }

@@ -68,10 +68,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
 
     // sections that may show up with this skin                                          
     // http://www.birpublications.org/toc/bjr/88/1052
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),    
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostReadWidget"),    
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumMostCitedWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesResponsiveWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumOpenAccessWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
    
     
@@ -123,6 +126,8 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // related content from Related tab of Errata full text
     // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    //http://www.tandfonline.com/doi/full/10.1080/02678373.2015.1004225
+    HtmlNodeFilters.tagWithAttribute("div", "id", "metrics-content"),
     // toc - erratum section linking to Original Article - other flavor
     // related content near Erratum
     // http://press.endocrine.org/toc/endo/154/10       
