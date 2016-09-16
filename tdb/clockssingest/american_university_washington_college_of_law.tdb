@@ -79,7 +79,7 @@
       name = Intellectual Property Brief
     >
     
-    # no issn
+    # no issn. See RT 6527
 
     param[journal_abbr] = ipbrief
 
