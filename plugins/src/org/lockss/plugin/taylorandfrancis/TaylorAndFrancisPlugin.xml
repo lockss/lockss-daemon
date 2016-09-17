@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>84</string>
+    <string>85</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -61,6 +61,12 @@
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TafHtmlLinkExtractorFactory</string>
   </entry> 
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.taylorandfrancis.TaFHttpResponseHandler</string>
+    </list>
+  </entry>  
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisJavaScriptLinkRewriterFactory</string>
