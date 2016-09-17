@@ -134,7 +134,7 @@
     au < finished ; finished ; 2012 ; Bioinformatics and Biology Insights Volume 6 ; 6 ; 2012 ; >
     au < finished ; finished ; 2013 ; Bioinformatics and Biology Insights Volume 7 ; 7 ; 2013 ; >
     au < finished ; finished ; 2014 ; Bioinformatics and Biology Insights Volume 8 ; 8 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Bioinformatics and Biology Insights Volume 9 ; 9 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Bioinformatics and Biology Insights Volume 10 ; 10 ; 2016 ; >
 
   }
@@ -240,7 +240,7 @@
     au < manifest ; exists ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 3 ; 2010 ; >
     au < finished ; finished ; 2013 ; Bone and Tissue Regeneration Insights Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Bone and Tissue Regeneration Insights Volume 5 ; 5 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Bone and Tissue Regeneration Insights Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Bone and Tissue Regeneration Insights Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -330,7 +330,7 @@
     au < finished ; finished ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Cell & Tissue Transplantation & Therapy Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Cell & Tissue Transplantation & Therapy Volume 7 ; 7 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Cell & Tissue Transplantation & Therapy Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -366,7 +366,7 @@
     au < finished ; finished ; 2012 ; Cell Communication Insights Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cell Communication Insights Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -631,7 +631,7 @@
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Pathology Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Pathology Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -674,7 +674,7 @@
     au < finished ; finished ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 3 ; 2011 ; >
     au < finished ; finished ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 5 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Psychiatry Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -738,7 +738,7 @@
     au < finished ; finished ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 3 ; 2010 ; >
     au < finished ; finished ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 6 ; 6 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -955,7 +955,7 @@
     au < manifest ; exists ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 3 ; 2010 ; >
     au < crawling ; exists ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 7 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Gene Expression to Genetical Genomics Volume 8 ; 8 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Gene Expression to Genetical Genomics Volume 8 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2016 ; Gene Expression to Genetical Genomics Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1826,7 +1826,7 @@
     au < manifest ; exists ; 2010 ; Virology: Research and Treatment Volume 2 ; 2 ; 2010 ; >
     au < crawling ; exists ; 2013 ; Virology: Research and Treatment Volume 4 ; 4 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Virology: Research and Treatment Volume 5 ; 5 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Virology: Research and Treatment Volume 7 ; 7 ; 2016 ; >
 
   }

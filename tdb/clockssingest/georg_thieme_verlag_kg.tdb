@@ -458,7 +458,7 @@
     au < finished ; finished ; 2012 ; 2012 ; American Journal of Perinatology Volume 2012 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; American Journal of Perinatology Volume 2013 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; American Journal of Perinatology Volume 2016 ; 33 ; >
 
    }
@@ -719,7 +719,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Craniomaxillofacial Trauma & Reconstruction Volume 2012 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Craniomaxillofacial Trauma & Reconstruction Volume 2013 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Craniomaxillofacial Trauma & Reconstruction Volume 2014 ; 7 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 2015 ; 8 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 2015 ; 8 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 2016 ; 9 ; >
 
   }
@@ -1231,7 +1231,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 ; >
    au < finished ; finished ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 ; >
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 27 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Endoscopy heute Volume 2015 ; 28 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Endoscopy heute Volume 2015 ; 28 ; reingest3.clockss.org:8083 >
    au < expected ; exists ; 2016 ; 2016 ; Endoscopy heute Volume 2016 ; 29 ; >
 
   }
@@ -1500,7 +1500,7 @@
     comment[years] = 2013
 
     au < finished ; finished ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2016 ; 2016 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 3 ; 3 ; >
 
   }
@@ -1625,7 +1625,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 82 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 2015 ; 83 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 2015 ; 83 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Fortschritte der Neurologie - Psychiatrie Volume 2016 ; 84 ; >
 
   }
@@ -1727,7 +1727,7 @@
    au < finished ; crawling ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 72 ; >
    au < finished ; crawling ; 2013 ; 2013 ; Geburtshilfe und Frauenheilkunde Volume 2013 ; 73 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 74 ; reingest1.clockss.org:8082 >
-   au < frozen ; exists ; 2015 ; 2015 ; Geburtshilfe und Frauenheilkunde Volume 2015 ; 75 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Geburtshilfe und Frauenheilkunde Volume 2015 ; 75 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Geburtshilfe und Frauenheilkunde Volume 2016 ; 76 ; >
 
   }
@@ -1876,7 +1876,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Handchirurgie Scan Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; 2013 ; Handchirurgie Scan Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Handchirurgie Scan Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Handchirurgie Scan Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Handchirurgie Scan Volume 5 ; 5 ; >
 
   }
@@ -3369,7 +3369,7 @@
     au < finished ; finished ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 43 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 ; >
     au < deepCrawl ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Neuropediatrics Volume 2016 ; 47 ; >
 
   }
@@ -3906,7 +3906,7 @@
     au < finished ; finished ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 ; >
     au < finished ; crawling ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; physioscience Volume 2016 ; 12 ; >
 
   }
@@ -4875,7 +4875,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Respiratory and Critical Care Medicine Volume 2012 ; 33 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Respiratory and Critical Care Medicine Volume 2013 ; 34 ; >
    au < deepCrawl ; exists ; 2014 ; 2014 ; Seminars in Respiratory and Critical Care Medicine Volume 2014 ; 35 ; >
-   au < frozen ; exists ; 2015 ; 2015 ; Seminars in Respiratory and Critical Care Medicine Volume 2015 ; 36 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; Seminars in Respiratory and Critical Care Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 2016 ; 37 ; >
 
   }
