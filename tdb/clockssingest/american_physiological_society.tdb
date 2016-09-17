@@ -1104,7 +1104,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; >
@@ -1671,7 +1671,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Renal Physiology Volume 292 ; 292 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Renal Physiology Volume 293 ; 293 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; American Journal of Physiology - Renal Physiology Volume 294 ; 294 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; American Journal of Physiology - Renal Physiology Volume 296 ; 296 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Renal Physiology Volume 298 ; 298 ; >
@@ -2075,7 +2075,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 1974 ; Journal of Neurophysiology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1975 ; Journal of Neurophysiology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1976 ; Journal of Neurophysiology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; down ; frozen ; 1977 ; Journal of Neurophysiology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePlugin ; down ; finished ; 1977 ; Journal of Neurophysiology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1978 ; Journal of Neurophysiology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1979 ; Journal of Neurophysiology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1980 ; Journal of Neurophysiology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
@@ -2633,7 +2633,7 @@
       au < ClockssHighWirePlugin ; down ; finished ; 2006 ; Physiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Physiology Volume 23 ; 23 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; Physiology Volume 24 ; 24 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2009 ; Physiology Volume 24 ; 24 ; >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Physiology Volume 25 ; 25 ; >
 
     }

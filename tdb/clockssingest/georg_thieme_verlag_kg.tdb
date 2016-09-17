@@ -1620,7 +1620,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 2007 ; 75 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 2008 ; 76 ; >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 2009 ; 77 ; >
-   au < finished ; crawling ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 ; >
+   au < finished ; finished ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 ; >
    au < finished ; finished ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 ; >
@@ -2292,7 +2292,7 @@
     param[journal_id] = 10.1055/s-00024754
     comment[years] = 2013-current
 
-    au < finished ; crawling ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Interventionelle Radiologie Scan Volume 4 ; 4 ; >
@@ -6007,7 +6007,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2009 ; 147 ; >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2010 ; 148 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2011 ; 149 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 ; >
+    au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 ; >
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 ; reingest5.clockss.org:8082 >

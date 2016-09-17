@@ -565,7 +565,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
-    au < down ; crawling ; 2000 ; Global Economy Journal Volume 1 ; 1 ; >
+    au < down ; finished ; 2000 ; Global Economy Journal Volume 1 ; 1 ; >
     au < zapped ; finished ; 2001 ; Global Economy Journal Volume 2 ; 2 ; >
     au < down ; finished ; 2002 ; Global Economy Journal Volume 3 ; 3 ; >
     au < down ; finished ; 2004 ; Global Economy Journal Volume 4 ; 4 ; >
