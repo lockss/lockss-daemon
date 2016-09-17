@@ -425,7 +425,8 @@
       au < doNotProcess ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < doNotProcess ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < doNotProcess ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < released ; 2013-2014 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
+      au < released ; 2013-2015 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
+      au < exists ; 2016 ; International Journal of Advanced Media and Communication Volume 6 ; 6 >
 
     }
 
@@ -486,6 +487,7 @@
       au < doNotProcess ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
       au < doNotProcess ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 >
       au < doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 >
+      au < exists ; 2015 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 >
 
     }
 
@@ -883,7 +885,8 @@
       param[journal_id] = ijam
 
       au < doNotProcess ; 2011-2012 ; International Journal of Aviation Management Volume 1 ; 1 >
-      au < manifest ; 2013 ; International Journal of Aviation Management Volume 2 ; 2 >
+      au < manifest ; 2013-2015 ; International Journal of Aviation Management Volume 2 ; 2 >
+      au < exists ; 2016 ; International Journal of Aviation Management Volume 3 ; 3 >
 
     }
 
@@ -6199,6 +6202,7 @@
 
       au < doNotProcess ; 2006-2008 ; International Journal of Nuclear Hydrogen Production and Applications Volume 1 ; 1 >
       au < doNotProcess ; 2009-2013 ; International Journal of Nuclear Hydrogen Production and Applications Volume 2 ; 2 >
+      au < exists ; 2016 ; International Journal of Nuclear Hydrogen Production and Applications Volume 3 ; 3 >
 
     }
 
@@ -7709,6 +7713,7 @@
 
       au < doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
       au < released ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < exists ; 2016 ; International Journal of Sustainable Design Volume 3 ; 3 >
 
     }
 
@@ -7797,6 +7802,7 @@
       param[journal_id] = ijsmss
 
       au < released ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 >
+      au < exists ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 >
 
     }
 

@@ -87,6 +87,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       # platform Allen Press
       param[journal_id] = apms
+      #content available from 1965 volume 55 to 2009 volume 99
 
       au < manifest ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 >
       au < ready ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 >
