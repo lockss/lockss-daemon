@@ -236,7 +236,7 @@
       au < finished ; finished ; 2011 ; Critical Survey Volume 23 ; 23 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Critical Survey Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Critical Survey Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Critical Survey Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Critical Survey Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < down ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; >    
       
     }
@@ -255,7 +255,7 @@
     param[journal_id] = demt
     param[journal_issn] = 2332-8894
 
-    au < finished ; crawling ; 2014 ; Democratic Theory Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Democratic Theory Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < down ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
     
   }
@@ -417,7 +417,7 @@
     au < down ; exists ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 ; >
     au < down ; exists ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 ; >
     au < finished ; crawling ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < down ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
     
   }
@@ -516,7 +516,7 @@
     au < finished ; finished ; 2011 ; International Journal of Social Quality Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; International Journal of Social Quality Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < down ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
     
   }
@@ -776,7 +776,7 @@
     au < down ; exists ; 2011 ; Projections Volume 5 ; 5 ; >
     au < down ; exists ; 2012 ; Projections Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Projections Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Projections Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Projections Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < down ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
     
   }

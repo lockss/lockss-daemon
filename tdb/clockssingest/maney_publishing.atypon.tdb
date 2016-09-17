@@ -722,7 +722,7 @@
     au < frozen ; exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Cochlear Implants International Volume 13 ; 13 ; >
     au < frozen ; exists ; 2013 ; Cochlear Implants International Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2014 ; Cochlear Implants International Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Cochlear Implants International Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Cochlear Implants International Volume 16 ; 16 ; >
 
   }
@@ -3777,7 +3777,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Progress in Palliative Care Volume 19 ; 19 ; > 
     au < doNotProcess ; doNotProcess ; 2012 ; Progress in Palliative Care Volume 20 ; 20 ; >
     au < frozen ; exists ; 2013 ; Progress in Palliative Care Volume 21 ; 21 ; >
-    au < down ; crawling ; 2014 ; Progress in Palliative Care Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < down ; finished ; 2014 ; Progress in Palliative Care Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Progress in Palliative Care Volume 23 ; 23 ; >
 
   }
