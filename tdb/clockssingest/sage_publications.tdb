@@ -508,7 +508,7 @@
       au < finished ; finished ; 2011 ; Advances in Mechanical Engineering Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; Advances in Mechanical Engineering Volume 4 ; 4 ; >
       au < crawling ; exists ; 2013 ; Advances in Mechanical Engineering Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2014 ; Advances in Mechanical Engineering Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2016 ; Advances in Mechanical Engineering Volume 8 ; 8 ; >
 
@@ -3568,7 +3568,7 @@
       au < zapped ; finished ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
       au < zapped ; finished ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
       au < finished ; finished ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 ; >
-      au < finished ; crawling ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
+      au < finished ; crawling ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; >
       au < crawling ; exists ; 2015-2016 ; Assessment for Effective Intervention Volume 41 ; 41 ; >
       au < expected ; exists ; 2016-2017 ; Assessment for Effective Intervention Volume 42 ; 42 ; >
@@ -6932,7 +6932,7 @@
       au < zapped ; finished ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ; >
       au < finished ; finished ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
       au < zapped ; finished ; 2012-2013 ; Communication Disorders Quarterly Volume 34 ; 34 ; >
-      au < finished ; crawling ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; >
+      au < finished ; crawling ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; >
       au < crawling ; exists ; 2015-2016 ; Communication Disorders Quarterly Volume 37 ; 37 ; >
       au < expected ; exists ; 2016-2017 ; Communication Disorders Quarterly Volume 38 ; 38 ; >
@@ -21092,7 +21092,7 @@
       au < crawling ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
       au < finished ; finished ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
+      au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Cerebral Blood Flow & Metabolism Volume 36 ; 36 ; >
 
@@ -34284,7 +34284,7 @@
       au < finished ; finished ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 ; >
       au < finished ; finished ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 ; >
       au < doNotProcess ; exists ; 2016 ; Perspectives on Psychological Science Volume 11 ; 11 ; >
 
@@ -35698,7 +35698,7 @@
       au < finished ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
       au < finished ; finished ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
       au < finished ; finished ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; >
-      au < finished ; crawling ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; >
+      au < finished ; crawling ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 229 ; 229 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 230 ; 230 ; >
 
@@ -47269,7 +47269,7 @@
     param[base_url] = http://smo.sagepub.com/
 
     au < finished ; finished ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; SAGE Open Medicine Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2016 ; SAGE Open Medicine Volume 4 ; 4 ; >
 
@@ -48154,7 +48154,7 @@
         au < finished ; finished ; 2011 ; International Journal of Maritime History Volume 23 ; 23 ; >
         au < finished ; finished ; 2012 ; International Journal of Maritime History Volume 24 ; 24 ; >
         au < finished ; finished ; 2013 ; International Journal of Maritime History Volume 25 ; 25 ; >
-        au < finished ; crawling ; 2014 ; International Journal of Maritime History Volume 26 ; 26 ; >
+        au < finished ; crawling ; 2014 ; International Journal of Maritime History Volume 26 ; 26 ; reingest2.clockss.org:8085 >
         au < finished ; crawling ; 2015 ; International Journal of Maritime History Volume 27 ; 27 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2016 ; International Journal of Maritime History Volume 28 ; 28 ; >
 

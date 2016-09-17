@@ -496,7 +496,7 @@
       au < down ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 ; >
       au < down ; finished ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 ; >
-      au < down ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 ; >
+      au < down ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 ; >
 
     }
@@ -904,7 +904,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2052-6687
       comment[moved] = to new platform
 
-      au < down ; crawling ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 ; >
+      au < down ; crawling ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 ; >
       
     }
@@ -1100,7 +1100,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cerebellumandataxias.com/
       param[journal_issn] = 2053-8871
 
-      au < down ; crawling ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 ; >
+      au < down ; crawling ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < down ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 ; >
       
     }
@@ -2170,7 +2170,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 ; >
       au < down ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 ; >
       au < down ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; Gut Pathogens Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2014 ; Gut Pathogens Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < down ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 ; >
 
     }

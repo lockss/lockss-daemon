@@ -88,7 +88,7 @@
     au < doNotProcess ; exists ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 ; > #no issues on manifest page.
     au < doNotProcess ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 ; > #no issues on manifest page.
     au < finished ; finished ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; >
+    au < finished ; crawling ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
 
@@ -174,7 +174,7 @@
     au < notReady ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/jeq/articles/40/4/www.losc.lsu.edu/stations.php?Id=msy  
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; >
+    au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; >
     au < crawling ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
 
@@ -200,7 +200,7 @@
     au < finished ; finished ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; >
+    au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; >
     au < notReady ; exists ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; >
 
@@ -296,7 +296,7 @@
     au < finished ; finished ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < finished ; finished ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
+    au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 ; >
     au < notReady ; exists ; 2016 ; Soil Horizons Volume 57 ; 57 ; > #content not online
 
@@ -325,7 +325,7 @@
     au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
     au < finished ; crawling ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
-    au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
+    au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
     au < crawling ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
 

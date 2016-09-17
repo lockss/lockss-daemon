@@ -42,8 +42,8 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; The Chaucer Review Volume 45 ; 45 ; >
       au < down ; finished ; 2011-2012 ; The Chaucer Review Volume 46 ; 46 ; >
       au < down ; finished ; 2012-2013 ; The Chaucer Review Volume 47 ; 47 ; >
-      au < down ; crawling ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 ; >
-      au < down ; crawling ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 ; >
+      au < down ; crawling ; 2013-2014 ; The Chaucer Review Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+      au < down ; crawling ; 2014-2015 ; The Chaucer Review Volume 49 ; 49 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; The Chaucer Review Volume 50 ; 50 ; >
       
   }
@@ -200,7 +200,7 @@
 
       au < down ; exists ; 2013 ; Journal of Africana Religions Volume 1 ; 1 ; >
       au < down ; exists ; 2013 ; Journal of Africana Religions Volume 2 ; 2 ; >
-      au < down ; crawling ; 2014 ; Journal of Africana Religions Volume 3 ; 3 ; >
+      au < down ; crawling ; 2014 ; Journal of Africana Religions Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Africana Religions Volume 4 ; 4 ; >
       
   }
@@ -219,7 +219,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 ; >
       au < down ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2 ; >
       au < down ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 ; >
-      au < down ; crawling ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 ; >
+      au < down ; crawling ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 ; 5 ; >
       
   }
@@ -316,7 +316,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 ; >
       au < down ; finished ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 ; >
       au < down ; finished ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 ; >
-      au < down ; crawling ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 ; >
+      au < down ; crawling ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 ; >
       
   }
