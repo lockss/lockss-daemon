@@ -622,6 +622,8 @@
       issnl = 2000-5121
     >
 
+    comment[continued_by] = 2002-2727
+    {
     param[base_url] = http://www.nano-reviews.net/
     param[journal_id] = nano
 
@@ -631,7 +633,33 @@
     au < finished ; finished ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 ; >
-    au < testing ; exists ; 2016 ; Nano Reviews [including Supplements] Volume 7 ; 7 ; 2016 ; >
+    }
+    {
+    param[base_url] = http://www.nanoreviewsexperiments.net/
+    param[journal_id] = nano
+
+    au < doNotProcess ; doNotProcess ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 ; >
+    }
+  }
+
+  {
+
+    title <
+      name = Nano Reviews & Experiments ;
+      eissn = 2002-2727 ;
+      issnl = 2002-2727
+    >
+
+    comment[continues] = 2000-5121
+    param[base_url] = http://www.nanoreviewsexperiments.net/
+    param[journal_id] = nano
+
+    au < exists ; exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; 2016 ; >
   }
 
   {

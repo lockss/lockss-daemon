@@ -572,16 +572,44 @@
       eissn = 2000-5121 ;
       issnl = 2000-5121
     >
-
+    comment[continued_by] = 2002-2727
+    {
     param[base_url] = http://www.nano-reviews.net/
     param[journal_id] = nano
 
-    au < released ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
-    au < manifest ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
-    au < manifest ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
-    au < manifest ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
+    au < down ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < down ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < down ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < doNotProcess ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
+    au < doNotProcess ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
+    au < doNotProcess ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
+    }
+    {
+    param[base_url] = http://www.nanoreviewsexperiments.net/
+    param[journal_id] = nano
+
+    au < doNotProcess ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < doNotProcess ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < doNotProcess ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
+    au < exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
+    au < exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
+    }
+  }
+
+  {
+
+    title <
+      name = Nano Reviews & Experiments ;
+      eissn = 2002-2727 ;
+      issnl = 2002-2727
+    >
+
+    comment[continues] = 2000-5121
+    param[base_url] = http://www.nanoreviewsexperiments.net/
+    param[journal_id] = nano
+
+    au < exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; 2016 >
 
   }
 
