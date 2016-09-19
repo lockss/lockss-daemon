@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>52</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>29</string>
+        <string>30</string>
       </entry>
     </map>
   </entry>
@@ -190,11 +190,11 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>(\.(css|js)|/images/.+\.(png|gif))$</string>
+    <string>(\.(css|js)|/images/.+\.(png|gif))(\?\d+)?$</string>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
-    <string>"(\.(css|js)|/images/.+\.(png|gif))$", 0</string>
+    <string>"(\.(css|js)|/images/.+\.(png|gif))(\?\d+)?$", 0</string>
   </entry>
 </map>
