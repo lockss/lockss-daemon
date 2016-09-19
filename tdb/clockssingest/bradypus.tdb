@@ -38,7 +38,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/novecento-released/
 
-    au < testing ; exists ; 2016 ; Novecento WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Novecento WARC Content 2016 ; 2016 >
     
   }  
   

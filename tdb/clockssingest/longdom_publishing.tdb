@@ -21,7 +21,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-pediatric-research-released/
 
-    au < testing ; exists ; 2016 ; Advances in Pediatric Research WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Advances in Pediatric Research WARC Content 2016 ; 2016 >
     
   }
   
@@ -36,7 +36,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-medical-ethics-released/
 
-    au < testing ; exists ; 2016 ; Advances in Medical Ethics WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Advances in Medical Ethics WARC Content 2016 ; 2016 >
     
   }
   
@@ -51,7 +51,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/advances-in-rare-diseases-released/
 
-    au < testing ; exists ; 2016 ; Advances in Rare Diseases WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Advances in Rare Diseases WARC Content 2016 ; 2016 >
     
   }
   
@@ -66,7 +66,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/healthy-aging-research-released/
 
-    au < testing ; exists ; 2016 ; Healthy Aging Research WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Healthy Aging Research WARC Content 2016 ; 2016 >
     
   }
 }
