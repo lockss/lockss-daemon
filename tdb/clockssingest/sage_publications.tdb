@@ -8615,7 +8615,7 @@
       au < finished ; finished ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
       au < superseded ; exists ; 2011 ; Critical Studies in Television Volume 6 [superseded] ; 6 ; >
       au < superseded ; exists ; 2012 ; Critical Studies in Television Volume 7 [superseded] ; 7 ; >
-      au < finished ; crawling ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
       au < finished ; crawling ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Critical Studies in Television Volume 11 ; 11 ; >
@@ -18286,7 +18286,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ; >
       au < zapped ; finished ; 2010 ; International Journal of Toxicology Volume 29 ; 29 ; >
       au < finished ; finished ; 2011 ; International Journal of Toxicology Volume 30 ; 30 ; >
-      au < finished ; frozen ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
+      au < finished ; finished ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
       au < finished ; finished ; 2013 ; International Journal of Toxicology Volume 32 ; 32 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Journal of Toxicology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2015 ; International Journal of Toxicology Volume 34 ; 34 ; >
@@ -24435,7 +24435,7 @@
       au < finished ; finished ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 ; >
       au < finished ; finished ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 ; >
       au < finished ; finished ; 2011 ; Journal of Histochemistry and Cytochemistry Volume 59 ; 59 ; >
-      au < finished ; frozen ; 2012 ; Journal of Histochemistry and Cytochemistry Volume 60 ; 60 ; >
+      au < finished ; finished ; 2012 ; Journal of Histochemistry and Cytochemistry Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Journal of Histochemistry and Cytochemistry Volume 61 ; 61 ; >
       au < finished ; finished ; 2014 ; Journal of Histochemistry and Cytochemistry Volume 62 ; 62 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Histochemistry and Cytochemistry Volume 63 ; 63 ; >
@@ -28685,7 +28685,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 ; >
       au < finished ; finished ; 2010 ; Journal of the American Psychiatric Nurses Association Volume 16 ; 16 ; >
       au < finished ; finished ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 ; >
-      au < finished ; frozen ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 ; >
+      au < finished ; finished ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 ; >
       au < finished ; finished ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of the American Psychiatric Nurses Association Volume 21 ; 21 ; >
@@ -37318,7 +37318,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Qualitative Health Research Volume 18 ; 18 ; >
-      au < down ; frozen ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
+      au < down ; finished ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
 
     }
 
@@ -44830,7 +44830,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
+      au < down ; finished ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
 
     }
 
