@@ -54,7 +54,7 @@
     au < finished ; finished ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
     au < finished ; finished ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
     au < finished ; finished ; 2007 ; Agronomy Journal Volume 99 ; 99 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Agronomy Journal Volume 101 ; 101 ; reingest1.clockss.org:8082 > #malformed url. 403 error
     au < notReady ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
     au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
@@ -117,7 +117,7 @@
     au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url.
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
     au < finished ; crawling ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Crop Science Volume 54 ; 54 ; >
+    au < finished ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < frozen ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
 
@@ -174,7 +174,7 @@
     au < notReady ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/jeq/articles/40/4/www.losc.lsu.edu/stations.php?Id=msy  
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; >
     au < crawling ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
 
@@ -323,9 +323,9 @@
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
     au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
-    au < finished ; crawling ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
+    au < finished ; finished ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
-    au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
     au < crawling ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
 

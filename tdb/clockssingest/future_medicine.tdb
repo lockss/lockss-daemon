@@ -102,7 +102,7 @@
     au < finished ; finished ; 2012 ; Clinical Lipidology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Clinical Lipidology Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2016 ; Clinical Lipidology Volume 11 ; 11 ; >
     
   }
@@ -600,7 +600,7 @@
     param[journal_id] = nmt
 
     au < manifest ; exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; >
@@ -637,7 +637,7 @@
     au < crawling ; exists ; 2012 ; Pain Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Pain Management Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Pain Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Pain Management Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Pain Management Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Pain Management Volume 6 ; 6 ; >
     
   }

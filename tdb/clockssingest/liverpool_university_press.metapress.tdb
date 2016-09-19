@@ -58,7 +58,7 @@
     au < down ; finished ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 ; >
     au < down ; finished ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 ; >
     au < down ; finished ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 ; >
-    au < down ; crawling ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 ; >
+    au < down ; finished ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 ; >
     au < down ; finished ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 ; >
     au < down ; exists ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2014 ; British Journal of Canadian Studies Volume 27 ; 27 ; >
@@ -225,7 +225,7 @@
       comment[upcoming] = this journal is upcoming in projectmuse
       param[journal_issn] = 2047-7708
 
-      au < down ; crawling ; 2011 ; Extrapolation Volume 52 ; 52 ; >
+      au < down ; finished ; 2011 ; Extrapolation Volume 52 ; 52 ; >
       au < down ; finished ; 2012 ; Extrapolation Volume 53 ; 53 ; >
       au < down ; exists ; 2013 ; Extrapolation Volume 54 ; 54 ; >
       au < doNotProcess ; exists ; 2014 ; Extrapolation Volume 55 ; 55 ; >

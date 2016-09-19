@@ -285,7 +285,7 @@
     
     comment[continued_by] = 2047-3877
     
-    au < finished ; crawling ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 ; >
+    au < finished ; finished ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 ; >
 
   }
 
@@ -335,7 +335,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Brontë Studies Volume 33 ; 33 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Brontë Studies Volume 34 ; 34 ; > 
     au < finished ; finished ; 2010 ; Brontë Studies Volume 35 ; 35 ; > 
-    au < finished ; crawling ; 2011 ; Brontë Studies Volume 36 ; 36 ; > 
+    au < finished ; finished ; 2011 ; Brontë Studies Volume 36 ; 36 ; > 
     au < finished ; finished ; 2012 ; Brontë Studies Volume 37 ; 37 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Brontë Studies Volume 38 ; 38 ; > 
 
@@ -355,7 +355,7 @@
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 ; > 
-    au < down ; crawling ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
+    au < down ; finished ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
     au < down ; finished ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 ; > 
@@ -610,7 +610,7 @@
     param[journal_issn] = 1547-402X
    
     au < finished ; finished ; 2011 ; The Chinese Historical Review Volume 18 ; 18 ; >  
-    au < finished ; crawling ; 2012 ; The Chinese Historical Review Volume 19 ; 19 ; >   
+    au < finished ; finished ; 2012 ; The Chinese Historical Review Volume 19 ; 19 ; >   
     au < doNotProcess ; doNotProcess ; 2013 ; The Chinese Historical Review Volume 20 ; 20 ; >   
     
   }
@@ -1470,7 +1470,7 @@
     
     comment[continues] = 1753-3031
     
-    au < finished ; crawling ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 ; > 
+    au < finished ; finished ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 ; > 
 
   }  
@@ -2116,7 +2116,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Occupational and Environmental Health Volume 15 ; 15 ; > 
     au < finished ; finished ; 2010 ; International Journal of Occupational and Environmental Health Volume 16 ; 16 ; > 
     au < finished ; finished ; 2011 ; International Journal of Occupational and Environmental Health Volume 17 ; 17 ; > 
-    au < finished ; crawling ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 ; > 
+    au < finished ; finished ; 2012 ; International Journal of Occupational and Environmental Health Volume 18 ; 18 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Occupational and Environmental Health Volume 19 ; 19 ; > 
 
   }  
@@ -3380,7 +3380,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Progress in Palliative Care Volume 17 ; 17 ; > 
     au < finished ; finished ; 2010 ; Progress in Palliative Care Volume 18 ; 18 ; > 
     au < finished ; finished ; 2011 ; Progress in Palliative Care Volume 19 ; 19 ; >
-    au < finished ; crawling ; 2012 ; Progress in Palliative Care Volume 20 ; 20 ; >
+    au < finished ; finished ; 2012 ; Progress in Palliative Care Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Progress in Palliative Care Volume 21 ; 21 ; >
 
   }
@@ -3462,7 +3462,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Redox Report Volume 14 ; 14 ; > 
     au < finished ; finished ; 2010 ; Redox Report Volume 15 ; 15 ; >
     au < finished ; finished ; 2011 ; Redox Report Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2012 ; Redox Report Volume 17 ; 17 ; > 
+    au < finished ; finished ; 2012 ; Redox Report Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Redox Report Volume 18 ; 18 ; > 
 
   }

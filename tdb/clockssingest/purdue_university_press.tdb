@@ -79,7 +79,7 @@
     au < finished ; finished ; 2010 ; CLCWeb: Comparative Literature and Culture Volume 12 ; 12 ; >
     au < finished ; finished ; 2011 ; CLCWeb: Comparative Literature and Culture Volume 13 ; 13 ; >
     au < finished ; frozen ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; >
+    au < finished ; finished ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; >
     au < finished ; finished ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; >
     au < finished ; crawling ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; >
@@ -165,7 +165,7 @@
     param[journal_abbr] = jhpee
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
     
-    au < finished ; frozen ; 2000 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 ; >
+    au < finished ; finished ; 2000 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 ; >
     au < finished ; finished ; 2001 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 ; >
     au < finished ; finished ; 2003 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 ; >
     au < finished ; finished ; 2005 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 ; >

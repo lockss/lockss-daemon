@@ -330,7 +330,7 @@
 
     param[journal_id] = abot
 
-    au < finished ; crawling ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Botany Volume 2016 ; 2016 ; 2016 ; >
 
@@ -505,7 +505,7 @@
 
     param[journal_id] = aelc
 
-    au < finished ; crawling ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Electronics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -553,7 +553,7 @@
 
     param[journal_id] = aec
 
-    au < finished ; crawling ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -625,7 +625,7 @@
     param[journal_id] = ageo
     #journal gone
 
-    au < down ; crawling ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 ; >
+    au < down ; finished ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 ; >
     au < down ; exists ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Geology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1080,7 +1080,7 @@
 
     param[journal_id] = aoto
 
-    au < finished ; crawling ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1379,7 +1379,7 @@
     au < manifest ; exists ; 2011 ; Advances in Virology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Virology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -1736,7 +1736,7 @@
     au < manifest ; exists ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Biochemistry Research International Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Biochemistry Research International Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biochemistry Research International Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -1810,7 +1810,7 @@
     au < manifest ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Biotechnology Research International Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biotechnology Research International Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2898,7 +2898,7 @@
     # archived
 
     au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3161,7 +3161,7 @@
     param[journal_id] = gt
 
     au < manifest ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Game Theory Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Game Theory Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4250,7 +4250,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; International Journal of Inorganic Chemistry Volume 2016 ; 2016 ; 2016 ; >
     
@@ -4354,7 +4354,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Medicinal Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4799,7 +4799,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Reconfigurable Computing Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Reconfigurable Computing Volume 2016 ; 2016 ; 2016 ; >
 
@@ -5179,7 +5179,7 @@
     au < manifest ; exists ; 2011 ; Journal of Aging Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Aging Research Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Aging Research Volume 2016 ; 2016 ; 2016 ; >
     
@@ -5569,7 +5569,7 @@
     au < manifest ; exists ; 2011 ; Journal of Cancer Epidemiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Cancer Epidemiology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Cancer Epidemiology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6498,7 +6498,7 @@
     #not archived. no 2015 content. 20160420
     
     au < manifest ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -8748,7 +8748,7 @@
 
     au < manifest ; exists ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Scientifica Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Scientifica Volume 2016 ; 2016 ; 2016 ; >
 

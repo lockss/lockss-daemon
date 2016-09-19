@@ -284,7 +284,7 @@
     au < finished ; crawling ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 ; >
     au < finished ; crawling ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
     au < finished ; crawling ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 ; >
-    au < finished ; crawling ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
+    au < finished ; finished ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
     au < finished ; finished ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
@@ -487,7 +487,7 @@
     au < zapped ; finished ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 ; >
     au < zapped ; finished ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 ; >
     au < finished ; crawling ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 ; >
-    au < finished ; frozen ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 ; >
+    au < finished ; finished ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 ; >
     au < finished ; frozen ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 ; >
     au < crawling ; exists ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 ; >
     au < finished ; finished ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 ; >
@@ -565,7 +565,7 @@
     au < finished ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
     au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
     au < crawling ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 ; >
-    au < finished ; crawling ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 ; >
     au < crawling ; exists ; 2016 ; Cellular & Molecular Immunology Volume 13 ; 2016 ; 13 ; >
 
@@ -754,7 +754,7 @@
     au < finished ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 ; >
     au < finished ; crawling ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 ; >
     au < crawling ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 ; >
-    au < finished ; crawling ; 2014 ; European Journal of Human Genetics Volume 22 ; 2014 ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; European Journal of Human Genetics Volume 22 ; 2014 ; 22 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; European Journal of Human Genetics Volume 23 ; 2015 ; 23 ; >
     au < testing ; exists ; 2016 ; European Journal of Human Genetics Volume 24 ; 2016 ; 24 ; >
 
@@ -909,7 +909,7 @@
     au < finished ; finished ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 ; >
     au < finished ; crawling ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 ; >
     au < finished ; crawling ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 ; >
-    au < finished ; crawling ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 ; >
+    au < finished ; finished ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 ; >
     au < deepCrawl ; exists ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 ; >
     au < testing ; exists ; 2016 ; Genes and Immunity Volume 17 ; 2016 ; 17 ; >
 
@@ -1281,7 +1281,7 @@
     # 2011 fixed.
 
     au < finished ; crawling ; 2011 ; International Journal of Obesity Supplements Volume 1 ; 2011 ; 1 ; >
-    au < finished ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 ; >
+    au < finished ; finished ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 ; >
@@ -1299,8 +1299,8 @@
 
     param[journal_id] = ijos
 
-    au < finished ; crawling ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 ; >
-    au < finished ; crawling ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 ; >
+    au < finished ; finished ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 ; >
+    au < finished ; finished ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 ; >
     au < finished ; crawling ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 ; >
     au < finished ; crawling ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 ; >
     au < finished ; finished ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 ; >
@@ -1420,13 +1420,13 @@
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 ; >
-    au < finished ; frozen ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 ; >
+    au < finished ; finished ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 ; >
     au < finished ; finished ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 ; >
     au < finished ; frozen ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 ; >
     au < finished ; crawling ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 ; >
     au < finished ; crawling ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 ; >
     au < finished ; crawling ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 ; >
-    au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 ; reingest2.clockss.org:8085 >
     au < down ; exists ; 2015 ; Journal of Cerebral Blood Flow and Metabolism Volume 35 ; 2015 ; 35 ; >
 
   }
@@ -1686,7 +1686,7 @@
     au < zapped ; finished ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 ; >
     au < zapped ; finished ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 ; >
     au < finished ; frozen ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 ; >
-    au < finished ; frozen ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 ; >
+    au < finished ; finished ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 ; >
     au < finished ; frozen ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 ; >
     au < crawling ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 ; >
     au < finished ; finished ; 2014 ; The Journal of Investigative Dermatology Volume 134 ; 2014 ; 134 ; reingest1.clockss.org:8082 >
@@ -1717,7 +1717,7 @@
     au < zapped ; finished ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 ; >
     au < zapped ; finished ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 ; >
     au < finished ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 ; >
-    au < finished ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 ; >
+    au < finished ; finished ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 ; >
     au < finished ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 ; >
     au < finished ; crawling ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
@@ -1744,7 +1744,7 @@
     au < down ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 ; >
     au < down ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 ; >
     au < down ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 ; >
-    au < finished ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 ; >
+    au < finished ; finished ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 ; >
     au < down ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 ; >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 ; >
     au < doNotProcess ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
@@ -2579,7 +2579,7 @@
      param[journal_id] = nclimate
 
     au < finished ; finished ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; >
     au < frozen ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; >
@@ -2829,7 +2829,7 @@
     au < manifest ; exists ; 2006 ; Nature Methods Volume 3 ; 2006 ; 3 ; >
     au < manifest ; exists ; 2007 ; Nature Methods Volume 4 ; 2007 ; 4 ; >
     au < finished ; crawling ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 ; >
-    au < finished ; frozen ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 ; >
+    au < finished ; finished ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 ; >
     au < finished ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 ; >
     au < crawling ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; >
@@ -3107,7 +3107,7 @@
     au < finished ; finished ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; >
-    au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
+    au < finished ; finished ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; >
     au < crawling ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
 
@@ -3130,7 +3130,7 @@
     au < manifest ; exists ; 2007 ; Nature Reviews Gastroenterology and Hepatology Volume 4 ; 2007 ; 4 ; >
     au < zapped ; finished ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 ; >
-    au < finished ; frozen ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 ; >
+    au < finished ; finished ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 ; >
     au < finished ; crawling ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 ; >
     au < crawling ; exists ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; >
@@ -3471,7 +3471,7 @@
     au < finished ; frozen ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 ; >
     au < finished ; frozen ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 ; >
     au < finished ; crawling ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 ; >
-    au < finished ; crawling ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 ; >
+    au < finished ; finished ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 ; >
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; >
     au < finished ; crawling ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Neuropsychopharmacology Volume 40 ; 2015 ; 40 ; >
@@ -3676,7 +3676,7 @@
     au < finished ; crawling ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 ; >
     au < finished ; frozen ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 ; >
     au < finished ; crawling ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 ; >
-    au < finished ; crawling ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; >
     au < finished ; finished ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 ; >
@@ -3951,7 +3951,7 @@
     au < finished ; crawling ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 ; >
     au < finished ; finished ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 ; >
     au < crawling ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; >
-    au < finished ; crawling ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; >
     au < testing ; exists ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; >
 

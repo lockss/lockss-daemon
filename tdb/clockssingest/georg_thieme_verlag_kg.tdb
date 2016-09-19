@@ -907,7 +907,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Dialyse aktuell Volume 2007 ; 2 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Dialyse aktuell Volume 2008 ; 3 ; >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Dialyse aktuell Volume 2009 ; 4 ; >
-   au < finished ; crawling ; 2010 ; 2010 ; Dialyse aktuell Volume 2010 ; 5 ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2010 ; 2010 ; Dialyse aktuell Volume 2010 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Dialyse aktuell Volume 2011 ; 6 ; >
    au < finished ; finished ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 ; >
    au < finished ; finished ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 ; >
@@ -1372,7 +1372,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 2007 ; 17 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 2008 ; 18 ; >
    au < doNotProcess ; exists ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 2009 ; 19 ; >
-   au < finished ; crawling ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 2011 ; 21 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 ; >
    au < finished ; finished ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 ; >
@@ -1726,7 +1726,7 @@
    au < finished ; finished ; 2011 ; 2011 ; Geburtshilfe und Frauenheilkunde Volume 2011 ; 71 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 72 ; >
    au < finished ; crawling ; 2013 ; 2013 ; Geburtshilfe und Frauenheilkunde Volume 2013 ; 73 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 74 ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 74 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; Geburtshilfe und Frauenheilkunde Volume 2015 ; 75 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Geburtshilfe und Frauenheilkunde Volume 2016 ; 76 ; >
 
@@ -2273,7 +2273,7 @@
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 ; >
     au < finished ; crawling ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 2016 ; 37 ; >
@@ -3904,7 +3904,7 @@
     au < finished ; finished ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; 2011 ; physioscience Volume 2011 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 ; >
     au < finished ; crawling ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; physioscience Volume 2016 ; 12 ; >

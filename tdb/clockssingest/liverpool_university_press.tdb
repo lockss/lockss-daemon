@@ -59,7 +59,7 @@
     au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
-    au < finished ; crawling ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
+    au < finished ; finished ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
     au < finished ; finished ; 2009 ; Before Farming Volume 2009 ; 2009 ; >
     au < finished ; finished ; 2010 ; Before Farming Volume 2010 ; 2010 ; >
     au < finished ; finished ; 2011 ; Before Farming Volume 2011 ; 2011 ; >
@@ -163,7 +163,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; The Byron Journal Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; The Byron Journal Volume 41 ; 41 ; >
     au < frozen ; exists ; 2014 ; The Byron Journal Volume 42 ; 42 ; >
-    au < finished ; crawling ; 2015 ; The Byron Journal Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; The Byron Journal Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; The Byron Journal Volume 44 ; 44 ; >
 
   }
@@ -432,7 +432,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 ; >
 

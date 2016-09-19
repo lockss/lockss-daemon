@@ -99,7 +99,7 @@
     comment[param] = eissn preferred
 
     au < down ; crawling ; 2009 ; Biofabrication Volume 1 ; 1 ; > 
-    au < down ; crawling ; 2010 ; Biofabrication Volume 2 ; 2 ; > 
+    au < down ; finished ; 2010 ; Biofabrication Volume 2 ; 2 ; > 
     au < down ; finished ; 2011 ; Biofabrication Volume 3 ; 3 ; > 
     au < down ; crawling ; 2012 ; Biofabrication Volume 4 ; 4 ; > 
     au < down ; exists ; 2013 ; Biofabrication Volume 5 ; 5 ; > 
@@ -124,7 +124,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 ; > 
     au < down ; finished ; 2008 ; Bioinspiration & Biomimetics Volume 3 ; 3 ; > 
     au < down ; finished ; 2009 ; Bioinspiration & Biomimetics Volume 4 ; 4 ; >
-    au < down ; crawling ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 ; > 
+    au < down ; finished ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 ; > 
     au < down ; finished ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 ; > 
     au < down ; crawling ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 ; > 
     au < down ; exists ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 ; > 
@@ -229,7 +229,7 @@
     au < down ; finished ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 ; > 
     au < down ; crawling ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 ; > 
     au < down ; crawling ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 ; > 
-    au < down ; crawling ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 ; > 
+    au < down ; finished ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 ; > 
     au < down ; crawling ; 2012 ; Chinese Journal of Chemical Physics Volume 25 ; 25 ; > 
 
   }
@@ -448,7 +448,7 @@
     au < down ; finished ; 2008 ; Communications in Theoretical Physics Volume 50 ; 50 ; > 
     au < down ; finished ; 2009 ; Communications in Theoretical Physics Volume 51 ; 51 ; > 
     au < down ; finished ; 2009 ; Communications in Theoretical Physics Volume 52 ; 52 ; > 
-    au < down ; crawling ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 ; > 
+    au < down ; finished ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 ; > 
     au < down ; crawling ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 ; > 
     au < down ; finished ; 2011 ; Communications in Theoretical Physics Volume 55 ; 55 ; > 
     au < down ; finished ; 2011 ; Communications in Theoretical Physics Volume 56 ; 56 ; >
@@ -814,7 +814,7 @@
     au < down ; finished ; 2011 ; Inverse Problems Volume 27 ; 27 ; > 
     au < down ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 ; > 
     au < down ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 ; > 
-    au < down ; crawling ; 2014 ; Inverse Problems Volume 30 ; 30 ; reingest3.clockss.org:8083 > 
+    au < down ; finished ; 2014 ; Inverse Problems Volume 30 ; 30 ; reingest3.clockss.org:8083 > 
     au < crawling ; exists ; 2015 ; Inverse Problems Volume 31 ; 31 ; > 
     au < expected ; exists ; 2016 ; Inverse Problems Volume 32 ; 32 ; > 
 
@@ -849,7 +849,7 @@
     au < down ; finished ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 ; > 
     au < down ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 ; > 
     au < down ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 ; > 
-    au < down ; crawling ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 ; reingest2.clockss.org:8085 > 
+    au < down ; finished ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 ; reingest2.clockss.org:8085 > 
     au < down ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 ; > 
 
   }
@@ -2106,7 +2106,7 @@
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 248 ; 248 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 249 ; 249 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 250 ; 250 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 251 ; 251 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 251 ; 251 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 252 ; 252 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 253 ; 253 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 254 ; 254 ; >
@@ -2352,10 +2352,10 @@
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 494 ; 494 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 495 ; 495 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 496 ; 496 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 ; reingest1.clockss.org:8082 >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 497 ; 497 ; reingest1.clockss.org:8082 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 498 ; 498 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 499 ; 499 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 ; reingest2.clockss.org:8085 >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 500 ; 500 ; reingest2.clockss.org:8085 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 501 ; 501 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 502 ; 502 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 503 ; 503 ; >
@@ -2382,7 +2382,7 @@
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 524 ; 524 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 525 ; 525 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 526 ; 526 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 ; reingest2.clockss.org:8085 >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 527 ; 527 ; reingest2.clockss.org:8085 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 528 ; 528 ; >
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 529 ; 529 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 530 ; 530 ; >
@@ -2399,7 +2399,7 @@
     au < down ; exists ; 2014 ; Journal of Physics: Conference Series Volume 541 ; 541 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 542 ; 542 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 543 ; 543 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 544 ; 544 ; >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 544 ; 544 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 545 ; 545 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 546 ; 546 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 547 ; 547 ; >
@@ -2413,7 +2413,7 @@
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 555 ; 555 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 556 ; 556 ; >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 557 ; 557 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 ; reingest2.clockss.org:8085 >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 558 ; 558 ; reingest2.clockss.org:8085 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 559 ; 559 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 560 ; 560 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 561 ; 561 ; >
@@ -2423,7 +2423,7 @@
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 565 ; 565 ; reingest1.clockss.org:8082 >
     au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 566 ; 566 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 567 ; 567 ; >
-    au < down ; crawling ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 ; reingest1.clockss.org:8082 >
+    au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 568 ; 568 ; reingest1.clockss.org:8082 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 569 ; 569 ; reingest3.clockss.org:8083 >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 ; >
     au < down ; finished ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 ; >
@@ -2722,7 +2722,7 @@
     au < down ; crawling ; 2008 ; Measurement Science and Technology Volume 19 ; 19 ; > 
     au < down ; crawling ; 2009 ; Measurement Science and Technology Volume 20 ; 20 ; > 
     au < down ; finished ; 2010 ; Measurement Science and Technology Volume 21 ; 21 ; > 
-    au < down ; crawling ; 2011 ; Measurement Science and Technology Volume 22 ; 22 ; > 
+    au < down ; finished ; 2011 ; Measurement Science and Technology Volume 22 ; 22 ; > 
     au < ingNotReady ; exists ; 2012 ; Measurement Science and Technology Volume 23 ; 23 ; > 
     au < down ; exists ; 2013 ; Measurement Science and Technology Volume 24 ; 24 ; > 
     au < down ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 ; > 
@@ -3265,7 +3265,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Physics Education Volume 42 ; 42 ; > 
     au < down ; finished ; 2008 ; Physics Education Volume 43 ; 43 ; >
     au < down ; finished ; 2009 ; Physics Education Volume 44 ; 44 ; > 
-    au < down ; crawling ; 2010 ; Physics Education Volume 45 ; 45 ; > 
+    au < down ; finished ; 2010 ; Physics Education Volume 45 ; 45 ; > 
     au < down ; finished ; 2011 ; Physics Education Volume 46 ; 46 ; > 
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 ; > 
     au < down ; exists ; 2013 ; Physics Education Volume 48 ; 48 ; > 
