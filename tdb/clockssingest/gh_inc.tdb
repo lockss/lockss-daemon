@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = GH, Inc. ;
+    info[contract] = 2013 ;
+    info[tester] = S 
+  >
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+  {
+  
+    title <
+      name =  Science Postprint WARC Content ; 
+      issn = 2187-9834
+    >  
+      
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/science-postprint-released/
+
+    au < testing ; exists ; 2016 ; Science Postprint WARC Content 2016 ; 2016 >
+    
+  }  
+}
