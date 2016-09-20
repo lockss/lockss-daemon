@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/year/%d/", base_url, year</string>
+    <string>"%slockss/year/%d", base_url, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
