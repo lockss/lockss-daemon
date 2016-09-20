@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>53</string>
+    <string>57</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,6 +44,12 @@
     <string>au_name</string>
     <string>"Endocrine Society Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+    </list>
+  </entry>  
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyHtmlHashFilterFactory</string>

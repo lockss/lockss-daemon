@@ -30,21 +30,40 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.taylorandfrancis;
+package org.lockss.plugin.atypon;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
-
-public class TaFHttpResponseHandler implements CacheResultHandler {
-  
-  private static final Logger logger = Logger.getLogger(TaFHttpResponseHandler.class);
+/*
+ * The newest skin of Atypon has problem where it serves a 500 when it seems to mean 404. 
+ * This is particularly a problem for the seemingly programmatically generated links to various
+ * formats of tables (action/downloadTable?doi=) but also shows up occasionally for figures
+ * (action/downloadFigures?). 
+ * In some cases the action/showPopup?citid=citart1 which displays footnote details
+ * So far seen in Taylor & Francis, Edocrine and Mark Allen Group
+ */
+public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
+    
+  // default for Atypon is 
+  //     action/downloadTable
+  //     action/downloadFigures
+  //     action/showPopup
+  //
+  // child can override through getter to extend or change the pattern
+  protected static final Pattern DEFAULT_NON_FATAL_PAT = 
+      Pattern.compile("action/(download(Table|Figures)|showPopup)");
+    
+  private static final Logger logger = Logger.getLogger(BaseAtyponHttpResponseHandler.class);
 
   @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException("Unexpected call to TafHttpResponseHandler.init()");
+    throw new UnsupportedOperationException("Unexpected call to BaseAtyponHttpResponseHandler.init()");
   }
 
   @Override
@@ -60,8 +79,9 @@ public class TaFHttpResponseHandler implements CacheResultHandler {
         // Currently full text html pages for articles that have tables sometimes
         //  generate links to PDF format of tables that return a 500 and should probaby be 404 - keep going
         // returns 500 error
-        logger.debug2("500");
-        if (url.contains("action/downloadTable")) {
+        logger.debug2("500 - pattern is " + getNonFatal500Pattern().toString());
+        Matcher mat = getNonFatal500Pattern().matcher(url);
+        if (mat.find()) {
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         } else {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
@@ -79,5 +99,11 @@ public class TaFHttpResponseHandler implements CacheResultHandler {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
+  
+  // Use a getter so that this can be overridden by a child plugin
+  protected Pattern getNonFatal500Pattern() {    
+    return DEFAULT_NON_FATAL_PAT;   
+  }
+  
   
 }

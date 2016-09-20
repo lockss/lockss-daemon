@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>53</string>
+    <string>57</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -48,6 +48,12 @@
     <string>au_name</string>
     <string>"Mark Allen Group Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+  <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.atypon.markallen.MarkAllenHttpResponseHandler</string>
+    </list>
+  </entry>    
  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.markallen.MarkAllenHtmlHashFilterFactory</string>
