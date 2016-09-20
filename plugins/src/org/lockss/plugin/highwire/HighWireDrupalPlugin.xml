@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -118,10 +118,11 @@
       <string>2,"^https?://%s/content/(by/(year|volume)/?|.*/article-.*)$", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required .toc  -->
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?\.toc$", url_host(base_url)</string>
-      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
-      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions  -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
+            page may also contain roman numerals, dot, & number (iii.2)  -->
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
     </list>
@@ -181,7 +182,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

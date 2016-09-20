@@ -125,6 +125,8 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     //     http://rsbm.royalsocietypublishing.org/content/roybiogmem/61/23.full.pdf
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
+    // found roman_numeral.number in page
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.2");
     // but not to ...
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");

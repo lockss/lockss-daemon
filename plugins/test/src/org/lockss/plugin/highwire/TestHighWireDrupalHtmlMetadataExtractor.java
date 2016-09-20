@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -174,7 +174,8 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
     
     assertEquals(goodFormat, md.get(MetadataField.FIELD_FORMAT));
     assertEquals(goodLanguage, md.get(MetadataField.FIELD_LANGUAGE));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // Publisher value will come from TDB by default not set by plugin
+    // assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,6 +65,8 @@ public class HighWireDrupalArticleIteratorFactory
   // http://msb.embopress.org/content/1/1/2005.0001
   // http://essays.biochemistry.org/content/59/1
   // http://essays.biochemistry.org/content/59/1.full.pdf
+  // http://rimg.geoscienceworld.org/content/81/1/iii.2
+  // http://rimg.geoscienceworld.org/content/81/1/iii.2.full.pdf
   
   // these kinds of urls are not used as part of the AI
   // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalized)
