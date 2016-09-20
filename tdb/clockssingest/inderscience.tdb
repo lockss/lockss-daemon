@@ -117,7 +117,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2015 ; The Botulinum Journal Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2015 ; The Botulinum Journal Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; The Botulinum Journal Volume 4 ; 4 ; >
 
     }
@@ -6443,7 +6443,7 @@
       param[journal_id] = ijpam
 
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Portfolio Analysis and Management Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; >
 
     }
 
@@ -8003,7 +8003,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Technology and Globalisation Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology and Globalisation Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013-2014 ; International Journal of Technology and Globalisation Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2015 ; International Journal of Technology and Globalisation Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2015 ; International Journal of Technology and Globalisation Volume 8 ; 8 ; >
 
     }
 
