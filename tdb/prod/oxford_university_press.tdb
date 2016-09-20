@@ -13089,7 +13089,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     # expected to be online on 6 Jan 2016
 
-    au < expected ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 >
+    au < exists ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 >
 
   }
 
