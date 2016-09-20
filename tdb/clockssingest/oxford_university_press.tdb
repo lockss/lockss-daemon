@@ -22619,7 +22619,7 @@
     param[base_url] = http://socrel.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; frozen ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
 
     }
 
@@ -22673,7 +22673,7 @@
     au < manifest ; exists ; 2006 ; Sociology of Religion Volume 67 ; 67 ; >
     au < manifest ; exists ; 2007 ; Sociology of Religion Volume 68 ; 68 ; >
     au < manifest ; exists ; 2008 ; Sociology of Religion Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
+    au < wanted ; exists ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < finished ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < finished ; finished ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
     au < finished ; finished ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
