@@ -22,7 +22,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/american-journal-of-archaeology-open-access-released/
 
-    au < testing ; exists ; 2016 ; American Journal of Archaeology WARC Content 2016 ; 2016 >     
+    au < readySource ; crawling ; 2016 ; American Journal of Archaeology WARC Content 2016 ; 2016 >     
   }
 
 }
