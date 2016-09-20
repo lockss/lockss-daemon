@@ -1805,7 +1805,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; down ; frozen ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; zapped ; frozen ; 1968 ; Journal of Applied Physiology Volume 25[*] ; 25 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePlugin ; doNotProcess ; doNotProcess ; 1968 ; Journal of Applied Physiology Volume 25[*] ; 25 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -1895,115 +1895,115 @@
 
     {
 
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1950-1951 ; Journal of Applied Physiology Volume 3 ; 3 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1951-1952 ; Journal of Applied Physiology Volume 4 ; 4 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1952-1953 ; Journal of Applied Physiology Volume 5 ; 5 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1953-1954 ; Journal of Applied Physiology Volume 6 ; 6 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1954-1955 ; Journal of Applied Physiology Volume 7 ; 7 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1955-1956 ; Journal of Applied Physiology Volume 8 ; 8 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1956 ; Journal of Applied Physiology Volume 9 ; 9 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1963 ; Journal of Applied Physiology Volume 18 ; 18 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1964 ; Journal of Applied Physiology Volume 19 ; 19 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1965 ; Journal of Applied Physiology Volume 20 ; 20 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1966 ; Journal of Applied Physiology Volume 21 ; 21 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1950-1951 ; Journal of Applied Physiology Volume 3 ; 3 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1951-1952 ; Journal of Applied Physiology Volume 4 ; 4 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1952-1953 ; Journal of Applied Physiology Volume 5 ; 5 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1953-1954 ; Journal of Applied Physiology Volume 6 ; 6 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1954-1955 ; Journal of Applied Physiology Volume 7 ; 7 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1955-1956 ; Journal of Applied Physiology Volume 8 ; 8 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1956 ; Journal of Applied Physiology Volume 9 ; 9 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1963 ; Journal of Applied Physiology Volume 18 ; 18 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1964 ; Journal of Applied Physiology Volume 19 ; 19 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1965 ; Journal of Applied Physiology Volume 20 ; 20 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1966 ; Journal of Applied Physiology Volume 21 ; 21 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1970 ; Journal of Applied Physiology Volume 29 ; 29 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1971 ; Journal of Applied Physiology Volume 30 ; 30 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1971 ; Journal of Applied Physiology Volume 31 ; 31 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1973 ; Journal of Applied Physiology Volume 35 ; 35 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1974 ; Journal of Applied Physiology Volume 36 ; 36 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1974 ; Journal of Applied Physiology Volume 37 ; 37 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1975 ; Journal of Applied Physiology Volume 38 ; 38 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1975 ; Journal of Applied Physiology Volume 39 ; 39 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1976 ; Journal of Applied Physiology Volume 40 ; 40 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1976 ; Journal of Applied Physiology Volume 41 ; 41 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; Journal of Applied Physiology Volume 42 ; 42 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; Journal of Applied Physiology Volume 43 ; 43 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1978 ; Journal of Applied Physiology Volume 44 ; 44 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1978 ; Journal of Applied Physiology Volume 45 ; 45 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1979 ; Journal of Applied Physiology Volume 46 ; 46 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1979 ; Journal of Applied Physiology Volume 47 ; 47 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1980 ; Journal of Applied Physiology Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1980 ; Journal of Applied Physiology Volume 49 ; 49 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1981 ; Journal of Applied Physiology Volume 50 ; 50 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1981 ; Journal of Applied Physiology Volume 51 ; 51 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1982 ; Journal of Applied Physiology Volume 52 ; 52 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1982 ; Journal of Applied Physiology Volume 53 ; 53 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1983 ; Journal of Applied Physiology Volume 54 ; 54 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1983 ; Journal of Applied Physiology Volume 55 ; 55 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1996 ; Journal of Applied Physiology Volume 80 ; 80 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1996 ; Journal of Applied Physiology Volume 81 ; 81 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1997 ; Journal of Applied Physiology Volume 82 ; 82 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1997 ; Journal of Applied Physiology Volume 83 ; 83 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1998 ; Journal of Applied Physiology Volume 84 ; 84 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1998 ; Journal of Applied Physiology Volume 85 ; 85 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1999 ; Journal of Applied Physiology Volume 86 ; 86 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000 ; Journal of Applied Physiology Volume 88 ; 88 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000 ; Journal of Applied Physiology Volume 89 ; 89 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2001 ; Journal of Applied Physiology Volume 90 ; 90 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2001 ; Journal of Applied Physiology Volume 91 ; 91 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Journal of Applied Physiology Volume 92 ; 92 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Journal of Applied Physiology Volume 93 ; 93 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003 ; Journal of Applied Physiology Volume 94 ; 94 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003 ; Journal of Applied Physiology Volume 95 ; 95 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004 ; Journal of Applied Physiology Volume 96 ; 96 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004 ; Journal of Applied Physiology Volume 97 ; 97 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 98 ; 98 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 99 ; 99 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 100 ; 100 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 101 ; 101 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007 ; Journal of Applied Physiology Volume 102 ; 102 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007 ; Journal of Applied Physiology Volume 103 ; 103 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1970 ; Journal of Applied Physiology Volume 29 ; 29 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1971 ; Journal of Applied Physiology Volume 30 ; 30 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1971 ; Journal of Applied Physiology Volume 31 ; 31 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1973 ; Journal of Applied Physiology Volume 35 ; 35 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1974 ; Journal of Applied Physiology Volume 36 ; 36 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1974 ; Journal of Applied Physiology Volume 37 ; 37 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1975 ; Journal of Applied Physiology Volume 38 ; 38 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1975 ; Journal of Applied Physiology Volume 39 ; 39 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1976 ; Journal of Applied Physiology Volume 40 ; 40 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1976 ; Journal of Applied Physiology Volume 41 ; 41 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; Journal of Applied Physiology Volume 42 ; 42 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1977 ; Journal of Applied Physiology Volume 43 ; 43 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1978 ; Journal of Applied Physiology Volume 44 ; 44 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1978 ; Journal of Applied Physiology Volume 45 ; 45 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1979 ; Journal of Applied Physiology Volume 46 ; 46 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1979 ; Journal of Applied Physiology Volume 47 ; 47 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1980 ; Journal of Applied Physiology Volume 48 ; 48 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1980 ; Journal of Applied Physiology Volume 49 ; 49 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1981 ; Journal of Applied Physiology Volume 50 ; 50 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1981 ; Journal of Applied Physiology Volume 51 ; 51 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1982 ; Journal of Applied Physiology Volume 52 ; 52 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1982 ; Journal of Applied Physiology Volume 53 ; 53 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1983 ; Journal of Applied Physiology Volume 54 ; 54 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1983 ; Journal of Applied Physiology Volume 55 ; 55 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1996 ; Journal of Applied Physiology Volume 80 ; 80 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1996 ; Journal of Applied Physiology Volume 81 ; 81 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1997 ; Journal of Applied Physiology Volume 82 ; 82 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1997 ; Journal of Applied Physiology Volume 83 ; 83 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1998 ; Journal of Applied Physiology Volume 84 ; 84 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1998 ; Journal of Applied Physiology Volume 85 ; 85 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Journal of Applied Physiology Volume 86 ; 86 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Journal of Applied Physiology Volume 88 ; 88 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Journal of Applied Physiology Volume 89 ; 89 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Journal of Applied Physiology Volume 90 ; 90 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Journal of Applied Physiology Volume 91 ; 91 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Journal of Applied Physiology Volume 92 ; 92 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Journal of Applied Physiology Volume 93 ; 93 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Journal of Applied Physiology Volume 94 ; 94 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Journal of Applied Physiology Volume 95 ; 95 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Journal of Applied Physiology Volume 96 ; 96 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Journal of Applied Physiology Volume 97 ; 97 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 98 ; 98 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Journal of Applied Physiology Volume 99 ; 99 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 100 ; 100 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Journal of Applied Physiology Volume 101 ; 101 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Journal of Applied Physiology Volume 102 ; 102 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Journal of Applied Physiology Volume 103 ; 103 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
@@ -2330,49 +2330,49 @@
 
     {
 
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1999 ; Physiological Genomics Volume 1 ; 1 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 2 ; 2 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 3 ; 3 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000-2001 ; Physiological Genomics Volume 4 ; 4 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 5 ; 5 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 6 ; 6 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 7 ; 7 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 8 ; 8 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 9 ; 9 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 10 ; 10 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 11 ; 11 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2002-2003 ; Physiological Genomics Volume 12 ; 12 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 13 ; 13 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 14 ; 14 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 15 ; 15 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2003-2004 ; Physiological Genomics Volume 16 ; 16 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 17 ; 17 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 18 ; 18 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 19 ; 19 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2004-2005 ; Physiological Genomics Volume 20 ; 20 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 21 ; 21 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 22 ; 22 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 23 ; 23 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2005-2006 ; Physiological Genomics Volume 24 ; 24 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 25 ; 25 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 26 ; 26 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2006-2007 ; Physiological Genomics Volume 28 ; 28 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 29 ; 29 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 30 ; 30 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 31 ; 31 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 33 ; 33 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 34 ; 34 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 35 ; 35 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 37 ; 37 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 38 ; 38 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 39 ; 39 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 41 ; 41 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42 ; 42 ; >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 1999 ; Physiological Genomics Volume 1 ; 1 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 2 ; 2 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 3 ; 3 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2000-2001 ; Physiological Genomics Volume 4 ; 4 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 5 ; 5 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 6 ; 6 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2001 ; Physiological Genomics Volume 7 ; 7 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 8 ; 8 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 9 ; 9 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 10 ; 10 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002 ; Physiological Genomics Volume 11 ; 11 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2002-2003 ; Physiological Genomics Volume 12 ; 12 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 13 ; 13 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 14 ; 14 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003 ; Physiological Genomics Volume 15 ; 15 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2003-2004 ; Physiological Genomics Volume 16 ; 16 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 17 ; 17 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 18 ; 18 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004 ; Physiological Genomics Volume 19 ; 19 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2004-2005 ; Physiological Genomics Volume 20 ; 20 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 21 ; 21 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 22 ; 22 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; Physiological Genomics Volume 23 ; 23 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2005-2006 ; Physiological Genomics Volume 24 ; 24 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 25 ; 25 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 26 ; 26 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; Physiological Genomics Volume 27 ; 27 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2006-2007 ; Physiological Genomics Volume 28 ; 28 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 29 ; 29 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 30 ; 30 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; Physiological Genomics Volume 31 ; 31 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 33 ; 33 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 34 ; 34 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Physiological Genomics Volume 35 ; 35 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 37 ; 37 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 38 ; 38 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Physiological Genomics Volume 39 ; 39 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 41 ; 41 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42 ; 42 ; >
+      au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; Physiological Genomics Volume 45 ; 45 ; reingest1.clockss.org:8082 >
@@ -2419,11 +2419,11 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 1938 ; Physiological Reviews Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1939 ; Physiological Reviews Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1940 ; Physiological Reviews Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; zapped ; frozen ; 1941 ; Physiological Reviews Volume 21[*] ; 21 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePlugin ; doNotProcess ; doNotProcess ; 1941 ; Physiological Reviews Volume 21[*] ; 21 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1942 ; Physiological Reviews Volume 22 ; 22 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1943 ; Physiological Reviews Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1944 ; Physiological Reviews Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; zapped ; frozen ; 1945 ; Physiological Reviews Volume 25[*] ; 25 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePlugin ; doNotProcess ; doNotProcess ; 1945 ; Physiological Reviews Volume 25[*] ; 25 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1946 ; Physiological Reviews Volume 26 ; 26 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1947 ; Physiological Reviews Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1948 ; Physiological Reviews Volume 28 ; 28 ; reingest1.clockss.org:8082 >
