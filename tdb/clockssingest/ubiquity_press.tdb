@@ -226,7 +226,7 @@
       param[base_url] = http://www.rurallandscapesjournal.com/
 
       au < finished ; manifest ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; >
+      au < finished ; manifest ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
 
   }
@@ -512,7 +512,7 @@
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; >
+      au < finished ; manifest ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
@@ -939,7 +939,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; >
+      au < finished ; manifest ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
 
   }
