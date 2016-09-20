@@ -458,7 +458,7 @@
     au < finished ; crawling ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 ; >
     au < finished ; finished ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 ; >
     au < deepCrawl ; exists ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 ; >
-    au < testing ; exists ; 2016 ; Cancer Gene Therapy Volume 23 ; 2016 ; 23 ; >
+    au < ready ; exists ; 2016 ; Cancer Gene Therapy Volume 23 ; 2016 ; 23 ; >
 
   }
 
@@ -1062,8 +1062,8 @@
     au < finished ; finished ; 2014 ; Heredity Volume 112 ; 2014 ; 112 ; >
     au < finished ; finished ; 2014 ; Heredity Volume 113 ; 2014 ; 113 ; >
     au < deepCrawl ; exists ; 2015 ; Heredity Volume 114 ; 2015 ; 114 ; >
-    au < testing ; exists ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; >
-    au < testing ; exists ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; >
+    au < ready ; exists ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; >
+    au < ready ; exists ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; >
     au < crawling ; exists ; 2016 ; Heredity Volume 117 ; 2016 ; 117 ; >
 
   }
@@ -1231,7 +1231,7 @@
     au < finished ; crawling ; 2013 ; International Journal of Impotence Research Volume 25 ; 2013 ; 25 ; >
     au < finished ; finished ; 2014 ; International Journal of Impotence Research Volume 26 ; 2014 ; 26 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Impotence Research Volume 27 ; 2015 ; 27 ; >
-    au < testing ; exists ; 2016 ; International Journal of Impotence Research Volume 28 ; 2016 ; 28 ; >
+    au < ready ; exists ; 2016 ; International Journal of Impotence Research Volume 28 ; 2016 ; 28 ; >
 
   }
 
@@ -2018,7 +2018,7 @@
     au < crawling ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; >
-    au < testing ; exists ; 2016 ; Molecular Therapy - Nucleic Acids Volume 5 ; 2016 ; 5 ; >
+    au < ready ; exists ; 2016 ; Molecular Therapy - Nucleic Acids Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -2432,7 +2432,7 @@
     au < crawling ; exists ; 2016 ; Nature Volume 534 ; 2016 ; 534 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
-    au < testing ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
+    au < ready ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
     au < expected ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
     au < expected ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
     au < expected ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
