@@ -472,15 +472,15 @@
     comment[1] = History and Computing from 1994 to 2002
     comment[3] = AU not added to ingest machines, but added to production machines in error.
     
-    au < crawling ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 ; >
-    au < crawling ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 ; >
-    au < crawling ; finished ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
-    au < crawling ; crawling ; 1997 ; History and Computing Volume 9 (1997) ; 9 ; >
+    au < crawling ; down ; 1994 ; History and Computing Volume 6 (1994) ; 6 ; >
+    au < crawling ; down ; 1995 ; History and Computing Volume 7 (1995) ; 7 ; >
+    au < crawling ; down ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
+    au < crawling ; down ; 1997 ; History and Computing Volume 9 (1997) ; 9 ; >
     au < doNotProcess ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 ; > # no substance
-    au < crawling ; finished ; 1999 ; History and Computing Volume 11 (1999) ; 11 ; >
-    au < crawling ; finished ; 2000 ; History and Computing Volume 12 (2000) ; 12 ; >
-    au < crawling ; finished ; 2001 ; History and Computing Volume 13 (2001) ; 13 ; >
-    au < crawling ; crawling ; 2002 ; History and Computing Volume 14 (2002) ; 14 ; >
+    au < crawling ; down ; 1999 ; History and Computing Volume 11 (1999) ; 11 ; >
+    au < crawling ; down ; 2000 ; History and Computing Volume 12 (2000) ; 12 ; >
+    au < crawling ; down ; 2001 ; History and Computing Volume 13 (2001) ; 13 ; >
+    au < crawling ; down ; 2002 ; History and Computing Volume 14 (2002) ; 14 ; >
     
     }
 
@@ -508,7 +508,7 @@
     au < finished ; finished ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 ; >
     au < finished ; finished ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 ; >
     au < finished ; finished ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 ; >
-    au < crawling ; finished ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 ; >
+    au < crawling ; down ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 ; >
     au < finished ; crawling ; 2014 ; International Journal of Humanities and Arts Computing Volume 8 (2014) ; 8 ; >
     au < finished ; crawling ; 2015 ; International Journal of Humanities and Arts Computing Volume 9 (2015) ; 9 ; >
     au < crawling ; exists ; 2016 ; International Journal of Humanities and Arts Computing Volume 10 (2016) ; 10 ; >
