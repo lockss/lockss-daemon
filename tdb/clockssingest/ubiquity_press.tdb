@@ -80,7 +80,7 @@
       au < crawling ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
 
@@ -124,7 +124,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://poetry.openlibhums.org/
 
-      au < finished ; manifest ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
 
   }
@@ -139,7 +139,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://olh.openlibhums.org/
 
-      au < finished ; manifest ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
@@ -159,7 +159,7 @@
       au < crawling ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
 
@@ -176,8 +176,8 @@
       param[base_url] = http://www.comicsgrid.com/
 
       au < crawling ; exists ; 2013 ; 1 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
 
   }
@@ -210,7 +210,7 @@
       au < crawling ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
 
   }
@@ -225,8 +225,8 @@
       comment[publisher] = Stockholm University Press
       param[base_url] = http://www.rurallandscapesjournal.com/
 
-      au < finished ; manifest ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
 
   }
@@ -273,7 +273,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Ancient Asia Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Ancient Asia Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Ancient Asia Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 7 ; Ancient Asia Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 8 ; Ancient Asia Volume 2016 ; 2016 ; >
 
   }
@@ -297,7 +297,7 @@
       au < doNotProcess ; exists ; 2012 ; 7 ; Archaeology International Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 8 ; Archaeology International Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 9 ; Archaeology International Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 10 ; Archaeology International Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 10 ; Archaeology International Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; >
 
   }
@@ -368,7 +368,7 @@
       au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
 
   }
@@ -409,8 +409,8 @@
       au < crawling ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
 
   }
@@ -425,7 +425,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.glocality.eu/
 
-      au < finished ; manifest ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
 
   }
@@ -441,7 +441,7 @@
       param[base_url] = http://www.govafricajournal.org/
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
 
   }
@@ -512,7 +512,7 @@
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
@@ -546,7 +546,7 @@
       au < doNotProcess ; exists ; 2012 ; 17 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 18 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 19 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 20 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 21 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
 
   }
@@ -567,7 +567,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 7 ; Journal of European Psychology Students Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 8 ; Journal of European Psychology Students Volume 2016 ; 2016 ; >
 
   }
@@ -622,8 +622,8 @@
       au < crawling ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
   }
@@ -641,7 +641,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
 
   }
@@ -657,8 +657,8 @@
       param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < finished ; manifest ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
   }
@@ -673,7 +673,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
-      au < finished ; manifest ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
 
   }
@@ -690,7 +690,7 @@
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
 
   }
@@ -722,7 +722,7 @@
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
 
   }
@@ -738,7 +738,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://jpl.letras.ulisboa.pt/
 
-      au < finished ; manifest ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
 
   }
@@ -757,7 +757,7 @@
       au < crawling ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2014 ; 5 ; Journal of the Belgian Society of Radiology Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 6 ; Journal of the Belgian Society of Radiology Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; 7 ; Journal of the Belgian Society of Radiology Volume 2016 ; 2016 ; >
 
@@ -802,7 +802,7 @@
       param[base_url] = http://openbioresources.metajnl.com/
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
 
   }
@@ -817,7 +817,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.openquaternary.com/
 
-      au < finished ; manifest ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
 
   }
@@ -857,7 +857,7 @@
       au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
 
   }
@@ -878,7 +878,7 @@
       au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; >
 
   }
@@ -903,7 +903,7 @@
       au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; >
 
   }
@@ -921,7 +921,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
 
   }
@@ -939,7 +939,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; >
 
   }
@@ -959,7 +959,7 @@
       au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; >
 
   }
@@ -988,8 +988,8 @@
 
       au < crawling ; exists ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; >
 
   }
@@ -1066,8 +1066,8 @@
       au < crawling ; exists ; 2011 ; 10 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 11 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 12 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
-      au < finished ; manifest ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 13 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
+      au < finished ; crawling ; 2015 ; 14 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 15 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
 
   }
@@ -1083,7 +1083,7 @@
       param[base_url] = http://www.westminsterpapers.org/
 
       au < exists ; exists ; 2014 ; 1 ; Westminster Papers in Communication and Culture Volume 2014 ; 2014 ; >
-      au < finished ; manifest ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; 2 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2016 ; 3 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; >
 
   }

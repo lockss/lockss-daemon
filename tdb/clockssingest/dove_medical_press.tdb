@@ -277,7 +277,7 @@
     au < doNotProcess ; exists ; 2011 ; Patient Preference and Adherence Volume 5 ; 5 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Patient Preference and Adherence Volume 6 ; 6 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Patient Preference and Adherence Volume 7 ; 7 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Patient Preference and Adherence Volume 8 ; 8 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Patient Preference and Adherence Volume 8 ; 8 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Patient Preference and Adherence Volume 9 ; 9 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Patient Preference and Adherence Volume 10 ; 10 ; 2016 ; >
     
@@ -341,7 +341,7 @@
     au < doNotProcess ; exists ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 4 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Advances and Applications in Bioinformatics and Chemistry Volume 6 ; 6 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; >
     
@@ -1111,7 +1111,7 @@
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Sports Medicine Volume 2 ; 2 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Open Access Journal of Sports Medicine Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Open Access Journal of Sports Medicine Volume 4 ; 4 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Open Access Journal of Sports Medicine Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Open Access Journal of Sports Medicine Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Open Access Journal of Sports Medicine Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Journal of Sports Medicine Volume 7 ; 7 ; 2016 ; >
     
@@ -1270,7 +1270,7 @@
     au < doNotProcess ; exists ; 2011 ; Open Access Journal of Contraception Volume 2 ; 2 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Open Access Journal of Contraception Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Open Access Journal of Contraception Volume 4 ; 4 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Open Access Journal of Contraception Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Open Access Journal of Contraception Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Open Access Journal of Contraception Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Open Access Journal of Contraception Volume 7 ; 7 ; 2016 ; >
     
@@ -1330,7 +1330,7 @@
     au < doNotProcess ; exists ; 2011 ; Eye and Brain Volume 3 ; 3 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Eye and Brain Volume 4 ; 4 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Eye and Brain Volume 5 ; 5 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Eye and Brain Volume 6 ; 6 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Eye and Brain Volume 6 ; 6 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Eye and Brain Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Eye and Brain Volume 8 ; 8 ; 2016 ; >
     
@@ -1530,7 +1530,7 @@
     au < doNotProcess ; exists ; 2011 ; Adolescent Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Adolescent Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Adolescent Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Adolescent Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Adolescent Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Adolescent Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Adolescent Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; >
     
@@ -1720,7 +1720,7 @@
     au < doNotProcess ; exists ; 2011 ; Degenerative Neurological and Neuromuscular Disease Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Degenerative Neurological and Neuromuscular Disease Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Degenerative Neurological and Neuromuscular Disease Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Degenerative Neurological and Neuromuscular Disease Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Degenerative Neurological and Neuromuscular Disease Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Degenerative Neurological and Neuromuscular Disease Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Degenerative Neurological and Neuromuscular Disease Volume 6 ; 6 ; 2016 ; >
    
@@ -1738,7 +1738,7 @@
     au < doNotProcess ; exists ; 2011 ; Advances in Genomics and Genetics Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Advances in Genomics and Genetics Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Advances in Genomics and Genetics Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Advances in Genomics and Genetics Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Advances in Genomics and Genetics Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Genomics and Genetics Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Genomics and Genetics Volume 6 ; 6 ; 2016 ; >
    
@@ -1774,7 +1774,7 @@
     au < doNotProcess ; exists ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Gastrointestinal Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Gastrointestinal Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Gastrointestinal Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Gastrointestinal Cancer: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Gastrointestinal Cancer: Targets and Therapy Volume 6 ; 6 ; 2016 ; >
    
@@ -1793,7 +1793,7 @@
     au < doNotProcess ; exists ; 2011 ; Pediatric Health, Medicine and Therapeutics Volume 2 ; 2 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Pediatric Health, Medicine and Therapeutics Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Pediatric Health, Medicine and Therapeutics Volume 4 ; 4 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Pediatric Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Pediatric Health, Medicine and Therapeutics Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pediatric Health, Medicine and Therapeutics Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pediatric Health, Medicine and Therapeutics Volume 7 ; 7 ; 2016 ; >
     
@@ -1829,7 +1829,7 @@
     au < doNotProcess ; exists ; 2011 ; Clinical Oncology in Adolescents and Young Adults Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Clinical Oncology in Adolescents and Young Adults Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Clinical Oncology in Adolescents and Young Adults Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Clinical Oncology in Adolescents and Young Adults Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Clinical Oncology in Adolescents and Young Adults Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Clinical Oncology in Adolescents and Young Adults Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Clinical Oncology in Adolescents and Young Adults Volume 6 ; 6 ; 2016 ; >
    
@@ -1847,7 +1847,7 @@
     au < doNotProcess ; exists ; 2011 ; Botanics: Targets and Therapy Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Botanics: Targets and Therapy Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Botanics: Targets and Therapy Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Botanics: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Botanics: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Botanics: Targets and Therapy Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Botanics: Targets and Therapy Volume 6 ; 6 ; 2016 ; >
    
@@ -1956,7 +1956,7 @@
     au < doNotProcess ; exists ; 2011 ; Medicolegal and Bioethics Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Medicolegal and Bioethics Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Medicolegal and Bioethics Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Medicolegal and Bioethics Volume 4 ; 4 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Medicolegal and Bioethics Volume 4 ; 4 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Medicolegal and Bioethics Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Medicolegal and Bioethics Volume 6 ; 6 ; 2016 ; >
    
@@ -1992,7 +1992,7 @@
     au < doNotProcess ; exists ; 2011 ; Research and Reports in Forensic Medical Science Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Research and Reports in Forensic Medical Science Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Research and Reports in Forensic Medical Science Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Research and Reports in Forensic Medical Science Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Research and Reports in Forensic Medical Science Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Research and Reports in Forensic Medical Science Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Research and Reports in Forensic Medical Science Volume 6 ; 6 ; 2016 ; >
    
@@ -2117,7 +2117,7 @@
     au < doNotProcess ; exists ; 2011 ; Psoriasis: Targets and Therapy Volume 1 ; 1 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Psoriasis: Targets and Therapy Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Psoriasis: Targets and Therapy Volume 3 ; 3 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Psoriasis: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Psoriasis: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Psoriasis: Targets and Therapy Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Psoriasis: Targets and Therapy Volume 6 ; 6 ; 2016 ; >
    
@@ -2291,7 +2291,7 @@
 
     au < crawling ; exists ; 2012 ; ImmunoTargets and Therapy Volume 1 ; 1 ; 2012 ; >
     au < crawling ; exists ; 2013 ; ImmunoTargets and Therapy Volume 2 ; 2 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; ImmunoTargets and Therapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; ImmunoTargets and Therapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; ImmunoTargets and Therapy Volume 4 ; 4 ; 2015 ; >
     au < crawling ; exists ; 2016 ; ImmunoTargets and Therapy Volume 5 ; 5 ; 2016 ; >
    
@@ -2324,7 +2324,7 @@
 
     au < crawling ; exists ; 2012 ; Oncolytic Virotherapy Volume 1 ; 1 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Oncolytic Virotherapy Volume 2 ; 2 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Oncolytic Virotherapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Oncolytic Virotherapy Volume 3 ; 3 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Oncolytic Virotherapy Volume 4 ; 4 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Oncolytic Virotherapy Volume 5 ; 5 ; 2016 ; >
    
@@ -2358,7 +2358,7 @@
 
     au < crawling ; exists ; 2012 ; Journal of Biorepository Science for Applied Medicine Volume 1 ; 1 ; 2012 ; >
     au < doesNotExist ; doesNotExist ; 2013 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Biorepository Science for Applied Medicine Volume 4 ; 4 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2016 ; >
    
@@ -2390,7 +2390,7 @@
     param[journal_id] = 145
 
     au < crawling ; exists ; 2013 ; Research and Reports in Focused Ultrasound Volume 1 ; 1 ; 2013 ; >
-    au < finished ; manifest ; 2014 ; Research and Reports in Focused Ultrasound Volume 2 ; 2 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Research and Reports in Focused Ultrasound Volume 2 ; 2 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Research and Reports in Focused Ultrasound Volume 3 ; 3 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Research and Reports in Focused Ultrasound Volume 4 ; 4 ; 2016 ; >
    
@@ -2487,7 +2487,7 @@
 
     au < crawling ; exists ; 2013 ; Journal of Neurorestoratology Volume 1 ; 1 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Neurorestoratology Volume 2 ; 2 ; 2014 ; >
-    au < finished ; manifest ; 2015 ; Journal of Neurorestoratology Volume 3 ; 3 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Neurorestoratology Volume 3 ; 3 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Neurorestoratology Volume 4 ; 4 ; 2016 ; >
    
   }
@@ -2531,7 +2531,7 @@
     
     param[journal_id] = 154
 
-    au < finished ; manifest ; 2014 ; Robotic Surgery: Research and Reviews Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Robotic Surgery: Research and Reviews Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Robotic Surgery: Research and Reviews Volume 2 ; 2 ; 2015 ; >
     au < expected ; exists ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; >
 
@@ -2546,7 +2546,7 @@
     
     param[journal_id] = 155
 
-    au < finished ; manifest ; 2014 ; Ambulatory Anesthesia Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Ambulatory Anesthesia Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Ambulatory Anesthesia Volume 2 ; 2 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Ambulatory Anesthesia Volume 3 ; 3 ; 2016 ; >
    

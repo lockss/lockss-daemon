@@ -116,7 +116,7 @@
     au < crawling ; exists ; 2011 ; Annals of African Medicine Volume 10 ; 2011 ; 10 ; >
     au < crawling ; exists ; 2012 ; Annals of African Medicine Volume 11 ; 2012 ; 11 ; >
     au < crawling ; exists ; 2013 ; Annals of African Medicine Volume 12 ; 2013 ; 12 ; >
-    au < finished ; manifest ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Annals of African Medicine Volume 14 ; 2015 ; 14 ; > #login page 
     au < crawling ; exists ; 2016 ; Annals of African Medicine Volume 15 ; 2016 ; 15 ; >
 
@@ -219,7 +219,7 @@
     au < finished ; finished ; 2011 ; Annals of Nigerian Medicine Volume 5 ; 2011 ; 5 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 ; >
     au < finished ; finished ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 ; >
 
@@ -440,7 +440,7 @@
     au < crawling ; exists ; 2011 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 32 ; 2011 ; 32 ; >
     au < crawling ; exists ; 2012 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 33 ; 2012 ; 33 ; >
     au < notReady ; exists ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 ; >
-    au < finished ; manifest ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 36 ; 2015 ; 36 ; >
     au < expected ; exists ; 2016 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 37 ; 2016 ; 37 ; >
 
@@ -589,7 +589,7 @@
     au < crawling ; exists ; 2011 ; Heart Views Volume 12 ; 2011 ; 12 ; >
     au < crawling ; exists ; 2012 ; Heart Views Volume 13 ; 2012 ; 13 ; >
     au < crawling ; exists ; 2013 ; Heart Views Volume 14 ; 2013 ; 14 ; >
-    au < finished ; manifest ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Heart Views Volume 16 ; 2015 ; 16 ; >
     au < crawling ; exists ; 2016 ; Heart Views Volume 17 ; 2016 ; 17 ; >
 
@@ -2828,7 +2828,7 @@
     au < crawling ; exists ; 2011 ; Journal of Laryngology and Voice Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2012 ; Journal of Laryngology and Voice Volume 2 ; 2012 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 ; >
-    au < finished ; manifest ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; >
     au < expected ; exists ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; >
 
@@ -4005,7 +4005,7 @@
     au < crawling ; exists ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 ; >
     au < crawling ; exists ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 ; >
     au < crawling ; exists ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 ; >
-    au < finished ; manifest ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 ; >
     au < expected ; exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 ; >
 
@@ -4025,7 +4025,7 @@
     au < crawling ; exists ; 2011 ; Tropical Parasitology Volume 1 ; 2011 ; 1 ; >
     au < crawling ; exists ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 ; >
-    au < finished ; manifest ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Tropical Parasitology Volume 5 ; 2015 ; 5 ; >
     au < crawling ; exists ; 2016 ; Tropical Parasitology Volume 6 ; 2016 ; 6 ; >
 

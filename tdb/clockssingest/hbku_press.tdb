@@ -139,7 +139,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = eel
 
-    au < finished ; manifest ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Engineering Education Letters Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -224,8 +224,8 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = messa
 
-    au < finished ; manifest ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Georgetown University-Qatar: Middle Eastern Studies Student Association Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 

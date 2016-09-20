@@ -61,7 +61,7 @@
     au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
-    au < finished ; manifest ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 > #malformed url. 403 error
+    au < finished ; crawling ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
 
   }
@@ -89,7 +89,7 @@
     au < doNotProcess ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 ; > #no issues on manifest page.
     au < finished ; finished ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
 
 
@@ -146,7 +146,7 @@
     au < doNotProcess ; exists ; 2012 ; CSA News Volume 57 ; 57 ; > # no issues on manifest page
     au < finished ; crawling ; 2013 ; CSA News Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; CSA News Volume 59 ; 59 ; >
-    au < finished ; manifest ; 2015 ; CSA News Volume 60 ; 60 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; CSA News Volume 60 ; 60 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
 
   }
@@ -175,7 +175,7 @@
     au < finished ; finished ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
 
 
@@ -201,7 +201,7 @@
     au < finished ; finished ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; >
 
   }
@@ -246,7 +246,7 @@
     au < finished ; finished ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
-    au < finished ; manifest ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
 
   }
@@ -297,7 +297,7 @@
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < finished ; finished ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Soil Horizons Volume 56 ; 56 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Soil Horizons Volume 56 ; 56 ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2016 ; Soil Horizons Volume 57 ; 57 ; > #content not online
 
   }
@@ -353,8 +353,8 @@
     au < finished ; finished ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < finished ; finished ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
 
   }
