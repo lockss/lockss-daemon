@@ -131,7 +131,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
     au < rsp.ClockssRSPDrupalPlugin ; exists ; exists ; 2014 ; Interface Focus Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2016 ; Interface Focus Volume 6 ; 6 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2016 ; Interface Focus Volume 6 ; 6 ; >
 
   }
   
@@ -263,7 +263,7 @@
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
     au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2016 ; Open Biology Volume 6 ; 6 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2016 ; Open Biology Volume 6 ; 6 ; >
     
   }
 
@@ -1283,7 +1283,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 ; >
     au < rsp.ClockssRSPDrupalPlugin ; exists ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; crawling ; exists ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
 
   }
 
