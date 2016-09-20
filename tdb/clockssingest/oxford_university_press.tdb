@@ -4535,7 +4535,7 @@
     au < finished ; crawling ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
     au < frozen ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < frozen ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
-    au < finished ; crawling ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Clinical Infectious Diseases Volume 61 ; 61 ; reingest1.clockss.org:8082 >
@@ -9573,7 +9573,7 @@
     au < finished ; finished ; 2011 ; Industrial Law Journal Volume 40 ; 40 ; >
     au < finished ; finished ; 2012 ; Industrial Law Journal Volume 41 ; 41 ; >
     au < finished ; finished ; 2013 ; Industrial Law Journal Volume 42 ; 42 ; >
-    au < finished ; crawling ; 2014 ; Industrial Law Journal Volume 43 ; 43 ; >
+    au < finished ; finished ; 2014 ; Industrial Law Journal Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2015 ; Industrial Law Journal Volume 44 ; 44 ; >
     au < manifest ; exists ; 2016 ; Industrial Law Journal Volume 45 ; 45 ; >
 
@@ -12503,7 +12503,7 @@
     au < finished ; crawling ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
     au < frozen ; exists ; 2013 ; Journal of Experimental Botany Volume 64 ; 64 ; >
-    au < finished ; crawling ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
     au < manifest ; exists ; 2016 ; Journal of Experimental Botany Volume 67 ; 67 ; >
 
@@ -13655,7 +13655,7 @@
     au < finished ; frozen ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
     au < finished ; finished ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
     au < finished ; crawling ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Law, Economics, and Organization Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; Journal of Law, Economics, and Organization Volume 32 ; 32 ; >
 
@@ -18615,7 +18615,7 @@
     au < finished ; finished ; 2011 ; Occupational Medicine Volume 61 ; 61 ; >
     au < finished ; finished ; 2012 ; Occupational Medicine Volume 62 ; 62 ; >
     au < finished ; finished ; 2013 ; Occupational Medicine Volume 63 ; 63 ; >
-    au < finished ; crawling ; 2014 ; Occupational Medicine Volume 64 ; 64 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Occupational Medicine Volume 64 ; 64 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
     au < manifest ; exists ; 2016 ; Occupational Medicine Volume 66 ; 66 ; >
 
@@ -18634,7 +18634,7 @@
     param[base_url] = http://ofid.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < finished ; crawling ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
 
@@ -19724,7 +19724,7 @@
     au < finished ; finished ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
     au < frozen ; exists ; 2012 ; Plant and Cell Physiology Volume 53 ; 53 ; >
     au < frozen ; exists ; 2013 ; Plant and Cell Physiology Volume 54 ; 54 ; >
-    au < finished ; crawling ; 2014 ; Plant and Cell Physiology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Plant and Cell Physiology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Plant and Cell Physiology Volume 56 ; 56 ; >
     au < manifest ; exists ; 2016 ; Plant and Cell Physiology Volume 57 ; 57 ; >
 
@@ -23079,7 +23079,7 @@
     au < finished ; crawling ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
     au < frozen ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
-    au < finished ; crawling ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < finished ; crawling ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Toxicological Sciences Volume 140 ; 140 ; reingest1.clockss.org:8082 >
@@ -25032,7 +25032,7 @@
       au < finished ; finished ; 2011 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2011 ; 2011 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2013 ; 2013 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2016 ; 2016 ; >
 

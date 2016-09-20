@@ -1848,7 +1848,7 @@
     au < manifest ; exists ; 2011 ; Canadian Journal of Gastroenterology and Hepatology Volume 25 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Canadian Journal of Gastroenterology and Hepatology Volume 26 (2012) ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Canadian Journal of Gastroenterology and Hepatology Volume 29 (2015) ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Canadian Journal of Gastroenterology and Hepatology Volume 30 ; 2016 ; 2016 ; >
         
@@ -3098,7 +3098,7 @@
     au < manifest ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Epidemiology Research International Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Epidemiology Research International Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4529,7 +4529,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Oceanography Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4663,7 +4663,7 @@
 
     param[journal_id] = ijpho
 
-    au < finished ; crawling ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; International Journal of Photochemistry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4816,7 +4816,7 @@
     param[journal_id] = ijrmed
 
     au < manifest ; exists ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Reproductive Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Reproductive Medicine Volume 2016 ; 2016 ; 2016 ; >
 
@@ -5782,7 +5782,7 @@
     param[journal_id] = jcomp
     
     au < manifest ; exists ; 2013 ; Journal of Composites Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Composites Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Composites Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Composites Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6318,7 +6318,7 @@
     au < manifest ; exists ; 2011 ; Journal of Geological Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Geological Research Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Geological Research Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7461,7 +7461,7 @@
     au < manifest ; exists ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 ; >
     au < manifest ; exists ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 ; >
     au < manifest ; exists ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; >
     
@@ -7494,7 +7494,7 @@
 
     param[journal_id] = jsto
 
-    au < finished ; crawling ; 2014 ; Journal of Stochastics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Stochastics Volume 2014 ; 2014 ; 2014 ; >
 
   }
   
@@ -7580,7 +7580,7 @@
     au < manifest ; exists ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Thermodynamics Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Thermodynamics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8336,7 +8336,7 @@
     param[journal_id] = physiology
 
     au < manifest ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Physiology Journal Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Physiology Journal Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8838,7 +8838,7 @@
     au < manifest ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 ; >
 

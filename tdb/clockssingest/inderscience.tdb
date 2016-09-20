@@ -467,7 +467,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Aerodynamics Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerodynamics Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aerodynamics Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; International Journal of Aerodynamics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Aerodynamics Volume 6 ; 6 ; >
 
@@ -645,7 +645,7 @@
 
       param[journal_id] = ijans
 
-      au < finished ; crawling ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; >
 
@@ -2151,7 +2151,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Critical Accounting Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Critical Accounting Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Critical Accounting Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Critical Accounting Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Critical Accounting Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; International Journal of Critical Accounting Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Critical Accounting Volume 8 ; 8 ; >
 
@@ -2496,7 +2496,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Economics and Business Research Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Economics and Business Research Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Economics and Business Research Volume 6 ; 6 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Economics and Business Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Economics and Business Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Economics and Business Research Volume 8 ; 8 ; >
       au < finished ; crawling ; 2015 ; International Journal of Economics and Business Research Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; International Journal of Economics and Business Research Volume 10 ; 10 ; >
@@ -3156,7 +3156,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Environment and Sustainable Development Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Environment and Sustainable Development Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environment and Sustainable Development Volume 12 ; 12 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Environment and Sustainable Development Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Environment and Sustainable Development Volume 13 ; 13 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; International Journal of Environment and Sustainable Development Volume 14 ; 14 ; >
       au < crawling ; exists ; 2016 ; International Journal of Environment and Sustainable Development Volume 15 ; 15 ; >
 
@@ -3366,7 +3366,7 @@
 
       param[journal_id] = ijferm
 
-      au < finished ; crawling ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       # below au was incorrectly moved to production too early - take it down until year span over
       au < crawling ; down ; 2015-2016 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; International Journal of Financial Engineering and Risk Management Volume 3 ; 3 ; >
@@ -4052,7 +4052,7 @@
 
       param[journal_id] = ijied
 
-      au < finished ; crawling ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 ; >
+      au < finished ; finished ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 ; >
       au < finished ; crawling ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Industrial Electronics and Drives Volume 3 ; 3 ; >
 
@@ -4822,7 +4822,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2015-2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 ; >
       au < expected ; exists ; 2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 6 ; 6 ; >
 
@@ -4924,7 +4924,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Learning and Intellectual Capital Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Learning and Intellectual Capital Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Learning and Intellectual Capital Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Learning and Intellectual Capital Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Learning and Intellectual Capital Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Learning and Intellectual Capital Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Learning and Intellectual Capital Volume 13 ; 13 ; >
 
@@ -7333,7 +7333,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Shipping and Transport Logistics Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Shipping and Transport Logistics Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Shipping and Transport Logistics Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Shipping and Transport Logistics Volume 6 ; 6 ; >
+      au < finished ; finished ; 2014 ; International Journal of Shipping and Transport Logistics Volume 6 ; 6 ; >
       au < finished ; crawling ; 2015 ; International Journal of Shipping and Transport Logistics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Shipping and Transport Logistics Volume 8 ; 8 ; >
 
@@ -7769,7 +7769,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sustainable Economy Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sustainable Economy Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Sustainable Economy Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Sustainable Economy Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Sustainable Economy Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; International Journal of Sustainable Economy Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Sustainable Economy Volume 8 ; 8 ; >
 
@@ -8129,7 +8129,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Management Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Management Volume 63 ; 63 ; >
       au < finished ; finished ; 2014 ; International Journal of Technology Management Volume 64 ; 64 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Technology Management Volume 65 ; 65 ; >
+      au < finished ; finished ; 2014 ; International Journal of Technology Management Volume 65 ; 65 ; >
       au < frozen ; exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 ; >
       au < finished ; crawling ; 2015 ; International Journal of Technology Management Volume 67 ; 67 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 68 ; 68 ; >
@@ -8309,7 +8309,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Tourism Policy Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Tourism Policy Volume 7 ; 7 ; >
 
@@ -8705,7 +8705,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Web Based Communities Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Web Based Communities Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Web Based Communities Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; International Journal of Web Based Communities Volume 11 ; 11 ; >
       au < crawling ; exists ; 2016 ; International Journal of Web Based Communities Volume 12 ; 12 ; >
 
@@ -8730,7 +8730,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Web Engineering and Technology Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Web Engineering and Technology Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Web Engineering and Technology Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Web Engineering and Technology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Web Engineering and Technology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; International Journal of Web Engineering and Technology Volume 10 ; 10 ; >
       au < crawling ; exists ; 2016 ; International Journal of Web Engineering and Technology Volume 11 ; 11 ; >
 
