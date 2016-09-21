@@ -787,7 +787,7 @@
 
     au < manifest ; exists ; 2011 ; 33 ; Acta Scientiarum. Animal Sciences Volume 33 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 34 ; Acta Scientiarum. Animal Sciences Volume 34 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 35 ; Acta Scientiarum. Animal Sciences Volume 35 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 35 ; Acta Scientiarum. Animal Sciences Volume 35 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 36 ; Acta Scientiarum. Animal Sciences Volume 36 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 37 ; Acta Scientiarum. Animal Sciences Volume 37 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -8005,7 +8005,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Desacatos Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Desacatos Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Desacatos Volume 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; Desacatos Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; Desacatos Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Desacatos Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Desacatos Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -11101,7 +11101,7 @@
     au < manifest ; exists ; 2010 ; 24 ; Gaceta Sanitaria Volume 24 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 25 ; Gaceta Sanitaria Volume 25 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 26 ; Gaceta Sanitaria Volume 26 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 27 ; Gaceta Sanitaria Volume 27 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 27 ; Gaceta Sanitaria Volume 27 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 28 ; Gaceta Sanitaria Volume 28 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 29 ; Gaceta Sanitaria Volume 29 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -11716,7 +11716,7 @@
     au < manifest ; exists ; 2010 ; 11 ; Historia de la educación - anuario Volume 11 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 12 ; Historia de la educación - anuario Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Historia de la educación - anuario Volume 13 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 14 ; Historia de la educación - anuario Volume 14 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 14 ; Historia de la educación - anuario Volume 14 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 15 ; Historia de la educación - anuario Volume 15 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
@@ -14901,7 +14901,7 @@
     param[journal_issn] = 0123-5931
 
     au < manifest ; exists ; 2012 ; 14 ; Literatura: Teoría, Historia, Crítica Volume 14 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 15 ; Literatura: Teoría, Historia, Crítica Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 15 ; Literatura: Teoría, Historia, Crítica Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 16 ; Literatura: Teoría, Historia, Crítica Volume 16 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 17 ; Literatura: Teoría, Historia, Crítica Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -18552,7 +18552,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Psicologia para América Latina Volume 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Psicologia para América Latina Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Psicologia para América Latina Volume 2011 ; 2011 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; Psicologia para América Latina Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 2013 ; Psicologia para América Latina Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -30646,7 +30646,7 @@
     param[base_url] = http://www.scielo.org.za/
     param[journal_issn] = 2223-7682
 
-    au < finished ; crawling ; 2013 ; 3 ; South African Journal of Childhood Education Volume 3 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 3 ; South African Journal of Childhood Education Volume 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 4 ; South African Journal of Childhood Education Volume 4 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 5 ; South African Journal of Childhood Education Volume 5 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -32047,7 +32047,7 @@
     au < manifest ; exists ; 2010 ; 33 ; Trans/Form/Ação Volume 33 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 34 ; Trans/Form/Ação Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Trans/Form/Ação Volume 35 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 36 ; Trans/Form/Ação Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 36 ; Trans/Form/Ação Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 37 ; Trans/Form/Ação Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 38 ; Trans/Form/Ação Volume 38 ; 2015 ; reingest2.clockss.org:8085 >
 
