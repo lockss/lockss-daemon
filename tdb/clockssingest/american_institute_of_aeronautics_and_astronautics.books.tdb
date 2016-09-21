@@ -42,14 +42,14 @@
     au < finished ; finished ; 2001 ; 9781563474729 ; 9781600861734 ; 9781600861734 ; Design Methodologies for Space Transportation Systems (9781600861734) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; 9781563474637 ; 9781600861857 ; 9781600861857 ; Flight Vehicle Performance and Aerodynamic Control (9781600861857) ; >
     au < finished ; crawling ; 2002 ; 9781563475757 ; 9781600861758 ; 9781600861758 ; Dynamics, Control, and Flying Qualities of V/STOL Aircraft (9781600861758) ; >
-    au < finished ; crawling ; 2003 ; 9781563475634 ; 9781600861550 ; 9781600861550 ; Analytical Mechanics of Space Systems (9781600861550) ; >
+    au < finished ; finished ; 2003 ; 9781563475634 ; 9781600861550 ; 9781600861550 ; Analytical Mechanics of Space Systems (9781600861550) ; >
     au < deepCrawl ; exists ; 2003 ; 9781563475801 ; 9781600861819 ; 9781600861819 ; Finite Element Multidisciplinary Analysis, Second Edition (9781600861819) ; >
     au < finished ; crawling ; 2003 ; 9781563475825 ; 9781600862519 ; 9781600862519 ; The Fundamentals of Aircraft Combat Survivability Analysis and Design, Second Edition (9781600862519) ; >
     au < deepCrawl ; exists ; 2006 ; 9781563478376 ; 9781600861352 ; 9781600861352 ; Aircraft and Rotorcraft System Identification (9781600861352) ; >
     au < deepCrawl ; exists ; 2006 ; 9781563477935 ; 9781600861567 ; 9781600861567 ; Applied Cartesian Tensors for Aerospace Simulations (9781600861567) ; >
     au < finished ; finished ; 2006 ; 9781563476990 ; 9781600861765 ; 9781600861765 ; Elements of Continuum Mechanics (9781600861765) ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; 9781563476983 ; 9781600862373 ; 9781600862373 ; Rotary Wing Structural Dynamics and Aeroelasticity, 2e (9781600862373) ; >
-    au < finished ; crawling ; 2006 ; 9781563477812 ; 9781600862502 ; 9781600862502 ; The Biokinetics of Flying and Swimming, 2e (9781600862502) ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; 9781563477812 ; 9781600862502 ; 9781600862502 ; The Biokinetics of Flying and Swimming, 2e (9781600862502) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2007 ; 9781563478383 ; 9781600861628 ; 9781600861628 ; Basic MATLAB®, Simulink®, and Stateflow® (9781600861628) ; >
     au < crawling ; exists ; 2007 ; 9781563479175 ; 9781600861925 ; 9781600861925 ; Highly Flexible Structures: Modeling, Computation, and Experimentation (9781600861925) ; >
     au < finished ; finished ; 2007 ; 9781563478734 ; 9781600862083 ; 9781600862083 ; Introduction to Helicopter and Tiltrotor Flight Simulation (9781600862083) ; reingest1.clockss.org:8082 >
@@ -98,7 +98,7 @@
     au < finished ; finished ; 2008 ; 9781563479496 ; 9781600868795 ; 9781600868795 ; Terminal Chaos (9781600868795) ; >
     au < deepCrawl ; exists ; 2009 ; 9781563479663 ; 9781563479670 ; 9781563479670 ; Success Stories in Satellite Systems (9781563479670) ; >
     au < deepCrawl ; exists ; 2009 ; 9781563479823 ; 9781563479878 ; 9781563479878 ; Out of This World - The New Field of Space Architecture (9781563479878) ; >
-    au < finished ; crawling ; 2009 ; 9781600867125 ; 9781600867316 ; 9781600867316 ; From Rainbow to Gusto (9781600867316) ; >
+    au < finished ; finished ; 2009 ; 9781600867125 ; 9781600867316 ; 9781600867316 ; From Rainbow to Gusto (9781600867316) ; >
     au < finished ; crawling ; 2010 ; 9781600867118 ; 9781600867293 ; 9781600867293 ; The Engines of Pratt & Whitney: A Technical History (9781600867293) ; >
     au < finished ; finished ; 2010 ; 9781600867149 ; 9781600867552 ; 9781600867552 ; German Development of the Swept Wing: 1935-1945 (9781600867552) ; >
     au < deepCrawl ; exists ; 2010 ; 9781600867569 ; 9781600867583 ; 9781600867583 ; Skycrane: Igor Sikorsky's Last Vision (9781600867583) ; >
@@ -132,7 +132,7 @@
     au < deepCrawl ; exists ; 1962 ; 9781563478567 ; 9781600864810 ; 9781600864810 ; Hypersonic Flow Research (9781600864810) ; >
     au < deepCrawl ; exists ; 1962 ; 9781563478574 ; 9781600864827 ; 9781600864827 ; Guidance and Control (9781600864827) ; >
     au < deepCrawl ; exists ; 1963 ; 9781563478598 ; 9781600864834 ; 9781600864834 ; Technology of Lunar Exploration (9781600864834) ; >
-    au < finished ; crawling ; 1963 ; 9781563478604 ; 9781600864841 ; 9781600864841 ; Power Systems for Space Flight (9781600864841) ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1963 ; 9781563478604 ; 9781600864841 ; 9781600864841 ; Power Systems for Space Flight (9781600864841) ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 1963 ; 9781563478611 ; 9781600864858 ; 9781600864858 ; Ionization in High-Temperature Gases (9781600864858) ; >
     au < finished ; finished ; 1963 ; 9781563478581 ; 9781600864865 ; 9781600864865 ; Electric Propulsion Development (9781600864865) ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 1964 ; 9781563478628 ; 9781600864872 ; 9781600864872 ; Guidance and Control--II (9781600864872) ; >
@@ -161,11 +161,11 @@
     au < finished ; finished ; 1975 ; 9780915928002 ; 9781600865107 ; 9781600865107 ; Thermal Pollution Analysis (9781600865107) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1975 ; 9780915928019 ; 9781600865114 ; 9781600865114 ; "Aeroacoustics: Jet and Combustion Noise; Duct Acoustics (9781600865114)" ; >
     au < finished ; finished ; 1975 ; 9780915928026 ; 9781600865121 ; 9781600865121 ; "Aeroacoustics: Fan, STOL, and Boundary Layer Noise; Sonic Boom; Aeroacoustics Instrumentation (9781600865121)" ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1975 ; 9780915928033 ; 9781600865138 ; 9781600865138 ; Heat Transfer with Thermal Control Applications (9781600865138) ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1975 ; 9780915928033 ; 9781600865138 ; 9781600865138 ; Heat Transfer with Thermal Control Applications (9781600865138) ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1976 ; 9780915928040 ; 9781600865145 ; 9781600865145 ; Aerodynamics of Base Combustion (9781600865145) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1976 ; 9780915928057 ; 9781600865152 ; 9781600865152 ; Communications Satellite Developments: Systems (9781600865152) ; >
     au < finished ; finished ; 1976 ; 9780915928064 ; 9781600865169 ; 9781600865169 ; Communications Satellite Developments: Technology (9781600865169) ; >
-    au < finished ; crawling ; 1976 ; 9780915928071 ; 9781600865176 ; 9781600865176 ; "Aeroacoustics: Jet Noise, Combustion and Core Engine Noise (9781600865176)" ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1976 ; 9780915928071 ; 9781600865176 ; 9781600865176 ; "Aeroacoustics: Jet Noise, Combustion and Core Engine Noise (9781600865176)" ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1976 ; 9780915928088 ; 9781600865183 ; 9781600865183 ; "Aeroacoustics: Fan Noise and Control; Duct Acoustics; Rotor Noise (9781600865183)" ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1976 ; 9780915928095 ; 9781600865190 ; 9781600865190 ; "Aeroacoustics: STOL Noise: Airframe and Airfoil Noise (9781600865190)" ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1976 ; 9780915928101 ; 9781600865206 ; 9781600865206 ; "Aeroacoustics: Acoustic Wave Propagation; Aircraft Noise Prediction; Aeroacoustic Instrumentation (9781600865206)" ; >
@@ -192,13 +192,13 @@
     au < finished ; finished ; 1980 ; 9780915928354 ; 9781600865428 ; 9781600865428 ; Injection and Mixing in Turbulent Flow (9781600865428) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1980 ; 9780915928385 ; 9781600865435 ; 9781600865435 ; Entry Heating and Thermal Protection (9781600865435) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1980 ; 9780915928392 ; 9781600865442 ; 9781600865442 ; Heat Transfer, Thermal Control, and Heat Pipes (9781600865442) ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1980 ; 9780915928415 ; 9781600865459 ; 9781600865459 ; Space Systems and Their Interactions with Earth’s Space Environment (9781600865459) ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1980 ; 9780915928415 ; 9781600865459 ; 9781600865459 ; Space Systems and Their Interactions with Earth’s Space Environment (9781600865459) ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1980 ; 9780915928446 ; 9781600865466 ; 9781600865466 ; Viscous Flow Drag Reduction (9781600865466) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1981 ; 9780915928484 ; 9781600865473 ; 9781600865473 ; Combustion Experiments in a Zero-Gravity Laboratory (9781600865473) ; >
     au < finished ; finished ; 1981 ; 9780915928514 ; 9781600865480 ; 9781600865480 ; Rarefied Gas Dynamics, Parts I and II (9781600865480) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1981 ; 9780915928460 ; 9781600865497 ; 9781600865497 ; Gasdynamics of Detonations and Explosions (9781600865497) ; >
     au < finished ; finished ; 1981 ; 9780915928477 ; 9781600865503 ; 9781600865503 ; Combustion in Reactive Systems (9781600865503) ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1981 ; 9780915928521 ; 9781600865510 ; 9781600865510 ; Aerothermodynamics and Planetary Entry (9781600865510) ; >
+    au < finished ; finished ; 1981 ; 9780915928521 ; 9781600865510 ; 9781600865510 ; Aerothermodynamics and Planetary Entry (9781600865510) ; >
     au < finished ; finished ; 1981 ; 9780915928538 ; 9781600865527 ; 9781600865527 ; Heat Transfer and Thermal Control (9781600865527) ; >
     au < deepCrawl ; exists ; 1981 ; 9780915928552 ; 9781600865534 ; 9781600865534 ; Electric Propulsion and Its Applications to Space Missions (9781600865534) ; >
     au < finished ; finished ; 1982 ; 9780915928606 ; 9781600865541 ; 9781600865541 ; Aero-Optical Phenomena (9781600865541) ; reingest1.clockss.org:8082 >
@@ -221,7 +221,7 @@
     au < finished ; finished ; 1985 ; 9780915928941 ; 9781600865718 ; 9781600865718 ; Thermal Design of Aeroassisted Orbital Transfer Vehicles (9781600865718) ; >
     au < finished ; finished ; 1985 ; 9780915928989 ; 9781600865725 ; 9781600865725 ; Monitoring Earth's Ocean, Land, and Atmosphere from Space-Sensors, Systems, and Applications (9781600865725) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1985 ; 9780930403003 ; 9781600865732 ; 9781600865732 ; Thrust and Drag: Its Prediction and Verification (9781600865732) ; >
-    au < finished ; crawling ; 1985 ; 9780930403010 ; 9781600865749 ; 9781600865749 ; Space Stations and Space Platforms-Concepts, Design, Infrastructure, and Uses (9781600865749) ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; 9780930403010 ; 9781600865749 ; 9781600865749 ; Space Stations and Space Platforms-Concepts, Design, Infrastructure, and Uses (9781600865749) ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1986 ; 9780930403058 ; 9781600865756 ; 9781600865756 ; MHD Energy Conversion: Physicotechnical Problems (9781600865756) ; >
     au < finished ; finished ; 1986 ; 9780930403096 ; 9781600865763 ; 9781600865763 ; Numerical Methods for Engine-Airframe Integration (9781600865763) ; >
     au < finished ; finished ; 1986 ; 9780930403102 ; 9781600865770 ; 9781600865770 ; Thermophysical Aspects of Re-Entry Flows (9781600865770) ; reingest1.clockss.org:8082 >
@@ -229,7 +229,7 @@
     au < finished ; finished ; 1986 ; 9780930403157 ; 9781600865800 ; 9781600865800 ; Dynamics of Explosions (9781600865800) ; >
     au < finished ; finished ; 1986 ; 9780930403171 ; 9781600865817 ; 9781600865817 ; Spacecraft Dielectric Material Properties and Spacecraft Charging (9781600865817) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1986 ; 9780930403188 ; 9781600865824 ; 9781600865824 ; Opportunities for Academic Research in a Low-Gravity Environment (9781600865824) ; >
-    au < finished ; crawling ; 1988 ; 9780930403447 ; 9781600865831 ; 9781600865831 ; Current Trends in Turbulence Research (9781600865831) ; >
+    au < finished ; finished ; 1988 ; 9780930403447 ; 9781600865831 ; 9781600865831 ; Current Trends in Turbulence Research (9781600865831) ; >
     au < crawling ; exists ; 1988 ; 9780930403393 ; 9781600865855 ; 9781600865855 ; Commercial Opportunities in Space (9781600865855) ; >
     au < finished ; finished ; 1988 ; 9780930403430 ; 9781600865862 ; 9781600865862 ; Liquid Metal Flows: Magnetohydrodynamics and Application (9781600865862) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1988 ; 9780930403461 ; 9781600865879 ; 9781600865879 ; "Dynamics of Reactive Systems Part I: Flames; Part II: Heterogeneous Combustion and Applications (9781600865879)" ; reingest2.clockss.org:8085 >
@@ -239,11 +239,11 @@
     au < finished ; finished ; 1989 ; 9780930403546 ; 9781600865916 ; 9781600865916 ; Rarefied Gas Dynamics: Physical Phenomena (9781600865916) ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1989 ; 9780930403553 ; 9781600865923 ; 9781600865923 ; Rarefied Gas Dynamics: Theoretical and Computational Techniques (9781600865923) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1989 ; 9780930403522 ; 9781600865947 ; 9781600865947 ; Unsteady Transonic Aerodynamics (9781600865947) ; >
-    au < finished ; crawling ; 1989 ; 9780930403584 ; 9781600865954 ; 9781600865954 ; Orbital Debris from Upper-Stage Breakup (9781600865954) ; >
+    au < finished ; finished ; 1989 ; 9780930403584 ; 9781600865954 ; 9781600865954 ; Orbital Debris from Upper-Stage Breakup (9781600865954) ; >
     au < finished ; crawling ; 1990 ; 9780930403645 ; 9781600865961 ; 9781600865961 ; Thermal-Hydraulics for Space Power, Propulsion and Thermal Management System Design (9781600865961) ; >
     au < finished ; crawling ; 1990 ; 9780930403669 ; 9781600865978 ; 9781600865978 ; Viscous Drag Reduction in Boundary Layers (9781600865978) ; >
     au < finished ; crawling ; 1990 ; 9780930403690 ; 9781600865985 ; 9781600865985 ; Applied Computational Aerodynamics (9781600865985) ; >
-    au < finished ; crawling ; 1990 ; 9780930403751 ; 9781600865992 ; 9781600865992 ; Space Commercialization: Launch Vehicles and Programs (9781600865992) ; >
+    au < finished ; finished ; 1990 ; 9780930403751 ; 9781600865992 ; 9781600865992 ; Space Commercialization: Launch Vehicles and Programs (9781600865992) ; >
     au < finished ; crawling ; 1990 ; 9780930403768 ; 9781600866005 ; 9781600866005 ; Space Commercialization: Platforms and Processing (9781600866005) ; >
     au < deepCrawl ; exists ; 1990 ; 9780930403775 ; 9781600866012 ; 9781600866012 ; Space Commercialization: Satellite Technology (9781600866012) ; >
     au < finished ; finished ; 1990 ; 9780930403737 ; 9781600866029 ; 9781600866029 ; Mechanics and Control of Large Flexible Structures (9781600866029) ; reingest5.clockss.org:8082 >
@@ -256,7 +256,7 @@
     au < finished ; crawling ; 1991 ; 9781563470059 ; 9781600866098 ; 9781600866098 ; Aerospace Software Engineering: A Collection of Concepts (9781600866098) ; >
     au < finished ; finished ; 1991 ; 9781563470110 ; 9781600866104 ; 9781600866104 ; High-Speed Flight Propulsion Systems (9781600866104) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1992 ; 9781563470202 ; 9781600866111 ; 9781600866111 ; Propagation of Intensive Laser Radiation in Clouds (9781600866111) ; >
-    au < finished ; crawling ; 1992 ; 9781563470172 ; 9781600866128 ; 9781600866128 ; Thermal Structures and Materials for High-Speed Flight (9781600866128) ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1992 ; 9781563470172 ; 9781600866128 ; 9781600866128 ; Thermal Structures and Materials for High-Speed Flight (9781600866128) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1992 ; 9781563470141 ; 9781600866159 ; 9781600866159 ; Nonsteady Burning and Combustion Stability of Solid Propellants (9781600866159) ; >
     au < finished ; finished ; 1992 ; 9781563470424 ; 9781600866166 ; 9781600866166 ; Space Economics (9781600866166) ; >
     au < deepCrawl ; exists ; 1992 ; 9781563470431 ; 9781600866173 ; 9781600866173 ; Mars: Past, Present, and Future (9781600866173) ; >
@@ -282,21 +282,21 @@
     au < finished ; crawling ; 1996 ; 9781563471070 ; 9781600866395 ; 9781600866395 ; Global Positioning System: Theory and Applications, Volume II (9781600866395) ; >
     au < finished ; crawling ; 1996 ; 9781563471766 ; 9781600866401 ; 9781600866401 ; Developments in High-Speed Vehicle Propulsion Systems (9781600866401) ; >
     au < finished ; finished ; 1996 ; 9781563471759 ; 9781600866418 ; 9781600866418 ; Recent Advances in Spray Combustion: Spray Atomization and Drop Burning Phenomena (9781600866418) ; >
-    au < finished ; crawling ; 1996 ; 9781563471810 ; 9781600866432 ; 9781600866432 ; Recent Advances in Spray Combustion: Spray Combustion Measurements and Model Simulation (9781600866432) ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; 9781563471810 ; 9781600866432 ; 9781600866432 ; Recent Advances in Spray Combustion: Spray Combustion Measurements and Model Simulation (9781600866432) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1997 ; 9781563471889 ; 9781600866449 ; 9781600866449 ; Future Aeronautical and Space Systems (9781600866449) ; >
     au < deepCrawl ; exists ; 1997 ; 9781563471780 ; 9781600866456 ; 9781600866456 ; Advances in Combustion Science: In Honor of Ya. B. Zel'dovich (9781600866456) ; >
     au < deepCrawl ; exists ; 1997 ; 9781563472435 ; 9781600866463 ; 9781600866463 ; Fundamentals of High Accuracy Inertial Navigation (9781600866463) ; >
     au < finished ; finished ; 1998 ; 9781563472565 ; 9781600866487 ; 9781600866487 ; Orbital and Celestial Mechanics (9781600866487) ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; 9781563472589 ; 9781600866494 ; 9781600866494 ; Some Engineering Applications in Random Vibrations and Random Structures (9781600866494) ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1998 ; 9781563472763 ; 9781600866524 ; 9781600866524 ; Satellite Thermal Control for Systems Engineers (9781600866524) ; >
+    au < finished ; finished ; 1998 ; 9781563472589 ; 9781600866494 ; 9781600866494 ; Some Engineering Applications in Random Vibrations and Random Structures (9781600866494) ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1998 ; 9781563472763 ; 9781600866524 ; 9781600866524 ; Satellite Thermal Control for Systems Engineers (9781600866524) ; >
     au < finished ; finished ; 1998 ; 9781563472848 ; 9781600866531 ; 9781600866531 ; Progress in Fluid Flow Research: Turbulence and Applied MHD (9781600866531) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; 9781563474040 ; 9781600866555 ; 9781600866555 ; Flight Control Systems (9781600866555) ; >
     au < finished ; crawling ; 2000 ; 9781563474422 ; 9781600866562 ; 9781600866562 ; Solid Propellant Chemistry, Combustion, and Motor Interior Ballistics (9781600866562) ; >
     au < deepCrawl ; exists ; 2000 ; 9781563474484 ; 9781600866586 ; 9781600866586 ; Micropropulsion for Small Spacecraft (9781600866586) ; >
     au < deepCrawl ; exists ; 2000 ; 9781563473845 ; 9781600866593 ; 9781600866593 ; Structures Technology for Future Aerospace Systems (9781600866593) ; >
     au < deepCrawl ; exists ; 2001 ; 9781563473227 ; 9781600866609 ; 9781600866609 ; Scramjet Propulsion (9781600866609) ; >
-    au < finished ; crawling ; 2001 ; 9781563474033 ; 9781600866616 ; 9781600866616 ; Gossamer Spacecraft: Membrane and Inflatable Structures Technology for Space Applications (9781600866616) ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2001 ; 9781563474743 ; 9781600866630 ; 9781600866630 ; Air Transportation Systems Engineering (9781600866630) ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; 9781563474033 ; 9781600866616 ; 9781600866616 ; Gossamer Spacecraft: Membrane and Inflatable Structures Technology for Space Applications (9781600866616) ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; 9781563474743 ; 9781600866630 ; 9781600866630 ; Air Transportation Systems Engineering (9781600866630) ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2001 ; 9781563475177 ; 9781600866654 ; 9781600866654 ; Fixed and Flapping Wing Aerodynamics for Micro Air Vehicle Applications (9781600866654) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2002 ; 9781563475184 ; 9781600866661 ; 9781600866661 ; Physical and Chemical Processes in Gas Dynamics Vol. 1 (9781600866661) ; >
     au < deepCrawl ; exists ; 2002 ; 9781563475412 ; 9781600866678 ; 9781600866678 ; Advanced Hypersonic Test Facilities (9781600866678) ; >
@@ -310,12 +310,12 @@
     au < finished ; finished ; 2006 ; 9781563476693 ; 9781600866807 ; 9781600866807 ; Combustion Instabilities in Gas Turbine Engines (9781600866807) ; >
     au < finished ; finished ; 2006 ; 9781563477775 ; 9781600866814 ; 9781600866814 ; Recent Advances in Gossamer Spacecraft (9781600866814) ; >
     au < finished ; crawling ; 2006 ; 9781563476976 ; 9781600866821 ; 9781600866821 ; Nonlinear Composite Beam Theory (9781600866821) ; >
-    au < finished ; crawling ; 2006 ; 9781563477898 ; 9781600866838 ; 9781600866838 ; Applications of Circulation Control Technology (9781600866838) ; >
+    au < finished ; finished ; 2006 ; 9781563477898 ; 9781600866838 ; 9781600866838 ; Applications of Circulation Control Technology (9781600866838) ; >
     au < deepCrawl ; exists ; 2006 ; 9781563478284 ; 9781600866845 ; 9781600866845 ; Airborne Doppler Radar (9781600866845) ; >
     au < finished ; finished ; 2006 ; 9781563478369 ; 9781600866852 ; 9781600866852 ; Flight Vehicle System Identification (9781600866852) ; >
-    au < finished ; crawling ; 2007 ; 9781563478413 ; 9781600866869 ; 9781600866869 ; Jet Induced Effects (9781600866869) ; >
+    au < finished ; finished ; 2007 ; 9781563478413 ; 9781600866869 ; 9781600866869 ; Jet Induced Effects (9781600866869) ; >
     au < finished ; finished ; 2007 ; 9781563477034 ; 9781600866876 ; 9781600866876 ; Fundamentals of Hybrid Rocket Combustion and Propulsion (9781600866876) ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2007 ; 9781563479199 ; 9781600866890 ; 9781600866890 ; Space Operations: Mission Management, Technologies, and Current Applications (9781600866890) ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; 9781563479199 ; 9781600866890 ; 9781600866890 ; Space Operations: Mission Management, Technologies, and Current Applications (9781600866890) ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; 9781563479212 ; 9781600866906 ; 9781600866906 ; Combustion Instabilities in Liquid Rocket Engines (9781600866906) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2008 ; 9781563479519 ; 9781600860096 ; 9781600860096 ; Nuclear Space Power and Propulsion Systems (9781600860096) ; >
     au < finished ; finished ; 2008 ; 9781563479281 ; 9781600866913 ; 9781600866913 ; Combustion Instability (9781600866913) ; reingest4.clockss.org:8082 >

@@ -754,9 +754,9 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Cell Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Cell Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
       au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
@@ -851,7 +851,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; down ; crawling ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 298 ; 298 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 299 ; 299 ; >
 
@@ -1026,7 +1026,7 @@
       au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 ; >
 
     }
@@ -1277,7 +1277,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
@@ -1346,7 +1346,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 291 ; 291 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 292 ; 292 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 293 ; 293 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296 ; 296 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297 ; 297 ; >
@@ -1400,7 +1400,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297 ; 297 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 299 ; 299 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; >
@@ -1751,8 +1751,8 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Renal Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Renal Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 ; >
@@ -2486,8 +2486,8 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2005 ; Physiological Reviews Volume 85 ; 85 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2006 ; Physiological Reviews Volume 86 ; 86 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; Physiological Reviews Volume 87 ; 87 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; Physiological Reviews Volume 88 ; 88 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; Physiological Reviews Volume 89 ; 89 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2008 ; Physiological Reviews Volume 88 ; 88 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2009 ; Physiological Reviews Volume 89 ; 89 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
 
     }

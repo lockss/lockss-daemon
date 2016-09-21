@@ -68,7 +68,7 @@
       param[base_url] = http://www.ascpjournal.org/
       param[journal_issn] = 1940-0640
 
-      au < down ; crawling ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 ; >
+      au < down ; finished ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 ; >
       au < down ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 ; >
       au < down ; finished ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 ; >
       au < down ; exists ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 ; >
@@ -332,7 +332,7 @@
       au < superseded ; exists ; 2009 ; Aquatic Biosystems Volume 5 [superseded] ; 5 ; >
       au < superseded ; exists ; 2010 ; Aquatic Biosystems Volume 6 [superseded] ; 6 ; >
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 ; >
-      au < down ; crawling ; 2012 ; Aquatic Biosystems Volume 8 ; 8 ; >
+      au < down ; finished ; 2012 ; Aquatic Biosystems Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 ; >
       au < down ; finished ; 2014 ; Aquatic Biosystems Volume 10 ; 10 ; >
       au < down ; exists ; 2015 ; Aquatic Biosystems Volume 11 ; 11 ; >
@@ -405,7 +405,7 @@
       au < doNotProcess ; exists ; 2005 ; Arthritis Research & Therapy Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2006 ; Arthritis Research & Therapy Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 ; >
-      au < down ; crawling ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 ; >
+      au < down ; finished ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 ; >
       au < down ; exists ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 ; >
       au < down ; crawling ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 ; >
       au < down ; crawling ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 ; >
@@ -1013,7 +1013,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cellandbioscience.com/
       param[journal_issn] = 2045-3701
 
-      au < down ; crawling ; 2011 ; Cell & Bioscience Volume 1 ; 1 ; >
+      au < down ; finished ; 2011 ; Cell & Bioscience Volume 1 ; 1 ; >
       au < down ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 ; >
       au < down ; finished ; 2013 ; Cell & Bioscience Volume 3 ; 3 ; >
       au < down ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 ; >
@@ -1269,7 +1269,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; finished ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 ; >
       au < down ; finished ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 ; >
       au < down ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 ; >
-      au < down ; crawling ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 ; >
+      au < down ; finished ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 ; >
       au < down ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 ; >
       
@@ -1627,7 +1627,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Emerging Themes in Epidemiology Volume 4 ; 4 ; >
       au < down ; exists ; 2008 ; Emerging Themes in Epidemiology Volume 5 ; 5 ; >
       au < down ; exists ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 ; >
-      au < down ; crawling ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 ; >
+      au < down ; finished ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 ; >
       au < down ; exists ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 ; >
       au < down ; exists ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 ; >
       au < down ; exists ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 ; >
@@ -4000,7 +4000,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < down ; exists ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 ; >
       au < down ; exists ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 ; >
-      au < down ; crawling ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 ; >
+      au < down ; finished ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 ; >
       au < down ; crawling ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 ; >
       au < down ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 ; >
       au < down ; exists ; 2013 ; Molecular Cytogenetics Volume 6 ; 6 ; >
@@ -4239,7 +4239,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < down ; exists ; 2008 ; Parasites & Vectors Volume 1 ; 1 ; >
       au < down ; exists ; 2009 ; Parasites & Vectors Volume 2 ; 2 ; >
-      au < down ; crawling ; 2010 ; Parasites & Vectors Volume 3 ; 3 ; >
+      au < down ; finished ; 2010 ; Parasites & Vectors Volume 3 ; 3 ; >
       au < down ; crawling ; 2011 ; Parasites & Vectors Volume 4 ; 4 ; >
       au < down ; exists ; 2012 ; Parasites & Vectors Volume 5 ; 5 ; >
       au < down ; exists ; 2013 ; Parasites & Vectors Volume 6 ; 6 ; >
@@ -4522,7 +4522,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2008 ; Reproductive Health Volume 5 ; 5 ; >
       au < down ; exists ; 2009 ; Reproductive Health Volume 6 ; 6 ; >
       au < down ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 ; >
-      au < down ; crawling ; 2011 ; Reproductive Health Volume 8 ; 8 ; >
+      au < down ; finished ; 2011 ; Reproductive Health Volume 8 ; 8 ; >
       au < down ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 ; >
       au < down ; exists ; 2013 ; Reproductive Health Volume 10 ; 10 ; >
       au < down ; exists ; 2014 ; Reproductive Health Volume 11 ; 11 ; >

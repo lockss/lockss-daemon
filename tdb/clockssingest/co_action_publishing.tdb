@@ -107,7 +107,7 @@
       param[journal_id] = dfa
       # includes supplements
 
-      au < finished ; crawling ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; 2010 ; >
+      au < finished ; finished ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; 2010 ; >
       au < finished ; finished ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 ; >
       au < finished ; finished ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; 2013 ; >
@@ -451,10 +451,10 @@
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < finished ; crawling ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 ; >
+    au < finished ; finished ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 ; >
     au < finished ; finished ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 ; >
-    au < finished ; crawling ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 ; >
-    au < finished ; crawling ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 ; >
+    au < finished ; finished ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 ; >
+    au < finished ; finished ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
@@ -474,9 +474,9 @@
     param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = ljm
 
-    au < finished ; crawling ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 ; >
+    au < finished ; finished ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 ; >
     au < finished ; crawling ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 ; >
-    au < finished ; crawling ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 ; >
+    au < finished ; finished ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 ; >
     au < finished ; finished ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 ; >
     au < finished ; finished ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 ; >
@@ -719,7 +719,7 @@
     au < finished ; finished ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 ; >
     au < finished ; finished ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 ; >
-    au < finished ; crawling ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 ; >
+    au < finished ; finished ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 ; >
     au < finished ; finished ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 ; >
     au < finished ; finished ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 ; >
@@ -758,11 +758,11 @@
     au < finished ; finished ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 ; >
     au < finished ; finished ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 ; >
-    au < finished ; crawling ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 ; >
+    au < finished ; finished ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 ; >
     au < finished ; crawling ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 ; >
     au < finished ; finished ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 ; >
     au < finished ; finished ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 ; >
-    au < finished ; crawling ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 ; >
+    au < finished ; finished ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 ; >
     au < finished ; finished ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; 2014 ; >
@@ -786,7 +786,7 @@
     param[journal_id] = fnr
 
     au < finished ; finished ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; 2006 ; >
-    au < finished ; crawling ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; 2007 ; >
+    au < finished ; finished ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; 2007 ; >
 
   }
 

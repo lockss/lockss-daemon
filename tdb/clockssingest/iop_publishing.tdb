@@ -98,7 +98,7 @@
     param[journal_issn] = 1758-5090
     comment[param] = eissn preferred
 
-    au < down ; crawling ; 2009 ; Biofabrication Volume 1 ; 1 ; > 
+    au < down ; finished ; 2009 ; Biofabrication Volume 1 ; 1 ; > 
     au < down ; finished ; 2010 ; Biofabrication Volume 2 ; 2 ; > 
     au < down ; finished ; 2011 ; Biofabrication Volume 3 ; 3 ; > 
     au < down ; crawling ; 2012 ; Biofabrication Volume 4 ; 4 ; > 
@@ -227,7 +227,7 @@
     comment[continues] = 1003-7713
 
     au < down ; finished ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 ; > 
-    au < down ; crawling ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 ; > 
+    au < down ; finished ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 ; > 
     au < down ; crawling ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 ; > 
     au < down ; finished ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 ; > 
     au < down ; crawling ; 2012 ; Chinese Journal of Chemical Physics Volume 25 ; 25 ; > 
@@ -522,7 +522,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Environmental Research Letters Volume 2 ; 2 ; > 
     au < down ; finished ; 2008 ; Environmental Research Letters Volume 3 ; 3 ; > 
     au < down ; finished ; 2009 ; Environmental Research Letters Volume 4 ; 4 ; > 
-    au < down ; crawling ; 2010 ; Environmental Research Letters Volume 5 ; 5 ; > 
+    au < down ; finished ; 2010 ; Environmental Research Letters Volume 5 ; 5 ; > 
     au < down ; finished ; 2011 ; Environmental Research Letters Volume 6 ; 6 ; > 
     au < ingNotReady ; exists ; 2012 ; Environmental Research Letters Volume 7 ; 7 ; > 
     au < down ; exists ; 2013 ; Environmental Research Letters Volume 8 ; 8 ; > 
@@ -873,7 +873,7 @@
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 5 ; 5 ; > 
     au < down ; finished ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 6 ; 6 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 7 ; 7 ; > 
-    au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 ; > 
+    au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 8 ; 8 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 9 ; 9 ; > 
     au < down ; crawling ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 10 ; 10 ; > 
     au < down ; finished ; 2010 ; IOP Conference Series: Materials Science and Engineering Volume 11 ; 11 ; > 
@@ -1229,7 +1229,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Neural Engineering Volume 4 ; 4 ; > 
     au < down ; finished ; 2008 ; Journal of Neural Engineering Volume 5 ; 5 ; >
     au < down ; finished ; 2009 ; Journal of Neural Engineering Volume 6 ; 6 ; > 
-    au < down ; crawling ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 ; > 
+    au < down ; finished ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 ; > 
     au < down ; finished ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 ; > 
     au < down ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 ; > 
     au < down ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 ; > 
@@ -1457,7 +1457,7 @@
     comment[continues] = 0305-4470
 
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics A: Mathematical and Theoretical Volume 40 ; 40 ; > 
-    au < down ; crawling ; 2008 ; Journal of Physics A: Mathematical and Theoretical Volume 41 ; 41 ; > 
+    au < down ; finished ; 2008 ; Journal of Physics A: Mathematical and Theoretical Volume 41 ; 41 ; > 
     au < down ; finished ; 2009 ; Journal of Physics A: Mathematical and Theoretical Volume 42 ; 42 ; > 
     au < down ; crawling ; 2010 ; Journal of Physics A: Mathematical and Theoretical Volume 43 ; 43 ; > 
     au < down ; crawling ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 ; > 
@@ -1951,7 +1951,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Physics: Conference Series Volume 93 ; 93 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 94 ; 94 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 95 ; 95 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 96 ; 96 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 97 ; 97 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 98 ; 98 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 99 ; 99 ; >
@@ -1966,7 +1966,7 @@
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 108 ; 108 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 109 ; 109 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 110 ; 110 ; >
-    au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 111 ; 111 ; >
+    au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 111 ; 111 ; >
     au < down ; crawling ; 2008 ; Journal of Physics: Conference Series Volume 112 ; 112 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 113 ; 113 ; >
     au < down ; finished ; 2008 ; Journal of Physics: Conference Series Volume 114 ; 114 ; >
@@ -2072,7 +2072,7 @@
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 214 ; 214 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 215 ; 215 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 216 ; 216 ; >
-    au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 217 ; 217 ; >
+    au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 217 ; 217 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 218 ; 218 ; >
     au < down ; crawling ; 2010 ; Journal of Physics: Conference Series Volume 219 ; 219 ; >
     au < down ; finished ; 2010 ; Journal of Physics: Conference Series Volume 220 ; 220 ; >
@@ -2156,14 +2156,14 @@
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 298 ; 298 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 299 ; 299 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 300 ; 300 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 301 ; 301 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 301 ; 301 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 302 ; 302 ; >
     au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 303 ; 303 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 304 ; 304 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 305 ; 305 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 306 ; 306 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 307 ; 307 ; >
-    au < down ; crawling ; 2011 ; Journal of Physics: Conference Series Volume 308 ; 308 ; >
+    au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 308 ; 308 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 309 ; 309 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 310 ; 310 ; >
     au < down ; finished ; 2011 ; Journal of Physics: Conference Series Volume 311 ; 311 ; >
@@ -2570,7 +2570,7 @@
 
     param[journal_issn] = 1674-4926
 
-    au < down ; crawling ; 2009 ; Journal of Semiconductors Volume 30 ; 30 ; > 
+    au < down ; finished ; 2009 ; Journal of Semiconductors Volume 30 ; 30 ; > 
     au < down ; finished ; 2010 ; Journal of Semiconductors Volume 31 ; 31 ; > 
     au < down ; finished ; 2011 ; Journal of Semiconductors Volume 32 ; 32 ; >
     au < down ; crawling ; 2012 ; Journal of Semiconductors Volume 33 ; 33 ; >
@@ -3341,7 +3341,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Physics in Medicine and Biology Volume 52 ; 52 ; > 
     au < down ; finished ; 2008 ; Physics in Medicine and Biology Volume 53 ; 53 ; > 
     au < down ; finished ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 ; > 
-    au < down ; crawling ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 ; > 
+    au < down ; finished ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 ; > 
     au < down ; crawling ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 ; > 
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 ; > 
     au < down ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 ; > 
@@ -3958,7 +3958,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Science and Technology of Advanced Materials Volume 8 ; 8 ; > 
     au < down ; crawling ; 2008 ; Science and Technology of Advanced Materials Volume 9 ; 9 ; > 
     au < down ; finished ; 2009 ; Science and Technology of Advanced Materials Volume 10 ; 10 ; > 
-    au < down ; crawling ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 ; > 
+    au < down ; finished ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 ; > 
     au < down ; finished ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 ; > 
     au < down ; crawling ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 ; > 
     au < down ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 ; > 
@@ -4022,7 +4022,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Semiconductor Science and Technology Volume 22 ; 22 ; > 
     au < down ; finished ; 2008 ; Semiconductor Science and Technology Volume 23 ; 23 ; > 
     au < down ; finished ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 ; > 
-    au < down ; crawling ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 ; > 
+    au < down ; finished ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 ; > 
     au < down ; finished ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 ; > 
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 ; > 
     au < down ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 ; > 

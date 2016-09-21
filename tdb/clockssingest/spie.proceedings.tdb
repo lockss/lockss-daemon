@@ -18,7 +18,7 @@
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
     param[base_url] = http://proceedings.spiedigitallibrary.org/
 
-    au < finished ; crawling ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1964 ; SPIE Proceedings 1964 ; 1964 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1965 ; SPIE Proceedings 1965 ; 1965 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 1966 ; SPIE Proceedings 1966 ; 1966 ; reingest2.clockss.org:8085 >

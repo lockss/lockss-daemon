@@ -25,7 +25,7 @@
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 ; >
     au < manifest ; exists ; 2007 ; Acta Pharmacologica Sinica Volume 28 ; 2007 ; 28 ; >
     au < zapped ; finished ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 ; >
-    au < finished ; frozen ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 ; >
+    au < finished ; finished ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 ; >
     au < finished ; frozen ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 ; >
     au < finished ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; frozen ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
@@ -287,7 +287,7 @@
     au < finished ; finished ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
     au < finished ; finished ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
+    au < finished ; finished ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; >
     au < manifest ; exists ; 2013 ; British Dental Journal Volume 215 ; 2013 ; 215 ; >
@@ -537,7 +537,7 @@
     au < manifest ; exists ; 2007 ; Cell Research Volume 17 ; 2007 ; 17 ; >
     au < zapped ; finished ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 ; >
     au < zapped ; finished ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 ; >
-    au < finished ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 ; >
+    au < finished ; finished ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 ; >
     au < finished ; frozen ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 ; >
     au < finished ; frozen ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 ; >
     au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 ; >
@@ -563,7 +563,7 @@
     au < finished ; finished ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
-    au < finished ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
+    au < finished ; finished ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
     au < crawling ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 ; >
     au < finished ; finished ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 ; >
@@ -628,7 +628,7 @@
     param[journal_id] = cti
 
     au < finished ; crawling ; 2012 ; Clinical & Translational Immunology Volume 1 ; 2012 ; 1 ; >
-    au < finished ; crawling ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 ; >
+    au < finished ; finished ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
     au < deepCrawl ; exists ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; >
     au < crawling ; exists ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; >
@@ -671,7 +671,7 @@
     au < down ; frozen ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 ; >
     au < zapped ; finished ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 ; >
     au < down ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 ; >
-    au < down ; frozen ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 ; >
+    au < down ; finished ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 ; >
     au < down ; frozen ; 2012 ; EMBO Reports Volume 13 ; 2012 ; 13 ; >
     au < down ; exists ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 ; >
 
@@ -794,7 +794,7 @@
 
     au < crawling ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; >
     au < finished ; crawling ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 ; >
-    au < finished ; crawling ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 ; >
+    au < finished ; finished ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 ; >
     au < finished ; crawling ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
     au < crawling ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 ; >
     au < crawling ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 ; >
@@ -1085,7 +1085,7 @@
     au < zapped ; finished ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 ; >
     au < finished ; frozen ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 ; >
     au < finished ; frozen ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 ; >
-    au < finished ; frozen ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 ; >
+    au < finished ; finished ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 ; >
     au < finished ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 ; >
     au < finished ; finished ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
@@ -1719,7 +1719,7 @@
     au < finished ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 ; >
     au < finished ; finished ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 ; >
     au < finished ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 ; >
-    au < finished ; crawling ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 ; >
     au < crawling ; exists ; 2016 ; Journal of Perinatology Volume 36 ; 2016 ; 36 ; >
@@ -1807,7 +1807,7 @@
     
     param[journal_id] = labinvest
 
-    au < finished ; frozen ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 ; >
+    au < finished ; finished ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 ; >
     au < finished ; finished ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 ; >
     au < finished ; crawling ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 ; >
     au < finished ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 ; >
@@ -1908,7 +1908,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 ; >
     au < finished ; finished ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 ; >
     au < finished ; frozen ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 ; >
-    au < finished ; frozen ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 ; >
+    au < finished ; finished ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 ; >
     au < finished ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 ; >
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
@@ -3304,7 +3304,7 @@
     au < finished ; finished ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 ; >
-    au < finished ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
+    au < finished ; finished ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
@@ -3469,7 +3469,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 ; >
     au < finished ; frozen ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 ; >
     au < finished ; frozen ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 ; >
-    au < finished ; frozen ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 ; >
+    au < finished ; finished ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 ; >
     au < finished ; crawling ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 ; >
     au < finished ; finished ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 ; >
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; >

@@ -571,7 +571,7 @@
     param[journal_id] = jlfnvac
     # purchased by Sage 11/15
 
-    au < finished ; crawling ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
     au < finished ; finished ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
     au < finished ; finished ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
@@ -626,7 +626,7 @@
 
     au < finished ; finished ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -719,7 +719,7 @@
     au < finished ; finished ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
     au < finished ; finished ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
     au < finished ; finished ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2004 ; Wind Engineering Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2004 ; Wind Engineering Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
     au < finished ; finished ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
     au < finished ; finished ; 2007 ; Wind Engineering Volume 31 ; 31 ; >

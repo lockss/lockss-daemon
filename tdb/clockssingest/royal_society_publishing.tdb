@@ -103,7 +103,7 @@
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2008 ; Biology Letters Volume 4 ; 4 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Biology Letters Volume 5 ; 5 ; >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Biology Letters Volume 6 ; 6 ; >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Biology Letters Volume 7 ; 7 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biology Letters Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Letters Volume 9 ; 9 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
@@ -127,7 +127,7 @@
     comment[rsfs] = Do not add earlier issues - From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface 
 
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Interface Focus Volume 1 ; 1 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Interface Focus Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Interface Focus Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
     au < rsp.ClockssRSPDrupalPlugin ; exists ; exists ; 2014 ; Interface Focus Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >

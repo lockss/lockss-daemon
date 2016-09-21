@@ -295,7 +295,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
-      au < finished ; crawling ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 ; >
@@ -344,7 +344,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
-      au < finished ; crawling ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2011 ; Chemical Society Reviews Volume 40 ; 40 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Chemical Society Reviews Volume 41 ; 41 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 ; >
@@ -534,7 +534,7 @@
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
-      au < finished ; crawling ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 ; >
+      au < finished ; finished ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 ; >
       au < finished ; finished ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 ; >
@@ -590,7 +590,7 @@
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; >
       au < finished ; finished ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 ; >
 
-      au < finished ; crawling ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 ; >
       au < finished ; finished ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 ; >
       au < finished ; crawling ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 ; reingest2.clockss.org:8085 >
