@@ -85,7 +85,7 @@
     au < manifest ; exists ; 2011 ; Geophysics Volume 76 ; 76 ; >
     au < manifest ; exists ; 2012 ; Geophysics Volume 77 ; 77 ; >
     au < crawling ; exists ; 2013 ; Geophysics Volume 78 ; 78 ; >
-    au < deepCrawl ; exists ; 2014 ; Geophysics Volume 79 ; 79 ; >
+    au < frozen ; exists ; 2014 ; Geophysics Volume 79 ; 79 ; >
     au < notReady ; exists ; 2015 ; Geophysics Volume 80 ; 80 ; >
     #500 Internal Server Error
     au < testing ; exists ; 2016 ; Geophysics Volume 81 ; 81 ; >
@@ -151,8 +151,8 @@
     param[journal_id] = inteio
 
     au < crawling ; exists ; 2013 ; Interpretation Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2014 ; Interpretation Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2015 ; Interpretation Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2014 ; Interpretation Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2015 ; Interpretation Volume 3 ; 3 ; >
     au < crawling ; exists ; 2016 ; Interpretation Volume 4 ; 4 ; >
 
    
@@ -186,7 +186,7 @@
     au < manifest ; exists ; 2011 ; Journal of Environmental and Engineering Geophysics Volume 16 ; 16 ; >
     au < manifest ; exists ; 2012 ; Journal of Environmental and Engineering Geophysics Volume 17 ; 17 ; >
     au < finished ; finished ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 ; >
     au < frozen ; exists ; 2015 ; Journal of Environmental and Engineering Geophysics Volume 20 ; 20 ; >
     au < crawling ; exists ; 2016 ; Journal of Environmental and Engineering Geophysics Volume 21 ; 21 ; >
    
