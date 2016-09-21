@@ -2438,7 +2438,7 @@
     au < finished ; finished ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 ; >
     au < frozen ; exists ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 ; >
-    au < frozen ; exists ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; >
+    au < finished ; manifest ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -4006,7 +4006,7 @@
     au < crawling ; exists ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 ; >
     au < crawling ; exists ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 ; >
     au < finished ; crawling ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 ; >
+    au < finished ; manifest ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 ; >
 
   }
