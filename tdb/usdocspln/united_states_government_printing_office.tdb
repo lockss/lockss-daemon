@@ -674,6 +674,15 @@
     comment[0] = published from 1999 to 2002
     param[collection_id] = CRECB
 
+    au < exists ; 1990 ; Congressional Record (Bound) 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < exists ; 1991 ; Congressional Record (Bound) 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < exists ; 1992 ; Congressional Record (Bound) 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < exists ; 1993 ; Congressional Record (Bound) 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < exists ; 1994 ; Congressional Record (Bound) 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < exists ; 1995 ; Congressional Record (Bound) 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < exists ; 1996 ; Congressional Record (Bound) 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < exists ; 1997 ; Congressional Record (Bound) 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < exists ; 1998 ; Congressional Record (Bound) 1998 ; http://www.gpo.gov/ ; 1998 >
     au < released ; 1999 ; Congressional Record (Bound) 1999 ; http://www.gpo.gov/ ; 1999 >
     au < released ; 2000 ; Congressional Record (Bound) 2000 ; http://www.gpo.gov/ ; 2000 >
     au < released ; 2001 ; Congressional Record (Bound) 2001 ; http://www.gpo.gov/ ; 2001 >
