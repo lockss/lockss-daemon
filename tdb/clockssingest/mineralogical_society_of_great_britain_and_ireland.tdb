@@ -113,7 +113,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Mineralogical Magazine Volume 77 ; 77 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Mineralogical Magazine Volume 78 ; 78 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Mineralogical Magazine Volume 79 [superseded] ; 79 ; >
-      au < gsw.ClockssGSWDrupalPlugin ; deepCrawl ; exists ; 2015 ; Mineralogical Magazine Volume 79 ; 79 ; >
+      au < gsw.ClockssGSWDrupalPlugin ; exists ; exists ; 2015 ; Mineralogical Magazine Volume 79 ; 79 ; >
       au < gsw.ClockssGSWDrupalPlugin ; manifest ; exists ; 2016 ; Mineralogical Magazine Volume 80 ; 80 ; >
 
     }
