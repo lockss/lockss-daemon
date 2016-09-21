@@ -1299,7 +1299,7 @@
 
     param[journal_id] = atox
 
-    au < finished ; crawling ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 ; >
 
