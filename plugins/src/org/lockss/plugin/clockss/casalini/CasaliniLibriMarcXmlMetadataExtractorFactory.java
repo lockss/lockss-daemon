@@ -87,7 +87,7 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       }
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       ArrayList<String> returnList = new ArrayList<String>();
-      returnList.add(cuBase + pubDir + "/" + dirNum + "/" + fileNum + ".pdf");
+      returnList.add(cuBase + "Monographs/" + pubDir + "/" + dirNum + "/" + fileNum + ".pdf");
       return returnList;
     }    
     

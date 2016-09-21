@@ -104,7 +104,7 @@ public class TestMarcXmlMetadataExtractor extends LockssTestCase {
       IOUtil.safeClose(file_input);
 
       CIProperties xmlHeader = new CIProperties();   
-      String xml_url = BASE_URL + YEAR + "/Monographs/TestXML.xml";
+      String xml_url = BASE_URL + YEAR + "/TestXML.xml";
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
       mcu.setContent(string_input);
