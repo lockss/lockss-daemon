@@ -68,7 +68,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	
 	// from au_url_poll_result_weight in plugins/src/org/lockss/plugin/igiglobal/IgiGlobalPlugin.xml
 	// if it changes in the plugin, you will likely need to change the test, so verify
-	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "[^/]+/(images|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
+	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "://[^/]+/(images|jquery|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
 	static final String  IGI_REPAIR_FROM_PEER_REGEXP2 = "[.](css|js)$";
 
   public void setUp() throws Exception {
@@ -213,10 +213,10 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	    
 	    List <String> repairList1 = ListUtil.list(
 	        BASE_URL + "sourcecontent/9781466601161_58264/978-1-4666-0116-1.ch002.f01.png",
-                BASE_URL + "images/workflow-wizard-hand-circle-medium-gray.png",
                 BASE_URL + "jQuery/css/blitzer/images/ui-icons_004276_256x240.png",
+                BASE_URL + "images/workflow-wizard-hand-circle-medium-gray.png",
                 BASE_URL + "images/erl-2015.png");
-	    Pattern p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP1);
+	    Pattern p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP1, Pattern.CASE_INSENSITIVE);
 	    for (String urlString : repairList1) {
 	      Matcher m = p.matcher(urlString);
 	      assertEquals(urlString, true, m.find());
@@ -226,7 +226,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	        BASE_URL + "includes/main.02052016.css",
 	        BASE_URL + "Scripts/tipped/tipped.css",
 	        BASE_URL + "Scripts/tipped/tipped.js");
-	    p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP2);
+	    p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP2, Pattern.CASE_INSENSITIVE);
 	    for (String urlString : repairList2) {
 	      Matcher m = p.matcher(urlString);
 	      assertEquals(urlString, true, m.find());
