@@ -97,12 +97,11 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
     
       thisAM.put(MetadataField.FIELD_PROVIDER,"Casalini Libri");
       // Now build up a full title if that is necessary
+      StringBuilder title_br = new StringBuilder(thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_title));
       String subT = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_subtitle);  
       if (subT != null) {
-        StringBuilder title_br = new StringBuilder(thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE));
         title_br.append(": ");
         title_br.append(subT);
-        thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE,  title_br.toString());
       }
       
       // Now clean up any missing ISBN values by pulling in from alternate location
@@ -124,8 +123,12 @@ public class CasaliniLibriMarcXmlMetadataExtractorFactory extends SourceXmlMetad
       String fName = thisAM.getRaw(CasaliniMarcXmlSchemaHelper.MARC_file);
       if (dirName == null || dirName == fName) {
         thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        // attribute the title information correctly
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE,  title_br.toString());
       } else {
         thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
+        // in which case, we inaccurately put the title in to the publication.title field, when it's a chapter (article) title
+        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE,  title_br.toString());
       }
       
       // TEMPORARY

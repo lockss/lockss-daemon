@@ -107,7 +107,7 @@ implements SourceXmlSchemaHelper {
   public static String MARC_isbn =  
       "datafield[@tag = \"" + ISBN_TAG + "\"]" +
           "/subfield[@code = \"" + isbn_code + "\"]";
-  private static String MARC_title = 
+  public static String MARC_title = 
       "datafield[@tag = \"" + TITLE_TAG + "\"]" +
           "/subfield[@code = \"" + title_code + "\"]";
   public static String MARC_subtitle = 
@@ -206,8 +206,9 @@ implements SourceXmlSchemaHelper {
     // More of the records have this rather than the MARC_isbn
     // postCookProcess to add in missing values from raw data
     cookMap.put(MARC_id_isbn, MetadataField.FIELD_ISBN);
-    // we will add subtitle/edition as needed in post-cook process
-    cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    // we defer attributing this until postCookProcess when we can 
+    // determin if it is an article (chapter) title or a publication title
+    //cookMap.put(MARC_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(MARC_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(MARC_publisher, MetadataField.FIELD_PUBLISHER);
     cookMap.put(MARC_pub_date, MetadataField.FIELD_DATE);
