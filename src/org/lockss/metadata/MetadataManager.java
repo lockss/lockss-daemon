@@ -4930,18 +4930,30 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the metadata of an Archival Unit.
+   * Provides the full metadata stored for an AU given the AU identifier or a
+   * pageful of the metadata defined by the page index and size.
    * 
    * @param auId
    *          A String with the Archival Unit text identifier.
-   * @return an AuMetadataDetail with the metadata of the Archival Unit.
+   * @param page
+   *          An Integer with the index of the page to be returned.
+   * @param limit
+   *          An Integer with the maximum number of AU metadata items to be
+   *          returned.
+   * @return a List<ItemMetadataDetail> with the requested metadata of the
+   *         Archival Unit.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public AuMetadataDetail getAuMetadataDetail(String auId) throws DbException {
+  public List<ItemMetadataDetail> getAuMetadataDetail(String auId, Integer page,
+      Integer limit) throws DbException {
     final String DEBUG_HEADER = "getAuMetadataDetail(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "page = " + page);
+      log.debug2(DEBUG_HEADER + "limit = " + limit);
+    }
 
-    return mdManagerSql.getAuMetadataDetail(auId);
+    return mdManagerSql.getAuMetadataDetail(auId, page, limit);
   }
 }
