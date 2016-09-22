@@ -14863,7 +14863,7 @@
         au < manifest ; 1992-1993 ; General Music Today Volume 6 ; 6 >
         au < manifest ; 1993-1994 ; General Music Today Volume 7 ; 7 >
         au < manifest ; 1994-1995 ; General Music Today Volume 8 ; 8 >
-        au < doesNotExist ; 0 ; General Music Today Volume 9 ; 9 >
+        au < exists ; 1995-1996 ; General Music Today Volume 9 ; 9 >
         au < manifest ; 1996-1997 ; General Music Today Volume 10 ; 10 >
         au < manifest ; 1997-1998 ; General Music Today Volume 11 ; 11 >
         au < manifest ; 1998-1999 ; General Music Today Volume 12 ; 12 >
@@ -35512,7 +35512,7 @@ comment[mpj] = now published by Brill
         au < released ; 2014 ; Multiple Sclerosis Journal Volume 20 ; 20 >
         au < released ; 2015 ; Multiple Sclerosis Journal Volume 21 ; 21 >
         au < manifest ; 2016 ; Multiple Sclerosis Journal Volume 22 ; 22 >
-        au < doesNotExist ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 > #link to supplement in clockss, but content doesn't exist.
+        au < doNotProcess ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 > #link to supplement in clockss, but content doesn't exist.
 
       }
 
@@ -45070,7 +45070,7 @@ comment[mpj] = now published by Brill
         au < doesNotExist ; 1989-1990 ; TEACHING Exceptional Children Volume 22 ; 22 >
         au < doesNotExist ; 1990-1991 ; TEACHING Exceptional Children Volume 23 ; 23 >
         au < doesNotExist ; 1991-1992 ; TEACHING Exceptional Children Volume 24 ; 24 >
-        au < doesNotExist ; 1992-1993 ; TEACHING Exceptional Children Volume 25 ; 25 >
+        au < exists ; 1992-1993 ; TEACHING Exceptional Children Volume 25 ; 25 >
         au < doesNotExist ; 1993-1994 ; TEACHING Exceptional Children Volume 26 ; 26 >
         au < doesNotExist ; 1994-1995 ; TEACHING Exceptional Children Volume 27 ; 27 >
         au < doesNotExist ; 1995-1996 ; TEACHING Exceptional Children Volume 28 ; 28 >
@@ -47420,7 +47420,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1991-1992 ; Update: Applications of Research in Music Education Volume 10 ; 10 >
         au < manifest ; 1992-1993 ; Update: Applications of Research in Music Education Volume 11 ; 11 >
         au < manifest ; 1993-1994 ; Update: Applications of Research in Music Education Volume 12 ; 12 >
-        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 13 ; 13 >
+        au < exists ; 1994-1995 ; Update: Applications of Research in Music Education Volume 13 ; 13 >
         au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 14 ; 14 >
         au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 15 ; 15 >
         au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 16 ; 16 >
