@@ -26,7 +26,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/baltic-journal-of-road-and-bridge-engineering-released/
 
-    au < testing ; exists ; 2016 ; The Baltic Journal of Road and Bridge Engineering WARC Content 2016 ; 2016 >     
+    au < readySource ; crawling ; 2016 ; The Baltic Journal of Road and Bridge Engineering WARC Content 2016 ; 2016 >     
   }
 
   {
