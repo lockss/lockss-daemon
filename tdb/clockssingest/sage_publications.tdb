@@ -1088,7 +1088,7 @@
       au < doesNotExist ; doesNotExist ; 2013 ; The American Economist Volume 58 ; 58 ; >
       au < doesNotExist ; doesNotExist ; 2014 ; The American Economist Volume 59 ; 59 ; >
       au < doesNotExist ; doesNotExist ; 2015 ; The American Economist Volume 60 ; 60 ; >
-      au < manifest ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; >
+      au < crawling ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; >
 
   }
 
@@ -4716,7 +4716,7 @@
       au < finished ; finished ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
       au < finished ; finished ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; >
       au < finished ; crawling ; 2015 ; Bulletin of Science, Technology & Society Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2016 ; Bulletin of Science, Technology & Society Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2016 ; Bulletin of Science, Technology & Society Volume 36 ; 36 ; >
 
     }
 
@@ -5294,11 +5294,11 @@
       au < manifest ; exists ; 2007 ; Calcutta Statistical Association Bulletin Volume 59 ; 59 ; >
       au < manifest ; exists ; 2008 ; Calcutta Statistical Association Bulletin Volume 60 ; 60 ; >
       au < manifest ; exists ; 2009 ; Calcutta Statistical Association Bulletin Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2010 ; Calcutta Statistical Association Bulletin Volume 62 ; 62 ; >
-      au < manifest ; exists ; 2011 ; Calcutta Statistical Association Bulletin Volume 63 ; 63 ; >
-      au < manifest ; exists ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 ; >
+      au < crawling ; exists ; 2010 ; Calcutta Statistical Association Bulletin Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2011 ; Calcutta Statistical Association Bulletin Volume 63 ; 63 ; >
+      au < crawling ; exists ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 ; >
+      au < crawling ; exists ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 ; >
 
   }
 
@@ -13664,7 +13664,7 @@
       param[base_url] = http://gch.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2016 ; Global Media and China Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; Global Media and China Volume 1 ; 1 ; >
 
   }
 
@@ -16559,7 +16559,7 @@
       au < exists ; exists ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; >
       au < exists ; exists ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; >
       au < exists ; exists ; 2015 ; International Journal of Advanced Robotic Systems Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Advanced Robotic Systems Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Advanced Robotic Systems Volume 13 ; 13 ; >
 
   }
 
@@ -31866,7 +31866,7 @@
       au < crawling ; exists ; 2013 ; Millennium - Journal of International Studies Volume 42 ; 42 ; >
       au < finished ; finished ; 2014 ; Millennium - Journal of International Studies Volume 43 ; 43 ; >
       au < deepCrawl ; exists ; 2015 ; Millennium - Journal of International Studies Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2016 ; Millennium - Journal of International Studies Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2016 ; Millennium - Journal of International Studies Volume 45 ; 45 ; >
 
     }
 
