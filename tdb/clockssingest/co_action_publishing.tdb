@@ -200,7 +200,7 @@
     param[journal_id] = ecrj
 
     au < finished ; finished ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -260,7 +260,7 @@
     au < finished ; finished ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; 2013 ; >
     au < finished ; finished ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; 2016 ; >
     
   }
@@ -457,7 +457,7 @@
     au < finished ; finished ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -677,7 +677,7 @@
     au < finished ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; 2016 ; >
 
   }
