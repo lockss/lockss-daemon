@@ -19,9 +19,9 @@
       param[base_url] = http://eaces.liuc.it/
       implicit < status ; year ; name ; volume ; param[year] >
       
-      # no manifest pages online after 2008 as of 2013/10.
-      comment[doNotProcess] = plugin needs review before more processing.
-      
+      comment[doNotProcess] = journal moved to new platform. Modified ojs. No manifest pages.
+      # See http://e-journal.liuc.it/
+
       au < released ; 2004 ; European Journal of Comparative Economics 2004 ; 1 ; 2004 >
       au < released ; 2005 ; European Journal of Comparative Economics 2005 ; 2 ; 2005 >
       au < doNotProcess ; 2006 ; European Journal of Comparative Economics 2006 ; 3 ; 2006 >
@@ -32,29 +32,12 @@
       au < exists ; 2011 ; European Journal of Comparative Economics 2011 ; 8 ; 2011 >
       au < exists ; 2012 ; European Journal of Comparative Economics 2012 ; 9 ; 2012 >
       au < exists ; 2013 ; European Journal of Comparative Economics 2013 ; 10 ; 2013 >
-      au < expected ; 2014 ; European Journal of Comparative Economics 2014 ; 11 ; 2014 >
+      au < exists ; 2014 ; European Journal of Comparative Economics 2014 ; 11 ; 2014 >
+      au < exists ; 2015 ; European Journal of Comparative Economics 2015 ; 12 ; 2015 >
+      au < exists ; 2016 ; European Journal of Comparative Economics 2016 ; 13 ; 2016 >
     
     }
     
-    {
-    
-      plugin = org.lockss.plugin.ojs2.OJS2Plugin
-      param[base_url] = http://e-journal.liuc.it/
-      param[journal_id] = ejce
-      implicit < status ; year ; name ; volume ; param[year] >
-      # No content online yet, AUs from old website http://eaces.liuc.it/
-      
-      au < exists ; 2004 ; European Journal of Comparative Economics Volume 1 ; 1 ; 2004 >
-      au < exists ; 2005 ; European Journal of Comparative Economics Volume 2 ; 2 ; 2005 >
-      au < exists ; 2006 ; European Journal of Comparative Economics Volume 3 ; 3 ; 2006 >
-      au < exists ; 2007 ; European Journal of Comparative Economics Volume 4 ; 4 ; 2007 > 
-      au < exists ; 2008 ; European Journal of Comparative Economics Volume 5 ; 5 ; 2008 > 
-      au < exists ; 2009 ; European Journal of Comparative Economics Volume 6 ; 6 ; 2009 > 
-      au < exists ; 2010 ; European Journal of Comparative Economics Volume 7 ; 7 ; 2010 > 
-      au < exists ; 2011 ; European Journal of Comparative Economics Volume 8 ; 8 ; 2011 > 
-    
-    }
-
   }
 
 }
