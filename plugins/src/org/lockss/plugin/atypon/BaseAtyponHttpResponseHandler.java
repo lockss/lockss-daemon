@@ -56,7 +56,7 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   //
   // child can override through getter to extend or change the pattern
   protected static final Pattern DEFAULT_NON_FATAL_PAT = 
-      Pattern.compile("action/(download(Table|Figures)|showPopup)");
+      Pattern.compile("action/(download(Table|Figures)|show(Popup|Cit))");
     
   private static final Logger logger = Logger.getLogger(BaseAtyponHttpResponseHandler.class);
 

@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>57</string>
+    <string>58</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -282,12 +282,14 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url + templates/jsp/. or any of (img|css|js)Jawr/ or sda/ or wro/ or pb-assets/ or resources/
          OR /(img|css|js)/ if ends .css, .js, etc 
-         OR base_url + na10x/home/..../covergifs/..*.jpg (inderscience) 
+         OR base_url + na10x/home/..../covergifs/..*.jpg (inderscience, temporarily provided)
+         OR base_url + na10x/home/.*.fp.png (inderscience, tempoarily provided firstpage of article)
+           ex: ..home/literatum/.../ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03 
          -->
     <list>
     <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
     <string>/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
-    <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/covergifs/.*\.jpg$</string>
+    <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
     </list>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
@@ -297,7 +299,7 @@
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/, 0</string>
       <string>/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
-      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*/covergifs/.*\.jpg$, 0</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
     </list>
   </entry>
   <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
