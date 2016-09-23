@@ -10383,7 +10383,8 @@
       pluginSuffix = HWDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2016 ; Digital Health Volume 1 ; 1 >
+      au < exists ; 2015 ; Digital Health Volume 1 ; 1 >
+      au < exists ; 2016 ; Digital Health Volume 2 ; 2 >
 
   }
 
