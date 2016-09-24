@@ -34,6 +34,7 @@ package org.lockss.tdb;
 
 import java.io.*;
 import java.util.*;
+import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
@@ -146,7 +147,7 @@ public class TdbParse {
     Tdb tdb = processFiles(options);
     ObjectOutputStream oos = null;
     try {
-      oos = new ObjectOutputStream(OutputOption.getSingleOutput(options));
+      oos = new ObjectOutputStream(new GZIPOutputStream(OutputOption.getSingleOutput(options)));
       oos.writeObject(tdb);
     }
     catch (IOException ioe) {
