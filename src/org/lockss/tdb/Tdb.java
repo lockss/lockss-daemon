@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.tdb;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -48,7 +49,7 @@ import java.util.*;
  * @author Thib Guicherd-Callin
  * @since 1.67
  */
-public class Tdb {
+public class Tdb implements Serializable {
   
   /**
    * <p>
