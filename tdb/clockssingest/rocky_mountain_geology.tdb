@@ -81,8 +81,8 @@
       au < gsw.ClockssGSWDrupalPlugin ; manifest ; exists ; 2011 ; Rocky Mountain Geology Volume 46 ; 46 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Rocky Mountain Geology Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2014 ; Rocky Mountain Geology Volume 49 ; 49 ; >
-      au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Rocky Mountain Geology Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2014 ; Rocky Mountain Geology Volume 49 [superseded] ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Rocky Mountain Geology Volume 50 ; 50 ; >
       au < gsw.ClockssGSWDrupalPlugin ; manifest ; exists ; 2016 ; Rocky Mountain Geology Volume 51 ; 51 ; >
       
     }
