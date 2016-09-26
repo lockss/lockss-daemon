@@ -221,6 +221,7 @@ while (my $line = <>) {
            $plugin eq "ClockssADADrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
            $plugin eq "ClockssAAASDrupalPlugin" ||
+           $plugin eq "ClockssBiologistsDrupalPlugin" ||
            $plugin eq "ClockssERSDrupalPlugin" ||
            $plugin eq "ClockssGSLDrupalPlugin" ||
            $plugin eq "ClockssGSWDrupalPlugin" ||
