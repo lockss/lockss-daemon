@@ -5,7 +5,7 @@
     info[tester] = 8
   >
 
-    #pluginPrefix = org.lockss.plugin.highwire.
+    pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
