@@ -5312,7 +5312,9 @@
       param[base_url] = http://cjk.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < expected ; exists ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; >
+      au < exists ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
+      au < exists ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; >
+      au < exists ; exists ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; >
 
   }
 
@@ -43829,7 +43831,9 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://trc.sagepub.com/
 
-      au < expected ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
+      au < exists ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
+      au < exists ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
+      au < exists ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
 
   }
 
