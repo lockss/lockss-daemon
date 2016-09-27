@@ -60,7 +60,7 @@
     au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
     au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
+    au < finished ; finished ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
     au < finished ; crawling ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
 
@@ -200,7 +200,7 @@
     au < finished ; finished ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
     au < finished ; finished ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; >
 
