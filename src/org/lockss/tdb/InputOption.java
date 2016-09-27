@@ -89,15 +89,6 @@ public class InputOption {
   
   /**
    * <p>
-   * Argument name for the standard input option ({@value}).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final String ARG_INPUT = "FILE";
-  
-  /**
-   * <p>
    * Adds the standard input option to a Commons CLI {@link Options}
    * instance.
    * </p>

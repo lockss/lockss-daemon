@@ -34,7 +34,7 @@ package org.lockss.tdb;
 
 import java.io.*;
 import java.util.*;
-import java.util.zip.GZIPOutputStream;
+import java.util.zip.*;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
@@ -145,21 +145,41 @@ public class TdbParse {
     Map<String, Object> options = processCommandLine(cmd);
     // Run
     Tdb tdb = processFiles(options);
-    ObjectOutputStream oos = null;
     try {
-      oos = new ObjectOutputStream(new GZIPOutputStream(OutputOption.getSingleOutput(options)));
-      oos.writeObject(tdb);
+      dumpTdb(tdb, OutputOption.getSingleOutput(options));
     }
     catch (IOException ioe) {
-      AppUtil.error(options, ioe, "I/O error");
+      AppUtil.error(options, ioe, "Output error");
     }
     finally {
-      try {
-        oos.close();
-      }
-      catch (IOException ioe) {
-        // ...
-      }
+      OutputOption.getSingleOutput(options).close();
+    }
+  }
+  
+  /**
+   * @param tdb
+   * @param outputStream
+   * @throws IOException
+   * @since 1.72
+   */
+  public static void dumpTdb(Tdb tdb, OutputStream outputStream) throws IOException {
+    ObjectOutputStream oos = new ObjectOutputStream(new GZIPOutputStream(outputStream));
+    oos.writeObject(tdb);
+  }
+
+  /**
+   * @param inputStream
+   * @return
+   * @throws IOException
+   * @since 1.72
+   */
+  public static Tdb loadTdbDump(InputStream inputStream) throws IOException {
+    ObjectInputStream ois = new ObjectInputStream(new GZIPInputStream(inputStream));
+    try {
+      return (Tdb)ois.readObject();
+    }
+    catch (ClassNotFoundException cnfe) {
+      throw new IOException(cnfe);
     }
   }
   
