@@ -591,9 +591,9 @@
     au < doNotProcess ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < doNotProcess ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
     au < doNotProcess ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
-    au < exists ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
-    au < exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
-    au < exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
+    au < manifest ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; 2013 >
+    au < manifest ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; 2014 >
+    au < manifest ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; 2015 >
     }
   }
 
@@ -609,7 +609,7 @@
     param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = nano
 
-    au < exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; 2016 >
+    au < manifest ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; 2016 >
 
   }
 

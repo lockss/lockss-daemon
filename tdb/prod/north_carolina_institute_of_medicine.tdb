@@ -17,8 +17,8 @@
     # 2002-2013 content on http://classic.ncmedicaljournal.com/
     # notReady: subscription updated RT 7723. Login for V75 at http://www.ncmedicaljournal.com/content/75/1/15/suppl/DCSupplemental
 
-    au < exists ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
-    au < exists ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < manifest ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < manifest ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
     au < manifest ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
 
   }
