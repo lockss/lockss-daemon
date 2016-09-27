@@ -73,6 +73,7 @@ public class TdbParse {
    */
   public void addOptions(Options opts) {
     HelpOption.addOptions(opts);
+    VerboseOption.addOptions(opts);
     VersionOption.addOptions(opts);
     InputOption.addOptions(opts);
     OutputOption.addOptions(opts);
@@ -140,9 +141,8 @@ public class TdbParse {
     Options opts = new Options();
     addOptions(opts);
     CommandLineAccessor cmd = new CommandLineAdapter(new DefaultParser().parse(opts, mainArgs));
-    Map<String, Object> options = processCommandLine(cmd);
     HelpOption.processCommandLine(cmd, opts, getClass());
-    processCommandLine(cmd);
+    Map<String, Object> options = processCommandLine(cmd);
     // Run
     Tdb tdb = processFiles(options);
     ObjectOutputStream oos = null;
@@ -151,7 +151,6 @@ public class TdbParse {
       oos.writeObject(tdb);
     }
     catch (IOException ioe) {
-      ioe.printStackTrace();//FIXME
       AppUtil.error(options, ioe, "I/O error");
     }
     finally {

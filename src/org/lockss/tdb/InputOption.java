@@ -111,7 +111,7 @@ public class InputOption {
                    .longOpt(KEY_INPUT)
                    .hasArg()
                    .argName("INFILE")
-                   .desc("read input only from INFILE instead of list of files")
+                   .desc("read input from INFILE instead of list of files")
                    .build());
   }
 
