@@ -3581,7 +3581,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 ; >
     au < finished ; crawling ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; OP-Journal Volume 2016 ; 32 ; >
+    au < testing ; exists ; 2016 ; 2016 ; OP-Journal Volume 2016 ; 32 ; >
 
   }
 
@@ -5271,7 +5271,7 @@
    au < finished ; finished ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2014 ; 2014 ; SYNFACTS Volume 2014 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; SYNFACTS Volume 2015 ; 11 ; reingest2.clockss.org:8085 >
-   au < manifest ; exists ; 2016 ; 2016 ; SYNFACTS Volume 2016 ; 12 ; >
+   au < testing ; exists ; 2016 ; 2016 ; SYNFACTS Volume 2016 ; 12 ; >
 
   }
 
@@ -5314,7 +5314,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 ; >
    au < finished ; crawling ; 2014 ; 2014 ; SYNLETT Volume 2014 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; SYNLETT Volume 2015 ; 26 ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2016 ; 2016 ; SYNLETT Volume 2016 ; 27 ; >
+   au < testing ; exists ; 2016 ; 2016 ; SYNLETT Volume 2016 ; 27 ; >
 
   }
 
@@ -5357,7 +5357,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 ; >
    au < finished ; crawling ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 ; >
-   au < manifest ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 2016 ; 48 ; >
+   au < testing ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 2016 ; 48 ; >
 
   }
 
@@ -5401,7 +5401,7 @@
    au < finished ; finished ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 ; >
    au < finished ; crawling ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 ; reingest4.clockss.org:8082 >
-   au < manifest ; exists ; 2016 ; 2016 ; team-konkret Volume 2016 ; 12 ; >
+   au < testing ; exists ; 2016 ; 2016 ; team-konkret Volume 2016 ; 12 ; >
 
   }
 
@@ -5454,7 +5454,7 @@
     au < finished ; finished ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 ; >
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 ; >
     au < finished ; crawling ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 2016 ; 64 ; >
+    au < testing ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Volume 2016 ; 64 ; >
 
   }
 
@@ -5514,7 +5514,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2016 ; 6 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2016 ; 6 ; >
 
   }
 
@@ -5546,7 +5546,7 @@
     au < finished ; finished ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 ; >
     au < finished ; finished ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 2016 ; 37 ; >
+    au < testing ; exists ; 2016 ; 2016 ; TumorDiagnostik & Therapie Volume 2016 ; 37 ; >
 
   }
 
@@ -5598,7 +5598,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 ; >
     au < finished ; finished ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2016 ; 37 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2016 ; 37 ; >
 
   }
 
@@ -5613,7 +5613,7 @@
     param[journal_id] = 10.1055/s-00028422
 
    au < finished ; crawling ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
+   au < testing ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
 
   }
 
@@ -5630,7 +5630,7 @@
 
    au < finished ; finished ; 2014 ; 2014 ; Urologie Scan Volume 2014 ; 1 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Urologie Scan Volume 2015 ; 2 ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2016 ; 2016 ; Urologie Scan Volume 2016 ; 3 ; >
+   au < testing ; exists ; 2016 ; 2016 ; Urologie Scan Volume 2016 ; 3 ; >
 
   }
 
@@ -5659,7 +5659,7 @@
     au < finished ; finished ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 ; >
     au < finished ; finished ; 2014 ; 2014 ; veterinär spiegel Volume 2014 ; 24 ; >
     au < finished ; finished ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; veterinär spiegel Volume 2016 ; 26 ; >
+    au < testing ; exists ; 2016 ; 2016 ; veterinär spiegel Volume 2016 ; 26 ; >
 
   }
 
@@ -6145,7 +6145,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Sexualforschung Volume 2013 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Sexualforschung Volume 2014 ; 27 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 2015 ; 28 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 2016 ; 29 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Sexualforschung Volume 2016 ; 29 ; >
 
   }
 
@@ -6177,7 +6177,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Zeitschrift für Chirurgie Volume 2013 ; 138 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 2014 ; 139 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 2015 ; 140 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 2016 ; 141 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 2016 ; 141 ; >
 
   }
 
@@ -6293,7 +6293,7 @@
     au < finished ; finished ; 2013 ; 2013 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2013 ; 122 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2014 ; 123 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2015 ; 124 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2016 ; 125 ; >
+    au < testing ; exists ; 2016 ; 2016 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2016 ; 125 ; >
 
   }
 
