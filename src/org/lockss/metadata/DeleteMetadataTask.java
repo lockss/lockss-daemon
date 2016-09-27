@@ -30,7 +30,8 @@ package org.lockss.metadata;
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.sql.Connection;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.LockssApp;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssWatchdog;
 import org.lockss.db.DbManager;
 import org.lockss.db.JdbcContext;
@@ -115,8 +116,11 @@ public class DeleteMetadataTask extends StepTask {
     this.au = au;
     this.auName = au.getName();
     this.auId = au.getAuId();
-    dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
+    //dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    //mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
+    mdManager =
+	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
     mdManagerSql = mdManager.getMetadataManagerSql();
 
     // Set the task event handler callback after construction to ensure that the

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +27,8 @@
  */
 package org.lockss.db;
 
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.LockssApp;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Logger;
 
@@ -57,7 +54,9 @@ public class DbVersion16To17Migrator extends LockssRunnable {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     try {
-      DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      DbManager dbManager =
+	  (DbManager)LockssApp.getManager(DbManager.getManagerKey());
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
 
       DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();

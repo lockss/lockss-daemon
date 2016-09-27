@@ -41,6 +41,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
+import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.plugin.ArchivalUnit;
@@ -5533,7 +5534,8 @@ public class DbManagerSql {
     // book chapter/journal article fetch times.
     DbVersion9To10Migrator migrator = new DbVersion9To10Migrator();
     Thread thread = new Thread(migrator, "DbVersion9To10Migrator");
-    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    //LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    getDbManager().recordThread(thread);
     new Thread(migrator).start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -6201,7 +6203,8 @@ public class DbManagerSql {
     // Archival Units.
     DbVersion14To15Migrator migrator = new DbVersion14To15Migrator();
     Thread thread = new Thread(migrator, "DbVersion14To15Migrator");
-    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    //LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    getDbManager().recordThread(thread);
     new Thread(migrator).start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -6373,7 +6376,8 @@ public class DbManagerSql {
     // book chapter/journal article fetch times.
     DbVersion16To17Migrator migrator = new DbVersion16To17Migrator();
     Thread thread = new Thread(migrator, "DbVersion16To17Migrator");
-    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    //LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    getDbManager().recordThread(thread);
     thread.start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -7317,7 +7321,8 @@ public class DbManagerSql {
     // Populate in a separate thread the Archival Unit providers.
     DbVersion19To20Migrator migrator = new DbVersion19To20Migrator();
     Thread thread = new Thread(migrator, "DbVersion19To20Migrator");
-    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    //LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    getDbManager().recordThread(thread);
     thread.start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -7806,7 +7811,8 @@ public class DbManagerSql {
     // Populate in a separate thread the unknown Archival Unit providers.
     DbVersion21To22Migrator migrator = new DbVersion21To22Migrator();
     Thread thread = new Thread(migrator, "DbVersion21To22Migrator");
-    LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    //LockssDaemon.getLockssDaemon().getDbManager().recordThread(thread);
+    getDbManager().recordThread(thread);
     thread.start();
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -9228,5 +9234,14 @@ public class DbManagerSql {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the database manager.
+   * 
+   * @return a DbManager with the database manager.
+   */
+  private DbManager getDbManager() {
+    return (DbManager)LockssApp.getManager(DbManager.getManagerKey());
   }
 }

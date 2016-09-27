@@ -44,9 +44,15 @@ import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
-import org.lockss.app.*;
-import org.lockss.config.*;
-import org.lockss.util.*;
+import org.lockss.app.BaseLockssDaemonManager;
+import org.lockss.app.ConfigurableManager;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.util.Constants;
+import org.lockss.util.Deadline;
+import org.lockss.util.FileUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 /**
  * Database manager.
@@ -476,6 +482,15 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static String truncateVarchar(String original, int maxLength) {
     return DbManagerSql.truncateVarchar(original, maxLength);
+  }
+
+  /**
+   * Provides the key used by the application to locate this manager.
+   * 
+   * @return a String with the manager key.
+   */
+  public static String getManagerKey() {
+    return "DbManager";
   }
 
   /**

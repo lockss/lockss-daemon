@@ -25,7 +25,6 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-
 package org.lockss.daemon;
 
 import static org.lockss.db.SqlConstants.*;
@@ -36,6 +35,7 @@ import java.sql.*;
 import java.text.ParseException;
 import java.util.*;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.AuParamType.InvalidFormatException;
@@ -105,7 +105,7 @@ public class OpenUrlResolver {
   private static final Logger log = Logger.getLogger(OpenUrlResolver.class);
 
   /** the LOCKSS daemon */
-  private final LockssDaemon daemon;
+  //private final LockssDaemon daemon;
   /** the PluginManager */
   private final PluginManager pluginMgr;
   
@@ -379,7 +379,7 @@ public class OpenUrlResolver {
     if (daemon == null) {
       throw new IllegalArgumentException("LOCKSS daemon not specified");
     }
-    this.daemon = daemon;
+    //this.daemon = daemon;
     this.pluginMgr = daemon.getPluginManager();
   }
   
@@ -1176,7 +1176,8 @@ public class OpenUrlResolver {
     OpenUrlInfo resolved = noOpenUrlInfo;
     try {
       // resolve from database manager
-      DbManager dbMgr = daemon.getDbManager();
+      //DbManager dbMgr = daemon.getDbManager();
+      DbManager dbMgr = getDbManager();
       resolved = resolveFromDoi(dbMgr, doi);
     } catch (IllegalArgumentException ex) {
     }
@@ -1364,7 +1365,8 @@ public class OpenUrlResolver {
     
     // try resolving from the metadata database first
     try {
-      DbManager dbMgr = daemon.getDbManager();
+      //DbManager dbMgr = daemon.getDbManager();
+      DbManager dbMgr = getDbManager();
       OpenUrlInfo aResolved = resolveFromIssn(dbMgr, issn, pub, date, 
                                   volume, issue, spage, artnum, author, atitle);
       if (aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
@@ -1639,8 +1641,10 @@ public class OpenUrlResolver {
     final String DEBUG_HEADER = "resolveFromQuery(): ";
     log.debug3(DEBUG_HEADER + "query: " + query);
 
-    PreparedStatement stmt =
-	daemon.getDbManager().prepareStatement(conn, query);
+    //PreparedStatement stmt = 
+	//daemon.getDbManager().prepareStatement(conn, query);
+    DbManager dbMgr = getDbManager();
+    PreparedStatement stmt = dbMgr.prepareStatement(conn, query);
 
     int count = 0;
 
@@ -1651,7 +1655,8 @@ public class OpenUrlResolver {
       }
 
       stmt.setMaxRows(results.length); // only need 2 to to determine if unique
-      ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
+      //ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
+      ResultSet resultSet = dbMgr.executeQuery(stmt);
       
       for ( ; count < results.length && resultSet.next(); count++) {
         for (int i = 0; i < results[count].length; i++) {
@@ -2320,7 +2325,8 @@ public class OpenUrlResolver {
     // only go to database manager if requesting individual article/chapter
     try {
       // resolve from database manager
-      DbManager dbMgr = daemon.getDbManager();
+      //DbManager dbMgr = daemon.getDbManager();
+      DbManager dbMgr = getDbManager();
       OpenUrlInfo aResolved = resolveFromIsbn(
           dbMgr, isbn, pub, date, volume, edition, 
           chapter, spage, author, atitle);
@@ -2606,5 +2612,14 @@ public class OpenUrlResolver {
     args.add("% " + authorEsc);    
     
     where.append(")");
+  }
+
+  /**
+   * Provides the database manager.
+   * 
+   * @return a DbManager with the database manager.
+   */
+  private DbManager getDbManager() {
+    return (DbManager)LockssApp.getManager(DbManager.getManagerKey());
   }
 }

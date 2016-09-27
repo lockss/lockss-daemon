@@ -31,11 +31,11 @@ import java.util.*;
 import org.apache.commons.lang3.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.db.DbManager;
+//import org.lockss.db.DbManager;
 import org.lockss.account.*;
-import org.lockss.job.JobManager;
+//import org.lockss.job.JobManager;
 import org.lockss.scheduler.*;
-import org.lockss.metadata.MetadataManager;
+//import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
@@ -102,7 +102,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ROUTER_MANAGER = "RouterManager";
   public static final String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
   public static final String PLUGIN_MANAGER = "PluginManager";
-  public static final String METADATA_MANAGER = "MetadataManager";
+  //public static final String METADATA_MANAGER = "MetadataManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
   public static final String LOCKSS_REPOSITORY = "LockssRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
@@ -118,59 +118,59 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String OVERVIEW_STATUS = "OverviewStatus";
   public static final String CRON = "Cron";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
-  public static final String DB_MANAGER = "DbManager";
-  public static final String JOB_MANAGER = "JobManager";
+  //public static final String DB_MANAGER = "DbManager";
+  //public static final String JOB_MANAGER = "JobManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
-  protected final ManagerDesc[] managerDescs = {
-    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
-    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
-    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
-    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
-    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
-    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
-    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
-    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
-    // keystore manager must be started before any others that need to
-    // access managed keystores
-    new ManagerDesc(KEYSTORE_MANAGER,
-                    "org.lockss.daemon.LockssKeyStoreManager"),
-    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
-    new ManagerDesc(REPOSITORY_MANAGER,
-                    "org.lockss.repository.RepositoryManager"),
-    // start plugin manager after generic services
-    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
-    // start database manager before any manager that uses it.
-    new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
-    // start metadata manager after pluggin manager and database manager.
-    new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
-    // Start the job manager.
-    new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
-    // NOTE: Any managers that are needed to decide whether a servlet is to be
-    // enabled or not (through ServletDescr.isEnabled()) need to appear before
-    // the AdminServletManager on the next line.
-    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
-    new ManagerDesc(CONTENT_SERVLET_MANAGER,
-                    "org.lockss.servlet.ContentServletManager"),
-    // comm after other major services so don't process messages until
-    // they're ready
-    new ManagerDesc(NODE_MANAGER_MANAGER,
-                    "org.lockss.state.NodeManagerManager"),
-    new ManagerDesc(PLATFORM_CONFIG_STATUS,
-                    "org.lockss.config.PlatformConfigStatus"),
-    new ManagerDesc(CONFIG_STATUS,
-                    "org.lockss.config.ConfigStatus"),
-    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
-                    "org.lockss.state.ArchivalUnitStatus"),
-    new ManagerDesc(REPOSITORY_STATUS,
-                    "org.lockss.repository.LockssRepositoryStatus"),
-    new ManagerDesc(OVERVIEW_STATUS,
-                    "org.lockss.daemon.status.OverviewStatus"),
-    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
-    // watchdog last
-    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
-  };
+//  protected final ManagerDesc[] managerDescs = {
+//    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
+//    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
+//    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
+//    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
+//    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
+//    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
+//    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
+//    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
+//    // keystore manager must be started before any others that need to
+//    // access managed keystores
+//    new ManagerDesc(KEYSTORE_MANAGER,
+//                    "org.lockss.daemon.LockssKeyStoreManager"),
+//    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
+//    new ManagerDesc(REPOSITORY_MANAGER,
+//                    "org.lockss.repository.RepositoryManager"),
+//    // start plugin manager after generic services
+//    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
+//    // start database manager before any manager that uses it.
+//    new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
+//    // start metadata manager after pluggin manager and database manager.
+//    new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
+//    // Start the job manager.
+//    new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
+//    // NOTE: Any managers that are needed to decide whether a servlet is to be
+//    // enabled or not (through ServletDescr.isEnabled()) need to appear before
+//    // the AdminServletManager on the next line.
+//    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
+//    new ManagerDesc(CONTENT_SERVLET_MANAGER,
+//                    "org.lockss.servlet.ContentServletManager"),
+//    // comm after other major services so don't process messages until
+//    // they're ready
+//    new ManagerDesc(NODE_MANAGER_MANAGER,
+//                    "org.lockss.state.NodeManagerManager"),
+//    new ManagerDesc(PLATFORM_CONFIG_STATUS,
+//                    "org.lockss.config.PlatformConfigStatus"),
+//    new ManagerDesc(CONFIG_STATUS,
+//                    "org.lockss.config.ConfigStatus"),
+//    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
+//                    "org.lockss.state.ArchivalUnitStatus"),
+//    new ManagerDesc(REPOSITORY_STATUS,
+//                    "org.lockss.repository.LockssRepositoryStatus"),
+//    new ManagerDesc(OVERVIEW_STATUS,
+//                    "org.lockss.daemon.status.OverviewStatus"),
+//    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+//    // watchdog last
+//    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
+//  };
 
   // AU-specific manager descriptors.  As each AU is created its managers
   // are started in this order.
@@ -210,7 +210,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   protected ManagerDesc[] getManagerDescs() {
-    return managerDescs;
+//    return managerDescs;
+    return null;
   }
 
   // General information accessors
@@ -295,9 +296,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return the MetadataManager
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public MetadataManager getMetadataManager() {
-    return (MetadataManager) getManager(METADATA_MANAGER);
-  }
+//  public MetadataManager getMetadataManager() {
+//    return (MetadataManager) getManager(METADATA_MANAGER);
+//  }
 
   /**
    * return the Account Manager
@@ -363,9 +364,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @throws IllegalArgumentException
    *           if the manager is not available.
    */
-  public DbManager getDbManager() {
-    return (DbManager) getManager(DB_MANAGER);
-  }
+//  public DbManager getDbManager() {
+//    return (DbManager) getManager(DB_MANAGER);
+//  }
 
   /**
    * Provides the job manager.
@@ -374,9 +375,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @throws IllegalArgumentException
    *           if the manager is not available.
    */
-  public JobManager getJobManager() {
-    return (JobManager) getManager(JOB_MANAGER);
-  }
+//  public JobManager getJobManager() {
+//    return (JobManager) getManager(JOB_MANAGER);
+//  }
 
   // LockssAuManager accessors
 

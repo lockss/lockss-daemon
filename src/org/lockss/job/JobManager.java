@@ -34,7 +34,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.LockssApp;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
@@ -158,8 +159,11 @@ public class JobManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    dbManager = getDaemon().getDbManager();
-    mdManager = getDaemon().getMetadataManager();
+    //dbManager = getDaemon().getDbManager();
+    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    //mdManager = getDaemon().getMetadataManager();
+    mdManager =
+	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
 
     try {
       jobManagerSql = new JobManagerSql(dbManager);
@@ -192,6 +196,15 @@ public class JobManager extends BaseLockssDaemonManager implements
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "JobManager service successfully started");
+  }
+
+  /**
+   * Provides the key used by the application to locate this manager.
+   * 
+   * @return a String with the manager key.
+   */
+  public static String getManagerKey() {
+    return "JobManager";
   }
 
   /**
@@ -869,8 +882,9 @@ public class JobManager extends BaseLockssDaemonManager implements
 
     try {
       // Get the Archival Unit.
-      ArchivalUnit au =
-	  LockssDaemon.getLockssDaemon().getMetadataManager().getAu(auId);
+//      ArchivalUnit au =
+//	  LockssDaemon.getLockssDaemon().getMetadataManager().getAu(auId);
+      ArchivalUnit au = mdManager.getAu(auId);
       if (log.isDebug3()) log.debug3("au = " + au);
 
       // Check whether it does exist.

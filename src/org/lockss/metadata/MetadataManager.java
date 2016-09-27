@@ -44,7 +44,8 @@ import java.util.Set;
 import java.util.TreeMap;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.LockssApp;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.config.BaseConfigFile;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -61,6 +62,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.job.JobManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
@@ -345,7 +347,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug(DEBUG_HEADER + "Starting MetadataManager");
 
     pluginMgr = getDaemon().getPluginManager();
-    dbManager = getDaemon().getDbManager();
+    //dbManager = getDaemon().getDbManager();
+    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
 
     try {
       mdManagerSql = new MetadataManagerSql(dbManager, this);
@@ -473,6 +476,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	}
       }
     }
+  }
+
+  /**
+   * Provides the key used by the application to locate this manager.
+   * 
+   * @return a String with the manager key.
+   */
+  public static String getManagerKey() {
+    return "MetadataManager";
   }
 
   /**
@@ -2929,8 +2941,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
     if (onDemandMetadataExtractionOnly) {
-      LockssDaemon.getLockssDaemon().getJobManager()
-      .handlePutAuJobStartEvent(au.getAuId());
+      //LockssDaemon.getLockssDaemon().getJobManager()
+      getJobManager().handlePutAuJobStartEvent(au.getAuId());
     }
   }
 
@@ -2952,8 +2964,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     if (onDemandMetadataExtractionOnly) {
-      LockssDaemon.getLockssDaemon().getJobManager()
-      .handlePutAuJobFinishEvent(au.getAuId(), status, exception);
+      //LockssDaemon.getLockssDaemon().getJobManager()
+      getJobManager().handlePutAuJobFinishEvent(au.getAuId(), status,
+	  exception);
     }
   }
 
@@ -2968,8 +2981,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
     if (onDemandMetadataExtractionOnly) {
-      LockssDaemon.getLockssDaemon().getJobManager()
-      .handleDeleteAuJobStartEvent(au.getAuId());
+      //LockssDaemon.getLockssDaemon().getJobManager()
+      getJobManager().handleDeleteAuJobStartEvent(au.getAuId());
     }
   }
 
@@ -2992,8 +3005,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     if (onDemandMetadataExtractionOnly) {
-      LockssDaemon.getLockssDaemon().getJobManager()
-      .handleDeleteAuJobFinishEvent(au.getAuId(), status, exception);
+      //LockssDaemon.getLockssDaemon().getJobManager()
+      getJobManager().handleDeleteAuJobFinishEvent(au.getAuId(), status,
+	  exception);
     }
   }
 
@@ -4955,5 +4969,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     return mdManagerSql.getAuMetadataDetail(auId, page, limit);
+  }
+
+  /**
+   * Provides the job manager.
+   * 
+   * @return a JobManager with the job manager.
+   */
+  private JobManager getJobManager() {
+    return (JobManager)LockssApp.getManager(JobManager.getManagerKey());
   }
 }

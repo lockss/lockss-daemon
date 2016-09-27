@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +36,8 @@ package org.lockss.db;
 import java.sql.SQLException;
 import java.util.Properties;
 import org.apache.derby.authentication.UserAuthenticator;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.LockssApp;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -66,7 +63,9 @@ public class DerbyUserAuthenticator implements UserAuthenticator {
    */
   public DerbyUserAuthenticator() {
     final String DEBUG_HEADER = "DerbyUserAuthenticator(): ";
-    DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    DbManager dbManager =
+	(DbManager)LockssApp.getManager(DbManager.getManagerKey());
 
     // Get the authentication parameters from the database manager and store
     // them to use them when authenticating passed credentiales later on.

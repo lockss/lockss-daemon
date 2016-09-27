@@ -31,6 +31,7 @@ import java.io.*;
 import java.lang.management.*;
 import java.sql.*;
 import java.util.*;
+import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
@@ -169,8 +170,11 @@ public class ReindexingTask extends StepTask {
       this.auNoSubstance = AuUtil.getAuState(au).hasNoSubstance();
     }
 
-    dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
+    //dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    //mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
+    mdManager =
+	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
     mdManagerSql = mdManager.getMetadataManagerSql();
 
     // The accumulator of article metadata.

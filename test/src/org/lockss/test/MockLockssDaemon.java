@@ -25,7 +25,6 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-
 package org.lockss.test;
 
 import java.util.List;
@@ -47,6 +46,56 @@ import org.lockss.util.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
+
+  // Manager descriptors.  The order of this table determines the order in
+  // which managers are initialized and started.
+  protected final ManagerDesc[] managerDescs = {
+    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
+    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
+    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
+    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
+    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
+    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
+    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
+    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
+    // keystore manager must be started before any others that need to
+    // access managed keystores
+    new ManagerDesc(KEYSTORE_MANAGER,
+                    "org.lockss.daemon.LockssKeyStoreManager"),
+    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
+    new ManagerDesc(REPOSITORY_MANAGER,
+                    "org.lockss.repository.RepositoryManager"),
+    // start plugin manager after generic services
+    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
+    // start database manager before any manager that uses it.
+    new ManagerDesc(DbManager.getManagerKey(), "org.lockss.db.DbManager"),
+    // start metadata manager after pluggin manager and database manager.
+    new ManagerDesc(MetadataManager.getManagerKey(),
+	"org.lockss.metadata.MetadataManager"),
+    // NOTE: Any managers that are needed to decide whether a servlet is to be
+    // enabled or not (through ServletDescr.isEnabled()) need to appear before
+    // the AdminServletManager on the next line.
+    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
+    new ManagerDesc(CONTENT_SERVLET_MANAGER,
+                    "org.lockss.servlet.ContentServletManager"),
+    // comm after other major services so don't process messages until
+    // they're ready
+    new ManagerDesc(NODE_MANAGER_MANAGER,
+                    "org.lockss.state.NodeManagerManager"),
+    new ManagerDesc(PLATFORM_CONFIG_STATUS,
+                    "org.lockss.config.PlatformConfigStatus"),
+    new ManagerDesc(CONFIG_STATUS,
+                    "org.lockss.config.ConfigStatus"),
+    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
+                    "org.lockss.state.ArchivalUnitStatus"),
+    new ManagerDesc(REPOSITORY_STATUS,
+                    "org.lockss.repository.LockssRepositoryStatus"),
+    new ManagerDesc(OVERVIEW_STATUS,
+                    "org.lockss.daemon.status.OverviewStatus"),
+    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+    // watchdog last
+    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
+  };
 
   ResourceManager resourceManager = null;
   WatchdogService wdogService = null;
@@ -327,25 +376,25 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the metadata manager instance
    * @return the MetadataManager
    */
-  public MetadataManager getMetadataManager() {
-    if (metadataManager == null) {
-      metadataManager = (MetadataManager)newManager(LockssDaemon.METADATA_MANAGER);
-      managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
-    }
-    return metadataManager;
-  }
+//  public MetadataManager getMetadataManager() {
+//    if (metadataManager == null) {
+//      metadataManager = (MetadataManager)newManager(LockssDaemon.METADATA_MANAGER);
+//      managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
+//    }
+//    return metadataManager;
+//  }
 
   /**
    * return the database manager instance
    * @return the DbManager
    */
-  public DbManager getDbManager() {
-    if (dbManager == null) {
-      dbManager = (DbManager)newManager(LockssDaemon.DB_MANAGER);
-      managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
-    }
-    return dbManager;
-  }
+//  public DbManager getDbManager() {
+//    if (dbManager == null) {
+//      dbManager = (DbManager)newManager(LockssDaemon.DB_MANAGER);
+//      managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+//    }
+//    return dbManager;
+//  }
 
   /**
    * return the cron instance
@@ -436,7 +485,8 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setMetadataManager(MetadataManager metadataMan) {
     metadataManager = metadataMan;
-    managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
+//    managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
+    managerMap.put(MetadataManager.getManagerKey(), metadataManager);
   }
 
   /**
@@ -472,7 +522,8 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setDbManager(DbManager dbMan) {
     dbManager = dbMan;
-    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+//    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+    managerMap.put(DbManager.getManagerKey(), dbManager);
   }
 
   /**
