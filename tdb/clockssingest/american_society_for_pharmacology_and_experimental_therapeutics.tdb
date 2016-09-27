@@ -6,7 +6,6 @@
     info[tester] = 5
   >
   
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
@@ -19,6 +18,7 @@
     >
 
     param[base_url] = http://dmd.aspetjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; >
     au < manifest ; exists ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; >
@@ -461,6 +461,7 @@
     >
 
     param[base_url] = http://molinterv.aspetjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
     au < zapped ; finished ; 2001 ; Molecular Interventions Volume 1 ; 1 ; >
     au < zapped ; finished ; 2002 ; Molecular Interventions Volume 2 ; 2 ; >
@@ -486,6 +487,7 @@
     >
 
     param[base_url] = http://molpharm.aspetjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1965 ; Molecular Pharmacology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1966 ; Molecular Pharmacology Volume 2 ; 2 ; >
@@ -590,6 +592,7 @@
     >
 
     param[base_url] = http://pharmrev.aspetjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1949 ; Pharmacological Reviews Volume 1 ; 1 ; >
     au < manifest ; exists ; 1950 ; Pharmacological Reviews Volume 2 ; 2 ; >
