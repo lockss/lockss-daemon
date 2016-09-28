@@ -76,7 +76,7 @@ public class TdbParse {
     VerboseOption.addOptions(opts);
     VersionOption.addOptions(opts);
     InputOption.addOptions(opts);
-    OutputOption.addOptions(opts);
+    opts.addOption(OutputData.option());
     KeepGoingOption.addOptions(opts);
   }
   
@@ -146,7 +146,7 @@ public class TdbParse {
     // Run
     Tdb tdb = processFiles(options);
     try {
-      dumpTdb(tdb, OutputOption.getSingleOutput(options));
+      writeTdb(tdb, OutputOption.getSingleOutput(options));
     }
     catch (IOException ioe) {
       AppUtil.error(options, ioe, "Output error");
@@ -162,7 +162,7 @@ public class TdbParse {
    * @throws IOException
    * @since 1.72
    */
-  public static void dumpTdb(Tdb tdb, OutputStream outputStream) throws IOException {
+  public static void writeTdb(Tdb tdb, OutputStream outputStream) throws IOException {
     ObjectOutputStream oos = new ObjectOutputStream(new GZIPOutputStream(outputStream));
     oos.writeObject(tdb);
   }
@@ -173,7 +173,7 @@ public class TdbParse {
    * @throws IOException
    * @since 1.72
    */
-  public static Tdb loadTdbDump(InputStream inputStream) throws IOException {
+  public static Tdb readTdb(InputStream inputStream) throws IOException {
     ObjectInputStream ois = new ObjectInputStream(new GZIPInputStream(inputStream));
     try {
       return (Tdb)ois.readObject();
