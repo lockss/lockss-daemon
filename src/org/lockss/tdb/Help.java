@@ -60,7 +60,7 @@ public class Help {
    * 
    * @since 1.67
    */
-  private HelpOption() {
+  private Help() {
     // Prevent instantiation
   }
 
@@ -71,7 +71,7 @@ public class Help {
    * 
    * @since 1.67
    */
-  protected static final String KEY_HELP = "help";
+  public static final String KEY = "help";
   
   /**
    * <p>
@@ -80,7 +80,7 @@ public class Help {
    * 
    * @since 1.67
    */
-  protected static final char LETTER_HELP = 'h';
+  public static final char LETTER = 'h';
   
   /**
    * <p>
@@ -91,11 +91,11 @@ public class Help {
    *          A Commons CLI {@link Options} instance.
    * @since 1.67
    */
-  public static void addOptions(Options opts) {
-    opts.addOption(Option.builder(Character.toString(LETTER_HELP))
-                   .longOpt(KEY_HELP)
-                   .desc("show this help message and exit")
-                   .build());
+  public static Option option() {
+    return Option.builder(Character.toString(LETTER))
+                 .longOpt(KEY)
+                 .desc("show this help message and exit")
+                 .build();
   }
 
   /**
@@ -113,10 +113,10 @@ public class Help {
    *          The {@link Class} instance of the program with a main method.
    * @since 1.67
    */
-  public static void processCommandLine(CommandLineAccessor cmd,
-                                        Options opts,
-                                        Class<?> clazz) {
-    if (cmd.hasOption(KEY_HELP)) {
+  public static void parse(CommandLineAccessor cmd,
+                           Options opts,
+                           Class<?> clazz) {
+    if (cmd.hasOption(KEY)) {
       HelpFormatter formatter = new HelpFormatter();
       formatter.setOptionComparator(new LongOptComparator());
       formatter.printHelp("java " + clazz.getName(), opts);

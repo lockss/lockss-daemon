@@ -72,7 +72,7 @@ public class TdbParse {
    * @since 1.72
    */
   public void addOptions(Options opts) {
-    HelpOption.addOptions(opts);
+    opts.addOption(Help.option());
     VerboseOption.addOptions(opts);
     VersionOption.addOptions(opts);
     InputOption.addOptions(opts);
@@ -141,7 +141,7 @@ public class TdbParse {
     Options opts = new Options();
     addOptions(opts);
     CommandLineAccessor cmd = new CommandLineAdapter(new DefaultParser().parse(opts, mainArgs));
-    HelpOption.processCommandLine(cmd, opts, getClass());
+    Help.parse(cmd, opts, getClass());
     Map<String, Object> options = processCommandLine(cmd);
     // Run
     Tdb tdb = processFiles(options);
