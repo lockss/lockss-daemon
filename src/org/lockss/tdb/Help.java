@@ -51,7 +51,7 @@ import org.apache.commons.cli.*;
  * @author Thib Guicherd-Callin
  * @since 1.67
  */
-public class HelpOption {
+public class Help {
 
   /**
    * <p>
