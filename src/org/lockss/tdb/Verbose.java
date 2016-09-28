@@ -41,7 +41,7 @@ import org.apache.commons.cli.*;
  * Utilities defining a standard verbose option.
  * </p>
  * <p>
- * If the verbose option created by {@link #addOptions(Options)} is requested on
+ * If the verbose option created by {@link #option(Options)} is requested on
  * the command line processed by
  * {@link #processCommandLine(Map, CommandLineAccessor)},
  * {@link #isVerbose(Map)} will return <code>true</code> to indicate it.
@@ -50,7 +50,7 @@ import org.apache.commons.cli.*;
  * @author Thib Guicherd-Callin
  * @since 1.67
  */
-public class VerboseOption {
+public class Verbose {
 
   /**
    * <p>
@@ -59,7 +59,7 @@ public class VerboseOption {
    * 
    * @since 1.67
    */
-  private VerboseOption() {
+  private Verbose() {
     // Prevent instantiation
   }
   
@@ -68,18 +68,18 @@ public class VerboseOption {
    * Key for the standard verbose option ({@value}).
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected static final String KEY_VERBOSE = "verbose";
+  protected static final String KEY = "verbose";
   
   /**
    * <p>
    * Single letter for the standard verbose option ({@value}).
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected static final char LETTER_VERBOSE = 'v';
+  protected static final char LETTER = 'v';
 
   /**
    * <p>
@@ -88,13 +88,13 @@ public class VerboseOption {
    * 
    * @param opts
    *          A Commons CLI {@link Options} instance.
-   * @since 1.67
+   * @since 1.72
    */
-  public static void addOptions(Options opts) {
-    opts.addOption(Option.builder(Character.toString(LETTER_VERBOSE))
-                   .longOpt(KEY_VERBOSE)
-                   .desc("output verbose error messages")
-                   .build());
+  public static Option option() {
+    return Option.builder(Character.toString(LETTER))
+                 .longOpt(KEY)
+                 .desc("output verbose error messages")
+                 .build();
   }
 
   /**
@@ -107,11 +107,11 @@ public class VerboseOption {
    *          An options map.
    * @param cmd
    *          A {@link CommandLineAccessor} instance.
-   * @since 1.67
+   * @since 1.72
    */
-  public static void processCommandLine(Map<String, Object> options,
-                                        CommandLineAccessor cmd) {
-    options.put(KEY_VERBOSE, Boolean.valueOf(cmd.hasOption(KEY_VERBOSE)));
+  public static void parse(Map<String, Object> options,
+                           CommandLineAccessor cmd) {
+    options.put(KEY, Boolean.valueOf(cmd.hasOption(KEY)));
   }
 
   /**
@@ -127,7 +127,7 @@ public class VerboseOption {
    * @since 1.67
    */
   public static boolean isVerbose(Map<String, Object> options) {
-    Boolean verbose = (Boolean)options.get(KEY_VERBOSE);
+    Boolean verbose = (Boolean)options.get(KEY);
     return verbose != null && verbose.booleanValue();
   }
 

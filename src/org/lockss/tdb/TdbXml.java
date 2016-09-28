@@ -314,7 +314,7 @@ public class TdbXml {
     // Options from other modules
     options.addOption(Help.option());
     options.addOption(Version.option());
-    VerboseOption.addOptions(options);
+    options.addOption(Verbose.option());
     KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
     OutputOption.addOptions(options);
@@ -341,7 +341,7 @@ public class TdbXml {
   public Map<String, Object> processCommandLine(Map<String, Object> options,
                                                 CommandLineAccessor cmd) {
     // Options from other modules
-    VerboseOption.processCommandLine(options, cmd);
+    Verbose.parse(options, cmd);
     KeepGoingOption.processCommandLine(options, cmd);
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
