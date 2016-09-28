@@ -313,7 +313,7 @@ public class TdbXml {
   public void addOptions(Options options) {
     // Options from other modules
     options.addOption(Help.option());
-    VersionOption.addOptions(options);
+    options.addOption(Version.option());
     VerboseOption.addOptions(options);
     KeepGoingOption.addOptions(options);
     InputOption.addOptions(options);
@@ -830,10 +830,7 @@ public class TdbXml {
     CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
     // Short-circuit options
     Help.parse(cmd, options, getClass());
-    VersionOption.processCommandLine(cmd,
-                                     VERSION,
-                                     TdbBuilder.VERSION,
-                                     TdbQueryBuilder.VERSION);
+    Version.parse(cmd, VERSION, TdbBuilder.VERSION, TdbQueryBuilder.VERSION);
     // Normal options
     run(cmd);
   }

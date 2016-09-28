@@ -47,8 +47,15 @@ import org.apache.commons.cli.*;
  * @author Thib Guicherd-Callin
  * @since 1.68
  */
-public class VersionOption {
+public class Version {
 
+  /**
+   * @since 1.72
+   */
+  private Version() {
+    // Prevent instantiation
+  }
+  
   /**
    * <p>
    * Key for the version option ({@value}).
@@ -56,7 +63,7 @@ public class VersionOption {
    * 
    * @since 1.68
    */
-  protected static final String KEY_VERSION = "version";
+  public static final String KEY = "version";
 
   /**
    * <p>
@@ -67,11 +74,11 @@ public class VersionOption {
    *          A Commons CLI {@link Options} instance.
    * @since 1.68
    */
-  public static void addOptions(Options opts) {
-    opts.addOption(Option.builder()
-                   .longOpt(KEY_VERSION)
-                   .desc("show version information and exit")
-                   .build());
+  public static Option option() {
+    return Option.builder()
+                 .longOpt(KEY)
+                 .desc("show version information and exit")
+                 .build();
   }
 
   /**
@@ -83,9 +90,9 @@ public class VersionOption {
    * @param versionStrings
    * @since 1.68
    */
-  public static void processCommandLine(CommandLineAccessor cmd,
-                                        String... versionStrings) {
-    if (cmd.hasOption(KEY_VERSION)) {
+  public static void parse(CommandLineAccessor cmd,
+                           String... versionStrings) {
+    if (cmd.hasOption(KEY)) {
       StringBuilder sb = new StringBuilder();
       for (String versionString : versionStrings) {
         sb.append(versionString);

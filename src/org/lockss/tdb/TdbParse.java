@@ -73,7 +73,7 @@ public class TdbParse {
    */
   public void addOptions(Options opts) {
     opts.addOption(Help.option());
-    VersionOption.addOptions(opts);
+    opts.addOption(Version.option());
     VerboseOption.addOptions(opts);
     InputOption.addOptions(opts);
     opts.addOption(OutputData.option());
@@ -88,7 +88,7 @@ public class TdbParse {
   public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
     Map<String, Object> options = new HashMap<String, Object>();
     // HelpOption already processed
-    VersionOption.processCommandLine(cmd, VERSION); // may exit
+    Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
     if (!OutputOption.isSingleOutput(options)) {
