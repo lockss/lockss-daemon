@@ -89,5 +89,9 @@ public class InputData {
       options.put(KEY, Arrays.asList(cmd.getOptionValue(KEY)));
     }
   }
-
+  
+  public static boolean isRequested(Map<String, Object> options) {
+    return options.containsKey(KEY);
+  }
+  
 }

@@ -49,7 +49,7 @@ import org.apache.commons.cli.*;
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
 public class Help {
 
@@ -58,7 +58,7 @@ public class Help {
    * Prevent instantiation.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
   private Help() {
     // Prevent instantiation
@@ -69,7 +69,7 @@ public class Help {
    * Key for the standard help option ({@value}).
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
   public static final String KEY = "help";
   
@@ -78,7 +78,7 @@ public class Help {
    * Single letter for the standard help option ({@value}).
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
   public static final char LETTER = 'h';
   
@@ -89,7 +89,7 @@ public class Help {
    * 
    * @param opts
    *          A Commons CLI {@link Options} instance.
-   * @since 1.67
+   * @since 1.72
    */
   public static Option option() {
     return Option.builder(Character.toString(LETTER))
@@ -111,7 +111,7 @@ public class Help {
    *          A Commons CLI {@link Options} instance (not an options map).
    * @param clazz
    *          The {@link Class} instance of the program with a main method.
-   * @since 1.67
+   * @since 1.72
    */
   public static void parse(CommandLineAccessor cmd,
                            Options opts,
@@ -131,7 +131,7 @@ public class Help {
    * </p>
    * 
    * @author Thib Guicherd-Callin
-   * @since 1.67
+   * @since 1.72
    */
   protected static class LongOptComparator implements Comparator<Option> {
     @Override
