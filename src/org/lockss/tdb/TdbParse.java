@@ -73,8 +73,8 @@ public class TdbParse {
    */
   public void addOptions(Options opts) {
     opts.addOption(Help.option());
-    VerboseOption.addOptions(opts);
     VersionOption.addOptions(opts);
+    VerboseOption.addOptions(opts);
     InputOption.addOptions(opts);
     opts.addOption(OutputData.option());
     KeepGoingOption.addOptions(opts);
