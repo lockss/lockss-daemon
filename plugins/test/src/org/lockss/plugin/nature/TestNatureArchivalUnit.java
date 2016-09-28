@@ -35,10 +35,15 @@ package org.lockss.plugin.nature;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import junit.framework.Test;
 
+import org.apache.oro.text.regex.Perl5Compiler;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlRateLimiter;
@@ -207,5 +212,49 @@ public class TestNatureArchivalUnit extends LockssTestCase {
 
   }
 
+  // need to call quotemeta on the base/home_urls because the RegexpUtil.regexpCollection 
+  // call on the returning strings calls it (but only on the base/home_url params)
+  static final String baseRepairList[] =
+    {
+        Perl5Compiler.quotemeta(ROOT_URL)+"(pal/)?(common|images|openinnovation)/",
+    };
+
+  public void testRepairList() throws Exception {
+    URL base = new URL(ROOT_URL);
+    DefinableArchivalUnit ABAu = makeAu(base, 33, "xyz", "2016");
+
+    assertEquals(Arrays.asList(baseRepairList), RegexpUtil.regexpCollection(ABAu.makeRepairFromPeerIfMissingUrlPatterns()));
+
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(   
+        ROOT_URL+"pal/common/images/login_error.gif",
+        ROOT_URL+"common/images/icons/rss.gif",
+        ROOT_URL+"common/includes/footer/default/style/footer.css",
+        ROOT_URL+"common/includes/footer/style/global.comments.css",
+        ROOT_URL+"common/includes/footer/scripts/jquery/plugins/cookie.js",
+        ROOT_URL+"images/lightbox-next-btn.png"
+        );
+    
+    Pattern p0 = Pattern.compile(baseRepairList[0]);
+    Matcher m0;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      assertEquals(true, m0.find());
+    }
+    
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString =ROOT_URL+"missing_file.html";
+    m0 = p0.matcher(notString);
+    assertEquals(false, m0.find());
+
+   PatternFloatMap urlPollResults = ABAu.makeUrlPollResultWeightMap();
+   assertNotNull(urlPollResults);
+   for (String urlString : repairList) {
+     assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+   }
+   assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+   
+  }
 }
 
