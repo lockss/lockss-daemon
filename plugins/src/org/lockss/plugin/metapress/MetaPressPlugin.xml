@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -105,6 +105,7 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
       <string>2,"^%s.*\?referencesMode=Show&amp;print=true$", base_url</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/(?:offerings/|fulltext[.]pdf[?]page=)", base_url</string>
       <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;]sortorder=(?!.*[&amp;]p_o=[1-9])", base_url</string>
+      <string>2,"^%scontent/[a-z0-9]{10,16}/.*[?&amp;]export=rss", base_url</string>
       <string>1,"^%scontent/[a-z0-9]{10,16}($|/)", base_url</string>
       <string>1,"^%s(?:export[.]mpx[?]code=[^&amp;]+&amp;mode=|dynamic-file[.]axd[?]id=)", base_url</string>
     </list>
