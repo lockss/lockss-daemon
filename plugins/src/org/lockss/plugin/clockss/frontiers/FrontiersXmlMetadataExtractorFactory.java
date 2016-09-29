@@ -45,10 +45,11 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 
-public class FrontiersJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(FrontiersJatsXmlMetadataExtractorFactory.class);
+public class FrontiersXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(FrontiersXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
+  private static SourceXmlSchemaHelper WorksheetHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -62,10 +63,20 @@ public class FrontiersJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
+      String url = cu.getUrl();
+      // TODO - we need to see the naming convention to do this
+      if ((url != null) && url.contains("Ebooks")) {
+        // Once you have it, just keep returning the same one. It won't change.
+        if (WorksheetHelper == null) {
+          WorksheetHelper = new FrontiersBooksWorksheetXmlSchemaHelper();
+        }
+        return WorksheetHelper;
+      } else {      
       if (JatsPublishingHelper == null) {
         JatsPublishingHelper = new JatsPublishingSchemaHelper();
       }
       return JatsPublishingHelper;
+      }
     }
     
 
@@ -76,6 +87,11 @@ public class FrontiersJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
+      if (helper == WorksheetHelper) {
+        // TODO
+        // unti we see the layout/book naming
+        return null;
+      }
       String url_string = cu.getUrl();
       String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("pdfName is " + pdfName);
@@ -89,6 +105,9 @@ public class FrontiersJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in Frontiers postCookProcess");
+      if (schemaHelper == WorksheetHelper) {
+        return;
+      }
       //If we didn't get a valid date value, use the copyright year if it's there
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
         if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {

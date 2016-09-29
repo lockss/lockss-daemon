@@ -47,8 +47,9 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- BASE_URL/YEAR/articles/frobt/01/frobt-01-0001.zip -->
+      <!-- journals: BASE_URL/YEAR/articles/frobt/01/frobt-01-0001.zip -->
       <string>"^%s%d/.+\.zip", base_url, year</string>
+      <!-- Ebooks? -->
     </list>
   </entry>
   <entry>
@@ -72,7 +73,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.frontiers.FrontiersJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.frontiers.FrontiersXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -81,7 +82,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.frontiers.FrontiersJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.frontiers.FrontiersXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>    
