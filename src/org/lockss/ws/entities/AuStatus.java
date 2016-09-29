@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -56,6 +52,7 @@ public class AuStatus {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
   private String lastPollResult;
@@ -258,6 +255,16 @@ public class AuStatus {
   }
 
   /**
+   * Provides the timestamp of the last metadata indexing of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastMetadataIndex() {
+    return lastMetadataIndex;
+  }
+
+  /**
    * Provides the timestamp of the last completed poll of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -408,6 +415,10 @@ public class AuStatus {
     this.lastCrawlResult = lastCrawlResult;
   }
 
+  public void setLastMetadataIndex(Long lastMetadataIndex) {
+    this.lastMetadataIndex = lastMetadataIndex;
+  }
+
   public void setLastCompletedPoll(Long lastCompletedPoll) {
     this.lastCompletedPoll = lastCompletedPoll;
   }
@@ -481,6 +492,8 @@ public class AuStatus {
     builder.append(lastCrawl);
     builder.append(", lastCrawlResult=");
     builder.append(lastCrawlResult);
+    builder.append(", lastMetadataIndex=");
+    builder.append(lastMetadataIndex);
     builder.append(", lastCompletedPoll=");
     builder.append(lastCompletedPoll);
     builder.append(", lastPoll=");

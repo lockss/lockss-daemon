@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -60,6 +56,7 @@ public class AuWsResult {
   private Long lastCompletedCrawl;
   private Long lastCrawl;
   private String lastCrawlResult;
+  private Long lastMetadataIndex;
   private Long lastCompletedPoll;
   private Long lastPoll;
   private String lastPollResult;
@@ -345,6 +342,19 @@ public class AuWsResult {
   }
 
   /**
+   * Provides the timestamp of the last metadata indexing of the Archival Unit.
+   * 
+   * @return a Long with the timestamp as the number of milliseconds since the
+   *         beginning of 1970.
+   */
+  public Long getLastMetadataIndex() {
+    return lastMetadataIndex;
+  }
+  public void setLastMetadataIndex(Long lastMetadataIndex) {
+    this.lastMetadataIndex = lastMetadataIndex;
+  }
+
+  /**
    * Provides the timestamp of the last completed poll of the Archival Unit.
    * 
    * @return a Long with the timestamp as the number of milliseconds since the
@@ -555,16 +565,16 @@ public class AuWsResult {
 	+ creationTime + ", crawlProxy=" + crawlProxy + ", crawlWindow="
 	+ crawlWindow + ", crawlPool=" + crawlPool + ", lastCompletedCrawl="
 	+ lastCompletedCrawl + ", lastCrawl=" + lastCrawl
-	+ ", lastCrawlResult=" + lastCrawlResult + ", lastCompletedPoll="
-	+ lastCompletedPoll + ", lastPoll=" + lastPoll + ", lastPollResult="
-	+ lastPollResult + ", currentlyCrawling=" + currentlyCrawling
-	+ ", currentlyPolling=" + currentlyPolling + ", subscriptionStatus="
-	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
-	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
-	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
-	+ peerAgreements + ", urls=" + urls + ", substanceUrls=" + substanceUrls
-	+ ", articleUrls=" + articleUrls + ", journalTitle=" + journalTitle
-	+ ", tdbProvider=" + tdbProvider
-	+ "]";
+	+ ", lastCrawlResult=" + lastCrawlResult + ", lastMetadataIndex="
+	+ lastMetadataIndex + ", lastCompletedPoll=" + lastCompletedPoll
+	+ ", lastPoll=" + lastPoll + ", lastPollResult=" + lastPollResult
+	+ ", currentlyCrawling=" + currentlyCrawling + ", currentlyPolling="
+	+ currentlyPolling + ", subscriptionStatus=" + subscriptionStatus
+	+ ", auConfiguration=" + auConfiguration + ", newContentCrawlUrls="
+	+ newContentCrawlUrls + ", urlStems=" + urlStems + ", isBulkContent="
+	+ isBulkContent + ", peerAgreements=" + peerAgreements + ", urls="
+	+ urls + ", substanceUrls=" + substanceUrls + ", articleUrls="
+	+ articleUrls + ", journalTitle=" + journalTitle + ", tdbProvider="
+	+ tdbProvider + "]";
   }
 }

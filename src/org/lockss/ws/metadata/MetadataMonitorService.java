@@ -315,9 +315,21 @@ public interface MetadataMonitorService {
    * 
    * @param auId
    *          A String with the identifier of the archival unit.
-   * @return an AuMetadataWsResult with the metadata information of the archival unit.
+   * @return an AuMetadataWsResult with the metadata information of the archival
+   *         unit.
    * @throws LockssWebServicesFault
    */
   @WebMethod
   AuMetadataWsResult getAuMetadata(String auId) throws LockssWebServicesFault;
+
+  /**
+   * Provides the Archival Units that exist in the database but that have been
+   * deleted from the daemon.
+   * 
+   * @return a List<AuMetadataWsResult> with the Archival unit data.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<AuMetadataWsResult> getDbArchivalUnitsDeletedFromDaemon()
+      throws LockssWebServicesFault;
 }

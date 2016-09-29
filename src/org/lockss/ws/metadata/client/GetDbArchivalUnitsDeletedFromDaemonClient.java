@@ -25,45 +25,41 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.ws.metadata;
+package org.lockss.ws.metadata.client;
 
-import javax.jws.WebMethod;
-import javax.jws.WebService;
-import org.lockss.ws.entities.LockssWebServicesFault;
-import org.lockss.ws.entities.MetadataControlResult;
+import java.util.Collection;
+import org.lockss.ws.entities.AuMetadataWsResult;
+import org.lockss.ws.metadata.MetadataMonitorService;
 
 /**
- * The MetadataMonitor web service interface.
+ * A client for the MetadataMonitorService.getDbArchivalUnitsDeletedFromDaemon()
+ * web service operation.
  */
-@WebService
-public interface MetadataControlService {
+public class GetDbArchivalUnitsDeletedFromDaemonClient
+extends MetadataMonitorServiceBaseClient {
   /**
-   * Deletes an ISSN linked to a publication.
+   * The main method.
    * 
-   * @param mdItemSeq
-   *          A Long with the publication metadata identifier.
-   * @param issn
-   *          A String with the ISSN.
-   * @param issnType
-   *          A String with the ISSN type.
-   * @return a MetadataControlResult with the result of the operation.
-   * @throws LockssWebServicesFault
+   * @param args
+   *          A String[] with the command line arguments.
+   * @throws Exception
    */
-  @WebMethod
-  MetadataControlResult deletePublicationIssn(Long mdItemSeq, String issn,
-      String issnType) throws LockssWebServicesFault;
+  public static void main(String args[]) throws Exception {
+    // Call the service and get the results of the query.
+    MetadataMonitorService proxy =
+	new GetDbArchivalUnitsDeletedFromDaemonClient().getProxy();
+    Collection<AuMetadataWsResult> deletedAus =
+	proxy.getDbArchivalUnitsDeletedFromDaemon();
+    System.out.println("deletedAus = " + deletedAus);
 
-  /**
-   * Deletes an Archival Unit and its metadata.
-   * 
-   * @param auSeq
-   *          A Long with the Archival Unit database identifier.
-   * @param auKey
-   *          A String with the Archival Unit key identifier.
-   * @return a MetadataControlResult with the result of the operation.
-   * @throws LockssWebServicesFault
-   */
-  @WebMethod
-  MetadataControlResult deleteAu(Long auSeq, String auKey)
-      throws LockssWebServicesFault;
+    if (deletedAus != null) {
+      System.out.println("deletedAus.size() = " + deletedAus.size());
+
+      for (AuMetadataWsResult au : deletedAus) {
+	System.out.println("au = " + au);
+      }
+    } else {
+      System.out.println("deletedAus = " + deletedAus);
+    }
+  }
 }

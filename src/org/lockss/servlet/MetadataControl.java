@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -50,6 +46,7 @@ public class MetadataControl extends LockssServlet {
   private static final Logger log = Logger.getLogger(MetadataControl.class);
 
   static final String DELETE_PUBLICATION_ISSN_ACTION = "deletePublicationIssn";
+  static final String DELETE_DB_AU_ACTION = "deleteDbAu";
 
   private DbManager dbManager;
   private MetadataManager mdManager;
@@ -95,6 +92,8 @@ public class MetadataControl extends LockssServlet {
     try {
       if (DELETE_PUBLICATION_ISSN_ACTION.equals(action)) {
 	deletePublicationIssn();
+      } else if (DELETE_DB_AU_ACTION.equals(action)) {
+	deleteDbAu();
       } else {
 	displayWarningInLieuOfPage("Invalid operation '" + action + "'");
 	return;
@@ -135,6 +134,31 @@ public class MetadataControl extends LockssServlet {
 
     boolean deleted =
 	mdManager.deletePublicationIssn(mdItemSeq, issnValue, issnType);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "deleted = " + deleted);
+    return deleted;
+  }
+
+  /**
+   * Deletes an Archival Unit and its metadata.
+   * 
+   * @return a boolean with <code>true</code> if the Archival Unit was deleted,
+   *         <code>false</code> otherwise.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private boolean deleteDbAu() throws DbException, IOException {
+    final String DEBUG_HEADER = "deleteDbAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Long auSeq = Long.valueOf(req.getParameter("auSeq"));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+    String auKey = req.getParameter("auKey");
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+    boolean deleted = mdManager.deleteDbAu(auSeq, auKey);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "deleted = " + deleted);
     return deleted;
   }

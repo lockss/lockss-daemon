@@ -158,7 +158,7 @@ public class MetadataManagerSql {
       + " and p." + PLUGIN_ID_COLUMN + " = ?"
       + " and a." + AU_KEY_COLUMN + " = ?";
 
-  // Query to delete an AU by Archival Unit key and plugin identifier.
+  // Query to delete an AU by its primary key.
   private static final String DELETE_AU_QUERY = "delete from " + AU_TABLE
       + " where "
       + AU_SEQ_COLUMN + " = ?";
@@ -1538,6 +1538,42 @@ public class MetadataManagerSql {
       + " and a." + PLUGIN_SEQ_COLUMN + " = " + " p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?"
       + " and a." + AU_KEY_COLUMN + " = ?";
+
+  // Query to retrieve the data of theArchival Units in the database.
+  private static final String GET_DB_ARCHIVAL_UNITS_QUERY = "select "
+      + "pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_SEQ_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", am." + CREATION_TIME_COLUMN
+      + ", am." + MD_VERSION_COLUMN
+      + ", am." + EXTRACT_TIME_COLUMN
+      + ", pv." + PROVIDER_NAME_COLUMN
+      + ", count(mi." + MD_ITEM_SEQ_COLUMN + ") as \"item_count\""
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + PROVIDER_TABLE + " pv"
+      + ", " + AU_MD_TABLE + " am"
+      + " left outer join " + MD_ITEM_TABLE + " mi"
+      + " on am." + AU_MD_SEQ_COLUMN + " = mi." + AU_MD_SEQ_COLUMN
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + PROVIDER_SEQ_COLUMN + " = pv." + PROVIDER_SEQ_COLUMN
+      + " group by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_SEQ_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", am." + CREATION_TIME_COLUMN
+      + ", am." + MD_VERSION_COLUMN
+      + ", am." + EXTRACT_TIME_COLUMN
+      + ", pv." + PROVIDER_NAME_COLUMN
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN;
+
+  // Query to delete an AU by its primary key and key identifier.
+  private static final String DELETE_AU_BY_PK_AND_KEY_QUERY = "delete from "
+      + AU_TABLE
+      + " where "
+      + AU_SEQ_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -6971,7 +7007,7 @@ public class MetadataManagerSql {
 	}
       }
     } catch (SQLException sqle) {
-      String message = "Cannot get AU extraction time";
+      String message = "Cannot get AU metadata";
       log.error(message, sqle);
       log.error("auId = '" + auId + "'.");
       log.error("SQL = '" + GET_AU_MD_QUERY + "'.");
@@ -6985,5 +7021,198 @@ public class MetadataManagerSql {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+
+  /**
+   * Provides the Archival Units that exist in the database.
+   * 
+   * @return a Collection<Map<String, Object>> with the Archival unit data.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, Object>> getDbArchivalUnits() throws DbException {
+    final String DEBUG_HEADER = "getDbArchivalUnits(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, Object>> aus = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the data of the archival units.
+      aus = getDbArchivalUnits(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aus.size() = " + aus.size());
+    return aus;
+  }
+
+  /**
+   * Provides the Archival Units that exist in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<Map<String, Object>> with the Archival unit data.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, Object>> getDbArchivalUnits(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getDbArchivalUnits(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, Object>> aus = new ArrayList<Map<String, Object>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, GET_DB_ARCHIVAL_UNITS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the Archival Units. 
+      while (resultSet.next()) {
+	Map<String, Object> auProperties = new HashMap<String, Object>();
+
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	auProperties.put(PLUGIN_ID_COLUMN, pluginId);
+
+	Long auSeq = resultSet.getLong(AU_SEQ_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+	auProperties.put(AU_SEQ_COLUMN, auSeq);
+
+	String auKey = resultSet.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	auProperties.put(AU_KEY_COLUMN, auKey);
+
+	Long creationTime = resultSet.getLong(CREATION_TIME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "creationTime = " + creationTime);
+
+	auProperties.put(CREATION_TIME_COLUMN, creationTime);
+
+	Integer mdVersion = resultSet.getInt(MD_VERSION_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "mdVersion = " + mdVersion);
+
+	auProperties.put(MD_VERSION_COLUMN, mdVersion);
+
+	Long extractionTime = resultSet.getLong(EXTRACT_TIME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "extractionTime = " + extractionTime);
+
+	auProperties.put(EXTRACT_TIME_COLUMN, extractionTime);
+
+	String providerName = resultSet.getString(PROVIDER_NAME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+
+	auProperties.put(PROVIDER_NAME_COLUMN, providerName);
+
+	Integer itemCount = resultSet.getInt("item_count");
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "itemCount = " + itemCount);
+
+	auProperties.put("item_count", itemCount);
+
+	aus.add(auProperties);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the Archival Units";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_DB_ARCHIVAL_UNITS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aus.size() = " + aus.size());
+    return aus;
+  }
+
+  /**
+   * Deletes an Archival Unit and its metadata.
+   * 
+   * @param auSeq
+   *          A Long with the Archival Unit identifier.
+   * @param auKey
+   *          A String with the Archival Unit key.
+   * @return a boolean with <code>true</code> if the Archival Unit was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean removeAu(Long auSeq, String auKey) throws DbException {
+    final String DEBUG_HEADER = "removeAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    boolean deleted = false;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Delete the Archival Unit.
+      deleted = removeAu(conn, auSeq, auKey);
+      DbManager.commitOrRollback(conn, log);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "deleted = " + deleted);
+    return deleted;
+  }
+
+  /**
+   * Deletes an Archival Unit and its metadata.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auSeq
+   *          A Long with the Archival Unit identifier.
+   * @param auKey
+   *          A String with the Archival Unit key.
+   * @return a boolean with <code>true</code> if the Archival Unit was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean removeAu(Connection conn, Long auSeq, String auKey)
+      throws DbException {
+    final String DEBUG_HEADER = "removeAu(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+      log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+    }
+
+    int deletedCount = -1;
+    PreparedStatement deleteAu =
+	dbManager.prepareStatement(conn, DELETE_AU_BY_PK_AND_KEY_QUERY);
+
+    try {
+      deleteAu.setLong(1, auSeq);
+      deleteAu.setString(2, auKey);
+      deletedCount = dbManager.executeUpdate(deleteAu);
+    } catch (SQLException sqle) {
+      String message = "Cannot delete Archival Unit";
+      log.error(message, sqle);
+      log.error("auSeq = '" + auSeq + "'.");
+      log.error("auKey = '" + auKey + "'.");
+      log.error("SQL = '" + DELETE_AU_BY_PK_AND_KEY_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteAu);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "result = " + (deletedCount > 0));
+    return deletedCount > 0;
   }
 }
