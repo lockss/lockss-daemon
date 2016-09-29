@@ -185,7 +185,7 @@
     au < zapped ; finished ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 ; >
     au < finished ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 ; >
     au < finished ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 ; >
-    au < finished ; crawling ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 ; >
     au < deepCrawl ; exists ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 ; >
     au < crawling ; exists ; 2016 ; Bone Marrow Transplantation Volume 51 ; 2016 ; 51 ; >
@@ -795,7 +795,7 @@
     au < crawling ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; >
     au < finished ; crawling ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 ; >
     au < finished ; finished ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 ; >
-    au < finished ; crawling ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
+    au < finished ; finished ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
     au < crawling ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 ; >
     au < crawling ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 ; >
     au < finished ; finished ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 ; >
@@ -1994,7 +1994,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Molecular Therapy Volume 14 (2006) ; 2006 ; 14 ; >
     au < manifest ; exists ; 2007 ; Molecular Therapy Volume 15 ; 2007 ; 15 ; >
     au < finished ; frozen ; 2008 ; Molecular Therapy Volume 16 ; 2008 ; 16 ; >
-    au < finished ; crawling ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 ; >
+    au < finished ; finished ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 ; >
     au < finished ; frozen ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 ; >
     au < finished ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 ; >
     au < finished ; frozen ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 ; >
@@ -2014,7 +2014,7 @@
 
     param[journal_id] = mtna
 
-    au < finished ; frozen ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 ; >
+    au < finished ; finished ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 ; >
     au < crawling ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; >
@@ -3468,7 +3468,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 ; >
     au < finished ; frozen ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 ; >
-    au < finished ; frozen ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 ; >
+    au < finished ; finished ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 ; >
     au < finished ; finished ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 ; >
     au < finished ; crawling ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 ; >
     au < finished ; finished ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 ; >
@@ -3736,7 +3736,7 @@
 
 	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 ; >
     au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 ; >
-    au < finished ; crawling ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 ; >
+    au < finished ; finished ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 ; >
     au < finished ; finished ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 ; >
     au < finished ; frozen ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 ; >
     au < finished ; finished ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 ; >
