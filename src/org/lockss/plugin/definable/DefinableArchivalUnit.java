@@ -293,7 +293,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   protected Collection<String> getAdditionalUrlStems()
       throws MalformedURLException {
     List<String> res = convertUrlListList(KEY_AU_ADDITIONAL_URL_STEMS);
-    log.debug2("Setting start urls " + res);
+    log.debug2("Setting additional urlStems " + res);
     if(res == null) {
       res = Collections.emptyList();
     }
