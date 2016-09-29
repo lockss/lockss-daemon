@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doi_batch version="4.3.0" xmlns="http://www.crossref.org/schema/4.3.0">
+    <head>
+        <doi_batch_id>3493</doi_batch_id>
+        <timestamp>20160424232525</timestamp>
+        <depositor>
+            <name>Foo</name>
+            <email_address>journal@aimsciences.org</email_address>
+        </depositor>
+        <registrant>American Institute of Mathematical Sciences</registrant>
+    </head>
+    <body>
+        <journal>
+            <journal_metadata language="en">
+                <full_title>Foo Control Theory</full_title>
+                <abbrev_title>FCT</abbrev_title>
+                <issn media_type="print">2163-1111</issn>
+                <doi_data>
+                    <doi>10.1111/fct</doi>
+                    <resource>http://www.aimsciences.org/journals/fct/index.htm</resource>
+                </doi_data>
+            </journal_metadata>
+            <journal_issue>
+                <publication_date media_type="print">
+                    <month>12</month>
+                    <year>2015</year>
+                </publication_date>
+                <journal_volume>
+                    <volume>4</volume>
+                </journal_volume>
+                <issue>4</issue>
+            </journal_issue>
+            <journal_article>
+                <titles>
+                    <title>Approximate controllability of abstract Stuff</title>
+                </titles>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Bob </given_name>
+                        <surname>Writer</surname>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Sally </given_name>
+                        <surname>Author</surname>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <month>11</month>
+                    <year>2015</year>
+                </publication_date>
+                <pages>
+                    <first_page>373</first_page>
+                    <last_page>389</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.1111/fct.2015.4.373</doi>
+                    <timestamp>20160424104321</timestamp>
+                    <resource>http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11869</resource>
+                </doi_data>
+                <citation_list>
+                    <citation key="1">
+                        <journal_title>&lt;em&gt;J. Math. Analysis Appl.</journal_title>
+                        <author>M. Aouadi</author>
+                        <volume>402</volume>
+                        <first_page>745</first_page>
+                        <cYear>2013</cYear>
+                        <doi>10.1016/j.jmaa.2013.01.059</doi>
+                        <article_title>On uniform decay of a nonsimple thermoelastic bar with memory,</article_title>
+                    </citation>
+                </citation_list>
+            </journal_article>
+            <journal_article>
+                <titles>
+                    <title>On Fascinating spaces with partial Hölder
+condition</title>
+                </titles>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Sam P. </given_name>
+                        <surname>Scientist</surname>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <month>11</month>
+                    <year>2015</year>
+                </publication_date>
+                <pages>
+                    <first_page>391</first_page>
+                    <last_page>429</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.1111/fct.2015.4.391</doi>
+                    <timestamp>20160423062728</timestamp>
+                    <resource>http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11870</resource>
+                </doi_data>
+            </journal_article>
+            <journal_article>
+                <titles>
+                    <title>Mathematics</title>
+                </titles>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <given_name>Barbara </given_name>
+                        <surname>Mathematician</surname>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <month>11</month>
+                    <year>2015</year>
+                </publication_date>
+                <pages>
+                    <first_page>447</first_page>
+                    <last_page>491</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.1111/fct.2015.4.447</doi>
+                    <timestamp>20160423122344</timestamp>
+                    <resource>http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11872</resource>
+                </doi_data>
+                <citation_list>
+                    <citation key="1">
+                        <journal_title>&lt;em&gt;Numer. Funct. Anal. Optim.&lt;/em&gt;</journal_title>
+                        <author>J.-J. Alibert</author>
+                        <volume>19</volume>
+                        <first_page>697</first_page>
+                        <cYear>1998</cYear>
+                        <doi>10.1080/01630569808816854</doi>
+                        <article_title>A Lagrange multiplier theorem for control problems with state constraints,</article_title>
+                    </citation>
+                    <citation key="2">
+                        <journal_title>Monographs in Mathematics</journal_title>
+                        <author>H. Amann</author>
+                        <cYear>1995</cYear>
+                        <doi>10.1007/978-3-0348-9221-6</doi>
+                        <article_title>&lt;em&gt;Linear and Quasilinear Parabolic Problems: Volume I: Abstract Linear Theory&lt;/em&gt;,</article_title>
+                    </citation>
+                </citation_list>
+            </journal_article>
+        </journal>
+    </body>
+</doi_batch>
