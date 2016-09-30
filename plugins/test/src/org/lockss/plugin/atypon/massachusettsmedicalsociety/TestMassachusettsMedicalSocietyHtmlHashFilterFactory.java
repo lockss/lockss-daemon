@@ -180,14 +180,14 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
                     "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
                     "<div id=\"copyright\"><p></p</div>Hello";
     private static final String copyrightHtmlHashFiltered = 
-                    " <noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> " +
+                    " " +
                     "Hello";
     
     private static final String javascriptHtmlHash = 
                     "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
                     "<script type=\"text/javascript\" src=\"http://nejm.resultspage.com/autosuggest/searchbox_suggest_v1.js\" language=\"javascript\">Hello</script>";
     private static final String javascriptHtmlHashFiltered = 
-                    " <noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
+                    " ";
     
     private static final String recentIssueHtmlHash =
                     "<div class=\"issueArchive-recentIssue\"><a class=\"issueArchive-recentIssue\">topics</a></div>\n" +

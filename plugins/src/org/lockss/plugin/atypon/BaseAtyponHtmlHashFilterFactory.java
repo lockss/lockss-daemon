@@ -88,6 +88,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tag("head"),
     // filter out javascript
     HtmlNodeFilters.tag("script"),
+    HtmlNodeFilters.tag("noscript"),
     //filter out comments
     HtmlNodeFilters.comment(),
     
