@@ -47393,7 +47393,15 @@ comment[mpj] = now published by Brill
         param[base_url] = http://trc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < expected ; 2016 ; Tropical Conservation Science Volume 9 ; 9 >
+        au < exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 >
+        au < exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 >
+        au < exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 >
+        au < exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 >
+        au < exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 >
+        au < exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 >
+        au < exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 >
+        au < exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 >
+        au < exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 >
 
     }
 

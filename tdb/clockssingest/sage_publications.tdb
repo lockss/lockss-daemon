@@ -43831,6 +43831,12 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://trc.sagepub.com/
 
+      au < exists ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
+      au < exists ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
+      au < exists ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; >
+      au < exists ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
+      au < exists ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
       au < exists ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
       au < exists ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
@@ -44914,9 +44920,10 @@
       issnl = 0043-8200
     >
 
-    param[base_url] = http://waf.sagepub.com/
+      param[base_url] = http://waf.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; >
+      au < doNotProcess ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; >
 
   }
 
