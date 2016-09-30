@@ -5883,6 +5883,8 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 >
+        au < exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 >
         au < manifest ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 >
 
     }

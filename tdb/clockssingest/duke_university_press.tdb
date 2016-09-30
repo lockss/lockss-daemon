@@ -535,6 +535,30 @@
   {
 
     title <
+      name = Environmental Humanities ;
+      eissn = 2201-1919 ;
+      issnl = 2201-1919
+    >
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://environmentalhumanities.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Environmental Humanities Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2013 ; Environmental Humanities Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2013 ; Environmental Humanities Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2014 ; Environmental Humanities Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2014 ; Environmental Humanities Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Environmental Humanities Volume 6 ; 6 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2015 ; Environmental Humanities Volume 7 ; 7 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2016 ; Environmental Humanities Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Environmental Humanities Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
       name = Ethnohistory ;
       issn = 0014-1801 ;
       eissn = 1527-5477
