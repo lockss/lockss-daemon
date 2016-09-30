@@ -118,7 +118,8 @@ public class SubscriptionManagerSql {
   // Query to find all the subscribed publishers.
   private static final String FIND_ALL_SUBSCRIBED_PUBLISHERS_QUERY =
       "select distinct"
-      + " pu." + PUBLISHER_NAME_COLUMN
+      + " pu." + PUBLISHER_SEQ_COLUMN
+      + ",pu." + PUBLISHER_NAME_COLUMN
       + ",ps." + PUBLISHER_SUBSCRIPTION_SEQ_COLUMN
       + ",ps." + SUBSCRIBED_COLUMN
       + " from " + PUBLISHER_SUBSCRIPTION_TABLE + " ps"
@@ -152,8 +153,10 @@ public class SubscriptionManagerSql {
   // Query to find all the subscriptions and their ranges.
   private static final String FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY = "select"
       + " distinct s." + SUBSCRIPTION_SEQ_COLUMN
+      + ",p." + PUBLICATION_SEQ_COLUMN
       + ",n." + NAME_COLUMN
       + ",pi." + PROPRIETARY_ID_COLUMN
+      + ",pu." + PUBLISHER_SEQ_COLUMN
       + ",pu." + PUBLISHER_NAME_COLUMN
       + ",pr." + PROVIDER_LID_COLUMN
       + ",pr." + PROVIDER_NAME_COLUMN
@@ -613,10 +616,12 @@ public class SubscriptionManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     Long subscriptionSeq = null;
+    Long publicationNumber;
     String publicationName;
     String proprietaryId;
     String pIssn;
     String eIssn;
+    Long publisherSeq;
     String publisherName;
     String providerLid;
     String providerName;
@@ -669,6 +674,10 @@ public class SubscriptionManagerSql {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
+	publicationNumber = resultSet.getLong(PUBLICATION_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publicationNumber = " + publicationNumber);
+	
 	publicationName = resultSet.getString(NAME_COLUMN);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
@@ -693,6 +702,10 @@ public class SubscriptionManagerSql {
         eIssn = resultSet.getString(E_ISSN_TYPE);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
 
+	publisherSeq = resultSet.getLong(PUBLISHER_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
+	
 	publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -735,6 +748,7 @@ public class SubscriptionManagerSql {
 
 	  // Initialize the new subscription publication.
 	  publication = new SerialPublication();
+	  publication.setPublicationNumber(publicationNumber);
 	  publication.setPublicationName(publicationName);
 	  publication.setProprietaryIds(proprietaryIds);
 	  publication.setPissn(pIssn);
@@ -762,6 +776,7 @@ public class SubscriptionManagerSql {
 	  if (!subscribedPublishers.containsKey(publisherName)) {
 	    // Yes: Add it with an unset publisher subscription.
 	    Publisher publisher = new Publisher();
+	    publisher.setPublisherSeq(publisherSeq);
 	    publisher.setPublisherName(publisherName);
 
 	    PublisherSubscription publisherSubscription =
@@ -903,6 +918,9 @@ public class SubscriptionManagerSql {
       resultSet = dbManager.executeQuery(getAllSubscribedPublishers);
 
       while (resultSet.next()) {
+	Long publisherSeq = resultSet.getLong(PUBLISHER_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 	String publisherName = resultSet.getString(PUBLISHER_NAME_COLUMN);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -917,6 +935,7 @@ public class SubscriptionManagerSql {
 	  log.debug3(DEBUG_HEADER + "subscribed = " + subscribed);
 
 	Publisher publisher = new Publisher();
+	publisher.setPublisherSeq(publisherSeq);
 	publisher.setPublisherName(publisherName);
 
 	PublisherSubscription subscription = new PublisherSubscription();

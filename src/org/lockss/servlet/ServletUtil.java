@@ -2136,12 +2136,6 @@ public class ServletUtil {
     // Create the spans required by jQuery to build the desired tabs.
     org.mortbay.html.List tabList =
 	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv, action);
-    
-    // The SubscriptionManagement add Page 
-    if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
-      // Add them to the tabs container.
-      tabsDiv.add(tabList);
-    }
 
     // The start and end letters of a tab letter group.
     Map.Entry<Character, Character> letterPair;
@@ -2173,14 +2167,6 @@ public class ServletUtil {
 
       // Create the tab for this letter group.
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
-      
-      if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
-        // Add the table to the tab.
-        tabDiv.add(divTable);
-        
-        // Add the tab to the tabs container.
-        tabsDiv.add(tabDiv);
-      }
 
       // Map the tab table by the first letter.
       divTableMap.put(startLetter.toString(), divTable);
@@ -2324,11 +2310,8 @@ public class ServletUtil {
       }
 
       // Set up the tab link.
-      if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
-        tabLink = new Link("SubscriptionManagement?lockssAction=" + action + "&start=" + startLetter + "&amp;end=" + endLetter);
-      }else{
-        tabLink = new Link("#" + startLetter);
-      }
+      tabLink = new Link("SubscriptionManagement?lockssAction=" + action + "&start=" + startLetter + "&amp;end=" + endLetter);
+
       tabLink.add(tabSpan);
       
       // Add the tab to the list.
@@ -2346,11 +2329,9 @@ public class ServletUtil {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     
-    if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
-      tabsDiv.add(tabList);
-      for(Block loadingDiv : loadingDivs){
-        tabsDiv.add(loadingDiv);
-      }
+    tabsDiv.add(tabList);
+    for(Block loadingDiv : loadingDivs){
+      tabsDiv.add(loadingDiv);
     }
     
     return tabList;
