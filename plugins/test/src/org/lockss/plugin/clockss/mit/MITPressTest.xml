@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd" >
+<ONIXmessage release="2.1">
+  <header>
+    <m174>MIT Press</m174>
+    <m175>Nobody 978-465-7755</m175>
+    <m283>foo@blahtech.com</m283>
+    <m182>20160826</m182>
+    <m183>Title information from MIT Press</m183>
+    <m184>eng</m184>
+    <m185>01</m185>
+    <m186>USD</m186>
+    <m187>in</m187>
+    <m193>General Trade</m193>
+  </header>
+  <product>
+    <a001>001043-24326427</a001>
+    <a002>03</a002>
+    <productidentifier>
+      <b221>02</b221>
+      <b244>0262034247</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>03</b221>
+      <b244>9780262034111</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9780262034111</b244>
+    </productidentifier>
+    <b012>BB</b012>
+    <b014>Hardback</b014>
+    <n338/>
+    <title>
+      <b202>01</b202>
+      <b203>First Part Title</b203>
+      <b029>More and Less</b029>
+    </title>
+    <workidentifier>
+      <b201>15</b201>
+      <b244>9780262533222</b244>
+    </workidentifier>
+    <contributor>
+      <b034>1</b034>
+      <b035>A01</b035>
+      <b036>Robert C. WRiter</b036>
+      <b037>WRiter, Robert C.</b037>
+      <b039>Robert C.</b039>
+      <b040>WRiter</b040>
+    </contributor>
+    <contributor>
+      <b034>2</b034>
+      <b035>A01</b035>
+      <b036>Flora Words</b036>
+      <b037>Words, Flora</b037>
+      <b039>Flora</b039>
+      <b040>Words</b040>
+    </contributor>
+    <n386/>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>224</b061>
+    <b064>LAN009000</b064>
+    <subject>
+      <b067>10</b067>
+      <b069>SCI027000</b069>
+    </subject>
+    <audience>
+      <b204>01</b204>
+      <b206>01</b206>
+    </audience>
+    <othertext>
+      <d102>01</d102>
+      <d103>02</d103>
+      <d104><![CDATA[<DIV>We are born crying, but those cries signal the first stirring of language. Within a year or so, infants master the sound system of their language; a few years after that, they are engaging in conversations. This remarkable, species-specific ability to acquire any human language -- &quot;the language faculty&quot; -- raises important biological questions about language, including how it has evolved. This book by two distinguished scholars -- a computer scientist and a linguist -- addresses the enduring question of the evolution of language. Robert Berwick and Noam Chomsky explain that until recently the evolutionary question could not be properly posed, because we did not have a clear idea of how to define &quot;language&quot; and therefore what it was that had evolved. But since the Minimalist Program, developed by Chomsky and others, we know the key ingredients of language and can put together an account of the evolution of human language and what distinguishes us from all other animals.Berwick and Chomsky discuss the biolinguistic perspective on language, which views language as a particular object of the biological world; the computational efficiency of language as a system of thought and understanding; the tension between Darwin's idea of gradual change and our contemporary understanding about evolutionary change and language; and evidence from nonhuman animals, in particular vocal learning in songbirds.</DIV>]]></d104>
+    </othertext>
+    <othertext>
+      <d102>02</d102>
+        <d103>02</d103>
+        <d104><![CDATA[<DIV>Berwick and Chomsky draw on recent developments in linguistic theory to offer an evolutionary account of language and humans' remarkable, species-specific ability to acquire it.</DIV>]]></d104>
+    </othertext>
+    <mediafile>
+      <f114>04</f114>
+      <f115>03</f115>
+      <f116>01</f116>
+      <f117></f117>
+    </mediafile>
+    <imprint>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Imprint Key</b242>
+      <b243>4031541</b243>
+      <b079>The MIT Press</b079>
+    </imprint>
+    <publisher>
+      <b291>01</b291>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Publisher Key</b242>
+      <b243>4031540</b243>
+      <b081>The MIT Press</b081>
+    </publisher>
+    <b394>04</b394>
+    <b003>20151230</b003>
+    <b087>2016</b087>
+    <salesrights>
+      <b089>01</b089>
+      <b090>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</b090>
+    </salesrights>
+    <relatedproduct>
+      <h208>13</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9780262533222</b244>
+      </productidentifier>
+    </relatedproduct>
+    <supplydetail>
+      <j137>MIT Press</j137>
+      <j268>02</j268>
+      <j269>N</j269>
+      <j141>IP</j141>
+      <j396>20</j396>
+      <j143>20151230</j143>
+      <price>
+        <j148>01</j148>
+        <discountcoded>
+          <j363>02</j363>
+          <j364>T</j364>
+        </discountcoded>
+        <j151>22.95</j151>
+        <j152>USD</j152>
+        <j161>20160822</j161>
+      </price>
+    </supplydetail>
+  </product>
+  <product>
+    <a001>001043-24326222</a001>
+    <a002>03</a002>
+    <productidentifier>
+      <b221>02</b221>
+      <b244>026233335X</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>03</b221>
+      <b244>9780262333351</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9780262333351</b244>
+    </productidentifier>
+    <b012>DG</b012>
+    <b014>Open Ebook Format</b014>
+    <b211>029</b211>
+    <b213>Open Ebook Format</b213>
+    <n338/>
+    <title>
+      <b202>01</b202>
+      <b203>First Part Title</b203>
+      <b029>More and Less</b029>
+    </title>
+    <workidentifier>
+      <b201>15</b201>
+      <b244>9780262533222</b244>
+    </workidentifier>
+    <contributor>
+      <b034>1</b034>
+      <b035>A01</b035>
+      <b036>Robert C. WRiter</b036>
+      <b037>WRiter, Robert C.</b037>
+      <b039>Robert C.</b039>
+      <b040>WRiter</b040>
+    </contributor>
+    <contributor>
+      <b034>2</b034>
+      <b035>A01</b035>
+      <b036>Flora Words</b036>
+      <b037>Words, Flora</b037>
+      <b039>Flora</b039>
+      <b040>Words</b040>
+    </contributor>
+    <n386/>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>224</b061>
+    <b064>LAN009000</b064>
+    <subject>
+      <b067>10</b067>
+      <b069>SCI027000</b069>
+    </subject>
+    <audience>
+      <b204>01</b204>
+      <b206>01</b206>
+    </audience>
+    <othertext>
+      <d102>01</d102>
+      <d103>02</d103>
+      <d104><![CDATA[<DIV>We are born crying, but those cries signal the first stirring of language. Within a year or so, infants master the sound system of their language; a few years after that, they are engaging in conversations. This remarkable, species-specific ability to acquire any human language -- &quot;the language faculty&quot; -- raises important biological questions about language, including how it has evolved. This book by two distinguished scholars -- a computer scientist and a linguist -- addresses the enduring question of the evolution of language. Robert Berwick and Noam Chomsky explain that until recently the evolutionary question could not be properly posed, because we did not have a clear idea of how to define &quot;language&quot; and therefore what it was that had evolved. But since the Minimalist Program, developed by Chomsky and others, we know the key ingredients of language and can put together an account of the evolution of human language and what distinguishes us from all other animals.Berwick and Chomsky discuss the biolinguistic perspective on language, which views language as a particular object of the biological world; the computational efficiency of language as a system of thought and understanding; the tension between Darwin's idea of gradual change and our contemporary understanding about evolutionary change and language; and evidence from nonhuman animals, in particular vocal learning in songbirds.</DIV>]]></d104>
+    </othertext>
+    <othertext>
+      <d102>02</d102>
+        <d103>02</d103>
+        <d104><![CDATA[<DIV>Berwick and Chomsky draw on recent developments in linguistic theory to offer an evolutionary account of language and humans' remarkable, species-specific ability to acquire it.</DIV>]]></d104>
+    </othertext>
+    <mediafile>
+      <f114>04</f114>
+      <f115>03</f115>
+      <f116>01</f116>
+      <f117></f117>
+    </mediafile>
+    <imprint>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Imprint Key</b242>
+      <b243>4031541</b243>
+      <b079>The MIT Press</b079>
+    </imprint>
+    <publisher>
+      <b291>01</b291>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Publisher Key</b242>
+      <b243>4031540</b243>
+      <b081>The MIT Press</b081>
+    </publisher>
+    <b394>04</b394>
+    <b003>20160115</b003>
+    <b087>2016</b087>
+    <salesrights>
+      <b089>01</b089>
+      <b090>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</b090>
+    </salesrights>
+    <relatedproduct>
+      <h208>13</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9780262533492</b244>
+      </productidentifier>
+    </relatedproduct>
+    <supplydetail>
+      <j137>MIT Press</j137>
+      <j268>02</j268>
+      <j269>N</j269>
+      <j141>IP</j141>
+      <j396>20</j396>
+      <j143>20160115</j143>
+      <price>
+        <j148>01</j148>
+        <j261>06</j261>
+        <discountcoded>
+          <j363>02</j363>
+          <j364>T</j364>
+        </discountcoded>
+        <j151>34.95</j151>
+        <j152>USD</j152>
+        <j161>20160822</j161>
+      </price>
+    </supplydetail>
+  </product>
+  <product>
+    <a001>001043-23999049</a001>
+    <a002>03</a002>
+    <productidentifier>
+      <b221>02</b221>
+      <b244>0262034387</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>03</b221>
+      <b244>9780262034888</b244>
+    </productidentifier>
+    <productidentifier>
+      <b221>15</b221>
+      <b244>9780262034888</b244>
+    </productidentifier>
+    <b012>BB</b012>
+    <b014>Hardback</b014>
+    <n338/>
+    <title>
+      <b202>01</b202>
+      <b203>Sharing the Work</b203>
+      <b029>What I Know</b029>
+    </title>
+    <workidentifier>
+      <b201>15</b201>
+      <b244>9780262533553</b244>
+    </workidentifier>
+    <contributor>
+      <b034>1</b034>
+      <b035>A01</b035>
+      <b036>Myra Thoughts</b036>
+      <b037>Thoughts, Myra</b037>
+      <b039>Myra</b039>
+      <b040>Thoughts</b040>
+    </contributor>
+    <n386/>
+    <language>
+      <b253>01</b253>
+      <b252>eng</b252>
+    </language>
+    <b061>248</b061>
+    <b064>BIO026000</b064>
+    <subject>
+      <b067>10</b067>
+      <b069>BUS069000</b069>
+    </subject>
+    <audience>
+      <b204>01</b204>
+      <b206>01</b206>
+    </audience>
+    <mediafile>
+      <f114>04</f114>
+      <f115>03</f115>
+      <f116>01</f116>
+      <f117></f117>
+    </mediafile>
+    <imprint>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Imprint Key</b242>
+      <b243>4031541</b243>
+      <b079>The MIT Press</b079>
+    </imprint>
+    <publisher>
+      <b291>01</b291>
+      <b241>01</b241>
+      <b242>Firebrand Cloud Publisher Key</b242>
+      <b243>4031540</b243>
+      <b081>The MIT Press</b081>
+    </publisher>
+    <b394>04</b394>
+    <b003>20160401</b003>
+    <salesrights>
+      <b089>01</b089>
+      <b090>AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</b090>
+    </salesrights>
+    <relatedproduct>
+      <h208>27</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9780262332088</b244>
+      </productidentifier>
+    </relatedproduct>
+    <relatedproduct>
+      <h208>27</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9780262332101</b244>
+      </productidentifier>
+    </relatedproduct>
+    <relatedproduct>
+      <h208>27</h208>
+      <productidentifier>
+        <b221>15</b221>
+        <b244>9780262332095</b244>
+      </productidentifier>
+    </relatedproduct>
+  </product>
+</ONIXmessage>
