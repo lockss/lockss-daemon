@@ -121,6 +121,20 @@
   {
   
     title < 
+      name = International Journal of Pharmacokinetics ;
+      issn = 2053-0846;
+      eissn = 2053-0854
+    >
+    
+    param[journal_id] = ipk
+
+   au < exists ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 >
+ 
+   }
+
+  {
+  
+    title < 
       name = Pharmaceutical Bioprocessing ;
       issn = 2048-9145
     >
