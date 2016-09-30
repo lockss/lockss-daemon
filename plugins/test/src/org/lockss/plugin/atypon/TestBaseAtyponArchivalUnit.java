@@ -66,14 +66,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String baseRepairList[] = 
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
-    "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     "://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\\.jpg|\\.fp\\.png(_v[0-9]+)?)$",
     };
 
   static final String bookRepairList[] = 
     {
     "://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/",
-    "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "/(assets|css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
     };
 
   
@@ -426,7 +426,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/resources/page-builder/newimg/playPause.gif",
         "http://www.inderscienceonline.com/na102/home/readonly/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
         "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/covergifs/ijlt/cover.jpg",
-        "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/content/ijpe/2015/ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03",        
+        "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/content/ijpe/2015/ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03",
+        //variant on pb-assets in now defunct Maney
+        "http://www.maneyonline.com/pb/assets/raw/sub-hist.png",
         "http://www.emeraldinsight.com/wro/product.css");
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
