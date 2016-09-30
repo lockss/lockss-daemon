@@ -48494,6 +48494,23 @@ comment[mpj] = now published by Brill
   }
 
     {
+  
+      title <
+        name = World Affairs ;
+        issn = 0043-8200 ;
+        eissn = 1940-1582 ;
+        issnl = 0043-8200
+      >
+  
+      param[base_url] = http://waf.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2016 ; World Affairs Volume 179 ; 179 >
+  
+    }
+
+    {
 
       title <
         name = World Journal for Pediatric and Congenital Heart Surgery ;
