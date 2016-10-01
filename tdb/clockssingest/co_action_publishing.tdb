@@ -277,7 +277,7 @@
     param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = gha
     
-    au < finished ; crawling ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 ; >
+    au < finished ; frozen ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 ; >
     au < finished ; crawling ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 ; >
     au < finished ; frozen ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 ; >
@@ -480,7 +480,7 @@
     au < finished ; finished ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 ; >
     au < finished ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 ; >
     au < finished ; finished ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 ; >
-    au < finished ; crawling ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 ; >
+    au < finished ; frozen ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; 2013 ; >
     au < finished ; finished ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; 2015 ; >
@@ -674,7 +674,7 @@
     param[journal_id] = pba
 
     au < finished ; finished ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 ; >
-    au < finished ; crawling ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 ; >
+    au < finished ; frozen ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
@@ -763,7 +763,7 @@
     au < finished ; finished ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 ; >
     au < finished ; finished ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 ; >
     au < finished ; finished ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 ; >
-    au < finished ; crawling ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 ; >
+    au < finished ; frozen ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; 2013 ; >
     au < finished ; finished ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; 2014 ; >
     au < finished ; finished ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; 2015 ; reingest1.clockss.org:8082 >
@@ -811,7 +811,7 @@
     au < finished ; finished ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 ; >
     au < finished ; finished ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 ; >
     au < finished ; crawling ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 ; >
-    au < finished ; crawling ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 ; >
+    au < finished ; frozen ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 ; >
     au < finished ; crawling ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; 2005 ; >
 
   }
@@ -950,7 +950,7 @@
     au < manifest ; exists ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; 1999 ; >
     au < finished ; finished ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; 2000 ; >
     au < finished ; finished ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; 2001 ; >
-    au < finished ; crawling ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 ; >
+    au < finished ; frozen ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 ; >
     au < finished ; finished ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; 2003 ; >
     au < finished ; finished ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; 2004 ; >
     au < finished ; finished ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 ; >

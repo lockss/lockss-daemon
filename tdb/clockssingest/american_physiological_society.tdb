@@ -1276,7 +1276,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 297 ; 297 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 299 ; 299 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
@@ -1499,7 +1499,7 @@
       au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296 ; 296 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 ; >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; >
+      au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 ; >
 
     }
@@ -2004,7 +2004,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >

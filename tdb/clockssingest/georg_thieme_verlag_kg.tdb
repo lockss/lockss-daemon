@@ -885,7 +885,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Diabetologie und Stoffwechsel Volume 2009 ; 4 ; >
    au < finished ; finished ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 2010 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 2011 ; 6 ; >
-   au < finished ; crawling ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 ; >
    au < finished ; finished ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; Diabetologie und Stoffwechsel Volume 2015 ; 10 ; reingest1.clockss.org:8082 >
@@ -1549,7 +1549,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 ; >
    au < finished ; finished ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 ; >
    au < finished ; finished ; 2014 ; 2014 ; Facial Plastic Surgery Volume 2014 ; 28 ; >
-   au < finished ; crawling ; 2015 ; 2015 ; Facial Plastic Surgery Volume 2015 ; 29 ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2015 ; 2015 ; Facial Plastic Surgery Volume 2015 ; 29 ; reingest1.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Facial Plastic Surgery Volume 2016 ; 30 ; >
 
   }
@@ -1675,7 +1675,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 8 ; >
    au < finished ; finished ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 2013 ; 9 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 2014 ; 10 ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 2015 ; 11 ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 2015 ; 11 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Gastroenterologie up2dat Volume 2016 ; 12 ; >
 
   }
@@ -2007,7 +2007,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Hormone and Metabolic Research Volume 2012 ; 44 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Hormone and Metabolic Research Volume 2013 ; 45 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Hormone and Metabolic Research Volume 2014 ; 46 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2015 ; 2015 ; Hormone and Metabolic Research Volume 2015 ; 47 ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2015 ; 2015 ; Hormone and Metabolic Research Volume 2015 ; 47 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Hormone and Metabolic Research Volume 2016 ; 48 ; >
 
   }
@@ -2138,7 +2138,7 @@
     au < finished ; finished ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 ; >
     au < finished ; crawling ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; intensiv Volume 2016 ; 24 ; >
 
   }
@@ -2275,7 +2275,7 @@
     au < finished ; finished ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 ; >
     au < finished ; finished ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Sports Medicine Volume 2016 ; 37 ; >
 
   }
@@ -3036,7 +3036,7 @@
     param[journal_id] = 10.1055/s-00025515
 
    au < finished ; crawling ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
+   au < finished ; frozen ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
@@ -3388,7 +3388,7 @@
 
     au < finished ; finished ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Neuroradiologie Scan Volume 2016 ; 6 ; >
@@ -5162,7 +5162,7 @@
    au < finished ; finished ; 2012 ; 2012 ; Sportverletzung - Sportschaden Volume 2012 ; 26 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 2013 ; 27 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 2015 ; 29 ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 2015 ; 29 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 2016 ; 30 ; >
 
    }
