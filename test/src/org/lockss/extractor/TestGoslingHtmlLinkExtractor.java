@@ -1085,6 +1085,47 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     assertEquals(expected, cb.getFoundUrls());
   }
 
+  public void testProtocolNeutralLinksHttp() throws Exception {
+    String url1= "http://sample2.com/foo/bar.x";
+    String url2= "http://sample3.com/bar/bar.y";
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>"+
+      "<a href=\"//sample3.com/bar/bar.y\">link1</a>";
+
+    extractor.extractUrls(mau, new StringInputStream(source), ENC,
+			  "http://www.example.com/blah/", cb);
+    assertEquals(SetUtil.set(url1, url2), cb.getFoundUrls());
+  }
+
+  public void testProtocolNeutralLinksHttps() throws Exception {
+    String url1= "https://sample2.com/foo/bar.x";
+    String url2= "https://sample3.com/bar/bar.y";
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>"+
+      "<a href=\"//sample3.com/bar/bar.y\">link1</a>";
+
+    extractor.extractUrls(mau, new StringInputStream(source), ENC,
+			  "https://www.example.com/blah/", cb);
+    assertEquals(SetUtil.set(url1, url2), cb.getFoundUrls());
+  }
+
+  public void testProtocolNeutralLinksBase() throws IOException {
+    String url1= "http://sample2.com/foo/bar.x";
+    String url2= "https://sample2.com/foo/bar.x";
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>"+
+      "<base href=https://www.example.com>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>";
+
+    extractor.extractUrls(mau, new StringInputStream(source), ENC,
+			  "http://www.example.com/blah/", cb);
+
+    assertEquals(SetUtil.set(url1, url2), cb.getFoundUrls());
+  }
+
 
   private void checkBadTags(String[] badTags, String closeTag)
       throws IOException {

@@ -789,6 +789,15 @@ public class TestUrlUtil extends LockssTestCase {
     }
   }
 
+  public void testResolveProtocolNeutralUrl() throws Exception {
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://gorp.org/xxx.jpg",
+				    "//test.com/foo/bar/a.html"));
+    assertEquals("https://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("https://gorp.org/xxx.jpg",
+				    "//test.com/foo/bar/a.html"));
+  }
+
   //should trip leading and trailing whitespace from the second arg
   public void testResolveUrlTrimsLeadingAndTrailingWhiteSpace()
       throws MalformedURLException {

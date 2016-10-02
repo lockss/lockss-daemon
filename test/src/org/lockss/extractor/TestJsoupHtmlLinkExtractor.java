@@ -981,6 +981,32 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     assertEquals(expected, m_callback.getFoundUrls());
   }
 
+  public void testProtocolNeutralLinksHttp() throws Exception {
+    String url1= "http://sample2.com/foo/bar.x";
+    String url2= "http://sample3.com/bar/bar.y";
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>"+
+      "<a href=\"//sample3.com/bar/bar.y\">link1</a>";
+
+    m_extractor.extractUrls(m_mau, new StringInputStream(source), ENC,
+			    "http://www.example.com/blah/", m_callback);
+    assertEquals(SetUtil.set(url1, url2), m_callback.getFoundUrls());
+  }
+
+  public void testProtocolNeutralLinksHttps() throws Exception {
+    String url1= "https://sample2.com/foo/bar.x";
+    String url2= "https://sample3.com/bar/bar.y";
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"//sample2.com/foo/bar.x\">link1</a>"+
+      "<a href=\"//sample3.com/bar/bar.y\">link1</a>";
+
+    m_extractor.extractUrls(m_mau, new StringInputStream(source), ENC,
+			    "https://www.example.com/blah/", m_callback);
+    assertEquals(SetUtil.set(url1, url2), m_callback.getFoundUrls());
+  }
+
   private String getPageHeader(URL fURL) throws IOException{
     StringBuilder result = new StringBuilder();
 
