@@ -260,9 +260,12 @@ public class AuHelper {
 
     AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
 
-    if (aupinfo.isAuOverride()) {
-      String disp = (aupinfo.getHost() == null
-	  ? "Direct connection" : aupinfo.getHost() + ":" + aupinfo.getPort());
+    if (aupinfo.isInvalidAuOverride()) {
+      result.setCrawlProxy("Invalid AU proxy spec: " + aupinfo.getAuSpec());
+    } else if (aupinfo.isAuOverride()) {
+      String disp =
+	(aupinfo.getHost() == null
+	 ? "Direct connection" : aupinfo.getHost() + ":" + aupinfo.getPort());
       result.setCrawlProxy(disp);
     }
 

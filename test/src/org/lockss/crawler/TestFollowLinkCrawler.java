@@ -215,7 +215,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(null, mmuf.proxyHost);
   }
 
-  public void testIllAuProxy() throws Exception {
+  public void testIllAuProxyAbort() throws Exception {
     Properties p = new Properties();
     p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
     p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
@@ -225,12 +225,37 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
 				 "proxy.host:8086:foo");
     mau.setConfiguration(auConfig);
-    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
-    mau.addUrl(startUrl);
-    crawler.makeUrlFetcher(startUrl);
-    MyMockUrlFetcher mmuf = mau.lastMmuf;
-    assertEquals("pr.wub", mmuf.proxyHost);
-    assertEquals(27, mmuf.proxyPort);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    crawler.setUrlsToFollow(ListUtil.list(url1));
+    mau.addUrl(url1, false, true);
+
+    assertFalse(crawler.doCrawl());
+    assertTrue(crawler.isAborted());
+  }
+
+  public void testIllAuProxyContinue() throws Exception {
+    Properties p = new Properties();
+    p.put(BaseCrawler.PARAM_ABORT_ON_INVALID_PROXY, "false");
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.addFromProps(p);
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "proxy.host:8086:foo");
+    mau.setConfiguration(auConfig);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    crawler.setUrlsToFollow(ListUtil.list(url1));
+    mau.addUrl(url1, false, true);
+
+    assertTrue(crawler.doCrawl());
+    assertFalse(crawler.isAborted());
   }
 
   public void testMakeUrlFetcher() {

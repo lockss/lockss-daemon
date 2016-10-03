@@ -1092,7 +1092,12 @@ public class ArchivalUnitStatus
 					  new Long(state.getAuCreationTime())));
 
       AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
-      if (aupinfo.isAuOverride()) {
+      if (aupinfo.isInvalidAuOverride()) {
+	String disp = "Error: Invalid AU proxy spec: " + aupinfo.getAuSpec();
+	res.add(new StatusTable.SummaryInfo("Crawl proxy",
+					    ColumnDescriptor.TYPE_STRING,
+					    disp));
+      } else if (aupinfo.isAuOverride()) {
 	String disp = (aupinfo.getHost() == null
 		       ? "Direct connection"
 		       : aupinfo.getHost() + ":" + aupinfo.getPort());
