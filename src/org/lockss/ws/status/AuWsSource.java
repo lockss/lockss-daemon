@@ -332,7 +332,9 @@ public class AuWsSource extends AuWsResult {
     if (!crawlProxyPopulated) {
       AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
 
-      if (aupinfo.isAuOverride()) {
+      if (aupinfo.isInvalidAuOverride()) {
+  	setCrawlProxy("Invalid AU proxy spec: " + aupinfo.getAuSpec());
+      } else if (aupinfo.isAuOverride()) {
   	setCrawlProxy((aupinfo.getHost() == null ? "Direct connection"
   	    : aupinfo.getHost() + ":" + aupinfo.getPort()));
       }

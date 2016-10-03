@@ -544,19 +544,25 @@ public class TestAuUtil extends LockssTestCase {
     aupi = AuUtil.getAuProxyInfo(mau);
     assertEquals(null, aupi.getHost());
     assertFalse(aupi.isAuOverride());
+    assertFalse(aupi.isInvalidAuOverride());
+    assertEquals(null, aupi.getAuSpec());
 
     setGlobalProxy("host", 1111);
     aupi = AuUtil.getAuProxyInfo(mau);
     assertFalse(aupi.isAuOverride());
+    assertFalse(aupi.isInvalidAuOverride());
     assertEquals("host", aupi.getHost());
     assertEquals(1111, aupi.getPort());
+    assertEquals(null, aupi.getAuSpec());
 
     tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "foo:47");
     mau.setTitleConfig(tc);
     aupi = AuUtil.getAuProxyInfo(mau);
     assertTrue(aupi.isAuOverride());
+    assertFalse(aupi.isInvalidAuOverride());
     assertEquals("foo", aupi.getHost());
     assertEquals(47, aupi.getPort());
+    assertEquals("foo:47", aupi.getAuSpec());
 
     tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "HOST:1111");
     mau.setTitleConfig(tc);
@@ -577,6 +583,16 @@ public class TestAuUtil extends LockssTestCase {
     assertTrue(aupi.isAuOverride());
     assertEquals("HOST", aupi.getHost());
     assertEquals(1112, aupi.getPort());
+
+    tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "INVALIDPROXY");
+    mau.setTitleConfig(tc);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertFalse(aupi.isAuOverride());
+    assertTrue(aupi.isInvalidAuOverride());
+    assertEquals(null, aupi.getHost());
+    assertEquals(0, aupi.getPort());
+    assertEquals("INVALIDPROXY", aupi.getAuSpec());
+
   }
 
   public void testIsConfigCompatibleWithPlugin() {

@@ -175,6 +175,12 @@ public abstract class BaseCrawler implements Crawler {
   public static final boolean DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED =
     true;
 
+  /** If the per-AU proxy spec is invalid (can't be parsed), abort the
+   * crawl.  If false the crawl proceeds using the global proxy if any. */
+  public static final String PARAM_ABORT_ON_INVALID_PROXY =
+    PREFIX + "abortOnInvalidProxy";
+  public static final boolean DEFAULT_ABORT_ON_INVALID_PROXY = true;
+
   protected boolean mimeTypePauseAfter304 = 
       DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
   protected StorePermissionScheme paramStorePermissionScheme =
@@ -286,7 +292,25 @@ public abstract class BaseCrawler implements Crawler {
     AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au, config);
     proxyHost = aupinfo.getHost();
     proxyPort = aupinfo.getPort();
-    if (aupinfo.isAuOverride()) {
+    if (aupinfo.isInvalidAuOverride()) {
+      proxyStatus = "Invalid: " + aupinfo.getAuSpec();
+      if (config.getBoolean(PARAM_ABORT_ON_INVALID_PROXY,
+			    DEFAULT_ABORT_ON_INVALID_PROXY)) {
+	logger.error("Invalid AU proxy: " + aupinfo.getAuSpec() +
+		     ". Aborting");
+	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
+				   "Invalid AU proxy: " + aupinfo.getAuSpec());
+	abortCrawl();
+      } else {
+	if (proxyHost != null) {
+	  logger.warning("Invalid AU proxy: " + aupinfo.getAuSpec() +
+			 ". Continuing with default proxy");
+	} else {
+	  logger.warning("Invalid AU proxy: " + aupinfo.getAuSpec() +
+			 ". Continuing with no proxy");
+	}
+      }
+    } else if (aupinfo.isAuOverride()) {
       if (aupinfo.getHost() == null) {
         logger.info("AU overrides crawl proxy with DIRECT");
 	proxyStatus = "Direct";

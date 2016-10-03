@@ -438,7 +438,13 @@ public class AuUtil {
   public static class AuProxyInfo {
     String host = null;
     int port;
+    String auSpec;
     boolean isAuOverride = false;
+    boolean isInvalidAuOverride = false;
+
+    public String getAuSpec() {
+      return auSpec;
+    }
 
     public String getHost() {
       return host;
@@ -450,6 +456,10 @@ public class AuUtil {
 
     public boolean isAuOverride() {
       return isAuOverride;
+    }
+
+    public boolean isInvalidAuOverride() {
+      return isInvalidAuOverride;
     }
 
     public boolean equals(Object o) {
@@ -543,6 +553,7 @@ public class AuUtil {
 
     if (!StringUtil.isNullString(auProxySpec)) {
       AuProxyInfo res = new AuProxyInfo();
+      res.auSpec = auProxySpec;
       try {
 	HostPortParser hpp = new HostPortParser(auProxySpec);
 	res.host = hpp.getHost();
@@ -551,6 +562,8 @@ public class AuUtil {
 	}
       } catch (HostPortParser.InvalidSpec e) {
 	log.warning("Illegal AU crawl_proxy: " + auProxySpec, e);
+	global.isInvalidAuOverride = true;
+	global.auSpec = auProxySpec;
 	return global;
       }
       res.isAuOverride = !res.equals(global);
