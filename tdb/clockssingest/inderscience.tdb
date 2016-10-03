@@ -2610,7 +2610,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electronic Customer Relationship Management Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; International Journal of Electronic Customer Relationship Management Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; >
 
     }
 
@@ -7132,7 +7132,7 @@
       au < finished ; crawling ; 2015 ; International Journal of Sensor Networks Volume 19 ; 19 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Sensor Networks Volume 20 ; 20 ; >
       au < crawling ; exists ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 ; >
-      au < expected ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
 
     }
 
@@ -8774,7 +8774,7 @@
       au < frozen ; exists ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 ; >
       au < finished ; crawling ; 2015 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 ; >
-      au < expected ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 ; >
 
     }
 
