@@ -200,21 +200,21 @@
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; The Journal of Cell Biology Volume 178 ; 178 ; >
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; The Journal of Cell Biology Volume 179 ; 179 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; The Journal of Cell Biology Volume 180 ; 180 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Journal of Cell Biology Volume 181 ; 181 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Journal of Cell Biology Volume 182 ; 182 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Journal of Cell Biology Volume 183 ; 183 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of Cell Biology Volume 184 ; 184 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of Cell Biology Volume 185 ; 185 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of Cell Biology Volume 186 ; 186 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of Cell Biology Volume 187 ; 187 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; The Journal of Cell Biology Volume 188 ; 188 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; The Journal of Cell Biology Volume 189 ; 189 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of Cell Biology Volume 181 ; 181 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of Cell Biology Volume 182 ; 182 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of Cell Biology Volume 183 ; 183 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of Cell Biology Volume 184 ; 184 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of Cell Biology Volume 185 ; 185 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of Cell Biology Volume 186 ; 186 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of Cell Biology Volume 187 ; 187 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; The Journal of Cell Biology Volume 188 ; 188 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; The Journal of Cell Biology Volume 189 ; 189 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; The Journal of Cell Biology Volume 190 ; 190 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; The Journal of Cell Biology Volume 191 ; 191 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Journal of Cell Biology Volume 192 ; 192 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; The Journal of Cell Biology Volume 192 ; 192 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; The Journal of Cell Biology Volume 193 ; 193 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; The Journal of Cell Biology Volume 194 ; 194 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Journal of Cell Biology Volume 195 ; 195 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; The Journal of Cell Biology Volume 195 ; 195 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 196 ; 196 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 197 ; 197 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 ; >
@@ -453,10 +453,10 @@
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2005 ; The Journal of Experimental Medicine Volume 202 ; 202 ; >
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; The Journal of Experimental Medicine Volume 203 ; 203 ; >
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; The Journal of Experimental Medicine Volume 204 ; 204 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Journal of Experimental Medicine Volume 205 ; 205 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of Experimental Medicine Volume 206 ; 206 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; The Journal of Experimental Medicine Volume 207 ; 207 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Journal of Experimental Medicine Volume 208 ; 208 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of Experimental Medicine Volume 205 ; 205 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of Experimental Medicine Volume 206 ; 206 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; The Journal of Experimental Medicine Volume 207 ; 207 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; The Journal of Experimental Medicine Volume 208 ; 208 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; The Journal of Experimental Medicine Volume 209 ; 209 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; The Journal of Experimental Medicine Volume 210 ; 210 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; The Journal of Experimental Medicine Volume 211 ; 211 ; >
@@ -606,16 +606,16 @@
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2006 ; The Journal of General Physiology Volume 128 ; 128 ; >
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; The Journal of General Physiology Volume 129 ; 129 ; >
     au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2007 ; The Journal of General Physiology Volume 130 ; 130 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; The Journal of General Physiology Volume 131 ; 131 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; The Journal of General Physiology Volume 131 ; 131 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; The Journal of General Physiology Volume 132 ; 132 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of General Physiology Volume 133 ; 133 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2009 ; The Journal of General Physiology Volume 134 ; 134 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; The Journal of General Physiology Volume 135 ; 135 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of General Physiology Volume 133 ; 133 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; The Journal of General Physiology Volume 134 ; 134 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2010 ; The Journal of General Physiology Volume 135 ; 135 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; The Journal of General Physiology Volume 136 ; 136 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Journal of General Physiology Volume 137 ; 137 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; The Journal of General Physiology Volume 138 ; 138 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; The Journal of General Physiology Volume 137 ; 137 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; The Journal of General Physiology Volume 138 ; 138 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of General Physiology Volume 139 ; 139 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; The Journal of General Physiology Volume 140 ; 140 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; The Journal of General Physiology Volume 140 ; 140 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; The Journal of General Physiology Volume 141 ; 141 ; reingest1.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; The Journal of General Physiology Volume 142 ; 142 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; The Journal of General Physiology Volume 143 ; 143 ; >

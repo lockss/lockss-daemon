@@ -308,7 +308,7 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://jcem.endojournals.org/
 
-      au < down ; crawling ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
+      au < down ; frozen ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
       au < down ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ; >
 
     }

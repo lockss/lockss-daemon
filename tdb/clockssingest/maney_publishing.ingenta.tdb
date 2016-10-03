@@ -37,9 +37,9 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 ; > 
     au < doNotProcess ; doNotProcess ; 2008 ; Advances in Applied Ceramics Volume 107 ; 107 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 ; > 
-    au < down ; crawling ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 ; > 
-    au < down ; crawling ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 ; >
-    au < finished ; crawling ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 ; > 
+    au < down ; frozen ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 ; > 
+    au < down ; frozen ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 ; >
+    au < finished ; frozen ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Advances in Applied Ceramics Volume 112 ; 112 ; > 
 
   }
@@ -357,7 +357,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 ; > 
     au < down ; finished ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
     au < down ; finished ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; > 
+    au < finished ; frozen ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 ; > 
 
   }
@@ -500,7 +500,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 ; >
-    au < finished ; crawling ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 ; >
+    au < finished ; frozen ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Canadian Metallurgical Quarterly Volume 52 ; 52 ; >
 
   }
@@ -750,7 +750,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 ; > 
     au < finished ; finished ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 ; >
     au < superseded ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 [superseded] ; 46 ; > 
-    au < finished ; crawling ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 ; > 
+    au < finished ; frozen ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 ; > 
 
   }
@@ -1034,7 +1034,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Environmental Archaeology Volume 14 ; 14 ; > 
     au < finished ; finished ; 2010 ; Environmental Archaeology Volume 15 ; 15 ; >
     au < finished ; finished ; 2011 ; Environmental Archaeology Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2012 ; Environmental Archaeology Volume 17 ; 17 ; > 
+    au < finished ; frozen ; 2012 ; Environmental Archaeology Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Environmental Archaeology Volume 18 ; 18 ; > 
 
   }
@@ -1051,7 +1051,7 @@
     param[journal_id] =  eja
     param[journal_issn] = 1461-9571
 
-    au < finished ; crawling ; 2011 ; European Journal of Archaeology Volume 14 ; 14 ; > 
+    au < finished ; frozen ; 2011 ; European Journal of Archaeology Volume 14 ; 14 ; > 
     au < finished ; finished ; 2012 ; European Journal of Archaeology Volume 15 ; 15 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Archaeology Volume 16 ; 16 ; > 
     
@@ -1186,7 +1186,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Hematology Volume 14 ; 14 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Hematology Volume 15 ; 15 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Hematology Volume 16 ; 16 ; > 
-    au < finished ; crawling ; 2012 ; Hematology Volume 17 ; 17 ; > 
+    au < finished ; frozen ; 2012 ; Hematology Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Hematology Volume 18 ; 18 ; > 
 
   }
@@ -1434,7 +1434,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 ; > 
-    au < finished ; crawling ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 ; > 
+    au < finished ; frozen ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Cast Metals Research Volume 26 ; 26 ; > 
 
   }
@@ -1609,7 +1609,7 @@
     
     au < doNotProcess ; doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; International Wood Products Journal Volume 2 ; 2 ; > 
-    au < finished ; crawling ; 2012 ; International Wood Products Journal Volume 3 ; 3 ; > 
+    au < finished ; frozen ; 2012 ; International Wood Products Journal Volume 3 ; 3 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; International Wood Products Journal Volume 4 ; 4 ; > 
 
   }
@@ -1640,7 +1640,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Ironmaking & Steelmaking Volume 36 ; 36 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 ; > 
-    au < finished ; crawling ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 ; > 
+    au < finished ; frozen ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Ironmaking & Steelmaking Volume 40 ; 40 ; > 
 
   }
@@ -1820,7 +1820,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Bryology Volume 31 ; 31 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Bryology Volume 32 ; 32 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Bryology Volume 33 ; 33 ; > 
-    au < finished ; crawling ; 2012 ; Journal of Bryology Volume 34 ; 34 ; > 
+    au < finished ; frozen ; 2012 ; Journal of Bryology Volume 34 ; 34 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Bryology Volume 35 ; 35 ; > 
 
   }
@@ -2134,7 +2134,7 @@
     comment[notReady] = low agreement
 
     au < superseded ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 [superseded] ; 34 ; > 
-    au < finished ; crawling ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 ; > 
+    au < finished ; frozen ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 ; > 
 
   }
@@ -2545,7 +2545,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 ; > 
-    au < finished ; crawling ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 ; > 
+    au < finished ; frozen ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 ; > 
 
   }
@@ -2770,7 +2770,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mineral Processing and Extractive Metallurgy Volume 118 ; 118 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 ; >  
-    au < finished ; crawling ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 ; > 
+    au < finished ; frozen ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Mineral Processing and Extractive Metallurgy Volume 122 ; 122 ; > 
 
   }
@@ -2823,7 +2823,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Ming Studies Volume 2008 ; 2008 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Ming Studies Volume 2009 ; 2009 ; > 
     au < finished ; finished ; 2010 ; Ming Studies Volume 2010 ; 2010 ; >
-    au < finished ; crawling ; 2011 ; Ming Studies Volume 2011 ; 2011 ; > 
+    au < finished ; frozen ; 2011 ; Ming Studies Volume 2011 ; 2011 ; > 
     au < finished ; finished ; 2012 ; Ming Studies Volume 2012 ; 2012 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Ming Studies Volume 2013 ; 2013 ; > 
 
@@ -2855,7 +2855,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mining Technology Volume 118 ; 118 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Mining Technology Volume 119 ; 119 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Mining Technology Volume 120 ; 120 ; > 
-    au < finished ; crawling ; 2012 ; Mining Technology Volume 121 ; 121 ; > 
+    au < finished ; frozen ; 2012 ; Mining Technology Volume 121 ; 121 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Mining Technology Volume 122 ; 122 ; > 
 
   }
@@ -2906,7 +2906,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Neurological Research Volume 31 ; 31 ; > 
     au < doNotProcess ; doNotProcess ; 2010 ; Neurological Research Volume 32 ; 32 ; > 
     au < doNotProcess ; doNotProcess ; 2011 ; Neurological Research Volume 33 ; 33 ; > 
-    au < finished ; crawling ; 2012 ; Neurological Research Volume 34 ; 34 ; > 
+    au < finished ; frozen ; 2012 ; Neurological Research Volume 34 ; 34 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Neurological Research Volume 35 ; 35 ; > 
 
   }
@@ -3264,7 +3264,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Physical Therapy Reviews Volume 14 ; 14 ; > 
     au < finished ; finished ; 2010 ; Physical Therapy Reviews Volume 15 ; 15 ; >
     au < finished ; finished ; 2011 ; Physical Therapy Reviews Volume 16 ; 16 ; > 
-    au < finished ; crawling ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 ; > 
+    au < finished ; frozen ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Physical Therapy Reviews Volume 18 ; 18 ; > 
 
   }
@@ -3296,7 +3296,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Plastics, Rubber and Composites Volume 38 ; 38 ; > 
     au < finished ; finished ; 2010 ; Plastics, Rubber and Composites Volume 39 ; 39 ; >
     au < finished ; finished ; 2011 ; Plastics, Rubber and Composites Volume 40 ; 40 ; > 
-    au < finished ; crawling ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 ; > 
+    au < finished ; frozen ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Plastics, Rubber and Composites Volume 42 ; 42 ; > 
 
   }
@@ -3352,7 +3352,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Powder Metallurgy Volume 52 ; 52 ; > 
     au < finished ; finished ; 2010 ; Powder Metallurgy Volume 53 ; 53 ; >
     au < down ; finished ; 2011 ; Powder Metallurgy Volume 54 ; 54 ; >
-    au < finished ; crawling ; 2012 ; Powder Metallurgy Volume 55 ; 55 ; > 
+    au < finished ; frozen ; 2012 ; Powder Metallurgy Volume 55 ; 55 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Powder Metallurgy Volume 56 ; 56 ; > 
 
   }
@@ -3407,7 +3407,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Public Archaeology Volume 8 ; 8 ; > 
     au < finished ; finished ; 2010 ; Public Archaeology Volume 9 ; 9 ; >
     au < finished ; finished ; 2011 ; Public Archaeology Volume 10 ; 10 ; > 
-    au < finished ; crawling ; 2012 ; Public Archaeology Volume 11 ; 11 ; > 
+    au < finished ; frozen ; 2012 ; Public Archaeology Volume 11 ; 11 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Public Archaeology Volume 12 ; 12 ; > 
 
   }
@@ -3561,7 +3561,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Science and Technology of Welding & Joining Volume 14 ; 14 ; > 
     au < finished ; finished ; 2010 ; Science and Technology of Welding & Joining Volume 15 ; 15 ; >
     au < finished ; finished ; 2011 ; Science and Technology of Welding & Joining Volume 16 ; 16 ; > 
-    au < finished ; crawling ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 ; > 
+    au < finished ; frozen ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Science and Technology of Welding & Joining Volume 18 ; 18 ; > 
 
   }
@@ -3662,7 +3662,7 @@
     param[journal_issn] = 0039-3630
  
    au < finished ; finished ; 2011 ; Studies in Conservation Volume 56 ; 56 ; > 
-   au < finished ; crawling ; 2012 ; Studies in Conservation Volume 57 ; 57 ; > 
+   au < finished ; frozen ; 2012 ; Studies in Conservation Volume 57 ; 57 ; > 
    au < doNotProcess ; doNotProcess ; 2013 ; Studies in Conservation Volume 58 ; 58 ; > 
     
   }
@@ -3694,7 +3694,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Surface Engineering Volume 25 ; 25 ; > 
     au < finished ; finished ; 2010 ; Surface Engineering Volume 26 ; 26 ; > 
     au < finished ; finished ; 2011 ; Surface Engineering Volume 27 ; 27 ; > 
-    au < finished ; crawling ; 2012 ; Surface Engineering Volume 28 ; 28 ; > 
+    au < finished ; frozen ; 2012 ; Surface Engineering Volume 28 ; 28 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Surface Engineering Volume 29 ; 29 ; > 
 
   }
@@ -3754,7 +3754,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Survey Review Volume 41 ; 41 ; > 
     au < finished ; finished ; 2010 ; Survey Review Volume 42 ; 42 ; > 
     au < finished ; finished ; 2011 ; Survey Review Volume 43 ; 43 ; >  
-    au < finished ; crawling ; 2012 ; Survey Review Volume 44 ; 44 ; > 
+    au < finished ; frozen ; 2012 ; Survey Review Volume 44 ; 44 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Survey Review Volume 45 ; 45 ; > 
 
   }
@@ -3994,7 +3994,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the IMF Volume 87 ; 87 ; >
     au < finished ; finished ; 2010 ; Transactions of the IMF Volume 88 ; 88 ; >
     au < finished ; finished ; 2011 ; Transactions of the IMF Volume 89 ; 89 ; >
-    au < finished ; crawling ; 2012 ; Transactions of the IMF Volume 90 ; 90 ; >
+    au < finished ; frozen ; 2012 ; Transactions of the IMF Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the IMF Volume 91 ; 91 ; >
 
   }
@@ -4039,7 +4039,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 ; >
     au < finished ; finished ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 ; >
     au < finished ; finished ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 ; >
+    au < finished ; frozen ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 ; >
 
   }
