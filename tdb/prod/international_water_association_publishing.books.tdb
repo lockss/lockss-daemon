@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = International Water Association Publishing ;
+    info[contract] = 2013 ;
+    info[tester] = 5
+  >
+
+    plugin = org.lockss.plugin.highwire.iwa.IWADrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Water Intelligence Online ;
+      eissn = 1476-1777 ;
+      issnl = 1476-1777
+    >
+
+    param[base_url] = http://wio.iwaponline.com/
+    type = bookSeries
+
+    au < exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 >
+    au < exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 >
+    au < exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 >
+    au < exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 >
+
+  }
+
+}
+
