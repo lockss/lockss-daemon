@@ -5336,6 +5336,21 @@
   {
 
     title <
+      name = Canadian Journal of Nursing Research ;
+      issn = 0844-5621 ;
+      eissn = 1705-7051
+    >
+
+      param[base_url] = http://cjn.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 ; >
+
+  }
+
+  {
+
+    title <
       name = The Canadian Journal of Psychiatry ;
       issn = 0706-7437 ;
       eissn = 1497-0015
@@ -5365,21 +5380,6 @@
       au < finished ; finished ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; >
-
-  }
-
-  {
-
-    title <
-      name = Canadian Journal of Nursing Research ;
-      issn = 0844-5621 ;
-      eissn = 1705-7051
-    >
-
-      param[base_url] = http://cjn.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < doNotProcess ; exists ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 ; >
 
   }
 
