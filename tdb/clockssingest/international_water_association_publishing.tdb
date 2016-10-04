@@ -229,7 +229,11 @@
     >
 
     param[base_url] = http://wio.iwaponline.com/
+    type = bookSeries
 
+    au < exists ; exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 ; >
+    au < exists ; exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; >
+    au < exists ; exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; >
     au < exists ; exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; >
 
   }
