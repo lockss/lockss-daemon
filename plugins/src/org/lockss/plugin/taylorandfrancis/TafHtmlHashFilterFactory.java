@@ -259,7 +259,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
   public static final Pattern PAT_CITING_ARTICLES = Pattern.compile("<li>(<div>)?(<strong>)?(Citing Articles:|Citations:|Citation information:|<a href=\"/doi/citedby/).*?</li>", Pattern.CASE_INSENSITIVE); 
   public static final String REP_CITING_ARTICLES = EMPTY_STRING;
   
-  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(Published online:|Available online:|Version of record first published:).*?>", Pattern.CASE_INSENSITIVE); 
+  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(<(b|h[23456])>)?(Published online:|Available online:|Version of record first published:)(</\\2>)?.*?>", Pattern.CASE_INSENSITIVE); 
   public static final String REP_PUBLISHED_ONLINE = EMPTY_STRING;
   
   public static final Pattern PAT_PUB_ID = Pattern.compile("</pub-id>.*?</li>", Pattern.CASE_INSENSITIVE); 
