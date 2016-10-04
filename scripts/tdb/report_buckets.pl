@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 # Read in two reports of AUids and status. Generate a count
-# of category crossings.
+# of category crossings.  
 #
 # To create report, comparing two points in time.
 # git:
