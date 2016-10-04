@@ -83,7 +83,7 @@
      au < finished ; finished ; 2012 ; Analysis & PDE Volume 5 ; 5 ; 2012 ; >
      au < finished ; finished ; 2013 ; Analysis & PDE Volume 6 ; 6 ; 2013 ; >
      au < finished ; finished ; 2014 ; Analysis & PDE Volume 7 ; 7 ; 2014 ; >
-     au < frozen ; exists ; 2015 ; Analysis & PDE Volume 8 ; 8 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Analysis & PDE Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Analysis & PDE Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -107,7 +107,7 @@
      au < finished ; finished ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 ; 2012 ; >
      au < finished ; finished ; 2013 ; Communications in Applied Mathematics and Computational Science Volume 8 ; 8 ; 2013 ; >
      au < finished ; finished ; 2014 ; Communications in Applied Mathematics and Computational Science Volume 9 ; 9 ; 2014 ; reingest1.clockss.org:8082 >
-     au < frozen ; exists ; 2015 ; Communications in Applied Mathematics and Computational Science Volume 10 ; 10 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Communications in Applied Mathematics and Computational Science Volume 10 ; 10 ; 2015 ; reingest3.clockss.org:8083 >
      au < expected ; exists ; 2016 ; Communications in Applied Mathematics and Computational Science Volume 11 ; 11 ; 2016 ; >
   
   }
@@ -140,7 +140,7 @@
      au < finished ; finished ; 2012 ; Geometric Topology Volume 16 ; 16 ; 2012 ; >
      au < crawling ; exists ; 2013 ; Geometric Topology Volume 17 ; 17 ; 2013 ; >
      au < deepCrawl ; exists ; 2014 ; Geometric Topology Volume 18 ; 18 ; 2014 ; >
-     au < frozen ; exists ; 2015 ; Geometric Topology Volume 19 ; 19 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Geometric Topology Volume 19 ; 19 ; 2015 ; reingest4.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Geometric Topology Volume 20 ; 20 ; 2016 ; >
  
   }
@@ -167,7 +167,7 @@
      au < crawling ; exists ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; >
      au < finished ; finished ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; >
      au < finished ; finished ; 2012 ; Geometry & Topology Monographs in 2012 ; 18 ; 2012 ; reingest2.clockss.org:8085 >
-     au < frozen ; exists ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; reingest5.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Geometry & Topology Monographs in 2016 ; 20 ; 2016 ; >
      
   }
@@ -189,7 +189,7 @@
      au < finished ; finished ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 ; 2012 ; >
      au < finished ; finished ; 2013 ; Involve, a journal of mathematics Volume 6 ; 6 ; 2013 ; >
      au < finished ; finished ; 2014 ; Involve, a journal of mathematics Volume 7 ; 7 ; 2014 ; >
-     au < frozen ; exists ; 2015 ; Involve, a journal of mathematics Volume 8 ; 8 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Involve, a journal of mathematics Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Involve, a journal of mathematics Volume 9 ; 9 ; 2016 ; >
  
    }
@@ -212,7 +212,7 @@
      au < finished ; finished ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 ; 2012 ; >
      au < finished ; finished ; 2013 ; Journal of Mechanics of Materials and Structures Volume 8 ; 8 ; 2013 ; >
      au < finished ; frozen ; 2014 ; Journal of Mechanics of Materials and Structures Volume 9 ; 9 ; 2014 ; reingest2.clockss.org:8085 >
-     au < frozen ; exists ; 2015 ; Journal of Mechanics of Materials and Structures Volume 10 ; 10 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Journal of Mechanics of Materials and Structures Volume 10 ; 10 ; 2015 ; reingest5.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Journal of Mechanics of Materials and Structures Volume 11 ; 11 ; 2016 ; >
  
    }
@@ -232,7 +232,7 @@
      au < finished ; finished ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 ; >
      au < finished ; finished ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 ; >
-     au < frozen ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 ; reingest3.clockss.org:8083 >
      au < expected ; exists ; 2016 ; Journal of Software for Algebra and Geometry Volume 8 ; 8 ; 2016 ; >
 
   }
@@ -249,7 +249,7 @@
  
      au < finished ; finished ; 2013 ; Mathematics and Mechanics of Complex Systems Volume 1 ; 1 ; 2013 ; >
      au < finished ; finished ; 2014 ; Mathematics and Mechanics of Complex Systems Volume 2 ; 2 ; 2014 ; >
-     au < frozen ; exists ; 2015 ; Mathematics and Mechanics of Complex Systems Volume 3 ; 3 ; 2015 ; >
+     au < finished ; manifest ; 2015 ; Mathematics and Mechanics of Complex Systems Volume 3 ; 3 ; 2015 ; reingest4.clockss.org:8082 >
      au < expected ; exists ; 2016 ; Mathematics and Mechanics of Complex Systems Volume 4 ; 4 ; 2016 ; >
 
   }
