@@ -1128,10 +1128,25 @@
     {
 
       title <
+        name = Alternative Law Journal ;
+        issn = 1037-969X ;
+        eissn = 2398-9084 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://alj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 >
+
+    }
+
+    {
+
+      title <
         name = American Behavioral Scientist ;
         issn = 0002-7642 ;
-        eissn = 1552-3381 ;
-        issnl = 0002-7642
+        eissn = 1552-3381 
       >
 
       {
@@ -6650,6 +6665,22 @@
 
     au < released ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 >
     au < manifest ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Chinese Sociological Dialogue ;
+      issn = 2397-2009 ;
+      eissn = 2397-2017
+    >
+
+      param[base_url] = http://csd.sagepub.com/
+    pluginSuffix = HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 >
 
   }
 
@@ -14563,6 +14594,21 @@
 
       }
 
+    }
+
+    {
+  
+      title <
+        name = Foot & Ankle Orthopaedics ;
+        eissn = 2473-0114
+      >
+  
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://fao.sagepub.com/
+  
+        au < exists ; 2016 ; Foot & Ankle Orthopaedics Volume 1 ; 1 >
+  
     }
 
     {
@@ -29508,6 +29554,37 @@ comment[mpj] = now published by Brill
     }
 
     {
+  
+      title <
+        name = Journal of Orthopaedic Surgery ;
+        eissn = 2309-4990
+      >
+  
+        param[base_url] = http://osj.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2000 ; Journal of Orthopaedic Surgery Volume 8 ; 8 >
+        au < exists ; 2001 ; Journal of Orthopaedic Surgery Volume 9 ; 9 >
+        au < exists ; 2002 ; Journal of Orthopaedic Surgery Volume 10 ; 10 >
+        au < exists ; 2003 ; Journal of Orthopaedic Surgery Volume 11 ; 11 >
+        au < exists ; 2004 ; Journal of Orthopaedic Surgery Volume 12 ; 12 >
+        au < exists ; 2005 ; Journal of Orthopaedic Surgery Volume 13 ; 13 >
+        au < exists ; 2006 ; Journal of Orthopaedic Surgery Volume 14 ; 14 >
+        au < exists ; 2007 ; Journal of Orthopaedic Surgery Volume 15 ; 15 >
+        au < exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 >
+        au < exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 >
+        au < exists ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 >
+        au < exists ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 >
+        au < exists ; 2012 ; Journal of Orthopaedic Surgery Volume 20 ; 20 >
+        au < exists ; 2013 ; Journal of Orthopaedic Surgery Volume 21 ; 21 >
+        au < exists ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 >
+        au < exists ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 >
+        au < exists ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 >
+  
+    }
+
+    {
 
       title <
         name = Journal of Peace Research ;
@@ -40669,10 +40746,25 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Pulmonary Circulation ;
+        issn = 2045-8932 ;
+        eissn = 2045-8940 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pul.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2016 ; Pulmonary Circulation Volume 6 ; 6 >
+
+    }
+
+    {
+
+      title <
         name = Punishment & Society ;
         issn = 1462-4745 ;
-        eissn = 1741-3095 ;
-        issnl = 1462-4745
+        eissn = 1741-3095 
       >
 
       {
@@ -42928,8 +43020,7 @@ comment[mpj] = now published by Brill
       title <
         name = Sexualities ;
         issn = 1363-4607 ;
-        eissn = 1461-7382 ;
-        issnl = 1363-4607
+        eissn = 1461-7382 
       >
 
       {
@@ -42991,10 +43082,25 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Sexualization, Media, and Society ;
+        eissn = 2374-6238
+      >
+
+      param[base_url] = http://sme.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 >
+      au < exists ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
         name = Shoulder & Elbow ;
         issn = 1758-5732 ;
-        eissn = 1758-5740 ;
-        issnl = 1758-5732
+        eissn = 1758-5740 
       >
 
       {

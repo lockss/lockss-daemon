@@ -973,6 +973,21 @@
   {
 
     title <
+      name = Alternative Law Journal ;
+      issn = 1037-969X ;
+      eissn = 2398-9084 
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://alj.sagepub.com/
+
+      au < doNotProcess ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; >
+
+  }
+
+  {
+
+    title <
       name = American Behavioral Scientist ;
       issn = 0002-7642 ;
       eissn = 1552-3381
@@ -3874,7 +3889,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://dli.sagepub.com/
 
-      au < exists ; exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; >
 
   }
 
@@ -5314,7 +5329,7 @@
 
       au < exists ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; >
-      au < exists ; exists ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; >
 
   }
 
@@ -6019,6 +6034,21 @@
 
       au < deepCrawl ; exists ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Chinese Sociological Dialogue ;
+      issn = 2397-2009 ;
+      eissn = 2397-2017
+    >
+
+      param[base_url] = http://csd.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; >
 
   }
 
@@ -7630,7 +7660,7 @@
       au < exists ; exists ; 2012 ; Contemporary Voice of Dalit Volume 5 ; 5 ; >
       au < exists ; exists ; 2013 ; Contemporary Voice of Dalit Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Contemporary Voice of Dalit Volume 7 ; 7 ; >
-      au < exists ; exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 ; >
 
   }
 
@@ -9417,7 +9447,7 @@
       pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; Digital Health Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2016 ; Digital Health Volume 2 ; 2 ; >
 
   }
 
@@ -13081,6 +13111,20 @@
   {
 
     title <
+      name = Foot & Ankle Orthopaedics ;
+      eissn = 2473-0114
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://fao.sagepub.com/
+
+      au < doNotProcess ; exists ; 2016 ; Foot & Ankle Orthopaedics Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Foot & Ankle Specialist ;
       issn = 1938-6400 ;
       eissn = 1938-7636
@@ -15860,7 +15904,7 @@
 
   }
 
-    {
+  {
 
     title <
       name = The Indian Economic Journal ;
@@ -15870,7 +15914,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://iej.sagepub.com/
 
-      au < exists ; exists ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; >
+      au < doNotProcess ; exists ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; >
 
   }
 
@@ -26493,6 +26537,36 @@
       au < doNotProcess ; exists ; 2016 ; Journal of Oncology Pharmacy Practice Volume 22 ; 22 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Orthopaedic Surgery ;
+      eissn = 2309-4990
+    >
+
+      param[base_url] = http://osj.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2000 ; Journal of Orthopaedic Surgery Volume 8 ; 8 ; >
+      au < exists ; exists ; 2001 ; Journal of Orthopaedic Surgery Volume 9 ; 9 ; >
+      au < exists ; exists ; 2002 ; Journal of Orthopaedic Surgery Volume 10 ; 10 ; >
+      au < exists ; exists ; 2003 ; Journal of Orthopaedic Surgery Volume 11 ; 11 ; >
+      au < exists ; exists ; 2004 ; Journal of Orthopaedic Surgery Volume 12 ; 12 ; >
+      au < exists ; exists ; 2005 ; Journal of Orthopaedic Surgery Volume 13 ; 13 ; >
+      au < exists ; exists ; 2006 ; Journal of Orthopaedic Surgery Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007 ; Journal of Orthopaedic Surgery Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; Journal of Orthopaedic Surgery Volume 20 ; 20 ; >
+      au < exists ; exists ; 2013 ; Journal of Orthopaedic Surgery Volume 21 ; 21 ; >
+      au < exists ; exists ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 ; >
+      au < exists ; exists ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 ; >
 
   }
 
@@ -37258,6 +37332,21 @@
 
   }
 
+ {
+
+   title <
+     name = Pulmonary Circulation ;
+     issn = 2045-8932 ;
+     eissn = 2045-8940 
+   >
+
+     pluginSuffix = ClockssHighWirePressH20Plugin
+     param[base_url] = http://pul.sagepub.com/
+
+     au < doNotProcess ; exists ; 2016 ; Pulmonary Circulation Volume 6 ; 6 ; >
+
+ }
+
   {
 
     title <
@@ -39533,30 +39622,45 @@
 
   }
 
+  {
+
+    title <
+      name = Sexualization, Media, and Society ;
+      eissn = 2374-6238
+    >
+
+    param[base_url] = http://sme.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = Shoulder & Elbow ;
+      issn = 1758-5732 ;
+      eissn = 1758-5740
+    >
+
     {
 
-      title <
-        name = Shoulder & Elbow ;
-        issn = 1758-5732 ;
-        eissn = 1758-5740
-      >
+    param[base_url] = http://sel.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
 
-      {
+    au < exists ; exists ; 2009 ; Shoulder & Elbow Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; >
+    au < finished ; finished ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
+    au < finished ; finished ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2015 ; Shoulder & Elbow Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2016 ; Shoulder & Elbow Volume 8 ; 8 ; >
 
-      param[base_url] = http://sel.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < exists ; exists ; 2009 ; Shoulder & Elbow Volume 1 ; 1 ; >
-      au < exists ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; >
-      au < exists ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; >
-      au < exists ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; >
-      au < finished ; finished ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
-      au < finished ; finished ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; >
-      au < deepCrawl ; exists ; 2015 ; Shoulder & Elbow Volume 7 ; 7 ; >
-      au < doNotProcess ; exists ; 2016 ; Shoulder & Elbow Volume 8 ; 8 ; >
-
-      }
     }
+  }
 
   {
 
@@ -43839,7 +43943,7 @@
       au < exists ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
       au < exists ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
-      au < exists ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
 
   }
 
