@@ -48516,7 +48516,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2016 ; World Affairs Volume 179 ; 179 >
+      au < manifest ; 2016 ; World Affairs Volume 179 ; 179 >
   
     }
 

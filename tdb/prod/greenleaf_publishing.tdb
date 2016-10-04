@@ -102,9 +102,9 @@
     param[journal_id] = jsm
     param[journal_issn] = 2053-2350 
 
-    au < exists ; 2014 ; The Journal of Sustainable Mobility Volume 1 ; 1 >
-    au < exists ; 2015 ; The Journal of Sustainable Mobility Volume 2 ; 2 >
-    au < exists ; 2016 ; The Journal of Sustainable Mobility Volume 3 ; 3 >
+    au < manifest ; 2014 ; The Journal of Sustainable Mobility Volume 1 ; 1 >
+    au < manifest ; 2015 ; The Journal of Sustainable Mobility Volume 2 ; 2 >
+    au < manifest ; 2016 ; The Journal of Sustainable Mobility Volume 3 ; 3 >
 
   }
 

@@ -899,8 +899,8 @@
       au < HighWirePressH20Plugin ; exists ; 2014 ; Environmental Humanities Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; exists ; 2014 ; Environmental Humanities Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; exists ; 2015 ; Environmental Humanities Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Environmental Humanities Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 2016 ; Environmental Humanities Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Environmental Humanities Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Environmental Humanities Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; expected ; 2016 ; Environmental Humanities Volume 9 ; 9 >
 
   }
@@ -3023,12 +3023,12 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       #move from Oxford University Press 
 
-      au < HighWirePressH20Plugin ; exists ; 2000 ; World Policy Journal Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; World Policy Journal Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; World Policy Journal Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; World Policy Journal Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; World Policy Journal Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 2005 ; World Policy Journal Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; World Policy Journal Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; World Policy Journal Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; World Policy Journal Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; World Policy Journal Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; World Policy Journal Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2005 ; World Policy Journal Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; manifest ; 2006 ; World Policy Journal Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 >
