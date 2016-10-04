@@ -68,12 +68,12 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
   
   static final String baseRepairList[] =
     {
-        "/static/.*\\.(png|css|js|gif)$",
+        "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
     };
   
   static final String journalRepairList[] =
     {
-        "/static/.*\\.(png|css|js|gif)$",
+        "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
         "/article/[^/]+/[^/\\.]+/fulltext\\.html$",
     };
 
@@ -153,7 +153,6 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
     shouldCacheTest(BASE_URL+"journal/10008", false, ABAu, cus);
     // discussion/"peer review"
     shouldCacheTest(BASE_URL+"static/201606100928-13/css/%22data:image/svg+xml", false, ABAu, cus);
-
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -209,6 +208,8 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
       BASE_URL+"static/201606100928-13/js/all.js",
       BASE_URL+"static/201606100928-13/css/springer_casper.min.css",
       BASE_URL+"static/js/webtrekk/webtrekk_v3.js",
+      BASE_URL+"springerlink-static/1057859635/js/main.js",
+      BASE_URL+"springerlink-static/625140479/css/styles.css",
       BASE_URL+"static/201606100928-13/sites/link/images/apple-touch-icon-72x72-precomposed.png"
      );
     

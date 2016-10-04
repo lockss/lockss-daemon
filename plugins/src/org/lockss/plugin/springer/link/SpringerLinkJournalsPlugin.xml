@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>23</string>
+        <string>24</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -102,7 +102,7 @@
       <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
       <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
-      <string>1,"^https?://%s/static/", url_host(download_url)</string>
+      <string>1,"^https?://%s/(springerlink-)?static/", url_host(download_url)</string>
     </list>
   </entry>
   <entry>
@@ -190,13 +190,13 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>/static/.*\.(png|css|js|gif)$</string>
+      <string>/(springerlink-)?static/.*\.(png|css|js|gif)$</string>
     </list>
   </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"/static/.*\.(png|css|js|gif)$", 0</string>
+      <string>"/(springerlink-)?static/.*\.(png|css|js|gif)$", 0</string>
       <string>"/article/[^/]+/[^/.]+/fulltext.html$", 0</string>
     </list>
   </entry>
