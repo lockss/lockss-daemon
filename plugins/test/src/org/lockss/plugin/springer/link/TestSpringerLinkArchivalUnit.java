@@ -60,6 +60,7 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
   static final String ISSN_KEY = "journal_eissn";
   static final String BASE_URL = "https://link.test.com/"; //this is not a real url
   static final String DOWNLOAD_URL = "http://download.test.com/"; //this is not a real url
+  static final String PERMITTED_HOST_URL = "https://static-content.springer.com/";
   
   static Logger log = Logger.getLogger(TestSpringerLinkArchivalUnit.class);
   
@@ -69,12 +70,14 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
   static final String baseRepairList[] =
     {
         "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
+        "^https://static-content\\.springer\\.com/cover/",
     };
   
   static final String journalRepairList[] =
     {
         "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
         "/article/[^/]+/[^/\\.]+/fulltext\\.html$",
+        "^https://static-content\\.springer\\.com/cover/",
     };
 
   public void setUp() throws Exception {
@@ -152,7 +155,7 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
     // related articles
     shouldCacheTest(BASE_URL+"journal/10008", false, ABAu, cus);
     // discussion/"peer review"
-    shouldCacheTest(BASE_URL+"static/201606100928-13/css/%22data:image/svg+xml", false, ABAu, cus);
+    shouldCacheTest("^"+BASE_URL+"static/201606100928-13/css/%22data:image/svg+xml", false, ABAu, cus);
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -212,10 +215,18 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
       BASE_URL+"springerlink-static/625140479/css/styles.css",
       BASE_URL+"static/201606100928-13/sites/link/images/apple-touch-icon-72x72-precomposed.png"
      );
+    List <String> repairList1 = ListUtil.list(   
+        PERMITTED_HOST_URL+"cover/journal/11356/20/3.jpg"
+       );
     
     Pattern p0 = Pattern.compile(baseRepairList[0]);
     Matcher m0;
     for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      assertEquals(true, m0.find());
+    }
+    p0 = Pattern.compile(baseRepairList[1]);
+    for (String urlString : repairList1) {
       m0 = p0.matcher(urlString);
       assertEquals(true, m0.find());
     }
@@ -228,6 +239,9 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
    PatternFloatMap urlPollResults = ABAu.makeUrlPollResultWeightMap();
    assertNotNull(urlPollResults);
    for (String urlString : repairList) {
+     assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+   }
+   for (String urlString : repairList1) {
      assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
    }
    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
