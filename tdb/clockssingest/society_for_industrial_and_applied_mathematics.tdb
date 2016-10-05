@@ -3,7 +3,8 @@
   publisher <
     name = Society for Industrial and Applied Mathematics ;
     info[contract] = 2011 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
 
     plugin = org.lockss.plugin.atypon.siam.ClockssSiamPlugin

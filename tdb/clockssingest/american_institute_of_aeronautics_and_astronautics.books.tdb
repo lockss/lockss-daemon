@@ -3,7 +3,8 @@
     name = American Institute of Aeronautics and Astronautics ;
     info[contract] = 2014 ;
     info[back] = 1985 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
 
   plugin = org.lockss.plugin.atypon.aiaa.ClockssAIAABooksPlugin

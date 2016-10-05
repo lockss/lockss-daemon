@@ -3,7 +3,8 @@
   publisher <
     name = American Meteorological Society ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 3
   >
   
   plugin = org.lockss.plugin.atypon.americanmeteorologicalsociety.ClockssAMetSocPlugin  

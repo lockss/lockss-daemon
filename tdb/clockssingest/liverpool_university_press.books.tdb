@@ -4,7 +4,8 @@
     name = Liverpool University Press ;
     info[contract] = 2013 ;
     info[back] = 1900 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
   
   plugin = org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin

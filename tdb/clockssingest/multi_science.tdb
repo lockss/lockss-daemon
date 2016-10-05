@@ -4,7 +4,8 @@
     name = Multi-Science ;
     info[back] = 1999 ;
     info[contract] = 2012 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
 
   plugin = org.lockss.plugin.atypon.multiscience.ClockssMultiSciencePlugin

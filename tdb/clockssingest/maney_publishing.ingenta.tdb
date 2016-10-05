@@ -6,7 +6,8 @@
   publisher <
     name = Maney Publishing ;
     info[contract] = 2010 ;
-    info[tester] = 0
+    info[tester] = 0 ;
+    info[poller] = 0
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin

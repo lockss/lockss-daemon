@@ -3,7 +3,8 @@
   publisher <
     name = Emerald Group Publishing ;
     info[contract] = 2015 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
 
   plugin = org.lockss.plugin.atypon.emeraldgroup.ClockssEmeraldGroupPlugin

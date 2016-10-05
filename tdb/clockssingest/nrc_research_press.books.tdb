@@ -4,7 +4,8 @@
     name = NRC Research Press ;
     info[contract] = 2012 ;
     info[back] = 1900 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
 
   comment[platform] = Atypon
