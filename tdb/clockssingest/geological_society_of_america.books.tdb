@@ -4,7 +4,8 @@
     name = Geological Society of America ;
     info[contract] = 2011 ;
     info[back] = 1990 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 6
   >
     
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin

@@ -3,7 +3,8 @@
   publisher <
     name = Co-Action Publishing ;
     info[contract] = 2010 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
 
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
