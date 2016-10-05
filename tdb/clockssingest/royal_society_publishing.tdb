@@ -3,7 +3,8 @@
   publisher <
     name = Royal Society Publishing ;
     info[contract] = 2009 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
     pluginPrefix = org.lockss.plugin.highwire.

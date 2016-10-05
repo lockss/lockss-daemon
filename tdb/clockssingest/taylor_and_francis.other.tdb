@@ -4,7 +4,8 @@
   publisher <
     name = Taylor & Francis ;
     info[contract] = 2008 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 1
   >
 
   plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin

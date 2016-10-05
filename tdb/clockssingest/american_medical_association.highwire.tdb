@@ -5,7 +5,8 @@
   publisher <
     name = American Medical Association ;
     info[contract] = 2008 ;
-    info[tester] = 0
+    info[tester] = 0 ;
+    info[poller] = 0
   >
 
   pluginPrefix = org.lockss.plugin.highwire.

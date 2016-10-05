@@ -3,7 +3,8 @@
   publisher <
     name = Oxford University Press ;
     info[contract] = 2009 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 6
   >
 
     pluginPrefix = org.lockss.plugin.highwire.

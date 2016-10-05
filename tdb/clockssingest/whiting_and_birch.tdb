@@ -4,7 +4,8 @@
     name = Whiting and Birch ;
     info[back] = 2011 ;
     info[contract] = 2012 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
     #moved from metapress to OJS on February 25, 2015
     #still no access on ingest3. Moving to reingest on a single ingest machine. 20160609

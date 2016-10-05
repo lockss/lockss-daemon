@@ -3,7 +3,8 @@
   publisher <
     name = Wildlife Information Liaison Development ;
     info[contract] = 2013 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
   
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin

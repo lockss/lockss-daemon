@@ -3,7 +3,8 @@
   publisher <
     name = Ubiquity Press ;
     info[contract] = 2011 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
 
   comment[platform] = moving from standard OJS to special OJS
