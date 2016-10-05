@@ -226,6 +226,17 @@ public class ConfigManager implements LockssManager {
     "remoteConfigFailoverMaxAge";
   public static final long DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE = 0;
 
+  /** Checksum algorithm used to verify remote config failover file */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
+    "remoteConfigFailoverChecksumAlgorithm";
+  public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
+    "SHA-256";
+
+  /** Failover file not accepted unled it has a checksum. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
+    "remoteConfigFailoverChecksumRequired";
+  public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
+    true;
 
 
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
@@ -2411,6 +2422,7 @@ public class ConfigManager implements LockssManager {
   static class RemoteConfigFailoverInfo implements LockssSerializable {
     final String url;
     String filename;
+    String chksum;
     long date;
     transient File dir;
     transient File tempfile;
@@ -2424,6 +2436,14 @@ public class ConfigManager implements LockssManager {
 
     void setRemoteConfigFailoverDir(File dir) {
       this.dir = dir;
+    }
+
+    String getChksum() {
+      return chksum;
+    }
+
+    void setChksum(String chk) {
+      this.chksum = chk;
     }
 
     String getUrl() {

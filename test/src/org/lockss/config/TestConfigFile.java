@@ -36,11 +36,14 @@ import java.io.*;
 import java.util.*;
 import java.util.zip.*;
 import java.net.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import junit.framework.*;
 
 import org.lockss.config.Configuration;
-import org.lockss.config.Tdb;
+import org.lockss.config.ConfigManager.RemoteConfigFailoverInfo;
 import org.lockss.config.TdbTitle;
+import org.lockss.hasher.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -675,11 +678,16 @@ public abstract class TestConfigFile extends LockssTestCase {
       assertEquals(pport, hcf.proxyPort);
     }
 
-    public void testMakeRemoteCopy() throws IOException {
+    MyConfigManager newMyConfigManager() throws IOException {
+      return new MyConfigManager(getTempDir());
+    }
+
+    public void testMakeRemoteCopy()
+	throws IOException, NoSuchAlgorithmException {
       String url1 = "http://foo.bar/lockss.xml";
       InputStream in = new StringInputStream(xml1);
       MyHttpConfigFile hcf = new MyHttpConfigFile(url1, in);
-      MyConfigManager mcm = new MyConfigManager();
+      MyConfigManager mcm = newMyConfigManager();
       File tmpFile = getTempFile("configtmp", "");
       FileUtil.safeDeleteFile(tmpFile);
       assertFalse(tmpFile.exists());
@@ -693,14 +701,35 @@ public abstract class TestConfigFile extends LockssTestCase {
       assertEquals("foo", config.get("prop.7"));
       assertEquals("bar", config.get("prop.8"));
       assertEquals("baz", config.get("prop.9"));
+
+      // Check checksum
+      RemoteConfigFailoverInfo rcfi = mcm.getRcfi(url1);
+      String alg =
+	ConfigManager.DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM;
+      assertEquals(hashGzippedString(xml1, alg).toString(), rcfi.chksum);
+    }
+
+    HashResult hashGzippedString(String str, String alg)
+	throws NoSuchAlgorithmException, IOException {
+      MessageDigest md = MessageDigest.getInstance(alg);
+      OutputStream out = new org.apache.commons.io.output.NullOutputStream();
+      HashedOutputStream hos = new HashedOutputStream(out, md);
+      out = new GZIPOutputStream(hos);
+      Writer wrtr = new OutputStreamWriter(out);
+      wrtr.write(str);
+      wrtr.close();
+      return HashResult.make(md.digest(), alg);
     }
 
     public void testLocalFailover() throws IOException {
+      ConfigurationUtil.setFromArgs(ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED,
+				  "false");
+
       String url1 = "http://foo.bar/lockss.xml";
       File remoteCopy = gzippedTempFile(xml1, ".xml");
       MyHttpConfigFile hcf =
 	new MyHttpConfigFile(url1, new StringInputStream(""));
-      MyConfigManager mcm = new MyConfigManager();
+      MyConfigManager mcm = newMyConfigManager();
       mcm.setPermFile(url1, remoteCopy);
       hcf.setConfigManager(mcm);
       hcf.setResponseCode(404);
@@ -731,7 +760,7 @@ public abstract class TestConfigFile extends LockssTestCase {
       File remoteCopy = gzippedTempFile(xml1, ".xml");
       MyHttpConfigFile hcf =
 	new MyHttpConfigFile(url2, new StringInputStream(""));
-      MyConfigManager mcm = new MyConfigManager();
+      MyConfigManager mcm = newMyConfigManager();
       mcm.setPermFile(url1, remoteCopy);
       hcf.setConfigManager(mcm);
       hcf.setResponseCode(404);
@@ -746,7 +775,61 @@ public abstract class TestConfigFile extends LockssTestCase {
       }
     }
 
+    public void testLocalFailoverNoChecksum() throws IOException {
+      String url1 = "http://foo.bar/lockss.xml";
+      File remoteCopy = gzippedTempFile(xml1, ".xml");
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile(url1, new StringInputStream(""));
+      MyConfigManager mcm = newMyConfigManager();
+      mcm.setPermFile(url1, remoteCopy);
+      hcf.setConfigManager(mcm);
+      hcf.setResponseCode(404);
+      assertTrue(remoteCopy.exists());
+      try {
+	Configuration config = hcf.getConfiguration();
+      } catch (FileNotFoundException e) {
+	assertMatchesRE("404", e.getMessage());
+      }
+    }
 
+    public void testLocalFailoverBadChecksum() throws IOException {
+      String url1 = "http://foo.bar/lockss.xml";
+      File remoteCopy = gzippedTempFile(xml1, ".xml");
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile(url1, new StringInputStream(""));
+      MyConfigManager mcm = newMyConfigManager();
+      mcm.setPermFile(url1, remoteCopy);
+      RemoteConfigFailoverInfo rcfi = mcm.getRcfi(url1);
+      rcfi.setChksum("SHA-256:1234");
+      hcf.setConfigManager(mcm);
+      hcf.setResponseCode(404);
+      assertTrue(remoteCopy.exists());
+      try {
+	Configuration config = hcf.getConfiguration();
+      } catch (FileNotFoundException e) {
+	assertMatchesRE("404", e.getMessage());
+      }
+    }
+
+    public void testLocalFailoverGoodChecksum()
+	throws IOException, NoSuchAlgorithmException {
+      String url1 = "http://foo.bar/lockss.xml";
+      File remoteCopy = gzippedTempFile(xml1, ".xml");
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile(url1, new StringInputStream(""));
+      MyConfigManager mcm = newMyConfigManager();
+      mcm.setPermFile(url1, remoteCopy);
+      RemoteConfigFailoverInfo rcfi = mcm.getRcfi(url1);
+      String alg =
+	ConfigManager.DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM;
+      MessageDigest md = MessageDigest.getInstance(alg);
+      md.update(xml1.getBytes(Constants.DEFAULT_ENCODING));
+      rcfi.setChksum(hashGzippedString(xml1, alg).toString());
+      hcf.setConfigManager(mcm);
+      hcf.setResponseCode(404);
+      assertTrue(remoteCopy.exists());
+      Configuration config = hcf.getConfiguration();
+    }
   }
 
   /** HTTPConfigFile that uses a programmable MockLockssUrlConnection */
@@ -884,33 +967,52 @@ public abstract class TestConfigFile extends LockssTestCase {
 
   // Just enough ConfigManager for HTTPConfigFile to save and load remote
   // config failover files
-  static class MyConfigManager extends ConfigManager {
+  class MyConfigManager extends ConfigManager {
+    File tmpdir;
     Map<String,File> tempfiles = new HashMap<String,File>();
     Map<String,File> permfiles = new HashMap<String,File>();
+    Map<String,RemoteConfigFailoverInfo> rcfis =
+      new HashMap<String,RemoteConfigFailoverInfo>();
+
+    public MyConfigManager(File tmpdir) {
+      this.tmpdir = tmpdir;
+    }
 
     public File getRemoteConfigFailoverTempFile(String url) {
-      return tempfiles.get(url);
+      RemoteConfigFailoverInfo rcfi = getRcfi(url);
+      return rcfi.tempfile;
     }
     public File getRemoteConfigFailoverFile(String url) {
-      return permfiles.get(url);
+      RemoteConfigFailoverInfo rcfi = getRcfi(url);
+      return new File(rcfi.filename);
     }
     public RemoteConfigFailoverInfo getRcfi(String url) {
-      RemoteConfigFailoverInfo rcfi =
-	new RemoteConfigFailoverInfo(url, new File("remotedir/"), 1);
-      File perm = getRemoteConfigFailoverFile(url);
-      if (perm != null) {
-	rcfi.filename = perm.getName();
-	rcfi.dir = perm.getParentFile();
+      RemoteConfigFailoverInfo rcfi = rcfis.get(url);
+      if (rcfi == null) {
+	rcfi = new MyRemoteConfigFailoverInfo(url, tmpdir, 1);
+	rcfis.put(url, rcfi);
       }
       return rcfi;
     }
 
     void setTempFile(String url, File file) {
-      tempfiles.put(url, file);
+      RemoteConfigFailoverInfo rcfi = getRcfi(url);
+      rcfi.tempfile = file;
     }
 
     void setPermFile(String url, File file) {
-      permfiles.put(url, file);
+      RemoteConfigFailoverInfo rcfi = getRcfi(url);
+      rcfi.filename = file.getAbsolutePath();
+    }
+  }
+
+  class MyRemoteConfigFailoverInfo extends RemoteConfigFailoverInfo {
+    MyRemoteConfigFailoverInfo(String url, File dir, int seq) {
+      super(url, dir, seq);
+    }
+
+    File getPermFileAbs() {
+      return new File(filename);
     }
   }
 

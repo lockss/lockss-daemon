@@ -36,10 +36,13 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.zip.GZIPOutputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import org.apache.commons.io.input.TeeInputStream;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.hasher.*;
 import org.apache.oro.text.regex.*;
 
 /**
@@ -69,6 +72,8 @@ public class HTTPConfigFile extends BaseConfigFile {
   private LockssUrlConnectionPool m_connPool;
   private boolean checkAuth = false;
   private boolean charsetUtil = true;
+  private MessageDigest chkDig;
+  private String chkAlg;
 
   public HTTPConfigFile(String url) {
     super(url);
@@ -276,14 +281,58 @@ public class HTTPConfigFile extends BaseConfigFile {
 	if (failoverFile == null) {
 	  throw e;
 	}
+	String chksum = rcfi.getChksum();
+	if (chksum != null) {
+	  HashResult hr = HashResult.make(chksum);
+	  try {
+	    HashResult fileHash = hashFile(failoverFile, hr.getAlgorithm());
+	    if (!hr.equals(fileHash)) {
+	      log.error("Failover file checksum mismatch");
+	      if (log.isDebug2()) {
+		log.debug2("state   : " + hr);
+		log.debug2("computed: " + fileHash);
+	      }
+	      throw new IOException("Failover file checksum mismatch");
+	    }
+	  } catch (NoSuchAlgorithmException nsae) {
+	    log.error("Failover file found has unsupported checksum: " +
+		      hr.getAlgorithm());
+	    throw e;
+	  } catch (IOException ioe) {
+	    log.error("Can't read failover file", ioe);
+	    throw e;
+	  }
+	} else if (CurrentConfig.getBooleanParam(ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED,
+						 ConfigManager.DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED)) {
+	  log.error("Failover file found but required checksum is missing");
+	  throw e;
+	}
+
 	// Found one, 
 	long date = rcfi.getDate();
-	log.info("Couldn't load remote config URL: " + m_fileUrl);
+	log.info("Couldn't load remote config URL: " + m_fileUrl +
+		 ": " + e.toString());
 	log.info("Substituting local copy created: " + new Date(date));
 	failoverFcf = new FileConfigFile(failoverFile.getPath());
 	m_loadedUrl = failoverFile.getPath();
       }
       return failoverFcf.openInputStream();
+    }
+  }
+
+  // XXX Find a place for this
+  HashResult hashFile(File file, String alg)
+      throws NoSuchAlgorithmException, IOException {
+    InputStream is = null;
+    try {
+      MessageDigest md = MessageDigest.getInstance(alg);
+      is = new BufferedInputStream(new FileInputStream(file));
+      StreamUtil.copy(is,
+		      new org.apache.commons.io.output.NullOutputStream(),
+		      -1, null, false, md);
+      return HashResult.make(md.digest(), alg);
+    } finally {
+      IOUtil.safeClose(is);
     }
   }
 
@@ -338,6 +387,7 @@ public class HTTPConfigFile extends BaseConfigFile {
 		  "Copying remote config: " + m_fileUrl);
 	  OutputStream out =
 	    new BufferedOutputStream(new FileOutputStream(tmpCacheFile));
+	  out = makeHashedOutputStream(out);
 	  out = new GZIPOutputStream(out, true);
 	  InputStream wrapped = new TeeInputStream(in, out, true);
 	  return wrapped;
@@ -349,6 +399,36 @@ public class HTTPConfigFile extends BaseConfigFile {
       }
     }
     return in;
+  }
+
+  OutputStream makeHashedOutputStream(OutputStream out) {
+    String hashAlg =
+      CurrentConfig.getParam(ConfigManager.PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM,
+			     ConfigManager.DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM);
+    if (!StringUtil.isNullString(hashAlg)) {
+      try {
+	chkDig = MessageDigest.getInstance(hashAlg);
+	chkAlg = hashAlg;
+	return new HashedOutputStream(out, chkDig);
+      } catch (NoSuchAlgorithmException ex) {
+	log.warning(String.format("Checksum algorithm %s not found, "
+				  + "checksumming disabled", hashAlg));
+      }
+    }
+    return out;
+  }
+
+  // Finished reading input, so failover file, if any, has now been
+  // written and its checksum calculated.  Store it in rcfi.
+  protected void loadFinished() {
+    if (chkDig != null) {
+      ConfigManager.RemoteConfigFailoverInfo rcfi =
+	m_cfgMgr.getRcfi(m_fileUrl);
+      if (rcfi != null) {
+	HashResult hres = HashResult.make(chkDig.digest(), chkAlg);
+	rcfi.setChksum(hres.toString());
+      }
+    }      
   }
 
   protected String calcNewLastModified() {
