@@ -179,6 +179,7 @@ public abstract class BaseConfigFile implements ConfigFile {
 	} finally {
 	  IOUtil.safeClose(in);
 	}
+	loadFinished();
       }
     } catch (FileNotFoundException ex) {
       log.debug2("File not found: " + m_fileUrl);
@@ -307,6 +308,12 @@ public abstract class BaseConfigFile implements ConfigFile {
    * hasn't changed.
    */
   protected abstract InputStream openInputStream() throws IOException;
+
+  /**
+   * Called after file has been completely read.
+   */
+  protected void loadFinished() {
+  }
 
   /**
    * Return the new last-modified time
