@@ -21,6 +21,20 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2001 ; Studies in the Age of Chaucer Volume 23 ; 23 >
+      au < exists ; 2002 ; Studies in the Age of Chaucer Volume 24 ; 24 >
+      au < exists ; 2003 ; Studies in the Age of Chaucer Volume 25 ; 25 >
+      au < exists ; 2004 ; Studies in the Age of Chaucer Volume 26 ; 26 >
+      au < exists ; 2005 ; Studies in the Age of Chaucer Volume 27 ; 27 >
+      au < exists ; 2006 ; Studies in the Age of Chaucer Volume 28 ; 28 >
+      au < manifest ; 2007 ; Studies in the Age of Chaucer Volume 29 ; 29 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < down ; 2008 ; Studies in the Age of Chaucer Volume 30 ; 30 >
