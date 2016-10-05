@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Open Library of the Humanities
+    name = Open Library of the Humanities ;
+    info[poller] = 3
   >
   
     rights = openaccess

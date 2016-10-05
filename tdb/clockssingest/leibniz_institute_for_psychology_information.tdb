@@ -3,7 +3,8 @@
   publisher <
     name = Leibniz Institute for Psychology Information ;
     info[contract] = 2013 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
 
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >

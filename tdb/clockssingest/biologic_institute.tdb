@@ -3,7 +3,8 @@
   publisher <
     name = Biologic Institute ;
     info[contract] = 2011 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
 
   param[base_url] = http://bio-complexity.org/ojs/

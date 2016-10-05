@@ -3,7 +3,8 @@
   publisher <
     name = Journal of Insect Biodiversity ;
     info[contract] = 2013 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 8
   >
 
     param[base_url] = http://www.insectbiodiversity.org/
