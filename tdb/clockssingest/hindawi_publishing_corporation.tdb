@@ -2,7 +2,8 @@
   publisher <
     name = Hindawi Publishing Corporation ;
     info[contract] = 2014 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 6
   >
 
   rights = openaccess

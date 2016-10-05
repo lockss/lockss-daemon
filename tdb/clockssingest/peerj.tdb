@@ -3,7 +3,8 @@
   publisher <
     name = PeerJ ;
     info[contract] = 2012 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
   rights = openaccess

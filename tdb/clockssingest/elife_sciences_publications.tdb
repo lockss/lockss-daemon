@@ -2,7 +2,8 @@
   publisher <
     name = eLife Sciences Publications ;
     info[contract] = 2014 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
   plugin = org.lockss.plugin.elifesciences.ClockssELifeSciencesPlugin

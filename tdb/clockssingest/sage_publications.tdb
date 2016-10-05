@@ -3,7 +3,8 @@
   publisher <
     name = SAGE Publications ;
     info[contract] = 2008 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 6
   >
   
   # Live on Atypon 1/1/2017. Do not process 2016 AUs before move.

@@ -3,7 +3,8 @@
   publisher <
     name = IGI Global ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 2
   >
 
   plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalPlugin
