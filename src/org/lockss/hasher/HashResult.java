@@ -168,7 +168,9 @@ final public class HashResult implements LockssSerializable {
     if (!(other instanceof HashResult)) {
       return false;
     }
-    return StringUtil.equalStrings(algorithm, ((HashResult)other).algorithm)
+    String oalg = ((HashResult)other).algorithm;
+    return (algorithm == null
+	    ? oalg == null : algorithm.equalsIgnoreCase(oalg))
       && equalsBytes(((HashResult)other).bytes);
   }
 

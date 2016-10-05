@@ -90,6 +90,7 @@ public class TestHashResult extends LockssTestCase {
     HashResult o3 = HashResult.make(bytes2);
     HashResult o4 = HashResult.make(bytes, "fooalg");
     HashResult o5 = HashResult.make(bytes, "baralg");
+    HashResult o6 = HashResult.make(bytes, "BarAlg");
     
     // o1 and o2 are not == but are equals.
     assertNotSame(o1, o2);
@@ -104,6 +105,9 @@ public class TestHashResult extends LockssTestCase {
 
     assertFalse(o4.equals(o5));
     assertFalse(o5.equals(o4));
+
+    assertTrue(o5.equals(o6));
+    assertTrue(o6.equals(o5));
 
     assertEquals(o1.hashCode(), o2.hashCode());
   }
