@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# tdbout -t publisher,plugin,publisher:info[contract],year,publisher:info[tester],status,publisher:info[back] *.tdb 
+# tdbout -t publisher,plugin,publisher:info[contract],year,publisher:info[tester],status,publisher:info[back],publisher:info[poller] *.tdb 
 
 BEGIN {
   FS="\t"
@@ -48,7 +48,8 @@ BEGIN {
         k[pn] = $7
       }
       d[pn] = $4
-      r[pn] = $5
+      r1[pn] = $5
+      r2[pn] = $8
       pn++
     }
     b[$1,lp2,$4]++
@@ -96,7 +97,7 @@ END {
   scn = 16
 
   #print out header
-  printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tTotal"
+  printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tP\tTotal"
   for (j = 0 ; j < scn ; j++) {
     if (x[s[j]] > 0) {
     printf "\t%s", sc[j]
@@ -104,9 +105,9 @@ END {
   }
   printf "\n"
 
-  #print out publisher, plugin, contract year, back, year, tester, total aus
+  #print out publisher, plugin, contract year, back, year, tester, poller, total aus
   for (i = 0 ; i < pn ; i++) {
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],d[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r1[i], r2[i], b[p[i],n[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
       if (c[p[i],n[i],d[i],s[j]] == 0) {
@@ -119,7 +120,7 @@ END {
     printf "\n"
   }
     #print out bottom line sums
-    printf "Publisher\tPlugin\tContr\tBack\tYear\tT\t%d", tt
+    printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tP\t%d", tt
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0) {
         printf "\t%d", x[s[j]]
