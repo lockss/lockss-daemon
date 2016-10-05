@@ -3,7 +3,8 @@
   publisher <
     name = IOP Publishing ;
     info[contract] = 2008 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 2
   >
 
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin

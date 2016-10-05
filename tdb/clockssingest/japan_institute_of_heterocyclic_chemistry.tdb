@@ -3,7 +3,8 @@
   publisher <
     name = Japan Institute of Heterocyclic Chemistry ;
     info[contract] = 2011 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 6
   >
 
   plugin = org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin

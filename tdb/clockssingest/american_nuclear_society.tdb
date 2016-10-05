@@ -3,7 +3,8 @@
   publisher <
     name = American Nuclear Society ;
     info[contract] = 2015 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 7
   >
 
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
@@ -27,7 +28,7 @@
       au < finished ; manifest ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 182 ; 182 ; >
+      au < manifest ; exists ; 2016 ; Nuclear Science and Engineering Volume 182 ; 182 ; >
       au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 183 ; 183 ; >
       au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 184 ; 184 ; >
 
@@ -52,7 +53,7 @@
       au < finished ; manifest ; 2015 ; Nuclear Technology Volume 190 ; 190 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Nuclear Technology Volume 191 ; 191 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; Nuclear Technology Volume 192 ; 192 ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 193 ; 193 ; >
+      au < manifest ; exists ; 2016 ; Nuclear Technology Volume 193 ; 193 ; >
       au < expected ; exists ; 2016 ; Nuclear Technology Volume 194 ; 194 ; >
       au < expected ; exists ; 2016 ; Nuclear Technology Volume 195 ; 195 ; >
       au < expected ; exists ; 2016 ; Nuclear Technology Volume 196 ; 196 ; >
@@ -72,7 +73,7 @@
       au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 66 ; 66 ; >
       au < finished ; manifest ; 2015 ; Fusion Science and Technology Volume 67 ; 67 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Fusion Science and Technology Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2016 ; Fusion Science and Technology Volume 69 ; 69 ; >
       au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 70 ; 70 ; >
 
     }
