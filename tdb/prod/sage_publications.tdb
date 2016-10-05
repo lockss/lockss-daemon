@@ -16121,7 +16121,22 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2008 ; Irish Journal of Sociology Volume 16 ; 16 >
+      au < exists ; 1991 ; Irish Journal of Sociology Volume 1 ; 1 >
+      au < exists ; 1992 ; Irish Journal of Sociology Volume 2 ; 2 >
+      au < exists ; 1993 ; Irish Journal of Sociology Volume 3 ; 3 >
+      au < exists ; 1994 ; Irish Journal of Sociology Volume 4 ; 4 >
+      au < exists ; 1995 ; Irish Journal of Sociology Volume 5 ; 5 >
+      au < exists ; 1996 ; Irish Journal of Sociology Volume 6 ; 6 >
+      au < exists ; 1997 ; Irish Journal of Sociology Volume 7 ; 7 >
+      au < exists ; 1998 ; Irish Journal of Sociology Volume 8 ; 8 >
+      au < exists ; 1999 ; Irish Journal of Sociology Volume 9 ; 9 >
+      au < exists ; 2000-2001 ; Irish Journal of Sociology Volume 10 ; 10 >
+      au < exists ; 2002 ; Irish Journal of Sociology Volume 11 ; 11 >
+      au < exists ; 2003 ; Irish Journal of Sociology Volume 12 ; 12 >
+      au < exists ; 2004 ; Irish Journal of Sociology Volume 13 ; 13 >
+      au < exists ; 2005 ; Irish Journal of Sociology Volume 14 ; 14 >
+      au < exists ; 2006 ; Irish Journal of Sociology Volume 15 ; 15 >
+      au < exists ; 2007 ; Irish Journal of Sociology Volume 16 ; 16 >
       au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
       au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
       au < exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
@@ -29340,6 +29355,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 >
         au < released ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 >
         au < released ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 >
+        au < manifest ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 >
 
       }
 
@@ -37459,6 +37475,7 @@ comment[mpj] = now published by Brill
         au < released ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 >
         au < released ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 >
         au < manifest ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 >
+        au < manifest ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 >
 
       }
 
@@ -38621,7 +38638,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pol.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-        #content available from 1981 volume 1 to 1999 19
+        #content available from 1981 volume 1 to 1999 volume 19
   
         au < exists ; 2000 ; politics Volume 20 ; 20 >
         au < exists ; 2001 ; politics Volume 21 ; 21 >
@@ -50757,7 +50774,13 @@ comment[mpj] = now published by Brill
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1966 volume 1 to 1999 volume 34
 
+    au < exists ; 2000 ; Foreign Trade Review Volume 35 ; 35 >
+    au < exists ; 2001 ; Foreign Trade Review Volume 36 ; 36 >
+    au < exists ; 2002 ; Foreign Trade Review Volume 37 ; 37 >
+    au < exists ; 2003 ; Foreign Trade Review Volume 38 ; 38 >
+    au < exists ; 2004 ; Foreign Trade Review Volume 39 ; 39 >
     au < exists ; 2005 ; Foreign Trade Review Volume 40 ; 40 >
     au < exists ; 2006 ; Foreign Trade Review Volume 41 ; 41 >
     au < exists ; 2007 ; Foreign Trade Review Volume 42 ; 42 >
@@ -52442,7 +52465,11 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://hsr.sagepub.com/
 
-        au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Health Services Research & Policy Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Health Services Research & Policy Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Health Services Research & Policy Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Health Services Research & Policy Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
@@ -53598,6 +53625,7 @@ comment[mpj] = now published by Brill
     au < ready ; 2015 ; Psychological Reports Volume 116 ; 116 >
     au < manifest ; 2015 ; Psychological Reports Volume 117 ; 117 >
     au < manifest ; 2016 ; Psychological Reports Volume 118 ; 118 >
+    au < manifest ; 2016 ; Psychological Reports Volume 119 ; 119 >
     
   }
 

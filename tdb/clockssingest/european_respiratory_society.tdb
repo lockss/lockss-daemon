@@ -22,6 +22,9 @@
     param[base_url] = http://breathe.ersjournals.com/
 
 
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2004-2005 ; Breathe Volume 1 ; 1 ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2005-2006 ; Breathe Volume 2 ; 2 ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2006-2007 ; Breathe Volume 3 ; 3 ; >
     au < ers.ClockssERSDrupalPlugin ; exists ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 ; >
     au < ers.ClockssERSDrupalPlugin ; exists ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 ; >
     au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2009-2010 ; Breathe Volume 6 ; 6 ; >
