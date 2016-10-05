@@ -4,7 +4,8 @@
     name = International Glaciological Society ;
     info[back] = 2011 ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 6
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin

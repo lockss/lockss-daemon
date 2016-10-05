@@ -3,7 +3,8 @@
   publisher <
     name = Aerospace Medical Association ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 6
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin

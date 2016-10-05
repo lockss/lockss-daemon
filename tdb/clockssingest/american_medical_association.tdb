@@ -3,7 +3,8 @@
   publisher <
     name = American Medical Association ;
     info[contract] = 2008 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 7
   >
 
   plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
