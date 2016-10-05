@@ -3,7 +3,7 @@
     name = Palgrave Macmillan Books ;
     info[contract] = 2011 ;
     info[tester] = 5 ;
-    info[poller] = 2
+    info[poller] = 8
   >
 
     plugin = org.lockss.plugin.palgrave.ClockssPalgraveBookPlugin
