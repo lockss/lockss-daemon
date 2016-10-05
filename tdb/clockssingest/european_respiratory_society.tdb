@@ -3,7 +3,8 @@
   publisher <
     name = European Respiratory Society ;
     info[contract] = 2011 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
     pluginPrefix = org.lockss.plugin.highwire.

@@ -4,7 +4,8 @@
     name = Canadian Institute of Mining, Metallurgy & Petroleum ;
     info[contract] = 2014 ;
     info[back] = 2008 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
     
     plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin

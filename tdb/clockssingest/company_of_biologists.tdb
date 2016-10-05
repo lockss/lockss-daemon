@@ -4,7 +4,8 @@
     name = Company of Biologists ;
     info[contract] = 2011 ;
     info[back] = 1900 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 2
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
