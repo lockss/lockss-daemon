@@ -3,7 +3,8 @@
   publisher <
     name = American Association for the Advancement of Science ;
     info[contract] = 2015 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
   plugin = org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin
