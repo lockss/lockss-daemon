@@ -72,7 +72,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; >
-      au < aap.ClockssAAPDrupalPlugin ; testing ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; >
+      au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; > #found login page in content3, not content1
 
     }
   
@@ -205,7 +205,7 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; NeoReviews Volume 15 ; 15 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; NeoReviews Volume 16 ; 16 ; >
-      au < aap.ClockssAAPDrupalPlugin ; testing ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; > #pdf stamping problem
+      au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; > #login page found content3, not content2
 
     }
   
