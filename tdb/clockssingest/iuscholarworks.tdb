@@ -224,8 +224,14 @@
       eissn = 2334-1645
     >
       param[journal_id] = inula
-      # no issue in 2001, 2002, 2004
       
+      au < manifest ; exists ; 1989 ; 1989 ; InULA Notes: Indiana University Librarians Association Volume 6-7 (1989) ; 6-7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1990 ; 1990 ; InULA Notes: Indiana University Librarians Association Volume 7-8 (1990) ; 7-8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1991 ; 1991 ; InULA Notes: Indiana University Librarians Association Volume 8 (1991) ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1992 ; 1992 ; InULA Notes: Indiana University Librarians Association Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1993 ; 1993 ; InULA Notes: Indiana University Librarians Association Volume 10 (1993) ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1994 ; 1994 ; InULA Notes: Indiana University Librarians Association Volume 10-11 (1994) ; 10-11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1995 ; 1995 ; InULA Notes: Indiana University Librarians Association Volume 11 (1995) ; 11 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 1996 ; 1996 ; InULA Notes: Indiana University Librarians Association Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 1997 ; 1997 ; InULA Notes: Indiana University Librarians Association Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 1998 ; 1998 ; InULA Notes: Indiana University Librarians Association Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
@@ -380,6 +386,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2012 ; 2012 ; The World is Our Home Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 }
