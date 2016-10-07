@@ -2840,7 +2840,7 @@
       au < exists ; exists ; 2012 ; The Antitrust Bulletin Volume 57 ; 57 ; >
       au < doNotProcess ; exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 ; >
       au < deepCrawl ; exists ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 ; >
-      au < finished ; crawling ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 ; >
 
   }
@@ -8173,7 +8173,7 @@
       au < finished ; finished ; 2012 ; Crime & Delinquency Volume 58 ; 58 ; >
       au < finished ; finished ; 2013 ; Crime & Delinquency Volume 59 ; 59 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Crime & Delinquency Volume 60 ; 60 ; >
-      au < finished ; crawling ; 2015 ; Crime & Delinquency Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Crime & Delinquency Volume 61 ; 61 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Crime & Delinquency Volume 62 ; 62 ; >
 
     }
@@ -12324,7 +12324,7 @@
       au < finished ; finished ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
       au < finished ; finished ; 2014 ; Evaluation Review Volume 38 ; 38 ; >
-      au < finished ; frozen ; 2015 ; Evaluation Review Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Evaluation Review Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; >
 
     }
@@ -17868,7 +17868,7 @@
       au < exists ; exists ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; >
       au < exists ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 ; >
-      au < finished ; frozen ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 ; >
 
   }
@@ -20820,7 +20820,7 @@
     {
       pluginSuffix = ClockssHighWirePressH20Plugin
       au < finished ; finished ; 2014 ; International Journal of Business Communication Volume 51 ; 51 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; International Journal of Business Communication Volume 53 ; 53 ; >
 
     }
@@ -21893,7 +21893,7 @@
       au < finished ; finished ; 2012 ; Journal of Contemporary Criminal Justice Volume 28 ; 28 ; >
       au < finished ; finished ; 2013 ; Journal of Contemporary Criminal Justice Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Contemporary Criminal Justice Volume 30 ; 30 ; >
-      au < finished ; frozen ; 2015 ; Journal of Contemporary Criminal Justice Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Journal of Contemporary Criminal Justice Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Journal of Contemporary Criminal Justice Volume 32 ; 32 ; >
 
     }

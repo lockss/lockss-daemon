@@ -1009,7 +1009,7 @@
 
     param[journal_id] = ao
 
-    au < finished ; frozen ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1967,7 +1967,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Case Reports in Cardiology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2198,7 +2198,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; frozen ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Case Reports in Medicine Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Case Reports in Medicine Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Medicine Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -2803,7 +2803,7 @@
     au < manifest ; exists ; 2011 ; Critical Care Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Critical Care Research and Practice Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Critical Care Research and Practice Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Critical Care Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Critical Care Research and Practice Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Critical Care Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     
@@ -3676,7 +3676,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Breast Cancer Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Breast Cancer Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3718,7 +3718,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Cell Biology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Cell Biology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4552,7 +4552,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Optics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; International Journal of Optics Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Optics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7323,7 +7323,7 @@
     au < manifest ; exists ; 2011 ; Journal of Sensors Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Sensors Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Sensors Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Sensors Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Sensors Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8222,7 +8222,7 @@
     au < manifest ; exists ; 2011 ; Pain Research and Management Volume 16 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Pain Research and Management Volume 17 (2012) ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Pain Research and Management Volume 20 (2015) ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Pain Research and Management Volume 21 ; 2016 ; 2016 ; >
     
