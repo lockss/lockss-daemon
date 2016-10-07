@@ -3,7 +3,8 @@
   publisher <
     name = Portland Press ;
     info[contract] = 2012 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 2
   >
 
   plugin = org.lockss.plugin.highwire.portlandpress.ClockssPortlandPressDrupalPlugin

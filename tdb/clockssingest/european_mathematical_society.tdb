@@ -2,8 +2,9 @@
 
   publisher <
     name = European Mathematical Society ;
+    info[contract] = 2015 ;
     info[tester] = 2 ;
-    info[contract] = 2015
+    info[poller] = 2
   >
   
   plugin = org.lockss.plugin.europeanmathematicalsociety.ClockssEuropeanMathematicalSocietyPlugin

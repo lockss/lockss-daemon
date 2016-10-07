@@ -4,7 +4,8 @@
     name = Edinburgh University Press ;
     info[contract] = 2009 ;
     comment[123tester] = 2 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[poller] = 3
   >
 
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin

@@ -3,7 +3,8 @@
     name = Inderscience ;
     info[back] = 2010 ;
     info[contract] = 2011 ;
-    info[tester] = 5
+    info[tester] = 5 ;
+    info[tester] = 3
   >
   
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
