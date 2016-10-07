@@ -1908,7 +1908,7 @@
     au < manifest ; exists ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Cardiology Research and Practice Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cardiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6119,7 +6119,7 @@
     au < manifest ; exists ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Journal of Electrical and Computer Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Electrical and Computer Engineering Volume 2016 ; 2016 ; 2016 ; >
     
@@ -7340,7 +7340,7 @@
     param[journal_id] = jstd
 
     au < manifest ; exists ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Sexually Transmitted Diseases Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Sexually Transmitted Diseases Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of Sexually Transmitted Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Sexually Transmitted Diseases Volume 2016 ; 2016 ; 2016 ; >
 
