@@ -50,7 +50,7 @@
       au < finished ; finished ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 ; >
-      au < finished ; crawling ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Abstracts in Anthropology Volume 72 ; 72 ; >
 
   }
@@ -12122,7 +12122,7 @@
       au < finished ; finished ; 2012 ; European Urban and Regional Studies Volume 19 ; 19 ; >
       au < crawling ; exists ; 2013 ; European Urban and Regional Studies Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; European Urban and Regional Studies Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2015 ; European Urban and Regional Studies Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; European Urban and Regional Studies Volume 22 ; 22 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; European Urban and Regional Studies Volume 23 ; 23 ; >
 
     }
@@ -15634,7 +15634,7 @@
       au < exists ; exists ; 2012 ; Illness, Crisis & Loss Volume 20 ; 20 ; >
       au < doNotProcess ; exists ; 2013 ; Illness, Crisis & Loss Volume 21 ; 21 ; >
       au < finished ; finished ; 2014 ; Illness, Crisis & Loss Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Illness, Crisis & Loss Volume 23 ; 23 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Illness, Crisis & Loss Volume 24 ; 24 ; >
 
   }
@@ -21155,7 +21155,7 @@
       au < crawling ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
       au < finished ; finished ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Cerebral Blood Flow & Metabolism Volume 36 ; 36 ; >
 
@@ -33707,7 +33707,7 @@
       au < finished ; finished ; 2012 ; Organization Volume 19 ; 19 ; >
       au < finished ; finished ; 2013 ; Organization Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Organization Volume 21 ; 21 ; >
-      au < finished ; frozen ; 2015 ; Organization Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Organization Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Organization Volume 23 ; 23 ; >
 
     }
@@ -47424,7 +47424,7 @@
     param[base_url] = http://smo.sagepub.com/
 
     au < finished ; finished ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
-    au < finished ; frozen ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; SAGE Open Medicine Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2016 ; SAGE Open Medicine Volume 4 ; 4 ; >
 
