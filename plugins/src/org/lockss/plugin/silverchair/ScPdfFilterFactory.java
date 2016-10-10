@@ -34,6 +34,7 @@ package org.lockss.plugin.silverchair;
 
 import java.io.InputStream;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
@@ -51,9 +52,9 @@ public class ScPdfFilterFactory implements FilterFactory{
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-	  if(au.getProperties().getString("base_url").contains("jamanetwork")) {
-		    FilterFactory AmaPdfFilter = new AmaPdfFilterFactory();
-		    return AmaPdfFilter.createFilteredInputStream(au, in, encoding);
+	  if(au.getProperties().getString(ConfigParamDescr.BASE_URL.getKey()).contains("jamanetwork")) {
+		    FilterFactory amaPdfFilter = new AmaPdfFilterFactory();
+		    return amaPdfFilter.createFilteredInputStream(au, in, encoding);
 	  }
 	  return in;
   }

@@ -194,10 +194,12 @@
   <!-- don't count it in the poll, but do collect and share versions -->  
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/ScriptResource\.axd\?d=[^/]+$</string>
-    <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
-    <string>/errors/404\.aspx\?aspxerrorpath=</string>
-    <string>silverchaircdn\.com/(CSS|Images)/</string>
+    <list>
+	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
+      <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
+      <string>/errors/404\.aspx\?aspxerrorpath=</string>
+      <string>silverchaircdn\.com/(CSS|Images)/</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
