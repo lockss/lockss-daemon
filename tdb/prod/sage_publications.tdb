@@ -13760,7 +13760,7 @@
       au < released ; 2013-2014 ; Exceptional Children Volume 80 ; 80 >
       au < released ; 2014-2015 ; Exceptional Children Volume 81 ; 81 >
       au < manifest ; 2015-2016 ; Exceptional Children Volume 82 ; 82 >
-      au < expected ; 2016-2017 ; Exceptional Children Volume 83 ; 83 >
+      au < manifest ; 2016-2017 ; Exceptional Children Volume 83 ; 83 >
 
     }
 
@@ -14607,7 +14607,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://fao.sagepub.com/
   
-        au < exists ; 2016 ; Foot & Ankle Orthopaedics Volume 1 ; 1 >
+        au < manifest ; 2016 ; Foot & Ankle Orthopaedics Volume 1 ; 1 >
   
     }
 
@@ -21464,7 +21464,7 @@
       au < released ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 >
       au < released ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 >
       au < released ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 >
-      au < expected ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 >
+      au < manifest ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 >
 
     }
 
@@ -27403,7 +27403,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 >
       au < exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 >
       au < manifest ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 >
-      au < expected ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 >
+      au < manifest ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 >
 
    }
 
@@ -29596,7 +29596,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2013 ; Journal of Orthopaedic Surgery Volume 21 ; 21 >
         au < exists ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 >
         au < exists ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 >
-        au < exists ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 >
+        au < manifest ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 >
   
     }
 
@@ -43107,8 +43107,8 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 >
-      au < exists ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 >
+      au < manifest ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 >
+      au < manifest ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 >
 
     }
 
