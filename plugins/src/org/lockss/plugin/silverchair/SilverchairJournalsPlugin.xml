@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -130,6 +130,10 @@
     <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
+  </entry>  
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%sarticle\.aspx\?articleid=\d+$", base_url, resource_id</string>
@@ -191,7 +195,7 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <string>/ScriptResource\.axd\?d=[^/]+$</string>
-    <string>/combres.axd/[^/]+-js/-?[0-9]+$</string>
+    <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
     <string>/errors/404\.aspx\?aspxerrorpath=</string>
     <string>silverchaircdn\.com/(CSS|Images)/</string>
   </entry>
@@ -199,7 +203,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
-      <string>"/combres.axd/[^/]+-js/-?[0-9]+$", 0</string>
+      <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
       <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
       <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
     </list>
