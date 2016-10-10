@@ -3193,7 +3193,7 @@
     au < manifest ; exists ; 2010 ; 47 ; Arquivos de Gastroenterologia Volume 47 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 48 ; Arquivos de Gastroenterologia Volume 48 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 49 ; Arquivos de Gastroenterologia Volume 49 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 50 ; Arquivos de Gastroenterologia Volume 50 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 50 ; Arquivos de Gastroenterologia Volume 50 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 51 ; Arquivos de Gastroenterologia Volume 51 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 52 ; Arquivos de Gastroenterologia Volume 52 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -6181,7 +6181,7 @@
     au < manifest ; exists ; 2010 ; 40 ; Ciência Rural Volume 40 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 41 ; Ciência Rural Volume 41 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 42 ; Ciência Rural Volume 42 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 43 ; Ciência Rural Volume 43 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 43 ; Ciência Rural Volume 43 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 44 ; Ciência Rural Volume 44 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 45 ; Ciência Rural Volume 45 ; 2015 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; 46 ; Ciência Rural Volume 46 ; 2016 ; >
@@ -6504,7 +6504,7 @@
     au < manifest ; exists ; 2010 ; 7 ; Co-herencia Volume 7 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 8 ; Co-herencia Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; Co-herencia Volume 9 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 10 ; Co-herencia Volume 10 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 10 ; Co-herencia Volume 10 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 11 ; Co-herencia Volume 11 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 12 ; Co-herencia Volume 12 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -8744,7 +8744,7 @@
     au < manifest ; exists ; 2010 ; 31 ; Educação & Sociedade Volume 31 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 32 ; Educação & Sociedade Volume 32 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 33 ; Educação & Sociedade Volume 33 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 34 ; Educação & Sociedade Volume 34 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 34 ; Educação & Sociedade Volume 34 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 35 ; Educação & Sociedade Volume 35 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 36 ; Educação & Sociedade Volume 36 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -10896,7 +10896,7 @@
     au < manifest ; exists ; 2010 ; 22 ; Fractal : Revista de Psicologia Volume 22 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 23 ; Fractal : Revista de Psicologia Volume 23 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 24 ; Fractal : Revista de Psicologia Volume 24 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 25 ; Fractal : Revista de Psicologia Volume 25 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 25 ; Fractal : Revista de Psicologia Volume 25 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 26 ; Fractal : Revista de Psicologia Volume 26 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 27 ; Fractal : Revista de Psicologia Volume 27 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -11245,7 +11245,7 @@
     au < manifest ; exists ; 2010 ; 33 ; Genetics and Molecular Biology Volume 33 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 34 ; Genetics and Molecular Biology Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Genetics and Molecular Biology Volume 35 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 36 ; Genetics and Molecular Biology Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 36 ; Genetics and Molecular Biology Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 37 ; Genetics and Molecular Biology Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 38 ; Genetics and Molecular Biology Volume 38 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -12503,7 +12503,7 @@
     param[journal_issn] = 0123-3033
 
     au < manifest ; exists ; 2012 ; 14 ; Ingeniería y competitividad Volume 14 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 15 ; Ingeniería y competitividad Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 15 ; Ingeniería y competitividad Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 16 ; Ingeniería y competitividad Volume 16 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 17 ; Ingeniería y competitividad Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -12667,7 +12667,7 @@
     au < manifest ; exists ; 2010 ; 11 ; Interações (Campo Grande) Volume 11 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 12 ; Interações (Campo Grande) Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Interações (Campo Grande) Volume 13 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 14 ; Interações (Campo Grande) Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 14 ; Interações (Campo Grande) Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 15 ; Interações (Campo Grande) Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 16 ; Interações (Campo Grande) Volume 16 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -12725,7 +12725,7 @@
 
     au < manifest ; exists ; 2011 ; 34 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 35 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 36 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 36 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 36 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 36 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 37 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 37 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 38 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 38 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -15947,7 +15947,7 @@
     au < manifest ; exists ; 2010 ; 19 ; Multequina Volume 19 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 20 ; Multequina Volume 20 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 21 ; Multequina Volume 21 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 22 ; Multequina Volume 22 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 22 ; Multequina Volume 22 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 23 ; Multequina Volume 23 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
@@ -20426,7 +20426,7 @@
     au < manifest ; exists ; 2010 ; 24 ; Revista Brasileira de Educação Física e Esporte Volume 24 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 25 ; Revista Brasileira de Educação Física e Esporte Volume 25 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 26 ; Revista Brasileira de Educação Física e Esporte Volume 26 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 27 ; Revista Brasileira de Educação Física e Esporte Volume 27 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 27 ; Revista Brasileira de Educação Física e Esporte Volume 27 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 28 ; Revista Brasileira de Educação Física e Esporte Volume 28 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 29 ; Revista Brasileira de Educação Física e Esporte Volume 29 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -22081,7 +22081,7 @@
     au < manifest ; exists ; 2010 ; 8 ; Revista Ciencias de la Salud Volume 8 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 9 ; Revista Ciencias de la Salud Volume 9 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 10 ; Revista Ciencias de la Salud Volume 10 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 11 ; Revista Ciencias de la Salud Volume 11 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 11 ; Revista Ciencias de la Salud Volume 11 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 12 ; Revista Ciencias de la Salud Volume 12 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 13 ; Revista Ciencias de la Salud Volume 13 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -24747,7 +24747,7 @@
     param[journal_issn] = 1646-8872
 
     au < manifest ; exists ; 2012 ; 12 ; Revista de Gestão Costeira Integrada Volume 12 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 13 ; Revista de Gestão Costeira Integrada Volume 13 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 13 ; Revista de Gestão Costeira Integrada Volume 13 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 14 ; Revista de Gestão Costeira Integrada Volume 14 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 15 ; Revista de Gestão Costeira Integrada Volume 15 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -24782,7 +24782,7 @@
 
     au < manifest ; exists ; 2011 ; 46 ; Revista de historia americana y argentina Volume 46 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 47 ; Revista de historia americana y argentina Volume 47 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 48 ; Revista de historia americana y argentina Volume 48 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 48 ; Revista de historia americana y argentina Volume 48 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 49 ; Revista de historia americana y argentina Volume 49 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 50 ; Revista de historia americana y argentina Volume 50 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -26441,7 +26441,7 @@
     param[base_url] = http://www.scielo.sa.cr/
     param[journal_issn] = 1409-4258
 
-    au < finished ; frozen ; 2013 ; 17 ; Revista Electrónica Educare Volume 17 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 17 ; Revista Electrónica Educare Volume 17 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 18 ; Revista Electrónica Educare Volume 18 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 19 ; Revista Electrónica Educare Volume 19 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -27343,7 +27343,7 @@
     au < manifest ; exists ; 2010 ; 7 ; Revista Lasallista de Investigación Volume 7 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 8 ; Revista Lasallista de Investigación Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; Revista Lasallista de Investigación Volume 9 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 10 ; Revista Lasallista de Investigación Volume 10 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 10 ; Revista Lasallista de Investigación Volume 10 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 11 ; Revista Lasallista de Investigación Volume 11 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
@@ -27379,7 +27379,7 @@
     au < manifest ; exists ; 2010 ; 18 ; Revista Latino-Americana de Enfermagem Volume 18 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 19 ; Revista Latino-Americana de Enfermagem Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Revista Latino-Americana de Enfermagem Volume 20 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 21 ; Revista Latino-Americana de Enfermagem Volume 21 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 21 ; Revista Latino-Americana de Enfermagem Volume 21 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 22 ; Revista Latino-Americana de Enfermagem Volume 22 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 23 ; Revista Latino-Americana de Enfermagem Volume 23 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -30495,7 +30495,7 @@
     au < manifest ; exists ; 2010 ; 25 ; Sociológica (México) Volume 25 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 26 ; Sociológica (México) Volume 26 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 27 ; Sociológica (México) Volume 27 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 28 ; Sociológica (México) Volume 28 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 28 ; Sociológica (México) Volume 28 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 29 ; Sociológica (México) Volume 29 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 30 ; Sociológica (México) Volume 30 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -31658,7 +31658,7 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 2197-0025
 
-    au < finished ; frozen ; 2013 ; 25 ; Theoretical and Experimental Plant Physiology Volume 25 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 25 ; Theoretical and Experimental Plant Physiology Volume 25 ; 2013 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -32373,7 +32373,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Universitas Humanística Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Universitas Humanística Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Universitas Humanística Volume 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; Universitas Humanística Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 2013 ; Universitas Humanística Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 2014 ; Universitas Humanística Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Universitas Humanística Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
 

@@ -1178,7 +1178,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
       au < finished ; finished ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
       au < zapped ; finished ; 2010 ; American Educational Research Journal Volume 47 ; 47 ; >
-      au < finished ; frozen ; 2011 ; American Educational Research Journal Volume 48 ; 48 ; >
+      au < finished ; finished ; 2011 ; American Educational Research Journal Volume 48 ; 48 ; >
       au < finished ; finished ; 2012 ; American Educational Research Journal Volume 49 ; 49 ; >
       au < finished ; finished ; 2013 ; American Educational Research Journal Volume 50 ; 50 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; American Educational Research Journal Volume 51 ; 51 ; reingest1.clockss.org:8082 >
@@ -3719,7 +3719,7 @@
         au < finished ; finished ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 ; >
         au < finished ; finished ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 ; >
         au < finished ; finished ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 ; >
-        au < finished ; frozen ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
+        au < finished ; finished ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
         au < finished ; finished ; 2013 ; Australian & New Zealand Journal of Psychiatry Volume 47 ; 47 ; >
         au < finished ; finished ; 2014 ; Australian & New Zealand Journal of Psychiatry Volume 48 ; 48 ; >
         au < deepCrawl ; exists ; 2015 ; Australian & New Zealand Journal of Psychiatry Volume 49 ; 49 ; >
@@ -9401,7 +9401,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; The Diabetes Educator Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Diabetes Educator Volume 35 ; 35 ; >
       au < finished ; finished ; 2010 ; The Diabetes Educator Volume 36 ; 36 ; >
-      au < finished ; frozen ; 2011 ; The Diabetes Educator Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; The Diabetes Educator Volume 37 ; 37 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2012 ; The Diabetes Educator Volume 38 ; 38 ; >
       au < finished ; finished ; 2013 ; The Diabetes Educator Volume 39 ; 39 ; >
       au < finished ; finished ; 2014 ; The Diabetes Educator Volume 40 ; 40 ; >
@@ -11526,7 +11526,7 @@
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         # Previous issues are at the same url.
 
-        au < finished ; frozen ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
+        au < finished ; finished ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
         au < crawling ; exists ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
         au < finished ; finished ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; >
         au < deepCrawl ; exists ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; >
@@ -16774,7 +16774,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Behavioral Development Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Behavioral Development Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 ; >
-      au < finished ; frozen ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
+      au < finished ; finished ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
       au < finished ; finished ; 2011 ; International Journal of Behavioral Development Volume 35 ; 35 ; >
       au < finished ; finished ; 2012 ; International Journal of Behavioral Development Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; International Journal of Behavioral Development Volume 37 ; 37 ; reingest3.clockss.org:8083 >
@@ -21259,7 +21259,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Child Neurology Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Child Neurology Volume 24 ; 24 ; >
       au < zapped ; finished ; 2010 ; Journal of Child Neurology Volume 25 ; 25 ; >
-      au < finished ; frozen ; 2011 ; Journal of Child Neurology Volume 26 ; 26 ; >
+      au < finished ; finished ; 2011 ; Journal of Child Neurology Volume 26 ; 26 ; >
       au < finished ; frozen ; 2012 ; Journal of Child Neurology Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Journal of Child Neurology Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; Journal of Child Neurology Volume 29 ; 29 ; >
@@ -23876,7 +23876,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; frozen ; 2008 ; Journal of Family Nursing Volume 14 ; 14 ; >
+      au < down ; finished ; 2008 ; Journal of Family Nursing Volume 14 ; 14 ; >
       au < superseded ; down ; 2009 ; Journal of Family Nursing Volume 15 [superseded] ; 15 ; >
 
     }
@@ -26897,7 +26897,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Pharmacy Practice Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Pharmacy Practice Volume 22 ; 22 ; >
       au < finished ; finished ; 2010 ; Journal of Pharmacy Practice Volume 23 ; 23 ; >
-      au < finished ; frozen ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 ; >
       au < finished ; finished ; 2013 ; Journal of Pharmacy Practice Volume 26 ; 26 ; >
       au < finished ; finished ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 ; >
@@ -27437,7 +27437,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Reinforced Plastics and Composites Volume 27 ; 27 ; >
       au < crawling ; exists ; 2009 ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 ; >
       au < finished ; finished ; 2010 ; Journal of Reinforced Plastics and Composites Volume 29 ; 29 ; >
-      au < finished ; frozen ; 2011 ; Journal of Reinforced Plastics and Composites Volume 30 ; 30 ; >
+      au < finished ; finished ; 2011 ; Journal of Reinforced Plastics and Composites Volume 30 ; 30 ; >
       au < finished ; frozen ; 2012 ; Journal of Reinforced Plastics and Composites Volume 31 ; 31 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2013 ; Journal of Reinforced Plastics and Composites Volume 32 ; 32 ; >
       au < finished ; finished ; 2014 ; Journal of Reinforced Plastics and Composites Volume 33 ; 33 ; >
@@ -32953,7 +32953,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ; >
       au < finished ; frozen ; 2010 ; Neurorehabilitation and Neural Repair Volume 24 ; 24 ; >
       au < finished ; finished ; 2011 ; Neurorehabilitation and Neural Repair Volume 25 ; 25 ; >
-      au < finished ; frozen ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Neurorehabilitation and Neural Repair Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Neurorehabilitation and Neural Repair Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2015 ; Neurorehabilitation and Neural Repair Volume 29 ; 29 ; >
@@ -40805,7 +40805,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; frozen ; 2008 ; South Asia Research Volume 28 ; 28 ; >
+      au < down ; finished ; 2008 ; South Asia Research Volume 28 ; 28 ; >
       au < zapped ; finished ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
     }
@@ -43402,7 +43402,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; >
       au < finished ; finished ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ; >
       au < finished ; finished ; 2011 ; Toxicologic Pathology Volume 39 ; 39 ; >
-      au < finished ; frozen ; 2012 ; Toxicologic Pathology Volume 40 ; 40 ; >
+      au < finished ; finished ; 2012 ; Toxicologic Pathology Volume 40 ; 40 ; >
       au < finished ; finished ; 2013 ; Toxicologic Pathology Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Toxicologic Pathology Volume 42 ; 42 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Toxicologic Pathology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
@@ -44202,7 +44202,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; frozen ; 2008 ; Urban Studies Volume 45 ; 45 ; >
+      au < down ; finished ; 2008 ; Urban Studies Volume 45 ; 45 ; >
       au < down ; finished ; 2009 ; Urban Studies Volume 46 ; 46 ; >
 
     }

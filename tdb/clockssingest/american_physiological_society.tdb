@@ -756,7 +756,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Cell Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
@@ -1106,7 +1106,7 @@
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; >
       au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 ; >
@@ -1576,7 +1576,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; reingest3.clockss.org:8083 >
@@ -2005,7 +2005,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
@@ -2253,7 +2253,7 @@
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
@@ -2489,7 +2489,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; Physiological Reviews Volume 87 ; 87 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; down ; finished ; 2008 ; Physiological Reviews Volume 88 ; 88 ; >
       au < ClockssHighWirePlugin ; down ; finished ; 2009 ; Physiological Reviews Volume 89 ; 89 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
 
     }
 
