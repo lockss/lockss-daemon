@@ -58,9 +58,7 @@ public class TestMsArchivalUnit extends LockssTestCase {
 
   static final String PLUGIN_ID = "org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin";
   static final String PluginName = "Microbiology Society Journals Plugin (CLOCKSS)";
-  
-  static final String MS_REPAIR_FROM_PEER_REGEXP = "(.+\\.mathjax\\.org|code\\.jquery\\.com|/css/.*\\.css(\\?[^/]+)?$|/(css|images|js)/(sgm|jp)/)";
-  
+    
 
   public void setUp() throws Exception {
     super.setUp();
@@ -187,55 +185,7 @@ public class TestMsArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
 
-  public void testPollSpecial() throws Exception {
-    ArchivalUnit FooAu = makeAu(new URL("http://jgv.microbiologyresearch.org/"), 96, "jgv");
-    theDaemon.getLockssRepository(FooAu);
-    theDaemon.getNodeManager(FooAu);
 
-
-    // if it changes in the plugin, you might need to change the test, so verify
-    assertEquals(ListUtil.list(
-        MS_REPAIR_FROM_PEER_REGEXP),
-        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
-    
-    // make sure that's the regexp that will match to the expected url string
-    // this also tests the regexp (which is the same) for the weighted poll map
-    List <String> repairList = ListUtil.list(
-        "http://jgv.microbiologyresearch.org/images/jp/uibg_glass_75_ffffff_1x400.png",
-          "http://jgv.microbiologyresearch.org/css/sgm/bespoke-fonts/fontawesome-webfont.svg?v=4.1.0",
-          "http://jgv.microbiologyresearch.org/images/jp/ui-icons_222222_256x240.png",
-          "http://jgv.microbiologyresearch.org/images/sgm/Header-shapes-small.png",
-          "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
-          "http://jgv.microbiologyresearch.org/images/sgm/ijsem_banner.png",
-          "https://code.jquery.com/jquery-1.11.1.min.js",
-          "http://jgv.microbiologyresearch.org/css/sgm/fulltext-html-tab.css",
-          "http://jgv.microbiologyresearch.org/css/sgm/site.css?2",
-          "http://jgv.microbiologyresearch.org/css/contentpreview/preview.css",
-          "http://jgv.microbiologyresearch.org/css/jp/ViewNLM.css",
-          "http://jgv.microbiologyresearch.org/css/jp/ingenta-branding-new.css",
-          "http://jgv.microbiologyresearch.org/css/jp/shopping.css",
-          "http://jgv.microbiologyresearch.org/css/metrics/metrics.css");
-     Pattern p = Pattern.compile(MS_REPAIR_FROM_PEER_REGEXP);
-     for (String urlString : repairList) {
-       Matcher m = p.matcher(urlString);
-       assertEquals(true, m.find());
-     }
-     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
-     String notString ="http://jgv.microbiologyresearch.org/docserver/fulltext/jgv/96/1/064816-f1.gif";
-     Matcher m = p.matcher(notString);
-     assertEquals(false, m.find());
-
-     
-    PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
-    assertNotNull(urlPollResults);
-    for (String urlString : repairList) {
-      assertEquals(0.0,
-          urlPollResults.getMatch(urlString, (float) 1),
-          .0001);
-    }
-    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
-  }
-  
   public void testGetName() throws Exception {
     DefinableArchivalUnit au =
         makeAu(new URL("http://www.ajrnl.com/"), 33, "blah");

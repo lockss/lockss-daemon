@@ -58,12 +58,26 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
 
   private static final Logger log = Logger.getLogger(TestPub2WebArchivalUnit.class);
 
-  static final String PLUGIN_ID = "org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin";
-  static final String BOOK_PLUGIN_ID = "org.lockss.plugin.pub2web.asm.ClockssASMscienceBooksPlugin";
-  static final String PluginName = "Microbiology Society Journals Plugin (CLOCKSS)";
-  static final String BookPluginName = "ASMscience Books Plugin (CLOCKSS)";
+  // variants for different plugins - ultimately may need to split the test
+  static final String MS_PLUGIN_ID = "org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin";
+  static final String ASM_PLUGIN_ID = "org.lockss.plugin.pub2web.asm.ClockssASMscienceJournalsPlugin";
+  static final String ASM_BOOK_PLUGIN_ID = "org.lockss.plugin.pub2web.asm.ClockssASMscienceBooksPlugin";
+  static final String MS_PluginName = "Microbiology Society Journals Plugin (CLOCKSS)";
+  static final String ASM_PluginName = "ASMScience Journals Plugin (CLOCKSS)";
+  static final String ASM_BookPluginName = "ASMscience Books Plugin (CLOCKSS)";
+
   
-  static final String MS_REPAIR_FROM_PEER_REGEXP = "(.+\\.mathjax\\.org|code\\.jquery\\.com|/css/.*\\.css(\\?[^/]+)?$|/(css|images|js)/(sgm|jp)/)";
+  static final String P2WRepairList[] = 
+    {
+    "(.+\\.mathjax\\.org|code\\.jquery\\.com|://[^/]+/(css|files|images|js|marketing)/)",
+    "/docserver/preview/.*\\.gif$",
+    };
+
+  static final String P2W_BooksRepairList[] = 
+    {
+    "(://[^/]+/(css|files|images|js|marketing)/)",
+    "/docserver/preview/.*\\.gif$",
+    };
   
 
   public void setUp() throws Exception {
@@ -77,7 +91,7 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private DefinableArchivalUnit makeAu(URL base_url, int volume, String jid)
+  private DefinableArchivalUnit makeAu(String plugin_id, URL base_url, int volume, String jid)
       throws Exception {
 
     Properties props = new Properties();
@@ -90,12 +104,12 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
 
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
-        PLUGIN_ID);
+        plugin_id);
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
   
-  private DefinableArchivalUnit makeBookAu(URL base_url, String doi)
+  private DefinableArchivalUnit makeBookAu(String plugin_id,URL base_url, String doi)
       throws Exception {
 
     Properties props = new Properties();
@@ -107,7 +121,7 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
 
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
-        BOOK_PLUGIN_ID);
+        plugin_id);
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
@@ -125,7 +139,7 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
     String REAL_ROOT= "http://jgv.microbiologyresearch.org/";
     String OTHER_ROOT = "http://www.microbiologyresearch.org/";
     URL base = new URL(REAL_ROOT);
-    ArchivalUnit  msau = makeAu(base, 96, "jgv");
+    ArchivalUnit  msau = makeAu(MS_PLUGIN_ID, base, 96, "jgv");
     theDaemon.getLockssRepository(msau);
     theDaemon.getNodeManager(msau);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(msau,
@@ -190,7 +204,7 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
   public void testBookShouldCacheProperPages() throws Exception {
     String REAL_ROOT= "http://asmscience.org/";
     URL base = new URL(REAL_ROOT);
-    ArchivalUnit  asmbau = makeBookAu(base, "10.1128/9781555817992");
+    ArchivalUnit  asmbau = makeBookAu(ASM_BOOK_PLUGIN_ID, base, "10.1128/9781555817992");
     theDaemon.getLockssRepository(asmbau);
     theDaemon.getNodeManager(asmbau);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(asmbau,
@@ -252,20 +266,19 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"content/journal/foo/clockssissues?volume=123";
  
-    DefinableArchivalUnit au = makeAu(url, 123, "foo");
+    DefinableArchivalUnit au = makeAu(MS_PLUGIN_ID,url, 123, "foo");
     assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
 
-  public void testPollSpecial() throws Exception {
-    ArchivalUnit FooAu = makeAu(new URL("http://jgv.microbiologyresearch.org/"), 96, "jgv");
-    theDaemon.getLockssRepository(FooAu);
-    theDaemon.getNodeManager(FooAu);
+  public void testMSPollSpecial() throws Exception {
+    ArchivalUnit MSAu = makeAu(MS_PLUGIN_ID,new URL("http://jgv.microbiologyresearch.org/"), 96, "jgv");
+    theDaemon.getLockssRepository(MSAu);
+    theDaemon.getNodeManager(MSAu);
 
 
     // if it changes in the plugin, you might need to change the test, so verify
-    assertEquals(ListUtil.list(
-        MS_REPAIR_FROM_PEER_REGEXP),
-        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+  assertEquals(Arrays.asList(P2WRepairList),
+    RegexpUtil.regexpCollection(MSAu.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
     // this also tests the regexp (which is the same) for the weighted poll map
@@ -283,19 +296,75 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
           "http://jgv.microbiologyresearch.org/css/jp/ViewNLM.css",
           "http://jgv.microbiologyresearch.org/css/jp/ingenta-branding-new.css",
           "http://jgv.microbiologyresearch.org/css/jp/shopping.css",
-          "http://jgv.microbiologyresearch.org/css/metrics/metrics.css");
-     Pattern p = Pattern.compile(MS_REPAIR_FROM_PEER_REGEXP);
-     for (String urlString : repairList) {
-       Matcher m = p.matcher(urlString);
-       assertEquals(true, m.find());
-     }
+          "http://jgv.microbiologyresearch.org/css/metrics/metrics.css",
+          "http://www.asmscience.org/js/asm/contentpreview/preview.js",
+          "http://www.asmscience.org/css/asm/bespoke-fonts/fontawesome-webfont.eot",
+          "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.eot",
+          "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.svg",
+           "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.ttf",
+            "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.woff");  
+    Pattern p0 = Pattern.compile(P2WRepairList[0]);
+    Pattern p1 = Pattern.compile(P2WRepairList[1]);
+    Matcher m0, m1;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://jgv.microbiologyresearch.org/docserver/fulltext/jgv/96/1/064816-f1.gif";
-     Matcher m = p.matcher(notString);
-     assertEquals(false, m.find());
+     m0 = p0.matcher(notString);
+     m1 = p1.matcher(notString);
+     assertEquals(false, m0.find() && m1.find());
 
      
-    PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
+    PatternFloatMap urlPollResults = MSAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0,
+          urlPollResults.getMatch(urlString, (float) 1),
+          .0001);
+    }
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+  }
+  
+  public void testBooksPollSpecial() throws Exception {
+    ArchivalUnit  ASMAu = makeBookAu(ASM_BOOK_PLUGIN_ID, new URL("http://www.asmscience.org/"), "10.1128/9781555817992");
+    theDaemon.getLockssRepository(ASMAu);
+    theDaemon.getNodeManager(ASMAu);
+
+
+    // if it changes in the plugin, you might need to change the test, so verify
+  assertEquals(Arrays.asList(P2W_BooksRepairList),
+    RegexpUtil.regexpCollection(ASMAu.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        "http://www.asmscience.org/js/asm/contentpreview/preview.js",
+        "http://www.asmscience.org/css/asm/bespoke-fonts/fontawesome-webfont.eot",
+        "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.eot",
+        "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.svg",
+         "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.ttf",
+          "http://www.asmscience.org/css/asm/bespoke-fonts/glyphicons-halflings-regular.woff");
+
+    Pattern p0 = Pattern.compile(P2W_BooksRepairList[0]);
+    Pattern p1 = Pattern.compile(P2W_BooksRepairList[1]);
+    Matcher m0, m1;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString ="http://www.asmscience.org/content/book/10.1128/9781555816445.ch07?crawler=true&mimetype=html";
+     m0 = p0.matcher(notString);
+     m1 = p1.matcher(notString);
+     assertEquals(false, m0.find() && m1.find());
+
+     
+    PatternFloatMap urlPollResults = ASMAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
       assertEquals(0.0,
@@ -307,9 +376,9 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
   
   public void testGetName() throws Exception {
     DefinableArchivalUnit au =
-        makeAu(new URL("http://www.ajrnl.com/"), 33, "blah");
+        makeAu(MS_PLUGIN_ID, new URL("http://www.ajrnl.com/"), 33, "blah");
     //Microbiology Society Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s
-    assertEquals(PluginName + ", Base URL http://www.ajrnl.com/, Journal ID blah, Volume 33", au.getName());
+    assertEquals(MS_PluginName + ", Base URL http://www.ajrnl.com/, Journal ID blah, Volume 33", au.getName());
   }
 
  
