@@ -44,7 +44,6 @@ import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.taylorandfrancis.TafHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
