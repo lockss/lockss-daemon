@@ -366,6 +366,18 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
   private static final String nonManifestList2FilteredStr = "";
+  private static final String styleBlock =
+      "<style type=\"text/css\">" +
+          " .suppl{" +
+          "    display: none !important;" +
+          "}" +
+          "</style>" +
+          "<style type=\"text/css\">" +
+          " .copyRight{" +
+          "    display: none !important;" +
+          "}" +
+          "</style>";
+  private static final String styleBlockFiltered = "";
     
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -442,7 +454,9 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
       doFilterTest(eau, variantFact, nonManifestList1, 
                    nonManifestList1FilteredStr);
       doFilterTest(eau, variantFact, nonManifestList2, 
-                   nonManifestList2FilteredStr);
+          nonManifestList2FilteredStr);
+      doFilterTest(eau, variantFact, styleBlock, 
+          styleBlockFiltered);
      }
   }
   

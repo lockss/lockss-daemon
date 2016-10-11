@@ -125,11 +125,13 @@ public class EmeraldGroupHtmlHashFilterFactory
         // abs, full, ref - random html - potential problem
         HtmlNodeFilters.tagWithAttribute("span",  "class", "Z3988"),
         // full, ref - references section - Crossref/ISI/Abstract/Infotrieve
-        // sepatated by a comma. Not easy to remove the comma, so hash out
+        // separated by a comma. Not easy to remove the comma, so hash out
         // class citation
         HtmlNodeFilters.tagWithAttribute("div", "class", "citation"),     
         //TOC - in case icon options change
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "icon-key"),
+        // on the full/abs/ref pages there are little style definitions that 
+        HtmlNodeFilters.tagWithAttributeRegex("style", "type", "text/css"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
