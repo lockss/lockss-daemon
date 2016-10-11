@@ -489,7 +489,7 @@
       au < doNotProcess ; exists ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 ; >
-      au < testing ; exists ; 2015-2016 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; >
+      au < ready ; exists ; 2015-2016 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 ; >
 
     }
 
@@ -7550,7 +7550,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space Science and Engineering Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 ; >
       au < finished ; finished ; 2015 ; International Journal of Space Science and Engineering Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2016 ; International Journal of Space Science and Engineering Volume 4 ; 4 ; >
+      au < ready ; exists ; 2016 ; International Journal of Space Science and Engineering Volume 4 ; 4 ; >
 
     }
 
@@ -7600,7 +7600,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Strategic Business Alliances Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Strategic Business Alliances Volume 3 ; 3 ; >
       au < frozen ; exists ; 2015 ; International Journal of Strategic Business Alliances Volume 4 ; 4 ; >
-      au < testing ; exists ; 2016 ; International Journal of Strategic Business Alliances Volume 5 ; 5 ; >
+      au < ready ; exists ; 2016 ; International Journal of Strategic Business Alliances Volume 5 ; 5 ; >
 
     }
 
@@ -7717,7 +7717,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 ; >
-      au < testing ; exists ; 2016 ; International Journal of Sustainable Design Volume 3 ; 3 ; >
+      au < ready ; exists ; 2016 ; International Journal of Sustainable Design Volume 3 ; 3 ; >
 
     }
 
@@ -7806,7 +7806,7 @@
       param[journal_id] = ijsmss
 
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; >
+      au < ready ; exists ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; >
 
     }
 
@@ -8136,7 +8136,7 @@
       au < finished ; manifest ; 2015 ; International Journal of Technology Management Volume 68 ; 68 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 69 ; 69 ; >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 70 ; 70 ; >
-      au < testing ; exists ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; >
+      au < ready ; exists ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; >
       au < expected ; exists ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; >
 
       }
@@ -8507,8 +8507,8 @@
       au < finished ; manifest ; 2015 ; International Journal of Vehicle Design Volume 68 ; 68 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Vehicle Design Volume 69 ; 69 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Vehicle Design Volume 70 ; 70 ; >
-      au < testing ; exists ; 2016 ; International Journal of Vehicle Design Volume 71 ; 71 ; >
-      au < testing ; exists ; 2016 ; International Journal of Vehicle Design Volume 72 ; 72 ; >
+      au < ready ; exists ; 2016 ; International Journal of Vehicle Design Volume 71 ; 71 ; >
+      au < ready ; exists ; 2016 ; International Journal of Vehicle Design Volume 72 ; 72 ; >
 
     }
 
@@ -8775,7 +8775,7 @@
       au < frozen ; exists ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 ; >
       au < finished ; crawling ; 2015 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 ; >
-      au < testing ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 ; >
+      au < ready ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 11 ; 11 ; >
 
     }
 
@@ -8928,7 +8928,7 @@
 
       au < finished ; finished ; 2014 ; Latin American Journal of Management for Sustainable Development Volume 1 ; 1 ; >
       au < finished ; finished ; 2015 ; Latin American Journal of Management for Sustainable Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < testing ; exists ; 2016 ; Latin American Journal of Management for Sustainable Development Volume 3 ; 3 ; >
+      au < ready ; exists ; 2016 ; Latin American Journal of Management for Sustainable Development Volume 3 ; 3 ; >
 
     }
 
@@ -8998,7 +8998,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 ; >
       au < finished ; finished ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 ; >
-      au < testing ; exists ; 2016 ; Progress in Industrial Ecology, An International Journal Volume 10 ; 10 ; >
+      au < ready ; exists ; 2016 ; Progress in Industrial Ecology, An International Journal Volume 10 ; 10 ; >
 
     }
 
