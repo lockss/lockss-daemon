@@ -304,6 +304,13 @@ private static final String extraSpaceGenericBefore=
 private static final String extraSpaceGenericAfter=
 " <div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
 " <div> <div> <span class=\"pb_toc_link\"> <br /> <br /> <b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span> </div> </div> </div>";
+private static final String extraneousDatesBefore=
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"<div class=\"articleDates\">Received: 13 November 2013 &ndash; Published in The Beautiful Frisbee Discuss.: 06 January 2014 <br/>Revised: 17 April 2014 &ndash; Accepted: 22 April 2014 &ndash; Published: 03 June 2014 </div>"+
+"Hello World </div>";
+private static final String extraneousDatesAfter=
+" <div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"Hello World </div>";
 
   public void testHashFiltering() throws Exception {
     InputStream inA;
@@ -356,6 +363,10 @@ private static final String extraSpaceGenericAfter=
     inB = hfact.createFilteredInputStream(mau, new StringInputStream(noSpaceGenericBefore), ENC);
     assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
 
+    /* remove the div class="articleDates" */
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(extraneousDatesBefore), ENC);
+    assertEquals(extraneousDatesAfter,StringUtil.fromInputStream(inA));
+    
   }
     
 }
