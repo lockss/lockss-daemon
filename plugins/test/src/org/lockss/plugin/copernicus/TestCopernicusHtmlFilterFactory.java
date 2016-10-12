@@ -53,7 +53,7 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
       "<div id=\"page_content_container\">KEEPME</div>" +
       "</div>";
   private static final String includeBitFiltered=
-      " <div id=\"page_content_container\" class=\"NORMALIZING\">KEEPME </div>";
+      " <div id=\"page_content_container\">KEEPME </div>";
 
   private static final String basicLayout = 
       "<html>"+ 
@@ -74,7 +74,7 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           "</html>";
   
   private static final String basicLayoutFiltered =
-          " <div class=\"NORMALIZING\" id=\"page_content_container\">GOODSTUFF </div>";
+          " <div id=\"page_content_container\">GOODSTUFF </div>";
   
   private static final String minimumBeginning =
       "<html>"+ 
@@ -105,7 +105,7 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
           minimumEnding;
 
   private static final String scriptsAndCommentsFiltered =
-      " <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+      " <div id=\"page_content_container\">" +
       " </tr> </table>" + minimumEndingFiltered;
   
   private static final String whiteSpacesV1 = 
@@ -228,7 +228,7 @@ private static final String genericIndexContent =
   "</ul></div>";
 
 private static final String genericIndexContentFiltered =
-" <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+" <div id=\"page_content_container\">" +
 " <div id=\"cmsbox_61812\" class=\"cmsbox \"> <h2>News </h2>" +
 " <h2>Highlight articles </h2>" +
 " </div>" +
@@ -283,7 +283,7 @@ private static final String publishedDateIdBefore =
 "</div>";
 
 private static final String publishedDateIdAfter = 
-" <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+" <div id=\"page_content_container\">" +
 " <p>HelloWorld" +
 " </div>";
 
@@ -292,7 +292,7 @@ private static final String extraSpaceWithSpanBefore =
 "<span>   <p>Hello World</p>   </span>" +
 "</div>";
 private static final String extraSpaceWithSpanAfter = 
-" <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+" <div id=\"page_content_container\">" +
 " <span> <p>Hello World </p> </span>"+
 " </div>";
 private static final String noSpaceGenericBefore=
@@ -302,14 +302,14 @@ private static final String extraSpaceGenericBefore=
 "<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
 "  <div>  <div>   <span class=\"pb_toc_link\"><br /><br /><b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span>  </div>  </div>  </div>";
 private static final String extraSpaceGenericAfter=
-" <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+" <div id=\"page_content_container\">" +
 " <div> <div> <span class=\"pb_toc_link\"> <br /> <br /> <b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span> </div> </div> </div>";
 private static final String extraneousDatesBefore=
 "<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
 "<div class=\"articleDates\">Received: 13 November 2013 &ndash; Published in The Beautiful Frisbee Discuss.: 06 January 2014 <br/>Revised: 17 April 2014 &ndash; Accepted: 22 April 2014 &ndash; Published: 03 June 2014 </div>"+
 "Hello World </div>";
 private static final String extraneousDatesAfter=
-" <div class=\"NORMALIZING\" id=\"page_content_container\">" +
+" <div id=\"page_content_container\">" +
 "Hello World </div>";
 
   public void testHashFiltering() throws Exception {
