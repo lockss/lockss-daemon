@@ -2611,7 +2611,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electronic Customer Relationship Management Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; International Journal of Electronic Customer Relationship Management Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Electronic Customer Relationship Management Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Electronic Customer Relationship Management Volume 10 ; 10 ; >
 
     }
 
@@ -2694,7 +2694,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Electronic Healthcare Volume 7 ; 7 ; >
       au < finished ; finished ; 2015 ; International Journal of Electronic Healthcare Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Electronic Healthcare Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Electronic Healthcare Volume 9 ; 9 ; >
 
     }
 
@@ -3034,7 +3034,7 @@
       au < finished ; finished ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 26 ; 26 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 27 ; 27 ; >
       au < crawling ; exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 28 ; 28 ; >
-      au < ready ; exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 29 ; 29 ; >
 
     }
 
@@ -3129,7 +3129,7 @@
       au < finished ; finished ; 2014 ; International Journal of Environment and Pollution Volume 56 ; 56 ; >
       au < finished ; finished ; 2015 ; International Journal of Environment and Pollution Volume 57 ; 57 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Environment and Pollution Volume 58 ; 58 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Environment and Pollution Volume 59 ; 59 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Environment and Pollution Volume 59 ; 59 ; >
       au < expected ; exists ; 2016 ; International Journal of Environment and Pollution Volume 60 ; 60 ; >
 
     }
@@ -3231,7 +3231,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Environmental Engineering Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; International Journal of Environmental Engineering Volume 6 ; 6 ; >
       au < finished ; finished ; 2015 ; International Journal of Environmental Engineering Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016 ; International Journal of Environmental Engineering Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Environmental Engineering Volume 8 ; 8 ; >
 
     }
 
@@ -3315,7 +3315,7 @@
       au < finished ; finished ; 2015 ; International Journal of Exergy Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Exergy Volume 19 ; 19 ; >
       au < crawling ; exists ; 2016 ; International Journal of Exergy Volume 20 ; 20 ; >
-      au < ready ; exists ; 2016 ; International Journal of Exergy Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Exergy Volume 21 ; 21 ; >
 
     }
 
@@ -3504,7 +3504,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Foresight and Innovation Policy Volume 9 ; 9 ; >
       au < finished ; manifest ; 2015 ; International Journal of Foresight and Innovation Policy Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Foresight and Innovation Policy Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Foresight and Innovation Policy Volume 11 ; 11 ; >
 
     }
 
@@ -3644,7 +3644,7 @@
       au < finished ; finished ; 2015 ; International Journal of Global Warming Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Global Warming Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Global Warming Volume 9 ; 9 ; >
-      au < ready ; exists ; 2016 ; International Journal of Global Warming Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Global Warming Volume 10 ; 10 ; >
 
     }
 
@@ -4038,7 +4038,7 @@
       au < finished ; finished ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Industrial and Systems Engineering Volume 22 ; 22 ; >
       au < crawling ; exists ; 2016 ; International Journal of Industrial and Systems Engineering Volume 23 ; 23 ; >
-      au < ready ; exists ; 2016 ; International Journal of Industrial and Systems Engineering Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Industrial and Systems Engineering Volume 24 ; 24 ; >
 
     }
 
@@ -4096,7 +4096,7 @@
       au < finished ; finished ; 2014 ; International Journal of Information and Communication Technology Volume 6 ; 6 ; >
       au < finished ; manifest ; 2015 ; International Journal of Information and Communication Technology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Information and Communication Technology Volume 8 ; 8 ; >
-      au < ready ; exists ; 2016 ; International Journal of Information and Communication Technology Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Information and Communication Technology Volume 9 ; 9 ; >
 
     }
 
@@ -4746,7 +4746,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; International Journal of Knowledge and Learning Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2016 ; International Journal of Knowledge and Learning Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Knowledge and Learning Volume 11 ; 11 ; >
 
     }
 
@@ -5082,7 +5082,7 @@
       au < frozen ; exists ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 ; >
       au < crawling ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 23 ; 23 ; >
       au < crawling ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 24 ; 24 ; >
-      au < ready ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 25 ; 25 ; >
 
     }
 
@@ -5587,7 +5587,7 @@
       au < frozen ; exists ; 2014 ; International Journal of Mathematics in Operational Research Volume 6 ; 6 ; >
       au < finished ; finished ; 2015 ; International Journal of Mathematics in Operational Research Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 ; >
-      au < ready ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 ; >
 
     }
 
@@ -5694,7 +5694,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Metadata, Semantics and Ontologies Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; International Journal of Metadata, Semantics and Ontologies Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; International Journal of Metadata, Semantics and Ontologies Volume 10 ; 10 ; >
-      au < ready ; exists ; 2016 ; International Journal of Metadata, Semantics and Ontologies Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Metadata, Semantics and Ontologies Volume 11 ; 11 ; >
 
     }
 
@@ -5713,7 +5713,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Metaheuristics Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; International Journal of Metaheuristics Volume 3 ; 3 ; >
       au < finished ; crawling ; 2015 ; International Journal of Metaheuristics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Metaheuristics Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Metaheuristics Volume 5 ; 5 ; >
 
     }
 
@@ -5738,7 +5738,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Microstructure and Materials Properties Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; International Journal of Microstructure and Materials Properties Volume 9 ; 9 ; >
       au < finished ; finished ; 2015 ; International Journal of Microstructure and Materials Properties Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016 ; International Journal of Microstructure and Materials Properties Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Microstructure and Materials Properties Volume 11 ; 11 ; >
 
     }
 
@@ -6054,7 +6054,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Nanoparticles Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Nanoparticles Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Nanoparticles Volume 9 ; 9 ; >
 
     }
 
@@ -6301,7 +6301,7 @@
       au < finished ; crawling ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 ; >
       au < crawling ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 ; >
-      au < ready ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 13 ; 13 ; >
 
     }
 
@@ -6342,7 +6342,7 @@
       au < finished ; finished ; 2015 ; International Journal of Operational Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Operational Research Volume 25 ; 25 ; >
       au < crawling ; exists ; 2016 ; International Journal of Operational Research Volume 26 ; 26 ; >
-      au < ready ; exists ; 2016 ; International Journal of Operational Research Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Operational Research Volume 27 ; 27 ; >
 
     }
 
@@ -6688,7 +6688,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Product Lifecycle Management Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; International Journal of Product Lifecycle Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Product Lifecycle Management Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016 ; International Journal of Product Lifecycle Management Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Product Lifecycle Management Volume 9 ; 9 ; >
 
     }
 
@@ -6736,7 +6736,7 @@
       au < finished ; finished ; 2015 ; International Journal of Productivity and Quality Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Productivity and Quality Management Volume 17 ; 17 ; >
       au < crawling ; exists ; 2016 ; International Journal of Productivity and Quality Management Volume 18 ; 18 ; >
-      au < ready ; exists ; 2016 ; International Journal of Productivity and Quality Management Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Productivity and Quality Management Volume 19 ; 19 ; >
 
     }
 
@@ -6917,7 +6917,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 ; >
       au < frozen ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; >
-      au < ready ; exists ; 2016 ; International Journal of Rapid Manufacturing Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Rapid Manufacturing Volume 6 ; 6 ; >
 
     }
 
@@ -7133,7 +7133,7 @@
       au < finished ; crawling ; 2015 ; International Journal of Sensor Networks Volume 19 ; 19 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Sensor Networks Volume 20 ; 20 ; >
       au < crawling ; exists ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 ; >
-      au < ready ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 ; >
 
     }
 
@@ -7189,7 +7189,7 @@
       au < finished ; finished ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Services and Operations Management Volume 23 ; 23 ; >
       au < crawling ; exists ; 2016 ; International Journal of Services and Operations Management Volume 24 ; 24 ; >
-      au < ready ; exists ; 2016 ; International Journal of Services and Operations Management Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Services and Operations Management Volume 25 ; 25 ; >
 
     }
 

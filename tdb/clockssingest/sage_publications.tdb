@@ -26577,12 +26577,12 @@
       au < manifest ; exists ; 2007 ; Journal of Orthopaedic Surgery Volume 15 ; 15 ; >
       au < manifest ; exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 ; >
       au < manifest ; exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2012 ; Journal of Orthopaedic Surgery Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2013 ; Journal of Orthopaedic Surgery Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2012 ; Journal of Orthopaedic Surgery Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2013 ; Journal of Orthopaedic Surgery Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2014 ; Journal of Orthopaedic Surgery Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2015 ; Journal of Orthopaedic Surgery Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Orthopaedic Surgery Volume 24 ; 24 ; >
 
   }
@@ -39650,7 +39650,7 @@
     param[base_url] = http://sme.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 ; >
 
   }

@@ -190,7 +190,7 @@
     
     param[journal_id] = cnc
 
-    au < ready ; exists ; 2016 ; Concussion Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2016 ; Concussion Volume 1 ; 1 ; >
 
   }
 
@@ -756,7 +756,7 @@
     au < crawling ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; >
     au < frozen ; exists ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; >
-    au < ready ; exists ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; >
     
   }
 
