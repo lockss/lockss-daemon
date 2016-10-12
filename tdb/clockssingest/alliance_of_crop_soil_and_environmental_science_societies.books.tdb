@@ -40,7 +40,7 @@
     
     param[series_id] = agronomymonogra
     
-    au < testing ; exists ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; >
+    au < ready ; exists ; 1957 ; 978-0-89118-200-9 ; Drainage of Agricultural Lands ; drainageofagric ; >
     au < crawling ; exists ; 1961 ; 978-0-89118-201-6 ; Oats and Oat Improvement ; oatsandoatimpro ; >
     au < crawling ; exists ; 1965 ; 978-0-89118-205-4 ; Soil Nitrogen ; soilnitrogen ; >
     au < crawling ; exists ; 1965 ; 978-0-89118-202-3 ; Methods of Soil Analysis. Part 1. Physical and Mineralogical Properties, Including Statistics of Measurement and Sampling ; methodsofsoilana ; >
@@ -54,7 +54,7 @@
     au < crawling ; exists ; 1979 ; 978-0-89118-214-6 ; Tall Fescue ; tallfescue ; >
     au < crawling ; exists ; 1982 ; 978-0-89118-865-0 ; Methods of Soil Analysis. Part 2. Microbiological and Biochemical Properties ; methodsofsoilan2 ; >
     au < crawling ; exists ; 1982 ; 978-0-89118-216-0 ; Nitrogen in Agricultural Soils ; nitrogeninagrics ; >
-    au < testing ; exists ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; >
+    au < ready ; exists ; 1984 ; 978-0-89118-217-7 ; Cotton ; cotton ; >
     au < crawling ; exists ; 1984 ; 978-0-89118-207-8 ; Soil Acidity and Liming ; soilacidityandl ; >
     au < crawling ; exists ; 1985 ; 978-0-89118-219-1 ; Barley ; barley ; >
     au < crawling ; exists ; 1985 ; 978-0-89118-218-4 ; Clover Science and Technology ; cloversciencean ; >
@@ -83,7 +83,7 @@
     au < crawling ; exists ; 2004 ; 978-0-89118-266-5 ; Soybeans: Improvement, Production, and Uses ; soybeansimprove ; >
     au < crawling ; exists ; 2004 ; 978-0-89118-237-5 ; Warm-Season (C4) Grasses ; warmseasonc4gra ; >
     au < crawling ; exists ; 2006 ; 978-0-89118-265-8 ; Dryland Agriculture ; drylandagricult ; >
-    au < testing ; exists ; 2007 ; 978-0-89118-264-1 ; Irrigation of Agricultural Crops ; irrigationofagr2 ; >
+    au < ready ; exists ; 2007 ; 978-0-89118-264-1 ; Irrigation of Agricultural Crops ; irrigationofagr2 ; >
     au < crawling ; exists ; 2008 ; 978-0-89118-191-0 ; Nitrogen in Agricultural Systems ; nitrogeninagric ; >
     au < crawling ; exists ; 2008 ; 978-0-89118-186-6 ; Sulfur: A Missing Link between Soils, Crops, and Nutrition ; sulfuramissingl ; >
     au < crawling ; exists ; 2009 ; 978-0-89118-189-7 ; Organic Farming: The Ecological System ; organicfarmingt ; >
@@ -91,8 +91,8 @@
     au < crawling ; exists ; 2009 ; 978-0-89118-187-3 ; Modification of Seed Composition to Promote Health and Nutrition ; modificationofs ; >
     au < crawling ; exists ; 2009 ; 978-0-89118-192-7 ; Nitrogen Fixation in Crop Production ; nitrogenfixatio ; >
     au < crawling ; exists ; 2010 ; 978-0-89118-181-1 ; Urban Ecosystem Ecology ; urbanecosysteme ; >
-    au < testing ; exists ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; >
-    au < testing ; exists ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; >
+    au < ready ; exists ; 2013 ; 978-0-89118-614-4 ; Turfgrass: Biology, Use, and Management ; turfgrassbiolog ; >
+    au < ready ; exists ; 2015 ; 978-0-89118-626-7 ; Cotton, 2nd edition ; agronmonogr57 ; >
     au < crawling ; exists ; 2016 ; 978-0-89118-628-1 ; Sorghum: State of the Art and Future Perspectives ; agronmonogr58 ; >
     
     
@@ -314,7 +314,7 @@
     au < crawling ; exists ; 1993 ; 978-0-89118-927-5 ; Sorption and Degradation of Pesticides and Organic Chemicals in Soil ; sorptionanddegr ; >
     au < crawling ; exists ; 1991 ; 978-0-89118-923-7 ; Spatial Variabilities of Soils and Landforms ; spatialvariabil ; >
     au < crawling ; exists ; 2001 ; 978-0-89118-952-7 ; Sustaining Soil Fertility in West Africa ; sustainingsoilf ; >
-    au < testing ; exists ; 1998 ; 978-0-89118-948-0 ; The Contribution of Soil Science to the Development of and Implementation of Criteria and Indicators of Sustainable Forest Management ; thecontribution ; >
+    au < ready ; exists ; 1998 ; 978-0-89118-948-0 ; The Contribution of Soil Science to the Development of and Implementation of Criteria and Indicators of Sustainable Forest Management ; thecontribution ; >
     au < crawling ; exists ; 1996 ; 978-0-89118-940-4 ; The Role of Soil Science in Interdisciplinary Research ; theroleofsoilsc ; >
     au < crawling ; exists ; 1994 ; 978-0-89118-931-2 ; Tomography of Soil-Water-Root Processes ; tomographyofsoi ; >
     au < crawling ; exists ; 1979 ; 978-0-89118-903-9 ; Universal Soil Loss Equation: Past, Present, and Future ; universalsoillo ; >
@@ -429,7 +429,7 @@
     au < crawling ; exists ; 1997 ; 978-0-89118-262-7 ; The State of Site-Specific Management for Agriculture ; thestateofsites ; >
     au < crawling ; exists ; 1994 ; 978-0-89118-578-9 ; Turf Weeds and Their Control ; turfweedsandthe ; >
     au < crawling ; exists ; 1986 ; 978-0-89118-886-5 ; Utilization, Treatment, and Disposal of Waste on Land ; utilizationtrea ; >
-    au < testing ; exists ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; >
+    au < ready ; exists ; 2012 ; 978-0-089118-616-8 ; Urban–Rural Interfaces: Linking People and Nature ; urbanruralinter ; >
     au < crawling ; exists ; 2016 ; 978-0-89118-354-9 ; Soil Fertility Management in Agroecosystems ; soilfertility ; >
     
   }
