@@ -1597,4 +1597,18 @@
 
    }
 
+  {
+    title <
+      name = Wind Energy Science ;
+      issn = 2366-7443 ;
+      eissn = 2366-7451
+    >
+      attr[journal_id] = WES
+      param[base_url] = http://www.wind-energy-science.net/
+      param[home_url] = http://www.wind-energ-sci.net/
+
+      au < exists ; exists ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; >
+
+   }
+
 }
