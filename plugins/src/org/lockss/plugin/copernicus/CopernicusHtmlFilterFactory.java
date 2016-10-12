@@ -117,7 +117,15 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                 tag.setAttributesEx(new Vector()); //empty attribs Vector. Even clears out tag name
                 tag.setTagName("REMOVE");
                 endTag.setTagName("REMOVE");
+              } // replace/create the "class" tag on the div with id=page_content_container with a normalized string
+              else if (("div".equals(tagName)) && (tag.getAttribute("id")!= null) && 
+                          tag.getAttribute("id").equals("page_content_container")) {
+                if (tag.getAttribute("class") != null) 
+                  tag.setAttribute("class", "NORMALIZING");
+                else
+                  tag.setAttribute("class", "\"NORMALIZING\"");
               }
+                
             }
           });
         }
