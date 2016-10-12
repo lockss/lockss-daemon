@@ -22,21 +22,21 @@
     param[base_url] = http://wio.iwaponline.com/
     type = bookSeries
 
-    au < manifest ; exists ; 2002 ; Water Intelligence Online Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2003 ; Water Intelligence Online Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2004 ; Water Intelligence Online Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2005 ; Water Intelligence Online Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2006 ; Water Intelligence Online Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2007 ; Water Intelligence Online Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2008 ; Water Intelligence Online Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2009 ; Water Intelligence Online Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2010 ; Water Intelligence Online Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2011 ; Water Intelligence Online Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2012 ; Water Intelligence Online Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 ; >
-    au < testing ; exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; >
-    au < testing ; exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; >
-    au < testing ; exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; >
+    au < testing ; exists ; 2002 ; Water Intelligence Online Volume 1 ; 1 ; >
+    au < testing ; exists ; 2003 ; Water Intelligence Online Volume 2 ; 2 ; >
+    au < testing ; exists ; 2004 ; Water Intelligence Online Volume 3 ; 3 ; >
+    au < testing ; exists ; 2005 ; Water Intelligence Online Volume 4 ; 4 ; >
+    au < testing ; exists ; 2006 ; Water Intelligence Online Volume 5 ; 5 ; >
+    au < testing ; exists ; 2007 ; Water Intelligence Online Volume 6 ; 6 ; >
+    au < testing ; exists ; 2008 ; Water Intelligence Online Volume 7 ; 7 ; >
+    au < testing ; exists ; 2009 ; Water Intelligence Online Volume 8 ; 8 ; >
+    au < testing ; exists ; 2010 ; Water Intelligence Online Volume 9 ; 9 ; >
+    au < testing ; exists ; 2011 ; Water Intelligence Online Volume 10 ; 10 ; >
+    au < testing ; exists ; 2012 ; Water Intelligence Online Volume 11 ; 11 ; >
+    au < testing ; exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 ; >
+    au < ready ; exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; >
+    au < ready ; exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; >
+    au < ready ; exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; >
 
   }
 
