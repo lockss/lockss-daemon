@@ -45,6 +45,10 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
 
+    au < manifest ; 2000 ; Journal of Applied Clinical Medical Physics Volume 1 ; 1 ; 2000 >
+    au < manifest ; 2001 ; Journal of Applied Clinical Medical Physics Volume 2 ; 2 ; 2001 >
+    au < manifest ; 2002 ; Journal of Applied Clinical Medical Physics Volume 3 ; 3 ; 2002 >
+    au < manifest ; 2003 ; Journal of Applied Clinical Medical Physics Volume 4 ; 4 ; 2003 >
     au < manifest ; 2004 ; Journal of Applied Clinical Medical Physics Volume 5 ; 5 ; 2004 >
     au < released ; 2005 ; Journal of Applied Clinical Medical Physics Volume 6 ; 6 ; 2005 >
     au < released ; 2006 ; Journal of Applied Clinical Medical Physics Volume 7 ; 7 ; 2006 >
