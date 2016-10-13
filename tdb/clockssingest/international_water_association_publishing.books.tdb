@@ -34,9 +34,10 @@
     au < testing ; exists ; 2011 ; Water Intelligence Online Volume 10 ; 10 ; >
     au < testing ; exists ; 2012 ; Water Intelligence Online Volume 11 ; 11 ; >
     au < testing ; exists ; 2013 ; Water Intelligence Online Volume 12 ; 12 ; >
-    au < ready ; exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; >
-    au < ready ; exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; >
-    au < ready ; exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; >
+
+    au < testing ; exists ; 2014 ; Water Intelligence Online Volume 13 ; 13 ; > # tested and ready
+    au < testing ; exists ; 2015 ; Water Intelligence Online Volume 14 ; 14 ; > # tested and ready
+    au < testing ; exists ; 2016 ; Water Intelligence Online Volume 15 ; 15 ; > # tested and ready
 
   }
 
