@@ -19,13 +19,13 @@
 
       param[base_url] = http://jco.ascopubs.org/
 
-      au < manifest ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 >
-      au < manifest ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 >
-      au < manifest ; 1985 ; Journal of Clinical Oncology Volume 3 ; 3 >
-      au < manifest ; 1986 ; Journal of Clinical Oncology Volume 4 ; 4 >
-      au < manifest ; 1987 ; Journal of Clinical Oncology Volume 5 ; 5 >
-      au < manifest ; 1988 ; Journal of Clinical Oncology Volume 6 ; 6 >
-      au < manifest ; 1989 ; Journal of Clinical Oncology Volume 7 ; 7 >
+      au < doNotProcess ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 >
+      au < doNotProcess ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 >
+      au < doNotProcess ; 1985 ; Journal of Clinical Oncology Volume 3 ; 3 >
+      au < doNotProcess ; 1986 ; Journal of Clinical Oncology Volume 4 ; 4 >
+      au < doNotProcess ; 1987 ; Journal of Clinical Oncology Volume 5 ; 5 >
+      au < doNotProcess ; 1988 ; Journal of Clinical Oncology Volume 6 ; 6 >
+      au < doNotProcess ; 1989 ; Journal of Clinical Oncology Volume 7 ; 7 >
       au < released ; 1990 ; Journal of Clinical Oncology Volume 8 ; 8 >
       au < released ; 1991 ; Journal of Clinical Oncology Volume 9 ; 9 >
       au < released ; 1992 ; Journal of Clinical Oncology Volume 10 ; 10 >
