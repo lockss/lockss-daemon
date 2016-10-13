@@ -1,0 +1,144 @@
+{
+
+  publisher <
+    name = Mineralogical Society of America
+  >
+    
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+  {
+    
+    title < 
+      name = American Mineralogist ;
+      issn = 0003-004X ;
+      eissn = 1945-3027
+    >
+
+    param[base_url] = http://ammin.geoscienceworld.org/
+
+    {
+      au < gsw.GSWDrupalPlugin ; exists ; 1998 ; American Mineralogist Volume 83 ; 83 >
+      au < gsw.GSWDrupalPlugin ; exists ; 1999 ; American Mineralogist Volume 84 ; 84 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2000 ; American Mineralogist Volume 85 ; 85 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2001 ; American Mineralogist Volume 86 ; 86 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2002 ; American Mineralogist Volume 87 ; 87 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2003 ; American Mineralogist Volume 88 ; 88 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2004 ; American Mineralogist Volume 89 ; 89 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2005 ; American Mineralogist Volume 90 ; 90 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2006 ; American Mineralogist Volume 91 ; 91 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2007 ; American Mineralogist Volume 92 ; 92 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2008 ; American Mineralogist Volume 93 ; 93 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2009 ; American Mineralogist Volume 94 ; 94 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2010 ; American Mineralogist Volume 95 ; 95 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2011 ; American Mineralogist Volume 96 ; 96 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2012 ; American Mineralogist Volume 97 ; 97 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2013 ; American Mineralogist Volume 98 ; 98 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2014 ; American Mineralogist Volume 99 ; 99 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2015 ; American Mineralogist Volume 100 ; 100 >
+      au < gsw.GSWDrupalPlugin ; exists ; 2016 ; American Mineralogist Volume 101 ; 101 >
+
+    }
+
+  }
+  
+  {
+    
+    title < 
+      name = Elements ;
+      issn = 1811-5209 ;
+      eissn = 1811-5217
+      
+    >
+
+    param[base_url] = http://elements.geoscienceworld.org/
+      
+    au < gsw.GSWDrupalPlugin ; exists ; 2005 ; Elements Volume 1 ; 1 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Elements Volume 2 ; 2 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2007 ; Elements Volume 3 ; 3 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2008 ; Elements Volume 4 ; 4 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2009 ; Elements Volume 5 ; 5 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2010 ; Elements Volume 6 ; 6 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2011 ; Elements Volume 7 ; 7 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2012 ; Elements Volume 8 ; 8 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2013 ; Elements Volume 9 ; 9 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2014 ; Elements Volume 10 ; 10 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2015 ; Elements Volume 11 ; 11 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2016 ; Elements Volume 12 ; 12 >
+
+  }
+  
+  {
+    
+    title < 
+      name = Reviews in Mineralogy ;
+      issn = 0275-0279
+      
+    >
+
+    param[base_url] = http://rimg.geoscienceworld.org/ 
+   	comment[continued_by] = [1529-6466]
+
+    attr[au_coverage_depth] = abstracts
+    #1980 - 1999 are abstracts only.
+
+  }
+
+  {
+    
+    title < 
+      name = Reviews in Mineralogy and Geochemistry ;
+      issn = 1529-6466
+      
+    >
+      
+    param[base_url] = http://rimg.geoscienceworld.org/
+    comment[continues] = 0275-0279
+
+    au < gsw.GSWDrupalPlugin ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 39 ; 39 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 40 ; 40 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 41 ; 41 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 42 ; 42 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 43 ; 43 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 44 ; 44 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 45 ; 45 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 46 ; 46 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 47 ; 47 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 48 ; 48 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 49 ; 49 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 50 ; 50 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 51 ; 51 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 52 ; 52 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 53 ; 53 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 54 ; 54 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2004 ; Reviews in Mineralogy and Geochemistry Volume 55 ; 55 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2004 ; Reviews in Mineralogy and Geochemistry Volume 56 ; 56 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 57 ; 57 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 58 ; 58 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 59 ; 59 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 60 ; 60 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 61 ; 61 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 62 ; 62 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 63 ; 63 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 64 ; 64 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 65 ; 65 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 66 ; 66 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 67 ; 67 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2008 ; Reviews in Mineralogy and Geochemistry Volume 68 ; 68 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2008 ; Reviews in Mineralogy and Geochemistry Volume 69 ; 69 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2009 ; Reviews in Mineralogy and Geochemistry Volume 70 ; 70 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2010 ; Reviews in Mineralogy and Geochemistry Volume 71 ; 71 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2010 ; Reviews in Mineralogy and Geochemistry Volume 72 ; 72 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2011 ; Reviews in Mineralogy and Geochemistry Volume 73 ; 73 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2012 ; Reviews in Mineralogy and Geochemistry Volume 74 ; 74 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 75 ; 75 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 76 ; 76 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 77 ; 77 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 78 ; 78 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 79 ; 79 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2015 ; Reviews in Mineralogy and Geochemistry Volume 80 ; 80 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2016 ; Reviews in Mineralogy and Geochemistry Volume 81 ; 81 >
+
+  }
+  
+}
