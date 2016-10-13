@@ -17,15 +17,15 @@
     
     param[journal_abbr] = aliso
 
-    au < testing ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 23 ; 23 >
-    au < testing ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 24 ; 24 >
-    au < testing ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 25 ; 25 >
-    au < testing ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 26 ; 26 >
-    au < testing ; 2009 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 27 ; 27 >
-    au < testing ; 2010 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 28 ; 28 >
-    au < testing ; 2011 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 29 ; 29 >
-    au < testing ; 2012 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 30 ; 30 >
-    au < testing ; 2013 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 31 ; 31 >
+    au < ready ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 23 ; 23 >
+    au < ready ; 2007 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 24 ; 24 >
+    au < ready ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 25 ; 25 >
+    au < ready ; 2008 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 26 ; 26 >
+    au < ready ; 2009 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 27 ; 27 >
+    au < ready ; 2010 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 28 ; 28 >
+    au < ready ; 2011 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 29 ; 29 >
+    au < ready ; 2012 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 30 ; 30 >
+    au < ready ; 2013 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 31 ; 31 >
     au < ready ; 2014 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 32 ; 32 >
     au < notReady ; 2015 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 33 ; 33 > #The full-text is currently under embargo, will be available Tuesday, October 25, 2016. 
     au < exists ; 2016 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 34 ; 34 >
@@ -42,15 +42,15 @@
     
     param[journal_abbr] = urceu
 
-    au < testing ; 2007 ; Claremont-UC Undergraduate Research Conference Journal Volume 2007 ; 2007 >
-    au < testing ; 2008 ; Claremont-UC Undergraduate Research Conference Journal Volume 2008 ; 2008 >
-    au < testing ; 2009 ; Claremont-UC Undergraduate Research Conference Journal Volume 2009 ; 2009 >
-    au < testing ; 2010 ; Claremont-UC Undergraduate Research Conference Journal Volume 2010 ; 2010 >
-    au < testing ; 2011 ; Claremont-UC Undergraduate Research Conference Journal Volume 2011 ; 2011 >
-    au < testing ; 2012 ; Claremont-UC Undergraduate Research Conference Journal Volume 2012 ; 2012 >
-    au < testing ; 2013 ; Claremont-UC Undergraduate Research Conference Journal Volume 2013 ; 2013 >
-    au < testing ; 2014 ; Claremont-UC Undergraduate Research Conference Journal Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 >
+    au < ready ; 2007 ; Claremont-UC Undergraduate Research Conference Journal Volume 2007 ; 2007 >
+    au < ready ; 2008 ; Claremont-UC Undergraduate Research Conference Journal Volume 2008 ; 2008 >
+    au < ready ; 2009 ; Claremont-UC Undergraduate Research Conference Journal Volume 2009 ; 2009 >
+    au < ready ; 2010 ; Claremont-UC Undergraduate Research Conference Journal Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Claremont-UC Undergraduate Research Conference Journal Volume 2011 ; 2011 >
+    au < ready ; 2012 ; Claremont-UC Undergraduate Research Conference Journal Volume 2012 ; 2012 >
+    au < ready ; 2013 ; Claremont-UC Undergraduate Research Conference Journal Volume 2013 ; 2013 >
+    au < ready ; 2014 ; Claremont-UC Undergraduate Research Conference Journal Volume 2014 ; 2014 >
+    au < testing ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 >
     au < manifest ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 >
     
   }
@@ -64,8 +64,8 @@
     
     param[journal_abbr] = five
 
-    au < testing ; 2012 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 1 ; 1 >
-    au < testing ; 2013 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 2 ; 2 >
+    au < ready ; 2012 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 1 ; 1 >
+    au < ready ; 2013 ; FIVE: The Claremont Colleges Journal of Undergraduate Academic Writing Volume 2 ; 2 >
     
   }
 
@@ -78,11 +78,11 @@
     
     param[journal_abbr] = jhm
 
-    au < testing ; 2011 ; Journal of Humanistic Mathematics Volume 1 ; 1 >
-    au < testing ; 2012 ; Journal of Humanistic Mathematics Volume 2 ; 2 >
-    au < testing ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 >
-    au < testing ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 >
-    au < manifest ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
+    au < ready ; 2011 ; Journal of Humanistic Mathematics Volume 1 ; 1 >
+    au < ready ; 2012 ; Journal of Humanistic Mathematics Volume 2 ; 2 >
+    au < ready ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 >
+    au < ready ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 >
+    au < testing ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
     au < manifest ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
     
   }
@@ -97,8 +97,8 @@
     param[journal_abbr] = lux
 
     au < exists ; 2011 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 1 ; 1 >
-    au < testing ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 >
-    au < testing ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 >
+    au < ready ; 2012 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 2 ; 2 >
+    au < ready ; 2013 ; LUX: A Journal of Transdisciplinary Writing and Research Volume 3 ; 3 >
     
   }
 
@@ -112,9 +112,9 @@
     
     param[journal_abbr] = mimejournal
 
-    au < testing ; 2003 ; Mime Journal Volume 23 ; 23 >
-    au < testing ; 2013 ; Mime Journal Volume 24 ; 24 >
-    au < testing ; 2014 ; Mime Journal Volume 25 ; 25 >
+    au < ready ; 2003 ; Mime Journal Volume 23 ; 23 >
+    au < ready ; 2013 ; Mime Journal Volume 24 ; 24 >
+    au < ready ; 2014 ; Mime Journal Volume 25 ; 25 >
     
   }
 
@@ -127,10 +127,10 @@
     
     param[journal_abbr] = passwords
 
-    au < testing ; 2009 ; Passwords Volume 10 ; 10 >
-    au < testing ; 2010 ; Passwords Volume 11 ; 11 >
-    au < testing ; 2011 ; Passwords Volume 12 ; 12 >
-    au < testing ; 2012 ; Passwords Volume 13 ; 13 >
+    au < ready ; 2009 ; Passwords Volume 10 ; 10 >
+    au < ready ; 2010 ; Passwords Volume 11 ; 11 >
+    au < ready ; 2011 ; Passwords Volume 12 ; 12 >
+    au < ready ; 2012 ; Passwords Volume 13 ; 13 >
     
   }
 
@@ -144,19 +144,19 @@
     
     param[journal_abbr] = ppr
 
-    au < testing ; 2003 ; Performance Practice Review Volume 8 ; 8 >
-    au < testing ; 2004 ; Performance Practice Review Volume 9 ; 9 >
-    au < testing ; 2005 ; Performance Practice Review Volume 10 ; 10 >
-    au < testing ; 2006 ; Performance Practice Review Volume 11 ; 11 >
-    au < testing ; 2007 ; Performance Practice Review Volume 12 ; 12 >
-    au < testing ; 2008 ; Performance Practice Review Volume 13 ; 13 >
-    au < testing ; 2009 ; Performance Practice Review Volume 14 ; 14 >
-    au < testing ; 2010 ; Performance Practice Review Volume 15 ; 15 >
-    au < testing ; 2011 ; Performance Practice Review Volume 16 ; 16 >
-    au < testing ; 2012 ; Performance Practice Review Volume 17 ; 17 >
-    au < testing ; 2013 ; Performance Practice Review Volume 18 ; 18 >
-    au < testing ; 2014 ; Performance Practice Review Volume 19 ; 19 >
-    au < manifest ; 2015 ; Performance Practice Review Volume 20 ; 20 >
+    au < ready ; 2003 ; Performance Practice Review Volume 8 ; 8 >
+    au < ready ; 2004 ; Performance Practice Review Volume 9 ; 9 >
+    au < ready ; 2005 ; Performance Practice Review Volume 10 ; 10 >
+    au < ready ; 2006 ; Performance Practice Review Volume 11 ; 11 >
+    au < ready ; 2007 ; Performance Practice Review Volume 12 ; 12 >
+    au < ready ; 2008 ; Performance Practice Review Volume 13 ; 13 >
+    au < ready ; 2009 ; Performance Practice Review Volume 14 ; 14 >
+    au < ready ; 2010 ; Performance Practice Review Volume 15 ; 15 >
+    au < ready ; 2011 ; Performance Practice Review Volume 16 ; 16 >
+    au < ready ; 2012 ; Performance Practice Review Volume 17 ; 17 >
+    au < ready ; 2013 ; Performance Practice Review Volume 18 ; 18 >
+    au < ready ; 2014 ; Performance Practice Review Volume 19 ; 19 >
+    au < testing ; 2015 ; Performance Practice Review Volume 20 ; 20 >
     au < expected ; 2016 ; Performance Practice Review Volume 21 ; 21 >
     
   }
@@ -170,8 +170,8 @@
     
     param[journal_abbr] = steam
 
-    au < testing ; 2014 ; The STEAM Journal Volume 1 ; 1 >
-    au < manifest ; 2015 ; The STEAM Journal Volume 2 ; 2 >
+    au < ready ; 2014 ; The STEAM Journal Volume 1 ; 1 >
+    au < testing ; 2015 ; The STEAM Journal Volume 2 ; 2 >
     au < exists ; 2016 ; The STEAM Journal Volume 3 ; 3 >
     
   }
@@ -185,10 +185,10 @@
     
     param[journal_abbr] = codee
 
-    au < testing ; 2012 ; CODEE Journal Volume 7 ; 7 >
-    au < testing ; 2013 ; CODEE Journal Volume 8 ; 8 >
-    au < testing ; 2014 ; CODEE Journal Volume 9 ; 9 >
-    au < manifest ; 2015 ; CODEE Journal Volume 10 ; 10 >
+    au < ready ; 2012 ; CODEE Journal Volume 7 ; 7 >
+    au < ready ; 2013 ; CODEE Journal Volume 8 ; 8 >
+    au < ready ; 2014 ; CODEE Journal Volume 9 ; 9 >
+    au < testing ; 2015 ; CODEE Journal Volume 10 ; 10 >
     au < manifest ; 2016 ; CODEE Journal Volume 11 ; 11 >
     
   }
