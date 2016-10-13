@@ -293,7 +293,7 @@
       attr[journal_id] = ACPD
       param[base_url] = http://www.atmos-chem-phys-discuss.net/
       param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
-      comment[doNotProcess] = Do Not Process Discussions paper
+      comment[doNotProcess] = Do Not Process Discussions papers
 
       au < doNotProcess ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Discussions Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Discussions Volume 2 ; 2 ; >
@@ -1604,10 +1604,24 @@
       eissn = 2366-7451
     >
       attr[journal_id] = WES
-      param[base_url] = http://www.wind-energy-science.net/
-      param[home_url] = http://www.wind-energ-sci.net/
+      param[base_url] = http://www.wind-energ-sci.net/
+      param[home_url] = http://www.wind-energy-science.net/
 
       au < exists ; exists ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; >
+
+   }
+
+  {
+    title <
+      name = Wind Energy Science Discussions;
+      eissn = 2366-7621
+    >
+      attr[journal_id] = WESD
+      param[base_url] = http://www.wind-energ-sci-discuss.net/
+      param[home_url] = http://www.wind-energy-science.net/
+      comment[doNotProcess] = Do Not Process Discussions papers
+
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Wind Energy Science Discussions Volume 1 ; 1 ; >
 
    }
 
