@@ -9,14 +9,14 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>19</string>
+        <string>20</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Poll</string>
-                <string>9</string>
+                <string>10</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -112,6 +112,15 @@
     <entry>
         <string>plugin_fetch_rate_limiter_source</string>
         <string>key:Silverchair</string>
+    </entry>
+    <entry>
+      <!-- Validator factory for text MIME types -->
+      <string>text/*_content_validator_factory</string>
+      <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
+    </entry>
+    <entry>
+      <string>application/json_filter_factory</string>
+      <string>org.lockss.plugin.silverchair.ScJsonHashFilterFactory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>

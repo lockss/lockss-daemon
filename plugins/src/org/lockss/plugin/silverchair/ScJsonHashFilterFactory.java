@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,38 +32,32 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
-import java.io.InputStream;
+import java.io.*;
+import java.util.Arrays;
 
-import org.lockss.daemon.ConfigParamDescr;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.CountingInputStream;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
-import org.lockss.pdf.*;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
-/**
- * Returns the input stream unless its JAMA which gets scraped
- */
-public class ScPdfFilterFactory implements FilterFactory{
+public class ScJsonHashFilterFactory implements FilterFactory {
 
-  public ScPdfFilterFactory() {
-  }
+  private static final Logger log = Logger.getLogger(ScJsonHashFilterFactory.class);
   
-  public InputStream createFilteredInputStream(ArchivalUnit au,
+  @Override
+  public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-	if(au.getProperties().getString(ConfigParamDescr.BASE_URL.getKey()).contains("jamanetwork")) {
-      FilterFactory amaPdfFilter = new AmaPdfFilterFactory();
-      return amaPdfFilter.createFilteredInputStream(au, in, encoding);
-    }
-	return in;
-  }
-  
-  public static class AmaPdfFilterFactory extends ExtractingPdfFilterFactory {
-
-    @Override
-    public void transform(ArchivalUnit au, PdfDocument anObject) throws PdfException {
-	  // Just scrape
-    }
+	Reader reader = FilterUtil.getReader(in, encoding);
+	Reader httpFilter = new StringFilter(reader, "\u0026", "&");
+	return new ReaderInputStream(httpFilter, encoding);
   }
 }
