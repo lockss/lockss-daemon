@@ -191,6 +191,7 @@
     <list>
 	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
       <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
+      <string>/multimediaPlayer.aspx\?</string>
       <string>/errors/404\.aspx\?aspxerrorpath=</string>
       <string>silverchaircdn\.com/(CSS|Images)/</string>
     </list>
@@ -200,6 +201,7 @@
     <list>
       <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
       <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+      <string>"/multimediaPlayer.aspx\?", 0</string>
       <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
       <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
     </list>
