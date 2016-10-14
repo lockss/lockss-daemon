@@ -107,8 +107,7 @@ lib/run-props
 /ant/classes
 
 # /generated/
-/generated/src
-/generated/classes
+*generated/
 
 # /lib/
 /lib/lockss-ant.jar
