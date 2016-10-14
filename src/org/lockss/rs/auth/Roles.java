@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,38 +25,26 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.rs.auth;
 
 /**
- * Constants used in SQL code.
- * 
- * @author Fernando García-Loygorri
+ * The authorization roles.
  */
-public class SqlConstants {
-  //
-  // Database table names.
-  //
-  /** Name of the version table. */
-  public static final String VERSION_TABLE = "version";
+public class Roles {
+  /** Least restrictive role. */
+  public static final String ROLE_USER_ADMIN = "userAdminRole";
 
-  //
-  // Database table column names.
-  //
-  /** System column. */
-  public static final String SYSTEM_COLUMN = "system";
+  /** User may configure content access (set content access list). */
+  public static final String ROLE_CONTENT_ADMIN = "contentAdminRole";
 
-  /** Version column. */
-  public static final String VERSION_COLUMN = "version";
+  /** User may change AU configuration (add/delete content). */
+  public static final String ROLE_AU_ADMIN = "auAdminRole";
 
-  /** Subsystem column. */
-  public static final String SUBSYSTEM_COLUMN = "subsystem";
+  /** User may access content). */
+  public static final String ROLE_CONTENT_ACCESS = "accessContentRole";
 
-  //
-  // Maximum lengths of variable text length database columns.
-  //
-  /** Length of the system column. */
-  public static final int MAX_SYSTEM_COLUMN = 16;
+  public static final String ROLE_DEBUG = "debugRole";
 
-  /** Length of the subsystem column. */
-  public static final int MAX_SUBSYSTEM_COLUMN = 32;
+  /** Minimum role of any authenticated user. */
+  public static final String ROLE_ANY = "anyRole";
 }

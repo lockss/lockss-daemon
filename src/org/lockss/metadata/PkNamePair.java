@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -29,7 +25,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.metadata;
 
 /**
  * A primary key/name pair.

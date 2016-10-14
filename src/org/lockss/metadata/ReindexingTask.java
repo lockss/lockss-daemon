@@ -36,7 +36,6 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.*;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.extractor.MetadataException.ValidationException;
@@ -106,7 +105,7 @@ public class ReindexingTask extends StepTask {
   private ArticleMetadataBuffer articleMetadataInfoBuffer = null;
 
   // The database manager.
-  private final DbManager dbManager;
+  private final MetadataDbManager dbManager;
 
   // The metadata manager.
   private final MetadataManager mdManager;
@@ -171,7 +170,8 @@ public class ReindexingTask extends StepTask {
     }
 
     //dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    dbManager = (MetadataDbManager)LockssApp
+	.getManager(MetadataDbManager.getManagerKey());
     //mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
     mdManager =
 	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
@@ -841,7 +841,7 @@ public class ReindexingTask extends StepTask {
             mdManager.updatePendingAusCount(conn);
 
             // Complete the database transaction.
-            DbManager.commitOrRollback(conn, log);
+            MetadataDbManager.commitOrRollback(conn, log);
 
             // Update the successful re-indexing count.
             mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
@@ -885,7 +885,7 @@ public class ReindexingTask extends StepTask {
                 + " -- NOT rescheduling", e);
             status = ReindexingStatus.Failed;
           } finally {
-            DbManager.safeRollbackAndClose(conn);
+            MetadataDbManager.safeRollbackAndClose(conn);
           }
 
           // Fall through if SQL exception occurred during update.
@@ -927,12 +927,12 @@ public class ReindexingTask extends StepTask {
               }
 
               // Complete the database transaction.
-              DbManager.commitOrRollback(conn, log);
+              MetadataDbManager.commitOrRollback(conn, log);
             } catch (DbException dbe) {
               log.warning("Error updating pending queue at FINISH for AU '"
         	  + auName + "', status = " + status, dbe);
             } finally {
-              DbManager.safeRollbackAndClose(conn);
+              MetadataDbManager.safeRollbackAndClose(conn);
             }
           }
 
@@ -977,11 +977,11 @@ public class ReindexingTask extends StepTask {
             mdManager.startReindexing(conn);
 
             // Complete the database transaction.
-            DbManager.commitOrRollback(conn, log);
+            MetadataDbManager.commitOrRollback(conn, log);
           } catch (DbException dbe) {
             log.error("Cannot restart indexing", dbe);
           } finally {
-            DbManager.safeRollbackAndClose(conn);
+            MetadataDbManager.safeRollbackAndClose(conn);
           }
         }
       } else {

@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +25,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.metadata;
 
 import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
@@ -33,23 +33,21 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Logger;
 
 /**
- * Migrates in a separate thread the database from version 14 to version 15.
- * 
- * @author Fernando Garcia-Loygorri
+ * Migrates in a separate thread the database from version 21 to version 22.
  */
-public class DbVersion14To15Migrator extends LockssRunnable {
-  private static Logger log = Logger.getLogger(DbVersion14To15Migrator.class);
+public class DbVersion21To22Migrator extends LockssRunnable {
+  private static Logger log = Logger.getLogger(DbVersion21To22Migrator.class);
 
   /**
    * Constructor.
    */
-  public DbVersion14To15Migrator() {
-    super("DbVersion14To15Migrator");
+  public DbVersion21To22Migrator() {
+    super("DbVersion21To22Migrator");
   }
 
   /**
-   * Entry point to start the process of migrating the database from version 14
-   * to version 15.
+   * Entry point to start the process of migrating the database from version 21
+   * to version 22.
    */
   public void lockssRun() {
     final String DEBUG_HEADER = "lockssRun(): ";
@@ -69,22 +67,26 @@ public class DbVersion14To15Migrator extends LockssRunnable {
     }
 
     try {
-      //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-      DbManager dbManager =
-	  (DbManager)LockssApp.getManager(DbManager.getManagerKey());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+      //DbManager dbManager = daemon.getDbManager();
+      MetadataDbManager metadataDbManager = (MetadataDbManager)
+	  LockssApp.getManager(MetadataDbManager.getManagerKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManager.");
 
-      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+      MetadataDbManagerSql metadataDbManagerSql =
+	  metadataDbManager.getMetadataDbManagerSqlBeforeReady();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManagerSql.");
 
       // Perform the actual work.
-      dbManagerSql.migrateDatabaseFrom14To15();
+      metadataDbManagerSql.migrateDatabaseFrom21To22();
 
-      dbManager.cleanUpThread("DbVersion14To15Migrator");
+      metadataDbManager.cleanUpThread("DbVersion21To22Migrator");
     } catch (Exception e) {
-      log.error("Cannot migrate the database from version 14 to 15", e);
+      log.error("Cannot migrate the database from version 21 to 22", e);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
+
 }

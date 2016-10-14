@@ -25,62 +25,52 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.metadata;
 
 import org.lockss.app.LockssApp;
-import org.lockss.app.LockssDaemon;
+//import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Logger;
 
 /**
- * Migrates in a separate thread the database from version 19 to version 20.
+ * Migrates in a separate thread the database from version 16 to version 17.
  */
-public class DbVersion19To20Migrator extends LockssRunnable {
-  private static Logger log = Logger.getLogger(DbVersion19To20Migrator.class);
+public class DbVersion16To17Migrator extends LockssRunnable {
+  private static Logger log = Logger.getLogger(DbVersion16To17Migrator.class);
 
   /**
    * Constructor.
    */
-  public DbVersion19To20Migrator() {
-    super("DbVersion19To20Migrator");
+  public DbVersion16To17Migrator() {
+    super("DbVersion16To17Migrator");
   }
 
   /**
-   * Entry point to start the process of migrating the database from version 19
-   * to version 20.
+   * Entry point to start the process of migrating the database from version 16
+   * to version 17.
    */
   public void lockssRun() {
     final String DEBUG_HEADER = "lockssRun(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-
-    // Wait until the AUs have been started.
-    if (!daemon.areAusStarted()) {
-      if (log.isDebug()) log.debug(DEBUG_HEADER + "Waiting for aus to start");
-
-      while (!daemon.areAusStarted()) {
-	try {
-	  daemon.waitUntilAusStarted();
-	} catch (InterruptedException ex) {
-	}
-      }
-    }
 
     try {
-      //DbManager dbManager = daemon.getDbManager();
-      DbManager dbManager =
-	  (DbManager)LockssApp.getManager(DbManager.getManagerKey());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+      //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+      MetadataDbManager metadataDbManager = (MetadataDbManager)
+	  LockssApp.getManager(MetadataDbManager.getManagerKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManager.");
 
-      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+      MetadataDbManagerSql metadataDbManagerSql =
+	  metadataDbManager.getMetadataDbManagerSqlBeforeReady();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManagerSql.");
 
       // Perform the actual work.
-      dbManagerSql.migrateDatabaseFrom19To20();
+      metadataDbManagerSql.migrateDatabaseFrom16To17();
 
-      dbManager.cleanUpThread("DbVersion19To20Migrator");
+      metadataDbManager.cleanUpThread("DbVersion16To17Migrator");
     } catch (Exception e) {
-      log.error("Cannot migrate the database from version 19 to 20", e);
+      log.error("Cannot migrate the database from version 16 to 17", e);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

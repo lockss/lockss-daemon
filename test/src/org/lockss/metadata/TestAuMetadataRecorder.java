@@ -27,7 +27,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,7 +43,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -73,7 +72,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
   private SimulatedArchivalUnit sau0;
   private MetadataManager metadataManager;
-  private DbManager dbManager;
+  private MetadataDbManager dbManager;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -238,7 +237,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       assertEquals(nTitles*nArticles, 
                    countAuMetadataItems(conn) - initialArticleCount);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -375,7 +374,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
         assertEquals(nTitles*nChapters, 
                      countAuMetadataItems(conn) - initialChapterCount);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -521,7 +520,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
                    countAuMetadataItems(conn) - initialChapterCount);
     
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -664,7 +663,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       checkJournalTypeAggregates(conn, "Publisher", true, 2013, 1, 30, 20, 10);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -746,7 +745,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       assertEquals(0, countAuProblems(conn) - initialProblemCount);
       
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -838,7 +837,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
       checkJournalTypeAggregates(conn, "Publisher", true, 2013, 1, 30, 20, 10);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -921,7 +920,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that 1 archival unit problem exists.
       assertEquals(1, countAuProblems(conn) - initialProblemCount);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -989,7 +988,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     } catch (MetadataException me) {
       // Expected.
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -1252,7 +1251,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
     // The expected truncated feature name.
     String truncatedFeature =
-	DbManager.truncateVarchar(tooLongFeature, MAX_FEATURE_COLUMN);
+	MetadataDbManager.truncateVarchar(tooLongFeature, MAX_FEATURE_COLUMN);
     assertNotEquals(tooLongFeature, truncatedFeature);
 
     // Generate the metadata.
@@ -1347,7 +1346,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       assertEquals(nTitles*nArticles, 
                    countAuMetadataItems(conn) - initialArticleCount);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -1536,7 +1535,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       assertEquals(0, countItemsByTypeName(conn,
 	  MD_ITEM_TYPE_UNKNOWN_ARTICLE));
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 

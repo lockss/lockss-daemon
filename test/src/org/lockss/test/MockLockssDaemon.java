@@ -35,6 +35,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
+import org.lockss.metadata.MetadataDbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
@@ -69,6 +70,8 @@ public class MockLockssDaemon extends LockssDaemon {
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
     // start database manager before any manager that uses it.
     new ManagerDesc(DbManager.getManagerKey(), "org.lockss.db.DbManager"),
+    new ManagerDesc(MetadataDbManager.getManagerKey(),
+	"org.lockss.metadata.MetadataDbManager"),
     // start metadata manager after pluggin manager and database manager.
     new ManagerDesc(MetadataManager.getManagerKey(),
 	"org.lockss.metadata.MetadataManager"),
@@ -112,6 +115,7 @@ public class MockLockssDaemon extends LockssDaemon {
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
   DbManager dbManager = null;
+  MetadataDbManager metadataDbManager = null;
   Cron cron = null;
   private boolean suppressStartAuManagers = true;
 
@@ -155,6 +159,7 @@ public class MockLockssDaemon extends LockssDaemon {
     metadataManager = null;
     statusService = null;
     dbManager = null;
+    metadataDbManager = null;
     cron = null;
 
     //super.stopDaemon();
@@ -524,6 +529,16 @@ public class MockLockssDaemon extends LockssDaemon {
     dbManager = dbMan;
 //    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
     managerMap.put(DbManager.getManagerKey(), dbManager);
+  }
+
+  /**
+   * Set the DbManager
+   * @param dbMan the new manager
+   */
+  public void setMetadataDbManager(MetadataDbManager dbMan) {
+    metadataDbManager = dbMan;
+//    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+    managerMap.put(MetadataDbManager.getManagerKey(), metadataDbManager);
   }
 
   /**

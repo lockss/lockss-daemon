@@ -27,11 +27,10 @@
  */
 package org.lockss.job;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.job.SqlConstants.*;
 import java.sql.Connection;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.scheduler.StepTask;
 import org.lockss.util.Logger;
@@ -48,7 +47,7 @@ public class JobTask implements Runnable {
   private String baseTaskName;
   private String taskName;
   private Long jobSeq = null;
-  private DbManager dbManager;
+  private JobDbManager dbManager;
   private MetadataManager mdManager;
   private JobManager jobManager;
   private boolean isJobFinished = false;
@@ -60,7 +59,7 @@ public class JobTask implements Runnable {
    * @param jobManagerSql
    *          A JobManagerSql with the Job SQL code executor.
    */
-  public JobTask(DbManager dbManager, MetadataManager mdManager,
+  public JobTask(JobDbManager dbManager, MetadataManager mdManager,
       JobManager jobManager) {
     this.dbManager = dbManager;
     this.mdManager = mdManager;
@@ -151,10 +150,10 @@ public class JobTask implements Runnable {
         conn = dbManager.getConnection();
 
         jobManager.markJobAsDone(conn, jobSeq, "Unknown job type");
-        DbManager.commitOrRollback(conn, log);
+        JobDbManager.commitOrRollback(conn, log);
         log.error("Ignored job " + jobSeq + " of unknown type = " + jobType);
       } finally {
-        DbManager.safeRollbackAndClose(conn);
+	JobDbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -181,7 +180,7 @@ public class JobTask implements Runnable {
 
       processPutAuJob(conn, jobSeq);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -236,7 +235,7 @@ public class JobTask implements Runnable {
 
       processDeleteAuJob(conn, jobSeq);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -290,9 +289,9 @@ public class JobTask implements Runnable {
 
 	jobManager.markJobAsFinished(conn, jobSeq, JOB_STATUS_TERMINATED,
 	    "Terminated by request");
-	DbManager.commitOrRollback(conn, log);
+	JobDbManager.commitOrRollback(conn, log);
       } finally {
-	DbManager.safeRollbackAndClose(conn);
+	JobDbManager.safeRollbackAndClose(conn);
       }
     } else {
       if (log.isDebug3())

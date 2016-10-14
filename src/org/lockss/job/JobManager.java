@@ -38,7 +38,6 @@ import org.lockss.app.LockssApp;
 //import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.metadata.DeleteMetadataTask;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
@@ -98,7 +97,7 @@ public class JobManager extends BaseLockssDaemonManager implements
   private long sleepDelaySeconds = DEFAULT_SLEEP_DELAY_SECONDS;
 
   // The database manager.
-  private DbManager dbManager = null;
+  private JobDbManager dbManager = null;
 
   // The metadata manager.
   private MetadataManager mdManager = null;
@@ -160,7 +159,8 @@ public class JobManager extends BaseLockssDaemonManager implements
     }
 
     //dbManager = getDaemon().getDbManager();
-    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    dbManager =
+	(JobDbManager)LockssApp.getManager(JobDbManager.getManagerKey());
     //mdManager = getDaemon().getMetadataManager();
     mdManager =
 	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
@@ -598,12 +598,12 @@ public class JobManager extends BaseLockssDaemonManager implements
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "jobSeq = " + jobSeq);
 
       jobManagerSql.markJobAsRunning(conn, jobSeq, "Extracting metadata");
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } catch (Exception e) {
       String message = "Error handling start of metadata extraction";
       log.error(message, e);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -656,7 +656,7 @@ public class JobManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "markedJobs = " + markedJobs);
 
-	DbManager.commitOrRollback(conn, log);
+	JobDbManager.commitOrRollback(conn, log);
       }
 
       // Loop through all the tasks.
@@ -679,7 +679,7 @@ public class JobManager extends BaseLockssDaemonManager implements
       String message = "Error handling finish of metadata extraction";
       log.error(message, e);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -706,12 +706,12 @@ public class JobManager extends BaseLockssDaemonManager implements
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "jobSeq = " + jobSeq);
 
       jobManagerSql.markJobAsRunning(conn, jobSeq, "Deleting metadata");
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } catch (Exception e) {
       String message = "Error handling start of metadata removal";
       log.error(message, e);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -759,7 +759,7 @@ public class JobManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "markedJobs = " + markedJobs);
 
-	DbManager.commitOrRollback(conn, log);
+	JobDbManager.commitOrRollback(conn, log);
       }
 
       for (JobTask jobTask : tasks) {
@@ -775,7 +775,7 @@ public class JobManager extends BaseLockssDaemonManager implements
       String message = "Error handling finish of metadata removal";
       log.error(message, e);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

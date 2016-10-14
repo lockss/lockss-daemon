@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +25,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.metadata;
 
 import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
@@ -33,21 +33,21 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Logger;
 
 /**
- * Migrates in a separate thread the database from version 21 to version 22.
+ * Migrates in a separate thread the database from version 19 to version 20.
  */
-public class DbVersion21To22Migrator extends LockssRunnable {
-  private static Logger log = Logger.getLogger(DbVersion21To22Migrator.class);
+public class DbVersion19To20Migrator extends LockssRunnable {
+  private static Logger log = Logger.getLogger(DbVersion19To20Migrator.class);
 
   /**
    * Constructor.
    */
-  public DbVersion21To22Migrator() {
-    super("DbVersion21To22Migrator");
+  public DbVersion19To20Migrator() {
+    super("DbVersion19To20Migrator");
   }
 
   /**
-   * Entry point to start the process of migrating the database from version 21
-   * to version 22.
+   * Entry point to start the process of migrating the database from version 19
+   * to version 20.
    */
   public void lockssRun() {
     final String DEBUG_HEADER = "lockssRun(): ";
@@ -68,22 +68,24 @@ public class DbVersion21To22Migrator extends LockssRunnable {
 
     try {
       //DbManager dbManager = daemon.getDbManager();
-      DbManager dbManager =
-	  (DbManager)LockssApp.getManager(DbManager.getManagerKey());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+      MetadataDbManager metadataDbManager = (MetadataDbManager)
+	  LockssApp.getManager(MetadataDbManager.getManagerKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManager.");
 
-      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+      MetadataDbManagerSql metadataDbManagerSql =
+	  metadataDbManager.getMetadataDbManagerSqlBeforeReady();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManagerSql.");
 
       // Perform the actual work.
-      dbManagerSql.migrateDatabaseFrom21To22();
+      metadataDbManagerSql.migrateDatabaseFrom19To20();
 
-      dbManager.cleanUpThread("DbVersion21To22Migrator");
+      metadataDbManager.cleanUpThread("DbVersion19To20Migrator");
     } catch (Exception e) {
-      log.error("Cannot migrate the database from version 21 to 22", e);
+      log.error("Cannot migrate the database from version 19 to 20", e);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
-
 }

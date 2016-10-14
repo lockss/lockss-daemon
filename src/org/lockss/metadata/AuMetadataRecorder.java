@@ -27,7 +27,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,7 +43,6 @@ import java.util.Map;
 import java.util.Set;
 import org.lockss.config.ConfigManager;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
@@ -229,7 +228,7 @@ public class AuMetadataRecorder {
   private final MetadataManagerSql mdManagerSql;
 
   // The database manager.
-  private final DbManager dbManager;
+  private final MetadataDbManager dbManager;
 
   // The archival unit.
   private final ArchivalUnit au;
@@ -596,7 +595,8 @@ public class AuMetadataRecorder {
 	log.warning("accessUrl too long '" + mdinfo.accessUrl
 	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
-	mdinfo.accessUrl = DbManager.truncateVarchar(accessUrl, MAX_URL_COLUMN);
+	mdinfo.accessUrl =
+	    MetadataDbManager.truncateVarchar(accessUrl, MAX_URL_COLUMN);
       } else {
 	mdinfo.accessUrl = accessUrl;
       }
@@ -649,8 +649,8 @@ public class AuMetadataRecorder {
 	log.warning("doi too long '" + mdinfo.doi + "' for title: '"
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
-	mdinfo.doi =
-	    DbManager.truncateVarchar(doi.toLowerCase(), MAX_DOI_COLUMN);
+	mdinfo.doi = MetadataDbManager.truncateVarchar(doi.toLowerCase(),
+	    MAX_DOI_COLUMN);
       } else {
 	mdinfo.doi = doi.toLowerCase();
       }
@@ -662,7 +662,8 @@ public class AuMetadataRecorder {
 	log.warning("pubDate too long '" + mdinfo.pubDate + "' for title: '"
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
-	mdinfo.pubDate = DbManager.truncateVarchar(pubDate, MAX_DATE_COLUMN);
+	mdinfo.pubDate =
+	    MetadataDbManager.truncateVarchar(pubDate, MAX_DATE_COLUMN);
       } else {
 	mdinfo.pubDate = pubDate;
       }
@@ -674,7 +675,8 @@ public class AuMetadataRecorder {
 	log.warning("volume too long '" + mdinfo.volume + "' for title: '"
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
-	mdinfo.volume = DbManager.truncateVarchar(volume, MAX_VOLUME_COLUMN);
+	mdinfo.volume =
+	    MetadataDbManager.truncateVarchar(volume, MAX_VOLUME_COLUMN);
       } else {
 	mdinfo.volume = volume;
       }
@@ -686,7 +688,8 @@ public class AuMetadataRecorder {
 	log.warning("issue too long '" + mdinfo.issue + "' for title: '"
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
-	mdinfo.issue = DbManager.truncateVarchar(issue, MAX_ISSUE_COLUMN);
+	mdinfo.issue =
+	    MetadataDbManager.truncateVarchar(issue, MAX_ISSUE_COLUMN);
       } else {
 	mdinfo.issue = issue;
       }
@@ -699,7 +702,7 @@ public class AuMetadataRecorder {
 	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.startPage =
-	    DbManager.truncateVarchar(startPage, MAX_START_PAGE_COLUMN);
+	    MetadataDbManager.truncateVarchar(startPage, MAX_START_PAGE_COLUMN);
       } else {
 	mdinfo.startPage = startPage;
       }
@@ -711,7 +714,8 @@ public class AuMetadataRecorder {
 	log.warning("article title too long '" + mdinfo.articleTitle
 	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
-	mdinfo.articleTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+	mdinfo.articleTitle =
+	    MetadataDbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.articleTitle = name;
       }
@@ -722,7 +726,8 @@ public class AuMetadataRecorder {
       if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("publisher too long '" + mdinfo.publisher
 	    + "' for title: '" + mdinfo.publicationTitle + "'");
-	mdinfo.publisher = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+	mdinfo.publisher =
+	    MetadataDbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.publisher = name;
       }
@@ -733,7 +738,8 @@ public class AuMetadataRecorder {
       if (name.length() > MAX_NAME_COLUMN) {
 	log.warning("provider too long '" + mdinfo.provider
 	    + "' for title: '" + mdinfo.publicationTitle + "'");
-	mdinfo.provider = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+	mdinfo.provider =
+	    MetadataDbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.provider = name;
       }
@@ -744,7 +750,8 @@ public class AuMetadataRecorder {
       if (name.length() > MAX_NAME_COLUMN) {
         log.warning("series title too long '" + mdinfo.seriesTitle
             + "' for publisher: " + mdinfo.publisher + "'");
-        mdinfo.seriesTitle = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+        mdinfo.seriesTitle =
+            MetadataDbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
         mdinfo.seriesTitle = name;
       }
@@ -756,7 +763,7 @@ public class AuMetadataRecorder {
 	log.warning("journal title too long '" + mdinfo.publicationTitle
 	    + "' for publisher: " + mdinfo.publisher + "'");
 	mdinfo.publicationTitle =
-	    DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+	    MetadataDbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.publicationTitle = name;
       }
@@ -770,7 +777,8 @@ public class AuMetadataRecorder {
 	  log.warning("author too long '" + author + "' for title: '"
 	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	      + "'");
-	  authors.add(DbManager.truncateVarchar(name, MAX_AUTHOR_COLUMN));
+	  authors.add(MetadataDbManager.truncateVarchar(name,
+	      MAX_AUTHOR_COLUMN));
 	} else {
 	  authors.add(name);
 	}
@@ -786,7 +794,8 @@ public class AuMetadataRecorder {
 	  log.warning("keyword too long '" + keyword + "' for title: '"
 	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	      + "'");
-	  keywords.add(DbManager.truncateVarchar(name, MAX_KEYWORD_COLUMN));
+	  keywords.add(MetadataDbManager.truncateVarchar(name,
+	      MAX_KEYWORD_COLUMN));
 	} else {
 	  keywords.add(name);
 	}
@@ -802,7 +811,8 @@ public class AuMetadataRecorder {
 	  log.warning("feature too long '" + feature + "' for title: '"
 	      + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	      + "'");
-	  validFeature = DbManager.truncateVarchar(feature, MAX_FEATURE_COLUMN);
+	  validFeature = MetadataDbManager.truncateVarchar(feature,
+	      MAX_FEATURE_COLUMN);
 	}
 
 	String url = mdinfo.featuredUrlMap.get(feature).trim();
@@ -811,7 +821,7 @@ public class AuMetadataRecorder {
 	      + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	      + mdinfo.publisher + "'");
 	  featuredUrls.put(validFeature,
-	      DbManager.truncateVarchar(url, MAX_URL_COLUMN));
+	      MetadataDbManager.truncateVarchar(url, MAX_URL_COLUMN));
 	} else {
 	  featuredUrls.put(validFeature, url);
 	}
@@ -826,7 +836,7 @@ public class AuMetadataRecorder {
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
 	mdinfo.endPage =
-	    DbManager.truncateVarchar(endPage, MAX_END_PAGE_COLUMN);
+	    MetadataDbManager.truncateVarchar(endPage, MAX_END_PAGE_COLUMN);
       } else {
 	mdinfo.endPage = endPage;
       }
@@ -839,7 +849,7 @@ public class AuMetadataRecorder {
 	    + mdinfo.publicationTitle + "' publisher: " + mdinfo.publisher
 	    + "'");
 	mdinfo.coverage =
-	    DbManager.truncateVarchar(coverage, MAX_COVERAGE_COLUMN);
+	    MetadataDbManager.truncateVarchar(coverage, MAX_COVERAGE_COLUMN);
       } else {
 	mdinfo.coverage = coverage;
       }
@@ -853,8 +863,8 @@ public class AuMetadataRecorder {
 	log.warning("itemNumber too long '" + mdinfo.itemNumber
 	    + "' for title: '" + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
-	mdinfo.itemNumber =
-	    DbManager.truncateVarchar(mdinfo.itemNumber, MAX_ITEM_NO_COLUMN);
+	mdinfo.itemNumber = MetadataDbManager.truncateVarchar(mdinfo.itemNumber,
+	    MAX_ITEM_NO_COLUMN);
       } else {
 	mdinfo.itemNumber = itemNumber;
       }
@@ -868,7 +878,7 @@ public class AuMetadataRecorder {
 	    + mdinfo.publicationTitle + "' publisher: "
 	    + mdinfo.publisher + "'");
 	mdinfo.proprietaryIdentifier =
-	    DbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
+	    MetadataDbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
       } else {
 	mdinfo.proprietaryIdentifier = name;
       }
@@ -881,7 +891,7 @@ public class AuMetadataRecorder {
             + mdinfo.proprietarySeriesIdentifier + "' for series title: '"
             + mdinfo.seriesTitle + "' publisher: " + mdinfo.publisher + "'");
         mdinfo.proprietarySeriesIdentifier =
-            DbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
+            MetadataDbManager.truncateVarchar(name, MAX_PROPRIETARY_ID_COLUMN);
       } else {
         mdinfo.proprietarySeriesIdentifier = name;
       }
@@ -981,7 +991,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + UPDATE_MD_ITEM_PRIMARY_NAME_QUERY + "'.");
       throw new DbException("Cannot update the primary name", sqle);
     } finally {
-      DbManager.safeCloseStatement(updatePrimaryName);
+      MetadataDbManager.safeCloseStatement(updatePrimaryName);
     }
   }
 
@@ -1013,7 +1023,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY + "'.");
       throw new DbException(message, sqle);
     } finally {
-      DbManager.safeCloseStatement(deleteName);
+      MetadataDbManager.safeCloseStatement(deleteName);
     }
   }
 
@@ -1048,7 +1058,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY + "'.");
       throw new DbException(message, sqle);
     } finally {
-      DbManager.safeCloseStatement(deleteName);
+      MetadataDbManager.safeCloseStatement(deleteName);
     }
   }
 
@@ -1675,7 +1685,7 @@ public class AuMetadataRecorder {
 	  log.debug3(DEBUG_HEADER + "typeName = " + typeName);
 	}
       } finally {
-	DbManager.safeCloseResultSet(resultSet);
+	MetadataDbManager.safeCloseResultSet(resultSet);
 	getMdItemTypeName.close();
       }
     } catch (SQLException sqle) {
@@ -1714,8 +1724,8 @@ public class AuMetadataRecorder {
     } catch (SQLException sqle) {
       throw new DbException("Cannot find AU metadata", sqle);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findAuMd);
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(findAuMd);
     }
 
     log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
@@ -1758,8 +1768,8 @@ public class AuMetadataRecorder {
     } catch (SQLException sqle) {
       throw new DbException("Cannot find metadata item", sqle);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findMdItem);
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(findMdItem);
     }
 
     log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
@@ -1806,7 +1816,7 @@ public class AuMetadataRecorder {
 	insertBibItem.setString(6, itemNo);
 	addedCount = dbManager.executeUpdate(insertBibItem);
       } finally {
-	DbManager.safeCloseStatement(insertBibItem);
+	MetadataDbManager.safeCloseStatement(insertBibItem);
       }
     } catch (SQLException sqle) {
       throw new DbException("Cannot add bibliographic item", sqle);
@@ -1905,8 +1915,8 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + GET_PUBLISHER_NAME_QUERY + "'.");
       throw new DbException("Cannot get the name of a publisher", sqle);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(getPublisherNameStatement);
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(getPublisherNameStatement);
     }
 
     log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -1958,8 +1968,8 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + FIND_AU_PROBLEMS_QUERY + "'.");
       throw new DbException("Cannot find AU problems", sqle);
     } finally {
-      DbManager.safeCloseResultSet(results);
-      DbManager.safeCloseStatement(findProblems);
+      MetadataDbManager.safeCloseResultSet(results);
+      MetadataDbManager.safeCloseStatement(findProblems);
     }
 
     return problems;
@@ -2001,7 +2011,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + DELETE_AU_PROBLEM_QUERY + "'.");
       throw new DbException("Cannot remove problem AU entry", sqle);
     } finally {
-      DbManager.safeCloseStatement(deleteAuProblem);
+      MetadataDbManager.safeCloseStatement(deleteAuProblem);
     }
   }
 
@@ -2041,7 +2051,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + INSERT_AU_PROBLEM_QUERY + "'.");
       throw new DbException("Cannot add problem AU entry", sqle);
     } finally {
-      DbManager.safeCloseStatement(addAuProblemStatement);
+      MetadataDbManager.safeCloseStatement(addAuProblemStatement);
     }
   }
 
@@ -2207,8 +2217,8 @@ public class AuMetadataRecorder {
       throw new DbException("Cannot find the publications of a publisher",
 	  sqle);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findPublications);
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(findPublications);
     }
 
     return publicationSeqs;
@@ -2253,8 +2263,8 @@ public class AuMetadataRecorder {
       throw new DbException(
 	  "Cannot find the child metadata items of a publication", sqle);
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findMdItems);
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(findMdItems);
     }
 
     return mdItemSeqs;
@@ -2365,7 +2375,7 @@ public class AuMetadataRecorder {
       log.error("SQL = '" + UPDATE_MD_ITEM_PARENT_SEQ_QUERY + "'.");
       throw new DbException("Cannot update the parent sequence", sqle);
     } finally {
-      DbManager.safeCloseStatement(updateParentSeq);
+      MetadataDbManager.safeCloseStatement(updateParentSeq);
     }
   }
 
@@ -2426,7 +2436,7 @@ public class AuMetadataRecorder {
 	throw new DbException("Cannot delete an unknown publisher publication",
 	    sqle);
       } finally {
-	DbManager.safeCloseStatement(deleteMdItem);
+	MetadataDbManager.safeCloseStatement(deleteMdItem);
       }
     }
 
@@ -2470,7 +2480,7 @@ public class AuMetadataRecorder {
 	throw new DbException("Cannot delete an unknown publisher publication",
 	    sqle);
       } finally {
-	DbManager.safeCloseStatement(deletePublication);
+	MetadataDbManager.safeCloseStatement(deletePublication);
       }
     }
 
@@ -2513,7 +2523,7 @@ public class AuMetadataRecorder {
 	    + "'.");
 	throw new DbException("Cannot delete an unknown publisher", sqle);
       } finally {
-	DbManager.safeCloseStatement(deletePublisher);
+	MetadataDbManager.safeCloseStatement(deletePublisher);
       }
     }
 

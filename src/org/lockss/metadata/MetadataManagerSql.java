@@ -28,8 +28,8 @@
 package org.lockss.metadata;
 
 import static java.sql.Types.BIGINT;
-import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManager.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,7 +46,6 @@ import java.util.TreeMap;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.db.JdbcContext;
-import org.lockss.db.PkNamePair;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
@@ -7354,6 +7353,14 @@ public class MetadataManagerSql {
 
       resultSet.close();
 
+      // Check whether no metadata was found for the given Archival Unit.
+      if (items.size() == 0) {
+	// Yes: Done.
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "items = " + items);
+	return items;
+      }
+
+      // No: Get the repeatable metadata.
       StringBuilder inIds = new StringBuilder("(");
       boolean isFirst = true;
 

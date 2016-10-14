@@ -28,7 +28,7 @@
 package org.lockss.job;
 
 import static java.sql.Types.*;
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.job.SqlConstants.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -41,7 +41,6 @@ import java.util.List;
 import java.util.Map;
 import org.joda.time.LocalDate;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
 
@@ -243,14 +242,14 @@ public class JobManagerSql {
       + ", " + STATUS_MESSAGE_COLUMN + " = ?"
       + " where " + JOB_SEQ_COLUMN + " = ?";
 
-  private final DbManager dbManager;
+  private final JobDbManager dbManager;
   private final Map<String, Long> jobStatusSeqByName;
   private final Map<String, Long> jobTypeSeqByName;
 
   /**
    * Constructor.
    */
-  JobManagerSql(DbManager dbManager) throws DbException {
+  JobManagerSql(JobDbManager dbManager) throws DbException {
     this.dbManager = dbManager;
 
     // Get a connection to the database.
@@ -260,7 +259,7 @@ public class JobManagerSql {
       jobStatusSeqByName = mapJobStatusByName(conn);
       jobTypeSeqByName = mapJobTypeByName(conn);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -310,8 +309,8 @@ public class JobManagerSql {
       log.error("SQL = '" + GET_JOB_STATUSES_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(stmt);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(stmt);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -363,8 +362,8 @@ public class JobManagerSql {
       log.error("SQL = '" + GET_JOB_TYPES_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(stmt);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(stmt);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -397,9 +396,9 @@ public class JobManagerSql {
       // Create the Archival Unit metadata extraction job.
       result = createMetadataExtractionJob(conn, auId);
 
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -509,7 +508,7 @@ public class JobManagerSql {
 
       result = getJob(conn, jobSeq);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -560,8 +559,8 @@ public class JobManagerSql {
       log.error("jobSeq = " + jobSeq);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findJob);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findJob);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "job = " + job);
@@ -688,8 +687,8 @@ public class JobManagerSql {
       log.error("auKey = " + auKey);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findJobs);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findJobs);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobs = " + jobs);
@@ -816,8 +815,8 @@ public class JobManagerSql {
       log.error("statusMessage = " + statusMessage);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(createJob);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(createJob);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobSeq = " + jobSeq);
@@ -853,7 +852,7 @@ public class JobManagerSql {
       // Get the Archival Units.
       result = getAus(conn, page, limit);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -983,8 +982,8 @@ public class JobManagerSql {
       log.error("offset = " + offset);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findAus);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findAus);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "aus = " + aus);
@@ -1046,9 +1045,9 @@ public class JobManagerSql {
       // Create the Archival Unit metadata removal job.
       result = createMetadataRemovalJob(conn, auId);
 
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -1161,7 +1160,7 @@ public class JobManagerSql {
       // Get the Archival Unit job.
       result = getAuJob(conn, auId);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -1239,7 +1238,7 @@ public class JobManagerSql {
       // Get the jobs.
       result = getJobs(conn, page, limit);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -1325,8 +1324,8 @@ public class JobManagerSql {
       log.error("offset = " + offset);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findJobs);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findJobs);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobs = " + jobs);
@@ -1352,9 +1351,9 @@ public class JobManagerSql {
       conn = dbManager.getConnection();
 
       deletedCount = deleteInactiveJobs(conn);
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2())
@@ -1386,9 +1385,9 @@ public class JobManagerSql {
       conn = dbManager.getConnection();
 
       job = deleteJob(conn, jobSeq);
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "job = " + job);
@@ -1477,7 +1476,7 @@ public class JobManagerSql {
       log.error("SQL = '" + DELETE_INACTIVE_JOBS_QUERY + "'.");
       throw new DbException(message, sqle);
     } finally {
-      DbManager.safeCloseStatement(deleteJob);
+      JobDbManager.safeCloseStatement(deleteJob);
     }
 
     if (log.isDebug2())
@@ -1525,7 +1524,7 @@ public class JobManagerSql {
       log.error("SQL = '" + DELETE_INACTIVE_JOB_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(deleteJob);
+      JobDbManager.safeCloseStatement(deleteJob);
     }
 
     if (log.isDebug2())
@@ -1558,7 +1557,7 @@ public class JobManagerSql {
 
       result = getJob(conn, jobId);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -1622,9 +1621,9 @@ public class JobManagerSql {
       conn = dbManager.getConnection();
 
       freeIncompleteJobs(conn);
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1666,7 +1665,7 @@ public class JobManagerSql {
       log.error("SQL = '" + FREE_INCOMPLETE_JOBS_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(freeIncompleteJobs);
+      JobDbManager.safeCloseStatement(freeIncompleteJobs);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1694,9 +1693,9 @@ public class JobManagerSql {
       conn = dbManager.getConnection();
 
       jobSeq = claimNextJob(conn, owner);
-      DbManager.commitOrRollback(conn, log);
+      JobDbManager.commitOrRollback(conn, log);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobSeq = " + jobSeq);
@@ -1782,8 +1781,8 @@ public class JobManagerSql {
       log.error("SQL = '" + FIND_HIGHEST_PRIORITY_JOBS_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findHighestPriorityJob);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findHighestPriorityJob);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobSeq = " + jobSeq);
@@ -1838,7 +1837,7 @@ public class JobManagerSql {
       log.error("SQL = '" + CLAIM_UNCLAIMED_JOB_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(claimUnclaimedJob);
+      JobDbManager.safeCloseStatement(claimUnclaimedJob);
     }
 
     if (log.isDebug2())
@@ -1868,7 +1867,7 @@ public class JobManagerSql {
 
       result = getJobType(conn, jobSeq);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      JobDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -1919,8 +1918,8 @@ public class JobManagerSql {
       log.error("jobSeq = " + jobSeq);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findJob);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findJob);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "jobType = " + jobType);
@@ -1976,7 +1975,7 @@ public class JobManagerSql {
       log.error("SQL = '" + MARK_JOB_AS_RUNNING_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(updateJobStatus);
+      JobDbManager.safeCloseStatement(updateJobStatus);
     }
 
     if (log.isDebug2())
@@ -2038,7 +2037,7 @@ public class JobManagerSql {
       log.error("SQL = '" + MARK_JOB_AS_FINISHED_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(updateJobStatus);
+      JobDbManager.safeCloseStatement(updateJobStatus);
     }
 
     if (log.isDebug2())
@@ -2136,7 +2135,7 @@ public class JobManagerSql {
       log.error("SQL = '" + UPDATE_JOB_STATUS_QUERY + "'.");
       throw dbe;
     } finally {
-      DbManager.safeCloseStatement(updateJobStatus);
+      JobDbManager.safeCloseStatement(updateJobStatus);
     }
 
     if (log.isDebug2())
@@ -2194,8 +2193,8 @@ public class JobManagerSql {
       log.error("jobSeq = " + jobSeq);
       throw dbe;
     } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findJob);
+      JobDbManager.safeCloseResultSet(resultSet);
+      JobDbManager.safeCloseStatement(findJob);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,8 +27,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
-
+import static org.lockss.metadata.SqlConstants.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -40,11 +35,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
-
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuEvent;
 import org.lockss.plugin.AuEventHandler;
@@ -59,7 +52,7 @@ import org.lockss.util.Logger;
 public class MetadataStarter extends LockssRunnable {
   private static Logger log = Logger.getLogger(MetadataStarter.class);
 
-  private final DbManager dbManager;
+  private final MetadataDbManager dbManager;
   private final MetadataManager mdManager;
   private final PluginManager pluginManager;
 
@@ -73,7 +66,7 @@ public class MetadataStarter extends LockssRunnable {
    * @param pluginManager
    *          A PluginManager with the plugin manager.
    */
-  public MetadataStarter(DbManager dbManager, MetadataManager mdManager,
+  public MetadataStarter(MetadataDbManager dbManager, MetadataManager mdManager,
       PluginManager pluginManager) {
     super("MetadataStarter");
 
@@ -164,12 +157,12 @@ public class MetadataStarter extends LockssRunnable {
    	// Add the AU to the table of pending AUs, if not already there.
 	mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au),
 	    fullReindex);
-	DbManager.commitOrRollback(conn, log);
+	MetadataDbManager.commitOrRollback(conn, log);
 	log.debug2(DEBUG_HEADER + "Queue updated");
       } catch (DbException dbe) {
 	log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE
 	    + "\"", dbe);
-	DbManager.safeRollbackAndClose(conn);
+	MetadataDbManager.safeRollbackAndClose(conn);
 	return;
       }
     }
@@ -181,7 +174,7 @@ public class MetadataStarter extends LockssRunnable {
     } catch (SQLException sqle) {
       log.error("Cannot start reindexing AUs", sqle);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -203,7 +196,7 @@ public class MetadataStarter extends LockssRunnable {
 
         // Mark the AU as active.
         dbManager.updateAuActiveFlag(conn, au.getAuId(), true);
-        DbManager.commitOrRollback(conn, log);
+        MetadataDbManager.commitOrRollback(conn, log);
 
         // Remove the AU from the table of unconfigured AUs.
         mdManager.getMetadataManagerSql().removeFromUnconfiguredAus(conn,
@@ -259,8 +252,8 @@ public class MetadataStarter extends LockssRunnable {
       } catch (DbException dbe) {
         log.error("Cannot reindex metadata for " + au.getName(), dbe);
       } finally {
-        DbManager.safeCloseStatement(insertPendingAuBatchStatement);
-        DbManager.safeRollbackAndClose(conn);
+	MetadataDbManager.safeCloseStatement(insertPendingAuBatchStatement);
+	MetadataDbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -296,11 +289,11 @@ public class MetadataStarter extends LockssRunnable {
 
 	    // Mark the AU as inactive in the database.
 	    dbManager.updateAuActiveFlag(conn, au.getAuId(), false);
-	    DbManager.commitOrRollback(conn, log);
+	    MetadataDbManager.commitOrRollback(conn, log);
 	  } catch (DbException dbe) {
 	    log.error("Cannot deactivate AU " + au.getName(), dbe);
 	  } finally {
-	    DbManager.safeRollbackAndClose(conn);
+	    MetadataDbManager.safeRollbackAndClose(conn);
 	  }
 
 	  break;
@@ -333,8 +326,9 @@ public class MetadataStarter extends LockssRunnable {
 	    } catch (DbException dbe) {
 	      log.error("Cannot reindex metadata for " + au.getName(), dbe);
 	    } finally {
-	      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
-	      DbManager.safeRollbackAndClose(conn);
+	      MetadataDbManager
+	      .safeCloseStatement(insertPendingAuBatchStatement);
+	      MetadataDbManager.safeRollbackAndClose(conn);
 	    }
 	  }
       }

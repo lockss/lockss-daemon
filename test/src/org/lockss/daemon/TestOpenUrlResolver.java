@@ -27,7 +27,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -36,11 +36,11 @@ import java.util.*;
 import junit.framework.Test;
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.metadata.MetadataDbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -68,7 +68,7 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
   private OpenUrlResolver openUrlResolver;
-  private DbManager dbManager;
+  private MetadataDbManager dbManager;
 
   /** set of AUs reindexed by the MetadataManager */
   private Set<String> ausReindexed = new HashSet<String>();

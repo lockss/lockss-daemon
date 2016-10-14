@@ -29,58 +29,26 @@
 /**
  * Derby database custom authenticator.
  * 
- * @author Fernando Garcia-Loygorri
+ * @author Fernando García-Loygorri
  */
 package org.lockss.db;
 
 import java.sql.SQLException;
 import java.util.Properties;
 import org.apache.derby.authentication.UserAuthenticator;
-import org.lockss.app.LockssApp;
-//import org.lockss.app.LockssDaemon;
+import org.apache.derby.jdbc.EmbeddedDataSource;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 public class DerbyUserAuthenticator implements UserAuthenticator {
 
-  private static final Logger log = Logger
-      .getLogger(DerbyUserAuthenticator.class);
-
-  // The name of the driver class used to access the database.
-  private String className = null;
-
-  // The name of the database;
-  private String databaseName = null;
-
-  // The name of the user to access the database.
-  private String user = null;
-
-  // The password of the database user.
-  private String password = null;
+  private static final Logger log =
+      Logger.getLogger(DerbyUserAuthenticator.class);
 
   /**
    * No-argument constructor.
    */
   public DerbyUserAuthenticator() {
-    final String DEBUG_HEADER = "DerbyUserAuthenticator(): ";
-    //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    DbManager dbManager =
-	(DbManager)LockssApp.getManager(DbManager.getManagerKey());
-
-    // Get the authentication parameters from the database manager and store
-    // them to use them when authenticating passed credentiales later on.
-    className = dbManager.getDataSourceClassNameBeforeReady();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "className = " + className);
-
-    databaseName = dbManager.getDataSourceDbNameBeforeReady();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "databaseName = " + databaseName);
-
-    user = dbManager.getDataSourceUserBeforeReady();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "user = " + user);
-
-    password = dbManager.getDataSourcePasswordBeforeReady();
-    //if (log.isDebug3()) log.debug3(DEBUG_HEADER + "password = " + password);
   }
 
   /**
@@ -105,18 +73,35 @@ public class DerbyUserAuthenticator implements UserAuthenticator {
       log.debug2(DEBUG_HEADER + "info = " + info);
     }
 
+    // Get the expected credentials.
+    DbCredentials credentials =
+	DbManager.getDbCredentialsMap().get(databaseName);
+    if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "credentials = " + credentials);
+
+    // Fail authentication if there are no expected credentials.
+    if (credentials == null) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Missing credentials: result is false");
+      return false;
+    }
+
     // No authentication is needed when using the embedded data source.
-    if ("org.apache.derby.jdbc.EmbeddedDataSource".equals(className)) {
+    if (EmbeddedDataSource.class.getCanonicalName()
+	.equals(credentials.getClassName())) {
       if (log.isDebug2())
 	log.debug2(DEBUG_HEADER + "EmbeddedDataSource: result is true");
       return true;
     }
 
+    String user = credentials.getUser();
+    String password = credentials.getPassword();
+
     // Fail authentication if either the user or the password are missing.
     if (StringUtil.isNullString(userName)
 	|| StringUtil.isNullString(userPassword)) {
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "Missing credentials: result is false");
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	  + "Missing user and/or password: result is false");
       return false;
     }
 

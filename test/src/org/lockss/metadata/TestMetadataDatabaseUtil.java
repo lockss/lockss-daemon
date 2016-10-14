@@ -33,7 +33,6 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.daemon.PluginException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -63,7 +62,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
 
   private SimulatedArchivalUnit sau0;
   private MetadataManager metadataManager;
-  private DbManager dbManager;
+  private MetadataDbManager dbManager;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -154,7 +153,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
       new AuMetadataRecorder(task, metadataManager, sau0)
           .recordMetadata(conn, metadata.iterator());
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -221,7 +220,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
       new AuMetadataRecorder(task, metadataManager, sau0)
 	  .recordMetadata(conn, metadata.iterator());
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -288,7 +287,7 @@ public class TestMetadataDatabaseUtil extends LockssTestCase {
       new AuMetadataRecorder(task, metadataManager, sau0)
           .recordMetadata(conn, metadata.iterator());
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 

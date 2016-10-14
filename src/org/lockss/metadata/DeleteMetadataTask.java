@@ -33,7 +33,6 @@ import java.sql.Connection;
 import org.lockss.app.LockssApp;
 //import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssWatchdog;
-import org.lockss.db.DbManager;
 import org.lockss.db.JdbcContext;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.plugin.ArchivalUnit;
@@ -75,7 +74,7 @@ public class DeleteMetadataTask extends StepTask {
   private volatile long endClockTime = 0;
 
   // The database manager.
-  private final DbManager dbManager;
+  private final MetadataDbManager dbManager;
 
   // The metadata manager.
   private final MetadataManager mdManager;
@@ -117,7 +116,8 @@ public class DeleteMetadataTask extends StepTask {
     this.auName = au.getName();
     this.auId = au.getAuId();
     //dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    dbManager = (MetadataDbManager)LockssApp
+	.getManager(MetadataDbManager.getManagerKey());
     //mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
     mdManager =
 	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
@@ -188,7 +188,7 @@ public class DeleteMetadataTask extends StepTask {
   	  + removedArticleCount + " database items.");
 
       // Complete the database transaction.
-      DbManager.commitOrRollback(conn, log);
+      MetadataDbManager.commitOrRollback(conn, log);
     } catch (Exception ex) {
       e = ex;
       log.warning("Error removing metadata", e);
@@ -197,7 +197,7 @@ public class DeleteMetadataTask extends StepTask {
         status = ReindexingStatus.Failed;
       }
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug3())

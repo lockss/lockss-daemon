@@ -27,7 +27,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
@@ -39,7 +39,8 @@ import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.AuParamType.InvalidFormatException;
-import org.lockss.db.*;
+import org.lockss.db.DbException;
+import org.lockss.metadata.MetadataDbManager;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
@@ -1177,7 +1178,7 @@ public class OpenUrlResolver {
     try {
       // resolve from database manager
       //DbManager dbMgr = daemon.getDbManager();
-      DbManager dbMgr = getDbManager();
+      MetadataDbManager dbMgr = getMetadataDbManager();
       resolved = resolveFromDoi(dbMgr, doi);
     } catch (IllegalArgumentException ex) {
     }
@@ -1287,7 +1288,7 @@ public class OpenUrlResolver {
    * @param doi the DOI
    * @return the OpenUrlInfo
    */
-  private OpenUrlInfo resolveFromDoi(DbManager dbMgr, String doi) {
+  private OpenUrlInfo resolveFromDoi(MetadataDbManager dbMgr, String doi) {
     final String DEBUG_HEADER = "resolveFromDoi(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "doi = " + doi);
 
@@ -1338,7 +1339,7 @@ public class OpenUrlResolver {
     } catch (DbException dbe) {
       log.error("Getting DOI:" + doi, dbe);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
     return noOpenUrlInfo;
   }
@@ -1366,7 +1367,7 @@ public class OpenUrlResolver {
     // try resolving from the metadata database first
     try {
       //DbManager dbMgr = daemon.getDbManager();
-      DbManager dbMgr = getDbManager();
+      MetadataDbManager dbMgr = getMetadataDbManager();
       OpenUrlInfo aResolved = resolveFromIssn(dbMgr, issn, pub, date, 
                                   volume, issue, spage, artnum, author, atitle);
       if (aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
@@ -1432,7 +1433,7 @@ public class OpenUrlResolver {
    * @return the article URL
    */
   private OpenUrlInfo resolveFromIssn(
-      DbManager dbMgr,
+      MetadataDbManager dbMgr,
       String issn, String pub, String date, String volume, String issue, 
       String spage, String artnum, String author, String atitle) {
           
@@ -1607,7 +1608,7 @@ public class OpenUrlResolver {
     } catch (DbException dbe) {
       log.error("Getting ISSN:" + issn, dbe);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
     return (resolved == null) ? noOpenUrlInfo : resolved;
   }
@@ -1643,7 +1644,7 @@ public class OpenUrlResolver {
 
     //PreparedStatement stmt = 
 	//daemon.getDbManager().prepareStatement(conn, query);
-    DbManager dbMgr = getDbManager();
+    MetadataDbManager dbMgr = getMetadataDbManager();
     PreparedStatement stmt = dbMgr.prepareStatement(conn, query);
 
     int count = 0;
@@ -2326,7 +2327,7 @@ public class OpenUrlResolver {
     try {
       // resolve from database manager
       //DbManager dbMgr = daemon.getDbManager();
-      DbManager dbMgr = getDbManager();
+      MetadataDbManager dbMgr = getMetadataDbManager();
       OpenUrlInfo aResolved = resolveFromIsbn(
           dbMgr, isbn, pub, date, volume, edition, 
           chapter, spage, author, atitle);
@@ -2379,7 +2380,7 @@ public class OpenUrlResolver {
    * @return the url
    */
   private OpenUrlInfo resolveFromIsbn(
-      DbManager dbMgr, String isbn, String pub,
+      MetadataDbManager dbMgr, String isbn, String pub,
       String date, String volume, String edition, 
       String chapter, String spage, String author, String atitle) {
     final String DEBUG_HEADER = "resolveFromIsbn(): ";
@@ -2571,7 +2572,7 @@ public class OpenUrlResolver {
       log.error("Getting ISBN:" + isbn, dbe);
         
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
     return (resolved == null) ? noOpenUrlInfo : resolved;
   }  
@@ -2619,7 +2620,8 @@ public class OpenUrlResolver {
    * 
    * @return a DbManager with the database manager.
    */
-  private DbManager getDbManager() {
-    return (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+  private MetadataDbManager getMetadataDbManager() {
+    return (MetadataDbManager)LockssApp
+	.getManager(MetadataDbManager.getManagerKey());
   }
 }

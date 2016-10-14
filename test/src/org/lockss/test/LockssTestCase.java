@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +37,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.db.DbManager;
+import org.lockss.metadata.MetadataDbManager;
 import org.lockss.util.*;
 
 
@@ -2085,7 +2081,7 @@ public class LockssTestCase extends TestCase {
    * @return a DbManager already started that uses a database snapshot
    *         previously created.
    */
-  protected DbManager getTestDbManager(String tempDirPath) {
+  protected MetadataDbManager getTestDbManager(String tempDirPath) {
     // Set the database log.
     System.setProperty("derby.stream.error.file",
 	new File(tempDirPath, "derby.log").getAbsolutePath());
@@ -2100,7 +2096,7 @@ public class LockssTestCase extends TestCase {
     }
 
     // Create the database manager skipping the asynchronous updates.
-    DbManager dbManager = new DbManager(true);
+    MetadataDbManager dbManager = new MetadataDbManager(true);
     mockDaemon.setDbManager(dbManager);
     dbManager.initService(mockDaemon);
     dbManager.startService();

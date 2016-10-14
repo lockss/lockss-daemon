@@ -83,20 +83,20 @@ public class JdbcContext {
       if (isValidStatement) {
 	// Yes: Close any result set.
 	try {
-	  DbManager.safeCloseResultSet(statement.getResultSet());
+	  JdbcBridge.safeCloseResultSet(statement.getResultSet());
 	} catch (SQLException sqle) {
 	  log.error("Cannot close result set", sqle);
 	}
 
 	// Close the statement.
-	DbManager.safeCloseStatement(statement);
+	JdbcBridge.safeCloseStatement(statement);
       }
 
       // Release the connection.
       if (connection != null) {
 	try {
 	  if (!connection.isClosed()) {
-	    DbManager.safeRollbackAndClose(connection);
+	    JdbcBridge.safeRollbackAndClose(connection);
 	  }
 	} catch (SQLException sqle) {
 	  log.error("Cannot determine whether connection is closed", sqle);

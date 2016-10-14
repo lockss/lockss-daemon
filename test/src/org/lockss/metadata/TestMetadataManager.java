@@ -26,8 +26,8 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
 import static org.lockss.metadata.MetadataManagerStatusAccessor.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -36,7 +36,6 @@ import java.util.*;
 import org.lockss.config.*;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.PluginException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -61,7 +60,7 @@ public class TestMetadataManager extends LockssTestCase {
   private MetadataManager metadataManager;
   private MetadataManagerSql metadataManagerSql;
   private PluginManager pluginManager;
-  private DbManager dbManager;
+  private MetadataDbManager dbManager;
 
   /** set of AuIds of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
@@ -348,7 +347,7 @@ public class TestMetadataManager extends LockssTestCase {
 	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus())
 	.size());
 
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
   }
 
   private void runTestPendingAu() throws Exception {
@@ -419,7 +418,7 @@ public class TestMetadataManager extends LockssTestCase {
     checkExecuteCount(conn, "delete from " + PENDING_AU_TABLE, 3);
 
     conn.commit();
-    DbManager.safeRollbackAndClose(conn);
+    MetadataDbManager.safeRollbackAndClose(conn);
 
     // Re-enable re-indexing.
     metadataManager.setIndexingEnabled(true);
@@ -496,7 +495,7 @@ public class TestMetadataManager extends LockssTestCase {
     checkExecuteCount(conn, "delete from " + PENDING_AU_TABLE, 3);
 
     conn.commit();
-    DbManager.safeRollbackAndClose(conn);
+    MetadataDbManager.safeRollbackAndClose(conn);
 
     // Re-enable re-indexing.
     metadataManager.setIndexingEnabled(true);
@@ -646,7 +645,7 @@ public class TestMetadataManager extends LockssTestCase {
     checkExecuteCount(con, "delete from " + PENDING_AU_TABLE, 6);
 
     con.commit();
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
 
     // Re-enable re-indexing.
     metadataManager.setIndexingEnabled(true);
@@ -710,7 +709,7 @@ public class TestMetadataManager extends LockssTestCase {
     }
     assertEquals(42, results.size());
 
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
   }
   
   private void runDeleteAuMetadataTest() throws Exception {
@@ -760,7 +759,7 @@ public class TestMetadataManager extends LockssTestCase {
     }
     assertEquals(21, results.size());
 
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
   }
 
   /**
@@ -810,7 +809,7 @@ public class TestMetadataManager extends LockssTestCase {
 
     // Make sure that it is there.
     assertEquals(1, metadataManager.findDisabledPendingAus(con).size());
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
   }
   
   private void runTestFailedIndexingAu() throws Exception {
@@ -822,7 +821,7 @@ public class TestMetadataManager extends LockssTestCase {
 
     // Make sure that it is there.
     assertEquals(1, metadataManager.findFailedIndexingPendingAus(con).size());
-    DbManager.safeRollbackAndClose(con);
+    MetadataDbManager.safeRollbackAndClose(con);
   }
 
   private void runTestFindPublication() throws Exception {
@@ -921,7 +920,7 @@ public class TestMetadataManager extends LockssTestCase {
     runTestFindBookSeries(conn, journals, mdItems, publishers, names, pIssns,
 	eIssns,	pIsbns, eIsbns);
 
-    DbManager.safeRollbackAndClose(conn);
+    MetadataDbManager.safeRollbackAndClose(conn);
   }
 
   private void runTestFindJournal(Connection conn, List<Long> journals,
@@ -1499,7 +1498,7 @@ public class TestMetadataManager extends LockssTestCase {
 	  results.get(mdItemSeq), mdItemSeq));
     }
 
-    DbManager.safeRollbackAndClose(conn);
+    MetadataDbManager.safeRollbackAndClose(conn);
   }
 
   private void runMetadataMonitorTest() throws Exception {
@@ -1561,7 +1560,7 @@ public class TestMetadataManager extends LockssTestCase {
       }
     }
 
-    DbManager.safeRollbackAndClose(conn);
+    MetadataDbManager.safeRollbackAndClose(conn);
   }
 
   private void runTestMandatoryMetadataFields() throws Exception {

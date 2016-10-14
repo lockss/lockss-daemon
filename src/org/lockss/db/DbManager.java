@@ -38,12 +38,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
+import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource;
+import org.apache.derby.jdbc.EmbeddedDataSource;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.config.ConfigManager;
@@ -55,203 +58,166 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 /**
- * Database manager.
+ * Generic database manager.
  * 
- * @author Fernando Garcia-Loygorri
+ * @author Fernando García-Loygorri
  */
 public class DbManager extends BaseLockssDaemonManager
   implements ConfigurableManager {
-  private static final Logger log = Logger.getLogger(DbManager.class);
-
-  // Prefix for the database manager configuration entries.
-  private static final String PREFIX = Configuration.PREFIX + "dbManager.";
-
-  // Prefix for the Derby configuration entries.
-  private static final String DERBY_ROOT = PREFIX + "derby";
+  protected static final Logger log = Logger.getLogger(DbManager.class);
 
   /**
    * Derby log append option. Changes require daemon restart.
    */
-  public static final String PARAM_DERBY_INFOLOG_APPEND = DERBY_ROOT
-      + ".infologAppend";
-  public static final String DEFAULT_DERBY_INFOLOG_APPEND = "false";
+  protected static final String DEFAULT_DERBY_INFOLOG_APPEND = "false";
 
   /**
    * Derby log query plan option. Changes require daemon restart.
    */
-  public static final String PARAM_DERBY_LANGUAGE_LOGQUERYPLAN = DERBY_ROOT
-      + ".languageLogqueryplan";
-  public static final String DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN = "false";
+  protected static final String DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN = "false";
 
   /**
    * Derby log statement text option. Changes require daemon restart.
    */
-  public static final String PARAM_DERBY_LANGUAGE_LOGSTATEMENTTEXT = DERBY_ROOT
-      + ".languageLogstatementtext";
-  public static final String DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT = "false";
+  protected static final String DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT =
+      "false";
 
   /**
    * Name of the Derby log file path. Changes require daemon restart.
    */
-  public static final String PARAM_DERBY_STREAM_ERROR_FILE = DERBY_ROOT
-      + ".streamErrorFile";
-  public static final String DEFAULT_DERBY_STREAM_ERROR_FILE = "derby.log";
+  protected static final String DEFAULT_DERBY_STREAM_ERROR_FILE = "derby.log";
 
   /**
    * Name of the Derby log severity level. Changes require daemon restart.
    */
-  public static final String PARAM_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL =
-      DERBY_ROOT + ".streamErrorLogseveritylevel";
-  public static final String DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL =
+  protected static final String DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL =
       "4000";
-
-  // Prefix for the datasource configuration entries.
-  private static final String DATASOURCE_ROOT = PREFIX + "datasource";
 
   /**
    * Name of the database datasource class. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_CLASSNAME = DATASOURCE_ROOT
-      + ".className";
-  public static final String DEFAULT_DATASOURCE_CLASSNAME =
-      "org.apache.derby.jdbc.EmbeddedDataSource";
+  protected static final String DEFAULT_DATASOURCE_CLASSNAME =
+      EmbeddedDataSource.class.getCanonicalName();
 
   /**
    * Name of the database create. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_CREATEDATABASE = DATASOURCE_ROOT
-      + ".createDatabase";
-  public static final String DEFAULT_DATASOURCE_CREATEDATABASE = "create";
-
-  /**
-   * Name of the database with the relative path to the DB directory. Changes
-   * require daemon restart.
-   */
-  public static final String PARAM_DATASOURCE_DATABASENAME = DATASOURCE_ROOT
-      + ".databaseName";
-  public static final String DEFAULT_DATASOURCE_DATABASENAME = "db/DbManager";
+  protected static final String DEFAULT_DATASOURCE_CREATEDATABASE = "create";
 
   /**
    * Port number of the database. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_PORTNUMBER = DATASOURCE_ROOT
-      + ".portNumber";
-  public static final String DEFAULT_DATASOURCE_PORTNUMBER = "1527";
-
-  public static final String DEFAULT_DATASOURCE_PORTNUMBER_PG = "5432";
-
-  public static final String DEFAULT_DATASOURCE_PORTNUMBER_MYSQL = "3306";
+  protected static final String DEFAULT_DATASOURCE_PORTNUMBER = "1527";
+  protected static final String DEFAULT_DATASOURCE_PORTNUMBER_PG = "5432";
+  protected static final String DEFAULT_DATASOURCE_PORTNUMBER_MYSQL = "3306";
 
   /**
    * Name of the server. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_SERVERNAME = DATASOURCE_ROOT
-      + ".serverName";
-  public static final String DEFAULT_DATASOURCE_SERVERNAME = "localhost";
+  protected static final String DEFAULT_DATASOURCE_SERVERNAME = "localhost";
 
   /**
    * Name of the database user. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_USER = DATASOURCE_ROOT + ".user";
-  public static final String DEFAULT_DATASOURCE_USER = "LOCKSS";
+  protected static final String DEFAULT_DATASOURCE_USER = "LOCKSS";
 
   /**
    * Name of the existing database password. Changes require daemon restart.
    */
-  public static final String PARAM_DATASOURCE_PASSWORD = DATASOURCE_ROOT
-      + ".password";
-  public static final String DEFAULT_DATASOURCE_PASSWORD = "insecure";
+  protected static final String DEFAULT_DATASOURCE_PASSWORD = "insecure";
 
   /**
    * Set to false to prevent DbManager from running
    */
-  public static final String PARAM_DBMANAGER_ENABLED = PREFIX + "enabled";
-  static final boolean DEFAULT_DBMANAGER_ENABLED = true;
+  protected static final boolean DEFAULT_DBMANAGER_ENABLED = true;
 
   /**
    * Maximum number of retries for transient SQL exceptions.
    */
-  public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "maxRetryCount";
-  public static final int DEFAULT_MAX_RETRY_COUNT = 10;
+  protected static final int DEFAULT_MAX_RETRY_COUNT = 10;
 
   /**
    * Delay  between retries for transient SQL exceptions.
    */
-  public static final String PARAM_RETRY_DELAY = PREFIX + "retryDelay";
-  public static final long DEFAULT_RETRY_DELAY = 3 * Constants.SECOND;
+  protected static final long DEFAULT_RETRY_DELAY = 3 * Constants.SECOND;
 
   /**
    * SQL statement fetch size.
    */
-  public static final String PARAM_FETCH_SIZE = PREFIX + "fetchSize";
   public static final int DEFAULT_FETCH_SIZE = 5000;
 
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
   // An indication of whether this object has been enabled.
-  private boolean dbManagerEnabled = DEFAULT_DBMANAGER_ENABLED;
+  protected boolean dbManagerEnabled = DEFAULT_DBMANAGER_ENABLED;
 
   // The database data source.
-  private DataSource dataSource = null;
+  protected DataSource dataSource = null;
 
   // The data source configuration.
-  private Configuration dataSourceConfig = null;
+  protected Configuration dataSourceConfig = null;
 
   // The data source class name.
-  private String dataSourceClassName = null;
+  protected String dataSourceClassName = null;
 
   // The data source database name.
-  private String dataSourceDbName = null;
+  protected String dataSourceDbName = null;
 
   // The data source user.
-  private String dataSourceUser = null;
+  protected String dataSourceUser = null;
 
   // The data source password.
-  private String dataSourcePassword = null;
+  protected String dataSourcePassword = null;
 
   // The network server control.
-  private NetworkServerControl networkServerControl = null;
+  protected NetworkServerControl networkServerControl = null;
 
   // An indication of whether this object is ready to be used.
-  private boolean ready = false;
+  protected boolean ready = false;
 
-  // The version of the database to be targeted by this daemon.
+  // The version of the database subsystem to be targeted by this daemon.
   //
   // After this service has started successfully, this is the version of the
-  // database that will be in place, as long as the database version prior to
-  // starting the service was not higher already.
-  private int targetDatabaseVersion = 28;
+  // database subsystem that will be in place, as long as the database subsystem
+  // version prior to starting the service was not higher already.
+  protected int targetDatabaseVersion = 0;
 
   // The database version updates that are performed asynchronously.
-  private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
+  protected int[] asynchronousUpdates = null;
 
   // An indication of whether to perform only synchronous updates to the
   // database. This is useful for performance reasons when creating an empty
   // database from scratch.
-  private boolean skipAsynchronousUpdates = false;
+  protected boolean skipAsynchronousUpdates = false;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
-  private int maxRetryCount = DEFAULT_MAX_RETRY_COUNT;
+  protected int maxRetryCount = DEFAULT_MAX_RETRY_COUNT;
 
   // The interval to wait between consecutive retries when encountering
   // transient SQL exceptions.
-  private long retryDelay = DEFAULT_RETRY_DELAY;
+  protected long retryDelay = DEFAULT_RETRY_DELAY;
 
   // The SQL statement fetch size.
-  private int fetchSize = DEFAULT_FETCH_SIZE;
+  protected int fetchSize = DEFAULT_FETCH_SIZE;
 
   // An indication of whether the database was booted.
-  private boolean dbBooted = false;
+  protected boolean dbBooted = false;
 
   // The spawned threads.
-  private List<Thread> threads = new ArrayList<Thread>();
+  protected List<Thread> threads = new ArrayList<Thread>();
 
   // The SQL code executor.
-  private DbManagerSql dbManagerSql = new DbManagerSql(null,
+  protected DbManagerSql dbManagerSql = new DbManagerSql(null,
       DEFAULT_DATASOURCE_CLASSNAME, DEFAULT_DATASOURCE_USER,
       DEFAULT_MAX_RETRY_COUNT, DEFAULT_RETRY_DELAY, DEFAULT_FETCH_SIZE);
+
+  private static Map<String, DbCredentials> dbCredentialsMap =
+      new HashMap<String, DbCredentials>();
+
+  // The database subsystem.
+  private static final String DB_VERSION_SUBSYSTEM = "DbManager";
 
   /**
    * Default constructor.
@@ -326,24 +292,6 @@ public class DbManager extends BaseLockssDaemonManager
 			Configuration.Differences changedKeys) {
     final String DEBUG_HEADER = "setConfig(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    if (changedKeys.contains(PREFIX)) {
-      // Update the reconfigured parameters.
-      maxRetryCount =
-	  config.getInt(PARAM_MAX_RETRY_COUNT, DEFAULT_MAX_RETRY_COUNT);
-      dbManagerSql.setMaxRetryCount(maxRetryCount);
-
-      retryDelay =
-	  config.getTimeInterval(PARAM_RETRY_DELAY, DEFAULT_RETRY_DELAY);
-      dbManagerSql.setRetryDelay(retryDelay);
-
-      dbManagerEnabled =
-	  config.getBoolean(PARAM_DBMANAGER_ENABLED, DEFAULT_DBMANAGER_ENABLED);
-
-      fetchSize = config.getInt(PARAM_FETCH_SIZE, DEFAULT_FETCH_SIZE);
-      dbManagerSql.setFetchSize(fetchSize);
-    }
-
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
@@ -370,6 +318,10 @@ public class DbManager extends BaseLockssDaemonManager
     ready = false;
     dataSource = null;
     dbManagerSql.setDataSource(dataSource);
+  }
+
+  protected void setDbManagerSql(DbManagerSql dbManagerSql) {
+    this.dbManagerSql = dbManagerSql;
   }
 
   /**
@@ -691,117 +643,6 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Provides the database version.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @return an int with the database version.
-   * @throws DbException
-   *           if this object is not ready or any problem occurred getting the
-   *           database version.
-   */
-  public int getDatabaseVersion(Connection conn) throws DbException {
-    if (!ready) {
-      throw new DbException("DbManager has not been initialized.");
-    }
-
-    try {
-      return dbManagerSql.getHighestNumberedDatabaseVersion(conn);
-    } catch (SQLException sqle) {
-      String message = "Cannot get the database version";
-      log.error(message, sqle);
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot get the database version";
-      log.error(message, re);
-      throw new DbException(message, re);
-    }
-  }
-
-  /**
-   * Adds a platform to the database during initialization.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param platformName
-   *          A String with the platform name.
-   * @return a Long with the identifier of the platform just added.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long addPlatform(Connection conn, String platformName)
-      throws DbException {
-    if (!ready) {
-      throw new DbException("DbManager has not been initialized.");
-    }
-
-    try {
-      return dbManagerSql.addPlatform(conn, platformName);
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot add platform '" + platformName + "'", sqle);
-    } catch (RuntimeException re) {
-      throw new DbException("Cannot add platform '" + platformName + "'", re);
-    }
-  }
-
-  /**
-   * Provides the URLs of a metadata item.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @return a Map<String, String> with the URL/feature pairs.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Map<String, String> getMdItemUrls(Connection conn, Long mdItemSeq)
-      throws DbException {
-    if (!ready) {
-      throw new DbException("DbManager has not been initialized.");
-    }
-
-    try {
-      return dbManagerSql.getMdItemUrls(conn, mdItemSeq);
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot get URLs for mdItemSeq = " + mdItemSeq,
-	  sqle);
-    } catch (RuntimeException re) {
-      throw new DbException("Cannot get URLs for mdItemSeq = " + mdItemSeq, re);
-    }
-  }
-
-  /**
-   * Updates the active flag of an Archival Unit.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param auId
-   *          A String with the identifier of the Archival Unit.
-   * @param isActive
-   *          A boolean with the indication of whether the ArchivalUnit is
-   *          active.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public void updateAuActiveFlag(Connection conn, String auId, boolean isActive)
-      throws DbException {
-    if (!ready) {
-      throw new DbException("DbManager has not been initialized.");
-    }
-
-    try {
-      dbManagerSql.updateAuActiveFlag(conn, auId, isActive);
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot update active flag of AU = " + auId + " to "
-	  + isActive, sqle);
-    } catch (RuntimeException re) {
-      throw new DbException("Cannot update active flag of AU = " + auId + " to "
-	  + isActive, re);
-    }
-  }
-
-  /**
    * Provides the SQL code executor.
    * 
    * @return a DbManagerSql with the SQL code executor.
@@ -821,73 +662,8 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @return a DbManagerSql with the SQL code executor.
    */
-  DbManagerSql getDbManagerSqlBeforeReady() {
+  private DbManagerSql getDbManagerSqlBeforeReady() {
     return dbManagerSql;
-  }
-
-  /**
-   * Sets the version of the database that is the upgrade target of this daemon.
-   * 
-   * @param version
-   *          An int with the target version of the database.
-   */
-  void setTargetDatabaseVersion(int version) {
-    targetDatabaseVersion = version;
-  }
-
-  /**
-   * Sets up the database for a given version.
-   * 
-   * @param finalVersion
-   *          An int with the version of the database to be set up.
-   * @return <code>true</code> if the database was successfully set up,
-   *         <code>false</code> otherwise.
-   */
-  boolean setUpDatabase(int finalVersion) {
-    final String DEBUG_HEADER = "setUpDatabase(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "finalVersion = " + finalVersion);
-
-    // Do nothing to set up a non-existent database.
-    if (finalVersion < 1) {
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "success = true");
-      return true;
-    }
-
-    boolean success = false;
-    Connection conn = null;
-
-    try {
-      // Set up the database infrastructure.
-      setUpInfrastructure();
-
-      // Get a connection to the database.
-      conn = dbManagerSql.getConnection();
-
-      // Set up the database to version 1.
-      dbManagerSql.setUpDatabaseVersion1(conn);
-
-      // Update the database to the final version.
-      int lastRecordedVersion = updateDatabase(conn, 1, finalVersion);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastRecordedVersion = "
-	  + lastRecordedVersion);
-
-      // Commit this partial update.
-      DbManagerSql.commitOrRollback(conn, log);
-
-      success = true;
-    } catch (SQLException sqle) {
-      log.error(sqle.getMessage() + " - DbManager not ready", sqle);
-    } catch (DbException dbe) {
-      log.error(dbe.getMessage() + " - DbManager not ready", dbe);
-    } catch (RuntimeException re) {
-      log.error(re.getMessage() + " - DbManager not ready", re);
-    } finally {
-      DbManagerSql.safeRollbackAndClose(conn);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "success = " + success);
-    return success;
   }
 
   /**
@@ -895,7 +671,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @return a String with the data source class name.
    */
-  String getDataSourceClassNameBeforeReady() {
+  public String getDataSourceClassNameBeforeReady() {
     return dataSourceClassName;
   }
 
@@ -904,7 +680,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @return a String with the data source database name.
    */
-  String getDataSourceDbNameBeforeReady() {
+  public String getDataSourceDbNameBeforeReady() {
     return dataSourceDbName;
   }
 
@@ -913,7 +689,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @return a String with the data source user name.
    */
-  String getDataSourceUserBeforeReady() {
+  public String getDataSourceUserBeforeReady() {
     return dataSourceUser;
   }
 
@@ -922,7 +698,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @return a String with the data source password.
    */
-  String getDataSourcePasswordBeforeReady() {
+  public String getDataSourcePasswordBeforeReady() {
     return dataSourcePassword;
   }
 
@@ -968,7 +744,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred setting up the database infrastructure.
    */
-  private void setUpInfrastructure() throws DbException {
+  protected void setUpInfrastructure() throws DbException {
     final String DEBUG_HEADER = "setUpInfrastructure(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -984,9 +760,9 @@ public class DbManager extends BaseLockssDaemonManager
     // Check whether authentication is required and it is not available.
     if (StringUtil.isNullString(dataSourceUser)
 	|| (dbManagerSql.isTypeDerby()
-	&& !"org.apache.derby.jdbc.EmbeddedDataSource"
+	&& !EmbeddedDataSource.class.getCanonicalName()
 	    .equals(dataSourceClassName)
-	&& !"org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource"
+	&& !EmbeddedConnectionPoolDataSource.class.getCanonicalName()
 	    .equals(dataSourceClassName)
 	&& StringUtil.isNullString(dataSourcePassword))) {
       // Yes: Report the problem.
@@ -1073,11 +849,10 @@ public class DbManager extends BaseLockssDaemonManager
     Configuration dsConfig = ConfigManager.newConfiguration();
 
     // Populate it from the current configuration datasource tree.
-    dsConfig.copyFrom(currentConfig.getConfigTree(DATASOURCE_ROOT));
+    dsConfig.copyFrom(currentConfig.getConfigTree(getDataSourceRootName()));
 
     // Save the default class name, if not configured.
-    dsConfig.put("className", currentConfig.get(
-	PARAM_DATASOURCE_CLASSNAME, DEFAULT_DATASOURCE_CLASSNAME));
+    dsConfig.put("className", getDataSourceClassName(currentConfig));
     dataSourceClassName = dsConfig.get("className");
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "dataSourceClassName = " + dataSourceClassName);
@@ -1087,30 +862,24 @@ public class DbManager extends BaseLockssDaemonManager
     // Check whether the Derby database is being used.
     if (dbManagerSql.isTypeDerby()) {
       // Yes: Save the Derby creation directive, if not configured.
-      dsConfig.put("createDatabase", currentConfig.get(
-	  PARAM_DATASOURCE_CREATEDATABASE, DEFAULT_DATASOURCE_CREATEDATABASE));
+      dsConfig.put("createDatabase",
+	  getDataSourceCreatedDatabase(currentConfig));
     }
 
     // Save the port number, if not configured.
     if (dbManagerSql.isTypeDerby()) {
-      dsConfig.put("portNumber", currentConfig.get(
-	  PARAM_DATASOURCE_PORTNUMBER, DEFAULT_DATASOURCE_PORTNUMBER));
+      dsConfig.put("portNumber", getDataSourcePortNumber(currentConfig));
     } else if (dbManagerSql.isTypePostgresql()) {
-      dsConfig.put("portNumber",
-	  currentConfig.get(PARAM_DATASOURCE_PORTNUMBER,
-	      		    DEFAULT_DATASOURCE_PORTNUMBER_PG));
+      dsConfig.put("portNumber", getDataSourcePortNumber(currentConfig));
     } else if (dbManagerSql.isTypeMysql()) {
-      dsConfig.put("port", currentConfig.get(PARAM_DATASOURCE_PORTNUMBER,
-	  DEFAULT_DATASOURCE_PORTNUMBER_MYSQL));
+      dsConfig.put("port", getDataSourcePortNumber(currentConfig));
     }
 
     // Save the server name, if not configured.
-    dsConfig.put("serverName", currentConfig.get(
-	PARAM_DATASOURCE_SERVERNAME, DEFAULT_DATASOURCE_SERVERNAME));
+    dsConfig.put("serverName", getDataSourceServerName(currentConfig));
 
     // Save the user name, if not configured.
-    dsConfig.put("user",
-	currentConfig.get(PARAM_DATASOURCE_USER, DEFAULT_DATASOURCE_USER));
+    dsConfig.put("user", getDataSourceUser(currentConfig));
     dataSourceUser = dsConfig.get("user");
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "dataSourceUser = " + dataSourceUser);
@@ -1118,40 +887,100 @@ public class DbManager extends BaseLockssDaemonManager
     dbManagerSql.setDataSourceUser(dataSourceUser);
 
     // Save the configured password.
-    dataSourcePassword = currentConfig.get(PARAM_DATASOURCE_PASSWORD,
-					   DEFAULT_DATASOURCE_PASSWORD);
+    dataSourcePassword = getDataSourcePassword(currentConfig);
     //if (log.isDebug3())
       //log.debug3(DEBUG_HEADER + "dataSourcePassword = " + dataSourcePassword);
 
     dsConfig.put("password", dataSourcePassword);
 
-    // Check whether the configured datasource database name does not exist.
-    if (dsConfig.get("databaseName") == null) {
-      // Yes: Check whether the Derby database is being used.
-      if (dbManagerSql.isTypeDerby()) {
-	// Yes: Get the data source root directory.
-	File datasourceDir = ConfigManager.getConfigManager()
-	    .findConfiguredDataDir(PARAM_DATASOURCE_DATABASENAME,
-				   DEFAULT_DATASOURCE_DATABASENAME, false);
+    // Save the configured database name.
+    dataSourceDbName = getDataSourceDatabaseName(currentConfig);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "dataSourceDbName = '" + dataSourceDbName + "'.");
 
-	// Save the database name.
-	dsConfig.put("databaseName",
-	    FileUtil.getCanonicalOrAbsolutePath(datasourceDir));
+    // Check whether the Derby database is being used.
+    if (dbManagerSql.isTypeDerby()) {
+      // Yes: Get the data source root directory.
+      File datasourceDir = ConfigManager.getConfigManager()
+	  .findConfiguredDataDir(dataSourceDbName, dataSourceDbName, false);
+	      //"db/" + this.getClass().getSimpleName(), false);
 
-	// No: Check whether the PostgreSQL or MySQL databases are being used.
-      } else if (dbManagerSql.isTypePostgresql() || dbManagerSql.isTypeMysql())
-      {
-	// Yes: Use the user name as the database name.
-	dsConfig.put("databaseName", dataSourceUser);
+      // Save the data source root directory.
+      dataSourceDbName = FileUtil.getCanonicalOrAbsolutePath(datasourceDir);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "dataSourceDbName = '" + dataSourceDbName + "'.");
+    }
+
+    dsConfig.put("databaseName", dataSourceDbName);
+
+    // Save the Derby credentials for later authentication.
+    if (dbManagerSql.isTypeDerby()) {
+      synchronized (this) {
+	// Get the stored credentials for this database.
+	DbCredentials dbCredentials = dbCredentialsMap.get(dataSourceDbName);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "dbCredentials = " + dbCredentials);
+
+	// Check whether there are no stored credentials for this database.
+	if (dbCredentials == null) {
+	  // Yes: Create the credentials for this database.
+	  dbCredentials = new DbCredentials(dataSourceUser, dataSourcePassword,
+	      dataSourceClassName);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "dbCredentials = " + dbCredentials);
+
+	  // Store the credentials for this database.
+	  dbCredentialsMap.put(dataSourceDbName, dbCredentials);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "dbCredentialsMap = " + dbCredentialsMap);
+	}
       }
     }
 
-    dataSourceDbName = dsConfig.get("databaseName");
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "datasourceDatabaseName = '"
-	  + dsConfig.get("databaseName") + "'.");
-
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return dsConfig;
+  }
+
+  protected String getDataSourceRootName() {
+    return null;
+  }
+
+  protected String getDataSourceClassName(Configuration config) {
+    return DEFAULT_DATASOURCE_CLASSNAME;
+  }
+
+  protected String getDataSourceCreatedDatabase(Configuration config) {
+    return DEFAULT_DATASOURCE_CREATEDATABASE;
+  }
+
+  protected String getDataSourcePortNumber(Configuration config) {
+    if (dbManagerSql.isTypePostgresql()) {
+      return DEFAULT_DATASOURCE_PORTNUMBER_PG;
+    } else if (dbManagerSql.isTypeMysql()) {
+      return DEFAULT_DATASOURCE_PORTNUMBER_MYSQL;
+    }
+
+    return DEFAULT_DATASOURCE_PORTNUMBER;
+  }
+
+  protected String getDataSourceServerName(Configuration config) {
+    return DEFAULT_DATASOURCE_SERVERNAME;
+  }
+
+  protected String getDataSourceUser(Configuration config) {
+    return DEFAULT_DATASOURCE_USER;
+  }
+
+  protected String getDataSourcePassword(Configuration config) {
+    return DEFAULT_DATASOURCE_PASSWORD;
+  }
+
+  protected String getDataSourceDatabaseName(Configuration config) {
+    if (dbManagerSql.isTypeDerby()) {
+      return "db/" + this.getClass().getSimpleName();
+    }
+
+    return this.getClass().getSimpleName();
   }
 
   /**
@@ -1165,42 +994,59 @@ public class DbManager extends BaseLockssDaemonManager
     Configuration currentConfig = ConfigManager.getCurrentConfig();
 
     // Save the default Derby log append option, if not configured.
-    System.setProperty("derby.infolog.append", currentConfig.get(
-	PARAM_DERBY_INFOLOG_APPEND, DEFAULT_DERBY_INFOLOG_APPEND));
+    System.setProperty("derby.infolog.append",
+	getDerbyInfoLogAppend(currentConfig));
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "derby.infolog.append = "
 	  + System.getProperty("derby.infolog.append"));
 
     // Save the default Derby log query plan option, if not configured.
-    System.setProperty("derby.language.logQueryPlan", currentConfig.get(
-	PARAM_DERBY_LANGUAGE_LOGQUERYPLAN,
-	DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN));
+    System.setProperty("derby.language.logQueryPlan",
+	getDerbyLanguageLogQueryPlan(currentConfig));
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "derby.language.logQueryPlan = "
 	+ System.getProperty("derby.language.logQueryPlan"));
 
     // Save the default Derby log statement text option, if not configured.
-    System.setProperty("derby.language.logStatementText", currentConfig.get(
-	PARAM_DERBY_LANGUAGE_LOGSTATEMENTTEXT,
-	DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT));
+    System.setProperty("derby.language.logStatementText",
+	getDerbyLanguageLogStatementText(currentConfig));
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "derby.language.logStatementText = "
 	+ System.getProperty("derby.language.logStatementText"));
 
     // Save the default Derby log file path, if not configured.
-    System.setProperty("derby.stream.error.file", currentConfig.get(
-	PARAM_DERBY_STREAM_ERROR_FILE, DEFAULT_DERBY_STREAM_ERROR_FILE));
+    System.setProperty("derby.stream.error.file",
+	getDerbyStreamErrorFile(currentConfig));
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "derby.stream.error.file = "
 	+ System.getProperty("derby.stream.error.file"));
 
     // Save the default Derby log severity level, if not configured.
-    System.setProperty("derby.stream.error.logSeverityLevel", currentConfig.get(
-	PARAM_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL,
-	DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL));
+    System.setProperty("derby.stream.error.logSeverityLevel",
+	getDerbyStreamErrorLogSeverityLevel(currentConfig));
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "derby.stream.error.logSeverityLevel = "
 	+ System.getProperty("derby.stream.error.logSeverityLevel"));
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  protected String getDerbyInfoLogAppend(Configuration config) {
+    return DEFAULT_DERBY_INFOLOG_APPEND;
+  }
+
+  protected String getDerbyLanguageLogQueryPlan(Configuration config) {
+    return DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN;
+  }
+
+  protected String getDerbyLanguageLogStatementText(Configuration config) {
+    return DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT;
+  }
+
+  protected String getDerbyStreamErrorFile(Configuration config) {
+    return DEFAULT_DERBY_STREAM_ERROR_FILE;
+  }
+
+  protected String getDerbyStreamErrorLogSeverityLevel(Configuration config) {
+    return DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL;
   }
 
   /**
@@ -1611,19 +1457,48 @@ public class DbManager extends BaseLockssDaemonManager
     try {
       conn = dbManagerSql.getConnection();
 
-      // Find the current database version.
-      int existingDbVersion = 0;
+      // Check whether the version table does not exist.
+      if (!dbManagerSql.tableExists(conn, VERSION_TABLE)) {
+	// Yes.
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + VERSION_TABLE + " table does not exist.");
+	// Create the table (without the subsystem column).
+	dbManagerSql.createVersionTable(conn);
 
-      if (dbManagerSql.tableExists(conn, VERSION_TABLE)) {
+	// Add the subsystem column.
+	dbManagerSql.addVersionSubsystemColumn(conn);
+
+	// Record the DbManager subsystem version in the database.
+	int count = recordDbVersion(conn, DB_VERSION_SUBSYSTEM, 1);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+      } else {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + VERSION_TABLE + " table exists.");
-	existingDbVersion =
-	    dbManagerSql.getHighestNumberedDatabaseVersion(conn);
-      } else if (dbManagerSql.tableExists(conn, OBSOLETE_METADATA_TABLE)){
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + OBSOLETE_METADATA_TABLE + " table exists.");
-	existingDbVersion = 1;
       }
+
+      // Check whether the subsystem column of the version table does not exist.
+      if (!dbManagerSql.columnExists(conn, VERSION_TABLE, SUBSYSTEM_COLUMN)) {
+	// Yes.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + SUBSYSTEM_COLUMN
+	    + " column in " + VERSION_TABLE + " table does not exist.");
+
+	// Add the subsystem column.
+	dbManagerSql.addVersionSubsystemColumn(conn);
+
+	// Record the DbManager subsystem version in the database.
+	int count = recordDbVersion(conn, DB_VERSION_SUBSYSTEM, 1);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+      } else {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + SUBSYSTEM_COLUMN
+	    + " column in " + VERSION_TABLE + " table exists.");
+      }
+
+      String subsystem = this.getClass().getSimpleName();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subsystem = " + subsystem);
+
+      // Find the current database version.
+      int existingDbVersion = dbManagerSql.getHighestNumberedDatabaseVersion(
+	  conn, subsystem);
 
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "existingDbVersion = "
 	  + existingDbVersion);
@@ -1644,7 +1519,7 @@ public class DbManager extends BaseLockssDaemonManager
       if (existingDbVersion >= 2) {
 	// Yes: Get all the version updates recorded in the database.
 	List<Integer> recordedVersions =
-	    dbManagerSql.getSortedDatabaseVersions(conn);
+	    dbManagerSql.getSortedDatabaseVersions(conn, subsystem);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "recordedVersions = " + recordedVersions);
 
@@ -1658,7 +1533,7 @@ public class DbManager extends BaseLockssDaemonManager
 	      log.debug3(DEBUG_HEADER + "Recording version " + version + "...");
 
 	    // Record the version in the database.
-	    int count = recordDbVersion(conn, version);
+	    int count = recordDbVersion(conn, subsystem, version);
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
 	  }
 	} else {
@@ -1798,7 +1673,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred updating the database.
    */
-  private int updateDatabase(Connection conn, int existingDatabaseVersion,
+  protected int updateDatabase(Connection conn, int existingDatabaseVersion,
       int finalDatabaseVersion) throws DbException {
     final String DEBUG_HEADER = "updateDatabase(): ";
     if (log.isDebug2()) {
@@ -1822,76 +1697,7 @@ public class DbManager extends BaseLockssDaemonManager
 
       try {
 	// Perform the appropriate update for this version.
-	if (from == 0) {
-	  dbManagerSql.setUpDatabaseVersion1(conn);
-	} else if (from == 1) {
-	  dbManagerSql.updateDatabaseFrom1To2(conn);
-	} else if (from == 2) {
-	  dbManagerSql.updateDatabaseFrom2To3(conn);
-	} else if (from == 3) {
-	  dbManagerSql.updateDatabaseFrom3To4(conn);
-	} else if (from == 4) {
-	  dbManagerSql.updateDatabaseFrom4To5(conn);
-	} else if (from == 5) {
-	  dbManagerSql.updateDatabaseFrom5To6(conn);
-	} else if (from == 6) {
-	  dbManagerSql.updateDatabaseFrom6To7(conn);
-	} else if (from == 7) {
-	  dbManagerSql.updateDatabaseFrom7To8(conn);
-	} else if (from == 8) {
-	  dbManagerSql.updateDatabaseFrom8To9(conn);
-	} else if (from == 9) {
-	  if (!skipAsynchronousUpdates) {
-	    dbManagerSql.updateDatabaseFrom9To10(conn);
-	  }
-	} else if (from == 10) {
-	  dbManagerSql.updateDatabaseFrom10To11(conn);
-	} else if (from == 11) {
-	  dbManagerSql.updateDatabaseFrom11To12(conn);
-	} else if (from == 12) {
-	  dbManagerSql.updateDatabaseFrom12To13(conn);
-	} else if (from == 13) {
-	  dbManagerSql.updateDatabaseFrom13To14(conn);
-	} else if (from == 14) {
-	  if (!skipAsynchronousUpdates) {
-	    dbManagerSql.updateDatabaseFrom14To15(conn);
-	  }
-	} else if (from == 15) {
-	  dbManagerSql.updateDatabaseFrom15To16(conn);
-	} else if (from == 16) {
-	  if (!skipAsynchronousUpdates) {
-	    dbManagerSql.updateDatabaseFrom16To17(conn);
-	  }
-	} else if (from == 17) {
-	  dbManagerSql.updateDatabaseFrom17To18(conn);
-	} else if (from == 18) {
-	  dbManagerSql.updateDatabaseFrom18To19(conn);
-	} else if (from == 19) {
-	  if (!skipAsynchronousUpdates) {
-	    dbManagerSql.updateDatabaseFrom19To20(conn);
-	  }
-	} else if (from == 20) {
-	  dbManagerSql.updateDatabaseFrom20To21(conn);
-	} else if (from == 21) {
-	  if (!skipAsynchronousUpdates) {
-	    dbManagerSql.updateDatabaseFrom21To22(conn);
-	  }
-	} else if (from == 22) {
-	  dbManagerSql.updateDatabaseFrom22To23(conn);
-	} else if (from == 23) {
-	  dbManagerSql.updateDatabaseFrom23To24(conn);
-	} else if (from == 24) {
-	  dbManagerSql.updateDatabaseFrom24To25(conn);
-	} else if (from == 25) {
-	  dbManagerSql.updateDatabaseFrom25To26(conn);
-	} else if (from == 26) {
-	  dbManagerSql.updateDatabaseFrom26To27(conn);
-	} else if (from == 27) {
-	  dbManagerSql.updateDatabaseFrom27To28(conn);
-	} else {
-	  throw new DbException("Non-existent method to update the database "
-	      + "from version " + from + ".");
-	}
+	updateDatabaseToVersion(conn, from + 1);
 
 	success = true;
       } catch (SQLException sqle) {
@@ -1911,11 +1717,19 @@ public class DbManager extends BaseLockssDaemonManager
 		|| Arrays.binarySearch(asynchronousUpdates, from + 1) < 0) {
 	      // Yes: Record the current database version in the database.
 	      lastRecordedVersion = from + 1;
-	      recordDbVersion(conn, lastRecordedVersion);
+	      recordDbVersion(conn, this.getClass().getSimpleName(),
+		  lastRecordedVersion);
 	      if (log.isDebug())
 		log.debug("Database updated to version " + lastRecordedVersion);
 	    }
 	  } else {
+	    // No: Record the current database version in the database.
+	    lastRecordedVersion = from + 1;
+	    recordDbVersion(conn, this.getClass().getSimpleName(),
+		lastRecordedVersion);
+	    if (log.isDebug())
+	      log.debug("Database updated to version " + lastRecordedVersion);
+
 	    // Commit this partial update.
 	    try {
 	      DbManagerSql.commitOrRollback(conn, log);
@@ -1943,28 +1757,40 @@ public class DbManager extends BaseLockssDaemonManager
     return lastRecordedVersion;
   }
 
+  protected void updateDatabaseToVersion(Connection conn, int databaseVersion)
+      throws SQLException {
+  }
+
   /**
-   * Records in the database the database version.
+   * Records in the database a database subsystem version.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
+   * @param subsystem
+   *          A String with database subsystem name.
    * @param version
    *          An int with version to be recorded.
    * @return an int with the number of database rows recorded.
    * @throws SQLException
    *           if any problem occurred recording the database version.
    */
-  private int recordDbVersion(Connection conn, int version) throws DbException {
+  private int recordDbVersion(Connection conn, String subsystem, int version)
+      throws DbException {
     final String DEBUG_HEADER = "recordDbVersion(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "subsystem = " + subsystem);
+      log.debug2(DEBUG_HEADER + "version = " + version);
+    }
+
     int count = -1;
 
     try {
-      count = dbManagerSql.addDbVersion(conn, version);
+      count = dbManagerSql.addDbVersion(conn, subsystem, version);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
       DbManagerSql.commitOrRollback(conn, log);
     } catch (SQLException sqle) {
-      String message = "Cannot record updated database version " + version;
+      String message = "Cannot record updated database subsystem " + subsystem
+	  + " version " + version;
       log.error(message);
       try {
 	DbManagerSql.rollback(conn, log);
@@ -1981,7 +1807,8 @@ public class DbManager extends BaseLockssDaemonManager
       }
       throw new DbException(message, sqle);
     } catch (RuntimeException re) {
-      String message = "Cannot record updated database version " + version;
+      String message = "Cannot record updated database subsystem " + subsystem
+	  + " version " + version;
       log.error(message);
       try {
 	DbManagerSql.rollback(conn, log);
@@ -2009,7 +1836,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @param thread A Thread with the thread to be recorded.
    */
-  synchronized void recordThread(Thread thread) {
+  public synchronized void recordThread(Thread thread) {
     final String DEBUG_HEADER = "recordThread(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "thread = '" + thread + "'");
 
@@ -2024,7 +1851,7 @@ public class DbManager extends BaseLockssDaemonManager
    * 
    * @param name A String with the name to be cleaned up.
    */
-  synchronized void cleanUpThread(String name) {
+  public synchronized void cleanUpThread(String name) {
     final String DEBUG_HEADER = "cleanUpThread(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "name = '" + name + "'");
     Thread namedThread = null;
@@ -2058,7 +1885,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @param timeout A long with the number of millisecons to wait at most for
    * threads to die.
    */
-  synchronized void waitForThreadsToFinish(long timeout) {
+  public synchronized void waitForThreadsToFinish(long timeout) {
     final String DEBUG_HEADER = "waitForThreadsToFinish(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "timeout = " + timeout);
 
@@ -2079,6 +1906,11 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
+  /**
+   * Provides the numbers of the database updates that are still pending.
+   * 
+   * @return a List<String> with the database updates that are still pending.
+   */
   private synchronized List<String> getPendingUpdates() {
     final String DEBUG_HEADER = "getPendingUpdates(): ";
     List<String> result = new ArrayList<String>();
@@ -2101,296 +1933,7 @@ public class DbManager extends BaseLockssDaemonManager
     return result;
   }
 
-  /**
-   * Provides the identifier of a provider if existing or after creating it
-   * otherwise.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param providerLid
-   *          A String with the provider LOCKSS identifier.
-   * @param providerName
-   *          A String with the provider name.
-   * @return a Long with the identifier of the provider.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findOrCreateProvider(Connection conn, String providerLid,
-      String providerName) throws DbException {
-    final String DEBUG_HEADER = "findOrCreateProvider(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
-      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
-    }
-
-    Long providerSeq = null;
-
-    try {
-      providerSeq =
-	  dbManagerSql.findOrCreateProvider(conn, providerLid, providerName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot find or create provider";
-      log.error(message);
-      log.error("providerLid = '" + providerLid + "'");
-      log.error("providerName = '" + providerName + "'");
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot find or create provider";
-      log.error(message);
-      log.error("providerLid = '" + providerLid + "'");
-      log.error("providerName = '" + providerName + "'");
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
-    return providerSeq;
-  }
-
-  /**
-   * Provides the identifier of a provider.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param providerLid
-   *          A String with the provider LOCKSS identifier.
-   * @param providerName
-   *          A String with the provider name.
-   * @return a Long with the identifier of the provider.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findProvider(Connection conn, String providerLid,
-      String providerName) throws DbException {
-    final String DEBUG_HEADER = "findProvider(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "providerName = '" + providerName + "'");
-      log.debug2(DEBUG_HEADER + "providerLid = '" + providerLid + "'");
-    }
-
-    Long providerSeq = null;
-
-    try {
-      providerSeq = dbManagerSql.findProvider(conn, providerLid, providerName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot find provider";
-      log.error(message);
-      log.error("providerLid = '" + providerLid + "'");
-      log.error("providerName = '" + providerName + "'");
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot find provider";
-      log.error(message);
-      log.error("providerLid = '" + providerLid + "'");
-      log.error("providerName = '" + providerName + "'");
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
-    return providerSeq;
-  }
-
-  /**
-   * Provides an indication of whether a given database upgrade has been
-   * completed.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param version
-   *          An int with the version of the database upgrade to check.
-   * @return <code>true</code> if the database upgrade has been completed,
-   *         <code>false</code> otherwise.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public boolean isVersionCompleted(Connection conn, int version)
-      throws DbException {
-    final String DEBUG_HEADER = "isVersionCompleted(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
-
-    boolean result = false;
-
-    try {
-      result = dbManagerSql.isVersionCompleted(conn, version);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
-    } catch (SQLException sqle) {
-      String message = "Cannot find a database version";
-      log.error(message);
-      log.error("version = " + version);
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot find a database version";
-      log.error(message);
-      log.error("version = " + version);
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
-  }
-
-  /**
-   * Adds to the database a metadata item proprietary identifier.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @param proprietaryId
-   *          A String with the proprietary identifier of the metadata item.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public void addMdItemProprietaryId(Connection conn, Long mdItemSeq,
-      String proprietaryId) throws DbException {
-    final String DEBUG_HEADER = "addMdItemProprietaryId(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
-      log.debug2(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
-    }
-
-    try {
-      dbManagerSql.addMdItemProprietaryId(conn, mdItemSeq, proprietaryId);
-    } catch (SQLException sqle) {
-      String message = "Cannot add proprietary identifier";
-      log.error(message);
-      log.error("mdItemSeq = " + mdItemSeq);
-      log.error("proprietaryId = " + proprietaryId);
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot add proprietary identifier";
-      log.error(message);
-      log.error("mdItemSeq = " + mdItemSeq);
-      log.error("proprietaryId = " + proprietaryId);
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Provides the identifier of a publisher if existing or after creating it
-   * otherwise.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisherName
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findOrCreatePublisher(Connection conn, String publisherName)
-      throws DbException {
-    final String DEBUG_HEADER = "findOrCreatePublisher(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
-
-    Long publisherSeq = null;
-
-    try {
-      publisherSeq = dbManagerSql.findOrCreatePublisher(conn, publisherName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot find or create publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot find or create publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    return publisherSeq;
-  }
-
-  /**
-   * Provides the identifier of a publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisherName
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long findPublisher(Connection conn, String publisherName)
-      throws DbException {
-    final String DEBUG_HEADER = "findPublisher(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
-
-    Long publisherSeq = null;
-
-    try {
-      publisherSeq = dbManagerSql.findPublisher(conn, publisherName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot find publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot find publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    return publisherSeq;
-  }
-
-  /**
-   * Adds a publisher.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param publisherName
-   *          A String with the publisher name.
-   * @return a Long with the identifier of the publisher just added.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  public Long addPublisher(Connection conn, String publisherName)
-      throws DbException {
-    final String DEBUG_HEADER = "addPublisher(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'");
-
-    Long publisherSeq = null;
-
-    try {
-      publisherSeq = dbManagerSql.addPublisher(conn, publisherName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    } catch (SQLException sqle) {
-      String message = "Cannot add publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, sqle);
-    } catch (RuntimeException re) {
-      String message = "Cannot add publisher";
-      log.error(message);
-      log.error("publisherName = '" + publisherName + "'");
-      throw new DbException(message, re);
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
-    return publisherSeq;
+  static Map<String, DbCredentials> getDbCredentialsMap() {
+    return dbCredentialsMap;
   }
 }

@@ -27,17 +27,9 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import static org.lockss.metadata.SqlConstants.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import org.lockss.app.LockssDaemon;
-import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
 import org.lockss.extractor.MetadataField;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
@@ -53,15 +45,6 @@ final public class MetadataDatabaseUtil {
   protected static Logger log = Logger.getLogger(MetadataDatabaseUtil.class);
 
   private MetadataDatabaseUtil() {
-  }
-
-  /**
-   * Get the current LOCKSS daemon.
-   * 
-   * @return the LOCKSS daemon.
-   */
-  static private LockssDaemon getDaemon() {
-    return LockssDaemon.getLockssDaemon();
   }
 
   /**

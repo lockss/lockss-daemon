@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,35 +28,44 @@
 package org.lockss.db;
 
 /**
- * Constants used in SQL code.
+ * Database credentials.
  * 
  * @author Fernando García-Loygorri
  */
-public class SqlConstants {
-  //
-  // Database table names.
-  //
-  /** Name of the version table. */
-  public static final String VERSION_TABLE = "version";
+public class DbCredentials {
 
-  //
-  // Database table column names.
-  //
-  /** System column. */
-  public static final String SYSTEM_COLUMN = "system";
+  private String user;
+  private String password;
+  private String className;
 
-  /** Version column. */
-  public static final String VERSION_COLUMN = "version";
+  public DbCredentials(String user, String password, String className) {
+    this.user = user;
+    this.password = password;
+    this.className = className;
+  }
 
-  /** Subsystem column. */
-  public static final String SUBSYSTEM_COLUMN = "subsystem";
+  public String getUser() {
+    return user;
+  }
+  public void setUser(String user) {
+    this.user = user;
+  }
+  public String getPassword() {
+    return password;
+  }
+  public void setPassword(String password) {
+    this.password = password;
+  }
+  public String getClassName() {
+    return className;
+  }
+  public void setClassName(String className) {
+    this.className = className;
+  }
 
-  //
-  // Maximum lengths of variable text length database columns.
-  //
-  /** Length of the system column. */
-  public static final int MAX_SYSTEM_COLUMN = 16;
-
-  /** Length of the subsystem column. */
-  public static final int MAX_SUBSYSTEM_COLUMN = 32;
+  @Override
+  public String toString() {
+    return "[DbCredentials user=" + user + ", password=" + password
+	+ ", className=" + className + "]";
+  }
 }

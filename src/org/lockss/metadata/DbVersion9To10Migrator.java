@@ -25,7 +25,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.db;
+package org.lockss.metadata;
 
 import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
@@ -70,17 +70,20 @@ public class DbVersion9To10Migrator extends LockssRunnable {
 
     try {
       //DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-      DbManager dbManager =
-	  (DbManager)LockssApp.getManager(DbManager.getManagerKey());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManager.");
+      MetadataDbManager metadataDbManager = (MetadataDbManager)
+	  LockssApp.getManager(MetadataDbManager.getManagerKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManager.");
 
-      DbManagerSql dbManagerSql = dbManager.getDbManagerSqlBeforeReady();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Obtained DbManagerSql.");
+      MetadataDbManagerSql metadataDbManagerSql =
+	  metadataDbManager.getMetadataDbManagerSqlBeforeReady();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Obtained MetadataDbManagerSql.");
 
       // Perform the actual work.
-      dbManagerSql.migrateDatabaseFrom9To10();
+      metadataDbManagerSql.migrateDatabaseFrom9To10();
 
-      dbManager.cleanUpThread("DbVersion9To10Migrator");
+      metadataDbManager.cleanUpThread("DbVersion9To10Migrator");
     } catch (Exception e) {
       log.error("Cannot migrate the database from version 9 to 10", e);
     }

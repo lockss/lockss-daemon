@@ -465,7 +465,7 @@ Args:
   <property name="empty.db.parent.dir" value="${tmpdir}" />
   <property name="empty.db.dir" value="${empty.db.parent.dir}/db" />
   <property name="empty.db.archive"
-            value="${test.classes}/org/lockss/db/db.zip" />
+            value="${test.classes}/org/lockss/metadata/db.zip" />
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -3671,13 +3671,13 @@ Test results in ${test.results}
   <target name="archive-empty-db" depends="compile-tests"
           description="Creates an archive with the empty database.">
     <uptodate property="archive.db.is.up.to.date"
-              srcfile="${classes}/org/lockss/db/DbManager.class"
+              srcfile="${classes}/org/lockss/metadata/MetadataDbManager.class"
               targetfile="${empty.db.archive}" />
     <if>
       <isset property="archive.db.is.up.to.date" />
       <else>
         <delete dir="${empty.db.dir}" quiet="true" />
-        <java classname="org.lockss.db.EmptyDbCreator" fork="true">
+        <java classname="org.lockss.metadata.EmptyDbCreator" fork="true">
           <classpath refid="build.empty.db.run.classpath" />
           <arg line="-d ${empty.db.parent.dir}" />
           <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}" />

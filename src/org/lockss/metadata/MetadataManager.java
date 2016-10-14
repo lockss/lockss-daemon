@@ -27,7 +27,7 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -56,8 +56,6 @@ import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
-import org.lockss.db.DbManager;
-import org.lockss.db.PkNamePair;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -309,7 +307,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private PluginManager pluginMgr = null;
 
   // The database manager.
-  private DbManager dbManager = null;
+  private MetadataDbManager dbManager = null;
 
   private PatternIntMap indexPriorityAuidMap;
 
@@ -348,7 +346,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     pluginMgr = getDaemon().getPluginManager();
     //dbManager = getDaemon().getDbManager();
-    dbManager = (DbManager)LockssApp.getManager(DbManager.getManagerKey());
+    dbManager = (MetadataDbManager)LockssApp
+	.getManager(MetadataDbManager.getManagerKey());
 
     try {
       mdManagerSql = new MetadataManagerSql(dbManager, this);
@@ -658,11 +657,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     try {
       conn = dbManager.getConnection();
       count = startReindexing(conn);
-      DbManager.commitOrRollback(conn, log);
+      MetadataDbManager.commitOrRollback(conn, log);
     } catch (DbException dbe) {
       log.error("Cannot start reindexing", dbe);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
 
     log.debug3(DEBUG_HEADER + "count = " + count);
@@ -1185,11 +1184,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
 	auidsToReindex = mdManagerSql.getPrioritizedAuIdsToReindex(conn,
 	    maxAuIds, prioritizeIndexingNewAus);
-	DbManager.commitOrRollback(conn, log);
+	MetadataDbManager.commitOrRollback(conn, log);
       } catch (DbException dbe) {
 	log.error("Cannot get pending AU ids for reindexing", dbe);
       } finally {
-	DbManager.safeRollbackAndClose(conn);
+	MetadataDbManager.safeRollbackAndClose(conn);
       }
     }
 
@@ -2684,7 +2683,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         
         startReindexing(conn);
 
-        DbManager.commitOrRollback(conn, log);
+        MetadataDbManager.commitOrRollback(conn, log);
         return true;
       } catch (DbException dbe) {
         log.error("Cannot add au to pending AUs: " + au.getName(), dbe);
@@ -2770,14 +2769,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
         // Add it marked as disabled.
         mdManagerSql.addDisabledAuToPendingAus(conn, auId);
-        DbManager.commitOrRollback(conn, log);
+        MetadataDbManager.commitOrRollback(conn, log);
       } catch (DbException dbe) {
         String errorMessage = "Cannot disable indexing for AU '"
             + au.getName() +"'";
         log.error(errorMessage, dbe);
         throw dbe;
       } finally {
-        DbManager.safeRollbackAndClose(conn);
+	MetadataDbManager.safeRollbackAndClose(conn);
       }
     }
   }
@@ -2806,7 +2805,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addToPendingAusIfNotThere(conn, aus, insertPendingAuBatchStatement, false,
 	  fullReindex);
     } finally {
-      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
+      MetadataDbManager.safeCloseStatement(insertPendingAuBatchStatement);
     }
   }
 
@@ -3040,14 +3039,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
         // Force reindexing to start next task.
         startReindexing(conn);
-        DbManager.commitOrRollback(conn, log);
+        MetadataDbManager.commitOrRollback(conn, log);
 
         return true;
       } catch (DbException dbe) {
         log.error("Cannot remove au: " + au.getName(), dbe);
         return false;
       } finally {
-        DbManager.safeRollbackAndClose(conn);
+	MetadataDbManager.safeRollbackAndClose(conn);
       }
     }
   }
@@ -3213,7 +3212,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @return a DbManager with the database manager.
    */
-  DbManager getDbManager() {
+  MetadataDbManager getDbManager() {
     return dbManager;
   }
 
@@ -4018,13 +4017,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       if (!isAuInUnconfiguredAuTable(conn, auId)) {
 	persistUnconfiguredAu(conn, auId);
-	DbManager.commitOrRollback(conn, log);
+	MetadataDbManager.commitOrRollback(conn, log);
       }
     } catch (DbException dbe) {
       log.error("Cannot insert archival unit in unconfigured table", dbe);
       log.error("auId = " + auId);
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -4332,14 +4331,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // Remove it from the list if it was marked as disabled.
       removeDisabledFromPendingAus(conn, auId);
-      DbManager.commitOrRollback(conn, log);
+      MetadataDbManager.commitOrRollback(conn, log);
     } catch (DbException dbe) {
       String errorMessage = "Cannot enable indexing for AU '" + au.getName()
 	  + "'";
       log.error(errorMessage, dbe);
       throw dbe;
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -4482,14 +4481,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationInterval = '"
 	  + publicationInterval.car + "' - '" + publicationInterval.cdr + "'");
 
-      DbManager.commitOrRollback(conn, log);
+      MetadataDbManager.commitOrRollback(conn, log);
     } catch (DbException dbe) {
       String message = "Cannot determine publication date interval for AU '"
 	  + auId + "'";
       log.error(message, dbe);
       throw dbe;
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "publicationInterval = '"
@@ -4647,7 +4646,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error(message, dbe);
       throw dbe;
     } finally {
-      DbManager.safeRollbackAndClose(conn);
+      MetadataDbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = '" + result + "'");
