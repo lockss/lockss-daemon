@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>119</string>
+    <string>120</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>40</string>
+        <string>41</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -270,6 +270,7 @@
     <list>
       <string>[.](css|js)$</string>
       <string>://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$</string>
+      <string>://[^/]+(/shared/img/).*[.](gif|png)$</string>
     </list>
   </entry>
   <entry>
@@ -278,6 +279,7 @@
     <list>
       <string>"[.](css|js)$", 0</string>
       <string>"://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$", 0</string>
+      <string>"://[^/]+(/shared/img/).*[.](gif|png)$", 0</string>
       <string>"/search\?submit=yes(?!(&amp;sortspec=[^&amp;]+)?&amp;tocsectionid=)", 0</string>
     </list>
   </entry>

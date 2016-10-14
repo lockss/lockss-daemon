@@ -61,7 +61,8 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
   static final String HW_REPAIR_FROM_PEER_REGEXP[] = 
     {
         "[.](css|js)$",
-        "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$"
+        "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$",
+        "://[^/]+(/shared/img/).*[.](gif|png)$"
     };
 
   private DefinablePlugin plugin;
@@ -169,21 +170,30 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     List <String> repairList = ListUtil.list(
         ROOT_URL + "css/9.2.6/print.css",
         ROOT_URL + "js/9.3.2/lib/functional.min.js",
-        ROOT_URL + "css/8.10.4/custom-theme/images/ui-bg_flat_100_006eb2_40x100.png");
+        ROOT_URL + "css/8.10.4/custom-theme/images/ui-bg_flat_100_006eb2_40x100.png",
+        ROOT_URL + "publisher/icons/login.gif",
+        ROOT_URL + "shared/img/common/hw-lens-monocle-xsm.png",
+        ROOT_URL + "shared/img/content/int-data-supp-closed.png",
+        ROOT_URL + "shared/img/fancybox/fancy_title_over.png"
+        );
     
     Pattern p0 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[0]);
     Pattern p1 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[1]);
-    Matcher m0, m1;
+    Pattern p2 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[2]);
+
+    Matcher m0, m1, m2;
     for (String urlString : repairList) {
       m0 = p0.matcher(urlString);
       m1 = p1.matcher(urlString);
-      assertEquals(urlString, true, m0.find() || m1.find());
+      m2 = p2.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find() || m2.find());
     }
     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
     String notString = ROOT_URL + "img/close-icon.png";
     m0 = p0.matcher(notString);
     m1 = p1.matcher(notString);
-    assertEquals(false, m0.find() && m1.find());
+    m2 = p2.matcher(notString);
+    assertEquals(false, m0.find() && m1.find() && m2.find());
     
     PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
