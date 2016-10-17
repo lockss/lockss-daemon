@@ -4,7 +4,7 @@
     name = IGI Global ;
     info[contract] = 2012 ;
     info[tester] = 5 ;
-    info[poller] = 2
+    info[poller] = 5
   >
 
   plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalPlugin
