@@ -21,7 +21,7 @@
     param[journal_abbr] = atg
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
     
-    # embargoed content. Moves to the Digital Commons site 4 years after publication.
+    # embargoed content. Moves to the Digital Commons site 4 years after publication. See RT 7330
 
     au < manifest ; exists ; 1989 ; Against the Grain Volume 1 ; 1 ; >
     au < manifest ; exists ; 1990 ; Against the Grain Volume 2 ; 2 ; >
