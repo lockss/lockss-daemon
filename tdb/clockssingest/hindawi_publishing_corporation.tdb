@@ -1394,11 +1394,11 @@
       issnl = 2356-6922 
     >
 
+    # journal archived - no longer accessible with expected journal_id
     param[journal_id] = az
 
     au < finished ; finished ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Zoology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
