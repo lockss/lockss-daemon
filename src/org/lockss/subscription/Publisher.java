@@ -37,10 +37,17 @@ package org.lockss.subscription;
  * @author Fernando Garcia-Loygorri
  */
 public class Publisher {
+  private Long publisherSeq;
   private Long publisherNumber;
   private String publisherName;
   private int auCount;
 
+  public Long getPublisherSeq() {
+    return publisherSeq;
+  }
+  public void setPublisherSeq(Long publisherSeq) {
+    this.publisherSeq = publisherSeq;
+  }
   public Long getPublisherNumber() {
     return publisherNumber;
   }

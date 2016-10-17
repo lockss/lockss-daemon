@@ -245,12 +245,17 @@ public class SubscriptionManagement extends LockssServlet {
       if (SHOW_ADD_PAGE_ACTION.equals(action)) {
         if(start != null && end != null){
           // Only send the tab content
-          this.writePage(this.populateTab(start, end));
+          this.writePage(this.populateTab(start, end, action));
         }else{
           displayAddPage();
         }
       } else if (SHOW_UPDATE_PAGE_ACTION.equals(action)) {
-	displayUpdatePage();
+        if(start != null && end != null){
+          // Only send the tab content
+          this.writePage(this.populateTab(start, end, action));
+        }else{
+          displayUpdatePage();
+        }
       } else if (ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
 	status = addSubscriptions();
 	displayResults(status, SHOW_ADD_PAGE_LINK_TEXT, SHOW_ADD_PAGE_ACTION);
@@ -425,7 +430,7 @@ public class SubscriptionManagement extends LockssServlet {
 	addFormJavaScriptLocation(form, "js/tribox.js");
 	
 	// Add the bulk actions javascript
-  addFormJavaScriptLocation(form, "js/bulk-actions.js");
+	addFormJavaScriptLocation(form, "js/bulk-actions.js");
 
 	// Add the form to the page.
 	page.add(form);
@@ -615,42 +620,83 @@ public class SubscriptionManagement extends LockssServlet {
    * @throws IOException
    * @throws DbException
    */
-  private Page populateTab(String start, String end) throws IOException, DbException {
+  @SuppressWarnings("unchecked")
+  private Page populateTab(String start, String end, String action ) throws IOException, DbException {	
     // Important or some character won't display properly
     resp.setContentType("text/html; charset=ISO-8859-1");
     
     HttpSession session = getSession();
     
-    // Get the publishers presented in the form just submitted.
-    Map<String, Publisher> publishers = (Map<String, Publisher>)session
-        .getAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY);
+    Map<String, Publisher> publishers;
+    Map<String, Publisher> tabPublishers =
+            new HashMap<String, Publisher>();
+    Map<String, PublisherSubscription> publisherSubscriptions;
+    Map<String, PublisherSubscription> tabPublisherSubscriptions =
+        new HashMap<String, PublisherSubscription>();
     
-    Map<String, Publisher> tabPublishers = new  HashMap<String, Publisher>();
+    List<SerialPublication> publications;
+    List<SerialPublication> tabPublications =
+        new ArrayList<SerialPublication>();
     
-    // Filter publisher
-    Set<String> pubNames = publishers.keySet();
-    Iterator<String> iterator = pubNames.iterator();
-    while (iterator.hasNext()) {
-      String pubName = iterator.next();
-      if(start.charAt(0) <= pubName.charAt(0) 
-          && pubName.charAt(0) <= end.charAt(0) ){
-        tabPublishers.put(pubName, publishers.get(pubName));
-      }
-    }
+    List<Subscription> subscriptions;
+    List<Subscription> tabSubscriptions =
+            new ArrayList<Subscription>();
+    
+    if(SHOW_ADD_PAGE_ACTION.equals(action)){
+        // Get the publishers presented in the form just submitted.
+    	publishers = (Map<String, Publisher>)session
+            .getAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY);
+        publications = (List<SerialPublication>)session
+            .getAttribute(UNDECIDED_TITLES_SESSION_KEY);
 
-    // Get the undecided publications presented in the form just submitted.
-    List<SerialPublication> publications = (List<SerialPublication>)session
-        .getAttribute(UNDECIDED_TITLES_SESSION_KEY);
-    List<SerialPublication> tabPublications = new ArrayList<SerialPublication>();
-    
-    // Filter publication
-    for (SerialPublication publication : publications) {
-      // Get the publisher name.
-      String publisherName = publication.getPublisherName();
-      // Only add if in tabPublishers.
-      if(tabPublishers.get(publisherName) != null) {
-        tabPublications.add(publication);
-      }
+        // Filter publisher
+        Set<String> pubNames = publishers.keySet();
+        Iterator<String> iterator = pubNames.iterator();
+        while (iterator.hasNext()) {
+            String pubName = iterator.next();
+            if(start.charAt(0) <= pubName.charAt(0) 
+                && pubName.charAt(0) <= end.charAt(0) ){
+              tabPublishers.put(pubName, publishers.get(pubName));
+          }
+        }
+
+        // Filter publication
+        for (SerialPublication publication : publications) {
+          // Get the publisher name.
+          String publisherName = publication.getPublisherName();
+          // Only add if in tabPublishers.
+          if(tabPublishers.get(publisherName) != null) {
+            tabPublications.add(publication);
+          }
+        }
+    }
+    else if(SHOW_UPDATE_PAGE_ACTION.equals(action)){
+    	publisherSubscriptions = (Map<String, PublisherSubscription>)session
+            .getAttribute(SUBSCRIBED_PUBLISHERS_SESSION_KEY);
+        subscriptions = (List<Subscription>)session
+            .getAttribute(this.SUBSCRIPTIONS_SESSION_KEY);
+
+        // Filter publisherSubscriptions
+        Set<String> pubNames = publisherSubscriptions.keySet();
+        Iterator<String> iterator = pubNames.iterator();
+        while (iterator.hasNext()) {
+            String pubName = iterator.next();
+            if(start.charAt(0) <= pubName.charAt(0) 
+                && pubName.charAt(0) <= end.charAt(0) ){
+            	tabPublisherSubscriptions.put(pubName, 
+            			publisherSubscriptions.get(pubName));
+          }
+        }
+
+        // Filter publication
+        for (Subscription subscription : subscriptions) {
+          // Get the publisher name.
+          String publisherName = subscription.getPublication().getPublisherName();
+          // Only add if in tabPublishers.
+          if(tabPublisherSubscriptions.get(publisherName) != null) {
+            tabSubscriptions.add(subscription);
+          }
+        }
     }
     
     Page page = new Page();
@@ -664,13 +710,29 @@ public class SubscriptionManagement extends LockssServlet {
     
     divTableMap.put("A", divTable);
     
-    this.populateTabsPublications(tabPublications, tabPublishers, divTableMap, start, end);
+    if(SHOW_ADD_PAGE_ACTION.equals(action)){
+        this.populateTabsPublications(tabPublications, tabPublishers, 
+            divTableMap, start, end);
+    }
+    else if(SHOW_UPDATE_PAGE_ACTION.equals(action)){
+        this.populateTabsSubscriptions(tabSubscriptions, 
+            tabPublisherSubscriptions,
+            divTableMap, start, end);
+    }
     
     Table table = divTableMap.get("A");
     
     page.add(table);
     
     return page;
+  }
+  
+  
+  @Deprecated
+  private void populateTabsPublications(List<SerialPublication> publications,
+      Map<String, Publisher> publishers, Map<String, Table> divTableMap) {
+    populateTabsPublications(publications, publishers, divTableMap, 
+        "A", "Z");
   }
   
   /**
@@ -686,12 +748,6 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
-  private void populateTabsPublications(List<SerialPublication> publications,
-      Map<String, Publisher> publishers, Map<String, Table> divTableMap) {
-    populateTabsPublications(publications, publishers, divTableMap, 
-        "A", "Z");
-  }
-  
   private void populateTabsPublications(List<SerialPublication> publications,
       Map<String, Publisher> publishers, Map<String, Table> divTableMap,
       String start, String end) {
@@ -849,7 +905,7 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return publicationMap;
   }
-
+  
   /**
    * Populates a tab with the publications for a publisher.
    * 
@@ -867,6 +923,7 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
+  @Deprecated
   private void populateTabPublisherPublications(String publisherName,
       Long publisherNumber, Boolean publisherSubscriptionSetting, int auCount,
       TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap) {
@@ -875,6 +932,27 @@ public class SubscriptionManagement extends LockssServlet {
         pubSet, divTableMap, "A", "Z");
   }
   
+  /**
+   * Populates a tab with the publications for a publisher.
+   * 
+   * @param publisherName
+   *          A String with the name of the publisher.
+   * @param publisherNumber
+   *          A Long with the number assigned to the publisher.
+   * @param publisherSubscriptionSetting
+   *          A Boolean with the setting of the publisher subscription.
+   * @param auCount
+   *          An int with the count of the publisher Archival Units.
+   * @param pubSet
+   *          A TreeSet<SerialPublication> with the publisher publications.
+   * @param divTableMap
+   *          A Map<String, Table> with the tabs tables mapped by the first
+   *          letter of the tab letter group.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
   private void populateTabPublisherPublications(String publisherName,
       Long publisherNumber, Boolean publisherSubscriptionSetting, int auCount,
       TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap,
@@ -958,6 +1036,7 @@ public class SubscriptionManagement extends LockssServlet {
    * @param divTable
    *          A Table with the table where to create the row.
    */
+  @Deprecated
   private void createPublisherRow(String publisherName, String publisherId,
       Long publisherNumber, Boolean publisherSubscriptionSetting,
       Table divTable) {
@@ -966,6 +1045,24 @@ public class SubscriptionManagement extends LockssServlet {
         divTable, "A", "Z");
   }
   
+  /**
+   * Creates a row for a publisher.
+   * 
+   * @param publisherName
+   *          A String with the name of the publisher.
+   * @param publisherId
+   *          A String with the identifier of the publisher.
+   * @param publisherNumber
+   *          A Long with the number assigned to the publisher.
+   * @param publisherSubscriptionSetting
+   *          A Boolean with the setting of the publisher subscription.
+   * @param divTable
+   *          A Table with the table where to create the row.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
   private void createPublisherRow(String publisherName, String publisherId,
       Long publisherNumber, Boolean publisherSubscriptionSetting,
       Table divTable, String start, String end) {
@@ -1030,7 +1127,12 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Long with the number assigned to the publisher.
    * @param publisherSubscriptionSetting
    *          A Boolean with the state of the publisher subscription widget.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
    * @return a Block representing the publisher subscription widget.
+   * 
    */
   private Block getPublisherSubscriptionBlock(Long publisherNumber,
       Boolean publisherSubscriptionSetting,
@@ -1068,12 +1170,29 @@ public class SubscriptionManagement extends LockssServlet {
    * @param divTable
    *          A Table with the table where to create the row.
    */
+  @Deprecated
   private void createPublicationRow(SerialPublication publication,
       String publisherId, int rowIndex, Table divTable) {
     createPublicationRow(publication,
             publisherId, rowIndex, divTable, "A", "Z");
   }
   
+  /**
+   * Creates a row for a publication.
+   * 
+   * @param publication
+   *          A SerialPublication with the publication.
+   * @param publisherId
+   *          A String with the identifier of the publisher.
+   * @param rowIndex
+   *          An int with row number.
+   * @param divTable
+   *          A Table with the table where to create the row.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
   private void createPublicationRow(SerialPublication publication,
       String publisherId, int rowIndex, Table divTable, String start, String end) {
     final String DEBUG_HEADER = "createPublicationRow(): ";
@@ -1147,6 +1266,7 @@ public class SubscriptionManagement extends LockssServlet {
    *          A String with the identifier of the unsubscribed ranges input box.
    * @return a Block representing the publication subscription widget.
    */
+  @Deprecated
   private Block getPublicationSubscriptionBlock(Long publicationNumber,
       Boolean publicationSubscriptionSetting, String subscribedRangesId,
       String unsubscribedRangesId) {
@@ -1155,6 +1275,23 @@ public class SubscriptionManagement extends LockssServlet {
         unsubscribedRangesId, "A", "Z");
   }
   
+  /**
+   * Provides the HTML block with the publication subscription widget.
+   * 
+   * @param publicationNumber
+   *          A Long with the number assigned to the publication.
+   * @param publicationSubscriptionSetting
+   *          A Boolean with the state of the publication subscription widget.
+   * @param subscribedRangesId
+   *          A String with the identifier of the subscribed ranges input box.
+   * @param unsubscribedRangesId
+   *          A String with the identifier of the unsubscribed ranges input box.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   * @return a Block representing the publication subscription widget.
+   */
   private Block getPublicationSubscriptionBlock(Long publicationNumber,
       Boolean publicationSubscriptionSetting, String subscribedRangesId,
       String unsubscribedRangesId, String start, String end) {
@@ -1500,7 +1637,8 @@ public class SubscriptionManagement extends LockssServlet {
 
       // No: Check whether the "Unsubscribe All" option has been selected.
     } else if (overallSubscriptionSetting != null
-	&& overallSubscriptionSetting.booleanValue()) {
+	&& !overallSubscriptionSetting.booleanValue()) {
+      if (log.isDebug3()) log.debug3("Create subscription \"Unsubscribe All\"");
       subscription = new Subscription();
       subscription.setPublication(publication);
       subscription.setUnsubscribedRanges(Collections
@@ -1979,6 +2117,8 @@ public class SubscriptionManagement extends LockssServlet {
       if (subscriptions.size() > 0 || subscribedPublishers.size() > 0) {
 	layoutErrorBlock(page);
 
+	page.add(createBulkActionsButton());
+
 	// Create the form.
 	Form form = ServletUtil.newForm(srvURL(myServletDescr()));
 
@@ -2026,8 +2166,9 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Populate the tabs content with the publications for which
 	// subscription decisions have already been made.
-	populateTabsSubscriptions(subscriptions, subscribedPublishers,
-	    divTableMap);
+	// W.P.: Removed as tabs are now populated only when clicked
+//	populateTabsSubscriptions(subscriptions, subscribedPublishers,
+//	    divTableMap);
 
 	// Save the existing subscriptions in the session to compare after the
 	// form is submitted.
@@ -2050,7 +2191,10 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Add the tribox javascript.
 	addFormJavaScriptLocation(form, "js/tribox.js");
-
+	
+	// Add the bulk actions javascript
+	addFormJavaScriptLocation(form, "js/bulk-actions.js");
+	
 	// Add the form to the page.
 	page.add(form);
       } else {
@@ -2084,9 +2228,34 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
+  @Deprecated
+  private void populateTabsSubscriptions(List<Subscription> subscriptions,
+	      Map<String, PublisherSubscription> subscribedPublishers,
+	      Map<String, Table> divTableMap) {
+	this.populateTabsSubscriptions(subscriptions, subscribedPublishers, 
+			divTableMap, "A", "Z");
+  }
+  
+  /**
+   * Populates the tabs with the subscription data to be displayed.
+   * 
+   * @param subscriptions
+   *          A List<Subscription> with the subscriptions to be used to populate
+   *          the tabs.
+   * @param subscribedPublishers
+   *          A Map<String, PublisherSubscription> with the publisher
+   *          subscriptions mapped by the publisher name.
+   * @param divTableMap
+   *          A Map<String, Table> with the tabs tables mapped by the first
+   *          letter of the tab letter group.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
   private void populateTabsSubscriptions(List<Subscription> subscriptions,
       Map<String, PublisherSubscription> subscribedPublishers,
-      Map<String, Table> divTableMap) {
+      Map<String, Table> divTableMap, String start, String end) {
     final String DEBUG_HEADER = "populateTabsSubscriptions(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptions = " + subscriptions);
@@ -2098,13 +2267,13 @@ public class SubscriptionManagement extends LockssServlet {
     List<PublisherSubscription> publisherSubscriptions =
 	new ArrayList<PublisherSubscription>();
 
-    long publisherNumber = 1;
-
     for (String publisherName : subscribedPublishers.keySet()) {
       PublisherSubscription publisherSubscription =
 	  subscribedPublishers.get(publisherName);
       Publisher publisher = publisherSubscription.getPublisher();
-      publisher.setPublisherNumber(publisherNumber++);
+      // Use Publisher sequence to identify publisher on the page
+      publisher.setPublisherNumber(
+	  publisherSubscription.getPublisher().getPublisherSeq());
 
       TdbPublisher tdbPublisher =
 	  TdbUtil.getTdb().getTdbPublisher(publisherName);
@@ -2140,7 +2309,7 @@ public class SubscriptionManagement extends LockssServlet {
       if (publisherSubscription.getSubscribed() != null) {
 	// Yes: Populate a tab with no title subscriptions for this publisher.
 	populateTabPublisherSubscriptions(publisherSubscription, null,
-	    divTableMap);
+	    divTableMap, start, end);
       } else {
 	// No: Get the publisher name.
 	String publisherName =
@@ -2151,7 +2320,7 @@ public class SubscriptionManagement extends LockssServlet {
 	// Populate a tab with the subscriptions for this publisher.
 	populateTabPublisherSubscriptions(publisherSubscription,
 	    (TreeSet<Subscription>)subscriptionMap.get(publisherName),
-	    divTableMap);
+	    divTableMap, start, end);
       }
     }
 
@@ -2265,9 +2434,34 @@ public class SubscriptionManagement extends LockssServlet {
    *          A Map<String, Table> with the tabs tables mapped by the first
    *          letter of the tab letter group.
    */
+  @Deprecated
   private void populateTabPublisherSubscriptions(
       PublisherSubscription publisherSubscription, 
       TreeSet<Subscription> subSet, Map<String, Table> divTableMap) {
+    populateTabPublisherSubscriptions(publisherSubscription, 
+      subSet, divTableMap, "A", "Z");
+  }
+  
+  /**
+   * Populates a tab with the subscriptions for a publisher.
+   * 
+   * @param publisherSubscription
+   *          A PublisherSubscription with the publisher subscription.
+   * @param subSet
+   *          A TreeSet<Subscription> with the publisher publication
+   *          subscriptions.
+   * @param divTableMap
+   *          A Map<String, Table> with the tabs tables mapped by the first
+   *          letter of the tab letter group.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
+  private void populateTabPublisherSubscriptions(
+      PublisherSubscription publisherSubscription, 
+      TreeSet<Subscription> subSet, Map<String, Table> divTableMap,
+      String start, String end) {
     final String DEBUG_HEADER = "populateTabPublisherSubscriptions(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publisherSubscription = "
@@ -2331,10 +2525,10 @@ public class SubscriptionManagement extends LockssServlet {
       log.debug3(DEBUG_HEADER + "publisherRowTitle = " + publisherRowTitle);
 
     // Create in the table the title row for the publisher.
-    createPublisherRow(publisherRowTitle, cleanNameString,
-	publisherSubscription.getPublisher().getPublisherNumber(),
-	publisherSubscription.getSubscribed(), divTable);
-
+    this.createPublisherRow(publisherRowTitle, cleanNameString,
+	publisherSubscription.getPublisher().getPublisherSeq(),
+	publisherSubscription.getSubscribed(), divTable, start, end);
+    
     // Check whether there are any subscriptions to show.
     if (subSet != null) {
       // Yes: Add them.
@@ -2344,7 +2538,7 @@ public class SubscriptionManagement extends LockssServlet {
       for (Subscription subscription : subSet) {
         // Create in the table a row for the subscription.
         createSubscriptionRow(subscription, cleanNameString, rowIndex,
-            divTable);
+            divTable, start, end);
         rowIndex++;
       }
     }
@@ -2364,28 +2558,67 @@ public class SubscriptionManagement extends LockssServlet {
    * @param divTable
    *          A Table with the table where to create the row.
    */
+  @Deprecated
   private void createSubscriptionRow(Subscription subscription,
       String publisherId, int rowIndex, Table divTable) {
+	  createSubscriptionRow(subscription,
+		      publisherId, rowIndex, divTable,
+		      "A", "Z");
+  }
+  
+  /**
+   * Creates a row for a subscription.
+   * 
+   * @param subscription
+   *          A Subscription with the subscription.
+   * @param publisherId
+   *          A String with the identifier of the publisher.
+   * @param rowIndex
+   *          An int with row number.
+   * @param divTable
+   *          A Table with the table where to create the row.
+   * @param start
+   *          A String representing the first character of the tab.
+   * @param end
+   *          A String representing the last character of the tab.
+   */
+  private void createSubscriptionRow(Subscription subscription,
+	      String publisherId, int rowIndex, Table divTable,
+	      String start, String end) {
     final String DEBUG_HEADER = "createSubscriptionRow(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
       log.debug2(DEBUG_HEADER + "publisherId = " + publisherId);
       log.debug2(DEBUG_HEADER + "rowIndex = " + rowIndex);
     }
-
+    
+    // The subscription publication.
+    SerialPublication publication = subscription.getPublication();
+    Long publicationNumber = publication.getPublicationNumber();
+    Long subscriptionSeq = subscription.getSubscriptionSeq();
+    
     divTable.newRow();
 
     Block newRow = divTable.row();
     newRow.attribute("class", publisherId + "_class hide-row "
-	+ ServletUtil.rowCss(rowIndex, 3));
+	+ ServletUtil.rowCss(rowIndex, 1));
+    
+    Block pubTitleLabel = new Block("label");
+    pubTitleLabel.attribute("class", "publication-title");
+    
+    // Add checkboxes for bulk actions
+    Input titleCheckBox = new Input(Input.Checkbox, 
+		    publication.getUniqueName().replaceAll(" ", "_"));
+    titleCheckBox.attribute("id", "bulk-action-ckbox_" + subscriptionSeq);
+    titleCheckBox.attribute("class", "shift-click-box bulk-actions-ckbox");
 
-    // The subscription publication.
-    SerialPublication publication = subscription.getPublication();
-
-    divTable.addCell(publication.getUniqueName() + " ("
-	+ publication.getAuCount() + " AU)", "class=\"sub-publication-name\"");
-
-    Long subscriptionSeq = subscription.getSubscriptionSeq();
+    pubTitleLabel.add(titleCheckBox);
+    
+    pubTitleLabel.add(publication.getUniqueName() + " ("
+        + publication.getAuCount() + " AU)");
+    
+    divTable.addCell(pubTitleLabel, "class=\"sub-publication-name\"");
+    
     String subscribedRangesId =
 	SUBSCRIBED_RANGES_PARAM_NAME + subscriptionSeq;
     String unsubscribedRangesId =
@@ -2423,7 +2656,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     divTable.addCell(getPublicationSubscriptionBlock(subscriptionSeq,
 	publicationSubscriptionSetting, subscribedRangesId,
-	unsubscribedRangesId));
+	unsubscribedRangesId, start, end));
 
     // The subscribed ranges.
     Input subscribedInputBox = new Input(Input.Text, subscribedRangesId,
@@ -2564,7 +2797,7 @@ public class SubscriptionManagement extends LockssServlet {
 	    Boolean newPublisherSubscriptionSetting = getTriBoxValue(
 		parameterMap,
 		PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX
-		+ publisherSubscription.getPublisher().getPublisherNumber());
+		+ publisherSubscription.getPublisher().getPublisherSeq());
 	    if (log.isDebug3()) log.debug3(DEBUG_HEADER
 		+ "newPublisherSubscriptionSetting = "
 		+ newPublisherSubscriptionSetting);
