@@ -95,6 +95,16 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
           // [SPIE]: unknown as of yet
           HtmlNodeFilters.tagWithAttribute("div", "id", "tab7"),
           
+          //ASHA
+          //Related articles
+          HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContentWidgets"),
+          //Prev Next
+          HtmlNodeFilters.tagWithAttribute("header", "class", "article-nav"),
+          //Issues
+          HtmlNodeFilters.tagWithAttribute("section", "id", "IssueInfo"),
+          //references
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "refRow"),
+          
           // Unvetted from prior version:
 
           // Some references can be article links (especially in hidden tab) (AMA)
