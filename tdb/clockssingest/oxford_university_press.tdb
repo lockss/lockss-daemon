@@ -327,8 +327,8 @@
     au < finished ; frozen ; 2011 ; Age and Ageing Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2015 ; Age and Ageing Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2014 ; Age and Ageing Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Age and Ageing Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Age and Ageing Volume 45 ; 45 ; >
 
     }
@@ -1542,7 +1542,7 @@
     au < finished ; finished ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
     au < finished ; finished ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
     au < frozen ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
-    au < frozen ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
+    au < finished ; manifest ; 2014 ; Annals of Botany Volume 113 ; 113 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Annals of Botany Volume 114 ; 114 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
     au < finished ; crawling ; 2015 ; Annals of Botany Volume 116 ; 116 ; reingest2.clockss.org:8085 >
@@ -1735,7 +1735,7 @@
     au < finished ; frozen ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < finished ; frozen ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
     au < frozen ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2014 ; Annals of Oncology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Annals of Oncology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2016 ; Annals of Oncology Volume 27 ; 27 ; >
 
@@ -5645,7 +5645,7 @@
     au < finished ; finished ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < finished ; finished ; 2012 ; Environmental History Volume 17 ; 17 ; >
     au < frozen ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2014 ; Environmental History Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2014 ; Environmental History Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Environmental History Volume 20 ; 20 ; >
     au < manifest ; exists ; 2016 ; Environmental History Volume 21 ; 21 ; >
 
