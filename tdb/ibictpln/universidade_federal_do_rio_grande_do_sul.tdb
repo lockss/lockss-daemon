@@ -245,13 +245,13 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = CadernosdoAplicacao
 
-      au < released ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 5 ; Cadernos do Aplicação Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 6 ; Cadernos do Aplicação Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 7 ; Cadernos do Aplicação Volume 2014 ; 2014 ; >
+      au < released ; 2008 ; 21 ; Cadernos do Aplicação Volume 21 ; 2008 ; >
+      au < released ; 2009 ; 22 ; Cadernos do Aplicação Volume 22 ; 2009 ; >
+      au < released ; 2010 ; 23 ; Cadernos do Aplicação Volume 23 ; 2010 ; >
+      au < released ; 2011 ; 24 ; Cadernos do Aplicação Volume 24 ; 2011 ; >
+      au < released ; 2012 ; 25 ; Cadernos do Aplicação Volume 25 ; 2012 ; >
+      au < released ; 2013 ; 26 ; Cadernos do Aplicação Volume 26 ; 2013 ; >
+      au < manifest ; 2015 ; 28 ; Cadernos do Aplicação Volume 28 ; 2015 ; >
 
   }
 
@@ -671,10 +671,11 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = fineduca
 
-      au < released ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 2 ; FINEDUCA-Revista de Financiamento da Educação Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 3 ; FINEDUCA-Revista de Financiamento da Educação Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 4 ; FINEDUCA-Revista de Financiamento da Educação Volume 2014 ; 2014 ; >
+      au < released ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 1 ; 2011 ; >
+      au < released ; 2012 ; 2 ; FINEDUCA-Revista de Financiamento da Educação Volume 2 ; 2012 ; >
+      au < released ; 2013 ; 3 ; FINEDUCA-Revista de Financiamento da Educação Volume 3 ; 2013 ; >
+      au < manifest ; 2014 ; 4 ; FINEDUCA-Revista de Financiamento da Educação Volume 4 ; 2014 ; >
+      au < manifest ; 2015 ; 5 ; FINEDUCA-Revista de Financiamento da Educação Volume 5 ; 2015 ; >
 
   }
 

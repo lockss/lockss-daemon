@@ -442,13 +442,14 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = reec
 
-      au < released ; 2010 ; 1 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 2 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 3 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 4 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 5 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 6 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 7 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2016 ; 2016 ; >
+      au < released ; 2010 ; 1 ; REEC-Revista Eletrônica de Engenharia Civil Volume 1 ; 2010 ; >
+      au < released ; 2011 ; 2-3 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2-3 ; 2011 ; >
+      au < released ; 2012 ; 4-5 ; REEC-Revista Eletrônica de Engenharia Civil Volume 4-5 ; 2012 ; >
+      au < released ; 2013 ; 6-7 ; REEC-Revista Eletrônica de Engenharia Civil Volume 6-7 ; 2013 ; >
+      au < released ; 2014 ; 8-9 ; REEC-Revista Eletrônica de Engenharia Civil Volume 8-9 ; 2014 ; >
+      au < manifest ; 2015 ; 10 ; REEC-Revista Eletrônica de Engenharia Civil Volume 10 ; 2015 ; >
+      au < manifest ; 2016 ; 11-12 ; REEC-Revista Eletrônica de Engenharia Civil Volume 11-12 ; 2016 ; >
+      au < manifest ; 2017 ; 13-14 ; REEC-Revista Eletrônica de Engenharia Civil Volume 13-14 ; 2017 ; >
 
   }
 
@@ -491,21 +492,22 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = sv
 
-      au < released ; 2002 ; 1 ; Polyphonía/Solta a voz Volume 2002 ; 2002 ; >
-      au < notReady ; 2003 ; 2 ; Polyphonía/Solta a voz Volume 2003 ; 2003 ; no articles >
-      au < notReady ; 2004 ; 3 ; Polyphonía/Solta a voz Volume 2004 ; 2004 ; no articles >
-      au < released ; 2005 ; 4 ; Polyphonía/Solta a voz Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 5 ; Polyphonía/Solta a voz Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 6 ; Polyphonía/Solta a voz Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 7 ; Polyphonía/Solta a voz Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 8 ; Polyphonía/Solta a voz Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 9 ; Polyphonía/Solta a voz Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 10 ; Polyphonía/Solta a voz Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 11 ; Polyphonía/Solta a voz Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 12 ; Polyphonía/Solta a voz Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 13 ; Polyphonía/Solta a voz Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 14 ; Polyphonía/Solta a voz Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 15 ; Polyphonía/Solta a voz Volume 2016 ; 2016 ; >
+      au < released ; 2002 ; 13 ; Polyphonía/Solta a voz Volume 13 ; 2002 ; >
+      au < notReady ; 2003 ; 14 ; Polyphonía/Solta a voz Volume 14 ; 2003 ; no articles >
+      au < notReady ; 2004 ; 15 ; Polyphonía/Solta a voz Volume 15 ; 2004 ; no articles >
+      au < released ; 2005 ; 16 ; Polyphonía/Solta a voz Volume 16 ; 2005 ; >
+      au < released ; 2006 ; 17 ; Polyphonía/Solta a voz Volume 17 ; 2006 ; >
+      au < released ; 2007 ; 18 ; Polyphonía/Solta a voz Volume 18 ; 2007 ; >
+      au < released ; 2008 ; 19 ; Polyphonía/Solta a voz Volume 19 ; 2008 ; >
+      au < released ; 2009 ; 20 ; Polyphonía/Solta a voz Volume 20 ; 2009 ; >
+      au < released ; 2010 ; 21 ; Polyphonía/Solta a voz Volume 21 ; 2010 ; >
+      au < released ; 2011 ; 22 ; Polyphonía/Solta a voz Volume 22 ; 2011 ; >
+      au < released ; 2012 ; 23 ; Polyphonía/Solta a voz Volume 23 ; 2012 ; >
+      au < released ; 2013 ; 24 ; Polyphonía/Solta a voz Volume 24 ; 2013 ; >
+      au < released ; 2014 ; 25 ; Polyphonía/Solta a voz Volume 25 ; 2014 ; >
+      au < manifest ; 2015 ; 26 ; Polyphonía/Solta a voz Volume 26 ; 2015 ; >
+      au < manifest ; 2016 ; 27 ; Polyphonía/Solta a voz Volume 27 ; 2016 ; >
+      au < manifest ; 2017 ; 28 ; Polyphonía/Solta a voz Volume 28 ; 2017 ; >
 
   }
 
