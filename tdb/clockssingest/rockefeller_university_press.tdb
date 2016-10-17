@@ -235,7 +235,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; The Journal of Cell Biology Volume 212 ; 212 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; The Journal of Cell Biology Volume 213 ; 213 ; reingest3.clockss.org:8083 >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; The Journal of Cell Biology Volume 214 ; 214 ; > # switch to Drupal 9/20/16
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; > # switch to Drupal 9/20/16
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; > # switch to Drupal 9/20/16
 
   }
 
