@@ -371,7 +371,7 @@
     au < manifest ; exists ; 2012 ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; manifest ; 2014 ; Advances in Civil Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Civil Engineering Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -664,7 +664,7 @@
     au < manifest ; exists ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; frozen ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Advances in Hematology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -1888,7 +1888,7 @@
     au < manifest ; exists ; 2012 ; Canadian Respiratory Journal Volume 19 (2012) ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Canadian Respiratory Journal Volume 21 (2014) ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Canadian Respiratory Journal Volume 22 (2015) ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Canadian Respiratory Journal Volume 22 (2015) ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Canadian Respiratory Journal Volume 23 ; 2016 ; 2016 ; >
         
   }
@@ -2255,7 +2255,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; frozen ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Case Reports in Obstetrics and Gynecology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2387,7 +2387,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Case Reports in Psychiatry Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Psychiatry Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2406,7 +2406,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2841,7 +2841,7 @@
 
     au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3272,7 +3272,7 @@
     au < manifest ; exists ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Hepatitis Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     
@@ -4573,7 +4573,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4839,7 +4839,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Rheumatology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -6153,7 +6153,7 @@
     param[journal_id] = je
     
     au < manifest ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6207,7 +6207,7 @@
     param[journal_id] = fluids
     
     au < manifest ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Fluids Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Fluids Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6223,7 +6223,7 @@
 
     param[journal_id] = jfp
     
-    au < frozen ; exists ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Food Processing Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6352,7 +6352,7 @@
     param[journal_id] = jgrav
     
     au < manifest ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Gravity Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6571,7 +6571,7 @@
     param[journal_id] = jma
     
     au < manifest ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Materials Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Materials Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6626,7 +6626,7 @@
     au < manifest ; exists ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Metallurgy Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6685,7 +6685,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Nanomaterials Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -6741,7 +6741,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Nanotechnology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7159,7 +7159,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; manifest ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Pregnancy Volume 2016 ; 2016 ; 2016 ; >
 
@@ -8717,7 +8717,7 @@
     au < manifest ; exists ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 ; >
     au < deepCrawl ; exists ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Science and Technology of Nuclear Installations Volume 2016 ; 2016 ; 2016 ; >
 
   }
