@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = European Mathematical Society ;
-    info[tester] = 0
+    name = European Mathematical Society
   >
   
   plugin = org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyBooksPlugin
@@ -219,7 +218,7 @@
   {
 
     title <
-      name = no series ;
+      name = European Mathematical Society Books ;
       type = bookSeries
     >
     

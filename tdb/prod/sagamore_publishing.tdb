@@ -29,7 +29,7 @@
     au < released ; 2011 ; 8 ; Asian Journal of Exercise and Sports Science Volume 8 ; 2011 >
     au < released ; 2012 ; 9 ; Asian Journal of Exercise and Sports Science Volume 9 ; 2012 >
     au < released ; 2013 ; 10 ; Asian Journal of Exercise and Sports Science Volume 10 ; 2013 >
-    au < ready ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 > #full text need subscription
+    au < releasing ; 2014 ; 11 ; Asian Journal of Exercise and Sports Science Volume 11 ; 2014 > #full text need subscription
     au < expected ; 2015 ; 12 ; Asian Journal of Exercise and Sports Science Volume 12 ; 2015 >
   }
 
@@ -86,7 +86,7 @@
     au < released ; 2011 ; 3 ; Journal of Applied Sport Management: Research that Matters Volume 3 ; 2011 >
     au < released ; 2012 ; 4 ; Journal of Applied Sport Management: Research that Matters Volume 4 ; 2012 >
     au < released ; 2013 ; 5 ; Journal of Applied Sport Management: Research that Matters Volume 5 ; 2013 >
-    au < ready ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 >
+    au < releasing ; 2014 ; 6 ; Journal of Applied Sport Management: Research that Matters Volume 6 ; 2014 >
     au < testing ; 2015 ; 7 ; Journal of Applied Sport Management: Research that Matters Volume 7 ; 2015 > #article page redirects to subscription page. http://js.sagamorepub.com/jasm/article/view/4498/4933
     au < manifest ; 2016 ; 8 ; Journal of Applied Sport Management: Research that Matters Volume 8 ; 2016 > 
   }
@@ -99,8 +99,8 @@
     param[journal_id] = jfpdm
 
     au < released ; 2013 ; 1 ; Journal of Facility Planning, Design, and Management Volume 1 ; 2013 >
-    au < ready ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
-    au < ready ; 2015 ; 3 ; Journal of Facility Planning, Design, and Management Volume 3 ; 2015 > #subscription needed?
+    au < releasing ; 2014 ; 2 ; Journal of Facility Planning, Design, and Management Volume 2 ; 2014 >
+    au < releasing ; 2015 ; 3 ; Journal of Facility Planning, Design, and Management Volume 3 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 4 ; Journal of Facility Planning, Design, and Management Volume 4 ; 2016 >
 
   }
@@ -132,8 +132,8 @@
     au < released ; 2011 ; 43 ; Journal of Leisure Research Volume 43 ; 2011 >
     au < released ; 2012 ; 44 ; Journal of Leisure Research Volume 44 ; 2012 >
     au < released ; 2013 ; 45 ; Journal of Leisure Research Volume 45 ; 2013 >
-    au < ready ; 2014 ; 46 ; Journal of Leisure Research Volume 46 ; 2014 >
-    au < ready ; 2015 ; 47 ; Journal of Leisure Research Volume 47 ; 2015 > #article url redirected to login page. http://js.sagamorepub.com/jlr/article/view/6174/4888
+    au < releasing ; 2014 ; 46 ; Journal of Leisure Research Volume 46 ; 2014 >
+    au < releasing ; 2015 ; 47 ; Journal of Leisure Research Volume 47 ; 2015 > #article url redirected to login page. http://js.sagamorepub.com/jlr/article/view/6174/4888
     au < manifest ; 2016 ; 48 ; Journal of Leisure Research Volume 48 ; 2016 > 
   }
 
@@ -176,8 +176,8 @@
     au < released ; 2011 ; 29 ; Journal of Park and Recreation Administration Volume 29 ; 2011 >
     au < released ; 2012 ; 30 ; Journal of Park and Recreation Administration Volume 39 ; 2012 >
     au < released ; 2013 ; 31 ; Journal of Park and Recreation Administration Volume 31 ; 2013 >
-    au < ready ; 2014 ; 32 ; Journal of Park and Recreation Administration Volume 32 ; 2014 >
-    au < ready ; 2015 ; 33 ; Journal of Park and Recreation Administration Volume 33 ; 2015 > #subscription needed?
+    au < releasing ; 2014 ; 32 ; Journal of Park and Recreation Administration Volume 32 ; 2014 >
+    au < releasing ; 2015 ; 33 ; Journal of Park and Recreation Administration Volume 33 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 34 ; Journal of Park and Recreation Administration Volume 34 ; 2016 >
   }
 
@@ -224,8 +224,8 @@
     au < released ; 2011 ; 68 ; The Physical Educator Volume 68 ; 2011 >
     au < released ; 2012 ; 69 ; The Physical Educator Volume 69 ; 2012 >
     au < released ; 2013 ; 70 ; The Physical Educator Volume 70 ; 2013 >
-    au < ready ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 >
-    au < ready ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 > #subscription needed?
+    au < releasing ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 >
+    au < releasing ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 73 ; The Physical Educator Volume 73 ; 2016 >
   }
 
@@ -256,8 +256,8 @@
     au < released ; 2011 ; 26 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 26 ; 2011 >
     au < released ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
     au < released ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
-    au < ready ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
-    au < ready ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 > #subscription needed?
+    au < releasing ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
+    au < releasing ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 31 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 31 ; 2016 > #subscription needed?
   }
 
@@ -300,8 +300,8 @@
     au < released ; 2011 ; 45 ; Therapeutic Recreation Journal Volume 45 ; 2011 >
     au < released ; 2012 ; 46 ; Therapeutic Recreation Journal Volume 46 ; 2012 >
     au < released ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 >
-    au < ready ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
-    au < ready ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 > #subscription page?
+    au < releasing ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
+    au < releasing ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 > #subscription page?
     au < manifest ; 2016 ; 50 ; Therapeutic Recreation Journal Volume 50 ; 2016 > 
   }
   
@@ -313,8 +313,8 @@
 
     param[journal_id] = jhett
 
-    au < ready ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
-    au < ready ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 > #subscription page?
+    au < releasing ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
+    au < releasing ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 > #subscription page?
   }
   
   {
@@ -324,12 +324,12 @@
 
     param[journal_id] = jnel
 
-    au < ready ; 2010 ; 0 ; Journal of Nonprofit Education and Leadership Volume 0 ; 2010 >
-    au < ready ; 2011 ; 1 ; Journal of Nonprofit Education and Leadership Volume 1 ; 2011 >
-    au < ready ; 2012 ; 2 ; Journal of Nonprofit Education and Leadership Volume 2 ; 2012 >
-    au < ready ; 2013 ; 3 ; Journal of Nonprofit Education and Leadership Volume 3 ; 2013 >
-    au < ready ; 2014 ; 4 ; Journal of Nonprofit Education and Leadership Volume 4 ; 2014 >
-    au < ready ; 2015 ; 5 ; Journal of Nonprofit Education and Leadership Volume 5 ; 2015 > #subscription needed?
+    au < releasing ; 2010 ; 0 ; Journal of Nonprofit Education and Leadership Volume 0 ; 2010 >
+    au < releasing ; 2011 ; 1 ; Journal of Nonprofit Education and Leadership Volume 1 ; 2011 >
+    au < releasing ; 2012 ; 2 ; Journal of Nonprofit Education and Leadership Volume 2 ; 2012 >
+    au < releasing ; 2013 ; 3 ; Journal of Nonprofit Education and Leadership Volume 3 ; 2013 >
+    au < releasing ; 2014 ; 4 ; Journal of Nonprofit Education and Leadership Volume 4 ; 2014 >
+    au < releasing ; 2015 ; 5 ; Journal of Nonprofit Education and Leadership Volume 5 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 6 ; Journal of Nonprofit Education and Leadership Volume 6 ; 2016 >
   }
   
@@ -356,10 +356,10 @@
     au < manifest ; 2006 ; 14 ; Learning Disabilities: A Multidisciplinary Journal Volume 14 ; 2006 >
     au < manifest ; 2009 ; 15 ; Learning Disabilities: A Multidisciplinary Journal Volume 15 ; 2009 >
     au < manifest ; 2010 ; 16 ; Learning Disabilities: A Multidisciplinary Journal Volume 16 ; 2010 >
-    au < ready ; 2011 ; 17 ; Learning Disabilities: A Multidisciplinary Journal Volume 17 ; 2011 >
-    au < ready ; 2012 ; 18 ; Learning Disabilities: A Multidisciplinary Journal Volume 18 ; 2012 >
-    au < ready ; 2013 ; 19 ; Learning Disabilities: A Multidisciplinary Journal Volume 19 ; 2013 >
-    au < ready ; 2014 ; 20 ; Learning Disabilities: A Multidisciplinary Journal Volume 20 ; 2014 >
+    au < releasing ; 2011 ; 17 ; Learning Disabilities: A Multidisciplinary Journal Volume 17 ; 2011 >
+    au < releasing ; 2012 ; 18 ; Learning Disabilities: A Multidisciplinary Journal Volume 18 ; 2012 >
+    au < releasing ; 2013 ; 19 ; Learning Disabilities: A Multidisciplinary Journal Volume 19 ; 2013 >
+    au < releasing ; 2014 ; 20 ; Learning Disabilities: A Multidisciplinary Journal Volume 20 ; 2014 >
     au < manifest ; 2016 ; 21 ; Learning Disabilities: A Multidisciplinary Journal Volume 21 ; 2016 >
     au < expected ; 2017 ; 22 ; Learning Disabilities: A Multidisciplinary Journal Volume 22 ; 2017 >
   }

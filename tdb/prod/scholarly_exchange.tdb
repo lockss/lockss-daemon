@@ -224,12 +224,12 @@
     param[base_url] = http://www.mjhid.org/
     param[journal_id] = mjhid
 
-    au < ready ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
-    au < ready ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
-    au < ready ; 2011 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 3 ; 3 ; 2011 >
-    au < ready ; 2012 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 4 ; 4 ; 2012 >
-    au < ready ; 2013 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 5 ; 5 ; 2013 >
-    au < ready ; 2014 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 6 ; 6 ; 2014 >
+    au < releasing ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
+    au < releasing ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
+    au < releasing ; 2011 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 3 ; 3 ; 2011 >
+    au < releasing ; 2012 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 4 ; 4 ; 2012 >
+    au < releasing ; 2013 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 5 ; 5 ; 2013 >
+    au < releasing ; 2014 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 6 ; 6 ; 2014 >
     au < manifest ; 2015 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 7 ; 7 ; 2015 >
     au < manifest ; 2016 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 8 ; 8 ; 2016 >
     
@@ -282,7 +282,7 @@
     au < released ; 2012 ; Syllabus Volume 1 ; 1 ; 2012 >
     au < released ; 2013 ; Syllabus Volume 2 ; 2 ; 2013 >
     au < released ; 2014 ; Syllabus Volume 3 ; 3 ; 2014 >
-    au < ready ; 2015 ; Syllabus Volume 4 ; 4 ; 2015 >
+    au < releasing ; 2015 ; Syllabus Volume 4 ; 4 ; 2015 >
     au < manifest ; 2016 ; Syllabus Volume 5 ; 5 ; 2016 >
     
   }

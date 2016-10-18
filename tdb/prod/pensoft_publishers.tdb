@@ -22,9 +22,9 @@
     param[au_oai_set] = bdj
     param[base_url] = http://bdj.pensoft.net/
 
-    au < ready ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 >
+    au < releasing ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 >
 
    }
@@ -45,8 +45,8 @@
     au < doNotProcess ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 >
     au < doNotProcess ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 >
     au < doNotProcess ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 >
+    au < releasing ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 >
 
@@ -68,8 +68,8 @@
     au < doNotProcess ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 >
     au < doNotProcess ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 >
+    au < releasing ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 >
 
    }
@@ -85,8 +85,8 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < ready ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 >
-     au < ready ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 >
+     au < releasing ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 >
+     au < releasing ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 >
      au < manifest ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 >
 
    }
@@ -123,7 +123,7 @@
     au < doNotProcess ; 2011 ; 20-23 ; Journal of Hymenoptera Research Volume 2011 ; 2011 >
     au < doNotProcess ; 2012 ; 24-29 ; Journal of Hymenoptera Research Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 >
+    au < releasing ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 >
     au < expected ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 >
 
@@ -143,8 +143,8 @@
 
     au < doNotProcess ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 >
     au < doNotProcess ; 2012 ; 2-5 ; MycoKeys Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 >
+    au < releasing ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 >
     au < expected ; 2016 ; 12-14 ; MycoKeys Volume 2016 ; 2016 >
 
@@ -162,8 +162,8 @@
 
     au < doNotProcess ; 2012 ; 1-3 ; Nature Conservation Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 >
+    au < releasing ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 >
     au < exists ; 2016 ; 14-17 ; Nature Conservation Volume 2016 ; 2016 >
 
    }
@@ -182,9 +182,9 @@
     
     au < doNotProcess ; 2011 ; 9-11 ; NeoBiota Volume 2011 ; 2011 >
     au < doNotProcess ; 2012 ; 12-15 ; NeoBiota Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 >
+    au < releasing ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 >
 
    }
 
@@ -241,9 +241,9 @@
     param[base_url] = http://subtbiol.pensoft.net/
 
     au < doNotProcess ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 >
-    au < ready ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 >
+    au < releasing ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 >
     au < exists ; 2016 ; 17-19 ; Subterranean Biology Volume 2016 ; 2016 >
 
    }
@@ -283,7 +283,7 @@
     param[au_oai_set] = zse
     param[base_url] = http://zse.pensoft.net/
 
-    au < ready ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 >
+    au < releasing ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 >
 
