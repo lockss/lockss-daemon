@@ -2171,7 +2171,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 ; >
       au < down ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 ; >
       au < down ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; Gut Pathogens Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; Gut Pathogens Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < down ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 ; >
 
     }
