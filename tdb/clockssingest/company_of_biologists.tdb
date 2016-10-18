@@ -24,7 +24,7 @@
 
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Biology Open Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Open Volume 2 ; 2 ; >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2014 ; Biology Open Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Biology Open Volume 3 ; 3 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2015 ; Biology Open Volume 4 ; 4 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2016 ; Biology Open Volume 5 ; 5 ; >
 
@@ -204,7 +204,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; >
 
@@ -375,7 +375,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Cell Science Volume 124 ; 124 ; >
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Cell Science Volume 125 ; 125 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; >
+    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2015 ; Journal of Cell Science Volume 128 ; 128 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; >
 
@@ -608,7 +608,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 ; >
     au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 ; >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 ; reingest1.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Experimental Biology Volume 219 ; 219 ; >
 
