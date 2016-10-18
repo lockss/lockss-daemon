@@ -18,7 +18,7 @@
     param[journal_abbr] = journal
     implicit < status ; year ; name ; param[volume] >
 
-    au < releasing ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 >
+    au < released ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 >
 
   }
 

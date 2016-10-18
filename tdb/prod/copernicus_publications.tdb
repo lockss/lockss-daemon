@@ -54,15 +54,15 @@
       au < released ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 >
       au < released ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 >
       au < released ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 >
-      au < releasing ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 >
-      au < releasing ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
-      au < releasing ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
-      au < releasing ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
-      au < releasing ; 2013-2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
-      au < releasing ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
-      au < releasing ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 >
-      au < releasing ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
-      au < releasing ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
+      au < released ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 >
+      au < released ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
+      au < released ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
+      au < released ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
+      au < released ; 2013-2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
+      au < released ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
+      au < released ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 >
+      au < released ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
+      au < released ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
       au < manifest ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 >
     
    }
@@ -87,9 +87,9 @@
       au < released ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 >
       au < released ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 >
       au < released ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 >
-      au < releasing ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 >
+      au < released ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 >
       au < released ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 >
-      au < releasing ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 >
+      au < released ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 >
       au < manifest ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 >
     
    }
@@ -113,9 +113,9 @@
       au < released ; 2011 ; 2011 ; Advances in Science and Research Volume 7 ; 7 >
       au < released ; 2012 ; 2012 ; Advances in Science and Research Volume 8 ; 8 >
       au < doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 >
-      au < releasing ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 >
-      au < releasing ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
-      au < releasing ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
+      au < released ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 >
+      au < released ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
+      au < released ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
       au < manifest ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 >
     
    }
@@ -130,7 +130,7 @@
       param[base_url] = http://www.adv-stat-clim-meteorol-oceanogr.net/
       param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
 
-      au < releasing ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
+      au < released ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
       au < manifest ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 >
 
    }
@@ -168,9 +168,9 @@
       au < released ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
       au < released ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
       au < released ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
-      au < releasing ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
-      au < releasing ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
-      au < releasing ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
+      au < released ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
+      au < released ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
+      au < released ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
       au < manifest ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 >
     
    }
@@ -209,7 +209,7 @@
       {
       param[base_url] = http://www.arch-anim-breed.net/
 
-      au < releasing ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      au < released ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       au < manifest ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 >
 
       }
@@ -227,7 +227,7 @@
       param[home_url] = http://www.astra-proceedings.net/
 
       au < released ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
-      au < releasing ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
+      au < released ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
       au < expected ; 2016 ; 2016 ; ASTRA Proceedings Volume 3 ; 3 >
 
    }
@@ -276,9 +276,9 @@
       au < released ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 >
       au < released ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 >
       au < released ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
-      au < releasing ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
-      au < releasing ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
-      au < releasing ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
+      au < released ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
+      au < released ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
+      au < released ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
       au < manifest ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 >
     
    }
@@ -326,9 +326,9 @@
       au < released ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 >
       au < released ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 >
       au < released ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
-      au < releasing ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
       au < released ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
-      au < releasing ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
+      au < released ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
       au < manifest ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 >
     
    }
@@ -373,9 +373,9 @@
       au < released ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 >
       au < released ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 >
       au < released ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
-      au < releasing ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
-      au < releasing ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
-      au < releasing ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
+      au < released ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
+      au < released ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
+      au < released ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
       au < manifest ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 >
     
    }
@@ -423,9 +423,9 @@
       au < released ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 >
       au < released ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 >
       au < released ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
-      au < releasing ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
-      au < releasing ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
-      au < releasing ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
+      au < released ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
+      au < released ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
+      au < released ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
       au < manifest ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 >
     
    }
@@ -469,9 +469,9 @@
       au < released ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 >
       au < released ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 >
       au < released ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
-      au < releasing ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
-      au < releasing ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
-      au < releasing ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
+      au < released ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
+      au < released ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
+      au < released ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
       au < manifest ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 >
     
    }
@@ -507,9 +507,9 @@
       param[base_url] = http://www.earth-surf-dynam.net/
       param[home_url] = http://www.earth-surface-dynamics.net/
 
-      au < releasing ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
-      au < releasing ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
-      au < releasing ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
+      au < released ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
+      au < released ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
+      au < released ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
       au < manifest ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 >
     
    }
@@ -543,9 +543,9 @@
       au < released ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 >
       au < released ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 >
       au < released ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
-      au < releasing ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
-      au < releasing ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
-      au < releasing ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
+      au < released ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
+      au < released ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
       au < manifest ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 >
     
    }
@@ -583,9 +583,9 @@
       au < released ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 >
       au < released ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 >
       au < released ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
-      au < releasing ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
-      au < releasing ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
-      au < releasing ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
+      au < released ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
+      au < released ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
+      au < released ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
       au < manifest ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 >
     
    }
@@ -686,13 +686,13 @@
       au < manifest ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract Only] ; 11 >
       au < manifest ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract Only] ; 12 >
       au < manifest ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract Only] ; 13 >
-      au < releasing ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract Only] ; 14 >
-      au < releasing ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract Only] ; 15 >
-      au < releasing ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract Only] ; 16 >
+      au < released ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract Only] ; 14 >
+      au < released ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract Only] ; 15 >
+      au < released ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract Only] ; 16 >
       }
       
-      au < releasing ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
-      au < releasing ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
+      au < released ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
+      au < released ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
       au < manifest ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 >
     
    }
@@ -774,9 +774,9 @@
       au < manifest ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 >
       au < manifest ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 >
       au < released ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
-      au < releasing ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
-      au < releasing ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
-      au < releasing ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
+      au < released ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
+      au < released ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
+      au < released ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
       au < manifest ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 >
     
    }
@@ -792,9 +792,9 @@
       param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
       au < released ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
-      au < releasing ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
-      au < releasing ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
-      au < releasing ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
+      au < released ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
+      au < released ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
+      au < released ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
       au < manifest ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 >
     
    }
@@ -832,9 +832,9 @@
       au < released ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 >
       au < released ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
       au < released ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
-      au < releasing ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
       au < released ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
-      au < releasing ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
+      au < released ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
       au < manifest ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 >
     
    }
@@ -870,9 +870,9 @@
       param[base_url] = http://www.geoth-energ-sci.net/
       param[home_url] = http://www.geothermal-energy-science.net/
 
-      au < releasing ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
+      au < released ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
       au < released ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
-      au < releasing ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
+      au < released ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
       au < manifest ; 2016 ; 2016 ; Geothermal Energy Science Volume 4 ; 4 >
     
    }
@@ -890,9 +890,9 @@
       au < released ; 2010 ; 2010 ; History of Geo- and Space Sciences Volume 1 ; 1 >
       au < released ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 >
       au < released ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
-      au < releasing ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
-      au < releasing ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
-      au < releasing ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
+      au < released ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
+      au < released ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 >
       au < manifest ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 >
     
    }
@@ -923,9 +923,9 @@
       au < released ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 >
       au < released ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 >
       au < released ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
-      au < releasing ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
-      au < releasing ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
-      au < releasing ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
+      au < released ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
+      au < released ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
+      au < released ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
       au < manifest ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 >
     
    }
@@ -976,7 +976,7 @@
       au < released ; 2013 ; 2013 ; ISPRS Annals Volume II-2/W1 ; II-2-W1 >
       au < released ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W3 ; II-3-W3 >
       au < released ; 2013 ; 2013 ; ISPRS Annals Volume II-4/W1 ; II-4-W1 >
-      au < releasing ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 >
+      au < released ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 >
       au < released ; 2014 ; 2014 ; ISPRS Annals Volume II-2 ; II-2 >
       au < released ; 2014 ; 2014 ; ISPRS Annals Volume II-3 ; II-3 >
       au < released ; 2014 ; 2014 ; ISPRS Annals Volume II-4 ; II-4 >
@@ -1063,7 +1063,7 @@
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 >
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 >
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 >
-      au < releasing ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 >
+      au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 >
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 >
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 >
       au < released ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 >
@@ -1071,8 +1071,8 @@
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 >
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 >
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 >
-      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 >
-      au < releasing ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 >
+      au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 >
+      au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 >
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 >
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 >
       au < released ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 >
@@ -1131,9 +1131,9 @@
       param[home_url] = http://www.journal-of-sensors-and-sensor-systems.net/
 
       au < released ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
-      au < releasing ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
-      au < releasing ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
-      au < releasing ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 >
+      au < released ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
+      au < released ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
+      au < released ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 >
       au < manifest ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 >
     
    }
@@ -1151,9 +1151,9 @@
       au < released ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 >
       au < released ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 >
       au < released ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
-      au < releasing ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
-      au < releasing ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
-      au < releasing ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
+      au < released ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
+      au < released ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 >
       au < manifest ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 >
     
    }
@@ -1180,9 +1180,9 @@
       au < released ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 >
       au < released ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 >
       au < released ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
-      au < releasing ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
-      au < releasing ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
-      au < releasing ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 >
+      au < released ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
+      au < released ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
+      au < released ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 >
       au < manifest ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 >
     
    }
@@ -1232,9 +1232,9 @@
       au < released ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 >
       au < released ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 >
       au < released ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 >
-      au < releasing ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
-      au < releasing ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 >
-      au < releasing ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 >
+      au < released ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
+      au < released ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 >
+      au < released ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 >
       au < manifest ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 >
     
    }
@@ -1272,9 +1272,9 @@
       au < released ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 >
       au < released ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 >
       au < released ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
-      au < releasing ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
-      au < releasing ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
-      au < releasing ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
+      au < released ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
+      au < released ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
+      au < released ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
       au < manifest ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 >
     
    }
@@ -1330,8 +1330,8 @@
       param[base_url] = http://www.primate-biol.net/
       param[home_url] = http://www.primate-biology.net/
 
-      au < releasing ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
-      au < releasing ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 >
+      au < released ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
+      au < released ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 >
       au < manifest ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 >
     
    }
@@ -1359,13 +1359,13 @@
       au < manifest ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 >
       au < manifest ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 >
       au < manifest ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 >
-      au < releasing ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
-      au < releasing ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
-      au < releasing ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
-      au < releasing ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
-      au < releasing ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
-      au < releasing ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
-      au < releasing ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 >
+      au < released ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
+      au < released ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
+      au < released ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
+      au < released ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
+      au < released ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
+      au < released ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
+      au < released ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 >
       au < manifest ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 >
     
    }
@@ -1401,7 +1401,7 @@
       param[base_url] = http://www.soil-journal.net/
       param[home_url] = http://www.soil-journal.net/
 
-      au < releasing ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
+      au < released ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
       au < manifest ; 2016 ; 2016 ; SOIL Volume 2 ; 2 >
 
    }
@@ -1434,9 +1434,9 @@
       au < released ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 >
       au < released ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 >
       au < released ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 >
-      au < releasing ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 >
-      au < releasing ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 >
-      au < releasing ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 >
+      au < released ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 >
+      au < released ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 >
+      au < released ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 >
       au < manifest ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 >
     
    }
@@ -1507,9 +1507,9 @@
       au < released ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 >
       au < released ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 >
       au < released ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
-      au < releasing ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
+      au < released ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
       au < released ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
-      au < releasing ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
+      au < released ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
       au < manifest ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 >
     
    }
@@ -1558,9 +1558,9 @@
       au < released ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 >
       au < released ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 >
       au < released ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 >
-      au < releasing ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 >
-      au < releasing ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 >
-      au < releasing ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 >
+      au < released ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 >
+      au < released ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 >
+      au < released ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 >
       au < manifest ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 >
     
    }

@@ -20,10 +20,10 @@
     param[journal_issn] = 0010-2571
     comment[journal_id] = cmh
     
-    au < releasing ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 >
-    au < releasing ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 >
-    au < releasing ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 >
-    au < releasing ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 >
+    au < released ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 >
+    au < released ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 >
+    au < released ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 >
+    au < released ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 >
     
   }
 
@@ -38,11 +38,11 @@
     param[journal_issn] = 0032-5155
     comment[journal_id] = pm
     
-    au < releasing ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 >
-    au < releasing ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 >
-    au < releasing ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 >
-    au < releasing ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 >
-    au < releasing ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 >
+    au < released ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 >
+    au < released ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 >
+    au < released ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 >
+    au < released ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 >
+    au < released ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 >
     
   }
 
@@ -57,11 +57,11 @@
     param[journal_issn] = 1663-487X
     comment[journal_id] = qt
     
-    au < releasing ; 2010 ; Quantum Topology Volume 1 ; 1 >
-    au < releasing ; 2011 ; Quantum Topology Volume 2 ; 2 >
-    au < releasing ; 2012 ; Quantum Topology Volume 3 ; 3 >
-    au < releasing ; 2013 ; Quantum Topology Volume 4 ; 4 >
-    au < releasing ; 2014 ; Quantum Topology Volume 5 ; 5 >
+    au < released ; 2010 ; Quantum Topology Volume 1 ; 1 >
+    au < released ; 2011 ; Quantum Topology Volume 2 ; 2 >
+    au < released ; 2012 ; Quantum Topology Volume 3 ; 3 >
+    au < released ; 2013 ; Quantum Topology Volume 4 ; 4 >
+    au < released ; 2014 ; Quantum Topology Volume 5 ; 5 >
     
   }
 

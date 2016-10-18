@@ -187,7 +187,7 @@
     au < released ; 2012 ; Comma Volume 2012 ; 2012 >
     au < released ; 2013 ; Comma Volume 2013 ; 2013 >
     au < released ; 2014 ; Comma Volume 2014 ; 2014 >
-    au < releasing ; 2015 ; Comma Volume 2015 ; 2015 >
+    au < released ; 2015 ; Comma Volume 2015 ; 2015 >
     au < expected ; 2016 ; Comma Volume 2016 ; 2016 >
 
   }
@@ -289,8 +289,8 @@
 
     param[journal_id] = extr
 
-    au < releasing ; 2008 ; Extrapolation Volume 49 ; 49 >
-    au < releasing ; 2009 ; Extrapolation Volume 50 ; 50 >
+    au < released ; 2008 ; Extrapolation Volume 49 ; 49 >
+    au < released ; 2009 ; Extrapolation Volume 50 ; 50 >
     au < released ; 2010 ; Extrapolation Volume 51 ; 51 >
     au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
     au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
@@ -356,12 +356,12 @@
     au < manifest ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
     au < manifest ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 >
     au < manifest ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 >
-    au < releasing ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 >
-    au < releasing ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 >
-    au < releasing ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 >
-    au < releasing ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 >
-    au < releasing ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 >
-    au < releasing ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 >
+    au < released ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 >
+    au < released ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 >
+    au < released ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 >
+    au < released ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 >
+    au < released ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 >
+    au < released ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 >
     au < manifest ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 >
 
   }
@@ -476,8 +476,8 @@
 
     param[journal_id] = mb
 
-    au < releasing ; 2008 ; Modern Believing Volume 49 ; 49 >
-    au < releasing ; 2009 ; Modern Believing Volume 50 ; 50 >
+    au < released ; 2008 ; Modern Believing Volume 49 ; 49 >
+    au < released ; 2009 ; Modern Believing Volume 50 ; 50 >
     au < released ; 2010 ; Modern Believing Volume 51 ; 51 >
     au < released ; 2011 ; Modern Believing Volume 52 ; 52 >
     au < released ; 2012 ; Modern Believing Volume 53 ; 53 >
@@ -644,23 +644,23 @@
 
     param[journal_id] = qs
 
-    au < releasing ; 2008 ; Quebec Studies Volume 45 ; 45 >
-    au < releasing ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < releasing ; 2009 ; Quebec Studies Volume 47 ; 47 >
-    au < releasing ; 2009 ; Quebec Studies Volume 48 ; 48 >
-    au < releasing ; 2010 ; Quebec Studies Volume 49 ; 49 >
-    au < releasing ; 2010 ; Quebec Studies Volume 50 ; 50 >
-    au < releasing ; 2011 ; Quebec Studies Volume 51 ; 51 >
-    au < releasing ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < releasing ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < releasing ; 2012 ; Quebec Studies Volume 54 ; 54 >
-    au < releasing ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
-    au < releasing ; 2013 ; Quebec Studies Volume 55 ; 55 >
-    au < releasing ; 2013 ; Quebec Studies Volume 56 ; 56 >
-    au < releasing ; 2014 ; Quebec Studies Volume 57 ; 57 >
-    au < releasing ; 2014 ; Quebec Studies Volume 58 ; 58 >
-    au < releasing ; 2015 ; Quebec Studies Volume 59 ; 59 >
-    au < releasing ; 2015 ; Quebec Studies Volume 60 ; 60 >
+    au < released ; 2008 ; Quebec Studies Volume 45 ; 45 >
+    au < released ; 2008 ; Quebec Studies Volume 46 ; 46 >
+    au < released ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < released ; 2009 ; Quebec Studies Volume 48 ; 48 >
+    au < released ; 2010 ; Quebec Studies Volume 49 ; 49 >
+    au < released ; 2010 ; Quebec Studies Volume 50 ; 50 >
+    au < released ; 2011 ; Quebec Studies Volume 51 ; 51 >
+    au < released ; 2011 ; Quebec Studies Volume 52 ; 52 >
+    au < released ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < released ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < released ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
+    au < released ; 2013 ; Quebec Studies Volume 55 ; 55 >
+    au < released ; 2013 ; Quebec Studies Volume 56 ; 56 >
+    au < released ; 2014 ; Quebec Studies Volume 57 ; 57 >
+    au < released ; 2014 ; Quebec Studies Volume 58 ; 58 >
+    au < released ; 2015 ; Quebec Studies Volume 59 ; 59 >
+    au < released ; 2015 ; Quebec Studies Volume 60 ; 60 >
     au < manifest ; 2016 ; Quebec Studies Volume 61 ; 61 >
     au < expected ; 2016 ; Quebec Studies Volume 62 ; 62 >
 
@@ -727,11 +727,11 @@
 
     param[journal_id] = studia
 
-    au < releasing ; 2011 ; Studia Hibernica Volume 37 ; 37 >
-    au < releasing ; 2012 ; Studia Hibernica Volume 38 ; 38 >
-    au < releasing ; 2013 ; Studia Hibernica Volume 39 ; 39 >
-    au < releasing ; 2014 ; Studia Hibernica Volume 40 ; 40 >
-    au < releasing ; 2015 ; Studia Hibernica Volume 41 ; 41 >
+    au < released ; 2011 ; Studia Hibernica Volume 37 ; 37 >
+    au < released ; 2012 ; Studia Hibernica Volume 38 ; 38 >
+    au < released ; 2013 ; Studia Hibernica Volume 39 ; 39 >
+    au < released ; 2014 ; Studia Hibernica Volume 40 ; 40 >
+    au < released ; 2015 ; Studia Hibernica Volume 41 ; 41 >
     au < expected ; 2016 ; Studia Hibernica Volume 42 ; 42 >
 
   }
