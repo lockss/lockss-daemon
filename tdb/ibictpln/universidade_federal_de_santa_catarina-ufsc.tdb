@@ -805,14 +805,15 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = emdebate
 
-      au < released ; 1999 ; 1 ; EM DEBATE Volume 1999 ; 1999 ; >
-      au < released ; 2006 ; 8 ; EM DEBATE Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; EM DEBATE Volume 2007 ; 2007 ; >
-      au < released ; 2010 ; 12 ; EM DEBATE Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; EM DEBATE Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; EM DEBATE Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; EM DEBATE Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 16 ; EM DEBATE Volume 2014 ; 2014 ; >
+      au < released ; 1999 ; 1 ; EM DEBATE Volume 1 ; 1999 ; >
+      au < released ; 2006 ; 2 ; EM DEBATE Volume 2 ; 2006 ; >
+      au < released ; 2007 ; 3 ; EM DEBATE Volume 3 ; 2007 ; >
+      au < released ; 2010 ; 4 ; EM DEBATE Volume 4 ; 2010 ; >
+      au < released ; 2011 ; 5-6 ; EM DEBATE Volume 5-6 ; 2011 ; >
+      au < released ; 2012 ; 7-8 ; EM DEBATE Volume 7-8 ; 2012 ; >
+      au < released ; 2013 ; 9-10 ; EM DEBATE Volume 9-10 ; 2013 ; >
+      au < released ; 2014 ; 11-12 ; EM DEBATE Volume 11-12 ; 2014 ; >
+      au < manifest ; 2015 ; 13-14 ; EM DEBATE Volume 13-14 ; 2015 ; >
 
   }
 
@@ -864,18 +865,19 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = extensio
 
-      au < released ; 2004 ; 1 ; Extensio: Revista Eletrônica de Extensão Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 2 ; Extensio: Revista Eletrônica de Extensão Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 3 ; Extensio: Revista Eletrônica de Extensão Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 4 ; Extensio: Revista Eletrônica de Extensão Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 5 ; Extensio: Revista Eletrônica de Extensão Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 6 ; Extensio: Revista Eletrônica de Extensão Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 7 ; Extensio: Revista Eletrônica de Extensão Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 8 ; Extensio: Revista Eletrônica de Extensão Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 9 ; Extensio: Revista Eletrônica de Extensão Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 10 ; Extensio: Revista Eletrônica de Extensão Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 11 ; Extensio: Revista Eletrônica de Extensão Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 12 ; Extensio: Revista Eletrônica de Extensão Volume 2015 ; 2015 ; >
+      au < released ; 2004 ; 1 ; Extensio: Revista Eletrônica de Extensão Volume 1 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Extensio: Revista Eletrônica de Extensão Volume 2 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Extensio: Revista Eletrônica de Extensão Volume 3 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Extensio: Revista Eletrônica de Extensão Volume 4 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Extensio: Revista Eletrônica de Extensão Volume 5 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Extensio: Revista Eletrônica de Extensão Volume 6 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Extensio: Revista Eletrônica de Extensão Volume 7 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Extensio: Revista Eletrônica de Extensão Volume 8 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Extensio: Revista Eletrônica de Extensão Volume 9 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Extensio: Revista Eletrônica de Extensão Volume 10 ; 2013 ; >
+      au < released ; 2014 ; 11 ; Extensio: Revista Eletrônica de Extensão Volume 11 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Extensio: Revista Eletrônica de Extensão Volume 12 ; 2015 ; >
+      au < manifest ; 2016 ; 13 ; Extensio: Revista Eletrônica de Extensão Volume 13 ; 2015 ; >
 
   }
 
@@ -1045,18 +1047,19 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = interthesis
 
-      au < released ; 2004 ; 1 ; Revista Internacional Interdisciplinar INTERthesis Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 2 ; Revista Internacional Interdisciplinar INTERthesis Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 3 ; Revista Internacional Interdisciplinar INTERthesis Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 4 ; Revista Internacional Interdisciplinar INTERthesis Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 5 ; Revista Internacional Interdisciplinar INTERthesis Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 6 ; Revista Internacional Interdisciplinar INTERthesis Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 7 ; Revista Internacional Interdisciplinar INTERthesis Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 8 ; Revista Internacional Interdisciplinar INTERthesis Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 9 ; Revista Internacional Interdisciplinar INTERthesis Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 10 ; Revista Internacional Interdisciplinar INTERthesis Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 11 ; Revista Internacional Interdisciplinar INTERthesis Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 12 ; Revista Internacional Interdisciplinar INTERthesis Volume 2015 ; 2015 ; >
+      au < released ; 2004 ; 1 ; Revista Internacional Interdisciplinar INTERthesis Volume 1 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Revista Internacional Interdisciplinar INTERthesis Volume 2 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Revista Internacional Interdisciplinar INTERthesis Volume 3 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Revista Internacional Interdisciplinar INTERthesis Volume 4 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Revista Internacional Interdisciplinar INTERthesis Volume 5 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Revista Internacional Interdisciplinar INTERthesis Volume 6 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Revista Internacional Interdisciplinar INTERthesis Volume 7 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Revista Internacional Interdisciplinar INTERthesis Volume 8 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Revista Internacional Interdisciplinar INTERthesis Volume 9 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Revista Internacional Interdisciplinar INTERthesis Volume 10 ; 2013 ; >
+      au < released ; 2014 ; 11 ; Revista Internacional Interdisciplinar INTERthesis Volume 11 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Revista Internacional Interdisciplinar INTERthesis Volume 12 ; 2015 ; >
+      au < manifest ; 2016 ; 13 ; Revista Internacional Interdisciplinar INTERthesis Volume 13 ; 2015 ; >
 
   }
 
