@@ -471,33 +471,30 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = resgate
 
-      au < released ; 1990 ; 1 ; Resgate Volume 1990 ; 1990 ; >
-      au < released ; 1991 ; 2 ; Resgate Volume 1991 ; 1991 ; >
-      au < released ; 1992 ; 3 ; Resgate Volume 1992 ; 1992 ; >
-      au < released ; 1993 ; 4 ; Resgate Volume 1993 ; 1993 ; >
-      au < exists ; 1994 ; 5 ; Resgate Volume 1994 ; 1994 ; >
-      au < exists ; 1995 ; 6 ; Resgate Volume 1995 ; 1995 ; >
-      au < released ; 1996 ; 7 ; Resgate Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 8 ; Resgate Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 9 ; Resgate Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 10 ; Resgate Volume 1999 ; 1999 ; >
-      au < exists ; 2000 ; 11 ; Resgate Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 12 ; Resgate Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 13 ; Resgate Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 14 ; Resgate Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 15 ; Resgate Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 16 ; Resgate Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 17 ; Resgate Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 18 ; Resgate Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 19 ; Resgate Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 20 ; Resgate Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 21 ; Resgate Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 22 ; Resgate Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 23 ; Resgate Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 24 ; Resgate Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 25 ; Resgate Volume 2014 ; 2014 ; >
-      au < released ; 2015 ; 26 ; Resgate Volume 2015 ; 2015 ; >
-      au < expected ; 2016 ; 27 ; Resgate Volume 2016 ; 2016 ; >
+      au < released ; 1990 ; 1 ; Resgate Volume 1 ; 1990 ; >
+      au < released ; 1991 ; 2 ; Resgate Volume 2 ; 1991 ; >
+      au < released ; 1992 ; 3 ; Resgate Volume 3 ; 1992 ; >
+      au < released ; 1993 ; 4 ; Resgate Volume 4 ; 1993 ; >
+      au < released ; 1996 ; 5 ; Resgate Volume 5 ; 1996 ; >
+      au < released ; 1997 ; 6 ; Resgate Volume 6 ; 1997 ; >
+      au < released ; 1998 ; 7 ; Resgate Volume 7 ; 1998 ; >
+      au < released ; 1999 ; 8 ; Resgate Volume 8 ; 1999 ; >
+      au < released ; 2001 ; 9 ; Resgate Volume 9 ; 2001 ; >
+      au < released ; 2002 ; 10 ; Resgate Volume 10 ; 2002 ; >
+      au < released ; 2003 ; 11 ; Resgate Volume 11 ; 2003 ; >
+      au < released ; 2004 ; 12 ; Resgate Volume 12 ; 2004 ; >
+      au < released ; 2005 ; 13 ; Resgate Volume 13 ; 2005 ; >
+      au < released ; 2006 ; 14 ; Resgate Volume 14 ; 2006 ; >
+      au < released ; 2007 ; 15 ; Resgate Volume 15 ; 2007 ; >
+      au < released ; 2008 ; 16 ; Resgate Volume 16 ; 2008 ; >
+      au < released ; 2009 ; 17 ; Resgate Volume 17 ; 2009 ; >
+      au < released ; 2010 ; 18 ; Resgate Volume 18 ; 2010 ; >
+      au < released ; 2011 ; 19 ; Resgate Volume 19 ; 2011 ; >
+      au < released ; 2012 ; 20 ; Resgate Volume 20 ; 2012 ; >
+      au < released ; 2013 ; 21 ; Resgate Volume 21 ; 2013 ; >
+      au < released ; 2014 ; 22 ; Resgate Volume 22 ; 2014 ; >
+      au < released ; 2015 ; 23 ; Resgate Volume 23 ; 2015 ; >
+      au < manifest ; 2016 ; 24 ; Resgate Volume 24 ; 2016 ; >
 
   }
 
@@ -561,17 +558,17 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = san
 
-      au < released ; 2005 ; 12 ; Segurança Alimentar e Nutricional Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 13 ; Segurança Alimentar e Nutricional Volume 2006 ; 2006 ; >
-      au < released ; 2008 ; 15 ; Segurança Alimentar e Nutricional Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 16 ; Segurança Alimentar e Nutricional Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 17 ; Segurança Alimentar e Nutricional Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 18 ; Segurança Alimentar e Nutricional Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 19 ; Segurança Alimentar e Nutricional Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 20 ; Segurança Alimentar e Nutricional Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 21 ; Segurança Alimentar e Nutricional Volume 2014 ; 2014 ; >
-      au < released ; 2015 ; 22 ; Segurança Alimentar e Nutricional Volume 2015 ; 2015 ; >
-      au < expected ; 2016 ; 23 ; Segurança Alimentar e Nutricional Volume 2016 ; 2016 ; >
+      au < released ; 2005 ; 12 ; Segurança Alimentar e Nutricional Volume 12 ; 2005 ; >
+      au < released ; 2006 ; 13 ; Segurança Alimentar e Nutricional Volume 13 ; 2006 ; >
+      au < released ; 2008 ; 15 ; Segurança Alimentar e Nutricional Volume 15 ; 2008 ; >
+      au < released ; 2009 ; 16 ; Segurança Alimentar e Nutricional Volume 16 ; 2009 ; >
+      au < released ; 2010 ; 17 ; Segurança Alimentar e Nutricional Volume 17 ; 2010 ; >
+      au < released ; 2011 ; 18 ; Segurança Alimentar e Nutricional Volume 18 ; 2011 ; >
+      au < released ; 2012 ; 19 ; Segurança Alimentar e Nutricional Volume 19 ; 2012 ; >
+      au < released ; 2013 ; 20 ; Segurança Alimentar e Nutricional Volume 20 ; 2013 ; >
+      au < released ; 2014 ; 21 ; Segurança Alimentar e Nutricional Volume 21 ; 2014 ; >
+      au < released ; 2015 ; 22 ; Segurança Alimentar e Nutricional Volume 22 ; 2015 ; >
+      au < manifest ; 2016 ; 23 ; Segurança Alimentar e Nutricional Volume 23 ; 2016 ; >
 
   }
 
