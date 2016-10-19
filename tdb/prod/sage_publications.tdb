@@ -967,10 +967,10 @@
         au < down ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
         au < down ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
         au < down ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
-        au < down ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
-        au < down ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
-        au < down ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
-        au < down ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
+        au < superseded ; 2009 ; Aesthetic Surgery Journal Volume 29 [superseded] ; 29 >
+        au < superseded ; 2010 ; Aesthetic Surgery Journal Volume 30 [superseded] ; 30 >
+        au < superseded ; 2011 ; Aesthetic Surgery Journal Volume 31 [superseded] ; 31 >
+        au < superseded ; 2012 ; Aesthetic Surgery Journal Volume 32 [superseded] ; 32 >
         au < doNotProcess ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
         au < doNotProcess ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
 
@@ -18309,7 +18309,7 @@
         au < exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
         au < exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
         au < exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
-        au < released ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
+        au < released ; 2015 ; Industry and Higher Education Volume 29 [Sage] ; 29 >
         au < manifest ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
   
     }
@@ -37510,7 +37510,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
         au < exists ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
         au < exists ; 2014 ; Outlook on Agriculture Volume 43 ; 43 >
-        au < released ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
+        au < released ; 2015 ; Outlook on Agriculture Volume 44 [Sage] ; 44 >
         au < manifest ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
   
     }
