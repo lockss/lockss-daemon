@@ -214,8 +214,8 @@
       param[base_url] = http://revistaseletronicas.pucrs.br/ojs/
       param[journal_id] = iberoamericana
 
-      au < manifest ; 1999 ; 25 ; Estudos Ibero-Americanos Volume 25 ; 2009 ; >
-      au < manifest ; 2000 ; 26 ; Estudos Ibero-Americanos Volume 26 ; 2010 ; >
+      au < exists ; 1999 ; 25 ; Estudos Ibero-Americanos Volume 25 ; 1999 ; >
+      au < exists ; 2000 ; 26 ; Estudos Ibero-Americanos Volume 26 ; 2000 ; >
       au < manifest ; 2001 ; 27 ; Estudos Ibero-Americanos Volume 27 ; 2001 ; >
       au < manifest ; 2002 ; 28 ; Estudos Ibero-Americanos Volume 28 ; 2002 ; >
       au < manifest ; 2003 ; 29 ; Estudos Ibero-Americanos Volume 29 ; 2003 ; >
