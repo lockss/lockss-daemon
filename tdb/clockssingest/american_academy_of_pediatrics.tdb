@@ -138,7 +138,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; AAP News Volume 33 ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; AAP News Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP News Volume 35 ; 35 ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP News Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2015 ; AAP News Volume 36 [superseded] ; 36 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; AAP News Volume 36 ; 36 ; >
       au < aap.ClockssAAPDrupalPlugin ; expected ; exists ; 2016 ; AAP News Volume 37 ; 37 ; >
 
     }
@@ -159,7 +160,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Hospital Pediatrics Volume 2 ; 2 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hospital Pediatrics Volume 4 ; 4 ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2015 ; Hospital Pediatrics Volume 5 [superseded] ; 5 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; >
 
   }
@@ -204,7 +206,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; NeoReviews Volume 13 ; 13 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; NeoReviews Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; NeoReviews Volume 16 ; 16 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2015 ; NeoReviews Volume 16 [superseded] ; 16 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; NeoReviews Volume 16 ; 16 ; >
       au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; > #login page found content3, not content2
 
     }
@@ -372,9 +375,11 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 131 ; 131 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 132 ; 132 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics Volume 133 ; 133 ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Pediatrics Volume 134 ; 134 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2014 ; Pediatrics Volume 134 [superseded] ; 134 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2014 ; Pediatrics Volume 134 ; 134 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2015 ; Pediatrics Volume 135 ; 135 ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics Volume 136 ; 136 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2015 ; Pediatrics Volume 136 [superseded] ; 136 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; Pediatrics Volume 136 ; 136 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Pediatrics Volume 137 ; 137 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Pediatrics Volume 138 ; 138 ; >
 
@@ -442,7 +447,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; >
+      au < ClockssHighWirePressH20Plugin ; superseded ; down ; 2015 ; Pediatrics in Review Volume 36 [superseded] ; 36 ; >
+      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; > #pdf stamping problem
 
     }
