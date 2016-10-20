@@ -31,7 +31,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2010-2011 ; Breathe Volume 7 ; 7 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011-2012 ; Breathe Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012-2013 ; Breathe Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; Breathe Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Breathe Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2015 ; Breathe Volume 11 ; 11 ; >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2016 ; Breathe Volume 12 ; 12 ; >
 
@@ -113,7 +113,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Journal Volume 41 ; 41 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Journal Volume 42 ; 42 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; European Respiratory Journal Volume 43 ; 43 ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; European Respiratory Journal Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; European Respiratory Journal Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 ; >
       au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 ; >
       au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2016 ; European Respiratory Journal Volume 47 ; 47 ; >
@@ -143,7 +143,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; European Respiratory Review Volume 20 ; 20 ; >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; European Respiratory Review Volume 21 ; 21 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; European Respiratory Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; European Respiratory Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 ; >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2016 ; European Respiratory Review Volume 25 ; 25 ; >
 
