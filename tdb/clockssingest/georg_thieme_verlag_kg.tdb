@@ -1067,7 +1067,7 @@
    au < finished ; finished ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 ; >
    au < finished ; finished ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 ; >
    au < finished ; crawling ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 2015 ; 141 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 2016 ; 142 ; >
@@ -1185,7 +1185,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy Volume 2010 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy Volume 2011 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 ; >
-   au < crawling ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 ; >
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Endoscopy Volume 2016 ; 48 ; >
@@ -2137,7 +2137,7 @@
     au < finished ; finished ; 2010 ; 2010 ; intensiv Volume 2010 ; 18 ; >
     au < finished ; finished ; 2011 ; 2011 ; intensiv Volume 2011 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 ; >
     au < finished ; finished ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; intensiv Volume 2015 ; 23 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; intensiv Volume 2016 ; 24 ; >
@@ -2182,7 +2182,7 @@
     comment[years] = 2012-current
 
    au < finished ; finished ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 ; >
    au < finished ; finished ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 ; >
@@ -2333,7 +2333,7 @@
     comment[years] = 2012-current
 
     au < finished ; finished ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal Club Schmerzmedizin Volume 5 ; 5 ; >
@@ -2449,7 +2449,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 ; >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 ; >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Volume 2016 ; 29 ; >
@@ -2545,7 +2545,7 @@
 
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Pediatric Biochemistry Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Biochemistry Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Biochemistry Volume 3 ; 3 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 ; >
@@ -2565,7 +2565,7 @@
     comment[years] = 2012-current
 
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 ; >
@@ -2585,7 +2585,7 @@
     comment[years] = 2012-current
 
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 ; >
@@ -2611,7 +2611,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Pediatric Infectious Diseases Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Infectious Diseases Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Infectious Diseases Volume 8 ; 8 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 ; >
@@ -2631,7 +2631,7 @@
     comment[years] = 2012-current
 
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Intensive Care Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Journal of Pediatric Intensive Care Volume 3 ; 3 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 ; >
@@ -2660,8 +2660,8 @@
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Pediatric Neurology Volume 9 ; 9 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Neurology Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Neurology Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 ; >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 ; >
 
@@ -2680,9 +2680,9 @@
     comment[years] = 2012-current
 
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Pediatric Neuroradiology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Pediatric Neuroradiology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 ; >
 
   }
@@ -2728,7 +2728,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 2010 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 2011 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 2012 ; 28 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 2015 ; 31 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Volume 2016 ; 32 ; >
@@ -2812,7 +2812,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 ; >
     au < finished ; finished ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Kardiologie up2date Volume 2016 ; 12 ; >
@@ -2836,7 +2836,7 @@
     au < finished ; finished ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 ; >
     au < finished ; crawling ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; kleintier konkret Volume 2016 ; 19 ; >
@@ -2864,7 +2864,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 ; >
     au < finished ; finished ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 ; >
     au < finished ; finished ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinikarzt Der Volume 2016 ; 45 ; >
@@ -2915,7 +2915,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 2010 ; 227 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Klinische Monatsblätter für Augenheilkunde Volume 2011 ; 228 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Klinische Monatsblätter für Augenheilkunde Volume 2012 ; 229 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 230 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 230 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 2014 ; 231 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 2015 ; 232 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 2016 ; 233 ; >
@@ -2968,7 +2968,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 2010 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 42 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 ; >
     au < finished ; finished ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 2016 ; 47 ; >
@@ -3145,7 +3145,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 2010 ; 89 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Laryngo-Rhino-Otologie Volume 2011 ; 90 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 ; >
     au < finished ; finished ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 2016 ; 95 ; >
@@ -3192,7 +3192,7 @@
     au < finished ; finished ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 ; >
     au < finished ; finished ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ; 17 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ; 17 ; >
     au < finished ; finished ; 2014 ; 2014 ; manuelletherapie Volume 2014 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; manuelletherapie Volume 2015 ; 19 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; manuelletherapie Volume 2016 ; 20 ; >
@@ -3368,7 +3368,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Neuropediatrics Volume 2010 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Neuropediatrics Volume 2011 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 43 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Neuropediatrics Volume 2015 ; 46 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Neuropediatrics Volume 2016 ; 47 ; >
@@ -3443,7 +3443,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Notarzt Der Volume 2010 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Notarzt Der Volume 2011 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 28 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Notarzt Der Volume 2015 ; 31 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Notarzt Der Volume 2016 ; 32 ; >
@@ -3579,7 +3579,7 @@
     au < finished ; finished ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 ; >
     au < finished ; finished ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; OP-Journal Volume 2016 ; 32 ; >
@@ -3624,7 +3624,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 05 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 ; >
     au < finished ; finished ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 2015 ; 08 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 2016 ; 09 ; >
@@ -3710,7 +3710,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 ; >
     au < finished ; finished ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 ; >
     au < finished ; finished ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Pädiatrie up2date Volume 2016 ; 11 ; >
@@ -3818,7 +3818,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Pharmacopsychiatry Volume 2010 ; 43 ; >
     au < finished ; finished ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 ; >
     au < finished ; finished ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Pharmacopsychiatry Volume 2016 ; 49 ; >
@@ -4041,7 +4041,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Planta Medica Volume 2010 ; 76 ; >
    au < finished ; finished ; 2011 ; 2011 ; Planta Medica Volume 2011 ; 77 ; >
    au < finished ; finished ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Volume 2015 ; 81 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Planta Medica Volume 2016 ; 82 ; >
@@ -4479,7 +4479,7 @@
     au < finished ; finished ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2010 ; 182 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2011 ; 183 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2012 ; 184 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2013 ; 185 ; >
     au < finished ; finished ; 2014 ; 2014 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2014 ; 186 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2015 ; 187 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 2016 ; 188 ; >
@@ -4874,7 +4874,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Respiratory and Critical Care Medicine Volume 2010 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Respiratory and Critical Care Medicine Volume 2011 ; 32 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Seminars in Respiratory and Critical Care Medicine Volume 2012 ; 33 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Seminars in Respiratory and Critical Care Medicine Volume 2013 ; 34 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Seminars in Respiratory and Critical Care Medicine Volume 2013 ; 34 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Seminars in Respiratory and Critical Care Medicine Volume 2014 ; 35 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Seminars in Respiratory and Critical Care Medicine Volume 2015 ; 36 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Respiratory and Critical Care Medicine Volume 2016 ; 37 ; >
@@ -4922,7 +4922,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Seminars in Speech and Language Volume 2010 ; 31 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Seminars in Speech and Language Volume 2011 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Seminars in Speech and Language Volume 2012 ; 33 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Speech and Language Volume 2013 ; 34 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Seminars in Speech and Language Volume 2013 ; 34 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Seminars in Speech and Language Volume 2014 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; 2015 ; Seminars in Speech and Language Volume 2015 ; 36 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; 2016 ; Seminars in Speech and Language Volume 2016 ; 37 ; >
@@ -4980,7 +4980,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Seminars in Thrombosis and Hemostasis Volume 2010 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Seminars in Thrombosis and Hemostasis Volume 2011 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Seminars in Thrombosis and Hemostasis Volume 2012 ; 38 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Thrombosis and Hemostasis Volume 2013 ; 39 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Seminars in Thrombosis and Hemostasis Volume 2013 ; 39 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 2014 ; 40 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Seminars in Thrombosis and Hemostasis Volume 2016 ; 42 ; >
@@ -5028,7 +5028,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2010 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; 2012 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2012 ; 9 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 ; >
+    au < deepCrawl ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 ; >
     au < finished ; finished ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2015 ; 12 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2016 ; 13 ; >
@@ -5161,7 +5161,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Sportverletzung - Sportschaden Volume 2010 ; 24 ; >
    au < finished ; finished ; 2011 ; 2011 ; Sportverletzung - Sportschaden Volume 2011 ; 25 ; >
    au < finished ; finished ; 2012 ; 2012 ; Sportverletzung - Sportschaden Volume 2012 ; 26 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 2013 ; 27 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 2013 ; 27 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 2014 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 2015 ; 29 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 2016 ; 30 ; >
@@ -5193,7 +5193,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Sprache Stimme Gehör Volume 2010 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Sprache Stimme Gehör Volume 2011 ; 35 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; Sprache Stimme Gehör Volume 2012 ; 36 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Sprache Stimme Gehör Volume 2013 ; 37 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Sprache Stimme Gehör Volume 2013 ; 37 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 2014 ; 38 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2015 ; 2015 ; Sprache Stimme Gehör Volume 2015 ; 39 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Sprache Stimme Gehör Volume 2016 ; 40 ; >
@@ -5225,7 +5225,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Suchttherapie Volume 2010 ; 11 ; >
    au < finished ; finished ; 2011 ; 2011 ; Suchttherapie Volume 2011 ; 12 ; >
    au < finished ; finished ; 2012 ; 2012 ; Suchttherapie Volume 2012 ; 13 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Suchttherapie Volume 2013 ; 14 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; Suchttherapie Volume 2013 ; 14 ; >
    au < finished ; crawling ; 2014 ; 2014 ; Suchttherapie Volume 2014 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Suchttherapie Volume 2015 ; 16 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Suchttherapie Volume 2016 ; 17 ; >
@@ -5312,7 +5312,7 @@
    au < finished ; finished ; 2010 ; 2010 ; SYNLETT Volume 2010 ; 21 ; reingest1.clockss.org:8082 >
    au < crawling ; exists ; 2011 ; 2011 ; SYNLETT Volume 2011 ; 22 ; >
    au < finished ; finished ; 2012 ; 2012 ; SYNLETT Volume 2012 ; 23 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 ; >
    au < finished ; crawling ; 2014 ; 2014 ; SYNLETT Volume 2014 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2015 ; 2015 ; SYNLETT Volume 2015 ; 26 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; SYNLETT Volume 2016 ; 27 ; >
@@ -5355,7 +5355,7 @@
    au < finished ; finished ; 2010 ; 2010 ; SYNTHESIS Volume 2010 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; SYNTHESIS Volume 2011 ; 43 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 ; >
-   au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 ; >
+   au < deepCrawl ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 ; >
    au < finished ; crawling ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 ; reingest5.clockss.org:8082 >
    au < frozen ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 ; >
    au < crawling ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 2016 ; 48 ; >
