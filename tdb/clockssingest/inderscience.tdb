@@ -928,7 +928,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 ; >
       au < frozen ; exists ; 2013-2014 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Behavioural Accounting and Finance Volume 6 ; 6 ; >
 
     }
@@ -1061,7 +1061,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -1805,7 +1805,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2012 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Computational Intelligence Studies Volume 2 ; 2 ; >
-      au < finished ; frozen ; 2014 ; International Journal of Computational Intelligence Studies Volume 3 ; 3 ; >
+      au < finished ; finished ; 2014 ; International Journal of Computational Intelligence Studies Volume 3 ; 3 ; >
       au < frozen ; exists ; 2015 ; International Journal of Computational Intelligence Studies Volume 4 ; 4 ; >
       au < crawling ; exists ; 2016 ; International Journal of Computational Intelligence Studies Volume 5 ; 5 ; >
 
@@ -4283,7 +4283,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 ; >
       au < finished ; finished ; 2012-2013 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2016-2017 ; International Journal of Information Technology, Communications and Convergence Volume 4 ; 4 ; >
 
     }
@@ -4876,7 +4876,7 @@
 
       param[journal_id] = ijler
 
-      au < finished ; crawling ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014-2015 ; International Journal of Lean Enterprise Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2016-2017 ; International Journal of Lean Enterprise Research Volume 2 ; 2 ; >
 
     }
@@ -6444,7 +6444,7 @@
       param[journal_id] = ijpam
 
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Portfolio Analysis and Management Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; International Journal of Portfolio Analysis and Management Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
 
