@@ -9,7 +9,25 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
+  </entry>
+  <!--  updating since has hash/crawl filter, must have own feature_version_map -->  
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>14</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>38</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>

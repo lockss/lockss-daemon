@@ -91,10 +91,13 @@ public class TestAllenPressHtmlFilterFactory
     au = createAu();
   }
   
-  private static final String filteredStr = 
+  // hashfilteredStr has whitespace filter, crawlFilteredStr does not
+  private static final String hashfilteredStr = 
+      " <div class=\"block\"> </div>";
+  private static final String crawlfilteredStr = 
       "<div class=\"block\"></div>";
   
-  private static final String referencesStr =
+  private static final String crawlReferencesStr =
       "<div class=\"block\">" +
       "<table border=\"0\" class=\"references\"><tr><td class=\"refnumber\" id=\"i1949-8357-5-4-556-Hauer1\">1.</td><td valign=\"top\">" +
           "Authors,  <span class=\"NLM_etal\">et al</span>. " +
@@ -103,7 +106,7 @@ public class TestAllenPressHtmlFilterFactory
           "<span class=\"NLM_year\">2008</span>;300(10):" +
           "<span class=\"NLM_fpage\">xxx</span>–<span class=\"NLM_lpage\">1164</span>. " +
           "<script type=\"text/javascript\">genRefLink(16, 'i1949-8357-5-4-556-xxx1', '10.1001%2Fjama.300.10.xxx');" +
-          "</script> </td></tr>" +
+          "</script> </td> </tr>" +
           "</table>" +
           "</div>";
   
@@ -167,8 +170,20 @@ public class TestAllenPressHtmlFilterFactory
           "</ul>" +
           "</div>" +
           "</div>";
+  
+  private static String whiteSpaceTest=
+      "     "+
+      "     "+
+      "     "+
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" +
+      "     "+
+      "     "+
+      "     "+
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\"";
           
-
+  private static String whiteSpaceTestFiltered=
+      " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" +
+      " <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\"";
   
   // Variant to test with Crawl Filter
   //HtmlNodeFilters.tagWithAttribute("div", "id", "leftColumn"),
@@ -177,10 +192,10 @@ public class TestAllenPressHtmlFilterFactory
   public static class TestCrawl extends TestAllenPressHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new AllenPressCrawlFilterFactory();
-      doFilterTest(au, variantFact, referencesStr, 
-          filteredStr);
+      doFilterTest(au, variantFact, crawlReferencesStr, 
+          crawlfilteredStr);
       doFilterTest(au, variantFact, leftColumnStr, 
-          filteredStr);
+          crawlfilteredStr);
       doFilterTest(au, variantFact, articleToolsStr, 
           crawlArticleToolsFiltered);
     }    
@@ -192,8 +207,9 @@ public class TestAllenPressHtmlFilterFactory
    public static class TestHash extends TestAllenPressHtmlFilterFactory {   
      public void testFiltering() throws Exception {
       variantFact = new AllenPressHtmlHashFilterFactory();
-      doFilterTest(au, variantFact, leftColumnStr, filteredStr);
-      doFilterTest(au, variantFact, articleToolsStr, filteredStr);
+      doFilterTest(au, variantFact, leftColumnStr, hashfilteredStr);
+      doFilterTest(au, variantFact, articleToolsStr, hashfilteredStr);
+      doFilterTest(au, variantFact, whiteSpaceTest, whiteSpaceTestFiltered);
     }
   }
   

@@ -65,11 +65,11 @@ public class AllenPressHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
     // additional html filtering to BaseAtyponHashFilters
     return super.createFilteredInputStream(au, in, encoding, allenpressFilters);
   }
-  /*
+
   // include a whitespace filter
   @Override
   public boolean doWSFiltering() {
     return true;
   }
-  */
+
 }
