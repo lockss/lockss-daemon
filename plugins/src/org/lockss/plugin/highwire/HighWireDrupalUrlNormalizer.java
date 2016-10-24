@@ -40,7 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class HighWireDrupalUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   private static final Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
   

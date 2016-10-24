@@ -50,7 +50,9 @@ import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 // an implementation of JsoupHtmlLinkExtractor
 public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFactory {
@@ -93,7 +95,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                               @Override
                               public void foundLink(String url) {
                                 if (au != null) {
-                                  if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
+                                  if (UrlUtil.isSameHost(srcUrl, url)) {
                                     String volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
                                     if ((volume != null) && !volume.isEmpty()) {
                                       Matcher mat = TOC_PATTERN.matcher(url);
@@ -109,11 +111,11 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                                     Matcher mat = LPAGE.matcher(url);
                                     if (mat.find()) {
                                       String purl = url + FULL_PDF;
-                                      purl = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, purl);
+                                      purl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, purl);
                                       cb.foundLink(purl);
                                     }
                                   }
-                                  url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+                                  url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
                                   cb.foundLink(url);
                                 }
                               }
