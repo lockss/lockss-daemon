@@ -98,6 +98,8 @@
       >
 
       param[journal_issn] = 1475-1488
+      
+      #In 2015, found that issn associated with volume 3-6 for articles is different from the toc. Resulting in no substance. See RT7387
 
       au < manifest ; 2000 ;  ; 9780762306688 ; 9780762306688 ; Advances in Accounting Behavioral Research Volume 3 >
       au < manifest ; 2001 ;  ; 9780762307845 ; 9780762307845 ; Advances in Accounting Behavioral Research Volume 4 >
