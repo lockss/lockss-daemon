@@ -9,6 +9,8 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
     comment[moved] = all moved to Drupal platform
+    
+    #don't process back content from before 1995 till after end of 2016, or see RT 7451
 
   {
 
