@@ -81,8 +81,8 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
           HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
                                            HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
           // DROP link to previous/next article [AMA, SPIE]
-          HtmlNodeFilters.tagWithAttribute("a", "class", "prev"),
-          HtmlNodeFilters.tagWithAttribute("a", "class", "next"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
           // DROP link back to issue TOC (prune impact of overcrawl) [AMA, SPIE]
           HtmlNodeFilters.tagWithAttribute("a", "id", "scm6MainContent_lnkFullIssueName"),
           // DROP first page preview: sometimes appears, sometimes not [AMA article]
@@ -94,6 +94,10 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
           // e.g. http://jama.jamanetwork.com/article.aspx?articleid=1487491 and http://jama.jamanetwork.com/article.aspx?articleid=1487492
           // [SPIE]: unknown as of yet
           HtmlNodeFilters.tagWithAttribute("div", "id", "tab7"),
+          
+          //CHEST
+          //Related content
+          HtmlNodeFilters.tagWithAttribute("div", "class", "relatedContentHeading"),
           
           //ASHA
           //Related articles

@@ -148,7 +148,10 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     
     // Remove white space
-    InputStream ret =  new ReaderInputStream(new WhiteSpaceFilter(noTagFilter));
+    Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
+    // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
+    InputStream ret =  new ReaderInputStream(new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis"));
+    
     // Instrumentation
     return new CountingInputStream(ret) {
       @Override
