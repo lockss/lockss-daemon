@@ -279,7 +279,7 @@ public class OJS2ArticleIteratorFactory
           // Need to normalizeUrl() for HttpHttps
           if (au != null) {
             try {
-              url = new HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer().normalizeUrl(url, au);
+              url = new BaseUrlHttpHttpsUrlNormalizer().normalizeUrl(url, au);
             } catch (PluginException pe) {
               log.debug3("Could not create instance of BaseUrlHttpHttpsUrlNormalizer", pe);
             }

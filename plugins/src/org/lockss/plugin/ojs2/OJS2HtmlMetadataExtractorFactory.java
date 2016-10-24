@@ -106,7 +106,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
         url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
       
     } // extract

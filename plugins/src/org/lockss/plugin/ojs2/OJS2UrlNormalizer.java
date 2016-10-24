@@ -36,7 +36,7 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
-public class OJS2UrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class OJS2UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {

@@ -222,6 +222,19 @@ public class TestOJS2Plugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/filelist.xml", false, au);
     shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/Background_files/filelist.xml", false, au);
     
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        ROOT_URL + "index.php/j_id/article/view/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        ROOT_URL + "j_id/article/view/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        URLEncoder.encode(ROOT_URL + "index.php/j_id/article/view/123/456", "UTF-8"), true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        URLEncoder.encode(ROOT_URL + "j_id/article/view/123/456", "UTF-8"), true, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        URLEncoder.encode(URLEncoder.encode(ROOT_URL + "index.php/j_id/article/view/123/456", "UTF-8"), "UTF-8"), false, au);
+    shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
+        URLEncoder.encode(URLEncoder.encode(ROOT_URL + "j_id/article/view/123/456", "UTF-8"), "UTF-8"), false, au);
+    
     shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu", true, au);
     shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu&id=1", false, au);
     shouldCacheTest(ROOT_URL + "sites/all/modules/contrib/views/css/views.css?nzdhiu", true, au);

@@ -40,6 +40,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.*;
 
 public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
@@ -69,8 +70,8 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
           @Override
           public void foundLink(String url) {
             if (au != null) {
-              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
-                url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              if (UrlUtil.isSameHost(srcUrl, url)) {
+                url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
               }
             }
             cb.foundLink(url);

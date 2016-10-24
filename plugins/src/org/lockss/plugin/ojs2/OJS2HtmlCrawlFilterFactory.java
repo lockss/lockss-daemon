@@ -70,6 +70,9 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
         
         // do not get links from references section
         HtmlNodeFilters.tagWithAttribute("div", "id", "articleCitations"),
+        
+        // do not get links that contain https?%25...
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "https?[%]25"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
