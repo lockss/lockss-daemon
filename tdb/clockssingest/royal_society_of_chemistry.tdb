@@ -19,9 +19,7 @@
       eissn = 1364-5528
     >
 
-    param[journal_code] = an
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = an
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -48,7 +46,6 @@
       au < deepCrawl ; exists ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 ; >
       au < crawling ; exists ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 ; >
 
-    }
   }
 
   {
@@ -59,10 +56,7 @@
       eissn = 1759-9679
     >
 
-    param[journal_code] = ay
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ay
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -76,7 +70,6 @@
       au < deepCrawl ; exists ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 ; >
 
-    }
   }
 
   {
@@ -87,10 +80,7 @@
       eissn = 1460-4760
     >
 
-    param[journal_code] = ic
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ic
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -102,7 +92,6 @@
       au < finished ; finished ; 2012 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 108 ; 108 ; 2012 ; >
       au < finished ; finished ; 2013 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 109 ; 109 ; 2013 ; >
 
-    }
   }
 
   {
@@ -113,10 +102,7 @@
       eissn = 1460-4779
     >
 
-    param[journal_code] = oc
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = oc
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -128,7 +114,6 @@
       au < finished ; finished ; 2012 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 108 ; 108 ; 2012 ; >
       au < finished ; finished ; 2013 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 109 ; 109 ; 2013 ; >
 
-    }
   }
 
   {
@@ -139,10 +124,7 @@
       eissn = 1460-4787
     >
 
-    param[journal_code] = pc
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = pc
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -153,7 +135,6 @@
       au < finished ; finished ; 2012 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 108 ; 108 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 109 ; 109 ; 2013 ; >
 
-    }
   }
 
   {
@@ -164,10 +145,7 @@
       eissn = 2047-4849
     >
 
-    param[journal_code] = bm
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = bm
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -178,7 +156,6 @@
       au < deepCrawl ; exists ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 ; >
       au < crawling ; exists ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 ; >
 
-    }
   }
 
   {
@@ -188,10 +165,7 @@
       issn = 0009-241X
     >
 
-    param[journal_code] = cc
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = cc
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -205,7 +179,6 @@
       au < deepCrawl ; exists ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 ; >
 
-    }
   }
 
   {
@@ -217,10 +190,7 @@
       issnl = 0306-0012
     >
 
-    param[journal_code] = cs
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = cs
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -234,7 +204,6 @@
       au < deepCrawl ; exists ; 2015 ; Chemical Society Reviews Volume 44 ; 44 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Chemical Society Reviews Volume 45 ; 45 ; 2016 ; >
 
-    }
   }
 
   {
@@ -244,10 +213,7 @@
       issn = 1109-4028
     >
 
-    param[journal_code] = rp
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = rp
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -261,7 +227,6 @@
       au < deepCrawl ; exists ; 2015 ; Chemistry Education Research and Practice Volume 16 ; 16 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Chemistry Education Research and Practice Volume 17 ; 17 ; 2016 ; >
 
-    }
   }
 
   {
@@ -272,10 +237,7 @@
       issnl = 1466-8033
     >
 
-    param[journal_code] = ce
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ce
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -289,7 +251,6 @@
       au < deepCrawl ; exists ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 ; >
       au < crawling ; exists ; 2016 ; CrystEngComm Volume 18 ; 18 ; 2016 ; >
 
-    }
   }
 
   {
@@ -301,10 +262,7 @@
       issnl = 1477-9226
     >
 
-    param[journal_code] = dt
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = dt
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -318,7 +276,6 @@
       au < deepCrawl ; exists ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 ; >
 
-    }
   }
 
   {
@@ -330,10 +287,7 @@
       issnl = 1754-5692
     >
 
-    param[journal_code] = ee
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ee
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -347,7 +301,6 @@
       au < deepCrawl ; exists ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Energy & Environmental Science Volume 9 ; 9 ; 2016 ; >
 
-    }
   }
 
   {
@@ -359,10 +312,7 @@
       issnl = 1359-6640
     >
 
-    param[journal_code] = fd
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = fd
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -426,7 +376,6 @@
       au < exists ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
       au < exists ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
 
-    }
   }
 
   {
@@ -438,10 +387,7 @@
       issnl = 1463-9262
     >
 
-    param[journal_code] = gc
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = gc
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -455,7 +401,6 @@
       au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; >
 
-    }
   }
 
   {
@@ -467,10 +412,7 @@
       issnl = 1757-9694
     >
 
-    param[journal_code] = ib
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ib
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -484,7 +426,6 @@
       au < deepCrawl ; exists ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Integrative Biology Volume 8 ; 8 ; 2016 ; >
 
-    }
   }
 
   {
@@ -495,10 +436,7 @@
       eissn = 1364-5544
     >
 
-    param[journal_code] = ja
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ja
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -512,7 +450,6 @@
       au < deepCrawl ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 ; >
 
-    }
   }
 
   {
@@ -522,17 +459,13 @@
       issn = 0300-9599
     >
 
-    param[journal_code] = ft
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ft
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
       param[base_url2] = http://www.rsc.org/
 
       au < doNotProcess ; exists ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 ; >
-    }
   }
 
   {
@@ -544,10 +477,7 @@
       issnl = 1464-0325
     >
 
-    param[journal_code] = em
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = em
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -561,7 +491,6 @@
       au < deepCrawl ; exists ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Journal of Environmental Monitoring Volume 18 ; 18 ; 2016 ; >
 
-    }
   }
 
   {
@@ -572,10 +501,7 @@
       issnl = 0959-9428
     >
 
-    param[journal_code] = jm
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = jm
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -585,7 +511,6 @@
       au < crawling ; exists ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 ; >
 
-    }
   }
 
   {
@@ -597,10 +522,7 @@
       issnl = 1473-0189
     >
 
-    param[journal_code] = lc
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = lc
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -614,7 +536,6 @@
       au < deepCrawl ; exists ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 ; >
 
-    }
   }
 
   {
@@ -626,10 +547,7 @@
       issnl = 1756-5901
     >
 
-    param[journal_code] = mt
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = mt
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -643,7 +561,6 @@
       au < deepCrawl ; exists ; 2015 ; Metallomics Volume 7 ; 7 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Metallomics Volume 8 ; 8 ; 2016 ; >
 
-    }
   }
 
   {
@@ -654,10 +571,7 @@
       eissn = 1742-2051
     >
 
-    param[journal_code] = mb
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = mb
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -671,7 +585,6 @@
       au < deepCrawl ; exists ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Molecular BioSystems Volume 12 ; 12 ; 2016 ; >
 
-    }
   }
 
   {
@@ -683,10 +596,7 @@
       issnl = 2040-3364
     >
 
-    param[journal_code] = nr
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = nr
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -700,7 +610,6 @@
       au < deepCrawl ; exists ; 2015 ; Nanoscale Volume 7 ; 7 ; 2015 ; >
       au < testing ; exists ; 2016 ; Nanoscale Volume 8 ; 8 ; 2016 ; >
 
-    }
   }
 
   {
@@ -712,10 +621,7 @@
       issnl = 0265-0568
     >
 
-    param[journal_code] = np
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = np
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -729,7 +635,6 @@
       au < deepCrawl ; exists ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Natural Product Reports Volume 33 ; 33 ; 2016 ; >
 
-    }
   }
 
   {
@@ -741,10 +646,7 @@
       issnl = 1144-0546
     >
 
-    param[journal_code] = nj
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = nj
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -759,7 +661,6 @@
       au < deepCrawl ; exists ; 2015 ; New Journal of Chemistry Volume 39 ; 39 ; 2015 ; >
       au < crawling ; exists ; 2016 ; New Journal of Chemistry Volume 40 ; 40 ; 2016 ; >
 
-    }
   }
 
   {
@@ -771,10 +672,7 @@
       issnl = 1477-0520
     >
 
-    param[journal_code] = ob
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = ob
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -789,7 +687,6 @@
       au < deepCrawl ; exists ; 2015 ; Organic & Biomolecular Chemistry Volume 13 ; 13 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Organic & Biomolecular Chemistry Volume 14 ; 14 ; 2016 ; >
 
-    }
   }
 
   {
@@ -800,10 +697,7 @@
       eissn = 1474-9092
     >
 
-    param[journal_code] = pp
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = pp
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -818,7 +712,6 @@
       au < deepCrawl ; exists ; 2015 ; Photochemical & Photobiological Sciences Volume 14 ; 14 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Photochemical & Photobiological Sciences Volume 15 ; 15 ; 2016 ; >
 
-    }
   }
 
   {
@@ -829,10 +722,7 @@
       eissn = 1463-9084
     >
 
-    param[journal_code] = cp
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = cp
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -846,7 +736,6 @@
       au < deepCrawl ; exists ; 2015 ; Physical Chemistry Chemical Physics Volume 17 ; 17 ; 2015 ; >
       au < testing ; exists ; 2016 ; Physical Chemistry Chemical Physics Volume 18 ; 18 ; 2016 ; >
 
-    }
   }
 
   {
@@ -857,10 +746,7 @@
       eissn = 1744-6848
     >
 
-    param[journal_code] = sm
-
-    {
-      #pluginSuffix = ClockssRSC2014Plugin
+      param[journal_code] = sm
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
       param[graphics_url] = http://sod-a.rsc-cdn.org/
@@ -874,7 +760,6 @@
       au < deepCrawl ; exists ; 2015 ; Soft Matter Volume 11 ; 11 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Soft Matter Volume 12 ; 12 ; 2016 ; >
 
-    }
   }
 
   {
@@ -884,9 +769,7 @@
       eissn = 2398-4902
     >
 
-    param[journal_code] = se
-
-    {
+      param[journal_code] = se
       #pluginSuffix = ClockssRSC2014Plugin
       param[base_url] = http://pubs.rsc.org/
       param[resolver_url] = http://xlink.rsc.org/
@@ -895,8 +778,6 @@
 
       au < expected ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
 
-    }
-    
   }
 
 }
