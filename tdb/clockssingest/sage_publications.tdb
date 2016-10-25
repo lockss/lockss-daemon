@@ -422,7 +422,7 @@
       au < finished ; finished ; 2012 ; Administration & Society Volume 44 ; 44 ; >
       au < finished ; finished ; 2013 ; Administration & Society Volume 45 ; 45 ; >
       au < finished ; finished ; 2014 ; Administration & Society Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2015 ; Administration & Society Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Administration & Society Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Administration & Society Volume 48 ; 48 ; >
 
     }
@@ -1838,7 +1838,7 @@
       au < zapped ; finished ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
       au < finished ; finished ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
       au < finished ; frozen ; 2011 ; American Sociological Review Volume 76 ; 76 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2012 ; American Sociological Review Volume 77 ; 77 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; American Sociological Review Volume 77 ; 77 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; American Sociological Review Volume 78 ; 78 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; American Sociological Review Volume 79 ; 79 ; >
       au < finished ; crawling ; 2015 ; American Sociological Review Volume 80 ; 80 ; reingest2.clockss.org:8085 >
@@ -4297,7 +4297,7 @@
         au < exists ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; >
         au < exists ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; >
         au < exists ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; >
-        au < finished ; crawling ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+        au < finished ; finished ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; >
 
   }
@@ -6166,7 +6166,7 @@
       au < finished ; finished ; 2012 ; Chronic Illness Volume 8 ; 8 ; >
       au < finished ; finished ; 2013 ; Chronic Illness Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Chronic Illness Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2015 ; Chronic Illness Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Chronic Illness Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Chronic Illness Volume 12 ; 12 ; >
 
     }
@@ -7301,7 +7301,7 @@
       au < finished ; finished ; 2012 ; Competition & Change Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Competition & Change Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Competition & Change Volume 18 ; 18 ; >
-      au < finished ; crawling ; 2015 ; Competition & Change Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Competition & Change Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Competition & Change Volume 20 ; 20 ; >
 
   }
@@ -7766,7 +7766,7 @@
       au < finished ; finished ; 2012 ; Contributions to Indian Sociology Volume 46 ; 46 ; >
       au < finished ; finished ; 2013 ; Contributions to Indian Sociology Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Contributions to Indian Sociology Volume 48 ; 48 ; >
-      au < finished ; crawling ; 2015 ; Contributions to Indian Sociology Volume 49 ; 49 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; Contributions to Indian Sociology Volume 49 ; 49 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Contributions to Indian Sociology Volume 50 ; 50 ; >
 
     }
@@ -24184,7 +24184,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; frozen ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 ; >
+      au < down ; finished ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 ; >
       au < down ; frozen ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 ; >
 
     }
@@ -25928,7 +25928,7 @@
       au < finished ; finished ; 2012 ; Journal of Literacy Research Volume 44 ; 44 ; >
       au < finished ; finished ; 2013 ; Journal of Literacy Research Volume 45 ; 45 ; >
       au < finished ; finished ; 2014 ; Journal of Literacy Research Volume 46 ; 46 ; >
-      au < finished ; crawling ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Journal of Literacy Research Volume 48 ; 48 ; >
 
   }
@@ -26649,7 +26649,7 @@
       au < finished ; finished ; 2012 ; Journal of Parenteral and Enteral Nutrition Volume 36 ; 36 ; >
       au < finished ; finished ; 2013 ; Journal of Parenteral and Enteral Nutrition Volume 37 ; 37 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2014 ; Journal of Parenteral and Enteral Nutrition Volume 38 ; 38 ; >
-      au < finished ; crawling ; 2015 ; Journal of Parenteral and Enteral Nutrition Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Journal of Parenteral and Enteral Nutrition Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Parenteral and Enteral Nutrition Volume 40 ; 40 ; >
 
     }
@@ -26936,7 +26936,7 @@
       au < crawling ; exists ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 ; >
       au < finished ; finished ; 2013 ; Journal of Pharmacy Technology Volume 29 ; 29 ; >
       au < finished ; finished ; 2014 ; Journal of Pharmacy Technology Volume 30 ; 30 ; >
-      au < finished ; crawling ; 2015 ; Journal of Pharmacy Technology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Journal of Pharmacy Technology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Journal of Pharmacy Technology Volume 32 ; 32 ; >
 
     }
@@ -27374,7 +27374,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Psychopharmacology Volume 23 ; 23 ; >
       au < finished ; finished ; 2010 ; Journal of Psychopharmacology Volume 24 ; 24 ; >
       au < finished ; frozen ; 2011 ; Journal of Psychopharmacology Volume 25 ; 25 ; >
-      au < finished ; frozen ; 2012 ; Journal of Psychopharmacology Volume 26 ; 26 ; >
+      au < finished ; finished ; 2012 ; Journal of Psychopharmacology Volume 26 ; 26 ; >
       au < crawling ; exists ; 2013 ; Journal of Psychopharmacology Volume 27 ; 27 ; >
       au < finished ; finished ; 2014 ; Journal of Psychopharmacology Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Psychopharmacology Volume 29 ; 29 ; >
@@ -30182,7 +30182,7 @@
       au < finished ; finished ; 2012 ; Language and Speech Volume 55 ; 55 ; >
       au < crawling ; exists ; 2013 ; Language and Speech Volume 56 ; 56 ; >
       au < finished ; finished ; 2014 ; Language and Speech Volume 57 ; 57 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Language and Speech Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Language and Speech Volume 58 ; 58 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Language and Speech Volume 59 ; 59 ; >
 
     }
@@ -31836,7 +31836,7 @@
       au < finished ; finished ; 2012 ; Men and Masculinities Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Men and Masculinities Volume 16 ; 16 ; >
       au < finished ; finished ; 2014 ; Men and Masculinities Volume 17 ; 17 ; >
-      au < finished ; crawling ; 2015 ; Men and Masculinities Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Men and Masculinities Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Men and Masculinities Volume 19 ; 19 ; >
 
     }
@@ -33826,8 +33826,8 @@
       au < manifest ; exists ; 2007 ; Organization Studies Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Organization Studies Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Organization Studies Volume 30 ; 30 ; >
-      au < finished ; frozen ; 2010 ; Organization Studies Volume 31 ; 31 ; >
-      au < finished ; frozen ; 2011 ; Organization Studies Volume 32 ; 32 ; >
+      au < finished ; finished ; 2010 ; Organization Studies Volume 31 ; 31 ; >
+      au < finished ; finished ; 2011 ; Organization Studies Volume 32 ; 32 ; >
       au < finished ; finished ; 2012 ; Organization Studies Volume 33 ; 33 ; >
       au < finished ; finished ; 2013 ; Organization Studies Volume 34 ; 34 ; >
       au < finished ; finished ; 2014 ; Organization Studies Volume 35 ; 35 ; >
@@ -38936,7 +38936,7 @@
       param[base_url] = http://son.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < finished ; crawling ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; SAGE Open Nursing Volume 2 ; 2 ; >
 
   }
@@ -47750,7 +47750,7 @@
         au < crawling ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < finished ; finished ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
-        au < finished ; crawling ; 2015 ; Clinical Ethics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+        au < finished ; finished ; 2015 ; Clinical Ethics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016 ; Clinical Ethics Volume 11 ; 11 ; >
 
     }

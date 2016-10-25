@@ -1140,7 +1140,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 ; >
       au < down ; exists ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 ; >
       au < down ; exists ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 ; >
-      au < down ; frozen ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 ; >
+      au < down ; finished ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 ; >
       au < down ; frozen ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 ; >
       au < down ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 ; >
       au < down ; finished ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 ; >
@@ -1579,7 +1579,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Diagnostic Pathology Volume 2 ; 2 ; >
       au < down ; exists ; 2008 ; Diagnostic Pathology Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Diagnostic Pathology Volume 4 ; 4 ; >
-      au < finished ; frozen ; 2010 ; Diagnostic Pathology Volume 5 ; 5 ; >
+      au < finished ; finished ; 2010 ; Diagnostic Pathology Volume 5 ; 5 ; >
       au < down ; exists ; 2011 ; Diagnostic Pathology Volume 6 ; 6 ; >
       au < down ; exists ; 2012 ; Diagnostic Pathology Volume 7 ; 7 ; >
       au < down ; exists ; 2013 ; Diagnostic Pathology Volume 8 ; 8 ; >
@@ -3740,7 +3740,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 ; >
       au < down ; exists ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 ; >
       au < down ; exists ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 ; >
-      au < finished ; frozen ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 ; >
+      au < finished ; finished ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 ; >
       au < down ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 ; >
       au < down ; exists ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 ; >
       au < down ; exists ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 ; >
@@ -4314,7 +4314,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 ; >
       au < down ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 ; >
       au < down ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; >
-      au < down ; frozen ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 ; >
+      au < down ; finished ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 ; >
       au < down ; finished ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 ; >
       au < down ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 ; >
       au < down ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 ; >

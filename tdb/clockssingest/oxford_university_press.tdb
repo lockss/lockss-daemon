@@ -42,7 +42,7 @@
     au < crawling ; exists ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < finished ; finished ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
-    au < finished ; frozen ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
+    au < finished ; finished ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
     au < finished ; finished ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
     au < finished ; finished ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
     au < frozen ; exists ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ; >
@@ -794,7 +794,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; finished ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
-    au < down ; frozen ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
+    au < down ; finished ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
     au < zapped ; finished ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
@@ -1869,7 +1869,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Applied Linguistics Volume 30 ; 30 ; >
     au < finished ; frozen ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
     au < finished ; finished ; 2011 ; Applied Linguistics Volume 32 ; 32 ; >
-    au < finished ; frozen ; 2012 ; Applied Linguistics Volume 33 ; 33 ; >
+    au < finished ; finished ; 2012 ; Applied Linguistics Volume 33 ; 33 ; >
     au < finished ; finished ; 2013 ; Applied Linguistics Volume 34 ; 34 ; >
     au < finished ; finished ; 2014 ; Applied Linguistics Volume 35 ; 35 ; >
     au < frozen ; exists ; 2015 ; Applied Linguistics Volume 36 ; 36 ; >
@@ -1950,7 +1950,7 @@
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < finished ; finished ; 2014 ; Arbitration International Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Arbitration International Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Arbitration International Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Arbitration International Volume 32 ; 32 ; >
 
   }
@@ -2068,7 +2068,7 @@
     au < crawling ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
     au < finished ; crawling ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
-    au < finished ; crawling ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
     au < exists ; exists ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
 
@@ -2472,7 +2472,7 @@
     param[base_url] = http://brain.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; frozen ; 2008 ; Brain Volume 131 ; 131 ; >
+    au < down ; finished ; 2008 ; Brain Volume 131 ; 131 ; >
     au < zapped ; finished ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
     }
@@ -4052,7 +4052,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
     au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; reingest4.clockss.org:8082 >
@@ -4112,7 +4112,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
     au < finished ; frozen ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
     au < finished ; finished ; 2010 ; Cerebral Cortex Volume 20 ; 20 ; >
-    au < finished ; frozen ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
+    au < finished ; finished ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
     au < finished ; frozen ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < frozen ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
     au < finished ; crawling ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; reingest5.clockss.org:8082 >
@@ -4540,7 +4540,7 @@
     au < finished ; finished ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Clinical Infectious Diseases Volume 60 ; 60 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Clinical Infectious Diseases Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Clinical Infectious Diseases Volume 61 ; 61 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Clinical Infectious Diseases Volume 62 ; 62 ; >
     au < manifest ; exists ; 2016 ; Clinical Infectious Diseases Volume 63 ; 63 ; >
 
@@ -5609,7 +5609,7 @@
     au < frozen ; exists ; 2011 ; Environmental Entomology Volume 40 ; 40 ; >
     au < frozen ; exists ; 2012 ; Environmental Entomology Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; Environmental Entomology Volume 42 ; 42 ; >
-    au < finished ; crawling ; 2014 ; Environmental Entomology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Environmental Entomology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Environmental Entomology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2016 ; Environmental Entomology Volume 45 ; 45 ; >
 
@@ -6148,7 +6148,7 @@
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33 ; 33 ; >
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 ; >
     au < finished ; finished ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
-    au < finished ; frozen ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
+    au < finished ; finished ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
     au < finished ; finished ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
     au < finished ; finished ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
     au < finished ; finished ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
@@ -6392,7 +6392,7 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
     au < zapped ; finished ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
-    au < down ; frozen ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
+    au < down ; finished ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < down ; finished ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
     au < down ; finished ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
     au < down ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; >
@@ -7114,7 +7114,7 @@
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 301 ; 301 ; >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Letters Volume 302 ; 302 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 303 ; 303 ; >
-    au < finished ; frozen ; 2010 ; FEMS Microbiology Letters Volume 304 ; 304 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; FEMS Microbiology Letters Volume 304 ; 304 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Letters Volume 305 ; 305 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 306 ; 306 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 307 ; 307 ; >
@@ -7161,10 +7161,10 @@
     au < frozen ; exists ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 ; >
     au < crawling ; exists ; 2013 ; FEMS Microbiology Letters Volume 349 ; 349 ; >
     au < finished ; crawling ; 2014 ; FEMS Microbiology Letters Volume 350 ; 350 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; FEMS Microbiology Letters Volume 351 ; 351 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 351 ; 351 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 352 ; 352 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; FEMS Microbiology Letters Volume 353 ; 353 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 354 ; 354 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; FEMS Microbiology Letters Volume 355 ; 355 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; FEMS Microbiology Letters Volume 356 ; 356 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 357 ; 357 ; >
@@ -7257,7 +7257,7 @@
     au < crawling ; exists ; 2011 ; FEMS Yeast Research Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; FEMS Yeast Research Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; FEMS Yeast Research Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; FEMS Yeast Research Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; FEMS Yeast Research Volume 15 ; 15 ; >
     au < manifest ; exists ; 2016 ; FEMS Yeast Research Volume 16 ; 16 ; >
 
@@ -8316,7 +8316,7 @@
     au < finished ; finished ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
     au < finished ; crawling ; 2013 ; Health & Social Work Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Health & Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Health & Social Work Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Health & Social Work Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; Health & Social Work Volume 41 ; 41 ; >
 
   }
@@ -10596,7 +10596,7 @@
     au < finished ; finished ; 2009 ; International Political Sociology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; International Political Sociology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
-    au < finished ; frozen ; 2012 ; International Political Sociology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; International Political Sociology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; International Political Sociology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Political Sociology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; International Political Sociology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
@@ -11930,7 +11930,7 @@
     au < crawling ; exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; >
     au < finished ; finished ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
     au < notReady ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
-    au < finished ; crawling ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ; >
     au < manifest ; exists ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 ; >
@@ -13315,7 +13315,7 @@
     au < finished ; finished ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Infectious Diseases Volume 211 ; 211 ; >
-    au < finished ; crawling ; 2015 ; Journal of Infectious Diseases Volume 212 ; 212 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Infectious Diseases Volume 212 ; 212 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Journal of Infectious Diseases Volume 213 ; 213 ; >
     au < manifest ; exists ; 2016 ; Journal of Infectious Diseases Volume 214 ; 214 ; >
 
@@ -13656,7 +13656,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
     au < finished ; finished ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
-    au < finished ; frozen ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
+    au < finished ; finished ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
     au < finished ; finished ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
     au < finished ; crawling ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -14802,7 +14802,7 @@
     au < finished ; finished ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
     au < finished ; finished ; 2012 ; Journal of Public Health Volume 34 ; 34 ; >
     au < finished ; finished ; 2013 ; Journal of Public Health Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2014 ; Journal of Public Health Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Public Health Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Public Health Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; Journal of Public Health Volume 38 ; 38 ; >
 
@@ -15512,7 +15512,7 @@
     au < exists ; exists ; 2012 ; Laboratory Medicine Volume 43 ; 43 ; >
     au < exists ; exists ; 2013 ; Laboratory Medicine Volume 44 ; 44 ; >
     au < exists ; exists ; 2014 ; Laboratory Medicine Volume 45 ; 45 ; >
-    au < finished ; crawling ; 2015 ; Laboratory Medicine Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Laboratory Medicine Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2016 ; Laboratory Medicine Volume 47 ; 47 ; >
 
   }
@@ -16904,7 +16904,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
     au < finished ; crawling ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
     au < finished ; finished ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 ; >
-    au < finished ; frozen ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 ; >
+    au < finished ; finished ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 ; >
     au < frozen ; exists ; 2012 ; Molecular Biology and Evolution Volume 29 ; 29 ; >
     au < frozen ; exists ; 2013 ; Molecular Biology and Evolution Volume 30 ; 30 ; >
     au < finished ; crawling ; 2014 ; Molecular Biology and Evolution Volume 31 ; 31 ; reingest2.clockss.org:8085 >
@@ -16972,7 +16972,7 @@
     au < finished ; finished ; 2012 ; The Monist Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
     au < finished ; finished ; 2014 ; The Monist Volume 97 ; 97 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; The Monist Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; The Monist Volume 98 ; 98 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; The Monist Volume 99 ; 99 ; >
 
   }
@@ -20285,7 +20285,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
     au < finished ; finished ; 2010 ; Protein Engineering, Design & Selection : PEDS Volume 23 ; 23 ; >
-    au < finished ; frozen ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
+    au < finished ; finished ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
     au < finished ; finished ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
@@ -21702,7 +21702,7 @@
     au < manifest ; exists ; 2007 ; Review of Finance Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Finance Volume 12 ; 12 ; >
     au < zapped ; finished ; 2009 ; Review of Finance Volume 13 ; 13 ; >
-    au < finished ; frozen ; 2010 ; Review of Finance Volume 14 ; 14 ; >
+    au < finished ; finished ; 2010 ; Review of Finance Volume 14 ; 14 ; >
     au < finished ; finished ; 2011 ; Review of Finance Volume 15 ; 15 ; >
     au < finished ; finished ; 2012 ; Review of Finance Volume 16 ; 16 ; >
     au < frozen ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
@@ -21760,7 +21760,7 @@
     au < manifest ; exists ; 2007 ; The Review of Financial Studies Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; >
-    au < finished ; frozen ; 2010 ; The Review of Financial Studies Volume 23 ; 23 ; >
+    au < finished ; finished ; 2010 ; The Review of Financial Studies Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; The Review of Financial Studies Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; >
     au < finished ; crawling ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; reingest4.clockss.org:8082 >
@@ -23064,7 +23064,7 @@
     au < finished ; finished ; 2009 ; Toxicological Sciences Volume 112 ; 112 ; >
     au < finished ; finished ; 2010 ; Toxicological Sciences Volume 113 ; 113 ; >
     au < finished ; finished ; 2010 ; Toxicological Sciences Volume 114 ; 114 ; >
-    au < finished ; frozen ; 2010 ; Toxicological Sciences Volume 115 ; 115 ; >
+    au < finished ; finished ; 2010 ; Toxicological Sciences Volume 115 ; 115 ; >
     au < finished ; finished ; 2010 ; Toxicological Sciences Volume 116 ; 116 ; >
     au < finished ; frozen ; 2010 ; Toxicological Sciences Volume 117 ; 117 ; >
     au < finished ; finished ; 2010 ; Toxicological Sciences Volume 118 ; 118 ; >
@@ -23246,7 +23246,7 @@
     au < frozen ; exists ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; >
     au < frozen ; exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; >
     au < finished ; finished ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
-    au < finished ; crawling ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 ; >
     au < crawling ; exists ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
 
@@ -24758,7 +24758,7 @@
       au < manifest ; exists ; 2006 ; American Journal of Legal History Volume 48 ; 48 ; >
       au < manifest ; exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 ; >
       au < finished ; finished ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
       au < finished ; finished ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; reingest1.clockss.org:8082 >

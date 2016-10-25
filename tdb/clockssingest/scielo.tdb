@@ -5780,7 +5780,7 @@
     au < manifest ; exists ; 2010 ; 42 ; Chungará (Arica) Volume 42 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 43 ; Chungará (Arica) Volume 43 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 44 ; Chungará (Arica) Volume 44 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 45 ; Chungará (Arica) Volume 45 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 45 ; Chungará (Arica) Volume 45 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 46 ; Chungará (Arica) Volume 46 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 47 ; Chungará (Arica) Volume 47 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -9383,7 +9383,7 @@
     au < manifest ; exists ; 2012 ; 14 ; Ensaio Pesquisa em Educação em Ciências (Belo Horizonte) Volume 14 ; 2012 ; >
     au < finished ; finished ; 2013 ; 15 ; Ensaio Pesquisa em Educação em Ciências (Belo Horizonte) Volume 15 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 16 ; Ensaio Pesquisa em Educação em Ciências (Belo Horizonte) Volume 16 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; 17 ; Ensaio Pesquisa em Educação em Ciências (Belo Horizonte) Volume 17 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; 17 ; Ensaio Pesquisa em Educação em Ciências (Belo Horizonte) Volume 17 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -10056,7 +10056,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Estudios políticos (México) Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Estudios políticos (México) Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Estudios políticos (México) Volume 2012 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 2013 ; Estudios políticos (México) Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Estudios políticos (México) Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Estudios políticos (México) Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Estudios políticos (México) Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -13442,7 +13442,7 @@
     au < manifest ; exists ; 2010 ; 7 ; JISTEM - Journal of Information Systems and Technology Management Volume 7 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 8 ; JISTEM - Journal of Information Systems and Technology Management Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; JISTEM - Journal of Information Systems and Technology Management Volume 9 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 10 ; JISTEM - Journal of Information Systems and Technology Management Volume 10 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 10 ; JISTEM - Journal of Information Systems and Technology Management Volume 10 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 11 ; JISTEM - Journal of Information Systems and Technology Management Volume 11 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 12 ; JISTEM - Journal of Information Systems and Technology Management Volume 12 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -13651,7 +13651,7 @@
     au < manifest ; exists ; 2010 ; 17 ; Jornal Português de Gastrenterologia Volume 17 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 18 ; Jornal Português de Gastrenterologia Volume 18 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 19 ; Jornal Português de Gastrenterologia Volume 19 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 20 ; Jornal Português de Gastrenterologia Volume 20 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 20 ; Jornal Português de Gastrenterologia Volume 20 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 21 ; Jornal Português de Gastrenterologia Volume 21 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
@@ -13753,7 +13753,7 @@
     au < manifest ; exists ; 2010 ; 8 ; Journal of applied research and technology Volume 8 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 9 ; Journal of applied research and technology Volume 9 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 10 ; Journal of applied research and technology Volume 10 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 11 ; Journal of applied research and technology Volume 11 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 11 ; Journal of applied research and technology Volume 11 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 12 ; Journal of applied research and technology Volume 12 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 13 ; Journal of applied research and technology Volume 13 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -13886,7 +13886,7 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 2317-1537
 
-    au < finished ; crawling ; 2013 ; 35 ; Journal of Seed Science Volume 35 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 35 ; Journal of Seed Science Volume 35 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 36 ; Journal of Seed Science Volume 36 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 37 ; Journal of Seed Science Volume 37 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -15374,7 +15374,7 @@
     au < manifest ; exists ; 2010 ; 27 ; Medicina Legal de Costa Rica Volume 27 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 28 ; Medicina Legal de Costa Rica Volume 28 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 29 ; Medicina Legal de Costa Rica Volume 29 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 30 ; Medicina Legal de Costa Rica Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 30 ; Medicina Legal de Costa Rica Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 31 ; Medicina Legal de Costa Rica Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 32 ; Medicina Legal de Costa Rica Volume 32 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -17054,7 +17054,7 @@
     au < manifest ; exists ; 2010 ; 12 ; Pediatría Atención Primaria Volume 12 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 13 ; Pediatría Atención Primaria Volume 13 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 14 ; Pediatría Atención Primaria Volume 14 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 15 ; Pediatría Atención Primaria Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 15 ; Pediatría Atención Primaria Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 16 ; Pediatría Atención Primaria Volume 16 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 17 ; Pediatría Atención Primaria Volume 17 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -18845,7 +18845,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Psicología desde el Caribe Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Psicología desde el Caribe Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 29 ; Psicología desde el Caribe Volume 29 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 30 ; Psicología desde el Caribe Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 30 ; Psicología desde el Caribe Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 31 ; Psicología desde el Caribe Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 32 ; Psicología desde el Caribe Volume 32 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -20639,7 +20639,7 @@
     au < manifest ; exists ; 2010 ; 13 ; Revista Brasileira de Epidemiologia Volume 13 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 14 ; Revista Brasileira de Epidemiologia Volume 14 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 15 ; Revista Brasileira de Epidemiologia Volume 15 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 16 ; Revista Brasileira de Epidemiologia Volume 16 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 16 ; Revista Brasileira de Epidemiologia Volume 16 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 17 ; Revista Brasileira de Epidemiologia Volume 17 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 18 ; Revista Brasileira de Epidemiologia Volume 18 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -22368,7 +22368,7 @@
 
     au < manifest ; exists ; 2011 ; 5 ; Revista Colombiana de Ciencias Hortícolas Volume 5 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 6 ; Revista Colombiana de Ciencias Hortícolas Volume 6 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 7 ; Revista Colombiana de Ciencias Hortícolas Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 7 ; Revista Colombiana de Ciencias Hortícolas Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 8 ; Revista Colombiana de Ciencias Hortícolas Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
@@ -25110,7 +25110,7 @@
 
     au < manifest ; exists ; 2011 ; 43 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 43 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 44 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 44 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 45 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 45 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; 45 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 45 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 46 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 46 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 47 ; Revista de la Facultad de Ciencias Agrarias. Universidad Nacional de Cuyo Volume 47 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -29114,7 +29114,7 @@
     au < manifest ; exists ; 2010 ; 13 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 13 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 14 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 14 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 15 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 15 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 16 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 16 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 16 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 16 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 17 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 17 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 18 ; Revista U.D.C.A Actualidad & Divulgación Científica Volume 18 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -29434,7 +29434,7 @@
     au < manifest ; exists ; 2010 ; 31 ; Runa Volume 31 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 32 ; Runa Volume 32 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 33 ; Runa Volume 33 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 34 ; Runa Volume 34 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 34 ; Runa Volume 34 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 35 ; Runa Volume 35 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 36 ; Runa Volume 36 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -29887,7 +29887,7 @@
     au < manifest ; exists ; 2010 ; 67 ; Scientia Agricola Volume 67 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 68 ; Scientia Agricola Volume 68 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 69 ; Scientia Agricola Volume 69 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 70 ; Scientia Agricola Volume 70 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 70 ; Scientia Agricola Volume 70 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 71 ; Scientia Agricola Volume 71 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 72 ; Scientia Agricola Volume 72 ; 2015 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; 73 ; Scientia Agricola Volume 73 ; 2016 ; >
@@ -31642,7 +31642,7 @@
     au < manifest ; exists ; 2010 ; 60 ; Theologica Xaveriana Volume 60 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 61 ; Theologica Xaveriana Volume 61 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 62 ; Theologica Xaveriana Volume 62 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 63 ; Theologica Xaveriana Volume 63 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 63 ; Theologica Xaveriana Volume 63 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 64 ; Theologica Xaveriana Volume 64 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 65 ; Theologica Xaveriana Volume 65 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -31929,7 +31929,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Trabajo y sociedad Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Trabajo y sociedad Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Trabajo y sociedad Volume 2012 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 2013 ; Trabajo y sociedad Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Trabajo y sociedad Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Trabajo y sociedad Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Trabajo y sociedad Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
