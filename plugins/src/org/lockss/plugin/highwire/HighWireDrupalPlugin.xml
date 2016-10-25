@@ -81,6 +81,13 @@
     <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
   </entry>
   <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
