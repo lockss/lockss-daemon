@@ -1777,6 +1777,30 @@
 
   {
     title <
+      name = Indian Journal of Rheumatology ;
+      issn = 0973-3698 ;
+      issnl = 0973-3698
+   >
+
+    param[base_url] = http://www.indianjrheumatol.com/
+    param[journal_issn] = 0973-3698
+
+    au < exists ; exists ; 2006 ; Indian Journal of Rheumatology Volume 1 ; 2006 ; 1 ; >
+    au < exists ; exists ; 2007 ; Indian Journal of Rheumatology Volume 2 ; 2007 ; 2 ; >
+    au < exists ; exists ; 2008 ; Indian Journal of Rheumatology Volume 3 ; 2008 ; 3 ; >
+    au < exists ; exists ; 2009 ; Indian Journal of Rheumatology Volume 4 ; 2009 ; 4 ; >
+    au < exists ; exists ; 2010 ; Indian Journal of Rheumatology Volume 5 ; 2010 ; 5 ; >
+    au < exists ; exists ; 2011 ; Indian Journal of Rheumatology Volume 6 ; 2011 ; 6 ; >
+    au < exists ; exists ; 2012 ; Indian Journal of Rheumatology Volume 7 ; 2012 ; 7 ; >
+    au < exists ; exists ; 2013 ; Indian Journal of Rheumatology Volume 8 ; 2013 ; 8 ; >
+    au < exists ; exists ; 2014 ; Indian Journal of Rheumatology Volume 9 ; 2014 ; 9 ; >
+    au < exists ; exists ; 2015 ; Indian Journal of Rheumatology Volume 10 ; 2015 ; 10 ; >
+    au < exists ; exists ; 2016 ; Indian Journal of Rheumatology Volume 11 ; 2016 ; 11 ; >
+
+  }
+
+  {
+    title <
       name = Indian Journal of Sexually Transmitted Diseases and AIDS ;
       issn = 0253-7184 ;
       eissn = 1998-3816 ;
