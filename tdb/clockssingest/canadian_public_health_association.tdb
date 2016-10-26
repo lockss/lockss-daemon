@@ -19,8 +19,20 @@
       >
       param[base_url] = http://journal.cpha.ca/
       param[journal_id] = cjph
-      
 
+      au < manifest ; exists ; 1997 ; Canadian Journal of Public Health Volume 88 ; 88 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Canadian Journal of Public Health Volume 89 ; 89 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Canadian Journal of Public Health Volume 90 ; 90 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Canadian Journal of Public Health Volume 91 ; 91 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Canadian Journal of Public Health Volume 92 ; 92 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Canadian Journal of Public Health Volume 93 ; 93 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Canadian Journal of Public Health Volume 94 ; 94 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Canadian Journal of Public Health Volume 95 ; 95 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Canadian Journal of Public Health Volume 96 ; 96 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Canadian Journal of Public Health Volume 97 ; 97 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Canadian Journal of Public Health Volume 98 ; 98 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Canadian Journal of Public Health Volume 99 ; 99 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Canadian Journal of Public Health Volume 100 ; 100 ; 2009 ; >
       au < testing ; exists ; 2010 ; Canadian Journal of Public Health Volume 101 ; 101 ; 2010 ; > #all testing passes. Waiting for contract.
       au < testing ; exists ; 2011 ; Canadian Journal of Public Health Volume 102 ; 102 ; 2011 ; > #all testing passes. Waiting for contract.
       au < testing ; exists ; 2012 ; Canadian Journal of Public Health Volume 103 ; 103 ; 2012 ; > #all testing passes. Waiting for contract.
