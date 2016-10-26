@@ -923,13 +923,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = sc
 
-      au < exists ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
+      au < manifest ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -1002,9 +1002,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = en
 
-      au < exists ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
+      au < manifest ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
 
   }
 
@@ -1020,10 +1020,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = em
 
-      au < exists ; exists ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 ; >
+      au < manifest ; exists ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 ; >
 
   }
 
@@ -1039,8 +1039,8 @@
       comment[years] = Published 2015-2016
       param[journal_code] = ew
 
-      au < exists ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
+      au < manifest ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
 
   }
 
@@ -1132,13 +1132,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = fo
 
-      au < exists ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
+      au < manifest ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -1153,10 +1153,10 @@
       comment[years] = Published 2000-2003
       param[journal_code] = gt
 
-      au < exists ; exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; >
-      au < exists ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; >
+      au < manifest ; exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 ; >
 
   }
 
@@ -1171,9 +1171,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qi
 
-      au < exists ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
+      au < manifest ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
 
   }
 
@@ -1251,10 +1251,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = ta
 
-      au < exists ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
+      au < manifest ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
 
   }
 
@@ -1270,10 +1270,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tb
 
-      au < exists ; exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 ; >
+      au < manifest ; exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 ; >
 
   }
 
@@ -1289,10 +1289,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tc
 
-      au < exists ; exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; >
+      au < manifest ; exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; >
 
   }
 
