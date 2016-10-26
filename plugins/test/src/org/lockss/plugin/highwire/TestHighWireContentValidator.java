@@ -64,6 +64,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
   private String urlStr2;
   private String urlStr3;
   private String urlStr4;
+  private String urlStr5;
   
   public void setUp() throws Exception {
     super.setUp();
@@ -80,6 +81,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
     urlStr2 = BASE_URL + "1/1/1.full.pdf+html";
     urlStr3 = BASE_URL + "1/1/1.full.pdf";
     urlStr4 = BASE_URL + "1/1/1.a.jpEg";
+    urlStr5 = BASE_URL + "f/o/o/1.zip";
   }
   
   public void tearDown() throws Exception {
@@ -116,6 +118,16 @@ public class TestHighWireContentValidator extends LockssTestCase {
       // okay, fall-thru
     }
     cu = new MockCachedUrl(urlStr4, mau);
+    cu.setContent(TEXT);
+    cu.setContentSize(LEN);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
+    try {
+      contentValidator.validate(cu);
+      fail("Bad cu should throw exception");
+    } catch (Exception e) {
+      // okay, fall-thru
+    }
+    cu = new MockCachedUrl(urlStr5, mau);
     cu.setContent(TEXT);
     cu.setContentSize(LEN);
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);

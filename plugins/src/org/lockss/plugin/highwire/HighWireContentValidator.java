@@ -45,6 +45,7 @@ public class HighWireContentValidator {
   protected static final String PNG_EXT = ".png";
   protected static final String JPG_EXT = ".jpg";
   protected static final String JPEG_EXT = ".jpeg";
+  protected static final String ZIP_EXT = ".zip";
   
   public static class TextTypeValidator implements ContentValidator {
     
@@ -55,7 +56,8 @@ public class HighWireContentValidator {
       if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
           StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
           StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||
-          StringUtil.endsWithIgnoreCase(url, JPEG_EXT)) {
+          StringUtil.endsWithIgnoreCase(url, JPEG_EXT) ||
+          StringUtil.endsWithIgnoreCase(url, ZIP_EXT)) {
         throw new ContentValidationException("URL MIME type mismatch");
       }
     }
