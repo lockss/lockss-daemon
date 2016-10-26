@@ -19,22 +19,204 @@
       name = BK Books ;
       type = bookSeries
     >
-  
-    au < finished ; finished ; 1999 ; 9781605092546 ;  ; 9781605092546 ; A Simpler Way ; >
-    au < manifest ; exists ; 2004 ; 9781609942052 ;  ; 9781609942052 ; The Serving Leader ; >
-    au < manifest ; exists ; 2005 ; 9781605093338 ;  ; 9781605093338 ; Research in Organizations ; >
-    au < manifest ; exists ; 2007 ; 9781576755099 ;  ; 9781576755099 ; The Change Handbook ; >
-    au < manifest ; exists ; 2011 ; 9781605096018 ;  ; 9781605096018 ; Useful Research ; >
-    au < finished ; finished ; 2011 ; 9781605096698 ;  ; 9781605096698 ; The Art of Convening ; >
-    au < finished ; finished ; 2011 ; 9781576758724 ;  ; 9781576758724 ; Helping ; >
-    au < finished ; finished ; 2012 ; 9781609945404 ;  ; 9781609945404 ; What To Do When There's Too Much To Do ; >
-    au < finished ; finished ; 2013 ; 9781609948306 ;  ; 9781609948306 ; How to Change Minds ; >
-    au < finished ; finished ; 2013 ; 9781609948023 ;  ; 9781609948023 ; Opening Doors to Teamwork and Collaboration ; >
-    au < finished ; finished ; 2013 ; 9781609949730 ;  ; 9781609949730 ; Practicing Positive Leadership ; >
-    au < finished ; finished ; 2013 ; 9781609948238 ;  ; 9781609948238 ; Stewardship ; >
-    au < finished ; finished ; 2015 ; 9781626562363 ;  ; 9781626562363 ; Dare to Serve ; >
-    au < manifest ; exists ; 2015 ; 9781626562448 ;  ; 9781626562448 ; A Peacock in the Land of Penguins ; >
-    au < manifest ; exists ; 2016 ; 9781626562806 ;  ; 9781626562806 ; The Vanishing American Corporation ; >
+      
+    au < manifest ; exists ; 1997 ; 9781605092690 ; ; 9781605092690 ; 301 Ways to Have Fun At Work ; >
+    au < manifest ; exists ; 1997 ; 9781605096230 ; ; 9781605096230 ; Expanding Our Now ; >
+    au < manifest ; exists ; 1997 ; 9781609941437 ; ; 9781609941437 ; Real Time Strategic Change ; >
+    au < manifest ; exists ; 1998 ; 9781609941444 ; ; 9781609941444 ; The New Management ; >
+    au < manifest ; exists ; 1998 ; 9781609941505 ; ; 9781609941505 ; Dance Lessons ; >
+    au < finished ; finished ; 1999 ; 9781605092546 ; ; 9781605092546 ; A Simpler Way ; >
+    au < manifest ; exists ; 1999 ; 9781605096247 ; ; 9781605096247 ; The Spirit of Leadership ; >
+    au < manifest ; exists ; 1999 ; 9781605096407 ; ; 9781605096407 ; Running Training Like a Business ; >
+    au < manifest ; exists ; 2000 ; 9781605093857 ; ; 9781605093857 ; The New Why Teams Don't Work ; >
+    au < manifest ; exists ; 2000 ; 9781605093963 ; ; 9781605093963 ; The Post-Corporate World ; >
+    au < manifest ; exists ; 2000 ; 9781605094632 ; ; 9781605094632 ; Profit Building ; >
+    au < manifest ; exists ; 2000 ; 9781605096193 ; ; 9781605096193 ; Identity Is Destiny ; >
+    au < manifest ; exists ; 2000 ; 9781605096254 ; ; 9781605096254 ; The Power of Spirit ; >
+    au < manifest ; exists ; 2001 ; 9781605092553 ; ; 9781605092553 ; The Influence Edge ; >
+    au < manifest ; exists ; 2001 ; 9781605092843 ; ; 9781605092843 ; Getting Things Done When You Are Not in Charge ; >
+    au < manifest ; exists ; 2001 ; 9781605093390 ; ; 9781605093390 ; Empowerment Takes More Than a Minute ; >
+    au < manifest ; exists ; 2001 ; 9781605094076 ; ; 9781605094076 ; Lean and Green ; >
+    au < manifest ; exists ; 2001 ; 9781605094106 ; ; 9781605094106 ; Teamwork Is an Individual Skill ; >
+    au < manifest ; exists ; 2001 ; 9781605097152 ; ; 9781605097152 ; The New SuperLeadership ; >
+    au < manifest ; exists ; 2001 ; 9781605098067 ; ; 9781605098067 ; Don't Kill the Bosses! ; >
+    au < manifest ; exists ; 2001 ; 9781605098494 ; ; 9781605098494 ; Attracting Perfect Customers ; >
+    au < manifest ; exists ; 2002 ; 9781605091495 ; ; 9781605091495 ; Why Decisions Fail ; >
+    au < manifest ; exists ; 2002 ; 9781605092850 ; ; 9781605092850 ; How to Make Collaboration Work ; >
+    au < manifest ; exists ; 2002 ; 9781605092980 ; ; 9781605092980 ; Working at Warp Speed ; >
+    au < manifest ; exists ; 2002 ; 9781605093680 ; ; 9781605093680 ; Change Is Everybody's Business ; >
+    au < manifest ; exists ; 2002 ; 9781605093895 ; ; 9781605093895 ; The Power of Failure ; >
+    au < manifest ; exists ; 2002 ; 9781605094274 ; ; 9781605094274 ; Inclusion Breakthrough ; >
+    au < manifest ; exists ; 2002 ; 9781605095677 ; ; 9781605095677 ; Responsible Restructuring ; >
+    au < manifest ; exists ; 2002 ; 9781605096100 ; ; 9781605096100 ; Accountability ; >
+    au < manifest ; exists ; 2002 ; 9781609941895 ; ; 9781609941895 ; Big Vision, Small Business ; >
+    au < manifest ; exists ; 2003 ; 9781576758755 ; ; 9781576758755 ; Love It, Don't Leave It ; >
+    au < manifest ; exists ; 2003 ; 9781576759622 ; ; 9781576759622 ; Emotional Discipline ; >
+    au < manifest ; exists ; 2003 ; 9781576759660 ; ; 9781576759660 ; Positive Organizational Scholarship ; >
+    au < manifest ; exists ; 2003 ; 9781605093888 ; ; 9781605093888 ; The Success Case Method ; >
+    au < manifest ; exists ; 2003 ; 9781605096124 ; ; 9781605096124 ; The Blind Men and the Elephant ; >
+    au < manifest ; exists ; 2003 ; 9781605096155 ; ; 9781605096155 ; Structured On-the-Job Training ; >
+    au < manifest ; exists ; 2003 ; 9781609941932 ; ; 9781609941932 ; Creating Leaderful Organizations ; >
+    au < manifest ; exists ; 2004 ; 9781576758793 ; ; 9781576758793 ; You Don't Have to Do It Alone ; >
+    au < manifest ; exists ; 2004 ; 9781605092829 ; ; 9781605092829 ; Second Innocence ; >
+    au < manifest ; exists ; 2004 ; 9781605094083 ; ; 9781605094083 ; DEC Is Dead, Long Live DEC ; >
+    au < manifest ; exists ; 2004 ; 9781605097169 ; ; 9781605097169 ; Robert K. Greenleaf ; >
+    au < manifest ; exists ; 2004 ; 9781605098197 ; ; 9781605098197 ; Positively M. A. D. ; >
+    au < manifest ; exists ; 2004 ; 9781609942052 ; ; 9781609942052 ; The Serving Leader ; >
+    au < manifest ; exists ; 2004 ; 9781609942076 ; ; 9781609942076 ; Formula 2+2 ; >
+    au < manifest ; exists ; 2005 ; 9781576758014 ; ; 9781576758014 ; Strategic Business Partner ; >
+    au < manifest ; exists ; 2005 ; 9781576759615 ; ; 9781576759615 ; The Pebble and the Avalanche ; >
+    au < manifest ; exists ; 2005 ; 9781605090184 ; ; 9781605090184 ; One from Many ; >
+    au < manifest ; exists ; 2005 ; 9781605093338 ; ; 9781605093338 ; Research in Organizations ; >
+    au < manifest ; exists ; 2005 ; 9781605093901 ; ; 9781605093901 ; Stick Your Neck Out ; >
+    au < manifest ; exists ; 2005 ; 9781605096186 ; ; 9781605096186 ; Real Leadership ; >
+    au < manifest ; exists ; 2005 ; 9781609942045 ; ; 9781609942045 ; The Art of Business ; >
+    au < manifest ; exists ; 2006 ; 9781576757956 ; ; 9781576757956 ; Covert Processes at Work ; >
+    au < manifest ; exists ; 2006 ; 9781576758809 ; ; 9781576758809 ; Changing How the World Does Business ; >
+    au < manifest ; exists ; 2006 ; 9781576759356 ; ; 9781576759356 ; Consensus Through Conversations ; >
+    au < manifest ; exists ; 2006 ; 9781576759509 ; ; 9781576759509 ; True to Yourself ; >
+    au < manifest ; exists ; 2006 ; 9781605090177 ; ; 9781605090177 ; Ideas Are Free ; >
+    au < manifest ; exists ; 2006 ; 9781605092539 ; ; 9781605092539 ; Leading People Through Disasters ; >
+    au < manifest ; exists ; 2006 ; 9781605096421 ; ; 9781605096421 ; Magnetic Service ; >
+    au < manifest ; exists ; 2006 ; 9781605097077 ; ; 9781605097077 ; Making the Impossible Possible ; >
+    au < manifest ; exists ; 2006 ; 9781605098487 ; ; 9781605098487 ; Yes Lives in the Land of No ; >
+    au < manifest ; exists ; 2007 ; 9781576755099 ; ; 9781576755099 ; The Change Handbook ; >
+    au < manifest ; exists ; 2007 ; 9781576755150 ; ; 9781576755150 ; Don't Just Do Something, Stand There! ; >
+    au < manifest ; exists ; 2007 ; 9781576755181 ; ; 9781576755181 ; Fun Works ; >
+    au < manifest ; exists ; 2007 ; 9781576755235 ; ; 9781576755235 ; Show Me the Money ; >
+    au < manifest ; exists ; 2007 ; 9781576755310 ; ; 9781576755310 ; Get There Early ; >
+    au < manifest ; exists ; 2007 ; 9781576755358 ; ; 9781576755358 ; Seeing Systems ; >
+    au < manifest ; exists ; 2007 ; 9781576755396 ; ; 9781576755396 ; The Great Turning ; >
+    au < manifest ; exists ; 2007 ; 9781576755440 ; ; 9781576755440 ; Executive Coaching for Results ; >
+    au < manifest ; exists ; 2007 ; 9781576755518 ; ; 9781576755518 ; The Five Secrets You Must Discover Before You Die ; >
+    au < manifest ; exists ; 2007 ; 9781605093376 ; ; 9781605093376 ; Know Can Do! ; >
+    au < manifest ; exists ; 2007 ; 9781605093413 ; ; 9781605093413 ; Go Team! ; >
+    au < manifest ; exists ; 2008 ; 9781576755495 ; ; 9781576755495 ; Zenobia ; >
+    au < manifest ; exists ; 2008 ; 9781576755624 ; ; 9781576755624 ; The Appreciative Inquiry Handbook ; >
+    au < manifest ; exists ; 2008 ; 9781576757758 ; ; 9781576757758 ; Open Space Technology ; >
+    au < manifest ; exists ; 2008 ; 9781576757819 ; ; 9781576757819 ; Putting Our Differences to Work ; >
+    au < manifest ; exists ; 2008 ; 9781576757826 ; ; 9781576757826 ; The Change Cycle ; >
+    au < manifest ; exists ; 2008 ; 9781576757840 ; ; 9781576757840 ; Be BIG ; >
+    au < manifest ; exists ; 2008 ; 9781576759813 ; ; 9781576759813 ; Authentic Conversations ; >
+    au < manifest ; exists ; 2008 ; 9781576759820 ; ; 9781576759820 ; Courage Goes to Work ; >
+    au < manifest ; exists ; 2008 ; 9781576759875 ; ; 9781576759875 ; Wave Rider ; >
+    au < manifest ; exists ; 2009 ; 9781576756201 ; ; 9781576756201 ; Make Their Day! ; >
+    au < manifest ; exists ; 2009 ; 9781576757734 ; ; 9781576757734 ; Community ; >
+    au < manifest ; exists ; 2009 ; 9781576759004 ; ; 9781576759004 ; The Power of Collective Wisdom ; >
+    au < manifest ; exists ; 2009 ; 9781576759219 ; ; 9781576759219 ; The Four Conversations ; >
+    au < manifest ; exists ; 2009 ; 9781605092638 ; ; 9781605092638 ; Trauma Stewardship ; >
+    au < manifest ; exists ; 2009 ; 9781605092669 ; ; 9781605092669 ; The Art of Quantum Planning ; >
+    au < manifest ; exists ; 2009 ; 9781605092744 ; ; 9781605092744 ; The Courageous Follower ; >
+    au < manifest ; exists ; 2009 ; 9781605093055 ; ; 9781605093055 ; Power and Love ; >
+    au < manifest ; exists ; 2009 ; 9781605093505 ; ; 9781605093505 ; Whale Done Parenting ; >
+    au < manifest ; exists ; 2009 ; 9781605093833 ; ; 9781605093833 ; The Compromise Trap ; >
+    au < manifest ; exists ; 2010 ; 9781605090108 ; ; 9781605090108 ; Standing in the Fire ; >
+    au < manifest ; exists ; 2010 ; 9781605092584 ; ; 9781605092584 ; The Circle Way ; >
+    au < manifest ; exists ; 2010 ; 9781605093475 ; ; 9781605093475 ; Bootstrap Leadership ; >
+    au < manifest ; exists ; 2010 ; 9781605093536 ; ; 9781605093536 ; Wander Woman ; >
+    au < manifest ; exists ; 2010 ; 9781605093741 ; ; 9781605093741 ; Rebuilding Trust in the Workplace ; >
+    au < manifest ; exists ; 2010 ; 9781605093765 ; ; 9781605093765 ; Agenda for a New Economy ; >
+    au < manifest ; exists ; 2010 ; 9781605094298 ; ; 9781605094298 ; Future Search ; >
+    au < manifest ; exists ; 2010 ; 9781605094458 ; ; 9781605094458 ; Creative Community Organizing ; >
+    au < manifest ; exists ; 2010 ; 9781605094489 ; ; 9781605094489 ; Terms of Engagement ; >
+    au < manifest ; exists ; 2010 ; 9781605096049 ; ; 9781605096049 ; Engaging Emergence ; >
+    au < manifest ; exists ; 2010 ; 9781605096070 ; ; 9781605096070 ; Networking for People Who Hate Networking ; >
+    au < manifest ; exists ; 2010 ; 9781605096209 ; ; 9781605096209 ; The One Minute Negotiator ; >
+    au < manifest ; exists ; 2010 ; 9781605096308 ; ; 9781605096308 ; Your Leadership Legacy ; >
+    au < finished ; finished ; 2011 ; 9781576758724 ; ; 9781576758724 ; Helping ; >
+    au < manifest ; exists ; 2011 ; 9781605091365 ; ; 9781605091365 ; Women Lead the Way ; >
+    au < manifest ; exists ; 2011 ; 9781605094144 ; ; 9781605094144 ; Scenario Planning in Organizations ; >
+    au < manifest ; exists ; 2011 ; 9781605096018 ; ; 9781605096018 ; Useful Research ; >
+    au < manifest ; exists ; 2011 ; 9781605096599 ; ; 9781605096599 ; The Improvisation Edge ; >
+    au < finished ; finished ; 2011 ; 9781605096698 ; ; 9781605096698 ; The Art of Convening ; >
+    au < manifest ; exists ; 2011 ; 9781605097329 ; ; 9781605097329 ; Walk Out Walk On ; >
+    au < manifest ; exists ; 2011 ; 9781605098760 ; ; 9781605098760 ; Full Steam Ahead! ; >
+    au < manifest ; exists ; 2011 ; 9781605098838 ; ; 9781605098838 ; Collective Visioning ; >
+    au < manifest ; exists ; 2011 ; 9781605099323 ; ; 9781605099323 ; Make Talent Your Business ; >
+    au < manifest ; exists ; 2011 ; 9781605099521 ; ; 9781605099521 ; Mother Teresa, CEO ; >
+    au < manifest ; exists ; 2011 ; 9781605099767 ; ; 9781605099767 ; Wired and Dangerous ; >
+    au < manifest ; exists ; 2011 ; 9781609940058 ; ; 9781609940058 ; The Leadership Wisdom of Jesus ; >
+    au < manifest ; exists ; 2011 ; 9781609940089 ; ; 9781609940089 ; True North Groups ; >
+    au < manifest ; exists ; 2011 ; 9781609940331 ; ; 9781609940331 ; The New Entrepreneurial Leader ; >
+    au < manifest ; exists ; 2011 ; 9781609940584 ; ; 9781609940584 ; Stepping Up ; >
+    au < manifest ; exists ; 2012 ; 9781605096957 ; ; 9781605096957 ; Great Leaders Grow ; >
+    au < manifest ; exists ; 2012 ; 9781609941215 ; ; 9781609941215 ; The Transforming Leader ; >
+    au < manifest ; exists ; 2012 ; 9781609942939 ; ; 9781609942939 ; Being Buddha at Work ; >
+    au < manifest ; exists ; 2012 ; 9781609944889 ; ; 9781609944889 ; Leaders Make the Future ; >
+    au < manifest ; exists ; 2012 ; 9781609945299 ; ; 9781609945299 ; Hungry Start-up Strategy ; >
+    au < finished ; finished ; 2012 ; 9781609945404 ; ; 9781609945404 ; What To Do When There's Too Much To Do ; >
+    au < manifest ; exists ; 2012 ; 9781609945671 ; ; 9781609945671 ; Positive Leadership ; >
+    au < manifest ; exists ; 2012 ; 9781609945749 ; ; 9781609945749 ; Managing for People Who Hate Managing ; >
+    au < manifest ; exists ; 2012 ; 9781609946333 ; ; 9781609946333 ; Help Them Grow or Watch Them Go ; >
+    au < manifest ; exists ; 2013 ; 9781576755877 ; ; 9781576755877 ; The Introverted Leader ; >
+    au < manifest ; exists ; 2013 ; 9781609940669 ; ; 9781609940669 ; I Moved Your Cheese ; >
+    au < manifest ; exists ; 2013 ; 9781609942977 ; ; 9781609942977 ; Rethinking Money ; >
+    au < manifest ; exists ; 2013 ; 9781609945633 ; ; 9781609945633 ; Quiet Influence ; >
+    au < manifest ; exists ; 2013 ; 9781609946371 ; ; 9781609946371 ; The Empress Has No Clothes ; >
+    au < manifest ; exists ; 2013 ; 9781609946456 ; ; 9781609946456 ; Leadership and the Art of Struggle ; >
+    au < manifest ; exists ; 2013 ; 9781609947118 ; ; 9781609947118 ; Managers As Mentors ; >
+    au < manifest ; exists ; 2013 ; 9781609947361 ; ; 9781609947361 ; Take Charge of Your Talent ; >
+    au < manifest ; exists ; 2013 ; 9781609947408 ; ; 9781609947408 ; I'm Sorry I Broke Your Company ; >
+    au < manifest ; exists ; 2013 ; 9781609947446 ; ; 9781609947446 ; It's the Way You Say It ; >
+    au < manifest ; exists ; 2013 ; 9781609948016 ; ; 9781609948016 ; Yoga Wisdom at Work ; >
+    au < finished ; finished ; 2013 ; 9781609948023 ; ; 9781609948023 ; Opening Doors to Teamwork and Collaboration ; >
+    au < manifest ; exists ; 2013 ; 9781609948108 ; ; 9781609948108 ; The Art of Insight ; >
+    au < finished ; finished ; 2013 ; 9781609948238 ; ; 9781609948238 ; Stewardship ; >
+    au < manifest ; exists ; 2013 ; 9781609948269 ; ; 9781609948269 ; Embrace the Chaos ; >
+    au < finished ; finished ; 2013 ; 9781609948306 ; ; 9781609948306 ; How to Change Minds ; >
+    au < manifest ; exists ; 2013 ; 9781609948382 ; ; 9781609948382 ; The Truth about Lies in the Workplace ; >
+    au < manifest ; exists ; 2013 ; 9781609948924 ; ; 9781609948924 ; Why Wait to Be Great? ; >
+    au < manifest ; exists ; 2013 ; 9781609949013 ; ; 9781609949013 ; Speaking Up ; >
+    au < manifest ; exists ; 2013 ; 9781609949129 ; ; 9781609949129 ; Make an Ethical Difference ; >
+    au < manifest ; exists ; 2013 ; 9781609949204 ; ; 9781609949204 ; The Seven Paths ; >
+    au < manifest ; exists ; 2013 ; 9781609949532 ; ; 9781609949532 ; Life Reimagined ; >
+    au < finished ; finished ; 2013 ; 9781609949730 ; ; 9781609949730 ; Practicing Positive Leadership ; >
+    au < manifest ; exists ; 2013 ; 9781609949822 ; ; 9781609949822 ; Humble Inquiry ; >
+    au < manifest ; exists ; 2013 ; 9781609949907 ; ; 9781609949907 ; Learning from Leonardo ; >
+    au < manifest ; exists ; 2014 ; 9781609945541 ; ; 9781609945541 ; The Innovation Paradox ; >
+    au < manifest ; exists ; 2014 ; 9781609948146 ; ; 9781609948146 ; Ice Cream Social ; >
+    au < manifest ; exists ; 2014 ; 9781609948856 ; ; 9781609948856 ; Love 'Em or Lose 'Em ; >
+    au < manifest ; exists ; 2014 ; 9781609949280 ; ; 9781609949280 ; Affluenza ; >
+    au < manifest ; exists ; 2014 ; 9781609949693 ; ; 9781609949693 ; Execution IS the Strategy ; >
+    au < manifest ; exists ; 2014 ; 9781609949785 ; ; 9781609949785 ; Measuring and Improving Social Impacts ; >
+    au < manifest ; exists ; 2014 ; 9781609949945 ; ; 9781609949945 ; Making Sustainability Work ; >
+    au < manifest ; exists ; 2014 ; 9781626560291 ; ; 9781626560291 ; How to Be a Positive Leader ; >
+    au < manifest ; exists ; 2014 ; 9781626560482 ; ; 9781626560482 ; Be the Best Bad Presenter Ever ; >
+    au < manifest ; exists ; 2014 ; 9781626560611 ; ; 9781626560611 ; Fit at Last ; >
+    au < manifest ; exists ; 2014 ; 9781626560666 ; ; 9781626560666 ; The Discomfort Zone ; >
+    au < manifest ; exists ; 2014 ; 9781626560826 ; ; 9781626560826 ; Let's Stop Meeting Like This ; >
+    au < manifest ; exists ; 2014 ; 9781626560888 ; ; 9781626560888 ; Who Kidnapped Excellence? ; >
+    au < manifest ; exists ; 2014 ; 9781626560987 ; ; 9781626560987 ; Deepening Community ; >
+    au < manifest ; exists ; 2014 ; 9781626561076 ; ; 9781626561076 ; The Reciprocity Advantage ; >
+    au < manifest ; exists ; 2014 ; 9781626561205 ; ; 9781626561205 ; Employee Surveys That Work ; >
+    au < manifest ; exists ; 2014 ; 9781626561243 ; ; 9781626561243 ; The Idea-Driven Organization ; >
+    au < manifest ; exists ; 2014 ; 9781626561410 ; ; 9781626561410 ; Business Ethics ; >
+    au < manifest ; exists ; 2014 ; 9781626561595 ; ; 9781626561595 ; Power Through Partnership ; >
+    au < manifest ; exists ; 2014 ; 9781626561830 ; ; 9781626561830 ; Why Motivating People Doesn't Work . . . and What Does ; >
+    au < manifest ; exists ; 2014 ; 9781626561878 ; ; 9781626561878 ; Hello, My Name Is Awesome ; >
+    au < manifest ; exists ; 2014 ; 9781626561953 ; ; 9781626561953 ; The Rise of the American Corporate Security State ; >
+    au < manifest ; exists ; 2014 ; 9781626561991 ; ; 9781626561991 ; The Secret ; >
+    au < manifest ; exists ; 2014 ; 9781626562110 ; ; 9781626562110 ; Corporations Are Not People ; >
+    au < manifest ; exists ; 2014 ; 9781626562158 ; ; 9781626562158 ; With Liberty and Dividends for All ; >
+    au < manifest ; exists ; 2014 ; 9781626562196 ; ; 9781626562196 ; In Their Own Hands ; >
+    au < manifest ; exists ; 2014 ; 9781626562769 ; ; 9781626562769 ; The Intelligent Optimist's Guide to Life ; >
+    au < manifest ; exists ; 2015 ; 9781626560338 ; ; 9781626560338 ; How the Poor Can Save Capitalism ; >
+    au < manifest ; exists ; 2015 ; 9781626562035 ; ; 9781626562035 ; The Confidence Myth ; >
+    au < manifest ; exists ; 2015 ; 9781626562301 ; ; 9781626562301 ; Performance Consulting ; >
+    au < finished ; finished ; 2015 ; 9781626562363 ; ; 9781626562363 ; Dare to Serve ; >
+    au < manifest ; exists ; 2015 ; 9781626562448 ; ; 9781626562448 ; A Peacock in the Land of Penguins ; >
+    au < manifest ; exists ; 2015 ; 9781626562585 ; ; 9781626562585 ; Trust and Betrayal in the Workplace ; >
+    au < manifest ; exists ; 2015 ; 9781626562660 ; ; 9781626562660 ; Leadership for a Fractured World ; >
+    au < manifest ; exists ; 2015 ; 9781626562912 ; ; 9781626562912 ; Change the Story, Change the Future ; >
+    au < manifest ; exists ; 2015 ; 9781626562950 ; ; 9781626562950 ; Your Leadership Story ; >
+    au < manifest ; exists ; 2015 ; 9781626563025 ; ; 9781626563025 ; What's Your Future Worth? ; >
+    au < manifest ; exists ; 2015 ; 9781626563186 ; ; 9781626563186 ; Rebalancing Society ; >
+    au < manifest ; exists ; 2015 ; 9781626563308 ; ; 9781626563308 ; Sustainable Happiness ; >
+    au < manifest ; exists ; 2015 ; 9781626563346 ; ; 9781626563346 ; Refire! Don't Retire ; >
+    au < manifest ; exists ; 2015 ; 9781626563384 ; ; 9781626563384 ; The Resilient Investor ; >
+    au < manifest ; exists ; 2015 ; 9781626564022 ; ; 9781626564022 ; Lift ; >
+    au < manifest ; exists ; 2015 ; 9781626564053 ; ; 9781626564053 ; Dialogic Organization Development ; >
+    au < manifest ; exists ; 2016 ; 9781626562806 ; ; 9781626562806 ; The Vanishing American Corporation ; >
 
   }
 
