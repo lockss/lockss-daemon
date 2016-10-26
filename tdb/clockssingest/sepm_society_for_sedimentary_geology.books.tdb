@@ -68,7 +68,7 @@
       au < exists ; exists ; 1988 ; 978-1-56576-095-0 ; Sea-Level Fluctuation and Coastal Evolution Volume 41 ; sepspsea ; >
       au < exists ; exists ; 1989 ; 978-1-56576-089-9 ; Sea-Level Changes Volume 42 ; sepspsel ; >
       au < exists ; exists ; 1989 ; 978-1-56576-169-8 ; Sedimentology and Geochemistry of Dolostones Volume 43 ; sepspsgd ; >
-      au < testing ; exists ; 1989 ; 978-1-56576-105-6 ; Controls on Carbonate Platform and Basin Development Volume 44 ; sepspcot ; >
+      au < ready ; exists ; 1989 ; 978-1-56576-105-6 ; Controls on Carbonate Platform and Basin Development Volume 44 ; sepspcot ; >
       au < exists ; exists ; 1991 ; 978-1-56576-170-4 ; Sedimentation in Volcanic Settings Volume 45 ; sepspsei ; >
       au < exists ; exists ; 1991 ; 978-1-56576-171-1 ; From Shoreline to Abyss: Contributions to Marine Geology in Honor of Francis Parker Shepard Volume 46 ; sepspsho ; >
       au < exists ; exists ; 1992 ; 978-1-56576-172-8 ; Origin, Diagenesis and Petrophysics of Clay Minerals in Sandstone Volume 47 ; sepspori ; >
@@ -126,9 +126,9 @@
       au < exists ; exists ; 2011 ; 978-1-56576-309-8 ; The End-Cretaceous Mass Extinction and the Chicxulub Impact in Texas Volume 100 ; sepsp100 ; >
       au < exists ; exists ; 2012 ; 978-1-56576-283-1 ; Microbial Mats in Siliciclastic Depositional Systems Volume 101 ; sepsp101 ; >
       au < exists ; exists ; 2012 ; 978-1-56576-313-5 ; Sedimentary Geology of Mars Volume 102 ; sepsp102 ; >
-      au < testing ; exists ; 2012 ; 978-1-56576-317-3 ; Analyzing Thermal Histories of Sedimentary Basins: Methods and Case Studies Volume 103 ; sepsp103 ; >
-      au < testing ; exists ; 2013 ; 978-1-56576-303-6 ; New Frontiers in Paleopedology and Terrestrial Paleoclimatology: Paleosols and Soil Surface Analog Systems Volume 104 ; sepsp104 ; >
-      au < testing ; exists ; 2014 ; 978-1-56576-323-4 ; Deposits, Architecture and Controls of Carbonate Margin, Slope and Basinal Settings Volume 105 ; sepsp105 ; >
+      au < ready ; exists ; 2012 ; 978-1-56576-317-3 ; Analyzing Thermal Histories of Sedimentary Basins: Methods and Case Studies Volume 103 ; sepsp103 ; >
+      au < ready ; exists ; 2013 ; 978-1-56576-303-6 ; New Frontiers in Paleopedology and Terrestrial Paleoclimatology: Paleosols and Soil Surface Analog Systems Volume 104 ; sepsp104 ; >
+      au < ready ; exists ; 2014 ; 978-1-56576-323-4 ; Deposits, Architecture and Controls of Carbonate Margin, Slope and Basinal Settings Volume 105 ; sepsp105 ; >
   
   }
   
@@ -144,12 +144,12 @@
 
       au < exists ; exists ; 1987 ; 978-1-56576-101-8 ; Cross-Bedding, Bedforms and Paleocurrents Volume 1 ; sepcocbb ; >
       au < exists ; exists ; 1990 ; 978-1-56576-225-1 ; Models and Stratigraphy of Mid-Cretaceous Reef Communities, Gulf of Mexico Volume 2 ; sepcomsm ; >
-      au < testing ; exists ; 1991 ; 978-1-56576-226-8 ; The Three-Dimensional Facies Architecture of Terrigenous Clastic Sediments and Its Implications for Hydrocarbon Discovery and Recovery Volume 3 ; sepcodfa ; >
+      au < ready ; exists ; 1991 ; 978-1-56576-226-8 ; The Three-Dimensional Facies Architecture of Terrigenous Clastic Sediments and Its Implications for Hydrocarbon Discovery and Recovery Volume 3 ; sepcodfa ; >
       au < exists ; exists ; 1994 ; 978-1-56576-227-5 ; Tectonic and Eustatic Controls on Sedimentary Cycles Volume 4 ; sepcotec ; >
       au < exists ; exists ; 1996 ; 978-1-56576-228-2 ; Models for Carbonate Stratigraphy from Miocene Reef Complexes of Mediterranean Regions Volume 5 ; sepcomod ; >
       au < exists ; exists ; 1998 ; 978-1-56576-229-9 ; Stratigraphy and Paleoenvironments of the Cretaceous Western Interior Seaway, USA Volume 6 ; sepcostr ; >
       au < exists ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; sepcosil ; >
-      au < testing ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; >
+      au < ready ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; >
       au < exists ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
       # the PDFs for the next AU is not accessible - goes to log in page
       au < notReady ; exists ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
@@ -177,7 +177,7 @@
       au < exists ; exists ; 1983 ; 978-1-56576-239-8 ; Stable Isotopes in Sedimentary Geology Volume 10 ; sepscsis ; >
       au < exists ; exists ; 1983 ; 978-1-56576-240-4 ; Patterns of Sedimentation, Diagenesis and Hydrocarbon Accumulation in Cretaceous Rocks of the Rocky Mountains Volume 11 ; sepscdia ; >
       au < exists ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; >
-      au < testing ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; sepscshe ; >
+      au < ready ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; sepscshe ; >
       au < exists ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; sepscmod ; >
       au < exists ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; sepscich ; >
       au < exists ; exists ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; sepscgla ; >
@@ -200,11 +200,11 @@
       au < exists ; exists ; 1997 ; 978-1-56576-114-8 ; Sequence Stratigraphy and Characterization of Carbonate Reservoirs Volume 40 ; sepscseq ; >
       au < exists ; exists ; 2000 ; 978-1-56576-115-5 ; 3-D Seismic Interpretation: A Primer for Geologists Volume 48 ; sepscdsi ; >
       au < exists ; exists ; 2000 ; 978-1-56576-285-5 ; Applied Sandstone Diagenesis: Practical Petrographic Solutions for a Variety of Common Exploration, Development and Production Problems Volume 50 ; sepscasd ; >
-      au < testing ; exists ; 2006 ; 978-1-56576-284-8 ; Continental Trace Fossils Volume 51 ; sepscctf ; >
+      au < ready ; exists ; 2006 ; 978-1-56576-284-8 ; Continental Trace Fossils Volume 51 ; sepscctf ; >
       au < exists ; exists ; 2007 ; 978-1-56576-140-7 ; Applied Ichnology Volume 52 ; sepsc052 ; >
       au < exists ; exists ; 2013 ; 978-1-56576-325-8 ; Satellite Imagery, Visualization and Geologicalinterpretation of the Exumas, Great Bahama Bank: An Analog for Carbonate Sand Reservoirs Volume 53 ; sepsc053 ; >
-      au < testing ; exists ; 2013 ; 978-1-56576-326-5 ; Delineating and Quantifying Depositional Facies Patterns of Modern Carbonate Sand Deposits on Great Bahama Bank Volume 54 ; sepsc054 ; >
-      au < testing ; exists ; 2013 ; 978-1-56576-327-2 ; Analogs for Carbonate Deposition in Early Rift Settings Volume 55 ; sepsc055 ; >
+      au < ready ; exists ; 2013 ; 978-1-56576-326-5 ; Delineating and Quantifying Depositional Facies Patterns of Modern Carbonate Sand Deposits on Great Bahama Bank Volume 54 ; sepsc054 ; >
+      au < ready ; exists ; 2013 ; 978-1-56576-327-2 ; Analogs for Carbonate Deposition in Early Rift Settings Volume 55 ; sepsc055 ; >
 
   }
 
@@ -219,7 +219,7 @@
       param[base_url] = http://notes.sepmonline.org/
 
       au < exists ; exists ; 1980 ; 978-1-56576-256-5 ; Carbonate Reservoir Rocks Volume 1 ; sepswcrr ; >
-      au < testing ; exists ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; sepswdwc ; >
+      au < ready ; exists ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; sepswdwc ; >
       au < exists ; exists ; 1982 ; 978-1-56576-258-9 ; Depositional and Diagenetic Spectra of Evaporites Volume 3 ; sepswdds ; >
       au < exists ; exists ; 1983 ; 978-1-56576-259-6 ; Carbonate Buildups Volume 4 ; sepswcbu ; >
       au < exists ; exists ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; sepswcas ; >
@@ -233,9 +233,9 @@
       au < exists ; exists ; 1991 ; 978-1-56576-269-5 ; Mixed Carbonate-Siliciclastic Sequences Volume 15 ; sepswmcs ; >
       au < exists ; exists ; 1992 ; 978-1-56576-097-4 ; Applications of Ichnology to Petroleum Exploration Volume 17 ; sepswapp ; >
       au < exists ; exists ; 1994 ; 978-1-56576-270-1 ; Paleokarst Related Hydrocarbon Reservoirs Volume 18 ; sepswprh ; >
-      au < testing ; exists ; 1994 ; 978-1-56576-271-8 ; Lacustrine Reservoirs and Depositional Systems Volume 19 ; sepswlrd ; >
+      au < ready ; exists ; 1994 ; 978-1-56576-271-8 ; Lacustrine Reservoirs and Depositional Systems Volume 19 ; sepswlrd ; >
       au < exists ; exists ; 1995 ; 978-1-56576-272-5 ; Turbidites and Associated Deep-Water Facies Volume 20 ; sepswtad ; >
-      au < testing ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; sepswpps ; >
+      au < ready ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; sepswpps ; >
       # the PDFs for the next AU is not accessible - goes to log in page
       au < notReady ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; sepsw022 ; >
 
