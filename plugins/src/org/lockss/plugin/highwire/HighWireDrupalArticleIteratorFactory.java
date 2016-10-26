@@ -143,7 +143,7 @@ public class HighWireDrupalArticleIteratorFactory
     builder.addAspect(FIGURES_REPLACEMENT,
         ArticleFiles.ROLE_FIGURES);
     
-    // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
+    // add metadata role from abstract, html or pdf landing page
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
