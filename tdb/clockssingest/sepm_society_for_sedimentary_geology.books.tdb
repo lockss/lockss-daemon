@@ -13,6 +13,8 @@
   
   comment[lockss] = HighWire says that they don't have a method for providing access to books. No ETA for fix. See PD-534, RT6183.
 
+  # These AUs may take a little time to come to poll agreement due to sporadic issues in getting
+  # to citation download page.  Should resolve after a few retries...
   {
 
       title <
@@ -149,7 +151,8 @@
       au < exists ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; sepcosil ; >
       au < testing ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; >
       au < exists ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
-      au < testing ; exists ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
+      # the PDFs for the next AU is not accessible - goes to log in page
+      au < notReady ; exists ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
 
   }
 
@@ -233,7 +236,8 @@
       au < testing ; exists ; 1994 ; 978-1-56576-271-8 ; Lacustrine Reservoirs and Depositional Systems Volume 19 ; sepswlrd ; >
       au < exists ; exists ; 1995 ; 978-1-56576-272-5 ; Turbidites and Associated Deep-Water Facies Volume 20 ; sepswtad ; >
       au < testing ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; sepswpps ; >
-      au < testing ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; sepsw022 ; >
+      # the PDFs for the next AU is not accessible - goes to log in page
+      au < notReady ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; sepsw022 ; >
 
   }
 
