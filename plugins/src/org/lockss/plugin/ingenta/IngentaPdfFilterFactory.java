@@ -277,11 +277,11 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       for (PdfPage pdfPage : pdfDocument.getPages()) {
         PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
         worker.process(pdfTokenStream);
+        List<PdfToken> tokens = pdfTokenStream.getTokens();
         if (worker.getResult()) {
-          List<PdfToken> tokens = pdfTokenStream.getTokens();
           tokens.subList(worker.getBegin(), worker.getEnd() + 1).clear();
-          pdfTokenStream.setTokens(tokens);
         }
+        pdfTokenStream.setTokens(tokens);
       }
     }
     
@@ -360,17 +360,13 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   }
   
   public static void main(String[] args) throws Exception {
-    FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
-    FilterFactory normExtractFiltFact = new NormalizingExtractingPdfFilterFactory();
     String[] files = new String[] {
-        "/tmp/ingenta.i2.v3.pdf",
-        "/tmp/ingenta.i2.v4.pdf",
+        "/tmp/document1.pdf",
+        "/tmp/document2.pdf",
     }; 
     for (String file : files) {
-      IOUtils.copy(normFiltFact.createFilteredInputStream(null, new FileInputStream(file), null),
-                   new FileOutputStream(file + ".out1"));
-      IOUtils.copy(normExtractFiltFact.createFilteredInputStream(null, new FileInputStream(file), null),
-                   new FileOutputStream(file + ".out2"));
+      IOUtils.copy(new PacificAffairsPdfFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
+                   new FileOutputStream(file + ".out"));
     }
   }
   
