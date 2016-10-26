@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>57</string>
+    <string>59</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,9 +43,9 @@
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>&quot;^%sindex\.php/%s/article/view/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
-        <string>&quot;^%sindex\.php/%s/article/download/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
-        <string>&quot;^%s/article/view/[^/]+/[^/]+&quot;, base_url</string>
+        <string>"^%sindex\.php/%s/article/view/%s\.[0-9]+/[0-9]+$", base_url, journal_id, journal_id </string>
+        <string>"^%sindex\.php/%s/article/download/%s\.[0-9]+/[0-9]+$", base_url, journal_id, journal_id </string>
+        <string>"^%s/article/view/[^/]+/[^/]+", base_url</string>
       </list>
   </entry>
   <entry>
@@ -54,6 +54,6 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Ubiquity Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>"Ubiquity Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
 </map>

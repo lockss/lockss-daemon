@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>58</string>
+    <string>59</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -38,7 +38,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
     <map>
       <entry>
         <string>Poll</string>
-        <string>26</string>
+        <string>27</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -145,7 +145,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       <string>2,"/([^.?/]+)/\1/\1/"</string>
       <string>2,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), url_path(base_url), journal_id</string>
-      <string>1,"^https?://%s%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), url_path(base_url), journal_id</string>
       <string>2,"^https?://%s%splugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%splugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url), url_path(base_url)</string>
     </list>
