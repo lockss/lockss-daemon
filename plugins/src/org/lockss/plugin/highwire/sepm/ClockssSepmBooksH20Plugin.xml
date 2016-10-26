@@ -1,0 +1,185 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <!--  NOTE: This is a CLOCKSS only brute force plugin to collect H20 content
+        It is a child plugin but has its own crawl rule block
+        and it's own iterator and extractor
+        This is used to collect SEPM book series - no manifest pages available 
+        Created as child plugin to use java code and share crawl pool -->
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.sepm.ClockssSepmBooksH20Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>SEPM HighWire Press Books Plugin (H20 for CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"SEPM HighWire Press Books Plugin (H20 for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>  
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>120</string>
+  </entry>  
+  <entry>
+    <string>au_start_url</string>
+    <string>"%ssite/misc/archive.xhtml", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent/%s/.*[.](?:body|full)([.]pdf)?$", base_url, volume_name</string>
+    </list>
+  </entry>  
+  <entry>
+  <!--  based off H20 crawl rules as of Oct252016 -->
+    <string>au_crawlrules</string>
+    <list>
+      <!-- Do not crawl these variations -->
+      <string>2,"^https?://%s/.*[.]cover[.]gif$", url_host(base_url)</string>
+      <string>2,"^https?://%s/lookup/(volpage/%s(/[^/]+)?$|suppl/doi)", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/.*\?tab=(metrics|related|responses)", url_host(base_url)</string>
+      <string>2,"^https?://%s/(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/content/%s/.*/href/?$", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/content/%s/[Ss]uppl(ement)?_[0-9]*[.]author-index$", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](rss=)", url_host(base_url), volume_name</string>
+      <!-- Do not crawl any most-read links -->
+      <string>2,"^https?://%s/.*/most-read", url_host(base_url)</string>
+      <string>2,"^https?://%s/highwire/filestream/powerpoint/", url_host(base_url)</string>
+      <!-- otherwise, all content from CDN -->
+      <string>1,"^https?://.+(sepmonline[.]org|cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|[.]glencoesoftware[.]com)[^?]*[.](css|gif|ico|jpe?g|js)"</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]*[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/(content|lookup/volpage)/%s(/|[.])", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/(cgi/content/[^/]+/|content/vol)%s/", url_host(base_url), volume_name</string>
+      <!-- may want to fix this: http://www.pnas.org/content/108/12/4748.full gets http://www.pnas.org/content/107/16/7347/suppl/DCSupplemental -->
+      <string>1,"^https?://%s/[^?]*DC(Supplemental|[0-9])", url_host(base_url)</string>
+      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+      <!--  get RIS metadata, no html meta tags availalbe -->
+      <!-- http://sp.sepmonline.org/citmgr?gcadoi=10.2110/pec.12.102.0195 -->
+      <!-- http://sp.sepmonline.org/citmgr?type=refman&gcadoi=10.2110%2Fpec.12.102.0195 -->
+      <!--  but don't pick up refworks... -->
+      <string>2,"^https?://%s/citmgr[?]type=refworks&amp;gcadoi=", url_host(base_url)</string>
+      <string>1,"^https?://%s/citmgr[?](type=[^&amp;]+&amp;)?gcadoi=", url_host(base_url)</string>
+      <!-- Added for eolj, but allows wrong volume manifest page to be crawled -->
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_[^/._]+_manifest.dtl", url_host(base_url)</string>
+      <!-- TOCs made up of searches -->
+      <string>1,"^https?://%s/search[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", url_host(base_url), volume_name</string>
+     </list>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.cloudfront\.net</string>
+      <string>.+\.glencoesoftware\.com</string>
+      <string>.+\.(googleapis|gstatic)\.com</string>
+      <string>(cdn.*|journals)\.bmj\.com</string>
+      <string>.+\.sepmonline\.org</string>
+    </list>
+  </entry>  
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.sepm.SepmBooksH20ArticleIteratorFactory</string>
+  </entry>  
+<!--  oddly, ris files are sometimes text/plain -->
+  <entry>
+  <string>text/plain_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.highwire.sepm.SepmBooksRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.highwire.sepm.SepmBooksRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry>    
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_permission_checker_factory</string>
+        <org.lockss.util.Default />
+      </entry>    
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>au_mime_rate_limiter_map</string>
+        <map>
+          <entry>
+            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+            <string>1/100</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>triggered_override</string>
+    <map>
+      <entry>
+        <string>plugin_rewrite_html_meta_urls</string>
+        <list>
+          <string>citation_abstract_html_url</string>
+          <string>citation_abstract_url</string>
+          <string>citation_fulltext_html_url</string>
+          <string>citation_pdf_url</string>
+          <string>citation_public_url</string>
+        </list>
+      </entry>
+    </map>
+  </entry>
+</map>
