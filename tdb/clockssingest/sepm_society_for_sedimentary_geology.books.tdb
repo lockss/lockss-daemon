@@ -5,7 +5,9 @@
     info[tester] = 0
   >
 
-
+  # RIS publishers vary - ensure that the provider is consistent
+  provider = SEPM Society for Sedimentary Geology
+  
   plugin = org.lockss.plugin.highwire.sepm.ClockssSepmBooksH20Plugin
   implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
   

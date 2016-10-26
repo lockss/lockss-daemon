@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
@@ -80,7 +81,6 @@ implements FileMetadataExtractorFactory {
     log.debug3("Inside SepmBooks Metadata extractor factory for RIS files");
 
     SepmRisMetadataExtractor sepm_ris = new SepmRisMetadataExtractor();
-    sepm_ris.setRisPattern(EXTENDED_RIS_PATTERN);
 
     sepm_ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
     sepm_ris.addRisTag("TI", MetadataField.FIELD_PUBLICATION_TITLE);
@@ -90,8 +90,13 @@ implements FileMetadataExtractorFactory {
 
   public static class SepmRisMetadataExtractor
   extends RisMetadataExtractor {
-    
-     // override this to do some additional attempts to get valid data before emitting
+
+    // SEPM uses only one space before hyphen after RIS tag
+     public SepmRisMetadataExtractor() {
+      super(EXTENDED_RIS_PATTERN);
+    }
+
+    // override this to do some additional attempts to get valid data before emitting
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
