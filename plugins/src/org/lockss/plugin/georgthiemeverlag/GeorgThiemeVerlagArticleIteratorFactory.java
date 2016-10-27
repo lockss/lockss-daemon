@@ -52,7 +52,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(?:[^/]+/)?ejournals/(?:html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?$\"," +
+      "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?$\"," +
       " base_url";
   
   // various aspects of an article

@@ -1,0 +1,166 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Georg Thieme Verlag Books Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string></string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.70.0</string> <!-- requires overridable PdfDocumentFactory -->
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Georg Thieme Verlag Books Plugin, Base URL %s, DOI %s", base_url, doi</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sproducts/ebooks/book/%s", base_url, doi</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+    <!--  spawned from the journals plugin on October 26, 2016  -->
+      <!-- Do not collect these images, they were not served consistently and images of content -->
+      <string>2,"^https?://%s/media/[^?]+/lookinside/[^?]+\.jpg$", url_host(base_url)</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]+[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
+      <string>1,"^%smedia/.*/supmat/", base_url</string>
+      <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
+      <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
+      <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ebooks/(?:book|issues|sample|recommend|topten|linkout))", base_url</string>
+      <string>1,"^%s(?:[^/]+/)?ebooks/(?:book|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(?:[.]pdf|/BIB)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>doi</key>
+        <displayName>DOI</displayName>
+        <description>DOI</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s(?:[^/]+/)?ebooks/html/10[.][0-9a-z]{4,6}/[^/?&amp;.]+$", base_url</string>
+      <string>"^%s(?:[^/]+/)?ebooks/pdf/10[.][0-9a-z]{4,6}/[^/?&amp;.]+[.]pdf$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHttpResponseHandler</string>
+      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_30S</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>(/js/.+|messages)[.]js$</string>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <string>"(/js/.+|messages)[.]js$", 0</string>
+  </entry>
+</map>
