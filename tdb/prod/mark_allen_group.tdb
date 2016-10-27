@@ -414,7 +414,7 @@
 
     au < manifest ; 2011 ; International Paramedic Practice Volume 1 ; 1 >
     au < manifest ; 2012 ; International Paramedic Practice Volume 2 ; 2 >
-    au < manifest ; 2013 ; International Paramedic Practice Volume 3 ; 3 >
+    au < ready ; 2013 ; International Paramedic Practice Volume 3 ; 3 >
     au < manifest ; 2014 ; International Paramedic Practice Volume 4 ; 4 >
     au < manifest ; 2015 ; International Paramedic Practice Volume 5 ; 5 >
     au < manifest ; 2016 ; International Paramedic Practice Volume 6 ; 6 >
@@ -465,7 +465,7 @@
     comment[base_url] = http://www.journalofhealthvisiting.com/
     param[journal_id] = johv
 
-    au < manifest ; 2013 ; Journal of Health Visiting Volume 1 ; 1 >
+    au < ready ; 2013 ; Journal of Health Visiting Volume 1 ; 1 >
     au < released ; 2014 ; Journal of Health Visiting Volume 2 ; 2 >
     au < released ; 2015 ; Journal of Health Visiting Volume 3 ; 3 >
     au < manifest ; 2016 ; Journal of Health Visiting Volume 4 ; 4 >
@@ -551,7 +551,7 @@
     au < manifest ; 2010 ; Nurse Prescribing Volume 8 ; 8 >
     au < manifest ; 2011 ; Nurse Prescribing Volume 9 ; 9 >
     au < manifest ; 2012 ; Nurse Prescribing Volume 10 ; 10 >
-    au < manifest ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
+    au < ready ; 2013 ; Nurse Prescribing Volume 11 ; 11 >
     au < released ; 2014 ; Nurse Prescribing Volume 12 ; 12 >
     au < released ; 2015 ; Nurse Prescribing Volume 13 ; 13 >
     au < manifest ; 2016 ; Nurse Prescribing Volume 14 ; 14 >
@@ -598,7 +598,7 @@
     au < manifest ; 2010 ; Practice Nursing Volume 21 ; 21 >
     au < manifest ; 2011 ; Practice Nursing Volume 22 ; 22 >
     au < manifest ; 2012 ; Practice Nursing Volume 23 ; 23 >
-    au < manifest ; 2013 ; Practice Nursing Volume 24 ; 24 >
+    au < ready ; 2013 ; Practice Nursing Volume 24 ; 24 >
     au < released ; 2014 ; Practice Nursing Volume 25 ; 25 >
     au < released ; 2015 ; Practice Nursing Volume 26 ; 26 >
     au < manifest ; 2016 ; Practice Nursing Volume 27 ; 27 >

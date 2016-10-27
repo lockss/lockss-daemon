@@ -3490,7 +3490,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; British Yearbook of International Law Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2012 ; British Yearbook of International Law Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2013 ; British Yearbook of International Law Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; British Yearbook of International Law Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; British Yearbook of International Law Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; British Yearbook of International Law Volume 86 ; 86 >
 
   }
@@ -13841,7 +13841,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
+    au < ready ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
     au < expected ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 >
 
     }
@@ -14491,7 +14491,7 @@
     au < released ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 >
     au < released ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 >
     au < manifest ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 >
-    au < manifest ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 >
+    au < ready ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 >
     au < released ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 >
     au < released ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 >
     au < manifest ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 >
@@ -14852,12 +14852,12 @@
     au < exists ; 2006 ; Journal of Neuropathology & Experimental Neurology Volume 65 ; 65 >
     au < exists ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 >
     au < manifest ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 >
-    au < manifest ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 >
+    au < ready ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 >
     au < manifest ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 >
-    au < manifest ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 >
-    au < manifest ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 >
+    au < ready ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 >
+    au < ready ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 >
     au < manifest ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 >
-    au < manifest ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 >
+    au < ready ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 >
     au < released ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 >
     au < manifest ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 >
 
@@ -24153,7 +24153,7 @@
     au < manifest ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 >
     au < manifest ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 >
     au < manifest ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 >
-    au < manifest ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 >
+    au < ready ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 >
     au < manifest ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 >
     au < manifest ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 >
     au < released ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 >
@@ -24430,13 +24430,13 @@
     au < manifest ; 2006 ; Western Historical Quarterly Volume 37 ; 37 >
     au < manifest ; 2007 ; Western Historical Quarterly Volume 38 ; 38 >
     au < manifest ; 2008 ; Western Historical Quarterly Volume 39 ; 39 >
-    au < manifest ; 2009 ; Western Historical Quarterly Volume 40 ; 40 >
-    au < manifest ; 2010 ; Western Historical Quarterly Volume 41 ; 41 >
-    au < manifest ; 2011 ; Western Historical Quarterly Volume 42 ; 42 >
-    au < manifest ; 2012 ; Western Historical Quarterly Volume 43 ; 43 >
-    au < manifest ; 2013 ; Western Historical Quarterly Volume 44 ; 44 >
-    au < manifest ; 2014 ; Western Historical Quarterly Volume 45 ; 45 >
-    au < manifest ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
+    au < ready ; 2009 ; Western Historical Quarterly Volume 40 ; 40 >
+    au < ready ; 2010 ; Western Historical Quarterly Volume 41 ; 41 >
+    au < ready ; 2011 ; Western Historical Quarterly Volume 42 ; 42 >
+    au < ready ; 2012 ; Western Historical Quarterly Volume 43 ; 43 >
+    au < ready ; 2013 ; Western Historical Quarterly Volume 44 ; 44 >
+    au < ready ; 2014 ; Western Historical Quarterly Volume 45 ; 45 >
+    au < ready ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
     au < manifest ; 2016 ; Western Historical Quarterly Volume 47 ; 47 >
     
   }
@@ -24670,7 +24670,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Yearbook of International Environmental Law Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Yearbook of International Environmental Law Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Yearbook of International Environmental Law Volume 27 ; 27 >
 
@@ -25505,7 +25505,7 @@
 
       au < released ; 2013 ; National Science Review Volume 1 ; 1 >
       au < released ; 2014 ; National Science Review Volume 2 ; 2 >
-      au < manifest ; 2015 ; National Science Review Volume 3 ; 3 >
+      au < ready ; 2015 ; National Science Review Volume 3 ; 3 >
       au < expected ; 2016 ; National Science Review Volume 4 ; 4 >
 
   }
