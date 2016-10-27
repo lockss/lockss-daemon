@@ -275,7 +275,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents !~ "No issues avail")) {
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
           $vol_title = $1;
           if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
