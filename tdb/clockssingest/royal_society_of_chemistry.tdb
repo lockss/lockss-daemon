@@ -676,9 +676,9 @@
       param[journal_code] = ac
 
       au < exists ; exists ; 1996 ; Analytical Communications Volume 33 ; 33 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; >
+      au < manifest ; exists ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 ; >
 
   }
 
@@ -947,7 +947,7 @@
       au < exists ; exists ; 1994 ; Contemporary Organic Synthesis Volume 1 ; 1 ; 1994 ; >
       au < exists ; exists ; 1995 ; Contemporary Organic Synthesis Volume 2 ; 2 ; 1995 ; >
       au < exists ; exists ; 1996 ; Contemporary Organic Synthesis Volume 3 ; 3 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 ; >
+      au < manifest ; exists ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 ; >
 
   }
 
