@@ -2015,12 +2015,12 @@
       comment[years] = Published 1998-2003
       param[journal_code] = qu
 
-      au < exists ; exists ; 1998 ; PhysChemComm Volume 1998 ; 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; PhysChemComm Volume 1999 ; 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; PhysChemComm Volume 2000 ; 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; PhysChemComm Volume 2001 ; 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; PhysChemComm Volume 2002 ; 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; PhysChemComm Volume 2003 ; 2003 ; 2003 ; >
+      au < exists ; exists ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 ; >
+      au < exists ; exists ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 ; >
+      au < exists ; exists ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 ; >
+      au < exists ; exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 ; >
+      au < exists ; exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 ; >
+      au < exists ; exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 ; >
 
   }
 
@@ -2296,12 +2296,12 @@
       comment[years] = Published 2011-2016
       param[journal_code] = ra
 
-      au < exists ; exists ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; >
-      au < exists ; exists ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; >
-      au < exists ; exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; >
-      au < exists ; exists ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; >
-      au < exists ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; >
-      au < expected ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; >
+      au < manifest ; exists ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; >
 
   }
 
@@ -2317,13 +2317,13 @@
       comment[years] = Published 1998-2004
       param[journal_code] = rc
 
-      au < exists ; exists ; 1998 ; Russian Chemical Reviews Volume 1998 ; 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Russian Chemical Reviews Volume 1999 ; 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; Russian Chemical Reviews Volume 2000 ; 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Russian Chemical Reviews Volume 2001 ; 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; Russian Chemical Reviews Volume 2002 ; 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Russian Chemical Reviews Volume 2003 ; 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; Russian Chemical Reviews Volume 2004 ; 2004 ; 2004 ; >
+      au < exists ; exists ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 ; >
 
   }
 
