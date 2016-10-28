@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,20 +46,26 @@ public class AAASHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFac
   
   private static final Logger log = Logger.getLogger(AAASHtmlCrawlFilterFactory.class);
   
-  protected static NodeFilter[] filters = new NodeFilter[] {
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
-  };
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    
+    String base_url = au.getConfiguration().get("base_url");
+    String volume = au.getConfiguration().get("volume_name");
+    
+    String regexStr = base_url + "content/(?!" + volume + "/)";
+    
+    NodeFilter[] filters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", regexStr),
+      };
     
     HtmlFilterInputStream filtered =
         (HtmlFilterInputStream) super.createFilteredInputStream(au, in, encoding, filters);
