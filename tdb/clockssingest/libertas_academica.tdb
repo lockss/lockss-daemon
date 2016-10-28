@@ -159,7 +159,7 @@
     au < finished ; finished ; 2012 ; Biomarker Insights Volume 7 ; 7 ; 2012 ; >
     au < finished ; finished ; 2013 ; Biomarker Insights Volume 8 ; 8 ; 2013 ; >
     au < finished ; finished ; 2014 ; Biomarker Insights Volume 9 ; 9 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Biomarker Insights Volume 10 ; 10 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Biomarker Insights Volume 10 ; 10 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biomarker Insights Volume 11 ; 11 ; 2016 ; >
 
   }
@@ -1063,7 +1063,7 @@
     au < finished ; finished ; 2012 ; Health Services Insights Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Health Services Insights Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Health Services Insights Volume 7 ; 7 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Health Services Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Health Services Insights Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Health Services Insights Volume 9 ; 9 ; 2016 ; >
 
   }
@@ -1357,7 +1357,7 @@
     au < finished ; finished ; 2012 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2015 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Journal of Genomes and Exomes Volume 5 ; 5 ; 2016 ; >
 
   }
@@ -1681,7 +1681,7 @@
     au < manifest ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; 2008 ; >
     au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 2 ; 2 ; 2010 ; >
     au < finished ; finished ; 2014 ; Rehabilitation Process and Outcome Volume 3 ; 3 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Rehabilitation Process and Outcome Volume 4 ; 4 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Rehabilitation Process and Outcome Volume 5 ; 5 ; 2016 ; >
 
   }

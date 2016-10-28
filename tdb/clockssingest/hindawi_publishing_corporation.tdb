@@ -181,7 +181,7 @@
 
     param[journal_id] = aandrol
 
-    au < finished ; frozen ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Advances in Andrology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2063,7 +2063,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3273,7 +3273,7 @@
     au < manifest ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Hepatitis Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -5533,7 +5533,7 @@
     au < manifest ; exists ; 2011 ; Journal of Botany Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Botany Volume 2016 ; 2016 ; 2016 ; >
     
@@ -6481,7 +6481,7 @@
     param[journal_id] = jim
     
     au < manifest ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6514,7 +6514,7 @@
     param[journal_id] = insects
     
     au < manifest ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6588,7 +6588,7 @@
     param[journal_id] = jmath
     
     au < manifest ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6718,7 +6718,7 @@
     param[journal_id] = jns
     
     au < manifest ; exists ; 2013 ; Journal of Nanoscience Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Nanoscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Nanoscience Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Nanoscience Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6976,7 +6976,7 @@
 
     param[journal_id] = joi
     
-    au < finished ; crawling ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Oral Implants Volume 2016 ; 2016 ; 2016 ; >
 
@@ -7035,7 +7035,7 @@
     au < manifest ; exists ; 2011 ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Journal of Parasitology Research Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Parasitology Research Volume 2016 ; 2016 ; 2016 ; >
 

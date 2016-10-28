@@ -1986,7 +1986,7 @@
     au < manifest ; exists ; 2010 ; 33 ; Anales del Sistema Sanitario de Navarra Volume 33 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 34 ; Anales del Sistema Sanitario de Navarra Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Anales del Sistema Sanitario de Navarra Volume 35 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 36 ; Anales del Sistema Sanitario de Navarra Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 36 ; Anales del Sistema Sanitario de Navarra Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 37 ; Anales del Sistema Sanitario de Navarra Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 38 ; Anales del Sistema Sanitario de Navarra Volume 38 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -7005,7 +7005,7 @@
     param[base_url] = http://scielo.sld.cu/
     param[journal_issn] = 1560-4381
 
-    au < finished ; crawling ; 2013 ; 17 ; Correo Científico Médico Volume 17 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 17 ; Correo Científico Médico Volume 17 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 18 ; Correo Científico Médico Volume 18 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 19 ; Correo Científico Médico Volume 19 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -13142,7 +13142,7 @@
     param[journal_issn] = 2007-5057
 
     au < manifest ; exists ; 2012 ; 1 ; Investigación en educación médica Volume 1 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 2 ; Investigación en educación médica Volume 2 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2 ; Investigación en educación médica Volume 2 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 3 ; Investigación en educación médica Volume 3 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 4 ; Investigación en educación médica Volume 4 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -16041,7 +16041,7 @@
 
     au < manifest ; exists ; 2011 ; 19 ; Nauplius Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Nauplius Volume 20 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 21 ; Nauplius Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 21 ; Nauplius Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 22 ; Nauplius Volume 22 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 23 ; Nauplius Volume 23 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -16367,7 +16367,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Nucleus Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Nucleus Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Nucleus Volume 2012 ; 2012 ; >
-    au < finished ; frozen ; 2013 ; 2013 ; Nucleus Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; Nucleus Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Nucleus Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Nucleus Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -17633,7 +17633,7 @@
     au < manifest ; exists ; 2010 ; 79 ; Phyton (Buenos Aires) Volume 79 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 80 ; Phyton (Buenos Aires) Volume 80 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 81 ; Phyton (Buenos Aires) Volume 81 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 82 ; Phyton (Buenos Aires) Volume 82 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 82 ; Phyton (Buenos Aires) Volume 82 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 83 ; Phyton (Buenos Aires) Volume 83 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
@@ -31365,7 +31365,7 @@
     au < manifest ; exists ; 2010 ; 14-15 ; Tempo Volume 14-15 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 16-17 ; Tempo Volume 16-17 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 18 ; Tempo Volume 18 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 19 ; Tempo Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 19 ; Tempo Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 20 ; Tempo Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Tempo Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
