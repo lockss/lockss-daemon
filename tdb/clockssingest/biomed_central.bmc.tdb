@@ -1605,28 +1605,6 @@
 
     {
       title <
-        name = BMC Proceedings ;
-        eissn = 1753-6561
-      >
-
-      param[journal_issn] = 1753-6561
-      comment[journal_code] = bmcproc
-
-      au < doNotProcess ; exists ; 2006 ; BMC Proceedings Volume 1 ; 1 ; >
-      au < doNotProcess ; exists ; 2007 ; BMC Proceedings Volume 2 ; 2 ; >
-      au < doNotProcess ; exists ; 2008 ; BMC Proceedings Volume 3 ; 3 ; >
-      au < doNotProcess ; exists ; 2009 ; BMC Proceedings Volume 4 ; 4 ; >
-      au < doNotProcess ; exists ; 2010 ; BMC Proceedings Volume 5 ; 5 ; >
-      au < doNotProcess ; exists ; 2011 ; BMC Proceedings Volume 6 ; 6 ; >
-      au < doNotProcess ; exists ; 2012 ; BMC Proceedings Volume 7 ; 7 ; >
-      au < doNotProcess ; exists ; 2013 ; BMC Proceedings Volume 8 ; 8 ; >
-      au < doNotProcess ; exists ; 2014 ; BMC Proceedings Volume 9 ; 9 ; >
-      au < doNotProcess ; exists ; 2015 ; BMC Proceedings Volume 10 ; 10 ; >
-
-    }
-
-    {
-      title <
         name = BMC Psychiatry ;
         eissn = 1471-244X ;
         issnl = 1471-244X

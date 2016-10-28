@@ -5185,22 +5185,6 @@
     {
 
       title <
-        name = Chinese Journal of Cancer ;
-        issn = 1000-467X ;
-        eissn = 1944-446X
-      >
-
-      param[base_url] = http://www.cjcjournal.com/
-      param[journal_issn] = 1944-446X
-      comment[platform] = BioMedCentral
-
-      au < doNotProcess ; 2015 ; Chinese Journal of Cancer Volume 34 ; 34 >
-
-    }
-
-    {
-
-      title <
         name = Climate Change Responses ;
         eissn = 2053-7565
       >

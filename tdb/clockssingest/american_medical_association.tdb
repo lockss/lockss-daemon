@@ -109,13 +109,18 @@
   {
 
     title <
-      name = JAMA Oncology
+      name = JAMA Oncology ;
+      issn = 2374-2437 ;
+      eissn = 2374-2445
     >
 
-    # New journal, hasn't published any content yet
-    # See http://oncology.jamanetwork.com/
     # Hypothetical resource_id: 174
+    param[resource_id] = 174
+    param[base_url] = http://oncology.jamanetwork.com/
     
+    au < exists ; exists ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Oncology Volume 2 ; 2016 ; >
+
   }
 
   {
