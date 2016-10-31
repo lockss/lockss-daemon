@@ -7081,7 +7081,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; CS Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; CS Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; CS Volume 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; CS Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; CS Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; CS Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; CS Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
@@ -8204,7 +8204,7 @@
     au < manifest ; exists ; 2010 ; 11 ; Discusiones Filosóficas Volume 11 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 12 ; Discusiones Filosóficas Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Discusiones Filosóficas Volume 13 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 14 ; Discusiones Filosóficas Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 14 ; Discusiones Filosóficas Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 15 ; Discusiones Filosóficas Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
@@ -8989,7 +8989,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Educar em Revista Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Educar em Revista Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Educar em Revista Volume 2012 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; Educar em Revista Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Educar em Revista Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Educar em Revista Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Educar em Revista Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -12109,7 +12109,7 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 2175-8026
 
-    au < finished ; crawling ; 2013 ; 2013 ; Ilha do Desterro Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Ilha do Desterro Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Ilha do Desterro Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 68 ; Ilha do Desterro Volume 68 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -12858,7 +12858,7 @@
     au < manifest ; exists ; 2010 ; 36 ; International braz j urol Volume 36 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 37 ; International braz j urol Volume 37 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 38 ; International braz j urol Volume 38 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 39 ; International braz j urol Volume 39 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 39 ; International braz j urol Volume 39 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 40 ; International braz j urol Volume 40 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 41 ; International braz j urol Volume 41 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -17355,7 +17355,7 @@
     au < manifest ; exists ; 2010 ; 15 ; Perspectivas em Ciência da Informação Volume 15 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 16 ; Perspectivas em Ciência da Informação Volume 16 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 17 ; Perspectivas em Ciência da Informação Volume 17 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 18 ; Perspectivas em Ciência da Informação Volume 18 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 18 ; Perspectivas em Ciência da Informação Volume 18 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 19 ; Perspectivas em Ciência da Informação Volume 19 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 20 ; Perspectivas em Ciência da Informação Volume 20 ; 2015 ; reingest2.clockss.org:8085 >
 
@@ -18191,7 +18191,7 @@
     au < manifest ; exists ; 2010 ; 12 ; Profile Issues in Teachers` Professional Development Volume 12 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 13 ; Profile Issues in Teachers` Professional Development Volume 13 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 14 ; Profile Issues in Teachers` Professional Development Volume 14 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 15 ; Profile Issues in Teachers` Professional Development Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 15 ; Profile Issues in Teachers` Professional Development Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 16 ; Profile Issues in Teachers` Professional Development Volume 16 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 17 ; Profile Issues in Teachers` Professional Development Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -27090,7 +27090,7 @@
     au < manifest ; exists ; 2010 ; 3 ; Revista IBRACON de Estruturas e Materiais Volume 3 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 4 ; Revista IBRACON de Estruturas e Materiais Volume 4 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 5 ; Revista IBRACON de Estruturas e Materiais Volume 5 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 6 ; Revista IBRACON de Estruturas e Materiais Volume 6 ; 2013 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 6 ; Revista IBRACON de Estruturas e Materiais Volume 6 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 7 ; Revista IBRACON de Estruturas e Materiais Volume 7 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 8 ; Revista IBRACON de Estruturas e Materiais Volume 8 ; 2015 ; reingest2.clockss.org:8085 >
 

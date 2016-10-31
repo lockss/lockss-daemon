@@ -1591,7 +1591,7 @@
     au < frozen ; exists ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 ; >
     au < frozen ; exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ; >
     au < frozen ; exists ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ; >
-    au < finished ; crawling ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ; >
 
   }
@@ -2632,7 +2632,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Brain Volume 135 ; 135 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Brain Volume 136 ; 136 ; >
     au < finished ; crawling ; 2014 ; Brain Volume 137 ; 137 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Brain Volume 138 ; 138 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Brain Volume 138 ; 138 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Brain Volume 139 ; 139 ; >
 
     }
@@ -4053,10 +4053,10 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
     au < finished ; finished ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
     au < finished ; crawling ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Cardiovascular Research Volume 109 ; 109 ; >
@@ -4964,7 +4964,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     #Change name from Literary and Linguistic Computing
 
-    au < finished ; crawling ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
 
   }
@@ -6157,7 +6157,7 @@
     au < finished ; finished ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
     au < frozen ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
     au < finished ; crawling ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; reingest1.clockss.org:8082 >
@@ -6677,7 +6677,7 @@
     au < finished ; finished ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
     au < finished ; finished ; 2013 ; European Sociological Review Volume 29 ; 29 ; >
     au < finished ; finished ; 2014 ; European Sociological Review Volume 30 ; 30 ; >
-    au < finished ; crawling ; 2015 ; European Sociological Review Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; European Sociological Review Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; European Sociological Review Volume 32 ; 32 ; >
 
     }
@@ -7284,7 +7284,7 @@
     au < finished ; finished ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ; >
 
@@ -7794,7 +7794,7 @@
     au < finished ; frozen ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
     au < frozen ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
 
   }
@@ -8102,7 +8102,7 @@
     au < finished ; finished ; 2012 ; German History Volume 30 ; 30 ; >
     au < finished ; finished ; 2013 ; German History Volume 31 ; 31 ; >
     au < finished ; finished ; 2014 ; German History Volume 32 ; 32 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; German History Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; German History Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; German History Volume 34 ; 34 ; >
 
     }
@@ -9635,7 +9635,7 @@
     au < finished ; frozen ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 15 ; 15 ; >
     au < frozen ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16 ; 16 ; >
     au < frozen ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 ; >
-    au < finished ; crawling ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20 ; 20 ; >
     au < finished ; finished ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 21 ; 21 ; reingest2.clockss.org:8085 >
@@ -9935,7 +9935,7 @@
     au < finished ; finished ; 2011 ; International Journal of Constitutional Law Volume 9 ; 9 ; >
     au < finished ; finished ; 2012 ; International Journal of Constitutional Law Volume 10 ; 10 ; >
     au < finished ; finished ; 2013 ; International Journal of Constitutional Law Volume 11 ; 11 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Constitutional Law Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Constitutional Law Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; International Journal of Constitutional Law Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; International Journal of Constitutional Law Volume 14 ; 14 ; >
 
@@ -12005,7 +12005,7 @@
     au < frozen ; exists ; 2011 ; Journal of Crohn's and Colitis Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; Journal of Crohn's and Colitis Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Crohn's and Colitis Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; Journal of Crohn's and Colitis Volume 10 ; 10 ; >
 
@@ -12385,7 +12385,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
     au < finished ; finished ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
-    au < finished ; frozen ; 2011 ; Journal of Environmental Law Volume 23 ; 23 ; >
+    au < finished ; finished ; 2011 ; Journal of Environmental Law Volume 23 ; 23 ; >
     au < finished ; finished ; 2012 ; Journal of Environmental Law Volume 24 ; 24 ; >
     au < finished ; finished ; 2013 ; Journal of Environmental Law Volume 25 ; 25 ; >
     au < finished ; crawling ; 2014 ; Journal of Environmental Law Volume 26 ; 26 ; reingest3.clockss.org:8083 >
@@ -13966,7 +13966,7 @@
     au < finished ; finished ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
-    au < finished ; crawling ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
     au < manifest ; exists ; 2016 ; Journal of Mammalogy Volume 97 ; 97 ; >
 
@@ -14630,12 +14630,12 @@
     au < manifest ; exists ; 2007 ; Journal of Plankton Research Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
-    au < finished ; frozen ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
+    au < finished ; finished ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
     au < finished ; finished ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
     au < finished ; finished ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
     au < finished ; finished ; 2013 ; Journal of Plankton Research Volume 35 ; 35 ; >
     au < finished ; finished ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
-    au < finished ; crawling ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; Journal of Plankton Research Volume 38 ; 38 ; >
 
     }
@@ -15443,7 +15443,7 @@
     param[base_url] = http://jue.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < finished ; crawling ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; >
 
   }
@@ -17157,7 +17157,7 @@
     au < finished ; crawling ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 442 ; 442 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 443 ; 443 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 444 ; 444 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 445 ; 445 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 445 ; 445 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 446 ; 446 ; >
     au < finished ; crawling ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 447 ; 447 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 448 ; 448 ; >
@@ -20208,7 +20208,7 @@
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics (PTP) Volume 125 ; 125 ; >
     au < frozen ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
-    au < finished ; frozen ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
+    au < finished ; finished ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
 
     }
 
@@ -21856,7 +21856,7 @@
     au < frozen ; exists ; 2012 ; Rheumatology Volume 51 ; 51 ; >
     au < frozen ; exists ; 2013 ; Rheumatology Volume 52 ; 52 ; >
     au < finished ; crawling ; 2014 ; Rheumatology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Rheumatology Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Rheumatology Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Rheumatology Volume 55 ; 55 ; >
 
     }
@@ -22270,7 +22270,7 @@
     au < frozen ; down ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
     au < finished ; crawling ; 2013 ; Social History of Medicine Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Social History of Medicine Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Social History of Medicine Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Social History of Medicine Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2016 ; Social History of Medicine Volume 29 ; 29 ; >
 
     }
@@ -22752,7 +22752,7 @@
     au < finished ; finished ; 2012 ; Statute Law Review Volume 33 ; 33 ; >
     au < frozen ; exists ; 2013 ; Statute Law Review Volume 34 ; 34 ; >
     au < finished ; finished ; 2014 ; Statute Law Review Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2015 ; Statute Law Review Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Statute Law Review Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2016 ; Statute Law Review Volume 37 ; 37 ; >
 
     }
@@ -24734,7 +24734,7 @@
     au < frozen ; exists ; 2012 ; Poultry Science Volume 91 ; 91 ; >
     au < finished ; crawling ; 2013 ; Poultry Science Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Poultry Science Volume 93 ; 93 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Poultry Science Volume 94 ; 94 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Poultry Science Volume 94 ; 94 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Poultry Science Volume 95 ; 95 ; >
 
   }
@@ -25097,7 +25097,7 @@
       au < crawling ; exists ; 2011 ; Pain Medicine Volume 12 ; 12 ; >
       au < finished ; finished ; 2012 ; Pain Medicine Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2014 ; Pain Medicine Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Pain Medicine Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Pain Medicine Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
 
