@@ -23,7 +23,7 @@
 
     au < manifest ; exists ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 ; >
     au < frozen ; exists ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
 
   }
@@ -130,7 +130,7 @@
     au < manifest ; exists ; 2012 ; Advances in Dual Diagnosis Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Advances in Dual Diagnosis Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
 
   }
@@ -4193,7 +4193,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Managing Projects in Business Volume 6 ; 6 ; >
     au < frozen ; exists ; 2014 ; International Journal of Managing Projects in Business Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Managing Projects in Business Volume 9 ; 9 ; >
 
   }
@@ -5509,7 +5509,7 @@
     au < manifest ; exists ; 2012 ; Journal of Business Strategy Volume 33 ; 33 ; >
     au < manifest ; exists ; 2013 ; Journal of Business Strategy Volume 34 ; 34 ; >
     au < frozen ; exists ; 2014 ; Journal of Business Strategy Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2015 ; Journal of Business Strategy Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2015 ; Journal of Business Strategy Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Business Strategy Volume 37 ; 37 ; >
 
   }
@@ -6886,7 +6886,7 @@
     au < manifest ; exists ; 2012 ; Journal of Management Development Volume 31 ; 31 ; >
     au < manifest ; exists ; 2013 ; Journal of Management Development Volume 32 ; 32 ; >
     au < frozen ; exists ; 2014 ; Journal of Management Development Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2015 ; Journal of Management Development Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2015 ; Journal of Management Development Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Management Development Volume 35 ; 35 ; >
 
   }
@@ -7469,7 +7469,7 @@
     au < manifest ; exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 ; >
     au < manifest ; exists ; 2013 ; Journal of Research in Marketing and Entrepreneurship Volume 15 ; 15 ; >
     au < frozen ; exists ; 2014 ; Journal of Research in Marketing and Entrepreneurship Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2015 ; Journal of Research in Marketing and Entrepreneurship Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2015 ; Journal of Research in Marketing and Entrepreneurship Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Research in Marketing and Entrepreneurship Volume 18 ; 18 ; >
 
   }
@@ -7662,7 +7662,7 @@
     au < manifest ; exists ; 2012 ; Journal of Strategy and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Journal of Strategy and Management Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Journal of Strategy and Management Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Strategy and Management Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2015 ; Journal of Strategy and Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Strategy and Management Volume 9 ; 9 ; >
 
   }
@@ -10623,7 +10623,7 @@
     au < manifest ; exists ; 2012 ; Supply Chain Management: An International Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 2013 ; Supply Chain Management: An International Journal Volume 18 ; 18 ; >
     au < frozen ; exists ; 2014 ; Supply Chain Management: An International Journal Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Supply Chain Management: An International Journal Volume 21 ; 21 ; >
 
   }
