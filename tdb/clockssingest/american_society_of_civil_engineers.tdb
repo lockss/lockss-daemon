@@ -115,7 +115,7 @@
     au < crawling ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Aerospace Engineering Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; Journal of Aerospace Engineering Volume 27 ; 27 ; >
-    au < finished ; manifest ; 2015 ; Journal of Aerospace Engineering Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Journal of Aerospace Engineering Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Aerospace Engineering Volume 29 ; 29 ; >
 
   }
@@ -153,7 +153,7 @@
       au < manifest ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 ; >
       au < crawling ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 18 ; >
-      au < finished ; manifest ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; Journal of Bridge Engineering Volume 20 ; 20 ; >
       au < crawling ; exists ; 2016 ; Journal of Bridge Engineering Volume 21 ; 21 ; >
     
@@ -186,8 +186,8 @@
     au < manifest ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; Journal of Composites for Construction Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Journal of Composites for Construction Volume 17 ; 17 ; >
-    au < finished ; manifest ; 2014 ; Journal of Composites for Construction Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Journal of Composites for Construction Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Journal of Composites for Construction Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Journal of Composites for Construction Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Composites for Construction Volume 20 ; 20 ; >
 
   }
@@ -277,7 +277,7 @@
     au < crawling ; exists ; 2012 ; Journal of Construction Engineering and Management Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Construction Engineering and Management Volume 139 ; 139 ; >
     au < frozen ; exists ; 2014 ; Journal of Construction Engineering and Management Volume 140 ; 140 ; >
-    au < finished ; manifest ; 2015 ; Journal of Construction Engineering and Management Volume 141 ; 141 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Journal of Construction Engineering and Management Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Construction Engineering and Management Volume 142 ; 142 ; >
 
   }
@@ -503,7 +503,7 @@
     au < manifest ; exists ; 2011 ; Journal of Energy Engineering Volume 137 ; 137 ; >
     au < finished ; finished ; 2012 ; Journal of Energy Engineering Volume 138 ; 138 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Journal of Energy Engineering Volume 139 ; 139 ; >
-    au < finished ; manifest ; 2014 ; Journal of Energy Engineering Volume 140 ; 140 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Journal of Energy Engineering Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Energy Engineering Volume 141 ; 141 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Energy Engineering Volume 142 ; 142 ; >
 
@@ -940,7 +940,7 @@
     au < crawling ; exists ; 2012 ; Journal of Pipeline Systems Engineering and Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Pipeline Systems Engineering and Practice Volume 4 ; 4 ; >
     au < frozen ; exists ; 2014 ; Journal of Pipeline Systems Engineering and Practice Volume 5 ; 5 ; >
-    au < finished ; manifest ; 2015 ; Journal of Pipeline Systems Engineering and Practice Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Pipeline Systems Engineering and Practice Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Pipeline Systems Engineering and Practice Volume 7 ; 7 ; >
 
   }
@@ -1034,7 +1034,7 @@
     au < crawling ; exists ; 2012 ; Journal of Surveying Engineering Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Surveying Engineering Volume 139 ; 139 ; >
     au < finished ; finished ; 2014 ; Journal of Surveying Engineering Volume 140 ; 140 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Journal of Surveying Engineering Volume 141 ; 141 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Journal of Surveying Engineering Volume 141 ; 141 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Surveying Engineering Volume 142 ; 142 ; >
 
   }
