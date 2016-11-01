@@ -125,7 +125,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     props.setProperty(VOLUME_NAME_KEY, "2010");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Georg Thieme Verlag Plugin (CLOCKSS), Base URL http://www.example." +
+    assertEquals("Georg Thieme Verlag Journals Plugin (CLOCKSS), Base URL http://www.example." +
                  "com/, Journal ID 10.1055/s-00000002, Volume 2010", au.getName());
   }
   
