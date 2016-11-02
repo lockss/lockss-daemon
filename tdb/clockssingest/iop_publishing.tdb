@@ -159,38 +159,38 @@
 
   }
   
-  {
-
-    title <
-      name = British Journal of Applied Physics ;
-      issn = 0508-3443 ;
-      issnl = 0508-3443
-    >
-
-    param[journal_issn] = 0508-3443
-    comment[param] = print issn preferred
-
-    au < doNotProcess ; doNotProcess ; 1950 ; British Journal of Applied Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1951 ; British Journal of Applied Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1952 ; British Journal of Applied Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1953 ; British Journal of Applied Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1954 ; British Journal of Applied Physics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1955 ; British Journal of Applied Physics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1956 ; British Journal of Applied Physics Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1957 ; British Journal of Applied Physics Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1958 ; British Journal of Applied Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1959 ; British Journal of Applied Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1960 ; British Journal of Applied Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; British Journal of Applied Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1962 ; British Journal of Applied Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1963 ; British Journal of Applied Physics Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1964 ; British Journal of Applied Physics Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1965 ; British Journal of Applied Physics Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; British Journal of Applied Physics Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1967 ; British Journal of Applied Physics Volume 18 ; 18 ; > 
-
-
-  }
+#  {
+#
+#    title <
+#      name = British Journal of Applied Physics ;
+#      issn = 0508-3443 ;
+#      issnl = 0508-3443
+#    >
+#
+#    param[journal_issn] = 0508-3443
+#    comment[param] = print issn preferred
+#
+#    au < doNotProcess ; doNotProcess ; 1950 ; British Journal of Applied Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1951 ; British Journal of Applied Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1952 ; British Journal of Applied Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1953 ; British Journal of Applied Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1954 ; British Journal of Applied Physics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1955 ; British Journal of Applied Physics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1956 ; British Journal of Applied Physics Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1957 ; British Journal of Applied Physics Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1958 ; British Journal of Applied Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1959 ; British Journal of Applied Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1960 ; British Journal of Applied Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; British Journal of Applied Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1962 ; British Journal of Applied Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1963 ; British Journal of Applied Physics Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1964 ; British Journal of Applied Physics Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1965 ; British Journal of Applied Physics Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; British Journal of Applied Physics Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1967 ; British Journal of Applied Physics Volume 18 ; 18 ; > 
+#
+#
+#  }
 
   {
 
@@ -402,32 +402,32 @@
 
   }
 
-  {
-
-    title <
-      name = Clinical Physics and Physiological Measurement ;
-      issn = 0143-0815 ;
-      issnl = 0143-0815
-    >
-
-    param[journal_issn] = 0143-0815
-    comment[continued_by] = 0967-3334
-
-    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Physics and Physiological Measurement Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Physics and Physiological Measurement Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Physics and Physiological Measurement Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Physics and Physiological Measurement Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Physics and Physiological Measurement Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Physics and Physiological Measurement Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Physics and Physiological Measurement Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Physics and Physiological Measurement Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Physics and Physiological Measurement Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Physics and Physiological Measurement Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Physics and Physiological Measurement Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Physics and Physiological Measurement Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Physics and Physiological Measurement Volume 13 ; 13 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Clinical Physics and Physiological Measurement ;
+#      issn = 0143-0815 ;
+#      issnl = 0143-0815
+#    >
+#
+#    param[journal_issn] = 0143-0815
+#    comment[continued_by] = 0967-3334
+#
+#    au < doNotProcess ; doNotProcess ; 1980 ; Clinical Physics and Physiological Measurement Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Clinical Physics and Physiological Measurement Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Clinical Physics and Physiological Measurement Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Clinical Physics and Physiological Measurement Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Clinical Physics and Physiological Measurement Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Clinical Physics and Physiological Measurement Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Clinical Physics and Physiological Measurement Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Clinical Physics and Physiological Measurement Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Clinical Physics and Physiological Measurement Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1989 ; Clinical Physics and Physiological Measurement Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1990 ; Clinical Physics and Physiological Measurement Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1991 ; Clinical Physics and Physiological Measurement Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1992 ; Clinical Physics and Physiological Measurement Volume 13 ; 13 ; > 
+#
+#  }
   
   {
 
@@ -487,26 +487,26 @@
 
   }
 
-  {
-
-    title <
-      name = Distributed Systems Engineering ;
-      issn = 0967-1846 ;
-      eissn = 1361-6390 ;
-      issnl = 0967-1846
-    >
-
-    param[journal_issn] = 0967-1846
-    comment[param] = print issn preferred
-
-    au < doNotProcess ; doNotProcess ; 1994 ; Distributed Systems Engineering Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1995 ; Distributed Systems Engineering Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1996 ; Distributed Systems Engineering Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1997 ; Distributed Systems Engineering Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1998 ; Distributed Systems Engineering Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1999 ; Distributed Systems Engineering Volume 6 ; 6 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Distributed Systems Engineering ;
+#      issn = 0967-1846 ;
+#      eissn = 1361-6390 ;
+#      issnl = 0967-1846
+#    >
+#
+#    param[journal_issn] = 0967-1846
+#    comment[param] = print issn preferred
+#
+#    au < doNotProcess ; doNotProcess ; 1994 ; Distributed Systems Engineering Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1995 ; Distributed Systems Engineering Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1996 ; Distributed Systems Engineering Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1997 ; Distributed Systems Engineering Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1998 ; Distributed Systems Engineering Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1999 ; Distributed Systems Engineering Volume 6 ; 6 ; > 
+#
+#  }
 
   {
 
@@ -1239,27 +1239,27 @@
 
   }
   
-  {
-
-    title <
-      name = Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research ;
-      issn = 0368-3281 ;
-      issnl = 0368-3281
-    >
-
-    param[journal_issn] = 0368-3281
-    comment[continued_by] = 0032-1028
-
-    au < doNotProcess ; doNotProcess ; 1959-1960 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1962 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1963 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1964 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1965 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 8 ; 8 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research ;
+#      issn = 0368-3281 ;
+#      issnl = 0368-3281
+#    >
+#
+#    param[journal_issn] = 0368-3281
+#    comment[continued_by] = 0032-1028
+#
+#    au < doNotProcess ; doNotProcess ; 1959-1960 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1962 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1963 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1964 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1965 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research Volume 8 ; 8 ; > 
+#
+#  }
 
   {
 
@@ -1283,48 +1283,48 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of Optics (1970-1998) ;
-      issn = 0150-536X ;
-      issnl = 0150-536X
-    >
-
-    param[journal_issn] = 0150-536X
-    comment[continues] = 0335-7368
-
-    au < exists ; exists ; 1970 ; Journal of Optics (1970-1998) Volume 1 ; 1 ; > 
-    au < exists ; exists ; 1971 ; Journal of Optics (1970-1998) Volume 2 ; 2 ; > 
-    au < exists ; exists ; 1972 ; Journal of Optics (1970-1998) Volume 3 ; 3 ; > 
-    au < exists ; exists ; 1973 ; Journal of Optics (1970-1998) Volume 4 ; 4 ; > 
-    au < exists ; exists ; 1974 ; Journal of Optics (1970-1998) Volume 5 ; 5 ; > 
-    au < exists ; exists ; 1975 ; Journal of Optics (1970-1998) Volume 6 ; 6 ; > 
-    au < exists ; exists ; 1976 ; Journal of Optics (1970-1998) Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Optics (1970-1998) Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Optics (1970-1998) Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Optics (1970-1998) Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Optics (1970-1998) Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Optics (1970-1998) Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Optics (1970-1998) Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Optics (1970-1998) Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Optics (1970-1998) Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Optics (1970-1998) Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Optics (1970-1998) Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Optics (1970-1998) Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Optics (1970-1998) Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Optics (1970-1998) Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Optics (1970-1998) Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Optics (1970-1998) Volume 22 ; 22 ; > 
-    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Optics (1970-1998) Volume 23 ; 23 ; > 
-    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Optics (1970-1998) Volume 24 ; 24 ; > 
-    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Optics (1970-1998) Volume 25 ; 25 ; > 
-    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Optics (1970-1998) Volume 26 ; 26 ; > 
-    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Optics (1970-1998) Volume 27 ; 27 ; > 
-    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Optics (1970-1998) Volume 28 ; 28 ; > 
-    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Optics (1970-1998) Volume 29 ; 29 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Optics (1970-1998) ;
+#      issn = 0150-536X ;
+#      issnl = 0150-536X
+#    >
+#
+#    param[journal_issn] = 0150-536X
+#    comment[continues] = 0335-7368
+#
+#    au < exists ; exists ; 1970 ; Journal of Optics (1970-1998) Volume 1 ; 1 ; > 
+#    au < exists ; exists ; 1971 ; Journal of Optics (1970-1998) Volume 2 ; 2 ; > 
+#    au < exists ; exists ; 1972 ; Journal of Optics (1970-1998) Volume 3 ; 3 ; > 
+#    au < exists ; exists ; 1973 ; Journal of Optics (1970-1998) Volume 4 ; 4 ; > 
+#    au < exists ; exists ; 1974 ; Journal of Optics (1970-1998) Volume 5 ; 5 ; > 
+#    au < exists ; exists ; 1975 ; Journal of Optics (1970-1998) Volume 6 ; 6 ; > 
+#    au < exists ; exists ; 1976 ; Journal of Optics (1970-1998) Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Optics (1970-1998) Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Optics (1970-1998) Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Optics (1970-1998) Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Optics (1970-1998) Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Optics (1970-1998) Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Optics (1970-1998) Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Optics (1970-1998) Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Optics (1970-1998) Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Optics (1970-1998) Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Optics (1970-1998) Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Optics (1970-1998) Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Optics (1970-1998) Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Optics (1970-1998) Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Optics (1970-1998) Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Optics (1970-1998) Volume 22 ; 22 ; > 
+#    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Optics (1970-1998) Volume 23 ; 23 ; > 
+#    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Optics (1970-1998) Volume 24 ; 24 ; > 
+#    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Optics (1970-1998) Volume 25 ; 25 ; > 
+#    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Optics (1970-1998) Volume 26 ; 26 ; > 
+#    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Optics (1970-1998) Volume 27 ; 27 ; > 
+#    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Optics (1970-1998) Volume 28 ; 28 ; > 
+#    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Optics (1970-1998) Volume 29 ; 29 ; > 
+#
+#  }
 
   {
 
@@ -1353,96 +1353,96 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Journal of Optics B: Quantum and Semiclassical Optics ;
+#      issn = 1464-4266 ;
+#      eissn = 1741-3575 ;
+#      issnl = 1464-4266
+#    >
+#
+#    param[journal_issn] = 1464-4266
+#    comment[param] = print issn preferred
+#    comment[continues] = 1355-5111
+#
+#    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 2000 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 2001 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 7 ; 7 ; > 
+#
+#  }
 
-    title <
-      name = Journal of Optics B: Quantum and Semiclassical Optics ;
-      issn = 1464-4266 ;
-      eissn = 1741-3575 ;
-      issnl = 1464-4266
-    >
+#  {
+#
+#    title <
+#      name = Journal of Physics A: General Physics ;
+#      issn = 0022-3689 ;
+#      issnl = 0022-3689
+#    >
+#
+#    param[journal_issn] = 0022-3689
+#    comment[continued_by] = 0301-0015
+#
+#    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics A: General Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics A: General Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics A: General Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics A: General Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics A: General Physics Volume 5 ; 5 ; > 
+#
+#  }
 
-    param[journal_issn] = 1464-4266
-    comment[param] = print issn preferred
-    comment[continues] = 1355-5111
-
-    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 2000 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 2001 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Optics B: Quantum and Semiclassical Optics Volume 7 ; 7 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Journal of Physics A: General Physics ;
-      issn = 0022-3689 ;
-      issnl = 0022-3689
-    >
-
-    param[journal_issn] = 0022-3689
-    comment[continued_by] = 0301-0015
-
-    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics A: General Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics A: General Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics A: General Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics A: General Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics A: General Physics Volume 5 ; 5 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Journal of Physics A: Mathematical and General ;
-      issn = 0305-4470 ;
-      eissn = 1361-6447 ;
-      issnl = 0305-4470
-    >
-
-    param[journal_issn] = 0305-4470
-    comment[param] = print issn preferred
-    comment[continues] = 0301-0015
-    comment[continued_by] = 1751-8121
-
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics A: Mathematical and General Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics A: Mathematical and General Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics A: Mathematical and General Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics A: Mathematical and General Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics A: Mathematical and General Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics A: Mathematical and General Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics A: Mathematical and General Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics A: Mathematical and General Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics A: Mathematical and General Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics A: Mathematical and General Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics A: Mathematical and General Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics A: Mathematical and General Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics A: Mathematical and General Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics A: Mathematical and General Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics A: Mathematical and General Volume 22 ; 22 ; > 
-    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Physics A: Mathematical and General Volume 23 ; 23 ; > 
-    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Physics A: Mathematical and General Volume 24 ; 24 ; > 
-    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Physics A: Mathematical and General Volume 25 ; 25 ; > 
-    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Physics A: Mathematical and General Volume 26 ; 26 ; > 
-    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Physics A: Mathematical and General Volume 27 ; 27 ; > 
-    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Physics A: Mathematical and General Volume 28 ; 28 ; > 
-    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Physics A: Mathematical and General Volume 29 ; 29 ; > 
-    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Physics A: Mathematical and General Volume 30 ; 30 ; > 
-    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Physics A: Mathematical and General Volume 31 ; 31 ; > 
-    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Physics A: Mathematical and General Volume 32 ; 32 ; > 
-    au < doNotProcess ; doNotProcess ; 2000 ; Journal of Physics A: Mathematical and General Volume 33 ; 33 ; > 
-    au < doNotProcess ; doNotProcess ; 2001 ; Journal of Physics A: Mathematical and General Volume 34 ; 34 ; > 
-    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Physics A: Mathematical and General Volume 35 ; 35 ; > 
-    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Physics A: Mathematical and General Volume 36 ; 36 ; > 
-    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Physics A: Mathematical and General Volume 37 ; 37 ; > 
-    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Physics A: Mathematical and General Volume 38 ; 38 ; > 
-    au < doNotProcess ; doNotProcess ; 2006 ; Journal of Physics A: Mathematical and General Volume 39 ; 39 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics A: Mathematical and General ;
+#      issn = 0305-4470 ;
+#      eissn = 1361-6447 ;
+#      issnl = 0305-4470
+#    >
+#
+#    param[journal_issn] = 0305-4470
+#    comment[param] = print issn preferred
+#    comment[continues] = 0301-0015
+#    comment[continued_by] = 1751-8121
+#
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics A: Mathematical and General Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics A: Mathematical and General Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics A: Mathematical and General Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics A: Mathematical and General Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics A: Mathematical and General Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics A: Mathematical and General Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics A: Mathematical and General Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics A: Mathematical and General Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics A: Mathematical and General Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics A: Mathematical and General Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics A: Mathematical and General Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics A: Mathematical and General Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics A: Mathematical and General Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics A: Mathematical and General Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics A: Mathematical and General Volume 22 ; 22 ; > 
+#    au < doNotProcess ; doNotProcess ; 1990 ; Journal of Physics A: Mathematical and General Volume 23 ; 23 ; > 
+#    au < doNotProcess ; doNotProcess ; 1991 ; Journal of Physics A: Mathematical and General Volume 24 ; 24 ; > 
+#    au < doNotProcess ; doNotProcess ; 1992 ; Journal of Physics A: Mathematical and General Volume 25 ; 25 ; > 
+#    au < doNotProcess ; doNotProcess ; 1993 ; Journal of Physics A: Mathematical and General Volume 26 ; 26 ; > 
+#    au < doNotProcess ; doNotProcess ; 1994 ; Journal of Physics A: Mathematical and General Volume 27 ; 27 ; > 
+#    au < doNotProcess ; doNotProcess ; 1995 ; Journal of Physics A: Mathematical and General Volume 28 ; 28 ; > 
+#    au < doNotProcess ; doNotProcess ; 1996 ; Journal of Physics A: Mathematical and General Volume 29 ; 29 ; > 
+#    au < doNotProcess ; doNotProcess ; 1997 ; Journal of Physics A: Mathematical and General Volume 30 ; 30 ; > 
+#    au < doNotProcess ; doNotProcess ; 1998 ; Journal of Physics A: Mathematical and General Volume 31 ; 31 ; > 
+#    au < doNotProcess ; doNotProcess ; 1999 ; Journal of Physics A: Mathematical and General Volume 32 ; 32 ; > 
+#    au < doNotProcess ; doNotProcess ; 2000 ; Journal of Physics A: Mathematical and General Volume 33 ; 33 ; > 
+#    au < doNotProcess ; doNotProcess ; 2001 ; Journal of Physics A: Mathematical and General Volume 34 ; 34 ; > 
+#    au < doNotProcess ; doNotProcess ; 2002 ; Journal of Physics A: Mathematical and General Volume 35 ; 35 ; > 
+#    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Physics A: Mathematical and General Volume 36 ; 36 ; > 
+#    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Physics A: Mathematical and General Volume 37 ; 37 ; > 
+#    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Physics A: Mathematical and General Volume 38 ; 38 ; > 
+#    au < doNotProcess ; doNotProcess ; 2006 ; Journal of Physics A: Mathematical and General Volume 39 ; 39 ; > 
+#
+#  }
   
   {
 
@@ -1469,56 +1469,56 @@
 
   }
   
-  {
-
-    title <
-      name = Journal of Physics A: Mathematical, Nuclear and General ;
-      issn = 0301-0015 ;
-      issnl = 0301-0015
-    >
-
-    param[journal_issn] = 0301-0015
-    comment[continues] = 0022-3689
-    comment[continued_by] = 0305-4470
-
-    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics A: Mathematical, Nuclear and General Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics A: Mathematical, Nuclear and General Volume 7 ; 7 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics A: Mathematical, Nuclear and General ;
+#      issn = 0301-0015 ;
+#      issnl = 0301-0015
+#    >
+#
+#    param[journal_issn] = 0301-0015
+#    comment[continues] = 0022-3689
+#    comment[continued_by] = 0305-4470
+#
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics A: Mathematical, Nuclear and General Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics A: Mathematical, Nuclear and General Volume 7 ; 7 ; > 
+#
+#  }
   
-  {
-
-    title <
-      name = Journal of Physics B: Atomic and Molecular Physics ;
-      issn = 0022-3700 ;
-      issnl = 0022-3700
-    >
-
-    param[journal_issn] = 0022-3700
-    comment[continued_by] = 0953-4075
-
-    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics B: Atomic and Molecular Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics B: Atomic and Molecular Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics B: Atomic and Molecular Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics B: Atomic and Molecular Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics B: Atomic and Molecular Physics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics B: Atomic and Molecular Physics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics B: Atomic and Molecular Physics Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics B: Atomic and Molecular Physics Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics B: Atomic and Molecular Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics B: Atomic and Molecular Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics B: Atomic and Molecular Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics B: Atomic and Molecular Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics B: Atomic and Molecular Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics B: Atomic and Molecular Physics Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics B: Atomic and Molecular Physics Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics B: Atomic and Molecular Physics Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics B: Atomic and Molecular Physics Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics B: Atomic and Molecular Physics Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics B: Atomic and Molecular Physics Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics B: Atomic and Molecular Physics Volume 20 ; 20 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics B: Atomic and Molecular Physics ;
+#      issn = 0022-3700 ;
+#      issnl = 0022-3700
+#    >
+#
+#    param[journal_issn] = 0022-3700
+#    comment[continued_by] = 0953-4075
+#
+#    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics B: Atomic and Molecular Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics B: Atomic and Molecular Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics B: Atomic and Molecular Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics B: Atomic and Molecular Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics B: Atomic and Molecular Physics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics B: Atomic and Molecular Physics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics B: Atomic and Molecular Physics Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics B: Atomic and Molecular Physics Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics B: Atomic and Molecular Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics B: Atomic and Molecular Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics B: Atomic and Molecular Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics B: Atomic and Molecular Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics B: Atomic and Molecular Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics B: Atomic and Molecular Physics Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics B: Atomic and Molecular Physics Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics B: Atomic and Molecular Physics Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics B: Atomic and Molecular Physics Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics B: Atomic and Molecular Physics Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics B: Atomic and Molecular Physics Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics B: Atomic and Molecular Physics Volume 20 ; 20 ; > 
+#
+#  }
 
   {
 
@@ -1564,39 +1564,39 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of Physics C: Solid State Physics ;
-      issn = 0022-3719 ;
-      issnl = 0022-3719
-    >
-
-    param[journal_issn] = 0022-3719
-
-    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics C: Solid State Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics C: Solid State Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics C: Solid State Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics C: Solid State Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics C: Solid State Physics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics C: Solid State Physics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics C: Solid State Physics Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics C: Solid State Physics Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics C: Solid State Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics C: Solid State Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics C: Solid State Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics C: Solid State Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics C: Solid State Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics C: Solid State Physics Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics C: Solid State Physics Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics C: Solid State Physics Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics C: Solid State Physics Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics C: Solid State Physics Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics C: Solid State Physics Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics C: Solid State Physics Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics C: Solid State Physics Volume 21 ; 21 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics C: Solid State Physics ;
+#      issn = 0022-3719 ;
+#      issnl = 0022-3719
+#    >
+#
+#    param[journal_issn] = 0022-3719
+#
+#    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics C: Solid State Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics C: Solid State Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics C: Solid State Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics C: Solid State Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics C: Solid State Physics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics C: Solid State Physics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics C: Solid State Physics Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics C: Solid State Physics Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics C: Solid State Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics C: Solid State Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics C: Solid State Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics C: Solid State Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics C: Solid State Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics C: Solid State Physics Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics C: Solid State Physics Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics C: Solid State Physics Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics C: Solid State Physics Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics C: Solid State Physics Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics C: Solid State Physics Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics C: Solid State Physics Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics C: Solid State Physics Volume 21 ; 21 ; > 
+#
+#  }
 
   {
 
@@ -1661,71 +1661,71 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Journal of Physics E: Scientific Instruments ;
+#      issn = 0022-3735 ;
+#      issnl = 0022-3735
+#    >
+#
+#    param[journal_issn] = 0022-3735
+#
+#    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics E: Scientific Instruments Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics E: Scientific Instruments Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics E: Scientific Instruments Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics E: Scientific Instruments Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics E: Scientific Instruments Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics E: Scientific Instruments Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics E: Scientific Instruments Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics E: Scientific Instruments Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics E: Scientific Instruments Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics E: Scientific Instruments Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics E: Scientific Instruments Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics E: Scientific Instruments Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics E: Scientific Instruments Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics E: Scientific Instruments Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics E: Scientific Instruments Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics E: Scientific Instruments Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics E: Scientific Instruments Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics E: Scientific Instruments Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics E: Scientific Instruments Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics E: Scientific Instruments Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics E: Scientific Instruments Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics E: Scientific Instruments Volume 22 ; 22 ; > 
+#
+#  }
 
-    title <
-      name = Journal of Physics E: Scientific Instruments ;
-      issn = 0022-3735 ;
-      issnl = 0022-3735
-    >
-
-    param[journal_issn] = 0022-3735
-
-    au < doNotProcess ; doNotProcess ; 1968 ; Journal of Physics E: Scientific Instruments Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1969 ; Journal of Physics E: Scientific Instruments Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Physics E: Scientific Instruments Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics E: Scientific Instruments Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics E: Scientific Instruments Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics E: Scientific Instruments Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics E: Scientific Instruments Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics E: Scientific Instruments Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics E: Scientific Instruments Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics E: Scientific Instruments Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics E: Scientific Instruments Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics E: Scientific Instruments Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics E: Scientific Instruments Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics E: Scientific Instruments Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics E: Scientific Instruments Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics E: Scientific Instruments Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics E: Scientific Instruments Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics E: Scientific Instruments Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics E: Scientific Instruments Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics E: Scientific Instruments Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics E: Scientific Instruments Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics E: Scientific Instruments Volume 22 ; 22 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Journal of Physics F: Metal Physics ;
-      issn = 0305-4608 ;
-      issnl = 0305-4608
-    >
-
-    param[journal_issn] = 0305-4608
-
-    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics F: Metal Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics F: Metal Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics F: Metal Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics F: Metal Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics F: Metal Physics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics F: Metal Physics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics F: Metal Physics Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics F: Metal Physics Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics F: Metal Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics F: Metal Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics F: Metal Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics F: Metal Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics F: Metal Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics F: Metal Physics Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics F: Metal Physics Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics F: Metal Physics Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics F: Metal Physics Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics F: Metal Physics Volume 18 ; 18 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics F: Metal Physics ;
+#      issn = 0305-4608 ;
+#      issnl = 0305-4608
+#    >
+#
+#    param[journal_issn] = 0305-4608
+#
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Physics F: Metal Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Physics F: Metal Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Physics F: Metal Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Physics F: Metal Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics F: Metal Physics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics F: Metal Physics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics F: Metal Physics Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics F: Metal Physics Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics F: Metal Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics F: Metal Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics F: Metal Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics F: Metal Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics F: Metal Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics F: Metal Physics Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics F: Metal Physics Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics F: Metal Physics Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics F: Metal Physics Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics F: Metal Physics Volume 18 ; 18 ; > 
+#
+#  }
 
   {
 
@@ -1772,33 +1772,33 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of Physics G: Nuclear Physics ;
-      issn = 0305-4616 ;
-      issnl = 0305-4616
-    >
-
-    param[journal_issn] = 0305-4616
-    comment[continued_by] = 0954-3899
-
-    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics G: Nuclear Physics Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics G: Nuclear Physics Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics G: Nuclear Physics Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics G: Nuclear Physics Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics G: Nuclear Physics Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics G: Nuclear Physics Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics G: Nuclear Physics Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics G: Nuclear Physics Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics G: Nuclear Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics G: Nuclear Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics G: Nuclear Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics G: Nuclear Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics G: Nuclear Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics G: Nuclear Physics Volume 14 ; 14 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Physics G: Nuclear Physics ;
+#      issn = 0305-4616 ;
+#      issnl = 0305-4616
+#    >
+#
+#    param[journal_issn] = 0305-4616
+#    comment[continued_by] = 0954-3899
+#
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Physics G: Nuclear Physics Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Physics G: Nuclear Physics Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Physics G: Nuclear Physics Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Physics G: Nuclear Physics Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Physics G: Nuclear Physics Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Journal of Physics G: Nuclear Physics Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of Physics G: Nuclear Physics Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of Physics G: Nuclear Physics Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of Physics G: Nuclear Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of Physics G: Nuclear Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of Physics G: Nuclear Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of Physics G: Nuclear Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of Physics G: Nuclear Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Journal of Physics G: Nuclear Physics Volume 14 ; 14 ; > 
+#
+#  }
 
   {
 
@@ -2502,62 +2502,62 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of Scientific Instruments ;
-      issn = 0950-7671 ;
-      issnl = 0950-7671
-    >
-
-    param[journal_issn] = 0950-7671
-
-    au < doNotProcess ; doNotProcess ; 1923-1924 ; Journal of Scientific Instruments Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1925 ; Journal of Scientific Instruments Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1926 ; Journal of Scientific Instruments Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1927 ; Journal of Scientific Instruments Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1928 ; Journal of Scientific Instruments Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1929 ; Journal of Scientific Instruments Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1930 ; Journal of Scientific Instruments Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1931 ; Journal of Scientific Instruments Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1932 ; Journal of Scientific Instruments Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1933 ; Journal of Scientific Instruments Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1934 ; Journal of Scientific Instruments Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1935 ; Journal of Scientific Instruments Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1936 ; Journal of Scientific Instruments Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1937 ; Journal of Scientific Instruments Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1938 ; Journal of Scientific Instruments Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1939 ; Journal of Scientific Instruments Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1940 ; Journal of Scientific Instruments Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1941 ; Journal of Scientific Instruments Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1942 ; Journal of Scientific Instruments Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1943 ; Journal of Scientific Instruments Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1944 ; Journal of Scientific Instruments Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1945 ; Journal of Scientific Instruments Volume 22 ; 22 ; > 
-    au < doNotProcess ; doNotProcess ; 1946 ; Journal of Scientific Instruments Volume 23 ; 23 ; > 
-    au < doNotProcess ; doNotProcess ; 1947 ; Journal of Scientific Instruments Volume 24 ; 24 ; > 
-    au < doNotProcess ; doNotProcess ; 1948 ; Journal of Scientific Instruments Volume 25 ; 25 ; > 
-    au < doNotProcess ; doNotProcess ; 1949 ; Journal of Scientific Instruments Volume 26 ; 26 ; > 
-    au < doNotProcess ; doNotProcess ; 1950 ; Journal of Scientific Instruments Volume 27 ; 27 ; > 
-    au < doNotProcess ; doNotProcess ; 1951 ; Journal of Scientific Instruments Volume 28 ; 28 ; > 
-    au < doNotProcess ; doNotProcess ; 1952 ; Journal of Scientific Instruments Volume 29 ; 29 ; > 
-    au < doNotProcess ; doNotProcess ; 1953 ; Journal of Scientific Instruments Volume 30 ; 30 ; > 
-    au < doNotProcess ; doNotProcess ; 1954 ; Journal of Scientific Instruments Volume 31 ; 31 ; > 
-    au < doNotProcess ; doNotProcess ; 1955 ; Journal of Scientific Instruments Volume 32 ; 32 ; > 
-    au < doNotProcess ; doNotProcess ; 1956 ; Journal of Scientific Instruments Volume 33 ; 33 ; > 
-    au < doNotProcess ; doNotProcess ; 1957 ; Journal of Scientific Instruments Volume 34 ; 34 ; > 
-    au < doNotProcess ; doNotProcess ; 1958 ; Journal of Scientific Instruments Volume 35 ; 35 ; > 
-    au < doNotProcess ; doNotProcess ; 1959 ; Journal of Scientific Instruments Volume 36 ; 36 ; > 
-    au < doNotProcess ; doNotProcess ; 1960 ; Journal of Scientific Instruments Volume 37 ; 37 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Scientific Instruments Volume 38 ; 38 ; > 
-    au < doNotProcess ; doNotProcess ; 1962 ; Journal of Scientific Instruments Volume 39 ; 39 ; > 
-    au < doNotProcess ; doNotProcess ; 1963 ; Journal of Scientific Instruments Volume 40 ; 40 ; > 
-    au < doNotProcess ; doNotProcess ; 1964 ; Journal of Scientific Instruments Volume 41 ; 41 ; > 
-    au < doNotProcess ; doNotProcess ; 1965 ; Journal of Scientific Instruments Volume 42 ; 42 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; Journal of Scientific Instruments Volume 43 ; 43 ; > 
-    au < doNotProcess ; doNotProcess ; 1967 ; Journal of Scientific Instruments Volume 44 ; 44 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of Scientific Instruments ;
+#      issn = 0950-7671 ;
+#      issnl = 0950-7671
+#    >
+#
+#    param[journal_issn] = 0950-7671
+#
+#    au < doNotProcess ; doNotProcess ; 1923-1924 ; Journal of Scientific Instruments Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1925 ; Journal of Scientific Instruments Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1926 ; Journal of Scientific Instruments Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1927 ; Journal of Scientific Instruments Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1928 ; Journal of Scientific Instruments Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1929 ; Journal of Scientific Instruments Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1930 ; Journal of Scientific Instruments Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1931 ; Journal of Scientific Instruments Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1932 ; Journal of Scientific Instruments Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1933 ; Journal of Scientific Instruments Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1934 ; Journal of Scientific Instruments Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1935 ; Journal of Scientific Instruments Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1936 ; Journal of Scientific Instruments Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1937 ; Journal of Scientific Instruments Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1938 ; Journal of Scientific Instruments Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1939 ; Journal of Scientific Instruments Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1940 ; Journal of Scientific Instruments Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1941 ; Journal of Scientific Instruments Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1942 ; Journal of Scientific Instruments Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1943 ; Journal of Scientific Instruments Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1944 ; Journal of Scientific Instruments Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1945 ; Journal of Scientific Instruments Volume 22 ; 22 ; > 
+#    au < doNotProcess ; doNotProcess ; 1946 ; Journal of Scientific Instruments Volume 23 ; 23 ; > 
+#    au < doNotProcess ; doNotProcess ; 1947 ; Journal of Scientific Instruments Volume 24 ; 24 ; > 
+#    au < doNotProcess ; doNotProcess ; 1948 ; Journal of Scientific Instruments Volume 25 ; 25 ; > 
+#    au < doNotProcess ; doNotProcess ; 1949 ; Journal of Scientific Instruments Volume 26 ; 26 ; > 
+#    au < doNotProcess ; doNotProcess ; 1950 ; Journal of Scientific Instruments Volume 27 ; 27 ; > 
+#    au < doNotProcess ; doNotProcess ; 1951 ; Journal of Scientific Instruments Volume 28 ; 28 ; > 
+#    au < doNotProcess ; doNotProcess ; 1952 ; Journal of Scientific Instruments Volume 29 ; 29 ; > 
+#    au < doNotProcess ; doNotProcess ; 1953 ; Journal of Scientific Instruments Volume 30 ; 30 ; > 
+#    au < doNotProcess ; doNotProcess ; 1954 ; Journal of Scientific Instruments Volume 31 ; 31 ; > 
+#    au < doNotProcess ; doNotProcess ; 1955 ; Journal of Scientific Instruments Volume 32 ; 32 ; > 
+#    au < doNotProcess ; doNotProcess ; 1956 ; Journal of Scientific Instruments Volume 33 ; 33 ; > 
+#    au < doNotProcess ; doNotProcess ; 1957 ; Journal of Scientific Instruments Volume 34 ; 34 ; > 
+#    au < doNotProcess ; doNotProcess ; 1958 ; Journal of Scientific Instruments Volume 35 ; 35 ; > 
+#    au < doNotProcess ; doNotProcess ; 1959 ; Journal of Scientific Instruments Volume 36 ; 36 ; > 
+#    au < doNotProcess ; doNotProcess ; 1960 ; Journal of Scientific Instruments Volume 37 ; 37 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; Journal of Scientific Instruments Volume 38 ; 38 ; > 
+#    au < doNotProcess ; doNotProcess ; 1962 ; Journal of Scientific Instruments Volume 39 ; 39 ; > 
+#    au < doNotProcess ; doNotProcess ; 1963 ; Journal of Scientific Instruments Volume 40 ; 40 ; > 
+#    au < doNotProcess ; doNotProcess ; 1964 ; Journal of Scientific Instruments Volume 41 ; 41 ; > 
+#    au < doNotProcess ; doNotProcess ; 1965 ; Journal of Scientific Instruments Volume 42 ; 42 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; Journal of Scientific Instruments Volume 43 ; 43 ; > 
+#    au < doNotProcess ; doNotProcess ; 1967 ; Journal of Scientific Instruments Volume 44 ; 44 ; > 
+#
+#  }
 
   {
 
@@ -2607,26 +2607,26 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of the Society for Radiological Protection ;
-      issn = 0260-2814 ;
-      issnl = 0260-2814
-    >
-
-    param[journal_issn] = 0260-2814
-    commnent[continued_by] = 0952-4746
-
-    au < doNotProcess ; doNotProcess ; 1981 ; Journal of the Society for Radiological Protection Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Journal of the Society for Radiological Protection Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Journal of the Society for Radiological Protection Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Journal of the Society for Radiological Protection Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Journal of the Society for Radiological Protection Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Journal of the Society for Radiological Protection Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Journal of the Society for Radiological Protection Volume 7 ; 7 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Journal of the Society for Radiological Protection ;
+#      issn = 0260-2814 ;
+#      issnl = 0260-2814
+#    >
+#
+#    param[journal_issn] = 0260-2814
+#    commnent[continued_by] = 0952-4746
+#
+#    au < doNotProcess ; doNotProcess ; 1981 ; Journal of the Society for Radiological Protection Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Journal of the Society for Radiological Protection Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Journal of the Society for Radiological Protection Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Journal of the Society for Radiological Protection Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Journal of the Society for Radiological Protection Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Journal of the Society for Radiological Protection Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Journal of the Society for Radiological Protection Volume 7 ; 7 ; > 
+#
+#  }
 
   {
 
@@ -2968,41 +2968,41 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Nouvelle Revue d'Optique ;
+#      issn = 0335-7368 ;
+#      issnl = 0335-7368
+#    >
+#
+#    param[journal_issn] = 0335-7368
+#    comment[continues] = 0029-4780
+#    comment[continued_by] = 0150-536X
+#
+#    au < doNotProcess ; doNotProcess ; 1973 ; Nouvelle Revue d'Optique Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Nouvelle Revue d'Optique Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Nouvelle Revue d'Optique Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Nouvelle Revue d'Optique Volume 7 ; 7 ; > 
+#
+#  }
 
-    title <
-      name = Nouvelle Revue d'Optique ;
-      issn = 0335-7368 ;
-      issnl = 0335-7368
-    >
-
-    param[journal_issn] = 0335-7368
-    comment[continues] = 0029-4780
-    comment[continued_by] = 0150-536X
-
-    au < doNotProcess ; doNotProcess ; 1973 ; Nouvelle Revue d'Optique Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Nouvelle Revue d'Optique Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Nouvelle Revue d'Optique Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Nouvelle Revue d'Optique Volume 7 ; 7 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Nouvelle Revue d'Optique Appliquée ;
-      issn = 0029-4780 ;
-      issnl = 0029-4780
-    >
-
-    param[journal_issn] = 0029-4780
-    comment[contineued_by] = 0335-7368
-
-    au < doNotProcess ; doNotProcess ; 1970 ; Nouvelle Revue d'Optique Appliquée Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Nouvelle Revue d'Optique Appliquée Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Nouvelle Revue d'Optique Appliquée Volume 3 ; 3 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Nouvelle Revue d'Optique Appliquée ;
+#      issn = 0029-4780 ;
+#      issnl = 0029-4780
+#    >
+#
+#    param[journal_issn] = 0029-4780
+#    comment[contineued_by] = 0335-7368
+#
+#    au < doNotProcess ; doNotProcess ; 1970 ; Nouvelle Revue d'Optique Appliquée Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Nouvelle Revue d'Optique Appliquée Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Nouvelle Revue d'Optique Appliquée Volume 3 ; 3 ; > 
+#
+#  }
 
   {
 
@@ -3351,35 +3351,35 @@
 
   }
 
-  {
-
-    title <
-      name = Physics in Technology ;
-      issn = 0305-4624 ;
-      issnl = 0305-4624
-    >
-
-    param[journal_issn] = 0305-4624
-    comment[continues] = 0034-6683
-
-    au < doNotProcess ; doNotProcess ; 1973 ; Physics in Technology Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Physics in Technology Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Physics in Technology Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Physics in Technology Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Physics in Technology Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Physics in Technology Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Physics in Technology Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Physics in Technology Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Physics in Technology Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Physics in Technology Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Physics in Technology Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1984 ; Physics in Technology Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1985 ; Physics in Technology Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1986 ; Physics in Technology Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1987 ; Physics in Technology Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1988 ; Physics in Technology Volume 19 ; 19 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Physics in Technology ;
+#      issn = 0305-4624 ;
+#      issnl = 0305-4624
+#    >
+#
+#    param[journal_issn] = 0305-4624
+#    comment[continues] = 0034-6683
+#
+#    au < doNotProcess ; doNotProcess ; 1973 ; Physics in Technology Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Physics in Technology Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Physics in Technology Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Physics in Technology Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Physics in Technology Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Physics in Technology Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Physics in Technology Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Physics in Technology Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Physics in Technology Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Physics in Technology Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Physics in Technology Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1984 ; Physics in Technology Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1985 ; Physics in Technology Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1986 ; Physics in Technology Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1987 ; Physics in Technology Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1988 ; Physics in Technology Volume 19 ; 19 ; > 
+#
+#  }
 
   {
 
@@ -3420,37 +3420,37 @@
 
   }
 
-  {
-
-    title <
-      name = Plasma Physics ;
-      issn = 0032-1028 ;
-      issnl = 0032-1028
-    >
-
-    param[journal_issn] = 0032-1028
-    comment[continues] = 0368-3281
-    comment[continued_by] = 0741-3335
-    
-    au < doNotProcess ; doNotProcess ; 1967 ; Plasma Physics Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1968 ; Plasma Physics Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1969 ; Plasma Physics Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1970 ; Plasma Physics Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Plasma Physics Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Plasma Physics Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1973 ; Plasma Physics Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1974 ; Plasma Physics Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1975 ; Plasma Physics Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1976 ; Plasma Physics Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1977 ; Plasma Physics Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1978 ; Plasma Physics Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1979 ; Plasma Physics Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1980 ; Plasma Physics Volume 22 ; 22 ; > 
-    au < doNotProcess ; doNotProcess ; 1981 ; Plasma Physics Volume 23 ; 23 ; > 
-    au < doNotProcess ; doNotProcess ; 1982 ; Plasma Physics Volume 24 ; 24 ; > 
-    au < doNotProcess ; doNotProcess ; 1983 ; Plasma Physics Volume 25 ; 25 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Plasma Physics ;
+#      issn = 0032-1028 ;
+#      issnl = 0032-1028
+#    >
+#
+#    param[journal_issn] = 0032-1028
+#    comment[continues] = 0368-3281
+#    comment[continued_by] = 0741-3335
+#    
+#    au < doNotProcess ; doNotProcess ; 1967 ; Plasma Physics Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1968 ; Plasma Physics Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1969 ; Plasma Physics Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Plasma Physics Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Plasma Physics Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Plasma Physics Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Plasma Physics Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Plasma Physics Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Plasma Physics Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Plasma Physics Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1977 ; Plasma Physics Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1978 ; Plasma Physics Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1979 ; Plasma Physics Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1980 ; Plasma Physics Volume 22 ; 22 ; > 
+#    au < doNotProcess ; doNotProcess ; 1981 ; Plasma Physics Volume 23 ; 23 ; > 
+#    au < doNotProcess ; doNotProcess ; 1982 ; Plasma Physics Volume 24 ; 24 ; > 
+#    au < doNotProcess ; doNotProcess ; 1983 ; Plasma Physics Volume 25 ; 25 ; > 
+#
+#  }
   
   {
 
@@ -3570,241 +3570,241 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Proceedings of the Physical Society ;
+#      issn = 0370-1328 ;
+#      issnl = 0370-1328
+#    >
+#
+#    param[journal_issn] = 0370-1328
+#    comment[continues] = 0370-1298 and 0370-1301
+#    
+#    au < doNotProcess ; doNotProcess ; 1958 ; Proceedings of the Physical Society Volume 71 ; 71 ; > 
+#    au < doNotProcess ; doNotProcess ; 1958 ; Proceedings of the Physical Society Volume 72 ; 72 ; > 
+#    au < doNotProcess ; doNotProcess ; 1959 ; Proceedings of the Physical Society Volume 73 ; 73 ; > 
+#    au < doNotProcess ; doNotProcess ; 1959 ; Proceedings of the Physical Society Volume 74 ; 74 ; > 
+#    au < doNotProcess ; doNotProcess ; 1960 ; Proceedings of the Physical Society Volume 75 ; 75 ; > 
+#    au < doNotProcess ; doNotProcess ; 1960 ; Proceedings of the Physical Society Volume 76 ; 76 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; Proceedings of the Physical Society Volume 77 ; 77 ; > 
+#    au < doNotProcess ; doNotProcess ; 1961 ; Proceedings of the Physical Society Volume 78 ; 78 ; > 
+#    au < doNotProcess ; doNotProcess ; 1962 ; Proceedings of the Physical Society Volume 79 ; 79 ; > 
+#    au < doNotProcess ; doNotProcess ; 1962 ; Proceedings of the Physical Society Volume 80 ; 80 ; > 
+#    au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the Physical Society Volume 81 ; 81 ; > 
+#    au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the Physical Society Volume 82 ; 82 ; > 
+#    au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the Physical Society Volume 83 ; 83 ; > 
+#    au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the Physical Society Volume 84 ; 84 ; > 
+#    au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the Physical Society Volume 85 ; 85 ; > 
+#    au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the Physical Society Volume 86 ; 86 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 87 ; 87 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 88 ; 88 ; > 
+#    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 89 ; 89 ; > 
+#    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 90 ; 90 ; > 
+#    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 91 ; 91 ; > 
+#    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 92 ; 92 ; > 
+#
+#  }
 
-    title <
-      name = Proceedings of the Physical Society ;
-      issn = 0370-1328 ;
-      issnl = 0370-1328
-    >
+#  {
+#
+#    title <
+#      name = Proceedings of the Physical Society ;
+#      issn = 0959-5309 ;
+#      issnl = 0959-5309
+#    >
+#
+#    param[journal_issn] = 0959-5309
+#    comment[continues] = 1478-7814
+#    comment[split_into] = 0370-1298 and 0370-1301
+#
+#    au < doNotProcess ; doNotProcess ; 1926 ; Proceedings of the Physical Society Volume 39 ; 39 ; >
+#    au < doNotProcess ; doNotProcess ; 1927 ; Proceedings of the Physical Society Volume 40 ; 40 ; >
+#    au < doNotProcess ; doNotProcess ; 1928 ; Proceedings of the Physical Society Volume 41 ; 41 ; >
+#    au < doNotProcess ; doNotProcess ; 1929 ; Proceedings of the Physical Society Volume 42 ; 42 ; >
+#    au < doNotProcess ; doNotProcess ; 1930 ; Proceedings of the Physical Society Volume 43 ; 43 ; >
+#    au < doNotProcess ; doNotProcess ; 1931 ; Proceedings of the Physical Society Volume 44 ; 44 ; >
+#    au < doNotProcess ; doNotProcess ; 1932 ; Proceedings of the Physical Society Volume 45 ; 45 ; >
+#    au < doNotProcess ; doNotProcess ; 1933 ; Proceedings of the Physical Society Volume 46 ; 46 ; >
+#    au < doNotProcess ; doNotProcess ; 1934 ; Proceedings of the Physical Society Volume 47 ; 47 ; >
+#    au < doNotProcess ; doNotProcess ; 1935 ; Proceedings of the Physical Society Volume 48 ; 48 ; >
+#    au < doNotProcess ; doNotProcess ; 1936 ; Proceedings of the Physical Society Volume 49 ; 49 ; >
+#    au < doNotProcess ; doNotProcess ; 1937 ; Proceedings of the Physical Society Volume 50 ; 50 ; >
+#    au < doNotProcess ; doNotProcess ; 1938 ; Proceedings of the Physical Society Volume 51 ; 51 ; >
+#    au < doNotProcess ; doNotProcess ; 1939 ; Proceedings of the Physical Society Volume 52 ; 52 ; >
+#    au < doNotProcess ; doNotProcess ; 1940 ; Proceedings of the Physical Society Volume 53 ; 53 ; >
+#    au < doNotProcess ; doNotProcess ; 1941 ; Proceedings of the Physical Society Volume 54 ; 54 ; >
+#    au < doNotProcess ; doNotProcess ; 1942 ; Proceedings of the Physical Society Volume 55 ; 55 ; >
+#    au < doNotProcess ; doNotProcess ; 1943 ; Proceedings of the Physical Society Volume 56 ; 56 ; >
+#    au < doNotProcess ; doNotProcess ; 1944 ; Proceedings of the Physical Society Volume 57 ; 57 ; >
+#    au < doNotProcess ; doNotProcess ; 1945 ; Proceedings of the Physical Society Volume 58 ; 58 ; >
+#    au < doNotProcess ; doNotProcess ; 1946 ; Proceedings of the Physical Society Volume 59 ; 59 ; >
+#    au < doNotProcess ; doNotProcess ; 1947 ; Proceedings of the Physical Society Volume 60 ; 60 ; >
+#    au < doNotProcess ; doNotProcess ; 1948 ; Proceedings of the Physical Society Volume 61 ; 61 ; >
+#
+#  }
 
-    param[journal_issn] = 0370-1328
-    comment[continues] = 0370-1298 and 0370-1301
-    
-    au < doNotProcess ; doNotProcess ; 1958 ; Proceedings of the Physical Society Volume 71 ; 71 ; > 
-    au < doNotProcess ; doNotProcess ; 1958 ; Proceedings of the Physical Society Volume 72 ; 72 ; > 
-    au < doNotProcess ; doNotProcess ; 1959 ; Proceedings of the Physical Society Volume 73 ; 73 ; > 
-    au < doNotProcess ; doNotProcess ; 1959 ; Proceedings of the Physical Society Volume 74 ; 74 ; > 
-    au < doNotProcess ; doNotProcess ; 1960 ; Proceedings of the Physical Society Volume 75 ; 75 ; > 
-    au < doNotProcess ; doNotProcess ; 1960 ; Proceedings of the Physical Society Volume 76 ; 76 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; Proceedings of the Physical Society Volume 77 ; 77 ; > 
-    au < doNotProcess ; doNotProcess ; 1961 ; Proceedings of the Physical Society Volume 78 ; 78 ; > 
-    au < doNotProcess ; doNotProcess ; 1962 ; Proceedings of the Physical Society Volume 79 ; 79 ; > 
-    au < doNotProcess ; doNotProcess ; 1962 ; Proceedings of the Physical Society Volume 80 ; 80 ; > 
-    au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the Physical Society Volume 81 ; 81 ; > 
-    au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the Physical Society Volume 82 ; 82 ; > 
-    au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the Physical Society Volume 83 ; 83 ; > 
-    au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the Physical Society Volume 84 ; 84 ; > 
-    au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the Physical Society Volume 85 ; 85 ; > 
-    au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the Physical Society Volume 86 ; 86 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 87 ; 87 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 88 ; 88 ; > 
-    au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the Physical Society Volume 89 ; 89 ; > 
-    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 90 ; 90 ; > 
-    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 91 ; 91 ; > 
-    au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the Physical Society Volume 92 ; 92 ; > 
+#  {
+#
+#    title <
+#      name = Proceedings of the Physical Society of London ;
+#      issn = 1478-7814 ;
+#      issnl = 1478-7814
+#    >
+#
+#    param[journal_issn] = 1478-7814
+#    comment[continued_by] = 0959-5309
+#
+#    au < doNotProcess ; doNotProcess ; 1874 ; Proceedings of the Physical Society of London Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1875 ; Proceedings of the Physical Society of London Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1879 ; Proceedings of the Physical Society of London Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1880 ; Proceedings of the Physical Society of London Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1882 ; Proceedings of the Physical Society of London Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1884 ; Proceedings of the Physical Society of London Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1885 ; Proceedings of the Physical Society of London Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1886 ; Proceedings of the Physical Society of London Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1887 ; Proceedings of the Physical Society of London Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1888 ; Proceedings of the Physical Society of London Volume 10 ; 10 ; > 
+#    au < doNotProcess ; doNotProcess ; 1890 ; Proceedings of the Physical Society of London Volume 11 ; 11 ; > 
+#    au < doNotProcess ; doNotProcess ; 1892 ; Proceedings of the Physical Society of London Volume 12 ; 12 ; > 
+#    au < doNotProcess ; doNotProcess ; 1894 ; Proceedings of the Physical Society of London Volume 13 ; 13 ; > 
+#    au < doNotProcess ; doNotProcess ; 1895 ; Proceedings of the Physical Society of London Volume 14 ; 14 ; > 
+#    au < doNotProcess ; doNotProcess ; 1896 ; Proceedings of the Physical Society of London Volume 15 ; 15 ; > 
+#    au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Physical Society of London Volume 16 ; 16 ; > 
+#    au < doNotProcess ; doNotProcess ; 1899 ; Proceedings of the Physical Society of London Volume 17 ; 17 ; > 
+#    au < doNotProcess ; doNotProcess ; 1901 ; Proceedings of the Physical Society of London Volume 18 ; 18 ; > 
+#    au < doNotProcess ; doNotProcess ; 1903 ; Proceedings of the Physical Society of London Volume 19 ; 19 ; > 
+#    au < doNotProcess ; doNotProcess ; 1906 ; Proceedings of the Physical Society of London Volume 20 ; 20 ; > 
+#    au < doNotProcess ; doNotProcess ; 1907 ; Proceedings of the Physical Society of London Volume 21 ; 21 ; > 
+#    au < doNotProcess ; doNotProcess ; 1909 ; Proceedings of the Physical Society of London Volume 22 ; 22 ; > 
+#    au < doNotProcess ; doNotProcess ; 1910 ; Proceedings of the Physical Society of London Volume 23 ; 23 ; > 
+#    au < doNotProcess ; doNotProcess ; 1911 ; Proceedings of the Physical Society of London Volume 24 ; 24 ; > 
+#    au < doNotProcess ; doNotProcess ; 1912 ; Proceedings of the Physical Society of London Volume 25 ; 25 ; > 
+#    au < doNotProcess ; doNotProcess ; 1913 ; Proceedings of the Physical Society of London Volume 26 ; 26 ; > 
+#    au < doNotProcess ; doNotProcess ; 1914 ; Proceedings of the Physical Society of London Volume 27 ; 27 ; > 
+#    au < doNotProcess ; doNotProcess ; 1915 ; Proceedings of the Physical Society of London Volume 28 ; 28 ; > 
+#    au < doNotProcess ; doNotProcess ; 1916 ; Proceedings of the Physical Society of London Volume 29 ; 29 ; > 
+#    au < doNotProcess ; doNotProcess ; 1917 ; Proceedings of the Physical Society of London Volume 30 ; 30 ; > 
+#    au < doNotProcess ; doNotProcess ; 1918 ; Proceedings of the Physical Society of London Volume 31 ; 31 ; > 
+#    au < doNotProcess ; doNotProcess ; 1919 ; Proceedings of the Physical Society of London Volume 32 ; 32 ; > 
+#    au < doNotProcess ; doNotProcess ; 1920 ; Proceedings of the Physical Society of London Volume 33 ; 33 ; > 
+#    au < doNotProcess ; doNotProcess ; 1921 ; Proceedings of the Physical Society of London Volume 34 ; 34 ; > 
+#    au < doNotProcess ; doNotProcess ; 1922 ; Proceedings of the Physical Society of London Volume 35 ; 35 ; > 
+#    au < doNotProcess ; doNotProcess ; 1923 ; Proceedings of the Physical Society of London Volume 36 ; 36 ; > 
+#    au < doNotProcess ; doNotProcess ; 1924 ; Proceedings of the Physical Society of London Volume 37 ; 37 ; > 
+#    au < doNotProcess ; doNotProcess ; 1925 ; Proceedings of the Physical Society of London Volume 38 ; 38 ; > 
+#
+#  }
 
-  }
+#  {
+#
+#    title <
+#      name = Proceedings of the Physical Society. Section A ;
+#      issn = 0370-1298 ;
+#      issnl = 0370-1298
+#    >
+#
+#    param[journal_issn] = 0370-1298
+#    comment[split_from] = 0959-5309
+#    comment[merged_into] = 0370-1328
+#
+#    au < doNotProcess ; doNotProcess ; 1949 ; Proceedings of the Physical Society. Section A Volume 62 ; 62 ; >
+#    au < doNotProcess ; doNotProcess ; 1950 ; Proceedings of the Physical Society. Section A Volume 63 ; 63 ; >
+#    au < doNotProcess ; doNotProcess ; 1951 ; Proceedings of the Physical Society. Section A Volume 64 ; 64 ; >
+#    au < doNotProcess ; doNotProcess ; 1952 ; Proceedings of the Physical Society. Section A Volume 65 ; 65 ; >
+#    au < doNotProcess ; doNotProcess ; 1953 ; Proceedings of the Physical Society. Section A Volume 66 ; 66 ; >
+#    au < doNotProcess ; doNotProcess ; 1954 ; Proceedings of the Physical Society. Section A Volume 67 ; 67 ; >
+#    au < doNotProcess ; doNotProcess ; 1955 ; Proceedings of the Physical Society. Section A Volume 68 ; 68 ; >
+#    au < doNotProcess ; doNotProcess ; 1956 ; Proceedings of the Physical Society. Section A Volume 69 ; 69 ; >
+#    au < doNotProcess ; doNotProcess ; 1957 ; Proceedings of the Physical Society. Section A Volume 70 ; 70 ; >
+#
+#  }
 
-  {
+#  {
+#
+#    title <
+#      name = Proceedings of the Physical Society. Section B ;
+#      issn = 0370-1301 ;
+#      issnl = 0370-1301
+#    >
+#
+#    param[journal_issn] = 0370-1301
+#    comment[split_from] = 0959-5309
+#    comment[merged_into] = 0370-1328
+#
+#    au < doNotProcess ; doNotProcess ; 1949 ; Proceedings of the Physical Society. Section B Volume 62 ; 62 ; >
+#    au < doNotProcess ; doNotProcess ; 1950 ; Proceedings of the Physical Society. Section B Volume 63 ; 63 ; >
+#    au < doNotProcess ; doNotProcess ; 1951 ; Proceedings of the Physical Society. Section B Volume 64 ; 64 ; >
+#    au < doNotProcess ; doNotProcess ; 1952 ; Proceedings of the Physical Society. Section B Volume 65 ; 65 ; >
+#    au < doNotProcess ; doNotProcess ; 1953 ; Proceedings of the Physical Society. Section B Volume 66 ; 66 ; >
+#    au < doNotProcess ; doNotProcess ; 1954 ; Proceedings of the Physical Society. Section B Volume 67 ; 67 ; >
+#    au < doNotProcess ; doNotProcess ; 1955 ; Proceedings of the Physical Society. Section B Volume 68 ; 68 ; >
+#    au < doNotProcess ; doNotProcess ; 1956 ; Proceedings of the Physical Society. Section B Volume 69 ; 69 ; >
+#    au < doNotProcess ; doNotProcess ; 1957 ; Proceedings of the Physical Society. Section B Volume 70 ; 70 ; >
+#
+#  }
 
-    title <
-      name = Proceedings of the Physical Society ;
-      issn = 0959-5309 ;
-      issnl = 0959-5309
-    >
+#  {
+#
+#    title <
+#      name = Pure and Applied Optics: Journal of the European Optical Society Part A ;
+#      issn = 0963-9659 ;
+#      eissn = 1361-6617 ;
+#      issnl = 0963-9659
+#    >
+#
+#    param[journal_issn] = 0963-9659
+#    comment[param] = print issn preferred
+#
+#    au < doNotProcess ; doNotProcess ; 1992 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1993 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1994 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1995 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1996 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1997 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1998 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 7 ; 7 ; > 
+#
+#  }
 
-    param[journal_issn] = 0959-5309
-    comment[continues] = 1478-7814
-    comment[split_into] = 0370-1298 and 0370-1301
+#  {
+#
+#    title <
+#      name = Quantum and Semiclassical Optics: Journal of the European Optical Society Part B ;
+#      issn = 1355-5111 ;
+#      eissn = 1361-6625 ;
+#      issnl = 1355-5111
+#    >
+#
+#    param[journal_issn] = 1355-5111
+#    comment[param] = print issn preferred
+#    comment[continues] = 0954-8998
+#    comment[continued_by] = 1464-4266 
+# 
+#    au < doNotProcess ; doNotProcess ; 1995 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1996 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 8 ; 8 ; > 
+#    au < doNotProcess ; doNotProcess ; 1997 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 9 ; 9 ; > 
+#    au < doNotProcess ; doNotProcess ; 1998 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 10 ; 10 ; > 
+#
+#  }
 
-    au < doNotProcess ; doNotProcess ; 1926 ; Proceedings of the Physical Society Volume 39 ; 39 ; >
-    au < doNotProcess ; doNotProcess ; 1927 ; Proceedings of the Physical Society Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 1928 ; Proceedings of the Physical Society Volume 41 ; 41 ; >
-    au < doNotProcess ; doNotProcess ; 1929 ; Proceedings of the Physical Society Volume 42 ; 42 ; >
-    au < doNotProcess ; doNotProcess ; 1930 ; Proceedings of the Physical Society Volume 43 ; 43 ; >
-    au < doNotProcess ; doNotProcess ; 1931 ; Proceedings of the Physical Society Volume 44 ; 44 ; >
-    au < doNotProcess ; doNotProcess ; 1932 ; Proceedings of the Physical Society Volume 45 ; 45 ; >
-    au < doNotProcess ; doNotProcess ; 1933 ; Proceedings of the Physical Society Volume 46 ; 46 ; >
-    au < doNotProcess ; doNotProcess ; 1934 ; Proceedings of the Physical Society Volume 47 ; 47 ; >
-    au < doNotProcess ; doNotProcess ; 1935 ; Proceedings of the Physical Society Volume 48 ; 48 ; >
-    au < doNotProcess ; doNotProcess ; 1936 ; Proceedings of the Physical Society Volume 49 ; 49 ; >
-    au < doNotProcess ; doNotProcess ; 1937 ; Proceedings of the Physical Society Volume 50 ; 50 ; >
-    au < doNotProcess ; doNotProcess ; 1938 ; Proceedings of the Physical Society Volume 51 ; 51 ; >
-    au < doNotProcess ; doNotProcess ; 1939 ; Proceedings of the Physical Society Volume 52 ; 52 ; >
-    au < doNotProcess ; doNotProcess ; 1940 ; Proceedings of the Physical Society Volume 53 ; 53 ; >
-    au < doNotProcess ; doNotProcess ; 1941 ; Proceedings of the Physical Society Volume 54 ; 54 ; >
-    au < doNotProcess ; doNotProcess ; 1942 ; Proceedings of the Physical Society Volume 55 ; 55 ; >
-    au < doNotProcess ; doNotProcess ; 1943 ; Proceedings of the Physical Society Volume 56 ; 56 ; >
-    au < doNotProcess ; doNotProcess ; 1944 ; Proceedings of the Physical Society Volume 57 ; 57 ; >
-    au < doNotProcess ; doNotProcess ; 1945 ; Proceedings of the Physical Society Volume 58 ; 58 ; >
-    au < doNotProcess ; doNotProcess ; 1946 ; Proceedings of the Physical Society Volume 59 ; 59 ; >
-    au < doNotProcess ; doNotProcess ; 1947 ; Proceedings of the Physical Society Volume 60 ; 60 ; >
-    au < doNotProcess ; doNotProcess ; 1948 ; Proceedings of the Physical Society Volume 61 ; 61 ; >
-
-  }
-
-  {
-
-    title <
-      name = Proceedings of the Physical Society of London ;
-      issn = 1478-7814 ;
-      issnl = 1478-7814
-    >
-
-    param[journal_issn] = 1478-7814
-    comment[continued_by] = 0959-5309
-
-    au < doNotProcess ; doNotProcess ; 1874 ; Proceedings of the Physical Society of London Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1875 ; Proceedings of the Physical Society of London Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1879 ; Proceedings of the Physical Society of London Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1880 ; Proceedings of the Physical Society of London Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1882 ; Proceedings of the Physical Society of London Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1884 ; Proceedings of the Physical Society of London Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1885 ; Proceedings of the Physical Society of London Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1886 ; Proceedings of the Physical Society of London Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1887 ; Proceedings of the Physical Society of London Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1888 ; Proceedings of the Physical Society of London Volume 10 ; 10 ; > 
-    au < doNotProcess ; doNotProcess ; 1890 ; Proceedings of the Physical Society of London Volume 11 ; 11 ; > 
-    au < doNotProcess ; doNotProcess ; 1892 ; Proceedings of the Physical Society of London Volume 12 ; 12 ; > 
-    au < doNotProcess ; doNotProcess ; 1894 ; Proceedings of the Physical Society of London Volume 13 ; 13 ; > 
-    au < doNotProcess ; doNotProcess ; 1895 ; Proceedings of the Physical Society of London Volume 14 ; 14 ; > 
-    au < doNotProcess ; doNotProcess ; 1896 ; Proceedings of the Physical Society of London Volume 15 ; 15 ; > 
-    au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Physical Society of London Volume 16 ; 16 ; > 
-    au < doNotProcess ; doNotProcess ; 1899 ; Proceedings of the Physical Society of London Volume 17 ; 17 ; > 
-    au < doNotProcess ; doNotProcess ; 1901 ; Proceedings of the Physical Society of London Volume 18 ; 18 ; > 
-    au < doNotProcess ; doNotProcess ; 1903 ; Proceedings of the Physical Society of London Volume 19 ; 19 ; > 
-    au < doNotProcess ; doNotProcess ; 1906 ; Proceedings of the Physical Society of London Volume 20 ; 20 ; > 
-    au < doNotProcess ; doNotProcess ; 1907 ; Proceedings of the Physical Society of London Volume 21 ; 21 ; > 
-    au < doNotProcess ; doNotProcess ; 1909 ; Proceedings of the Physical Society of London Volume 22 ; 22 ; > 
-    au < doNotProcess ; doNotProcess ; 1910 ; Proceedings of the Physical Society of London Volume 23 ; 23 ; > 
-    au < doNotProcess ; doNotProcess ; 1911 ; Proceedings of the Physical Society of London Volume 24 ; 24 ; > 
-    au < doNotProcess ; doNotProcess ; 1912 ; Proceedings of the Physical Society of London Volume 25 ; 25 ; > 
-    au < doNotProcess ; doNotProcess ; 1913 ; Proceedings of the Physical Society of London Volume 26 ; 26 ; > 
-    au < doNotProcess ; doNotProcess ; 1914 ; Proceedings of the Physical Society of London Volume 27 ; 27 ; > 
-    au < doNotProcess ; doNotProcess ; 1915 ; Proceedings of the Physical Society of London Volume 28 ; 28 ; > 
-    au < doNotProcess ; doNotProcess ; 1916 ; Proceedings of the Physical Society of London Volume 29 ; 29 ; > 
-    au < doNotProcess ; doNotProcess ; 1917 ; Proceedings of the Physical Society of London Volume 30 ; 30 ; > 
-    au < doNotProcess ; doNotProcess ; 1918 ; Proceedings of the Physical Society of London Volume 31 ; 31 ; > 
-    au < doNotProcess ; doNotProcess ; 1919 ; Proceedings of the Physical Society of London Volume 32 ; 32 ; > 
-    au < doNotProcess ; doNotProcess ; 1920 ; Proceedings of the Physical Society of London Volume 33 ; 33 ; > 
-    au < doNotProcess ; doNotProcess ; 1921 ; Proceedings of the Physical Society of London Volume 34 ; 34 ; > 
-    au < doNotProcess ; doNotProcess ; 1922 ; Proceedings of the Physical Society of London Volume 35 ; 35 ; > 
-    au < doNotProcess ; doNotProcess ; 1923 ; Proceedings of the Physical Society of London Volume 36 ; 36 ; > 
-    au < doNotProcess ; doNotProcess ; 1924 ; Proceedings of the Physical Society of London Volume 37 ; 37 ; > 
-    au < doNotProcess ; doNotProcess ; 1925 ; Proceedings of the Physical Society of London Volume 38 ; 38 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Proceedings of the Physical Society. Section A ;
-      issn = 0370-1298 ;
-      issnl = 0370-1298
-    >
-
-    param[journal_issn] = 0370-1298
-    comment[split_from] = 0959-5309
-    comment[merged_into] = 0370-1328
-
-    au < doNotProcess ; doNotProcess ; 1949 ; Proceedings of the Physical Society. Section A Volume 62 ; 62 ; >
-    au < doNotProcess ; doNotProcess ; 1950 ; Proceedings of the Physical Society. Section A Volume 63 ; 63 ; >
-    au < doNotProcess ; doNotProcess ; 1951 ; Proceedings of the Physical Society. Section A Volume 64 ; 64 ; >
-    au < doNotProcess ; doNotProcess ; 1952 ; Proceedings of the Physical Society. Section A Volume 65 ; 65 ; >
-    au < doNotProcess ; doNotProcess ; 1953 ; Proceedings of the Physical Society. Section A Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 1954 ; Proceedings of the Physical Society. Section A Volume 67 ; 67 ; >
-    au < doNotProcess ; doNotProcess ; 1955 ; Proceedings of the Physical Society. Section A Volume 68 ; 68 ; >
-    au < doNotProcess ; doNotProcess ; 1956 ; Proceedings of the Physical Society. Section A Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 1957 ; Proceedings of the Physical Society. Section A Volume 70 ; 70 ; >
-
-  }
-
-  {
-
-    title <
-      name = Proceedings of the Physical Society. Section B ;
-      issn = 0370-1301 ;
-      issnl = 0370-1301
-    >
-
-    param[journal_issn] = 0370-1301
-    comment[split_from] = 0959-5309
-    comment[merged_into] = 0370-1328
-
-    au < doNotProcess ; doNotProcess ; 1949 ; Proceedings of the Physical Society. Section B Volume 62 ; 62 ; >
-    au < doNotProcess ; doNotProcess ; 1950 ; Proceedings of the Physical Society. Section B Volume 63 ; 63 ; >
-    au < doNotProcess ; doNotProcess ; 1951 ; Proceedings of the Physical Society. Section B Volume 64 ; 64 ; >
-    au < doNotProcess ; doNotProcess ; 1952 ; Proceedings of the Physical Society. Section B Volume 65 ; 65 ; >
-    au < doNotProcess ; doNotProcess ; 1953 ; Proceedings of the Physical Society. Section B Volume 66 ; 66 ; >
-    au < doNotProcess ; doNotProcess ; 1954 ; Proceedings of the Physical Society. Section B Volume 67 ; 67 ; >
-    au < doNotProcess ; doNotProcess ; 1955 ; Proceedings of the Physical Society. Section B Volume 68 ; 68 ; >
-    au < doNotProcess ; doNotProcess ; 1956 ; Proceedings of the Physical Society. Section B Volume 69 ; 69 ; >
-    au < doNotProcess ; doNotProcess ; 1957 ; Proceedings of the Physical Society. Section B Volume 70 ; 70 ; >
-
-  }
-
-  {
-
-    title <
-      name = Pure and Applied Optics: Journal of the European Optical Society Part A ;
-      issn = 0963-9659 ;
-      eissn = 1361-6617 ;
-      issnl = 0963-9659
-    >
-
-    param[journal_issn] = 0963-9659
-    comment[param] = print issn preferred
-
-    au < doNotProcess ; doNotProcess ; 1992 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1993 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1994 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1995 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1996 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1997 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 6 ; 6 ; > 
-    au < doNotProcess ; doNotProcess ; 1998 ; Pure and Applied Optics: Journal of the European Optical Society Part A Volume 7 ; 7 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Quantum and Semiclassical Optics: Journal of the European Optical Society Part B ;
-      issn = 1355-5111 ;
-      eissn = 1361-6625 ;
-      issnl = 1355-5111
-    >
-
-    param[journal_issn] = 1355-5111
-    comment[param] = print issn preferred
-    comment[continues] = 0954-8998
-    comment[continued_by] = 1464-4266 
- 
-    au < doNotProcess ; doNotProcess ; 1995 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 7 ; 7 ; > 
-    au < doNotProcess ; doNotProcess ; 1996 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 8 ; 8 ; > 
-    au < doNotProcess ; doNotProcess ; 1997 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 9 ; 9 ; > 
-    au < doNotProcess ; doNotProcess ; 1998 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 10 ; 10 ; > 
-
-  }
-
-  {
-
-    title <
-      name = Quantum Optics: Journal of the European Optical Society Part B ;
-      issn = 0954-8998 ;
-      issnl = 0954-8998
-    >
-
-    param[journal_issn] = 0954-8998
-
-    au < doNotProcess ; doNotProcess ; 1989 ; Quantum Optics: Journal of the European Optical Society Part B Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1990 ; Quantum Optics: Journal of the European Optical Society Part B Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1991 ; Quantum Optics: Journal of the European Optical Society Part B Volume 3 ; 3 ; > 
-    au < doNotProcess ; doNotProcess ; 1992 ; Quantum Optics: Journal of the European Optical Society Part B Volume 4 ; 4 ; > 
-    au < doNotProcess ; doNotProcess ; 1993 ; Quantum Optics: Journal of the European Optical Society Part B Volume 5 ; 5 ; > 
-    au < doNotProcess ; doNotProcess ; 1994 ; Quantum Optics: Journal of the European Optical Society Part B Volume 6 ; 6 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Quantum Optics: Journal of the European Optical Society Part B ;
+#      issn = 0954-8998 ;
+#      issnl = 0954-8998
+#    >
+#
+#    param[journal_issn] = 0954-8998
+#
+#    au < doNotProcess ; doNotProcess ; 1989 ; Quantum Optics: Journal of the European Optical Society Part B Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1990 ; Quantum Optics: Journal of the European Optical Society Part B Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1991 ; Quantum Optics: Journal of the European Optical Society Part B Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1992 ; Quantum Optics: Journal of the European Optical Society Part B Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1993 ; Quantum Optics: Journal of the European Optical Society Part B Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1994 ; Quantum Optics: Journal of the European Optical Society Part B Volume 6 ; 6 ; > 
+#
+#  }
 
   {
 
@@ -3920,22 +3920,22 @@
 
   }
 
-  {
-
-    title <
-      name = Review of Physics in Technology ;
-      issn = 0034-6683 ;
-      issnl = 0034-6683
-    >
-
-    param[journal_issn] = 0034-6683
-    comment[continued_by] = 0305-4624
-
-    au < doNotProcess ; doNotProcess ; 1970 ; Review of Physics in Technology Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 1971 ; Review of Physics in Technology Volume 2 ; 2 ; > 
-    au < doNotProcess ; doNotProcess ; 1972 ; Review of Physics in Technology Volume 3 ; 3 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Review of Physics in Technology ;
+#      issn = 0034-6683 ;
+#      issnl = 0034-6683
+#    >
+#
+#    param[journal_issn] = 0034-6683
+#    comment[continued_by] = 0305-4624
+#
+#    au < doNotProcess ; doNotProcess ; 1970 ; Review of Physics in Technology Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Review of Physics in Technology Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Review of Physics in Technology Volume 3 ; 3 ; > 
+#
+#  }
 
   {
 
@@ -4132,67 +4132,67 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Transactions of the Optical Society ;
+#      issn = 1475-4878 ;
+#      issnl = 1475-4878
+#    >
+#
+#    param[journal_issn] = 1475-4878
+#    comment[param] = print issn preferred
+#
+#    au < doNotProcess ; doNotProcess ; 1899 ; Transactions of the Optical Society Volume 1 ; 1  ; > 
+#    au < doNotProcess ; doNotProcess ; 1900 ; Transactions of the Optical Society Volume 2 ; 2  ; > 
+#    au < doNotProcess ; doNotProcess ; 1901 ; Transactions of the Optical Society Volume 3 ; 3  ; > 
+#    au < doNotProcess ; doNotProcess ; 1902 ; Transactions of the Optical Society Volume 4 ; 4  ; > 
+#    au < doNotProcess ; doNotProcess ; 1903 ; Transactions of the Optical Society Volume 5 ; 5  ; > 
+#    au < doNotProcess ; doNotProcess ; 1904 ; Transactions of the Optical Society Volume 6 ; 6  ; > 
+#    au < doNotProcess ; doNotProcess ; 1905 ; Transactions of the Optical Society Volume 7 ; 7  ; > 
+#    au < doNotProcess ; doNotProcess ; 1906 ; Transactions of the Optical Society Volume 8 ; 8  ; > 
+#    au < doNotProcess ; doNotProcess ; 1907 ; Transactions of the Optical Society Volume 9 ; 9  ; > 
+#    au < doNotProcess ; doNotProcess ; 1908 ; Transactions of the Optical Society Volume 10 ; 10  ; > 
+#    au < doNotProcess ; doNotProcess ; 1909 ; Transactions of the Optical Society Volume 11 ; 11  ; > 
+#    au < doNotProcess ; doNotProcess ; 1910 ; Transactions of the Optical Society Volume 12 ; 12  ; > 
+#    au < doNotProcess ; doNotProcess ; 1911 ; Transactions of the Optical Society Volume 13 ; 13  ; > 
+#    au < doNotProcess ; doNotProcess ; 1913 ; Transactions of the Optical Society Volume 14 ; 14  ; > 
+#    au < doNotProcess ; doNotProcess ; 1914 ; Transactions of the Optical Society Volume 15 ; 15  ; > 
+#    au < doNotProcess ; doNotProcess ; 1915 ; Transactions of the Optical Society Volume 16 ; 16  ; > 
+#    au < doNotProcess ; doNotProcess ; 1916 ; Transactions of the Optical Society Volume 17 ; 17  ; > 
+#    au < doNotProcess ; doNotProcess ; 1917 ; Transactions of the Optical Society Volume 18 ; 18  ; > 
+#    au < doNotProcess ; doNotProcess ; 1918 ; Transactions of the Optical Society Volume 19 ; 19  ; > 
+#    au < doNotProcess ; doNotProcess ; 1919 ; Transactions of the Optical Society Volume 20 ; 20  ; > 
+#    au < doNotProcess ; doNotProcess ; 1920 ; Transactions of the Optical Society Volume 21 ; 21  ; > 
+#    au < doNotProcess ; doNotProcess ; 1921 ; Transactions of the Optical Society Volume 22 ; 22  ; > 
+#    au < doNotProcess ; doNotProcess ; 1922 ; Transactions of the Optical Society Volume 23 ; 23  ; > 
+#    au < doNotProcess ; doNotProcess ; 1923 ; Transactions of the Optical Society Volume 24 ; 24  ; > 
+#    au < doNotProcess ; doNotProcess ; 1924 ; Transactions of the Optical Society Volume 25 ; 25  ; > 
+#    au < doNotProcess ; doNotProcess ; 1925 ; Transactions of the Optical Society Volume 26 ; 26  ; > 
+#    au < doNotProcess ; doNotProcess ; 1926 ; Transactions of the Optical Society Volume 27 ; 27  ; > 
+#    au < doNotProcess ; doNotProcess ; 1927 ; Transactions of the Optical Society Volume 28 ; 28  ; > 
+#    au < doNotProcess ; doNotProcess ; 1928 ; Transactions of the Optical Society Volume 29 ; 29  ; > 
+#    au < doNotProcess ; doNotProcess ; 1929 ; Transactions of the Optical Society Volume 30 ; 30  ; > 
+#    au < doNotProcess ; doNotProcess ; 1930 ; Transactions of the Optical Society Volume 31 ; 31  ; > 
+#    au < doNotProcess ; doNotProcess ; 1931 ; Transactions of the Optical Society Volume 32 ; 32  ; > 
+#    au < doNotProcess ; doNotProcess ; 1932 ; Transactions of the Optical Society Volume 33 ; 33  ; >
+#
+#  }
 
-    title <
-      name = Transactions of the Optical Society ;
-      issn = 1475-4878 ;
-      issnl = 1475-4878
-    >
-
-    param[journal_issn] = 1475-4878
-    comment[param] = print issn preferred
-
-    au < doNotProcess ; doNotProcess ; 1899 ; Transactions of the Optical Society Volume 1 ; 1  ; > 
-    au < doNotProcess ; doNotProcess ; 1900 ; Transactions of the Optical Society Volume 2 ; 2  ; > 
-    au < doNotProcess ; doNotProcess ; 1901 ; Transactions of the Optical Society Volume 3 ; 3  ; > 
-    au < doNotProcess ; doNotProcess ; 1902 ; Transactions of the Optical Society Volume 4 ; 4  ; > 
-    au < doNotProcess ; doNotProcess ; 1903 ; Transactions of the Optical Society Volume 5 ; 5  ; > 
-    au < doNotProcess ; doNotProcess ; 1904 ; Transactions of the Optical Society Volume 6 ; 6  ; > 
-    au < doNotProcess ; doNotProcess ; 1905 ; Transactions of the Optical Society Volume 7 ; 7  ; > 
-    au < doNotProcess ; doNotProcess ; 1906 ; Transactions of the Optical Society Volume 8 ; 8  ; > 
-    au < doNotProcess ; doNotProcess ; 1907 ; Transactions of the Optical Society Volume 9 ; 9  ; > 
-    au < doNotProcess ; doNotProcess ; 1908 ; Transactions of the Optical Society Volume 10 ; 10  ; > 
-    au < doNotProcess ; doNotProcess ; 1909 ; Transactions of the Optical Society Volume 11 ; 11  ; > 
-    au < doNotProcess ; doNotProcess ; 1910 ; Transactions of the Optical Society Volume 12 ; 12  ; > 
-    au < doNotProcess ; doNotProcess ; 1911 ; Transactions of the Optical Society Volume 13 ; 13  ; > 
-    au < doNotProcess ; doNotProcess ; 1913 ; Transactions of the Optical Society Volume 14 ; 14  ; > 
-    au < doNotProcess ; doNotProcess ; 1914 ; Transactions of the Optical Society Volume 15 ; 15  ; > 
-    au < doNotProcess ; doNotProcess ; 1915 ; Transactions of the Optical Society Volume 16 ; 16  ; > 
-    au < doNotProcess ; doNotProcess ; 1916 ; Transactions of the Optical Society Volume 17 ; 17  ; > 
-    au < doNotProcess ; doNotProcess ; 1917 ; Transactions of the Optical Society Volume 18 ; 18  ; > 
-    au < doNotProcess ; doNotProcess ; 1918 ; Transactions of the Optical Society Volume 19 ; 19  ; > 
-    au < doNotProcess ; doNotProcess ; 1919 ; Transactions of the Optical Society Volume 20 ; 20  ; > 
-    au < doNotProcess ; doNotProcess ; 1920 ; Transactions of the Optical Society Volume 21 ; 21  ; > 
-    au < doNotProcess ; doNotProcess ; 1921 ; Transactions of the Optical Society Volume 22 ; 22  ; > 
-    au < doNotProcess ; doNotProcess ; 1922 ; Transactions of the Optical Society Volume 23 ; 23  ; > 
-    au < doNotProcess ; doNotProcess ; 1923 ; Transactions of the Optical Society Volume 24 ; 24  ; > 
-    au < doNotProcess ; doNotProcess ; 1924 ; Transactions of the Optical Society Volume 25 ; 25  ; > 
-    au < doNotProcess ; doNotProcess ; 1925 ; Transactions of the Optical Society Volume 26 ; 26  ; > 
-    au < doNotProcess ; doNotProcess ; 1926 ; Transactions of the Optical Society Volume 27 ; 27  ; > 
-    au < doNotProcess ; doNotProcess ; 1927 ; Transactions of the Optical Society Volume 28 ; 28  ; > 
-    au < doNotProcess ; doNotProcess ; 1928 ; Transactions of the Optical Society Volume 29 ; 29  ; > 
-    au < doNotProcess ; doNotProcess ; 1929 ; Transactions of the Optical Society Volume 30 ; 30  ; > 
-    au < doNotProcess ; doNotProcess ; 1930 ; Transactions of the Optical Society Volume 31 ; 31  ; > 
-    au < doNotProcess ; doNotProcess ; 1931 ; Transactions of the Optical Society Volume 32 ; 32  ; > 
-    au < doNotProcess ; doNotProcess ; 1932 ; Transactions of the Optical Society Volume 33 ; 33  ; >
-
-  }
-
-  {
-
-    title <
-      name = Translational Materials Research ;
-      eissn = 2053-1613 ;
-      issnl = 2053-1613
-    >
-    
-    param[journal_issn] = 2053-1613
-    comment[param] = eissn preferred
-
-    au < doNotProcess ; doNotProcess ; 2014 ; Translational Materials Research Volume 1 ; 1 ; > 
-    au < doNotProcess ; doNotProcess ; 2015 ; Translational Materials Research Volume 2 ; 2 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = Translational Materials Research ;
+#      eissn = 2053-1613 ;
+#      issnl = 2053-1613
+#    >
+#    
+#    param[journal_issn] = 2053-1613
+#    comment[param] = eissn preferred
+#
+#    au < doNotProcess ; doNotProcess ; 2014 ; Translational Materials Research Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 2015 ; Translational Materials Research Volume 2 ; 2 ; > 
+#
+#  }
 
 }
