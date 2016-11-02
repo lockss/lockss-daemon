@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>25</string>
+        <string>26</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -209,6 +209,7 @@
       <string>/multimediaPlayer.aspx\?</string>
       <string>/errors/404\.aspx\?aspxerrorpath=</string>
       <string>silverchaircdn\.com/(CSS|Images)/</string>
+      <string>"\?v=[0-9]+$"</string>
     </list>
   </entry>
   <entry>
@@ -219,6 +220,7 @@
       <string>"/multimediaPlayer.aspx\?", 0</string>
       <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
       <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
+      <string>"\?v=[0-9]+$", 0</string>
     </list>
   </entry> 
 </map>

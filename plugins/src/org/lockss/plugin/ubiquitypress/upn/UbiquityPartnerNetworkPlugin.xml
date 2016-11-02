@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -37,6 +37,7 @@
     <list>
       <string>2,"^https?://%s%sjms/public/journals/1/journalFavicon_en_US.ico$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
+      <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
     </list>

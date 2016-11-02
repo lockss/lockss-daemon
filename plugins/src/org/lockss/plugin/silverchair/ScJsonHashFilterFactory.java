@@ -57,7 +57,7 @@ public class ScJsonHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
 	Reader reader = FilterUtil.getReader(in, encoding);
-	Reader httpFilter = new StringFilter(reader, "\u0026", "&");
+	Reader httpFilter = new StringFilter(reader, "\\u0026", "&");
 	return new ReaderInputStream(httpFilter, encoding);
   }
 }

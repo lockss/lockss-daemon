@@ -46,7 +46,7 @@ public class TestScJsonFilterFactory extends LockssTestCase {
   //HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
   
   private static final String encoded =
-		 "{\"d\":\"/pdfaccess.ashx?ResourceID=7158716\u0026PDFSource=24\"}";
+		 "{\"d\":\"/pdfaccess.ashx?ResourceID=7158716\\u0026PDFSource=24\"}";
   private static final String encodedFiltered =
   		 "{\"d\":\"/pdfaccess.ashx?ResourceID=7158716&PDFSource=24\"}";
   
