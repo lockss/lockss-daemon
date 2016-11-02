@@ -55,6 +55,15 @@
       au < notReady ; 2007 ; Archivaria 63-64 (2007) ; 63-64 ; 2007 >
       au < notReady ; 2008 ; Archivaria 65-66 (2008) ; 65-66 ; 2008 >
 
+      au < exists ; 2009 ; Archivaria 67-68 (2009) ; 67-68 ; 2009 >
+      au < exists ; 2010 ; Archivaria 69-70 (2010) ; 69-70 ; 2010 >
+      au < exists ; 2011 ; Archivaria 71-72 (2011) ; 71-72 ; 2011 >
+      au < exists ; 2012 ; Archivaria 73-74 (2012) ; 73-74 ; 2012 >
+      au < exists ; 2013 ; Archivaria 75-76 (2013) ; 75-76 ; 2013 >
+      au < exists ; 2014 ; Archivaria 77-78 (2014) ; 77-78 ; 2014 >
+      au < exists ; 2015 ; Archivaria 79-80 (2015) ; 79-80 ; 2015 >
+      au < exists ; 2016 ; Archivaria 81-82 (2016) ; 81-82 ; 2016 >
+
     }
     
     {
@@ -246,6 +255,21 @@
       # moved to http://journals.sfu.ca/present/
   
       au < down ; 2005 ; Simon Fraser University Demo Journal Volume 2005 ; 2005 ; 2005 >
+      
+    }
+
+    {
+
+      title <
+        name = Open Journal Systems Demonstration Journal
+      >
+        
+      param[base_url] = http://journals.sfu.ca/present/
+      param[journal_id] = demojournal
+  
+      # name changed 
+  
+      au < exists ; 2016 ; Open Journal Systems Demonstration Journal Volume 1 ; 1 ; 2016 >
       
     }
 
