@@ -107,6 +107,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
     cu.setContentSize(LEN);
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     contentValidator.validate(cu);
+    
     cu = new MockCachedUrl(urlStr3, mau);
     cu.setContent(TEXT);
     cu.setContentSize(LEN);
@@ -117,6 +118,10 @@ public class TestHighWireContentValidator extends LockssTestCase {
     } catch (Exception e) {
       // okay, fall-thru
     }
+    // This test should pass
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_URL, urlStr1);
+    contentValidator.validate(cu);
+    
     cu = new MockCachedUrl(urlStr4, mau);
     cu.setContent(TEXT);
     cu.setContentSize(LEN);
