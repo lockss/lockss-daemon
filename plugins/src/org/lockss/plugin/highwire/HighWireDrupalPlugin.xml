@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>57</string>
+    <string>58</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -132,6 +132,8 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <!-- otherwise, all content from glencoesoftware CDN -->
+      <string>1,"^https?://.+([.]glencoesoftware[.]com)/.+"</string>
     </list>
   </entry>
   <entry>
@@ -226,5 +228,13 @@
          -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.glencoesoftware\.com</string>
+    </list>
   </entry>
 </map>
