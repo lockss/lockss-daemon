@@ -64,6 +64,9 @@ public class AAASHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFac
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "promo"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "foot"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "secondary"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", regexStr),
       };
     
