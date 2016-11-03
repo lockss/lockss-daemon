@@ -222,43 +222,43 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = British Ceramic Transactions ;
+#      issn = 0967-9782 ;
+#      eissn = 1743-2766 ;
+#      issnl = 0967-9782 
+#    >
+#
+#    param[journal_id] = bct 
+#    comment[continued_by] = 1743-6753
+#
+#    au < doNotProcess ; doNotProcess ; 1999 ; British Ceramic Transactions Volume 98 ; 98 ; >
+#    au < doNotProcess ; doNotProcess ; 2000 ; British Ceramic Transactions Volume 99 ; 99 ; >
+#    au < doNotProcess ; doNotProcess ; 2001 ; British Ceramic Transactions Volume 100 ; 100 ; >
+#    au < doNotProcess ; doNotProcess ; 2002 ; British Ceramic Transactions Volume 101 ; 101 ; >
+#    au < doNotProcess ; doNotProcess ; 2003 ; British Ceramic Transactions Volume 102 ; 102 ; >
+#    au < doNotProcess ; doNotProcess ; 2004 ; British Ceramic Transactions Volume 103 ; 103 ; >
+#
+#  }
 
-    title <
-      name = British Ceramic Transactions ;
-      issn = 0967-9782 ;
-      eissn = 1743-2766 ;
-      issnl = 0967-9782 
-    >
-
-    param[journal_id] = bct 
-    comment[continued_by] = 1743-6753
-
-    au < doNotProcess ; doNotProcess ; 1999 ; British Ceramic Transactions Volume 98 ; 98 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; British Ceramic Transactions Volume 99 ; 99 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; British Ceramic Transactions Volume 100 ; 100 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; British Ceramic Transactions Volume 101 ; 101 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; British Ceramic Transactions Volume 102 ; 102 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; British Ceramic Transactions Volume 103 ; 103 ; >
-
-  }
-
-  {
-
-    title <
-      name = British Corrosion Journal ;
-      issn = 0007-0599 
-    >
-
-    param[journal_id] = bcj
-    comment[continued_by] = 1478-422X
-
-    au < doNotProcess ; doNotProcess ; 1999 ; British Corrosion Journal Volume 34 ; 34 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; British Corrosion Journal Volume 35 ; 35 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; British Corrosion Journal Volume 36 ; 36 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; British Corrosion Journal Volume 37 ; 37 ; >
-
-  }
+#  {
+#
+#    title <
+#      name = British Corrosion Journal ;
+#      issn = 0007-0599 
+#    >
+#
+#    param[journal_id] = bcj
+#    comment[continued_by] = 1478-422X
+#
+#    au < doNotProcess ; doNotProcess ; 1999 ; British Corrosion Journal Volume 34 ; 34 ; >
+#    au < doNotProcess ; doNotProcess ; 2000 ; British Corrosion Journal Volume 35 ; 35 ; >
+#    au < doNotProcess ; doNotProcess ; 2001 ; British Corrosion Journal Volume 36 ; 36 ; >
+#    au < doNotProcess ; doNotProcess ; 2002 ; British Corrosion Journal Volume 37 ; 37 ; >
+#
+#  }
 
   {
 
@@ -344,44 +344,44 @@
 
   }
 
-  {
-
-    title <
-      name = Brontë Society Transactions: The Journal of Brontë Studies ;
-      issn = 0309-7765 
-    >
-
-    param[journal_id] = bronsoc
-    comment[continued_by] = 1474-8932
- 
-    au < doNotProcess ; doNotProcess ; 1895-1898 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1899-1906 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1906 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 1907-1912 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1913-1919 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1920-1925 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1926-1931 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 1932-1935 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 1936-1939 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 1940-1945 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 1946-1950 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 1951-1955 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 1956-1960 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 1961-1965 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 1966-1970 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 1971-1975 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 1976-1980 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 1981-1985 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 1986-1989 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 19 ; 19 ; >
-    au < doNotProcess ; doNotProcess ; 1990-1993 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 1993-1996 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 26 ; 26 ; >
-
-  }
+#  {
+#
+#    title <
+#      name = Brontë Society Transactions: The Journal of Brontë Studies ;
+#      issn = 0309-7765 
+#    >
+#
+#    param[journal_id] = bronsoc
+#    comment[continued_by] = 1474-8932
+# 
+#    au < doNotProcess ; doNotProcess ; 1895-1898 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 1 ; 1 ; >
+#    au < doNotProcess ; doNotProcess ; 1899-1906 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 2 ; 2 ; >
+#    au < doNotProcess ; doNotProcess ; 1906 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 3 ; 3 ; >
+#    au < doNotProcess ; doNotProcess ; 1907-1912 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 4 ; 4 ; >
+#    au < doNotProcess ; doNotProcess ; 1913-1919 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 5 ; 5 ; >
+#    au < doNotProcess ; doNotProcess ; 1920-1925 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 6 ; 6 ; >
+#    au < doNotProcess ; doNotProcess ; 1926-1931 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 7 ; 7 ; >
+#    au < doNotProcess ; doNotProcess ; 1932-1935 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 8 ; 8 ; >
+#    au < doNotProcess ; doNotProcess ; 1936-1939 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 9 ; 9 ; >
+#    au < doNotProcess ; doNotProcess ; 1940-1945 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 10 ; 10 ; >
+#    au < doNotProcess ; doNotProcess ; 1946-1950 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 11 ; 11 ; >
+#    au < doNotProcess ; doNotProcess ; 1951-1955 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 12 ; 12 ; >
+#    au < doNotProcess ; doNotProcess ; 1956-1960 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 13 ; 13 ; >
+#    au < doNotProcess ; doNotProcess ; 1961-1965 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 14 ; 14 ; >
+#    au < doNotProcess ; doNotProcess ; 1966-1970 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 15 ; 15 ; >
+#    au < doNotProcess ; doNotProcess ; 1971-1975 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 16 ; 16 ; >
+#    au < doNotProcess ; doNotProcess ; 1976-1980 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 17 ; 17 ; >
+#    au < doNotProcess ; doNotProcess ; 1981-1985 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 18 ; 18 ; >
+#    au < doNotProcess ; doNotProcess ; 1986-1989 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 19 ; 19 ; >
+#    au < doNotProcess ; doNotProcess ; 1990-1993 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 20 ; 20 ; >
+#    au < doNotProcess ; doNotProcess ; 1993-1996 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 21 ; 21 ; >
+#    au < doNotProcess ; doNotProcess ; 1997 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 22 ; 22 ; >
+#    au < doNotProcess ; doNotProcess ; 1998 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 23 ; 23 ; >
+#    au < doNotProcess ; doNotProcess ; 1999 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 24 ; 24 ; >
+#    au < doNotProcess ; doNotProcess ; 2000 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 25 ; 25 ; >
+#    au < doNotProcess ; doNotProcess ; 2001 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 26 ; 26 ; >
+#
+#  }
 
   {
 
@@ -1354,22 +1354,22 @@
 
   }
 
-  {
-
-    title <
-      name = Gwerin: A Half-Yearly Journal of Folk Life  ;
-      issn = 0434-9725 ;
-      issnl = 0434-9725 
-    >
-
-    param[journal_id] = gwr 
-    comment[continued_by] = 0430-8778
-
-    au < doNotProcess ; doNotProcess ; 1956-1957 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1958-1959 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 1960-1962 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 3 ; 3 ; >
-
-  }
+#  {
+#
+#    title <
+#      name = Gwerin: A Half-Yearly Journal of Folk Life  ;
+#      issn = 0434-9725 ;
+#      issnl = 0434-9725 
+#    >
+#
+#    param[journal_id] = gwr 
+#    comment[continued_by] = 0430-8778
+#
+#    au < doNotProcess ; doNotProcess ; 1956-1957 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 1 ; 1 ; >
+#    au < doNotProcess ; doNotProcess ; 1958-1959 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 2 ; 2 ; >
+#    au < doNotProcess ; doNotProcess ; 1960-1962 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 3 ; 3 ; >
+#
+#  }
 
   {
 
@@ -1796,52 +1796,52 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = International Metallurgical Reviews ;
+#      issn = 0367-9020 ;
+#      issnl = 0367-9020 
+#    >
+#
+#    param[journal_id] = imtlr 
+#    comment[continues] = 0076-6690
+#    comment[continued_by] = 0308-4590
+#    comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
+#    
+#    au < doNotProcess ; doNotProcess ; 1972 ; International Metallurgical Reviews Volume 17 ; 17 ; >
+#    au < doNotProcess ; doNotProcess ; 1973 ; International Metallurgical Reviews Volume 18 ; 18 ; >
+#    au < doNotProcess ; doNotProcess ; 1974 ; International Metallurgical Reviews Volume 19 ; 19 ; >
+#    au < doNotProcess ; doNotProcess ; 1975 ; International Metallurgical Reviews Volume 20 ; 20 ; >
+#
+#  }
 
-    title <
-      name = International Metallurgical Reviews ;
-      issn = 0367-9020 ;
-      issnl = 0367-9020 
-    >
-
-    param[journal_id] = imtlr 
-    comment[continues] = 0076-6690
-    comment[continued_by] = 0308-4590
-    comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
-    
-    au < doNotProcess ; doNotProcess ; 1972 ; International Metallurgical Reviews Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 1973 ; International Metallurgical Reviews Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 1974 ; International Metallurgical Reviews Volume 19 ; 19 ; >
-    au < doNotProcess ; doNotProcess ; 1975 ; International Metallurgical Reviews Volume 20 ; 20 ; >
-
-  }
-
-  {
-
-    title <
-      name = International Metals Reviews ;
-      issn = 0308-4590 ;
-      issnl = 0308-4590  
-    >
-
-    param[journal_id] = imtr 
-    comment[continues] = 0367-9020
-    comment[continued_by] = 0950-6608 
-    comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
-    
-    au < doNotProcess ; doNotProcess ; 1976 ; International Metals Reviews Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 1977 ; International Metals Reviews Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 1978 ; International Metals Reviews Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 1979 ; International Metals Reviews Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 1980 ; International Metals Reviews Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 1981 ; International Metals Reviews Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 1982 ; International Metals Reviews Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 1983 ; International Metals Reviews Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 1984 ; International Metals Reviews Volume 29 ; 29 ; >
-    au < doNotProcess ; doNotProcess ; 1985 ; International Metals Reviews Volume 30 ; 30 ; >
-    au < doNotProcess ; doNotProcess ; 1986 ; International Metals Reviews Volume 31 ; 31 ; > 
-
-  }
+#  {
+#
+#    title <
+#      name = International Metals Reviews ;
+#      issn = 0308-4590 ;
+#      issnl = 0308-4590  
+#    >
+#
+#    param[journal_id] = imtr 
+#    comment[continues] = 0367-9020
+#    comment[continued_by] = 0950-6608 
+#    comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
+#    
+#    au < doNotProcess ; doNotProcess ; 1976 ; International Metals Reviews Volume 21 ; 21 ; >
+#    au < doNotProcess ; doNotProcess ; 1977 ; International Metals Reviews Volume 22 ; 22 ; >
+#    au < doNotProcess ; doNotProcess ; 1978 ; International Metals Reviews Volume 23 ; 23 ; >
+#    au < doNotProcess ; doNotProcess ; 1979 ; International Metals Reviews Volume 24 ; 24 ; >
+#    au < doNotProcess ; doNotProcess ; 1980 ; International Metals Reviews Volume 25 ; 25 ; >
+#    au < doNotProcess ; doNotProcess ; 1981 ; International Metals Reviews Volume 26 ; 26 ; >
+#    au < doNotProcess ; doNotProcess ; 1982 ; International Metals Reviews Volume 27 ; 27 ; >
+#    au < doNotProcess ; doNotProcess ; 1983 ; International Metals Reviews Volume 28 ; 28 ; >
+#    au < doNotProcess ; doNotProcess ; 1984 ; International Metals Reviews Volume 29 ; 29 ; >
+#    au < doNotProcess ; doNotProcess ; 1985 ; International Metals Reviews Volume 30 ; 30 ; >
+#    au < doNotProcess ; doNotProcess ; 1986 ; International Metals Reviews Volume 31 ; 31 ; > 
+#
+#  }
 
   {
 

@@ -1775,27 +1775,27 @@
 
   }
 
- {
-
-    title <
-      name = Lab Animal ;
-      issn = 0093-7355 ;
-      eissn = 1548-4475
-    >
-    
-    comment[base_url] = http://www.labanimal.com/laban/index.html
-    param[journal_id] = laban
-
-    au < exists ; exists ; 2008 ; Lab Animal Volume 37 ; 2008 ; 37 ; >
-    au < exists ; exists ; 2009 ; Lab Animal Volume 38 ; 2009 ; 38 ; >
-    au < exists ; exists ; 2010 ; Lab Animal Volume 39 ; 2010 ; 39 ; >
-    au < exists ; exists ; 2011 ; Lab Animal Volume 40 ; 2011 ; 40 ; >
-    au < exists ; exists ; 2012 ; Lab Animal Volume 41 ; 2012 ; 41 ; >
-    au < exists ; exists ; 2013 ; Lab Animal Volume 42 ; 2013 ; 42 ; >
-    au < exists ; exists ; 2014 ; Lab Animal Volume 43 ; 2014 ; 43 ; >
-    au < exists ; exists ; 2015 ; Lab Animal Volume 44 ; 2015 ; 44 ; >
-
-  }
+# {
+#
+#    title <
+#      name = Lab Animal ;
+#      issn = 0093-7355 ;
+#      eissn = 1548-4475
+#    >
+#    
+#    comment[base_url] = http://www.labanimal.com/laban/index.html. Not on nature website.
+#    param[journal_id] = laban
+#
+#    au < exists ; exists ; 2008 ; Lab Animal Volume 37 ; 2008 ; 37 ; >
+#    au < exists ; exists ; 2009 ; Lab Animal Volume 38 ; 2009 ; 38 ; >
+#    au < exists ; exists ; 2010 ; Lab Animal Volume 39 ; 2010 ; 39 ; >
+#    au < exists ; exists ; 2011 ; Lab Animal Volume 40 ; 2011 ; 40 ; >
+#    au < exists ; exists ; 2012 ; Lab Animal Volume 41 ; 2012 ; 41 ; >
+#    au < exists ; exists ; 2013 ; Lab Animal Volume 42 ; 2013 ; 42 ; >
+#    au < exists ; exists ; 2014 ; Lab Animal Volume 43 ; 2014 ; 43 ; >
+#    au < exists ; exists ; 2015 ; Lab Animal Volume 44 ; 2015 ; 44 ; >
+#
+#  }
 
   {
 
@@ -3783,76 +3783,76 @@
 
   }
 
-  {
+#  {
+#
+#    title <
+#      name = Scientific American ;
+#      issn = 0036-8733 ;
+#      issnl = 0036-8733
+#    >
+#
+#    param[journal_id] = scientificamerican
+#
+#    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 ; >
+#    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 ; >
+#    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 ; >
+#    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 ; >
+#    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 ; >
+#    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 ; >
+#    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 ; >
+#    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 ; >
+#    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 ; >
+#    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 ; >
+#    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 ; >
+#    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 ; >
+#    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 310 ; 2014 ; 310 ; >
+#    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 311 ; 2014 ; 311 ; >
+#    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 312 ; 2015 ; 312 ; >
+#    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 313 ; 2015 ; 313 ; >
+#    au < doNotProcess ; exists ; 2016 ; Scientific American Volume 314 ; 2016 ; 314 ; >
+#
+#  }
 
-    title <
-      name = Scientific American ;
-      issn = 0036-8733 ;
-      issnl = 0036-8733
-    >
+#  {
+#
+#    title <
+#      name = Scientific American Mind ;
+#      issn = 1555-2284 ;
+#      issnl = 1555-2284
+#    >
+#
+#    param[journal_id] = scientificamericanmind
+#
+#    au < doNotProcess ; exists ; 2008 ; Scientific American Mind Volume 19 (2008) ; 2008 ; 19 ; >
+#    au < doNotProcess ; exists ; 2009 ; Scientific American Mind Volume 20 (2009) ; 2009 ; 20 ; >
+#    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 20 (2010) ; 2010 ; 20 ; >
+#    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 21 (2010) ; 2010 ; 21 ; >
+#    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 21 (2011) ; 2011 ; 21 ; >
+#    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 22 (2011) ; 2011 ; 22 ; >
+#    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 22 (2012) ; 2012 ; 22 ; >
+#    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 23 (2012) ; 2012 ; 23 ; >
+#    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 23 (2013) ; 2013 ; 23 ; >
+#    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 24 (2013) ; 2013 ; 24 ; >
+#    au < doNotProcess ; exists ; 2014 ; Scientific American Mind Volume 25 (2014) ; 2014 ; 25 ; >
+#    au < doNotProcess ; exists ; 2015 ; Scientific American Mind Volume 26 (2015) ; 2015 ; 26 ; >
+#
+#  }
 
-    param[journal_id] = scientificamerican
-
-    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 ; >
-    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 ; >
-    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 ; >
-    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 ; >
-    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 ; >
-    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 ; >
-    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 ; >
-    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 ; >
-    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 ; >
-    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 ; >
-    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 ; >
-    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 ; >
-    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 310 ; 2014 ; 310 ; >
-    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 311 ; 2014 ; 311 ; >
-    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 312 ; 2015 ; 312 ; >
-    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 313 ; 2015 ; 313 ; >
-    au < doNotProcess ; exists ; 2016 ; Scientific American Volume 314 ; 2016 ; 314 ; >
-
-  }
-
-  {
-
-    title <
-      name = Scientific American Mind ;
-      issn = 1555-2284 ;
-      issnl = 1555-2284
-    >
-
-    param[journal_id] = scientificamericanmind
-
-    au < doNotProcess ; exists ; 2008 ; Scientific American Mind Volume 19 (2008) ; 2008 ; 19 ; >
-    au < doNotProcess ; exists ; 2009 ; Scientific American Mind Volume 20 (2009) ; 2009 ; 20 ; >
-    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 20 (2010) ; 2010 ; 20 ; >
-    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 21 (2010) ; 2010 ; 21 ; >
-    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 21 (2011) ; 2011 ; 21 ; >
-    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 22 (2011) ; 2011 ; 22 ; >
-    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 22 (2012) ; 2012 ; 22 ; >
-    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 23 (2012) ; 2012 ; 23 ; >
-    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 23 (2013) ; 2013 ; 23 ; >
-    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 24 (2013) ; 2013 ; 24 ; >
-    au < doNotProcess ; exists ; 2014 ; Scientific American Mind Volume 25 (2014) ; 2014 ; 25 ; >
-    au < doNotProcess ; exists ; 2015 ; Scientific American Mind Volume 26 (2015) ; 2015 ; 26 ; >
-
-  }
-
-  {
-
-    title <
-      name = Scientific Reports ;
-      issn = 2045-2322 ;
-      issnl = 2045-2322
-    >
-    
-    # not standard format. Conference papers.
-
-    param[journal_id] = srep
-
-    au < doNotProcess ; exists ; 2015 ; Scientific Reports Volume 1 ; 2015 ; 1 ; >
-
-  }
+#  {
+#
+#    title <
+#      name = Scientific Reports ;
+#      issn = 2045-2322 ;
+#      issnl = 2045-2322
+#    >
+#    
+#    # not standard format. Conference papers.
+#
+#    param[journal_id] = srep
+#
+#    au < doNotProcess ; exists ; 2015 ; Scientific Reports Volume 1 ; 2015 ; 1 ; >
+#
+#  }
 
   {
 

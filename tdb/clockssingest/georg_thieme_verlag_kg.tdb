@@ -74,7 +74,7 @@
     au < doNotProcess ; exists ; 1987 ; 1987 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 1988 ; 1988 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 1989 ; 1989 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 24 ; 24 ; >
-    au < doNotProcess ; exists ; 1990 ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 25 ; 25 ; >
+    au < exists ; exists ; 1990 ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 25 ; 25 ; >
 
   }
 
@@ -277,7 +277,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aktuelle Trauatologie Volume 36 ; 36 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Trauatologie Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Trauatologie Volume 38 ; 38 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Trauatologie Volume 39 ; 39 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Aktuelle Trauatologie Volume 39 ; 39 ; >
 
    }
 
@@ -795,7 +795,7 @@
 
    au < doNotProcess ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 2000 ; 43 ; >
    au < doNotProcess ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Akupunktur Volume 2001 ; 44 ; >
-   au < doNotProcess ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 2002 ; 45 ; >
+   au < exists ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 2002 ; 45 ; >
 
   }
 
@@ -841,7 +841,7 @@
     comment[years] = 2000 only - journal published 1996-2000
     comment[continued_by] = 1617-5891 Deutsche Zeitschrift fur Onkologie
 
-   au < doNotProcess ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 2000 ; 32 ; >
+   au < exists ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 2000 ; 32 ; >
 
   }
 
@@ -1414,7 +1414,7 @@
     param[journal_id] = 10.1055/s-00000152
     comment[years] = 2010-current
 
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
 
   }
 
@@ -1920,7 +1920,7 @@
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
 
-   au < doNotProcess ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 84 ; >
+   au < exists ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 84 ; >
 
   }
 
@@ -3466,7 +3466,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Notfall & Hausarztmedizin Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Notfall & Hausarztmedizin Volume 34 ; 34 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 ; >
 
   }
 
@@ -3482,7 +3482,7 @@
     comment[years] = 2004-2005
 
     au < doNotProcess ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 30 ; 30 ; >
-    au < doNotProcess ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 ; >
 
   }
 
@@ -3497,7 +3497,7 @@
     param[journal_id] = 10.1055/s-00000044
     comment[years] = 2003
 
-    au < doNotProcess ; exists ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 ; >
 
   }
 
@@ -3673,7 +3673,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Osteosynthesis & Trauma Care Volume 2006 ; 14 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 2007 ; 15 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Osteosynthesis & Trauma Care Volume 2008 ; 16 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Osteosynthesis & Trauma Care Volume 2009 ; 17 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Osteosynthesis & Trauma Care Volume 2009 ; 17 ; >
 
   }
 
@@ -3688,7 +3688,7 @@
     param[journal_id] = 10.1055/s-00000047
     comment[years] = 2001
 
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 9 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 9 ; >
 
   }
 
@@ -3965,7 +3965,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; Plant Biology Volume 2006 ; 8 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; Plant Biology Volume 2007 ; 9 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Plant Biology Volume 2008 ; 10 ; >
-   au < doNotProcess ; exists ; 2009 ; 2009 ; Plant Biology Volume 2009 ; 11 ; >
+   au < exists ; exists ; 2009 ; 2009 ; Plant Biology Volume 2009 ; 11 ; >
 
   }
 
@@ -4279,7 +4279,7 @@
 
     au < doNotProcess ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
 
   }
 
@@ -4807,7 +4807,7 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 1998 ; 12 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 1999 ; 13 ; >
     au < doNotProcess ; exists ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 2000 ; 14 ; >
-    au < doNotProcess ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 2001 ; 15 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 2001 ; 15 ; >
 
   }
 
@@ -5100,7 +5100,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Sleep And Breathing Volume 2006 ; 10 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Sleep And Breathing Volume 2007 ; 11 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Sleep And Breathing Volume 2008 ; 12 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Sleep And Breathing Volume 2009 ; 13 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Sleep And Breathing Volume 2009 ; 13 ; >
 
   }
 
@@ -5380,7 +5380,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; team spiegel Volume 2006 ; 13 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; team spiegel Volume 2007 ; 14 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; team spiegel Volume 2008 ; 15 ; >
-   au < doNotProcess ; exists ; 2009 ; 2009 ; team spiegel Volume 2009 ; 16 ; >
+   au < exists ; exists ; 2009 ; 2009 ; team spiegel Volume 2009 ; 16 ; >
 
   }
 
@@ -5494,7 +5494,7 @@
     comment[years] = 2008-2009
 
     au < doNotProcess ; exists ; 2008 ; 2008 ; Tierarzthelfer/in konkret Volume 2008 ; 4 ; >
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Tierarzthelfer/in konkret Volume 2009 ; 5 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Tierarzthelfer/in konkret Volume 2009 ; 5 ; >
 
   }
 
@@ -6056,7 +6056,7 @@
     au < doNotProcess ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
     au < doNotProcess ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
-    au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
 
   }
 
