@@ -14,28 +14,28 @@
 
 
 
-  {
-    title <
-      name = African Journal of Business Ethics ;
-      issn = 1817-7417 ;
-      eissn = 0976-3600 ;
-      issnl = 1817-7417
-    >
-
-    param[base_url] = http://www.ajobe.org/
-    #  base url doesn't exist
-    param[journal_issn] = 1817-7417
-
-    au < doNotProcess ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 ; >
-    au < doNotProcess ; exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 ; >
-    au < doNotProcess ; exists ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 ; >
-    au < doNotProcess ; exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 ; >
-    au < doNotProcess ; exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 ; >
-    au < doNotProcess ; exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 ; >
-    au < doNotProcess ; exists ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 ; >
-    au < expected ; exists ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 ; >
-
-  }
+#  {
+#    title <
+#      name = African Journal of Business Ethics ;
+#      issn = 1817-7417 ;
+#      eissn = 0976-3600 ;
+#      issnl = 1817-7417
+#    >
+#
+#    param[base_url] = http://www.ajobe.org/
+#    #  base url doesn't exist
+#    param[journal_issn] = 1817-7417
+#
+#    au < doNotProcess ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 ; >
+#    au < doNotProcess ; exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 ; >
+#    au < doNotProcess ; exists ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 ; >
+#    au < doNotProcess ; exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 ; >
+#    au < doNotProcess ; exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 ; >
+#    au < doNotProcess ; exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 ; >
+#    au < doNotProcess ; exists ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 ; >
+#    au < expected ; exists ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 ; >
+#
+#  }
 
   {
     title <
@@ -64,18 +64,18 @@
 
   }
 
-  {
-    title <
-      name = Ancient Science of Life ;
-      issn = 0257-7941 ;
-      issnl = 0257-7941
-    >
-
-    param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl/
-    comment[asl] = the url structure is the new version
-    # base_url & journal are not up yet 9/10/2015
-
-  }
+#  {
+#    title <
+#      name = Ancient Science of Life ;
+#      issn = 0257-7941 ;
+#      issnl = 0257-7941
+#    >
+#
+#    param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl/
+#    comment[asl] = the url structure is the new version
+#    # base_url & journal are not up yet 9/10/2015
+#
+#  }
 
   {
     title <
@@ -249,20 +249,20 @@
 
   }
 
-  {
-    title <
-      name = Annals of Saudi Medicine ;
-      issn = 0256-4947 ;
-      eissn = 0975-4466 ;
-      issnl = 0256-4947
-    >
-
-    param[base_url] = http://www.saudiannals.net/
-    param[journal_issn] = 0256-4947
-    # base_url & journal are not up yet on 9/10/2015
-
-
-  }
+#  {
+#    title <
+#      name = Annals of Saudi Medicine ;
+#      issn = 0256-4947 ;
+#      eissn = 0975-4466 ;
+#      issnl = 0256-4947
+#    >
+#
+#    param[base_url] = http://www.saudiannals.net/
+#    param[journal_issn] = 0256-4947
+#    # base_url & journal are not up yet on 9/10/2015
+#
+#
+#  }
 
   {
     title <
@@ -353,29 +353,29 @@
 
   }
 
-  {
-    title <
-      name = Asian Journal of Pharmaceutics ;
-      issn = 0973-8398 ;
-      eissn = 1998-409X ;
-      issnl = 0973-8398
-    >
-
-    param[base_url] = http://www.asiapharmaceutics.info/
-    param[journal_issn] = 0973-8398
-    #website looks like ojs2
-
-    au < doNotProcess ; exists ; 2008 ; Asian Journal of Pharmaceutics Volume 2 ; 2008 ; 2 ; >
-    au < doNotProcess ; exists ; 2009 ; Asian Journal of Pharmaceutics Volume 3 ; 2009 ; 3 ; >
-    au < doNotProcess ; exists ; 2010 ; Asian Journal of Pharmaceutics Volume 4 ; 2010 ; 4 ; >
-    au < doNotProcess ; exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 ; >
-    au < doNotProcess ; exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 ; >
-    au < doNotProcess ; exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 ; >
-    au < doNotProcess ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 ; >
-    au < doNotProcess ; exists ; 2015 ; Asian Journal of Pharmaceutics Volume 9 ; 2015 ; 9 ; >
-    au < doNotProcess ; exists ; 2016 ; Asian Journal of Pharmaceutics Volume 10 ; 2016 ; 10 ; >
-
-  }
+#  {
+#    title <
+#      name = Asian Journal of Pharmaceutics ;
+#      issn = 0973-8398 ;
+#      eissn = 1998-409X ;
+#      issnl = 0973-8398
+#    >
+#
+#    param[base_url] = http://www.asiapharmaceutics.info/
+#    param[journal_issn] = 0973-8398
+#    #website looks like ojs
+#
+#    au < doNotProcess ; exists ; 2008 ; Asian Journal of Pharmaceutics Volume 2 ; 2008 ; 2 ; >
+#    au < doNotProcess ; exists ; 2009 ; Asian Journal of Pharmaceutics Volume 3 ; 2009 ; 3 ; >
+#    au < doNotProcess ; exists ; 2010 ; Asian Journal of Pharmaceutics Volume 4 ; 2010 ; 4 ; >
+#    au < doNotProcess ; exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 ; >
+#    au < doNotProcess ; exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 ; >
+#    au < doNotProcess ; exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 ; >
+#    au < doNotProcess ; exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 ; >
+#    au < doNotProcess ; exists ; 2015 ; Asian Journal of Pharmaceutics Volume 9 ; 2015 ; 9 ; >
+#    au < doNotProcess ; exists ; 2016 ; Asian Journal of Pharmaceutics Volume 10 ; 2016 ; 10 ; >
+#
+#  }
 
   {
     title <
@@ -512,60 +512,60 @@
 
   }
 
-  {
-    title <
-      name = CytoJournal ;
-      issn = 0974-5963 ;
-      eissn = 1742-6413 ;
-      issnl = 0974-5963
-   >
+#  {
+#    title <
+#      name = CytoJournal ;
+#      issn = 0974-5963 ;
+#      eissn = 1742-6413 ;
+#      issnl = 0974-5963
+#   >
+#
+#    param[base_url] = http://www.cytojournal.com/
+#    param[journal_issn] = 0974-5963
+#
+#    au < doNotProcess ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 2004 ; >
+#    au < doNotProcess ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2005 ; >
+#    au < doNotProcess ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 2006 ; >
+#    au < doNotProcess ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 2007 ; >
+#    au < doNotProcess ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 2008 ; >
+#    au < doNotProcess ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 2009 ; >
+#    au < doNotProcess ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 2010 ; >
+#    au < doNotProcess ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 ; >
+#    au < doNotProcess ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 ; >
+#    au < doNotProcess ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 ; >
+#    au < doNotProcess ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 ; >
+#    au < doNotProcess ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 2015 ; >
+#    au < doNotProcess ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 2016 ; >
+#
+#  }
 
-    param[base_url] = http://www.cytojournal.com/
-    param[journal_issn] = 0974-5963
-
-    au < doNotProcess ; exists ; 2004 ; CytoJournal Volume 2004 ; 2004 ; 2004 ; >
-    au < doNotProcess ; exists ; 2005 ; CytoJournal Volume 2005 ; 2005 ; 2005 ; >
-    au < doNotProcess ; exists ; 2006 ; CytoJournal Volume 2006 ; 2006 ; 2006 ; >
-    au < doNotProcess ; exists ; 2007 ; CytoJournal Volume 2007 ; 2007 ; 2007 ; >
-    au < doNotProcess ; exists ; 2008 ; CytoJournal Volume 2008 ; 2008 ; 2008 ; >
-    au < doNotProcess ; exists ; 2009 ; CytoJournal Volume 2009 ; 2009 ; 2009 ; >
-    au < doNotProcess ; exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 2010 ; >
-    au < doNotProcess ; exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 ; >
-    au < doNotProcess ; exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 ; >
-    au < doNotProcess ; exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 ; >
-    au < doNotProcess ; exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 ; >
-    au < doNotProcess ; exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 2015 ; >
-    au < doNotProcess ; exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 2016 ; >
-
-  }
-
-  {
-    title <
-      name = Dental Research Journal ;
-      issn = 1735-3327 ;
-      eissn = 2008-0255 ;
-      issnl = 1735-3327
-   >
-
-    param[base_url] = http://drj.mui.ac.ir/index.php/drj/
-    # looks like ojs
-
-    au < doNotProcess ; exists ; 2003 ; Dental Research Journal Volume 1 (2003) ; 2003 ; 1 ; >
-    au < doNotProcess ; exists ; 2004 ; Dental Research Journal Volume 1 (2004) ; 2004 ; 1 ; >
-    au < doNotProcess ; exists ; 2005 ; Dental Research Journal Volume 2 ; 2005 ; 2 ; >
-    au < doNotProcess ; exists ; 2006 ; Dental Research Journal Volume 3 ; 2006 ; 3 ; >
-    au < doNotProcess ; exists ; 2007 ; Dental Research Journal Volume 4 ; 2007 ; 4 ; >
-    au < doNotProcess ; exists ; 2008 ; Dental Research Journal Volume 5 ; 2008 ; 5 ; >
-    au < doNotProcess ; exists ; 2009 ; Dental Research Journal Volume 6 ; 2009 ; 6 ; >
-    au < doNotProcess ; exists ; 2010 ; Dental Research Journal Volume 7 ; 2010 ; 7 ; >
-    au < doNotProcess ; exists ; 2011 ; Dental Research Journal Volume 8 ; 2011 ; 8 ; >
-    au < doNotProcess ; exists ; 2012 ; Dental Research Journal Volume 9 ; 2012 ; 9 ; >
-    au < doNotProcess ; exists ; 2013 ; Dental Research Journal Volume 10 ; 2013 ; 10 ; >
-    au < doNotProcess ; exists ; 2014 ; Dental Research Journal Volume 11 ; 2014 ; 11 ; >
-    au < doNotProcess ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; >
-    au < doNotProcess ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; >
-
-  }
+#  {
+#    title <
+#      name = Dental Research Journal ;
+#      issn = 1735-3327 ;
+#      eissn = 2008-0255 ;
+#      issnl = 1735-3327
+#   >
+#
+#    param[base_url] = http://drj.mui.ac.ir/index.php/drj/
+#    # looks like ojs
+#
+#    au < doNotProcess ; exists ; 2003 ; Dental Research Journal Volume 1 (2003) ; 2003 ; 1 ; >
+#    au < doNotProcess ; exists ; 2004 ; Dental Research Journal Volume 1 (2004) ; 2004 ; 1 ; >
+#    au < doNotProcess ; exists ; 2005 ; Dental Research Journal Volume 2 ; 2005 ; 2 ; >
+#    au < doNotProcess ; exists ; 2006 ; Dental Research Journal Volume 3 ; 2006 ; 3 ; >
+#    au < doNotProcess ; exists ; 2007 ; Dental Research Journal Volume 4 ; 2007 ; 4 ; >
+#    au < doNotProcess ; exists ; 2008 ; Dental Research Journal Volume 5 ; 2008 ; 5 ; >
+#    au < doNotProcess ; exists ; 2009 ; Dental Research Journal Volume 6 ; 2009 ; 6 ; >
+#    au < doNotProcess ; exists ; 2010 ; Dental Research Journal Volume 7 ; 2010 ; 7 ; >
+#    au < doNotProcess ; exists ; 2011 ; Dental Research Journal Volume 8 ; 2011 ; 8 ; >
+#    au < doNotProcess ; exists ; 2012 ; Dental Research Journal Volume 9 ; 2012 ; 9 ; >
+#    au < doNotProcess ; exists ; 2013 ; Dental Research Journal Volume 10 ; 2013 ; 10 ; >
+#    au < doNotProcess ; exists ; 2014 ; Dental Research Journal Volume 11 ; 2014 ; 11 ; >
+#    au < doNotProcess ; exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; >
+#    au < doNotProcess ; exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; >
+#
+#  }
 
   {
     title <
@@ -1177,7 +1177,7 @@
    >
 
     param[base_url] = http://www.ijoem.com/
-    param[journal_issn] = 0973-2284
+    param[journal_issn] = 0019-5278
     comment[ijoem] =  the issns are not consistent between medknow website and the journal's website
 
     au < doNotProcess ; exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 ; >
@@ -1188,10 +1188,12 @@
     au < doNotProcess ; exists ; 2008 ; Indian Journal of Occupational and Environmental Medicine Volume 12 ; 2008 ; 12 ; >
     au < doNotProcess ; exists ; 2009 ; Indian Journal of Occupational and Environmental Medicine Volume 13 ; 2009 ; 13 ; >
     au < doNotProcess ; exists ; 2010 ; Indian Journal of Occupational and Environmental Medicine Volume 14 ; 2010 ; 14 ; >
-    au < doNotProcess ; exists ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 ; >
-    au < doNotProcess ; exists ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; >
-    au < doNotProcess ; exists ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 ; >
-    au < expected ; exists ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; >
+    au < exists ; exists ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 ; >
+    au < exists ; exists ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; >
+    au < exists ; exists ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 ; >
+    au < exists ; exists ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; >
+    au < exists ; exists ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; >
+    au < exists ; exists ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 ; >
 
   }
 
@@ -1909,22 +1911,22 @@
 
   }
 
-  {
-    title <
-      name = International Journal of Ayurveda Research ;
-      issn = 0974-7788 ;
-      eissn = 0974-925X ;
-      issnl = 0974-7788
-    >
-
-    param[base_url] = http://www.ijaronline.com/
-    param[journal_issn] = 0974-7788
-    # no permission page at this url
-
-    au < doNotProcess ; exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 ; >
-    au < doNotProcess ; exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 ; >
-
-  }
+#  {
+#    title <
+#      name = International Journal of Ayurveda Research ;
+#      issn = 0974-7788 ;
+#      eissn = 0974-925X ;
+#      issnl = 0974-7788
+#    >
+#
+#    param[base_url] = http://www.ijaronline.com/
+#    param[journal_issn] = 0974-7788
+#    # no permission page at this url
+#
+#    au < doNotProcess ; exists ; 2010 ; International Journal of Ayurveda Research Volume 1 ; 2010 ; 1 ; >
+#    au < doNotProcess ; exists ; 2011 ; International Journal of Ayurveda Research Volume 2 ; 2011 ; 2 ; >
+#
+#  }
 
   {
     title <
@@ -1946,28 +1948,28 @@
 
   }
 
-  {
-    title <
-      name = International Journal of Green Pharmacy ;
-      issn = 0973-8258 ;
-      eissn = 1998-4103 ;
-      issnl = 0973-8258
-   >
-
-    param[base_url] = http://www.greenpharmacy.info/
-    param[journal_issn] = 0973-8258
-    # This journal has a different structure than typical Medknow journals; got an error "Unable to fetch permission page" and it goes downhill from there
-
-    au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 ; >
-    au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 ; >
-    au < doNotProcess ; exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 ; >
-    au < doNotProcess ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 ; >
-    au < doNotProcess ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 ; >
-    au < doNotProcess ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 ; >
-    au < doNotProcess ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 ; >
-    au < expected ; exists ; 2014 ; International Journal of Green Pharmacy Volume 8 ; 2014 ; 8 ; >
-
-  }
+#  {
+#    title <
+#      name = International Journal of Green Pharmacy ;
+#      issn = 0973-8258 ;
+#      eissn = 1998-4103 ;
+#      issnl = 0973-8258
+#   >
+#
+#    param[base_url] = http://www.greenpharmacy.info/
+#    param[journal_issn] = 0973-8258
+#    # Looks like OJS
+#
+#    au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 ; >
+#    au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 ; >
+#    au < doNotProcess ; exists ; 2009 ; International Journal of Green Pharmacy Volume 3 ; 2009 ; 3 ; >
+#    au < doNotProcess ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 ; >
+#    au < doNotProcess ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 ; >
+#    au < doNotProcess ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 ; >
+#    au < doNotProcess ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 ; >
+#    au < expected ; exists ; 2014 ; International Journal of Green Pharmacy Volume 8 ; 2014 ; 8 ; >
+#
+#  }
 
   {
     title <
@@ -2009,24 +2011,24 @@
 
   }
 
-  {
-    title <
-      name = International Journal of Preventive Medicine ;
-      issn = 2008-7802 ;
-      eissn = 2008-8213 ;
-      issnl = 2008-7802
-    >
-
-    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm/
-    comment[ijpm] = the url structure is the new version
-
-    au < exists ; exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 ; >
-    au < exists ; exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 ; >
-    au < exists ; exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 ; >
-    au < exists ; exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 ; >
-
-  }
+#  {
+#    title <
+#      name = International Journal of Preventive Medicine ;
+#      issn = 2008-7802 ;
+#      eissn = 2008-8213 ;
+#      issnl = 2008-7802
+#    >
+#
+#    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm/
+#    comment[ijpm] = the url structure is the new version
+#
+#    au < exists ; exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 ; >
+#    au < exists ; exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 ; >
+#    au < exists ; exists ; 2012 ; International Journal of Preventive Medicine Volume 3 ; 2012 ; 3 ; >
+#    au < exists ; exists ; 2013 ; International Journal of Preventive Medicine Volume 4 ; 2013 ; 4 ; >
+#    au < expected ; exists ; 2014 ; International Journal of Preventive Medicine Volume 5 ; 2014 ; 5 ; >
+#
+#  }
 
   {
     title <
@@ -2097,32 +2099,32 @@
 
   }
 
-  {
-    title <
-      name = Iranian Journal of Nursing and Midwifery Research ;
-      issn = 1735-9066 ;
-      eissn = 2228-5504 ;
-      issnl = 1735-9066
-   >
-
-    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr/
-    comment[ijnmr] = the url structure is the new version
-
-    au < exists ; exists ; 2002 ; Iranian Journal of Nursing and Midwifery Research Volume 7 ; 2002 ; 7 ; >
-    au < exists ; exists ; 2003 ; Iranian Journal of Nursing and Midwifery Research Volume 8 ; 2003 ; 8 ; >
-    au < exists ; exists ; 2004 ; Iranian Journal of Nursing and Midwifery Research Volume 9 ; 2004 ; 9 ; >
-    au < exists ; exists ; 2005 ; Iranian Journal of Nursing and Midwifery Research Volume 10 ; 2005 ; 10 ; >
-    au < exists ; exists ; 2006 ; Iranian Journal of Nursing and Midwifery Research Volume 11 ; 2006 ; 11 ; >
-    au < exists ; exists ; 2007 ; Iranian Journal of Nursing and Midwifery Research Volume 12 ; 2007 ; 12 ; >
-    au < exists ; exists ; 2008 ; Iranian Journal of Nursing and Midwifery Research Volume 13 ; 2008 ; 13 ; >
-    au < exists ; exists ; 2009 ; Iranian Journal of Nursing and Midwifery Research Volume 14 ; 2009 ; 14 ; >
-    au < exists ; exists ; 2010 ; Iranian Journal of Nursing and Midwifery Research Volume 15 ; 2010 ; 15 ; >
-    au < exists ; exists ; 2011 ; Iranian Journal of Nursing and Midwifery Research Volume 16 ; 2011 ; 16 ; >
-    au < exists ; exists ; 2012 ; Iranian Journal of Nursing and Midwifery Research Volume 17 ; 2012 ; 17 ; >
-    au < exists ; exists ; 2013 ; Iranian Journal of Nursing and Midwifery Research Volume 18 ; 2013 ; 18 ; >
-    au < expected ; exists ; 2014 ; Iranian Journal of Nursing and Midwifery Research Volume 19 ; 2014 ; 19 ; >
-
-  }
+#  {
+#    title <
+#      name = Iranian Journal of Nursing and Midwifery Research ;
+#      issn = 1735-9066 ;
+#      eissn = 2228-5504 ;
+#      issnl = 1735-9066
+#   >
+#
+#    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr/
+#    comment[ijnmr] = the url structure is the new version
+#
+#    au < exists ; exists ; 2002 ; Iranian Journal of Nursing and Midwifery Research Volume 7 ; 2002 ; 7 ; >
+#    au < exists ; exists ; 2003 ; Iranian Journal of Nursing and Midwifery Research Volume 8 ; 2003 ; 8 ; >
+#    au < exists ; exists ; 2004 ; Iranian Journal of Nursing and Midwifery Research Volume 9 ; 2004 ; 9 ; >
+#    au < exists ; exists ; 2005 ; Iranian Journal of Nursing and Midwifery Research Volume 10 ; 2005 ; 10 ; >
+#    au < exists ; exists ; 2006 ; Iranian Journal of Nursing and Midwifery Research Volume 11 ; 2006 ; 11 ; >
+#    au < exists ; exists ; 2007 ; Iranian Journal of Nursing and Midwifery Research Volume 12 ; 2007 ; 12 ; >
+#    au < exists ; exists ; 2008 ; Iranian Journal of Nursing and Midwifery Research Volume 13 ; 2008 ; 13 ; >
+#    au < exists ; exists ; 2009 ; Iranian Journal of Nursing and Midwifery Research Volume 14 ; 2009 ; 14 ; >
+#    au < exists ; exists ; 2010 ; Iranian Journal of Nursing and Midwifery Research Volume 15 ; 2010 ; 15 ; >
+#    au < exists ; exists ; 2011 ; Iranian Journal of Nursing and Midwifery Research Volume 16 ; 2011 ; 16 ; >
+#    au < exists ; exists ; 2012 ; Iranian Journal of Nursing and Midwifery Research Volume 17 ; 2012 ; 17 ; >
+#    au < exists ; exists ; 2013 ; Iranian Journal of Nursing and Midwifery Research Volume 18 ; 2013 ; 18 ; >
+#    au < expected ; exists ; 2014 ; Iranian Journal of Nursing and Midwifery Research Volume 19 ; 2014 ; 19 ; >
+#
+#  }
 
   {
     title <
@@ -2187,40 +2189,41 @@
 
   }
 
-  {
-    title <
-      name = Journal of Andrology, Sexual Medicine, Ageing and Gender ;
-      issn = 0974-1224 ;
-      issnl = 0974-1224
-    >
+#  {
+#    title <
+#      name = Journal of Andrology, Sexual Medicine, Ageing and Gender ;
+#      issn = 0974-1224 ;
+#      issnl = 0974-1224
+#    >
+#
+#    param[base_url] =
+#    param[journal_issn] = 0974-1224
+#    # base_url & journal are not up yet on 10/8/2013
+#
+#
+#  }
 
-    param[base_url] =
-    param[journal_issn] = 0974-1224
-    # base_url & journal are not up yet on 10/8/2013
-
-
-  }
-
-  {
-    title <
-      name = Journal of Ayurveda and Integrative Medicine ;
-      issn = 0975-9476 ;
-      eissn = 0976-2809 ;
-      issnl = 0975-9476
-   >
-
-    param[base_url] = http://www.jaim.in/
-    param[journal_issn] = 0975-9476
-
-    au < exists ; exists ; 2010 ; Journal of Ayurveda and Integrative Medicine Volume 1 ; 2010 ; 1 ; >
-    au < exists ; exists ; 2011 ; Journal of Ayurveda and Integrative Medicine Volume 2 ; 2011 ; 2 ; >
-    au < exists ; exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 ; >
-    au < exists ; exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 ; >
-    au < exists ; exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 ; >
-    au < exists ; exists ; 2015 ; Journal of Ayurveda and Integrative Medicine Volume 6 ; 2015 ; 6 ; >
-    au < exists ; exists ; 2016 ; Journal of Ayurveda and Integrative Medicine Volume 7 ; 2016 ; 7 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Ayurveda and Integrative Medicine ;
+#      issn = 0975-9476 ;
+#      eissn = 0976-2809 ;
+#      issnl = 0975-9476
+#   >
+#
+#    param[base_url] = http://www.jaim.in/
+#    param[journal_issn] = 0975-9476
+#    # moved to Elsevier
+#
+#    au < exists ; exists ; 2010 ; Journal of Ayurveda and Integrative Medicine Volume 1 ; 2010 ; 1 ; >
+#    au < exists ; exists ; 2011 ; Journal of Ayurveda and Integrative Medicine Volume 2 ; 2011 ; 2 ; >
+#    au < exists ; exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 ; >
+#    au < exists ; exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 ; >
+#    au < exists ; exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 ; >
+#    au < exists ; exists ; 2015 ; Journal of Ayurveda and Integrative Medicine Volume 6 ; 2015 ; 6 ; >
+#    au < exists ; exists ; 2016 ; Journal of Ayurveda and Integrative Medicine Volume 7 ; 2016 ; 7 ; >
+#
+#  }
 
   {
     title <
@@ -2257,7 +2260,7 @@
    >
 
     param[base_url] = http://www.carcinogenesis.com/
-    param[journal_issn] = 0974-6773
+    param[journal_issn] = 1477-3163
 
     au < exists ; exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; >
     au < exists ; exists ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; >
@@ -2275,25 +2278,25 @@
 
   }
 
-  {
-    title <
-      name = Journal of Cardiovascular Disease Research ;
-      issn = 0975-3583 ;
-      eissn = 0976-2833 ;
-      issnl = 0975-3583
-   >
-
-    param[base_url] = http://www.jcdronline.com/
-    # no lockss.txt available at this url
-    param[journal_issn] = 0975-3583
-
-    au < doNotProcess ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 ; >
-    au < doNotProcess ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; Journal of Cardiovascular Disease Research Volume 5 ; 2014 ; 5 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Cardiovascular Disease Research ;
+#      issn = 0975-3583 ;
+#      eissn = 0976-2833 ;
+#      issnl = 0975-3583
+#   >
+#
+#    param[base_url] = http://www.jcdronline.com/
+#    # no lockss.txt available at this url. Moved.
+#    param[journal_issn] = 0975-3583
+#
+#    au < doNotProcess ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 ; >
+#    au < expected ; exists ; 2014 ; Journal of Cardiovascular Disease Research Volume 5 ; 2014 ; 5 ; >
+#
+#  }
 
   {
     title <
@@ -2309,7 +2312,9 @@
     au < exists ; exists ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; >
     au < exists ; exists ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; >
     au < exists ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; >
-    au < expected ; exists ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; >
+    au < exists ; exists ; 2014 ; Journal of Clinical Imaging Science Volume 4 ; 2014 ; 4 ; >
+    au < exists ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; >
+    au < exists ; exists ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -2331,23 +2336,23 @@
 
   }
 
-  {
-    title <
-      name = ASL- Musculoskeletal Diseases ;
-      issn = 2231-072X ;
-      issnl = 2231-072X
-   >
-
-    param[base_url] = http://msd.ancientscienceoflife.org/
-    param[journal_issn] = 2231-072X
-    # no permission page at this url
-    comment[base_url] = old url http://www.ayurvedarheumatology.org/
-    comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
-
-    au < doNotProcess ; exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 ; >
-    au < expected ; exists ; 2014 ; ASL- Musculoskeletal Diseases Volume 2 ; 2014 ; 2 ; >
-
-  }
+#  {
+#    title <
+#      name = ASL- Musculoskeletal Diseases ;
+#      issn = 2231-072X ;
+#      issnl = 2231-072X
+#   >
+#
+#    param[base_url] = http://msd.ancientscienceoflife.org/
+#    param[journal_issn] = 2231-072X
+#    # no permission page at this url
+#    comment[base_url] = old url http://www.ayurvedarheumatology.org/
+#    comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
+#
+#    au < doNotProcess ; exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 ; >
+#    au < expected ; exists ; 2014 ; ASL- Musculoskeletal Diseases Volume 2 ; 2014 ; 2 ; >
+#
+#  }
 
   {
     title <
@@ -2412,7 +2417,7 @@
    >
 
     param[base_url] = http://www.jcasonline.com/
-    param[journal_issn] = 0378-6326
+    param[journal_issn] = 0974-2077
 
     au < exists ; exists ; 2008 ; Journal of Cutaneous and Aesthetic Surgery Volume 1 ; 2008 ; 1 ; >
     au < exists ; exists ; 2009 ; Journal of Cutaneous and Aesthetic Surgery Volume 2 ; 2009 ; 2 ; >
@@ -2420,7 +2425,9 @@
     au < exists ; exists ; 2011 ; Journal of Cutaneous and Aesthetic Surgery Volume 4 ; 2011 ; 4 ; >
     au < exists ; exists ; 2012 ; Journal of Cutaneous and Aesthetic Surgery Volume 5 ; 2012 ; 5 ; >
     au < exists ; exists ; 2013 ; Journal of Cutaneous and Aesthetic Surgery Volume 6 ; 2013 ; 6 ; >
-    au < expected ; exists ; 2014 ; Journal of Cutaneous and Aesthetic Surgery Volume 7 ; 2014 ; 7 ; >
+    au < exists ; exists ; 2014 ; Journal of Cutaneous and Aesthetic Surgery Volume 7 ; 2014 ; 7 ; >
+    au < exists ; exists ; 2015 ; Journal of Cutaneous and Aesthetic Surgery Volume 8 ; 2015 ; 8 ; >
+    au < exists ; exists ; 2016 ; Journal of Cutaneous and Aesthetic Surgery Volume 9 ; 2016 ; 9 ; >
 
   }
 
@@ -2471,13 +2478,13 @@
   {
     title <
       name = Journal of Digestive Endoscopy ;
-      issn = 0976-5042 ;
-      eissn = 0976-5050 ;
-      issnl = 0976-5042
+      issn = 0974-6781 ;
+      eissn = 0974-7850 ;
+      issnl = 0974-6781
    >
 
     param[base_url] = http://www.jdionline.org/
-    param[journal_issn] = 0976-5042
+    param[journal_issn] = 0974-6781
 
     au < exists ; exists ; 2011 ; Journal of Digestive Endoscopy Volume 1 ; 2011 ; 1 ; >
     au < exists ; exists ; 2012 ; Journal of Digestive Endoscopy Volume 2 ; 2012 ; 2 ; >
@@ -2912,22 +2919,22 @@
 
   }
 
-  {
-    title <
-      name = Journal of Medical Signals & Sensors ;
-      issn = 2228-7477 ;
-      issnl = 2228-7477
-   >
-
-    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss/
-    comment[jmss] = the url structure is the new version
-
-    au < exists ; exists ; 2011 ; Journal of Medical Signals & Sensors Volume 1 ; 2011 ; 1 ; >
-    au < exists ; exists ; 2012 ; Journal of Medical Signals & Sensors Volume 2 ; 2012 ; 2 ; >
-    au < exists ; exists ; 2013 ; Journal of Medical Signals & Sensors Volume 3 ; 2013 ; 3 ; >
-    au < expected ; exists ; 2014 ; Journal of Medical Signals & Sensors Volume 4 ; 2014 ; 4 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Medical Signals & Sensors ;
+#      issn = 2228-7477 ;
+#      issnl = 2228-7477
+#   >
+#
+#    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss/
+#    comment[jmss] = the url structure is the new version
+#
+#    au < exists ; exists ; 2011 ; Journal of Medical Signals & Sensors Volume 1 ; 2011 ; 1 ; >
+#    au < exists ; exists ; 2012 ; Journal of Medical Signals & Sensors Volume 2 ; 2012 ; 2 ; >
+#    au < exists ; exists ; 2013 ; Journal of Medical Signals & Sensors Volume 3 ; 2013 ; 3 ; >
+#    au < expected ; exists ; 2014 ; Journal of Medical Signals & Sensors Volume 4 ; 2014 ; 4 ; >
+#
+#  }
 
   {
     title <
@@ -2976,25 +2983,25 @@
 
   }
 
-  {
-    title <
-      name = Journal of Natural Pharmaceuticals ;
-      issn = 2229-5119 ;
-      eissn = 2229-7715 ;
-      issnl = 2229-5119
-   >
-
-    param[base_url] = http://www.jnatpharm.org/
-    # no lockss.txt available at this url
-    param[journal_issn] = 2229-5119
-
-    au < doNotProcess ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 ; >
-    au < doNotProcess ; exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; Journal of Natural Pharmaceuticals Volume 5 ; 2014 ; 5 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Natural Pharmaceuticals ;
+#      issn = 2229-5119 ;
+#      eissn = 2229-7715 ;
+#      issnl = 2229-5119
+#   >
+#
+#    param[base_url] = http://www.jnatpharm.org/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 2229-5119
+#
+#    au < doNotProcess ; exists ; 2010 ; Journal of Natural Pharmaceuticals Volume 1 ; 2010 ; 1 ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Natural Pharmaceuticals Volume 2 ; 2011 ; 2 ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Natural Pharmaceuticals Volume 3 ; 2012 ; 3 ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Natural Pharmaceuticals Volume 4 ; 2013 ; 4 ; >
+#    au < expected ; exists ; 2014 ; Journal of Natural Pharmaceuticals Volume 5 ; 2014 ; 5 ; >
+#
+#  }
 
   {
     title <
@@ -3094,13 +3101,15 @@
     >
 
     param[base_url] = http://www.jpathinformatics.org/
-    param[journal_issn] = 2229-5089
+    param[journal_issn] = 2153-3539
 
     au < exists ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; >
     au < exists ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; >
     au < exists ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 ; >
     au < exists ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; >
+    au < exists ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; >
+    au < exists ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; >
+    au < exists ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -3180,14 +3189,16 @@
    >
 
     param[base_url] = http://www.jpbsonline.org/
-    param[journal_issn] = 0976-4879
+    param[journal_issn] = 0975-7406
 
     au < exists ; exists ; 2009 ; Journal of Pharmacy and Bioallied Sciences Volume 1 ; 2009 ; 1 ; >
     au < exists ; exists ; 2010 ; Journal of Pharmacy and Bioallied Sciences Volume 2 ; 2010 ; 2 ; >
     au < exists ; exists ; 2011 ; Journal of Pharmacy and Bioallied Sciences Volume 3 ; 2011 ; 3 ; >
     au < exists ; exists ; 2012 ; Journal of Pharmacy and Bioallied Sciences Volume 4 ; 2012 ; 4 ; >
     au < exists ; exists ; 2013 ; Journal of Pharmacy and Bioallied Sciences Volume 5 ; 2013 ; 5 ; >
-    au < expected ; exists ; 2014 ; Journal of Pharmacy and Bioallied Sciences Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2014 ; Journal of Pharmacy and Bioallied Sciences Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2015 ; Journal of Pharmacy and Bioallied Sciences Volume 7 ; 2015 ; 7 ; >
+    au < exists ; exists ; 2016 ; Journal of Pharmacy and Bioallied Sciences Volume 8 ; 2016 ; 8 ; >
 
   }
 
@@ -3246,55 +3257,55 @@
 
   }
 
-  {
-    title <
-      name = Journal of Prenatal Diagnosis and Therapy ;
-      issn = 0976-1756 ;
-      eissn = 0976-4054 ;
-      issnl = 0976-1756
-   >
+#  {
+#    title <
+#      name = Journal of Prenatal Diagnosis and Therapy ;
+#      issn = 0976-1756 ;
+#      eissn = 0976-4054 ;
+#      issnl = 0976-1756
+#   >
+#
+#    param[base_url] = http://www.jpdt.org/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 0976-1756
+#
+#    au < doNotProcess ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 ; >
+#
+#  }
 
-    param[base_url] = http://www.jpdt.org/
-    # no lockss.txt available at this url
-    param[journal_issn] = 0976-1756
-
-    au < doNotProcess ; exists ; 2010 ; Journal of Prenatal Diagnosis and Therapy Volume 1 ; 2010 ; 1 ; >
-
-  }
-
-  {
-    title <
-      name = Journal of Research in Medical Sciences ;
-      issn = 1735-1995 ;
-      eissn = 1735-7136 ;
-      issnl = 1735-1995
-   >
-
-    param[base_url] = http://www.journals.mui.ac.ir/jrms/
-    comment[jrms] = the url structure is the new version
-
-    {
-      attr[au_coverage_depth] = abstracts
-
-      au < exists ; exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 ; >
-      au < exists ; exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 ; >
-      au < exists ; exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 ; >
-      au < exists ; exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 ; >
-    }
-
-    au < exists ; exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 ; >
-    au < exists ; exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 ; >
-    au < exists ; exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 ; >
-    au < exists ; exists ; 2007 ; Journal of Research in Medical Sciences Volume 12 ; 2007 ; 12 ; >
-    au < exists ; exists ; 2008 ; Journal of Research in Medical Sciences Volume 13 ; 2008 ; 13 ; >
-    au < exists ; exists ; 2009 ; Journal of Research in Medical Sciences Volume 14 ; 2009 ; 14 ; >
-    au < exists ; exists ; 2010 ; Journal of Research in Medical Sciences Volume 15 ; 2010 ; 15 ; >
-    au < exists ; exists ; 2011 ; Journal of Research in Medical Sciences Volume 16 ; 2011 ; 16 ; >
-    au < exists ; exists ; 2012 ; Journal of Research in Medical Sciences Volume 17 ; 2012 ; 17 ; >
-    au < exists ; exists ; 2013 ; Journal of Research in Medical Sciences Volume 18 ; 2013 ; 18 ; >
-    au < expected ; exists ; 2014 ; Journal of Research in Medical Sciences Volume 19 ; 2014 ; 19 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Research in Medical Sciences ;
+#      issn = 1735-1995 ;
+#      eissn = 1735-7136 ;
+#      issnl = 1735-1995
+#   >
+#
+#    param[base_url] = http://www.journals.mui.ac.ir/jrms/
+#    comment[jrms] = the url structure is the new version
+#
+#    {
+#      attr[au_coverage_depth] = abstracts
+#
+#      au < exists ; exists ; 2000 ; Journal of Research in Medical Sciences Volume 5 [Abstract only] ; 2000 ; 5 ; >
+#      au < exists ; exists ; 2001 ; Journal of Research in Medical Sciences Volume 6 [Abstract only] ; 2001 ; 6 ; >
+#      au < exists ; exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 ; >
+#      au < exists ; exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 ; >
+#    }
+#
+#    au < exists ; exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 ; >
+#    au < exists ; exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 ; >
+#    au < exists ; exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 ; >
+#    au < exists ; exists ; 2007 ; Journal of Research in Medical Sciences Volume 12 ; 2007 ; 12 ; >
+#    au < exists ; exists ; 2008 ; Journal of Research in Medical Sciences Volume 13 ; 2008 ; 13 ; >
+#    au < exists ; exists ; 2009 ; Journal of Research in Medical Sciences Volume 14 ; 2009 ; 14 ; >
+#    au < exists ; exists ; 2010 ; Journal of Research in Medical Sciences Volume 15 ; 2010 ; 15 ; >
+#    au < exists ; exists ; 2011 ; Journal of Research in Medical Sciences Volume 16 ; 2011 ; 16 ; >
+#    au < exists ; exists ; 2012 ; Journal of Research in Medical Sciences Volume 17 ; 2012 ; 17 ; >
+#    au < exists ; exists ; 2013 ; Journal of Research in Medical Sciences Volume 18 ; 2013 ; 18 ; >
+#    au < expected ; exists ; 2014 ; Journal of Research in Medical Sciences Volume 19 ; 2014 ; 19 ; >
+#
+#  }
 
   {
     title <
@@ -3334,26 +3345,27 @@
 
   }
 
-  {
-    title <
-      name = Journal of Young Pharmacists ;
-      issn = 0975-1483 ;
-      eissn = 0975-1505 ;
-      issnl = 0975-1483
-   >
-
-    param[base_url] = http://www.jyoungpharm.in/
-    # no lockss.txt available at this url
-    param[journal_issn] = 0975-1483
-
-    au < doNotProcess ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 ; >
-    au < doNotProcess ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 ; >
-    au < doNotProcess ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 ; >
-    au < doNotProcess ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 ; >
-    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 6 ; 2014 ; 6 ; >
-
-  }
+#  {
+#    title <
+#      name = Journal of Young Pharmacists ;
+#      issn = 0975-1483 ;
+#      eissn = 0975-1505 ;
+#      issnl = 0975-1483
+#   >
+#
+#    param[base_url] = http://www.jyoungpharm.in/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 0975-1483
+#    #moved
+#
+#    au < doNotProcess ; exists ; 2009 ; Journal of Young Pharmacists Volume 1 ; 2009 ; 1 ; >
+#    au < doNotProcess ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 ; >
+#    au < doNotProcess ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 ; >
+#    au < doNotProcess ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 ; >
+#    au < doNotProcess ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 ; >
+#    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 6 ; 2014 ; 6 ; >
+#
+#  }
 
   {
     title <
@@ -3402,19 +3414,19 @@
 
   }
 
-  {
-    title <
-      name = Medical Law Cases - For Dentists ;
-      issn = 0976-2531 ;
-      issnl = 0976-2531
-    >
-
-    param[base_url] = http://www.mlcdentists.in/
-    param[journal_issn] = 0976-2531
-    # base_url & journal are not up yet
-
-
-  }
+#  {
+#    title <
+#      name = Medical Law Cases - For Dentists ;
+#      issn = 0976-2531 ;
+#      issnl = 0976-2531
+#    >
+#
+#    param[base_url] = http://www.mlcdentists.in/
+#    param[journal_issn] = 0976-2531
+#    # base_url & journal are not up yet
+#
+#
+#  }
 
   {
     title <
@@ -3695,25 +3707,26 @@
 
   }
 
-  {
-    title <
-      name = Pharmaceutical Methods ;
-      issn = 2229-4708 ;
-      eissn = 2229-4716 ;
-      issnl = 2229-4708
-    >
-
-    param[base_url] = http://www.phmethods.org/
-    # no lockss.txt available at this url
-    param[journal_issn] = 2229-4708
-
-    au < doNotProcess ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 ; >
-    au < doNotProcess ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 ; >
-    au < doNotProcess ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 ; >
-    au < doNotProcess ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 5 ; 2014 ; 5 ; >
-
-  }
+#  {
+#    title <
+#      name = Pharmaceutical Methods ;
+#      issn = 2229-4708 ;
+#      eissn = 2229-4716 ;
+#      issnl = 2229-4708
+#    >
+#
+#    param[base_url] = http://www.phmethods.org/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 2229-4708
+#    # moved
+#
+#    au < doNotProcess ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 ; >
+#    au < doNotProcess ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 ; >
+#    au < doNotProcess ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 ; >
+#    au < doNotProcess ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 ; >
+#    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 5 ; 2014 ; 5 ; >
+#
+#  }
 
   {
     title <
@@ -3750,14 +3763,16 @@
     >
 
     param[base_url] = http://www.phcogres.com/
-    param[journal_issn] = 0976-4836
+    param[journal_issn] = 0974-8490
 
     au < exists ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; >
     au < exists ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; >
     au < exists ; exists ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 ; >
     au < exists ; exists ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 ; >
     au < exists ; exists ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 ; >
-    au < expected ; exists ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2015 ; Pharmacognosy Research Volume 7 ; 2015 ; 7 ; >
+    au < exists ; exists ; 2016 ; Pharmacognosy Research Volume 8 ; 2016 ; 8 ; >
 
   }
 
@@ -3785,45 +3800,46 @@
 
   }
 
-  {
-    title <
-      name = Pulmonary Circulation ;
-      issn = 2045-8932 ;
-      eissn = 2045-8940 ;
-      issnl = 2045-8932
-    >
+#  {
+#    title <
+#      name = Pulmonary Circulation ;
+#      issn = 2045-8932 ;
+#      eissn = 2045-8940 ;
+#      issnl = 2045-8932
+#    >
+#
+#    param[base_url] = http://www.pulmonarycirculation.org/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 2045-8932
+#    # moved
+#
+#    au < doNotProcess ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 ; >
+#    au < doNotProcess ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 ; >
+#    au < doNotProcess ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 ; >
+#    au < expected ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 2014 ; 4 ; >
+#
+#  }
 
-    param[base_url] = http://www.pulmonarycirculation.org/
-    # no lockss.txt available at this url
-    param[journal_issn] = 2045-8932
-
-    au < doNotProcess ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 ; >
-    au < doNotProcess ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 ; >
-    au < doNotProcess ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 ; >
-    au < expected ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 2014 ; 4 ; >
-
-  }
-
-  {
-    title <
-      name = PVRI Review ;
-      issn = 0974-6013 ;
-      eissn = 0975-1602 ;
-      issnl = 0974-6013
-    >
-
-    param[base_url] = http://www.pvrireview.org/
-    # no lockss.txt available at this url
-    param[journal_issn] = 0974-6013
-
-    au < doNotProcess ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 ; >
-    au < doNotProcess ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 ; >
-    au < doNotProcess ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 ; >
-    au < doNotProcess ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 ; >
-    au < doNotProcess ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 ; >
-    au < expected ; exists ; 2014 ; PVRI Review Volume 6 ; 2014 ; 6 ; >
-
-  }
+#  {
+#    title <
+#      name = PVRI Review ;
+#      issn = 0974-6013 ;
+#      eissn = 0975-1602 ;
+#      issnl = 0974-6013
+#    >
+#
+#    param[base_url] = http://www.pvrireview.org/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 0974-6013
+#
+#    au < doNotProcess ; exists ; 2009 ; PVRI Review Volume 1 ; 2009 ; 1 ; >
+#    au < doNotProcess ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 ; >
+#    au < doNotProcess ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 ; >
+#    au < doNotProcess ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 ; >
+#    au < doNotProcess ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 ; >
+#    au < expected ; exists ; 2014 ; PVRI Review Volume 6 ; 2014 ; 6 ; >
+#
+#  }
 
   {
     title <
@@ -3842,46 +3858,46 @@
 
   }
 
-  {
-    title <
-      name = Ramon Llull Journal of Applied Ethics ;
-      issn = 2013-8393 ;
-      eissn = 2229-578X ;
-      issnl = 2013-8393
-    >
+#  {
+#    title <
+#      name = Ramon Llull Journal of Applied Ethics ;
+#      issn = 2013-8393 ;
+#      eissn = 2229-578X ;
+#      issnl = 2013-8393
+#    >
+#
+#    param[base_url] = http://www.rljae.org/
+#    param[journal_issn] = 2013-8393
+#    # no issue in 2012
+#
+#    au < exists ; exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 ; >
+#    au < exists ; exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 ; >
+#    au < expected ; exists ; 2014 ; Ramon Llull Journal of Applied Ethics Volume 3 ; 2014 ; 3 ; >
+#
+#  }
 
-    param[base_url] = http://www.rljae.org/
-    param[journal_issn] = 2013-8393
-    # no issue in 2012
-
-    au < exists ; exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 ; >
-    au < exists ; exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 ; >
-    au < expected ; exists ; 2014 ; Ramon Llull Journal of Applied Ethics Volume 3 ; 2014 ; 3 ; >
-
-  }
-
-  {
-    title <
-      name = Research in Pharmaceutical Sciences ;
-      issn = 1735-5362 ;
-      eissn = 1735-9414 ;
-      issnl = 1735-5362
-    >
-
-    param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
-    comment[jrps] = the url structure is the new version
-
-    au < exists ; exists ; 2006 ; Research in Pharmaceutical Sciences Volume 1 ; 2006 ; 1 ; >
-    au < exists ; exists ; 2007 ; Research in Pharmaceutical Sciences Volume 2 ; 2007 ; 2 ; >
-    au < exists ; exists ; 2008 ; Research in Pharmaceutical Sciences Volume 3 ; 2008 ; 3 ; >
-    au < exists ; exists ; 2009 ; Research in Pharmaceutical Sciences Volume 4 ; 2009 ; 4 ; >
-    au < exists ; exists ; 2010 ; Research in Pharmaceutical Sciences Volume 5 ; 2010 ; 5 ; >
-    au < exists ; exists ; 2011 ; Research in Pharmaceutical Sciences Volume 6 ; 2011 ; 6 ; >
-    au < exists ; exists ; 2012 ; Research in Pharmaceutical Sciences Volume 7 ; 2012 ; 7 ; >
-    au < exists ; exists ; 2013 ; Research in Pharmaceutical Sciences Volume 8 ; 2013 ; 8 ; >
-    au < expected ; exists ; 2014 ; Research in Pharmaceutical Sciences Volume 9 ; 2014 ; 9 ; >
-
-  }
+#  {
+#    title <
+#      name = Research in Pharmaceutical Sciences ;
+#      issn = 1735-5362 ;
+#      eissn = 1735-9414 ;
+#      issnl = 1735-5362
+#    >
+#
+#    param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
+#    comment[jrps] = the url structure is the new version
+#
+#    au < exists ; exists ; 2006 ; Research in Pharmaceutical Sciences Volume 1 ; 2006 ; 1 ; >
+#    au < exists ; exists ; 2007 ; Research in Pharmaceutical Sciences Volume 2 ; 2007 ; 2 ; >
+#    au < exists ; exists ; 2008 ; Research in Pharmaceutical Sciences Volume 3 ; 2008 ; 3 ; >
+#    au < exists ; exists ; 2009 ; Research in Pharmaceutical Sciences Volume 4 ; 2009 ; 4 ; >
+#    au < exists ; exists ; 2010 ; Research in Pharmaceutical Sciences Volume 5 ; 2010 ; 5 ; >
+#    au < exists ; exists ; 2011 ; Research in Pharmaceutical Sciences Volume 6 ; 2011 ; 6 ; >
+#    au < exists ; exists ; 2012 ; Research in Pharmaceutical Sciences Volume 7 ; 2012 ; 7 ; >
+#    au < exists ; exists ; 2013 ; Research in Pharmaceutical Sciences Volume 8 ; 2013 ; 8 ; >
+#    au < expected ; exists ; 2014 ; Research in Pharmaceutical Sciences Volume 9 ; 2014 ; 9 ; >
+#
+#  }
 
   {
     title <
@@ -3943,18 +3959,18 @@
 
   }
 
-  {
-    title <
-      name = Saudi Orthodontic Journal ;
-      issn =
-   >
-
-    param[base_url] = http://www.saudioj.org/
-    comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
-    # base_url & journal are not up yet
-
-
-  }
+#  {
+#    title <
+#      name = Saudi Orthodontic Journal ;
+#      issn =
+#   >
+#
+#    param[base_url] = http://www.saudioj.org/
+#    comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
+#    # base_url & journal are not up yet
+#
+#
+#  }
 
   {
     title <
@@ -3971,43 +3987,45 @@
 
   }
 
-  {
-    title <
-      name = Surgical Neurology International ;
-      issn = 2229-5097 ;
-      eissn = 2152-7806 ;
-      issnl = 2229-5097
-   >
+#  {
+#    title <
+#      name = Surgical Neurology International ;
+#      issn = 2229-5097 ;
+#      eissn = 2152-7806 ;
+#      issnl = 2229-5097
+#   >
+#
+#    param[base_url] = http://www.surgicalneurologyint.com/
+#    # no lockss.txt available at this url
+#    param[journal_issn] = 2229-5097
+#    # moved
+#
+#    au < doNotProcess ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 ; >
+#    au < doNotProcess ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 ; >
+#    au < doNotProcess ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 ; >
+#    au < doNotProcess ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 ; >
+#    au < expected ; exists ; 2014 ; Surgical Neurology International Volume 5 ; 2014 ; 5 ; >
+#
+#  }
 
-    param[base_url] = http://www.surgicalneurologyint.com/
-    # no lockss.txt available at this url
-    param[journal_issn] = 2229-5097
-
-    au < doNotProcess ; exists ; 2010 ; Surgical Neurology International Volume 1 ; 2010 ; 1 ; >
-    au < doNotProcess ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 ; >
-    au < doNotProcess ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 ; >
-    au < doNotProcess ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 ; >
-    au < expected ; exists ; 2014 ; Surgical Neurology International Volume 5 ; 2014 ; 5 ; >
-
-  }
-
-  {
-    title <
-      name = Systematic Reviews in Pharmacy ;
-      issn = 0975-8453 ;
-      eissn = 0976-2779 ;
-      issnl = 0975-8453
-   >
-
-    param[base_url] = http://www.sysrevpharm.org/
-    param[journal_issn] = 0975-8453
-
-    au < exists ; exists ; 2010 ; Systematic Reviews in Pharmacy Volume 1 ; 2010 ; 1 ; >
-    au < exists ; exists ; 2011 ; Systematic Reviews in Pharmacy Volume 2 ; 2011 ; 2 ; >
-    au < exists ; exists ; 2012 ; Systematic Reviews in Pharmacy Volume 3 ; 2012 ; 3 ; >
-    au < expected ; exists ; 2014 ; Systematic Reviews in Pharmacy Volume 4 ; 2014 ; 4 ; >
-
-  }
+#  {
+#    title <
+#      name = Systematic Reviews in Pharmacy ;
+#      issn = 0975-8453 ;
+#      eissn = 0976-2779 ;
+#      issnl = 0975-8453
+#   >
+#
+#    param[base_url] = http://www.sysrevpharm.org/
+#    param[journal_issn] = 0975-8453
+#    # moved
+#
+#    au < exists ; exists ; 2010 ; Systematic Reviews in Pharmacy Volume 1 ; 2010 ; 1 ; >
+#    au < exists ; exists ; 2011 ; Systematic Reviews in Pharmacy Volume 2 ; 2011 ; 2 ; >
+#    au < exists ; exists ; 2012 ; Systematic Reviews in Pharmacy Volume 3 ; 2012 ; 3 ; >
+#    au < expected ; exists ; 2014 ; Systematic Reviews in Pharmacy Volume 4 ; 2014 ; 4 ; >
+#
+#  }
 
   {
     title <
@@ -4105,35 +4123,36 @@
 
   }
 
-  {
-    title <
-      name = Young Scientists Journal ;
-      issn = 0974-6102 ;
-      eissn = 0975-2145 ;
-      issnl = 0974-6102
-    >
-
-    param[base_url] = http://ysjournal.com/
-    param[journal_issn] = 0974-6102
-
-    au < doNotProcess ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 ; >
-    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 ; >
-    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 ; >
-    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 ; >
-    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 ; >
-    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 ; >
-    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 ; >
-    au < doNotProcess ; exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 ; >
-    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 ; >
-    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 ; >
-    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 ; >
-    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 ; >
-    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 ; >
-    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 ; >
-    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 15 ; 2014 ; 15 ; >
-    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 16 ; 2014 ; 16 ; >
-    au < exists ; exists ; 2015 ; Young Scientists Journal Volume 17 ; 2015 ; 17 ; >
-
-  }
+#  {
+#    title <
+#      name = Young Scientists Journal ;
+#      issn = 0974-6102 ;
+#      eissn = 0975-2145 ;
+#      issnl = 0974-6102
+#    >
+#
+#    param[base_url] = http://ysjournal.com/
+#    param[journal_issn] = 0974-6102
+#    # moved
+#
+#    au < doNotProcess ; exists ; 2006 ; Young Scientists Journal Volume 1 ; 2006 ; 1 ; >
+#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 2 ; 2007 ; 2 ; >
+#    au < doNotProcess ; exists ; 2007 ; Young Scientists Journal Volume 3 ; 2007 ; 3 ; >
+#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 4 ; 2008 ; 4 ; >
+#    au < doNotProcess ; exists ; 2008 ; Young Scientists Journal Volume 5 ; 2008 ; 5 ; >
+#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 6 ; 2009 ; 6 ; >
+#    au < doNotProcess ; exists ; 2009 ; Young Scientists Journal Volume 7 ; 2009 ; 7 ; >
+#    au < doNotProcess ; exists ; 2010 ; Young Scientists Journal Volume 8 ; 2010 ; 8 ; >
+#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 ; >
+#    au < doNotProcess ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 ; >
+#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 ; >
+#    au < doNotProcess ; exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 ; >
+#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 ; >
+#    au < doNotProcess ; exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 ; >
+#    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 15 ; 2014 ; 15 ; >
+#    au < exists ; exists ; 2014 ; Young Scientists Journal Volume 16 ; 2014 ; 16 ; >
+#    au < exists ; exists ; 2015 ; Young Scientists Journal Volume 17 ; 2015 ; 17 ; >
+#
+#  }
 
 }
