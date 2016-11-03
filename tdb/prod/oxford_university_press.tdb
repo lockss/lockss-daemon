@@ -3125,6 +3125,7 @@
     au < HighWirePressH20Plugin ; released ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; released ; 2015 ; The British Journal of Criminology: An International Review of Crime and Society Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; The British Journal of Criminology: An International Review of Crime and Society Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; exists ; 2017 ; The British Journal of Criminology: An International Review of Crime and Society Volume 57 ; 57 >
 
     }
 
@@ -13528,6 +13529,8 @@
       issnl = 1473-6691
     >
 
+     #content available from 1961 volume os5 to 2000 volume os32
+
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
@@ -13544,6 +13547,9 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of the ICRU Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of the ICRU Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of the ICRU Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the ICRU Volume 4 ; 4 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the ICRU Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
@@ -13554,6 +13560,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the ICRU Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 >
 
     }
 
