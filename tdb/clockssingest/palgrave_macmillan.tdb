@@ -410,31 +410,31 @@
 
     }
 
-    {
-
-      title <
-        name = International Journal of Educational Advancement ;
-        issn = 1744-6503 ;
-        eissn = 1744-6511 ;
-        issnl = 1744-6503
-      >
-
-      param[journal_id] = ijea
-
-      au < doNotProcess ; exists ; 2003 ; International Journal of Educational Advancement Volume 4 (2003) ; 2003 ; 4 ; >
-      au < doNotProcess ; exists ; 2004 ; International Journal of Educational Advancement Volume 4 (2004) ; 2004 ; 4 ; >
-      au < doNotProcess ; exists ; 2004 ; International Journal of Educational Advancement Volume 5 (2004) ; 2004 ; 5 ; >
-      au < doNotProcess ; exists ; 2005 ; International Journal of Educational Advancement Volume 5 (2005) ; 2005 ; 5 ; >
-      au < doNotProcess ; exists ; 2005 ; International Journal of Educational Advancement Volume 6 (2005) ; 2005 ; 6 ; >
-      au < doNotProcess ; exists ; 2006 ; International Journal of Educational Advancement Volume 6 (2006) ; 2006 ; 6 ; >
-      au < doNotProcess ; exists ; 2007 ; International Journal of Educational Advancement Volume 7 ; 2007 ; 7 ; >
-      au < doNotProcess ; exists ; 2008 ; International Journal of Educational Advancement Volume 8 ; 2008 ; 8 ; >
-      au < doNotProcess ; exists ; 2009 ; International Journal of Educational Advancement Volume 9 (2009) ; 2009 ; 9 ; >
-      au < doNotProcess ; exists ; 2010 ; International Journal of Educational Advancement Volume 9 (2010) ; 2010 ; 9 ; >
-      au < doNotProcess ; exists ; 2010 ; International Journal of Educational Advancement Volume 10 (2010) ; 2010 ; 10 ; >
-      au < doNotProcess ; exists ; 2011 ; International Journal of Educational Advancement Volume 11 (2011) ; 2011 ; 11 ; >
-
-    }
+#    {
+#
+#      title <
+#        name = International Journal of Educational Advancement ;
+#        issn = 1744-6503 ;
+#        eissn = 1744-6511 ;
+#        issnl = 1744-6503
+#      >
+#
+#      param[journal_id] = ijea
+#
+#      au < doNotProcess ; exists ; 2003 ; International Journal of Educational Advancement Volume 4 (2003) ; 2003 ; 4 ; >
+#      au < doNotProcess ; exists ; 2004 ; International Journal of Educational Advancement Volume 4 (2004) ; 2004 ; 4 ; >
+#      au < doNotProcess ; exists ; 2004 ; International Journal of Educational Advancement Volume 5 (2004) ; 2004 ; 5 ; >
+#      au < doNotProcess ; exists ; 2005 ; International Journal of Educational Advancement Volume 5 (2005) ; 2005 ; 5 ; >
+#      au < doNotProcess ; exists ; 2005 ; International Journal of Educational Advancement Volume 6 (2005) ; 2005 ; 6 ; >
+#      au < doNotProcess ; exists ; 2006 ; International Journal of Educational Advancement Volume 6 (2006) ; 2006 ; 6 ; >
+#      au < doNotProcess ; exists ; 2007 ; International Journal of Educational Advancement Volume 7 ; 2007 ; 7 ; >
+#      au < doNotProcess ; exists ; 2008 ; International Journal of Educational Advancement Volume 8 ; 2008 ; 8 ; >
+#      au < doNotProcess ; exists ; 2009 ; International Journal of Educational Advancement Volume 9 (2009) ; 2009 ; 9 ; >
+#      au < doNotProcess ; exists ; 2010 ; International Journal of Educational Advancement Volume 9 (2010) ; 2010 ; 9 ; >
+#      au < doNotProcess ; exists ; 2010 ; International Journal of Educational Advancement Volume 10 (2010) ; 2010 ; 10 ; >
+#      au < doNotProcess ; exists ; 2011 ; International Journal of Educational Advancement Volume 11 (2011) ; 2011 ; 11 ; >
+#
+#    }
 
     {
 
@@ -665,25 +665,25 @@
 
     }
 
-    {
-
-      title <
-        name = Journal of Digital Asset Management ;
-        issn = 1743-6540 ;
-        eissn = 1743-6559 ;
-        issnl = 1743-6540
-      >
-
-      param[journal_id] = dam
-
-      au < doNotProcess ; exists ; 2005 ; Journal of Asset Digital Management Volume 1 ; 2005 ; 1 ; >
-      au < doNotProcess ; exists ; 2006 ; Journal of Asset Digital Management Volume 2 ; 2006 ; 2 ; >
-      au < doNotProcess ; exists ; 2007 ; Journal of Asset Digital Management Volume 3 ; 2007 ; 3 ; >
-      au < doNotProcess ; exists ; 2008 ; Journal of Asset Digital Management Volume 4 ; 2008 ; 4 ; >
-      au < doNotProcess ; exists ; 2009 ; Journal of Asset Digital Management Volume 5 ; 2009 ; 5 ; >
-      au < doNotProcess ; exists ; 2010 ; Journal of Asset Digital Management Volume 6 ; 2010 ; 6 ; >
-
-    }
+#    {
+#
+#      title <
+#        name = Journal of Digital Asset Management ;
+#        issn = 1743-6540 ;
+#        eissn = 1743-6559 ;
+#        issnl = 1743-6540
+#      >
+#
+#      param[journal_id] = dam
+#
+#      au < doNotProcess ; exists ; 2005 ; Journal of Asset Digital Management Volume 1 ; 2005 ; 1 ; >
+#      au < doNotProcess ; exists ; 2006 ; Journal of Asset Digital Management Volume 2 ; 2006 ; 2 ; >
+#      au < doNotProcess ; exists ; 2007 ; Journal of Asset Digital Management Volume 3 ; 2007 ; 3 ; >
+#      au < doNotProcess ; exists ; 2008 ; Journal of Asset Digital Management Volume 4 ; 2008 ; 4 ; >
+#      au < doNotProcess ; exists ; 2009 ; Journal of Asset Digital Management Volume 5 ; 2009 ; 5 ; >
+#      au < doNotProcess ; exists ; 2010 ; Journal of Asset Digital Management Volume 6 ; 2010 ; 6 ; >
+#
+#    }
 
     {
 
@@ -850,33 +850,33 @@
 
     }
 
-    {
-
-      title <
-        name = Journal of Retail & Leisure Property ;
-        issn = 1479-1110 ;
-        eissn = 1750-2098 ;
-        issnl = 1479-1110
-      >
-
-      param[journal_id] = rlp
-
-      au < doNotProcess ; exists ; 2000 ; Journal of Retail & Leisure Property Volume 1 (2000) ; 2000 ; 1 ; >
-      au < doNotProcess ; exists ; 2001 ; Journal of Retail & Leisure Property Volume 1 (2001) ; 2001 ; 1 ; >
-      au < doNotProcess ; exists ; 2002 ; Journal of Retail & Leisure Property Volume 2 ; 2002 ; 2 ; >
-      au < doNotProcess ; exists ; 2003 ; Journal of Retail & Leisure Property Volume 3 (2003) ; 2003 ; 3 ; >
-      au < doNotProcess ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 3 (2004) ; 2004 ; 3 ; >
-      au < doNotProcess ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 4 (2004) ; 2004 ; 4 ; >
-      au < doNotProcess ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 4 (2005) ; 2005 ; 4 ; >
-      au < doNotProcess ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 5 (2005) ; 2005 ; 5 ; >
-      au < doNotProcess ; exists ; 2006 ; Journal of Retail & Leisure Property Volume 5 (2006) ; 2006 ; 5 ; >
-      au < doNotProcess ; exists ; 2007 ; Journal of Retail & Leisure Property Volume 6 ; 2007 ; 6 ; >
-      au < doNotProcess ; exists ; 2008 ; Journal of Retail & Leisure Property Volume 7 ; 2008 ; 7 ; >
-      au < doNotProcess ; exists ; 2009 ; Journal of Retail & Leisure Property Volume 8 ; 2009 ; 8 ; >
-      au < doNotProcess ; exists ; 2010 ; Journal of Retail & Leisure Property Volume 9 (2010) ; 2010 ; 9 ; >
-      au < doNotProcess ; exists ; 2011 ; Journal of Retail & Leisure Property Volume 9 (2011) ; 2011 ; 9 ; >
-
-    }
+#    {
+#
+#      title <
+#        name = Journal of Retail & Leisure Property ;
+#        issn = 1479-1110 ;
+#        eissn = 1750-2098 ;
+#        issnl = 1479-1110
+#      >
+#
+#      param[journal_id] = rlp
+#
+#      au < doNotProcess ; exists ; 2000 ; Journal of Retail & Leisure Property Volume 1 (2000) ; 2000 ; 1 ; >
+#      au < doNotProcess ; exists ; 2001 ; Journal of Retail & Leisure Property Volume 1 (2001) ; 2001 ; 1 ; >
+#      au < doNotProcess ; exists ; 2002 ; Journal of Retail & Leisure Property Volume 2 ; 2002 ; 2 ; >
+#      au < doNotProcess ; exists ; 2003 ; Journal of Retail & Leisure Property Volume 3 (2003) ; 2003 ; 3 ; >
+#      au < doNotProcess ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 3 (2004) ; 2004 ; 3 ; >
+#      au < doNotProcess ; exists ; 2004 ; Journal of Retail & Leisure Property Volume 4 (2004) ; 2004 ; 4 ; >
+#      au < doNotProcess ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 4 (2005) ; 2005 ; 4 ; >
+#      au < doNotProcess ; exists ; 2005 ; Journal of Retail & Leisure Property Volume 5 (2005) ; 2005 ; 5 ; >
+#      au < doNotProcess ; exists ; 2006 ; Journal of Retail & Leisure Property Volume 5 (2006) ; 2006 ; 5 ; >
+#      au < doNotProcess ; exists ; 2007 ; Journal of Retail & Leisure Property Volume 6 ; 2007 ; 6 ; >
+#      au < doNotProcess ; exists ; 2008 ; Journal of Retail & Leisure Property Volume 7 ; 2008 ; 7 ; >
+#      au < doNotProcess ; exists ; 2009 ; Journal of Retail & Leisure Property Volume 8 ; 2009 ; 8 ; >
+#      au < doNotProcess ; exists ; 2010 ; Journal of Retail & Leisure Property Volume 9 (2010) ; 2010 ; 9 ; >
+#      au < doNotProcess ; exists ; 2011 ; Journal of Retail & Leisure Property Volume 9 (2011) ; 2011 ; 9 ; >
+#
+#    }
 
     {
 
