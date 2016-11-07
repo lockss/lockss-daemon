@@ -150,7 +150,8 @@
       au < crawling ; exists ; 1998 ; 978-1-56576-229-9 ; Stratigraphy and Paleoenvironments of the Cretaceous Western Interior Seaway, USA Volume 6 ; sepcostr ; >
       au < ready ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; sepcosil ; >
       au < crawling ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; sepcocar ; >
-      au < crawling ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
+      # no substance for Outcrops Revitalized.
+      au < ingNotReady ; exists ; 2011 ; 978-1-56576-306-7 ; Outcrops Revitalized: Tools, Techniques and Applications Volume 10 ; sepcoout ; >
       # the PDFs for the next AU is not accessible - goes to log in page
       au < notReady ; exists ; 2013 ; 978-1-56576-281-7 ; Phanerozoic Paleoclimate: An Atlas of Lithologic Indicators of Climate Volume 11 ; sepcopha ; >
 
