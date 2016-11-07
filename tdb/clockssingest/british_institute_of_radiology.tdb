@@ -292,7 +292,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Imaging Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Imaging Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Imaging Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2014 ; Imaging Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2014 ; Imaging Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2016 ; Imaging Volume 24 ; 24 ; >
     
     }
