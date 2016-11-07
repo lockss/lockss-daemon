@@ -74,7 +74,7 @@
     au < doNotProcess ; exists ; 1987 ; 1987 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 1988 ; 1988 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 1989 ; 1989 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 24 ; 24 ; >
-    au < exists ; exists ; 1990 ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 25 ; 25 ; >
 
   }
 
@@ -795,7 +795,7 @@
 
    au < doNotProcess ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 2000 ; 43 ; >
    au < doNotProcess ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Akupunktur Volume 2001 ; 44 ; >
-   au < exists ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 2002 ; 45 ; >
+   au < manifest ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 2002 ; 45 ; >
 
   }
 
@@ -841,7 +841,7 @@
     comment[years] = 2000 only - journal published 1996-2000
     comment[continued_by] = 1617-5891 Deutsche Zeitschrift fur Onkologie
 
-   au < exists ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 2000 ; 32 ; >
+   au < manifest ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 2000 ; 32 ; >
 
   }
 
@@ -1414,7 +1414,7 @@
     param[journal_id] = 10.1055/s-00000152
     comment[years] = 2010-current
 
-    au < exists ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 ; >
 
   }
 
@@ -1920,7 +1920,7 @@
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
 
-   au < exists ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 84 ; >
+   au < manifest ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 84 ; >
 
   }
 
@@ -3466,7 +3466,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Notfall & Hausarztmedizin Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Notfall & Hausarztmedizin Volume 34 ; 34 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 ; >
 
   }
 
@@ -3482,7 +3482,7 @@
     comment[years] = 2004-2005
 
     au < doNotProcess ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 30 ; 30 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 ; >
 
   }
 
@@ -3497,7 +3497,7 @@
     param[journal_id] = 10.1055/s-00000044
     comment[years] = 2003
 
-    au < exists ; exists ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 ; >
 
   }
 
@@ -3688,7 +3688,7 @@
     param[journal_id] = 10.1055/s-00000047
     comment[years] = 2001
 
-    au < exists ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 9 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 9 ; >
 
   }
 
@@ -4279,7 +4279,7 @@
 
     au < doNotProcess ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
 
   }
 
@@ -4807,7 +4807,7 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 1998 ; 12 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 1999 ; 13 ; >
     au < doNotProcess ; exists ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 2000 ; 14 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 2001 ; 15 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 2001 ; 15 ; >
 
   }
 
@@ -5380,7 +5380,7 @@
    au < doNotProcess ; exists ; 2006 ; 2006 ; team spiegel Volume 2006 ; 13 ; >
    au < doNotProcess ; exists ; 2007 ; 2007 ; team spiegel Volume 2007 ; 14 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; team spiegel Volume 2008 ; 15 ; >
-   au < exists ; exists ; 2009 ; 2009 ; team spiegel Volume 2009 ; 16 ; >
+   au < manifest ; exists ; 2009 ; 2009 ; team spiegel Volume 2009 ; 16 ; >
 
   }
 
@@ -5494,7 +5494,7 @@
     comment[years] = 2008-2009
 
     au < doNotProcess ; exists ; 2008 ; 2008 ; Tierarzthelfer/in konkret Volume 2008 ; 4 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Tierarzthelfer/in konkret Volume 2009 ; 5 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Tierarzthelfer/in konkret Volume 2009 ; 5 ; >
 
   }
 
@@ -6056,7 +6056,7 @@
     au < doNotProcess ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
     au < doNotProcess ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
 
   }
 
