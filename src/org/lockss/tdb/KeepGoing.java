@@ -43,7 +43,7 @@ import org.apache.commons.cli.*;
  * <p>
  * If the keep-going option created by {@link #addOptions(Options)} is requested
  * on the command line processed by
- * {@link #processCommandLine(Map, CommandLineAccessor)},
+ * {@link #parse(Map, CommandLineAccessor)},
  * {@link #isKeepGoing(Map)} will return <code>true</code> to indicate it; one
  * can then add errors to the list of errors via
  * {@link #addError(Map, Exception)} and retrieve them later via
@@ -51,18 +51,18 @@ import org.apache.commons.cli.*;
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
-public class KeepGoingOption {
+public class KeepGoing {
 
   /**
    * <p>
    * Prevent instantiation.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  private KeepGoingOption() {
+  private KeepGoing() {
     // Prevent instantiation
   }
 
@@ -71,27 +71,18 @@ public class KeepGoingOption {
    * Key for the standard input option ({@value}).
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected static final String KEY_KEEP_GOING = "keep-going";
-  
-  /**
-   * <p>
-   * Single letter for the standard input option ({@value}).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final char LETTER_KEEP_GOING = 'k';
+  public static final String KEY = "keep-going";
   
   /**
    * <p>
    * Key for the keep-going option's error list.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected static final String KEY_KEEP_GOING_ERRORS = KEY_KEEP_GOING + "__errors";
+  private static final String KEY_ERRORS = KEY + "__errors";
   
   /**
    * <p>
@@ -101,13 +92,13 @@ public class KeepGoingOption {
    * 
    * @param opts
    *          A Commons CLI {@link Options} instance.
-   * @since 1.67
+   * @since 1.72
    */
-  public static void addOptions(Options opts) {
-    opts.addOption(Option.builder(Character.toString(LETTER_KEEP_GOING))
-                   .longOpt(KEY_KEEP_GOING)
-                   .desc(String.format("keep going past errors through all input files"))
-                   .build());
+  public static Option option() {
+    return Option.builder(Character.toString('k'))
+                 .longOpt(KEY)
+                 .desc("keep going past errors through all input files")
+                 .build();
   }
 
   /**
@@ -120,12 +111,12 @@ public class KeepGoingOption {
    *          An options map.
    * @param cmd
    *          A {@link CommandLineAccessor} instance.
-   * @since 1.67
+   * @since 1.72
    */
-  public static void processCommandLine(Map<String, Object> options,
-                                        CommandLineAccessor cmd) {
-    options.put(KEY_KEEP_GOING, Boolean.valueOf(cmd.hasOption(KEY_KEEP_GOING)));
-    options.put(KEY_KEEP_GOING_ERRORS, new ArrayList<Exception>());
+  public static void parse(Map<String, Object> options,
+                           CommandLineAccessor cmd) {
+    options.put(KEY, Boolean.valueOf(cmd.hasOption(KEY)));
+    options.put(KEY_ERRORS, new ArrayList<Exception>());
   }
 
   /**
@@ -138,10 +129,10 @@ public class KeepGoingOption {
    *          An options map.
    * @return <code>true</code> if and only if the keep-going option has been
    *         requested on the command line.
-   * @since 1.67
+   * @since 1.72
    */
   public static boolean isKeepGoing(Map<String, Object> options) {
-    Boolean keepGoing = (Boolean)options.get(KEY_KEEP_GOING);
+    Boolean keepGoing = (Boolean)options.get(KEY);
     return keepGoing != null && keepGoing.booleanValue();
   }
   
@@ -154,7 +145,7 @@ public class KeepGoingOption {
    *          The options map.
    * @param exc
    *          An exception.
-   * @since 1.67
+   * @since 1.72
    */
   public static void addError(Map<String, Object> options,
                               Exception exc) {
@@ -169,10 +160,10 @@ public class KeepGoingOption {
    * @param options
    *          The options map.
    * @return The list of errors stored in the options map.
-   * @since 1.67
+   * @since 1.72
    */
   public static List<Exception> getErrors(Map<String, Object> options) {
-    return (List<Exception>)options.get(KEY_KEEP_GOING_ERRORS);
+    return (List<Exception>)options.get(KEY_ERRORS);
   }
 
 }

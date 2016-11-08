@@ -73,7 +73,7 @@ public class TdbParse {
    */
   public void addOptions(Options opts) {
     opts.addOption(Help.option()); // --help
-    KeepGoingOption.addOptions(opts); // --keep-going
+    opts.addOption(KeepGoing.option()); // --keep-going
     opts.addOption(OutputData.option()); // --output-data
     opts.addOption(Verbose.option()); // --verbose
     opts.addOption(Version.option()); // --version
@@ -93,7 +93,7 @@ public class TdbParse {
     if (OutputData.get(options) == null) {
       AppUtil.error("--%s is required", OutputData.KEY);
     }
-    KeepGoingOption.processCommandLine(options, cmd);
+    KeepGoing.parse(options, cmd);
     return options;
   }
   
@@ -111,21 +111,21 @@ public class TdbParse {
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
-        KeepGoingOption.addError(options, fnfe);
+        KeepGoing.addError(options, fnfe);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: I/O error", f);
-        KeepGoingOption.addError(options, ioe);
+        KeepGoing.addError(options, ioe);
       }
       catch (SyntaxError se) {
         AppUtil.warning(options, se, se.getMessage());
-        KeepGoingOption.addError(options, se);
+        KeepGoing.addError(options, se);
       }
     }
     
-    List<Exception> errors = KeepGoingOption.getErrors(options);
+    List<Exception> errors = KeepGoing.getErrors(options);
     int errs = errors.size();
-    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+    if (KeepGoing.isKeepGoing(options) && errs > 0) {
       AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
     }
     return tdbBuilder.getTdb();

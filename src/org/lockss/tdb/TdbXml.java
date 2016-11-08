@@ -315,7 +315,7 @@ public class TdbXml {
     options.addOption(Help.option());
     options.addOption(Version.option());
     options.addOption(Verbose.option());
-    KeepGoingOption.addOptions(options);
+    options.addOption(KeepGoing.option());
     InputOption.addOptions(options);
     OutputOption.addOptions(options);
     OutputDirectoryOption.addOptions(options);
@@ -342,7 +342,7 @@ public class TdbXml {
                                                 CommandLineAccessor cmd) {
     // Options from other modules
     Verbose.parse(options, cmd);
-    KeepGoingOption.processCommandLine(options, cmd);
+    KeepGoing.parse(options, cmd);
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
     OutputDirectoryOption.processCommandLine(options, cmd);
@@ -711,7 +711,7 @@ public class TdbXml {
         TdbBuilder tdbBuilder = new TdbBuilder();
         if ("-".equals(f)) {
           AppUtil.warning(options, null, "Cannot process from standard input in output directory mode");
-          KeepGoingOption.addError(options, null);
+          KeepGoing.addError(options, null);
         }
         else {
           tdbBuilder.parse(f, Constants.ENCODING_UTF_8);
@@ -722,21 +722,21 @@ public class TdbXml {
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
-        KeepGoingOption.addError(options, fnfe);
+        KeepGoing.addError(options, fnfe);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: error reading from file", f);
-        KeepGoingOption.addError(options, ioe);
+        KeepGoing.addError(options, ioe);
       }
       catch (SyntaxError se) {
         AppUtil.warning(options, se, se.getMessage());
-        KeepGoingOption.addError(options, se);
+        KeepGoing.addError(options, se);
       }
     }
     
-    List<Exception> errors = KeepGoingOption.getErrors(options);
+    List<Exception> errors = KeepGoing.getErrors(options);
     int errs = errors.size();
-    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+    if (KeepGoing.isKeepGoing(options) && errs > 0) {
       AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
     }
   }
@@ -767,21 +767,21 @@ public class TdbXml {
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
-        KeepGoingOption.addError(options, fnfe);
+        KeepGoing.addError(options, fnfe);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: I/O error", f);
-        KeepGoingOption.addError(options, ioe);
+        KeepGoing.addError(options, ioe);
       }
       catch (SyntaxError se) {
         AppUtil.warning(options, se, se.getMessage());
-        KeepGoingOption.addError(options, se);
+        KeepGoing.addError(options, se);
       }
     }
     
-    List<Exception> errors = KeepGoingOption.getErrors(options);
+    List<Exception> errors = KeepGoing.getErrors(options);
     int errs = errors.size();
-    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+    if (KeepGoing.isKeepGoing(options) && errs > 0) {
       AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
     }
     

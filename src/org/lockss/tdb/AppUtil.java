@@ -161,7 +161,7 @@ public class AppUtil {
       exc.printStackTrace(System.err);
     }
     System.err.println(msg);
-    if (!KeepGoingOption.isKeepGoing(options)) {
+    if (!KeepGoing.isKeepGoing(options)) {
       System.exit(1);
     }
   }

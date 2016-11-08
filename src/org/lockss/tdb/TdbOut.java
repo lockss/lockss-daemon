@@ -516,7 +516,7 @@ public class TdbOut {
     options.addOption(Help.option());
     options.addOption(Version.option());
     options.addOption(Verbose.option());
-    KeepGoingOption.addOptions(options);
+    options.addOption(KeepGoing.option());
     InputOption.addOptions(options);
     OutputOption.addOptions(options);
     tdbQueryBuilder.addOptions(options);
@@ -549,7 +549,7 @@ public class TdbOut {
                                                 Map<String, Object> options) {
     // Options from other modules
     Verbose.parse(options, cmd);
-    KeepGoingOption.processCommandLine(options, cmd);
+    KeepGoing.parse(options, cmd);
     InputOption.processCommandLine(options, cmd);
     OutputOption.processCommandLine(options, cmd);
     tdbQueryBuilder.processCommandLine(options, cmd);
@@ -688,21 +688,21 @@ public class TdbOut {
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
-        KeepGoingOption.addError(options, fnfe);
+        KeepGoing.addError(options, fnfe);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: I/O error", f);
-        KeepGoingOption.addError(options, ioe);
+        KeepGoing.addError(options, ioe);
       }
       catch (SyntaxError se) {
         AppUtil.warning(options, se, se.getMessage());
-        KeepGoingOption.addError(options, se);
+        KeepGoing.addError(options, se);
       }
     }
     
-    List<Exception> errors = KeepGoingOption.getErrors(options);
+    List<Exception> errors = KeepGoing.getErrors(options);
     int errs = errors.size();
-    if (KeepGoingOption.isKeepGoing(options) && errs > 0) {
+    if (KeepGoing.isKeepGoing(options) && errs > 0) {
       AppUtil.error(options, errors, "Encountered %d %s; exiting", errs, errs == 1 ? "error" : "errors");
     }
     return tdbBuilder.getTdb();
