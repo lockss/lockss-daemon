@@ -68,7 +68,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	
 	// from au_url_poll_result_weight in plugins/src/org/lockss/plugin/igiglobal/IgiGlobalPlugin.xml
 	// if it changes in the plugin, you will likely need to change the test, so verify
-	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "://[^/]+/(images|jquery|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
+	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "(?i)://[^/]+/(images|jquery|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
 	static final String  IGI_REPAIR_FROM_PEER_REGEXP2 = "[.](css|js)$";
 
   public void setUp() throws Exception {
@@ -206,6 +206,8 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	        IGI_REPAIR_FROM_PEER_REGEXP1, IGI_REPAIR_FROM_PEER_REGEXP2),
 	        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
 	    
+	    PatternFloatMap pfm = au.makeUrlPollResultWeightMap();
+	    
 	    // make sure that's the regexp that will match to the expected url string
 	    // this also tests the regexp (which is the same) for the weighted poll map
 	    // Add to pattern these urls? Has not been seen as problem, yet
@@ -215,11 +217,12 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	        BASE_URL + "sourcecontent/9781466601161_58264/978-1-4666-0116-1.ch002.f01.png",
                 BASE_URL + "jQuery/css/blitzer/images/ui-icons_004276_256x240.png",
                 BASE_URL + "images/workflow-wizard-hand-circle-medium-gray.png",
-                BASE_URL + "images/erl-2015.png");
+                BASE_URL + "images/erl-2015.png",
+                BASE_URL + "Images/erl-2015.png");
 	    Pattern p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP1, Pattern.CASE_INSENSITIVE);
 	    for (String urlString : repairList1) {
-	      Matcher m = p.matcher(urlString);
-	      assertEquals(urlString, true, m.find());
+	      assertEquals(urlString, true, p.matcher(urlString).find());
+	      assertEquals(urlString, 0.0f, pfm.getMatch(urlString, 1.0f));
 	    }
 	    List <String> repairList2 = ListUtil.list(
 	        BASE_URL + "includes/gateway.61113.js",
@@ -228,8 +231,8 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	        BASE_URL + "Scripts/tipped/tipped.js");
 	    p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP2, Pattern.CASE_INSENSITIVE);
 	    for (String urlString : repairList2) {
-	      Matcher m = p.matcher(urlString);
-	      assertEquals(urlString, true, m.find());
+	      assertEquals(urlString, true, p.matcher(urlString).find());
+              assertEquals(urlString, 0.0f, pfm.getMatch(urlString, 1.0f));
 	    }
 	    
 	    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
