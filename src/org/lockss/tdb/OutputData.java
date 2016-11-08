@@ -72,8 +72,12 @@ public class OutputData {
   public static void parse(Map<String, Object> options,
                            CommandLineAccessor cmd) {
     if (cmd.hasOption(KEY)) {
-      options.put(KEY, Arrays.asList(cmd.getOptionValue(KEY)));
+      options.put(KEY, cmd.getOptionValue(KEY));
     }
+  }
+
+  public static String get(Map<String, Object> options) {
+    return (String)options.get(KEY);
   }
 
 }

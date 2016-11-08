@@ -59,6 +59,11 @@ public class InputData {
    */
   protected static final String KEY = "input-data";
   
+  /**
+   * 
+   * @return
+   * @since 1.72
+   */
   public static Option option() {
     return Option.builder()
                  .longOpt(KEY)
@@ -86,12 +91,18 @@ public class InputData {
       if (cmd.getArgs().length > 0) {
         AppUtil.error("--%s cannot be used with command line arguments", KEY);
       }
-      options.put(KEY, Arrays.asList(cmd.getOptionValue(KEY)));
+      options.put(KEY, cmd.getOptionValue(KEY));
     }
   }
   
-  public static boolean isRequested(Map<String, Object> options) {
-    return options.containsKey(KEY);
+  /**
+   * 
+   * @param options
+   * @return
+   * @since 1.72
+   */
+  public static String get(Map<String, Object> options) {
+    return (String)options.get(KEY);
   }
   
 }

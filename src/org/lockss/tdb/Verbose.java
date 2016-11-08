@@ -38,17 +38,16 @@ import org.apache.commons.cli.*;
 
 /**
  * <p>
- * Utilities defining a standard verbose option.
+ * Utility class defining a verbose option.
  * </p>
  * <p>
- * If the verbose option created by {@link #option(Options)} is requested on
- * the command line processed by
- * {@link #processCommandLine(Map, CommandLineAccessor)},
+ * If the verbose option created by {@link #option()} is requested on the
+ * command line by {@link #parse(Map, CommandLineAccessor)},
  * {@link #isVerbose(Map)} will return <code>true</code> to indicate it.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
 public class Verbose {
 
@@ -57,7 +56,7 @@ public class Verbose {
    * Prevent instantiation.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
   private Verbose() {
     // Prevent instantiation

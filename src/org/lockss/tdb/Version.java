@@ -36,16 +36,17 @@ import org.apache.commons.cli.*;
 
 /**
  * <p>
- * Utilities defining a standard version option.
+ * Utility class defining a version option.
  * </p>
  * <p>
- * If the version option created by {@link #addOptions(Options)} is requested on
- * the command line,
- * <b>and then will exit with {@link System#exit(int)}</b>.
+ * If the version option created by {@link #option()} is requested on the
+ * command line, {@lin #parse(CommandLineAccessor, String...)} will display a
+ * message to {}@link System#out], <b>and then will exit with
+ * {@link System#exit(int)}</b>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.68
+ * @since 1.72
  */
 public class Version {
 
@@ -61,18 +62,17 @@ public class Version {
    * Key for the version option ({@value}).
    * </p>
    * 
-   * @since 1.68
+   * @since 1.72
    */
   public static final String KEY = "version";
 
   /**
    * <p>
-   * Adds the standard version option to a Commons CLI {@link Options} instance.
+   * Returns an instance of the version option.
    * </p>
    * 
-   * @param opts
-   *          A Commons CLI {@link Options} instance.
-   * @since 1.68
+   * @return An {@link Option} instance.
+   * @since 1.72
    */
   public static Option option() {
     return Option.builder()
@@ -88,7 +88,7 @@ public class Version {
    * 
    * @param cmd
    * @param versionStrings
-   * @since 1.68
+   * @since 1.72
    */
   public static void parse(CommandLineAccessor cmd,
                            String... versionStrings) {
