@@ -43,7 +43,7 @@ import org.apache.commons.cli.*;
  * <p>
  * If the verbose option created by {@link #option()} is requested on the
  * command line by {@link #parse(Map, CommandLineAccessor)},
- * {@link #isVerbose(Map)} will return <code>true</code> to indicate it.
+ * {@link #isVerbose(Map)} will return <code>true</code>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -69,28 +69,18 @@ public class Verbose {
    * 
    * @since 1.72
    */
-  protected static final String KEY = "verbose";
+  public static final String KEY = "verbose";
   
   /**
    * <p>
-   * Single letter for the standard verbose option ({@value}).
+   * Returns an instance of the output data option.
    * </p>
    * 
-   * @since 1.72
-   */
-  protected static final char LETTER = 'v';
-
-  /**
-   * <p>
-   * Adds the standard verbose option to a Commons CLI {@link Options} instance.
-   * </p>
-   * 
-   * @param opts
-   *          A Commons CLI {@link Options} instance.
+   * @return An {@link Option} instance.
    * @since 1.72
    */
   public static Option option() {
-    return Option.builder(Character.toString(LETTER))
+    return Option.builder(Character.toString('v'))
                  .longOpt(KEY)
                  .desc("output verbose error messages")
                  .build();
@@ -123,7 +113,7 @@ public class Verbose {
    *          An options map.
    * @return <code>true</code> if and only if the verbose option has been
    *         requested on the command line.
-   * @since 1.67
+   * @since 1.72
    */
   public static boolean isVerbose(Map<String, Object> options) {
     Boolean verbose = (Boolean)options.get(KEY);

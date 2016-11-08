@@ -37,12 +37,25 @@ import java.util.*;
 import org.apache.commons.cli.Option;
 
 /**
+ * <p>
+ * Utility class defining an output data option.
+ * </p>
+ * <p>
+ * If the output data option created by {@link #option()} is requested on the
+ * command line by {@link #parse(Map, CommandLineAccessor)}, {@link #get(Map)}
+ * will return a file name string.
+ * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.72
  */
 public class OutputData {
 
   /**
+   * <p>
+   * Prevent instantiation.
+   * </p>
+   * 
    * @since 1.72
    */
   private OutputData() {
@@ -50,11 +63,20 @@ public class OutputData {
   }
   
   /**
+   * <p>
+   * Key for the standard input data option ({@value}).
+   * </p>
+   * 
    * @since 1.72
    */
   public static final String KEY = "output-data";
 
   /**
+   * <p>
+   * Returns an instance of the output data option.
+   * </p>
+   * 
+   * @return An {@link Option} instance.
    * @since 1.72
    */
   public static Option option() {
@@ -67,6 +89,15 @@ public class OutputData {
   }
 
   /**
+   * <p>
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
+   * information in the given options map.
+   * </p>
+   * 
+   * @param options
+   *          An options map.
+   * @param cmd
+   *          A {@link CommandLineAccessor} instance.
    * @since 1.72
    */
   public static void parse(Map<String, Object> options,
@@ -76,6 +107,17 @@ public class OutputData {
     }
   }
 
+  /**
+   * <p>
+   * Retrieves a file name string from the options map if the output data
+   * options has been requested at the command line, null otherwise.
+   * </p>
+   * 
+   * @param options
+   *          An options map.
+   * @return A file name string, or null.
+   * @since 1.72
+   */
   public static String get(Map<String, Object> options) {
     return (String)options.get(KEY);
   }

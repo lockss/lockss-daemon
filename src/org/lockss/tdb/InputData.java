@@ -37,13 +37,25 @@ import java.util.*;
 import org.apache.commons.cli.*;
 
 /**
+ * <p>
+ * Utility class defining an input data option.
+ * </p>
+ * <p>
+ * If the input data option created by {@link #option()} is requested on the
+ * command line by {@link #parse(Map, CommandLineAccessor)}, {@link #get(Map)}
+ * will return a file name string.
+ * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.72
- *
  */
 public class InputData {
 
   /**
+   * <p>
+   * Prevent instantiation.
+   * </p>
+   * 
    * @since 1.72
    */
   private InputData() {
@@ -52,16 +64,19 @@ public class InputData {
   
   /**
    * <p>
-   * Key for the standard input-data option ({@value}).
+   * Key for the standard input data option ({@value}).
    * </p>
    * 
    * @since 1.72
    */
-  protected static final String KEY = "input-data";
+  public static final String KEY = "input-data";
   
   /**
+   * <p>
+   * Returns an instance of the input data option.
+   * </p>
    * 
-   * @return
+   * @return An {@link Option} instance.
    * @since 1.72
    */
   public static Option option() {
@@ -94,11 +109,16 @@ public class InputData {
       options.put(KEY, cmd.getOptionValue(KEY));
     }
   }
-  
+
   /**
+   * <p>
+   * Retrieves a file name string from the options map if the input data options
+   * has been requested at the command line, null otherwise.
+   * </p>
    * 
    * @param options
-   * @return
+   *          An options map.
+   * @return A file name string, or null.
    * @since 1.72
    */
   public static String get(Map<String, Object> options) {

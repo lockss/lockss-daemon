@@ -72,12 +72,11 @@ public class TdbParse {
    * @since 1.72
    */
   public void addOptions(Options opts) {
-    opts.addOption(Help.option());
-    opts.addOption(Version.option());
-    opts.addOption(Verbose.option());
-    InputOption.addOptions(opts);
-    opts.addOption(OutputData.option());
-    KeepGoingOption.addOptions(opts);
+    opts.addOption(Help.option()); // --help
+    KeepGoingOption.addOptions(opts); // --keep-going
+    opts.addOption(OutputData.option()); // --output-data
+    opts.addOption(Verbose.option()); // --verbose
+    opts.addOption(Version.option()); // --version
   }
   
   /**
@@ -87,12 +86,12 @@ public class TdbParse {
    */
   public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
     Map<String, Object> options = new HashMap<String, Object>();
-    // HelpOption already processed
+    // Help already processed
     Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
-    InputOption.processCommandLine(options, cmd);
-    OutputOption.processCommandLine(options, cmd);
-    if (!OutputOption.isSingleOutput(options)) {
-      AppUtil.error("--%s is required", OutputOption.KEY_OUTPUT);
+    InputData.parse(options, cmd);
+    OutputData.parse(options, cmd);
+    if (OutputData.get(options) == null) {
+      AppUtil.error("--%s is required", OutputData.KEY);
     }
     KeepGoingOption.processCommandLine(options, cmd);
     return options;

@@ -38,14 +38,13 @@ import org.apache.commons.cli.*;
 
 /**
  * <p>
- * Utilities defining a standard help option.
+ * Utility class defining a help option.
  * </p>
  * <p>
  * If the help option created by {@link #addOptions(Options)} is requested on
- * the command line,
- * {@link #processCommandLine(CommandLineAccessor, Options, Class)} will display
- * a usage and help message to {@link System#out} <b>and then will exit with
- * {@link System#exit(int)}</b>.
+ * the command line, {@link #parse(CommandLineAccessor, Options, Class)} will
+ * display a usage and help message to {@link System#out} <b>and then will exit
+ * with {@link System#exit(int)}</b>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -75,24 +74,14 @@ public class Help {
   
   /**
    * <p>
-   * Single letter for the standard help option ({@value}).
+   * Returns an instance of the help option.
    * </p>
    * 
-   * @since 1.72
-   */
-  public static final char LETTER = 'h';
-  
-  /**
-   * <p>
-   * Adds the standard help option to a Commons CLI {@link Options} instance.
-   * </p>
-   * 
-   * @param opts
-   *          A Commons CLI {@link Options} instance.
+   * @return An {@link Option} instance.
    * @since 1.72
    */
   public static Option option() {
-    return Option.builder(Character.toString(LETTER))
+    return Option.builder(Character.toString('h'))
                  .longOpt(KEY)
                  .desc("show this help message and exit")
                  .build();
