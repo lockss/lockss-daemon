@@ -130,7 +130,7 @@ implements SourceXmlSchemaHelper {
   
   // these are all relative to the row  
   private static String FEB_title = "Cell[" + TITLE_COL + "]/Data";
-  private static String FEB_isbn =  "Cell[" + ISBN_COL + "]/Data";
+  public static String FEB_isbn =  "Cell[" + ISBN_COL + "]/Data";
   private static String FEB_pub_date = "Cell[" + DATE_COL + "]/Data";
   private static String FEB_doi = "Cell[" + DOI_COL + "]/Data";
   public static String FEB_editor = "Cell[" + EDITOR_COL + "]/Data";
@@ -168,6 +168,8 @@ implements SourceXmlSchemaHelper {
   static {
     // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(FEB_isbn, MetadataField.FIELD_ISBN);
+    cookMap.put(FEB_series_issn, MetadataField.FIELD_ISSN);
+    cookMap.put(FEB_series, MetadataField.FIELD_SERIES_TITLE);
     cookMap.put(FEB_doi, MetadataField.FIELD_DOI);
     // we will add subtitle/edition as needed in post-cook process
     cookMap.put(FEB_title, MetadataField.FIELD_PUBLICATION_TITLE);

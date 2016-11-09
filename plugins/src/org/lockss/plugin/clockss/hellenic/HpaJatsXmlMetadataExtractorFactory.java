@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,12 +30,11 @@
 
  */
 
-package org.lockss.plugin.clockss.frontiers;
+package org.lockss.plugin.clockss.hellenic;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -46,85 +45,51 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
+/*
+ * If the xml is at 27.2-GR-2016-89.xml
+ * then the pdf is at 27.2-GR-2016-89.pdf
+ */
 
-public class FrontiersXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(FrontiersXmlMetadataExtractorFactory.class);
+public class HpaJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(HpaJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
-  private static SourceXmlSchemaHelper WorksheetHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new FrontiersJatsPublishingSourceXmlMetadataExtractor();
+    return new JatsPublishingSourceXmlMetadataExtractor();
   }
 
-  public class FrontiersJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      String url = cu.getUrl();
-      // TODO - we need to see the naming convention to do this
-      if ((url != null) && url.contains("Ebooks")) {
-        // Once you have it, just keep returning the same one. It won't change.
-        if (WorksheetHelper == null) {
-          WorksheetHelper = new FrontiersBooksWorksheetXmlSchemaHelper();
-        }
-        return WorksheetHelper;
-      } else {      
       if (JatsPublishingHelper == null) {
         JatsPublishingHelper = new JatsPublishingSchemaHelper();
       }
       return JatsPublishingHelper;
-      }
     }
-    
 
 
-    /* In this case, the filename is the same as the xml filename
+    /* 
+     * filename is the same as the xml, just change the suffix 
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
+      // filename is just the same a the XML filename but with .pdf 
+      // instead of .xml
+      String url_string = cu.getUrl();
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
-      String pdfBase;
-      if (helper == WorksheetHelper) {
-        //book layout
-        String isbn_val = oneAM.getRaw(FrontiersBooksWorksheetXmlSchemaHelper.FEB_isbn);
-        String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-        pdfBase = cuBase + isbn_val;
-      } else { 
-        // journal layout
-        String url_string = cu.getUrl();
-        pdfBase = url_string.substring(0,url_string.length() - 4);
-      }
-      log.debug3("pdfName is " + pdfBase + ".pdf (or .PDF)" );
-      returnList.add(pdfBase + ".pdf");
-      returnList.add(pdfBase + ".PDF");
+      returnList.add(pdfName);
       return returnList;
     }
     
-    @Override
-    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
-        CachedUrl cu, ArticleMetadata thisAM) {
-
-      log.debug3("in Frontiers postCookProcess");
-      if (schemaHelper == WorksheetHelper) {
-        //books
-        return;
-      }
-      //If we didn't get a valid date value, use the copyright year if it's there
-      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
-        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
-        } else {// last chance
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
-        }
-      }
-    }
-
   }
 }

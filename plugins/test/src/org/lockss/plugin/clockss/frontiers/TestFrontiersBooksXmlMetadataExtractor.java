@@ -52,6 +52,9 @@ public class TestFrontiersBooksXmlMetadataExtractor extends LockssTestCase {
   private static String PLUGIN_NAME = "org.lockss.plugin.clockss.frontiers.ClockssFrontiersSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static final String xml_url = BASE_URL + "Ebooks.xml";
+  //  //978-2-88919-000-3, 978-2-88919-001-0
+  private static final String pdf1 = BASE_URL + "978-2-88919-000-3.pdf";
+      private static final String pdf2= BASE_URL + "978-2-88919-001-0.PDF";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -99,6 +102,9 @@ public class TestFrontiersBooksXmlMetadataExtractor extends LockssTestCase {
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
       // Now add all the pdf files in our AU since we check for them before emitting
+      // these aren't opened, so it doens't matter that they have the wrong header type
+      mau.addUrl(pdf1, true, true, xmlHeader);
+      mau.addUrl(pdf2, true, true, xmlHeader);
 
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
@@ -108,9 +114,8 @@ public class TestFrontiersBooksXmlMetadataExtractor extends LockssTestCase {
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
-      assertNotEmpty(mdlist);
-      // only one of the two records had a matching pdf
-      //assertEquals(2, mdlist.size());
+      //assertNotEmpty(mdlist);
+      assertEquals(2, mdlist.size());
 
       // check each returned md against expected values
       Iterator<ArticleMetadata> mdIt = mdlist.iterator();
