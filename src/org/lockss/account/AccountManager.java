@@ -29,16 +29,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.account;
 
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 import java.security.*;
 import org.lockss.app.*;
 import org.lockss.daemon.status.*;
+import org.lockss.jetty.LockssUserRealm;
 import org.lockss.config.*;
 import org.lockss.servlet.*;
 import org.lockss.util.*;
-import static org.lockss.servlet.BaseServletManager.SUFFIX_AUTH_TYPE;
-import static org.lockss.servlet.BaseServletManager.SUFFIX_ENABLE_DEBUG_USER;
-import static org.lockss.servlet.BaseServletManager.SUFFIX_USE_SSL;
+import org.mortbay.http.UserRealm;
 
 /** Manage user accounts
  */
@@ -124,6 +124,9 @@ public class AccountManager
   // Predefined account policies.  See ConfigManager.setConfigMacros()
 
   private static String UI_PREFIX = AdminServletManager.PREFIX;
+  public static final String SUFFIX_USE_SSL = "useSsl";
+  public static final String SUFFIX_AUTH_TYPE = "authType";
+  public static final String SUFFIX_ENABLE_DEBUG_USER = "debugUser.enable";
 
   /** <code>LC</code>: SSL, form auth, Library of Congress password rules */
   public static String[] POLICY_LC = {
@@ -181,6 +184,40 @@ public class AccountManager
   // Maps account name to UserAccount
   Map<String,UserAccount> accountMap = new HashMap<String,UserAccount>();
 
+  public static final String SERVER_NAME = "Admin";
+  /** Auth realm */
+  public static final boolean DEFAULT_START = true;
+  public static final int DEFAULT_PORT = 8081;
+  public static final String DEFAULT_403_MSG =
+      "Access to the admin UI is not allowed from this IP address (%IP%)";
+  public static final boolean DO_USER_AUTH = true;
+  public static final String UI_REALM = "LOCKSS Admin";
+  public static final boolean DEFAULT_ENABLE_DEBUG_USER = true;
+  public static final boolean DEFAULT_LOG_FORBIDDEN = true;
+  public static boolean DEFAULT_RESOLVE_REMOTE_HOST = true;
+  /** File holding debug user passwd */
+  public static final String PASSWORD_PROPERTY_FILE =
+          "/org/lockss/servlet/admin.props";
+
+  /** Username established during platform config */
+  public static final String PARAM_PLATFORM_USERNAME =
+    Configuration.PLATFORM + "ui.username";
+
+  /** Password established during platform config */
+  public static final String PARAM_PLATFORM_PASSWORD =
+    Configuration.PLATFORM + "ui.password";
+
+  // User login tree below org.lockss.<server>.users
+  public static final String SUFFIX_USERS = "users";
+
+  public static final String USER_PARAM_USER = "user";
+  public static final String USER_PARAM_PWD = "password";
+  public static final String USER_PARAM_ROLES = "roles";
+
+  ManagerInfo mi;
+  protected UserRealm realm;
+  protected boolean enableDebugUser;
+
   public void startService() {
     super.startService();
     LockssDaemon daemon = getDaemon();
@@ -201,6 +238,9 @@ public class AccountManager
 	log.warning("No AdminServletManager, not installing UserStatus table");
       }
     }
+
+    setupAuthRealm();
+    log.warning("getUsers() = " + getUsers());
   }
 
   public void stopService() {
@@ -224,6 +264,14 @@ public class AccountManager
 	config.getBoolean(PARAM_MAIL_ADMIN_IF_NO_USER_EMAIL,
 			  DEFAULT_MAIL_ADMIN_IF_NO_USER_EMAIL);
       adminEmail = config.get(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL);
+    }
+
+    mi = getManagerInfo();
+    String prefix = mi.prefix;
+
+    if (changedKeys.contains(prefix)) {
+      enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
+	  mi.defaultEnableDebugUser);
     }
   }
 
@@ -649,6 +697,101 @@ public class AccountManager
     return new XStreamSerializer();
   }
 
+  protected ManagerInfo getManagerInfo() {
+    ManagerInfo mi = new ManagerInfo();
+    mi.prefix = Configuration.PREFIX + "ui.";
+    mi.serverName = SERVER_NAME;
+    mi.defaultStart = DEFAULT_START;
+    mi.defaultPort = DEFAULT_PORT;
+    mi.default403Msg = DEFAULT_403_MSG;
+    mi.doAuth = DO_USER_AUTH;
+    mi.authRealm = UI_REALM;
+    mi.defaultEnableDebugUser = DEFAULT_ENABLE_DEBUG_USER;
+    mi.defaultLogForbidden = DEFAULT_LOG_FORBIDDEN;
+    mi.defaultResolveRemoteHost = DEFAULT_RESOLVE_REMOTE_HOST;
+    mi.debugUserFile = PASSWORD_PROPERTY_FILE;
+    return mi;
+  }
+
+  void setupAuthRealm() {
+    if (mi.doAuth) {
+      realm = newUserRealm();
+      installUsers();
+      if (getUsers().isEmpty()) {
+	log.warning("No users created, " + mi.authRealm +
+		    " is effectively disabled.");
+      }
+    }
+  }
+
+  protected UserRealm newUserRealm() {
+    return new LockssUserRealm(mi.authRealm, this);
+  }
+
+  protected void installUsers() {
+    installDebugUser();
+    installPlatformUser();
+    installGlobalUsers();
+    installLocalUsers();
+  }
+
+  protected void installDebugUser() {
+    if (enableDebugUser) {
+      try {
+	log.debug("passwd props file: " + mi.debugUserFile);
+	URL propsUrl = this.getClass().getResource(mi.debugUserFile);
+	if (propsUrl != null) {
+	  log.debug("passwd props file: " + propsUrl);
+	  log.debug("debugUserFile: " + mi.debugUserFile);
+	  loadFromProps(mi.debugUserFile);
+	}
+      } catch (IOException e) {
+	log.warning("Error loading " + mi.debugUserFile, e);
+      }
+    }
+  }
+
+  // Manually install password set by platform config.
+  protected void installPlatformUser() {
+    // Use platform config in case real config hasn't been loaded yet (when
+    // used from TinyUI)
+    Configuration platConfig = ConfigManager.getPlatformConfig();
+    String platUser = platConfig.get(PARAM_PLATFORM_USERNAME);
+    String platPass = platConfig.get(PARAM_PLATFORM_PASSWORD);
+    installPlatformUser(platUser, platPass);
+  }
+
+  protected void installGlobalUsers() {
+    // Install globally configured users
+    // XXX disallow this on the platform
+    installUsers(ConfigManager.getCurrentConfig().getConfigTree(mi.prefix + SUFFIX_USERS));
+  }
+
+  protected void installLocalUsers() {
+    // Install locally configured users
+//     installUsers(ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
+  }
+
+  protected void installUsers(Configuration users) {
+    for (Iterator iter = users.nodeIterator(); iter.hasNext(); ) {
+      Configuration oneUser = users.getConfigTree((String)iter.next());
+      String user = oneUser.get(USER_PARAM_USER);
+      String pwd = oneUser.get(USER_PARAM_PWD);
+      String roles = oneUser.get(USER_PARAM_ROLES);
+      if (!StringUtil.isNullString(user) &&
+	  !StringUtil.isNullString(pwd)) {
+	try {
+	  UserAccount acct = addStaticUser(user, pwd);
+	  if (!StringUtil.isNullString(roles)) {
+	    acct.setRoles(roles);
+	  }
+	} catch (AccountManager.NotAddedException e) {
+	  log.error(e.getMessage());
+	}
+      }
+    }
+  }
+
   public class NotAddedException extends Exception {
     public NotAddedException(String msg) {
       super(msg);
@@ -671,5 +814,24 @@ public class AccountManager
     public UserExistsException(String msg) {
       super(msg);
     }
+  }
+
+  /** Struct to hold particulars of concrete servlet managers needed for
+   * generic processing.  Mostly config param defaults. */
+
+  protected static class ManagerInfo {
+    String prefix;
+    String accessPrefix;		// if from different server
+    String serverName;
+    boolean defaultStart;
+    int defaultPort;
+    String default403Msg = "Access forbidden";
+    boolean doAuth;
+    boolean doFilterIpAccess = true;
+    String authRealm;
+    boolean defaultEnableDebugUser;
+    boolean defaultLogForbidden;
+    boolean defaultResolveRemoteHost;
+    String debugUserFile;
   }
 }
