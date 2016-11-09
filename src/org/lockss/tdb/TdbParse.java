@@ -67,36 +67,6 @@ public class TdbParse {
     this.tdbBuilder = new TdbBuilder();
   }
   
-  /**
-   * @param opts
-   * @since 1.72
-   */
-  public void addOptions(Options opts) {
-    opts.addOption(Help.option()); // --help
-    opts.addOption(KeepGoing.option()); // --keep-going
-    opts.addOption(OutputData.option()); // --output-data
-    opts.addOption(Verbose.option()); // --verbose
-    opts.addOption(Version.option()); // --version
-  }
-  
-  /**
-   * @param cmd
-   * @return
-   * @since 1.72
-   */
-  public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
-    Map<String, Object> options = new HashMap<String, Object>();
-    // Help already processed
-    Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
-    InputData.parse(options, cmd);
-    OutputData.parse(options, cmd);
-    if (OutputData.get(options) == null) {
-      AppUtil.error("--%s is required", OutputData.KEY);
-    }
-    KeepGoing.parse(options, cmd);
-    return options;
-  }
-  
   public Tdb processFiles(Map<String, Object> options) {
     List<String> inputFiles = InputOption.getInput(options);
     for (String f : inputFiles) {
@@ -132,17 +102,36 @@ public class TdbParse {
   }
   
   /**
-   * @param mainArgs
+   * @param opts
    * @since 1.72
    */
-  public void run(String[] mainArgs) throws ParseException {
-    // Parse command line
-    Options opts = new Options();
-    addOptions(opts);
-    CommandLineAccessor cmd = new CommandLineAdapter(new DefaultParser().parse(opts, mainArgs));
-    Help.parse(cmd, opts, getClass());
-    Map<String, Object> options = processCommandLine(cmd);
-    // Run
+  public void addOptions(Options opts) {
+    opts.addOption(Help.option()); // --help
+    opts.addOption(KeepGoing.option()); // --keep-going
+    opts.addOption(OutputData.option()); // --output-data
+    opts.addOption(Verbose.option()); // --verbose
+    opts.addOption(Version.option()); // --version
+  }
+  
+  /**
+   * @param cmd
+   * @return
+   * @since 1.72
+   */
+  public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
+    Map<String, Object> options = new HashMap<String, Object>();
+    // Help already processed
+    Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
+    InputData.parse(options, cmd);
+    OutputData.parse(options, cmd);
+    if (OutputData.get(options) == null) {
+      AppUtil.error("--%s is required", OutputData.KEY);
+    }
+    KeepGoing.parse(options, cmd);
+    return options;
+  }
+  
+  public void run(Map<String, Object> options) {
     Tdb tdb = processFiles(options);
     try {
       writeTdb(tdb, OutputOption.getSingleOutput(options));
@@ -155,6 +144,19 @@ public class TdbParse {
     }
   }
   
+  /**
+   * @param mainArgs
+   * @since 1.72
+   */
+  public void run(String[] mainArgs) throws ParseException {
+    Options opts = new Options();
+    addOptions(opts);
+    CommandLineAccessor cmd = new CommandLineAdapter(new DefaultParser().parse(opts, mainArgs));
+    Help.parse(cmd, opts, getClass());
+    Map<String, Object> options = processCommandLine(cmd);
+    run(options);
+  }
+
   /**
    * @param tdb
    * @param outputStream

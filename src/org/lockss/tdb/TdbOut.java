@@ -504,123 +504,6 @@ public class TdbOut {
   
   /**
    * <p>
-   * Add this module's options to a Commons CLI {@link Options} instance.
-   * </p>
-   * 
-   * @param options
-   *          A Commons CLI {@link Options} instance.
-   * @since 1.67
-   */
-  public void addOptions(Options options) {
-    // Options from other modules
-    options.addOption(Help.option());
-    options.addOption(Version.option());
-    options.addOption(Verbose.option());
-    options.addOption(KeepGoing.option());
-    InputOption.addOptions(options);
-    OutputOption.addOptions(options);
-    tdbQueryBuilder.addOptions(options);
-    // Own options
-    options.addOption(OPTION_AUID);
-    options.addOption(OPTION_AUIDPLUS);
-    options.addOption(OPTION_COUNT);
-    options.addOption(OPTION_CSV);
-    options.addOption(OPTION_FIELDS);
-    options.addOption(OPTION_JOURNALS);
-    options.addOption(OPTION_LIST);
-    options.addOption(OPTION_STYLE);
-    options.addOption(OPTION_TSV);
-    options.addOption(OPTION_TYPE_JOURNAL);
-  }
-  
-  /**
-   * <p>
-   * Processes a {@link CommandLineAccessor} instance and stores appropriate
-   * information in the given options map.
-   * </p>
-   * 
-   * @param options
-   *          An options map.
-   * @param cmd
-   *          A {@link CommandLineAccessor} instance.
-   * @since 1.67
-   */
-  public Map<String, Object> processCommandLine(CommandLineAccessor cmd,
-                                                Map<String, Object> options) {
-    // Options from other modules
-    Verbose.parse(options, cmd);
-    KeepGoing.parse(options, cmd);
-    InputOption.processCommandLine(options, cmd);
-    OutputOption.processCommandLine(options, cmd);
-    tdbQueryBuilder.processCommandLine(options, cmd);
-
-    // Own options
-
-    int actions = count(cmd, mutuallyExclusiveActions);
-    if (actions == 0) {
-      AppUtil.error("Specify an action among %s", mutuallyExclusiveActions);
-    }
-    if (actions > 1) {
-      AppUtil.error("Specify only one action among %s", mutuallyExclusiveActions);
-    }
-    if (count(cmd, mutuallyExclusiveFields) > 1) {
-      AppUtil.error("Specify only one option among %s", mutuallyExclusiveFields);
-    }
-    
-    if (cmd.hasOption(KEY_JOURNALS)) {
-      options.put(KEY_JOURNALS, KEY_JOURNALS);
-    }
-    if (cmd.hasOption(KEY_TYPE_JOURNAL)) {
-      if (!options.containsKey(KEY_JOURNALS)) {
-        AppUtil.error("--%s can only be used with --%s", KEY_TYPE_JOURNAL, KEY_JOURNALS);
-      }
-      options.put(KEY_JOURNALS, KEY_TYPE_JOURNAL);
-    }
-    
-    if (cmd.hasOption(KEY_AUID)) {
-      options.put(KEY_STYLE, STYLE_TSV);
-      options.put(KEY_FIELDS, Arrays.asList("auid"));
-    }
-    if (cmd.hasOption(KEY_AUIDPLUS)) {
-      options.put(KEY_STYLE, STYLE_TSV);
-      options.put(KEY_FIELDS, Arrays.asList("auidplus"));
-    }
-    options.put(KEY_COUNT, Boolean.valueOf(cmd.hasOption(KEY_COUNT)));
-    if (cmd.hasOption(KEY_CSV)) {
-      options.put(KEY_STYLE, STYLE_CSV);
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_CSV).split(",")));
-    }
-    if (cmd.hasOption(KEY_LIST)) {
-      options.put(KEY_STYLE, STYLE_TSV);
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_LIST)));
-    }
-    if (cmd.hasOption(KEY_TSV)) {
-      options.put(KEY_STYLE, STYLE_TSV);
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_TSV).split(",")));
-    }
-    if (cmd.hasOption(KEY_STYLE)) {
-      String style = cmd.getOptionValue(KEY_STYLE);
-      if (!CHOICES_STYLE.contains(style)) {
-        AppUtil.error("Invalid style '%s'; must be among %s", style, CHOICES_STYLE);
-      }
-      options.put(KEY_STYLE, STYLE_CSV.equals(style) ? STYLE_CSV : STYLE_TSV);
-    }
-    if (cmd.hasOption(KEY_FIELDS)) {
-      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_FIELDS).split(",")));
-    }
-
-    if (getStyle(options) != null) {
-      List<String> fields = getFields(options);
-      if (fields == null || fields.size() == 0) {
-        AppUtil.error("No output fields specified");
-      }
-    }
-    
-    return options;
-  }
-
-  /**
-   * <p>
    * Determines from the options map if the count option was requested.
    * </p>
    * 
@@ -660,6 +543,24 @@ public class TdbOut {
    */
   public List<String> getFields(Map<String, Object> options) {
     return (List<String>)options.get(KEY_FIELDS);
+  }
+  
+  public Tdb processInputData(Map<String, Object> options)
+      throws FileNotFoundException, IOException {
+    Tdb tdb = null;
+    InputStream is = null;
+    String f = InputData.get(options);
+    try {
+      is = "-".equals(f) ? System.in : new FileInputStream(f);
+      tdb = TdbParse.readTdb(is);
+    }
+    catch (FileNotFoundException fnfe) {
+      AppUtil.error(options, fnfe, "%s: file not found", f);
+    }
+    finally {
+      is.close();
+    }
+    return tdb;
   }
   
   /**
@@ -798,6 +699,125 @@ public class TdbOut {
   
   /**
    * <p>
+   * Add this module's options to a Commons CLI {@link Options} instance.
+   * </p>
+   * 
+   * @param options
+   *          A Commons CLI {@link Options} instance.
+   * @since 1.67
+   */
+  public void addOptions(Options options) {
+    // Options from other modules
+    options.addOption(Help.option()); // --help
+    InputOption.addOptions(options); // --input
+    options.addOption(InputData.option()); // --input-data
+    options.addOption(KeepGoing.option()); // --keep-going
+    OutputOption.addOptions(options); // --output
+    options.addOption(Verbose.option()); // --verbose
+    options.addOption(Version.option()); // --version
+    tdbQueryBuilder.addOptions(options);
+    // Own options
+    options.addOption(OPTION_AUID);
+    options.addOption(OPTION_AUIDPLUS);
+    options.addOption(OPTION_COUNT);
+    options.addOption(OPTION_CSV);
+    options.addOption(OPTION_FIELDS);
+    options.addOption(OPTION_JOURNALS);
+    options.addOption(OPTION_LIST);
+    options.addOption(OPTION_STYLE);
+    options.addOption(OPTION_TSV);
+    options.addOption(OPTION_TYPE_JOURNAL);
+  }
+  
+  /**
+   * <p>
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
+   * information in the given options map.
+   * </p>
+   * 
+   * @param options
+   *          An options map.
+   * @param cmd
+   *          A {@link CommandLineAccessor} instance.
+   * @since 1.67
+   */
+  public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
+    Map<String, Object> options = new HashMap<String, Object>();
+    // Help already processed
+    Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
+
+    InputOption.processCommandLine(options, cmd);
+    InputData.parse(options, cmd);
+    KeepGoing.parse(options, cmd);
+    OutputOption.processCommandLine(options, cmd);
+    Verbose.parse(options, cmd);
+    tdbQueryBuilder.processCommandLine(options, cmd);
+
+    int actions = count(cmd, mutuallyExclusiveActions);
+    if (actions == 0) {
+      AppUtil.error("Specify an action among %s", mutuallyExclusiveActions);
+    }
+    if (actions > 1) {
+      AppUtil.error("Specify only one action among %s", mutuallyExclusiveActions);
+    }
+    if (count(cmd, mutuallyExclusiveFields) > 1) {
+      AppUtil.error("Specify only one option among %s", mutuallyExclusiveFields);
+    }
+    
+    if (cmd.hasOption(KEY_JOURNALS)) {
+      options.put(KEY_JOURNALS, KEY_JOURNALS);
+    }
+    if (cmd.hasOption(KEY_TYPE_JOURNAL)) {
+      if (!options.containsKey(KEY_JOURNALS)) {
+        AppUtil.error("--%s can only be used with --%s", KEY_TYPE_JOURNAL, KEY_JOURNALS);
+      }
+      options.put(KEY_JOURNALS, KEY_TYPE_JOURNAL);
+    }
+    
+    if (cmd.hasOption(KEY_AUID)) {
+      options.put(KEY_STYLE, STYLE_TSV);
+      options.put(KEY_FIELDS, Arrays.asList("auid"));
+    }
+    if (cmd.hasOption(KEY_AUIDPLUS)) {
+      options.put(KEY_STYLE, STYLE_TSV);
+      options.put(KEY_FIELDS, Arrays.asList("auidplus"));
+    }
+    options.put(KEY_COUNT, Boolean.valueOf(cmd.hasOption(KEY_COUNT)));
+    if (cmd.hasOption(KEY_CSV)) {
+      options.put(KEY_STYLE, STYLE_CSV);
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_CSV).split(",")));
+    }
+    if (cmd.hasOption(KEY_LIST)) {
+      options.put(KEY_STYLE, STYLE_TSV);
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_LIST)));
+    }
+    if (cmd.hasOption(KEY_TSV)) {
+      options.put(KEY_STYLE, STYLE_TSV);
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_TSV).split(",")));
+    }
+    if (cmd.hasOption(KEY_STYLE)) {
+      String style = cmd.getOptionValue(KEY_STYLE);
+      if (!CHOICES_STYLE.contains(style)) {
+        AppUtil.error("Invalid style '%s'; must be among %s", style, CHOICES_STYLE);
+      }
+      options.put(KEY_STYLE, STYLE_CSV.equals(style) ? STYLE_CSV : STYLE_TSV);
+    }
+    if (cmd.hasOption(KEY_FIELDS)) {
+      options.put(KEY_FIELDS, Arrays.asList(cmd.getOptionValue(KEY_FIELDS).split(",")));
+    }
+
+    if (getStyle(options) != null) {
+      List<String> fields = getFields(options);
+      if (fields == null || fields.size() == 0) {
+        AppUtil.error("No output fields specified");
+      }
+    }
+    
+    return options;
+  }
+
+  /**
+   * <p>
    * Secondary entry point of this class, after the command line has been
    * parsed.
    * </p>
@@ -808,10 +828,8 @@ public class TdbOut {
    *           if an I/O error occurs.
    * @since 1.67
    */
-  public void run(CommandLineAccessor cmd) throws IOException {
-    Map<String, Object> options = new HashMap<String, Object>();
-    processCommandLine(cmd, options);
-    Tdb tdb = processFiles(options);
+  public void run(Map<String, Object> options) throws IOException {
+    Tdb tdb = InputData.get(options) == null ? processFiles(options) : processInputData(options);
     if (options.containsKey(KEY_JOURNALS)) {
       produceJournals(options, tdb);
     }
@@ -819,7 +837,7 @@ public class TdbOut {
       produceOutput(options, tdb);
     }
   }
-  
+
   /**
    * <p>
    * Primary entry point of this class, before the command line has been parsed.
@@ -831,15 +849,12 @@ public class TdbOut {
    * @since 1.67
    */
   public void run(String[] mainArgs) throws Exception {
-    Options options = new Options();
-    addOptions(options);
-    CommandLine clicmd = new DefaultParser().parse(options, mainArgs);
-    CommandLineAccessor cmd = new CommandLineAdapter(clicmd);
-    // Short-circuit options
-    Help.parse(cmd, options, getClass());
-    Version.parse(cmd, VERSION, TdbBuilder.VERSION, TdbQueryBuilder.VERSION);
-    // Normal options
-    run(cmd);
+    Options opts = new Options();
+    addOptions(opts);
+    CommandLineAccessor cmd = new CommandLineAdapter(new DefaultParser().parse(opts, mainArgs));
+    Help.parse(cmd, opts, getClass());
+    Map<String, Object> options = processCommandLine(cmd);
+    run(options);
   }
   
   /**
