@@ -91,5 +91,20 @@ public class HpaJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       return returnList;
     }
     
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("in HPA postCookProcess");
+      //If we didn't get a valid date value, use the copyright year if it's there
+      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+        } else {// last chance
+          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+        }
+      }
+    }
+    
   }
 }
