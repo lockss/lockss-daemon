@@ -46,7 +46,7 @@
     au < finished ; finished ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
     au < finished ; finished ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
     au < finished ; crawling ; 2015 ; Acta Biochimica et Biophysica Sinica Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ; >
+    au < superseded ; exists ; 2016 ; Acta Biochimica et Biophysica Sinica Volume 48 ; 48 ; >
 
     }
 
@@ -84,7 +84,7 @@
     au < finished ; finished ; 2013 ; Adaptation Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Adaptation Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Adaptation Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Adaptation Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2016 ; Adaptation Volume 9 ; 9 ; >
 
     }
 
@@ -255,7 +255,7 @@
     au < finished ; finished ; 2013 ; African Affairs Volume 112 ; 112 ; >
     au < finished ; finished ; 2014 ; African Affairs Volume 113 ; 113 ; >
     au < finished ; crawling ; 2015 ; African Affairs Volume 114 ; 114 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2016 ; African Affairs Volume 115 ; 115 ; >
+    au < superseded ; exists ; 2016 ; African Affairs Volume 115 ; 115 ; >
 
     }
 
@@ -329,7 +329,7 @@
     au < frozen ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
     au < finished ; crawling ; 2014 ; Age and Ageing Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Age and Ageing Volume 44 ; 44 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Age and Ageing Volume 45 ; 45 ; >
+    au < superseded ; exists ; 2016 ; Age and Ageing Volume 45 ; 45 ; >
 
     }
 
@@ -421,7 +421,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Alcohol and Alcoholism Volume 50 ; 50 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ; >
+    au < superseded ; exists ; 2016 ; Alcohol and Alcoholism Volume 51 ; 51 ; >
 
     }
 
@@ -465,7 +465,7 @@
     au < finished ; finished ; 2013 ; American Entomologist Volume 59 ; 59 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; American Entomologist Volume 60 ; 60 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; American Entomologist Volume 61 ; 61 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; American Entomologist Volume 62 ; 62 ; >
+    au < superseded ; exists ; 2016 ; American Entomologist Volume 62 ; 62 ; >
 
   }
 
@@ -606,7 +606,7 @@
     au < finished ; finished ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
     au < finished ; finished ; 2014 ; The American Historical Review Volume 119 ; 119 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
-    au < crawling ; exists ; 2016 ; The American Historical Review Volume 121 ; 121 ; >
+    au < superseded ; exists ; 2016 ; The American Historical Review Volume 121 ; 121 ; >
 
     }
 
@@ -723,7 +723,7 @@
     au < finished ; finished ; 2013 ; American Journal of Agricultural Economics Volume 95 ; 95 ; >
     au < finished ; finished ; 2014 ; American Journal of Agricultural Economics Volume 96 ; 96 ; >
     au < finished ; finished ; 2015 ; American Journal of Agricultural Economics Volume 97 ; 97 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ; >
+    au < superseded ; exists ; 2016 ; American Journal of Agricultural Economics Volume 98 ; 98 ; >
 
     }
 
@@ -775,7 +775,7 @@
     au < finished ; finished ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 ; >
-    au < crawling ; exists ; 2016 ; American Journal of Clinical Pathology Volume 146 ; 146 ; >
+    au < superseded ; exists ; 2016 ; American Journal of Clinical Pathology Volume 146 ; 146 ; >
 
   }
 
@@ -989,7 +989,7 @@
     au < finished ; manifest ; 2015 ; American Journal of Epidemiology Volume 181 ; 181 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; American Journal of Epidemiology Volume 182 ; 182 ; >
     au < crawling ; exists ; 2016 ; American Journal of Epidemiology Volume 183 ; 183 ; >
-    au < crawling ; exists ; 2016 ; American Journal of Epidemiology Volume 184 ; 184 ; >
+    au < superseded ; exists ; 2016 ; American Journal of Epidemiology Volume 184 ; 184 ; >
 
     }
 
@@ -1035,7 +1035,7 @@
     au < finished ; crawling ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
     au < finished ; crawling ; 2015 ; American Journal of Hypertension Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ; >
+    au < superseded ; exists ; 2016 ; American Journal of Hypertension Volume 29 ; 29 ; >
 
   }
 
@@ -1111,7 +1111,7 @@
     au < finished ; finished ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     au < finished ; finished ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 ; >
     au < finished ; finished ; 2015 ; The American Journal of Jurisprudence Volume 60 ; 60 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; The American Journal of Jurisprudence Volume 61 ; 61 ; >
+    au < superseded ; exists ; 2016 ; The American Journal of Jurisprudence Volume 61 ; 61 ; >
 
   }
 
@@ -1156,7 +1156,7 @@
     au < finished ; finished ; 2013 ; American Law and Economics Review Volume 15 ; 15 ; >
     au < finished ; finished ; 2014 ; American Law and Economics Review Volume 16 ; 16 ; >
     au < finished ; finished ; 2015 ; American Law and Economics Review Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; American Law and Economics Review Volume 18 ; 18 ; >
+    au < superseded ; exists ; 2016 ; American Law and Economics Review Volume 18 ; 18 ; >
 
     }
 
@@ -1212,7 +1212,7 @@
     au < finished ; finished ; 2013 ; American Literary History Volume 25 ; 25 ; >
     au < finished ; crawling ; 2014 ; American Literary History Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; American Literary History Volume 27 ; 27 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; American Literary History Volume 28 ; 28 ; >
+    au < superseded ; exists ; 2016 ; American Literary History Volume 28 ; 28 ; >
 
     }
 
@@ -1348,7 +1348,7 @@
     au < finished ; finished ; 2013 ; Analysis Volume 73 ; 73 ; >
     au < finished ; crawling ; 2014 ; Analysis Volume 74 ; 74 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Analysis Volume 75 ; 75 ; >
-    au < crawling ; exists ; 2016 ; Analysis Volume 76 ; 76 ; >
+    au < superseded ; exists ; 2016 ; Analysis Volume 76 ; 76 ; >
 
     }
 
@@ -1547,7 +1547,7 @@
     au < deepCrawl ; exists ; 2015 ; Annals of Botany Volume 115 ; 115 ; >
     au < finished ; finished ; 2015 ; Annals of Botany Volume 116 ; 116 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Annals of Botany Volume 117 ; 117 ; >
-    au < crawling ; exists ; 2016 ; Annals of Botany Volume 118 ; 118 ; >
+    au < superseded ; exists ; 2016 ; Annals of Botany Volume 118 ; 118 ; >
 
     }
 
@@ -1592,7 +1592,7 @@
     au < frozen ; exists ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 ; >
     au < finished ; manifest ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ; >
+    au < superseded ; exists ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 ; >
 
   }
 
@@ -1679,7 +1679,7 @@
     au < finished ; finished ; 2013 ; The Annals of Occupational Hygiene Volume 57 ; 57 ; >
     au < finished ; finished ; 2014 ; The Annals of Occupational Hygiene Volume 58 ; 58 ; >
     au < finished ; crawling ; 2015 ; The Annals of Occupational Hygiene Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ; >
+    au < superseded ; exists ; 2016 ; The Annals of Occupational Hygiene Volume 60 ; 60 ; >
 
     }
 
@@ -3600,7 +3600,7 @@
     au < finished ; finished ; 2013 ; Bulletin of the London Mathematical Society Volume 45 ; 45 ; >
     au < finished ; finished ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
     au < finished ; finished ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Bulletin of the London Mathematical Society Volume 48 ; 48 ; >
+    au < superseded ; exists ; 2016 ; Bulletin of the London Mathematical Society Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 2017 ; Bulletin of the London Mathematical Society Volume 49 ; 49 ; > #moving to wiley
 
     }
@@ -13934,7 +13934,7 @@
     au < finished ; crawling ; 2015 ; Journal of the London Mathematical Society Volume 91 ; 91 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Journal of the London Mathematical Society Volume 92 ; 92 ; >
     au < crawling ; exists ; 2016 ; Journal of the London Mathematical Society Volume 93 ; 93 ; >
-    au < crawling ; exists ; 2016 ; Journal of the London Mathematical Society Volume 94 ; 94 ; >
+    au < superseded ; exists ; 2016 ; Journal of the London Mathematical Society Volume 94 ; 94 ; >
     au < doNotProcess ; exists ; 2017 ; Journal of the London Mathematical Society Volume 95 ; 95 ; > #moving to wiley
 
     }
@@ -15341,7 +15341,7 @@
     au < finished ; finished ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
     au < finished ; finished ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
     au < finished ; manifest ; 2015 ; Journal of Topology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Journal of Topology Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2016 ; Journal of Topology Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2017 ; Journal of Topology Volume 10 ; 10 ; > #moving to wiley
 
     }
@@ -19132,7 +19132,7 @@
     au < finished ; finished ; 2014 ; Pathogens and Disease Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 ; >
     au < finished ; crawling ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
+    au < superseded ; exists ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
 
   }
 
@@ -20065,7 +20065,7 @@
     au < finished ; manifest ; 2015 ; Proceedings of the London Mathematical Society Volume 110 ; 110 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Proceedings of the London Mathematical Society Volume 111 ; 111 ; >
     au < crawling ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 112 ; 112 ; >
-    au < crawling ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 113 ; 113 ; >
+    au < superseded ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 113 ; 113 ; >
     au < doNotProcess ; exists ; 2017 ; Proceedings of the London Mathematical Society Volume 114 ; 114 ; > #moving to wiley
 
     }
@@ -23129,7 +23129,7 @@
 
     au < finished ; finished ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 ; >
+    au < superseded ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2017 ; Transactions of the London Mathematical Society Volume 4 ; 4 ; > #moving to wiley.
 
   }
@@ -23255,7 +23255,7 @@
     au < finished ; finished ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
     au < finished ; finished ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 ; >
-    au < crawling ; exists ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
+    au < superseded ; exists ; 2016 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 ; >
 
   }
 
@@ -23931,7 +23931,7 @@
       au < frozen ; exists ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ; >
       au < finished ; finished ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; >
+      au < superseded ; exists ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; >
 
     }
 
@@ -24021,7 +24021,7 @@
       au < finished ; finished ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 ; >
       au < finished ; finished ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 ; >
+      au < superseded ; exists ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 ; >
 
     }
 
@@ -24426,7 +24426,7 @@
       au < frozen ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
       au < finished ; crawling ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 ; >
+      au < superseded ; exists ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 ; >
 
     }
 
@@ -24510,7 +24510,7 @@
     au < finished ; crawling ; 2013 ; Interacting with Computers Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     au < finished ; crawling ; 2015 ; Interacting with Computers Volume 27 ; 27 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Interacting with Computers Volume 28 ; 28 ; >
+    au < superseded ; exists ; 2016 ; Interacting with Computers Volume 28 ; 28 ; >
 
   }
   {
@@ -24623,7 +24623,7 @@
     au < finished ; crawling ; 2013 ; BioScience Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; BioScience Volume 64 ; 64 ; >
     au < finished ; crawling ; 2015 ; BioScience Volume 65 ; 65 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; BioScience Volume 66 ; 66 ; >
+    au < superseded ; exists ; 2016 ; BioScience Volume 66 ; 66 ; >
 
   }
 
@@ -24742,7 +24742,7 @@
     au < finished ; crawling ; 2013 ; Poultry Science Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Poultry Science Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Poultry Science Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Poultry Science Volume 95 ; 95 ; >
+    au < superseded ; exists ; 2016 ; Poultry Science Volume 95 ; 95 ; >
 
   }
 
@@ -24770,7 +24770,7 @@
       au < finished ; finished ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
+      au < superseded ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
 
   }
 
@@ -24800,7 +24800,7 @@
       au < finished ; finished ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
+      au < superseded ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
 
   }
 
@@ -24855,7 +24855,7 @@
       au < crawling ; exists ; 2013 ; Critical Values Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; Critical Values Volume 7 ; 7 ; >
       au < finished ; finished ; 2015 ; Critical Values Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
+      au < superseded ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
 
   }
 
@@ -24904,7 +24904,7 @@
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
       au < doNotProcess ; exists ; 2015 ; Environmental Epigenetics Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ; >
+      au < superseded ; exists ; 2016 ; Environmental Epigenetics Volume 2 ; 2 ; >
 
   }
 
@@ -24920,7 +24920,7 @@
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
       au < finished ; finished ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
+      au < superseded ; exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
 
   }
 
@@ -24953,7 +24953,7 @@
       param[base_url] = http://jole.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-      au < crawling ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
 
   }
 
@@ -24985,7 +24985,7 @@
       au < doNotProcess ; exists ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ; > #File size differs from Content-Length header 
       au < crawling ; exists ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 ; >
       au < finished ; finished ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 ; >
+      au < superseded ; exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 ; >
 
   }
 
@@ -25022,7 +25022,7 @@
       au < finished ; finished ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 ; >
       au < finished ; finished ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 ; >
+      au < superseded ; exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 ; >
 
   }
 
@@ -25048,7 +25048,7 @@
       au < finished ; finished ; 2013 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2013 ; 2013 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2016 ; 2016 ; >
+      au < superseded ; exists ; 2016 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2016 ; 2016 ; >
 
   }
 
@@ -25106,7 +25106,7 @@
       au < crawling ; exists ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Pain Medicine Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Pain Medicine Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
+      au < superseded ; exists ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
 
   }
 
@@ -25138,7 +25138,7 @@
       au < finished ; crawling ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
+      au < superseded ; exists ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
 
   }
 
@@ -25200,7 +25200,7 @@
       au < crawling ; exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
       au < crawling ; exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; >
       au < crawling ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
+      au < superseded ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
 
   }
 
