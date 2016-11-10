@@ -4196,4 +4196,3648 @@
 
   }
 
+
+  {
+
+      title <
+        name = Advanced Arab Academy of Audio-Vestibulogy Journal ;
+        issn = 2314-8667 ;
+        eissn = 2314-8675
+      >
+
+      param[journal_issn] = 2314-8667
+      param[base_url] = http://www.aaj.eg.net/
+
+      au < exists ; exists ; 2014 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Advanced Biomedical Research ;
+        eissn = 2277-9175
+      >
+
+      param[journal_issn] = 2277-9175
+      param[base_url] = http://www.advbiores.net/
+
+      au < exists ; exists ; 2014 ; Advanced Biomedical Research Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Advanced Biomedical Research Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Advanced Biomedical Research Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = African Journal of Medical and Health Sciences ;
+        issn = 2384-5589 ;
+        eissn = 2468-8207
+      >
+
+      param[journal_issn] = 2384-5589
+      param[base_url] = http://www.ajmhs.org/
+
+      au < exists ; exists ; 2013 ; African Journal of Medical and Health Sciences Volume 12 ; 2013 ; 12 ; >
+      au < exists ; exists ; 2014 ; African Journal of Medical and Health Sciences Volume 13 ; 2014 ; 13 ; >
+      au < exists ; exists ; 2015 ; African Journal of Medical and Health Sciences Volume 14 ; 2015 ; 14 ; >
+      au < expected ; exists ; 2016 ; African Journal of Medical and Health Sciences Volume 15 ; 2016 ; 15 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = African Journal of Trauma ;
+        issn = 1597-1112
+      >
+
+      param[journal_issn] = 1597-1112
+      param[base_url] = http://www.afrjtrauma.com/
+
+      au < exists ; exists ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Al-Azhar Assiut Medical Journal ;
+        issn = 1687-1693
+      >
+
+      param[journal_issn] = 1687-1693
+      param[base_url] = http://www.azmj.eg.net/
+
+      au < expected ; exists ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Al-Basar International Journal of Ophthalmology ;
+        issn = 1858-6538 ;
+        eissn = 1858-6546
+      >
+
+      param[journal_issn] = 1858-6538
+      param[base_url] = http://www.bijojournal.org/
+
+      au < exists ; exists ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Ancient Science of Life ;
+        issn = 0257-7941 ;
+        eissn = 2249-9547
+      >
+
+      param[journal_issn] = 0257-7941
+      param[base_url] = http://www.ancientscienceoflife.org/
+
+      au < exists ; exists ; 2000 ; Ancient Science of Life Volume 19 ; 2000 ; 19 ; >
+      au < exists ; exists ; 2001 ; Ancient Science of Life Volume 20 ; 2001 ; 20 ; >
+      au < exists ; exists ; 2002 ; Ancient Science of Life Volume 21 ; 2002 ; 21 ; >
+      au < exists ; exists ; 2003 ; Ancient Science of Life Volume 22 ; 2003 ; 22 ; >
+      au < exists ; exists ; 2004 ; Ancient Science of Life Volume 23 ; 2004 ; 23 ; >
+      au < exists ; exists ; 2005 ; Ancient Science of Life Volume 24 ; 2005 ; 24 ; >
+      au < exists ; exists ; 2006 ; Ancient Science of Life Volume 25 ; 2006 ; 25 ; >
+      au < exists ; exists ; 2007 ; Ancient Science of Life Volume 26 ; 2007 ; 26 ; >
+      au < exists ; exists ; 2008 ; Ancient Science of Life Volume 27 ; 2008 ; 27 ; >
+      au < exists ; exists ; 2009 ; Ancient Science of Life Volume 28 ; 2009 ; 28 ; >
+      au < exists ; exists ; 2010 ; Ancient Science of Life Volume 29 ; 2010 ; 29 ; >
+      au < exists ; exists ; 2011 ; Ancient Science of Life Volume 30 ; 2011 ; 30 ; >
+      au < exists ; exists ; 2012 ; Ancient Science of Life Volume 31 ; 2012 ; 31 ; >
+      au < exists ; exists ; 2013 ; Ancient Science of Life Volume 32 ; 2013 ; 32 ; >
+      au < exists ; exists ; 2014 ; Ancient Science of Life Volume 33 ; 2014 ; 33 ; >
+      au < exists ; exists ; 2015 ; Ancient Science of Life Volume 34 ; 2015 ; 34 ; >
+      au < expected ; exists ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Annals of Bioanthropology ;
+        issn = 2315-7992 ;
+        eissn = 2468-8444
+      >
+
+      param[journal_issn] = 2315-7992
+      param[base_url] = http://www.bioanthrojournal.org/
+
+      au < exists ; exists ; 2014 ; Annals of Bioanthropology Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Annals of Bioanthropology Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Annals of Bioanthropology Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Annals of Medical and Health Sciences Research ;
+        issn = 2141-9248 ;
+        eissn = 2277-9205
+      >
+
+      param[journal_issn] = 2141-9248
+      param[base_url] = http://www.amhsr.org/
+
+      au < exists ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = APOS Trends in Orthodontics ;
+        issn = 2321-4600 ;
+        eissn = 2321-1407
+      >
+
+      param[journal_issn] = 2321-4600
+      param[base_url] = http://www.apospublications.com/
+
+      au < exists ; exists ; 2011 ; APOS Trends in Orthodontics Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; APOS Trends in Orthodontics Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; APOS Trends in Orthodontics Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; APOS Trends in Orthodontics Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; APOS Trends in Orthodontics Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; APOS Trends in Orthodontics Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Archives of International Surgery ;
+        issn = 2278-9596 ;
+        eissn = 2320-4761
+      >
+
+      param[journal_issn] = 2278-9596
+      param[base_url] = http://www.archintsurg.org/
+
+      au < exists ; exists ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Archives of Medicine and Health Sciences ;
+        issn = 2321-4848 ;
+        eissn = 2321-6085
+      >
+
+      param[journal_issn] = 2321-4848
+      param[base_url] = http://www.amhsjournal.org/
+
+      au < exists ; exists ; 2013 ; Archives of Medicine and Health Sciences Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Archives of Medicine and Health Sciences Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Archives of Medicine and Health Sciences Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Archives of Medicine and Health Sciences Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Archives of Pharmacy Practice ;
+        issn = 2320-5210 ;
+        eissn = 2045-080X
+      >
+
+      param[journal_issn] = 2320-5210
+      param[base_url] = http://www.archivepp.com/
+
+      au < exists ; exists ; 2010 ; Archives of Pharmacy Practice Volume 1 ; 2010 ; 1 ; >
+      au < exists ; exists ; 2011 ; Archives of Pharmacy Practice Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; Archives of Pharmacy Practice Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Archives of Pharmacy Practice Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Archives of Pharmacy Practice Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Archives of Pharmacy Practice Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Archives of Pharmacy Practice Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Asia Pacific Clinical and Translational Nervous System Diseases ;
+        issn = 2468-5577 ;
+        eissn = 2455-7765
+      >
+
+      param[journal_issn] = 2468-5577
+      param[base_url] = http://www.actnjournal.com/
+
+      au < expected ; exists ; 2016 ; Asia Pacific Clinical and Translational Nervous System Diseases Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Asian Journal of Oncology ;
+        issn = 2454-6798 ;
+        eissn = 2455-4618
+      >
+
+      param[journal_issn] = 2454-6798
+      param[base_url] = http://www.asjo.in/
+
+      au < exists ; exists ; 2015 ; Asian Journal of Oncology Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Asian Journal of Oncology Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Asia-Pacific Journal of Oncology Nursing ;
+        issn = 2347-5625 ;
+        eissn = 2349-6673
+      >
+
+      param[journal_issn] = 2347-5625
+      param[base_url] = http://www.apjon.org/
+
+      au < exists ; exists ; 2014 ; Asia-Pacific Journal of Oncology Nursing Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Asia-Pacific Journal of Oncology Nursing Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Asia-Pacific Journal of Oncology Nursing Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Astrocyte ;
+        issn = 2349-0977 ;
+        eissn = 2349-4387
+      >
+
+      param[journal_issn] = 2349-0977
+      param[base_url] = http://www.astrocyte.in/
+
+      au < exists ; exists ; 2014 ; Astrocyte Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Benha Medical Journal ;
+        issn = 1110-208X
+      >
+
+      param[journal_issn] = 1110-208X
+      param[base_url] = http://www.bmfj.eg.net/
+
+      au < exists ; exists ; 2015 ; Benha Medical Journal Volume 32 ; 2015 ; 32 ; >
+      au < expected ; exists ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = BLDE University Journal of Health Sciences ;
+        issn = 2468-838X ;
+        eissn = 2456-1975
+      >
+
+      param[journal_issn] = 2468-838X
+      param[base_url] = http://www.bldeujournalhs.in/
+
+      au < expected ; exists ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Brain Circulation ;
+        issn = 2394-8108 ;
+        eissn = 2455-4626
+      >
+
+      param[journal_issn] = 2394-8108
+      param[base_url] = http://www.braincirculation.org/
+
+      au < exists ; exists ; 2015 ; Brain Circulation Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Brain Circulation Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Bulletin of Faculty of Physical Therapy ;
+        issn = 1110-6611
+      >
+
+      param[journal_issn] = 1110-6611
+      param[base_url] = http://www.bfpt.eg.net/
+
+      au < exists ; exists ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; >
+      au < expected ; exists ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Cancer Translational Medicine ;
+        issn = 2395-3977 ;
+        eissn = 2395-3012
+      >
+
+      param[journal_issn] = 2395-3977
+      param[base_url] = http://www.cancertm.com/
+
+      au < exists ; exists ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Carcinomics and Clinical Communications ;
+        eissn = 2393-8633
+      >
+
+      param[journal_issn] = 2393-8633
+      param[base_url] = http://www.cconcology.com/
+
+      au < exists ; exists ; 2014 ; Carcinomics and Clinical Communications Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Carcinomics and Clinical Communications Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Carcinomics and Clinical Communications Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Chinese Medical Journal ;
+        issn = 0366-6999
+      >
+
+      param[journal_issn] = 0366-6999
+      param[base_url] = http://www.cmj.org/
+
+      au < exists ; exists ; 2015 ; Chinese Medical Journal Volume 128 ; 2015 ; 128 ; >
+      au < expected ; exists ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = CHRISMED Journal of Health and Research ;
+        issn = 2348-3334 ;
+        eissn = 2348-506X
+      >
+
+      param[journal_issn] = 2348-3334
+      param[base_url] = http://www.cjhr.org/
+
+      au < exists ; exists ; 2014 ; CHRISMED Journal of Health and Research Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; CHRISMED Journal of Health and Research Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; CHRISMED Journal of Health and Research Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Clinical and Translational Degenerative Diseases ;
+        issn = 2468-5658 ;
+        eissn = 2468-5666
+      >
+
+      param[journal_issn] = 2468-5658
+      param[base_url] = http://www.clinicaltdd.com/
+
+      au < expected ; exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Clinical and Translational Orthopedics ;
+        issn = 2468-5674 ;
+        eissn = 2468-564X
+      >
+
+      param[journal_issn] = 2468-5674
+      param[base_url] = http://www.clinicalto.com/
+
+      au < expected ; exists ; 2016 ; Clinical and Translational Orthopedics Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Clinical Cancer Investigation Journal ;
+        issn = 2278-1668 ;
+        eissn = 2278-0513
+      >
+
+      param[journal_issn] = 2278-1668
+      param[base_url] = http://www.ccij-online.org/
+
+      au < exists ; exists ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Clinical Cancer Investigation Journal Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Clinical Cancer Investigation Journal Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Clinical Cancer Investigation Journal Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Community Acquired Infection ;
+        eissn = 2225-6482
+      >
+
+      param[journal_issn] = 2225-6482
+      param[base_url] = http://www.caijournal.com/
+
+      au < exists ; exists ; 2014 ; Community Acquired Infection Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Delta Journal of Ophthalmology ;
+        issn = 1110-9173 ;
+        eissn = 2090-4835
+      >
+
+      param[journal_issn] = 1110-9173
+      param[base_url] = http://www.djo.eg.net/
+
+      au < exists ; exists ; 2015 ; Delta Journal of Ophthalmology Volume 16 ; 2015 ; 16 ; >
+      au < expected ; exists ; 2016 ; Delta Journal of Ophthalmology Volume 17 ; 2016 ; 17 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Dental Hypotheses ;
+        eissn = 2155-8213
+      >
+
+      param[journal_issn] = 2155-8213
+      param[base_url] = http://www.dentalhypotheses.com/
+
+      au < exists ; exists ; 2010 ; Dental Hypotheses Volume 1 ; 2010 ; 1 ; >
+      au < exists ; exists ; 2011 ; Dental Hypotheses Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; Dental Hypotheses Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Dental Hypotheses Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Dental Hypotheses Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Dental Hypotheses Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Dental Hypotheses Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Dentistry and Medical Research ;
+        eissn = 2348-1471
+      >
+
+      param[journal_issn] = 2348-1471
+      param[base_url] = http://www.dmrjournal.org/
+
+      au < exists ; exists ; 2013 ; Dentistry and Medical Research Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Dentistry and Medical Research Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Dentistry and Medical Research Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Dentistry and Medical Research Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Digital Medicine ;
+        eissn = 2226-8561
+      >
+
+      param[journal_issn] = 2226-8561
+      param[base_url] = http://www.digitmedicine.com/
+
+      au < exists ; exists ; 2015 ; Digital Medicine Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Digital Medicine Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Education for Health ;
+        issn = 1357-6283 ;
+        eissn = 1469-5804
+      >
+
+      param[journal_issn] = 1357-6283
+      param[base_url] = http://www.educationforhealth.net/
+
+      au < exists ; exists ; 2000 ; Education for Health Volume 13 ; 2000 ; 13 ; >
+      au < exists ; exists ; 2001 ; Education for Health Volume 14 ; 2001 ; 14 ; >
+      au < exists ; exists ; 2002 ; Education for Health Volume 15 ; 2002 ; 15 ; >
+      au < exists ; exists ; 2003 ; Education for Health Volume 16 ; 2003 ; 16 ; >
+      au < exists ; exists ; 2004 ; Education for Health Volume 17 ; 2004 ; 17 ; >
+      au < exists ; exists ; 2005 ; Education for Health Volume 18 ; 2005 ; 18 ; >
+      au < exists ; exists ; 2006 ; Education for Health Volume 19 ; 2006 ; 19 ; >
+      au < exists ; exists ; 2007 ; Education for Health Volume 20 ; 2007 ; 20 ; >
+      au < exists ; exists ; 2008 ; Education for Health Volume 21 ; 2008 ; 21 ; >
+      au < exists ; exists ; 2009 ; Education for Health Volume 22 ; 2009 ; 22 ; >
+      au < exists ; exists ; 2010 ; Education for Health Volume 23 ; 2010 ; 23 ; >
+      au < exists ; exists ; 2011 ; Education for Health Volume 24 ; 2011 ; 24 ; >
+      au < exists ; exists ; 2012 ; Education for Health Volume 25 ; 2012 ; 25 ; >
+      au < exists ; exists ; 2013 ; Education for Health Volume 26 ; 2013 ; 26 ; >
+      au < exists ; exists ; 2014 ; Education for Health Volume 27 ; 2014 ; 27 ; >
+      au < exists ; exists ; 2015 ; Education for Health Volume 28 ; 2015 ; 28 ; >
+      au < expected ; exists ; 2016 ; Education for Health Volume 29 ; 2016 ; 29 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Journal of Bronchology ;
+        issn = 1687-8426 ;
+        eissn = 2314-8551
+      >
+
+      param[journal_issn] = 1687-8426
+      param[base_url] = http://www.ejbronchology.eg.net/
+
+      au < exists ; exists ; 2013 ; Egyptian Journal of Bronchology Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; Egyptian Journal of Bronchology Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; Egyptian Journal of Bronchology Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; Egyptian Journal of Bronchology Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Journal of Dermatology and Venerology ;
+        issn = 1110-6530 ;
+        eissn = 2314-7407
+      >
+
+      param[journal_issn] = 1110-6530
+      param[base_url] = http://www.ejdv.eg.net/
+
+      au < exists ; exists ; 2013 ; Egyptian Journal of Dermatology and Venerology Volume 33 ; 2013 ; 33 ; >
+      au < exists ; exists ; 2014 ; Egyptian Journal of Dermatology and Venerology Volume 34 ; 2014 ; 34 ; >
+      au < exists ; exists ; 2015 ; Egyptian Journal of Dermatology and Venerology Volume 35 ; 2015 ; 35 ; >
+      au < expected ; exists ; 2016 ; Egyptian Journal of Dermatology and Venerology Volume 36 ; 2016 ; 36 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Journal of Obesity, Diabetes and Endocrinology ;
+        issn = 2356-8062
+      >
+
+      param[journal_issn] = 2356-8062
+      param[base_url] = http://www.ejode.eg.net/
+
+      au < exists ; exists ; 2015 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Journal of Psychiatry ;
+        issn = 1110-1105 ;
+        eissn = 2090-2425
+      >
+
+      param[journal_issn] = 1110-1105
+      param[base_url] = http://www.new.ejpsy.eg.net/
+
+      au < exists ; exists ; 2012 ; Egyptian Journal of Psychiatry Volume 33 ; 2012 ; 33 ; >
+      au < exists ; exists ; 2013 ; Egyptian Journal of Psychiatry Volume 34 ; 2013 ; 34 ; >
+      au < exists ; exists ; 2014 ; Egyptian Journal of Psychiatry Volume 35 ; 2014 ; 35 ; >
+      au < exists ; exists ; 2015 ; Egyptian Journal of Psychiatry Volume 36 ; 2015 ; 36 ; >
+      au < expected ; exists ; 2016 ; Egyptian Journal of Psychiatry Volume 37 ; 2016 ; 37 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Pharmaceutical Journal ;
+        issn = 1687-4315 ;
+        eissn = 2090-9853
+      >
+
+      param[journal_issn] = 1687-4315
+      param[base_url] = http://www.epj.eg.net/
+
+      au < exists ; exists ; 2012 ; Egyptian Pharmaceutical Journal Volume 11 ; 2012 ; 11 ; >
+      au < exists ; exists ; 2013 ; Egyptian Pharmaceutical Journal Volume 12 ; 2013 ; 12 ; >
+      au < exists ; exists ; 2014 ; Egyptian Pharmaceutical Journal Volume 13 ; 2014 ; 13 ; >
+      au < exists ; exists ; 2015 ; Egyptian Pharmaceutical Journal Volume 14 ; 2015 ; 14 ; >
+      au < expected ; exists ; 2016 ; Egyptian Pharmaceutical Journal Volume 15 ; 2016 ; 15 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Retina Journal ;
+        issn = 2347-5617
+      >
+
+      param[journal_issn] = 2347-5617
+      param[base_url] = http://www.egyptretinaj.com/
+
+      au < exists ; exists ; 2013 ; Egyptian Retina Journal Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Egyptian Retina Journal Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Egyptian Retina Journal Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Egyptian Retina Journal Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Egyptian Rheumatology and Rehabilitation ;
+        issn = 1110-161X ;
+        eissn = 2090-3235
+      >
+
+      param[journal_issn] = 1110-161X
+      param[base_url] = http://www.err.eg.net/
+
+      au < exists ; exists ; 2013 ; Egyptian Rheumatology and Rehabilitation Volume 40 ; 2013 ; 40 ; >
+      au < exists ; exists ; 2014 ; Egyptian Rheumatology and Rehabilitation Volume 41 ; 2014 ; 41 ; >
+      au < exists ; exists ; 2015 ; Egyptian Rheumatology and Rehabilitation Volume 42 ; 2015 ; 42 ; >
+      au < expected ; exists ; 2016 ; Egyptian Rheumatology and Rehabilitation Volume 43 ; 2016 ; 43 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Emerging Scientist ;
+        eissn = 2166-5060
+      >
+
+      param[journal_issn] = 2166-5060
+      param[base_url] = http://www.emergingscientist.com/
+
+      au < exists ; exists ; 2012 ; Emerging Scientist Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Emerging Scientist Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Emerging Scientist Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Emerging Scientist Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Emerging Scientist Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Endodontology ;
+        issn = 0970-7212
+      >
+
+      param[journal_issn] = 0970-7212
+      param[base_url] = http://www.endodontologyonweb.org/
+
+      au < expected ; exists ; 2016 ; Endodontology Volume 28 ; 2016 ; 28 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Endoscopic Ultrasound ;
+        issn = 2303-9027 ;
+        eissn = 2226-7190
+      >
+
+      param[journal_issn] = 2303-9027
+      param[base_url] = http://www.eusjournal.com/
+
+      au < exists ; exists ; 2012 ; Endoscopic Ultrasound Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Endoscopic Ultrasound Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Endoscopic Ultrasound Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Endoscopic Ultrasound Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Environmental Disease ;
+        issn = 2468-5690 ;
+        eissn = 2468-5704
+      >
+
+      param[journal_issn] = 2468-5690
+      param[base_url] = http://www.environmentmed.org/
+
+      au < expected ; exists ; 2016 ; Environmental Disease Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = European Journal of Dentistry ;
+        issn = 1305-7456 ;
+        eissn = 1305-7464
+      >
+
+      param[journal_issn] = 1305-7456
+      param[base_url] = http://www.eurjdent.com/
+
+      au < exists ; exists ; 2013 ; European Journal of Dentistry Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; European Journal of Dentistry Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; European Journal of Dentistry Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; European Journal of Dentistry Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = European Journal of General Dentistry ;
+        issn = 2278-9626 ;
+        eissn = 2320-4753
+      >
+
+      param[journal_issn] = 2278-9626
+      param[base_url] = http://www.ejgd.org/
+
+      au < exists ; exists ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = European Journal of Prosthodontics ;
+        eissn = 2347-4610
+      >
+
+      param[journal_issn] = 2347-4610
+      param[base_url] = http://www.eurjdent.com/
+
+      au < exists ; exists ; 2013 ; European Journal of Prosthodontics Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; European Journal of Prosthodontics Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; European Journal of Prosthodontics Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; European Journal of Prosthodontics Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = European Journal of Psychology and Educational Studies ;
+        eissn = 2395-2555
+      >
+
+      param[journal_issn] = 2395-2555
+      param[base_url] = http://www.ejpes.org/
+
+      au < exists ; exists ; 2014 ; European Journal of Psychology and Educational Studies Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; European Journal of Psychology and Educational Studies Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; European Journal of Psychology and Educational Studies Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Fertility Science and Research ;
+        issn = 2394-4285
+      >
+
+      param[journal_issn] = 2394-4285
+      param[base_url] = http://www.fertilityscienceresearch.org/
+
+      au < exists ; exists ; 2014 ; Fertility Science and Research Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Fertility Science and Research Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Fertility Science and Research Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Genome Integrity ;
+        issn = 2041-9414
+      >
+
+      param[journal_issn] = 2041-9414
+      param[base_url] = http://www.genome-integrity.org/
+
+      au < exists ; exists ; 2015 ; Genome Integrity Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Global Journal of Transfusion Medicine ;
+        issn = 2468-8398 ;
+        eissn = 2455-8893
+      >
+
+      param[journal_issn] = 2468-8398
+      param[base_url] = http://www.gjtmonline.com/
+
+      au < expected ; exists ; 2016 ; Global Journal of Transfusion Medicine Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Heart India ;
+        issn = 2321-449X ;
+        eissn = 2321-6638
+      >
+
+      param[journal_issn] = 2321-449X
+      param[base_url] = http://www.heartindia.net/
+
+      au < exists ; exists ; 2013 ; Heart India Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Heart India Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Heart India Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Heart India Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Allergy, Asthma and Immunology ;
+        issn = 0972-6691 ;
+        eissn = 2320-4745
+      >
+
+      param[journal_issn] = 0972-6691
+      param[base_url] = http://www.ijaai.in/
+
+      au < exists ; exists ; 2012 ; Indian Journal of Allergy, Asthma and Immunology Volume 26 ; 2012 ; 26 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Allergy, Asthma and Immunology Volume 27 ; 2013 ; 27 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Allergy, Asthma and Immunology Volume 28 ; 2014 ; 28 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Allergy, Asthma and Immunology Volume 29 ; 2015 ; 29 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Allergy, Asthma and Immunology Volume 30 ; 2016 ; 30 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Burns ;
+        issn = 0971-653X ;
+        eissn = 2321-1415
+      >
+
+      param[journal_issn] = 0971-653X
+      param[base_url] = http://www.ijburns.com/
+
+      au < exists ; exists ; 2008 ; Indian Journal of Burns Volume 16 ; 2008 ; 16 ; >
+      au < exists ; exists ; 2009 ; Indian Journal of Burns Volume 17 ; 2009 ; 17 ; >
+      au < exists ; exists ; 2010 ; Indian Journal of Burns Volume 18 ; 2010 ; 18 ; >
+      au < exists ; exists ; 2011 ; Indian Journal of Burns Volume 19 ; 2011 ; 19 ; >
+      au < exists ; exists ; 2012 ; Indian Journal of Burns Volume 20 ; 2012 ; 20 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Burns Volume 21 ; 2013 ; 21 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Burns Volume 22 ; 2014 ; 22 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Burns Volume 23 ; 2015 ; 23 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Burns Volume 24 ; 2016 ; 24 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Cerebral Palsy ;
+        issn = 2395-4264
+      >
+
+      param[journal_issn] = 2395-4264
+      param[base_url] = http://www.ijcpjournal.org/
+
+      au < exists ; exists ; 2015 ; Indian Journal of Cerebral Palsy Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Dentistry ;
+        issn = 0975-962X ;
+        eissn = 2213-3666
+      >
+
+      param[journal_issn] = 0975-962X
+      param[base_url] = http://www.ijdentistry.com/
+
+      au < exists ; exists ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Dermatopathology and Diagnostic Dermatology ;
+        eissn = 2349-6029
+      >
+
+      param[journal_issn] = 2349-6029
+      param[base_url] = http://www.ijdpdd.com/
+
+      au < exists ; exists ; 2014 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Drugs in Dermatology ;
+        eissn = 2455-3972
+      >
+
+      param[journal_issn] = 2455-3972
+      param[base_url] = http://www.ijdd.in/
+
+      au < exists ; exists ; 2015 ; Indian Journal of Drugs in Dermatology Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Drugs in Dermatology Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Health Sciences ;
+        issn = 2349-5006 ;
+        eissn = 2349-6681
+      >
+
+      param[journal_issn] = 2349-5006
+      param[base_url] = http://www.ijournalhs.org/
+
+      au < exists ; exists ; 2014 ; Indian Journal of Health Sciences Volume 7 ; 2014 ; 7 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Health Sciences Volume 8 ; 2015 ; 8 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Health Sciences Volume 9 ; 2016 ; 9 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Medical Research ;
+        issn = 0971-5916 ;
+        eissn = 0975–9174
+      >
+
+      param[journal_issn] = 0971-5916
+      param[base_url] = http://www.ijmr.org.in/
+
+      au < exists ; exists ; 2014 ; Indian Journal of Medical Research Volume 7 ; 2014 ; 7 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Medical Research Volume 8 ; 2015 ; 8 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Medical Research Volume 9 ; 2016 ; 9 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Multidisciplinary Dentistry ;
+        issn = 2229-6360 ;
+        eissn = 2277-7113
+      >
+
+      param[journal_issn] = 2229-6360
+      param[base_url] = http://www.ijmdent.com/
+
+      au < exists ; exists ; 2011 ; Indian Journal of Multidisciplinary Dentistry Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; Indian Journal of Multidisciplinary Dentistry Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Multidisciplinary Dentistry Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Multidisciplinary Dentistry Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Multidisciplinary Dentistry Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Oral Health and Research ;
+        issn = 2393-8692
+      >
+
+      param[journal_issn] = 2393-8692
+      param[base_url] = http://www.ijohr.org/
+
+      au < exists ; exists ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Oral Sciences ;
+        issn = 0976-6944 ;
+        eissn = 2229-4481
+      >
+
+      param[journal_issn] = 0976-6944
+      param[base_url] = http://www.indjos.com/
+
+      au < exists ; exists ; 2012 ; Indian Journal of Oral Sciences Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Oral Sciences Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Oral Sciences Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Oral Sciences Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Oral Sciences Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Pain ;
+        issn = 0970-5333 ;
+        eissn = 2321-7820
+      >
+
+      param[journal_issn] = 0970-5333
+      param[base_url] = http://www.indianjpain.org/
+
+      au < exists ; exists ; 2013 ; Indian Journal of Pain Volume 27 ; 2013 ; 27 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Pain Volume 28 ; 2014 ; 28 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Pain Volume 29 ; 2015 ; 29 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Pain Volume 30 ; 2016 ; 30 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Research in Homoeopathy ;
+        issn = 0974-7168 ;
+        eissn = 2320-7094
+      >
+
+      param[journal_issn] = 0974-7168
+      param[base_url] = http://www.ijrh.org/
+
+      au < exists ; exists ; 2007 ; Indian Journal of Research in Homoeopathy Volume 1 ; 2007 ; 1 ; >
+      au < exists ; exists ; 2008 ; Indian Journal of Research in Homoeopathy Volume 2 ; 2008 ; 2 ; >
+      au < exists ; exists ; 2009 ; Indian Journal of Research in Homoeopathy Volume 3 ; 2009 ; 3 ; >
+      au < exists ; exists ; 2010 ; Indian Journal of Research in Homoeopathy Volume 4 ; 2010 ; 4 ; >
+      au < exists ; exists ; 2011 ; Indian Journal of Research in Homoeopathy Volume 5 ; 2011 ; 5 ; >
+      au < exists ; exists ; 2012 ; Indian Journal of Research in Homoeopathy Volume 6 ; 2012 ; 6 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Research in Homoeopathy Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Research in Homoeopathy Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Research in Homoeopathy Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Research in Homoeopathy Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Social Psychiatry ;
+        issn = 0971-9962 ;
+        eissn = 2454-8316
+      >
+
+      param[journal_issn] = 0971-9962
+      param[base_url] = http://www.indjsp.org/
+
+      au < exists ; exists ; 2015 ; Indian Journal of Social Psychiatry Volume 31 ; 2015 ; 31 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Social Psychiatry Volume 32 ; 2016 ; 32 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Indian Journal of Vascular and Endovascular Surgery ;
+        issn = 0972-0820 ;
+        eissn = 2394-0999
+      >
+
+      param[journal_issn] = 0972-0820
+      param[base_url] = http://www.indjvascsurg.org/
+
+      au < exists ; exists ; 2014 ; Indian Journal of Vascular and Endovascular Surgery Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Indian Journal of Vascular and Endovascular Surgery Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Indian Journal of Vascular and Endovascular Surgery Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Academic Medicine ;
+        eissn = 2455-5568
+      >
+
+      param[journal_issn] = 2455-5568
+      param[base_url] = http://www.ijam-web.org/
+
+      au < exists ; exists ; 2015 ; International Journal of Academic Medicine Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Academic Medicine Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Advanced Medical and Health Research ;
+        issn = 2349-4220 ;
+        eissn = 2350-0298
+      >
+
+      param[journal_issn] = 2349-4220
+      param[base_url] = http://www.ijamhrjournal.org/
+
+      au < exists ; exists ; 2014 ; International Journal of Advanced Medical and Health Research Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; International Journal of Advanced Medical and Health Research Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Clinical and Experimental Physiology ;
+        issn = 2348-8832 ;
+        eissn = 2348-8093
+      >
+
+      param[journal_issn] = 2348-8832
+      param[base_url] = http://www.ijcep.org/
+
+      au < exists ; exists ; 2014 ; International Journal of Clinical and Experimental Physiology Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; International Journal of Clinical and Experimental Physiology Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Clinical and Experimental Physiology Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Educational and Psychological Researches ;
+        eissn = 2395-2296
+      >
+
+      param[journal_issn] = 2395-2296
+      param[base_url] = http://www.ijeprjournal.org/
+
+      au < exists ; exists ; 2015 ; International Journal of Educational and Psychological Researches Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Educational and Psychological Researches Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Environmental Health Engineering ;
+        eissn = 2277-9183
+      >
+
+      param[journal_issn] = 2277-9183
+      param[base_url] = http://www.ijehe.org/
+
+      au < exists ; exists ; 2014 ; International Journal of Environmental Health Engineering Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; International Journal of Environmental Health Engineering Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; International Journal of Environmental Health Engineering Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Health & Allied Sciences ;
+        issn = 2278-4292 ;
+        eissn = 2278-344X
+      >
+
+      param[journal_issn] = 2278-4292
+      param[base_url] = http://www.ijhas.in/
+
+      au < exists ; exists ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; International Journal of Health & Allied Sciences Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; International Journal of Health & Allied Sciences Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; International Journal of Health & Allied Sciences Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Health System and Disaster Management ;
+        eissn = 2347-9019
+      >
+
+      param[journal_issn] = 2347-9019
+      param[base_url] = http://www.ijhsdm.org/
+
+      au < exists ; exists ; 2013 ; International Journal of Health System and Disaster Management Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; International Journal of Health System and Disaster Management Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; International Journal of Health System and Disaster Management Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Heart Rhythm ;
+        issn = 2352-4197 ;
+        eissn = 2352-4200
+      >
+
+      param[journal_issn] = 2352-4197
+      param[base_url] = http://www.ijhronline.org/
+
+      au < expected ; exists ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Noncommunicable Diseases ;
+        issn = 2468-8827 ;
+        eissn = 2468-8835
+      >
+
+      param[journal_issn] = 2468-8827
+      param[base_url] = http://www.ijncd.org/
+
+      au < expected ; exists ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Oral Health Sciences ;
+        issn = 2231-6027 ;
+        eissn = 2348-5094
+      >
+
+      param[journal_issn] = 2231-6027
+      param[base_url] = http://www.ijohsjournal.org/
+
+      au < exists ; exists ; 2013 ; International Journal of Oral Health Sciences Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; International Journal of Oral Health Sciences Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; International Journal of Oral Health Sciences Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; International Journal of Oral Health Sciences Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Yoga - Philosophy, Psychology and Parapsychology ;
+        issn = 2347-5633 ;
+        eissn = 2348-5108
+      >
+
+      param[journal_issn] = 2347-5633
+      param[base_url] = http://www.ijoyppp.org/
+
+      au < exists ; exists ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = IVF Lite ;
+        issn = 2348-2907 ;
+        eissn = 2348-5116
+      >
+
+      param[journal_issn] = 2348-2907
+      param[base_url] = http://www.ivflite.org/
+
+      au < exists ; exists ; 2014 ; IVF Lite Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; IVF Lite Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; IVF Lite Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Applied Hematology ;
+        issn = 1658-5127 ;
+        eissn = 2454-6976
+      >
+
+      param[journal_issn] = 1658-5127
+      param[base_url] = http://www.jahjournal.org/
+
+      au < exists ; exists ; 2010 ; Journal of Applied Hematology Volume 1 ; 2010 ; 1 ; >
+      au < exists ; exists ; 2011 ; Journal of Applied Hematology Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; Journal of Applied Hematology Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Journal of Applied Hematology Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Journal of Applied Hematology Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Journal of Applied Hematology Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Journal of Applied Hematology Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Basic and Clinical Pharmacy ;
+        issn = 0976-0105 ;
+        eissn = 0976-0113
+      >
+
+      param[journal_issn] = 0976-0105
+      param[base_url] = http://www.jbclinpharm.org/
+
+      au < exists ; exists ; 2010 ; Journal of Basic and Clinical Pharmacy Volume 1 ; 2010 ; 1 ; >
+      au < exists ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Journal of Basic and Clinical Pharmacy Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Basic and Clinical Reproductive Sciences ;
+        issn = 2278-960X ;
+        eissn = 2320-2041
+      >
+
+      param[journal_issn] = 2278-960X
+      param[base_url] = http://www.jbcrs.org/
+
+      au < exists ; exists ; 2012 ; Journal of Basic and Clinical Reproductive Sciences Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Basic and Clinical Reproductive Sciences Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Basic and Clinical Reproductive Sciences Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Basic and Clinical Reproductive Sciences Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Basic and Clinical Reproductive Sciences Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Cardiovascular Echography ;
+        issn = 2211-4122 ;
+        eissn = 2347-193X
+      >
+
+      param[journal_issn] = 2211-4122
+      param[base_url] = http://www.jcecho.org/
+
+      au < exists ; exists ; 2013 ; Journal of Cardiovascular Echography Volume 23 ; 2013 ; 23 ; >
+      au < exists ; exists ; 2014 ; Journal of Cardiovascular Echography Volume 24 ; 2014 ; 24 ; >
+      au < exists ; exists ; 2015 ; Journal of Cardiovascular Echography Volume 25 ; 2015 ; 25 ; >
+      au < expected ; exists ; 2016 ; Journal of Cardiovascular Echography Volume 26 ; 2016 ; 26 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Cleft Lip Palate and Craniofacial Anomalies ;
+        issn = 2348–2125 ;
+        eissn = 2348-3644
+      >
+
+      param[journal_issn] = 2348–2125
+      param[base_url] = http://www.jclpca.org/
+
+      au < exists ; exists ; 2014 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Clinical and Preventive Cardiology ;
+        issn = 2250-3528
+      >
+
+      param[journal_issn] = 2250-3528
+      param[base_url] = http://www.jcpconline.org/
+
+      au < expected ; exists ; 2016 ; Journal of Clinical and Preventive Cardiology Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Clinical Ophthalmology and Research ;
+        issn = 2320-3897 ;
+        eissn = 2320-3900
+      >
+
+      param[journal_issn] = 2320-3897
+      param[base_url] = http://www.jcor.in/
+
+      au < exists ; exists ; 2013 ; Journal of Clinical Ophthalmology and Research Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Clinical Ophthalmology and Research Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Clinical Ophthalmology and Research Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Clinical Ophthalmology and Research Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Clinical Sciences ;
+        issn = 2468-6859 ;
+        eissn = 2408-7408
+      >
+
+      param[journal_issn] = 2468-6859
+      param[base_url] = http://www.jcsjournal.org/
+
+      au < exists ; exists ; 2001 ; Journal of Clinical Sciences Volume 1 ; 2001 ; 1 ; >
+      au < exists ; exists ; 2002 ; Journal of Clinical Sciences Volume 2 ; 2002 ; 2 ; >
+      au < exists ; exists ; 2003 ; Journal of Clinical Sciences Volume 3 ; 2003 ; 3 ; >
+      au < exists ; exists ; 2004 ; Journal of Clinical Sciences Volume 4 ; 2004 ; 4 ; >
+      au < exists ; exists ; 2005 ; Journal of Clinical Sciences Volume 5 ; 2005 ; 5 ; >
+      au < exists ; exists ; 2006 ; Journal of Clinical Sciences Volume 6 ; 2006 ; 6 ; >
+      au < exists ; exists ; 2007 ; Journal of Clinical Sciences Volume 7 ; 2007 ; 7 ; >
+      au < exists ; exists ; 2008 ; Journal of Clinical Sciences Volume 8 ; 2008 ; 8 ; >
+      au < exists ; exists ; 2009 ; Journal of Clinical Sciences Volume 9 ; 2009 ; 9 ; >
+      au < exists ; exists ; 2010 ; Journal of Clinical Sciences Volume 10 ; 2010 ; 10 ; >
+      au < exists ; exists ; 2011 ; Journal of Clinical Sciences Volume 11 ; 2011 ; 11 ; >
+      au < exists ; exists ; 2012 ; Journal of Clinical Sciences Volume 12 ; 2012 ; 12 ; >
+      au < exists ; exists ; 2013 ; Journal of Clinical Sciences Volume 13 ; 2013 ; 13 ; >
+      au < exists ; exists ; 2014 ; Journal of Clinical Sciences Volume 14 ; 2014 ; 14 ; >
+      au < exists ; exists ; 2015 ; Journal of Clinical Sciences Volume 15 ; 2015 ; 15 ; >
+      au < expected ; exists ; 2016 ; Journal of Clinical Sciences Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Current Research in Scientific Medicine ;
+        eissn = 2455-3069
+      >
+
+      param[journal_issn] = 2455-3069
+      param[base_url] = http://www.jcrsmed.org/
+
+      au < exists ; exists ; 2015 ; Journal of Current Research in Scientific Medicine Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of Current Research in Scientific Medicine Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dental and Allied Sciences ;
+        issn = 2277-4696 ;
+        eissn = 2277-6672
+      >
+
+      param[journal_issn] = 2277-4696
+      param[base_url] = http://www.jdas.in//
+
+      au < exists ; exists ; 2012 ; Journal of Dental and Allied Sciences Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Dental and Allied Sciences Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Dental and Allied Sciences Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Dental and Allied Sciences Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Dental and Allied Sciences Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dental Lasers ;
+        issn = 2321-1385 ;
+        eissn = 2321-1393
+      >
+
+      param[journal_issn] = 2321-1385
+      param[base_url] = http://www.jdentlasers.org/
+
+      au < exists ; exists ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; >
+      au < exists ; exists ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; >
+      au < exists ; exists ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; >
+      au < exists ; exists ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; >
+      au < exists ; exists ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; >
+      au < exists ; exists ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; >
+      au < exists ; exists ; 2013 ; Journal of Dental Lasers Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; Journal of Dental Lasers Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; Journal of Dental Lasers Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; Journal of Dental Lasers Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dental Research and Review ;
+        issn = 2348-2915 ;
+        eissn = 2348-3172
+      >
+
+      param[journal_issn] = 2348-2915
+      param[base_url] = http://www.jdrr.org/
+
+      au < exists ; exists ; 2014 ; Journal of Dental Research and Review Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Dental Research and Review Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Dental Research and Review Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Digestive Endoscopy ;
+        issn = 0976-5042 ;
+        eissn = 0976-5050
+      >
+
+      param[journal_issn] = 0976-5042
+      param[base_url] = http://www.jdeonline.in/
+
+      au < exists ; exists ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Dr. NTR University of Health Sciences ;
+        issn = 2278-1889 ;
+        eissn = 2277-8632
+      >
+
+      param[journal_issn] = 2278-1889
+      param[base_url] = http://www.jdrntruhs.org/
+
+      au < exists ; exists ; 2012 ; Journal of Dr. NTR University of Health Sciences Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Dr. NTR University of Health Sciences Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Dr. NTR University of Health Sciences Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Dr. NTR University of Health Sciences Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Dr. NTR University of Health Sciences Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Earth, Environment and Health Sciences ;
+        eissn = 2423-7752
+      >
+
+      param[journal_issn] = 2423-7752
+      param[base_url] = http://www.ijeehs.org/
+
+      au < exists ; exists ; 2015 ; Journal of Earth, Environment and Health Sciences Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of Earth, Environment and Health Sciences Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Experimental and Clinical Anatomy ;
+        issn = 1596-2393
+      >
+
+      param[journal_issn] = 1596-2393
+      param[base_url] = http://www.jecajournal.org/
+
+      au < exists ; exists ; 2013 ; Journal of Experimental and Clinical Anatomy Volume 12 ; 2013 ; 12 ; >
+      au < exists ; exists ; 2014 ; Journal of Experimental and Clinical Anatomy Volume 13 ; 2014 ; 13 ; >
+      au < exists ; exists ; 2015 ; Journal of Experimental and Clinical Anatomy Volume 14 ; 2015 ; 14 ; >
+      au < expected ; exists ; 2016 ; Journal of Experimental and Clinical Anatomy Volume 15 ; 2016 ; 15 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Forensic Science and Medicine ;
+        issn = 2349-5014 ;
+        eissn = 2455-0094
+      >
+
+      param[journal_issn] = 2349-5014
+      param[base_url] = http://www.jfsmonline.com/
+
+      au < exists ; exists ; 2015 ; Journal of Forensic Science and Medicine Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of Forensic Science and Medicine Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Geriatric Mental Health ;
+        issn = 2348-9995 ;
+        eissn = 2395-3322
+      >
+
+      param[journal_issn] = 2348-9995
+      param[base_url] = http://www.jgmh.org/
+
+      au < exists ; exists ; 2014 ; Journal of Geriatric Mental Health Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Geriatric Mental Health Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Head & Neck Physicians And Surgeons ;
+        eissn = 2347-8127
+      >
+
+      param[journal_issn] = 2347-8127
+      param[base_url] = http://www.jhnps.org/
+
+      au < expected ; exists ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Health Research and Reviews ;
+        issn = 2394-2010 ;
+        eissn = 2394-2029
+      >
+
+      param[journal_issn] = 2394-2010
+      param[base_url] = http://www.jhrr.org/
+
+      au < exists ; exists ; 2014 ; Journal of Health Research and Reviews Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Health Research and Reviews Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Health Research and Reviews Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Health Specialties ;
+        issn = 2468-6360 ;
+        eissn = 2321-6298
+      >
+
+      param[journal_issn] = 2468-6360
+      param[base_url] = http://www.thejhs.org/
+
+      au < exists ; exists ; 2013 ; Journal of Health Specialties Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Health Specialties Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Health Specialties Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Health Specialties Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of HIV and Human Reproduction ;
+        issn = 2321-9157 ;
+        eissn = 2321-9165
+      >
+
+      param[journal_issn] = 2321-9157
+      param[base_url] = http://www.j-hhr.org/
+
+      au < exists ; exists ; 2013 ; Journal of HIV and Human Reproduction Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of HIV and Human Reproduction Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of HIV and Human Reproduction Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of HIV and Human Reproduction Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Human Health ;
+        issn = 2468-6565 ;
+        eissn = 2468-6573
+      >
+
+      param[journal_issn] = 2468-6565
+      param[base_url] = http://www.jhhjournal.org/
+
+      au < exists ; exists ; 2015 ; Journal of Human Health Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of Human Health Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian Academy of Dental Specialist Researchers ;
+        issn = 2229-3019 ;
+        eissn = 2394-2533
+      >
+
+      param[journal_issn] = 2229-3019
+      param[base_url] = http://www.jiadsr.org/
+
+      au < exists ; exists ; 2014 ; Journal of Indian Academy of Dental Specialist Researchers Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Indian Academy of Dental Specialist Researchers Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Indian Academy of Dental Specialist Researchers Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian Association of Public Health Dentistry ;
+        issn = 2319-5932 ;
+        eissn = 2350-0484
+      >
+
+      param[journal_issn] = 2319-5932
+      param[base_url] = http://www.jiaphd.org/
+
+      au < exists ; exists ; 2002 ; Journal of Indian Association of Public Health Dentistry Volume 2 ; 2002 ; 2 ; >
+      au < exists ; exists ; 2003 ; Journal of Indian Association of Public Health Dentistry Volume 3 ; 2003 ; 3 ; >
+      au < exists ; exists ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2004 ; 4 ; >
+      au < exists ; exists ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2005 ; 5 ; >
+      au < exists ; exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2006 ; 6 ; >
+      au < exists ; exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2007 ; 7 ; >
+      au < exists ; exists ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2008 ; 8 ; >
+      au < exists ; exists ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 9 ; 2009 ; 9 ; >
+      au < exists ; exists ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 10 ; 2010 ; 10 ; >
+      au < exists ; exists ; 2011 ; Journal of Indian Association of Public Health Dentistry Volume 11 ; 2011 ; 11 ; >
+      au < exists ; exists ; 2012 ; Journal of Indian Association of Public Health Dentistry Volume 12 ; 2012 ; 12 ; >
+      au < exists ; exists ; 2013 ; Journal of Indian Association of Public Health Dentistry Volume 13 ; 2013 ; 13 ; >
+      au < exists ; exists ; 2014 ; Journal of Indian Association of Public Health Dentistry Volume 14 ; 2014 ; 14 ; >
+      au < exists ; exists ; 2015 ; Journal of Indian Association of Public Health Dentistry Volume 15 ; 2015 ; 15 ; >
+      au < expected ; exists ; 2016 ; Journal of Indian Association of Public Health Dentistry Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian Orthodontic Society ;
+        issn = 0301-5742 ;
+        eissn = 0974-9098
+      >
+
+      param[journal_issn] = 0301-5742
+      param[base_url] = http://www.jios.in/
+
+      au < exists ; exists ; 2001 ; Journal of Indian Orthodontic Society Volume 35 ; 2001 ; 35 ; >
+      au < exists ; exists ; 2002 ; Journal of Indian Orthodontic Society Volume 36 ; 2002 ; 36 ; >
+      au < exists ; exists ; 2003 ; Journal of Indian Orthodontic Society Volume 37 ; 2003 ; 37 ; >
+      au < exists ; exists ; 2004 ; Journal of Indian Orthodontic Society Volume 38 ; 2004 ; 38 ; >
+      au < exists ; exists ; 2005 ; Journal of Indian Orthodontic Society Volume 39 ; 2005 ; 39 ; >
+      au < exists ; exists ; 2006 ; Journal of Indian Orthodontic Society Volume 40 ; 2006 ; 40 ; >
+      au < exists ; exists ; 2007 ; Journal of Indian Orthodontic Society Volume 41 ; 2007 ; 41 ; >
+      au < exists ; exists ; 2008 ; Journal of Indian Orthodontic Society Volume 42 ; 2008 ; 42 ; >
+      au < exists ; exists ; 2009 ; Journal of Indian Orthodontic Society Volume 43 ; 2009 ; 43 ; >
+      au < exists ; exists ; 2010 ; Journal of Indian Orthodontic Society Volume 44 ; 2010 ; 44 ; >
+      au < exists ; exists ; 2011 ; Journal of Indian Orthodontic Society Volume 45 ; 2011 ; 45 ; >
+      au < exists ; exists ; 2012 ; Journal of Indian Orthodontic Society Volume 46 ; 2012 ; 46 ; >
+      au < exists ; exists ; 2013 ; Journal of Indian Orthodontic Society Volume 47 ; 2013 ; 47 ; >
+      au < exists ; exists ; 2014 ; Journal of Indian Orthodontic Society Volume 48 ; 2014 ; 48 ; >
+      au < exists ; exists ; 2015 ; Journal of Indian Orthodontic Society Volume 49 ; 2015 ; 49 ; >
+      au < expected ; exists ; 2016 ; Journal of Indian Orthodontic Society Volume 50 ; 2016 ; 50 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Indian Speech Language & Hearing Association ;
+        issn = 0974-2131 ;
+        eissn = 2348-5075
+      >
+
+      param[journal_issn] = 0974-2131
+      param[base_url] = http://www.jisha.org/
+
+      au < exists ; exists ; 2014 ; Journal of Indian Speech Language & Hearing Association Volume 28 ; 2014 ; 28 ; >
+      au < exists ; exists ; 2015 ; Journal of Indian Speech Language & Hearing Association Volume 29 ; 2015 ; 29 ; >
+      au < expected ; exists ; 2016 ; Journal of Indian Speech Language & Hearing Association Volume 30 ; 2016 ; 30 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Integrative Nephrology and Andrology ;
+        issn = 2394-2916 ;
+        eissn = 2394-3432
+      >
+
+      param[journal_issn] = 2394-2916
+      param[base_url] = http://www.journal-ina.com/
+
+      au < exists ; exists ; 2014 ; Journal of Integrative Nephrology and Andrology Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Integrative Nephrology and Andrology Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Integrative Nephrology and Andrology Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Limb Lengthening & Reconstruction ;
+        eissn = 2455-3719
+      >
+
+      param[journal_issn] = 2455-3719
+      param[base_url] = http://www.jlimblengthrecon.org/
+
+      au < exists ; exists ; 2015 ; Journal of Limb Lengthening & Reconstruction Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of Limb Lengthening & Reconstruction Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Mahatma Gandhi Institute of Medical Sciences ;
+        issn = 0971-9903 ;
+        eissn = 2347-1948
+      >
+
+      param[journal_issn] = 0971-9903
+      param[base_url] = http://www.jmgims.co.in/
+
+      au < exists ; exists ; 2013 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 18 ; 2013 ; 18 ; >
+      au < exists ; exists ; 2014 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 19 ; 2014 ; 19 ; >
+      au < exists ; exists ; 2015 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 20 ; 2015 ; 20 ; >
+      au < expected ; exists ; 2016 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 21 ; 2016 ; 21 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Medical Investigations and Practice ;
+        issn = 2468-645X ;
+        eissn = 2468-6468
+      >
+
+      param[journal_issn] = 2468-645X
+      param[base_url] = http://www.jomip.org/
+
+      au < exists ; exists ; 2014 ; Journal of Medical Investigations and Practice Volume 9 ; 2014 ; 9 ; >
+      au < exists ; exists ; 2015 ; Journal of Medical Investigations and Practice Volume 10 ; 2015 ; 10 ; >
+      au < expected ; exists ; 2016 ; Journal of Medical Investigations and Practice Volume 11 ; 2016 ; 11 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Medical Nutrition and Nutraceuticals ;
+        issn = 2278-1870 ;
+        eissn = 2278-019X
+      >
+
+      param[journal_issn] = 2278-1870
+      param[base_url] = http://www.jmnn.org/
+
+      au < exists ; exists ; 2012 ; Journal of Medical Nutrition and Nutraceuticals Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Medical Nutrition and Nutraceuticals Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Medical Nutrition and Nutraceuticals Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Medical Nutrition and Nutraceuticals Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Medical Nutrition and Nutraceuticals Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Medical Society ;
+        issn = 0972-4958 ;
+        eissn = 2321-662X
+      >
+
+      param[journal_issn] = 0972-4958
+      param[base_url] = http://www.jmedsoc.org/
+
+      au < exists ; exists ; 2012 ; Journal of Medical Society Volume 26 ; 2012 ; 26 ; >
+      au < exists ; exists ; 2013 ; Journal of Medical Society Volume 27 ; 2013 ; 27 ; >
+      au < exists ; exists ; 2014 ; Journal of Medical Society Volume 28 ; 2014 ; 28 ; >
+      au < exists ; exists ; 2015 ; Journal of Medical Society Volume 29 ; 2015 ; 29 ; >
+      au < expected ; exists ; 2016 ; Journal of Medical Society Volume 30 ; 2016 ; 30 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Medicine in the Tropics ;
+        issn = 2276-7096 ;
+        eissn = 2468-8185
+      >
+
+      param[journal_issn] = 2276-7096
+      param[base_url] = http://www.jmedtropics.org/
+
+      au < exists ; exists ; 2013 ; Journal of Medicine in the Tropics Volume 15 ; 2013 ; 15 ; >
+      au < exists ; exists ; 2014 ; Journal of Medicine in the Tropics Volume 16 ; 2014 ; 16 ; >
+      au < exists ; exists ; 2015 ; Journal of Medicine in the Tropics Volume 17 ; 2015 ; 17 ; >
+      au < expected ; exists ; 2016 ; Journal of Medicine in the Tropics Volume 18 ; 2016 ; 18 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Mental Health and Human Behaviour ;
+        issn = 0971-8990
+      >
+
+      param[journal_issn] = 0971-8990
+      param[base_url] = http://www.jmhhb.org/
+
+      au < exists ; exists ; 2014 ; Journal of Mental Health and Human Behaviour Volume 19 ; 2014 ; 19 ; >
+      au < exists ; exists ; 2015 ; Journal of Mental Health and Human Behaviour Volume 20 ; 2015 ; 20 ; >
+      au < expected ; exists ; 2016 ; Journal of Mental Health and Human Behaviour Volume 21 ; 2016 ; 21 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Neuroanaesthesiology and Critical Care ;
+        issn = 2348-0548 ;
+        eissn = 2348-926X
+      >
+
+      param[journal_issn] = 2348-0548
+      param[base_url] = http://www.jnaccjournal.org/
+
+      au < exists ; exists ; 2014 ; Journal of Neuroanaesthesiology and Critical Care Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Neuroanaesthesiology and Critical Care Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Obesity and Metabolic Research ;
+        issn = 2347-9906 ;
+        eissn = 2348-148X
+      >
+
+      param[journal_issn] = 2347-9906
+      param[base_url] = http://www.jomrjournal.org/
+
+      au < exists ; exists ; 2014 ; Journal of Obesity and Metabolic Research Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Journal of Obesity and Metabolic Research Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Journal of Obesity and Metabolic Research Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Ophthalmic and Vision Research ;
+        eissn = 2008-322X
+      >
+
+      param[journal_issn] = 2008-322X
+      param[base_url] = http://www.jovr.org/
+
+      au < exists ; exists ; 2010 ; Journal of Ophthalmic and Vision Research Volume 5 ; 2010 ; 5 ; >
+      au < exists ; exists ; 2011 ; Journal of Ophthalmic and Vision Research Volume 6 ; 2011 ; 6 ; >
+      au < exists ; exists ; 2012 ; Journal of Ophthalmic and Vision Research Volume 7 ; 2012 ; 7 ; >
+      au < exists ; exists ; 2013 ; Journal of Ophthalmic and Vision Research Volume 8 ; 2013 ; 8 ; >
+      au < exists ; exists ; 2014 ; Journal of Ophthalmic and Vision Research Volume 9 ; 2014 ; 9 ; >
+      au < exists ; exists ; 2015 ; Journal of Ophthalmic and Vision Research Volume 10 ; 2015 ; 10 ; >
+      au < expected ; exists ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Oral and Maxillofacial Radiology ;
+        issn = 2321-3841 ;
+        eissn = 2321-385X
+      >
+
+      param[journal_issn] = 2321-3841
+      param[base_url] = http://www.joomr.org/
+
+      au < exists ; exists ; 2013 ; Journal of Oral and Maxillofacial Radiology Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Oral and Maxillofacial Radiology Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Oral and Maxillofacial Radiology Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Oral and Maxillofacial Radiology Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Oral Research and Review ;
+        issn = 2249-4987 ;
+        eissn = 2394-2541
+      >
+
+      param[journal_issn] = 2249-4987
+      param[base_url] = http://www.jorr.org/
+
+      au < exists ; exists ; 2014 ; Journal of Oral Research and Review Volume 6 ; 2014 ; 6 ; >
+      au < exists ; exists ; 2015 ; Journal of Oral Research and Review Volume 7 ; 2015 ; 7 ; >
+      au < expected ; exists ; 2016 ; Journal of Oral Research and Review Volume 8 ; 2016 ; 8 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orofacial Sciences ;
+        issn = 0975-8844 ;
+        eissn = 2320-4737
+      >
+
+      param[journal_issn] = 0975-8844
+      param[base_url] = http://www.jofs.in/
+
+      au < exists ; exists ; 2009 ; Journal of Orofacial Sciences Volume 1 ; 2009 ; 1 ; >
+      au < exists ; exists ; 2010 ; Journal of Orofacial Sciences Volume 2 ; 2010 ; 2 ; >
+      au < exists ; exists ; 2011 ; Journal of Orofacial Sciences Volume 3 ; 2011 ; 3 ; >
+      au < exists ; exists ; 2012 ; Journal of Orofacial Sciences Volume 4 ; 2012 ; 4 ; >
+      au < exists ; exists ; 2013 ; Journal of Orofacial Sciences Volume 5 ; 2013 ; 5 ; >
+      au < exists ; exists ; 2014 ; Journal of Orofacial Sciences Volume 6 ; 2014 ; 6 ; >
+      au < exists ; exists ; 2015 ; Journal of Orofacial Sciences Volume 7 ; 2015 ; 7 ; >
+      au < expected ; exists ; 2016 ; Journal of Orofacial Sciences Volume 8 ; 2016 ; 8 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthodontic Research ;
+        issn = 2321-3825 ;
+        eissn = 2321-3833
+      >
+
+      param[journal_issn] = 2321-3825
+      param[base_url] = http://www.jorthodr.org/
+
+      au < exists ; exists ; 2013 ; Journal of Orthodontic Research Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Orthodontic Research Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Orthodontic Research Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Orthodontic Research Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthodontic Science ;
+        issn = 2278-1897 ;
+        eissn = 2278-0203
+      >
+
+      param[journal_issn] = 2278-1897
+      param[base_url] = http://www.jorthodsci.org/
+
+      au < exists ; exists ; 2012 ; Journal of Orthodontic Science Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Orthodontic Science Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Orthodontic Science Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Orthodontic Science Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Orthodontic Science Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthopaedics and Allied Sciences ;
+        issn = 2319-2585 ;
+        eissn = 2347-436X
+      >
+
+      param[journal_issn] = 2319-2585
+      param[base_url] = http://www.joas.in/
+
+      au < exists ; exists ; 2013 ; Journal of Orthopaedics and Allied Sciences Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Orthopaedics and Allied Sciences Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Orthopedics, Traumatology and Rehabilitation ;
+        issn = 0975-7341 ;
+        eissn = 2347-3746
+      >
+
+      param[journal_issn] = 0975-7341
+      param[base_url] = http://www.jotr.in/
+
+      au < exists ; exists ; 2013 ; Journal of Orthopedics, Traumatology and Rehabilitation Volume 6 ; 2013 ; 6 ; >
+      au < exists ; exists ; 2014 ; Journal of Orthopedics, Traumatology and Rehabilitation Volume 7 ; 2014 ; 7 ; >
+      au < exists ; exists ; 2015 ; Journal of Orthopedics, Traumatology and Rehabilitation Volume 8 ; 2015 ; 8 ; >
+      au < expected ; exists ; 2016 ; Journal of Orthopedics, Traumatology and Rehabilitation Volume 9 ; 2016 ; 9 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Pediatric Dentistry ;
+        eissn = 2321-6646
+      >
+
+      param[journal_issn] = 2321-6646
+      param[base_url] = http://www.jpediatrdent.org/
+
+      au < exists ; exists ; 2013 ; Journal of Pediatric Dentistry Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Pediatric Dentistry Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Pediatric Dentistry Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Pediatric Dentistry Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Radiation and Cancer Research ;
+        issn = 0973-0168
+      >
+
+      param[journal_issn] = 0973-0168
+      param[base_url] = http://www.journalrcr.org/
+
+      au < expected ; exists ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Research in Pharmacy Practice ;
+        issn = 2319-9644 ;
+        eissn = 2279-042X
+      >
+
+      param[journal_issn] = 2319-9644
+      param[base_url] = http://www.jrpp.net/
+
+      au < exists ; exists ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Journal of Research in Pharmacy Practice Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Restorative Dentistry ;
+        eissn = 2321-4619
+      >
+
+      param[journal_issn] = 2321-4619
+      param[base_url] = http://www.jresdent.org/
+
+      au < exists ; exists ; 2013 ; Journal of Restorative Dentistry Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Restorative Dentistry Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Restorative Dentistry Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Restorative Dentistry Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Social Health and Diabetes ;
+        issn = 2321-0656 ;
+        eissn = 2321-0664
+      >
+
+      param[journal_issn] = 2321-0656
+      param[base_url] = http://www.joshd.net/
+
+      au < exists ; exists ; 2013 ; Journal of Social Health and Diabetes Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Journal of Social Health and Diabetes Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Journal of Social Health and Diabetes Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Journal of Social Health and Diabetes Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of The Academy of Clinical Microbiologists ;
+        issn = 0972-1282 ;
+        eissn = 2348-5086
+      >
+
+      param[journal_issn] = 0972-1282
+      param[base_url] = http://www.jacmjournal.org/
+
+      au < exists ; exists ; 2013 ; Journal of The Academy of Clinical Microbiologists Volume 15 ; 2013 ; 15 ; >
+      au < exists ; exists ; 2014 ; Journal of The Academy of Clinical Microbiologists Volume 16 ; 2014 ; 16 ; >
+      au < exists ; exists ; 2015 ; Journal of The Academy of Clinical Microbiologists Volume 17 ; 2015 ; 17 ; >
+      au < expected ; exists ; 2016 ; Journal of The Academy of Clinical Microbiologists Volume 18 ; 2016 ; 18 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Egyptian Ophthalmological Society ;
+        issn = 2090-0686 ;
+        eissn = 2314-6648
+      >
+
+      param[journal_issn] = 2090-0686
+      param[base_url] = http://www.jeos.eg.net/
+
+      au < exists ; exists ; 2013 ; Journal of the Egyptian Ophthalmological Society Volume 106 ; 2013 ; 106 ; >
+      au < exists ; exists ; 2014 ; Journal of the Egyptian Ophthalmological Society Volume 107 ; 2014 ; 107 ; >
+      au < exists ; exists ; 2015 ; Journal of the Egyptian Ophthalmological Society Volume 108 ; 2015 ; 108 ; >
+      au < expected ; exists ; 2016 ; Journal of the Egyptian Ophthalmological Society Volume 109 ; 2016 ; 109 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of The Egyptian Society of Nephrology and Transplantation ;
+        issn = 1110-9165 ;
+        eissn = 2356-9387
+      >
+
+      param[journal_issn] = 1110-9165
+      param[base_url] = http://www.jesnt.eg.net/
+
+      au < expected ; exists ; 2016 ; Journal of The Egyptian Society of Nephrology and Transplantation Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Practice of Cardiovascular Sciences ;
+        issn = 2395-5414 ;
+        eissn = 2454-2830
+      >
+
+      param[journal_issn] = 2395-5414
+      param[base_url] = http://www.j-pcs.org/
+
+      au < exists ; exists ; 2015 ; Journal of the Practice of Cardiovascular Sciences Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Journal of the Practice of Cardiovascular Sciences Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Scientific Society ;
+        issn = 0974-5009 ;
+        eissn = 2278-7127
+      >
+
+      param[journal_issn] = 0974-5009
+      param[base_url] = http://www.jscisociety.com/
+
+      au < exists ; exists ; 2012 ; Journal of the Scientific Society Volume 39 ; 2012 ; 39 ; >
+      au < exists ; exists ; 2013 ; Journal of the Scientific Society Volume 40 ; 2013 ; 40 ; >
+      au < exists ; exists ; 2014 ; Journal of the Scientific Society Volume 41 ; 2014 ; 41 ; >
+      au < exists ; exists ; 2015 ; Journal of the Scientific Society Volume 42 ; 2015 ; 42 ; >
+      au < expected ; exists ; 2016 ; Journal of the Scientific Society Volume 43 ; 2016 ; 43 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Karnataka Anaesthesia Journal ;
+        issn = 2394-6954 ;
+        eissn = 2394-9775
+      >
+
+      param[journal_issn] = 2394-6954
+      param[base_url] = http://www.karnatakaanaesthj.org/
+
+      au < exists ; exists ; 2015 ; Karnataka Anaesthesia Journal Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Karnataka Anaesthesia Journal Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Kasr Al Ainy Medical Journal ;
+        issn = 1687-4625 ;
+        eissn = 2356-8097
+      >
+
+      param[journal_issn] = 1687-4625
+      param[base_url] = http://www.kamj.eg.net/
+
+      au < exists ; exists ; 2015 ; Kasr Al Ainy Medical Journal Volume 21 ; 2015 ; 21 ; >
+      au < expected ; exists ; 2016 ; Kasr Al Ainy Medical Journal Volume 22 ; 2016 ; 22 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = MAMC Journal of Medical Sciences ;
+        issn = 2394-7438 ;
+        eissn = 2395-0145
+      >
+
+      param[journal_issn] = 2394-7438
+      param[base_url] = http://www.mamcjms.in//
+
+      au < exists ; exists ; 2015 ; MAMC Journal of Medical Sciences Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; MAMC Journal of Medical Sciences Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Medical Gas Research ;
+        eissn = 2045-9912
+      >
+
+      param[journal_issn] = 2045-9912
+      param[base_url] = http://www.medgasres.com/
+
+      au < expected ; exists ; 2016 ; Medical Gas Research Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Medical Journal of Dr. D.Y. Patil University ;
+        issn = 0975-2870 ;
+        eissn = 2278-7119
+      >
+
+      param[journal_issn] = 0975-2870
+      param[base_url] = http://www.mjdrdypu.org/
+
+      au < exists ; exists ; 2012 ; Medical Journal of Dr. D.Y. Patil University Volume 5 ; 2012 ; 5 ; >
+      au < exists ; exists ; 2013 ; Medical Journal of Dr. D.Y. Patil University Volume 6 ; 2013 ; 6 ; >
+      au < exists ; exists ; 2014 ; Medical Journal of Dr. D.Y. Patil University Volume 7 ; 2014 ; 7 ; >
+      au < exists ; exists ; 2015 ; Medical Journal of Dr. D.Y. Patil University Volume 8 ; 2015 ; 8 ; >
+      au < expected ; exists ; 2016 ; Medical Journal of Dr. D.Y. Patil University Volume 9 ; 2016 ; 9 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Menoufia Medical Journal ;
+        issn = 1110-2098 ;
+        eissn = 2314-6788
+      >
+
+      param[journal_issn] = 1110-2098
+      param[base_url] = http://www.mmj.eg.net/
+
+      au < exists ; exists ; 2013 ; Menoufia Medical Journal Volume 26 ; 2013 ; 26 ; >
+      au < exists ; exists ; 2014 ; Menoufia Medical Journal Volume 27 ; 2014 ; 27 ; >
+      au < exists ; exists ; 2015 ; Menoufia Medical Journal Volume 28 ; 2015 ; 28 ; >
+      au < expected ; exists ; 2016 ; Menoufia Medical Journal Volume 29 ; 2016 ; 29 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Muller Journal of Medical Sciences and Research ;
+        issn = 0975-9727 ;
+        eissn = 2321-3701
+      >
+
+      param[journal_issn] = 0975-9727
+      param[base_url] = http://www.mjmsr.net/
+
+      au < exists ; exists ; 2013 ; Muller Journal of Medical Sciences and Research Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; Muller Journal of Medical Sciences and Research Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; Muller Journal of Medical Sciences and Research Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; Muller Journal of Medical Sciences and Research Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Neural Regeneration Research ;
+        issn = 1673-5374 ;
+        eissn = 1876-7958
+      >
+
+      param[journal_issn] = 1673-5374
+      param[base_url] = http://www.nrronline.org/
+
+      au < exists ; exists ; 2011 ; Neural Regeneration Research Volume 6 ; 2011 ; 6 ; >
+      au < exists ; exists ; 2012 ; Neural Regeneration Research Volume 7 ; 2012 ; 7 ; >
+      au < exists ; exists ; 2013 ; Neural Regeneration Research Volume 8 ; 2013 ; 8 ; >
+      au < exists ; exists ; 2014 ; Neural Regeneration Research Volume 9 ; 2014 ; 9 ; >
+      au < exists ; exists ; 2015 ; Neural Regeneration Research Volume 10 ; 2015 ; 10 ; >
+      au < expected ; exists ; 2016 ; Neural Regeneration Research Volume 11 ; 2016 ; 11 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = New Nigerian Journal of Clinical Research ;
+        issn = 2250-9658
+      >
+
+      param[journal_issn] = 2250-9658
+      param[base_url] = http://www.mdcan-uath.org/
+
+      au < expected ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Basic and Clinical Sciences ;
+        issn = 0331-8540 ;
+        eissn = 2320-477X
+      >
+
+      param[journal_issn] = 0331-8540
+      param[base_url] = http://www.njbcs.net/
+
+      au < exists ; exists ; 2012 ; Nigerian Journal of Basic and Clinical Sciences Volume 9 ; 2012 ; 9 ; >
+      au < exists ; exists ; 2013 ; Nigerian Journal of Basic and Clinical Sciences Volume 10 ; 2013 ; 10 ; >
+      au < exists ; exists ; 2014 ; Nigerian Journal of Basic and Clinical Sciences Volume 11 ; 2014 ; 11 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Basic and Clinical Sciences Volume 12 ; 2015 ; 12 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Basic and Clinical Sciences Volume 13 ; 2016 ; 13 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Cardiology ;
+        issn = 0189-7969 ;
+        eissn = 2347-3576
+      >
+
+      param[journal_issn] = 0189-7969
+      param[base_url] = http://www.nigjcardiol.org/
+
+      au < exists ; exists ; 2013 ; Nigerian Journal of Cardiology Volume 10 ; 2013 ; 10 ; >
+      au < exists ; exists ; 2014 ; Nigerian Journal of Cardiology Volume 11 ; 2014 ; 11 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Cardiology Volume 12 ; 2015 ; 12 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Cardiology Volume 13 ; 2016 ; 13 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Experimental and Clinical Biosciences ;
+        issn = 2348-053X ;
+        eissn = 2348–0149
+      >
+
+      param[journal_issn] = 2348-053X
+      param[base_url] = http://www.njecbonline.org/
+
+      au < exists ; exists ; 2013 ; Nigerian Journal of Experimental and Clinical Biosciences Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Nigerian Journal of Experimental and Clinical Biosciences Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Experimental and Clinical Biosciences Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Experimental and Clinical Biosciences Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Health Sciences ;
+        issn = 1596-4078 ;
+        eissn = 2468-8819
+      >
+
+      param[journal_issn] = 1596-4078
+      param[base_url] = http://www.chs-journal.com/
+
+      au < exists ; exists ; 2015 ; Nigerian Journal of Health Sciences Volume 15 ; 2015 ; 15 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Ophthalmology ;
+        issn = 0189-9171 ;
+        eissn = 2468-8363
+      >
+
+      param[journal_issn] = 0189-9171
+      param[base_url] = http://www.nigerianjournalofophthalmology.com/
+
+      au < exists ; exists ; 2014 ; Nigerian Journal of Ophthalmology Volume 22 ; 2014 ; 22 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Ophthalmology Volume 23 ; 2015 ; 23 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Ophthalmology Volume 24 ; 2016 ; 24 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Plastic Surgery ;
+        issn = 0794-9316 ;
+        eissn = 2468-7251
+      >
+
+      param[journal_issn] = 0794-9316
+      param[base_url] = http://www.njps.org/
+
+      au < exists ; exists ; 2014 ; Nigerian Journal of Plastic Surgery Volume 10 ; 2014 ; 10 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Plastic Surgery Volume 11 ; 2015 ; 11 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Plastic Surgery Volume 12 ; 2016 ; 12 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Surgical Research ;
+        issn = 1595-1103 ;
+        eissn = 2468-8177
+      >
+
+      param[journal_issn] = 1595-1103
+      param[base_url] = http://www.njsrjournal.org/
+
+      au < exists ; exists ; 2013 ; Nigerian Journal of Surgical Research Volume 15 ; 2013 ; 15 ; >
+      au < exists ; exists ; 2014 ; Nigerian Journal of Surgical Research Volume 16 ; 2014 ; 16 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Surgical Research Volume 17 ; 2015 ; 17 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Surgical Research Volume 18 ; 2016 ; 18 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Journal of Surgical Sciences ;
+        issn = 1116-5898
+      >
+
+      param[journal_issn] = 1116-5898
+      param[base_url] = http://www.njssjournal.org/
+
+      au < exists ; exists ; 2013 ; Nigerian Journal of Surgical Sciences Volume 23 ; 2013 ; 23 ; >
+      au < exists ; exists ; 2014 ; Nigerian Journal of Surgical Sciences Volume 24 ; 2014 ; 24 ; >
+      au < exists ; exists ; 2015 ; Nigerian Journal of Surgical Sciences Volume 25 ; 2015 ; 25 ; >
+      au < expected ; exists ; 2016 ; Nigerian Journal of Surgical Sciences Volume 26 ; 2016 ; 26 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Nigerian Postgraduate Medical Journal ;
+        issn = 1117-1936 ;
+        eissn = 2468-6875
+      >
+
+      param[journal_issn] = 1117-1936
+      param[base_url] = http://www.npmj.org/
+
+      au < exists ; exists ; 2001 ; Nigerian Postgraduate Medical Journal Volume 8 ; 2001 ; 8 ; >
+      au < exists ; exists ; 2002 ; Nigerian Postgraduate Medical Journal Volume 9 ; 2002 ; 9 ; >
+      au < exists ; exists ; 2003 ; Nigerian Postgraduate Medical Journal Volume 10 ; 2003 ; 10 ; >
+      au < exists ; exists ; 2004 ; Nigerian Postgraduate Medical Journal Volume 11 ; 2004 ; 11 ; >
+      au < exists ; exists ; 2005 ; Nigerian Postgraduate Medical Journal Volume 12 ; 2005 ; 12 ; >
+      au < exists ; exists ; 2006 ; Nigerian Postgraduate Medical Journal Volume 13 ; 2006 ; 13 ; >
+      au < exists ; exists ; 2007 ; Nigerian Postgraduate Medical Journal Volume 14 ; 2007 ; 14 ; >
+      au < exists ; exists ; 2008 ; Nigerian Postgraduate Medical Journal Volume 15 ; 2008 ; 15 ; >
+      au < exists ; exists ; 2009 ; Nigerian Postgraduate Medical Journal Volume 16 ; 2009 ; 16 ; >
+      au < exists ; exists ; 2010 ; Nigerian Postgraduate Medical Journal Volume 17 ; 2010 ; 17 ; >
+      au < exists ; exists ; 2011 ; Nigerian Postgraduate Medical Journal Volume 18 ; 2011 ; 18 ; >
+      au < exists ; exists ; 2012 ; Nigerian Postgraduate Medical Journal Volume 19 ; 2012 ; 19 ; >
+      au < exists ; exists ; 2013 ; Nigerian Postgraduate Medical Journal Volume 20 ; 2013 ; 20 ; >
+      au < exists ; exists ; 2014 ; Nigerian Postgraduate Medical Journal Volume 21 ; 2014 ; 21 ; >
+      au < exists ; exists ; 2015 ; Nigerian Postgraduate Medical Journal Volume 22 ; 2015 ; 22 ; >
+      au < expected ; exists ; 2016 ; Nigerian Postgraduate Medical Journal Volume 23 ; 2016 ; 23 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = North American Journal of Medical Sciences ;
+        issn = 2250-1541 ;
+        eissn = 1947-2714
+      >
+
+      param[journal_issn] = 2250-1541
+      param[base_url] = http://www.najms.org/
+
+      au < exists ; exists ; 2009 ; North American Journal of Medical Sciences Volume 1 ; 2009 ; 1 ; >
+      au < exists ; exists ; 2010 ; North American Journal of Medical Sciences Volume 2 ; 2010 ; 2 ; >
+      au < exists ; exists ; 2011 ; North American Journal of Medical Sciences Volume 3 ; 2011 ; 3 ; >
+      au < exists ; exists ; 2012 ; North American Journal of Medical Sciences Volume 4 ; 2012 ; 4 ; >
+      au < exists ; exists ; 2013 ; North American Journal of Medical Sciences Volume 5 ; 2013 ; 5 ; >
+      au < exists ; exists ; 2014 ; North American Journal of Medical Sciences Volume 6 ; 2014 ; 6 ; >
+      au < exists ; exists ; 2015 ; North American Journal of Medical Sciences Volume 7 ; 2015 ; 7 ; >
+      au < expected ; exists ; 2016 ; North American Journal of Medical Sciences Volume 8 ; 2016 ; 8 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Oncobiology and Targets ;
+        eissn = 2395-4469
+      >
+
+      param[journal_issn] = 2395-4469
+      param[base_url] = http://www.oncotargets.com/
+
+      au < exists ; exists ; 2014 ; Oncobiology and Targets Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Oncobiology and Targets Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Oncobiology and Targets Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Pan Arab Journal of Rhinology ;
+        issn = 2090-7540 ;
+        eissn = 2090-7559
+      >
+
+      param[journal_issn] = 2090-7540
+      param[base_url] = http://www.pajr.eg.net/
+
+      au < expected ; exists ; 2016 ; Pan Arab Journal of Rhinology Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Pigment International ;
+        issn = 2349-5847 ;
+        eissn = 2349-5782
+      >
+
+      param[journal_issn] = 2349-5847
+      param[base_url] = http://www.pigmentinternational.com/
+
+      au < exists ; exists ; 2014 ; Pigment International Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Pigment International Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Pigment International Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Port Harcourt Medical Journal ;
+        issn = 0795-3038
+      >
+
+      param[journal_issn] = 0795-3038
+      param[base_url] = http://www.phmj.org/
+
+      au < expected ; exists ; 2016 ; Port Harcourt Medical Journal Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Research and Opinion in Anesthesia and Intensive Care ;
+        issn = 2356-9115 ;
+        eissn = 2356-9123
+      >
+
+      param[journal_issn] = 2356-9115
+      param[base_url] = http://www.roaic.eg.net/
+
+      au < exists ; exists ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Sahel Medical Journal ;
+        issn = 1118-8561 ;
+        eissn = 2321-6689
+      >
+
+      param[journal_issn] = 1118-8561
+      param[base_url] = http://www.smjonline.org/
+
+      au < exists ; exists ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; >
+      au < exists ; exists ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; >
+      au < exists ; exists ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; >
+      au < exists ; exists ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; >
+      au < exists ; exists ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; >
+      au < exists ; exists ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; >
+      au < exists ; exists ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; >
+      au < exists ; exists ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; >
+      au < exists ; exists ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; >
+      au < exists ; exists ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; >
+      au < exists ; exists ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; >
+      au < exists ; exists ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; >
+      au < exists ; exists ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; >
+      au < exists ; exists ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; >
+      au < exists ; exists ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; >
+      au < exists ; exists ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; >
+      au < exists ; exists ; 2014 ; Sahel Medical Journal Volume 17 ; 2014 ; 17 ; >
+      au < exists ; exists ; 2015 ; Sahel Medical Journal Volume 18 ; 2015 ; 18 ; >
+      au < expected ; exists ; 2016 ; Sahel Medical Journal Volume 19 ; 2016 ; 19 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Endodontic Journal ;
+        issn = 1658-5984 ;
+        eissn = 2320-1495
+      >
+
+      param[journal_issn] = 1658-5984
+      param[base_url] = http://www.saudiendodj.com/
+
+      au < exists ; exists ; 2011 ; Saudi Endodontic Journal Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; Saudi Endodontic Journal Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Saudi Endodontic Journal Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Saudi Endodontic Journal Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Saudi Endodontic Journal Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Saudi Endodontic Journal Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal for Health Sciences ;
+        issn = 2278-1900 ;
+        eissn = 2278-0521
+      >
+
+      param[journal_issn] = 2278-1900
+      param[base_url] = http://www.saudijhealthsci.org/
+
+      au < exists ; exists ; 2012 ; Saudi Journal for Health Sciences Volume 1 ; 2012 ; 1 ; >
+      au < exists ; exists ; 2013 ; Saudi Journal for Health Sciences Volume 2 ; 2013 ; 2 ; >
+      au < exists ; exists ; 2014 ; Saudi Journal for Health Sciences Volume 3 ; 2014 ; 3 ; >
+      au < exists ; exists ; 2015 ; Saudi Journal for Health Sciences Volume 4 ; 2015 ; 4 ; >
+      au < expected ; exists ; 2016 ; Saudi Journal for Health Sciences Volume 5 ; 2016 ; 5 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Laparoscopy ;
+        issn = 2542-4629 ;
+        eissn = 2542-4637
+      >
+
+      param[journal_issn] = 2542-4629
+      param[base_url] = http://www.saudijl.org/
+
+      au < expected ; exists ; 2016 ; Saudi Journal of Laparoscopy Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Medicine and Medical Sciences ;
+        issn = 1658-631X ;
+        eissn = 2321-4856
+      >
+
+      param[journal_issn] = 1658-631X
+      param[base_url] = http://www.sjmms.net/
+
+      au < exists ; exists ; 2013 ; Saudi Journal of Medicine and Medical Sciences Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Saudi Journal of Medicine and Medical Sciences Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Saudi Journal of Medicine and Medical Sciences Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Saudi Journal of Medicine and Medical Sciences Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Obesity ;
+        issn = 2347-2618 ;
+        eissn = 2347-4629
+      >
+
+      param[journal_issn] = 2347-2618
+      param[base_url] = http://www.saudijobesity.com/
+
+      au < exists ; exists ; 2013 ; Saudi Journal of Obesity Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Saudi Journal of Obesity Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Saudi Journal of Obesity Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Saudi Journal of Obesity Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Oral Sciences ;
+        issn = 1658-6816
+      >
+
+      param[journal_issn] = 1658-6816
+      param[base_url] = http://www.saudijos.org/
+
+      au < exists ; exists ; 2014 ; Saudi Journal of Oral Sciences Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Saudi Journal of Oral Sciences Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Saudi Journal of Oral Sciences Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Journal of Sports Medicine ;
+        issn = 1319-6308 ;
+        eissn = 2321-6697
+      >
+
+      param[journal_issn] = 1319-6308
+      param[base_url] = http://www.sjosm.org/
+
+      au < exists ; exists ; 2013 ; Saudi Journal of Sports Medicine Volume 13 ; 2013 ; 13 ; >
+      au < exists ; exists ; 2014 ; Saudi Journal of Sports Medicine Volume 14 ; 2014 ; 14 ; >
+      au < exists ; exists ; 2015 ; Saudi Journal of Sports Medicine Volume 15 ; 2015 ; 15 ; >
+      au < expected ; exists ; 2016 ; Saudi Journal of Sports Medicine Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Saudi Surgical Journal ;
+        issn = 2320-3846 ;
+        eissn = 2347-260X
+      >
+
+      param[journal_issn] = 2320-3846
+      param[base_url] = http://www.saudisurgj.org/
+
+      au < exists ; exists ; 2013 ; Saudi Surgical Journal Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Saudi Surgical Journal Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Saudi Surgical Journal Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; Saudi Surgical Journal Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Sifa Medical Journal ;
+        eissn = 2148-7731
+      >
+
+      param[journal_issn] = 2148-7731
+      param[base_url] = http://www.imjsu.org/
+
+      au < exists ; exists ; 2014 ; Sifa Medical Journal Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Sifa Medical Journal Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = SRM Journal of Research in Dental Sciences ;
+        issn = 0976-433X ;
+        eissn = 2229-4910
+      >
+
+      param[journal_issn] = 0976-433X
+      param[base_url] = http://www.srmjrds.in/
+
+      au < exists ; exists ; 2010 ; SRM Journal of Research in Dental Sciences Volume 1 ; 2010 ; 1 ; >
+      au < exists ; exists ; 2011 ; SRM Journal of Research in Dental Sciences Volume 2 ; 2011 ; 2 ; >
+      au < exists ; exists ; 2012 ; SRM Journal of Research in Dental Sciences Volume 3 ; 2012 ; 3 ; >
+      au < exists ; exists ; 2013 ; SRM Journal of Research in Dental Sciences Volume 4 ; 2013 ; 4 ; >
+      au < exists ; exists ; 2014 ; SRM Journal of Research in Dental Sciences Volume 5 ; 2014 ; 5 ; >
+      au < exists ; exists ; 2015 ; SRM Journal of Research in Dental Sciences Volume 6 ; 2015 ; 6 ; >
+      au < expected ; exists ; 2016 ; SRM Journal of Research in Dental Sciences Volume 7 ; 2016 ; 7 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Sub-Saharan African Journal of Medicine ;
+        issn = 2384-5147 ;
+        eissn = 2384-6046
+      >
+
+      param[journal_issn] = 2384-5147
+      param[base_url] = http://www.ssajm.org/
+
+      au < exists ; exists ; 2014 ; Sub-Saharan African Journal of Medicine Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; Sub-Saharan African Journal of Medicine Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; Sub-Saharan African Journal of Medicine Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Sudan Medical Monitor ;
+        issn = 1858-5000 ;
+        eissn = 1858-6384
+      >
+
+      param[journal_issn] = 1858-5000
+      param[base_url] = http://www.sudanmedicalmonitor.org/
+
+      au < exists ; exists ; 2013 ; Sudan Medical Monitor Volume 8 ; 2013 ; 8 ; >
+      au < exists ; exists ; 2014 ; Sudan Medical Monitor Volume 9 ; 2014 ; 9 ; >
+      au < exists ; exists ; 2015 ; Sudan Medical Monitor Volume 10 ; 2015 ; 10 ; >
+      au < expected ; exists ; 2016 ; Sudan Medical Monitor Volume 11 ; 2016 ; 11 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Sudanese Journal of Ophthalmology ;
+        issn = 1858-540X ;
+        eissn = 1858-5418
+      >
+
+      param[journal_issn] = 1858-540X
+      param[base_url] = http://www.sjopthal.net/
+
+      au < exists ; exists ; 2013 ; Sudanese Journal of Ophthalmology Volume 5 ; 2013 ; 5 ; >
+      au < exists ; exists ; 2014 ; Sudanese Journal of Ophthalmology Volume 6 ; 2014 ; 6 ; >
+      au < exists ; exists ; 2015 ; Sudanese Journal of Ophthalmology Volume 7 ; 2015 ; 7 ; >
+      au < expected ; exists ; 2016 ; Sudanese Journal of Ophthalmology Volume 8 ; 2016 ; 8 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Tanta Dental Journal ;
+        issn = 1687-8574 ;
+        eissn = 1687-8574
+      >
+
+      param[journal_issn] = 1687-8574
+      param[base_url] = http://www.tmj.eg.net/
+
+      au < expected ; exists ; 2016 ; Tanta Dental Journal Volume 13 ; 2016 ; 13 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Journal of Cardiothoracic Anesthesia ;
+        issn = 1687-9090 ;
+        eissn = 2090-326X
+      >
+
+      param[journal_issn] = 1687-9090
+      param[base_url] = http://www.ejca.eg.net/
+
+      au < exists ; exists ; 2012 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 6 ; 2012 ; 6 ; >
+      au < exists ; exists ; 2013 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 9 ; 2015 ; 9 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 10 ; 2016 ; 10 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Journal of Haematology ;
+        issn = 1110-1067 ;
+        eissn = 2090-9268
+      >
+
+      param[journal_issn] = 1110-1067
+      param[base_url] = http://www.ehj.eg.net/
+
+      au < exists ; exists ; 2012 ; The Egyptian Journal of Haematology Volume 37 ; 2012 ; 37 ; >
+      au < exists ; exists ; 2013 ; The Egyptian Journal of Haematology Volume 38 ; 2013 ; 38 ; >
+      au < exists ; exists ; 2014 ; The Egyptian Journal of Haematology Volume 39 ; 2014 ; 39 ; >
+      au < exists ; exists ; 2015 ; The Egyptian Journal of Haematology Volume 40 ; 2015 ; 40 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Journal of Haematology Volume 41 ; 2016 ; 41 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Journal of Internal Medicine ;
+        issn = 1110-7782 ;
+        eissn = 2090-9098
+      >
+
+      param[journal_issn] = 1110-7782
+      param[base_url] = http://www.esim.eg.net/
+
+      au < exists ; exists ; 2012 ; The Egyptian Journal of Internal Medicine Volume 24 ; 2012 ; 24 ; >
+      au < exists ; exists ; 2013 ; The Egyptian Journal of Internal Medicine Volume 25 ; 2013 ; 25 ; >
+      au < exists ; exists ; 2014 ; The Egyptian Journal of Internal Medicine Volume 26 ; 2014 ; 26 ; >
+      au < exists ; exists ; 2015 ; The Egyptian Journal of Internal Medicine Volume 27 ; 2015 ; 27 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Journal of Neurology, Psychiatry and Neurosurgery ;
+        issn = 1110-1083 ;
+        eissn = 1687-8329
+      >
+
+      param[journal_issn] = 1110-1083
+      param[base_url] = http://www.ejnpn.eg.net/
+
+      au < exists ; exists ; 2015 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 52 ; 2015 ; 52 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Journal of Neurology, Psychiatry and Neurosurgery Volume 53 ; 2016 ; 53 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Journal of Otolaryngology ;
+        issn = 1012-5574 ;
+        eissn = 2090-8539
+      >
+
+      param[journal_issn] = 1012-5574
+      param[base_url] = http://www.ejo.eg.net/
+
+      au < exists ; exists ; 2012 ; The Egyptian Journal of Otolaryngology Volume 28 ; 2012 ; 28 ; >
+      au < exists ; exists ; 2013 ; The Egyptian Journal of Otolaryngology Volume 29 ; 2013 ; 29 ; >
+      au < exists ; exists ; 2014 ; The Egyptian Journal of Otolaryngology Volume 30 ; 2014 ; 30 ; >
+      au < exists ; exists ; 2015 ; The Egyptian Journal of Otolaryngology Volume 31 ; 2015 ; 31 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Egyptian Orthopaedic Journal ;
+        issn = 1110-1148 ;
+        eissn = 2090-9926
+      >
+
+      param[journal_issn] = 1110-1148
+      param[base_url] = http://www.eoj.eg.net/
+
+      au < exists ; exists ; 2012 ; The Egyptian Orthopaedic Journal Volume 47 ; 2012 ; 47 ; >
+      au < exists ; exists ; 2013 ; The Egyptian Orthopaedic Journal Volume 48 ; 2013 ; 48 ; >
+      au < exists ; exists ; 2014 ; The Egyptian Orthopaedic Journal Volume 49 ; 2014 ; 49 ; >
+      au < exists ; exists ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 ; >
+      au < expected ; exists ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of Association of Chest Physicians ;
+        issn = 2320-8775 ;
+        eissn = 2320-9089
+      >
+
+      param[journal_issn] = 2320-8775
+      param[base_url] = http://www.jacpjournal.org/
+
+      au < exists ; exists ; 2013 ; The Journal of Association of Chest Physicians Volume 1 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; The Journal of Association of Chest Physicians Volume 2 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; The Journal of Association of Chest Physicians Volume 3 ; 2015 ; 3 ; >
+      au < expected ; exists ; 2016 ; The Journal of Association of Chest Physicians Volume 4 ; 2016 ; 4 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of Indian Prosthodontic Society ;
+        issn = 0972-4052 ;
+        eissn = 1998-4057
+      >
+
+      param[journal_issn] = 0972-4052
+      param[base_url] = http://www.j-ips.org/
+
+      au < exists ; exists ; 2005 ; The Journal of Indian Prosthodontic Society Volume 5 ; 2005 ; 5 ; >
+      au < exists ; exists ; 2006 ; The Journal of Indian Prosthodontic Society Volume 6 ; 2006 ; 6 ; >
+      au < exists ; exists ; 2007 ; The Journal of Indian Prosthodontic Society Volume 7 ; 2007 ; 7 ; >
+      au < exists ; exists ; 2008 ; The Journal of Indian Prosthodontic Society Volume 8 ; 2008 ; 8 ; >
+      au < exists ; exists ; 2009 ; The Journal of Indian Prosthodontic Society Volume 9 ; 2009 ; 9 ; >
+      au < exists ; exists ; 2010 ; The Journal of Indian Prosthodontic Society Volume 10 ; 2010 ; 10 ; >
+      au < exists ; exists ; 2011 ; The Journal of Indian Prosthodontic Society Volume 11 ; 2011 ; 11 ; >
+      au < exists ; exists ; 2012 ; The Journal of Indian Prosthodontic Society Volume 12 ; 2012 ; 12 ; >
+      au < exists ; exists ; 2013 ; The Journal of Indian Prosthodontic Society Volume 13 ; 2013 ; 13 ; >
+      au < exists ; exists ; 2014 ; The Journal of Indian Prosthodontic Society Volume 14 ; 2014 ; 14 ; >
+      au < exists ; exists ; 2015 ; The Journal of Indian Prosthodontic Society Volume 15 ; 2015 ; 15 ; >
+      au < expected ; exists ; 2016 ; The Journal of Indian Prosthodontic Society Volume 16 ; 2016 ; 16 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of National Accreditation Board for Hospitals & Healthcare Providers ;
+        issn = 2319-1880 ;
+        eissn = 2348-6139
+      >
+
+      param[journal_issn] = 2319-1880
+      param[base_url] = http://www.nabh.ind.in/
+
+      au < exists ; exists ; 2014 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 1 ; 2014 ; 1 ; >
+      au < exists ; exists ; 2015 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 2 ; 2015 ; 2 ; >
+      au < expected ; exists ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The National Medical Journal of India ;
+        issn = 0970-258X
+      >
+
+      param[journal_issn] = 0970-258X
+      param[base_url] = http://www.nmji.in/
+
+      au < expected ; exists ; 2016 ; The National Medical Journal of India Volume 29 ; 2016 ; 29 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Nigerian Journal of General Practice ;
+        issn = 1118-4647 ;
+        eissn = 2468-8215
+      >
+
+      param[journal_issn] = 1118-4647
+      param[base_url] = http://www.njgp.org/
+
+      au < exists ; exists ; 2014 ; The Nigerian Journal of General Practice Volume 12 ; 2014 ; 12 ; >
+      au < exists ; exists ; 2015 ; The Nigerian Journal of General Practice Volume 13 ; 2015 ; 13 ; >
+      au < expected ; exists ; 2016 ; The Nigerian Journal of General Practice Volume 14 ; 2016 ; 14 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = The Saint's International Dental Journal ;
+        issn = 2454-3160
+      >
+
+      param[journal_issn] = 2454-3160
+      param[base_url] = http://www.sidj.org/
+
+      au < exists ; exists ; 2015 ; The Saint's International Dental Journal Volume 1 ; 2015 ; 1 ; >
+      au < expected ; exists ; 2016 ; The Saint's International Dental Journal Volume 2 ; 2016 ; 2 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Thyroid Research and Practice ;
+        issn = 0973-0354 ;
+        eissn = 2250-1452
+      >
+
+      param[journal_issn] = 0973-0354
+      param[base_url] = http://www.thetrp.net/
+
+      au < exists ; exists ; 2006 ; Thyroid Research and Practice Volume 3 ; 2006 ; 3 ; >
+      au < exists ; exists ; 2007 ; Thyroid Research and Practice Volume 4 ; 2007 ; 4 ; >
+      au < exists ; exists ; 2008 ; Thyroid Research and Practice Volume 5 ; 2008 ; 5 ; >
+      au < exists ; exists ; 2009 ; Thyroid Research and Practice Volume 6 ; 2009 ; 6 ; >
+      au < exists ; exists ; 2010 ; Thyroid Research and Practice Volume 7 ; 2010 ; 7 ; >
+      au < exists ; exists ; 2011 ; Thyroid Research and Practice Volume 8 ; 2011 ; 8 ; >
+      au < exists ; exists ; 2012 ; Thyroid Research and Practice Volume 9 ; 2012 ; 9 ; >
+      au < exists ; exists ; 2013 ; Thyroid Research and Practice Volume 10 ; 2013 ; 10 ; >
+      au < exists ; exists ; 2014 ; Thyroid Research and Practice Volume 11 ; 2014 ; 11 ; >
+      au < exists ; exists ; 2015 ; Thyroid Research and Practice Volume 12 ; 2015 ; 12 ; >
+      au < expected ; exists ; 2016 ; Thyroid Research and Practice Volume 13 ; 2016 ; 13 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Translational Surgery ;
+        issn = 2468-5585 ;
+        eissn = 2455-9598
+      >
+
+      param[journal_issn] = 2468-5585
+      param[base_url] = http://www.translsurg.com/
+
+      au < expected ; exists ; 2016 ; Translational Surgery Volume 1 ; 2016 ; 1 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Tropical Journal of Medical Research ;
+        issn = 1119-0388
+      >
+
+      param[journal_issn] = 1119-0388
+      param[base_url] = http://www.tjmrjournal.org/
+
+      au < exists ; exists ; 2014 ; Tropical Journal of Medical Research Volume 17 ; 2014 ; 17 ; >
+      au < exists ; exists ; 2015 ; Tropical Journal of Medical Research Volume 18 ; 2015 ; 18 ; >
+      au < expected ; exists ; 2016 ; Tropical Journal of Medical Research Volume 19 ; 2016 ; 19 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Tropical Journal of Obstetrics and Gynaecology ;
+        issn = 0189-5117
+      >
+
+      param[journal_issn] = 0189-5117
+      param[base_url] = http://www.tjogonline.com/
+
+      au < expected ; exists ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Universal Research Journal of Dentistry ;
+        issn = 2249-9725 ;
+        eissn = 2250-3455
+      >
+
+      param[journal_issn] = 2249-9725
+      param[base_url] = http://www.urjd.org/
+
+      au < exists ; exists ; 2011 ; Universal Research Journal of Dentistry Volume 1 ; 2011 ; 1 ; >
+      au < exists ; exists ; 2012 ; Universal Research Journal of Dentistry Volume 2 ; 2012 ; 2 ; >
+      au < exists ; exists ; 2013 ; Universal Research Journal of Dentistry Volume 3 ; 2013 ; 3 ; >
+      au < exists ; exists ; 2014 ; Universal Research Journal of Dentistry Volume 4 ; 2014 ; 4 ; >
+      au < exists ; exists ; 2015 ; Universal Research Journal of Dentistry Volume 5 ; 2015 ; 5 ; >
+      au < expected ; exists ; 2016 ; Universal Research Journal of Dentistry Volume 6 ; 2016 ; 6 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = West African Journal of Radiology ;
+        issn = 1115-3474 ;
+        eissn = 2321-6670
+      >
+
+      param[journal_issn] = 1115-3474
+      param[base_url] = http://www.wajradiology.org/
+
+      au < exists ; exists ; 2001 ; West African Journal of Radiology Volume 8 ; 2001 ; 8 ; >
+      au < exists ; exists ; 2002 ; West African Journal of Radiology Volume 9 ; 2002 ; 9 ; >
+      au < exists ; exists ; 2003 ; West African Journal of Radiology Volume 10 ; 2003 ; 10 ; >
+      au < exists ; exists ; 2004 ; West African Journal of Radiology Volume 11 ; 2004 ; 11 ; >
+      au < exists ; exists ; 2005 ; West African Journal of Radiology Volume 12 ; 2005 ; 12 ; >
+      au < exists ; exists ; 2006 ; West African Journal of Radiology Volume 13 ; 2006 ; 13 ; >
+      au < exists ; exists ; 2007 ; West African Journal of Radiology Volume 14 ; 2007 ; 14 ; >
+      au < exists ; exists ; 2008 ; West African Journal of Radiology Volume 15 ; 2008 ; 15 ; >
+      au < exists ; exists ; 2009 ; West African Journal of Radiology Volume 16 ; 2009 ; 16 ; >
+      au < exists ; exists ; 2010 ; West African Journal of Radiology Volume 17 ; 2010 ; 17 ; >
+      au < exists ; exists ; 2011 ; West African Journal of Radiology Volume 18 ; 2011 ; 18 ; >
+      au < exists ; exists ; 2012 ; West African Journal of Radiology Volume 19 ; 2012 ; 19 ; >
+      au < exists ; exists ; 2013 ; West African Journal of Radiology Volume 20 ; 2013 ; 20 ; >
+      au < exists ; exists ; 2014 ; West African Journal of Radiology Volume 21 ; 2014 ; 21 ; >
+      au < exists ; exists ; 2015 ; West African Journal of Radiology Volume 22 ; 2015 ; 22 ; >
+      au < expected ; exists ; 2016 ; West African Journal of Radiology Volume 23 ; 2016 ; 23 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Yoga Mimamsa ;
+        issn = 0044-0507 ;
+        eissn = 2394-2487
+      >
+
+      param[journal_issn] = 0044-0507
+      param[base_url] = http://www.ym-kdham.in/
+
+      au < exists ; exists ; 2014 ; Yoga Mimamsa Volume 46 ; 2014 ; 46 ; >
+      au < exists ; exists ; 2015 ; Yoga Mimamsa Volume 47 ; 2015 ; 47 ; >
+      au < expected ; exists ; 2016 ; Yoga Mimamsa Volume 48 ; 2016 ; 48 ; >
+
+  }
+
 }
