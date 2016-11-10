@@ -128,10 +128,9 @@ public class InputOption {
       options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
     }
     else {
-      if (args.length == 0) {
-        AppUtil.error("No input files specified");
+      if (args.length > 0) {
+        options.put(KEY_INPUT, Arrays.asList(args));
       }
-      options.put(KEY_INPUT, Arrays.asList(args));
     }
   }
 

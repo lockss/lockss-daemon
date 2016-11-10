@@ -748,6 +748,13 @@ public class TdbOut {
 
     InputOption.processCommandLine(options, cmd);
     InputData.parse(options, cmd);
+    if (InputOption.getInput(options) == null && InputData.get(options) == null) {
+      AppUtil.error("No input files specified");
+    }
+    if (InputOption.getInput(options) != null && InputData.get(options) != null) {
+      AppUtil.error("--%s cannot be used with a list of input files", InputOption.KEY_INPUT);
+    }
+    
     KeepGoing.parse(options, cmd);
     OutputOption.processCommandLine(options, cmd);
     Verbose.parse(options, cmd);

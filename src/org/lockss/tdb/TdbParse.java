@@ -107,6 +107,7 @@ public class TdbParse {
    */
   public void addOptions(Options opts) {
     opts.addOption(Help.option()); // --help
+    InputOption.addOptions(opts); // --input
     opts.addOption(KeepGoing.option()); // --keep-going
     opts.addOption(OutputData.option()); // --output-data
     opts.addOption(Verbose.option()); // --verbose
@@ -122,7 +123,7 @@ public class TdbParse {
     Map<String, Object> options = new HashMap<String, Object>();
     // Help already processed
     Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
-    InputData.parse(options, cmd);
+    InputOption.processCommandLine(options, cmd);
     OutputData.parse(options, cmd);
     if (OutputData.get(options) == null) {
       AppUtil.error("--%s is required", OutputData.KEY);
@@ -133,14 +134,22 @@ public class TdbParse {
   
   public void run(Map<String, Object> options) {
     Tdb tdb = processFiles(options);
+    OutputStream os = null;
     try {
-      writeTdb(tdb, OutputOption.getSingleOutput(options));
+      String f = OutputData.get(options);
+      os = (f == null || "-".equals(f)) ? System.out : new FileOutputStream(f);
+      writeTdb(tdb, os);
     }
     catch (IOException ioe) {
       AppUtil.error(options, ioe, "Output error");
     }
     finally {
-      OutputOption.getSingleOutput(options).close();
+      try {
+        os.close();
+      }
+      catch (IOException ioe) {
+        // ignore
+      }
     }
   }
   
@@ -164,7 +173,7 @@ public class TdbParse {
    * @since 1.72
    */
   public static void writeTdb(Tdb tdb, OutputStream outputStream) throws IOException {
-    ObjectOutputStream oos = new ObjectOutputStream(new GZIPOutputStream(outputStream));
+    ObjectOutputStream oos = new ObjectOutputStream(outputStream);
     oos.writeObject(tdb);
   }
 
@@ -175,7 +184,7 @@ public class TdbParse {
    * @since 1.72
    */
   public static Tdb readTdb(InputStream inputStream) throws IOException {
-    ObjectInputStream ois = new ObjectInputStream(new GZIPInputStream(inputStream));
+    ObjectInputStream ois = new ObjectInputStream(inputStream);
     try {
       return (Tdb)ois.readObject();
     }
