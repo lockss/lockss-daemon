@@ -4193,9 +4193,9 @@
     param[base_url] = http://www.ddtjournal.org/
     param[journal_issn] = 2394-6555
 
-    au < exists ; exists ; 2014 ; Drug Development and Therapeutics Volume 5 ; 2014 ; 5 ; >
-    au < exists ; exists ; 2015 ; Drug Development and Therapeutics Volume 6 ; 2015 ; 6 ; >
-    au < exists ; exists ; 2016 ; Drug Development and Therapeutics Volume 7 ; 2016 ; 7 ; >
+    au < manifest ; exists ; 2014 ; Drug Development and Therapeutics Volume 5 ; 2014 ; 5 ; >
+    au < manifest ; exists ; 2015 ; Drug Development and Therapeutics Volume 6 ; 2015 ; 6 ; >
+    au < manifest ; exists ; 2016 ; Drug Development and Therapeutics Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -4211,9 +4211,9 @@
       param[journal_issn] = 2314-8667
       param[base_url] = http://www.aaj.eg.net/
 
-      au < exists ; exists ; 2014 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 1 ; 2014 ; 1 ; >
-      au < exists ; exists ; 2015 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 2 ; 2015 ; 2 ; >
-      au < expected ; exists ; 2016 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 3 ; 2016 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 1 ; 2014 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 2 ; 2015 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Advanced Arab Academy of Audio-Vestibulogy Journal Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -4227,6 +4227,7 @@
 
       param[journal_issn] = 2277-9175
       param[base_url] = http://www.advbiores.net/
+      #no back issues page.
 
       au < exists ; exists ; 2014 ; Advanced Biomedical Research Volume 1 ; 2014 ; 1 ; >
       au < exists ; exists ; 2015 ; Advanced Biomedical Research Volume 2 ; 2015 ; 2 ; >
@@ -4246,10 +4247,10 @@
       param[journal_issn] = 2384-5589
       param[base_url] = http://www.ajmhs.org/
 
-      au < exists ; exists ; 2013 ; African Journal of Medical and Health Sciences Volume 12 ; 2013 ; 12 ; >
-      au < exists ; exists ; 2014 ; African Journal of Medical and Health Sciences Volume 13 ; 2014 ; 13 ; >
-      au < exists ; exists ; 2015 ; African Journal of Medical and Health Sciences Volume 14 ; 2015 ; 14 ; >
-      au < expected ; exists ; 2016 ; African Journal of Medical and Health Sciences Volume 15 ; 2016 ; 15 ; >
+      au < manifest ; exists ; 2013 ; African Journal of Medical and Health Sciences Volume 12 ; 2013 ; 12 ; >
+      au < manifest ; exists ; 2014 ; African Journal of Medical and Health Sciences Volume 13 ; 2014 ; 13 ; >
+      au < manifest ; exists ; 2015 ; African Journal of Medical and Health Sciences Volume 14 ; 2015 ; 14 ; >
+      au < manifest ; exists ; 2016 ; African Journal of Medical and Health Sciences Volume 15 ; 2016 ; 15 ; >
 
   }
 
@@ -4264,8 +4265,8 @@
       param[journal_issn] = 1597-1112
       param[base_url] = http://www.afrjtrauma.com/
 
-      au < exists ; exists ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; >
-      au < exists ; exists ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; >
+      au < manifest ; exists ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; >
+      au < manifest ; exists ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; >
       au < expected ; exists ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; >
 
   }
@@ -4281,7 +4282,7 @@
       param[journal_issn] = 1687-1693
       param[base_url] = http://www.azmj.eg.net/
 
-      au < expected ; exists ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; >
 
   }
 
@@ -4297,7 +4298,7 @@
       param[journal_issn] = 1858-6538
       param[base_url] = http://www.bijojournal.org/
 
-      au < exists ; exists ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; >
+      au < manifest ; exists ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; >
       au < expected ; exists ; 2016 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2016 ; 4 ; >
 
   }
@@ -4324,13 +4325,13 @@
       au < exists ; exists ; 2007 ; Ancient Science of Life Volume 26 ; 2007 ; 26 ; >
       au < exists ; exists ; 2008 ; Ancient Science of Life Volume 27 ; 2008 ; 27 ; >
       au < exists ; exists ; 2009 ; Ancient Science of Life Volume 28 ; 2009 ; 28 ; >
-      au < exists ; exists ; 2010 ; Ancient Science of Life Volume 29 ; 2010 ; 29 ; >
-      au < exists ; exists ; 2011 ; Ancient Science of Life Volume 30 ; 2011 ; 30 ; >
-      au < exists ; exists ; 2012 ; Ancient Science of Life Volume 31 ; 2012 ; 31 ; >
-      au < exists ; exists ; 2013 ; Ancient Science of Life Volume 32 ; 2013 ; 32 ; >
-      au < exists ; exists ; 2014 ; Ancient Science of Life Volume 33 ; 2014 ; 33 ; >
-      au < exists ; exists ; 2015 ; Ancient Science of Life Volume 34 ; 2015 ; 34 ; >
-      au < expected ; exists ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; >
+      au < manifest ; exists ; 2010 ; Ancient Science of Life Volume 29 ; 2010 ; 29 ; >
+      au < manifest ; exists ; 2011 ; Ancient Science of Life Volume 30 ; 2011 ; 30 ; >
+      au < manifest ; exists ; 2012 ; Ancient Science of Life Volume 31 ; 2012 ; 31 ; >
+      au < manifest ; exists ; 2013 ; Ancient Science of Life Volume 32 ; 2013 ; 32 ; >
+      au < manifest ; exists ; 2014 ; Ancient Science of Life Volume 33 ; 2014 ; 33 ; >
+      au < manifest ; exists ; 2015 ; Ancient Science of Life Volume 34 ; 2015 ; 34 ; >
+      au < manifest ; exists ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; >
 
   }
 
@@ -4346,9 +4347,9 @@
       param[journal_issn] = 2315-7992
       param[base_url] = http://www.bioanthrojournal.org/
 
-      au < exists ; exists ; 2014 ; Annals of Bioanthropology Volume 2 ; 2014 ; 2 ; >
-      au < exists ; exists ; 2015 ; Annals of Bioanthropology Volume 3 ; 2015 ; 3 ; >
-      au < expected ; exists ; 2016 ; Annals of Bioanthropology Volume 4 ; 2016 ; 4 ; >
+      au < manifest ; exists ; 2014 ; Annals of Bioanthropology Volume 2 ; 2014 ; 2 ; >
+      au < manifest ; exists ; 2015 ; Annals of Bioanthropology Volume 3 ; 2015 ; 3 ; >
+      au < manifest ; exists ; 2016 ; Annals of Bioanthropology Volume 4 ; 2016 ; 4 ; >
 
   }
 
@@ -4364,12 +4365,12 @@
       param[journal_issn] = 2141-9248
       param[base_url] = http://www.amhsr.org/
 
-      au < exists ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; >
-      au < exists ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; >
-      au < exists ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; >
-      au < exists ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; >
+      au < manifest ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; >
+      au < manifest ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; >
       au < exists ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; >
-      au < expected ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
+      au < manifest ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -4382,7 +4383,7 @@
         eissn = 2321-1407
       >
 
-      param[journal_issn] = 2321-4600
+      param[journal_issn] = 2321-1407
       param[base_url] = http://www.apospublications.com/
 
       au < exists ; exists ; 2011 ; APOS Trends in Orthodontics Volume 1 ; 2011 ; 1 ; >
@@ -4406,11 +4407,11 @@
       param[journal_issn] = 2278-9596
       param[base_url] = http://www.archintsurg.org/
 
-      au < exists ; exists ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; >
-      au < exists ; exists ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; >
-      au < exists ; exists ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; >
-      au < exists ; exists ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; >
-      au < expected ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; >
+      au < manifest ; exists ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; >
+      au < manifest ; exists ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -4426,8 +4427,8 @@
       param[journal_issn] = 2321-4848
       param[base_url] = http://www.amhsjournal.org/
 
-      au < exists ; exists ; 2013 ; Archives of Medicine and Health Sciences Volume 1 ; 2013 ; 1 ; >
-      au < exists ; exists ; 2014 ; Archives of Medicine and Health Sciences Volume 2 ; 2014 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Archives of Medicine and Health Sciences Volume 1 ; 2013 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Archives of Medicine and Health Sciences Volume 2 ; 2014 ; 2 ; >
       au < exists ; exists ; 2015 ; Archives of Medicine and Health Sciences Volume 3 ; 2015 ; 3 ; >
       au < expected ; exists ; 2016 ; Archives of Medicine and Health Sciences Volume 4 ; 2016 ; 4 ; >
 
