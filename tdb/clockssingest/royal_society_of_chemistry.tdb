@@ -883,13 +883,12 @@
       comment[years] = Published 2010-2016
       param[journal_code] = cy
 
-      au < exists ; exists ; 2010 ; Catalysis Science & Technology Volume 1 ; 1 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Catalysis Science & Technology Volume 2 ; 2 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Catalysis Science & Technology Volume 3 ; 3 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Catalysis Science & Technology Volume 4 ; 4 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Catalysis Science & Technology Volume 5 ; 5 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Catalysis Science & Technology Volume 6 ; 6 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Catalysis Science & Technology Volume 7 ; 7 ; 2016 ; >
+      au < exists ; exists ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; >
 
   }
 
