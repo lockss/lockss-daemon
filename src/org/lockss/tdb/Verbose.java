@@ -32,104 +32,92 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import java.io.Serializable;
-import java.util.*;
+import java.util.Map;
+
+import org.apache.commons.cli.*;
 
 /**
  * <p>
- * A lightweight class (struct) to represent a publisher during TDB processing.
+ * Utility class defining a verbose option.
+ * </p>
+ * <p>
+ * If the verbose option created by {@link #option()} is requested on the
+ * command line by {@link #parse(Map, CommandLineAccessor)},
+ * {@link #isVerbose(Map)} will return <code>true</code>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
-public class Publisher implements Serializable {
-  
+public class Verbose {
+
   /**
    * <p>
-   * Makes a new publisher instance (useful for tests).
+   * Prevent instantiation.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected Publisher() {
-    this(new LinkedHashMap<String, String>());
+  private Verbose() {
+    // Prevent instantiation
   }
   
   /**
    * <p>
-   * Makes a new publisher instance with the given map.
+   * Key for the standard verbose option ({@value}).
    * </p>
    * 
-   * @param map A map of key-value pairs for the publisher.
-   * @since 1.67
+   * @since 1.72
    */
-  public Publisher(Map<String, String>map) {
-    this.map = map;
+  public static final String KEY = "verbose";
+  
+  /**
+   * <p>
+   * Returns an instance of the output data option.
+   * </p>
+   * 
+   * @return An {@link Option} instance.
+   * @since 1.72
+   */
+  public static Option option() {
+    return Option.builder(Character.toString('v'))
+                 .longOpt(KEY)
+                 .desc("output verbose error messages")
+                 .build();
   }
-  
+
   /**
    * <p>
-   * Internal storage map.
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
+   * information in the given options map.
    * </p>
    * 
-   * @since 1.67
+   * @param options
+   *          An options map.
+   * @param cmd
+   *          A {@link CommandLineAccessor} instance.
+   * @since 1.72
    */
-  protected Map<String, String> map;
-  
-  /**
-   * <p>
-   * Retrieves a value from the internal storage map.
-   * </p>
-   * 
-   * @param key A key.
-   * @return The value for the key, or <code>null</code> if none is set.
-   * @since 1.67
-   */
-  public String getArbitraryValue(String key) {
-    return map.get(key);
+  public static void parse(Map<String, Object> options,
+                           CommandLineAccessor cmd) {
+    options.put(KEY, Boolean.valueOf(cmd.hasOption(KEY)));
   }
-  
+
   /**
    * <p>
-   * Publisher's name (key).
+   * Determines from the options map if the verbose option has been requested
+   * on the command line.
    * </p>
    * 
-   * @since 1.67
+   * @param options
+   *          An options map.
+   * @return <code>true</code> if and only if the verbose option has been
+   *         requested on the command line.
+   * @since 1.72
    */
-  protected static final String NAME = "name";
-  
-  /**
-   * <p>
-   * Publisher's name (flag).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected boolean _name = false;
-  
-  /**
-   * <p>
-   * Publisher's name (field).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected String name = null;
-  
-  /**
-   * <p>
-   * Retrieves the publisher's name.
-   * </p>
-   * 
-   * @return The publisher name.
-   */
-  public String getName() {
-    if (!_name) {
-      _name = true;
-      name = map.get(NAME);
-    }
-    return name;
+  public static boolean isVerbose(Map<String, Object> options) {
+    Boolean verbose = (Boolean)options.get(KEY);
+    return verbose != null && verbose.booleanValue();
   }
-  
+
 }

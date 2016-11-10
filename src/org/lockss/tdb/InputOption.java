@@ -1,32 +1,32 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2016, Board of Trustees of Leland Stanford Jr. University,
+All rights reserved.
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -89,40 +89,21 @@ public class InputOption {
   
   /**
    * <p>
-   * Argument name for the standard input option ({@value}).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final String ARG_INPUT = "FILE";
-  
-  /**
-   * <p>
-   * Standard input option.
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final Option OPTION_INPUT =
-      Option.builder(Character.toString(LETTER_INPUT))
-            .longOpt(KEY_INPUT)
-            .hasArg()
-            .argName(ARG_INPUT)
-            .desc(String.format("read input from %s instead of list of input files", ARG_INPUT))
-            .build();
-  
-  /**
-   * <p>
    * Adds the standard input option to a Commons CLI {@link Options}
    * instance.
    * </p>
    * 
-   * @param options
+   * @param opts
    *          A Commons CLI {@link Options} instance.
    * @since 1.67
    */
-  public static void addOptions(Options options) {
-    options.addOption(OPTION_INPUT);
+  public static void addOptions(Options opts) {
+    opts.addOption(Option.builder(Character.toString(LETTER_INPUT))
+                   .longOpt(KEY_INPUT)
+                   .hasArg()
+                   .argName("INFILE")
+                   .desc("read input from INFILE instead of list of files")
+                   .build());
   }
 
   /**
@@ -147,10 +128,9 @@ public class InputOption {
       options.put(KEY_INPUT, Arrays.asList(cmd.getOptionValue(KEY_INPUT)));
     }
     else {
-      if (args.length == 0) {
-        AppUtil.error("No input files specified");
+      if (args.length > 0) {
+        options.put(KEY_INPUT, Arrays.asList(args));
       }
-      options.put(KEY_INPUT, Arrays.asList(args));
     }
   }
 

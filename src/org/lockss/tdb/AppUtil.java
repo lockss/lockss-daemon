@@ -78,7 +78,7 @@ public class AppUtil {
                            String format,
                            Object... args) {
     String msg = String.format(format, args);
-    if (options != null && VerboseOption.isVerbose(options) && exceptions != null) {
+    if (options != null && Verbose.isVerbose(options) && exceptions != null) {
       for (Exception exc : exceptions) {
         exc.printStackTrace(System.err);
       }
@@ -157,11 +157,11 @@ public class AppUtil {
                              String format,
                              Object... args) {
     String msg = String.format(format, args);
-    if (VerboseOption.isVerbose(options) && exc != null) {
+    if (Verbose.isVerbose(options) && exc != null) {
       exc.printStackTrace(System.err);
     }
     System.err.println(msg);
-    if (!KeepGoingOption.isKeepGoing(options)) {
+    if (!KeepGoing.isKeepGoing(options)) {
       System.exit(1);
     }
   }

@@ -32,104 +32,94 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import java.io.Serializable;
 import java.util.*;
+
+import org.apache.commons.cli.Option;
 
 /**
  * <p>
- * A lightweight class (struct) to represent a publisher during TDB processing.
+ * Utility class defining an output data option.
+ * </p>
+ * <p>
+ * If the output data option created by {@link #option()} is requested on the
+ * command line by {@link #parse(Map, CommandLineAccessor)}, {@link #get(Map)}
+ * will return a file name string.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
-public class Publisher implements Serializable {
-  
+public class OutputData {
+
   /**
    * <p>
-   * Makes a new publisher instance (useful for tests).
+   * Prevent instantiation.
    * </p>
    * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected Publisher() {
-    this(new LinkedHashMap<String, String>());
+  private OutputData() {
+    // Prevent instantiation
   }
   
   /**
    * <p>
-   * Makes a new publisher instance with the given map.
+   * Key for the standard input data option ({@value}).
    * </p>
    * 
-   * @param map A map of key-value pairs for the publisher.
-   * @since 1.67
+   * @since 1.72
    */
-  public Publisher(Map<String, String>map) {
-    this.map = map;
+  public static final String KEY = "output-data";
+
+  /**
+   * <p>
+   * Returns an instance of the output data option.
+   * </p>
+   * 
+   * @return An {@link Option} instance.
+   * @since 1.72
+   */
+  public static Option option() {
+    return Option.builder()
+          .longOpt(KEY)
+          .hasArg()
+          .argName("DATFILE")
+          .desc("write TDB data to DATFILE")
+          .build();
   }
-  
+
   /**
    * <p>
-   * Internal storage map.
+   * Processes a {@link CommandLineAccessor} instance and stores appropriate
+   * information in the given options map.
    * </p>
    * 
-   * @since 1.67
+   * @param options
+   *          An options map.
+   * @param cmd
+   *          A {@link CommandLineAccessor} instance.
+   * @since 1.72
    */
-  protected Map<String, String> map;
-  
-  /**
-   * <p>
-   * Retrieves a value from the internal storage map.
-   * </p>
-   * 
-   * @param key A key.
-   * @return The value for the key, or <code>null</code> if none is set.
-   * @since 1.67
-   */
-  public String getArbitraryValue(String key) {
-    return map.get(key);
-  }
-  
-  /**
-   * <p>
-   * Publisher's name (key).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final String NAME = "name";
-  
-  /**
-   * <p>
-   * Publisher's name (flag).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected boolean _name = false;
-  
-  /**
-   * <p>
-   * Publisher's name (field).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected String name = null;
-  
-  /**
-   * <p>
-   * Retrieves the publisher's name.
-   * </p>
-   * 
-   * @return The publisher name.
-   */
-  public String getName() {
-    if (!_name) {
-      _name = true;
-      name = map.get(NAME);
+  public static void parse(Map<String, Object> options,
+                           CommandLineAccessor cmd) {
+    if (cmd.hasOption(KEY)) {
+      options.put(KEY, cmd.getOptionValue(KEY));
     }
-    return name;
   }
-  
+
+  /**
+   * <p>
+   * Retrieves a file name string from the options map if the output data
+   * options has been requested at the command line, null otherwise.
+   * </p>
+   * 
+   * @param options
+   *          An options map.
+   * @return A file name string, or null.
+   * @since 1.72
+   */
+  public static String get(Map<String, Object> options) {
+    return (String)options.get(KEY);
+  }
+
 }

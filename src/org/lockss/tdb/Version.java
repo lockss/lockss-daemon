@@ -32,104 +32,74 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import java.io.Serializable;
-import java.util.*;
+import org.apache.commons.cli.*;
 
 /**
  * <p>
- * A lightweight class (struct) to represent a publisher during TDB processing.
+ * Utility class defining a version option.
+ * </p>
+ * <p>
+ * If the version option created by {@link #option()} is requested on the
+ * command line, {@lin #parse(CommandLineAccessor, String...)} will display a
+ * message to {}@link System#out], <b>and then will exit with
+ * {@link System#exit(int)}</b>.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.67
+ * @since 1.72
  */
-public class Publisher implements Serializable {
-  
+public class Version {
+
   /**
-   * <p>
-   * Makes a new publisher instance (useful for tests).
-   * </p>
-   * 
-   * @since 1.67
+   * @since 1.72
    */
-  protected Publisher() {
-    this(new LinkedHashMap<String, String>());
+  private Version() {
+    // Prevent instantiation
   }
   
   /**
    * <p>
-   * Makes a new publisher instance with the given map.
+   * Key for the version option ({@value}).
    * </p>
    * 
-   * @param map A map of key-value pairs for the publisher.
-   * @since 1.67
+   * @since 1.72
    */
-  public Publisher(Map<String, String>map) {
-    this.map = map;
+  public static final String KEY = "version";
+
+  /**
+   * <p>
+   * Returns an instance of the version option.
+   * </p>
+   * 
+   * @return An {@link Option} instance.
+   * @since 1.72
+   */
+  public static Option option() {
+    return Option.builder()
+                 .longOpt(KEY)
+                 .desc("show version information and exit")
+                 .build();
   }
-  
+
   /**
    * <p>
-   * Internal storage map.
+   * 
    * </p>
    * 
-   * @since 1.67
+   * @param cmd
+   * @param versionStrings
+   * @since 1.72
    */
-  protected Map<String, String> map;
-  
-  /**
-   * <p>
-   * Retrieves a value from the internal storage map.
-   * </p>
-   * 
-   * @param key A key.
-   * @return The value for the key, or <code>null</code> if none is set.
-   * @since 1.67
-   */
-  public String getArbitraryValue(String key) {
-    return map.get(key);
-  }
-  
-  /**
-   * <p>
-   * Publisher's name (key).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected static final String NAME = "name";
-  
-  /**
-   * <p>
-   * Publisher's name (flag).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected boolean _name = false;
-  
-  /**
-   * <p>
-   * Publisher's name (field).
-   * </p>
-   * 
-   * @since 1.67
-   */
-  protected String name = null;
-  
-  /**
-   * <p>
-   * Retrieves the publisher's name.
-   * </p>
-   * 
-   * @return The publisher name.
-   */
-  public String getName() {
-    if (!_name) {
-      _name = true;
-      name = map.get(NAME);
+  public static void parse(CommandLineAccessor cmd,
+                           String... versionStrings) {
+    if (cmd.hasOption(KEY)) {
+      StringBuilder sb = new StringBuilder();
+      for (String versionString : versionStrings) {
+        sb.append(versionString);
+      }
+      System.out.println(sb.toString());
+      System.exit(0);
     }
-    return name;
   }
   
 }
