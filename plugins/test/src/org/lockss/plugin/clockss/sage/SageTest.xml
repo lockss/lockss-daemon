@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sage:SAGE xmlns:sage="http://www.sagepublications.com/" xmlns="http://www.tei-c.org/ns/1.0" xmlns:doi="http://www.doi.org/2004/DOISchema" version="5.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Habitat Regeneration: A Handbook</title>
+        <title type="main_apa">Habitat regeneration: A handbook</title>
+        <editor bio="504823">
+          <persName>
+            <forename>Peter</forename>
+            <surname>Writer</surname>
+          </persName>
+        </editor>
+        <editor bio="438113">
+          <persName>
+            <forename>Hugh</forename>
+            <surname>Wordsmith</surname>
+          </persName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <volumes/>
+        <edition/>
+        <respStmt>
+          <resp>Converted to XML from the print edition</resp>
+          <name>SAGE Publications, Inc.</name>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>SAGE Publications Ltd</publisher>
+        <pubPlace>
+          <address>
+            <street>1 Oliver's Yard</street>
+            <street>55 City Road</street>
+            <name type="city">London</name>
+            <name type="state"/>
+            <postCode>EC1Y 1SP</postCode>
+            <name type="country">United Kingdom</name>
+          </address>
+        </pubPlace>
+        <date>2008</date>
+        <idno rend="pb" type="print">9781111111111</idno>
+        <idno type="online">9781111111112</idno>
+        <date rend="online">20120531</date>
+        <idno type="subject_label">Habitat Planning</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="subject_label">Urban Geography</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="platformName">SAGE Knowledge</idno>
+        <idno type="productName">SAGE Reference</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="productCode">xxxxx/B</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="spinID">xxxxx</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="url">http://sk.sagepub.com/foo/foo</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+        <idno type="uri">foo</idno>
+        <!--20150821111126 Added as part of the great sk 2.0 metadata update of 2015-->
+      </publicationStmt>
+      <seriesStmt>
+        <title type="series"/>
+        <title type="series_apa"/>
+      </seriesStmt>
+      <notesStmt>
+        <doi:DOI>10.4135/97811111111111</doi:DOI>
+      </notesStmt>
+      <sourceDesc>
+        <p>Encoded from hard copy of original work</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text type="handbook">
+  </text>
+</sage:SAGE>
