@@ -16,8 +16,8 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hpa-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
-    #waiting on contract - but otherwise ready to add to production
-    au < readySource ; exists ; 2016 ; Hellenic Psychiatric Society Source Content 2016 ; 2016 >
+
+    au < readySource ; crawling ; 2016 ; Hellenic Psychiatric Society Source Content 2016 ; 2016 >
 
   }
 
