@@ -50,8 +50,12 @@ public class WageningenJournalsHtmlCrawlFilterFactory
     
     // toc, abs, ref - right column most read/most cited
     // too restrictive - it relates to any tabbed content, which could be main
-    // TODO - look for a better solution
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),        
+    // the citation download got moved in to these tabs - so we must allow that through
+    //HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+          HtmlNodeFilters.tagWithAttributeRegex(
+                 "a", "href", "/action/showCitFormats\\?")),    
     
     // everything is currently moved up to the parent class
 

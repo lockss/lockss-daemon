@@ -227,6 +227,149 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       ", " +
       "</div>";
   
+  private static final String toolsTab = 
+      "<div class=\"widget-body body body-none \">" +
+          "<div class=\"tabs tabs-widget \" aria-live=\"polite\" aria-atomic=\"true\" aria-relevant=\"additions\">" +
+          "<ul class=\"tab-nav\">" +
+          "<li class=\"active\">" +
+          "<a href=\"\" title=\"show Tools\">Tools</a>" +
+          "</li>" +
+          "<li class=\"\">" +
+          "<a href=\"\" title=\"show Most Read\">Most Read</a>" +
+          "</li>" +
+          "<li class=\"\">" +
+          "<a href=\"\" title=\"show Most Cited\">Most Cited</a>" +
+          "</li>" +
+          "</ul>" +
+          "<div class=\"tab-content\">" +
+          "<div class=\"tab-pane active\" id=\"\">" +
+          "<div class=\"tab-pane-content\" data-pb-dropzone=\"\" data-pb-dropzone-name=\"Tools\">" +
+          "<div class=\"widget layout-one-column none  widget-regular  widget-border-toggle widget-compact-all\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-regular  body-border-toggle body-compact-all\">" +
+          "<div class=\"pb-columns row-fluid\">" +
+          "<div class=\"width_1_1\">" +
+          "<div data-pb-dropzone=\"center\">" +
+          "<div class=\"widget literatumAlertsWidget none  widget-none  widget-compact-vertical\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none  body-compact-vertical\">" +
+          "<div class=\"alertsWidget\">" +
+          "<h3>Site Tools</h3>" +
+          "<div class=\"alerts-body\">" +
+          "<div class=\"boxlink\" id=\"\">" +
+          "<a href=\"/action/doUpdateAlertSettings?action=addJournal\">Sign up for e-alerts</a>" +
+          "</div>" +
+          "<div class=\"boxlink\" id=\"\">" +
+          "<a href=\"/action/showFeed?type=etoc&feed=rss&jc=qas\"><img src=\"\" alt=\"RSS\" width=\"36\" height=\"14\" align=\"top\" /></a>" +
+          "<a href=\"/help?context=rss\" onclick=\"popupHelp(this.href); return false;\" target=\"_blank\">" +
+          "(What is this?)" +
+          "</a>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"widget literatumArticleToolsWidget alignLeft  widget-none  widget-compact-all widget-rounded\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none  body-compact-all body-rounded\">" +
+          "<div class=\"articleTools\">" +
+          "<ul class=\"linkList blockLinks separators centered\">" +
+          "<li class=\"addToFavs\">" +
+          "<a href=\"/personalize/addFavoritePublication?doi=10.3920%2FQAS2014.0457\">Add to Favorites</a>" +
+          "</li>" +
+          "<li class=\"email\">" +
+          "<a href=\"/action/showMailPage?doi=10.3920\">Email a Friend</a>" +
+          "</li>" +
+          "<li class=\"downloadCitations\">" +
+          "<a href=\"/action/showCitFormats?doi=10.3920%2FQAS2014.0457\">Download Citation Data</a>" +
+          "</li>" +
+          "<li class=\"trackCitations\">" +
+          "<a href=\"/action/addCitationAlert?doi=10.3920%2FQAS2014.0457\">Track Citations</a>" +
+          "</li>" +
+          "</ul>" +
+          "</div" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"widget general-html none  widget-none  widget-compact-horizontal\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none  body-compact-horizontal\"><script src=\"\"></script>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"tab-pane \" id=\"\">" +
+          "<div class=\"tab-pane-content\" data-pb-dropzone=\"\" data-pb-dropzone-name=\"Most Read\">" +
+          "<div class=\"widget literatumMostReadWidget none  widget-none\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none \"><section class=\"popular\">" +
+          "<div class=\"mostRead  \">" +
+          "<a href=\"/action/showMostReadArticles?journalCode=qas\" class=\"more\">See More</a>" +
+          "</div>" +
+          "</section" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"tab-pane \" id=\"\">" +
+          "<div class=\"tab-pane-content\" data-pb-dropzone=\"\" data-pb-dropzone-name=\"Most Cited\">" +
+          "<div class=\"widget literatumMostCitedWidget none  widget-none\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none \"><section class=\"popular\">" +
+          "</section" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+// remove everything except for the tree to the one piece we need  
+  private static final String toolsTabCrawlFiltered =
+      "<div class=\"widget-body body body-none \">" +
+          "<div class=\"tabs tabs-widget \" aria-live=\"polite\" aria-atomic=\"true\" aria-relevant=\"additions\">" +
+          "<div class=\"tab-content\">" +
+          "<div class=\"tab-pane active\" id=\"\">" +
+          "<div class=\"tab-pane-content\" data-pb-dropzone=\"\" data-pb-dropzone-name=\"Tools\">" +
+          "<div class=\"widget layout-one-column none  widget-regular  widget-border-toggle widget-compact-all\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-regular  body-border-toggle body-compact-all\">" +
+          "<div class=\"pb-columns row-fluid\">" +
+          "<div class=\"width_1_1\">" +
+          "<div data-pb-dropzone=\"center\">" +
+          "<div class=\"widget literatumArticleToolsWidget alignLeft  widget-none  widget-compact-all widget-rounded\" id=\"\"  >" +
+          "<div class=\"wrapped \" >" +
+          "<div class=\"widget-body body body-none  body-compact-all body-rounded\">" +
+          "<div class=\"articleTools\">" +
+          "<ul class=\"linkList blockLinks separators centered\">" +
+          "<li class=\"downloadCitations\"><a href=\"/action/showCitFormats?doi=10.3920%2FQAS2014.0457\">Download Citation Data</a>" +
+          "</li>" +
+          "</ul>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
 
 // ?? use this block when manifest pages are up  
 //    private static final String manifestList =
@@ -311,6 +454,8 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       doFilterTest(wau, variantFact, withRelatedContent, filteredStr);      
       doFilterTest(wau, variantFact, withArticleToolsExceptDownloadCitation1, 
           articleToolsFilteredStr1);      
+      doFilterTest(wau, variantFact, toolsTab, 
+          toolsTabCrawlFiltered);      
     }    
   }
 
