@@ -33,28 +33,23 @@ import java.util.Base64;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import javax.annotation.Priority;
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
-import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ResourceInfo;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.PathSegment;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.Provider;
 import org.lockss.account.UserAccount;
 import org.lockss.app.LockssDaemon;
 import org.lockss.util.Logger;
 
 /**
- * Access Control filter.
+ * Abstract Access Control filter to be extended in each web service.
  */
-@Provider
-@Priority(Priorities.AUTHENTICATION)
-public class AccessControlFilter implements ContainerRequestFilter {
+public abstract class AccessControlFilter implements ContainerRequestFilter {
   private static final String forbiddenAccess = "Access blocked for all users.";
   private static final String noAuthorizationHeader =
       "No authorization header.";
@@ -75,9 +70,7 @@ public class AccessControlFilter implements ContainerRequestFilter {
    * execute operations of this web service when no javax.annotation.security
    * annotations are specified for web service operations.
    *
-   * By default, it does not allow any role. Overriden in a subclass when
-   * the javax.annotation.security annotations do not provide enough access
-   * control.
+   * Overriden in a subclass.
    * 
    * @param resourceInfo
    *          A ResourceInfo with information about the resource involved.
@@ -86,10 +79,8 @@ public class AccessControlFilter implements ContainerRequestFilter {
    * 
    * @return a Set<String> with the permissible roles.
    */
-  protected Set<String> getPermissibleRoles(ResourceInfo resourceInfo,
-      ContainerRequestContext requestContext) {
-    return new HashSet<String>();
-  }
+  protected abstract Set<String> getPermissibleRoles(ResourceInfo resourceInfo,
+      ContainerRequestContext requestContext) ;
 
   /**
    * Filter method called after a resource has been matched to a request, but
