@@ -3545,6 +3545,21 @@
     {
 
       title <
+        name = International Journal of Gender Studies in Developing Societies ;
+        issn = 2052-0352 ;
+        eissn = 2052-0360 ;
+        issnl = 2052-0352
+      >
+
+      param[journal_id] = ijgsds
+
+      au < exists ; exists ; 2015-2016 ; International Journal of Gender Studies in Developing Societies Volume 1 ; 1 ; >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Global Energy Issues ;
         issn = 0954-7118 ;
         eissn = 1741-5128 ;
@@ -4722,6 +4737,21 @@
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Inventory Research Volume 1 ; 1 ; >
       au < frozen ; exists ; 2013-2015 ; International Journal of Inventory Research Volume 2 ; 2 ; >
       au < manifest ; exists ; 2016-2017 ; International Journal of Inventory Research Volume 3 ; 3 ; >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Islamic Marketing and Branding ;
+        issn = 2055-0944 ;
+        eissn = 2055-0952 ;
+        issnl = 2055-0944
+      >
+
+      param[journal_id] = ijimb
+
+      au < exists ; exists ; 2015-2016 ; International Journal of Islamic Marketing and Branding Volume 1 ; 1 ; >
 
     }
 
@@ -8944,8 +8974,8 @@
 
       param[journal_id] = lrj
 
-      au < finished ; finished ; 2015 ; Luxury Research Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2016 ; Luxury Research Journal Volume 2 ; 2 ; >
+      au < finished ; finished ; 2015-2016 ; Luxury Research Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < expected ; exists ; 2017 ; Luxury Research Journal Volume 2 ; 2 ; >
 
     }
 
