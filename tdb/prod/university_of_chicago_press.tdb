@@ -10,6 +10,73 @@
 
   {
     title <
+      name = Archives of American Art Journal ;
+      issn = 0003-9853 ;
+      eissn = 2327-0667 
+    >
+
+      param[journal_id] = aaa
+
+      au < exists ; 1960-1961 ; Archives of American Art Journal Volume 1 ; 1 >
+      au < exists ; 1962 ; Archives of American Art Journal Volume 2 ; 2 >
+      au < exists ; 1963 ; Archives of American Art Journal Volume 3 ; 3 >
+      au < exists ; 1964 ; Archives of American Art Journal Volume 4 ; 4 >
+      au < exists ; 1965 ; Archives of American Art Journal Volume 5 ; 5 >
+      au < exists ; 1966 ; Archives of American Art Journal Volume 6 ; 6 >
+      au < exists ; 1967 ; Archives of American Art Journal Volume 7 ; 7 >
+      au < exists ; 1968 ; Archives of American Art Journal Volume 8 ; 8 >
+      au < exists ; 1969 ; Archives of American Art Journal Volume 9 ; 9 >
+      au < exists ; 1970 ; Archives of American Art Journal Volume 10 ; 10 >
+      au < exists ; 1971 ; Archives of American Art Journal Volume 11 ; 11 >
+      au < exists ; 1972 ; Archives of American Art Journal Volume 12 ; 12 >
+      au < exists ; 1973 ; Archives of American Art Journal Volume 13 ; 13 >
+      au < exists ; 1974 ; Archives of American Art Journal Volume 14 ; 14 >
+      au < exists ; 1975 ; Archives of American Art Journal Volume 15 ; 15 >
+      au < exists ; 1976 ; Archives of American Art Journal Volume 16 ; 16 >
+      au < exists ; 1977 ; Archives of American Art Journal Volume 17 ; 17 >
+      au < exists ; 1978 ; Archives of American Art Journal Volume 18 ; 18 >
+      au < exists ; 1979 ; Archives of American Art Journal Volume 19 ; 19 >
+      au < exists ; 1980 ; Archives of American Art Journal Volume 20 ; 20 >
+      au < exists ; 1981 ; Archives of American Art Journal Volume 21 ; 21 >
+      au < exists ; 1982 ; Archives of American Art Journal Volume 22 ; 22 >
+      au < exists ; 1983 ; Archives of American Art Journal Volume 23 ; 23 >
+      au < exists ; 1984 ; Archives of American Art Journal Volume 24 ; 24 >
+      au < exists ; 1985 ; Archives of American Art Journal Volume 25 ; 25 >
+      au < exists ; 1986 ; Archives of American Art Journal Volume 26 ; 26 >
+      au < exists ; 1987 ; Archives of American Art Journal Volume 27 ; 27 >
+      au < exists ; 1988 ; Archives of American Art Journal Volume 28 ; 28 >
+      au < exists ; 1989 ; Archives of American Art Journal Volume 29 ; 29 >
+      au < exists ; 1990 ; Archives of American Art Journal Volume 30 ; 30 >
+      au < exists ; 1991 ; Archives of American Art Journal Volume 31 ; 31 >
+      au < exists ; 1992 ; Archives of American Art Journal Volume 32 ; 32 >
+      au < exists ; 1993 ; Archives of American Art Journal Volume 33 ; 33 >
+      au < exists ; 1994 ; Archives of American Art Journal Volume 34 ; 34 >
+      au < exists ; 1995 ; Archives of American Art Journal Volume 35 ; 35 >
+      au < exists ; 1996 ; Archives of American Art Journal Volume 36 ; 36 >
+      au < exists ; 1997 ; Archives of American Art Journal Volume 37 ; 37 >
+      au < exists ; 1998 ; Archives of American Art Journal Volume 38 ; 38 >
+      au < exists ; 1999 ; Archives of American Art Journal Volume 39 ; 39 >
+      au < exists ; 2000 ; Archives of American Art Journal Volume 40 ; 40 >
+      au < exists ; 2001 ; Archives of American Art Journal Volume 41 ; 41 >
+      au < exists ; 2002 ; Archives of American Art Journal Volume 42 ; 42 >
+      au < exists ; 2003 ; Archives of American Art Journal Volume 43 ; 43 >
+      au < exists ; 2004 ; Archives of American Art Journal Volume 44 ; 44 >
+      au < exists ; 2005 ; Archives of American Art Journal Volume 45 ; 45 >
+      au < exists ; 2006-2007 ; Archives of American Art Journal Volume 46 ; 46 >
+      au < exists ; 2008 ; Archives of American Art Journal Volume 47 ; 47 >
+      au < exists ; 2009 ; Archives of American Art Journal Volume 48 ; 48 >
+      au < exists ; 2010 ; Archives of American Art Journal Volume 49 ; 49 >
+      au < exists ; 2011 ; Archives of American Art Journal Volume 50 ; 50 >
+      au < exists ; 2012 ; Archives of American Art Journal Volume 51 ; 51 >
+      au < exists ; 2013 ; Archives of American Art Journal Volume 52 ; 52 >
+      au < exists ; 2014 ; Archives of American Art Journal Volume 53 ; 53 >
+      au < exists ; 2015 ; Archives of American Art Journal Volume 54 ; 54 >
+      au < exists ; 2016 ; Archives of American Art Journal Volume 55 ; 55 >
+      
+  }
+
+  {
+    title <
       name = The Biological Bulletin ;
       issn = 0006-3185 ;
       eissn = 1939-8697 
@@ -311,6 +378,121 @@
 
   {
     title <
+      name = History of Humanities ;
+      issn = 2379-3163 ;
+      eissn = 2379-3171 
+    >
+
+      param[journal_id] = hoh
+
+      au < exists ; 2016 ; History of Humanities Volume 1 ; 1 >
+      
+  }
+
+  {
+    title <
+      name = Journal of Anthropological Research ;
+      issn = 0091-7710 ;
+      eissn = 2153-3806 
+    >
+
+      param[journal_id] = jar
+      #continues = 2328-1839
+
+      au < exists ; 1973 ; Journal of Anthropological Research Volume 29 ; 29 >
+      au < exists ; 1974 ; Journal of Anthropological Research Volume 30 ; 30 >
+      au < exists ; 1975 ; Journal of Anthropological Research Volume 31 ; 31 >
+      au < exists ; 1976 ; Journal of Anthropological Research Volume 32 ; 32 >
+      au < exists ; 1977 ; Journal of Anthropological Research Volume 33 ; 33 >
+      au < exists ; 1978 ; Journal of Anthropological Research Volume 34 ; 34 >
+      au < exists ; 1979 ; Journal of Anthropological Research Volume 35 ; 35 >
+      au < exists ; 1980 ; Journal of Anthropological Research Volume 36 ; 36 >
+      au < exists ; 1981 ; Journal of Anthropological Research Volume 37 ; 37 >
+      au < exists ; 1982 ; Journal of Anthropological Research Volume 38 ; 38 >
+      au < exists ; 1983 ; Journal of Anthropological Research Volume 39 ; 39 >
+      au < exists ; 1984 ; Journal of Anthropological Research Volume 40 ; 40 >
+      au < exists ; 1985 ; Journal of Anthropological Research Volume 41 ; 41 >
+      au < exists ; 1986 ; Journal of Anthropological Research Volume 42 ; 42 >
+      au < exists ; 1987 ; Journal of Anthropological Research Volume 43 ; 43 >
+      au < exists ; 1988 ; Journal of Anthropological Research Volume 44 ; 44 >
+      au < exists ; 1989 ; Journal of Anthropological Research Volume 45 ; 45 >
+      au < exists ; 1990 ; Journal of Anthropological Research Volume 46 ; 46 >
+      au < exists ; 1991 ; Journal of Anthropological Research Volume 47 ; 47 >
+      au < exists ; 1992 ; Journal of Anthropological Research Volume 48 ; 48 >
+      au < exists ; 1993 ; Journal of Anthropological Research Volume 49 ; 49 >
+      au < exists ; 1994 ; Journal of Anthropological Research Volume 50 ; 50 >
+      au < exists ; 1995 ; Journal of Anthropological Research Volume 51 ; 51 >
+      au < exists ; 1996 ; Journal of Anthropological Research Volume 52 ; 52 >
+      au < exists ; 1997 ; Journal of Anthropological Research Volume 53 ; 53 >
+      au < exists ; 1998 ; Journal of Anthropological Research Volume 54 ; 54 >
+      au < exists ; 1999 ; Journal of Anthropological Research Volume 55 ; 55 >
+      au < exists ; 2000 ; Journal of Anthropological Research Volume 56 ; 56 >
+      au < exists ; 2001 ; Journal of Anthropological Research Volume 57 ; 57 >
+      au < exists ; 2002 ; Journal of Anthropological Research Volume 58 ; 58 >
+      au < exists ; 2003 ; Journal of Anthropological Research Volume 59 ; 59 >
+      au < exists ; 2004 ; Journal of Anthropological Research Volume 60 ; 60 >
+      au < exists ; 2005 ; Journal of Anthropological Research Volume 61 ; 61 >
+      au < exists ; 2006 ; Journal of Anthropological Research Volume 62 ; 62 >
+      au < exists ; 2007 ; Journal of Anthropological Research Volume 63 ; 63 >
+      au < exists ; 2008 ; Journal of Anthropological Research Volume 64 ; 64 >
+      au < exists ; 2009 ; Journal of Anthropological Research Volume 65 ; 65 >
+      au < exists ; 2010 ; Journal of Anthropological Research Volume 66 ; 66 >
+      au < exists ; 2011 ; Journal of Anthropological Research Volume 67 ; 67 >
+      au < exists ; 2012 ; Journal of Anthropological Research Volume 68 ; 68 >
+      au < exists ; 2013 ; Journal of Anthropological Research Volume 69 ; 69 >
+      au < exists ; 2014 ; Journal of Anthropological Research Volume 70 ; 70 >
+      au < exists ; 2015 ; Journal of Anthropological Research Volume 71 ; 71 >
+      au < exists ; 2016 ; Journal of Anthropological Research Volume 72 ; 72 >
+      
+  }
+
+  {
+    title <
+      name = Journal of the Association for Consumer Research ;
+      issn = 2378-1815 ;
+      eissn = 2378-1823
+    >
+
+      param[journal_id] = jacr
+
+      au < exists ; 2016 ; Journal of the Association for Consumer Research Volume 1 ; 1 >
+      
+  }
+
+  {
+    title <
+      name = New Mexican Anthropologist ;
+      issn = 0734-7030 
+    >
+
+      param[journal_id] = newmexianthr
+      #continued_by = 2328-1839
+
+      au < exists ; 1937 ; New Mexican Anthropologist Volume 1 ; 1 >
+      au < exists ; 1937-1938 ; New Mexican Anthropologist Volume 2 ; 2 >
+      au < exists ; 1938-1939 ; New Mexican Anthropologist Volume 3 ; 3 >
+      au < exists ; 1940 ; New Mexican Anthropologist Volume 4 ; 4 >
+      au < exists ; 1941 ; New Mexican Anthropologist Volume 5 ; 5 >
+      au < exists ; 1943 ; New Mexican Anthropologist Volume 6/7 ; 6/7 >
+
+  }
+
+  {
+    title <
+      name = The Papers of the Bibliographical Society of America ;
+      issn = 0006-128X ;
+      eissn = 2377-6528 
+    >
+
+      param[journal_id] = pbs
+
+      au < expected ; 2015 ; The Papers of the Bibliographical Society of America Volume 109 ; 109 >
+      au < expected ; 2016 ; The Papers of the Bibliographical Society of America Volume 110 ; 110 >
+
+  }
+
+  {
+    title <
       name = Polity ;
       issn = 0032-3497 ;
       eissn = 1744-1684 
@@ -350,6 +532,47 @@
       au < expected ; 2014-2015 ; Res: Anthropology and aesthetics Volume 65/66 ; 65/66 >
       au < expected ; 2016 ; Res: Anthropology and aesthetics Volume 67 ; 67 >
       
+  }
+
+  {
+    title <
+      name = Southwestern Journal of Anthropology ;
+      eissn = 2328-1839 
+    >
+
+      param[journal_id] = soutjanth
+      #continues = 0734-7030
+      #continued_by = 0091-7710
+
+      au < exists ; 1945 ; Southwestern Journal of Anthropology Volume 1 ; 1 >
+      au < exists ; 1946 ; Southwestern Journal of Anthropology Volume 2 ; 2 >
+      au < exists ; 1947 ; Southwestern Journal of Anthropology Volume 3 ; 3 >
+      au < exists ; 1948 ; Southwestern Journal of Anthropology Volume 4 ; 4 >
+      au < exists ; 1949 ; Southwestern Journal of Anthropology Volume 5 ; 5 >
+      au < exists ; 1950 ; Southwestern Journal of Anthropology Volume 6 ; 6 >
+      au < exists ; 1951 ; Southwestern Journal of Anthropology Volume 7 ; 7 >
+      au < exists ; 1952 ; Southwestern Journal of Anthropology Volume 8 ; 8 >
+      au < exists ; 1953 ; Southwestern Journal of Anthropology Volume 9 ; 9 >
+      au < exists ; 1954 ; Southwestern Journal of Anthropology Volume 10 ; 10 >
+      au < exists ; 1955 ; Southwestern Journal of Anthropology Volume 11 ; 11 >
+      au < exists ; 1956 ; Southwestern Journal of Anthropology Volume 12 ; 12 >
+      au < exists ; 1957 ; Southwestern Journal of Anthropology Volume 13 ; 13 >
+      au < exists ; 1958 ; Southwestern Journal of Anthropology Volume 14 ; 14 >
+      au < exists ; 1979 ; Southwestern Journal of Anthropology Volume 15 ; 15 >
+      au < exists ; 1960 ; Southwestern Journal of Anthropology Volume 16 ; 16 >
+      au < exists ; 1961 ; Southwestern Journal of Anthropology Volume 17 ; 17 >
+      au < exists ; 1962 ; Southwestern Journal of Anthropology Volume 18 ; 18 >
+      au < exists ; 1963 ; Southwestern Journal of Anthropology Volume 19 ; 19 >
+      au < exists ; 1964 ; Southwestern Journal of Anthropology Volume 20 ; 20 >
+      au < exists ; 1965 ; Southwestern Journal of Anthropology Volume 21 ; 21 >
+      au < exists ; 1966 ; Southwestern Journal of Anthropology Volume 22 ; 22 >
+      au < exists ; 1967 ; Southwestern Journal of Anthropology Volume 23 ; 23 >
+      au < exists ; 1968 ; Southwestern Journal of Anthropology Volume 24 ; 24 >
+      au < exists ; 1969 ; Southwestern Journal of Anthropology Volume 25 ; 25 >
+      au < exists ; 1970 ; Southwestern Journal of Anthropology Volume 26 ; 26 >
+      au < exists ; 1971 ; Southwestern Journal of Anthropology Volume 27 ; 27 >
+      au < exists ; 1972 ; Southwestern Journal of Anthropology Volume 28 ; 28 >
+
   }
 
 }
