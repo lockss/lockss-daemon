@@ -4,19 +4,20 @@
     name = Vilnius Gediminas Technical University Press
   >
 
-  {
-
-      title <
-        name = The Baltic Journal of Road and Bridge Engineering ;
-        issn = 1822-427X ;
-        eissn = 1822-4288 ;
-        issnl = 1822-427X
-      >
-    plugin = needs.new.plugin
-    param[base_url] = http://www.bjrbe.vgtu.lt/
-    
-
-  }
+#  {
+#
+#      title <
+#        name = The Baltic Journal of Road and Bridge Engineering ;
+#        issn = 1822-427X ;
+#        eissn = 1822-4288 ;
+#        issnl = 1822-427X
+#      >
+#    plugin = needs.new.plugin
+#    param[base_url] = http://www.bjrbe.vgtu.lt/
+#    #preserved as a warc in clockss. not in gln.
+#    
+#
+#  }
 
   {
     title <
@@ -164,20 +165,21 @@
 
   }
 
-  {
-    title <
-      name = Aviation technologies ;
-      eissn = 2029-9974
-    >
-    
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://www.at.vgtu.lt/
-    param[journal_id] = at
-    implicit < status ; year ; param[year] ; name ; volume >
-
-    au < exists ; 2013 ; 2013 ; Business, Management and Education Volume 1 ; 1 >
-    au < exists ; 2014 ; 2014 ; Business, Management and Education Volume 2 ; 2 >
-
-  }
+#  {
+#    title <
+#      name = Aviation technologies ;
+#      eissn = 2029-9974
+#    >
+#    
+#    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+#    param[base_url] = http://www.at.vgtu.lt/
+#    param[journal_id] = at
+#    implicit < status ; year ; param[year] ; name ; volume >
+#    #publisher does not wish to include this.
+#
+#    au < exists ; 2013 ; 2013 ; Business, Management and Education Volume 1 ; 1 >
+#    au < exists ; 2014 ; 2014 ; Business, Management and Education Volume 2 ; 2 >
+#
+#  }
   
 }
