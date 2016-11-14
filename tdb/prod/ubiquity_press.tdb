@@ -133,10 +133,10 @@
       >
 
       comment[publisher] = Open Library of the Humanities
-      param[base_url] = http://olh.openlibhums.org/
+      param[base_url] = https://olh.openlibhums.org/
 
-      au < manifest ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+      au < exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
 
@@ -205,8 +205,7 @@
       au < manifest ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; >
-      au < exists ; 2015 ; 8 ; Designs for Learning Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 9 ; Designs for Learning Volume 2016 ; 2016 ; >
+      au < manifest ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; >
 
   }
 
