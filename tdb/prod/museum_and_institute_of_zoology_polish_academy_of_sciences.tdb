@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Museum and Institute of Zoology, Polish Academy of Sciences 
+  >
+
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
+
+    {
+      title <
+        name = Polish Journal of Ecology ;
+        issn = 1505-2249 ;
+        eissn = 2450-1395 ;
+        issnl = 1505-2249
+      >
+
+      param[journal_id] = pjoe
+      
+      au < exists ; 2014 ; Polish Journal of Ecology Volume 62 ; 62 >
+      au < exists ; 2015 ; Polish Journal of Ecology Volume 63 ; 63 >
+      au < exists ; 2016 ; Polish Journal of Ecology Volume 64 ; 64 >
+
+    }
+
+}
