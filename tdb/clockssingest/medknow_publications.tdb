@@ -2480,24 +2480,6 @@
 
   {
     title <
-      name = Journal of Digestive Endoscopy ;
-      issn = 0974-6781 ;
-      eissn = 0974-7850 ;
-      issnl = 0974-6781
-   >
-
-    param[base_url] = http://www.jdionline.org/
-    param[journal_issn] = 0974-6781
-
-    au < manifest ; exists ; 2011 ; Journal of Digestive Endoscopy Volume 1 ; 2011 ; 1 ; >
-    au < manifest ; exists ; 2012 ; Journal of Digestive Endoscopy Volume 2 ; 2012 ; 2 ; >
-    au < manifest ; exists ; 2013 ; Journal of Digestive Endoscopy Volume 3 ; 2013 ; 3 ; >
-    au < manifest ; exists ; 2014 ; Journal of Digestive Endoscopy Volume 4 ; 2014 ; 4 ; >
-
-  }
-
-  {
-    title <
       name = Journal of Education and Ethics in Dentistry ;
       issn = 0974-7761 ;
       eissn = 2277-9191 ;

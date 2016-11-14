@@ -460,16 +460,13 @@
       issnl = 1464-0325
     >
 
+    comment[years] = Published 1999-2012
     param[journal_code] = em
     {
       
       au < released ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
       au < released ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
       au < released ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
-      au < released ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
-      au < released ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
-      au < ready ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
-      au < manifest ; 2016 ; Journal of Environmental Monitoring Volume 18 ; 18 ; 2016 >
 
     }
   }
@@ -1091,10 +1088,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = em
 
-      au < exists ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 >
-      au < exists ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 >
-      au < exists ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 >
-      au < exists ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 >
+      au < released ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 >
+      au < released ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 >
+      au < ready ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 >
+      au < manifest ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 >
 
   }
 
