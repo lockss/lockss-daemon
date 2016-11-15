@@ -6681,7 +6681,7 @@
     pluginSuffix = HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 >
+      au < manifest ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 >
 
   }
 
@@ -34828,7 +34828,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2016 ; Media International Australia Volume 158 ; 158 >
       au < manifest ; 2016 ; Media International Australia Volume 159 ; 159 >
       au < manifest ; 2016 ; Media International Australia Volume 160 ; 160 >
-      au < expected ; 2016 ; Media International Australia Volume 161 ; 161 >
+      au < manifest ; 2016 ; Media International Australia Volume 161 ; 161 >
 
     }
 

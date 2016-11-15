@@ -745,9 +745,9 @@
       param[journal_code] = ac
 
       au < exists ; 1996 ; Analytical Communications Volume 33 ; 33 ; 1996 >
-      au < exists ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 >
-      au < exists ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 >
-      au < exists ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 >
+      au < manifest ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 >
+      au < manifest ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 >
+      au < manifest ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 >
 
   }
 
@@ -952,12 +952,12 @@
       comment[years] = Published 2010-2016
       param[journal_code] = cy
 
-      au < exists ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 >
-      au < exists ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 >
-      au < exists ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 >
-      au < exists ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 >
-      au < exists ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 >
-      au < expected ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 >
+      au < manifest ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 >
+      au < manifest ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 >
+      au < manifest ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 >
+      au < manifest ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 >
+      au < manifest ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 >
 
   }
 
@@ -991,13 +991,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = sc
 
-      au < exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 >
-      au < exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 >
-      au < exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 >
-      au < exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
-      au < exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
-      au < exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 >
-      au < exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 >
+      au < manifest ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 >
+      au < manifest ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
+      au < manifest ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
+      au < manifest ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 >
+      au < manifest ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 >
 
   }
 
@@ -1015,7 +1015,7 @@
       au < exists ; 1994 ; Contemporary Organic Synthesis Volume 1 ; 1 ; 1994 >
       au < exists ; 1995 ; Contemporary Organic Synthesis Volume 2 ; 2 ; 1995 >
       au < exists ; 1996 ; Contemporary Organic Synthesis Volume 3 ; 3 ; 1996 >
-      au < exists ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
+      au < manifest ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
 
   }
 
@@ -1070,9 +1070,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = en
 
-      au < exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 >
-      au < exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 >
-      au < exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 >
+      au < manifest ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 >
+      au < manifest ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 >
+      au < manifest ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -1107,8 +1107,8 @@
       comment[years] = Published 2015-2016
       param[journal_code] = ew
 
-      au < exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
-      au < exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
+      au < manifest ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
+      au < manifest ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
 
   }
 
@@ -1200,13 +1200,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = fo
 
-      au < exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 >
-      au < exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 >
-      au < exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 >
-      au < exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 >
-      au < exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 >
-      au < exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 >
-      au < exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 >
+      au < manifest ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 >
+      au < manifest ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 >
+      au < manifest ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 >
+      au < manifest ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 >
+      au < manifest ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 >
 
   }
 
@@ -1221,10 +1221,10 @@
       comment[years] = Published 2000-2003
       param[journal_code] = gt
 
-      au < exists ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 >
-      au < exists ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 >
-      au < exists ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
-      au < exists ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
+      au < manifest ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 >
+      au < manifest ; 2001 ; Geochemical Transactions Volume 2 ; 2 ; 2001 >
+      au < manifest ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
+      au < manifest ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
 
   }
 
@@ -1239,9 +1239,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qi
 
-      au < exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
-      au < exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
-      au < exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
+      au < manifest ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
+      au < manifest ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
+      au < manifest ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -1319,10 +1319,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = ta
 
-      au < exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 >
-      au < exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 >
-      au < exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 >
-      au < exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 >
+      au < manifest ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 >
+      au < manifest ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 >
+      au < manifest ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 >
+      au < manifest ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 >
 
   }
 
@@ -1338,10 +1338,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tb
 
-      au < exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 >
-      au < exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 >
-      au < exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 >
-      au < exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 >
+      au < manifest ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 >
+      au < manifest ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 >
+      au < manifest ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 >
+      au < manifest ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 >
 
   }
 
@@ -1357,10 +1357,10 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tc
 
-      au < exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 >
-      au < exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 >
-      au < exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
-      au < exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 >
+      au < manifest ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 >
+      au < manifest ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 >
+      au < manifest ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
+      au < manifest ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 >
 
   }
 
@@ -1972,9 +1972,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = mh
 
-      au < exists ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 >
-      au < exists ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 >
-      au < exists ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 >
+      au < manifest ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 >
+      au < manifest ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 >
+      au < manifest ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -1990,13 +1990,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = md
 
-      au < exists ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 >
-      au < exists ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 >
-      au < exists ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 >
-      au < exists ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 >
-      au < exists ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 >
-      au < exists ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 >
-      au < exists ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 >
+      au < manifest ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 >
+      au < manifest ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 >
+      au < manifest ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 >
+      au < manifest ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 >
+      au < manifest ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 >
 
   }
 
@@ -2032,7 +2032,7 @@
       comment[years] = Published 2016-2016
       param[journal_code] = nh
 
-      au < exists ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 >
+      au < manifest ; 2016 ; Nanoscale Horizons Volume 1 ; 1 ; 2016 >
 
   }
 
@@ -2047,9 +2047,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qo
 
-      au < exists ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
-      au < exists ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
-      au < exists ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
+      au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
+      au < manifest ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
+      au < manifest ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -2083,12 +2083,12 @@
       comment[years] = Published 1998-2003
       param[journal_code] = qu
 
-      au < exists ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 >
-      au < exists ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 >
-      au < exists ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 >
-      au < exists ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
-      au < exists ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
-      au < exists ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
+      au < manifest ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 >
+      au < manifest ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 >
+      au < manifest ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 >
+      au < manifest ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
+      au < manifest ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
+      au < manifest ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
 
   }
 
@@ -2104,13 +2104,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = py
 
-      au < exists ; 2010 ; Polymer Chemistry Volume 1 ; 1 ; 2010 >
-      au < exists ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 >
-      au < exists ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 >
-      au < exists ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 >
-      au < exists ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 >
-      au < exists ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 >
-      au < exists ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 >
+      au < manifest ; 2010 ; Polymer Chemistry Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 >
+      au < manifest ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 >
+      au < manifest ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 >
+      au < manifest ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 >
+      au < manifest ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 >
 
   }
 
@@ -2364,12 +2364,12 @@
       comment[years] = Published 2011-2016
       param[journal_code] = ra
 
-      au < exists ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 >
-      au < exists ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 >
-      au < exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 >
-      au < exists ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 >
-      au < exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
-      au < exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
+      au < manifest ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 >
+      au < manifest ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 >
+      au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 >
+      au < manifest ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
+      au < manifest ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
 
   }
 
@@ -2385,13 +2385,13 @@
       comment[years] = Published 1998-2004
       param[journal_code] = rc
 
-      au < exists ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
-      au < exists ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
-      au < exists ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
-      au < exists ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
-      au < exists ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
-      au < exists ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
-      au < exists ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
+      au < manifest ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
+      au < manifest ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
+      au < manifest ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
+      au < manifest ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
+      au < manifest ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
+      au < manifest ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
+      au < manifest ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
 
   }
 
