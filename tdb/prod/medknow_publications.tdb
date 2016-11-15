@@ -2290,7 +2290,7 @@
     title <
       name = Journal of Clinical Neonatology ;
       issn = 2249-4847 ;
-      eissn = 2249-4847 ;
+      eissn = 1658-6093 ;
       issnl = 2249-4847
    >
 
@@ -5065,7 +5065,7 @@
 
       title <
         name = Genome Integrity ;
-        issn = 2041-9414
+        eissn = 2041-9414
       >
 
       param[journal_issn] = 2041-9414
@@ -5246,7 +5246,7 @@
       title <
         name = Indian Journal of Medical Research ;
         issn = 0971-5916 ;
-        eissn = 0975–9174
+        eissn = 0975-9174
       >
 
       param[journal_issn] = 0971-5916
@@ -5693,11 +5693,11 @@
 
       title <
         name = Journal of Cleft Lip Palate and Craniofacial Anomalies ;
-        issn = 2348–2125 ;
+        issn = 2348-2125 ;
         eissn = 2348-3644
       >
 
-      param[journal_issn] = 2348–2125
+      param[journal_issn] = 2348-2125
       param[base_url] = http://www.jclpca.org/
 
       au < exists ; 2014 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 1 ; 2014 ; 1 >
@@ -6872,7 +6872,7 @@
       title <
         name = Nigerian Journal of Experimental and Clinical Biosciences ;
         issn = 2348-053X ;
-        eissn = 2348–0149
+        eissn = 2348-0149
       >
 
       param[journal_issn] = 2348-053X
@@ -7396,7 +7396,6 @@
 
       title <
         name = Tanta Dental Journal ;
-        issn = 1687-8574 ;
         eissn = 1687-8574
       >
 
