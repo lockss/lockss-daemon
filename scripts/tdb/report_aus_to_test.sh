@@ -1,27 +1,5 @@
 ###!/bin/bash
 ###
-### Read in tester number and output auids to test.
-###
-##set -x
-##tester=$1
-##current_year=2016
-##contract=2008 #includes all possible contract years
-##published_start=2014
-##until [ $contract -gt $current_year ]; do
-##    echo The contract is $contract
-##    published=$contract
-##    until [ $published -gt $current_year ] ; do
-##        echo   The published year is $published
-##        #echo ./scripts/tdb/tdbout -a -Q 'year ~ "'$published'$" and publisher:info[tester] is "'$tester'" and publisher:info[contract] is "'$contract'"' tdb/clockssingest/amer*.tdb | sort -u > ~/tmp/rb1.txt
-##        ./scripts/tdb/tdbout -a -Q 'year ~ "'$published'$" and publisher:info[tester] is "'$tester'" and publisher:info[contract] is "'$contract'"' tdb/clockssingest/*.tdb | sort -u > ~/tmp/rb1.txt
-##        let published=published+1
-##    done
-##    let contract=contract+1
-##done
-##set +x
-##exit 0
-##
-
 # Read in tester number and output auids to test.
 #
 tester=$1
