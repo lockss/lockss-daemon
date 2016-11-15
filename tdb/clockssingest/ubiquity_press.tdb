@@ -1424,26 +1424,25 @@
       comment[publisher] = Utrecht University Library
       param[base_url] = https://www.tijdschriftstudies.nl/
 
-      au < crawling ; exists ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; >
-      au < crawling ; exists ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; >
-      au < crawling ; exists ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; >
-      au < crawling ; exists ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; >
-      au < crawling ; exists ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; >
-      au < crawling ; exists ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; >
-      au < crawling ; exists ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; >
-      au < crawling ; exists ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; >
-      au < crawling ; exists ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; >
-      au < expected ; exists ; 2016 ; 20 ; Tijdschrift voor Tijdschriftstudies Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; >
+      au < frozen ; exists ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; >
+      au < frozen ; exists ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; >
+      au < frozen ; exists ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; >
+      au < frozen ; exists ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; > #2 extra css files
+      au < frozen ; exists ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; >
+      au < frozen ; exists ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; > #2 extra css files
+      au < frozen ; exists ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; >
+      au < frozen ; exists ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; >
 
   }
 
