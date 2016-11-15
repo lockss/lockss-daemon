@@ -5127,42 +5127,6 @@
   {
 
     title <
-      name = Enterprise & Society: The International Journal of Business History ;
-      issn = 1467-2227 ;
-      eissn = 1467-2235 ;
-      issnl = 1467-2227
-    >
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://es.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    # moved to Cambridge University Press
-
-    au < doNotProcess ; 2000 ; Enterprise & Society Volume 1 ; 1 >
-    au < doNotProcess ; 2001 ; Enterprise & Society Volume 2 ; 2 >
-    au < doNotProcess ; 2002 ; Enterprise & Society Volume 3 ; 3 >
-    au < doNotProcess ; 2003 ; Enterprise & Society Volume 4 ; 4 >
-    au < doNotProcess ; 2004 ; Enterprise & Society Volume 5 ; 5 >
-    au < doNotProcess ; 2005 ; Enterprise & Society Volume 6 ; 6 >
-    au < doNotProcess ; 2006 ; Enterprise & Society Volume 7 ; 7 >
-    au < doNotProcess ; 2007 ; Enterprise & Society Volume 8 ; 8 >
-    au < doNotProcess ; 2008 ; Enterprise & Society Volume 9 ; 9 >
-    au < doNotProcess ; 2009 ; Enterprise & Society Volume 10 ; 10 >
-    au < doNotProcess ; 2010 ; Enterprise & Society Volume 11 ; 11 >
-    au < doNotProcess ; 2011 ; Enterprise & Society Volume 12 ; 12 >
-    au < doNotProcess ; 2012 ; Enterprise & Society Volume 13 ; 13 >
-    au < doNotProcess ; 2013 ; Enterprise & Society Volume 14 ; 14 >
-    au < doNotProcess ; 2014 ; Enterprise & Society Volume 15 ; 15 >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Environmental Entomology ;
       issn = 0046-225X ;
       eissn = 1938-2936 ;
@@ -5761,60 +5725,6 @@
   {
 
     title <
-      name = European Journal of Heart Failure ;
-      issn = 1388-9842 ;
-      eissn = 1879-0844 ;
-      issnl = 1388-9842
-    >
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://eurjhf.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    comment[moved] = moved to Wiley Blackwell.
-
-    au < doNotProcess ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 >
-    au < doNotProcess ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 >
-    au < doNotProcess ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 >
-    au < doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 >
-    au < doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 >
-    au < doNotProcess ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
-    au < doNotProcess ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
-    au < doNotProcess ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
-    au < doNotProcess ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 >
-
-    }
-
-  }
-
- {
-
-    title <
-      name = European Journal of Heart Failure Supplements ;
-      issn = 1567-4215 ;
-      eissn = 1878-1314 ;
-      issnl = 1567-4215
-    >
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://eurjhfsupp.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    comment[moved] = Moved to Wiley
-
-    au < doNotProcess ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 >
-    au < doNotProcess ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
-    au < doNotProcess ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
-    au < doNotProcess ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
-    au < doNotProcess ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
-
-  }
-
-  {
-
-    title <
       name = European Journal of International Law ;
       issn = 0938-5428 ;
       eissn = 1464-3596 ;
@@ -6109,29 +6019,6 @@
     au < doNotProcess ; 2014 ; European Sociological Review Volume 30 ; 30 >
     au < doNotProcess ; 2015 ; European Sociological Review Volume 31 ; 31 >
     au < exists ; 2016 ; European Sociological Review Volume 32 ; 32 >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = Evidence-based Complementary and Alternative Medicine ;
-      issn = 1741-427X ;
-      eissn = 1741-4288 ;
-      issnl = 1741-427X
-    >
-
-    comment[moved] = Published by Hindawi from 2011
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ecam.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < doNotProcess ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
 
     }
 
@@ -8321,102 +8208,6 @@
     au < doNotProcess ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 >
     au < doNotProcess ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 >
     au < exists ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 >
-
-  }
-
-  {
-
-    title <
-      name = IEICE Transactions on Communications ;
-      issn = 0916-8516 ;
-      eissn = 1745-1345 ;
-      issnl = 0916-8516
-    >
-
-    comment[down] = The online versions of the journals have moved to JSTAGE
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ietcom.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < doNotProcess ; 2006 ; IEICE Transactions on Communications Volume E89-B ; E89-B >
-    au < doNotProcess ; 2007 ; IEICE Transactions on Communications Volume E90-B ; E90-B >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = IEICE Transactions on Electronics ;
-      issn = 0916-8524 ;
-      eissn = 1745-1353 ;
-      issnl = 0916-8524
-    >
-
-    comment[down] = The online versions of the journals have moved to JSTAGE
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ietele.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < doNotProcess ; 2006 ; IEICE Transactions on Electronics Volume E89-C ; E89-C >
-    au < doNotProcess ; 2007 ; IEICE Transactions on Electronics Volume E90-C ; E90-C >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences ;
-      issn = 0916-8508 ;
-      eissn = 1745-1337 ;
-      issnl = 0916-8508
-    >
-
-    comment[down] = The online versions of the journals have moved to JSTAGE
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ietfec.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < doNotProcess ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E89-A ; E89-A >
-    au < doNotProcess ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E90-A ; E90-A >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = IEICE Transactions on Information and Systems ;
-      issn = 0916-8532 ;
-      eissn = 1745-1361 ;
-      issnl = 0916-8532
-    >
-
-    comment[down] = The online versions of the journals have moved to JSTAGE
-
-    {
-
-    #pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ietisy.oxfordjournals.org/
-    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < doNotProcess ; 2006 ; IEICE Transactions on Information and Systems Volume E89-D ; E89-D >
-    au < doNotProcess ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D >
-
-   }
 
   }
 
