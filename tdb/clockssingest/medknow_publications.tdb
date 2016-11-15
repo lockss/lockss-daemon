@@ -1452,38 +1452,13 @@
 
     param[base_url] = http://www.ijpsonline.com/
     param[journal_issn] = 0250-474X
+    # moved
 
-    au < manifest ; exists ; 1986 ; Indian Journal of Pharmaceutical Sciences Volume 48 ; 1986 ; 48 ; >
-    au < manifest ; exists ; 1987 ; Indian Journal of Pharmaceutical Sciences Volume 49 ; 1987 ; 49 ; >
-    au < manifest ; exists ; 1988 ; Indian Journal of Pharmaceutical Sciences Volume 50 ; 1988 ; 50 ; >
-    au < doesNotExist ; doesNotExist ; 0 ; Indian Journal of Pharmaceutical Sciences Volume 51 ; 0 ; 0 ; >
-    au < manifest ; exists ; 1990 ; Indian Journal of Pharmaceutical Sciences Volume 52 ; 1990 ; 52 ; >
-    au < manifest ; exists ; 1991 ; Indian Journal of Pharmaceutical Sciences Volume 53 ; 1991 ; 53 ; >
-    au < manifest ; exists ; 1992 ; Indian Journal of Pharmaceutical Sciences Volume 54 ; 1992 ; 54 ; >
-    au < manifest ; exists ; 1993 ; Indian Journal of Pharmaceutical Sciences Volume 55 ; 1993 ; 55 ; >
-    au < manifest ; exists ; 1994 ; Indian Journal of Pharmaceutical Sciences Volume 56 ; 1994 ; 56 ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Pharmaceutical Sciences Volume 57 ; 1995 ; 57 ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Pharmaceutical Sciences Volume 58 ; 1996 ; 58 ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Pharmaceutical Sciences Volume 59 ; 1997 ; 59 ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Pharmaceutical Sciences Volume 60 ; 1998 ; 60 ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Pharmaceutical Sciences Volume 61 ; 1999 ; 61 ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Pharmaceutical Sciences Volume 62 ; 2000 ; 62 ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Pharmaceutical Sciences Volume 63 ; 2001 ; 63 ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Pharmaceutical Sciences Volume 64 ; 2002 ; 64 ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Pharmaceutical Sciences Volume 65 ; 2003 ; 65 ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Pharmaceutical Sciences Volume 66 ; 2004 ; 66 ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Pharmaceutical Sciences Volume 67 ; 2005 ; 67 ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Pharmaceutical Sciences Volume 68 ; 2006 ; 68 ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Pharmaceutical Sciences Volume 69 ; 2007 ; 69 ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Pharmaceutical Sciences Volume 70 ; 2008 ; 70 ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Pharmaceutical Sciences Volume 71 ; 2009 ; 71 ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Pharmaceutical Sciences Volume 72 ; 2010 ; 72 ; >
     au < down ; exists ; 2011 ; Indian Journal of Pharmaceutical Sciences Volume 73 ; 2011 ; 73 ; >
     au < down ; exists ; 2012 ; Indian Journal of Pharmaceutical Sciences Volume 74 ; 2012 ; 74 ; >
     au < down ; exists ; 2013 ; Indian Journal of Pharmaceutical Sciences Volume 75 ; 2013 ; 75 ; >
     au < down ; exists ; 2014 ; Indian Journal of Pharmaceutical Sciences Volume 76 ; 2014 ; 76 ; >
     au < down ; exists ; 2015 ; Indian Journal of Pharmaceutical Sciences Volume 77 ; 2015 ; 77 ; >
-    au < testing ; exists ; 2016 ; Indian Journal of Pharmaceutical Sciences Volume 78 ; 2016 ; 78 ; >
 
   }
 
@@ -3434,7 +3409,7 @@
     au < doNotProcess ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; >
     au < notReady ; exists ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; > #no substance. unknown why.
     au < notReady ; exists ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; > #no substance. unknown why.
-    au < testing ; exists ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; >
+    au < notReady ; exists ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; > #no substance. unknown why.
 
   }
 
