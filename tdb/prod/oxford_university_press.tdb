@@ -20894,37 +20894,6 @@
   {
 
     title <
-      name = Social Work Research and Abstracts ;
-      issn = 0148-0847 
-    >
-
-    param[base_url] = http://swra.oxfordjournals.org/
-    #plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    #implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 1977 ; Social Work Research and Abstracts Volume 13 ; 13 >
-    au < exists ; 1978 ; Social Work Research and Abstracts Volume 14 ; 14 >
-    au < exists ; 1979 ; Social Work Research and Abstracts Volume 15 ; 15 >
-    au < exists ; 1980 ; Social Work Research and Abstracts Volume 16 ; 16 >
-    au < exists ; 1981 ; Social Work Research and Abstracts Volume 17 ; 17 >
-    au < exists ; 1982 ; Social Work Research and Abstracts Volume 18 ; 18 >
-    au < exists ; 1983 ; Social Work Research and Abstracts Volume 19 ; 19 >
-    au < exists ; 1984 ; Social Work Research and Abstracts Volume 20 ; 20 >
-    au < exists ; 1985 ; Social Work Research and Abstracts Volume 21 ; 21 >
-    au < exists ; 1986 ; Social Work Research and Abstracts Volume 22 ; 22 >
-    au < exists ; 1987 ; Social Work Research and Abstracts Volume 23 ; 23 >
-    au < exists ; 1988 ; Social Work Research and Abstracts Volume 24 ; 24 >
-    au < exists ; 1989 ; Social Work Research and Abstracts Volume 25 ; 25 >
-    au < exists ; 1990 ; Social Work Research and Abstracts Volume 26 ; 26 >
-    au < exists ; 1991 ; Social Work Research and Abstracts Volume 27 ; 27 >
-    au < exists ; 1992 ; Social Work Research and Abstracts Volume 28 ; 28 >
-    au < exists ; 1993 ; Social Work Research and Abstracts Volume 29 ; 29 >
-
-  }
-
-  {
-
-    title <
       name = Socio-Economic Review ;
       issn = 1475-1461 ;
       eissn = 1475-147X ;
