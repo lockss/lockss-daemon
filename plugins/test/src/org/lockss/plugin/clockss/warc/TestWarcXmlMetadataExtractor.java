@@ -33,7 +33,12 @@
 
 package org.lockss.plugin.clockss.warc;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.*;
 
 import org.lockss.test.*;
@@ -108,7 +113,7 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-    FileMetadataExtractor me = new WarcJatsXmlMetadataExtractorFactory().createFileMetadataExtractor(
+    FileMetadataExtractor me = new WarcXmlMetadataExtractorFactory().createFileMetadataExtractor(
         MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
@@ -129,7 +134,48 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
     }finally {
       IOUtil.safeClose(file_input);
     }
+  }
+    
+    private static final String realOnixXMLFile = "WarcOnixTest.xml";
 
+    public void testFromWarcOnixXMLFile() throws Exception {
+      InputStream file_input = null;
+      try {
+        file_input = getResourceAsStream(realOnixXMLFile);
+        String string_input = StringUtil.fromInputStream(file_input);
+        IOUtil.safeClose(file_input);
+
+        CIProperties xmlHeader = new CIProperties();   
+        // mock up coming from a zip arhive
+        String xml_url = BASE_URL + YEAR + "TestXML.xml";
+        xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+        MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+        mcu.setContent(string_input);
+        mcu.setContentSize(string_input.length());
+        mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new WarcXmlMetadataExtractorFactory().createFileMetadataExtractor(
+          MetadataTarget.Any(), "text/xml");
+        FileMetadataListExtractor mle =
+            new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+        assertNotEmpty(mdlist);
+        assertEquals(4, mdlist.size());
+
+        // check each returned md against expected values
+        //debugPrintMdListToFile(mdlist);
+        Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+        ArticleMetadata mdRecord = null;
+        while (mdIt.hasNext()) {
+          mdRecord = (ArticleMetadata) mdIt.next();
+          //log.setLevel("debug3");
+          log.debug3(mdRecord.ppString(2));
+          compareMetadataBooks(mdRecord);
+        }
+      }finally {
+        IOUtil.safeClose(file_input);
+      }
+    
   }
  
   
@@ -141,6 +187,85 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
     assertEquals(AM.get(MetadataField.FIELD_DOI),"10.9999/12-34-56");
     assertEquals(AM.get(MetadataField.FIELD_VOLUME),"12");
     assertEquals(AM.get(MetadataField.FIELD_ISSUE),"34");
+  }
+  
+  
+  private static final String isbn1 = "9780111111010"; 
+  private static final String isbn2 = "9780222222010"; 
+  private static final String isbn3 = "9780333333010"; 
+  private static final String isbn4 = "9780444444010"; 
+
+  private static final String date1 = "1974-01-01";
+  private static final String date2 ="1975";
+  private static final String date3 ="1976-01-01";
+  private static final String date4 ="1977-01-01";
+
+  private static final String title1 = "Book Title One";
+  private static final String title2 = "Book The Second";
+  private static final String title3 = "Third Book: A Title";
+  private static final String title4 = "And tHis IS the FINAL TITLE";
+
+  private void compareMetadataBooks(ArticleMetadata AM) {
+
+    assertNotNull(AM);
+    String bookisbn = AM.get(MetadataField.FIELD_ISBN);
+    log.debug3(bookisbn);
+    assertEquals(AM.get(MetadataField.FIELD_PUBLISHER),"Mineralogical Society of America");
+    if ( isbn1.equals(bookisbn) ) {
+      assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE),title1);
+      assertEquals(AM.get(MetadataField.FIELD_DATE), date1);
+    } else if (isbn2.equals(bookisbn) ) {
+      assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE),title2);
+      assertEquals(AM.get(MetadataField.FIELD_DATE), date2);      
+    } else if (isbn3.equals(bookisbn) ) {
+      assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE),title3);
+      assertEquals(AM.get(MetadataField.FIELD_DATE), date3);      
+    } else if (isbn4.equals(bookisbn) ) {
+      assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE),title4);
+      assertEquals(AM.get(MetadataField.FIELD_DATE), date4);      
+    } else {
+      // we didn't recognize the isbn
+      assertEquals(false,true);
+    }
+  }
+
+  
+  /* 
+   * Useful method for initial testing of a new warc. Saves the MD output to a file
+   */
+  private void debugPrintMdListToFile(List<ArticleMetadata> mdlist) {
+    // check each returned md against expected values
+    Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+    ArticleMetadata mdRecord = null;
+    File file = null;
+    file = new File("/tmp", "warc_md.txt");
+    if (!file.exists()) {
+      try {
+        file.createNewFile();
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    }
+    FileOutputStream fos;
+    try {
+      fos = new FileOutputStream(file);
+      PrintWriter pw = new PrintWriter(fos);
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        pw.print(mdRecord.ppString(2));
+        pw.println();
+      }
+      pw.flush();
+      pw.close();
+      fos.close();      
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
   
 }

@@ -288,6 +288,10 @@ implements SourceXmlSchemaHelper {
       ONIX_product_id + "[ProductIDType = \"13\"]";
   private static String ONIX_idtype_doi =
       ONIX_product_id + "[ProductIDType = \"06\"]";
+  // this one may have different meanings for different publishers
+  // so just collect it by default in to the raw metadata
+  public static String ONIX_idtype_proprietary =
+      ONIX_product_id + "[ProductIDType = \"01\"]";
   /* components under DescriptiveDetail */
   private static String ONIX_product_descrip =
       "DescriptiveDetail";  
@@ -314,7 +318,8 @@ implements SourceXmlSchemaHelper {
       ONIX_product_pub + "/Publisher/PublisherName";
   private static String ONIX_pub_date =
       ONIX_product_pub + "/PublishingDate";
-  private static String ONIX_copy_date =
+  // expose this for access from post-coook
+  public static String ONIX_copy_date =
       ONIX_product_pub + "/CopyrightStatement/CopyrightYear";
   /* components under MarketPublishingDetail */
   private static String ONIX_product_mktdetail =
@@ -335,6 +340,7 @@ implements SourceXmlSchemaHelper {
     ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
+    ONIX_articleMap.put(ONIX_idtype_proprietary, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_product_form, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_product_title, ONIX_TITLE_VALUE);
     ONIX_articleMap.put(ONIX_chapter_title, ONIX_TITLE_VALUE);
