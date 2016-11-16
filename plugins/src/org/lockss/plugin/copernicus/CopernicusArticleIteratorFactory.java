@@ -56,9 +56,9 @@ public class CopernicusArticleIteratorFactory
   
   protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, volume_name"; 
   // although the format seems to be consistent, don't box in the alphanum sequence, just the depth
-  // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf" as well
+  // since we pick up ".pdf" as well, be sure not to pick up "-supplement.pdf", nor "-assets.html" as well
   //(?<!-supplement) is negative lookbehind and will cancel out the *.pdf if it matches
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+(?<!-supplement)\\.(html|pdf)\", base_url,volume_name";
+  protected static final String PATTERN_TEMPLATE = "\"^%s%s/[^/]+/[^/]+/[^/]+(?<!-(supplement|assets))\\.(html|pdf)\", base_url,volume_name";
   
 
   // primary aspects of the article
@@ -71,6 +71,7 @@ public class CopernicusArticleIteratorFactory
   // secondary aspect replacements
   final String XML_REPLACEMENT = "$1.xml";
   final String SUPPL_REPLACEMENT = "$1-supplement.pdf";
+  final String ASSETS_REPLACEMENT = "$1-assets.html";
   final String SUPPL_ZIP_REPLACEMENT = "$1-supplement.zip";
   final String RIS_REPLACEMENT = "$1.ris";
   final String BIB_REPLACEMENT = "$1.bib";
@@ -107,6 +108,12 @@ public class CopernicusArticleIteratorFactory
       // set a role, but it isn't sufficient to trigger an ArticleFiles
       builder.addAspect(SUPPL_REPLACEMENT,
           ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+
+      // set a role, but it isn't sufficient to trigger an ArticleFiles
+      // this is an html page that contains supporting article references
+      // but isn't the references page
+      builder.addAspect(ASSETS_REPLACEMENT,
+          "ArticleAssets");
       // set a role, but it isn't sufficient to trigger an ArticleFiles
       builder.addAspect(SUPPL_ZIP_REPLACEMENT,
           ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
