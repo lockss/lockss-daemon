@@ -142,7 +142,8 @@
 
     title <
       name = Chemical Communications ;
-      issn = 0009-241X
+      issn = 1359-7345 ;
+      eissn = 1364-548X
     >
 
       param[journal_code] = cc
@@ -683,7 +684,7 @@
   {
 
       title <
-        name = Analytical Proceedings ;
+        name = Analytical Proceedings including Analytical Communications ;
         issn = 0144-557X
       >
 
@@ -1671,7 +1672,9 @@
 
       title <
         name = Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry ;
-        issn = 0300-922X
+        issn = 0300-922X ;
+        eissn = 1364-5463 ;
+        issnl = 0300-922X
       >
 
       comment[years] = Published 1972-1999

@@ -156,7 +156,8 @@
 
     title <
       name = Chemical Communications ;
-      issn = 0009-241X  
+      issn = 1359-7345 ;
+      eissn = 1364-548X
     >
 
     param[journal_code] = cc
@@ -481,7 +482,7 @@
   {
 
     title <
-      name = Journal of the Chemical Society, Perkin Transactions 1 ;
+      name = Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry ;
       issn = 0300-922X ;
       eissn = 1364-5463 ;
       issnl = 0300-922X
@@ -490,12 +491,12 @@
     param[journal_code] = p1
     {
       
-    au < doNotProcess ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1 1997 ; 0 ; 1997 >
-    au < doNotProcess ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1 1998 ; 0 ; 1998 >
-    au < doNotProcess ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1 1999 ; 0 ; 1999 >
-    au < doNotProcess ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 2000 ; 0 ; 2000 >
-    au < doNotProcess ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
-    au < down ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 2002 ; 0 ; 2002 >
+    au < doNotProcess ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1997 ; 0 ; 1997 >
+    au < doNotProcess ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1998 ; 0 ; 1998 >
+    au < doNotProcess ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1999 ; 0 ; 1999 >
+    au < doNotProcess ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 2000 ; 0 ; 2000 >
+    au < doNotProcess ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 2001 ; 0 ; 2001 >
+    au < down ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 2002 ; 0 ; 2002 >
     }
   }
 
