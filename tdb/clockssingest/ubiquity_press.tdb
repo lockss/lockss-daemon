@@ -20,11 +20,11 @@
       comment[publisher] = Martin Paul Eve
       param[base_url] = https://www.pynchon.net/
 
-      au < testing ; exists ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; >
 
   }
 
@@ -78,7 +78,7 @@
 
       au < manifest ; exists ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
@@ -157,7 +157,7 @@
       param[base_url] = http://www.mamsie.bbk.ac.uk/
 
       au < manifest ; exists ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
@@ -209,7 +209,7 @@
 
       au < manifest ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; >
@@ -272,7 +272,7 @@
       param[base_url] = http://www.ancient-asia-journal.com/
 
       au < manifest ; exists ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; >
-      au < testing ; exists ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2012 ; 3 ; Ancient Asia Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Ancient Asia Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Ancient Asia Volume 2014 ; 2014 ; >
@@ -367,7 +367,7 @@
       au < manifest ; exists ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
@@ -409,7 +409,7 @@
       au < manifest ; exists ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
@@ -470,13 +470,13 @@
       au < manifest ; exists ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; >
 
   }
 
@@ -558,7 +558,7 @@
       #nothing published 2011
 
       au < manifest ; exists ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; >
@@ -590,12 +590,12 @@
       au < manifest ; exists ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; >
 
   }
 
@@ -613,7 +613,7 @@
       au < manifest ; exists ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
@@ -748,7 +748,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.jbsr.be/
 
-      au < testing ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 1 ; Journal of the Belgian Society of Radiology Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 2 ; Journal of the Belgian Society of Radiology Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 3 ; Journal of the Belgian Society of Radiology Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 4 ; Journal of the Belgian Society of Radiology Volume 2013 ; 2013 ; >
@@ -847,7 +847,7 @@
       au < manifest ; exists ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; >
       au < exists ; exists ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
@@ -868,7 +868,7 @@
       param[base_url] = http://www.presentpasts.info/
 
       au < exists ; exists ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; >
@@ -893,7 +893,7 @@
       au < manifest ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; >
@@ -949,7 +949,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.utrechtjournal.org/
 
-      au < testing ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; >
@@ -1023,7 +1023,7 @@
       au < manifest ; exists ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; >
 
   }
@@ -1058,7 +1058,7 @@
       au < manifest ; exists ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
@@ -1151,13 +1151,13 @@
       au < manifest ; exists ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 39 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 40 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; >
 
   }
 
@@ -1171,9 +1171,9 @@
       comment[publisher] = Utrecht University Library
       param[base_url] = https://www.de-zeventiende-eeuw.nl/
 
-      au < testing ; exists ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; >
       au < testing ; exists ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; >
 
@@ -1196,13 +1196,13 @@
       au < manifest ; exists ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; >
 
   }
 
@@ -1216,12 +1216,12 @@
       comment[publisher] = Utrecht University Library
       param[base_url] = http://www.rivista-incontri.nl/
 
-      au < testing ; exists ; 2011 ; 1 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 2 ; Incontri. Rivista europea di studi italiani Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2011 ; 1 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 2 ; Incontri. Rivista europea di studi italiani Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 5 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 ; >
 
   }
 
@@ -1237,13 +1237,13 @@
 
       au < manifest ; exists ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; >
 
   }
 
@@ -1257,10 +1257,10 @@
       comment[publisher] = Utrecht University Library
       param[base_url] = https://www.history-culture-modernity.org/
 
-      au < testing ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
 
   }
 
@@ -1277,13 +1277,13 @@
       au < manifest ; exists ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; >
 
   }
 
@@ -1302,13 +1302,13 @@
       au < manifest ; exists ; 2007 ; 3 ; Journal of Social Intervention Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 4 ; Journal of Social Intervention Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 5 ; Journal of Social Intervention Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; >
 
   }
 
@@ -1333,13 +1333,13 @@
       au < manifest ; exists ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
 
   }
 
@@ -1356,13 +1356,13 @@
       au < manifest ; exists ; 2007 ; 1 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2007 ; 2007 ; >
       au < manifest ; exists ; 2008 ; 2 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; 3 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2009 ; 2009 ; >
-      au < testing ; exists ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; >
-      au < testing ; exists ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2010 ; 4 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2010 ; 2010 ; >
+      au < ready ; exists ; 2011 ; 5 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 6 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 7 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 8 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 9 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; 10 ; RELIEF - REVUE ÉLECTRONIQUE DE LITTÉRATURE FRANÇAISE Volume 2016 ; 2016 ; >
 
   }
 
@@ -1376,9 +1376,9 @@
       comment[publisher] = Utrecht University Library
       param[base_url] = https://www.religionandgender.org/
 
-      au < testing ; exists ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; >
-      au < testing ; exists ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; >
+      au < ready ; exists ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
       au < testing ; exists ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; >
       au < testing ; exists ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; >
       au < testing ; exists ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
