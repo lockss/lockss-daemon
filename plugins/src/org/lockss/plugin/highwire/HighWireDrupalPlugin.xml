@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>58</string>
+    <string>59</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>22</string>
+        <string>23</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -127,9 +127,11 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?\.toc$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(ENEURO\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(ENEURO\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
       <!-- otherwise, all content from glencoesoftware CDN -->
@@ -159,8 +161,11 @@
       <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF  -->
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
+      <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF 
+        This usually was an html page with backend error message
+        Make retry/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
+        we will count on polls to catch errors where no PDF was collected -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
     </list>
   </entry>
   <entry>
@@ -192,6 +197,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(ENEURO\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -225,9 +231,15 @@
          This excludes urls that
         1) do not have /highwire/filestream/ nor .pdf nor /content/.../suppl/ in their path
         2) do end with html     (for urls like .../1361.full.pdf+html)
+        3) do contain /twil. or /twis. (AAAS this week in literature|science)
+        4) do contain /findings. (AAAS findings)
          -->
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
+    <list>
+      <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
+      <string>^http(.+)/twi[ls]\.</string>
+      <string>^http(.+)/findings\.</string>
+    </list>
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config

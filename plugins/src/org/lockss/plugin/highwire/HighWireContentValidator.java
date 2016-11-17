@@ -60,7 +60,7 @@ public class HighWireContentValidator {
       // validate based on extension (ie .pdf or .jpg)
       String url = cu.getUrl();
       CIProperties headers = cu.getProperties();
-      String val = headers.getProperty("X-Lockss-content-url");
+      String val = headers.getProperty(CachedUrl.PROPERTY_CONTENT_URL);
       if (val != null && !val.equalsIgnoreCase(url)) {
         log.info("Not validating url: " + url + "; using X-Lockss-content-url value: " + val);
         url = val;

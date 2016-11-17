@@ -60,7 +60,7 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   private static final Logger log = Logger.getLogger(HighWireDrupalHtmlLinkExtractorFactory.class);
   
   private static final Pattern LPAGE =
-      Pattern.compile("content(/[^/.]+|(?=.*/bmj[.]))/([^/.]+)/([^/.]*?)((?:bmj[.])?([^/.]+?|\\d+[.]\\d+))$");
+      Pattern.compile("content(/[^/.]+|(?=.*/bmj[.]))/([^/.]+)/([^/.]*?)((?:(bmj|[ivx]+)[.])?([^/.]+?|\\d+[.]\\d+))$");
   private static final String FULL_PDF = ".full.pdf";
   
   // Previously Thib deemed it acceptable that we collect pages that did not have the volume match 
