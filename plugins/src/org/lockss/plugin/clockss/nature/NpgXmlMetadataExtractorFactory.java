@@ -67,6 +67,13 @@ public class NpgXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
       return NPGHelper;
     }
 
+    
+    /*
+     * Some articles are abstract only and the XML itself provides the entirety 
+     * of the content. So look for a PDF but if that's not there, just use 
+     * the XML as proof of existence - so all records will emit
+     * 
+     */
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
@@ -75,6 +82,7 @@ public class NpgXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
       String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
       ArrayList<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
+      returnList.add(url_string);
       return returnList;
     }    
     
