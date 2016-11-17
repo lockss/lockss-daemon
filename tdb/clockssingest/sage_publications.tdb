@@ -1349,10 +1349,10 @@
       au < exists ; exists ; 1987 ; American Journal of Health Promotion Volume 2 ; 2 ; >
       au < exists ; exists ; 1988-1989 ; American Journal of Health Promotion Volume 3 ; 3 ; >
       au < exists ; exists ; 1989-1990 ; American Journal of Health Promotion Volume 4 ; 4 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 5 ; 5 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 6 ; 6 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 7 ; 7 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 8 ; 8 ; >
+      au < exists ; exists ; 1990-1991 ; American Journal of Health Promotion Volume 5 ; 5 ; >
+      au < exists ; exists ; 1991-1992 ; American Journal of Health Promotion Volume 6 ; 6 ; >
+      au < exists ; exists ; 1992-1993 ; American Journal of Health Promotion Volume 7 ; 7 ; >
+      au < exists ; exists ; 1993-1994 ; American Journal of Health Promotion Volume 8 ; 8 ; >
       au < exists ; exists ; 1994-1995 ; American Journal of Health Promotion Volume 9 ; 9 ; >
       au < exists ; exists ; 1995-1996 ; American Journal of Health Promotion Volume 10 ; 10 ; >
       au < exists ; exists ; 1996-1997 ; American Journal of Health Promotion Volume 11 ; 11 ; >
@@ -17297,7 +17297,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
-    au < doesNotExist ; doesNotExist ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
+    au < exists ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
     au < exists ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; >
     au < exists ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; >
     au < exists ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; >
@@ -37059,7 +37059,7 @@
       au < manifest ; exists ; 1985 ; Public Finance Review Volume 13 ; 13 ; >
       au < manifest ; exists ; 1986 ; Public Finance Review Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987 ; Public Finance Review Volume 15 ; 15 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Public Finance Review Volume 16 ; 16 ; >
+      au < exists ; exists ; 1988 ; Public Finance Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 1989 ; Public Finance Review Volume 17 ; 17 ; >
       au < manifest ; exists ; 1990 ; Public Finance Review Volume 18 ; 18 ; >
       au < manifest ; exists ; 1991 ; Public Finance Review Volume 19 ; 19 ; >
