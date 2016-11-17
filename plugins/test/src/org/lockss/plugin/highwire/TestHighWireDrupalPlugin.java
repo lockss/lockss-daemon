@@ -241,6 +241,16 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest("", false, au);
     shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     
+    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-figures-data", true, au);
+    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-article-info", false, au);
+    shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-metrics", false, au);
+    shouldCacheTest("http://dzfiakl78wcmk.cloudfront.net/sites/all/modules/contrib/panels_ajax_tab/images/loading.gif", false, au);
+    shouldCacheTest(ROOT_URL + "highwire/filestream/124406/field_highwire_adjunct_files/2/JEM_20160800_sm.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "highwire/filestream/124406/field_highwire_adjunct_files/0/JEM_20160800_V1.mp4", true, au);
+    shouldCacheTest("http://static-movie-usa.glencoesoftware.com/jpg/10.1084/255/99e5615849629455e656275ea23db2f09a4b4e9f/JEM_20160800_V1.jpg", true, au);
+    shouldCacheTest("http://movie.rupress.org/video/10.1084/jem.20160800/video-1", false, au);
+    shouldCacheTest("http://static-movie-usa.glencoesoftware.com/source/10.1084/255/99e5615849629455e656275ea23db2f09a4b4e9f/JEM_20160800_V1.mp4", true, au);
+    
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
     
@@ -258,6 +268,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   static final String HW_EXCLUDE_FROM_POLLS_REGEXP[] = 
     {
         "^http(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
+        "^http(.+)/twi[ls]\\.",
+        "^http(.+)/findings\\.",
     };
   
   
