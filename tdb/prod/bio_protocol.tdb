@@ -5,7 +5,7 @@
 
   implicit < status ; year ; name ; param[volume] >
   #platform = custom
-  plugin = needs/plugin
+  plugin = needs.plugin
   param[base_url] = http://www.bio-protocol.org/
 
   {
