@@ -8430,7 +8430,7 @@
     au < doNotProcess ; exists ; 2007 ; Health Policy and Planning Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < finished ; frozen ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
-    au < finished ; frozen ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
+    au < finished ; finished ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
     au < finished ; finished ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
     au < finished ; finished ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
@@ -14100,7 +14100,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
-    au < finished ; frozen ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
+    au < finished ; finished ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; Journal of Molecular Cell Biology Volume 5 ; 5 ; >
@@ -17784,7 +17784,7 @@
     au < doNotProcess ; exists ; 2007 ; Mutagenesis Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
-    au < finished ; frozen ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
+    au < finished ; finished ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
     au < frozen ; exists ; 2012 ; Mutagenesis Volume 27 ; 27 ; >
     au < finished ; manifest ; 2013 ; Mutagenesis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
@@ -18322,7 +18322,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; frozen ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
-    au < down ; frozen ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
+    au < down ; finished ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
 
     }
 
@@ -21512,7 +21512,7 @@
     au < doNotProcess ; exists ; 2006 ; The Review of Economic Studies Volume 73 ; 73 ; >
     au < doNotProcess ; exists ; 2007 ; The Review of Economic Studies Volume 74 ; 74 ; >
     au < doNotProcess ; exists ; 2008 ; The Review of Economic Studies Volume 75 ; 75 ; >
-    au < finished ; frozen ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; The Review of Economic Studies Volume 77 ; 77 ; >
     au < finished ; finished ; 2011 ; The Review of Economic Studies Volume 78 ; 78 ; >
     au < frozen ; exists ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; >
