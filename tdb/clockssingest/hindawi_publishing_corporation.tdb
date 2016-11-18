@@ -371,7 +371,7 @@
     au < manifest ; exists ; 2012 ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Civil Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Civil Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Advances in Civil Engineering Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Civil Engineering Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4473,7 +4473,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; International Journal of Navigation and Observation Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; International Journal of Navigation and Observation Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Navigation and Observation Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -6555,7 +6555,7 @@
     au < manifest ; exists ; 2011 ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Marine Biology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6661,7 +6661,7 @@
     param[journal_id] = jmy
     
     au < manifest ; exists ; 2013 ; Journal of Mycology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Mycology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Mycology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Mycology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6686,7 +6686,7 @@
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Nanomaterials Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -7015,7 +7015,7 @@
     au < manifest ; exists ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Osteoporosis Volume 2016 ; 2016 ; 2016 ; >
     
@@ -7176,7 +7176,7 @@
 
     param[journal_id] = jprob
     
-    au < finished ; frozen ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Probability Volume 2016 ; 2016 ; 2016 ; >
 
