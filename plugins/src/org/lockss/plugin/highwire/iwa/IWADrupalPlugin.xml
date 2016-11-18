@@ -66,6 +66,14 @@
       <string>1,"^https?://.+([.]glencoesoftware[.]com)/.+"</string>
     </list>
   </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
+  </entry>
   <entry> <!-- These au_substance_url_patterns need to be included into parent HighWireDrupalPlugin once testing verifies that they work as expected  -->
     <string>au_substance_url_pattern</string>
     <list>
