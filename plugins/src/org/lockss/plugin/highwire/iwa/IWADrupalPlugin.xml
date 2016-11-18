@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>54</string>
+    <string>59</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,16 +33,44 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"International Water Association Publishing Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry> <!-- These crawls rules need to be included into parent HighWireDrupalPlugin once testing verifies that they work as expected  -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
+      <string>2,"^https?://%s/content/(by/(year|volume)|.*/article-.*$)", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, required .toc  -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?\.toc$", url_host(base_url)</string>
+      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
+            page may also contain roman numerals, dot, & number (iii.2)  -->
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <!-- otherwise, all content from glencoesoftware CDN -->
+      <string>1,"^https?://.+([.]glencoesoftware[.]com)/.+"</string>
+    </list>
+  </entry>
+  <entry> <!-- These au_substance_url_patterns need to be included into parent HighWireDrupalPlugin once testing verifies that they work as expected  -->
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+    </list>
   </entry>
 </map>

@@ -47,11 +47,11 @@ import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 
-public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestHighWireDrupalArticleIteratorVIPFactory extends ArticleIteratorTestCase {
   
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   
-  private final String PLUGIN_NAME = "org.lockss.plugin.highwire.HighWireDrupalPlugin";
+  private final String PLUGIN_NAME = "org.lockss.plugin.highwire.sfn.SFNDrupalPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private final String BASE_URL = "http://ajpendo.physiology.org/";
@@ -121,44 +121,28 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.123");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
-    // this matches but really not a valid page in this case (valid in other cases like 
-    //     http://rsbm.royalsocietypublishing.org/content/roybiogmem/61/23.full.pdf
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/99/1/1");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.12345");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/ENEURO.12345-679");
     // found roman_numeral.number in page
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.2");
     // but not to ...
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.12345");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf+html");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.abstract");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.long");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/99/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/email?gca=bjophthalmol;96/1/1&current-view-path=/content/96/1/1.extract");
     
     // wrong base url
     assertNotMatchesRE(pat, "http://ametsoc.org/bitstream/handle/foobar");
   }
   
-  //
-  // We are set up to match any of "<base_url>content/<vol>/.*[.]body"
-  //
   
-  //  public void testBookUrls() throws Exception {
-  //    SubTreeArticleIterator artIter = createSubTreeIter();
-  //    Pattern pat = getPattern(artIter);
-  //    
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC8.body");
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133.body");
-  //    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133/SEC178.body");
-  //    // but not to ...
-  //    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/SEC131/SEC133.extract");
-  //  }
-  
-  //
   // simAU was created with only one depth
   // 1 filetype (html) and 2 files of each type
   // So the total number of files of all types is 2
