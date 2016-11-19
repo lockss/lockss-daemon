@@ -1,6 +1,6 @@
 <map>
   <entry>
-    <!-- Need to get Vicky/Thib to clarify the status of the plugin and which, if any, content is collected -->
+    <!-- This plugin needs to have status changed once content is through the pipeline and tdb files updated. OUP is changing platforms  -->
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
@@ -51,34 +51,6 @@
     <list>
       <string>"%slockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
       <string>"%slockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
-      <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
-      <string>2,"^https?://%s/content/(by/(year|volume)|.*/article-.*$)", url_host(base_url)</string>
-      <!-- after content is optional jcode, required vol, optional issue, required .toc  -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?\.toc$", url_host(base_url)</string>
-      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
-            page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|NP)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
-      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|NP)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
-      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
-      <!-- otherwise, all content from glencoesoftware CDN -->
-      <string>1,"^https?://.+([.]glencoesoftware[.]com)/.+"</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|NP)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     </list>
   </entry>
 </map>

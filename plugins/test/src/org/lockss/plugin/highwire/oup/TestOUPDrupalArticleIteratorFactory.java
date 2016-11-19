@@ -120,6 +120,7 @@ public class TestOUPDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     assertMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1");
     assertMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1");
     assertMatchesRE(pat, "http://example.oxfordjournals.org/content/example/1/1");
+    // crawl rules exclude this URL, but if they did not, the article iterator would accept the URL
     assertMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/NP.1");
     // but not to ...
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/example/1/1/1");
