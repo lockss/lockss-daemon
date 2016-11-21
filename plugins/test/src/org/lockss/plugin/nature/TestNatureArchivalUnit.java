@@ -169,6 +169,12 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?arg=foo&message=remove&arg2=blah", false, NAu, cus);          
     shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/full/onc2010273a.html?arg=foo&message-global=remove&arg2=blah", false, NAu, cus);
     
+    // Do not pick up the covers/index.html pages - due to issues with content-length headers
+    // and this was the easiest solution to content already in production
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/covers/index.html", false, NAu, cus);
+    shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n1/covers/index.html", false, NAu, cus);
+    
+    
     // TOC page collected as unterminated issue page - normalize to vx/ny/index.html
     shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22", false, NAu, cus);          
     shouldCacheTest(ROOT_URL+"xxxx/journal/v123/n22/index.html", true, NAu, cus);          

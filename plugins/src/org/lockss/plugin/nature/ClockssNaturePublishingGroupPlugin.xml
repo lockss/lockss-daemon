@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>52</string>
+    <string>53</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -59,7 +59,7 @@
       <string>1,"^%s%s/clockss/%s_clockss_%d.html$", base_url, journal_id, journal_id, year</string>
       <string>2,"^%s%s/journal/v%s/.*(/metrics|\?(lang=[a-z]{2}$|.*message(-global)?=remove))", base_url, journal_id, volume_name</string>
       <string>2,"^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$", base_url, journal_id, volume_name</string>
-      <string>2,"^%s%s/journal/v%s/[^/]+/(products|pubmed)/", base_url, journal_id, volume_name</string>
+      <string>2,"^%s%s/journal/v%s/[^/]+/(covers|products|pubmed)/", base_url, journal_id, volume_name</string>
       <string>2,"^%s.*url_ver=",base_url</string>
       <string>2,"^%s%s/journal/v%s/n\d{1,2}$", base_url, journal_id, volume_name</string>
       <string>1,"^%s%s/journal/v%s/", base_url, journal_id, volume_name</string>
