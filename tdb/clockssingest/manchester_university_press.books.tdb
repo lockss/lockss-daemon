@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Manchester University Press ;
+    info[back] = 2000 ;
+    info[contract] = 2014 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[publisher_id] = mmso
+    implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
+
+  {
+    title <
+      name = Manchester Medieval Sources Online ;
+      type = bookSeries
+    >
+    
+      au < exists ; exists ; 2012 ; 9780719034251 ; ; 9780719034251 ; The Annals of St Bertin: Ninth-century histories, volume I ; >
+      au < exists ; exists ; 2016 ; 9781526112606 ; ; 9781526112606 ; The Annals of Lampert of Hersfeld ; >
+      au < exists ; exists ; 2012 ; 9780719034572 ; ; 9780719034572 ; The Annals of Fulda: Ninth-century Histories, Volume II ; >
+
+  }
+
+}
