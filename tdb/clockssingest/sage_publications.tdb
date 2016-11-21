@@ -1345,35 +1345,35 @@
       param[base_url] = http://ahp.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1986-1987 ; American Journal of Health Promotion Volume 1 ; 1 ; >
-      au < exists ; exists ; 1987 ; American Journal of Health Promotion Volume 2 ; 2 ; >
-      au < exists ; exists ; 1988-1989 ; American Journal of Health Promotion Volume 3 ; 3 ; >
-      au < exists ; exists ; 1989-1990 ; American Journal of Health Promotion Volume 4 ; 4 ; >
-      au < exists ; exists ; 1990-1991 ; American Journal of Health Promotion Volume 5 ; 5 ; >
-      au < exists ; exists ; 1991-1992 ; American Journal of Health Promotion Volume 6 ; 6 ; >
-      au < exists ; exists ; 1992-1993 ; American Journal of Health Promotion Volume 7 ; 7 ; >
-      au < exists ; exists ; 1993-1994 ; American Journal of Health Promotion Volume 8 ; 8 ; >
-      au < exists ; exists ; 1994-1995 ; American Journal of Health Promotion Volume 9 ; 9 ; >
-      au < exists ; exists ; 1995-1996 ; American Journal of Health Promotion Volume 10 ; 10 ; >
-      au < exists ; exists ; 1996-1997 ; American Journal of Health Promotion Volume 11 ; 11 ; >
-      au < exists ; exists ; 1997-1998 ; American Journal of Health Promotion Volume 12 ; 12 ; >
-      au < exists ; exists ; 1998-1999 ; American Journal of Health Promotion Volume 13 ; 13 ; >
-      au < exists ; exists ; 1999-2000 ; American Journal of Health Promotion Volume 14 ; 14 ; >
-      au < exists ; exists ; 2000-2001 ; American Journal of Health Promotion Volume 15 ; 15 ; >
-      au < exists ; exists ; 2001-2002 ; American Journal of Health Promotion Volume 16 ; 16 ; >
-      au < exists ; exists ; 2002-2003 ; American Journal of Health Promotion Volume 17 ; 17 ; >
-      au < exists ; exists ; 2003-2004 ; American Journal of Health Promotion Volume 18 ; 18 ; >
-      au < exists ; exists ; 2004-2005 ; American Journal of Health Promotion Volume 19 ; 19 ; >
-      au < exists ; exists ; 2005-2006 ; American Journal of Health Promotion Volume 20 ; 20 ; >
-      au < exists ; exists ; 2006-2007 ; American Journal of Health Promotion Volume 21 ; 21 ; >
-      au < exists ; exists ; 2007-2008 ; American Journal of Health Promotion Volume 22 ; 22 ; >
-      au < exists ; exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 ; >
-      au < exists ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; >
-      au < exists ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; >
-      au < exists ; exists ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; >
-      au < exists ; exists ; 2012-2013 ; American Journal of Health Promotion Volume 27 ; 27 ; >
-      au < exists ; exists ; 2013-2014 ; American Journal of Health Promotion Volume 28 ; 28 ; >
-      au < exists ; exists ; 2014-2015 ; American Journal of Health Promotion Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1986-1987 ; American Journal of Health Promotion Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Health Promotion Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988-1989 ; American Journal of Health Promotion Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989-1990 ; American Journal of Health Promotion Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990-1991 ; American Journal of Health Promotion Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991-1992 ; American Journal of Health Promotion Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992-1993 ; American Journal of Health Promotion Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993-1994 ; American Journal of Health Promotion Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994-1995 ; American Journal of Health Promotion Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995-1996 ; American Journal of Health Promotion Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996-1997 ; American Journal of Health Promotion Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997-1998 ; American Journal of Health Promotion Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998-1999 ; American Journal of Health Promotion Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999-2000 ; American Journal of Health Promotion Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000-2001 ; American Journal of Health Promotion Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001-2002 ; American Journal of Health Promotion Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002-2003 ; American Journal of Health Promotion Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003-2004 ; American Journal of Health Promotion Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004-2005 ; American Journal of Health Promotion Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005-2006 ; American Journal of Health Promotion Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006-2007 ; American Journal of Health Promotion Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007-2008 ; American Journal of Health Promotion Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2012-2013 ; American Journal of Health Promotion Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2013-2014 ; American Journal of Health Promotion Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2014-2015 ; American Journal of Health Promotion Volume 29 ; 29 ; >
       au < doNotProcess ; exists ; 2016 ; American Journal of Health Promotion Volume 30 ; 30 ; >
 
   }
@@ -5329,8 +5329,8 @@
       param[base_url] = http://cjk.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2016 ; Canadian Journal of Kidney Health and Disease Volume 3 ; 3 ; >
 
   }
@@ -16596,18 +16596,18 @@
       param[base_url] = http://arx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; International Journal of Advanced Robotic Systems Volume 1 ; 1 ; >
-      au < exists ; exists ; 2005 ; International Journal of Advanced Robotic Systems Volume 2 ; 2 ; >
-      au < exists ; exists ; 2006 ; International Journal of Advanced Robotic Systems Volume 3 ; 3 ; >
-      au < exists ; exists ; 2007 ; International Journal of Advanced Robotic Systems Volume 4 ; 4 ; >
-      au < exists ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; >
-      au < exists ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; >
-      au < exists ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; >
-      au < exists ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; >
-      au < exists ; exists ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; >
-      au < exists ; exists ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; >
-      au < exists ; exists ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; >
-      au < exists ; exists ; 2015 ; International Journal of Advanced Robotic Systems Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2004 ; International Journal of Advanced Robotic Systems Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; International Journal of Advanced Robotic Systems Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; International Journal of Advanced Robotic Systems Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; International Journal of Advanced Robotic Systems Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2015 ; International Journal of Advanced Robotic Systems Volume 12 ; 12 ; >
       au < crawling ; exists ; 2016 ; International Journal of Advanced Robotic Systems Volume 13 ; 13 ; >
 
   }
@@ -17188,11 +17188,11 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://dsn.sagepub.com/
 
-        au < exists ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; >
-        au < exists ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; >
-        au < exists ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 ; >
-        au < exists ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 ; >
-        au < exists ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 11 ; 11 ; >
         au < doNotProcess ; exists ; 2016 ; International Journal of Distributed Sensor Networks Volume 12 ; 12 ; >
 
     }
@@ -17274,13 +17274,13 @@
     param[base_url] = http://enb.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; >
-      au < exists ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; >
-      au < exists ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; >
-      au < exists ; exists ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; >
-      au < exists ; exists ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; >
-      au < exists ; exists ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; >
-      au < exists ; exists ; 2015 ; International Journal of Engineering Business Management Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; International Journal of Engineering Business Management Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Engineering Business Management Volume 8 ; 8 ; >
 
   }
@@ -17296,22 +17296,22 @@
     param[base_url] = http://iei.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
-    au < exists ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
-    au < exists ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; >
-    au < exists ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; >
-    au < exists ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; >
-    au < exists ; exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; >
-    au < exists ; exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; >
-    au < exists ; exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; >
-    au < exists ; exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; >
-    au < exists ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; >
-    au < exists ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; >
-    au < exists ; exists ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; >
-    au < exists ; exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
-    au < exists ; exists ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; >
-    au < exists ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; >
-    au < exists ; exists ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
 
   }
@@ -21282,10 +21282,10 @@
       param[base_url] = http://cbx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2013 ; Journal of Circulating Biomarkers Volume 1 ; 1 ; >
-      au < exists ; exists ; 2014 ; Journal of Circulating Biomarkers Volume 2 ; 2 ; >
-      au < exists ; exists ; 2014 ; Journal of Circulating Biomarkers Volume 3 ; 3 ; >
-      au < exists ; exists ; 2015 ; Journal of Circulating Biomarkers Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Journal of Circulating Biomarkers Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Journal of Circulating Biomarkers Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014 ; Journal of Circulating Biomarkers Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2015 ; Journal of Circulating Biomarkers Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Circulating Biomarkers Volume 5 ; 5 ; >
 
   }
@@ -23155,7 +23155,7 @@
       au < finished ; finished ; 2013-2014 ; Journal of Educational Technology Systems Volume 42 ; 42 ; >
       au < finished ; finished ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 ; >
 
   }
 
@@ -31856,20 +31856,20 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://met.sagepub.com/
 
-      au < exists ; exists ; 2002 ; Metamorphosis Volume 1 ; 1 ; >
-      au < exists ; exists ; 2003 ; Metamorphosis Volume 2 ; 2 ; >
-      au < exists ; exists ; 2004 ; Metamorphosis Volume 3 ; 3 ; >
-      au < exists ; exists ; 2005 ; Metamorphosis Volume 4 ; 4 ; >
-      au < exists ; exists ; 2006 ; Metamorphosis Volume 5 ; 5 ; >
-      au < exists ; exists ; 2007 ; Metamorphosis Volume 6 ; 6 ; >
-      au < exists ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; >
-      au < exists ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; >
-      au < exists ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; >
-      au < exists ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; >
-      au < exists ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; >
-      au < exists ; exists ; 2013 ; Metamorphosis Volume 12 ; 12 ; >
-      au < exists ; exists ; 2014 ; Metamorphosis Volume 13 ; 13 ; >
-      au < exists ; exists ; 2015 ; Metamorphosis Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2002 ; Metamorphosis Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; Metamorphosis Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; Metamorphosis Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; Metamorphosis Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Metamorphosis Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Metamorphosis Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Metamorphosis Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Metamorphosis Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Metamorphosis Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2013 ; Metamorphosis Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2014 ; Metamorphosis Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2015 ; Metamorphosis Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Metamorphosis Volume 15 ; 15 ; >
 
   }
@@ -32366,8 +32366,8 @@
       param[base_url] = http://nab.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2016 ; Nanobiomedicine Volume 3 ; 3 ; >
 
   }
@@ -32382,11 +32382,11 @@
       param[base_url] = http://nax.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
-      au < exists ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; >
-      au < exists ; exists ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; >
-      au < exists ; exists ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; >
-      au < exists ; exists ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2016 ; Nanomaterials and Nanotechnology Volume 6 ; 6 ; >
 
   }
@@ -37059,7 +37059,7 @@
       au < manifest ; exists ; 1985 ; Public Finance Review Volume 13 ; 13 ; >
       au < manifest ; exists ; 1986 ; Public Finance Review Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987 ; Public Finance Review Volume 15 ; 15 ; >
-      au < exists ; exists ; 1988 ; Public Finance Review Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1988 ; Public Finance Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 1989 ; Public Finance Review Volume 17 ; 17 ; >
       au < manifest ; exists ; 1990 ; Public Finance Review Volume 18 ; 18 ; >
       au < manifest ; exists ; 1991 ; Public Finance Review Volume 19 ; 19 ; >
@@ -40918,22 +40918,22 @@
       param[base_url] = http://ser.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; >
-      au < exists ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; >
-      au < exists ; exists ; 2002 ; South East Asia Research Volume 10 ; 10 ; >
-      au < exists ; exists ; 2003 ; South East Asia Research Volume 11 ; 11 ; >
-      au < exists ; exists ; 2004 ; South East Asia Research Volume 12 ; 12 ; >
-      au < exists ; exists ; 2005 ; South East Asia Research Volume 13 ; 13 ; >
-      au < exists ; exists ; 2006 ; South East Asia Research Volume 14 ; 14 ; >
-      au < exists ; exists ; 2007 ; South East Asia Research Volume 15 ; 15 ; >
-      au < exists ; exists ; 2008 ; South East Asia Research Volume 16 ; 16 ; >
-      au < exists ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; >
-      au < exists ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; >
-      au < exists ; exists ; 2011 ; South East Asia Research Volume 19 ; 19 ; >
-      au < exists ; exists ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
-      au < exists ; exists ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
-      au < exists ; exists ; 2014 ; South East Asia Research Volume 22 ; 22 ; >
-      au < exists ; exists ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2002 ; South East Asia Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2003 ; South East Asia Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2004 ; South East Asia Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2005 ; South East Asia Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2006 ; South East Asia Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2007 ; South East Asia Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2008 ; South East Asia Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2011 ; South East Asia Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2014 ; South East Asia Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2016 ; South East Asia Research Volume 24 ; 24 ; >
 
   }
@@ -43276,24 +43276,24 @@
       param[base_url] = http://teu.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1996 ; Tourism Economics Volume 2 [Sage] ; 2 ; >
+      au < manifest ; exists ; 1996 ; Tourism Economics Volume 2 [Sage] ; 2 ; >
       au < doesNotExist ; doesNotExist ; 1997 ; Tourism Economics Volume 3 ; 3 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; Tourism Economics Volume 4 ; 4 ; >
       au < doesNotExist ; doesNotExist ; 1999 ; Tourism Economics Volume 5 ; 5 ; >
-      au < exists ; exists ; 2000 ; Tourism Economics Volume 6 [Sage] ; 6 ; >
-      au < exists ; exists ; 2001 ; Tourism Economics Volume 7 [Sage] ; 7 ; >
-      au < exists ; exists ; 2002 ; Tourism Economics Volume 8 [Sage] ; 8 ; >
-      au < exists ; exists ; 2003 ; Tourism Economics Volume 9 [Sage] ; 9 ; >
-      au < exists ; exists ; 2004 ; Tourism Economics Volume 10 [Sage] ; 10 ; >
-      au < exists ; exists ; 2005 ; Tourism Economics Volume 11 [Sage] ; 11 ; >
-      au < exists ; exists ; 2006 ; Tourism Economics Volume 12 [Sage] ; 12 ; >
-      au < exists ; exists ; 2007 ; Tourism Economics Volume 13 [Sage] ; 13 ; >
-      au < exists ; exists ; 2008 ; Tourism Economics Volume 14 [Sage] ; 14 ; >
-      au < exists ; exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 ; >
-      au < exists ; exists ; 2010 ; Tourism Economics Volume 16 [Sage] ; 16 ; >
-      au < exists ; exists ; 2011 ; Tourism Economics Volume 17 [Sage] ; 17 ; >
-      au < exists ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; >
-      au < exists ; exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; >
+      au < manifest ; exists ; 2000 ; Tourism Economics Volume 6 [Sage] ; 6 ; >
+      au < manifest ; exists ; 2001 ; Tourism Economics Volume 7 [Sage] ; 7 ; >
+      au < manifest ; exists ; 2002 ; Tourism Economics Volume 8 [Sage] ; 8 ; >
+      au < manifest ; exists ; 2003 ; Tourism Economics Volume 9 [Sage] ; 9 ; >
+      au < manifest ; exists ; 2004 ; Tourism Economics Volume 10 [Sage] ; 10 ; >
+      au < manifest ; exists ; 2005 ; Tourism Economics Volume 11 [Sage] ; 11 ; >
+      au < manifest ; exists ; 2006 ; Tourism Economics Volume 12 [Sage] ; 12 ; >
+      au < manifest ; exists ; 2007 ; Tourism Economics Volume 13 [Sage] ; 13 ; >
+      au < manifest ; exists ; 2008 ; Tourism Economics Volume 14 [Sage] ; 14 ; >
+      au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 ; >
+      au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 [Sage] ; 16 ; >
+      au < manifest ; exists ; 2011 ; Tourism Economics Volume 17 [Sage] ; 17 ; >
+      au < manifest ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; >
+      au < manifest ; exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; >
       au < exists ; exists ; 2014 ; Tourism Economics Volume 20 [Sage] ; 20 ; >
       au < exists ; exists ; 2015 ; Tourism Economics Volume 21 [Sage] ; 21 ; >
       au < crawling ; exists ; 2016 ; Tourism Economics Volume 22 [Sage] ; 22 ; >
@@ -43957,14 +43957,14 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://trc.sagepub.com/
 
-      au < exists ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; >
-      au < exists ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
-      au < exists ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
-      au < exists ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; >
-      au < exists ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
-      au < exists ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
-      au < exists ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
-      au < exists ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
 
   }
