@@ -121,7 +121,7 @@
 
     au < manifest ; exists ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 ; >
     au < frozen ; exists ; 2014 ; Journal of Aerospace Computing, Information, and Communication Volume 11 ; 11 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Aerospace Computing, Information, and Communication Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2015 ; Journal of Aerospace Computing, Information, and Communication Volume 12 ; 12 ; >
     au < crawling ; exists ; 2016 ; Journal of Aerospace Computing, Information, and Communication Volume 13 ; 13 ; >
 
   }
@@ -332,7 +332,7 @@
     au < manifest ; exists ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 ; >
     au < frozen ; exists ; 2014 ; Journal of Propulsion and Power Volume 30 ; 30 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Propulsion and Power Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2015 ; Journal of Propulsion and Power Volume 31 ; 31 ; >
     au < crawling ; exists ; 2016 ; Journal of Propulsion and Power Volume 32 ; 32 ; >
 
   }
@@ -397,7 +397,7 @@
     au < manifest ; exists ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 ; >
     au < manifest ; exists ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 ; >
     au < manifest ; exists ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 ; >
-    au < deepCrawl ; exists ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of Spacecraft and Rockets Volume 52 ; 52 ; >
     au < crawling ; exists ; 2016 ; Journal of Spacecraft and Rockets Volume 53 ; 53 ; >
 
