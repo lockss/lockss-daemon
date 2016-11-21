@@ -121,6 +121,8 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.123");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
+    // crawl rules don't included, but would work with ArticleIterator if they did
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/NP.1");
     // this matches but really not a valid page in this case (valid in other cases like 
     //     http://rsbm.royalsocietypublishing.org/content/roybiogmem/61/23.full.pdf
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
