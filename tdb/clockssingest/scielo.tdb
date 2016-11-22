@@ -361,7 +361,7 @@
     au < manifest ; exists ; 2011 ; 26 ; Acta Cirurgica Brasileira Volume 26 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 27 ; Acta Cirurgica Brasileira Volume 27 ; 2012 ; >
     au < finished ; finished ; 2013 ; 28 ; Acta Cirurgica Brasileira Volume 28 ; 2013 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; 29 ; Acta Cirurgica Brasileira Volume 29 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 29 ; Acta Cirurgica Brasileira Volume 29 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 30 ; Acta Cirurgica Brasileira Volume 30 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
@@ -1214,7 +1214,7 @@
     au < manifest ; exists ; 2011 ; 28 ; Agriscientia Volume 28 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 29 ; Agriscientia Volume 29 ; 2012 ; >
     au < finished ; finished ; 2013 ; 30 ; Agriscientia Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 31 ; Agriscientia Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 31 ; Agriscientia Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2309,7 +2309,7 @@
     au < manifest ; exists ; 2011 ; 7 ; Angiologia e Cirurgia Vascular Volume 7 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 8 ; Angiologia e Cirurgia Vascular Volume 8 ; 2012 ; >
     au < finished ; finished ; 2013 ; 9 ; Angiologia e Cirurgia Vascular Volume 9 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 10 ; Angiologia e Cirurgia Vascular Volume 10 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 10 ; Angiologia e Cirurgia Vascular Volume 10 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 11 ; Angiologia e Cirurgia Vascular Volume 11 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -2855,7 +2855,7 @@
     au < manifest ; exists ; 2011 ; 74 ; Archivos Venezolanos de Puericultura y Pediatría Volume 74 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 75 ; Archivos Venezolanos de Puericultura y Pediatría Volume 75 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 76 ; Archivos Venezolanos de Puericultura y Pediatría Volume 76 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 77 ; Archivos Venezolanos de Puericultura y Pediatría Volume 77 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 77 ; Archivos Venezolanos de Puericultura y Pediatría Volume 77 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 78 ; Archivos Venezolanos de Puericultura y Pediatría Volume 78 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
@@ -7367,7 +7367,7 @@
     au < manifest ; exists ; 2011 ; 25 ; Cuadernos de herpetología Volume 25 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 26 ; Cuadernos de herpetología Volume 26 ; 2012 ; >
     au < finished ; finished ; 2013 ; 27 ; Cuadernos de herpetología Volume 27 ; 2013 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; 28 ; Cuadernos de herpetología Volume 28 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 28 ; Cuadernos de herpetología Volume 28 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -8745,7 +8745,7 @@
     au < manifest ; exists ; 2011 ; 32 ; Educação & Sociedade Volume 32 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 33 ; Educação & Sociedade Volume 33 ; 2012 ; >
     au < finished ; finished ; 2013 ; 34 ; Educação & Sociedade Volume 34 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 35 ; Educação & Sociedade Volume 35 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 35 ; Educação & Sociedade Volume 35 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 36 ; Educação & Sociedade Volume 36 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -9267,7 +9267,7 @@
     au < manifest ; exists ; 2011 ; 23 ; Enfoques Volume 23 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 24 ; Enfoques Volume 24 ; 2012 ; >
     au < finished ; finished ; 2013 ; 25 ; Enfoques Volume 25 ; 2013 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; 26 ; Enfoques Volume 26 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; 26 ; Enfoques Volume 26 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -9404,7 +9404,7 @@
     au < manifest ; exists ; 2011 ; 29 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 29 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 30 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 30 ; 2012 ; >
     au < finished ; finished ; 2013 ; 31 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 31 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 32 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 32 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 32 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 32 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 33 ; Ensayos sobre POLÍTICA ECONÓMICA Volume 33 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
@@ -11021,7 +11021,7 @@
     au < manifest ; exists ; 2011 ; 34 ; Gaceta Médica Boliviana Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Gaceta Médica Boliviana Volume 35 ; 2012 ; >
     au < finished ; finished ; 2013 ; 36 ; Gaceta Médica Boliviana Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 37 ; Gaceta Médica Boliviana Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 37 ; Gaceta Médica Boliviana Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 38 ; Gaceta Médica Boliviana Volume 38 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -11718,7 +11718,7 @@
     au < manifest ; exists ; 2011 ; 12 ; Historia de la educación - anuario Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Historia de la educación - anuario Volume 13 ; 2012 ; >
     au < finished ; finished ; 2013 ; 14 ; Historia de la educación - anuario Volume 14 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 15 ; Historia de la educación - anuario Volume 15 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 15 ; Historia de la educación - anuario Volume 15 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -12360,7 +12360,7 @@
 
     au < manifest ; exists ; 2012 ; 33 ; Ingeniería Electrónica, Automática y Comunicaciones Volume 33 ; 2012 ; >
     au < finished ; finished ; 2013 ; 34 ; Ingeniería Electrónica, Automática y Comunicaciones Volume 34 ; 2013 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; 35 ; Ingeniería Electrónica, Automática y Comunicaciones Volume 35 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 35 ; Ingeniería Electrónica, Automática y Comunicaciones Volume 35 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 36 ; Ingeniería Electrónica, Automática y Comunicaciones Volume 36 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
@@ -12859,7 +12859,7 @@
     au < manifest ; exists ; 2011 ; 37 ; International braz j urol Volume 37 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 38 ; International braz j urol Volume 38 ; 2012 ; >
     au < finished ; finished ; 2013 ; 39 ; International braz j urol Volume 39 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 40 ; International braz j urol Volume 40 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 40 ; International braz j urol Volume 40 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 41 ; International braz j urol Volume 41 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
@@ -18846,7 +18846,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Psicología desde el Caribe Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 29 ; Psicología desde el Caribe Volume 29 ; 2012 ; >
     au < finished ; finished ; 2013 ; 30 ; Psicología desde el Caribe Volume 30 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 31 ; Psicología desde el Caribe Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 31 ; Psicología desde el Caribe Volume 31 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 32 ; Psicología desde el Caribe Volume 32 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -18942,7 +18942,7 @@
     au < manifest ; exists ; 2011 ; 22 ; Psicologia USP Volume 22 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 23 ; Psicologia USP Volume 23 ; 2012 ; >
     au < finished ; finished ; 2013 ; 24 ; Psicologia USP Volume 24 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 25 ; Psicologia USP Volume 25 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 25 ; Psicologia USP Volume 25 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 26 ; Psicologia USP Volume 26 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -21720,7 +21720,7 @@
     au < manifest ; exists ; 2011 ; 38 ; Revista chilena de derecho Volume 38 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 39 ; Revista chilena de derecho Volume 39 ; 2012 ; >
     au < finished ; finished ; 2013 ; 40 ; Revista chilena de derecho Volume 40 ; 2013 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; 41 ; Revista chilena de derecho Volume 41 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 41 ; Revista chilena de derecho Volume 41 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 42 ; Revista chilena de derecho Volume 42 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
@@ -22597,7 +22597,7 @@
     au < manifest ; exists ; 2011 ; 62 ; Revista Colombiana de Obstetricia y Ginecología Volume 62 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 63 ; Revista Colombiana de Obstetricia y Ginecología Volume 63 ; 2012 ; >
     au < finished ; finished ; 2013 ; 64 ; Revista Colombiana de Obstetricia y Ginecología Volume 64 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 65 ; Revista Colombiana de Obstetricia y Ginecología Volume 65 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 65 ; Revista Colombiana de Obstetricia y Ginecología Volume 65 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 66 ; Revista Colombiana de Obstetricia y Ginecología Volume 66 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
@@ -26427,7 +26427,7 @@
     au < manifest ; exists ; 2011 ; 6 ; Revista electrónica de investigación en educación en ciencias Volume 6 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 7 ; Revista electrónica de investigación en educación en ciencias Volume 7 ; 2012 ; >
     au < finished ; finished ; 2013 ; 8 ; Revista electrónica de investigación en educación en ciencias Volume 8 ; 2013 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; 9 ; Revista electrónica de investigación en educación en ciencias Volume 9 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; 9 ; Revista electrónica de investigación en educación en ciencias Volume 9 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -27809,7 +27809,7 @@
     au < manifest ; exists ; 2011 ; 33 ; Revista Médica Electrónica Volume 33 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 34 ; Revista Médica Electrónica Volume 34 ; 2012 ; >
     au < finished ; finished ; 2013 ; 35 ; Revista Médica Electrónica Volume 35 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 36 ; Revista Médica Electrónica Volume 36 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 36 ; Revista Médica Electrónica Volume 36 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 37 ; Revista Médica Electrónica Volume 37 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
@@ -29032,7 +29032,7 @@
     au < manifest ; exists ; 2011 ; 44 ; Revista signos Volume 44 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 45 ; Revista signos Volume 45 ; 2012 ; >
     au < finished ; finished ; 2013 ; 46 ; Revista signos Volume 46 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 47 ; Revista signos Volume 47 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 47 ; Revista signos Volume 47 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 48 ; Revista signos Volume 48 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
@@ -29069,7 +29069,7 @@
     param[base_url] = http://www.scielo.sa.cr/
     param[journal_issn] = 0379-3962
 
-    au < finished ; manifest ; 2014 ; 27 ; Revista Tecnología en Marcha Volume 27 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 27 ; Revista Tecnología en Marcha Volume 27 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -29635,7 +29635,7 @@
     au < manifest ; exists ; 2011 ; 15 ; Salus Volume 15 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 16 ; Salus Volume 16 ; 2012 ; >
     au < finished ; finished ; 2013 ; 17 ; Salus Volume 17 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 18 ; Salus Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 18 ; Salus Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 19 ; Salus Volume 19 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
