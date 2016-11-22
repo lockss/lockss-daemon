@@ -161,6 +161,39 @@
   {
   
     title <
+      name = Journal of Practitioner Research ;
+      eissn = 2379-9951
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[journal_abbr] = jpr
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < expected ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+  
+  }
+
+  {
+  
+    title <
+      name = Military Cyber Affairs ;
+      eissn = 2378-0789
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[journal_abbr] = cba
+    implicit < status ; year ; volume ; name ; param[volume] >
+    
+    au < exists ; 2015 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < expected ; 2016 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
+  
+  }
+
+  {
+  
+    title <
       name = Journal of Strategic Security ;
       issn = 1944-0464 ;
       eissn = 1944-0472
