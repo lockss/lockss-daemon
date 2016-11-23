@@ -22,7 +22,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/american-mineralogist-released/
 
-    au < exists ; exists ; 2016 ; American Mineralogist WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; American Mineralogist WARC Content 2016 ; 2016 >
     
   }
   
@@ -38,7 +38,7 @@
 
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/reviews-in-mineralogy-and-geochemistry-released/
 
-    au < exists ; exists ; 2016 ; Reviews in Mineralogy and Geochemistry WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Reviews in Mineralogy and Geochemistry WARC Content 2016 ; 2016 >
     
   }
 
