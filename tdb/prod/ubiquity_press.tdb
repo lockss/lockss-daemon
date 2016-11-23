@@ -135,8 +135,8 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://olh.openlibhums.org/
 
-      au < exists ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
-      au < exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+      au < manifest ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
 

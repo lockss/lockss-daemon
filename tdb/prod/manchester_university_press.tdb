@@ -50,7 +50,7 @@
       param[base_url] = https://mmj.openlibrary.manchester.ac.uk/
       param[journal_id] = mmj
     
-      au < expected ; 2016 ; 2016 ; Manchester Medical Journal Volume 1 ; 1 >
+      au < manifest ; 2016 ; 2016 ; Manchester Medical Journal Volume 1 ; 1 >
 
   }
 

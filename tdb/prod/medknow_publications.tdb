@@ -5700,9 +5700,9 @@
       param[journal_issn] = 2348-2125
       param[base_url] = http://www.jclpca.org/
 
-      au < exists ; 2014 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 1 ; 2014 ; 1 >
-      au < exists ; 2015 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 2 ; 2015 ; 2 >
-      au < expected ; 2016 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 3 ; 2016 ; 3 >
+      au < manifest ; 2014 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 1 ; 2014 ; 1 >
+      au < manifest ; 2015 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 2 ; 2015 ; 2 >
+      au < manifest ; 2016 ; Journal of Cleft Lip Palate and Craniofacial Anomalies Volume 3 ; 2016 ; 3 >
 
   }
 
@@ -7519,7 +7519,7 @@
       au < manifest ; 2013 ; The Egyptian Orthopaedic Journal Volume 48 ; 2013 ; 48 >
       au < manifest ; 2014 ; The Egyptian Orthopaedic Journal Volume 49 ; 2014 ; 49 >
       au < manifest ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 >
-      au < expected ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 >
+      au < manifest ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 >
 
   }
 
