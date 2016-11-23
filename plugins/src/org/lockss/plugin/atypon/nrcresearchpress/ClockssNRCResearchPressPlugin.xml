@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -21,7 +21,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>18</string>
+        <string>19</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -57,11 +57,12 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
   </entry>
-  <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
+  <!--some pdfplus files need scraping - remove cited by pages, no downloaded by to remove.  -->  
   <entry>
     <string>application/pdf_filter_factory</string>
-    <org.lockss.util.Default />
-  </entry>
+    <string>org.lockss.plugin.atypon.nrcresearchpress.NrcPdfFilterFactory</string>
+  </entry>    
+  <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor and UrlNormalizer - remove those you don't want. -->
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
