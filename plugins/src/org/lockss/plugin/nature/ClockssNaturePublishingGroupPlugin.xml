@@ -9,12 +9,12 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!--  for JsoupLinkExtractor 1.62 and use of HtmlNodeFilter.comment() 1.64 -->
-    <string>1.64.0</string>
+    <!--  for content validation-->
+    <string>1.70.2</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -146,6 +146,13 @@
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- Mismatched actual length from Content-Length header should be ignored for Nature-->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
+    </list>
+  </entry> 
   <entry>
   <!--  default link extractor is Gosling. Use Jsoup to handle titles with unencoded greaterthan in them -->
     <string>text/html_link_extractor_factory</string>
