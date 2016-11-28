@@ -301,7 +301,7 @@
       au < doNotProcess ; exists ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; 11 ; Archaeology International Volume 2016 ; 2016 ; >
 
   }
@@ -429,7 +429,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.glocality.eu/
 
-      au < finished ; crawling ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
 
   }
@@ -445,7 +445,7 @@
       param[base_url] = http://www.govafricajournal.org/
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Governance in Africa Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2 ; Governance in Africa Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; >
 
   }
@@ -541,7 +541,7 @@
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; >
 
   }
@@ -617,7 +617,7 @@
       au < crawling ; exists ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
-      au < finished ; crawling ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
       au < finished ; crawling ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
@@ -636,7 +636,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; >
 
   }
@@ -653,7 +653,7 @@
       # continues Journal of Open Public Health Data
 
       au < finished ; crawling ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
   }
@@ -668,7 +668,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
-      au < finished ; crawling ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
 
   }
@@ -717,7 +717,7 @@
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; >
 
   }
@@ -797,7 +797,7 @@
       param[base_url] = http://openbioresources.metajnl.com/
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; >
 
   }
@@ -852,7 +852,7 @@
       au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; >
 
   }
@@ -1062,7 +1062,7 @@
       au < crawling ; exists ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
-      au < finished ; crawling ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
       au < finished ; crawling ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
 

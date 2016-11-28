@@ -1929,7 +1929,7 @@
     au < manifest ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Cardiovascular Psychiatry and Neurology Volume 2016 ; 2016 ; 2016 ; >
     
@@ -2406,7 +2406,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; >
 
@@ -3483,7 +3483,7 @@
     param[journal_id] = ijanal
 
     au < manifest ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; International Journal of Analysis Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Analysis Volume 2016 ; 2016 ; 2016 ; >
 
@@ -4695,7 +4695,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; frozen ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Photoenergy Volume 2015 ; 2015 ; 2015 ; >
     au < crawling ; exists ; 2016 ; International Journal of Photoenergy Volume 2016 ; 2016 ; 2016 ; >
 
@@ -6890,7 +6890,7 @@
     au < manifest ; exists ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 ; >
-    au < finished ; crawling ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Oncology Volume 2016 ; 2016 ; 2016 ; >
 
   }
