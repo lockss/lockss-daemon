@@ -13511,7 +13511,7 @@
       param[base_url] = http://ggm.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2016 ; Gerontology and Geriatric Medicine Volume 2 ; 2 ; >
 
   }
@@ -34234,7 +34234,7 @@
       au < finished ; finished ; 2012 ; Perfusion Volume 27 ; 27 ; >
       au < finished ; finished ; 2013 ; Perfusion Volume 28 ; 28 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Perfusion Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2015 ; Perfusion Volume 30 ; 30 ; >
+      au < finished ; manifest ; 2015 ; Perfusion Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Perfusion Volume 31 ; 31 ; >
 
     }
@@ -44266,7 +44266,7 @@
       au < finished ; finished ; 2012 ; Urban Studies Volume 49 ; 49 ; >
       au < finished ; finished ; 2013 ; Urban Studies Volume 50 ; 50 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Urban Studies Volume 51 ; 51 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Urban Studies Volume 52 ; 52 ; >
+      au < finished ; manifest ; 2015 ; Urban Studies Volume 52 ; 52 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Urban Studies Volume 53 ; 53 ; >
 
     }
