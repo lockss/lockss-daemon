@@ -3,7 +3,8 @@
     name = SEPM Society for Sedimentary Geology ;
     info[contract] = 2014 ;
     info[back] = 1900 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[poller] = 3
   >
   #Do not test!!! Add to ingest machines in an ordered manner.
 
