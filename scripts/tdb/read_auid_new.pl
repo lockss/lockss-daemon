@@ -629,7 +629,8 @@ while (my $line = <>) {
            ($plugin eq "MarkAllenPlugin") ||
            ($plugin eq "MultiSciencePlugin") ||
            ($plugin eq "MassachusettsMedicalSocietyPlugin") ||
-           ($plugin eq "SiamPlugin")) {
+           ($plugin eq "SiamPlugin") ||
+           ($plugin eq "WageningenJournalsPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
