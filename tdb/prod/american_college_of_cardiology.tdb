@@ -35,7 +35,10 @@
     au < HighWirePressPlugin ; down ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
     au < HighWirePressPlugin ; down ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
     au < HighWirePressPlugin ; down ; 2012 ; JACC: Cardiovascular Imaging Volume 5 ; 5 >
-    au < HWDrupalPlugin ; expected ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
     }
 
   }
