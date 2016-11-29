@@ -37,7 +37,6 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.StringUtil;
-import org.lockss.util.CIProperties;
 import org.lockss.util.HeaderUtil;
 import org.lockss.util.Logger;
 
@@ -59,12 +58,6 @@ public class HighWireContentValidator {
         throws ContentValidationException, PluginException, IOException {
       // validate based on extension (ie .pdf or .jpg)
       String url = cu.getUrl();
-      CIProperties headers = cu.getProperties();
-      String val = headers.getProperty(CachedUrl.PROPERTY_CONTENT_URL);
-      if (val != null && !val.equalsIgnoreCase(url)) {
-        log.info("Not validating url: " + url + "; using X-Lockss-content-url value: " + val);
-        url = val;
-      }
       if (StringUtil.endsWithIgnoreCase(url, PDF_EXT) ||
           StringUtil.endsWithIgnoreCase(url, PNG_EXT) ||
           StringUtil.endsWithIgnoreCase(url, JPG_EXT) ||

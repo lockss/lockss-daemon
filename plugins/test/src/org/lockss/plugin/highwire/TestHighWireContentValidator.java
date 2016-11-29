@@ -118,9 +118,14 @@ public class TestHighWireContentValidator extends LockssTestCase {
     } catch (Exception e) {
       // okay, fall-thru
     }
-    // This test should pass
+    // This test should NOT pass
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_URL, urlStr1);
-    contentValidator.validate(cu);
+    try {
+      contentValidator.validate(cu);
+      fail("Bad cu should throw exception");
+    } catch (Exception e) {
+      // okay, fall-thru
+    }
     
     cu = new MockCachedUrl(urlStr4, mau);
     cu.setContent(TEXT);
