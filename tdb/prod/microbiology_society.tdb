@@ -741,7 +741,7 @@
       au < doNotProcess ; 2010 ; Journal of General Virology Volume 91 ; 91 >
       au < doNotProcess ; 2011 ; Journal of General Virology Volume 92 ; 92 >
       au < doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 >
-      au < ready ; 2013 ; Journal of General Virology Volume 94 ; 94 >
+      au < manifest ; 2013 ; Journal of General Virology Volume 94 ; 94 >
       au < manifest ; 2014 ; Journal of General Virology Volume 95 ; 95 >
       au < manifest ; 2015 ; Journal of General Virology Volume 96 ; 96 >
       au < manifest ; 2016 ; Journal of General Virology Volume 97 ; 97 >
@@ -922,7 +922,7 @@
       param[journal_id] = jmmcr
 
       au < manifest ; 2014 ; JMM Case Reports Volume 1 ; 1 >
-      au < ready ; 2015 ; JMM Case Reports Volume 2 ; 2 >
+      au < manifest ; 2015 ; JMM Case Reports Volume 2 ; 2 >
       au < manifest ; 2016 ; JMM Case Reports Volume 3 ; 3 >
 
     }
@@ -1017,8 +1017,8 @@
       au < doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 >
       au < doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 >
       au < manifest ; 2013 ; Microbiology Volume 159 ; 159 >
-      au < ready ; 2014 ; Microbiology Volume 160 ; 160 >
-      au < ready ; 2015 ; Microbiology Volume 161 ; 161 >
+      au < manifest ; 2014 ; Microbiology Volume 160 ; 160 >
+      au < manifest ; 2015 ; Microbiology Volume 161 ; 161 >
       au < manifest ; 2016 ; Microbiology Volume 162 ; 162 >
 
     }
