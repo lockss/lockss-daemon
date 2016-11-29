@@ -187,13 +187,13 @@
     param[resource_id] = 90
     implicit < status ; year ; name ; param[year] >
     
-    au < testing ; 2010 ; Annals of Internal Medicine Volume 152-153 ; 2010 >
-    au < testing ; 2011 ; Annals of Internal Medicine Volume 154-155 ; 2011 >
-    au < testing ; 2012 ; Annals of Internal Medicine Volume 156-157 ; 2012 >
-    au < testing ; 2013 ; Annals of Internal Medicine Volume 158-159 ; 2013 >
-    au < testing ; 2014 ; Annals of Internal Medicine Volume 160-161 ; 2014 >
-    au < testing ; 2015 ; Annals of Internal Medicine Volume 162-163 ; 2015 >
-    au < manifest ; 2016 ; Annals of Internal Medicine Volume 164-165 ; 2016 >
+    au < exists ; 2010 ; Annals of Internal Medicine Volume 152-153 ; 2010 >
+    au < exists ; 2011 ; Annals of Internal Medicine Volume 154-155 ; 2011 >
+    au < exists ; 2012 ; Annals of Internal Medicine Volume 156-157 ; 2012 >
+    au < exists ; 2013 ; Annals of Internal Medicine Volume 158-159 ; 2013 >
+    au < exists ; 2014 ; Annals of Internal Medicine Volume 160-161 ; 2014 >
+    au < exists ; 2015 ; Annals of Internal Medicine Volume 162-163 ; 2015 >
+    au < exists ; 2016 ; Annals of Internal Medicine Volume 164-165 ; 2016 >
     
   }
 
