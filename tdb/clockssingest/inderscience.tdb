@@ -1262,7 +1262,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Competition and Growth Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Business Competition and Growth Volume 3 ; 3 ; >
       au < finished ; finished ; 2015 ; International Journal of Business Competition and Growth Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Business Competition and Growth Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Business Competition and Growth Volume 5 ; 5 ; >
 
     }
 
@@ -3554,7 +3554,7 @@
 
       param[journal_id] = ijgsds
 
-      au < ready ; exists ; 2015-2016 ; International Journal of Gender Studies in Developing Societies Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015-2016 ; International Journal of Gender Studies in Developing Societies Volume 1 ; 1 ; >
 
     }
 
@@ -4752,7 +4752,7 @@
 
       param[journal_id] = ijimb
 
-      au < ready ; exists ; 2015-2016 ; International Journal of Islamic Marketing and Branding Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015-2016 ; International Journal of Islamic Marketing and Branding Volume 1 ; 1 ; >
 
     }
 
@@ -4892,7 +4892,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Knowledge Management Studies Volume 4 ; 4 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Knowledge Management Studies Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Knowledge Management Studies Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Knowledge Management Studies Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Knowledge Management Studies Volume 7 ; 7 ; >
 
     }
 
@@ -6974,7 +6974,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 ; >
       au < finished ; finished ; 2015 ; International Journal of Reasoning-based Intelligent Systems Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016 ; International Journal of Reasoning-based Intelligent Systems Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Reasoning-based Intelligent Systems Volume 8 ; 8 ; >
 
     }
 
@@ -8241,7 +8241,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 ; >
       au < doNotProcess ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 ; >
       au < finished ; finished ; 2015 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Technology Transfer and Commercialisation Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Technology Transfer and Commercialisation Volume 14 ; 14 ; >
 
     }
 

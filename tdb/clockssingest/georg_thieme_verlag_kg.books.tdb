@@ -1634,9 +1634,9 @@
       >
 
     #series doi = 10.1055/b-00000131;I care;;
-    au < ready ; exists ; 2015 ; 9783131656117 ; 9783131958211 ; 10.1055/b-003-125803 ; Anatomie, Physiologie (9783131958211) ; >
-    au < ready ; exists ; 2015 ; 9783131657114 ; 9783131958112 ; 10.1055/b-003-125802 ; Krankheitslehre (9783131958112) ; >
-    au < ready ; exists ; 2015 ; 9783131656513 ; 9783131958013 ; 10.1055/b-003-125821 ; Pflege (9783131958013) ; >
+    au < crawling ; exists ; 2015 ; 9783131656117 ; 9783131958211 ; 10.1055/b-003-125803 ; Anatomie, Physiologie (9783131958211) ; >
+    au < crawling ; exists ; 2015 ; 9783131657114 ; 9783131958112 ; 10.1055/b-003-125802 ; Krankheitslehre (9783131958112) ; >
+    au < crawling ; exists ; 2015 ; 9783131656513 ; 9783131958013 ; 10.1055/b-003-125821 ; Pflege (9783131958013) ; >
 
    }
 
@@ -1648,9 +1648,9 @@
       >
 
     #series doi = 10.1055/b-00000141;PROMETHEUS LernAtlas der Anatomie;;
-    au < ready ; exists ; 2014 ; 9783131395245 ; 9783132404908 ; 10.1055/b-004-129726 ; Allgemeine Anatomie und Bewegungssystem: LernAtlas der Anatomie (9783132404908) ; >
-    au < ready ; exists ; 2015 ; 9783131395344 ; 9783132404915 ; 10.1055/b-004-129727 ; Innere Organe (9783132404915) ; >
-    au < ready ; exists ; 2015 ; 9783131395443 ; 9783132404922 ; 10.1055/b-004-129728 ; Kopf, Hals und Neuroanatomie: LernAtlas Anatomie (9783132404922) ; >
+    au < crawling ; exists ; 2014 ; 9783131395245 ; 9783132404908 ; 10.1055/b-004-129726 ; Allgemeine Anatomie und Bewegungssystem: LernAtlas der Anatomie (9783132404908) ; >
+    au < crawling ; exists ; 2015 ; 9783131395344 ; 9783132404915 ; 10.1055/b-004-129727 ; Innere Organe (9783132404915) ; >
+    au < crawling ; exists ; 2015 ; 9783131395443 ; 9783132404922 ; 10.1055/b-004-129728 ; Kopf, Hals und Neuroanatomie: LernAtlas Anatomie (9783132404922) ; >
   
 
    }
