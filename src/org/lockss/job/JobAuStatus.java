@@ -27,7 +27,7 @@
  */
 package org.lockss.job;
 
-import org.joda.time.LocalDate;
+import java.util.Date;
 
 /**
  * A job processing the metadata of an Archival Unit.
@@ -38,9 +38,9 @@ public class JobAuStatus {
   private String id = null;
   private Long type = null;
   private String description = null;
-  private LocalDate creationDate = null;
-  private LocalDate startDate = null;
-  private LocalDate endDate = null;
+  private Date creationDate = null;
+  private Date startDate = null;
+  private Date endDate = null;
   private String auId = null;
   private String auName = null;
   private Integer statusCode = null;
@@ -70,27 +70,27 @@ public class JobAuStatus {
     this.description = description;
   }
 
-  public LocalDate getCreationDate() {
+  public Date getCreationDate() {
     return creationDate;
   }
 
-  public void setCreationDate(LocalDate creationDate) {
+  public void setCreationDate(Date creationDate) {
     this.creationDate = creationDate;
   }
 
-  public LocalDate getStartDate() {
+  public Date getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(LocalDate startDate) {
+  public void setStartDate(Date startDate) {
     this.startDate = startDate;
   }
 
-  public LocalDate getEndDate() {
+  public Date getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(LocalDate endDate) {
+  public void setEndDate(Date endDate) {
     this.endDate = endDate;
   }
 

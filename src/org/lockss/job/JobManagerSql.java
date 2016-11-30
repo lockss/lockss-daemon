@@ -39,7 +39,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.joda.time.LocalDate;
 import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
@@ -589,18 +588,18 @@ public class JobManagerSql {
       job.setDescription(description);
     }
 
-    job.setCreationDate(new LocalDate(resultSet.getLong(CREATION_TIME_COLUMN)));
+    job.setCreationDate(new Date(resultSet.getLong(CREATION_TIME_COLUMN)));
 
     Long startTime = resultSet.getLong(START_TIME_COLUMN);
 
     if (!resultSet.wasNull()) {
-      job.setStartDate(new LocalDate(startTime));
+      job.setStartDate(new Date(startTime));
     }
 
     Long endTime = resultSet.getLong(END_TIME_COLUMN);
 
     if (!resultSet.wasNull()) {
-      job.setEndDate(new LocalDate(endTime));
+      job.setEndDate(new Date(endTime));
     }
 
     String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
@@ -1436,7 +1435,7 @@ public class JobManagerSql {
     if (deleted) {
       job.setStatusCode(
 	  jobStatusSeqByName.get(JOB_STATUS_DELETED).intValue());
-      job.setEndDate(new LocalDate(Long.valueOf(new Date().getTime())));
+      job.setEndDate(new Date());
       job.setStatusMessage("Deleted");
     }
 
