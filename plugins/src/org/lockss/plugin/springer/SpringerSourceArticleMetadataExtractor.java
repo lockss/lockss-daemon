@@ -30,9 +30,7 @@ package org.lockss.plugin.springer;
 
 import java.io.IOException;
 
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
-import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;

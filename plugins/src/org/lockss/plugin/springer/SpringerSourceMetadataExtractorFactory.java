@@ -32,20 +32,12 @@
 
 package org.lockss.plugin.springer;
 
-import java.io.*;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.associationforcomputingmachinery.ACMBooksXmlSchemaHelper;
-import org.lockss.plugin.associationforcomputingmachinery.ACMXmlSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor;
-import org.lockss.plugin.clockss.markallen.MarkAllenWorksheetXmlSchemaHelper;
-import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
-import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -53,11 +45,6 @@ import org.w3c.dom.NodeList;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.collections.map.*;
-import org.apache.commons.io.FilenameUtils;
-
-import javax.xml.xpath.XPathExpressionException;
 
 /**
  * Implements a FileMetadataExtractor for Springer Source Content
@@ -96,8 +83,6 @@ public class SpringerSourceMetadataExtractorFactory
       String element_name = top_element.getNodeName();
       NodeList elementChildren = top_element.getChildNodes();
       
-      log.info("I'm here");
-
       if ("Publisher".equals(element_name)
           && elementChildren != null) { 
         // look at each child until we either run out of children or
