@@ -170,7 +170,7 @@
     param[journal_abbr] = jpr
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < expected ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < manifest ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
   
   }
 
