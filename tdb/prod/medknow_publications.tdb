@@ -4474,7 +4474,7 @@
       param[base_url] = http://www.bmfj.eg.net/
 
       au < manifest ; 2015 ; Benha Medical Journal Volume 32 ; 2015 ; 32 >
-      au < expected ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 >
+      au < manifest ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 >
 
   }
 
@@ -4802,7 +4802,7 @@
       au < manifest ; 2013 ; Egyptian Journal of Dermatology and Venerology Volume 33 ; 2013 ; 33 >
       au < manifest ; 2014 ; Egyptian Journal of Dermatology and Venerology Volume 34 ; 2014 ; 34 >
       au < ready ; 2015 ; Egyptian Journal of Dermatology and Venerology Volume 35 ; 2015 ; 35 >
-      au < expected ; 2016 ; Egyptian Journal of Dermatology and Venerology Volume 36 ; 2016 ; 36 >
+      au < manifest ; 2016 ; Egyptian Journal of Dermatology and Venerology Volume 36 ; 2016 ; 36 >
 
   }
 
@@ -5971,7 +5971,7 @@
       param[journal_issn] = 2347-8128
       param[base_url] = http://www.jhnps.org/
 
-      au < expected ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 >
+      au < manifest ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 >
 
   }
 
