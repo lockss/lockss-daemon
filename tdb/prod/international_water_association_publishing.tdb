@@ -65,7 +65,7 @@
     au < manifest ; 2012 ; Hydrology Research Volume 43 ; 43 >
     au < manifest ; 2013 ; Hydrology Research Volume 44 ; 44 >
     au < manifest ; 2014 ; Hydrology Research Volume 45 ; 45 >
-    au < ready ; 2015 ; Hydrology Research Volume 46 ; 46 >
+    au < releasing ; 2015 ; Hydrology Research Volume 46 ; 46 >
     au < manifest ; 2016 ; Hydrology Research Volume 47 ; 47 >
 
   }
@@ -80,12 +80,12 @@
 
     param[base_url] = http://jwcc.iwaponline.com/
 
-    au < ready ; 2010 ; Journal of Water and Climate Change Volume 1 ; 1 >
-    au < ready ; 2011 ; Journal of Water and Climate Change Volume 2 ; 2 >
-    au < ready ; 2012 ; Journal of Water and Climate Change Volume 3 ; 3 >
-    au < ready ; 2013 ; Journal of Water and Climate Change Volume 4 ; 4 >
-    au < ready ; 2014 ; Journal of Water and Climate Change Volume 5 ; 5 >
-    au < ready ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 >
+    au < releasing ; 2010 ; Journal of Water and Climate Change Volume 1 ; 1 >
+    au < releasing ; 2011 ; Journal of Water and Climate Change Volume 2 ; 2 >
+    au < releasing ; 2012 ; Journal of Water and Climate Change Volume 3 ; 3 >
+    au < releasing ; 2013 ; Journal of Water and Climate Change Volume 4 ; 4 >
+    au < releasing ; 2014 ; Journal of Water and Climate Change Volume 5 ; 5 >
+    au < releasing ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 >
     au < manifest ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 >
 
   }
@@ -100,19 +100,19 @@
 
     param[base_url] = http://jwh.iwaponline.com/
 
-    au < ready ; 2003 ; Journal of Water and Health Volume 1 ; 1 >
-    au < ready ; 2004 ; Journal of Water and Health Volume 2 ; 2 >
-    au < ready ; 2005 ; Journal of Water and Health Volume 3 ; 3 >
-    au < ready ; 2006 ; Journal of Water and Health Volume 4 ; 4 >
-    au < ready ; 2007 ; Journal of Water and Health Volume 5 ; 5 >
-    au < ready ; 2008 ; Journal of Water and Health Volume 6 ; 6 >
-    au < ready ; 2009 ; Journal of Water and Health Volume 7 ; 7 >
-    au < ready ; 2010 ; Journal of Water and Health Volume 8 ; 8 >
-    au < ready ; 2011 ; Journal of Water and Health Volume 9 ; 9 >
-    au < ready ; 2012 ; Journal of Water and Health Volume 10 ; 10 >
-    au < ready ; 2013 ; Journal of Water and Health Volume 11 ; 11 >
-    au < ready ; 2014 ; Journal of Water and Health Volume 12 ; 12 >
-    au < ready ; 2015 ; Journal of Water and Health Volume 13 ; 13 >
+    au < releasing ; 2003 ; Journal of Water and Health Volume 1 ; 1 >
+    au < releasing ; 2004 ; Journal of Water and Health Volume 2 ; 2 >
+    au < releasing ; 2005 ; Journal of Water and Health Volume 3 ; 3 >
+    au < releasing ; 2006 ; Journal of Water and Health Volume 4 ; 4 >
+    au < releasing ; 2007 ; Journal of Water and Health Volume 5 ; 5 >
+    au < releasing ; 2008 ; Journal of Water and Health Volume 6 ; 6 >
+    au < releasing ; 2009 ; Journal of Water and Health Volume 7 ; 7 >
+    au < releasing ; 2010 ; Journal of Water and Health Volume 8 ; 8 >
+    au < releasing ; 2011 ; Journal of Water and Health Volume 9 ; 9 >
+    au < releasing ; 2012 ; Journal of Water and Health Volume 10 ; 10 >
+    au < releasing ; 2013 ; Journal of Water and Health Volume 11 ; 11 >
+    au < releasing ; 2014 ; Journal of Water and Health Volume 12 ; 12 >
+    au < releasing ; 2015 ; Journal of Water and Health Volume 13 ; 13 >
     au < manifest ; 2016 ; Journal of Water and Health Volume 14 ; 14 >
 
   }
@@ -127,11 +127,11 @@
 
     param[base_url] = http://jwrd.iwaponline.com/
 
-    au < ready ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 1 >
-    au < ready ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 2 >
-    au < ready ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 3 >
-    au < ready ; 2014 ; Journal of Water Reuse and Desalination Volume 4 ; 4 >
-    au < ready ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 5 >
+    au < releasing ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 1 >
+    au < releasing ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 2 >
+    au < releasing ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 3 >
+    au < releasing ; 2014 ; Journal of Water Reuse and Desalination Volume 4 ; 4 >
+    au < releasing ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 5 >
     au < manifest ; 2016 ; Journal of Water Reuse and Desalination Volume 6 ; 6 >
 
   }
@@ -146,11 +146,11 @@
 
     param[base_url] = http://washdev.iwaponline.com/
 
-    au < ready ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 1 >
-    au < ready ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 2 >
-    au < ready ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 3 >
-    au < ready ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 4 >
-    au < ready ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 >
+    au < releasing ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 1 >
+    au < releasing ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 2 >
+    au < releasing ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 3 >
+    au < releasing ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 4 >
+    au < releasing ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 >
     au < manifest ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 >
 
   }
@@ -165,24 +165,24 @@
 
     param[base_url] = http://aqua.iwaponline.com/
 
-    au < ready ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 47 >
-    au < ready ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 48 >
-    au < ready ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 49 >
-    au < ready ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 50 >
-    au < ready ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 51 >
-    au < ready ; 2003 ; Journal of Water Supply: Research and Technology - Aqua Volume 52 ; 52 >
-    au < ready ; 2004 ; Journal of Water Supply: Research and Technology - Aqua Volume 53 ; 53 >
-    au < ready ; 2005 ; Journal of Water Supply: Research and Technology - Aqua Volume 54 ; 54 >
-    au < ready ; 2006 ; Journal of Water Supply: Research and Technology - Aqua Volume 55 ; 55 >
-    au < ready ; 2007 ; Journal of Water Supply: Research and Technology - Aqua Volume 56 ; 56 >
-    au < ready ; 2008 ; Journal of Water Supply: Research and Technology - Aqua Volume 57 ; 57 >
-    au < ready ; 2009 ; Journal of Water Supply: Research and Technology - Aqua Volume 58 ; 58 >
-    au < ready ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 59 >
-    au < ready ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 60 >
-    au < ready ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 61 >
-    au < ready ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 62 >
-    au < ready ; 2014 ; Journal of Water Supply: Research and Technology - Aqua Volume 63 ; 63 >
-    au < ready ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 64 >
+    au < releasing ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 47 >
+    au < releasing ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 48 >
+    au < releasing ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 49 >
+    au < releasing ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 50 >
+    au < releasing ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 51 >
+    au < releasing ; 2003 ; Journal of Water Supply: Research and Technology - Aqua Volume 52 ; 52 >
+    au < releasing ; 2004 ; Journal of Water Supply: Research and Technology - Aqua Volume 53 ; 53 >
+    au < releasing ; 2005 ; Journal of Water Supply: Research and Technology - Aqua Volume 54 ; 54 >
+    au < releasing ; 2006 ; Journal of Water Supply: Research and Technology - Aqua Volume 55 ; 55 >
+    au < releasing ; 2007 ; Journal of Water Supply: Research and Technology - Aqua Volume 56 ; 56 >
+    au < releasing ; 2008 ; Journal of Water Supply: Research and Technology - Aqua Volume 57 ; 57 >
+    au < releasing ; 2009 ; Journal of Water Supply: Research and Technology - Aqua Volume 58 ; 58 >
+    au < releasing ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 59 >
+    au < releasing ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 60 >
+    au < releasing ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 61 >
+    au < releasing ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 62 >
+    au < releasing ; 2014 ; Journal of Water Supply: Research and Technology - Aqua Volume 63 ; 63 >
+    au < releasing ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 64 >
     au < manifest ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 >
 
   }
@@ -197,23 +197,23 @@
 
     param[base_url] = http://jh.iwaponline.com/
 
-    au < ready ; 1999 ; Journal of Hydroinformatics Volume 1 ; 1 >
-    au < ready ; 2000 ; Journal of Hydroinformatics Volume 2 ; 2 >
-    au < ready ; 2001 ; Journal of Hydroinformatics Volume 3 ; 3 >
-    au < ready ; 2002 ; Journal of Hydroinformatics Volume 4 ; 4 >
-    au < ready ; 2003 ; Journal of Hydroinformatics Volume 5 ; 5 >
-    au < ready ; 2004 ; Journal of Hydroinformatics Volume 6 ; 6 >
-    au < ready ; 2005 ; Journal of Hydroinformatics Volume 7 ; 7 >
-    au < ready ; 2006 ; Journal of Hydroinformatics Volume 8 ; 8 >
-    au < ready ; 2007 ; Journal of Hydroinformatics Volume 9 ; 9 >
-    au < ready ; 2008 ; Journal of Hydroinformatics Volume 10 ; 10 >
-    au < ready ; 2009 ; Journal of Hydroinformatics Volume 11 ; 11 >
-    au < ready ; 2010 ; Journal of Hydroinformatics Volume 12 ; 12 >
-    au < ready ; 2011 ; Journal of Hydroinformatics Volume 13 ; 13 >
-    au < ready ; 2012 ; Journal of Hydroinformatics Volume 14 ; 14 >
-    au < ready ; 2013 ; Journal of Hydroinformatics Volume 15 ; 15 >
-    au < ready ; 2014 ; Journal of Hydroinformatics Volume 16 ; 16 >
-    au < ready ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 >
+    au < releasing ; 1999 ; Journal of Hydroinformatics Volume 1 ; 1 >
+    au < releasing ; 2000 ; Journal of Hydroinformatics Volume 2 ; 2 >
+    au < releasing ; 2001 ; Journal of Hydroinformatics Volume 3 ; 3 >
+    au < releasing ; 2002 ; Journal of Hydroinformatics Volume 4 ; 4 >
+    au < releasing ; 2003 ; Journal of Hydroinformatics Volume 5 ; 5 >
+    au < releasing ; 2004 ; Journal of Hydroinformatics Volume 6 ; 6 >
+    au < releasing ; 2005 ; Journal of Hydroinformatics Volume 7 ; 7 >
+    au < releasing ; 2006 ; Journal of Hydroinformatics Volume 8 ; 8 >
+    au < releasing ; 2007 ; Journal of Hydroinformatics Volume 9 ; 9 >
+    au < releasing ; 2008 ; Journal of Hydroinformatics Volume 10 ; 10 >
+    au < releasing ; 2009 ; Journal of Hydroinformatics Volume 11 ; 11 >
+    au < releasing ; 2010 ; Journal of Hydroinformatics Volume 12 ; 12 >
+    au < releasing ; 2011 ; Journal of Hydroinformatics Volume 13 ; 13 >
+    au < releasing ; 2012 ; Journal of Hydroinformatics Volume 14 ; 14 >
+    au < releasing ; 2013 ; Journal of Hydroinformatics Volume 15 ; 15 >
+    au < releasing ; 2014 ; Journal of Hydroinformatics Volume 16 ; 16 >
+    au < releasing ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 >
     au < manifest ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 >
 
   }
@@ -228,16 +228,16 @@
 
     param[base_url] = http://wpt.iwaponline.com/
 
-    au < ready ; 2006 ; Water Practice and Technology Volume 1 ; 1 >
-    au < ready ; 2007 ; Water Practice and Technology Volume 2 ; 2 >
-    au < ready ; 2008 ; Water Practice and Technology Volume 3 ; 3 >
-    au < ready ; 2009 ; Water Practice and Technology Volume 4 ; 4 >
-    au < ready ; 2010 ; Water Practice and Technology Volume 5 ; 5 >
-    au < ready ; 2011 ; Water Practice and Technology Volume 6 ; 6 >
-    au < ready ; 2012 ; Water Practice and Technology Volume 7 ; 7 >
-    au < ready ; 2013 ; Water Practice and Technology Volume 8 ; 8 >
-    au < ready ; 2014 ; Water Practice and Technology Volume 9 ; 9 >
-    au < ready ; 2015 ; Water Practice and Technology Volume 10 ; 10 >
+    au < releasing ; 2006 ; Water Practice and Technology Volume 1 ; 1 >
+    au < releasing ; 2007 ; Water Practice and Technology Volume 2 ; 2 >
+    au < releasing ; 2008 ; Water Practice and Technology Volume 3 ; 3 >
+    au < releasing ; 2009 ; Water Practice and Technology Volume 4 ; 4 >
+    au < releasing ; 2010 ; Water Practice and Technology Volume 5 ; 5 >
+    au < releasing ; 2011 ; Water Practice and Technology Volume 6 ; 6 >
+    au < releasing ; 2012 ; Water Practice and Technology Volume 7 ; 7 >
+    au < releasing ; 2013 ; Water Practice and Technology Volume 8 ; 8 >
+    au < releasing ; 2014 ; Water Practice and Technology Volume 9 ; 9 >
+    au < releasing ; 2015 ; Water Practice and Technology Volume 10 ; 10 >
     au < manifest ; 2016 ; Water Practice and Technology Volume 11 ; 11 >
 
   }
@@ -252,19 +252,19 @@
 
     param[base_url] = http://wp.iwaponline.com/
 
-    au < ready ; 2003 ; Water Policy Volume 5 ; 5 >
-    au < ready ; 2004 ; Water Policy Volume 6 ; 6 >
-    au < ready ; 2005 ; Water Policy Volume 7 ; 7 >
-    au < ready ; 2006 ; Water Policy Volume 8 ; 8 >
-    au < ready ; 2007 ; Water Policy Volume 9 ; 9 >
-    au < ready ; 2008 ; Water Policy Volume 10 ; 10 >
-    au < ready ; 2009 ; Water Policy Volume 11 ; 11 >
-    au < ready ; 2010 ; Water Policy Volume 12 ; 12 >
-    au < ready ; 2011 ; Water Policy Volume 13 ; 13 >
-    au < ready ; 2012 ; Water Policy Volume 14 ; 14 >
-    au < ready ; 2013 ; Water Policy Volume 15 ; 15 >
-    au < ready ; 2014 ; Water Policy Volume 16 ; 16 >
-    au < ready ; 2015 ; Water Policy Volume 17 ; 17 >
+    au < releasing ; 2003 ; Water Policy Volume 5 ; 5 >
+    au < releasing ; 2004 ; Water Policy Volume 6 ; 6 >
+    au < releasing ; 2005 ; Water Policy Volume 7 ; 7 >
+    au < releasing ; 2006 ; Water Policy Volume 8 ; 8 >
+    au < releasing ; 2007 ; Water Policy Volume 9 ; 9 >
+    au < releasing ; 2008 ; Water Policy Volume 10 ; 10 >
+    au < releasing ; 2009 ; Water Policy Volume 11 ; 11 >
+    au < releasing ; 2010 ; Water Policy Volume 12 ; 12 >
+    au < releasing ; 2011 ; Water Policy Volume 13 ; 13 >
+    au < releasing ; 2012 ; Water Policy Volume 14 ; 14 >
+    au < releasing ; 2013 ; Water Policy Volume 15 ; 15 >
+    au < releasing ; 2014 ; Water Policy Volume 16 ; 16 >
+    au < releasing ; 2015 ; Water Policy Volume 17 ; 17 >
     au < manifest ; 2016 ; Water Policy Volume 18 ; 18 >
 
   }
@@ -279,11 +279,11 @@
 
     param[base_url] = http://wqrjc.iwaponline.com/
 
-    au < ready ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 >
-    au < ready ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 >
-    au < ready ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 >
-    au < ready ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 >
-    au < ready ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 >
+    au < releasing ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 >
+    au < releasing ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 >
+    au < releasing ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 >
+    au < releasing ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 >
+    au < releasing ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 >
     au < manifest ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 >
 
   }
@@ -298,65 +298,65 @@
 
     param[base_url] = http://wst.iwaponline.com/
 
-    au < ready ; 1982 ; Water Science and Technology Volume 14 ; 14 >
-    au < ready ; 1983 ; Water Science and Technology Volume 15 ; 15 >
-    au < ready ; 1984 ; Water Science and Technology Volume 16 ; 16 >
-    au < ready ; 1985 ; Water Science and Technology Volume 17 ; 17 >
-    au < ready ; 1986 ; Water Science and Technology Volume 18 ; 18 >
-    au < ready ; 1987 ; Water Science and Technology Volume 19 ; 19 >
-    au < ready ; 1988 ; Water Science and Technology Volume 20 ; 20 >
-    au < ready ; 1989 ; Water Science and Technology Volume 21 ; 21 >
-    au < ready ; 1990 ; Water Science and Technology Volume 22 ; 22 >
-    au < ready ; 1991 ; Water Science and Technology Volume 23 ; 23 >
-    au < ready ; 1991 ; Water Science and Technology Volume 24 ; 24 >
-    au < ready ; 1992 ; Water Science and Technology Volume 25 ; 25 >
-    au < ready ; 1992 ; Water Science and Technology Volume 26 ; 26 >
-    au < ready ; 1993 ; Water Science and Technology Volume 27 ; 27 >
-    au < ready ; 1993 ; Water Science and Technology Volume 28 ; 28 >
-    au < ready ; 1994 ; Water Science and Technology Volume 29 ; 29 >
-    au < ready ; 1994 ; Water Science and Technology Volume 30 ; 30 >
-    au < ready ; 1995 ; Water Science and Technology Volume 31 ; 31 >
-    au < ready ; 1995 ; Water Science and Technology Volume 32 ; 32 >
-    au < ready ; 1996 ; Water Science and Technology Volume 33 ; 33 >
-    au < ready ; 1996 ; Water Science and Technology Volume 34 ; 34 >
-    au < ready ; 1997 ; Water Science and Technology Volume 35 ; 35 >
-    au < ready ; 1997 ; Water Science and Technology Volume 36 ; 36 >
-    au < ready ; 1998 ; Water Science and Technology Volume 37 ; 37 >
-    au < ready ; 1998 ; Water Science and Technology Volume 38 ; 38 >
-    au < ready ; 1999 ; Water Science and Technology Volume 39 ; 39 >
-    au < ready ; 1999 ; Water Science and Technology Volume 40 ; 40 >
-    au < ready ; 2000 ; Water Science and Technology Volume 41 ; 41 >
-    au < ready ; 2000 ; Water Science and Technology Volume 42 ; 42 >
-    au < ready ; 2001 ; Water Science and Technology Volume 43 ; 43 >
+    au < releasing ; 1982 ; Water Science and Technology Volume 14 ; 14 >
+    au < releasing ; 1983 ; Water Science and Technology Volume 15 ; 15 >
+    au < releasing ; 1984 ; Water Science and Technology Volume 16 ; 16 >
+    au < releasing ; 1985 ; Water Science and Technology Volume 17 ; 17 >
+    au < releasing ; 1986 ; Water Science and Technology Volume 18 ; 18 >
+    au < releasing ; 1987 ; Water Science and Technology Volume 19 ; 19 >
+    au < releasing ; 1988 ; Water Science and Technology Volume 20 ; 20 >
+    au < releasing ; 1989 ; Water Science and Technology Volume 21 ; 21 >
+    au < releasing ; 1990 ; Water Science and Technology Volume 22 ; 22 >
+    au < releasing ; 1991 ; Water Science and Technology Volume 23 ; 23 >
+    au < releasing ; 1991 ; Water Science and Technology Volume 24 ; 24 >
+    au < releasing ; 1992 ; Water Science and Technology Volume 25 ; 25 >
+    au < releasing ; 1992 ; Water Science and Technology Volume 26 ; 26 >
+    au < releasing ; 1993 ; Water Science and Technology Volume 27 ; 27 >
+    au < releasing ; 1993 ; Water Science and Technology Volume 28 ; 28 >
+    au < releasing ; 1994 ; Water Science and Technology Volume 29 ; 29 >
+    au < releasing ; 1994 ; Water Science and Technology Volume 30 ; 30 >
+    au < releasing ; 1995 ; Water Science and Technology Volume 31 ; 31 >
+    au < releasing ; 1995 ; Water Science and Technology Volume 32 ; 32 >
+    au < releasing ; 1996 ; Water Science and Technology Volume 33 ; 33 >
+    au < releasing ; 1996 ; Water Science and Technology Volume 34 ; 34 >
+    au < releasing ; 1997 ; Water Science and Technology Volume 35 ; 35 >
+    au < releasing ; 1997 ; Water Science and Technology Volume 36 ; 36 >
+    au < releasing ; 1998 ; Water Science and Technology Volume 37 ; 37 >
+    au < releasing ; 1998 ; Water Science and Technology Volume 38 ; 38 >
+    au < releasing ; 1999 ; Water Science and Technology Volume 39 ; 39 >
+    au < releasing ; 1999 ; Water Science and Technology Volume 40 ; 40 >
+    au < releasing ; 2000 ; Water Science and Technology Volume 41 ; 41 >
+    au < releasing ; 2000 ; Water Science and Technology Volume 42 ; 42 >
+    au < releasing ; 2001 ; Water Science and Technology Volume 43 ; 43 >
     au < exists ; 2001 ; Water Science and Technology Volume 44 ; 44 >
-    au < ready ; 2002 ; Water Science and Technology Volume 45 ; 45 >
-    au < ready ; 2002 ; Water Science and Technology Volume 46 ; 46 >
-    au < ready ; 2003 ; Water Science and Technology Volume 47 ; 47 >
-    au < ready ; 2003 ; Water Science and Technology Volume 48 ; 48 >
-    au < ready ; 2004 ; Water Science and Technology Volume 49 ; 49 >
-    au < ready ; 2004 ; Water Science and Technology Volume 50 ; 50 >
-    au < ready ; 2005 ; Water Science and Technology Volume 51 ; 51 >
-    au < ready ; 2005 ; Water Science and Technology Volume 52 ; 52 >
-    au < ready ; 2006 ; Water Science and Technology Volume 53 ; 53 >
-    au < ready ; 2006 ; Water Science and Technology Volume 54 ; 54 >
-    au < ready ; 2007 ; Water Science and Technology Volume 55 ; 55 >
-    au < ready ; 2007 ; Water Science and Technology Volume 56 ; 56 >
-    au < ready ; 2008 ; Water Science and Technology Volume 57 ; 57 >
-    au < ready ; 2008 ; Water Science and Technology Volume 58 ; 58 >
-    au < ready ; 2009 ; Water Science and Technology Volume 59 ; 59 >
-    au < ready ; 2009 ; Water Science and Technology Volume 60 ; 60 >
-    au < ready ; 2010 ; Water Science and Technology Volume 61 ; 61 >
-    au < ready ; 2010 ; Water Science and Technology Volume 62 ; 62 >
-    au < ready ; 2011 ; Water Science and Technology Volume 63 ; 63 >
-    au < ready ; 2011 ; Water Science and Technology Volume 64 ; 64 >
-    au < ready ; 2012 ; Water Science and Technology Volume 65 ; 65 >
-    au < ready ; 2012 ; Water Science and Technology Volume 66 ; 66 >
-    au < ready ; 2013 ; Water Science and Technology Volume 67 ; 67 >
-    au < ready ; 2013 ; Water Science and Technology Volume 68 ; 68 >
-    au < ready ; 2014 ; Water Science and Technology Volume 69 ; 69 >
-    au < ready ; 2014 ; Water Science and Technology Volume 70 ; 70 >
-    au < ready ; 2015 ; Water Science and Technology Volume 71 ; 71 >
-    au < ready ; 2015 ; Water Science and Technology Volume 72 ; 72 >
+    au < releasing ; 2002 ; Water Science and Technology Volume 45 ; 45 >
+    au < releasing ; 2002 ; Water Science and Technology Volume 46 ; 46 >
+    au < releasing ; 2003 ; Water Science and Technology Volume 47 ; 47 >
+    au < releasing ; 2003 ; Water Science and Technology Volume 48 ; 48 >
+    au < releasing ; 2004 ; Water Science and Technology Volume 49 ; 49 >
+    au < releasing ; 2004 ; Water Science and Technology Volume 50 ; 50 >
+    au < releasing ; 2005 ; Water Science and Technology Volume 51 ; 51 >
+    au < releasing ; 2005 ; Water Science and Technology Volume 52 ; 52 >
+    au < releasing ; 2006 ; Water Science and Technology Volume 53 ; 53 >
+    au < releasing ; 2006 ; Water Science and Technology Volume 54 ; 54 >
+    au < releasing ; 2007 ; Water Science and Technology Volume 55 ; 55 >
+    au < releasing ; 2007 ; Water Science and Technology Volume 56 ; 56 >
+    au < releasing ; 2008 ; Water Science and Technology Volume 57 ; 57 >
+    au < releasing ; 2008 ; Water Science and Technology Volume 58 ; 58 >
+    au < releasing ; 2009 ; Water Science and Technology Volume 59 ; 59 >
+    au < releasing ; 2009 ; Water Science and Technology Volume 60 ; 60 >
+    au < releasing ; 2010 ; Water Science and Technology Volume 61 ; 61 >
+    au < releasing ; 2010 ; Water Science and Technology Volume 62 ; 62 >
+    au < releasing ; 2011 ; Water Science and Technology Volume 63 ; 63 >
+    au < releasing ; 2011 ; Water Science and Technology Volume 64 ; 64 >
+    au < releasing ; 2012 ; Water Science and Technology Volume 65 ; 65 >
+    au < releasing ; 2012 ; Water Science and Technology Volume 66 ; 66 >
+    au < releasing ; 2013 ; Water Science and Technology Volume 67 ; 67 >
+    au < releasing ; 2013 ; Water Science and Technology Volume 68 ; 68 >
+    au < releasing ; 2014 ; Water Science and Technology Volume 69 ; 69 >
+    au < releasing ; 2014 ; Water Science and Technology Volume 70 ; 70 >
+    au < releasing ; 2015 ; Water Science and Technology Volume 71 ; 71 >
+    au < releasing ; 2015 ; Water Science and Technology Volume 72 ; 72 >
     au < manifest ; 2016 ; Water Science and Technology Volume 73 ; 73 >
     au < manifest ; 2016 ; Water Science and Technology Volume 74 ; 74 >
 
@@ -372,21 +372,21 @@
 
     param[base_url] = http://ws.iwaponline.com/
     
-    au < ready ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 >
-    au < ready ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 >
-    au < ready ; 2003 ; Water Science and Technology: Water Supply Volume 3 ; 3 >
-    au < ready ; 2004 ; Water Science and Technology: Water Supply Volume 4 ; 4 >
-    au < ready ; 2005 ; Water Science and Technology: Water Supply Volume 5 ; 5 >
-    au < ready ; 2006 ; Water Science and Technology: Water Supply Volume 6 ; 6 >
-    au < ready ; 2007 ; Water Science and Technology: Water Supply Volume 7 ; 7 >
-    au < ready ; 2008 ; Water Science and Technology: Water Supply Volume 8 ; 8 >
-    au < ready ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 >
-    au < ready ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 >
-    au < ready ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 >
-    au < ready ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 >
-    au < ready ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 >
-    au < ready ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 >
-    au < ready ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 >
+    au < releasing ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 >
+    au < releasing ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 >
+    au < releasing ; 2003 ; Water Science and Technology: Water Supply Volume 3 ; 3 >
+    au < releasing ; 2004 ; Water Science and Technology: Water Supply Volume 4 ; 4 >
+    au < releasing ; 2005 ; Water Science and Technology: Water Supply Volume 5 ; 5 >
+    au < releasing ; 2006 ; Water Science and Technology: Water Supply Volume 6 ; 6 >
+    au < releasing ; 2007 ; Water Science and Technology: Water Supply Volume 7 ; 7 >
+    au < releasing ; 2008 ; Water Science and Technology: Water Supply Volume 8 ; 8 >
+    au < releasing ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 >
+    au < releasing ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 >
+    au < releasing ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 >
+    au < releasing ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 >
+    au < releasing ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 >
+    au < releasing ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 >
+    au < releasing ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 >
     au < manifest ; 2016 ; Water Science and Technology: Water Supply Volume 16 ; 16 >
 
   }
