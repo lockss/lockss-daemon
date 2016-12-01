@@ -1425,10 +1425,10 @@
       >
 
     #series doi = 10.1055/b-00000029;Referenz-Reihe Neurologie: Methoden;;2198-9257
-    au < testing ; exists ; 2008 ; 9783131356628 ; 9783131883223 ; 10.1055/b-002-33672 ; EMG · NLG: Elektromyographie · Nervenleitungsuntersuchungen (9783131883223) ; >
-    au < testing ; exists ; 2011 ; 9783131407023 ; 9783131888129 ; 10.1055/b-002-19490 ; Begutachtung in der Neurologie (9783131888129) ; >
-    au < testing ; exists ; 2011 ; 9783131401021 ; 9783131883827 ; 10.1055/b-002-37738 ; EEG (9783131883827) ; >
-    au < testing ; exists ; 2014 ; 9783131356635 ; 9783131948236 ; 10.1055/b-002-96278 ; EMG NLG: Elektromyografie - Nervenleitungsuntersuchungen (9783131948236) ; >
+    au < ready ; exists ; 2008 ; 9783131356628 ; 9783131883223 ; 10.1055/b-002-33672 ; EMG · NLG: Elektromyographie · Nervenleitungsuntersuchungen (9783131883223) ; >
+    au < ready ; exists ; 2011 ; 9783131407023 ; 9783131888129 ; 10.1055/b-002-19490 ; Begutachtung in der Neurologie (9783131888129) ; >
+    au < ready ; exists ; 2011 ; 9783131401021 ; 9783131883827 ; 10.1055/b-002-37738 ; EEG (9783131883827) ; >
+    au < ready ; exists ; 2014 ; 9783131356635 ; 9783131948236 ; 10.1055/b-002-96278 ; EMG NLG: Elektromyografie - Nervenleitungsuntersuchungen (9783131948236) ; >
     au < testing ; exists ; 2017 ; 9783131367730 ; 9783132407350 ; 10.1055/b-004-132213 ; Sonografie in der Neurologie (9783132407350) ; >
 
    }
@@ -1468,7 +1468,7 @@
       >
 
     #series doi = 10.1055/b-00000032;Referenz-Reihe Neurologie: Klinische Neurologie;;2198-9249
-    au < testing ; exists ; 2012 ; 9783131369123 ; 9783131833525 ; 10.1055/b-002-21524 ; Demenzen (9783131833525) ; >
+    au < ready ; exists ; 2012 ; 9783131369123 ; 9783131833525 ; 10.1055/b-002-21524 ; Demenzen (9783131833525) ; >
     au < testing ; exists ; 2014 ; 9783135678047 ; 9783131947048 ; 10.1055/b-002-96293 ; Muskelerkrankungen (9783131947048) ; >
 
    }
@@ -1514,15 +1514,15 @@
       >
 
     #series doi = 10.1055/b-00000061;Forum Logopädie;0932-0547;2199-8043
-    au < testing ; exists ; 2008 ; 9783131184535 ; 9783131863232 ; 10.1055/b-002-7267 ; Stottern im Kindesalter (9783131863232) ; >
-    au < testing ; exists ; 2011 ; 9783137785064 ; 9783131879660 ; 10.1055/b-002-54084 ; Sprachstörungen im Kindesalter (9783131879660) ; >
-    au < testing ; exists ; 2014 ; 9783131312129 ; 9783131879721 ; 10.1055/b-002-92690 ; Poltern: Theoretische Grundlagen, Diagnostik, Therapie (9783131879721) ; >
-    au < testing ; exists ; 2014 ; 9783131709219 ; 9783131950215 ; 10.1055/b-002-101349 ; Praktische Stimmdiagnostik: Theoretischer und praktischer Leitfaden (9783131950215) ; >
+    au < ready ; exists ; 2008 ; 9783131184535 ; 9783131863232 ; 10.1055/b-002-7267 ; Stottern im Kindesalter (9783131863232) ; >
+    au < ready ; exists ; 2011 ; 9783137785064 ; 9783131879660 ; 10.1055/b-002-54084 ; Sprachstörungen im Kindesalter (9783131879660) ; >
+    au < ready ; exists ; 2014 ; 9783131312129 ; 9783131879721 ; 10.1055/b-002-92690 ; Poltern: Theoretische Grundlagen, Diagnostik, Therapie (9783131879721) ; >
+    au < ready ; exists ; 2014 ; 9783131709219 ; 9783131950215 ; 10.1055/b-002-101349 ; Praktische Stimmdiagnostik: Theoretischer und praktischer Leitfaden (9783131950215) ; >
     au < testing ; exists ; 2015 ; 9783131733412 ; 9783131952318 ; 10.1055/b-003-104194 ; Restaphasie (9783131952318) ; >
-    au < testing ; exists ; 2015 ; 9783137785071 ; 9783131956071 ; 10.1055/b-003-104352 ; Sprachstörungen im Kindesalter: Materialien zur Früherkennung und Beratung (9783131956071) ; >
+    au < ready ; exists ; 2015 ; 9783137785071 ; 9783131956071 ; 10.1055/b-003-104352 ; Sprachstörungen im Kindesalter: Materialien zur Früherkennung und Beratung (9783131956071) ; >
     au < testing ; exists ; 2015 ; 9783131184542 ; 9783131977243 ; 10.1055/b-003-125855 ; Stottern im Kindesalter (9783131977243) ; >
-    au < testing ; exists ; 2016 ; 9783131111135 ; 9783132404724 ; 10.1055/b-004-129721 ; Einführung in die Aphasiologie (9783132404724) ; >
-    au < testing ; exists ; 2016 ; 9783132006812 ; 9783132404205 ; 10.1055/b-004-129684 ; Pragmatische Störungen im Kindes- und Erwachsenenalter (9783132404205) ; >
+    au < ready ; exists ; 2016 ; 9783131111135 ; 9783132404724 ; 10.1055/b-004-129721 ; Einführung in die Aphasiologie (9783132404724) ; >
+    au < ready ; exists ; 2016 ; 9783132006812 ; 9783132404205 ; 10.1055/b-004-129684 ; Pragmatische Störungen im Kindes- und Erwachsenenalter (9783132404205) ; >
 
    }
 
@@ -1535,11 +1535,11 @@
       >
 
     #series doi = 10.1055/b-00000071;AOSpine Master Series;;2376-3426
-    au < testing ; exists ; 2015 ; 9781626232235 ; 9781626232242 ; 10.1055/b-003-122260 ; AOSpine Masters Series: Cervical Spine Trauma (9781626232242) ; >
-    au < testing ; exists ; 2015 ; 9781626231009 ; 9781626231016 ; 10.1055/b-003-121777 ; AOSpine Masters Series: Adult Spinal Deformities (9781626231016) ; >
+    au < ready ; exists ; 2015 ; 9781626232235 ; 9781626232242 ; 10.1055/b-003-122260 ; AOSpine Masters Series: Cervical Spine Trauma (9781626232242) ; >
+    au < ready ; exists ; 2015 ; 9781626231009 ; 9781626231016 ; 10.1055/b-003-121777 ; AOSpine Masters Series: Adult Spinal Deformities (9781626231016) ; >
     au < testing ; exists ; 2015 ; 9781626230507 ; 9781626230514 ; 10.1055/b-003-120934 ; AOSpine Masters Series: Cervical Degenerative Conditions (9781626230514) ; >
-    au < testing ; exists ; 2016 ; 9781626232259 ; 9781626232266 ; 10.1055/b-003-128237 ; AO Spine Masters Series: Thoracolumbar Spine Trauma (9781626232266) ; >
-    au < testing ; exists ; 2017 ; 9781626232273 ; 9781626232280 ; 10.1055/b-004-135644 ; AOSpine Masters Series: Spinal Cord Injury and Regeneration (9781626232280) ; >
+    au < ready ; exists ; 2016 ; 9781626232259 ; 9781626232266 ; 10.1055/b-003-128237 ; AO Spine Masters Series: Thoracolumbar Spine Trauma (9781626232266) ; >
+    au < ready ; exists ; 2017 ; 9781626232273 ; 9781626232280 ; 10.1055/b-004-135644 ; AOSpine Masters Series: Spinal Cord Injury and Regeneration (9781626232280) ; >
     au < ready ; exists ; 2017 ; 9781626232297 ; 9781626232303 ; 10.1055/b-004-139123 ; AOSpine Masters Series: Back Pain (9781626232303) ; >
 
    }
@@ -1555,7 +1555,7 @@
     au < testing ; exists ; 2008 ; 9783131189219 ; 9783131839411 ; 10.1055/b-003-125755 ; Category 5, Compounds with One Saturated Carbon Heteroatom Bond: Sulfur, Selenium, and Tellurium (9783131839411) ; >
     au < testing ; exists ; 2008 ; 9783131188915 ; 9783131839213 ; 10.1055/b-003-117813 ; Category 5, Compounds with One Saturated Carbon Heteroatom Bond: Ethers (9783131839213) ; >
     au < testing ; exists ; 2008 ; 9783131188816 ; 9783131839114 ; 10.1055/b-003-125753 ; Category 5, Compounds with One Saturated Carbon Heteroatom Bond: Alcohols (9783131839114) ; >
-    au < testing ; exists ; 2008 ; 9783131189615 ; 9783131839916 ; 10.1055/b-003-125760 ; Category 6, Compounds with All-Carbon Functions: Polyynes, Arynes, Enynes, and Alkynes (9783131839916) ; >
+    au < ready ; exists ; 2008 ; 9783131189615 ; 9783131839916 ; 10.1055/b-003-125760 ; Category 6, Compounds with All-Carbon Functions: Polyynes, Arynes, Enynes, and Alkynes (9783131839916) ; >
     au < testing ; exists ; 2008 ; 9783131189714 ; 9783131840110 ; 10.1055/b-003-125761 ; Category 6, Compounds with All-Carbon Functions: Cumulenes and Allenes (9783131840110) ; >
     au < testing ; exists ; 2008 ; 9783131188410 ; 9783131838612 ; 10.1055/b-003-125758 ; Science of Synthesis: Houben-Weyl Methods of Molecular Transformations: X-Ene-X (X=F, Cl, Br, I, O, S, Se, Te, N, P), Ene-Hal, and Ene-O Compounds (9783131838612) ; >
     au < testing ; exists ; 2009 ; 9783131462510 ; 9783131839619 ; 10.1055/b-003-125757 ; Category 5, Compounds with One Saturated Carbon Heteroatom Bond: Amine N-Oxides, Haloamines, Hydroxylamines and Sulfur Analogues, and Hydrazines (9783131839619) ; >
