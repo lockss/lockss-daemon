@@ -301,7 +301,7 @@
     param[journal_id] = ab
 
     au < finished ; finished ; 2014 ; Advances in Biology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Biology Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Biology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -539,7 +539,7 @@
     param[journal_id] = aen
 
     au < finished ; finished ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Endocrinology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -704,7 +704,7 @@
     au < manifest ; exists ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; >
     au < deepCrawl ; exists ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Advances in High Energy Physics Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -770,7 +770,7 @@
     au < manifest ; exists ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Mathematical Physics Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Advances in Mathematical Physics Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -936,7 +936,7 @@
     param[journal_id] = anurs
 
     au < finished ; finished ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Nursing Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Advances in Nursing Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -1120,7 +1120,7 @@
     au < manifest ; exists ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Advances in Pharmacological Sciences Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -1450,7 +1450,7 @@
     param[journal_id] = acp
 
     au < finished ; finished ; 2014 ; Analytical Cellular Pathology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Analytical Cellular Pathology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Analytical Cellular Pathology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Analytical Cellular Pathology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2082,7 +2082,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < deepCrawl ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2139,7 +2139,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Hepatology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2445,7 +2445,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Case Reports in Rheumatology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2521,7 +2521,7 @@
     au < manifest ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Case Reports in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Case Reports in Vascular Medicine Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2825,7 +2825,7 @@
     au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Current Gerontology and Geriatrics Research Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2998,7 +2998,7 @@
     au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 ; >
     au < manifest ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; >
     au < deepCrawl ; exists ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Disease Markers Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3563,7 +3563,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Atmospheric Sciences Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Atmospheric Sciences Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3580,7 +3580,7 @@
 
     au < manifest ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Bacteriology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Bacteriology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Bacteriology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3642,7 +3642,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Biomedical Imaging Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3698,7 +3698,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Carbohydrate Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -3899,7 +3899,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; International Journal of Differential Equations Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Differential Equations Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Differential Equations Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4062,7 +4062,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Evolutionary Biology Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -4082,7 +4082,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; International Journal of Family Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Family Medicine Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Family Medicine Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -4356,7 +4356,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Medicinal Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4417,7 +4417,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Microwave Science and Technology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4451,7 +4451,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Molecular Imaging Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Molecular Imaging Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4895,7 +4895,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; International Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -5890,7 +5890,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Construction Engineering Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -6174,7 +6174,7 @@
     au < manifest ; exists ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Environmental and Public Health Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -7381,7 +7381,7 @@
     au < manifest ; exists ; 2012 ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Skin Cancer Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Skin Cancer Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Skin Cancer Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Skin Cancer Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Skin Cancer Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -8014,7 +8014,7 @@
     au < manifest ; exists ; 2012 ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Multiple Sclerosis International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Multiple Sclerosis International Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Multiple Sclerosis International Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Multiple Sclerosis International Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Multiple Sclerosis International Volume 2016 ; 2016 ; 2016 ; >
     
   }
@@ -8695,7 +8695,7 @@
     au < manifest ; exists ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Schizophrenia Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Schizophrenia Research and Treatment Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Schizophrenia Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
 
   }
