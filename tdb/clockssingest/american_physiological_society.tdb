@@ -104,7 +104,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; reingest4.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; >
 
     }
@@ -760,10 +760,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Cell Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Cell Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Cell Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Cell Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Cell Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Cell Physiology Volume 311 ; 311 ; >
 
@@ -934,10 +934,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Endocrinology and Metabolism Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Endocrinology and Metabolism Volume 311 ; 311 ; >
 
@@ -1109,10 +1109,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 311 ; 311 ; >
 
@@ -1283,10 +1283,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; reingest2.clockss.org:8085 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; >
 
@@ -1407,10 +1407,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 ; reingest5.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 311 ; 311 ; >
 
@@ -1581,10 +1581,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; reingest3.clockss.org:8083 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 311 ; 311 ; >
 
@@ -1756,10 +1756,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 ; reingest2.clockss.org:8085 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Renal Physiology Volume 308 ; 308 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; American Journal of Physiology - Renal Physiology Volume 309 ; 309 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Renal Physiology Volume 308 ; 308 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; American Journal of Physiology - Renal Physiology Volume 309 ; 309 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Renal Physiology Volume 310 ; 310 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; American Journal of Physiology - Renal Physiology Volume 311 ; 311 ; >
 
@@ -2257,10 +2257,10 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Journal of Neurophysiology Volume 113 ; 113 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Journal of Neurophysiology Volume 114 ; 114 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Journal of Neurophysiology Volume 113 ; 113 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Journal of Neurophysiology Volume 114 ; 114 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Neurophysiology Volume 115 ; 115 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Neurophysiology Volume 116 ; 116 ; >
 
@@ -2378,7 +2378,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2013 ; Physiological Genomics Volume 45 ; 45 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiological Genomics Volume 46 ; 46 ; reingest3.clockss.org:8083 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Physiological Genomics Volume 47 ; 47 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Physiological Genomics Volume 47 ; 47 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Physiological Genomics Volume 48 ; 48 ; >
 
     }
@@ -2588,8 +2588,8 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 ; >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Physiological Reviews Volume 95 ; 95 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Physiological Reviews Volume 95 ; 95 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Physiological Reviews Volume 96 ; 96 ; >
 
     }
@@ -2670,7 +2670,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Physiology Volume 27 ; 27 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; frozen ; 2013 ; Physiology Volume 28 ; 28 ; >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-      au < aps.ClockssAPSDrupalPlugin ; deepCrawl ; exists ; 2015 ; Physiology Volume 30 ; 30 ; >
+      au < aps.ClockssAPSDrupalPlugin ; frozen ; exists ; 2015 ; Physiology Volume 30 ; 30 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Physiology Volume 31 ; 31 ; >
 
     }
