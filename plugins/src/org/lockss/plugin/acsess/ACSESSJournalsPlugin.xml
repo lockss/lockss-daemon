@@ -9,9 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
-    <entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!--  for content validation-->
+    <string>1.70.2</string>
+  </entry>  
+  <entry>
     <string>plugin_name</string>
     <string>Alliance of Crop, Soil, and Environmental Science Societies Journals Plugin</string>
   </entry>
@@ -138,6 +143,12 @@
       </entry>
     </map>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.acsess.ACSESSJournalsHttpResponseHandler</string>
+    </list>
+  </entry>    
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.acsess.ACSESSJournalsHtmlHashFilterFactory</string>
