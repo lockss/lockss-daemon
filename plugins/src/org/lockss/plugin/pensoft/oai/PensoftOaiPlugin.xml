@@ -57,7 +57,7 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=)?$", url_host(base_url)</string>
       <string>1,"^%s(articles|article_preview)\.php\?id=[0-9]+$", base_url</string>
-      <string>1,"^%soai\.php.*lockss$", base_url</string>
+      <string>1,"^%sauid=.*$", base_url</string>
       <string>1,"^%slib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
       <string>1,"^%slib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
     </list>
@@ -129,7 +129,7 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>[.](css|js|svg)([?].+)?$</string>
-      <string>oai\.php.*lockss$</string>
+      <string>/auid=.*$</string>
     </list>
   </entry>
   <entry>
@@ -137,7 +137,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"[.](css|js|svg)([?].+)?$", 0</string>
-      <string>"oai\.php.*lockss$", 0</string>
+      <string>"/auid=.*$", 0</string>
     </list>
   </entry>
 </map>

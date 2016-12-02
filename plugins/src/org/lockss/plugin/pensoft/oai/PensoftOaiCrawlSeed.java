@@ -34,10 +34,13 @@ package org.lockss.plugin.pensoft.oai;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,6 +51,7 @@ import org.lockss.plugin.UrlData;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
@@ -83,49 +87,57 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
-	      throws ConfigurationException {
-	    try {
-	      String storeUrl = baseUrl + oaiUrlPostfix + "&source=lockss";
-	      String link;
-	      Boolean error = false;
-	      Collection<String> idList = new HashSet<String>();
-	      try {
-		      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
-		           recIter.hasNext();) {
-		        Record rec = recIter.next();
-		        MetadataSearch<String> metaSearch = 
-		            rec.getMetadata().getValue().searcher();
-		        if (checkMetaRules(metaSearch)) {
-		        	link = findRecordArticleLink(rec);
-		        	if(link != null) {
-		        		idList.add(link);
-		        	}
-		        }
-		      }
-	      } catch (InvalidOAIResponse e) {
-	    	  error = true;
-	    	  logger.debug("Error retreiving OAI results. Trying alternate start Url", e);
+		  throws ConfigurationException, IOException {
+      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+      String link;
+      Boolean error = false;
+      Set<String> idSet = new HashSet<String>();
+      try {
+	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
+	           recIter.hasNext();) {
+	        Record rec = recIter.next();
+	        MetadataSearch<String> metaSearch = 
+	            rec.getMetadata().getValue().searcher();
+	        if (checkMetaRules(metaSearch)) {
+	        	link = findRecordArticleLink(rec);
+	        	if(link != null) {
+	        		idSet.add(link);
+	        	}
+	        }
 	      }
-	      if(error) {
-	    	  idList.add(storeUrl);
-	      } else {
-	    	  storeStartUrls(idList, storeUrl);
-	      }
-	      return idList;
-	    } catch (BadArgumentException | IOException e) {
-	      throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
-	    }
+      } catch (InvalidOAIResponse e) {
+    	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
+    		  error = true;
+    		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
+    	  } else {
+    		  throw e;
+    	  }
+      } catch (BadArgumentException e) {
+    	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
+      }
+      
+      List<String> idList = new ArrayList<String>();
+	  if(error) {
+		  idList.add(storeUrl);
+	  } else if(!idSet.isEmpty()) {
+		  idList.addAll(idSet);
+		  Collections.sort(idList);
+		  storeStartUrls(idList, storeUrl);
 	  }
+	  return idList;
+  }
   
   protected void storeStartUrls(Collection<String> urlList, String url) throws IOException {
-	  String page = "<html>\n";
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("<html>\n");
 	  for (String u : urlList) {
-		  page = page.concat("<a href=\"" + u + "\">" + u + "</a></br>\n");
+		  sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
 	  }
-	  page = page.concat("</html>");
+	  sb.append("</html>");
 	  CIProperties headers = new CIProperties();
+	  //Should use a constant here
 	  headers.setProperty("content-type", "text/html; charset=utf-8");
-      UrlData ud = new UrlData(new StringInputStream(page), headers, url);
+      UrlData ud = new UrlData(new StringInputStream(sb.toString()), headers, url);
       UrlCacher cacher = facade.makeUrlCacher(ud);
       cacher.storeContent();
   }

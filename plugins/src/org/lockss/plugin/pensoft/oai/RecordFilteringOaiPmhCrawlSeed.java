@@ -144,7 +144,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
    * @throws ConfigurationException
    */
   protected Collection<String> getRecordList(ListRecordsParameters params)
-      throws ConfigurationException {
+      throws ConfigurationException, IOException {
     try {
       Collection<String> idList = new ArrayList<String>();
       for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
