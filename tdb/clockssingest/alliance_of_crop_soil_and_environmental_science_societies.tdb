@@ -270,8 +270,8 @@
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < finished ; finished ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
     au < crawling ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
 
   }
