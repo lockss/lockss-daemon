@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.pensoft.oai;
 
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -43,10 +43,15 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
+import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
 import com.lyncode.xoai.serviceprovider.model.Context;
 import com.lyncode.xoai.serviceprovider.model.Context.KnownTransformer;
 import com.lyncode.xoai.serviceprovider.parameters.ListRecordsParameters;
@@ -80,25 +85,50 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected Collection<String> getRecordList(ListRecordsParameters params)
 	      throws ConfigurationException {
 	    try {
+	      String storeUrl = baseUrl + oaiUrlPostfix + "&source=lockss";
 	      String link;
+	      Boolean error = false;
 	      Collection<String> idList = new HashSet<String>();
-	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
-	           recIter.hasNext();) {
-	        Record rec = recIter.next();
-	        MetadataSearch<String> metaSearch = 
-	            rec.getMetadata().getValue().searcher();
-	        if (checkMetaRules(metaSearch)) {
-	        	link = findRecordArticleLink(rec);
-	        	if(link != null) {
-	        		idList.add(link);
-	        	}
-	        }
+	      try {
+		      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
+		           recIter.hasNext();) {
+		        Record rec = recIter.next();
+		        MetadataSearch<String> metaSearch = 
+		            rec.getMetadata().getValue().searcher();
+		        if (checkMetaRules(metaSearch)) {
+		        	link = findRecordArticleLink(rec);
+		        	if(link != null) {
+		        		idList.add(link);
+		        	}
+		        }
+		      }
+	      } catch (InvalidOAIResponse e) {
+	    	  error = true;
+	    	  logger.debug("Error retreiving OAI results. Trying alternate start Url", e);
+	      }
+	      if(error) {
+	    	  idList.add(storeUrl);
+	      } else {
+	    	  storeStartUrls(idList, storeUrl);
 	      }
 	      return idList;
-	    } catch (BadArgumentException e) {
+	    } catch (BadArgumentException | IOException e) {
 	      throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
 	    }
 	  }
+  
+  protected void storeStartUrls(Collection<String> urlList, String url) throws IOException {
+	  String page = "<html>\n";
+	  for (String u : urlList) {
+		  page = page.concat("<a href=\"" + u + "\">" + u + "</a></br>\n");
+	  }
+	  page = page.concat("</html>");
+	  CIProperties headers = new CIProperties();
+	  headers.setProperty("content-type", "text/html; charset=utf-8");
+      UrlData ud = new UrlData(new StringInputStream(page), headers, url);
+      UrlCacher cacher = facade.makeUrlCacher(ud);
+      cacher.storeContent();
+  }
   
   protected String findRecordArticleLink(Record rec) { 
 	  MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
