@@ -299,6 +299,12 @@ public class PluginManager
       URL_CONTENT_WS_PREFIX + "timeoutValue";
   public static final int DEFAULT_URL_CONTENT_WS_TIMEOUT_VALUE = 600;
 
+  /**
+   * The Index REST web service location.
+   */
+  public static final String PARAM_REST_SERVICE_LOCATION =
+      URL_LIST_WS_PREFIX + "restServiceLocation";
+
   public static final List NON_USER_SETTABLE_AU_PARAMS =
     Collections.unmodifiableList(new ArrayList());
 

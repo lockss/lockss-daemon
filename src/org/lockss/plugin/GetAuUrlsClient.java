@@ -30,17 +30,25 @@ package org.lockss.plugin;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.GenericType;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
+import org.jboss.resteasy.client.jaxrs.BasicAuthentication;
+import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 import org.lockss.config.CurrentConfig;
 import org.lockss.util.Logger;
 import org.lockss.ws.status.DaemonStatusService;
 
 /**
- * A client for the DaemonStatusService.getAuUrls() web service operation.
+ * A client for the DaemonStatusService.getAuUrls() web service operation or for
+ * the equivalent Index REST web service.
  */
 public class GetAuUrlsClient {
   private static Logger log = Logger.getLogger(GetAuUrlsClient.class);
@@ -60,10 +68,74 @@ public class GetAuUrlsClient {
   public List<String> getAuUrls(String auId) {
     final String DEBUG_HEADER = "getAuUrls(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
-    try {
-      return getProxy().getAuUrls(auId, null);
-    } catch (Exception e) {
-      exceptions.put(auId, e);
+
+    // Get the configured REST service location.
+    String restServiceLocation =
+	CurrentConfig.getParam(PluginManager.PARAM_REST_SERVICE_LOCATION);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "restServiceLocation = "
+	+ restServiceLocation);
+
+    // Check whether a REST service location has been configured.
+    if (restServiceLocation != null
+	&& restServiceLocation.trim().length() > 0) {
+      // Yes: Get the Archival Unit URLs from the REST service.
+      try {
+	// Create a REST service client.
+	Client client = ClientBuilder.newClient();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "client = '" + client + "'");
+
+	// Create the client target.
+	ResteasyWebTarget webTarget =
+	    (ResteasyWebTarget)client.target(restServiceLocation);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "webTarget = '" + webTarget + "'");
+
+	// Provide the authentication credentials.
+	String userName =
+	    CurrentConfig.getParam(PluginManager.PARAM_URL_LIST_WS_USER_NAME);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "userName = '" + userName + "'");
+	String password =
+	    CurrentConfig.getParam(PluginManager.PARAM_URL_LIST_WS_PASSWORD);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "password = '" + password + "'");
+
+	webTarget.register(new BasicAuthentication(userName, password));
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "webTarget = '" + webTarget + "'");
+
+	// Make the request and get the response.
+	String encodedAuId = URLEncoder.encode(auId, "UTF-8");
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "encodedAuId = '" + encodedAuId + "'");
+
+	List<Url> result = webTarget.path("aus").path(encodedAuId).path("urls")
+	    .request().accept("application/json").get()
+	    .readEntity(new GenericType<List<Url>>(){});
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+
+	// Prepare the results.
+	List<String> urls = new ArrayList<String>();
+
+	for (Url url : result) {
+	  urls.add(url.getUrl());
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "urls = " + urls);
+	return urls;
+      } catch (Exception e) {
+	log.error("Caught exception accessing REST service", e);
+	exceptions.put(auId, e);
+      }
+    } else {
+      // No: Get the Archival Unit URLs from the non-REST service.
+      try {
+	return getProxy().getAuUrls(auId, null);
+      } catch (Exception e) {
+	log.error("Caught exception accessing non-REST service", e);
+	exceptions.put(auId, e);
+      }
     }
 
     return null;
@@ -137,5 +209,54 @@ public class GetAuUrlsClient {
    */
   public static Exception getAndDeleteAnyException(String auId) {
     return exceptions.remove(auId);
+  }
+
+  /**
+   * The object returned by the REST web service.
+   */
+  public static class Url {
+    private String url = null;
+    private WarcRecordIndex warcRecordIndex = null;
+
+    public String getUrl() {
+      return url;
+    }
+    public void setUrl(String url) {
+      this.url = url;
+    }
+
+    public WarcRecordIndex getWarcRecordIndex() {
+      return warcRecordIndex;
+    }
+    public void setWarcRecordIndex(WarcRecordIndex warcRecordIndex) {
+      this.warcRecordIndex = warcRecordIndex;
+    }
+
+    public static class WarcRecordIndex {
+      private String uri = null;
+      private Integer timestamp = null;
+      private Integer offset = null;
+
+      public String getUri() {
+        return uri;
+      }
+      public void setUri(String uri) {
+        this.uri = uri;
+      }
+
+      public Integer getTimestamp() {
+        return timestamp;
+      }
+      public void setTimestamp(Integer timestamp) {
+        this.timestamp = timestamp;
+      }
+
+      public Integer getOffset() {
+        return offset;
+      }
+      public void setOffset(Integer offset) {
+        this.offset = offset;
+      }
+    }
   }
 }
