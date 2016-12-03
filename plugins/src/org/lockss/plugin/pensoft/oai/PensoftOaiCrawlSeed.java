@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.pensoft.oai;
 
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,7 +49,6 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
-import org.lockss.test.StringInputStream;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
@@ -137,7 +137,7 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	  CIProperties headers = new CIProperties();
 	  //Should use a constant here
 	  headers.setProperty("content-type", "text/html; charset=utf-8");
-      UrlData ud = new UrlData(new StringInputStream(sb.toString()), headers, url);
+      UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes("uft-8")), headers, url);
       UrlCacher cacher = facade.makeUrlCacher(ud);
       cacher.storeContent();
   }
