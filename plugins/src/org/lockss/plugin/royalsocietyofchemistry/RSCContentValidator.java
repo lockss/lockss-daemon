@@ -52,6 +52,7 @@ public class RSCContentValidator {
       String url = cu.getUrl();
       if ((StringUtil.indexOfIgnoreCase(url, PDF_1) > 0) ||
           (StringUtil.indexOfIgnoreCase(url, PDF_2) > 0)) {
+        //We want this to try and fetch again - this exception gets mapped to retry
         throw new ContentValidationException("URL MIME type mismatch");
       }
     }
