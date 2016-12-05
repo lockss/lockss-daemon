@@ -4494,7 +4494,7 @@
       param[base_url] = http://www.bmfj.eg.net/
 
       au < notReady ; exists ; 2015 ; Benha Medical Journal Volume 32 ; 2015 ; 32 ; > # no permission page see http://www.bmfj.eg.net/lockss.txt 
-      au < expected ; exists ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; >
+      au < manifest ; exists ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; >
 
   }
 
@@ -4822,7 +4822,7 @@
       au < testing ; exists ; 2013 ; Egyptian Journal of Dermatology and Venerology Volume 33 ; 2013 ; 33 ; >
       au < ready ; exists ; 2014 ; Egyptian Journal of Dermatology and Venerology Volume 34 ; 2014 ; 34 ; >
       au < crawling ; exists ; 2015 ; Egyptian Journal of Dermatology and Venerology Volume 35 ; 2015 ; 35 ; >
-      au < expected ; exists ; 2016 ; Egyptian Journal of Dermatology and Venerology Volume 36 ; 2016 ; 36 ; >
+      au < manifest ; exists ; 2016 ; Egyptian Journal of Dermatology and Venerology Volume 36 ; 2016 ; 36 ; >
 
   }
 
@@ -5991,7 +5991,7 @@
       param[journal_issn] = 2347-8128
       param[base_url] = http://www.jhnps.org/
 
-      au < expected ; exists ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 ; >
+      au < manifest ; exists ; 2016 ; Journal of Head & Neck Physicians And Surgeons Volume 4 ; 2016 ; 4 ; >
 
   }
 
@@ -7128,8 +7128,8 @@
       param[base_url] = http://www.roaic.eg.net/
 
       au < notReady ; exists ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 1 ; 2015 ; 1 ; > #no permission see http://www.roaic.eg.net/lockss.txt
-      au < exists ; exists ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2015 ; 2 ; >
-      au < exists ; exists ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 3 ; 2016 ; 3 ; >
+      au < manifest ; exists ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2015 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -7540,7 +7540,7 @@
       au < manifest ; exists ; 2013 ; The Egyptian Orthopaedic Journal Volume 48 ; 2013 ; 48 ; >
       au < testing ; exists ; 2014 ; The Egyptian Orthopaedic Journal Volume 49 ; 2014 ; 49 ; >
       au < ready ; exists ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 ; >
-      au < expected ; exists ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; >
+      au < manifest ; exists ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; >
 
   }
 
