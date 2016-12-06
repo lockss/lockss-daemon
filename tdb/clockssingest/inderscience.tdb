@@ -3192,7 +3192,7 @@
       au < finished ; finished ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 18 ; 18 ; >
+      au < testing ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 18 ; 18 ; >
 
     }
 
@@ -3248,7 +3248,7 @@
       param[journal_id] = ijepdm
 
       au < frozen ; exists ; 2010-2015 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 ; >
 
     }
 
@@ -3353,7 +3353,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; >
+      au < testing ; exists ; 2016 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; >
 
     }
 
@@ -7441,7 +7441,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Six Sigma and Competitive Advantage Volume 7 ; 7 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Six Sigma and Competitive Advantage Volume 8 ; 8 ; >
       au < finished ; finished ; 2015 ; International Journal of Six Sigma and Competitive Advantage Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 ; >
+      au < testing ; exists ; 2016 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 ; >
 
     }
 
@@ -8170,7 +8170,7 @@
       au < frozen ; exists ; 2015 ; International Journal of Technology Management Volume 69 ; 69 ; >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 70 ; 70 ; >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; >
+      au < testing ; exists ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; >
 
       }
     }
@@ -8287,7 +8287,7 @@
       param[journal_id] = ijbeam
 
       au < finished ; finished ; 2011-2015 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
 
     }
 
