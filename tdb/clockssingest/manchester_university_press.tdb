@@ -20,7 +20,7 @@
     
       param[base_url] = http://ercw.openlibrary.manchester.ac.uk/
       param[journal_id] = ercw
-      #From the website: The journal was cancelled after Volume 5, 2014
+      #From the website: The journal was cancelled after Volume 5, 2014. Moved to https.
     
       au < finished ; finished ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; Ethnicity and Race in a Changing World Volume 2 (2010) ; 2 ; >
