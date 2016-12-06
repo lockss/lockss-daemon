@@ -22,8 +22,8 @@
     param[journal_id] = arla
 
     au < manifest ; exists ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 ; >
-    au < finished ; crawling ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
 
   }
@@ -130,7 +130,7 @@
     au < manifest ; exists ; 2012 ; Advances in Dual Diagnosis Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Advances in Dual Diagnosis Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
 
   }
@@ -221,7 +221,7 @@
     au < manifest ; exists ; 2011 ; Agricultural Finance Review Volume 71 ; 71 ; >
     au < manifest ; exists ; 2012 ; Agricultural Finance Review Volume 72 ; 72 ; >
     au < manifest ; exists ; 2013 ; Agricultural Finance Review Volume 73 ; 73 ; >
-    au < finished ; crawling ; 2014 ; Agricultural Finance Review Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Agricultural Finance Review Volume 74 ; 74 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Agricultural Finance Review Volume 75 ; 75 ; >
     au < crawling ; exists ; 2016 ; Agricultural Finance Review Volume 76 ; 76 ; >
 
@@ -579,7 +579,7 @@
     au < manifest ; exists ; 2011 ; Asia-Pacific Journal of Business Administration Volume 3 ; 3 ; >
     au < manifest ; exists ; 2012 ; Asia-Pacific Journal of Business Administration Volume 4 ; 4 ; >
     au < manifest ; exists ; 2013 ; Asia-Pacific Journal of Business Administration Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2014 ; Aisa-Pacific Journal of Business Administration Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Aisa-Pacific Journal of Business Administration Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Aisa-Pacific Journal of Business Administration Volume 7 ; 7 ; >
     au < crawling ; exists ; 2016 ; Aisa-Pacific Journal of Business Administration Volume 8 ; 8 ; >
 
@@ -890,7 +890,7 @@
     au < manifest ; exists ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 2012 ; Benchmarking: An International Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 2013 ; Benchmarking: An International Journal Volume 20 ; 20 ; >
-    au < finished ; crawling ; 2014 ; Benchmarking: An International Journal Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Benchmarking: An International Journal Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Benchmarking: An International Journal Volume 22 ; 22 ; >
     au < crawling ; exists ; 2016 ; Benchmarking: An International Journal Volume 23 ; 23 ; >
 
@@ -1338,7 +1338,7 @@
     au < manifest ; exists ; 2012 ; Chinese Management Studies Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; Chinese Management Studies Volume 7 ; 7 ; >
     au < frozen ; exists ; 2014 ; Chinese Management Studies Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2015 ; Chinese Management Studies Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Chinese Management Studies Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Chinese Management Studies Volume 10 ; 10 ; >
 
   }
@@ -1535,7 +1535,7 @@
     au < manifest ; exists ; 2011 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 30 ; 30 ; >
     au < manifest ; exists ; 2012 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 31 ; 31 ; >
     au < manifest ; exists ; 2013 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 32 ; 32 ; >
-    au < finished ; crawling ; 2014 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 33 ; 33 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 34 ; 34 ; >
     au < exists ; exists ; 2016 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 35 ; 35 ; >
 
@@ -1604,7 +1604,7 @@
     au < manifest ; exists ; 2011 ; Construction Innovation: Information, Process, Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 2012 ; Construction Innovation: Information, Process, Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 2013 ; Construction Innovation: Information, Process, Management Volume 13 ; 13 ; >
-    au < finished ; crawling ; 2014 ; Construction Innovation: Information, Process, Management Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Construction Innovation: Information, Process, Management Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Construction Innovation: Information, Process, Management Volume 15 ; 15 ; >
     au < crawling ; exists ; 2016 ; Construction Innovation: Information, Process, Management Volume 16 ; 16 ; >
 
@@ -1761,7 +1761,7 @@
     au < manifest ; exists ; 2011 ; Development and Learning in Organizations Volume 25 ; 25 ; >
     au < manifest ; exists ; 2012 ; Development and Learning in Organizations Volume 26 ; 26 ; >
     au < manifest ; exists ; 2013 ; Development and Learning in Organizations Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2014 ; Development and Learning in Organizations Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Development and Learning in Organizations Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Development and Learning in Organizations Volume 29 ; 29 ; >
     au < crawling ; exists ; 2016 ; Development and Learning in Organizations Volume 30 ; 30 ; >
 
@@ -2379,7 +2379,7 @@
     au < manifest ; exists ; 2011 ; European Journal of Innovation Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2012 ; European Journal of Innovation Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 2013 ; European Journal of Innovation Management Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2014 ; European Journal of Innovation Management Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; European Journal of Innovation Management Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; European Journal of Innovation Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2016 ; European Journal of Innovation Management Volume 19 ; 19 ; >
 
@@ -3146,7 +3146,7 @@
     au < manifest ; exists ; 2011 ; info Volume 13 ; 13 ; >
     au < manifest ; exists ; 2012 ; info Volume 14 ; 14 ; >
     au < manifest ; exists ; 2013 ; info Volume 15 ; 15 ; >
-    au < finished ; crawling ; 2014 ; info Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; info Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; info Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2016 ; info Volume 18 ; 18 ; >
 
@@ -3821,7 +3821,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; International Journal of Energy Sector Management Volume 9 ; 9 ; >
     au < exists ; exists ; 2016 ; International Journal of Energy Sector Management Volume 10 ; 10 ; >
 
@@ -4010,7 +4010,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 8 ; 8 ; >
     au < exists ; exists ; 2016 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 9 ; 9 ; >
 
@@ -4056,7 +4056,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 ; >
     au < manifest ; exists ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 ; >
     au < manifest ; exists ; 2013 ; International Journal of Law in the Built Environment Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Law in the Built Environment Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Law in the Built Environment Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; International Journal of Law in the Built Environment Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Law in the Built Environment Volume 8 ; 8 ; >
 
@@ -4193,7 +4193,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Managing Projects in Business Volume 6 ; 6 ; >
     au < frozen ; exists ; 2014 ; International Journal of Managing Projects in Business Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Managing Projects in Business Volume 9 ; 9 ; >
 
   }
@@ -4260,7 +4260,7 @@
 
     au < manifest ; exists ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 ; >
     au < manifest ; exists ; 2013 ; International Journal of Mentoring and Coaching in Education Volume 2 ; 2 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Mentoring and Coaching in Education Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; International Journal of Mentoring and Coaching in Education Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; International Journal of Mentoring and Coaching in Education Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Mentoring and Coaching in Education Volume 5 ; 5 ; >
 
@@ -5314,7 +5314,7 @@
     au < manifest ; exists ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 ; >
     au < manifest ; exists ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Journal of Agribusiness in Developing and Emerging Economies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2016 ; Journal of Agribusiness in Developing and Emerging Economies Volume 6 ; 6 ; >
 
@@ -5509,7 +5509,7 @@
     au < manifest ; exists ; 2012 ; Journal of Business Strategy Volume 33 ; 33 ; >
     au < manifest ; exists ; 2013 ; Journal of Business Strategy Volume 34 ; 34 ; >
     au < frozen ; exists ; 2014 ; Journal of Business Strategy Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2015 ; Journal of Business Strategy Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Business Strategy Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Business Strategy Volume 37 ; 37 ; >
 
   }
@@ -5631,7 +5631,7 @@
     au < manifest ; exists ; 2012 ; Journal of Communication Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 2013 ; Journal of Communication Management Volume 17 ; 17 ; >
     au < finished ; crawling ; 2014 ; Journal of Communication Management Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Communication Management Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Communication Management Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Communication Management Volume 20 ; 20 ; >
 
   }
@@ -5983,7 +5983,7 @@
     au < manifest ; exists ; 2011 ; Journal of Educational Administration Volume 49 ; 49 ; >
     au < manifest ; exists ; 2012 ; Journal of Educational Administration Volume 50 ; 50 ; >
     au < manifest ; exists ; 2013 ; Journal of Educational Administration Volume 51 ; 51 ; >
-    au < finished ; crawling ; 2014 ; Journal of Educational Administration Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Educational Administration Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Educational Administration Volume 53 ; 53 ; >
     au < crawling ; exists ; 2016 ; Journal of Educational Administration Volume 54 ; 54 ; >
 
@@ -6152,7 +6152,7 @@
     au < manifest ; exists ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; Journal of European Real Estate Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of European Real Estate Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of European Real Estate Research Volume 8 ; 8 ; >
     au < exists ; exists ; 2016 ; Journal of European Real Estate Research Volume 9 ; 9 ; >
 
@@ -6233,7 +6233,7 @@
     au < manifest ; exists ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 ; >
-    au < finished ; crawling ; 2014 ; Journal of Fashion Marketing and Management Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Fashion Marketing and Management Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Journal of Fashion Marketing and Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2016 ; Journal of Fashion Marketing and Management Volume 20 ; 20 ; >
 
@@ -6319,8 +6319,8 @@
     au < manifest ; exists ; 2011 ; Journal of Financial Management of Property and Construction Volume 16 ; 16 ; >
     au < manifest ; exists ; 2012 ; Journal of Financial Management of Property and Construction Volume 17 ; 17 ; >
     au < manifest ; exists ; 2013 ; Journal of Financial Management of Property and Construction Volume 18 ; 18 ; >
-    au < finished ; crawling ; 2014 ; Journal of Financial Management of Property and Construction Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Financial Management of Property and Construction Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Financial Management of Property and Construction Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Financial Management of Property and Construction Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2016 ; Journal of Financial Management of Property and Construction Volume 21 ; 21 ; >
 
   }
@@ -6457,7 +6457,7 @@
     au < manifest ; exists ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2014 ; Journal of Historical Research in Marketing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Historical Research in Marketing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Historical Research in Marketing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Historical Research in Marketing Volume 8 ; 8 ; >
 
@@ -6642,7 +6642,7 @@
     au < manifest ; exists ; 2011 ; Journal of Intellectual Capital Volume 12 ; 12 ; >
     au < manifest ; exists ; 2012 ; Journal of Intellectual Capital Volume 13 ; 13 ; >
     au < manifest ; exists ; 2013 ; Journal of Intellectual Capital Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2014 ; Journal of Intellectual Capital Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Intellectual Capital Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Journal of Intellectual Capital Volume 16 ; 16 ; >
     au < crawling ; exists ; 2016 ; Journal of Intellectual Capital Volume 17 ; 17 ; >
 
@@ -7262,7 +7262,7 @@
     au < manifest ; exists ; 2011 ; Journal of Product & Brand Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2012 ; Journal of Product & Brand Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2013 ; Journal of Product & Brand Management Volume 22 ; 22 ; >
-    au < finished ; crawling ; 2014 ; Journal of Product & Brand Management Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Product & Brand Management Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Product & Brand Management Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Journal of Product & Brand Management Volume 25 ; 25 ; >
 
@@ -7414,7 +7414,7 @@
     au < manifest ; exists ; 2011 ; Journal of Quality in Maintenance Engineering Volume 17 ; 17 ; >
     au < manifest ; exists ; 2012 ; Journal of Quality in Maintenance Engineering Volume 18 ; 18 ; >
     au < manifest ; exists ; 2013 ; Journal of Quality in Maintenance Engineering Volume 19 ; 19 ; >
-    au < finished ; crawling ; 2014 ; Journal of Quality in Maintenance Engineering Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Quality in Maintenance Engineering Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Journal of Quality in Maintenance Engineering Volume 21 ; 21 ; >
     au < crawling ; exists ; 2016 ; Journal of Quality in Maintenance Engineering Volume 22 ; 22 ; >
 
@@ -7469,7 +7469,7 @@
     au < manifest ; exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 ; >
     au < manifest ; exists ; 2013 ; Journal of Research in Marketing and Entrepreneurship Volume 15 ; 15 ; >
     au < frozen ; exists ; 2014 ; Journal of Research in Marketing and Entrepreneurship Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2015 ; Journal of Research in Marketing and Entrepreneurship Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Journal of Research in Marketing and Entrepreneurship Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Journal of Research in Marketing and Entrepreneurship Volume 18 ; 18 ; >
 
   }
@@ -7498,7 +7498,7 @@
     au < manifest ; exists ; 2011 ; The Journal of Risk Finance Volume 12 ; 12 ; >
     au < manifest ; exists ; 2012 ; The Journal of Risk Finance Volume 13 ; 13 ; >
     au < manifest ; exists ; 2013 ; The Journal of Risk Finance Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2014 ; The Journal of Risk Finance Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; The Journal of Risk Finance Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; The Journal of Risk Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2016 ; The Journal of Risk Finance Volume 17 ; 17 ; >
 
@@ -7662,7 +7662,7 @@
     au < manifest ; exists ; 2012 ; Journal of Strategy and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Journal of Strategy and Management Volume 6 ; 6 ; >
     au < finished ; finished ; 2014 ; Journal of Strategy and Management Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Strategy and Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Strategy and Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Strategy and Management Volume 9 ; 9 ; >
 
   }
@@ -7869,7 +7869,7 @@
     au < manifest ; exists ; 2012 ; Leadership & Organization Development Journal Volume 33 ; 33 ; >
     au < manifest ; exists ; 2013 ; Leadership & Organization Development Journal Volume 34 ; 34 ; >
     au < frozen ; exists ; 2014 ; Leadership & Organization Development Journal Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2015 ; Leadership & Organization Development Journal Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Leadership & Organization Development Journal Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Leadership & Organization Development Journal Volume 37 ; 37 ; >
 
   }
@@ -8331,7 +8331,7 @@
     au < manifest ; exists ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 ; >
     au < manifest ; exists ; 2013 ; Management of Environmental Quality: An International Journal Volume 24 ; 24 ; >
-    au < finished ; crawling ; 2014 ; Management of Environmental Quality: An International Journal Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Management of Environmental Quality: An International Journal Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Management of Environmental Quality: An International Journal Volume 26 ; 26 ; >
     au < crawling ; exists ; 2016 ; Management of Environmental Quality: An International Journal Volume 27 ; 27 ; >
 
@@ -8399,8 +8399,8 @@
     au < manifest ; exists ; 2011 ; Management Research Review Volume 34 ; 34 ; >
     au < manifest ; exists ; 2012 ; Management Research Review Volume 35 ; 35 ; >
     au < manifest ; exists ; 2013 ; Management Research Review Volume 36 ; 36 ; >
-    au < finished ; crawling ; 2014 ; Management Research Review Volume 37 ; 37 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Management Research Review Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Management Research Review Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2015 ; Management Research Review Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Management Research Review Volume 39 ; 39 ; >
 
   }
@@ -8632,7 +8632,7 @@
     au < manifest ; exists ; 2011 ; Managing Service Quality Volume 21 ; 21 ; >
     au < manifest ; exists ; 2012 ; Managing Service Quality Volume 22 ; 22 ; >
     au < manifest ; exists ; 2013 ; Managing Service Quality Volume 23 ; 23 ; >
-    au < finished ; crawling ; 2014 ; Managing Service Quality Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Managing Service Quality Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -8785,7 +8785,7 @@
     au < manifest ; exists ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 ; >
     au < manifest ; exists ; 2012 ; Mental Health and Social Inclusion Volume 16 ; 16 ; >
     au < manifest ; exists ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 ; >
-    au < finished ; crawling ; 2014 ; Mental Health and Social Inclusion Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Mental Health and Social Inclusion Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Mental Health and Social Inclusion Volume 19 ; 19 ; >
     au < exists ; exists ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 ; >
 
@@ -9230,7 +9230,7 @@
     au < manifest ; exists ; 2011 ; On The Horizon Volume 19 ; 19 ; >
     au < manifest ; exists ; 2012 ; On The Horizon Volume 20 ; 20 ; >
     au < manifest ; exists ; 2013 ; On The Horizon Volume 21 ; 21 ; >
-    au < finished ; crawling ; 2014 ; On The Horizon Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; On The Horizon Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; On The Horizon Volume 23 ; 23 ; >
     au < exists ; exists ; 2016 ; On The Horizon Volume 24 ; 24 ; >
 
@@ -9285,7 +9285,7 @@
     au < manifest ; exists ; 2012 ; Online Information Review Volume 36 ; 36 ; >
     au < manifest ; exists ; 2013 ; Online Information Review Volume 37 ; 37 ; >
     au < finished ; crawling ; 2014 ; Online Information Review Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Online Information Review Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Online Information Review Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Online Information Review Volume 40 ; 40 ; >
 
   }
@@ -9482,7 +9482,7 @@
     au < manifest ; exists ; 2011 ; Pigment & Resin Technology Volume 40 ; 40 ; >
     au < manifest ; exists ; 2012 ; Pigment & Resin Technology Volume 41 ; 41 ; >
     au < manifest ; exists ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 ; >
-    au < finished ; crawling ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Pigment & Resin Technology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Pigment & Resin Technology Volume 44 ; 44 ; >
     au < exists ; exists ; 2016 ; Pigment & Resin Technology Volume 45 ; 45 ; >
 
@@ -9723,7 +9723,7 @@
     au < manifest ; exists ; 2011 ; Qualitative Research in Accounting & Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 2012 ; Qualitative Research in Accounting & Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 2013 ; Qualitative Research in Accounting & Management Volume 10 ; 10 ; >
-    au < finished ; crawling ; 2014 ; Qualitative Research in Accounting & Management Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Qualitative Research in Accounting & Management Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Qualitative Research in Accounting & Management Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Qualitative Research in Accounting & Management Volume 13 ; 13 ; >
 
@@ -9830,7 +9830,7 @@
     au < manifest ; exists ; 2011 ; Quality Assurance in Education Volume 19 ; 19 ; >
     au < manifest ; exists ; 2012 ; Quality Assurance in Education Volume 20 ; 20 ; >
     au < manifest ; exists ; 2013 ; Quality Assurance in Education Volume 21 ; 21 ; >
-    au < finished ; crawling ; 2014 ; Quality Assurance in Education Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Quality Assurance in Education Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Quality Assurance in Education Volume 23 ; 23 ; >
     au < exists ; exists ; 2016 ; Quality Assurance in Education Volume 24 ; 24 ; >
 
@@ -9937,8 +9937,8 @@
     au < manifest ; exists ; 2011 ; Records Management Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2012 ; Records Management Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2013 ; Records Management Journal Volume 23 ; 23 ; >
-    au < finished ; crawling ; 2014 ; Records Management Journal Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Records Management Journal Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Records Management Journal Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Records Management Journal Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Records Management Journal Volume 26 ; 26 ; >
 
   }
@@ -9972,7 +9972,7 @@
     au < manifest ; exists ; 2011 ; Reference Reviews Volume 25 ; 25 ; >
     au < manifest ; exists ; 2012 ; Reference Reviews Volume 26 ; 26 ; >
     au < manifest ; exists ; 2013 ; Reference Reviews Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2014 ; Reference Reviews Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Reference Reviews Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Reference Reviews Volume 29 ; 29 ; >
     au < exists ; exists ; 2016 ; Reference Reviews Volume 30 ; 30 ; >
 
@@ -10058,7 +10058,7 @@
     au < manifest ; exists ; 2011 ; Review of Accounting and Finance Volume 10 ; 10 ; >
     au < manifest ; exists ; 2012 ; Review of Accounting and Finance Volume 11 ; 11 ; >
     au < manifest ; exists ; 2013 ; Review of Accounting and Finance Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2014 ; Review of Accounting and Finance Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Review of Accounting and Finance Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Review of Accounting and Finance Volume 14 ; 14 ; >
     au < exists ; exists ; 2016 ; Review of Accounting and Finance Volume 15 ; 15 ; >
 
@@ -10225,7 +10225,7 @@
     au < manifest ; exists ; 2011 ; Social Enterprise Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 2012 ; Social Enterprise Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2013 ; Social Enterprise Journal Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2014 ; Social Enterprise Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Social Enterprise Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Social Enterprise Journal Volume 11 ; 11 ; >
     au < exists ; exists ; 2016 ; Social Enterprise Journal Volume 12 ; 12 ; >
 
@@ -10384,7 +10384,7 @@
     au < manifest ; exists ; 2011 ; Strategic Direction Volume 27 ; 27 ; >
     au < manifest ; exists ; 2012 ; Strategic Direction Volume 28 ; 28 ; >
     au < manifest ; exists ; 2013 ; Strategic Direction Volume 29 ; 29 ; >
-    au < finished ; crawling ; 2014 ; Strategic Direction Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Strategic Direction Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Strategic Direction Volume 31 ; 31 ; >
     au < exists ; exists ; 2016 ; Strategic Direction Volume 32 ; 32 ; >
 
@@ -10411,7 +10411,7 @@
     au < manifest ; exists ; 2011 ; Strategic HR Review Volume 10 ; 10 ; >
     au < manifest ; exists ; 2012 ; Strategic HR Review Volume 11 ; 11 ; >
     au < manifest ; exists ; 2013 ; Strategic HR Review Volume 12 ; 12 ; >
-    au < finished ; crawling ; 2014 ; Strategic HR Review Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Strategic HR Review Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Strategic HR Review Volume 14 ; 14 ; >
     au < exists ; exists ; 2016 ; Strategic HR Review Volume 15 ; 15 ; >
 
@@ -10623,7 +10623,7 @@
     au < manifest ; exists ; 2012 ; Supply Chain Management: An International Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 2013 ; Supply Chain Management: An International Journal Volume 18 ; 18 ; >
     au < finished ; crawling ; 2014 ; Supply Chain Management: An International Journal Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Supply Chain Management: An International Journal Volume 21 ; 21 ; >
 
   }
@@ -10644,7 +10644,7 @@
     au < manifest ; exists ; 2011 ; Sustainability Accounting, Management and Policy Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 2012 ; Sustainability Accounting, Management and Policy Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 2013 ; Sustainability Accounting, Management and Policy Journal Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2014 ; Sustainability Accounting, Management and Policy Journal Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Sustainability Accounting, Management and Policy Journal Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Sustainability Accounting, Management and Policy Journal Volume 6 ; 6 ; >
     au < exists ; exists ; 2016 ; Sustainability Accounting, Management and Policy Journal Volume 7 ; 7 ; >
 
@@ -10736,7 +10736,7 @@
 
     au < manifest ; exists ; 2012 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 33 ; 33 ; >
     au < manifest ; exists ; 2013 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 34 ; 34 ; >
-    au < finished ; crawling ; 2014 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 36 ; 36 ; >
     au < exists ; exists ; 2016 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 37 ; 37 ; >
 
@@ -11002,7 +11002,7 @@
     au < manifest ; exists ; 2011 ; VINE Volume 41 ; 41 ; >
     au < manifest ; exists ; 2012 ; VINE Volume 42 ; 42 ; >
     au < manifest ; exists ; 2013 ; VINE Volume 43 ; 43 ; >
-    au < finished ; crawling ; 2014 ; VINE Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; VINE Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; VINE Volume 45 ; 45 ; >
     au < expected ; exists ; 2016 ; VINE Volume 46 ; 46 ; >
 

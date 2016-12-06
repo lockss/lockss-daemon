@@ -923,7 +923,7 @@
       param[journal_id] = jmmcr
 
       au < manifest ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2015 ; JMM Case Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; >
 
     }

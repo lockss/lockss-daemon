@@ -217,7 +217,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Arms & Armour Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Arms & Armour Volume 9 ; 9 ; >
     au < finished ; finished ; 2013 ; Arms & Armour Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Arms & Armour Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Arms & Armour Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Arms & Armour Volume 12 ; 12 ; reingest5.clockss.org:8082 >
 
   }
@@ -642,7 +642,7 @@
     au < frozen ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; The Cartographic Journal Volume 49 ; 49 ; >
     au < frozen ; exists ; 2013 ; The Cartographic Journal Volume 50 ; 50 ; >
-    au < finished ; crawling ; 2014 ; The Cartographic Journal Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; The Cartographic Journal Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; The Cartographic Journal Volume 52 ; 52 ; >
 
   }
@@ -1711,7 +1711,7 @@
     
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Healthcare Management Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; International Journal of Healthcare Management Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; International Journal of Healthcare Management Volume 8 ; 8 ; >
 
   }  
@@ -2461,7 +2461,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 ; >
     au < finished ; finished ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < down ; finished ; 2014 ; Journal of Spinal Cord Medicine Volume 37 ; 37 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Spinal Cord Medicine Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Spinal Cord Medicine Volume 38 ; 38 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2962,7 +2962,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Medieval Sermon Studies Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 ; >
     au < finished ; finished ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Medieval Sermon Studies Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Medieval Sermon Studies Volume 59 ; 59 ; >
 
   }
@@ -3305,7 +3305,7 @@
     au < frozen ; exists ; 2011 ; Neurological Research Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Neurological Research Volume 34 ; 34 ; >
     au < frozen ; exists ; 2013 ; Neurological Research Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2014 ; Neurological Research Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Neurological Research Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Neurological Research Volume 37 ; 37 ; >
 
   }
@@ -4232,7 +4232,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Survey Review Volume 43 ; 43 ; > 
     au < doNotProcess ; doNotProcess ; 2012 ; Survey Review Volume 44 ; 44 ; >
     au < finished ; crawling ; 2013 ; Survey Review Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Survey Review Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Survey Review Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Survey Review Volume 47 ; 47 ; >
 
   }

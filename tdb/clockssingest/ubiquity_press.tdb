@@ -126,7 +126,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://poetry.openlibhums.org/
 
-      au < finished ; crawling ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
 
   }
@@ -141,7 +141,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = https://olh.openlibhums.org/
 
-      au < finished ; crawling ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
 
   }
@@ -229,7 +229,7 @@
       param[base_url] = http://www.rurallandscapesjournal.com/
 
       au < finished ; crawling ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
 
   }
@@ -372,7 +372,7 @@
       au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; >
 
   }
@@ -413,8 +413,8 @@
       au < crawling ; exists ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; >
-      au < finished ; crawling ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; >
 
   }
@@ -516,7 +516,7 @@
       au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; >
 
   }
@@ -652,7 +652,7 @@
       param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < finished ; crawling ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2014 ; 2 ; Journal of Open Health Data Volume 2014 ; 2014 ; >
       au < finished ; finished ; 2015 ; 3 ; Journal of Open Health Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Health Data Volume 2016 ; 2016 ; >
 
@@ -685,7 +685,7 @@
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; >
 
   }
@@ -916,7 +916,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; >
 
   }
@@ -1063,7 +1063,7 @@
       au < crawling ; exists ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; >
 
   }
