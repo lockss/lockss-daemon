@@ -29,10 +29,10 @@
       param[base_url] = http://sp.sepmonline.org/
 
       au < crawling ; exists ; 1929 ; 978-1-56576-202-2 ; Bibliography of Otoliths Volume 1 ; sepspbib ; >
-      au < ready ; exists ; 1951 ; 978-1-56576-203-9 ; Turbidity Currents and the Transportation of Coarse Sediments to Deep Water Volume 2 ; sepsptur ; >
-      au < ready ; exists ; 1955 ; 978-1-56576-204-6 ; Finding Ancient Shorelines Volume 3 ; sepspfin ; >
-      au < ready ; exists ; 1955 ; 978-1-56576-205-3 ; Recent Marine Sediments Volume 4 ; sepsprec ; >
-      au < ready ; exists ; 1957 ; 978-1-56576-206-0 ; Regional Aspects of Carbonate Deposition Volume 5 ; sepspreg ; >
+      au < crawling ; exists ; 1951 ; 978-1-56576-203-9 ; Turbidity Currents and the Transportation of Coarse Sediments to Deep Water Volume 2 ; sepsptur ; >
+      au < crawling ; exists ; 1955 ; 978-1-56576-204-6 ; Finding Ancient Shorelines Volume 3 ; sepspfin ; >
+      au < crawling ; exists ; 1955 ; 978-1-56576-205-3 ; Recent Marine Sediments Volume 4 ; sepsprec ; >
+      au < crawling ; exists ; 1957 ; 978-1-56576-206-0 ; Regional Aspects of Carbonate Deposition Volume 5 ; sepspreg ; >
       au < crawling ; exists ; 1958 ; 978-1-56576-207-7 ; Journal of Sedimentary Petrology Index Volume 6 ; sepspjou ; >
       au < crawling ; exists ; 1959 ; 978-1-56576-208-4 ; Silica in Sediments Volume 7 ; sepspsil ; >
       au < crawling ; exists ; 1960 ; 978-1-56576-209-1 ; Journal of Paleontology Index  Volume 8 ; sepspjpi ; >
@@ -45,22 +45,22 @@
       au < crawling ; exists ; 1970 ; 978-1-56576-145-2 ; Deltaic Sedimentation - Modern and Ancient Volume 15 ; sepspdel ; >
       au < crawling ; exists ; 1972 ; 978-1-56576-146-9 ; Recognition of Ancient Sedimentary Environments Volume 16 ; sepspreo ; >
       au < crawling ; exists ; 1972 ; 978-1-56576-147-6 ; Sedimentation in the World Ocean: With Emphasis on the Nature,Distribution and Behavior of Marine Suspensions Volume 17 ; sepspsed ; >
-      au < ready ; exists ; 1974 ; 978-1-56576-148-3 ; Reefs in Time and Space: Selected Examples for the Recent and Ancient Volume 18 ; sepspree ; >
-      au < ready ; exists ; 1974 ; 978-1-56576-149-0 ; Modern and Ancient Geosynclinal Sedimentation Volume 19 ; sepspmod ; >
+      au < crawling ; exists ; 1974 ; 978-1-56576-148-3 ; Reefs in Time and Space: Selected Examples for the Recent and Ancient Volume 18 ; sepspree ; >
+      au < crawling ; exists ; 1974 ; 978-1-56576-149-0 ; Modern and Ancient Geosynclinal Sedimentation Volume 19 ; sepspmod ; >
       au < crawling ; exists ; 1974 ; 978-1-56576-150-6 ; Studies in Paleo-Oceanography Volume 20 ; sepspstu ; >
-      au < ready ; exists ; 1974 ; 978-1-56576-151-3 ; Paleogeographic Provinces and Provinciality Volume 21 ; sepsppae ; >
-      au < ready ; exists ; 1974 ; 978-1-56576-152-0 ; Tectonics and Sedimentation Volume 22 ; sepsptec ; >
+      au < crawling ; exists ; 1974 ; 978-1-56576-151-3 ; Paleogeographic Provinces and Provinciality Volume 21 ; sepsppae ; >
+      au < crawling ; exists ; 1974 ; 978-1-56576-152-0 ; Tectonics and Sedimentation Volume 22 ; sepsptec ; >
       au < crawling ; exists ; 1975 ; 978-1-56576-153-7 ; Glaciofluvial and Glaciolacustrine Sedimentation Volume 23 ; sepspgla ; >
       au < crawling ; exists ; 1987 ; 978-1-56576-154-4 ; Beach and Nearshore Sedimentation Volume 24 ; sepspbea ; >
       au < crawling ; exists ; 1977 ; 978-1-56576-155-1 ; Deep-Water Carbonate Environments Volume 25 ; sepspdee ; >
       au < crawling ; exists ; 1979 ; 978-1-56576-156-8 ; Aspects of Diagenesis Volume 26 ; sepspasp ; >
-      au < ready ; exists ; 1979 ; 978-1-56576-157-5 ; Geology of Continental Slopes Volume 27 ; sepspgeo ; >
+      au < crawling ; exists ; 1979 ; 978-1-56576-157-5 ; Geology of Continental Slopes Volume 27 ; sepspgeo ; >
       au < crawling ; exists ; 1980 ; 978-1-56576-158-2 ; Concepts and Models of Dolomitization Volume 28 ; sepspcon ; >
       au < crawling ; exists ; 1980 ; 978-1-56576-159-9 ; Marine Phosphorites Volume 29 ; sepspmar ; >
-      au < ready ; exists ; 1981 ; 978-1-56576-160-5 ; European Fossil Reef Models Volume 30 ; sepspeur ; >
+      au < crawling ; exists ; 1981 ; 978-1-56576-160-5 ; European Fossil Reef Models Volume 30 ; sepspeur ; >
       au < crawling ; exists ; 1981 ; 978-1-56576-161-2 ; Recent and Ancient Nonmarine Depositional Environments: Models for Exploration Volume 31 ; sepspren ; >
       au < crawling ; exists ; 1981 ; 978-1-56576-162-9 ; The Deep Sea Drilling Project: A Decade of Progress Volume 32 ; sepspdsd ; >
-      au < ready ; exists ; 1983 ; 978-1-56576-163-6 ; The Shelfbreak: Critical Interface on Continental Margins Volume 33 ; sepspshe ; >
+      au < crawling ; exists ; 1983 ; 978-1-56576-163-6 ; The Shelfbreak: Critical Interface on Continental Margins Volume 33 ; sepspshe ; >
       au < crawling ; exists ; 1984 ; 978-1-56576-164-3 ; Siliciclastic Shelf Sediments Volume 34 ; sepspsic ; >
       au < crawling ; exists ; 1985 ; 978-1-56576-165-0 ; Biogenic Structures: Their Use in Interpreting Depositional Systems Volume 35 ; sepspbio ; >
       au < crawling ; exists ; 1985 ; 978-1-56576-166-7 ; Carbonate Cements Volume 36 ; sepspcar ; >
@@ -170,26 +170,26 @@
 
       param[base_url] = http://scnotes.sepmonline.org/
 
-      au < ready ; exists ; 1975 ; 978-1-56576-231-2 ; Depositional Environments As Interpreted from Primary Sedimentary Structures and Stratification Sequences Volume 2 ; sepscdep ; >
-      au < ready ; exists ; 1984 ; 978-1-56576-232-9 ; Mechanics of Sediment Movement Volume 3 ; sepscmsm ; >
+      au < crawling ; exists ; 1975 ; 978-1-56576-231-2 ; Depositional Environments As Interpreted from Primary Sedimentary Structures and Stratification Sequences Volume 2 ; sepscdep ; >
+      au < crawling ; exists ; 1984 ; 978-1-56576-232-9 ; Mechanics of Sediment Movement Volume 3 ; sepscmsm ; >
       au < crawling ; exists ; 1987 ; 978-1-56576-233-6 ; Marine Evaporites Volume 4 ; sepscmae ; >
       au < crawling ; exists ; 1978 ; 978-1-56576-234-3 ; Trace Fossil Concepts Volume 5 ; sepsctfc ; >
       au < crawling ; exists ; 1979 ; 978-1-56576-235-0 ; Foraminiferal Ecology and Paleoecology Volume 6 ; sepscfor ; >
       au < crawling ; exists ; 1987 ; 978-1-56576-236-7 ; How to Assess Maturation and Paleotemperatures Volume 7 ; sepschow ; >
-      au < ready ; exists ; 1980 ; 978-1-56576-237-4 ; Principles and Applications of Coal Petrology Volume 8 ; sepscpac ; >
+      au < crawling ; exists ; 1980 ; 978-1-56576-237-4 ; Principles and Applications of Coal Petrology Volume 8 ; sepscpac ; >
       au < crawling ; exists ; 1982 ; 978-1-56576-238-1 ; Structures and Sequences in Clastic Rocks Volume 9 ; sepscstr ; >
       au < crawling ; exists ; 1983 ; 978-1-56576-239-8 ; Stable Isotopes in Sedimentary Geology Volume 10 ; sepscsis ; >
       au < crawling ; exists ; 1983 ; 978-1-56576-240-4 ; Patterns of Sedimentation, Diagenesis and Hydrocarbon Accumulation in Cretaceous Rocks of the Rocky Mountains Volume 11 ; sepscdia ; >
-      au < ready ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; >
+      au < crawling ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; sepscpla ; >
       au < crawling ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; sepscshe ; >
-      au < ready ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; sepscmod ; >
+      au < crawling ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; sepscmod ; >
       au < crawling ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; sepscich ; >
       au < crawling ; exists ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; sepscgla ; >
-      au < ready ; exists ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; sepscrel ; >
-      au < ready ; exists ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; sepscpeg ; >
+      au < crawling ; exists ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; sepscrel ; >
+      au < crawling ; exists ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; sepscpeg ; >
       au < crawling ; exists ; 1985 ; 978-1-56576-248-0 ; Recognition of Fluvial Depositional Systems and Their Resource Potential Volume 19 ; sepscrec ; >
       au < crawling ; exists ; 1988 ; 978-1-56576-099-8 ; Origin and Migration of Subsurface Sedimentary Brines Volume 21 ; sepscoms ; >
-      au < ready ; exists ; 1988 ; 978-1-56576-249-7 ; Clay Minerals for Petroleum Geologists and Engineers Volume 22 ; sepsccmp ; >
+      au < crawling ; exists ; 1988 ; 978-1-56576-249-7 ; Clay Minerals for Petroleum Geologists and Engineers Volume 22 ; sepsccmp ; >
       au < crawling ; exists ; 1991 ; 978-1-56576-106-3 ; Luminescence Microscopy and Spectroscopy: Qualitative and Quantitative Applications Volume 25 ; sepsclms ; >
       au < crawling ; exists ; 1992 ; 978-1-56576-250-3 ; Geochemistry of Organic Matter in Sediments and Sedimentary Rocks Volume 27 ; sepscgom ; >
       au < crawling ; exists ; 1992 ; 978-1-56576-251-0 ; Devonian Early-Mississippian Carbonates of the Western Canada Sedimentary Basin: A Sequence Stratigraphic Framework Volume 28 ; sepscdem ; >
@@ -226,13 +226,13 @@
       au < crawling ; exists ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; sepswdwc ; >
       au < crawling ; exists ; 1982 ; 978-1-56576-258-9 ; Depositional and Diagenetic Spectra of Evaporites Volume 3 ; sepswdds ; >
       au < crawling ; exists ; 1983 ; 978-1-56576-259-6 ; Carbonate Buildups Volume 4 ; sepswcbu ; >
-      au < ready ; exists ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; sepswcas ; >
-      au < ready ; exists ; 1985 ; 978-1-56576-261-9 ; Deep-Water Carbonates: Buildups, Turbidites, Debris Flows and Chalks Volume 6 ; sepswdew ; >
-      au < ready ; exists ; 1985 ; 978-1-56576-262-6 ; Rocky Mountain Carbonate Reservoirs Volume 7 ; sepswrmc ; >
+      au < crawling ; exists ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; sepswcas ; >
+      au < crawling ; exists ; 1985 ; 978-1-56576-261-9 ; Deep-Water Carbonates: Buildups, Turbidites, Debris Flows and Chalks Volume 6 ; sepswdew ; >
+      au < crawling ; exists ; 1985 ; 978-1-56576-262-6 ; Rocky Mountain Carbonate Reservoirs Volume 7 ; sepswrmc ; >
       au < crawling ; exists ; 1985 ; 978-1-56576-263-3 ; Depositional Modeling of Detrital Rocks: With Emphasis on Cored Sequences of Petroleum Reservoirs Volume 8 ; sepswdmd ; >
       au < crawling ; exists ; 1996 ; 978-1-56576-264-0 ; Modern and Ancient Shelf Clastics Volume 9 ; sepswmas ; >
       au < crawling ; exists ; 1988 ; 978-1-56576-100-1 ; Giant Oil and Gas Fields Volume 12 ; sepswgog ; >
-      au < ready ; exists ; 1989 ; 978-1-56576-267-1 ; Subsurface and Outcrop Examination of the Capitan Shelf Margin, Northern Delaware Basin Volume 13 ; sepswsoc ; >
+      au < crawling ; exists ; 1989 ; 978-1-56576-267-1 ; Subsurface and Outcrop Examination of the Capitan Shelf Margin, Northern Delaware Basin Volume 13 ; sepswsoc ; >
       au < crawling ; exists ; 1990 ; 978-1-56576-268-8 ; Miocene and Oligocene Petroleum Reservoirs of the Santa Maria and Santa Barabara-Ventura Basins, California Volume 14 ; sepswmop ; >
       au < crawling ; exists ; 1991 ; 978-1-56576-269-5 ; Mixed Carbonate-Siliciclastic Sequences Volume 15 ; sepswmcs ; >
       au < crawling ; exists ; 1992 ; 978-1-56576-097-4 ; Applications of Ichnology to Petroleum Exploration Volume 17 ; sepswapp ; >

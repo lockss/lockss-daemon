@@ -1370,7 +1370,7 @@
       au < manifest ; exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 ; >
       au < manifest ; exists ; 2009-2010 ; American Journal of Health Promotion Volume 24 ; 24 ; >
       au < manifest ; exists ; 2010-2011 ; American Journal of Health Promotion Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2011-2012 ; American Journal of Health Promotion Volume 26 ; 26 ; >
       au < crawling ; exists ; 2012-2013 ; American Journal of Health Promotion Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013-2014 ; American Journal of Health Promotion Volume 28 ; 28 ; >
       au < crawling ; exists ; 2014-2015 ; American Journal of Health Promotion Volume 29 ; 29 ; >
@@ -16604,7 +16604,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; >
       au < manifest ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; >
       au < manifest ; exists ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Advanced Robotic Systems Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; International Journal of Advanced Robotic Systems Volume 10 ; 10 ; >
       au < crawling ; exists ; 2014 ; International Journal of Advanced Robotic Systems Volume 11 ; 11 ; >
       au < crawling ; exists ; 2015 ; International Journal of Advanced Robotic Systems Volume 12 ; 12 ; >
@@ -17189,7 +17189,7 @@
         param[base_url] = http://dsn.sagepub.com/
 
         au < manifest ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; >
-        au < manifest ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; >
+        au < crawling ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 ; >
         au < crawling ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 ; >
         au < crawling ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 ; >
         au < crawling ; exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 11 ; 11 ; >
@@ -17277,8 +17277,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; >
       au < manifest ; exists ; 2010 ; International Journal of Engineering Business Management Volume 2 ; 2 ; >
       au < manifest ; exists ; 2011 ; International Journal of Engineering Business Management Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Engineering Business Management Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2013 ; International Journal of Engineering Business Management Volume 5 ; 5 ; >
       au < crawling ; exists ; 2014 ; International Journal of Engineering Business Management Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; International Journal of Engineering Business Management Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2016 ; International Journal of Engineering Business Management Volume 8 ; 8 ; >
@@ -17308,7 +17308,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; >
     au < manifest ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; >
@@ -32383,7 +32383,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; >
       au < crawling ; exists ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; >
       au < crawling ; exists ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; >
       au < crawling ; exists ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; >
@@ -40930,8 +40930,8 @@
       au < manifest ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; >
       au < manifest ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; >
       au < manifest ; exists ; 2011 ; South East Asia Research Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2012 ; South East Asia Research Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2013 ; South East Asia Research Volume 21 ; 21 ; >
       au < crawling ; exists ; 2014 ; South East Asia Research Volume 22 ; 22 ; >
       au < crawling ; exists ; 2015 ; South East Asia Research Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2016 ; South East Asia Research Volume 24 ; 24 ; >
@@ -43292,7 +43292,7 @@
       au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 ; >
       au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 [Sage] ; 16 ; >
       au < manifest ; exists ; 2011 ; Tourism Economics Volume 17 [Sage] ; 17 ; >
-      au < manifest ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; >
+      au < crawling ; exists ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; >
       au < crawling ; exists ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; >
       au < manifest ; exists ; 2014 ; Tourism Economics Volume 20 [Sage] ; 20 ; >
       au < manifest ; exists ; 2015 ; Tourism Economics Volume 21 [Sage] ; 21 ; >
@@ -43961,8 +43961,8 @@
       au < manifest ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
       au < manifest ; exists ; 2011 ; Tropical Conservation Science Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; >
       au < crawling ; exists ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
