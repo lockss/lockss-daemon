@@ -4,7 +4,7 @@
 
 /**
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.regex.Pattern;
@@ -39,9 +40,10 @@ import java.util.regex.Pattern;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.LinkTag;
-import org.htmlparser.tags.TableColumn;
 import org.htmlparser.tags.TableTag;
+import org.htmlparser.util.NodeList;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
@@ -173,11 +175,26 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 HtmlNodeFilters.tagWithAttribute("font", "class", "CorrsAdd"),
                 // do NOT take TOC per-article link sections - variable over time
 
-            }))
+            })),
+            
+            // convert all remaining nodes to plaintext nodes
+            new HtmlTransform() {
+              @Override
+              public NodeList transform(NodeList nodeList) throws IOException {
+                NodeList nl = new NodeList();
+                for (int sx = 0; sx < nodeList.size(); sx++) {
+                  Node snode = nodeList.elementAt(sx);
+                  TextNode tn = new TextNode(snode.toPlainTextString());
+                  nl.add(tn);
+                }
+                return nl;
+              }
+            }
             )
         );
+    
     Reader reader = FilterUtil.getReader(filtered, encoding);
-    // first subsitute plain white space for &nbsp;
+    // first substitute plain white space for &nbsp;
     String[][] unifySpaces = new String[][] { 
         // inconsistent use of nbsp v empty space - do this replacement first
         {"&nbsp;", " "}, 
@@ -185,7 +202,7 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
     Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
         unifySpaces, false);   
 
-    //now consolidate white space before doing additional tagfilter stuff
+    //now consolidate white space
     Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
     return new ReaderInputStream(WSReader);
 

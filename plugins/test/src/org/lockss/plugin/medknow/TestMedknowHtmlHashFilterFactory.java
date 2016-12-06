@@ -156,16 +156,16 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           " </table>";
 
   private static final String tocHtmlKept = 
-      "<td width=\"90%\" colspan=\"2\" class=\"tochead\">EDITORIAL</td>" +
-          "<td width=\"10%\" class=\"tochead\"> </td>" +
-          "<td width=\"75%\" class=\"articleTitle\" style='margin:left:5px;'>Article Title for Editorial</td>" +
-          "<td class=\"sAuthor\">P Ran, NJ Goo<br><b>DOI</b>:1X.1111/0022-3859.153101 <b>PMID</b>:55555555</td>" +
-          "<td width=\"90%\" colspan=\"2\" class=\"tochead\">ORIGINAL ARTICLES</td>" +
-          "<td width=\"75%\" class=\"articleTitle\" style='margin:left:5px;'>Another TItle for an Original Article</td>" +
-          "<td class=\"sAuthor\" style='line-height:18px;'>P Author, P Writer<br>" +
-          " <b>DOI</b>:1X.1111/0022-3859.150442 <b>PMID</b>:66666666" +
-          " <div id='a' style='display:none;background-color:#eaeaea;border:1px solid #ddd;padding:5px;'>" +
-          " abstract goes here </div></td>";
+      "EDITORIAL" +
+          " " +
+          "Article Title for Editorial" +
+          "P Ran, NJ GooDOI:1X.1111/0022-3859.153101 PMID:55555555" +
+          "ORIGINAL ARTICLES" +
+          "Another TItle for an Original Article" +
+          "P Author, P Writer" +
+          " DOI:1X.1111/0022-3859.150442 PMID:66666666" +
+          // " " + // by removing tags whitespace changed
+          " abstract goes here ";
 
 
   private static final String articleHtml = 
@@ -176,11 +176,11 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           "</table></td></tr></table></div>";
 
   private static final String articleHtmlKept = 
-      "<table class=\"articlepage\" >" +
-          "<div></div>" +
-          "</table>";
+      "" +
+          "" +
+          "";
 
-  private static final String onlyKept = "<table class=\"articlepage\" ></table>";
+  private static final String onlyKept = "";
 
   private static final String bigTOC = "<body>" +
       "<table border=\"0\" width=\"1000\" align=\"center\"  cellspacing=\"0\" cellpadding=\"0\" >" +
@@ -383,7 +383,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "</tr>" +
       "</table>" +
       "</body>";
-  
+  /*
   private static String bigAbsFiltered = 
       "<table border=\"0\" width=\"100%\" class=\"articlepage\">" +
       "<tr>" +
@@ -470,7 +470,95 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "<td width=\"50%\">" +
       "</td>" +
       "</tr>" +
-      "</table>";
+      "</table>";*/
+  
+  private static String bigAbsFilteredNT = 
+      "" +
+      "" +
+      "" +
+      "" +
+      "ORIGINAL ARTICLE" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "Year : 2024 | Volume" +
+      ": 11 " +
+      "| Issue : 24 | Page : 101-104" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "Renal cell carcinoma in children and adolescence: Our experience" +
+      "" +
+      "" +
+      "" +
+      "FOO" +
+      "1, FOO" +
+      "2, FOO" +
+      "2, FOO" +
+      "2, FOO" +
+      "2, FOO" +
+      "2" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "Background: Literature on foo " +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "[FULL TEXT] " +
+      "[PDF]*" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      " " +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "" +
+      "";
   
   private static final String backIssueHtml =
       "<td>" +
@@ -492,12 +580,12 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
 
   // only keep the link tags that are specific to the issues for this journals/volume
   private static final String backIssueFiltered =
-      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=6;month=yin-yang\">" +
-      "Issue 6 (Nov-Dec)</a>" +
-      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=5;month=foo-blah\">" +
-      "Issue 6 (Nov-Dec)</a>" +
-      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=4;month=oil-water\">" +
-      "Issue 6 (Nov-Dec)</a>";
+      "" +
+      "Issue 6 (Nov-Dec)" +
+      "" +
+      "Issue 6 (Nov-Dec)" +
+      "" +
+      "Issue 6 (Nov-Dec)";
       
   /*
    *  Compare Html and HtmlHashFiltered
@@ -518,7 +606,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(bigAbs),
         Constants.DEFAULT_ENCODING);
 
-    assertEquals(bigAbsFiltered, StringUtil.fromInputStream(actIn));
+    assertEquals(bigAbsFilteredNT, StringUtil.fromInputStream(actIn));
 
   }
   public void testAbstract() throws Exception {
