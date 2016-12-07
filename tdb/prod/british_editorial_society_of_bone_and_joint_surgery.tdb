@@ -18,10 +18,10 @@
     
     param[base_url] = http://www.bj360.boneandjoint.org.uk/
 
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
     
   }
   
@@ -36,10 +36,10 @@
     param[base_url] = http://www.bjr.boneandjoint.org.uk/
     rights = openaccess
 
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
-    au < besbjs.BESBJSDrupalPlugin ; manifest ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
     
   }
   
