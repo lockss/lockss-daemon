@@ -106,7 +106,7 @@
     au < manifest ; exists ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 ; >
     au < manifest ; exists ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 ; >
     au < manifest ; exists ; 2013 ; Accounting, Auditing & Accountability Journal Volume 26 ; 26 ; >
-    au < finished ; crawling ; 2014 ; Accounting, Auditing & Accountability Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Accounting, Auditing & Accountability Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; Accounting, Auditing & Accountability Journal Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2016 ; Accounting, Auditing & Accountability Journal Volume 29 ; 29 ; >
 
@@ -129,7 +129,7 @@
     au < manifest ; exists ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; Advances in Dual Diagnosis Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Advances in Dual Diagnosis Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
 
@@ -2059,7 +2059,7 @@
     au < manifest ; exists ; 2011 ; Employee Relations: An International Journal Volume 33 ; 33 ; >
     au < manifest ; exists ; 2012 ; Employee Relations: An International Journal Volume 34 ; 34 ; >
     au < manifest ; exists ; 2013 ; Employee Relations: An International Journal Volume 35 ; 35 ; >
-    au < finished ; crawling ; 2014 ; Employee Relations: An International Journal Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Employee Relations: An International Journal Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Employee Relations: An International Journal Volume 37 ; 37 ; >
     au < crawling ; exists ; 2016 ; Employee Relations: An International Journal Volume 38 ; 38 ; >
 
@@ -2784,7 +2784,7 @@
     au < manifest ; exists ; 2012 ; Human Resource Management International Digest Volume 20 ; 20 ; >
     au < manifest ; exists ; 2013 ; Human Resource Management International Digest Volume 21 ; 21 ; >
     au < frozen ; exists ; 2014 ; Human Resource Management International Digest Volume 22 ; 22 ; >
-    au < finished ; crawling ; 2015 ; Human Resource Management International Digest Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Human Resource Management International Digest Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Human Resource Management International Digest Volume 24 ; 24 ; >
 
   }
@@ -2848,7 +2848,7 @@
     au < manifest ; exists ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; Indian Growth and Development Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; Indian Growth and Development Review Volume 6 ; 6 ; >
-    au < finished ; crawling ; 2014 ; Indian Growth and Development Review Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Indian Growth and Development Review Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2015 ; Indian Growth and Development Review Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Indian Growth and Development Review Volume 9 ; 9 ; >
 
@@ -3427,8 +3427,13 @@
     au < manifest ; exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 ; >
     au < manifest ; exists ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 ; >
     au < manifest ; exists ; 2013 ; International Journal of Bank Marketing Volume 31 ; 31 ; >
+<<<<<<< 633e4625bf33ec46011992583bf30359cb734b6f
     au < finished ; crawling ; 2014 ; International Journal of Bank Marketing Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; International Journal of Bank Marketing Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+=======
+    au < finished ; finished ; 2014 ; International Journal of Bank Marketing Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; International Journal of Bank Marketing Volume 33 ; 33 ; >
+>>>>>>> Content processing (b083-04, b084-04).
     au < crawling ; exists ; 2016 ; International Journal of Bank Marketing Volume 34 ; 34 ; >
 
   }
@@ -4445,7 +4450,7 @@
     au < manifest ; exists ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 ; >
     au < manifest ; exists ; 2013 ; International Journal of Pervasive Computing and Communications Volume 9 ; 9 ; >
     au < frozen ; exists ; 2014 ; International Journal of Pervasive Computing and Communications Volume 10 ; 10 ; >
-    au < finished ; crawling ; 2015 ; International Journal of Pervasive Computing and Communications Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; International Journal of Pervasive Computing and Communications Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2016 ; International Journal of Pervasive Computing and Communications Volume 12 ; 12 ; >
 
   }
@@ -5343,8 +5348,13 @@
     au < manifest ; exists ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 ; >
     au < manifest ; exists ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 ; >
     au < manifest ; exists ; 2013 ; Journal of Applied Accounting Research Volume 14 ; 14 ; >
+<<<<<<< 633e4625bf33ec46011992583bf30359cb734b6f
     au < finished ; crawling ; 2014 ; Journal of Applied Accounting Research Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Applied Accounting Research Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+=======
+    au < finished ; finished ; 2014 ; Journal of Applied Accounting Research Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Journal of Applied Accounting Research Volume 16 ; 16 ; >
+>>>>>>> Content processing (b083-04, b084-04).
     au < exists ; exists ; 2016 ; Journal of Applied Accounting Research Volume 17 ; 17 ; >
 
   }
@@ -9615,7 +9625,7 @@
     au < manifest ; exists ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 ; >
     au < manifest ; exists ; 2012 ; Program: Electronic Library and Information Systems Volume 46 ; 46 ; >
     au < manifest ; exists ; 2013 ; Program: Electronic Library and Information Systems Volume 47 ; 47 ; >
-    au < finished ; crawling ; 2014 ; Program: Electronic Library and Information Systems Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Program: Electronic Library and Information Systems Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Program: Electronic Library and Information Systems Volume 49 ; 49 ; >
     au < exists ; exists ; 2016 ; Program: Electronic Library and Information Systems Volume 50 ; 50 ; >
 
@@ -10335,8 +10345,13 @@
 
     au < manifest ; exists ; 2012 ; South Asian Journal of Global Business Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 2013 ; South Asian Journal of Global Business Research Volume 2 ; 2 ; >
+<<<<<<< 633e4625bf33ec46011992583bf30359cb734b6f
     au < finished ; crawling ; 2014 ; South Asian Journal of Global Business Research Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; South Asian Journal of Global Business Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+=======
+    au < finished ; finished ; 2014 ; South Asian Journal of Global Business Research Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; South Asian Journal of Global Business Research Volume 4 ; 4 ; >
+>>>>>>> Content processing (b083-04, b084-04).
     au < exists ; exists ; 2016 ; South Asian Journal of Global Business Research Volume 5 ; 5 ; >
 
   }
