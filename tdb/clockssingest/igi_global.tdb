@@ -169,7 +169,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Agent Technologies and Systems (IJATS) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Agent Technologies and Systems (IJATS) Volume 5 ; 5 ; > 
     au < finished ; finished ; 2014 ; International Journal of Agent Technologies and Systems (IJATS) Volume 6 ; 6 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Agent Technologies and Systems (IJATS) Volume 7 ; 7 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Agent Technologies and Systems (IJATS) Volume 7 ; 7 ; reingest1.clockss.org:8082 > 
     au < expected ; exists ; 2016 ; International Journal of Agent Technologies and Systems (IJATS) Volume 8 ; 8 ; > 
 
   }
@@ -381,7 +381,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Asian Business and Information Management (IJABIM) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Asian Business and Information Management (IJABIM) Volume 4 ; 4 ; > 
     au < finished ; manifest ; 2014 ; International Journal of Asian Business and Information Management (IJABIM) Volume 5 ; 5 ; reingest4.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Asian Business and Information Management (IJABIM) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Asian Business and Information Management (IJABIM) Volume 6 ; 6 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Asian Business and Information Management (IJABIM) Volume 7 ; 7 ; > 
 
   }
@@ -554,10 +554,10 @@
     au < manifest ; exists ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 ; > 
     au < finished ; crawling ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 ; > 
-    au < deepCrawl ; exists ; 2013 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 7 ; 7  ; > 
-    au < frozen ; exists ; 2014 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 8 ; 8  ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 9 ; 9  ; > 
-    au < crawling ; exists ; 2016 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 10 ; 10  ; > 
+    au < deepCrawl ; exists ; 2013 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 7 ; 7 ; > 
+    au < frozen ; exists ; 2014 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 8 ; 8 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 9 ; 9 ; reingest1.clockss.org:8082 > 
+    au < crawling ; exists ; 2016 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 10 ; 10 ; > 
 
   }
 
@@ -644,7 +644,7 @@
 
     au < deepCrawl ; exists ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 ; > 
     au < finished ; finished ; 2014 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 2 ; 2 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 4 ; 4 ; >
 
   }
@@ -684,7 +684,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 4 ; 4 ; > 
     au < finished ; finished ; 2014 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 5 ; 5 ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 6 ; 6 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 7 ; 7 ; > 
 
   }
@@ -765,7 +765,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 9 ; 9 ; > 
     au < finished ; manifest ; 2014 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 10 ; 10 ; reingest5.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 11 ; 11 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 11 ; 11 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 12 ; 12 ; > 
 
   }
@@ -843,7 +843,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 ; >
     au < finished ; frozen ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 ; >
     au < finished ; manifest ; 2014 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Digital Library Systems (IJDLS) Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Digital Library Systems (IJDLS) Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2016 ; International Journal of Digital Library Systems (IJDLS) Volume 6 ; 6 ; >
 
   }
@@ -1286,7 +1286,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 5 ; 5 ; > 
     au < frozen ; exists ; 2014 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 6 ; 6 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 7 ; 7 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 7 ; 7 ; reingest5.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 8 ; 8 ; > 
 
   }
@@ -1348,7 +1348,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 7 ; 7 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 8 ; 8 ; > 
     au < finished ; finished ; 2014 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 9 ; 9 ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 10 ; 10 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 10 ; 10 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 11 ; 11 ; > 
 
   }
@@ -1368,7 +1368,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 4 ; 4 ; > 
     au < finished ; manifest ; 2014 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 5 ; 5 ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 6 ; 6 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 7 ; 7 ; > 
 
   }
@@ -1452,7 +1452,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Information Retrieval Research (IJIRR) Volume 2 ; 2 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Information Retrieval Research (IJIRR) Volume 3 ; 3 ; > 
     au < finished ; manifest ; 2014 ; International Journal of Information Retrieval Research (IJIRR) Volume 4 ; 4 ; reingest1.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Information Retrieval Research (IJIRR) Volume 5 ; 5 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Information Retrieval Research (IJIRR) Volume 5 ; 5 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Information Retrieval Research (IJIRR) Volume 6 ; 6 ; > 
 
   }
@@ -1515,7 +1515,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Information Systems and Social Change (IJISSC) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Information Systems and Social Change (IJISSC) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2014 ; International Journal of Information Systems and Social Change (IJISSC) Volume 5 ; 5 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Information Systems and Social Change (IJISSC) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Information Systems and Social Change (IJISSC) Volume 6 ; 6 ; reingest2.clockss.org:8085 > 
     au < crawling ; exists ; 2016 ; International Journal of Information Systems and Social Change (IJISSC) Volume 7 ; 7 ; > 
 
   }
@@ -1558,7 +1558,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 5 ; 5 ; > 
     au < finished ; finished ; 2014 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 6 ; 6 ; reingest5.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2016 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 8 ; 8 ; >
 
   }
@@ -1665,7 +1665,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 4 ; 4 ; > 
     au < finished ; finished ; 2014 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 5 ; 5 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 6 ; 6 ; reingest4.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 7 ; 7 ; > 
 
   }
@@ -1793,7 +1793,7 @@
     au < finished ; crawling ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 4 ; 4 ; > 
     au < finished ; manifest ; 2014 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 5 ; 5 ; reingest4.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 6 ; 6 ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 7 ; 7 ; > 
 
   }
@@ -1813,7 +1813,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 4 ; 4 ; > 
     au < frozen ; exists ; 2014 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 5 ; 5 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 6 ; 6 ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 7 ; 7 ; > 
 
   }
@@ -1857,7 +1857,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Knowledge Management (IJKM) Volume 8 ; 8 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Knowledge Management (IJKM) Volume 9 ; 9 ; > 
     au < finished ; finished ; 2014 ; International Journal of Knowledge Management (IJKM) Volume 10 ; 10 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Knowledge Management (IJKM) Volume 11 ; 11 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Knowledge Management (IJKM) Volume 11 ; 11 ; reingest3.clockss.org:8083 > 
     au < crawling ; exists ; 2016 ; International Journal of Knowledge Management (IJKM) Volume 12 ; 12 ; > 
 
   }
@@ -2238,7 +2238,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 1 ; 1 ; > 
     au < finished ; crawling ; 2012 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 2 ; 2 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 3 ; 3 ; > 
-    au < deepCrawl ; exists ; 2015 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 4 ; 4 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 4 ; 4 ; reingest5.clockss.org:8082 > 
     au < expected ; exists ; 2016 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 5 ; 5 ; > 
 
   }
@@ -2309,7 +2309,7 @@
 
     au < deepCrawl ; exists ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 ; > 
     au < finished ; finished ; 2014 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 2 ; 2 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 3 ; 3 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 3 ; 3 ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 4 ; 4 ; > 
    
   }
@@ -2367,7 +2367,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 1 ; 1 ; >
     au < finished ; crawling ; 2012 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Signs and Semiotic Systems (IJSSS) Volume 5 ; 5 ; >
 
   }
@@ -2426,7 +2426,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 5 ; 5 ; > 
     au < finished ; finished ; 2014 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 6 ; 6 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 7 ; 7 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 7 ; 7 ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 8 ; 8 ; > 
 
   }
@@ -2670,7 +2670,7 @@
     au < finished ; crawling ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Technoethics (IJT) Volume 4 ; 4 ; > 
     au < frozen ; exists ; 2014 ; International Journal of Technoethics (IJT) Volume 5 ; 5 ; > 
-    au < frozen ; exists ; 2015 ; International Journal of Technoethics (IJT) Volume 6 ; 6 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Technoethics (IJT) Volume 6 ; 6 ; reingest1.clockss.org:8082 > 
     au < crawling ; exists ; 2016 ; International Journal of Technoethics (IJT) Volume 7 ; 7 ; > 
 
   }
@@ -2793,7 +2793,7 @@
     au < finished ; frozen ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 ; > 
     au < deepCrawl ; exists ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 ; > 
     au < finished ; finished ; 2014 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 6 ; 6 ; reingest4.clockss.org:8082 > 
-    au < frozen ; exists ; 2015 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 7 ; 7 ; > 
+    au < finished ; manifest ; 2015 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 7 ; 7 ; reingest3.clockss.org:8083 > 
     au < crawling ; exists ; 2016 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 8 ; 8 ; > 
 
   }
