@@ -102,7 +102,13 @@ public class TestNatureHtmlFilterFactory extends LockssTestCase {
   private static final String commentTagsFiltered =
       " <link title=\"schema(PRISM)\" rel=\"schema.prism\" href=\"http://prismstandard.org/namespaces/1.2/basic/\" />";
 
-  private static final String footerHtml =
+  private static final String hdrFtrHtml =
+      " <div id=\"hdr\" class=\"show-eu-cookie-notice\">\n" + 
+      "<div class=\"eu-cookie-notice\">\n" + 
+      "<div class=\"cookie-wrapper\">\n" + 
+      "</div>\n" + 
+      "</div>\n" + 
+      "</div>" +
       " <div id=\"ftr\" class=\"footer\">" +
           " <div class=\"cope cope-bottom-align\">" +
           "<a href=\'http://publicationethics.org/\' title=\'Committee on Publication Ethics - external website.\'>" +
@@ -116,7 +122,7 @@ public class TestNatureHtmlFilterFactory extends LockssTestCase {
           " <!-- end webtrends Version: 8.6.0 -->" +
           " </body>" +
           " </html>";
-  private static final String footerHtmlFiltered =
+  private static final String hdrFtrHtmlFiltered =
           " </body>" +
           " </html>";
   
@@ -193,10 +199,10 @@ public class TestNatureHtmlFilterFactory extends LockssTestCase {
     assertEquals(commentTagsFiltered,StringUtil.fromInputStream(inA));
     
     // test removing footer section
-    inA = fact.createFilteredInputStream(null, new StringInputStream(footerHtml),
+    inA = fact.createFilteredInputStream(null, new StringInputStream(hdrFtrHtml),
         ENC);
 
-    assertEquals(footerHtmlFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(hdrFtrHtmlFiltered,StringUtil.fromInputStream(inA));
     
     // test global message removal
     inA = fact.createFilteredInputStream(null, new StringInputStream(globalMessageHtml),
