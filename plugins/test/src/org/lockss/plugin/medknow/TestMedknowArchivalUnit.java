@@ -217,7 +217,7 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
     assertEquals(PluginName + ", Base URL http://www.ajrnl.com/, Issn 1234-5678, Year 2009, Volume 33", au.getName());
   }
   
-  //<string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]+(;type=2)?$", base_url, journal_issn, year, volume_name</string>
+  //<string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]*(;type=2)?$", base_url, journal_issn, year, volume_name</string>
 
   public void testSubstancePatterns() throws Exception {
     URL base = new URL("http://www.ajrnl.com/");
@@ -227,6 +227,10 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
     ArchivalUnit au = makeAu(base, volume, issn, year);
 
     assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+        au);
+    assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=;type=2",
+        au);
+    assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=",
         au);
     //redirects to this:
     assertSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
