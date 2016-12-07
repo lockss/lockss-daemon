@@ -1235,10 +1235,10 @@
     au < testing ; exists ; 2015 ; 9783131273345 ; 9783131974341 ; 10.1055/b-003-106499 ; Checkliste Anamnese und klinische Untersuchung (9783131974341) ; >
     au < ready ; exists ; 2015 ; 9783131250551 ; 9783131974556 ; 10.1055/b-003-106497 ; Checkliste Neonatologie (9783131974556) ; >
     au < frozen ; exists ; 2015 ; 9783131150745 ; 9783131913739 ; 10.1055/b-001-2127 ; Checkliste XXL Pneumologie (9783131913739) ; >
-    au < testing ; exists ; 2016 ; 9783135225111 ; 9783132407398 ; 10.1055/b-004-132240 ; Checkliste Chirurgie (9783132407398) ; >
-    au < testing ; exists ; 2016 ; 9783131262769 ; 9783132403734 ; 10.1055/b-003-129347 ; Checkliste Neurologie (9783132403734) ; >
+    au < ready ; exists ; 2016 ; 9783135225111 ; 9783132407398 ; 10.1055/b-004-132240 ; Checkliste Chirurgie (9783132407398) ; >
+    au < ready ; exists ; 2016 ; 9783131262769 ; 9783132403734 ; 10.1055/b-003-129347 ; Checkliste Neurologie (9783132403734) ; >
     au < testing ; exists ; 2016 ; 9783131391056 ; 9783132401563 ; 10.1055/b-003-128231 ; Checkliste Pädiatrie (9783132401563) ; >
-    au < testing ; exists ; 2016 ; 9783135981086 ; 9783132403550 ; 10.1055/b-003-129342 ; Checkliste Traumatologie (9783132403550) ; >
+    au < ready ; exists ; 2016 ; 9783135981086 ; 9783132403550 ; 10.1055/b-003-129342 ; Checkliste Traumatologie (9783132403550) ; >
 
    }
 
@@ -1251,11 +1251,11 @@
       >
 
     #series doi = 10.1055/b-00000015;Taschenatlas Anatomie;;2198-9222
-    au < testing ; exists ; 2009 ; 9783134921106 ; 9783131912305 ; 10.1055/b-002-25588 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131912305) ; >
+    au < ready ; exists ; 2009 ; 9783134921106 ; 9783131912305 ; 10.1055/b-002-25588 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131912305) ; >
     au < ready ; exists ; 2009 ; 9783134922103 ; 9783131909602 ; 10.1055/b-002-25602 ; Taschenatlas Anatomie - Band 3: Nervensystem und Sinnesorgane (9783131909602) ; >
-    au < testing ; exists ; 2009 ; 9783134920109 ; 9783131907400 ; 10.1055/b-002-35710 ; Taschenatlas Anatomie - Bewegungsapparat (9783131907400) ; >
+    au < ready ; exists ; 2009 ; 9783134920109 ; 9783131907400 ; 10.1055/b-002-35710 ; Taschenatlas Anatomie - Bewegungsapparat (9783131907400) ; >
     au < testing ; exists ; 2013 ; 9783134921113 ; 9783131935311 ; 10.1055/b-002-25585 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131935311) ; >
-    au < testing ; exists ; 2013 ; 9783134922110 ; 9783131935410 ; 10.1055/b-002-43897 ; Taschenatlas Anatomie - Band 3: Nervensystem und Sinnesorgane (9783131935410) ; >
+    au < ready ; exists ; 2013 ; 9783134922110 ; 9783131935410 ; 10.1055/b-002-43897 ; Taschenatlas Anatomie - Band 3: Nervensystem und Sinnesorgane (9783131935410) ; >
     au < crawling ; exists ; 2013 ; 9783134920116 ; 9783131935212 ; 10.1055/b-002-33693 ; Taschenatlas Anatomie - Bewegungsapparat (9783131935212) ; >
 
    }
@@ -1269,11 +1269,11 @@
       >
 
     #series doi = 10.1055/b-00000016;Memorix;;2198-9451
-    au < testing ; exists ; 2008 ; 9783131454317 ; 9783131892010 ; 10.1055/b-002-39795 ; Memorix Psychiatrie und Psychotherapie (9783131892010) ; >
-    au < testing ; exists ; 2009 ; 9783131492517 ; 9783131920010 ; 10.1055/b-002-43885 ; Memorix Kindernotfälle (9783131920010) ; >
-    au < testing ; exists ; 2010 ; 9783131143730 ; 9783131909732 ; 10.1055/b-002-10332 ; Memorix Zahnmedizin (9783131909732) ; >
-    au < testing ; exists ; 2011 ; 9783131472311 ; 9783131852410 ; 10.1055/b-002-29654 ; Memorix Kinderanästhesie (9783131852410) ; >
-    au < testing ; exists ; 2011 ; 9783131399397 ; 9783131852397 ; 10.1055/b-002-37736 ; MEMORIX Notfallmedizin (9783131852397) ; >
+    au < ready ; exists ; 2008 ; 9783131454317 ; 9783131892010 ; 10.1055/b-002-39795 ; Memorix Psychiatrie und Psychotherapie (9783131892010) ; >
+    au < ready ; exists ; 2009 ; 9783131492517 ; 9783131920010 ; 10.1055/b-002-43885 ; Memorix Kindernotfälle (9783131920010) ; >
+    au < ready ; exists ; 2010 ; 9783131143730 ; 9783131909732 ; 10.1055/b-002-10332 ; Memorix Zahnmedizin (9783131909732) ; >
+    au < ready ; exists ; 2011 ; 9783131472311 ; 9783131852410 ; 10.1055/b-002-29654 ; Memorix Kinderanästhesie (9783131852410) ; >
+    au < ready ; exists ; 2011 ; 9783131399397 ; 9783131852397 ; 10.1055/b-002-37736 ; MEMORIX Notfallmedizin (9783131852397) ; >
     au < testing ; exists ; 2011 ; 9783131454324 ; 9783131897022 ; 10.1055/b-002-39796 ; Memorix Psychiatrie und Psychotherapie (9783131897022) ; >
     au < testing ; exists ; 2011 ; 9783131465818 ; 9783131898913 ; 10.1055/b-002-40823 ; Psychosomatik und Psychotherapie (9783131898913) ; >
     au < testing ; exists ; 2016 ; 9783131400963 ; 9783131977663 ; 10.1055/b-003-125866 ; Neurologie (9783131977663) ; >
@@ -1290,9 +1290,9 @@
       >
 
     #series doi = 10.1055/b-00000017;Memorix AINS;;2198-946X
-    au < testing ; exists ; 2008 ; 9783131457417 ; 9783131848918 ; 10.1055/b-002-40802 ; Schmerztherapie (9783131848918) ; >
+    au < ready ; exists ; 2008 ; 9783131457417 ; 9783131848918 ; 10.1055/b-002-40802 ; Schmerztherapie (9783131848918) ; >
     au < testing ; exists ; 2010 ; 9783131402011 ; 9783131849410 ; 10.1055/b-002-26624 ; Atemwegsmanagement (9783131849410) ; >
-    au < testing ; exists ; 2011 ; 9783131480712 ; 9783131852519 ; 10.1055/b-002-33678 ; Periphere Regionalanästhesie (9783131852519) ; >
+    au < ready ; exists ; 2011 ; 9783131480712 ; 9783131852519 ; 10.1055/b-002-33678 ; Periphere Regionalanästhesie (9783131852519) ; >
 
    }
 
@@ -1330,7 +1330,7 @@
 
     #series doi = 10.1055/b-00000021;Zahn-Mund-Kiefer-Heilkunde;;
     au < testing ; exists ; 2008 ; 9783135934044 ; 9783131916846 ; 10.1055/b-002-15434 ; Chirurgische Grundlagen (9783131916846) ; >
-    au < testing ; exists ; 2009 ; 9783131169648 ; 9783131912145 ; 10.1055/b-002-54070 ; Zahnärztliche Chirurgie: Zahn-Mund-Kiefer-Heilkunde (9783131912145) ; >
+    au < ready ; exists ; 2009 ; 9783131169648 ; 9783131912145 ; 10.1055/b-002-54070 ; Zahnärztliche Chirurgie: Zahn-Mund-Kiefer-Heilkunde (9783131912145) ; >
     au < testing ; exists ; 2011 ; 9783135938028 ; 9783131905123 ; 10.1055/b-002-44931 ; Kieferorthopädie (9783131905123) ; >
     au < testing ; exists ; 2011 ; 9783135935041 ; 9783131903044 ; 10.1055/b-002-15441 ; Mund-Kiefer-Gesichtschirurgie (9783131903044) ; >
 
@@ -1345,10 +1345,10 @@
       >
 
     #series doi = 10.1055/b-00000023;kma-reader;;2198-8633
-    au < testing ; exists ; 2011 ; 9783131612212 ; 9783131860316 ; 10.1055/b-002-33688 ; Alles grün… … auch im Krankenhaus: Green Hospital –Wege zur effektiven Nachhaltigkeit (9783131860316) ; >
+    au < ready ; exists ; 2011 ; 9783131612212 ; 9783131860316 ; 10.1055/b-002-33688 ; Alles grün… … auch im Krankenhaus: Green Hospital –Wege zur effektiven Nachhaltigkeit (9783131860316) ; >
     au < testing ; exists ; 2011 ; 9783131612311 ; 9783131860118 ; 10.1055/b-002-33689 ; Krankenhausmanagement mit Zukunft: Orientierungswissen und Anregungen von Experten (9783131860118) ; >
     au < testing ; exists ; 2011 ; 9783131538215 ; 9783131860217 ; 10.1055/b-002-41859 ; Patientenorientierte Arzneimittelversorgung: Sicherheit und Wirtschaftlichkeit des Arzneimittelmanagements (9783131860217) ; >
-    au < testing ; exists ; 2012 ; 9783131710413 ; 9783131831316 ; 10.1055/b-002-25586 ; Entlassmanagement: Vernetztes Handeln durch Patientenkoordination (9783131831316) ; >
+    au < ready ; exists ; 2012 ; 9783131710413 ; 9783131831316 ; 10.1055/b-002-25586 ; Entlassmanagement: Vernetztes Handeln durch Patientenkoordination (9783131831316) ; >
     au < testing ; exists ; 2012 ; 9783131708717 ; 9783131831415 ; 10.1055/b-002-23577 ; Gefahrgüter im Gesundheitswesen (9783131831415) ; >
     au < testing ; exists ; 2013 ; 9783131673015 ; 9783131923615 ; 10.1055/b-002-57170 ; In Führung gehen: Praxishandbuch für Ärzte im Krankenhaus (9783131923615) ; >
     au < testing ; exists ; 2013 ; 9783131673213 ; 9783131923516 ; 10.1055/b-002-57161 ; Unternehmen Krankenhaus (9783131923516) ; >
