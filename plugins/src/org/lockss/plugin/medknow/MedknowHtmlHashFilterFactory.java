@@ -126,7 +126,10 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                       if(tclass != null && !tclass.isEmpty() && "articlepage".equals(tclass)) {
                         String longContents = ((TableTag)node).getStringText();
                         // the PDF access policy is stated on TOC
-                        if (!(longContents.toLowerCase().contains("pdf access policy"))) {
+                        // except like http://www.ejo.eg.net/showBackIssue.asp?issn=1012-5574;year=2012;volume=28;issue=1
+                        if (!(longContents.toLowerCase().contains("pdf access policy") ||
+                              longContents.matches(".*Online since .{14,99}?Accessed [0-9,.]{1,99} times?.*")))
+                        {
                           return true;
                         }
                       }
