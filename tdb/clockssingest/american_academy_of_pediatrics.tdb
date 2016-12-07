@@ -72,7 +72,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; >
-      au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; > #found login page in content3, not content1
+      au < aap.ClockssAAPDrupalPlugin ; ready ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; >
 
     }
   
