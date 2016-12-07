@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.3.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.3.7" xsi:schemaLocation="http://www.crossref.org/schema/4.3.7 http://www.crossref.org/schema/deposit/crossref4.3.7.xsd">
+  <head>
+    <doi_batch_id>4a337132155c63964d2-283c</doi_batch_id>
+    <timestamp>201611180736</timestamp>
+    <depositor>
+      <depositor_name>ecmj</depositor_name>
+      <email_address>ecm@aofoundation.org</email_address>
+    </depositor>
+    <registrant>WEB-FORM</registrant>
+  </head>
+  <body>
+    <journal>
+      <journal_metadata>
+        <full_title>European Cells and Materials</full_title>
+        <abbrev_title>eCM</abbrev_title>
+        <doi_data>
+          <doi>10.22203/eCM</doi>
+          <resource>http://www.ecmjournal.org/index.htm</resource>
+        </doi_data>
+      </journal_metadata>
+      <journal_issue>
+        <publication_date media_type="online">
+          <month>01</month>
+          <day>10</day>
+          <year>2001</year>
+        </publication_date>
+        <journal_volume>
+          <volume>1</volume>
+        </journal_volume>
+      </journal_issue>
+      <!-- ============== -->
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>Characterizing a Number of Images</title>
+        </titles>
+        <contributors>
+          <organization sequence="first" contributor_role="author">Institute of Biological Sciences, The University of Wales, Aberystwyth, Ceredigion, Wales, SY23 3DA</organization>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>P</given_name>
+            <surname>al Writer</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>C</given_name>
+            <surname>Wilson</surname>
+          </person_name>
+        </contributors>
+        <publication_date media_type="online">
+          <month>01</month>
+          <day>10</day>
+          <year>2001</year>
+        </publication_date>
+        <pages>
+          <first_page>1</first_page>
+          <last_page>11</last_page>
+        </pages>
+        <doi_data>
+          <doi>10.22203/eCM.vxxxx1</doi>
+          <resource>http://www.ecmjournal.org/journal/papers/vol001/pdf/vxxxxx1.pdf</resource>
+        </doi_data>
+      </journal_article>
+      <!-- ============== -->
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>A combined study of units</title>
+        </titles>
+        <contributors>
+          <organization sequence="first" contributor_role="author">Laboratoire de Lausanne, Switzerland</organization>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>S</given_name>
+            <surname>Researcher</surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name> A</given_name>
+            <surname> Typer </surname>
+          </person_name>
+          <person_name sequence="additional" contributor_role="author">
+            <given_name>Ph </given_name>
+            <surname>DStuff </surname>
+          </person_name>
+        </contributors>
+        <publication_date media_type="online">
+          <month>01</month>
+          <day>10</day>
+          <year>2001</year>
+        </publication_date>
+        <pages>
+          <first_page>12</first_page>
+          <last_page>17</last_page>
+        </pages>
+        <doi_data>
+          <doi>10.22203/eCM.vxxxxx2</doi>
+          <resource>http://www.ecmjournal.org/journal/papers/vol001/pdf/vxxxxx2.pdf</resource>
+        </doi_data>
+      </journal_article>
+      <!-- ============== -->
+      <journal_article publication_type="full_text">
+        <titles>
+          <title>The Importance of Being Earnest</title>
+        </titles>
+        <contributors>
+          <organization sequence="first" contributor_role="author">The Country, Switzerland</organization>
+          <person_name sequence="first" contributor_role="author">
+            <given_name>E</given_name>
+            <surname>Moncrief</surname>
+          </person_name>
+        </contributors>
+        <publication_date media_type="online">
+          <month>01</month>
+          <day>10</day>
+          <year>2001</year>
+        </publication_date>
+        <pages>
+          <first_page>18</first_page>
+          <last_page>26</last_page>
+        </pages>
+        <doi_data>
+          <doi>10.22203/eCM.vxxxxx3</doi>
+          <resource>http://www.ecmjournal.org/journal/papers/vol001/pdf/vxxxxx3.pdf</resource>
+        </doi_data>
+      </journal_article>
+    </journal>
+  </body>
+</doi_batch>

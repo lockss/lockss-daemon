@@ -42,19 +42,18 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 
-public class TestPubmedArticleXmlMetadataExtractor extends LockssTestCase {
+public class TestCrossRefXmlMetadataExtractor extends LockssTestCase {
 
-  private static final Logger log = Logger.getLogger(TestPubmedArticleXmlMetadataExtractor.class);
+  private static final Logger log = Logger.getLogger(TestCrossRefXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  //private static String PLUGIN_NAME = "org.lockss.plugin.clockss.mdpi.ClockssMdpiJatsSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
-  private static final String xml_url = BASE_URL + "2016/ECMv32-2016a.xml ";
-  private static final String pdf_url1 = BASE_URL + "2016/v032a01.pdf";
-  private static final String pdf_url2 = BASE_URL + "2016/v032a02.pdf";
-  private static final String pdf_url3 = BASE_URL + "2016/v032a03.pdf";
+  private static final String xml_url = BASE_URL + "2016/vol01/cr4a337132155c63964d2-283c.xml ";
+  private static final String pdf_url1 = BASE_URL + "2016/vol01/vxxxxx1.pdf";
+  private static final String pdf_url2 = BASE_URL + "2016/vol01/vxxxxx2.pdf";
+  private static final String pdf_url3 = BASE_URL + "2016/vol01/vxxxxx3.pdf";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -90,7 +89,7 @@ public class TestPubmedArticleXmlMetadataExtractor extends LockssTestCase {
 
 
   
-  private static final String realXMLFile = "PubmedSourceTest.xml";
+  private static final String realXMLFile = "CrossRefTest.xml";
 
   public void testFromJatsPublishingXMLFile() throws Exception {
     InputStream file_input = null;
@@ -124,7 +123,6 @@ public class TestPubmedArticleXmlMetadataExtractor extends LockssTestCase {
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
         log.debug3(mdRecord.ppString(2));
-        log.info(mdRecord.ppString(2));
         //compareMetadata(mdRecord);
       }
     }finally {

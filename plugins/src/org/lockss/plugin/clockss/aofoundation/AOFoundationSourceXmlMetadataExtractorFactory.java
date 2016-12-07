@@ -36,19 +36,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang.StringUtils;
-import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.util.Logger;
 
 
 public class AOFoundationSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(AOFoundationSourceXmlMetadataExtractorFactory.class);
   
-  private static SourceXmlSchemaHelper PubmedHelper = null;
+  private static final String ECM_PUBLISHER = "AO Foundation";
+  private static SourceXmlSchemaHelper CrossRefHelper = null;
   
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -62,25 +63,23 @@ public class AOFoundationSourceXmlMetadataExtractorFactory extends SourceXmlMeta
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (PubmedHelper != null) {
-        return PubmedHelper;
+      if (CrossRefHelper != null) {
+        return CrossRefHelper;
       }
-      PubmedHelper = new PubmedArticleXmlSchemaHelper();
-      return PubmedHelper;
+      CrossRefHelper = new CrossRefSchemaHelper();
+      return CrossRefHelper;
     }
 
     
-    // TODO - if we get full text XML without a matching pdf we must still emit
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      // filename is just the same a the XML filename but with
+      // filename is just the same a the resource filename with this apth
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String pii = oneAM.getRaw(helper.getFilenameXPathKey());
-      String piibase = StringUtils.substringAfter(pii,"vol");
-      String pdfName = cuBase + "v" + piibase + ".pdf";
-      log.info("pdfName is " + pdfName);
+      String resource = oneAM.getRaw(CrossRefSchemaHelper.art_resource);
+      String pdfName = cuBase  + FilenameUtils.getName(resource);
+      log.debug3("looking for pdfName of " + pdfName);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
       return returnList;
@@ -90,6 +89,14 @@ public class AOFoundationSourceXmlMetadataExtractorFactory extends SourceXmlMeta
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
       log.debug("in AOFoundation postcook");
+      // In the AOFoundation metadata, the registrant is incorrectly set to WEB-FORM
+      String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
+      String jname = thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE);
+      if ("WEB-FORM".equals(pname)) {
+        // for now this is the only journal handled by this plugin
+        // if ("European Cells and Materials".equals(jname)) {
+          thisAM.replace(MetadataField.FIELD_PUBLISHER,ECM_PUBLISHER);
+      }
     }
 
   }
