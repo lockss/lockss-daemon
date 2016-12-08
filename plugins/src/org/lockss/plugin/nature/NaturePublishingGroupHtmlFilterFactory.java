@@ -138,6 +138,8 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "baseline-wrapper"),
         // global message on pages - e.g. request to fill out a survey
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^global-message"),
+        // http://www.nature.com/jhg/journal/v61/n8/index.html 
+        HtmlNodeFilters.tagWithAttribute("span", "class", "free"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
