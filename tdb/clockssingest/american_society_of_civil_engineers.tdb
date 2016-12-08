@@ -154,7 +154,7 @@
       au < crawling ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 18 ; >
       au < finished ; crawling ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; Journal of Bridge Engineering Volume 20 ; 20 ; >
+      au < finished ; manifest ; 2015 ; Journal of Bridge Engineering Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Journal of Bridge Engineering Volume 21 ; 21 ; >
     
   }
@@ -276,7 +276,7 @@
     au < manifest ; exists ; 2011 ; Journal of Construction Engineering and Management Volume 137 ; 137 ; >
     au < crawling ; exists ; 2012 ; Journal of Construction Engineering and Management Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Construction Engineering and Management Volume 139 ; 139 ; >
-    au < frozen ; exists ; 2014 ; Journal of Construction Engineering and Management Volume 140 ; 140 ; >
+    au < finished ; manifest ; 2014 ; Journal of Construction Engineering and Management Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Construction Engineering and Management Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Construction Engineering and Management Volume 142 ; 142 ; >
 
@@ -457,7 +457,7 @@
     au < crawling ; exists ; 2012 ; Journal of Engineering Mechanics Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Engineering Mechanics Volume 139 ; 139 ; >
     au < finished ; finished ; 2014 ; Journal of Engineering Mechanics Volume 140 ; 140 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Engineering Mechanics Volume 141 ; 141 ; >
+    au < finished ; manifest ; 2015 ; Journal of Engineering Mechanics Volume 141 ; 141 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Engineering Mechanics Volume 142 ; 142 ; >
 
   }
@@ -584,7 +584,7 @@
     au < crawling ; exists ; 2012 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 16 ; 16 ; >
     au < finished ; finished ; 2013 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2015 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 20 ; 20 ; >
 
   }
@@ -664,7 +664,7 @@
     au < manifest ; exists ; 2011 ; Journal of Hydraulic Engineering Volume 137 ; 137 ; >
     au < crawling ; exists ; 2012 ; Journal of Hydraulic Engineering Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Hydraulic Engineering Volume 139 ; 139 ; >
-    au < frozen ; exists ; 2014 ; Journal of Hydraulic Engineering Volume 140 ; 140 ; >
+    au < finished ; manifest ; 2014 ; Journal of Hydraulic Engineering Volume 140 ; 140 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Journal of Hydraulic Engineering Volume 141 ; 141 ; >
     au < crawling ; exists ; 2016 ; Journal of Hydraulic Engineering Volume 142 ; 142 ; >
 
@@ -712,7 +712,7 @@
     au < crawling ; exists ; 2012 ; Journal of Irrigation and Drainage Engineering Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Irrigation and Drainage Engineering Volume 139 ; 139 ; >
     au < finished ; finished ; 2014 ; Journal of Irrigation and Drainage Engineering Volume 140 ; 140 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Irrigation and Drainage Engineering Volume 141 ; 141 ; >
+    au < finished ; manifest ; 2015 ; Journal of Irrigation and Drainage Engineering Volume 141 ; 141 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Irrigation and Drainage Engineering Volume 142 ; 142 ; >
 
   }
@@ -747,7 +747,7 @@
     au < crawling ; exists ; 2012 ; Journal of Infrastructure Systems Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Journal of Infrastructure Systems Volume 19 ; 19 ; >
     au < finished ; finished ; 2014 ; Journal of Infrastructure Systems Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2015 ; Journal of Infrastructure Systems Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2015 ; Journal of Infrastructure Systems Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Infrastructure Systems Volume 22 ; 22 ; >
 
   }
@@ -767,7 +767,7 @@
     au < manifest ; exists ; 2011 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2014 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2014 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 8 ; 8 ; >
 
@@ -872,7 +872,7 @@
     au < manifest ; exists ; 2011 ; Journal of Nanomechanics and Micromechanics Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; Journal of Nanomechanics and Micromechanics Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Journal of Nanomechanics and Micromechanics Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2014 ; Journal of Nanomechanics and Micromechanics Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2014 ; Journal of Nanomechanics and Micromechanics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Nanomechanics and Micromechanics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Nanomechanics and Micromechanics Volume 6 ; 6 ; >
 
@@ -1128,7 +1128,7 @@
     au < crawling ; exists ; 2012 ; Journal of Urban Planning and Development Volume 138 ; 138 ; >
     au < crawling ; exists ; 2013 ; Journal of Urban Planning and Development Volume 139 ; 139 ; >
     au < finished ; finished ; 2014 ; Journal of Urban Planning and Development Volume 140 ; 140 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Urban Planning and Development Volume 141 ; 141 ; >
+    au < finished ; manifest ; 2015 ; Journal of Urban Planning and Development Volume 141 ; 141 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Urban Planning and Development Volume 142 ; 142 ; >
 
   }
@@ -1222,7 +1222,7 @@
     au < finished ; finished ; 2012 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 138 ; 138 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 139 ; 139 ; >
     au < finished ; finished ; 2014 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 140 ; 140 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 141 ; 141 ; >
+    au < finished ; manifest ; 2015 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 141 ; 141 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 142 ; 142 ; >
     
   }
