@@ -27,6 +27,7 @@
  */
 package org.lockss.plugin;
 
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
@@ -35,14 +36,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
+import java.util.concurrent.TimeUnit;
+import javax.ws.rs.ProcessingException;
 import javax.ws.rs.core.GenericType;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import org.jboss.resteasy.client.jaxrs.BasicAuthentication;
-import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
+import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.lockss.config.CurrentConfig;
+import org.lockss.laaws.indexservice.model.Url;
 import org.lockss.util.Logger;
 import org.lockss.ws.status.DaemonStatusService;
 
@@ -80,18 +82,14 @@ public class GetAuUrlsClient {
 	&& restServiceLocation.trim().length() > 0) {
       // Yes: Get the Archival Unit URLs from the REST service.
       try {
-	// Create a REST service client.
-	Client client = ClientBuilder.newClient();
+	// Get the client connection timeout.
+	int timeoutValue = CurrentConfig.getIntParam(
+	    PluginManager.PARAM_URL_LIST_WS_TIMEOUT_VALUE,
+	    PluginManager.DEFAULT_URL_LIST_WS_TIMEOUT_VALUE);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "client = '" + client + "'");
+	  log.debug3(DEBUG_HEADER + "timeoutValue = " + timeoutValue);
 
-	// Create the client target.
-	ResteasyWebTarget webTarget =
-	    (ResteasyWebTarget)client.target(restServiceLocation);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "webTarget = '" + webTarget + "'");
-
-	// Provide the authentication credentials.
+	// Get the authentication credentials.
 	String userName =
 	    CurrentConfig.getParam(PluginManager.PARAM_URL_LIST_WS_USER_NAME);
 	if (log.isDebug3())
@@ -101,31 +99,46 @@ public class GetAuUrlsClient {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "password = '" + password + "'");
 
-	webTarget.register(new BasicAuthentication(userName, password));
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "webTarget = '" + webTarget + "'");
-
-	// Make the request and get the response.
+	// Encode the Archival Unit identifier.
 	String encodedAuId = URLEncoder.encode(auId, "UTF-8");
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "encodedAuId = '" + encodedAuId + "'");
 
-	List<Url> result = webTarget.path("aus").path(encodedAuId).path("urls")
-	    .request().accept("application/json").get()
-	    .readEntity(new GenericType<List<Url>>(){});
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+	// Make the request to the REST service and get its response.
+	List<Url> result = new ResteasyClientBuilder()
+	    .register(JacksonJsonProvider.class)
+	    .establishConnectionTimeout(timeoutValue, TimeUnit.SECONDS)
+            .socketTimeout(timeoutValue, TimeUnit.SECONDS).build()
+            .target(restServiceLocation)
+            .register(new BasicAuthentication(userName, password))
+            .path("aus").path(encodedAuId).path("urls").request()
+            .get(new GenericType<List<Url>>() {});
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "result = " + result);
+	  log.debug3(DEBUG_HEADER + "result.size() = " + result.size());
+	}
 
-	// Prepare the results.
+	// Initialize the results.
 	List<String> urls = new ArrayList<String>();
 
+	// Loop through all the objects provided by the REST service.
 	for (Url url : result) {
+	  // Extract the URL from the REST service response object and add it to
+	  // the results.
 	  urls.add(url.getUrl());
 	}
 
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "urls = " + urls);
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "urls = " + urls);
 	return urls;
       } catch (Exception e) {
 	log.error("Caught exception accessing REST service", e);
+
+	while (e instanceof ProcessingException && e.getCause() != null
+	    && e.getCause() instanceof Exception) {
+	  e = (Exception)e.getCause();
+	  log.error("ProcessingException.getCause()", e);
+	}
+
 	exceptions.put(auId, e);
       }
     } else {
@@ -209,54 +222,5 @@ public class GetAuUrlsClient {
    */
   public static Exception getAndDeleteAnyException(String auId) {
     return exceptions.remove(auId);
-  }
-
-  /**
-   * The object returned by the REST web service.
-   */
-  public static class Url {
-    private String url = null;
-    private WarcRecordIndex warcRecordIndex = null;
-
-    public String getUrl() {
-      return url;
-    }
-    public void setUrl(String url) {
-      this.url = url;
-    }
-
-    public WarcRecordIndex getWarcRecordIndex() {
-      return warcRecordIndex;
-    }
-    public void setWarcRecordIndex(WarcRecordIndex warcRecordIndex) {
-      this.warcRecordIndex = warcRecordIndex;
-    }
-
-    public static class WarcRecordIndex {
-      private String uri = null;
-      private Integer timestamp = null;
-      private Integer offset = null;
-
-      public String getUri() {
-        return uri;
-      }
-      public void setUri(String uri) {
-        this.uri = uri;
-      }
-
-      public Integer getTimestamp() {
-        return timestamp;
-      }
-      public void setTimestamp(Integer timestamp) {
-        this.timestamp = timestamp;
-      }
-
-      public Integer getOffset() {
-        return offset;
-      }
-      public void setOffset(Integer offset) {
-        this.offset = offset;
-      }
-    }
   }
 }

@@ -463,6 +463,8 @@ Args:
   	value="${lib}/javax.ws.rs-api-2.0.1.jar" />
   <property name="resteasy-client-3.0.19.Final.jar"
   	value="${lib}/resteasy-client-3.0.19.Final.jar" />
+  <property name="jackson-jaxrs-json-provider.jar"
+  	value="${lib}/jackson-jaxrs-json-provider-2.3.2.jar" />
 
   <property name="empty.db.parent.dir" value="${tmpdir}" />
   <property name="empty.db.dir" value="${empty.db.parent.dir}/db" />
@@ -616,6 +618,7 @@ Args:
     <pathelement path="${javax.annotation-api-1.2.jar}" />
     <pathelement path="${javax.ws.rs-api-2.0.1.jar}" />
     <pathelement path="${resteasy-client-3.0.19.Final.jar}" />
+    <pathelement path="${jackson-jaxrs-json-provider.jar}" />
   	<!-- Needed by Java 8 -->
     <pathelement path="${jdk.rt.jar}" />
   </path>
