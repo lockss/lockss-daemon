@@ -290,7 +290,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 153 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Endocrinology Volume 154 ; 154 ; >
       au < finished ; crawling ; 2014 ; Endocrinology Volume 155 ; 155 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Endocrinology Volume 156 ; 156 ; >
+      au < finished ; manifest ; 2015 ; Endocrinology Volume 156 ; 156 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; Endocrinology Volume 157 ; 157 ; >
 
     }
@@ -421,7 +421,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ; >
       au < finished ; crawling ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 ; >
+      au < finished ; manifest ; 2015 ; Journal of Clinical Endocrinology & Metabolism Volume 100 ; 100 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Journal of Clinical Endocrinology & Metabolism Volume 101 ; 101 ; >
 
     }
