@@ -1,0 +1,120 @@
+<map>
+<!--  This plugin is used to HARVEST the content received via file-transfer and thence made in to a 
+      crawlable website.  We will trigger from the harvested version of the content as per the trigger guidelines
+      Not putting in an article iterator or a metadata extractor because the content was counted 
+      when it was taken in via file-transfer; this plugin is solely to provide access to the content
+-->
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.nature.ClockssBoneKeyTriggeredContentPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"BoneKey Reports Triggered Content Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BoneKey Reports Triggered Content Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>1,"^%s%d/", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%d/CLOCKSS_%d.html", base_url, year, year</string>    
+  </entry>
+  <!--  some articles don't have PDF, but every year has at least some PDF -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%d/.+\.pdf$", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+<!--  we only harvest from our own servers -->
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+<!-- 
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+-->  
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
+  </entry>
+  <!--  do not extract external references from file-transfer xml files -->
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceXmlLinkExtractorFactory</string>
+  </entry>    
+</map>    
