@@ -193,6 +193,7 @@
     <list>
       <string>"%s(pal/)?(common|images|openinnovation)/", base_url</string>
       <string>"%sview/[^/]+/images/", base_url</string>
+      <string>"[.](css|js)$"</string>
     </list>
   </entry>
   <entry>
@@ -200,6 +201,7 @@
     <list>
       <string>"%s(pal/)?(common|images|openinnovation)/", base_url, 0</string>
       <string>"%sview/[^/]+/images/", base_url, 0</string>
+      <string>"[.](css|js)$", 0</string>
     </list>
   </entry> 
   <entry>
