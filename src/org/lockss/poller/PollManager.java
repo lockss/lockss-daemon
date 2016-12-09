@@ -125,7 +125,7 @@ public class PollManager
    * </dl>
    */
   public static final String PARAM_AUTO_POLL_AUS =
-    PREFIX + "autoPollAuClassess";
+    PREFIX + "autoPollAuClassess"; // FIXME typo
   public static final List<String> DEFAULT_AUTO_POLL_AUS =
     ListUtil.list("All");
 
