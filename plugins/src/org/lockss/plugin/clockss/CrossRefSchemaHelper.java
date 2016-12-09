@@ -206,6 +206,7 @@ implements SourceXmlSchemaHelper {
   static {
     // normal journal article schema
     cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(pub_issn, MetadataField.FIELD_ISSN);
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
