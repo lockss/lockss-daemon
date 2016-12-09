@@ -1949,8 +1949,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://lupus.bmj.com/
 
-      au < HighWirePressH20Plugin ; testing ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
     
