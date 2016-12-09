@@ -902,7 +902,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; >
-      au < finished ; manifest ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; >
 
     }
@@ -1017,7 +1017,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; >
-      au < finished ; manifest ; 2015 ; Microbiology Volume 161 ; 161 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; Microbiology Volume 161 ; 161 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; >
 
     }
