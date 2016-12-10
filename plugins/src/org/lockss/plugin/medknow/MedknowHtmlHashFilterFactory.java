@@ -82,6 +82,7 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
     String AuVol = auConfig.get(ConfigParamDescr.VOLUME_NAME.getKey());
     String AuIssn = auConfig.get(ConfigParamDescr.JOURNAL_ISSN.getKey());
     final Pattern THIS_VOL_ISSN_PAT = Pattern.compile(String.format("showBackIssue\\.asp\\?issn=%s;year=[0-9]{4};volume=%s;",AuIssn, AuVol),Pattern.CASE_INSENSITIVE);
+    final Pattern ONLINE_ACCESSED_PAT = Pattern.compile("Online since .{1,99}?Accessed [0-9,.]{1,99} times?", Pattern.DOTALL);
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
         in,
         encoding,
@@ -127,8 +128,8 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                         String longContents = ((TableTag)node).getStringText();
                         // the PDF access policy is stated on TOC
                         // except like http://www.ejo.eg.net/showBackIssue.asp?issn=1012-5574;year=2012;volume=28;issue=1
-                        if (!(longContents.toLowerCase().contains("pdf access policy") ||
-                              longContents.matches(".*Online since .{14,99}?Accessed [0-9,.]{1,99} times?.*")))
+                        if (!(longContents.toLowerCase().contains("pdf access policy") || 
+                              ONLINE_ACCESSED_PAT.matcher(longContents).find()))
                         {
                           return true;
                         }

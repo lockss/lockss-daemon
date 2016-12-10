@@ -229,11 +229,11 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "<td valign=\'top\' width=\'50%\'>" +
       "<b>April-June&nbsp;2014</b>" +
       "<br>Volume 11&nbsp;|&nbsp;Issue 2" +
-      "<br>Page Nos. 97-200<br>" +
-      "<br>Online since Tuesday, May 20, 2014<br>" +
-      "<br>" +
-      "Accessed 33,012 times." +
-      "<br>" +
+      "<br>Page Nos. 97-200<br>\n" +
+      "<br>Online since Tuesday, May 20, 2014<br>\n" +
+      "<br>\n" +
+      "Accessed 33,012 times.\n" +
+      "<br>\n" +
       "<br>" +
       "<b>PDF access policy</b>" +
       "<br>Full text access is free in HTML pages; however the journal allows PDF access only to subscribers." +
