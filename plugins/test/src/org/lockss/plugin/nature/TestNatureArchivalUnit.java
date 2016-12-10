@@ -220,6 +220,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     {
         Perl5Compiler.quotemeta(ROOT_URL)+"(pal/)?(common|images|openinnovation)/",
         Perl5Compiler.quotemeta(ROOT_URL)+"view/[^/]+/images/",
+        "[.](css|js)$",
     };
 
   public void testRepairList() throws Exception {
