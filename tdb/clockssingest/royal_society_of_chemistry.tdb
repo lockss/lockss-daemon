@@ -922,8 +922,8 @@
 
       au < ready ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
       au < ready ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
-      au < testing ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
-      au < testing ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
+      au < ready ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
       au < testing ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
       au < testing ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
       au < testing ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
@@ -999,7 +999,7 @@
       comment[years] = Published 2014-2016
       param[journal_code] = en
 
-      au < testing ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
+      au < ready ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
       au < testing ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
       au < testing ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
 

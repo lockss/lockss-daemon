@@ -2498,7 +2498,6 @@
     >
 
     param[journal_id] = ncb
-    comment[notReady] = low agreement 
 
     au < doNotProcess ; doNotProcess ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 ; >
     au < manifest ; exists ; 2000 ; Nature Cell Biology Volume 2 ; 2000 ; 2 ; >
@@ -2513,7 +2512,7 @@
     au < zapped ; finished ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 ; >
     au < finished ; frozen ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 ; >
     au < finished ; frozen ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
-    au < ingNotReady ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; >
+    au < ready ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; >
     au < crawling ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; >
