@@ -35,11 +35,11 @@
     param[base_url] = https://bonekey.stanford.clockss.org/
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
 
-    au < testing ; exists ; 2012 ; BoneKEy Reports Volume 2012 ; 2012 ; >
-    au < testing ; exists ; 2013 ; BoneKEy Reports Volume 2013 ; 2013 ; >
-    au < testing ; exists ; 2014 ; BoneKEy Reports Volume 2014 ; 2014 ; >
-    au < testing ; exists ; 2015 ; BoneKEy Reports Volume 2015 ; 2015 ; >
-    au < testing ; exists ; 2016 ; BoneKEy Reports Volume 2016 ; 2016 ; >
+    au < crawling ; exists ; 2012 ; BoneKEy Reports Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; BoneKEy Reports Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; BoneKEy Reports Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; BoneKEy Reports Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2016 ; BoneKEy Reports Volume 2016 ; 2016 ; >
   
   }
 
