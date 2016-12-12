@@ -5797,7 +5797,7 @@
       >
 
       param[journal_issn] = 2277-4696
-      param[base_url] = http://www.jdas.in//
+      param[base_url] = http://www.jdas.in/
 
       au < manifest ; 2012 ; Journal of Dental and Allied Sciences Volume 1 ; 2012 ; 1 >
       au < manifest ; 2013 ; Journal of Dental and Allied Sciences Volume 2 ; 2013 ; 2 >
@@ -6711,7 +6711,7 @@
       >
 
       param[journal_issn] = 2394-7438
-      param[base_url] = http://www.mamcjms.in//
+      param[base_url] = http://www.mamcjms.in/
 
       au < manifest ; 2015 ; MAMC Journal of Medical Sciences Volume 1 ; 2015 ; 1 >
       au < manifest ; 2016 ; MAMC Journal of Medical Sciences Volume 2 ; 2016 ; 2 >
@@ -7108,10 +7108,10 @@
       param[base_url] = http://www.roaic.eg.net/
 
       au < manifest ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 1 ; 2015 ; 1 >
-      au < expected ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2016 ; 2 >
+      au < exists ; 2015 ; Research and Opinion in Anesthesia and Intensive Care Volume 2 ; 2015 ; 2 >
+      au < exists ; 2016 ; Research and Opinion in Anesthesia and Intensive Care Volume 3 ; 2016 ; 3 >
 
   }
-
 
   {
 
