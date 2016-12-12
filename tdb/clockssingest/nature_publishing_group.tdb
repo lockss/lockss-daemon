@@ -421,7 +421,7 @@
     au < finished ; frozen ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 ; >
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 ; >
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 ; >
-    au < finished ; crawling ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 ; >
     au < deepCrawl ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 ; >
@@ -905,7 +905,7 @@
     au < manifest ; exists ; 2006 ; Genes and Immunity Volume 7 ; 2006 ; 7 ; >
     au < manifest ; exists ; 2007 ; Genes and Immunity Volume 8 ; 2007 ; 8 ; >
     au < finished ; frozen ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 ; >
-    au < finished ; frozen ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 ; >
+    au < finished ; finished ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 ; >
     au < finished ; frozen ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 ; >
     au < finished ; frozen ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 ; >
@@ -1349,7 +1349,7 @@
     #move to Elsevier http://www.jidsponline.org/
 
 
-    au < finished ; frozen ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 ; >
+    au < finished ; finished ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 ; >
     au < finished ; finished ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 ; >
     au < superseded ; down ; 2010 ; JID Symposium Proceedings Volume 15 [superseded] ; 2010 ; 15 ; >
     au < finished ; finished ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 ; >
@@ -2409,7 +2409,7 @@
     au < finished ; finished ; 2014 ; Nature Volume 510 ; 2014 ; 510 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Volume 512 ; 2014 ; 512 ; >
-    au < finished ; frozen ; 2014 ; Nature Volume 513 ; 2014 ; 513 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Nature Volume 513 ; 2014 ; 513 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; Nature Volume 514 ; 2014 ; 514 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; >

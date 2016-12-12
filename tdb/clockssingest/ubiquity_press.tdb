@@ -82,7 +82,7 @@
       au < crawling ; exists ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 20-21 ; ASIANetwork Exchange Volume 2013 ; 2013 ; >
-      au < finished ; crawling ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2014 ; 21-22 ; ASIANetwork Exchange Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; 22 ; ASIANetwork Exchange Volume 2015 ; 2015 ; >
       au < crawling ; exists ; 2016 ; 23 ; ASIANetwork Exchange Volume 2016 ; 2016 ; >
 
@@ -179,7 +179,7 @@
 
       au < crawling ; exists ; 2013 ; 1 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; >
 
   }
@@ -228,7 +228,7 @@
       comment[publisher] = Stockholm University Press
       param[base_url] = http://www.rurallandscapesjournal.com/
 
-      au < finished ; crawling ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
+      au < finished ; finished ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; >
       au < finished ; finished ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; >
 
@@ -618,7 +618,7 @@
       au < crawling ; exists ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; >
       au < crawling ; exists ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; >
 
   }
@@ -1426,11 +1426,11 @@
       au < finished ; finished ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; reingest1.clockss.org:8082 > #2 extra css files
-      au < finished ; crawling ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; reingest1.clockss.org:8082 > #2 extra css files
+      au < finished ; finished ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >

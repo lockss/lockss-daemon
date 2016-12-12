@@ -761,7 +761,7 @@
       param[journal_id] = ijaudit
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015-2016 ; International Journal of Auditing Technology Volume 3 ; 3 ; >
 
     }
@@ -870,7 +870,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Autonomous and Adaptive Communications Systems Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Autonomous and Adaptive Communications Systems Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; International Journal of Autonomous and Adaptive Communications Systems Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Autonomous and Adaptive Communications Systems Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal of Autonomous and Adaptive Communications Systems Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Autonomous and Adaptive Communications Systems Volume 9 ; 9 ; >
 
     }
@@ -2814,7 +2814,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Emergency Management Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Emergency Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Emergency Management Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Emergency Management Volume 12 ; 12 ; >
 
@@ -3936,7 +3936,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Human Resources Development and Management Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Human Resources Development and Management Volume 16 ; 16 ; >
 
     }
@@ -5997,7 +5997,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Multicriteria Decision Making Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Multicriteria Decision Making Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Multicriteria Decision Making Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015 ; International Journal of Multicriteria Decision Making Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal of Multicriteria Decision Making Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Multicriteria Decision Making Volume 6 ; 6 ; >
 
     }
@@ -6556,7 +6556,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Powertrain Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Powertrain Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Powertrain Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; International Journal of Powertrain Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Powertrain Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Powertrain Volume 5 ; 5 ; >
 
@@ -7324,7 +7324,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Services Technology and Management Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Services Technology and Management Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; International Journal of Services Technology and Management Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; International Journal of Services Technology and Management Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; International Journal of Services Technology and Management Volume 21 ; 21 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Services Technology and Management Volume 22 ; 22 ; >
 
     }
@@ -7563,7 +7563,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Space-Based and Situated Computing Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Space-Based and Situated Computing Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Space-Based and Situated Computing Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Space-Based and Situated Computing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Space-Based and Situated Computing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Space-Based and Situated Computing Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Space-Based and Situated Computing Volume 6 ; 6 ; >
 
@@ -8584,7 +8584,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 ; >
-      au < finished ; crawling ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; >
 
     }
@@ -9030,7 +9030,7 @@
       au < doNotProcess ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 ; >
       au < finished ; finished ; 2013-2014 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 ; >
-      au < finished ; crawling ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Progress in Industrial Ecology, An International Journal Volume 10 ; 10 ; >
 
     }
@@ -9103,7 +9103,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; World Review of Science, Technology and Sustainable Development Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2016 ; World Review of Science, Technology and Sustainable Development Volume 13 ; 13 ; >
 
     }

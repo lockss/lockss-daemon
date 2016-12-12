@@ -436,7 +436,7 @@
     au < manifest ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2014 ; Immunotherapy Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; > #500 Error. Waiting for Atypon to fix.
     au < crawling ; exists ; 2016 ; Immunotherapy Volume 8 ; 8 ; >
     
@@ -638,7 +638,7 @@
     au < manifest ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 ; >
     au < finished ; crawling ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2015 ; Neuropsychiatry Volume 5 ; 5 ; >
     au < expected ; exists ; 2016 ; Neuropsychiatry Volume 6 ; 6 ; >
     
