@@ -6599,7 +6599,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Private Law Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Private Law Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Private Law Volume 6 ; 6 ; >
-      au < finished ; manifest ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; International Journal of Private Law Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Private Law Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Private Law Volume 9 ; 9 ; >
 
@@ -6637,7 +6637,7 @@
       param[journal_id] = ijpse
 
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2016 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; >
 
@@ -6949,7 +6949,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Rapid Manufacturing Volume 6 ; 6 ; >
 
     }
@@ -7415,7 +7415,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Simulation and Process Modelling Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Simulation and Process Modelling Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Simulation and Process Modelling Volume 8 ; 8 ; >
-      au < finished ; manifest ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; International Journal of Simulation and Process Modelling Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Simulation and Process Modelling Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; International Journal of Simulation and Process Modelling Volume 11 ; 11 ; >
 
