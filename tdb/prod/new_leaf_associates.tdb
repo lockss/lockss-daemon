@@ -3,9 +3,6 @@
     name = New Leaf Associates
   >
 
-  plugin = org.lockss.plugin.jafscd.JafscdPlugin
-  implicit < status ; year ; name ; param[volume_name] ; param[manifest_id]>
-  param[base_url] = http://www.agdevjournal.com/
 
   {
     title <
@@ -14,14 +11,37 @@
       eissn = 2152-0801 
     >
 
-    # manifest page is online
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+    param[base_url] = https://www.foodsystemsjournal.org/
     
-    au < released ; 2010-2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 ; 285>
-    au < released ; 2011-2012 ; Journal of Agriculture, Food Systems, and Community Development Volume 2 ; 2 ; 286>
-    au < released ; 2012-2013 ; Journal of Agriculture, Food Systems, and Community Development Volume 3 ; 3 ; 386>
-    au < released ; 2013-2014 ; Journal of Agriculture, Food Systems, and Community Development Volume 4 ; 4 ; 481>
-    au < released ; 2014-2015 ; Journal of Agriculture, Food Systems, and Community Development Volume 5 ; 5 ; 570>
-    au < expected ; 2015-2016 ; Journal of Agriculture, Food Systems, and Community Development Volume 6 ; 6 ; 600>
+    au < exists ; 2010 ; 1 ; Journal of Agriculture, Food Systems, and Community Development Volume 2010 ; 2010 >
+    au < exists ; 2011 ; 1-2 ; Journal of Agriculture, Food Systems, and Community Development Volume 2011 ; 2011 >
+    au < exists ; 2012 ; 2-3 ; Journal of Agriculture, Food Systems, and Community Development Volume 2012 ; 2012 >
+    au < exists ; 2013 ; 3-4 ; Journal of Agriculture, Food Systems, and Community Development Volume 2013 ; 2013 >
+    au < exists ; 2014 ; 4-5 ; Journal of Agriculture, Food Systems, and Community Development Volume 2014 ; 2014 >
+    au < exists ; 2015 ; 5-6 ; Journal of Agriculture, Food Systems, and Community Development Volume 2015 ; 2015 >
+    au < exists ; 2016 ; 6-7 ; Journal of Agriculture, Food Systems, and Community Development Volume 2016 ; 2016 >
+
+  }
+
+  {
+    title <
+      name = Journal of Agriculture, Food Systems, and Community Development ;
+      issn = 2152-0798 ;
+      eissn = 2152-0801 
+    >
+
+    plugin = org.lockss.plugin.jafscd.JafscdPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[manifest_id]>
+    param[base_url] = http://www.agdevjournal.com/
+    ####moved to https://www.foodsystemsjournal.org/
+    
+    au < down ; 2010-2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 ; 285>
+    au < down ; 2011-2012 ; Journal of Agriculture, Food Systems, and Community Development Volume 2 ; 2 ; 286>
+    au < down ; 2012-2013 ; Journal of Agriculture, Food Systems, and Community Development Volume 3 ; 3 ; 386>
+    au < down ; 2013-2014 ; Journal of Agriculture, Food Systems, and Community Development Volume 4 ; 4 ; 481>
+    au < down ; 2014-2015 ; Journal of Agriculture, Food Systems, and Community Development Volume 5 ; 5 ; 570>
 
   }
 
