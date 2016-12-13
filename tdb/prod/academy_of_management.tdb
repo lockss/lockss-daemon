@@ -6,7 +6,13 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      
+  {
+     #Journal: Academy of Management Proceedings
+     #url: http://proceedings.aom.org/site/misc/archive.xhtml
+     #Publisher: Academy of Management
+     #JIRA: http://jira.lockss.org/browse/PUB-265
+     #####Not sufficiently well formed for preservation with a crawler. Do not include####
+  }
   {
 
     title <
