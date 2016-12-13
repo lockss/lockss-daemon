@@ -21366,7 +21366,7 @@
         au < released ; 2010 ; International Studies Volume 47 ; 47 >
         au < released ; 2011 ; International Studies Volume 48 ; 48 >
         au < released ; 2012 ; International Studies Volume 49 ; 49 >
-        au < exists ; 2013 ; International Studies Volume 50 ; 50 >
+        au < manifest ; 2013 ; International Studies Volume 50 ; 50 >
 
       }
 
@@ -31558,7 +31558,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 >
-      au < expected ; 2016 ; Journal of Strategic Contracting and Negotiation Volume 2 ; 2 >
+      au < manifest ; 2016 ; Journal of Strategic Contracting and Negotiation Volume 2 ; 2 >
 
   }
 
@@ -33405,7 +33405,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Justice Research and Policy Volume 14 ; 14 >
       au < manifest ; 2013 ; Justice Research and Policy Volume 15 ; 15 >
       au < released ; 2015 ; Justice Research and Policy Volume 16 ; 16 >
-      au < expected ; 2016 ; Justice Research and Policy Volume 17 ; 17 >
+      au < manifest ; 2016 ; Justice Research and Policy Volume 17 ; 17 >
 
   }
 
