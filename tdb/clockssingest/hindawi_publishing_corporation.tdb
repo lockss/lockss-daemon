@@ -132,10 +132,10 @@
     >
 
     param[journal_id] = aae
+    #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Aerospace Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Aerospace Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -164,10 +164,10 @@
     >
 
     param[journal_id] = aanat
+    #moved to archive
 
-    au < deepCrawl ; exists ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Anatomy Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -182,8 +182,7 @@
     param[journal_id] = aandrol
 
     au < finished ; finished ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Andrology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -196,10 +195,11 @@
     >
 
     param[journal_id] = aan
+    #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -315,7 +315,7 @@
     >
 
     param[journal_id] = abm
-    #archived
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
 
@@ -330,10 +330,10 @@
     >
 
     param[journal_id] = abot
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Botany Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -385,10 +385,11 @@
     >
 
     param[journal_id] = aceng
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Computer Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Computer Engineering Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -423,11 +424,10 @@
     >
 
     param[journal_id] = acc
-    #journal gone
+    #Moved to archive
 
-    au < down ; finished ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Advances in Critical Care Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -505,10 +505,10 @@
     >
 
     param[journal_id] = aelc
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Electronics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -521,10 +521,11 @@
     >
 
     param[journal_id] = aem
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -553,10 +554,11 @@
     >
 
     param[journal_id] = aec
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -569,10 +571,11 @@
     >
 
     param[journal_id] = aep
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Epidemiology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Epidemiology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Epidemiology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -585,11 +588,10 @@
     >
 
     param[journal_id] = aeb
-    #journal gone
+    #Moved to archive
 
-    au < down ; finished ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Evolutionary Biology Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; finished ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -624,11 +626,10 @@
     >
 
     param[journal_id] = ageo
-    #journal gone
+    #Moved to archive
 
-    au < down ; finished ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 ; >
-    au < down ; exists ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Geology Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; finished ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -641,10 +642,10 @@
     >
 
     param[journal_id] = ager
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Geriatrics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -678,10 +679,10 @@
     >
 
     param[journal_id] = ahe
+    #Moved to archive
 
-    au < deepCrawl ; exists ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Hepatology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -790,7 +791,7 @@
     au < doNotProcess ; exists ; 2011 ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < doNotProcess ; exists ; 2013 ; Advances in Mechanical Engineering Volume 2013 ; 2013 ; 2013 ; >
-    au < down ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Mechanical Engineering Volume 2014 ; 2014 ; 2014 ; >
 
   }
 
@@ -841,11 +842,10 @@
     >
 
     param[journal_id] = amb
-    #journal gone
+    #Moved to archive
 
-    au < down ; exists ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 ; >
-    au < down ; exists ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Molecular Biology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -881,10 +881,11 @@
     >
 
     param[journal_id] = an
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -950,9 +951,9 @@
     >
 
     param[journal_id] = aocean
-    #journal gone
+    #Moved to archive
 
-    au < down ; exists ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 ; >
 
   }
 
@@ -1080,10 +1081,11 @@
     >
 
     param[journal_id] = aoto
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1096,10 +1098,10 @@
     >
 
     param[journal_id] = ap
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Advances in Pharmaceutics Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Advances in Pharmaceutics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1199,10 +1201,10 @@
     >
 
     param[journal_id] = apsy
+    #Moved to archive
 
     au < frozen ; exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2016 ; Advances in Psychiatry Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1231,10 +1233,10 @@
     >
 
     param[journal_id] = ara
+    #Moved to archive
 
-    au < deepCrawl ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Radiology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -1247,7 +1249,7 @@
     >
 
     param[journal_id] = arm
-    # archived
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
@@ -1283,10 +1285,10 @@
     >
 
     param[journal_id] = as
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Advances in Statistics Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Advances in Statistics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1299,10 +1301,11 @@
     >
 
     param[journal_id] = atox
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1358,10 +1361,10 @@
     >
 
     param[journal_id] = avm
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Vascular Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -1394,8 +1397,8 @@
       issnl = 2356-6922 
     >
 
-    # journal archived - no longer accessible with expected journal_id
     param[journal_id] = az
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
@@ -1431,11 +1434,12 @@
     >
 
     param[journal_id] = algebra
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -1631,11 +1635,10 @@
     >
 
     param[journal_id] = ajn
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Asian Journal of Neuroscience Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Asian Journal of Neuroscience Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -2896,9 +2899,9 @@
     >
 
     param[journal_id] = dbj
-    # archived
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
@@ -3542,12 +3545,11 @@
     >
 
     param[journal_id] = ijan
-    #journal gone
+    #Moved to archive
 
     au < doNotProcess ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 ; >
-    au < down ; finished ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Antibiotics Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; International Journal of Antibiotics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -3755,11 +3757,10 @@
     >
 
     param[journal_id] = ijcp
-    #journal gone
+    #Moved to archive
 
     au < doNotProcess ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 ; >
-    au < down ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Chemical Physics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -4002,7 +4003,7 @@
     >
 
     param[journal_id] = ijembry
-    # archived
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 ; >
 
@@ -5321,7 +5322,7 @@
     param[journal_id] = jani
     #archived
     
-    au < down ; finished ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 ; >
 
   }
 
@@ -5548,9 +5549,9 @@
     >
 
     param[journal_id] = jcv
-    #journal gone
+    #Moved to archive
     
-    au < down ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 ; >
 
   }
 
@@ -5815,11 +5816,10 @@
     >
 
     param[journal_id] = jces
-    #journal gone
+    #Moved to archive
     
-    au < down ; finished ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2016 ; Journal of Computational Environmental Sciences Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5977,11 +5977,10 @@
     >
 
     param[journal_id] = jds
-    #journal gone
+    #Moved to archive
     
-    au < down ; finished ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Dental Surgery Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; finished ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -6188,11 +6187,10 @@
     >
 
     param[journal_id] = jep
-    #journal gone
+    #Moved to archive
     
-    au < down ; finished ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 ; >
-    au < down ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Experimental Physics Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; finished ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -6296,11 +6294,10 @@
     >
 
     param[journal_id] = jg
-    #journal gone
+    #Moved to archive
     
-    au < down ; finished ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < down ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Geochemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < finished ; finished ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -6791,9 +6788,9 @@
     >
 
     param[journal_id] = jnc
-    #archived
+    #Moved to archive
     
-    au < down ; finished ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6992,12 +6989,11 @@
     >
 
     param[journal_id] = joo
-    #journal gone
+    #Moved to archive
     
     au < doNotProcess ; exists ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 ; >
-    au < down ; finished ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2016 ; Journal of Oral Oncology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7395,9 +7391,9 @@
     >
 
     param[journal_id] = jsmat
-    # archived
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Soft Matter Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -7526,10 +7522,9 @@
     >
 
     param[journal_id] = jsb
-    #journal gone
+    #Moved to archive
 
-    au < down ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Synthetic Biology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -8258,9 +8253,9 @@
     >
 
     param[journal_id] = paleontology
-    # archive
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Paleontology Journal Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -8895,9 +8890,9 @@
     >
 
     param[journal_id] = sb
-    #journal gone
+    #Moved to archive
 
-    au < down ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 ; >
+    au < frozen ; exists ; 2013 ; Structural Biology Volume 2013 ; 2013 ; 2013 ; >
 
   }
   
