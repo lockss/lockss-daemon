@@ -442,8 +442,8 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://mend.endojournals.org/
 
-      au < finished ; finished ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ; >
-      au < down ; exists ; 2013 ; Molecular Endocrinology Volume 27 ; 27 ; >
+      au < superseded ; finished ; 2012 ; Molecular Endocrinology Volume 26 [superseded] ; 26 ; >
+      au < superseded ; exists ; 2013 ; Molecular Endocrinology Volume 27 [superseded] ; 27 ; >
 
     }
 
