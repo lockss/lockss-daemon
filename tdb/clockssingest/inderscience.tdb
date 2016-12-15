@@ -3192,7 +3192,7 @@
       au < finished ; finished ; 2015 ; International Journal of Environment and Waste Management Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Environment and Waste Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 17 ; 17 ; >
-      au < ready ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Environment and Waste Management Volume 18 ; 18 ; >
 
     }
 
@@ -7441,7 +7441,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Six Sigma and Competitive Advantage Volume 7 ; 7 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Six Sigma and Competitive Advantage Volume 8 ; 8 ; >
       au < finished ; finished ; 2015 ; International Journal of Six Sigma and Competitive Advantage Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 ; >
 
     }
 
@@ -8170,7 +8170,7 @@
       au < finished ; crawling ; 2015 ; International Journal of Technology Management Volume 69 ; 69 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 70 ; 70 ; >
       au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 71 ; 71 ; >
-      au < ready ; exists ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Technology Management Volume 72 ; 72 ; >
 
       }
     }
@@ -8287,7 +8287,7 @@
       param[journal_id] = ijbeam
 
       au < finished ; finished ; 2011-2015 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
 
     }
 
