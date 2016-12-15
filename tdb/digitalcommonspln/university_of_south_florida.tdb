@@ -87,36 +87,36 @@
     param[journal_abbr] = ijs
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < testing ; 1972 ; 1 ; International Journal of Speleology Volume 1 ; 1 >
-    au < testing ; 1973 ; 2 ; International Journal of Speleology Volume 2 ; 2 >
-    au < testing ; 1974 ; 3 ; International Journal of Speleology Volume 3 ; 3 >
-    au < testing ; 1975 ; 4 ; International Journal of Speleology Volume 4 ; 4 >
-    au < testing ; 1976 ; 5 ; International Journal of Speleology Volume 5 ; 5 >
-    au < testing ; 1977 ; 6 ; International Journal of Speleology Volume 6 ; 6 >
-    au < testing ; 1978 ; 7 ; International Journal of Speleology Volume 7 ; 7 >
-    au < testing ; 1979 ; 8 ; International Journal of Speleology Volume 8 ; 8 >
-    au < testing ; 1980 ; 9 ; International Journal of Speleology Volume 9 ; 9 >
-    au < testing ; 1981 ; 10 ; International Journal of Speleology Volume 10 ; 10 >
-    au < testing ; 1982 ; 11 ; International Journal of Speleology Volume 11 ; 11 >
-    au < testing ; 1983 ; 12 ; International Journal of Speleology Volume 12 ; 12 >
-    au < testing ; 1984 ; 13 ; International Journal of Speleology Volume 13 ; 13 >
-    au < testing ; 1985 ; 14 ; International Journal of Speleology Volume 14 ; 14 >
-    au < testing ; 1986 ; 15 ; International Journal of Speleology Volume 15 ; 15 >
-    au < testing ; 1987 ; 16 ; International Journal of Speleology Volume 16 ; 16 >
-    au < testing ; 1988 ; 17 ; International Journal of Speleology Volume 17 ; 17 >
-    au < testing ; 1989 ; 18 ; International Journal of Speleology Volume 18 ; 18 >
-    au < testing ; 1990 ; 19 ; International Journal of Speleology Volume 19 ; 19 >
-    au < testing ; 1991 ; 20 ; International Journal of Speleology Volume 20 ; 20 >
-    au < testing ; 1992 ; 21 ; International Journal of Speleology Volume 21 ; 21 >
-    au < testing ; 1993 ; 22 ; International Journal of Speleology Volume 22 ; 22 >
-    au < testing ; 1994 ; 23 ; International Journal of Speleology Volume 23 ; 23 >
-    au < testing ; 1995 ; 24 ; International Journal of Speleology Volume 24 ; 24 >
-    au < testing ; 1996 ; 25 ; International Journal of Speleology Volume 25 ; 25 >
-    au < testing ; 1997 ; 26 ; International Journal of Speleology Volume 26 ; 26 >
-    au < testing ; 1998 ; 27 ; International Journal of Speleology Volume 27 ; 27 >
-    au < testing ; 1999 ; 28 ; International Journal of Speleology Volume 28 ; 28 >
-    au < testing ; 2000 ; 29 ; International Journal of Speleology Volume 29 ; 29 >
-    au < testing ; 2001 ; 30 ; International Journal of Speleology Volume 30 ; 30 >
+    au < ready ; 1972 ; 1 ; International Journal of Speleology Volume 1 ; 1 >
+    au < ready ; 1973 ; 2 ; International Journal of Speleology Volume 2 ; 2 >
+    au < ready ; 1974 ; 3 ; International Journal of Speleology Volume 3 ; 3 >
+    au < ready ; 1975 ; 4 ; International Journal of Speleology Volume 4 ; 4 >
+    au < ready ; 1976 ; 5 ; International Journal of Speleology Volume 5 ; 5 >
+    au < ready ; 1977 ; 6 ; International Journal of Speleology Volume 6 ; 6 >
+    au < ready ; 1978 ; 7 ; International Journal of Speleology Volume 7 ; 7 >
+    au < ready ; 1979 ; 8 ; International Journal of Speleology Volume 8 ; 8 >
+    au < ready ; 1980 ; 9 ; International Journal of Speleology Volume 9 ; 9 >
+    au < ready ; 1981 ; 10 ; International Journal of Speleology Volume 10 ; 10 >
+    au < ready ; 1982 ; 11 ; International Journal of Speleology Volume 11 ; 11 >
+    au < ready ; 1983 ; 12 ; International Journal of Speleology Volume 12 ; 12 >
+    au < ready ; 1984 ; 13 ; International Journal of Speleology Volume 13 ; 13 >
+    au < ready ; 1985 ; 14 ; International Journal of Speleology Volume 14 ; 14 >
+    au < ready ; 1986 ; 15 ; International Journal of Speleology Volume 15 ; 15 >
+    au < ready ; 1987 ; 16 ; International Journal of Speleology Volume 16 ; 16 >
+    au < ready ; 1988 ; 17 ; International Journal of Speleology Volume 17 ; 17 >
+    au < ready ; 1989 ; 18 ; International Journal of Speleology Volume 18 ; 18 >
+    au < ready ; 1990 ; 19 ; International Journal of Speleology Volume 19 ; 19 >
+    au < ready ; 1991 ; 20 ; International Journal of Speleology Volume 20 ; 20 >
+    au < ready ; 1992 ; 21 ; International Journal of Speleology Volume 21 ; 21 >
+    au < ready ; 1993 ; 22 ; International Journal of Speleology Volume 22 ; 22 >
+    au < ready ; 1994 ; 23 ; International Journal of Speleology Volume 23 ; 23 >
+    au < ready ; 1995 ; 24 ; International Journal of Speleology Volume 24 ; 24 >
+    au < ready ; 1996 ; 25 ; International Journal of Speleology Volume 25 ; 25 >
+    au < ready ; 1997 ; 26 ; International Journal of Speleology Volume 26 ; 26 >
+    au < ready ; 1998 ; 27 ; International Journal of Speleology Volume 27 ; 27 >
+    au < ready ; 1999 ; 28 ; International Journal of Speleology Volume 28 ; 28 >
+    au < ready ; 2000 ; 29 ; International Journal of Speleology Volume 29 ; 29 >
+    au < ready ; 2001 ; 30 ; International Journal of Speleology Volume 30 ; 30 >
     au < released ; 2002 ; 31 ; International Journal of Speleology Volume 31 ; 31 >
     au < released ; 2003 ; 32 ; International Journal of Speleology Volume 32 ; 32 >
     au < released ; 2004 ; 33 ; International Journal of Speleology Volume 33 ; 33 >
