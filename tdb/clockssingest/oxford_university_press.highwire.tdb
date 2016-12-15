@@ -1970,13 +1970,14 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     # doesn't seem to be published past 2006
 
-    au < doNotProcess ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
-    au < doNotProcess ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 ; >
-    au < doNotProcess ; exists ; 2003 ; Arbitration Law Reports and Review 2003 ; 2003 ; >
-    au < doNotProcess ; exists ; 2004 ; Arbitration Law Reports and Review 2004 ; 2004 ; >
-    au < doNotProcess ; exists ; 2005 ; Arbitration Law Reports and Review 2005 ; 2005 ; >
-    au < doNotProcess ; exists ; 2006 ; Arbitration Law Reports and Review 2006 ; 2006 ; >
-    au < doNotProcess ; exists ; 2007 ; Arbitration Law Reports and Review 2007 ; 2007 ; >
+    au < crawling ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
+    au < crawling ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 ; >
+    au < crawling ; exists ; 2003 ; Arbitration Law Reports and Review 2003 ; 2003 ; >
+    au < crawling ; exists ; 2004 ; Arbitration Law Reports and Review 2004 ; 2004 ; >
+    au < crawling ; exists ; 2005 ; Arbitration Law Reports and Review 2005 ; 2005 ; >
+    au < crawling ; exists ; 2006 ; Arbitration Law Reports and Review 2006 ; 2006 ; >
+    au < crawling ; exists ; 2007 ; Arbitration Law Reports and Review 2007 ; 2007 ; >
+    au < crawling ; exists ; 2011 ; Arbitration Law Reports and Review 2011 ; 2011 ; >
 
     }
 
