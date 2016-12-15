@@ -3521,6 +3521,7 @@
     param[base_url] = http://blms.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     # The London Mathematical Society
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; released ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1970 ; Bulletin of the London Mathematical Society Volume 2 ; 2 >
@@ -13958,6 +13959,7 @@
     param[base_url] = http://jlms.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     # The London Mathematical Society
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; released ; 1926 ; Journal of the London Mathematical Society Volume s1-1 ; s1-1 >
     au < HighWirePressH20Plugin ; released ; 1927 ; Journal of the London Mathematical Society Volume s1-2 ; s1-2 >
@@ -15501,6 +15503,7 @@
     param[base_url] = http://jtopol.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     # The London Mathematical Society
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Topology Volume 1 ; 1 >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Topology Volume 2 [superseded] ; 2 >
@@ -20101,6 +20104,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://pan.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #move to Cambridge University Press
 
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Political Analysis Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Political Analysis Volume 2 ; 2 >
@@ -20179,6 +20183,7 @@
     param[base_url] = http://plms.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     # The London Mathematical Society
+    #move to Wiley
 
     au < HighWirePressH20Plugin ; released ; 1865 ; Proceedings of the London Mathematical Society Volume s1-1 ; s1-1 >
     au < HighWirePressH20Plugin ; released ; 1866 ; Proceedings of the London Mathematical Society Volume s1-2 ; s1-2 >
@@ -23419,6 +23424,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://tlms.oxfordjournals.org/
     # The London Mathematical Society
+    #move to Wiley
 
     au < released ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 >
     au < released ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 >

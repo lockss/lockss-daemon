@@ -3214,6 +3214,7 @@
 
     param[base_url] = http://blms.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to Wiley
 
     au < exists ; exists ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 ; >
     au < exists ; exists ; 1970 ; Bulletin of the London Mathematical Society Volume 2 ; 2 ; >
@@ -12092,6 +12093,7 @@
     param[base_url] = http://jlms.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
     comment[jlms19] = malformed manifest page
+    #move to Wiley
 
     au < exists ; exists ; 1926 ; Journal of the London Mathematical Society Volume s1-1 ; s1-1 ; >
     au < exists ; exists ; 1927 ; Journal of the London Mathematical Society Volume s1-2 ; s1-2 ; >
@@ -13469,6 +13471,7 @@
 
     param[base_url] = http://jtopol.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to Wiley
 
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
@@ -17595,6 +17598,7 @@
 
     param[base_url] = http://pan.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to Cambridge University Press
 
     au < exists ; exists ; 1989 ; Political Analysis Volume 1 ; 1 ; >
     au < exists ; exists ; 1990 ; Political Analysis Volume 2 ; 2 ; >
@@ -17640,6 +17644,7 @@
 
     param[base_url] = http://plms.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to Wiley
 
     au < exists ; exists ; 1865 ; Proceedings of the London Mathematical Society Volume s1-1 ; s1-1 ; >
     au < exists ; exists ; 1866 ; Proceedings of the London Mathematical Society Volume s1-2 ; s1-2 ; >
@@ -20617,6 +20622,7 @@
 
     param[base_url] = http://tlms.oxfordjournals.org/
     #pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to Wiley
 
     au < doNotProcess ; doNotProcess ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
