@@ -126,8 +126,9 @@ public class TestHighWireDrupalArticleIteratorVIPFactory extends ArticleIterator
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/ENEURO.12345-679");
     // found roman_numeral.number in page
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/iii.2");
+    // issue is now optional 
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     // but not to ...
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
