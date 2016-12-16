@@ -174,8 +174,10 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     // new inclusive crawl_rule
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
+    // toc page for a volume only
+    shouldCacheTest(ROOT_URL + "content/2015", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015.toc", true, au);
     // toc page for a volume, issue
-    shouldCacheTest(ROOT_URL + "content/2015", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/2.toc", true, au);
     shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/2015/2.toc", true, au);

@@ -15,10 +15,34 @@
         This is a list of HighWire Drupal Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
         update the child's plugin_version number:
+        aaas.ClockssAAASDrupalPlugin
+        aap.AAPDrupalPlugin
+        ada.ADADrupalPlugin
+        aha.AHADrupalPlugin
         aps.APSDrupalPlugin
-        bmj.
+        apta.APTADrupalPlugin
+        arf.ARFDrupalPlugin
+        ash.ASHDrupalPlugin
+        asm.ASMDrupalPlugin
+        besbjs.BESBJSDrupalPlugin
+        biologists.BiologistsDrupalPlugin
+        bmj.BMJDrupalPlugin
         elife.ELifeDrupalPlugin (Deprecated)
-        oup.
+        embo.EMBODrupalPlugin
+        ers.ERSDrupalPlugin
+        fsf.FSFDrupalPlugin
+        gensoc.GeneticsSocietyDrupalPlugin
+        gsl.GSLDrupalPlugin
+        gsw.GSWDrupalPlugin
+        iwa.IWADrupalPlugin
+        jbjs.JBJSDrupalPlugin
+        oup.OUPDrupalPlugin (Soon to be Deprecated)
+        portlandpress.PortlandPressDrupalPlugin
+        rcgp.RCGPDrupalPlugin
+        rcpsych.RCPsychDrupalPlugin
+        rsp.RSPDrupalPlugin
+        rup.RUPDrupalPlugin
+        sfn.SFNDrupalPlugin
         
         Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
         update the CLOCKSS child plugin_version & plugin_parent_version with 
@@ -27,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>60</string>
+    <string>61</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>

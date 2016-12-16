@@ -184,7 +184,7 @@ public class TestClockssELifeDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2013_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // toc page for an issue, there is no issue
-    shouldCacheTest(ROOT_URL + "content/1", false, au);
+    // shouldCacheTest(ROOT_URL + "content/1", false, au); // changed crawl rule as there are some volume only tocs (iwa) so this test is true
     // article files
     shouldCacheTest(ROOT_URL + "content/1/e00002", true, au);
     shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/1/e00002", true, au);

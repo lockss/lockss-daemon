@@ -49,9 +49,9 @@ public class HighWireDrupalArticleIteratorVIPFactory
   
   protected static final String ROOT_TEMPLATE = "\"%scontent/\", base_url";
   
-  // <base_url>/content/<v>/<i>/<pg> required vol, issue, page, then EOL
+  // <base_url>/content/<v>/[<i>/]<pg> required vol, issue, page, then EOL
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/([^/]+/)(?!.+?[.](full|pdf|long|supplemental|data|figures-only|abstract|extract))([^/?&]+)$\", base_url, volume_name";
+    "\"^%scontent/%s/([^/]+/)?(?!.+?[.](full|pdf|long|supplemental|data|figures-only|abstract|extract))([^/?&]+)$\", base_url, volume_name";
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1

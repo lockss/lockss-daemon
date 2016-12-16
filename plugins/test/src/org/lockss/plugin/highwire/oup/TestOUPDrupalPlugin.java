@@ -162,7 +162,7 @@ http://jinsectscience.oxfordjournals.org/highwire/article_citation_preview/61258
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_303_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // vol and issue
-    shouldCacheTest(ROOT_URL + "content/303", false, au);
+    // shouldCacheTest(ROOT_URL + "content/303", false, au); changed crawl rule as there are some volume only tocs (iwa) so this test is true
     shouldCacheTest(ROOT_URL + "content/303/2", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2.toc", true, au);
     // article files

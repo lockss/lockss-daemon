@@ -72,6 +72,7 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String ELTR_PARAM = ".e-letters?";
   protected static final String EXPAND_PARAM = "/expansion?";
   protected static final String ITOK_PARAM = "?itok=";
+  protected static final String PDF_DOWNLOAD_PARAM = ".pdf?download=";
   
   
   @Override
@@ -99,6 +100,10 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     // http://ajprenal.physiology.org/sites/all/libraries/pdfjs/web/viewer.html
     //  ?file=/content/ajprenal/304/1/F33.full.pdf
     // to http://ajprenal.physiology.org/content/304/1/F33.full.pdf
+    // 
+    // while PDFs with download param are not collected, the links should work in audit proxy
+    // http://ajpheart.physiology.org/content/304/2/H253.full.pdf?download=true
+    // to http://ajpheart.physiology.org/content/304/2/H253.full.pdf
     // 
     // map 
     // http://ajpcell.physiology.org/highwire/citation/1814/bookends
@@ -143,7 +148,8 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
         url.contains(IJKEY_PARAM) ||
         url.contains(ELTR_PARAM) || 
         url.contains(EXPAND_PARAM) ||
-        url.contains(ITOK_PARAM)) {
+        url.contains(ITOK_PARAM) ||
+        url.contains(PDF_DOWNLOAD_PARAM)) {
       url = url.replaceFirst("[?].+$", "");
     }
     
