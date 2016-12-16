@@ -53,16 +53,18 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
   String tempDirPath;
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
-        
+
+  
+  // BIR now removes all tags after filtering based on tag information 
   private static final String PLUGIN_ID = 
       "org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin";
   
-  //WS filter causes spaces before "<"
+  // BIR now removes all tags after filtering based on tag information 
   private static final String filteredStr = 
-      " <div class=\"block\"> </div>";
+//      " <div class=\"block\"> </div>";
+      " ";
   private static final String filteredCrawlStr = 
-      "<div class=\"block\"></div>";
-
+         "<div class=\"block\"></div>";
     
   private static final String withMenuXml =
       "<div class=\"block\">" +
@@ -218,16 +220,8 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "</ul></div></div>" +
           "</div>";
     
-    // id tag also got filtered
     private static final String articleToolsWidgetFiltered = 
-      " <div class=\"block\">" +  
-          " <div class=\"widget literatumArticleToolsWidget\" >" +
-          " <div class=\"articleTools\">" +
-          " <ul class=\"blockLinks\">" +
-          " <li class=\"downloadCitations\"> <a href=\"/action/showCitFormats?" +
-          "doi=1.11111%2Fjid.2013.111\">Download Citation </a> </li>" +
-          " </ul> </div> </div>" +
-          " </div>";
+            " Download Citation ";
     
     private static final String withCitedby =
       "<div class=\"block\">" + 
@@ -235,11 +229,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "<a href=\"/doi/citedby/11.1111/jid.20129999\"> Cited by </a>" +
           "</li></ul>" +
           "</div>"; 
-    private static final String withoutCitedby =
-      " <div class=\"block\">" + 
-          " <ul> </ul>" +
-          " </div>";    
-    
+
     private static final String withSectionJumpTo =
         "<div class=\"block\">" +
             "<div class=\"sectionJumpTo\">" +
@@ -271,7 +261,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
             "</div></section></div></div></div>BOO</body>";                
 
     private static final String mostReadHtmlFiltered = 
-        " <body>BOO </body>";   
+        " BOO ";   
     private static final String mostReadHtmlCrawlFiltered = 
         "<body>BOO</body>";   
     
@@ -346,7 +336,7 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
         doFilterTest(bau, variantFact, 
                      withArticleToolsWidgetExceptDownloadCitation, 
                      articleToolsWidgetFiltered);
-        doFilterTest(bau, variantFact, withCitedby, withoutCitedby); 
+        doFilterTest(bau, variantFact, withCitedby, filteredStr); 
         doFilterTest(bau, variantFact, withSectionJumpTo, filteredStr);         
         doFilterTest(bau, variantFact, mostReadHtml , mostReadHtmlFiltered);         
      }

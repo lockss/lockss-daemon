@@ -32,11 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.bir;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
+import org.lockss.plugin.atypon.nrcresearchpress.NrcPdfFilterFactory;
 import org.lockss.util.Logger;
 
 public class BIRAtyponHtmlHashFilterFactory 
@@ -109,8 +114,8 @@ public class BIRAtyponHtmlHashFilterFactory
     return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
-  @Override
-  public boolean doTagIDFiltering() {
+  
+  public boolean doTagRemovalFiltering() {
     return true;
   }
    
