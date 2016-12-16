@@ -258,7 +258,27 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
             "<h1 class=\"topContentTitle\">" +                                                                                                            
             "Most read articles" +                                                                                                                  
             "</h1><ul><li>art2></li><li>art2</li></ul>" +
-            "</div></section></div></div></div>BOO</body>";                
+            "</div></section></div></div></div>BOO</body>";
+    
+    private static final String referencesTable = 
+        "<table border=\"0\" class=\"references\">" +
+            "<tr id=\"b1\">" +
+            "<td class=\"refnumber\">1.</td>" +
+            "<td valign=\"top\"> <span class=\"NLM_string-name\">Foo <span class=\"NLM_given-names\">BL</span>" +
+            "</span>, <span class=\"NLM_string-name\">Smith <span class=\"NLM_given-names\">BS</span>" +
+            "</span>. <span class=\"NLM_article-title\">Infection: prevention and management</span>. <i>Instr Course Lect</i> " +
+            "<span class=\"NLM_year\">2012</span>; 61: " +
+            "<span class=\"NLM_fpage\">411</span>–<span class=\"NLM_lpage\">19</span>.  " +
+            "<a href=\"/servlet/linkout?suffix=b1&amp;dbid=8&amp;doi=10.1111%2Fbjr.foo&amp;key=x0\" onclick=\"newWindow(this.href);return false\">Medline</a>" +
+            "</td>" +
+            "</tr>" +
+            "</table>";
+    private static final String referencesTableFiltered = 
+            " Foo BL" +
+            " Smith BS" +
+            " Infection: prevention and management" +
+            " 2012 " +
+            "411 19 ";
 
     private static final String mostReadHtmlFiltered = 
         " BOO ";   
@@ -338,7 +358,8 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
                      articleToolsWidgetFiltered);
         doFilterTest(bau, variantFact, withCitedby, filteredStr); 
         doFilterTest(bau, variantFact, withSectionJumpTo, filteredStr);         
-        doFilterTest(bau, variantFact, mostReadHtml , mostReadHtmlFiltered);         
+        doFilterTest(bau, variantFact, mostReadHtml , mostReadHtmlFiltered);
+        doFilterTest(bau, variantFact, referencesTable, referencesTableFiltered);
      }
   }
   

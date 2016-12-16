@@ -106,6 +106,16 @@ public class BIRAtyponHtmlHashFilterFactory
                 "div", "class", "literatumArticleToolsWidget"),
                 HtmlNodeFilters.tagWithAttributeRegex(
                     "a", "href", "/action/showCitFormats\\?")),
+        // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
+        // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
+        // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
+        // but remove everything else (links and punctuation between options)  
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttribute(
+                "table", "class", "references"),
+                HtmlNodeFilters.tagWithAttributeRegex(
+                    "span", "class", "NLM_")),
+                    
  
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
@@ -123,7 +133,7 @@ public class BIRAtyponHtmlHashFilterFactory
   public boolean doWSFiltering() {
     return true;
   }
-  
+
 }
 
 
