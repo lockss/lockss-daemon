@@ -12,7 +12,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -49,25 +49,6 @@
     <string>au_def_pause_time</string>
     <long>100</long>
   </entry>
-<!-- 
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>application/xml_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.clockss.sagebaywood.SageBaywoodTriggeredXmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
--->  
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -118,7 +99,16 @@
         <string>org.lockss.plugin.clockss.nature.NpgXmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>  
+  </entry>
+ <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.nature.NpgXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>     
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
