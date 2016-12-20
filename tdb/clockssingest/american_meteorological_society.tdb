@@ -312,7 +312,7 @@
     au < finished ; finished ; 2014 ; Journal of Climate Volume 27 ; 27 ; >
     au < frozen ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 ; >
     au < crawling ; exists ; 2016 ; Journal of Climate Volume 29 ; 29 ; >
-    au < expected ; exists ; 2017 ; Journal of Climate Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2017 ; Journal of Climate Volume 30 ; 30 ; >
 
   }
 
@@ -406,7 +406,7 @@
     au < finished ; finished ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 ; >
     au < frozen ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 ; >
     au < crawling ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; >
-    au < expected ; exists ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; >
 
   }
 
@@ -494,7 +494,7 @@
     au < frozen ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 ; >
     au < deepCrawl ; exists ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 ; >
     au < crawling ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; >
-    au < expected ; exists ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; >
    
   }
 
@@ -509,19 +509,19 @@
     
     param[journal_id] = amsm
     
-    au < exists ; exists ; 1980 ; Meteorological Monographs Volume 39 ; 39 ; >
-    au < exists ; exists ; 1986 ; Meteorological Monographs Volume 43 ; 43 ; >
-    au < exists ; exists ; 1993 ; Meteorological Monographs Volume 46 ; 46 ; >
-    au < exists ; exists ; 1994 ; Meteorological Monographs Volume 47 ; 47 ; >
-    au < exists ; exists ; 1996 ; Meteorological Monographs Volume 48 ; 48 ; >
-    au < exists ; exists ; 1998 ; Meteorological Monographs Volume 49 ; 49 ; >
-    au < exists ; exists ; 2001 ; Meteorological Monographs Volume 50 ; 50 ; >
-    au < exists ; exists ; 2003 ; Meteorological Monographs Volume 51 ; 51 ; >
-    au < exists ; exists ; 2003 ; Meteorological Monographs Volume 52 ; 52 ; >
-    au < exists ; exists ; 2003 ; Meteorological Monographs Volume 53 ; 53 ; >
-    au < exists ; exists ; 2004 ; Meteorological Monographs Volume 54 ; 54 ; >
-    au < exists ; exists ; 2008 ; Meteorological Monographs Volume 55 ; 55 ; >
-    au < exists ; exists ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1980 ; Meteorological Monographs Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1986 ; Meteorological Monographs Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1993 ; Meteorological Monographs Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1994 ; Meteorological Monographs Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1996 ; Meteorological Monographs Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1998 ; Meteorological Monographs Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2001 ; Meteorological Monographs Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2004 ; Meteorological Monographs Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2008 ; Meteorological Monographs Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; >
     
   }
 
@@ -681,7 +681,7 @@
     au < finished ; finished ; 2014 ; Monthly Weather Review Volume 142 ; 142 ; >
     au < frozen ; exists ; 2015 ; Monthly Weather Review Volume 143 ; 143 ; >
     au < crawling ; exists ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; >
-    au < expected ; exists ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; >
+    au < manifest ; exists ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; >
     
   }
 
