@@ -3167,11 +3167,11 @@
     >
 
     param[journal_id] = gt
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Game Theory Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Game Theory Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Game Theory Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -3240,11 +3240,12 @@
     >
 
     param[journal_id] = geography
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Geography Journal Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Geography Journal Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < frozen ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Geography Journal Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Geography Journal Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -3257,11 +3258,11 @@
     >
 
     param[journal_id] = geometry
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Geometry Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Geometry Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -3662,10 +3663,10 @@
     >
 
     param[journal_id] = ijbs
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Brain Science Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -3815,10 +3816,11 @@
     >
 
     param[journal_id] = ijcm
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Computational Mathematics Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; International Journal of Computational Mathematics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Computational Mathematics Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -4340,10 +4342,10 @@
     >
 
     param[journal_id] = ijmg
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Medical Genetics Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Medical Genetics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Medical Genetics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Medical Genetics Volume 2015 ; 2015 ; 2015 ; >
 
   }
   
@@ -4436,7 +4438,7 @@
     >
 
     param[journal_id] = ijm
-    #archived
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
 
@@ -4512,11 +4514,11 @@
     >
 
     param[journal_id] = ijne
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Nuclear Energy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Nuclear Energy Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Nuclear Energy Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Nuclear Energy Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Nuclear Energy Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -4593,10 +4595,11 @@
     >
 
     param[journal_id] = ijpc
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; International Journal of Palliative Care Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; International Journal of Palliative Care Volume 2016 ; 2016 ; 2016 ; >
 
   }
   
@@ -4609,11 +4612,11 @@
     >
 
     param[journal_id] = ijpde
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Partial Differential Equations Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -4668,10 +4671,10 @@
     >
 
     param[journal_id] = ijpho
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Photochemistry Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 ; >
 
   }
   
@@ -4914,11 +4917,11 @@
     >
 
     param[journal_id] = ijsm
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Statistical Mechanics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Statistical Mechanics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Statistical Mechanics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -4974,11 +4977,11 @@
     >
 
     param[journal_id] = ijsu
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Superconductivity Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Superconductivity Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Superconductivity Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Superconductivity Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Superconductivity Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Superconductivity Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5033,11 +5036,11 @@
     >
 
     param[journal_id] = ijte
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Tissue Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Tissue Engineering Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; International Journal of Tissue Engineering Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Tissue Engineering Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -6514,11 +6517,12 @@
     >
 
     param[journal_id] = insects
+    #Moved to archive
     
-    au < manifest ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
