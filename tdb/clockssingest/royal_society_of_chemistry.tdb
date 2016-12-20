@@ -920,13 +920,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = sc
 
-      au < ready ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
-      au < ready ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
+      au < crawling ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
+      au < crawling ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
+      au < crawling ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
       au < testing ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
       au < testing ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
+      au < crawling ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -999,9 +999,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = en
 
-      au < ready ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
+      au < crawling ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
 
   }
 
@@ -1036,8 +1036,8 @@
       comment[years] = Published 2015-2016
       param[journal_code] = ew
 
-      au < ready ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
+      au < crawling ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
 
   }
 
@@ -1129,13 +1129,13 @@
       comment[years] = Published 2010-2016
       param[journal_code] = fo
 
-      au < ready ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
-      au < ready ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
-      au < ready ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
+      au < crawling ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
+      au < crawling ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
+      au < crawling ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
 
   }
 
@@ -1168,9 +1168,9 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qi
 
-      au < ready ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
+      au < crawling ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
 
   }
 
