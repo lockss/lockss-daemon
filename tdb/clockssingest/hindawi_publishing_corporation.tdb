@@ -180,6 +180,7 @@
     >
 
     param[journal_id] = aandrol
+    #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; >
@@ -1009,6 +1010,7 @@
     >
 
     param[journal_id] = ao
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
@@ -2595,10 +2597,11 @@
     >
 
     param[journal_id] = cjb
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -2729,11 +2732,12 @@
     >
 
     param[journal_id] = cbj
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProces ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < frozen ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -2769,11 +2773,11 @@
     >
 
     param[journal_id] = cpis
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Conference Papers in Science Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
 
   }
 

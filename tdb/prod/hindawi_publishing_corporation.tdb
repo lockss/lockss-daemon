@@ -132,10 +132,10 @@
     >
 
     param[journal_id] = aae
+    #moved to archive
 
-    au < released ; 2014 ; Advances in Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Aerospace Engineering Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -164,10 +164,10 @@
     >
 
     param[journal_id] = aanat
+    #moved to archive
 
-    au < released ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Anatomy Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -180,10 +180,10 @@
     >
 
     param[journal_id] = aandrol
+    #moved to archive
 
-    au < released ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Andrology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -196,10 +196,11 @@
     >
 
     param[journal_id] = aan
+    #moved to archive
 
-    au < released ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -315,9 +316,9 @@
     >
 
     param[journal_id] = abm
-    #archived
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -330,10 +331,10 @@
     >
 
     param[journal_id] = abot
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Botany Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Botany Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -384,10 +385,11 @@
     >
 
     param[journal_id] = aceng
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Computer Engineering Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Computer Engineering Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -422,11 +424,10 @@
     >
 
     param[journal_id] = acc
-    #journal gone
+    #Moved to archive
 
     au < down ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Critical Care Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Critical Care Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -525,10 +526,10 @@
     >
 
     param[journal_id] = aelc
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Electronics Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Electronics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -541,10 +542,11 @@
     >
 
     param[journal_id] = aem
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Emergency Medicine Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Emergency Medicine Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Emergency Medicine Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -573,10 +575,11 @@
     >
 
     param[journal_id] = aec
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Environmental Chemistry Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Environmental Chemistry Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -589,10 +592,11 @@
     >
 
     param[journal_id] = aep
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Epidemiology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Epidemiology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Epidemiology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Epidemiology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Epidemiology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -605,11 +609,10 @@
     >
 
     param[journal_id] = aeb
-    #journal gone
+    #Moved to archive
 
     au < down ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Evolutionary Biology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -644,11 +647,10 @@
     >
 
     param[journal_id] = ageo
-    #journal gone
+    #Moved to archive
 
     au < down ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Geology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -661,10 +663,10 @@
     >
 
     param[journal_id] = ager
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Geriatrics Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -698,10 +700,10 @@
     >
 
     param[journal_id] = ahe
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Hepatology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -861,11 +863,10 @@
     >
 
     param[journal_id] = amb
-    #journal gone
+    #Moved to archive
 
     au < doNotProcess ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Molecular Biology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -901,10 +902,11 @@
     >
 
     param[journal_id] = an
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -986,7 +988,7 @@
     >
 
     param[journal_id] = aocean
-    #journal gone
+    #Moved to archive
 
     au < doNotProcess ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 >
 
@@ -1044,8 +1046,9 @@
     >
 
     param[journal_id] = ao
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1124,10 +1127,11 @@
     >
 
     param[journal_id] = aoto
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -1140,10 +1144,10 @@
     >
 
     param[journal_id] = ap
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Pharmaceutics Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Pharmaceutics Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Pharmaceutics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1245,10 +1249,10 @@
     >
 
     param[journal_id] = apsy
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Psychiatry Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Psychiatry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1277,10 +1281,10 @@
     >
 
     param[journal_id] = ara
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Radiology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1293,8 +1297,9 @@
     >
 
     param[journal_id] = arm
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1328,10 +1333,10 @@
     >
 
     param[journal_id] = as
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Statistics Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Statistics Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Statistics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1344,10 +1349,11 @@
     >
 
     param[journal_id] = atox
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -1403,10 +1409,10 @@
     >
 
     param[journal_id] = avm
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Vascular Medicine Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1440,10 +1446,10 @@
     >
 
     param[journal_id] = az
+    #Moved to archive
 
-    au < released ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Advances in Zoology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Advances in Zoology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1476,11 +1482,12 @@
     >
 
     param[journal_id] = algebra
+    #Moved to archive
 
-    au < manifest ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -1712,11 +1719,10 @@
     >
 
     param[journal_id] = ajn
+    #Moved to archive
 
-    au < manifest ; 2013 ; Asian Journal of Neuroscience Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Asian Journal of Neuroscience Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Asian Journal of Neuroscience Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Asian Journal of Neuroscience Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2729,10 +2735,11 @@
     >
 
     param[journal_id] = cjb
+    #Moved to archive
 
-    au < released ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -2928,11 +2935,12 @@
     >
 
     param[journal_id] = cbj
+    #Moved to archive
 
-    au < manifest ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -2968,11 +2976,11 @@
     >
 
     param[journal_id] = cpis
+    #Moved to archive
 
-    au < manifest ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Conference Papers in Science Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
