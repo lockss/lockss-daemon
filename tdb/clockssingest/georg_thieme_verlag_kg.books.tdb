@@ -958,16 +958,16 @@
     au < crawling ; exists ; 2015 ; 9783131769114 ; 9783131953018 ; 10.1055/b-003-106502 ; Pssst...AINS-Secrets!: Wissenswertes zum Weiterflüstern (9783131953018) ; >
     au < crawling ; exists ; 2015 ; 9781604068320 ; 9781604068337 ; 10.1055/b-003-102986 ; RadCases Emergency Radiology (9781604068337) ; >
     au < crawling ; exists ; 2015 ; 9781604063226 ; 9781604063233 ; 10.1055/b-003-103089 ; RadCases Ultrasound Imaging (9781604063233) ; >
-    au < testing ; exists ; 2015 ; 9783132400429 ; 9783132066939 ; 10.1055/b-003-126995 ; Radiologie-Trainer Bewegungsapparat (9783132066939) ; >
-    au < testing ; exists ; 2015 ; 9783131729217 ; 9783131976413 ; 10.1055/b-003-109648 ; Radiologische Diagnostik Abdomen und Thorax: Bildinterpretation unter Berücksichtigung anatomischer Landmarken und klinischer Symptome (9783131976413) ; >
-    au < testing ; exists ; 2015 ; 9783131295545 ; 9783131951946 ; 10.1055/b-003-104343 ; Rationelle Diagnostik und Therapie in Endokrinologie, Diabetologie und Stoffwechsel (9783131951946) ; >
-    au < testing ; exists ; 2015 ; 9783131760517 ; 9783131952516 ; 10.1055/b-002-101340 ; Recht für Ärzte von A–Z: Haftungsrisiken nachschlagen, kennen und vermeiden (9783131952516) ; >
-    au < testing ; exists ; 2015 ; 9783131296429 ; 9783131696328 ; 10.1055/b-002-99022 ; Reconstructive Facial Plastic Surgery: A Problem-Solving Manual (9783131696328) ; >
-    au < testing ; exists ; 2015 ; 9783136578063 ; 9783131951861 ; 10.1055/b-002-101344 ; Rheumatologie: Diagnostik ‒ Klinik ‒ Therapie (9783131951861) ; >
-    au < testing ; exists ; 2015 ; 9781604068672 ; 9781604068689 ; 10.1055/b-003-104231 ; Rhinoplasty: The Experts' Reference (9781604068689) ; >
-    au < testing ; exists ; 2015 ; 9783137009054 ; 9783131955050 ; 10.1055/b-002-101356 ; Röntgennormalbefunde (9783131955050) ; >
-    au < testing ; exists ; 2015 ; 9783132003118 ; 9783131958419 ; 10.1055/b-003-106486 ; Rücken Qi Gong (9783131958419) ; >
-    au < testing ; exists ; 2015 ; 9783132003415 ; 9783132401358 ; 10.1055/b-003-128214 ; Screening in der Physiotherapie: Das Flaggen-System – Warnsignale erkennen (9783132401358) ; >
+    au < ready ; exists ; 2015 ; 9783132400429 ; 9783132066939 ; 10.1055/b-003-126995 ; Radiologie-Trainer Bewegungsapparat (9783132066939) ; >
+    au < ready ; exists ; 2015 ; 9783131729217 ; 9783131976413 ; 10.1055/b-003-109648 ; Radiologische Diagnostik Abdomen und Thorax: Bildinterpretation unter Berücksichtigung anatomischer Landmarken und klinischer Symptome (9783131976413) ; >
+    au < ready ; exists ; 2015 ; 9783131295545 ; 9783131951946 ; 10.1055/b-003-104343 ; Rationelle Diagnostik und Therapie in Endokrinologie, Diabetologie und Stoffwechsel (9783131951946) ; >
+    au < ready ; exists ; 2015 ; 9783131760517 ; 9783131952516 ; 10.1055/b-002-101340 ; Recht für Ärzte von A–Z: Haftungsrisiken nachschlagen, kennen und vermeiden (9783131952516) ; >
+    au < ready ; exists ; 2015 ; 9783131296429 ; 9783131696328 ; 10.1055/b-002-99022 ; Reconstructive Facial Plastic Surgery: A Problem-Solving Manual (9783131696328) ; >
+    au < ready ; exists ; 2015 ; 9783136578063 ; 9783131951861 ; 10.1055/b-002-101344 ; Rheumatologie: Diagnostik ‒ Klinik ‒ Therapie (9783131951861) ; >
+    au < ready ; exists ; 2015 ; 9781604068672 ; 9781604068689 ; 10.1055/b-003-104231 ; Rhinoplasty: The Experts' Reference (9781604068689) ; >
+    au < ready ; exists ; 2015 ; 9783137009054 ; 9783131955050 ; 10.1055/b-002-101356 ; Röntgennormalbefunde (9783131955050) ; >
+    au < ready ; exists ; 2015 ; 9783132003118 ; 9783131958419 ; 10.1055/b-003-106486 ; Rücken Qi Gong (9783131958419) ; >
+    au < ready ; exists ; 2015 ; 9783132003415 ; 9783132401358 ; 10.1055/b-003-128214 ; Screening in der Physiotherapie: Das Flaggen-System – Warnsignale erkennen (9783132401358) ; >
     au < testing ; exists ; 2015 ; 9783830411727 ; 9783131955517 ; 10.1055/b-003-125811 ; Spezielle Pathologie für die Tiermedizin (9783131955517) ; >
     au < testing ; exists ; 2015 ; 9781626230347 ; 9781626230354 ; 10.1055/b-003-122489 ; Spine Radiosurgery (9781626230354) ; >
     au < testing ; exists ; 2015 ; 9783131671523 ; 9783131974822 ; 10.1055/b-003-124666 ; Sport und Ernährung: Wissenschaftlich basierte Empfehlungen, Tipps und Ernährungspläne für die Praxis (9783131974822) ; >
@@ -1202,7 +1202,7 @@
       >
 
     #series doi = 10.1055/b-00000013;Checklisten der aktuellen Medizin;;2198-9427
-    au < testing ; exists ; 2008 ; 9783131308559 ; 9783131908650 ; 10.1055/b-002-25591 ; Checkliste Arzneimittel A–Z (9783131908650) ; >
+    au < ready ; exists ; 2008 ; 9783131308559 ; 9783131908650 ; 10.1055/b-002-25591 ; Checkliste Arzneimittel A–Z (9783131908650) ; >
     au < ready ; exists ; 2008 ; 9783135225098 ; 9783131907295 ; 10.1055/b-002-25606 ; Checkliste Chirurgie (9783131907295) ; >
     au < ready ; exists ; 2008 ; 9783131294043 ; 9783131917041 ; 10.1055/b-002-7268 ; Checkliste Echokardiographie (9783131917041) ; >
     au < ready ; exists ; 2008 ; 9783131182630 ; 9783131910639 ; 10.1055/b-002-5211 ; Checkliste Ernährung (9783131910639) ; >
@@ -1212,32 +1212,32 @@
     au < ready ; exists ; 2010 ; 9783136970065 ; 9783131936165 ; 10.1055/b-002-46951 ; Checkliste Dermatologie (9783131936165) ; >
     au < ready ; exists ; 2010 ; 9783131072467 ; 9783131929068 ; 10.1055/b-001-2164 ; Checkliste Innere Medizin (9783131929068) ; >
     au < testing ; exists ; 2010 ; 9783131169136 ; 9783131927934 ; 10.1055/b-002-11357 ; Checkliste Intensivmedizin (9783131927934) ; >
-    au < testing ; exists ; 2010 ; 9783131250544 ; 9783131920645 ; 10.1055/b-002-5204 ; Checkliste Neonatologie (9783131920645) ; >
+    au < ready ; exists ; 2010 ; 9783131250544 ; 9783131920645 ; 10.1055/b-002-5204 ; Checkliste Neonatologie (9783131920645) ; >
     au < ready ; exists ; 2011 ; 9783131273338 ; 9783131931139 ; 10.1055/b-002-7265 ; Checkliste Anamnese und klinische Untersuchung: Checklisten der aktuellen Medizin (9783131931139) ; >
     au < testing ; exists ; 2011 ; 9783131005748 ; 9783131928740 ; 10.1055/b-001-42 ; Checkliste Augenheilkunde (9783131928740) ; >
     au < ready ; exists ; 2011 ; 9783137402053 ; 9783131936257 ; 10.1055/b-002-21508 ; Checkliste Hals-Nasen-Ohren-Heilkunde (9783131936257) ; >
     au < ready ; exists ; 2011 ; 9783131422828 ; 9783131934529 ; 10.1055/b-002-39794 ; Checkliste Orthopädie (9783131934529) ; >
     au < ready ; exists ; 2011 ; 9783131391049 ; 9783131933447 ; 10.1055/b-002-21544 ; Checkliste Pädiatrie (9783131933447) ; >
     au < ready ; exists ; 2012 ; 9783135225104 ; 9783131935502 ; 10.1055/b-002-25608 ; Checkliste Chirurgie (9783131935502) ; >
-    au < testing ; exists ; 2012 ; 9783131109347 ; 9783131929440 ; 10.1055/b-001-2169 ; Checkliste Doppler- und Duplexsonografie (9783131929440) ; >
+    au < ready ; exists ; 2012 ; 9783131109347 ; 9783131929440 ; 10.1055/b-001-2169 ; Checkliste Doppler- und Duplexsonografie (9783131929440) ; >
     au < testing ; exists ; 2012 ; 9783137630043 ; 9783131936448 ; 10.1055/b-002-35716 ; Checkliste Rheumatologie (9783131936448) ; >
     au < ready ; exists ; 2012 ; 9783135981079 ; 9783131936073 ; 10.1055/b-002-23575 ; Checkliste Traumatologie (9783131936073) ; >
     au < ready ; exists ; 2013 ; 9783131308566 ; 9783131932068 ; 10.1055/b-002-85456 ; Checkliste Arzneimittel A–Z: Checklisten der aktuellen Medizin (9783131932068) ; >
     au < testing ; exists ; 2013 ; 9783131072474 ; 9783131957474 ; 10.1055/b-003-104359 ; Checkliste Innere Medizin (9783131957474) ; >
     au < ready ; exists ; 2013 ; 9783131463814 ; 9783131957511 ; 10.1055/b-003-106488 ; Checkliste Medical Skills (9783131957511) ; >
-    au < testing ; exists ; 2013 ; 9783131262752 ; 9783131930354 ; 10.1055/b-001-2139 ; Checkliste Neurologie (9783131930354) ; >
+    au < ready ; exists ; 2013 ; 9783131262752 ; 9783131930354 ; 10.1055/b-001-2139 ; Checkliste Neurologie (9783131930354) ; >
     au < ready ; exists ; 2013 ; 9783137102069 ; 9783131953568 ; 10.1055/b-003-104341 ; Checkliste Psychiatrie und Psychotherapie (9783131953568) ; >
     au < ready ; exists ; 2014 ; 9783131005755 ; 9783131942258 ; 10.1055/b-002-94105 ; Checkliste Augenheilkunde (9783131942258) ; >
     au < ready ; exists ; 2014 ;  ; 9783132404182 ; 10.1055/b-003-125808 ; Checkliste Dermatologie: Venerologie, Allergologie, Phlebologie, Andrologie (9783132404182) ; >
-    au < testing ; exists ; 2014 ; 9783131063649 ; 9783131942043 ; 10.1055/b-002-94104 ; Checkliste EKG (9783131942043) ; >
+    au < ready ; exists ; 2014 ; 9783131063649 ; 9783131942043 ; 10.1055/b-002-94104 ; Checkliste EKG (9783131942043) ; >
     au < ready ; exists ; 2014 ; 9783131169143 ; 9783131953643 ; 10.1055/b-003-104344 ; Checkliste Intensivmedizin (9783131953643) ; >
     au < ready ; exists ; 2014 ; 9783131422835 ; 9783131953438 ; 10.1055/b-002-101350 ; Checkliste Orthopädie (9783131953438) ; >
-    au < testing ; exists ; 2015 ; 9783131273345 ; 9783131974341 ; 10.1055/b-003-106499 ; Checkliste Anamnese und klinische Untersuchung (9783131974341) ; >
+    au < ready ; exists ; 2015 ; 9783131273345 ; 9783131974341 ; 10.1055/b-003-106499 ; Checkliste Anamnese und klinische Untersuchung (9783131974341) ; >
     au < crawling ; exists ; 2015 ; 9783131250551 ; 9783131974556 ; 10.1055/b-003-106497 ; Checkliste Neonatologie (9783131974556) ; >
     au < finished ; crawling ; 2015 ; 9783131150745 ; 9783131913739 ; 10.1055/b-001-2127 ; Checkliste XXL Pneumologie (9783131913739) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 9783135225111 ; 9783132407398 ; 10.1055/b-004-132240 ; Checkliste Chirurgie (9783132407398) ; >
     au < crawling ; exists ; 2016 ; 9783131262769 ; 9783132403734 ; 10.1055/b-003-129347 ; Checkliste Neurologie (9783132403734) ; >
-    au < testing ; exists ; 2016 ; 9783131391056 ; 9783132401563 ; 10.1055/b-003-128231 ; Checkliste Pädiatrie (9783132401563) ; >
+    au < ready ; exists ; 2016 ; 9783131391056 ; 9783132401563 ; 10.1055/b-003-128231 ; Checkliste Pädiatrie (9783132401563) ; >
     au < crawling ; exists ; 2016 ; 9783135981086 ; 9783132403550 ; 10.1055/b-003-129342 ; Checkliste Traumatologie (9783132403550) ; >
 
    }
@@ -1254,7 +1254,7 @@
     au < ready ; exists ; 2009 ; 9783134921106 ; 9783131912305 ; 10.1055/b-002-25588 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131912305) ; >
     au < ready ; exists ; 2009 ; 9783134922103 ; 9783131909602 ; 10.1055/b-002-25602 ; Taschenatlas Anatomie - Band 3: Nervensystem und Sinnesorgane (9783131909602) ; >
     au < ready ; exists ; 2009 ; 9783134920109 ; 9783131907400 ; 10.1055/b-002-35710 ; Taschenatlas Anatomie - Bewegungsapparat (9783131907400) ; >
-    au < testing ; exists ; 2013 ; 9783134921113 ; 9783131935311 ; 10.1055/b-002-25585 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131935311) ; >
+    au < ready ; exists ; 2013 ; 9783134921113 ; 9783131935311 ; 10.1055/b-002-25585 ; Taschenatlas Anatomie - Band 2: Innere Organe (9783131935311) ; >
     au < ready ; exists ; 2013 ; 9783134922110 ; 9783131935410 ; 10.1055/b-002-43897 ; Taschenatlas Anatomie - Band 3: Nervensystem und Sinnesorgane (9783131935410) ; >
     au < finished ; crawling ; 2013 ; 9783134920116 ; 9783131935212 ; 10.1055/b-002-33693 ; Taschenatlas Anatomie - Bewegungsapparat (9783131935212) ; reingest1.clockss.org:8082 >
 
@@ -1274,7 +1274,7 @@
     au < ready ; exists ; 2010 ; 9783131143730 ; 9783131909732 ; 10.1055/b-002-10332 ; Memorix Zahnmedizin (9783131909732) ; >
     au < ready ; exists ; 2011 ; 9783131472311 ; 9783131852410 ; 10.1055/b-002-29654 ; Memorix Kinderanästhesie (9783131852410) ; >
     au < ready ; exists ; 2011 ; 9783131399397 ; 9783131852397 ; 10.1055/b-002-37736 ; MEMORIX Notfallmedizin (9783131852397) ; >
-    au < testing ; exists ; 2011 ; 9783131454324 ; 9783131897022 ; 10.1055/b-002-39796 ; Memorix Psychiatrie und Psychotherapie (9783131897022) ; >
+    au < ready ; exists ; 2011 ; 9783131454324 ; 9783131897022 ; 10.1055/b-002-39796 ; Memorix Psychiatrie und Psychotherapie (9783131897022) ; >
     au < ready ; exists ; 2011 ; 9783131465818 ; 9783131898913 ; 10.1055/b-002-40823 ; Psychosomatik und Psychotherapie (9783131898913) ; >
     au < crawling ; exists ; 2016 ; 9783131400963 ; 9783131977663 ; 10.1055/b-003-125866 ; Neurologie (9783131977663) ; >
     au < crawling ; exists ; 2016 ; 9783132401105 ; 9783132402553 ; 10.1055/b-003-128285 ; Zahnmedizin (9783132402553) ; >
@@ -1317,7 +1317,7 @@
 
     #series doi = 10.1055/b-00000019;Tübinger Curriculum;;
     au < ready ; exists ; 2009 ; 9783131491619 ; 9783131917218 ; 10.1055/b-002-43887 ; Endokrinologie und Diabetes (9783131917218) ; >
-    au < testing ; exists ; 2009 ; 9783131471017 ; 9783131895516 ; 10.1055/b-002-41839 ; Leber und Gastrointestinaltrakt (9783131895516) ; >
+    au < ready ; exists ; 2009 ; 9783131471017 ; 9783131895516 ; 10.1055/b-002-41839 ; Leber und Gastrointestinaltrakt (9783131895516) ; >
 
    }
 
@@ -1347,7 +1347,7 @@
     #series doi = 10.1055/b-00000023;kma-reader;;2198-8633
     au < ready ; exists ; 2011 ; 9783131612212 ; 9783131860316 ; 10.1055/b-002-33688 ; Alles grün… … auch im Krankenhaus: Green Hospital –Wege zur effektiven Nachhaltigkeit (9783131860316) ; >
     au < ready ; exists ; 2011 ; 9783131612311 ; 9783131860118 ; 10.1055/b-002-33689 ; Krankenhausmanagement mit Zukunft: Orientierungswissen und Anregungen von Experten (9783131860118) ; >
-    au < testing ; exists ; 2011 ; 9783131538215 ; 9783131860217 ; 10.1055/b-002-41859 ; Patientenorientierte Arzneimittelversorgung: Sicherheit und Wirtschaftlichkeit des Arzneimittelmanagements (9783131860217) ; >
+    au < ready ; exists ; 2011 ; 9783131538215 ; 9783131860217 ; 10.1055/b-002-41859 ; Patientenorientierte Arzneimittelversorgung: Sicherheit und Wirtschaftlichkeit des Arzneimittelmanagements (9783131860217) ; >
     au < ready ; exists ; 2012 ; 9783131710413 ; 9783131831316 ; 10.1055/b-002-25586 ; Entlassmanagement: Vernetztes Handeln durch Patientenkoordination (9783131831316) ; >
     au < ready ; exists ; 2012 ; 9783131708717 ; 9783131831415 ; 10.1055/b-002-23577 ; Gefahrgüter im Gesundheitswesen (9783131831415) ; >
     au < ready ; exists ; 2013 ; 9783131673015 ; 9783131923615 ; 10.1055/b-002-57170 ; In Führung gehen: Praxishandbuch für Ärzte im Krankenhaus (9783131923615) ; >
