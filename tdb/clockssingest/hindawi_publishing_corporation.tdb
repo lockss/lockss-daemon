@@ -7159,11 +7159,12 @@
     >
 
     param[journal_id] = jpt
+    #Moved to archive
     
-    au < manifest ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Powder Technology Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Powder Technology Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7196,10 +7197,10 @@
     >
 
     param[journal_id] = jprob
+    #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Probability Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7254,6 +7255,7 @@
     >
 
     param[journal_id] = jqc
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
 
@@ -7268,10 +7270,10 @@
     >
 
     param[journal_id] = jra
+    #Moved to archive
 
-    au < deepCrawl ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Radiotherapy Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7301,11 +7303,11 @@
     >
 
     param[journal_id] = jrm
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Respiratory Medicine Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7449,11 +7451,11 @@
     >
 
     param[journal_id] = jssp
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Solid State Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Solid State Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Solid State Physics Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Solid State Physics Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Solid State Physics Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Solid State Physics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
