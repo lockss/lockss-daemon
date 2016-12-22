@@ -5785,8 +5785,9 @@
     >
 
     param[journal_id] = jaer
+    #Moved to archive
 
-    au < released ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -5910,10 +5911,11 @@
     >
 
     param[journal_id] = jan
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Anesthesiology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Anesthesiology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -5926,11 +5928,11 @@
     >
 
     param[journal_id] = jangi
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Angiology Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5943,7 +5945,7 @@
     >
 
     param[journal_id] = jani
-    #archived
+    #Moved to archive
 
     au < down ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 >
 
@@ -6099,10 +6101,10 @@
     >
 
     param[journal_id] = jarchae
-    #not archived as of 20160420
+    #Moved to archive
 
-    au < manifest ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -6170,13 +6172,14 @@
     {
     param[journal_id] = jamp
     comment[continues] = 1687-9228
+    #Moved to archive
 
-    au < manifest ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
 
     }
   }
@@ -6356,7 +6359,7 @@
     >
 
     param[journal_id] = jcv
-    #journal gone
+    #Moved to archive
     
     au < doNotProcess ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
 
@@ -6393,11 +6396,12 @@
     >
 
     param[journal_id] = jcr
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6427,8 +6431,9 @@
     >
 
     param[journal_id] = jcad
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -6458,10 +6463,11 @@
     >
 
     param[journal_id] = jcha
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6500,11 +6506,12 @@
     >
 
     param[journal_id] = jcli
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6517,9 +6524,10 @@
     >
 
     param[journal_id] = jcoat
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -6572,11 +6580,11 @@
     >
 
     param[journal_id] = jcs
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Complex Systems Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Complex Systems Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Complex Systems Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Complex Systems Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Complex Systems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6623,11 +6631,10 @@
     >
 
     param[journal_id] = jces
-    #journal gone
+    #Moved to archive
     
     au < down ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Computational Environmental Sciences Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6640,11 +6647,12 @@
     >
 
     param[journal_id] = jcm
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6657,10 +6665,11 @@
     >
 
     param[journal_id] = jcmp
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6753,11 +6762,11 @@
     >
 
     param[journal_id] = jcrim
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Criminology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Criminology Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Criminology Volume 2013 ; 2013 ; 2013 >
+    au < down; 2014 ; Journal of Criminology Volume 2014 ; 2014 ; 2014 >
+    au < down; 2015 ; Journal of Criminology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6770,10 +6779,10 @@
     >
 
     param[journal_id] = jccm
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Critical Care Medicine Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6803,11 +6812,10 @@
     >
 
     param[journal_id] = jds
-    #journal gone
+    #Moved to archive
     
     au < down ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Dental Surgery Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6850,10 +6858,11 @@
     >
 
     param[journal_id] = jde
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Difference Equations Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Difference Equations Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Difference Equations Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Difference Equations Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6866,11 +6875,12 @@
     >
 
     param[journal_id] = jdm
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6902,10 +6912,11 @@
     >
 
     param[journal_id] = jearth
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Earthquakes Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Earthquakes Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6918,11 +6929,11 @@
     >
 
     param[journal_id] = jeco
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Ecosystems Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Ecosystems Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Ecosystems Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Ecosystems Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7013,11 +7024,10 @@
     >
 
     param[journal_id] = jep
-    #journal gone
+    #Moved to archive
     
     au < down ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Experimental Physics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7078,10 +7088,10 @@
     >
 
     param[journal_id] = jfu
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Fuels Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Fuels Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Fuels Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Fuels Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Fuels Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7121,11 +7131,10 @@
     >
 
     param[journal_id] = jg
-    #journal gone
+    #Moved to archive
     
     au < down ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Geochemistry Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7159,10 +7168,11 @@
     >
 
     param[journal_id] = jger
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Geriatrics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Geriatrics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Geriatrics Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Geriatrics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Geriatrics Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Geriatrics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7213,11 +7223,12 @@
     >
 
     param[journal_id] = jh
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7230,11 +7241,12 @@
     >
 
     param[journal_id] = jhor
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7333,11 +7345,12 @@
     >
 
     param[journal_id] = jim
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7350,9 +7363,10 @@
     >
 
     param[journal_id] = jic
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -7495,11 +7509,11 @@
     >
 
     param[journal_id] = jmin
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Mining Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7645,7 +7659,7 @@
     >
 
     param[journal_id] = jnc
-    #archived
+    #Moved to archive
 
     au < down ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
 
@@ -7680,10 +7694,10 @@
     >
 
     param[journal_id] = jn
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Numbers Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Numbers Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Numbers Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Numbers Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7839,11 +7853,12 @@
     >
 
     param[journal_id] = jod
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Oral Diseases Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Oral Diseases Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7856,10 +7871,10 @@
     >
 
     param[journal_id] = joi
+    #Moved to archive
     
-    au < released ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Oral Implants Volume 2016 ; 2016 ; 2016 >
+    au < down ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7872,12 +7887,11 @@
     >
 
     param[journal_id] = joo
-    #journal gone
+    #Moved to archive
     
     au < doNotProcess ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
     au < down ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
-    au < expected ; 2016 ; Journal of Oral Oncology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7992,11 +8006,12 @@
     >
 
     param[journal_id] = jpho
+    #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
-    au < released ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 >
+    au < doNotProcess ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 >
 
   }
 
