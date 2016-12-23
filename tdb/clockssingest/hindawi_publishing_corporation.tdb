@@ -7518,6 +7518,7 @@
     >
 
     param[journal_id] = jsto
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Journal of Stochastics Volume 2014 ; 2014 ; 2014 ; >
 
@@ -7532,11 +7533,12 @@
     >
 
     param[journal_id] = jstruc
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Structures Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Structures Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Structures Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Structures Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Structures Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Structures Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Structures Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7564,11 +7566,12 @@
     >
 
     param[journal_id] = jtex
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Textiles Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Textiles Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Textiles Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Textiles Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Textiles Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Textiles Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Textiles Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7660,11 +7663,11 @@
     >
 
     param[journal_id] = jtox
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Toxins Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7719,11 +7722,11 @@
     >
 
     param[journal_id] = jv
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Vaccines Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7753,10 +7756,10 @@
     >
 
     param[journal_id] = jvi
+    #Moved to archive
 
     au < finished ; finished ; 2014 ; Journal of Viruses Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Journal of Viruses Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Journal of Viruses Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Viruses Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -7769,11 +7772,12 @@
     >
 
     param[journal_id] = jwm
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Waste Management Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Waste Management Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Waste Management Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Waste Management Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Waste Management Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Waste Management Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Waste Management Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -7786,11 +7790,13 @@
     >
 
     param[journal_id] = jwe
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Journal of Wind Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Wind Energy Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Wind Energy Volume 2014 ; 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Wind Energy Volume 2015 ; 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; Journal of Wind Energy Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Journal of Wind Energy Volume 2015 ; 2015 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; Journal of Wind Energy Volume 2016 ; 2016 ; 2016 ; >
+
 
   }
 
@@ -7841,13 +7847,13 @@
     >
 
     param[journal_id] = lymph
+    #Moved to archive
 
-    au < manifest ; exists ; 2011 ; Lymphoma Volume 2011 ; 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; Lymphoma Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Lymphoma Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2011 ; Lymphoma Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Lymphoma Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Lymphoma Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Lymphoma Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2015 ; Lymphoma Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Lymphoma Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Lymphoma Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -8358,11 +8364,11 @@
     >
 
     param[journal_id] = physiology
+    #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2015 ; Physiology Journal Volume 2015 ; 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Physiology Journal Volume 2016 ; 2016 ; 2016 ; >
+    au < frozen ; exists ; 2015 ; Physiology Journal Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
