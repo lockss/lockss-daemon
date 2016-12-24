@@ -51,7 +51,7 @@ public class HighWireDrupalArticleIteratorFactory
   
   // <base_url>/content/<v>/[<i>/]<pg> required vol, optional issue, required page, then EOL
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/([^/]+/)([^/]+/)?([^./?&]+([.]\\d{1,4})?)$\", base_url, volume_name";
+    "\"^%scontent/(?!.*[.]toc$)([^/]+/)([^/]+/)?([^./?&]+([.]\\d{1,4})?)$\", base_url, volume_name";
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1

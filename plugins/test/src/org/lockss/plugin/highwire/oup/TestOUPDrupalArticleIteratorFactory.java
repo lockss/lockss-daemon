@@ -129,6 +129,8 @@ public class TestOUPDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.full.pdf+html");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.abstract");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.long");
+    assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1/1.toc");
+    assertNotMatchesRE(pat, "http://example.oxfordjournals.org/content/1/1.toc");
     assertNotMatchesRE(pat, "http://example.oxfordjournals.org/email?gca=example;96/1/1&current-view-path=/content/96/1/1.extract");
     
     // wrong base url

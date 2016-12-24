@@ -114,15 +114,16 @@ public class TestHighWireContentValidator extends LockssTestCase {
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     try {
       contentValidator.validate(cu);
-      fail("Bad cu should throw exception");
+      fail("Bad cu should throw exception " + cu.getUrl());
     } catch (Exception e) {
       // okay, fall-thru
     }
-    // This test should NOT pass
+    // This test should NOT pass 
+    cu.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, urlStr1);
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_URL, urlStr1);
     try {
       contentValidator.validate(cu);
-      fail("Bad cu should throw exception");
+      fail("Bad cu should throw exception " + cu.getUrl() + " " + urlStr1);
     } catch (Exception e) {
       // okay, fall-thru
     }
@@ -133,7 +134,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     try {
       contentValidator.validate(cu);
-      fail("Bad cu should throw exception");
+      fail("Bad cu should throw exception " + cu.getUrl());
     } catch (Exception e) {
       // okay, fall-thru
     }
@@ -143,7 +144,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, TEXT_CONTENT_TYPE);
     try {
       contentValidator.validate(cu);
-      fail("Bad cu should throw exception");
+      fail("Bad cu should throw exception " + cu.getUrl());
     } catch (Exception e) {
       // okay, fall-thru
     }

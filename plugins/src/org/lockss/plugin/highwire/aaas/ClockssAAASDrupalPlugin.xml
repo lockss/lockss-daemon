@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>60</string>
+    <string>62</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -64,5 +64,13 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalScrapingPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorVIPFactory</string>
   </entry>
 </map>

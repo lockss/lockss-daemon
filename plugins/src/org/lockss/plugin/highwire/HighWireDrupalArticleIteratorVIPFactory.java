@@ -51,7 +51,7 @@ public class HighWireDrupalArticleIteratorVIPFactory
   
   // <base_url>/content/<v>/[<i>/]<pg> required vol, issue, page, then EOL
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/([^/]+/)?(?!.+?[.](full|pdf|long|supplemental|data|figures-only|abstract|extract))([^/?&]+)$\", base_url, volume_name";
+    "\"^%scontent/%s/([^/]+/)?(?!.+?[.](toc|full|pdf|long|supplemental|data|figures-only|abstract|extract))([^/?&]+)$\", base_url, volume_name";
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
@@ -74,6 +74,7 @@ public class HighWireDrupalArticleIteratorVIPFactory
   // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://bjo.bmj.com/content/96/1/1.short
   // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
+  // http://bjo.bmj.com/content/96/1.toc
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
       "/([^/?&]+)$", Pattern.CASE_INSENSITIVE);
