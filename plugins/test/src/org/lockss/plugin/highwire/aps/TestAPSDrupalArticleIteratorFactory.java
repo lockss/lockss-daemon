@@ -120,9 +120,9 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
-    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
-    // but not to ...
+    // but not to ... Using VIP ArticleIterator
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1.toc");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
