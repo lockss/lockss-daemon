@@ -109,7 +109,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Letters Volume 9 ; 9 ; >
     au < rsp.ClockssRSPDrupalPlugin ; notReady ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; > #xml error: See http://rsbl.royalsocietypublishing.org/highwire/filestream/25839/field_highwire_adjunct_files/2/rsbl20140479supp3.xml
     au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; testing ; exists ; 2016 ; Biology Letters Volume 12 ; 12 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; ready ; exists ; 2016 ; Biology Letters Volume 12 ; 12 ; >
 
   }
 
