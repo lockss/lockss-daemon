@@ -118,7 +118,7 @@
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2014 ; Diabetes Volume 63 ; 63 ; >
         au < ClockssHighWirePressH20Plugin ; deepCrawl ; exists ; 2015 ; Diabetes Volume 64 ; 64 ; >
         au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2016 ; Diabetes Volume 65 ; 65 ; >
-        au < ada.ClockssADADrupalPlugin ; expected ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; >
+        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; >
 
       }
 
