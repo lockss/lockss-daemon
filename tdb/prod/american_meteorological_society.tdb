@@ -21,36 +21,36 @@
     
     param[journal_id] = bams
   
-    au < manifest ; 1970 ; Bulletin of the American Meteorological Society Volume 51 ; 51 >
-    au < manifest ; 1971 ; Bulletin of the American Meteorological Society Volume 52 ; 52 >
-    au < manifest ; 1972 ; Bulletin of the American Meteorological Society Volume 53 ; 53 >
-    au < manifest ; 1973 ; Bulletin of the American Meteorological Society Volume 54 ; 54 >
-    au < manifest ; 1974 ; Bulletin of the American Meteorological Society Volume 55 ; 55 >
-    au < manifest ; 1975 ; Bulletin of the American Meteorological Society Volume 56 ; 56 >
-    au < manifest ; 1976 ; Bulletin of the American Meteorological Society Volume 57 ; 57 >
-    au < manifest ; 1977 ; Bulletin of the American Meteorological Society Volume 58 ; 58 >
-    au < manifest ; 1978 ; Bulletin of the American Meteorological Society Volume 59 ; 59 >
-    au < manifest ; 1979 ; Bulletin of the American Meteorological Society Volume 60 ; 60 >
-    au < manifest ; 1980 ; Bulletin of the American Meteorological Society Volume 61 ; 61 >
-    au < manifest ; 1981 ; Bulletin of the American Meteorological Society Volume 62 ; 62 >
-    au < manifest ; 1982 ; Bulletin of the American Meteorological Society Volume 63 ; 63 >
-    au < manifest ; 1983 ; Bulletin of the American Meteorological Society Volume 64 ; 64 >
-    au < manifest ; 1984 ; Bulletin of the American Meteorological Society Volume 65 ; 65 >
-    au < manifest ; 1985 ; Bulletin of the American Meteorological Society Volume 66 ; 66 >
-    au < manifest ; 1986 ; Bulletin of the American Meteorological Society Volume 67 ; 67 >
-    au < manifest ; 1987 ; Bulletin of the American Meteorological Society Volume 68 ; 68 >
-    au < manifest ; 1988 ; Bulletin of the American Meteorological Society Volume 69 ; 69 >
-    au < manifest ; 1989 ; Bulletin of the American Meteorological Society Volume 70 ; 70 >
-    au < manifest ; 1990 ; Bulletin of the American Meteorological Society Volume 71 ; 71 >
-    au < manifest ; 1991 ; Bulletin of the American Meteorological Society Volume 72 ; 72 >
-    au < manifest ; 1992 ; Bulletin of the American Meteorological Society Volume 73 ; 73 >
-    au < manifest ; 1993 ; Bulletin of the American Meteorological Society Volume 74 ; 74 >
-    au < manifest ; 1994 ; Bulletin of the American Meteorological Society Volume 75 ; 75 >
-    au < manifest ; 1995 ; Bulletin of the American Meteorological Society Volume 76 ; 76 >
-    au < manifest ; 1996 ; Bulletin of the American Meteorological Society Volume 77 ; 77 >
-    au < manifest ; 1997 ; Bulletin of the American Meteorological Society Volume 78 ; 78 >
-    au < manifest ; 1998 ; Bulletin of the American Meteorological Society Volume 79 ; 79 >
-    au < manifest ; 1999 ; Bulletin of the American Meteorological Society Volume 80 ; 80 >
+    au < testing ; 1970 ; Bulletin of the American Meteorological Society Volume 51 ; 51 >
+    au < testing ; 1971 ; Bulletin of the American Meteorological Society Volume 52 ; 52 >
+    au < testing ; 1972 ; Bulletin of the American Meteorological Society Volume 53 ; 53 >
+    au < testing ; 1973 ; Bulletin of the American Meteorological Society Volume 54 ; 54 >
+    au < testing ; 1974 ; Bulletin of the American Meteorological Society Volume 55 ; 55 >
+    au < testing ; 1975 ; Bulletin of the American Meteorological Society Volume 56 ; 56 >
+    au < testing ; 1976 ; Bulletin of the American Meteorological Society Volume 57 ; 57 >
+    au < testing ; 1977 ; Bulletin of the American Meteorological Society Volume 58 ; 58 >
+    au < testing ; 1978 ; Bulletin of the American Meteorological Society Volume 59 ; 59 >
+    au < testing ; 1979 ; Bulletin of the American Meteorological Society Volume 60 ; 60 >
+    au < testing ; 1980 ; Bulletin of the American Meteorological Society Volume 61 ; 61 >
+    au < testing ; 1981 ; Bulletin of the American Meteorological Society Volume 62 ; 62 >
+    au < testing ; 1982 ; Bulletin of the American Meteorological Society Volume 63 ; 63 >
+    au < testing ; 1983 ; Bulletin of the American Meteorological Society Volume 64 ; 64 >
+    au < testing ; 1984 ; Bulletin of the American Meteorological Society Volume 65 ; 65 >
+    au < testing ; 1985 ; Bulletin of the American Meteorological Society Volume 66 ; 66 >
+    au < testing ; 1986 ; Bulletin of the American Meteorological Society Volume 67 ; 67 >
+    au < testing ; 1987 ; Bulletin of the American Meteorological Society Volume 68 ; 68 >
+    au < testing ; 1988 ; Bulletin of the American Meteorological Society Volume 69 ; 69 >
+    au < testing ; 1989 ; Bulletin of the American Meteorological Society Volume 70 ; 70 >
+    au < testing ; 1990 ; Bulletin of the American Meteorological Society Volume 71 ; 71 >
+    au < testing ; 1991 ; Bulletin of the American Meteorological Society Volume 72 ; 72 >
+    au < testing ; 1992 ; Bulletin of the American Meteorological Society Volume 73 ; 73 >
+    au < testing ; 1993 ; Bulletin of the American Meteorological Society Volume 74 ; 74 >
+    au < testing ; 1994 ; Bulletin of the American Meteorological Society Volume 75 ; 75 >
+    au < testing ; 1995 ; Bulletin of the American Meteorological Society Volume 76 ; 76 >
+    au < testing ; 1996 ; Bulletin of the American Meteorological Society Volume 77 ; 77 >
+    au < testing ; 1997 ; Bulletin of the American Meteorological Society Volume 78 ; 78 >
+    au < testing ; 1998 ; Bulletin of the American Meteorological Society Volume 79 ; 79 >
+    au < testing ; 1999 ; Bulletin of the American Meteorological Society Volume 80 ; 80 >
     au < testing ; 2000 ; Bulletin of the American Meteorological Society Volume 81 ; 81 >
     au < ready ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 >
     au < ready ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 >
@@ -115,27 +115,27 @@
     param[journal_id] = jam
     comment[continued_by] = 0733-3021
 
-    au < manifest ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 >
-    au < manifest ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 >
-    au < manifest ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 >
-    au < manifest ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
-    au < manifest ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
-    au < manifest ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 >
-    au < manifest ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
-    au < manifest ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
-    au < manifest ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
-    au < manifest ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
-    au < manifest ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
-    au < manifest ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
-    au < manifest ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
-    au < manifest ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
-    au < manifest ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
-    au < manifest ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
-    au < manifest ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
-    au < manifest ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
-    au < manifest ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 >
-    au < manifest ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 >
-    au < manifest ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
+    au < testing ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 >
+    au < testing ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 >
+    au < testing ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 >
+    au < testing ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
+    au < testing ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
+    au < testing ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 >
+    au < testing ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
+    au < testing ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
+    au < testing ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
+    au < testing ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
+    au < testing ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
+    au < testing ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
+    au < testing ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
+    au < testing ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
+    au < testing ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
+    au < testing ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
+    au < testing ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
+    au < testing ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
+    au < testing ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 >
+    au < testing ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 >
+    au < testing ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
 
   }
 
@@ -151,11 +151,11 @@
     comment[continues] = 0021-8952
     comment[continued_by] = 0894-8763
 
-    au < manifest ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
-    au < manifest ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
-    au < manifest ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 >
-    au < manifest ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 >
-    au < manifest ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
+    au < testing ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
+    au < testing ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
+    au < testing ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 >
+    au < testing ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 >
+    au < testing ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
 
   }
 
