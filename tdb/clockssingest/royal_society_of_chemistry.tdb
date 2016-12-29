@@ -324,7 +324,7 @@
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; >
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; >
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
-      au < ready ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
+      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; >
       au < manifest ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
       au < manifest ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
@@ -924,7 +924,7 @@
       au < crawling ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
       au < testing ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
 
@@ -1248,7 +1248,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = ta
 
-      au < ready ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
+      au < crawling ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
       au < testing ; exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; >
       au < testing ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; >
       au < testing ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
