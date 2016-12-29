@@ -358,8 +358,8 @@
     au < manifest ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; >
     au < manifest ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; >
     au < manifest ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
-    au < manifest ; exists ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; >
-    au < manifest ; exists ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; >
+    au < testing ; exists ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; >
+    au < testing ; exists ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; >
     au < finished ; finished ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 ; reingest2.clockss.org:8085 >
@@ -589,9 +589,9 @@
 
     param[journal_id] = quaker
 
-    au < manifest ; exists ; 2007-2008 ; Quaker Studies Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2008-2009 ; Quaker Studies Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2009-2010 ; Quaker Studies Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < testing ; exists ; 2007-2008 ; Quaker Studies Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < testing ; exists ; 2008-2009 ; Quaker Studies Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < testing ; exists ; 2009-2010 ; Quaker Studies Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; reingest5.clockss.org:8082 >
@@ -663,7 +663,7 @@
     au < finished ; finished ; 2015 ; Quebec Studies Volume 59 ; 59 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Quebec Studies Volume 60 ; 60 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Quebec Studies Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; >
+    au < testing ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; >
 
   }
 
@@ -733,7 +733,7 @@
     au < finished ; finished ; 2013 ; Studia Hibernica Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Studia Hibernica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2016 ; Studia Hibernica Volume 42 ; 42 ; >
+    au < testing ; exists ; 2016 ; Studia Hibernica Volume 42 ; 42 ; >
 
   }
 
