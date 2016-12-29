@@ -10,8 +10,8 @@
   
   # Live on Atypon 1/1/2017. 
 
-  plugin =   plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
-  #param[base_url] = http://journals.sagepub.com/
+  plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+  param[base_url] = http://journals.sagepub.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   #pluginPrefix = org.lockss.plugin.highwire.
@@ -22,9 +22,10 @@
       name = Abstracts in Anthropology ;
       issn = 0001-3455 ;
       eissn = 1557-5136
-    >	
+    >
 
       #param[base_url] = http://aax.sagepub.com/
+      param[journal_id] = aax
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1970 volume 1 to 1999 volume 39
 
@@ -68,6 +69,7 @@
     >
 
     #param[base_url] = http://ach.sagepub.com/
+    param[journal_id] = ach
 
     {
 
@@ -108,6 +110,7 @@
     >
 
     #param[base_url] = http://asj.sagepub.com/
+    param[journal_id] = asj
 
     {
 
@@ -185,6 +188,7 @@
      >
 
        #param[base_url] = http://arr.sagepub.com/
+       param[journal_id] = arr
        #pluginSuffix = ClockssHighWirePressH20Plugin
 
        au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
@@ -204,6 +208,7 @@
     >
 
     #param[base_url] = http://arj.sagepub.com/
+    param[journal_id] = arj
 
     {
 
@@ -237,6 +242,7 @@
     >
 
     #param[base_url] = http://alh.sagepub.com/
+    param[journal_id] = alh
 
     {
 
@@ -273,6 +279,7 @@
     >
 
     #param[base_url] = http://adb.sagepub.com/
+    param[journal_id] = adb
 
     {
 
@@ -316,6 +323,7 @@
     >
 
     #param[base_url] = http://aas.sagepub.com/
+    param[journal_id] = aas
 
     {
 
@@ -383,6 +391,7 @@
     >
 
       #param[base_url] = http://asq.sagepub.com/
+      param[journal_id] = asq
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Administrative Science Quarterly Volume 44 ; 44 ; >
@@ -415,6 +424,7 @@
     >
 
       #param[base_url] = http://adt.sagepub.com/
+      param[journal_id] = adt
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1984 volume 1 to 1999 volume 17
 
@@ -448,6 +458,7 @@
     # this title was previously published by Hindawi and apparently moved to Sage in 2015
     # though Sage has archived back volumes
       #param[base_url] = http://ade.sagepub.com/
+      param[journal_id] = ade
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
@@ -470,6 +481,7 @@
     >
 
     #param[base_url] = http://aeq.sagepub.com/
+    param[journal_id] = aeq
 
     {
 
@@ -556,6 +568,7 @@
       >
 
       #param[base_url] = http://alx.sagepub.com/
+      param[journal_id] = alx
 
       {
 
@@ -593,6 +606,7 @@
     >
 
     #param[base_url] = http://adr.sagepub.com/
+    param[journal_id] = adr
 
     {
 
@@ -640,6 +654,7 @@
     >
 
     #param[base_url] = http://adh.sagepub.com/
+    param[journal_id] = adh
 
     {
 
@@ -677,6 +692,7 @@
     >
 
       #param[base_url] = http://ase.sagepub.com/
+      param[journal_id] = ase
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1997-1998 ; Advances in Structural Engineering Volume 1 ; 1 ; >
@@ -709,6 +725,7 @@
     >
 
       #param[base_url] = http://ero.sagepub.com/
+      param[journal_id] = ero
       #pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
@@ -725,6 +742,7 @@
     >
 
     #param[base_url] = http://aff.sagepub.com/
+    param[journal_id] = aff
 
     {
 
@@ -771,8 +789,9 @@
       name = Agrarian South: Journal of Political Economy ;
       issn = 2277-9760
     >
-	
+
       #param[base_url] = http://ags.sagepub.com/
+      param[journal_id] = ags
 
     {
 
@@ -796,8 +815,9 @@
       issn = 0955-7490 ;
       eissn = 2050-4551
     >
-	
+
       #param[base_url] = http://ala.sagepub.com/
+      param[journal_id] = ala
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; Alexandria Volume 21 ; 21 ; >
@@ -814,8 +834,9 @@
       name = Alternatives: Global, Local, Political ;
       issn = 0304-3754
     >
-	
+
       #param[base_url] = http://alt.sagepub.com/
+      param[journal_id] = alt
 
     {
 
@@ -848,6 +869,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://alj.sagepub.com/
+      param[journal_id] = alj
 
       au < exists ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; >
 
@@ -862,6 +884,7 @@
     >
 
     #param[base_url] = http://abs.sagepub.com/
+    param[journal_id] = abs
 
     {
 
@@ -941,6 +964,7 @@
     >
 
     #param[base_url] = http://aex.sagepub.com/
+    param[journal_id] = aex
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #content available from 1960 volume 4 to 1999 volume 43
 
@@ -974,6 +998,7 @@
     >
 
     #param[base_url] = http://aer.sagepub.com/
+    param[journal_id] = aer
 
     {
 
@@ -1046,6 +1071,7 @@
     >
 
     #param[base_url] = http://aja.sagepub.com/
+    param[journal_id] = aja
 
     {
 
@@ -1096,6 +1122,7 @@
     >
 
       #param[base_url] = http://acs.sagepub.com/
+      param[journal_id] = acs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
@@ -1116,6 +1143,7 @@
     >
 
     #param[base_url] = http://aje.sagepub.com/
+    param[journal_id] = aje
 
     {
 
@@ -1172,6 +1200,7 @@
     >
 
       #param[base_url] = http://ahp.sagepub.com/
+      param[journal_id] = ahp
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1986-1987 ; American Journal of Health Promotion Volume 1 ; 1 ; >
@@ -1216,6 +1245,7 @@
     >
 
     #param[base_url] = http://ajh.sagepub.com/
+    param[journal_id] = ajh
 
     {
 
@@ -1268,6 +1298,7 @@
     >
 
       #param[base_url] = http://jlm.sagepub.com/
+      param[journal_id] = jlm
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; American Journal of Law & Medicine Volume 30 ; 30 ; >
@@ -1295,6 +1326,7 @@
     >
 
     #param[base_url] = http://ajl.sagepub.com/
+    param[journal_id] = ajl
 
     {
 
@@ -1324,6 +1356,7 @@
     >
 
     #param[base_url] = http://ajm.sagepub.com/
+    param[journal_id] = ajm
 
     {
 
@@ -1374,6 +1407,7 @@
     >
 
     #param[base_url] = http://jmh.sagepub.com/
+    param[journal_id] = jmh
 
     {
 
@@ -1403,6 +1437,7 @@
     >
 
     #param[base_url] = http://ajs.sagepub.com/
+    param[journal_id] = ajs
 
     {
 
@@ -1466,6 +1501,7 @@
     >
 
     #param[base_url] = http://apr.sagepub.com/
+    param[journal_id] = apr
 
     {
 
@@ -1530,6 +1566,7 @@
     >
 
     #param[base_url] = http://arp.sagepub.com/
+    param[journal_id] = arp
 
     
     {
@@ -1596,6 +1633,7 @@
     >
 
     #param[base_url] = http://asr.sagepub.com/
+    param[journal_id] = asr
 
     {
 
@@ -1628,6 +1666,7 @@
     >
 
     #param[base_url] = http://ang.sagepub.com/
+    param[journal_id] = ang
 
     
     {
@@ -1715,6 +1754,7 @@
     >
 
     #param[base_url] = http://anm.sagepub.com/
+    param[journal_id] = anm
 
     
     {
@@ -1746,6 +1786,7 @@
     >
 
     #param[base_url] = http://ann.sagepub.com/
+    param[journal_id] = ann
 
     
     {
@@ -2434,6 +2475,7 @@
     >
 
     #param[base_url] = http://aop.sagepub.com/
+    param[journal_id] = aop
 
     {
 
@@ -2472,6 +2514,7 @@
     >
 
       #param[base_url] = http://aor.sagepub.com/
+      param[journal_id] = aor
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1911 volume 20 to 1999 volume 108
 
@@ -2507,6 +2550,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://anr.sagepub.com/
+    param[journal_id] = anr
 
     au < doNotProcess ; doNotProcess ; 2014 ; The Anthropocene Review Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Anthropocene Review Volume 2 ; 2 ; >
@@ -2523,6 +2567,7 @@
     >
 
     #param[base_url] = http://ant.sagepub.com/
+    param[journal_id] = ant
 
     
     {
@@ -2560,6 +2605,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://abx.sagepub.com/
+      param[journal_id] = abx
 
       au < exists ; exists ; 2009 ; The Antitrust Bulletin Volume 54 ; 54 ; >
       au < exists ; exists ; 2010 ; The Antitrust Bulletin Volume 55 ; 55 ; >
@@ -2582,6 +2628,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://avc.sagepub.com/
+      param[journal_id] = avc
       #content available from 1990 volume 1 to 2008 volume 19
 
       au < exists ; exists ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 ; >
@@ -2603,6 +2650,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://jws.sagepub.com/
+      param[journal_id] = jws
 
       au < exists ; exists ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; >
 
@@ -2617,6 +2665,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://apb.sagepub.com/
+      param[journal_id] = apb
 
       au < exists ; exists ; 1996 ; Applied Biosafety Volume 1 ; 1 ; >
       au < exists ; exists ; 1997 ; Applied Biosafety Volume 2 ; 2 ; >
@@ -2651,6 +2700,7 @@
     >
 
     #param[base_url] = http://apm.sagepub.com/
+    param[journal_id] = apm
 
     
     {
@@ -2712,6 +2762,7 @@
     >
 
       #param[base_url] = http://asp.sagepub.com/
+      param[journal_id] = asp
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1946 volume 1 to 1979 volume 33
 
@@ -2764,6 +2815,7 @@
     >
 
     #param[base_url] = http://afs.sagepub.com/
+    param[journal_id] = afs
 
     
     {
@@ -2826,6 +2878,7 @@
     >
 
     #param[base_url] = http://ahh.sagepub.com/
+    param[journal_id] = ahh
 
     
     {
@@ -2862,6 +2915,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://amj.sagepub.com/
+      param[journal_id] = amj
 
       au < exists ; exists ; 1992 ; Asian and Pacific Migration Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 1993 ; Asian and Pacific Migration Journal Volume 2 ; 2 ; >
@@ -2901,6 +2955,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://aan.sagepub.com/
+    param[journal_id] = aan
 
     au < exists ; exists ; 1993 ; Asian Cardiovascular and Thoracic Annals Volume 1 ; 1 ; >
     au < exists ; exists ; 1994 ; Asian Cardiovascular and Thoracic Annals Volume 2 ; 2 ; >
@@ -2940,6 +2995,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://acp.sagepub.com/
+    param[journal_id] = acp
 
     au < exists ; exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 ; >
 
@@ -2956,6 +3012,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://ale.sagepub.com/
+    param[journal_id] = ale
 
     au < doNotProcess ; doNotProcess ; 2014 ; Asian Journal of Legal Education Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Asian Journal of Legal Education Volume 2 ; 2 ; >
@@ -2972,6 +3029,7 @@
     >
 
     #param[base_url] = http://ajc.sagepub.com/
+    param[journal_id] = ajc
 
     
     {
@@ -3005,6 +3063,7 @@
     >
 
     #param[base_url] = http://apj.sagepub.com/
+    param[journal_id] = apj
 
     
     {
@@ -3076,6 +3135,7 @@
     >
 
     #param[base_url] = http://aph.sagepub.com/
+    param[journal_id] = aph
 
     
     {
@@ -3124,6 +3184,7 @@
       >
 
       #param[base_url] = http://ame.sagepub.com/
+      param[journal_id] = ame
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
@@ -3143,6 +3204,7 @@
     >
 
       #param[base_url] = http://apn.sagepub.com/
+      param[journal_id] = apn
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #moved to UNLV
 
@@ -3160,6 +3222,7 @@
     >
 
     #param[base_url] = http://asm.sagepub.com/
+    param[journal_id] = asm
 
     
     {
@@ -3204,6 +3267,7 @@
     >
 
     #param[base_url] = http://aei.sagepub.com/
+    param[journal_id] = aei
 
     
     {
@@ -3265,6 +3329,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://anj.sagepub.com/
+      param[journal_id] = anj
 
       au < exists ; exists ; 1968 ; Australian & New Zealand Journal of Criminology Volume 1 ; 1 ; >
       au < exists ; exists ; 1969 ; Australian & New Zealand Journal of Criminology Volume 2 ; 2 ; >
@@ -3329,6 +3394,7 @@
     >
 
     #param[base_url] = http://anp.sagepub.com/
+    param[journal_id] = anp
 
     {
 
@@ -3397,6 +3463,7 @@
     >
 
     #param[base_url] = http://aum.sagepub.com/
+    param[journal_id] = aum
 
     {
 
@@ -3457,6 +3524,7 @@
     >
 
     #param[base_url] = http://apy.sagepub.com/
+    param[journal_id] = apy
 
     {
 
@@ -3500,6 +3568,7 @@
     >
 
     #param[base_url] = http://aut.sagepub.com/
+    param[journal_id] = aut
 
     
     {
@@ -3541,6 +3610,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://dli.sagepub.com/
+      param[journal_id] = dli
 
       au < exists ; exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; >
 
@@ -3555,6 +3625,7 @@
     >
 
     #param[base_url] = http://bmo.sagepub.com/
+    param[journal_id] = bmo
 
     
     {
@@ -3615,6 +3686,7 @@
     >
 
     #param[base_url] = http://bcn.sagepub.com/
+    param[journal_id] = bcn
 
     {
 
@@ -3641,6 +3713,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://tbt.sagepub.com/
+        param[journal_id] = tbt
 
         au < exists ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; >
         au < exists ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; >
@@ -3667,6 +3740,7 @@
     >
 
     #param[base_url] = http://btb.sagepub.com/
+    param[journal_id] = btb
     comment[btb_1] = title changed from iblical Theology Bulletin: Journal of Bible and Theology to Biblical Theology Bulletin: Journal of Bible and Culture 1/2012
     
     {
@@ -3733,6 +3807,7 @@
     >
       #pluginSuffix = ClockssHWDrupalPlugin
       #param[base_url] = http://bds.sagepub.com/
+      param[journal_id] = bds
 
       au < exists ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
@@ -3749,6 +3824,7 @@
     >
 
     #param[base_url] = http://brn.sagepub.com/
+    param[journal_id] = brn
 
     
     {
@@ -3787,6 +3863,7 @@
     >
 
     #param[base_url] = http://bio.sagepub.com/
+    param[journal_id] = bio
 
     {
 
@@ -3813,6 +3890,7 @@
     >
 
     #param[base_url] = http://bod.sagepub.com/
+    param[journal_id] = bod
 
     
     {
@@ -3856,6 +3934,7 @@
     >
 
     #param[base_url] = http://dvd.sagepub.com/
+    param[journal_id] = dvd
 
     
     {
@@ -3890,6 +3969,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://bjm.sagepub.com/
+        param[journal_id] = bjm
         #content available from 1987 volume 1 to 1999 volume 13
 
         au < exists ; exists ; 2000 ; British Journal of Music Therapy Volume 14 ; 14 ; >
@@ -3922,6 +4002,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://bjo.sagepub.com/
+        param[journal_id] = bjo
 
         au < exists ; exists ; 1938 ; The British Journal of Occupational Therapy Volume 1 ; 1 ; >
         au < exists ; exists ; 1939 ; The British Journal of Occupational Therapy Volume 2 ; 2 ; >
@@ -4018,6 +4099,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://bjp.sagepub.com/
+        param[journal_id] = bjp
 
         au < doNotProcess ; doNotProcess ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Pain Volume 2 ; 2 ; >
@@ -4043,6 +4125,7 @@
     >
 
       #param[base_url] = http://bpi.sagepub.com/
+      param[journal_id] = bpi
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
@@ -4075,6 +4158,7 @@
     >
 
     #param[base_url] = http://jvi.sagepub.com/
+    param[journal_id] = jvi
 
     
     {
@@ -4129,6 +4213,7 @@
     >
 
     #param[base_url] = http://bjr.sagepub.com/
+    param[journal_id] = bjr
 
     
     {
@@ -4176,6 +4261,7 @@
     >
 
       #param[base_url] = http://bua.sagepub.com/
+      param[journal_id] = bua
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 ; >
@@ -4208,6 +4294,7 @@
     >
 
     #param[base_url] = http://bse.sagepub.com/
+    param[journal_id] = bse
 
     
     {
@@ -4265,6 +4352,7 @@
     >
 
     #param[base_url] = http://bst.sagepub.com/
+    param[journal_id] = bst
 
     
     {
@@ -4321,6 +4409,7 @@
     >
 
     #param[base_url] = http://bms.sagepub.com/
+    param[journal_id] = bms
 
     {
 
@@ -4472,6 +4561,7 @@
     >
 
     #param[base_url] = http://bos.sagepub.com/
+    param[journal_id] = bos
 
     {
 
@@ -4509,6 +4599,7 @@
     >
 
     #param[base_url] = http://bas.sagepub.com/
+    param[journal_id] = bas
 
     
     {
@@ -4585,6 +4676,7 @@
     >
 
     #param[base_url] = http://bcq.sagepub.com/
+    param[journal_id] = bcq
 
     
     {
@@ -4653,6 +4745,7 @@
     >
 
     #param[base_url] = http://bcq.sagepub.com/
+    param[journal_id] = bcq
 
     {
       #pluginSuffix = ClockssHighWirePressH20Plugin
@@ -4675,6 +4768,7 @@
     >
 
     #param[base_url] = http://bir.sagepub.com/
+    param[journal_id] = bir
 
     
     {
@@ -4728,6 +4822,7 @@
     >
 
       #param[base_url] = http://bpr.sagepub.com/
+      param[journal_id] = bpr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2012-2013 ; Business Perspectives and Research Volume 1 ; 1 ; >
@@ -4746,6 +4841,7 @@
     >
 
       #param[base_url] = http://cae.sagepub.com/
+      param[journal_id] = cae
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Cahiers Élisabéthains Volume 55 ; 55 ; >
@@ -4796,6 +4892,7 @@
     >
 
       #param[base_url] = http://csa.sagepub.com/
+      param[journal_id] = csa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1947-1948 ; Calcutta Statistical Association Bulletin Volume 1 ; 1 ; >
@@ -4875,6 +4972,7 @@
     >
 
       #param[base_url] = http://cjk.sagepub.com/
+      param[journal_id] = cjk
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
@@ -4892,6 +4990,7 @@
     >
 
       #param[base_url] = http://cjn.sagepub.com/
+      param[journal_id] = cjn
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Canadian Journal of Nursing Research Volume 48 ; 48 ; >
@@ -4907,6 +5006,7 @@
     >
 
       #param[base_url] = http://cpa.sagepub.com/
+      param[journal_id] = cpa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1996 ; The Canadian Journal of Psychiatry Volume 41 ; 41 ; >
@@ -4942,6 +5042,7 @@
     >
 
     #param[base_url] = http://cjs.sagepub.com/
+    param[journal_id] = cjs
 
     
     {
@@ -4985,6 +5086,7 @@
     >
 
     #param[base_url] = http://cnc.sagepub.com/
+    param[journal_id] = cnc
 
     {
 
@@ -5044,6 +5146,7 @@
     >
 
     #param[base_url] = http://ccl.sagepub.com/
+    param[journal_id] = ccl
 
     {
 
@@ -5066,6 +5169,7 @@
     >
 
       #param[base_url] = http://cto.sagepub.com/
+      param[journal_id] = cto
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 ; >
@@ -5083,6 +5187,7 @@
     >
 
     #param[base_url] = http://cde.sagepub.com/
+    param[journal_id] = cde
 
     comment[continued_by] = Name/ISSN changed after 2011 to 2165-1434 Career Development and Transition for Exceptional Individuals
 
@@ -5145,6 +5250,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://cde.sagepub.com/
+        param[journal_id] = cde
 
         au < doNotProcess ; doNotProcess ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
         au < doNotProcess ; doNotProcess ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
@@ -5164,6 +5270,7 @@
     >
 
     #param[base_url] = http://car.sagepub.com/
+    param[journal_id] = car
 
     
     {
@@ -5191,6 +5298,7 @@
     >
 
     #param[base_url] = http://cep.sagepub.com/
+    param[journal_id] = cep
 
     {
 
@@ -5246,6 +5354,7 @@
     >
 
     #param[base_url] = http://clt.sagepub.com/
+    param[journal_id] = clt
 
     
     {
@@ -5298,6 +5407,7 @@
     >
 
     #param[base_url] = http://cmx.sagepub.com/
+    param[journal_id] = cmx
 
     
     {
@@ -5339,6 +5449,7 @@
     >
 
       #param[base_url] = http://cno.sagepub.com/
+      param[journal_id] = cno
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Child Neurology Open Volume 1 ; 1 ; >
@@ -5356,6 +5467,7 @@
     >
 
     #param[base_url] = http://chd.sagepub.com/
+    param[journal_id] = chd
 
     
     {
@@ -5399,6 +5511,7 @@
     >
 
     #param[base_url] = http://cin.sagepub.com/
+    param[journal_id] = cin
 
     
     {
@@ -5449,6 +5562,7 @@
     >
 
     #param[base_url] = http://chr.sagepub.com/
+    param[journal_id] = chr
 
     {
 
@@ -5520,6 +5634,7 @@
     >
 
       #param[base_url] = http://chs.sagepub.com/
+      param[journal_id] = chs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
@@ -5536,6 +5651,7 @@
     >
 
       #param[base_url] = http://csd.sagepub.com/
+      param[journal_id] = csd
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; >
@@ -5551,6 +5667,7 @@
     >
 
     #param[base_url] = http://cal.sagepub.com/
+    param[journal_id] = cal
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1950 ; Christianity & Literature Volume 1 ; 1 ; >
@@ -5631,6 +5748,7 @@
     >
 
     #param[base_url] = http://chi.sagepub.com/
+    param[journal_id] = chi
 
     
     {
@@ -5663,6 +5781,7 @@
     >
 
     #param[base_url] = http://crd.sagepub.com/
+    param[journal_id] = crd
 
     
     {
@@ -5696,6 +5815,7 @@
       >
 
         #param[base_url] = http://cse.sagepub.com/
+        param[journal_id] = cse
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1996 ; Citizenship, Social and Economics Education Volume 1 ; 1 ; >
@@ -5725,6 +5845,7 @@
     >
 
     #param[base_url] = http://cla.sagepub.com/
+    param[journal_id] = cla
 
     
     {
@@ -5799,6 +5920,7 @@
     >
 
     #param[base_url] = http://cat.sagepub.com/
+    param[journal_id] = cat
 
     
     {
@@ -5842,6 +5964,7 @@
     >
 
     #param[base_url] = http://ccs.sagepub.com/
+    param[journal_id] = ccs
 
     
     {
@@ -5877,6 +6000,7 @@
     >
 
     #param[base_url] = http://ccp.sagepub.com/
+    param[journal_id] = ccp
 
     
     {
@@ -5918,6 +6042,7 @@
       >
 
         #param[base_url] = http://eeg.sagepub.com/
+        param[journal_id] = eeg
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1988 ; Clinical EEG and Neuroscience Volume 19 ; 19 ; >
@@ -5961,6 +6086,7 @@
     >
 
     #param[base_url] = http://cnr.sagepub.com/
+    param[journal_id] = cnr
 
     
     {
@@ -6006,6 +6132,7 @@
     >
 
     #param[base_url] = http://cpj.sagepub.com/
+    param[journal_id] = cpj
 
     
     {
@@ -6082,6 +6209,7 @@
     >
 
     #param[base_url] = http://cpd.sagepub.com/
+    param[journal_id] = cpd
 
 
     {
@@ -6103,6 +6231,7 @@
     >
 
       #param[base_url] = http://cpx.sagepub.com/
+      param[journal_id] = cpx
 
     {
 
@@ -6126,6 +6255,7 @@
     >
 
     #param[base_url] = http://cre.sagepub.com/
+    param[journal_id] = cre
 
     
     {
@@ -6176,6 +6306,7 @@
     >
 
     #param[base_url] = http://ctj.sagepub.com/
+    param[journal_id] = ctj
 
     
     {
@@ -6209,6 +6340,7 @@
     >
 
     #param[base_url] = http://ctr.sagepub.com/
+    param[journal_id] = ctr
 
     
     {
@@ -6265,6 +6397,7 @@
     >
 
       #param[base_url] = http://clw.sagepub.com/
+      param[journal_id] = clw
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Common Law World Review Volume 32 ; 32 ; >
@@ -6294,6 +6427,7 @@
     >
 
       #param[base_url] = http://ctp.sagepub.com/
+      param[journal_id] = ctp
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Communication and the Public Volume 1 ; 1 ; >
@@ -6310,6 +6444,7 @@
     >
 
     #param[base_url] = http://cdq.sagepub.com/
+    param[journal_id] = cdq
 
     
     {
@@ -6368,6 +6503,7 @@
     >
 
     #param[base_url] = http://crx.sagepub.com/
+    param[journal_id] = crx
 
     
     {
@@ -6431,6 +6567,7 @@
     >
 
     #param[base_url] = http://crw.sagepub.com/
+    param[journal_id] = crw
 
     
     {
@@ -6496,6 +6633,7 @@
     >
 
     #param[base_url] = http://cps.sagepub.com/
+    param[journal_id] = cps
 
     
     {
@@ -6566,6 +6704,7 @@
     >
 
     #param[base_url] = http://cbr.sagepub.com/
+    param[journal_id] = cbr
 
     
     {
@@ -6638,6 +6777,7 @@
       
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://cch.sagepub.com/
+      param[journal_id] = cch
 
       au < exists ; exists ; 2002 ; Competition & Change Volume 6 ; 6 ; >
       au < exists ; exists ; 2003 ; Competition & Change Volume 7 ; 7 ; >
@@ -6672,6 +6812,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://chp.sagepub.com/
+        param[journal_id] = chp
 
         au < exists ; exists ; 1995 ; Alternative Health Practitioner Volume 1 ; 1 ; >
         au < exists ; exists ; 1996 ; Alternative Health Practitioner Volume 2 ; 2 ; >
@@ -6693,6 +6834,7 @@
         comment[two] = Till 2011-01-01 Complementary Health Practice Revew 1533-2101
         comment[tri] = Finally, to Journal of Evidence-Based Complementary & Alternative Medicine 2156-5872
         #param[base_url] = http://chp.sagepub.com/
+        param[journal_id] = chp
 
     
       {
@@ -6725,6 +6867,7 @@
       comment[jebcam] = 2011-01-01 name changed from Complementary Health Practice to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
 
       #param[base_url] = http://chp.sagepub.com/
+      param[journal_id] = chp
 
     {
 
@@ -6751,6 +6894,7 @@
     >
 
     #param[base_url] = http://cer.sagepub.com/
+    param[journal_id] = cer
 
     
     {
@@ -6795,6 +6939,7 @@
     >
 
     #param[base_url] = http://cmp.sagepub.com/
+    param[journal_id] = cmp
 
     
     {
@@ -6849,6 +6994,7 @@
     >
 
       #param[base_url] = http://cdx.sagepub.com/
+      param[journal_id] = cdx
       #pluginSuffix = ClockssHighWirePressH20Plugin
       
       au < exists ; exists ; 2009 ; Contemporary Drug Problems Volume 36 ; 36 ; >
@@ -6871,6 +7017,7 @@
     >
 
     #param[base_url] = http://ced.sagepub.com/
+    param[journal_id] = ced
 
     {
 
@@ -6904,6 +7051,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://cie.sagepub.com/
+      param[journal_id] = cie
 
       au < exists ; exists ; 2000 ; Contemporary Issues in Early Childhood Volume 1 ; 1 ; >
       au < exists ; exists ; 2001 ; Contemporary Issues in Early Childhood Volume 2 ; 2 ; >
@@ -6935,6 +7083,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://cme.sagepub.com/
+      param[journal_id] = cme
 
       au < doNotProcess ; doNotProcess ; 2014 ; Contemporary Review of the Middle East Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Contemporary Review of the Middle East Volume 2 ; 2 ; >
@@ -6951,6 +7100,7 @@
     >
 
       #param[base_url] = http://csx.sagepub.com/
+      param[journal_id] = csx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; Contemporary Sociology: A Journal of Reviews Volume 33 ; 33 ; >
@@ -6977,6 +7127,7 @@
     >
 
       #param[base_url] = http://vod.sagepub.com/
+      param[journal_id] = vod
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2008 ; Contemporary Voice of Dalit Volume 1 ; 1 ; >
@@ -6999,6 +7150,7 @@
     >
 
       #param[base_url] = http://ctx.sagepub.com/
+      param[journal_id] = ctx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; Contexts Volume 1 ; 1 ; >
@@ -7028,6 +7180,7 @@
     >
 
     #param[base_url] = http://cis.sagepub.com/
+    param[journal_id] = cis
 
     
     {
@@ -7098,6 +7251,7 @@
     >
 
     #param[base_url] = http://con.sagepub.com/
+    param[journal_id] = con
 
     
     {
@@ -7140,6 +7294,7 @@
     >
 
     #param[base_url] = http://cac.sagepub.com/
+    param[journal_id] = cac
 
     
     {
@@ -7211,6 +7366,7 @@
     >
 
     #param[base_url] = http://cqx.sagepub.com/
+    param[journal_id] = cqx
 
     
     {
@@ -7288,6 +7444,7 @@
     >
 
     #param[base_url] = http://cor.sagepub.com/
+    param[journal_id] = cor
 
     {
 
@@ -7314,6 +7471,7 @@
     >
 
     #param[base_url] = http://tcp.sagepub.com/
+    param[journal_id] = tcp
 
     
     {
@@ -7378,6 +7536,7 @@
     >
 
     #param[base_url] = http://cad.sagepub.com/
+    param[journal_id] = cad
 
     
     {
@@ -7460,6 +7619,7 @@
     >
 
     #param[base_url] = http://cmc.sagepub.com/
+    param[journal_id] = cmc
 
     
     {
@@ -7492,6 +7652,7 @@
     >
 
     #param[base_url] = http://cjb.sagepub.com/
+    param[journal_id] = cjb
 
     
     {
@@ -7555,6 +7716,7 @@
     >
 
     #param[base_url] = http://cjp.sagepub.com/
+    param[journal_id] = cjp
 
     
     {
@@ -7602,6 +7764,7 @@
     >
 
     #param[base_url] = http://cjr.sagepub.com/
+    param[journal_id] = cjr
 
     
     {
@@ -7663,6 +7826,7 @@
     >
 
     #param[base_url] = http://crj.sagepub.com/
+    param[journal_id] = crj
 
     
     {
@@ -7699,6 +7863,7 @@
     >
 
     #param[base_url] = http://cro.sagepub.com/
+    param[journal_id] = cro
 
     {
 
@@ -7733,6 +7898,7 @@
     >
 
     #param[base_url] = http://csp.sagepub.com/
+    param[journal_id] = csp
 
     
     {
@@ -7789,6 +7955,7 @@
     >
 
     #param[base_url] = http://crs.sagepub.com/
+    param[journal_id] = crs
 
     
     {
@@ -7851,6 +8018,7 @@
     >
 
       #param[base_url] = http://cst.sagepub.com/
+      param[journal_id] = cst
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
@@ -7872,6 +8040,7 @@
     >
 
     #param[base_url] = http://coa.sagepub.com/
+    param[journal_id] = coa
 
     
     {
@@ -7928,6 +8097,7 @@
     >
 
     #param[base_url] = http://ccr.sagepub.com/
+    param[journal_id] = ccr
 
     
     {
@@ -7998,6 +8168,7 @@
     >
 
     #param[base_url] = http://cdy.sagepub.com/
+    param[journal_id] = cdy
 
     
     {
@@ -8046,6 +8217,7 @@
     >
 
     #param[base_url] = http://cgj.sagepub.com/
+    param[journal_id] = cgj
 
     
     {
@@ -8089,6 +8261,7 @@
     >
 
     #param[base_url] = http://cus.sagepub.com/
+    param[journal_id] = cus
 
     
     {
@@ -8119,6 +8292,7 @@
     >
 
     #param[base_url] = http://csc.sagepub.com/
+    param[journal_id] = csc
 
     
     {
@@ -8155,6 +8329,7 @@
     >
 
     #param[base_url] = http://cap.sagepub.com/
+    param[journal_id] = cap
 
     
     {
@@ -8197,6 +8372,7 @@
     >
 
       #param[base_url] = http://cba.sagepub.com/
+      param[journal_id] = cba
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1968 volume 1 to 1999 volume 29
       #missing volume 36 to 39
@@ -8231,6 +8407,7 @@
     >
 
     #param[base_url] = http://cdp.sagepub.com/
+    param[journal_id] = cdp
 
     {
 
@@ -8275,6 +8452,7 @@
     >
 
     #param[base_url] = http://csi.sagepub.com/
+    param[journal_id] = csi
 
     
     {
@@ -8359,6 +8537,7 @@
     >
 
     #param[base_url] = http://cbi.sagepub.com/
+    param[journal_id] = cbi
 
     
     {
@@ -8394,6 +8573,7 @@
     >
 
     #param[base_url] = http://dem.sagepub.com/
+    param[journal_id] = dem
 
     
     {
@@ -8429,6 +8609,7 @@
     >
 
     #param[base_url] = http://dvr.sagepub.com/
+    param[journal_id] = dvr
 
     
     {
@@ -8462,6 +8643,7 @@
     >
 
     #param[base_url] = http://tde.sagepub.com/
+    param[journal_id] = tde
 
     
     {
@@ -8520,6 +8702,7 @@
     >
 
     #param[base_url] = http://dhg.sagepub.com/
+    param[journal_id] = dhg
 
     {
 
@@ -8544,6 +8727,7 @@
     >
 
       #param[base_url] = http://dhj.sagepub.com/
+      param[journal_id] = dhj
       #pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; >
@@ -8560,6 +8744,7 @@
     >
 
     #param[base_url] = http://dio.sagepub.com/
+    param[journal_id] = dio
 
     
     {
@@ -8641,6 +8826,7 @@
     >
 
     #param[base_url] = http://dcm.sagepub.com/
+    param[journal_id] = dcm
 
     
     {
@@ -8671,6 +8857,7 @@
     >
 
     #param[base_url] = http://das.sagepub.com/
+    param[journal_id] = das
 
     
     {
@@ -8718,6 +8905,7 @@
     >
 
     #param[base_url] = http://dis.sagepub.com/
+    param[journal_id] = dis
 
     
     {
@@ -8755,6 +8943,7 @@
     >
 
       #param[base_url] = http://dos.sagepub.com/
+      param[journal_id] = dos
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Dose-Response Volume 1 ; 1 ; >
@@ -8783,6 +8972,7 @@
     >
 
       #param[base_url] = http://tdr.sagepub.com/
+      param[journal_id] = tdr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; >
@@ -8798,6 +8988,7 @@
     >
 
        #param[base_url] = http://dij.sagepub.com/
+       param[journal_id] = dij
 
     {
 
@@ -8865,6 +9056,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://dij.sagepub.com/
+        param[journal_id] = dij
 
         # Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
@@ -8885,6 +9077,7 @@
     >
 
       #param[base_url] = http://ldm.sagepub.com/
+      param[journal_id] = ldm
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; E-Learning and Digital Media Volume 1 ; 1 ; >
@@ -8913,6 +9106,7 @@
     >
 
     #param[base_url] = http://eep.sagepub.com/
+    param[journal_id] = eep
 
     
     {
@@ -8963,6 +9157,7 @@
     >
 
     #param[base_url] = http://eid.sagepub.com/
+    param[journal_id] = eid
 
     
     {
@@ -9024,6 +9219,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://elr.sagepub.com/
+        param[journal_id] = elr
 
         au < exists ; exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 ; >
         au < exists ; exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 ; >
@@ -9066,6 +9262,7 @@
     >
 
     #param[base_url] = http://edq.sagepub.com/
+    param[journal_id] = edq
 
     
     {
@@ -9116,6 +9313,7 @@
     >
 
     #param[base_url] = http://eus.sagepub.com/
+    param[journal_id] = eus
 
     
     {
@@ -9185,6 +9383,7 @@
     >
 
     #param[base_url] = http://esj.sagepub.com/
+    param[journal_id] = esj
 
     
     {
@@ -9216,6 +9415,7 @@
     >
 
     #param[base_url] = http://eaq.sagepub.com/
+    param[journal_id] = eaq
 
     
     {
@@ -9288,6 +9488,7 @@
     >
 
     #param[base_url] = http://epm.sagepub.com/
+    param[journal_id] = epm
 
     
     {
@@ -9384,6 +9585,7 @@
     >
 
     #param[base_url] = http://epa.sagepub.com/
+    param[journal_id] = epa
 
     
     {
@@ -9442,6 +9644,7 @@
     >
 
     #param[base_url] = http://ehm.sagepub.com/
+    param[journal_id] = ehm
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2011 ; Educational Horizons Volume 89 ; 89 ; >
@@ -9461,6 +9664,7 @@
     >
 
     #param[base_url] = http://ema.sagepub.com/
+    param[journal_id] = ema
 
     
     {
@@ -9525,6 +9729,7 @@
     >
 
     #param[base_url] = http://epx.sagepub.com/
+    param[journal_id] = epx
 
     
     {
@@ -9575,6 +9780,7 @@
     >
 
     #param[base_url] = http://edr.sagepub.com/
+    param[journal_id] = edr
 
     
     {
@@ -9640,6 +9846,7 @@
     >
 
     #param[base_url] = http://enx.sagepub.com/
+    param[journal_id] = enx
 
     {
 
@@ -9668,6 +9875,7 @@
     >
 
       #param[base_url] = http://emi.sagepub.com/
+      param[journal_id] = emi
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Emerging Economy Studies Volume 1 ; 1 ; >
@@ -9684,6 +9892,7 @@
     >
 
     #param[base_url] = http://emr.sagepub.com/
+    param[journal_id] = emr
 
     
     {
@@ -9712,6 +9921,7 @@
     >
 
       #param[base_url] = http://art.sagepub.com/
+      param[journal_id] = art
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1983 volume 1 to 1999 volume 17
 
@@ -9745,6 +9955,7 @@
     >
 
       #param[base_url] = http://eae.sagepub.com/
+      param[journal_id] = eae
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
@@ -9777,6 +9988,7 @@
     >
 
       #param[base_url] = http://eea.sagepub.com/
+      param[journal_id] = eea
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 ; >
@@ -9808,6 +10020,7 @@
     >
 
     #param[base_url] = http://eab.sagepub.com/
+    param[journal_id] = eab
 
     
     {
@@ -9877,6 +10090,7 @@
     >
 
       #param[base_url] = http://epn.sagepub.com/
+      param[journal_id] = epn
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1977 volume 9 to 2007 volume 39 
 
@@ -9909,6 +10123,7 @@
     >
 
       #param[base_url] = http://epb.sagepub.com/
+      param[journal_id] = epb
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1976 volume 3 to 2007 volume 34 
 
@@ -9936,6 +10151,7 @@
     >
 
       #param[base_url] = http://epc.sagepub.com/
+      param[journal_id] = epc
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1983 volume 1 to 2007 volume 25 
 
@@ -9963,6 +10179,7 @@
     >
 
       #param[base_url] = http://epd.sagepub.com/
+      param[journal_id] = epd
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 2002 volume 20 to 2007 volume 25 
 
@@ -9987,6 +10204,7 @@
     >
 
     #param[base_url] = http://eau.sagepub.com/
+    param[journal_id] = eau
 
     
     {
@@ -10035,6 +10253,7 @@
     >
 
     #param[base_url] = http://eua.sagepub.com/
+    param[journal_id] = eua
 
     {
 
@@ -10062,6 +10281,7 @@
     >
 
       #param[base_url] = http://elj.sagepub.com/
+      param[journal_id] = elj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Environmental Law Review Volume 5 ; 5 ; >
@@ -10089,6 +10309,7 @@
     >
 
     #param[base_url] = http://erg.sagepub.com/
+    param[journal_id] = erg
 
     {
 
@@ -10132,6 +10353,7 @@
     >
 
     #param[base_url] = http://etn.sagepub.com/
+    param[journal_id] = etn
 
     
     {
@@ -10168,6 +10390,7 @@
     >
 
     #param[base_url] = http://eth.sagepub.com/
+    param[journal_id] = eth
 
     
     {
@@ -10206,6 +10429,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://eer.sagepub.com/
+      param[journal_id] = eer
 
       au < exists ; exists ; 2002 ; European Educational Research Journal Volume 1 ; 1 ; >
       au < exists ; exists ; 2003 ; European Educational Research Journal Volume 2 ; 2 ; >
@@ -10236,6 +10460,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://acc.sagepub.com/
+      param[journal_id] = acc
 
       au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 ; >
@@ -10254,6 +10479,7 @@
     >
 
     #param[base_url] = http://ehq.sagepub.com/
+    param[journal_id] = ehq
 
     
     {
@@ -10320,6 +10546,7 @@
     >
 
     #param[base_url] = http://eja.sagepub.com/
+    param[journal_id] = eja
 
     
     {
@@ -10354,6 +10581,7 @@
     >
 
       #param[base_url] = http://cnu.sagepub.com/
+      param[journal_id] = cnu
 
     {
 
@@ -10388,6 +10616,7 @@
     >
 
     #param[base_url] = http://cpr.sagepub.com/
+    param[journal_id] = cpr
 
     {
 
@@ -10430,6 +10659,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://cpr.sagepub.com/
+        param[journal_id] = cpr
 
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         # Previous issues are at the same url.
@@ -10453,6 +10683,7 @@
     >
 
     #param[base_url] = http://ejc.sagepub.com/
+    param[journal_id] = ejc
 
     
     {
@@ -10504,6 +10735,7 @@
     >
 
     #param[base_url] = http://euc.sagepub.com/
+    param[journal_id] = euc
 
     
     {
@@ -10537,6 +10769,7 @@
     >
 
     #param[base_url] = http://ecs.sagepub.com/
+    param[journal_id] = ecs
 
     
     {
@@ -10576,6 +10809,7 @@
     >
 
     #param[base_url] = http://ejd.sagepub.com/
+    param[journal_id] = ejd
 
     
     {
@@ -10617,6 +10851,7 @@
     >
 
       #param[base_url] = http://eji.sagepub.com/
+      param[journal_id] = eji
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; European Journal of Inflammation Volume 1 ; 1 ; >
@@ -10645,6 +10880,7 @@
     >
 
     #param[base_url] = http://ejt.sagepub.com/
+    param[journal_id] = ejt
 
     
     {
@@ -10687,6 +10923,7 @@
     >
 
     #param[base_url] = http://ept.sagepub.com/
+    param[journal_id] = ept
 
     
     {
@@ -10721,6 +10958,7 @@
     >
 
     #param[base_url] = http://ejp.sagepub.com/
+    param[journal_id] = ejp
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2009 ; European Journal of Probation Volume 1 ; 1 ; >
@@ -10743,6 +10981,7 @@
     >
 
     #param[base_url] = http://est.sagepub.com/
+    param[journal_id] = est
 
     
     {
@@ -10782,6 +11021,7 @@
     >
 
     #param[base_url] = http://ejw.sagepub.com/
+    param[journal_id] = ejw
 
     
     {
@@ -10825,6 +11065,7 @@
     >
 
     #param[base_url] = http://epe.sagepub.com/
+    param[journal_id] = epe
 
     
     {
@@ -10867,6 +11108,7 @@
     >
 
     #param[base_url] = http://eup.sagepub.com/
+    param[journal_id] = eup
 
     
     {
@@ -10904,6 +11146,7 @@
     >
 
     #param[base_url] = http://eur.sagepub.com/
+    param[journal_id] = eur
 
     
     {
@@ -10947,6 +11190,7 @@
     >
 
       #param[base_url] = http://eso.sagepub.com/
+      param[journal_id] = eso
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; >
@@ -10961,6 +11205,7 @@
     >
 
     #param[base_url] = http://evi.sagepub.com/
+    param[journal_id] = evi
 
     
     {
@@ -11003,6 +11248,7 @@
     >
 
     #param[base_url] = http://ehp.sagepub.com/
+    param[journal_id] = ehp
 
     
     {
@@ -11062,6 +11308,7 @@
     >
 
     #param[base_url] = http://erx.sagepub.com/
+    param[journal_id] = erx
 
     
     {
@@ -11121,6 +11368,7 @@
     >
 
       #param[base_url] = http://evp.sagepub.com/
+      param[journal_id] = evp
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Evolutionary Psychology Volume 1 ; 1 ; >
@@ -11148,6 +11396,7 @@
     >
 
       #param[base_url] = http://ecx.sagepub.com/
+      param[journal_id] = ecx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2000-2001 ; Exceptional Children Volume 67 ; 67 ; >
@@ -11179,6 +11428,7 @@
     >
 
       #param[base_url] = http://ext.sagepub.com/
+      param[journal_id] = ext
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1889-1890 ; The Expository Times Volume 1 ; 1 ; >
@@ -11321,6 +11571,7 @@
     >
 
     #param[base_url] = http://fcs.sagepub.com/
+    param[journal_id] = fcs
 
     comment[moved] = Family and Consumer Sciences Research Journal has moved to Wiley
 
@@ -11336,6 +11587,7 @@
     >
 
     #param[base_url] = http://fbr.sagepub.com/
+    param[journal_id] = fbr
 
     
     {
@@ -11385,6 +11637,7 @@
     >
 
     #param[base_url] = http://tfj.sagepub.com/
+    param[journal_id] = tfj
 
     
     {
@@ -11429,6 +11682,7 @@
     >
 
     #param[base_url] = http://fap.sagepub.com/
+    param[journal_id] = fap
 
     
     {
@@ -11475,6 +11729,7 @@
     >
 
     #param[base_url] = http://fcx.sagepub.com/
+    param[journal_id] = fcx
 
     
     {
@@ -11507,6 +11762,7 @@
     >
 
     #param[base_url] = http://fth.sagepub.com/
+    param[journal_id] = fth
 
     
     {
@@ -11552,6 +11808,7 @@
     >
 
     #param[base_url] = http://fty.sagepub.com/
+    param[journal_id] = fty
 
     
     {
@@ -11589,6 +11846,7 @@
     >
 
     #param[base_url] = http://fmx.sagepub.com/
+    param[journal_id] = fmx
 
     
     {
@@ -11637,6 +11895,7 @@
     >
 
     #param[base_url] = http://fla.sagepub.com/
+    param[journal_id] = fla
 
     
     {
@@ -11693,6 +11952,7 @@
     >
 
     #param[base_url] = http://foa.sagepub.com/
+    param[journal_id] = foa
 
     
     {
@@ -11744,6 +12004,7 @@
     >
 
       #param[base_url] = http://fnb.sagepub.com/
+      param[journal_id] = fnb
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 ; >
@@ -11760,6 +12021,7 @@
     >
 
     #param[base_url] = http://fst.sagepub.com/
+    param[journal_id] = fst
 
     
     {
@@ -11802,6 +12064,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://fao.sagepub.com/
+      param[journal_id] = fao
 
       au < exists ; exists ; 2016 ; Foot & Ankle Orthopaedics Volume 1 ; 1 ; >
 
@@ -11816,6 +12079,7 @@
     >
 
     #param[base_url] = http://fas.sagepub.com/
+    param[journal_id] = fas
 
     
     {
@@ -11845,6 +12109,7 @@
     >
 
     #param[base_url] = http://frc.sagepub.com/
+    param[journal_id] = frc
 
     
     {
@@ -11892,6 +12157,7 @@
     >
 
     #param[base_url] = http://gac.sagepub.com/
+    param[journal_id] = gac
 
     
     {
@@ -11924,6 +12190,7 @@
     >
 
     #param[base_url] = http://gas.sagepub.com/
+    param[journal_id] = gas
 
     
     {
@@ -11974,6 +12241,7 @@
     >
 
     #param[base_url] = http://gtd.sagepub.com/
+    param[journal_id] = gtd
 
     
     {
@@ -12014,6 +12282,7 @@
     >
 
     #param[base_url] = http://gmt.sagepub.com/
+    param[journal_id] = gmt
 
     
     {
@@ -12060,6 +12329,7 @@
     >
 
     #param[base_url] = http://gan.sagepub.com/
+    param[journal_id] = gan
 
     {
 
@@ -12083,6 +12353,7 @@
     >
 
     #param[base_url] = http://gos.sagepub.com/
+    param[journal_id] = gos
 
     {
 
@@ -12109,6 +12380,7 @@
     >
 
       #param[base_url] = http://gjh.sagepub.com/
+      param[journal_id] = gjh
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1998 ; German Journal of Human Resource Management Volume 12 ; 12 ; >
@@ -12141,6 +12413,7 @@
     >
 
       #param[base_url] = http://ggm.sagepub.com/
+      param[journal_id] = ggm
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; >
@@ -12157,6 +12430,7 @@
     >
 
     #param[base_url] = http://gcq.sagepub.com/
+    param[journal_id] = gcq
 
     
     {
@@ -12237,6 +12511,7 @@
     >
 
       #param[base_url] = http://gei.sagepub.com/
+      param[journal_id] = gei
 
     {
 
@@ -12288,6 +12563,7 @@
     >
 
     #param[base_url] = http://gbr.sagepub.com/
+    param[journal_id] = gbr
 
     
     {
@@ -12325,6 +12601,7 @@
     >
 
       #param[base_url] = http://gch.sagepub.com/
+      param[journal_id] = gch
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Global Media and China Volume 1 ; 1 ; >
@@ -12339,6 +12616,7 @@
     >
 
       #param[base_url] = http://gsc.sagepub.com/
+      param[journal_id] = gsc
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2011 ; Global Studies of Childhood Volume 1 ; 1 ; >
@@ -12359,6 +12637,7 @@
     >
 
     #param[base_url] = http://ped.sagepub.com/
+    param[journal_id] = ped
 
     
     {
@@ -12402,6 +12681,7 @@
     >
 
     #param[base_url] = http://eme.sagepub.com/
+    param[journal_id] = eme
 
     
     {
@@ -12430,6 +12710,7 @@
     >
 
     #param[base_url] = http://gmc.sagepub.com/
+    param[journal_id] = gmc
 
     
     {
@@ -12463,6 +12744,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://gph.sagepub.com/
+      param[journal_id] = gph
 
       au < doNotProcess ; doNotProcess ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Global Pediatric Health Volume 2 ; 2 ; >
@@ -12480,6 +12762,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://gqn.sagepub.com/
+      param[journal_id] = gqn
 
       au < doNotProcess ; doNotProcess ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Global Qualitative Nursing Research Volume 2 ; 2 ; >
@@ -12496,6 +12779,7 @@
     >
 
     #param[base_url] = http://gsp.sagepub.com/
+    param[journal_id] = gsp
 
     
     {
@@ -12532,6 +12816,7 @@
     >
 
     #param[base_url] = http://gom.sagepub.com/
+    param[journal_id] = gom
 
     
     {
@@ -12593,6 +12878,7 @@
     >
 
     #param[base_url] = http://gaq.sagepub.com/
+    param[journal_id] = gaq
 
     
     {
@@ -12662,6 +12948,7 @@
     >
 
     #param[base_url] = http://gpi.sagepub.com/
+    param[journal_id] = gpi
 
     
     {
@@ -12701,6 +12988,7 @@
     >
 
     #param[base_url] = http://heb.sagepub.com/
+    param[journal_id] = heb
 
     
     {
@@ -12764,6 +13052,7 @@
     >
 
     #param[base_url] = http://hej.sagepub.com/
+    param[journal_id] = hej
 
     
     {
@@ -12859,6 +13148,7 @@
     >
 
     #param[base_url] = http://jhi.sagepub.com/
+    param[journal_id] = jhi
 
     
     {
@@ -12901,6 +13191,7 @@
     >
 
       #param[base_url] = http://him.sagepub.com/
+      param[journal_id] = him
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2001 ; Health Information Management Journal Volume 29 ; 29 ; >
@@ -12932,6 +13223,7 @@
     >
 
     #param[base_url] = http://hpp.sagepub.com/
+    param[journal_id] = hpp
 
     
     {
@@ -12969,6 +13261,7 @@
     >
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://hme.sagepub.com/
+      param[journal_id] = hme
 
       au < doNotProcess ; doNotProcess ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 ; >
@@ -12985,6 +13278,7 @@
     >
 
     #param[base_url] = http://hea.sagepub.com/
+    param[journal_id] = hea
 
     
     {
@@ -13026,6 +13320,7 @@
     >
 
       #param[base_url] = http://hmf.sagepub.com/
+      param[journal_id] = hmf
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1988 ; Healthcare Management Forum Volume 1 ; 1 ; >
@@ -13069,6 +13364,7 @@
     >
 
       #param[base_url] = http://her.sagepub.com/
+      param[journal_id] = her
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2007-2008 ; HERD: Health Environments Research & Design Journal Volume 1 ; 1 ; >
@@ -13093,6 +13389,7 @@
     >
 
     #param[base_url] = http://hip.sagepub.com/
+    param[journal_id] = hip
 
     
     {
@@ -13141,6 +13438,7 @@
     >
 
       #param[base_url] = http://hef.sagepub.com/
+      param[journal_id] = hef
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Higher Education for the Future Volume 1 ; 1 ; >
@@ -13158,6 +13456,7 @@
     >
 
       #param[base_url] = http://hci.sagepub.com/
+      param[journal_id] = hci
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 ; >
@@ -13173,6 +13472,7 @@
     >
 
     #param[base_url] = http://hjb.sagepub.com/
+    param[journal_id] = hjb
 
     
     {
@@ -13231,6 +13531,7 @@
     >
 
     #param[base_url] = http://hsa.sagepub.com/
+    param[journal_id] = hsa
 
     {
 
@@ -13260,6 +13561,7 @@
     >
 
     #param[base_url] = http://hpy.sagepub.com/
+    param[journal_id] = hpy
 
     
     {
@@ -13307,6 +13609,7 @@
     >
 
       #param[base_url] = http://hos.sagepub.com/
+      param[journal_id] = hos
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; History of Science Volume 52 ; 52 ; >
@@ -13324,6 +13627,7 @@
     >
 
     #param[base_url] = http://hhs.sagepub.com/
+    param[journal_id] = hhs
 
     
     {
@@ -13373,6 +13677,7 @@
     >
 
     #param[base_url] = http://hol.sagepub.com/
+    param[journal_id] = hol
 
     
     {
@@ -13419,6 +13724,7 @@
     >
 
     #param[base_url] = http://hhc.sagepub.com/
+    param[journal_id] = hhc
 
     
     {
@@ -13467,6 +13773,7 @@
     >
 
     #param[base_url] = http://hsx.sagepub.com/
+    param[journal_id] = hsx
 
     
     {
@@ -13507,6 +13814,7 @@
     >
 
     #param[base_url] = http://het.sagepub.com/
+    param[journal_id] = het
 
     
     {
@@ -13562,6 +13870,7 @@
     >
 
     #param[base_url] = http://hfs.sagepub.com/
+    param[journal_id] = hfs
 
     
     {
@@ -13641,6 +13950,7 @@
       {
 
         #param[base_url] = http://hgp.sagepub.com/
+        param[journal_id] = hgp
         #pluginSuffix = ClockssHighWirePressH20Plugin
         rights = openaccess
         
@@ -13663,6 +13973,7 @@
     >
 
     #param[base_url] = http://hum.sagepub.com/
+    param[journal_id] = hum
 
     
     {
@@ -13752,6 +14063,7 @@
     >
 
     #param[base_url] = http://hrd.sagepub.com/
+    param[journal_id] = hrd
 
     
     {
@@ -13786,6 +14098,7 @@
     >
 
       #param[base_url] = http://has.sagepub.com/
+      param[journal_id] = has
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Humanity & Society Volume 27 ; 27 ; >
@@ -13813,6 +14126,7 @@
     >
 
       #param[base_url] = http://ipe.sagepub.com/
+      param[journal_id] = ipe
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2010 ; i-Perception Volume 1 ; 1 ; >
@@ -13835,6 +14149,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://ilr.sagepub.com/
+      param[journal_id] = ilr
       #content available from 1947 volume 1 to 1999 volume 52
 
       au < exists ; exists ; 1999 ; ILR Review: Industrial & Labor Relations Review Volume 52 ; 52 ; >
@@ -13867,6 +14182,7 @@
     >
 
     #param[base_url] = http://can.sagepub.com/
+    param[journal_id] = can
 
     
     {
@@ -13895,6 +14211,7 @@
     >
 
     #param[base_url] = http://icu.sagepub.com/
+    param[journal_id] = icu
 
     {
 
@@ -13918,6 +14235,7 @@
     >
 
     #param[base_url] = http://ifl.sagepub.com/
+    param[journal_id] = ifl
 
     
     {
@@ -13983,6 +14301,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://ksm.sagepub.com/
+      param[journal_id] = ksm
 
       au < doNotProcess ; doNotProcess ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; IIM Kozhikode Society & Management Review Volume 2 ; 2 ; >
@@ -14003,6 +14322,7 @@
     >
 
       #param[base_url] = http://icl.sagepub.com/
+      param[journal_id] = icl
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1991 ; Illness, Crisis & Loss Volume 1 ; 1 ; >
@@ -14041,6 +14361,7 @@
     >
 
       #param[base_url] = http://ica.sagepub.com/
+      param[journal_id] = ica
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1981 volume 1 to 1999 volume 18
 
@@ -14074,6 +14395,7 @@
     >
 
     #param[base_url] = http://imp.sagepub.com/
+    param[journal_id] = imp
 
     
     {
@@ -14113,6 +14435,7 @@
     >
 
     #param[base_url] = http://ioc.sagepub.com/
+    param[journal_id] = ioc
 
     {
 
@@ -14177,6 +14500,7 @@
     >
 
     #param[base_url] = http://iqq.sagepub.com/
+    param[journal_id] = iqq
 
     
     {
@@ -14208,6 +14532,7 @@
     >
 
     #param[base_url] = http://ier.sagepub.com/
+    param[journal_id] = ier
 
     
     {
@@ -14281,6 +14606,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://iej.sagepub.com/
+      param[journal_id] = iej
 
       au < exists ; exists ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; >
 
@@ -14295,6 +14621,7 @@
     >
 
       #param[base_url] = http://ihr.sagepub.com/
+      param[journal_id] = ihr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Indian Historical Review Volume 26 ; 26 ; >
@@ -14326,6 +14653,7 @@
     >
 
       #param[base_url] = http://ijc.sagepub.com/
+      param[journal_id] = ijc
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2008 ; Indian Journal of Corporate Governance Volume 1 ; 1 ; >
@@ -14349,6 +14677,7 @@
     >
 
     #param[base_url] = http://ijg.sagepub.com/
+    param[journal_id] = ijg
 
     
     {
@@ -14391,6 +14720,7 @@
     >
 
       #param[base_url] = http://jhd.sagepub.com/
+      param[journal_id] = jhd
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Indian Journal of Human Development Volume 1 ; 1 ; >
@@ -14405,6 +14735,7 @@
     >
 
     #param[base_url] = http://ibe.sagepub.com/
+    param[journal_id] = ibe
 
     
     {
@@ -14450,6 +14781,7 @@
     >
 
       #param[base_url] = http://ihe.sagepub.com/
+      param[journal_id] = ihe
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 ; >
@@ -14482,6 +14814,7 @@
     >
 
     #param[base_url] = http://idv.sagepub.com/
+    param[journal_id] = idv
 
     
     {
@@ -14536,6 +14869,7 @@
     >
 
     #param[base_url] = http://ivi.sagepub.com/
+    param[journal_id] = ivi
 
     {
 
@@ -14569,6 +14903,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://inq.sagepub.com/
+      param[journal_id] = inq
 
       au < exists ; exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 ; >
       au < exists ; exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 ; >
@@ -14595,6 +14930,7 @@
     >
 
       #param[base_url] = http://ioa.sagepub.com/
+      param[journal_id] = ioa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; Insight on Africa Volume 1 ; 1 ; >
@@ -14617,6 +14953,7 @@
     >
 
     #param[base_url] = http://ias.sagepub.com/
+    param[journal_id] = ias
 
     {
 
@@ -14660,6 +14997,7 @@
     {
 
       #param[base_url] = http://ini.sagepub.com/
+      param[journal_id] = ini
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
@@ -14689,6 +15027,7 @@
     >
 
     #param[base_url] = http://ini.sagepub.com/
+    param[journal_id] = ini
 
     
     {
@@ -14719,6 +15058,7 @@
     >
 
     #param[base_url] = http://ict.sagepub.com/
+    param[journal_id] = ict
 
     
     {
@@ -14754,6 +15094,7 @@
     >
 
     #param[base_url] = http://gaz.sagepub.com/
+    param[journal_id] = gaz
 
     
     {
@@ -14852,6 +15193,7 @@
     >
 
     #param[base_url] = http://icj.sagepub.com/
+    param[journal_id] = icj
 
     
     {
@@ -14897,6 +15239,7 @@
     >
 
       #param[base_url] = http://arx.sagepub.com/
+      param[journal_id] = arx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; International Journal of Advanced Robotic Systems Volume 1 ; 1 ; >
@@ -14924,6 +15267,7 @@
     >
 
       #param[base_url] = http://jae.sagepub.com/
+      param[journal_id] = jae
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
@@ -14953,6 +15297,7 @@
     >
 
       #param[base_url] = http://ahd.sagepub.com/
+      param[journal_id] = ahd
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1970 volume 1 to 1999 volume 49
 
@@ -15003,6 +15348,7 @@
     >
 
       #param[base_url] = http://jac.sagepub.com/
+      param[journal_id] = jac
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 ; >
@@ -15031,6 +15377,7 @@
     >
 
     #param[base_url] = http://jbd.sagepub.com/
+    param[journal_id] = jbd
 
     
     {
@@ -15091,6 +15438,7 @@
     >
 
     #param[base_url] = http://ijb.sagepub.com/
+    param[journal_id] = ijb
 
     
     {
@@ -15132,6 +15480,7 @@
     >
 
       #param[base_url] = http://ice.sagepub.com/
+      param[journal_id] = ice
       #pluginSuffix = ClockssHighWirePressH20Plugin
       comment[merged_from] = 1366-5456 and 0021-9657
       
@@ -15149,6 +15498,7 @@
     >
 
       #param[base_url] = http://ice.sagepub.com/
+      param[journal_id] = ice
       #pluginSuffix = ClockssHighWirePressH20Plugin
       comment[merged_into] = 2056-9971
       
@@ -15178,6 +15528,7 @@
     >
 
       #param[base_url] = http://ice.sagepub.com/
+      param[journal_id] = ice
       #pluginSuffix = ClockssHighWirePressH20Plugin
       comment[merged_into] = 2056-9971
       # content available 1974 volume 17, missing content from 1975 to 2000
@@ -15206,6 +15557,7 @@
     >
 
     #param[base_url] = http://cos.sagepub.com/
+    param[journal_id] = cos
 
     
     {
@@ -15283,6 +15635,7 @@
     >
 
     #param[base_url] = http://ccm.sagepub.com/
+    param[journal_id] = ccm
 
     
     {
@@ -15319,6 +15672,7 @@
     >
 
     #param[base_url] = http://ics.sagepub.com/
+    param[journal_id] = ics
 
     
     {
@@ -15358,6 +15712,7 @@
     >
 
     #param[base_url] = http://ijd.sagepub.com/
+    param[journal_id] = ijd
 
     
     {
@@ -15404,6 +15759,7 @@
 
       {
         #param[base_url] = http://jdi.sagepub.com/
+        param[journal_id] = jdi
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 ; >
@@ -15436,6 +15792,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://dsn.sagepub.com/
+        param[journal_id] = dsn
 
         au < exists ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 ; 1 ; >
         au < exists ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 ; 2 ; >
@@ -15461,6 +15818,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://ije.sagepub.com/
+      param[journal_id] = ije
       #content available from 1963 volume 1 to 1999 volume 36
 
      au < exists ; exists ; 2000 ; International Journal of Electrical Engineering Education Volume 37 ; 37 ; >
@@ -15492,6 +15850,7 @@
     >
 
     #param[base_url] = http://jer.sagepub.com/
+    param[journal_id] = jer
 
     {
 
@@ -15527,6 +15886,7 @@
   >
 
     #param[base_url] = http://enb.sagepub.com/
+    param[journal_id] = enb
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; International Journal of Engineering Business Management Volume 1 ; 1 ; >
@@ -15549,6 +15909,7 @@
   >
 
     #param[base_url] = http://iei.sagepub.com/
+    param[journal_id] = iei
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
@@ -15580,6 +15941,7 @@
     >
 
       #param[base_url] = http://epj.sagepub.com/
+      param[journal_id] = epj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; The International Journal of Evidence & Proof Volume 7  ; 7 ; >
@@ -15608,6 +15970,7 @@
     >
 
       #param[base_url] = http://joh.sagepub.com/
+      param[journal_id] = joh
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1999 ; International Journal of Health Services Volume 29 ; 29 ; >
@@ -15640,6 +16003,7 @@
     >
 
       #param[base_url] = http://hde.sagepub.com/
+      param[journal_id] = hde
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
@@ -15659,6 +16023,7 @@
     >
 
     #param[base_url] = http://hpc.sagepub.com/
+    param[journal_id] = hpc
 
     
     {
@@ -15708,6 +16073,7 @@
     >
 
       #param[base_url] = http://iji.sagepub.com/
+      param[journal_id] = iji
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1988 volume 1 to 1999 volume 12
 
@@ -15740,6 +16106,7 @@
     >
 
     #param[base_url] = http://ijl.sagepub.com/
+    param[journal_id] = ijl
 
     
     {
@@ -15776,6 +16143,7 @@
     >
 
       #param[base_url] = http://ijj.sagepub.com/
+      param[journal_id] = ijj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; International Journal of Mechanical Engineering Education Volume 27 ; 27 ; >
@@ -15808,6 +16176,7 @@
     >
 
       #param[base_url] = http://mav.sagepub.com/
+      param[journal_id] = mav
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; >
@@ -15831,6 +16200,7 @@
     >
 
     #param[base_url] = http://ijm.sagepub.com/
+    param[journal_id] = ijm
 
     comment[manifests] = serious problem with malformed manifests over two series.
 
@@ -15906,6 +16276,7 @@
     >
 
       #param[base_url] = http://ocs.sagepub.com/
+      param[journal_id] = ocs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 ; >
@@ -15927,6 +16298,7 @@
     >
 
     #param[base_url] = http://ijo.sagepub.com/
+    param[journal_id] = ijo
 
     
     {
@@ -16001,6 +16373,7 @@
     >
 
       #param[base_url] = http://psm.sagepub.com/
+      param[journal_id] = psm
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 1998-1999 ; International Journal of Police Science & Management Volume 1 ; 1 ; >
@@ -16033,6 +16406,7 @@
     >
 
     #param[base_url] = http://hij.sagepub.com/
+    param[journal_id] = hij
 
     
     {
@@ -16074,6 +16448,7 @@
     >
 
       #param[base_url] = http://prs.sagepub.com/
+      param[journal_id] = prs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 ; >
@@ -16096,6 +16471,7 @@
     >
 
       #param[base_url] = http://ijp.sagepub.com/
+      param[journal_id] = ijp
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; The International Journal of Psychiatry in Medicine Volume 29 ; 29 ; >
@@ -16131,6 +16507,7 @@
       >
 
       #param[base_url] = http://ijq.sagepub.com/
+      param[journal_id] = ijq
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; International Journal of Qualitative Methods Volume 1 ; 1 ; >
@@ -16159,6 +16536,7 @@
     >
 
     #param[base_url] = http://ijr.sagepub.com/
+    param[journal_id] = ijr
 
     
     {
@@ -16213,6 +16591,7 @@
     >
 
     #param[base_url] = http://irm.sagepub.com/
+    param[journal_id] = irm
 
     {
 
@@ -16245,6 +16624,7 @@
     >
 
     #param[base_url] = http://isp.sagepub.com/
+    param[journal_id] = isp
 
     
     {
@@ -16327,6 +16707,7 @@
      >
 
       #param[base_url] = http://sps.sagepub.com/
+      param[journal_id] = sps
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 ; >
@@ -16359,6 +16740,7 @@
     >
 
       #param[base_url] = http://spo.sagepub.com/
+      param[journal_id] = spo
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2006 ; International Journal of Sports Science & Coaching Volume 1 ; 1 ; >
@@ -16384,6 +16766,7 @@
     >
 
       #param[base_url] = http://scd.sagepub.com/
+      param[journal_id] = scd
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; >
@@ -16406,6 +16789,7 @@
     >
 
       #param[base_url] = http://wso.sagepub.com/
+      param[journal_id] = wso
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2006 ; International Journal of Stroke Volume 1 ; 1 ; >
@@ -16431,6 +16815,7 @@
     >
 
     #param[base_url] = http://ijs.sagepub.com/
+    param[journal_id] = ijs
 
     
     {
@@ -16475,6 +16860,7 @@
     >
 
     #param[base_url] = http://ijt.sagepub.com/
+    param[journal_id] = ijt
 
     
     {
@@ -16530,6 +16916,7 @@
     >
 
     #param[base_url] = http://iab.sagepub.com/
+    param[journal_id] = iab
 
     
     {
@@ -16560,6 +16947,7 @@
     >
 
     #param[base_url] = http://ips.sagepub.com/
+    param[journal_id] = ips
 
     
     {
@@ -16617,6 +17005,7 @@
     >
 
       #param[base_url] = http://qch.sagepub.com/
+      param[journal_id] = qch
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1980-1981 ; International Quarterly of Community Health Education Volume 1 ; 1 ; >
@@ -16668,6 +17057,7 @@
     >
 
     #param[base_url] = http://irx.sagepub.com/
+    param[journal_id] = irx
 
     
     {
@@ -16728,6 +17118,7 @@
     >
 
     #param[base_url] = http://ire.sagepub.com/
+    param[journal_id] = ire
 
     
     {
@@ -16778,6 +17169,7 @@
     >
 
     #param[base_url] = http://irs.sagepub.com/
+    param[journal_id] = irs
 
     
     {
@@ -16849,6 +17241,7 @@
     >
 
     #param[base_url] = http://ras.sagepub.com/
+    param[journal_id] = ras
 
     
     {
@@ -16930,6 +17323,7 @@
 
         # no 2011 journal
         #param[base_url] = http://irv.sagepub.com/
+        param[journal_id] = irv
 
       {
 
@@ -16971,6 +17365,7 @@
     >
 
     #param[base_url] = http://isb.sagepub.com/
+    param[journal_id] = isb
 
     
     {
@@ -17025,6 +17420,7 @@
     >
 
     #param[base_url] = http://isw.sagepub.com/
+    param[journal_id] = isw
 
     
     {
@@ -17104,6 +17500,7 @@
     >
 
     #param[base_url] = http://iss.sagepub.com/
+    param[journal_id] = iss
 
     
     {
@@ -17155,6 +17552,7 @@
     >
 
     #param[base_url] = http://isq.sagepub.com/
+    param[journal_id] = isq
 
     
     {
@@ -17224,6 +17622,7 @@
     >
 
     #param[base_url] = http://isc.sagepub.com/
+    param[journal_id] = isc
 
     
     {
@@ -17296,6 +17695,7 @@
     >
 
       #param[base_url] = http://ine.sagepub.com/
+      param[journal_id] = ine
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1995 ; Interventional Neuroradiology Volume 1 ; 1 ; >
@@ -17332,6 +17732,7 @@
     >
 
       #param[base_url] = http://ies.sagepub.com/
+      param[journal_id] = ies
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 ; >
@@ -17356,6 +17757,7 @@
     >
 
       #param[base_url] = http://irj.sagepub.com/
+      param[journal_id] = irj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1991 ; Irish Journal of Sociology Volume 1 ; 1 ; >
@@ -17394,6 +17796,7 @@
     >
 
     #param[base_url] = http://itq.sagepub.com/
+    param[journal_id] = itq
 
     
     {
@@ -17471,6 +17874,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://jnr.sagepub.com/
+      param[journal_id] = jnr
 
       au < exists ; exists ; 1995 ; Jadavpur Journal of International Relations Volume 1 ; 1 ; >
       au < exists ; exists ; 1996 ; Jadavpur Journal of International Relations Volume 2 ; 2 ; >
@@ -17503,6 +17907,7 @@
     >
 
       #param[base_url] = http://jct.sagepub.com/
+      param[journal_id] = jct
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 ; >
@@ -17518,6 +17923,7 @@
     >
 
     #param[base_url] = http://jnt.sagepub.com/
+    param[journal_id] = jnt
 
     
     {
@@ -17577,6 +17983,7 @@
     >
 
     #param[base_url] = http://jot.sagepub.com/
+    param[journal_id] = jot
 
     
     {
@@ -17638,6 +18045,7 @@
     >
 
     #param[base_url] = http://jsp.sagepub.com/
+    param[journal_id] = jsp
 
     
     {
@@ -17683,6 +18091,7 @@
     >
 
     #param[base_url] = http://jaf.sagepub.com/
+    param[journal_id] = jaf
 
     {
 
@@ -17733,6 +18142,7 @@
     >
 
     #param[base_url] = http://jar.sagepub.com/
+    param[journal_id] = jar
 
     
     {
@@ -17784,6 +18194,7 @@
       >
 
         #param[base_url] = http://adu.sagepub.com/
+        param[journal_id] = adu
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; Journal of Adult and Continuing Education Volume 8 ; 8 ; >
@@ -17812,6 +18223,7 @@
       >
 
         #param[base_url] = http://joa.sagepub.com/
+        param[journal_id] = joa
 
       {
 
@@ -17852,6 +18264,7 @@
     >
 
     #param[base_url] = http://jah.sagepub.com/
+    param[journal_id] = jah
 
     
     {
@@ -17900,6 +18313,7 @@
     >
 
       #param[base_url] = http://act.sagepub.com/
+      param[journal_id] = act
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; >
@@ -17924,6 +18338,7 @@
     >
 
     #param[base_url] = http://jab.sagepub.com/
+    param[journal_id] = jab
 
     
     {
@@ -17996,6 +18411,7 @@
     >
 
     #param[base_url] = http://jag.sagepub.com/
+    param[journal_id] = jag
 
     
     {
@@ -18052,6 +18468,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://jax.sagepub.com/
+      param[journal_id] = jax
 
       au < exists ; exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
@@ -18075,6 +18492,7 @@
     >
 
     #param[base_url] = http://jas.sagepub.com/
+    param[journal_id] = jas
 
     
     {
@@ -18147,6 +18565,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://aia.sagepub.com/
+      param[journal_id] = aia
 
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Asian Security and International Affairs Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Asian Security and International Affairs Volume 2 ; 2 ; >
@@ -18163,6 +18582,7 @@
     >
 
     #param[base_url] = http://jaa.sagepub.com/
+    param[journal_id] = jaa
 
     {
 
@@ -18186,6 +18606,7 @@
     >
 
     #param[base_url] = http://jad.sagepub.com/
+    param[journal_id] = jad
 
     
     {
@@ -18226,6 +18647,7 @@
     >
 
     #param[base_url] = http://jbc.sagepub.com/
+    param[journal_id] = jbc
 
     
     {
@@ -18277,6 +18699,7 @@
     >
 
     #param[base_url] = http://jbr.sagepub.com/
+    param[journal_id] = jbr
 
     
     {
@@ -18328,6 +18751,7 @@
     >
 
     #param[base_url] = http://jba.sagepub.com/
+    param[journal_id] = jba
 
     
     {
@@ -18379,6 +18803,7 @@
     >
 
     #param[base_url] = http://jbx.sagepub.com/
+    param[journal_id] = jbx
 
     
     {
@@ -18420,6 +18845,7 @@
     >
 
     #param[base_url] = http://jbp.sagepub.com/
+    param[journal_id] = jbp
 
     
     {
@@ -18482,6 +18908,7 @@
     >
 
     #param[base_url] = http://jbs.sagepub.com/
+    param[journal_id] = jbs
 
     
     {
@@ -18549,6 +18976,7 @@
     >
 
     #param[base_url] = http://jen.sagepub.com/
+    param[journal_id] = jen
 
     
     {
@@ -18609,6 +19037,7 @@
     >
 
     #param[base_url] = http://jbt.sagepub.com/
+    param[journal_id] = jbt
 
     
     {
@@ -18660,6 +19089,7 @@
     >
 
     #param[base_url] = http://job.sagepub.com/
+    param[journal_id] = job
     comment[continued_by] = 2329-4884
 
     
@@ -18731,6 +19161,7 @@
     >
 
     #param[base_url] = http://job.sagepub.com/
+    param[journal_id] = job
     comment[continues] = 0021-9436
 
     {
@@ -18754,6 +19185,7 @@
     >
 
     #param[base_url] = http://cpt.sagepub.com/
+    param[journal_id] = cpt
 
     
     {
@@ -18795,6 +19227,7 @@
     >
 
     #param[base_url] = http://jca.sagepub.com/
+    param[journal_id] = jca
 
     
     {
@@ -18839,6 +19272,7 @@
     >
 
     #param[base_url] = http://jcd.sagepub.com/
+    param[journal_id] = jcd
 
     
     {
@@ -18901,6 +19335,7 @@
     >
 
     #param[base_url] = http://jel.sagepub.com/
+    param[journal_id] = jel
 
     
     {
@@ -18940,6 +19375,7 @@
     >
 
     #param[base_url] = http://cel.sagepub.com/
+    param[journal_id] = cel
 
     
     {
@@ -19012,6 +19448,7 @@
     >
 
       #param[base_url] = http://jcb.sagepub.com/
+      param[journal_id] = jcb
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1981 volume 1 to 1999 volume 19
 
@@ -19044,6 +19481,7 @@
     >
 
     #param[base_url] = http://chc.sagepub.com/
+    param[journal_id] = chc
 
     
     {
@@ -19084,6 +19522,7 @@
     >
 
     #param[base_url] = http://jcn.sagepub.com/
+    param[journal_id] = jcn
 
     
     {
@@ -19134,6 +19573,7 @@
     >
 
       #param[base_url] = http://cbx.sagepub.com/
+      param[journal_id] = cbx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Circulating Biomarkers Volume 1 ; 1 ; >
@@ -19153,6 +19593,7 @@
     >
 
     #param[base_url] = http://jcs.sagepub.com/
+    param[journal_id] = jcs
 
     
     {
@@ -19189,6 +19630,7 @@
     >
 
     #param[base_url] = http://jcp.sagepub.com/
+    param[journal_id] = jcp
 
     
     {
@@ -19262,6 +19704,7 @@
     >
 
     #param[base_url] = http://edm.sagepub.com/
+    param[journal_id] = edm
 
     {
 
@@ -19291,6 +19734,7 @@
     >
 
       #param[base_url] = http://csr.sagepub.com/
+      param[journal_id] = csr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Journal of College Student Retention: Research, Theory & Practice Volume 1 ; 1 ; >
@@ -19323,6 +19767,7 @@
     >
 
     #param[base_url] = http://jcl.sagepub.com/
+    param[journal_id] = jcl
 
     {
 
@@ -19393,6 +19838,7 @@
     >
 
     #param[base_url] = http://jci.sagepub.com/
+    param[journal_id] = jci
 
     {
 
@@ -19452,6 +19898,7 @@
     >
 
     #param[base_url] = http://jcm.sagepub.com/
+    param[journal_id] = jcm
 
     
     {
@@ -19522,6 +19969,7 @@
     >
 
       #param[base_url] = http://cmf.sagepub.com/
+      param[journal_id] = cmf
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 ; >
@@ -19544,6 +19992,7 @@
     >
 
     #param[base_url] = http://jcr.sagepub.com/
+    param[journal_id] = jcr
 
     
     {
@@ -19624,6 +20073,7 @@
     >
 
     #param[base_url] = http://joc.sagepub.com/
+    param[journal_id] = joc
 
     
     {
@@ -19660,6 +20110,7 @@
     >
 
     #param[base_url] = http://ccj.sagepub.com/
+    param[journal_id] = ccj
 
     
     {
@@ -19712,6 +20163,7 @@
     >
 
     #param[base_url] = http://jce.sagepub.com/
+    param[journal_id] = jce
 
     
     {
@@ -19777,6 +20229,7 @@
     >
 
     #param[base_url] = http://jch.sagepub.com/
+    param[journal_id] = jch
 
     
     {
@@ -19848,6 +20301,7 @@
     >
 
     #param[base_url] = http://jcx.sagepub.com/
+    param[journal_id] = jcx
 
     
     {
@@ -19889,6 +20343,7 @@
     >
 
       #param[base_url] = http://jcv.sagepub.com/
+      param[journal_id] = jcv
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; >
@@ -19905,6 +20360,7 @@
     >
 
     #param[base_url] = http://crc.sagepub.com/
+    param[journal_id] = crc
 
     
     {
@@ -19936,6 +20392,7 @@
     >
 
     #param[base_url] = http://clj.sagepub.com/
+    param[journal_id] = clj
     #pluginSuffix = ClockssHighWirePressH20Plugin
     # content available from 1939 volume 3 to 1999 volume 63
 
@@ -19965,6 +20422,7 @@
     >
 
     #param[base_url] = http://jcc.sagepub.com/
+    param[journal_id] = jcc
 
     
     {
@@ -20032,6 +20490,7 @@
     >
 
       #param[base_url] = http://cms.sagepub.com/
+      param[journal_id] = cms
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2006 ; Journal of Cutaneous Medicine and Surgery Volume 10 ; 10 ; >
@@ -20057,6 +20516,7 @@
     >
 
     #param[base_url] = http://dms.sagepub.com/
+    param[journal_id] = dms
 
     
     {
@@ -20089,6 +20549,7 @@
       >
 
         #param[base_url] = http://dbm.sagepub.com/
+        param[journal_id] = dbm
 
       {
 
@@ -20116,6 +20577,7 @@
     >
 
     #param[base_url] = http://jdr.sagepub.com/
+    param[journal_id] = jdr
 
     
     {
@@ -20230,6 +20692,7 @@
     >
 
       #param[base_url] = http://jdp.sagepub.com/
+      param[journal_id] = jdp
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Journal of Development Policy and Practice Volume 1 ; 1 ; >
@@ -20245,6 +20708,7 @@
     >
 
     #param[base_url] = http://jds.sagepub.com/
+    param[journal_id] = jds
 
     
     {
@@ -20280,6 +20744,7 @@
       >
 
         #param[base_url] = http://dst.sagepub.com/
+        param[journal_id] = dst
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
@@ -20305,6 +20770,7 @@
     >
 
     #param[base_url] = http://jdm.sagepub.com/
+    param[journal_id] = jdm
 
     
     {
@@ -20357,6 +20823,7 @@
     >
 
     #param[base_url] = http://dps.sagepub.com/
+    param[journal_id] = dps
 
     
     {
@@ -20406,6 +20873,7 @@
     >
 
       #param[base_url] = http://dre.sagepub.com/
+      param[journal_id] = dre
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Journal of Drug Education Volume 29 ; 29 ; >
@@ -20439,6 +20907,7 @@
     >
 
       #param[base_url] = http://jod.sagepub.com/
+      param[journal_id] = jod
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
@@ -20469,6 +20938,7 @@
     >
 
     #param[base_url] = http://jea.sagepub.com/
+    param[journal_id] = jea
 
     
     {
@@ -20525,6 +20995,7 @@
     >
 
     #param[base_url] = http://ecl.sagepub.com/
+    param[journal_id] = ecl
 
     
     {
@@ -20562,6 +21033,7 @@
     >
 
     #param[base_url] = http://ecr.sagepub.com/
+    param[journal_id] = ecr
 
     
     {
@@ -20597,6 +21069,7 @@
     >
 
     #param[base_url] = http://jei.sagepub.com/
+    param[journal_id] = jei
 
     
     {
@@ -20655,6 +21128,7 @@
     >
 
     #param[base_url] = http://jsd.sagepub.com/
+    param[journal_id] = jsd
 
     
     {
@@ -20685,6 +21159,7 @@
     >
 
     #param[base_url] = http://jeb.sagepub.com/
+    param[journal_id] = jeb
 
     
     {
@@ -20747,6 +21222,7 @@
     >
 
       #param[base_url] = http://jec.sagepub.com/
+      param[journal_id] = jec
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Journal of Educational Computing Research Volume 20 ; 20 ; >
@@ -20796,6 +21272,7 @@
     >
 
       #param[base_url] = http://ets.sagepub.com/
+      param[journal_id] = ets
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1975 volume 4 to 1999 volume 27
 
@@ -20829,6 +21306,7 @@
     >
 
     #param[base_url] = http://jep.sagepub.com/
+    param[journal_id] = jep
 
     
     {
@@ -20897,6 +21375,7 @@
     >
 
     #param[base_url] = http://emf.sagepub.com/
+    param[journal_id] = emf
 
     
     {
@@ -20932,6 +21411,7 @@
     >
 
     #param[base_url] = http://ebx.sagepub.com/
+    param[journal_id] = ebx
 
     
     {
@@ -20976,6 +21456,7 @@
     >
 
       #param[base_url] = http://jet.sagepub.com/
+      param[journal_id] = jet
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1995 ; Journal of Endovascular Therapy Volume 1 ; 1 ; >
@@ -21013,6 +21494,7 @@
     >
 
     #param[base_url] = http://eng.sagepub.com/
+    param[journal_id] = eng
 
     
     {
@@ -21077,6 +21559,7 @@
     >
 
     #param[base_url] = http://joe.sagepub.com/
+    param[journal_id] = joe
 
     
     {
@@ -21122,6 +21605,7 @@
     >
 
     #param[base_url] = http://jed.sagepub.com/
+    param[journal_id] = jed
 
     
     {
@@ -21167,6 +21651,7 @@
     >
 
       #param[base_url] = http://eie.sagepub.com/
+      param[journal_id] = eie
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 1 ; 1 ; >
@@ -21183,6 +21668,7 @@
     >
 
     #param[base_url] = http://esp.sagepub.com/
+    param[journal_id] = esp
 
     
     {
@@ -21229,6 +21715,7 @@
     >
 
     #param[base_url] = http://jes.sagepub.com/
+    param[journal_id] = jes
 
     
     {
@@ -21296,6 +21783,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://jee.sagepub.com/
+      param[journal_id] = jee
 
       au < exists ; exists ; 2001 ; Journal of Experiential Education Volume 24 ; 24 ; >
       au < exists ; exists ; 2002-2003 ; Journal of Experiential Education Volume 25 ; 25 ; >
@@ -21325,6 +21813,7 @@
     >
 
     #param[base_url] = http://jfh.sagepub.com/
+    param[journal_id] = jfh
 
     
     {
@@ -21386,6 +21875,7 @@
     >
 
     #param[base_url] = http://jfi.sagepub.com/
+    param[journal_id] = jfi
 
     
     {
@@ -21444,6 +21934,7 @@
     >
 
     #param[base_url] = http://jfn.sagepub.com/
+    param[journal_id] = jfn
 
     
     {
@@ -21486,6 +21977,7 @@
     >
 
       #param[base_url] = http://jfm.sagepub.com/
+      param[journal_id] = jfm
 
     {
 
@@ -21522,6 +22014,7 @@
     >
 
       #param[base_url] = http://jor.sagepub.com/
+      param[journal_id] = jor
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 ; >
@@ -21538,6 +22031,7 @@
     >
 
     #param[base_url] = http://jfe.sagepub.com/
+    param[journal_id] = jfe
 
     
     {
@@ -21581,6 +22075,7 @@
     >
 
     #param[base_url] = http://jfs.sagepub.com/
+    param[journal_id] = jfs
 
     
     {
@@ -21635,6 +22130,7 @@
     >
 
     #param[base_url] = http://jgm.sagepub.com/
+    param[journal_id] = jgm
 
     {
 
@@ -21667,6 +22163,7 @@
     >
 
     #param[base_url] = http://jgp.sagepub.com/
+    param[journal_id] = jgp
 
     
     {
@@ -21716,6 +22213,7 @@
     >
 
     #param[base_url] = http://jhs.sagepub.com/
+    param[journal_id] = jhs
 
     
     {
@@ -21776,6 +22274,7 @@
     >
 
     #param[base_url] = http://hsb.sagepub.com/
+    param[journal_id] = hsb
 
     {
 
@@ -21808,6 +22307,7 @@
     >
 
     #param[base_url] = http://jhm.sagepub.com/
+    param[journal_id] = jhm
 
     
     {
@@ -21846,6 +22346,7 @@
     >
 
     #param[base_url] = http://hpq.sagepub.com/
+    param[journal_id] = hpq
 
     
     {
@@ -21886,6 +22387,7 @@
     >
 
       #param[base_url] = http://hmj.sagepub.com/
+      param[journal_id] = hmj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Journal of Heritage Management Volume 1 ; 1 ; >
@@ -21901,6 +22403,7 @@
     >
 
     #param[base_url] = http://jhh.sagepub.com/
+    param[journal_id] = jhh
 
     
     {
@@ -21937,6 +22440,7 @@
     >
 
     #param[base_url] = http://jhc.sagepub.com/
+    param[journal_id] = jhc
 
     {
 
@@ -22020,6 +22524,7 @@
     >
 
       #param[base_url] = http://jhr.sagepub.com/
+      param[journal_id] = jhr
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1980 volume 1 to 1999 volume 20
 
@@ -22053,6 +22558,7 @@
     >
 
     #param[base_url] = http://jhn.sagepub.com/
+    param[journal_id] = jhn
 
     
     {
@@ -22107,6 +22613,7 @@
     >
 
     #param[base_url] = http://jht.sagepub.com/
+    param[journal_id] = jht
 
     
     {
@@ -22167,6 +22674,7 @@
     >
 
     #param[base_url] = http://jhl.sagepub.com/
+    param[journal_id] = jhl
 
     
     {
@@ -22219,6 +22727,7 @@
     >
 
     #param[base_url] = http://jhv.sagepub.com/
+    param[journal_id] = jhv
 
     
     {
@@ -22261,6 +22770,7 @@
     >
 
     #param[base_url] = http://jhp.sagepub.com/
+    param[journal_id] = jhp
 
     
     {
@@ -22337,6 +22847,7 @@
     >
 
       #param[base_url] = http://iem.sagepub.com/
+      param[journal_id] = iem
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
@@ -22355,6 +22866,7 @@
     >
 
     #param[base_url] = http://jir.sagepub.com/
+    param[journal_id] = jir
 
     
     {
@@ -22433,6 +22945,7 @@
     >
 
     #param[base_url] = http://jit.sagepub.com/
+    param[journal_id] = jit
 
     
     {
@@ -22502,6 +23015,7 @@
     comment[continued_by] = Journal of Infection Prevention 2009-, issn:1757-1774
 
     #param[base_url] = http://bji.sagepub.com/
+    param[journal_id] = bji
 
     
     {
@@ -22533,6 +23047,7 @@
     comment[continues] = British Journal of Infection Control 2000-2008, issn:1469-0446
 
     #param[base_url] = http://bji.sagepub.com/
+    param[journal_id] = bji
 
     
     {
@@ -22561,6 +23076,7 @@
     >
 
     #param[base_url] = http://jis.sagepub.com/
+    param[journal_id] = jis
 
     
     {
@@ -22623,6 +23139,7 @@
     >
 
     #param[base_url] = http://jid.sagepub.com/
+    param[journal_id] = jid
 
     
     {
@@ -22663,6 +23180,7 @@
     >
 
     #param[base_url] = http://jim.sagepub.com/
+    param[journal_id] = jim
 
     
     {
@@ -22710,6 +23228,7 @@
     >
 
     #param[base_url] = http://jic.sagepub.com/
+    param[journal_id] = jic
 
     
     {
@@ -22761,6 +23280,7 @@
       >
 
       #param[base_url] = http://inc.sagepub.com/
+      param[journal_id] = inc
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Journal of the Intensive Care Society Volume 4 ; 4 ; >
@@ -22788,6 +23308,7 @@
       >
 
       #param[base_url] = http://jie.sagepub.com/
+      param[journal_id] = jie
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
@@ -22807,6 +23328,7 @@
     >
 
     #param[base_url] = http://ipt.sagepub.com/
+    param[journal_id] = ipt
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 ; >
@@ -22833,6 +23355,7 @@
     >
 
     #param[base_url] = http://jiv.sagepub.com/
+    param[journal_id] = jiv
 
     
     {
@@ -22887,6 +23410,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://jla.sagepub.com/
+        param[journal_id] = jla
 
         au < exists ; exists ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 ; >
         au < exists ; exists ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 ; >
@@ -22913,6 +23437,7 @@
     >
 
       #param[base_url] = http://jla.sagepub.com/
+      param[journal_id] = jla
 
     {
 
@@ -22940,6 +23465,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://lrs.sagepub.com/
+        param[journal_id] = lrs
 
         au < doNotProcess ; doNotProcess ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
@@ -22959,6 +23485,7 @@
     >
 
     #param[base_url] = http://jls.sagepub.com/
+    param[journal_id] = jls
 
     
     {
@@ -23014,6 +23541,7 @@
     >
 
       #param[base_url] = http://lme.sagepub.com/
+      param[journal_id] = lme
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1973 volume 1 to 1999 volume 27
 
@@ -23046,6 +23574,7 @@
     >
 
     #param[base_url] = http://jlo.sagepub.com/
+    param[journal_id] = jlo
 
     
     {
@@ -23088,6 +23617,7 @@
     >
 
     #param[base_url] = http://ldx.sagepub.com/
+    param[journal_id] = ldx
 
     
     {
@@ -23157,6 +23687,7 @@
     >
 
     #param[base_url] = http://lis.sagepub.com/
+    param[journal_id] = lis
 
     
     {
@@ -23225,6 +23756,7 @@
     >
 
       #param[base_url] = http://jlr.sagepub.com/
+      param[journal_id] = jlr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 1969 ; Journal of Literacy Research Volume 1 ; 1 ; >
@@ -23287,6 +23819,7 @@
     >
 
       #param[base_url] = http://lfn.sagepub.com/
+      param[journal_id] = lfn
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1982 volume 1 to 1999 volume 18
 
@@ -23319,6 +23852,7 @@
     >
 
     #param[base_url] = http://jmk.sagepub.com/
+    param[journal_id] = jmk
 
     
     {
@@ -23375,6 +23909,7 @@
     >
 
     #param[base_url] = http://jom.sagepub.com/
+    param[journal_id] = jom
 
     
     {
@@ -23437,6 +23972,7 @@
     >
 
     #param[base_url] = http://jme.sagepub.com/
+    param[journal_id] = jme
 
     
     {
@@ -23497,6 +24033,7 @@
     >
 
     #param[base_url] = http://jmi.sagepub.com/
+    param[journal_id] = jmi
 
     
     {
@@ -23543,6 +24080,7 @@
     >
 
     #param[base_url] = http://jmd.sagepub.com/
+    param[journal_id] = jmd
 
     
     {
@@ -23601,6 +24139,7 @@
     >
 
     #param[base_url] = http://mcu.sagepub.com/
+    param[journal_id] = mcu
 
     
     {
@@ -23642,6 +24181,7 @@
     >
 
     #param[base_url] = http://mmj.sagepub.com/
+    param[journal_id] = mmj
 
     {
 
@@ -23676,6 +24216,7 @@
     >
 
       #param[base_url] = http://men.sagepub.com/
+      param[journal_id] = men
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1992-1993 ; The Journal of Men's Studies Volume 1 ; 1 ; >
@@ -23714,6 +24255,7 @@
     >
 
     #param[base_url] = http://mmr.sagepub.com/
+    param[journal_id] = mmr
 
     
     {
@@ -23744,6 +24286,7 @@
     >
 
     #param[base_url] = http://jmt.sagepub.com/
+    param[journal_id] = jmt
 
     
     {
@@ -23790,6 +24333,7 @@
     >
 
     #param[base_url] = http://opp.sagepub.com/
+    param[journal_id] = opp
 
     
     {
@@ -23831,6 +24375,7 @@
     >
 
       #param[base_url] = http://osj.sagepub.com/
+      param[journal_id] = osj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2000 ; Journal of Orthopaedic Surgery Volume 8 ; 8 ; >
@@ -23862,6 +24407,7 @@
     >
 
     #param[base_url] = http://pen.sagepub.com/
+    param[journal_id] = pen
 
     
     {
@@ -23924,6 +24470,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://pcc.sagepub.com/
+      param[journal_id] = pcc
       #content available from 1968 volume 22 to 1999 volume 53
 
       au < exists ; exists ; 2000 ; Journal of Pastoral Care & Counseling Volume 54 ; 54 ; >
@@ -23955,6 +24502,7 @@
     >
 
       #param[base_url] = http://jpx.sagepub.com/
+      param[journal_id] = jpx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; >
@@ -23972,6 +24520,7 @@
     >
 
     #param[base_url] = http://jpr.sagepub.com/
+    param[journal_id] = jpr
 
     
     {
@@ -24045,6 +24594,7 @@
     >
 
     #param[base_url] = http://jpo.sagepub.com/
+    param[journal_id] = jpo
 
     
     {
@@ -24098,6 +24648,7 @@
     >
 
     #param[base_url] = http://jpp.sagepub.com/
+    param[journal_id] = jpp
 
     
     {
@@ -24147,6 +24698,7 @@
     >
 
     #param[base_url] = http://pmt.sagepub.com/
+    param[journal_id] = pmt
 
     {
 
@@ -24182,6 +24734,7 @@
     >
 
     #param[base_url] = http://jpe.sagepub.com/
+    param[journal_id] = jpe
 
     
     {
@@ -24238,6 +24791,7 @@
     >
 
     #param[base_url] = http://jph.sagepub.com/
+    param[journal_id] = jph
 
     
     {
@@ -24273,6 +24827,7 @@
     >
 
     #param[base_url] = http://jpl.sagepub.com/
+    param[journal_id] = jpl
 
     
     {
@@ -24324,6 +24879,7 @@
     >
 
     #param[base_url] = http://jpf.sagepub.com/
+    param[journal_id] = jpf
 
     
     {
@@ -24376,6 +24932,7 @@
     >
 
     #param[base_url] = http://pbi.sagepub.com/
+    param[journal_id] = pbi
 
     
     {
@@ -24414,6 +24971,7 @@
     >
 
     #param[base_url] = http://jpc.sagepub.com/
+    param[journal_id] = jpc
 
     {
 
@@ -24441,6 +24999,7 @@
     >
 
       #param[base_url] = http://plx.sagepub.com/
+      param[journal_id] = plx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; The Journal of Psychiatry & Law Volume 37 ; 37 ; >
@@ -24459,6 +25018,7 @@
     >
 
     #param[base_url] = http://jpa.sagepub.com/
+    param[journal_id] = jpa
 
     
     {
@@ -24513,6 +25073,7 @@
     >
 
     #param[base_url] = http://jop.sagepub.com/
+    param[journal_id] = jop
 
     
     {
@@ -24563,6 +25124,7 @@
     >
 
     #param[base_url] = http://jrp.sagepub.com/
+    param[journal_id] = jrp
 
     
     {
@@ -24617,6 +25179,7 @@
     >
 
     #param[base_url] = http://jrt.sagepub.com/
+    param[journal_id] = jrt
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Rehabilitation and Assistive Technologies Engineering Volume 1 ; 1 ; >
@@ -24634,6 +25197,7 @@
     >
 
     #param[base_url] = http://jra.sagepub.com/
+    param[journal_id] = jra
 
     
     {
@@ -24671,6 +25235,7 @@
     >
 
       #param[base_url] = http://rbf.sagepub.com/
+      param[journal_id] = rbf
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2010 ; Journal of Reproductive Biotechnology and Fertility Volume 1 ; 1 ; >
@@ -24689,6 +25254,7 @@
     >
 
     #param[base_url] = http://jrc.sagepub.com/
+    param[journal_id] = jrc
 
     
     {
@@ -24762,6 +25328,7 @@
     >
 
     #param[base_url] = http://jri.sagepub.com/
+    param[journal_id] = jri
 
     
     {
@@ -24797,6 +25364,7 @@
     >
 
     #param[base_url] = http://jrm.sagepub.com/
+    param[journal_id] = jrm
 
     
     {
@@ -24881,6 +25449,7 @@
     >
 
     #param[base_url] = http://jrn.sagepub.com/
+    param[journal_id] = jrn
 
     
     {
@@ -24920,6 +25489,7 @@
      >
 
     #param[base_url] = http://jrl.sagepub.com/
+    param[journal_id] = jrl
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2006 ; Journal of Research on Leadership Education Volume 1 ; 1 ; >
@@ -24945,6 +25515,7 @@
     >
 
     #param[base_url] = http://jsm.sagepub.com/
+    param[journal_id] = jsm
 
     
     {
@@ -24983,6 +25554,7 @@
     >
 
     #param[base_url] = http://jsn.sagepub.com/
+    param[journal_id] = jsn
 
     
     {
@@ -25020,6 +25592,7 @@
     >
 
     #param[base_url] = http://jsr.sagepub.com/
+    param[journal_id] = jsr
 
     
     {
@@ -25059,6 +25632,7 @@
     >
 
     #param[base_url] = http://spr.sagepub.com/
+    param[journal_id] = spr
 
     
     {
@@ -25112,6 +25686,7 @@
     >
 
     #param[base_url] = http://jsa.sagepub.com/
+    param[journal_id] = jsa
 
     
     {
@@ -25148,6 +25723,7 @@
     >
 
     #param[base_url] = http://jsw.sagepub.com/
+    param[journal_id] = jsw
 
     
     {
@@ -25184,6 +25760,7 @@
     >
 
     #param[base_url] = http://jos.sagepub.com/
+    param[journal_id] = jos
 
     
     {
@@ -25256,6 +25833,7 @@
     >
 
     #param[base_url] = http://sad.sagepub.com/
+    param[journal_id] = sad
 
     
     {
@@ -25287,6 +25865,7 @@
      >
 
     #param[base_url] = http://sed.sagepub.com/
+    param[journal_id] = sed
 
     
     {
@@ -25357,6 +25936,7 @@
     >
 
       #param[base_url] = http://jst.sagepub.com/
+      param[journal_id] = jst
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1978 ; Journal of Special Education Technology Volume 1 ; 1 ; >
@@ -25382,6 +25962,7 @@
     >
 
     #param[base_url] = http://jss.sagepub.com/
+    param[journal_id] = jss
 
     
     {
@@ -25442,6 +26023,7 @@
     >
 
     #param[base_url] = http://jse.sagepub.com/
+    param[journal_id] = jse
 
     
     {
@@ -25479,6 +26061,7 @@
     >
 
     #param[base_url] = http://sdj.sagepub.com/
+    param[journal_id] = sdj
 
     {
 
@@ -25549,6 +26132,7 @@
     >
 
       #param[base_url] = http://jsc.sagepub.com/
+      param[journal_id] = jsc
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 ; >
@@ -25565,6 +26149,7 @@
     >
 
     #param[base_url] = http://jsi.sagepub.com/
+    param[journal_id] = jsi
 
     
     {
@@ -25605,6 +26190,7 @@
     >
 
     #param[base_url] = http://jte.sagepub.com/
+    param[journal_id] = jte
 
     
     {
@@ -25693,6 +26279,7 @@
     >
 
     #param[base_url] = http://jam.sagepub.com/
+    param[journal_id] = jam
 
     {
 
@@ -25747,6 +26334,7 @@
     >
 
     #param[base_url] = http://jap.sagepub.com/
+    param[journal_id] = jap
 
     
     {
@@ -25789,6 +26377,7 @@
     >
 
     #param[base_url] = http://apa.sagepub.com/
+    param[journal_id] = apa
 
     
     {
@@ -25873,6 +26462,7 @@
     >
 
       #param[base_url] = http://jha.sagepub.com/
+      param[journal_id] = jha
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
@@ -25888,6 +26478,7 @@
         issn = 0534-283X
       >
         #param[base_url] = http://jil.sagepub.com/
+        param[journal_id] = jil
       {
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
@@ -25965,6 +26556,7 @@
     >
 
     #param[base_url] = http://jia.sagepub.com/
+    param[journal_id] = jia
 
     
     {
@@ -26003,6 +26595,7 @@
     >
 
       #param[base_url] = http://jtw.sagepub.com/
+      param[journal_id] = jtw
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Journal of Technical Writing and Communication Volume 29 ; 29 ; >
@@ -26035,6 +26628,7 @@
     >
 
     #param[base_url] = http://jtp.sagepub.com/
+    param[journal_id] = jtp
 
     
     {
@@ -26083,6 +26677,7 @@
     >
 
     #param[base_url] = http://jtc.sagepub.com/
+    param[journal_id] = jtc
 
     
     {
@@ -26131,6 +26726,7 @@
     >
 
       #param[base_url] = http://tej.sagepub.com/
+      param[journal_id] = tej
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
@@ -26152,6 +26748,7 @@
     >
 
     #param[base_url] = http://tcn.sagepub.com/
+    param[journal_id] = tcn
 
     
     {
@@ -26200,6 +26797,7 @@
     >
 
     #param[base_url] = http://jtd.sagepub.com/
+    param[journal_id] = jtd
 
     
     {
@@ -26234,6 +26832,7 @@
     >
 
       #param[base_url] = http://jth.sagepub.com/
+      param[journal_id] = jth
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; The Journal of Transport History Volume 20 ; 20 ; >
@@ -26266,6 +26865,7 @@
     >
 
     #param[base_url] = http://jtr.sagepub.com/
+    param[journal_id] = jtr
 
     
     {
@@ -26335,6 +26935,7 @@
     >
 
     #param[base_url] = http://juh.sagepub.com/
+    param[journal_id] = juh
 
     
     {
@@ -26398,6 +26999,7 @@
     >
 
     #param[base_url] = http://jvm.sagepub.com/
+    param[journal_id] = jvm
 
     
     {
@@ -26442,6 +27044,7 @@
     >
 
       #param[base_url] = http://jov.sagepub.com/
+      param[journal_id] = jov
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1998 ; Journal of Veterinary Dentistry Volume 15 ; 15 ; >
@@ -26475,6 +27078,7 @@
     >
 
     #param[base_url] = http://vdi.sagepub.com/
+    param[journal_id] = vdi
 
     {
 
@@ -26522,6 +27126,7 @@
     >
 
     #param[base_url] = http://jvc.sagepub.com/
+    param[journal_id] = jvc
 
     
     {
@@ -26566,6 +27171,7 @@
     >
 
     #param[base_url] = http://vcu.sagepub.com/
+    param[journal_id] = vcu
 
     
     {
@@ -26601,6 +27207,7 @@
     >
 
     #param[base_url] = http://jwb.sagepub.com/
+    param[journal_id] = jwb
 
     {
 
@@ -26625,6 +27232,7 @@
       >
 
       #param[base_url] = http://jmc.sagepub.com/
+      param[journal_id] = jmc
 
       {
 
@@ -26694,6 +27302,7 @@
     >
 
     #param[base_url] = http://jmo.sagepub.com/
+    param[journal_id] = jmo
 
     {
 
@@ -26732,6 +27341,7 @@
     >
 
       #param[base_url] = http://jmq.sagepub.com/
+      param[journal_id] = jmq
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1955 ; Journalism & Mass Communication Quarterly Volume 32 ; 32 ; >
@@ -26808,6 +27418,7 @@
     >
 
     #param[base_url] = http://jou.sagepub.com/
+    param[journal_id] = jou
 
     
     {
@@ -26845,6 +27456,7 @@
     >
 
       #param[base_url] = http://jrx.sagepub.com/
+      param[journal_id] = jrx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Justice Research and Policy Volume 1 ; 1 ; >
@@ -26876,6 +27488,7 @@
     >
 
     #param[base_url] = http://lsj.sagepub.com/
+    param[journal_id] = lsj
 
     
     {
@@ -26917,6 +27530,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://lin.sagepub.com/
+      param[journal_id] = lin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Language and Linguistics Volume 16 ; 16 ; >
@@ -26933,6 +27547,7 @@
     >
 
     #param[base_url] = http://lal.sagepub.com/
+    param[journal_id] = lal
 
     
     {
@@ -26978,6 +27593,7 @@
     >
 
     #param[base_url] = http://las.sagepub.com/
+    param[journal_id] = las
 
     
     {
@@ -27057,6 +27673,7 @@
     >
 
     #param[base_url] = http://ltr.sagepub.com/
+    param[journal_id] = ltr
 
     
     {
@@ -27097,6 +27714,7 @@
     >
 
     #param[base_url] = http://ltj.sagepub.com/
+    param[journal_id] = ltj
 
     
     {
@@ -27150,6 +27768,7 @@
     >
 
     #param[base_url] = http://lap.sagepub.com/
+    param[journal_id] = lap
 
     
     {
@@ -27213,6 +27832,7 @@
     >
 
     #param[base_url] = http://lch.sagepub.com/
+    param[journal_id] = lch
 
     
     {
@@ -27245,6 +27865,7 @@
     >
 
     #param[base_url] = http://lea.sagepub.com/
+    param[journal_id] = lea
 
     
     {
@@ -27277,6 +27898,7 @@
     >
 
     #param[base_url] = http://lrt.sagepub.com/
+    param[journal_id] = lrt
 
     
     {
@@ -27345,6 +27967,7 @@
     >
 
     #param[base_url] = http://lrx.sagepub.com/
+    param[journal_id] = lrx
 
     {
 
@@ -27366,6 +27989,7 @@
     >
 
       #param[base_url] = http://lah.sagepub.com/
+      param[journal_id] = lah
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1992 ; Literature & History Volume 1 ; 1 ; >
@@ -27405,6 +28029,7 @@
     >
 
     #param[base_url] = http://lec.sagepub.com/
+    param[journal_id] = lec
 
     {
 
@@ -27455,6 +28080,7 @@
     >
 
     #param[base_url] = http://lup.sagepub.com/
+    param[journal_id] = lup
 
     
     {
@@ -27504,6 +28130,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://mls.sagepub.com/
+        param[journal_id] = mls
 
         au < exists ; exists ; 1999 ; Management and Labour Studies Volume 24 ; 24 ; >
         au < exists ; exists ; 2000 ; Management and Labour Studies Volume 25 ; 25 ; >
@@ -27537,6 +28164,7 @@
     >
 
     #param[base_url] = http://moh.sagepub.com/
+    param[journal_id] = moh
 
     
     {
@@ -27566,6 +28194,7 @@
     >
 
     #param[base_url] = http://mcq.sagepub.com/
+    param[journal_id] = mcq
 
     
     {
@@ -27616,6 +28245,7 @@
     >
 
     #param[base_url] = http://mie.sagepub.com/
+    param[journal_id] = mie
 
     
     {
@@ -27666,6 +28296,7 @@
     >
 
     #param[base_url] = http://mlq.sagepub.com/
+    param[journal_id] = mlq
 
     
     {
@@ -27733,6 +28364,7 @@
     >
 
     #param[base_url] = http://mar.sagepub.com/
+    param[journal_id] = mar
 
     
     {
@@ -27763,6 +28395,7 @@
     >
 
     #param[base_url] = http://mtq.sagepub.com/
+    param[journal_id] = mtq
 
     
     {
@@ -27799,6 +28432,7 @@
     >
 
     #param[base_url] = http://mms.sagepub.com/
+    param[journal_id] = mms
 
     
     {
@@ -27843,6 +28477,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://mac.sagepub.com/
+        param[journal_id] = mac
 
         au < exists ; exists ; 1968 ; Measurement and Control Volume 1 ; 1 ; >
         au < exists ; exists ; 1969 ; Measurement and Control Volume 2 ; 2 ; >
@@ -27906,6 +28541,7 @@
     >
 
     #param[base_url] = http://mec.sagepub.com/
+    param[journal_id] = mec
 
     
     {
@@ -27934,6 +28570,7 @@
     >
 
     #param[base_url] = http://mcs.sagepub.com/
+    param[journal_id] = mcs
 
     
     {
@@ -27993,6 +28630,7 @@
     >
 
     #param[base_url] = http://mwc.sagepub.com/
+    param[journal_id] = mwc
 
     
     {
@@ -28022,6 +28660,7 @@
     >
 
       #param[base_url] = http://mia.sagepub.com/
+      param[journal_id] = mia
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1976 volume 1 to 1999 volume 93
 
@@ -28105,6 +28744,7 @@
     >
 
     #param[base_url] = http://mcr.sagepub.com/
+    param[journal_id] = mcr
 
     
     {
@@ -28198,6 +28838,7 @@
     >
 
     #param[base_url] = http://mdm.sagepub.com/
+    param[journal_id] = mdm
 
     
     {
@@ -28254,6 +28895,7 @@
         issnl = 0968-5332
       >
         #param[base_url] = http://mli.sagepub.com/
+        param[journal_id] = mli
       {
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
@@ -28287,6 +28929,7 @@
      >
 
         #param[base_url] = http://mlj.sagepub.com/
+        param[journal_id] = mlj
         #pluginSuffix = ClockssHighWirePressH20Plugin
         # no issue MLST-24
 
@@ -28411,6 +29054,7 @@
     >
 
     #param[base_url] = http://mhj.sagepub.com/
+    param[journal_id] = mhj
 
     
     {
@@ -28450,6 +29094,7 @@
     >
 
     #param[base_url] = http://mss.sagepub.com/
+    param[journal_id] = mss
 
     
     {
@@ -28479,6 +29124,7 @@
     >
 
     #param[base_url] = http://jmm.sagepub.com/
+    param[journal_id] = jmm
 
     
     {
@@ -28519,6 +29165,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://met.sagepub.com/
+      param[journal_id] = met
 
       au < exists ; exists ; 2002 ; Metamorphosis Volume 1 ; 1 ; >
       au < exists ; exists ; 2003 ; Metamorphosis Volume 2 ; 2 ; >
@@ -28547,6 +29194,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://mla.sagepub.com/
+      param[journal_id] = mla
 
       au < exists ; exists ; 2010 ; Millennial Asia Volume 1 ; 1 ; >
       au < exists ; exists ; 2011 ; Millennial Asia Volume 2 ; 2 ; >
@@ -28567,6 +29215,7 @@
     >
 
     #param[base_url] = http://mil.sagepub.com/
+    param[journal_id] = mil
 
     
     {
@@ -28632,6 +29281,7 @@
     >
 
     #param[base_url] = http://mcx.sagepub.com/
+    param[journal_id] = mcx
 
     
     {
@@ -28694,6 +29344,7 @@
     >
 
       #param[base_url] = http://mix.sagepub.com/
+      param[journal_id] = mix
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; Molecular Imaging Volume 1 ; 1 ; >
@@ -28722,6 +29373,7 @@
     >
 
       #param[base_url] = http://mpx.sagepub.com/
+      param[journal_id] = mpx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2005 ; Molecular Pain Volume 1 ; 1 ; >
@@ -28748,6 +29400,7 @@
     >
 
     #param[base_url] = http://msj.sagepub.com/
+    param[journal_id] = msj
 
     
     {
@@ -28791,6 +29444,7 @@
     >
 
       #param[base_url] = http://mso.sagepub.com/
+      param[journal_id] = mso
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 1 ; 1 ; >
@@ -28807,6 +29461,7 @@
     >
 
     #param[base_url] = http://mmd.sagepub.com/
+    param[journal_id] = mmd
 
     
     {
@@ -28833,6 +29488,7 @@
     >
 
     #param[base_url] = http://mej.sagepub.com/
+    param[journal_id] = mej
 
     
     {
@@ -28956,6 +29612,7 @@
     >
 
     #param[base_url] = http://msx.sagepub.com/
+    param[journal_id] = msx
 
     {
 
@@ -28986,6 +29643,7 @@
     >
 
       #param[base_url] = http://nab.sagepub.com/
+      param[journal_id] = nab
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; >
@@ -29002,6 +29660,7 @@
     >
 
       #param[base_url] = http://nax.sagepub.com/
+      param[journal_id] = nax
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2011 ; Nanomaterials and Nanotechnology Volume 1 ; 1 ; >
@@ -29022,6 +29681,7 @@
     >
 
     #param[base_url] = http://nas.sagepub.com/
+    param[journal_id] = nas
 
     
     {
@@ -29059,6 +29719,7 @@
     >
 
     #param[base_url] = http://bul.sagepub.com/
+    param[journal_id] = bul
 
     
     {
@@ -29180,6 +29841,7 @@
     >
 
     #param[base_url] = http://ner.sagepub.com/
+    param[journal_id] = ner
 
     
     {
@@ -29438,6 +30100,7 @@
     >
 
     #param[base_url] = http://nho.sagepub.com/
+    param[journal_id] = nho
 
     {
 
@@ -29463,6 +30126,7 @@
     >
 
       #param[base_url] = http://neu.sagepub.com/
+      param[journal_id] = neu
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # no issue on 1997 & 1998
 
@@ -29505,6 +30169,7 @@
     >
 
     #param[base_url] = http://nnr.sagepub.com/
+    param[journal_id] = nnr
 
     
     {
@@ -29555,6 +30220,7 @@
     >
 
     #param[base_url] = http://nro.sagepub.com/
+    param[journal_id] = nro
 
     
     {
@@ -29599,6 +30265,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://nlf.sagepub.com/
+        param[journal_id] = nlf
 
         au < doNotProcess ; doNotProcess ; 2010 ; New Labor Forum Volume 19 ; 19 ; >
         au < doNotProcess ; doNotProcess ; 2011 ; New Labor Forum Volume 20 ; 20 ; >
@@ -29619,6 +30286,7 @@
     >
 
     #param[base_url] = http://nms.sagepub.com/
+    param[journal_id] = nms
 
     
     {
@@ -29657,6 +30325,7 @@
     >
 
       #param[base_url] = http://new.sagepub.com/
+      param[journal_id] = new
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; New Solutions Volume 9 ; 9 ; >
@@ -29689,6 +30358,7 @@
     >
 
       #param[base_url] = http://nrj.sagepub.com/
+      param[journal_id] = nrj
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1979 volume 1 to 1999 volume 20
 
@@ -29721,6 +30391,7 @@
     >
 
       #param[base_url] = http://nct.sagepub.com/
+      param[journal_id] = nct
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; >
@@ -29749,6 +30420,7 @@
     >
 
       #param[base_url] = http://nvw.sagepub.com/
+      param[journal_id] = nvw
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Noise & Vibration Worldwide Volume 30 ; 30 ; >
@@ -29781,6 +30453,7 @@
     >
 
     #param[base_url] = http://nvs.sagepub.com/
+    param[journal_id] = nvs
 
     
     {
@@ -29847,6 +30520,7 @@
     >
 
       #param[base_url] = http://njn.sagepub.com/
+      param[journal_id] = njn
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1997 ; Nordic Journal of Nursing Research Volume 17 ; 17 ; >
@@ -29882,6 +30556,7 @@
     >
 
       #param[base_url] = http://naa.sagepub.com/
+      param[journal_id] = naa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; North American Archaeologist Volume 20 ; 20 ; >
@@ -29915,6 +30590,7 @@
     >
 
     #param[base_url] = http://nej.sagepub.com/
+    param[journal_id] = nej
 
     
     {
@@ -29958,6 +30634,7 @@
     >
 
     #param[base_url] = http://nsq.sagepub.com/
+    param[journal_id] = nsq
 
     
     {
@@ -30007,6 +30684,7 @@
     >
 
       #param[base_url] = http://nah.sagepub.com/
+      param[journal_id] = nah
 
     {
 
@@ -30049,6 +30727,7 @@
     >
 
     #param[base_url] = http://ncp.sagepub.com/
+    param[journal_id] = ncp
 
     
     {
@@ -30101,6 +30780,7 @@
     >
 
       #param[base_url] = http://ome.sagepub.com/
+      param[journal_id] = ome
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1998-1999 ; OMEGA - Journal of Death and Dying Volume 38 ; 38 ; >
@@ -30153,6 +30833,7 @@
     >
 
       #param[base_url] = http://otj.sagepub.com/
+      param[journal_id] = otj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 1981 ; OTJR: Occupation, Participation and Health Volume 1 ; 1 ; >
@@ -30203,6 +30884,7 @@
     >
 
     #param[base_url] = http://org.sagepub.com/
+    param[journal_id] = org
 
     
     {
@@ -30246,6 +30928,7 @@
     >
 
     #param[base_url] = http://oae.sagepub.com/
+    param[journal_id] = oae
 
     
     {
@@ -30295,6 +30978,7 @@
     >
 
     #param[base_url] = http://oss.sagepub.com/
+    param[journal_id] = oss
 
     
     {
@@ -30352,6 +31036,7 @@
     >
 
     #param[base_url] = http://opr.sagepub.com/
+    param[journal_id] = opr
 
     {
 
@@ -30377,6 +31062,7 @@
     >
 
     #param[base_url] = http://orm.sagepub.com/
+    param[journal_id] = orm
 
     
     {
@@ -30416,6 +31102,7 @@
     >
 
     #param[base_url] = http://oto.sagepub.com/
+    param[journal_id] = oto
 
     {
 
@@ -30479,6 +31166,7 @@
     >
 
       #param[base_url] = http://oag.sagepub.com/
+      param[journal_id] = oag
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1956 volume 1 to 1997 volume 26
 
@@ -30512,6 +31200,7 @@
     >
 
     #param[base_url] = http://pmj.sagepub.com/
+    param[journal_id] = pmj
 
     
     {
@@ -30562,6 +31251,7 @@
     >
 
     #param[base_url] = http://par.sagepub.com/
+    param[journal_id] = par
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2014 ; Paradigm Volume 18 ; 18 ; >
@@ -30579,6 +31269,7 @@
     >
 
     #param[base_url] = http://ppq.sagepub.com/
+    param[journal_id] = ppq
 
     
     {
@@ -30621,6 +31312,7 @@
     >
 
       #param[base_url] = http://php.sagepub.com/
+      param[journal_id] = php
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 ; >
@@ -30637,6 +31329,7 @@
     >
 
       #param[base_url] = http://pec.sagepub.com/
+      param[journal_id] = pec
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; Perception Volume 33 ; 33 ; >
@@ -30664,6 +31357,7 @@
     >
 
     #param[base_url] = http://prf.sagepub.com/
+    param[journal_id] = prf
 
     
     {
@@ -30715,6 +31409,7 @@
     >
 
     #param[base_url] = http://psp.sagepub.com/
+    param[journal_id] = psp
 
     
     {
@@ -30777,6 +31472,7 @@
     >
 
     #param[base_url] = http://psr.sagepub.com/
+    param[journal_id] = psr
 
     
     {
@@ -30817,6 +31513,7 @@
     >
 
     #param[base_url] = http://pps.sagepub.com/
+    param[journal_id] = pps
 
     {
 
@@ -30850,6 +31547,7 @@
     comment[continued_by] = 1757-9139
     comment[rsh] = journal name changed to Perspectives in Public Health
     #param[base_url] = http://rsh.sagepub.com/
+    param[journal_id] = rsh
 
     {
 
@@ -31000,6 +31698,7 @@
     comment[continues] = Before 2009, The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
 
     #param[base_url] = http://rsh.sagepub.com/
+    param[journal_id] = rsh
 
     
     {
@@ -31030,6 +31729,7 @@
     >
 
     #param[base_url] = http://pvs.sagepub.com/
+    param[journal_id] = pvs
 
     
     {
@@ -31076,6 +31776,7 @@
       >
 
         #param[base_url] = http://pdk.sagepub.com/
+        param[journal_id] = pdk
         #pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < exists ; exists ; 2000-2001 ; Phi Delta Kappan Volume 82 ; 82 ; >
@@ -31107,6 +31808,7 @@
     >
 
     #param[base_url] = http://psc.sagepub.com/
+    param[journal_id] = psc
 
     
     {
@@ -31169,6 +31871,7 @@
     >
 
     #param[base_url] = http://pos.sagepub.com/
+    param[journal_id] = pos
 
     
     {
@@ -31235,6 +31938,7 @@
     >
 
     #param[base_url] = http://plt.sagepub.com/
+    param[journal_id] = plt
 
     
     {
@@ -31271,6 +31975,7 @@
     >
 
       #param[base_url] = http://pjx.sagepub.com/
+      param[journal_id] = pjx
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; The Police Journal: Theory, Practice and Principles Volume 76 ; 76 ; >
@@ -31299,6 +32004,7 @@
     >
 
     #param[base_url] = http://pqx.sagepub.com/
+    param[journal_id] = pqx
 
     
     {
@@ -31338,6 +32044,7 @@
     >
 
     #param[base_url] = http://ppn.sagepub.com/
+    param[journal_id] = ppn
 
     
     {
@@ -31375,6 +32082,7 @@
     >
 
       #param[base_url] = http://pfe.sagepub.com/
+      param[journal_id] = pfe
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Policy Futures in Education Volume 1 ; 1 ; >
@@ -31404,6 +32112,7 @@
     >
 
       #param[base_url] = http://bbs.sagepub.com/
+      param[journal_id] = bbs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Policy Insights from the Behavioral and Brain Sciences Volume 1 ; 1 ; >
@@ -31421,6 +32130,7 @@
     >
 
       #param[base_url] = http://pli.sagepub.com/
+      param[journal_id] = pli
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2010 ; Political Insight Volume 1 ; 1 ; >
@@ -31442,6 +32152,7 @@
     >
 
     #param[base_url] = http://prq.sagepub.com/
+    param[journal_id] = prq
 
     
     {
@@ -31531,6 +32242,7 @@
     >
 
       #param[base_url] = http://psx.sagepub.com/
+      param[journal_id] = psx
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1953 volume 1 to 1999 volume 47
 
@@ -31563,6 +32275,7 @@
     >
 
       #param[base_url] = http://psw.sagepub.com/
+      param[journal_id] = psw
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2003 ; Political Studies Review Volume 1 ; 1 ; >
@@ -31591,6 +32304,7 @@
     >
 
     #param[base_url] = http://ptx.sagepub.com/
+    param[journal_id] = ptx
 
     
     {
@@ -31655,6 +32369,7 @@
     >
 
       #param[base_url] = http://pol.sagepub.com/
+      param[journal_id] = pol
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1981 volume 1 to 1999 volume 19
 
@@ -31687,6 +32402,7 @@
     >
 
     #param[base_url] = http://pas.sagepub.com/
+    param[journal_id] = pas
 
     
     {
@@ -31751,6 +32467,7 @@
     >
 
     #param[base_url] = http://ppe.sagepub.com/
+    param[journal_id] = ppe
 
     
     {
@@ -31786,6 +32503,7 @@
     >
 
       #param[base_url] = http://pae.sagepub.com/
+      param[journal_id] = pae
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2009 ; Power and Education Volume 1 ; 1 ; >
@@ -31808,6 +32526,7 @@
     >
 
     #param[base_url] = http://tpj.sagepub.com/
+    param[journal_id] = tpj
 
     
     {
@@ -31925,6 +32644,7 @@
     >
 
     #param[base_url] = http://prb.sagepub.com/
+    param[journal_id] = prb
 
     
     {
@@ -32005,6 +32725,7 @@
           issn = 1071-1813
       >
         #param[base_url] = http://pro.sagepub.com/
+        param[journal_id] = pro
       {
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
@@ -32067,6 +32788,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://hcs.sagepub.com/
+        param[journal_id] = hcs
 
         au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 ; >
@@ -32084,6 +32806,7 @@
     >
 
     #param[base_url] = http://pia.sagepub.com/
+    param[journal_id] = pia
 
     {
 
@@ -32137,6 +32860,7 @@
     >
 
     #param[base_url] = http://pib.sagepub.com/
+    param[journal_id] = pib
 
     {
 
@@ -32190,6 +32914,7 @@
     >
 
     #param[base_url] = http://pic.sagepub.com/
+    param[journal_id] = pic
 
     {
 
@@ -32243,6 +32968,7 @@
     >
 
     #param[base_url] = http://pid.sagepub.com/
+    param[journal_id] = pid
 
     {
 
@@ -32295,6 +33021,7 @@
     >
 
     #param[base_url] = http://pie.sagepub.com/
+    param[journal_id] = pie
 
     {
 
@@ -32342,6 +33069,7 @@
     >
 
     #param[base_url] = http://pif.sagepub.com/
+    param[journal_id] = pif
 
     {
 
@@ -32389,6 +33117,7 @@
     >
 
     #param[base_url] = http://pig.sagepub.com/
+    param[journal_id] = pig
 
     {
 
@@ -32436,6 +33165,7 @@
     >
 
     #param[base_url] = http://pih.sagepub.com/
+    param[journal_id] = pih
 
     {
 
@@ -32483,6 +33213,7 @@
     >
 
     #param[base_url] = http://pii.sagepub.com/
+    param[journal_id] = pii
 
     {
 
@@ -32528,6 +33259,7 @@
     >
 
     #param[base_url] = http://pij.sagepub.com/
+    param[journal_id] = pij
 
     {
 
@@ -32570,6 +33302,7 @@
     >
 
     #param[base_url] = http://pik.sagepub.com/
+    param[journal_id] = pik
 
     {
 
@@ -32607,6 +33340,7 @@
     >
 
     #param[base_url] = http://pil.sagepub.com/
+    param[journal_id] = pil
 
     {
 
@@ -32644,6 +33378,7 @@
     >
 
     #param[base_url] = http://pim.sagepub.com/
+    param[journal_id] = pim
 
     {
 
@@ -32678,6 +33413,7 @@
     >
 
     #param[base_url] = http://pin.sagepub.com/
+    param[journal_id] = pin
 
     {
 
@@ -32710,6 +33446,7 @@
     >
 
     #param[base_url] = http://pio.sagepub.com/
+    param[journal_id] = pio
 
     {
 
@@ -32740,6 +33477,7 @@
     >
 
       #param[base_url] = http://pip.sagepub.com/
+      param[journal_id] = pip
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 222 ; 222 ; >
@@ -32763,6 +33501,7 @@
     >
 
       #param[base_url] = http://psh.sagepub.com/
+      param[journal_id] = psh
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2010 ; Proceedings of Singapore Healthcare Volume 19 ; 19 ; >
@@ -32784,6 +33523,7 @@
     >
 
     #param[base_url] = http://pdj.sagepub.com/
+    param[journal_id] = pdj
 
     
     {
@@ -32820,6 +33560,7 @@
     >
 
     #param[base_url] = http://phg.sagepub.com/
+    param[journal_id] = phg
 
     
     {
@@ -32880,6 +33621,7 @@
     >
 
     #param[base_url] = http://ppg.sagepub.com/
+    param[journal_id] = ppg
 
     
     {
@@ -32940,6 +33682,7 @@
     >
 
       #param[base_url] = http://pit.sagepub.com/
+      param[journal_id] = pit
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1996 ; Progress in Transplantation Volume 6 ; 6 ; >
@@ -32975,6 +33718,7 @@
     >
 
       #param[base_url] = http://poi.sagepub.com/
+      param[journal_id] = poi
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 ; >
@@ -33029,6 +33773,7 @@
     >
 
     #param[base_url] = http://pss.sagepub.com/
+    param[journal_id] = pss
 
     {
 
@@ -33075,6 +33820,7 @@
     >
 
     #param[base_url] = http://psi.sagepub.com/
+    param[journal_id] = psi
 
     {
 
@@ -33111,6 +33857,7 @@
     >
 
     #param[base_url] = http://pds.sagepub.com/
+    param[journal_id] = pds
 
     
     {
@@ -33159,6 +33906,7 @@
     >
 
       #param[base_url] = http://plj.sagepub.com/
+      param[journal_id] = plj
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2001 ; Psychology Learning & Teaching Volume 1 ; 1 ; >
@@ -33188,6 +33936,7 @@
     >
 
     #param[base_url] = http://pom.sagepub.com/
+    param[journal_id] = pom
 
     
     {
@@ -33249,6 +33998,7 @@
           issn = 0361-6843
       >
         #param[base_url] = http://pwq.sagepub.com/
+        param[journal_id] = pwq
       {
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
@@ -33307,6 +34057,7 @@
     >
 
     #param[base_url] = http://pfr.sagepub.com/
+    param[journal_id] = pfr
 
     
     {
@@ -33372,6 +34123,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://phr.sagepub.com/
+      param[journal_id] = phr
 
       au < exists ; exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; >
 
@@ -33386,6 +34138,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://ppm.sagepub.com/
+      param[journal_id] = ppm
 
       au < exists ; exists ; 1973 ; Public Personnel Management Volume 2 ; 2 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 ; >
@@ -33443,6 +34196,7 @@
     >
 
     #param[base_url] = http://ppa.sagepub.com/
+    param[journal_id] = ppa
 
     
     {
@@ -33495,6 +34249,7 @@
     >
 
       #param[base_url] = http://pri.sagepub.com/
+      param[journal_id] = pri
 
     {
 
@@ -33519,6 +34274,7 @@
     >
 
     #param[base_url] = http://pus.sagepub.com/
+    param[journal_id] = pus
 
     
     {
@@ -33564,6 +34320,7 @@
     >
 
     #param[base_url] = http://pwm.sagepub.com/
+    param[journal_id] = pwm
 
     
     {
@@ -33606,6 +34363,7 @@
 
      #pluginSuffix = ClockssHighWirePressH20Plugin
      #param[base_url] = http://pul.sagepub.com/
+     param[journal_id] = pul
 
      au < exists ; exists ; 2016 ; Pulmonary Circulation Volume 6 ; 6 ; >
 
@@ -33620,6 +34378,7 @@
     >
 
     #param[base_url] = http://pun.sagepub.com/
+    param[journal_id] = pun
 
     
     {
@@ -33658,6 +34417,7 @@
     >
 
     #param[base_url] = http://qhr.sagepub.com/
+    param[journal_id] = qhr
 
     
     {
@@ -33704,6 +34464,7 @@
     >
 
     #param[base_url] = http://qix.sagepub.com/
+    param[journal_id] = qix
 
     
     {
@@ -33746,6 +34507,7 @@
     >
 
     #param[base_url] = http://qrj.sagepub.com/
+    param[journal_id] = qrj
 
     
     {
@@ -33782,6 +34544,7 @@
     >
 
     #param[base_url] = http://qsw.sagepub.com/
+    param[journal_id] = qsw
 
     
     {
@@ -33817,6 +34580,7 @@
     >
 
     #param[base_url] = http://rac.sagepub.com/
+    param[journal_id] = rac
 
     
     {
@@ -33894,6 +34658,7 @@
     >
 
     #param[base_url] = http://raj.sagepub.com/
+    param[journal_id] = raj
 
     {
 
@@ -33919,6 +34684,7 @@
     >
 
     #param[base_url] = http://rss.sagepub.com/
+    param[journal_id] = rss
 
     
     {
@@ -33969,6 +34735,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://rme.sagepub.com/
+        param[journal_id] = rme
 
         au < exists ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 ; >
         au < doNotProcess ; doNotProcess ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 ; >
@@ -33997,6 +34764,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ram.sagepub.com/
+        param[journal_id] = ram
 
         au < exists ; exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 ; >
         au < doNotProcess ; doNotProcess ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 ; >
@@ -34022,6 +34790,7 @@
     >
 
     #param[base_url] = http://rcb.sagepub.com/
+    param[journal_id] = rcb
 
     
     {
@@ -34060,6 +34829,7 @@
     >
 
     #param[base_url] = http://rel.sagepub.com/
+    param[journal_id] = rel
 
     
     {
@@ -34127,6 +34897,7 @@
     >
 
     #param[base_url] = http://rse.sagepub.com/
+    param[journal_id] = rse
 
     
     {
@@ -34180,6 +34951,7 @@
     >
 
     #param[base_url] = http://rsx.sagepub.com/
+    param[journal_id] = rsx
 
     
     {
@@ -34223,6 +34995,7 @@
 
       #pluginSuffix = ClockssHWDrupalPlugin
       #param[base_url] = http://rap.sagepub.com/
+      param[journal_id] = rap
 
       au < exists ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Research & Politics Volume 2 ; 2 ; >
@@ -34239,6 +35012,7 @@
     >
 
       #param[base_url] = http://rea.sagepub.com/
+      param[journal_id] = rea
 
     {
 
@@ -34270,6 +35044,7 @@
     >
 
       #param[base_url] = http://rci.sagepub.com/
+      param[journal_id] = rci
       #pluginSuffix = ClockssHighWirePressH20Plugin
       
       au < exists ; exists ; 2006 ; Research in Comparative and International Education Volume 1 ; 1 ; >
@@ -34295,6 +35070,7 @@
     >
 
       #param[base_url] = http://rie.sagepub.com/
+      param[journal_id] = rie
       #pluginSuffix = ClockssHighWirePressH20Plugin
       
       au < exists ; exists ; 1999 ; Research in Education Volume 61 ; 61 ; >
@@ -34328,6 +35104,7 @@
     >
 
     #param[base_url] = http://roa.sagepub.com/
+    param[journal_id] = roa
 
     
     {
@@ -34386,6 +35163,7 @@
     >
 
     #param[base_url] = http://rsw.sagepub.com/
+    param[journal_id] = rsw
 
     
     {
@@ -34432,6 +35210,7 @@
     >
 
     #param[base_url] = http://rsm.sagepub.com/
+    param[journal_id] = rsm
 
     
     {
@@ -34490,6 +35269,7 @@
     >
 
     #param[base_url] = http://rrn.sagepub.com/
+    param[journal_id] = rrn
 
     {
 
@@ -34512,6 +35292,7 @@
     >
 
     #param[base_url] = http://rae.sagepub.com/
+    param[journal_id] = rae
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1904 ; Review & Expositor Volume 1 ; 1 ; >
@@ -34639,6 +35420,7 @@
     >
 
     #param[base_url] = http://rer.sagepub.com/
+    param[journal_id] = rer
 
     
     {
@@ -34745,6 +35527,7 @@
     >
 
     #param[base_url] = http://rmi.sagepub.com/
+    param[journal_id] = rmi
 
     {
 
@@ -34772,6 +35555,7 @@
     >
 
     #param[base_url] = http://rop.sagepub.com/
+    param[journal_id] = rop
 
     
     {
@@ -34828,6 +35612,7 @@
     >
 
     #param[base_url] = http://rrp.sagepub.com/
+    param[journal_id] = rrp
 
     
     {
@@ -34896,6 +35681,7 @@
     >
 
     #param[base_url] = http://rre.sagepub.com/
+    param[journal_id] = rre
 
     
     {
@@ -34955,6 +35741,7 @@
     >
 
     #param[base_url] = http://rev.sagepub.com/
+    param[journal_id] = rev
 
     {
 
@@ -34985,6 +35772,7 @@
       >
 
         #param[base_url] = http://sgo.sagepub.com/
+        param[journal_id] = sgo
         comment[moved] = changed platforms to Drupal?
 
         {
@@ -35020,6 +35808,7 @@
     >
 
       #param[base_url] = http://son.sagepub.com/
+      param[journal_id] = son
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; >
@@ -35036,6 +35825,7 @@
     >
 
     #param[base_url] = http://sjp.sagepub.com/
+    param[journal_id] = sjp
 
     
     {
@@ -35100,6 +35890,7 @@
     >
 
     #param[base_url] = http://sjs.sagepub.com/
+    param[journal_id] = sjs
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2002 ; Scandinavian Journal of Surgery Volume 91 ; 91 ; >
@@ -35128,6 +35919,7 @@
     >
 
       #param[base_url] = http://sbh.sagepub.com/
+      param[journal_id] = sbh
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 ; >
@@ -35144,6 +35936,7 @@
     >
 
     #param[base_url] = http://spi.sagepub.com/
+    param[journal_id] = spi
 
     
     {
@@ -35201,6 +35994,7 @@
     >
 
     #param[base_url] = http://scx.sagepub.com/
+    param[journal_id] = scx
 
     
     {
@@ -35259,6 +36053,7 @@
     >
 
     #param[base_url] = http://sts.sagepub.com/
+    param[journal_id] = sts
 
     
     {
@@ -35300,6 +36095,7 @@
     >
 
     #param[base_url] = http://sth.sagepub.com/
+    param[journal_id] = sth
 
     
     {
@@ -35342,7 +36138,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Science, Technology & Human Values Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Science, Technology & Human Values Volume 37 ; 37	 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Science, Technology & Human Values Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Science, Technology & Human Values Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Science, Technology & Human Values Volume 40 ; 40 ; >
@@ -35361,6 +36157,7 @@
     >
 
     #param[base_url] = http://slr.sagepub.com/
+    param[journal_id] = slr
 
     
     {
@@ -35413,6 +36210,7 @@
     >
 
     #param[base_url] = http://sdi.sagepub.com/
+    param[journal_id] = sdi
 
     
     {
@@ -35480,6 +36278,7 @@
     >
 
     #param[base_url] = http://scv.sagepub.com/
+    param[journal_id] = scv
 
     
     {
@@ -35520,6 +36319,7 @@
     >
 
     #param[base_url] = http://sax.sagepub.com/
+    param[journal_id] = sax
 
     
     {
@@ -35573,6 +36373,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://sex.sagepub.com/
+      param[journal_id] = sex
 
       comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
       comment[sexualities] = manifest pages reference sex base_url after V12.
@@ -35603,6 +36404,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://sexualities.sagepub.com/
+      param[journal_id] = sexualities
 
       comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
       comment[sexualities] = manifest pages reference sex base_url after V12.
@@ -35634,6 +36436,7 @@
     >
 
     #param[base_url] = http://sme.sagepub.com/
+    param[journal_id] = sme
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; >
@@ -35652,6 +36455,7 @@
     {
 
     #param[base_url] = http://sel.sagepub.com/
+    param[journal_id] = sel
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2009 ; Shoulder & Elbow Volume 1 ; 1 ; >
@@ -35675,6 +36479,7 @@
     >
 
     #param[base_url] = http://sim.sagepub.com/
+    param[journal_id] = sim
 
     
     {
@@ -35787,6 +36592,7 @@
     >
 
     #param[base_url] = http://sag.sagepub.com/
+    param[journal_id] = sag
 
     
     {
@@ -35854,6 +36660,7 @@
     >
 
     #param[base_url] = http://sgr.sagepub.com/
+    param[journal_id] = sgr
 
     
     {
@@ -35921,6 +36728,7 @@
     >
 
     #param[base_url] = http://sls.sagepub.com/
+    param[journal_id] = sls
 
     
     {
@@ -35966,6 +36774,7 @@
     >
 
     #param[base_url] = http://scp.sagepub.com/
+    param[journal_id] = scp
 
     
     {
@@ -36049,6 +36858,7 @@
     >
 
       #param[base_url] = http://scu.sagepub.com/
+      param[journal_id] = scu
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Social Currents Volume 1 ; 1 ; >
@@ -36065,6 +36875,7 @@
     >
 
       #param[base_url] = http://sms.sagepub.com/
+      param[journal_id] = sms
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Social Media + Society Volume 1 ; 1 ; >
@@ -36081,6 +36892,7 @@
     >
 
     #param[base_url] = http://spp.sagepub.com/
+    param[journal_id] = spp
 
     {
 
@@ -36107,6 +36919,7 @@
     >
 
     #param[base_url] = http://spq.sagepub.com/
+    param[journal_id] = spq
 
     {
 
@@ -36139,6 +36952,7 @@
     >
 
     #param[base_url] = http://ssc.sagepub.com/
+    param[journal_id] = ssc
 
     
     {
@@ -36193,6 +37007,7 @@
     >
 
     #param[base_url] = http://ssi.sagepub.com/
+    param[journal_id] = ssi
 
     
     {
@@ -36268,6 +37083,7 @@
     >
 
     #param[base_url] = http://sss.sagepub.com/
+    param[journal_id] = sss
 
     
     {
@@ -36335,6 +37151,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://scs.sagepub.com/
+      param[journal_id] = scs
 
       au < doNotProcess ; doNotProcess ; 2015 ; Society and Culture in South Asia Volume 1 ; 1 ; >
       au < exists ; exists ; 2016 ; Society and Culture in South Asia Volume 2 ; 2 ; >
@@ -36350,6 +37167,7 @@
     >
 
       #param[base_url] = http://smh.sagepub.com/
+      param[journal_id] = smh
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2011 ; Society and Mental Health Volume 1 ; 1 ; >
@@ -36370,6 +37188,7 @@
     >
 
     #param[base_url] = http://smr.sagepub.com/
+    param[journal_id] = smr
 
     
     {
@@ -36435,6 +37254,7 @@
     >
 
     #param[base_url] = http://soc.sagepub.com/
+    param[journal_id] = soc
 
     
     {
@@ -36505,6 +37325,7 @@
     >
 
       #param[base_url] = http://soe.sagepub.com/
+      param[journal_id] = soe
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004 ; Sociology of Education Volume 77 ; 77 ; >
@@ -36532,6 +37353,7 @@
       >
 
       #param[base_url] = http://sre.sagepub.com/
+      param[journal_id] = sre
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Sociology of Race and Ethnicity Volume 1 ; 1 ; >
@@ -36547,6 +37369,7 @@
       >
 
       #param[base_url] = http://srd.sagepub.com/
+      param[journal_id] = srd
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2015 ; Socius: Sociological Research for a Dynamic World Volume 1 ; 1 ; >
@@ -36563,6 +37386,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://sap.sagepub.com/
+      param[journal_id] = sap
 
       au < exists ; exists ; 1979 ; South African Journal of Psychology Volume 9 ; 9 ; >
       au < exists ; exists ; 1980 ; South African Journal of Psychology Volume 10 ; 10 ; >
@@ -36613,6 +37437,7 @@
     >
 
     #param[base_url] = http://sae.sagepub.com/
+    param[journal_id] = sae
 
     
     {
@@ -36646,8 +37471,9 @@
       name = South Asian Journal of Business and Management Cases ;
       issn = 2277-9779
     >
-	
+
       #param[base_url] = http://bmc.sagepub.com/
+      param[journal_id] = bmc
 
     {
 
@@ -36671,6 +37497,7 @@
     >
 
       #param[base_url] = http://hrm.sagepub.com/
+      param[journal_id] = hrm
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 ; >
@@ -36688,6 +37515,7 @@
     >
 
     #param[base_url] = http://sar.sagepub.com/
+    param[journal_id] = sar
 
     
     {
@@ -36743,6 +37571,7 @@
     >
 
     #param[base_url] = http://sas.sagepub.com/
+    param[journal_id] = sas
 
     
     {
@@ -36783,6 +37612,7 @@
     >
 
       #param[base_url] = http://ser.sagepub.com/
+      param[journal_id] = ser
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; >
@@ -36814,6 +37644,7 @@
     >
 
     #param[base_url] = http://sac.sagepub.com/
+    param[journal_id] = sac
 
     
     {
@@ -36853,6 +37684,7 @@
     >
 
     #param[base_url] = http://sph.sagepub.com/
+    param[journal_id] = sph
 
     {
 
@@ -36880,6 +37712,7 @@
     >
 
     #param[base_url] = http://slg.sagepub.com/
+    param[journal_id] = slg
 
     {
 
@@ -36919,6 +37752,7 @@
     >
 
     #param[base_url] = http://spa.sagepub.com/
+    param[journal_id] = spa
 
     {
 
@@ -36954,6 +37788,7 @@
     >
 
     #param[base_url] = http://smm.sagepub.com/
+    param[journal_id] = smm
 
     
     {
@@ -36999,6 +37834,7 @@
     >
 
     #param[base_url] = http://smj.sagepub.com/
+    param[journal_id] = smj
 
     
     {
@@ -37035,6 +37871,7 @@
     >
 
     #param[base_url] = http://soq.sagepub.com/
+    param[journal_id] = soq
 
     
     {
@@ -37069,6 +37906,7 @@
     >
 
     #param[base_url] = http://shm.sagepub.com/
+    param[journal_id] = shm
 
     
     {
@@ -37104,6 +37942,7 @@
     >
 
     #param[base_url] = http://sce.sagepub.com/
+    param[journal_id] = sce
 
     
     {
@@ -37153,6 +37992,7 @@
     >
 
     #param[base_url] = http://sih.sagepub.com/
+    param[journal_id] = sih
 
     
     {
@@ -37207,6 +38047,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://inp.sagepub.com/
+        param[journal_id] = inp
 
         au < doNotProcess ; doNotProcess ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; >
@@ -37225,6 +38066,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://mic.sagepub.com/
+        param[journal_id] = mic
 
         au < doNotProcess ; doNotProcess ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; >
@@ -37243,6 +38085,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://sip.sagepub.com/
+        param[journal_id] = sip
 
         au < doNotProcess ; doNotProcess ; 2014 ; Studies in People's History Volume 1 ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Studies in People's History Volume 2 ; 2 ; >
@@ -37259,6 +38102,7 @@
     >
 
       #param[base_url] = http://sir.sagepub.com/
+      param[journal_id] = sir
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 ; >
@@ -37318,6 +38162,7 @@
     >
 
     #param[base_url] = http://sri.sagepub.com/
+    param[journal_id] = sri
 
     
     {
@@ -37361,6 +38206,7 @@
     >
 
     #param[base_url] = http://tes.sagepub.com/
+    param[journal_id] = tes
 
     
     {
@@ -37421,6 +38267,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://tcx.sagepub.com/
+      param[journal_id] = tcx
 
       au < exists ; exists ; 1968-1969 ; TEACHING Exceptional Children Volume 1 ; 1 ; >
       au < exists ; exists ; 1969-1970 ; TEACHING Exceptional Children Volume 2 ; 2 ; >
@@ -37483,6 +38330,7 @@
     >
 
     #param[base_url] = http://top.sagepub.com/
+    param[journal_id] = top
 
     {
 
@@ -37508,6 +38356,7 @@
     >
 
       #param[base_url] = http://tpa.sagepub.com/
+      param[journal_id] = tpa
 
     {
 
@@ -37560,6 +38409,7 @@
     >
 
     #param[base_url] = http://tso.sagepub.com/
+    param[journal_id] = tso
 
     {
 
@@ -37592,6 +38442,7 @@
     >
 
       #param[base_url] = http://tct.sagepub.com/
+      param[journal_id] = tct
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2002 ; Technology in Cancer Research & Treatment Volume 1 ; 1 ; >
@@ -37621,6 +38472,7 @@
     >
 
     #param[base_url] = http://tvn.sagepub.com/
+    param[journal_id] = tvn
 
     
     {
@@ -37658,6 +38510,7 @@
     >
 
     #param[base_url] = http://trj.sagepub.com/
+    param[journal_id] = trj
 
     
     {
@@ -37764,6 +38617,7 @@
     >
 
     #param[base_url] = http://tsj.sagepub.com/
+    param[journal_id] = tsj
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1940 ; Theological Studies Volume 1 ; 1 ; >
@@ -37855,6 +38709,7 @@
     >
 
     #param[base_url] = http://tjx.sagepub.com/
+    param[journal_id] = tjx
 
     {
 
@@ -37993,6 +38848,7 @@
     >
 
     #param[base_url] = http://tse.sagepub.com/
+    param[journal_id] = tse
 
     {
 
@@ -38026,6 +38882,7 @@
     >
 
     #param[base_url] = http://ttj.sagepub.com/
+    param[journal_id] = ttj
 
     {
 
@@ -38118,6 +38975,7 @@
     >
 
     #param[base_url] = http://tcr.sagepub.com/
+    param[journal_id] = tcr
 
     
     {
@@ -38158,6 +39016,7 @@
     >
 
     #param[base_url] = http://tap.sagepub.com/
+    param[journal_id] = tap
 
     
     {
@@ -38204,6 +39063,7 @@
     >
 
     #param[base_url] = http://tre.sagepub.com/
+    param[journal_id] = tre
 
     
     {
@@ -38238,6 +39098,7 @@
     >
 
     #param[base_url] = http://tcs.sagepub.com/
+    param[journal_id] = tcs
 
     
     {
@@ -38291,6 +39152,7 @@
     >
 
     #param[base_url] = http://tak.sagepub.com/
+    param[journal_id] = tak
 
     
     {
@@ -38321,6 +39183,7 @@
     >
 
     #param[base_url] = http://taj.sagepub.com/
+    param[journal_id] = taj
 
     {
 
@@ -38347,6 +39210,7 @@
     >
 
     #param[base_url] = http://taw.sagepub.com/
+    param[journal_id] = taw
 
     {
 
@@ -38373,6 +39237,7 @@
     >
 
     #param[base_url] = http://tae.sagepub.com/
+    param[journal_id] = tae
 
     {
 
@@ -38399,6 +39264,7 @@
     >
 
     #param[base_url] = http://tag.sagepub.com/
+    param[journal_id] = tag
 
     
     {
@@ -38428,6 +39294,7 @@
     >
 
     #param[base_url] = http://tah.sagepub.com/
+    param[journal_id] = tah
 
     {
 
@@ -38454,6 +39321,7 @@
     >
 
     #param[base_url] = http://tam.sagepub.com/
+    param[journal_id] = tam
 
     
     {
@@ -38482,6 +39350,7 @@
     >
 
     #param[base_url] = http://tab.sagepub.com/
+    param[journal_id] = tab
 
     {
 
@@ -38509,6 +39378,7 @@
     >
 
     #param[base_url] = http://tan.sagepub.com/
+    param[journal_id] = tan
 
     
     {
@@ -38538,6 +39408,7 @@
     >
 
     #param[base_url] = http://tpp.sagepub.com/
+    param[journal_id] = tpp
 
     {
 
@@ -38563,6 +39434,7 @@
     >
 
     #param[base_url] = http://tar.sagepub.com/
+    param[journal_id] = tar
 
     
     {
@@ -38593,6 +39465,7 @@
     >
 
     #param[base_url] = http://tau.sagepub.com/
+    param[journal_id] = tau
 
     
     {
@@ -38624,6 +39497,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://tav.sagepub.com/
+      param[journal_id] = tav
 
       au < doNotProcess ; doNotProcess ; 2013 ; Therapeutic Advances in Vaccines Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Therapeutic Advances in Vaccines Volume 2 ; 2 ; >
@@ -38643,6 +39517,7 @@
     >
 
     #param[base_url] = http://the.sagepub.com/
+    param[journal_id] = the
 
     
     {
@@ -38797,6 +39672,7 @@
     >
 
     #param[base_url] = http://tas.sagepub.com/
+    param[journal_id] = tas
 
     
     {
@@ -38842,6 +39718,7 @@
     >
 
     #param[base_url] = http://tec.sagepub.com/
+    param[journal_id] = tec
 
     
     {
@@ -38898,6 +39775,7 @@
     >
 
       #param[base_url] = http://thr.sagepub.com/
+      param[journal_id] = thr
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 ; >
@@ -38924,6 +39802,7 @@
     >
 
       #param[base_url] = http://teu.sagepub.com/
+      param[journal_id] = teu
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1996 ; Tourism Economics Volume 2 [Sage] ; 2 ; >
@@ -38959,6 +39838,7 @@
     >
 
     #param[base_url] = http://tou.sagepub.com/
+    param[journal_id] = tou
 
     
     {
@@ -38995,6 +39875,7 @@
     >
 
     #param[base_url] = http://tpx.sagepub.com/
+    param[journal_id] = tpx
 
     
     {
@@ -39059,6 +39940,7 @@
     >
 
     #param[base_url] = http://tih.sagepub.com/
+    param[journal_id] = tih
 
     
     {
@@ -39111,6 +39993,7 @@
     >
 
     #param[base_url] = http://tim.sagepub.com/
+    param[journal_id] = tim
 
     
     {
@@ -39169,6 +40052,7 @@
     >
 
     #param[base_url] = http://tps.sagepub.com/
+    param[journal_id] = tps
 
     
     {
@@ -39242,6 +40126,7 @@
     >
 
     #param[base_url] = http://trs.sagepub.com/
+    param[journal_id] = trs
 
     {
 
@@ -39282,6 +40167,7 @@
     >
 
     #param[base_url] = http://trn.sagepub.com/
+    param[journal_id] = trn
 
     
     {
@@ -39335,6 +40221,7 @@
     >
 
       #param[base_url] = http://epi.sagepub.com/
+      param[journal_id] = epi
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2014 ; Translational Epigenomics Volume 1 ; 1 ; >
@@ -39349,6 +40236,7 @@
     >
 
       #param[base_url] = http://too.sagepub.com/
+      param[journal_id] = too
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; Translational Research in Oral Oncology Volume 1 ; 1 ; >
@@ -39364,6 +40252,7 @@
     >
 
     #param[base_url] = http://tra.sagepub.com/
+    param[journal_id] = tra
 
     
     {
@@ -39402,6 +40291,7 @@
     >
 
     #param[base_url] = http://tva.sagepub.com/
+    param[journal_id] = tva
 
     
     {
@@ -39439,6 +40329,7 @@
     >
 
     #param[base_url] = http://tmt.sagepub.com/
+    param[journal_id] = tmt
 
     
     {
@@ -39478,6 +40369,7 @@
     >
 
     #param[base_url] = http://tia.sagepub.com/
+    param[journal_id] = tia
 
     
     {
@@ -39519,6 +40411,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://trc.sagepub.com/
+      param[journal_id] = trc
 
       au < exists ; exists ; 2008 ; Tropical Conservation Science Volume 1 ; 1 ; >
       au < exists ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
@@ -39541,6 +40434,7 @@
     >
 
     #param[base_url] = http://upd.sagepub.com/
+    param[journal_id] = upd
 
     
     {
@@ -39594,6 +40488,7 @@
     >
 
     #param[base_url] = http://uar.sagepub.com/
+    param[journal_id] = uar
 
     
     {
@@ -39666,6 +40561,7 @@
     >
 
     #param[base_url] = http://uex.sagepub.com/
+    param[journal_id] = uex
 
     
     {
@@ -39737,6 +40633,7 @@
     >
 
     #param[base_url] = http://usj.sagepub.com/
+    param[journal_id] = usj
 
     
     {
@@ -39810,6 +40707,7 @@
     >
 
     #param[base_url] = http://ves.sagepub.com/
+    param[journal_id] = ves
 
     
     {
@@ -39881,6 +40779,7 @@
     >
 
     #param[base_url] = http://vmj.sagepub.com/
+    param[journal_id] = vmj
 
     
     {
@@ -39928,6 +40827,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://vet.sagepub.com/
+        param[journal_id] = vet
 
         au < exists ; exists ; 1964 ; Pathologia veterinaria Volume 1 ; 1 ; >
         au < exists ; exists ; 1965 ; Pathologia veterinaria Volume 2 ; 2 ; >
@@ -39950,6 +40850,7 @@
     >
 
        #param[base_url] = http://vet.sagepub.com/
+       param[journal_id] = vet
        comment[continues] = Pathologia veterinaria
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
@@ -40012,6 +40913,7 @@
     >
 
       #param[base_url] = http://vik.sagepub.com/
+      param[journal_id] = vik
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1976 volume 1 to 1999 volume 24
 
@@ -40029,6 +40931,7 @@
     >
 
     #param[base_url] = http://vaw.sagepub.com/
+    param[journal_id] = vaw
 
     
     {
@@ -40072,6 +40975,7 @@
     >
 
     #param[base_url] = http://vcj.sagepub.com/
+    param[journal_id] = vcj
 
     
     {
@@ -40108,6 +41012,7 @@
     >
 
     #param[base_url] = http://wih.sagepub.com/
+    param[journal_id] = wih
 
     
     {
@@ -40152,6 +41057,7 @@
     >
 
     #param[base_url] = http://wmr.sagepub.com/
+    param[journal_id] = wmr
 
     
     {
@@ -40207,6 +41113,7 @@
     >
 
     #param[base_url] = http://wjn.sagepub.com/
+    param[journal_id] = wjn
 
     
     {
@@ -40266,6 +41173,7 @@
     >
 
       #param[base_url] = http://wie.sagepub.com/
+      param[journal_id] = wie
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
@@ -40297,6 +41205,7 @@
     >
 
     #param[base_url] = http://wom.sagepub.com/
+    param[journal_id] = wom
 
     
     {
@@ -40346,6 +41255,7 @@
     >
 
     #param[base_url] = http://wox.sagepub.com/
+    param[journal_id] = wox
 
     
     {
@@ -40410,6 +41320,7 @@
     >
 
     #param[base_url] = http://wes.sagepub.com/
+    param[journal_id] = wes
 
     
     {
@@ -40462,6 +41373,7 @@
     >
 
       #param[base_url] = http://whs.sagepub.com/
+      param[journal_id] = whs
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2006 ; Workplace Health & Safety Volume 54 ; 54 ; >
@@ -40488,6 +41400,7 @@
     >
 
       #param[base_url] = http://waf.sagepub.com/
+      param[journal_id] = waf
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; >
@@ -40504,6 +41417,7 @@
     >
 
     #param[base_url] = http://pch.sagepub.com/
+    param[journal_id] = pch
 
     {
 
@@ -40531,6 +41445,7 @@
     >
 
     #param[base_url] = http://wpj.sagepub.com/
+    param[journal_id] = wpj
 
     {
 
@@ -40560,6 +41475,7 @@
     >
 
     #param[base_url] = http://wcx.sagepub.com/
+    param[journal_id] = wcx
 
     
     {
@@ -40614,6 +41530,7 @@
     >
 
     #param[base_url] = http://you.sagepub.com/
+    param[journal_id] = you
 
     
     {
@@ -40658,6 +41575,7 @@
     >
 
     #param[base_url] = http://yec.sagepub.com/
+    param[journal_id] = yec
 
     {
 
@@ -40697,6 +41615,7 @@
     >
 
     #param[base_url] = http://yas.sagepub.com/
+    param[journal_id] = yas
 
     
     {
@@ -40766,6 +41685,7 @@
     >
 
     #param[base_url] = http://yjj.sagepub.com/
+    param[journal_id] = yjj
 
     
     {
@@ -40803,6 +41723,7 @@
     >
 
     #param[base_url] = http://yvj.sagepub.com/
+    param[journal_id] = yvj
 
     {
 
@@ -40836,6 +41757,7 @@
     >
 
     #param[base_url] = http://eim.sagepub.com/
+    param[journal_id] = eim
 
     {
 
@@ -40871,6 +41793,7 @@
     >
 
     #param[base_url] = http://gct.sagepub.com/
+    param[journal_id] = gct
 
     {
 
@@ -40930,6 +41853,7 @@
     >
 
     #param[base_url] = http://int.sagepub.com/
+    param[journal_id] = int
 
     {
 
@@ -41019,6 +41943,7 @@
     >
 
     #param[base_url] = http://jeg.sagepub.com/
+    param[journal_id] = jeg
 
     {
 
@@ -41062,6 +41987,7 @@
     >
 
     #param[base_url] = http://joi.sagepub.com/
+    param[journal_id] = joi
 
     {
 
@@ -41089,6 +42015,7 @@
     >
 
     #param[base_url] = http://jms.sagepub.com/
+    param[journal_id] = jms
 
     {
 
@@ -41131,6 +42058,7 @@
     >
 
     #param[base_url] = http://ldq.sagepub.com/
+    param[journal_id] = ldq
 
     {
 
@@ -41172,6 +42100,7 @@
     >
 
     #param[base_url] = http://pnz.sagepub.com/
+    param[journal_id] = pnz
 
     {
 
@@ -41258,6 +42187,7 @@
     >
 
     #param[base_url] = http://pau.sagepub.com/
+    param[journal_id] = pau
 
     {
 
@@ -41317,6 +42247,7 @@
     >
 
     #param[base_url] = http://pme.sagepub.com/
+    param[journal_id] = pme
 
     {
 
@@ -41530,6 +42461,7 @@
     >
 
     #param[base_url] = http://pad.sagepub.com/
+    param[journal_id] = pad
 
     {
 
@@ -41573,6 +42505,7 @@
     >
 
     #param[base_url] = http://pcp.sagepub.com/
+    param[journal_id] = pcp
 
     {
 
@@ -41599,6 +42532,7 @@
     >
 
     #param[base_url] = http://sch.sagepub.com/
+    param[journal_id] = sch
 
     {
 
@@ -41636,6 +42570,7 @@
     >
 
     #param[base_url] = http://smq.sagepub.com/
+    param[journal_id] = smq
 
     {
 
@@ -41674,6 +42609,7 @@
     >
 
     #param[base_url] = http://smx.sagepub.com/
+    param[journal_id] = smx
 
     {
 
@@ -41704,6 +42640,7 @@
     >
 
     #param[base_url] = http://stx.sagepub.com/
+    param[journal_id] = stx
 
     {
 
@@ -41734,6 +42671,7 @@
     >
 
     #param[base_url] = http://uix.sagepub.com/
+    param[journal_id] = uix
 
     {
 
@@ -41791,6 +42729,7 @@
     >
 
       #param[base_url] = http://vis.sagepub.com/
+      param[journal_id] = vis
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1997 ; Vision: The Journal of Business Perspective Volume 1 ; 1 ; >
@@ -41827,6 +42766,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://aed.sagepub.com/
+      param[journal_id] = aed
 
       au < exists ; exists ; 1957 ; Australian Journal of Education Volume 1 ; 1 ; >
       au < exists ; exists ; 1958 ; Australian Journal of Education Volume 2 ; 2 ; >
@@ -41902,6 +42842,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://aaf.sagepub.com/
+    param[journal_id] = aaf
 
     au < exists ; exists ; 1977 ; Adoption & Fostering Volume 87 ; 87 ; >
     au < exists ; exists ; 1977 ; Adoption & Fostering Volume 88 ; 88 ; >
@@ -41971,6 +42912,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://abr.sagepub.com/
+    param[journal_id] = abr
 
     # Jan 2012 name changed from Asia Pacific Business Review to Asia-Pacific Journal of Management Research and Innovation
 
@@ -41998,6 +42940,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://asn.sagepub.com/
+    param[journal_id] = asn
 
     au < exists ; exists ; 2009 ; ASN NEURO Volume 1 ; 1 ; >
     au < exists ; exists ; 2010 ; ASN NEURO Volume 2 ; 2 ; >
@@ -42021,6 +42964,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://acd.sagepub.com/
+    param[journal_id] = acd
 
     au < exists ; exists ; 1992 ; Australian Journal of Career Development Volume 1 ; 1 ; >
     au < exists ; exists ; 1993 ; Australian Journal of Career Development Volume 2 ; 2 ; >
@@ -42060,6 +43004,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://aip.sagepub.com/
+    param[journal_id] = aip
 
     au < doNotProcess ; doNotProcess ; 2013 ; AADE in Practice Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; AADE in Practice Volume 2 ; 2 ; >
@@ -42078,6 +43023,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://ani.sagepub.com/
+    param[journal_id] = ani
 
     au < doNotProcess ; doNotProcess ; 1977 ; Annals of the ICRP Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1978-1979 ; Annals of the ICRP Volume 2 ; 2 ; >
@@ -42136,6 +43082,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://spx.sagepub.com/
+    param[journal_id] = spx
 
     au < exists ; exists ; 1971 ; Sociological Perspectives Volume 14 ; 14 ; >
     au < exists ; exists ; 1972 ; Sociological Perspectives Volume 15 ; 15 ; >
@@ -42197,6 +43144,7 @@
     comment[upcoming] = online 2013
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://brj.sagepub.com/
+    param[journal_id] = brj
 
     au < doNotProcess ; doNotProcess ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 ; >
@@ -42217,6 +43165,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://cjo.sagepub.com/
+    param[journal_id] = cjo
 
     au < exists ; exists ; 1933-1934 ; Canadian Journal of Occupational Therapy Volume 1 ; 1 ; >
     au < exists ; exists ; 1934-1935 ; Canadian Journal of Occupational Therapy Volume 2 ; 2 ; >
@@ -42314,6 +43263,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://cph.sagepub.com/
+    param[journal_id] = cph
 
     au < exists ; exists ; 2004 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 137 ; 137 ; >
     au < exists ; exists ; 2005 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 138 ; 138 ; >
@@ -42342,6 +43292,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://com.sagepub.com/
+    param[journal_id] = com
 
     au < doNotProcess ; doNotProcess ; 2013 ; Communication & Sport Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Communication & Sport Volume 2 ; 2 ; >
@@ -42361,6 +43312,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://crr.sagepub.com/
+    param[journal_id] = crr
 
     au < doNotProcess ; doNotProcess ; 2013 ; Critical Research on Religion Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Critical Research on Religion Volume 2 ; 2 ; >
@@ -42378,6 +43330,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://dsp.sagepub.com/
+    param[journal_id] = dsp
     
     au < doNotProcess ; doNotProcess ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
     au < exists ; exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
@@ -42395,6 +43348,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://eax.sagepub.com/
+    param[journal_id] = eax
 
     au < doNotProcess ; doNotProcess ; 2013 ; Emerging Adulthood Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Emerging Adulthood Volume 2 ; 2 ; >
@@ -42414,6 +43368,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://fai.sagepub.com/
+    param[journal_id] = fai
 
     au < doNotProcess ; doNotProcess ; 1980-1981 ; Foot & Ankle International Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1981-1982 ; Foot & Ankle International Volume 2 ; 2 ; >
@@ -42466,6 +43421,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://foi.sagepub.com/
+    param[journal_id] = foi
 
     au < doNotProcess ; doNotProcess ; 1967 ; Forum Italicum: A Journal of Italian Studies Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1968 ; Forum Italicum: A Journal of Italian Studies Volume 2 ; 2 ; >
@@ -42529,6 +43485,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://ftr.sagepub.com/
+    param[journal_id] = ftr
     #content available from 1966 volume 1 to 1999 volume 34
 
     au < exists ; exists ; 2000 ; Foreign Trade Review Volume 35 ; 35 ; >
@@ -42562,6 +43519,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://hic.sagepub.com/
+    param[journal_id] = hic
 
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Investigative Medicine High Impact Case Reports Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Investigative Medicine High Impact Case Reports Volume 2 ; 2 ; >
@@ -42581,6 +43539,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://imr.sagepub.com/
+    param[journal_id] = imr
 
     au < doNotProcess ; doNotProcess ; 1972-1973 ; Journal of International Medical Research Volume 1 ; 1 ; >
     au < exists ; exists ; 1974 ; Journal of International Medical Research Volume 2 ; 2 ; >
@@ -42642,6 +43601,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ino.sagepub.com/
+        param[journal_id] = ino
         comment[title] = name changed from InnovAiT: The RCGP Journal for Associates in Training to InnovAiT: Education and inspiration for general practice
 
         au < doNotProcess ; doNotProcess ; 2008 ; InnovAiT: The RCGP Journal for Associates in Training Volume 1 ; 1 ; >
@@ -42682,6 +43642,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://mis.sagepub.com/
+    param[journal_id] = mis
 
     au < exists ; exists ; 1973 ; Missiology: An International Review Volume 1 ; 1 ; >
     au < exists ; exists ; 1974 ; Missiology: An International Review Volume 2 ; 2 ; >
@@ -42741,6 +43702,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://mmc.sagepub.com/
+    param[journal_id] = mmc
 
     au < doNotProcess ; doNotProcess ; 2013 ; Mobile Media & Communication Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Mobile Media & Communication Volume 2 ; 2 ; >
@@ -42760,6 +43722,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://paa.sagepub.com/
+    param[journal_id] = paa
 
     au < doNotProcess ; doNotProcess ; 1988 ; Pacifica: Australasian Theological Studies Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; Pacifica: Australasian Theological Studies Volume 2 ; 2 ; >
@@ -42802,6 +43765,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://sco.sagepub.com/
+    param[journal_id] = sco
 
     au < doNotProcess ; doNotProcess ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; SAGE Open Medical Case Reports Volume 2 ; 2 ; >
@@ -42819,6 +43783,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://smo.sagepub.com/
+    param[journal_id] = smo
 
     au < doNotProcess ; doNotProcess ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
@@ -42837,6 +43802,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://smp.sagepub.com/
+    param[journal_id] = smp
 
     au < doNotProcess ; doNotProcess ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
@@ -42857,6 +43823,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://tai.sagepub.com/
+    param[journal_id] = tai
 
     au < doNotProcess ; doNotProcess ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Therapeutic Advances in Infectious Disease Volume 2 ; 2 ; >
@@ -42876,6 +43843,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://ueg.sagepub.com/
+    param[journal_id] = ueg
 
     au < doNotProcess ; doNotProcess ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; United European Gastroenterology Journal Volume 2 ; 2 ; >
@@ -42894,6 +43862,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://uro.sagepub.com/
+      param[journal_id] = uro
 
       # Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
 
@@ -42919,6 +43888,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://wfr.sagepub.com/
+    param[journal_id] = wfr
 
     au < exists ; exists ; 2009 ; World Future Review Volume 1 ; 1 ; >
     au < exists ; exists ; 2010 ; World Future Review Volume 2 ; 2 ; >
@@ -42940,6 +43910,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://ojs.sagepub.com/
+    param[journal_id] = ojs
 
     au < doNotProcess ; doNotProcess ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Orthopaedic Journal of Sports Medicine Volume 2 ; 2 ; >
@@ -42957,6 +43928,7 @@
 
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://tax.sagepub.com/
+    param[journal_id] = tax
 
     au < exists ; exists ; 1971 ; Transactional Analysis Journal Volume 1 ; 1 ; >
     au < exists ; exists ; 1972 ; Transactional Analysis Journal Volume 2 ; 2 ; >
@@ -43026,6 +43998,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://acr.sagepub.com/
+        param[journal_id] = acr
 
         au < exists ; exists ; 1961 ; Acta Radiologica Volume volos-55 ; volos-55 ; >
         au < exists ; exists ; 1961 ; Acta Radiologica Volume volos-56 ; volos-56 ; >
@@ -43102,6 +44075,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://acb.sagepub.com/
+        param[journal_id] = acb
 
         au < exists ; exists ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 ; >
         au < exists ; exists ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 ; >
@@ -43137,6 +44111,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://cet.sagepub.com/
+        param[journal_id] = cet
 
         au < exists ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
         au < exists ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
@@ -43164,6 +44139,7 @@
         comment[notmoved] = not yet moved to Sage.
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://cri.sagepub.com/
+        param[journal_id] = cri
 
         au < exists ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 ; >
         au < exists ; exists ; 2002 ; Clinical Risk Volume 8 ; 8 ; >
@@ -43194,6 +44170,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ebm.sagepub.com/
+        param[journal_id] = ebm
 
         au < exists ; exists ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 ; >
         au < exists ; exists ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 ; >
@@ -43451,6 +44428,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://hth.sagepub.com/
+        param[journal_id] = hth
 
         au < exists ; exists ; 2001 ; Hand Therapy Volume 6 ; 6 ; >
         au < exists ; exists ; 2002 ; Hand Therapy Volume 7 ; 7 ; >
@@ -43484,6 +44462,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://hsm.sagepub.com/
+        param[journal_id] = hsm
 
         au < exists ; exists ; 2001 ; Health Services Management Research Volume 14 ; 14 ; >
         au < exists ; exists ; 2002 ; Health Services Management Research Volume 15 ; 15 ; >
@@ -43518,6 +44497,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ijx.sagepub.com/
+        param[journal_id] = ijx
 
         au < exists ; exists ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 ; >
         au < exists ; exists ; 1947 ; International Journal: Canada's Journal of Global Policy Analysis Volume 2 ; 2 ; >
@@ -43605,6 +44585,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://icp.sagepub.com/
+        param[journal_id] = icp
         comment[continues] = 2040-4026
 
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
@@ -43626,6 +44607,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://icp.sagepub.com/
+        param[journal_id] = icp
         comment[continued_by] = 2053-4354
 
         au < exists ; exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 ; >
@@ -43662,6 +44644,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://nan.sagepub.com/
+        param[journal_id] = nan
 
         au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Green Nanotechnology Volume 1 [Sage] ; 1 ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Green Nanotechnology Volume 2 [Sage] ; 2 ; >
@@ -43681,6 +44664,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ijh.sagepub.com/
+        param[journal_id] = ijh
 
         au < exists ; exists ; 1989 ; International Journal of Maritime History Volume 1 ; 1 ; >
         au < exists ; exists ; 1990 ; International Journal of Maritime History Volume 2 ; 2 ; >
@@ -43724,6 +44708,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://std.sagepub.com/
+        param[journal_id] = std
 
         au < exists ; exists ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 ; >
         au < exists ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 ; >
@@ -43760,6 +44745,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://hsr.sagepub.com/
+        param[journal_id] = hsr
 
         au < exists ; exists ; 1996 ; Journal of Health Services Research & Policy Volume 1 ; 1 ; >
         au < exists ; exists ; 1997 ; Journal of Health Services Research & Policy Volume 2 ; 2 ; >
@@ -43797,6 +44783,7 @@
       {
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://jmb.sagepub.com/
+        param[journal_id] = jmb
 
         au < exists ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
         au < exists ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
@@ -43826,6 +44813,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://msc.sagepub.com/
+        param[journal_id] = msc
 
         au < exists ; exists ; 1994 ; Journal of Medical Screening Volume 1 ; 1 ; >
         au < exists ; exists ; 1995 ; Journal of Medical Screening Volume 2 ; 2 ; >
@@ -43865,6 +44853,7 @@
       {
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://jtt.sagepub.com/
+        param[journal_id] = jtt
 
         au < exists ; exists ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 ; >
         au < exists ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; >
@@ -43906,6 +44895,7 @@
       {
 
         #param[base_url] = http://jrs.sagepub.com/
+        param[journal_id] = jrs
 
         au < exists ; exists ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 ; >
         au < exists ; exists ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 ; >
@@ -44120,6 +45110,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://cvd.sagepub.com/
+      param[journal_id] = cvd
 
       au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
@@ -44138,6 +45129,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://shr.sagepub.com/
+        param[journal_id] = shr
         # Title change in 2014, same base_url
         comment[continued_by] = 2054-2704
 
@@ -44157,6 +45149,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://shr.sagepub.com/
+        param[journal_id] = shr
         comment[continues] = 2042-5333
 
         au < doNotProcess ; doNotProcess ; 2014 ; JRSM Open Volume 5 ; 5 ; >
@@ -44179,6 +45172,7 @@
       {
 
         #param[base_url] = http://lan.sagepub.com/
+        param[journal_id] = lan
 
         au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; >
         au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; >
@@ -44245,6 +45239,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://msl.sagepub.com/
+        param[journal_id] = msl
 
         au < exists ; exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 ; >
         au < exists ; exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 ; >
@@ -44274,6 +45269,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://min.sagepub.com/
+        param[journal_id] = min
         comment[continued_by] = 2053-3691
 
         au < exists ; exists ; 2000 ; Menopause International Volume 6 ; 6 ; >
@@ -44304,6 +45300,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://min.sagepub.com/
+        param[journal_id] = min
         comment[continues] = 1754-0453
 
         au < doNotProcess ; doNotProcess ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; >
@@ -44325,6 +45322,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://obm.sagepub.com/
+        param[journal_id] = obm
 
         au < exists ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
         au < exists ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
@@ -44354,6 +45352,7 @@
       {
 
         #param[base_url] = http://phl.sagepub.com/
+        param[journal_id] = phl
 
         au < exists ; exists ; 2003 ; Phlebology Volume 18 ; 18 ; >
         au < exists ; exists ; 2004 ; Phlebology Volume 19 ; 19 ; >
@@ -44384,6 +45383,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://scm.sagepub.com/
+      param[journal_id] = scm
 
       au < exists ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
       au < exists ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
@@ -44412,6 +45412,7 @@
       {
 
         #param[base_url] = http://tdo.sagepub.com/
+        param[journal_id] = tdo
 
         au < exists ; exists ; 2005 ; Tropical Doctor Volume 35 ; 35 ; >
         au < exists ; exists ; 2006 ; Tropical Doctor Volume 36 ; 36 ; >
@@ -44440,6 +45441,7 @@
 
         #pluginSuffix = ClockssHighWirePressH20Plugin
         #param[base_url] = http://ult.sagepub.com/
+        param[journal_id] = ult
 
         au < exists ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
         au < exists ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
@@ -44466,6 +45468,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://urb.sagepub.com/
+      param[journal_id] = urb
 
       au < exists ; exists ; 2016 ; Urbanisation Volume 1 ; 1 ; >
 
@@ -44481,6 +45484,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://vas.sagepub.com/
+      param[journal_id] = vas
 
       au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
       au < exists ; exists ; 2005 ; Vascular Volume 13 ; 13 ; >
@@ -44508,6 +45512,7 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #param[base_url] = http://whe.sagepub.com/
+      param[journal_id] = whe
 
       au < exists ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
 
@@ -44523,6 +45528,7 @@
     #Ammons http://www.amsci.com/journals/
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://cop.sagepub.com/
+    param[journal_id] = cop
  
     au < doNotProcess ; doNotProcess ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Comprehensive Psychology Volume 2 ; 2 ; >
@@ -44555,6 +45561,7 @@
     #Ammons http://www.amsci.com/journals/
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://prx.sagepub.com/
+    param[journal_id] = prx
  
     au < doNotProcess ; doNotProcess ; 1955 ; Psychological Reports Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1956 ; Psychological Reports Volume 2 ; 2 ; >
@@ -44689,6 +45696,7 @@
     #Ammons http://www.amsci.com/journals/
     #pluginSuffix = ClockssHighWirePressH20Plugin
     #param[base_url] = http://pms.sagepub.com/
+    param[journal_id] = pms
 
     au < doNotProcess ; doNotProcess ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 ; >
