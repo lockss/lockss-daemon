@@ -612,6 +612,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif (($plugin eq "TaylorAndFrancisPlugin") ||
+           ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "AIAAPlugin") ||
            ($plugin eq "AllenPressJournalsPlugin") ||
            ($plugin eq "AmPublicHealthAssocPlugin") ||
@@ -664,6 +665,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
+           ($plugin eq "ClockssGenericAtyponPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
            ($plugin eq "ClockssAllenPressJournalsPlugin") ||
            ($plugin eq "ClockssAMetSocPlugin") ||
@@ -718,7 +720,8 @@ while (my $line = <>) {
         sleep(4);
 
   # the non-Clockss Atypon Books plugins go here
-  } elsif (($plugin eq "AIAABooksPlugin") ||
+  } elsif (($plugin eq "GenericAtyponBooksPlugin") ||
+           ($plugin eq "AIAABooksPlugin") ||
            ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||
@@ -775,7 +778,8 @@ while (my $line = <>) {
         sleep(4);
 
   # the CLOCKSS Atypon Books plugins go here
-  } elsif (($plugin eq "ClockssAIAABooksPlugin") ||
+  } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
+           ($plugin eq "ClockssAIAABooksPlugin") ||
            ($plugin eq "ClockssEmeraldGroupBooksPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") ||
            ($plugin eq "ClockssFutureScienceBooksPlugin") ||
