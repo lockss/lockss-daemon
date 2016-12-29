@@ -52,8 +52,8 @@
     au < manifest ; 1998 ; Bulletin of the American Meteorological Society Volume 79 ; 79 >
     au < manifest ; 1999 ; Bulletin of the American Meteorological Society Volume 80 ; 80 >
     au < testing ; 2000 ; Bulletin of the American Meteorological Society Volume 81 ; 81 >
-    au < testing ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 >
-    au < testing ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 >
+    au < ready ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 >
+    au < ready ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 >
     au < testing ; 2003 ; Bulletin of the American Meteorological Society Volume 84 ; 84 >
     au < testing ; 2004 ; Bulletin of the American Meteorological Society Volume 85 ; 85 >
     au < released ; 2005 ; Bulletin of the American Meteorological Society Volume 86 ; 86 >
@@ -81,8 +81,8 @@
     
     param[journal_id] = eint
   
-    au < testing ; 1997 ; Earth Interactions Volume 1 ; 1 >
-    au < testing ; 1998 ; Earth Interactions Volume 2 ; 2 >
+    au < ready ; 1997 ; Earth Interactions Volume 1 ; 1 >
+    au < ready ; 1998 ; Earth Interactions Volume 2 ; 2 >
     au < testing ; 1999 ; Earth Interactions Volume 3 ; 3 >
     au < testing ; 2000 ; Earth Interactions Volume 4 ; 4 >
     au < testing ; 2001 ; Earth Interactions Volume 5 ; 5 >
