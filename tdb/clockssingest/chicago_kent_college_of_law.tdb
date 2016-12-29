@@ -11,7 +11,6 @@
   # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
   implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-  # journal changed base_url.
 
   {
   
@@ -31,6 +30,27 @@
       au < frozen ; exists ; 2014-2015 ; Seventh Circuit Review Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015-2016 ; Seventh Circuit Review Volume 11 ; 11 ; >
       au < exists ; exists ; 2016 ; Seventh Circuit Review Volume 12 ; 12 ; >
+    
+    }
+  
+  {
+  
+    title <
+      name = Journal of Intellectual Property ;
+      eissn = 1559-9493
+    >
+      
+      #Journal added per RT 8018
+      param[base_url] = http://scholarship.kentlaw.iit.edu/
+      param[journal_abbr] = ckjip
+
+      au < exists ; exists ; 2010-2011 ; Journal of Intellectual Property Volume 10 ; 10 ; >
+      au < exists ; exists ; 2011-2012 ; Journal of Intellectual Property Volume 11 ; 11 ; >
+      au < exists ; exists ; 2012-2013 ; Journal of Intellectual Property Volume 12 ; 12 ; >
+      au < exists ; exists ; 2013-2014 ; Journal of Intellectual Property Volume 13 ; 13 ; >
+      au < exists ; exists ; 2014-2015 ; Journal of Intellectual Property Volume 14 ; 14 ; >
+      au < exists ; exists ; 2016 ; Journal of Intellectual Property Volume 15 ; 15 ; >
+      au < exists ; exists ; 2016 ; Journal of Intellectual Property Volume 16 ; 16 ; >
     
     }
   
