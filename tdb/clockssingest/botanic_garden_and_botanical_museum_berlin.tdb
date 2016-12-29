@@ -39,9 +39,10 @@
       au < manifest ; exists ; 2011 ; Willdenowia Volume 41 ; 41 ; >
       au < manifest ; exists ; 2012 ; Willdenowia Volume 42 ; 42 ; >
       au < manifest ; exists ; 2013 ; Willdenowia Volume 43 ; 43 ; >
-      au < crawling ; exists ; 2014 ; Willdenowia Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2015 ; Willdenowia Volume 45 ; 45 ; >
+      au < deepCrawl ; exists ; 2014 ; Willdenowia Volume 44 ; 44 ; >
+      au < deepCrawl ; exists ; 2015 ; Willdenowia Volume 45 ; 45 ; >
       au < testing ; exists ; 2016 ; Willdenowia Volume 46 ; 46 ; >
+      au < expected ; exists ; 2017 ; Willdenowia Volume 47 ; 47 ; >
 
     }
 
