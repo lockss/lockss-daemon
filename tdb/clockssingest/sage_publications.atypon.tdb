@@ -25,7 +25,7 @@
     >
 
       #param[base_url] = http://aax.sagepub.com/
-      param[journal_id] = aax
+      param[journal_id] = aaxa
       #pluginSuffix = ClockssHighWirePressH20Plugin
       # content available from 1970 volume 1 to 1999 volume 39
 
@@ -69,7 +69,7 @@
     >
 
     #param[base_url] = http://ach.sagepub.com/
-    param[journal_id] = ach
+    param[journal_id] = acha
 
     {
 
@@ -110,7 +110,7 @@
     >
 
     #param[base_url] = http://asj.sagepub.com/
-    param[journal_id] = asj
+    param[journal_id] = asja
 
     {
 
@@ -188,7 +188,7 @@
      >
 
        #param[base_url] = http://arr.sagepub.com/
-       param[journal_id] = arr
+       param[journal_id] = arra
        #pluginSuffix = ClockssHighWirePressH20Plugin
 
        au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
@@ -208,7 +208,7 @@
     >
 
     #param[base_url] = http://arj.sagepub.com/
-    param[journal_id] = arj
+    param[journal_id] = arja
 
     {
 
@@ -242,7 +242,7 @@
     >
 
     #param[base_url] = http://alh.sagepub.com/
-    param[journal_id] = alh
+    param[journal_id] = alha
 
     {
 
@@ -279,7 +279,7 @@
     >
 
     #param[base_url] = http://adb.sagepub.com/
-    param[journal_id] = adb
+    param[journal_id] = adba
 
     {
 
@@ -323,7 +323,7 @@
     >
 
     #param[base_url] = http://aas.sagepub.com/
-    param[journal_id] = aas
+    param[journal_id] = aasa
 
     {
 
@@ -391,7 +391,7 @@
     >
 
       #param[base_url] = http://asq.sagepub.com/
-      param[journal_id] = asq
+      param[journal_id] = asqa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 1999 ; Administrative Science Quarterly Volume 44 ; 44 ; >
@@ -424,7 +424,7 @@
     >
 
       #param[base_url] = http://adt.sagepub.com/
-      param[journal_id] = adt
+      param[journal_id] = adta
       #pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1984 volume 1 to 1999 volume 17
 
@@ -458,7 +458,7 @@
     # this title was previously published by Hindawi and apparently moved to Sage in 2015
     # though Sage has archived back volumes
       #param[base_url] = http://ade.sagepub.com/
-      param[journal_id] = ade
+      param[journal_id] = adea
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Mechanical Engineering Volume 1 ; 1 ; >
@@ -481,7 +481,7 @@
     >
 
     #param[base_url] = http://aeq.sagepub.com/
-    param[journal_id] = aeq
+    param[journal_id] = aeqa
 
     {
 
