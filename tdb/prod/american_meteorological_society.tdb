@@ -51,11 +51,11 @@
     au < manifest ; 1997 ; Bulletin of the American Meteorological Society Volume 78 ; 78 >
     au < manifest ; 1998 ; Bulletin of the American Meteorological Society Volume 79 ; 79 >
     au < manifest ; 1999 ; Bulletin of the American Meteorological Society Volume 80 ; 80 >
-    au < manifest ; 2000 ; Bulletin of the American Meteorological Society Volume 81 ; 81 >
-    au < manifest ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 >
-    au < manifest ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 >
-    au < manifest ; 2003 ; Bulletin of the American Meteorological Society Volume 84 ; 84 >
-    au < manifest ; 2004 ; Bulletin of the American Meteorological Society Volume 85 ; 85 >
+    au < testing ; 2000 ; Bulletin of the American Meteorological Society Volume 81 ; 81 >
+    au < testing ; 2001 ; Bulletin of the American Meteorological Society Volume 82 ; 82 >
+    au < testing ; 2002 ; Bulletin of the American Meteorological Society Volume 83 ; 83 >
+    au < testing ; 2003 ; Bulletin of the American Meteorological Society Volume 84 ; 84 >
+    au < testing ; 2004 ; Bulletin of the American Meteorological Society Volume 85 ; 85 >
     au < released ; 2005 ; Bulletin of the American Meteorological Society Volume 86 ; 86 >
     au < released ; 2006 ; Bulletin of the American Meteorological Society Volume 87 ; 87 >
     au < released ; 2007 ; Bulletin of the American Meteorological Society Volume 88 ; 88 >
@@ -81,14 +81,14 @@
     
     param[journal_id] = eint
   
-    au < manifest ; 1997 ; Earth Interactions Volume 1 ; 1 >
-    au < manifest ; 1998 ; Earth Interactions Volume 2 ; 2 >
-    au < manifest ; 1999 ; Earth Interactions Volume 3 ; 3 >
-    au < manifest ; 2000 ; Earth Interactions Volume 4 ; 4 >
-    au < manifest ; 2001 ; Earth Interactions Volume 5 ; 5 >
-    au < manifest ; 2002 ; Earth Interactions Volume 6 ; 6 >
-    au < manifest ; 2003 ; Earth Interactions Volume 7 ; 7 >
-    au < manifest ; 2004 ; Earth Interactions Volume 8 ; 8 >
+    au < testing ; 1997 ; Earth Interactions Volume 1 ; 1 >
+    au < testing ; 1998 ; Earth Interactions Volume 2 ; 2 >
+    au < testing ; 1999 ; Earth Interactions Volume 3 ; 3 >
+    au < testing ; 2000 ; Earth Interactions Volume 4 ; 4 >
+    au < testing ; 2001 ; Earth Interactions Volume 5 ; 5 >
+    au < testing ; 2002 ; Earth Interactions Volume 6 ; 6 >
+    au < testing ; 2003 ; Earth Interactions Volume 7 ; 7 >
+    au < testing ; 2004 ; Earth Interactions Volume 8 ; 8 >
     au < released ; 2005 ; Earth Interactions Volume 9 ; 9 >
     au < released ; 2006 ; Earth Interactions Volume 10 ; 10 >
     au < released ; 2007 ; Earth Interactions Volume 11 ; 11 >
@@ -184,12 +184,12 @@
     au < manifest ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
     au < manifest ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
     au < manifest ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
-    au < manifest ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
-    au < manifest ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
-    au < manifest ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 >
-    au < manifest ; 2003 ; Journal of Applied Meteorology Volume 42 ; 42 >
-    au < manifest ; 2004 ; Journal of Applied Meteorology Volume 43 ; 43 >
-    au < manifest ; 2005 ; Journal of Applied Meteorology Volume 44 ; 44 >
+    au < testing ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
+    au < testing ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
+    au < testing ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 >
+    au < testing ; 2003 ; Journal of Applied Meteorology Volume 42 ; 42 >
+    au < testing ; 2004 ; Journal of Applied Meteorology Volume 43 ; 43 >
+    au < testing ; 2005 ; Journal of Applied Meteorology Volume 44 ; 44 >
 
   }
 
@@ -246,11 +246,11 @@
     au < manifest ; 1997 ; Journal of Atmospheric and Oceanic Technology Volume 14 ; 14 >
     au < manifest ; 1998 ; Journal of Atmospheric and Oceanic Technology Volume 15 ; 15 >
     au < manifest ; 1999 ; Journal of Atmospheric and Oceanic Technology Volume 16 ; 16 >
-    au < manifest ; 2000 ; Journal of Atmospheric and Oceanic Technology Volume 17 ; 17 >
-    au < manifest ; 2001 ; Journal of Atmospheric and Oceanic Technology Volume 18 ; 18 >
-    au < manifest ; 2002 ; Journal of Atmospheric and Oceanic Technology Volume 19 ; 19 >
-    au < manifest ; 2003 ; Journal of Atmospheric and Oceanic Technology Volume 20 ; 20 >
-    au < manifest ; 2004 ; Journal of Atmospheric and Oceanic Technology Volume 21 ; 21 >
+    au < testing ; 2000 ; Journal of Atmospheric and Oceanic Technology Volume 17 ; 17 >
+    au < testing ; 2001 ; Journal of Atmospheric and Oceanic Technology Volume 18 ; 18 >
+    au < testing ; 2002 ; Journal of Atmospheric and Oceanic Technology Volume 19 ; 19 >
+    au < testing ; 2003 ; Journal of Atmospheric and Oceanic Technology Volume 20 ; 20 >
+    au < testing ; 2004 ; Journal of Atmospheric and Oceanic Technology Volume 21 ; 21 >
     au < released ; 2005 ; Journal of Atmospheric and Oceanic Technology Volume 22 ; 22 >
     au < released ; 2006 ; Journal of Atmospheric and Oceanic Technology Volume 23 ; 23 >
     au < released ; 2007 ; Journal of Atmospheric and Oceanic Technology Volume 24 ; 24 >
@@ -290,11 +290,11 @@
     au < manifest ; 1997 ; Journal of Climate Volume 10 ; 10 >
     au < manifest ; 1998 ; Journal of Climate Volume 11 ; 11 >
     au < manifest ; 1999 ; Journal of Climate Volume 12 ; 12 >
-    au < manifest ; 2000 ; Journal of Climate Volume 13 ; 13 >
-    au < manifest ; 2001 ; Journal of Climate Volume 14 ; 14 >
-    au < manifest ; 2002 ; Journal of Climate Volume 15 ; 15 >
-    au < manifest ; 2003 ; Journal of Climate Volume 16 ; 16 >
-    au < manifest ; 2004 ; Journal of Climate Volume 17 ; 17 >
+    au < testing ; 2000 ; Journal of Climate Volume 13 ; 13 >
+    au < testing ; 2001 ; Journal of Climate Volume 14 ; 14 >
+    au < testing ; 2002 ; Journal of Climate Volume 15 ; 15 >
+    au < testing ; 2003 ; Journal of Climate Volume 16 ; 16 >
+    au < testing ; 2004 ; Journal of Climate Volume 17 ; 17 >
     au < released ; 2005 ; Journal of Climate Volume 18 ; 18 >
     au < released ; 2006 ; Journal of Climate Volume 19 ; 19 >
     au < released ; 2007 ; Journal of Climate Volume 20 ; 20 >
@@ -321,11 +321,11 @@
     
     param[journal_id] = hydr
 
-    au < manifest ; 2000 ; Journal of Hydrometeorology Volume 1 ; 1 >
-    au < manifest ; 2001 ; Journal of Hydrometeorology Volume 2 ; 2 >
-    au < manifest ; 2002 ; Journal of Hydrometeorology Volume 3 ; 3 >
-    au < manifest ; 2003 ; Journal of Hydrometeorology Volume 4 ; 4 >
-    au < manifest ; 2004 ; Journal of Hydrometeorology Volume 5 ; 5 >
+    au < testing ; 2000 ; Journal of Hydrometeorology Volume 1 ; 1 >
+    au < testing ; 2001 ; Journal of Hydrometeorology Volume 2 ; 2 >
+    au < testing ; 2002 ; Journal of Hydrometeorology Volume 3 ; 3 >
+    au < testing ; 2003 ; Journal of Hydrometeorology Volume 4 ; 4 >
+    au < testing ; 2004 ; Journal of Hydrometeorology Volume 5 ; 5 >
     au < released ; 2005 ; Journal of Hydrometeorology Volume 6 ; 6 >
     au < released ; 2006 ; Journal of Hydrometeorology Volume 7 ; 7 >
     au < released ; 2007 ; Journal of Hydrometeorology Volume 8 ; 8 >
@@ -381,11 +381,11 @@
     au < manifest ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 >
     au < manifest ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
     au < manifest ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
-    au < manifest ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
-    au < manifest ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
-    au < manifest ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
-    au < manifest ; 2003 ; Journal of Physical Oceanography Volume 33 ; 33 >
-    au < manifest ; 2004 ; Journal of Physical Oceanography Volume 34 ; 34 >
+    au < testing ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
+    au < testing ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
+    au < testing ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
+    au < testing ; 2003 ; Journal of Physical Oceanography Volume 33 ; 33 >
+    au < testing ; 2004 ; Journal of Physical Oceanography Volume 34 ; 34 >
     au < released ; 2005 ; Journal of Physical Oceanography Volume 35 ; 35 >
     au < released ; 2006 ; Journal of Physical Oceanography Volume 36 ; 36 >
     au < released ; 2007 ; Journal of Physical Oceanography Volume 37 ; 37 >
@@ -468,11 +468,11 @@
     au < manifest ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 >
     au < manifest ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 >
     au < manifest ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 >
-    au < manifest ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
-    au < manifest ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
-    au < manifest ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
-    au < manifest ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 >
-    au < manifest ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
+    au < testing ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
+    au < testing ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
+    au < testing ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
+    au < testing ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 >
+    au < testing ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
     au < released ; 2005 ; Journal of the Atmospheric Sciences Volume 62 ; 62 >
     au < released ; 2006 ; Journal of the Atmospheric Sciences Volume 63 ; 63 >
     au < released ; 2007 ; Journal of the Atmospheric Sciences Volume 64 ; 64 >
@@ -505,12 +505,12 @@
     au < manifest ; 1994 ; Meteorological Monographs Volume 47 ; 47 >
     au < manifest ; 1996 ; Meteorological Monographs Volume 48 ; 48 >
     au < manifest ; 1998 ; Meteorological Monographs Volume 49 ; 49 >
-    au < manifest ; 2001 ; Meteorological Monographs Volume 50 ; 50 >
-    au < manifest ; 2003 ; Meteorological Monographs Volume 51 ; 51 >
-    au < manifest ; 2003 ; Meteorological Monographs Volume 52 ; 52 >
-    au < manifest ; 2003 ; Meteorological Monographs Volume 53 ; 53 >
-    au < manifest ; 2004 ; Meteorological Monographs Volume 54 ; 54 >
-    au < manifest ; 2008 ; Meteorological Monographs Volume 55 ; 55 >
+    au < testing ; 2001 ; Meteorological Monographs Volume 50 ; 50 >
+    au < testing ; 2003 ; Meteorological Monographs Volume 51 ; 51 >
+    au < testing ; 2003 ; Meteorological Monographs Volume 52 ; 52 >
+    au < testing ; 2003 ; Meteorological Monographs Volume 53 ; 53 >
+    au < testing ; 2004 ; Meteorological Monographs Volume 54 ; 54 >
+    au < testing ; 2008 ; Meteorological Monographs Volume 55 ; 55 >
     au < manifest ; 2016 ; Meteorological Monographs Volume 56 ; 56 >
     au < manifest ; 2016 ; Meteorological Monographs Volume 57 ; 57 >
     
@@ -655,11 +655,11 @@
     au < manifest ; 1997 ; Monthly Weather Review Volume 125 ; 125 >
     au < manifest ; 1998 ; Monthly Weather Review Volume 126 ; 126 >
     au < manifest ; 1999 ; Monthly Weather Review Volume 127 ; 127 >
-    au < manifest ; 2000 ; Monthly Weather Review Volume 128 ; 128 >
-    au < manifest ; 2001 ; Monthly Weather Review Volume 129 ; 129 >
-    au < manifest ; 2002 ; Monthly Weather Review Volume 130 ; 130 >
-    au < manifest ; 2003 ; Monthly Weather Review Volume 131 ; 131 >
-    au < manifest ; 2004 ; Monthly Weather Review Volume 132 ; 132 >
+    au < testing ; 2000 ; Monthly Weather Review Volume 128 ; 128 >
+    au < testing ; 2001 ; Monthly Weather Review Volume 129 ; 129 >
+    au < testing ; 2002 ; Monthly Weather Review Volume 130 ; 130 >
+    au < testing ; 2003 ; Monthly Weather Review Volume 131 ; 131 >
+    au < testing ; 2004 ; Monthly Weather Review Volume 132 ; 132 >
     au < released ; 2005 ; Monthly Weather Review Volume 133 ; 133 >
     au < released ; 2006 ; Monthly Weather Review Volume 134 ; 134 >
     au < released ; 2007 ; Monthly Weather Review Volume 135 ; 135 >
@@ -722,11 +722,11 @@
     au < manifest ; 1997 ; Weather and Forecasting Volume 12 ; 12 >
     au < manifest ; 1998 ; Weather and Forecasting Volume 13 ; 13 >
     au < manifest ; 1999 ; Weather and Forecasting Volume 14 ; 14 >
-    au < manifest ; 2000 ; Weather and Forecasting Volume 15 ; 15 >
-    au < manifest ; 2001 ; Weather and Forecasting Volume 16 ; 16 >
-    au < manifest ; 2002 ; Weather and Forecasting Volume 17 ; 17 >
-    au < manifest ; 2003 ; Weather and Forecasting Volume 18 ; 18 >
-    au < manifest ; 2004 ; Weather and Forecasting Volume 19 ; 19 >
+    au < testing ; 2000 ; Weather and Forecasting Volume 15 ; 15 >
+    au < testing ; 2001 ; Weather and Forecasting Volume 16 ; 16 >
+    au < testing ; 2002 ; Weather and Forecasting Volume 17 ; 17 >
+    au < testing ; 2003 ; Weather and Forecasting Volume 18 ; 18 >
+    au < testing ; 2004 ; Weather and Forecasting Volume 19 ; 19 >
     au < released ; 2005 ; Weather and Forecasting Volume 20 ; 20 >
     au < released ; 2006 ; Weather and Forecasting Volume 21 ; 21 >
     au < released ; 2007 ; Weather and Forecasting Volume 22 ; 22 >
