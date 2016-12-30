@@ -3730,7 +3730,7 @@
 
     au < manifest ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; >
     au < manifest ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; >
-    au < ready ; exists ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 ; >
+    au < crawling ; exists ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 ; >
     au < crawling ; exists ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 ; >
     au < crawling ; exists ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 ; >
     au < crawling ; exists ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 ; >
@@ -4893,7 +4893,7 @@
       param[journal_issn] = 2347-5617
       param[base_url] = http://www.egyptretinaj.com/
 
-      au < ready ; exists ; 2013 ; Egyptian Retina Journal Volume 1 ; 2013 ; 1 ; >
+      au < crawling ; exists ; 2013 ; Egyptian Retina Journal Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Egyptian Retina Journal Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Egyptian Retina Journal Volume 3 ; 2015 ; 3 ; >
       au < expected ; exists ; 2016 ; Egyptian Retina Journal Volume 4 ; 2016 ; 4 ; >
@@ -5020,7 +5020,7 @@
       param[journal_issn] = 2278-9626
       param[base_url] = http://www.ejgd.org/
 
-      au < ready ; exists ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; >
+      au < crawling ; exists ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; >
       au < crawling ; exists ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; >
       au < crawling ; exists ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; >
       au < crawling ; exists ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; >
@@ -5371,7 +5371,7 @@
       au < manifest ; exists ; 2009 ; Indian Journal of Research in Homoeopathy Volume 3 ; 2009 ; 3 ; >
       au < manifest ; exists ; 2010 ; Indian Journal of Research in Homoeopathy Volume 4 ; 2010 ; 4 ; >
       au < crawling ; exists ; 2011 ; Indian Journal of Research in Homoeopathy Volume 5 ; 2011 ; 5 ; >
-      au < ready ; exists ; 2012 ; Indian Journal of Research in Homoeopathy Volume 6 ; 2012 ; 6 ; >
+      au < crawling ; exists ; 2012 ; Indian Journal of Research in Homoeopathy Volume 6 ; 2012 ; 6 ; >
       au < crawling ; exists ; 2013 ; Indian Journal of Research in Homoeopathy Volume 7 ; 2013 ; 7 ; >
       au < crawling ; exists ; 2014 ; Indian Journal of Research in Homoeopathy Volume 8 ; 2014 ; 8 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Research in Homoeopathy Volume 9 ; 2015 ; 9 ; >
@@ -6824,7 +6824,7 @@
       param[base_url] = http://www.nrronline.org/
 
       au < crawling ; exists ; 2011 ; Neural Regeneration Research Volume 6 ; 2011 ; 6 ; >
-      au < ready ; exists ; 2012 ; Neural Regeneration Research Volume 7 ; 2012 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Neural Regeneration Research Volume 7 ; 2012 ; 7 ; >
       au < crawling ; exists ; 2013 ; Neural Regeneration Research Volume 8 ; 2013 ; 8 ; >
       au < crawling ; exists ; 2014 ; Neural Regeneration Research Volume 9 ; 2014 ; 9 ; >
       au < crawling ; exists ; 2015 ; Neural Regeneration Research Volume 10 ; 2015 ; 10 ; >
@@ -7236,7 +7236,7 @@
       param[journal_issn] = 1658-631X
       param[base_url] = http://www.sjmms.net/
 
-      au < ready ; exists ; 2013 ; Saudi Journal of Medicine and Medical Sciences Volume 1 ; 2013 ; 1 ; >
+      au < crawling ; exists ; 2013 ; Saudi Journal of Medicine and Medical Sciences Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Saudi Journal of Medicine and Medical Sciences Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Saudi Journal of Medicine and Medical Sciences Volume 3 ; 2015 ; 3 ; >
       au < manifest ; exists ; 2016 ; Saudi Journal of Medicine and Medical Sciences Volume 4 ; 2016 ; 4 ; >
@@ -7745,7 +7745,7 @@
 
       au < crawling ; exists ; 2011 ; Universal Research Journal of Dentistry Volume 1 ; 2011 ; 1 ; >
       au < crawling ; exists ; 2012 ; Universal Research Journal of Dentistry Volume 2 ; 2012 ; 2 ; >
-      au < ready ; exists ; 2013 ; Universal Research Journal of Dentistry Volume 3 ; 2013 ; 3 ; >
+      au < crawling ; exists ; 2013 ; Universal Research Journal of Dentistry Volume 3 ; 2013 ; 3 ; >
       au < crawling ; exists ; 2014 ; Universal Research Journal of Dentistry Volume 4 ; 2014 ; 4 ; >
       au < crawling ; exists ; 2015 ; Universal Research Journal of Dentistry Volume 5 ; 2015 ; 5 ; >
       au < manifest ; exists ; 2016 ; Universal Research Journal of Dentistry Volume 6 ; 2016 ; 6 ; >
