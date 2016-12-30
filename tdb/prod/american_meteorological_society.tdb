@@ -172,18 +172,18 @@
     comment[continues] = 0733-3021
     comment[continued_by] = 1558-8424
 
-    au < boost ; 1988 ; Journal of Applied Meteorology Volume 27 ; 27 >
-    au < boost ; 1989 ; Journal of Applied Meteorology Volume 28 ; 28 >
-    au < boost ; 1990 ; Journal of Applied Meteorology Volume 29 ; 29 >
-    au < boost ; 1991 ; Journal of Applied Meteorology Volume 30 ; 30 >
-    au < boost ; 1992 ; Journal of Applied Meteorology Volume 31 ; 31 >
-    au < boost ; 1993 ; Journal of Applied Meteorology Volume 32 ; 32 >
-    au < boost ; 1994 ; Journal of Applied Meteorology Volume 33 ; 33 >
-    au < boost ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
-    au < boost ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 >
-    au < boost ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
-    au < boost ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
-    au < boost ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
+    au < testing ; 1988 ; Journal of Applied Meteorology Volume 27 ; 27 >
+    au < testing ; 1989 ; Journal of Applied Meteorology Volume 28 ; 28 >
+    au < testing ; 1990 ; Journal of Applied Meteorology Volume 29 ; 29 >
+    au < testing ; 1991 ; Journal of Applied Meteorology Volume 30 ; 30 >
+    au < testing ; 1992 ; Journal of Applied Meteorology Volume 31 ; 31 >
+    au < testing ; 1993 ; Journal of Applied Meteorology Volume 32 ; 32 >
+    au < testing ; 1994 ; Journal of Applied Meteorology Volume 33 ; 33 >
+    au < testing ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
+    au < testing ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 >
+    au < testing ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
+    au < testing ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
+    au < testing ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
     au < ready ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
     au < ready ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
     au < ready ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 >
@@ -230,22 +230,22 @@
 
     param[journal_id] = atot
 
-    au < boost ; 1984 ; Journal of Atmospheric and Oceanic Technology Volume 1 ; 1 >
-    au < boost ; 1985 ; Journal of Atmospheric and Oceanic Technology Volume 2 ; 2 >
-    au < boost ; 1986 ; Journal of Atmospheric and Oceanic Technology Volume 3 ; 3 >
-    au < boost ; 1987 ; Journal of Atmospheric and Oceanic Technology Volume 4 ; 4 >
-    au < boost ; 1988 ; Journal of Atmospheric and Oceanic Technology Volume 5 ; 5 >
-    au < boost ; 1989 ; Journal of Atmospheric and Oceanic Technology Volume 6 ; 6 >
-    au < boost ; 1990 ; Journal of Atmospheric and Oceanic Technology Volume 7 ; 7 >
-    au < boost ; 1991 ; Journal of Atmospheric and Oceanic Technology Volume 8 ; 8 >
-    au < boost ; 1992 ; Journal of Atmospheric and Oceanic Technology Volume 9 ; 9 >
-    au < boost ; 1993 ; Journal of Atmospheric and Oceanic Technology Volume 10 ; 10 >
-    au < boost ; 1994 ; Journal of Atmospheric and Oceanic Technology Volume 11 ; 11 >
-    au < boost ; 1995 ; Journal of Atmospheric and Oceanic Technology Volume 12 ; 12 >
-    au < boost ; 1996 ; Journal of Atmospheric and Oceanic Technology Volume 13 ; 13 >
-    au < boost ; 1997 ; Journal of Atmospheric and Oceanic Technology Volume 14 ; 14 >
-    au < boost ; 1998 ; Journal of Atmospheric and Oceanic Technology Volume 15 ; 15 >
-    au < boost ; 1999 ; Journal of Atmospheric and Oceanic Technology Volume 16 ; 16 >
+    au < testing ; 1984 ; Journal of Atmospheric and Oceanic Technology Volume 1 ; 1 >
+    au < testing ; 1985 ; Journal of Atmospheric and Oceanic Technology Volume 2 ; 2 >
+    au < testing ; 1986 ; Journal of Atmospheric and Oceanic Technology Volume 3 ; 3 >
+    au < testing ; 1987 ; Journal of Atmospheric and Oceanic Technology Volume 4 ; 4 >
+    au < testing ; 1988 ; Journal of Atmospheric and Oceanic Technology Volume 5 ; 5 >
+    au < testing ; 1989 ; Journal of Atmospheric and Oceanic Technology Volume 6 ; 6 >
+    au < testing ; 1990 ; Journal of Atmospheric and Oceanic Technology Volume 7 ; 7 >
+    au < testing ; 1991 ; Journal of Atmospheric and Oceanic Technology Volume 8 ; 8 >
+    au < testing ; 1992 ; Journal of Atmospheric and Oceanic Technology Volume 9 ; 9 >
+    au < testing ; 1993 ; Journal of Atmospheric and Oceanic Technology Volume 10 ; 10 >
+    au < testing ; 1994 ; Journal of Atmospheric and Oceanic Technology Volume 11 ; 11 >
+    au < testing ; 1995 ; Journal of Atmospheric and Oceanic Technology Volume 12 ; 12 >
+    au < testing ; 1996 ; Journal of Atmospheric and Oceanic Technology Volume 13 ; 13 >
+    au < testing ; 1997 ; Journal of Atmospheric and Oceanic Technology Volume 14 ; 14 >
+    au < testing ; 1998 ; Journal of Atmospheric and Oceanic Technology Volume 15 ; 15 >
+    au < testing ; 1999 ; Journal of Atmospheric and Oceanic Technology Volume 16 ; 16 >
     au < ready ; 2000 ; Journal of Atmospheric and Oceanic Technology Volume 17 ; 17 >
     au < ready ; 2001 ; Journal of Atmospheric and Oceanic Technology Volume 18 ; 18 >
     au < ready ; 2002 ; Journal of Atmospheric and Oceanic Technology Volume 19 ; 19 >
@@ -352,35 +352,35 @@
     
     param[journal_id] = phoc
 
-    au < boost ; 1971 ; Journal of Physical Oceanography Volume 1 ; 1 >  
-    au < boost ; 1972 ; Journal of Physical Oceanography Volume 2 ; 2 >  
-    au < boost ; 1973 ; Journal of Physical Oceanography Volume 3 ; 3 >  
-    au < boost ; 1974 ; Journal of Physical Oceanography Volume 4 ; 4 >  
-    au < boost ; 1975 ; Journal of Physical Oceanography Volume 5 ; 5 >  
-    au < boost ; 1976 ; Journal of Physical Oceanography Volume 6 ; 6 >  
-    au < boost ; 1977 ; Journal of Physical Oceanography Volume 7 ; 7 >  
-    au < boost ; 1978 ; Journal of Physical Oceanography Volume 8 ; 8 >  
-    au < boost ; 1979 ; Journal of Physical Oceanography Volume 9 ; 9 >
-    au < boost ; 1980 ; Journal of Physical Oceanography Volume 10 ; 10 >
-    au < boost ; 1981 ; Journal of Physical Oceanography Volume 11 ; 11 >
-    au < boost ; 1982 ; Journal of Physical Oceanography Volume 12 ; 12 >
-    au < boost ; 1983 ; Journal of Physical Oceanography Volume 13 ; 13 >
-    au < boost ; 1984 ; Journal of Physical Oceanography Volume 14 ; 14 >
-    au < boost ; 1985 ; Journal of Physical Oceanography Volume 15 ; 15 >
-    au < boost ; 1986 ; Journal of Physical Oceanography Volume 16 ; 16 >
-    au < boost ; 1987 ; Journal of Physical Oceanography Volume 17 ; 17 >
-    au < boost ; 1988 ; Journal of Physical Oceanography Volume 18 ; 18 >
-    au < boost ; 1989 ; Journal of Physical Oceanography Volume 19 ; 19 >
-    au < boost ; 1990 ; Journal of Physical Oceanography Volume 20 ; 20 >
-    au < boost ; 1991 ; Journal of Physical Oceanography Volume 21 ; 21 >
-    au < boost ; 1992 ; Journal of Physical Oceanography Volume 22 ; 22 >
-    au < boost ; 1993 ; Journal of Physical Oceanography Volume 23 ; 23 >
-    au < boost ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 >
-    au < boost ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
-    au < boost ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 >
-    au < boost ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 >
-    au < boost ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
-    au < boost ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
+    au < testing ; 1971 ; Journal of Physical Oceanography Volume 1 ; 1 >  
+    au < testing ; 1972 ; Journal of Physical Oceanography Volume 2 ; 2 >  
+    au < testing ; 1973 ; Journal of Physical Oceanography Volume 3 ; 3 >  
+    au < testing ; 1974 ; Journal of Physical Oceanography Volume 4 ; 4 >  
+    au < testing ; 1975 ; Journal of Physical Oceanography Volume 5 ; 5 >  
+    au < testing ; 1976 ; Journal of Physical Oceanography Volume 6 ; 6 >  
+    au < testing ; 1977 ; Journal of Physical Oceanography Volume 7 ; 7 >  
+    au < testing ; 1978 ; Journal of Physical Oceanography Volume 8 ; 8 >  
+    au < testing ; 1979 ; Journal of Physical Oceanography Volume 9 ; 9 >
+    au < testing ; 1980 ; Journal of Physical Oceanography Volume 10 ; 10 >
+    au < testing ; 1981 ; Journal of Physical Oceanography Volume 11 ; 11 >
+    au < testing ; 1982 ; Journal of Physical Oceanography Volume 12 ; 12 >
+    au < testing ; 1983 ; Journal of Physical Oceanography Volume 13 ; 13 >
+    au < testing ; 1984 ; Journal of Physical Oceanography Volume 14 ; 14 >
+    au < testing ; 1985 ; Journal of Physical Oceanography Volume 15 ; 15 >
+    au < testing ; 1986 ; Journal of Physical Oceanography Volume 16 ; 16 >
+    au < testing ; 1987 ; Journal of Physical Oceanography Volume 17 ; 17 >
+    au < testing ; 1988 ; Journal of Physical Oceanography Volume 18 ; 18 >
+    au < testing ; 1989 ; Journal of Physical Oceanography Volume 19 ; 19 >
+    au < testing ; 1990 ; Journal of Physical Oceanography Volume 20 ; 20 >
+    au < testing ; 1991 ; Journal of Physical Oceanography Volume 21 ; 21 >
+    au < testing ; 1992 ; Journal of Physical Oceanography Volume 22 ; 22 >
+    au < testing ; 1993 ; Journal of Physical Oceanography Volume 23 ; 23 >
+    au < testing ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 >
+    au < testing ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
+    au < testing ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 >
+    au < testing ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 >
+    au < testing ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
+    au < testing ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
     au < testing ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
     au < testing ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
     au < testing ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
