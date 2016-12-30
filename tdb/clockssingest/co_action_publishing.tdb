@@ -12,23 +12,6 @@
   
   # IMPORTANT This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed
 
-   {
-
-    title <
-      name = Advances in Regenerative Biology ;
-      eissn = 2001-8517 ;
-      issnl = 2001-8517
-    >
-
-    param[base_url] = http://www.regenerativebiology.net/
-    param[journal_id] = arb
-
-    au < exists ; exists ; 2014 ; Advances in Regenerative Biology Volume 1 ; 1 ; 2014 ; >
-    au < exists ; exists ; 2015 ; Advances in Regenerative Biology Volume 2 ; 2 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Advances in Regenerative Biology Volume 3 ; 3 ; 2016 ; >
-
-  }
-
   {
 
     title <
@@ -68,7 +51,7 @@
     title <
       name = BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
       eissn = 2000-7493 ;
-      issnl = 2000-7493       
+      issnl = 2000-7493
     >
 
     param[base_url] = http://www.childlitaesthetics.net/
@@ -81,6 +64,7 @@
     au < finished ; finished ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; 2016 ; >
+    au < expected ; exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; 2017 ; >
 
   }
     
@@ -115,7 +99,7 @@
       au < finished ; finished ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; 2014 ; >
       au < finished ; finished ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; 2016 ; >
-
+      au < expected ; exists ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; 2017 ; >
 
     }
   }
@@ -139,6 +123,7 @@
     au < finished ; finished ; 2014 ; Education Inquiry Volume 5 ; 5 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Education Inquiry Volume 6 ; 6 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Education Inquiry Volume 7 ; 7 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Education Inquiry Volume 8 ; 8 ; 2017 ; >
 
   }
 
@@ -186,6 +171,7 @@
     au < finished ; finished ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; 2014 ; >
     au < finished ; finished ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Ethics & Global Politics Volume 10 ; 10 ; 2017 ; >
     
   }
     
@@ -203,6 +189,7 @@
     au < finished ; finished ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; 2016 ; >
+    au < expected ; exists ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 ; 2017 ; >
 
   }
 
@@ -238,6 +225,8 @@
       au < finished ; finished ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 ; >
       au < notReady ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; 2015 ; >
       au < crawling ; exists ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; 2016 ; >
+      au < expected ; exists ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; 2017 ; >
+
     }
   }
 
@@ -263,6 +252,7 @@
     au < finished ; finished ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; 2014 ; >
     au < finished ; finished ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; 2017 ; >
     
   }
 
@@ -287,6 +277,8 @@
     au < finished ; finished ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; 2017 ; >
+
   }
 
   {
@@ -306,6 +298,8 @@
     au < finished ; finished ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 ; 2017 ; >
+
   }
   
   {
@@ -335,6 +329,8 @@
     au < finished ; finished ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 ; 2016 ; >
+    au < expected ; exists ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 ; 2017 ; >
+
   }
 
   {
@@ -361,6 +357,8 @@
     au < finished ; finished ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 ; 2016 ; >
+    au < expected ; exists ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; 2017 ; >
+
   }
 
   {
@@ -382,6 +380,8 @@
     au < finished ; finished ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 ; >
     au < crawling ; exists ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 ; 2017 ; >
+
   }
 
   {
@@ -401,6 +401,7 @@
     au < finished ; finished ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 ; 2017 ; >
 
   }
 
@@ -420,6 +421,7 @@
     au < finished ; finished ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 ; 2016 ; >
+    au < expected ; exists ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; 2017 ; >
 
   }
 
