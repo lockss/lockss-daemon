@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +54,7 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 
 /** Extension of ResourceHandler that allows flexibility in finding the
  * Resource.  Mostly copied here because some things in ResourceHandler
@@ -451,6 +452,26 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                                            Resource resource)
         throws IOException
     {
+      boolean ignoreIfModified = false;
+      if (CurrentConfig.getCurrentConfig().getBoolean(ProxyManager.PARAM_IGNORE_IF_MODIFIED_WHEN_CONTENT_LENGTH_WRONG,
+						      ProxyManager.DEFAULT_IGNORE_IF_MODIFIED_WHEN_CONTENT_LENGTH_WRONG) &&
+	  resource instanceof CuUrlResource) {
+	CuUrlResource cur = (CuUrlResource)resource;
+	String clenHdr = cur.getProperty(HttpFields.__ContentLength);
+	if (!StringUtil.isNullString(clenHdr)) {
+	  try {
+	    long clen = Long.parseLong(clenHdr);
+	    if (clen != resource.length()) {
+	      ignoreIfModified = true;
+	      log.debug("ignoring If-Modified-Since: " + cur.getURL());
+	    }
+	  } catch (NumberFormatException e) {
+	    log.warn("Error parsing Content-Length: " + clenHdr + 
+		     " of " + cur.getURL());
+	  }
+	}
+      }
+
         if (!request.getMethod().equals(HttpRequest.__HEAD))
         {
             // If we have meta data for the file
@@ -461,6 +482,9 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             if (metaData != null && resource.lastModified() > 0)
             {
                 String ifms=request.getField(HttpFields.__IfModifiedSince);
+		if (ignoreIfModified) {
+		  ifms = null;
+		}
                 String mdlm=metaData.getLastModified();
                 if (ifms != null && mdlm != null && ifms.equals(mdlm))
                 {
@@ -483,7 +507,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 }
             }
 
-            if ((date=request.getDateField(HttpFields.__IfModifiedSince))>0)
+            if (!ignoreIfModified &&
+		(date=request.getDateField(HttpFields.__IfModifiedSince))>0)
             {
 
                 if (resource.lastModified()/1000 <= date/1000)
@@ -680,6 +705,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         response.setContentType(ctype);
         if (count != -1)
         {
+	  String origContentLength =
+	    cur.getProperty(HttpFields.__ContentLength);
 	  if (count==resource.length()) {
 	    response.setField(HttpFields.__ContentLength,metaData.getLength());
 	  } else {
@@ -689,6 +716,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	      response.setField(HttpFields.__ContentLength,
 				Long.toString(count));
 	    }
+	  }
+	  if (!StringUtil.equalStrings(origContentLength, 
+				       response.getField(HttpFields.__ContentLength))) {
+	    response.setField(origPrefix(HttpFields.__ContentLength),
+			      origContentLength);
 	  }
 	}
 

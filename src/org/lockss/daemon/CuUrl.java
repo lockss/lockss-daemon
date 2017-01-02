@@ -156,12 +156,23 @@ public class CuUrl {
     }
 
     public int getContentLength() {
+      throw new UnsupportedOperationException("Must use getContentLengthLong");
+    }
+
+    // Inherited method returns length from Content-Length header.  For
+    // CachedUrl, we want to return the actual file length, as the
+    // Content-Length may be wrong.
+    public long getContentLengthLong() {
       try {
 	connect();
-	return Integer.parseInt(getHeaderField(HttpFields.__ContentLength));
-      } catch (Exception e) {
+	return cu.getContentSize();
+      } catch (IOException e) {
 	return -1;
       }
+    }
+
+    public long getHeaderContentLength() {
+        return getHeaderFieldLong("content-length", -1);
     }
 
     public String getHeaderField(String name) {
