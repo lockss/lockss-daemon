@@ -114,6 +114,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   public static final String KEY_AU_REPAIR_FROM_PEER_IF_MISSING_URL_PATTERN =
     "au_repair_from_peer_if_missing_url_pattern";
 
+  public static final String KEY_AU_URL_MIME_TYPE = "au_url_mime_type";
+
   public static final String KEY_AU_CRAWL_COOKIE_POLICY =
     "au_crawl_cookie_policy";
   public static final String KEY_AU_URL_RATE_LIMITER_MAP =
@@ -411,6 +413,33 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     }
   }
 
+  public PatternStringMap makeUrlMimeTypeMap() {
+    List<String> mimeTypeSpec = getElementList(KEY_AU_URL_MIME_TYPE, null);
+    if (mimeTypeSpec != null) {
+      List<String> lst = new ArrayList<String>();
+      for (String pair : mimeTypeSpec) {
+	// Separate printf from MIME string, process printf, reassemble for
+	// PatternStringMap
+
+	// Find the last occurrence of comma to avoid regexp quoting
+	int pos = pair.lastIndexOf(',');
+	if (pos < 0) {
+	  throw new IllegalArgumentException("Malformed pattern,string pair; no comma: "
+					     + pair);
+	}
+	String printf = pair.substring(0, pos);
+	String mime = pair.substring(pos + 1).trim();
+	PrintfConverter.MatchPattern mp =
+	  convertVariableRegexpString(printf, RegexpContext.Url);
+	if (mp.getRegexp() != null) {
+	  lst.add(mp.getRegexp() + "," + mime);
+	}
+      }
+      return new PatternStringMap(lst);
+    } else {
+      return null;
+    }
+  }
 
   public List<Pattern> makeNonSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {
