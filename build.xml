@@ -1424,9 +1424,10 @@ The target you have selected requires compiling under JDK 1.7.
         <echo message="Building daemon ${releasename}" />
       </then>
     </if>
-    <!-- Build file with SVN revision info for all files -->
-    <exec executable="svn" dir="${src}" output="${build.filerev.file}">
-      <arg line="--verbose status" />
+    <!-- Build file with git blob info -->
+    <exec executable="git" dir="${src}" output="${build.filerev.file}"
+	  failifexecutionfails="false">
+      <arg line="show -s --pretty=oneline" />
     </exec>
   </target>
 

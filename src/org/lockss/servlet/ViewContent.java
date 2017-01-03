@@ -284,7 +284,9 @@ public class ViewContent extends LockssServlet {
       tbl.newRow();
       tbl.newCell("align=left");
       Link lnk = new Link(srvURL(myServletDescr(), args), "Show all");
-      lnk.attribute("target", "CuMeta");
+      if (contentInOtherFrame) {
+	lnk.attribute("target", "CuMeta");
+      }
       tbl.add(lnk);
     }
 

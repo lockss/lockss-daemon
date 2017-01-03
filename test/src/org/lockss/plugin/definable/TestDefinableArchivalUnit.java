@@ -77,6 +77,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                                 ConfigParamDescr.VOLUME_NUMBER);
     defMap = new ExternalizableMap();
 
+    MyPluginManager pmgr = new MyPluginManager();
+    getMockLockssDaemon().setPluginManager(pmgr);
+    pmgr.initService(getMockLockssDaemon());
   }
 
   protected void tearDown() throws Exception {
@@ -1321,6 +1324,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+
     cp.initPlugin(getMockLockssDaemon(), defMap);
     FilterFactory fact = cau.getCrawlFilterFactory(" text/html ; random-char-set");
     assertTrue(fact instanceof FilterFactoryWrapper);
@@ -1365,11 +1369,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   MyDefinablePlugin loadLargePlugin() {
-    return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
+    return (MyDefinablePlugin)
+      PluginTestUtil.findPlugin("org.lockss.plugin.definable.LargeTestPlugin");
+    // return loadPlugin("org.lockss.plugin.definable.LargeTestPlugin");
   }
 
   public void testLargePlugin() throws Exception {
-    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
+      ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
 				  "false");
 
     MyDefinablePlugin defplug = loadLargePlugin();
@@ -1553,6 +1559,17 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(1.0,
 		 urlPollResults.getMatch("http://base.foo/base_path/J47/xyz.html"),
 		 .0001);
+
+    PatternStringMap urlMimeTypes = au.makeUrlMimeTypeMap();
+    assertEquals("application/x-research-info-systems",
+		 urlMimeTypes.getMatch("http://base.foo/J47/xyz.ris"));
+    assertEquals(null,
+		 urlMimeTypes.getMatch("http://base.foo/J47/xyz.rib"));
+    assertEquals("application/pdf",
+		 urlMimeTypes.getMatch("http://base.foo/base_path/bar/pdf_url/xxx"));
+    assertEquals(null,
+		 urlMimeTypes.getMatch("http://base.foo/bar/pdf_url/xxx"));
+    
   }
 
   public void testFeatureUrls() throws Exception {
@@ -1755,6 +1772,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 getPatterns(au4.makeNonSubstanceUrlPatterns()));
 
   }
+
+  public void testUrlMimeMap() throws Exception {
+    MyDefinablePlugin defplug = loadLargePlugin();
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+    p.put("issue_set", "1,2,3,3a");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
+      }     
 
   HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
     return (HttpResultMap)plugin.getCacheResultMap();

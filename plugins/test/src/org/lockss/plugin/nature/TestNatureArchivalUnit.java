@@ -299,9 +299,10 @@ public class TestNatureArchivalUnit extends LockssTestCase {
 
     @Override
     protected void storeContentIn(String url, InputStream input,
-        CIProperties headers)
+				  CIProperties headers,
+				  boolean doValidate, List<String> redirUrls)
             throws IOException {
-      super.storeContentIn(url, input, headers);
+      super.storeContentIn(url, input, headers, doValidate, redirUrls);
       wasStored = true;
     }
   }

@@ -42,6 +42,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -290,9 +291,23 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public String getContentType() {
+    String res = null;
     CIProperties props = getProperties();
     if (props != null) {
-      return props.getProperty(PROPERTY_CONTENT_TYPE);
+      res = props.getProperty(PROPERTY_CONTENT_TYPE);
+    }
+    if (res != null) {
+      return res;
+    }
+    // XXX temporary expedient
+    if (au instanceof DefinableArchivalUnit) {
+      DefinableArchivalUnit dau = (DefinableArchivalUnit)au;
+      PatternStringMap urlMime = dau.makeUrlMimeTypeMap();
+      String mime = urlMime.getMatch(getUrl());
+      if (mime != null) {
+	logger.debug("Inferred mime type: " + mime + " for " + getUrl());
+      }
+      return mime;
     }
     return null;
   }

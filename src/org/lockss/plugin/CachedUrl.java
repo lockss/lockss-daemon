@@ -108,6 +108,13 @@ public interface CachedUrl extends CachedUrlSetNode {
   public static final String PROPERTY_CONTENT_ENCODING = "content-encoding";
   public static final String PROPERTY_CONTENT_LENGTH = "content-length";
 
+  /** This property is present only in the headers of the uncommitted
+   * (unsealed) CachedUrl passed to a ContentValidator.  If present its
+   * value is a list of all the URLs in the redirect chain.  It must be
+   * accessed with get(), not getProperty() */
+  public static final String PROPERTY_VALIDATOR_REDIRECT_URLS = 
+    "x-lockss-validator-redirect-urls";
+
   /** CachedUrl properties that the daemon uses internally, should not be
    * served with content */
 

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,39 +30,28 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
+package org.lockss.jetty;
 
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.mortbay.util.Resource;
+
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.repository.LockssRepositoryImpl;
 
-/**
- * Test class for org.lockss.daemon.CuUrl
- */
-
-public class TestCuUrl extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestCuUrl");
+public class TestCuUrlResource extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestCuUrlResource");
   private MockLockssDaemon theDaemon;
   private UrlManager uMgr;
   private StaticContentPlugin.SAU au;
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
+    setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
-
-    // make and init a real Pluginmgr
-    theDaemon.getPluginManager();
 
     // make and start a UrlManager to set up the URLStreamHandlerFactory
     uMgr = new UrlManager();
@@ -76,13 +65,10 @@ public class TestCuUrl extends LockssTestCase {
     au = (StaticContentPlugin.SAU)spl.createAu(null);
     PluginTestUtil.registerArchivalUnit(spl, au);
     fillAu(au);
-
-    theDaemon.getLockssRepository(au);
   }
 
   public void tearDown() throws Exception {
     uMgr.stopService();
-    theDaemon.stopDaemon();
     super.tearDown();
   }
 
@@ -90,86 +76,69 @@ public class TestCuUrl extends LockssTestCase {
   public static String testUrls[] = {
     "http://foo.bar/one",
     "http://foo.bar/two",
+    "http://foo.bar/three",
   };
 
-  public static String testTypes[] = {
-    "text/plain",
-    "text/html",
+  public static long testContentLengthOffsets[] = {
+    0,
+    4,
+    -3,
   };
 
   public static String testContents[] = {
-    "this is one text\n",
-    "<html><h3>this is two html</h3></html>",
+    "content 10123456789012345678901234567890123456789",
+    "content 201234567890123456789012",
+    "content 301234567890123456789012345678901234567890123456789",
   };
 
   /**
    * Create and store some content in the au
-   * @param au the static AU
-   * @return an ArchivalUnit
    */
   public static ArchivalUnit fillAu(StaticContentPlugin.SAU au) {
     for (int i = 0; i < testUrls.length; i++) {
-      au.storeCachedUrl(testUrls[i], testTypes[i], testContents[i]);
+      au.storeCachedUrl(testUrls[i], "text/plain", testContents[i]);
+      CachedUrl scu = au.makeCachedUrl(testUrls[i]);
+      Properties props = scu.getProperties();
+      long clen = Long.parseLong(props.getProperty("Content-Length"));
+      props.setProperty("Content-Length",
+			""+(clen+testContentLengthOffsets[i]));
     }
     return au;
   }
 
-  public void testCuUrl() throws Exception {
-    CachedUrlSet cus = au.getAuCachedUrlSet();
-    log.debug("cus: " + cus);
-    // non-existent url should return null CU
-    assertNull(au.makeCachedUrl("foobarnotthere"));
-
-    tryUrl(au, cus, 0);
-    tryUrl(au, cus, 1);
+  public void testNull() throws Exception {
+    Resource res = new CuUrlResource();
+    assertNull(res.addPath(null));
   }
 
-  private void tryUrl(ArchivalUnit au, CachedUrlSet cus, int n)
-      throws Exception {
+  public void testAll() throws Exception {
+    for (int i = 0; i < testUrls.length; i++) {
+      testOne(i);
+    }
+  }
 
+  public void testOne(int n) throws Exception {
     // get a test CU
     CachedUrl cu = au.makeCachedUrl(new String(testUrls[n]));
     assertNotNull(cu);
 
     // make a CuUrl URL from it
     URL cuurl = CuUrl.fromCu(au, cu);
-    log.debug("cuurl: " + cuurl);
     assertNotNull(cuurl);
 
-    // try opening it and fetching its properties and content
-    URLConnection uconn = cuurl.openConnection();
-    log.debug("uconn: " + uconn);
-    assertNotNull(uconn);
+    Resource res = new CuUrlResource().addPath(cuurl.toString());
+    assertNotNull(res);
+    assertTrue(res.exists());
+    assertTrue(CuUrl.isCuUrl(res.getURL()));
+    // length() shoudl retuwn actual content length
+    assertEquals(testContents[n].length(), res.length());
 
-    Object uobj = cuurl.getContent();
-    log.debug("uobj: " + uobj);
-    assertNotNull(uobj);
+    CuUrlResource cures = (CuUrlResource)res;
+    long off = testContentLengthOffsets[n];
+    assertEquals(testContents[n].length() + off,
+		 cures.getHeaderContentLength());
 
-    assertEquals(testTypes[n], uconn.getContentType());
-    assertEquals(testContents[n].length(), uconn.getContentLengthLong());
-    InputStream in = uconn.getInputStream();
-    Reader r = new InputStreamReader(in);
-    assertEquals(testContents[n], StringUtil.fromReader(r));
-
-    Map hdrFields = uconn.getHeaderFields();
-    assertEquals(MapUtil.map("x-lockss-content-type",
-			     ListUtil.list(testTypes[n]),
-			     "content-length",
-			     ListUtil.list(""+testContents[n].length())),
-		 hdrFields);
-    try {
-      hdrFields.put("foo", "bar");
-      fail("getHeaderFields() is required to return an unmodifiable map");
-    } catch (UnsupportedOperationException e) {
-    }
+    assertInputStreamMatchesString(testContents[n], res.getInputStream());
   }
 
-  public void testIsCuUrl() {
-    assertTrue(CuUrl.isCuUrl("locksscu://foo"));
-    assertTrue(CuUrl.isCuUrl("LOCKSSCU://foo"));
-    assertTrue(CuUrl.isCuUrl("locksscu:"));
-    assertTrue(CuUrl.isCuUrl("LOCKSSCU:"));
-    assertFalse( CuUrl.isCuUrl("locksscu"));
-    assertFalse( CuUrl.isCuUrl("http://foo"));
-  }
 }

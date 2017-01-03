@@ -243,6 +243,9 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 			    CacheException.WarningOnly.class);
     resultMap.storeMapEntry(MyContentValidationException3.class,
 			    CacheException.RetryableNetworkException_2.class);
+    // 4 isn't mapped
+    resultMap.storeMapEntry(MyContentValidationException5.class,
+			    DontStoreWarningException.class);
     mau.setContentValidatorFactory(new MyContentValidatorFactory());
     List<String> expVers = new ArrayList<String>();
 
@@ -269,6 +272,12 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       assertNull(cacher.getInfoException());
     }
     
+    // Warning, no store
+    doStore("invalid_5", null);
+    assertEquals("v ex 5",
+		 cacher.getInfoException().getMessage());
+    // expVers.add("invalid_5");
+
     // Not explicitly mapped, maps to ContentValidationException default in
     // HttpResultMap
 
@@ -399,6 +408,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 	  throw new MyContentValidationException3("v ex 3");
 	case "invalid_4":
 	  throw new MyContentValidationException4("v ex 4");
+	case "invalid_5":
+	  throw new MyContentValidationException5("v ex 5");
 	}
       }
       String cont = StringUtil.fromInputStream(cu.getUnfilteredInputStream());
@@ -411,6 +422,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 	throw new MyContentValidationException3("v ex 3");
       case "invalid_4":
 	throw new MyContentValidationException4("v ex 4");
+      case "invalid_5":
+	throw new MyContentValidationException5("v ex 5");
       case "IOException":
 	throw new IOException("EIEIOException");
       case "PluginException":
@@ -444,6 +457,27 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     extends ContentValidationException {
     MyContentValidationException4(String msg) {
       super(msg);
+    }
+  }
+
+  static class MyContentValidationException5
+    extends ContentValidationException {
+    MyContentValidationException5(String msg) {
+      super(msg);
+    }
+  }
+
+  public static class DontStoreWarningException extends CacheException.WarningOnly {
+    public DontStoreWarningException() {
+      super();
+    }
+
+    public DontStoreWarningException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
   }
 
@@ -790,9 +824,11 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     @Override
     protected void storeContentIn(String url, InputStream input,
-				  CIProperties headers)
+				  CIProperties headers,
+				  boolean doValidate,
+				  List<String> redirUrls)
         throws IOException {
-      super.storeContentIn(url, input, headers);
+      super.storeContentIn(url, input, headers, doValidate, redirUrls);
       wasStored = true;
     }
   }
