@@ -62,6 +62,12 @@ public class CacheException
   //such as a permission problem or a site wide issue
   public static final int ATTRIBUTE_FATAL = 3;
 
+  //If an exception with this attribute is thrown in a context where a file
+  //would otherwise have been stored, the file won't be stored.  Useful for
+  //validators to reject files (possibly after retries, if used with
+  //ATTRIBUTE_RETRY) without causing the crawl to fail.
+  public static final int ATTRIBUTE_NO_STORE = 4;
+
   protected static boolean defaultSuppressStackTrace = true;
 
   protected String message;
