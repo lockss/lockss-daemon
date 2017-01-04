@@ -76,7 +76,7 @@
     au < finished ; crawling ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Biomedical Optics Volume 21 ; 2016 ; reingest2.clockss.org:8085 >
 
@@ -130,8 +130,8 @@
     param[base_url] = http://medicalimaging.spiedigitallibrary.org/
     param[resource_id] = 165
 
-    au < finished ; crawling ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Medical Imaging Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
@@ -180,7 +180,7 @@
     au < finished ; crawling ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Nanophotonics Volume 10 ; 2016 ; reingest2.clockss.org:8085 >
 
