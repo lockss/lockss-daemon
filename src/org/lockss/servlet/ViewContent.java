@@ -279,7 +279,9 @@ public class ViewContent extends LockssServlet {
       Properties args = getParamsAsProps();
       args.remove("frame");
       args.setProperty("showall", "1");
-      args.setProperty("frame", "summary");
+      if (contentInOtherFrame) {
+	args.setProperty("frame", "summary");
+      }
 
       tbl.newRow();
       tbl.newCell("align=left");
