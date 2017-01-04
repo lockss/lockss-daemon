@@ -303,6 +303,8 @@ public class DefaultUrlCacher implements UrlCacher {
       os.close();
       boolean doStore = true;
       if (doValidate && !fetchFlags.get(SUPPRESS_CONTENT_VALIDATION)) {
+	// Don't modify passed-in headers
+	headers = CIProperties.fromProperties(headers);
 	if (redirUrls != null && !redirUrls.isEmpty()) {
 	  headers.put(CachedUrl.PROPERTY_VALIDATOR_REDIRECT_URLS, redirUrls);
 	}
