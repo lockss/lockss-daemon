@@ -54,7 +54,7 @@ implements SourceXmlSchemaHelper {
    *  Philosophy Documentation Center 
    */
   
-  // this is global for all articles in the file
+  // this is global for all articles in the file - not always correct, don't cook
   private static final String publisher = "/doi_batch/head/registrant";
   
   
@@ -113,12 +113,14 @@ implements SourceXmlSchemaHelper {
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
     // normal journal article schema
-    cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(publisher, MetadataField.FIELD_PUBLISHER); not always correct
     cookMap.put(pub_issn, MetadataField.FIELD_ISSN);
+    cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);
     cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(art_doi, MetadataField.FIELD_DOI);
     cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);
     cookMap.put(art_lp, MetadataField.FIELD_END_PAGE);
     //cookMap.put(art_contrib, MetadataField.FIELD_AUTHOR);
