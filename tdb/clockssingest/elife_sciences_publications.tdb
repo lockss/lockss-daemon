@@ -19,7 +19,7 @@
 
       param[base_url] = https://elifesciences.org/
 
-      au < finished ; crawling ; 2014 ; eLife January 2014 ; 2014/01 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; eLife January 2014 ; 2014/01 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; eLife February 2014 ; 2014/02 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; eLife March 2014 ; 2014/03 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; eLife April 2014 ; 2014/04 ; reingest1.clockss.org:8082 >
@@ -30,7 +30,7 @@
       au < finished ; finished ; 2014 ; eLife September 2014 ; 2014/09 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; eLife October 2014 ; 2014/10 ; reingest5.clockss.org:8082 >  # chosen after manual hash
       au < finished ; finished ; 2014 ; eLife November 2014 ; 2014/11 ; reingest5.clockss.org:8082 >  # chosen after manual hash
-      au < finished ; crawling ; 2014 ; eLife December 2014 ; 2014/12 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; eLife December 2014 ; 2014/12 ; reingest5.clockss.org:8082 >
 
       au < finished ; finished ; 2015 ; eLife January 2015 ; 2015/01 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; eLife February 2015 ; 2015/02 ; reingest5.clockss.org:8082 >
