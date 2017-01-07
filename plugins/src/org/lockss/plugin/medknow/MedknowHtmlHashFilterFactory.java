@@ -39,11 +39,15 @@ import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
+import org.htmlparser.Text;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.TableTag;
 import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
@@ -83,9 +87,12 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
     String AuIssn = auConfig.get(ConfigParamDescr.JOURNAL_ISSN.getKey());
     final Pattern THIS_VOL_ISSN_PAT = Pattern.compile(String.format("showBackIssue\\.asp\\?issn=%s;year=[0-9]{4};volume=%s;",AuIssn, AuVol),Pattern.CASE_INSENSITIVE);
     final Pattern ONLINE_ACCESSED_PAT = Pattern.compile("Online since .{1,99}?Accessed [0-9,.]{1,99} times?", Pattern.DOTALL);
+    final Pattern PMID_PAT = Pattern.compile(":?[0-9]{0,10}");
+    
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
         in,
         encoding,
+        new HtmlCompoundTransform(
         new HtmlCompoundTransform(
             /*
              * KEEP: throw out everything but main content areas
@@ -179,8 +186,42 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 HtmlNodeFilters.tagWithAttribute("font", "class", "CorrsAdd"),
                 // do NOT take TOC per-article link sections - variable over time
 
-            })),
+            }))),
             
+        new HtmlCompoundTransform(
+            new HtmlTransform() {
+              @Override
+              public NodeList transform(NodeList nodeList) throws IOException {
+                // <td class="sAuthor" style="line-height:18px;">
+                // <b>PMID</b> :24891795
+                try {
+                  nodeList.visitAllNodesWith(new NodeVisitor() {
+                    @Override
+                    public void visitTag(Tag tag) {
+                      if ("td".equals(tag.getTagName().toLowerCase()) &&
+                          "sAuthor".equals(tag.getAttribute("class"))) {
+                          boolean p1 = false;
+                          NodeList nl = tag.getChildren();
+                          for (int sx = 0; sx < nl.size(); sx++) {
+                            Node snode = nl.elementAt(sx);
+                            String xmin = snode.getText();
+                            if (snode instanceof Text &&
+                                ("PMID".equals(xmin) ||
+                                 (p1 && PMID_PAT.matcher(xmin).find()))) {
+                              p1 = true;
+                              nl.remove(sx);
+                            }
+                          }
+                        }
+                      }
+                    });
+                }
+                catch (ParserException pe) {
+                  throw new IOException(pe);
+                }
+                return nodeList;
+              }
+            },
             // convert all remaining nodes to plaintext nodes
             new HtmlTransform() {
               @Override
@@ -194,7 +235,7 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 return nl;
               }
             }
-            )
+            ))
         );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);

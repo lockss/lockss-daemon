@@ -159,13 +159,13 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "EDITORIAL" +
           " " +
           "Article Title for Editorial" +
-          "P Ran, NJ GooDOI:1X.1111/0022-3859.153101 PMID:55555555" +
+          "P Ran, NJ GooDOI:1X.1111/0022-3859.153101 " +
           "ORIGINAL ARTICLES" +
           "Another TItle for an Original Article" +
-          "P Author, P Writer" +
-          " DOI:1X.1111/0022-3859.150442 PMID:66666666" +
+          "P Author, P Writer " +
+          "DOI:1X.1111/0022-3859.150442 " +
           // " " + // by removing tags whitespace changed
-          " abstract goes here ";
+          "abstract goes here ";
 
 
   private static final String articleHtml = 
