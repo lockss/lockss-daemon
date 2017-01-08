@@ -37,9 +37,12 @@ import java.util.*;
 
 import org.apache.commons.lang3.tuple.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.*;
+import org.lockss.state.*;
 import org.lockss.extractor.*;
 
 /** Performs basic well-formedness tests on one or more plugins.  The list
@@ -71,6 +74,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
     setUpDiskSpace();
 
     daemon = getMockLockssDaemon();
+    daemon.suppressStartAuManagers(false);
     pluginMgr = new MyPluginManager();
     daemon.setPluginManager(pluginMgr);
     pluginMgr.initService(daemon);
@@ -79,6 +83,24 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
   public void tearDown() throws Exception {
     super.tearDown();
+  }
+
+  protected MockLockssDaemon newMockLockssDaemon() {
+    return new MyMockLockssDaemon();
+  }
+
+  public class MyMockLockssDaemon extends MockLockssDaemon {
+    protected MyMockLockssDaemon() {
+      super();
+    }
+
+    public NodeManager getNodeManager(ArchivalUnit au) {
+      // try {
+      // 	return super.getNodeManager(au);
+      // } catch (IllegalArgumentException e) {
+	return (NodeManager)newAuManager(LockssDaemon.NODE_MANAGER, au);
+      // }
+    }
   }
 
   protected Plugin getPlugin() throws IOException {
@@ -185,6 +207,18 @@ public final class PluginWellformednessTests extends LockssTestCase {
 
     assertSame(plugin, au.getPlugin());
     assertEquals(plugin.getPluginId(), au.getPluginId());
+
+    if (plugin instanceof DefinablePlugin) {
+      DefinablePlugin dplug = (DefinablePlugin)(plugin);
+      TypedEntryMap plugDef = dplug.getDefinitionMap();
+      if (!pluginName.equals(plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER))) {
+	log.warning("Wrong plugin_id: " +
+		    plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER) +
+		    " should be " + pluginName);
+      }
+      // assertEquals("Wrong plugin_id", pluginName,
+      // 		   plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER));
+    }
 
     assertEquals(getSampleAuConfig(), au.getConfiguration());
 
