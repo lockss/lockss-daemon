@@ -821,6 +821,26 @@
       param[journal_id] = alaa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1989 ; Alexandria Volume 1 ; 1 ; >
+      au < exists ; exists ; 1990 ; Alexandria Volume 2 ; 2 ; >
+      au < exists ; exists ; 1991 ; Alexandria Volume 3 ; 3 ; >
+      au < exists ; exists ; 1992 ; Alexandria Volume 4 ; 4 ; >
+      au < exists ; exists ; 1993 ; Alexandria Volume 5 ; 5 ; >
+      au < exists ; exists ; 1994 ; Alexandria Volume 6 ; 6 ; >
+      au < exists ; exists ; 1995 ; Alexandria Volume 7 ; 7 ; >
+      au < exists ; exists ; 1996 ; Alexandria Volume 8 ; 8 ; >
+      au < exists ; exists ; 1997 ; Alexandria Volume 9 ; 9 ; >
+      au < exists ; exists ; 1998 ; Alexandria Volume 10 ; 10 ; >
+      au < exists ; exists ; 1999 ; Alexandria Volume 11 ; 11 ; >
+      au < exists ; exists ; 2000 ; Alexandria Volume 12 ; 12 ; >
+      au < exists ; exists ; 2001 ; Alexandria Volume 13 ; 13 ; >
+      au < exists ; exists ; 2002 ; Alexandria Volume 14 ; 14 ; >
+      au < exists ; exists ; 2003 ; Alexandria Volume 15 ; 15 ; >
+      au < exists ; exists ; 2004 ; Alexandria Volume 16 ; 16 ; >
+      au < exists ; exists ; 2005 ; Alexandria Volume 17 ; 17 ; >
+      au < exists ; exists ; 2006 ; Alexandria Volume 18 ; 18 ; >
+      au < exists ; exists ; 2007 ; Alexandria Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Alexandria Volume 20 ; 20 ; >
       au < manifest ; exists ; 2009 ; Alexandria Volume 21 ; 21 ; >
       au < manifest ; exists ; 2011 ; Alexandria Volume 22 ; 22 ; >
       au < manifest ; exists ; 2012 ; Alexandria Volume 23 ; 23 ; >
@@ -4962,6 +4982,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; >
+      au < expected ; exists ; 2016 ; Calcutta Statistical Association Bulletin Volume 68 ; 68 ; >
 
   }
 
@@ -6998,6 +7020,21 @@
       param[journal_id] = cdxa
       #pluginSuffix = ClockssHighWirePressH20Plugin
       
+      au < exists ; exists ; 1994 ; Contemporary Drug Problems Volume 21 ; 21 ; >
+      au < exists ; exists ; 1995 ; Contemporary Drug Problems Volume 22 ; 22 ; >
+      au < exists ; exists ; 1996 ; Contemporary Drug Problems Volume 23 ; 23 ; >
+      au < exists ; exists ; 1997 ; Contemporary Drug Problems Volume 24 ; 24 ; >
+      au < exists ; exists ; 1998 ; Contemporary Drug Problems Volume 25 ; 25 ; >
+      au < exists ; exists ; 1999 ; Contemporary Drug Problems Volume 26 ; 26 ; >
+      au < exists ; exists ; 2000 ; Contemporary Drug Problems Volume 27 ; 27 ; >
+      au < exists ; exists ; 2001 ; Contemporary Drug Problems Volume 28 ; 28 ; >
+      au < exists ; exists ; 2002 ; Contemporary Drug Problems Volume 29 ; 29 ; >
+      au < exists ; exists ; 2003 ; Contemporary Drug Problems Volume 30 ; 30 ; >
+      au < exists ; exists ; 2004 ; Contemporary Drug Problems Volume 31 ; 31 ; >
+      au < exists ; exists ; 2005 ; Contemporary Drug Problems Volume 32 ; 32 ; >
+      au < exists ; exists ; 2006 ; Contemporary Drug Problems Volume 33 ; 33 ; >
+      au < exists ; exists ; 2007 ; Contemporary Drug Problems Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2008 ; Contemporary Drug Problems Volume 35 ; 35 ; >
       au < manifest ; exists ; 2009 ; Contemporary Drug Problems Volume 36 ; 36 ; >
       au < manifest ; exists ; 2010 ; Contemporary Drug Problems Volume 37 ; 37 ; >
       au < manifest ; exists ; 2011 ; Contemporary Drug Problems Volume 38 ; 38 ; >
@@ -8022,6 +8059,10 @@
       param[journal_id] = csta
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2006 ; Critical Studies in Television Volume 1 ; 1 ; >
+      au < exists ; exists ; 2007 ; Critical Studies in Television Volume 2 ; 2 ; >
+      au < exists ; exists ; 2008 ; Critical Studies in Television Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; Critical Studies in Television Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
       au < manifest ; exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
       au < manifest ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
@@ -12008,6 +12049,23 @@
       param[journal_id] = fnba
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1998 ; Food and Nutrition Bulletin Volume 19 ; 19 ; >
+      au < exists ; exists ; 1999 ; Food and Nutrition Bulletin Volume 20 ; 20 ; >
+      au < exists ; exists ; 2000 ; Food and Nutrition Bulletin Volume 21 ; 21 ; >
+      au < exists ; exists ; 2001 ; Food and Nutrition Bulletin Volume 22 ; 22 ; >
+      au < exists ; exists ; 2002 ; Food and Nutrition Bulletin Volume 23 ; 23 ; >
+      au < exists ; exists ; 2003 ; Food and Nutrition Bulletin Volume 24 ; 24 ; >
+      au < exists ; exists ; 2004 ; Food and Nutrition Bulletin Volume 25 ; 25 ; >
+      au < exists ; exists ; 2005 ; Food and Nutrition Bulletin Volume 26 ; 26 ; >
+      au < exists ; exists ; 2006 ; Food and Nutrition Bulletin Volume 27 ; 27 ; >
+      au < exists ; exists ; 2007 ; Food and Nutrition Bulletin Volume 28 ; 28 ; >
+      au < exists ; exists ; 2008 ; Food and Nutrition Bulletin Volume 29 ; 29 ; >
+      au < exists ; exists ; 2009 ; Food and Nutrition Bulletin Volume 30 ; 30 ; >
+      au < exists ; exists ; 2010 ; Food and Nutrition Bulletin Volume 31 ; 31 ; >
+      au < exists ; exists ; 2011 ; Food and Nutrition Bulletin Volume 32 ; 32 ; >
+      au < exists ; exists ; 2012 ; Food and Nutrition Bulletin Volume 33 ; 33 ; >
+      au < exists ; exists ; 2013 ; Food and Nutrition Bulletin Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2014 ; Food and Nutrition Bulletin Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 ; >
       au < manifest ; exists ; 2016 ; Food and Nutrition Bulletin Volume 37 ; 37 ; >
 
@@ -13613,6 +13671,57 @@
       param[journal_id] = hosa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1962 ; History of Science Volume 1 ; 1 ; >
+      au < exists ; exists ; 1963 ; History of Science Volume 2 ; 2 ; >
+      au < exists ; exists ; 1964 ; History of Science Volume 3 ; 3 ; >
+      au < exists ; exists ; 1965 ; History of Science Volume 4 ; 4 ; >
+      au < exists ; exists ; 1966 ; History of Science Volume 5 ; 5 ; >
+      au < exists ; exists ; 1967 ; History of Science Volume 6 ; 6 ; >
+      au < exists ; exists ; 1968 ; History of Science Volume 7 ; 7 ; >
+      au < exists ; exists ; 1969 ; History of Science Volume 8 ; 8 ; >
+      au < exists ; exists ; 1970 ; History of Science Volume 9 ; 9 ; >
+      au < exists ; exists ; 1971 ; History of Science Volume 10 ; 10 ; >
+      au < exists ; exists ; 1973 ; History of Science Volume 11 ; 11 ; >
+      au < exists ; exists ; 1974 ; History of Science Volume 12 ; 12 ; >
+      au < exists ; exists ; 1975 ; History of Science Volume 13 ; 13 ; >
+      au < exists ; exists ; 1976 ; History of Science Volume 14 ; 14 ; >
+      au < exists ; exists ; 1977 ; History of Science Volume 15 ; 15 ; >
+      au < exists ; exists ; 1978 ; History of Science Volume 16 ; 16 ; >
+      au < exists ; exists ; 1979 ; History of Science Volume 17 ; 17 ; >
+      au < exists ; exists ; 1980 ; History of Science Volume 18 ; 18 ; >
+      au < exists ; exists ; 1981 ; History of Science Volume 19 ; 19 ; >
+      au < exists ; exists ; 1982 ; History of Science Volume 20 ; 20 ; >
+      au < exists ; exists ; 1983 ; History of Science Volume 21 ; 21 ; >
+      au < exists ; exists ; 1984 ; History of Science Volume 22 ; 22 ; >
+      au < exists ; exists ; 1985 ; History of Science Volume 23 ; 23 ; >
+      au < exists ; exists ; 1986 ; History of Science Volume 24 ; 24 ; >
+      au < exists ; exists ; 1987 ; History of Science Volume 25 ; 25 ; >
+      au < exists ; exists ; 1988 ; History of Science Volume 26 ; 26 ; >
+      au < exists ; exists ; 1989 ; History of Science Volume 27 ; 27 ; >
+      au < exists ; exists ; 1990 ; History of Science Volume 28 ; 28 ; >
+      au < exists ; exists ; 1991 ; History of Science Volume 29 ; 29 ; >
+      au < exists ; exists ; 1992 ; History of Science Volume 30 ; 30 ; >
+      au < exists ; exists ; 1993 ; History of Science Volume 31 ; 31 ; >
+      au < exists ; exists ; 1994 ; History of Science Volume 32 ; 32 ; >
+      au < exists ; exists ; 1995 ; History of Science Volume 33 ; 33 ; >
+      au < exists ; exists ; 1996 ; History of Science Volume 34 ; 34 ; >
+      au < exists ; exists ; 1997 ; History of Science Volume 35 ; 35 ; >
+      au < exists ; exists ; 1998 ; History of Science Volume 36 ; 36 ; >
+      au < exists ; exists ; 1999 ; History of Science Volume 37 ; 37 ; >
+      au < exists ; exists ; 2000 ; History of Science Volume 38 ; 38 ; >
+      au < exists ; exists ; 2001 ; History of Science Volume 39 ; 39 ; >
+      au < exists ; exists ; 2002 ; History of Science Volume 40 ; 40 ; >
+      au < exists ; exists ; 2003 ; History of Science Volume 41 ; 41 ; >
+      au < exists ; exists ; 2004 ; History of Science Volume 42 ; 42 ; >
+      au < exists ; exists ; 2005 ; History of Science Volume 43 ; 43 ; >
+      au < exists ; exists ; 2006 ; History of Science Volume 44 ; 44 ; >
+      au < exists ; exists ; 2007 ; History of Science Volume 45 ; 45 ; >
+      au < exists ; exists ; 2008 ; History of Science Volume 46 ; 46 ; >
+      au < exists ; exists ; 2009 ; History of Science Volume 47 ; 47 ; >
+      au < exists ; exists ; 2010 ; History of Science Volume 48 ; 48 ; >
+      au < exists ; exists ; 2011 ; History of Science Volume 49 ; 49 ; >
+      au < exists ; exists ; 2012 ; History of Science Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2013 ; History of Science Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; History of Science Volume 52 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; History of Science Volume 53 ; 53 ; >
       au < manifest ; exists ; 2016 ; History of Science Volume 54 ; 54 ; >
@@ -14919,6 +15028,9 @@
       au < doNotProcess ; doNotProcess ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2014 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 51 ; 51 ; >
+      au < exists ; exists ; 2015 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 52 ; 52 ; >
+      au < exists ; exists ; 2016 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 53 ; 53 ; >
 
     }
 
@@ -23312,6 +23424,29 @@
       param[journal_id] = jiea
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1985-1987 ; Journal of Interdisciplinary Economics Volume 1 ; 1 ; >
+      au < exists ; exists ; 1987-1988 ; Journal of Interdisciplinary Economics Volume 2 ; 2 ; >
+      au < exists ; exists ; 1989-1991 ; Journal of Interdisciplinary Economics Volume 3 ; 3 ; >
+      au < exists ; exists ; 1992 ; Journal of Interdisciplinary Economics Volume 4 ; 4 ; >
+      au < exists ; exists ; 1994-1995 ; Journal of Interdisciplinary Economics Volume 5 ; 5 ; >
+      au < exists ; exists ; 1995 ; Journal of Interdisciplinary Economics Volume 6 ; 6 ; >
+      au < exists ; exists ; 1996 ; Journal of Interdisciplinary Economics Volume 7 ; 7 ; >
+      au < exists ; exists ; 1997 ; Journal of Interdisciplinary Economics Volume 8 ; 8 ; >
+      au < exists ; exists ; 1998 ; Journal of Interdisciplinary Economics Volume 9 ; 9 ; >
+      au < exists ; exists ; 1999 ; Journal of Interdisciplinary Economics Volume 10 ; 10 ; >
+      au < exists ; exists ; 2000 ; Journal of Interdisciplinary Economics Volume 11 ; 11 ; >
+      au < exists ; exists ; 2000-2001 ; Journal of Interdisciplinary Economics Volume 12 ; 12 ; >
+      au < exists ; exists ; 2002 ; Journal of Interdisciplinary Economics Volume 13 ; 13 ; >
+      au < exists ; exists ; 2003 ; Journal of Interdisciplinary Economics Volume 14 ; 14 ; >
+      au < exists ; exists ; 2004 ; Journal of Interdisciplinary Economics Volume 15 ; 15 ; >
+      au < exists ; exists ; 2004-2005 ; Journal of Interdisciplinary Economics Volume 16 ; 16 ; >
+      au < exists ; exists ; 2006 ; Journal of Interdisciplinary Economics Volume 17 ; 17 ; >
+      au < exists ; exists ; 2007 ; Journal of Interdisciplinary Economics Volume 18 ; 18 ; >
+      au < exists ; exists ; 2007-2008 ; Journal of Interdisciplinary Economics Volume 19 ; 19 ; >
+      au < exists ; exists ; 2009 ; Journal of Interdisciplinary Economics Volume 20 ; 20 ; >
+      au < exists ; exists ; 2009-2010 ; Journal of Interdisciplinary Economics Volume 21 ; 21 ; >
+      au < exists ; exists ; 2010 ; Journal of Interdisciplinary Economics Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2010-2011 ; Journal of Interdisciplinary Economics Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
@@ -26466,6 +26601,50 @@
       param[journal_id] = jhaa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1970 ; Journal for the History of Astronomy Volume 1 ; 1 ; >
+      au < exists ; exists ; 1971 ; Journal for the History of Astronomy Volume 2 ; 2 ; >
+      au < exists ; exists ; 1972 ; Journal for the History of Astronomy Volume 3 ; 3 ; >
+      au < exists ; exists ; 1973 ; Journal for the History of Astronomy Volume 4 ; 4 ; >
+      au < exists ; exists ; 1974 ; Journal for the History of Astronomy Volume 5 ; 5 ; >
+      au < exists ; exists ; 1975 ; Journal for the History of Astronomy Volume 6 ; 6 ; >
+      au < exists ; exists ; 1976 ; Journal for the History of Astronomy Volume 7 ; 7 ; >
+      au < exists ; exists ; 1977 ; Journal for the History of Astronomy Volume 8 ; 8 ; >
+      au < exists ; exists ; 1978 ; Journal for the History of Astronomy Volume 9 ; 9 ; >
+      au < exists ; exists ; 1979 ; Journal for the History of Astronomy Volume 10 ; 10 ; >
+      au < exists ; exists ; 1980 ; Journal for the History of Astronomy Volume 11 ; 11 ; >
+      au < exists ; exists ; 1981 ; Journal for the History of Astronomy Volume 12 ; 12 ; >
+      au < exists ; exists ; 1982 ; Journal for the History of Astronomy Volume 13 ; 13 ; >
+      au < exists ; exists ; 1983 ; Journal for the History of Astronomy Volume 14 ; 14 ; >
+      au < exists ; exists ; 1984 ; Journal for the History of Astronomy Volume 15 ; 15 ; >
+      au < exists ; exists ; 1985 ; Journal for the History of Astronomy Volume 16 ; 16 ; >
+      au < exists ; exists ; 1986 ; Journal for the History of Astronomy Volume 17 ; 17 ; >
+      au < exists ; exists ; 1987 ; Journal for the History of Astronomy Volume 18 ; 18 ; >
+      au < exists ; exists ; 1988 ; Journal for the History of Astronomy Volume 19 ; 19 ; >
+      au < exists ; exists ; 1989 ; Journal for the History of Astronomy Volume 20 ; 20 ; >
+      au < exists ; exists ; 1990 ; Journal for the History of Astronomy Volume 21 ; 21 ; >
+      au < exists ; exists ; 1991 ; Journal for the History of Astronomy Volume 22 ; 22 ; >
+      au < exists ; exists ; 1992 ; Journal for the History of Astronomy Volume 23 ; 23 ; >
+      au < exists ; exists ; 1993 ; Journal for the History of Astronomy Volume 24 ; 24 ; >
+      au < exists ; exists ; 1994 ; Journal for the History of Astronomy Volume 25 ; 25 ; >
+      au < exists ; exists ; 1995 ; Journal for the History of Astronomy Volume 26 ; 26 ; >
+      au < exists ; exists ; 1996 ; Journal for the History of Astronomy Volume 27 ; 27 ; >
+      au < exists ; exists ; 1997 ; Journal for the History of Astronomy Volume 28 ; 28 ; >
+      au < exists ; exists ; 1998 ; Journal for the History of Astronomy Volume 29 ; 29 ; >
+      au < exists ; exists ; 1999 ; Journal for the History of Astronomy Volume 30 ; 30 ; >
+      au < exists ; exists ; 2000 ; Journal for the History of Astronomy Volume 31 ; 31 ; >
+      au < exists ; exists ; 2001 ; Journal for the History of Astronomy Volume 32 ; 32 ; >
+      au < exists ; exists ; 2002 ; Journal for the History of Astronomy Volume 33 ; 33 ; >
+      au < exists ; exists ; 2003 ; Journal for the History of Astronomy Volume 34 ; 34 ; >
+      au < exists ; exists ; 2004 ; Journal for the History of Astronomy Volume 35 ; 35 ; >
+      au < exists ; exists ; 2005 ; Journal for the History of Astronomy Volume 36 ; 36 ; >
+      au < exists ; exists ; 2006 ; Journal for the History of Astronomy Volume 37 ; 37 ; >
+      au < exists ; exists ; 2007 ; Journal for the History of Astronomy Volume 38 ; 38 ; >
+      au < exists ; exists ; 2008 ; Journal for the History of Astronomy Volume 39 ; 39 ; >
+      au < exists ; exists ; 2009 ; Journal for the History of Astronomy Volume 40 ; 40 ; >
+      au < exists ; exists ; 2010 ; Journal for the History of Astronomy Volume 41 ; 41 ; >
+      au < exists ; exists ; 2011 ; Journal for the History of Astronomy Volume 42 ; 42 ; >
+      au < exists ; exists ; 2012 ; Journal for the History of Astronomy Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2013 ; Journal for the History of Astronomy Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal for the History of Astronomy Volume 45 ; 45 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal for the History of Astronomy Volume 46 ; 46 ; >
       au < manifest ; exists ; 2016 ; Journal for the History of Astronomy Volume 47 ; 47 ; >
@@ -31255,9 +31434,26 @@
     param[journal_id] = para
     #pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; doNotProcess ; 2014 ; Paradigm Volume 18 ; 18 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Paradigm Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2016 ; Paradigm Volume 20 ; 20 ; >
+      au < exists ; exists ; 1997 ; Paradigm Volume 1 ; 1 ; >
+      au < exists ; exists ; 1998 ; Paradigm Volume 2 ; 2 ; >
+      au < exists ; exists ; 1999 ; Paradigm Volume 3 ; 3 ; >
+      au < exists ; exists ; 2000 ; Paradigm Volume 4 ; 4 ; >
+      au < exists ; exists ; 2001 ; Paradigm Volume 5 ; 5 ; >
+      au < exists ; exists ; 2002 ; Paradigm Volume 6 ; 6 ; >
+      au < exists ; exists ; 2003 ; Paradigm Volume 7 ; 7 ; >
+      au < exists ; exists ; 2004 ; Paradigm Volume 8 ; 8 ; >
+      au < exists ; exists ; 2005 ; Paradigm Volume 9 ; 9 ; >
+      au < exists ; exists ; 2006 ; Paradigm Volume 10 ; 10 ; >
+      au < exists ; exists ; 2007 ; Paradigm Volume 11 ; 11 ; >
+      au < exists ; exists ; 2008 ; Paradigm Volume 12 ; 12 ; >
+      au < exists ; exists ; 2009 ; Paradigm Volume 13 ; 13 ; >
+      au < exists ; exists ; 2010 ; Paradigm Volume 14 ; 14 ; >
+      au < exists ; exists ; 2011 ; Paradigm Volume 15 ; 15 ; >
+      au < exists ; exists ; 2012 ; Paradigm Volume 16 ; 16 ; >
+      au < exists ; exists ; 2013 ; Paradigm Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Paradigm Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Paradigm Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Paradigm Volume 20 ; 20 ; >
 
   }
 
@@ -34366,6 +34562,11 @@
      #param[base_url] = http://pul.sagepub.com/
      param[journal_id] = pula
 
+     au < exists ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 1 ; >
+     au < exists ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2 ; >
+     au < exists ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 3 ; >
+     au < exists ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 4 ; >
+     au < manifest ; exists ; 2015 ; Pulmonary Circulation Volume 5 ; 5 ; >
      au < manifest ; exists ; 2016 ; Pulmonary Circulation Volume 6 ; 6 ; >
 
  }
