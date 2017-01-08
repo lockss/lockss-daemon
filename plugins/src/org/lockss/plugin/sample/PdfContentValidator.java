@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.sample;
 
 import java.io.*;
+import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -58,6 +59,17 @@ public class PdfContentValidator implements ContentValidator {
     if (isTruncatedPdf(cu.getUnfilteredInputStream())) {
       throw new TruncatedPdfException("msg");
     }      
+
+    // If a redirect occurred, the CachedUrl argument reflects the original
+    // URL, the response headers are those from the final, non-redirect
+    // response, and the list of redirected-to URLs (not including the
+    // original URL) in the CachedUrl.PROPERTY_VALIDATOR_REDIRECT_URLS
+    // property.  (This is a List, which must be retrieved using Map.get(),
+    // not Properties.getProperty()).
+
+    List<String> redirUrls =
+      (List<String>)headers.get(CachedUrl.PROPERTY_VALIDATOR_REDIRECT_URLS);
+    // ...
   }
 
   boolean isTruncatedPdf(InputStream ins) {
