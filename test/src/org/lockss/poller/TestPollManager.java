@@ -76,6 +76,7 @@ public class TestPollManager extends LockssTestCase {
   protected MyPollManager pollmanager;
   protected IdentityManager idmanager;
   private File tempDir;
+  private Tdb tdb;
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -93,6 +94,7 @@ public class TestPollManager extends LockssTestCase {
     // harness has been torn down, leading to spurious NPEs & such in the
     // timer thread.
     setErrorIfTimerThrows(false);
+    tdb = new Tdb();
   }
 
 
@@ -359,6 +361,7 @@ public class TestPollManager extends LockssTestCase {
     MockArchivalUnit[] res = new MockArchivalUnit[n];
     for (int ix = 0; ix < n; ix++) {
       res[ix] = newMockArchivalUnit("mau" + ix);
+      res[ix].setName("Mock " + ix);
     }
     return res;
   }
@@ -374,8 +377,10 @@ public class TestPollManager extends LockssTestCase {
   }
 
   void setAu(MockArchivalUnit mau,
+	     String year,
 	     long lastPollStart, long lastTopLevelPoll, int lastPollResult,
-	     long pollDuration, double agreement) {
+	     long pollDuration, double agreement) 
+      throws Exception {
     MockAuState aus = new MockAuState(mau);
     ((MockNodeManager)theDaemon.getNodeManager(mau)).setAuState(aus);
     aus.setLastCrawlTime(100);
@@ -384,6 +389,20 @@ public class TestPollManager extends LockssTestCase {
     aus.setLastPollResult(lastPollResult);
     aus.setPollDuration(pollDuration);
     aus.setV3Agreement(agreement);
+
+    Properties tprops = new Properties();
+    tprops.put("title", "It's " + mau.getName());
+    tprops.put("journalTitle", "jtitle " + mau.getName());
+    tprops.put("plugin", "Plug1");
+    tprops.put("pluginVersion", "4");
+    tprops.put("param.1.key", "volume");
+    tprops.put("param.1.value", "vol_" + mau.getName());
+    tprops.put("param.2.key", "year");
+    tprops.put("param.2.value", "2010");
+    tprops.put("attributes.year", year);
+
+    TdbAu tau = tdb.addTdbAuFromProperties(tprops);
+    mau.setTdbAu(tau);
   }	   
 
   void registerAus(MockArchivalUnit[] aus) {
@@ -418,25 +437,25 @@ public class TestPollManager extends LockssTestCase {
     registerAus(aus);
 
     //    setAu(mau, lastStart, lastComplete, lastResult, duration, agmnt);
-    setAu(aus[0], 900, 950,  C, 5, .9);
-    setAu(aus[1], 900, 500, NC, 5, .9);
-    setAu(aus[2], 900, 950,  C, 5, .2);
-    setAu(aus[3], 900, 500, NC, 5, .2);
+    setAu(aus[0], "2000", 900, 950,  C, 5, .9);
+    setAu(aus[1], "2001", 900, 500, NC, 5, .9);
+    setAu(aus[2], "2002", 900, 950,  C, 5, .2);
+    setAu(aus[3], "2003", 900, 500, NC, 5, .2);
 
-    setAu(aus[4], 850, 950,  C, 10, .9);
-    setAu(aus[5], 850, 500, NC, 10, .9);
-    setAu(aus[6], 850, 950,  C, 10, .2);
-    setAu(aus[7], 850, 500, NC, 10, .2);
+    setAu(aus[4], "2004", 850, 950,  C, 10, .9);
+    setAu(aus[5], "2005", 850, 500, NC, 10, .9);
+    setAu(aus[6], "2006", 850, 950,  C, 10, .2);
+    setAu(aus[7], "2007", 850, 500, NC, 10, .2);
 
-    setAu(aus[ 8], 650, 750,  C, 10, .9);
-    setAu(aus[ 9], 650, 400, NC, 10, .9);
-    setAu(aus[10], 650, 750,  C, 10, .2);
-    setAu(aus[11], 650, 400, NC, 10, .2);
+    setAu(aus[ 8], "2008", 650, 750,  C, 10, .9);
+    setAu(aus[ 9], "2009", 650, 400, NC, 10, .9);
+    setAu(aus[10], "2010", 650, 750,  C, 10, .2);
+    setAu(aus[11], "2011", 650, 400, NC, 10, .2);
 
-    setAu(aus[12], 350, 450,  C, 10, .9);
-    setAu(aus[13], 350, 100, NC, 10, .9);
-    setAu(aus[14], 350, 450,  C, 10, .2);
-    setAu(aus[15], 350, 100, NC, 10, .2);
+    setAu(aus[12], "2012", 350, 450,  C, 10, .9);
+    setAu(aus[13], "2013", 350, 100, NC, 10, .9);
+    setAu(aus[14], "2014", 350, 450,  C, 10, .2);
+    setAu(aus[15], "2015", 350, 100, NC, 10, .2);
 
     String p1 = "TCP:[127.0.0.1]:12";
     String p2 = "TCP:[127.0.0.2]:12";
@@ -494,7 +513,31 @@ public class TestPollManager extends LockssTestCase {
 			      aus[7], aus[10], aus[13], aus[15], aus[9],
 			      aus[1], aus[3]);
     assertEquals(exp4, weightOrder());
-  }
+
+    // Add a au xpath->priority map.
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_POLL_PRIORITY_AU_MAP,
+				  "[tdbAu/attrs/year='2001'],2.0;" +
+				  "[tdbAu/attrs/year='2005'],2.0");
+    
+    pollmanager.pollQueue.rebuildPollQueue();
+    List exp5 = ListUtil.list(aus[11], aus[5], aus[0], aus[14], aus[12],
+			      aus[1],
+			      aus[7], aus[10], aus[13], aus[15], aus[9],
+			      aus[3]);
+    assertEquals(exp5, weightOrder());
+
+    // Add a more extreme au xpath->priority map.
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_POLL_PRIORITY_AU_MAP,
+				  "[tdbAu/attrs/year='2001'],3.0;" +
+				  "[tdbAu/attrs/year='2005'],1.3");
+    
+    pollmanager.pollQueue.rebuildPollQueue();
+    List exp6 = ListUtil.list(aus[11], aus[5], aus[0], aus[14], aus[1],
+			      aus[12],
+			      aus[7], aus[10], aus[13], aus[15], aus[9],
+			      aus[3]);
+    assertEquals(exp6, weightOrder());
+}
 
   List<ArchivalUnit> weightOrder() {
     final Map<ArchivalUnit,PollManager.PollWeight> weightMap =

@@ -39,6 +39,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.alert.*;
 
 /**
@@ -1637,7 +1638,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     }
 
-    public void testCrawlPriorityPatterns() {
+    public void testCrawlPriorityAuidPatterns() {
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
 				    "foo(4|5),3;bar,5;baz,-1");
       MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
@@ -1665,6 +1666,68 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.setReqPriority(req);
       assertEquals(-3, req.getPriority());
 
+    }
+
+    public void testCrawlPriorityAuPatterns() throws Exception {
+      MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
+      mau1.setAuId("auid1");
+      MockArchivalUnit mau2 = new MockArchivalUnit(new MockPlugin(theDaemon));
+      mau2.setAuId("auid2");
+      MockArchivalUnit mau3 = new MockArchivalUnit(new MockPlugin(theDaemon));
+      mau3.setAuId("auid3");
+
+      Tdb tdb = new Tdb();
+
+      Properties tprops = new Properties();
+      tprops.put("journalTitle", "jtitle");
+      tprops.put("plugin", "Plug1");
+      tprops.put("param.1.key", "volume");
+
+      tprops.put("title", "title 1");
+      tprops.put("param.1.value", "vol_1");
+      tprops.put("attributes.year", "2001");
+      mau1.setTdbAu(tdb.addTdbAuFromProperties(tprops));
+
+      tprops.put("title", "title 2");
+      tprops.put("param.1.value", "vol_2");
+      tprops.put("attributes.year", "2002");
+      mau2.setTdbAu(tdb.addTdbAuFromProperties(tprops));
+
+      tprops.put("title", "title 3");
+      tprops.put("param.1.value", "vol_3");
+      tprops.put("attributes.year", "2003");
+      mau3.setTdbAu(tdb.addTdbAuFromProperties(tprops));
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AU_MAP,
+				    "[RE:isMatchRe(tdbAu/params/volume,'vol_1')],6;" +
+				    "[RE:isMatchRe(tdbAu/params/volume,'vol_(1|2)')],3;");
+
+      CrawlReq req1 = new CrawlReq(mau1);
+      CrawlReq req2 = new CrawlReq(mau2);
+      CrawlReq req3 = new CrawlReq(mau3);
+      crawlManager.setReqPriority(req1);
+      crawlManager.setReqPriority(req2);
+      crawlManager.setReqPriority(req3);
+      assertEquals(6, req1.getPriority());
+      assertEquals(3, req2.getPriority());
+      assertEquals(0, req3.getPriority());
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AU_MAP,
+				    "[tdbAu/year <= '2002'],10;" +
+				    "[tdbAu/year >= '2002'],12;");
+
+      crawlManager.setReqPriority(req1);
+      crawlManager.setReqPriority(req2);
+      crawlManager.setReqPriority(req3);
+      assertEquals(10, req1.getPriority());
+      assertEquals(10, req2.getPriority());
+      assertEquals(12, req3.getPriority());
+
+      // Remove param, ensure priority map gets removed
+      ConfigurationUtil.resetConfig();
+      req1.setPriority(0);
+      crawlManager.setReqPriority(req1);
+      assertEquals(0, req1.getPriority());
     }
 
     public void testCrawlPoolSizeMap() {

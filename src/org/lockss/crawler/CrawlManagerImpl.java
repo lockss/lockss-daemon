@@ -240,9 +240,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * Priority must be an integer; priorities <= -10000 mean "do not crawl
    * matching AUs", priorities <= -20000 mean "abort running crawls of
    * matching AUs".  */
+  @Deprecated
   static final String PARAM_CRAWL_PRIORITY_AUID_MAP =
     PREFIX + "crawlPriorityAuidMap";
   static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
+
+  /** Maps AU patterns to crawl priority.  Keys are XPath expressions (see
+   * {@link org.lockss.util.AuXpathMatcher).  If set, AU's crawl priority
+   * is the value associated with the first matching XPath.  Priority must
+   * be an integer; priorities <= -10000 mean "do not crawl matching AUs",
+   * priorities <= -20000 mean "abort running crawls of matching AUs".  */
+  static final String PARAM_CRAWL_PRIORITY_AU_MAP =
+    PREFIX + "crawlPriorityAuMap";
+  static final List DEFAULT_CRAWL_PRIORITY_AU_MAP = null;
 
   public static final int MIN_CRAWL_PRIORITY = -10000;
   public static final int ABORT_CRAWL_PRIORITY = -20000;
@@ -342,6 +352,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private List<Pattern> allowedPluginPermittedHosts;
 
   private PatternIntMap crawlPriorityAuidMap;
+  private AuXpathFloatMap crawlPriorityAuMap;
 
   private Map<String,Integer> concurrentCrawlLimitMap;
 
@@ -525,15 +536,25 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       paramStartCrawlsInitialDelay =
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
+
+      boolean processAborts = false;
       if (changedKeys.contains(PARAM_CRAWL_PRIORITY_AUID_MAP)) {
 	installCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
 						   DEFAULT_CRAWL_PRIORITY_AUID_MAP));
 
-	if (areAusStarted()) {
- 	  processAbortPriorities();
-	  rebuildQueueSoon();
-	}
+	processAborts = true;
       }
+      if (changedKeys.contains(PARAM_CRAWL_PRIORITY_AU_MAP)) {
+	installCrawlPriorityAuMap(config.getList(PARAM_CRAWL_PRIORITY_AU_MAP,
+						   DEFAULT_CRAWL_PRIORITY_AU_MAP));
+
+	processAborts = true;
+      }
+      if (processAborts && areAusStarted()) {
+	processAbortPriorities();
+	rebuildQueueSoon();
+      }
+
       if (changedKeys.contains(PARAM_CONCURRENT_CRAWL_LIMIT_MAP)) {
 	concurrentCrawlLimitMap =
 	  makeCrawlPoolSizeMap(config.getList(PARAM_CONCURRENT_CRAWL_LIMIT_MAP,
@@ -1000,6 +1021,22 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	logger.error("Illegal crawl priority map, ignoring", e);
 	logger.error("Crawl priority map unchanged, still: " +
 		     crawlPriorityAuidMap);
+      }
+    }
+  }
+
+  void installCrawlPriorityAuMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      logger.debug("Installing empty crawl priority au map");
+      crawlPriorityAuMap = AuXpathFloatMap.EMPTY;
+    } else {
+      try {
+	crawlPriorityAuMap = new AuXpathFloatMap(patternPairs);
+	logger.debug("Installing crawl priority au map: " + crawlPriorityAuMap);
+      } catch (IllegalArgumentException e) {
+	logger.error("Illegal crawl priority au map, ignoring", e);
+	logger.error("Crawl priority au map unchanged, still: " +
+		     crawlPriorityAuMap);
       }
     }
   }
@@ -1965,11 +2002,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   public int getAuPriority(ArchivalUnit au) {
-    Integer res = null;
-    if (crawlPriorityAuidMap != null) {
-      res = crawlPriorityAuidMap.getMatch(au.getAuId());
-    }
-    return res != null ? res : 0;
+    return Math.round(crawlPriorityAuMap.getMatch(au, crawlPriorityAuidMap.getMatch(au.getAuId())));
   }
 
   /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>
