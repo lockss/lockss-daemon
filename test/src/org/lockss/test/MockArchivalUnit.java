@@ -56,6 +56,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private CrawlRule rule;
   private String pluginId = "mock";
   private TitleConfig tc = null;
+  private TdbAu tau = null;
   private String auId = null;
   private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
@@ -257,7 +258,13 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public TdbAu getTdbAu() {
-    return tc == null ? null : tc.getTdbAu();
+    if (tau != null) return tau;
+    if (tc != null) return tc.getTdbAu();
+    return null;
+  }
+
+  public void setTdbAu(TdbAu tau) {
+    this.tau = tau;
   }
 
   public void setTitleConfig(TitleConfig tc) {

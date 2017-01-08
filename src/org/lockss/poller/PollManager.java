@@ -131,10 +131,18 @@ public class PollManager
 
   /** Map of AUID regexp to poll weight multiplier.  If set, AU's poll
    * weight is multiplied by the weight of the first regexp that its AUID
-   * matches.  Weight should be a flost.  This is temporary. */
+   * matches.  Weight should be a flost. */
   static final String PARAM_POLL_PRIORITY_AUID_MAP =
     PREFIX + "pollWeightAuidMap";
   static final List DEFAULT_POLL_PRIORITY_AUID_MAP = null;
+
+  /** Maps AU patterns to poll weight.  Keys are XPath expressions (see
+   * {@link org.lockss.util.AuXpathMatcher).  If set, AU's poll weight is
+   * multiplied by the weight of the first matching XPath..
+   * Weight should be a flost. */
+  static final String PARAM_POLL_PRIORITY_AU_MAP =
+    PREFIX + "pollWeightAuMap";
+  static final List DEFAULT_POLL_PRIORITY_AU_MAP = null;
 
   // Poll starter
 
@@ -738,6 +746,7 @@ public class PollManager
   private CompoundLinearSlope v3VoteRetryIntervalDurationCurve = null;
   private ReputationTransfers reputationTransfers;
   private PatternFloatMap pollPriorityAuidMap;
+  private AuXpathFloatMap pollPriorityAuMap;
 
 
   private AuPeersMap atRiskAuInstances = null;
@@ -1929,6 +1938,10 @@ public class PollManager
 	installPollPriorityAuidMap(newConfig.getList(PARAM_POLL_PRIORITY_AUID_MAP,
 						     DEFAULT_POLL_PRIORITY_AUID_MAP));
       }
+      if (changedKeys.contains(PARAM_POLL_PRIORITY_AU_MAP)) {
+	installPollPriorityAuMap(newConfig.getList(PARAM_POLL_PRIORITY_AU_MAP,
+						     DEFAULT_POLL_PRIORITY_AU_MAP));
+      }
       if (changedKeys.contains(V3PREFIX)) {
 	enableLocalPolls = newConfig.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
 						DEFAULT_V3_ENABLE_LOCAL_POLLS);
@@ -2027,20 +2040,36 @@ public class PollManager
   /** Set up poll priority map. */
   void installPollPriorityAuidMap(List<String> patternPairs) {
     if (patternPairs == null) {
-      log.debug("Installing empty poll priority map");
+      log.debug("Installing empty priority auid poll map");
       pollPriorityAuidMap = PatternFloatMap.EMPTY;
     } else {
       try {
 	pollPriorityAuidMap = new PatternFloatMap(patternPairs);
-	theLog.debug("Installing poll priority map: " + pollPriorityAuidMap);
+	theLog.debug("Installing poll priority auid map: " + 
+		     pollPriorityAuidMap);
       } catch (IllegalArgumentException e) {
-	theLog.error("Illegal poll priority map, ignoring", e);
-	theLog.error("Poll priority map unchanged, still: " +
-		  pollPriorityAuidMap);
+	theLog.error("Illegal poll priority auid map, ignoring", e);
+	theLog.error("Poll priority auid map unchanged, still: " +
+		     pollPriorityAuidMap);
       }
     }
   }
 
+  void installPollPriorityAuMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      log.debug("Installing empty poll priority au map");
+      pollPriorityAuMap = AuXpathFloatMap.EMPTY;
+    } else {
+      try {
+	pollPriorityAuMap = new AuXpathFloatMap(patternPairs);
+	theLog.debug("Installing poll priority au map: " + pollPriorityAuMap);
+      } catch (IllegalArgumentException e) {
+	theLog.error("Illegal poll priority au map, ignoring", e);
+	theLog.error("Poll priority au map unchanged, still: " +
+		     pollPriorityAuMap);
+      }
+    }
+  }
 
   public Collection<PeerIdentity>
       getAllReputationsTransferredFrom(PeerIdentity pid) {
@@ -2991,6 +3020,9 @@ public class PollManager
     }
     if (pollPriorityAuidMap != null) {
       weight *= pollPriorityAuidMap.getMatch(au.getAuId(), 1.0f);
+    }
+    if (pollPriorityAuMap != null) {
+      weight *= pollPriorityAuMap.getMatch(au, 1.0f);
     }
     long maxDelayBetweenPoR = pollInterval * maxDelayBetweenPoRMultiplier;
     return new PollWeight(choosePollVariant(au, maxDelayBetweenPoR), weight);
