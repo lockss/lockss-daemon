@@ -203,6 +203,7 @@ public class TestEditableDefinablePlugin
     "RetryableNetworkException_5_60S",
     "RetryableNetworkException_5_5M",
     "WarningOnly",
+    "NoStoreWarningOnly",
   };
 
   public void testGetKnownCacheExceptions() {

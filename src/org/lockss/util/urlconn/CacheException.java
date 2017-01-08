@@ -877,4 +877,21 @@ public class CacheException
       super(message);
     }
   }
+
+  /** Do not store the received file, record a warning and proceed.  Makes
+   * sense only in a ContentValidator, as that's the only place it's possible to prevent the file from being stored. */
+  public static class NoStoreWarningOnly
+      extends CacheException {
+    public NoStoreWarningOnly() {
+      super();
+    }
+
+    public NoStoreWarningOnly(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.set(ATTRIBUTE_NO_STORE);
+    }
+  }
 }

@@ -245,7 +245,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 			    CacheException.RetryableNetworkException_2.class);
     // 4 isn't mapped
     resultMap.storeMapEntry(MyContentValidationException5.class,
-			    DontStoreWarningException.class);
+			    CacheException.NoStoreWarningOnly.class);
     mau.setContentValidatorFactory(new MyContentValidatorFactory());
     List<String> expVers = new ArrayList<String>();
 
@@ -464,20 +464,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     extends ContentValidationException {
     MyContentValidationException5(String msg) {
       super(msg);
-    }
-  }
-
-  public static class DontStoreWarningException extends CacheException.WarningOnly {
-    public DontStoreWarningException() {
-      super();
-    }
-
-    public DontStoreWarningException(String message) {
-      super(message);
-    }
-
-    protected void setAttributes() {
-      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
   }
 
