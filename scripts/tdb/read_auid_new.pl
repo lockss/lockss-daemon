@@ -181,6 +181,7 @@ while (my $line = <>) {
            $plugin eq "RCGPDrupalPlugin" ||
            $plugin eq "RCPsychDrupalPlugin" ||
            $plugin eq "RSPDrupalPlugin" ||
+           $plugin eq "RUPDrupalPlugin" ||
            $plugin eq "HWDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
@@ -230,6 +231,7 @@ while (my $line = <>) {
            $plugin eq "ClockssOUPDrupalPlugin" ||
            $plugin eq "ClockssPortlandPressDrupalPlugin" ||
            $plugin eq "ClockssRSPDrupalPlugin" ||
+           $plugin eq "ClockssRUPDrupalPlugin" ||
            $plugin eq "ClockssHWDrupalPlugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
