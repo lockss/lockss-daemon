@@ -1146,6 +1146,33 @@
       param[journal_id] = acsa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1984 ; The American Journal of Cosmetic Surgery Volume 1 ; 1 ; >
+      au < exists ; exists ; 1985 ; The American Journal of Cosmetic Surgery Volume 2 ; 2 ; >
+      au < exists ; exists ; 1986 ; The American Journal of Cosmetic Surgery Volume 3 ; 3 ; >
+      au < exists ; exists ; 1987 ; The American Journal of Cosmetic Surgery Volume 4 ; 4 ; >
+      au < exists ; exists ; 1988 ; The American Journal of Cosmetic Surgery Volume 5 ; 5 ; >
+      au < exists ; exists ; 1989 ; The American Journal of Cosmetic Surgery Volume 6 ; 6 ; >
+      au < exists ; exists ; 1990 ; The American Journal of Cosmetic Surgery Volume 7 ; 7 ; >
+      au < exists ; exists ; 1991 ; The American Journal of Cosmetic Surgery Volume 8 ; 8 ; >
+      au < exists ; exists ; 1992 ; The American Journal of Cosmetic Surgery Volume 9 ; 9 ; >
+      au < exists ; exists ; 1993 ; The American Journal of Cosmetic Surgery Volume 10 ; 10 ; >
+      au < exists ; exists ; 1994 ; The American Journal of Cosmetic Surgery Volume 11 ; 11 ; >
+      au < exists ; exists ; 1995 ; The American Journal of Cosmetic Surgery Volume 12 ; 12 ; >
+      au < exists ; exists ; 1996 ; The American Journal of Cosmetic Surgery Volume 13 ; 13 ; >
+      au < exists ; exists ; 1997 ; The American Journal of Cosmetic Surgery Volume 14 ; 14 ; >
+      au < exists ; exists ; 1998 ; The American Journal of Cosmetic Surgery Volume 15 ; 15 ; >
+      au < exists ; exists ; 1999 ; The American Journal of Cosmetic Surgery Volume 16 ; 16 ; >
+      au < exists ; exists ; 2000 ; The American Journal of Cosmetic Surgery Volume 17 ; 17 ; >
+      au < exists ; exists ; 2001 ; The American Journal of Cosmetic Surgery Volume 18 ; 18 ; >
+      au < exists ; exists ; 2002 ; The American Journal of Cosmetic Surgery Volume 19 ; 19 ; >
+      au < exists ; exists ; 2003 ; The American Journal of Cosmetic Surgery Volume 20 ; 20 ; >
+      au < exists ; exists ; 2004 ; The American Journal of Cosmetic Surgery Volume 21 ; 21 ; >
+      au < exists ; exists ; 2005 ; The American Journal of Cosmetic Surgery Volume 22 ; 22 ; >
+      au < exists ; exists ; 2006 ; The American Journal of Cosmetic Surgery Volume 23 ; 23 ; >
+      au < exists ; exists ; 2007 ; The American Journal of Cosmetic Surgery Volume 24 ; 24 ; >
+      au < exists ; exists ; 2008 ; The American Journal of Cosmetic Surgery Volume 25 ; 25 ; >
+      au < exists ; exists ; 2009 ; The American Journal of Cosmetic Surgery Volume 26 ; 26 ; >
+      au < exists ; exists ; 2010 ; The American Journal of Cosmetic Surgery Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
@@ -2628,6 +2655,29 @@
       #param[base_url] = http://abx.sagepub.com/
       param[journal_id] = abxa
 
+      au < exists ; exists ; 1986 ; The Antitrust Bulletin Volume 31 ; 31 ; >
+      au < exists ; exists ; 1987 ; The Antitrust Bulletin Volume 32 ; 32 ; >
+      au < exists ; exists ; 1988 ; The Antitrust Bulletin Volume 33 ; 33 ; >
+      au < exists ; exists ; 1989 ; The Antitrust Bulletin Volume 34 ; 34 ; >
+      au < exists ; exists ; 1990 ; The Antitrust Bulletin Volume 35 ; 35 ; >
+      au < exists ; exists ; 1991 ; The Antitrust Bulletin Volume 36 ; 36 ; >
+      au < exists ; exists ; 1992 ; The Antitrust Bulletin Volume 37 ; 37 ; >
+      au < exists ; exists ; 1993 ; The Antitrust Bulletin Volume 38 ; 38 ; >
+      au < exists ; exists ; 1994 ; The Antitrust Bulletin Volume 39 ; 39 ; >
+      au < exists ; exists ; 1995 ; The Antitrust Bulletin Volume 40 ; 40 ; >
+      au < exists ; exists ; 1996 ; The Antitrust Bulletin Volume 41 ; 41 ; >
+      au < exists ; exists ; 1997 ; The Antitrust Bulletin Volume 42 ; 42 ; >
+      au < exists ; exists ; 1998 ; The Antitrust Bulletin Volume 43 ; 43 ; >
+      au < exists ; exists ; 1999 ; The Antitrust Bulletin Volume 44 ; 44 ; >
+      au < exists ; exists ; 2000 ; The Antitrust Bulletin Volume 45 ; 45 ; >
+      au < exists ; exists ; 2001 ; The Antitrust Bulletin Volume 46 ; 46 ; >
+      au < exists ; exists ; 2002 ; The Antitrust Bulletin Volume 47 ; 47 ; >
+      au < exists ; exists ; 2003 ; The Antitrust Bulletin Volume 48 ; 48 ; >
+      au < exists ; exists ; 2004 ; The Antitrust Bulletin Volume 49 ; 49 ; >
+      au < exists ; exists ; 2005 ; The Antitrust Bulletin Volume 50 ; 50 ; >
+      au < exists ; exists ; 2006 ; The Antitrust Bulletin Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; The Antitrust Bulletin Volume 52 ; 52 ; >
+      au < exists ; exists ; 2008 ; The Antitrust Bulletin Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; The Antitrust Bulletin Volume 54 ; 54 ; >
       au < manifest ; exists ; 2010 ; The Antitrust Bulletin Volume 55 ; 55 ; >
       au < manifest ; exists ; 2011 ; The Antitrust Bulletin Volume 56 ; 56 ; >
@@ -9017,6 +9067,139 @@
       param[journal_id] = tdra
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1880-1882 ; The Downside Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 1883 ; The Downside Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 1884 ; The Downside Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 1885 ; The Downside Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 1886 ; The Downside Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 1887 ; The Downside Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 1888 ; The Downside Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 1889 ; The Downside Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 1890 ; The Downside Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 1891 ; The Downside Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 1892 ; The Downside Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 1893 ; The Downside Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 1894 ; The Downside Review Volume 13 ; 13 ; >
+      au < exists ; exists ; 1895 ; The Downside Review Volume 14 ; 14 ; >
+      au < exists ; exists ; 1896 ; The Downside Review Volume 15 ; 15 ; >
+      au < exists ; exists ; 1897 ; The Downside Review Volume 16 ; 16 ; >
+      au < exists ; exists ; 1898 ; The Downside Review Volume 17 ; 17 ; >
+      au < exists ; exists ; 1899 ; The Downside Review Volume 18 ; 18 ; >
+      au < exists ; exists ; 1900 ; The Downside Review Volume 19 ; 19 ; >
+      au < exists ; exists ; 1901 ; The Downside Review Volume 20 ; 20 ; >
+      au < exists ; exists ; 1902 ; The Downside Review Volume 21 ; 21 ; >
+      au < exists ; exists ; 1903 ; The Downside Review Volume 22 ; 22 ; >
+      au < exists ; exists ; 1904 ; The Downside Review Volume 23 ; 23 ; >
+      au < exists ; exists ; 1905 ; The Downside Review Volume 24 ; 24 ; >
+      au < exists ; exists ; 1906 ; The Downside Review Volume 25 ; 25 ; >
+      au < exists ; exists ; 1907 ; The Downside Review Volume 26 ; 26 ; >
+      au < exists ; exists ; 1908 ; The Downside Review Volume 27 ; 27 ; >
+      au < exists ; exists ; 1909 ; The Downside Review Volume 28 ; 28 ; >
+      au < exists ; exists ; 1910 ; The Downside Review Volume 29 ; 29 ; >
+      au < exists ; exists ; 1911 ; The Downside Review Volume 30 ; 30 ; >
+      au < exists ; exists ; 1912 ; The Downside Review Volume 31 ; 31 ; >
+      au < exists ; exists ; 1913 ; The Downside Review Volume 32 ; 32 ; >
+      au < exists ; exists ; 1914 ; The Downside Review Volume 33 ; 33 ; >
+      au < exists ; exists ; 1915 ; The Downside Review Volume 34 ; 34 ; >
+      au < exists ; exists ; 1916 ; The Downside Review Volume 35 ; 35 ; >
+      au < exists ; exists ; 1917 ; The Downside Review Volume 36 ; 36 ; >
+      au < exists ; exists ; 1918 ; The Downside Review Volume 37 ; 37 ; >
+      au < exists ; exists ; 1919 ; The Downside Review Volume 38 ; 38 ; >
+      au < exists ; exists ; 1921 ; The Downside Review Volume 39 ; 39 ; >
+      au < exists ; exists ; 1922 ; The Downside Review Volume 40 ; 40 ; >
+      au < exists ; exists ; 1923 ; The Downside Review Volume 41 ; 41 ; >
+      au < exists ; exists ; 1924 ; The Downside Review Volume 42 ; 42 ; >
+      au < exists ; exists ; 1925 ; The Downside Review Volume 43 ; 43 ; >
+      au < exists ; exists ; 1926 ; The Downside Review Volume 44 ; 44 ; >
+      au < exists ; exists ; 1927 ; The Downside Review Volume 45 ; 45 ; >
+      au < exists ; exists ; 1928 ; The Downside Review Volume 46 ; 46 ; >
+      au < exists ; exists ; 1929 ; The Downside Review Volume 47 ; 47 ; >
+      au < exists ; exists ; 1930 ; The Downside Review Volume 48 ; 48 ; >
+      au < exists ; exists ; 1931 ; The Downside Review Volume 49 ; 49 ; >
+      au < exists ; exists ; 1932 ; The Downside Review Volume 50 ; 50 ; >
+      au < exists ; exists ; 1933 ; The Downside Review Volume 51 ; 51 ; >
+      au < exists ; exists ; 1934 ; The Downside Review Volume 52 ; 52 ; >
+      au < exists ; exists ; 1935 ; The Downside Review Volume 53 ; 53 ; >
+      au < exists ; exists ; 1936 ; The Downside Review Volume 54 ; 54 ; >
+      au < exists ; exists ; 1937 ; The Downside Review Volume 55 ; 55 ; >
+      au < exists ; exists ; 1938 ; The Downside Review Volume 56 ; 56 ; >
+      au < exists ; exists ; 1939 ; The Downside Review Volume 57 ; 57 ; >
+      au < exists ; exists ; 1940 ; The Downside Review Volume 58 ; 58 ; >
+      au < exists ; exists ; 1941 ; The Downside Review Volume 59 ; 59 ; >
+      au < exists ; exists ; 1942 ; The Downside Review Volume 60 ; 60 ; >
+      au < exists ; exists ; 1943 ; The Downside Review Volume 61 ; 61 ; >
+      au < exists ; exists ; 1944 ; The Downside Review Volume 62 ; 62 ; >
+      au < exists ; exists ; 1945 ; The Downside Review Volume 63 ; 63 ; >
+      au < exists ; exists ; 1946 ; The Downside Review Volume 64 ; 64 ; >
+      au < exists ; exists ; 1947 ; The Downside Review Volume 65 ; 65 ; >
+      au < exists ; exists ; 1948 ; The Downside Review Volume 66 ; 66 ; >
+      au < exists ; exists ; 1949 ; The Downside Review Volume 67 ; 67 ; >
+      au < exists ; exists ; 1950 ; The Downside Review Volume 68 ; 68 ; >
+      au < exists ; exists ; 1951 ; The Downside Review Volume 69 ; 69 ; >
+      au < exists ; exists ; 1952 ; The Downside Review Volume 70 ; 70 ; >
+      au < exists ; exists ; 1953 ; The Downside Review Volume 71 ; 71 ; >
+      au < exists ; exists ; 1954 ; The Downside Review Volume 72 ; 72 ; >
+      au < exists ; exists ; 1955 ; The Downside Review Volume 73 ; 73 ; >
+      au < exists ; exists ; 1956 ; The Downside Review Volume 74 ; 74 ; >
+      au < exists ; exists ; 1957 ; The Downside Review Volume 75 ; 75 ; >
+      au < exists ; exists ; 1958 ; The Downside Review Volume 76 ; 76 ; >
+      au < exists ; exists ; 1959 ; The Downside Review Volume 77 ; 77 ; >
+      au < exists ; exists ; 1960 ; The Downside Review Volume 78 ; 78 ; >
+      au < exists ; exists ; 1961 ; The Downside Review Volume 79 ; 79 ; >
+      au < exists ; exists ; 1962 ; The Downside Review Volume 80 ; 80 ; >
+      au < exists ; exists ; 1963 ; The Downside Review Volume 81 ; 81 ; >
+      au < exists ; exists ; 1964 ; The Downside Review Volume 82 ; 82 ; >
+      au < exists ; exists ; 1965 ; The Downside Review Volume 83 ; 83 ; >
+      au < exists ; exists ; 1966 ; The Downside Review Volume 84 ; 84 ; >
+      au < exists ; exists ; 1967 ; The Downside Review Volume 85 ; 85 ; >
+      au < exists ; exists ; 1968 ; The Downside Review Volume 86 ; 86 ; >
+      au < exists ; exists ; 1969 ; The Downside Review Volume 87 ; 87 ; >
+      au < exists ; exists ; 1970 ; The Downside Review Volume 88 ; 88 ; >
+      au < exists ; exists ; 1971 ; The Downside Review Volume 89 ; 89 ; >
+      au < exists ; exists ; 1972 ; The Downside Review Volume 90 ; 90 ; >
+      au < exists ; exists ; 1973 ; The Downside Review Volume 91 ; 91 ; >
+      au < exists ; exists ; 1974 ; The Downside Review Volume 92 ; 92 ; >
+      au < exists ; exists ; 1975 ; The Downside Review Volume 93 ; 93 ; >
+      au < exists ; exists ; 1976 ; The Downside Review Volume 94 ; 94 ; >
+      au < exists ; exists ; 1977 ; The Downside Review Volume 95 ; 95 ; >
+      au < exists ; exists ; 1978 ; The Downside Review Volume 96 ; 96 ; >
+      au < exists ; exists ; 1979 ; The Downside Review Volume 97 ; 97 ; >
+      au < exists ; exists ; 1980 ; The Downside Review Volume 98 ; 98 ; >
+      au < exists ; exists ; 1981 ; The Downside Review Volume 99 ; 99 ; >
+      au < exists ; exists ; 1982 ; The Downside Review Volume 100 ; 100 ; >
+      au < exists ; exists ; 1983 ; The Downside Review Volume 101 ; 101 ; >
+      au < exists ; exists ; 1984 ; The Downside Review Volume 102 ; 102 ; >
+      au < exists ; exists ; 1985 ; The Downside Review Volume 103 ; 103 ; >
+      au < exists ; exists ; 1986 ; The Downside Review Volume 104 ; 104 ; >
+      au < exists ; exists ; 1987 ; The Downside Review Volume 105 ; 105 ; >
+      au < exists ; exists ; 1988 ; The Downside Review Volume 106 ; 106 ; >
+      au < exists ; exists ; 1989 ; The Downside Review Volume 107 ; 107 ; >
+      au < exists ; exists ; 1990 ; The Downside Review Volume 108 ; 108 ; >
+      au < exists ; exists ; 1991 ; The Downside Review Volume 109 ; 109 ; >
+      au < exists ; exists ; 1992 ; The Downside Review Volume 110 ; 110 ; >
+      au < exists ; exists ; 1993 ; The Downside Review Volume 111 ; 111 ; >
+      au < exists ; exists ; 1994 ; The Downside Review Volume 112 ; 112 ; >
+      au < exists ; exists ; 1995 ; The Downside Review Volume 113 ; 113 ; >
+      au < exists ; exists ; 1996 ; The Downside Review Volume 114 ; 114 ; >
+      au < exists ; exists ; 1997 ; The Downside Review Volume 115 ; 115 ; >
+      au < exists ; exists ; 1998 ; The Downside Review Volume 116 ; 116 ; >
+      au < exists ; exists ; 1999 ; The Downside Review Volume 117 ; 117 ; >
+      au < exists ; exists ; 2000 ; The Downside Review Volume 118 ; 118 ; >
+      au < exists ; exists ; 2001 ; The Downside Review Volume 119 ; 119 ; >
+      au < exists ; exists ; 2002 ; The Downside Review Volume 120 ; 120 ; >
+      au < exists ; exists ; 2003 ; The Downside Review Volume 121 ; 121 ; >
+      au < exists ; exists ; 2004 ; The Downside Review Volume 122 ; 122 ; >
+      au < exists ; exists ; 2005 ; The Downside Review Volume 123 ; 123 ; >
+      au < exists ; exists ; 2006 ; The Downside Review Volume 124 ; 124 ; >
+      au < exists ; exists ; 2007 ; The Downside Review Volume 125 ; 125 ; >
+      au < exists ; exists ; 2008 ; The Downside Review Volume 126 ; 126 ; >
+      au < exists ; exists ; 2009 ; The Downside Review Volume 127 ; 127 ; >
+      au < exists ; exists ; 2010 ; The Downside Review Volume 128 ; 128 ; >
+      au < exists ; exists ; 2011 ; The Downside Review Volume 129 ; 129 ; >
+      au < exists ; exists ; 2012 ; The Downside Review Volume 130 ; 130 ; >
+      au < exists ; exists ; 2013 ; The Downside Review Volume 131 ; 131 ; >
+      au < exists ; exists ; 2014 ; The Downside Review Volume 132 ; 132 ; >
+      au < manifest ; exists ; 2015 ; The Downside Review Volume 133 ; 133 ; >
       au < manifest ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; >
 
   }
@@ -25138,6 +25321,22 @@
       param[journal_id] = plxa
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1993 ; The Journal of Psychiatry & Law Volume 21 ; 21 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; The Journal of Psychiatry & Law Volume 22 ; 22 ; >
+      au < doesNotExist ; doesNotExist ; 1995 ; The Journal of Psychiatry & Law Volume 23 ; 23 ; >
+      au < exists ; exists ; 1996 ; The Journal of Psychiatry & Law Volume 24 ; 24 ; >
+      au < doesNotExist ; doesNotExist ; 1997 ; The Journal of Psychiatry & Law Volume 25 ; 25 ; >
+      au < doesNotExist ; doesNotExist ; 1998 ; The Journal of Psychiatry & Law Volume 26 ; 26 ; >
+      au < exists ; exists ; 1999 ; The Journal of Psychiatry & Law Volume 27 ; 27 ; >
+      au < exists ; exists ; 2000 ; The Journal of Psychiatry & Law Volume 28 ; 28 ; >
+      au < exists ; exists ; 2001 ; The Journal of Psychiatry & Law Volume 29 ; 29 ; >
+      au < exists ; exists ; 2002 ; The Journal of Psychiatry & Law Volume 30 ; 30 ; >
+      au < exists ; exists ; 2003 ; The Journal of Psychiatry & Law Volume 31 ; 31 ; >
+      au < exists ; exists ; 2004 ; The Journal of Psychiatry & Law Volume 32 ; 32 ; >
+      au < exists ; exists ; 2005 ; The Journal of Psychiatry & Law Volume 33 ; 33 ; >
+      au < exists ; exists ; 2006 ; The Journal of Psychiatry & Law Volume 34 ; 34 ; >
+      au < exists ; exists ; 2007 ; The Journal of Psychiatry & Law Volume 35 ; 35 ; >
+      au < exists ; exists ; 2008 ; The Journal of Psychiatry & Law Volume 36 ; 36 ; >
       au < manifest ; exists ; 2009 ; The Journal of Psychiatry & Law Volume 37 ; 37 ; >
       au < manifest ; exists ; 2010 ; The Journal of Psychiatry & Law Volume 38 ; 38 ; >
       au < manifest ; exists ; 2011 ; The Journal of Psychiatry & Law Volume 39 ; 39 ; >
@@ -35294,6 +35493,23 @@
       au < manifest ; exists ; 2007 ; Research in Education Volume 77 ; 77 ; >
       au < manifest ; exists ; 2007 ; Research in Education Volume 78 ; 78 ; >
       au < manifest ; exists ; 2008 ; Research in Education Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2008 ; Research in Education Volume 80 ; 80 ; >
+      au < exists ; exists ; 2009 ; Research in Education Volume 81 ; 81 ; >
+      au < exists ; exists ; 2009 ; Research in Education Volume 82 ; 82 ; >
+      au < exists ; exists ; 2010 ; Research in Education Volume 83 ; 83 ; >
+      au < exists ; exists ; 2010 ; Research in Education Volume 84 ; 84 ; >
+      au < exists ; exists ; 2011 ; Research in Education Volume 85 ; 85 ; >
+      au < exists ; exists ; 2011 ; Research in Education Volume 86 ; 86 ; >
+      au < exists ; exists ; 2012 ; Research in Education Volume 87 ; 87 ; >
+      au < exists ; exists ; 2012 ; Research in Education Volume 88 ; 88 ; >
+      au < exists ; exists ; 2013 ; Research in Education Volume 89 ; 89 ; >
+      au < exists ; exists ; 2013 ; Research in Education Volume 90 ; 90 ; >
+      au < exists ; exists ; 2014 ; Research in Education Volume 91 ; 91 ; >
+      au < exists ; exists ; 2014 ; Research in Education Volume 92 ; 92 ; >
+      au < exists ; exists ; 2015 ; Research in Education Volume 93 ; 93 ; >
+      au < exists ; exists ; 2015 ; Research in Education Volume 94 ; 94 ; >
+      au < exists ; exists ; 2016 ; Research in Education Volume 95 ; 95 ; >
+      au < exists ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; >
 
   }
 
@@ -38538,12 +38754,50 @@
 
       #pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1974 ; Teaching of Psychology Volume 1 ; 1 ; >
+      au < exists ; exists ; 1975 ; Teaching of Psychology Volume 2 ; 2 ; >
+      au < exists ; exists ; 1976 ; Teaching of Psychology Volume 3 ; 3 ; >
+      au < exists ; exists ; 1977 ; Teaching of Psychology Volume 4 ; 4 ; >
+      au < exists ; exists ; 1978 ; Teaching of Psychology Volume 5 ; 5 ; >
+      au < exists ; exists ; 1979 ; Teaching of Psychology Volume 6 ; 6 ; >
+      au < exists ; exists ; 1980 ; Teaching of Psychology Volume 7 ; 7 ; >
+      au < exists ; exists ; 1981 ; Teaching of Psychology Volume 8 ; 8 ; >
+      au < exists ; exists ; 1982 ; Teaching of Psychology Volume 9 ; 9 ; >
+      au < exists ; exists ; 1983 ; Teaching of Psychology Volume 10 ; 10 ; >
+      au < exists ; exists ; 1984 ; Teaching of Psychology Volume 11 ; 11 ; >
+      au < exists ; exists ; 1985 ; Teaching of Psychology Volume 12 ; 12 ; >
+      au < exists ; exists ; 1986 ; Teaching of Psychology Volume 13 ; 13 ; >
+      au < exists ; exists ; 1987 ; Teaching of Psychology Volume 14 ; 14 ; >
+      au < exists ; exists ; 1988 ; Teaching of Psychology Volume 15 ; 15 ; >
+      au < exists ; exists ; 1989 ; Teaching of Psychology Volume 16 ; 16 ; >
+      au < exists ; exists ; 1990 ; Teaching of Psychology Volume 17 ; 17 ; >
+      au < exists ; exists ; 1991 ; Teaching of Psychology Volume 18 ; 18 ; >
+      au < exists ; exists ; 1992 ; Teaching of Psychology Volume 19 ; 19 ; >
+      au < exists ; exists ; 1993 ; Teaching of Psychology Volume 20 ; 20 ; >
+      au < exists ; exists ; 1994 ; Teaching of Psychology Volume 21 ; 21 ; >
+      au < exists ; exists ; 1995 ; Teaching of Psychology Volume 22 ; 22 ; >
+      au < exists ; exists ; 1996 ; Teaching of Psychology Volume 23 ; 23 ; >
+      au < exists ; exists ; 1997 ; Teaching of Psychology Volume 24 ; 24 ; >
+      au < exists ; exists ; 1998 ; Teaching of Psychology Volume 25 ; 25 ; >
+      au < exists ; exists ; 1999 ; Teaching of Psychology Volume 26 ; 26 ; >
+      au < exists ; exists ; 2000 ; Teaching of Psychology Volume 27 ; 27 ; >
+      au < exists ; exists ; 2001 ; Teaching of Psychology Volume 28 ; 28 ; >
+      au < exists ; exists ; 2002 ; Teaching of Psychology Volume 29 ; 29 ; >
+      au < exists ; exists ; 2003 ; Teaching of Psychology Volume 30 ; 30 ; >
+      au < exists ; exists ; 2004 ; Teaching of Psychology Volume 31 ; 31 ; >
+      au < exists ; exists ; 2005 ; Teaching of Psychology Volume 32 ; 32 ; >
+      au < exists ; exists ; 2006 ; Teaching of Psychology Volume 33 ; 33 ; >
+      au < exists ; exists ; 2007 ; Teaching of Psychology Volume 34 ; 34 ; >
+      au < exists ; exists ; 2008 ; Teaching of Psychology Volume 35 ; 35 ; >
+      au < exists ; exists ; 2009 ; Teaching of Psychology Volume 36 ; 36 ; >
+      au < exists ; exists ; 2010 ; Teaching of Psychology Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Teaching of Psychology Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Teaching of Psychology Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Teaching of Psychology Volume 42 ; 42 ; >
       au < manifest ; exists ; 2016 ; Teaching of Psychology Volume 43 ; 43 ; >
+      au < exists ; exists ; 2017 ; Teaching of Psychology Volume 44 ; 44 ; >
 
     }
 
@@ -41117,8 +41371,46 @@
       #param[base_url] = http://vik.sagepub.com/
       param[journal_id] = vika
       #pluginSuffix = ClockssHighWirePressH20Plugin
-      #content available from 1976 volume 1 to 1999 volume 24
 
+      au < exists ; exists ; 1976 ; Vikalpa Volume 1 ; 1 ; >
+      au < exists ; exists ; 1977 ; Vikalpa Volume 2 ; 2 ; >
+      au < exists ; exists ; 1978 ; Vikalpa Volume 3 ; 3 ; >
+      au < exists ; exists ; 1979 ; Vikalpa Volume 4 ; 4 ; >
+      au < exists ; exists ; 1980 ; Vikalpa Volume 5 ; 5 ; >
+      au < exists ; exists ; 1981 ; Vikalpa Volume 6 ; 6 ; >
+      au < exists ; exists ; 1982 ; Vikalpa Volume 7 ; 7 ; >
+      au < exists ; exists ; 1983 ; Vikalpa Volume 8 ; 8 ; >
+      au < exists ; exists ; 1984 ; Vikalpa Volume 9 ; 9 ; >
+      au < exists ; exists ; 1985 ; Vikalpa Volume 10 ; 10 ; >
+      au < exists ; exists ; 1986 ; Vikalpa Volume 11 ; 11 ; >
+      au < exists ; exists ; 1987 ; Vikalpa Volume 12 ; 12 ; >
+      au < exists ; exists ; 1988 ; Vikalpa Volume 13 ; 13 ; >
+      au < exists ; exists ; 1989 ; Vikalpa Volume 14 ; 14 ; >
+      au < exists ; exists ; 1990 ; Vikalpa Volume 15 ; 15 ; >
+      au < exists ; exists ; 1991 ; Vikalpa Volume 16 ; 16 ; >
+      au < exists ; exists ; 1992 ; Vikalpa Volume 17 ; 17 ; >
+      au < exists ; exists ; 1993 ; Vikalpa Volume 18 ; 18 ; >
+      au < exists ; exists ; 1994 ; Vikalpa Volume 19 ; 19 ; >
+      au < exists ; exists ; 1995 ; Vikalpa Volume 20 ; 20 ; >
+      au < exists ; exists ; 1996 ; Vikalpa Volume 21 ; 21 ; >
+      au < exists ; exists ; 1997 ; Vikalpa Volume 22 ; 22 ; >
+      au < exists ; exists ; 1998 ; Vikalpa Volume 23 ; 23 ; >
+      au < exists ; exists ; 1999 ; Vikalpa Volume 24 ; 24 ; >
+      au < exists ; exists ; 2000 ; Vikalpa Volume 25 ; 25 ; >
+      au < exists ; exists ; 2001 ; Vikalpa Volume 26 ; 26 ; >
+      au < exists ; exists ; 2002 ; Vikalpa Volume 27 ; 27 ; >
+      au < exists ; exists ; 2003 ; Vikalpa Volume 28 ; 28 ; >
+      au < exists ; exists ; 2004 ; Vikalpa Volume 29 ; 29 ; >
+      au < exists ; exists ; 2005 ; Vikalpa Volume 30 ; 30 ; >
+      au < exists ; exists ; 2006 ; Vikalpa Volume 31 ; 31 ; >
+      au < exists ; exists ; 2007 ; Vikalpa Volume 32 ; 32 ; >
+      au < exists ; exists ; 2008 ; Vikalpa Volume 33 ; 33 ; >
+      au < exists ; exists ; 2009 ; Vikalpa Volume 34 ; 34 ; >
+      au < exists ; exists ; 2010 ; Vikalpa Volume 35 ; 35 ; >
+      au < exists ; exists ; 2011 ; Vikalpa Volume 36 ; 36 ; >
+      au < exists ; exists ; 2012 ; Vikalpa Volume 37 ; 37 ; >
+      au < exists ; exists ; 2013 ; Vikalpa Volume 38 ; 38 ; >
+      au < exists ; exists ; 2014 ; Vikalpa Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Vikalpa Volume 40 ; 40 ; >
       au < manifest ; exists ; 2016 ; Vikalpa Volume 41 ; 41 ; >
 
@@ -45716,6 +46008,17 @@
       #param[base_url] = http://whe.sagepub.com/
       param[journal_id] = whea
 
+      au < exists ; exists ; 2005 ; Women's Health Volume 1 ; 1 ; >
+      au < exists ; exists ; 2006 ; Women's Health Volume 2 ; 2 ; >
+      au < exists ; exists ; 2007 ; Women's Health Volume 3 ; 3 ; >
+      au < exists ; exists ; 2008 ; Women's Health Volume 4 ; 4 ; >
+      au < exists ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; >
+      au < exists ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; >
+      au < exists ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; >
+      au < exists ; exists ; 2012 ; Women's Health Volume 8 ; 8 ; >
+      au < exists ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; >
+      au < exists ; exists ; 2014 ; Women's Health Volume 10 ; 10 ; >
+      au < exists ; exists ; 2015 ; Women's Health Volume 11 ; 11 ; >
       au < manifest ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
 
   }
