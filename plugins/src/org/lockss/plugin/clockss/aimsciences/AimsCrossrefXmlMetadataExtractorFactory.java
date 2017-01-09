@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -82,8 +83,12 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
 
     /* In this case, the filename is found using the doi as directory levels to "paper.pdf"
-     * doi of '10.3934/proc.2015.0085"
-     * would have the content at ./10.3934/proc.2015.0085/paper.pdf
+     * so in foo.zip with a doi of '10.3934/proc.2015.0085" defined in 
+     * foo.zip!/crossref.xml
+     *     foo.zip!/10.3934/proc.2015.0085/paper.pdf
+     * but we've also seen this variation 
+     *     foo.zip!/proc.2015.0085.pdf
+     * which is at the same level as the crossref.xml and uses the 2nd part of the doi as filename
      * 
      */
     @Override
@@ -91,12 +96,15 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         ArticleMetadata oneAM) {
 
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String doiValue = oneAM.getRaw(helper.getFilenameXPathKey());        
+      String doiValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String doiSecond = StringUtils.substringAfter(doiValue, "/");
       String pdfName = cuBase + doiValue + "/paper.pdf";
+      String altName = cuBase + doiSecond + ".pdf";
       log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
-      //log.info("looking for: " + pdfName);
+      returnList.add(altName);
+      //log.info("looking for: " + pdfName + " or " + altName);
       return returnList;
     }
     
