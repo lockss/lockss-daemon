@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2016-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,6 +31,7 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.sql.Connection;
 import org.lockss.app.LockssApp;
+import org.lockss.config.CurrentConfig;
 //import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssWatchdog;
 import org.lockss.db.JdbcContext;
@@ -172,32 +173,51 @@ public class DeleteMetadataTask extends StepTask {
     final String DEBUG_HEADER = "step(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "n = " + n);
 
-    Connection conn = null;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
 
-    try {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
-
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-      jdbcCtxt = new JdbcContext(conn);
-      
-      // Remove from the database the Archival Unit metadata.
-      long removedArticleCount =
-	  mdManagerSql.removeAuMetadataItems(jdbcCtxt, auId);
-      log.info("Metadata removal task for AU '" + auName + "' removed "
-  	  + removedArticleCount + " database items.");
-
-      // Complete the database transaction.
-      MetadataDbManager.commitOrRollback(conn, log);
-    } catch (Exception ex) {
-      e = ex;
-      log.warning("Error removing metadata", e);
-      setFinished();
-      if (status == ReindexingStatus.Running) {
-        status = ReindexingStatus.Failed;
+    // Check whether the metadata should be deleted via a REST web service.
+    if (CurrentConfig.getParam(MetadataManager.PARAM_MD_REST_SERVICE_LOCATION)
+	!= null) {
+      // Yes: Invoke the REST web service operation.
+      try {
+	Integer removedArticleCount =
+	    new DeleteAuItemsClient().deleteAuItems(auId);
+	log.info("Metadata removal task for AU '" + auName + "' removed "
+	    + removedArticleCount + " database items.");
+      } catch (Exception ex) {
+	e = ex;
+	log.warning("Error removing metadata", e);
+	setFinished();
+	if (status == ReindexingStatus.Running) {
+	  status = ReindexingStatus.Failed;
+	}
       }
-    } finally {
-      MetadataDbManager.safeRollbackAndClose(conn);
+    } else {
+      // No: Delete the metadata from the database.
+      Connection conn = null;
+
+      try {
+	conn = dbManager.getConnection();
+	jdbcCtxt = new JdbcContext(conn);
+
+	// Remove from the database the Archival Unit metadata.
+	int removedArticleCount =
+	    mdManagerSql.removeAuMetadataItems(jdbcCtxt, auId);
+	log.info("Metadata removal task for AU '" + auName + "' removed "
+	    + removedArticleCount + " database items.");
+
+	// Complete the database transaction.
+	MetadataDbManager.commitOrRollback(conn, log);
+      } catch (Exception ex) {
+	e = ex;
+	log.warning("Error removing metadata", e);
+	setFinished();
+	if (status == ReindexingStatus.Running) {
+	  status = ReindexingStatus.Failed;
+	}
+      } finally {
+	MetadataDbManager.safeRollbackAndClose(conn);
+      }
     }
 
     if (log.isDebug3())

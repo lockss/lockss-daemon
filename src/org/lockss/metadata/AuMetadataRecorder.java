@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,8 +42,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.CurrentConfig;
 import org.lockss.db.DbException;
 import org.lockss.extractor.MetadataField;
+import org.lockss.laaws.mdq.model.ItemMetadata;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
@@ -290,6 +292,30 @@ public class AuMetadataRecorder {
   }
 
   /**
+   * Constructor.
+   * 
+   * @param mdManager
+   *          A MetadataManager with the metadata manager.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   */
+  public AuMetadataRecorder(MetadataManager mdManager, String auId) {
+    this.task = null;
+    this.mdManager = mdManager;
+    mdManagerSql = mdManager.getMetadataManagerSql();
+    dbManager = mdManager.getDbManager();
+    this.au = null;
+
+    this.plugin = mdManager.getAuPlugin(auId);
+    isBulkContent = plugin.isBulkContent();
+    platform = plugin.getPublishingPlatform();
+    pluginVersion = mdManager.getPluginMetadataVersionNumber(plugin);
+    this.auId = auId;
+    auKey = PluginManager.auKeyFromAuId(auId);
+    pluginId = PluginManager.pluginIdFromAuId(auId);
+  }
+
+  /**
    * Writes to the database metadata related to an archival unit.
    * 
    * @param conn
@@ -309,7 +335,8 @@ public class AuMetadataRecorder {
 
     // Get the mandatory metadata fields.
     List<String> mandatoryFields = mdManager.getMandatoryMetadataFields();
-    if (log.isDebug3()) log.debug3("mandatoryFields = " + mandatoryFields);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "mandatoryFields = " + mandatoryFields);
 
     // Loop through the metadata for each item.
     while (mditr.hasNext()) {
@@ -319,18 +346,7 @@ public class AuMetadataRecorder {
 
       task.pokeWDog();
 
-      // Get the next metadata item.
-      ArticleMetadataInfo mdInfo = mditr.next();
-
-      // Validate all the metadata fields.
-      validateMetadata(mdInfo, mandatoryFields);
-
-
-      // Normalize all the metadata fields.
-      ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mdInfo);
-
-      // Store the metadata fields in the database.
-      storeMetadata(conn, normalizedMdInfo);
+      recordMetadataItem(conn, mandatoryFields, mditr);
 
       // Count the processed article.
       task.incrementUpdatedArticleCount();
@@ -338,32 +354,93 @@ public class AuMetadataRecorder {
 	  + task.getUpdatedArticleCount());
     }
 
-    if (auMdSeq != null) {
-      // Update the AU last extraction timestamp.
-      mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
+    // Check whether the metadata should NOT be posted to a REST web service.
+    if (CurrentConfig.getParam(MetadataManager.PARAM_MD_REST_SERVICE_LOCATION)
+	== null) {
+      // Yes.
+      if (auMdSeq != null) {
+	// Update the AU last extraction timestamp.
+	mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
+      } else {
+	log.warning("auMdSeq is null for auid = '" + au.getAuId() + "'.");
+      }
+
+      // Find the list of previous problems indexing this Archival Unit.
+      List<String> problems = findAuProblems(conn, auId);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "problems.size() = " + problems.size());
+
+      // Check whether the publisher name used is a synthetic name.
+      if (publisherName.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
+	// Yes: Check whether an entry in the AU problem table does not exist.
+	if (!problems.contains(publisherName)) {
+	  // Yes: Add an unknown publisher entry to the AU problem table.
+	  addAuProblem(conn, auId, publisherName);
+	}
+      } else {
+	// No: Check whether there is data obtained when the publisher was
+	// unknown that needs to be merged.
+	if (problems.size() > 0) {
+	  // Yes: Merge it.
+	  fixUnknownPublishersAuData(conn, problems);
+	}
+      }
+    }
+  }
+
+  /**
+   * Writes to the database metadata related to an archival unit item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mandatoryFields
+   *          A List<String> with the fields that are required for the item
+   *          metadata to pass validation.
+   * @param mditr
+   *          An Iterator<ArticleMetadataInfo> with the metadata.
+   * @return a Long with the database identifier of the metadata item.
+   * @throws MetadataException
+   *           if any problem is detected with the passed metadata.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long recordMetadataItem(Connection conn, List<String> mandatoryFields,
+      Iterator<ArticleMetadataInfo> mditr) throws MetadataException,
+      DbException {
+    final String DEBUG_HEADER = "recordMetadataItem(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "mandatoryFields = " + mandatoryFields);
+
+    Long mdItemSeq = null;
+
+    // Get the next metadata item.
+    ArticleMetadataInfo mdInfo = mditr.next();
+
+    // Validate all the metadata fields.
+    validateMetadata(mdInfo, mandatoryFields);
+
+    // Normalize all the metadata fields.
+    ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mdInfo);
+
+    // Check whether the metadata should be posted to a REST web service.
+    if (CurrentConfig.getParam(MetadataManager.PARAM_MD_REST_SERVICE_LOCATION)
+	!= null) {
+      // Yes: Create the object to be posted.
+      ItemMetadata item =
+	  mdManager.populateItemMetadataDetail(normalizedMdInfo);
+
+      // Add to it the Archival Unit identifier.
+      item.getScalarMap().put("au_id", auId);
+
+      // Post it.
+      mdItemSeq = new StoreAuItemClient().storeAuItem(item);
     } else {
-      log.warning("auMdSeq is null for auid = '" + au.getAuId() + "'.");
+      // No: Store the metadata fields in the database.
+      mdItemSeq = storeMetadata(conn, normalizedMdInfo);
     }
 
-    // Find the list of previous problems indexing this Archival Unit.
-    List<String> problems = findAuProblems(conn, auId);
-    log.debug3(DEBUG_HEADER + "problems.size() = " + problems.size());
-
-    // Check whether the publisher name used is a synthetic name.
-    if (publisherName.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
-      // Yes: Check whether an entry in the AU problem table does not exist.
-      if (!problems.contains(publisherName)) {
-	// Yes: Add an unknown publisher entry to the AU problem table.
-	addAuProblem(conn, auId, publisherName);
-      }
-    } else {
-      // No: Check whether there is data obtained when the publisher was unknown
-      // that needs to be merged.
-      if (problems.size() > 0) {
-	// Yes: Merge it.
-	fixUnknownPublishersAuData(conn, problems);
-      }
-    }
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
   }
 
   /**
@@ -1069,12 +1146,13 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @return a Long with the database identifier of the metadata item.
    * @throws MetadataException
    *           if any problem is detected with the passed metadata.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
+  Long storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
       throws MetadataException, DbException {
     final String DEBUG_HEADER = "storeMetadata(): ";
     if (log.isDebug3()) {
@@ -1191,7 +1269,7 @@ public class AuMetadataRecorder {
   	parentMdItemType == null) {
         if (log.isDebug3()) log.debug3(DEBUG_HEADER
   	  + "Done: publicationSeq or parentSeq or parentMdItemType is null.");
-        return;
+        return null;
       }
 
       // Replace any unknown series titles with this series title
@@ -1254,9 +1332,10 @@ public class AuMetadataRecorder {
     }
 
     // Replace or create the metadata item.
-    replaceOrCreateMdItem(conn, mdinfo);
+    Long mdItemSeq = replaceOrCreateMdItem(conn, mdinfo);
 
-    log.debug3(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
   }
 
   /**
@@ -1506,10 +1585,11 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
+   * @return a Long with the database identifier of the metadata item.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void replaceOrCreateMdItem(Connection conn,
+  private Long replaceOrCreateMdItem(Connection conn,
       ArticleMetadataInfo mdinfo) throws DbException {
     final String DEBUG_HEADER = "replaceOrCreateMdItem(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
@@ -1577,7 +1657,7 @@ public class AuMetadataRecorder {
     if (StringUtil.isNullString(mdItemType)) {
       // Skip it if the parent type is not a book or journal.
       log.error(DEBUG_HEADER + "Unknown mdItemType = " + mdItemType);
-      return;
+      return null;
     }
     
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdItemType = " + mdItemType);
@@ -1590,7 +1670,7 @@ public class AuMetadataRecorder {
     // sanity check -- type should be known in database
     if (mdItemTypeSeq == null) {
       log.error(DEBUG_HEADER + "Unknown articleType = " + mdItemType);
-      return;
+      return null;
     }
     
     Long mdItemSeq = null;
@@ -1652,7 +1732,8 @@ public class AuMetadataRecorder {
     mdManager.addMdItemDoi(conn, mdItemSeq, doi);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added AUItem DOI.");
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
   }
 
   /**
@@ -2687,10 +2768,15 @@ public class AuMetadataRecorder {
 	log.debug3(DEBUG_HEADER + "Updated AU plugin version.");
     }
 
+    if (au != null) {
     // Update the last extraction time.
-    mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "Updated AU last extraction time.");
+      mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Updated AU last extraction time.");
+    } else {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "AU is null: AU last extraction time NOT updated.");
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

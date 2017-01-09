@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,6 +28,7 @@
 package org.lockss.metadata;
 
 import static org.lockss.metadata.SqlConstants.*;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -56,11 +57,15 @@ import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
+import org.lockss.db.DbManager;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.job.JobManager;
+import org.lockss.laaws.mdq.model.ItemMetadata;
+import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
@@ -74,6 +79,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 import org.lockss.util.PatternIntMap;
+import org.lockss.util.PlatformUtil;
 
 /**
  * This class implements a metadata manager that is responsible for managing an
@@ -225,6 +231,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   static final String PARAM_ON_DEMAND_METADATA_EXTRACTION_ONLY = PREFIX
       + "onDemandMetadataExtractionOnly";
   static final boolean DEFAULT_ON_DEMAND_METADATA_EXTRACTION_ONLY = false;
+
+  /**
+   * The Metadata REST web service parameters.
+   */
+  static final String MD_REST_PREFIX = PREFIX + "mdRest.";
+  static final String PARAM_MD_REST_SERVICE_LOCATION =
+      MD_REST_PREFIX + "serviceLocation";
+  static final String PARAM_MD_REST_TIMEOUT_VALUE =
+      MD_REST_PREFIX + "timeoutValue";
+  static final int DEFAULT_MD_REST_TIMEOUT_VALUE = 600;
+  static final String PARAM_MD_REST_USER_NAME = MD_REST_PREFIX + "userName";
+  static final String PARAM_MD_REST_PASSWORD = MD_REST_PREFIX + "password";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -518,15 +536,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
 	  for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(pluginId)) {
 	    String auId = tdbAuId.toString().replaceAll("&pub_down~true", "");
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+	    //if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
 
 	    TdbAu tdbAu = tdb.getTdbAuById(tdbAuId);
 	    if (log.isDebug3()) {
 	      //log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
 	      //log.debug3(DEBUG_HEADER
 		  //+ "tdbAu.getAttrs() = " + tdbAu.getAttrs());
-	      log.debug3(DEBUG_HEADER
-		  + "tdbAu.getParams() = " + tdbAu.getParams());
+	      //log.debug3(DEBUG_HEADER
+		  //+ "tdbAu.getParams() = " + tdbAu.getParams());
 	      //log.debug3(DEBUG_HEADER
 		  //+ "tdbAu.getProperties() = " + tdbAu.getProperties());
 	    }
@@ -535,7 +553,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    properties.putAll(tdbAu.getParams());
 
 	    Configuration auConf = ConfigManager.fromProperties(properties);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+	    //if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
 
 	    auConfigurations.put(auId, auConf);
 	  }
@@ -4799,7 +4817,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the identifier of the archival unit.
    * @return a Plugin with the plugin of the archival unit.
    */
-  private Plugin getAuPlugin(String auId) {
+  Plugin getAuPlugin(String auId) {
     final String DEBUG_HEADER = "getAuPlugin(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
@@ -4895,8 +4913,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "getAuConf(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
-    Configuration auConf = auConfigurations.get(auId);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+    Configuration auConf = null;
+
+    if (auConfigurations != null) {
+      auConf = auConfigurations.get(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+    }
 
     if (auConf == null) {
       auConf = ConfigManager.EMPTY_CONFIGURATION;
@@ -4953,12 +4975,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param limit
    *          An Integer with the maximum number of AU metadata items to be
    *          returned.
-   * @return a List<ItemMetadataDetail> with the requested metadata of the
-   *         Archival Unit.
+   * @return a List<ItemMetadata> with the requested metadata of the Archival
+   *         Unit.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public List<ItemMetadataDetail> getAuMetadataDetail(String auId, Integer page,
+  public List<ItemMetadata> getAuMetadataDetail(String auId, Integer page,
       Integer limit) throws DbException {
     final String DEBUG_HEADER = "getAuMetadataDetail(): ";
     if (log.isDebug2()) {
@@ -4968,6 +4990,338 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     return mdManagerSql.getAuMetadataDetail(auId, page, limit);
+  }
+
+  /**
+   * Populates an ItemMetadata with data provided in an ArticleMetadataInfo
+   * object.
+   * 
+   * @param ami
+   *          An ArticleMetadataInfo with the source of the data.
+   * @return an ItemMetadata populated with the source data.
+   */
+  public ItemMetadata populateItemMetadataDetail(ArticleMetadataInfo ami) {
+    final String DEBUG_HEADER = "populateItemMetadataDetail(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ami = " + ami);
+
+    ItemMetadata item = new ItemMetadata();
+
+    Map<String, String> scalarMap = item.getScalarMap();
+    Map<String, List<String>> listMap = item.getListMap();
+    Map<String, Map<String, String>> mapMap = item.getMapMap();
+
+    if (ami.publisher != null) {
+      scalarMap.put(PUBLISHER_NAME_COLUMN, ami.publisher);
+    }
+
+    if (ami.provider != null) {
+      scalarMap.put(PROVIDER_NAME_COLUMN, ami.provider);
+    }
+
+    if (ami.seriesTitle != null) {
+      scalarMap.put("series_title_name", ami.seriesTitle);
+    }
+
+    if (ami.proprietarySeriesIdentifier != null) {
+      scalarMap.put("proprietary_series_identifier",
+	  ami.proprietarySeriesIdentifier);
+    }
+
+    if (ami.publicationTitle != null) {
+      scalarMap.put("publication_name", ami.publicationTitle);
+    }
+
+    Map<String, String> isbnMap = new HashMap<String, String>();
+
+    if (ami.isbn != null) {
+      isbnMap.put(P_ISBN_TYPE, ami.isbn);
+    }
+
+    if (ami.eisbn != null) {
+      isbnMap.put(E_ISBN_TYPE, ami.eisbn);
+    }
+
+    if (isbnMap.size() > 0) {
+      mapMap.put(ISBN_COLUMN, isbnMap);
+    }
+
+    Map<String, String> issnMap = new HashMap<String, String>();
+
+    if (ami.issn != null) {
+      issnMap.put(P_ISSN_TYPE, ami.issn);
+    }
+
+    if (ami.eissn != null) {
+      issnMap.put(E_ISSN_TYPE, ami.eissn);
+    }
+
+    if (issnMap.size() > 0) {
+      mapMap.put(ISSN_COLUMN, issnMap);
+    }
+
+    if (ami.volume != null) {
+      scalarMap.put(VOLUME_COLUMN, ami.volume);
+    }
+
+    if (ami.issue != null) {
+      scalarMap.put(ISSUE_COLUMN, ami.issue);
+    }
+
+    if (ami.startPage != null) {
+      scalarMap.put(START_PAGE_COLUMN, ami.startPage);
+    }
+
+    if (ami.endPage != null) {
+      scalarMap.put(END_PAGE_COLUMN, ami.endPage);
+    }
+
+    if (ami.pubDate != null) {
+      scalarMap.put(DATE_COLUMN, ami.pubDate);
+    }
+
+    if (ami.articleTitle != null) {
+      scalarMap.put("item_title", ami.articleTitle);
+    }
+
+    if (ami.authors != null && ami.authors.size() > 0) {
+      listMap.put(AUTHOR_NAME_COLUMN, new ArrayList<String>(ami.authors));
+    }
+
+    if (ami.doi != null) {
+      scalarMap.put(DOI_COLUMN, ami.doi);
+    }
+
+    Map<String, String> urlMap = ami.featuredUrlMap;
+
+    if (ami.accessUrl != null) {
+      urlMap.put("Access", ami.accessUrl);
+    }
+
+    if (urlMap.size() > 0) {
+      mapMap.put(URL_COLUMN, urlMap);
+    }
+
+    if (ami.keywords != null && ami.keywords.size() > 0) {
+      listMap.put(KEYWORD_COLUMN, new ArrayList<String>(ami.keywords));
+    }
+
+    if (ami.coverage != null) {
+      scalarMap.put(COVERAGE_COLUMN, ami.coverage);
+    }
+
+    if (ami.itemNumber != null) {
+      scalarMap.put(ITEM_NO_COLUMN, ami.itemNumber);
+    }
+
+    if (ami.proprietaryIdentifier != null) {
+      List<String> pis = new ArrayList<String>();
+      listMap.put(PROPRIETARY_ID_COLUMN, pis);
+      pis.add(ami.proprietaryIdentifier);
+    }
+
+    if (ami.fetchTime != null) {
+      scalarMap.put(FETCH_TIME_COLUMN, ami.fetchTime);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "item = " + item);
+    return item;
+  }
+
+  /**
+   * Stores in the database the metadata for an item belonging to an AU.
+   * 
+   * @param item
+   *          An ItemMetadata with the AU item metadata.
+   * @return a Long with the database identifier of the metadata item.
+   * @throws Exception
+   *           if any problem occurred.
+   */
+  public Long storeAuItemMetadata(ItemMetadata item) throws Exception {
+    final String DEBUG_HEADER = "storeAuItemMetadata(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "item = " + item);
+
+    Long mdItemSeq = null;
+    Connection conn = null;
+
+    try {
+      String auId = item.getScalarMap().get("au_id");
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+      MetadataManager mdManager =
+  	(MetadataManager)LockssApp.getManager(MetadataManager.getManagerKey());
+
+      ArticleMetadataBuffer articleMetadataInfoBuffer =
+	  new ArticleMetadataBuffer(new File(PlatformUtil.getSystemTempDir()));
+
+      ArticleMetadata md = populateArticleMetadata(item);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "md = " + md);
+
+      articleMetadataInfoBuffer.add(md);
+
+      Iterator<ArticleMetadataInfo> mditr =
+          articleMetadataInfoBuffer.iterator();
+
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the mandatory metadata fields.
+      List<String> mandatoryFields = mdManager.getMandatoryMetadataFields();
+      if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "mandatoryFields = " + mandatoryFields);
+
+      // Write the AU metadata to the database.
+      mdItemSeq = new AuMetadataRecorder(mdManager, auId)
+	  .recordMetadataItem(conn, mandatoryFields, mditr);
+
+      // Complete the database transaction.
+      MetadataDbManager.commitOrRollback(conn, log);
+    } catch (Exception e) {
+      log.error("Error storing AU item metadata", e);
+      log.error("item = " + item);
+      throw e;
+    } finally {
+      MetadataDbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+    return mdItemSeq;
+ }
+
+  /**
+   * Populates an ArticleMetadata with data provided in an ItemMetadata object.
+   * 
+   * @param item
+   *          An ItemMetadata with the source of the data.
+   * @return an ArticleMetadata populated with the source data.
+   */
+  private ArticleMetadata populateArticleMetadata(ItemMetadata item) {
+    Map<String, String> scalarMap = item.getScalarMap();
+
+    if (scalarMap == null) {
+      scalarMap = new HashMap<String, String>();
+    }
+
+    Map<String, List<String>> listMap = item.getListMap();
+
+    if (listMap == null) {
+      listMap = new HashMap<String, List<String>>();
+    }
+
+    Map<String, Map<String, String>> mapMap = item.getMapMap();
+
+    if (mapMap == null) {
+      mapMap = new HashMap<String, Map<String, String>>();
+    }
+
+    ArticleMetadata am = new ArticleMetadata();
+
+    am.put(MetadataField.FIELD_PUBLISHER, scalarMap.get(PUBLISHER_NAME_COLUMN));
+    am.put(MetadataField.FIELD_PROVIDER, scalarMap.get(PROVIDER_NAME_COLUMN));
+    am.put(MetadataField.FIELD_SERIES_TITLE,
+	scalarMap.get("series_title_name"));
+    am.put(MetadataField.FIELD_PROPRIETARY_SERIES_IDENTIFIER,
+	scalarMap.get("proprietary_series_identifier"));
+    am.put(MetadataField.FIELD_PUBLICATION_TITLE,
+	scalarMap.get("publication_name"));
+
+    Map<String, String> isbnMap = mapMap.get(ISBN_COLUMN);
+
+    if (isbnMap != null && isbnMap.size() > 0) {
+      am.put(MetadataField.FIELD_ISBN, isbnMap.get(P_ISBN_TYPE));
+      am.put(MetadataField.FIELD_EISBN, isbnMap.get(E_ISBN_TYPE));
+    }
+
+    Map<String, String> issnMap = mapMap.get(ISSN_COLUMN);
+
+    if (issnMap != null && issnMap.size() > 0) {
+      am.put(MetadataField.FIELD_ISSN, issnMap.get(P_ISSN_TYPE));
+      am.put(MetadataField.FIELD_EISSN, issnMap.get(E_ISSN_TYPE));
+    }
+
+    am.put(MetadataField.FIELD_VOLUME, scalarMap.get(VOLUME_COLUMN));
+    am.put(MetadataField.FIELD_ISSUE, scalarMap.get(ISSUE_COLUMN));
+    am.put(MetadataField.FIELD_START_PAGE, scalarMap.get(START_PAGE_COLUMN));
+    am.put(MetadataField.FIELD_END_PAGE, scalarMap.get(END_PAGE_COLUMN));
+    am.put(MetadataField.FIELD_DATE, scalarMap.get(DATE_COLUMN));
+    am.put(MetadataField.FIELD_ARTICLE_TITLE, scalarMap.get("item_title"));
+
+    List<String> authors = listMap.get(AUTHOR_NAME_COLUMN);
+
+    if (authors != null) {
+      for (String author : authors) {
+	am.put(MetadataField.FIELD_AUTHOR, author);
+      }
+    }
+
+    am.put(MetadataField.FIELD_DOI, scalarMap.get(DOI_COLUMN));
+
+    Map<String, String> urlMap = mapMap.get(URL_COLUMN);
+
+    if (urlMap != null && urlMap.size() > 0) {
+      am.put(MetadataField.FIELD_ACCESS_URL, urlMap.get("Access"));
+      am.putRaw(MetadataField.FIELD_FEATURED_URL_MAP.getKey(), urlMap);
+    }
+
+    List<String> keywords = listMap.get(KEYWORD_COLUMN);
+
+    if (keywords != null) {
+      for (String keyword : keywords) {
+	am.put(MetadataField.FIELD_KEYWORDS, keyword);
+      }
+    }
+
+    am.put(MetadataField.FIELD_COVERAGE, scalarMap.get(COVERAGE_COLUMN));
+    am.put(MetadataField.FIELD_ITEM_NUMBER, scalarMap.get(ITEM_NO_COLUMN));
+
+    List<String> pis = listMap.get(PROPRIETARY_ID_COLUMN);
+
+    if (pis != null && pis.size() > 0) {
+      am.put(MetadataField.FIELD_PROPRIETARY_IDENTIFIER, pis.get(0));
+    }
+
+    am.put(MetadataField.FIELD_FETCH_TIME, scalarMap.get(FETCH_TIME_COLUMN));
+
+    return am;
+  }
+
+  /**
+   * Deletes the metadata stored for an AU given the AU identifier.
+   * 
+   * @param auId
+   *          A String with the AU identifier.
+   * @return an int with the number of articles deleted.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public int deleteAuMetadataItems(String auId) throws DbException {
+    final String DEBUG_HEADER = "deleteAuMetadataItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auid = " + auId);
+
+    Connection conn = null;
+    int itemCount = 0;
+
+    try {
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	String message = "Cannot enable indexing for auid '" + auId
+	    + "' - Cannot connect to database";
+
+	log.error(message);
+	throw new DbException(message);
+      }
+
+      // Remove the metadata for this AU.
+      itemCount = mdManagerSql.removeAuMetadataItems(conn, auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "itemCount = " + itemCount);
+
+      DbManager.commitOrRollback(conn, log);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "itemCount = " + itemCount);
+    return itemCount;
   }
 
   /**

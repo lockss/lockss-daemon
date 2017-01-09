@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +46,7 @@ import java.util.TreeMap;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.db.JdbcContext;
+import org.lockss.laaws.mdq.model.ItemMetadata;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
@@ -1528,10 +1529,13 @@ public class MetadataManagerSql {
       + ", mi2." + MD_ITEM_SEQ_COLUMN
       + ", min2." + NAME_COLUMN + " as item_title"
       + ", mi2." + DATE_COLUMN
+      + ", mi2." + COVERAGE_COLUMN
+      + ", mi2." + FETCH_TIME_COLUMN
       + ", b." + VOLUME_COLUMN
       + ", b." + ISSUE_COLUMN
       + ", b." + START_PAGE_COLUMN
       + ", b." + END_PAGE_COLUMN
+      + ", b." + ITEM_NO_COLUMN
       + ", d." + DOI_COLUMN
       + ", pv." + PROVIDER_NAME_COLUMN
       + " from " + PUBLISHER_TABLE + " pr"
@@ -1569,10 +1573,12 @@ public class MetadataManagerSql {
       + ", u." + FEATURE_COLUMN
       + ", u." + URL_COLUMN
       + ", a." + AUTHOR_NAME_COLUMN
+      + ", k." + KEYWORD_COLUMN
       + ", issn." + ISSN_COLUMN
       + ", issn." + ISSN_TYPE_COLUMN
       + ", isbn." + ISBN_COLUMN
       + ", isbn." + ISBN_TYPE_COLUMN
+      + ", pi." + PROPRIETARY_ID_COLUMN
       + " from " + MD_ITEM_TABLE + " mi2"
       + " left outer join " + MD_ITEM_NAME_TABLE + " min2"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
@@ -1581,10 +1587,14 @@ public class MetadataManagerSql {
       + " on mi2." + PARENT_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + ISBN_TABLE
       + " on mi2." + PARENT_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + PROPRIETARY_ID_TABLE + " pi"
+      + " on mi2." + PARENT_SEQ_COLUMN + " = pi." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + URL_TABLE + " u"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + AUTHOR_TABLE + " a"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = a." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + KEYWORD_TABLE + " k"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = k." + MD_ITEM_SEQ_COLUMN
       + " where mi2." + MD_ITEM_SEQ_COLUMN + " in ()"
       + " order by mi2." + MD_ITEM_SEQ_COLUMN;
 
@@ -7142,12 +7152,12 @@ public class MetadataManagerSql {
    * @param limit
    *          An Integer with the maximum number of AU metadata items to be
    *          returned.
-   * @return a List<ItemMetadataDetail> with the requested metadata of the
-   *         Archival Unit.
+   * @return a List<ItemMetadata> with the requested metadata of the Archival
+   *         Unit.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public List<ItemMetadataDetail> getAuMetadataDetail(String auId, Integer page,
+  public List<ItemMetadata> getAuMetadataDetail(String auId, Integer page,
       Integer limit) throws DbException {
     final String DEBUG_HEADER = "getAuMetadataDetail(): ";
     if (log.isDebug2()) {
@@ -7156,7 +7166,7 @@ public class MetadataManagerSql {
       log.debug2(DEBUG_HEADER + "limit = " + limit);
     }
 
-    List<ItemMetadataDetail> items = null;
+    List<ItemMetadata> items = null;
     Connection conn = null;
 
     try {
@@ -7186,13 +7196,13 @@ public class MetadataManagerSql {
    * @param limit
    *          An Integer with the maximum number of AU metadata items to be
    *          returned.
-   * @return a List<ItemMetadataDetail> with the requested metadata of the
-   *         Archival Unit.
+   * @return a List<ItemMetadata> with the requested metadata of the Archival
+   *         Unit.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public List<ItemMetadataDetail> getAuMetadataDetail(Connection conn,
-      String auId, Integer page, Integer limit) throws DbException {
+  public List<ItemMetadata> getAuMetadataDetail(Connection conn, String auId,
+      Integer page, Integer limit) throws DbException {
     final String DEBUG_HEADER = "getAuMetadataDetail(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "auId = " + auId);
@@ -7200,15 +7210,14 @@ public class MetadataManagerSql {
       log.debug2(DEBUG_HEADER + "limit = " + limit);
     }
 
-    List<ItemMetadataDetail> items = new ArrayList<ItemMetadataDetail>();
+    List<ItemMetadata> items = new ArrayList<ItemMetadata>();
 
-    Map<Long, ItemMetadataDetail> itemMap =
-	new HashMap<Long, ItemMetadataDetail>();
+    Map<Long, ItemMetadata> itemMap = new HashMap<Long, ItemMetadata>();
 
     String pluginId = null;
     String auKey = null;
     Long previousMdItemSeq = null;
-    ItemMetadataDetail itemMetadata = null;
+    ItemMetadata itemMetadata = null;
     String sql = FIND_OFFSET_AU_MD_ITEM_QUERY;
 
     if (dbManager.isTypeDerby()) {
@@ -7253,7 +7262,7 @@ public class MetadataManagerSql {
 	  log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
 	if (!mdItemSeq.equals(previousMdItemSeq)) {
-	  itemMetadata = new ItemMetadataDetail();
+	  itemMetadata = new ItemMetadata();
 	  itemMetadata.setScalarMap(new HashMap<String, String>());
 	  itemMetadata.setListMap(new HashMap<String, List<String>>());
 	  itemMetadata.setMapMap(new HashMap<String, Map<String, String>>());
@@ -7293,6 +7302,22 @@ public class MetadataManagerSql {
 	    scalarMap.put(DATE_COLUMN, date);
 	  }
 
+	  String coverage = resultSet.getString(COVERAGE_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "coverage = " + coverage);
+
+	  if (!resultSet.wasNull()) {
+	    scalarMap.put(COVERAGE_COLUMN, coverage);
+	  }
+
+	  Long fetchTime = resultSet.getLong(FETCH_TIME_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+
+	  if (!resultSet.wasNull()) {
+	    scalarMap.put(FETCH_TIME_COLUMN, fetchTime.toString());
+	  }
+
 	  String itemTitle = resultSet.getString("item_title");
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "itemTitle = " + itemTitle);
@@ -7328,6 +7353,13 @@ public class MetadataManagerSql {
 
 	  if (!resultSet.wasNull()) {
 	    scalarMap.put(END_PAGE_COLUMN, endPage);
+	  }
+
+	  String itemNo = resultSet.getString(ITEM_NO_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "itemNo = " + itemNo);
+
+	  if (!resultSet.wasNull()) {
+	    scalarMap.put(ITEM_NO_COLUMN, itemNo);
 	  }
 
 	  String doi = resultSet.getString(DOI_COLUMN);
@@ -7444,6 +7476,27 @@ public class MetadataManagerSql {
 	  }
 	}
 
+	String proprietaryId = resultSet.getString(PROPRIETARY_ID_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "proprietaryId = " + proprietaryId);
+
+	if (!resultSet.wasNull()) {
+	  List<String> pis =
+	      itemMetadata.getListMap().get(PROPRIETARY_ID_COLUMN);
+
+	  if (pis == null) {
+	    itemMetadata.getListMap().put(PROPRIETARY_ID_COLUMN,
+		new ArrayList<String>());
+
+	    itemMetadata.getListMap().get(PROPRIETARY_ID_COLUMN)
+	    .add(proprietaryId);
+	  } else {
+	    if (!pis.contains(proprietaryId)) {
+	      pis.add(proprietaryId);
+	    }
+	  }
+	}
+
 	String url = resultSet.getString(URL_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "url = " + url);
 
@@ -7481,6 +7534,24 @@ public class MetadataManagerSql {
 	  } else {
 	    if (!authors.contains(author)) {
 	      authors.add(author);
+	    }
+	  }
+	}
+
+	String keyword = resultSet.getString(KEYWORD_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "keyword = " + keyword);
+
+	if (!resultSet.wasNull()) {
+	  List<String> keywords = itemMetadata.getListMap().get(KEYWORD_COLUMN);
+
+	  if (keywords == null) {
+	    itemMetadata.getListMap().put(KEYWORD_COLUMN,
+		new ArrayList<String>());
+
+	    itemMetadata.getListMap().get(KEYWORD_COLUMN).add(keyword);
+	  } else {
+	    if (!keywords.contains(keyword)) {
+	      keywords.add(keyword);
 	    }
 	  }
 	}
