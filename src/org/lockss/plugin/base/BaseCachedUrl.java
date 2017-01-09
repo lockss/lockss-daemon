@@ -303,11 +303,13 @@ public class BaseCachedUrl implements CachedUrl {
     if (au instanceof DefinableArchivalUnit) {
       DefinableArchivalUnit dau = (DefinableArchivalUnit)au;
       PatternStringMap urlMime = dau.makeUrlMimeTypeMap();
-      String mime = urlMime.getMatch(getUrl());
-      if (mime != null) {
-	logger.debug("Inferred mime type: " + mime + " for " + getUrl());
+      if (urlMime != null) {
+	String mime = urlMime.getMatch(getUrl());
+	if (mime != null) {
+	  logger.debug("Inferred mime type: " + mime + " for " + getUrl());
+	  return mime;
+	}
       }
-      return mime;
     }
     return null;
   }
