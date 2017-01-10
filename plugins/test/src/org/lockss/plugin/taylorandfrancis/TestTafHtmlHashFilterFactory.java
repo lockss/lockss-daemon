@@ -107,14 +107,46 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 "           </a>\n"+
 "       </li>\n"+
 "       </div> ";
-  
-
  
   private static final String withoutTocLink =
       "";
+
+  private static final String withPeopleAlsoRead =
+"    <div class=\"overview borderedmodule-last\">Hello World" +
+"    <div class=\"widget combinedRecommendationsWidget none  widget-none  widget-compact-vertical\" id=\"abcde\"  >" + //147_1
+"      <div class=\"wrapped \" ><h1 class=\"widget-header header-none  header-compact-vertical\">People also read</h1>" + //148_2 wrapped
+"        <div class=\"widget-body body body-none  body-compact-vertical\">" + //149_3 widget-body
+"          <div class=\"relatedArt\">" +       //150_4 related_art
+"            <div class=\"sidebar\">" + //151_5 sidebar
+"              <div class=\"relatedItem\"> " +  //152_6 relatedItem                   
+"                <div class=\"article-card col-md-1-4\">" + //153_7 article-card
+"                  <div class=\"header\">" + //154_8  header
+"                    <div class=\"art_title  hlFld-Title\">" + //155_9 art_title
+"                      <div class=\"article_type\">Article" + //156_10 article_type tests "_"
+"                      </div><a class=\"ref nowrap\" href=\"/doi/full/10.1080/2049761X.2015.1107307?src=recsys\">Cape Town Convention closing opinions in aircraft finance transactions: custom, standards and practice</a><span class=\"access-icon oa\"></span>" + //156_10 article-type
+"                    </div>" + //155_9 art_title
+"                  </div>" + //154_8  header
+"                  <div class=\"footer\"><a class=\"entryAuthor search-link\" href=\"/author/Durham%2C+Phillip+L\"><span class=\"hlFld-ContribAuthor\">Phillip L Durham</span></a> et al." + //160_11 footer
+"                    <div class=\"card-section\">Cape Town Convention Journal" + //161_12 card-section
+"                    </div>" + //161_12 card-section
+"                    <div class=\"card-section\">" + //163_13 card-section
+"                      <div class=\"tocEPubDate\"><span class=\"maintextleft\"><strong>Published online: </strong>4 Nov 2015</span>" + //164_14 tocEPubDate
+"                      </div>" + //164_14 tocEPubDate
+"                    </div>" + //163_13 card-section
+"                  </div><span class=\"access-icon oa\"></span>" + //160_11 footer
+"                </div>" + //153_7 article-card
+"              </div>" + //152_6 relatedItem
+"            </div>" + //151_5 sidebar
+"          </div>" + //150_4 related_art
+"        </div>" + //149_3 widget-body
+"      </div>" + //148_2 wrapped
+"    </div>" + //147_1
+"    </div>" ; 
   
   
-  
+  private static final String withoutPeopleAlsoRead =  
+" Hello World ";
+
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -136,4 +168,9 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutTocLink, StringUtil.fromInputStream(actIn));
   }
   
+  public void testPeopleAlsoRead() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withPeopleAlsoRead), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutPeopleAlsoRead, StringUtil.fromInputStream(actIn));
+  }
 }

@@ -72,7 +72,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // KEEP top part of main content area [TOC, abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b"), // avoid match on pageArticle
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
             // KEEP abstract [abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
             // KEEP active content area [abs, full, ref, suppl]
@@ -124,6 +124,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedArticleLink"), // [article block]
             HtmlNodeFilters.tagWithText("h3", "Related articles"), // [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "searchRelatedLink"), // [abs/full/ref/suppl overview]
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "combinedRecommendationsWidget"), // all - "People also read"
             // DROP title options (e.g. 'Publication History', 'Sample this title') [TOC overview]
             HtmlNodeFilters.tagWithAttribute("div", "class", "options"),
             // DROP title icons (e.g. 'Routledge Open Select') [TOC overview]
