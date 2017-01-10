@@ -40,7 +40,7 @@
     au < finished ; finished ; 2014 ; International Journal of Geomechanics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; International Journal of Geomechanics Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Geomechanics Volume 16 ; 16 ; >
-    au < expected ; exists ; 2017 ; International Journal of Geomechanics Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2017 ; International Journal of Geomechanics Volume 17 ; 17 ; >
 
   }
 
@@ -159,7 +159,7 @@
       au < finished ; finished ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2015 ; Journal of Bridge Engineering Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Journal of Bridge Engineering Volume 21 ; 21 ; >
-      au < expected ; exists ; 2017 ; Journal of Bridge Engineering Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2017 ; Journal of Bridge Engineering Volume 22 ; 22 ; >
     
   }
 
@@ -285,7 +285,7 @@
     au < finished ; crawling ; 2014 ; Journal of Construction Engineering and Management Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Construction Engineering and Management Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Construction Engineering and Management Volume 142 ; 142 ; >
-    au < expected ; exists ; 2017 ; Journal of Construction Engineering and Management Volume 143 ; 143 ; >
+    au < manifest ; exists ; 2017 ; Journal of Construction Engineering and Management Volume 143 ; 143 ; >
 
   }
 
@@ -1253,7 +1253,7 @@
     au < finished ; finished ; 2014 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 140 ; 140 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 141 ; 141 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 142 ; 142 ; >
-    au < expected ; exists ; 2017 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 143 ; 143 ; >
+    au < manifest ; exists ; 2017 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 143 ; 143 ; >
     
   }
 

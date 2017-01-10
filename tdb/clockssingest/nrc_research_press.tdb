@@ -1349,11 +1349,11 @@
     param[journal_id] = cjas
     #1957 to present.
 
-    au < exists ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 ; >
-    au < exists ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 ; >
-    au < exists ; exists ; 2014 ; Canadian Journal of Animal Science Volume 94 ; 94 ; >
-    au < exists ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; >
-    au < exists ; exists ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2014 ; Canadian Journal of Animal Science Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 96 ; >
 
     }
     
@@ -1368,11 +1368,11 @@
     param[journal_id] = cjps
     #1957 to present.
 
-    au < exists ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 ; >
-    au < exists ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 ; >
-    au < exists ; exists ; 2014 ; Canadian Journal of Plant Science Volume 94 ; 94 ; >
-    au < exists ; exists ; 2015 ; Canadian Journal of Plant Science Volume 95 ; 95 ; >
-    au < exists ; exists ; 2016 ; Canadian Journal of Plant Science Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2014 ; Canadian Journal of Plant Science Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2015 ; Canadian Journal of Plant Science Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2016 ; Canadian Journal of Plant Science Volume 96 ; 96 ; >
 
     }
     
@@ -1387,11 +1387,11 @@
     param[journal_id] = cjss
     #1957 to present.
 
-    au < exists ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 ; >
-    au < exists ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 ; >
-    au < exists ; exists ; 2014 ; Canadian Journal of Soil Science Volume 94 ; 94 ; >
-    au < exists ; exists ; 2015 ; Canadian Journal of Soil Science Volume 95 ; 95 ; >
-    au < exists ; exists ; 2016 ; Canadian Journal of Soil Science Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2014 ; Canadian Journal of Soil Science Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2015 ; Canadian Journal of Soil Science Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2016 ; Canadian Journal of Soil Science Volume 96 ; 96 ; >
 
     }
     
@@ -1406,7 +1406,7 @@
     param[journal_id] = sa
     #1921 to 1952. continued by Canadian Journal of Agricultural Science
 
-    au < exists ; exists ; 1952 ; Scientific Agriculture Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1952 ; Scientific Agriculture Volume 32 ; 32 ; >
 
     }
     
@@ -1421,7 +1421,7 @@
     param[journal_id] = agsci
     #1953 to 1956. Continued by 3 journals: cjss, cjps, cjas
 
-    au < exists ; exists ; 1956 ; Canadian Journal of Agricultural Science Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1956 ; Canadian Journal of Agricultural Science Volume 36 ; 36 ; >
 
     }
     
@@ -1435,8 +1435,8 @@
     param[journal_id] = as
     #2015 to present
 
-    au < exists ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
-    au < exists ; exists ; 2016 ; Arctic Science Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2016 ; Arctic Science Volume 2 ; 2 ; >
 
     }
     
