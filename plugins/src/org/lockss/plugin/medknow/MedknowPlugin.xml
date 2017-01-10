@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -199,6 +199,11 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
