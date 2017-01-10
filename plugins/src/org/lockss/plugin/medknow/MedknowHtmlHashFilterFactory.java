@@ -229,7 +229,9 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 NodeList nl = new NodeList();
                 for (int sx = 0; sx < nodeList.size(); sx++) {
                   Node snode = nodeList.elementAt(sx);
-                  TextNode tn = new TextNode(snode.toPlainTextString());
+                  // Add a space for case where to separate nodes,
+                  // required where showstats is filtered but extra NL remained and caused diff
+                  TextNode tn = new TextNode(snode.toPlainTextString() + " ");
                   nl.add(tn);
                 }
                 return nl;

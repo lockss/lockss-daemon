@@ -111,7 +111,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
   private static final String  tocHtml = 
       "<table>" +
           "<tr>" +
-          "    <td width=\"90%\" colspan=\"2\" class=\"tochead\">EDITORIAL</td>" +
+          "    <td width=\"90%\" colspan=\"2\" class=\"tochead\">EDITORIAL</td>\n" +
           "    <td width=\"10%\"  class=\"tochead\">&nbsp;</td>" +
           "  </tr>" +
           " <tr>" +
@@ -122,7 +122,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           "    <input type='checkbox' name='sai' value='jpgm_2015_X_Y_Z'><br></td>" +
           "    <td width=\"75%\" class=\"articleTitle\" style='margin:left:5px;'>Article Title for Editorial</td>" +
           "    <td width=\"5%\" rowspan=\"3\" class=\"other\" valign=\"top\" align=\"right\">p. 73</td>" +
-          "  </tr>" +
+          "  </tr>\n" +
           "  <tr>" +
           "    <td class=\"sAuthor\">P Ran, NJ Goo<br><b>DOI</b>:1X.1111/0022-3859.153101&nbsp;&nbsp;<b>PMID</b>:55555555</td>" +
           "  </tr>" +
@@ -156,12 +156,11 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           " </table>";
 
   private static final String tocHtmlKept = 
-      "EDITORIAL" +
-          " " +
-          "Article Title for Editorial" +
+      "EDITORIAL " +
+          "Article Title for Editorial " +
           "P Ran, NJ GooDOI:1X.1111/0022-3859.153101 " +
-          "ORIGINAL ARTICLES" +
-          "Another TItle for an Original Article" +
+          "ORIGINAL ARTICLES " +
+          "Another TItle for an Original Article " +
           "P Author, P Writer " +
           "DOI:1X.1111/0022-3859.150442 " +
           // " " + // by removing tags whitespace changed
@@ -170,17 +169,17 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
 
   private static final String articleHtml = 
       "<div><table><tr><td><table class=\"articlepage\" >" +
-          "<div>"+
+          "<div>\n"+
           "<font class=\"AuthorAff\">Foo, Blah, Blah</font>" +
           "</div>" +
           "</table></td></tr></table></div>";
 
   private static final String articleHtmlKept = 
-      "" +
+      " " +
           "" +
           "";
 
-  private static final String onlyKept = "";
+  private static final String onlyKept = " ";
 
   private static final String bigTOC = "<body>" +
       "<table border=\"0\" width=\"1000\" align=\"center\"  cellspacing=\"0\" cellpadding=\"0\" >" +
@@ -581,11 +580,11 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
   // only keep the link tags that are specific to the issues for this journals/volume
   private static final String backIssueFiltered =
       "" +
-      "Issue 6 (Nov-Dec)" +
+      "Issue 6 (Nov-Dec) " +
       "" +
-      "Issue 6 (Nov-Dec)" +
+      "Issue 6 (Nov-Dec) " +
       "" +
-      "Issue 6 (Nov-Dec)";
+      "Issue 6 (Nov-Dec) ";
       
   /*
    *  Compare Html and HtmlHashFiltered
