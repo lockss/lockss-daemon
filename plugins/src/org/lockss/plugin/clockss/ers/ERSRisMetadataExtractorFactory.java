@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,18 +33,12 @@
 package org.lockss.plugin.clockss.ers;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.util.Logger;
-import org.lockss.util.UrlUtil;
 
 /*
  * The following are the default tags:
@@ -110,6 +104,9 @@ implements FileMetadataExtractorFactory {
       }
 
       // correction or fallback values in to cooked map here
+      
+      // These are books, we know that. So set the publication title to the title
+      am.put(MetadataField.FIELD_PUBLICATION_TITLE,  am.getRaw("T1"));
       am.put(MetadataField.FIELD_ACCESS_URL, pdfName);
  
       emitter.emitMetadata(cu, am);
