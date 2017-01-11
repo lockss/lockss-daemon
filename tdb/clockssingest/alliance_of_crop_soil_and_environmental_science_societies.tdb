@@ -121,7 +121,7 @@
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
-    au < finished ; crawling ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
+    au < finished ; finished ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
     au < crawling ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
     au < manifest ; exists ; 2017 ; Crop Science Volume 57 ; 57 ; >
 
