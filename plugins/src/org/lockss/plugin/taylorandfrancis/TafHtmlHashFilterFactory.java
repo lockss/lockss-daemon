@@ -119,6 +119,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "access"), // formerly by itself
             // DROP number of article views [article block, abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleUsage"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumArticleMetricsWidget"),
             // DROP "Related articles" variants [article block, abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "relatedLink"), // old?
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedArticleLink"), // [article block]
