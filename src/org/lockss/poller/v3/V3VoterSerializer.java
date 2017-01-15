@@ -55,6 +55,9 @@ public class V3VoterSerializer extends V3Serializer {
 
   public void saveVoterUserData(VoterUserData data)
       throws PollSerializerException {
+    if (!enabled) {
+      return;
+    }
     try {
       getSerializer().serialize(voterUserDataFile, data);
     } catch (Exception ex) {

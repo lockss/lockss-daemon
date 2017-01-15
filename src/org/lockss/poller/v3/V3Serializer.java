@@ -45,6 +45,7 @@ public abstract class V3Serializer {
 
   protected File pollDir;
   protected LockssDaemon daemon;
+  protected boolean enabled = true;
 
   static final Logger log = Logger.getLogger("V3Serializer");
   
@@ -87,6 +88,10 @@ public abstract class V3Serializer {
     }
   }
   
+  public void enable(boolean val) {
+    enabled = val;
+  }
+
   /** Make an XStreamSerializer */
   protected ObjectSerializer getSerializer() {
     return new XStreamSerializer(daemon);
