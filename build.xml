@@ -2535,6 +2535,12 @@ published on the Web. http://www.lockss.org
   </target>
 
   <!-- ==================================================================== -->
+  <target name="test-abp"
+   depends="package,test-unit,test-func,test-tools,test-xml"
+   description="Run all but plugin tests" >
+  </target>
+
+  <!-- ==================================================================== -->
   <target name="test-unit"
    depends="prepare.run.test,jar-tests"
    description="Run all unit tests (test/src/**/Test*.class)" >
