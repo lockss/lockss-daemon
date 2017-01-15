@@ -1694,10 +1694,9 @@ public class V3Poller extends BasePoll {
       VoteBlockTallier.makeForRepair(hashBlock, getHashIndexer());
     // For the WON/LOST
     voteBlockTallier.addBlockTally(tally);
-    // XXXX Do NOT re-count the agree/disagree/&c for each participant
-    // For the agree/disagree/&c for each participant
+    // Do re-count the agree/disagree/&c for each participant to reflect
+    // post-repair totals, iff we can do so accurately
     if (isRecordPeerUrlLists()) {
-      // XXXXXXXXXXXXXXXXX this should give wrong totals if no peer url lists
       voteBlockTallier.addTally(ParticipantUserData.voteTally);
     }
     return voteBlockTallier;

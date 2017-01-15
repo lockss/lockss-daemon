@@ -47,6 +47,8 @@ public class ParticipantUserData implements LockssSerializable {
 
   private static transient final Logger log = Logger.getLogger("V3Poller");
 
+  /** Keeps track of per-peer agreement data.  Concrete subclasses either
+   * do or don't keep full URL lists */
   public static abstract class VoteCounts implements LockssSerializable {
     // weighted agree, etc., counts
     protected float wAgreed;
@@ -226,6 +228,8 @@ public class ParticipantUserData implements LockssSerializable {
     }
   }
 
+  /** A VoteCounts that maintains counters only.  It cannot accurately
+   * track repairs, */
   public class VoteCountsOnly extends VoteCounts {
     private long agreedVotes;
     private long disagreedVotes;
@@ -329,6 +333,8 @@ public class ParticipantUserData implements LockssSerializable {
     }
   }
 
+  /** A VoteCounts that maintains collections of the agreeing, disagreeing,
+   * etc., URLs.  It accurately tracks updates due to repairs, */
   public class VoteCountsUrls extends VoteCounts {
     private long neitherVotes;
 
