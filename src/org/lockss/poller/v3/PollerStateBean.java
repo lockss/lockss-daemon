@@ -524,6 +524,9 @@ public class PollerStateBean implements LockssSerializable {
     }
 
     private synchronized void removeUrl(String url) {
+      if (log.isDebug3()) {
+	log.debug3("removeUrl("+url+")", new Throwable());
+      }
       float weight = getUrlResultWeight(url);
       if (agreedUrls.remove(url)) wAgreedCount -= weight;
       if (disagreedUrls.remove(url)) wDisagreedCount -= weight;

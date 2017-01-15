@@ -35,6 +35,7 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 
 import java.io.*;
 import java.util.*;
@@ -46,71 +47,77 @@ public class ParticipantUserData implements LockssSerializable {
 
   private static transient final Logger log = Logger.getLogger("V3Poller");
 
-  public class VoteCounts implements LockssSerializable {
-    private long agreedVotes;
-    private long disagreedVotes;
-    private long pollerOnlyVotes;
-    private long voterOnlyVotes;
-    private long neitherVotes;
-    private long spoiledVotes;
+  public static abstract class VoteCounts implements LockssSerializable {
     // weighted agree, etc., counts
-    private float wAgreed;
-    private float wDisagreed;
-    private float wPollerOnly;
-    private float wVoterOnly;
+    protected float wAgreed;
+    protected float wDisagreed;
+    protected float wPollerOnly;
+    protected float wVoterOnly;
 
-    private VoteCounts() {
-    }
+    abstract void release();
 
-    public VoteCounts(VoteCounts voteCounts) {
-      agreedVotes = voteCounts.agreedVotes;
-      disagreedVotes = voteCounts.disagreedVotes;
-      pollerOnlyVotes = voteCounts.pollerOnlyVotes;
-      voterOnlyVotes = voteCounts.voterOnlyVotes;
-      neitherVotes = voteCounts.neitherVotes;
-      spoiledVotes = voteCounts.spoiledVotes;
-      wAgreed = voteCounts.wAgreed;
-      wDisagreed = voteCounts.wDisagreed;
-      wPollerOnly = voteCounts.wPollerOnly;
-      wVoterOnly = voteCounts.wVoterOnly;
+    private static List asArrayList(Collection coll) {
+      List res = new ArrayList(coll.size());
+      res.addAll(coll);
+      return res;
     }
 
     // For testing
-    String votes(long agreedVotes, long disagreedVotes,
-		 long pollerOnlyVotes, long voterOnlyVotes,
-		 long neitherVotes, long spoiledVotes) {
-      return agreedVotes + "/" + disagreedVotes + "/" + pollerOnlyVotes + "/" +
-	voterOnlyVotes + "/" + neitherVotes + "/" + spoiledVotes;
+    /**
+     * @return a String representing the votes by category, separated by "/":
+     * agree/disagree/pollerOnly/voterOnly/neither/spoiled
+     */
+    String votes() {
+      return getAgreedVotes() + "/" + getDisagreedVotes() + "/" +
+	getPollerOnlyVotes() + "/" + getVoterOnlyVotes() + "/" +
+	getNeitherVotes() + "/" + getSpoiledVotes();
     }
 
-    void addAgreed(String url) {
-      agreedVotes++;
-      wAgreed += getUrlResultWeight(url);
-    }
+    public abstract boolean hasPeerUrlLists();
 
-    void addDisagreed(String url) {
-      disagreedVotes++;
-      wDisagreed += getUrlResultWeight(url);
-    }
+    abstract void addAgreed(String url);
 
-    void addPollerOnly(String url) {
-      pollerOnlyVotes++;
-      wPollerOnly += getUrlResultWeight(url);
-    }
+    abstract void addDisagreed(String url);
 
-    void addVoterOnly(String url) {
-      voterOnlyVotes++;
-      wVoterOnly += getUrlResultWeight(url);
-    }
+    abstract void addPollerOnly(String url);
 
-    void addNeither(String url) {
-      neitherVotes++;
-    }
+    abstract void addVoterOnly(String url);
 
-    void addSpoiled(String url) {
-      spoiledVotes++;
-    }
+    abstract void addNeither(String url);
 
+    abstract void addSpoiled(String url);
+    
+
+    /**
+     * Returns the count of agreed votes for this peer.
+     */
+    public abstract long getAgreedVotes();
+
+    /**
+     * Returns the count of disagreed votes for this peer.
+     */
+    public abstract long getDisagreedVotes();
+
+    /**
+     * Returns the count of poller-only votes for this peer.
+     */
+    public abstract long getPollerOnlyVotes();
+
+    /**
+     * Returns the count of voter-only votes for this peer.
+     */
+    public abstract long getVoterOnlyVotes();
+
+    /**
+     * Returns the count of spoiled votes for this peer.
+     */
+    public abstract long getSpoiledVotes();
+      
+    /**
+     * Returns the count of neither votes for this peer.
+     */
+    public abstract long getNeitherVotes();
+      
     /** 
      * Return the percent agreement for this peer.
      * 
@@ -118,20 +125,22 @@ public class ParticipantUserData implements LockssSerializable {
      * 0.0 and 1.0, inclusive)
      */
     public float getPercentAgreement() {
-      long talliedVotes = talliedVotes();
-      log.debug2("[getPercentAgreement] agreeVotes = "
-		 + agreedVotes + "; talliedVotes = " + talliedVotes);
-      if (agreedVotes > 0 && talliedVotes > 0) {
-	return (float)agreedVotes / (float)talliedVotes;
+      long tallied = talliedVotes();
+      long agreed = getAgreedVotes();
+      long disagreed = getDisagreedVotes();
+      log.debug2("[getPercentAgreement] agreeVotes = " + agreed +
+		 "; talliedVotes = " + tallied);
+      if (agreed > 0 && tallied > 0) {
+	return (float)agreed / (float)tallied;
       } else {
 	return 0.0f;
       }
     }
 
     /** 
-     * Return the percent agreement for this peer.
+     * Return the weighted percent agreement for this peer.
      * 
-     * @return The percent agreement for this peer (a number between
+     * @return The weighted percent agreement for this peer (a number between
      * 0.0 and 1.0, inclusive)
      */
     public float getWeightedPercentAgreement() {
@@ -139,42 +148,6 @@ public class ParticipantUserData implements LockssSerializable {
       log.debug2("[getWeightedPercentAgreement] wAgreed = "
 		 + wAgreed + "; wTallied = " + wTallied);
       return wTallied > 0.0 ? wAgreed / wTallied : 0.0f;
-    }
-
-    /**
-     * Returns the count of agreed votes for this peer.
-     * 
-     * @return a long with the count of agreed votes.
-     */
-    public long getAgreedVotes() {
-      return agreedVotes;
-    }
-
-    /**
-     * Returns the count of disagreed votes for this peer.
-     * 
-     * @return a long with the count of disagreed votes.
-     */
-    public long getDisagreedVotes() {
-      return disagreedVotes;
-    }
-
-    /**
-     * Returns the count of poller-only votes for this peer.
-     * 
-     * @return a long with the count of poller-only votes.
-     */
-    public long getPollerOnlyVotes() {
-      return pollerOnlyVotes;
-    }
-
-    /**
-     * Returns the count of voter-only votes for this peer.
-     * 
-     * @return a long with the count of voter-only votes.
-     */
-    public long getVoterOnlyVotes() {
-      return voterOnlyVotes;
     }
 
     /**
@@ -214,35 +187,278 @@ public class ParticipantUserData implements LockssSerializable {
     }
 
     /**
-     * Returns the count of spoiled votes for this peer.
-     * 
-     * @return a long with the count of voter-only votes.
+     * Returns the list of agreed urls for this peer.
      */
-    public long getSpoiledVotes() {
-      return spoiledVotes;
-    }
-      
+    public abstract Collection<String> getAgreedUrls();
+
+    /**
+     * Returns the list of disagreed urls for this peer.
+     */
+    public abstract Collection<String> getDisagreedUrls();
+
+    /**
+     * Returns the list of poller-only urls for this peer.
+     */
+    public abstract Collection<String> getPollerOnlyUrls();
+
+    /**
+     * Returns the list of voter-only urls for this peer.
+     */
+    public abstract Collection<String> getVoterOnlyUrls();
+
+    /**
+     * Returns the list of spoiled urls for this peer.
+     */
+    public abstract Collection<String> getSpoiledUrls();
+
+
     /**
      * @return the total of the "significant" votes.
      * This excludes "neither" and "spoiled" votes.
      */
     long talliedVotes() {
-      return agreedVotes + disagreedVotes + pollerOnlyVotes + voterOnlyVotes;
+      return getAgreedVotes() + getDisagreedVotes() + 
+	getPollerOnlyVotes() + getVoterOnlyVotes();
     }
 
     float getWeightedTalliedVotes() {
       return wAgreed + wDisagreed + wPollerOnly + wVoterOnly;
     }
+  }
 
-    /**
-     * @return a String representing the votes by category, separated by "/":
-     * agree/disagree/pollerOnly/voterOnly/neither/spoiled
-     */
-    String votes() {
-      return votes(agreedVotes, disagreedVotes,
-		   pollerOnlyVotes, voterOnlyVotes,
-		   neitherVotes, spoiledVotes);
+  public class VoteCountsOnly extends VoteCounts {
+    private long agreedVotes;
+    private long disagreedVotes;
+    private long pollerOnlyVotes;
+    private long voterOnlyVotes;
+    private long neitherVotes;
+    private long spoiledVotes;
+
+    void release() {
     }
+
+    private VoteCountsOnly() {
+    }
+
+    public boolean hasPeerUrlLists() {
+      return false;
+    }
+
+    void addAgreed(String url) {
+      if (log.isDebug3()) {
+	log.debug3("agreed: " + url, new Throwable());
+      }
+      agreedVotes++;
+      wAgreed += getUrlResultWeight(url);
+    }
+
+    void addDisagreed(String url) {
+      if (log.isDebug3()) {
+	log.debug3("disagreed: " + url, new Throwable());
+      }
+      disagreedVotes++;
+      wDisagreed += getUrlResultWeight(url);
+    }
+
+    void addPollerOnly(String url) {
+      if (log.isDebug3()) {
+	log.debug3("poller-only: " + url, new Throwable());
+      }
+      pollerOnlyVotes++;
+      wPollerOnly += getUrlResultWeight(url);
+    }
+
+    void addVoterOnly(String url) {
+      if (log.isDebug3()) {
+	log.debug3("voter-only: " + url, new Throwable());
+      }
+      voterOnlyVotes++;
+      wVoterOnly += getUrlResultWeight(url);
+    }
+
+    void addSpoiled(String url) {
+      spoiledVotes++;
+    }
+
+    void addNeither(String url) {
+      neitherVotes++;
+    }
+
+    public long getAgreedVotes() {
+      return agreedVotes;
+    }
+
+    public long getDisagreedVotes() {
+      return disagreedVotes;
+    }
+
+    public long getPollerOnlyVotes() {
+      return pollerOnlyVotes;
+    }
+
+    public long getVoterOnlyVotes() {
+      return voterOnlyVotes;
+    }
+
+    public long getSpoiledVotes() {
+      return spoiledVotes;
+    }
+      
+    public long getNeitherVotes() {
+      return neitherVotes;
+    }
+
+    public Collection<String> getAgreedUrls() {
+      throw new UnsupportedOperationException("Per peer URL lists not available");
+    }
+
+    public Collection<String> getDisagreedUrls() {
+      throw new UnsupportedOperationException("Per peer URL lists not available");
+    }
+
+    public Collection<String> getPollerOnlyUrls() {
+      throw new UnsupportedOperationException("Per peer URL lists not available");
+    }
+
+    public Collection<String> getVoterOnlyUrls() {
+      throw new UnsupportedOperationException("Per peer URL lists not available");
+    }
+
+    public Collection<String> getSpoiledUrls() {
+      throw new UnsupportedOperationException("Per peer URL lists not available");
+    }
+  }
+
+  public class VoteCountsUrls extends VoteCounts {
+    private long neitherVotes;
+
+    // weighted agree, etc., counts
+    private float wAgreed;
+    private float wDisagreed;
+    private float wPollerOnly;
+    private float wVoterOnly;
+
+    private Collection<String> agreedUrls;
+    private Collection<String> disagreedUrls;
+    private Collection<String> pollerOnlyUrls;
+    private Collection<String> voterOnlyUrls;
+    private Collection<String> spoiledUrls;
+
+    void release() {
+      agreedUrls = asList(agreedUrls);
+      disagreedUrls = asList(disagreedUrls);
+      pollerOnlyUrls = asList(pollerOnlyUrls);
+      voterOnlyUrls = asList(voterOnlyUrls);
+      spoiledUrls = asList(spoiledUrls);
+    }
+
+    List asList(Collection coll) {
+      List res = new ArrayList(coll.size());
+      res.addAll(coll);
+      return res;
+    }
+
+    private VoteCountsUrls() {
+      agreedUrls = new HashSet<String>();
+      disagreedUrls = new HashSet<String>();
+      pollerOnlyUrls = new HashSet<String>();
+      voterOnlyUrls = new HashSet<String>();
+      spoiledUrls = new HashSet<String>();
+    }
+
+    public boolean hasPeerUrlLists() {
+      return true;
+    }
+
+    private synchronized void removeUrl(String url) {
+      if (log.isDebug3()) {
+	log.debug3("removeUrl("+url+")", new Throwable());
+      }
+      float weight = getUrlResultWeight(url);
+      if (agreedUrls.remove(url)) wAgreed -= weight;
+      if (disagreedUrls.remove(url)) wDisagreed -= weight;
+      if (pollerOnlyUrls.remove(url)) wPollerOnly -= weight;
+      if (voterOnlyUrls.remove(url)) wVoterOnly -= weight;
+      spoiledUrls.remove(url);
+    }
+
+    void addAgreed(String url) {
+      removeUrl(url);
+      agreedUrls.add(url);
+      wAgreed += getUrlResultWeight(url);
+    }
+
+    void addDisagreed(String url) {
+      removeUrl(url);
+      disagreedUrls.add(url);
+      wDisagreed += getUrlResultWeight(url);
+    }
+
+    void addPollerOnly(String url) {
+      removeUrl(url);
+      pollerOnlyUrls.add(url);
+      wPollerOnly += getUrlResultWeight(url);
+    }
+
+    void addVoterOnly(String url) {
+      removeUrl(url);
+      voterOnlyUrls.add(url);
+      wVoterOnly += getUrlResultWeight(url);
+    }
+
+    void addSpoiled(String url) {
+      removeUrl(url);
+      spoiledUrls.add(url);
+    }
+
+    void addNeither(String url) {
+      neitherVotes++;
+    }
+
+    public long getAgreedVotes() {
+      return agreedUrls.size();
+    }
+
+    public long getDisagreedVotes() {
+      return disagreedUrls.size();
+    }
+
+    public long getPollerOnlyVotes() {
+      return pollerOnlyUrls.size();
+    }
+
+    public long getVoterOnlyVotes() {
+      return voterOnlyUrls.size();
+    }
+
+    public long getSpoiledVotes() {
+      return spoiledUrls.size();
+    }
+      
+    public long getNeitherVotes() {
+      return neitherVotes;
+    }
+
+    public Collection<String> getAgreedUrls() {
+      return agreedUrls;
+    }
+
+    public Collection<String> getDisagreedUrls() {
+      return disagreedUrls;
+    }
+
+    public Collection<String> getPollerOnlyUrls() {
+      return pollerOnlyUrls;
+    }
+
+    public Collection<String> getVoterOnlyUrls() {
+      return voterOnlyUrls;
+    }
+
+    public Collection<String> getSpoiledUrls() {
+      return spoiledUrls;
+    }
+
   }
 
   /**
@@ -297,7 +513,7 @@ public class ParticipantUserData implements LockssSerializable {
   private PsmInterpStateBean psmState;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private String statusMsg = null;
-  private VoteCounts voteCounts = new VoteCounts();
+  private VoteCounts voteCounts;
   private long bytesHashed;
   private long bytesRead;
   /** The poll NAK code, if any */
@@ -309,7 +525,13 @@ public class ParticipantUserData implements LockssSerializable {
   private transient PsmInterp psmInterp;
   private transient File messageDir;
 
-  protected ParticipantUserData() {}
+  protected ParticipantUserData(V3Poller poller) {
+    if (poller.isRecordPeerUrlLists()) {
+      voteCounts = new VoteCountsUrls();
+    } else {
+      voteCounts = new VoteCountsOnly();
+    }
+  }
 
   /**
    * Construct a new PollerUserData object.
@@ -324,6 +546,7 @@ public class ParticipantUserData implements LockssSerializable {
 
   public ParticipantUserData(PeerIdentity id, V3Poller poller,
 			     PollerStateBean pollState, File messageDir) {
+    this(poller);
     this.voterId = id;
     this.poller = poller;
     this.pollState = pollState;
@@ -635,7 +858,8 @@ public class ParticipantUserData implements LockssSerializable {
    * @return an copy of the voteCounts for this peer.
    */
   public VoteCounts getVoteCounts() {
-    return new VoteCounts(voteCounts);
+    return voteCounts;
+//     return new VoteCounts(voteCounts);
   }
 
   /** 
@@ -717,6 +941,8 @@ public class ParticipantUserData implements LockssSerializable {
 
     psmInterp = null;
     psmState = null;
+
+    voteCounts.release();
   }
 
 }

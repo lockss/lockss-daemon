@@ -328,7 +328,9 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.poll.v3.allLocalPolls': 'false',
                           'org.lockss.poll.v3.allPoPPolls': 'false',
 			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
-                          'org.lockss.poll.pollStarterInitialDelay': '30s'}
+                          'org.lockss.poll.v3.recordPeerUrlLists' : 'false',
+                          'org.lockss.poll.pollStarterInitialDelay': '10s'
+            }
             extraConf.update( self.local_configuration )
             self.framework.appendLocalConfig( extraConf, client )
         self._start_framework()
@@ -572,6 +574,24 @@ class SimpleDamageV3TestCase( V3TestCases ):
         self._set_expected_agreement_from_damaged( nodes )
         return nodes
 
+class SimpleDamageV3PostRepairTestCase( V3TestCases ):
+    """Test a basic V3 poll, with post-repair counts"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'numFiles': 15 }
+
+    def setUp( self ):
+        V3TestCases.setUp( self )
+        self.framework.appendLocalConfig(
+            {'org.lockss.poll.v3.recordPeerUrlLists' : 'true' },
+            self.victim )
+
+    def _damage_AU( self ):
+        nodes = [ self.victim.randomDamageSingleNode( self.AU ) ]
+        self.expected_agreement = '100.00'
+        return nodes
+
 
 class UnsuccessfulRepairV3TestCase( V3TestCases ):
     """Test a repair that doesn't match consensus"""
@@ -613,6 +633,18 @@ class UnsuccessfulRepairV3TestCase( V3TestCases ):
         self.assertEqual( int( summary[ 'Disagreeing URLs' ][ 'value' ] ), 1 )
         self.assertEqual( int( summary[ 'Completed Repairs' ][ 'value' ] ), 1 )
 
+
+class UnsuccessfulRepairV3PostRepairTestCase( UnsuccessfulRepairV3TestCase ):
+    """Test a repair that doesn't match consensus, with post-repair counts"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+
+    def setUp( self ):
+        UnsuccessfulRepairV3TestCase.setUp( self )
+        self.framework.appendLocalConfig(
+            {'org.lockss.poll.v3.recordPeerUrlLists' : 'true' },
+            self.victim )
 
 class TooCloseV3Tests( V3TestCases ):
     """Abstract class"""
@@ -737,6 +769,19 @@ class SimpleDeleteV3TestCase( DeleteV3Tests ):
         self._set_expected_agreement_from_deleted( [ node ] )
         return [ node ]
         
+class SimpleDeleteV3PostRepairTestCase( DeleteV3Tests ):
+    """Test repair of a missing file, with post-repair counts"""
+
+    def setUp( self ):
+        DeleteV3Tests.setUp( self )
+        self.framework.appendLocalConfig(
+            {'org.lockss.poll.v3.recordPeerUrlLists' : 'true' },
+            self.victim )
+
+    def _damage_AU( self ):
+        node = self.victim.randomDelete( self.AU )
+        return [ node ]
+
 
 class LastFileDeleteV3TestCase( DeleteV3Tests ):
     """Ensure that the deletion of the alphabetically last file in the AU can be repaired"""
@@ -955,6 +1000,19 @@ class TotalLossRecoveryV3TestCase( TotalLossRecoveryV3Tests ):
         TotalLossRecoveryV3Tests.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
 
+class TotalLossRecoveryV3PostRepairTestCase( TotalLossRecoveryV3Tests ):
+    """Test repairing a cache under V3 that has lost all its contents, with post-repair counts"""
+
+    def __init__( self, methodName = 'runTest' ):
+        TotalLossRecoveryV3Tests.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
+        self.expected_agreement = '100.00'
+
+    def setUp( self ):
+        TotalLossRecoveryV3Tests.setUp( self )
+        self.framework.appendLocalConfig(
+            {'org.lockss.poll.v3.recordPeerUrlLists' : 'true' },
+            self.victim )
 
 class TotalLossRecoverySymmetricV3TestCase( TotalLossRecoveryV3Tests ):
     """Test repairing a cache under V3 that has lost all its contents via a symmetric poll"""
@@ -1419,7 +1477,11 @@ tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
 simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       SimpleV3TestCase(),
                                       SimpleDamageV3TestCase(),
+                                      SimpleDamageV3PostRepairTestCase(),
+                                      UnsuccessfulRepairV3TestCase(),
+                                      UnsuccessfulRepairV3PostRepairTestCase(),
                                       SimpleDeleteV3TestCase(),
+                                      SimpleDeleteV3PostRepairTestCase(),
                                       SimpleExtraFileV3TestCase(),
                                       LastFileDeleteV3TestCase(),
                                       LastFileExtraV3TestCase(),
@@ -1428,6 +1490,7 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       VotersDontParticipateV3TestCase(),
                                       NoQuorumV3TestCase(),
                                       TotalLossRecoveryV3TestCase(),
+                                      TotalLossRecoveryV3PostRepairTestCase(),
                                       RepairFromPublisherV3TestCase(),
                                       RepairFromPeerV3TestCase(),
                                       RepairFromPeerV3LocalTestCase(),
