@@ -1103,6 +1103,16 @@ public class PollManager
     statusServ.registerStatusAccessor(V3PollStatus.ERROR_TABLE_NAME,
                                       new V3PollStatus.V3ErrorURLs(this));
 
+    statusServ.registerStatusAccessor(V3PollStatus.PEER_AGREE_URLS_TABLE_NAME,
+                                      new V3PollStatus.V3PeerAgreeURLs(this));
+    statusServ.registerStatusAccessor(V3PollStatus.PEER_DISAGREE_URLS_TABLE_NAME,
+                                      new V3PollStatus.V3PeerDisagreeURLs(this));
+    statusServ.registerStatusAccessor(V3PollStatus.PEER_POLLER_ONLY_URLS_TABLE_NAME,
+                                      new V3PollStatus.V3PeerPollerOnlyURLs(this));
+    statusServ.registerStatusAccessor(V3PollStatus.PEER_VOTER_ONLY_URLS_TABLE_NAME,
+                                      new V3PollStatus.V3PeerVoterOnlyURLs(this));
+
+
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
 	@Override public void auCreated(AuEvent event, ArchivalUnit au) {
@@ -1715,7 +1725,7 @@ public class PollManager
     return null;
   }
   
-  IdentityManager getIdentityManager() {
+  public IdentityManager getIdentityManager() {
     return theIDManager;
   }
 

@@ -89,6 +89,11 @@ public class V3Voter extends BasePoll {
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
+  /** If true, voter state will be saved on disk */
+  public static final String PARAM_CHECKPOINT_VOTES =
+    PREFIX + "checkpointVotes";
+  public static final boolean DEFAULT_CHECKPOINT_VOTES = false;
+
   /** The minimum number of peers to select for a nomination message.
    * If there are fewer than this number of peers available to nominate,
    * an empty nomination message will be sent. */
@@ -264,9 +269,9 @@ public class V3Voter extends BasePoll {
   public V3Voter(LockssDaemon daemon, V3LcapMessage msg)
       throws V3Serializer.PollSerializerException {
     this.theDaemon = daemon;
-    long padding =
-      CurrentConfig.getTimeIntervalParam(V3Voter.PARAM_RECEIPT_PADDING,
-                                         V3Voter.DEFAULT_RECEIPT_PADDING);
+    Configuration c = ConfigManager.getCurrentConfig();
+    long padding = c.getTimeInterval(V3Voter.PARAM_RECEIPT_PADDING,
+				     V3Voter.DEFAULT_RECEIPT_PADDING);
     long duration = msg.getDuration() + padding;
 
     log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
@@ -284,16 +289,16 @@ public class V3Voter extends BasePoll {
     }
 
     pollSerializer = new V3VoterSerializer(theDaemon);
+    pollSerializer.enable(!c.getBoolean(PARAM_CHECKPOINT_VOTES, DEFAULT_CHECKPOINT_VOTES));
+
     
     stateDir = PollUtil.ensurePollStateRoot();
 
-    maxBlockErrorCount =
-      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
-                                V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
+    maxBlockErrorCount = c.getInt(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
+				  V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
     if (msg.getModulus() != 0) {
-      if (CurrentConfig.getBooleanParam(PARAM_ENABLE_POP_VOTING,
-					DEFAULT_ENABLE_POP_VOTING)) {
+      if (c.getBoolean(PARAM_ENABLE_POP_VOTING, DEFAULT_ENABLE_POP_VOTING)) {
 	MessageDigest sampleHasher = 
 	  PollUtil.createMessageDigest(hashAlgorithm);
 	int sampleModulus = msg.getModulus();
@@ -347,10 +352,8 @@ public class V3Voter extends BasePoll {
     } else {
       log.debug2("poll is not symmetric");
     }
-    int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
-                                        DEFAULT_MIN_NOMINATION_SIZE);
-    int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
-                                        DEFAULT_MAX_NOMINATION_SIZE);
+    int min = c.getInt(PARAM_MIN_NOMINATION_SIZE, DEFAULT_MIN_NOMINATION_SIZE);
+    int max = c.getInt(PARAM_MAX_NOMINATION_SIZE, DEFAULT_MAX_NOMINATION_SIZE);
     if (min < 0) min = 0;
     if (max < 0) max = 0;
     if (min > max) {

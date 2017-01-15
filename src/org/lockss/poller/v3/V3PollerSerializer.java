@@ -91,6 +91,9 @@ public class V3PollerSerializer extends V3Serializer {
    */
   public void savePollerState(PollerStateBean state)
       throws PollSerializerException {
+    if (!enabled) {
+      return;
+    }
     log.debug2("Saving poll state in " + pollerStateBeanFile);
     try {
       getSerializer().serialize(pollerStateBeanFile, state);
@@ -123,6 +126,9 @@ public class V3PollerSerializer extends V3Serializer {
    */
   public void savePollerUserData(ParticipantUserData state)
       throws PollSerializerException {
+    if (!enabled) {
+      return;
+    }
     PeerIdentity peerId = state.getVoterId();
     log.debug2("Saving voter state for participant " + state.getVoterId());
     try {

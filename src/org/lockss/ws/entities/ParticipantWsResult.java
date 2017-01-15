@@ -31,6 +31,8 @@
  */
 package org.lockss.ws.entities;
 
+import java.util.*;
+
 /**
  * Container for the information related to a poll participant that is the
  * result of a query.
@@ -44,6 +46,13 @@ public class ParticipantWsResult {
   private Long disagreedVoteCount;
   private Long pollerOnlyVoteCount;
   private Long voterOnlyVotecount;
+  private boolean isPostRepair = false;
+
+  private Collection<String> agreedUrls;
+  private Collection<String> disagreedUrls;
+  private Collection<String> pollerOnlyUrls;
+  private Collection<String> voterOnlyUrls;
+
   private Long bytesHashed;
   private Long bytesRead;
   private String currentState;
@@ -87,6 +96,17 @@ public class ParticipantWsResult {
   }
 
   /**
+   * True if the percent agreement and URL counts/lists are updated with
+   * the results of repairs
+   */
+  public Boolean isPostRepair() {
+    return isPostRepair;
+  }
+  public void setIsPostRepair(Boolean isPostRepair) {
+    this.isPostRepair = isPostRepair;
+  }
+
+  /**
    * Provides the participant agreement percentage.
    * 
    * @return a Float with the agreement percentage.
@@ -123,7 +143,7 @@ public class ParticipantWsResult {
   }
 
   /**
-   * Provides the count of votes as poller.
+   * Provides the count of URLs that the poller has but this peer doesn't.
    * 
    * @return a Long with the count.
    */
@@ -135,7 +155,7 @@ public class ParticipantWsResult {
   }
 
   /**
-   * Provides the count of votes as voter.
+   * Provides the count of URLs that this voter has but the poller doesn't.
    * 
    * @return a Long with the count.
    */
@@ -144,6 +164,54 @@ public class ParticipantWsResult {
   }
   public void setVoterOnlyVotecount(Long voterOnlyVotecount) {
     this.voterOnlyVotecount = voterOnlyVotecount;
+  }
+
+  /**
+   * Provides the list of agreeing URLs.
+   *
+   * @return a Collection<String> with the agreeing URLs.
+   */
+  public Collection<String> getAgreedUrls() {
+    return agreedUrls;
+  }
+  public void setAgreedUrls(Collection<String> agreedUrls) {
+    this.agreedUrls = agreedUrls;
+  }
+
+  /**
+   * Provides the list of disagreeing URLs.
+   *
+   * @return a Collection<String> with the disagreeing URLs.
+   */
+  public Collection<String> getDisagreedUrls() {
+    return disagreedUrls;
+  }
+  public void setDisagreedUrls(Collection<String> disagreedUrls) {
+    this.disagreedUrls = disagreedUrls;
+  }
+
+  /**
+   * Provides the list of pollerOnly URLs.
+   *
+   * @return a Collection<String> with the pollerOnly URLs.
+   */
+  public Collection<String> getPollerOnlyUrls() {
+    return pollerOnlyUrls;
+  }
+  public void setPollerOnlyUrls(Collection<String> pollerOnlyUrls) {
+    this.pollerOnlyUrls = pollerOnlyUrls;
+  }
+
+  /**
+   * Provides the list of voterOnly URLs.
+   *
+   * @return a Collection<String> with the voterOnly URLs.
+   */
+  public Collection<String> getVoterOnlyUrls() {
+    return voterOnlyUrls;
+  }
+  public void setVoterOnlyUrls(Collection<String> voterOnlyUrls) {
+    this.voterOnlyUrls = voterOnlyUrls;
   }
 
   /**

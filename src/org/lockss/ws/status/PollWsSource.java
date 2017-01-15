@@ -701,6 +701,14 @@ public class PollWsSource extends PollWsResult {
 	  .valueOf(voteCounts.getVoterOnlyVotes()));
       result.setBytesHashed(Long.valueOf(voter.getBytesHashed()));
       result.setBytesRead(Long.valueOf(voter.getBytesRead()));
+
+      if (voteCounts.hasPeerUrlLists()) {
+	result.setAgreedUrls(voteCounts.getAgreedUrls());
+	result.setDisagreedUrls(voteCounts.getDisagreedUrls());
+	result.setPollerOnlyUrls(voteCounts.getPollerOnlyUrls());
+	result.setVoterOnlyUrls(voteCounts.getVoterOnlyUrls());
+	result.setIsPostRepair(true);
+      }
     }
 
     PsmInterp interp = voter.getPsmInterp();

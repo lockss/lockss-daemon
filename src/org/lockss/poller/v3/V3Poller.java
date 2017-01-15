@@ -350,7 +350,7 @@ public class V3Poller extends BasePoll {
     PREFIX + "receiptPadding";
   public static final long DEFAULT_RECEIPT_PADDING =
     5 * Constants.MINUTE;
-  
+
   /**
    * Factor by which to extend poll duration and try again to find
    * schedulable time
@@ -439,6 +439,13 @@ public class V3Poller extends BasePoll {
   public static final int DEFAULT_MIN_REPLICAS_FOR_NO_QUORUM_PEER_REPAIR = -1;
   
   /**
+   * If true, poll state will be saved on disk
+   */
+  public static final String PARAM_CHECKPOINT_POLLS =
+    PREFIX + "checkpointPolls";
+  public static final boolean DEFAULT_CHECKPOINT_POLLS = false;
+
+  /**
    * The number of bytes to hash before saving poll status during hashing.
    */
   public static final String PARAM_V3_HASH_BYTES_BEFORE_CHECKPOINT =
@@ -475,6 +482,14 @@ public class V3Poller extends BasePoll {
   
   /** Length of poller and voter challenges */
   public static final int HASH_NONCE_LENGTH = 20;
+
+  /**
+   * If true, polls record and report the per-peer lists of agreeing,
+   * disagreeing, poller-only, voter-only, etc. URLs
+   */
+  public static final String PARAM_RECORD_PEER_URL_LISTS =
+    PREFIX + "recordPeerUrlLists";
+  public static final boolean DEFAULT_RECORD_PEER_URL_LISTS = false;
 
   /**
    * Maximum number of unrepaired URLs to report in PersistentDisagreement
@@ -562,6 +577,7 @@ public class V3Poller extends BasePoll {
   private boolean enablePoPPolls = DEFAULT_V3_ENABLE_POP_POLLS;
   private boolean allPoPPolls = DEFAULT_V3_ALL_POP_POLLS;
   private int repairerThreshold = DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS;
+  private boolean isRecordPeerUrlLists = DEFAULT_RECORD_PEER_URL_LISTS;
 
   private SchedulableTask task;
   private TimerQueue.Request invitationRequest;
@@ -630,11 +646,11 @@ public class V3Poller extends BasePoll {
     this.idManager = daemon.getIdentityManager();
 
     setConfig();
-
+    Configuration c = ConfigManager.getCurrentConfig();
     this.serializer = new V3PollerSerializer(theDaemon);
+    this.serializer.enable(!c.getBoolean(PARAM_CHECKPOINT_POLLS, DEFAULT_CHECKPOINT_POLLS));
     long pollEnd = TimeBase.nowMs() + duration;
 
-    Configuration c = ConfigManager.getCurrentConfig();
     int outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
 				     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
     int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
@@ -817,6 +833,12 @@ public class V3Poller extends BasePoll {
 				 DEFAULT_V3_ALL_POP_POLLS);
     repairerThreshold = c.getInt(PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
 				     DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS);
+    isRecordPeerUrlLists = c.getBoolean(PARAM_RECORD_PEER_URL_LISTS,
+					DEFAULT_RECORD_PEER_URL_LISTS);
+  }
+
+  boolean isRecordPeerUrlLists() {
+    return isRecordPeerUrlLists;
   }
 
   PollVariant configOverridesSpec(PollVariant v) {
@@ -1169,7 +1191,9 @@ public class V3Poller extends BasePoll {
         }
       }
     }
-    serializer.closePoll();
+    if (serializer != null) {
+      serializer.closePoll();
+    }
     pollManager.closeThePoll(pollerState.getPollKey());      
     
     log.debug("Closed poll " + pollerState.getPollKey());
@@ -1670,7 +1694,11 @@ public class V3Poller extends BasePoll {
       VoteBlockTallier.makeForRepair(hashBlock, getHashIndexer());
     // For the WON/LOST
     voteBlockTallier.addBlockTally(tally);
-    // Do NOT re-count the agree/disagree/&c for each participant
+    // Do re-count the agree/disagree/&c for each participant to reflect
+    // post-repair totals, iff we can do so accurately
+    if (isRecordPeerUrlLists()) {
+      voteBlockTallier.addTally(ParticipantUserData.voteTally);
+    }
     return voteBlockTallier;
   }
 
@@ -2744,7 +2772,9 @@ public class V3Poller extends BasePoll {
 	}
         // Release used resources.
 	ud.release();
-        serializer.removePollerUserData(id);
+	if (serializer != null) {
+	  serializer.removePollerUserData(id);
+	}
         theParticipants.remove(id);
 	synchronized (exParticipants) {
 	  exParticipants.put(id, ud);
@@ -3640,7 +3670,7 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  private ParticipantUserData getParticipant(PeerIdentity id) {
+  ParticipantUserData getParticipant(PeerIdentity id) {
     synchronized(theParticipants) {
       return (ParticipantUserData)theParticipants.get(id);
     }

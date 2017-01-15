@@ -39,6 +39,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 
@@ -189,7 +190,7 @@ public class TestV3Serializer extends LockssTestCase {
   }
 
   private ParticipantUserData makePollerUserData(V3PollerSerializer serializer)
-      throws IOException {
+      throws Exception {
     return makePollerUserData("TCP:[127.0.0.1]:8080", serializer);
   }
 
@@ -204,8 +205,8 @@ public class TestV3Serializer extends LockssTestCase {
 
   private ParticipantUserData makePollerUserData(String voterId,
                                                  V3PollerSerializer serializer)
-                                                 throws IOException {
-    ParticipantUserData ud = new ParticipantUserData();
+                                                 throws Exception {
+    ParticipantUserData ud = new ParticipantUserData(makeV3Poller("foo"));
     PeerIdentity id = idManager.findPeerIdentity(voterId);
     ud.setVoterId(id);
     ud.setHashAlgorithm("SHA1");
@@ -246,6 +247,23 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setVoterNonce2AndBlocks(ByteArray.makeRandomBytes(20),
 			       makeVoteBlocks(4));
     return ud;
+  }
+
+  private MyV3Poller makeV3Poller(String key) throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit("id1");
+    PollSpec ps = new MockPollSpec(mau.getAuCachedUrlSet(), null, null,
+                                   Poll.V3_POLL);
+    MyV3Poller poller =
+      new MyV3Poller(ps, theDaemon, null, "key", 20000, "SHA-1");
+    return poller;
+  }
+
+  private class MyV3Poller extends V3Poller {
+    MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
+	       String pollkey, long duration, String hashAlg)
+	       throws V3Serializer.PollSerializerException {
+      super(spec, daemon, id, pollkey, duration, hashAlg);
+    }
   }
 
   private class PollerUserDataComparator

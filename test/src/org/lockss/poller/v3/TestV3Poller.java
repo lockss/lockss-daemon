@@ -1909,6 +1909,47 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(155, participant.getBytesRead());
   }
 
+  public void testVoteCounts() throws Exception {
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    ParticipantUserData participant =
+      new ParticipantUserData(id1, v3Poller, null);
+
+    ParticipantUserData.VoteCounts counts = participant.getVoteCounts();
+    VoteBlockTallier.VoteBlockTally tally = ParticipantUserData.voteTally;
+    tally.voteAgreed( participant, "url1");
+    assertEquals("1/0/0/0/0/0", counts.votes());
+    assertEquals(1.0, counts.getPercentAgreement(), .001);
+
+    tally.voteDisagreed( participant, "url3");
+    tally.voteDisagreed( participant, "url4");
+    assertEquals("1/2/0/0/0/0", counts.votes());
+    tally.voteAgreed( participant, "url3");
+    assertEquals("2/2/0/0/0/0", counts.votes());
+
+    assertEquals(.5, counts.getPercentAgreement(), .001);
+}
+
+  public void testVoteCountsWithUrlLists() throws Exception {
+    MyV3Poller v3Poller = makeV3Poller("testing poll key");
+    v3Poller.setRecordPeerUrlLists(true);
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    ParticipantUserData participant =
+      new ParticipantUserData(id1, v3Poller, null);
+    ParticipantUserData.VoteCounts counts = participant.getVoteCounts();
+    VoteBlockTallier.VoteBlockTally tally = ParticipantUserData.voteTally;
+    tally.voteAgreed( participant, "url1");
+    assertEquals("1/0/0/0/0/0", counts.votes());
+    assertEquals(1.0, counts.getPercentAgreement(), .001);
+    tally.voteDisagreed( participant, "url3");
+    tally.voteDisagreed( participant, "url4");
+    assertEquals("1/2/0/0/0/0", counts.votes());
+    tally.voteAgreed( participant, "url3");
+    assertEquals("2/1/0/0/0/0", counts.votes());
+
+    assertEquals(0.667, counts.getPercentAgreement(), .001);
+  }
+
   public void testRecordSymmetricHashes() throws Exception {
 
     V3Poller v3Poller = makeInittedV3Poller("testing poll key");
@@ -2059,6 +2100,16 @@ public class TestV3Poller extends LockssTestCase {
 	return repairs;
       }
       return super.getCompletedRepairs();
+    }
+
+    boolean isRecordPeerUrlLists = DEFAULT_RECORD_PEER_URL_LISTS;
+
+    boolean isRecordPeerUrlLists() {
+      return isRecordPeerUrlLists;
+    }
+
+    void setRecordPeerUrlLists(boolean val) {
+      isRecordPeerUrlLists = val;
     }
   }
   
