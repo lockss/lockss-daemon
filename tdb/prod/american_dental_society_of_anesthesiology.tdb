@@ -18,17 +18,17 @@
     
     param[journal_id] = anpr
     
-    au < exists ; 2005 ; Anesthesia Progress Volume 52 ; 52 >
-    au < exists ; 2006 ; Anesthesia Progress Volume 53 ; 53 >
-    au < exists ; 2007 ; Anesthesia Progress Volume 54 ; 54 >
-    au < exists ; 2008 ; Anesthesia Progress Volume 55 ; 55 >
-    au < exists ; 2009 ; Anesthesia Progress Volume 56 ; 56 >
-    au < exists ; 2010 ; Anesthesia Progress Volume 57 ; 57 >
-    au < exists ; 2011 ; Anesthesia Progress Volume 58 ; 58 >
-    au < exists ; 2012 ; Anesthesia Progress Volume 59 ; 59 >
-    au < exists ; 2013 ; Anesthesia Progress Volume 60 ; 60 >
-    au < exists ; 2014 ; Anesthesia Progress Volume 61 ; 61 >
-    au < expected ; 2015 ; Anesthesia Progress Volume 62 ; 62 >
+    au < manifest ; 2005 ; Anesthesia Progress Volume 52 ; 52 >
+    au < manifest ; 2006 ; Anesthesia Progress Volume 53 ; 53 >
+    au < manifest ; 2007 ; Anesthesia Progress Volume 54 ; 54 >
+    au < manifest ; 2008 ; Anesthesia Progress Volume 55 ; 55 >
+    au < manifest ; 2009 ; Anesthesia Progress Volume 56 ; 56 >
+    au < manifest ; 2010 ; Anesthesia Progress Volume 57 ; 57 >
+    au < manifest ; 2011 ; Anesthesia Progress Volume 58 ; 58 >
+    au < manifest ; 2012 ; Anesthesia Progress Volume 59 ; 59 >
+    au < manifest ; 2013 ; Anesthesia Progress Volume 60 ; 60 >
+    au < manifest ; 2014 ; Anesthesia Progress Volume 61 ; 61 >
+    au < manifest ; 2015 ; Anesthesia Progress Volume 62 ; 62 >
     
   }
   
