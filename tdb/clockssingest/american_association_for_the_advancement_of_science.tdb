@@ -41,13 +41,8 @@
       au < crawling ; exists ; 2016 ; Science Volume 351 ; 351 ; >
       au < crawling ; exists ; 2016 ; Science Volume 352 ; 352 ; >
       au < crawling ; exists ; 2016 ; Science Volume 353 ; 353 ; >
-<<<<<<< Upstream, based on branch 'master' of https://github.com/lockss/lockss-daemon.git
-      au < manifest ; exists ; 2016 ; Science Volume 354 ; 354 ; >
-      au < manifest ; exists ; 2017 ; Science Volume 355 ; 355 ; >
-=======
       au < ready ; exists ; 2016 ; Science Volume 354 ; 354 ; >
-      au < expected ; exists ; 2017 ; Science Volume 355 ; 355 ; >
->>>>>>> a96aa20 Content testing.
+      au < manifest ; exists ; 2017 ; Science Volume 355 ; 355 ; >
       au < expected ; exists ; 2017 ; Science Volume 356 ; 356 ; >
       au < expected ; exists ; 2017 ; Science Volume 357 ; 357 ; >
       au < expected ; exists ; 2017 ; Science Volume 358 ; 358 ; >
