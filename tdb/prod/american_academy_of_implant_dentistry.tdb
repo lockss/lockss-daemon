@@ -2,11 +2,10 @@
 
   publisher <
     name = American Academy of Implant Dentistry ;
-    comment[platform] = Allen Press ;
-    info[tester] = 0
+    comment[platform] = Allen Press
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.joionline.org/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -38,6 +37,7 @@
     au < exists ; 2013 ; Journal of Oral Implantology Volume 39 ; 39 >
     au < exists ; 2014 ; Journal of Oral Implantology Volume 40 ; 40 >
     au < exists ; 2015 ; Journal of Oral Implantology Volume 41 ; 41 >
+    au < exists ; 2016 ; Journal of Oral Implantology Volume 42 ; 42 >
     
   }
   
