@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -266,7 +266,8 @@ public class TestAuParamType extends LockssTestCase {
     assertEquals(10000, ((Collection)largeSet).size());
 
     // UserPasswd
-    assertEquals("foo:bar", AuParamType.UserPasswd.parse("foo:bar"));
+    assertEquals(ListUtil.list("foo", "bar"), 
+		 AuParamType.UserPasswd.parse("foo:bar"));
     try {
       AuParamType.UserPasswd.parse("foo");
       fail("UserPasswd.parse(\"foo\") should throw InvalidFormatException");

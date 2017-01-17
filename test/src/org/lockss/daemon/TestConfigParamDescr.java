@@ -388,7 +388,7 @@ public class TestConfigParamDescr extends LockssTestCase {
    */
   public void testGetValueOfTypeUserPass() throws Exception {
     ConfigParamDescr pass = ConfigParamDescr.USER_CREDENTIALS;
-    assertEquals("foo:bar", pass.getValueOfType("foo:bar"));
+    assertEquals(ListUtil.list("foo", "bar"), pass.getValueOfType("foo:bar"));
     // Invalid pass
     try {
       pass.getValueOfType("foobar");
