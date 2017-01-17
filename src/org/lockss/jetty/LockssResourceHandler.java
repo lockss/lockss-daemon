@@ -699,8 +699,13 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	  cur = (CuUrlResource)resource;
 	  ctype = cur.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 	}
-	if (ctype == null) {
+
+	if (ctype == null &&
+	    CurrentConfig.getCurrentConfig()
+	    .getBoolean(ProxyManager.PARAM_INFER_MIME_TYPE,
+			ProxyManager.DEFAULT_INFER_MIME_TYPE)) {
 	  ctype = metaData.getMimeType();
+	  log.trace("ctype from metadata: " + ctype);
 	}
         response.setContentType(ctype);
         if (count != -1)
