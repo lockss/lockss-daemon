@@ -587,7 +587,7 @@ public class V3PollStatus {
 		    new StatusTable.SortRule("identity",
                                              CatalogueOrderComparator.SINGLETON));
     private String FOOT_AGREE_PRE_REPAIR =
-      "Agreement values and URL counts are not updated to reflect repairs." +
+      "Agreement values and URL counts are not updated to reflect repairs. " +
       "See org.lockss.poll.v3.recordPeerUrlLists.";
 
     private String FOOT_AGREE_POST_REPAIR =
