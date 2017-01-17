@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2001-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -190,5 +190,19 @@ public class CurrentConfig {
       return dfault;
     }
      return cur.getList(key, dfault);
+   }
+
+  /** If val is of the form "<code>@<i>param_name</i></code>", and
+   * <i>param_name</i> is the name of a parameter set in the current
+   * Configuration, return its value.  If it is not set, return
+   * <i>dfault</i>.  If val is not of the form
+   * "<code>@<i>param_name</i></code>" return it verbatim.
+   * @param key any String value, possibly beginning with <code>@</code>.
+   * @param dfault the default value to return if the named param is not set
+   * @return a String
+   */
+   public static String getIndirect(String val, String dfault) {
+    Configuration cur = getCurrentConfig();
+    return cur.getIndirect(val, dfault);
    }
 }

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -784,6 +784,21 @@ public class TestConfiguration extends LockssTestCase {
       fail("getDouble(10.0xx) should throw");
     } catch (Configuration.InvalidParam e) {
     }
+  }
+
+  public void testGetIndirect() throws Exception {
+    Configuration config =
+      ConfigurationUtil.fromArgs("org.lockss.foo1", "bar",
+				 "org.lockss.foo2", "org.lockss.foo4",
+				 "org.lockss.foo3", "@org.lockss.foo4",
+				 "org.lockss.foo4", "twice");
+    assertEquals(null, config.getIndirect(null, null));
+    assertEquals("val", config.getIndirect("val", null));
+    assertEquals(null, config.getIndirect("@org.lockss.foo0", null));
+    assertEquals("aa", config.getIndirect("@org.lockss.foo0", "aa"));
+    assertEquals("bar", config.getIndirect("@org.lockss.foo1", null));
+    assertEquals("@org.lockss.foo4",
+		 config.getIndirect("@org.lockss.foo3", null));
   }
 
   public void testAddPrefix() throws Exception {
