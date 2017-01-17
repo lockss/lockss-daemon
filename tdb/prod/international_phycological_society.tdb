@@ -2,11 +2,10 @@
 
   publisher <
     name = International Phycological Society ;
-    comment[platform] = Allen Press ;
-    info[tester] = 0
+    comment[platform] = Allen Press
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.phycologia.org/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -74,6 +73,7 @@
     au < exists ; 2013 ; Phycologia Volume 52 ; 52 >
     au < exists ; 2014 ; Phycologia Volume 53 ; 53 >
     au < exists ; 2015 ; Phycologia Volume 54 ; 54 >
+    au < exists ; 2016 ; Phycologia Volume 55 ; 55 >
     
   }
   

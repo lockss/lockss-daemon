@@ -2,11 +2,10 @@
 
   publisher <
     name = Society for Pediatric Pathology ;
-    comment[platform] = Allen Press ;
-    info[tester] = 0
+    comment[platform] = Allen Press
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.pedpath.org/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -30,6 +29,7 @@
     au < exists ; 2013 ; Pediatric and Developmental Pathology Volume 16 ; 16 >
     au < exists ; 2014 ; Pediatric and Developmental Pathology Volume 17 ; 17 >
     au < exists ; 2015 ; Pediatric and Developmental Pathology Volume 18 ; 18 >
+    au < exists ; 2016 ; Pediatric and Developmental Pathology Volume 19 ; 19 >
     
   }
   

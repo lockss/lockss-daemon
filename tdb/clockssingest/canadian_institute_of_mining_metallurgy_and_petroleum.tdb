@@ -3,12 +3,12 @@
   publisher <
     name = Canadian Institute of Mining, Metallurgy & Petroleum ;
     info[contract] = 2014 ;
-    info[back] = 2008 ;
+    info[back] = 2005 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
     
-    plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.gsw.GSWDrupalPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     
   {
@@ -38,7 +38,7 @@
     au < exists ; exists ; 2007 ; Exploration and Mining Geology Volume 16 ; 16 ; >
     au < exists ; exists ; 2008 ; Exploration and Mining Geology Volume 17 ; 17 ; >
     au < exists ; exists ; 2009 ; Exploration and Mining Geology Volume 18 ; 18 ; >
-    au < ready ; exists ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 ; >
+    au < exists ; exists ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 ; >
 
   } 
 }

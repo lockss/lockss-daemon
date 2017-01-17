@@ -2,11 +2,10 @@
 
   publisher <
     name = American Dental Society of Anesthesiology ;
-    comment[platform] = Allen Press ;
-    info[tester] = 0
+    comment[platform] = Allen Press
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.anesthesiaprogress.org/
   implicit < status ; year ; name ; param[volume_name] >
   

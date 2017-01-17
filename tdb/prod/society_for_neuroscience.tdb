@@ -1,8 +1,8 @@
 {
   publisher <
-    name = Society for Neuroscience ;
-    info[tester] = 0
+    name = Society for Neuroscience
   >
+      pluginPrefix = org.lockss.plugin.highwire.
 
   {
     title <
@@ -11,13 +11,13 @@
       issnl = 2373-2822
     >
 
-      plugin = org.lockss.plugin.highwire.sfn.SFNDrupalPlugin
       param[base_url] = http://eneuro.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2014 ; eNeuro Volume 1 ; 1 >
-      au < exists ; 2015 ; eNeuro Volume 2 ; 2 >
-      au < exists ; 2016 ; eNeuro Volume 3 ; 3 >
+      au < sfn.SFNDrupalPlugin ; released ; 2014 ; eNeuro Volume 1 ; 1 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2015 ; eNeuro Volume 2 ; 2 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2016 ; eNeuro Volume 3 ; 3 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
 
   }
   
@@ -31,46 +31,46 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jneurosci.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1981 ; Journal of Neuroscience Volume 1 ; 1 >
-      au < released ; 1982 ; Journal of Neuroscience Volume 2 ; 2 >
-      au < released ; 1983 ; Journal of Neuroscience Volume 3 ; 3 >
-      au < released ; 1984 ; Journal of Neuroscience Volume 4 ; 4 >
-      au < released ; 1985 ; Journal of Neuroscience Volume 5 ; 5 >
-      au < released ; 1986 ; Journal of Neuroscience Volume 6 ; 6 >
-      au < released ; 1987 ; Journal of Neuroscience Volume 7 ; 7 >
-      au < released ; 1988 ; Journal of Neuroscience Volume 8 ; 8 >
-      au < released ; 1989 ; Journal of Neuroscience Volume 9 ; 9 >
-      au < released ; 1990 ; Journal of Neuroscience Volume 10 ; 10 >
-      au < released ; 1991 ; Journal of Neuroscience Volume 11 ; 11 >
-      au < released ; 1992 ; Journal of Neuroscience Volume 12 ; 12 >
-      au < released ; 1993 ; Journal of Neuroscience Volume 13 ; 13 >
-      au < released ; 1994 ; Journal of Neuroscience Volume 14 ; 14 >
-      au < released ; 1995 ; Journal of Neuroscience Volume 15 ; 15 >
-      au < released ; 1996 ; Journal of Neuroscience Volume 16 ; 16 >
-      au < released ; 1997 ; Journal of Neuroscience Volume 17 ; 17 >
-      au < released ; 1998 ; Journal of Neuroscience Volume 18 ; 18 >
-      au < released ; 1999 ; Journal of Neuroscience Volume 19 ; 19 >
-      au < released ; 2000 ; Journal of Neuroscience Volume 20 ; 20 >
-      au < released ; 2001 ; Journal of Neuroscience Volume 21 ; 21 >
-      au < released ; 2002 ; Journal of Neuroscience Volume 22 ; 22 >
-      au < released ; 2003 ; Journal of Neuroscience Volume 23 ; 23 >
-      au < released ; 2004 ; Journal of Neuroscience Volume 24 ; 24 >
-      au < released ; 2005 ; Journal of Neuroscience Volume 25 ; 25 >
-      au < released ; 2006 ; Journal of Neuroscience Volume 26 ; 26 >
-      au < released ; 2007 ; Journal of Neuroscience Volume 27 ; 27 >
-      au < released ; 2008 ; Journal of Neuroscience Volume 28 ; 28 >
-      au < released ; 2009 ; Journal of Neuroscience Volume 29 ; 29 >
-      au < released ; 2010 ; Journal of Neuroscience Volume 30 ; 30 >
-      au < released ; 2011 ; Journal of Neuroscience Volume 31 ; 31 >
-      au < released ; 2012 ; Journal of Neuroscience Volume 32 ; 32 >
-      au < released ; 2013 ; Journal of Neuroscience Volume 33 ; 33 >
-      au < released ; 2014 ; Journal of Neuroscience Volume 34 ; 34 >
-      au < released ; 2015 ; Journal of Neuroscience Volume 35 ; 35 >
-      au < manifest ; 2016 ; Journal of Neuroscience Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Neuroscience Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Neuroscience Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Neuroscience Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Neuroscience Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Neuroscience Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1986 ; Journal of Neuroscience Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1987 ; Journal of Neuroscience Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1988 ; Journal of Neuroscience Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1989 ; Journal of Neuroscience Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Neuroscience Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Neuroscience Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Neuroscience Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Neuroscience Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Neuroscience Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Neuroscience Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Neuroscience Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; Journal of Neuroscience Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; Journal of Neuroscience Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Journal of Neuroscience Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Neuroscience Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Neuroscience Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Neuroscience Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Journal of Neuroscience Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Neuroscience Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Neuroscience Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Neuroscience Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Neuroscience Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Neuroscience Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Neuroscience Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Neuroscience Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Neuroscience Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Neuroscience Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Neuroscience Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Neuroscience Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Neuroscience Volume 35 ; 35 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2016 ; Journal of Neuroscience Volume 36 ; 36 >
+      au < sfn.SFNDrupalPlugin ; exists ; 2017 ; Journal of Neuroscience Volume 37 ; 37 >
 
     }
 

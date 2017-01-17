@@ -1,7 +1,6 @@
 {
   publisher <
-    name = Society for Industrial and Applied Mathematics ;
-    info[tester] = 0
+    name = Society for Industrial and Applied Mathematics
   >
 
   plugin = org.lockss.plugin.atypon.siam.SiamBooksPlugin

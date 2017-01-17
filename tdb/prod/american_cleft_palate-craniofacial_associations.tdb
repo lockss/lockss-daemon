@@ -2,11 +2,10 @@
 
   publisher <
     name = American Cleft Palate-Craniofacial Associations ;
-    comment[platform] = Allen Press ;
-    info[tester] = 0
+    comment[platform] = Allen Press
   >
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://www.cpcjournal.org/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -46,6 +45,7 @@
     au < exists ; 2013 ; The Cleft Palate-Craniofacial Journal Volume 50 ; 50 >
     au < exists ; 2014 ; The Cleft Palate-Craniofacial Journal Volume 51 ; 51 >
     au < exists ; 2015 ; The Cleft Palate-Craniofacial Journal Volume 52 ; 52 >
+    au < exists ; 2016 ; The Cleft Palate-Craniofacial Journal Volume 53 ; 53 >
     
   }
   
