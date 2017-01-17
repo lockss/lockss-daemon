@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -142,6 +142,15 @@ public class ProxyManager extends BaseProxyManager {
   public static final String PARAM_INCLUDE_LOCKSS_AUDIT_PROPS =
     PREFIX + "includeLockssAuditProperties";
   public static final boolean DEFAULT_INCLUDE_LOCKSS_AUDIT_PROPS = false;
+
+  /** If true, when serving cached Files that have no stored Content-Type
+   * (and for which none is supplied using the plugin's
+   * <code>au_url_mime_type</code>, one will be inferred from the extension
+   * using Jetty's mechanism.  Setting this false ensures that files
+   * without Content-Type won't inadvertently get one when transferred to
+   * another cache using the audit proxy. */
+  public static final String PARAM_INFER_MIME_TYPE = PREFIX + "inforeMimeType";
+  public static final boolean DEFAULT_INFER_MIME_TYPE = true;
 
   /** Determines whether the proxy interprets a {@value
    * org.lockss.util.Constants#X_LOCKSS_LOCAL_ADDRESS} request header.
