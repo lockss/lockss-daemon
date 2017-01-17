@@ -6,7 +6,7 @@ the default behavior.  See testsuite.props for details."""
 # $Id$
 
 __copyright__ = '''\
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -329,7 +329,7 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.poll.v3.allPoPPolls': 'false',
 			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
                           'org.lockss.poll.v3.recordPeerUrlLists' : 'false',
-                          'org.lockss.poll.pollStarterInitialDelay': '10s'
+                          'org.lockss.poll.pollStarterInitialDelay': '30s'
             }
             extraConf.update( self.local_configuration )
             self.framework.appendLocalConfig( extraConf, client )
