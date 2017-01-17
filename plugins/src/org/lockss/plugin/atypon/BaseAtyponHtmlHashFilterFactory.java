@@ -103,6 +103,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class","literatumMostRecentWidget"),                                      
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumListOfIssuesWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBreadcrumbs"),
+    //seen in TandF but likely to spread
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumArticleMetricsWidget"),
     // additional just for hashing - may or may not be necessary
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
     //http://press.endocrine.org/doi/full/10.1210/en.2013-1159
