@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -649,6 +649,22 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     muf.fetch();
     assertEquals("uuu", mconn.username);
     assertEquals("ppp", mconn.password);
+  }
+
+  public void testCredentialsIndirect() throws Exception {
+    ConfigurationUtil.setFromArgs("org.lockss.cred.wayback.foopln",
+				  "foo_user:foopln_pass");
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+    Configuration auConfig = mau.getConfiguration();
+    auConfig.put(ConfigParamDescr.USER_CREDENTIALS.getKey(),
+		 "@org.lockss.cred.wayback.foopln");
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.fetch();
+    assertEquals("foo_user", mconn.username);
+    assertEquals("foopln_pass", mconn.password);
   }
 
   public void testSetReqProp() throws Exception {
