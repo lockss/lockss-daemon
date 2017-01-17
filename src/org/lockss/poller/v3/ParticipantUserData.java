@@ -3,7 +3,7 @@
  */
 
 /*
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -865,7 +865,6 @@ public class ParticipantUserData implements LockssSerializable {
    */
   public VoteCounts getVoteCounts() {
     return voteCounts;
-//     return new VoteCounts(voteCounts);
   }
 
   /** 
