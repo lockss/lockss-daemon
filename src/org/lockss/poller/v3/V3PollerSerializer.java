@@ -169,10 +169,11 @@ public class V3PollerSerializer extends V3Serializer {
     File f = peerMapping.get(id);
     if (f == null) {
       log.warning("Poller user data file does not exist, can't remove " + f);
-    }
-    if (!f.delete()) {
-      throw new SerializationException("Could not remove poller user " +
-                                       "data file " + f);
+    } else {
+      if (!f.delete()) {
+	throw new SerializationException("Could not remove poller user " +
+					 "data file " + f);
+      }
     }
   }
 
