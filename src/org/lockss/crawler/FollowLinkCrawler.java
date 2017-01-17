@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -497,7 +497,15 @@ public class FollowLinkCrawler extends BaseCrawler {
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);
       log.debug2("setStartUrl(" + curl + ")");
-      addToQueue(curl, fetchQueue, crawlStatus);
+      if (au.shouldBeCached(url)) {
+	addToQueue(curl, fetchQueue, crawlStatus);
+      } else {
+	crawlStatus.signalErrorForUrl(url,
+				      "Start URL from CrawlSeed not within crawl rules",
+				      CrawlerStatus.Severity.Error);
+	crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+				   "Start URL from CrawlSeed not within crawl rules");
+      }
     }
   }
 

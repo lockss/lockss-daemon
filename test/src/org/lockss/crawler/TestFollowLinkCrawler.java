@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -141,6 +141,54 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       fail("Calling getType() ," +
 	   " which should not be implemented in FollowLinkCrawler");
     } catch (UnsupportedOperationException usoe) {
+    }
+  }
+
+  protected String permissionUrl = "http://www.example.com/permission.html";
+
+  public void testCrawlSeedStartUrlsNotInCrawlSpec()
+      throws ConfigurationException, PluginException, IOException {
+
+    mau.addUrlToBeCached(startUrl);
+    mau.addUrlToBeCached(permissionUrl);
+
+    MyBaseCrawlSeed bcs = new MyBaseCrawlSeed(mau);
+    List moreStartUrls = ListUtil.list("http://www.example2.com/index2.html",
+				       "http://www.example3.com/index3.html");
+    startUrls.addAll(moreStartUrls);
+    bcs.setStartUrls(startUrls);
+    mau.setCrawlSeed(bcs);
+
+    assertEquals(startUrls, bcs.getStartUrls());
+    crawler.enqueueStartUrls();
+
+    CrawlerStatus cs = crawler.getCrawlerStatus();
+    assertEquals(Crawler.STATUS_PLUGIN_ERROR, cs.getCrawlStatus());
+    assertEquals(MapUtil.map("http://www.example3.com/index3.html",
+			     "Start URL from CrawlSeed not within crawl rules",
+			     "http://www.example2.com/index2.html",
+			     "Start URL from CrawlSeed not within crawl rules"),
+		 cs.getUrlsWithErrors());
+  }
+
+  class MyBaseCrawlSeed extends BaseCrawlSeed {
+    List<String> startUrls;
+
+    MyBaseCrawlSeed(ArchivalUnit au) {
+      super(au);
+    }
+    @Override
+    public Collection<String> doGetStartUrls()
+	throws ConfigurationException, PluginException, IOException {
+      if (startUrls == null) {
+	log.critical("doGetStartUrls: " + super.doGetStartUrls());
+	return super.doGetStartUrls();
+      }
+      log.critical("doGetStartUrls: " + startUrls);
+      return startUrls;
+    }
+    void setStartUrls(List<String> urls) {
+      startUrls = urls;
     }
   }
 

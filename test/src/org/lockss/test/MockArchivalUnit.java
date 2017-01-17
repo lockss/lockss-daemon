@@ -109,6 +109,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
+  private CrawlSeed seed;
 
   boolean isBulkContent = false;
   ArchiveFileTypes aft = null;
@@ -515,6 +516,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public boolean shouldBeCached(String url) {
+    log.critical("shouldBeCached: " + urlsToCache);
     return urlsToCache.contains(url);
   }
 
@@ -770,7 +772,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   @Override
   public CrawlSeed makeCrawlSeed(Crawler.CrawlerFacade crawlFacade) {
+    if (seed != null) {
+      return seed;
+    }
     return new BaseCrawlSeed(this);
+  }
+
+  public void setCrawlSeed(CrawlSeed seed) {
+    this.seed = seed;
   }
 
   @Override
