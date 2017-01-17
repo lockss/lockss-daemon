@@ -325,6 +325,8 @@ public class FuncV3Voter extends LockssTestCase {
   public void testSerializeAndReloadVoter(boolean expSubChecker)
       throws Exception {
     
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_CHECKPOINT_VOTES, "true");
+
     // Just check to be sure that checkpointing and restoring a poll
     // does not fail.
     
