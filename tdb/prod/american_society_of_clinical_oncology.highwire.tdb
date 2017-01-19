@@ -1,0 +1,91 @@
+{
+  publisher <
+    name = American Society of Clinical Oncology ;
+    info[down] = down
+  >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    #moving to Atypon October 2016
+
+  {
+    title <
+      name = Journal of Clinical Oncology ;
+      issn = 0732-183X ;
+      issnl = 0732-183X
+    >
+
+    {
+
+      param[base_url] = http://jco.ascopubs.org/
+
+      au < doNotProcess ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 >
+      au < doNotProcess ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 >
+      au < doNotProcess ; 1985 ; Journal of Clinical Oncology Volume 3 ; 3 >
+      au < doNotProcess ; 1986 ; Journal of Clinical Oncology Volume 4 ; 4 >
+      au < doNotProcess ; 1987 ; Journal of Clinical Oncology Volume 5 ; 5 >
+      au < doNotProcess ; 1988 ; Journal of Clinical Oncology Volume 6 ; 6 >
+      au < doNotProcess ; 1989 ; Journal of Clinical Oncology Volume 7 ; 7 >
+      au < down ; 1990 ; Journal of Clinical Oncology Volume 8 ; 8 >
+      au < down ; 1991 ; Journal of Clinical Oncology Volume 9 ; 9 >
+      au < down ; 1992 ; Journal of Clinical Oncology Volume 10 ; 10 >
+      au < down ; 1993 ; Journal of Clinical Oncology Volume 11 ; 11 >
+      au < down ; 1994 ; Journal of Clinical Oncology Volume 12 ; 12 >
+      au < down ; 1995 ; Journal of Clinical Oncology Volume 13 ; 13 >
+      au < down ; 1996 ; Journal of Clinical Oncology Volume 14 ; 14 >
+      au < down ; 1997 ; Journal of Clinical Oncology Volume 15 ; 15 >
+      au < down ; 1998 ; Journal of Clinical Oncology Volume 16 ; 16 >
+      au < down ; 1999 ; Journal of Clinical Oncology Volume 17 ; 17 >
+      au < down ; 2000 ; Journal of Clinical Oncology Volume 18 ; 18 >
+      au < down ; 2001 ; Journal of Clinical Oncology Volume 19 ; 19 >
+      au < down ; 2002 ; Journal of Clinical Oncology Volume 20 ; 20 >
+      au < down ; 2003 ; Journal of Clinical Oncology Volume 21 ; 21 >
+      au < down ; 2004 ; Journal of Clinical Oncology Volume 22 ; 22 >
+      au < down ; 2005 ; Journal of Clinical Oncology Volume 23 ; 23 >
+      au < down ; 2006 ; Journal of Clinical Oncology Volume 24 ; 24 >
+      au < down ; 2007 ; Journal of Clinical Oncology Volume 25 ; 25 >
+      au < down ; 2008 ; Journal of Clinical Oncology Volume 26 ; 26 >
+      au < down ; 2009 ; Journal of Clinical Oncology Volume 27 ; 27 >
+      au < down ; 2010 ; Journal of Clinical Oncology Volume 28 ; 28 >
+      au < down ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 >
+      au < down ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 >
+      au < down ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
+      au < down ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
+      au < down ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
+      au < doNotProcess ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Oncology Practice ;
+      issn = 1554-7477 ;
+      issnl = 1554-7477
+    >
+
+    {
+
+      param[base_url] = http://jop.ascopubs.org/ 
+
+      au < down ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 >
+      au < down ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 >
+      au < down ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 >
+      au < down ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 >
+      au < down ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 >
+      au < down ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 >
+      au < down ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 >
+      au < down ; 2012 ; Journal of Oncology Practice Volume 8 ; 8 >
+      au < down ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 >
+      au < down ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 >
+      au < down ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 >
+      au < doNotProcess ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
+
+    }
+
+  }
+
+}
+
