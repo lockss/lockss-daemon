@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,8 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     // Do not crawl for links from aside in BMJ, etc
     HtmlNodeFilters.tag("aside"),
     HtmlNodeFilters.tag("script"),
+    // filter nav tag; found outside of header tag in http://elements.geoscienceworld.org/content/8/1/76.long
+    HtmlNodeFilters.tag("nav"),
     // Do not crawl reference section, right sidebar for links; common with APS & OUP
     HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
     // Title bar on toc with link to current issue

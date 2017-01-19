@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -220,6 +220,20 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</div>";
   
+  private static final String withNav = "<div id=\"page\">" +
+      "<nav class=\"menubar-nav\">" +
+      "<ul class=\"nice-menu nice-menu-down\" id=\"nice-menu-1\" role=\"menu\">" +
+      "<li class=\"menu-616 menu-path-front first odd\" role=\"menuitem\">" +
+      " <a href=\"/\" class=\"\" data-icon-position=\"\" data-hide-link-title=\"0\">Home</a></li>\n" + 
+      "<li class=\"menu-617 menuparent  menu-path-content-current  even\" role=\"menuitem\">" +
+      " <a href=\"/content/current\" data-icon-position=\"\" data-hide-link-title=\"0\">Content</a></li>\n" + 
+      "</ul></nav>" +
+      "</div>";
+  
+  private static final String withoutNav = "<div id=\"page\">" +
+      "\n" +
+      "</div>";
+  
   /*
    */
   public void testFiltering() throws Exception {
@@ -239,11 +253,11 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
     assertEquals(withoutFooter, a);
     
 //    // ref list
-//    inA = fact.createFilteredInputStream(mau, new StringInputStream(withRefList),
-//        Constants.DEFAULT_ENCODING);
-//    a = StringUtil.fromInputStream(inA);
-//    assertEquals(withoutRefList, a);
-//    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withRefList),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutRefList, a);
+    
     // sidebar
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withSidebar),
         Constants.DEFAULT_ENCODING);
@@ -251,10 +265,10 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
     assertEquals(withoutSidebar, a);
     
     // node pager
-//    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
-//        Constants.DEFAULT_ENCODING);
-//    a = StringUtil.fromInputStream(inA);
-//    assertEquals(withoutPager, a);
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutPager, a);
     
     // aside
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withAside),

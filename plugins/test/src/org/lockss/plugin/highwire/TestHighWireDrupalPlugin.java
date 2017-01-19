@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -242,6 +242,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, au);
     shouldCacheTest("", false, au);
     shouldCacheTest(ROOT_URL + "content/by/year", false, au);
+    shouldCacheTest(ROOT_URL + "content/current", false, au);
     
     shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-figures-data", true, au);
     shouldCacheTest(ROOT_URL + "content/213/11/2293/tab-article-info", false, au);

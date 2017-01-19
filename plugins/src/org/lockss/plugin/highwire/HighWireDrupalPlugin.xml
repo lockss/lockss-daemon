@@ -51,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>62</string>
+    <string>63</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>
@@ -146,7 +146,7 @@
     <list>
       <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
-      <string>2,"^https?://%s/content/(by/(year|volume)|.*/article-.*$)", url_host(base_url)</string>
+      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-.*$)", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?(\.toc)?$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
