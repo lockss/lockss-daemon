@@ -77,7 +77,7 @@
   
     {
     
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.atsjournals.org/
       param[journal_id] = ajrccm
@@ -212,7 +212,7 @@
     
     {
     
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.atsjournals.org/
       param[journal_id] = ajrcmb
@@ -300,7 +300,7 @@
     }
     
     {
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.atsjournals.org/
       param[journal_id] = pats
@@ -327,7 +327,7 @@
       comment[continues] = 1546-3222
       # name changed from Proceedings of the American Thoracic Society to Annals of the American Thoracic Society in 2013
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.atsjournals.org/
       param[journal_id] = annalsats
