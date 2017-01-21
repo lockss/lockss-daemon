@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,12 +43,23 @@ import org.lockss.plugin.*;
 
 
 /*
- * the ROLE_METADATA is a RIS citation file
- * But before collecting and emitting, make sure the corresponding pdf or 
+ * This RIS extractor is used by both legacy JSTOR as well as JSTOR Current Scholarship
+ * Legacy: https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.5325/chaucerrev.49.1.0001
+ * New: http://www.jstor.org/citation/ris/10.2307/40835452
+ * 
+ * For Legacy:
+ * The RIS url is manufactured by a link extractor using the DOI on the TOC page 
+ * before collecting and emitting, make sure the corresponding pdf or 
  * full text html is in the AU
- * because the RIS url was generated from a DOI on the TOC page
  * The RIS file will exist even for a bogus DOI, it's just that the contents
  * will be blank. So do a validation check on the RIS file.
+ * 
+ * For new:
+ * The RIS comes from a link so is valid. Do the check anyway, because why not
+ * 
+ * Leave the ISSN uncooked and it will come from the TDB more consistently
+ * 
+ * If the DOI is missing - you can get it from the metadata url 
  */
 
 /*
@@ -98,6 +109,11 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
   // to check that we have full content version of the same name
   final static Pattern FILE_PATTERN = Pattern.compile("(.*)/stable/(view/|info/)?(.*)$", Pattern.CASE_INSENSITIVE);
 
+//https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.5325/chaucerrev.49.1.0001
+//  or
+// http://www.jstor.org/citation/ris/10.2307/40835452
+  final static Pattern RIS_URL_PATTERN = Pattern.compile("(doi=|citation/ris/)(.*)$", Pattern.CASE_INSENSITIVE);
+
   
   /*
    * The base RisMetadataExtractor defines the following set tags, but Jstor
@@ -107,12 +123,23 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
    *  PB-FIELD_PUBLISHER,VL-FIELD_VOLUME, IS-FIELD_ISSUE, SP-FIELD_START_PAGE, 
    *  EP-FIELD_END_PAGE,DA-FIELD_DATE
    *  
-   *  In Jstor, the 
+   *  In Jstor original, the 
    *      FIELD_DATE is Y1 and not DA
    *      FIELD_ARTICLE_TITLE is TI and not T1
    *      FIELD_PUBLICATION_TITLE is JO
    *  we are assuming they won't also use the other tags as well
-   *       
+   *  
+   *  In Jstor Current Scholarship, the
+   *    FIELD_DATE (year) is PY
+   *    FIELD_PUBLICATION_TITLE is T2
+   *    FIELD_ARTICLE_TITLE is TI (as before)
+   *    The rest of the tags are standard
+   *    If, for whatever reason, the DO isn't set, the url has the DOI
+   *      
+   * Don't cook the SN (issn value) both because in Current Scholarship it is often
+   * both values, comma separated which is invalid and would need ot be parsed
+   * but also because we don't know which is issn vs eissn and the information will
+   * exist in the TDB and get picked up from there       
    */
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -120,7 +147,9 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
     JstorRisMetadataExtractor jris = new JstorRisMetadataExtractor();
 
     jris.addRisTag("JO", MetadataField.FIELD_PUBLICATION_TITLE);
+    jris.addRisTag("T2", MetadataField.FIELD_PUBLICATION_TITLE);
     jris.addRisTag("Y1", MetadataField.FIELD_DATE);
+    jris.addRisTag("PY", MetadataField.FIELD_DATE);
     jris.addRisTag("TI", MetadataField.FIELD_ARTICLE_TITLE); // weird, but true in some cases
     // UR will point to a stable URL that we won't have, don't cook this
     // so that we can put in a correct value
@@ -150,6 +179,23 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
       ArticleMetadata am = super.extract(target, cu); //extracts and cooks
       // we have metadata to emit
       if (am != null) {
+        Matcher doiMat = RIS_URL_PATTERN.matcher(cu.getUrl());
+        String doiVal;
+        if (doiMat.find()) {
+            doiVal = doiMat.group(2);
+            log.debug3("doiVal from url is: " + doiVal);
+            //sometimes the doi isn't in the RIS file
+            am.putIfBetter(MetadataField.FIELD_DOI, doiVal);
+        }
+        if (am.get(MetadataField.FIELD_ISSN) == null) {
+          String sn_val = am.getRaw("SN");
+          if (sn_val != null && sn_val.contains(",")) {
+            String one_val = sn_val.substring( 0, sn_val.indexOf(","));
+            am.put(MetadataField.FIELD_ISSN, one_val.trim());
+          }
+        }
+        log.debug3("SN val is " + am.get(MetadataField.FIELD_ISSN));
+
         /* the UR line in the RIS file gives us the filename used for this document 
          * it will be one of two formats:
          *   UR  - http://www.jstor.org/stable/41495857
@@ -164,6 +210,11 @@ public class JstorRisMetadataExtractorFactory implements FileMetadataExtractorFa
 
         /* Get the filename from the UR field in the metadata */
 //        String full_UR = am.get(MetadataField.FIELD_ACCESS_URL);
+        /*
+         * This check is from JSTOR original
+         * but leave it in for JSTOR Current Scholarship
+         * since we're iterating only on the RIS and XML
+         */
         String full_UR = am.getRaw("ur");
         if ((full_UR != null)) {
           Matcher accessUrlMat = FILE_PATTERN.matcher(full_UR);

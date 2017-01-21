@@ -1,0 +1,200 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>JSTOR Current Scholarship Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!-- url consumer with storeAtOrigUrl convenience method -->
+    <string>1.68.0</string>
+  </entry>  
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>JSTOR</string>
+  </entry>    
+  <entry>
+    <string>au_name</string>
+    <string>"JSTOR Current Scholarship Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/%s/%d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!--
+    // CDN support
+    //http://assets.adobedtm.com/e0b918adcf7233db110ce33e1416a2e6448e08e6/satelliteLib-5c3c84854607a1fc3328b9b539472ebd81244f0b.js
+    //http://www.jstor.org/stable/10.2972/hesperia.84.issue-3 [index]
+    //http://www.jstor.org/stable/10.2972/i40044030 [index, legacy]
+    // which redirects to: http://www.jstor.org/stable/i40044030 [legacy index direct from prev/next]
+        
+    but NOT
+    //http://www.jstor.org/stable/10.2972/hesperia.84.3.0515 [article]
+    //http://www.jstor.org/stable/40981057 [article, legacy]
+    //http://www.jstor.org/stable/pdf/10.2972/hesperia.84.3.0515.pdf [pdf]
+    //http://www.jstor.org/stable/pdf/40981057.pdf [pdf, legacy]
+    //http://www.jstor.org/doi/xml/10.2307/40981057 [xml]
+    //http://www.jstor.org/doi/xml/10.2972/hesperia.84.3.0515 [xml]
+    //http://www.jstor.org/citation/info/10.2972/hesperia.84.3.0515 [citation select]
+    //http://www.jstor.org/citation/info/10.2307/40981057 [citation select]
+    //http://www.jstor.org/citation/ris/10.2307/40981057 [citation]
+     -->
+    <list>
+      <string>1,"^https?://assets\.adobedtm\.com/"</string>    
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?(v|appId)=.+)?$", base_url</string>
+      <!--  spider trap if it's like other Atypon; doesn't matter what the intermed dir is-->
+      <string>2,"^%s(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
+      <string>2,"^%sstable/([^/]+/)?[0-9.]+/[-.9]+$", base_url</string>
+      <!-- regular/new style -->
+      <string>1,"^%sstable/(pdf/)?[.0-9]+/%s\.", base_url, journal_id</string>
+      <!-- legacy style -->
+      <string>1,"^%sstable/[0-9.]+/i[0-9]+$", base_url</string>
+      <string>1,"^%sstable/i[0-9]+$", base_url</string>
+      <string>1,"^%sstable/([0-9.]+/)?[0-9]+$", base_url</string>
+      <string>1,"^%sstable/pdf/[0-9]+\.pdf", base_url</string>
+      <!--  citation support -->
+      <string>1,"^%sdoi/xml/[.0-9]+/", base_url</string>
+      <string>1,"^%scitation/(info|ris)/[.0-9]+/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal ID</displayName>
+        <description>Journal Identifier</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>  
+  <entry>
+     <string>au_substance_url_pattern</string>
+     <list>
+       <!--  newer use two part doi as article identifier and end in pdf -->
+       <!--  legacy uses article identifier and end in pdf -->
+        <string>"^%sstable/pdf/([.0-9]+/)?[^/?&amp;]+\.pdf$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorCSHtmlHashFilterFactory</string>
+  </entry>
+<!-- so far no need, only TOC and pdf
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorCSHtmlCrawlFilterFactory</string>
+  </entry>
+  -->
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.jstor.JstorPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.jstor.JstorCSArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.jstor.JstorCSArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.jstor.JstorRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.jstor.JstorRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>  
+  <!-- redirect gets swallowed so no need for normalizing off arguments
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.jstor.JstorUrlNormalizer</string>
+  </entry>
+  -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.jstor.JstorCSUrlConsumerFactory</string>
+  </entry>  
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.jstor.JstorHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>"assets.adobedtm.com"</string>
+  </entry>  
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>JSTOR hosts this archival unit (AU) and may require you to register the IP address of this LOCKSS box as a crawler. For more information, visit the &lt;a href=&apos;http://www.lockss.org/support/use-a-lockss-box/adding-titles/publisher-ip-address-registration-contacts-for-global-lockss-network/&apos;&gt;LOCKSS IP address registration page&lt;/a&gt;.</string>
+  </entry>  
+</map>

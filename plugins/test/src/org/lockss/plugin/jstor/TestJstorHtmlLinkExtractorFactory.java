@@ -32,7 +32,7 @@
 package org.lockss.plugin.jstor;
 
 import java.util.Set;
-
+import java.util.regex.Matcher;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.LinkExtractor;
@@ -53,6 +53,7 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
   protected MockLockssDaemon daemon;
   private MockArchivalUnit m_mau;
   private ArchivalUnit jsau;
+  private ArchivalUnit JsCsau;
 
   private JstorHtmlLinkExtractor m_extractor;
   private MyLinkExtractorCallback m_callback;
@@ -65,15 +66,21 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
       "stable/info/41495848";
 
   private final String PLUGIN_NAME = "org.lockss.plugin.jstor.JstorPlugin";
+  private final String PLUGIN_CS_NAME = "org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String BASE_URL2_KEY = ConfigParamDescr.BASE_URL2.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, JSTOR_BASE_URL,
       BASE_URL2_KEY, JSTOR_BASE_URL2,
       VOLUME_NAME_KEY, "123",
       JOURNAL_ID_KEY, "xxxx");
+  private final Configuration AU_CS_CONFIG = ConfigurationUtil.fromArgs(
+      BASE_URL_KEY, JSTOR_BASE_URL,
+      JOURNAL_ID_KEY, "xxxx",
+      YEAR_KEY, "2015");
 
 
   public static final String htmltest =
@@ -131,6 +138,7 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
     daemon = getMockLockssDaemon();
     daemon.getPluginManager().setLoadablePluginsReady(true);
     jsau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
+    JsCsau = PluginTestUtil.createAndStartAu(PLUGIN_CS_NAME, AU_CS_CONFIG);
 
     m_callback = new MyLinkExtractorCallback();
     LinkExtractorFactory fact = new JstorHtmlLinkExtractorFactory();
@@ -140,13 +148,13 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
   public void testBasic() throws Exception {
     Set<String>expected = SetUtil.set(
         "https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41495848");
-    testExpectedAgainstParsedUrls(expected,htmltest,JSTOR_TOC_URL);
+    testExpectedAgainstParsedUrls(jsau, expected,htmltest,JSTOR_TOC_URL);
   }
   
   //Don't use citation form extractor except on TOC pages
   public void testNotTOC() throws Exception {
     Set<String> expected = SetUtil.set();
-    testExpectedAgainstParsedUrls(expected,htmltest,JSTOR_ARTICLE_ABSTRACT_URL);
+    testExpectedAgainstParsedUrls(jsau, expected,htmltest,JSTOR_ARTICLE_ABSTRACT_URL);
   }
 
   public void testFullLink() throws Exception {
@@ -156,7 +164,7 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
         "http://www.jstor.org/stable/view/41495848",
         "https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/41495848",
         "http://www.jstor.org/stable/pdfplus/41495848.pdf");
-    testExpectedAgainstParsedUrls(expected,fullLinkHtml, JSTOR_TOC_URL);
+    testExpectedAgainstParsedUrls(jsau, expected,fullLinkHtml, JSTOR_TOC_URL);
   }
 
   public void tesMultiLinks() throws Exception {
@@ -165,16 +173,42 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
         "https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.2307/746318",
         "https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.1525/ncm.2013.36.3.toc",
         "https://www.jstor.org/action/downloadSingleCitationSec?format=refman&doi=10.3764/aja.117.3.0429");
-      testExpectedAgainstParsedUrls(expected, multiLinksHtml, JSTOR_TOC_URL);
+      testExpectedAgainstParsedUrls(jsau, expected, multiLinksHtml, JSTOR_TOC_URL);
   }
+  
+  public static final String scriptLinkHtml =
+  "    <!-- PerimeterX -->" +
+  "<script id=\"px-js\" type=\"text/javascript\">" +
+   "   (function(){" +
+    "      window._pxAppId = 'PXu4K0s8nX';" +
+     "     window._pxRootUrl = '/px/xhr';" +
+      "    var p = document.getElementsByTagName('script')[0]," +
+       "       s = document.createElement('script');" +
+        "  s.async = 1;" +
+         " s.src = '/px/client/main.min.js';" +
+          "s.onerror = function() {" +
+           "   storePerimeterXLoadingError('asyncScript', 'element present but not loaded');" +
+          "};" +
+         " p.parentNode.insertBefore(s,p);" +
+      "}());" +
+ " </script>";
+ 
+public void testScriptExtractorPattern() throws Exception {
+  Matcher mat = JstorHtmlLinkExtractor.SCRIPT_SRC_PAT.matcher(scriptLinkHtml);
+  assertEquals(true,mat.find());
+}
 
+  public void testScriptCurrentScholarship() throws Exception {
+    Set<String>expected = SetUtil.set(
+        "http://www.jstor.org/px/client/main.min.js");
+    testExpectedAgainstParsedUrls(JsCsau, expected,scriptLinkHtml,"http://www.jstor.org/stable/10.1234/i41495848");
+  }
   
   
-  
-  private void testExpectedAgainstParsedUrls(Set<String> expectedUrls, 
+  private void testExpectedAgainstParsedUrls(ArchivalUnit au, Set<String> expectedUrls, 
       String source, String srcUrl) throws Exception {
 
-    Set<String> result_strings = parseSingleSource(source, srcUrl);
+    Set<String> result_strings = parseSingleSource(au, source, srcUrl);
     assertEquals(expectedUrls.size(), result_strings.size());
     for (String url : result_strings) {
       log.debug3("URL: " + url);
@@ -182,11 +216,11 @@ public class TestJstorHtmlLinkExtractorFactory extends LockssTestCase {
     }
   }
 
-  private Set<String> parseSingleSource(String source, String srcUrl)
+  private Set<String> parseSingleSource(ArchivalUnit au, String source, String srcUrl)
       throws Exception {
 
     m_callback.reset();
-    m_extractor.extractUrls(jsau,
+    m_extractor.extractUrls(au,
         new org.lockss.test.StringInputStream(source), ENC,
         srcUrl, m_callback);
     return m_callback.getFoundUrls();
