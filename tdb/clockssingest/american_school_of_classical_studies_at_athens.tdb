@@ -113,7 +113,7 @@
    {
    
      comment[platform] = JSTOR
-     plugin = org.lockss.plugin.jstor.ClockssJstoCurrentScholarshipPlugin
+     plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
      param[base_url] = http://www.jstor.org/
      implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
      param[journal_id] = hesperia
