@@ -1,0 +1,249 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Silverchair AMA Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resource_id</key>
+        <displayName>Resource ID</displayName>
+        <description>Internal resource ID</description>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Silverchair AMA Journals Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", base_url, resource_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://([^.]+\.(googleapis)\.com)/"</string>
+      <!-- I used the same old list of cdn -->
+      <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^%sjournals/%s/issue/", base_url, journal_id</string>
+      <string>1,"^%sjournals/%s/(fullarticle|article-abstract)/", base_url, journal_id</string>
+      <!-- string>1,"^%sjournals/%s/data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string> -->
+      <string>1,"^%spdfaccess.ashx[?]url=/data/journals/.+routename=%s", base_url, journal_id</string>
+      
+      <!--  
+      http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iic150063.pdf
+      http://amaprod.silverchaircdn.com/UI/app
+      http://jamanetwork.com/journals/jamainternalmedicine/issue/176/1
+      http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
+      http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2479062
+      http://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2479062
+      
+      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
+      <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
+      <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"__EVENTVALIDATION="</string>
+      <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
+      <string>1,"^%s(article\.aspx\?articleid=|(downloadCitation|multimediaPlayer)\.aspx\?)", base_url</string>
+      <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
+      <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
+      <string>1,"^%scombres\.axd/", base_url</string>
+      <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
+      <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
+      <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
+      <string>1,"^%sScriptResource\.axd\?d", base_url</string>
+       -->
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlCrawlFilterFactory</string>
+  </entry>
+  <!-- entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+  </entry> -->
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Silverchair</string>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
+  </entry>
+  <!-- entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/json_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ScJsonHashFilterFactory</string>
+  </entry> -->
+  <!-- entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
+  </entry> -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
+      <string>"^%sjournals/%s/data/journals/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
+    </list>
+  </entry>
+  <!-- entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry> -->
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
+  </entry>
+  <!-- entry>
+      <string>plugin_url_fetcher_factory</string>
+      <string>org.lockss.plugin.silverchair.ScUrlFetcherFactory</string>
+  </entry> -->
+  <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
+  <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->  
+  <!-- don't count it in the poll, but do collect and share versions -->  
+  <!-- entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
+      <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
+      <string>/multimediaPlayer.aspx\?</string>
+      <string>/errors/404\.aspx\?aspxerrorpath=</string>
+      <string>silverchaircdn\.com/(CSS|Images)/</string>
+      <string>"\?v=[0-9]+$"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
+      <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+      <string>"/multimediaPlayer.aspx\?", 0</string>
+      <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
+      <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
+      <string>"\?v=[0-9]+$", 0</string>
+    </list>
+  </entry> -->
+</map>
