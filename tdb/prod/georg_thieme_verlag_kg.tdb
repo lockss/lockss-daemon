@@ -21,12 +21,12 @@
     param[journal_id] = 10.1055/s-00000169
     comment[years] = 2011-current
 
-    au < exists ; 2011 ; 2011 ; American Journal of Perinatology Reports Volume 2011 ; 1 >
-    au < exists ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 2 >
-    au < exists ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 >
-    au < exists ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 4 >
-    au < exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 >
-    au < exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 2016 ; 6 >
+    au < exists ; 2011 ; 2011 ; American Journal of Perinatology Reports Volume 2011 ; 28 >
+    au < exists ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 29 >
+    au < exists ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 30 >
+    au < exists ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 31 >
+    au < exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 32 >
+    au < exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 2016 ; 33 >
 
    }
 
@@ -40,8 +40,8 @@
     >
     param[journal_id] = 10.1055/s-00028832
 
-   au < exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 1 >
-   au < expected ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2016 ; 2 >
+   au < exists ; 2015 ; 2015 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2015 ; 34 >
+   au < expected ; 2016 ; 2016 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 2016 ; 35 >
 
    }
 

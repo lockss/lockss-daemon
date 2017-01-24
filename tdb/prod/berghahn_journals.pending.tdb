@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Berghahn Journals
+    name = Berghahn Journals [PENDING] ;
+    info[down] = pending
   >
 
   plugin = needs.plugin #pubfactory
