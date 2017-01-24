@@ -1,7 +1,8 @@
 {
   publisher <
-    name = Microbiology Society ;
-    info[tester] = 5
+    name = Microbiology Society [PENDING] ;
+    info[tester] = 5 ;
+    info[down] = pending
   >
   
   # Formerly: Society for General Microbiology
