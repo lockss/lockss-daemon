@@ -84,6 +84,8 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
  
           // toc - contents only
           HtmlNodeFilters.tagWithAttribute("div", "class", "toc-view"),
+          // citation/info
+          HtmlNodeFilters.tagWithAttribute("div", "id", "citationBody"),
       };
       
       //nothing yet...put in placeholder
@@ -93,6 +95,10 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div","id","journal_info_drop"),
           //might change offerings and not pertinent content
           HtmlNodeFilters.tagWithAttribute("ul","id","export-bulk-drop"),
+          
+          // the value of data-issue-key is variable - just remove the associated tag
+          HtmlNodeFilters.tagWithAttributeRegex("div", "data-issue-key", ".*"),
+
       };
       return getFilteredInputStream(au, in, encoding,
           includeNodes, excludeNodes);
