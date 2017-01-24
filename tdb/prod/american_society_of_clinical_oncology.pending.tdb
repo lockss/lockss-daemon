@@ -1,10 +1,12 @@
 {
   publisher <
-    name = American Society of Clinical Oncology
+    name = American Society of Clinical Oncology [PENDING] ;
+    info[down] = pending
   >
 
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
     implicit < status ; year ; name ; param[volume_name] >
+    # waiting for this journal to move to clockss.
     
     #moving to Atypon October 2016
     param[base_url] = http://ascopubs.org/
