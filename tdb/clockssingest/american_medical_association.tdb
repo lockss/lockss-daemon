@@ -7,7 +7,7 @@
     info[poller] = 7
   >
 
-  plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
+  plugin = needs.plugin
   implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
   
   {
@@ -22,7 +22,7 @@
     param[base_url] = http://cardiology.jamanetwork.com/
     param[resource_id] = 184
     
-    au < down ; exists ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; >
+    au < exists ; exists ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; >
   
   }
 
@@ -38,11 +38,11 @@
     param[base_url] = http://archderm.jamanetwork.com/
     param[resource_id] = 68
     
-    au < down ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; >
   
   }
 
@@ -58,11 +58,11 @@
     param[base_url] = http://archfaci.jamanetwork.com/
     param[resource_id] = 69
     
-    au < down ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
-    au < down ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; >
   
   }
 
@@ -78,11 +78,11 @@
     param[base_url] = http://archinte.jamanetwork.com/
     param[resource_id] = 71
         
-    au < down ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; >
 
   }
 
@@ -98,11 +98,11 @@
     param[base_url] =  http://archneur.jamanetwork.com/
     param[resource_id] = 72
     
-    au < down ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; >
   
   }
 
@@ -135,11 +135,11 @@
     param[base_url] =  http://archopht.jamanetwork.com/
     param[resource_id] = 73
         
-    au < down ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; >
     
   }
 
@@ -155,11 +155,11 @@
     param[base_url] =  http://archotol.jamanetwork.com/
     param[resource_id] = 74
         
-    au < down ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; reingest4.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; >
     
   }
 
@@ -175,11 +175,11 @@
     param[base_url] = http://archpedi.jamanetwork.com/
     param[resource_id] = 75
         
-    au < down ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; reingest4.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; >
     
   }
 
@@ -195,11 +195,11 @@
     param[base_url] = http://archpsyc.jamanetwork.com/
     param[resource_id] = 70
       
-    au < down ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 ; >
+    au < exists ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 ; >
   
   }
 
@@ -215,10 +215,10 @@
     param[base_url] = http://archsurg.jamanetwork.com/
     param[resource_id] = 76
     
-    au < down ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; reingest1.clockss.org:8082 >
-    au < down ; exists ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; >
+    au < exists ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; >
   
   }
 
@@ -234,11 +234,11 @@
     param[base_url] = http://archsurg.jamanetwork.com/
     param[resource_id] = 76
     
-    au < exists ; exists ; 1922 ; Archives of Surgery Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 1922 ; Archives of Surgery Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 1976 ; Archives of Surgery Volume 111 ; 1976 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1999 ; Archives of Surgery Volume 134 ; 1999 ; reingest4.clockss.org:8082 >
-    au < down ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; >
+    au < exists ; exists ; 1922 ; Archives of Surgery Volume 5 ; 5 ; >
+    au < exists ; exists ; 1922 ; Archives of Surgery Volume 6 ; 6 ; >
+    au < exists ; exists ; 1976 ; Archives of Surgery Volume 111 ; 1976 ; >
+    au < exists ; exists ; 1999 ; Archives of Surgery Volume 134 ; 1999 ; >
+    au < exists ; exists ; 2012 ; Archives of Surgery Volume 147 ; 2012 ; >
   
   }
 
@@ -254,12 +254,12 @@
     param[base_url] = http://jama.jamanetwork.com/
     param[resource_id] = 67
     
-    au < down ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; >
-    au < down ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; >
-    au < down ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; >
-    au < finished ; finished ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; >
+    au < exists ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 ; >
+    au < exists ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; >
+    au < exists ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; >
+    au < exists ; exists ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; >
   
   }
 
@@ -277,13 +277,13 @@
     param[base_url] = http://archneurpsyc.jamanetwork.com/
     param[resource_id] = 91
 
-    au < exists ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; >
+    au < exists ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; >
+    au < exists ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; >
+    au < exists ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; >
+    au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; >
+    au < exists ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; >
+    au < exists ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; >
 
   }
 
