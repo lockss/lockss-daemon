@@ -2686,7 +2686,7 @@
     param[journal_id] = complexity
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Complexity Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Complexity Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -2792,7 +2792,7 @@
     param[journal_id] = cmmi
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -3227,7 +3227,7 @@
     param[journal_id] = geofluids
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Geofluids Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Geofluids Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -5155,7 +5155,7 @@
     param[journal_id] = jat
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Journal of Advanced Transportation Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Journal of Advanced Transportation Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -6256,7 +6256,7 @@
     param[journal_id] = jfq
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Journal of Food Quality Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Journal of Food Quality Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -8188,7 +8188,7 @@
     param[journal_id] = oti
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -8705,7 +8705,7 @@
     param[journal_id] = scanning
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Scanning Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Scanning Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -8795,7 +8795,7 @@
     param[journal_id] = scn
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; exists ; 2017 ; Security and Communication Networks Volume 2017 ; 2017 ; 2017 ; >
+    au < manifest ; exists ; 2017 ; Security and Communication Networks Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
