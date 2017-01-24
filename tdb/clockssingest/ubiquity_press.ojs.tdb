@@ -215,19 +215,6 @@
   {
   
     title < 
-      name = Journal of Cosmology 
-    >
-    
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    param[base_url] = http://journalofcosmology.com/
-    param[journal_id] = joc
-    # needs review on web structure, http://journalofcosmology.com/JOC22/indexVol22CONTENTS.htm
-
-  }
-
-  {
-  
-    title < 
       name = Journal of European Psychology Students ;
       eissn = 2222-6931
     >
