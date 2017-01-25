@@ -140,7 +140,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of the Rheumatic Diseases Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; ready ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; releasing ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 >
@@ -424,23 +424,23 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; BMJ Volume 327 ; 327 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 328 ; 328 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; BMJ Volume 329 ; 329 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2005 ; BMJ Volume 330 ; 330 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2005 ; BMJ Volume 331 ; 331 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2006 ; BMJ Volume 332 ; 332 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2006 ; BMJ Volume 333 ; 333 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2007 ; BMJ Volume 334 ; 334 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2007 ; BMJ Volume 335 ; 335 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2008 ; BMJ Volume 336 ; 336 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2008 ; BMJ Volume 337 ; 337 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2009 ; BMJ Volume 338 ; 338 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2009 ; BMJ Volume 339 ; 339 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2005 ; BMJ Volume 330 ; 330 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2005 ; BMJ Volume 331 ; 331 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2006 ; BMJ Volume 332 ; 332 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2006 ; BMJ Volume 333 ; 333 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2007 ; BMJ Volume 334 ; 334 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2007 ; BMJ Volume 335 ; 335 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2008 ; BMJ Volume 336 ; 336 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2008 ; BMJ Volume 337 ; 337 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2009 ; BMJ Volume 338 ; 338 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2009 ; BMJ Volume 339 ; 339 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2011 ; BMJ Volume 342 ; 342 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2011 ; BMJ Volume 343 ; 343 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2011 ; BMJ Volume 342 ; 342 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2011 ; BMJ Volume 343 ; 343 >
     au < bmj.BMJDrupalPlugin ; testing ; 2012 ; BMJ Volume 344 ; 344 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2012 ; BMJ Volume 345 ; 345 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2013 ; BMJ Volume 346 ; 346 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2012 ; BMJ Volume 345 ; 345 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2013 ; BMJ Volume 346 ; 346 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 347 ; 347 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 348 ; 348 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 349 ; 349 >
@@ -496,7 +496,7 @@
 
       au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; ready ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; releasing ; 2015 ; BMJ Open Diabetes Research & Care Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Open Diabetes Research & Care Volume 4 ; 4 >
 
   }
@@ -1948,8 +1948,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://lupus.bmj.com/
 
-      au < HighWirePressH20Plugin ; ready ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; ready ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; releasing ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 2015 ; Lupus Science & Medicine Volume 2 ; 2 >
 
     }
     
