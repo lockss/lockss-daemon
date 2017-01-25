@@ -75,26 +75,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://([^.]+\.(googleapis)\.com)/"</string>
+      <!-- I used the same old list of cdn -->
+      <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn)\.com/).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/%s/(article(-pdf)?|issue|)/[0-9]+/", url_host(base_url), journal_id</string>
-      <string>1,"^https?://oup.silverchair-cdn.com/"</string>
     </list>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>application/json_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJsonLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s\%s\article\", base_url, journal_id</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -113,27 +104,33 @@
     <string>key:Silverchair</string>
   </entry>
   <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>application/json_link_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ScJsonLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ScOUPHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
+  </entry>
+  <entry>
     <!-- Validator factory for text MIME types -->
     <string>text/*_content_validator_factory</string>
     <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/json_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJsonHashFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.ScOUPHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
-  </entry>  
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%s\%s\article\", base_url, journal_id</string>
-    </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -179,7 +176,7 @@
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn|silverchair-cdn)\.com"</string>
+    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn)\.com"</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
