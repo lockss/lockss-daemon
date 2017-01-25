@@ -75,7 +75,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair AMA Journals Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+    <string>"Silverchair AMA Journals Plugin, Base URL %s, Resource ID %d, Journal ID %s, Year %d", base_url, resource_id, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -84,13 +84,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://([^.]+\.(googleapis)\.com)/"</string>
+      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
       <!-- I used the same old list of cdn -->
-      <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|[^.]+\.((silverchair(\.netdna-cdn|-?cdn))\.com/|cloudfront\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
       <string>1,"^%sjournals/%s/issue/", base_url, journal_id</string>
       <string>1,"^%sjournals/%s/(fullarticle|article-abstract)/", base_url, journal_id</string>
-      <!-- string>1,"^%sjournals/%s/data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string> -->
+      <string>1,"^%s(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
       <string>1,"^%spdfaccess.ashx[?]url=/data/journals/.+routename=%s", base_url, journal_id</string>
+      <!-- Found old style links in articles -->
+      <string>1,"^https?://([^.]+\.)?jamanetwork\.com/article\.aspx\?doi=10\.1001/"</string>
+      <string>2,"/downloadcitation/[^?/]+\?format=[^&amp;]+$"</string>
+      <string>1,"^%sjournals/%s/downloadcitation/", base_url, journal_id</string>
+      <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string>
       
       <!--  
       http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iic150063.pdf
@@ -99,6 +105,18 @@
       http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
       http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2479062
       http://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2479062
+      http://jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.5946
+      http://jamanetwork.com/data/Journals/INTEMED/934800/IOI150079supp1_prod.pdf
+      
+      http://archinte.jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.6324
+      http://jamanetwork.com/journals/jamainternalmedicine/downloadcitation/2472944?format=
+      http://jamanetwork.com/downloadimage.aspx?image=/data/Journals/INTEMED/935316/ioi160030t3.png&sec=126816453&ar=2520680&imagename=
+      learning/video-player/12889420
+      
+      http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+      http://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
+      https://cdn.optimizely.com/js/2785501806.js (not collected)
+      http://jamanetwork.com/learning/article-quiz/ (not collected)
       
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
       <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
@@ -168,7 +186,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
-      <string>"^%sjournals/%s/data/journals/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
+      <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
   <!-- entry>
@@ -215,7 +233,14 @@
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
+    <list>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.gstatic\.com</string>
+      <string>.*cdn\.jsdelivr\.net</string>
+      <string>.*(silverchair(\.netdna-cdn|-?cdn))\.com</string>
+      <string>.*\.cloudfront\.net</string>
+      <!-- string>.*ajax\.microsoft\.com</string> -->
+    </list>
   </entry>
   <!-- entry>
       <string>plugin_url_fetcher_factory</string>
