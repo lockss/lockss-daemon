@@ -59,6 +59,7 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
           Pattern.CASE_INSENSITIVE);
   protected static final String ACCESS_ARTICLE_PDF =
       "/pdfaccess.ashx[?]url=/data/journals/%s&routename=%s";
+  protected static final String AUTH_SEARCH_STR = "searchresults?author=";
   
   // http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
   // http://jamanetwork.com/pdfaccess.ashx?url=/data/journals/intemed/934800/iii160001.pdf&routename=jamainternalmedicine
@@ -125,9 +126,13 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
       //the <a href attribute handler
       if (node.hasAttr("href")) {
-//        String href = node.attr("href");
+        String href = node.attr("href");
 //        Matcher hrefMat;
-//        // we look for the citation and derive the article id and generate a url
+        // we look for searchresults?author= and exclude these
+        if ((href != null) && !href.contains(AUTH_SEARCH_STR)) {
+          // the standard method for <a href>
+          JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
+        }
 //        hrefMat = PATTERN_CITATION.matcher(href);
 //        if (hrefMat.find()) {
 //          logger.debug3("Found target citation URL");
@@ -152,25 +157,13 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
 //            }
 //          }
 //        }
-//        else {
-          // the standard method for <a href>
-          JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
-//        }
+//        else {        }
       }   // end <a href
       
       if (node.hasAttr("data-article-url")) {
         String url = node.attr("data-article-url");
         if (!StringUtil.isNullString(url)) {
-          // we take the url and derive the pdfaccess url
-          Matcher urlMat;
-          urlMat = PATTERN_ARTICLE_PDF.matcher(url);
-          if (urlMat.find()) {
-            logger.debug3("Found target URL: " + url);
-            String part1 = urlMat.group(1);
-            String part2 = urlMat.group(2);
-            String accessUrl = String.format(ACCESS_ARTICLE_PDF, part2, part1);
-            cb.foundLink(accessUrl);
-          }
+          cb.foundLink(url);
         }
       }
       

@@ -56,13 +56,6 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
    * 9=citing
    * 10=comments
    * 12=supplemental
-   * SPIE = SPIE (http://spiedigitallibrary.org/)
-   * Tabs 20151025
-   * 1= extract/abstract/article
-   * 2=figures
-   * 3=tables
-   * 5=multimedia
-   * 6=references
    *
    */
 
@@ -78,14 +71,34 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
           // DROP right column: related content, etc.
           // KEEP links to article views, citation files, etc.
           
-//          HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "portletColumn"),
-//                                           HtmlNodeFilters.tagWithAttribute("div", "id", "scm6MainContent_ToolBox")),
-          
           HtmlNodeFilters.tagWithAttributeRegex("section", "class", "master-(header|footer)"),
           HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "issue-browse"),
-          HtmlNodeFilters.tagWithAttribute("div", "class", "(reveal|artmet)-modal"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*links|EditorsChoice|LinkedContent))"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(reveal|artmet)-modal|social-share)"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(reference|related|ymal)"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab)"),
           
-/*          
+          HtmlNodeFilters.allExceptSubtree(
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "get-citation")),
+          HtmlNodeFilters.allExceptSubtree(
+              HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "get-citation")),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
+          
+/*        
+<div class="social-share " style="position: fixed; top: 106px; width: 60px;">
+<div class="widget-ArticleLinks widget-instance-AMA_ErrataArticleLinks_Magazine"> </div>
+<div class="widget-ArticleLinks widget-instance-AMA_ArticleLinks_ToErrata_Magazine"> </div>
+<div class="widget-ArticleNavLinks widget-instance-AMA_ArticleNavLinks_Magazine">
+<div id="divArticleLevelMetrics" class="article-metrics-wrapper" runat="server">
+<ul class="toolbar-trigger magazine">
+<div class="widget-EditorsChoice widget-instance-AMA_EditorsChoice_Links"> </div>
+<div class="widget-LinkedContentToolbar widget-instance-AMA_LinkedContentToolbar">
+<a class="relatedArticleLink"
+<ul class="toolbar">
+
+
 <section class="master-header">
 <section id="secFooterControl" class="master-footer">
 <nav class="issue-browse">
@@ -94,6 +107,11 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
 <div id="no-access-reveal" class="no-access reveal-modal login-modal medium modal" data-reveal="">
 <div id="no-access-reveal-learning" class="no-access reveal-modal login-modal medium modal" data-reveal="">
 <div id="register-free-pdf-reveal" class="reveal-modal modal register-free-pdf medium" data-reveal="">
+<div class="tab-nav
+<div class="references">
+<div class="sidebar issue-view-tab--sidebar past-issues--sidebar">
+<div class="ymal--footer">
+<div class="sidebar">
           
 */          
           // DROP link to previous/next article [AMA]
