@@ -75,16 +75,18 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://([^.]+\.(googleapis)\.com)/"</string>
-      <!-- I used the same old list of cdn -->
-      <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn)\.com/).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/%s/(article(-pdf)?|issue|)/[0-9]+/", url_host(base_url), journal_id</string>
+      <!--  -->
+      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
+      <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn|googleapis)\.com/|cdn\.mathjax\.org|ajax\.microsoft\.com|cdn\.jsdelivr\.net).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue|)/([0-9]+|doi)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s\%s\article\", base_url, journal_id</string>
+      <string>"^%s/%s/article(-pdf)?/[0-9]+/", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
@@ -104,29 +106,16 @@
     <string>key:Silverchair</string>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>application/json_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJsonLinkExtractorFactory</string>
-  </entry>
-  <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScOUPHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.ScOUPHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.silverchair.ScUrlNormalizer</string>
-  </entry>
-  <entry>
-    <!-- Validator factory for text MIME types -->
-    <string>text/*_content_validator_factory</string>
-    <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
+    <string>org.lockss.plugin.silverchair.oup.ScOUPUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScOUPHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.ScOUPHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
@@ -170,13 +159,13 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <string>403=org.lockss.plugin.silverchair.oup.ScOUPHtmlHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.oup.ScOUPHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn)\.com"</string>
+    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn)\.com|cdn\.mathjax\.org"</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>

@@ -74,7 +74,7 @@ public class ScOUPHtmlHashFilterFactory implements FilterFactory {
           })),
       
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comments"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments"),
     	  }))
       )
     );
@@ -82,12 +82,11 @@ public class ScOUPHtmlHashFilterFactory implements FilterFactory {
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
+    // Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     
     // Remove white space
-    Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
-    InputStream ret =  new ReaderInputStream(new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis"));
+    Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
+    InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
     return ret;
     // Instrumentation
   }

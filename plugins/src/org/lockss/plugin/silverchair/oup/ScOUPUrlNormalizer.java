@@ -36,6 +36,7 @@ import java.util.regex.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * <p>
@@ -51,11 +52,13 @@ import org.lockss.plugin.*;
  * </ul>
  */
 public class ScOUPUrlNormalizer implements UrlNormalizer {
-
+  private static final Logger log = Logger.getLogger(ScOUPUrlNormalizer.class);
+	
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-	 if(url.contains("Expires") && url.contains("Signature"))
-    url = url.split("?")[0];
+	 if(url.contains("Expires") && url.contains("Signature")) {
+		 url = url.substring(0, url.indexOf("?"));
+	 }
     return url;
   }
 

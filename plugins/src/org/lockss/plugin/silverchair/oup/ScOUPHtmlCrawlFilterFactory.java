@@ -75,19 +75,10 @@ public class ScOUPHtmlCrawlFilterFactory implements FilterFactory {
     	//	<div id="resourceTypeList-OUP_Issue" class="article-list-resources">
       in,
       encoding,
-      new HtmlCompoundTransform(
-    		  HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "resourceTypeList-OUP_Issue"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
-              HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
-          })),
-      
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-    	  }))
+    	  })
       )
     );
   }
