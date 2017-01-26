@@ -577,7 +577,8 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
+            #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
+            if (defined($man_contents) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $param{journal_id}/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
                     $vol_title = $1
                 }
@@ -600,7 +601,7 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
+            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/) && ($man_contents =~ m/DOI: $param{journal_id}/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
                     $vol_title = $1
                 }
