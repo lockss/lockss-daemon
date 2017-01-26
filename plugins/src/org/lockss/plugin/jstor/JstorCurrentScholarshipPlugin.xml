@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -57,8 +57,6 @@
     //http://www.jstor.org/stable/10.2972/hesperia.84.issue-3 [index]
     //http://www.jstor.org/stable/10.2972/i40044030 [index, legacy]
     // which redirects to: http://www.jstor.org/stable/i40044030 [legacy index direct from prev/next]
-        
-    but NOT
     //http://www.jstor.org/stable/10.2972/hesperia.84.3.0515 [article]
     //http://www.jstor.org/stable/40981057 [article, legacy]
     //http://www.jstor.org/stable/pdf/10.2972/hesperia.84.3.0515.pdf [pdf]
@@ -68,6 +66,8 @@
     //http://www.jstor.org/citation/info/10.2972/hesperia.84.3.0515 [citation select]
     //http://www.jstor.org/citation/info/10.2307/40981057 [citation select]
     //http://www.jstor.org/citation/ris/10.2307/40981057 [citation]
+    //image
+    //http://www.jstor.org/stable/get_asset/10.5325/chaucerrev.50.3-4.0220?path=XXXX
      -->
     <list>
       <string>1,"^https?://assets\.adobedtm\.com/"</string>    
@@ -85,6 +85,8 @@
       <!--  citation support -->
       <string>1,"^%sdoi/xml/[.0-9]+/", base_url</string>
       <string>1,"^%scitation/(info|ris)/[.0-9]+/", base_url</string>
+      <!--  images - for now leave this very open -->
+      <string>1,"^%sstable/get_asset/", base_url</string>
     </list>
   </entry>
   <entry>
@@ -131,12 +133,10 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorCSHtmlHashFilterFactory</string>
   </entry>
-<!-- so far no need, only TOC and pdf
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorCSHtmlCrawlFilterFactory</string>
   </entry>
-  -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.jstor.JstorPdfFilterFactory</string>

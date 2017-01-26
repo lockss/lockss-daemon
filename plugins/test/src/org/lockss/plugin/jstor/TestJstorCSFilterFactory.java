@@ -29,21 +29,27 @@
 
 package org.lockss.plugin.jstor;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.PrintWriter;
 
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
+import org.lockss.util.IOUtil;
 import org.lockss.util.StringUtil;
 
-public class TestJstorCSHtmlHashFilterFactory extends LockssTestCase {
-  private JstorCSHtmlHashFilterFactory fact;
+public class TestJstorCSFilterFactory extends LockssTestCase {
+  private JstorCSHtmlHashFilterFactory hashfact;
+  private JstorCSHtmlCrawlFilterFactory crawlfact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new JstorCSHtmlHashFilterFactory();
+    hashfact = new JstorCSHtmlHashFilterFactory();
+    crawlfact = new JstorCSHtmlCrawlFilterFactory();
   }
 
   // ?? use this block when manifest pages are up  
@@ -108,16 +114,16 @@ public class TestJstorCSHtmlHashFilterFactory extends LockssTestCase {
    */
 
   public void testManifestFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(manifestHtml), Constants.DEFAULT_ENCODING);
     assertEquals(manifestHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
   public void testTocFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(html1), Constants.DEFAULT_ENCODING);
     assertEquals("<div class=\"toc-view\"></div>", StringUtil.fromInputStream(actIn));
-    actIn = fact.createFilteredInputStream(mau,
+    actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(html2), Constants.DEFAULT_ENCODING);
     assertEquals("<div class=\"toc-view\"></div>", StringUtil.fromInputStream(actIn)); 
   }

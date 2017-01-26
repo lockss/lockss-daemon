@@ -61,32 +61,43 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
    *   http://www.jstor.org/stable/pdf/10.5184/classicalj.110.2.0129.pdf
    * it will end up here:
    *   http://www.jstor.org/stable/pdf/10.5184/classicalj.110.2.0129.pdf?acceptTC=true&coverpage=false
-   * and the redirect is a 302 so we need to follow it 
-   * </p>
-   * ALSO - JSTOR doesn't allow the crawler to get to the article landing html and instead
-   * directs the article landing page
-   * http://www.jstor.org/stable/10.2972/hesperia.84.4.bm
-   * to redirect to the PDF version of the file, with it's arguments
-   * Store this, even though it is a little redundant, at the original URL for the purposes of 
+   * and the redirect is a 302 so we need to follow it
+   * 
+   * Further testing reveals some variants:
+   * 
+   * - the originating url may look like any of these
+   * http://www.jstor.org/stable/pdf/10.5184/foo.pdf
+   * http://www.jstor.org/stable/pdf/foo.pdf
+   * (and in the case where the article landing doesn't provide html)
+   * http://www.jstor.org/stable/10.5184/foo
+   * http://www.jstor.org/stable/foo
+   * 
+   * - the destination url may look like any of these and they do have /pdf/ and ".pdf"
+   * http://www.jstor.org/stable/pdf/10.5184/foo.pdf?acceptTC=true&coverpage=false
+   * http://www.jstor.org/stable/pdf/foo.pdf?acceptTC=true&coverpage=false
+   * 
+   * - with one additional potential hiccup, a two-hopper
+   * from: http://www.jstor.org/stable/10.5184/foo
+   * to: http://www.jstor.org/stable/foo
+   * to: http://www.jstor.org/stable/pdf/foo.pdf?acceptTC=true&coverpage=false
+   * (see Am Jrnl of Arch TOC: http://www.jstor.org/stable/10.3764/amerjarch.121.issue-1)
+   * which requires allowing 1 or 2 hops so long as the originating and terminating
+   * urls conform to the expected pattern
    *       
    * @since 1.68.0
    */
   public class JstorCSUrlConsumer extends SimpleUrlConsumer {
 
-    //  original pdf will look like this: 
-    // ...stable/pdf/10.5184/classicalj.110.2.0129.pdf
-    // or (no /pdf/ nor .pdf) for an article landing page 
-    // ...stable/10.2972/hesperia.84.4.bm
-   // an issue would be similar 
-    // stable/10.2972/hesperia.84.issue-4 
-    // but it wouldn't redirect, so no need to exclude
-    public static final String PDF_STRING = "/stable(/pdf)?/[^/]+/[^/?&]+(\\.pdf)?";
-    public static final String ORIG_PDF_STRING = PDF_STRING + "$"; // no arguments
+    // originating string must be highly flexible because it could take several forms
+    // no worry about inadvertently catching issue, because the html wouldn't redirect
+    public static final String ORIG_STRING = "/stable(/pdf)?(/[0-9.]+)?/[^/?&]+(\\.pdf)?$";
+    // allow for with or without DOI prefix
+    public static final String PDF_STRING = "/stable/pdf(/[0-9.]+)?/[^/?&]+\\.pdf";
     //?acceptTC=true&coverpage=false
     public static final String DEST_PDF_STRING = PDF_STRING + "\\?acceptTC=true&coverpage=false";
 
  
-    protected Pattern origFullTextPat = Pattern.compile(ORIG_PDF_STRING, Pattern.CASE_INSENSITIVE);
+    protected Pattern origFullTextPat = Pattern.compile(ORIG_STRING, Pattern.CASE_INSENSITIVE);
     protected Pattern destFullTextPat = Pattern.compile(DEST_PDF_STRING, Pattern.CASE_INSENSITIVE);
 
     public JstorCSUrlConsumer(CrawlerFacade facade,
@@ -113,9 +124,13 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
      *         origin URL.
      */
     protected boolean shouldStoreRedirectsAtOrigUrl() {
+      // allow for a two hop in some cases so long as originator and terminator are correct
+      if(log.isDebug3() && fud.redirectUrls != null) {
+        log.debug3("FUD: " + fud.toString());
+      }
       boolean should =  fud.redirectUrls != null
-          && fud.redirectUrls.size() == 1
-          && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+          && ( (fud.redirectUrls.size() == 1 && fud.redirectUrls.get(0).equals(fud.fetchUrl))
+               || (fud.redirectUrls.size() == 2 && fud.redirectUrls.get(1).equals(fud.fetchUrl)) ) 
           && destFullTextPat.matcher(fud.fetchUrl).find()
           && origFullTextPat.matcher(fud.origUrl).find();
       return should;

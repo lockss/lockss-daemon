@@ -86,6 +86,8 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div", "class", "toc-view"),
           // citation/info
           HtmlNodeFilters.tagWithAttribute("div", "id", "citationBody"),
+          // for those papers that have full text html
+          HtmlNodeFilters.tagWithAttribute("div", "id", "full_text_tab_contents"),
       };
       
       //nothing yet...put in placeholder

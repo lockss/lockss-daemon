@@ -48,16 +48,19 @@ import org.lockss.util.SetUtil;
 public class TestJstorUrlConsumer extends LockssTestCase {
   Set<String> originatingUrls = SetUtil.set(
       "http://www.jstor.org/stable/pdf/10.2972/hesperia.84.1.0001.pdf",
-      "http://www.jstor.org/stable/10.2972/hesperia.84.4.0857"
+      "http://www.jstor.org/stable/10.2972/hesperia.84.4.0857",
+      "http://www.jstor.org/stable/40024320",
+      "http://www.jstor.org/stable/10.2307/40024320"
       );
 
   Set<String> destinationUrls = SetUtil.set(
-      "http://www.jstor.org/stable/pdf/10.2972/hesperia.84.1.0001.pdf?acceptTC=true&coverpage=false"
+      "http://www.jstor.org/stable/pdf/10.2972/hesperia.84.1.0001.pdf?acceptTC=true&coverpage=false",
+      "http://www.jstor.org/stable/pdf/40024320.pdf?acceptTC=true&coverpage=false"
       );
 
 
   public void testOrigPdfPattern() throws Exception {
-    Pattern origFullTextPat = Pattern.compile(JstorCSUrlConsumer.ORIG_PDF_STRING, Pattern.CASE_INSENSITIVE);
+    Pattern origFullTextPat = Pattern.compile(JstorCSUrlConsumer.ORIG_STRING, Pattern.CASE_INSENSITIVE);
     for (String url : originatingUrls) {
       assertMatchesRE(origFullTextPat, url);
     }
