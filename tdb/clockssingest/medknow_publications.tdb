@@ -4593,7 +4593,7 @@
       param[base_url] = http://www.cmj.org/
 
       au < notReady ; exists ; 2015 ; Chinese Medical Journal Volume 128 ; 2015 ; 128 ; > #502 upstream error
-      au < testing ; exists ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; >
+      au < ready ; exists ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; >
 
   }
 
@@ -5256,7 +5256,7 @@
 
       au < crawling ; exists ; 2014 ; Indian Journal of Health Sciences Volume 7 ; 2014 ; 7 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Health Sciences Volume 8 ; 2015 ; 8 ; >
-      au < testing ; exists ; 2016 ; Indian Journal of Health Sciences Volume 9 ; 2016 ; 9 ; >
+      au < ready ; exists ; 2016 ; Indian Journal of Health Sciences Volume 9 ; 2016 ; 9 ; >
 
   }
 
@@ -5350,7 +5350,7 @@
       au < crawling ; exists ; 2013 ; Indian Journal of Pain Volume 27 ; 2013 ; 27 ; >
       au < crawling ; exists ; 2014 ; Indian Journal of Pain Volume 28 ; 2014 ; 28 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Pain Volume 29 ; 2015 ; 29 ; >
-      au < testing ; exists ; 2016 ; Indian Journal of Pain Volume 30 ; 2016 ; 30 ; >
+      au < ready ; exists ; 2016 ; Indian Journal of Pain Volume 30 ; 2016 ; 30 ; >
 
   }
 
@@ -5444,7 +5444,7 @@
 
       au < crawling ; exists ; 2014 ; International Journal of Advanced Medical and Health Research Volume 1 ; 2014 ; 1 ; >
       au < crawling ; exists ; 2015 ; International Journal of Advanced Medical and Health Research Volume 2 ; 2015 ; 2 ; >
-      au < testing ; exists ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; >
+      au < ready ; exists ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -6082,7 +6082,7 @@
 
       au < crawling ; exists ; 2014 ; Journal of Indian Academy of Dental Specialist Researchers Volume 1 ; 2014 ; 1 ; >
       au < crawling ; exists ; 2015 ; Journal of Indian Academy of Dental Specialist Researchers Volume 2 ; 2015 ; 2 ; >
-      au < testing ; exists ; 2016 ; Journal of Indian Academy of Dental Specialist Researchers Volume 3 ; 2016 ; 3 ; >
+      au < ready ; exists ; 2016 ; Journal of Indian Academy of Dental Specialist Researchers Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -6308,7 +6308,7 @@
 
       au < crawling ; exists ; 2014 ; Journal of Mental Health and Human Behaviour Volume 19 ; 2014 ; 19 ; >
       au < crawling ; exists ; 2015 ; Journal of Mental Health and Human Behaviour Volume 20 ; 2015 ; 20 ; >
-      au < testing ; exists ; 2016 ; Journal of Mental Health and Human Behaviour Volume 21 ; 2016 ; 21 ; >
+      au < ready ; exists ; 2016 ; Journal of Mental Health and Human Behaviour Volume 21 ; 2016 ; 21 ; >
 
   }
 
@@ -6787,7 +6787,7 @@
 
       au < crawling ; exists ; 2013 ; Menoufia Medical Journal Volume 26 ; 2013 ; 26 ; >
       au < crawling ; exists ; 2014 ; Menoufia Medical Journal Volume 27 ; 2014 ; 27 ; >
-      au < testing ; exists ; 2015 ; Menoufia Medical Journal Volume 28 ; 2015 ; 28 ; >
+      au < ready ; exists ; 2015 ; Menoufia Medical Journal Volume 28 ; 2015 ; 28 ; >
       au < ready ; exists ; 2016 ; Menoufia Medical Journal Volume 29 ; 2016 ; 29 ; >
 
   }
