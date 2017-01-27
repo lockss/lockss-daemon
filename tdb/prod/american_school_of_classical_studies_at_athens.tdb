@@ -120,6 +120,32 @@
       au < doNotProcess ; 2014 ; Hesperia Volume 83 ; 83 >
       au < doNotProcess ; 2015 ; Hesperia Volume 84 ; 84 >
     }
+  
+    {
+      plugin = org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin
+      param[base_url] = http://www.jstor.org/
+      implicit < status ; year ; name ; param[year] >
+      param[journal_id] = hesperia
+      # still waiting on GLN manifest pages - will be 2002 forward only...
+      
+
+      au < exists ; 2002 ; Hesperia Volume 71 ; 2002 >
+      au < exists ; 2003 ; Hesperia Volume 72 ; 2003 >
+      au < exists ; 2004 ; Hesperia Volume 73 ; 2004 >
+      au < exists ; 2005 ; Hesperia Volume 74 ; 2005 >
+      au < exists ; 2006 ; Hesperia Volume 75 ; 2006 >
+      au < exists ; 2007 ; Hesperia Volume 76 ; 2007 >
+      au < exists ; 2008 ; Hesperia Volume 77 ; 2008 >
+      au < exists ; 2009 ; Hesperia Volume 78 ; 2009 >
+      au < exists ; 2010 ; Hesperia Volume 79 ; 2010 >
+      au < exists ; 2011 ; Hesperia Volume 80 ; 2011 >
+      au < exists ; 2012 ; Hesperia Volume 81 ; 2012 >
+      au < exists ; 2013 ; Hesperia Volume 82 ; 2013 >
+      au < exists ; 2014 ; Hesperia Volume 83 ; 2014 >
+      au < exists ; 2015 ; Hesperia Volume 84 ; 2015 >
+      au < exists ; 2016 ; Hesperia Volume 85 ; 2015 >
+      
+    }
   }
 
 }
