@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -65,7 +65,7 @@
     //http://www.jstor.org/doi/xml/10.2972/hesperia.84.3.0515 [xml]
     //http://www.jstor.org/citation/info/10.2972/hesperia.84.3.0515 [citation select]
     //http://www.jstor.org/citation/info/10.2307/40981057 [citation select]
-    //http://www.jstor.org/citation/ris/10.2307/40981057 [citation]
+    //http://www.jstor.org/citation/(ris|text)/10.2307/40981057 [citation]
     //image
     //http://www.jstor.org/stable/get_asset/10.5325/chaucerrev.50.3-4.0220?path=XXXX
      -->
@@ -84,7 +84,7 @@
       <string>1,"^%sstable/pdf/[0-9]+\.pdf", base_url</string>
       <!--  citation support -->
       <string>1,"^%sdoi/xml/[.0-9]+/", base_url</string>
-      <string>1,"^%scitation/(info|ris)/[.0-9]+/", base_url</string>
+      <string>1,"^%scitation/(info|ris|text)/[.0-9]+/", base_url</string>
       <!--  images - for now leave this very open -->
       <string>1,"^%sstable/get_asset/", base_url</string>
     </list>

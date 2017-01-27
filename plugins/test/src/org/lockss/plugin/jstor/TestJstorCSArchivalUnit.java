@@ -149,6 +149,9 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"citation/info/10.2972/xxxx.84.3.0515", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"citation/info/10.2307/40981057", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"citation/ris/10.2307/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL+"citation/text/10.2307/40981057", true, JSAu, cus);
+    //but not
+    shouldCacheTest(ROOT_URL+"citation/refworks/10.2307/40981057", false, JSAu, cus);
     
     // support files
     //http://www.jstor.org/px/xhr/api/v1/collector/pxPixel.gif?appId=PXu4K0s8nX
