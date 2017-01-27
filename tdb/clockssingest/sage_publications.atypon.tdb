@@ -18789,48 +18789,11 @@
 
     #param[base_url] = http://jas.sagepub.com/
     param[journal_id] = jasa
+    # earlier volumes at Brill
 
     
     {
 
-      #pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < exists ; exists ; 1966 ; Journal of Asian and African Studies Volume 1 ; 1 ; >
-      au < exists ; exists ; 1967 ; Journal of Asian and African Studies Volume 2 ; 2 ; >
-      au < exists ; exists ; 1968 ; Journal of Asian and African Studies Volume 3 ; 3 ; >
-      au < exists ; exists ; 1969 ; Journal of Asian and African Studies Volume 4 ; 4 ; >
-      au < exists ; exists ; 1970 ; Journal of Asian and African Studies Volume 5 ; 5 ; >
-      au < exists ; exists ; 1971 ; Journal of Asian and African Studies Volume 6 ; 6 ; >
-      au < exists ; exists ; 1972 ; Journal of Asian and African Studies Volume 7 ; 7 ; >
-      au < exists ; exists ; 1973 ; Journal of Asian and African Studies Volume 8 ; 8 ; >
-      au < exists ; exists ; 1974 ; Journal of Asian and African Studies Volume 9 ; 9 ; >
-      au < exists ; exists ; 1975 ; Journal of Asian and African Studies Volume 10 ; 10 ; >
-      au < exists ; exists ; 1976 ; Journal of Asian and African Studies Volume 11 ; 11 ; >
-      au < exists ; exists ; 1977 ; Journal of Asian and African Studies Volume 12 ; 12 ; >
-      au < exists ; exists ; 1978 ; Journal of Asian and African Studies Volume 13 ; 13 ; >
-      au < exists ; exists ; 1979 ; Journal of Asian and African Studies Volume 14 ; 14 ; >
-      au < exists ; exists ; 1980 ; Journal of Asian and African Studies Volume 15 ; 15 ; >
-      au < exists ; exists ; 1981 ; Journal of Asian and African Studies Volume 16 ; 16 ; >
-      au < exists ; exists ; 1982 ; Journal of Asian and African Studies Volume 17 ; 17 ; >
-      au < exists ; exists ; 1983 ; Journal of Asian and African Studies Volume 18 ; 18 ; >
-      au < exists ; exists ; 1984 ; Journal of Asian and African Studies Volume 19 ; 19 ; >
-      au < exists ; exists ; 1985 ; Journal of Asian and African Studies Volume 20 ; 20 ; >
-      au < exists ; exists ; 1986 ; Journal of Asian and African Studies Volume 21 ; 21 ; >
-      au < exists ; exists ; 1987 ; Journal of Asian and African Studies Volume 22 ; 22 ; >
-      au < exists ; exists ; 1988 ; Journal of Asian and African Studies Volume 23 ; 23 ; >
-      au < exists ; exists ; 1989 ; Journal of Asian and African Studies Volume 24 ; 24 ; >
-      au < exists ; exists ; 1990 ; Journal of Asian and African Studies Volume 25 ; 25 ; >
-      au < exists ; exists ; 1991 ; Journal of Asian and African Studies Volume 26 ; 26 ; >
-      au < exists ; exists ; 1992 ; Journal of Asian and African Studies Volume 27 ; 27 ; >
-      au < exists ; exists ; 1993 ; Journal of Asian and African Studies Volume 28 ; 28 ; >
-      au < exists ; exists ; 1994 ; Journal of Asian and African Studies Volume 29 ; 29 ; >
-      au < exists ; exists ; 1995 ; Journal of Asian and African Studies Volume 30 ; 30 ; >
-      au < exists ; exists ; 1996 ; Journal of Asian and African Studies Volume 31 ; 31 ; >
-      au < exists ; exists ; 1997 ; Journal of Asian and African Studies Volume 32 ; 32 ; >
-      au < exists ; exists ; 1998 ; Journal of Asian and African Studies Volume 33 ; 33 ; >
-      au < exists ; exists ; 1999 ; Journal of Asian and African Studies Volume 34 ; 34 ; >
-      au < exists ; exists ; 2000 ; Journal of Asian and African Studies Volume 35 ; 35 ; >
-      au < exists ; exists ; 2001 ; Journal of Asian and African Studies Volume 36 ; 36 ; >
       au < manifest ; exists ; 2002 ; Journal of Asian and African Studies Volume 37 ; 37 ; >
       au < manifest ; exists ; 2003 ; Journal of Asian and African Studies Volume 38 ; 38 ; >
       au < manifest ; exists ; 2004 ; Journal of Asian and African Studies Volume 39 ; 39 ; >
@@ -19271,13 +19234,8 @@
       eissn = 1744-2583
     >
 
-    #param[base_url] = http://jen.sagepub.com/
-    param[journal_id] = jena
-
-    
-    {
-
-      #pluginSuffix = ClockssHighWirePressH20Plugin
+      #param[base_url] = http://jen.sagepub.com/
+      param[journal_id] = jena
 
       au < manifest ; exists ; 1977-1978 ; Journal of Building Physics Volume 1 ; 1 ; >
       au < manifest ; exists ; 1978-1979 ; Journal of Building Physics Volume 2 ; 2 ; >
@@ -19319,8 +19277,6 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; >
       au < exists ; exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; >
-
-    }
 
   }
 
