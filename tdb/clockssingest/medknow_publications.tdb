@@ -4510,7 +4510,7 @@
       param[journal_issn] = 2468-838X
       param[base_url] = http://www.bldeujournalhs.in/
 
-      au < testing ; exists ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; >
+      au < notReady ; exists ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; > #500 error.
 
   }
 
@@ -4636,14 +4636,14 @@
 
       title <
         name = Clinical and Translational Orthopedics ;
-        issn = 2468-5674 ;
-        eissn = 2468-564X
+        issn = 2542-4157 ;
+        eissn = 2542-4165
       >
 
-      param[journal_issn] = 2468-5674
+      param[journal_issn] = 2542-4157
       param[base_url] = http://www.clinicalto.com/
 
-      au < testing ; exists ; 2016 ; Clinical and Translational Orthopedics Volume 1 ; 2016 ; 1 ; >
+      au < exists ; exists ; 2016 ; Clinical and Translational Orthopedics Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -5205,7 +5205,7 @@
 
       au < notReady ; exists ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 ; > #500 errors. See http://www.ijdentistry.com/showBackIssue.asp?issn=0975-962X;year=2014;volume=5;issue=4
       au < notReady ; exists ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 ; > #500 errors on pdfs.
-      au < testing ; exists ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; >
+      au < notReady ; exists ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; > #500 errors.
 
   }
 
@@ -6161,7 +6161,7 @@
 
       au < notReady ; exists ; 2014 ; Journal of Indian Speech Language & Hearing Association Volume 28 ; 2014 ; 28 ; > # 500 server error
       au < notReady ; exists ; 2015 ; Journal of Indian Speech Language & Hearing Association Volume 29 ; 2015 ; 29 ; > # 500 server error
-      au < testing ; exists ; 2016 ; Journal of Indian Speech Language & Hearing Association Volume 30 ; 2016 ; 30 ; >
+      au < notReady ; exists ; 2016 ; Journal of Indian Speech Language & Hearing Association Volume 30 ; 2016 ; 30 ; > # 500 server error
 
   }
 
@@ -6843,7 +6843,7 @@
       param[journal_issn] = 2250-9658
       param[base_url] = http://www.mdcan-uath.org/
 
-      au < testing ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; >
+      au < notReady ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; > #500 error.
 
   }
 
