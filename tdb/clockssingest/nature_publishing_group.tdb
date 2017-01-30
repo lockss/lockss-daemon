@@ -81,7 +81,7 @@
 
     param[journal_id] = ajgsup
 
-    au < ready ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
+    au < crawling ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
     au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; >
 
   }
@@ -690,7 +690,7 @@
     au < crawling ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 ; >
-    au < ready ; exists ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -1883,7 +1883,7 @@
     au < finished ; finished ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
     au < deepCrawl ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; >
-    au < ready ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -2434,9 +2434,9 @@
     au < crawling ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
-    au < ready ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
-    au < ready ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
-    au < ready ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
 
   }
 
@@ -2809,7 +2809,7 @@
     au < crawling ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; >
-    au < ready ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; >
+    au < crawling ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; >
 
   }
 
@@ -3000,7 +3000,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -3226,7 +3226,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; >
     au < finished ; finished ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
-    au < ready ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
 
   }
 
@@ -3690,7 +3690,7 @@
     au < frozen ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
     au < frozen ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
     au < crawling ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
-    au < ready ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
+    au < crawling ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
 
   }
 

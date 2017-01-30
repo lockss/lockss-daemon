@@ -120,21 +120,21 @@
      # on this platform, manifest pages only enabled from 2002 forward - ok
      # 2014 & 2016 have 2 pdf files that fail filtering - check manually
      
-      au < ready ; exists ; 2002 ; Hesperia Volume 71 ; 2002 ; >
+      au < crawling ; exists ; 2002 ; Hesperia Volume 71 ; 2002 ; >
       au < manifest ; exists ; 2003 ; Hesperia Volume 72 ; 2003 ; >
       au < manifest ; exists ; 2004 ; Hesperia Volume 73 ; 2004 ; >
       au < testing ; exists ; 2005 ; Hesperia Volume 74 ; 2005 ; >
       au < manifest ; exists ; 2006 ; Hesperia Volume 75 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Hesperia Volume 76 ; 2007 ; >
       au < manifest ; exists ; 2008 ; Hesperia Volume 77 ; 2008 ; >
-      au < ready ; exists ; 2009 ; Hesperia Volume 78 ; 2009 ; >
+      au < crawling ; exists ; 2009 ; Hesperia Volume 78 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Hesperia Volume 79 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Hesperia Volume 80 ; 2011 ; >
       au < manifest ; exists ; 2012 ; Hesperia Volume 81 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Hesperia Volume 82 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Hesperia Volume 83 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Hesperia Volume 84 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Hesperia Volume 85 ; 2016 ; >
+      au < crawling ; exists ; 2014 ; Hesperia Volume 83 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Hesperia Volume 84 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Hesperia Volume 85 ; 2016 ; >
    
     }
     

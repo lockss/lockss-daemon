@@ -42,7 +42,7 @@
       {
       param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
 
-      au < ready ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
       }
 
       {
@@ -63,7 +63,7 @@
       param[base_url] = https://mmj.openlibrary.manchester.ac.uk/
       param[journal_id] = mmj
     
-      au < ready ; exists ; 2016 ; 2016 ; Manchester Medical Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Manchester Medical Journal Volume 1 ; 1 ; >
 
   }
 
