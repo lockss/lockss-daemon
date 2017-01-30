@@ -698,7 +698,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 27 ; 027 ; >
     au < finished ; finished ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 28 ; 028 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 29 ; 29 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Clinics in Colon and Rectal Surgery Volume 30 ; 30 ; >
 
   }
 
@@ -1208,9 +1208,9 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
 
   }
 
@@ -2049,9 +2049,9 @@
     param[journal_id] = 10.1055/s-00028728
     comment[years] =  2012-current
 
-   au < exists ; exists ; 2012 ; 2012 ; Indian Journal of Neruosurgery 1 ; 1 ; >
-   au < exists ; exists ; 2013 ; 2013 ; Indian Journal of Neruosurgery 2 ; 2 ; >
-   au < exists ; exists ; 2014 ; 2014 ; Indian Journal of Neruosurgery 3 ; 3 ; >
+   au < manifest ; exists ; 2012 ; 2012 ; Indian Journal of Neruosurgery 1 ; 1 ; >
+   au < manifest ; exists ; 2013 ; 2013 ; Indian Journal of Neruosurgery 2 ; 2 ; >
+   au < manifest ; exists ; 2014 ; 2014 ; Indian Journal of Neruosurgery 3 ; 3 ; >
    au < finished ; finished ; 2015 ; 2015 ; Indian Journal of Neruosurgery Volume 4 ; 4 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Neruosurgery Volume 5 ; 5 ; >
 
@@ -2194,7 +2194,7 @@
    au < finished ; finished ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; International Archives of Otorhinolaryngology Volume 20 ; 20 ; >
-   au < exists ; exists ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; International Archives of Otorhinolaryngology Volume 21 ; 21 ; >
 
   }
 
@@ -2540,7 +2540,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 77 ; 77 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Neurological Surgery Reports Volume 78 ; 78 ; >
 
   }
 
@@ -3050,12 +3050,12 @@
     param[journal_id] = 10.1055/s-00025515
     #years = 2004-current
 
-    au < exists ; exists ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 ; >
-    au < exists ; exists ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 ; >
-    au < exists ; exists ; 2006 ; 2006 ; kma - Das Gesundheitswirtschaftsmagazin Volume 11 ; 11 ; >
-    au < exists ; exists ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 ; >
-    au < exists ; exists ; 2008 ; 2008 ; kma - Das Gesundheitswirtschaftsmagazin Volume 13 ; 13 ; >
-    au < exists ; exists ; 2009 ; 2009 ; kma - Das Gesundheitswirtschaftsmagazin Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; kma - Das Gesundheitswirtschaftsmagazin Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; kma - Das Gesundheitswirtschaftsmagazin Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; kma - Das Gesundheitswirtschaftsmagazin Volume 14 ; 14 ; >
     au < finished ; finished ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -3063,7 +3063,7 @@
     au < finished ; finished ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 21 ; 21 ; >
-    au < exists ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; >
 
   }
 
