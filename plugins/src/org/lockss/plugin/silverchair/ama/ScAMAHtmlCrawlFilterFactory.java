@@ -75,7 +75,7 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "issue-browse"),
           // http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2477128
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent))"),
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(reveal|artmet)-modal|social-share)"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab)"),
           

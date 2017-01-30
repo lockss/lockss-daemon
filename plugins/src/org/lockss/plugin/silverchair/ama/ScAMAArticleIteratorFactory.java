@@ -58,8 +58,7 @@ public class ScAMAArticleIteratorFactory
   private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "<meta name=\"citation_pdf_url\" content=\".+/(data/journals/[^/]+/[^/]+/[^/.]+[.]pdf$)\"", Pattern.CASE_INSENSITIVE);
-  // <meta name="citation_pdf_url" content="http://jama.jamanetwork.com/data/journals/jama/934829/jii160002.pdf" />
+      "<meta name=\"citation_pdf_url\" content=\".+/(data/journals/[^/]+/[^/]+/[^/.]+[.]pdf)\"", Pattern.CASE_INSENSITIVE);
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -152,14 +151,13 @@ public class ScAMAArticleIteratorFactory
         if (cu == null || !cu.hasContent()) {
           return;
         }
-        String url = cu.getUrl();
         BufferedReader bReader = null;
         try {
           bReader = new BufferedReader(new InputStreamReader(
               cu.getUnfilteredInputStream(), cu.getEncoding())
               );
-          Matcher mat;
           
+          Matcher mat;
           // go through the cached URL content line by line
           // if a match is found, look for valid url & content
           // if found then set the role for ROLE_FULL_TEXT_PDF
@@ -167,7 +165,8 @@ public class ScAMAArticleIteratorFactory
             mat = PDF_PATTERN.matcher(line);
             if (mat.find()) {
               String baseUrl = au.getConfiguration().get("base_url");
-              String pdfUrl = mat.group(1);
+              String journalId = au.getConfiguration().get("journal_id");
+              String pdfUrl = "journals/" + journalId + "/" + mat.group(1);
               CachedUrl pdfCu = au.makeCachedUrl(baseUrl + pdfUrl);
               if (pdfCu != null && pdfCu.hasContent()) {
                 af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
