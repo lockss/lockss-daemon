@@ -29,8 +29,13 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <!-- url consumer with storeAtOrigUrl convenience method -->
+    <string>1.68.0</string>
+  </entry>
+  <entry>
     <string>plugin_name</string>
-    <string>Silverchair AMA Journals Plugin</string>
+    <string>Silverchair American Medical Association Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -75,66 +80,57 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair AMA Journals Plugin, Base URL %s, Resource ID %d, Journal ID %s, Year %d", base_url, resource_id, journal_id, year</string>
+    <string>"Silverchair American Medical Association Journals Plugin, Base URL %s, Resource ID %d, Journal ID %s, Year %d", base_url, resource_id, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", base_url, resource_id, year</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf</string>
+            <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
-      <!-- I used the same old list of cdn -->
-      <string>1,"^https?://(%s|[^.]+\.((silverchair(\.netdna-cdn|-?cdn))\.com/|cloudfront\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
+      <!-- Started with the old Silverchair list of cdn -->
+      <string>1,"^https?://(%s|[^.]+\.((silverchair(\.netdna-cdn|-?cdn))\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>4,"^%s", base_url</string>
       <string>1,"^%sjournals/%s/issue/", base_url, journal_id</string>
       <string>1,"^%sjournals/%s/(fullarticle|article-abstract)/", base_url, journal_id</string>
       <string>1,"^%s(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
-      <string>1,"^%spdfaccess.ashx[?]url=/data/journals/.+routename=%s", base_url, journal_id</string>
-      <!-- Found old style links in articles -->
-      <string>1,"^https?://([^.]+\.)?jamanetwork\.com/article\.aspx\?doi=10\.1001/"</string>
-      <string>2,"/downloadcitation/[^?/]+\?format=[^&amp;]+$"</string>
-      <string>1,"^%sjournals/%s/downloadcitation/", base_url, journal_id</string>
+      <string>1,"^%spdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", base_url, journal_id</string>
+      <string>1,"^%sjournals/%s/downloadcitation/[^?/]+\?format=$", base_url, journal_id</string>
+      <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
+      
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string>
       
-      <!--  
-      http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iic150063.pdf
-      http://amaprod.silverchaircdn.com/UI/app
-      http://jamanetwork.com/journals/jamainternalmedicine/issue/176/1
-      http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
-      http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2479062
-      http://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2479062
-      http://jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.5946
-      http://jamanetwork.com/data/Journals/INTEMED/934800/IOI150079supp1_prod.pdf
-      
-      http://archinte.jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.6324
-      http://jamanetwork.com/journals/jamainternalmedicine/downloadcitation/2472944?format=
-      http://jamanetwork.com/downloadimage.aspx?image=/data/Journals/INTEMED/935316/ioi160030t3.png&sec=126816453&ar=2520680&imagename=
-      learning/video-player/12889420
-      
-      http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
-      http://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
-      https://cdn.optimizely.com/js/2785501806.js (not collected)
-      http://jamanetwork.com/learning/article-quiz/ (not collected)
-      
-      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
-      <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
-      <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
-      <string>4,"^%s", base_url</string>
-      <string>2,"__EVENTVALIDATION="</string>
-      <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
-      <string>1,"^%s(article\.aspx\?articleid=|(downloadCitation|multimediaPlayer)\.aspx\?)", base_url</string>
-      <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
-      <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
-      <string>1,"^%scombres\.axd/", base_url</string>
-      <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
-      <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
-      <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
-      <string>1,"^%sScriptResource\.axd\?d", base_url</string>
-       -->
+      <!-- Found old style links in articles, if we want to preserve them... we need to either -->
+      <!-- 1) get permission pages [bad idea] or 2) [bad idea], add to permitted hosts list -->
+      <!-- <string>1,"^https?://([^.]+\.)?jamanetwork\.com/article\.aspx\?doi=10\.1001/"</string> -->
     </list>
   </entry>
   <entry>
@@ -189,31 +185,13 @@
       <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
-  <!-- entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/plain_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -223,7 +201,11 @@
         <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry> -->
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.ScAMAUrlConsumerFactory</string>
+  </entry>
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
@@ -238,14 +220,11 @@
       <string>.+\.gstatic\.com</string>
       <string>.*cdn\.jsdelivr\.net</string>
       <string>.*(silverchair(\.netdna-cdn|-?cdn))\.com</string>
+      <string>.*\.brightcove\.net</string>
       <string>.*\.cloudfront\.net</string>
       <!-- string>.*ajax\.microsoft\.com</string> -->
     </list>
   </entry>
-  <!-- entry>
-      <string>plugin_url_fetcher_factory</string>
-      <string>org.lockss.plugin.silverchair.ScUrlFetcherFactory</string>
-  </entry> -->
   <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
   <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->  
   <!-- don't count it in the poll, but do collect and share versions -->  

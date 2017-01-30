@@ -42,43 +42,19 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-//import java.io.UnsupportedEncodingException;
-//import java.net.URLEncoder;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   private static final Logger logger = Logger.getLogger(ScAMAHtmlLinkExtractorFactory.class);
 
   private static final String ANCHOR_TAG = "a";
-//  public static final String IMG_TAG = "img";
 
-  protected static final Pattern PATTERN_ARTICLE_PDF =
-      Pattern.compile("/journals/([^/]+)/data/journals/([^/]+/[^/]+/[^/.]+[.]pdf)$",
-          Pattern.CASE_INSENSITIVE);
-  protected static final String ACCESS_ARTICLE_PDF =
-      "/pdfaccess.ashx[?]url=/data/journals/%s&routename=%s";
   protected static final String AUTH_SEARCH_STR = "searchresults?author=";
-  
-  // http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
-  // http://jamanetwork.com/pdfaccess.ashx?url=/data/journals/intemed/934800/iii160001.pdf&routename=jamainternalmedicine
 //  protected static final Pattern PATTERN_ARTICLE =
-//    Pattern.compile("/(article|proceeding)\\.aspx\\?(articleid=[^&]+)$",
-//                    Pattern.CASE_INSENSITIVE);
-//
-//  protected static final Pattern PATTERN_CITATION =
-//    Pattern.compile("/downloadCitation\\.aspx\\?(format=[^&]+)?$",
-//                    Pattern.CASE_INSENSITIVE);
-//
-//  protected static final Pattern PATTERN_DOWNLOAD_FILE =
-//    Pattern.compile("javascript:downloadFile\\('([^']+)'\\)",
-//                    Pattern.CASE_INSENSITIVE);
-//
-//  protected static final Pattern PATTERN_OPENPDF =
-//    Pattern.compile("openPDFWindow\\('([^']+)'\\)",
-//                    Pattern.CASE_INSENSITIVE);
-
+//      Pattern.compile("journals/([^/]+)/(?fullarticle|article-abstract)/(\\d+)$", Pattern.CASE_INSENSITIVE);
+  
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false, false, null, null);
@@ -97,14 +73,7 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
                                    new ScAMAAnchorTagExtractor(new String[]{
                                        "href",
                                        "data-article-url",
-//                                       "onclick",
-//                                       "download"
                                        }));
-//    extractor.registerTagExtractor(IMG_TAG,
-//                                   new SimpleTagLinkExtractor(new String[]{"src", "longdesc",
-//                                                                           "data-original"
-//                                   }));
-
   }
 
   public static class ScAMAAnchorTagExtractor extends SimpleTagLinkExtractor {
@@ -122,42 +91,23 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
      * @param cb A callback to record extracted links.
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
-      String srcUrl = node.baseUri();
-
       //the <a href attribute handler
       if (node.hasAttr("href")) {
         String href = node.attr("href");
-//        Matcher hrefMat;
         // we look for searchresults?author= and exclude these
         if ((href != null) && !href.contains(AUTH_SEARCH_STR)) {
-          // the standard method for <a href>
           JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
         }
-//        hrefMat = PATTERN_CITATION.matcher(href);
+        
+//        Matcher hrefMat = PATTERN_ARTICLE.matcher(href);
 //        if (hrefMat.find()) {
-//          logger.debug3("Found target citation URL");
-//          // Derive citation format; can be null
-//          String formatPair = hrefMat.group(1);
-//          Matcher srcUrlMat = PATTERN_ARTICLE.matcher(srcUrl);
-//          if (srcUrlMat.find()) {
-//            // Derive article ID
-//            String articleIdPair = srcUrlMat.group(2);
-//            // Generate correct citation URL
-//            String url;
-//            if (formatPair == null) {
-//              url = String.format("/downloadCitation.aspx?%s", articleIdPair);
-//            }
-//            else {
-//              url = String.format("/downloadCitation.aspx?%s&%s", formatPair,
-//                                  articleIdPair);
-//            }
-//            logger.debug3(String.format("Generated %s", url));
-//            if (!StringUtil.isNullString(url)) {
-//              cb.foundLink(url);
-//            }
-//          }
+//          // http://jamanetwork.com/journals/jama/article-abstract/2480471
+//          // http://jamanetwork.com/journals/jama/downloadcitation/2480471?format=
+//          String baseUrl = au.getConfiguration().get("base_url");
+//          String url = baseUrl + "journals/" + hrefMat.group(1) + "/downloadcitation/" + hrefMat.group(2) + "?format=";
+//          logger.debug3("Generate citation URL: " + url);
+//          cb.foundLink(url);
 //        }
-//        else {        }
       }   // end <a href
       
       if (node.hasAttr("data-article-url")) {
@@ -167,10 +117,6 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
         }
       }
       
-      // the 'download' attribute handler - the standard method for <a download
-      if (node.hasAttr("download")) {
-        JsoupHtmlLinkExtractor.checkLink(node, cb, "download");
-      }
     }
-
-} }
+  }
+}

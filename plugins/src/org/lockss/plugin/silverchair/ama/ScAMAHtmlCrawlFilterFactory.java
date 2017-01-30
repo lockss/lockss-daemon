@@ -73,17 +73,18 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
           
           HtmlNodeFilters.tagWithAttributeRegex("section", "class", "master-(header|footer)"),
           HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "issue-browse"),
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*links|EditorsChoice|LinkedContent))"),
+          // http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2477128
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent))"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(reveal|artmet)-modal|social-share)"),
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(reference|related|ymal)"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab)"),
           
           HtmlNodeFilters.allExceptSubtree(
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "get-citation")),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "get-citation")),
           HtmlNodeFilters.allExceptSubtree(
               HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "get-citation")),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "get-citation")),
           HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
           
 /*        
@@ -97,6 +98,7 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
 <div class="widget-LinkedContentToolbar widget-instance-AMA_LinkedContentToolbar">
 <a class="relatedArticleLink"
 <ul class="toolbar">
+<div class="cme-info no-access">
 
 
 <section class="master-header">
