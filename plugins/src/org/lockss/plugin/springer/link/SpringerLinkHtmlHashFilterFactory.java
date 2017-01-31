@@ -78,6 +78,9 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("footer"),
       // filter out comments
       HtmlNodeFilters.comment(),
+      // all meta and link tags - some have links with names that change
+      HtmlNodeFilters.tag("meta"),
+      HtmlNodeFilters.tag("link"),
 
       //google iframes with weird ids
       HtmlNodeFilters.tag("iframe"),
@@ -88,9 +91,6 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       
       //more links to pdf and article
       HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
-      
-      //weird meta tag
-      HtmlNodeFilters.tagWithAttribute("meta", "name", "nolard"),
       
       //adds on the side
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
@@ -121,9 +121,6 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       // button - let's get rid of all of them...
       HtmlNodeFilters.tag("button"),
      /*class="StickySideButton_left StickySideButton_left--feedback"*/
-      
-      //CSS links in body
-      HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
       
       HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tag("div"),
               new OrFilter(HtmlNodeFilters.tag("section"),
