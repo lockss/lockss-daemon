@@ -70,6 +70,7 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
       encoding,
       HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
           // DROP right column: related content, etc.
+          //    except for citation links
           // KEEP links to article views, citation files, etc.
           
           HtmlNodeFilters.tag("header"),
