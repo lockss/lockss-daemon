@@ -71,13 +71,14 @@ public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
           // DROP right column: related content, etc.
           // KEEP links to article views, citation files, etc.
           
+          HtmlNodeFilters.tag("header"),
           HtmlNodeFilters.tagWithAttributeRegex("section", "class", "master-(header|footer)"),
           HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "issue-browse"),
           // http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2477128
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent))"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
-          HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab)"),
+          HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab|register)"),
           
           HtmlNodeFilters.allExceptSubtree(
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar"),

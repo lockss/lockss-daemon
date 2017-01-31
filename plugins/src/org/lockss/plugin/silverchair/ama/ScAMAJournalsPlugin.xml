@@ -190,7 +190,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

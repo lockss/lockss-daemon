@@ -137,8 +137,7 @@ public class ScAMAArticleIteratorFactory
             // Since 1.64 createArticleFiles can return ArticleFiles
             ArticleFiles af = super.createArticleFiles(cu);
             
-            if (af != null && 
-                spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            if (af != null && spec.getTarget() != null && !spec.getTarget().isArticle()) {
               guessPdf(af);
             }
             return af;
@@ -161,11 +160,11 @@ public class ScAMAArticleIteratorFactory
           // go through the cached URL content line by line
           // if a match is found, look for valid url & content
           // if found then set the role for ROLE_FULL_TEXT_PDF
+          String baseUrl = au.getConfiguration().get("base_url");
+          String journalId = au.getConfiguration().get("journal_id");
           for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
             mat = PDF_PATTERN.matcher(line);
             if (mat.find()) {
-              String baseUrl = au.getConfiguration().get("base_url");
-              String journalId = au.getConfiguration().get("journal_id");
               String pdfUrl = "journals/" + journalId + "/" + mat.group(1);
               CachedUrl pdfCu = au.makeCachedUrl(baseUrl + pdfUrl);
               if (pdfCu != null && pdfCu.hasContent()) {
