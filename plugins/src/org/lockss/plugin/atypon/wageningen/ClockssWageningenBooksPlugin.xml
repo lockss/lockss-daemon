@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>23</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -47,18 +47,6 @@
   <entry>
     <string>au_start_url</string>
     <string>"%sclockss/eisbn/%s", base_url, book_eisbn</string>
-  </entry>  
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsPdfFilterFactory</string>
   </entry>  
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->

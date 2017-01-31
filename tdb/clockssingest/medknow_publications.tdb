@@ -2875,7 +2875,7 @@
     au < crawling ; exists ; 2012 ; Journal of Medical Physics Volume 37 ; 2012 ; 37 ; >
     au < finished ; finished ; 2013 ; Journal of Medical Physics Volume 38 ; 2013 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Journal of Medical Physics Volume 39 ; 2014 ; 39 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Medical Physics Volume 40 ; 2015 ; 40 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Medical Physics Volume 40 ; 2015 ; 40 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Medical Physics Volume 41 ; 2016 ; 41 ; >
 
   }
@@ -4543,7 +4543,7 @@
       param[base_url] = http://www.bfpt.eg.net/
 
       au < notReady ; exists ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; > #can't fetch permission page.
-      au < testing ; exists ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; >
+      au < ready ; exists ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; >
 
   }
 
@@ -4949,7 +4949,7 @@
       param[journal_issn] = 0970-7212
       param[base_url] = http://www.endodontologyonweb.org/
 
-      au < testing ; exists ; 2016 ; Endodontology Volume 28 ; 2016 ; 28 ; >
+      au < ready ; exists ; 2016 ; Endodontology Volume 28 ; 2016 ; 28 ; >
 
   }
 
@@ -4985,7 +4985,7 @@
       param[journal_issn] = 2468-5690
       param[base_url] = http://www.environmentmed.org/
 
-      au < testing ; exists ; 2016 ; Environmental Disease Volume 1 ; 2016 ; 1 ; >
+      au < ready ; exists ; 2016 ; Environmental Disease Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -5108,7 +5108,7 @@
       param[journal_issn] = 2468-8398
       param[base_url] = http://www.gjtmonline.com/
 
-      au < testing ; exists ; 2016 ; Global Journal of Transfusion Medicine Volume 1 ; 2016 ; 1 ; >
+      au < ready ; exists ; 2016 ; Global Journal of Transfusion Medicine Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -5549,7 +5549,7 @@
       param[journal_issn] = 2352-4197
       param[base_url] = http://www.ijhronline.org/
 
-      au < testing ; exists ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; >
+      au < ready ; exists ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -6214,7 +6214,7 @@
       au < crawling ; exists ; 2013 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 18 ; 2013 ; 18 ; >
       au < crawling ; exists ; 2014 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 19 ; 2014 ; 19 ; >
       au < crawling ; exists ; 2015 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 20 ; 2015 ; 20 ; >
-      au < testing ; exists ; 2016 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 21 ; 2016 ; 21 ; >
+      au < ready ; exists ; 2016 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 21 ; 2016 ; 21 ; >
 
   }
 
@@ -6326,7 +6326,7 @@
 
       au < crawling ; exists ; 2014 ; Journal of Neuroanaesthesiology and Critical Care Volume 1 ; 2014 ; 1 ; >
       au < crawling ; exists ; 2015 ; Journal of Neuroanaesthesiology and Critical Care Volume 2 ; 2015 ; 2 ; >
-      au < testing ; exists ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 2016 ; 3 ; >
+      au < ready ; exists ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -6365,7 +6365,7 @@
       au < crawling ; exists ; 2013 ; Journal of Ophthalmic and Vision Research Volume 8 ; 2013 ; 8 ; >
       au < crawling ; exists ; 2014 ; Journal of Ophthalmic and Vision Research Volume 9 ; 2014 ; 9 ; >
       au < crawling ; exists ; 2015 ; Journal of Ophthalmic and Vision Research Volume 10 ; 2015 ; 10 ; >
-      au < testing ; exists ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; >
+      au < ready ; exists ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; >
 
   }
 
@@ -6483,7 +6483,7 @@
       au < crawling ; exists ; 2013 ; Journal of Orthopaedics and Allied Sciences Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Journal of Orthopaedics and Allied Sciences Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; >
-      au < testing ; exists ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; >
+      au < ready ; exists ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; >
 
   }
 
@@ -6535,7 +6535,7 @@
       param[journal_issn] = 0973-0168
       param[base_url] = http://www.journalrcr.org/
 
-      au < testing ; exists ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; >
+      au < ready ; exists ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -6683,7 +6683,7 @@
       au < crawling ; exists ; 2013 ; Journal of the Scientific Society Volume 40 ; 2013 ; 40 ; >
       au < crawling ; exists ; 2014 ; Journal of the Scientific Society Volume 41 ; 2014 ; 41 ; >
       au < crawling ; exists ; 2015 ; Journal of the Scientific Society Volume 42 ; 2015 ; 42 ; >
-      au < testing ; exists ; 2016 ; Journal of the Scientific Society Volume 43 ; 2016 ; 43 ; >
+      au < ready ; exists ; 2016 ; Journal of the Scientific Society Volume 43 ; 2016 ; 43 ; >
 
   }
 
@@ -6717,7 +6717,7 @@
       param[base_url] = http://www.kamj.eg.net/
 
       au < crawling ; exists ; 2015 ; Kasr Al Ainy Medical Journal Volume 21 ; 2015 ; 21 ; >
-      au < testing ; exists ; 2016 ; Kasr Al Ainy Medical Journal Volume 22 ; 2016 ; 22 ; >
+      au < ready ; exists ; 2016 ; Kasr Al Ainy Medical Journal Volume 22 ; 2016 ; 22 ; >
 
   }
 
@@ -6863,7 +6863,7 @@
       au < crawling ; exists ; 2013 ; Nigerian Journal of Basic and Clinical Sciences Volume 10 ; 2013 ; 10 ; >
       au < crawling ; exists ; 2014 ; Nigerian Journal of Basic and Clinical Sciences Volume 11 ; 2014 ; 11 ; >
       au < crawling ; exists ; 2015 ; Nigerian Journal of Basic and Clinical Sciences Volume 12 ; 2015 ; 12 ; >
-      au < testing ; exists ; 2016 ; Nigerian Journal of Basic and Clinical Sciences Volume 13 ; 2016 ; 13 ; >
+      au < ready ; exists ; 2016 ; Nigerian Journal of Basic and Clinical Sciences Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -6918,7 +6918,7 @@
       param[base_url] = http://www.chs-journal.com/
 
       au < crawling ; exists ; 2015 ; Nigerian Journal of Health Sciences Volume 15 ; 2015 ; 15 ; >
-      au < testing ; exists ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 ; >
+      au < ready ; exists ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -6991,7 +6991,7 @@
       au < crawling ; exists ; 2013 ; Nigerian Journal of Surgical Sciences Volume 23 ; 2013 ; 23 ; >
       au < crawling ; exists ; 2014 ; Nigerian Journal of Surgical Sciences Volume 24 ; 2014 ; 24 ; >
       au < crawling ; exists ; 2015 ; Nigerian Journal of Surgical Sciences Volume 25 ; 2015 ; 25 ; >
-      au < testing ; exists ; 2016 ; Nigerian Journal of Surgical Sciences Volume 26 ; 2016 ; 26 ; >
+      au < ready ; exists ; 2016 ; Nigerian Journal of Surgical Sciences Volume 26 ; 2016 ; 26 ; >
 
   }
 
@@ -7111,7 +7111,7 @@
       param[journal_issn] = 0795-3038
       param[base_url] = http://www.phmj.org/
 
-      au < testing ; exists ; 2016 ; Port Harcourt Medical Journal Volume 10 ; 2016 ; 10 ; >
+      au < ready ; exists ; 2016 ; Port Harcourt Medical Journal Volume 10 ; 2016 ; 10 ; >
 
   }
 
@@ -7163,7 +7163,7 @@
       au < crawling ; exists ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; >
       au < crawling ; exists ; 2014 ; Sahel Medical Journal Volume 17 ; 2014 ; 17 ; >
       au < crawling ; exists ; 2015 ; Sahel Medical Journal Volume 18 ; 2015 ; 18 ; >
-      au < testing ; exists ; 2016 ; Sahel Medical Journal Volume 19 ; 2016 ; 19 ; >
+      au < ready ; exists ; 2016 ; Sahel Medical Journal Volume 19 ; 2016 ; 19 ; >
 
   }
 
@@ -7184,7 +7184,7 @@
       au < crawling ; exists ; 2013 ; Saudi Endodontic Journal Volume 3 ; 2013 ; 3 ; >
       au < crawling ; exists ; 2014 ; Saudi Endodontic Journal Volume 4 ; 2014 ; 4 ; >
       au < crawling ; exists ; 2015 ; Saudi Endodontic Journal Volume 5 ; 2015 ; 5 ; >
-      au < testing ; exists ; 2016 ; Saudi Endodontic Journal Volume 6 ; 2016 ; 6 ; >
+      au < ready ; exists ; 2016 ; Saudi Endodontic Journal Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -7258,7 +7258,7 @@
       au < crawling ; exists ; 2013 ; Saudi Journal of Obesity Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Saudi Journal of Obesity Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Saudi Journal of Obesity Volume 3 ; 2015 ; 3 ; >
-      au < testing ; exists ; 2016 ; Saudi Journal of Obesity Volume 4 ; 2016 ; 4 ; >
+      au < ready ; exists ; 2016 ; Saudi Journal of Obesity Volume 4 ; 2016 ; 4 ; >
 
   }
 
@@ -7313,7 +7313,7 @@
       au < crawling ; exists ; 2013 ; Saudi Surgical Journal Volume 1 ; 2013 ; 1 ; >
       au < crawling ; exists ; 2014 ; Saudi Surgical Journal Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; Saudi Surgical Journal Volume 3 ; 2015 ; 3 ; >
-      au < testing ; exists ; 2016 ; Saudi Surgical Journal Volume 4 ; 2016 ; 4 ; >
+      au < ready ; exists ; 2016 ; Saudi Surgical Journal Volume 4 ; 2016 ; 4 ; >
 
   }
 
@@ -7483,7 +7483,7 @@
       au < crawling ; exists ; 2013 ; The Egyptian Journal of Internal Medicine Volume 25 ; 2013 ; 25 ; >
       au < crawling ; exists ; 2014 ; The Egyptian Journal of Internal Medicine Volume 26 ; 2014 ; 26 ; >
       au < crawling ; exists ; 2015 ; The Egyptian Journal of Internal Medicine Volume 27 ; 2015 ; 27 ; >
-      au < testing ; exists ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; >
+      au < ready ; exists ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; >
 
   }
 
@@ -7520,7 +7520,7 @@
       au < crawling ; exists ; 2013 ; The Egyptian Journal of Otolaryngology Volume 29 ; 2013 ; 29 ; >
       au < crawling ; exists ; 2014 ; The Egyptian Journal of Otolaryngology Volume 30 ; 2014 ; 30 ; >
       au < crawling ; exists ; 2015 ; The Egyptian Journal of Otolaryngology Volume 31 ; 2015 ; 31 ; >
-      au < testing ; exists ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; >
+      au < ready ; exists ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; >
 
   }
 
@@ -7540,7 +7540,7 @@
       au < crawling ; exists ; 2013 ; The Egyptian Orthopaedic Journal Volume 48 ; 2013 ; 48 ; >
       au < crawling ; exists ; 2014 ; The Egyptian Orthopaedic Journal Volume 49 ; 2014 ; 49 ; >
       au < crawling ; exists ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 ; >
-      au < testing ; exists ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; >
+      au < ready ; exists ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; >
 
   }
 
@@ -7779,7 +7779,7 @@
       au < crawling ; exists ; 2013 ; West African Journal of Radiology Volume 20 ; 2013 ; 20 ; >
       au < crawling ; exists ; 2014 ; West African Journal of Radiology Volume 21 ; 2014 ; 21 ; >
       au < crawling ; exists ; 2015 ; West African Journal of Radiology Volume 22 ; 2015 ; 22 ; >
-      au < testing ; exists ; 2016 ; West African Journal of Radiology Volume 23 ; 2016 ; 23 ; >
+      au < ready ; exists ; 2016 ; West African Journal of Radiology Volume 23 ; 2016 ; 23 ; >
 
   }
 
