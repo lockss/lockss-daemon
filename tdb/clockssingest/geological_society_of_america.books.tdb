@@ -767,9 +767,14 @@
     au < finished ; finished ; 2015 ; 10.1130/9780813725161 ; 978-0-8137-2516-1 ; Geological Society of America Special Papers Volume 516 ; 516 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 10.1130/9780813725178 ; 978-0-8137-2517-8 ; Geological Society of America Special Papers Volume 517 ; 517 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 10.1130/9780813725185 ; 978-0-8137-2518-5 ; Geological Society of America Special Papers Volume 518 ; 518 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2015 ; 10.1130/9780813725192 ; 978-0-8137-2519-2 ; Geological Society of America Special Papers Volume 519 ; 519 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ;  ;  ; Geological Society of America Special Papers Volume 520 ; 520 ; >
-    au < crawling ; exists ; 2016 ;  ;  ; Geological Society of America Special Papers Volume 521 ; 521 ; >
+    au < finished ; finished ; 2016 ; 10.1130/9780813725192 ; 978-0-8137-2519-2 ; Geological Society of America Special Papers Volume 519 ; 519 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2016 ; 10.1130/9780813725208 ; 978-0-8137-2520-8 ; Geological Society of America Special Papers Volume 520 ; 520 ; >
+    au < crawling ; exists ; 2016 ; 10.1130/9780813725215 ; 978-0-8137-2521-5 ; Geological Society of America Special Papers Volume 521 ; 521 ; >
+    au < exists ; exists ; 2016 ; 10.1130/9780813725222 ; 978-0-8137-2522-2 ; Geological Society of America Special Papers Volume 522 ; 522 ; >
+    au < expected ; exists ; 2017 ;  ;  ; Geological Society of America Special Papers Volume 523 ; 523 ; >
+    au < exists ; exists ; 2016 ; 10.1130/9780813725246 ; 978-0-8137-2524-6 ; Geological Society of America Special Papers Volume 524 ; 524 ; >
+    au < expected ; exists ; 2017 ;  ;  ; Geological Society of America Special Papers Volume 525 ; 525 ; >
+    au < expected ; exists ; 2017 ;  ;  ; Geological Society of America Special Papers Volume 526 ; 526 ; >
 
   }
   
@@ -823,7 +828,11 @@
     au < finished ; finished ; 2014 ; 978-0-8137-0038-0 ; GSA Field Guides Volume 38 ; 38 ; >
     au < finished ; finished ; 2015 ; 978-0-8137-0039-7 ; GSA Field Guides Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 978-0-8137-0040-3 ; GSA Field Guides Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2015 ;  ; GSA Field Guides Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 978-0-8137-0041-0 ; GSA Field Guides Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 2016 ;  ; GSA Field Guides Volume 42 ; 42 ; >
+    au < exists ; exists ; 2016 ;  ; GSA Field Guides Volume 43 ; 43 ; >
+    au < exists ; exists ; 2016 ;  ; GSA Field Guides Volume 44 ; 44 ; >
+    au < expected ; exists ; 2017 ;  ; GSA Field Guides Volume 45 ; 45 ; >
 
   }
   
@@ -860,7 +869,6 @@
     au < finished ; finished ; 2008 ;  ; 978-0-8137-4116-1 ; Reviews in Engineering Geology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 ; >
     au < finished ; finished ; 2014 ; 10.1130/9780813741222 ; 978-0-8137-4122-2 ; Reviews in Engineering Geology Volume 22 ; 22 ; >
-    au < expected ; exists ; 2015 ;  ;  ; Reviews in Engineering Geology Volume 23 ; 23 ; >
 
   }
 }
