@@ -4418,14 +4418,14 @@
 
       title <
         name = Asia Pacific Clinical and Translational Nervous System Diseases ;
-        issn = 2468-5577 ;
-        eissn = 2455-7765
+        issn = 2542-3932 ;
+        eissn = 2542-3940
       >
 
-      param[journal_issn] = 2468-5577
+      param[journal_issn] = 2542-3932
       param[base_url] = http://www.actnjournal.com/
 
-      au < testing ; exists ; 2016 ; Asia Pacific Clinical and Translational Nervous System Diseases Volume 1 ; 2016 ; 1 ; >
+      au < exists ; exists ; 2016 ; Asia Pacific Clinical and Translational Nervous System Diseases Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -4620,14 +4620,14 @@
 
       title <
         name = Clinical and Translational Degenerative Diseases ;
-        issn = 2468-5658 ;
-        eissn = 2468-5666
+        issn = 2542-3975 ;
+        eissn = 2542-3983
       >
 
-      param[journal_issn] = 2468-5658
+      param[journal_issn] = 2542-3975
       param[base_url] = http://www.clinicaltdd.com/
 
-      au < testing ; exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; >
+      au < exists ; exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; >
 
   }
 
@@ -5565,7 +5565,7 @@
       param[journal_issn] = 2468-8827
       param[base_url] = http://www.ijncd.org/
 
-      au < testing ; exists ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; >
+      au < notReady ; exists ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; > #500 error
 
   }
 
@@ -5658,14 +5658,15 @@
 
       param[journal_issn] = 0976-0105
       param[base_url] = http://www.jbclinpharm.org/
+      #moved to new platform.
 
-      au < manifest ; exists ; 2010 ; Journal of Basic and Clinical Pharmacy Volume 1 ; 2010 ; 1 ; >
-      au < crawling ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
-      au < crawling ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
-      au < crawling ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
-      au < crawling ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
-      au < crawling ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
-      au < testing ; exists ; 2016 ; Journal of Basic and Clinical Pharmacy Volume 7 ; 2016 ; 7 ; >
+      au < exists ; exists ; 2010 ; Journal of Basic and Clinical Pharmacy Volume 1 ; 2010 ; 1 ; >
+      au < down ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
+      au < down ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
+      au < down ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
+      au < down ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
+      au < down ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
+      au < exists ; exists ; 2016 ; Journal of Basic and Clinical Pharmacy Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -7604,7 +7605,7 @@
 
       au < notReady ; exists ; 2014 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 1 ; 2014 ; 1 ; > #500 error.
       au < notReady ; exists ; 2015 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 2 ; 2015 ; 2 ; > #500 error see http://www.nabh.ind.in/article.asp?issn=2319-1880;year=2015;volume=2;issue=2;spage=37;epage=40;aulast=Pandit;type=2
-      au < testing ; exists ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 ; >
+      au < notReady ; exists ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 ; > #500 error
 
   }
 
