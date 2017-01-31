@@ -5182,7 +5182,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-3581
       comment[platform] = BioMedCentral
 
-      au < down ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2014 ; Canadian Journal of Kidney Health and Disease Volume 1 [superseded] ; 1 ; >
       au < doNotProcess ; exists ; 2015 ; Canadian Journal of Kidney Health and Disease Volume 2 ; 2 ; >
 
     }
