@@ -1,0 +1,67 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>11</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>15</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>38</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>plugin_name</string>
+    <string>Wageningen Academic Publishers Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>62</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Wageningen Academic Publishers Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.wageningen.WageningenJournalsPdfFilterFactory</string>
+  </entry>  
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.wageningenacademic.com/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Wageningen Academic Publishers.</string>
+  </entry>
+</map>    
