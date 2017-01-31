@@ -70,12 +70,18 @@ public class TestKbartExporter extends LockssTestCase {
       }}));
     }};
 
-    this.basicKb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
-    basicKb.setFilter( KbartExportFilter.identityFilter(titles) );
+    this.basicKb = new KbartDummyExporter(copy(titles), KbartExporter.OutputFormat.HTML, this);
+    basicKb.setFilter( KbartExportFilter.identityFilter(copy(titles)) );
   }
 
   protected void tearDown() throws Exception {
     super.tearDown();
+  }
+
+  // KbartExporter and KbartExportFilter modify (sort) the list they are
+  // passed.
+  List copy(List c) {
+    return new ArrayList(c);
   }
 
   /**
@@ -84,10 +90,10 @@ public class TestKbartExporter extends LockssTestCase {
    */
   public final void testExport() {
     // Test basic export
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
+    this.kb = new KbartDummyExporter(copy(titles), KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = false;
     this.showHealthRatings = false;
-    this.filter = KbartExportFilter.identityFilter(titles);
+    this.filter = KbartExportFilter.identityFilter(copy(titles));
     kb.setFilter(filter);
     kb.setCompress(false);
     kb.export(new NullOutputStream());
@@ -95,10 +101,10 @@ public class TestKbartExporter extends LockssTestCase {
 	titles.size(), kb.exportCount);
     
     // Test predefined custom export
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
+    this.kb = new KbartDummyExporter(copy(titles), KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = false;
     this.showHealthRatings = false;
-    this.filter = new KbartExportFilter(titles, 
+    this.filter = new KbartExportFilter(copy(titles),
 	KbartExportFilter.PredefinedColumnOrdering.ISSN_ONLY,
         omitEmptyFields,
         omitHeader,
@@ -116,10 +122,10 @@ public class TestKbartExporter extends LockssTestCase {
       add(Field.ONLINE_IDENTIFIER);
       add(Field.TITLE_ID);
     }};
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
+    this.kb = new KbartDummyExporter(copy(titles), KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = true;
     this.showHealthRatings = false;
-    this.filter = new KbartExportFilter(titles, 
+    this.filter = new KbartExportFilter(copy(titles),
         KbartExportFilter.CustomColumnOrdering.create(ordering),
         omitEmptyFields,
         omitHeader,
