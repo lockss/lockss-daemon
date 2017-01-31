@@ -119,7 +119,7 @@
     au < released ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 >
     au < released ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 >
     au < testing ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
-    au < testing ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
+    au < ready ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
     au < released ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 >
     au < released ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
     au < released ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
@@ -151,11 +151,11 @@
     comment[continues] = 0021-8952
     comment[continued_by] = 0894-8763
 
-    au < testing ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
+    au < ready ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
     au < testing ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
     au < released ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 >
     au < released ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 >
-    au < testing ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
+    au < ready ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
 
   }
 
@@ -182,7 +182,7 @@
     au < testing ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
     au < released ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 >
     au < released ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
-    au < testing ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
+    au < ready ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
     au < testing ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
     au < released ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
     au < released ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
@@ -276,7 +276,6 @@
     >
     
     param[journal_id] = clim
-
 
     au < manifest ; 1988 ; Journal of Climate Volume 1 ; 1 >
     au < manifest ; 1989 ; Journal of Climate Volume 2 ; 2 >
@@ -412,14 +411,14 @@
     
     param[journal_id] = atsc
 
-    au < manifest ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 >  
-    au < manifest ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 >  
-    au < manifest ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 >  
-    au < manifest ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 >  
-    au < manifest ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 >  
-    au < manifest ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 >  
-    au < manifest ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 >  
-    au < manifest ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 >  
+    au < manifest ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 >
+    au < manifest ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 >
+    au < manifest ; 1946 ; Journal of the Atmospheric Sciences Volume 3 ; 3 >
+    au < manifest ; 1947 ; Journal of the Atmospheric Sciences Volume 4 ; 4 >
+    au < manifest ; 1948 ; Journal of the Atmospheric Sciences Volume 5 ; 5 >
+    au < manifest ; 1949 ; Journal of the Atmospheric Sciences Volume 6 ; 6 >
+    au < manifest ; 1950 ; Journal of the Atmospheric Sciences Volume 7 ; 7 >
+    au < manifest ; 1951 ; Journal of the Atmospheric Sciences Volume 8 ; 8 >
     au < manifest ; 1952 ; Journal of the Atmospheric Sciences Volume 9 ; 9 >
     au < manifest ; 1953 ; Journal of the Atmospheric Sciences Volume 10 ; 10 >
     au < manifest ; 1954 ; Journal of the Atmospheric Sciences Volume 11 ; 11 >
@@ -451,26 +450,26 @@
     au < manifest ; 1980 ; Journal of the Atmospheric Sciences Volume 37 ; 37 >
     au < manifest ; 1981 ; Journal of the Atmospheric Sciences Volume 38 ; 38 >
     au < manifest ; 1982 ; Journal of the Atmospheric Sciences Volume 39 ; 39 >
-    au < manifest ; 1983 ; Journal of the Atmospheric Sciences Volume 40 ; 40 >
-    au < manifest ; 1984 ; Journal of the Atmospheric Sciences Volume 41 ; 41 >
-    au < manifest ; 1985 ; Journal of the Atmospheric Sciences Volume 42 ; 42 >
-    au < manifest ; 1986 ; Journal of the Atmospheric Sciences Volume 43 ; 43 >
-    au < manifest ; 1987 ; Journal of the Atmospheric Sciences Volume 44 ; 44 >
-    au < manifest ; 1988 ; Journal of the Atmospheric Sciences Volume 45 ; 45 >
-    au < manifest ; 1989 ; Journal of the Atmospheric Sciences Volume 46 ; 46 >
-    au < manifest ; 1990 ; Journal of the Atmospheric Sciences Volume 47 ; 47 >
-    au < manifest ; 1991 ; Journal of the Atmospheric Sciences Volume 48 ; 48 >
-    au < manifest ; 1992 ; Journal of the Atmospheric Sciences Volume 49 ; 49 >
-    au < manifest ; 1993 ; Journal of the Atmospheric Sciences Volume 50 ; 50 >
-    au < manifest ; 1994 ; Journal of the Atmospheric Sciences Volume 51 ; 51 >
-    au < manifest ; 1995 ; Journal of the Atmospheric Sciences Volume 52 ; 52 >
-    au < manifest ; 1996 ; Journal of the Atmospheric Sciences Volume 53 ; 53 >
-    au < manifest ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 >
-    au < manifest ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 >
-    au < manifest ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 >
+    au < testing ; 1983 ; Journal of the Atmospheric Sciences Volume 40 ; 40 >
+    au < testing ; 1984 ; Journal of the Atmospheric Sciences Volume 41 ; 41 >
+    au < testing ; 1985 ; Journal of the Atmospheric Sciences Volume 42 ; 42 >
+    au < testing ; 1986 ; Journal of the Atmospheric Sciences Volume 43 ; 43 >
+    au < testing ; 1987 ; Journal of the Atmospheric Sciences Volume 44 ; 44 >
+    au < testing ; 1988 ; Journal of the Atmospheric Sciences Volume 45 ; 45 >
+    au < testing ; 1989 ; Journal of the Atmospheric Sciences Volume 46 ; 46 >
+    au < testing ; 1990 ; Journal of the Atmospheric Sciences Volume 47 ; 47 >
+    au < testing ; 1991 ; Journal of the Atmospheric Sciences Volume 48 ; 48 >
+    au < testing ; 1992 ; Journal of the Atmospheric Sciences Volume 49 ; 49 >
+    au < testing ; 1993 ; Journal of the Atmospheric Sciences Volume 50 ; 50 >
+    au < testing ; 1994 ; Journal of the Atmospheric Sciences Volume 51 ; 51 >
+    au < testing ; 1995 ; Journal of the Atmospheric Sciences Volume 52 ; 52 >
+    au < testing ; 1996 ; Journal of the Atmospheric Sciences Volume 53 ; 53 >
+    au < testing ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 >
+    au < testing ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 >
+    au < testing ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 >
     au < testing ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
     au < testing ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
-    au < testing ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
+    au < ready ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
     au < testing ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 >
     au < testing ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
     au < released ; 2005 ; Journal of the Atmospheric Sciences Volume 62 ; 62 >
@@ -528,15 +527,15 @@
     
     param[journal_id] = mwre
     
-    au < manifest ; 1872 ; Monthly Weather Review Volume 0 ; 0 >  
-    au < manifest ; 1873 ; Monthly Weather Review Volume 1 ; 1 >  
-    au < manifest ; 1874 ; Monthly Weather Review Volume 2 ; 2 >  
-    au < manifest ; 1875 ; Monthly Weather Review Volume 3 ; 3 >  
-    au < manifest ; 1876 ; Monthly Weather Review Volume 4 ; 4 >  
-    au < manifest ; 1877 ; Monthly Weather Review Volume 5 ; 5 >  
-    au < manifest ; 1878 ; Monthly Weather Review Volume 6 ; 6 >  
-    au < manifest ; 1879 ; Monthly Weather Review Volume 7 ; 7 >  
-    au < manifest ; 1880 ; Monthly Weather Review Volume 8 ; 8 >  
+    au < manifest ; 1872 ; Monthly Weather Review Volume 0 ; 0 >
+    au < manifest ; 1873 ; Monthly Weather Review Volume 1 ; 1 >
+    au < manifest ; 1874 ; Monthly Weather Review Volume 2 ; 2 >
+    au < manifest ; 1875 ; Monthly Weather Review Volume 3 ; 3 >
+    au < manifest ; 1876 ; Monthly Weather Review Volume 4 ; 4 >
+    au < manifest ; 1877 ; Monthly Weather Review Volume 5 ; 5 >
+    au < manifest ; 1878 ; Monthly Weather Review Volume 6 ; 6 >
+    au < manifest ; 1879 ; Monthly Weather Review Volume 7 ; 7 >
+    au < manifest ; 1880 ; Monthly Weather Review Volume 8 ; 8 >
     au < manifest ; 1881 ; Monthly Weather Review Volume 9 ; 9 >
     au < manifest ; 1882 ; Monthly Weather Review Volume 10 ; 10 >
     au < manifest ; 1883 ; Monthly Weather Review Volume 11 ; 11 >
@@ -606,37 +605,37 @@
     au < manifest ; 1947 ; Monthly Weather Review Volume 75 ; 75 >
     au < manifest ; 1948 ; Monthly Weather Review Volume 76 ; 76 >
     au < manifest ; 1949 ; Monthly Weather Review Volume 77 ; 77 >
-    au < manifest ; 1950 ; Monthly Weather Review Volume 78 ; 78 >
-    au < manifest ; 1951 ; Monthly Weather Review Volume 79 ; 79 >
-    au < manifest ; 1952 ; Monthly Weather Review Volume 80 ; 80 >
-    au < manifest ; 1953 ; Monthly Weather Review Volume 81 ; 81 >
-    au < manifest ; 1954 ; Monthly Weather Review Volume 82 ; 82 >
-    au < manifest ; 1955 ; Monthly Weather Review Volume 83 ; 83 >
-    au < manifest ; 1956 ; Monthly Weather Review Volume 84 ; 84 >
-    au < manifest ; 1957 ; Monthly Weather Review Volume 85 ; 85 >
-    au < manifest ; 1958 ; Monthly Weather Review Volume 86 ; 86 >
-    au < manifest ; 1959 ; Monthly Weather Review Volume 87 ; 87 >
-    au < manifest ; 1960 ; Monthly Weather Review Volume 88 ; 88 >
-    au < manifest ; 1961 ; Monthly Weather Review Volume 89 ; 89 >
-    au < manifest ; 1962 ; Monthly Weather Review Volume 90 ; 90 >
-    au < manifest ; 1963 ; Monthly Weather Review Volume 91 ; 91 >
-    au < manifest ; 1964 ; Monthly Weather Review Volume 92 ; 92 >
-    au < manifest ; 1965 ; Monthly Weather Review Volume 93 ; 93 >
-    au < manifest ; 1966 ; Monthly Weather Review Volume 94 ; 94 >
-    au < manifest ; 1967 ; Monthly Weather Review Volume 95 ; 95 >
-    au < manifest ; 1968 ; Monthly Weather Review Volume 96 ; 96 >
-    au < manifest ; 1969 ; Monthly Weather Review Volume 97 ; 97 >
+    au < testing ; 1950 ; Monthly Weather Review Volume 78 ; 78 >
+    au < testing ; 1951 ; Monthly Weather Review Volume 79 ; 79 >
+    au < testing ; 1952 ; Monthly Weather Review Volume 80 ; 80 >
+    au < testing ; 1953 ; Monthly Weather Review Volume 81 ; 81 >
+    au < testing ; 1954 ; Monthly Weather Review Volume 82 ; 82 >
+    au < testing ; 1955 ; Monthly Weather Review Volume 83 ; 83 >
+    au < testing ; 1956 ; Monthly Weather Review Volume 84 ; 84 >
+    au < testing ; 1957 ; Monthly Weather Review Volume 85 ; 85 >
+    au < testing ; 1958 ; Monthly Weather Review Volume 86 ; 86 >
+    au < testing ; 1959 ; Monthly Weather Review Volume 87 ; 87 >
+    au < testing ; 1960 ; Monthly Weather Review Volume 88 ; 88 >
+    au < testing ; 1961 ; Monthly Weather Review Volume 89 ; 89 >
+    au < testing ; 1962 ; Monthly Weather Review Volume 90 ; 90 >
+    au < testing ; 1963 ; Monthly Weather Review Volume 91 ; 91 >
+    au < testing ; 1964 ; Monthly Weather Review Volume 92 ; 92 >
+    au < testing ; 1965 ; Monthly Weather Review Volume 93 ; 93 >
+    au < testing ; 1966 ; Monthly Weather Review Volume 94 ; 94 >
+    au < testing ; 1967 ; Monthly Weather Review Volume 95 ; 95 >
+    au < testing ; 1968 ; Monthly Weather Review Volume 96 ; 96 >
+    au < testing ; 1969 ; Monthly Weather Review Volume 97 ; 97 >
     au < testing ; 1970 ; Monthly Weather Review Volume 98 ; 98 >
     au < testing ; 1971 ; Monthly Weather Review Volume 99 ; 99 >
     au < testing ; 1972 ; Monthly Weather Review Volume 100 ; 100 >
     au < testing ; 1973 ; Monthly Weather Review Volume 101 ; 101 >
-    au < testing ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
-    au < testing ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
-    au < testing ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
-    au < testing ; 1977 ; Monthly Weather Review Volume 105 ; 105 >
-    au < testing ; 1978 ; Monthly Weather Review Volume 106 ; 106 >
-    au < testing ; 1979 ; Monthly Weather Review Volume 107 ; 107 >
-    au < testing ; 1980 ; Monthly Weather Review Volume 108 ; 108 >
+    au < ready ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
+    au < ready ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
+    au < ready ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
+    au < ready ; 1977 ; Monthly Weather Review Volume 105 ; 105 >
+    au < ready ; 1978 ; Monthly Weather Review Volume 106 ; 106 >
+    au < ready ; 1979 ; Monthly Weather Review Volume 107 ; 107 >
+    au < ready ; 1980 ; Monthly Weather Review Volume 108 ; 108 >
     au < testing ; 1981 ; Monthly Weather Review Volume 109 ; 109 >
     au < testing ; 1982 ; Monthly Weather Review Volume 110 ; 110 >
     au < testing ; 1983 ; Monthly Weather Review Volume 111 ; 111 >
