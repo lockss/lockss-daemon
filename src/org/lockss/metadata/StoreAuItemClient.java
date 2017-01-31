@@ -79,18 +79,6 @@ public class StoreAuItemClient {
       log.debug3(DEBUG_HEADER + "password = '" + password + "'");
 
     // Make the request to the REST service and get its response.
-//    Response result = new ResteasyClientBuilder()
-//	.register(JacksonJsonProvider.class)
-//	.establishConnectionTimeout(timeoutValue, TimeUnit.SECONDS)
-//	.socketTimeout(timeoutValue, TimeUnit.SECONDS).build()
-//	.target(restServiceLocation)
-//	.register(new BasicAuthentication(userName, password))
-//	//.path("aus").request()
-//	.request()
-//	.post(Entity.entity(item, MediaType.APPLICATION_JSON_TYPE));
-//    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
-//
-//    Long mdItemSeq = (Long)result.getEntity();
     Long mdItemSeq = new ResteasyClientBuilder()
 	.register(JacksonJsonProvider.class)
 	.establishConnectionTimeout(timeoutValue, TimeUnit.SECONDS)
