@@ -336,14 +336,8 @@ public class ParticipantUserData implements LockssSerializable {
   /** A VoteCounts that maintains collections of the agreeing, disagreeing,
    * etc., URLs.  It accurately tracks updates due to repairs, */
   public class VoteCountsUrls extends VoteCounts {
+
     private long neitherVotes;
-
-    // weighted agree, etc., counts
-    private float wAgreed;
-    private float wDisagreed;
-    private float wPollerOnly;
-    private float wVoterOnly;
-
     private Collection<String> agreedUrls;
     private Collection<String> disagreedUrls;
     private Collection<String> pollerOnlyUrls;

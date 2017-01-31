@@ -149,7 +149,7 @@ public class ProxyManager extends BaseProxyManager {
    * using Jetty's mechanism.  Setting this false ensures that files
    * without Content-Type won't inadvertently get one when transferred to
    * another cache using the audit proxy. */
-  public static final String PARAM_INFER_MIME_TYPE = PREFIX + "inforeMimeType";
+  public static final String PARAM_INFER_MIME_TYPE = PREFIX + "inferMimeType";
   public static final boolean DEFAULT_INFER_MIME_TYPE = true;
 
   /** Determines whether the proxy interprets a {@value

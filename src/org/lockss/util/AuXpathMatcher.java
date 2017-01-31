@@ -46,8 +46,8 @@ import org.lockss.plugin.*;
  * <li><code>[name='AuName']</code> - True if the AU name is "AuName"</li>
  * <li><code>[year >= 1996 and year <= 2005]</code> - True if the year (see
  * below) is between 1996 and 2005</li>
- * <li><code>[RE:isMatchRe(tdbAu/journalTitle, '^JAMA")]</code> - True if the journal title starts with "JAMA"</li>
- * <li><code>[RE:isMatchRe(tdbAu/params/base_url, '\.univ\.edu/(path1|path2)")]</code> - True if the base_url config param matches the regexp</li>
+ * <li><code>[RE:isMatchRe(tdbAu/journalTitle, '^JAMA')]</code> - True if the journal title starts with "JAMA"</li>
+ * <li><code>[RE:isMatchRe(tdbAu/params/base_url, '\.univ\.edu/(path1|path2)')]</code> - True if the base_url config param matches the regexp</li>
  * </ul><br>
  * Expressions may access the tdb attribute and AU config param maps,
  * various scalar data and a number of convenience accessors.  For a
@@ -100,19 +100,14 @@ public class AuXpathMatcher {
     expr = JXPathContext.compile("." + xpath);
   }
 
+  /** Return true if the XPath predicate returns true when applied to the
+   * AU */
   public boolean isMatch(ArchivalUnit au) {
     return isMatch(new AuXpathAccessor(au));
    }
  
-  public Object eval(ArchivalUnit au) {
-    return eval(new AuXpathAccessor(au));
-   }
- 
-  public Object eval(AuXpathAccessor auxa) {
-    JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
-    return context.getValue("" + xpath.substring(1, xpath.length()-1));
-  }
-
+  /** Return true if the XPath predicate returns true when applied to the
+   * AU */
   public boolean isMatch(AuXpathAccessor auxa) {
     JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
     Iterator iter = expr.iteratePointers(context);
@@ -143,6 +138,17 @@ public class AuXpathMatcher {
     sb.append(xpath);
     sb.append("]");
     return sb.toString();
+  }
+
+  /** Return the object located by the XPath.  Useful for debugging. */
+  public Object eval(ArchivalUnit au) {
+    return eval(new AuXpathAccessor(au));
+   }
+ 
+  /** Return the object located by the XPath.  Useful for debugging. */
+  public Object eval(AuXpathAccessor auxa) {
+    JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
+    return context.getValue("" + xpath.substring(1, xpath.length()-1));
   }
 
   /** Factory method to create an AuXpathMatcher */
