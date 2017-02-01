@@ -35,8 +35,6 @@ package org.lockss.plugin.silverchair.ama;
 import java.io.*;
 import java.util.Arrays;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
@@ -47,48 +45,49 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
-public class ScAMAHtmlHashFilterFactory implements FilterFactory {
+public class AmaScHtmlHashFilterFactory implements FilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
-   * SPIE = SPIE (http://spiedigitallibrary.org/)
    */
-  private static final Logger log = Logger.getLogger(ScAMAHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(AmaScHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-
+    
     InputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
       new HtmlCompoundTransform(
-    	  HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "resourceTypeList-OUP_Issue"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
-              HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
+          HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-content"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-(-info|group)"),
           })),
-      
-    	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comments"),
-    	  }))
+          HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent|WidgetLoader))"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(nav|(artmet|login)-modal|social-share)"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(cme-info|no-access|reference|related|ymal)"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(metrics|(reference|related)-tab|register)"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(badges|movable-ad|sidebar)"),
+              HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
+              HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
+              HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comments"),
+              HtmlNodeFilters.tag("script"),
+          }))
       )
     );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
-
     // Remove all inner tag content
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
-    
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
     // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
-    InputStream ret =  new ReaderInputStream(new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis"));
+    Reader sepsisFilter = new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis");
+    InputStream ret = new ReaderInputStream(whiteSpaceFilter);
     return ret;
-    // Instrumentation
   }
 }

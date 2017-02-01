@@ -42,7 +42,7 @@ import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 
-public class ScAMAHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class AmaScHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
   protected static final String KEY_PUBLICATION_ABBREV = "publication.abbrev";
   
@@ -72,6 +72,7 @@ public class ScAMAHtmlMetadataExtractorFactory implements FileMetadataExtractorF
     tagMap.put("citation_pdf_url", MetadataField.DC_FIELD_IDENTIFIER);
   }
   
+  // XXX Commented out due to open files from JsoupTagExtractor code
 //  @Override
 //  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 //                                                           String contentType)
@@ -83,6 +84,11 @@ public class ScAMAHtmlMetadataExtractorFactory implements FileMetadataExtractorF
 //        ArticleMetadata am = super.extract(target, cu);
 //        am.putRaw("extractor.type", "HTML");
 //        am.cook(tagMap);
+//        ArchivalUnit au = cu.getArchivalUnit();
+//        if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+//          url = cu.getUrl();
+//        }
+//        am.replace(MetadataField.FIELD_ACCESS_URL, url);
 //        return am;
 //      }
 //    };
@@ -102,6 +108,7 @@ public class ScAMAHtmlMetadataExtractorFactory implements FileMetadataExtractorF
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException {
       ArticleMetadata am = super.extract(target, cu);
+      am.putRaw("extractor.type", "HTML");
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
       ArchivalUnit au = cu.getArchivalUnit();

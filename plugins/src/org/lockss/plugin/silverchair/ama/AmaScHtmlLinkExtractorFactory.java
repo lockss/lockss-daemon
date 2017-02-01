@@ -42,18 +42,13 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-//import java.util.regex.Matcher;
-//import java.util.regex.Pattern;
-
-public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
-
-  private static final Logger logger = Logger.getLogger(ScAMAHtmlLinkExtractorFactory.class);
-
+public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
+  
+  private static final Logger logger = Logger.getLogger(AmaScHtmlLinkExtractorFactory.class);
+  
   private static final String ANCHOR_TAG = "a";
-
+  
   protected static final String AUTH_SEARCH_STR = "searchresults?author=";
-//  protected static final Pattern PATTERN_ARTICLE =
-//      Pattern.compile("journals/([^/]+)/(?fullarticle|article-abstract)/(\\d+)$", Pattern.CASE_INSENSITIVE);
   
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
@@ -61,27 +56,27 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
     registerExtractors(extractor);
     return extractor;
   }
-
+  
   /*
- *  For when it is insufficient to simply use a different link tag or script
- *  tag link extractor class, a child plugin can override this and register
- *  additional or alternate extractors
- */
+   *  For when it is insufficient to simply use a different link tag or script
+   *  tag link extractor class, a child plugin can override this and register
+   *  additional or alternate extractors
+   */
   protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
-
+    
     extractor.registerTagExtractor(ANCHOR_TAG,
                                    new ScAMAAnchorTagExtractor(new String[]{
                                        "href",
                                        "data-article-url",
                                        }));
   }
-
+  
   public static class ScAMAAnchorTagExtractor extends SimpleTagLinkExtractor {
-
+    
     public ScAMAAnchorTagExtractor(final String[] attrs) {
       super(attrs);
-  }
-
+    }
+    
     /**
      * Extract link(s) from this tag for attributes href, onclick, download.
      * We process each of the attributes in turn since more than one may be present.
@@ -98,16 +93,6 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
         if ((href != null) && !href.contains(AUTH_SEARCH_STR)) {
           JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
         }
-        
-//        Matcher hrefMat = PATTERN_ARTICLE.matcher(href);
-//        if (hrefMat.find()) {
-//          // http://jamanetwork.com/journals/jama/article-abstract/2480471
-//          // http://jamanetwork.com/journals/jama/downloadcitation/2480471?format=
-//          String baseUrl = au.getConfiguration().get("base_url");
-//          String url = baseUrl + "journals/" + hrefMat.group(1) + "/downloadcitation/" + hrefMat.group(2) + "?format=";
-//          logger.debug3("Generate citation URL: " + url);
-//          cb.foundLink(url);
-//        }
       }   // end <a href
       
       if (node.hasAttr("data-article-url")) {
@@ -116,7 +101,6 @@ public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
           cb.foundLink(url);
         }
       }
-      
     }
   }
 }

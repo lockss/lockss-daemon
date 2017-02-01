@@ -44,10 +44,10 @@ import org.lockss.plugin.*;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
-public class ScAMAArticleIteratorFactory
+public class AmaScArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger(ScAMAArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(AmaScArticleIteratorFactory.class);
   
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%sjournals/%s/fullarticle/\\d+$\", base_url, journal_id";
@@ -81,48 +81,6 @@ public class ScAMAArticleIteratorFactory
     return builder.getSubTreeArticleIterator();
   }
   
-  /*  
-  //http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iii160001.pdf
-  //http://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2479062
-  //http://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2479062
-  //http://jamanetwork.com/journals/jamainternalmedicine/downloadcitation/2479062?format=
-
-  http://jamanetwork.com/journals/jamainternalmedicine/data/journals/intemed/934800/iic150063.pdf
-  http://amaprod.silverchaircdn.com/UI/app
-  http://jamanetwork.com/journals/jamainternalmedicine/issue/176/1
-  http://jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.5946
-  http://jamanetwork.com/article.aspx?doi=10.1001/jama.2015.17632
-  http://jamanetwork.com/data/Journals/INTEMED/934800/IOI150079supp1_prod.pdf
-  http://jamanetwork.com/pdfaccess.ashx?url=/data/journals/intemed/935017  (no routename)
-  http://jamanetwork.com/pdfaccess.ashx?url=/data/journals/intemed/934800/ioi150092supp1_prod.pdf
-  
-  http://archinte.jamanetwork.com/article.aspx?doi=10.1001/jamainternmed.2015.6324
-  http://jamanetwork.com/journals/jamainternalmedicine/downloadcitation/2472944?format=
-  http://jamanetwork.com/downloadimage.aspx?image=/data/Journals/INTEMED/935316/ioi160030t3.png&sec=126816453&ar=2520680&imagename=
-  learning/video-player/12889420
-  
-  http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
-  http://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
-  https://cdn.optimizely.com/js/2785501806.js (not collected)
-  http://jamanetwork.com/learning/article-quiz/ (not collected)
-  
-  <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
-  <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
-  <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-  <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
-  <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
-  <string>4,"^%s", base_url</string>
-  <string>2,"__EVENTVALIDATION="</string>
-  <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
-  <string>1,"^%s(article\.aspx\?articleid=|(downloadCitation|multimediaPlayer)\.aspx\?)", base_url</string>
-  <string>1,"^%sIssue\.aspx\?(.*&amp;journalid=%d|journalid=%d&amp;.*)$", base_url, resource_id, resource_id</string>
-  <string>1,"^%sdata/(Journals|Multimedia)/", base_url</string>
-  <string>1,"^%scombres\.axd/", base_url</string>
-  <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
-  <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
-  <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
-  <string>1,"^%sScriptResource\.axd\?d", base_url</string>
-  */
   protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
     return new SubTreeArticleIteratorBuilder(au) {
       

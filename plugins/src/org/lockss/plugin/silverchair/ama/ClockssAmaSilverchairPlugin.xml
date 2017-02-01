@@ -5,27 +5,27 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.silverchair.ama.ClockssScAMAJournalsPlugin</string>
+    <string>org.lockss.plugin.silverchair.ama.ClockssAmaSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAJournalsPlugin</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Silverchair AMA Journals Plugin (CLOCKSS)</string>
+    <string>American Medical Association Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair AMA Journals Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+    <string>"American Medical Association Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
   </entry>
   <entry>
     <string>clockss_override</string>
