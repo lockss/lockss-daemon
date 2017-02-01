@@ -126,8 +126,8 @@
       <string>1,"^%sjournals/%s/downloadcitation/[^?/]+\?format=$", base_url, journal_id</string>
       <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
       
-      <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string>
-      
+      <!--  Not collecting audio/video/interactive content
+      <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
       <!-- Found old style links in articles, if we want to preserve them... we need to either -->
       <!-- 1) get permission pages [bad idea] or 2) [bad idea], add to permitted hosts list -->
       <!-- <string>1,"^https?://([^.]+\.)?jamanetwork\.com/article\.aspx\?doi=10\.1001/"</string> -->
@@ -162,10 +162,10 @@
     <string>text/*_content_validator_factory</string>
     <string>org.lockss.plugin.silverchair.ScContentValidator$Factory</string>
   </entry>
-  <!-- entry>
+  <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
-  </entry> -->
+    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlHashFilterFactory</string>
+  </entry>
   <!-- entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
