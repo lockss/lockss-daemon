@@ -268,69 +268,25 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1543-8120
+      param[journal_id] = arbo.j
 
-      au < doNotProcess ; The Arabidopsis Book Volume 1 ; 1 >
-      au < doNotProcess ; The Arabidopsis Book Volume 2 ; 2 >
-      au < doNotProcess ; The Arabidopsis Book Volume 3 ; 3 >
-      au < doNotProcess ; The Arabidopsis Book Volume 4 ; 4 >
-      au < doNotProcess ; The Arabidopsis Book Volume 5 ; 5 >
-      au < doNotProcess ; The Arabidopsis Book Volume 6 ; 6 >
-      au < doNotProcess ; The Arabidopsis Book Volume 7 ; 7 >
-      au < doNotProcess ; The Arabidopsis Book Volume 8 ; 8 >
-      au < doNotProcess ; The Arabidopsis Book Volume 9 ; 9 >
-      au < doNotProcess ; The Arabidopsis Book Volume 10 ; 10 >
-      au < doNotProcess ; The Arabidopsis Book Volume 11 ; 11 >
-      au < doNotProcess ; The Arabidopsis Book Volume 12 ; 12 >
-      au < doNotProcess ; The Arabidopsis Book Volume 13 ; 13 >
-      au < doNotProcess ; The Arabidopsis Book Volume 14 ; 14 >
-      au < doNotProcess ; The Arabidopsis Book Volume 15 ; 15 >
-      au < doNotProcess ; The Arabidopsis Book Volume 16 ; 16 >
-      au < doNotProcess ; The Arabidopsis Book Volume 17 ; 17 >
-      au < doNotProcess ; The Arabidopsis Book Volume 18 ; 18 >
-      au < doNotProcess ; The Arabidopsis Book Volume 19 ; 19 >
-      au < doNotProcess ; The Arabidopsis Book Volume 20 ; 20 >
-      au < doNotProcess ; The Arabidopsis Book Volume 21 ; 21 >
-      au < doNotProcess ; The Arabidopsis Book Volume 22 ; 22 >
-      au < doNotProcess ; The Arabidopsis Book Volume 23 ; 23 >
-      au < doNotProcess ; The Arabidopsis Book Volume 24 ; 24 >
-      au < doNotProcess ; The Arabidopsis Book Volume 25 ; 25 >
-      au < doNotProcess ; The Arabidopsis Book Volume 26 ; 26 >
-      au < doNotProcess ; The Arabidopsis Book Volume 27 ; 27 >
-      au < doNotProcess ; The Arabidopsis Book Volume 28 ; 28 >
-      au < doNotProcess ; The Arabidopsis Book Volume 29 ; 29 >
-      au < doNotProcess ; The Arabidopsis Book Volume 30 ; 30 >
-      au < doNotProcess ; The Arabidopsis Book Volume 31 ; 31 >
-      au < doNotProcess ; The Arabidopsis Book Volume 32 ; 32 >
-      au < doNotProcess ; The Arabidopsis Book Volume 33 ; 33 >
-      au < doNotProcess ; The Arabidopsis Book Volume 34 ; 34 >
-      au < doNotProcess ; The Arabidopsis Book Volume 35 ; 35 >
-      au < doNotProcess ; The Arabidopsis Book Volume 36 ; 36 >
-      au < doNotProcess ; The Arabidopsis Book Volume 37 ; 37 >
-      au < doNotProcess ; The Arabidopsis Book Volume 38 ; 38 >
-      au < doNotProcess ; The Arabidopsis Book Volume 39 ; 39 >
-      au < doNotProcess ; The Arabidopsis Book Volume 40 ; 40 >
-      au < doNotProcess ; The Arabidopsis Book Volume 41 ; 41 >
-      au < doNotProcess ; The Arabidopsis Book Volume 42 ; 42 >
-      au < doNotProcess ; The Arabidopsis Book Volume 43 ; 43 >
-      au < doNotProcess ; The Arabidopsis Book Volume 44 ; 44 >
-      au < doNotProcess ; The Arabidopsis Book Volume 45 ; 45 >
-      au < doNotProcess ; The Arabidopsis Book Volume 46 ; 46 >
-      au < doNotProcess ; The Arabidopsis Book Volume 47 ; 47 >
-      au < doNotProcess ; The Arabidopsis Book Volume 48 ; 48 >
-      au < doNotProcess ; The Arabidopsis Book Volume 49 ; 49 >
-      au < doNotProcess ; The Arabidopsis Book Volume 50 ; 50 >
-      au < doNotProcess ; The Arabidopsis Book Volume 51 ; 51 >
-      au < doNotProcess ; The Arabidopsis Book Volume 52 ; 52 >
-      au < doNotProcess ; The Arabidopsis Book Volume 53 ; 53 >
-      au < doNotProcess ; The Arabidopsis Book Volume 54 ; 54 >
-      au < doNotProcess ; The Arabidopsis Book Volume 55 ; 55 >
-      au < doNotProcess ; The Arabidopsis Book Volume 56 ; 56 >
-      au < doNotProcess ; The Arabidopsis Book Volume 57 ; 57 >
-      au < doNotProcess ; The Arabidopsis Book Volume 58 ; 58 >
+      au < manifest ; 2002 ; The Arabidopsis Book Volume 1 ; 1 >
+      au < manifest ; 2003 ; The Arabidopsis Book Volume 2 ; 2 >
+      au < manifest ; 2004 ; The Arabidopsis Book Volume 3 ; 3 >
+      au < manifest ; 2006 ; The Arabidopsis Book Volume 4 ; 4 >
+      au < manifest ; 2007 ; The Arabidopsis Book Volume 5 ; 5 >
+      au < manifest ; 2008 ; The Arabidopsis Book Volume 6 ; 6 >
+      au < manifest ; 2009 ; The Arabidopsis Book Volume 7 ; 7 >
+      au < manifest ; 2010 ; The Arabidopsis Book Volume 8 ; 8 >
+      au < manifest ; 2011 ; The Arabidopsis Book Volume 9 ; 9 >
+      au < manifest ; 2012 ; The Arabidopsis Book Volume 10 ; 10 >
+      au < manifest ; 2013 ; The Arabidopsis Book Volume 11 ; 11 >
+      au < manifest ; 2014 ; The Arabidopsis Book Volume 12 ; 12 >
+      au < manifest ; 2015 ; The Arabidopsis Book Volume 13 ; 13 >
+      au < manifest ; 2016 ; The Arabidopsis Book Volume 14 ; 14 >
     }
 
   }

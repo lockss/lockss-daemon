@@ -1,0 +1,114 @@
+{
+  publisher <
+    name = American Society of Clinical Oncology [PENDING] ;
+    info[down] = pending
+  >
+
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    # waiting for this journal to move to clockss.
+    
+    #moving to Atypon October 2016
+    param[base_url] = http://ascopubs.org/
+
+  {
+    title <
+      name = Journal of Clinical Oncology ;
+      issn = 0732-183X ;
+      issnl = 0732-183X
+    >
+
+    {
+
+      #param[base_url] = http://jco.ascopubs.org/
+      param[journal_id] = jco
+
+      au < doNotProcess ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 >
+      au < doNotProcess ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 >
+      au < doNotProcess ; 1985 ; Journal of Clinical Oncology Volume 3 ; 3 >
+      au < doNotProcess ; 1986 ; Journal of Clinical Oncology Volume 4 ; 4 >
+      au < doNotProcess ; 1987 ; Journal of Clinical Oncology Volume 5 ; 5 >
+      au < doNotProcess ; 1988 ; Journal of Clinical Oncology Volume 6 ; 6 >
+      au < doNotProcess ; 1989 ; Journal of Clinical Oncology Volume 7 ; 7 >
+      au < doNotProcess ; 1990 ; Journal of Clinical Oncology Volume 8 ; 8 >
+      au < doNotProcess ; 1991 ; Journal of Clinical Oncology Volume 9 ; 9 >
+      au < doNotProcess ; 1992 ; Journal of Clinical Oncology Volume 10 ; 10 >
+      au < doNotProcess ; 1993 ; Journal of Clinical Oncology Volume 11 ; 11 >
+      au < doNotProcess ; 1994 ; Journal of Clinical Oncology Volume 12 ; 12 >
+      au < doNotProcess ; 1995 ; Journal of Clinical Oncology Volume 13 ; 13 >
+      au < doNotProcess ; 1996 ; Journal of Clinical Oncology Volume 14 ; 14 >
+      au < doNotProcess ; 1997 ; Journal of Clinical Oncology Volume 15 ; 15 >
+      au < doNotProcess ; 1998 ; Journal of Clinical Oncology Volume 16 ; 16 >
+      au < doNotProcess ; 1999 ; Journal of Clinical Oncology Volume 17 ; 17 >
+      au < doNotProcess ; 2000 ; Journal of Clinical Oncology Volume 18 ; 18 >
+      au < doNotProcess ; 2001 ; Journal of Clinical Oncology Volume 19 ; 19 >
+      au < doNotProcess ; 2002 ; Journal of Clinical Oncology Volume 20 ; 20 >
+      au < doNotProcess ; 2003 ; Journal of Clinical Oncology Volume 21 ; 21 >
+      au < doNotProcess ; 2004 ; Journal of Clinical Oncology Volume 22 ; 22 >
+      au < doNotProcess ; 2005 ; Journal of Clinical Oncology Volume 23 ; 23 >
+      au < doNotProcess ; 2006 ; Journal of Clinical Oncology Volume 24 ; 24 >
+      au < doNotProcess ; 2007 ; Journal of Clinical Oncology Volume 25 ; 25 >
+      au < doNotProcess ; 2008 ; Journal of Clinical Oncology Volume 26 ; 26 >
+      au < doNotProcess ; 2009 ; Journal of Clinical Oncology Volume 27 ; 27 >
+      au < doNotProcess ; 2010 ; Journal of Clinical Oncology Volume 28 ; 28 >
+      au < doNotProcess ; 2011 ; Journal of Clinical Oncology Volume 29 ; 29 >
+      au < doNotProcess ; 2012 ; Journal of Clinical Oncology Volume 30 ; 30 >
+      au < doNotProcess ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
+      au < doNotProcess ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
+      au < doNotProcess ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
+      au < exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Global Oncology ;
+      eissn = 2378-9506 ;
+      issnl = 2378-9506
+    >
+
+    {
+
+      #param[base_url] = http://jgo.ascopubs.org/ 
+      param[journal_id] = jgo
+
+      au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
+      au < exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Oncology Practice ;
+      issn = 1554-7477 ;
+      issnl = 1554-7477
+    >
+
+    {
+
+      #param[base_url] = http://jop.ascopubs.org/ 
+      param[journal_id] = jop
+
+      au < doNotProcess ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 >
+      au < doNotProcess ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 >
+      au < doNotProcess ; 2007 ; Journal of Oncology Practice Volume 3 ; 3 >
+      au < doNotProcess ; 2008 ; Journal of Oncology Practice Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Journal of Oncology Practice Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Journal of Oncology Practice Volume 6 ; 6 >
+      au < doNotProcess ; 2011 ; Journal of Oncology Practice Volume 7 ; 7 >
+      au < doNotProcess ; 2012 ; Journal of Oncology Practice Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 >
+      au < exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
+
+    }
+
+  }
+
+}
+

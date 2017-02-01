@@ -18,16 +18,16 @@
 
     param[base_url] = http://apt.rcpsych.org/
 
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 >
     au < HighWirePressPlugin ; down ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 >
     au < HighWirePressPlugin ; down ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 >
     au < HighWirePressPlugin ; down ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 >
@@ -37,8 +37,8 @@
     au < HighWirePressPlugin ; down ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Advances in Psychiatric Treatment Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Advances in Psychiatric Treatment Volume 19 ; 19 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2014 ; Advances in Psychiatric Treatment Volume 20 ; 20 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2015 ; Advances in Psychiatric Treatment Volume 21 ; 21 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2014 ; Advances in Psychiatric Treatment Volume 20 ; 20 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; Advances in Psychiatric Treatment Volume 21 ; 21 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; Advances in Psychiatric Treatment Volume 22 ; 22 >
 
   }
@@ -53,7 +53,7 @@
 
     param[base_url] = http://bjpo.rcpsych.org/
 
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2015 ; BJPsych Open Volume 1 ; 1 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; BJPsych Open Volume 1 ; 1 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; BJPsych Open Volume 2 ; 2 >
 
   }
@@ -69,190 +69,190 @@
 
     param[base_url] = http://bjp.rcpsych.org/
 
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1855-1856 ; The British Journal of Psychiatry Volume 2 ; 2 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1857 ; The British Journal of Psychiatry Volume 3 ; 3 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1858 ; The British Journal of Psychiatry Volume 4 ; 4 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1858-1859 ; The British Journal of Psychiatry Volume 5 ; 5 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1859-1860 ; The British Journal of Psychiatry Volume 6 ; 6 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1860-1862 ; The British Journal of Psychiatry Volume 7 ; 7 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1862-1863 ; The British Journal of Psychiatry Volume 8 ; 8 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1863-1864 ; The British Journal of Psychiatry Volume 9 ; 9 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1864-1865 ; The British Journal of Psychiatry Volume 10 ; 10 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1865-1866 ; The British Journal of Psychiatry Volume 11 ; 11 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1866-1867 ; The British Journal of Psychiatry Volume 12 ; 12 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1867 ; The British Journal of Psychiatry Volume 13 ; 13 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1868-1869 ; The British Journal of Psychiatry Volume 14 ; 14 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1855-1856 ; The British Journal of Psychiatry Volume 2 ; 2 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1857 ; The British Journal of Psychiatry Volume 3 ; 3 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1858 ; The British Journal of Psychiatry Volume 4 ; 4 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1858-1859 ; The British Journal of Psychiatry Volume 5 ; 5 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1859-1860 ; The British Journal of Psychiatry Volume 6 ; 6 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1860-1862 ; The British Journal of Psychiatry Volume 7 ; 7 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1862-1863 ; The British Journal of Psychiatry Volume 8 ; 8 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1863-1864 ; The British Journal of Psychiatry Volume 9 ; 9 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1864-1865 ; The British Journal of Psychiatry Volume 10 ; 10 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1865-1866 ; The British Journal of Psychiatry Volume 11 ; 11 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1866-1867 ; The British Journal of Psychiatry Volume 12 ; 12 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1867 ; The British Journal of Psychiatry Volume 13 ; 13 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1868-1869 ; The British Journal of Psychiatry Volume 14 ; 14 >
     au < rcpsych.RCPsychDrupalPlugin ; doesNotExist ; 1870 ; The British Journal of Psychiatry Volume 15 ; 15 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1870-1871 ; The British Journal of Psychiatry Volume 16 ; 16 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1871-1872 ; The British Journal of Psychiatry Volume 17 ; 17 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1872-1873 ; The British Journal of Psychiatry Volume 18 ; 18 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1873-1874 ; The British Journal of Psychiatry Volume 19 ; 19 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1874 ; The British Journal of Psychiatry Volume 20 ; 20 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1875-1876 ; The British Journal of Psychiatry Volume 21 ; 21 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1876-1877 ; The British Journal of Psychiatry Volume 22 ; 22 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1877-1878 ; The British Journal of Psychiatry Volume 23 ; 23 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1878-1879 ; The British Journal of Psychiatry Volume 24 ; 24 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1879-1880 ; The British Journal of Psychiatry Volume 25 ; 25 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1880-1881 ; The British Journal of Psychiatry Volume 26 ; 26 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1881 ; The British Journal of Psychiatry Volume 27 ; 27 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1882-1883 ; The British Journal of Psychiatry Volume 28 ; 28 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1883-1884 ; The British Journal of Psychiatry Volume 29 ; 29 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1884 ; The British Journal of Psychiatry Volume 30 ; 30 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1885-1886 ; The British Journal of Psychiatry Volume 31 ; 31 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1886-1887 ; The British Journal of Psychiatry Volume 32 ; 32 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1887-1888 ; The British Journal of Psychiatry Volume 33 ; 33 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1888-1889 ; The British Journal of Psychiatry Volume 34 ; 34 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1889 ; The British Journal of Psychiatry Volume 35 ; 35 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1890 ; The British Journal of Psychiatry Volume 36 ; 36 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1891 ; The British Journal of Psychiatry Volume 37 ; 37 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1892 ; The British Journal of Psychiatry Volume 38 ; 38 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1893 ; The British Journal of Psychiatry Volume 39 ; 39 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1894 ; The British Journal of Psychiatry Volume 40 ; 40 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1895 ; The British Journal of Psychiatry Volume 41 ; 41 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1896 ; The British Journal of Psychiatry Volume 42 ; 42 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1897 ; The British Journal of Psychiatry Volume 43 ; 43 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1898 ; The British Journal of Psychiatry Volume 44 ; 44 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1899 ; The British Journal of Psychiatry Volume 45 ; 45 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1900 ; The British Journal of Psychiatry Volume 46 ; 46 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1901 ; The British Journal of Psychiatry Volume 47 ; 47 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1902 ; The British Journal of Psychiatry Volume 48 ; 48 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1903 ; The British Journal of Psychiatry Volume 49 ; 49 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1904 ; The British Journal of Psychiatry Volume 50 ; 50 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1905 ; The British Journal of Psychiatry Volume 51 ; 51 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1906 ; The British Journal of Psychiatry Volume 52 ; 52 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1907 ; The British Journal of Psychiatry Volume 53 ; 53 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1908 ; The British Journal of Psychiatry Volume 54 ; 54 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1909 ; The British Journal of Psychiatry Volume 55 ; 55 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1910 ; The British Journal of Psychiatry Volume 56 ; 56 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1911 ; The British Journal of Psychiatry Volume 57 ; 57 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1912 ; The British Journal of Psychiatry Volume 58 ; 58 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1913 ; The British Journal of Psychiatry Volume 59 ; 59 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1914 ; The British Journal of Psychiatry Volume 60 ; 60 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1915 ; The British Journal of Psychiatry Volume 61 ; 61 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1916 ; The British Journal of Psychiatry Volume 62 ; 62 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1917 ; The British Journal of Psychiatry Volume 63 ; 63 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1918 ; The British Journal of Psychiatry Volume 64 ; 64 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1919 ; The British Journal of Psychiatry Volume 65 ; 65 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1920 ; The British Journal of Psychiatry Volume 66 ; 66 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1921 ; The British Journal of Psychiatry Volume 67 ; 67 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1922 ; The British Journal of Psychiatry Volume 68 ; 68 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1923 ; The British Journal of Psychiatry Volume 69 ; 69 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1924 ; The British Journal of Psychiatry Volume 70 ; 70 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1925 ; The British Journal of Psychiatry Volume 71 ; 71 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1926 ; The British Journal of Psychiatry Volume 72 ; 72 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1927 ; The British Journal of Psychiatry Volume 73 ; 73 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1928 ; The British Journal of Psychiatry Volume 74 ; 74 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1929 ; The British Journal of Psychiatry Volume 75 ; 75 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1930 ; The British Journal of Psychiatry Volume 76 ; 76 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1931 ; The British Journal of Psychiatry Volume 77 ; 77 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1932 ; The British Journal of Psychiatry Volume 78 ; 78 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1933 ; The British Journal of Psychiatry Volume 79 ; 79 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1934 ; The British Journal of Psychiatry Volume 80 ; 80 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1935 ; The British Journal of Psychiatry Volume 81 ; 81 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1936 ; The British Journal of Psychiatry Volume 82 ; 82 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1937 ; The British Journal of Psychiatry Volume 83 ; 83 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1938 ; The British Journal of Psychiatry Volume 84 ; 84 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1939 ; The British Journal of Psychiatry Volume 85 ; 85 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1940 ; The British Journal of Psychiatry Volume 86 ; 86 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1941 ; The British Journal of Psychiatry Volume 87 ; 87 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1942 ; The British Journal of Psychiatry Volume 88 ; 88 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1943 ; The British Journal of Psychiatry Volume 89 ; 89 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1944 ; The British Journal of Psychiatry Volume 90 ; 90 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1945 ; The British Journal of Psychiatry Volume 91 ; 91 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1946 ; The British Journal of Psychiatry Volume 92 ; 92 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1947 ; The British Journal of Psychiatry Volume 93 ; 93 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1948 ; The British Journal of Psychiatry Volume 94 ; 94 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1949 ; The British Journal of Psychiatry Volume 95 ; 95 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1950 ; The British Journal of Psychiatry Volume 96 ; 96 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1951 ; The British Journal of Psychiatry Volume 97 ; 97 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1952 ; The British Journal of Psychiatry Volume 98 ; 98 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1953 ; The British Journal of Psychiatry Volume 99 ; 99 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1954 ; The British Journal of Psychiatry Volume 100 ; 100 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1955 ; The British Journal of Psychiatry Volume 101 ; 101 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1956 ; The British Journal of Psychiatry Volume 102 ; 102 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1957 ; The British Journal of Psychiatry Volume 103 ; 103 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1958 ; The British Journal of Psychiatry Volume 104 ; 104 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1959 ; The British Journal of Psychiatry Volume 105 ; 105 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1960 ; The British Journal of Psychiatry Volume 106 ; 106 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1961 ; The British Journal of Psychiatry Volume 107 ; 107 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1962 ; The British Journal of Psychiatry Volume 108 ; 108 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1963 ; The British Journal of Psychiatry Volume 109 ; 109 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1964 ; The British Journal of Psychiatry Volume 110 ; 110 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1965 ; The British Journal of Psychiatry Volume 111 ; 111 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1966 ; The British Journal of Psychiatry Volume 112 ; 112 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1967 ; The British Journal of Psychiatry Volume 113 ; 113 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1968 ; The British Journal of Psychiatry Volume 114 ; 114 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1969 ; The British Journal of Psychiatry Volume 115 ; 115 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1970 ; The British Journal of Psychiatry Volume 116 ; 116 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1970 ; The British Journal of Psychiatry Volume 117 ; 117 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1971 ; The British Journal of Psychiatry Volume 118 ; 118 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1971 ; The British Journal of Psychiatry Volume 119 ; 119 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1972 ; The British Journal of Psychiatry Volume 120 ; 120 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1972 ; The British Journal of Psychiatry Volume 121 ; 121 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1973 ; The British Journal of Psychiatry Volume 122 ; 122 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1973 ; The British Journal of Psychiatry Volume 123 ; 123 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1974 ; The British Journal of Psychiatry Volume 124 ; 124 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1974 ; The British Journal of Psychiatry Volume 125 ; 125 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1975 ; The British Journal of Psychiatry Volume 126 ; 126 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1975 ; The British Journal of Psychiatry Volume 127 ; 127 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1976 ; The British Journal of Psychiatry Volume 128 ; 128 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1976 ; The British Journal of Psychiatry Volume 129 ; 129 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1977 ; The British Journal of Psychiatry Volume 130 ; 130 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1977 ; The British Journal of Psychiatry Volume 131 ; 131 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1978 ; The British Journal of Psychiatry Volume 132 ; 132 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1870-1871 ; The British Journal of Psychiatry Volume 16 ; 16 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1871-1872 ; The British Journal of Psychiatry Volume 17 ; 17 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1872-1873 ; The British Journal of Psychiatry Volume 18 ; 18 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1873-1874 ; The British Journal of Psychiatry Volume 19 ; 19 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1874 ; The British Journal of Psychiatry Volume 20 ; 20 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1875-1876 ; The British Journal of Psychiatry Volume 21 ; 21 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1876-1877 ; The British Journal of Psychiatry Volume 22 ; 22 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1877-1878 ; The British Journal of Psychiatry Volume 23 ; 23 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1878-1879 ; The British Journal of Psychiatry Volume 24 ; 24 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1879-1880 ; The British Journal of Psychiatry Volume 25 ; 25 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1880-1881 ; The British Journal of Psychiatry Volume 26 ; 26 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1881 ; The British Journal of Psychiatry Volume 27 ; 27 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1882-1883 ; The British Journal of Psychiatry Volume 28 ; 28 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1883-1884 ; The British Journal of Psychiatry Volume 29 ; 29 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1884 ; The British Journal of Psychiatry Volume 30 ; 30 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1885-1886 ; The British Journal of Psychiatry Volume 31 ; 31 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1886-1887 ; The British Journal of Psychiatry Volume 32 ; 32 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1887-1888 ; The British Journal of Psychiatry Volume 33 ; 33 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1888-1889 ; The British Journal of Psychiatry Volume 34 ; 34 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1889 ; The British Journal of Psychiatry Volume 35 ; 35 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1890 ; The British Journal of Psychiatry Volume 36 ; 36 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1891 ; The British Journal of Psychiatry Volume 37 ; 37 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1892 ; The British Journal of Psychiatry Volume 38 ; 38 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1893 ; The British Journal of Psychiatry Volume 39 ; 39 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1894 ; The British Journal of Psychiatry Volume 40 ; 40 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1895 ; The British Journal of Psychiatry Volume 41 ; 41 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1896 ; The British Journal of Psychiatry Volume 42 ; 42 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1897 ; The British Journal of Psychiatry Volume 43 ; 43 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1898 ; The British Journal of Psychiatry Volume 44 ; 44 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1899 ; The British Journal of Psychiatry Volume 45 ; 45 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1900 ; The British Journal of Psychiatry Volume 46 ; 46 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1901 ; The British Journal of Psychiatry Volume 47 ; 47 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1902 ; The British Journal of Psychiatry Volume 48 ; 48 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1903 ; The British Journal of Psychiatry Volume 49 ; 49 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1904 ; The British Journal of Psychiatry Volume 50 ; 50 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1905 ; The British Journal of Psychiatry Volume 51 ; 51 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1906 ; The British Journal of Psychiatry Volume 52 ; 52 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1907 ; The British Journal of Psychiatry Volume 53 ; 53 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1908 ; The British Journal of Psychiatry Volume 54 ; 54 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1909 ; The British Journal of Psychiatry Volume 55 ; 55 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1910 ; The British Journal of Psychiatry Volume 56 ; 56 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1911 ; The British Journal of Psychiatry Volume 57 ; 57 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1912 ; The British Journal of Psychiatry Volume 58 ; 58 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1913 ; The British Journal of Psychiatry Volume 59 ; 59 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1914 ; The British Journal of Psychiatry Volume 60 ; 60 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1915 ; The British Journal of Psychiatry Volume 61 ; 61 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1916 ; The British Journal of Psychiatry Volume 62 ; 62 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1917 ; The British Journal of Psychiatry Volume 63 ; 63 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1918 ; The British Journal of Psychiatry Volume 64 ; 64 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1919 ; The British Journal of Psychiatry Volume 65 ; 65 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1920 ; The British Journal of Psychiatry Volume 66 ; 66 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1921 ; The British Journal of Psychiatry Volume 67 ; 67 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1922 ; The British Journal of Psychiatry Volume 68 ; 68 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1923 ; The British Journal of Psychiatry Volume 69 ; 69 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1924 ; The British Journal of Psychiatry Volume 70 ; 70 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1925 ; The British Journal of Psychiatry Volume 71 ; 71 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1926 ; The British Journal of Psychiatry Volume 72 ; 72 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1927 ; The British Journal of Psychiatry Volume 73 ; 73 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1928 ; The British Journal of Psychiatry Volume 74 ; 74 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1929 ; The British Journal of Psychiatry Volume 75 ; 75 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1930 ; The British Journal of Psychiatry Volume 76 ; 76 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1931 ; The British Journal of Psychiatry Volume 77 ; 77 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1932 ; The British Journal of Psychiatry Volume 78 ; 78 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1933 ; The British Journal of Psychiatry Volume 79 ; 79 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1934 ; The British Journal of Psychiatry Volume 80 ; 80 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1935 ; The British Journal of Psychiatry Volume 81 ; 81 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1936 ; The British Journal of Psychiatry Volume 82 ; 82 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1937 ; The British Journal of Psychiatry Volume 83 ; 83 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1938 ; The British Journal of Psychiatry Volume 84 ; 84 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1939 ; The British Journal of Psychiatry Volume 85 ; 85 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1940 ; The British Journal of Psychiatry Volume 86 ; 86 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1941 ; The British Journal of Psychiatry Volume 87 ; 87 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1942 ; The British Journal of Psychiatry Volume 88 ; 88 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1943 ; The British Journal of Psychiatry Volume 89 ; 89 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1944 ; The British Journal of Psychiatry Volume 90 ; 90 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1945 ; The British Journal of Psychiatry Volume 91 ; 91 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1946 ; The British Journal of Psychiatry Volume 92 ; 92 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1947 ; The British Journal of Psychiatry Volume 93 ; 93 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1948 ; The British Journal of Psychiatry Volume 94 ; 94 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1949 ; The British Journal of Psychiatry Volume 95 ; 95 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1950 ; The British Journal of Psychiatry Volume 96 ; 96 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1951 ; The British Journal of Psychiatry Volume 97 ; 97 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1952 ; The British Journal of Psychiatry Volume 98 ; 98 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1953 ; The British Journal of Psychiatry Volume 99 ; 99 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1954 ; The British Journal of Psychiatry Volume 100 ; 100 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1955 ; The British Journal of Psychiatry Volume 101 ; 101 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1956 ; The British Journal of Psychiatry Volume 102 ; 102 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1957 ; The British Journal of Psychiatry Volume 103 ; 103 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1958 ; The British Journal of Psychiatry Volume 104 ; 104 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1959 ; The British Journal of Psychiatry Volume 105 ; 105 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1960 ; The British Journal of Psychiatry Volume 106 ; 106 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1961 ; The British Journal of Psychiatry Volume 107 ; 107 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1962 ; The British Journal of Psychiatry Volume 108 ; 108 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1963 ; The British Journal of Psychiatry Volume 109 ; 109 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1964 ; The British Journal of Psychiatry Volume 110 ; 110 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1965 ; The British Journal of Psychiatry Volume 111 ; 111 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1966 ; The British Journal of Psychiatry Volume 112 ; 112 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1967 ; The British Journal of Psychiatry Volume 113 ; 113 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1968 ; The British Journal of Psychiatry Volume 114 ; 114 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1969 ; The British Journal of Psychiatry Volume 115 ; 115 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1970 ; The British Journal of Psychiatry Volume 116 ; 116 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1970 ; The British Journal of Psychiatry Volume 117 ; 117 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1971 ; The British Journal of Psychiatry Volume 118 ; 118 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1971 ; The British Journal of Psychiatry Volume 119 ; 119 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1972 ; The British Journal of Psychiatry Volume 120 ; 120 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1972 ; The British Journal of Psychiatry Volume 121 ; 121 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1973 ; The British Journal of Psychiatry Volume 122 ; 122 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1973 ; The British Journal of Psychiatry Volume 123 ; 123 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1974 ; The British Journal of Psychiatry Volume 124 ; 124 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1974 ; The British Journal of Psychiatry Volume 125 ; 125 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1975 ; The British Journal of Psychiatry Volume 126 ; 126 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1975 ; The British Journal of Psychiatry Volume 127 ; 127 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1976 ; The British Journal of Psychiatry Volume 128 ; 128 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1976 ; The British Journal of Psychiatry Volume 129 ; 129 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1977 ; The British Journal of Psychiatry Volume 130 ; 130 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1977 ; The British Journal of Psychiatry Volume 131 ; 131 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1978 ; The British Journal of Psychiatry Volume 132 ; 132 >
     au < rcpsych.RCPsychDrupalPlugin ; exists ; 1978 ; The British Journal of Psychiatry Volume 133 ; 133 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1979 ; The British Journal of Psychiatry Volume 134 ; 134 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1979 ; The British Journal of Psychiatry Volume 135 ; 135 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1980 ; The British Journal of Psychiatry Volume 136 ; 136 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1980 ; The British Journal of Psychiatry Volume 137 ; 137 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1981 ; The British Journal of Psychiatry Volume 138 ; 138 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1981 ; The British Journal of Psychiatry Volume 139 ; 139 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1982 ; The British Journal of Psychiatry Volume 140 ; 140 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1982 ; The British Journal of Psychiatry Volume 141 ; 141 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1983 ; The British Journal of Psychiatry Volume 142 ; 142 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1983 ; The British Journal of Psychiatry Volume 143 ; 143 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1984 ; The British Journal of Psychiatry Volume 144 ; 144 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1984 ; The British Journal of Psychiatry Volume 145 ; 145 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1985 ; The British Journal of Psychiatry Volume 146 ; 146 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1985 ; The British Journal of Psychiatry Volume 147 ; 147 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1986 ; The British Journal of Psychiatry Volume 148 ; 148 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1986 ; The British Journal of Psychiatry Volume 149 ; 149 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1987 ; The British Journal of Psychiatry Volume 150 ; 150 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1987 ; The British Journal of Psychiatry Volume 151 ; 151 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1988 ; The British Journal of Psychiatry Volume 152 ; 152 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1988 ; The British Journal of Psychiatry Volume 153 ; 153 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1989 ; The British Journal of Psychiatry Volume 154 ; 154 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1989 ; The British Journal of Psychiatry Volume 155 ; 155 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1990 ; The British Journal of Psychiatry Volume 156 ; 156 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1990 ; The British Journal of Psychiatry Volume 157 ; 157 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1991 ; The British Journal of Psychiatry Volume 158 ; 158 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1991 ; The British Journal of Psychiatry Volume 159 ; 159 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1992 ; The British Journal of Psychiatry Volume 160 ; 160 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1992 ; The British Journal of Psychiatry Volume 161 ; 161 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1993 ; The British Journal of Psychiatry Volume 162 ; 162 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1993 ; The British Journal of Psychiatry Volume 163 ; 163 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1994 ; The British Journal of Psychiatry Volume 164 ; 164 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1994 ; The British Journal of Psychiatry Volume 165 ; 165 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1995 ; The British Journal of Psychiatry Volume 166 ; 166 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1995 ; The British Journal of Psychiatry Volume 167 ; 167 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1996 ; The British Journal of Psychiatry Volume 168 ; 168 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1996 ; The British Journal of Psychiatry Volume 169 ; 169 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1997 ; The British Journal of Psychiatry Volume 170 ; 170 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1997 ; The British Journal of Psychiatry Volume 171 ; 171 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1998 ; The British Journal of Psychiatry Volume 172 ; 172 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1998 ; The British Journal of Psychiatry Volume 173 ; 173 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1999 ; The British Journal of Psychiatry Volume 174 ; 174 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 1999 ; The British Journal of Psychiatry Volume 175 ; 175 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2000 ; The British Journal of Psychiatry Volume 176 ; 176 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2000 ; The British Journal of Psychiatry Volume 177 ; 177 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2001 ; The British Journal of Psychiatry Volume 178 ; 178 >
-    au < rcpsych.RCPsychDrupalPlugin ; notReady ; 2001 ; The British Journal of Psychiatry Volume 179 ; 179 > #URL MIME type mismatch
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2002 ; The British Journal of Psychiatry Volume 180 ; 180 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2002 ; The British Journal of Psychiatry Volume 181 ; 181 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2003 ; The British Journal of Psychiatry Volume 182 ; 182 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2003 ; The British Journal of Psychiatry Volume 183 ; 183 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2004 ; The British Journal of Psychiatry Volume 184 ; 184 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2004 ; The British Journal of Psychiatry Volume 185 ; 185 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1979 ; The British Journal of Psychiatry Volume 134 ; 134 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1979 ; The British Journal of Psychiatry Volume 135 ; 135 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1980 ; The British Journal of Psychiatry Volume 136 ; 136 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1980 ; The British Journal of Psychiatry Volume 137 ; 137 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1981 ; The British Journal of Psychiatry Volume 138 ; 138 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1981 ; The British Journal of Psychiatry Volume 139 ; 139 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1982 ; The British Journal of Psychiatry Volume 140 ; 140 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1982 ; The British Journal of Psychiatry Volume 141 ; 141 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1983 ; The British Journal of Psychiatry Volume 142 ; 142 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1983 ; The British Journal of Psychiatry Volume 143 ; 143 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1984 ; The British Journal of Psychiatry Volume 144 ; 144 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1984 ; The British Journal of Psychiatry Volume 145 ; 145 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1985 ; The British Journal of Psychiatry Volume 146 ; 146 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1985 ; The British Journal of Psychiatry Volume 147 ; 147 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1986 ; The British Journal of Psychiatry Volume 148 ; 148 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1986 ; The British Journal of Psychiatry Volume 149 ; 149 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1987 ; The British Journal of Psychiatry Volume 150 ; 150 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1987 ; The British Journal of Psychiatry Volume 151 ; 151 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1988 ; The British Journal of Psychiatry Volume 152 ; 152 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1988 ; The British Journal of Psychiatry Volume 153 ; 153 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1989 ; The British Journal of Psychiatry Volume 154 ; 154 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1989 ; The British Journal of Psychiatry Volume 155 ; 155 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1990 ; The British Journal of Psychiatry Volume 156 ; 156 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1990 ; The British Journal of Psychiatry Volume 157 ; 157 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1991 ; The British Journal of Psychiatry Volume 158 ; 158 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1991 ; The British Journal of Psychiatry Volume 159 ; 159 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1992 ; The British Journal of Psychiatry Volume 160 ; 160 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1992 ; The British Journal of Psychiatry Volume 161 ; 161 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1993 ; The British Journal of Psychiatry Volume 162 ; 162 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1993 ; The British Journal of Psychiatry Volume 163 ; 163 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1994 ; The British Journal of Psychiatry Volume 164 ; 164 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1994 ; The British Journal of Psychiatry Volume 165 ; 165 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1995 ; The British Journal of Psychiatry Volume 166 ; 166 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1995 ; The British Journal of Psychiatry Volume 167 ; 167 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1996 ; The British Journal of Psychiatry Volume 168 ; 168 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1996 ; The British Journal of Psychiatry Volume 169 ; 169 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1997 ; The British Journal of Psychiatry Volume 170 ; 170 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1997 ; The British Journal of Psychiatry Volume 171 ; 171 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1998 ; The British Journal of Psychiatry Volume 172 ; 172 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1998 ; The British Journal of Psychiatry Volume 173 ; 173 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1999 ; The British Journal of Psychiatry Volume 174 ; 174 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 1999 ; The British Journal of Psychiatry Volume 175 ; 175 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2000 ; The British Journal of Psychiatry Volume 176 ; 176 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2000 ; The British Journal of Psychiatry Volume 177 ; 177 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2001 ; The British Journal of Psychiatry Volume 178 ; 178 >
+    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2001 ; The British Journal of Psychiatry Volume 179 ; 179 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2002 ; The British Journal of Psychiatry Volume 180 ; 180 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2002 ; The British Journal of Psychiatry Volume 181 ; 181 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2003 ; The British Journal of Psychiatry Volume 182 ; 182 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2003 ; The British Journal of Psychiatry Volume 183 ; 183 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2004 ; The British Journal of Psychiatry Volume 184 ; 184 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2004 ; The British Journal of Psychiatry Volume 185 ; 185 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal of Psychiatry Volume 186 ; 186 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal of Psychiatry Volume 187 ; 187 >
     au < HighWireStrVolPlugin ; down ; 2006 ; The British Journal of Psychiatry Volume 188 ; 188 >
@@ -271,10 +271,10 @@
     au < HighWirePressH20Plugin ; down ; 2012 ; The British Journal of Psychiatry Volume 201 ; 201 >
     au < HighWirePressH20Plugin ; down ; 2013 ; The British Journal of Psychiatry Volume 202 ; 202 >
     au < HighWirePressH20Plugin ; down ; 2013 ; The British Journal of Psychiatry Volume 203 ; 203 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2014 ; The British Journal of Psychiatry Volume 204 ; 204 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2014 ; The British Journal of Psychiatry Volume 205 ; 205 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2014 ; The British Journal of Psychiatry Volume 204 ; 204 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2014 ; The British Journal of Psychiatry Volume 205 ; 205 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; The British Journal of Psychiatry Volume 208 ; 208 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; The British Journal of Psychiatry Volume 209 ; 209 >
 
@@ -328,8 +328,8 @@
     au < HighWirePressPlugin ; down ; 2011 ; The Psychiatrist Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Psychiatric Bulletin Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Psychiatric Bulletin Volume 37 ; 37 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2014 ; Psychiatric Bulletin Volume 38 ; 38 >
-    au < rcpsych.RCPsychDrupalPlugin ; ready ; 2015 ; Psychiatric Bulletin Volume 39 ; 39 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2014 ; Psychiatric Bulletin Volume 38 ; 38 >
+    au < rcpsych.RCPsychDrupalPlugin ; released ; 2015 ; Psychiatric Bulletin Volume 39 ; 39 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; Psychiatric Bulletin Volume 40 ; 40 >
   
   }

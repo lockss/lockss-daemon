@@ -41,6 +41,7 @@ import org.jsoup.select.Elements;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.HtmlUtil;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -118,9 +119,16 @@ public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
     }
     ArticleMetadata am_ret = new ArticleMetadata();
     if(cu.getContentSize() > 0) {
-      InputStream in = cu.getUncompressedInputStream();
-      // we pass in null for charset to determine from http-equiv meta selector
-      Document doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
+      InputStream in = null;
+      Document doc;
+      try {
+        in = cu.getUncompressedInputStream();
+        // we pass in null for charset to determine from http-equiv meta selector
+        doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
+      }
+      finally {
+        IOUtil.safeClose(in);
+      }
       if(m_isHtml && (m_selectors == null || m_selectors.isEmpty())) {
         // just use the default "meta" tag (backwards compatible)
         extractMetaTags(doc, am_ret);

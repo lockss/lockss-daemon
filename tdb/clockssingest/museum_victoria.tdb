@@ -18,7 +18,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
-    au < testing ; exists ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Memoirs of Museum Victoria WARC Content 2016 ; 2016 >
       
   }
 
@@ -31,7 +31,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
-    au < testing ; exists ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
+    au < readySource ; crawling ; 2016 ; Museum Victoria Science Reports WARC Content 2016 ; 2016 >
     
   }
   

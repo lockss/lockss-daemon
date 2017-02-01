@@ -1,10 +1,12 @@
 {
 
   publisher <
-    name = Now Publishers
+    name = Now Publishers [PENDING] ;
+    info[down] = pending
   >
   
   plugin = needs.plugin
+  #waiting for publisher to be added to clockss
 
   {
     title <

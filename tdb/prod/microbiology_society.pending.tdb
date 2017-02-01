@@ -1,7 +1,8 @@
 {
   publisher <
-    name = Microbiology Society ;
-    info[tester] = 5
+    name = Microbiology Society [PENDING] ;
+    info[tester] = 5 ;
+    info[down] = pending
   >
   
   # Formerly: Society for General Microbiology
@@ -40,8 +41,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -118,8 +118,7 @@
     }
 
     {  
-      #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -197,7 +196,6 @@
     
     {
       plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      #plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -380,8 +378,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
@@ -643,7 +640,6 @@
 
     {
       plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      #plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://jgv.microbiologyresearch.org/
       param[journal_id] = jgv
@@ -831,8 +827,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://jmm.microbiologyresearch.org/
       param[journal_id] = jmm
@@ -898,10 +893,10 @@
       au < doNotProcess ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
       au < doNotProcess ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 >
       au < doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
-      au < exists ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >
-      au < exists ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >
-      au < exists ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >
-      au < exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 >
+      au < manifest ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >
+      au < manifest ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >
+      au < manifest ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >
+      au < manifest ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 >
 
     }
 
@@ -916,7 +911,6 @@
     {
       rights = openaccess
       plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      #plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://jmmcr.microbiologyresearch.org/
       param[journal_id] = jmmcr
@@ -932,19 +926,18 @@
   {
     title <
       name = Microbial Genomics ;
-      eissn = 
+      eissn = 2057-5858
     >
 
     {
       rights = openaccess
-      #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
 
-      au < exists ; 2015 ; Microbial Genomics Volume 1 ; 1 >
-      au < expected ; 2016 ; Microbial Genomics Volume 2 ; 2 >
+      au < manifest ; 2015 ; Microbial Genomics Volume 1 ; 1 >
+      au < manifest ; 2016 ; Microbial Genomics Volume 2 ; 2 >
 
     }
 
@@ -992,7 +985,6 @@
       
     {
       plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-      #plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro

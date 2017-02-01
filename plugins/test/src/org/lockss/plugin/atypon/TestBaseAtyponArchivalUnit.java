@@ -565,6 +565,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://arc.aiaa.org/", null, 
         "org.lockss.plugin.atypon.aiaa.AIAAPlugin",
         "org.lockss.plugin.atypon.aiaa.ClockssAIAAPlugin");
+    testSpecificUserMsg("http://arc.aiaa.org/", null, 
+        "org.lockss.plugin.atypon.aiaa.AIAABooksPlugin",
+        "org.lockss.plugin.atypon.aiaa.ClockssAIAABooksPlugin");
     //asce - only a clockss plugin
     testSpecificUserMsg("http://ascelibrary.org/", null, 
         null,
@@ -592,15 +595,27 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     //emeraldgroup
     testSpecificUserMsg("http://www.emeraldinsight.com/", null, 
         "org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupPlugin",
-        null);
+        "org.lockss.plugin.atypon.emeraldgroup.ClockssEmeraldGroupPlugin");
+    //emeraldgroup
+    testSpecificUserMsg("http://www.emeraldinsight.com/", null, 
+        "org.lockss.plugin.atypon.emeraldgroup.EmeraldGroupBooksPlugin",
+        "org.lockss.plugin.atypon.emeraldgroup.ClockssEmeraldGroupBooksPlugin");
     //endocrine society
     testSpecificUserMsg("http://press.endocrine.org/", null, 
         "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyPlugin",
         "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin");
+    //endocrine society
+    testSpecificUserMsg("http://press.endocrine.org/", null, 
+        "org.lockss.plugin.atypon.endocrinesociety.EndocrineSocietyBooksPlugin",
+        "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin");
     //futurescience
     testSpecificUserMsg("http://www.future-science.com/", null,
         "org.lockss.plugin.atypon.futurescience.FutureSciencePlugin",
         "org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin");
+    //futurescience
+    testSpecificUserMsg("http://www.future-science.com/", null,
+        "org.lockss.plugin.atypon.futurescience.FutureScienceBooksPlugin",
+        "org.lockss.plugin.atypon.futurescience.ClockssFutureScienceBooksPlugin");
     //inderscience
     testSpecificUserMsg("http://www.inderscienceonline.com/", null, 
         "org.lockss.plugin.atypon.inderscience.IndersciencePlugin",
@@ -609,6 +624,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://online.liverpooluniversitypress.co.uk/", null, 
         "org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin",
         "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolJournalsPlugin");
+    //liverpool
+    testSpecificUserMsg("http://online.liverpooluniversitypress.co.uk/", null, 
+        "org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin",
+        "org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin");
     //maney
     testSpecificUserMsg("http://www.maneyonline.com/", null, 
         "org.lockss.plugin.atypon.maney.ManeyAtyponPlugin",
@@ -631,18 +650,34 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
         null,
         "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin");
+    //nrcresearch
+    testSpecificUserMsg("http://www.nrcresearchpress.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressBooksPlugin");
     //practicalaction
     testSpecificUserMsg("http://www.developmentbookshelf.com/", null, 
         null,
         "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionJournalsPlugin");    
+    //practicalaction
+    testSpecificUserMsg("http://www.developmentbookshelf.com/", null, 
+        null,
+        "org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionBooksPlugin");    
     //seg
     testSpecificUserMsg("http://library.seg.org/", null, 
         null,
         "org.lockss.plugin.atypon.seg.ClockssSEGPlugin");
+    //seg
+    testSpecificUserMsg("http://library.seg.org/", null, 
+        null,
+        "org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin");
     //siam
     testSpecificUserMsg("http://epubs.siam.org/", null, 
         "org.lockss.plugin.atypon.siam.SiamPlugin",
         "org.lockss.plugin.atypon.siam.ClockssSiamPlugin");
+    //siam
+    testSpecificUserMsg("http://epubs.siam.org/", null, 
+        "org.lockss.plugin.atypon.siam.SiamBooksPlugin",
+        "org.lockss.plugin.atypon.siam.ClockssSiamBooksPlugin");
 
     // and the ones that do not live below the atypon directory
     //bioone
@@ -659,8 +694,18 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin");
     //wageningen
     testSpecificUserMsg("http://www.wageningenacademic.com/", null, 
-        null,
-        "org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin");    
+        "org.lockss.plugin.atypon.wageningen.WageningenJournalsPlugin",
+        "org.lockss.plugin.atypon.wageningen.ClockssWageningenJournalsPlugin");
+    //wageningen books
+    testSpecificUserMsg("http://www.wageningenacademic.com/", null, 
+        "org.lockss.plugin.atypon.wageningen.WageningenBooksPlugin",
+        "org.lockss.plugin.atypon.wageningen.ClockssWageningenBooksPlugin");
+    //Sage on Atypon
+    testSpecificUserMsg("http://journals.sagepub.com/", null, 
+        "org.lockss.plugin.atypon.sage.SageAtyponJournalsPlugin",
+        "org.lockss.plugin.atypon.sage.ClockssSageAtyponJournalsPlugin");    
+    
+
   }
 
   // Associate the base_url with the publisher name for convenience
@@ -692,16 +737,26 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://www.euppublishing.com/", "Edinburgh University Press");
     pluginPubMap.put("http://www.tandfonline.com/", "Taylor & Francis");
     pluginPubMap.put("http://www.wageningenacademic.com/", "Wageningen Academic Publishers");
+    pluginPubMap.put("http://journals.sagepub.com/", "Sage Publications");
   }
 
 
   private void testSpecificUserMsg(String plugin_base_url, String full_msg, 
       String gln_plugin, String clockss_plugin) throws Exception {
 
+    
     Properties props = new Properties();
-    props.setProperty(VOL_KEY, Integer.toString(17));
-    props.setProperty(JID_KEY, "eint");
-    props.setProperty(BASE_URL_KEY, plugin_base_url);
+    if ((gln_plugin != null && gln_plugin.contains("Books")) ||
+          (clockss_plugin != null && clockss_plugin.contains("Books")) ) {
+      // set up a books plugin for testing
+      props.setProperty("book_eisbn", "9781780447636");
+      props.setProperty(BASE_URL_KEY, plugin_base_url);
+    } else {
+      props.setProperty(VOL_KEY, Integer.toString(17));
+      props.setProperty(JID_KEY, "eint");
+      props.setProperty(BASE_URL_KEY, plugin_base_url);
+    }
+    
     Configuration config = ConfigurationUtil.fromProps(props);
 
     if (!StringUtils.isEmpty(gln_plugin)) {

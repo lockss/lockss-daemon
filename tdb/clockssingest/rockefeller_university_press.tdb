@@ -220,9 +220,9 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 197 ; 197 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; The Journal of Cell Biology Volume 199 ; 199 ; >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; The Journal of Cell Biology Volume 200 ; 200 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Journal of Cell Biology Volume 200 ; 200 ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; The Journal of Cell Biology Volume 201 ; 201 ; reingest5.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; The Journal of Cell Biology Volume 202 ; 202 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Journal of Cell Biology Volume 202 ; 202 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; The Journal of Cell Biology Volume 203 ; 203 ; reingest5.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; The Journal of Cell Biology Volume 204 ; 204 ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; The Journal of Cell Biology Volume 205 ; 205 ; reingest1.clockss.org:8082 >
@@ -235,8 +235,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; The Journal of Cell Biology Volume 212 ; 212 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; The Journal of Cell Biology Volume 213 ; 213 ; reingest3.clockss.org:8083 >
     au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 2016 ; The Journal of Cell Biology Volume 214 ; 214 ; >
-    au < rup.ClockssRUPDrupalPlugin ; testing ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; >
-    au < rup.ClockssRUPDrupalPlugin ; expected ; exists ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; > #frequency changes to 1 vol/yr.
+    au < rup.ClockssRUPDrupalPlugin ; crawling ; exists ; 2016 ; The Journal of Cell Biology Volume 215 ; 215 ; >
+    au < rup.ClockssRUPDrupalPlugin ; manifest ; exists ; 2017 ; The Journal of Cell Biology Volume 216 ; 216 ; > #frequency changes to 1 vol/yr.
 
   }
 

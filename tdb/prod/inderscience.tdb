@@ -1697,7 +1697,7 @@
       param[journal_id] = ijcast
       # title is not yet published on 4/11/2013
 
-      au < expected ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < manifest ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -4088,7 +4088,7 @@
       au < doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
       au < released ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 >
       au < released ; 2015-2016 ; International Journal of Information and Coding Theory Volume 3 ; 3 >
-      au < expected ; 2016 ; International Journal of Information and Coding Theory Volume 4 ; 4 >
+      au < manifest ; 2016 ; International Journal of Information and Coding Theory Volume 4 ; 4 >
 
     }
 
@@ -5895,7 +5895,7 @@
       au < manifest ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 >
       au < released ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 >
+      au < manifest ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 >
 
     }
 
@@ -8383,7 +8383,7 @@
       au < doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
       au < released ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
       au < manifest ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
-      au < expected ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 >
+      au < manifest ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 >
 
     }
 

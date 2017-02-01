@@ -5887,11 +5887,11 @@
         au < manifest ; 2007 ; Calcutta Statistical Association Bulletin Volume 59 ; 59 >
         au < manifest ; 2008 ; Calcutta Statistical Association Bulletin Volume 60 ; 60 >
         au < manifest ; 2009 ; Calcutta Statistical Association Bulletin Volume 61 ; 61 >
-        au < ready ; 2010 ; Calcutta Statistical Association Bulletin Volume 62 ; 62 >
-        au < ready ; 2011 ; Calcutta Statistical Association Bulletin Volume 63 ; 63 >
-        au < ready ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 >
-        au < ready ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 >
-        au < ready ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 >
+        au < exists ; 2010 ; Calcutta Statistical Association Bulletin Volume 62 ; 62 >
+        au < exists ; 2011 ; Calcutta Statistical Association Bulletin Volume 63 ; 63 >
+        au < exists ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 >
+        au < exists ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 >
+        au < exists ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 >
 
     }
 
@@ -29390,7 +29390,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 >
         au < released ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 >
         au < released ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 >
-        au < ready ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 >
+        au < exists ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 >
 
       }
 
@@ -43151,7 +43151,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 >
+      au < exists ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 >
       au < manifest ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 >
 
     }

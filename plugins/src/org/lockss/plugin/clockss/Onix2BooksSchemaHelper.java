@@ -316,7 +316,8 @@ implements SourceXmlSchemaHelper {
         "ProductIdentifier[ProductIDType='15'] | productidentifier[b221='15']";
     private static final String ONIX_idtype_lccn =
         "ProductIdentifier[ProductIDType='13'] | productidentifier[b221='13']";
-    private static final String ONIX_idtype_doi =
+    // accessed for filename
+    public static final String ONIX_idtype_doi =
         "ProductIdentifier[ProductIDType='06'] | productidentifier[b221='06']";
     private static final String ONIX_product_title = "Title|title";
     private static final String ONIX_product_contrib = "Contributor|contributor";

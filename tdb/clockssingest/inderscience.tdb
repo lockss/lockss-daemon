@@ -1698,7 +1698,7 @@
 
       param[journal_id] = ijcast
 
-      au < expected ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
 
     }
 
@@ -3335,7 +3335,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 ; >
       au < finished ; finished ; 2015 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; International Journal of Experimental and Computational Biomechanics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Experimental and Computational Biomechanics Volume 4 ; 4 ; >
 
     }
 
@@ -4090,7 +4090,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 ; >
       au < finished ; finished ; 2011-2014 ; International Journal of Information and Coding Theory Volume 2 ; 2 ; >
       au < crawling ; exists ; 2015-2016 ; International Journal of Information and Coding Theory Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; International Journal of Information and Coding Theory Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Information and Coding Theory Volume 4 ; 4 ; >
 
     }
 
@@ -4155,7 +4155,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Information and Decision Sciences Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Information and Decision Sciences Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Information and Decision Sciences Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Information and Decision Sciences Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; International Journal of Information and Decision Sciences Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Information and Decision Sciences Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; International Journal of Information and Decision Sciences Volume 8 ; 8 ; >
 
@@ -5616,7 +5616,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Mathematics in Operational Research Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mathematics in Operational Research Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mathematics in Operational Research Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Mathematics in Operational Research Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; International Journal of Mathematics in Operational Research Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Mathematics in Operational Research Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 ; >
       au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 ; >
@@ -5901,7 +5901,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; >
 
     }
 
@@ -6894,7 +6894,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Quality Engineering and Technology Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2016 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 ; >
 
     }
 
@@ -8389,7 +8389,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; >
       # below au was incorrectly moved to production too early - take it down until year span over
       au < crawling ; down ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
-      au < expected ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
 
     }
 

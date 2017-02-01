@@ -2995,7 +2995,7 @@
     param[journal_id] = cmmi
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < expected ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 >
+    au < manifest ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 >
 
   }
 

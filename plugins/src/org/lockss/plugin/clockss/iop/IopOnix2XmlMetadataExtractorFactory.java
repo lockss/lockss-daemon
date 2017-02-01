@@ -69,22 +69,85 @@ public class IopOnix2XmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
     }
 
 
-    /* In this case, build up the filename the XML filename with .pdf
-     * Although this plugin could use the RecordReference string - this is easier
+    /* 
+     * This is a little horrible, but making it work. 
+     * 
+     * In this case, build up the filename the ISBN13 and ".pdf"
+     * but occasionally that doesn't find it, so the next fallback is to try
+     * the second half of the doi
+     * what makes this particularly tricky is that the publisher provides the
+     * PDF filename using the ISBN *with* the hyphens which is a tricky 
+     * proposition made trickier by their occasionally incorrect hyphen placement. 
+     * So we are going to brute force this by trying the three likely 
+     * combinations
+     * We will also ask them to begin providing PDF without hyphens in the future
+     * (If they do not, we may want to consider a keeping a static list of the
+     * files around with the hyphens stripped out available to each XML file
+     * during an extraction)
+     *
+     * In most cases, the isbn13 looks like this
+     * 9780750311441 (no hyphen) 
+
+     * In most cases the doi value is like this
+     * 10.1088/978-0-7503-1103-8
+     * But in some cases it looks like this:
+     * http://dx.doi.org/10.1088/978-0-750-31173-1
+     * in a few cases it looks like this
+     * http://dx.doi.org/10.1088/9780750312363  (no hyphens)
+     * but in all cases it has at least one slash
+     *
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-  
-      String record = oneAM.getRaw(helper.getFilenameXPathKey());
+      
+      String isbn13 = oneAM.getRaw(helper.getFilenameXPathKey());
+      String fullDOI = oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi); 
+      String doi_isbn13 = null;
+      if (fullDOI != null) {
+        doi_isbn13 = fullDOI.substring(fullDOI.lastIndexOf("/") + 1); 
+      }
+      
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       List<String> returnList = new ArrayList<String>();
-// need to add in the slashes in the correct location        
-      returnList.add(cuBase + record + ".pdf");
+      // need to add in the slashes in various locations... these are
+      // guesses specific to what IOP seems to be delivering which isn't always correct
+      if (isbn13 != null && isbn13.length() == 13) {
+        // try 3-1-4-4-1 and 3-1-3-5-1 of the isbn13 value
+        String startval = isbn13.substring(0,3) + "-" + isbn13.substring(3,4) + "-";
+        String endval = "-" + isbn13.substring(12,13);
+        String midvals1 =  isbn13.substring(4,8) + "-" + isbn13.substring(8,12);
+        String midvals2 =  isbn13.substring(4,7) + "-" + isbn13.substring(7,12);
+        returnList.add(cuBase + startval + midvals1 + endval + ".pdf");
+        returnList.add(cuBase + startval + midvals2 + endval + ".pdf");
+      }
+      if (doi_isbn13 != null) {
+        // and if the doi value has hyphens, just try what they gave us
+        if  (doi_isbn13.contains("-")) { 
+          returnList.add(cuBase + doi_isbn13 + ".pdf");
+        } else if (doi_isbn13.length() == 13){
+          // crud - a few cases where the doi didn't have hyphens...do it manually
+          // try 3-1-4-4-1 and 3-1-3-5-1 of the  value
+          String startval = doi_isbn13.substring(0,3) + "-" + doi_isbn13.substring(3,4) + "-";
+          String endval = "-" + doi_isbn13.substring(12,13);
+          String midvals1 =  doi_isbn13.substring(4,8) + "-" + doi_isbn13.substring(8,12);
+          String midvals2 =  doi_isbn13.substring(4,7) + "-" + doi_isbn13.substring(7,12);
+          returnList.add(cuBase + startval + midvals1 + endval + ".pdf");
+          returnList.add(cuBase + startval + midvals2 + endval + ".pdf");
+        }
+      }
+      // NOTE - what we haven't tried here is a differently spaced variant on 
+      // the hyphen version from the doi.
+      // and for future, use just the hyphenless value of each
+      returnList.add(cuBase + isbn13 + ".pdf");
+      if (doi_isbn13 != null) { 
+        String doi_isbn13_nohyphen = doi_isbn13.replace("-", "");
+        returnList.add(cuBase + doi_isbn13_nohyphen + ".pdf");
+      }
+      //log.debug3("RETURNLIST: " + returnList.toString());
       return returnList;
     }
-    
 
   }
 }

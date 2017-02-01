@@ -326,8 +326,8 @@
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
       au < crawling ; exists ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; >
-      au < ready ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
-      au < ready ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
+      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
+      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
 
   }
 
@@ -498,6 +498,20 @@
       au < finished ; finished ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Molecular BioSystems Volume 11 ; 11 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Molecular BioSystems Volume 12 ; 12 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Molecular Systems Design and Engineering ;
+      eissn = 2058-9689
+    >
+
+      param[journal_code] = me
+
+      au < exists ; exists ; 2016 ; Molecular Systems Design and Engineering Volume 1 ; 1 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Molecular Systems Design and Engineering Volume 2 ; 2 ; 2017 ; >
 
   }
 
@@ -690,6 +704,7 @@
 
       comment[years] = Published 1980-1993
       param[journal_code] = ap
+      #Same issn as next title block. So title is the same, but AU names are different.
 
       au < exists ; exists ; 1980 ; Analytical Proceedings Volume 17 ; 17 ; 1980 ; >
       au < exists ; exists ; 1981 ; Analytical Proceedings Volume 18 ; 18 ; 1981 ; >

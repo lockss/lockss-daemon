@@ -81,7 +81,7 @@
 
     param[journal_id] = ajgsup
 
-    au < testing ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
+    au < crawling ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
     au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; >
 
   }
@@ -422,7 +422,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 ; >
     au < crawling ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 ; >
     au < finished ; finished ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 ; >
     au < deepCrawl ; exists ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 ; >
     au < crawling ; exists ; 2016 ; British Journal of Cancer Volume 114 ; 2016 ; 114 ; >
@@ -690,7 +690,7 @@
     au < crawling ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 ; >
-    au < testing ; exists ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -912,7 +912,7 @@
     au < finished ; frozen ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 ; >
     au < finished ; finished ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 ; >
     au < deepCrawl ; exists ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 ; >
-    au < testing ; exists ; 2016 ; Genes and Immunity Volume 17 ; 2016 ; 17 ; >
+    au < ready ; exists ; 2016 ; Genes and Immunity Volume 17 ; 2016 ; 17 ; >
 
   }
 
@@ -1286,7 +1286,7 @@
     au < finished ; finished ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 ; >
     au < deepCrawl ; exists ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 ; >
-    au < testing ; exists ; 2016 ; International Journal of Obesity Supplements Volume 6 ; 2016 ; 6 ; >
+    au < notReady ; exists ; 2016 ; International Journal of Obesity Supplements Volume 6 ; 2016 ; 6 ; > #need fix to plugin, collect issues starting w S.
 
   }
 
@@ -1883,7 +1883,7 @@
     au < finished ; finished ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
     au < deepCrawl ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; >
-    au < testing ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -2434,9 +2434,9 @@
     au < crawling ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; >
     au < crawling ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; >
-    au < testing ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
-    au < testing ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
-    au < testing ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; >
+    au < crawling ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; >
 
   }
 
@@ -2809,7 +2809,7 @@
     au < crawling ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; >
-    au < testing ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; >
+    au < crawling ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; >
 
   }
 
@@ -3000,7 +3000,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 ; >
     au < deepCrawl ; exists ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 ; >
-    au < testing ; exists ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -3226,7 +3226,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; >
     au < finished ; finished ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
     au < deepCrawl ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
-    au < testing ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
+    au < crawling ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
 
   }
 
@@ -3690,7 +3690,7 @@
     au < frozen ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
     au < frozen ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
     au < crawling ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
-    au < testing ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
+    au < crawling ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
 
   }
 

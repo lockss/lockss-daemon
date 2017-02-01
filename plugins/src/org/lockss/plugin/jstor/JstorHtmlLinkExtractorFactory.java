@@ -3,7 +3,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jstor;
 
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
 import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 /* Jstor needs its own LinkExtractor so that it can generate a link
  * for citation download from the DOI information stored on TOC pages.
@@ -56,6 +61,10 @@ import org.lockss.util.Logger;
 public class JstorHtmlLinkExtractorFactory 
 implements LinkExtractorFactory {
 
+  Pattern SCRIPT_SRC_PAT = Pattern.compile("\\.src[ \t]*=[ \t]*[\"'][ \t]*(/[^ \t\"']*)[ \t]*[\"'][ \t]*;",
+      Pattern.CASE_INSENSITIVE);
+
+  
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
 
     // must turnon form processng which is off by default
@@ -63,6 +72,10 @@ implements LinkExtractorFactory {
   }
 
   public static class JstorHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
+    public static Pattern SCRIPT_SRC_PAT = Pattern.compile("\\.src[ \t]*=[ \t]*[\"'][ \t]*(/[^ \t\"']*)[ \t]*[\"'][ \t]*;",
+        Pattern.CASE_INSENSITIVE);
+
+    
     
     private static Logger log = Logger.getLogger(JstorHtmlLinkExtractor.class);
 
@@ -74,6 +87,8 @@ implements LinkExtractorFactory {
                                 Map<String, HtmlFormExtractor.FieldIterator>
                                     generators) {
       super(enableStats, processForms, restrictors, generators);
+      registerScriptTagExtractor();
+      
       // TODO Auto-generated constructor stub
     }
 
@@ -85,6 +100,26 @@ implements LinkExtractorFactory {
       log.debug3("Creating new JstorHtmlFormExtractor");
       return new JstorHtmlFormExtractor(au, cb, encoding,   getFormRestrictors(), getFormGenerators());
     }
+    
+    // This is needed by the Jstor Current Scholarship plugin to find the js support 
+    // at base_url/px/client/main.min.js
+    // in <script (function() {....s.src='/px/client/main.min.js'...
+    protected void registerScriptTagExtractor() {
+      registerTagExtractor("script", new ScriptTagLinkExtractor() {
+        @Override
+        public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+          String scriptHtml = ((Element)node).html();
+          if (!StringUtil.isNullString(scriptHtml)) {
+            Matcher mat = SCRIPT_SRC_PAT.matcher(scriptHtml);
+            if (mat.find()) {
+              cb.foundLink(mat.group(1));
+            }
+          }
+          super.tagBegin(node, au, cb);
+        }
+      });
+    }
+    
   }
 
 

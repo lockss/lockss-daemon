@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,9 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
+/*
+ * This pdf filter works for both legacy JSTOR and Jstor Current Scholarship
+ */
 public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
   
   private static final Logger logger = Logger.getLogger(JstorPdfFilterFactory.class);
@@ -167,5 +170,7 @@ public class JstorPdfFilterFactory extends ExtractingPdfFilterFactory {
       firstPage = false;
     }
   }
+  
+
 
 }
