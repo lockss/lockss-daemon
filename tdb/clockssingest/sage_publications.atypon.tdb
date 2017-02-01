@@ -10,7 +10,7 @@
   
   # Live on Atypon 1/1/2017. 
 
-  plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+  plugin = org.lockss.plugin.atypon.sage.ClockssSageAtyponJournalsPlugin
   param[base_url] = http://journals.sagepub.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[journal_id] ; hidden[proxy] >
 

@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAJournalsPlugin</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -35,7 +35,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Silverchair American Medical Association Journals Plugin</string>
+    <string>American Medical Association Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -80,7 +80,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair American Medical Association Journals Plugin, Base URL %s, Resource ID %d, Journal ID %s, Year %d", base_url, resource_id, journal_id, year</string>
+    <string>"American Medical Association Plugin, Base URL %s, Resource ID %d, Journal ID %s, Year %d", base_url, resource_id, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
