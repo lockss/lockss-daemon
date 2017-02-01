@@ -40,7 +40,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class ScAMAHtmlCrawlFilterFactory implements FilterFactory {
+public class AmaScHtmlCrawlFilterFactory implements FilterFactory {
 
   /*
    * XXX Not sure what this indicates, however, it is in the parent version

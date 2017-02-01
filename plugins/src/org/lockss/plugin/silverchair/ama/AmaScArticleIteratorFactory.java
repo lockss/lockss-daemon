@@ -44,10 +44,10 @@ import org.lockss.plugin.*;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
-public class ScAMAArticleIteratorFactory
+public class AmaScArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger(ScAMAArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(AmaScArticleIteratorFactory.class);
   
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%sjournals/%s/fullarticle/\\d+$\", base_url, journal_id";

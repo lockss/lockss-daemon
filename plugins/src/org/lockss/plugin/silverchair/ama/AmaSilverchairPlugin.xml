@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -135,11 +135,11 @@
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlHashFilterFactory</string>
   </entry>
   <!-- entry>
     <string>application/pdf_filter_factory</string>
@@ -179,24 +179,24 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.silverchair.ama.ScAMAHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ama.AmaScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.silverchair.ama.ScAMAUrlConsumerFactory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>

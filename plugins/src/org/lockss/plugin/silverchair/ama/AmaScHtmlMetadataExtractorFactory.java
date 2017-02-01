@@ -42,7 +42,7 @@ import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 
-public class ScAMAHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class AmaScHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
   protected static final String KEY_PUBLICATION_ABBREV = "publication.abbrev";
   

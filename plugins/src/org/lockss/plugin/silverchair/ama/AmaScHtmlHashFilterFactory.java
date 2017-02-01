@@ -45,12 +45,12 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
-public class ScAMAHtmlHashFilterFactory implements FilterFactory {
+public class AmaScHtmlHashFilterFactory implements FilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
    */
-  private static final Logger log = Logger.getLogger(ScAMAHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(AmaScHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(final ArchivalUnit au,

@@ -43,8 +43,8 @@ import org.lockss.util.Logger;
 /**
  * @since 1.68.0 with storeAtOrigUrl()
  */
-public class ScAMAUrlConsumerFactory implements UrlConsumerFactory {
-  private static final Logger log = Logger.getLogger(ScAMAUrlConsumerFactory.class);
+public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
+  private static final Logger log = Logger.getLogger(AmaScUrlConsumerFactory.class);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {

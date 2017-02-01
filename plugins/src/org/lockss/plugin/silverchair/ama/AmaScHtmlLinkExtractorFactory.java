@@ -42,9 +42,9 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class ScAMAHtmlLinkExtractorFactory implements LinkExtractorFactory {
+public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
   
-  private static final Logger logger = Logger.getLogger(ScAMAHtmlLinkExtractorFactory.class);
+  private static final Logger logger = Logger.getLogger(AmaScHtmlLinkExtractorFactory.class);
   
   private static final String ANCHOR_TAG = "a";
   
