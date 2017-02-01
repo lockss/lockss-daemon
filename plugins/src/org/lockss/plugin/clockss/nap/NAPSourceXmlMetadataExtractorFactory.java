@@ -69,7 +69,15 @@ public class NAPSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     }
 
     
-    // TODO - if we get full text XML without a matching pdf we must still emit
+    /*
+     * NOTE - NAP re-delivers the XML files multiple times with metadata updates
+     * These updates aren't bibliographic and we can ignore them. 
+     * It looks like we receive a lot more XML files than PDF files each year, but
+     * we handle the metadata and emit at the time of initial deposit and ignore later
+     * deliveries of the same xml filename.  See RT#4226 for information
+     * 
+     */
+    
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
