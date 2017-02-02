@@ -46,8 +46,8 @@ import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
 
-public class ScOUPHtmlHttpResponseHandler implements CacheResultHandler {
-  private static final Logger logger = Logger.getLogger(ScOUPHtmlHttpResponseHandler.class);
+public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
+  private static final Logger logger = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
   
   protected static final Pattern NON_FATAL_PAT = 
 	      Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff|pdf)$");

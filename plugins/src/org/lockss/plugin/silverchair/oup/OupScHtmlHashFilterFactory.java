@@ -32,55 +32,62 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.oup;
 
-import java.io.InputStream;
+import java.io.*;
+import java.util.Arrays;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
-public class ScOUPHtmlCrawlFilterFactory implements FilterFactory {
+public class OupScHtmlHashFilterFactory implements FilterFactory {
 
   /*
    * AMA = American Medical Association (http://jamanetwork.com/)
-   * Tabs 20151025
-   * 1=extract/abstract/article
-   * 2=discussion (w/i framework of article contents)
-   * 3=figures
-   * 4=tables
-   * 5=video
-   * 6=references
-   * 7=letters
-   * 8=cme
-   * 9=citing
-   * 10=comments
-   * 12=supplemental
    * SPIE = SPIE (http://spiedigitallibrary.org/)
-   * Tabs 20151025
-   * 1= extract/abstract/article
-   * 2=figures
-   * 3=tables
-   * 5=multimedia
-   * 6=references
-   *
    */
-
+  private static final Logger log = Logger.getLogger(OupScHtmlHashFilterFactory.class);
+  
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
+  public InputStream createFilteredInputStream(final ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return new HtmlFilterInputStream(
-    	//	<div id="resourceTypeList-OUP_Issue" class="article-list-resources">
+
+    InputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
+      new HtmlCompoundTransform(
+    	  HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-list-resources"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "resourceTypeList-OUP_Issue"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
+              HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
+          })),
+      
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-    	  })
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments"),
+    	  }))
       )
     );
-  }
+    
+    Reader reader = FilterUtil.getReader(filtered, encoding);
 
+    // Remove all inner tag content
+    // Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
+    
+    // Remove white space
+    Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
+    InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
+    return ret;
+    // Instrumentation
+  }
 }

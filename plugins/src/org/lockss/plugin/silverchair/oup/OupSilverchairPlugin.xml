@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.silverchair.oup.ScOUPPlugin</string>
+    <string>org.lockss.plugin.silverchair.oup.OupSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Silverchair Oxford University Press Plugin</string>
+    <string>Oxford University Press Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -66,7 +66,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Silverchair Oxford University Press Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Oxford University Press Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -78,8 +78,8 @@
       <!--  -->
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
       <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn|googleapis)\.com/|cdn\.mathjax\.org|ajax\.microsoft\.com|cdn\.jsdelivr\.net).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue|)/([0-9]+|doi)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue)/[0-9]+/", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
     </list>
   </entry>
@@ -107,27 +107,23 @@
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.ScOUPHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.silverchair.oup.ScOUPUrlNormalizer</string>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.oup.ScOUPHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silverchair.ScJournalsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/plain_metadata_extractor_factory_map</string>
@@ -159,8 +155,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>403=org.lockss.plugin.silverchair.oup.ScOUPHtmlHttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.oup.ScOUPHtmlHttpResponseHandler</string>
+      <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
@@ -170,23 +165,27 @@
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-	  <string>/ScriptResource\.axd\?d=[^/]+$</string>
+      <string>\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=[^?]+$</string>
+      <string>https?://oup\.silverchair-cdn\.com/cassette\.axd/.*(JS|CSS)$</string>
+	  <!--<string>/ScriptResource\.axd\?d=[^/]+$</string>
       <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
       <string>/multimediaPlayer.aspx\?</string>
       <string>/errors/404\.aspx\?aspxerrorpath=</string>
       <string>silverchaircdn\.com/(CSS|Images)/</string>
-      <string>"\?v=[0-9]+$"</string>
+      <string>"\?v=[0-9]+$"</string>-->
     </list>
   </entry>
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
+      <string>"\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=[^?]+$", 0</string>
+      <string>"https?://oup\.silverchair-cdn\.com/cassette\.axd/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
+      <!--<string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
       <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
       <string>"/multimediaPlayer.aspx\?", 0</string>
       <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
       <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
-      <string>"\?v=[0-9]+$", 0</string>
+      <string>"\?v=[0-9]+$", 0</string>-->
     </list>
   </entry> 
 </map>
