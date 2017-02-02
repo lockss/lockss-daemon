@@ -22,7 +22,7 @@
     >
 
     param[resource_id] = 184
-    param[journal_id] = cardiology
+    param[journal_id] = jamacardiology
     
     au < testing ; exists ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; >
   
@@ -38,7 +38,7 @@
     >
 
     param[resource_id] = 68
-    param[journal_id] = archderm
+    param[journal_id] = jamadermatology
     
     au < exists ; exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
@@ -58,7 +58,7 @@
     >
 
     param[resource_id] = 69
-    param[journal_id] = archfaci
+    param[journal_id] = jamafacialplasticsurgery
     
     au < exists ; exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; >
@@ -98,7 +98,7 @@
     >
 
     param[resource_id] = 72
-    param[journal_id] = archneur
+    param[journal_id] = jamaneurology
     
     au < exists ; exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; >
@@ -135,7 +135,7 @@
     >
 
     param[resource_id] = 73
-    param[journal_id] = archopht
+    param[journal_id] = jamaophthalmology
     
     au < exists ; exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; >
@@ -155,7 +155,7 @@
     >
 
     param[resource_id] = 74
-    param[journal_id] = archotol
+    param[journal_id] = jamaotolaryngology
     
     au < exists ; exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; >
@@ -175,7 +175,7 @@
     >
 
     param[resource_id] = 75
-    param[journal_id] = archpedi
+    param[journal_id] = jamapediatrics
     
     au < exists ; exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
@@ -195,7 +195,7 @@
     >
 
     param[resource_id] = 70
-    param[journal_id] = archpsyc
+    param[journal_id] = jamapsychiatry
     
     au < exists ; exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 ; >
     au < exists ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; >
@@ -215,7 +215,7 @@
 
     #JAMA Surgery started 2013. Continues Archives of Surgery years 1960-2012 issn 1538-3644
     param[resource_id] = 76
-    param[journal_id] = archsurg
+    param[journal_id] = jamasurgery
     
     au < testing ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; >
@@ -234,7 +234,7 @@
 
     #Archives of Surgery years 1960-2012 issn 1538-3644. After 2013: JAMA Surgery years 2013-present eissn 2168-6262. 
     param[resource_id] = 76
-    param[journal_id] = archsurg
+    param[journal_id] = jamasurgery
     
     au < exists ; exists ; 1922 ; Archives of Surgery Volume 5 ; 5 ; >
     au < exists ; exists ; 1922 ; Archives of Surgery Volume 6 ; 6 ; >
@@ -285,7 +285,7 @@
     au < exists ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; >
     au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; >
     au < exists ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; >
-    au < testing ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; >
+    au < testing ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 1957 ; >
 
   }
 

@@ -1472,8 +1472,8 @@
       comment[publisher] = University of California Press
       param[base_url] = http://collabra.org/
 
-      au < exists ; 2015 ; 1 ; COLLABRA Volume 1 ; 2015 >
-      au < exists ; 2016 ; 2 ; COLLABRA Volume 2 ; 2016 >
+      au < manifest ; 2015 ; 1 ; COLLABRA Volume 1 ; 2015 >
+      au < manifest ; 2016 ; 2 ; COLLABRA Volume 2 ; 2016 >
 
   }
 
