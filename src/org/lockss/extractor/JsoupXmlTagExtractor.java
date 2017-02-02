@@ -40,6 +40,7 @@ import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
@@ -109,9 +110,16 @@ public class JsoupXmlTagExtractor extends SimpleFileMetadataExtractor {
     }
     ArticleMetadata am_ret = new ArticleMetadata();
     if(cu.hasContent()) {
-      InputStream in = cu.getUncompressedInputStream();
-      Document doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
-      extractTags(doc, am_ret);
+      InputStream in = null;
+      try {
+        in = cu.getUncompressedInputStream();
+        // we pass in null for charset to determine from http-equiv meta selector
+        Document doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
+        extractTags(doc, am_ret);
+      }
+      finally {
+        IOUtil.safeClose(in);
+      }
     }
     return am_ret;
   }
