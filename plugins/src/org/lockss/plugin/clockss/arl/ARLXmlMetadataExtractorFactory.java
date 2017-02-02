@@ -102,7 +102,7 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 
       String filenameValue;
       if (helper == ArlOnixHelper) {
-         filenameValue = oneAM.getRaw("RecordReference") + ".pdf";
+         filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR) + ".pdf";
       } else {
         // JatsSet - this has a pdf on it already
         filenameValue = oneAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri);

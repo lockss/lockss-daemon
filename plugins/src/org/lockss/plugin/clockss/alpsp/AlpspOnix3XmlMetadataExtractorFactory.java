@@ -75,7 +75,7 @@ public class AlpspOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtr
         ArticleMetadata oneAM) {
 
 
-      String filenameValue = oneAM.getRaw("RecordReference");
+      String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       /* the filenames have spaces in them - which become %20 in the AU */
       String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + filenameValue + ".pdf"); 

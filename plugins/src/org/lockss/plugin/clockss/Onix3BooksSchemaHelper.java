@@ -47,7 +47,7 @@ import org.w3c.dom.NodeList;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
- *  Onix 3 currently only long-from tags which is all we've seen
+ *  Onix 3 both short and long form
  *  @author alexohlson
  */
 public class Onix3BooksSchemaHelper
@@ -78,7 +78,7 @@ implements SourceXmlSchemaHelper {
       NodeList childNodes = node.getChildNodes(); 
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m); 
-        if (infoNode.getNodeName().equals("IDValue")) {
+        if ( "IDValue".equals(infoNode.getNodeName()) | "b244".equals(infoNode.getNodeName())) {
           idVal = infoNode.getTextContent();
           break;
         }
@@ -118,16 +118,18 @@ implements SourceXmlSchemaHelper {
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         String nodeName = infoNode.getNodeName();
-        if ("ContributorRole".equals(nodeName)) {
+        if ("ContributorRole".equals(nodeName) || "b035".equals(nodeName) ) {
           auType = infoNode.getTextContent();
-        } else if ("NamesBeforeKey".equals(nodeName)) {
+        } else if ("NamesBeforeKey".equals(nodeName) || "b039".equals(nodeName)) {
           auBeforeKey = infoNode.getTextContent();
-        } else if ("KeyNames".equals(nodeName)) {
+        } else if ("KeyNames".equals(nodeName) || "b040".equals(nodeName)) {
           auKey = infoNode.getTextContent();
-        } else if ("PersonName".equals(nodeName)) {
+        } else if ("PersonName".equals(nodeName) || "b036".equals(nodeName)) {
           straightName = infoNode.getTextContent();
-        } else if ("PersonNameInverted".equals(nodeName)) {
+        } else if ("PersonNameInverted".equals(nodeName) || "b037".equals(nodeName)) {
           invertedName = infoNode.getTextContent();
+        } else if ("CorporateName".equals(nodeName) || "b047".equals(nodeName)) {
+          straightName = infoNode.getTextContent(); // organization, not person
         }
       }
       // We may choose to limit the type of roles, but not sure which yet
@@ -180,13 +182,13 @@ implements SourceXmlSchemaHelper {
       // look at each child of the TitleElement for information
       for (int j = 0; j < elementChildren.getLength(); j++) {
         Node checkNode = elementChildren.item(j);
-        if ("TitleText".equals(checkNode.getNodeName())) {
+        if ("TitleText".equals(checkNode.getNodeName()) || "b203".equals(checkNode.getNodeName())) {
           tTitle = checkNode.getTextContent();
-        } else if ("Subtitle".equals(checkNode.getNodeName())) {
+        } else if ("Subtitle".equals(checkNode.getNodeName()) || "b029".equals(checkNode.getNodeName())) {
           tSubtitle = checkNode.getTextContent();
-        } else if ("TitlePrefix".equals(checkNode.getNodeName())) {
+        } else if ("TitlePrefix".equals(checkNode.getNodeName()) || "b030".equals(checkNode.getNodeName())) {
           tPrefix = checkNode.getTextContent();
-        } else if ("TitleWithoutPrefix".equals(checkNode.getNodeName())) {
+        } else if ("TitleWithoutPrefix".equals(checkNode.getNodeName()) || "b031".equals(checkNode.getNodeName())) {
           tNoPrefix = checkNode.getTextContent();
         }
       }
@@ -236,18 +238,26 @@ implements SourceXmlSchemaHelper {
       String dDate = null;
 
       String RoleName = "PublishingDateRole";
-      if (!(node.getNodeName().equals("PublishingDate"))) {
+      String shortRoleName = "x448";
+      // short form is just all lower case
+      if (!(node.getNodeName().equalsIgnoreCase("PublishingDate"))) {
         RoleName = "MarketDateRole";
+        shortRoleName = "j408";
       }
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node childNode = childNodes.item(m);
-        if (childNode.getNodeName().equals(RoleName)) {
+        if ((childNode.getNodeName().equals(RoleName)) || childNode.getNodeName().equals(shortRoleName)){
           dRole = childNode.getTextContent();
-        } else if (childNode.getNodeName().equals("Date")) {
+        } else if ((childNode.getNodeName().equals("Date")) || childNode.getNodeName().equals("b306")) {
           dDate = childNode.getTextContent();
+          // get the format - try both short and long...
           dFormat = ((Element)childNode).getAttribute("dateformat");
           if ((dFormat == null) || dFormat.isEmpty()) {
-            dFormat = "00";
+            dFormat = ((Element)childNode).getAttribute("j260");
+            if ((dFormat == null) || dFormat.isEmpty()) {
+              //default
+              dFormat = "00";
+            }
           }
         }
       }
@@ -280,53 +290,46 @@ implements SourceXmlSchemaHelper {
    *  ONIX specific XPATH key definitions that we care about
    */
 
+  public static String ONIX_RR = "RecordReference|a001";
   /* Under an item node, the interesting bits live at these relative locations */
-  private static String ONIX_product_id =  "ProductIdentifier";
   protected static String ONIX_idtype_isbn13 =
-      ONIX_product_id + "[ProductIDType = \"15\"]"; 
+      "ProductIdentifier[ProductIDType='15'] | productidentifier[b221='15']";
   private static String ONIX_idtype_lccn =
-      ONIX_product_id + "[ProductIDType = \"13\"]";
-  private static String ONIX_idtype_doi =
-      ONIX_product_id + "[ProductIDType = \"06\"]";
+      "ProductIdentifier[ProductIDType='13'] | productidentifier[b221='13']";
+  public static String ONIX_idtype_doi =
+      "ProductIdentifier[ProductIDType='06'] | productidentifier[b221='06']";
   // this one may have different meanings for different publishers
   // so just collect it by default in to the raw metadata
   public static String ONIX_idtype_proprietary =
-      ONIX_product_id + "[ProductIDType = \"01\"]";
+      "ProductIdentifier[ProductIDType='01'] | productidentifier[b221='01']";
   /* components under DescriptiveDetail */
-  private static String ONIX_product_descrip =
-      "DescriptiveDetail";  
   private static String ONIX_product_form =
-      ONIX_product_descrip + "/ProductFormDetail";
+      "DescriptiveDetail/ProductFormDetail | descriptivedetail/b333"; 
   /* only pick up level01 title element - allow for no leading 0...(bradypus) */
   private static String ONIX_product_title =
-      ONIX_product_descrip + "/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '01']";
+      "DescriptiveDetail/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '01'] | descriptivedetail/titledetail[b202 = '01' or b202 = '1']/titleelement[x409 = '01']";
   private static String ONIX_chapter_title =
-      ONIX_product_descrip + "/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '04']";
+      "DescriptiveDetail/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '04'] | descriptivedetail/titledetail[b202 = '01' or b202 = '1']/titleelement[x409 = '04']";
   private static String ONIX_product_contrib =
-      ONIX_product_descrip + "/Contributor";
+      "DescriptiveDetail/Contributor | descriptivedetail/contributor";
   private static String ONIX_product_comp =
-      ONIX_product_descrip + "/ProductComposition";
+      "DescriptiveDetail/ProductComposition | descriptivedetail/x314";
   /* components under DescriptiveDetail if this is part of series */
   private static String ONIX_product_seriestitle =
-      ONIX_product_descrip + "/Collection/TitleDetail/TitleElement[TitleElementLevel = '01']";
+      "DescriptiveDetail/Collection/TitleDetail/TitleElement[TitleElementLevel = '01'] | descriptivedetail/collection/titledetail/titleelement[x409 = '01']";
   private static String ONIX_product_seriesISSN =
-      ONIX_product_descrip + "/Collection/CollectionIdentifier[CollectionIDType = '02']";
+      "DescriptiveDetail/Collection/CollectionIdentifier[CollectionIDType = '02'] | descriptivedetail/collection/collectionidentifier[x344= '02']";
   /* components under PublishingDetail */
-  private static String ONIX_product_pub =
-      "PublishingDetail";
   private static String ONIX_pub_name =
-      ONIX_product_pub + "/Publisher/PublisherName";
+      "PublishingDetail/Publisher/PublisherName | publishingdetail/publisher/b081";
   private static String ONIX_pub_date =
-      ONIX_product_pub + "/PublishingDate";
-  // expose this for access from post-coook
+      "PublishingDetail/PublishingDate | publishingdetail/publishingdate";
+  // expose this for access from post-cook
   public static String ONIX_copy_date =
-      ONIX_product_pub + "/CopyrightStatement/CopyrightYear";
+      "PublishingDetail/CopyrightStatement/CopyrightYear | publishingdetail/copyrightstatement/b087";
   /* components under MarketPublishingDetail */
-  private static String ONIX_product_mktdetail =
-      "ProductSupply/MarketPublishingDetail"; 
   private static String ONIX_mkt_date =
-      ONIX_product_mktdetail + "/MarketDate";
-
+      "ProductSupply/MarketPublishingDetail/MarketDate | productsupply/marketpublishingdetail/marketdate"; 
 
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
@@ -336,7 +339,7 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue> ONIX_articleMap = 
       new HashMap<String,XPathValue>();
   static {
-    ONIX_articleMap.put("RecordReference", XmlDomMetadataExtractor.TEXT_VALUE);
+    ONIX_articleMap.put(ONIX_RR, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
@@ -356,7 +359,7 @@ implements SourceXmlSchemaHelper {
   }
 
   /* 2. Each item (book) has its own subNode */
-  static private final String ONIX_articleNode = "/ONIXMessage/Product"; 
+  static private final String ONIX_articleNode = "//Product|//product"; 
 
   /* 3. in ONIX, there is no global information we care about, it is repeated per article */ 
   static private final Map<String,XPathValue> ONIX_globalMap = null;
@@ -436,7 +439,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getConsolidationXPathKey() {
-    return ONIX_product_descrip + "/ProductFormDetail";
+    return ONIX_product_form;
   }
 
   /**

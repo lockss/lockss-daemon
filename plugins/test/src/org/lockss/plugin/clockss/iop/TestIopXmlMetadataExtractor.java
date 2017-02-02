@@ -179,4 +179,155 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
     assertEquals(expected.get(EISSN_INDEX), AM.get(MetadataField.FIELD_EISSN));
 
   }
+  
+  private static final ArrayList real_pdflist = (ArrayList) ListUtil.list(
+      "978-1-6270-5469-0.pdf",
+      "978-0-7503-1104-5.pdf",
+      "978-0-750-31040-6.pdf",
+      "978-0-750-31044-4.pdf",
+      "978-0-7503-1052-9.pdf"
+      );      
+
+  private static final String TwoXMLFile = "Onix2Test.xml";
+
+  public void testAllOnix2File() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(TwoXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();    
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+
+      // Now add all the pdf files in our AU since we check for them before emitting
+      String pdf_url_start = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/";
+      Iterator<String> pdfIterator = real_pdflist.iterator();
+      while (pdfIterator.hasNext()) {
+        String tail = pdfIterator.next();
+        //System.out.println("adding " + pdf_url_start + tail);
+        mau.addUrl(pdf_url_start + tail, true, true, xmlHeader);
+      }    
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new  IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(1, mdlist.size());
+      //log.info("SIZE for onix2: " + mdlist.size());
+      
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        //log.info(mdRecord.ppString(2));
+        //compareMetadata(mdRecord);
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
+
+  private static final String ThreeLongXMLFile = "Onix3LongTest.xml";
+
+  public void testAllOnix3File() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(ThreeLongXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();    
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+
+      // Now add all the pdf files in our AU since we check for them before emitting
+      String pdf_url_start = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/";
+      Iterator<String> pdfIterator = real_pdflist.iterator();
+      while (pdfIterator.hasNext()) {
+        String tail = pdfIterator.next();
+        //System.out.println("adding " + pdf_url_start + tail);
+        mau.addUrl(pdf_url_start + tail, true, true, xmlHeader);
+      }    
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new  IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(1, mdlist.size());
+      //log.info("SIZE for onix3Long: " + mdlist.size());
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        //log.info(mdRecord.ppString(2));
+        //compareMetadata(mdRecord);
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }    
+  private static final String ThreeShortXMLFile = "Onix3ShortTest.xml";
+
+  public void testOnix3ShrotFile() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(ThreeShortXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();    
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+
+      // Now add all the pdf files in our AU since we check for them before emitting
+      String pdf_url_start = BASE_URL + "2015/" + TAR_GZ + "0022-3727/48/35/355104/";
+      Iterator<String> pdfIterator = real_pdflist.iterator();
+      while (pdfIterator.hasNext()) {
+        String tail = pdfIterator.next();
+        //System.out.println("adding " + pdf_url_start + tail);
+        mau.addUrl(pdf_url_start + tail, true, true, xmlHeader);
+      }    
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new  IopOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(3, mdlist.size());
+      //log.info("SIZE for onix3short: " + mdlist.size());
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        //log.info(mdRecord.ppString(2));
+        //compareMetadata(mdRecord);
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+  }
 }

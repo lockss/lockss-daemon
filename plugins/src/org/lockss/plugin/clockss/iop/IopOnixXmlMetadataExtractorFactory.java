@@ -41,27 +41,85 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.Onix2BooksSchemaHelper;
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.w3c.dom.Document;
+import org.w3c.dom.DocumentType;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
 
-public class IopOnix2XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(IopOnix2XmlMetadataExtractorFactory.class);
+public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(IopOnixXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper Onix2Helper = null;
+  private static SourceXmlSchemaHelper Onix3Helper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new IopOnix2XmlMetadataExtractor();
+    return new IopOnixXmlMetadataExtractor();
   }
 
-  public static class IopOnix2XmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public static class IopOnixXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
+    }
+    
+    
+    /*
+     * IOP Books use both Onix2 and Onix3, both short and long form. 
+     * Thelong/short isn't an issue because the SchemaHelper handles both
+     * The 2/3 is harder because the difference isn't at a top node, so hard to differentiate
+     * just from the xml paths and the DTD definition isn't used consistently.
+     * Try - 
+     * DTD
+     * <!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+     * or
+     * "release=" off the top node
+     * /ONIXmessage/@release=3.0
+     * or
+     * look for a particular titlegroup layout
+     * 
+     */
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
       // Once you have it, just keep returning the same one. It won't change.
+      String system = null;
+      String release = null;
+      
+      if (doc == null) return null;
+      DocumentType doctype = doc.getDoctype();
+      if (doctype != null) {
+        system  = doctype.getSystemId();
+        log.debug3("DOCTYPE URI: " + doctype.getSystemId());
+      }
+      Element root = doc.getDocumentElement();
+      if (root != null) {
+        release = root.getAttribute("release");
+        if (release != null) {
+          log.debug3("releaseNum : " + release);
+        }
+      }
+      if( ((system != null) && system.contains("/onix/2")) ||
+           (( release != null) && release.startsWith("2")) ) {
+        if (Onix2Helper == null) {
+          Onix2Helper = new Onix2BooksSchemaHelper();
+        }
+        return Onix2Helper;
+      } else if ( ((system != null) && system.contains("/onix/3")) ||
+        (( release != null) && release.startsWith("3")) ) {
+        if (Onix3Helper == null) {
+          Onix3Helper = new Onix3BooksSchemaHelper();
+        }
+        return Onix3Helper;
+      } else {
+        log.warning("guessing at XML schema - using ONIX2");
+      }
       if (Onix2Helper == null) {
         Onix2Helper = new Onix2BooksSchemaHelper();
       }
@@ -103,7 +161,8 @@ public class IopOnix2XmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 
       
       String isbn13 = oneAM.getRaw(helper.getFilenameXPathKey());
-      String fullDOI = oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi); 
+      String fullDOI = (helper == Onix2Helper) ? oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi) : 
+        oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_doi);
       String doi_isbn13 = null;
       if (fullDOI != null) {
         doi_isbn13 = fullDOI.substring(fullDOI.lastIndexOf("/") + 1); 
