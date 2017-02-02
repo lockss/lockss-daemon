@@ -1,12 +1,11 @@
 {
   publisher <
-    name = Wageningen Academic Publishers [PENDING] ;
-    info[down] = pending
+    name = Wageningen Academic Publishers
   >
 
   #plugin = needs.plugin
-  #plugin = org.lockss.plugin.atypon.wageningen.WageningenBooksPlugin
-  plugin = org.lockss.plugin.atypon.GenericAtyponBooksPlugin
+  plugin = org.lockss.plugin.atypon.wageningen.WageningenBooksPlugin
+  #plugin = org.lockss.plugin.atypon.GenericAtyponBooksPlugin
   param[base_url] = http://www.wageningenacademic.com/
   implicit < status ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
 
