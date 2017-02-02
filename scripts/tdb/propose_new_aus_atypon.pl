@@ -46,7 +46,7 @@ if ($opt_help) {
 while (my $line = <>) {
     chomp($line);
     # Check only for Atypon plugins.
-    if ($line =~ m/(atypon|TaylorAndFrancisPlugin)/i) {
+    if ($line =~ m/(typon|TaylorAndFrancisPlugin)/i) {
       if ($line =~ m/org\|lockss\|plugin\|(\S+)\&base_url~(\S+)\&journal_id~(\S+)\&volume_name~(\d+)/) {
         my $au_plugin = $1;
         my $base_url = $2;
