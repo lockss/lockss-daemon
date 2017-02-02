@@ -15,7 +15,7 @@
 
     param[base_url] = http://rmbr.nus.edu.sg/rbz/
     implicit < status ; year ; name ; param[volume_name] >
-    # web page cannot be found - 4/20/2015
+    # see http://lkcnhm.nus.edu.sg/nus/index.php/pastvolumes
 
     au < exists ; 2013 ; The Raffles Bulletin of Zoology Volume 61 ; 61 >
     au < expected ; 2014 ; The Raffles Bulletin of Zoology Volume 62 ; 62 >
