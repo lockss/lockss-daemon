@@ -114,11 +114,11 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //maney, future-science (also in child...will remove later)
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
 
-    // abs, ref, suppl - all tools except Citation Mgr
-    // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
-    // this may not be in the right column...
+    // This used to be Regex but that was too broad and was a problem for Sage
+    // Did an analysis and made it specific to the class
+    // Publishers that need more will have to ask for it themselves
     HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
           HtmlNodeFilters.tagWithAttributeRegex(
                  "a", "href", "/action/showCitFormats\\?")),
     
