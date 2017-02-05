@@ -45,11 +45,27 @@ import org.lockss.util.Logger;
  */
 public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(AmaScUrlConsumerFactory.class);
+
+  protected static final String PDF_STRING = "/data/journals/[^/]+/[^/]+/[^/.]+[.]pdf";
+  protected static final String ORIG_PDF_STRING = PDF_STRING + "$";
+  protected static final String DEST_PDF_STRING =
+      "/pdfaccess[.]ashx[?]url=" + PDF_STRING + "(.routename=.+)?$";
+  
+  protected static final Pattern origPdfPat = Pattern.compile(ORIG_PDF_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern destPdfPat = Pattern.compile(DEST_PDF_STRING, Pattern.CASE_INSENSITIVE);
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
     log.debug3("Creating a UrlConsumer");
-    return new ScAMAUrlConsumer(facade, fud);
+    return new AmaScUrlConsumer(facade, fud);
+  }
+  
+  public static Pattern getOrigPdfPattern() {
+    return origPdfPat;
+  }
+  
+  public static Pattern getDestPdfPattern() {
+    return destPdfPat;
   }
   
   /**
@@ -71,17 +87,9 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
    * 
    * @since 1.68.0
    */
-  public class ScAMAUrlConsumer extends SimpleUrlConsumer {
+  public class AmaScUrlConsumer extends SimpleUrlConsumer {
     
-    public static final String PDF_STRING = "/data/journals/[^/]+/[^/]+/[^/.]+[.]pdf";
-    public static final String ORIG_PDF_STRING = PDF_STRING + "$";
-    public static final String DEST_PDF_STRING =
-        "/pdfaccess[.]ashx[?]url=" + PDF_STRING + "(.routename=.+)?$";
-    
-    protected Pattern origFullTextPat = Pattern.compile(ORIG_PDF_STRING, Pattern.CASE_INSENSITIVE);
-    protected Pattern destFullTextPat = Pattern.compile(DEST_PDF_STRING, Pattern.CASE_INSENSITIVE);
-    
-    public ScAMAUrlConsumer(CrawlerFacade facade,
+    public AmaScUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
       super(facade, fud);
     }
@@ -108,8 +116,8 @@ public class AmaScUrlConsumerFactory implements UrlConsumerFactory {
       boolean should =  fud.redirectUrls != null
           && fud.redirectUrls.size() == 1
           && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-          && destFullTextPat.matcher(fud.fetchUrl).find()
-          && origFullTextPat.matcher(fud.origUrl).find();
+          && destPdfPat.matcher(fud.fetchUrl).find()
+          && origPdfPat.matcher(fud.origUrl).find();
       return should;
     }
     

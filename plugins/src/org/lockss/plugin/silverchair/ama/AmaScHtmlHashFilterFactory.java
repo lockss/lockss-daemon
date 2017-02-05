@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.silverchair.ama;
 
 import java.io.*;
-import java.util.Arrays;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
@@ -63,8 +62,9 @@ public class AmaScHtmlHashFilterFactory implements FilterFactory {
       encoding,
       new HtmlCompoundTransform(
           HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
-              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-content"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "Issues[^ \"]+Manifest"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-(-info|group)"),
+              HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(article-content|full-text)"),
           })),
           HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(widget-(article[^ ]*link|EditorsChoice|LinkedContent|WidgetLoader))"),
@@ -76,8 +76,7 @@ public class AmaScHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
               HtmlNodeFilters.tagWithAttributeRegex("a", "class", "comments"),
               HtmlNodeFilters.tag("script"),
-          }))
-      )
+          })))
     );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
@@ -86,8 +85,7 @@ public class AmaScHtmlHashFilterFactory implements FilterFactory {
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
     // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
-    Reader sepsisFilter = new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis");
-    InputStream ret = new ReaderInputStream(whiteSpaceFilter);
-    return ret;
+//    Reader sepsisFilter = new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis");
+    return new ReaderInputStream(whiteSpaceFilter);
   }
 }
