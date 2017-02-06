@@ -9,11 +9,9 @@
   
   #######**** When Endocrine Society moves to OUP, do not change publisher.
 
-  #implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-  #plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin
-
   plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
   implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
+  #param[base_url] = http://press.endocrine.org/
 
   {
 
@@ -26,8 +24,9 @@
     
     {
      
-      param[base_url] = http://press.endocrine.org/
-      param[journal_id] = edrv
+      param[base_url] = https://academic.oup.com/edrv
+      #param[journal_id] = edrv
+      param[resource_id] = edrv
 
       au < exists ; exists ; 1980 ; Endocrine Reviews Volume 1 ; 1980 ; >
       au < exists ; exists ; 1981 ; Endocrine Reviews Volume 2 ; 1981 ; >
@@ -83,8 +82,9 @@
 
     {
 
-      param[base_url] = http://press.endocrine.org/
-      param[journal_id] = endo
+      param[base_url] = https://academic.oup.com/endo
+      #param[journal_id] = endo
+      param[resource_id] = endo
 
       au < exists ; exists ; 1917 ; Endocrinology Volume 1 ; 1917 ; >
       au < exists ; exists ; 1918 ; Endocrinology Volume 2 ; 1918 ; >
@@ -260,8 +260,9 @@
 
     {
 
-      param[base_url] = http://press.endocrine.org/
-      param[journal_id] = jcem
+      param[base_url] = https://academic.oup.com/jcem
+      #param[journal_id] = jcem
+      param[resource_id] = jcem
 
       au < exists ; exists ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1941 ; >
       au < exists ; exists ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 1942 ; >
@@ -381,8 +382,9 @@
 
     {
 
-      param[base_url] = http://press.endocrine.org/
-      param[journal_id] = mend
+      param[base_url] = https://academic.oup.com/mend
+      #param[journal_id] = mend
+      param[resource_id] = mend
 
       au < doNotProcess ; doNotProcess ; 1987 ; Molecular Endocrinology Volume 1 ; 1987 ; >
       au < doNotProcess ; doNotProcess ; 1988 ; Molecular Endocrinology Volume 2 ; 1988 ; >
