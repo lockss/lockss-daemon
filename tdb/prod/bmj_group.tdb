@@ -503,6 +503,18 @@
   
   {
     title <
+      name = BMJ Open Ophthalmology ;
+      eissn = 2397-3269
+    >
+
+    param[base_url] = http://bmjophth.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2016 ; BMJ Open Ophthalmology Volume 1 ; 1 >
+
+  }
+  
+  {
+    title <
       name = BMJ Open Respiratory Research ;
       eissn = 2052-4439
     >
