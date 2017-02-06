@@ -9,14 +9,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
+  <entry>
+    <!-- support for au_url_mime_type map-->
+    <string>required_daemon_version</string>
+    <string>1.72.0</string>
+  </entry>  
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -50,6 +55,12 @@
       <string>"^%s%d/.+\.pdf", base_url, year</string>
     </list>
   </entry>
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*\.ris$, application/x-research-info-systems</string>
+    </list>
+  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.SourceRisArticleIteratorFactory</string>
