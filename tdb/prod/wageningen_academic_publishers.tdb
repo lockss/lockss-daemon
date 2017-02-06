@@ -20,9 +20,9 @@
 
       param[journal_id] = bm
     
-      au < manifest ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
-      au < manifest ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
-      au < manifest ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
+      au < testing ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
+      au < testing ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
+      au < testing ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
       au < manifest ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
       au < manifest ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
       au < manifest ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
@@ -40,7 +40,7 @@
 
       param[journal_id] = cep
 
-      au < manifest ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
+      au < testing ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
       au < manifest ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 >
       au < manifest ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 >
       au < manifest ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
@@ -81,9 +81,9 @@
       au < manifest ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 >
       au < manifest ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 >
       au < manifest ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 >
-      au < manifest ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 >
-      au < manifest ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 >
-      au < manifest ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 >
+      au < testing ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 >
+      au < testing ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 >
+      au < testing ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 >
       au < manifest ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 >
       au < manifest ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 >
       au < manifest ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 >
