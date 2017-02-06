@@ -26,7 +26,7 @@
     au < finished ; crawling ; 2010 ; Journal of Applied Remote Sensing Volume 4 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Applied Remote Sensing Volume 10 ; 2016 ; >
@@ -99,7 +99,7 @@
     au < finished ; crawling ; 1996 ; Journal of Electronic Imaging Volume 5 ; 1996 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Journal of Electronic Imaging Volume 6 ; 1997 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; Journal of Electronic Imaging Volume 7 ; 1998 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; Journal of Electronic Imaging Volume 8 ; 1999 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; Journal of Electronic Imaging Volume 8 ; 1999 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2000 ; Journal of Electronic Imaging Volume 9 ; 2000 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2001 ; Journal of Electronic Imaging Volume 10 ; 2001 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2002 ; Journal of Electronic Imaging Volume 11 ; 2002 ; reingest2.clockss.org:8085 >
@@ -173,7 +173,7 @@
     param[base_url] = http://nanophotonics.spiedigitallibrary.org/
     param[resource_id] = 97
 
-    au < finished ; crawling ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 ; reingest2.clockss.org:8085 >
