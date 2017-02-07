@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -35,6 +35,7 @@ package org.lockss.tdb;
 import java.io.Serializable;
 import java.util.*;
 
+import org.antlr.v4.runtime.Token;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
@@ -53,10 +54,13 @@ public class Au implements Serializable {
    * Make a new root AU instance.
    * </p>
    * 
-   * @since 1.67 
+   * @since 1.73 
    */
-  public Au() {
-    // Intentionally left blank
+  public Au(Token tok) {
+    if (tok != null) {
+      this.file = tok.getTokenSource().getSourceName();
+      this.line = tok.getLine();
+    }
   }
 
   /**
@@ -66,9 +70,10 @@ public class Au implements Serializable {
    * 
    * @param other
    *          An existing AU instance.
-   * @since 1.67
+   * @since 1.73
    */
-  public Au(Au other) {
+  public Au(Token tok, Au other) {
+    this(tok);
     this.computedPlugin = other.computedPlugin;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
@@ -103,10 +108,10 @@ public class Au implements Serializable {
    *          A parent title.
    * @param other
    *          An existing AU instance.
-   * @since 1.67
+   * @since 1.73
    */
-  public Au(Title title, Au other) {
-    this(other);
+  public Au(Token tok, Title title, Au other) {
+    this(tok, other);
     this.title = title;
   }
   
@@ -117,9 +122,10 @@ public class Au implements Serializable {
    * 
    * @param title
    *          A parent title.
-   * @since 1.67
+   * @since 1.73
    */
-  protected Au(Title title) {
+  protected Au(Token tok, Title title) {
+    this(tok);
     this.title = title;
   }
   
@@ -539,6 +545,36 @@ public class Au implements Serializable {
   
   /**
    * <p>
+   * The AU's file (key).
+   * </p>
+   * 
+   * @since 1.73
+   */
+  protected static final String FILE = "file";
+  
+  /**
+   * <p>
+   * The AU's file (field).
+   * </p>
+   * 
+   * @since 1.73
+   */
+  protected String file = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's file.
+   * </p>
+   * 
+   * @return The AU's efile.
+   * @since 1.73
+   */
+  public String getFile() {
+    return file;
+  }
+  
+  /**
+   * <p>
    * The AU's ISBN (key).
    * </p>
    * 
@@ -565,6 +601,36 @@ public class Au implements Serializable {
    */
   public String getIsbn() {
     return isbn;
+  }
+  
+  /**
+   * <p>
+   * The AU's line (key).
+   * </p>
+   * 
+   * @since 1.73
+   */
+  protected static final String LINE = "line";
+  
+  /**
+   * <p>
+   * The AU's line (field).
+   * </p>
+   * 
+   * @since 1.73
+   */
+  protected int line = 0;
+  
+  /**
+   * <p>
+   * Retrieves the AU's line.
+   * </p>
+   * 
+   * @return The AU's line.
+   * @since 1.73
+   */
+  public int getLine() {
+    return line;
   }
   
   /**
@@ -1218,7 +1284,10 @@ public class Au implements Serializable {
     m.put("au:auidplus", new A() { @Override String a(Au a) { return a.getAuidPlus(); } });
     m.put("au:edition", new A() { @Override String a(Au a) { return a.getEdition(); } });
     m.put("au:eisbn", new A() { @Override String a(Au a) { return a.getEisbn(); } });
+    m.put("au:file", new A() { @Override String a(Au a) { return a.getFile(); } });
+    m.put("au:fileline", new A() { @Override String a(Au a) { return String.format("%s:%d", a.getFile(), a.getLine()); } });
     m.put("au:isbn", new A() { @Override String a(Au a) { return a.getIsbn(); } });
+    m.put("au:line", new A() { @Override String a(Au a) { return Integer.toString(a.getLine()); } });
     m.put("au:name", new A() { @Override String a(Au a) { return a.getName(); } });
     m.put("au:plugin", new A() { @Override String a(Au a) { return a.getComputedPlugin(); } });
     m.put("au:pluginPrefix", new A() { @Override String a(Au a) { return a.getPluginPrefix(); } });
@@ -1255,9 +1324,12 @@ public class Au implements Serializable {
     m.put("edition", m.get("au:edition"));
     m.put("eisbn", m.get("au:eisbn"));
     m.put("eissn", m.get("title:eissn"));
+    m.put("file", m.get("au:file"));
+    m.put("fileline", m.get("au:fileline"));
     m.put("isbn", m.get("au:isbn"));
     m.put("issn", m.get("title:issn"));
     m.put("issnl", m.get("title:issnl"));
+    m.put("line", m.get("au:line"));
     m.put("name", m.get("au:name"));
     m.put("plugin", m.get("au:plugin"));
     m.put("pluginPrefix", m.get("au:pluginPrefix"));

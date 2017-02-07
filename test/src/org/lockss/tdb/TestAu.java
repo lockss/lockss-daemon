@@ -1,32 +1,32 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University,
+All rights reserved.
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -126,7 +126,7 @@ public class TestAu extends LockssTestCase {
   }
   
   public void testEmpty() throws Exception {
-    Au au = new Au();
+    Au au = new Au(null);
     assertNull(au.getTitle());
     assertNull(au.getName());
     assertNull(au.getAuid());
@@ -156,7 +156,7 @@ public class TestAu extends LockssTestCase {
   public void testAu() throws Exception {
     Publisher publisher = new Publisher();
     Title title = new Title(publisher);
-    Au au = new Au(title);
+    Au au = new Au(null, title);
     assertSame(title, au.getTitle());
     assertSame(publisher, au.getTitle().getPublisher());
     au.put(Au.NAME, NAME_VALUE);
@@ -200,14 +200,14 @@ public class TestAu extends LockssTestCase {
   }
 
   public void testPlugin() throws Exception {
-    Au au1 = new Au();
+    Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN_VALUE);
     assertEquals(PLUGIN_VALUE, au1.getPlugin());
     assertNull(au1.getPluginPrefix());
     assertNull(au1.getPluginSuffix());
     assertEquals(PLUGIN_VALUE, au1.getComputedPlugin());
 
-    Au au2 = new Au();
+    Au au2 = new Au(null);
     au2.put(Au.PLUGIN_PREFIX, PLUGIN_PREFIX_VALUE);
     au2.put(Au.PLUGIN_SUFFIX, PLUGIN_SUFFIX_VALUE);
     assertNull(au2.getPlugin());
@@ -217,7 +217,7 @@ public class TestAu extends LockssTestCase {
     
     // Other combinations are illegal but have the following behavior:
 
-    Au au3 = new Au();
+    Au au3 = new Au(null);
     au3.put(Au.PLUGIN, PLUGIN_VALUE);
     au3.put(Au.PLUGIN_PREFIX, PLUGIN_PREFIX_VALUE);
     assertEquals(PLUGIN_VALUE, au3.getPlugin());
@@ -225,7 +225,7 @@ public class TestAu extends LockssTestCase {
     assertNull(au3.getPluginSuffix());
     assertEquals(PLUGIN_VALUE, au3.getComputedPlugin());
 
-    Au au4 = new Au();
+    Au au4 = new Au(null);
     au4.put(Au.PLUGIN, PLUGIN_VALUE);
     au4.put(Au.PLUGIN_SUFFIX, PLUGIN_SUFFIX_VALUE);
     assertEquals(PLUGIN_VALUE, au4.getPlugin());
@@ -233,14 +233,14 @@ public class TestAu extends LockssTestCase {
     assertEquals(PLUGIN_SUFFIX_VALUE, au4.getPluginSuffix());
     assertEquals(PLUGIN_VALUE, au4.getComputedPlugin());
 
-    Au au5 = new Au();
+    Au au5 = new Au(null);
     au5.put(Au.PLUGIN_PREFIX, PLUGIN_PREFIX_VALUE);
     assertNull(au5.getPlugin());
     assertEquals(PLUGIN_PREFIX_VALUE, au5.getPluginPrefix());
     assertNull(au5.getPluginSuffix());
     assertNull(au5.getComputedPlugin());
 
-    Au au6 = new Au();
+    Au au6 = new Au(null);
     au6.put(Au.PLUGIN_SUFFIX, PLUGIN_SUFFIX_VALUE);
     assertNull(au6.getPlugin());
     assertNull(au6.getPluginPrefix());
@@ -249,14 +249,14 @@ public class TestAu extends LockssTestCase {
   }
 
   public void testAuid() throws Exception {
-    Au au1 = new Au();
+    Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN1);
     au1.put(String.format("param[%s]", PARAM1_KEY), PARAM1_VALUE);
     au1.put(String.format("param[%s]", PARAM2_KEY), PARAM2_VALUE);
     assertEquals(AUID1, au1.getAuid());
     assertEquals(AUID1, au1.getAuidPlus());
 
-    Au au2 = new Au();
+    Au au2 = new Au(null);
     au2.put(Au.PLUGIN, PLUGIN1);
     au2.put(String.format("param[%s]", PARAM1_KEY), PARAM1_VALUE);
     au2.put(String.format("param[%s]", PARAM2_KEY), PARAM2_VALUE);
@@ -267,15 +267,15 @@ public class TestAu extends LockssTestCase {
   }
 
   public void testNesting() throws Exception {
-    Au au1 = new Au();
+    Au au1 = new Au(null);
     au1.put(Au.EISBN, EISBN_VALUE);
     au1.put(String.format("param[%s]", PARAM1_KEY), PARAM1_VALUE);
     au1.put(FOO_KEY, FOO_VALUE);
     au1.setImplicit(IMPLICIT_VALUE);
-    Au au2 = new Au(au1);
+    Au au2 = new Au(null, au1);
     au2.put(Au.ISBN, ISBN_VALUE);
     au2.put(String.format("nondefparam[%s]", NONDEFPARAM1_KEY), NONDEFPARAM1_VALUE);
-    Au au3 = new Au(au2);
+    Au au3 = new Au(null, au2);
     au3.put(Au.PLUGIN, PLUGIN_VALUE);
     au3.put(String.format("attr[%s]", ATTR1_KEY), ATTR1_VALUE);
     assertEquals(EISBN_VALUE, au3.getEisbn());
@@ -300,7 +300,7 @@ public class TestAu extends LockssTestCase {
     Title title = new Title(publisher, titleMap);
 
     // Make an AU with that title
-    Au au = new Au(title);
+    Au au = new Au(null, title);
     
     // Test AU traits
     au.put(Au.EDITION, EDITION_VALUE);
