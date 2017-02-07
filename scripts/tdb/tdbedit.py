@@ -1,37 +1,38 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 '''A rudimentary script to change the status, status2, or proxy setting of AUs
 in TDB files from one or more old values to a new value.'''
 
-# $Id$
-
 __copyright__ = '''\
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-'''
+Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.'''
 
 __license__ = '''\
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-'''
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+
 
 __tutorial__ = '''
 This utility assists in editing the status, status2, or proxy setting of AUs in
@@ -143,7 +144,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
 import cStringIO
 import optparse
@@ -167,7 +168,9 @@ class _TdbEditOptions(object):
     '''
     usage = '%prog [--from-status=CSSTATUS --to-status=STATUS] [--from-status2=CSSTATUS --to-status2=STATUS] [--from-proxy=CSPROXY [--to-proxy=PROXY|--to-proxy-round-robin=CSPROXY]] [--auids=AFILE|--auid=AUID] FILE...'
     parser = optparse.OptionParser(version=__version__, usage=usage, description=__doc__)
-    parser.add_option('--tutorial', action='store_true', help='show tutorial and exit')
+    parser.add_option('--copyright', '-C', action='store_true', help='show copyright and exit')
+    parser.add_option('--license', '-L', action='store_true', help='show license and exit')
+    parser.add_option('--tutorial', '-T', action='store_true', help='show tutorial and exit')
     group = optparse.OptionGroup(parser, 'AUIDs')
     group.add_option('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
     group.add_option('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
@@ -216,10 +219,12 @@ class _TdbEditOptions(object):
     - files (list of strings): files the changes apply to
     '''
     super(_TdbEditOptions, self).__init__()
-    # Tutorial
-    if opts.tutorial:
-      parser.print_help()
-      print __tutorial__
+    # --copyright, --license, --tutorial (--help, --version already done)
+    if any([opts.copyright, opts.license, opts.tutorial]):
+      if opts.copyright: print copyright__
+      elif opts.license: print __license__
+      elif opts.tutorial: print __tutorial__
+      else: raise RuntimeError, 'internal error'
       sys.exit()
     # status_change/from_status/keep_status/to_status
     if (opts.from_status is None) != (opts.to_status is None):
@@ -272,7 +277,8 @@ class _TdbEditOptions(object):
   def __proxy_round_robin(self):
     '''Bottomless generator over the values from to_proxy in a round robin.'''
     while True:
-      for x in self.to_proxy: yield x
+      for x in self.to_proxy:
+        yield x
 
   def next_proxy(self):
     '''Returns the next desired proxy setting value.'''
@@ -281,13 +287,11 @@ class _TdbEditOptions(object):
 class _Au(object):
   '''An internal class to represent an AU entry.'''
 
-  def __init__(self, filestr, lineindex, implicitmap, body, changed=False):
+  def __init__(self, implicitmap, body, changed=False):
     '''
     Constructor.
     Parameters (all becoming fields, except 'body' which is split into the
     'values' array and can be regenerated with 'generate_body()'):
-    - filestr (string): the file path of the AU entry
-    - lineindex (integer): the (zero-based) line index within the file
     - implicitmap (dict): the AU entry's implicit<...> specification, mapping
     from string (key in the implicit<...> statement) to integer (zero-based
     index of the key in the implicit<...> statement)
@@ -296,9 +300,7 @@ class _Au(object):
     been modified (default: False)
     '''
     super(_Au, self).__init__()
-    # filestr/lineindex/implicitmap/changed
-    self.filestr = filestr
-    self.lineindex = lineindex
+    # implicitmap/changed
     self.implicitmap = implicitmap
     self.changed = changed
     # values
@@ -367,8 +369,7 @@ class _Au(object):
     '''
     fieldindex = self.implicitmap.get(field)
     if fieldindex is None:
-      sys.stderr.write('%s:%d: KeyError\n' % (self.filestr, self.lineindex)) ###DEBUG
-      raise KeyError, field
+      raise KeyError, '%s' % (field,)
     if val.strip() != self.values[fieldindex].strip():
       self.values[fieldindex] = ' %s ' % (val,)
       self.changed = True
@@ -381,20 +382,27 @@ _IMPLICIT = re.compile(r'^[ \t]*implicit[ \t]*<(.*)>[ \t]*(#.*)?$')
 # - Group 1: semicolon-separated body of the au<...> statement
 _AU = re.compile(r'^[ \t]*au[ \t]*<(.*)>[ \t]*(#.*)?$')
 
-def _get_auids(options):
+def _tdbout(options):
   '''
-  Invokes tdbout on the given files and returns a list of AUIDs.
+  Invokes tdbout on the given files and returns a list of AUIDs/file/line triples.
   Parameters:
   - options (of type _TdbEditOptions): the current options
   '''
-  cmd = ['scripts/tdb/tdbout', '--auid']
+  tdbout = 'scripts/tdb/tdbout'
+  cmd = [tdbout, '--tsv=auid,file,line']
   cmd.extend(options.files)
   proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   (out, err) = proc.communicate() # out and err are (potentially huge) strings
-  if proc.returncode != 0: sys.exit(err)
-  return [line.strip() for line in cStringIO.StringIO(out)]
+  if proc.returncode != 0:
+       sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, cStringIO.StringIO(err)))
+  ret = list()
+  for line in cStringIO.StringIO(out):
+    x = line.strip().split('\t')
+    ret.append([x[0], x[1], int(x[2])])
+  return ret
 
-def _build_au_index(options):
+
+def _build_au_index(options, aus):
   '''
   Scans the given files, attempting to detect every AU entry, and returns a list
   of _Au instances. Gives up and exits with sys.exit() if an implicit<...>
@@ -403,10 +411,10 @@ def _build_au_index(options):
   Parameters:
   - options (of type _TdbEditOptions): the current options
   '''
+  aindex = 0
   errors = 0
-  aus = list()
   for fstr in options.files:
-    continue1 = False
+    continue_outer = False
     with open(fstr, 'r') as f:
       for lineindex, line in enumerate(f):
         mat = _IMPLICIT.search(line)
@@ -416,65 +424,75 @@ def _build_au_index(options):
           if 'name' not in implmap:
             errors = errors + 1
             sys.stderr.write('%s:%s: implicit statement does not specify \'name\'\n' % (fstr, lineindex + 1))
-            continue1 = True # next file
+            continue_outer = True # next file
             break
           if 'status' not in implmap:
             errors = errors + 1
             sys.stderr.write('%s:%s: implicit statement does not specify \'status\'\n' % (fstr, lineindex + 1))
-            continue1 = True # next file
+            continue_outer = True # next file
             break
           if options.status2_change and 'status2' not in implmap:
             errors = errors + 1
             sys.stderr.write('%s:%s: implicit statement does not specify \'status2\'\n' % (fstr, lineindex + 1))
-            continue1 = True # next file
+            continue_outer = True # next file
             break
           continue # next line
-        mat = _AU.search(line)
-        if mat is not None:
-          au = _Au(fstr, lineindex, implmap, mat.group(1))
-          aus.append(au)
+        if aindex < len(aus) and fstr == aus[aindex][1] and lineindex + 1 == aus[aindex][2]:
+          mat = _AU.search(line)
+          if mat is None:
+            errors = errors + 1
+            sys.stderr.write('%s:%s: text recognizer does not match definition for %s\n' % (fstr, lineindex + 1, aus[aindex][0]))
+            continue_outer = True # next file
+            break
+          au = _Au(implmap, mat.group(1))
+          aus[aindex].append(au)
+          aindex = aindex + 1
           continue # next line
-      if continue1: continue # next file
-  if errors > 0: sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
-  return aus
+      if continue_outer: continue # next file
+  if len(aus) != aindex:
+    errors = errors + 1
+    sys.stderr.write('error: tdbout parsed %d AU declarations but tdbedit found %d\n' % (len(aus), aindex))
+  if errors > 0:
+    sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
 
-def _change_aus(options, auids, aus):
+def _change_aus(options, aus):
   '''
   Performs the requested changes, in memory. Exits with sys.exit() if a
   requested AUID is not found or if a requested change is not valid for an AUID.
   Parameters:
   - options (of type _TdbEditOptions): the current options
-  - auids (list of strings): the list of parsed AUIDs
   - aus (list of _Au instances): the list of AU entries
   '''
-  auindex = dict([(x, i) for i, x in enumerate(auids)])
+  aumap = dict([(x[0], x) for x in aus])
   errors = 0
   for auid in options.auids:
     # Check that the requested AUID is in the parsed files
-    index = auindex.get(auid)
-    if index is None:
+    auentry = aumap.get(auid)
+    if auentry is None:
       errors = errors + 1
       sys.stderr.write('No AU declaration found in these files for %s\n' % (auid,))
       continue # next AUID
     # Check that the changes are valid
-    au = aus[index]
+    au = auentry[3]
     if options.status_change and au.get_status() not in options.from_status and au.get_status() not in options.keep_status:
       errors = errors + 1
-      sys.stderr.write('%s:%s: %s: status \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status(), ', '.join(options.from_status)))
+      sys.stderr.write('%s:%s: %s: status \'%s\' is not one of %s\n' % (auentry[1], auentry[2], au.get_name(), au.get_status(), ', '.join(options.from_status)))
       continue # next AUID
     if options.status2_change and au.get_status2() not in options.from_status2 and au.get_status2() not in options.keep_status2:
       errors = errors + 1
-      sys.stderr.write('%s:%s: %s: status2 \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status2(), ', '.join(options.from_status2)))
+      sys.stderr.write('%s:%s: %s: status2 \'%s\' is not one of %s\n' % (auentry[1], auentry[2], au.get_name(), au.get_status2(), ', '.join(options.from_status2)))
       continue # next AUID
     if options.proxy_change and _ANY not in options.from_proxy:
       found = au.get_proxy() or _NONE
       if found not in options.from_proxy:
         errors = errors + 1
-        sys.stderr.write('%s:%s: %s: proxy \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), found, ', '.join(options.from_proxy)))
+        sys.stderr.write('%s:%s: %s: proxy \'%s\' is not one of %s\n' % (auentry[1], auentry[2], au.get_name(), found, ', '.join(options.from_proxy)))
         continue # next AUID
     # Perform requested changes if necessary
-    if options.status_change and au.get_status() not in options.keep_status: au.set_status(options.to_status)
-    if options.status2_change and au.get_status2() not in options.keep_status2: au.set_status2(options.to_status2)
+    if options.status_change and au.get_status() not in options.keep_status:
+      au.set_status(options.to_status)
+    if options.status2_change and au.get_status2() not in options.keep_status2:
+      au.set_status2(options.to_status2)
     if options.proxy_change:
       target = options.next_proxy()
       if target == _NONE: target = None
@@ -489,24 +507,25 @@ def _alter_files(options, aus):
   - auids (list of strings): the list of parsed AUIDs
   - aus (list of _Au instances): the list of AU entries
   '''
-  # Reduce to list of changed AUS and list of affected files
-  touch_aus = filter(lambda a: a.is_changed(), aus)
-  touch_files = list()
-  for au in touch_aus:
-    if au.filestr not in touch_files: touch_files.append(au.filestr)
+  fileindex = dict()
+  for auentry in aus:
+    au = auentry[3]
+    if au.is_changed():
+      fileindex.setdefault(auentry[1], list()).append(auentry)
   # Process each affected file
-  for touch_file in touch_files:
+  for touch_file in fileindex:
     # Read file into memory and copy into backup file
     with open(touch_file, 'r') as f: lines = f.readlines()
     with open('%s.bak' % (touch_file,), 'w') as fbak: fbak.writelines(lines)
     # Process AUs from that file
-    for au in filter(lambda a: a.filestr == touch_file, touch_aus):
+    for auentry in fileindex[touch_file]:
+      au = auentry[3]
       # Reconstruct altered au<...> statement
-      line = lines[au.lineindex]
+      line = lines[auentry[2] - 1]
       mat = _AU.search(line)
       aumid = mat.group(1).split(';')
       line = line[:mat.start(1)] + au.generate_body() + line[mat.end(1):]
-      lines[au.lineindex] = line
+      lines[auentry[2] - 1] = line
     # Write out modified file
     with open(touch_file, 'w') as f: f.writelines(lines)
 
@@ -528,11 +547,10 @@ def _main():
   (opts, args) = parser.parse_args()
   options = _TdbEditOptions(parser, opts, args)
   # Get AUIDs and scan files for AU entries
-  auids = _get_auids(options)
-  aus = _build_au_index(options)
-  if len(auids) != len(aus): sys.exit('Error: tdbout parsed %d AU declarations but tdbedit found %d; exiting' % (len(auids), len(aus)))
+  aus = _tdbout(options)
+  _build_au_index(options, aus)
   # Perform changes in memory
-  _change_aus(options, auids, aus)
+  _change_aus(options, aus)
   # Translate changes into files
   _alter_files(options, aus)
 
