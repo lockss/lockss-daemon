@@ -20,7 +20,7 @@
 
     {
      
-      param[base_url] = https://academic.oup.com/edrv
+      param[base_url] = https://academic.oup.com/
       #param[journal_id] = edrv
       param[resource_id] = edrv
 
@@ -78,7 +78,7 @@
 
     {
 
-      param[base_url] = https://academic.oup.com/endo
+      param[base_url] = https://academic.oup.com/
       #param[journal_id] = endo
       param[resource_id] = endo
 
@@ -103,120 +103,63 @@
       au < doNotProcess ; 1935 ; Endocrinology Volume 19 ; 1935 >
       au < doNotProcess ; 1936 ; Endocrinology Volume 20 ; 1936 >
       au < doNotProcess ; 1937 ; Endocrinology Volume 21 ; 1937 >
-      au < doNotProcess ; 1938 ; Endocrinology Volume 22 ; 1938 >
-      au < doNotProcess ; 1938 ; Endocrinology Volume 23 ; 1938 >
-      au < doNotProcess ; 1939 ; Endocrinology Volume 24 ; 1939 >
-      au < doNotProcess ; 1939 ; Endocrinology Volume 25 ; 1939 >
-      au < doNotProcess ; 1940 ; Endocrinology Volume 26 ; 1940 >
-      au < doNotProcess ; 1940 ; Endocrinology Volume 27 ; 1940 >
-      au < doNotProcess ; 1941 ; Endocrinology Volume 28 ; 1941 >
-      au < doNotProcess ; 1941 ; Endocrinology Volume 29 ; 1941 >
-      au < doNotProcess ; 1942 ; Endocrinology Volume 30 ; 1942 >
-      au < doNotProcess ; 1942 ; Endocrinology Volume 31 ; 1942 >
-      au < doNotProcess ; 1943 ; Endocrinology Volume 32 ; 1943 >
-      au < doNotProcess ; 1943 ; Endocrinology Volume 33 ; 1943 >
-      au < doNotProcess ; 1944 ; Endocrinology Volume 34 ; 1944 >
-      au < doNotProcess ; 1944 ; Endocrinology Volume 35 ; 1944 >
-      au < doNotProcess ; 1945 ; Endocrinology Volume 36 ; 1945 >
-      au < doNotProcess ; 1945 ; Endocrinology Volume 37 ; 1945 >
-      au < doNotProcess ; 1946 ; Endocrinology Volume 38 ; 1946 >
-      au < doNotProcess ; 1946 ; Endocrinology Volume 39 ; 1946 >
-      au < doNotProcess ; 1947 ; Endocrinology Volume 40 ; 1947 >
-      au < doNotProcess ; 1947 ; Endocrinology Volume 41 ; 1947 >
-      au < doNotProcess ; 1948 ; Endocrinology Volume 42 ; 1948 >
-      au < doNotProcess ; 1948 ; Endocrinology Volume 43 ; 1948 >
-      au < doNotProcess ; 1949 ; Endocrinology Volume 44 ; 1949 >
-      au < doNotProcess ; 1949 ; Endocrinology Volume 45 ; 1949 >
-      au < doNotProcess ; 1950 ; Endocrinology Volume 46 ; 1950 >
-      au < doNotProcess ; 1950 ; Endocrinology Volume 47 ; 1950 >
-      au < doNotProcess ; 1951 ; Endocrinology Volume 48 ; 1951 >
-      au < doNotProcess ; 1951 ; Endocrinology Volume 49 ; 1951 >
-      au < doNotProcess ; 1952 ; Endocrinology Volume 50 ; 1952 >
-      au < doNotProcess ; 1952 ; Endocrinology Volume 51 ; 1952 >
-      au < doNotProcess ; 1953 ; Endocrinology Volume 52 ; 1953 >
-      au < doNotProcess ; 1953 ; Endocrinology Volume 53 ; 1953 >
-      au < doNotProcess ; 1954 ; Endocrinology Volume 54 ; 1954 >
-      au < doNotProcess ; 1954 ; Endocrinology Volume 55 ; 1954 >
-      au < doNotProcess ; 1955 ; Endocrinology Volume 56 ; 1955 >
-      au < doNotProcess ; 1955 ; Endocrinology Volume 57 ; 1955 >
-      au < doNotProcess ; 1956 ; Endocrinology Volume 58 ; 1956 >
-      au < doNotProcess ; 1956 ; Endocrinology Volume 59 ; 1956 >
-      au < doNotProcess ; 1957 ; Endocrinology Volume 60 ; 1957 >
-      au < doNotProcess ; 1957 ; Endocrinology Volume 61 ; 1957 >
-      au < doNotProcess ; 1958 ; Endocrinology Volume 62 ; 1958 >
-      au < doNotProcess ; 1958 ; Endocrinology Volume 63 ; 1958 >
-      au < doNotProcess ; 1959 ; Endocrinology Volume 64 ; 1959 >
-      au < doNotProcess ; 1959 ; Endocrinology Volume 65 ; 1959 >
-      au < doNotProcess ; 1960 ; Endocrinology Volume 66 ; 1960 >
-      au < doNotProcess ; 1960 ; Endocrinology Volume 67 ; 1960 >
-      au < doNotProcess ; 1961 ; Endocrinology Volume 68 ; 1961 >
-      au < doNotProcess ; 1961 ; Endocrinology Volume 69 ; 1961 >
-      au < doNotProcess ; 1962 ; Endocrinology Volume 70 ; 1962 >
-      au < doNotProcess ; 1962 ; Endocrinology Volume 71 ; 1962 >
-      au < doNotProcess ; 1963 ; Endocrinology Volume 72 ; 1963 >
-      au < doNotProcess ; 1963 ; Endocrinology Volume 73 ; 1963 >
-      au < doNotProcess ; 1964 ; Endocrinology Volume 74 ; 1964 >
-      au < doNotProcess ; 1964 ; Endocrinology Volume 75 ; 1964 >
-      au < doNotProcess ; 1965 ; Endocrinology Volume 76 ; 1965 >
-      au < doNotProcess ; 1965 ; Endocrinology Volume 77 ; 1965 >
-      au < doNotProcess ; 1966 ; Endocrinology Volume 78 ; 1966 >
-      au < doNotProcess ; 1966 ; Endocrinology Volume 79 ; 1966 >
-      au < doNotProcess ; 1967 ; Endocrinology Volume 80 ; 1967 >
-      au < doNotProcess ; 1967 ; Endocrinology Volume 81 ; 1967 >
-      au < doNotProcess ; 1968 ; Endocrinology Volume 82 ; 1968 >
-      au < doNotProcess ; 1968 ; Endocrinology Volume 83 ; 1968 >
-      au < doNotProcess ; 1969 ; Endocrinology Volume 84 ; 1969 >
-      au < doNotProcess ; 1969 ; Endocrinology Volume 85 ; 1969 >
-      au < doNotProcess ; 1970 ; Endocrinology Volume 86 ; 1970 >
-      au < doNotProcess ; 1970 ; Endocrinology Volume 87 ; 1970 >
-      au < doNotProcess ; 1971 ; Endocrinology Volume 88 ; 1971 >
-      au < doNotProcess ; 1971 ; Endocrinology Volume 89 ; 1971 >
-      au < doNotProcess ; 1972 ; Endocrinology Volume 90 ; 1972 >
-      au < doNotProcess ; 1972 ; Endocrinology Volume 91 ; 1972 >
-      au < doNotProcess ; 1973 ; Endocrinology Volume 92 ; 1973 >
-      au < doNotProcess ; 1973 ; Endocrinology Volume 93 ; 1973 >
-      au < doNotProcess ; 1974 ; Endocrinology Volume 94 ; 1974 >
-      au < doNotProcess ; 1974 ; Endocrinology Volume 95 ; 1974 >
-      au < doNotProcess ; 1975 ; Endocrinology Volume 96 ; 1975 >
-      au < doNotProcess ; 1975 ; Endocrinology Volume 97 ; 1975 >
-      au < doNotProcess ; 1976 ; Endocrinology Volume 98 ; 1976 >
-      au < doNotProcess ; 1976 ; Endocrinology Volume 99 ; 1976 >
-      au < doNotProcess ; 1977 ; Endocrinology Volume 100 ; 1977 >
-      au < doNotProcess ; 1977 ; Endocrinology Volume 101 ; 1977 >
-      au < doNotProcess ; 1978 ; Endocrinology Volume 102 ; 1978 >
-      au < doNotProcess ; 1978 ; Endocrinology Volume 103 ; 1978 >
-      au < doNotProcess ; 1979 ; Endocrinology Volume 104 ; 1979 >
-      au < doNotProcess ; 1979 ; Endocrinology Volume 105 ; 1979 >
-      au < doNotProcess ; 1980 ; Endocrinology Volume 106 ; 1980 >
-      au < doNotProcess ; 1980 ; Endocrinology Volume 107 ; 1980 >
-      au < doNotProcess ; 1981 ; Endocrinology Volume 108 ; 1981 >
-      au < doNotProcess ; 1981 ; Endocrinology Volume 109 ; 1981 >
-      au < doNotProcess ; 1982 ; Endocrinology Volume 110 ; 1982 >
-      au < doNotProcess ; 1982 ; Endocrinology Volume 111 ; 1982 >
-      au < doNotProcess ; 1983 ; Endocrinology Volume 112 ; 1983 >
-      au < doNotProcess ; 1983 ; Endocrinology Volume 113 ; 1983 >
-      au < doNotProcess ; 1984 ; Endocrinology Volume 114 ; 1984 >
-      au < doNotProcess ; 1984 ; Endocrinology Volume 115 ; 1984 >
-      au < doNotProcess ; 1985 ; Endocrinology Volume 116 ; 1985 >
-      au < doNotProcess ; 1985 ; Endocrinology Volume 117 ; 1985 >
-      au < doNotProcess ; 1986 ; Endocrinology Volume 118 ; 1986 >
-      au < doNotProcess ; 1986 ; Endocrinology Volume 119 ; 1986 >
-      au < doNotProcess ; 1987 ; Endocrinology Volume 120 ; 1987 >
-      au < doNotProcess ; 1987 ; Endocrinology Volume 121 ; 1987 >
-      au < doNotProcess ; 1988 ; Endocrinology Volume 122 ; 1988 >
-      au < doNotProcess ; 1988 ; Endocrinology Volume 123 ; 1988 >
-      au < doNotProcess ; 1989 ; Endocrinology Volume 124 ; 1989 >
-      au < doNotProcess ; 1989 ; Endocrinology Volume 125 ; 1989 >
-      au < doNotProcess ; 1990 ; Endocrinology Volume 126 ; 1990 >
-      au < doNotProcess ; 1990 ; Endocrinology Volume 127 ; 1990 >
-      au < doNotProcess ; 1991 ; Endocrinology Volume 128 ; 1991 >
-      au < doNotProcess ; 1991 ; Endocrinology Volume 129 ; 1991 >
-      au < doNotProcess ; 1992 ; Endocrinology Volume 130 ; 1992 >
-      au < doNotProcess ; 1992 ; Endocrinology Volume 131 ; 1992 >
-      au < doNotProcess ; 1993 ; Endocrinology Volume 132 ; 1993 >
-      au < doNotProcess ; 1993 ; Endocrinology Volume 133 ; 1993 >
-      au < doNotProcess ; 1994 ; Endocrinology Volume 134 ; 1994 >
-      au < doNotProcess ; 1994 ; Endocrinology Volume 135 ; 1994 >
+      au < doNotProcess ; 1938 ; Endocrinology Volume 22-23 ; 1938 >
+      au < doNotProcess ; 1939 ; Endocrinology Volume 24-25 ; 1939 >
+      au < doNotProcess ; 1940 ; Endocrinology Volume 26-27 ; 1940 >
+      au < doNotProcess ; 1941 ; Endocrinology Volume 28-29 ; 1941 >
+      au < doNotProcess ; 1942 ; Endocrinology Volume 30-31 ; 1942 >
+      au < doNotProcess ; 1943 ; Endocrinology Volume 32-33 ; 1943 >
+      au < doNotProcess ; 1944 ; Endocrinology Volume 34-35 ; 1944 >
+      au < doNotProcess ; 1945 ; Endocrinology Volume 36-37 ; 1945 >
+      au < doNotProcess ; 1946 ; Endocrinology Volume 38-39 ; 1946 >
+      au < doNotProcess ; 1947 ; Endocrinology Volume 40-41 ; 1947 >
+      au < doNotProcess ; 1948 ; Endocrinology Volume 42-43 ; 1948 >
+      au < doNotProcess ; 1949 ; Endocrinology Volume 44-45 ; 1949 >
+      au < doNotProcess ; 1950 ; Endocrinology Volume 46-47 ; 1950 >
+      au < doNotProcess ; 1951 ; Endocrinology Volume 48-49 ; 1951 >
+      au < doNotProcess ; 1952 ; Endocrinology Volume 50-51 ; 1952 >
+      au < doNotProcess ; 1953 ; Endocrinology Volume 52-53 ; 1953 >
+      au < doNotProcess ; 1954 ; Endocrinology Volume 54-55 ; 1954 >
+      au < doNotProcess ; 1955 ; Endocrinology Volume 56-57 ; 1955 >
+      au < doNotProcess ; 1956 ; Endocrinology Volume 58-59 ; 1956 >
+      au < doNotProcess ; 1957 ; Endocrinology Volume 60-61 ; 1957 >
+      au < doNotProcess ; 1958 ; Endocrinology Volume 62-63 ; 1958 >
+      au < doNotProcess ; 1959 ; Endocrinology Volume 64-65 ; 1959 >
+      au < doNotProcess ; 1960 ; Endocrinology Volume 66-67 ; 1960 >
+      au < doNotProcess ; 1961 ; Endocrinology Volume 68-69 ; 1961 >
+      au < doNotProcess ; 1962 ; Endocrinology Volume 70-71 ; 1962 >
+      au < doNotProcess ; 1963 ; Endocrinology Volume 72-73 ; 1963 >
+      au < doNotProcess ; 1964 ; Endocrinology Volume 74-75 ; 1964 >
+      au < doNotProcess ; 1965 ; Endocrinology Volume 76-77 ; 1965 >
+      au < doNotProcess ; 1966 ; Endocrinology Volume 78-79 ; 1966 >
+      au < doNotProcess ; 1967 ; Endocrinology Volume 80-81 ; 1967 >
+      au < doNotProcess ; 1968 ; Endocrinology Volume 82-83 ; 1968 >
+      au < doNotProcess ; 1969 ; Endocrinology Volume 84-85 ; 1969 >
+      au < doNotProcess ; 1970 ; Endocrinology Volume 86-87 ; 1970 >
+      au < doNotProcess ; 1971 ; Endocrinology Volume 88-89 ; 1971 >
+      au < doNotProcess ; 1972 ; Endocrinology Volume 90-91 ; 1972 >
+      au < doNotProcess ; 1973 ; Endocrinology Volume 92-93 ; 1973 >
+      au < doNotProcess ; 1974 ; Endocrinology Volume 94-95 ; 1974 >
+      au < doNotProcess ; 1975 ; Endocrinology Volume 96-97 ; 1975 >
+      au < doNotProcess ; 1976 ; Endocrinology Volume 98-99 ; 1976 >
+      au < doNotProcess ; 1977 ; Endocrinology Volume 100-101 ; 1977 >
+      au < doNotProcess ; 1978 ; Endocrinology Volume 102-103 ; 1978 >
+      au < doNotProcess ; 1979 ; Endocrinology Volume 104-105 ; 1979 >
+      au < doNotProcess ; 1980 ; Endocrinology Volume 106-107 ; 1980 >
+      au < doNotProcess ; 1981 ; Endocrinology Volume 108-109 ; 1981 >
+      au < doNotProcess ; 1982 ; Endocrinology Volume 110-111 ; 1982 >
+      au < doNotProcess ; 1983 ; Endocrinology Volume 112-113 ; 1983 >
+      au < doNotProcess ; 1984 ; Endocrinology Volume 114-115 ; 1984 >
+      au < doNotProcess ; 1985 ; Endocrinology Volume 116-117 ; 1985 >
+      au < doNotProcess ; 1986 ; Endocrinology Volume 118-119 ; 1986 >
+      au < doNotProcess ; 1987 ; Endocrinology Volume 120-121 ; 1987 >
+      au < doNotProcess ; 1988 ; Endocrinology Volume 122-123 ; 1988 >
+      au < doNotProcess ; 1989 ; Endocrinology Volume 124-125 ; 1989 >
+      au < doNotProcess ; 1990 ; Endocrinology Volume 126-127 ; 1990 >
+      au < doNotProcess ; 1991 ; Endocrinology Volume 128-129 ; 1991 >
+      au < doNotProcess ; 1992 ; Endocrinology Volume 130-131 ; 1992 >
+      au < doNotProcess ; 1993 ; Endocrinology Volume 132-133 ; 1993 >
+      au < doNotProcess ; 1994 ; Endocrinology Volume 134-135 ; 1994 >
       au < doNotProcess ; 1995 ; Endocrinology Volume 136 ; 1995 >
       au < doNotProcess ; 1996 ; Endocrinology Volume 137 ; 1996 >
       au < doNotProcess ; 1997 ; Endocrinology Volume 138 ; 1997 >
@@ -256,7 +199,7 @@
 
     {
 
-      param[base_url] = https://academic.oup.com/jcem
+      param[base_url] = https://academic.oup.com/
       #param[journal_id] = jcem
       param[resource_id] = jcem
 
@@ -289,56 +232,31 @@
       au < doNotProcess ; 1967 ; Journal of Clinical Endocrinology & Metabolism Volume 27 ; 1967 >
       au < doNotProcess ; 1968 ; Journal of Clinical Endocrinology & Metabolism Volume 28 ; 1968 >
       au < doNotProcess ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 1969 >
-      au < doNotProcess ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30 ; 1970 >
-      au < doNotProcess ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 31 ; 1970 >
-      au < doNotProcess ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32 ; 1971 >
-      au < doNotProcess ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 33 ; 1971 >
-      au < doNotProcess ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34 ; 1972 >
-      au < doNotProcess ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 35 ; 1972 >
-      au < doNotProcess ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36 ; 1973 >
-      au < doNotProcess ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 37 ; 1973 >
-      au < doNotProcess ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38 ; 1974 >
-      au < doNotProcess ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 39 ; 1974 >
-      au < doNotProcess ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40 ; 1975 >
-      au < doNotProcess ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 41 ; 1975 >
-      au < doNotProcess ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42 ; 1976 >
-      au < doNotProcess ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 43 ; 1976 >
-      au < doNotProcess ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44 ; 1977 >
-      au < doNotProcess ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 45 ; 1977 >
-      au < doNotProcess ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46 ; 1978 >
-      au < doNotProcess ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 47 ; 1978 >
-      au < doNotProcess ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 48 ; 1979 >
-      au < doNotProcess ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 49 ; 1979 >
-      au < doNotProcess ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 50 ; 1980 >
-      au < doNotProcess ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 51 ; 1980 >
-      au < doNotProcess ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52 ; 1981 >
-      au < doNotProcess ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 53 ; 1981 >
-      au < doNotProcess ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54 ; 1982 >
-      au < doNotProcess ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 55 ; 1982 >
-      au < doNotProcess ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56 ; 1983 >
-      au < doNotProcess ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 57 ; 1983 >
-      au < doNotProcess ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58 ; 1984 >
-      au < doNotProcess ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 59 ; 1984 >
-      au < doNotProcess ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 60 ; 1985 >
-      au < doNotProcess ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 61 ; 1985 >
-      au < doNotProcess ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 62 ; 1986 >
-      au < doNotProcess ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 63 ; 1986 >
-      au < doNotProcess ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 64 ; 1987 >
-      au < doNotProcess ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 65 ; 1987 >
-      au < doNotProcess ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 66 ; 1988 >
-      au < doNotProcess ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 67 ; 1988 >
-      au < doNotProcess ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 68 ; 1989 >
-      au < doNotProcess ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 69 ; 1989 >
-      au < doNotProcess ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 70 ; 1990 >
-      au < doNotProcess ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 71 ; 1990 >
-      au < doNotProcess ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72 ; 1991 >
-      au < doNotProcess ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 73 ; 1991 >
-      au < doNotProcess ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74 ; 1992 >
-      au < doNotProcess ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 75 ; 1992 >
-      au < doNotProcess ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76 ; 1993 >
-      au < doNotProcess ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 77 ; 1993 >
-      au < doNotProcess ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78 ; 1994 >
-      au < doNotProcess ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 79 ; 1994 >
+      au < doNotProcess ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30-31 ; 1970 >
+      au < doNotProcess ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32-33 ; 1971 >
+      au < doNotProcess ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34-35 ; 1972 >
+      au < doNotProcess ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36-37 ; 1973 >
+      au < doNotProcess ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38-39 ; 1974 >
+      au < doNotProcess ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40-41 ; 1975 >
+      au < doNotProcess ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42-43 ; 1976 >
+      au < doNotProcess ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44-45 ; 1977 >
+      au < doNotProcess ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46-47 ; 1978 >
+      au < doNotProcess ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 48-49 ; 1979 >
+      au < doNotProcess ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 50-51 ; 1980 >
+      au < doNotProcess ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52-53 ; 1981 >
+      au < doNotProcess ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54-55 ; 1982 >
+      au < doNotProcess ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56-57 ; 1983 >
+      au < doNotProcess ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58-59 ; 1984 >
+      au < doNotProcess ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 60-61 ; 1985 >
+      au < doNotProcess ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 62-63 ; 1986 >
+      au < doNotProcess ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 64-65 ; 1987 >
+      au < doNotProcess ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 66-67 ; 1988 >
+      au < doNotProcess ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 68-69 ; 1989 >
+      au < doNotProcess ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 70-71 ; 1990 >
+      au < doNotProcess ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72-73 ; 1991 >
+      au < doNotProcess ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74-75 ; 1992 >
+      au < doNotProcess ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76-77 ; 1993 >
+      au < doNotProcess ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78-79 ; 1994 >
       au < doNotProcess ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 1995 >
       au < doNotProcess ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 1996 >
       au < doNotProcess ; 1997 ; Journal of Clinical Endocrinology & Metabolism Volume 82 ; 1997 >
@@ -378,7 +296,7 @@
 
     {
 
-      param[base_url] = https://academic.oup.com/mend
+      param[base_url] = https://academic.oup.com/
       #param[journal_id] = mend
       param[resource_id] = mend
 
