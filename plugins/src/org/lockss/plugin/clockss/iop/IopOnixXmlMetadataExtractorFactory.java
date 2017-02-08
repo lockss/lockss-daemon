@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -55,7 +56,7 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
 
   private static SourceXmlSchemaHelper Onix2Helper = null;
   private static SourceXmlSchemaHelper Onix3Helper = null;
-
+ 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -153,7 +154,7 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
      * in a few cases it looks like this
      * http://dx.doi.org/10.1088/9780750312363  (no hyphens)
      * but in all cases it has at least one slash
-     *
+
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
@@ -164,8 +165,9 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       String fullDOI = (helper == Onix2Helper) ? oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi) : 
         oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_doi);
       String doi_isbn13 = null;
+      String clean_doi = null;
       if (fullDOI != null) {
-        doi_isbn13 = fullDOI.substring(fullDOI.lastIndexOf("/") + 1); 
+        doi_isbn13 = fullDOI.substring(fullDOI.lastIndexOf("/") + 1);
       }
       
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
@@ -208,5 +210,31 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       return returnList;
     }
 
+    /*
+     * * In most cases the doi value is like this
+    * 10.1088/978-0-7503-1103-8
+    * But in some cases it looks like this:
+    * http://dx.doi.org/10.1088/978-0-750-31173-1
+    * This isn't valid - so now clean up and put in the clean value
+    * Could have done this during filename processing but prefer to leave
+    * the original raw value untouched
+    */
+
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper helper, 
+        CachedUrl cu, ArticleMetadata oneAM) {
+      
+      String fullDOI = (helper == Onix2Helper) ? oneAM.getRaw(Onix2BooksSchemaHelper.ONIX_idtype_doi) : 
+        oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_doi);
+      String clean_doi = null;
+      if (fullDOI != null && fullDOI.contains("dx.doi.org")) {
+        clean_doi = StringUtils.substringAfter(fullDOI,"http://dx.doi.org/");
+        if (!(fullDOI.equals(clean_doi))) {
+            oneAM.putIfBetter(MetadataField.FIELD_DOI,clean_doi);
+        }
+      }      
+    }    
+
+    
   }
 }
