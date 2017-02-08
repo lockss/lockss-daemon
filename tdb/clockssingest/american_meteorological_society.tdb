@@ -509,20 +509,21 @@
     
     param[journal_id] = amsm
     
-    au < manifest ; exists ; 1980 ; Meteorological Monographs Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1986 ; Meteorological Monographs Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1993 ; Meteorological Monographs Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1994 ; Meteorological Monographs Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1996 ; Meteorological Monographs Volume 48 ; 48 ; >
-    au < manifest ; exists ; 1998 ; Meteorological Monographs Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2001 ; Meteorological Monographs Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2004 ; Meteorological Monographs Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2008 ; Meteorological Monographs Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1980 ; Meteorological Monographs Volume 39 [abstract only] ; 39 ; >
+    au < manifest ; exists ; 1986 ; Meteorological Monographs Volume 43 [abstract only] ; 43 ; >
+    au < manifest ; exists ; 1993 ; Meteorological Monographs Volume 46 [abstract only] ; 46 ; >
+    au < manifest ; exists ; 1994 ; Meteorological Monographs Volume 47 [abstract only] ; 47 ; >
+    au < manifest ; exists ; 1996 ; Meteorological Monographs Volume 48 [abstract only] ; 48 ; >
+    au < manifest ; exists ; 1998 ; Meteorological Monographs Volume 49 [abstract only] ; 49 ; >
+    au < manifest ; exists ; 2001 ; Meteorological Monographs Volume 50 [abstract only] ; 50 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 51 [abstract only] ; 51 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 52 [abstract only] ; 52 ; >
+    au < manifest ; exists ; 2003 ; Meteorological Monographs Volume 53 [abstract only] ; 53 ; >
+    au < manifest ; exists ; 2004 ; Meteorological Monographs Volume 54 [abstract only] ; 54 ; >
+    au < manifest ; exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 ; >
     au < manifest ; exists ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; >
     au < manifest ; exists ; 2016 ; Meteorological Monographs Volume 57 ; 57 ; >
+    au < expected ; exists ; 2017 ; Meteorological Monographs Volume 58 ; 58 ; >
     
   }
 
