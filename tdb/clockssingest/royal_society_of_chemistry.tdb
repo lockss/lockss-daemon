@@ -2344,10 +2344,10 @@
 
       param[journal_code] = tx
 
-      au < manifest ; exists ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
+      au < testing ; exists ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; >
+      au < testing ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
+      au < testing ; exists ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; >
+      au < testing ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
       au < ready ; exists ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 ; >
 
   }
