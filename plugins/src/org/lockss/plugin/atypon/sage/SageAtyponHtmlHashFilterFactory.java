@@ -45,9 +45,6 @@ public class SageAtyponHtmlHashFilterFactory
 
   private static final Logger log = Logger.getLogger(SageAtyponHtmlHashFilterFactory.class);
   
-  //TODO - this is cut and paste from BIR
-  // do analysis and cleanup - take in to account both BaseAtyon
-
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -56,64 +53,25 @@ public class SageAtyponHtmlHashFilterFactory
         // handled by parent: script, sfxlink, stylesheet
 
         HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.tag("style"),
         
         // toc - first top block ad
-        // http://www.birpublications.org/toc/bjr/87/1044
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumAd"),
         // page header: login, register, etc., and journal menu such as
         // subscribe, alerts, ...
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageHeader"),
+        HtmlNodeFilters.tagWithAttribute("header", "class", "page-header"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalNavContainer"),
         // page footer
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "pageFooter"),
-        // toc - BJR logo image right below pageHeader
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+        // toc - Right column
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "^widget general-image"),
-        // toc, abs, full, ref - menu above breadcrumbs
-        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "menuXml"),
-        // toc - free.gif image tied to an abs
-        HtmlNodeFilters.tagWithAttributeRegex("img",  "src", "free.gif"),   
-        // toc - access icon container
+                                              "TOCRightColumn"),
+        // article right column
+        HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "articleRightColumn"),
+
+        
+        // toc - access icon container - haven't seen but common for Atypon
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
-        // toc - pulldown with sections - may add citedby later
-        HtmlNodeFilters.tagWithAttribute("div", "class", 
-                                         "publicationTooldropdownContainer"), 
-        // toc - right column, current issue
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumBookIssueNavigation"),
-        // toc, abs - share social media
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "general-bookmark-share"),
-        // toc - right column impact factor block - no unique name found
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-            "widget\\s+layout-one-column\\s+none\\s+widget-regular\\s+widget-border-toggle"),
-        // ref - this seems unused but may get turned on
-        // http://www.birpublications.org/doi/ref/10.1259/bjr.20130571
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "MathJax_Message"),
-        // full - section choose pulldown appeared in multiple sections
-        // http://www.birpublications.org/doi/full/10.1259/dmfr.20120050
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "sectionJumpTo"),
-        // toc, abs, full, text and ref right column - most read 
-        // http://www.birpublications.org/toc/bjr/88/1052
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "literatumMostReadWidget"),
-        // abs - right column all literatumArticleToolsWidget 
-        // except Download Citation
-        // http://www.birpublications.org/doi/abs/10.1259/bjr.20140472                                      
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttributeRegex( 
-                "div", "class", "literatumArticleToolsWidget"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "a", "href", "/action/showCitFormats\\?")),
-        // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
-        // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
-        // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
-        // but remove everything else (links and punctuation between options)  
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tagWithAttribute(
-                "table", "class", "references"),
-                HtmlNodeFilters.tagWithAttributeRegex(
-                    "span", "class", "NLM_")),
-                    
  
     };
     // super.createFilteredInputStream adds bir filter to the baseAtyponFilters
