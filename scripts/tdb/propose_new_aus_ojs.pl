@@ -46,9 +46,11 @@ if ($opt_help) {
 while (my $line = <>) {
     chomp($line);
     # Check only for OJS plugins.
-    if ($line =~ m/(OJS2Plugin)/i) {
+    if ($line =~ m/(OJS2Plugin|CoActionPublishingPlugin)/i) {
       # org|lockss|plugin|ojs2|OJS2Plugin&base_url~http%3A%2F%2Fwww%2Efaccamp%2Ebr%2Fojs%2F&journal_id~RMPE&year~2007
-      if ($line =~ m/org\|lockss\|plugin\|ojs2\|(\S+)\&base_url~(https?%3A%2F%2F)(\S+)\&journal_id~(\S+)\&year~(\d+)/) {
+      # org|lockss|plugin|coactionpublishing|CoActionPublishingPlugin&base_url~http%3A%2F%2Fwww%2Eregenerativebiology%2Enet%2F&journal_id~arb&year~2016
+
+      if ($line =~ m/org\|lockss\|plugin\|(\S+)\&base_url~(https?%3A%2F%2F)(\S+)\&journal_id~(\S+)\&year~(\d+)/) {
         my $au_plugin = $1;
         my $base_url_prefix = $2;
         my $base_url = $3;

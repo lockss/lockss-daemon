@@ -22,6 +22,7 @@
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2013 ; Bone & Joint 360 Volume 2 ; 2 > #Unable to fetch probe permission page
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2014 ; Bone & Joint 360 Volume 3 ; 3 > #Unable to fetch probe permission page
     au < besbjs.BESBJSDrupalPlugin ; notReady ; 2015 ; Bone & Joint 360 Volume 4 ; 4 > #Unable to fetch probe permission page
+    au < besbjs.BESBJSDrupalPlugin ; notReady ; 2016 ; Bone & Joint 360 Volume 5 ; 5 > #Unable to fetch probe permission page
     
   }
   
@@ -40,6 +41,7 @@
     au < besbjs.BESBJSDrupalPlugin ; released ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
     au < besbjs.BESBJSDrupalPlugin ; released ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
     au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
+    au < besbjs.BESBJSDrupalPlugin ; expected ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
     
   }
   
@@ -141,6 +143,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
     au < HighWirePressH20Plugin ; down ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
     au < besbjs.BESBJSDrupalPlugin ; released ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
+    au < besbjs.BESBJSDrupalPlugin ; expected ; 2016 ; The Bone & Joint Journal Volume 98 ; 98-B >
 
   }
 
