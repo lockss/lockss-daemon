@@ -186,20 +186,6 @@
   {
   
     title <
-      name = International Journal for Undergraduate Research - Science, Engineering & Technology ;
-      eissn = 2227-1929
-    >
-
-    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
-    param[journal_id] = ijurset
-
-    au < expected ; exists ; 2016 ; International Journal for Undergraduate Research - Science, Engineering & Technology Volume 2016 ; 2016 ; >
-
-  }
-
-  {
-  
-    title <
       name = Journal of Emergency Medicine, Trauma and Acute Care ;
       eissn = 1999-7086
     >
