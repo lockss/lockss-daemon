@@ -18,16 +18,16 @@
     # purchased by Sage 11/15 (moved to H20)
     param[journal_id] = ast
 
-    au < released ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
-    au < released ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
-    au < released ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
-    au < released ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
-    au < released ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
-    au < released ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
-    au < released ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
-    au < released ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
-    au < released ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
-    au < released ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
+    au < down ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
+    au < down ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
+    au < down ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
+    au < down ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
+    au < down ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
+    au < down ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
+    au < down ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
+    au < down ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
+    au < down ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+    au < down ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
     au < doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
     au < doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
     au < doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
@@ -48,16 +48,16 @@
     param[journal_id] = ase
     # purchased by Sage 11/15
     
-    au < released ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
-    au < released ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
-    au < released ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
-    au < released ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
-    au < released ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
-    au < released ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
-    au < released ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
-    au < released ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
-    au < released ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
-    au < released ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
+    au < down ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
+    au < down ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
+    au < down ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
+    au < down ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
+    au < down ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
+    au < down ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
+    au < down ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
+    au < down ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
+    au < down ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
+    au < down ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
     au < doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
     au < doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
     au < doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
@@ -77,23 +77,23 @@
 
     param[journal_id] = ba
 
-    au < manifest ; 1999 ; Building Acoustics Volume 6 ; 6 >
-    au < released ; 2000 ; Building Acoustics Volume 7 ; 7 >
-    au < released ; 2001 ; Building Acoustics Volume 8 ; 8 >
-    au < released ; 2002 ; Building Acoustics Volume 9 ; 9 >
-    au < released ; 2003 ; Building Acoustics Volume 10 ; 10 >
-    au < released ; 2004 ; Building Acoustics Volume 11 ; 11 >
-    au < released ; 2005 ; Building Acoustics Volume 12 ; 12 >
-    au < released ; 2006 ; Building Acoustics Volume 13 ; 13 >
-    au < released ; 2007 ; Building Acoustics Volume 14 ; 14 >
-    au < released ; 2008 ; Building Acoustics Volume 15 ; 15 >
-    au < released ; 2009 ; Building Acoustics Volume 16 ; 16 >
+    au < doNotProcess ; 1999 ; Building Acoustics Volume 6 ; 6 >
+    au < down ; 2000 ; Building Acoustics Volume 7 ; 7 >
+    au < down ; 2001 ; Building Acoustics Volume 8 ; 8 >
+    au < down ; 2002 ; Building Acoustics Volume 9 ; 9 >
+    au < down ; 2003 ; Building Acoustics Volume 10 ; 10 >
+    au < down ; 2004 ; Building Acoustics Volume 11 ; 11 >
+    au < down ; 2005 ; Building Acoustics Volume 12 ; 12 >
+    au < down ; 2006 ; Building Acoustics Volume 13 ; 13 >
+    au < down ; 2007 ; Building Acoustics Volume 14 ; 14 >
+    au < down ; 2008 ; Building Acoustics Volume 15 ; 15 >
+    au < down ; 2009 ; Building Acoustics Volume 16 ; 16 >
     au < doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 >
     au < doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 >
-    au < released ; 2013 ; Building Acoustics Volume 20 ; 20 >
-    au < released ; 2014 ; Building Acoustics Volume 21 [Multi-Science] ; 21 >
-    au < released ; 2015 ; Building Acoustics Volume 22 [Multi-Science] ; 22 >
+    au < down ; 2013 ; Building Acoustics Volume 20 ; 20 >
+    au < down ; 2014 ; Building Acoustics Volume 21 [Multi-Science] ; 21 >
+    au < down ; 2015 ; Building Acoustics Volume 22 [Multi-Science] ; 22 >
     #no volumes after 2015.
 
   }
@@ -109,17 +109,17 @@
     param[journal_id] = ee
     # purchased by Sage 11/15
 
-    au < manifest ; 1999 ; Energy & Environment Volume 10 ; 10 >
-    au < released ; 2000 ; Energy & Environment Volume 11 ; 11 >
-    au < released ; 2001 ; Energy & Environment Volume 12 ; 12 >
-    au < released ; 2002 ; Energy & Environment Volume 13 ; 13 >
-    au < released ; 2003 ; Energy & Environment Volume 14 ; 14 >
-    au < released ; 2004 ; Energy & Environment Volume 15 ; 15 >
-    au < released ; 2005 ; Energy & Environment Volume 16 ; 16 >
-    au < released ; 2006 ; Energy & Environment Volume 17 ; 17 >
-    au < released ; 2007 ; Energy & Environment Volume 18 ; 18 >
-    au < released ; 2008 ; Energy & Environment Volume 19 ; 19 >
-    au < released ; 2009 ; Energy & Environment Volume 20 ; 20 >
+    au < doNotProcess ; 1999 ; Energy & Environment Volume 10 ; 10 >
+    au < down ; 2000 ; Energy & Environment Volume 11 ; 11 >
+    au < down ; 2001 ; Energy & Environment Volume 12 ; 12 >
+    au < down ; 2002 ; Energy & Environment Volume 13 ; 13 >
+    au < down ; 2003 ; Energy & Environment Volume 14 ; 14 >
+    au < down ; 2004 ; Energy & Environment Volume 15 ; 15 >
+    au < down ; 2005 ; Energy & Environment Volume 16 ; 16 >
+    au < down ; 2006 ; Energy & Environment Volume 17 ; 17 >
+    au < down ; 2007 ; Energy & Environment Volume 18 ; 18 >
+    au < down ; 2008 ; Energy & Environment Volume 19 ; 19 >
+    au < down ; 2009 ; Energy & Environment Volume 20 ; 20 >
     au < doNotProcess ; 2010 ; Energy & Environment Volume 21 ; 21 >
     au < doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 >
     au < doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 >
@@ -139,23 +139,23 @@
 
     param[journal_id] = eee
 
-    au < released ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 >
-    au < released ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 >
-    au < released ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 >
-    au < released ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 >
-    au < released ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 >
-    au < released ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 >
-    au < released ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 >
-    au < released ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 >
-    au < released ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 >
-    au < released ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 >
+    au < down ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 >
+    au < down ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 >
+    au < down ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 >
+    au < down ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 >
+    au < down ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 >
+    au < down ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 >
+    au < down ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 >
+    au < down ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 >
+    au < down ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 >
+    au < down ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 >
     au < doNotProcess ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 >
     au < doNotProcess ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 >
     au < doNotProcess ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 >
-    au < released ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 >
-    au < released ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 >
-    au < manifest ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 >
-    au < expected ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 >
+    au < down ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 >
+    au < down ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 >
+    au < doNotProcess ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 >
+    au < doNotProcess ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 >
 
   }
 
@@ -169,20 +169,20 @@
 
     param[journal_id] = ija
 
-    au < released ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
-    au < released ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
-    au < released ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
-    au < released ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 >
-    au < released ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
-    au < released ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
-    au < released ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
-    au < released ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
+    au < down ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
+    au < down ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
+    au < down ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
+    au < down ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 >
+    au < down ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
+    au < down ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
+    au < down ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
+    au < down ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
     au < doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 >
     au < doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 >
     au < doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 >
-    au < released ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
-    au < released ; 2014 ; International Journal of Aeroacoustics Volume 13 [Multi-Science] ; 13 >
-    au < released ; 2015 ; International Journal of Aeroacoustics Volume 14 [Multi-Science] ; 14 >
+    au < down ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
+    au < down ; 2014 ; International Journal of Aeroacoustics Volume 13 [Multi-Science] ; 13 >
+    au < down ; 2015 ; International Journal of Aeroacoustics Volume 14 [Multi-Science] ; 14 >
 
   }
 
@@ -198,8 +198,8 @@
     au < doNotProcess ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < released ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
+    au < down ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < down ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
 
   }
 
@@ -213,20 +213,20 @@
 
     param[journal_id] = ijac
 
-    au < released ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
-    au < released ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
-    au < released ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 >
-    au < released ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 >
-    au < released ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
-    au < released ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
-    au < released ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
+    au < down ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
+    au < down ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
+    au < down ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 >
+    au < down ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 >
+    au < down ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
+    au < down ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
+    au < down ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
     au < doNotProcess ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
     au < doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
     au < doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
-    au < released ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
-    au < released ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
-    au < manifest ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
-    au < expected ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
+    au < down ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
+    au < down ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
+    au < doNotProcess ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
+    au < doNotProcess ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
 
   }
 
@@ -258,10 +258,10 @@
     au < doNotProcess ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
-    au < released ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
-    au < released ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
-    au < released ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
+    au < down ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
+    au < down ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
+    au < down ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
+    au < down ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
   }
 
@@ -276,10 +276,10 @@
     param[journal_id] = ijhde
     # purchased by Sage 11/15
 
-    au < released ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
-    au < released ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
-    au < released ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 [Multi-Science] ; 3 >
-    au < released ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 [Multi-Science] ; 4 >
+    au < down ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
+    au < down ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
+    au < down ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 [Multi-Science] ; 3 >
+    au < down ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 [Multi-Science] ; 4 >
 
   }
 
@@ -308,14 +308,14 @@
 
     param[journal_id] = ijis
 
-    au < released ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
+    au < down ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
-    au < released ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
-    au < released ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
-    au < expected ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 >
+    au < down ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
+    au < down ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
+    au < down ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
+    au < doNotProcess ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 >
 
   }
 
@@ -329,13 +329,13 @@
 
     param[journal_id] = ijmav
 
-    au < released ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
+    au < down ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
-    au < released ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
-    au < manifest ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
+    au < down ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
+    au < down ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
+    au < doNotProcess ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
 
   }
 
@@ -350,9 +350,9 @@
 
     au < doNotProcess ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < released ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < released ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
-    au < released ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < down ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < down ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < down ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
 
   }
 
@@ -370,9 +370,9 @@
     au < doNotProcess ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
-    au < released ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
-    au < released ; 2014 ; International Journal of Protective Structures Volume 5 [Multi-Science] ; 5 >
-    au < released ; 2015 ; International Journal of Protective Structures Volume 6 [Multi-Science] ; 6 >
+    au < down ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
+    au < down ; 2014 ; International Journal of Protective Structures Volume 5 [Multi-Science] ; 5 >
+    au < down ; 2015 ; International Journal of Protective Structures Volume 6 [Multi-Science] ; 6 >
 
   }
 
@@ -387,23 +387,23 @@
     param[journal_id] = ijss
     # purchased by Sage 11/15
 
-    au < manifest ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
-    au < released ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
-    au < released ; 2001 ; International Journal of Space Structures Volume 16 ; 16 >
-    au < released ; 2002 ; International Journal of Space Structures Volume 17 ; 17 >
-    au < released ; 2003 ; International Journal of Space Structures Volume 18 ; 18 >
-    au < released ; 2004 ; International Journal of Space Structures Volume 19 ; 19 >
-    au < released ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
-    au < released ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
-    au < released ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
-    au < released ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
-    au < released ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
+    au < doNotProcess ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
+    au < down ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
+    au < down ; 2001 ; International Journal of Space Structures Volume 16 ; 16 >
+    au < down ; 2002 ; International Journal of Space Structures Volume 17 ; 17 >
+    au < down ; 2003 ; International Journal of Space Structures Volume 18 ; 18 >
+    au < down ; 2004 ; International Journal of Space Structures Volume 19 ; 19 >
+    au < down ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
+    au < down ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
+    au < down ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
+    au < down ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
+    au < down ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
     au < doNotProcess ; 2010 ; International Journal of Space Structures Volume 25 ; 25 >
     au < doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 >
     au < doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 >
-    au < released ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
-    au < released ; 2014 ; International Journal of Space Structures Volume 29 [Multi-Science] ; 29 >
-    au < released ; 2015 ; International Journal of Space Structures Volume 30 [Multi-Science] ; 30 >
+    au < down ; 2013 ; International Journal of Space Structures Volume 28 ; 28 >
+    au < down ; 2014 ; International Journal of Space Structures Volume 29 [Multi-Science] ; 29 >
+    au < down ; 2015 ; International Journal of Space Structures Volume 30 [Multi-Science] ; 30 >
 
   }
 
@@ -417,16 +417,16 @@
 
     param[journal_id] = ijssc
 
-    au < released ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
-    au < released ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
-    au < released ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
-    au < released ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
+    au < down ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
+    au < down ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
+    au < down ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 >
+    au < down ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 >
     au < doNotProcess ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 >
     au < doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 >
     au < doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 >
-    au < released ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
-    au < released ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
-    au < released ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
+    au < down ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 >
+    au < down ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 >
+    au < down ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 >
 
   }
 
@@ -441,13 +441,13 @@
     param[journal_id] = ijscd
     # purchased by Sage 11/15
 
-    au < released ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
+    au < down ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
-    au < released ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 [Multi-Science] ; 6 >
-    au < released ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 [Multi-Science] ; 7 >
+    au < down ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
+    au < down ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 [Multi-Science] ; 6 >
+    au < down ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 [Multi-Science] ; 7 >
 
   }
 
@@ -460,10 +460,10 @@
 
     param[journal_id] = ijtst
 
-    au < released ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
-    au < released ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
-    au < released ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 >
-    au < released ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 >
+    au < down ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
+    au < down ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
+    au < down ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 >
+    au < down ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 >
 
   }
 
@@ -477,15 +477,15 @@
 
     param[journal_id] = jact
 
-    au < released ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
-    au < released ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
-    au < released ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
+    au < down ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
+    au < down ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
+    au < down ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
     au < doNotProcess ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
-    au < released ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
-    au < released ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
-    au < manifest ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 >
+    au < down ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
+    au < down ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
+    au < doNotProcess ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 >
 
   }
 
@@ -502,9 +502,9 @@
     au < doNotProcess ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
-    au < released ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
-    au < released ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
-    au < released ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 >
+    au < down ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
+    au < down ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
+    au < down ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 >
 
   }
 
@@ -520,9 +520,9 @@
     au < doNotProcess ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
-    au < released ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
-    au < released ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
-    au < released ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 >
+    au < down ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
+    au < down ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
+    au < down ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 >
 
   }
 
@@ -536,22 +536,22 @@
 
     param[journal_id] = jlfnvac
 
-    au < released ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
-    au < released ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
-    au < released ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
-    au < released ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
-    au < released ; 2004 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
-    au < released ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
-    au < released ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
-    au < released ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
-    au < released ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
-    au < released ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
+    au < down ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
+    au < down ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
+    au < down ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
+    au < down ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
+    au < down ; 2004 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
+    au < down ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
+    au < down ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
+    au < down ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
+    au < down ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
+    au < down ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
     au < doNotProcess ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 >
     au < doNotProcess ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 >
     au < doNotProcess ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 >
-    au < released ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 >
-    au < released ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 >
-    au < manifest ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 >
+    au < down ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 >
+    au < down ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 >
+    au < doNotProcess ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 >
 
   }
 
@@ -566,9 +566,9 @@
     param[journal_id] = nvww
     # purchased by Sage 11/15
 
-    au < manifest ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
-    au < manifest ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
-    au < manifest ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
+    au < doNotProcess ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
+    au < doNotProcess ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
+    au < doNotProcess ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
     au < doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
     au < superseded ; 2013 ; Noise & Vibration Worldwide Volume 44 [superseded] ; 44 >
@@ -596,9 +596,9 @@
     au < doNotProcess ; 2009 ; Noise Notes Volume 8 ; 8 >
     au < doNotProcess ; 2010 ; Noise Notes Volume 9 ; 9 >
     au < doNotProcess ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < released ; 2012 ; Noise Notes Volume 11 ; 11 >
-    au < released ; 2013 ; Noise Notes Volume 12 ; 12 >
-    au < released ; 2014 ; Noise Notes Volume 13 ; 13 >
+    au < down ; 2012 ; Noise Notes Volume 11 ; 11 >
+    au < down ; 2013 ; Noise Notes Volume 12 ; 12 >
+    au < down ; 2014 ; Noise Notes Volume 13 ; 13 >
 
   }
 
@@ -611,15 +611,15 @@
 
     param[journal_id] = ijm
 
-    au < released ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
-    au < released ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
-    au < released ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
+    au < down ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
+    au < down ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
+    au < down ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
     au < doNotProcess ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
-    au < released ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
-    au < released ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
-    au < released ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 >
+    au < down ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 >
+    au < down ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
+    au < down ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 >
 
   }
 
@@ -637,9 +637,9 @@
     au < doNotProcess ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 >
-    au < released ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
-    au < released ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 [Multi-Science] ; 5 >
-    au < released ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 [Multi-Science] ; 6 >
+    au < down ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
+    au < down ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 [Multi-Science] ; 5 >
+    au < down ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 [Multi-Science] ; 6 >
 
   }
 
@@ -653,13 +653,13 @@
 
     param[journal_id] = jcmf
 
-    au < released ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
+    au < down ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
-    au < released ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
-    au < released ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
-    au < manifest ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
+    au < down ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
+    au < down ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
+    au < doNotProcess ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
 
   }
 
@@ -674,16 +674,16 @@
     param[journal_id] = we
     # purchased by Sage 11/15
 
-    au < released ; 2000 ; Wind Engineering Volume 24 ; 24 >
-    au < released ; 2001 ; Wind Engineering Volume 25 ; 25 >
-    au < released ; 2002 ; Wind Engineering Volume 26 ; 26 >
-    au < released ; 2003 ; Wind Engineering Volume 27 ; 27 >
-    au < released ; 2004 ; Wind Engineering Volume 28 ; 28 >
-    au < released ; 2005 ; Wind Engineering Volume 29 ; 29 >
-    au < released ; 2006 ; Wind Engineering Volume 30 ; 30 >
-    au < released ; 2007 ; Wind Engineering Volume 31 ; 31 >
-    au < released ; 2008 ; Wind Engineering Volume 32 ; 32 >
-    au < released ; 2009 ; Wind Engineering Volume 33 ; 33 >
+    au < down ; 2000 ; Wind Engineering Volume 24 ; 24 >
+    au < down ; 2001 ; Wind Engineering Volume 25 ; 25 >
+    au < down ; 2002 ; Wind Engineering Volume 26 ; 26 >
+    au < down ; 2003 ; Wind Engineering Volume 27 ; 27 >
+    au < down ; 2004 ; Wind Engineering Volume 28 ; 28 >
+    au < down ; 2005 ; Wind Engineering Volume 29 ; 29 >
+    au < down ; 2006 ; Wind Engineering Volume 30 ; 30 >
+    au < down ; 2007 ; Wind Engineering Volume 31 ; 31 >
+    au < down ; 2008 ; Wind Engineering Volume 32 ; 32 >
+    au < down ; 2009 ; Wind Engineering Volume 33 ; 33 >
     au < doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 >
     au < doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 >
     au < doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 >
@@ -704,9 +704,9 @@
 
     au < doNotProcess ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
     au < doNotProcess ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
-    au < released ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
-    au < released ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
-    au < released ; 2015 ; World Journal of Engineering Volume 12 ; 12 >
+    au < down ; 2013 ; World Journal of Engineering Volume 10 ; 10 >
+    au < down ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
+    au < down ; 2015 ; World Journal of Engineering Volume 12 ; 12 >
 
   }
 
