@@ -429,7 +429,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.inderscienceonline.com/na101/home/literatum/publisher/indersci/journals/content/ijpe/2015/ijpe.2015.1.issue-3/ijpe.2015.071062/20150811/ijpe.2015.071062.fp.png_v03",
         //variant on pb-assets in now defunct Maney
         "http://www.maneyonline.com/pb/assets/raw/sub-hist.png",
-        "http://www.emeraldinsight.com/wro/product.css");
+        "http://www.emeraldinsight.com/wro/product.css",
+        "http://journals.sagepub.com/pb/css/t1486049682000-v1486049682000/head_1_6_7.css",
+        "http://journals.sagepub.com/templates/jsp/_style2/_sage/images/sfxbutton.gif");
      Pattern p0 = Pattern.compile(baseRepairList[0]);
      Pattern p1 = Pattern.compile(baseRepairList[1]);
      Pattern p2 = Pattern.compile(baseRepairList[2]);
