@@ -36,6 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
 __version__ = '0.1.0'
 
 import cStringIO
+from datetime import datetime
 import optparse
 import re
 import subprocess
@@ -48,6 +49,12 @@ class _TdbAddYearOptions(object):
         parser = optparse.OptionParser(version=__version__, usage=usage, description=__doc__)
         parser.add_option('--copyright', '-C', action='store_true', help='show copyright and exit')
         parser.add_option('--license', '-L', action='store_true', help='show license and exit')
+        # Options
+        group = optparse.OptionGroup(parser, 'Options')
+        group.add_option('--end-year', help='last year in which to add entries (default: this year)')
+        group.add_option('--start-year', help='first year in which to add entries (default: this year)')
+        group.add_option('--stoppers', default='doesNotExist', help='AU statuses indicating the end of a run (comma-separated, default: %default)')
+        parser.add_option_group(group)
         return parser
 
     def __init__(self, parser, opts, args):
@@ -61,6 +68,18 @@ class _TdbAddYearOptions(object):
         # files
         if len(args) == 0: parser.error('at least one file is required')
         self.files = args[:]
+        # end_year, start_year (integer)
+        this_year = str(datetime.today().year)
+        self.start_year = _parse_year(opts.start_year or this_year)
+        self.end_year = _parse_year(opts.end_year or this_year)
+        if self.start_year > self.end_year:
+            parser.error('Start year is later than end year')
+        # stoppers
+        self.stoppers = set(opts.stoppers.split(',') if len(opts.stoppers) > 0 else [])
+
+def _parse_year(yearstr):
+    begin, dash, end = yearstr.rpartition('-')
+    return int(end) # int constructor raises ValueError
 
 class _Au(object):
   '''An internal class to represent an AU entry.'''
@@ -233,6 +252,19 @@ def _find_endpoints(options, aus):
         aindex = aindex + 1
     return ret
 
+def _find_candidates(options, aus, endpoints):
+    ret = list()
+    for endpoint in endpoints:
+        auentry = aus[endpoint]
+        if auentry[-1].get_status() in options.stoppers:
+            continue
+        if len(auentry[_YEAR]) > 0 and _parse_year(auentry[_YEAR]) + 1 < options.start_year:
+            continue
+        if len(auentry[_YEAR]) > 0 and len(auentry[_PYEAR]) > 0 and _parse_year(auentry[_PYEAR]) + 1 < options.start_year:
+            continue
+        ret.append(endpoint)
+    return ret
+
 def _main():
     # Parse command line
     parser = _TdbAddYearOptions.make_parser()
@@ -244,7 +276,10 @@ def _main():
     _recognize(options, aus)
     # Find candidates
     endpoints = _find_endpoints(options, aus)
-    for aindex in endpoints:
+    candidates = _find_candidates(options, aus, endpoints)
+
+    ###DEBUG
+    for aindex in candidates:
         auentry = aus[aindex]
         print '%s:%d: %s' % (auentry[_FILE], auentry[_LINE], auentry[_NAME]) ###DEBUG
 
