@@ -25,6 +25,7 @@
     param[journal_id] = jamacardiology
     
     au < testing ; exists ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Cardiology Volume 2 ; 2017 ; >
   
   }
 
@@ -45,6 +46,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Dermatology Volume 153 ; 2017 ; >
   
   }
 
@@ -65,6 +67,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; >
   
   }
 
@@ -85,6 +88,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 ; >
 
   }
 
@@ -105,6 +109,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; >
   
   }
 
@@ -122,6 +127,7 @@
     
     au < manifest ; exists ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; >
     au < manifest ; exists ; 2016 ; JAMA Oncology Volume 2 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Oncology Volume 3 ; 2017 ; >
 
   }
 
@@ -142,6 +148,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; >
     
   }
 
@@ -162,6 +169,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; >
     
   }
 
@@ -182,6 +190,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; >
     
   }
 
@@ -202,6 +211,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Psychiatry Volume 74 ; 2017 ; >
   
   }
 
@@ -221,6 +231,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA Surgery Volume 152 ; 2017 ; >
   
   }
 
@@ -262,6 +273,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; >
     au < testing ; exists ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; >
+    au < expected ; exists ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; >
   
   }
 
