@@ -142,6 +142,12 @@ public class WarcXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
         if (raw_pub != null) {
           thisAM.replace(MetadataField.FIELD_PUBLISHER, raw_pub);
         }
+        if (thisAM.get(MetadataField.FIELD_DATE)== null) {
+          String pubdate = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date);
+          if (pubdate != null) {
+            thisAM.put(MetadataField.FIELD_DATE,pubdate);
+          }
+        }        
       } else if (schemaHelper == WarcOnixPublishingHelper) {
         String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
         if (access != null) {
