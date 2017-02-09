@@ -43,20 +43,21 @@ import org.lockss.util.urlconn.*;
  * The newest skin of Atypon has problem where it serves a 500 when it seems to mean 404. 
  * This is particularly a problem for the seemingly programmatically generated links to various
  * formats of tables (action/downloadTable?doi=) but also shows up occasionally for figures
- * (action/downloadFigures?). 
+ * (action/downloadFigures? | downloadPdfFig). 
  * In some cases the action/showPopup?citid=citart1 which displays footnote details
- * So far seen in Taylor & Francis, Edocrine and Mark Allen Group
+ * So far seen in Taylor & Francis, Edocrine and Mark Allen Group and Sage on Atypon
  */
 public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
     
   // default for Atypon is 
   //     action/downloadTable
   //     action/downloadFigures
+  //     action/downloadPdfFig
   //     action/showPopup
   //
   // child can override through getter to extend or change the pattern
   protected static final Pattern DEFAULT_NON_FATAL_PAT = 
-      Pattern.compile("action/(download(Table|Figures)|show(Popup|Cit))");
+      Pattern.compile("action/(download(Table|Figures|PdfFig)|show(Popup|Cit))");
     
   private static final Logger logger = Logger.getLogger(BaseAtyponHttpResponseHandler.class);
 
