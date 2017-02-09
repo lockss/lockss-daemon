@@ -643,13 +643,13 @@
   {
     title <
       name = Central European Neurosurgery - Zentralblatt für Neurochirurgie ;
-      issn = 1438-9746 ;
-      eissn = 0044-4251 ;
+      issn = 1868-4904 ;
+      eissn = 1868-4912 ;
       doi = 10.1055/s-00000110
 
     >
     param[journal_id] = 10.1055/s-00000110
-    comment[years] = 2000-2008
+    comment[years] = 2000-2011
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
     au < doNotProcess ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 60 ; 60 >
@@ -736,6 +736,21 @@
     #First issue online will be available soon. 
 
     au < expected ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Current Research: Concussion ;
+      eissn = 2472-7512 ;
+      doi = 10.1055/s-007-33324
+
+    >
+    param[journal_id] = 10.1055/s-007-33324
+    #years = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 >
 
   }
 
@@ -2179,7 +2194,8 @@
 
     title <
       name = International Archives of Otorhinolaryngology ;
-      eissn = 1809-9777 ;
+      issn = 1809-9777 ;
+      eissn = 1809-4864 ;
       doi = 10.1055/s-00025477
 
     >
@@ -5123,6 +5139,21 @@
   {
 
     title <
+      name = Sports Medicine International Open ;
+      eissn = 2367-1890 ;
+      doi = 10.1055/s-007-33312
+
+    >
+    param[journal_id] = 10.1055/s-007-33312
+    #years = 2017-current
+
+    au < exists ; 2017 ; 2017 ; Sports Medicine International Open Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Sportverletzung - Sportschaden ;
       issn = 0932-0555 ;
       eissn = 1439-1236 ;
@@ -5313,6 +5344,22 @@
    au < manifest ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 >
    au < manifest ; 2015 ; 2015 ; SYNLETT Volume 26 ; 26 >
    au < manifest ; 2016 ; 2016 ; SYNLETT Volume 27 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = SynOpen ;
+      eissn = 2509-9396 ;
+      doi = 10.1055/s-00032269
+
+    >
+    param[journal_id] = 10.1055/s-00032269
+    #years = 2017-current
+    #First issue online will be available soon. 
+
+    au < expected ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 >
 
   }
 
@@ -6262,6 +6309,33 @@
     au < exists ; 2012 ; 2012 ; Zeitschrift für Allgemeinmedizin Volume 88 ; 88 >
     au < exists ; 2013 ; 2013 ; Zeitschrift für Allgemeinmedizin Volume 89 ; 89 >
     au < exists ; 2014 ; 2014 ; Zeitschrift für Allgemeinmedizin Volume 90 ; 90 >
+
+  }
+
+  {
+    title <
+      name = Zentralblatt für Neurochirurgie ;
+      issn = 1438-9746 ;
+      eissn = 0044-4251 ;
+      doi = 10.1055/s-00000107
+
+    >
+    param[journal_id] = 10.1055/s-00000107
+    #years = 2000-2011
+    # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
+
+    au < exists ; 2000 ; 2000 ; Zentralblatt für Neurochirurgie Volume 60 ; 60 >
+    au < exists ; 2001 ; 2001 ; Zentralblatt für Neurochirurgie Volume 61 ; 61 >
+    au < exists ; 2002 ; 2002 ; Zentralblatt für Neurochirurgie Volume 62 ; 62 >
+    au < exists ; 2003 ; 2003 ; Zentralblatt für Neurochirurgie Volume 63 ; 63 >
+    au < exists ; 2004 ; 2004 ; Zentralblatt für Neurochirurgie Volume 64 ; 64 >
+    au < exists ; 2005 ; 2005 ; Zentralblatt für Neurochirurgie Volume 65 ; 65 >
+    au < exists ; 2006 ; 2006 ; Zentralblatt für Neurochirurgie Volume 66 ; 66 >
+    au < exists ; 2007 ; 2007 ; Zentralblatt für Neurochirurgie Volume 67 ; 67 >
+    au < exists ; 2008 ; 2008 ; Zentralblatt für Neurochirurgie Volume 68 ; 68 >
+    au < exists ; 2009 ; 2009 ; Zentralblatt für Neurochirurgie Volume 69 ; 69 >
+    au < exists ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 >
+    au < exists ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 >
 
   }
 
