@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>64</string>
+    <string>65</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -127,6 +127,13 @@
       <string>1,"^%saction/(downloadFigures|downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
     </list>
   </entry>
+  <!--  tandf is serving pdf files of this form (tables) without mime-type -->
+  <entry>
+    <string>au_url_mime_type</string>
+    <list>
+      <string>.*&amp;downloadType=(pdf|PDF)$, application/pdf</string>
+    </list>
+  </entry>    
   <entry>
     <string>plugin_config_props</string>
     <list>
