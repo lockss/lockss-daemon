@@ -47,7 +47,7 @@
 
     param[base_url] = http://openres.ersjournals.com/
 
-    au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2015 ; ERJ Open Research Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; ERJ Open Research Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < ers.ClockssERSDrupalPlugin ; crawling ; exists ; 2016 ; ERJ Open Research Volume 2 ; 2 ; >
 
   }
