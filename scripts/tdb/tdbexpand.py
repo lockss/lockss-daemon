@@ -269,7 +269,7 @@ def _suggest_expansions(options, aus, candidates):
     pass
 
 def _suggest_expansions_single(options, aus, candidate):
-
+    pass
 
 def _main():
     # Parse command line
