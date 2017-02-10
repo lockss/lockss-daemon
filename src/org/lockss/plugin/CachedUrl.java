@@ -93,6 +93,10 @@ public interface CachedUrl extends CachedUrlSetNode {
    * but cannot be changed. */
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
+  /** Referer header that was sent with the request for this URL, if any.
+      Used by the repair crawler */
+  public static final String PROPERTY_REQ_REFERRER = "X-Lockss-referrer";
+
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
 
   /** Checksum: The checksum (hash) of the content in <alg>:<hash> format */
@@ -103,6 +107,13 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   public static final String PROPERTY_CONTENT_ENCODING = "content-encoding";
   public static final String PROPERTY_CONTENT_LENGTH = "content-length";
+
+  /** This property is present only in the headers of the uncommitted
+   * (unsealed) CachedUrl passed to a ContentValidator.  If present its
+   * value is a list of all the URLs in the redirect chain.  It must be
+   * accessed with get(), not getProperty() */
+  public static final String PROPERTY_VALIDATOR_REDIRECT_URLS = 
+    "x-lockss-validator-redirect-urls";
 
   /** CachedUrl properties that the daemon uses internally, should not be
    * served with content */

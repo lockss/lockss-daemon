@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,12 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
+
 import org.lockss.util.LockssSerializable;
 
 /**
  * NodeStateBean is a settable version of the NodeState, to allow marshalling.
  */
 public class NodeStateBean implements LockssSerializable {
+  CrawlStateBean crawlBean;
   List pollBeans = new ArrayList();
   int curState;
   long hashDuration = -1;
@@ -50,9 +56,30 @@ public class NodeStateBean implements LockssSerializable {
    * @param nodeState the NodeState
    */
   NodeStateBean(NodeState nodeState) {
+    this.crawlBean = new CrawlStateBean(nodeState.getCrawlState());
     Iterator polls = nodeState.getActivePolls();
+    while (polls.hasNext()) {
+      PollState poll = (PollState)polls.next();
+      pollBeans.add(new PollStateBean(poll));
+    }
     hashDuration = nodeState.getAverageHashDuration();
     curState = nodeState.getState();
+  }
+
+  /**
+   * Returns the CrawlStateBean.
+   * @return the {@link CrawlStateBean}
+   */
+  public CrawlStateBean getCrawlStateBean() {
+    return crawlBean;
+  }
+
+  /**
+   * Sets the CrawlStateBean
+   * @param newBean the new {@link CrawlStateBean}
+   */
+  public void setCrawlStateBean(CrawlStateBean newBean) {
+    this.crawlBean = newBean;
   }
 
   /**

@@ -30,17 +30,32 @@ package org.lockss.app;
 import java.util.*;
 import org.apache.commons.lang3.*;
 import org.lockss.util.*;
+import org.lockss.alert.*;
 import org.lockss.daemon.*;
-//import org.lockss.db.DbManager;
+import org.lockss.hasher.HashService;
+import org.lockss.db.DbManager;
 import org.lockss.account.*;
-//import org.lockss.job.JobManager;
+import org.lockss.alert.AlertManager;
+import org.lockss.clockss.ClockssParams;
+import org.lockss.job.JobManager;
 import org.lockss.scheduler.*;
-//import org.lockss.metadata.MetadataManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.LcapDatagramComm;
+import org.lockss.protocol.LcapDatagramRouter;
+import org.lockss.protocol.LcapRouter;
+import org.lockss.protocol.LcapStreamComm;
+import org.lockss.protocol.psm.PsmManager;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.icp.IcpManager;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
+import org.lockss.crawler.*;
+import org.lockss.remote.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -96,19 +111,27 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ACCOUNT_MANAGER = "AccountManager";
   public static final String KEYSTORE_MANAGER = "KeystoreManager";
   public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
+  public static final String ALERT_MANAGER = "AlertManager";
+  public static final String HASH_SERVICE = "HashService";
   public static final String TIMER_SERVICE = "TimerService";
   public static final String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
   public static final String STREAM_COMM_MANAGER = "StreamCommManager";
   public static final String ROUTER_MANAGER = "RouterManager";
   public static final String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
+  public static final String IDENTITY_MANAGER = "IdentityManager";
+  public static final String CRAWL_MANAGER = "CrawlManager";
   public static final String PLUGIN_MANAGER = "PluginManager";
   //public static final String METADATA_MANAGER = "MetadataManager";
+  public static final String POLL_MANAGER = "PollManager";
+  public static final String PSM_MANAGER = "PsmManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
   public static final String LOCKSS_REPOSITORY = "LockssRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
   public static final String NODE_MANAGER = "NodeManager";
   public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
+  public static final String PROXY_MANAGER = "ProxyManager";
   public static final String SYSTEM_METRICS = "SystemMetrics";
+  public static final String REMOTE_API = "RemoteApi";
   public static final String URL_MANAGER = "UrlManager";
   public static final String NODE_MANAGER_MANAGER = "NodeManagerManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
@@ -116,61 +139,64 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String PLATFORM_CONFIG_STATUS = "PlatformConfigStatus";
   public static final String CONFIG_STATUS = "ConfigStatus";
   public static final String OVERVIEW_STATUS = "OverviewStatus";
+  public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
+  public static final String CLOCKSS_PARAMS = "ClockssParams";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   //public static final String DB_MANAGER = "DbManager";
   //public static final String JOB_MANAGER = "JobManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
-//  protected final ManagerDesc[] managerDescs = {
-//    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
-//    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
-//    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
-//    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
-//    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
-//    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
-//    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
-//    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
-//    // keystore manager must be started before any others that need to
-//    // access managed keystores
-//    new ManagerDesc(KEYSTORE_MANAGER,
-//                    "org.lockss.daemon.LockssKeyStoreManager"),
-//    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
-//    new ManagerDesc(REPOSITORY_MANAGER,
-//                    "org.lockss.repository.RepositoryManager"),
-//    // start plugin manager after generic services
-//    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
-//    // start database manager before any manager that uses it.
-//    new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
-//    // start metadata manager after pluggin manager and database manager.
-//    new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
-//    // Start the job manager.
-//    new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
-//    // NOTE: Any managers that are needed to decide whether a servlet is to be
-//    // enabled or not (through ServletDescr.isEnabled()) need to appear before
-//    // the AdminServletManager on the next line.
-//    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
-//    new ManagerDesc(CONTENT_SERVLET_MANAGER,
-//                    "org.lockss.servlet.ContentServletManager"),
-//    // comm after other major services so don't process messages until
-//    // they're ready
-//    new ManagerDesc(NODE_MANAGER_MANAGER,
-//                    "org.lockss.state.NodeManagerManager"),
-//    new ManagerDesc(PLATFORM_CONFIG_STATUS,
-//                    "org.lockss.config.PlatformConfigStatus"),
-//    new ManagerDesc(CONFIG_STATUS,
-//                    "org.lockss.config.ConfigStatus"),
-//    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
-//                    "org.lockss.state.ArchivalUnitStatus"),
-//    new ManagerDesc(REPOSITORY_STATUS,
-//                    "org.lockss.repository.LockssRepositoryStatus"),
-//    new ManagerDesc(OVERVIEW_STATUS,
-//                    "org.lockss.daemon.status.OverviewStatus"),
-//    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
-//    // watchdog last
-//    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
-//  };
+  protected final ManagerDesc[] managerDescs = {
+    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
+    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
+    new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
+    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
+    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
+    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
+    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
+    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
+    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
+    // keystore manager must be started before any others that need to
+    // access managed keystores
+    new ManagerDesc(KEYSTORE_MANAGER,
+                    "org.lockss.daemon.LockssKeyStoreManager"),
+    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
+    new ManagerDesc(REPOSITORY_MANAGER,
+                    "org.lockss.repository.RepositoryManager"),
+    // start plugin manager after generic services
+    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
+    // start database manager before any manager that uses it.
+    new ManagerDesc(DbManager.getManagerKey(), "org.lockss.db.DbManager"),
+    // start metadata manager after pluggin manager and database manager.
+    new ManagerDesc(MetadataManager.getManagerKey(), "org.lockss.metadata.MetadataManager"),
+    // Start the job manager.
+    new ManagerDesc(JobManager.getManagerKey(), "org.lockss.job.JobManager"),
+    // NOTE: Any managers that are needed to decide whether a servlet is to be
+    // enabled or not (through ServletDescr.isEnabled()) need to appear before
+    // the AdminServletManager on the next line.
+    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
+    new ManagerDesc(CONTENT_SERVLET_MANAGER,
+                    "org.lockss.servlet.ContentServletManager"),
+    // comm after other major services so don't process messages until
+    // they're ready
+    new ManagerDesc(NODE_MANAGER_MANAGER,
+                    "org.lockss.state.NodeManagerManager"),
+    new ManagerDesc(PLATFORM_CONFIG_STATUS,
+                    "org.lockss.config.PlatformConfigStatus"),
+    new ManagerDesc(CONFIG_STATUS,
+                    "org.lockss.config.ConfigStatus"),
+    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
+                    "org.lockss.state.ArchivalUnitStatus"),
+    new ManagerDesc(REPOSITORY_STATUS,
+                    "org.lockss.repository.LockssRepositoryStatus"),
+    new ManagerDesc(OVERVIEW_STATUS,
+                    "org.lockss.daemon.status.OverviewStatus"),
+    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+    // watchdog last
+    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
+  };
 
   // AU-specific manager descriptors.  As each AU is created its managers
   // are started in this order.
@@ -197,6 +223,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       new HashMap<String,LockssAuManager.Factory>();
 
   private static LockssDaemon theDaemon;
+  private boolean isClockss;
   protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
@@ -248,6 +275,21 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return testingMode;
   }
 
+  /**
+   * True if running as a CLOCKSS daemon
+   */
+  public boolean isClockss() {
+    return isClockss;
+  }
+
+  /**
+   * Convenience method returns {@link
+   * ClockssParams#isDetectSubscription()}
+   */
+  public boolean isDetectClockssSubscription() {
+    return isClockss() && getClockssParams().isDetectSubscription();
+  }
+
   /** Stop the daemon.  Currently only used in testing. */
   public void stopDaemon() {
     stopApp();
@@ -256,12 +298,102 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // LockssManager accessors
 
   /**
+   * return the alert manager instance
+   * @return the AlertManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public AlertManager getAlertManager() {
+    return (AlertManager)getManager(ALERT_MANAGER);
+  }
+
+  /**
+   * return the hash service instance
+   * @return the HashService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public HashService getHashService() {
+    return (HashService) getManager(HASH_SERVICE);
+  }
+
+  /**
    * return the sched service instance
    * @return the SchedService
    * @throws IllegalArgumentException if the manager is not available.
    */
   public SchedService getSchedService() {
     return (SchedService) getManager(SCHED_SERVICE);
+  }
+
+  /**
+   * return the poll manager instance
+   * @return the PollManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public PollManager getPollManager() {
+    return (PollManager) getManager(POLL_MANAGER);
+  }
+
+  /**
+   * return the psm manager instance
+   * @return the PsmManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public PsmManager getPsmManager() {
+    return (PsmManager) getManager(PSM_MANAGER);
+  }
+
+  /**
+   * return the datagram communication manager instance
+   * @return the LcapDatagramComm
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapDatagramComm getDatagramCommManager()  {
+    return (LcapDatagramComm) getManager(DATAGRAM_COMM_MANAGER);
+  }
+
+  /**
+   * return the stream communication manager instance
+   * @return the LcapStreamComm
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapStreamComm getStreamCommManager()  {
+    return (LcapStreamComm) getManager(STREAM_COMM_MANAGER);
+  }
+
+  /**
+   * return the datagram router manager instance
+   * @return the LcapDatagramRouter
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapDatagramRouter getDatagramRouterManager()  {
+    return (LcapDatagramRouter) getManager(DATAGRAM_ROUTER_MANAGER);
+  }
+
+  /**
+   * return the communication router manager instance
+   * @return the LcapDatagramRouter
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapRouter getRouterManager()  {
+    return (LcapRouter) getManager(ROUTER_MANAGER);
+  }
+
+  /**
+   * return the proxy handler instance
+   * @return the ProxyManager
+   * @throws IllegalArgumentException if the manager is not available.
+  */
+  public ProxyManager getProxyManager() {
+    return (ProxyManager) getManager(PROXY_MANAGER);
+  }
+
+  /**
+   * return the crawl manager instance
+   * @return the CrawlManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public CrawlManager getCrawlManager() {
+    return (CrawlManager) getManager(CRAWL_MANAGER);
   }
 
   /**
@@ -331,6 +463,34 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
+   * return the Identity Manager
+   * @return IdentityManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+
+  public IdentityManager getIdentityManager() {
+    return (IdentityManager) getManager(IDENTITY_MANAGER);
+  }
+
+  /**
+   * <p>Retrieves the ICP manager.</p>
+   * @return The ICP manager instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public IcpManager getIcpManager() {
+    return (IcpManager)getManager(ICP_MANAGER);
+  }
+
+  /**
+   * return the RemoteApi instance.
+   * @return RemoteApi instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public RemoteApi getRemoteApi() {
+    return (RemoteApi) getManager(REMOTE_API);
+  }
+
+  /**
    * return the NodeManagerManager instance.
    * @return NodeManagerManager instance.
    * @throws IllegalArgumentException if the manager is not available.
@@ -367,6 +527,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 //  public DbManager getDbManager() {
 //    return (DbManager) getManager(DB_MANAGER);
 //  }
+
+  /**
+   * return the ClockssParams instance.
+   * @return ClockssParams instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ClockssParams getClockssParams() {
+    return (ClockssParams) getManager(CLOCKSS_PARAMS);
+  }
 
   /**
    * Provides the job manager.
@@ -674,6 +843,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     log.info("Started");
     ausStarted.fill();
+
+    AlertManager alertMgr = getAlertManager();
+    alertMgr.raiseAlert(Alert.cacheAlert(Alert.DAEMON_STARTED),
+			"LOCKSS daemon " +
+			ConfigManager.getDaemonVersion().displayString() +
+			" started");
   }
 
 

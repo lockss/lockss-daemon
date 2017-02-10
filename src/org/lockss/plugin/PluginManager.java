@@ -35,10 +35,14 @@ import java.util.*;
 import java.util.jar.*;
 import java.util.regex.*;
 import org.apache.commons.collections.map.*;
+import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.poller.PollSpec;
+import org.lockss.state.AuState;
 import org.lockss.util.*;
 
 /**
@@ -319,6 +323,7 @@ public class PluginManager
     DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES;
 
   private ConfigManager configMgr;
+  private AlertManager alertMgr;
 
   private File pluginDir = null;
   private AuOrderComparator auComparator = new AuOrderComparator();
@@ -416,6 +421,7 @@ public class PluginManager
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
+    alertMgr = getDaemon().getAlertManager();
     // Initialize the plugin directory.
     initPluginDir();
     configureDefaultTitleSets();
@@ -1145,8 +1151,10 @@ public class PluginManager
     }
   }
 
-  protected void raiseAlert(String msg) {
-      log.warning(msg);
+  protected void raiseAlert(Alert alert, String msg) {
+    if (alertMgr != null) {
+      alertMgr.raiseAlert(alert, msg);
+    }
   }
 
   void signalAuEvent(final ArchivalUnit au,
@@ -1156,7 +1164,7 @@ public class PluginManager
 
     switch (how.getType()) {
     case Create:
-      raiseAlert("AU created");
+      raiseAlert(Alert.auAlert(Alert.AU_CREATED, au), "AU created");
       // falls through
     case RestartCreate:
     case StartupCreate:
@@ -1171,7 +1179,7 @@ public class PluginManager
 	  }});
       break;
     case Delete:
-      raiseAlert("AU deleted");
+      raiseAlert(Alert.auAlert(Alert.AU_DELETED, au), "AU deleted");
       // falls through
     case Deactivate:
     case RestartDelete:
@@ -1743,7 +1751,8 @@ public class PluginManager
   }
 
   void alert0(String pluginName, String msg, String emsg) {
-    raiseAlert(String.format("%s: %s\n%s", msg, pluginName, emsg));
+    raiseAlert(Alert.cacheAlert(Alert.PLUGIN_NOT_LOADED), 
+	       String.format("%s: %s\n%s", msg, pluginName, emsg));
   }
 
   /**
@@ -1912,6 +1921,10 @@ public class PluginManager
     return getPlugin(pluginKeyFromId(pluginId));
   }
 
+  public Plugin getPluginFromAuId(String auid) {
+    return getPlugin(pluginKeyFromId(pluginIdFromAuId(auid)));
+  }
+
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
@@ -1950,6 +1963,34 @@ public class PluginManager
       }
     }
     return ret;
+  }
+
+  /**
+   * Find the CachedUrlSet from a PollSpec.
+   * @param spec the PollSpec (from an incoming message)
+   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
+   * null if au not present on this cache
+   */
+  public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+    if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
+    String auId = spec.getAuId();
+    ArchivalUnit au = getAuFromId(auId);
+    if (log.isDebug3()) log.debug3("au: " + au);
+    if (au == null) return null;
+    String url = spec.getUrl();
+    CachedUrlSet cus;
+    if (AuUrl.isAuUrl(url)) {
+      cus = au.getAuCachedUrlSet();
+    } else if ((spec.getLwrBound() != null) &&
+	       (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
+    } else {
+      RangeCachedUrlSetSpec rcuss =
+	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
+      cus = au.makeCachedUrlSet(rcuss);
+    }
+    if (log.isDebug3()) log.debug3("ret cus: " + cus);
+    return cus;
   }
 
   /**
@@ -2479,8 +2520,15 @@ public class PluginManager
     if (contentReq.wantsContent() && !hasContent) {
       res += 8;
     }
+    if (isUnsubscribed(au)) res += 2;
     if (isDamaged(cu)) res += 1;
     return res;
+  }
+
+  private boolean isUnsubscribed(ArchivalUnit au) {
+    return (getDaemon().isDetectClockssSubscription() &&
+	    (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
+	     AuState.CLOCKSS_SUB_YES));
   }
 
   // XXX
@@ -2543,6 +2591,10 @@ public class PluginManager
   }
 
   private void queuePluginRegistryCrawls() {
+    CrawlManager crawlMgr = getDaemon().getCrawlManager();
+    for (ArchivalUnit au : getAllRegistryAus()) {
+      crawlMgr.startNewContentCrawl(au, null, null, null);
+    }
   }
 
   /** Return a collection of all RegistryArchivalUnits.  This is a subset
@@ -2688,6 +2740,9 @@ public class PluginManager
 
     BinarySemaphore bs = new BinarySemaphore();
 
+    InitialRegistryCallback regCallback =
+      new InitialRegistryCallback(urls, bs);
+
     List loadAus = new ArrayList();
 
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
@@ -2704,6 +2759,7 @@ public class PluginManager
 	  configureAu(getRegistryPlugin(), auConf, auId);
 	} catch (ArchivalUnit.ConfigurationException ex) {
 	  log.error("Failed to configure AU " + auKey, ex);
+	  regCallback.crawlCompleted(url);
 	  continue;
 	}
 
@@ -2712,8 +2768,10 @@ public class PluginManager
 	loadAus.add(registryAu);
 
 	// Trigger a new content crawl if required.
+	possiblyStartRegistryAuCrawl(registryAu, url, regCallback);
       } else {
 	log.debug2("We already have this AU configured, notifying callback.");
+	regCallback.crawlCompleted(url);
       }
     }
 
@@ -2722,10 +2780,12 @@ public class PluginManager
     log.debug("Waiting for loadable plugins to finish loading...");
     try {
       if (!bs.take(Deadline.in(registryTimeout))) {
-	log.warning("Timed out while waiting for registries to finish loading. ");
+	log.warning("Timed out while waiting for registries to finish loading. " +
+		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
       }
     } catch (InterruptedException ex) {
-      log.warning("Binary semaphore threw InterruptedException while waiting.");
+      log.warning("Binary semaphore threw InterruptedException while waiting." +
+		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
     }
 
     processRegistryAus(loadAus);
@@ -2772,6 +2832,22 @@ public class PluginManager
    */
   public ImportPlugin getImportPlugin() {
     return (ImportPlugin)getInternalPlugin(ImportPlugin.PLUGIN_ID);
+  }
+
+  // Trigger a new content crawl on the registry AU if required.
+  protected void possiblyStartRegistryAuCrawl(ArchivalUnit registryAu,
+					      String url,
+					      InitialRegistryCallback cb) {
+    if (registryAu.shouldCrawlForNewContent(AuUtil.getAuState(registryAu))) {
+      if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
+      getDaemon().getCrawlManager().startNewContentCrawl(registryAu, cb,
+							 url, null);
+    } else {
+      if (log.isDebug2()) log.debug2("No crawl needed: " + registryAu);
+
+      // If we're not going to crawl this AU, let the callback know.
+      cb.crawlCompleted(url);
+    }
   }
 
   // Ensure plugins listed in o.l.plugin.registry or in jars listed in
@@ -3016,7 +3092,7 @@ public class PluginManager
     jarValidator.allowExpired(acceptExpiredCertificates);
 
     // Create temporary plugin and classloader maps
-    HashMap tmpMap = new HashMap();
+    HashMap<String,PluginInfo> tmpMap = new HashMap<String,PluginInfo>();
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
@@ -3035,12 +3111,10 @@ public class PluginManager
     List<ArchivalUnit> needRestartAus = new ArrayList();
     List<String> changedPluginKeys = new ArrayList<String>();
 
-    for (Iterator pluginIter = tmpMap.entrySet().iterator();
-	 pluginIter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)pluginIter.next();
-      String key = (String)entry.getKey();
+    for (Map.Entry<String,PluginInfo> entry : tmpMap.entrySet()) {
+      String key = entry.getKey();
       log.debug2("Adding to plugin map: " + key);
-      PluginInfo info = (PluginInfo)entry.getValue();
+      PluginInfo info = entry.getValue();
       pluginfoMap.put(key, info);
       classloaders.add(info.getClassLoader());
 
@@ -3142,55 +3216,63 @@ public class PluginManager
     cuNodeVersionMap.put(url, curVersion);
 
     if (blessedJar != null) {
-      // Get the list of plugins to load from this jar.
-      List loadPlugins = null;
+      loadPluginsFromJar(blessedJar, url, au, cu, tmpMap);
+    }
+  }
+
+  protected void loadPluginsFromJar(File jarFile, String url,
+				    ArchivalUnit au, CachedUrl cu,
+				    Map tmpMap) {
+    // Get the list of plugins to load from this jar.
+    List loadPlugins = null;
+    try {
+      loadPlugins = getJarPluginClasses(jarFile);
+    } catch (IOException ex) {
+      log.error("Error while getting list of plugins for " +
+		jarFile);
+      return; // skip this CU.
+
+    }
+    log.debug2("Blessed jar: " + jarFile + ", plugins: " + loadPlugins);
+
+    // Although this -should- never happen, it's possible.
+    if (loadPlugins.size() == 0) {
+      log.warning("Jar " + jarFile +
+		  " does not contain any plugins.  Skipping...");
+      return; // skip this CU.
+    }
+
+    // Load the plugin classes
+    ClassLoader pluginLoader = null;
+    URL blessedUrl;
+    try {
+      blessedUrl = jarFile.toURL();
+      URL[] urls = new URL[] { blessedUrl };
+      pluginLoader =
+	preferLoadablePlugin
+	? new LoadablePluginClassLoader(urls)
+	: new URLClassLoader(urls);
+    } catch (MalformedURLException ex) {
+      log.error("Malformed URL exception attempting to create " +
+		"classloader for plugin JAR " + jarFile);
+      return; // skip this CU.
+    }
+
+    String pluginName = null;
+
+    for (Iterator pluginIter = loadPlugins.iterator();
+	 pluginIter.hasNext();) {
+      pluginName = (String)pluginIter.next();
+      String key = pluginKeyFromName(pluginName);
+
+      Plugin plugin;
+      PluginInfo info;
       try {
-	loadPlugins = getJarPluginClasses(blessedJar);
-      } catch (IOException ex) {
-	log.error("Error while getting list of plugins for " +
-		  blessedJar);
-	return; // skip this CU.
-
-      }
-      log.debug2("Blessed jar: " + blessedJar + ", plugins: " + loadPlugins);
-
-      // Although this -should- never happen, it's possible.
-      if (loadPlugins.size() == 0) {
-	log.warning("Jar " + blessedJar +
-		    " does not contain any plugins.  Skipping...");
-	return; // skip this CU.
-      }
-
-      // Load the plugin classes
-      ClassLoader pluginLoader = null;
-      URL blessedUrl;
-      try {
-	blessedUrl = blessedJar.toURL();
-	URL[] urls = new URL[] { blessedUrl };
-	pluginLoader =
-	  preferLoadablePlugin
-	  ? new LoadablePluginClassLoader(urls)
-	  : new URLClassLoader(urls);
-      } catch (MalformedURLException ex) {
-	log.error("Malformed URL exception attempting to create " +
-		  "classloader for plugin JAR " + blessedJar);
-	return; // skip this CU.
-      }
-
-      String pluginName = null;
-
-      for (Iterator pluginIter = loadPlugins.iterator();
-	   pluginIter.hasNext();) {
-	pluginName = (String)pluginIter.next();
-	String key = pluginKeyFromName(pluginName);
-
-	Plugin plugin;
-	PluginInfo info;
-	try {
-	  info = retrievePlugin(pluginName, pluginLoader);
-	  if (info == null) {
-	    log.warning("Probable plugin packaging error: plugin " +
-			pluginName + " not found in " + cu.getUrl());
+	info = retrievePlugin(pluginName, pluginLoader);
+	if (info == null) {
+	  log.warning("Probable plugin packaging error: plugin " +
+			pluginName + " could not be loaded from " +
+			cu.getUrl());
 	    continue;
 	  } else {
 	    info.setCuUrl(url);
@@ -3275,6 +3357,78 @@ public class PluginManager
 	  }
 	}
       }
+    }
+
+  /**
+   * Convenience method to provide an indication of whether an Archival Unit is
+   * not configured in the daemon and it's not inactive.
+   * 
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a boolean with <code>true</code> if the Archival Unit is not
+   *         configured in the daemon and it's not inactive, <code>false</code>
+   *         otherwise.
+   */
+  public boolean isNotConfiguredAndNotInactive(String auId) {
+    // The third element of the intersection below is there to handle the
+    // potential race condition triggered by the Archival Unit being reactivated
+    // between the first two calls.
+    return getAuFromId(auId) == null && !isInactiveAuId(auId)
+	&& getAuFromId(auId) == null;
+  }
+
+  /**
+   * CrawlManager callback that is responsible for handling Registry
+   * AUs when they're finished with their initial crawls.
+   */
+  static class InitialRegistryCallback implements CrawlManager.Callback {
+    private BinarySemaphore bs;
+
+    List registryUrls;
+
+    /*
+     * Set the initial size of the list of registry URLs to process.
+     */
+    public InitialRegistryCallback(List registryUrls, BinarySemaphore bs) {
+      this.registryUrls =
+	Collections.synchronizedList(new ArrayList(registryUrls));
+      this.bs = bs;
+      if (log.isDebug2()) log.debug2("InitialRegistryCallback: " +
+				     registryUrls);
+      if (registryUrls.isEmpty()) {
+	bs.give();
+      }
+    }
+
+    public void signalCrawlAttemptCompleted(boolean success,
+					    Object cookie,
+					    CrawlerStatus status) {
+      String url = (String)cookie;
+
+      crawlCompleted(url);
+    }
+
+    public void crawlCompleted(String url) {
+      // Remove urls from registryUrls as they finish crawling (or it is
+      // determine that they don't need to be crawled).  When registryUrls
+      // is empty signal the waiting process that it may proceed to load
+      // plugins we're done running crawls on all the plugin registries,
+      // and we can load the plugin classes.
+      registryUrls.remove(url);
+      if (log.isDebug2()) log.debug2("Registry crawl complete: " + url +
+				     ", " + registryUrls.size() + " left");
+      if (registryUrls.isEmpty()) {
+	if (log.isDebug2()) log.debug2("Registry crawls complete");
+	bs.give();
+      }
+    }
+
+    /**
+     * Used only in the case that our semaphore throws an Interrupted
+     * exception -- we can print this list to see what was left.
+     */
+    public List getRegistryUrls() {
+      return registryUrls;
     }
   }
 

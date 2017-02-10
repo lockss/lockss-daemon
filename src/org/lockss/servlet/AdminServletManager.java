@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -45,8 +49,10 @@ import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
+//import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
+//import org.lockss.exporter.counter.CounterReportsManager;
 import org.springframework.web.context.ContextLoaderListener;
 
 /**
@@ -89,6 +95,9 @@ public class AdminServletManager extends BaseServletManager {
   /** List of IPs or subnets to allow */
   public static final String PARAM_IP_INCLUDE =
           IP_ACCESS_PREFIX + SUFFIX_IP_INCLUDE;
+  /** List of IPs or subnets to reject */
+  public static final String PARAM_IP_PLATFORM_SUBNET =
+          IP_ACCESS_PREFIX + SUFFIX_IP_PLATFORM_SUBNET;
 
   /** Log accesses from forbidden IP addresses */
   public static final String PARAM_LOG_FORBIDDEN =
@@ -259,6 +268,221 @@ public class AdminServletManager extends BaseServletManager {
 
   // Descriptors for all admin servlets.
 
+  protected static final ServletDescr SERVLET_HOME =
+          new ServletDescr("UiHome",
+          UiHome.class,
+          "LOCKSS Administration",
+          "Home",
+          ServletDescr.LARGE_LOGO);
+  protected static final ServletDescr SERVLET_EDIT_ACCOUNT =
+          new ServletDescr("UserEditAccount",
+          UserEditAccount.class,
+          "My Account",
+          (ServletDescr.IN_NAV),
+          "Update account info") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              AccountManager acctMgr = daemon.getAccountManager();
+              return acctMgr != null && acctMgr.isEnabled();
+            }
+            public boolean isInNav(LockssServlet servlet) {
+// 	if (servlet.doesUserHaveRole(LockssServlet.ROLE_USER_ADMIN)
+// 	    && !servlet.doesUserHaveRole(LockssServlet.ROLE_DEBUG)) {
+// 	  return false;
+// 	}
+              UserAccount acct = servlet.getUserAccount();
+              return acct != null && acct.isEditable();
+            }
+            public String getNavHeading(LockssServlet servlet) {
+              UserAccount acct = servlet.getUserAccount();
+              if (acct != null) {
+                return super.getNavHeading(servlet) + " (" + acct.getName() + ")";
+              }
+              return super.getNavHeading(servlet);
+      }};
+
+  protected static final ServletDescr SERVLET_EDIT_ACCOUNTS =
+          new ServletDescr("AdminEditAccounts",
+          AdminEditAccounts.class,
+          "User Accounts",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Administer user accounts") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              AccountManager acctMgr = daemon.getAccountManager();
+              return acctMgr != null && acctMgr.isEnabled();
+      }};
+
+  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
+          new ServletDescr("BatchAuConfig",
+          BatchAuConfig.class,
+          "Journal Configuration",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Add or remove titles from this LOCKSS box");
+  // XXXUI Development version
+//  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
+//          new ServletDescr("BatchAuConfigNew",
+//          BatchAuConfigNew.class,
+//          "Journal Configuration (New UI)",
+//          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+//          | ServletDescr.NEED_ROLE_AU_ADMIN),
+//          "Add or remove titles from this LOCKSS box");
+  protected static final ServletDescr SERVLET_AU_CONFIG =
+          new ServletDescr("AuConfig",
+          AuConfig.class,
+          "Manual Journal Configuration",
+          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Manually edit single AU configuration");
+  protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
+          new ServletDescr("AdminIpAccess",
+          AdminIpAccess.class,
+          "Admin Access Control",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Control access to the administrative UI");
+  protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
+          new ServletDescr("ProxyIpAccess",
+          ProxyIpAccess.class,
+          "Content Access Control",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+          "Control access to the preserved content");
+  protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
+          new ServletDescr("ProxyAndContent",
+          ProxyAndContent.class,
+          "Content Access Options",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+          "Configure the audit proxy and the ICP server");
+  protected static final ServletDescr SERVLET_PROXY_INFO =
+          new ServletDescr("ProxyConfig",
+          ProxyConfig.class,
+          "Proxy Info",
+          "info/ProxyInfo",
+          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Info for configuring browsers and proxies"
+          + "<br>"
+          + "to access preserved content on this LOCKSS box");
+  protected static final ServletDescr SERVLET_EXPERT_CONFIG =
+          new ServletDescr("ExpertConfig",
+          ExpertConfig.class,
+          "Expert Config",
+          (ServletDescr.IN_NAV
+          | ServletDescr.NEED_ROLE_USER_ADMIN),
+          "Allows arbitrary local configuration");
+  protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
+          new ServletDescr("PluginConfig",
+          PluginConfig.class,
+          "Plugin Configuration",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+          | ServletDescr.NEED_ROLE_AU_ADMIN),
+          "Manage plugin repositories, title databases") {
+            public boolean isInNav(LockssServlet servlet) {
+              return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
+                      DEFAULT_ALLOW_PLUGIN_CONFIG);
+            }
+            public boolean isInUiHome(LockssServlet servlet) {
+              return isInNav(servlet);
+      }};
+  protected static final ServletDescr SERVLET_DAEMON_STATUS =
+          new ServletDescr("DaemonStatus",
+          DaemonStatus.class,
+          "Daemon Status",
+          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Status of LOCKSS box contents and operation");
+  // XXXUI Development version
+//  protected static final ServletDescr SERVLET_DAEMON_STATUS_NEW =
+//          new ServletDescr("DaemonStatusNew",
+//          DaemonStatusNew.class,
+//          "Daemon Status (New UI)",
+//          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+//          "Status of LOCKSS box contents and operation");
+  protected static final ServletDescr SERVLET_DISPLAY_CONTENT_STATUS =
+          new ServletDescr("DisplayContentStatus",
+          DisplayContentStatus.class,
+          "Display Content Status",
+          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+          "Status of LOCKSS box contents");
+  protected static final ServletDescr SERVLET_DISPLAY_CONTENT_TAB =
+          new ServletDescr("DisplayContentTab",
+          DisplayContentTab.class,
+          "Display Content Tab");
+  public static final ServletDescr SERVLET_DISPLAY_CONTENT =
+          new ServletDescr("ViewContent",
+          ViewContent.class,
+          "View Content",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_ADD_CONTENT =
+          new ServletDescr("AddContent",
+          AddContent.class,
+          "Add Content",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_ADD_CONTENT_TAB =
+          new ServletDescr("AddContentTab",
+          AddContentTab.class,
+          "Add Content Tab",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  // XXXUI New servlet
+  public static final ServletDescr SERVLET_SERVE_CONTENT =
+          new ServletDescr("ServeContent",
+          ServeContent.class,
+          "Serve Content",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS | ServletDescr.WILDCARD_PATH);
+  public static final ServletDescr SERVLET_TIME_GATE =
+      new ServletDescr("TimeGateService",
+		       TimeGateService.class,
+		       "Time Gate",
+		       ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_TIME_MAP =
+      new ServletDescr("TimeMapService",
+		       TimeMapService.class,
+		       "Time Map",
+		       ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_EXPORT_CONTENT =
+          new ServletDescr("ExportContent",
+          ExportContent.class,
+          "Export Content",
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS),
+          "Export preserved content as Zip, WARC, etc.") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
+                      ExportContent.DEFAULT_ENABLE_EXPORT);
+      }};
+  public static final ServletDescr SERVLET_LIST_OBJECTS =
+          new ServletDescr("ListObjects",
+          ListObjects.class,
+          "List Objects");
+  protected static final ServletDescr SERVLET_HASH_CUS =
+          new ServletDescr("HashCUS",
+          HashCUS.class,
+          "Hash CUS",
+          ServletDescr.NEED_ROLE_DEBUG
+          | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  
+  protected static final ServletDescr SERVLET_LIST_HOLDINGS =
+          new ServletDescr("TitleList",
+          ListHoldings.class,
+          "Title List",
+          "Titles",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+          "List title metadata") {
+            public boolean isEnabled(LockssDaemon daemon) {
+              return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
+                      ListHoldings.DEFAULT_ENABLE_HOLDINGS);
+      }};
+
+  /*protected static final ServletDescr SERVLET_OPENURL_QUERY =
+   new ServletDescr("OpenUrlQuery",
+   OpenUrlQuery.class,
+   "OpenURL Query",
+   "OpenUrlQuery",
+   (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+   "Perform an OpenURL query against the holdings.") {
+   public boolean isEnabled(LockssDaemon daemon) {
+   return CurrentConfig.getBooleanParam(OpenUrlQuery.PARAM_ENABLE_QUERY,
+   OpenUrlQuery.DEFAULT_ENABLE_QUERY);
+   }};*/
+
   protected static final ServletDescr LINK_LOGS =
           new ServletDescr(null,
           null,
@@ -290,6 +514,22 @@ public class AdminServletManager extends BaseServletManager {
             public boolean isInUiHome(LockssServlet servlet) {
               return isInNav(servlet);
       }};
+  protected static final ServletDescr SERVLET_THREAD_DUMP =
+          new ServletDescr("ThreadDump",
+          ThreadDump.class,
+          "Thread Dump",
+          ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
+  protected static final ServletDescr SERVLET_RAISE_ALERT =
+          new ServletDescr("RaiseAlert",
+          RaiseAlert.class,
+          "Raise Alert",
+          ServletDescr.NEED_ROLE_DEBUG | ServletDescr.NEED_ROLE_USER_ADMIN);
+  protected static final ServletDescr SERVLET_DEBUG_PANEL =
+          new ServletDescr("DebugPanel",
+          DebugPanel.class,
+          "Debug Panel",
+          (ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG
+          | ServletDescr.NEED_ROLE_AU_ADMIN));
   protected static final ServletDescr LINK_CONTACT =
           new ServletDescr(null,
           null,
@@ -302,6 +542,35 @@ public class AdminServletManager extends BaseServletManager {
           "Help", DEFAULT_HELP_URL,
           ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
           "Online help, FAQs, credits");
+  
+  protected static final ServletDescr LINK_LOGOUT =
+          new ServletDescr("LoginForm",
+          null,
+          "Logout",
+          "LoginForm?logout=true",
+          ServletDescr.IN_NAV) {
+            public boolean isInNav(LockssServlet servlet) {
+              ServletManager mgr = servlet.getServletManager();
+              return (mgr.getAuthenticator() instanceof LockssFormAuthenticator);
+      }};
+
+  protected static final ServletDescr LOGIN_FORM =
+          new ServletDescr("LoginForm",
+          LoginForm.class,
+          "LOCKSS Administration",
+          ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
+		     
+//  protected static final ServletDescr SERVLET_COUNTER_REPORTS =
+//      new ServletDescr("CounterReportsServlet",
+//                       CounterReportsServlet.class,
+//                       "COUNTER Reports",
+//		       "CounterReports",
+//		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+//		       "COUNTER Report generator") {
+//	public boolean isEnabled(LockssDaemon daemon) {
+//	  CounterReportsManager mgr = daemon.getCounterReportsManager();
+//	  return mgr != null && mgr.isReady();
+//	}};
 
   protected static final ServletDescr SERVLET_CXF_WEB_SERVICES =
       new ServletDescr("CXFServlet",
@@ -310,6 +579,35 @@ public class AdminServletManager extends BaseServletManager {
 		       "ws/*",
 		       0,
 	               "JAX-WS CXF Web Services");
+
+//  protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
+//      new ServletDescr("SubscriptionManagement",
+//		       SubscriptionManagement.class,
+//		       "Title Subscription Management",
+//		       (ServletDescr.NEED_ROLE_AU_ADMIN),
+//		       "Subscribe or unsubscribe to individual titles") {
+//	public boolean isEnabled(LockssDaemon daemon) {
+//	  try {
+//	    SubscriptionManager mgr = daemon.getSubscriptionManager();
+//	    return mgr != null && mgr.isReady();
+//	  } catch (Exception e) {
+//	    return false;
+//	  }
+//	}};
+//
+//  protected static final ServletDescr SERVLET_MD_MONITOR =
+//      new ServletDescr("MetadataMonitor",
+//	  	       MetadataMonitor.class,
+//	  	       "Metadata Monitor",
+//	  	       ServletDescr.NEED_ROLE_DEBUG,
+//	  	       "Metadata Monitor");
+//
+//  protected static final ServletDescr SERVLET_MD_CONTROL =
+//      new ServletDescr("MetadataControl",
+//	  	       MetadataControl.class,
+//	  	       "Metadata Control",
+//	  	       ServletDescr.NEED_ROLE_AU_ADMIN,
+//	  	       "Metadata Control");
 
   protected static final ServletDescr SERVLET_OIOSAML =
       new ServletDescr("SAMLDispatcherServlet",
@@ -338,33 +636,137 @@ public class AdminServletManager extends BaseServletManager {
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
+    SERVLET_HOME,
+    SERVLET_BATCH_AU_CONFIG,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+//    SERVLET_COUNTER_REPORTS,
+    //SERVLET_OPENURL_QUERY,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
     LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+//    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
+    LINK_LOGOUT,
+    LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
+//    SERVLET_MD_MONITOR,
+//    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
   static final ServletDescr servletDescrsNew[] = {
+    SERVLET_HOME,
+//    SERVLET_BATCH_AU_CONFIG_NEW,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+//    SERVLET_DAEMON_STATUS_NEW,
+    SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT_TAB,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+//    SERVLET_COUNTER_REPORTS,
+    //SERVLET_OPENURL_QUERY,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
     LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+//    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
+    LINK_LOGOUT,
+    LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
+//    SERVLET_MD_MONITOR,
+//    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
+    SERVLET_HOME,
+    SERVLET_BATCH_AU_CONFIG,
+//    SERVLET_BATCH_AU_CONFIG_NEW,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS,
+//    SERVLET_DAEMON_STATUS_NEW,
+    SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT_TAB,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
+    SERVLET_TIME_GATE,
+    SERVLET_TIME_MAP,
+    SERVLET_EXPORT_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_DEBUG_PANEL,
+    SERVLET_EXPERT_CONFIG,
+    SERVLET_LIST_HOLDINGS,
+//    SERVLET_COUNTER_REPORTS,
+    //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
     LINK_CONTACT,
+    SERVLET_EDIT_ACCOUNT,
+    SERVLET_EDIT_ACCOUNTS,
+//    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
+    LINK_LOGOUT,
+    LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
+//    SERVLET_MD_MONITOR,
+//    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 
@@ -400,6 +802,7 @@ public class AdminServletManager extends BaseServletManager {
   private List inFrameContentTypes;
   private boolean hasIsoFiles = false;
   private boolean compressorEnabled = DEFAULT_COMPRESSOR_ENABLED;
+  private boolean exportEnabled = ExportContent.DEFAULT_ENABLE_EXPORT;
   private boolean oiosamlEnabled = DEFAULT_OIOSAML_ENABLED;
   private File oiosamlHomeDir = null;
   private String oiosamlConfigFileName = DEFAULT_OIOSAML_CONFIG_FILE;
@@ -416,6 +819,20 @@ public class AdminServletManager extends BaseServletManager {
     super.setConfig(config, prevConfig, changedKeys);
     isodir = config.get(PARAM_ISODIR);
     logdir = config.get(PARAM_LOGDIR);
+    if (changedKeys.contains(ExportContent.PREFIX)) {
+      String path = config.get(ExportContent.PARAM_EXPORT_PATH);
+      if (StringUtil.isNullString(path)) {
+        String tmpdir = config.get(ConfigManager.PARAM_TMPDIR);
+        exportdir = new File(tmpdir, ExportContent.DEFAULT_EXPORT_DIR);
+      } else {
+        exportdir = new File(path);
+      }
+      if (!exportdir.exists()) {
+        if (!FileUtil.ensureDirExists(exportdir)) {
+          log.error("Could not create export directory " + exportdir);
+        }
+      }
+    }
     if (changedKeys.contains(PREFIX)) {
       if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
         redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
@@ -431,6 +848,8 @@ public class AdminServletManager extends BaseServletManager {
       setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
       compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
               DEFAULT_COMPRESSOR_ENABLED);
+      exportEnabled = config.getBoolean(ExportContent.PARAM_ENABLE_EXPORT,
+              ExportContent.DEFAULT_ENABLE_EXPORT);
       oiosamlEnabled = config.getBoolean(PARAM_OIOSAML_ENABLED,
           DEFAULT_OIOSAML_ENABLED);
 
@@ -502,6 +921,10 @@ public class AdminServletManager extends BaseServletManager {
         // Create context for serving log files and directory
         setupLogContext(server, realm, "/log/", logdir);
       }
+      if (exportEnabled) {
+        // Create context for serving exported files and directory
+        setupDirContext(server, realm, "/export/", exportdir.toString(), null);
+      }
       if (isodir != null) {
         // Create context for serving ISO files and directory
         FilenameFilter filt = new FileExtensionFilter(".iso");
@@ -564,6 +987,10 @@ public class AdminServletManager extends BaseServletManager {
     // XXXUI add the new servlets too
     //addServlets(servletDescrsNew, handler);
 
+    handler.addServlet("ProxyInfo", "/info/ProxyInfo",
+            "org.lockss.servlet.ProxyConfig");
+    addServletIfAvailable(handler, "Api", "/Api",
+            "org.lockss.uiapi.servlet.Api");
     context.addHandler(handler);
 
     // ResourceHandler should come after servlets
@@ -578,6 +1005,9 @@ public class AdminServletManager extends BaseServletManager {
       redirMap.put("/", redirectRootTo);
       context.setAttribute(CONTEXT_ATTR_RESOURCE_REDIRECT_MAP, redirMap);
     }
+
+    handler.addServlet("Resource", "/",
+            "org.lockss.servlet.LockssResourceServlet");
 
 //     // NotFoundHandler
 //     context.addHandler(new NotFoundHandler());

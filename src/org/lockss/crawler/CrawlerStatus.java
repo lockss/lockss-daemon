@@ -190,6 +190,7 @@ public class CrawlerStatus {
   protected ArchivalUnit au = null;
   protected int refetchDepth = -1;
   protected int depth = -1;
+  protected int priority = -1;
 
   protected String type;
   private long contentBytesFetched = 0;
@@ -505,12 +506,20 @@ public class CrawlerStatus {
     depth = val;
   }
 
+  public void setPriority(int val) {
+    priority = val;
+  }
+
   public int getRefetchDepth() {
     return refetchDepth;
   }
 
   public int getDepth() {
     return depth;
+  }
+
+  public int getPriority() {
+    return priority;
   }
 
   public void setProxy(String proxy) {

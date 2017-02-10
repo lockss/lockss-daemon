@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,10 +36,17 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssAuManager;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.*;
+import org.lockss.protocol.DatedPeerIdSet;
+import org.lockss.protocol.DatedPeerIdSetImpl;
+import org.lockss.protocol.IdentityAgreementList;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.AuAgreements;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.LockssRepository.RepositoryStateException;
 import org.lockss.util.*;
@@ -94,7 +105,8 @@ public class HistoryRepositoryImpl
    */
   static final String[] MAPPING_FILES = {
       MAPPING_FILE_NAME,
-      ExternalizableMap.MAPPING_FILE_NAME
+      ExternalizableMap.MAPPING_FILE_NAME,
+      IdentityManager.MAPPING_FILE_NAME
   };
 
   /**
@@ -190,6 +202,31 @@ public class HistoryRepositoryImpl
   public long getAuCreationTime() {
     File auidfile = new File(rootLocation, LockssRepositoryImpl.AU_ID_FILE);
     return auidfile.lastModified();
+  }
+  
+  private DatedPeerIdSet m_noAuDpis = null;
+  
+  /**
+   * Return the associated NoAuPeerIdSet
+   */
+  public DatedPeerIdSet getNoAuPeerSet()
+  {
+    IdentityManager idman;
+    
+    if (m_noAuDpis == null) {
+      File fileDpis = new File(rootLocation, NO_AU_PEER_ID_SET_FILE_NAME);
+      LockssDaemon ld = getDaemon();
+      if (ld != null) {
+        idman = ld.getIdentityManager();
+      } else {
+        logger.error("When attempting to get a dated Peer ID set, I could not find the daemon.  Aborting.");
+        throw new NullPointerException();
+      }
+      
+      m_noAuDpis = new DatedPeerIdSetImpl(fileDpis, idman);
+    }
+    
+    return m_noAuDpis;
   }
 
 
@@ -296,7 +333,7 @@ public class HistoryRepositoryImpl
    * @see #loadIdentityAgreements(ObjectSerializer)
    */
   public Object loadIdentityAgreements() {
-    return null;
+    return loadIdentityAgreements(makeIdentityAgreementListSerializer());
   }
 
   /**
@@ -395,6 +432,7 @@ public class HistoryRepositoryImpl
     // Default value
     return new NodeStateImpl(cus,
                              -1,
+                             new CrawlState(-1, CrawlState.FINISHED, 0),
                              new ArrayList(),
                              this);
   }
@@ -547,6 +585,40 @@ public class HistoryRepositoryImpl
     }
     catch (Exception exc) {
       String errorString = "Could not store damaged nodes for AU '" + nodeSet.theAu.getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
+    }
+  }
+
+  /**
+   * <p>Stores an identity agreement instance.</p>
+   * @param auAgreements A {@link AuAgreements} instance.
+   * @see #storeIdentityAgreements(ObjectSerializer, List)
+   */
+  public void storeIdentityAgreements(AuAgreements auAgreements) {
+    // CASTOR: change to makeObjectSerializer() when Castor is phased out
+    storeIdentityAgreements(makeIdentityAgreementListSerializer(),
+			    auAgreements);
+  }
+
+  /**
+   * <p>Stores an identity agreement instance using the given serializer
+   * instance.</p>
+   * @param serializer A serializer instance.
+   * @param auAgreements A {@link AuAgreements} instance.
+   * @throws RepositoryStateException if an error condition arises.
+   */
+  void storeIdentityAgreements(ObjectSerializer serializer,
+                               AuAgreements auAgreements) {
+    logger.debug3("Storing identity agreements for AU '" + storedAu.getName() + "'");
+    File file = prepareFile(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
+
+    try {
+      // CR: I assume I need not wrap()
+      serializer.serialize(file, auAgreements);
+    }
+    catch (Exception exc) {
+      String errorString = "Could not store identity agreements for AU '" + storedAu.getName() + "'";
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
@@ -785,6 +857,15 @@ public class HistoryRepositoryImpl
   }
 
   /**
+   * <p>Builds a new serializer for identity agreement lists.</p>
+   * @return A serializer for identity agreement lists..
+   */
+  protected ObjectSerializer makeIdentityAgreementListSerializer() {
+    // CASTOR: Phase out with Castor
+    return makeObjectSerializer(IdentityAgreementList.class);
+  }
+
+  /**
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
    */
@@ -848,6 +929,9 @@ public class HistoryRepositoryImpl
     if (obj == null) {
       return null;
     }
+    else if (obj instanceof IdentityAgreementList) {
+      return ((IdentityAgreementList)obj).getList();
+    }
     else if (obj instanceof NodeHistoryBean) {
       List histBeans = ((NodeHistoryBean)obj).getHistoryBeans();
       return NodeHistoryBean.fromBeanListToList(histBeans);
@@ -900,7 +984,9 @@ public class HistoryRepositoryImpl
    * @return An object suitable for serialization.
    */
   private static Serializable wrap(List idList) {
-    return (Serializable)idList;
+    // CASTOR: Phase out with Castor
+    if (isCastorMode()) { return new IdentityAgreementList(idList); }
+    else                { return (Serializable)idList; }
   }
 
   /**

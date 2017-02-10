@@ -40,6 +40,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.db.DbException;
+import org.lockss.exporter.biblio.*;
 import org.lockss.metadata.MetadataDbManager;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
@@ -237,7 +238,7 @@ public class OpenUrlResolver {
     private String resolvedUrl;
     private String proxySpec;
     private ResolvedTo resolvedTo;
-    private TdbAu resolvedBibliographicItem = null;
+    private BibliographicItem resolvedBibliographicItem = null;
     private OpenUrlInfo nextInfo = null;
     
     private OpenUrlInfo(String resolvedUrl, 
@@ -293,7 +294,7 @@ public class OpenUrlResolver {
     public ResolvedTo getResolvedTo() {
       return resolvedTo;
     }
-    public TdbAu getBibliographicItem() {
+    public BibliographicItem getBibliographicItem() {
       return resolvedBibliographicItem;
     }
 
@@ -1225,7 +1226,7 @@ public class OpenUrlResolver {
    * @return the OpenUrl query string, or null if not available
    */
   static public String getOpenUrlQueryForBibliographicItem(
-      TdbAu bibitem) {
+      BibliographicItem bibitem) {
     StringBuffer sb = new StringBuffer();
     
     String isbn = bibitem.getIsbn();

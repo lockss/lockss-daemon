@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,10 +36,14 @@ package org.lockss.state;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
 import junit.framework.Test;
+
 import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.Vote;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -85,7 +93,10 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
+  private IdentityManager idmgr;
   private String idKey;
+  private PeerIdentity testID1 = null;
+  private PeerIdentity testID2 = null;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -98,9 +109,19 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.initService(theDaemon);
     repository.startService();
+    if (idmgr == null) {
+      idmgr = theDaemon.getIdentityManager();
+      idmgr.startService();
+    }
+    testID1 = idmgr.stringToPeerIdentity("127.1.2.3");
+    testID2 = idmgr.stringToPeerIdentity("127.4.5.6");
   }
 
   public void tearDown() throws Exception {
+    if (idmgr != null) {
+      idmgr.stopService();
+      idmgr = null;
+    }
     repository.stopService();
     super.tearDown();
   }
@@ -163,8 +184,11 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null,
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
                                                 repository);
+    List histories = ListUtil.list(createPollHistoryBean(3), createPollHistoryBean(3),
+                                   createPollHistoryBean(3), createPollHistoryBean(3),
+                                   createPollHistoryBean(3));
 
     /*
      * CASTOR: [summary] Rewrite test in non-Castor way
@@ -174,6 +198,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
      * TODO: Rewrite test in non-Castor way
      */
     //nodeState.setPollHistoryBeanList(histories);
+    nodeState.setPollHistoryList(NodeHistoryBean.fromBeanListToList(histories));
 
     repository.storePollHistories(nodeState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
@@ -186,12 +211,39 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState.setPollHistoryList(new ArrayList());
     repository.loadPollHistories(nodeState);
     List loadedHistory = nodeState.getPollHistoryList();
+    assertEquals(histories.size(), loadedHistory.size());
     // CASTOR: some Castor-tailored stuff here
     // PollHistoryBean expect1 = (PollHistoryBean)histories.get(0);
     // PollHistoryBean elem1 = (PollHistoryBean)loadedHistory.get(0);
+    PollHistory expect1 = (PollHistory)histories.get(0);
+    PollHistory elem1 = (PollHistory)loadedHistory.get(0);
+    assertEquals(expect1.type, elem1.type);
+    assertEquals(expect1.lwrBound, elem1.lwrBound);
+    assertEquals(expect1.uprBound, elem1.uprBound);
+    assertEquals(expect1.status, elem1.status);
+    assertEquals(expect1.startTime, elem1.startTime);
+    assertEquals(expect1.duration, elem1.duration);
     // CASTOR: some Castor-tailored stuff here
     // List expectBeans = (List)expect1.getVoteBeans();
     // List elemBeans = (List)elem1.getVoteBeans();
+    Iterator expectIter = (Iterator)expect1.getVotes();
+    Iterator elemIter = (Iterator)elem1.getVotes();
+    while (expectIter.hasNext() && elemIter.hasNext()) {
+      Vote expectVote = (Vote)expectIter.next();
+      Vote elemVote = (Vote)elemIter.next();
+      assertEquals(expectVote.getVoterIdentity().getIdString(),
+                   elemVote.getVoterIdentity().getIdString());
+      assertEquals(expectVote.isAgreeVote(),
+                   elemVote.isAgreeVote());
+      assertEquals(expectVote.getChallengeString(),
+                   elemVote.getChallengeString());
+      assertEquals(expectVote.getVerifierString(),
+                   elemVote.getVerifierString());
+      assertEquals(expectVote.getHashString(),
+                   elemVote.getHashString());
+    }
+    assertFalse(expectIter.hasNext());
+    assertFalse(expectIter.hasNext());
     TimeBase.setReal();
   }
 
@@ -199,7 +251,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null,
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
                                                 repository);
     nodeState.setPollHistoryList(new ArrayList());
     //storing empty vector
@@ -217,7 +269,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 
     mspec = new MockCachedUrlSetSpec("http://www.example2.com", null);
     mcus = new MockCachedUrlSet(mau, mspec);
-    nodeState = new NodeStateImpl(mcus, -1, null, repository);
+    nodeState = new NodeStateImpl(mcus, -1, null, null, repository);
     filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example2.com/");
@@ -549,8 +601,13 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     TimeBase.setSimulated(100);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(
         "http://www.example.com"));
+    CrawlState crawl = new CrawlState(1, 2, 123);
     List polls = new ArrayList(2);
-    NodeState nodeState = new NodeStateImpl(mcus, 123321, polls,
+    PollState poll1 = new PollState(1, "sdf", "jkl", 2, 123, Deadline.at(456), false);
+    PollState poll2 = new PollState(2, "abc", "def", 3, 321, Deadline.at(654), false);
+    polls.add(poll1);
+    polls.add(poll2);
+    NodeState nodeState = new NodeStateImpl(mcus, 123321, crawl, polls,
                                             repository);
     ((NodeStateImpl)nodeState).setState(NodeState.DAMAGE_AT_OR_BELOW);
     repository.storeNodeState(nodeState);
@@ -566,12 +623,29 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertSame(mcus, nodeState.getCachedUrlSet());
 
     assertEquals(123321, nodeState.getAverageHashDuration());
+    assertEquals(1, nodeState.getCrawlState().getType());
+    assertEquals(2, nodeState.getCrawlState().getStatus());
+    assertEquals(123, nodeState.getCrawlState().getStartTime());
     assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
 
     Iterator pollIt = nodeState.getActivePolls();
     assertTrue(pollIt.hasNext());
+    PollState loadedPoll = (PollState)pollIt.next();
+    assertEquals(1, loadedPoll.getType());
+    assertEquals("sdf", loadedPoll.getLwrBound());
+    assertEquals("jkl", loadedPoll.getUprBound());
+    assertEquals(2, loadedPoll.getStatus());
+    assertEquals(123, loadedPoll.getStartTime());
+    assertEquals(456, loadedPoll.getDeadline().getExpirationTime());
 
     assertTrue(pollIt.hasNext());
+    loadedPoll = (PollState)pollIt.next();
+    assertEquals(2, loadedPoll.getType());
+    assertEquals("abc", loadedPoll.getLwrBound());
+    assertEquals("def", loadedPoll.getUprBound());
+    assertEquals(3, loadedPoll.getStatus());
+    assertEquals(321, loadedPoll.getStartTime());
+    assertEquals(654, loadedPoll.getDeadline().getExpirationTime());
     assertFalse(pollIt.hasNext());
 
     TimeBase.setReal();
@@ -642,6 +716,11 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         },
         new SerializerFactory() {
           public ObjectSerializer makeSerializer() {
+            return repository.makeIdentityAgreementListSerializer();
+          }
+        },
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
             return repository.makeNodeStateSerializer();
           }
         },
@@ -666,13 +745,48 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
                    cxSerializer.getCompatibilityMode());
     }
   }
+  
+  /**
+   *  Make sure that we have one (and only one) dated peer id set 
+   */
+  public void testGetNoAuPeerSet() {
+    DatedPeerIdSet dpis1;
+    DatedPeerIdSet dpis2;
+    
+    dpis1 = repository.getNoAuPeerSet();
+    assertNotNull(dpis1);
+    
+    dpis2 = repository.getNoAuPeerSet();
+    assertNotNull(dpis2);
+    
+    assertSame(dpis1, dpis2);
+  }
+  
+  
+
+  private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
+    PollState state = new PollState(1, "lwr", "upr", 2, 5, null, false);
+    List votes = new ArrayList(voteCount);
+    for (int ii=0; ii<voteCount; ii++) {
+      VoteBean bean = new VoteBean();
+      bean.setId(idKey);
+      bean.setAgreeState(true);
+      bean.setChallengeString("1234");
+      bean.setHashString("2345");
+      bean.setVerifierString("3456");
+      votes.add(bean.getVote());
+    }
+    return new PollHistoryBean(new PollHistory(state, 0, votes));
+  }
 
   public static void configHistoryParams(String rootLocation)
     throws IOException {
     ConfigurationUtil.addFromArgs(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                                   rootLocation,
                                   LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-                                  rootLocation);
+                                  rootLocation,
+                                  IdentityManager.PARAM_LOCAL_IP,
+                                  "127.0.0.7");
   }
 
   public static void main(String[] argv) {

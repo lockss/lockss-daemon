@@ -166,6 +166,14 @@ public abstract class BasePlugin
   }
 
   /**
+   * Should crawler send Referrer header
+   * @return true
+   */
+  public boolean sendReferrer() {
+    return true;
+  }
+
+  /**
    * Default implementation collects keys from titleConfigMap.
    * @return a List
    */
@@ -216,7 +224,10 @@ public abstract class BasePlugin
 			   Configuration.Differences diffs) {
     // PJG: should we get this from the changedKeys?
     if (diffs.containsTdbPluginId(getPluginId())) {
-      setTitleConfigs(newConfig.getTdb());
+      Tdb tdb = newConfig.getTdb();
+      if (tdb != null) {
+	setTitleConfigs(tdb);
+      }
     }
   }
 
@@ -711,6 +722,16 @@ public abstract class BasePlugin
     return newAuxClass(className, expectedType, expectedType);
   }
 
+  protected <T> Class loadPluginClass(String className, Class<T> expectedType)
+      throws ClassNotFoundException {
+    if (classLoader != null) {
+      return Class.forName(className, true, classLoader);
+    } else {
+      return Class.forName(className);
+    }
+  }
+
+
   /** Create and return a new instance of a plugin auxilliary class.
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
@@ -721,14 +742,11 @@ public abstract class BasePlugin
 			   Class<T> wrapperType) {
     T obj = null;
     try {
-      if (classLoader != null) {
-	obj = ((Class<T>)Class.forName(className, true, classLoader)).newInstance();
-      } else {
-	obj = ((Class<T>)Class.forName(className)).newInstance();
-      }
+      obj = ((Class<T>)loadPluginClass(className, expectedType)).newInstance();
     } catch (ExceptionInInitializerError e) {
-      throw auxErr("Initializer error in dynamically loaded class "
-		   + className,
+      throw auxErr("Error initializing dynamically loaded class "
+		   + className
+		   + ": " + e.getMessage(),
 		   e);
     } catch (LinkageError e) {
       throw auxErr("Linkage error in dynamically loaded class " + className,

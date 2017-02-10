@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -31,13 +35,22 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 import java.net.*;
+
 import org.apache.commons.collections.Predicate;
+import org.apache.commons.io.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.*;
+
 import org.lockss.app.*;
 import org.lockss.account.*;
+import org.lockss.clockss.*;
 import org.lockss.daemon.*;
+import org.lockss.hasher.*;
+import org.lockss.mail.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
+import org.lockss.proxy.*;
+import org.lockss.remote.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
@@ -105,6 +118,11 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
 
+  /** Temporary param to enable new scheduler */
+  public static final String PARAM_NEW_SCHEDULER =
+    HashService.PREFIX + "use.scheduler";
+  static final boolean DEFAULT_NEW_SCHEDULER = true;
+
   /** Maximum number of AU config changes to to save up during a batch add
    * or remove operation, before writing them to au.txt  */
   public static final String PARAM_MAX_DEFERRED_AU_BATCH_SIZE =
@@ -133,7 +151,7 @@ public class ConfigManager implements LockssManager {
    * misconfigured servers. */
   public static final String PARAM_JSSE_ENABLESNIEXTENSION =
     PREFIX + "jsse.enableSNIExtension";
-  static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = false;
+  static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = true;
 
   /** Parameters whose values are more prop URLs */
   static final Set URL_PARAMS =
@@ -190,6 +208,37 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
+  /** If true, local copies of remote config files will be maintained, to
+   * allow daemon to start when config server isn't available. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER = PLATFORM +
+    "remoteConfigFailover";
+  public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER = true;
+
+  /** Dir in which to store local copies of remote config files. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_DIR = PLATFORM +
+    "remoteConfigFailoverDir";
+  public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_DIR = "remoteCopy";
+
+  /** Maximum acceptable age of a remote config failover file, specified as
+   * an integer followed by h, d, w or y for hours, days, weeks and years.
+   * Zero means no age limit. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_MAX_AGE = PLATFORM +
+    "remoteConfigFailoverMaxAge";
+  public static final long DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE = 0;
+
+  /** Checksum algorithm used to verify remote config failover file */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
+    "remoteConfigFailoverChecksumAlgorithm";
+  public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
+    "SHA-256";
+
+  /** Failover file not accepted unled it has a checksum. */
+  public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
+    "remoteConfigFailoverChecksumRequired";
+  public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
+    true;
+
+
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
   public static final String CONFIG_FILE_PROXY_IP_ACCESS =
     "proxy_ip_access.txt";
@@ -209,6 +258,9 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
 
+  public static final String REMOTE_CONFIG_FAILOVER_FILENAME =
+    "remote_config_failover_info.xml";
+
   /** If set to a list of regexps, matching parameter names will be allowed
    * to be set in expert config.  */
   public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
@@ -224,6 +276,11 @@ public class ConfigManager implements LockssManager {
 		  ODLD +"app\\.exit(Once|After|Immediately)$",
 		  Perl5Compiler.quotemeta(PARAM_DAEMON_GROUPS),
 		  Perl5Compiler.quotemeta(PARAM_AUX_PROP_URLS),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_IP),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_IDENTITY),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_PORT),
+		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
+		  Perl5Compiler.quotemeta(ExportContent.PARAM_ENABLE_EXPORT),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY),
 		  Perl5Compiler.quotemeta(LockssDaemon.PARAM_TESTING_MODE)
@@ -425,6 +482,11 @@ public class ConfigManager implements LockssManager {
   private List pluginTitledbUrlList;	// list of titledb urls (usually
 					// jar:) specified by plugins
   private List userTitledbUrlList;	// titledb urls added from UI
+
+  private List<String> loadedUrls = Collections.EMPTY_LIST;
+  private List<String> specUrls = Collections.EMPTY_LIST;
+
+
   private String groupNames;		// daemon group names
 
   // Maps name of params holding included config URLs to the URL of the
@@ -673,6 +735,11 @@ public class ConfigManager implements LockssManager {
     return haveConfig.isFull();
   }
 
+  /** Return true if the first config load has completed. */
+  public boolean haveConfig() {
+    return haveConfig.isFull();
+  }
+
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
    * time a configuration has been loaded.) */
   public boolean waitConfig() {
@@ -764,6 +831,23 @@ public class ConfigManager implements LockssManager {
    */
   public List getConfigUrlList() {
     return configUrlList;
+  }
+
+  /**
+   * @return the List of config urls, including auxilliary files (e.g.,
+   * specified by {@value PARAM_TITLE_DB_URLS}).
+   */
+  public List getSpecUrlList() {
+    return specUrls;
+  }
+
+  /**
+   * @return the List of urls from which the config was actually loaded.
+   * This differs from {@link #getSpecUrlList()} in that it reflects any
+   * failover to local copies.
+   */
+  public List getLoadedUrlList() {
+    return loadedUrls;
   }
 
   ConfigFile.Generation getConfigGeneration(String url, boolean required,
@@ -936,6 +1020,8 @@ public class ConfigManager implements LockssManager {
       haveConfig.fill();
     }
     connPool.closeIdleConnections(0);
+    updateRemoteConfigFailover();
+
     return res;
   }
 
@@ -966,6 +1052,10 @@ public class ConfigManager implements LockssManager {
     List gens;
     try {
       gens = getStandardConfigGenerations(urls, reload);
+    } catch (SocketException | UnknownHostException | FileNotFoundException e) {
+      log.error("Error loading config: " + e.toString());
+//       recentLoadError = e.toString();
+      return false;
     } catch (IOException e) {
       log.error("Error loading config", e);
 //       recentLoadError = e.toString();
@@ -1016,6 +1106,8 @@ public class ConfigManager implements LockssManager {
     putIf(p, "groups",
 	  StringUtil.separatedString(getPlatformGroupList(), ";"));
     putIf(p, "host", getPlatformHostname());
+    putIf(p, "peerid",
+	  currentConfig.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY));
     return p;
   }
 
@@ -1091,6 +1183,8 @@ public class ConfigManager implements LockssManager {
     // group) in initial config get into platformConfig even during testing.
     platConfig.seal();
     platformConfig = platConfig;
+    initCacheConfig(platConfig);
+    setUpRemoteConfigFailover();
   }
 
   // If a keystore was specified for 
@@ -1167,7 +1261,7 @@ public class ConfigManager implements LockssManager {
     initCacheConfig(newConfig);
     setCurrentConfig(newConfig);
     updateGenerations(gens);
-    logConfigLoaded(newConfig, oldConfig, diffs, gens);
+    recordConfigLoaded(newConfig, oldConfig, diffs, gens);
     startCallbacksTime = TimeBase.nowMs();
     runCallbacks(newConfig, oldConfig, diffs);
     return true;
@@ -1248,21 +1342,42 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  private void buildLoadedFileLists(List<ConfigFile.Generation> gens) {
+    if (gens != null && !gens.isEmpty()) {
+      List<String> specNames = new ArrayList<String>(gens.size());
+      List<String> loadedNames = new ArrayList<String>(gens.size());
+      for (ConfigFile.Generation gen : gens) {
+	if (gen != null) {
+	  loadedNames.add(gen.getConfigFile().getLoadedUrl());
+	  specNames.add(gen.getConfigFile().getFileUrl());
+	}
+      }
+      loadedUrls = loadedNames;
+      specUrls = specNames;
+    } else {
+      loadedUrls = Collections.EMPTY_LIST;
+      specUrls = Collections.EMPTY_LIST;
+    }
+  }
+
+  private void recordConfigLoaded(Configuration newConfig,
+				  Configuration oldConfig,
+				  Configuration.Differences diffs,
+				  List gens) {
+    buildLoadedFileLists(gens);    
+    logConfigLoaded(newConfig, oldConfig, diffs, loadedUrls);
+  }
+
+  
+
   private void logConfigLoaded(Configuration newConfig,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs,
-			       List gens) {
+			       List<String> names) {
     StringBuffer sb = new StringBuffer("Config updated, ");
     sb.append(newConfig.keySet().size());
     sb.append(" keys");
-    if (gens != null && !gens.isEmpty()) {
-      List names = new ArrayList(gens.size());
-      for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-	ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
-	if (gen != null) {
-	  names.add(gen.getUrl());
-	}
-      }
+    if (!names.isEmpty()) {
       sb.append(" from ");
       sb.append(StringUtil.separatedString(names, ", "));
     }
@@ -1278,6 +1393,14 @@ public class ConfigManager implements LockssManager {
   static final String DEFAULT_HASH_SVC = "org.lockss.hasher.HashSvcSchedImpl";
 
   private void inferMiscParams(Configuration config) {
+    // hack to make hash use new scheduler without directly setting
+    // org.lockss.manager.HashService, which would break old daemons.
+    // don't set if already has a value
+    if (config.get(PARAM_HASH_SVC) == null &&
+	config.getBoolean(PARAM_NEW_SCHEDULER, DEFAULT_NEW_SCHEDULER)) {
+      config.put(PARAM_HASH_SVC, DEFAULT_HASH_SVC);
+    }
+
     // If we were given a temp dir, create a subdir and use that.  This
     // ensures that * expansion in rundaemon won't exceed the maximum
     // command length.
@@ -1299,7 +1422,11 @@ public class ConfigManager implements LockssManager {
     String fromParam = LockssDaemon.PARAM_BIND_ADDRS;
     setIfNotSet(config, fromParam, AdminServletManager.PARAM_BIND_ADDRS);
     setIfNotSet(config, fromParam, ContentServletManager.PARAM_BIND_ADDRS);
+    setIfNotSet(config, fromParam, ProxyManager.PARAM_BIND_ADDRS);
+    setIfNotSet(config, fromParam, AuditProxyManager.PARAM_BIND_ADDRS);
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
+
+    org.lockss.poller.PollManager.processConfigMacros(config);
   }
 
   // Backward compatibility for param settings
@@ -1324,6 +1451,9 @@ public class ConfigManager implements LockssManager {
     setIfNotSet(config,
 		PARAM_OBS_ADMIN_HELP_URL,
 		AdminServletManager.PARAM_HELP_URL);
+    setIfNotSet(config,
+		RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+		RemoteApi.PARAM_BACKUP_FREQ);
   }
 
   private void setConfigMacros(Configuration config) {
@@ -1364,6 +1494,34 @@ public class ConfigManager implements LockssManager {
 		       new File(logdir, logfile).toString());
     }
 
+    conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
+				IdentityManager.PARAM_LOCAL_IP);
+
+    conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
+				ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR);
+    conditionalPlatformOverride(config, PARAM_PLATFORM_SECOND_IP_ADDRESS,
+				ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR);
+
+    conditionalPlatformOverride(config, PARAM_PLATFORM_LOCAL_V3_IDENTITY,
+				IdentityManager.PARAM_LOCAL_V3_IDENTITY);
+
+    conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_PORT,
+				SmtpMailService.PARAM_SMTPPORT);
+    conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
+				SmtpMailService.PARAM_SMTPHOST);
+
+    // Add platform access subnet to access lists if it hasn't already been
+    // accounted for
+    String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
+    appendPlatformAccess(config,
+			 AdminServletManager.PARAM_IP_INCLUDE,
+			 AdminServletManager.PARAM_IP_PLATFORM_SUBNET,
+			 platformSubnet);
+    appendPlatformAccess(config,
+			 ProxyManager.PARAM_IP_INCLUDE,
+			 ProxyManager.PARAM_IP_PLATFORM_SUBNET,
+			 platformSubnet);
+
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (!StringUtil.isNullString(space)) {
       String firstSpace =
@@ -1373,9 +1531,14 @@ public class ConfigManager implements LockssManager {
 		       firstSpace);
       platformOverride(config, HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);
+      platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
+		       new File(firstSpace, "iddb").toString());
       platformDefault(config,
 		      org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
 		      new File(firstSpace, "tfile").toString());
+      platformDefault(config,
+		      RemoteApi.PARAM_BACKUP_DIR,
+		      new File(firstSpace, "backup").toString());
     }
   }
 
@@ -1637,15 +1800,6 @@ public class ConfigManager implements LockssManager {
       processExpertAllowDeny(expertAllow, expertDeny);
     }
     if (cacheConfigInited) return;
-
-    // Do not try to create the config directory if the content is obtained via
-    // web services.
-    if (Boolean.valueOf(getFromGenerations(configGenerations,
-	PluginManager.PARAM_AU_CONTENT_FROM_WS,
-	String.valueOf(PluginManager.DEFAULT_AU_CONTENT_FROM_WS)))) {
-      cacheConfigInited = true;
-      return;
-    }
     String dspace = getFromGenerations(configGenerations,
 				       PARAM_PLATFORM_DISK_SPACE_LIST,
 				       null);
@@ -2256,10 +2410,314 @@ public class ConfigManager implements LockssManager {
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
 
+  // Remote config failover mechanism maintain local copy of remote config
+  // files, uses them on daemon startup if origin file not available
+
+  File remoteConfigFailoverDir;			// Copies written to this dir
+  File remoteConfigFailoverInfoFile;		// State file
+  RemoteConfigFailoverMap rcfm;
+  long remoteConfigFailoverMaxAge = DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE;
+
+  /** Records state of one config failover file */
+  static class RemoteConfigFailoverInfo implements LockssSerializable {
+    final String url;
+    String filename;
+    String chksum;
+    long date;
+    transient File dir;
+    transient File tempfile;
+    transient int seq;
+
+    RemoteConfigFailoverInfo(String url, File dir, int seq) {
+      this.dir = dir;
+      this.url = url;
+      this.seq = seq;
+    }
+
+    void setRemoteConfigFailoverDir(File dir) {
+      this.dir = dir;
+    }
+
+    String getChksum() {
+      return chksum;
+    }
+
+    void setChksum(String chk) {
+      this.chksum = chk;
+    }
+
+    String getUrl() {
+      return url;
+    }
+
+    String getFilename() {
+      return filename;
+    }
+
+    boolean exists() {
+      return filename != null && getPermFileAbs().exists();
+    }
+
+    File getTempFile() {
+      return tempfile;
+    }
+
+    void setTempFile(File tempfile) {
+      this.tempfile = tempfile;
+    }
+
+    boolean update() {
+      if (tempfile != null) {
+	String pname = getOrMakePermFilename();
+	File pfile = new File(dir, pname);
+	log.debug2("Rename " + tempfile + " -> " + pfile);
+	PlatformUtil.updateAtomically(tempfile, pfile);
+	tempfile = null;
+	date = TimeBase.nowMs();
+	filename = pname;
+	return true;
+      } else {
+	return false;
+      }
+    }
+
+    File getPermFileAbs() {
+      if (filename == null) {
+	return null;
+      }
+      return new File(dir, filename);
+    }
+
+    long getDate() {
+      return date;
+    }
+
+    String getOrMakePermFilename() {
+      if (filename != null) {
+	return filename;
+      }
+      try {
+	log.debug2("Making perm filename from: " + url);
+	String path = UrlUtil.getPath(url);
+	String name = FilenameUtils.getBaseName(path);
+	String ext = FilenameUtils.getExtension(path);
+	return String.format("%02d-%s.%s.gz", seq, name, ext);
+      } catch (MalformedURLException e) {
+	log.warning("Error building fialover filename", e);
+	return String.format("%02d-config-file.gz", seq);
+      }
+    }
+  }
+
+  /** Maps URL to rel filename */
+  static class RemoteConfigFailoverMap implements LockssSerializable {
+    Map<String,RemoteConfigFailoverInfo> map =
+      new HashMap<String,RemoteConfigFailoverInfo>();
+    int seq;
+
+    RemoteConfigFailoverInfo put(String url, RemoteConfigFailoverInfo rcfi) {
+      return map.put(url, rcfi);
+    }
+
+    RemoteConfigFailoverInfo get(String url) {
+      return map.get(url);
+    }
+
+    int nextSeq() {
+      return ++seq;
+    }
+
+    Collection<RemoteConfigFailoverInfo> getColl() {
+      return map.values();
+    }
+
+    boolean update() {
+      boolean isModified = false;
+      for (RemoteConfigFailoverInfo rcfi : getColl()) {
+	isModified |= rcfi.update();
+      }
+      return isModified;
+    }
+
+    void setRemoteConfigFailoverDir(File dir) {
+      for (RemoteConfigFailoverInfo rcfi : getColl()) {
+	rcfi.setRemoteConfigFailoverDir(dir);
+      }
+    }
+  }
+
+  void setUpRemoteConfigFailover() {
+    Configuration plat = getPlatformConfig();
+    if (plat.getBoolean(PARAM_REMOTE_CONFIG_FAILOVER,
+			DEFAULT_REMOTE_CONFIG_FAILOVER)) {
+      remoteConfigFailoverDir =
+	new File(cacheConfigDir, plat.get(PARAM_REMOTE_CONFIG_FAILOVER_DIR,
+					  DEFAULT_REMOTE_CONFIG_FAILOVER_DIR));
+      if (FileUtil.ensureDirExists(remoteConfigFailoverDir)) {
+	if (remoteConfigFailoverDir.canWrite()) {
+	  remoteConfigFailoverInfoFile =
+	    new File(cacheConfigDir, REMOTE_CONFIG_FAILOVER_FILENAME);
+	  rcfm = loadRemoteConfigFailoverMap();
+	  remoteConfigFailoverMaxAge =
+	    plat.getTimeInterval(PARAM_REMOTE_CONFIG_FAILOVER_MAX_AGE,
+				 DEFAULT_REMOTE_CONFIG_FAILOVER_MAX_AGE);
+	} else {
+	  log.error("Can't write to remote config failover dir: " +
+		    remoteConfigFailoverDir);
+	  remoteConfigFailoverDir = null;
+	  rcfm = null;
+	}
+      } else {
+	log.error("Can't create remote config failover dir: " +
+		  remoteConfigFailoverDir);
+	remoteConfigFailoverDir = null;
+	rcfm = null;
+      }
+    } else {
+      remoteConfigFailoverDir = null;
+      rcfm = null;
+    }
+  }
+
+  public boolean isRemoteConfigFailoverEnabled() {
+    return rcfm != null;
+  }
+
+  RemoteConfigFailoverInfo getRcfi(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = rcfm.get(url);
+    if (rcfi == null) {
+      rcfi = new RemoteConfigFailoverInfo(url,
+					  remoteConfigFailoverDir,
+					  rcfm.nextSeq());
+      rcfm.put(url, rcfi);
+    }
+    return rcfi;
+  }
+
+  public File getRemoteConfigFailoverFile(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    if (rcfi == null || !rcfi.exists()) {
+      return null;
+    }
+    if (remoteConfigFailoverMaxAge > 0 &&
+	TimeBase.msSince(rcfi.getDate()) > remoteConfigFailoverMaxAge) {
+      log.error("Remote config failover file is too old (" +
+		StringUtil.timeIntervalToString(TimeBase.msSince(rcfi.getDate())) +
+		" > " + StringUtil.timeIntervalToString(remoteConfigFailoverMaxAge) +
+		"): " + url);
+      return null;
+    }
+    return rcfi.getPermFileAbs();
+  }    
+
+  public File getRemoteConfigFailoverTempFile(String url) {
+    if (!isRemoteConfigFailoverEnabled()) return null;
+    RemoteConfigFailoverInfo rcfi = getRcfi(url);
+    if (rcfi == null) {
+      return null;
+    }
+    File tempfile = rcfi.getTempFile();
+    if (tempfile != null) {
+      log.warning("getRemoteConfigFailoverTempFile: temp file already exists for " + url);
+      FileUtil.safeDeleteFile(tempfile);
+      rcfi.setTempFile(null);
+    }
+    try {
+      tempfile =
+	FileUtil.createTempFile("remote_config", ".tmp",
+				remoteConfigFailoverDir);
+    } catch (IOException e) {
+      log.error("Can't create temp file for remote config failover copy of "
+		+ url + " in " + remoteConfigFailoverDir, e);
+    }
+    rcfi.setTempFile(tempfile);
+    return tempfile;
+  }
+
+  void updateRemoteConfigFailover() {
+    if (!isRemoteConfigFailoverEnabled()) return;
+    if (rcfm.update()) {
+      try {
+	storeRemoteConfigFailoverMap(remoteConfigFailoverInfoFile);
+      } catch (IOException | SerializationException e) {
+	log.error("Error storing remote config failover map", e);
+      }
+    }
+  }
+
+  void storeRemoteConfigFailoverMap(File file)
+      throws IOException, SerializationException {
+    log.debug2("storeRemoteConfigFailoverMap: " + file);
+    try {
+      ObjectSerializer serializer = new XStreamSerializer();
+      serializer.serialize(file, rcfm);
+    } catch (Exception e) {
+      log.error("Could not store remote config failover map", e);
+      throw e;
+    }
+  }
+
+  /**
+   * Load RemoteConfigFailoverMap from a file
+   * @param file         A source file.
+   * @return RemoteConfigFailoverMap instance loaded from file (or a default
+   *         value).
+   */
+  RemoteConfigFailoverMap loadRemoteConfigFailoverMap() {
+    try {
+      log.debug2("Loading RemoteConfigFailoverMap");
+      ObjectSerializer deserializer = new XStreamSerializer();
+      RemoteConfigFailoverMap map =
+	(RemoteConfigFailoverMap)deserializer.deserialize(remoteConfigFailoverInfoFile);
+      map.setRemoteConfigFailoverDir(remoteConfigFailoverDir);
+      return map;
+    } catch (SerializationException.FileNotFound se) {
+      log.debug("No RemoteConfigFailoverMap, creating new one");
+      return new RemoteConfigFailoverMap();
+    } catch (SerializationException se) {
+      log.error("Marshalling exception for RemoteConfigFailoverMap", se);
+      return new RemoteConfigFailoverMap();
+    } catch (Exception e) {
+      log.error("Could not load RemoteConfigFailoverMap", e);
+      throw new RuntimeException("Could not load RemoteConfigFailoverMap", e);
+    }
+  }
+
+
   // Testing assistance
 
   void setGroups(String groups) {
     this.groupNames = groups;
+  }
+
+  // TinyUI comes up on port 8081 if can't complete initial props load
+
+  TinyUi tiny = null;
+  String[] tinyData = new String[1];
+
+  void startTinyUi() {
+    TinyUi t = new TinyUi(tinyData);
+    updateTinyData();
+    t.startTiny();
+    tiny = t;
+  }
+
+  void stopTinyUi() {
+    if (tiny != null) {
+      tiny.stopTiny();
+      tiny = null;
+      // give listener socket a little time to close
+      try {
+	Deadline.in(2 * Constants.SECOND).sleep();
+      } catch (InterruptedException e ) {
+      }
+    }
+  }
+
+  void updateTinyData() {
+    tinyData[0] = recentLoadError;
   }
 
   // Reload thread
@@ -2309,12 +2767,23 @@ public class ConfigManager implements LockssManager {
 	pokeWDog();
 	running = true;
 	if (updateConfig()) {
+	  if (tiny != null) {
+	    stopTinyUi();
+	  }
 	  // true iff loaded config has changed
 	  if (!goOn) {
 	    break;
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //	stopAndOrStartThings(true);
+	} else {
+	  if (lastReload == 0) {
+	    if (tiny == null) {
+	      startTinyUi();
+	    } else {
+	      updateTinyData();
+	    }
+	  }
 	}
 	pokeWDog();			// in case update took a long time
 	long reloadRange = reloadInterval/4;

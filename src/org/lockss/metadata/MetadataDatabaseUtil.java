@@ -28,8 +28,19 @@
 package org.lockss.metadata;
 
 import static org.lockss.metadata.SqlConstants.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.lockss.app.LockssApp;
+import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
+import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.extractor.MetadataField;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
@@ -48,12 +59,21 @@ final public class MetadataDatabaseUtil {
   }
 
   /**
+   * Get the current LOCKSS daemon.
+   * 
+   * @return the LOCKSS daemon.
+   */
+  static private LockssDaemon getDaemon() {
+    return LockssDaemon.getLockssDaemon();
+  }
+
+  /**
    * This class implements a BibliographicItem from a metadata database query.
    * 
    * @author Philip Gust
    * 
    */
-  static class BibliographicDatabaseItem {
+  static class BibliographicDatabaseItem implements BibliographicItem {
     final String provider;
     final String publisher;
     final String seriesTitle;
@@ -216,7 +236,48 @@ final public class MetadataDatabaseUtil {
     public String getEndIssue() {
       return null;
     }
-  }
+
+    /**
+     * Provides an indication of whether there are no differences between this
+     * object and another one in anything other than proprietary identifiers.
+     * 
+     * @param other
+     *          A BibliographicItem with the other object.
+     * @return <code>true</code> if there are no differences in anything other
+     *         than their proprietary identifiers, <code>false</code> otherwise.
+     */
+    @Override
+    public boolean sameInNonProprietaryIdProperties(BibliographicItem other){
+      return other != null
+	  && areSameProperty(publisher, other.getPublisherName())
+	  && areSameProperty(seriesTitle, other.getSeriesTitle())
+	  && areSameProperty(publicationTitle, other.getPublicationTitle())
+	  && areSameProperty(eissn, other.getEissn())
+	  && areSameProperty(printissn, other.getPrintIssn())
+	  && areSameProperty(eisbn, other.getEisbn())
+	  && areSameProperty(printisbn, other.getPrintIsbn())
+	  && areSameProperty(year, other.getYear())
+	  && areSameProperty(volume, other.getVolume())
+	  && areSameProperty(coverageDepth, other.getCoverageDepth())
+	  && areSameProperty(publicationType, other.getPublicationType())
+	  && areSameProperty(provider, other.getProviderName());
+    }
+
+    /**
+     * Provides an indication of whether two properties are the same.
+     * 
+     * @param property1
+     *          A String with the first property to be compared.
+     * @param property2
+     *          A String with the second property to be compared.
+     * @return <code>true</code> if the two properties are the same,
+     *         <code>false</code> otherwise.
+     */
+    private boolean areSameProperty(String property1, String property2) {
+      return ((property1 == null && property2 == null)
+	  || (property1 != null && property1.equals(property2)));
+    }
+}
     
   /**
    * This query generates information to populate BibliographicItem records.
@@ -372,4 +433,69 @@ where
       + "   , pv." + PROVIDER_NAME_COLUMN
       + "   , series_proprietary_id"
       + "   , proprietery_id";
+
+  /**
+   * Returns a list of BibliographicItems from the metadata database.
+   * 
+   * @return a list of BibliobraphicItems from the metadata database.
+   */
+  static public List<BibliographicItem> getBibliographicItems() {
+    List<BibliographicItem> items = Collections.<BibliographicItem>emptyList();
+    Connection conn = null;
+    try {
+      MetadataDbManager dbManager = (MetadataDbManager)LockssApp
+		.getManager(MetadataDbManager.getManagerKey());
+      conn = dbManager.getConnection();
+      items = getBibliographicItems(dbManager, conn);
+    } catch (DbException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } finally {
+      MetadataDbManager.safeRollbackAndClose(conn);
+    }
+    return items;
+  }
+  
+  /**
+   * Returns a list of BibliographicItems from the metadata database.
+   * @param dbManager the database manager
+   * @param conn the database connection 
+   * @return a list of BibliobraphicItems from the metadata database.
+   */
+  static public List<BibliographicItem> getBibliographicItems(
+      MetadataDbManager dbManager, Connection conn) {
+    final String DEBUG_HEADER = "getBibliographicItems(): ";
+    BibliographicItem previousItem = null;
+    List<BibliographicItem> items = new ArrayList<BibliographicItem>();
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    
+    try {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "bibliographicItemsQuery = "
+	  + bibliographicItemsQuery);
+      statement = dbManager.prepareStatement(conn, bibliographicItemsQuery);
+      resultSet = dbManager.executeQuery(statement);
+
+      while (resultSet.next()) {
+	BibliographicItem item = new BibliographicDatabaseItem(resultSet);
+	// Avoid adding items that differ only in some proprietary identifier. 
+	if (!item.sameInNonProprietaryIdProperties(previousItem)) {
+	  items.add(item);
+	}
+      }
+    } catch (IllegalArgumentException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } catch (SQLException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } catch (DbException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } finally {
+      MetadataDbManager.safeCloseResultSet(resultSet);
+      MetadataDbManager.safeCloseStatement(statement);
+    }
+    return items;
+  }
 }

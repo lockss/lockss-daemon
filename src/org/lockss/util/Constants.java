@@ -132,6 +132,10 @@ public interface Constants {
    * testing */
   public static String X_LOCKSS_REAL_ID = "X-Lockss-Id";
 
+  /** The real identity of a repairer sending a request to localhost, for
+   * testing */
+  public static String HTTP_REFERER = "Referer";
+
   // Cookie policies.
 
   /** Cookie policy: ignore cookies */

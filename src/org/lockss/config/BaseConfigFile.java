@@ -53,6 +53,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected String m_lastModified;
   // FileConfigFile assumes the url doesn't change
   protected String m_fileUrl;
+  protected String m_loadedUrl;
   protected String m_loadError = "Not yet loaded";
   protected IOException m_IOException;
   protected long m_lastAttempt;
@@ -67,7 +68,8 @@ public abstract class BaseConfigFile implements ConfigFile {
    * Create a ConfigFile for the URL
    */
   public BaseConfigFile(String url) {
-    if (StringUtil.endsWithIgnoreCase(url, ".xml")) {
+    if (StringUtil.endsWithIgnoreCase(url, ".xml") ||
+	StringUtil.endsWithIgnoreCase(url, ".xml.gz")) {
       m_fileType = ConfigFile.XML_FILE;
     } else {
       m_fileType = ConfigFile.PROPERTIES_FILE;
@@ -80,8 +82,14 @@ public abstract class BaseConfigFile implements ConfigFile {
     m_cfgMgr = configMgr;
   }
 
+  @Override
   public String getFileUrl() {
     return m_fileUrl;
+  }
+
+  @Override
+  public String getLoadedUrl() {
+    return m_loadedUrl != null ? m_loadedUrl : m_fileUrl;
   }
 
   /** Return true if this file might contain platform values that are
@@ -171,6 +179,7 @@ public abstract class BaseConfigFile implements ConfigFile {
 	} finally {
 	  IOUtil.safeClose(in);
 	}
+	loadFinished();
       }
     } catch (FileNotFoundException ex) {
       log.debug2("File not found: " + m_fileUrl);
@@ -299,6 +308,12 @@ public abstract class BaseConfigFile implements ConfigFile {
    * hasn't changed.
    */
   protected abstract InputStream openInputStream() throws IOException;
+
+  /**
+   * Called after file has been completely read.
+   */
+  protected void loadFinished() {
+  }
 
   /**
    * Return the new last-modified time

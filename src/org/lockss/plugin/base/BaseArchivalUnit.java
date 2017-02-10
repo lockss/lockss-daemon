@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -31,13 +35,16 @@ package org.lockss.plugin.base;
 import java.net.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
 import org.apache.oro.text.regex.*;
+
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -111,6 +118,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String auTitle;   // the title of the AU (from titledb, if any)
   protected Configuration auConfig;
   protected String auId = null;
+  protected CrawlRule rule;
   protected CrawlWindow window;
 
   protected TypedEntryMap paramMap;
@@ -282,6 +290,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     log.debug2("Setting new content crawl interval to " +
                   StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
+    
+    rule = makeRule();
+    paramMap.setMapElement(KEY_AU_CRAWL_RULE, rule);
     
     shouldRefetchOnCookies = paramMap.getBoolean(SHOULD_REFETCH_ON_SET_COOKIE,
         DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE);
@@ -476,13 +487,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws LockssRegexpException 
    */
   public boolean shouldBeCached(String url) {
-    return true;
+    return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
   }
   
   public boolean storeProbePermission() {
     return plugin.storeProbePermission();
   }
   
+  public boolean sendReferrer() {
+    return plugin.sendReferrer();
+  }
+
   public boolean shouldRefetchOnCookies() {
     return shouldRefetchOnCookies;
   }
@@ -566,7 +581,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       }
     }
     
-    if (key == null) {
+    if (key == null && log.isDebug()) {
       log.warning("Rate limiter source (" + limiterSource + ") is null, using AU");
     }
     if (log.isDebug3()) {
@@ -678,6 +693,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   
   public CrawlWindow getCrawlWindow() {
     return window;
+  }
+
+  
+  /**
+   * subclasses must implement this method to make and return the Crawl Rules
+   * needed to crawl content.
+   * @return CrawlRule object containing the necessary rules
+   * @throws LockssRegexpException if the rules contain an unacceptable
+   * regular expression.
+   */
+  abstract protected CrawlRule makeRule() throws ConfigurationException;
+  
+  public CrawlRule getRule() {
+    return rule;
   }
   
   /**

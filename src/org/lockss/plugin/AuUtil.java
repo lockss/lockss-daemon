@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -39,7 +43,9 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.CuResourceHandler;
+import org.lockss.crawler.*;
 import org.lockss.state.*;
+import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.exploded.*;
@@ -59,7 +65,8 @@ public class AuUtil {
    */
   public static final String PARAM_POLL_PROTOCOL_VERSION =
     Configuration.PREFIX + "poll.defaultPollProtocol";
-  private static final int DEFAULT_POLL_PROTOCOL_VERSION = 0;
+  private static final int DEFAULT_POLL_PROTOCOL_VERSION =
+    Poll.V3_PROTOCOL;
 
   /** The maximum number of CachedUrl versions to search to find the
    * earliert, in order to extract the earliest fetch time.
@@ -431,7 +438,13 @@ public class AuUtil {
   public static class AuProxyInfo {
     String host = null;
     int port;
+    String auSpec;
     boolean isAuOverride = false;
+    boolean isInvalidAuOverride = false;
+
+    public String getAuSpec() {
+      return auSpec;
+    }
 
     public String getHost() {
       return host;
@@ -443,6 +456,10 @@ public class AuUtil {
 
     public boolean isAuOverride() {
       return isAuOverride;
+    }
+
+    public boolean isInvalidAuOverride() {
+      return isInvalidAuOverride;
     }
 
     public boolean equals(Object o) {
@@ -523,11 +540,20 @@ public class AuUtil {
   public static AuProxyInfo getAuProxyInfo(String auProxySpec,
                                            Configuration config) {
     AuProxyInfo global = new AuProxyInfo();
-    global.host = null;
-    global.port = 0;
+    if (config.getBoolean(BaseCrawler.PARAM_PROXY_ENABLED,
+			  BaseCrawler.DEFAULT_PROXY_ENABLED)) {
+      global.host = config.get(BaseCrawler.PARAM_PROXY_HOST);
+      global.port = config.getInt(BaseCrawler.PARAM_PROXY_PORT,
+				  BaseCrawler.DEFAULT_PROXY_PORT);
+      if (StringUtil.isNullString(global.host) || global.port <= 0) {
+	global.host = null;
+	global.port = 0;
+      }
+    }
 
     if (!StringUtil.isNullString(auProxySpec)) {
       AuProxyInfo res = new AuProxyInfo();
+      res.auSpec = auProxySpec;
       try {
 	HostPortParser hpp = new HostPortParser(auProxySpec);
 	res.host = hpp.getHost();
@@ -536,6 +562,8 @@ public class AuUtil {
 	}
       } catch (HostPortParser.InvalidSpec e) {
 	log.warning("Illegal AU crawl_proxy: " + auProxySpec, e);
+	global.isInvalidAuOverride = true;
+	global.auSpec = auProxySpec;
 	return global;
       }
       res.isAuOverride = !res.equals(global);

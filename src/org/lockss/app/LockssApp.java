@@ -32,6 +32,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.mail.MailService;
 import org.lockss.scheduler.*;
 import org.lockss.servlet.*;
 import org.apache.commons.collections.map.LinkedMap;
@@ -71,6 +72,7 @@ public abstract class LockssApp {
 
   // Parameter keys for common managers
   public static final String WATCHDOG_SERVICE = "WatchdogService";
+  public static final String MAIL_SERVICE = "MailService";
   public static final String STATUS_SERVICE = "StatusService";
   public static final String SCHED_SERVICE = "SchedService";
   public static final String RESOURCE_MANAGER = "ResourceManager";
@@ -247,6 +249,15 @@ public abstract class LockssApp {
    */
   public WatchdogService getWatchdogService() {
     return (WatchdogService)getManager(WATCHDOG_SERVICE);
+  }
+
+  /**
+   * return the mail manager instance
+   * @return the MailService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public MailService getMailService() {
+    return (MailService)getManager(MAIL_SERVICE);
   }
 
   /**

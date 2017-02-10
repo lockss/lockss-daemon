@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,8 +37,10 @@ import java.net.*;
 import java.util.*;
 import java.util.List;
 import java.security.Principal;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
@@ -42,12 +48,16 @@ import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
 import org.mortbay.http.*;
 import org.mortbay.servlet.MultiPartRequest;
+
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
+import org.lockss.protocol.*;
 import org.lockss.jetty.*;
+import org.lockss.alert.*;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
+
 import org.xnap.commons.i18n.I18n;
 
 /** Abstract base class for LOCKSS servlets
@@ -92,6 +102,11 @@ public abstract class LockssServlet extends HttpServlet
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
+  
+  // Name of the parameters defining which Tab needs to be loaded
+  // There values are a character between A and Z
+  public static final String TAB_START_TAG = "start";
+  public static final String TAB_END_TAG = "end";
 
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
@@ -122,6 +137,7 @@ public abstract class LockssServlet extends HttpServlet
   private LockssApp theApp = null;
   private ServletManager servletMgr;
   private AccountManager acctMgr;
+  protected AlertManager alertMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -155,6 +171,7 @@ public abstract class LockssServlet extends HttpServlet
       (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
     if (theApp instanceof LockssDaemon) {
       acctMgr = getLockssDaemon().getAccountManager();
+      alertMgr = getLockssDaemon().getAlertManager();
     }
   }
 
@@ -611,6 +628,10 @@ public abstract class LockssServlet extends HttpServlet
     return srvURLFromStem(srvUrlStem(host), d, params);
   }
 
+  String srvURL(PeerIdentity peer, ServletDescr d, String params) {
+    return srvURLFromStem(peer.getUiUrlStem(reqURL.getPort()), d, params);
+  }
+
   /** Construct servlet URL, with params as necessary.  Avoid generating a
    *  hostname different from that used in the original request, or
    *  browsers will prompt again for login
@@ -691,6 +712,13 @@ public abstract class LockssServlet extends HttpServlet
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(String host, ServletDescr d, String text, String params) {
     return new Link(srvURL(host, d, params),
+		    (text != null ? text : d.heading)).toString();
+  }
+
+  /** Return an absolute link to a servlet with params */
+  String srvAbsLink(PeerIdentity peer, ServletDescr d, String text,
+		    String params) {
+    return new Link(srvURL(peer, d, params),
 		    (text != null ? text : d.heading)).toString();
   }
 
@@ -1261,7 +1289,7 @@ public abstract class LockssServlet extends HttpServlet
    *          A Page representing the HTML page.
    */
   protected void addCssLocations(Page page) {
-    page.add(new StyleLink("/css/lockss.css"));
+    page.add(new StyleLink("/css/lockss-new.css"));
     page.add(new StyleLink("/css/jquery-ui-1.8.css"));
   }
 
@@ -1274,8 +1302,9 @@ public abstract class LockssServlet extends HttpServlet
   protected void addJQueryLocations(Page page) {
     addJavaScriptLocation(page, "js/jquery-1.6.2.js");
     addJavaScriptLocation(page, "js/jquery-ui.min-1.8.js");
-    addJavaScriptLocation(page, "js/auDetails.js");
+    addJavaScriptLocation(page, "js/auDetails-new.js");
     addJavaScriptLocation(page, "js/jquery.tristate.js");
+    addJavaScriptLocation(page, "js/jquery.shiftclick.js");
   }
 
   /**

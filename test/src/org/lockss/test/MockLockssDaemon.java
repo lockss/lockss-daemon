@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,98 +29,79 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.test;
 
 import java.util.List;
+
 import org.apache.commons.collections.map.LinkedMap;
+
+import org.lockss.alert.AlertManager;
 import org.lockss.account.AccountManager;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
-import org.lockss.metadata.MetadataDbManager;
+//import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.hasher.HashService;
+import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.*;
+import org.lockss.protocol.psm.*;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.icp.IcpManager;
+import org.lockss.remote.RemoteApi;
 import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
+//import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
+import org.lockss.clockss.*;
+//import org.lockss.safenet.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
 
-  // Manager descriptors.  The order of this table determines the order in
-  // which managers are initialized and started.
-  protected final ManagerDesc[] managerDescs = {
-    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
-    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
-    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
-    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
-    new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
-    new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
-    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
-    new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
-    // keystore manager must be started before any others that need to
-    // access managed keystores
-    new ManagerDesc(KEYSTORE_MANAGER,
-                    "org.lockss.daemon.LockssKeyStoreManager"),
-    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
-    new ManagerDesc(REPOSITORY_MANAGER,
-                    "org.lockss.repository.RepositoryManager"),
-    // start plugin manager after generic services
-    new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
-    // start database manager before any manager that uses it.
-    new ManagerDesc(DbManager.getManagerKey(), "org.lockss.db.DbManager"),
-    new ManagerDesc(MetadataDbManager.getManagerKey(),
-	"org.lockss.metadata.MetadataDbManager"),
-    // start metadata manager after pluggin manager and database manager.
-    new ManagerDesc(MetadataManager.getManagerKey(),
-	"org.lockss.metadata.MetadataManager"),
-    // NOTE: Any managers that are needed to decide whether a servlet is to be
-    // enabled or not (through ServletDescr.isEnabled()) need to appear before
-    // the AdminServletManager on the next line.
-    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
-    new ManagerDesc(CONTENT_SERVLET_MANAGER,
-                    "org.lockss.servlet.ContentServletManager"),
-    // comm after other major services so don't process messages until
-    // they're ready
-    new ManagerDesc(NODE_MANAGER_MANAGER,
-                    "org.lockss.state.NodeManagerManager"),
-    new ManagerDesc(PLATFORM_CONFIG_STATUS,
-                    "org.lockss.config.PlatformConfigStatus"),
-    new ManagerDesc(CONFIG_STATUS,
-                    "org.lockss.config.ConfigStatus"),
-    new ManagerDesc(ARCHIVAL_UNIT_STATUS,
-                    "org.lockss.state.ArchivalUnitStatus"),
-    new ManagerDesc(REPOSITORY_STATUS,
-                    "org.lockss.repository.LockssRepositoryStatus"),
-    new ManagerDesc(OVERVIEW_STATUS,
-                    "org.lockss.daemon.status.OverviewStatus"),
-    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
-    // watchdog last
-    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
-  };
-
   ResourceManager resourceManager = null;
   WatchdogService wdogService = null;
+  MailService mailService = null;
+  AlertManager alertManager = null;
   AccountManager accountManager = null;
   RandomManager randomManager = null;
   LockssKeyStoreManager keystoreManager = null;
+  HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
+  PollManager pollManager = null;
+  PsmManager psmManager = null;
+  LcapDatagramComm commManager = null;
+  LcapStreamComm scommManager = null;
+  LcapDatagramRouter datagramRouterManager = null;
+  LcapRouter routerManager = null;
+  ProxyManager proxyManager = null;
   ServletManager servletManager = null;
+  CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
   NodeManagerManager nodeManagerManager = null;
   PluginManager pluginManager = null;
   MetadataManager metadataManager = null;
+  IdentityManager identityManager = null;
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
+  RemoteApi remoteApi = null;
+  IcpManager icpManager = null;
+  ClockssParams clockssParams = null;
   DbManager dbManager = null;
-  MetadataDbManager metadataDbManager = null;
+  //CounterReportsManager counterReportsManager = null;
+  //SubscriptionManager subscriptionManager = null;
   Cron cron = null;
+  //EntitlementRegistryClient entitlementRegistryClient = null;
   private boolean suppressStartAuManagers = true;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
@@ -154,12 +139,22 @@ public class MockLockssDaemon extends LockssDaemon {
     auManagerMaps.clear();
 
     wdogService = null;
+    hashService = null;
     schedService = null;
+    pollManager = null;
+    psmManager = null;
+    commManager = null;
+    scommManager = null;
+    proxyManager = null;
+    crawlManager = null;
     pluginManager = null;
     metadataManager = null;
+    identityManager = null;
     statusService = null;
+    icpManager = null;
     dbManager = null;
-    metadataDbManager = null;
+//    counterReportsManager = null;
+//    subscriptionManager = null;
     cron = null;
 
     //super.stopDaemon();
@@ -220,6 +215,18 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the mail manager instance
+   * @return the MailService
+   */
+  public MailService getMailService() {
+    if (mailService == null) {
+      mailService = new NullMailService();
+      managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
+    }
+    return mailService;
+  }
+
+  /**
    * return the resource manager instance
    * @return the ResourceManager
    */
@@ -235,8 +242,12 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the alert manager instance
    * @return the AlertManager
    */
-  public Object getAlertManager() {
-    return null;
+  public AlertManager getAlertManager() {
+    if (alertManager == null) {
+      alertManager = new NullAlertManager();
+      managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
+    }
+    return alertManager;
   }
 
   /**
@@ -279,8 +290,12 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the hash service instance
    * @return the HashService
    */
-  public Object getHashService() {
-    return null;
+  public HashService getHashService() {
+    if (hashService == null) {
+      hashService = (HashService)newManager(LockssDaemon.HASH_SERVICE);
+      managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
+    }
+    return hashService;
   }
 
   /**
@@ -305,6 +320,95 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
     }
     return systemMetrics;
+  }
+
+  /**
+   * return the poll manager instance
+   * @return the PollManager
+   */
+  public PollManager getPollManager() {
+    if (pollManager == null) {
+      pollManager = (PollManager)newManager(LockssDaemon.POLL_MANAGER);
+      managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
+    }
+    return pollManager;
+  }
+
+  /**
+   * return the psm manager instance
+   * @return the PsmManager
+   */
+  public PsmManager getPsmManager() {
+    if (psmManager == null) {
+      psmManager = (PsmManager)newManager(LockssDaemon.PSM_MANAGER);
+      managerMap.put(LockssDaemon.PSM_MANAGER, psmManager);
+    }
+    return psmManager;
+  }
+
+  /**
+   * return the datagram communication manager instance
+   * @return the LcapDatagramComm
+   */
+  public LcapDatagramComm getDatagramCommManager() {
+    if (commManager == null) {
+      commManager =
+	(LcapDatagramComm)newManager(LockssDaemon.DATAGRAM_COMM_MANAGER);
+      managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
+    }
+    return commManager;
+  }
+
+  /**
+   * return the stream communication manager instance
+   * @return the LcapStreamComm
+   */
+  public LcapStreamComm getStreamCommManager() {
+    if (scommManager == null) {
+      scommManager =
+	(LcapStreamComm)newManager(LockssDaemon.STREAM_COMM_MANAGER);
+      managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
+    }
+    return scommManager;
+  }
+
+  /**
+   * return the datagram router manager instance
+   * @return the LcapDatagramRouter
+   */
+  public LcapDatagramRouter getDatagramRouterManager() {
+    if (datagramRouterManager == null) {
+      datagramRouterManager =
+	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER,
+		     datagramRouterManager);
+    }
+    return datagramRouterManager;
+  }
+
+  /**
+   * return the router manager instance
+   * @return the LcapRouter
+   */
+  public LcapRouter getRouterManager() {
+    if (routerManager == null) {
+      routerManager =
+	(LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+    }
+    return routerManager;
+  }
+
+  /**
+   * return the proxy manager instance
+   * @return the ProxyManager
+   */
+  public ProxyManager getProxyManager() {
+    if (proxyManager == null) {
+      proxyManager = (ProxyManager)newManager(LockssDaemon.PROXY_MANAGER);
+      managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
+    }
+    return proxyManager;
   }
 
   /**
@@ -335,8 +439,12 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the crawl manager instance
    * @return the CrawlManager
    */
-  public Object getCrawlManager() {
-    return null;
+  public CrawlManager getCrawlManager() {
+    if (crawlManager == null) {
+      crawlManager = (CrawlManager)newManager(LockssDaemon.CRAWL_MANAGER);
+      managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
+    }
+    return crawlManager;
   }
 
   /**
@@ -381,24 +489,65 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the metadata manager instance
    * @return the MetadataManager
    */
-//  public MetadataManager getMetadataManager() {
-//    if (metadataManager == null) {
-//      metadataManager = (MetadataManager)newManager(LockssDaemon.METADATA_MANAGER);
-//      managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
-//    }
-//    return metadataManager;
-//  }
+  public MetadataManager getMetadataManager() {
+    if (metadataManager == null) {
+      metadataManager = (MetadataManager)newManager(MetadataManager.getManagerKey());
+      managerMap.put(MetadataManager.getManagerKey(), metadataManager);
+    }
+    return metadataManager;
+  }
+
+  /**
+   * return the Identity Manager
+   * @return IdentityManager
+   */
+  public IdentityManager getIdentityManager() {
+    if (identityManager == null) {
+      identityManager =
+	(IdentityManager)newManager(LockssDaemon.IDENTITY_MANAGER);
+      managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
+    }
+    return identityManager;
+  }
+
+  public boolean hasIdentityManager() {
+    return identityManager != null;
+  }
 
   /**
    * return the database manager instance
    * @return the DbManager
    */
-//  public DbManager getDbManager() {
-//    if (dbManager == null) {
-//      dbManager = (DbManager)newManager(LockssDaemon.DB_MANAGER);
-//      managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+  public DbManager getDbManager() {
+    if (dbManager == null) {
+      dbManager = (DbManager)newManager(DbManager.getManagerKey());
+      managerMap.put(DbManager.getManagerKey(), dbManager);
+    }
+    return dbManager;
+  }
+
+//  /**
+//   * return the COUNTER reports manager instance
+//   * @return the CounterReportsManager
+//   */
+//  public CounterReportsManager getCounterReportsManager() {
+//    if (counterReportsManager == null) {
+//      counterReportsManager = (CounterReportsManager)newManager(LockssDaemon.COUNTER_REPORTS_MANAGER);
+//      managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
 //    }
-//    return dbManager;
+//    return counterReportsManager;
+//  }
+//
+//  /**
+//   * return the subscription manager instance
+//   * @return the SusbcriptionManager
+//   */
+//  public SubscriptionManager getSusbcriptionManager() {
+//    if (subscriptionManager == null) {
+//      subscriptionManager = (SubscriptionManager)newManager(LockssDaemon.SUBSCRIPTION_MANAGER);
+//      managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
+//    }
+//    return subscriptionManager;
 //  }
 
   /**
@@ -419,6 +568,86 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.STATUS_SERVICE, statusService);
     }
     return statusService;
+  }
+
+  /**
+   * return the RemoteApi instance
+   * @return the RemoteApi
+   */
+  public RemoteApi getRemoteApi() {
+    if (remoteApi == null) {
+      remoteApi = (RemoteApi)newManager(LockssDaemon.REMOTE_API);
+      managerMap.put(LockssDaemon.REMOTE_API, remoteApi);
+    }
+    return remoteApi;
+  }
+
+  /**
+   * return the ClockssParams instance
+   * @return the ClockssParams
+   */
+  public ClockssParams getClockssParams() {
+    if (clockssParams == null) {
+      clockssParams = (ClockssParams)newManager(LockssDaemon.CLOCKSS_PARAMS);
+      managerMap.put(LockssDaemon.CLOCKSS_PARAMS, clockssParams);
+    }
+    return clockssParams;
+  }
+
+  private boolean forceIsClockss = false;
+
+  public void setClockss(boolean val) {
+    forceIsClockss = val;
+  }
+
+  public boolean isClockss() {
+    return forceIsClockss || super.isClockss();
+  }
+
+  /**
+   * Set the datagram CommManager
+   * @param commMan the new manager
+   */
+  public void setDatagramCommManager(LcapDatagramComm commMan) {
+    commManager = commMan;
+    managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
+  }
+
+  /**
+   * Set the stream CommManager
+   * @param scommMan the new manager
+   */
+  public void setStreamCommManager(LcapStreamComm scommMan) {
+    scommManager = scommMan;
+    managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
+  }
+
+  /**
+   * Set the DatagramRouterManager
+   * @param datagramRouterMan the new manager
+   */
+  public void setDatagramRouterManager(LcapDatagramRouter datagramRouterMan) {
+    datagramRouterManager = datagramRouterMan;
+    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER,
+		   datagramRouterManager);
+  }
+
+  /**
+   * Set the RouterManager
+   * @param routerMan the new manager
+   */
+  public void setRouterManager(LcapRouter routerMan) {
+    routerManager = routerMan;
+    managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+  }
+
+  /**
+   * Set the CrawlManager
+   * @param crawlMan the new manager
+   */
+  public void setCrawlManager(CrawlManager crawlMan) {
+    crawlManager = crawlMan;
+    managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
   }
 
   /**
@@ -449,6 +678,24 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the MailService
+   * @param mailMan the new manager
+   */
+  public void setMailService(MailService mailMan) {
+    mailService = mailMan;
+    managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
+  }
+
+  /**
+   * Set the AlertManager
+   * @param alertMan the new manager
+   */
+  public void setAlertManager(AlertManager alertMan) {
+    alertManager = alertMan;
+    managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
+  }
+
+  /**
    * Set the AccountManager
    * @param accountMan the new manager
    */
@@ -476,6 +723,15 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the HashService
+   * @param hashServ the new service
+   */
+  public void setHashService(HashService hashServ) {
+    hashService = hashServ;
+    managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
+  }
+
+  /**
    * Set the SchedService
    * @param schedServ the new service
    */
@@ -485,12 +741,20 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the IdentityManager
+   * @param idMan the new manager
+   */
+  public void setIdentityManager(IdentityManager idMan) {
+    identityManager = idMan;
+    managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
+  }
+
+  /**
    * Set the MetadataManager
    * @param metadataMan the new manager
    */
   public void setMetadataManager(MetadataManager metadataMan) {
     metadataManager = metadataMan;
-//    managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
     managerMap.put(MetadataManager.getManagerKey(), metadataManager);
   }
 
@@ -501,6 +765,24 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setPluginManager(PluginManager pluginMan) {
     pluginManager = pluginMan;
     managerMap.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
+  }
+
+  /**
+   * Set the PollManager
+   * @param pollMan the new manager
+   */
+  public void setPollManager(PollManager pollMan) {
+    pollManager = pollMan;
+    managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
+  }
+
+  /**
+   * Set the ProxyManager
+   * @param proxyMgr the new manager
+   */
+  public void setProxyManager(ProxyManager proxyMgr) {
+    proxyManager = proxyMgr;
+    managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
   }
 
   /**
@@ -527,19 +809,26 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setDbManager(DbManager dbMan) {
     dbManager = dbMan;
-//    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
     managerMap.put(DbManager.getManagerKey(), dbManager);
   }
 
-  /**
-   * Set the DbManager
-   * @param dbMan the new manager
-   */
-  public void setMetadataDbManager(MetadataDbManager dbMan) {
-    metadataDbManager = dbMan;
-//    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
-    managerMap.put(MetadataDbManager.getManagerKey(), metadataDbManager);
-  }
+//  /**
+//   * Set the CounterReportsManager
+//   * @param counterReportsMan the new manager
+//   */
+//  public void setCounterReportsManager(CounterReportsManager counterReportsMan) {
+//    counterReportsManager = counterReportsMan;
+//    managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
+//  }
+//
+//  /**
+//   * Set the SubscriptionManager
+//   * @param subscriptionMan the new manager
+//   */
+//  public void setSubscriptionManager(SubscriptionManager subscriptionMan) {
+//    subscriptionManager = subscriptionMan;
+//    managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
+//  }
 
   /**
    * Set the SystemMetrics
@@ -551,6 +840,15 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the RemoteApi
+   * @param sysMetrics the new metrics
+   */
+  public void setRemoteApi(RemoteApi sysMetrics) {
+    remoteApi = sysMetrics;
+    managerMap.put(LockssDaemon.REMOTE_API, sysMetrics);
+  }
+
+  /**
    * Set the Cron
    * @param cron the new cron
    */
@@ -558,6 +856,15 @@ public class MockLockssDaemon extends LockssDaemon {
     this.cron = cron;
     managerMap.put(LockssDaemon.CRON, cron);
   }
+
+//  /**
+//   * Set the EntitlementRegistryClient
+//   * @param pluginMan the new manager
+//   */
+//  public void setEntitlementRegistryClient(EntitlementRegistryClient entitlementRegistryClient) {
+//    this.entitlementRegistryClient = entitlementRegistryClient;
+//    managerMap.put(LockssDaemon.SAFENET_MANAGER, entitlementRegistryClient);
+//  }
 
   // AU managers
 
@@ -688,6 +995,15 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setHistoryRepository(HistoryRepository histRepo, ArchivalUnit au) {
     setAuManager(HISTORY_REPOSITORY, au, histRepo);
+  }
+
+  /**
+   * <p>Forcibly sets the ICP manager to a new value.</p>
+   * @param icpManager A new ICP manager to use.
+   */
+  public void setIcpManager(IcpManager icpManager) {
+    this.icpManager = icpManager;
+    managerMap.put(LockssDaemon.ICP_MANAGER, icpManager);
   }
 
   private boolean daemonInited = false;

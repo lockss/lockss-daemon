@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
+import org.lockss.poller.v3.*;
 import org.lockss.repository.*;
 
 /**
@@ -415,7 +420,11 @@ public class AuState implements LockssSerializable {
     if (lastPollResult < 0) {
       return null;
     }
-    return "Poll result " + lastPollResult;
+    try {
+      return V3Poller.getStatusString(lastPollResult);
+    } catch (IndexOutOfBoundsException e) {
+      return "Poll result " + lastPollResult;
+    }
   }
 
   /**
@@ -425,7 +434,11 @@ public class AuState implements LockssSerializable {
     if (lastPoPPollResult < 0) {
       return null;
     }
-    return "Poll result " + lastPoPPollResult;
+    try {
+      return V3Poller.getStatusString(lastPoPPollResult);
+    } catch (IndexOutOfBoundsException e) {
+      return "Poll result " + lastPoPPollResult;
+    }
   }
 
   public int getNumAgreePeersLastPoR() {
@@ -636,6 +649,44 @@ public class AuState implements LockssSerializable {
   public synchronized void pollAttempted() {
     lastPollAttempt = TimeBase.nowMs();
     needSave();
+  }
+
+  /**
+   * Sets the last poll time to the current time.
+   */
+  public synchronized void pollFinished(int result,
+					V3Poller.PollVariant variant) {
+    long now = TimeBase.nowMs();
+    boolean complete = result == V3Poller.POLLER_STATUS_COMPLETE;
+    switch (variant) {
+    case PoR:
+      if (complete) {
+	lastTopLevelPoll = now;
+      }
+      lastPollResult = result;
+      setPollDuration(TimeBase.msSince(lastPollAttempt));
+      break;
+    case PoP:
+      if (complete) {
+	lastPoPPoll = now;
+      }
+      lastPoPPollResult = result;
+      break;
+    case Local:
+      if (complete) {
+	lastLocalHashScan = now;
+      }
+      break;
+    }
+    needSave();
+  }
+
+  /**
+   * Sets the last poll time to the current time. Only for V1 polls.
+   */
+  public void pollFinished() {
+    pollFinished(V3Poller.POLLER_STATUS_COMPLETE,
+		 V3Poller.PollVariant.PoR); // XXX Bogus!
   }
 
   public synchronized void setV3Agreement(double d) {

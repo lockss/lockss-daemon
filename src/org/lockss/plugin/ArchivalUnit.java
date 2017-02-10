@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -27,8 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin;
-
 import java.util.*;
+
 import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -39,6 +43,7 @@ import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
+
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -145,6 +150,12 @@ public interface ArchivalUnit {
    * @return true if probe page should be stored
    */
   public boolean storeProbePermission();
+
+  /**
+   * Does the associated plugin want the crawler to send Referer headers
+   * @return true if Referer header should be sent
+   */
+  public boolean sendReferrer();
 
   /**
    * Return true if the URL is that of a login page.
@@ -301,6 +312,14 @@ public interface ArchivalUnit {
    * @return true if we should do a top level poll
    */
   public boolean shouldCallTopLevelPoll(AuState aus);
+
+  /**
+   * Returns a Comparator<CrawlUrl> used to determine the order in which URLs
+   * are fetched during a crawl.
+   * @return the Comparator<CrawlUrl>, or null if none
+   */
+  public Comparator<CrawlUrl> getCrawlUrlComparator()
+      throws PluginException.LinkageError;
   
   /**
    * Return a {@link LinkExtractor} that knows how to extract URLs from

@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +36,14 @@ import java.io.FileNotFoundException;
 import java.net.*;
 import java.util.Collection;
 import java.util.List;
+
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.htmlparser.*;
 import org.htmlparser.tags.TitleTag;
 import org.htmlparser.filters.NodeClassFilter;
 import org.htmlparser.util.*;
 import org.lockss.config.*;
+import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.BaseArchivalUnit;
 import org.lockss.state.*;
@@ -83,6 +89,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   static final boolean DEFAULT_ENABLE_REGISTRY_POLLS = true;
 
   private String m_registryUrl = null;
+  private int m_refetchDepth = FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private boolean recomputeRegName = true;
   private boolean enablePolls = DEFAULT_ENABLE_REGISTRY_POLLS;
   private String regName = null;
@@ -96,6 +103,9 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   protected void setConfig(Configuration config,
 			   Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
+    m_refetchDepth =
+      config.getInt(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+          FollowLinkCrawler.DEFAULT_MAX_CRAWL_DEPTH);
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
     enablePolls = config.getBoolean(PARAM_ENABLE_REGISTRY_POLLS,
 				    DEFAULT_ENABLE_REGISTRY_POLLS);
@@ -201,6 +211,15 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return super.shouldCallTopLevelPoll(aus);
   }
 
+  /**
+   * return the collection of crawl rules used to crawl and cache a
+   * list of Plugin JAR files.
+   * @return CrawlRule
+   */
+  protected CrawlRule makeRule() {
+    return new RegistryRule();
+  }
+
   // Might need to recompute name if refetch start page
   public UrlCacher makeUrlCacher(UrlData ud) {
     if (ud.url.equals(m_registryUrl)) {
@@ -235,12 +254,24 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 				  DEFAULT_REGISTRY_FETCH_RATE_LIMITER_SOURCE);
   }
 
+  // Registry AU crawl rule implementation
+  private class RegistryRule implements CrawlRule {
+    public int match(String url) {
+      if (StringUtil.equalStringsIgnoreCase(url, m_registryUrl) ||
+	  StringUtil.endsWithIgnoreCase(url, ".jar")) {
+	return CrawlRule.INCLUDE;
+      } else {
+	return CrawlRule.EXCLUDE;
+      }
+    }
+  }
+
   public List<PermissionChecker> makePermissionCheckers() {
     return null;
   }
 
   public int getRefetchDepth() {
-    return 0;
+    return m_refetchDepth;
   }
 
   public LoginPageChecker getLoginPageChecker() {

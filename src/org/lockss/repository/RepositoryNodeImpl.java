@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,9 +37,12 @@ import java.nio.charset.*;
 import java.net.MalformedURLException;
 import java.util.*;
 import java.util.Queue;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.oro.text.regex.*;
+
 import org.lockss.config.*;
+import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
 import org.lockss.util.*;
@@ -225,6 +232,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentCacheFile.length();
   }
 
+  Object treeSizeLock = new Object();
+
   public long getTreeContentSize(CachedUrlSetSpec filter,
 				 boolean calcIfUnknown) {
     // this caches the size recursively (for unfiltered queries)
@@ -233,9 +242,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (filter==null) {
       String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
       if (isPropValid(treeSize)) {
-        // return if found
+	// return if found
 	logger.debug2("Found cached size at " + nodeLocation);
-        return Long.parseLong(treeSize);
+	return Long.parseLong(treeSize);
       }
     }
     logger.debug2("No cached size at " + nodeLocation);
@@ -243,28 +252,42 @@ public class RepositoryNodeImpl implements RepositoryNode {
       repository.queueSizeCalc(this);
       return -1;
     }
+    // Don't allow two threads to calculate size of same node
+    synchronized (treeSizeLock) {
+      // Check cache again when lock obtained.  Don't think this is
+      // double-checked locksing anti-pattern due to value being in
+      // Properties, but only harm would be to redundantly recalc a single
+      // node.
+      if (filter==null) {
+	String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
+	if (isPropValid(treeSize)) {
+	  // return if found
+	  logger.debug2("Found cached size at " + nodeLocation);
+	  return Long.parseLong(treeSize);
+	}
+      }
+      long totalSize = 0;
+      if (hasContent()) {
+	totalSize = currentCacheFile.length();
+      }
 
-    long totalSize = 0;
-    if (hasContent()) {
-      totalSize = currentCacheFile.length();
-    }
+      // since RepositoryNodes update and cache tree size, efficient to use them
+      int children = 0;
+      for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
+	// call recursively on all children
+	RepositoryNode subNode = (RepositoryNode)subNodes.next();
+	totalSize += subNode.getTreeContentSize(null, true);
+	children++;
+      }
 
-    // since RepositoryNodes update and cache tree size, efficient to use them
-    int children = 0;
-    for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
-      // call recursively on all children
-      RepositoryNode subNode = (RepositoryNode)subNodes.next();
-      totalSize += subNode.getTreeContentSize(null, true);
-      children++;
+      if (filter==null) {
+	// cache values
+	nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
+	nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
+	writeNodeProperties();
+      }
+      return totalSize;
     }
-
-    if (filter==null) {
-      // cache values
-      nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
-      nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
-      writeNodeProperties();
-    }
-    return totalSize;
   }
 
   public boolean isLeaf() {
@@ -768,25 +791,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
     versionTimeout = Deadline.in(
       CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
                                  DEFAULT_VERSION_TIMEOUT));
+    isIdenticalVersion = false;
+  }
+
+  private boolean isIdenticalVersion = false;
+
+  public boolean isIdenticalVersion() {
+    return isIdenticalVersion;
   }
 
   public synchronized void sealNewVersion() {
-    sealNewVersion(false);
-  }
-
-  public synchronized void sealNewVersion(boolean identicalVersion) {
     try {
-      if (!identicalVersion) {
-	if (curOutputStream==null) {
-	  throw new UnsupportedOperationException("getNewOutputStream() not called.");
-	} else {
-	  try {
-	    // make sure outputstream was closed
-	    curOutputStream.close();
-	  } catch (IOException ignore) { }
-	  curOutputStream = null;
-	}
+      if (curOutputStream==null) {
+	throw new UnsupportedOperationException("getNewOutputStream() not called, or already sealed.");
       }
+      // make sure outputstream was closed
+      IOUtil.safeClose(curOutputStream);
+      curOutputStream = null;
+
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
       }
@@ -835,7 +857,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // check temp vs. last version, so as not to duplicate identical versions
-      if (!identicalVersion && currentCacheFile.exists()) {
+      if (currentCacheFile.exists()) {
         try {
           // if identical, don't rename
           if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
@@ -844,7 +866,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	      logger.debug2("New version identical to old: " +
 			    currentCacheFile);
 	    }
-            identicalVersion = true;
+            isIdenticalVersion = true;
           } else if (!PlatformUtil.updateAtomically(currentCacheFile,
                                                     getVersionedCacheFile(currentVersion))) {
             String err = "Couldn't rename current content file: " + url;
@@ -861,7 +883,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // get versioned props file
       File verPropsFile;
       // name 'identical version' props differently
-      if (identicalVersion) {
+      if (isIdenticalVersion) {
         // rename to dated property version, using 'File.lastModified()'
         long date = currentPropsFile.lastModified();
         verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
@@ -876,7 +898,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUP_FILE,
                                         DEFAULT_KEEP_ALL_PROPS_FOR_DUP_FILE)
-                                        || !identicalVersion) {
+                                        || !isIdenticalVersion) {
 	// rename current properties to chosen file name
 	if (currentPropsFile.exists() &&
 	    !PlatformUtil.updateAtomically(currentPropsFile,
@@ -888,7 +910,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // if not identical, rename content from 'temp' to 'current'
-      if (!identicalVersion) {
+      if (!isIdenticalVersion) {
         // rename new content file (if non-identical)
         if (!PlatformUtil.updateAtomically(tempCacheFile,
                                            currentCacheFile)) {
@@ -941,7 +963,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       newVersionOpen = false;
       versionTimeout.expire();
       // blank the stored sizes for this and its parents
-      if (!identicalVersion ||
+      if (!isIdenticalVersion ||
 	  CurrentConfig.getBooleanParam(PARAM_INVALIDATE_CACHED_SIZE_ON_DUP_STORE,
                                         DEFAULT_INVALIDATE_CACHED_SIZE_ON_DUP_STORE)) {
         invalidateCachedValues(true);
@@ -953,7 +975,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       throws IOException {
     OutputStream os = null;
     try {
-      os = new BufferedOutputStream(new FileOutputStream(toFile));
+      os = new BufferedOutputStream(FileUtil.newFileOutputStream(toFile));
       props.store(os, "HTTP headers for " + url);
     } finally {
       IOUtil.safeClose(os);
@@ -1016,6 +1038,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     } else {
       if (!contentDir.exists()) {
+	logger.warning("Creating content dir in order to deactivate node: " +
+		       url);
         contentDir.mkdirs();
       }
     }
@@ -1130,16 +1154,25 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     try {
       curOutputStream = new BufferedOutputStream(
-          new FileOutputStream(tempCacheFile));
+          FileUtil.newFileOutputStream(tempCacheFile));
       return curOutputStream;
-    } catch (FileNotFoundException fnfe) {
+    } catch (IOException e) {
+//       logFailedCreate(tempCacheFile);
       try {
-        logger.error("No new version file for "+tempCacheFile.getPath()+".",
-		     fnfe);
-        throw new LockssRepository.RepositoryStateException("Couldn't load new outputstream.");
+	logger.error("No new version file for "+tempCacheFile.getPath()+".", e);
+        throw new LockssRepository.RepositoryStateException("Couldn't create/write to repository file.", e);
       } finally {
         abandonNewVersion();
       }
+    }
+  }
+
+  void logFailedCreate(File f) {
+    String sss = tempCacheFile.toString();
+    logger.error("FNF: isAscii: " + StringUtil.isAscii(sss));
+    logger.error("FNF: len: " + sss.length());
+    for (String s : StringUtil.breakAt(sss, "/")) {
+      logger.error("comp: " + s.length() + " : " + s);
     }
   }
 
@@ -1152,7 +1185,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   void loadPropsInto(File propsFile, Properties props)
       throws FileNotFoundException, IOException {
-    InputStream is = new BufferedInputStream(new FileInputStream(propsFile));
+    InputStream is =
+      new BufferedInputStream(FileUtil.newFileInputStream(propsFile));
     try {
       props.load(is);
     } catch (IllegalArgumentException e) {
@@ -1164,7 +1198,31 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
+  public synchronized boolean hasAgreement(PeerIdentity id) {
+    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
+    try {
+      return agreeingPeers.contains(id);
+    } catch (IOException e) {
+      return false;
+    }
+  }
+  
   public synchronized void signalAgreement(Collection peers) {
+    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
+    for (Iterator it = peers.iterator(); it.hasNext(); ) {
+      PeerIdentity key = (PeerIdentity)it.next();
+      try {
+        agreeingPeers.add(key);
+      } catch (IOException e) {
+        logger.warning("impossible error in loaded PeerIdSet");
+        return;   /* TODO: Should this pass up an exception? */
+      }
+    }
+    try {
+      agreeingPeers.store(true);
+    } catch (IOException e) {
+      logger.error("Couldn't store node agreement: " + getNodeUrl(), e);
+    }
   }
 
   public void setNewProperties(Properties newProps) {
@@ -1191,8 +1249,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       } catch (IOException ioe) {
         try {
           logger.error("Couldn't write properties for " +
-                       tempPropsFile.getPath()+".");
-          throw new LockssRepository.RepositoryStateException("Couldn't write properties file.");
+                       tempPropsFile.getPath()+".", ioe);
+          throw new LockssRepository.RepositoryStateException("Couldn't write properties file.", ioe);
         } finally {
           abandonNewVersion();
         }
@@ -1284,10 +1342,52 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
+  /**
+   * Return a set of PeerIdentity keys that have agreed with this node.
+   * 
+   * The previous version of this routine used 'Set<String>' (without declaring
+   * that it was a set of String)'.  This version returns a PersistentPeerIdSet.
+   */
+  PersistentPeerIdSet loadAgreementHistory() {
+    PersistentPeerIdSet ppisReturn;
+ 
+     if (agreementFile == null) {
+      initAgreementFile();
+    }
+    
+    DataInputStream is = null;
+    try {
+//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, repository.getDaemon().getIdentityManager());
+      ppisReturn = new PersistentPeerIdSetImpl(agreementFile, repository.getDaemon().getIdentityManager());
+      ppisReturn.load();
+      
+    } catch (Exception e) {
+      logger.error("Error loading agreement history" + e.getMessage());
+      throw new LockssRepository.RepositoryStateException("Couldn't load agreement file.");
+    } finally {
+      IOUtil.safeClose(is);
+    }
+    
+    return ppisReturn;
+  }
+  
   
   /** Consume the input stream, decoding peer identity keys  */
   Set decodeAgreementHistory(DataInputStream is) {
     Set history = new HashSet();
+    String id;
+    try {
+      while ((id = IDUtil.decodeOneKey(is)) != null) {
+        history.add(id);
+      }
+    } catch (IdentityParseException ex) {
+      // IDUtil.decodeOneKey will do its best to leave us at the
+      // start of the next key, but there's no guarantee.  All we can
+      // do here is log the fact that there was an error, and try
+      // again.
+      logger.error("Parse error while trying to decode agreement " +
+                   "history file " + agreementFile + ": " + ex);
+    }
     return history;
   }
 
@@ -1614,13 +1714,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected void writeNodeProperties() {
     try {
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      OutputStream os =
+	new BufferedOutputStream(FileUtil.newFileOutputStream(nodePropsFile));
       nodeProps.store(os, "Node properties");
       os.close();
     } catch (IOException ioe) {
       logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
-      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+                   nodePropsFile.getPath()+".", ioe);
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.", ioe);
     }
   }
 
@@ -1774,7 +1875,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       try {
 	InputStream is =
-	  new BufferedInputStream(new FileInputStream(tempCacheFile));
+	  new BufferedInputStream(FileUtil.newFileInputStream(tempCacheFile));
 	if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 					  DEFAULT_MONITOR_INPUT_STREAMS)) {
 	  is = new MonitoringInputStream(is, tempCacheFile.toString());
@@ -2008,7 +2109,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (is == null) {
 	assertContent();
 	try {
-	  is = new BufferedInputStream(new FileInputStream(getContentFile()));
+	  is = new BufferedInputStream(FileUtil.newFileInputStream(getContentFile()));
 	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
 	    is = new MonitoringInputStream(is, getContentFile().toString());
@@ -2023,7 +2124,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
   }
-
 
   /**
    * Simple comparator which uses File.compareTo() for sorting.

@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
+import java.util.zip.*;
 
 import org.lockss.util.*;
 
@@ -105,7 +106,11 @@ public class FileConfigFile extends BaseConfigFile {
 		   "), reloading: " + m_fileUrl);
       }
     }
-    return new FileInputStream(m_fileFile);
+    InputStream in = new FileInputStream(m_fileFile);
+    if (StringUtil.endsWithIgnoreCase(m_fileFile.getName(), ".gz")) {
+      in = new GZIPInputStream(in);
+    }
+    return in;
    }
 
    protected String calcNewLastModified() {

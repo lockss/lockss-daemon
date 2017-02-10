@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
+
 import org.lockss.daemon.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
@@ -82,11 +87,19 @@ public interface CrawlManager {
 				   CrawlManager.Callback cb,
 				   Object cookie, ActivityRegulator.Lock lock);
 
+  /**
+   * Starts a new content crawl specified by a CrawlReq
+   *
+   * @param req
+   * @param lock the activity lock (can be null)
+   */
+  public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock);
+
   /** Return the CrawlRateLimiter assigned to the crawler. */
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler);
 
   /** Return true if the periodic crawl starter is running */
-  public boolean isCrawlStarterEnabled();
+  public boolean isCrawlStarterRunning();
 
   /** Return the StatusSource */
   public StatusSource getStatusSource();
@@ -120,10 +133,21 @@ public interface CrawlManager {
 
   public interface StatusSource {
 
+    /**
+     * Return the CrawlManager's status object
+     */
+    public CrawlManagerStatus getStatus();
+
     /** Return the dameon instance */
     public LockssDaemon getDaemon();
 
     /** Return true if the crawler is enabled */
     public boolean isCrawlerEnabled();
+
+    /** Return true if the crawl starter is enabled */
+    public boolean isCrawlStarterEnabled();
+
+    /** Return collection of pending CrawlReq */
+    Collection<CrawlReq> getPendingQueue();
   }
 }

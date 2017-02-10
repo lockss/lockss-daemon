@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,8 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
+import java.security.MessageDigest;
 import org.lockss.daemon.*;
+import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -199,8 +206,18 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   // Methods used by the poller
 
+  CachedUrlSetHasher contentHasher = null;
+  CachedUrlSetHasher nameHasher = null;
   byte[] contentToBeHashed = null;
   byte[] namesToBeHashed = null;
+
+  public void setContentHasher(CachedUrlSetHasher hasher) {
+    contentHasher = hasher;
+  }
+
+  public void setNameHasher(CachedUrlSetHasher hasher) {
+    nameHasher = hasher;
+  }
 
   public void setContentToBeHashed(byte[] content) {
     contentToBeHashed = content;
@@ -208,6 +225,20 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public void setNamesToBeHashed(byte[] names) {
     namesToBeHashed = names;
+  }
+
+  public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
+    if (contentToBeHashed != null) {
+      digest.update(contentToBeHashed);
+    }
+    return contentHasher;
+  }
+
+  public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
+    if (namesToBeHashed != null) {
+      digest.update(namesToBeHashed);
+    }
+    return nameHasher;
   }
 
   private long hashEstimate = 0;

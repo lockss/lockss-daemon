@@ -37,6 +37,9 @@ import org.mortbay.http.Authenticator;
  */
 public interface ServletManager extends LockssManager {
 
+  public static final String SUFFIX_IP_PLATFORM_SUBNET =
+    IpAccessControl.SUFFIX_PLATFORM_ACCESS;
+
   /** Username established during platform config */
   public static final String PARAM_PLATFORM_USERNAME =
     Configuration.PLATFORM + "ui.username";

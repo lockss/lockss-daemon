@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -9,7 +13,7 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
+n
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 
@@ -29,10 +33,15 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+
 import org.apache.commons.collections.map.Flat3Map;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.*;
+import org.lockss.subscription.BibliographicPeriod;
 import org.lockss.util.*;
+
 
 /**
  * This class represents a title database archival unit (AU).
@@ -40,7 +49,7 @@ import org.lockss.util.*;
  * @author  Philip Gust
  */
 // TODO: Remove Comparable after testing.
-public class TdbAu implements Comparable<TdbAu> {
+public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   /**
    * Set up logger
    */
@@ -85,6 +94,8 @@ public class TdbAu implements Comparable<TdbAu> {
    * The key for identity testing
    */
   private final Id tdbAuId = new Id();
+
+  private List<BibliographicPeriod> publicationRanges;
 
   /**
    * This class encapsulates the key for a TdbAu.  As with
@@ -285,6 +296,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return a String[] with the single proprietary identifier of this AU.
    */
+  @Override
   public String[] getProprietaryIds() {
     String pubType = getPublicationType();
     String[] ids = journal_ids;
@@ -303,6 +315,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * @return a String[] with the single series proprietary identifier of this
    *         AU.
    */
+  @Override
   public String[] getProprietarySeriesIds() {
     String[] proprietaryIds = {null};
     String pubType = getPublicationType();
@@ -678,6 +691,7 @@ public class TdbAu implements Comparable<TdbAu> {
    *
    * @return the name of this AU's TdbProvider, or <tt>null</tt>
    */
+  @Override
   public String getProviderName() {
     try {
       return provider.getName();
@@ -691,8 +705,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the start issue or <code>null</code> if not specified
    */
+  @Override
   public String getStartIssue() {
-    return null;
+    return BibliographicUtil.getRangeSetStart(getIssue());
   }
 
   /**
@@ -700,8 +715,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the end issue or <code>null</code> if not specified
    */
+  @Override
   public String getEndIssue() {
-    return null;
+    return BibliographicUtil.getRangeSetEnd(getIssue());
   }
 
   /**
@@ -713,7 +729,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * @return <code>true</code> if this AU includes the issue
    */
   public boolean includesIssue(String anIssue) {
-    return false;
+    return BibliographicUtil.coverageIncludes(getIssue(), anIssue);
   }
 
   /**
@@ -724,6 +740,7 @@ public class TdbAu implements Comparable<TdbAu> {
    *
    * @return issue for for this AU or <code>null</code> if not specified
    */
+  @Override
   public String getIssue() {
     String issue = getAttr("issue");
     if (issue == null) {
@@ -761,6 +778,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return publication type this title or "journal" if not specified
    */
+  @Override
   public String getPublicationType() {
     String pubType = "journal";
     if (props != null) {
@@ -785,6 +803,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return coverage depth this AU or "fulltext" if not specified
    */
+  @Override
   public String getCoverageDepth() {
     String depth = "fulltext";
     if (attrs != null) {
@@ -801,6 +820,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return the print ISSN for this title or <code>null</code> if not specified
    */
+  @Override
   public String getPrintIssn() {
     return (props == null) ? null : props.get("issn");
   }
@@ -811,6 +831,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return the eISSN for this title or <code>null</code> if not specified
    */
+  @Override
   public String getEissn() {
     return (props == null) ? null : props.get("eissn");
   }
@@ -821,6 +842,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return the ISSN-L for this title or <code>null</code> if not specified
    */
+  @Override
   public String getIssnL() {
     return (props == null) ? null : props.get("issnl");
   }
@@ -834,6 +856,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * @return representative for this title or <code>null</code> if not 
    *  specified or is ill-formed
    */
+  @Override
   public String getIssn() {
     String issn = getIssnL();
     if (!MetadataUtil.isIssn(issn)) {
@@ -853,6 +876,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return the print ISBN for this TdbAu or <code>null</code> if not specified
    */
+  @Override
   public String getPrintIsbn() {
     String printIsbn = (attrs == null) ? null : attrs.get("isbn");
     if (logger.isDebug3() && printIsbn != null) {
@@ -866,6 +890,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * 
    * @return the print ISBN for this TdbAu or <code>null</code> if not specified
    */
+  @Override
   public String getEisbn() {
     String eisbn = (attrs == null) ? null : attrs.get("eisbn");
     if (logger.isDebug3() && eisbn != null) {
@@ -883,6 +908,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * @return the ISBN for this title or <code>null</code> if not specified
    *  or is malformed
    */
+  @Override
   public String getIsbn() {
     String isbn = getEisbn();
     if (!MetadataUtil.isIsbn(isbn)) {
@@ -902,8 +928,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the start year or <code>null</code> if not specified
    */
+  @Override
   public String getStartYear() {
-    return null;
+    return BibliographicUtil.getRangeSetStart(getYear());
   }
 
   /**
@@ -911,8 +938,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * a delimited list of ranges.
    * @return the end year or <code>null</code> if not specified
    */
+  @Override
   public String getEndYear() {
-    return null;
+    return BibliographicUtil.getRangeSetEnd(getYear());
   }
 
   /**
@@ -924,7 +952,7 @@ public class TdbAu implements Comparable<TdbAu> {
    */
   public boolean includesYear(String aYear) {
     //return NumberUtil.rangeIncludes(getYear(), aYear);
-    return false;
+    return BibliographicUtil.coverageIncludes(getYear(), aYear);
   }
 
   /**
@@ -950,8 +978,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * with a hyphen, the string is returned whole.
    * @return the start volume or <code>null</code> if not specified
    */
+  @Override
   public String getStartVolume() {
-    return null;
+    return BibliographicUtil.getRangeSetStart(getVolume());
   }
 
   /**
@@ -960,8 +989,9 @@ public class TdbAu implements Comparable<TdbAu> {
    * with a hyphen, the string is returned whole.
    * @return the end volume or <code>null</code> if not specified
    */
+  @Override
   public String getEndVolume() {
-    return null;
+    return BibliographicUtil.getRangeSetEnd(getVolume());
   }
 
   /**
@@ -973,7 +1003,7 @@ public class TdbAu implements Comparable<TdbAu> {
    */
   public boolean includesVolume(String aVolume) {
     //return NumberUtil.rangeIncludes(getVolume(), aVolume);
-    return false;
+    return BibliographicUtil.coverageIncludes(getVolume(), aVolume);
     // TODO Use a volume-aware method instead, that allows for example
     // s2ii to not include s2iii
     // s2v-s2x to include s2ix but not s2w
@@ -990,6 +1020,7 @@ public class TdbAu implements Comparable<TdbAu> {
    * @param tdbau the TdbAu
    * @return the volume name or <code>null</code> if not specified.
    */
+  @Override
   public String getVolume() {
     String auVolume = getAttr("volume");
     if (auVolume == null) {
@@ -1142,6 +1173,33 @@ public class TdbAu implements Comparable<TdbAu> {
     return "[TdbAu: " + name + "]";
   }
 
+  /**
+   * TODO: Where do the publication ranges come from?
+   * Provides a list of the publication ranges covered by this Archival Unit.
+   *
+   * @return a List<BibliographicPeriod> with the publication ranges.
+   */
+  public List<BibliographicPeriod> getPublicationRanges() {
+    // TODO: Provide a real implementation instead of this mock-up.
+    if (publicationRanges == null) {
+      publicationRanges = new ArrayList<BibliographicPeriod>();
+      publicationRanges.add(new BibliographicPeriod(getStartYear(),
+	getStartVolume(), getStartIssue(), getEndYear(), getEndVolume(),
+	getEndIssue()));
+    }
+
+    return publicationRanges;
+  }
+
+  /**
+   * TODO: Where do the publication ranges come from?
+   *
+   * At the moment this is only used for setting up tests.
+   */
+  public void setPublicationRanges(List<BibliographicPeriod> ranges) {
+    publicationRanges = ranges;
+  }
+
   // TODO: Remove after testing.
   // Used to get the sorted TdbAus in TdbTitle for testing.
   @Override
@@ -1179,7 +1237,8 @@ public class TdbAu implements Comparable<TdbAu> {
    * @return <code>true</code> if there are no differences in anything other
    *         than their proprietary identifiers, <code>false</code> otherwise.
    */
-  public boolean sameInNonProprietaryIdProperties(Object other){
+  @Override
+  public boolean sameInNonProprietaryIdProperties(BibliographicItem other){
     throw new UnsupportedOperationException();
   }
 }

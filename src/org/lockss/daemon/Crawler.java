@@ -1,6 +1,10 @@
 /*
+ * $Id$
+ */
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,6 +106,13 @@ public interface Crawler {
    */
   public void abortCrawl();
 
+
+  /**
+   * Set the CrawlReq that caused this crawl, if any.  Communicates
+   * request-specific args such as refetch depth
+   */
+  public void setCrawlReq(CrawlReq req);
+
   /**
    * Set a watchdog that should be poked periodically by the crawl
    * @param wdog the watchdog
@@ -149,7 +160,12 @@ public interface Crawler {
     
     public void addToFailedUrls(String url);
     
-    public void addToPermissionProbeQueue(String probeUrl);
+    public void addToFetchQueue(CrawlUrlData curl);
+    
+    public void addToParseQueue(CrawlUrlData curl);
+    
+    public void addToPermissionProbeQueue(String probeUrl,
+					  String referrerUrl);
 
     public void setPreviousContentType(String previousContentType);
     
@@ -181,5 +197,8 @@ public interface Crawler {
     public boolean isAllowedPluginPermittedHost(String host);
 
     public void updateCdnStems(String url);
+
+    public CrawlUrl addChild(CrawlUrl curl, String url);
   }
+
 }
