@@ -265,6 +265,12 @@ def _find_candidates(options, aus, endpoints):
         ret.append(endpoint)
     return ret
 
+def _suggest_expansions(options, aus, candidates):
+    pass
+
+def _suggest_expansions_single(options, aus, candidate):
+
+
 def _main():
     # Parse command line
     parser = _TdbAddYearOptions.make_parser()
@@ -281,7 +287,7 @@ def _main():
     ###DEBUG
     for aindex in candidates:
         auentry = aus[aindex]
-        print '%s:%d: %s' % (auentry[_FILE], auentry[_LINE], auentry[_NAME]) ###DEBUG
+        print '%s:%d: %s' % (auentry[_FILE], auentry[_LINE], auentry[_NAME])
 
 # Main entry point
 if __name__ == '__main__': _main()
