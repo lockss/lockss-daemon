@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-'''A rudimentary script to add additional years of serial publications in TDB
+'''A rudimentary tool to add additional entries for serial publications in TDB
 files.'''
 
 __copyright__ = '''\
@@ -41,7 +41,7 @@ import optparse
 import re
 import subprocess
 
-class _TdbAddYearOptions(object):
+class _TdbExpandOptions(object):
 
     @staticmethod
     def make_parser():
@@ -51,14 +51,15 @@ class _TdbAddYearOptions(object):
         parser.add_option('--license', '-L', action='store_true', help='show license and exit')
         # Options
         group = optparse.OptionGroup(parser, 'Options')
-        group.add_option('--end-year', help='last year in which to add entries (default: this year)')
-        group.add_option('--start-year', help='first year in which to add entries (default: this year)')
+        group.add_option('--end-year', type='int', help='last year in which to add entries (default: this year)')
+        group.add_option('--start-year', type='int', help='first year in which to add entries (default: this year)')
         group.add_option('--stoppers', default='doesNotExist', help='AU statuses indicating the end of a run (comma-separated, default: %default)')
+        group.add_option('--year-required', action='store_true', help='Only process AUs with a year marker')
         parser.add_option_group(group)
         return parser
 
     def __init__(self, parser, opts, args):
-        super(_TdbAddYearOptions, self).__init__()
+        super(_TdbExpandOptions, self).__init__()
         # --copyright, --license, (--help, --version already done)
         if any([opts.copyright, opts.license]):
             if opts.copyright: print copyright__
@@ -69,17 +70,19 @@ class _TdbAddYearOptions(object):
         if len(args) == 0: parser.error('at least one file is required')
         self.files = args[:]
         # end_year, start_year (integer)
-        this_year = str(datetime.today().year)
-        self.start_year = _parse_year(opts.start_year or this_year)
-        self.end_year = _parse_year(opts.end_year or this_year)
+        this_year = datetime.today().year
+        self.start_year = opts.start_year or this_year
+        self.end_year = opts.end_year or this_year
         if self.start_year > self.end_year:
             parser.error('Start year is later than end year')
         # stoppers
         self.stoppers = set(opts.stoppers.split(',') if len(opts.stoppers) > 0 else [])
+        # year_required
+        self.year_required = bool(opts.year_required)
 
 def _parse_year(yearstr):
-    begin, dash, end = yearstr.rpartition('-')
-    return int(end) # int constructor raises ValueError
+    year1, dash, year2 = yearstr.partition('-')
+    return (int(year1), int(year2) if dash == '-' else None) # int constructor raises ValueError
 
 class _Au(object):
   '''An internal class to represent an AU entry.'''
@@ -258,24 +261,54 @@ def _find_candidates(options, aus, endpoints):
         auentry = aus[endpoint]
         if auentry[-1].get_status() in options.stoppers:
             continue
-        if len(auentry[_YEAR]) > 0 and _parse_year(auentry[_YEAR]) + 1 < options.start_year:
+        auyearstr = auentry[_YEAR]
+        aupyearstr = auentry[_PYEAR]
+        if options.year_required and len(auyearstr) == 0 and len(aupyearstr) == 0:
             continue
-        if len(auentry[_YEAR]) > 0 and len(auentry[_PYEAR]) > 0 and _parse_year(auentry[_PYEAR]) + 1 < options.start_year:
+        if len(auyearstr) > 0 and _parse_year(auyearstr)[0] + 1 < options.start_year:
+            continue
+        if len(auyearstr) > 0 and len(aupyearstr) > 0 and _parse_year(aupyearstr)[0] + 1 < options.start_year:
             continue
         ret.append(endpoint)
     return ret
 
-def _suggest_expansions(options, aus, candidates):
+def _guess_expansions(options, aus, candidates):
     pass
 
-def _suggest_expansions_single(options, aus, candidate):
-    pass
+def _guess_expansions_single(options, aus, candidate):
+    auentry = aus[candidate]
+    autitle = aus[_TITLE]
+    auyear = _parse_year(auentry[_YEAR]) if len(auentry[_YEAR]) > 0 else (_parse_year(auentry[_PYEAR]) if len(auentry[_PYEAR]) > 0 else None)
+    prev = list()
+    aindex = candidate - 1
+    while aindex >= 0:
+        preventry = aus[aindex]
+        if preventry[_TITLE] != autitle:
+            break
+        prevyear = _parse_year(preventry[_YEAR]) if len(preventry[_YEAR]) > 0 else (_parse_year(preventry[_PYEAR]) if len(preventry[_PYEAR]) > 0 else None)
+        if auyear:
+            if auyear[1] is None:
+                if prevyear[1] is None:
+                    if prevyear[0] < auyear[0]:
+                        break
+                    else:
+                        prev.append(aindex)
+                        aindex = aindex - 1
+                        continue
+                else:
+                    prev.append(aindex)
+                    break
+            else:
+                if prevyear[1] is None:
+                    pass ###FIXME
+                else:
+                    pass ###FIXME
 
 def _main():
     # Parse command line
-    parser = _TdbAddYearOptions.make_parser()
+    parser = _TdbExpandOptions.make_parser()
     (opts, args) = parser.parse_args()
-    options = _TdbAddYearOptions(parser, opts, args)
+    options = _TdbExpandOptions(parser, opts, args)
     aus = _tdbout(options)
     # Get AUIDs and scan files for AU entries
     aus = _tdbout(options)
