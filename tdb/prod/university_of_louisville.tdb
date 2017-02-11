@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = University of Louisville
+  >
+  
+  {
+  
+    title <
+      name = Journal of Respiratory Infections ;
+      eissn = 2473-2869 
+    >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.library.louisville.edu/
+      param[journal_abbr] = jri
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < exists ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+
+  }
+  
+}
