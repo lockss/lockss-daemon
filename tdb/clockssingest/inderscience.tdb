@@ -3249,7 +3249,7 @@
       param[journal_id] = ijepdm
 
       au < finished ; finished ; 2010-2015 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 ; >
 
     }
 
@@ -3354,7 +3354,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; >
-      au < ready ; exists ; 2016 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; >
 
     }
 
@@ -3974,7 +3974,7 @@
       param[journal_id] = ijim
 
       au < finished ; finished ; 2015 ; International Journal of Image Mining Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < notReady ; exists ; 2016 ; International Journal of Image Mining Volume 2 ; 2 ; > #content not online
+      au < testing ; exists ; 2016 ; International Journal of Image Mining Volume 2 ; 2 ; >
 
     }
 

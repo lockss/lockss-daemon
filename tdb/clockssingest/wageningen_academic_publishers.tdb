@@ -22,7 +22,7 @@
     
       au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; >
       au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; >
-      au < ready ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; >
       au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; >
       au < finished ; finished ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -41,7 +41,7 @@
 
       param[journal_id] = cep
 
-      au < ready ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; >
       au < finished ; finished ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -84,7 +84,7 @@
       au < manifest ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; >
       au < manifest ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; >
       au < manifest ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; >
-      au < ready ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; >
       au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; >
       au < finished ; finished ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; reingest1.clockss.org:8082 >
@@ -122,8 +122,8 @@
       au < manifest ; exists ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; >
       au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; >
-      au < ready ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; >
-      au < ready ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; >
       au < finished ; finished ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; reingest1.clockss.org:8082 >
