@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -221,38 +221,26 @@
       <!-- string>.*ajax\.microsoft\.com</string> -->
     </list>
   </entry>
-  <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
-  <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->  
-  <!-- don't count it in the poll, but do collect and share versions -->  
-  <!-- entry>
+  <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
-      <string>/ScriptResource\.axd\?d=[^/]+$</string>
-      <string>/combres.axd/[^/]+-(js|css)/-?[0-9]+$</string>
-      <string>/multimediaPlayer.aspx\?</string>
-      <string>/errors/404\.aspx\?aspxerrorpath=</string>
-      <string>silverchaircdn\.com/(CSS|Images)/</string>
-      <string>"\?v=[0-9]+$"</string>
+      <string>[.](css|js)(\?.+)?$</string>
     </list>
   </entry>
   <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>"/ScriptResource\.axd\?d=[^/]+$", 0</string>
-      <string>"/combres.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
-      <string>"/multimediaPlayer.aspx\?", 0</string>
-      <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
-      <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
-      <string>"\?v=[0-9]+$", 0</string>
+      <string>"[.](css|js)(\?.+)?$", 0</string>
     </list>
-  </entry> -->
+  </entry>
   <entry>
     <string>clockss_override</string>
     <map>
-     <entry>
+      <entry>
         <string>au_def_pause_time</string>
         <long>100</long>
-     </entry>
+      </entry>
     </map>
   </entry>
- </map>
+</map>

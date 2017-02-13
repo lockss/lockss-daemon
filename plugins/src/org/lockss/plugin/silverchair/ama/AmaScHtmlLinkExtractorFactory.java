@@ -87,10 +87,17 @@ public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
      */
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       //the <a href attribute handler
-      if (node.hasAttr("href")) {
-        String href = node.attr("href");
+      String href;
+      if (node.hasAttr("href") && ((href = node.attr("href")) != null)) {
+        if (href.contains("/issue/")) {
+          // <a href="http://jamanetwork.com/journals/jama/issue/315/2">12January - Volume 315, Issue 2</a>
+          String srcUrl = node.baseUri();
+          // ListOfIssues.aspx?resourceId=67&year=2016
+          if (srcUrl.contains("/ListOfIssues.aspx"))
+            JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
+        }
         // we look for searchresults?author= and exclude these
-        if ((href != null) && !href.contains(AUTH_SEARCH_STR)) {
+        else if (!href.contains(AUTH_SEARCH_STR)) {
           JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
         }
       }   // end <a href
