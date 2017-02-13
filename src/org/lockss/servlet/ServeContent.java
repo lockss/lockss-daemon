@@ -1087,7 +1087,7 @@ public class ServeContent extends LockssServlet {
     if (ifModifiedSince != null && cuLastModified != null) {
       try {
         if (!HeaderUtil.isEarlier(ifModifiedSince, cuLastModified)) {
-          ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+          ctype = cu.getContentType();
           String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
           if (log.isDebug3()) {
             log.debug3( "Cached content not modified for: " + url
@@ -1105,7 +1105,7 @@ public class ServeContent extends LockssServlet {
       }
     }
 
-    ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+    ctype = cu.getContentType();
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
 
     if (log.isDebug3()) {

@@ -186,7 +186,7 @@ public class ContentServiceImpl implements ContentService {
 	}
       }
 
-      String ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      String ctype = cu.getContentType();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ctype = " + ctype);
 
       String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
