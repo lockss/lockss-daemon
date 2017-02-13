@@ -434,13 +434,8 @@ public class ServletUtil {
     return sb.toString();
   }
 
-  // Common page footer
-  public static void doLayoutFooter(Page page,
-                                  Iterator notesIterator,
-                                  String versionInfo) {
-    Composite comp = new Composite();
-
-    if (notesIterator!= null && notesIterator.hasNext()) {
+  public static void addNotes(Composite comp, Iterator notesIterator) {
+    if (notesIterator != null && notesIterator.hasNext()) {
       // if there are footnotes
       comp.add(NOTES_BEGIN);
       comp.add(NOTES_LIST_BEFORE);
@@ -449,6 +444,15 @@ public class ServletUtil {
       }
       comp.add(NOTES_LIST_AFTER);
     }
+  }
+
+  // Common page footer
+  public static void doLayoutFooter(Page page,
+                                  Iterator notesIterator,
+                                  String versionInfo) {
+    Composite comp = new Composite();
+
+    addNotes(comp, notesIterator);
 
     comp.add("<p>");
 

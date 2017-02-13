@@ -649,6 +649,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return null;
   }
 
+  public PatternStringMap makeUrlMimeTypeMap() {
+    return PatternStringMap.EMPTY;
+  }
+
   public PatternFloatMap makeUrlPollResultWeightMap()
       throws ArchivalUnit.ConfigurationException {
     return PatternFloatMap.EMPTY;

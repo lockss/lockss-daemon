@@ -71,6 +71,9 @@ public class HttpResultMap implements CacheResultMap {
       this.message = message;
     }
 
+    void storeCauseIn(Exception e) {
+    }
+
     String getMessage() {
       return message;
     }
@@ -128,6 +131,10 @@ public class HttpResultMap implements CacheResultMap {
     ExceptionEvent(Exception fetchException, String message) {
       super(message);
       this.fetchException = fetchException;
+    }
+
+    void storeCauseIn(Exception e) {
+      e.initCause(fetchException);
     }
 
     String getResultString() {
@@ -272,6 +279,7 @@ public class HttpResultMap implements CacheResultMap {
 	CacheException exception = (CacheException)ex.newInstance();
         exception.initMessage(fmtMsg(evt.getResultString(),
 				     evt.getMessage()));
+	evt.storeCauseIn(exception);
 	return exception;
       }
 
@@ -339,7 +347,10 @@ public class HttpResultMap implements CacheResultMap {
 		  CacheException.WarningOnly.class);
     storeMapEntry(ContentValidationException.WrongLength.class,
 		  CacheException.RetryableNetworkException_3_10S.class);
-  }
+
+    storeMapEntry(ContentValidationException.ValidatorExeception.class,
+		  CacheException.UnexpectedNoRetryFailException.class);
+}
 
   public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
     for (int i=0; i< codeArray.length; i++) {

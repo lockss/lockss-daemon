@@ -413,6 +413,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     }
   }
 
+  @Override
   public PatternStringMap makeUrlMimeTypeMap() {
     List<String> mimeTypeSpec = getElementList(KEY_AU_URL_MIME_TYPE, null);
     if (mimeTypeSpec != null) {

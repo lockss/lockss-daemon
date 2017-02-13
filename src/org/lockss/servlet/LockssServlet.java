@@ -1106,6 +1106,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected void endPageNoFooter(Page page) throws IOException {
+    ServletUtil.addNotes(page,
+			 (footnotes == null ? null : footnotes.iterator()));
     writePage(page);
   }
 

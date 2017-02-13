@@ -62,6 +62,10 @@ public class BaseCachedUrl implements CachedUrl {
   protected RepositoryNode.RepositoryNodeContents rnc = null;
   protected Properties options;
 
+  // Cached here as might be used several times in quick succession
+  // (esp. by archive members).  Don't want to store in AU.
+  PatternStringMap urlMimeMap = null;
+
   public static final String PREFIX = Configuration.PREFIX + "baseCachedUrl.";
 
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
@@ -299,17 +303,22 @@ public class BaseCachedUrl implements CachedUrl {
     if (res != null) {
       return res;
     }
-    // XXX temporary expedient
-    if (au instanceof DefinableArchivalUnit) {
-      DefinableArchivalUnit dau = (DefinableArchivalUnit)au;
-      PatternStringMap urlMime = dau.makeUrlMimeTypeMap();
-      if (urlMime != null) {
-	String mime = urlMime.getMatch(getUrl());
-	if (mime != null) {
-	  logger.debug("Inferred mime type: " + mime + " for " + getUrl());
-	  return mime;
-	}
-      }
+    return matchUrlMimeMap(getUrl());
+  }
+
+  PatternStringMap getUrlMimeTypeMap() {
+    if (urlMimeMap == null) {
+      urlMimeMap = au.makeUrlMimeTypeMap();
+    }
+    return urlMimeMap;
+  }
+
+  String matchUrlMimeMap(String url) {
+    PatternStringMap map = getUrlMimeTypeMap();;
+    String mime = map.getMatch(url);
+    if (mime != null) {
+      logger.debug("Inferred mime type: " + mime + " for " + getUrl());
+      return mime;
     }
     return null;
   }

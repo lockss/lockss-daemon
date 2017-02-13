@@ -152,7 +152,7 @@ public class ViewContent extends LockssServlet {
     clen = cu.getContentSize();
     try {
       props = cu.getProperties();
-      ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      ctype = cu.getContentType();
       String frame = getParameter("frame");
       if (StringUtil.isNullString(frame)) {
 	if (isFrameType(ctype)) {
@@ -180,7 +180,7 @@ public class ViewContent extends LockssServlet {
     if (StringUtil.isNullString(mimeType)) return false;
     for (Iterator iter = srvltMgr.inFrameContentTypes().iterator();
 	 iter.hasNext(); ) {
-      if (StringUtil.startsWithIgnoreCase(ctype, (String)iter.next())) {
+      if (StringUtil.startsWithIgnoreCase(mimeType, (String)iter.next())) {
 	return true;
       }
     }
@@ -225,8 +225,15 @@ public class ViewContent extends LockssServlet {
     tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
 //     tbl.newRow();
 //     tbl.newCell("colspan=2 align=center");
-    addPropRow(tbl, "Content Type",
-	       props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    String contentTypeHeader =
+      props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+    String contentType = cu.getContentType();
+    if (StringUtil.equalStrings(contentType, contentTypeHeader)) {
+      addPropRow(tbl, "Content Type", contentType);
+    } else {
+      addPropRow(tbl, "Content Type" + addFootnote("Inferred by plugin"),
+		 contentType);
+    }
     addPropRow(tbl, "Length", clen);
     try {
       String versionStr = Integer.toString(cu.getVersion());
@@ -331,7 +338,7 @@ public class ViewContent extends LockssServlet {
     boolean isFilter = getParameter("filter") != null;
     resp.setContentType(ctype);
     // Set as inline content with name, if PDF or unframed content
-    if (!isFrameType(ctype) || ctype.equals("application/pdf")) {
+    if (!isFrameType(ctype)) {
       resp.setHeader("Content-disposition", "inline; filename=" +
 		     ServletUtil.getContentOriginalFilename(cu, true));
     }

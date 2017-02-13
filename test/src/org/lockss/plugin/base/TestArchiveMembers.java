@@ -184,7 +184,7 @@ public class TestArchiveMembers extends LockssTestCase {
     assertEquals(expSize, props.get("Length"));
 
     assertEquals(expMembUrl, props.get(CachedUrl.PROPERTY_NODE_URL));
-    assertEquals(expMime, props.get(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEquals(expMime, cu.getContentType());
 
     if (arcCu != null) {
       Properties arcProps = arcCu.getProperties();
@@ -203,6 +203,7 @@ public class TestArchiveMembers extends LockssTestCase {
 
     assertArchiveMember("file 1, depth 0, branch 0", "text/html", 226,
 			aurl, "001file.html");
+
     assertArchiveMember("file 2, depth 0, branch 0", "text/html", 226,
 			aurl, "002file.html");
 
@@ -215,7 +216,23 @@ public class TestArchiveMembers extends LockssTestCase {
     assertNoArchive(aurl + "bogus", "branch0/002file.html");
     assertNoArchive("bogus" + aurl, "branch0/002file.html");
 
+    assertArchiveMember("this is bin",
+			null, 12,
+			aurl, "branch5/branch2/001file.bin");
+  }
 
+  public void testInferContentType() throws Exception {
+    PluginTestUtil.crawlSimAu(simau);
+    String aurl = "http://www.example.com/branch1/branch1/zip5.zip";
+
+    msau.setUrlMimeTypeMap(new PatternStringMap("\\.bin$,application/beans"));
+
+    assertArchiveMember("file 1, depth 0, branch 0", "text/html", 226,
+			aurl, "001file.html");
+
+    assertArchiveMember("this is bin",
+			"application/beans", 12,
+			aurl, "branch5/branch2/001file.bin");
   }
 
   public void testIll() throws Exception {
@@ -254,7 +271,7 @@ public class TestArchiveMembers extends LockssTestCase {
       assertTrue(cu.hasContent());
       cnt++;
     }
-    assertEquals(16, cnt);
+    assertEquals(17, cnt);
   }
 
   List<String> readLinesFromResource(String resource) throws IOException {
@@ -452,7 +469,7 @@ public class TestArchiveMembers extends LockssTestCase {
     for (String url : shouldNotContain) {
       assertDoesNotContain(urls, url);
     }
-    assertEquals(108, urls.size());
+    assertEquals(109, urls.size());
 
     cus.setExcludeFilesUnchangedAfter(600000);
     Set urls2 = new HashSet();
@@ -495,7 +512,7 @@ public class TestArchiveMembers extends LockssTestCase {
     // The archive file itesle
     cu = pluginMgr.findCachedUrl(arcUrl);
     assertTrue(cu.hasContent());
-    assertEquals(5162, cu.getContentSize());
+    assertEquals(5392, cu.getContentSize());
 
     cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member");
     assertNull(cu);
@@ -551,6 +568,7 @@ public class TestArchiveMembers extends LockssTestCase {
 
   public static class MySimulatedArchivalUnit extends SimulatedArchivalUnit {
     ArchiveFileTypes aft = null;
+    PatternStringMap urlMimeMap = PatternStringMap.EMPTY;
 
     public MySimulatedArchivalUnit(Plugin owner) {
       super(owner);
@@ -562,6 +580,15 @@ public class TestArchiveMembers extends LockssTestCase {
 
     public void setArchiveFileTypes(ArchiveFileTypes aft) {
       this.aft = aft;
+    }
+
+    @Override
+    public PatternStringMap makeUrlMimeTypeMap() {
+      return urlMimeMap;
+    }
+
+    public void setUrlMimeTypeMap(PatternStringMap map) {
+      urlMimeMap = map;
     }
   }
 
@@ -584,7 +611,10 @@ public class TestArchiveMembers extends LockssTestCase {
       }
       return rootDir.toString();
     }
+
   }
+
+
 
   private static class MyCachedUrl extends BaseCachedUrl {
     private boolean gotUnfilteredStream = false;
