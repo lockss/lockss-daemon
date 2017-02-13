@@ -178,6 +178,11 @@ public class DefaultUrlCacher implements UrlCacher {
       }
       if (logger.isDebug2()) logger.debug2("Storing url '"+ origUrl +"'");
       storeContentIn(origUrl, input, headers, true, redirectUrls);
+      if (infoException != null &&
+	  infoException.isAttributeSet(CacheException.ATTRIBUTE_NO_STORE)) {
+        logger.debug3("Validator said no store, short-circuiting storeContent");
+	return;
+      }
       if (logger.isDebug3()) {
         logger.debug3("redirectUrls: " + redirectUrls);
       }
@@ -482,7 +487,7 @@ public class DefaultUrlCacher implements UrlCacher {
     }
   }
 
-  public long getContentLength() {
+  private long getContentLength() {
     try {
       return Long.parseLong(headers.getProperty("content-length"));
     } catch (Exception e) {
