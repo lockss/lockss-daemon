@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>22</string>
+        <string>23</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -27,6 +27,10 @@
                 <string>9</string>
             </entry>
         </map>
+    </entry>
+    <entry>
+        <string>required_daemon_version</string>
+        <string>1.72.0</string> <!-- no store content validation -->
     </entry>
     <entry>
         <string>plugin_name</string>

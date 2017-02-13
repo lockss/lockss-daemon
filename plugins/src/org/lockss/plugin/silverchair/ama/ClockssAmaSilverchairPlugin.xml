@@ -3,13 +3,14 @@
     <string>plugin_status</string>
     <string>testing</string>
   </entry>
+  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.silverchair.ama.ClockssAmaSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,8 +31,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!-- url consumer with storeAtOrigUrl convenience method -->
-    <string>1.68.0</string>
+     <!-- no store content validation -->
+    <string>1.72.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -206,7 +207,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

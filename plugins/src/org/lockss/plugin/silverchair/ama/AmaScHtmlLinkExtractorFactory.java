@@ -47,7 +47,7 @@ public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
   private static final Logger logger = Logger.getLogger(AmaScHtmlLinkExtractorFactory.class);
   
   private static final String ANCHOR_TAG = "a";
-  
+  private static final String START_URL_STR = "LOCKSS/ListOfIssues.aspx?";
   protected static final String AUTH_SEARCH_STR = "searchresults?author=";
   
   @Override
@@ -93,7 +93,7 @@ public class AmaScHtmlLinkExtractorFactory implements LinkExtractorFactory {
           // <a href="http://jamanetwork.com/journals/jama/issue/315/2">12January - Volume 315, Issue 2</a>
           String srcUrl = node.baseUri();
           // ListOfIssues.aspx?resourceId=67&year=2016
-          if (srcUrl.contains("/ListOfIssues.aspx"))
+          if (srcUrl.contains(START_URL_STR))
             JsoupHtmlLinkExtractor.checkLink(node, cb, "href");
         }
         // we look for searchresults?author= and exclude these

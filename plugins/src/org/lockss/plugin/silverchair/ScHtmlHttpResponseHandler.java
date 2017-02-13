@@ -72,20 +72,24 @@ public class ScHtmlHttpResponseHandler implements CacheResultHandler {
   }
 
   public static class ScRetryableNetworkException extends CacheException.RetryableNetworkException_3 {
+    
     public ScRetryableNetworkException() {
       super();
       attributeBits.clear(ATTRIBUTE_FAIL);
+      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
 
     public ScRetryableNetworkException(String message) {
       super(message);
       attributeBits.clear(ATTRIBUTE_FAIL);
+      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
 
     /** Create this if details of causal exception are more relevant. */
     public ScRetryableNetworkException(Exception e) {
       super(e);
       attributeBits.clear(ATTRIBUTE_FAIL);
+      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
 
     public long getRetryDelay() {
