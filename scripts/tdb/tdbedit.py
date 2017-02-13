@@ -144,7 +144,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 import cStringIO
 import optparse
@@ -394,7 +394,7 @@ def _tdbout(options):
   proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   (out, err) = proc.communicate() # out and err are (potentially huge) strings
   if proc.returncode != 0:
-       sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, cStringIO.StringIO(err)))
+       sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, err))
   ret = list()
   for line in cStringIO.StringIO(out):
     x = line.strip().split('\t')
