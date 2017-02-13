@@ -247,6 +247,12 @@ public interface ArchivalUnit {
   public List<String> getHttpRequestHeaders();
 
   /**
+   * Construct the mapping from URL pattern MIME type to use if no
+   * Content-Type header is present.
+   */
+  public PatternStringMap makeUrlMimeTypeMap();
+
+  /**
    * Construct a list of Patterns of URLs that should be excluded from
    * polls.
    */

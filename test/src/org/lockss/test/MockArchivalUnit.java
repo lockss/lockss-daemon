@@ -201,6 +201,10 @@ public class MockArchivalUnit implements ArchivalUnit {
     return excludeUrlFromPollPatterns;
   }
 
+  public PatternStringMap makeUrlMimeTypeMap() {
+    return PatternStringMap.EMPTY;
+  }
+
   public PatternFloatMap makeUrlPollResultWeightMap()
       throws ArchivalUnit.ConfigurationException {
     return urlPollResultMap;
@@ -516,7 +520,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public boolean shouldBeCached(String url) {
-    log.critical("shouldBeCached: " + urlsToCache);
     return urlsToCache.contains(url);
   }
 

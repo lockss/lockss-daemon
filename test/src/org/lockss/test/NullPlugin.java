@@ -529,6 +529,10 @@ public class NullPlugin {
       return null;
     }
 
+    public PatternStringMap makeUrlMimeTypeMap() {
+      return PatternStringMap.EMPTY;
+    }
+
     public PatternFloatMap makeUrlPollResultWeightMap() {
       return null;
     }
