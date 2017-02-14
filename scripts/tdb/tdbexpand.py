@@ -192,10 +192,22 @@ def _tdbout(options):
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     (out, err) = proc.communicate() # out and err are (potentially huge) strings
     if proc.returncode != 0:
-        sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, cStringIO.StringIO(err)))
+        sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, err))
     ret = [line.strip().split('\t') for line in cStringIO.StringIO(out)]
     for auentry in ret: auentry[_LINE] = int(auentry[_LINE])
     return ret
+
+def _select_year(auentry):
+    for choice in [_YEAR, _PYEAR]:
+        if len(auentry[choice]) > 0:
+            return _parse_year(auentry[choice])
+    return None
+
+def _select_volume(auentry):
+    for choice in [_VOLUME, _PVOLUME, _PVOLNAME]:
+        if len(auentry[choice]) > 0:
+            return _parse_year(auentry[choice])
+    return None
 
 # A regular expression to match implicit<...> lines
 # - Group 1: semicolon-separated body of the implicit<...> statement
@@ -273,36 +285,42 @@ def _find_candidates(options, aus, endpoints):
     return ret
 
 def _guess_expansions(options, aus, candidates):
-    pass
+    for candidate in candidates:
+        _guess_expansions_single(options, aus, candidate)
 
 def _guess_expansions_single(options, aus, candidate):
     auentry = aus[candidate]
-    autitle = aus[_TITLE]
-    auyear = _parse_year(auentry[_YEAR]) if len(auentry[_YEAR]) > 0 else (_parse_year(auentry[_PYEAR]) if len(auentry[_PYEAR]) > 0 else None)
+    autitle = auentry[_TITLE]
+    auyear = _select_year(auentry)
+    auvol = _select_volume(auentry)
+    # Collect immediately preceding entries by year
     prev = list()
     aindex = candidate - 1
-    while aindex >= 0:
-        preventry = aus[aindex]
-        if preventry[_TITLE] != autitle:
-            break
-        prevyear = _parse_year(preventry[_YEAR]) if len(preventry[_YEAR]) > 0 else (_parse_year(preventry[_PYEAR]) if len(preventry[_PYEAR]) > 0 else None)
-        if auyear:
-            if auyear[1] is None:
-                if prevyear[1] is None:
-                    if prevyear[0] < auyear[0]:
-                        break
-                    else:
-                        prev.append(aindex)
-                        aindex = aindex - 1
-                        continue
-                else:
-                    prev.append(aindex)
-                    break
+    if auyear is not None:
+        while aindex >= 0:
+            preventry = aus[aindex]
+            if preventry[_TITLE] != autitle:
+                break
+            prevyear = _select_year(preventry)
+            prevvol = _select_volume(preventry)
+            prev.append((aindex, prevyear, prevvol))
+            if (auyear[1] is None and prevyear[1] is None and prevyear[0] == auyear[0]) \
+                    or (auyear[1] is not None and prevyear[1] is None and prevyear[0] == auyear[0]):
+                # e.g. auyear is 2007 and prevyear is 2007,
+                # or auyear is 2006-2007 and prevyear is 2006
+                aindex = aindex - 1
+                continue
             else:
-                if prevyear[1] is None:
-                    pass ###FIXME
-                else:
-                    pass ###FIXME
+                # e.g. auyear is 2007 and prevyear is 1999 or 2006 or 1998-1999 or 2006-2007,
+                # or auyear is 2006-2007 and prevyear is 1999 or 2005 or 1998-1999 or 2005-2006
+                break
+    ###DEBUG
+    print ('>', auyear, auvol), auentry[-1].generate_body()
+    for i, t in enumerate(prev):
+        print i, t, aus[t[0]][-1].generate_body()
+    else:
+        print
+    # Analyze results and guess expansions
 
 def _main():
     # Parse command line
@@ -316,11 +334,7 @@ def _main():
     # Find candidates
     endpoints = _find_endpoints(options, aus)
     candidates = _find_candidates(options, aus, endpoints)
-
-    ###DEBUG
-    for aindex in candidates:
-        auentry = aus[aindex]
-        print '%s:%d: %s' % (auentry[_FILE], auentry[_LINE], auentry[_NAME])
+    _guess_expansions(options, aus, candidates)
 
 # Main entry point
 if __name__ == '__main__': _main()
