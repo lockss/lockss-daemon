@@ -20,7 +20,7 @@
     #base_url changed upon move to Drupal.
     param[base_url] = http://jaapl.org/
 
-    au < HWDrupalPlugin ; exists ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 >
     au < HWDrupalPlugin ; expected ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 >
 
     }

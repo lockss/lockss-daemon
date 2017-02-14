@@ -14040,7 +14040,7 @@
 
         #param[base_url] = http://iej.sagepub.com/
 
-        au < exists ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
+        au < manifest ; 2016 ; The Indian Economic Journal Volume 64 ; 64 ; ieja >
 
     }
 
@@ -16026,7 +16026,7 @@
       au < doNotProcess ; 2014 ; International Quarterly of Community Health Education Volume 34 ; 34 ; qcha >
       au < doNotProcess ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 ; qcha >
       au < manifest ; 2015-2016 ; International Quarterly of Community Health Education Volume 36 ; 36 ; qcha >
-      au < expected ; 2016-2017 ; International Quarterly of Community Health Education Volume 37 ; 37 ; qcha >
+      au < manifest ; 2016-2017 ; International Quarterly of Community Health Education Volume 37 ; 37 ; qcha >
 
   }
 
@@ -26985,8 +26985,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://mli.sagepub.com/
 
-        au < exists ; 1993-1995 ; Medical Law International Volume 1 ; 1 ; mlia >
-        au < exists ; 1995-1997 ; Medical Law International Volume 2 ; 2 ; mlia >
+        au < manifest ; 1993-1995 ; Medical Law International Volume 1 ; 1 ; mlia >
+        au < manifest ; 1995-1997 ; Medical Law International Volume 2 ; 2 ; mlia >
         au < manifest ; 1997-1998 ; Medical Law International Volume 3 ; 3 ; mlia >
         au < manifest ; 1999-2000 ; Medical Law International Volume 4 ; 4 ; mlia >
         au < manifest ; 2000-2002 ; Medical Law International Volume 5 ; 5 ; mlia >
