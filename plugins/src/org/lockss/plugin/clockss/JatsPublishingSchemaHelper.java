@@ -187,7 +187,10 @@ implements SourceXmlSchemaHelper {
   
   /* 
    * AUTHOR INFORMATION
-   * We're at the top level of a "<contrib><name>" 
+   * We're at the top level of a 
+   *   "<contrib><name>" or
+   *   "<contrib><name-alternatives><name name-style="western">"
+   * 
    *   <name>
    *     <surname>
    *     <given-names>
@@ -310,7 +313,8 @@ implements SourceXmlSchemaHelper {
 
   public static String JATS_date = JATS_ameta + "/pub-date[" + pubdate_attr_options +"]";
   public static String JATS_edate = JATS_ameta + "/pub-date[" + epubdate_attr_options +"]";
-  private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name";
+  /* extra level for westernized version of chinese character names */
+  private static String JATS_contrib = JATS_ameta + "/contrib-group/contrib/name | " + JATS_ameta + "/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
   
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
