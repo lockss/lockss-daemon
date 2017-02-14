@@ -5332,4 +5332,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private JobManager getJobManager() {
     return (JobManager)LockssApp.getManager(JobManager.getManagerKey());
   }
+
+  /**
+   * Provides the identifier of a publisher if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreatePublisher(Connection conn, String publisherName)
+      throws DbException {
+    return dbManager.findOrCreatePublisher(conn, publisherName);
+  }
 }

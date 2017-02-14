@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,12 +27,13 @@
  */
 package org.lockss.exporter.counter;
 
-import static org.lockss.db.SqlConstants.*;
+import static org.lockss.metadata.SqlConstants.*;
 import static org.lockss.plugin.ArticleFiles.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.lockss.app.LockssApp;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
@@ -52,13 +49,13 @@ public class CounterReportsRequestRecorder {
   private static final Logger log = Logger
       .getLogger(CounterReportsRequestRecorder.class);
 
-//  private static final String SQL_QUERY_MD_ITEM_ID_FROM_URL = "select "
-//      + MD_ITEM_SEQ_COLUMN
-//      + " from " + URL_TABLE
-//      + " where " + URL_COLUMN + " = ?"
-//      + " and (" + FEATURE_COLUMN + " = '" + ROLE_FULL_TEXT_HTML
-//      + "' or " + FEATURE_COLUMN + " = '" + ROLE_FULL_TEXT_PDF
-//      + "')";
+  private static final String SQL_QUERY_MD_ITEM_ID_FROM_URL = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + " from " + URL_TABLE
+      + " where " + URL_COLUMN + " = ?"
+      + " and (" + FEATURE_COLUMN + " = '" + ROLE_FULL_TEXT_HTML
+      + "' or " + FEATURE_COLUMN + " = '" + ROLE_FULL_TEXT_PDF
+      + "')";
 
   // The singleton instance of this class.
   private static final CounterReportsRequestRecorder instance =
@@ -104,42 +101,42 @@ public class CounterReportsRequestRecorder {
    */
   public void recordRequest(String url, PublisherContacted contacted,
       int publisherCode, String organization) {
-//    try {
-//      final String DEBUG_HEADER = "recordRequest(): ";
-//      CounterReportsManager counterReportsManager =
-//	  LockssDaemon.getLockssDaemon().getCounterReportsManager();
-//      
-//      // Check whether the COUNTER reports manager is disabled.
-//      if (!counterReportsManager.isReady()) {
-//	// Yes: Do nothing.
-//	log.debug2(DEBUG_HEADER + "Done: COUNTER reports manager is disabled.");
+    try {
+      final String DEBUG_HEADER = "recordRequest(): ";
+      CounterReportsManager counterReportsManager =
+	  LockssDaemon.getLockssDaemon().getCounterReportsManager();
+      
+      // Check whether the COUNTER reports manager is disabled.
+      if (!counterReportsManager.isReady()) {
+	// Yes: Do nothing.
+	log.debug2(DEBUG_HEADER + "Done: COUNTER reports manager is disabled.");
 	return;
-//      }
-//
-//      // No: Get the metadata identifier of the URL.
-//      log.debug2(DEBUG_HEADER + "url = '" + url + "'.");
-//      Long mdItemId = findMatchingFullTextMdItemId(url);
-//
-//      // Do nothing more if it is not a request needed for any report.
-//      if (mdItemId == null) {
-//	return;
-//      }
-//
-//      // Get an indication of whether the publisher is involved in serving the
-//      // content.
-//      log.debug2("publisherCode = " + publisherCode);
-//      boolean isPublisherInvolved = contacted == PublisherContacted.TRUE
-//	  && (publisherCode == HttpResponse.__200_OK
-//	      || publisherCode == HttpResponse.__304_Not_Modified);
-//      log.debug2("isPublisherInvolved = " + isPublisherInvolved);
-//
-//      // Persist the request data.
-//      counterReportsManager.persistRequest(url, isPublisherInvolved,
-//	  organization);
-//      log.debug2(DEBUG_HEADER + "Done.");
-//    } catch (DbException sqle) {
-//      log.error("Cannot persist request - Statistics not collected", sqle);
-//    }
+      }
+
+      // No: Get the metadata identifier of the URL.
+      log.debug2(DEBUG_HEADER + "url = '" + url + "'.");
+      Long mdItemId = findMatchingFullTextMdItemId(url);
+
+      // Do nothing more if it is not a request needed for any report.
+      if (mdItemId == null) {
+	return;
+      }
+
+      // Get an indication of whether the publisher is involved in serving the
+      // content.
+      log.debug2("publisherCode = " + publisherCode);
+      boolean isPublisherInvolved = contacted == PublisherContacted.TRUE
+	  && (publisherCode == HttpResponse.__200_OK
+	      || publisherCode == HttpResponse.__304_Not_Modified);
+      log.debug2("isPublisherInvolved = " + isPublisherInvolved);
+
+      // Persist the request data.
+      counterReportsManager.persistRequest(url, isPublisherInvolved,
+	  organization);
+      log.debug2(DEBUG_HEADER + "Done.");
+    } catch (DbException sqle) {
+      log.error("Cannot persist request - Statistics not collected", sqle);
+    }
   }
 
   /**
@@ -158,32 +155,33 @@ public class CounterReportsRequestRecorder {
     PreparedStatement getUrlMdItemId = null;
     ResultSet results = null;
     Long mdItemId = null;
-//    DbManager dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-//
-//    try {
-//      // Get the database connection.
-//      conn = dbManager.getConnection();
-//
-//      // Prepare the query.
-//      getUrlMdItemId =
-//	  dbManager.prepareStatement(conn, SQL_QUERY_MD_ITEM_ID_FROM_URL);
-//      getUrlMdItemId.setString(1, url);
-//
-//      // Get any results.
-//      results = dbManager.executeQuery(getUrlMdItemId);
-//
-//      // Get the metadata item identifier.
-//      if (results.next()) {
-//	mdItemId = results.getLong(MD_ITEM_SEQ_COLUMN);
-//      }
-//    } catch (SQLException sqle) {
-//      throw new DbException(
-//	  "Cannot find full-text URL metadata item identifier", sqle);
-//    } finally {
-//      DbManager.safeCloseResultSet(results);
-//      DbManager.safeCloseStatement(getUrlMdItemId);
-//      DbManager.safeRollbackAndClose(conn);
-//    }
+    DbManager dbManager =
+	(DbManager)(LockssApp.getManager(DbManager.getManagerKey()));
+
+    try {
+      // Get the database connection.
+      conn = dbManager.getConnection();
+
+      // Prepare the query.
+      getUrlMdItemId =
+	  dbManager.prepareStatement(conn, SQL_QUERY_MD_ITEM_ID_FROM_URL);
+      getUrlMdItemId.setString(1, url);
+
+      // Get any results.
+      results = dbManager.executeQuery(getUrlMdItemId);
+
+      // Get the metadata item identifier.
+      if (results.next()) {
+	mdItemId = results.getLong(MD_ITEM_SEQ_COLUMN);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException(
+	  "Cannot find full-text URL metadata item identifier", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(getUrlMdItemId);
+      DbManager.safeRollbackAndClose(conn);
+    }
 
     log.debug2(DEBUG_HEADER + "mdItemId = '" + mdItemId + "'.");
     return mdItemId;
