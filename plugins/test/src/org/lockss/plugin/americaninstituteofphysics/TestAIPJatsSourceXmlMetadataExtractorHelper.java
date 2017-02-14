@@ -1,6 +1,6 @@
 /* $Id$
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,17 +28,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americaninstituteofphysics;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.plugin.clockss.lia.LiaJatsXmlMetadataExtractorFactory;
 
-//import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 
 /*
  * Test file used to extract metadata:
@@ -63,27 +62,23 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
   private static final String BASE_URL = 
       "http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/"+ YEAR + "/";
   
-  private static final String BASIC_CONTENT_FILE_NAME = "test_jats1.xml";
-   
-  private static final String TEST_XML_URL = "localhost:~audreyishizaki/aip-aud/Markup/test_jats0.xml";
-  private static final String TEST_PDF_URL = "localhost:~audreyishizaki/aip-aud/Page_Renditions/online.pdf";
+  private static final String TEST_XML_URL = BASE_URL + "aip-aud/Markup/test_jats0.xml";
+  private static final String TEST_PDF_URL = BASE_URL + "aip-aud/Page_Renditions/online.pdf";
 
   // expected metadata
   private static final String GOOD_JOURNAL_TITLE = "Journal of Applied Physics";
-  private static final String GOOD_PUB_DATE = "2012-06-01";
+  private static final String GOOD_PUB_DATE = "2012";
   private static final String GOOD_DOI = "10.1063/1.4726137";
   private static final String GOOD_ISSN = "0021-8979";
   private static final String GOOD_EISSN = "1089-7550";
   private static final String GOOD_ISSUE = "11";
-  private static final String GOOD_ARTICLE_TITLE = "Preface to Special Topic: Selected Papers ... from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011";
-  private static final String GOOD_JOURNAL_ID = "JAPIAU";
+  private static final String GOOD_ARTICLE_TITLE = "Preface to Special Topic: Selected PapersGafrom the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011";
   private static final String GOOD_VOLUME = "111";
 //  private static final String HARDWIRED_PUBLISHER = "American Institute of Physics";
   private static ArrayList goodAuthors = (ArrayList) ListUtil.list(
       "Chelast, Firsthua",
-      "Liast, ",
-      "Sainlast, Naufirst L.",
-      "Sun, B. M.");
+      "Liast",
+      "Sainlast, Naufirst L.");
    
  
   private static final String BASIC_CONTENT =
@@ -123,7 +118,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "<article-title>" +
     "Preface to Special Topic: Selected Papers" +
     "<inline-formula><mml:math display=\"inline\" overflow=\"scroll\"><mml:mrow><mml:mi>G</mml:mi><mml:mi>a</mml:mi></mml:mrow></mml:math></inline-formula>" + 
-    /* testing for inline formulas in article titles - replacing formulae with " ... " */
+    /* JATS schema helper just pulls the text from an inline formula...fine for our purposes */
     "from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011" +
     "</article-title>" +
     "</title-group>" +
@@ -150,12 +145,10 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "<xref ref-type=\"aff\" rid=\"a3\">3</xref>" +
     "</contrib>" +
     "<contrib contrib-type=\"author\">"+
+    /* ignoring name-alternative now. just use original */
     "<name-alternatives><name name-style=\"western\">"+
     "<surname>Sun</surname>"+
     "<given-names>B. M.</given-names></name>"+
-    /* if you add the following, complaints about invalid utf-8 characters follow
-    "<string-name name-style=\"eastern\" xml:lang=\"zh\">孙保民</string-name>" +
-     */
     "</name-alternatives></contrib>"+
     "<aff id=\"a1\">" +
     "<label>1</label>" +
@@ -299,10 +292,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "</body>" +
     "</article>";
   
-  private static final String EMPTY_CONTENT =
-      "<article>" +
-      "</article>";
-  
   private static final String BAD_CONTENT =
     "<HTML><HEAD><TITLE>" + GOOD_ARTICLE_TITLE + "</TITLE></HEAD><BODY>\n"
     + "<meta name=\"foo\"" +  " content=\"bar\">\n"
@@ -348,42 +337,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     setUp();
   }
  
-    // get test input files from current directory
-  private String getInputFile(String filename) {
-    String jatsStr;
-    try {
-      InputStream jatsIn = getClass().getResourceAsStream(filename);
-      jatsStr = StringUtil.fromInputStream(jatsIn);
-    }
-    catch (IOException e) {
-       throw new RuntimeException(e);
-    }
-    return (jatsStr);
-  }
-
-  public void testExtractFromEmptyContent() throws Exception {
-    String xml_url = TEST_XML_URL;
-    String pdf_url = TEST_PDF_URL;
-
-    CIProperties xmlHeader = new CIProperties();
-
-    MockCachedUrl xml_cu = mau.addUrl(xml_url, true, true, xmlHeader);
-    xml_cu.setContent(EMPTY_CONTENT);
-    xml_cu.setContentSize(EMPTY_CONTENT.length());
-    MockCachedUrl pdf_cu = mau.addUrl(pdf_url, true, true, xmlHeader);
-    pdf_cu.setContent(EMPTY_CONTENT);
-    pdf_cu.setContentSize(EMPTY_CONTENT.length());
-    
-    FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory
-                                  .AIPJatsSourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xml_cu);
-    assertEmpty(mdlist);
-
-  }
   
   public void testExtractFromBadContent() throws Exception {
     String xml_url = TEST_XML_URL;
@@ -400,8 +353,8 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     pdf_cu.setContentSize(BAD_CONTENT.length());
 
     
-    FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory
-                                  .AIPJatsSourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new  AIPJatsSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
@@ -432,7 +385,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       pcu.setContentSize(string_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
+      FileMetadataExtractor me = new  AIPJatsSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
       FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -447,12 +400,8 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
       assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
       assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-//      assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
       assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-      assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-      //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+      assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {
@@ -460,67 +409,50 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     }
   }
   
- /*
-  // Use when getting test content locally
-  private String basicInputContent = getInputFile("Markup/VOR_10.1063_1.4829703.xml");
+  private static final String realXMLFile = "test_jats.xml";
 
-  // original xml file from the publisher
-  public void testExtractFromRealContent() throws Exception {
-    String xml_url = "Markup/VOR_10.1063_1.4829703.xml";
-    String pdf_url ="Page_Renditions/online.pdf";
-    CIProperties xmlHeader = new CIProperties();
-
+  public void testFromJatsPublishingXMLFile() throws Exception {
     InputStream file_input = null;
     try {
-      //MockCachedUrl mcu = new MockCachedUrl(url, mau);
+      file_input = getResourceAsStream(realXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();    
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      //MockCachedUrl cu = new MockCachedUrl(xml_url, mau);
-      MockCachedUrl xcu = mau.addUrl(xml_url, true, true, xmlHeader);
-      // need to check for this file before emitting
-      MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
+      MockCachedUrl mcu = mau.addUrl(TEST_XML_URL, true, true, xmlHeader);
+      // Now add all the pdf files in our AU since we check for them before emitting
+      mau.addUrl(TEST_PDF_URL, true, true, xmlHeader);
 
-      file_input = getResourceAsStream(xml_url);
-      String xml_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-      //MockCachedUrl pcu = new MockCachedUrl(pdf_url, mau);
-      // really not going to be read other than to check .hasContent()
-      file_input = getResourceAsStream(xml_url);
-      String pdf_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-      
-      xcu.setContent(xml_input);
-      xcu.setContentSize(xml_input.length());
-      xcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-      pcu.setContent(pdf_input);
-      pcu.setContentSize(pdf_input.length());
-      pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-      FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
-      assertNotNull(me);
-      log.debug3("Extractor: " + me.toString());
-      FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xcu);
+      FileMetadataExtractor me = new  AIPJatsSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
       assertNotEmpty(mdlist);
-      ArticleMetadata md = mdlist.get(0);
-      assertNotNull(md);
+      assertEquals(1, mdlist.size());
 
-          assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-          assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
-          assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-          assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-          assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-          assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-          assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-          assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-          //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-      //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-      assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
-      
-    } finally {
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        //log.info(mdRecord.ppString(2));
+        assertEquals("10.1111/FOO.3.3430", mdRecord.get(MetadataField.FIELD_DOI));
+        assertEquals("Van Writerr, Piet", mdRecord.getList(MetadataField.FIELD_AUTHOR).get(0));
+        assertEquals("Phyics Foo", mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("2017", mdRecord.get(MetadataField.FIELD_DATE));
+        assertEquals("An Article Title in Italics", mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE));
+        assertEquals("70", mdRecord.get(MetadataField.FIELD_VOLUME));
+        assertEquals("1", mdRecord.get(MetadataField.FIELD_ISSUE));        
+      }
+    }finally {
       IOUtil.safeClose(file_input);
     }
+
   }
-  */
+  
 }

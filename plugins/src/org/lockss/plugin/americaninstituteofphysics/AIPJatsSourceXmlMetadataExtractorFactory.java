@@ -1,10 +1,10 @@
 /*
- * $Id$
+ * $Id:$
  */
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,85 +32,93 @@
 
 package org.lockss.plugin.americaninstituteofphysics;
 
-import org.apache.commons.io.FilenameUtils;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
+/*
+ * If the xml is at foo/blah/Markup/VOR_10.2351_1.4893749.xml
+ * then the pdf is at foo/blah/Page_Renditions/online.pdf 
+ * which is the Page_Renditions sibling directory with the filename always "online.pdf" 
+ */
+
 public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(AIPJatsSourceXmlMetadataExtractorFactory.class);
+  private static final String PDF_DIR_FILE = "/Page_Renditions/online.pdf";
 
-  private static SourceXmlSchemaHelper AIPJatsHelper = null;
+  private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
-
-  // these are the subdirs where the xml and pdf files live, respectively
-  final static String XMLDIR = "Markup/";
-  final static String PDFDIR = "Page_Renditions/";
-  final static String PDFFILE = "online.pdf";
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new AIPJatsSourceXmlMetadataExtractor();
+    return new JatsPublishingSourceXmlMetadataExtractor();
   }
 
-  public static class AIPJatsSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
-    @Override
-    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper, 
-        CachedUrl cu, ArticleMetadata thisAM) {
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String aipBase = null;
-      ArchivalUnit B_au = cu.getArchivalUnit();
-      CachedUrl fileCu;
-
-
-      log.debug3("in AIPJats preEmitCheck");
-      // hardcoded to be online.pdf
-
-      // no pre-emit check required if values are all null
-      // we know for AIPJats (filenameSuffixList, filenameKey) will be null
-
-      /* AIPJats file structure has the xml at .../Markup/***.xml
-       * and the pdf is always named .../Page_Renditions/online.pdf
-       * so this pre-emit check has to check to make sure the pdf exists 
-       */
-      if (cuBase.endsWith(XMLDIR)) {
-        int i = cuBase.lastIndexOf(XMLDIR);
-        aipBase = cuBase.substring(0, i);
-      }
-      if (aipBase == null) {
-        log.debug3(cuBase + ": non standard location for XML");
-        return false;
-      }
-
-      //Check in order for at least existing file from among the suffixes
-      // just check for the one version using the other items
-      fileCu = B_au.makeCachedUrl(aipBase + PDFDIR + PDFFILE);
-      if(fileCu != null && (fileCu.hasContent())) {
-        // Set a cooked value for an access file. Otherwise it would get set to xml file
-        thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-        return true;
-      } else {
-        log.debug3(aipBase+PDFDIR+PDFFILE + " does not exist in this AU");
-        return false; //No file found to match this record
-      }
-    }
+  public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (AIPJatsHelper != null) {
-        return AIPJatsHelper;
+      if (JatsPublishingHelper == null) {
+        JatsPublishingHelper = new JatsPublishingSchemaHelper();
       }
-      AIPJatsHelper = new AIPJatsXmlSchemaHelper();
-      return AIPJatsHelper;
+      return JatsPublishingHelper;
     }
+
+
+    /* 
+     * filename is always online.pdf and lives in the sibling directory names Page_Renditions
+     * The XML file represented by the current cu would be something like:
+     * ...76_CLOCKSS_aip_2017-01-03_234500.zip!/APC/v1788/i1/010002_1/Markup/VOR_10.1063_1.4968248.xml
+     * and the pdf would be
+     * ...76_CLOCKSS_aip_2017-01-03_234500.zip!/APC/v1788/i1/010002_1/Page_Renditions/online.pdf
+     */
+    @Override
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+
+      String pdfPath;
+      String url_string = cu.getUrl();
+      int markup_dir_start = url_string.lastIndexOf("/Markup/");
+      // This will leave the "/", so just add back on the sibling_dir and filename
+      if (markup_dir_start < 0) {
+        //can't return null because that would make it okay to emit
+        // this will fail to emit, as it should - we don't know how to verify the PDF existence
+        log.siteWarning("The XML file lives at an unexpected location: " + url_string);
+        pdfPath = PDF_DIR_FILE;  
+      }  else {
+        pdfPath = url_string.substring(0, markup_dir_start) + PDF_DIR_FILE;
+      }
+      log.debug3("pdfPath is " + pdfPath);
+      List<String> returnList = new ArrayList<String>();
+      returnList.add(pdfPath);
+      return returnList;
+    }
+    
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("in AIP postCookProcess");
+      //If we didn't get a valid date value, use the copyright year if it's there
+      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+        } else {// last chance
+          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+        }
+      }
+    }
+
   }
 }
