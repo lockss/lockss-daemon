@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -860,8 +860,8 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  int getHighestNumberedDatabaseVersion(Connection conn, String subsystem)
-      throws SQLException {
+  public int getHighestNumberedDatabaseVersion(Connection conn,
+      String subsystem) throws SQLException {
     final String DEBUG_HEADER = "getHighestNumberedDatabaseVersion(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subsystem = " + subsystem);
 

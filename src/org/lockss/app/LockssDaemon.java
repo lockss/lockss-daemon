@@ -33,6 +33,7 @@ import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
+import org.lockss.exporter.FetchTimeExportManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
@@ -141,6 +142,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   //public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
+  public static final String FETCH_TIME_EXPORT_MANAGER =
+      "FetchTimeExportManager";
   //public static final String JOB_MANAGER = "JobManager";
 
   // Manager descriptors.  The order of this table determines the order in
@@ -171,6 +174,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // Start the COUNTER reports manager.
     new ManagerDesc(COUNTER_REPORTS_MANAGER,
 	"org.lockss.exporter.counter.CounterReportsManager"),
+    // Start the fetch time export manager.
+    new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
+	"org.lockss.exporter.FetchTimeExportManager"),
     // Start the job manager.
     new ManagerDesc(JobManager.getManagerKey(), "org.lockss.job.JobManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
@@ -537,6 +543,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public CounterReportsManager getCounterReportsManager() {
     return (CounterReportsManager) getManager(COUNTER_REPORTS_MANAGER);
+  }
+
+  /**
+   * Provides the fetch time export manager.
+   * 
+   * @return a FetchTimeExportManager with the fetch time export manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public FetchTimeExportManager getFetchTimeExportManager() {
+    return (FetchTimeExportManager) getManager(FETCH_TIME_EXPORT_MANAGER);
   }
 
   /**

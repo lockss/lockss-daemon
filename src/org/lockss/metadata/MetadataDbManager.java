@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2016-2017 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -314,6 +314,35 @@ public class MetadataDbManager extends DbManager
   protected String getDerbyStreamErrorLogSeverityLevel(Configuration config) {
     return config.get(PARAM_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL,
 	DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL);
+  }
+
+  /**
+   * Provides the database version.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return an int with the database version.
+   * @throws DbException
+   *           if this object is not ready or any problem occurred getting the
+   *           database version.
+   */
+  public int getDatabaseVersion(Connection conn) throws DbException {
+    if (!ready) {
+      throw new DbException("DbManager has not been initialized.");
+    }
+
+    try {
+      return dbManagerSql.getHighestNumberedDatabaseVersion(conn,
+	  this.getClass().getSimpleName());
+    } catch (SQLException sqle) {
+      String message = "Cannot get the database version";
+      log.error(message, sqle);
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot get the database version";
+      log.error(message, re);
+      throw new DbException(message, re);
+    }
   }
 
   /**
@@ -659,6 +688,46 @@ public class MetadataDbManager extends DbManager
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
     return providerSeq;
+  }
+
+  /**
+   * Provides an indication of whether a given database upgrade has been
+   * completed.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param version
+   *          An int with the version of the database upgrade to check.
+   * @return <code>true</code> if the database upgrade has been completed,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean isVersionCompleted(Connection conn, int version)
+      throws DbException {
+    final String DEBUG_HEADER = "isVersionCompleted(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
+
+    boolean result = false;
+
+    try {
+      result = dbManagerSql.isVersionCompleted(conn,
+	  this.getClass().getSimpleName(), version);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+    } catch (SQLException sqle) {
+      String message = "Cannot find a database version";
+      log.error(message);
+      log.error("version = " + version);
+      throw new DbException(message, sqle);
+    } catch (RuntimeException re) {
+      String message = "Cannot find a database version";
+      log.error(message);
+      log.error("version = " + version);
+      throw new DbException(message, re);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   /**
