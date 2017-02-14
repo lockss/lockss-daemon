@@ -160,6 +160,8 @@ implements SourceXmlSchemaHelper {
   /*
    * Title is built up from sibling - subfield@code=a & subfield@code=b
    *   the titles are inconsistent on inclusion of : and padding spaces
+   *   these may or may not have the "marc:" namespace in them
+   *   in 2014 they didn't; in 2016 they did
    */
   
   static private final NodeValue TITLE_VALUE = new NodeValue() {
@@ -176,7 +178,7 @@ implements SourceXmlSchemaHelper {
       for (int j = 0; j < elementChildren.getLength(); j++) {
         Node checkNode = elementChildren.item(j);
         String nodeName = checkNode.getNodeName();
-        if ("subfield".equals(nodeName)) {
+        if ("subfield".equals(nodeName)  | "marc:subfield".equals(nodeName) ) {
           String code = ((Element)checkNode).getAttribute("code");
           if ("a".equals(code)) {
             // some have :, some not; some spaces, some not - make consistent

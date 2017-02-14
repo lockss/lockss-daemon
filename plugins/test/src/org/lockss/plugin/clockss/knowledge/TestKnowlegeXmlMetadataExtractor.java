@@ -33,6 +33,7 @@
 
 package org.lockss.plugin.clockss.knowledge;
 
+import java.io.InputStream;
 import java.util.*;
 
 import org.lockss.test.*;
@@ -40,6 +41,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.lia.LiaJatsXmlMetadataExtractorFactory;
 
 
 public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
@@ -315,4 +317,44 @@ public class TestKnowlegeXmlMetadataExtractor extends LockssTestCase {
   private String addSubFieldBlock(String sf_code) {
     return "</subfield><subfield code=\"" + sf_code + "\">";
   }
+  
+  private static final String realXMLFile = "unlatched.xml";
+
+  public void testFromXMLFile() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();    
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+      // Now add all the pdf files in our AU since we check for them before emitting
+      mau.addUrl(pdfUrl1, true, true, xmlHeader);
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new  KnowledgeUnlatchedSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(1, mdlist.size());
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+        log.debug3(mdRecord.ppString(2));
+        assertEquals("War Anthropology : The Subtitle about this Stuff", mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }  
 }

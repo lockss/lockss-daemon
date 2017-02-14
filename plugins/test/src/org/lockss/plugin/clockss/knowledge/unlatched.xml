@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<marc:record>
+<marc:leader>04900nam a2000529 a 4500</marc:leader>
+<marc:controlfield tag="001">org.knowledgeunlatched.112</marc:controlfield>
+<marc:controlfield tag="003">IN-ChSCO</marc:controlfield>
+<marc:controlfield tag="006">m|||||||||||||||||</marc:controlfield>
+<marc:controlfield tag="007">cr||n||||||||n</marc:controlfield>
+<marc:controlfield tag="008">151022s2016||||dur|||||s|||||||||||eng||</marc:controlfield>
+<marc:datafield tag="010" ind1=" " ind2=" ">
+<marc:subfield code="a">2015037300</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="020" ind1=" " ind2=" ">
+<marc:subfield code="a">9780899999999 (print-ISBN)</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="020" ind1=" " ind2=" ">
+<marc:subfield code="a">9780888888888 (pbk-ISBN)</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="020" ind1=" " ind2=" ">
+<marc:subfield code="a">9780811111111 (e-ISBN)</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="040" ind1=" " ind2=" ">
+<marc:subfield code="a">IN-ChSCO</marc:subfield>
+<marc:subfield code="b">eng</marc:subfield>
+<marc:subfield code="e">rda</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="042" ind1=" " ind2=" ">
+<marc:subfield code="a">pcc</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="043" ind1=" " ind2=" ">
+<marc:subfield code="a">n-us---</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="050" ind1=" " ind2="4">
+<marc:subfield code="a">GN17.3.U5</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="050" ind1="0" ind2="0">
+<marc:subfield code="a">GN17.3.U5</marc:subfield>
+<marc:subfield code="b">P75 2016</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="082" ind1="0" ind2="4">
+<marc:subfield code="a">301.097309/04</marc:subfield>
+<marc:subfield code="2">23</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="100" ind1="1" ind2=" ">
+<marc:subfield code="a">Writer, David H., </marc:subfield>
+<marc:subfield code="e">author.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="245" ind1="1" ind2="0">
+<marc:subfield code="a">War Anthropology : </marc:subfield>
+<marc:subfield code="b">The Subtitle about this Stuff / </marc:subfield>
+<marc:subfield code="c">David H. Writer.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="246" ind1="3" ind2="0">
+<marc:subfield code="a">War Anthropology: The Substitle about this Stuff</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="263" ind1=" " ind2=" ">
+<marc:subfield code="a">201604.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="264" ind1=" " ind2="1">
+<marc:subfield code="a">Durham, N.C., : </marc:subfield>
+<marc:subfield code="b">Duke University Press, </marc:subfield>
+<marc:subfield code="c">c2016.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="264" ind1=" " ind2="2">
+<marc:subfield code="a">London : </marc:subfield>
+<marc:subfield code="b">Knowledge Unlatched, </marc:subfield>
+<marc:subfield code="c">c2016.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="264" ind1=" " ind2="4">
+<marc:subfield code="c">©2016.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="300" ind1=" " ind2=" ">
+<marc:subfield code="a">1 online resource (472 pages) : </marc:subfield>
+<marc:subfield code="b">illustrations, figures, tables.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="336" ind1=" " ind2=" ">
+<marc:subfield code="a">text</marc:subfield>
+<marc:subfield code="2">rdacontent</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="337" ind1=" " ind2=" ">
+<marc:subfield code="a">computer</marc:subfield>
+<marc:subfield code="2">rdamedia</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="338" ind1=" " ind2=" ">
+<marc:subfield code="a">online resource</marc:subfield>
+<marc:subfield code="2">rdacarrier</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="504" ind1=" " ind2=" ">
+<marc:subfield code="a">Includes bibliographical references and indexes.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="505" ind1="0" ind2=" ">
+<marc:subfield code="a">Cold War political-economic disciplinary formations -- Political economy and history of American Cold War intelligence -- World War II long shadow -- Rebooting professional anthropology in the postwar world -- After the shooting war: centers, committees, seminars, and other Cold War projects -- Anthropologists and state: aid, debt, and other Cold War weapons of the strong intermezzo -- Anthropologists' articulations with the National Security State -- Cold War anthropologists at the CIA: careers confirmed and suspected -- How CIA funding fronts shaped anthropological research -- Unwitting CIA anthropologist collaborators: MK-Ultra, human ecology, and buying a piece of anthropology -- Cold War fieldwork within the intelligence universe -- Cold War anthropological counterinsurgency dreams -- The AAA confronts military and intelligence uses of disciplinary knowledge -- Anthropologically informed counterinsurgency in Southeast Asia -- Anthropologists for radical political action and revolution within the AAA -- Untangling open secrets, hidden histories, outrage denied, and recurrent dual use themes.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="520" ind1="3" ind2=" ">
+<marc:subfield code="a">A thoroughly researched account of how the CIA influenced and employed anthropological research from the Cold War through Vietnam. This title was made Open Access by libraries from around the world through Knowledge Unlatched.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="520" ind1="3" ind2=" ">
+<marc:subfield code="b">In a wide-ranging and in-depth study of the recent history of anthropology, David Price offers a provocative account of the ways anthropology has been influenced by U.S. imperial projects around the world, and by CIA funding in particular. DUAL USE ANTHROPOLOGY is the third in Price’s trilogy on the history of the discipline of anthropology and its tangled relationship with the American military complex. He argues that anthropologists’ interactions with Cold War military and intelligence agencies shaped mid-century American anthropology and that governmental and private funding of anthropological research programs connected witting and unwitting anthropologists with research of interest to military and intelligence agencies. Price gives careful accounts of CIA interactions with the American Anthropological Association (AAA), the development of post-war area studies programs, and new governmental funding programs articulated with Cold War projects. During the late 1960s and early 1970s, American anthropologists became increasingly critical of anthropologists’ collaborations with military and intelligence agencies, particularly when these interactions contributed to counterinsurgency projects. Awareness of these uses of anthropology led to several public clashes within the AAA, and to the development of the Association’s first ethics code. Price compares this history of anthropological knowledge being used by military and intelligence agencies during the Cold War to post-9/11 projects.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="530" ind1=" " ind2=" ">
+<marc:subfield code="a">Also issued in print and PDF version.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="540" ind1=" " ind2=" ">
+<marc:subfield code="a">CC BY-NC-ND.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="4">
+<marc:subfield code="a">Anthropologists</marc:subfield>
+<marc:subfield code="x">Political activity</marc:subfield>
+<marc:subfield code="z">United States</marc:subfield>
+<marc:subfield code="x">History</marc:subfield>
+<marc:subfield code="x">20th century.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="4">
+<marc:subfield code="a">Anthropology</marc:subfield>
+<marc:subfield code="x">Political aspects</marc:subfield>
+<marc:subfield code="z">United States</marc:subfield>
+<marc:subfield code="x">History</marc:subfield>
+<marc:subfield code="x">20th century.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="4">
+<marc:subfield code="a">Cold War.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="4">
+<marc:subfield code="a">Military intelligence</marc:subfield>
+<marc:subfield code="x">United States</marc:subfield>
+<marc:subfield code="x">History</marc:subfield>
+<marc:subfield code="x">20th century.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="4">
+<marc:subfield code="a">Science and state</marc:subfield>
+<marc:subfield code="z">United States</marc:subfield>
+<marc:subfield code="x">History</marc:subfield>
+<marc:subfield code="x">20th century.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="0">
+<marc:subfield code="a">Anthropology.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="650" ind1=" " ind2="0">
+<marc:subfield code="a">Politics.</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="776" ind1="1" ind2="8">
+<marc:subfield code="i">Print version: </marc:subfield>
+<marc:subfield code="t">War Anthropology, The Subtitle about this Stuff</marc:subfield>
+<marc:subfield code="d">Durham, N.C., : </marc:subfield>
+<marc:subfield code="b">Duke University Press, </marc:subfield>
+<marc:subfield code="c">c2016. </marc:subfield>
+<marc:subfield code="z">9780822361060</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="856" ind1="4" ind2="0">
+<marc:subfield code="u">http://www.oapen.org/search?identifier=6xxxxx</marc:subfield>
+</marc:datafield>
+<marc:datafield tag="955" ind1=" " ind2=" ">
+<marc:subfield code="a">org.knowledgeunlatched.112.</marc:subfield>
+</marc:datafield>
+</marc:record>
+</marc:collection>
