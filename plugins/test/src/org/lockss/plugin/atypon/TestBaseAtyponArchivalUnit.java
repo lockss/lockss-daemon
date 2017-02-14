@@ -229,6 +229,15 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // this one is valid 
     shouldCacheTest(ROOT_URL + "action/downloadCitation?doi=10.1111%2F123456&format=ris&include=cit", 
         true, ABAu, cus);
+    
+    // a few things we explicitly don't want
+    // mistake in T&F that caused recursing due to incorrect use of relative link
+    shouldCacheTest(ROOT_URL + "toc/iort20/85/www.tandf.co.uk/journals/pdf/rate-cards/www.tandf.co.uk/journals/pdf/rate-cards/www.tandf.co.uk/journals/pdf/rate-cards/IORT.pdf", 
+        false, ABAu, cus);
+    //ppt used in downlaod of figures - we can't hash 
+    shouldCacheTest(ROOT_URL + "action/downloadFigures?doi=10.1080%2F0376835X.2014.952896&id=F0003", 
+        false, ABAu, cus);
+
 
     // ASCE use of relative link where it should be absolute causes ever-deeper URLS because
     // the "page not found" page uses the template with the same relative link problem.

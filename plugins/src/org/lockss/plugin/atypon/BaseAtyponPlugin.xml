@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>66</string>
+    <string>67</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -77,6 +77,7 @@
     <!--  CRAWL COMMENT BLOCK
     - lots of variable versioning at the end of fonts/images (_v9,?v=1.2.4,?1nc2qbv)
     - googleAnalyticsPlugin.js : TMP: ASCE recursing ever deeper incorrectly relative url
+    - rate-card: T&F with wildly recursing ever deeper incorrect relative URL including www.tandf.co.uk
     - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
     - include all content from cdn (eg js, css and common images) cdn.nejm.org
     -     as well as foo.global.prod.fastly.net (emeraldinsight) 
@@ -111,6 +112,7 @@
     <list>
       <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
       <string>2,"^%sdoi/.*/googleAnalyticsPlugin\.js$", base_url</string>
+      <string>2,"^%s.*/www\.tandf\.co\.uk/", base_url</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
@@ -121,9 +123,9 @@
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
       <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
-      <!-- <string>1,"^%saction/downloadFigures\?doi=.+&amp;id=[^&amp;]+$", base_url</string>-->        
-      <string>1,"^%saction/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", base_url</string>          
-      <string>1,"^%saction/(downloadFigures|downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", base_url</string>
+      <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->          
+      <string>1,"^%saction/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
     </list>
   </entry>
   <!--  tandf is serving pdf files of this form (tables) without mime-type -->
