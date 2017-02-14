@@ -17,7 +17,8 @@
   
     title <
       name = Alaska Law Review ;
-      issn = 0883-0568 
+      issn = 0883-0568 ;
+      eissn = 1930-6598
     >
 
     param[journal_abbr] = alr
@@ -55,9 +56,9 @@
     au < finished ; finished ; 2014 ; Alaska Law Review Volume 31 ; 31 ; >
     au < finished ; finished ; 2015 ; Alaska Law Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Alaska Law Review Volume 33 ; 33 ; >
+    au < expected ; exists ; 2017 ; Alaska Law Review Volume 34 ; 34 ; >
 
   }
-
 
   {
   
