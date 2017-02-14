@@ -164,13 +164,17 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "AAPDrupalPlugin" ||
+           $plugin eq "ADADrupalPlugin" ||
            $plugin eq "AHADrupalPlugin" ||
            $plugin eq "APSDrupalPlugin" ||
            $plugin eq "ARFDrupalPlugin" ||
+           $plugin eq "ASHDrupalPlugin" ||
            $plugin eq "BESBJSDrupalPlugin" ||
            $plugin eq "BiologistsDrupalPlugin" ||
            $plugin eq "BMJDrupalPlugin" ||
+           $plugin eq "EMBODrupalPlugin" ||
            $plugin eq "ERSDrupalPlugin" ||
+           $plugin eq "FSFDrupalPlugin" ||
            $plugin eq "GeneticsSocietyDrupalPlugin" ||
            $plugin eq "GSLDrupalPlugin" ||
            $plugin eq "GSWDrupalPlugin" ||
@@ -182,6 +186,7 @@ while (my $line = <>) {
            $plugin eq "RCPsychDrupalPlugin" ||
            $plugin eq "RSPDrupalPlugin" ||
            $plugin eq "RUPDrupalPlugin" ||
+           $plugin eq "SFNDrupalPlugin" ||
            $plugin eq "HWDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
@@ -219,10 +224,11 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "ClockssAAPDrupalPlugin" ||
+  } elsif ($plugin eq "ClockssAAASDrupalPlugin" ||
+           $plugin eq "ClockssAAPDrupalPlugin" ||
            $plugin eq "ClockssADADrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
-           $plugin eq "ClockssAAASDrupalPlugin" ||
+           $plugin eq "ClockssASPETDrupalPlugin" ||
            $plugin eq "ClockssBiologistsDrupalPlugin" ||
            $plugin eq "ClockssERSDrupalPlugin" ||
            $plugin eq "ClockssGSLDrupalPlugin" ||
@@ -689,6 +695,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssMultiSciencePlugin") ||
            ($plugin eq "ClockssNRCResearchPressPlugin") ||
            ($plugin eq "ClockssPracticalActionJournalsPlugin") ||
+           ($plugin eq "ClockssSageAtyponJournalsPlugin") ||
            ($plugin eq "ClockssSEGPlugin") ||
            ($plugin eq "ClockssSiamPlugin") ||
            ($plugin eq "ClockssWageningenJournalsPlugin")) {
