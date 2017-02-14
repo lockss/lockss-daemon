@@ -44269,4 +44269,29 @@
     au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; pmsb ; >
 
   }
+
+  {
+    title <
+      name = Pediatric and Developmental Pathology ;
+      issn = 1093-5266 ;
+      eissn = 1615-5742 ;
+      issnl = 1093-5266
+    >
+    
+    #param[journal_id] = pdpa
+    
+    au < exists ; exists ; 2006 ; Pediatric and Developmental Pathology Volume 9 ; 9 ; pdpa ; >
+    au < exists ; exists ; 2007 ; Pediatric and Developmental Pathology Volume 10 ; 10 ; pdpa ; >
+    au < exists ; exists ; 2008 ; Pediatric and Developmental Pathology Volume 11 ; 11 ; pdpa ; >
+    au < exists ; exists ; 2009 ; Pediatric and Developmental Pathology Volume 12 ; 12 ; pdpa ; >
+    au < exists ; exists ; 2010 ; Pediatric and Developmental Pathology Volume 13 ; 13 ; pdpa ; >
+    au < exists ; exists ; 2011 ; Pediatric and Developmental Pathology Volume 14 ; 14 ; pdpa ; >
+    au < exists ; exists ; 2012 ; Pediatric and Developmental Pathology Volume 15 ; 15 ; pdpa ; >
+    au < exists ; exists ; 2013 ; Pediatric and Developmental Pathology Volume 16 ; 16 ; pdpa ; >
+    au < exists ; exists ; 2014 ; Pediatric and Developmental Pathology Volume 17 ; 17 ; pdpa ; >
+    au < exists ; exists ; 2015 ; Pediatric and Developmental Pathology Volume 18 ; 18 ; pdpa ; >
+    au < exists ; exists ; 2016 ; Pediatric and Developmental Pathology Volume 19 ; 19 ; pdpa ; >
+    
+  }
+  
 }
