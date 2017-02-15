@@ -308,8 +308,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jme.endocrinology-journals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[jme45] = found a login page
-      comment[jme46] = no permission 
 
       au < released ; 1988 ; Journal of Molecular Endocrinology Volume 1 ; 1 >
       au < released ; 1989 ; Journal of Molecular Endocrinology Volume 2 ; 2 >
