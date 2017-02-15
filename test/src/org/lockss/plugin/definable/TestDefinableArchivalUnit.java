@@ -1572,6 +1572,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     
   }
 
+  public void testNoMimeMap() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a plugin definition without au_url_mime_type map
+    String pname = "org.lockss.plugin.definable.GoodPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    assertFalse(((DefinablePlugin)plug).getDefinitionMap()
+		.containsKey(DefinableArchivalUnit.KEY_AU_URL_MIME_TYPE));
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    assertTrue(au.makeUrlMimeTypeMap().isEmpty());
+  }
+
   public void testFeatureUrls() throws Exception {
     MyDefinablePlugin defplug = loadLargePlugin();
     // Configure and create an AU
