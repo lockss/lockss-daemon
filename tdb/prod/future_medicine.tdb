@@ -77,6 +77,7 @@
     >
     comment[continued_by] = Clinical Lipidology, 1758-4299
     param[journal_id] = flp
+    #No longer published by Future Medicine 
 
     au < manifest ; 2006 ; Future Lipidology Volume 1 ; 1 >
     au < manifest ; 2007 ; Future Lipidology Volume 2 ; 2 >
@@ -92,7 +93,8 @@
     >
     comment[continues] = Future Lipidology
     param[journal_id] = clp
-
+    #No longer published by Future Medicine
+     
     au < manifest ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
     au < manifest ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
     au < manifest ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
@@ -100,28 +102,6 @@
     au < released ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < released ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
     au < released ; 2015 ; Clinical Lipidology Volume 10 ; 10 >
-    au < expected ; 2016 ; Clinical Lipidology Volume 11 ; 11 >
-
-  }
-
-  {
-  
-    title < 
-      name = Therapy ;
-      issn = 1475-0708 ;
-      eissn = 1744-831X
-    >
-    comment[continued_by] = Clinical Practice, 2044-9038
-    param[journal_id] = thy
-
-    au < manifest ; 2004 ; Therapy Volume 1 ; 1 >
-    au < manifest ; 2005 ; Therapy Volume 2 ; 2 >
-    au < manifest ; 2006 ; Therapy Volume 3 ; 3 >
-    au < manifest ; 2007 ; Therapy Volume 4 ; 4 >
-    au < manifest ; 2008 ; Therapy Volume 5 ; 5 >
-    au < manifest ; 2009 ; Therapy Volume 6 ; 6 >
-    au < manifest ; 2010 ; Therapy Volume 7 ; 7 >
-    au < manifest ; 2011 ; Therapy Volume 8 ; 8 >
 
   }
 
@@ -133,12 +113,11 @@
     >
     comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
+    #No longer published by Future Medicine, no content online
 
-    au < released ; 2012 ; Clinical Practice Volume 9 ; 9 >
-    au < released ; 2013 ; Clinical Practice Volume 10 ; 10 >
-    au < released ; 2014 ; Clinical Practice Volume 11 ; 11 >
-    au < expected ; 2015 ; Clinical Practice Volume 12 ; 12 >
-    au < expected ; 2016 ; Clinical Practice Volume 13 ; 13 >
+    au < down ; 2012 ; Clinical Practice Volume 9 ; 9 >
+    au < down ; 2013 ; Clinical Practice Volume 10 ; 10 >
+    au < down ; 2014 ; Clinical Practice Volume 11 ; 11 >
 
   }
 
@@ -162,7 +141,7 @@
   {
   
     title < 
-      name = Colorectal Cancery ;
+      name = Colorectal Cancer ;
       issn = 1758-194X
     >
     
@@ -198,13 +177,12 @@
     >
     
     param[journal_id] = dmt
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; 2011 ; Diabetes Management Volume 1 ; 1 >
-    au < released ; 2012 ; Diabetes Management Volume 2 ; 2 >
-    au < released ; 2013 ; Diabetes Management Volume 3 ; 3 >
-    au < released ; 2014 ; Diabetes Management Volume 4 ; 4 >
-    au < released ; 2015 ; Diabetes Management Volume 5 ; 5 >
-    au < expected ; 2016 ; Diabetes Management Volume 6 ; 6 >
+    au < down ; 2012 ; Diabetes Management Volume 2 ; 2 >
+    au < down ; 2013 ; Diabetes Management Volume 3 ; 3 >
+    au < down ; 2014 ; Diabetes Management Volume 4 ; 4 >
+    au < down ; 2015 ; Diabetes Management Volume 5 ; 5 >
 
   }
 
@@ -403,15 +381,11 @@
     >
     
     param[journal_id] = iim
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; 2009 ; Imaging in Medicine Volume 1 ; 1 >
-    au < manifest ; 2010 ; Imaging in Medicine Volume 2 ; 2 >
-    au < manifest ; 2011 ; Imaging in Medicine Volume 3 ; 3 >
-    au < released ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
-    au < released ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
-    au < released ; 2014 ; Imaging in Medicine Volume 6 ; 6 >
-    au < expected ; 2015 ; Imaging in Medicine Volume 7 ; 7 >
-    au < expected ; 2016 ; Imaging in Medicine Volume 8 ; 8 >
+    au < down ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
+    au < down ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
+    au < down ; 2014 ; Imaging in Medicine Volume 6 ; 6 >
 
   }
 
@@ -439,37 +413,18 @@
   {
   
     title < 
-      name = Future Rheumatology ;
-      issn = 1746-0816 ;
-      eissn = 1746-0824
-    >
-    comment[continued_by] = International Journal of Clinical Rheumatology 1758-4272
-    param[journal_id] = frm
-
-    au < manifest ; 2006 ; Future Rheumatology Volume 1 ; 1 >
-    au < manifest ; 2007 ; Future Rheumatology Volume 2 ; 2 >
-    au < manifest ; 2008 ; Future Rheumatology Volume 3 ; 3 >
-
-  }
-
-  {
-  
-    title < 
       name = International Journal of Clinical Rheumatology ;
       issn = 1758-4272 ;
       eissn = 1758-4280
     >
     comment[continues] = Future Rheumatology 1758-4272
     param[journal_id] = ijr
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 4 >
-    au < manifest ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 5 >
-    au < manifest ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 6 >
-    au < released ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 >
-    au < released ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 >
-    au < released ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 >
-    au < released ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 >
-    au < expected ; 2016 ; International Journal of Clinical Rheumatology Volume 11 ; 11 >
+    au < down ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 >
+    au < down ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 >
+    au < down ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 >
+    au < down ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 >
 
   }
 
@@ -515,15 +470,25 @@
     >
     
     param[journal_id] = ica
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; 2009 ; Interventional Cardiology Volume 1 ; 1 >
-    au < manifest ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
-    au < manifest ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
-    au < released ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
-    au < released ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
-    au < released ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
-    au < released ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
-    au < expected ; 2016 ; Interventional Cardiology Volume 8 ; 8 >
+    au < down ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
+    au < down ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
+    au < down ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
+    au < down ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of 3D Printing in Medicine ;
+      issn = 2059-4755
+    >
+    
+    param[journal_id] = 3dp
+
+    au < exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 >
 
   }
 
@@ -628,13 +593,11 @@
     >
     
     param[journal_id] = npy
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
-    au < released ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
-    au < released ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
-    au < released ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
-    au < expected ; 2015 ; Neuropsychiatry Volume 5 ; 5 >
-    au < expected ; 2016 ; Neuropsychiatry Volume 6 ; 6 >
+    au < down ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
+    au < down ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
+    au < down ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
 
   }
 
@@ -762,6 +725,7 @@
     >
     
     param[journal_id] = whe
+    #move to Sage
 
     au < manifest ; 2005 ; Women's Health Volume 1 ; 1 >
     au < manifest ; 2006 ; Women's Health Volume 2 ; 2 >

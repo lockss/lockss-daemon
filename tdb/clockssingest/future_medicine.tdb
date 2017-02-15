@@ -51,6 +51,7 @@
     au < finished ; finished ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; >
+    au < exists ; exists ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; >
    
   }
 
@@ -68,6 +69,7 @@
     au < finished ; finished ; 2014 ; Breast Cancer Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Breast Cancer Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; >
+    au < expected ; exists ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; >
   
   }
 
@@ -80,6 +82,7 @@
     >
     comment[continued_by] = Clinical Lipidology, 1758-4299
     param[journal_id] = flp
+    #No longer published by Future Medicine
 
     au < manifest ; exists ; 2006 ; Future Lipidology Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; Future Lipidology Volume 2 ; 2 ; >
@@ -96,6 +99,7 @@
     
     comment[continues] = Future Lipidology
     param[journal_id] = clp
+    #No longer published by Future Medicine
 
     au < manifest ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 ; >
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 ; >
@@ -104,29 +108,7 @@
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Clinical Lipidology Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2016 ; Clinical Lipidology Volume 11 ; 11 ; >
     
-  }
-
-  {
-  
-    title < 
-      name = Therapy ;
-      issn = 1475-0708 ;
-      eissn = 1744-831X
-    >
-    comment[continued_by] = Clinical Practice, 2044-9038
-    param[journal_id] = thy
-
-    au < manifest ; exists ; 2004 ; Therapy Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2005 ; Therapy Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2006 ; Therapy Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2007 ; Therapy Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2008 ; Therapy Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2009 ; Therapy Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2010 ; Therapy Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2011 ; Therapy Volume 8 ; 8 ; >
-
   }
 
   {
@@ -138,12 +120,11 @@
     
     comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
+    #No longer published by Future Medicine, no content online
 
-    au < finished ; finished ; 2012 ; Clinical Practice Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 ; >
-    au < finished ; finished ; 2014 ; Clinical Practice Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2015 ; Clinical Practice Volume 12 ; 12 ; >
-    au < expected ; exists ; 2016 ; Clinical Practice Volume 13 ; 13 ; >
+    au < down ; finished ; 2012 ; Clinical Practice Volume 9 ; 9 ; >
+    au < down ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 ; >
+    au < down ; finished ; 2014 ; Clinical Practice Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -161,13 +142,14 @@
     au < finished ; finished ; 2014 ; CNS Oncology Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; CNS Oncology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; CNS Oncology Volume 5 ; 5 ; >
+    au < exists ; exists ; 2017 ; CNS Oncology Volume 6 ; 6 ; >
     
   }
 
   {
   
     title < 
-      name = Colorectal Cancery ;
+      name = Colorectal Cancer ;
       issn = 1758-194X
     >
     
@@ -178,6 +160,7 @@
     au < finished ; finished ; 2014 ; Colorectal Cancer Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; Colorectal Cancer Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; >
+    au < expected ; exists ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; >
     
   }
 
@@ -191,6 +174,7 @@
     param[journal_id] = cnc
 
     au < crawling ; exists ; 2016 ; Concussion Volume 1 ; 1 ; >
+    au < expected ; exists ; 2017 ; Concussion Volume 2 ; 2 ; >
 
   }
 
@@ -203,13 +187,12 @@
     >
     
     param[journal_id] = dmt
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; exists ; 2011 ; Diabetes Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 ; >
-    au < finished ; finished ; 2014 ; Diabetes Management Volume 4 ; 4 ; >
-    au < finished ; finished ; 2015 ; Diabetes Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2016 ; Diabetes Management Volume 6 ; 6 ; >
+    au < down ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 ; >
+    au < down ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 ; >
+    au < down ; finished ; 2014 ; Diabetes Management Volume 4 ; 4 ; >
+    au < down ; finished ; 2015 ; Diabetes Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
   
   }
 
@@ -230,6 +213,7 @@
     au < finished ; finished ; 2014 ; Epigenomics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Epigenomics Volume 7 ; 7 ; >
     au < crawling ; exists ; 2016 ; Epigenomics Volume 8 ; 8 ; >
+    au < exists ; exists ; 2017 ; Epigenomics Volume 9 ; 9 ; >
      
   }
 
@@ -255,6 +239,7 @@
     au < finished ; finished ; 2014 ; Future Cardiology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Future Cardiology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Future Cardiology Volume 12 ; 12 ; >
+    au < exists ; exists ; 2017 ; Future Cardiology Volume 13 ; 13 ; >
     
   }
 
@@ -278,6 +263,7 @@
     au < finished ; finished ; 2014 ; Future Microbiology Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Future Microbiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Future Microbiology Volume 11 ; 11 ; >
+    au < exists ; exists ; 2017 ; Future Microbiology Volume 12 ; 12 ; >
     
   }
 
@@ -302,6 +288,7 @@
     au < finished ; finished ; 2014 ; Future Neurology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Future Neurology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Future Neurology Volume 11 ; 11 ; >
+    au < exists ; exists ; 2017 ; Future Neurology Volume 12 ; 12 ; >
     
   }
 
@@ -327,6 +314,7 @@
     au < finished ; finished ; 2014 ; Future Oncology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Future Oncology Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Future Oncology Volume 12 ; 12 ; >
+    au < exists ; exists ; 2017 ; Future Oncology Volume 13 ; 13 ; >
     
   }
 
@@ -351,6 +339,7 @@
     au < finished ; finished ; 2014 ; Future Virology Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Future Virology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Future Virology Volume 11 ; 11 ; >
+    au < exists ; exists ; 2017 ; Future Virology Volume 12 ; 12 ; >
     
   }
 
@@ -382,6 +371,7 @@
     au < finished ; finished ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; >
     au < finished ; finished ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; >
+    au < expected ; exists ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; >
     
   }
 
@@ -409,15 +399,11 @@
     >
     
     param[journal_id] = iim
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; exists ; 2009 ; Imaging in Medicine Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Imaging in Medicine Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; Imaging in Medicine Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; >
-    au < finished ; finished ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2015 ; Imaging in Medicine Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; Imaging in Medicine Volume 8 ; 8 ; >
+    au < down ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; >
+    au < down ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; >
+    au < down ; finished ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -439,23 +425,8 @@
     au < finished ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; > #500 Error. Waiting for Atypon to fix.
     au < crawling ; exists ; 2016 ; Immunotherapy Volume 8 ; 8 ; >
+    au < exists ; exists ; 2017 ; Immunotherapy Volume 9 ; 9 ; >
     
-  }
-
-  {
-  
-    title < 
-      name = Future Rheumatology ;
-      issn = 1746-0816 ;
-      eissn = 1746-0824
-    >
-    comment[continued_by] = International Journal of Clinical Rheumatology 1758-4272
-    param[journal_id] = frm
-
-    au < manifest ; exists ; 2006 ; Future Rheumatology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2007 ; Future Rheumatology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2008 ; Future Rheumatology Volume 3 ; 3 ; >
-
   }
 
   {
@@ -467,15 +438,12 @@
     >
     
     param[journal_id] = ijr
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; exists ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 6 ; >
-    au < finished ; finished ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; >
-    au < finished ; finished ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; >
-    au < finished ; finished ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; International Journal of Clinical Rheumatology Volume 11 ; 11 ; >
+    au < down ; finished ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < down ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; >
+    au < down ; finished ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; >
+    au < down ; finished ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     
   }
 
@@ -492,6 +460,7 @@
     au < finished ; finished ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; >
+    au < expected ; exists ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; >
 
   }
 
@@ -509,6 +478,7 @@
     au < frozen ; exists ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; >
+    au < expected ; exists ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; >
     
   }
 
@@ -521,16 +491,26 @@
     >
     
     param[journal_id] = ica
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; exists ; 2009 ; Interventional Cardiology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 3 ; >
-    au < finished ; finished ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; >
-    au < finished ; finished ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Interventional Cardiology Volume 8 ; 8 ; >
+    au < down ; finished ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; >
+    au < down ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; >
+    au < down ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; >
+    au < down ; finished ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     
+  }
+
+  {
+  
+    title < 
+      name = Journal of 3D Printing in Medicine ;
+      issn = 2059-4755
+    >
+    
+    param[journal_id] = 3dp
+
+    au < exists ; exists ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; >
+
   }
 
   {
@@ -547,6 +527,7 @@
     au < frozen ; exists ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; >
     
   }
 
@@ -564,6 +545,7 @@
     au < finished ; finished ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; >
     au < crawling ; exists ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; >
+    au < expected ; exists ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; >
     
   }
 
@@ -580,6 +562,7 @@
     au < finished ; finished ; 2014 ; Melanoma Management Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Melanoma Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Melanoma Management Volume 3 ; 3 ; >
+    au < expected ; exists ; 2017 ; Melanoma Management Volume 4 ; 4 ; >
 
   }
 
@@ -604,6 +587,7 @@
     au < finished ; finished ; 2014 ; Nanomedicine Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Nanomedicine Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Nanomedicine Volume 11 ; 11 ; >
+    au < exists ; exists ; 2017 ; Nanomedicine Volume 12 ; 12 ; >
     
   }
 
@@ -623,6 +607,7 @@
     au < finished ; finished ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; >
     au < crawling ; exists ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; >
+    au < exists ; exists ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; >
 
   }
 
@@ -634,13 +619,11 @@
     >
     
     param[journal_id] = npy
+    #No longer published by Future Medicine, no content online
 
-    au < manifest ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 ; >
-    au < finished ; finished ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; >
-    au < finished ; finished ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2015 ; Neuropsychiatry Volume 5 ; 5 ; >
-    au < expected ; exists ; 2016 ; Neuropsychiatry Volume 6 ; 6 ; >
+    au < down ; finished ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < down ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; >
+    au < down ; finished ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -659,6 +642,7 @@
     au < finished ; finished ; 2014 ; Pain Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pain Management Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Pain Management Volume 6 ; 6 ; >
+    au < exists ; exists ; 2017 ; Pain Management Volume 7 ; 7 ; >
     
   }
 
@@ -703,6 +687,7 @@
     au < finished ; finished ; 2014 ; Personalized Medicine Volume 11 ; 11 ; >
     au < frozen ; exists ; 2015 ; Personalized Medicine Volume 12 ; 12 ; >
     au < crawling ; exists ; 2016 ; Personalized Medicine Volume 13 ; 13 ; >
+    au < exists ; exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; >
     
   }
 
@@ -733,6 +718,7 @@
     au < finished ; finished ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; >
     au < crawling ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; >
+    au < exists ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; >
     
   }
 
@@ -757,6 +743,7 @@
     au < finished ; finished ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; >
+    au < exists ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; >
     
   }
 
@@ -769,6 +756,7 @@
     >
     
     param[journal_id] = whe
+    #move to Sage
 
     au < manifest ; exists ; 2005 ; Women's Health Volume 1 ; 1 ; >
     au < manifest ; exists ; 2006 ; Women's Health Volume 2 ; 2 ; >
