@@ -3230,7 +3230,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @return a DbManager with the database manager.
    */
-  MetadataDbManager getDbManager() {
+  public MetadataDbManager getDbManager() {
     return dbManager;
   }
 

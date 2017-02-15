@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -26,12 +30,19 @@ in this Software without prior written authorization from Stanford University.
 
 */
 package org.lockss.daemon;
+import java.io.*;
+import java.util.*;
 
+import org.lockss.state.*;
+import org.lockss.clockss.*;
+import org.lockss.extractor.*;
 import org.lockss.test.*;
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 
 public class LockssPermissionCheckerTestCase extends LockssTestCase {
 
   protected MockArchivalUnit mau;
+  protected MockCrawlerFacade mcf;
   protected MockAuState aus;
 
   public void setUp() throws Exception {
@@ -40,9 +51,15 @@ public class LockssPermissionCheckerTestCase extends LockssTestCase {
     MockLockssDaemon daemon = getMockLockssDaemon();
     MockPlugin mplugin = new MockPlugin(daemon);
     mau = new MockArchivalUnit(mplugin);
+    // Some tests want to make sure an unrelated link extractor gets
+    // invoked.
+    LinkExtractor ue = new RegexpCssLinkExtractor();
+    mau.setLinkExtractor("text/css", ue);
     aus = new MockAuState(mau);
     MockNodeManager nm = new MockNodeManager();
     nm.setAuState(aus);
     daemon.setNodeManager(nm, mau);
+    mcf = new MockCrawler().new MockCrawlerFacade();
+    mcf.setAu(mau);
   }
 }

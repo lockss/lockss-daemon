@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -30,10 +34,13 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+
+import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.UrlFetcher.RedirectScheme;
 import org.lockss.plugin.base.SimpleUrlConsumerFactory;
 import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -51,6 +58,7 @@ public class MockUrlFetcher implements UrlFetcher {
   private String url;
   private InputStream uncachedIS;
   private CIProperties uncachedProp;
+  private Map<String,String> reqProps = new HashMap();
 
   private boolean shouldBeCached = false;
   private IOException cachingException = null;
@@ -136,6 +144,11 @@ public class MockUrlFetcher implements UrlFetcher {
   }
 
   public void setRequestProperty(String key, String value) {
+    reqProps.put(key, value);
+  }
+
+  public String getRequestProperty(String key) {
+    return reqProps.get(key);
   }
 
   public void setRedirectScheme(RedirectScheme scheme) {

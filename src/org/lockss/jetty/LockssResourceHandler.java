@@ -1,4 +1,8 @@
 /*
+ * $Id$
+ */
+
+/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -35,16 +39,22 @@ package org.lockss.jetty;
 
 import java.io.*;
 import java.util.*;
+
 import org.apache.commons.logging.Log;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.log.LogFactory;
 import org.mortbay.util.*;
+
 import com.sun.jimi.core.*;
 import com.sun.jimi.core.raster.JimiRasterImage;
+
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.proxy.ProxyManager;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 
 /** Extension of ResourceHandler that allows flexibility in finding the
  * Resource.  Mostly copied here because some things in ResourceHandler
@@ -54,6 +64,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 
     /* ----------------------------------------------------------------- */
     private LockssDaemon theDaemon = null;
+    private ProxyManager proxyMgr = null;
     private boolean _acceptRanges=true;
     private boolean _redirectWelcomeFiles ;
     private String _redirectRootTo ;
@@ -80,6 +91,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
     public LockssResourceHandler(LockssDaemon daemon)
     {
       theDaemon = daemon;
+      proxyMgr = theDaemon.getProxyManager();
     }
 
 
@@ -440,6 +452,26 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                                            Resource resource)
         throws IOException
     {
+      boolean ignoreIfModified = false;
+      if (CurrentConfig.getCurrentConfig().getBoolean(ProxyManager.PARAM_IGNORE_IF_MODIFIED_WHEN_CONTENT_LENGTH_WRONG,
+						      ProxyManager.DEFAULT_IGNORE_IF_MODIFIED_WHEN_CONTENT_LENGTH_WRONG) &&
+	  resource instanceof CuUrlResource) {
+	CuUrlResource cur = (CuUrlResource)resource;
+	String clenHdr = cur.getProperty(HttpFields.__ContentLength);
+	if (!StringUtil.isNullString(clenHdr)) {
+	  try {
+	    long clen = Long.parseLong(clenHdr);
+	    if (clen != resource.length()) {
+	      ignoreIfModified = true;
+	      log.debug("ignoring If-Modified-Since: " + cur.getURL());
+	    }
+	  } catch (NumberFormatException e) {
+	    log.warn("Error parsing Content-Length: " + clenHdr + 
+		     " of " + cur.getURL());
+	  }
+	}
+      }
+
         if (!request.getMethod().equals(HttpRequest.__HEAD))
         {
             // If we have meta data for the file
@@ -450,6 +482,9 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             if (metaData != null && resource.lastModified() > 0)
             {
                 String ifms=request.getField(HttpFields.__IfModifiedSince);
+		if (ignoreIfModified) {
+		  ifms = null;
+		}
                 String mdlm=metaData.getLastModified();
                 if (ifms != null && mdlm != null && ifms.equals(mdlm))
                 {
@@ -472,7 +507,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 }
             }
 
-            if ((date=request.getDateField(HttpFields.__IfModifiedSince))>0)
+            if (!ignoreIfModified &&
+		(date=request.getDateField(HttpFields.__IfModifiedSince))>0)
             {
 
                 if (resource.lastModified()/1000 <= date/1000)
@@ -663,12 +699,19 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	  cur = (CuUrlResource)resource;
 	  ctype = cur.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 	}
-	if (ctype == null) {
+
+	if (ctype == null &&
+	    CurrentConfig.getCurrentConfig()
+	    .getBoolean(ProxyManager.PARAM_INFER_MIME_TYPE,
+			ProxyManager.DEFAULT_INFER_MIME_TYPE)) {
 	  ctype = metaData.getMimeType();
+	  log.trace("ctype from metadata: " + ctype);
 	}
         response.setContentType(ctype);
         if (count != -1)
         {
+	  String origContentLength =
+	    cur.getProperty(HttpFields.__ContentLength);
 	  if (count==resource.length()) {
 	    response.setField(HttpFields.__ContentLength,metaData.getLength());
 	  } else {
@@ -678,6 +721,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	      response.setField(HttpFields.__ContentLength,
 				Long.toString(count));
 	    }
+	  }
+	  if (!StringUtil.equalStrings(origContentLength, 
+				       response.getField(HttpFields.__ContentLength))) {
+	    response.setField(origPrefix(HttpFields.__ContentLength),
+			      origContentLength);
 	  }
 	}
 
@@ -744,6 +792,16 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	  isHeaderKey(key, DONT_PROXY_HEADERS)) {
 	continue;
       }
+
+      // If configured to copy response props, or if this is an audit prop
+      // (repair info, checksum) that we're configured to include, store it
+      // in the response.
+      if (isHeaderKey(key, CachedUrl.LOCKSS_AUDIT_PROPERTIES)
+	  ? proxyMgr.isIncludeLockssAuditProps()
+	  : proxyMgr.isCopyStoredResponseHeaders()) {
+
+	response.setField(key, valLst.get(0));
+      }
     }
   }
 
@@ -808,8 +866,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 
 	    InputStream in = data.getInputStream();
 	    OutputStream out = null;
-	    boolean enableRewrite = false;
-	    if (enableRewrite &&
+	    boolean enableRewrite =
+              CurrentConfig.getCurrentConfig().getBoolean(ProxyManager.PARAM_REWRITE_GIF_PNG,
+                                                          ProxyManager.DEFAULT_REWRITE_GIF_PNG);
+	    if (!proxyMgr.isRepairRequest(request) &&
+		enableRewrite &&
 		"image/gif".equals(HeaderUtil.getMimeTypeFromContentType(response.getContentType())) &&
 		"from-cache".equals(response.getField("X-Lockss"))) {
 	      try {

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,9 +106,16 @@ public class CuUrlResource extends URLResource {
       UrlUtil.equalUrls(_url,((CuUrlResource)o)._url);
   }
 
-  // Inherited method returns count from URLConnection, which (incorrently)
-  // is an int.  This version handles cached files larger than 2GB
+  // Inherited method returns URLConnection.getContentLength(), which
+  // return an int.
   public long length() {
+    if (checkConnection()) {
+      return _connection.getContentLengthLong();
+    }
+    return -1;
+  }
+
+  public long getHeaderContentLength() {
     try {
       return Long.parseLong(getProperty(HttpFields.__ContentLength));
     } catch (Exception e) {
