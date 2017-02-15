@@ -283,76 +283,13 @@ def _find_ranges(options, aus):
         while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
             aindex = aindex - 1
     ###DEBUG
-    for range in ranges:
-        for auentry in range:
-            print auentry[-1].generate_body()
-        print
+    # for range in ranges:
+    #     for auentry in range:
+    #         print auentry[-1].generate_body()
+    #     print
     return ranges
 
-def _find_endpoints(options, aus):
-    ret = list()
-    aindex = 0
-    while aindex < len(aus):
-        auentry = aus[aindex]
-        if aindex == len(aus) - 1 or auentry[_TITLE] != aus[aindex+1][_TITLE]:
-            ret.append(aindex)
-        aindex = aindex + 1
-    return ret
 
-def _find_candidates(options, aus, endpoints):
-    ret = list()
-    for endpoint in endpoints:
-        auentry = aus[endpoint]
-        if auentry[-1].get_status() in options.stoppers:
-            continue
-        auyearstr = auentry[_YEAR]
-        aupyearstr = auentry[_PYEAR]
-        if options.year_required and len(auyearstr) == 0 and len(aupyearstr) == 0:
-            continue
-        if len(auyearstr) > 0 and _parse_year(auyearstr)[0] + 1 < options.start_year:
-            continue
-        if len(auyearstr) > 0 and len(aupyearstr) > 0 and _parse_year(aupyearstr)[0] + 1 < options.start_year:
-            continue
-        ret.append(endpoint)
-    return ret
-
-def _guess_expansions(options, aus, candidates):
-    for candidate in candidates:
-        _guess_expansions_single(options, aus, candidate)
-
-def _guess_expansions_single(options, aus, candidate):
-    auentry = aus[candidate]
-    autitle = auentry[_TITLE]
-    auyear = _select_year(auentry)
-    auvol = _select_volume(auentry)
-    # Collect immediately preceding entries by year
-    prev = list()
-    aindex = candidate - 1
-    if auyear is not None:
-        while aindex >= 0:
-            preventry = aus[aindex]
-            if preventry[_TITLE] != autitle:
-                break
-            prevyear = _select_year(preventry)
-            prevvol = _select_volume(preventry)
-            prev.append((aindex, prevyear, prevvol))
-            if (auyear[1] is None and prevyear[1] is None and prevyear[0] == auyear[0]) \
-                    or (auyear[1] is not None and prevyear[1] is None and prevyear[0] == auyear[0]):
-                # e.g. auyear is 2007 and prevyear is 2007,
-                # or auyear is 2006-2007 and prevyear is 2006
-                aindex = aindex - 1
-                continue
-            else:
-                # e.g. auyear is 2007 and prevyear is 1999 or 2006 or 1998-1999 or 2006-2007,
-                # or auyear is 2006-2007 and prevyear is 1999 or 2005 or 1998-1999 or 2005-2006
-                break
-    ###DEBUG
-    print ('>', auyear, auvol), auentry[-1].generate_body()
-    for i, t in enumerate(prev):
-        print i, t, aus[t[0]][-1].generate_body()
-    else:
-        print
-    # Analyze results and guess expansions
 
 def _main():
     # Parse command line
