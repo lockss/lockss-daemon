@@ -80,10 +80,6 @@ class _TdbExpandOptions(object):
         # year_required
         self.year_required = bool(opts.year_required)
 
-def _parse_year(yearstr):
-    year1, dash, year2 = yearstr.partition('-')
-    return (int(year1), int(year2) if dash == '-' else None) # int constructor raises ValueError
-
 class _Au(object):
   '''An internal class to represent an AU entry.'''
 
@@ -184,6 +180,8 @@ _VOLUME = 6
 _PYEAR = 7
 _PVOLUME = 8
 _PVOLNAME = 9
+_IYEAR = 10
+_IVOL = 11
 
 def _tdbout(options):
     tdbout = 'scripts/tdb/tdbout'
@@ -194,8 +192,15 @@ def _tdbout(options):
     if proc.returncode != 0:
         sys.exit('%s exited with error code %d: %s' % (tdbout, proc.returncode, err))
     ret = [line.strip().split('\t') for line in cStringIO.StringIO(out)]
-    for auentry in ret: auentry[_LINE] = int(auentry[_LINE])
+    for auentry in ret:
+        auentry[_LINE] = int(auentry[_LINE])
+        auentry.append(_select_year(auentry))
+        auentry.append(_select_volume(auentry))
     return ret
+
+def _parse_year(yearstr):
+    year1, dash, year2 = yearstr.partition('-')
+    return (int(year1), int(year2) if dash == '-' else None) # int constructor raises ValueError
 
 def _select_year(auentry):
     for choice in [_YEAR, _PYEAR]:
@@ -256,6 +261,33 @@ def _recognize(options, aus):
         sys.stderr.write('error: tdbout parsed %d AU declarations but tdbedit found %d\n' % (len(aus), aindex))
     if errors > 0:
         sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
+
+def _find_ranges(options, aus):
+    ranges = list()
+    aindex = len(aus) - 1
+    while aindex >= 0:
+        auentry = aus[aindex]
+        if auentry[-1].get_status() in options.stoppers:
+            while aindex >= 0 and aus[aindex][_TITLE] == auentry[_TITLE]:
+                aindex = aindex - 1
+            continue
+        ranges.append([auentry])
+        aindex = aindex - 1
+        while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
+            if (aus[aindex][_IYEAR] and aus[aindex][_IYEAR] > ranges[-1][-1][_IYEAR]):
+                break
+            if (aus[aindex][_IYEAR] is None and aus[aindex][_IVOL] > ranges[-1][-1][_IVOL]):
+                break
+            ranges[-1].append(aus[aindex])
+            aindex = aindex - 1
+        while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
+            aindex = aindex - 1
+    ###DEBUG
+    for range in ranges:
+        for auentry in range:
+            print auentry[-1].generate_body()
+        print
+    return ranges
 
 def _find_endpoints(options, aus):
     ret = list()
@@ -327,14 +359,10 @@ def _main():
     parser = _TdbExpandOptions.make_parser()
     (opts, args) = parser.parse_args()
     options = _TdbExpandOptions(parser, opts, args)
-    aus = _tdbout(options)
     # Get AUIDs and scan files for AU entries
     aus = _tdbout(options)
     _recognize(options, aus)
-    # Find candidates
-    endpoints = _find_endpoints(options, aus)
-    candidates = _find_candidates(options, aus, endpoints)
-    _guess_expansions(options, aus, candidates)
+    _find_ranges(options, aus)
 
 # Main entry point
 if __name__ == '__main__': _main()
