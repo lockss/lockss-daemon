@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.exolab.org/mapping.dtd">
+
+<mapping>
+        <class name="org.lockss.state.NodeHistoryBean">
+                <map-to xml="NodeHistory"/>
+                <field name="historyBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                </field>
+        </class>
+        <class name="org.lockss.state.PollHistoryBean">
+                <map-to xml="PollHistory"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+
+                <field name="lwrBound"
+                       type="java.lang.String">
+                        <bind-xml name="LwrBound" node="element"/>
+                </field>
+                <field name="uprBound"
+                       type="java.lang.String">
+                        <bind-xml name="UprBound" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+                <field name="duration"
+                       type="long">
+                        <bind-xml name="Duration" node="element"/>
+                </field>
+                <field name="voteBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                        <bind-xml name="Votes" node="element"/>
+                </field>
+                 <field name="ourPoll"
+                       type="boolean">
+                        <bind-xml name="OurPoll" node="element"/>
+                </field>
+        </class>
+
+        <class name="org.lockss.state.VoteBean">
+                <map-to xml="Vote"/>
+                <field name="id"
+                       type="java.lang.String">
+                        <bind-xml name="Id" node="attribute"/>
+                </field>
+                <field name="agreeState"
+                       type="boolean">
+                        <bind-xml name="AgreeState" node="attribute"/>
+                </field>
+                <field name="challengeString"
+                       type="java.lang.String">
+                        <bind-xml name="Challenge" node="element"/>
+                </field>
+                <field name="verifierString"
+                       type="java.lang.String">
+                        <bind-xml name="Verifier" node="element"/>
+                </field>
+                <field name="hashString"
+                       type="java.lang.String">
+                        <bind-xml name="Hash" node="element"/>
+                </field>
+
+        </class>
+        <class name="org.lockss.state.AuStateBean">
+                <map-to xml="AuState"/>
+                <field name="lastCrawlTime"
+                       type="long">
+                        <bind-xml name="LastCrawlTime" node="element"/>
+                </field>
+                <field name="lastTopLevelPollTime"
+                       type="long">
+                        <bind-xml name="LastPollTime" node="element"/>
+                </field>
+                <field name="crawlUrls"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                </field>
+                <field name="clockssSubscriptionStatus"
+                       type="integer">
+                        <bind-xml name="ClockssSubscriptionStatus" node="element"/>
+                </field>
+        </class>
+        <class name="org.lockss.state.DamagedNodeSet">
+                <map-to xml="DamagedNodeSet"/>
+                <field name="damagedNodes"
+                       type="java.util.Set"
+                       collection="set" lazy="true">
+                </field>
+                <field name="repairNodeBean"
+                       type="org.lockss.util.ExtMapBean">
+                        <bind-xml name="RepairMap" node="element"/>
+                </field>
+        </class>
+        <class name="org.lockss.state.NodeStateBean">
+                <map-to xml="NodeState"/>
+                <field name="state"
+                       type="integer">
+                        <bind-xml name="State" node="element"/>
+                </field>
+                <field name="averageHashDuration"
+                       type="long">
+                        <bind-xml name="AverageHashDuration" node="element"/>
+                </field>
+                <field name="crawlStateBean"
+                       type="org.lockss.state.CrawlStateBean">
+                        <bind-xml name="CrawlState" node="element"/>
+                </field>
+                <field name="pollBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                </field>
+        </class>
+        <class name="org.lockss.state.CrawlStateBean">
+                <map-to xml="CrawlState"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+        </class>
+        <class name="org.lockss.state.PollStateBean">
+                <map-to xml="PollState"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+                <field name="lwrBound"
+                       type="java.lang.String">
+                        <bind-xml name="LwrBound" node="element"/>
+                </field>
+                <field name="uprBound"
+                       type="java.lang.String">
+                        <bind-xml name="UprBound" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+                <field name="deadlineTime"
+                       type="long">
+                        <bind-xml name="DeadlineTime" node="element"/>
+                </field>
+                 <field name="ourPoll"
+                       type="boolean">
+                        <bind-xml name="OurPoll" node="element"/>
+                </field>
+       </class>
+</mapping>

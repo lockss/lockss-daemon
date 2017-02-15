@@ -5325,6 +5325,68 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Provides the Archival Units that exist in the database but that have been
+   * deleted from the daemon.
+   * 
+   * @return a Collection<Map<String, Object>> with the Archival unit data.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, Object>> getDbArchivalUnitsDeletedFromDaemon()
+      throws DbException {
+    final String DEBUG_HEADER = "getDbArchivalUnitsDeletedFromDaemon(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, Object>> deletedAus =
+	new ArrayList<Map<String, Object>>();
+
+    Collection<Map<String, Object>> aus =
+	getMetadataManagerSql().getDbArchivalUnits();
+
+    for (Map<String, Object> auProperties : aus) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "auProperties = " + auProperties);
+
+      String pluginId = (String)auProperties.get(PLUGIN_ID_COLUMN);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+      String auKey = (String)auProperties.get(AU_KEY_COLUMN);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      String auId = PluginManager.generateAuId(pluginId, auKey);
+
+      // Check whether the daemon does not have this AU and this AU is not
+      // restarting due to a plugin update and it has not been manually
+      // deactivated.
+      if (pluginMgr.isNotConfiguredAndNotInactive(auId)) {
+	// Yes: It is an AU that can be safely deleted.
+	deletedAus.add(auProperties);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Deleted");
+      } else {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Not Deleted");
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "deletedAus = " + deletedAus);
+    return deletedAus;
+  }
+
+  /**
+   * Deletes an Archival Unit and its metadata.
+   * 
+   * @param auSeq
+   *          A Long with the Archival Unit identifier.
+   * @param auKey
+   *          A String with the Archival Unit key.
+   * @return a boolean with <code>true</code> if the Archival Unit was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean deleteDbAu(Long auSeq, String auKey) throws DbException {
+    return getMetadataManagerSql().removeAu(auSeq, auKey);
+  }
+
+  /**
    * Provides the job manager.
    * 
    * @return a JobManager with the job manager.
@@ -5348,5 +5410,58 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public Long findOrCreatePublisher(Connection conn, String publisherName)
       throws DbException {
     return dbManager.findOrCreatePublisher(conn, publisherName);
+  }
+
+  /**
+   * Provides the identifier of a publisher.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherName
+   *          A String with the publisher name.
+   * @return a Long with the identifier of the publisher.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findPublisher(Connection conn, String publisherName)
+      throws DbException {
+    return dbManager.findPublisher(conn, publisherName);
+  }
+
+  /**
+   * Provides the identifier of a provider if existing or after creating it
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreateProvider(Connection conn, String providerLid,
+      String providerName) throws DbException {
+    return dbManager.findOrCreateProvider(conn, providerLid, providerName);
+  }
+
+  /**
+   * Provides the identifier of a provider.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @return a Long with the identifier of the provider.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findProvider(Connection conn, String providerLid,
+      String providerName) throws DbException {
+    return dbManager.findProvider(conn, providerLid, providerName);
   }
 }

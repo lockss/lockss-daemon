@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,10 +29,10 @@ package org.lockss.app;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
-import org.lockss.mail.MailService;
 import org.lockss.scheduler.*;
 import org.lockss.servlet.*;
 import org.apache.commons.collections.map.LinkedMap;
@@ -81,6 +81,8 @@ public abstract class LockssApp {
   // default classes for common managers
   protected static final String DEFAULT_WATCHDOG_SERVICE =
     "org.lockss.daemon.WatchdogService";
+  protected static final String DEFAULT_MAIL_SERVICE =
+    "org.lockss.mail.SmtpMailService";
   protected static final String DEFAULT_STATUS_SERVICE =
     "org.lockss.daemon.status.StatusServiceImpl";
   protected static final String DEFAULT_SCHED_SERVICE =

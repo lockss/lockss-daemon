@@ -46,12 +46,14 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.lockss.clockss.*;
+import org.lockss.safenet.*;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.job.JobManager;
 
@@ -127,6 +129,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String NODE_MANAGER = "NodeManager";
   public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
   public static final String PROXY_MANAGER = "ProxyManager";
+  public static final String AUDIT_PROXY_MANAGER = "AuditProxyManager";
+  public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
   public static final String SYSTEM_METRICS = "SystemMetrics";
   public static final String REMOTE_API = "RemoteApi";
   public static final String URL_MANAGER = "UrlManager";
@@ -139,9 +143,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
+  public static final String SAFENET_MANAGER = "SafenetManager";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   //public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
+  public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
   public static final String FETCH_TIME_EXPORT_MANAGER =
       "FetchTimeExportManager";
   //public static final String JOB_MANAGER = "JobManager";
@@ -151,18 +157,25 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected final ManagerDesc[] managerDescs = {
     new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
+    new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
     new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
     new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
+    new ManagerDesc(HASH_SERVICE, "org.lockss.hasher.HashSvcQueueImpl"),
     new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
     // keystore manager must be started before any others that need to
     // access managed keystores
     new ManagerDesc(KEYSTORE_MANAGER,
                     "org.lockss.daemon.LockssKeyStoreManager"),
     new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
+    new ManagerDesc(IDENTITY_MANAGER,
+                    "org.lockss.protocol.IdentityManagerImpl"),
+    new ManagerDesc(PSM_MANAGER, "org.lockss.protocol.psm.PsmManager"),
+    new ManagerDesc(POLL_MANAGER, "org.lockss.poller.PollManager"),
+    new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
     new ManagerDesc(REPOSITORY_MANAGER,
                     "org.lockss.repository.RepositoryManager"),
     // start plugin manager after generic services
@@ -171,9 +184,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(DbManager.getManagerKey(), "org.lockss.db.DbManager"),
     // start metadata manager after pluggin manager and database manager.
     new ManagerDesc(MetadataManager.getManagerKey(), "org.lockss.metadata.MetadataManager"),
+    // start proxy and servlets after plugin manager
+    new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
     // Start the COUNTER reports manager.
     new ManagerDesc(COUNTER_REPORTS_MANAGER,
 	"org.lockss.exporter.counter.CounterReportsManager"),
+    // Start the subscription manager.
+    new ManagerDesc(SUBSCRIPTION_MANAGER,
+	"org.lockss.subscription.SubscriptionManager"),
     // Start the fetch time export manager.
     new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
 	"org.lockss.exporter.FetchTimeExportManager"),
@@ -185,10 +203,24 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
     new ManagerDesc(CONTENT_SERVLET_MANAGER,
                     "org.lockss.servlet.ContentServletManager"),
+    new ManagerDesc(PROXY_MANAGER, "org.lockss.proxy.ProxyManager"),
+    new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
+    new ManagerDesc(FAIL_OVER_PROXY_MANAGER ,
+                    "org.lockss.proxy.FailOverProxyManager"),
     // comm after other major services so don't process messages until
     // they're ready
+    new ManagerDesc(DATAGRAM_COMM_MANAGER,
+                    "org.lockss.protocol.LcapDatagramComm"),
+    new ManagerDesc(STREAM_COMM_MANAGER,
+                    "org.lockss.protocol.BlockingStreamComm"),
+    new ManagerDesc(DATAGRAM_ROUTER_MANAGER,
+                    "org.lockss.protocol.LcapDatagramRouter"),
+    new ManagerDesc(ROUTER_MANAGER,
+                    "org.lockss.protocol.LcapRouter"),
     new ManagerDesc(NODE_MANAGER_MANAGER,
                     "org.lockss.state.NodeManagerManager"),
+    new ManagerDesc(ICP_MANAGER,
+                    "org.lockss.proxy.icp.IcpManager"),
     new ManagerDesc(PLATFORM_CONFIG_STATUS,
                     "org.lockss.config.PlatformConfigStatus"),
     new ManagerDesc(CONFIG_STATUS,
@@ -200,6 +232,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(OVERVIEW_STATUS,
                     "org.lockss.daemon.status.OverviewStatus"),
     new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+    new ManagerDesc(CLOCKSS_PARAMS, "org.lockss.clockss.ClockssParams") {
+      public boolean shouldStart() {
+        return isClockss();
+      }},
+    new ManagerDesc(SAFENET_MANAGER, "org.lockss.safenet.CachingEntitlementRegistryClient") {
+      public boolean shouldStart() {
+        return isSafenet();
+      }},
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
   };
@@ -230,6 +270,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
+  private boolean isSafenet;
   protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
@@ -243,8 +284,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   protected ManagerDesc[] getManagerDescs() {
-//    return managerDescs;
-    return null;
+    return managerDescs;
   }
 
   // General information accessors
@@ -294,6 +334,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public boolean isDetectClockssSubscription() {
     return isClockss() && getClockssParams().isDetectSubscription();
+  }
+
+  /**
+   * True if running as a Safenet daemon
+   */
+  public boolean isSafenet() {
+    return isSafenet;
   }
 
   /** Stop the daemon.  Currently only used in testing. */
@@ -546,6 +593,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
+   * Provides the subscription manager.
+   * 
+   * @return a SubscriptionManager with the subscription manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public SubscriptionManager getSubscriptionManager() {
+    return (SubscriptionManager) getManager(SUBSCRIPTION_MANAGER);
+  }
+
+  /**
    * Provides the fetch time export manager.
    * 
    * @return a FetchTimeExportManager with the fetch time export manager.
@@ -563,6 +621,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public ClockssParams getClockssParams() {
     return (ClockssParams) getManager(CLOCKSS_PARAMS);
+  }
+
+  /**
+   * return the EntitlementRegistryClient instance.
+   * @return EntitlementRegistryClient instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public EntitlementRegistryClient getEntitlementRegistryClient() {
+    return (EntitlementRegistryClient) getManager(SAFENET_MANAGER);
   }
 
   /**
@@ -918,6 +985,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       Deadline.setReasonableDeadlineRange(maxInPast, maxInFuture);
     }
     testingMode = config.get(PARAM_TESTING_MODE);
+    String proj = ConfigManager.getPlatformProject();
+    isClockss = "clockss".equalsIgnoreCase(proj);
+    isSafenet = "safenet".equalsIgnoreCase(proj);
 
     super.setConfig(config, prevConfig, changedKeys);
   }

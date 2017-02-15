@@ -49,10 +49,10 @@ import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
-//import org.lockss.subscription.SubscriptionManager;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
-//import org.lockss.exporter.counter.CounterReportsManager;
+import org.lockss.exporter.counter.CounterReportsManager;
 import org.springframework.web.context.ContextLoaderListener;
 
 /**
@@ -560,17 +560,17 @@ public class AdminServletManager extends BaseServletManager {
           "LOCKSS Administration",
           ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
 		     
-//  protected static final ServletDescr SERVLET_COUNTER_REPORTS =
-//      new ServletDescr("CounterReportsServlet",
-//                       CounterReportsServlet.class,
-//                       "COUNTER Reports",
-//		       "CounterReports",
-//		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-//		       "COUNTER Report generator") {
-//	public boolean isEnabled(LockssDaemon daemon) {
-//	  CounterReportsManager mgr = daemon.getCounterReportsManager();
-//	  return mgr != null && mgr.isReady();
-//	}};
+  protected static final ServletDescr SERVLET_COUNTER_REPORTS =
+      new ServletDescr("CounterReportsServlet",
+                       CounterReportsServlet.class,
+                       "COUNTER Reports",
+		       "CounterReports",
+		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+		       "COUNTER Report generator") {
+	public boolean isEnabled(LockssDaemon daemon) {
+	  CounterReportsManager mgr = daemon.getCounterReportsManager();
+	  return mgr != null && mgr.isReady();
+	}};
 
   protected static final ServletDescr SERVLET_CXF_WEB_SERVICES =
       new ServletDescr("CXFServlet",
@@ -580,34 +580,34 @@ public class AdminServletManager extends BaseServletManager {
 		       0,
 	               "JAX-WS CXF Web Services");
 
-//  protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
-//      new ServletDescr("SubscriptionManagement",
-//		       SubscriptionManagement.class,
-//		       "Title Subscription Management",
-//		       (ServletDescr.NEED_ROLE_AU_ADMIN),
-//		       "Subscribe or unsubscribe to individual titles") {
-//	public boolean isEnabled(LockssDaemon daemon) {
-//	  try {
-//	    SubscriptionManager mgr = daemon.getSubscriptionManager();
-//	    return mgr != null && mgr.isReady();
-//	  } catch (Exception e) {
-//	    return false;
-//	  }
-//	}};
-//
-//  protected static final ServletDescr SERVLET_MD_MONITOR =
-//      new ServletDescr("MetadataMonitor",
-//	  	       MetadataMonitor.class,
-//	  	       "Metadata Monitor",
-//	  	       ServletDescr.NEED_ROLE_DEBUG,
-//	  	       "Metadata Monitor");
-//
-//  protected static final ServletDescr SERVLET_MD_CONTROL =
-//      new ServletDescr("MetadataControl",
-//	  	       MetadataControl.class,
-//	  	       "Metadata Control",
-//	  	       ServletDescr.NEED_ROLE_AU_ADMIN,
-//	  	       "Metadata Control");
+  protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
+      new ServletDescr("SubscriptionManagement",
+		       SubscriptionManagement.class,
+		       "Title Subscription Management",
+		       (ServletDescr.NEED_ROLE_AU_ADMIN),
+		       "Subscribe or unsubscribe to individual titles") {
+	public boolean isEnabled(LockssDaemon daemon) {
+	  try {
+	    SubscriptionManager mgr = daemon.getSubscriptionManager();
+	    return mgr != null && mgr.isReady();
+	  } catch (Exception e) {
+	    return false;
+	  }
+	}};
+
+  protected static final ServletDescr SERVLET_MD_MONITOR =
+      new ServletDescr("MetadataMonitor",
+	  	       MetadataMonitor.class,
+	  	       "Metadata Monitor",
+	  	       ServletDescr.NEED_ROLE_DEBUG,
+	  	       "Metadata Monitor");
+
+  protected static final ServletDescr SERVLET_MD_CONTROL =
+      new ServletDescr("MetadataControl",
+	  	       MetadataControl.class,
+	  	       "Metadata Control",
+	  	       ServletDescr.NEED_ROLE_AU_ADMIN,
+	  	       "Metadata Control");
 
   protected static final ServletDescr SERVLET_OIOSAML =
       new ServletDescr("SAMLDispatcherServlet",
@@ -654,7 +654,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-//    SERVLET_COUNTER_REPORTS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
@@ -667,13 +667,13 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-//    SERVLET_SUB_MANAGEMENT,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-//    SERVLET_MD_MONITOR,
-//    SERVLET_MD_CONTROL,
+    SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 
@@ -701,7 +701,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-//    SERVLET_COUNTER_REPORTS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
@@ -714,13 +714,13 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-//    SERVLET_SUB_MANAGEMENT,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-//    SERVLET_MD_MONITOR,
-//    SERVLET_MD_CONTROL,
+    SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
@@ -749,7 +749,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-//    SERVLET_COUNTER_REPORTS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,
@@ -760,13 +760,13 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-//    SERVLET_SUB_MANAGEMENT,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
-//    SERVLET_MD_MONITOR,
-//    SERVLET_MD_CONTROL,
+    SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 
