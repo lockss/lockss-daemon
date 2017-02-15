@@ -88,7 +88,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1877-6361
+      #param[journal_issn] = 1877-6361
 
       au < manifest ; exists ; 2009 ;  ; 9781848558328 ; 9781848558328 ; Advanced Series in Management Volume 6 ; >
       au < manifest ; exists ; 2010 ;  ; 9780857240064 ; 9780857240064 ; Relational Practices, Participative Organizing Volume 7 ; >
@@ -105,7 +105,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1475-1488
+      #param[journal_issn] = 1475-1488
       #In 2015, found that issn associated with volume 3-6 for articles is different from the toc. Resulting in no substance. See RT7387
 
       au < doNotProcess ; doNotProcess ; 2000 ;  ; 9780762306688 ; 9780762306688 ; Advances in Accounting Behavioral Research Volume 3 ; > #RT7387 incorrect article links
@@ -131,7 +131,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1085-4622
+      #param[journal_issn] = 1085-4622
 
       au < manifest ; exists ; 2000 ;  ; 9780762305155 ; 9780762305155 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 2 ; >
       au < manifest ; exists ; 2000 ;  ; 9780762307586 ; 9780762307586 ; Advances in Accounting Education Teaching and Curriculum Innovations Volume 3 ; >
@@ -156,7 +156,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1569-4933
+      #param[journal_issn] = 1569-4933
 
       au < manifest ; exists ; 2000 ;  ; 9780762306121 ; 9780762306121 ; New Frontiers in Agricultural History Volume 1 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310012 ; 9780762310012 ; Advances in Agricultural Economic History Volume 2 ; >
@@ -171,7 +171,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2212-1609
+      #param[journal_issn] = 2212-1609
 
       au < manifest ; exists ; 2012 ;  ; 9781780524689 ; 9781780524689 ; Pricing Behavior and Non-Price Characteristics in the Airline Industry Volume 3 ; >
 
@@ -185,7 +185,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0749-6826
+      #param[journal_issn] = 0749-6826
 
       au < manifest ; exists ; 2005 ;  ; 9780762311682 ; 9780762311682 ; Competence Perspective on Managing Internal Process Volume 7 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762311699 ; 9780762311699 ; Competence Perspectives on Managing Interfirm Interactions Volume 8 ; >
@@ -204,7 +204,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0278-0984
+      #param[journal_issn] = 0278-0984
 
       au < manifest ; exists ; 2000 ;  ; 9780762305766 ; 9780762305766 ; Advances in Applied Microeconomics Volume 8 ; >
       au < manifest ; exists ; 2000 ;  ; 9780762306879 ; 9780762306879 ; Industrial Organization Volume 9 ; >
@@ -224,7 +224,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1475-9152
+      #param[journal_issn] = 1475-9152
 
       au < manifest ; exists ; 2004 ;  ; 9780762308927 ; 9780762308927 ; Constructive Discourse and Human Organization Volume 1 ; >
       au < manifest ; exists ; 2007 ;  ; 9780762312870 ; 9780762312870 ; Designing Information and Organizations with a Positive Lens Volume 2 ; >
@@ -240,7 +240,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1529-2134
+      #param[journal_issn] = 1529-2134
 
       au < manifest ; exists ; 1995 ;  ; 9781559385312 ; 9781559385312 ; Advances in Austrian Economics Volume 2 Part 2 ; >
       au < manifest ; exists ; 1996 ;  ; 9780762300556 ; 9780762300556 ; Advances in Austrian Economics Volume 3 ; >
@@ -268,7 +268,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3709
+      #param[journal_issn] = 1479-3709
 
       au < manifest ; exists ; 2001 ;  ; 9780762307579 ; 9780762307579 ; Postmodern Malpractice: A Medical Case Study in The Culture War Volume 6 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307647 ; 9780762307647 ; The Ethics of Organ Transplantation Volume 7 ; >
@@ -287,7 +287,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1477-4070
+      #param[journal_issn] = 1477-4070
 
       au < manifest ; exists ; 2008 ;  ; 9780762314782 ; 9780762314782 ; Advances in Business and Management Forecasting Volume 5 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848555488 ; 9781848555488 ; Advances in Business and Management Forecasting Volume 6 ; >
@@ -305,7 +305,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1069-0964
+      #param[journal_issn] = 1069-0964
 
       au < manifest ; exists ; 2000 ;  ; 9780762306824 ; 9780762306824 ; Designing winning products Volume 10 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762306336 ; 9780762306336 ; Getting Better at Sensemaking Volume 9 ; >
@@ -329,7 +329,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1871-3173
+      #param[journal_issn] = 1871-3173
 
       au < manifest ; exists ; 2008 ;  ; 9780762314515 ; 9780762314515 ; Advances in Culture, Tourism and Hospitality Research Volume 2 ; >
       au < manifest ; exists ; 2009 ;  ; 9781849506038 ; 9781849506038 ; Perspectives on Cross-Cultural, Ethnographic, Brand Image, Storytelling, Unconscious Needs, and Hospitality Guest Research Volume 3 ; >
@@ -348,7 +348,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0270-4021
+      #param[journal_issn] = 0270-4021
 
       au < manifest ; exists ; 2001 ;  ; 9780762308101 ; 9780762308101 ; Early Education and Care, and Reconceptualizing Play Volume 11 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310630 ; 9780762310630 ; Bridging the Gap Between Theory, Research and Practice: The Role of... Volume 12 ; >
@@ -367,7 +367,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0731-9053
+      #param[journal_issn] = 0731-9053
 
       au < manifest ; exists ; 1997 ;  ; 9780762301874 ; 9780762301874 ; Applying Maximum Entropy to Econometric Problems Volume 12 ; >
       au < manifest ; exists ; 1999 ;  ; 9780762303038 ; 9780762303038 ; Messy Data Volume 13 ; >
@@ -400,7 +400,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2041-806X
+      #param[journal_issn] = 2041-806X
 
       au < manifest ; exists ; 2007 ;  ; 9781780526669 ; 9781780526669 ; Utopias, Ecotopias and Green Communities: Exploring the Activism, Settlements and Living Patterns of Green Idealists Volume 1 ; >
       au < manifest ; exists ; 2008 ;  ; 9781780526683 ; 9781780526683 ; Advances in Ecopolitics Volume 2 ; >
@@ -423,7 +423,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-358X
+      #param[journal_issn] = 1479-358X
 
       au < manifest ; exists ; 2002 ;  ; 9780762304288 ; 9780762304288 ; Edmund W. Gordon: Producing Knowledge, Pursuing Understanding Volume 1 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308293 ; 9780762308293 ; African American Education: Race, Community, Inequality, and Achievement a Tribute to Edgar G. Epps Volume 2 ; >
@@ -445,7 +445,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3660
+      #param[journal_issn] = 1479-3660
 
       au < manifest ; exists ; 2002 ;  ; 9780762304264 ; 9780762304264 ; Challenges of Urban Education and Efficacy of School Reform Volume 6 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311453 ; 9780762311453 ; Administering Special Education: In Pursuit of Dignity and Autonomy Volume 7 ; >
@@ -471,7 +471,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1074-7540
+      #param[journal_issn] = 1074-7540
 
       au < manifest ; exists ; 2001 ;  ; 9780762303250 ; 9780762303250 ; Databases for the Study of Entrepreneurship Volume 4 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308774 ; 9780762308774 ; Managing People in Entrepreneurial Organizations Volume 5 ; >
@@ -495,7 +495,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3598
+      #param[journal_issn] = 1479-3598
 
       au < manifest ; exists ; 2000 ;  ; 9780762303342 ; 9780762303342 ; Advances in Environmental Accounting & Management Volume 1 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310708 ; 9780762310708 ; Advances in Environmental Accounting & Management Volume 2 ; >
@@ -512,7 +512,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1569-3732
+      #param[journal_issn] = 1569-3732
 
       au < manifest ; exists ; 2001 ;  ; 9780762307135 ; 9780762307135 ; Advances in Financial Economics Volume 6 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308972 ; 9780762308972 ; Innovations in Investments and Corporate Finance Volume 7 ; >
@@ -535,7 +535,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1529-2126
+      #param[journal_issn] = 1529-2126
 
       au < manifest ; exists ; 1999 ;  ; 9780762305339 ; 9780762305339 ; Social Change for Women and Children Volume 4 ; >
       au < doNotProcess ; exists ; 2001 ;  ; 9780762307203 ; 9780762307203 ; An International Feminist Challenge to Theory Volume 5 ; >
@@ -562,7 +562,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1535-1203
+      #param[journal_issn] = 1535-1203
 
       au < manifest ; exists ; 2001 ;  ; 9780762307234 ; 9780762307234 ; Advances in Global Leadership Volume 2 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762308668 ; 9780762308668 ; Advances in Global Leadership Volume 3 ; >
@@ -581,7 +581,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0882-6145
+      #param[journal_issn] = 0882-6145
 
       au < manifest ; exists ; 2000 ;  ; 9780762306510 ; 9780762306510 ; Advances in Group Processes Volume 17 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307678 ; 9780762307678 ; Advances in Group Processes Volume 18 ; >
@@ -607,7 +607,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1474-8231
+      #param[journal_issn] = 1474-8231
 
       au < manifest ; exists ; 2000 ;  ; 9780762306848 ; 9780762306848 ; Advances in Health Care Management Volume 1 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308026 ; 9780762308026 ; Advances in Health Care Management Volume 2 ; >
@@ -633,7 +633,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0731-2199
+      #param[journal_issn] = 0731-2199
 
       au < manifest ; exists ; 2005 ;  ; 9780762312337 ; 9780762312337 ; Substance Use: Individual Behaviour, Social Interactions, Markets and Politics Volume 16 ; >
       au < manifest ; exists ; 2006 ;  ; 9780762314065 ; 9780762314065 ; The Economics of Obesity Volume 17 ; >
@@ -654,7 +654,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1745-3542
+      #param[journal_issn] = 1745-3542
 
       au < manifest ; exists ; 2005 ;  ; 9780762311583 ; 9780762311583 ; Advances in Hospitality and Leisure Volume 1 ; >
       au < manifest ; exists ; 2006 ;  ; 9780762312849 ; 9780762312849 ; Advances in Hospitality and Leisure Volume 2 ; >
@@ -675,7 +675,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3601
+      #param[journal_issn] = 1479-3601
 
       au < manifest ; exists ; 2001 ;  ; 9780762307487 ; 9780762307487 ; Advances in Human Performance and Cognitive Engineering Research Volume 1 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308644 ; 9780762308644 ; Advances in Human Performance and Cognitive Engineering Research Volume 2 ; >
@@ -695,7 +695,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0742-6186
+      #param[journal_issn] = 0742-6186
 
       au < manifest ; exists ; 2001 ;  ; 9780762307500 ; 9780762307500 ; New Research on Labor Relations and the Performance of University HR/IR Programs Volume 10 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308538 ; 9780762308538 ; Advances in Industrial & Labor Relations Volume 11 ; >
@@ -719,7 +719,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1572-0977
+      #param[journal_issn] = 1572-0977
 
       au < manifest ; exists ; 2000 ;  ; 9780762307470 ; 9780762307470 ; Advances in Interdisciplinary Studies of Work Teams Volume 7 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308439 ; 9780762308439 ; Virtual teams Volume 8 ; >
@@ -738,7 +738,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1571-5027
+      #param[journal_issn] = 1571-5027
 
       au < manifest ; exists ; 2003 ;  ; 9780762310500 ; 9780762310500 ; Managing Multinationals in a Knowledge Economy: Economics, Culture Volume 15 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311262 ; 9780762311262 ; Theories of the Multinational Enterprise: Diversity, Complexity and Relevance Volume 16 ; >
@@ -762,7 +762,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1474-7979
+      #param[journal_issn] = 1474-7979
 
       au < manifest ; exists ; 2000 ;  ; 9780762306695 ; 9780762306695 ; Globalization, the Multinational Firm, and Emerging Economies Volume 10 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307951 ; 9780762307951 ; Reassesing the Internationalization of the Firm Volume 11 ; >
@@ -789,7 +789,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0735-004X
+      #param[journal_issn] = 0735-004X
 
       au < manifest ; exists ; 2001 ;  ; 9780762308156 ; 9780762308156 ; Technological Applications Volume 15 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310296 ; 9780762310296 ; Advances in Learning and Behavioral Disabilities Volume 16 ; >
@@ -813,7 +813,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0065-2830
+      #param[journal_issn] = 0065-2830
 
       au < manifest ; exists ; 1991 ;  ; 9780120246151 ; 9780120246151 ; Advances in Librarianship Volume 15 ; >
       au < manifest ; exists ; 1992 ;  ; 9780120246168 ; 9780120246168 ; Advances in Librarianship Volume 16 ; >
@@ -847,7 +847,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0732-0671
+      #param[journal_issn] = 0732-0671
 
       au < manifest ; exists ; 2000 ;  ; 9780762306473 ; 9780762306473 ; Advances in Library Administration and Organization Volume 17 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307180 ; 9780762307180 ; Advances in Library Administration and Organization Volume 18 ; >
@@ -875,7 +875,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1474-7871
+      #param[journal_issn] = 1474-7871
 
       au < manifest ; exists ; 2003 ;  ; 9780762310128 ; 9780762310128 ; Advances in Management Accounting Volume 11 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311187 ; 9780762311187 ; Advances in Management Accounting Volume 12 ; >
@@ -899,7 +899,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1057-6290
+      #param[journal_issn] = 1057-6290
 
       au < manifest ; exists ; 1999 ;  ; 9780762305377 ; 9780762305377 ; Emergent Issues in the Field of Drug Abuse Volume 7 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308811 ; 9780762308811 ; Social Networks and Health Volume 8 ; >
@@ -920,7 +920,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-361X
+      #param[journal_issn] = 1479-361X
 
       au < manifest ; exists ; 2000 ;  ; 9780762306831 ; 9780762306831 ; Advances in Mergers & Acquisitions Volume 1 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310036 ; 9780762310036 ; Advances in Mergers & Acquisitions Volume 2 ; >
@@ -944,7 +944,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0749-7423
+      #param[journal_issn] = 0749-7423
 
       au < manifest ; exists ; 2010 ;  ; 9780857241115 ; 9780857241115 ; The Decade Ahead: Theoretical Perspectives on Motivation and Achievement Volume 16 Part A ; >
       au < manifest ; exists ; 2010 ;  ; 9780857242532 ; 9780857242532 ; The Decade Ahead: Applications and Contexts of Motivation and Achievement Volume 16 Part B ; >
@@ -960,7 +960,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1474-7863
+      #param[journal_issn] = 1474-7863
 
       au < manifest ; exists ; 2001 ;  ; 9780762307715 ; 9780762307715 ; Vision of Quality: How Evaluators Define, Understand and Represent Program Quality Volume 7 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308613 ; 9780762308613 ; School-Based Evaluation: An International Perspective Volume 8 ; >
@@ -980,7 +980,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1041-7060
+      #param[journal_issn] = 1041-7060
 
       au < manifest ; exists ; 2001 ;  ; 9780762305186 ; 9780762305186 ; Advances in Accountability: Regulation, Research, Gender and Justice Volume 8 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762309580 ; 9780762309580 ; Mirrors and Prisms Interrogating Accounting Volume 9 ; >
@@ -1001,7 +1001,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3687
+      #param[journal_issn] = 1479-3687
 
       au < manifest ; exists ; 2001 ;  ; 9780762306152 ; 9780762306152 ; Subject-specific instructional methods and activities Volume 8 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308736 ; 9780762308736 ; Social Constructivist Teaching: Affordances and Constraints Volume 9 ; >
@@ -1025,7 +1025,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0270-4013
+      #param[journal_issn] = 0270-4013
 
       au < manifest ; exists ; 2001 ;  ; 9780762308187 ; 9780762308187 ; Autistic Spectrum Disorders: Educational and Clinical Interventions Volume 14 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309757 ; 9780762309757 ; Effective Education for Learners with Exceptionalities Volume 15 ; >
@@ -1050,7 +1050,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0742-3322
+      #param[journal_issn] = 0742-3322
 
       au < manifest ; exists ; 2000 ;  ; 9780762306619 ; 9780762306619 ; Economics Meets Sociology in Strategic Management Volume 17 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307210 ; 9780762307210 ; Multiunit Organization and Multimarket Strategy Volume 18 ; >
@@ -1076,7 +1076,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2051-5030
+      #param[journal_issn] = 2051-5030
 
       au < manifest ; exists ; 2013 ;  ; 9781781906255 ; 9781781906255 ; International Business, Sustainability and Corporate Social Responsibility Volume 11 ; >
 
@@ -1090,7 +1090,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1058-7497
+      #param[journal_issn] = 1058-7497
 
       au < manifest ; exists ; 2000 ;  ; 9780762306701 ; 9780762306701 ; Advances in Taxation Volume 12 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307746 ; 9780762307746 ; Advances in Taxation Volume 13 ; >
@@ -1112,7 +1112,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0885-3339
+      #param[journal_issn] = 0885-3339
 
       au < manifest ; exists ; 2003 ;  ; 9780762310005 ; 9780762310005 ; Advances in the Economic Analysis of Participatory & Labor-Managed Firms Volume 7 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311149 ; 9780762311149 ; Employee Participation, Firm Performance and Survival Volume 8 ; >
@@ -1132,7 +1132,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1569-3740
+      #param[journal_issn] = 1569-3740
 
       au < manifest ; exists ; 2001 ;  ; 9780762303052 ; 9780762303052 ; The Long-Term Economics of Climate Change: Beyond a Doubling of Greenhouse Gas Concentrations Volume 3 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308507 ; 9780762308507 ; Economics of Pesticides, Sustainable Food Production, and Organic Food Markets Volume 4 ; >
@@ -1150,7 +1150,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1048-4736
+      #param[journal_issn] = 1048-4736
 
       au < manifest ; exists ; 2000 ;  ; 9780762306893 ; 9780762306893 ; Entrepreneurship and economic growth in the American economy Volume 12 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308224 ; 9780762308224 ; Entrepreneurial inputs and outcomes: New studies of entrepreneurship in the United States Volume 13 ; >
@@ -1174,7 +1174,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0276-8976
+      #param[journal_issn] = 0276-8976
 
       au < manifest ; exists ; 2006 ;  ; 0-7623-1221-1 ; 0-7623-1221-1 ; Applications of Management Science: In Productivity, Finance, and Operations Volume 12 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848558786 ; 9781848558786 ; Financial Modeling Applications and Data Envelopment Applications Volume 13 ; >
@@ -1191,7 +1191,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2042-1443
+      #param[journal_issn] = 2042-1443
 
       au < manifest ; exists ; 2009 ;  ; 9781849507202 ; 9781849507202 ; Tourism Branding: Communities in Action Volume 1 ; >
       au < manifest ; exists ; 2010 ;  ; 9781849509206 ; 9781849509206 ; Tourism in the Muslim World Volume 2 ; >
@@ -1208,7 +1208,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2040-7262
+      #param[journal_issn] = 2040-7262
 
       au < manifest ; exists ; 2009 ;  ; 9781848559066 ; 9781848559066 ; Urban Risk Reduction: An Asian Perspective Volume 1 ; >
       au < manifest ; exists ; 2010 ;  ; 9781849506984 ; 9781849506984 ; Water Communities Volume 2 ; >
@@ -1233,7 +1233,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0195-6310
+      #param[journal_issn] = 0195-6310
 
       au < manifest ; exists ; 2000 ;  ; 9780762306794 ; 9780762306794 ; Comparative Perspectives on Universities Volume 19 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308361 ; 9780762308361 ; The Comparative Study of Conscription in the Armed Forces Volume 20 ; >
@@ -1258,7 +1258,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2040-7246
+      #param[journal_issn] = 2040-7246
 
       au < manifest ; exists ; 2010 ;  ; 9780857243355 ; 9780857243355 ; Innovating Women: Contributions to Technological Advancement Volume 1 ; >
       au < manifest ; exists ; 2012 ;  ; 9781781902547 ; 9781781902547 ; Social and Sustainable Enterprise: Changing the Nature of Business Volume 2 ; >
@@ -1273,7 +1273,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1530-3535
+      #param[journal_issn] = 1530-3535
 
       au < manifest ; exists ; 2003 ;  ; 9780762308019 ; 9780762308019 ; Intergenerational Ambivalences: New Perspectives on Parent-Child Relations in Later Life Volume 4 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311163 ; 9780762311163 ; Families in Eastern Europe Volume 5 ; >
@@ -1289,7 +1289,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1569-3759
+      #param[journal_issn] = 1569-3759
 
       au < manifest ; exists ; 2002 ;  ; 9780762309795 ; 9780762309795 ; The Irish Economy in Transition: Successes, Problems, and Prospects Volume 85 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762312580 ; 9780762312580 ; Asia Pacific Financial Markets in Comparative Perspective: Issues and Implications for the 21st Century Volume 86 ; >
@@ -1312,7 +1312,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1572-8323
+      #param[journal_issn] = 1572-8323
 
       au < manifest ; exists ; 2005 ;  ; 9780444518651 ; 9780444518651 ; Eurasia Volume 1 ; >
       au < manifest ; exists ; 2005 ;  ; 9780444519603 ; 9780444519603 ; Military Missions and their Implications Reconsidered: The Aftermath of September 11th Volume 2 ; >
@@ -1346,7 +1346,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0573-8555
+      #param[journal_issn] = 0573-8555
 
       au < manifest ; exists ; 1992 ;  ; 9780444896537 ; 9780444896537 ; Economic Modeling in the Nordic Countries Volume 210 ; >
       au < manifest ; exists ; 1993 ;  ; 9780444814692 ; 9780444814692 ; Contingent Valuation: A Critical Assessment Volume 220 ; >
@@ -1408,7 +1408,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2045-7944
+      #param[journal_issn] = 2045-7944
 
       au < manifest ; exists ; 2012 ;  ; 9780857249975 ; 9780857249975 ; Emerging and Potential Trends in Public Management: An Age of Austerity Volume 1 ; >
 
@@ -1422,7 +1422,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2043-9059
+      #param[journal_issn] = 2043-9059
 
       au < manifest ; exists ; 2010 ;  ; 9780857244550 ; 9780857244550 ; Reframing Corporate Social Responsibility: Lessons from the Global Financial Crisis Volume 1 ; >
       au < manifest ; exists ; 2011 ;  ; 9781780520926 ; 9781780520926 ; Finance and Sustainability: Towards a New Paradigm? A Post-Crisis Agenda Volume 2 ; >
@@ -1439,7 +1439,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0278-1204
+      #param[journal_issn] = 0278-1204
 
       au < manifest ; exists ; 2002 ;  ; 9780762307623 ; 9780762307623 ; Bringing Capitalism Back for Critique by Social Theory Volume 21 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762309634 ; 9780762309634 ; Critical Theory: Diverse Objects, Diverse Subjects Volume 22 ; >
@@ -1462,7 +1462,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1472-7870
+      #param[journal_issn] = 1472-7870
 
       au < exists ; exists ; 2011 ;  ; 9780857249098 ; 9780857249098 ; Making Semantics Pragmatic Volume 24 ; >
       au < exists ; exists ; 2011 ;  ; 9780857240934 ; 9780857240934 ; Procedural Meaning: Problems and Perspectives Volume 25 ; >
@@ -1477,7 +1477,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2044-9968
+      #param[journal_issn] = 2044-9968
 
       au < manifest ; exists ; 2011 ;  ; 9780857246493 ; 9780857246493 ; Educating Educators with Social Media Volume 1 ; >
       au < manifest ; exists ; 2011 ;  ; 9780857246516 ; 9780857246516 ; Higher Education Administration with Social Media Volume 2 ; >
@@ -1502,7 +1502,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2043-0523
+      #param[journal_issn] = 2043-0523
 
       au < manifest ; exists ; 2010 ;  ; 9780857242952 ; 9780857242952 ; NGOs and Social Responsibility Volume 1 ; >
       au < manifest ; exists ; 2011 ;  ; 9780857248770 ; 9780857248770 ; Governance in the Business Environment Volume 2 ; >
@@ -1519,7 +1519,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2046-6072
+      #param[journal_issn] = 2046-6072
 
       au < manifest ; exists ; 2011 ;  ; 9781780522807 ; 9781780522807 ; The Third Sector Volume 1 ; >
 
@@ -1533,7 +1533,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3644
+      #param[journal_issn] = 1479-3644
 
       au < manifest ; exists ; 2005 ;  ; 9780762305629 ; 9780762305629 ; Beyond Small Numbers Volume 4 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762312535 ; 9780762312535 ; Lessons in Leadership Volume 5 ; >
@@ -1555,7 +1555,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1574-8715
+      #param[journal_issn] = 1574-8715
 
       au < manifest ; exists ; 2006 ;  ; 9780444527653 ; 9780444527653 ; Theory and Practice of Foreign Aid Volume 1 ; >
       au < manifest ; exists ; 2007 ;  ; 9780444527646 ; 9780444527646 ; Intellectual Property, Growth and Trade Volume 2 ; >
@@ -1579,7 +1579,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1574-0129
+      #param[journal_issn] = 1574-0129
 
       au < manifest ; exists ; 2008 ;  ; 9780444532633 ; 9780444532633 ; Frontiers of Family Economics Volume 1 ; >
 
@@ -1593,7 +1593,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2041-272X
+      #param[journal_issn] = 2041-272X
 
       au < exists ; exists ; 2010 ;  ; 9781849507462 ; 9781849507462 ; Language Program Leadership in a Changing World: An Ecological Model Volume 1 ; >
       au < exists ; exists ; 2010 ;  ; 9781849509961 ; 9781849509961 ; Service, Satisfaction, and Climate: Perspectives on Management in English Language Teaching Volume 2 ; >
@@ -1612,7 +1612,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1876-066X
+      #param[journal_issn] = 1876-066X
 
       au < manifest ; exists ; 2011 ;  ; 9781780521121 ; 9781780521121 ; The Role of Expatriates in MNCs Knowledge Mobilization Volume 27 ; >
       au < manifest ; exists ; 2012 ;  ; 9781780529905 ; 9781780529905 ; Business, Society and Politics Volume 28 ; >
@@ -1627,7 +1627,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1569-3767
+      #param[journal_issn] = 1569-3767
 
       au < manifest ; exists ; 2001 ;  ; 9780762306862 ; 9780762306862 ; Asian Financial Crisis Financial, Structural and International Dimensions Volume 1 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308309 ; 9780762308309 ; International Finance Review Volume 2 ; >
@@ -1653,7 +1653,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3679
+      #param[journal_issn] = 1479-3679
 
       au < manifest ; exists ; 2002 ;  ; 9780762308217 ; 9780762308217 ; New Paradigms and Recurring Paradoxes in Education for Citizenship: An International Comparison Volume 5 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762311750 ; 9780762311750 ; Global Trends in Educational Policy Volume 6 ; >
@@ -1681,7 +1681,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3628
+      #param[journal_issn] = 1479-3628
 
       au < manifest ; exists ; 2000 ;  ; 9780762307418 ; 9780762307418 ; Academic Work and Life: What it is to be an Academic, and How this is Changing Volume 1 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309740 ; 9780762309740 ; Access and Exclusion Volume 2 ; >
@@ -1702,7 +1702,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3636
+      #param[journal_issn] = 1479-3636
 
       au < manifest ; exists ; 2001 ;  ; 9780762307227 ; 9780762307227 ; Emotional and Behavioural Difficulties in Mainstream Schools Volume 1 ; >
       au < manifest ; exists ; 2012 ;  ; 9781780527109 ; 9781780527109 ; Transforming Troubled Lives: Strategies and Interventions for Children with Social, Emotional and Behavioural Difficulties Volume 2 ; >
@@ -1717,7 +1717,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1074-7877
+      #param[journal_issn] = 1074-7877
 
       au < manifest ; exists ; 2001 ;  ; 9780762300235 ; 9780762300235 ; Strategies and Organizations in Transition Volume 3 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310333 ; 9780762310333 ; Ethnic Entrepreneurship: Structure and Process Volume 4 ; >
@@ -1733,7 +1733,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1571-0386
+      #param[journal_issn] = 1571-0386
 
       au < manifest ; exists ; 2004 ;  ; 9780444514332 ; 9780444514332 ; Economic Complexity Volume 14 ; >
       au < manifest ; exists ; 2007 ;  ; 9780444530059 ; 9780444530059 ; Modelling Our Future: Population Ageing, Health and Aged Care Volume 16 ; >
@@ -1753,7 +1753,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1876-0562
+      #param[journal_issn] = 1876-0562
 
       au < manifest ; exists ; 1991 ;  ; 9780122870415 ; 9780122870415 ; Library Technical Services: Operations and Management Volume 91A ; >
       au < manifest ; exists ; 1991 ;  ; 9780124245204 ; 9780124245204 ; Operations Research for Libraries and Information Agencies: Techniques for the Evaluation of Management Decision Alternatives Volume 91B ; >
@@ -1782,7 +1782,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2048-0458
+      #param[journal_issn] = 2048-0458
 
       au < manifest ; exists ; 2012 ;  ; 9781780526300 ; 9781780526300 ; Using Informative Assessments towards Effective Literacy Instruction Volume 1 ; >
       au < manifest ; exists ; 2013 ;  ; 9781781905036 ; 9781781905036 ; Advanced Literacy Practices Volume 2 ; >
@@ -1797,7 +1797,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3571
+      #param[journal_issn] = 1479-3571
 
       au < manifest ; exists ; 2007 ;  ; 9780762313327 ; 9780762313327 ; Being There Even When You Are Not Volume 4 ; >
 
@@ -1811,7 +1811,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1876-0228
+      #param[journal_issn] = 1876-0228
 
       au < manifest ; exists ; 2008 ;  ; 9780080554488 ; 9780080554488 ; New Technology-Based Firms in the New Millenium Volume 6 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848557826 ; 9781848557826 ; New Technology-Based Firms in the New Millenium Volume 7 ; >
@@ -1829,7 +1829,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2045-0605
+      #param[journal_issn] = 2045-0605
 
       au < manifest ; exists ; 2011 ;  ; 9780857245571 ; 9780857245571 ; Organizing for Sustainability Volume 1 ; >
       au < manifest ; exists ; 2012 ;  ; 9781781900321 ; 9781781900321 ; Organizing for Sustainable Health Care Volume 2 ; >
@@ -1844,7 +1844,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0198-8719
+      #param[journal_issn] = 0198-8719
 
       au < manifest ; exists ; 2001 ;  ; 9780762307630 ; 9780762307630 ; Political Power and Social Theory Volume 14 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308835 ; 9780762308835 ; Political Power and Social Theory Volume 15 ; >
@@ -1868,7 +1868,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1745-8862
+      #param[journal_issn] = 1745-8862
 
       au < manifest ; exists ; 2008 ;  ; 9781848552784 ; 9781848552784 ; New Perspectives in International Business Research Volume 3 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848559561 ; 9781848559561 ; Research on Knowledge, Innovation and Internationalization Volume 4 ; >
@@ -1886,7 +1886,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0363-0951
+      #param[journal_issn] = 0363-0951
 
       au < exists ; exists ; 2003 ;  ; 9780125421188 ; 9780125421188 ; Progress in Psychobiology and Physiological Psychology Volume 18 ; >
 
@@ -1900,7 +1900,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3563
+      #param[journal_issn] = 1479-3563
 
       au < manifest ; exists ; 2008 ;  ; 9781848552524 ; 9781848552524 ; Corporate Governance in Less Developed and Emerging Economies Volume 8 ; >
       au < manifest ; exists ; 2009 ;  ; 9781849506250 ; 9781849506250 ; Accounting in Emerging Economies Volume 9 ; >
@@ -1919,7 +1919,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2042-9940
+      #param[journal_issn] = 2042-9940
 
       au < manifest ; exists ; 2011 ;  ; 9780857245793 ; 9780857245793 ; Biology and Politics Volume 9 ; >
       au < manifest ; exists ; 2012 ;  ; 9781780528205 ; 9781780528205 ; Biopolicy: The Life Sciences and Public Policy Volume 10 ; >
@@ -1934,7 +1934,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0192-0812
+      #param[journal_issn] = 0192-0812
 
       au < manifest ; exists ; 2000 ;  ; 9780762306718 ; 9780762306718 ; Research in Community and Mental Health Volume 11 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762309726 ; 9780762309726 ; Community-Based Interventions for Criminal Offenders with Severe Mental Illness Volume 12 ; >
@@ -1951,7 +1951,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1744-2117
+      #param[journal_issn] = 1744-2117
 
       au < manifest ; exists ; 2008 ;  ; 9781848552104 ; 9781848552104 ; A Focused Issue on Fundamental Issues in Competence Theory Development Volume 4 ; >
       au < manifest ; exists ; 2010 ;  ; 9781849509909 ; 9781849509909 ; A Focussed Issue on Identifying, Building, and Linking Competences Volume 5 ; >
@@ -1967,7 +1967,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0885-2111
+      #param[journal_issn] = 0885-2111
 
       au < manifest ; exists ; 2006 ;  ; 0-7623-1304-8 ; 0-7623-1304-8 ; Research in Consumer Behavior Volume 10 ; >
       au < manifest ; exists ; 2007 ;  ; 9780762314461 ; 9780762314461 ; Consumer Culture Theory Volume 11 ; >
@@ -1985,7 +1985,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0190-1281
+      #param[journal_issn] = 0190-1281
 
       au < manifest ; exists ; 2002 ;  ; 9780762308996 ; 9780762308996 ; Research in Economic Anthropology Volume 21 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310715 ; 9780762310715 ; Anthropological Perspectives on Economic Development and Integration Volume 22 ; >
@@ -2010,7 +2010,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0363-3268
+      #param[journal_issn] = 0363-3268
 
       au < manifest ; exists ; 2001 ;  ; 9780762308378 ; 9780762308378 ; Research in Economic History Volume 20 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309931 ; 9780762309931 ; Research in Economic History Volume 21 ; >
@@ -2033,7 +2033,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1529-2096
+      #param[journal_issn] = 1529-2096
 
       au < manifest ; exists ; 2000 ;  ; 9780762306633 ; 9780762306633 ; Symposium on Health Care Ethics Volume 2 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308095 ; 9780762308095 ; The Next Phase of Business Ethics: Integrating Psychology and Ethics Volume 3 ; >
@@ -2053,7 +2053,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0193-2306
+      #param[journal_issn] = 0193-2306
 
       au < manifest ; exists ; 2001 ;  ; 9780762307029 ; 9780762307029 ; Research in Experimental Economics Volume 8 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762311743 ; 9780762311743 ; Field Experiments in Economics Volume 10 ; >
@@ -2073,7 +2073,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0196-3821
+      #param[journal_issn] = 0196-3821
 
       au < manifest ; exists ; 2001 ;  ; 9780762307173 ; 9780762307173 ; Research in Finance Volume 18 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762309658 ; 9780762309658 ; Research in Finance Volume 19 ; >
@@ -2097,7 +2097,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1064-4857
+      #param[journal_issn] = 1064-4857
 
       au < manifest ; exists ; 1994 ;  ; 9781559386197 ; 9781559386197 ; Research in Global Strategic Management Volume 4 ; >
       au < manifest ; exists ; 1995 ;  ; 9781559384346 ; 9781559384346 ; Beyond The Diamond Volume 5 ; >
@@ -2122,7 +2122,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0194-3960
+      #param[journal_issn] = 0194-3960
 
       au < manifest ; exists ; 2000 ;  ; 9780762305292 ; 9780762305292 ; The Economics of Disability Volume 13 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762306978 ; 9780762306978 ; Investing in Health: The Social and Economic Benefits of Health Care Innovation Volume 14 ; >
@@ -2139,7 +2139,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0147-9121
+      #param[journal_issn] = 0147-9121
 
       au < manifest ; exists ; 2000 ;  ; 9780762305841 ; 9780762305841 ; Research in Labor Economics Volume 18 ; >
       au < manifest ; exists ; 2000 ;  ; 9780762306930 ; 9780762306930 ; Research in Labor Economics Volume 19 ; >
@@ -2171,7 +2171,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0193-5895
+      #param[journal_issn] = 0193-5895
 
       au < manifest ; exists ; 2000 ;  ; 9780762303083 ; 9780762303083 ; Research in Law and Economics Volume 19 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308880 ; 9780762308880 ; An Introduction to the Law and Economics of Environmental Policy: Issues in Institutional Design Volume 20 ; >
@@ -2191,7 +2191,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1094-5334
+      #param[journal_issn] = 1094-5334
 
       au < manifest ; exists ; 2001 ;  ; 9780762307142 ; 9780762307142 ; The Economics of Women and Work in the Middle East and North Africa Volume 4 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309924 ; 9780762309924 ; Food, Agriculture, and Economic Policy in the Middle East and North Africa Volume 5 ; >
@@ -2207,7 +2207,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1475-9144
+      #param[journal_issn] = 1475-9144
 
       au < manifest ; exists ; 2002 ;  ; 9780762308057 ; 9780762308057 ; The many faces of multi-level issues Volume 1 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310395 ; 9780762310395 ; Multi-Level Issues in Organizational Behavior and Strategy Volume 2 ; >
@@ -2228,7 +2228,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3555
+      #param[journal_issn] = 1479-3555
 
       au < manifest ; exists ; 2001 ;  ; 9780762308460 ; 9780762308460 ; Exploring Theoretical Mechanisms and Perspectives Volume 1 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762309702 ; 9780762309702 ; Historical and Current Perspectives on Stress and Health Volume 2 ; >
@@ -2251,7 +2251,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0897-3016
+      #param[journal_issn] = 0897-3016
 
       au < manifest ; exists ; 2000 ;  ; 9780762306275 ; 9780762306275 ; Research in Organizational Change and Development Volume 12 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308279 ; 9780762308279 ; Research in Organizational Change and Development Volume 13 ; >
@@ -2273,7 +2273,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0742-7301
+      #param[journal_issn] = 0742-7301
 
       au < manifest ; exists ; 2000 ;  ; 9780762307517 ; 9780762307517 ; Research in Personnel and Human Resources Management Volume 19 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308408 ; 9780762308408 ; Research in Personnel and Human Resources Management Volume 20 ; >
@@ -2299,7 +2299,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0161-7230
+      #param[journal_issn] = 0161-7230
 
       au < manifest ; exists ; 2000 ;  ; 9780762306961 ; 9780762306961 ; Value, Capitalist Dynamics and Money Volume 18 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308385 ; 9780762308385 ; Marx's Capital and Capitalism\; Markets in a Socialist Alternative Volume 19 ; >
@@ -2322,7 +2322,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0895-9935
+      #param[journal_issn] = 0895-9935
 
       au < manifest ; exists ; 2008 ;  ; 9781848551787 ; 9781848551787 ; Politics and Public Policy Volume 17 ; >
       au < manifest ; exists ; 2010 ;  ; 9780857240910 ; 9780857240910 ; Democratic Paths and Trends Volume 18 ; >
@@ -2339,7 +2339,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0732-1317
+      #param[journal_issn] = 0732-1317
 
       au < exists ; exists ; 2001 ;  ; 9780762307593 ; 9780762307593 ; Learning from International Public Management Reform: Part A Volume 11 Part 1 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307609 ; 9780762307609 ; Learning from International Public Management Reform: Part B Volume 11 Part 2 ; >
@@ -2365,7 +2365,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0195-7449
+      #param[journal_issn] = 0195-7449
 
       au < manifest ; exists ; 2008 ;  ; 9780762314096 ; 9780762314096 ; Biculturalism, Self Identity and Societal Transformation Volume 15 ; >
       au < manifest ; exists ; 2010 ;  ; 9780857241672 ; 9780857241672 ; Race in the Age of Obama Volume 16 ; >
@@ -2381,7 +2381,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1057-1922
+      #param[journal_issn] = 1057-1922
 
       au < manifest ; exists ; 2000 ;  ; 9780762304745 ; 9780762304745 ; Research in Rural Sociology and Development Volume 8 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309542 ; 9780762309542 ; Walking Towards Justice: Democratization in Rural Life Volume 9 ; >
@@ -2405,7 +2405,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0163-786X
+      #param[journal_issn] = 0163-786X
 
       au < manifest ; exists ; 2000 ;  ; 9780762306657 ; 9780762306657 ; Research in Social Movements, Conflicts and Change Volume 22 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307869 ; 9780762307869 ; Political Opportunities Social Movements, and Democratization Volume 23 ; >
@@ -2432,7 +2432,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0196-1152
+      #param[journal_issn] = 0196-1152
 
       au < manifest ; exists ; 2001 ;  ; 9780762307166 ; 9780762307166 ; The Organizational Response to Social Problems Volume 8 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308064 ; 9780762308064 ; Environmental Risks: Perception, Evaluation and Management Volume 9 ; >
@@ -2458,7 +2458,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3547
+      #param[journal_issn] = 1479-3547
 
       au < manifest ; exists ; 2000 ;  ; 9780762305513 ; 9780762305513 ; Expanding the Scope of Social Science Research on Disability Volume 1 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307739 ; 9780762307739 ; Exploring Theories and Expanding Methodologies: Where we are and where we need to go Volume 2 ; >
@@ -2477,7 +2477,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0743-4154
+      #param[journal_issn] = 0743-4154
 
       au < manifest ; exists ; 2000 ;  ; 9780762306374 ; 9780762306374 ; A Research Annual Volume 18 Part 1 ; >
       au < manifest ; exists ; 2000 ;  ; 9780762306350 ; 9780762306350 ; American Economics Volume 18 Part 2 ; >
@@ -2527,7 +2527,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3539
+      #param[journal_issn] = 1479-3539
 
       au < manifest ; exists ; 2002 ;  ; 9780762308170 ; 9780762308170 ; Schooling and Social Capital in Diverse Cultures Volume 13 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310616 ; 9780762310616 ; Inequality Across Societies: Families, Schools and Persisting Stratification Volume 14 ; >
@@ -2546,7 +2546,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0275-4959
+      #param[journal_issn] = 0275-4959
 
       au < manifest ; exists ; 2000 ;  ; 9780762306442 ; 9780762306442 ; Health Care Providers, Institutions, and Patients: Changing Patterns of Care Provision and Care Delivery Volume 17 ; >
       au < manifest ; exists ; 2000 ;  ; 9780762307401 ; 9780762307401 ; Health, Illness, and use of Care: The Impact of Social Factors Volume 18 ; >
@@ -2573,7 +2573,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0733-558X
+      #param[journal_issn] = 0733-558X
 
       au < manifest ; exists ; 2000 ;  ; 9780762306329 ; 9780762306329 ; Research in the Sociology of Organizations Volume 17 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307708 ; 9780762307708 ; Social Capital of Organizations Volume 18 ; >
@@ -2608,7 +2608,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1476-2854
+      #param[journal_issn] = 1476-2854
 
       au < manifest ; exists ; 2012 ;  ; 9781780522968 ; 9781780522968 ; Qualitative Research on Sport and Physical Culture Volume 6 ; >
 
@@ -2622,7 +2622,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0277-2833
+      #param[journal_issn] = 0277-2833
 
       au < manifest ; exists ; 2001 ;  ; 9780762307661 ; 9780762307661 ; The Transformation of Work Volume 10 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762308828 ; 9780762308828 ; Labor Revitalization: Global Perspectives and New Initiatives Volume 11 ; >
@@ -2650,7 +2650,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3520
+      #param[journal_issn] = 1479-3520
 
       au < manifest ; exists ; 2000 ;  ; 9780762304998 ; 9780762304998 ; Citizen Responsive Government Volume 8 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310609 ; 9780762310609 ; The City as an Entertainment Machine Volume 9 ; >
@@ -2666,7 +2666,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1047-0042
+      #param[journal_issn] = 1047-0042
 
       au < manifest ; exists ; 1999 ;  ; 9780762305407 ; 9780762305407 ; Constructions of Urban Space Volume 5 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762305414 ; 9780762305414 ; Critical Perspectives on Urban Redevelopment Volume 6 ; >
@@ -2687,7 +2687,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-8387
+      #param[journal_issn] = 1479-8387
 
       au < manifest ; exists ; 2004 ;  ; 9780762310517 ; 9780762310517 ; Research Methodology in Strategy and Management Volume 1 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762312085 ; 9780762312085 ; Research Methodology in Strategy and Management Volume 2 ; >
@@ -2708,7 +2708,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1049-2585
+      #param[journal_issn] = 1049-2585
 
       au < manifest ; exists ; 2003 ;  ; 9780762310142 ; 9780762310142 ; Inequality, Welfare and Poverty: Theory and Measurement Volume 9 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310241 ; 9780762310241 ; Fiscal Policy, Inequality and Welfare Volume 10 ; >
@@ -2733,7 +2733,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1746-9791
+      #param[journal_issn] = 1746-9791
 
       au < manifest ; exists ; 2005 ;  ; 9780762312344 ; 9780762312344 ; The Effect of Affect in Organizational Settings Volume 1 ; >
       au < manifest ; exists ; 2006 ;  ; 9780762313105 ; 9780762313105 ; Individual and Organizational Perspectives on Emotion Management and Display Volume 2 ; >
@@ -2754,7 +2754,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1534-0856
+      #param[journal_issn] = 1534-0856
 
       au < manifest ; exists ; 2000 ;  ; 9780762306626 ; 9780762306626 ; Technology Volume 3 ; >
       au < manifest ; exists ; 2002 ;  ; 9780762308620 ; 9780762308620 ; Toward Phenomenology of Groups and Group Membership Volume 4 ; >
@@ -2780,7 +2780,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1574-0765
+      #param[journal_issn] = 1574-0765
 
       au < manifest ; exists ; 2004 ;  ; 9780762311255 ; 9780762311255 ; Research on Professional Responsibility and Ethics in Accounting Volume 9 ; >
       au < manifest ; exists ; 2005 ;  ; 9780762312399 ; 9780762312399 ; Research on Professional Responsibility and Ethics in Accounting Volume 10 ; >
@@ -2801,7 +2801,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0737-1071
+      #param[journal_issn] = 0737-1071
 
       au < manifest ; exists ; 2001 ;  ; 9780762308118 ; 9780762308118 ; Comparative Studies of Technological Evolution Volume 7 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762311569 ; 9780762311569 ; Product Inovation, Interactive Learning and Economic Performance Volume 8 ; >
@@ -2817,7 +2817,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1548-6435
+      #param[journal_issn] = 1548-6435
 
       au < manifest ; exists ; 2005 ;  ; 9780765613042 ; 9780765613042 ; Review of Marketing Research Volume 1 ; >
       au < manifest ; exists ; 2006 ;  ; 9780765613059 ; 9780765613059 ; Review of Marketing Research Volume 2 ; >
@@ -2839,7 +2839,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1537-4661
+      #param[journal_issn] = 1537-4661
 
       au < manifest ; exists ; 2001 ;  ; 9780762300518 ; 9780762300518 ; Sociological Studies of Children and Youth Volume 8 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762309672 ; 9780762309672 ; Sociological Studies of Children and Youth Volume 9 ; >
@@ -2861,7 +2861,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1521-6136
+      #param[journal_issn] = 1521-6136
 
       au < manifest ; exists ; 2000 ;  ; 9780762306800 ; 9780762306800 ; Sociology of Crime, Law and Deviance Volume 2 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762308002 ; 9780762308002 ; Legal Professions: Work, Structure and Organization Volume 3 ; >
@@ -2889,7 +2889,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0275-7982
+      #param[journal_issn] = 0275-7982
 
       au < manifest ; exists ; 2011 ;  ; 9780762300525 ; 9780762300525 ; Human Rights and Media Volume 6 ; >
 
@@ -2903,7 +2903,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1529-210X
+      #param[journal_issn] = 1529-210X
 
       au < manifest ; exists ; 1999 ;  ; 9780762305636 ; 9780762305636 ; Explorations in Methodology Volume 2 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307388 ; 9780762307388 ; Genders and Sexualities in Educational Ethnography Volume 3 ; >
@@ -2927,7 +2927,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1059-4337
+      #param[journal_issn] = 1059-4337
 
       au < manifest ; exists ; 2003 ;  ; 9780762310159 ; 9780762310159 ; Studies in Law, Politics, and Society Volume 28 ; >
       au < manifest ; exists ; 2003 ;  ; 9780762310326 ; 9780762310326 ; Studies in Law, Politics, and Society Volume 29 ; >
@@ -2973,7 +2973,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-3512
+      #param[journal_issn] = 1479-3512
 
       au < manifest ; exists ; 2008 ;  ; 9780762314799 ; 9780762314799 ; Performance Measurement and Management Control: Measuring and Rewarding Performance Volume 18 ; >
       au < manifest ; exists ; 2009 ;  ; 9781848552548 ; 9781848552548 ; Managerial Attitudes toward a Stakeholder Prominence within a Southeast Asia Context Volume 19 ; >
@@ -2994,7 +2994,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2050-2060
+      #param[journal_issn] = 2050-2060
 
       au < manifest ; exists ; 2012 ;  ; 9781780529189 ; 9781780529189 ; School Shootings: Mediatized Violence in a Global Age Volume 7 ; >
 
@@ -3008,7 +3008,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2051-6630
+      #param[journal_issn] = 2051-6630
 
       au < manifest ; exists ; 2013 ;  ; 9781781906576 ; 9781781906576 ; Conceptualizing and Researching Governance in Public and Non-Profit Organizations Volume 1 ; >
 
@@ -3022,7 +3022,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1042-3192
+      #param[journal_issn] = 1042-3192
 
       au < manifest ; exists ; 2000 ;  ; 9780762300532 ; 9780762300532 ; Cross-Cultural Case Study Volume 6 ; >
       au < manifest ; exists ; 2004 ;  ; 9780762310210 ; 9780762310210 ; Seeing is Believing? Approaches to Visual Research Volume 7 ; >
@@ -3042,7 +3042,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0163-2396
+      #param[journal_issn] = 0163-2396
 
       au < manifest ; exists ; 2000 ;  ; 9780762306398 ; 9780762306398 ; Studies in Symbolic Interaction Volume 23 ; >
       au < manifest ; exists ; 2001 ;  ; 9780762307548 ; 9780762307548 ; Studies in Symbolic Interaction Volume 24 ; >
@@ -3072,7 +3072,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1572-6304
+      #param[journal_issn] = 1572-6304
 
       au < exists ; exists ; 2006 ;  ; 9780080448633 ; 9780080448633 ; Writing and Digital Media Volume 17 ; >
       au < exists ; exists ; 2006 ;  ; 9780080453255 ; 9780080453255 ; Writing and Motivation Volume 19 ; >
@@ -3092,7 +3092,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 0092-4563
+      #param[journal_issn] = 0092-4563
 
       au < exists ; exists ; 1998 ;  ; 9780126135312 ; 9780126135312 ; Sentence Processing: A Crosslinguistic Perspective Volume 31 ; >
       au < exists ; exists ; 1999 ;  ; 9780126135329 ; 9780126135329 ; The Nature and Function of Syntatic Categories Volume 32 ; >
@@ -3113,7 +3113,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1479-067X
+      #param[journal_issn] = 1479-067X
 
       au < manifest ; exists ; 2004 ;  ; 9780080444574 ; 9780080444574 ; Silicon Valley North Volume 9 ; >
       au < manifest ; exists ; 2006 ;  ; 9780080453217 ; 9780080453217 ; Astute Competition Volume 11 ; >
@@ -3129,7 +3129,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 1571-5043
+      #param[journal_issn] = 1571-5043
 
       au < manifest ; exists ; 2012 ;  ; 9780857246837 ; 9780857246837 ; Culture and Society in Tourism Contexts Volume 17 ; >
 
@@ -3143,7 +3143,7 @@
         type = bookSeries
       >
 
-      param[journal_issn] = 2044-9941
+      #param[journal_issn] = 2044-9941
 
       au < manifest ; exists ; 2012 ;  ; 9781780522982 ; 9781780522982 ; Cycling and Sustainability Volume 1 ; >
       au < manifest ; exists ; 2012 ;  ; 9781780524405 ; 9781780524405 ; Transport and Climate Change Volume 2 ; >
