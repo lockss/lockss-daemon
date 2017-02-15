@@ -438,7 +438,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
       }
       return new PatternStringMap(lst);
     } else {
-      return null;
+      return PatternStringMap.EMPTY;
     }
   }
 
