@@ -45,10 +45,15 @@ class _TdbExpandOptions(object):
 
     @staticmethod
     def make_parser():
-        usage = '%prog [OPTIONS] FILE...'
+        usage = '%prog {--interative|--non-interactive} [OPTIONS] FILE...'
         parser = optparse.OptionParser(version=__version__, usage=usage, description=__doc__)
         parser.add_option('--copyright', '-C', action='store_true', help='show copyright and exit')
         parser.add_option('--license', '-L', action='store_true', help='show license and exit')
+        # Mode
+        group = optparse.OptionGroup(parser, 'Mode')
+        group.add_option('--interactive', action='store_true', help='Prompt user interactively')
+        group.add_option('--non-interactive', action='store_true', help='Do not prompt user interactively (default)')
+        parser.add_option_group(group)
         # Options
         group = optparse.OptionGroup(parser, 'Options')
         group.add_option('--end-year', type='int', help='last year in which to add entries (default: this year)')
@@ -69,6 +74,10 @@ class _TdbExpandOptions(object):
         # files
         if len(args) == 0: parser.error('at least one file is required')
         self.files = args[:]
+        # interactive
+        if opts.interactive and opts.non_interactive:
+            parser.error('--interactive, --non-interactive are mutually exclusive')
+        self.interactive = opts.interactive is True
         # end_year, start_year (integer)
         this_year = datetime.today().year
         self.start_year = opts.start_year or this_year
@@ -274,22 +283,53 @@ def _find_ranges(options, aus):
         ranges.append([auentry])
         aindex = aindex - 1
         while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
+            ranges[-1].append(aus[aindex])
             if (aus[aindex][_IYEAR] and aus[aindex][_IYEAR] > ranges[-1][-1][_IYEAR]):
                 break
             if (aus[aindex][_IYEAR] is None and aus[aindex][_IVOL] > ranges[-1][-1][_IVOL]):
                 break
-            ranges[-1].append(aus[aindex])
             aindex = aindex - 1
         while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
             aindex = aindex - 1
     ###DEBUG
-    # for range in ranges:
-    #     for auentry in range:
-    #         print auentry[-1].generate_body()
-    #     print
+    for range in reversed(ranges):
+        for auentry in range:
+            print auentry[-1].generate_body()
+        print
+    ranges.reverse()
     return ranges
 
+def _analyze_ranges(options, aus, ranges):
+    for range in ranges:
+        print ('>>>>>>>', _analyze_range(options, aus, range)) ###FIXME
 
+def _analyze_range(options, aus, range):
+    latestau = range[0]
+    latestyear = latestau[_IYEAR]
+    if latestyear is None:
+        pass ###FIXME
+    elif latestyear[1] is None:
+        n = 1
+        while n < len(range) and range[n][_IYEAR] == latestyear:
+            n = n + 1
+        if n == len(range):
+            if options.interactive and not _yesno('Not enough years; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries'), range):
+                return ('warning',)
+            else:
+                return ('single', n, 0)
+        else:
+            pass ###FIXME
+    else:
+        pass ###FIXME
+
+
+def _yesno(st, range=None):
+    if range:
+        for entry in reversed(range):
+            print '%s:%d: au <%s>' % (entry[_FILE], entry[_LINE], entry[-1].generate_body())
+        print
+    x = raw_input(st + ' [Yn] ')
+    return not x.lower().startswith('n')
 
 def _main():
     # Parse command line
@@ -299,7 +339,8 @@ def _main():
     # Get AUIDs and scan files for AU entries
     aus = _tdbout(options)
     _recognize(options, aus)
-    _find_ranges(options, aus)
+    ranges = _find_ranges(options, aus)
+    _analyze_ranges(options, aus, ranges)
 
 # Main entry point
 if __name__ == '__main__': _main()
