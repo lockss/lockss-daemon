@@ -12,7 +12,7 @@ $3>date
 
 {
   # add a loop to add line only if either [status is _not_ manifest] OR [journal year (or journal end year) is lt or eq to the current year we are testing]
-  current_year = 2015
+  current_year = 2016
   end_year = 0
   incontract = 0
   #test_year = ""
