@@ -151,10 +151,18 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"stable/40981057", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/10.2307/40981054", true, JSAu, cus);
     shouldCacheTest(ROOT_URL+"stable/pdf/40981057.pdf", true, JSAu, cus);
-    shouldCacheTest(ROOT_URL+"doi/xml/10.2307/40981057", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/xml/10.2307/40981057", true, JSAu, cus);    
     
     // YES -version of PDF with argument -- it will get swallowed as redirect
     shouldCacheTest(ROOT_URL+"stable/pdf/11.1111/xxxx.-abc.12G.pdf?acceptTC=true&coverpage=false", true, JSAu, cus);
+    
+    //american journal of archaeology uses alernative to journal_id as doi component "aja" not "amerjarch"
+    shouldCacheTest(ROOT_URL+"stable/10.3764/aja.120.4.0603", true, JSAu, cus);
+    shouldCacheTest(ROOT_URL+"stable/pdf/10.3764/aja.120.4.0603.pdf", true, JSAu, cus);
+    
+    //image from full-text - this url is consistent for this image
+    // came from http://www.jstor.org/stable/10.5325/critphilrace.3.1.0028
+    shouldCacheTest(ROOT_URL + "stable/get_asset/10.5325/critphilrace.3.1.0028?path=czM6Ly9zZXF1b2lhLWNlZGFyL2NpZC1wcm9kLTEvNzQ3YzEyNWMvMzRlMy8zMWExLzg2ZDcvZDA2OGMwZTBiMTRlL2NyaXRwaGlscmFjZS4zLjEuaXNzdWUtMS9jcml0cGhpbHJhY2UuMy4xLjAwMjgvZ3JhcGhpYy9jcml0cGhpbHJhY2UuMy4xLjAwMjgtZjAxLnRpZl9fLi5NRURJVU0uR0lG", true, JSAu, cus);
     
     // YES - citation download information 
     //http://www.jstor.org/citation/info/10.2972/hesperia.84.3.0515
@@ -252,11 +260,11 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
       m1 = p1.matcher(urlString);
       assertEquals(urlString, true, m0.find() || m1.find());
     }
-    //cannot at the moment find a full-text article with an images we do need to compare...
-    String notString ="";
+    //this a consistent path to this resource
+    String notString ="http://www.jstor.org/stable/get_asset/10.5325/critphilrace.3.1.0028?path=czM6Ly9zZXF1b2lhLWNlZGFyL2NpZC1wcm9kLTEvNzQ3YzEyNWMvMzRlMy8zMWExLzg2ZDcvZDA2OGMwZTBiMTRlL2NyaXRwaGlscmFjZS4zLjEuaXNzdWUtMS9jcml0cGhpbHJhY2UuMy4xLjAwMjgvZ3JhcGhpYy9jcml0cGhpbHJhY2UuMy4xLjAwMjgtZjAxLnRpZl9fLi5NRURJVU0uR0lG";
     m0 = p0.matcher(notString);
     m1 = p1.matcher(notString);
-    //assertEquals(false, m0.find() && m1.find());
+    assertEquals(false, m0.find() && m1.find());
 
 
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();

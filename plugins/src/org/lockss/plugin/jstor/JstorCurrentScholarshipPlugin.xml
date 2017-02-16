@@ -76,7 +76,8 @@
       <string>2,"^%s(doi|citation)/[^/]+/[0-9.]+/[-.9]+$", base_url</string>
       <string>2,"^%sstable/([^/]+/)?[0-9.]+/[-.9]+$", base_url</string>
       <!-- regular/new style -->
-      <string>1,"^%sstable/(pdf/)?[.0-9]+/%s\.", base_url, journal_id</string>
+      <!--  unfortunately amerjarch uses aja as prefix on article poriton of doi, so can't require journal_id -->
+      <string>1,"^%sstable/(pdf/)?[.0-9]+/[a-z]+\.", base_url, journal_id</string>
       <!-- legacy style -->
       <string>1,"^%sstable/[0-9.]+/i[0-9]+$", base_url</string>
       <string>1,"^%sstable/i[0-9]+$", base_url</string>

@@ -51,9 +51,8 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
 
   
   /*
-   * Currently JSTOR only gets the manifest page and the issue TOCs
-   * The article landing page redirects to PDF so there 
-   * is no full text html nor html abstract
+   * Some AUs only get TOC and pdf
+   * But some provide full text (see chaucer review)
    * 
    */	  
     @Override
@@ -90,7 +89,6 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div", "id", "full_text_tab_contents"),
       };
       
-      //nothing yet...put in placeholder
       NodeFilter[] excludeNodes = new NodeFilter[] {       
           HtmlNodeFilters.tagWithAttribute("div","id","citation-tools"),
           // the span will change over time
