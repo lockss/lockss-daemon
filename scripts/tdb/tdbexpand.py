@@ -307,19 +307,43 @@ def _analyze_range(options, aus, range):
     latestau = range[0]
     latestyear = latestau[_IYEAR]
     if latestyear is None:
+        # Does not have years
         pass ###FIXME
     elif latestyear[1] is None:
+        # Ends with single year
         n = 1
         while n < len(range) and range[n][_IYEAR] == latestyear:
             n = n + 1
         if n == len(range):
-            if options.interactive and not _yesno('Not enough years; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries'), range):
-                return ('warning',)
+            # Only one year to draw from
+            if options.interactive and not _yesno('Only one year to draw from; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries'), range):
+                return ('warning', None)
             else:
                 return ('single', n, 0)
         else:
-            pass ###FIXME
+            prevyear = range[n]
+            if prevyear[1] is None:
+                if prevyear[0] > latestyear[0]:
+                    # Invalid
+                    return ('error', 'Invalid progression of years')
+                elif prevyear[0] == latestyear - 1:
+                    # Preceded by previous year
+                    p = n
+                    while p < len(range) and range[p][_IYEAR] == prevyear:
+                        p = p + 1
+                    if p == len(range):
+                        # Only two years to draw from
+                        if n < p - n:
+                            # More of the previous year than the latest year
+                            if options.interactive and not _yesno()
+                    else:
+                        pass ###FIXME
+                else:
+                    pass ###FIXMEs
+            else:
+                pass ###FIXME
     else:
+        # Ends with double year
         pass ###FIXME
 
 
