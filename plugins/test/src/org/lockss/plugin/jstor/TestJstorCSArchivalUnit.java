@@ -33,11 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jstor;
 
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.PatternMatcher;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -62,6 +63,19 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
   static final String PLUGIN_ID = "org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin";
   static final String CLOCKSS_PLUGIN_ID = "org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin";
   static final String PluginName = "JSTOR Current Scholarship Plugin";
+
+  // fudge this a little bit to match what the daemon generates from the plugin pattern
+  // to whit: escape everything in the base_url and
+  // turn the &amp; to &
+  static final String jstorSubstanceList[] = 
+    {
+    "^http\\:\\/\\/www\\.jstor\\.org\\/stable/pdf/([.0-9]+/)?[^/?&]+\\.pdf$",
+    };
+  static final String jstorRepairList[] = 
+    {
+    "://[^/]+/assets/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    "://assets\\.adobedtm\\.com/.+\\.(css|gif|jpe?g|js|png)$",    
+    };  
   
   public void setUp() throws Exception {
     super.setUp();
@@ -176,40 +190,84 @@ public class TestJstorCSArchivalUnit extends LockssTestCase {
 
   
   List<String> substanceList = ListUtil.list(
-  ROOT_URL+"stable/pdf/11.1111/1234-abc.12G.pdf");
+  ROOT_URL+"stable/pdf/40025106.pdf");
   
   List<String> notSubstanceList = ListUtil.list(
-  ROOT_URL+"assets/legacy_20170113T1556/files/legacy/css");    
+  ROOT_URL+"doi/xml/10.2307/40026123",
+  ROOT_URL + "stable/10.5325/goodsociety.24.1.0049",
+  ROOT_URL + "citation/text/10.5325/chaucerrev.49.4.0427",
+  ROOT_URL + "stable/10.5325/chaucerrev.50.1-2.0055");    
   
   public void testCheckSubstanceRules() throws Exception {
     boolean found;
-    URL base = new URL(ROOT_URL);
-    ArchivalUnit jsAu = makeAu("tranamerentosoc3", "2015", false);
-    PatternMatcher matcher = RegexpUtil.getMatcher();   
-    List<Pattern> patList = jsAu.makeSubstanceUrlPatterns();
+    ArchivalUnit jsAu = makeAu("hesperia", "2015", false);
 
+    assertEquals(Arrays.asList(jstorSubstanceList),
+        RegexpUtil.regexpCollection(jsAu.makeSubstanceUrlPatterns()));
+    Pattern p0 = Pattern.compile(jstorSubstanceList[0]);
+    Matcher m0;
 
     for (String nextUrl : substanceList) {
       log.debug3("testing for substance: "+ nextUrl);
-      found = false;
-      for (Pattern nextPat : patList) {
-            found = matcher.matches(nextUrl, nextPat);
-            if (found) break;
+        m0 = p0.matcher(nextUrl);
+        assertEquals(nextUrl, true, m0.find());
       }
-      assertEquals(true,found);
-    }
+
     
     for (String nextUrl : notSubstanceList) {
       log.debug3("testing for not substance: "+ nextUrl);
-      found = false;
-      for (Pattern nextPat : patList) {
-            found = matcher.matches(nextUrl, nextPat);
-            if (found) break;
-      }
-      assertEquals(false,found);
+        m0 = p0.matcher(nextUrl);
+        assertEquals(false, m0.find());
     }
 
   }
+  
+  public void testPollSpecial() throws Exception {
+    ArchivalUnit FooAu = makeAu("xxxx", "2015",true);
+    theDaemon.getLockssRepository(FooAu);
+    theDaemon.getNodeManager(FooAu);
+
+    // if it changes in the plugin, you might need to change the test, so verify
+    assertEquals(Arrays.asList(jstorRepairList),
+        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        "http://www.jstor.org/assets/legacy_20170215T1357/files/legacy/css/legacy.css",
+        "http://www.jstor.org/assets/legacy_20170215T1357/files/legacy/js/legacy.min.js",
+        "http://www.jstor.org/assets/legacy_20170215T1357/files/shared/images/JSTOR_Logo_RGB_60x76.gif",
+        "http://www.jstor.org/assets/legacy_20170215T1357/files/shared/images/MagnifyingGlass_22px.png",
+        "http://www.jstor.org/assets/legacy_20170215T1357/files/shared/images/jstor_logo.jpg",
+        "http://www.jstor.org/assets/toc-view_20170215T1026/files/shared/images/expand.gif",
+        "http://www.jstor.org/assets/toc-view_20170215T1026/files/toc-view/css/toc-view.css",
+        "http://www.jstor.org/assets/toc-view_20170215T1026/files/toc-view/js/toc-view.min.js",
+        "http://assets.adobedtm.com/e0b918adcf7233db110ce33e1416a2e6448e08e6/satelliteLib-5c3c84854607a1fc3328b9b539472ebd81244f0b.js");
+
+    Pattern p0 = Pattern.compile(jstorRepairList[0]);
+    Pattern p1 = Pattern.compile(jstorRepairList[1]);
+    Matcher m0, m1, m2;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
+    //cannot at the moment find a full-text article with an images we do need to compare...
+    String notString ="";
+    m0 = p0.matcher(notString);
+    m1 = p1.matcher(notString);
+    //assertEquals(false, m0.find() && m1.find());
+
+
+    PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0,
+          urlPollResults.getMatch(urlString, (float) 1),
+          .0001);
+    }
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+  }  
 
 }
 
