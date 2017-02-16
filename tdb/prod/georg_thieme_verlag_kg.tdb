@@ -4269,24 +4269,18 @@
       name = Psychoneuro - Psychiatrie - Neurologie - Psychotherapie ;
       issn = 1611-9991 ;
       eissn = 1439-1813 ;
-      doi = 10.1055/s-00000063
+      doi = 10.1055/s-00000064
 
     >
-    param[journal_id] = 10.1055/s-00000063
+    param[journal_id] = 10.1055/s-00000064
     comment[years] = 2003-2008
 
-   au < doNotProcess ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 >
-   au < doNotProcess ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 >
-   au < doNotProcess ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 >
-   au < doNotProcess ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 >
-   au < doNotProcess ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 >
-   au < doNotProcess ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 >
-   au < doNotProcess ; 2009 ; 2009 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 35 ; 35 >
-   au < exists ; 2010 ; 2010 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 36 ; 36 >
-   au < exists ; 2011 ; 2011 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 37 ; 37 >
-   au < exists ; 2012 ; 2012 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 38 ; 38 >
-   au < exists ; 2013 ; 2013 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 39 ; 39 >
-   au < exists ; 2014 ; 2014 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 40 ; 40 >
+   au < exists ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 >
+   au < exists ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 >
+   au < exists ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 >
+   au < exists ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 >
+   au < exists ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 >
+   au < exists ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 >
 
   }
 
@@ -5103,17 +5097,12 @@
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
 
-    au < doNotProcess ; 1999 ; 1999 ; Sleep And Breathing Volume 3 ; 3 >
-    au < doNotProcess ; 2000 ; 2000 ; Sleep And Breathing Volume 4 ; 4 >
-    au < doNotProcess ; 2001 ; 2001 ; Sleep And Breathing Volume 5 ; 5 >
-    au < doNotProcess ; 2002 ; 2002 ; Sleep And Breathing Volume 6 ; 6 >
-    au < doNotProcess ; 2003 ; 2003 ; Sleep And Breathing Volume 7 ; 7 >
-    au < doNotProcess ; 2004 ; 2004 ; Sleep And Breathing Volume 8 ; 8 >
-    au < doNotProcess ; 2005 ; 2005 ; Sleep And Breathing Volume 9 ; 9 >
-    au < doNotProcess ; 2006 ; 2006 ; Sleep And Breathing Volume 10 ; 10 >
-    au < doNotProcess ; 2007 ; 2007 ; Sleep And Breathing Volume 11 ; 11 >
-    au < doNotProcess ; 2008 ; 2008 ; Sleep And Breathing Volume 12 ; 12 >
-    au < exists ; 2009 ; 2009 ; Sleep And Breathing Volume 13 ; 13 >
+    au < exists ; 1999 ; 1999 ; Sleep And Breathing Volume 3 ; 3 >
+    au < exists ; 2000 ; 2000 ; Sleep And Breathing Volume 4 ; 4 >
+    au < exists ; 2001 ; 2001 ; Sleep And Breathing Volume 5 ; 5 >
+    au < exists ; 2002 ; 2002 ; Sleep And Breathing Volume 6 ; 6 >
+    au < exists ; 2003 ; 2003 ; Sleep And Breathing Volume 7 ; 7 >
+    au < exists ; 2004 ; 2004 ; Sleep And Breathing Volume 8 ; 8 >
 
   }
 
@@ -5743,21 +5732,14 @@
     param[journal_id] = 10.1055/s-00000091
     comment[years] = 2000-2007
 
-    au < doNotProcess ; 2000 ; 2000 ; Viszeralchirurgie Volume 35 ; 35 >
-    au < doNotProcess ; 2001 ; 2001 ; Viszeralchirurgie Volume 36 ; 36 >
-    au < doNotProcess ; 2002 ; 2002 ; Viszeralchirurgie Volume 37 ; 37 >
-    au < doNotProcess ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 >
-    au < doNotProcess ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 >
-    au < doNotProcess ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 >
-    au < doNotProcess ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 >
-    au < doNotProcess ; 2007 ; 2007 ; Viszeralchirurgie Volume 42 ; 42 >
-    au < doNotProcess ; 2008 ; 2008 ; Viszeralchirurgie Volume 43 ; 43 >
-    au < doNotProcess ; 2009 ; 2009 ; Viszeralchirurgie Volume 44 ; 44 >
-    au < exists ; 2010 ; 2010 ; Viszeralchirurgie Volume 45 ; 45 >
-    au < exists ; 2011 ; 2011 ; Viszeralchirurgie Volume 46 ; 46 >
-    au < exists ; 2012 ; 2012 ; Viszeralchirurgie Volume 47 ; 47 >
-    au < exists ; 2013 ; 2013 ; Viszeralchirurgie Volume 48 ; 48 >
-    au < exists ; 2014 ; 2014 ; Viszeralchirurgie Volume 49 ; 49 >
+    au < exists ; 2000 ; 2000 ; Viszeralchirurgie Volume 35 ; 35 >
+    au < exists ; 2001 ; 2001 ; Viszeralchirurgie Volume 36 ; 36 >
+    au < exists ; 2002 ; 2002 ; Viszeralchirurgie Volume 37 ; 37 >
+    au < exists ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 >
+    au < exists ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 >
+    au < exists ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 >
+    au < exists ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 >
+    au < exists ; 2007 ; 2007 ; Viszeralchirurgie Volume 42 ; 42 >
 
   }
 
@@ -5788,7 +5770,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000184
-    comment[years] = 2012-current
+    comment[years] = 2012-2014
 
     au < manifest ; 2012 ; 2012 ; XX Die Zeitschrift für Frauen in der Medizin Volume 1 ; 1 >
     au < manifest ; 2013 ; 2013 ; XX Die Zeitschrift für Frauen in der Medizin Volume 2 ; 2 >
@@ -6237,21 +6219,13 @@
     param[journal_id] = 10.1055/s-00000105
     comment[years] = 2000-2006
 
-    au < doNotProcess ; 2000 ; 2000 ; Zeitschrift für Gynäkologie Volume 122 ; 122 >
-    au < doNotProcess ; 2001 ; 2001 ; Zeitschrift für Gynäkologie Volume 123 ; 123 >
-    au < doNotProcess ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 >
-    au < doNotProcess ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 >
-    au < doNotProcess ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 >
-    au < doNotProcess ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 >
-    au < doNotProcess ; 2006 ; 2006 ; Zeitschrift für Gynäkologie Volume 128 ; 128 >
-    au < doNotProcess ; 2007 ; 2007 ; Zeitschrift für Gynäkologie Volume 129 ; 129 >
-    au < doNotProcess ; 2008 ; 2008 ; Zeitschrift für Gynäkologie Volume 130 ; 130 >
-    au < doNotProcess ; 2009 ; 2009 ; Zeitschrift für Gynäkologie Volume 131 ; 131 >
-    au < exists ; 2010 ; 2010 ; Zeitschrift für Gynäkologie Volume 132 ; 132 >
-    au < exists ; 2011 ; 2011 ; Zeitschrift für Gynäkologie Volume 133 ; 133 >
-    au < exists ; 2012 ; 2012 ; Zeitschrift für Gynäkologie Volume 134 ; 134 >
-    au < exists ; 2013 ; 2013 ; Zeitschrift für Gynäkologie Volume 135 ; 135 >
-    au < exists ; 2014 ; 2014 ; Zeitschrift für Gynäkologie Volume 136 ; 136 >
+    au < exists ; 2000 ; 2000 ; Zeitschrift für Gynäkologie Volume 122 ; 122 >
+    au < exists ; 2001 ; 2001 ; Zeitschrift für Gynäkologie Volume 123 ; 123 >
+    au < exists ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 >
+    au < exists ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 >
+    au < exists ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 >
+    au < exists ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 >
+    au < exists ; 2006 ; 2006 ; Zeitschrift für Gynäkologie Volume 128 ; 128 >
 
   }
 
@@ -6267,21 +6241,9 @@
     param[journal_id] = 10.1055/s-00000016
     comment[years] = 2000-2002
 
-    au < doNotProcess ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 >
-    au < doNotProcess ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 >
-    au < doNotProcess ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 >
-    au < doNotProcess ; 2003 ; 2003 ; Zeitschrift für Kinderchirurgie Volume 12 ; 12 >
-    au < doNotProcess ; 2004 ; 2004 ; Zeitschrift für Kinderchirurgie Volume 13 ; 13 >
-    au < doNotProcess ; 2005 ; 2005 ; Zeitschrift für Kinderchirurgie Volume 14 ; 14 >
-    au < doNotProcess ; 2006 ; 2006 ; Zeitschrift für Kinderchirurgie Volume 15 ; 15 >
-    au < doNotProcess ; 2007 ; 2007 ; Zeitschrift für Kinderchirurgie Volume 16 ; 16 >
-    au < doNotProcess ; 2008 ; 2008 ; Zeitschrift für Kinderchirurgie Volume 17 ; 17 >
-    au < doNotProcess ; 2009 ; 2009 ; Zeitschrift für Kinderchirurgie Volume 18 ; 18 >
-    au < exists ; 2010 ; 2010 ; Zeitschrift für Kinderchirurgie Volume 19 ; 19 >
-    au < exists ; 2011 ; 2011 ; Zeitschrift für Kinderchirurgie Volume 20 ; 20 >
-    au < exists ; 2012 ; 2012 ; Zeitschrift für Kinderchirurgie Volume 21 ; 21 >
-    au < exists ; 2013 ; 2013 ; Zeitschrift für Kinderchirurgie Volume 22 ; 22 >
-    au < exists ; 2014 ; 2014 ; Zeitschrift für Kinderchirurgie Volume 23 ; 23 >
+    au < exists ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 >
+    au < exists ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 >
+    au < exists ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 >
 
   }
 
@@ -6295,20 +6257,14 @@
 
     >
     param[journal_id] = 10.1055/s-00000111
-    comment[years] = 2003-current
+    comment[years] = 2003-2008
 
-    au < doNotProcess ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 >
-    au < doNotProcess ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 >
-    au < doNotProcess ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 >
-    au < doNotProcess ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 >
-    au < doNotProcess ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 >
-    au < doNotProcess ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 >
-    au < doNotProcess ; 2009 ; 2009 ; Zeitschrift für Allgemeinmedizin Volume 85 ; 85 >
-    au < exists ; 2010 ; 2010 ; Zeitschrift für Allgemeinmedizin Volume 86 ; 86 >
-    au < exists ; 2011 ; 2011 ; Zeitschrift für Allgemeinmedizin Volume 87 ; 87 >
-    au < exists ; 2012 ; 2012 ; Zeitschrift für Allgemeinmedizin Volume 88 ; 88 >
-    au < exists ; 2013 ; 2013 ; Zeitschrift für Allgemeinmedizin Volume 89 ; 89 >
-    au < exists ; 2014 ; 2014 ; Zeitschrift für Allgemeinmedizin Volume 90 ; 90 >
+    au < exists ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 >
+    au < exists ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 >
+    au < exists ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 >
+    au < exists ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 >
+    au < exists ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 >
+    au < exists ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 >
 
   }
 
