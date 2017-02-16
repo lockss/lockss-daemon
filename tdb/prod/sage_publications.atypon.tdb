@@ -7,8 +7,8 @@
 
   comment[moving] = Live on Atypon 1/1/2017.
 
-  #plugin = org.lockss.plugin.atypon.sage.SageAtyponJournalsPlugin
-  plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+  plugin = org.lockss.plugin.atypon.sage.SageAtyponJournalsPlugin
+  #plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
   param[base_url] = http://journals.sagepub.com/
   implicit < status ; year ; name ; param[volume_name] ; param[journal_id] >
 

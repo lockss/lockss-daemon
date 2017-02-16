@@ -641,6 +641,7 @@ while (my $line = <>) {
            ($plugin eq "MarkAllenPlugin") ||
            ($plugin eq "MultiSciencePlugin") ||
            ($plugin eq "MassachusettsMedicalSocietyPlugin") ||
+           ($plugin eq "SageAtyponJournalsPlugin") ||
            ($plugin eq "SiamPlugin") ||
            ($plugin eq "WageningenJournalsPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html",
