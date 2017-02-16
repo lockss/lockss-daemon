@@ -17,16 +17,6 @@
     param[journal_dir] = western_american_literature
     attr[journal_id] = wal
     
-    comment[v43] = malformed manifest page. no content.
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < doNotProcess ; 2008 ; Western American Literature Volume 43 ; 43 >
-
-    }
-
     {
 
       param[base_url] = http://muse.jhu.edu/

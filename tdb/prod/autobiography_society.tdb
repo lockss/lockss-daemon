@@ -16,28 +16,15 @@
       issnl = 0898-9575
     >
     
-    comment[v20_v23] = no content for manifest page.
-
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < doNotProcess ; 2005 ; Auto/Biography Studies Volume 20 ; 20 >
-      au < doNotProcess ; 2006 ; Auto/Biography Studies Volume 21 ; 21 >
-      au < doNotProcess ; 2007 ; Auto/Biography Studies Volume 22 ; 22 >
-      au < doNotProcess ; 2008 ; Auto/Biography Studies Volume 23 ; 23 >
-
-    }
-
     {
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < down ; 2009 ; Auto/Biography Studies Volume 24 [BioOne] ; 24 >
-      au < down ; 2010 ; Auto/Biography Studies Volume 25 [BioOne] ; 25 >
-      au < down ; 2011 ; Auto/Biography Studies Volume 26 [BioOne] ; 26 >
-      au < down ; 2012 ; Auto/Biography Studies Volume 27 [BioOne] ; 27 >
-      au < down ; 2013 ; Auto/Biography Studies Volume 28 [BioOne] ; 28 >
+      au < down ; 2009 ; Auto/Biography Studies Volume 24 [Project MUSE] ; 24 >
+      au < down ; 2010 ; Auto/Biography Studies Volume 25 [Project MUSE] ; 25 >
+      au < down ; 2011 ; Auto/Biography Studies Volume 26 [Project MUSE] ; 26 >
+      au < down ; 2012 ; Auto/Biography Studies Volume 27 [Project MUSE] ; 27 >
+      au < down ; 2013 ; Auto/Biography Studies Volume 28 [Project MUSE] ; 28 >
 
     }
 

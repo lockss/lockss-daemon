@@ -1022,27 +1022,13 @@
       issnl = 2151-7363
     >
     
-    comment[continuity] = continued from 1040-0656. Formerly NWSA Journal through Volume 21, No. 3, Fall 2009 (E-ISSN: 1527-1889, Print ISSN: 1040-0656)
 
     param[journal_dir] = feminist_formations
     attr[journal_id] = ff
     
     {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < doNotProcess ; 1999 ; Feminist Formations Volume 11 ; 11 >
-      au < doNotProcess ; 2000 ; Feminist Formations Volume 12 ; 12 >
-      au < doNotProcess ; 2001 ; Feminist Formations Volume 13 ; 13 >
-      au < doNotProcess ; 2002 ; Feminist Formations Volume 14 ; 14 >
-      au < doNotProcess ; 2003 ; Feminist Formations Volume 15 ; 15 >
-      au < doNotProcess ; 2004 ; Feminist Formations Volume 16 ; 16 >
-      au < doNotProcess ; 2005 ; Feminist Formations Volume 17 ; 17 >
-      au < doNotProcess ; 2006 ; Feminist Formations Volume 18 ; 18 >
-      au < doNotProcess ; 2007 ; Feminist Formations Volume 19 ; 19 >
-      au < doNotProcess ; 2008 ; Feminist Formations Volume 20 ; 20 >
-      au < doNotProcess ; 2009 ; Feminist Formations Volume 21 ; 21 >
-
+      #Volumes 11-21, years 1999-2009 processed under title NWSA Journal
+      comment[continuity] = continued from 1040-0656. Formerly NWSA Journal through Volume 21, No. 3, Fall 2009 (E-ISSN: 1527-1889, Print ISSN: 1040-0656)
     }
 
     {
