@@ -6,29 +6,36 @@
     info[tester] = 0
   >
   
-  	plugin = needs.plugin
+  plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+  hidden[proxy] = DIRECT
+  implicit < status ; status2 ; year ; name ; param[year] >      
+
+  {
+    title <
+      name = Philosophy@LISBON WARC Content ;
+      issn = 2132-4371    
+    >
+    
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophy@lisbon-released/
+
+    au < exists ; exists ; 2017 ; Philosophy@LISBON WARC Content 2017 ; 2017 >
+      
+  }
+
+  {
+
+    title <
+      name = Philosophica WARC Content ;
+      issn = 0872-4784
+    >
+    
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophica-released-released/
+
+    au < exists ; exists ; 2017 ; Philosophica WARC Content 2017 ; 2017 >
+    
+  }
   	
   {
-  
-    title <
-      name = Philosophy;
-      issn = 2132-4371
-    >  
-
-
-  }
-  
-  {
-  
-    title <
-      name = Philosophica ;
-      issn = 0872-4784
-    >  
-
-
-  }
-  
-   {
   
     title <
       name = Phainomenon ;
