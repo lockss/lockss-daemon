@@ -18,7 +18,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophy@lisbon-released/
 
-    au < exists ; exists ; 2017 ; Philosophy@LISBON WARC Content 2017 ; 2017 >
+    au < expected ; exists ; 2017 ; Philosophy@LISBON WARC Content 2017 ; 2017 >
       
   }
 
@@ -31,7 +31,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/philosophica-released-released/
 
-    au < exists ; exists ; 2017 ; Philosophica WARC Content 2017 ; 2017 >
+    au < expected ; exists ; 2017 ; Philosophica WARC Content 2017 ; 2017 >
     
   }
   	
