@@ -276,31 +276,31 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "ProjectMusePlugin") {
-        $url = sprintf("%sjournals/%s/v%03d/",
-            $param{base_url}, $param{journal_dir}, $param{volume});
-        $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents !~ "No issues avail")) {
-        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-          $vol_title = $1;
-          if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
-            $vol_title = $vol_title . " " . $1;
-          }
-          $vol_title =~ s/\s*\n\s*/ /g;
-          $vol_title =~ s/,//;
-        }
-    $result = "Manifest"
-      } else {
-    $result = "--"
-      }
-  } else {
-      $result = "--"
-  }
-        sleep(4);
+#  } elsif ($plugin eq "ProjectMusePlugin") {
+#        $url = sprintf("%sjournals/%s/v%03d/",
+#            $param{base_url}, $param{journal_dir}, $param{volume});
+#        $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents !~ "No issues avail")) {
+#        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+#          $vol_title = $1;
+#          if ($man_contents =~ m/<h2>(.*)<\/h2>/si) {
+#            $vol_title = $vol_title . " " . $1;
+#          }
+#          $vol_title =~ s/\s*\n\s*/ /g;
+#          $vol_title =~ s/,//;
+#        }
+#    $result = "Manifest"
+#      } else {
+#    $result = "--"
+#      }
+#  } else {
+#      $result = "--"
+#  }
+#        sleep(4);
 
   } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
       $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml",
