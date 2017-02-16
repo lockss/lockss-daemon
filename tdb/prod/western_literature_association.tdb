@@ -34,8 +34,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; Western American Literature Volume 49 ; 49 >
-      au < manifest ; 2015-2016 ; Western American Literature Volume 50 ; 50 >
-      au < manifest ; 2016-2017 ; Western American Literature Volume 51 ; 51 >
+      au < doNotProcess ; 2015-2016 ; Western American Literature Volume 50 ; 50 >
+      au < doNotProcess ; 2016-2017 ; Western American Literature Volume 51 ; 51 >
 
     }
 

@@ -140,27 +140,27 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1976 ; Education and Culture Volume 1 ; 1 >
-      au < manifest ; 1977 ; Education and Culture Volume 2 ; 2 >
-      au < manifest ; 1983 ; Education and Culture Volume 3 ; 3 >
-      au < manifest ; 1984 ; Education and Culture Volume 4 ; 4 >
-      au < manifest ; 1985 ; Education and Culture Volume 5 ; 5 >
-      au < manifest ; 1986 ; Education and Culture Volume 6 ; 6 >
-      au < manifest ; 1987 ; Education and Culture Volume 7 ; 7 >
-      au < manifest ; 1988 ; Education and Culture Volume 8 ; 8 >
-      au < manifest ; 1989 ; Education and Culture Volume 9 ; 9 >
-      au < manifest ; 1993 ; Education and Culture Volume 10 ; 10 >
-      au < manifest ; 1994 ; Education and Culture Volume 11 ; 11 >
-      au < manifest ; 1995 ; Education and Culture Volume 12 ; 12 >
-      au < manifest ; 1996 ; Education and Culture Volume 13 ; 13 >
-      au < manifest ; 1997 ; Education and Culture Volume 14 ; 14 >
-      au < manifest ; 1999 ; Education and Culture Volume 15 ; 15 >
-      au < manifest ; 1999-2000 ; Education and Culture Volume 16 ; 16 >
-      au < manifest ; 2001 ; Education and Culture Volume 17 ; 17 >
-      au < manifest ; 2002 ; Education and Culture Volume 18 ; 18 >
-      au < manifest ; 2003 ; Education and Culture Volume 19 ; 19 >
-      au < manifest ; 2004 ; Education and Culture Volume 20 ; 20 >
-      au < manifest ; 2005 ; Education and Culture Volume 21 ; 21 >
+      au < doNotProcess ; 1976 ; Education and Culture Volume 1 ; 1 >
+      au < doNotProcess ; 1977 ; Education and Culture Volume 2 ; 2 >
+      au < doNotProcess ; 1983 ; Education and Culture Volume 3 ; 3 >
+      au < doNotProcess ; 1984 ; Education and Culture Volume 4 ; 4 >
+      au < doNotProcess ; 1985 ; Education and Culture Volume 5 ; 5 >
+      au < doNotProcess ; 1986 ; Education and Culture Volume 6 ; 6 >
+      au < doNotProcess ; 1987 ; Education and Culture Volume 7 ; 7 >
+      au < doNotProcess ; 1988 ; Education and Culture Volume 8 ; 8 >
+      au < doNotProcess ; 1989 ; Education and Culture Volume 9 ; 9 >
+      au < doNotProcess ; 1993 ; Education and Culture Volume 10 ; 10 >
+      au < doNotProcess ; 1994 ; Education and Culture Volume 11 ; 11 >
+      au < doNotProcess ; 1995 ; Education and Culture Volume 12 ; 12 >
+      au < doNotProcess ; 1996 ; Education and Culture Volume 13 ; 13 >
+      au < doNotProcess ; 1997 ; Education and Culture Volume 14 ; 14 >
+      au < doNotProcess ; 1999 ; Education and Culture Volume 15 ; 15 >
+      au < doNotProcess ; 1999-2000 ; Education and Culture Volume 16 ; 16 >
+      au < doNotProcess ; 2001 ; Education and Culture Volume 17 ; 17 >
+      au < doNotProcess ; 2002 ; Education and Culture Volume 18 ; 18 >
+      au < doNotProcess ; 2003 ; Education and Culture Volume 19 ; 19 >
+      au < doNotProcess ; 2004 ; Education and Culture Volume 20 ; 20 >
+      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
 
     }
 
@@ -185,7 +185,7 @@
 
       au < down ; 2014 ; Education and Culture Volume 30 ; 30 >
       au < down ; 2015 ; Education and Culture Volume 31 ; 31 >
-      au < manifest ; 2016 ; Education and Culture Volume 32 ; 32 >
+      au < doNotProcess ; 2016 ; Education and Culture Volume 32 ; 32 >
 
     }
 
@@ -264,7 +264,7 @@
 
       au < down ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
       au < down ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
-      au < manifest ; 2016 ; Philip Roth Studies Volume 12 ; 12 >
+      au < doNotProcess ; 2016 ; Philip Roth Studies Volume 12 ; 12 >
 
     }
 
@@ -328,7 +328,7 @@
 
       au < down ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
       au < down ; 2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
-      au < manifest ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 ; 34 >
+      au < doNotProcess ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 ; 34 >
 
     }
 

@@ -36,8 +36,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014 ; Archives of Asian Art Volume 64 ; 64 >
-        au < manifest ; 2015 ; Archives of Asian Art Volume 65 ; 65 >
-        au < manifest ; 2016 ; Archives of Asian Art Volume 66 ; 66 >
+        au < doNotProcess ; 2015 ; Archives of Asian Art Volume 65 ; 65 >
+        au < doNotProcess ; 2016 ; Archives of Asian Art Volume 66 ; 66 >
 
       }
 
@@ -86,7 +86,7 @@
         au < down ; 2013 ; Asian Perspectives Volume 52 ; 52 >
         au < down ; 2014 ; Asian Perspectives Volume 53 ; 53 >
         au < down ; 2015 ; Asian Perspectives Volume 54 ; 54 >
-        au < manifest ; 2016 ; Asian Perspectives Volume 55 ; 55 >
+        au < doNotProcess ; 2016 ; Asian Perspectives Volume 55 ; 55 >
 
       }
 
@@ -136,7 +136,7 @@
 
         au < down ; 2014 ; Asian Theatre Journal Volume 31 ; 31 >
         au < down ; 2015 ; Asian Theatre Journal Volume 32 ; 32 >
-        au < manifest ; 2016 ; Asian Theatre Journal Volume 33 ; 33 >
+        au < doNotProcess ; 2016 ; Asian Theatre Journal Volume 33 ; 33 >
 
       }
 
@@ -177,7 +177,7 @@
 
         au < down ; 2014 ; Azalea: Journal of Korean Literature & Culture Volume 7 ; 7 >
         au < down ; 2015 ; Azalea: Journal of Korean Literature & Culture Volume 8 ; 8 >
-        au < manifest ; 2016 ; Azalea: Journal of Korean Literature & Culture Volume 9 ; 9 >
+        au < doNotProcess ; 2016 ; Azalea: Journal of Korean Literature & Culture Volume 9 ; 9 >
 
       }
 
@@ -248,7 +248,7 @@
 
         au < down ; 2014 ; Biography Volume 37 ; 37 >
         au < down ; 2015 ; Biography Volume 38 ; 38 >
-        au < manifest ; 2016 ; Biography Volume 39 ; 39 >
+        au < doNotProcess ; 2016 ; Biography Volume 39 ; 39 >
 
       }
 
@@ -297,7 +297,7 @@
 
         au < down ; 2014 ; Buddhist-Christian Studies Volume 34 ; 34 >
         au < down ; 2015 ; Buddhist-Christian Studies Volume 35 ; 35 >
-        au < manifest ; 2016 ; Buddhist-Christian Studies Volume 36 ; 36 >
+        au < doNotProcess ; 2016 ; Buddhist-Christian Studies Volume 36 ; 36 >
 
       }
 
@@ -349,7 +349,7 @@
         param[base_url] = http://muse.jhu.edu/
 
         au < down ; 2013 ; China Review International Volume 20 ; 20 >
-        au < manifest ; 2014 ; China Review International Volume 21 ; 21 >
+        au < doNotProcess ; 2014 ; China Review International Volume 21 ; 21 >
 
       }
 
@@ -397,7 +397,7 @@
 
         au < down ; 2014 ; The Contemporary Pacific Volume 26 ; 26 >
         au < down ; 2015 ; The Contemporary Pacific Volume 27 ; 27 >
-        au < manifest ; 2016 ; The Contemporary Pacific Volume 28 ; 28 >
+        au < doNotProcess ; 2016 ; The Contemporary Pacific Volume 28 ; 28 >
 
       }
 
@@ -432,7 +432,7 @@
 
         au < down ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 ; 3 >
         au < down ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 ; 4 >
-        au < manifest ; 2016 ; Cross-Currents: East Asian History and Culture Review Volume 5 ; 5 >
+        au < doNotProcess ; 2016 ; Cross-Currents: East Asian History and Culture Review Volume 5 ; 5 >
 
       }
 
@@ -468,7 +468,7 @@
 
         au < down ; 2014 ; Journal of Korean Religions Volume 5 ; 5 >
         au < down ; 2015 ; Journal of Korean Religions Volume 6 ; 6 >
-        au < manifest ; 2016 ; Journal of Korean Religions Volume 7 ; 7 >
+        au < doNotProcess ; 2016 ; Journal of Korean Religions Volume 7 ; 7 >
 
       }
 
@@ -519,8 +519,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014 ; Journal of World History Volume 25 ; 25 >
-        au < manifest ; 2015 ; Journal of World History Volume 26 ; 26 >
-        au < manifest ; 2016 ; Journal of World History Volume 27 ; 27 >
+        au < doNotProcess ; 2015 ; Journal of World History Volume 26 ; 26 >
+        au < doNotProcess ; 2016 ; Journal of World History Volume 27 ; 27 >
 
       }
 
@@ -621,7 +621,7 @@
 
         au < down ; 2014 ; Korean Studies Volume 38 ; 38 >
         au < down ; 2015 ; Korean Studies Volume 39 ; 39 >
-        au < manifest ; 2016 ; Korean Studies Volume 40 ; 40 >
+        au < doNotProcess ; 2016 ; Korean Studies Volume 40 ; 40 >
 
       }
 
@@ -670,7 +670,7 @@
 
         au < down ; 2014 ; Manoa Volume 26 ; 26 >
         au < down ; 2015 ; Manoa Volume 27 ; 27 >
-        au < expected ; 2016 ; Manoa Volume 28 ; 28 >
+        au < doNotProcess ; 2016 ; Manoa Volume 28 ; 28 >
 
       }
 
@@ -719,7 +719,7 @@
 
         au < down ; 2014 ; Oceanic Linguistics Volume 53 ; 53 >
         au < down ; 2015 ; Oceanic Linguistics Volume 54 ; 54 >
-        au < manifest ; 2016 ; Oceanic Linguistics Volume 55 ; 55 >
+        au < doNotProcess ; 2016 ; Oceanic Linguistics Volume 55 ; 55 >
 
       }
 
@@ -781,15 +781,15 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2008 ; Pacific Science Volume 62 [Project MUSE] ; 62 >
-        au < manifest ; 2009 ; Pacific Science Volume 63 [Project MUSE] ; 63 >
-        au < manifest ; 2010 ; Pacific Science Volume 64 [Project MUSE] ; 64 >
-        au < manifest ; 2011 ; Pacific Science Volume 65 [Project MUSE] ; 65 >
-        au < manifest ; 2012 ; Pacific Science Volume 66 [Project MUSE] ; 66 >
-        au < manifest ; 2013 ; Pacific Science Volume 67 [Project MUSE] ; 67 >
-        au < manifest ; 2014 ; Pacific Science Volume 68 [Project MUSE] ; 68 >
-        au < manifest ; 2015 ; Pacific Science Volume 69 [Project MUSE] ; 69 >
-        au < manifest ; 2016 ; Pacific Science Volume 70 [Project MUSE] ; 70 >
+        au < doNotProcess ; 2008 ; Pacific Science Volume 62 [Project MUSE] ; 62 >
+        au < doNotProcess ; 2009 ; Pacific Science Volume 63 [Project MUSE] ; 63 >
+        au < doNotProcess ; 2010 ; Pacific Science Volume 64 [Project MUSE] ; 64 >
+        au < doNotProcess ; 2011 ; Pacific Science Volume 65 [Project MUSE] ; 65 >
+        au < doNotProcess ; 2012 ; Pacific Science Volume 66 [Project MUSE] ; 66 >
+        au < doNotProcess ; 2013 ; Pacific Science Volume 67 [Project MUSE] ; 67 >
+        au < doNotProcess ; 2014 ; Pacific Science Volume 68 [Project MUSE] ; 68 >
+        au < doNotProcess ; 2015 ; Pacific Science Volume 69 [Project MUSE] ; 69 >
+        au < doNotProcess ; 2016 ; Pacific Science Volume 70 [Project MUSE] ; 70 >
 
       }
 
@@ -838,7 +838,7 @@
 
         au < down ; 2014 ; Philosophy East and West Volume 64 ; 64 >
         au < down ; 2015 ; Philosophy East and West Volume 65 ; 65 >
-        au < manifest ; 2016 ; Philosophy East and West Volume 66 ; 66 >
+        au < doNotProcess ; 2016 ; Philosophy East and West Volume 66 ; 66 >
 
       }
 
@@ -873,7 +873,7 @@
         au < down ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
         au < down ; 2014 ; Review of Japanese Culture and Society Volume 26 ; 26 >
         au < down ; 2015 ; Review of Japanese Culture and Society Volume 27 ; 27 >
-        au < expected ; 2016 ; Review of Japanese Culture and Society Volume 28 ; 28 >
+        au < doNotProcess ; 2016 ; Review of Japanese Culture and Society Volume 28 ; 28 >
 
       }
 
@@ -906,12 +906,12 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < exists ; 2013 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
+        au < doNotProcess ; 2013 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
         au < down ; 2014 ; U.S.-Japan Women's Journal Volume 46 ; 46 >
         au < down ; 2014 ; U.S.-Japan Women's Journal Volume 47 ; 47 >
-        au < manifest ; 2015 ; U.S.-Japan Women's Journal Volume 48 ; 48 >
-        au < manifest ; 2016 ; U.S.-Japan Women's Journal Volume 49 ; 49 >
-        au < exists ; 2016 ; U.S.-Japan Women's Journal Volume 50 ; 50 >
+        au < doNotProcess ; 2015 ; U.S.-Japan Women's Journal Volume 48 ; 48 >
+        au < doNotProcess ; 2016 ; U.S.-Japan Women's Journal Volume 49 ; 49 >
+        au < doNotProcess ; 2016 ; U.S.-Japan Women's Journal Volume 50 ; 50 >
 
       }
 
@@ -936,67 +936,67 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 1935 ; Yearbook of the Association of Pacific Coast Geographers Volume 1 ; 1 >
-        au < manifest ; 1936 ; Yearbook of the Association of Pacific Coast Geographers Volume 2 ; 2 >
-        au < manifest ; 1937 ; Yearbook of the Association of Pacific Coast Geographers Volume 3 ; 3 >
-        au < manifest ; 1938 ; Yearbook of the Association of Pacific Coast Geographers Volume 4 ; 4 >
-        au < manifest ; 1939 ; Yearbook of the Association of Pacific Coast Geographers Volume 5 ; 5 >
-        au < manifest ; 1940 ; Yearbook of the Association of Pacific Coast Geographers Volume 6 ; 6 >
-        au < manifest ; 1941 ; Yearbook of the Association of Pacific Coast Geographers Volume 7 ; 7 >
-        au < manifest ; 1942 ; Yearbook of the Association of Pacific Coast Geographers Volume 8 ; 8 >
-        au < manifest ; 1947 ; Yearbook of the Association of Pacific Coast Geographers Volume 9 ; 9 >
-        au < manifest ; 1948 ; Yearbook of the Association of Pacific Coast Geographers Volume 10 ; 10 >
-        au < manifest ; 1949 ; Yearbook of the Association of Pacific Coast Geographers Volume 11 ; 11 >
-        au < manifest ; 1950 ; Yearbook of the Association of Pacific Coast Geographers Volume 12 ; 12 >
-        au < manifest ; 1951 ; Yearbook of the Association of Pacific Coast Geographers Volume 13 ; 13 >
-        au < manifest ; 1952 ; Yearbook of the Association of Pacific Coast Geographers Volume 14 ; 14 >
-        au < manifest ; 1953 ; Yearbook of the Association of Pacific Coast Geographers Volume 15 ; 15 >
-        au < manifest ; 1954 ; Yearbook of the Association of Pacific Coast Geographers Volume 16 ; 16 >
-        au < manifest ; 1955 ; Yearbook of the Association of Pacific Coast Geographers Volume 17 ; 17 >
-        au < manifest ; 1956 ; Yearbook of the Association of Pacific Coast Geographers Volume 18 ; 18 >
-        au < manifest ; 1957 ; Yearbook of the Association of Pacific Coast Geographers Volume 19 ; 19 >
-        au < manifest ; 1958 ; Yearbook of the Association of Pacific Coast Geographers Volume 20 ; 20 >
-        au < manifest ; 1959 ; Yearbook of the Association of Pacific Coast Geographers Volume 21 ; 21 >
-        au < manifest ; 1960 ; Yearbook of the Association of Pacific Coast Geographers Volume 22 ; 22 >
-        au < manifest ; 1961 ; Yearbook of the Association of Pacific Coast Geographers Volume 23 ; 23 >
-        au < manifest ; 1962 ; Yearbook of the Association of Pacific Coast Geographers Volume 24 ; 24 >
-        au < manifest ; 1963 ; Yearbook of the Association of Pacific Coast Geographers Volume 25 ; 25 >
-        au < manifest ; 1964 ; Yearbook of the Association of Pacific Coast Geographers Volume 26 ; 26 >
-        au < manifest ; 1965 ; Yearbook of the Association of Pacific Coast Geographers Volume 27 ; 27 >
-        au < manifest ; 1966 ; Yearbook of the Association of Pacific Coast Geographers Volume 28 ; 28 >
-        au < manifest ; 1967 ; Yearbook of the Association of Pacific Coast Geographers Volume 29 ; 29 >
-        au < manifest ; 1968 ; Yearbook of the Association of Pacific Coast Geographers Volume 30 ; 30 >
-        au < manifest ; 1969 ; Yearbook of the Association of Pacific Coast Geographers Volume 31 ; 31 >
-        au < manifest ; 1970 ; Yearbook of the Association of Pacific Coast Geographers Volume 32 ; 32 >
-        au < manifest ; 1971 ; Yearbook of the Association of Pacific Coast Geographers Volume 33 ; 33 >
-        au < manifest ; 1972 ; Yearbook of the Association of Pacific Coast Geographers Volume 34 ; 34 >
-        au < manifest ; 1973 ; Yearbook of the Association of Pacific Coast Geographers Volume 35 ; 35 >
-        au < manifest ; 1974 ; Yearbook of the Association of Pacific Coast Geographers Volume 36 ; 36 >
-        au < manifest ; 1975 ; Yearbook of the Association of Pacific Coast Geographers Volume 37 ; 37 >
-        au < manifest ; 1976 ; Yearbook of the Association of Pacific Coast Geographers Volume 38 ; 38 >
-        au < manifest ; 1977 ; Yearbook of the Association of Pacific Coast Geographers Volume 39 ; 39 >
-        au < manifest ; 1978 ; Yearbook of the Association of Pacific Coast Geographers Volume 40 ; 40 >
-        au < manifest ; 1979 ; Yearbook of the Association of Pacific Coast Geographers Volume 41 ; 41 >
-        au < manifest ; 1980 ; Yearbook of the Association of Pacific Coast Geographers Volume 42 ; 42 >
-        au < manifest ; 1981 ; Yearbook of the Association of Pacific Coast Geographers Volume 43 ; 43 >
-        au < manifest ; 1982 ; Yearbook of the Association of Pacific Coast Geographers Volume 44 ; 44 >
-        au < manifest ; 1983 ; Yearbook of the Association of Pacific Coast Geographers Volume 45 ; 45 >
-        au < manifest ; 1984 ; Yearbook of the Association of Pacific Coast Geographers Volume 46 ; 46 >
-        au < manifest ; 1985 ; Yearbook of the Association of Pacific Coast Geographers Volume 47 ; 47 >
-        au < manifest ; 1986 ; Yearbook of the Association of Pacific Coast Geographers Volume 48 ; 48 >
-        au < manifest ; 1987 ; Yearbook of the Association of Pacific Coast Geographers Volume 49 ; 49 >
-        au < manifest ; 1988 ; Yearbook of the Association of Pacific Coast Geographers Volume 50 ; 50 >
-        au < manifest ; 1989 ; Yearbook of the Association of Pacific Coast Geographers Volume 51 ; 51 >
-        au < manifest ; 1990 ; Yearbook of the Association of Pacific Coast Geographers Volume 52 ; 52 >
-        au < manifest ; 1991 ; Yearbook of the Association of Pacific Coast Geographers Volume 53 ; 53 >
-        au < manifest ; 1992 ; Yearbook of the Association of Pacific Coast Geographers Volume 54 ; 54 >
-        au < manifest ; 1993 ; Yearbook of the Association of Pacific Coast Geographers Volume 55 ; 55 >
-        au < manifest ; 1994 ; Yearbook of the Association of Pacific Coast Geographers Volume 56 ; 56 >
-        au < manifest ; 1995 ; Yearbook of the Association of Pacific Coast Geographers Volume 57 ; 57 >
-        au < manifest ; 1996 ; Yearbook of the Association of Pacific Coast Geographers Volume 58 ; 58 >
-        au < manifest ; 1997 ; Yearbook of the Association of Pacific Coast Geographers Volume 59 ; 59 >
-        au < manifest ; 1998 ; Yearbook of the Association of Pacific Coast Geographers Volume 60 ; 60 >
-        au < manifest ; 1999 ; Yearbook of the Association of Pacific Coast Geographers Volume 61 ; 61 >
+        au < doNotProcess ; 1935 ; Yearbook of the Association of Pacific Coast Geographers Volume 1 ; 1 >
+        au < doNotProcess ; 1936 ; Yearbook of the Association of Pacific Coast Geographers Volume 2 ; 2 >
+        au < doNotProcess ; 1937 ; Yearbook of the Association of Pacific Coast Geographers Volume 3 ; 3 >
+        au < doNotProcess ; 1938 ; Yearbook of the Association of Pacific Coast Geographers Volume 4 ; 4 >
+        au < doNotProcess ; 1939 ; Yearbook of the Association of Pacific Coast Geographers Volume 5 ; 5 >
+        au < doNotProcess ; 1940 ; Yearbook of the Association of Pacific Coast Geographers Volume 6 ; 6 >
+        au < doNotProcess ; 1941 ; Yearbook of the Association of Pacific Coast Geographers Volume 7 ; 7 >
+        au < doNotProcess ; 1942 ; Yearbook of the Association of Pacific Coast Geographers Volume 8 ; 8 >
+        au < doNotProcess ; 1947 ; Yearbook of the Association of Pacific Coast Geographers Volume 9 ; 9 >
+        au < doNotProcess ; 1948 ; Yearbook of the Association of Pacific Coast Geographers Volume 10 ; 10 >
+        au < doNotProcess ; 1949 ; Yearbook of the Association of Pacific Coast Geographers Volume 11 ; 11 >
+        au < doNotProcess ; 1950 ; Yearbook of the Association of Pacific Coast Geographers Volume 12 ; 12 >
+        au < doNotProcess ; 1951 ; Yearbook of the Association of Pacific Coast Geographers Volume 13 ; 13 >
+        au < doNotProcess ; 1952 ; Yearbook of the Association of Pacific Coast Geographers Volume 14 ; 14 >
+        au < doNotProcess ; 1953 ; Yearbook of the Association of Pacific Coast Geographers Volume 15 ; 15 >
+        au < doNotProcess ; 1954 ; Yearbook of the Association of Pacific Coast Geographers Volume 16 ; 16 >
+        au < doNotProcess ; 1955 ; Yearbook of the Association of Pacific Coast Geographers Volume 17 ; 17 >
+        au < doNotProcess ; 1956 ; Yearbook of the Association of Pacific Coast Geographers Volume 18 ; 18 >
+        au < doNotProcess ; 1957 ; Yearbook of the Association of Pacific Coast Geographers Volume 19 ; 19 >
+        au < doNotProcess ; 1958 ; Yearbook of the Association of Pacific Coast Geographers Volume 20 ; 20 >
+        au < doNotProcess ; 1959 ; Yearbook of the Association of Pacific Coast Geographers Volume 21 ; 21 >
+        au < doNotProcess ; 1960 ; Yearbook of the Association of Pacific Coast Geographers Volume 22 ; 22 >
+        au < doNotProcess ; 1961 ; Yearbook of the Association of Pacific Coast Geographers Volume 23 ; 23 >
+        au < doNotProcess ; 1962 ; Yearbook of the Association of Pacific Coast Geographers Volume 24 ; 24 >
+        au < doNotProcess ; 1963 ; Yearbook of the Association of Pacific Coast Geographers Volume 25 ; 25 >
+        au < doNotProcess ; 1964 ; Yearbook of the Association of Pacific Coast Geographers Volume 26 ; 26 >
+        au < doNotProcess ; 1965 ; Yearbook of the Association of Pacific Coast Geographers Volume 27 ; 27 >
+        au < doNotProcess ; 1966 ; Yearbook of the Association of Pacific Coast Geographers Volume 28 ; 28 >
+        au < doNotProcess ; 1967 ; Yearbook of the Association of Pacific Coast Geographers Volume 29 ; 29 >
+        au < doNotProcess ; 1968 ; Yearbook of the Association of Pacific Coast Geographers Volume 30 ; 30 >
+        au < doNotProcess ; 1969 ; Yearbook of the Association of Pacific Coast Geographers Volume 31 ; 31 >
+        au < doNotProcess ; 1970 ; Yearbook of the Association of Pacific Coast Geographers Volume 32 ; 32 >
+        au < doNotProcess ; 1971 ; Yearbook of the Association of Pacific Coast Geographers Volume 33 ; 33 >
+        au < doNotProcess ; 1972 ; Yearbook of the Association of Pacific Coast Geographers Volume 34 ; 34 >
+        au < doNotProcess ; 1973 ; Yearbook of the Association of Pacific Coast Geographers Volume 35 ; 35 >
+        au < doNotProcess ; 1974 ; Yearbook of the Association of Pacific Coast Geographers Volume 36 ; 36 >
+        au < doNotProcess ; 1975 ; Yearbook of the Association of Pacific Coast Geographers Volume 37 ; 37 >
+        au < doNotProcess ; 1976 ; Yearbook of the Association of Pacific Coast Geographers Volume 38 ; 38 >
+        au < doNotProcess ; 1977 ; Yearbook of the Association of Pacific Coast Geographers Volume 39 ; 39 >
+        au < doNotProcess ; 1978 ; Yearbook of the Association of Pacific Coast Geographers Volume 40 ; 40 >
+        au < doNotProcess ; 1979 ; Yearbook of the Association of Pacific Coast Geographers Volume 41 ; 41 >
+        au < doNotProcess ; 1980 ; Yearbook of the Association of Pacific Coast Geographers Volume 42 ; 42 >
+        au < doNotProcess ; 1981 ; Yearbook of the Association of Pacific Coast Geographers Volume 43 ; 43 >
+        au < doNotProcess ; 1982 ; Yearbook of the Association of Pacific Coast Geographers Volume 44 ; 44 >
+        au < doNotProcess ; 1983 ; Yearbook of the Association of Pacific Coast Geographers Volume 45 ; 45 >
+        au < doNotProcess ; 1984 ; Yearbook of the Association of Pacific Coast Geographers Volume 46 ; 46 >
+        au < doNotProcess ; 1985 ; Yearbook of the Association of Pacific Coast Geographers Volume 47 ; 47 >
+        au < doNotProcess ; 1986 ; Yearbook of the Association of Pacific Coast Geographers Volume 48 ; 48 >
+        au < doNotProcess ; 1987 ; Yearbook of the Association of Pacific Coast Geographers Volume 49 ; 49 >
+        au < doNotProcess ; 1988 ; Yearbook of the Association of Pacific Coast Geographers Volume 50 ; 50 >
+        au < doNotProcess ; 1989 ; Yearbook of the Association of Pacific Coast Geographers Volume 51 ; 51 >
+        au < doNotProcess ; 1990 ; Yearbook of the Association of Pacific Coast Geographers Volume 52 ; 52 >
+        au < doNotProcess ; 1991 ; Yearbook of the Association of Pacific Coast Geographers Volume 53 ; 53 >
+        au < doNotProcess ; 1992 ; Yearbook of the Association of Pacific Coast Geographers Volume 54 ; 54 >
+        au < doNotProcess ; 1993 ; Yearbook of the Association of Pacific Coast Geographers Volume 55 ; 55 >
+        au < doNotProcess ; 1994 ; Yearbook of the Association of Pacific Coast Geographers Volume 56 ; 56 >
+        au < doNotProcess ; 1995 ; Yearbook of the Association of Pacific Coast Geographers Volume 57 ; 57 >
+        au < doNotProcess ; 1996 ; Yearbook of the Association of Pacific Coast Geographers Volume 58 ; 58 >
+        au < doNotProcess ; 1997 ; Yearbook of the Association of Pacific Coast Geographers Volume 59 ; 59 >
+        au < doNotProcess ; 1998 ; Yearbook of the Association of Pacific Coast Geographers Volume 60 ; 60 >
+        au < doNotProcess ; 1999 ; Yearbook of the Association of Pacific Coast Geographers Volume 61 ; 61 >
         au < down ; 2000 ; Yearbook of the Association of Pacific Coast Geographers Volume 62 ; 62 >
         au < down ; 2001 ; Yearbook of the Association of Pacific Coast Geographers Volume 63 ; 63 >
         au < down ; 2002 ; Yearbook of the Association of Pacific Coast Geographers Volume 64 ; 64 >
@@ -1027,7 +1027,7 @@
 
         au < down ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 ; 76 >
         au < down ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 ; 77 >
-        au < manifest ; 2016 ; Yearbook of the Association of Pacific Coast Geographers Volume 78 ; 78 >
+        au < doNotProcess ; 2016 ; Yearbook of the Association of Pacific Coast Geographers Volume 78 ; 78 >
 
       }
 

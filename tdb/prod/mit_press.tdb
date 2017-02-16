@@ -44,7 +44,7 @@
       au < down ; 2014 ; Computer Music Journal Volume 38 ; 38 >
       au < down ; 2015 ; Computer Music Journal Volume 39 ; 39 >
 
-      au < manifest ; 2016 ; Computer Music Journal Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; Computer Music Journal Volume 40 ; 40 >
 
     }
 
@@ -85,7 +85,7 @@
 
       au < down ; 2014 ; Global Environmental Politics Volume 14 ; 14 >
       au < down ; 2015 ; Global Environmental Politics Volume 15 ; 15 >
-      au < manifest ; 2016 ; Global Environmental Politics Volume 16 ; 16 >
+      au < doNotProcess ; 2016 ; Global Environmental Politics Volume 16 ; 16 >
 
     }
 
@@ -204,8 +204,8 @@
 
       au < down ; 2013-2014 ; International Security Volume 38 ; 38 >
       au < down ; 2014-2015 ; International Security Volume 39 ; 39 >
-      au < manifest ; 2015 ; International Security Volume 40 ; 40 >
-      au < manifest ; 2016 ; International Security Volume 41 ; 41 >
+      au < doNotProcess ; 2015 ; International Security Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; International Security Volume 41 ; 41 >
 
     }
 
@@ -250,7 +250,7 @@
 
       au < down ; 2014 ; Journal of Cold War Studies Volume 16 ; 16 >
       au < down ; 2015 ; Journal of Cold War Studies Volume 17 ; 17 >
-      au < manifest ; 2016 ; Journal of Cold War Studies Volume 18 ; 18 >
+      au < doNotProcess ; 2016 ; Journal of Cold War Studies Volume 18 ; 18 >
 
     }
 
@@ -294,8 +294,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; Journal of Interdisciplinary History Volume 45 ; 45 >
-      au < manifest ; 2015-2016 ; Journal of Interdisciplinary History Volume 46 ; 46 >
-      au < manifest ; 2016-2017 ; Journal of Interdisciplinary History Volume 47 ; 47 >
+      au < doNotProcess ; 2015-2016 ; Journal of Interdisciplinary History Volume 46 ; 46 >
+      au < doNotProcess ; 2016-2017 ; Journal of Interdisciplinary History Volume 47 ; 47 >
 
     }
 
@@ -316,39 +316,39 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1968 ; Leonardo Volume 1 ; 1 >
-      au < manifest ; 1969 ; Leonardo Volume 2 ; 2 >
-      au < manifest ; 1970 ; Leonardo Volume 3 ; 3 >
-      au < manifest ; 1971 ; Leonardo Volume 4 ; 4 >
-      au < manifest ; 1972 ; Leonardo Volume 5 ; 5 >
-      au < manifest ; 1973 ; Leonardo Volume 6 ; 6 >
-      au < manifest ; 1974 ; Leonardo Volume 7 ; 7 >
-      au < manifest ; 1975 ; Leonardo Volume 8 ; 8 >
-      au < manifest ; 1976 ; Leonardo Volume 9 ; 9 >
-      au < manifest ; 1977 ; Leonardo Volume 10 ; 10 >
-      au < manifest ; 1978 ; Leonardo Volume 11 ; 11 >
-      au < manifest ; 1979 ; Leonardo Volume 12 ; 12 >
-      au < manifest ; 1980 ; Leonardo Volume 13 ; 13 >
-      au < manifest ; 1981 ; Leonardo Volume 14 ; 14 >
-      au < manifest ; 1982 ; Leonardo Volume 15 ; 15 >
-      au < manifest ; 1983 ; Leonardo Volume 16 ; 16 >
-      au < manifest ; 1984 ; Leonardo Volume 17 ; 17 >
-      au < manifest ; 1985 ; Leonardo Volume 18 ; 18 >
-      au < manifest ; 1986 ; Leonardo Volume 19 ; 19 >
-      au < manifest ; 1987 ; Leonardo Volume 20 ; 20 >
-      au < manifest ; 1988 ; Leonardo Volume 21 ; 21 >
-      au < manifest ; 1989 ; Leonardo Volume 22 ; 22 >
-      au < manifest ; 1990 ; Leonardo Volume 23 ; 23 >
-      au < manifest ; 1991 ; Leonardo Volume 24 ; 24 >
-      au < manifest ; 1992 ; Leonardo Volume 25 ; 25 >
-      au < manifest ; 1993 ; Leonardo Volume 26 ; 26 >
-      au < manifest ; 1994 ; Leonardo Volume 27 ; 27 >
-      au < manifest ; 1995 ; Leonardo Volume 28 ; 28 >
-      au < manifest ; 1996 ; Leonardo Volume 29 ; 29 >
-      au < manifest ; 1997 ; Leonardo Volume 30 ; 30 >
-      au < manifest ; 1998 ; Leonardo Volume 31 ; 31 >
-      au < manifest ; 1999 ; Leonardo Volume 32 ; 32 >
-      au < manifest ; 2000 ; Leonardo Volume 33 ; 33 >
+      au < doNotProcess ; 1968 ; Leonardo Volume 1 ; 1 >
+      au < doNotProcess ; 1969 ; Leonardo Volume 2 ; 2 >
+      au < doNotProcess ; 1970 ; Leonardo Volume 3 ; 3 >
+      au < doNotProcess ; 1971 ; Leonardo Volume 4 ; 4 >
+      au < doNotProcess ; 1972 ; Leonardo Volume 5 ; 5 >
+      au < doNotProcess ; 1973 ; Leonardo Volume 6 ; 6 >
+      au < doNotProcess ; 1974 ; Leonardo Volume 7 ; 7 >
+      au < doNotProcess ; 1975 ; Leonardo Volume 8 ; 8 >
+      au < doNotProcess ; 1976 ; Leonardo Volume 9 ; 9 >
+      au < doNotProcess ; 1977 ; Leonardo Volume 10 ; 10 >
+      au < doNotProcess ; 1978 ; Leonardo Volume 11 ; 11 >
+      au < doNotProcess ; 1979 ; Leonardo Volume 12 ; 12 >
+      au < doNotProcess ; 1980 ; Leonardo Volume 13 ; 13 >
+      au < doNotProcess ; 1981 ; Leonardo Volume 14 ; 14 >
+      au < doNotProcess ; 1982 ; Leonardo Volume 15 ; 15 >
+      au < doNotProcess ; 1983 ; Leonardo Volume 16 ; 16 >
+      au < doNotProcess ; 1984 ; Leonardo Volume 17 ; 17 >
+      au < doNotProcess ; 1985 ; Leonardo Volume 18 ; 18 >
+      au < doNotProcess ; 1986 ; Leonardo Volume 19 ; 19 >
+      au < doNotProcess ; 1987 ; Leonardo Volume 20 ; 20 >
+      au < doNotProcess ; 1988 ; Leonardo Volume 21 ; 21 >
+      au < doNotProcess ; 1989 ; Leonardo Volume 22 ; 22 >
+      au < doNotProcess ; 1990 ; Leonardo Volume 23 ; 23 >
+      au < doNotProcess ; 1991 ; Leonardo Volume 24 ; 24 >
+      au < doNotProcess ; 1992 ; Leonardo Volume 25 ; 25 >
+      au < doNotProcess ; 1993 ; Leonardo Volume 26 ; 26 >
+      au < doNotProcess ; 1994 ; Leonardo Volume 27 ; 27 >
+      au < doNotProcess ; 1995 ; Leonardo Volume 28 ; 28 >
+      au < doNotProcess ; 1996 ; Leonardo Volume 29 ; 29 >
+      au < doNotProcess ; 1997 ; Leonardo Volume 30 ; 30 >
+      au < doNotProcess ; 1998 ; Leonardo Volume 31 ; 31 >
+      au < doNotProcess ; 1999 ; Leonardo Volume 32 ; 32 >
+      au < doNotProcess ; 2000 ; Leonardo Volume 33 ; 33 >
 
     }
 
@@ -378,7 +378,7 @@
 
       au < down ; 2014 ; Leonardo Volume 47 ; 47 >
       au < down ; 2015 ; Leonardo Volume 48 ; 48 >
-      au < manifest ; 2016 ; Leonardo Volume 49 ; 49 >
+      au < doNotProcess ; 2016 ; Leonardo Volume 49 ; 49 >
 
     }
 
@@ -399,15 +399,15 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1991 ; Leonardo Music Journal Volume 1 ; 1 >
-      au < manifest ; 1992 ; Leonardo Music Journal Volume 2 ; 2 >
-      au < manifest ; 1993 ; Leonardo Music Journal Volume 3 ; 3 >
-      au < manifest ; 1994 ; Leonardo Music Journal Volume 4 ; 4 >
-      au < manifest ; 1995 ; Leonardo Music Journal Volume 5 ; 5 >
-      au < manifest ; 1996 ; Leonardo Music Journal Volume 6 ; 6 >
-      au < manifest ; 1997 ; Leonardo Music Journal Volume 7 ; 7 >
-      au < manifest ; 1998 ; Leonardo Music Journal Volume 8 ; 8 >
-      au < manifest ; 1999 ; Leonardo Music Journal Volume 9 ; 9 >
+      au < doNotProcess ; 1991 ; Leonardo Music Journal Volume 1 ; 1 >
+      au < doNotProcess ; 1992 ; Leonardo Music Journal Volume 2 ; 2 >
+      au < doNotProcess ; 1993 ; Leonardo Music Journal Volume 3 ; 3 >
+      au < doNotProcess ; 1994 ; Leonardo Music Journal Volume 4 ; 4 >
+      au < doNotProcess ; 1995 ; Leonardo Music Journal Volume 5 ; 5 >
+      au < doNotProcess ; 1996 ; Leonardo Music Journal Volume 6 ; 6 >
+      au < doNotProcess ; 1997 ; Leonardo Music Journal Volume 7 ; 7 >
+      au < doNotProcess ; 1998 ; Leonardo Music Journal Volume 8 ; 8 >
+      au < doNotProcess ; 1999 ; Leonardo Music Journal Volume 9 ; 9 >
 
     }
 
@@ -481,7 +481,7 @@
 
       au < down ; 2014 ; Linguistic Inquiry Volume 45 ; 45 >
       au < down ; 2015 ; Linguistic Inquiry Volume 46 ; 46 >
-      au < manifest ; 2016 ; Linguistic Inquiry Volume 47 ; 47 >
+      au < doNotProcess ; 2016 ; Linguistic Inquiry Volume 47 ; 47 >
 
     }
 
@@ -529,7 +529,7 @@
 
       au < down ; 2014 ; PAJ: A Journal of Performance and Art Volume 36 ; 36 >
       au < down ; 2015 ; PAJ: A Journal of Performance and Art Volume 37 ; 37 >
-      au < manifest ; 2016 ; PAJ: A Journal of Performance and Art Volume 38 ; 38 >
+      au < doNotProcess ; 2016 ; PAJ: A Journal of Performance and Art Volume 38 ; 38 >
 
     }
 
@@ -575,7 +575,7 @@
 
       au < down ; 2014 ; Perspectives on Science Volume 22 ; 22 >
       au < down ; 2015 ; Perspectives on Science Volume 23 ; 23 >
-      au < manifest ; 2016 ; Perspectives on Science Volume 24 ; 24 >
+      au < doNotProcess ; 2016 ; Perspectives on Science Volume 24 ; 24 >
 
     }
 
@@ -620,7 +620,7 @@
 
       au < down ; 2014 ; TDR: The Drama Review Volume 58 ; 58 >
       au < down ; 2015 ; TDR: The Drama Review Volume 59 ; 59 >
-      au < manifest ; 2016 ; TDR: The Drama Review Volume 60 ; 60 >
+      au < doNotProcess ; 2016 ; TDR: The Drama Review Volume 60 ; 60 >
 
     }
 

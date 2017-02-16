@@ -34,7 +34,7 @@
       au < down ; 2014 ; Change Over Time Volume 4 ; 4 >
       au < down ; 2015 ; Change Over Time Volume 5 ; 5 >
 
-      au < manifest ; 2016 ; Change Over Time Volume 6 ; 6 >
+      au < doNotProcess ; 2016 ; Change Over Time Volume 6 ; 6 >
 
     }
 
@@ -74,7 +74,7 @@
       au < down ; 2014 ; Dissent Volume 61 ; 61 >
       au < down ; 2015 ; Dissent Volume 62 ; 62 >
 
-      au < manifest ; 2016 ; Dissent Volume 63 ; 63 >
+      au < doNotProcess ; 2016 ; Dissent Volume 63 ; 63 >
 
     }
 
@@ -116,7 +116,7 @@
       au < down ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 ; 12 >
       au < down ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 ; 13 >
 
-      au < manifest ; 2016 ; Early American Studies: An Interdisciplinary Journal Volume 14 ; 14 >
+      au < doNotProcess ; 2016 ; Early American Studies: An Interdisciplinary Journal Volume 14 ; 14 >
 
     }
 
@@ -154,7 +154,7 @@
 
       au < down ; 2014 ; The Eighteenth Century Volume 55 ; 55 >
       au < down ; 2015 ; The Eighteenth Century Volume 56 ; 56 >
-      au < manifest ; 2016 ; The Eighteenth Century Volume 57 ; 57 >
+      au < doNotProcess ; 2016 ; The Eighteenth Century Volume 57 ; 57 >
 
     }
 
@@ -193,7 +193,7 @@
 
       au < down ; 2014 ; Hispanic Review Volume 82 ; 82 >
       au < down ; 2015 ; Hispanic Review Volume 83 ; 83 >
-      au < manifest ; 2016 ; Hispanic Review Volume 84 ; 84 >
+      au < doNotProcess ; 2016 ; Hispanic Review Volume 84 ; 84 >
 
     }
 
@@ -227,7 +227,7 @@
 
       au < down ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 ; 5 >
       au < down ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 ; 6 >
-      au < manifest ; 2016 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 7 ; 7 >
+      au < doNotProcess ; 2016 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 7 ; 7 >
 
     }
 
@@ -258,7 +258,7 @@
 
       au < down ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 ; 2 >
       au < down ; 2015 ; J19: The Journal of Nineteenth-Century Americanists Volume 3 ; 3 >
-      au < manifest ; 2016 ; J19: The Journal of Nineteenth-Century Americanists Volume 4 ; 4 >
+      au < doNotProcess ; 2016 ; J19: The Journal of Nineteenth-Century Americanists Volume 4 ; 4 >
 
     }
 
@@ -307,7 +307,7 @@
 
       au < down ; 2014 ; Jewish Quarterly Review Volume 104 ; 104 >
       au < down ; 2015 ; Jewish Quarterly Review Volume 105 ; 105 >
-      au < manifest ; 2016 ; Jewish Quarterly Review Volume 106 ; 106 >
+      au < doNotProcess ; 2016 ; Jewish Quarterly Review Volume 106 ; 106 >
 
     }
 
@@ -357,7 +357,7 @@
 
       au < down ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 ; 14 >
       au < down ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 ; 15 >
-      au < manifest ; 2016 ; Journal for Early Modern Cultural Studies Volume 16 ; 16 >
+      au < doNotProcess ; 2016 ; Journal for Early Modern Cultural Studies Volume 16 ; 16 >
 
     }
 
@@ -396,7 +396,7 @@
 
       au < down ; 2014 ; Journal of the Early Republic Volume 34 ; 34 >
       au < down ; 2015 ; Journal of the Early Republic Volume 35 ; 35 >
-      au < manifest ; 2016 ; Journal of the Early Republic Volume 36 ; 36 >
+      au < doNotProcess ; 2016 ; Journal of the Early Republic Volume 36 ; 36 >
 
     }
 
@@ -418,7 +418,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2015 ; Journal of Ecumenical Studies Volume 50 ; 50 >
-      au < manifest ; 2016 ; Journal of Ecumenical Studies Volume 51 ; 51 >
+      au < doNotProcess ; 2016 ; Journal of Ecumenical Studies Volume 51 ; 51 >
 
     }
 
@@ -466,7 +466,7 @@
 
       au < down ; 2014 ; Journal of the History of Ideas Volume 75 ; 75 >
       au < down ; 2015 ; Journal of the History of Ideas Volume 76 ; 76 >
-      au < manifest ; 2016 ; Journal of the History of Ideas Volume 77 ; 77 >
+      au < doNotProcess ; 2016 ; Journal of the History of Ideas Volume 77 ; 77 >
 
     }
 
@@ -504,7 +504,7 @@
 
       au < down ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 ; 9 >
       au < down ; 2015 ; Magic, Ritual, and Witchcraft Volume 10 ; 10 >
-      au < manifest ; 2016 ; Magic, Ritual, and Witchcraft Volume 11 ; 11 >
+      au < doNotProcess ; 2016 ; Magic, Ritual, and Witchcraft Volume 11 ; 11 >
 
     }
 
@@ -541,7 +541,7 @@
 
       au < down ; 2014 ; Revista Hispánica Moderna Volume 67 ; 67 >
       au < down ; 2015 ; Revista Hispánica Moderna Volume 68 ; 68 >
-      au < manifest ; 2016 ; Revista Hispánica Moderna Volume 69 ; 69 >
+      au < doNotProcess ; 2016 ; Revista Hispánica Moderna Volume 69 ; 69 >
 
     }
 

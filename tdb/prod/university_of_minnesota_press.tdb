@@ -39,7 +39,7 @@
       au < down ; 2014 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 21 ; 21 >
       au < down ; 2015 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 22 ; 22 >
 
-      au < manifest ; 2016 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 23 ; 23 >
+      au < doNotProcess ; 2016 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 23 ; 23 >
 
     }
 
@@ -112,9 +112,9 @@
       au < down ; 2015 ; Cultural Critique Volume 89 ; 89 >
       au < down ; 2015 ; Cultural Critique Volume 90 ; 90 >
       au < down ; 2015 ; Cultural Critique Volume 91 ; 91 >
-      au < manifest ; 2016 ; Cultural Critique Volume 92 ; 92 >
-      au < manifest ; 2016 ; Cultural Critique Volume 93 ; 93 >
-      au < expected ; 2016 ; Cultural Critique Volume 94 ; 94 >
+      au < doNotProcess ; 2016 ; Cultural Critique Volume 92 ; 92 >
+      au < doNotProcess ; 2016 ; Cultural Critique Volume 93 ; 93 >
+      au < doNotProcess ; 2016 ; Cultural Critique Volume 94 ; 94 >
 
     }
 
@@ -150,7 +150,7 @@
 
       au < down ; 2014 ; Future Anterior Volume 11 ; 11 >
       au < down ; 2015 ; Future Anterior Volume 12 ; 12 >
-      au < manifest ; 2016 ; Future Anterior Volume 13 ; 13 >
+      au < doNotProcess ; 2016 ; Future Anterior Volume 13 ; 13 >
 
     }
 
@@ -187,7 +187,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014 ; Mechademia Volume 9 ; 9 >
-      au < expected ; 2015 ; Mechademia Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Mechademia Volume 10 ; 10 >
 
     }
 
@@ -271,7 +271,7 @@
 
       au < down ; 2014 ; Wicazo Sa Review Volume 29 ; 29 >
       au < down ; 2015 ; Wicazo Sa Review Volume 30 ; 30 >
-      au < manifest ; 2016 ; Wicazo Sa Review Volume 31 ; 31 >
+      au < doNotProcess ; 2016 ; Wicazo Sa Review Volume 31 ; 31 >
 
     }
 

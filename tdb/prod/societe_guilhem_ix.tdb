@@ -23,25 +23,25 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1985-1986 ; Tenso Volume 1 ; 1 >
-      au < manifest ; 1987 ; Tenso Volume 2 ; 2 >
-      au < manifest ; 1987-1988 ; Tenso Volume 3 ; 3 >
-      au < manifest ; 1988-1989 ; Tenso Volume 4 ; 4 >
-      au < manifest ; 1989-1990 ; Tenso Volume 5 ; 5 >
-      au < manifest ; 1990-1991 ; Tenso Volume 6 ; 6 >
-      au < manifest ; 1991-1992 ; Tenso Volume 7 ; 7 >
-      au < manifest ; 1992-1993 ; Tenso Volume 8 ; 8 >
-      au < manifest ; 1993-1994 ; Tenso Volume 9 ; 9 >
-      au < manifest ; 1994-1995 ; Tenso Volume 10 ; 10 >
-      au < manifest ; 1995-1996 ; Tenso Volume 11 ; 11 >
-      au < manifest ; 1996-1997 ; Tenso Volume 12 ; 12 >
-      au < manifest ; 1997-1998 ; Tenso Volume 13 ; 13 >
-      au < manifest ; 1999 ; Tenso Volume 14 ; 14 >
-      au < manifest ; 2000 ; Tenso Volume 15 ; 15 >
-      au < manifest ; 2001 ; Tenso Volume 16 ; 16 >
-      au < manifest ; 2002 ; Tenso Volume 17 ; 17 >
-      au < manifest ; 2003 ; Tenso Volume 18 ; 18 >
-      au < manifest ; 2004 ; Tenso Volume 19 ; 19 >
+      au < doNotProcess ; 1985-1986 ; Tenso Volume 1 ; 1 >
+      au < doNotProcess ; 1987 ; Tenso Volume 2 ; 2 >
+      au < doNotProcess ; 1987-1988 ; Tenso Volume 3 ; 3 >
+      au < doNotProcess ; 1988-1989 ; Tenso Volume 4 ; 4 >
+      au < doNotProcess ; 1989-1990 ; Tenso Volume 5 ; 5 >
+      au < doNotProcess ; 1990-1991 ; Tenso Volume 6 ; 6 >
+      au < doNotProcess ; 1991-1992 ; Tenso Volume 7 ; 7 >
+      au < doNotProcess ; 1992-1993 ; Tenso Volume 8 ; 8 >
+      au < doNotProcess ; 1993-1994 ; Tenso Volume 9 ; 9 >
+      au < doNotProcess ; 1994-1995 ; Tenso Volume 10 ; 10 >
+      au < doNotProcess ; 1995-1996 ; Tenso Volume 11 ; 11 >
+      au < doNotProcess ; 1996-1997 ; Tenso Volume 12 ; 12 >
+      au < doNotProcess ; 1997-1998 ; Tenso Volume 13 ; 13 >
+      au < doNotProcess ; 1999 ; Tenso Volume 14 ; 14 >
+      au < doNotProcess ; 2000 ; Tenso Volume 15 ; 15 >
+      au < doNotProcess ; 2001 ; Tenso Volume 16 ; 16 >
+      au < doNotProcess ; 2002 ; Tenso Volume 17 ; 17 >
+      au < doNotProcess ; 2003 ; Tenso Volume 18 ; 18 >
+      au < doNotProcess ; 2004 ; Tenso Volume 19 ; 19 >
 
     }
 
@@ -67,7 +67,7 @@
 
       au < down ; 2014 ; Tenso Volume 29 ; 29 >
       au < down ; 2015 ; Tenso Volume 30 ; 30 >
-      au < manifest ; 2016 ; Tenso Volume 31 ; 31 >
+      au < doNotProcess ; 2016 ; Tenso Volume 31 ; 31 >
 
     }
 

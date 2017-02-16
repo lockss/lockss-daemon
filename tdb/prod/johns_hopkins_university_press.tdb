@@ -52,7 +52,7 @@
       au < down ; 2014 ; American Imago Volume 71 ; 71 >
       au < down ; 2015 ; American Imago Volume 72 ; 72 >
 
-      au < manifest ; 2016 ; American Imago Volume 73 ; 73 >
+      au < doNotProcess ; 2016 ; American Imago Volume 73 ; 73 >
 
     }
 
@@ -98,7 +98,7 @@
 
       au < down ; 2014 ; American Jewish History Volume 98 ; 98 >
       au < down ; 2015 ; American Jewish History Volume 99 ; 99 >
-      au < manifest ; 2016 ; American Jewish History Volume 100 ; 100 >
+      au < doNotProcess ; 2016 ; American Jewish History Volume 100 ; 100 >
 
     }
 
@@ -148,7 +148,7 @@
       au < down ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
       au < down ; 2015 ; American Journal of Mathematics Volume 137 ; 137 >
 
-      au < manifest ; 2016 ; American Journal of Mathematics Volume 138 ; 138 >
+      au < doNotProcess ; 2016 ; American Journal of Mathematics Volume 138 ; 138 >
 
     }
 
@@ -197,7 +197,7 @@
       au < down ; 2014 ; American Journal of Philology Volume Volume 135 ; 135 >
       au < down ; 2015 ; American Journal of Philology Volume Volume 136 ; 136 >
 
-      au < manifest ; 2016 ; American Journal of Philology Volume Volume 137 ; 137 >
+      au < doNotProcess ; 2016 ; American Journal of Philology Volume Volume 137 ; 137 >
 
     }
 
@@ -246,8 +246,8 @@
       au < down ; 2014 ; American Quarterly Volume 66 ; 66 >
       au < down ; 2015 ; American Quarterly Volume 67 ; 67 >
 
-      au < manifest ; 2015 ; American Quarterly Volume 68 ; 68 >
-      au < expected ; 2016 ; American Quarterly Volume 69 ; 69 >
+      au < doNotProcess ; 2015 ; American Quarterly Volume 68 ; 68 >
+      au < doNotProcess ; 2016 ; American Quarterly Volume 69 ; 69 >
 
     }
 
@@ -295,7 +295,7 @@
 
       au < down ; 2014 ; Arethusa Volume 47 ; 47 >
       au < down ; 2015 ; Arethusa Volume 48 ; 48 >
-      au < manifest ; 2016 ; Arethusa Volume 49 ; 49 >
+      au < doNotProcess ; 2016 ; Arethusa Volume 49 ; 49 >
 
     }
 
@@ -319,7 +319,7 @@
       au < down ; 2014 ; ariel: A Review of International English Literature Volume 45 ; 45 >
       au < down ; 2015 ; ariel: A Review of International English Literature Volume 46 ; 46 >
 
-      au < manifest ; 2016 ; ariel: A Review of International English Literature Volume 47 ; 47>
+      au < doNotProcess ; 2016 ; ariel: A Review of International English Literature Volume 47 ; 47>
 
   }
 
@@ -401,7 +401,7 @@
       au < down ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
       au < down ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 ; 53 >
 
-      au < manifest ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54 ; 54 >
+      au < doNotProcess ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54 ; 54 >
 
     }
 
@@ -439,8 +439,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 ; 68 >
-      au < manifest ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69 ; 69 >
-      au < manifest ; 2016-2017 ; Bulletin of the Center for Children's Books Volume 70 ; 70 >
+      au < doNotProcess ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69 ; 69 >
+      au < doNotProcess ; 2016-2017 ; Bulletin of the Center for Children's Books Volume 70 ; 70 >
 
     }
 
@@ -490,7 +490,7 @@
       au < down ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
       au < down ; 2015 ; Bulletin of the History of Medicine Volume 89 ; 89 >
 
-      au < manifest ; 2016 ; Bulletin of the History of Medicine Volume 90 ; 90 >
+      au < doNotProcess ; 2016 ; Bulletin of the History of Medicine Volume 90 ; 90 >
 
     }
 
@@ -540,7 +540,7 @@
       au < down ; 2014 ; Callaloo Volume 37 ; 37 >
       au < down ; 2015 ; Callaloo Volume 38 ; 38 >
 
-      au < manifest ; 2016 ; Callaloo Volume 39 ; 39 >
+      au < doNotProcess ; 2016 ; Callaloo Volume 39 ; 39 >
 
     }
 
@@ -571,7 +571,7 @@
       au < down ; 2014 ; CEA Critic Volume 76 ; 76 >
       au < down ; 2015 ; CEA Critic Volume 77 ; 77 >
 
-      au < manifest ; 2016 ; CEA Critic Volume 78 ; 78 >
+      au < doNotProcess ; 2016 ; CEA Critic Volume 78 ; 78 >
 
     }
 
@@ -643,7 +643,7 @@
       au < down ; 2014 ; Children's Literature Volume 42 ; 42 >
       au < down ; 2015 ; Children's Literature Volume 43 ; 43 >
 
-      au < manifest ; 2016 ; Children's Literature Volume 44 ; 44 >
+      au < doNotProcess ; 2016 ; Children's Literature Volume 44 ; 44 >
 
     }
 
@@ -806,7 +806,7 @@
       au < down ; 2014 ; Configurations Volume 22 ; 22 >
       au < down ; 2015 ; Configurations Volume 23 ; 23 >
 
-      au < manifest ; 2016 ; Configurations Volume 24 ; 24 >
+      au < doNotProcess ; 2016 ; Configurations Volume 24 ; 24 >
 
     }
 
@@ -873,7 +873,7 @@
 
       au < down ; 2015 ; Dickens Quarterly Volume 32 ; 32 >
 
-      au < manifest ; 2016 ; Dickens Quarterly Volume 33 ; 33 >
+      au < doNotProcess ; 2016 ; Dickens Quarterly Volume 33 ; 33 >
 
   }
 
@@ -904,7 +904,7 @@
       au < down ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 ; 3 >
       au < down ; 2015 ; Digital Philology: A Journal of Medieval Cultures Volume 4 ; 4 >
 
-      au < manifest ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5 ; 5 >
+      au < doNotProcess ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5 ; 5 >
 
     }
 
@@ -953,8 +953,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; Eighteenth-Century Studies Volume 48 ; 48 >
-      au < manifest ; 2015-2016 ; Eighteenth-Century Studies Volume 49 ; 49 >
-      au < manifest ; 2016-2017 ; Eighteenth-Century Studies Volume 50 ; 50 >
+      au < doNotProcess ; 2015-2016 ; Eighteenth-Century Studies Volume 49 ; 49 >
+      au < doNotProcess ; 2016-2017 ; Eighteenth-Century Studies Volume 50 ; 50 >
 
     }
 
@@ -1007,7 +1007,7 @@
       au < down ; 2014 ; ELH Volume 81 ; 81 >
       au < down ; 2015 ; ELH Volume 82 ; 82 >
 
-      au < manifest ; 2016 ; ELH Volume 83 ; 83 >
+      au < doNotProcess ; 2016 ; ELH Volume 83 ; 83 >
 
     }
 
@@ -1048,7 +1048,7 @@
 
       au < down ; 2014 ; Feminist Formations Volume 26 ; 26 >
       au < down ; 2015 ; Feminist Formations Volume 27 ; 27 >
-      au < manifest ; 2016 ; Feminist Formations Volume 28 ; 28 >
+      au < doNotProcess ; 2016 ; Feminist Formations Volume 28 ; 28 >
 
     }
 
@@ -1082,7 +1082,7 @@
 
       au < down ; 2014 ; German Studies Review Volume 37 ; 37 >
       au < down ; 2015 ; German Studies Review Volume 38 ; 38 >
-      au < manifest ; 2016 ; German Studies Review Volume 39 ; 39 >
+      au < doNotProcess ; 2016 ; German Studies Review Volume 39 ; 39 >
 
     }
 
@@ -1117,7 +1117,7 @@
 
       au < down ; 2014 ; Hispania Volume 97 ; 97 >
       au < down ; 2015 ; Hispania Volume 98 ; 98 >
-      au < manifest ; 2016 ; Hispania Volume 99 ; 99 >
+      au < doNotProcess ; 2016 ; Hispania Volume 99 ; 99 >
 
     }
 
@@ -1197,7 +1197,7 @@
 
       au < down ; 2014 ; The Hopkins Review Volume 7 ; 7 >
       au < down ; 2015 ; The Hopkins Review Volume 8 ; 8 >
-      au < manifest ; 2016 ; The Hopkins Review Volume 9 ; 9 >
+      au < doNotProcess ; 2016 ; The Hopkins Review Volume 9 ; 9 >
 
     }
 
@@ -1246,7 +1246,7 @@
 
       au < down ; 2014 ; Human Rights Quarterly Volume 36 ; 36 >
       au < down ; 2015 ; Human Rights Quarterly Volume 37 ; 37 >
-      au < manifest ; 2016 ; Human Rights Quarterly Volume 38 ; 38 >
+      au < doNotProcess ; 2016 ; Human Rights Quarterly Volume 38 ; 38 >
 
     }
 
@@ -1292,7 +1292,7 @@
 
       au < down ; 2014 ; Journal of Asian American Studies Volume 17 ; 17 >
       au < down ; 2015 ; Journal of Asian American Studies Volume 18 ; 18 >
-      au < manifest ; 2016 ; Journal of Asian American Studies Volume 19 ; 19 >
+      au < doNotProcess ; 2016 ; Journal of Asian American Studies Volume 19 ; 19 >
 
     }
 
@@ -1333,7 +1333,7 @@
 
       au < down ; 2014 ; Journal of College Student Development Volume 55 ; 55 >
       au < down ; 2015 ; Journal of College Student Development Volume 56 ; 56 >
-      au < manifest ; 2016 ; Journal of College Student Development Volume 57 ; 57 >
+      au < doNotProcess ; 2016 ; Journal of College Student Development Volume 57 ; 57 >
 
     }
 
@@ -1375,7 +1375,7 @@
 
       au < down ; 2014 ; Journal of Colonialism and Colonial History Volume 15 ; 15 >
       au < down ; 2015 ; Journal of Colonialism and Colonial History Volume 16 ; 16 >
-      au < manifest ; 2016 ; Journal of Colonialism and Colonial History Volume 17 ; 17 >
+      au < doNotProcess ; 2016 ; Journal of Colonialism and Colonial History Volume 17 ; 17 >
 
     }
 
@@ -1436,7 +1436,7 @@
 
       au < down ; 2014 ; Journal of Democracy Volume 25 ; 25 >
       au < down ; 2015 ; Journal of Democracy Volume 26 ; 26 >
-      au < manifest ; 2016 ; Journal of Democracy Volume 27 ; 27 >
+      au < doNotProcess ; 2016 ; Journal of Democracy Volume 27 ; 27 >
 
     }
 
@@ -1495,7 +1495,7 @@
 
       au < down ; 2014 ; Journal of Early Christian Studies Volume 22 ; 22 >
       au < down ; 2015 ; Journal of Early Christian Studies Volume 23 ; 23 >
-      au < manifest ; 2016 ; Journal of Early Christian Studies Volume 24 ; 24 >
+      au < doNotProcess ; 2016 ; Journal of Early Christian Studies Volume 24 ; 24 >
 
     }
 
@@ -1556,7 +1556,7 @@
 
       au < down ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 ; 25 >
       au < down ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 ; 26 >
-      au < manifest ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 ; 27 >
+      au < doNotProcess ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 ; 27 >
 
     }
 
@@ -1593,7 +1593,7 @@
 
       au < down ; 2014 ; Journal of Late Antiquity Volume 7 ; 7 >
       au < down ; 2015 ; Journal of Late Antiquity Volume 8 ; 8 >
-      au < manifest ; 2016 ; Journal of Late Antiquity Volume 9 ; 9 >
+      au < doNotProcess ; 2016 ; Journal of Late Antiquity Volume 9 ; 9 >
 
     }
 
@@ -1661,7 +1661,7 @@
 
       au < down ; 2014 ; Journal of Modern Greek Studies Volume 32 ; 32 >
       au < down ; 2015 ; Journal of Modern Greek Studies Volume 33 ; 33 >
-      au < manifest ; 2016 ; Journal of Modern Greek Studies Volume 34 ; 34 >
+      au < doNotProcess ; 2016 ; Journal of Modern Greek Studies Volume 34 ; 34 >
 
     }
 
@@ -1718,7 +1718,7 @@
 
       au < down ; 2014 ; The Journal of the History of Childhood and Youth Volume 7 ; 7 >
       au < down ; 2015 ; The Journal of the History of Childhood and Youth Volume 8 ; 8 >
-      au < manifest ; 2016 ; The Journal of the History of Childhood and Youth Volume 9 ; 9 >
+      au < doNotProcess ; 2016 ; The Journal of the History of Childhood and Youth Volume 9 ; 9 >
 
     }
 
@@ -1807,7 +1807,7 @@
 
       au < down ; 2014 ; Journal of the History of Philosophy Volume 52 ; 52 >
       au < down ; 2015 ; Journal of the History of Philosophy Volume 53 ; 53 >
-      au < manifest ; 2016 ; Journal of the History of Philosophy Volume 54 ; 54 >
+      au < doNotProcess ; 2016 ; Journal of the History of Philosophy Volume 54 ; 54 >
 
     }
 
@@ -1869,7 +1869,7 @@
 
       au < down ; 2014 ; Journal of Women's History Volume 26 ; 26 >
       au < down ; 2015 ; Journal of Women's History Volume 27 ; 27 >
-      au < manifest ; 2016 ; Journal of Women's History Volume 28 ; 28 >
+      au < doNotProcess ; 2016 ; Journal of Women's History Volume 28 ; 28 >
 
     }
 
@@ -1929,7 +1929,7 @@
 
       au < down ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 ; 24 >
       au < down ; 2015 ; Kennedy Institute of Ethics Journal Volume 25 ; 25 >
-      au < manifest ; 2016 ; Kennedy Institute of Ethics Journal Volume 26 ; 26 >
+      au < doNotProcess ; 2016 ; Kennedy Institute of Ethics Journal Volume 26 ; 26 >
 
     }
 
@@ -1977,7 +1977,7 @@
 
       au < down ; 2014 ; L'Esprit Créateur Volume 54 ; 54 >
       au < down ; 2015 ; L'Esprit Créateur Volume 55 ; 55 >
-      au < manifest ; 2016 ; L'Esprit Créateur Volume 56 ; 56 >
+      au < doNotProcess ; 2016 ; L'Esprit Créateur Volume 56 ; 56 >
 
     }
 
@@ -2049,7 +2049,7 @@
 
       au < down ; 2014 ; Late Imperial China Volume 35 ; 35 >
       au < down ; 2015 ; Late Imperial China Volume 36 ; 36 >
-      au < manifest ; 2016 ; Late Imperial China Volume 37 ; 37 >
+      au < doNotProcess ; 2016 ; Late Imperial China Volume 37 ; 37 >
 
     }
 
@@ -2094,7 +2094,7 @@
 
       au < down ; 2014 ; Leviathan Volume 16 ; 16 >
       au < down ; 2015 ; Leviathan Volume 17 ; 17 >
-      au < manifest ; 2016 ; Leviathan Volume 18 ; 18 >
+      au < doNotProcess ; 2016 ; Leviathan Volume 18 ; 18 >
 
     }
 
@@ -2132,8 +2132,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; Library Trends Volume 63 ; 63 >
-      au < manifest ; 2015-2016 ; Library Trends Volume 64 ; 64 >
-      au < manifest ; 2016-2017 ; Library Trends Volume 65 ; 65 >
+      au < doNotProcess ; 2015-2016 ; Library Trends Volume 64 ; 64 >
+      au < doNotProcess ; 2016-2017 ; Library Trends Volume 65 ; 65 >
 
     }
 
@@ -2201,7 +2201,7 @@
 
       au < down ; 2014 ; Literature and Medicine Volume 32 ; 32 >
       au < down ; 2015 ; Literature and Medicine Volume 33 ; 33 >
-      au < manifest ; 2016 ; Literature and Medicine Volume 34 ; 34 >
+      au < doNotProcess ; 2016 ; Literature and Medicine Volume 34 ; 34 >
 
     }
 
@@ -2267,7 +2267,7 @@
 
       au < down ; 2014 ; MFS Modern Fiction Studies Volume 60 ; 60 >
       au < down ; 2015 ; MFS Modern Fiction Studies Volume 61 ; 61 >
-      au < manifest ; 2016 ; MFS Modern Fiction Studies Volume 62 ; 62 >
+      au < doNotProcess ; 2016 ; MFS Modern Fiction Studies Volume 62 ; 62 >
 
     }
 
@@ -2342,7 +2342,7 @@
 
       au < down ; 2014 ; MLN Volume 129 ; 129 >
       au < down ; 2015 ; MLN Volume 130 ; 130 >
-      au < manifest ; 2016 ; MLN Volume 131 ; 131 >
+      au < doNotProcess ; 2016 ; MLN Volume 131 ; 131 >
 
     }
 
@@ -2392,7 +2392,7 @@
 
       au < down ; 2014 ; Modernism/modernity Volume 21 ; 21 >
       au < down ; 2015 ; Modernism/modernity Volume 22 ; 22 >
-      au < manifest ; 2016 ; Modernism/modernity Volume 23 ; 23 >
+      au < doNotProcess ; 2016 ; Modernism/modernity Volume 23 ; 23 >
 
     }
 
@@ -2425,7 +2425,7 @@
 
         au < down ; 2014 ; Narrative Inquiry in Bioethics Volume 4 ; 4 >
         au < down ; 2015 ; Narrative Inquiry in Bioethics Volume 5 ; 5 >
-        au < manifest ; 2016 ; Narrative Inquiry in Bioethics Volume 6 ; 6 >
+        au < doNotProcess ; 2016 ; Narrative Inquiry in Bioethics Volume 6 ; 6 >
 
     }
 
@@ -2475,7 +2475,7 @@
 
       au < down ; 2014 ; New Literary History Volume 45 ; 45 >
       au < down ; 2015 ; New Literary History Volume 46 ; 46 >
-      au < manifest ; 2016 ; New Literary History Volume 47 ; 47 >
+      au < doNotProcess ; 2016 ; New Literary History Volume 47 ; 47 >
 
     }
 
@@ -2550,7 +2550,7 @@
 
       au < down ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
       au < down ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13 ; 13 >
-      au < manifest ; 2016 ; Partial Answers: Journal of Literature and the History of Ideas Volume 14 ; 14 >
+      au < doNotProcess ; 2016 ; Partial Answers: Journal of Literature and the History of Ideas Volume 14 ; 14 >
 
     }
 
@@ -2643,7 +2643,7 @@
 
       au < down ; 2014 ; Perspectives in Biology and Medicine Volume 57 ; 57 >
       au < down ; 2015 ; Perspectives in Biology and Medicine Volume 58 ; 58 >
-      au < manifest ; 2016 ; Perspectives in Biology and Medicine Volume 59 ; 59 >
+      au < doNotProcess ; 2016 ; Perspectives in Biology and Medicine Volume 59 ; 59 >
 
     }
 
@@ -2717,7 +2717,7 @@
 
       au < down ; 2014 ; Philosophy and Literature Volume 38 ; 38 >
       au < down ; 2015 ; Philosophy and Literature Volume 39 ; 39 >
-      au < manifest ; 2016 ; Philosophy and Literature Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; Philosophy and Literature Volume 40 ; 40 >
 
     }
 
@@ -2774,7 +2774,7 @@
 
       au < down ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21 ; 21 >
       au < down ; 2015 ; Philosophy, Psychiatry, & Psychology Volume 22 ; 22 >
-      au < manifest ; 2016 ; Philosophy, Psychiatry, & Psychology Volume 23 ; 23 >
+      au < doNotProcess ; 2016 ; Philosophy, Psychiatry, & Psychology Volume 23 ; 23 >
 
     }
 
@@ -2808,7 +2808,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < exists ; 2007 ; Poe Studies Volume 40 ; 40 >
+      au < doNotProcess ; 2007 ; Poe Studies Volume 40 ; 40 >
 
     }
 
@@ -2874,7 +2874,7 @@
 
       au < down ; 2014 ; portal: Libraries and the Academy Volume 14 ; 14 >
       au < down ; 2015 ; portal: Libraries and the Academy Volume 15 ; 15 >
-      au < manifest ; 2016 ; portal: Libraries and the Academy Volume 16 ; 16 >
+      au < doNotProcess ; 2016 ; portal: Libraries and the Academy Volume 16 ; 16 >
 
     }
 
@@ -2925,7 +2925,7 @@
 
       au < down ; 2013-2014 ; Postmodern Culture Volume 24 ; 24 >
       au < down ; 2014-2015 ; Postmodern Culture Volume 25 ; 25 >
-      au < manifest ; 2015-2016 ; Postmodern Culture Volume 26 ; 26 >
+      au < doNotProcess ; 2015-2016 ; Postmodern Culture Volume 26 ; 26 >
 
     }
 
@@ -2962,7 +2962,7 @@
 
       au < down ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 ; 8 >
       au < down ; 2015 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 9 ; 9 >
-      au < manifest ; 2016 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 10 ; 10 >
+      au < doNotProcess ; 2016 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 10 ; 10 >
 
     }
 
@@ -3011,7 +3011,7 @@
 
       au < down ; 2014 ; Reviews in American History Volume 42 ; 42 >
       au < down ; 2015 ; Reviews in American History Volume 43 ; 43 >
-      au < manifest ; 2016 ; Reviews in American History Volume 44 ; 44 >
+      au < doNotProcess ; 2016 ; Reviews in American History Volume 44 ; 44 >
 
     }
 
@@ -3107,7 +3107,7 @@
       au < down ; 2013 ; SAIS Review of International Affairs Volume 33 ; 33 >
       au < down ; 2014 ; SAIS Review of International Affairs Volume 34 ; 34 >
       au < down ; 2015 ; SAIS Review of International Affairs Volume 35 ; 35 >
-      au < manifest ; 2016 ; SAIS Review of International Affairs Volume 36 ; 36 >
+      au < doNotProcess ; 2016 ; SAIS Review of International Affairs Volume 36 ; 36 >
 
     }
 
@@ -3152,7 +3152,7 @@
 
       au < down ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
       au < down ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 ; 55 >
-      au < manifest ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 ; 56 >
+      au < doNotProcess ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 ; 56 >
 
     }
 
@@ -3189,7 +3189,7 @@
 
       au < down ; 2014 ; Sewanee Review Volume 122 ; 122 >
       au < down ; 2015 ; Sewanee Review Volume 123 ; 123 >
-      au < manifest ; 2016 ; Sewanee Review Volume 124 ; 124 >
+      au < doNotProcess ; 2016 ; Sewanee Review Volume 124 ; 124 >
 
     }
 
@@ -3227,7 +3227,7 @@
 
       au < down ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
       au < down ; 2015 ; Shakespeare Bulletin Volume 33 ; 33 >
-      au < manifest ; 2016 ; Shakespeare Bulletin Volume 34 ; 34 >
+      au < doNotProcess ; 2016 ; Shakespeare Bulletin Volume 34 ; 34 >
 
     }
 
@@ -3270,7 +3270,7 @@
 
       au < down ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
       au < down ; 2015 ; Shakespeare Quarterly Volume 66 ; 66 >
-      au < manifest ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 >
+      au < doNotProcess ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 >
 
     }
 
@@ -3334,7 +3334,7 @@
       au < down ; 2013 ; Social Research: An International Quarterly Volume 80 ; 80 >
       au < down ; 2014 ; Social Research: An International Quarterly Volume 81 ; 81 >
       au < down ; 2015 ; Social Research: An International Quarterly Volume 82 ; 82 >
-      au < manifest ; 2016 ; Social Research: An International Quarterly Volume 83 ; 83 >
+      au < doNotProcess ; 2016 ; Social Research: An International Quarterly Volume 83 ; 83 >
 
     }
 
@@ -3375,7 +3375,7 @@
 
       au < down ; 2014 ; South Central Review Volume 31 ; 31 >
       au < down ; 2015 ; South Central Review Volume 32 ; 32 >
-      au < manifest ; 2016 ; South Central Review Volume 33 ; 33 >
+      au < doNotProcess ; 2016 ; South Central Review Volume 33 ; 33 >
 
     }
 
@@ -3418,7 +3418,7 @@
 
       au < down ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
       au < down ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15 ; 15 >
-      au < manifest ; 2016 ; Spiritus: A Journal of Christian Spirituality Volume 16 ; 16 >
+      au < doNotProcess ; 2016 ; Spiritus: A Journal of Christian Spirituality Volume 16 ; 16 >
 
     }
 
@@ -3494,7 +3494,7 @@
 
       au < down ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
       au < down ; 2015 ; Studies in American Fiction Volume 42 ; 42 >
-      au < manifest ; 2016 ; Studies in American Fiction Volume 43 ; 43 >
+      au < doNotProcess ; 2016 ; Studies in American Fiction Volume 43 ; 43 >
 
     }
 
@@ -3547,7 +3547,7 @@
 
       au < down ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
       au < down ; 2015 ; Studies in Eighteenth-Century Culture Volume 44 ; 44 >
-      au < manifest ; 2016 ; Studies in Eighteenth-Century Culture Volume 45 ; 45 >
+      au < doNotProcess ; 2016 ; Studies in Eighteenth-Century Culture Volume 45 ; 45 >
 
     }
 
@@ -3593,7 +3593,7 @@
 
       au < down ; 2014 ; Technology and Culture Volume 55 ; 55 >
       au < down ; 2015 ; Technology and Culture Volume 56 ; 56 >
-      au < manifest ; 2016 ; Technology and Culture Volume 57 ; 57 >
+      au < doNotProcess ; 2016 ; Technology and Culture Volume 57 ; 57 >
 
     }
 
@@ -3645,7 +3645,7 @@
 
       au < down ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
       au < down ; 2015 ; The Emily Dickinson Journal Volume 24 ; 24 >
-      au < manifest ; 2016 ; The Emily Dickinson Journal Volume 25 ; 25 >
+      au < doNotProcess ; 2016 ; The Emily Dickinson Journal Volume 25 ; 25 >
 
     }
 
@@ -3716,7 +3716,7 @@
 
       au < down ; 2014 ; The Henry James Review Volume 35 ; 35 >
       au < down ; 2015 ; The Henry James Review Volume 36 ; 36 >
-      au < manifest ; 2016 ; The Henry James Review Volume 37 ; 37 >
+      au < doNotProcess ; 2016 ; The Henry James Review Volume 37 ; 37 >
 
     }
 
@@ -3782,7 +3782,7 @@
 
       au < down ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
       au < down ; 2015 ; The Lion and the Unicorn Volume 39 ; 39 >
-      au < manifest ; 2016 ; The Lion and the Unicorn Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; The Lion and the Unicorn Volume 40 ; 40 >
 
     }
 
@@ -3829,8 +3829,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014-2015 ; The Review of Higher Education Volume 38 ; 38 >
-      au < manifest ; 2015-2016 ; The Review of Higher Education Volume 39 ; 39 >
-      au < manifest ; 2016-2017 ; The Review of Higher Education Volume 40 ; 40 >
+      au < doNotProcess ; 2015-2016 ; The Review of Higher Education Volume 39 ; 39 >
+      au < doNotProcess ; 2016-2017 ; The Review of Higher Education Volume 40 ; 40 >
 
     }
 
@@ -3911,7 +3911,7 @@
 
       au < down ; 2014 ; Theatre Journal Volume 66 ; 66 >
       au < down ; 2015 ; Theatre Journal Volume 67 ; 67 >
-      au < manifest ; 2016 ; Theatre Journal Volume 68 ; 68 >
+      au < doNotProcess ; 2016 ; Theatre Journal Volume 68 ; 68 >
 
     }
 
@@ -3964,7 +3964,7 @@
 
       au < down ; 2014 ; Theatre Topics Volume 24 ; 24 >
       au < down ; 2015 ; Theatre Topics Volume 25 ; 25 >
-      au < manifest ; 2016 ; Theatre Topics Volume 26 ; 26 >
+      au < doNotProcess ; 2016 ; Theatre Topics Volume 26 ; 26 >
 
     }
 
@@ -4009,7 +4009,7 @@
 
       au < down ; 2014 ; Theory & Event Volume 17 ; 17 >
       au < down ; 2015 ; Theory & Event Volume 18 ; 18 >
-      au < manifest ; 2016 ; Theory & Event Volume 19 ; 19 >
+      au < doNotProcess ; 2016 ; Theory & Event Volume 19 ; 19 >
 
     }
 
@@ -4054,7 +4054,7 @@
 
       au < down ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
       au < down ; 2015 ; TAPA Volume 145 ; 145 >
-      au < manifest ; 2016 ; TAPA Volume 146 ; 146 >
+      au < doNotProcess ; 2016 ; TAPA Volume 146 ; 146 >
 
     }
 
@@ -4093,7 +4093,7 @@
 
       au < down ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
       au < down ; 2015 ; Victorian Periodicals Review Volume 48 ; 48 >
-      au < manifest ; 2016 ; Victorian Periodicals Review Volume 49 ; 49 >
+      au < doNotProcess ; 2016 ; Victorian Periodicals Review Volume 49 ; 49 >
 
     }
 
@@ -4126,7 +4126,7 @@
 
       au < down ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
       au < down ; 2015 ; Wallace Stevens Journal Volume 39 ; 39 >
-      au < manifest ; 2016 ; Wallace Stevens Journal Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; Wallace Stevens Journal Volume 40 ; 40 >
 
     }
 

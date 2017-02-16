@@ -45,8 +45,8 @@
 
       au < down ; 2014 ; Brookings Papers on Economic Activity 2014 ; 2014 >
 
-      au < manifest ; 2015 ; Brookings Papers on Economic Activity 2015 ; 2015 >
-      au < manifest ; 2016 ; Brookings Papers on Economic Activity 2016 ; 2016 >
+      au < doNotProcess ; 2015 ; Brookings Papers on Economic Activity 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; Brookings Papers on Economic Activity 2016 ; 2016 >
 
     }
 
@@ -241,8 +241,8 @@
 
       au < down ; 2013-2014 ; Economía Volume 14 ; 14 >
       au < down ; 2014-2015 ; Economía Volume 15 ; 15 >
-      au < manifest ; 2015-2016 ; Economía Volume 16 ; 16 >
-      au < manifest ; 2016-2017 ; Economía Volume 17 ; 17 >
+      au < doNotProcess ; 2015-2016 ; Economía Volume 16 ; 16 >
+      au < doNotProcess ; 2016-2017 ; Economía Volume 17 ; 17 >
 
     }
 

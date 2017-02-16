@@ -451,8 +451,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014 ; Syllecta Classica Volume 25 ; 25 >
-      au < manifest ; 2015 ; Syllecta Classica Volume 26 ; 26 >
-      au < expected ; 2016 ; Syllecta Classica Volume 27 ; 27 >
+      au < doNotProcess ; 2015 ; Syllecta Classica Volume 26 ; 26 >
+      au < doNotProcess ; 2016 ; Syllecta Classica Volume 27 ; 27 >
 
     }
 

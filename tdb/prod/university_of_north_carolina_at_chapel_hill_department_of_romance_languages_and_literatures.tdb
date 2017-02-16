@@ -54,8 +54,8 @@
       au < down ; 2014 ; Hispanófila Volume 172 ; 172 >
       au < down ; 2015 ; Hispanófila Volume 173 ; 173 >
       au < down ; 2015 ; Hispanófila Volume 174 ; 174 >
-      au < manifest ; 2015 ; Hispanófila Volume 175 ; 175 >
-      au < expected ; 2016 ; Hispanófila Volume 176 ; 176 >
+      au < doNotProcess ; 2015 ; Hispanófila Volume 175 ; 175 >
+      au < doNotProcess ; 2016 ; Hispanófila Volume 176 ; 176 >
 
     }
 
@@ -93,7 +93,7 @@
 
       au < down ; 2014 ; Romance Notes Volume 54 ; 54 >
       au < down ; 2015 ; Romance Notes Volume 55 ; 55 >
-      au < manifest ; 2016 ; Romance Notes Volume 56 ; 56 >
+      au < doNotProcess ; 2016 ; Romance Notes Volume 56 ; 56 >
 
     }
 

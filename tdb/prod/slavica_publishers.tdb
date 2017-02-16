@@ -38,7 +38,7 @@
 
       au < down ; 2014 ; Journal of Slavic Linguistics Volume 22 ; 22 >
       au < down ; 2015 ; Journal of Slavic Linguistics Volume 23 ; 23 >
-      au < manifest ; 2016 ; Journal of Slavic Linguistics Volume 24 ; 24 >
+      au < doNotProcess ; 2016 ; Journal of Slavic Linguistics Volume 24 ; 24 >
 
     }
 
@@ -83,7 +83,7 @@
 
       au < down ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 ; 15 >
       au < down ; 2015 ; Kritika: Explorations in Russian and Eurasian History Volume 16 ; 16 >
-      au < manifest ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 17 ; 17 >
+      au < doNotProcess ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 17 ; 17 >
 
     }
 
@@ -114,7 +114,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2013-2014 ; Pushkin Review Volume 16-17 ; 16 >
-      au < expected ; 2015 ; Pushkin Review Volume 18 ; 18 >
+      au < doNotProcess ; 2015 ; Pushkin Review Volume 18 ; 18 >
 
     }
 
@@ -148,7 +148,7 @@
 
       au < down ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 ; 3 >
       au < down ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 4 ; 4 >
-      au < manifest ; 2016 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 5 ; 5 >
+      au < doNotProcess ; 2016 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 5 ; 5 >
 
     }
 
@@ -184,7 +184,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2012 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 26 ; 26 >
-      au < manifest ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 27 ; 27 >
+      au < doNotProcess ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 27 ; 27 >
 
     }
 

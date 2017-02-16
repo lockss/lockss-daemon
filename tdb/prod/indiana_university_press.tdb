@@ -68,8 +68,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Africa Today Volume 61 ; 61 >
-        au < manifest ; 2015-2016 ; Africa Today Volume 62 ; 62 >
-        au < manifest ; 2016-2017 ; Africa Today Volume 63 ; 63 >
+        au < doNotProcess ; 2015-2016 ; Africa Today Volume 62 ; 62 >
+        au < doNotProcess ; 2016-2017 ; Africa Today Volume 63 ; 63 >
 
       }
 
@@ -109,7 +109,7 @@
         au < down ; 2014 ; African Conflict & Peacebuilding Review Volume 4 ; 4 >
         au < down ; 2015 ; African Conflict & Peacebuilding Review Volume 5 ; 5 >
 
-        au < manifest ; 2016 ; African Conflict & Peacebuilding Review Volume 6 ; 6 >
+        au < doNotProcess ; 2016 ; African Conflict & Peacebuilding Review Volume 6 ; 6 >
 
       }
 
@@ -185,7 +185,7 @@
         au < down ; 2014 ; Aleph: Historical Studies in Science and Judaism Volume 14 ; 14 >
         au < down ; 2015 ; Aleph: Historical Studies in Science and Judaism Volume 15 ; 15 >
 
-        au < manifest ; 2016 ; Aleph: Historical Studies in Science and Judaism Volume 16 ; 16 >
+        au < doNotProcess ; 2016 ; Aleph: Historical Studies in Science and Judaism Volume 16 ; 16 >
 
       }
 
@@ -237,8 +237,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Black Camera Volume 6 ; 6 >
-        au < manifest ; 2015-2016 ; Black Camera Volume 7 ; 7 >
-        au < manifest ; 2016-2017 ; Black Camera Volume 8 ; 8 >
+        au < doNotProcess ; 2015-2016 ; Black Camera Volume 7 ; 7 >
+        au < doNotProcess ; 2016-2017 ; Black Camera Volume 8 ; 8 >
 
       }
 
@@ -351,7 +351,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2013-2014 ; e-Service Journal Volume 9 ; 9 >
-        au < expected ; 2015-2016 ; e-Service Journal Volume 10 ; 10 >
+        au < doNotProcess ; 2015-2016 ; e-Service Journal Volume 10 ; 10 >
 
       }
 
@@ -431,7 +431,7 @@
         au < down ; 2014 ; Ethics & the Environment Volume 19 ; 19 >
         au < down ; 2015 ; Ethics & the Environment Volume 20 ; 20 >
 
-        au < manifest ; 2016 ; Ethics & the Environment Volume 21 ; 21 >
+        au < doNotProcess ; 2016 ; Ethics & the Environment Volume 21 ; 21 >
 
       }
 
@@ -499,7 +499,7 @@
         au < down ; 2014 ; Film History: An International Journal Volume 26 ; 26 >
         au < down ; 2015 ; Film History: An International Journal Volume 27 ; 27 >
 
-       au < manifest ; 2016 ; Film History: An International Journal Volume 28 ; 28 >
+       au < doNotProcess ; 2016 ; Film History: An International Journal Volume 28 ; 28 >
 
       }
 
@@ -556,8 +556,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014 ; The Global South Volume 8 ; 8 >
-        au < manifest ; 2015 ; The Global South Volume 9 ; 9 >
-        au < expected ; 2016 ; The Global South Volume 10 ; 10 >
+        au < doNotProcess ; 2015 ; The Global South Volume 9 ; 9 >
+        au < doNotProcess ; 2016 ; The Global South Volume 10 ; 10 >
 
       }
 
@@ -641,7 +641,7 @@
 
         au < down ; 2014 ; History & Memory Volume 26 ; 26 >
         au < down ; 2015 ; History & Memory Volume 27 ; 27 >
-        au < manifest ; 2016 ; History & Memory Volume 28 ; 28 >
+        au < doNotProcess ; 2016 ; History & Memory Volume 28 ; 28 >
 
       }
 
@@ -745,7 +745,7 @@
 
         au < down ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 ; 21 >
         au < down ; 2015 ; Indiana Journal of Global Legal Studies Volume 22 ; 22 >
-        au < manifest ; 2016 ; Indiana Journal of Global Legal Studies Volume 23 ; 23 >
+        au < doNotProcess ; 2016 ; Indiana Journal of Global Legal Studies Volume 23 ; 23 >
 
       }
 
@@ -848,7 +848,7 @@
 
         au < down ; 2014 ; Israel Studies Volume 19 ; 19 >
         au < down ; 2015 ; Israel Studies Volume 20 ; 20 >
-        au < manifest ; 2016 ; Israel Studies Volume 21 ; 21 >
+        au < doNotProcess ; 2016 ; Israel Studies Volume 21 ; 21 >
 
       }
 
@@ -924,7 +924,7 @@
 
         au < down ; 2013-2014 ; Jewish Social Studies Volume 20 ; 20 >
         au < down ; 2015 ; Jewish Social Studies Volume 21 ; 21 > 
-        au < manifest ; 2016 ; Jewish Social Studies Volume 22 ; 22 > 
+        au < doNotProcess ; 2016 ; Jewish Social Studies Volume 22 ; 22 > 
 
       }
 
@@ -1017,7 +1017,7 @@
 
         au < down ; 2014 ; Journal of Feminist Studies in Religion Volume 30 ; 30 >
         au < down ; 2015 ; Journal of Feminist Studies in Religion Volume 31 ; 31 >
-        au < manifest ; 2016 ; Journal of Feminist Studies in Religion Volume 32 ; 32 >
+        au < doNotProcess ; 2016 ; Journal of Feminist Studies in Religion Volume 32 ; 32 >
 
       }
 
@@ -1085,7 +1085,7 @@
 
         au < down ; 2014 ; Journal of Folklore Research Volume 51 ; 51 >
         au < down ; 2015 ; Journal of Folklore Research Volume 52 ; 52 >
-        au < manifest ; 2016 ; Journal of Folklore Research Volume 53 ; 53 >
+        au < doNotProcess ; 2016 ; Journal of Folklore Research Volume 53 ; 53 >
 
       }
 
@@ -1147,7 +1147,7 @@
 
         au < down ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 >
         au < down ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
-        au < manifest ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 >
+        au < doNotProcess ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 >
 
       }
 
@@ -1217,7 +1217,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Journal of Modern Literature Volume 38 ; 38 >
-        au < manifest ; 2015-2016 ; Journal of Modern Literature Volume 39 ; 39 >
+        au < doNotProcess ; 2015-2016 ; Journal of Modern Literature Volume 39 ; 39 >
 
       }
 
@@ -1289,7 +1289,7 @@
 
         au < down ; 2014 ; Meridians: feminism, race, transnationalism Volume 12 ; 12 >
         au < down ; 2015-2016 ; Meridians: feminism, race, transnationalism Volume 13 ; 13 >
-        au < manifest ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 14 ; 14 >
+        au < doNotProcess ; 2016-2017 ; Meridians: feminism, race, transnationalism Volume 14 ; 14 >
 
       }
 
@@ -1360,8 +1360,8 @@
         au < down ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 ; 26 >
         au < down ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 ; 27 >
         au < down ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
-        au < manifest ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 29 ; 29 >
-        au < expected ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 30 ; 30 >
+        au < doNotProcess ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 29 ; 29 >
+        au < doNotProcess ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 30 ; 30 >
 
       }
 
@@ -1439,7 +1439,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2001 ; Philosophy of Music Education Review Volume 9 ; 9 >
+        au < doNotProcess ; 2001 ; Philosophy of Music Education Review Volume 9 ; 9 >
 
       }
 
@@ -1468,7 +1468,7 @@
 
         au < down ; 2014 ; Philosophy of Music Education Review Volume 22 ; 22 >
         au < down ; 2015 ; Philosophy of Music Education Review Volume 23 ; 23 >
-        au < manifest ; 2016 ; Philosophy of Music Education Review Volume 24 ; 24 >
+        au < doNotProcess ; 2016 ; Philosophy of Music Education Review Volume 24 ; 24 >
 
       }
 
@@ -1515,8 +1515,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 1998 ; Prooftexts Volume 18 ; 18 >
-        au < manifest ; 1999 ; Prooftexts Volume 19 ; 19 >
+        au < doNotProcess ; 1998 ; Prooftexts Volume 18 ; 18 >
+        au < doNotProcess ; 1999 ; Prooftexts Volume 19 ; 19 >
 
       }
 
@@ -1546,8 +1546,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014 ; Prooftexts Volume 34 ; 34 >
-        au < manifest ; 2015 ; Prooftexts Volume 35 ; 35 >
-        au < expected ; 2016 ; Prooftexts Volume 36 ; 36 >
+        au < doNotProcess ; 2015 ; Prooftexts Volume 35 ; 35 >
+        au < doNotProcess ; 2016 ; Prooftexts Volume 36 ; 36 >
 
       }
 
@@ -1665,7 +1665,7 @@
 
         au < down ; 2014 ; Research in African Literatures Volume 45 ; 45 >
         au < down ; 2015 ; Research in African Literatures Volume 46 ; 46 >
-        au < manifest ; 2016 ; Research in African Literatures Volume 47 ; 47 >
+        au < doNotProcess ; 2016 ; Research in African Literatures Volume 47 ; 47 >
 
       }
 
@@ -1703,8 +1703,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Spectrum: A Journal on Black Men Volume 3 ; 3 >
-        au < manifest ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 ; 4 >
-        au < manifest ; 2016-2017 ; Spectrum: A Journal on Black Men Volume 5 ; 5 >
+        au < doNotProcess ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 ; 4 >
+        au < doNotProcess ; 2016-2017 ; Spectrum: A Journal on Black Men Volume 5 ; 5 >
 
       }
 
@@ -1862,7 +1862,7 @@
 
         au < down ; 2014 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 50 ; 50 >
         au < down ; 2015 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 51 ; 51 >
-        au < manifest ; 2016 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 52 ; 52 >
+        au < doNotProcess ; 2016 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 52 ; 52 >
 
       }
 
@@ -1940,8 +1940,8 @@
         au < down ; 2014 ; Transition Volume 116 ; 116 >
         au < down ; 2015 ; Transition Volume 117 ; 117 >
         au < down ; 2015 ; Transition Volume 118 ; 118 >
-        au < manifest ; 2016 ; Transition Volume 119 ; 119 >
-        au < manifest ; 2016 ; Transition Volume 120 ; 120 >
+        au < doNotProcess ; 2016 ; Transition Volume 119 ; 119 >
+        au < doNotProcess ; 2016 ; Transition Volume 120 ; 120 >
 
       }
 
@@ -2012,8 +2012,8 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2014-2015 ; Victorian Studies Volume 57 ; 57 >
-        au < manifest ; 2015-2016 ; Victorian Studies Volume 58 ; 58 >
-        au < expected ; 2016-2017 ; Victorian Studies Volume 59 ; 59 >
+        au < doNotProcess ; 2015-2016 ; Victorian Studies Volume 58 ; 58 >
+        au < doNotProcess ; 2016-2017 ; Victorian Studies Volume 59 ; 59 >
 
       }
 

@@ -38,7 +38,7 @@
         au < down ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
         au < down ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
 
-        au < manifest ; 2016 ; American Journal of Theology & Philosophy Volume 37 ; 37 >
+        au < doNotProcess ; 2016 ; American Journal of Theology & Philosophy Volume 37 ; 37 >
 
       }
 
@@ -74,7 +74,7 @@
 
         au < down ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
         au < down ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
-        au < manifest ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
+        au < doNotProcess ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
 
       }
 
@@ -110,7 +110,7 @@
         au < down ; 2014 ; American Music Volume 32 ; 32 >
         au < down ; 2015 ; American Music Volume 33 ; 33 >
 
-        au < manifest ; 2016 ; American Music Volume 34 ; 34 >
+        au < doNotProcess ; 2016 ; American Music Volume 34 ; 34 >
 
       }
 
@@ -203,8 +203,8 @@
 
         au < down ; 2014 ; Feminist Teacher Volume 24 ; 24 >
 
-        au < manifest ; 2014-2015 ; Feminist Teacher Volume 25 ; 25 >
-        au < expected ; 2015-2016 ; Feminist Teacher Volume 26 ; 26 >
+        au < doNotProcess ; 2014-2015 ; Feminist Teacher Volume 25 ; 25 >
+        au < doNotProcess ; 2015-2016 ; Feminist Teacher Volume 26 ; 26 >
 
       }
  
@@ -226,7 +226,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < down ; 2015 ; Illinois Classical Studies Volume 40 ; 40 >
-        au < manifest ; 2016 ; Illinois Classical Studies Volume 41 ; 41 >
+        au < doNotProcess ; 2016 ; Illinois Classical Studies Volume 41 ; 41 >
 
       }
  
@@ -261,7 +261,7 @@
 
         au < down ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
         au < down ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
-        au < manifest ; 2016 ; JEGP, Journal of English and Germanic Philology Volume 115 ; 115 >
+        au < doNotProcess ; 2016 ; JEGP, Journal of English and Germanic Philology Volume 115 ; 115 >
 
       }
 
@@ -302,7 +302,7 @@
 
         au < down ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
         au < down ; 2015 ; The Journal of Aesthetic Education Volume 49 ; 49 >
-        au < manifest ; 2016 ; The Journal of Aesthetic Education Volume 50 ; 50 >
+        au < doNotProcess ; 2016 ; The Journal of Aesthetic Education Volume 50 ; 50 >
 
       }
 
@@ -337,7 +337,7 @@
 
         au < down ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
         au < down ; 2015 ; Journal of Education Finance Volume 41 ; 41 >
-        au < manifest ; 2016 ; Journal of Education Finance Volume 42 ; 42 >
+        au < doNotProcess ; 2016 ; Journal of Education Finance Volume 42 ; 42 >
 
       }
 
@@ -373,7 +373,7 @@
 
         au < down ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
         au < down ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
-        au < manifest ; 2016 ; Journal of Film and Video Volume 68 ; 68 >
+        au < doNotProcess ; 2016 ; Journal of Film and Video Volume 68 ; 68 >
 
       }
 
@@ -392,7 +392,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2015 ; Music and the Moving Image Volume 8 ; 8 >
-      au < manifest ; 2016 ; Music and the Moving Image Volume 9 ; 9 >
+      au < doNotProcess ; 2016 ; Music and the Moving Image Volume 9 ; 9 >
 
     }
 
@@ -425,7 +425,7 @@
 
         au < down ; 2014 ; The Pluralist Volume 9 ; 9 >
         au < down ; 2015 ; The Pluralist Volume 10 ; 10 >
-        au < manifest ; 2016 ; The Pluralist Volume 11 ; 11 >
+        au < doNotProcess ; 2016 ; The Pluralist Volume 11 ; 11 >
 
       }
 
@@ -489,7 +489,7 @@
 
         au < down ; 2014 ; Visual Arts Research Volume 40 ; 40 >
         au < down ; 2015 ; Visual Arts Research Volume 41 ; 41 >
-        au < manifest ; 2016 ; Visual Arts Research Volume 42 ; 42 >
+        au < doNotProcess ; 2016 ; Visual Arts Research Volume 42 ; 42 >
 
       }
 
@@ -520,7 +520,7 @@
 
         au < down ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
         au < down ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
-        au < manifest ; 2016 ; Women, Gender, and Families of Color Volume 4 ; 4 >
+        au < doNotProcess ; 2016 ; Women, Gender, and Families of Color Volume 4 ; 4 >
 
       }
 

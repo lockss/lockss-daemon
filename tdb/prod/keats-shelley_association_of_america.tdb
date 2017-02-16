@@ -30,8 +30,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014 ; Keats-Shelley Journal Volume 63 ; 63 >
-      au < manifest ; 2015 ; Keats-Shelley Journal Volume 64 ; 64 >
-      au < expected ; 2016 ; Keats-Shelley Journal Volume 65 ; 65 >
+      au < doNotProcess ; 2015 ; Keats-Shelley Journal Volume 64 ; 64 >
+      au < doNotProcess ; 2016 ; Keats-Shelley Journal Volume 65 ; 65 >
 
     }
 

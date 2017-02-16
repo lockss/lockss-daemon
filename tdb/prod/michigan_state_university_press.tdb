@@ -44,7 +44,7 @@
       au < down ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
       au < down ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
 
-      au < manifest ; 2016 ; CR: The New Centennial Review Volume 16 ; 16 ; 16 >
+      au < doNotProcess ; 2016 ; CR: The New Centennial Review Volume 16 ; 16 ; 16 >
 
     }
 
@@ -99,7 +99,7 @@
 
       au < down ; 2014 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 21 ; 21 ; 21 >
       au < down ; 2015 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 22 ; 22 ; 22 >
-      au < manifest ; 2016 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 23 ; 23 ; 23 >
+      au < doNotProcess ; 2016 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 23 ; 23 ; 23 >
 
     }
 
@@ -145,7 +145,7 @@
       au < down ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 ; 16 ; 16 >
       au < down ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 ; 17 ; 17 >
 
-      au < manifest ; 2016 ; Fourth Genre: Explorations in Nonfiction Volume 18 ; 18 ; 18 >
+      au < doNotProcess ; 2016 ; Fourth Genre: Explorations in Nonfiction Volume 18 ; 18 ; 18 >
 
     }
 
@@ -166,8 +166,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2002 ; French Colonial History Volume 1 ; 1 ; 1 >
-      au < manifest ; 2002 ; French Colonial History Volume 2 ; 2 ; 2 >
+      au < doNotProcess ; 2002 ; French Colonial History Volume 1 ; 1 ; 1 >
+      au < doNotProcess ; 2002 ; French Colonial History Volume 2 ; 2 ; 2 >
 
     }
 
@@ -245,7 +245,7 @@
 
       au < down ; 2014 ; Journal for the Study of Radicalism Volume 8 ; 8 ; 8 >
       au < down ; 2015 ; Journal for the Study of Radicalism Volume 9 ; 9 ; 9 >
-      au < manifest ; 2016 ; Journal for the Study of Radicalism Volume 10 ; 10 ; 10 >
+      au < doNotProcess ; 2016 ; Journal for the Study of Radicalism Volume 10 ; 10 ; 10 >
 
     }
 
@@ -295,7 +295,7 @@
 
       au < down ; 2014 ; Northeast African Studies Volume 14 ; 14 ; 14 >
       au < down ; 2015 ; Northeast African Studies Volume 15 ; 15 ; 15 >
-      au < manifest ; 2016 ; Northeast African Studies Volume 16 ; 16 ; 16 >
+      au < doNotProcess ; 2016 ; Northeast African Studies Volume 16 ; 16 ; 16 >
 
     }
 
@@ -318,7 +318,7 @@
       au < down ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue ; 0 ; 0 >
       au < down ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 ; 1 ; 1s >
       au < down ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 ; 2 ; 2 >
-      au < manifest ; 2016 ; QED: A Journal in GLBTQ Worldmaking Volume 3 ; 3 ; 3 >
+      au < doNotProcess ; 2016 ; QED: A Journal in GLBTQ Worldmaking Volume 3 ; 3 ; 3 >
 
     }
 
@@ -339,8 +339,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2003 ; Red Cedar Review Volume 38 ; 38 ; 38 >
-      au < manifest ; 2004 ; Red Cedar Review Volume 39 ; 39 ; 39 >
+      au < doNotProcess ; 2003 ; Red Cedar Review Volume 38 ; 38 ; 38 >
+      au < doNotProcess ; 2004 ; Red Cedar Review Volume 39 ; 39 ; 39 >
 
     }
 
@@ -403,7 +403,7 @@
 
       au < down ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
       au < down ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
-      au < manifest ; 2016 ; Rhetoric & Public Affairs Volume 19 ; 19 ; 19 >
+      au < doNotProcess ; 2016 ; Rhetoric & Public Affairs Volume 19 ; 19 ; 19 >
 
     }
 

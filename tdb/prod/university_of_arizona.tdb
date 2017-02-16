@@ -53,8 +53,8 @@
 
       au < down ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
       au < down ; 2014 ; Arizona Journal of Hispanic Cultural Studies Volume 18 ; 18 >
-      au < manifest ; 2015 ; Arizona Journal of Hispanic Cultural Studies Volume 19 ; 19 >
-      au < expected ; 2016 ; Arizona Journal of Hispanic Cultural Studies Volume 20 ; 20 >
+      au < doNotProcess ; 2015 ; Arizona Journal of Hispanic Cultural Studies Volume 19 ; 19 >
+      au < doNotProcess ; 2016 ; Arizona Journal of Hispanic Cultural Studies Volume 20 ; 20 >
 
     }
 
@@ -76,18 +76,18 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1988 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 44 ; 44 >
-      au < manifest ; 1989 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 45 ; 45 >
-      au < manifest ; 1990 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 46 ; 46 >
-      au < manifest ; 1991 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 47 ; 47 >
-      au < manifest ; 1992 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 48 ; 48 >
-      au < manifest ; 1993 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 49 ; 49 >
-      au < manifest ; 1994 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 50 ; 50 >
-      au < manifest ; 1995 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 51 ; 51 >
-      au < manifest ; 1996 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 52 ; 52 >
-      au < manifest ; 1997 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 53 ; 53 >
-      au < manifest ; 1998 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 54 ; 54 >
-      au < manifest ; 1999 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 55 ; 55 >
+      au < doNotProcess ; 1988 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 44 ; 44 >
+      au < doNotProcess ; 1989 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 45 ; 45 >
+      au < doNotProcess ; 1990 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 46 ; 46 >
+      au < doNotProcess ; 1991 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 47 ; 47 >
+      au < doNotProcess ; 1992 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 48 ; 48 >
+      au < doNotProcess ; 1993 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 49 ; 49 >
+      au < doNotProcess ; 1994 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 50 ; 50 >
+      au < doNotProcess ; 1995 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 51 ; 51 >
+      au < doNotProcess ; 1996 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 52 ; 52 >
+      au < doNotProcess ; 1997 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 53 ; 53 >
+      au < doNotProcess ; 1998 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 54 ; 54 >
+      au < doNotProcess ; 1999 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 55 ; 55 >
       au < down ; 2000 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 56 ; 56 >
       au < down ; 2001 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 57 ; 57 >
       au < down ; 2002 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 58 ; 58 >
@@ -119,7 +119,7 @@
       au < down ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 70 ; 70 >
       au < down ; 2015 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 71 ; 71 >
 
-      au < manifest ; 2016 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 72 ; 72 >
+      au < doNotProcess ; 2016 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 72 ; 72 >
 
     }
 
@@ -156,7 +156,7 @@
 
       au < down ; 2014 ; Journal of the Southwest Volume 56 ; 56 >
       au < down ; 2015 ; Journal of the Southwest Volume 57 ; 57 >
-      au < manifest ; 2016 ; Journal of the Southwest Volume 58 ; 58 >
+      au < doNotProcess ; 2016 ; Journal of the Southwest Volume 58 ; 58 >
 
     }
 

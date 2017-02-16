@@ -23,12 +23,12 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2001 ; Mouseion: Journal of the Classical Association of Canada Volume 1 ; 1 >
-      au < manifest ; 2002 ; Mouseion: Journal of the Classical Association of Canada Volume 2 ; 2 >
-      au < manifest ; 2003 ; Mouseion: Journal of the Classical Association of Canada Volume 3 ; 3 >
-      au < manifest ; 2004 ; Mouseion: Journal of the Classical Association of Canada Volume 4 ; 4 >
-      au < manifest ; 2005 ; Mouseion: Journal of the Classical Association of Canada Volume 5 ; 5 >
-      au < exists ; 2006 ; Mouseion: Journal of the Classical Association of Canada Volume 6 ; 6 >
+      au < doNotProcess ; 2001 ; Mouseion: Journal of the Classical Association of Canada Volume 1 ; 1 >
+      au < doNotProcess ; 2002 ; Mouseion: Journal of the Classical Association of Canada Volume 2 ; 2 >
+      au < doNotProcess ; 2003 ; Mouseion: Journal of the Classical Association of Canada Volume 3 ; 3 >
+      au < doNotProcess ; 2004 ; Mouseion: Journal of the Classical Association of Canada Volume 4 ; 4 >
+      au < doNotProcess ; 2005 ; Mouseion: Journal of the Classical Association of Canada Volume 5 ; 5 >
+      au < doNotProcess ; 2006 ; Mouseion: Journal of the Classical Association of Canada Volume 6 ; 6 >
 
     }
 
@@ -49,7 +49,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2012 ; Mouseion: Journal of the Classical Association of Canada Volume 12 ; 1012 >
-      au < manifest ; 2016 ; Mouseion: Journal of the Classical Association of Canada Volume 13 ; 1013 >
+      au < doNotProcess ; 2016 ; Mouseion: Journal of the Classical Association of Canada Volume 13 ; 1013 >
 
     }
 

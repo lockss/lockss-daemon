@@ -38,16 +38,16 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2000 ; Ab Imperio Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; Ab Imperio Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; Ab Imperio Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; Ab Imperio Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; Ab Imperio Volume 2004 ; 2004 >
+      au < doNotProcess ; 2000 ; Ab Imperio Volume 2000 ; 2000 >
+      au < doNotProcess ; 2001 ; Ab Imperio Volume 2001 ; 2001 >
+      au < doNotProcess ; 2002 ; Ab Imperio Volume 2002 ; 2002 >
+      au < doNotProcess ; 2003 ; Ab Imperio Volume 2003 ; 2003 >
+      au < doNotProcess ; 2004 ; Ab Imperio Volume 2004 ; 2004 >
 
       au < down ; 2014 ; Ab Imperio Volume 2014 ; 2014 >
       au < down ; 2015 ; Ab Imperio Volume 2015 ; 2015 >
 
-      au < manifest ; 2016 ; Ab Imperio Volume 2016 ; 2016 >
+      au < doNotProcess ; 2016 ; Ab Imperio Volume 2016 ; 2016 >
 
     }
 

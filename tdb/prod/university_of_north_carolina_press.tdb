@@ -21,25 +21,25 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1973 ; Appalachian Heritage Volume 1 ; 1 >
-      au < manifest ; 1974 ; Appalachian Heritage Volume 2 ; 2 >
-      au < manifest ; 1975 ; Appalachian Heritage Volume 3 ; 3 >
-      au < manifest ; 1976 ; Appalachian Heritage Volume 4 ; 4 >
-      au < manifest ; 1977 ; Appalachian Heritage Volume 5 ; 5 >
-      au < manifest ; 1978 ; Appalachian Heritage Volume 6 ; 6 >
-      au < manifest ; 1979 ; Appalachian Heritage Volume 7 ; 7 >
-      au < manifest ; 1980 ; Appalachian Heritage Volume 8 ; 8 >
-      au < manifest ; 1981 ; Appalachian Heritage Volume 9 ; 9 >
-      au < manifest ; 1982 ; Appalachian Heritage Volume 10 ; 10 >
-      au < manifest ; 1983 ; Appalachian Heritage Volume 11 ; 11 >
-      au < manifest ; 1984 ; Appalachian Heritage Volume 12 ; 12 >
-      au < manifest ; 1985 ; Appalachian Heritage Volume 13 ; 13 >
-      au < manifest ; 1986 ; Appalachian Heritage Volume 14 ; 14 >
-      au < manifest ; 1987 ; Appalachian Heritage Volume 15 ; 15 >
-      au < manifest ; 1988 ; Appalachian Heritage Volume 16 ; 16 >
-      au < manifest ; 1989 ; Appalachian Heritage Volume 17 ; 17 >
-      au < manifest ; 1990 ; Appalachian Heritage Volume 18 ; 18 >
-      au < manifest ; 1991 ; Appalachian Heritage Volume 19 ; 19 >
+      au < doNotProcess ; 1973 ; Appalachian Heritage Volume 1 ; 1 >
+      au < doNotProcess ; 1974 ; Appalachian Heritage Volume 2 ; 2 >
+      au < doNotProcess ; 1975 ; Appalachian Heritage Volume 3 ; 3 >
+      au < doNotProcess ; 1976 ; Appalachian Heritage Volume 4 ; 4 >
+      au < doNotProcess ; 1977 ; Appalachian Heritage Volume 5 ; 5 >
+      au < doNotProcess ; 1978 ; Appalachian Heritage Volume 6 ; 6 >
+      au < doNotProcess ; 1979 ; Appalachian Heritage Volume 7 ; 7 >
+      au < doNotProcess ; 1980 ; Appalachian Heritage Volume 8 ; 8 >
+      au < doNotProcess ; 1981 ; Appalachian Heritage Volume 9 ; 9 >
+      au < doNotProcess ; 1982 ; Appalachian Heritage Volume 10 ; 10 >
+      au < doNotProcess ; 1983 ; Appalachian Heritage Volume 11 ; 11 >
+      au < doNotProcess ; 1984 ; Appalachian Heritage Volume 12 ; 12 >
+      au < doNotProcess ; 1985 ; Appalachian Heritage Volume 13 ; 13 >
+      au < doNotProcess ; 1986 ; Appalachian Heritage Volume 14 ; 14 >
+      au < doNotProcess ; 1987 ; Appalachian Heritage Volume 15 ; 15 >
+      au < doNotProcess ; 1988 ; Appalachian Heritage Volume 16 ; 16 >
+      au < doNotProcess ; 1989 ; Appalachian Heritage Volume 17 ; 17 >
+      au < doNotProcess ; 1990 ; Appalachian Heritage Volume 18 ; 18 >
+      au < doNotProcess ; 1991 ; Appalachian Heritage Volume 19 ; 19 >
       au < down ; 1992 ; Appalachian Heritage Volume 20 ; 20 >
       au < down ; 1993 ; Appalachian Heritage Volume 21 ; 21 >
       au < down ; 1994 ; Appalachian Heritage Volume 22 ; 22 >
@@ -78,7 +78,7 @@
 
       au < down ; 2014 ; Appalachian Heritage Volume 42 ; 42 >
       au < down ; 2015 ; Appalachian Heritage Volume 43 ; 43 >
-      au < manifest ; 2016 ; Appalachian Heritage Volume 44 ; 44 >
+      au < doNotProcess ; 2016 ; Appalachian Heritage Volume 44 ; 44 >
 
     }
 
@@ -137,7 +137,7 @@
 
       au < down ; 2014 ; The Comparatist Volume 38 ; 38 >
       au < down ; 2015 ; The Comparatist Volume 39 ; 39 >
-      au < manifest ; 2016 ; The Comparatist Volume 40 ; 40 >
+      au < doNotProcess ; 2016 ; The Comparatist Volume 40 ; 40 >
 
     }
 
@@ -182,7 +182,7 @@
       au < down ; 2014 ; Early American Literature Volume 49 ; 49 >
       au < down ; 2015 ; Early American Literature Volume 50 ; 50 >
 
-      au < manifest ; 2016 ; Early American Literature Volume 51 ; 51 >
+      au < doNotProcess ; 2016 ; Early American Literature Volume 51 ; 51 >
 
     }
 
@@ -226,7 +226,7 @@
       au < down ; 2013 ; The High School Journal Volume 97 ; 97 >
       au < down ; 2014-2015 ; The High School Journal Volume 98 ; 98 >
       au < down ; 2015 ; The High School Journal Volume 99 ; 99 >
-      au < manifest ; 2016 ; The High School Journal Volume 100 ; 100 >
+      au < doNotProcess ; 2016 ; The High School Journal Volume 100 ; 100 >
 
     }
 
@@ -259,7 +259,7 @@
 
       au < down ; 2014 ; The Journal of the Civil War Era Volume 4 ; 4 >
       au < down ; 2015 ; The Journal of the Civil War Era Volume 5 ; 5 >
-      au < manifest ; 2016 ; The Journal of the Civil War Era Volume 6 ; 6 >
+      au < doNotProcess ; 2016 ; The Journal of the Civil War Era Volume 6 ; 6 >
 
     }
 
@@ -304,8 +304,8 @@
 
       au < down ; 2013-2014 ; Social Forces Volume 92 [Project MUSE] ; 92 >
       au < down ; 2014-2015 ; Social Forces Volume 93 [Project MUSE] ; 93 >
-      au < manifest ; 2015-2016 ; Social Forces Volume 94 [Project MUSE] ; 94 >
-      au < manifest ; 2016-2017 ; Social Forces Volume 95 [Project MUSE] ; 95 >
+      au < doNotProcess ; 2015-2016 ; Social Forces Volume 94 [Project MUSE] ; 94 >
+      au < doNotProcess ; 2016-2017 ; Social Forces Volume 95 [Project MUSE] ; 95 >
 
     }
 
@@ -326,35 +326,35 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1961 ; Southeastern Geographer Volume 1 ; 1 >
-      au < manifest ; 1962 ; Southeastern Geographer Volume 2 ; 2 >
-      au < manifest ; 1963 ; Southeastern Geographer Volume 3 ; 3 >
-      au < manifest ; 1964 ; Southeastern Geographer Volume 4 ; 4 >
-      au < manifest ; 1965 ; Southeastern Geographer Volume 5 ; 5 >
-      au < manifest ; 1966 ; Southeastern Geographer Volume 6 ; 6 >
-      au < manifest ; 1967 ; Southeastern Geographer Volume 7 ; 7 >
-      au < manifest ; 1968 ; Southeastern Geographer Volume 8 ; 8 >
-      au < manifest ; 1969 ; Southeastern Geographer Volume 9 ; 9 >
-      au < manifest ; 1970 ; Southeastern Geographer Volume 10 ; 10 >
-      au < manifest ; 1971 ; Southeastern Geographer Volume 11 ; 11 >
-      au < manifest ; 1972 ; Southeastern Geographer Volume 12 ; 12 >
-      au < manifest ; 1973 ; Southeastern Geographer Volume 13 ; 13 >
-      au < manifest ; 1974 ; Southeastern Geographer Volume 14 ; 14 >
-      au < manifest ; 1975 ; Southeastern Geographer Volume 15 ; 15 >
-      au < manifest ; 1976 ; Southeastern Geographer Volume 16 ; 16 >
-      au < manifest ; 1977 ; Southeastern Geographer Volume 17 ; 17 >
-      au < manifest ; 1978 ; Southeastern Geographer Volume 18 ; 18 >
-      au < manifest ; 1979 ; Southeastern Geographer Volume 19 ; 19 >
-      au < manifest ; 1980 ; Southeastern Geographer Volume 20 ; 20 >
-      au < manifest ; 1981 ; Southeastern Geographer Volume 21 ; 21 >
-      au < manifest ; 1982 ; Southeastern Geographer Volume 22 ; 22 >
-      au < manifest ; 1983 ; Southeastern Geographer Volume 23 ; 23 >
-      au < manifest ; 1984 ; Southeastern Geographer Volume 24 ; 24 >
-      au < manifest ; 1985 ; Southeastern Geographer Volume 25 ; 25 >
-      au < manifest ; 1986 ; Southeastern Geographer Volume 26 ; 26 >
-      au < manifest ; 1987 ; Southeastern Geographer Volume 27 ; 27 >
-      au < manifest ; 1988 ; Southeastern Geographer Volume 28 ; 28 >
-      au < manifest ; 1989 ; Southeastern Geographer Volume 29 ; 29 >
+      au < doNotProcess ; 1961 ; Southeastern Geographer Volume 1 ; 1 >
+      au < doNotProcess ; 1962 ; Southeastern Geographer Volume 2 ; 2 >
+      au < doNotProcess ; 1963 ; Southeastern Geographer Volume 3 ; 3 >
+      au < doNotProcess ; 1964 ; Southeastern Geographer Volume 4 ; 4 >
+      au < doNotProcess ; 1965 ; Southeastern Geographer Volume 5 ; 5 >
+      au < doNotProcess ; 1966 ; Southeastern Geographer Volume 6 ; 6 >
+      au < doNotProcess ; 1967 ; Southeastern Geographer Volume 7 ; 7 >
+      au < doNotProcess ; 1968 ; Southeastern Geographer Volume 8 ; 8 >
+      au < doNotProcess ; 1969 ; Southeastern Geographer Volume 9 ; 9 >
+      au < doNotProcess ; 1970 ; Southeastern Geographer Volume 10 ; 10 >
+      au < doNotProcess ; 1971 ; Southeastern Geographer Volume 11 ; 11 >
+      au < doNotProcess ; 1972 ; Southeastern Geographer Volume 12 ; 12 >
+      au < doNotProcess ; 1973 ; Southeastern Geographer Volume 13 ; 13 >
+      au < doNotProcess ; 1974 ; Southeastern Geographer Volume 14 ; 14 >
+      au < doNotProcess ; 1975 ; Southeastern Geographer Volume 15 ; 15 >
+      au < doNotProcess ; 1976 ; Southeastern Geographer Volume 16 ; 16 >
+      au < doNotProcess ; 1977 ; Southeastern Geographer Volume 17 ; 17 >
+      au < doNotProcess ; 1978 ; Southeastern Geographer Volume 18 ; 18 >
+      au < doNotProcess ; 1979 ; Southeastern Geographer Volume 19 ; 19 >
+      au < doNotProcess ; 1980 ; Southeastern Geographer Volume 20 ; 20 >
+      au < doNotProcess ; 1981 ; Southeastern Geographer Volume 21 ; 21 >
+      au < doNotProcess ; 1982 ; Southeastern Geographer Volume 22 ; 22 >
+      au < doNotProcess ; 1983 ; Southeastern Geographer Volume 23 ; 23 >
+      au < doNotProcess ; 1984 ; Southeastern Geographer Volume 24 ; 24 >
+      au < doNotProcess ; 1985 ; Southeastern Geographer Volume 25 ; 25 >
+      au < doNotProcess ; 1986 ; Southeastern Geographer Volume 26 ; 26 >
+      au < doNotProcess ; 1987 ; Southeastern Geographer Volume 27 ; 27 >
+      au < doNotProcess ; 1988 ; Southeastern Geographer Volume 28 ; 28 >
+      au < doNotProcess ; 1989 ; Southeastern Geographer Volume 29 ; 29 >
       au < down ; 1990 ; Southeastern Geographer Volume 30 ; 30 >
       au < down ; 1991 ; Southeastern Geographer Volume 31 ; 31 >
       au < down ; 1992 ; Southeastern Geographer Volume 32 ; 32 >
@@ -395,7 +395,7 @@
 
       au < down ; 2014 ; Southeastern Geographer Volume 54 ; 54 >
       au < down ; 2015 ; Southeastern Geographer Volume 55 ; 55 >
-      au < manifest ; 2016 ; Southeastern Geographer Volume 56 ; 56 >
+      au < doNotProcess ; 2016 ; Southeastern Geographer Volume 56 ; 56 >
 
     }
 
@@ -452,7 +452,7 @@
 
       au < down ; 2014 ; Southern Cultures Volume 20 ; 20 >
       au < down ; 2015 ; Southern Cultures Volume 21 ; 21 >
-      au < manifest ; 2016 ; Southern Cultures Volume 22 ; 22 >
+      au < doNotProcess ; 2016 ; Southern Cultures Volume 22 ; 22 >
 
     }
 
@@ -495,8 +495,8 @@
 
       au < down ; 2013-2014 ; The Southern Literary Journal Volume 46 ; 46 >
       au < down ; 2014-2015 ; The Southern Literary Journal Volume 47 ; 47 >
-      au < manifest ; 2015-2016 ; The Southern Literary Journal Volume 48 ; 48 >
-      au < expected ; 2016-2017 ; The Southern Literary Journal Volume 49 ; 49 >
+      au < doNotProcess ; 2015-2016 ; The Southern Literary Journal Volume 48 ; 48 >
+      au < doNotProcess ; 2016-2017 ; The Southern Literary Journal Volume 49 ; 49 >
 
     }
 
@@ -538,7 +538,7 @@
 
       au < down ; 2014 ; Studies in Philology Volume 111 ; 111 >
       au < down ; 2015 ; Studies in Philology Volume 112 ; 112 >
-      au < manifest ; 2016 ; Studies in Philology Volume 113 ; 113 >
+      au < doNotProcess ; 2016 ; Studies in Philology Volume 113 ; 113 >
 
     }
 
