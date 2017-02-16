@@ -47,6 +47,7 @@
     au < manifest ; exists ; 2012 ; Engineering Geology Special Publications Volume 25 ; 25 ; >
     au < manifest ; exists ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 ; >
     au < crawling ; exists ; 2016 ; Engineering Geology Special Publications Volume 27 ; 27 ; >
+    au < expected ; exists ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; >
     
   }
 
@@ -77,6 +78,7 @@
     au < finished ; finished ; 2014 ; Geochemistry: Exploration, Environment, Analysis Volume 14 ; 14 ; >
     au < finished ; finished ; 2015 ; Geochemistry: Exploration, Environment, Analysis Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 ; >
+    au < expected ; exists ; 2017 ; Geochemistry: Exploration, Environment, Analysis Volume 17 ; 17 ; >
 
   }
 
@@ -137,8 +139,8 @@
     au < finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2016 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
-    au < expected ; exists ; 2016 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2017 ; Geological Society of London Memoirs Volume 47 ; 47 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Memoirs Volume 48 ; 48 ; >
 
   }
 
@@ -575,7 +577,7 @@
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 420 ; 420 ; >
     au < finished ; finished ; 2015 ; Geological Society of London Special Publications Volume 421 ; 421 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Geological Society of London Special Publications Volume 422 ; 422 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 ; >
+    au < exists ; exists ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 424 ; 424 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 425 ; 425 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 426 ; 426 ; >
@@ -584,15 +586,25 @@
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 429 ; 429 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 430 ; 430 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 431 ; 431 ; >
-    au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 432 ; 432 ; >
-    au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 433 ; 433 ; >
+    au < crawling ; exists ; 2017 ; Geological Society of London Special Publications Volume 432 ; 432 ; >
+    au < crawling ; exists ; 2017 ; Geological Society of London Special Publications Volume 433 ; 433 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 434 ; 434 ; >
     au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 435 ; 435 ; >
     au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 436 ; 436 ; >
-    au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 437 ; 437 ; >
-    au < crawling ; exists ; 2016 ; Geological Society of London Special Publications Volume 438 ; 438 ; >
-    au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 439 ; 439 ; >
-    au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 437 ; 437 ; >
+    au < crawling ; exists ; 2017 ; Geological Society of London Special Publications Volume 438 ; 438 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 439 ; 439 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 440 ; 440 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 441 ; 441 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 442 ; 442 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 443 ; 443 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 444 ; 444 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 445 ; 445 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 446 ; 446 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 447 ; 447 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 448 ; 448 ; >
+    au < exists ; exists ; 2017 ; Geological Society of London Special Publications Volume 449 ; 449 ; >
+    au < expected ; exists ; 2017 ; Geological Society of London Special Publications Volume 450 ; 450 ; >
 
   }
 
@@ -655,6 +667,7 @@
     au < finished ; finished ; 2014 ; Journal of the Geological Society of London Volume 171 ; 171 ; >
     au < finished ; finished ; 2015 ; Journal of the Geological Society of London Volume 172 ; 172 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of the Geological Society of London Volume 173 ; 173 ; >
+    au < expected ; exists ; 2017 ; Journal of the Geological Society of London Volume 174 ; 174 ; >
 
   }
 
@@ -691,6 +704,7 @@
       au < finished ; finished ; 2014 ; Petroleum Geoscience Volume 20 ; 20 ; >
       au < finished ; finished ; 2015 ; Petroleum Geoscience Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Petroleum Geoscience Volume 22 ; 22 ; >
+      au < expected ; exists ; 2017 ; Petroleum Geoscience Volume 23 ; 23 ; >
     
   }
 
@@ -755,6 +769,7 @@
     au < finished ; finished ; 2014 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 47 ; 47 ; >
     au < finished ; finished ; 2015 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 ; >
+    au < expected ; exists ; 2017 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 50 ; 50 ; >
       
   }
 
