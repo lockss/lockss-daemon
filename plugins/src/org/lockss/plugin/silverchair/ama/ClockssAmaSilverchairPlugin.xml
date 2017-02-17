@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>testing - EJ</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -25,7 +25,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -117,21 +117,16 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
-      <!-- Started with the old Silverchair list of cdn -->
-      <string>1,"^https?://(%s|[^.]+\.((silverchair(\.netdna-cdn|-?cdn))\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
+      <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^%sjournals/%s/issue/", base_url, journal_id</string>
       <string>1,"^%sjournals/%s/(fullarticle|article-abstract)/", base_url, journal_id</string>
       <string>1,"^%s(journals/%s/)?data/journals/[^/]+/[^/]+/[^./]+\.pdf$", base_url, journal_id</string>
       <string>1,"^%spdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", base_url, journal_id</string>
-      <string>1,"^%sjournals/%s/downloadcitation/[^?/]+\?format=$", base_url, journal_id</string>
+      <string>1,"^%sjournals/%s/downloadcitation/[^?/]+\?format=ris$", base_url, journal_id</string>
       <string>2,"^%sdownloadimage\.aspx\?", base_url</string>
       
       <!--  Not collecting audio/video/interactive content
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
-      <!-- Found old style links in articles, if we want to preserve them... we need to either -->
-      <!-- 1) get permission pages [bad idea] or 2) [bad idea], add to permitted hosts list -->
-      <!-- <string>1,"^https?://([^.]+\.)?jamanetwork\.com/article\.aspx\?doi=10\.1001/"</string> -->
     </list>
   </entry>
   <entry>
@@ -171,12 +166,9 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.silverchair.ama.AmaScHtmlHashFilterFactory</string>
   </entry>
-  <!-- entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.silverchair.ScPdfFilterFactory</string>
-  </entry> -->
   <entry>
     <string>au_substance_url_pattern</string>
+    <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
     <list>
       <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
       <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
@@ -195,7 +187,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.silverchair.ama.AmaScHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -206,7 +198,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <!-- string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string> -->
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
     </list>
   </entry>
@@ -216,10 +208,9 @@
       <string>.+\.googleapis\.com</string>
       <string>.+\.gstatic\.com</string>
       <string>.*cdn\.jsdelivr\.net</string>
-      <string>.*(silverchair(\.netdna-cdn|-?cdn))\.com</string>
+      <string>.*silverchair-?cdn\.com</string>
       <string>.*\.brightcove\.net</string>
       <string>.*\.cloudfront\.net</string>
-      <!-- string>.*ajax\.microsoft\.com</string> -->
     </list>
   </entry>
   <entry>

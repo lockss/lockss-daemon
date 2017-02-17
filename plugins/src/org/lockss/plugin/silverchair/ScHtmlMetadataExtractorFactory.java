@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 
 public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -52,7 +53,7 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
     // All below seen in ACCP, ACP, AMA, APA
     cookMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     cookMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
-    // replacement tite for proceedings
+    // replacement title for proceedings
     cookMap.put("citation_conference_title", MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put("citation_journal_abbrev", FIELD_PUBLICATION_ABBREV);
     cookMap.put("citation_issn", MetadataField.FIELD_ISSN);
@@ -82,6 +83,12 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
         ArticleMetadata am = super.extract(target, cu);
         am.putRaw("extractor.type", "HTML");
         am.cook(cookMap);
+        String url = am.get(MetadataField.FIELD_ACCESS_URL);
+        ArchivalUnit au = cu.getArchivalUnit();
+        if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+          url = cu.getUrl();
+        }
+        am.replace(MetadataField.FIELD_ACCESS_URL, url);
         return am;
       }
     };

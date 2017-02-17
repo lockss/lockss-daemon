@@ -84,8 +84,6 @@ public class AmaScHtmlHashFilterFactory implements FilterFactory {
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
-    // All instances of "Systemic Infection" have been replaced with Sepsis on AMA
-//    Reader sepsisFilter = new StringFilter(whiteSpaceFilter, "systemic infection", "sepsis");
     return new ReaderInputStream(whiteSpaceFilter);
   }
 }

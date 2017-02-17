@@ -55,7 +55,7 @@ public class AmaScArticleIteratorFactory
   private static final Pattern HTML_PATTERN = Pattern.compile("/fullarticle/(\\d+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/fullarticle/$1";
   private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1";
-  private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=";
+  private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "<meta name=\"citation_pdf_url\" content=\".+/(data/journals/[^/]+/[^/]+/[^/.]+[.]pdf)\"", Pattern.CASE_INSENSITIVE);
