@@ -72,6 +72,8 @@ public class SageAtyponHtmlHashFilterFactory
         
         // toc - access icon container - haven't seen but common for Atypon
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
+        // toc - article type seems to change and this isn't important
+        HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
         // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
         // added to (GoogleScholar, Medline, ISI, abstract, etc)                                                                                                                                      
         // leave the content (NLM_article-title, NLM_year, etc),                                                                                                                                      
