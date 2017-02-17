@@ -39,6 +39,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -49,10 +50,6 @@ import org.lockss.util.ReaderInputStream;
 
 public class OupScHtmlHashFilterFactory implements FilterFactory {
 
-  /*
-   * AMA = American Medical Association (http://jamanetwork.com/)
-   * SPIE = SPIE (http://spiedigitallibrary.org/)
-   */
   private static final Logger log = Logger.getLogger(OupScHtmlHashFilterFactory.class);
   
   @Override
@@ -71,19 +68,18 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ContentColumn"),
               HtmlNodeFilters.tagWithAttributeRegex("span", "class", "content-inner-wrap"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
+              
           })),
       
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
     	  }))
       )
     );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
-
-    // Remove all inner tag content
-    // Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
-    
+  
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
     InputStream ret =  new ReaderInputStream(whiteSpaceFilter);

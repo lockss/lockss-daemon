@@ -62,14 +62,21 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final int code) throws PluginException {
     logger.debug(code + ": " + url);
+    Matcher mat = NON_FATAL_PAT.matcher(url);
     switch (code) {
       case 403:
         //Do not fail the crawl for 403 errors at URLs like the one below should not be fatal
-        Matcher mat = NON_FATAL_PAT.matcher(url);
         if (mat.find()) {
           return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
         } else {
           return new CacheException.RetrySameUrlException("403 Forbidden error");
+        }
+      case 500:
+        //Do not fail the crawl for 500 errors at URLs like the one below should not be fatal
+        if (mat.find()) {
+          return new CacheException.NoRetryDeadLinkException("500 Internal server (non-fatal)");
+        } else {
+          return new CacheException.RetrySameUrlException("500 Internal server error");
         }
       default:
         logger.warning("Unexpected responseCode (" + code + ") in handleResult(): AU " + au.getName() + "; URL " + url);
@@ -81,30 +88,7 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
     logger.debug(ex.getMessage() + ": " + url);
-    return new ScRetryableNetworkException(ex);
-  }
-
-  public static class ScRetryableNetworkException extends CacheException.RetryableNetworkException_3 {
-    public ScRetryableNetworkException() {
-      super();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-
-    public ScRetryableNetworkException(String message) {
-      super(message);
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-
-    /** Create this if details of causal exception are more relevant. */
-    public ScRetryableNetworkException(Exception e) {
-      super(e);
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-
-    public long getRetryDelay() {
-      return 3 * Constants.MINUTE;
-    }
-
+    return new CacheException.RetrySameUrlException(ex.getMessage());
   }
 
 }

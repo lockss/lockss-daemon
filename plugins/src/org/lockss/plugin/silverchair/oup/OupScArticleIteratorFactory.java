@@ -58,12 +58,16 @@ public class OupScArticleIteratorFactory
   //Need to scrape?
   private static final String RIS_REPLACEMENT = "/article-pdf/$1";
   private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
+  //<meta name="citation_pdf_url" content="https://academic.oup.com/bioinformatics/article-pdf/31/1/119/6999904/btu602.pdf" />
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "<meta[\\s]*name=\"citation_pdf_url\"[\\s]*content=\"(.+/article-pdf/[^.]+\\.pdf)\"[\\s]*/>", Pattern.CASE_INSENSITIVE);
+
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
     builder.setSpec(target,
                     ROOT_TEMPLATE,
                     PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
@@ -78,6 +82,66 @@ public class OupScArticleIteratorFactory
                                   ArticleFiles.ROLE_ABSTRACT,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
     return builder.getSubTreeArticleIterator();
+  }
+  
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+    return new SubTreeArticleIteratorBuilder(au) {
+      
+      @Override
+      protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
+        
+        
+        return new BuildableSubTreeArticleIterator(au, spec) {
+          
+          @Override
+          protected ArticleFiles createArticleFiles(CachedUrl cu) {
+            // Since 1.64 createArticleFiles can return ArticleFiles
+            ArticleFiles af = super.createArticleFiles(cu);
+            
+            if (af != null && spec.getTarget() != null && !spec.getTarget().isArticle()) {
+              guessPdf(af);
+            }
+            return af;
+          }
+        };
+      }
+      
+      protected void guessPdf(ArticleFiles af) {
+        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+        if (cu == null || !cu.hasContent()) {
+          return;
+        }
+        BufferedReader bReader = null;
+        try {
+          bReader = new BufferedReader(new InputStreamReader(
+              cu.getUnfilteredInputStream(), cu.getEncoding())
+              );
+          
+          Matcher mat;
+          // go through the cached URL content line by line
+          // if a match is found, look for valid url & content
+          // if found then set the role for ROLE_FULL_TEXT_PDF
+          for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
+            mat = PDF_PATTERN.matcher(line);
+            if (mat.find()) {
+              String pdfUrl = mat.group(1);
+              CachedUrl pdfCu = au.makeCachedUrl(pdfUrl);
+              if (pdfCu != null && pdfCu.hasContent()) {
+                af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+              }
+              break;
+            }
+          }
+        } catch (Exception e) {
+          // probably not serious, so warn
+          log.warning(e + " : Looking for citation_pdf_url");
+        }
+        finally {
+          IOUtil.safeClose(bReader);
+          cu.release();
+        }
+      }
+    };
   }
   
     @Override

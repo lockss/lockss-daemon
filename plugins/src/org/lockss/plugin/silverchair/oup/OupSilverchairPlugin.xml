@@ -9,22 +9,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -79,14 +79,14 @@
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
       <string>1,"^https?://(%s|[^.]+\.(silverchair\.netdna-cdn|silverchair-?cdn|googleapis)\.com/|cdn\.mathjax\.org|ajax\.microsoft\.com|cdn\.jsdelivr\.net).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue)/[0-9]+/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue)/([0-9]+|doi)/", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s/%s/article(-pdf)?/[0-9]+/", base_url, journal_id</string>
+      <string>"^%s%s/article-pdf/([0-9]+|doi)/[^?]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
@@ -126,29 +126,11 @@
     <string>org.lockss.plugin.silverchair.oup.OupScArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>text/plain_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.silverchair.oup.OupScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -156,6 +138,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

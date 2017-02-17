@@ -45,10 +45,28 @@ import org.lockss.util.Logger;
 public class OupScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(OupScUrlConsumerFactory.class);
 
+  public static final String DEL_URL = "/article-pdf/[^?]+\\.pdf";
+  public static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+\\.pdf";
+  public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
+
+  public static final String ORIG_FULLTEXT_STRING = DEL_URL;
+  public static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
+
+  protected static final Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
+  
+  public static Pattern getOrigPdfPattern() {
+    return origFullTextPat;
+  }
+  
+  public static Pattern getDestPdfPattern() {
+    return destFullTextPat;
+  }
+  
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
     log.debug3("Creating a Pub2Web UrlConsumer");
-    return new Pub2WebUrlConsumer(facade, fud);
+    return new OupScUrlConsumer(facade, fud);
   }
 
   /**
@@ -63,24 +81,13 @@ public class OupScUrlConsumerFactory implements UrlConsumerFactory {
    * </p>
    * 
    */
-  public class Pub2WebUrlConsumer extends SimpleUrlConsumer {
+  public class OupScUrlConsumer extends SimpleUrlConsumer {
 
-    public static final String DEL_URL = "/article-pdf/[^.]+\\.pdf";
-    public static final String DOC_URL = "backfile/Content_public/Journal/[^.]+\\.pdf";
-    public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
-
-    public static final String ORIG_FULLTEXT_STRING = DEL_URL;
-    public static final String DEST_FULLTEXT_STRING = DOC_URL +  DOC_ARGS;
-
- 
-    protected Pattern origFullTextPat = Pattern.compile(ORIG_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
-    protected Pattern destFullTextPat = Pattern.compile(DEST_FULLTEXT_STRING, Pattern.CASE_INSENSITIVE);
-
-    public Pub2WebUrlConsumer(CrawlerFacade facade,
+    public OupScUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
       super(facade, fud);
     }
-
+    
     @Override
     public void consume() throws IOException {
       if (shouldStoreAtOrigUrl()) {
