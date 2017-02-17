@@ -108,7 +108,10 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
           "    </dl>" +
           "</div>" +     
           "</div></div>";
-
+  private static final String html2_filtered =
+      "<div class=\"toc-view\"></div>" +
+          "<div class=\"journal_description mtm\"><strong>Description:</strong> <i>Foo</i> is published quarterly." +
+          "</div>";
   /*
    *  Compare Html and HtmlFiltered
    */
@@ -125,7 +128,7 @@ public class TestJstorCSFilterFactory extends LockssTestCase {
     assertEquals("<div class=\"toc-view\"></div>", StringUtil.fromInputStream(actIn));
     actIn = hashfact.createFilteredInputStream(mau,
         new StringInputStream(html2), Constants.DEFAULT_ENCODING);
-    assertEquals("<div class=\"toc-view\"></div>", StringUtil.fromInputStream(actIn)); 
+    assertEquals(html2_filtered, StringUtil.fromInputStream(actIn)); 
   }
   
 

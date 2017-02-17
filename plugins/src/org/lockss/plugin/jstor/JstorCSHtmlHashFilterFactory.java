@@ -87,6 +87,9 @@ public class JstorCSHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div", "id", "citationBody"),
           // for those papers that have full text html
           HtmlNodeFilters.tagWithAttribute("div", "id", "full_text_tab_contents"),
+          // must pick small portion of journal_info or it will hash0 - parts of it are ever changing
+          // http://www.jstor.org/stable/10.5325/pennhistory.82.1.0001?item_view=journal_info
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journal_description"),
       };
       
       NodeFilter[] excludeNodes = new NodeFilter[] {       
