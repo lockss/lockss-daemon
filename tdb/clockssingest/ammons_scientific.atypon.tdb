@@ -43,7 +43,7 @@
     au < down ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 ; >
     au < frozen ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; Innovative Teaching Volume 3 ; 3 ; >
-    au < boost ; exists ; 2015 ; Innovative Teaching Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; Innovative Teaching Volume 4 ; 4 ; >
 
   }
 
@@ -168,12 +168,12 @@
     au < superseded ; exists ; 2011 ; Psychological Reports Volume 109 [superseded] ; 109 ; > #reprocess when it moves to highwire
     au < down ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 ; >
     au < down ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 ; >
-    au < boost ; exists ; 2013 ; Psychological Reports Volume 112 ; 112 ; >
-    au < boost ; exists ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
-    au < boost ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
-    au < boost ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
+    au < frozen ; exists ; 2013 ; Psychological Reports Volume 112 ; 112 ; >
+    au < frozen ; exists ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
+    au < frozen ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
+    au < frozen ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < boost ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
+    au < frozen ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
     
   }
 
@@ -302,12 +302,12 @@
     au < down ; exists ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 ; >
     au < down ; exists ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 ; >
     au < down ; exists ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 ; >
-    au < boost ; exists ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; >
-    au < boost ; exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
-    au < boost ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
-    au < boost ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
+    au < frozen ; exists ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; >
+    au < frozen ; exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
+    au < frozen ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
+    au < frozen ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < boost ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
+    au < frozen ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
 
   }
 }
