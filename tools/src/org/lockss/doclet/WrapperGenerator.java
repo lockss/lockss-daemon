@@ -32,14 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.doclet;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.lang.reflect.*;
 import com.sun.javadoc.*;
 import org.apache.oro.text.regex.*;
-import org.w3c.dom.*;
 import org.lockss.util.*;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.io.*;
+import java.util.*;
 
 
 /**
