@@ -2484,9 +2484,9 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[down] = Moved to Drupal platform
 
-    au < down ; frozen ; 2010 ; Brain Volume 133 ; 133 ; >
-    au < down ; frozen ; 2011 ; Brain Volume 134 ; 134 ; >
-    au < down ; frozen ; 2012 ; Brain Volume 135 ; 135 ; >
+    au < finished ; frozen ; 2010 ; Brain Volume 133 ; 133 ; >
+    au < finished ; frozen ; 2011 ; Brain Volume 134 ; 134 ; >
+    au < finished ; frozen ; 2012 ; Brain Volume 135 ; 135 ; >
     au < finished ; finished ; 2013 ; Brain Volume 136 ; 136 ; >
 
     }
@@ -5563,7 +5563,7 @@
     au < down ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
     au < down ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
     au < down ; exists ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
-    au < down ; frozen ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
+    au < finished ; frozen ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
     au < finished ; finished ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
     au < finished ; finished ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
     au < finished ; finished ; 2012 ; Enterprise & Society Volume 13 ; 13 ; >
@@ -5923,8 +5923,8 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Europace Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
-    au < down ; frozen ; 2010 ; Europace Volume 12 ; 12 ; >
-    au < down ; frozen ; 2011 ; Europace Volume 13 ; 13 ; >
+    au < finished ; frozen ; 2010 ; Europace Volume 12 ; 12 ; >
+    au < finished ; frozen ; 2011 ; Europace Volume 13 ; 13 ; >
     au < down ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
     au < finished ; finished ; 2013 ; Europace Volume 15 ; 15 ; >
 
@@ -5985,10 +5985,10 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
-    au < down ; frozen ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
-    au < down ; frozen ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
-    au < down ; frozen ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
-    au < down ; frozen ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
+    au < finished ; frozen ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
+    au < finished ; frozen ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
+    au < finished ; frozen ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
+    au < finished ; frozen ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
 
     }
 
@@ -6283,7 +6283,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
-    au < down ; frozen ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
+    au < finished ; frozen ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
     au < finished ; finished ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
     au < finished ; finished ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
     au < finished ; finished ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 ; >
@@ -8736,7 +8736,7 @@
     param[base_url] = http://humrep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; frozen ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
+    au < finished ; frozen ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < zapped ; finished ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
@@ -18322,7 +18322,7 @@
     param[base_url] = http://nar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; frozen ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
+    au < finished ; frozen ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
     au < finished ; finished ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
 
     }
@@ -20622,7 +20622,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
     au < finished ; frozen ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
-    au < down ; frozen ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
+    au < finished ; frozen ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
     au < finished ; finished ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
 
     }
