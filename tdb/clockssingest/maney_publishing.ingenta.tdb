@@ -356,8 +356,8 @@
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 ; > 
-    au < down ; finished ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
-    au < down ; finished ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
+    au < finished ; finished ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; > 
+    au < finished ; finished ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
     au < finished ; frozen ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 ; > 
 
@@ -2595,9 +2595,9 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Medieval Archaeology Volume 51 ; 51 ; > 
     au < doNotProcess ; doNotProcess ; 2008 ; Medieval Archaeology Volume 52 ; 52 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Medieval Archaeology Volume 53 ; 53 ; > 
-    au < down ; finished ; 2010 ; Medieval Archaeology Volume 54 ; 54 ; > 
-    au < down ; finished ; 2011 ; Medieval Archaeology Volume 55 ; 55 ; >
-    au < down ; finished ; 2012 ; Medieval Archaeology Volume 56 ; 56 ; > 
+    au < finished ; finished ; 2010 ; Medieval Archaeology Volume 54 ; 54 ; > 
+    au < finished ; finished ; 2011 ; Medieval Archaeology Volume 55 ; 55 ; >
+    au < finished ; finished ; 2012 ; Medieval Archaeology Volume 56 ; 56 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Medieval Archaeology Volume 57 ; 57 ; > 
 
     }
@@ -2989,9 +2989,9 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Northern History Volume 44 ; 44 ; > 
     au < doNotProcess ; doNotProcess ; 2008 ; Northern History Volume 45 ; 45 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Northern History Volume 46 ; 46 ; > 
-    au < down ; finished ; 2010 ; Northern History Volume 47 ; 47 ; > 
-    au < down ; finished ; 2011 ; Northern History Volume 48 ; 48 ; >  
-    au < down ; finished ; 2012 ; Northern History Volume 49 ; 49 ; >
+    au < finished ; finished ; 2010 ; Northern History Volume 47 ; 47 ; > 
+    au < finished ; finished ; 2011 ; Northern History Volume 48 ; 48 ; >  
+    au < finished ; finished ; 2012 ; Northern History Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Northern History Volume 50 ; 50 ; > 
 
   }
@@ -3102,7 +3102,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 18 ; 18 ; > 
     au < doNotProcess ; doNotProcess ; 2008 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 19 ; 19 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 20 ; 20 ; > 
-    au < down ; finished ; 2010 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 21 ; 21 ; >
+    au < finished ; finished ; 2010 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 21 ; 21 ; >
     au < finished ; finished ; 2011 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 22 ; 22 ; > 
     au < finished ; finished ; 2012 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 24 ; 24 ; > 
@@ -3355,7 +3355,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Powder Metallurgy Volume 51 ; 51 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Powder Metallurgy Volume 52 ; 52 ; > 
     au < finished ; finished ; 2010 ; Powder Metallurgy Volume 53 ; 53 ; >
-    au < down ; finished ; 2011 ; Powder Metallurgy Volume 54 ; 54 ; >
+    au < finished ; finished ; 2011 ; Powder Metallurgy Volume 54 ; 54 ; >
     au < finished ; frozen ; 2012 ; Powder Metallurgy Volume 55 ; 55 ; > 
     au < doNotProcess ; doNotProcess ; 2013 ; Powder Metallurgy Volume 56 ; 56 ; > 
 

@@ -457,9 +457,9 @@
 
     param[base_url] = http://www.cysonline.org/
     param[journal_issn] = 2229-5186
-    # Young Scientists redirects to Drug Delivery. Seems like an error. (moved to www.ddtjounral.org)
+    # Young Scientists redirects to Drug Delivery. Seems like an error. (moved to http://www.ddtjournal.org/)
 
-    au < down ; exists ; 2014 ; Chronicles of Young Scientists Volume 5 ; 2014 ; 5 ; >
+    au < superseded ; exists ; 2014 ; Chronicles of Young Scientists Volume 5 [superseded] ; 2014 ; 5 ; >
 
   }
 
@@ -1454,11 +1454,11 @@
     param[journal_issn] = 0250-474X
     # moved
 
-    au < down ; exists ; 2011 ; Indian Journal of Pharmaceutical Sciences Volume 73 ; 2011 ; 73 ; >
-    au < down ; exists ; 2012 ; Indian Journal of Pharmaceutical Sciences Volume 74 ; 2012 ; 74 ; >
-    au < down ; exists ; 2013 ; Indian Journal of Pharmaceutical Sciences Volume 75 ; 2013 ; 75 ; >
-    au < down ; exists ; 2014 ; Indian Journal of Pharmaceutical Sciences Volume 76 ; 2014 ; 76 ; >
-    au < down ; exists ; 2015 ; Indian Journal of Pharmaceutical Sciences Volume 77 ; 2015 ; 77 ; >
+    au < frozen ; exists ; 2011 ; Indian Journal of Pharmaceutical Sciences Volume 73 ; 2011 ; 73 ; >
+    au < superseded ; exists ; 2012 ; Indian Journal of Pharmaceutical Sciences Volume 74 [superseded] ; 2012 ; 74 ; >
+    au < superseded ; exists ; 2013 ; Indian Journal of Pharmaceutical Sciences Volume 75 [superseded] ; 2013 ; 75 ; >
+    au < frozen ; exists ; 2014 ; Indian Journal of Pharmaceutical Sciences Volume 76 ; 2014 ; 76 ; >
+    au < frozen ; exists ; 2015 ; Indian Journal of Pharmaceutical Sciences Volume 77 ; 2015 ; 77 ; >
 
   }
 
@@ -5657,11 +5657,11 @@
       #moved to new platform.
 
       au < exists ; exists ; 2010 ; Journal of Basic and Clinical Pharmacy Volume 1 ; 2010 ; 1 ; >
-      au < down ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
-      au < down ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
-      au < down ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
-      au < down ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
-      au < down ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
+      au < frozen ; exists ; 2011 ; Journal of Basic and Clinical Pharmacy Volume 2 ; 2011 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Journal of Basic and Clinical Pharmacy Volume 3 ; 2012 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Journal of Basic and Clinical Pharmacy Volume 4 ; 2013 ; 4 ; >
+      au < frozen ; exists ; 2014 ; Journal of Basic and Clinical Pharmacy Volume 5 ; 2014 ; 5 ; >
+      au < frozen ; exists ; 2015 ; Journal of Basic and Clinical Pharmacy Volume 6 ; 2015 ; 6 ; >
       au < exists ; exists ; 2016 ; Journal of Basic and Clinical Pharmacy Volume 7 ; 2016 ; 7 ; >
 
   }

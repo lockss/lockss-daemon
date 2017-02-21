@@ -24,17 +24,17 @@
     param[journal_id] = afr
     comment[2011] = from 2011 published by Cambridge University Press
 
-    au < down ; finished ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -50,12 +50,12 @@
     param[journal_id] = abib
     comment[2011] = from 2011 published by Cambridge University Press
 
-    au < down ; finished ; 2004 ; Africa Bibliography Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2005 ; Africa Bibliography Volume 2005 ; 2005 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2006 ; Africa Bibliography Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 ; reingest2.clockss.org:8085 >
-    au < down ; finished ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; Africa Bibliography Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2005 ; Africa Bibliography Volume 2005 ; 2005 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; Africa Bibliography Volume 2006 ; 2006 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -104,9 +104,9 @@
     au < finished ; finished ; 2005 ; Architectural Heritage Volume 16 ; 16 ; >
     au < finished ; finished ; 2006 ; Architectural Heritage Volume 17 ; 17 ; >
     au < finished ; finished ; 2007 ; Architectural Heritage Volume 18 ; 18 ; >
-    au < down ; finished ; 2008 ; Architectural Heritage Volume XIX ; XIX ; >
+    au < finished ; finished ; 2008 ; Architectural Heritage Volume XIX ; XIX ; >
     au < doNotProcess ; exists ; 2008 ; Architectural Heritage Volume 19 ; 19 ; >
-    au < down ; finished ; 2009 ; Architectural Heritage Volume XX ; XX ; >
+    au < finished ; finished ; 2009 ; Architectural Heritage Volume XX ; XX ; >
     au < doNotProcess ; exists ; 2009 ; Architectural Heritage Volume 20 ; 20 ; >
     au < finished ; finished ; 2010 ; Architectural Heritage Volume 21 ; 21 ; >
     au < finished ; finished ; 2011 ; Architectural Heritage Volume 22 ; 22 ; >
@@ -382,14 +382,14 @@
     param[journal_id] = epi
     comment[down] = content no longer available on eup website
 
-    au < down ; finished ; 2004-2005 ; Episteme Volume 1 ; 1 ; >
-    au < down ; finished ; 2005-2006 ; Episteme Volume 2 ; 2 ; >
-    au < down ; finished ; 2006 ; Episteme Volume 3 ; 3 ; >
-    au < down ; finished ; 2007 ; Episteme Volume 4 ; 4 ; >
-    au < down ; finished ; 2008 ; Episteme Volume 5 ; 5 ; >
-    au < down ; finished ; 2009 ; Episteme Volume 6 ; 6 ; >
-    au < down ; finished ; 2010 ; Episteme Volume 7 ; 7 ; >
-    au < down ; finished ; 2011 ; Episteme Volume 8 ; 8 ; >
+    au < finished ; finished ; 2004-2005 ; Episteme Volume 1 ; 1 ; >
+    au < finished ; finished ; 2005-2006 ; Episteme Volume 2 ; 2 ; >
+    au < finished ; finished ; 2006 ; Episteme Volume 3 ; 3 ; >
+    au < finished ; finished ; 2007 ; Episteme Volume 4 ; 4 ; >
+    au < finished ; finished ; 2008 ; Episteme Volume 5 ; 5 ; >
+    au < finished ; finished ; 2009 ; Episteme Volume 6 ; 6 ; >
+    au < finished ; finished ; 2010 ; Episteme Volume 7 ; 7 ; >
+    au < finished ; finished ; 2011 ; Episteme Volume 8 ; 8 ; >
 
   }
 

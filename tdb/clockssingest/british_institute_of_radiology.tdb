@@ -107,8 +107,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; British Journal of Radiology Volume 82 ; 82 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; >
-      au < down ; finished ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; >
-      au < down ; finished ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; >
+      au < finished ; finished ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; >
+      au < finished ; finished ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; >
       au < down ; exists ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; >
       
     }
@@ -208,8 +208,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
-      au < down ; finished ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; > 
-      au < down ; finished ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
+      au < finished ; finished ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; > 
+      au < finished ; finished ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
       au < down ; exists ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
 
     }
@@ -261,17 +261,17 @@
       param[base_url] = http://imaging.birjournals.org/
       # last published volume in 2009  
     
-      au < down ; finished ; 1999 ; Imaging Volume 11 ; 11 ; >
-      au < down ; finished ; 2000 ; Imaging Volume 12 ; 12 ; >
-      au < down ; finished ; 2001 ; Imaging Volume 13 ; 13 ; >
-      au < down ; finished ; 2002 ; Imaging Volume 14 ; 14 ; >
-      au < down ; finished ; 2003 ; Imaging Volume 15 ; 15 ; >
-      au < down ; finished ; 2004 ; Imaging Volume 16 ; 16 ; >
-      au < down ; finished ; 2005 ; Imaging Volume 17 ; 17 ; >
-      au < down ; finished ; 2006 ; Imaging Volume 18 ; 18 ; >
-      au < down ; finished ; 2007 ; Imaging Volume 19 ; 19 ; >
-      au < down ; finished ; 2008 ; Imaging Volume 20 ; 20 ; >
-      au < down ; finished ; 2009 ; Imaging Volume 21 ; 21 ; >
+      au < finished ; finished ; 1999 ; Imaging Volume 11 ; 11 ; >
+      au < finished ; finished ; 2000 ; Imaging Volume 12 ; 12 ; >
+      au < finished ; finished ; 2001 ; Imaging Volume 13 ; 13 ; >
+      au < finished ; finished ; 2002 ; Imaging Volume 14 ; 14 ; >
+      au < finished ; finished ; 2003 ; Imaging Volume 15 ; 15 ; >
+      au < finished ; finished ; 2004 ; Imaging Volume 16 ; 16 ; >
+      au < finished ; finished ; 2005 ; Imaging Volume 17 ; 17 ; >
+      au < finished ; finished ; 2006 ; Imaging Volume 18 ; 18 ; >
+      au < finished ; finished ; 2007 ; Imaging Volume 19 ; 19 ; >
+      au < finished ; finished ; 2008 ; Imaging Volume 20 ; 20 ; >
+      au < finished ; finished ; 2009 ; Imaging Volume 21 ; 21 ; >
     
     }
 

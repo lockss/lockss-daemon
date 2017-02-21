@@ -56,17 +56,17 @@
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 ; >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; >
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 ; >
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; AAP Grand Rounds Volume 25 ; 25 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; AAP Grand Rounds Volume 26 ; 26 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; AAP Grand Rounds Volume 27 ; 27 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; AAP Grand Rounds Volume 28 ; 28 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2013 ; AAP Grand Rounds Volume 29 ; 29 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2013 ; AAP Grand Rounds Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; AAP Grand Rounds Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; AAP Grand Rounds Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; AAP Grand Rounds Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; AAP Grand Rounds Volume 30 ; 30 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP Grand Rounds Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP Grand Rounds Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
@@ -482,17 +482,17 @@
     {
       param[base_url] = http://redbookarchive.aappublications.org/
 
-      au < ClockssHighWirePlugin ; down ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 ; >
-      au < ClockssHighWirePlugin ; down ; finished ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
-      au < ClockssHighWirePlugin ; down ; finished ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
-      au < ClockssHighWirePlugin ; down ; finished ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
+      au < ClockssHighWirePlugin ; finished ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 ; >
+      au < ClockssHighWirePlugin ; finished ; finished ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
+      au < ClockssHighWirePlugin ; finished ; finished ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
+      au < ClockssHighWirePlugin ; finished ; finished ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
     }
 
     {
       param[base_url] = http://aapredbook.aappublications.org/
       comment[moved] = moved to http://redbook.solutions.aap.org/
       
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 ; >
     }
 
   }
