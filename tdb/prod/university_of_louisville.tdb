@@ -16,7 +16,7 @@
       param[journal_abbr] = jri
       implicit < status ; year ; name ; param[volume] >
     
-      au < exists ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
+      au < manifest ; 2017 ; Journal of Respiratory Infections Volume 1 ; 1 >
 
   }
   
