@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.uiapi.util;
 
-import java.io.*;
-import java.util.*;
+import org.apache.commons.codec.binary.Base64;
 
-import sun.misc.BASE64Encoder;
-import sun.misc.BASE64Decoder;
+import java.io.IOException;
+
 /**
  * Base 64 encoding/decoding
  */
@@ -53,8 +52,8 @@ public class Base64Utils
    * @return
    *     Decoded bytes
    */
-  public static byte decodeToBytes(String data)[] throws IOException {
-      return new BASE64Decoder().decodeBuffer(data);
+  public static byte[] decodeToBytes(String data) throws IOException {
+      return Base64.decodeBase64(data);
   }
    
   /**
@@ -70,7 +69,7 @@ public class Base64Utils
   }
    
   /**
-   * Encode provided data
+   * Encode provided data unchunked (ie without 76 char barrier)
    *
    * @param   
    *    data for encoding
@@ -78,7 +77,10 @@ public class Base64Utils
    *    Base 64 encoded string
    */
   public static String encode(byte data[]) {
-    return filter(new BASE64Encoder().encodeBuffer(data));
+
+    //return filter(Base64.encodeBase64String(data));
+
+    return Base64.encodeBase64String(data);
   }
    
   /**
@@ -90,6 +92,7 @@ public class Base64Utils
    *    Base 64 encoded string
    */
   public static String encode(String data) {
+
     return encode(data.getBytes());
   }
 
