@@ -173,7 +173,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     // Change this when we support 1.8
     String specVar = jver.getSpecificationVersion();
     assertTrue("Java version expected to be 1.6 or 1.7",
-	       ListUtil.list("1.6", "1.7").contains(specVar));
+	       ListUtil.list("1.6", "1.7","1.8").contains(specVar));
     assertTrue("java version s.b. initial substring of java spec version",
 	       jver.getSpecificationVersion().startsWith(specVar));
     assertTrue("java version s.b. initial substring of java runtime version",
