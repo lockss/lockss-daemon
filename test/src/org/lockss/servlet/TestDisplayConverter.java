@@ -32,11 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.util.*;
-import java.text.*;
+import org.lockss.test.LockssTestCase;
+import org.lockss.util.Constants;
+import org.lockss.util.Deadline;
+import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
 
-import org.lockss.test.*;
-import org.lockss.util.*;
+import java.text.Format;
+import java.util.Date;
+
 import static org.lockss.daemon.status.ColumnDescriptor.*;
 
 public class TestDisplayConverter extends LockssTestCase {
@@ -80,8 +84,8 @@ public class TestDisplayConverter extends LockssTestCase {
     assertEquals("", cds(null, TYPE_FLOAT));
     assertEquals("375.0", cds(375, TYPE_FLOAT));
     assertEquals("-375.0", cds(-375, TYPE_FLOAT));
-    assertEquals("3751.4", cds(3751.35, TYPE_FLOAT));
-    assertEquals("1.2", cds(Double.valueOf(1.234567), TYPE_FLOAT));
+    assertEquals("3751.4", cds(3751.35F, TYPE_FLOAT));
+    assertEquals("1.2", cds(1.234567F, TYPE_FLOAT));
     assertEquals("-1.2", cds(Double.valueOf(-1.234567), TYPE_FLOAT));
     assertEquals("3752.0", cds(Long.valueOf(3752), TYPE_FLOAT));
     assertEquals("32112345.0", cds(32112345, TYPE_FLOAT));
