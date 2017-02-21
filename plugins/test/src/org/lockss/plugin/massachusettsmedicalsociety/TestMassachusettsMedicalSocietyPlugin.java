@@ -28,17 +28,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import java.io.File;
-
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
-import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.base.BaseCachedUrlSet;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
-import org.lockss.test.*;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssPluginTestCase;
+import org.lockss.test.MockAuState;
+import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 import org.lockss.util.TimeBase;
@@ -188,7 +190,7 @@ public class TestMassachusettsMedicalSocietyPlugin extends LockssPluginTestCase 
 
 	  public void testGetUrlStems() throws Exception {
 	    ArchivalUnit au = createAu();
-	    assertEquals(ListUtil.list(BASE_URL2, BASE_URL), au.getUrlStems());
+		  assertSameElements(ListUtil.list(BASE_URL2, BASE_URL), au.getUrlStems());
 	  }
 
 	  public void testShouldDoNewContentCrawlTooEarly() throws Exception {

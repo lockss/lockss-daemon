@@ -32,16 +32,22 @@
 
 package org.lockss.plugin.portlandpress;
 
-import java.io.*;
-import java.util.*;
-
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.repository.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.extractor.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.simulated.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.PluginTestUtil;
+import org.lockss.plugin.simulated.SimulatedArchivalUnit;
+import org.lockss.plugin.simulated.SimulatedContentGenerator;
+import org.lockss.plugin.simulated.SimulatedPlugin;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockCachedUrl;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class TestPortlandPressMetadataExtractor extends LockssTestCase {
@@ -150,9 +156,9 @@ public class TestPortlandPressMetadataExtractor extends LockssTestCase {
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertEquals(goodAuthors, md.getList(MetadataField.DC_FIELD_CREATOR));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    assertSameElements(goodAuthors, md.getList(MetadataField.DC_FIELD_CREATOR));
+    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
   }
 
 

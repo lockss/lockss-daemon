@@ -32,19 +32,27 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.jstor;
 
-import java.net.URL;
-import java.util.List;
-import java.util.Properties;
-
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.PatternMatcher;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.definable.*;
-import org.lockss.test.*;
-import org.lockss.util.*;
+import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.base.BaseCachedUrlSet;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.ListUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.RegexpUtil;
+
+import java.net.URL;
+import java.util.List;
+import java.util.Properties;
 
 //
 // This plugin test framework is set up to run the same tests in two variants - CLOCKSS and GLN
@@ -115,7 +123,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   
   public void testGetUrlStems() throws Exception {
     ArchivalUnit JSAu = makeAu(true, 123, "xxxx" );
-    assertEquals(ListUtil.list(ROOT_URL, ROOT_URL2), JSAu.getUrlStems());
+    assertSameElements(ListUtil.list(ROOT_URL, ROOT_URL2), JSAu.getUrlStems());
   }
   
   //
