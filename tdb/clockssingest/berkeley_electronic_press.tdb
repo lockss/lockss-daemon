@@ -63,7 +63,7 @@
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
     au < finished ; finished ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 ; >
-    au < down ; crawling ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 ; >
     au < zapped ; finished ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 ; >
@@ -383,7 +383,7 @@
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
     au < zapped ; finished ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 ; >    
-    au < down ; crawling ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; >
     au < zapped ; finished ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 ; >    
     au < finished ; finished ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 ; >    
@@ -484,13 +484,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = fhep
 
-    au < down ; crawling ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 ; >
+    au < finished ; crawling ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 ; >
     au < finished ; finished ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 ; >
     au < zapped ; finished ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 ; >
     au < finished ; finished ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 ; >
     au < finished ; finished ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 ; >
-    au < down ; crawling ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 ; >
+    au < finished ; crawling ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 ; >
     au < zapped ; finished ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 ; >
     au < finished ; finished ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 ; >
     au < zapped ; finished ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 ; >
@@ -1588,7 +1588,7 @@
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
     au < finished ; finished ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 ; >
-    au < down ; crawling ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 ; >
     au < zapped ; finished ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 ; >
     au < zapped ; finished ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 ; >

@@ -2737,7 +2737,7 @@
     param[base_url] = http://bfgp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
+    au < finished ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
 
     }
 
@@ -4059,7 +4059,7 @@
     au < finished ; crawling ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Cardiovascular Research Volume 105 ; 105 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Cardiovascular Research Volume 106 ; 106 ; reingest4.clockss.org:8082 >
-    au < down ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
+    au < frozen ; exists ; 2015 ; Cardiovascular Research Volume 107 ; 107 ; >
     au < finished ; finished ; 2015 ; Cardiovascular Research Volume 108 ; 108 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2016 ; Cardiovascular Research Volume 109 ; 109 ; >
     au < doNotProcess ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 ; >
@@ -6474,7 +6474,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
-    au < down ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
+    au < finished ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
     au < finished ; finished ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
     au < finished ; finished ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
     au < finished ; finished ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
@@ -16288,7 +16288,7 @@
     au < frozen ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < finished ; finished ; 2014 ; Mammalian Species Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
     au < doNotProcess ; exists ; 2016 ; Mammalian Species Volume 48 ; 48 ; >
 
   }
@@ -20610,7 +20610,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < superseded ; down ; 2008 ; QJM: An International Journal of Medicine Volume 101 [superseded] ; 101 ; >
-    au < down ; crawling ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
+    au < finished ; crawling ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
     }
 
