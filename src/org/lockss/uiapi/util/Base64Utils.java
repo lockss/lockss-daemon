@@ -69,7 +69,7 @@ public class Base64Utils
   }
    
   /**
-   * Encode provided data unchunked (ie without 76 char barrier)
+   * Encode provided unchunked data  (ie without 76 char breaks)
    *
    * @param   
    *    data for encoding
@@ -94,24 +94,5 @@ public class Base64Utils
   public static String encode(String data) {
 
     return encode(data.getBytes());
-  }
-
-  /*
-   * Remove carriage return/linefeed  
-   */
-  private static String filter(String encoded) {
-    
-   StringBuffer filtered = new StringBuffer(encoded.length());
-
-   for (int i = 0; i < encoded.length(); i++) {
-
-     char ch = encoded.charAt(i);
-
-       if ((ch == '\r') || (ch =='\n')) {
-            continue;
-       }
-       filtered.append(encoded.substring(i, i + 1));
-    }
-    return filtered.toString();
   }
 }
