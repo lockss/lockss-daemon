@@ -359,10 +359,10 @@
     param[base_url] = http://alcalc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; finished ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
-    au < down ; finished ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
-    au < down ; finished ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
-    au < down ; finished ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
+    au < finished ; finished ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
+    au < finished ; finished ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
+    au < finished ; finished ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
+    au < finished ; finished ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
 
     }
 
@@ -793,8 +793,8 @@
     param[base_url] = http://aje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
-    au < down ; finished ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
+    au < finished ; finished ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
+    au < finished ; finished ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
     au < zapped ; finished ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
@@ -2124,7 +2124,7 @@
     param[base_url] = http://beheco.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
+    au < finished ; finished ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
     au < zapped ; finished ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
@@ -2180,7 +2180,7 @@
     param[base_url] = http://bioinformatics.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
+    au < finished ; finished ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
     au < zapped ; finished ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
 
     }
@@ -2473,7 +2473,7 @@
     param[base_url] = http://brain.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Brain Volume 131 ; 131 ; >
+    au < finished ; finished ; 2008 ; Brain Volume 131 ; 131 ; >
     au < zapped ; finished ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
     }
@@ -2487,7 +2487,7 @@
     au < down ; frozen ; 2010 ; Brain Volume 133 ; 133 ; >
     au < down ; frozen ; 2011 ; Brain Volume 134 ; 134 ; >
     au < down ; frozen ; 2012 ; Brain Volume 135 ; 135 ; >
-    au < down ; finished ; 2013 ; Brain Volume 136 ; 136 ; >
+    au < finished ; finished ; 2013 ; Brain Volume 136 ; 136 ; >
 
     }
 
@@ -3691,7 +3691,7 @@
     param[base_url] = http://cjres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
+    au < finished ; finished ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
     au < zapped ; finished ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
     }
@@ -3843,7 +3843,7 @@
     param[base_url] = http://carcin.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
+    au < finished ; finished ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
     au < zapped ; finished ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
     }
@@ -3929,22 +3929,22 @@
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
     au < zapped ; finished ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
-    au < down ; finished ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
-    au < down ; finished ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
-    au < down ; finished ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
-    au < down ; finished ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
-    au < down ; finished ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
-    au < down ; finished ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
-    au < down ; finished ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
-    au < down ; finished ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
+    au < finished ; finished ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
+    au < finished ; finished ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
+    au < finished ; finished ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
+    au < finished ; finished ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
+    au < finished ; finished ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
+    au < finished ; finished ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
+    au < finished ; finished ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
+    au < finished ; finished ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
     au < frozen ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
-    au < down ; finished ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
-    au < down ; finished ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
-    au < down ; finished ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
-    au < down ; finished ; 2013 ; Cardiovascular Research Volume 97 ; 97 ; >
-    au < down ; finished ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
-    au < down ; finished ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
-    au < down ; finished ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
+    au < finished ; finished ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
+    au < finished ; finished ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
+    au < finished ; finished ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
+    au < finished ; finished ; 2013 ; Cardiovascular Research Volume 97 ; 97 ; >
+    au < finished ; finished ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
+    au < finished ; finished ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
+    au < finished ; finished ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
 
     }
 
@@ -4084,7 +4084,7 @@
     param[base_url] = http://cercor.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
+    au < finished ; finished ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
     au < zapped ; finished ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
     }
@@ -4796,7 +4796,7 @@
     param[base_url] = http://ceaccp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
+    au < finished ; finished ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
     au < zapped ; finished ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; reingest4.clockss.org:8082 >
 
     }
@@ -5564,9 +5564,9 @@
     au < down ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
     au < down ; exists ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
     au < down ; frozen ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
-    au < down ; finished ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
-    au < down ; finished ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
-    au < down ; finished ; 2012 ; Enterprise & Society Volume 13 ; 13 ; >
+    au < finished ; finished ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
+    au < finished ; finished ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
+    au < finished ; finished ; 2012 ; Enterprise & Society Volume 13 ; 13 ; >
     au < down ; exists ; 2013 ; Enterprise & Society Volume 14 ; 14 ; >
     au < finished ; crawling ; 2014 ; Enterprise & Society Volume 15 ; 15 ; reingest5.clockss.org:8082 >
 
@@ -5926,7 +5926,7 @@
     au < down ; frozen ; 2010 ; Europace Volume 12 ; 12 ; >
     au < down ; frozen ; 2011 ; Europace Volume 13 ; 13 ; >
     au < down ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
-    au < down ; finished ; 2013 ; Europace Volume 15 ; 15 ; >
+    au < finished ; finished ; 2013 ; Europace Volume 15 ; 15 ; >
 
     }
 
@@ -6070,10 +6070,10 @@
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; finished ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
-    au < down ; finished ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
-    au < down ; finished ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
-    au < down ; finished ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
+    au < finished ; finished ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
+    au < finished ; finished ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < finished ; finished ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
+    au < finished ; finished ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 ; >
 
     }
 
@@ -6187,9 +6187,9 @@
     comment[down] = Moved to Drupal platform
 
     au < superseded ; down ; 2010 ; European Journal of Echocardiography Volume 11 [to delete] ; 11 ; >
-    au < down ; finished ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
-    au < down ; finished ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
-    au < down ; finished ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
+    au < finished ; finished ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < finished ; finished ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
+    au < finished ; finished ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
 
     }
 
@@ -6246,7 +6246,7 @@
     param[base_url] = http://ejechocard.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; finished ; 2010 ; European Journal of Echocardiography Volume 11 [superseded] ; 11 ; >
+    au < finished ; finished ; 2010 ; European Journal of Echocardiography Volume 11 [superseded] ; 11 ; >
 
     }
 
@@ -6284,9 +6284,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < down ; frozen ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
-    au < down ; finished ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
-    au < down ; finished ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
-    au < down ; finished ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 ; >
+    au < finished ; finished ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
+    au < finished ; finished ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
+    au < finished ; finished ; 2013 ; European Journal of Heart Failure Volume 15 ; 15 ; >
 
     }
 
@@ -6326,7 +6326,7 @@
     param[base_url] = http://ejil.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
+    au < finished ; finished ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < zapped ; finished ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
 
     }
@@ -6394,9 +6394,9 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
     au < zapped ; finished ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
-    au < down ; finished ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
-    au < down ; finished ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
-    au < down ; finished ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
+    au < finished ; finished ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
+    au < finished ; finished ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
+    au < finished ; finished ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
     au < down ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; >
 
     }
@@ -6475,10 +6475,10 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
     au < down ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
-    au < down ; finished ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
-    au < down ; finished ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
-    au < down ; finished ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
-    au < down ; finished ; 2013 ; European Journal of Public Health Volume 23 ; 23 ; >
+    au < finished ; finished ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
+    au < finished ; finished ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
+    au < finished ; finished ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
+    au < finished ; finished ; 2013 ; European Journal of Public Health Volume 23 ; 23 ; >
 
     }
 
@@ -8893,7 +8893,7 @@
     param[base_url] = http://icesjms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
+    au < finished ; finished ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
     au < zapped ; finished ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
 
     }
@@ -9843,7 +9843,7 @@
     param[base_url] = http://intimm.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; International Immunology Volume 20 ; 20 ; >
+    au < finished ; finished ; 2008 ; International Immunology Volume 20 ; 20 ; >
     au < zapped ; finished ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
 
     }
@@ -9959,7 +9959,7 @@
     param[base_url] = http://ije.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
+    au < finished ; finished ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
     au < zapped ; finished ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
 
     }
@@ -10278,7 +10278,7 @@
     param[base_url] = http://ijpor.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
+    au < finished ; finished ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
     au < zapped ; finished ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
@@ -10335,7 +10335,7 @@
     param[base_url] = http://intqhc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
+    au < finished ; finished ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
     au < zapped ; finished ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
@@ -10815,7 +10815,7 @@
     param[base_url] = http://jjco.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
+    au < finished ; finished ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
     au < superseded ; down ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 [superseded] ; 39 ; >
 
     }
@@ -11384,7 +11384,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
-    au < down ; finished ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
+    au < finished ; finished ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < superseded ; down ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 [superseded] ; 63 ; >
     au < superseded ; down ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 [superseded] ; 64 ; >
 
@@ -11485,7 +11485,7 @@
     param[base_url] = http://jb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
+    au < finished ; finished ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
     au < zapped ; finished ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
     au < zapped ; finished ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
     au < superseded ; down ; 2009 ; The Journal of Biochemistry Volume 146 [superseded] ; 146 ; >
@@ -14021,7 +14021,7 @@
     param[base_url] = http://jmp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
+    au < finished ; finished ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
     au < zapped ; finished ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
     }
@@ -14238,7 +14238,7 @@
     param[base_url] = http://jnci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Journal of the National Cancer Institute: JNCI Volume 100 ; 100 ; >
+    au < finished ; finished ; 2008 ; Journal of the National Cancer Institute: JNCI Volume 100 ; 100 ; >
     au < superseded ; down ; 2009 ; Journal of the National Cancer Institute: JNCI Volume 101 [superseded] ; 101 ; >
 
     }
@@ -14511,8 +14511,8 @@
     param[base_url] = http://petrology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
-    au < down ; finished ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
+    au < finished ; finished ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
+    au < finished ; finished ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
 
     }
 
@@ -14597,7 +14597,7 @@
     param[base_url] = http://plankt.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
+    au < finished ; finished ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < zapped ; finished ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
 
     }
@@ -16938,10 +16938,10 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     # move to Cell Press 2015-01-01
 
-    au < down ; finished ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
-    au < down ; finished ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
-    au < down ; finished ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
-    au < down ; finished ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
+    au < finished ; finished ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
+    au < finished ; finished ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
+    au < finished ; finished ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
+    au < finished ; finished ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
     au < down ; exists ; 2013 ; Molecular Plant Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Molecular Plant Volume 7 ; 7 ; reingest3.clockss.org:8083 >
 
@@ -17751,7 +17751,7 @@
     param[base_url] = http://mutage.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
+    au < finished ; finished ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
     au < zapped ; finished ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
 
     }
@@ -17814,7 +17814,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; NDT Plus Volume 1 ; 1 ; >
-    au < down ; finished ; 2009 ; NDT Plus Volume 2 ; 2 ; >
+    au < finished ; finished ; 2009 ; NDT Plus Volume 2 ; 2 ; >
 
     }
 
@@ -18323,7 +18323,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; frozen ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
-    au < down ; finished ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
+    au < finished ; finished ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
 
     }
 
@@ -19672,7 +19672,7 @@
     param[base_url] = http://pcp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
+    au < finished ; finished ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
     au < superseded ; down ; 2009 ; Plant and Cell Physiology Volume 50 [superseded] ; 50 ; >
 
     }
@@ -19854,7 +19854,7 @@
 
     au < zapped ; finished ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
     au < zapped ; finished ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
-    au < down ; finished ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
+    au < finished ; finished ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
     au < zapped ; finished ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
 
     }
@@ -20623,7 +20623,7 @@
     au < finished ; frozen ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
     au < down ; frozen ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
-    au < down ; finished ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
+    au < finished ; finished ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
 
     }
 
@@ -21736,7 +21736,7 @@
     param[base_url] = http://rfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
+    au < finished ; finished ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
     au < zapped ; finished ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
     }
@@ -21794,7 +21794,7 @@
     param[base_url] = http://rheumatology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Rheumatology Volume 47 ; 47 ; >
+    au < finished ; finished ; 2008 ; Rheumatology Volume 47 ; 47 ; >
     au < zapped ; finished ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
     }
@@ -21885,7 +21885,7 @@
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; finished ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
+    au < finished ; finished ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
     au < zapped ; finished ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
     }
@@ -22940,7 +22940,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 101 [superseded] ; 101 ; >
-    au < down ; finished ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
+    au < finished ; finished ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
     au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 103 [superseded] ; 103 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
     au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
