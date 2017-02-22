@@ -15,15 +15,15 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://jaha.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2012 ; Journal of the American Heart Association Volume 1 ; 1 >
-      au < released ; 2013 ; Journal of the American Heart Association Volume 2 ; 2 >
-      au < released ; 2014 ; Journal of the American Heart Association Volume 3 ; 3 >
-      au < released ; 2015 ; Journal of the American Heart Association Volume 4 ; 4 >
-      au < manifest ; 2016 ; Journal of the American Heart Association Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the American Heart Association Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the American Heart Association Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the American Heart Association Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Journal of the American Heart Association Volume 4 ; 4 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Journal of the American Heart Association Volume 5 ; 5 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Journal of the American Heart Association Volume 6 ; 6 >
 
     }
 
@@ -39,46 +39,46 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://atvb.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1981 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 1 ; 1 >
-      au < released ; 1982 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 2 ; 2 >
-      au < released ; 1983 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 3 ; 3 >
-      au < released ; 1984 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 4 ; 4 >
-      au < released ; 1985 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 5 ; 5 >
-      au < released ; 1986 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 6 ; 6 >
-      au < released ; 1987 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 7 ; 7 >
-      au < released ; 1988 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 8 ; 8 >
-      au < released ; 1989 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 9 ; 9 >
-      au < released ; 1990 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 10 ; 10 >
-      au < released ; 1991 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 11 ; 11 >
-      au < released ; 1992 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 12 ; 12 >
-      au < released ; 1993 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 13 ; 13 >
-      au < released ; 1994 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 14 ; 14 >
-      au < released ; 1995 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 15 ; 15 >
-      au < released ; 1996 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 16 ; 16 >
-      au < released ; 1997 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 17 ; 17 >
-      au < released ; 1998 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 18 ; 18 >
-      au < released ; 1999 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 19 ; 19 >
-      au < released ; 2000 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 20 ; 20 >
-      au < released ; 2001 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 21 ; 21 >
-      au < released ; 2002 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 22 ; 22 >
-      au < released ; 2003 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 23 ; 23 >
-      au < released ; 2004 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 24 ; 24 >
-      au < released ; 2005 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 25 ; 25 >
-      au < released ; 2006 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26 ; 26 >
-      au < released ; 2007 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 27 ; 27 >
-      au < released ; 2008 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 28 ; 28 >
-      au < released ; 2009 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 29 ; 29 >
-      au < released ; 2010 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 30 ; 30 >
-      au < released ; 2011 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 31 ; 31 >
-      au < released ; 2012 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 32 ; 32 >
-      au < released ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
-      au < released ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
-      au < released ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
-      au < manifest ; 2016 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 1981 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1982 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1983 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1984 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1985 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1986 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1987 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1988 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1989 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1990 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 1991 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 1992 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 1993 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 36 ; 36 >
+      au < aha.AHADrupalPlugin ; expected ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
 
     }
 
@@ -246,129 +246,128 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circres.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1953 ; Circulation Research Volume 1 ; 1 >
-      au < manifest ; 1954 ; Circulation Research Volume 2 ; 2 >
-      au < manifest ; 1955 ; Circulation Research Volume 3 ; 3 >
-      au < manifest ; 1956 ; Circulation Research Volume 4 ; 4 >
-      au < manifest ; 1957 ; Circulation Research Volume 5 ; 5 >
-      au < manifest ; 1958 ; Circulation Research Volume 6 ; 6 >
-      au < manifest ; 1959 ; Circulation Research Volume 7 ; 7 >
-      au < manifest ; 1960 ; Circulation Research Volume 8 ; 8 >
-      au < manifest ; 1961 ; Circulation Research Volume 9 ; 9 >
-      au < manifest ; 1962 ; Circulation Research Volume 10 ; 10 >
-      au < manifest ; 1962 ; Circulation Research Volume 11 ; 11 >
-      au < manifest ; 1963 ; Circulation Research Volume 12 ; 12 >
-      au < manifest ; 1963 ; Circulation Research Volume 13 ; 13 >
-      au < manifest ; 1964 ; Circulation Research Volume 14 ; 14 >
-      au < manifest ; 1964 ; Circulation Research Volume 15 ; 15 >
-      au < manifest ; 1965 ; Circulation Research Volume 16 ; 16 >
-      au < manifest ; 1965 ; Circulation Research Volume 17 ; 17 >
-      au < manifest ; 1966 ; Circulation Research Volume 18 ; 18 >
-      au < manifest ; 1966 ; Circulation Research Volume 19 ; 19 >
-      au < manifest ; 1967 ; Circulation Research Volume 20 ; 20 >
-      au < manifest ; 1967 ; Circulation Research Volume 21 ; 21 >
-      au < manifest ; 1968 ; Circulation Research Volume 22 ; 22 >
-      au < manifest ; 1968 ; Circulation Research Volume 23 ; 23 >
-      au < manifest ; 1969 ; Circulation Research Volume 24 ; 24 >
-      au < manifest ; 1969 ; Circulation Research Volume 25 ; 25 >
-      au < manifest ; 1970 ; Circulation Research Volume 26 ; 26 >
-      au < manifest ; 1970 ; Circulation Research Volume 27 ; 27 >
-      au < manifest ; 1971 ; Circulation Research Volume 28 ; 28 >
-      au < manifest ; 1971 ; Circulation Research Volume 29 ; 29 >
-      au < manifest ; 1972 ; Circulation Research Volume 30 ; 30 >
-      au < manifest ; 1972 ; Circulation Research Volume 31 ; 31 >
-      au < manifest ; 1973 ; Circulation Research Volume 32 ; 32 >
-      au < manifest ; 1973 ; Circulation Research Volume 33 ; 33 >
-      au < manifest ; 1974 ; Circulation Research Volume 34 ; 34 >
-      au < manifest ; 1974 ; Circulation Research Volume 35 ; 35 >
-      au < manifest ; 1975 ; Circulation Research Volume 36 ; 36 >
-      au < manifest ; 1975 ; Circulation Research Volume 37 ; 37 >
-      au < manifest ; 1976 ; Circulation Research Volume 38 ; 38 >
-      au < manifest ; 1976 ; Circulation Research Volume 39 ; 39 >
-      au < manifest ; 1977 ; Circulation Research Volume 40 ; 40 >
-      au < manifest ; 1977 ; Circulation Research Volume 41 ; 41 >
-      au < manifest ; 1978 ; Circulation Research Volume 42 ; 42 >
-      au < manifest ; 1978 ; Circulation Research Volume 43 ; 43 >
-      au < manifest ; 1979 ; Circulation Research Volume 44 ; 44 >
-      au < manifest ; 1979 ; Circulation Research Volume 45 ; 45 >
-      au < manifest ; 1980 ; Circulation Research Volume 46 ; 46 >
-      au < manifest ; 1980 ; Circulation Research Volume 47 ; 47 >
-      au < manifest ; 1981 ; Circulation Research Volume 48 ; 48 >
-      au < manifest ; 1981 ; Circulation Research Volume 49 ; 49 >
-      au < manifest ; 1982 ; Circulation Research Volume 50 ; 50 >
-      au < manifest ; 1982 ; Circulation Research Volume 51 ; 51 >
-      au < manifest ; 1983 ; Circulation Research Volume 52 ; 52 >
-      au < manifest ; 1983 ; Circulation Research Volume 53 ; 53 >
-      au < manifest ; 1984 ; Circulation Research Volume 54 ; 54 >
-      au < manifest ; 1984 ; Circulation Research Volume 55 ; 55 >
-      au < manifest ; 1985 ; Circulation Research Volume 56 ; 56 >
-      au < manifest ; 1985 ; Circulation Research Volume 57 ; 57 >
-      au < manifest ; 1986 ; Circulation Research Volume 58 ; 58 >
-      au < manifest ; 1986 ; Circulation Research Volume 59 ; 59 >
-      au < manifest ; 1987 ; Circulation Research Volume 60 ; 60 >
-      au < manifest ; 1987 ; Circulation Research Volume 61 ; 61 >
-      au < manifest ; 1988 ; Circulation Research Volume 62 ; 62 >
-      au < manifest ; 1988 ; Circulation Research Volume 63 ; 63 >
-      au < manifest ; 1989 ; Circulation Research Volume 64 ; 64 >
-      au < manifest ; 1989 ; Circulation Research Volume 65 ; 65 >
-      au < manifest ; 1990 ; Circulation Research Volume 66 ; 66 >
-      au < manifest ; 1990 ; Circulation Research Volume 67 ; 67 >
-      au < manifest ; 1991 ; Circulation Research Volume 68 ; 68 >
-      au < manifest ; 1991 ; Circulation Research Volume 69 ; 69 >
-      au < manifest ; 1992 ; Circulation Research Volume 70 ; 70 >
-      au < manifest ; 1992 ; Circulation Research Volume 71 ; 71 >
-      au < manifest ; 1993 ; Circulation Research Volume 72 ; 72 >
-      au < manifest ; 1993 ; Circulation Research Volume 73 ; 73 >
-      au < manifest ; 1994 ; Circulation Research Volume 74 ; 74 >
-      au < manifest ; 1994 ; Circulation Research Volume 75 ; 75 >
-      au < manifest ; 1995 ; Circulation Research Volume 76 ; 76 >
-      au < manifest ; 1995 ; Circulation Research Volume 77 ; 77 >
-      au < manifest ; 1996 ; Circulation Research Volume 78 ; 78 >
-      au < manifest ; 1996 ; Circulation Research Volume 79 ; 79 >
-      au < manifest ; 1997 ; Circulation Research Volume 80 ; 80 >
-      au < manifest ; 1997 ; Circulation Research Volume 81 ; 81 >
-      au < manifest ; 1998 ; Circulation Research Volume 82 ; 82 >
-      au < manifest ; 1998 ; Circulation Research Volume 83 ; 83 >
-      au < manifest ; 1999 ; Circulation Research Volume 84 ; 84 >
-      au < manifest ; 1999 ; Circulation Research Volume 85 ; 85 >
-      au < released ; 2000 ; Circulation Research Volume 86 ; 86 >
-      au < released ; 2000 ; Circulation Research Volume 87 ; 87 >
-      au < released ; 2001 ; Circulation Research Volume 88 ; 88 >
-      au < released ; 2001 ; Circulation Research Volume 89 ; 89 >
-      au < released ; 2002 ; Circulation Research Volume 90 ; 90 >
-      au < released ; 2002 ; Circulation Research Volume 91 ; 91 >
-      au < released ; 2003 ; Circulation Research Volume 92 ; 92 >
-      au < released ; 2003 ; Circulation Research Volume 93 ; 93 >
-      au < released ; 2004 ; Circulation Research Volume 94 ; 94 >
-      au < released ; 2004 ; Circulation Research Volume 95 ; 95 >
-      au < released ; 2005 ; Circulation Research Volume 96 ; 96 >
-      au < released ; 2005 ; Circulation Research Volume 97 ; 97 >
-      au < released ; 2006 ; Circulation Research Volume 98 ; 98 >
-      au < released ; 2006 ; Circulation Research Volume 99 ; 99 >
-      au < released ; 2007 ; Circulation Research Volume 100 ; 100 >
-      au < released ; 2007 ; Circulation Research Volume 101 ; 101 >
-      au < released ; 2008 ; Circulation Research Volume 102 ; 102 >
-      au < released ; 2008 ; Circulation Research Volume 103 ; 103 >
-      au < released ; 2009 ; Circulation Research Volume 104 ; 104 >
-      au < released ; 2009 ; Circulation Research Volume 105 ; 105 >
-      au < released ; 2010 ; Circulation Research Volume 106 ; 106 >
-      au < released ; 2010 ; Circulation Research Volume 107 ; 107 >
-      au < released ; 2011 ; Circulation Research Volume 108 ; 108 >
-      au < released ; 2011 ; Circulation Research Volume 109 ; 109 >
-      au < released ; 2012 ; Circulation Research Volume 110 ; 110 >
-      au < released ; 2012 ; Circulation Research Volume 111 ; 111 >
-      au < released ; 2013 ; Circulation Research Volume 112 ; 112 >
-      au < released ; 2013 ; Circulation Research Volume 113 ; 113 >
-      au < released ; 2014 ; Circulation Research Volume 114 ; 114 >
-      au < released ; 2014 ; Circulation Research Volume 115 ; 115 >
-      au < released ; 2015 ; Circulation Research Volume 116 ; 116 >
-      au < released ; 2015 ; Circulation Research Volume 117 ; 117 >
-      au < manifest ; 2016 ; Circulation Research Volume 118 ; 118 >
-      au < manifest ; 2016 ; Circulation Research Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; manifest ; 1953 ; Circulation Research Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1954 ; Circulation Research Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1955 ; Circulation Research Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1956 ; Circulation Research Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1957 ; Circulation Research Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1958 ; Circulation Research Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1959 ; Circulation Research Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1960 ; Circulation Research Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1961 ; Circulation Research Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Circulation Research Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Circulation Research Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Circulation Research Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Circulation Research Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Circulation Research Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Circulation Research Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1965 ; Circulation Research Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1965 ; Circulation Research Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1966 ; Circulation Research Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1966 ; Circulation Research Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1967 ; Circulation Research Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1967 ; Circulation Research Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1968 ; Circulation Research Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1968 ; Circulation Research Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1969 ; Circulation Research Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1969 ; Circulation Research Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Circulation Research Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Circulation Research Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Circulation Research Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Circulation Research Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Circulation Research Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Circulation Research Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Circulation Research Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Circulation Research Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Circulation Research Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Circulation Research Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Circulation Research Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Circulation Research Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Circulation Research Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Circulation Research Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Circulation Research Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Circulation Research Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Circulation Research Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Circulation Research Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Circulation Research Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Circulation Research Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Circulation Research Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Circulation Research Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Circulation Research Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Circulation Research Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Circulation Research Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Circulation Research Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Circulation Research Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Circulation Research Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Circulation Research Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Circulation Research Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Circulation Research Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Circulation Research Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Circulation Research Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Circulation Research Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Circulation Research Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Circulation Research Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Circulation Research Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Circulation Research Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Circulation Research Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Circulation Research Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Circulation Research Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Circulation Research Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Circulation Research Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Circulation Research Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Circulation Research Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Circulation Research Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Circulation Research Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Circulation Research Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Circulation Research Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Circulation Research Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Circulation Research Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Circulation Research Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Circulation Research Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Circulation Research Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Circulation Research Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Circulation Research Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Circulation Research Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Circulation Research Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Circulation Research Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Circulation Research Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Circulation Research Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Circulation Research Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Circulation Research Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Circulation Research Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Circulation Research Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Circulation Research Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Circulation Research Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Circulation Research Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Circulation Research Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Circulation Research Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Circulation Research Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Circulation Research Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Circulation Research Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Circulation Research Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Circulation Research Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Circulation Research Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation Research Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation Research Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation Research Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation Research Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation Research Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation Research Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation Research Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation Research Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation Research Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation Research Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation Research Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation Research Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation Research Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation Research Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation Research Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation Research Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Circulation Research Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Circulation Research Volume 119 ; 119 >
 
     }
 
@@ -384,19 +383,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circep.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Arrhythmia and Electrophysiology Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Arrhythmia and Electrophysiology Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Arrhythmia and Electrophysiology Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Arrhythmia and Electrophysiology Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Arrhythmia and Electrophysiology Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Arrhythmia and Electrophysiology Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Arrhythmia and Electrophysiology Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Arrhythmia and Electrophysiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Arrhythmia and Electrophysiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Arrhythmia and Electrophysiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Arrhythmia and Electrophysiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Arrhythmia and Electrophysiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Arrhythmia and Electrophysiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Arrhythmia and Electrophysiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Arrhythmia and Electrophysiology Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Arrhythmia and Electrophysiology Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Arrhythmia and Electrophysiology Volume 10 ; 10 >
 
     }
 
@@ -412,19 +411,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circgenetics.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Cardiovascular Genetics Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Cardiovascular Genetics Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Cardiovascular Genetics Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Cardiovascular Genetics Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Cardiovascular Genetics Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Cardiovascular Genetics Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Cardiovascular Genetics Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Cardiovascular Genetics Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Cardiovascular Genetics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Cardiovascular Genetics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Cardiovascular Genetics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Cardiovascular Genetics Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Cardiovascular Genetics Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Genetics Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Genetics Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Genetics Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Genetics Volume 10 ; 10 >
 
     }
 
@@ -440,19 +439,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circimaging.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Cardiovascular Imaging Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Cardiovascular Imaging Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Cardiovascular Imaging Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Cardiovascular Imaging Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Cardiovascular Imaging Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Cardiovascular Imaging Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Cardiovascular Imaging Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Cardiovascular Imaging Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Cardiovascular Imaging Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Cardiovascular Imaging Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Cardiovascular Imaging Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Cardiovascular Imaging Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Cardiovascular Imaging Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Cardiovascular Imaging Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Imaging Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Imaging Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Imaging Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Imaging Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Imaging Volume 10 ; 10 >
 
     }
 
@@ -468,19 +467,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circinterventions.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Cardiovascular Interventions Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Cardiovascular Interventions Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Cardiovascular Interventions Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Cardiovascular Interventions Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Cardiovascular Interventions Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Cardiovascular Interventions Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Cardiovascular Interventions Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Cardiovascular Interventions Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Cardiovascular Interventions Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Cardiovascular Interventions Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Cardiovascular Interventions Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Cardiovascular Interventions Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Cardiovascular Interventions Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Cardiovascular Interventions Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Interventions Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Interventions Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Interventions Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Interventions Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Interventions Volume 10 ; 10 >
 
     }
 
@@ -496,19 +495,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circoutcomes.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Cardiovascular Quality and Outcomes Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Cardiovascular Quality and Outcomes Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Cardiovascular Quality and Outcomes Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Cardiovascular Quality and Outcomes Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Cardiovascular Quality and Outcomes Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Cardiovascular Quality and Outcomes Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Cardiovascular Quality and Outcomes Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Cardiovascular Quality and Outcomes Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Cardiovascular Quality and Outcomes Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Cardiovascular Quality and Outcomes Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Cardiovascular Quality and Outcomes Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Cardiovascular Quality and Outcomes Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Cardiovascular Quality and Outcomes Volume 10 ; 10 >
 
     }
 
@@ -524,19 +523,19 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://circheartfailure.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
-      au < released ; 2009 ; Circulation: Heart Failure Volume 2 ; 2 >
-      au < released ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
-      au < released ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
-      au < released ; 2012 ; Circulation: Heart Failure Volume 5 ; 5 >
-      au < released ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
-      au < released ; 2014 ; Circulation: Heart Failure Volume 7 ; 7 >
-      au < released ; 2015 ; Circulation: Heart Failure Volume 8 ; 8 >
-      au < manifest ; 2016 ; Circulation: Heart Failure Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Circulation: Heart Failure Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Circulation: Heart Failure Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Circulation: Heart Failure Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Circulation: Heart Failure Volume 8 ; 8 >
+      au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation: Heart Failure Volume 9 ; 9 >
+      au < aha.AHADrupalPlugin ; manifest ; 2017 ; Circulation: Heart Failure Volume 10 ; 10 >
 
     }
 
@@ -552,78 +551,77 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://hyper.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1979 ; Hypertension Volume 1 ; 1 >
-      au < manifest ; 1980 ; Hypertension Volume 2 ; 2 >
-      au < manifest ; 1981 ; Hypertension Volume 3 ; 3 >
-      au < manifest ; 1982 ; Hypertension Volume 4 ; 4 >
-      au < manifest ; 1983 ; Hypertension Volume 5 ; 5 >
-      au < manifest ; 1984 ; Hypertension Volume 6 ; 6 >
-      au < manifest ; 1985 ; Hypertension Volume 7 ; 7 >
-      au < manifest ; 1986 ; Hypertension Volume 8 ; 8 >
-      au < manifest ; 1987 ; Hypertension Volume 9 ; 9 >
-      au < manifest ; 1987 ; Hypertension Volume 10 ; 10 >
-      au < manifest ; 1988 ; Hypertension Volume 11 ; 11 >
-      au < manifest ; 1988 ; Hypertension Volume 12 ; 12 >
-      au < manifest ; 1989 ; Hypertension Volume 13 ; 13 >
-      au < manifest ; 1989 ; Hypertension Volume 14 ; 14 >
-      au < manifest ; 1990 ; Hypertension Volume 15 ; 15 >
-      au < manifest ; 1990 ; Hypertension Volume 16 ; 16 >
-      au < manifest ; 1991 ; Hypertension Volume 17 ; 17 >
-      au < manifest ; 1991 ; Hypertension Volume 18 ; 18 >
-      au < manifest ; 1992 ; Hypertension Volume 19 ; 19 >
-      au < manifest ; 1992 ; Hypertension Volume 20 ; 20 >
-      au < manifest ; 1993 ; Hypertension Volume 21 ; 21 >
-      au < manifest ; 1993 ; Hypertension Volume 22 ; 22 >
-      au < manifest ; 1994 ; Hypertension Volume 23 ; 23 >
-      au < manifest ; 1994 ; Hypertension Volume 24 ; 24 >
-      au < manifest ; 1995 ; Hypertension Volume 25 ; 25 >
-      au < manifest ; 1995 ; Hypertension Volume 26 ; 26 >
-      au < manifest ; 1996 ; Hypertension Volume 27 ; 27 >
-      au < manifest ; 1996 ; Hypertension Volume 28 ; 28 >
-      au < manifest ; 1997 ; Hypertension Volume 29 ; 29 >
-      au < manifest ; 1997 ; Hypertension Volume 30 ; 30 >
-      au < manifest ; 1998 ; Hypertension Volume 31 ; 31 >
-      au < manifest ; 1998 ; Hypertension Volume 32 ; 32 >
-      au < manifest ; 1999 ; Hypertension Volume 33 ; 33 >
-      au < manifest ; 1999 ; Hypertension Volume 34 ; 34 >
-      au < released ; 2000 ; Hypertension Volume 35 ; 35 >
-      au < released ; 2000 ; Hypertension Volume 36 ; 36 >
-      au < released ; 2001 ; Hypertension Volume 37 ; 37 >
-      au < released ; 2001 ; Hypertension Volume 38 ; 38 >
-      au < released ; 2002 ; Hypertension Volume 39 ; 39 >
-      au < released ; 2002 ; Hypertension Volume 40 ; 40 >
-      au < released ; 2003 ; Hypertension Volume 41 ; 41 >
-      au < released ; 2003 ; Hypertension Volume 42 ; 42 >
-      au < released ; 2004 ; Hypertension Volume 43 ; 43 >
-      au < released ; 2004 ; Hypertension Volume 44 ; 44 >
-      au < released ; 2005 ; Hypertension Volume 45 ; 45 >
-      au < released ; 2005 ; Hypertension Volume 46 ; 46 >
-      au < released ; 2006 ; Hypertension Volume 47 ; 47 >
-      au < released ; 2006 ; Hypertension Volume 48 ; 48 >
-      au < released ; 2007 ; Hypertension Volume 49 ; 49 >
-      au < released ; 2007 ; Hypertension Volume 50 ; 50 >
-      au < released ; 2008 ; Hypertension Volume 51 ; 51 >
-      au < released ; 2008 ; Hypertension Volume 52 ; 52 >
-      au < released ; 2009 ; Hypertension Volume 53 ; 53 >
-      au < released ; 2009 ; Hypertension Volume 54 ; 54 >
-      au < released ; 2010 ; Hypertension Volume 55 ; 55 >
-      au < released ; 2010 ; Hypertension Volume 56 ; 56 >
-      au < released ; 2011 ; Hypertension Volume 57 ; 57 >
-      au < released ; 2011 ; Hypertension Volume 58 ; 58 >
-      au < released ; 2012 ; Hypertension Volume 59 ; 59 >
-      au < released ; 2012 ; Hypertension Volume 60 ; 60 >
-      au < released ; 2010 ; Hypertension Volume 61 ; 61 >
-      au < released ; 2013 ; Hypertension Volume 62 ; 62 >
-      au < released ; 2014 ; Hypertension Volume 63 ; 63 >
-      au < released ; 2014 ; Hypertension Volume 64 ; 64 >
-      au < released ; 2015 ; Hypertension Volume 65 ; 65 >
-      au < released ; 2015 ; Hypertension Volume 66 ; 66 >
-      au < manifest ; 2016 ; Hypertension Volume 67 ; 67 >
-      au < manifest ; 2016 ; Hypertension Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Hypertension Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Hypertension Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Hypertension Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Hypertension Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Hypertension Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Hypertension Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Hypertension Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Hypertension Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Hypertension Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Hypertension Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Hypertension Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Hypertension Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Hypertension Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Hypertension Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Hypertension Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Hypertension Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Hypertension Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Hypertension Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Hypertension Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Hypertension Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Hypertension Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Hypertension Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Hypertension Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Hypertension Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Hypertension Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Hypertension Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Hypertension Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Hypertension Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Hypertension Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Hypertension Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Hypertension Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Hypertension Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Hypertension Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Hypertension Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Hypertension Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Hypertension Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Hypertension Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Hypertension Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Hypertension Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Hypertension Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Hypertension Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Hypertension Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Hypertension Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Hypertension Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Hypertension Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Hypertension Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Hypertension Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Hypertension Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Hypertension Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Hypertension Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Hypertension Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Hypertension Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Hypertension Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Hypertension Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Hypertension Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Hypertension Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Hypertension Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Hypertension Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Hypertension Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Hypertension Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Hypertension Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Hypertension Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Hypertension Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Hypertension Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Hypertension Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Hypertension Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Hypertension Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Hypertension Volume 68 ; 68 >
 
     }
 
@@ -639,57 +637,56 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://stroke.ahajournals.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1970 ; Stroke Volume 1 ; 1 >
-      au < manifest ; 1971 ; Stroke Volume 2 ; 2 >
-      au < manifest ; 1972 ; Stroke Volume 3 ; 3 >
-      au < manifest ; 1973 ; Stroke Volume 4 ; 4 >
-      au < manifest ; 1974 ; Stroke Volume 5 ; 5 >
-      au < manifest ; 1975 ; Stroke Volume 6 ; 6 >
-      au < manifest ; 1976 ; Stroke Volume 7 ; 7 >
-      au < manifest ; 1977 ; Stroke Volume 8 ; 8 >
-      au < manifest ; 1978 ; Stroke Volume 9 ; 9 >
-      au < manifest ; 1979 ; Stroke Volume 10 ; 10 >
-      au < manifest ; 1980 ; Stroke Volume 11 ; 11 >
-      au < manifest ; 1981 ; Stroke Volume 12 ; 12 >
-      au < manifest ; 1982 ; Stroke Volume 13 ; 13 >
-      au < manifest ; 1983 ; Stroke Volume 14 ; 14 >
-      au < manifest ; 1984 ; Stroke Volume 15 ; 15 >
-      au < manifest ; 1985 ; Stroke Volume 16 ; 16 >
-      au < manifest ; 1986 ; Stroke Volume 17 ; 17 >
-      au < manifest ; 1987 ; Stroke Volume 18 ; 18 >
-      au < manifest ; 1988 ; Stroke Volume 19 ; 19 >
-      au < manifest ; 1989 ; Stroke Volume 20 ; 20 >
-      au < manifest ; 1980 ; Stroke Volume 21 ; 21 >
-      au < manifest ; 1981 ; Stroke Volume 22 ; 22 >
-      au < manifest ; 1982 ; Stroke Volume 23 ; 23 >
-      au < manifest ; 1983 ; Stroke Volume 24 ; 24 >
-      au < manifest ; 1984 ; Stroke Volume 25 ; 25 >
-      au < manifest ; 1985 ; Stroke Volume 26 ; 26 >
-      au < manifest ; 1986 ; Stroke Volume 27 ; 27 >
-      au < manifest ; 1987 ; Stroke Volume 28 ; 28 >
-      au < manifest ; 1988 ; Stroke Volume 29 ; 29 >
-      au < manifest ; 1999 ; Stroke Volume 30 ; 30 >
-      au < released ; 2000 ; Stroke Volume 31 ; 31 >
-      au < released ; 2001 ; Stroke Volume 32 ; 32 >
-      au < released ; 2002 ; Stroke Volume 33 ; 33 >
-      au < released ; 2003 ; Stroke Volume 34 ; 34 >
-      au < released ; 2004 ; Stroke Volume 35 ; 35 >
-      au < released ; 2005 ; Stroke Volume 36 ; 36 >
-      au < released ; 2006 ; Stroke Volume 37 ; 37 >
-      au < released ; 2007 ; Stroke Volume 38 ; 38 >
-      au < released ; 2008 ; Stroke Volume 39 ; 39 >
-      au < released ; 2009 ; Stroke Volume 40 ; 40 >
-      au < released ; 2010 ; Stroke Volume 41 ; 41 >
-      au < released ; 2011 ; Stroke Volume 42 ; 42 >
-      au < released ; 2012 ; Stroke Volume 43 ; 43 >
-      au < released ; 2013 ; Stroke Volume 44 ; 44 >
-      au < released ; 2014 ; Stroke Volume 45 ; 45 >
-      au < released ; 2015 ; Stroke Volume 46 ; 46 >
-      au < manifest ; 2016 ; Stroke Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Stroke Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Stroke Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Stroke Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Stroke Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Stroke Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Stroke Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Stroke Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Stroke Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Stroke Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Stroke Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Stroke Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Stroke Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Stroke Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Stroke Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Stroke Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Stroke Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Stroke Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Stroke Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Stroke Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Stroke Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Stroke Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Stroke Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Stroke Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Stroke Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Stroke Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Stroke Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Stroke Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Stroke Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Stroke Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Stroke Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Stroke Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Stroke Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Stroke Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Stroke Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Stroke Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Stroke Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Stroke Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Stroke Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Stroke Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Stroke Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Stroke Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Stroke Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Stroke Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Stroke Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Stroke Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Stroke Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Stroke Volume 47 ; 47 >
 
     }
 
