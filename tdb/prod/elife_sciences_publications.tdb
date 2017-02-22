@@ -14,44 +14,57 @@
     {
       param[base_url] = https://elifesciences.org/
 
-      au < manifest ; 2014 ; eLife January 2014 ; 2014/01 >
-      au < manifest ; 2014 ; eLife February 2014 ; 2014/02 >
-      au < manifest ; 2014 ; eLife March 2014 ; 2014/03 >
-      au < manifest ; 2014 ; eLife April 2014 ; 2014/04 >
-      au < manifest ; 2014 ; eLife May 2014 ; 2014/05 >
-      au < manifest ; 2014 ; eLife June 2014 ; 2014/06 >
-      au < manifest ; 2014 ; eLife July 2014 ; 2014/07 >
-      au < manifest ; 2014 ; eLife August 2014 ; 2014/08 >
-      au < manifest ; 2014 ; eLife September 2014 ; 2014/09 >
-      au < manifest ; 2014 ; eLife October 2014 ; 2014/10 >
-      au < manifest ; 2014 ; eLife November 2014 ; 2014/11 >
-      au < manifest ; 2014 ; eLife December 2014 ; 2014/12 >
+      au < ready ; 2014 ; eLife January 2014 ; 2014/01 >
+      au < ready ; 2014 ; eLife February 2014 ; 2014/02 >
+      au < ready ; 2014 ; eLife March 2014 ; 2014/03 >
+      au < ready ; 2014 ; eLife April 2014 ; 2014/04 >
+      au < ready ; 2014 ; eLife May 2014 ; 2014/05 >
+      au < ready ; 2014 ; eLife June 2014 ; 2014/06 >
+      au < ready ; 2014 ; eLife July 2014 ; 2014/07 >
+      au < ready ; 2014 ; eLife August 2014 ; 2014/08 >
+      au < ready ; 2014 ; eLife September 2014 ; 2014/09 >
+      au < ready ; 2014 ; eLife October 2014 ; 2014/10 >
+      au < ready ; 2014 ; eLife November 2014 ; 2014/11 >
+      au < ready ; 2014 ; eLife December 2014 ; 2014/12 >
 
-      au < manifest ; 2015 ; eLife January 2015 ; 2015/01 >
-      au < manifest ; 2015 ; eLife February 2015 ; 2015/02 >
-      au < manifest ; 2015 ; eLife March 2015 ; 2015/03 >
-      au < manifest ; 2015 ; eLife April 2015 ; 2015/04 >
-      au < manifest ; 2015 ; eLife May 2015 ; 2015/05 >
-      au < manifest ; 2015 ; eLife June 2015 ; 2015/06 >
-      au < manifest ; 2015 ; eLife July 2015 ; 2015/07 >
-      au < manifest ; 2015 ; eLife August 2015 ; 2015/08 >
-      au < manifest ; 2015 ; eLife September 2015 ; 2015/09 >
-      au < manifest ; 2015 ; eLife October 2015 ; 2015/10 >
-      au < manifest ; 2015 ; eLife November 2015 ; 2015/11 >
-      au < manifest ; 2015 ; eLife December 2015 ; 2015/12 >
+      au < ready ; 2015 ; eLife January 2015 ; 2015/01 >
+      au < ready ; 2015 ; eLife February 2015 ; 2015/02 >
+      au < ready ; 2015 ; eLife March 2015 ; 2015/03 >
+      au < ready ; 2015 ; eLife April 2015 ; 2015/04 >
+      au < ready ; 2015 ; eLife May 2015 ; 2015/05 >
+      au < ready ; 2015 ; eLife June 2015 ; 2015/06 >
+      au < ready ; 2015 ; eLife July 2015 ; 2015/07 >
+      au < ready ; 2015 ; eLife August 2015 ; 2015/08 >
+      au < ready ; 2015 ; eLife September 2015 ; 2015/09 >
+      au < ready ; 2015 ; eLife October 2015 ; 2015/10 >
+      au < ready ; 2015 ; eLife November 2015 ; 2015/11 >
+      au < ready ; 2015 ; eLife December 2015 ; 2015/12 >
 
-      au < manifest ; 2016 ; eLife January 2016 ; 2016/01 >
-      au < manifest ; 2016 ; eLife February 2016 ; 2016/02 >
-      au < manifest ; 2016 ; eLife March 2016 ; 2016/03 >
-      au < manifest ; 2016 ; eLife April 2016 ; 2016/04 >
-      au < manifest ; 2016 ; eLife May 2016 ; 2016/05 >
-      au < manifest ; 2016 ; eLife June 2016 ; 2016/06 >
-      au < manifest ; 2016 ; eLife July 2016 ; 2016/07 >
-      au < manifest ; 2016 ; eLife August 2016 ; 2016/08 >
-      au < manifest ; 2016 ; eLife September 2016 ; 2016/09 >
+      au < ready ; 2016 ; eLife January 2016 ; 2016/01 >
+      au < ready ; 2016 ; eLife February 2016 ; 2016/02 >
+      au < ready ; 2016 ; eLife March 2016 ; 2016/03 >
+      au < ready ; 2016 ; eLife April 2016 ; 2016/04 >
+      au < ready ; 2016 ; eLife May 2016 ; 2016/05 >
+      au < ready ; 2016 ; eLife June 2016 ; 2016/06 >
+      au < exists ; 2016 ; eLife July 2016 ; 2016/07 >
+      au < exists ; 2016 ; eLife August 2016 ; 2016/08 >
+      au < exists ; 2016 ; eLife September 2016 ; 2016/09 >
       au < exists ; 2016 ; eLife October 2016 ; 2016/10 >
-      au < expected ; 2016 ; eLife November 2016 ; 2016/11 >
-      au < expected ; 2016 ; eLife December 2016 ; 2016/12 >
+      au < exists ; 2016 ; eLife November 2016 ; 2016/11 >
+      au < exists ; 2016 ; eLife December 2016 ; 2016/12 >
+
+      au < expected ; 2017 ; eLife January 2017 ; 2017/01 >
+      au < expected ; 2017 ; eLife February 2017 ; 2017/02 >
+      au < expected ; 2017 ; eLife March 2017 ; 2017/03 >
+      au < expected ; 2017 ; eLife April 2017 ; 2017/04 >
+      au < expected ; 2017 ; eLife May 2017 ; 2017/05 >
+      au < expected ; 2017 ; eLife June 2017 ; 2017/06 >
+      au < expected ; 2017 ; eLife July 2017 ; 2017/07 >
+      au < expected ; 2017 ; eLife August 2017 ; 2017/08 >
+      au < expected ; 2017 ; eLife September 2017 ; 2017/09 >
+      au < expected ; 2017 ; eLife October 2017 ; 2017/10 >
+      au < expected ; 2017 ; eLife November 2017 ; 2017/11 >
+      au < expected ; 2017 ; eLife December 2017 ; 2017/12 >
     }
     {
       param[base_url] = http://elifesciences.org/
