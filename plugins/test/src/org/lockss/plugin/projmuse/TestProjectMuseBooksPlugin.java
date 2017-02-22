@@ -103,7 +103,7 @@ public class TestProjectMuseBooksPlugin extends LockssTestCase {
     props.setProperty(EISBN_KEY, "322");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Project Muse Books Plugin, Base URL http://www.example.com/, eISBN 322",
+    assertEquals("Project Muse Books Plugin (Legacy), Base URL http://www.example.com/, eISBN 322",
         au.getName());
   }
 

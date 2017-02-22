@@ -240,10 +240,10 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(HTTP_ROOT), DIR, 60);
-    assertEquals("Project Muse Journals Plugin, Base URL http://muse.jhu.edu/, Journal ID american_imago, Volume 60", au.getName());
+    assertEquals("Project Muse Journals Plugin (Legacy), Base URL http://muse.jhu.edu/, Journal ID american_imago, Volume 60", au.getName());
     DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), "bmj", 61);
-    assertEquals("Project Muse Journals Plugin, Base URL http://www.bmj.com/, Journal ID bmj, Volume 61", au1.getName());
+    assertEquals("Project Muse Journals Plugin (Legacy), Base URL http://www.bmj.com/, Journal ID bmj, Volume 61", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
