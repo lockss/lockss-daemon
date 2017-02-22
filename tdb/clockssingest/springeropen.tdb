@@ -65,7 +65,7 @@
   
         au < down ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Agricultural and Food Economics Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -84,7 +84,7 @@
         au < doNotProcess ; exists ; 2012 ; AMB Express Volume 2 ; 2 ; >
         au < down ; exists ; 2013 ; AMB Express Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; AMB Express Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; AMB Express Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; AMB Express Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -103,7 +103,7 @@
         au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 ; >
         au < down ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; >
         au < finished ; finished ; 2014 ; Annals of Intensive Care Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Annals of Intensive Care Volume 5 [superseded] ; 5 ; >
   
     }
 
@@ -120,7 +120,7 @@
 
         au < down ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Applied Adhesion Science Volume 3 [superseded] ; 3 ; >
 
     }
 
@@ -136,7 +136,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < finished ; finished ; 2014 ; Applied Informatics Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Applied Informatics Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -152,7 +152,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 [superseded] ; 2 ; >
   
     }
 
@@ -169,7 +169,7 @@
   
         au < down ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -185,7 +185,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 ; > #crawl completed with no substance
-        au < down ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -202,7 +202,7 @@
   
         au < down ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 ; >
         au < down ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 ; >
-        au < down ; exists ; 2015 ; Botanical Studies Volume 56 ; 56 ; >
+        au < superseded ; exists ; 2015 ; Botanical Studies Volume 56 [superseded] ; 56 ; >
   
     }
   
@@ -245,7 +245,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -261,7 +261,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < doNotProcess ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Chemical and Biological Technologies in Agriculture Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Chemical and Biological Technologies in Agriculture Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -277,7 +277,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; City, Territory and Architecture Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; City, Territory and Architecture Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -314,7 +314,7 @@
         au < doNotProcess ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; >
         au < doesNotExist ; doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -331,7 +331,7 @@
   
         au < down ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -346,7 +346,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 ; >
+        au < superseded ; exists ; 2015 ; Computational Cognitive Science Volume 1 [superseded] ; 1 ; >
   
     }
   
@@ -383,7 +383,7 @@
         au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 ; >
         au < down ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; >
         au < down ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; >
-        au < down ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 ; 7 ; >
+        au < superseded ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 [superseded] ; 7 ; >
   
     }
   
@@ -399,7 +399,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Decision Analytics Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Decision Analytics Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -415,7 +415,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Earth Perspectives Volume 2 [superseded] ; 2 ; >
   
     }
 
@@ -449,7 +449,7 @@
         au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Ecological Processes Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Ecological Processes Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Ecological Processes Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -465,7 +465,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; EJNMMI Physics Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; EJNMMI Physics Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -484,7 +484,7 @@
         au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 ; >
         au < down ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; EJNMMI Research Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; EJNMMI Research Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -501,7 +501,7 @@
   
         au < down ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; >
         au < down ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 ; >
-        au < down ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 ; 7 ; >
+        au < superseded ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 [superseded] ; 7 ; >
   
     }
   
@@ -520,7 +520,7 @@
         au < doNotProcess ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 ; >
         au < finished ; finished ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -539,7 +539,7 @@
         au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 ; >
         au < down ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; >
         au < down ; exists ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; >
-        au < down ; exists ; 2015 ; Environmental Sciences Europe Volume 27 ; 27 ; >
+        au < superseded ; exists ; 2015 ; Environmental Sciences Europe Volume 27 [superseded] ; 27 ; >
   
     }
   
@@ -557,7 +557,7 @@
         au < doNotProcess ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Environmental Systems Research Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Environmental Systems Research Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -575,7 +575,7 @@
         au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; EPJ Data Science Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; EPJ Data Science Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; EPJ Data Science Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -592,7 +592,7 @@
   
         au < down ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -608,7 +608,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; EPJ Quantum Technology Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; EPJ Quantum Technology Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -624,7 +624,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -643,7 +643,7 @@
   
         au < down ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 [superseded] ; 2015 ; >
         }
 
     }
@@ -661,8 +661,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 ; >
-        au < down ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 ; >
+        au < frozen ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 [superseded] ; 2015 ; >
 
     }
   
@@ -681,7 +681,7 @@
   
         au < down ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 [superseded] ; 2015 ; >
         }
 
     }
@@ -701,7 +701,7 @@
   
         au < finished ; finished ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 [superseded] ; 2015 ; >
         }
   
     }
@@ -721,7 +721,7 @@
   
         au < down ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 [superseded] ; 2015 ; >
         }
     }
   
@@ -767,7 +767,7 @@
   
         au < down ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 [superseded] ; 2015 ; >
         }
     }
   
@@ -786,7 +786,7 @@
   
         au < down ; exists ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 ; >
         au < down ; exists ; 2014 ; Evolution: Education and Outreach Volume 7 ; 7 ; >
-        au < down ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 ; 8 ; >
+        au < superseded ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 [superseded] ; 8 ; >
   
     }
   
@@ -832,7 +832,7 @@
         au < doNotProcess ; exists ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 ; >
         au < doNotProcess ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 ; >
         au < down ; exists ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 ; >
-        au < down ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 ; 2015 ; >
+        au < superseded ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 [superseded] ; 2015 ; >
   
     }
 
@@ -848,7 +848,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Forest Ecosystems Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Forest Ecosystems Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -864,7 +864,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < finished ; finished ; 2014 ; Functional Linguistics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-        au < down ; exists ; 2015 ; Functional Linguistics Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Functional Linguistics Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -880,7 +880,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Geoscience Letters Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Geoscience Letters Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -897,7 +897,7 @@
   
         au < down ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Geothermal Energy Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Geothermal Energy Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -914,7 +914,7 @@
   
         au < down ; exists ; 2013 ; Health & Justice Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; Health & Justice Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Health & Justice Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Health & Justice Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -933,7 +933,7 @@
         au < doNotProcess ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 ; >
         au < down ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Health Economics Review Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Health Economics Review Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Health Economics Review Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -953,7 +953,7 @@
         au < doNotProcess ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 ; >
         au < down ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 ; >
         au < down ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 ; >
-        au < down ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 ; >
+        au < superseded ; exists ; 2015 ; HUGO Journal Volume 9 [superseded] ; 9 ; >
   
     }
   
@@ -972,7 +972,7 @@
         au < doNotProcess ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 ; >
         au < down ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -989,7 +989,7 @@
   
         au < down ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; In Silico Pharmacology Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; In Silico Pharmacology Volume 3 [superseded] ; 3 ; >
   
     }
 
@@ -1005,7 +1005,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Injury Epidemiology Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Injury Epidemiology Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -1024,7 +1024,7 @@
         au < doNotProcess ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 ; >
         au < finished ; finished ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1041,7 +1041,7 @@
   
         au < down ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -1060,7 +1060,7 @@
         au < doNotProcess ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 ; >
         au < down ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 ; >
         au < down ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 ; >
-        au < down ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 ; >
+        au < superseded ; exists ; 2015 ; International Aquatic Research Volume 7 [superseded] ; 7 ; >
   
     }
   
@@ -1096,7 +1096,7 @@
   
         au < doNotProcess ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -1116,7 +1116,7 @@
         au < doNotProcess ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 ; >
         au < down ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; >
         au < down ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 ; >
-        au < down ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 ; >
+        au < superseded ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 [superseded] ; 8 ; >
   
     }
   
@@ -1151,7 +1151,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; International Journal of Food Contamination Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -1170,7 +1170,7 @@
         au < doNotProcess ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 ; >
         au < down ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; >
         au < down ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 ; >
-        au < down ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 ; >
+        au < superseded ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 [superseded] ; 6 ; >
   
     }
   
@@ -1203,7 +1203,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; International Journal of STEM Education Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -1240,7 +1240,7 @@
         au < doNotProcess ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1258,7 +1258,7 @@
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1276,7 +1276,7 @@
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1294,7 +1294,7 @@
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1312,7 +1312,7 @@
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; IZA Journal of Migration Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1329,7 +1329,7 @@
   
         au < down ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; >
         au < finished ; finished ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-        au < down ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 ; >
+        au < superseded ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 [superseded] ; 6 ; >
   
     }
   
@@ -1347,7 +1347,7 @@
         au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1363,7 +1363,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Journal Of Big Data Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -1381,7 +1381,7 @@
         au < doNotProcess ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1397,7 +1397,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Journal of Computational Surgery Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -1415,7 +1415,7 @@
         au < doNotProcess ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 ; >
         au < down ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Journal of Economic Structures Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -1431,7 +1431,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 [superseded] ; 2 ; >
   
     }
 
@@ -1548,7 +1548,7 @@
   
         au < doNotProcess ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 ; >
         au < down ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 ; >
-        au < down ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 ; >
+        au < superseded ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 [superseded] ; 6 ; >
   
     }
   
@@ -1586,7 +1586,7 @@
         au < doNotProcess ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -1720,7 +1720,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Journal of Trust Management Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -1737,7 +1737,7 @@
   
         au < doNotProcess ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 ; >
         au < down ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 ; >
-        au < down ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 ; >
+        au < superseded ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 [superseded] ; 3 ; >
   
     }
   
@@ -1861,7 +1861,7 @@
 
         au < doNotProcess ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 ; >
         #PD-1535 xml page processing error
-        au < down ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Nano Convergence Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -1903,7 +1903,7 @@
   
         au < doNotProcess ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 ; >
         au < down ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 ; >
-        au < down ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 ; >
+        au < superseded ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 [superseded] ; 45 ; >
   
     }
   
@@ -1940,7 +1940,7 @@
         au < doNotProcess ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -1959,7 +1959,7 @@
         au < doNotProcess ; exists ; 2012 ; Pastoralism Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Pastoralism Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Pastoralism Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Pastoralism Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Pastoralism Volume 5 [superseded] ; 5 ; >
   
     }
   
@@ -1977,7 +1977,7 @@
         au < doNotProcess ; exists ; 2012 ; Planetary Science Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; Planetary Science Volume 2 ; 2 ; >
         au < down ; exists ; 2014 ; Planetary Science Volume 3 ; 3 ; >
-        au < down ; exists ; 2015 ; Planetary Science Volume 4 ; 4 ; >
+        au < superseded ; exists ; 2015 ; Planetary Science Volume 4 [superseded] ; 4 ; >
   
     }
   
@@ -2009,7 +2009,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 [superseded] ; 2 ; >
   
     }
   
@@ -2028,7 +2028,7 @@
         au < doNotProcess ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 ; >
         au < down ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 ; >
-        au < down ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 ; >
+        au < superseded ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 [superseded] ; 5 ; >
   
     }
 
@@ -2044,7 +2044,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 ; >
-        au < down ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 ; >
+        au < superseded ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -2061,7 +2061,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 ; >
-        au < down ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 ; >
+        au < superseded ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 [superseded] ; 88 ; >
 
     }
 
@@ -2200,7 +2200,7 @@
 
         au < doNotProcess ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 ; >
         au < down ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 ; >
-        au < down ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 ; >
+        au < superseded ; exists ; 2015 ; Zoological Studies Volume 54 [superseded] ; 54 ; >
 
     }
 
@@ -2296,7 +2296,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 ; >
+      au < superseded ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 [superseded] ; 2 ; >
 
     }
 
@@ -2331,7 +2331,7 @@
 
       au < doNotProcess ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 ; >
       au < down ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 ; >
-      au < down ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 ; >
+      au < superseded ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 [superseded] ; 3 ; >
 
     }
 
@@ -2413,7 +2413,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 ; >
+      au < superseded ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 [superseded] ; 37 ; >
 
     }
 
