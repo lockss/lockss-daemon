@@ -60,7 +60,7 @@
     au < finished ; frozen ; 2012 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 3 ; 3 ; > 
     au < down ; exists ; 2013 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 4 ; 4 ; > 
     au < down ; exists ; 2014 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 5 ; 5 ; > 
-    au < down ; exists ; 2015 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 6 ; 6 ; > 
+    au < superseded ; exists ; 2015; Advances in Natural Science: Nanoscience and Nanotechnology Volume 6 [superseded] ; 6 ; > #no substance
 
   }
 
@@ -83,7 +83,7 @@
     au < finished ; finished ; 2012 ; Applied Physics Express Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; Applied Physics Express Volume 6 ; 6 ; >
     au < down ; exists ; 2014 ; Applied Physics Express Volume 7 ; 7 ; >
-    au < down ; exists ; 2015 ; Applied Physics Express Volume 8 ; 8 ; >
+    au < superseded ; exists ; 2015; Applied Physics Express Volume 8 [superseded] ; 8 ; > #no substance
 
   }
 
@@ -155,7 +155,7 @@
     au < finished ; crawling ; 2012 ; Biomedical Materials Volume 7 ; 7 ; > 
     au < down ; exists ; 2013 ; Biomedical Materials Volume 8 ; 8 ; > 
     au < down ; exists ; 2014 ; Biomedical Materials Volume 9 ; 9 ; > 
-    au < down ; exists ; 2015 ; Biomedical Materials Volume 10 ; 10 ; > 
+    au < superseded ; exists ; 2015; Biomedical Materials Volume 10 [superseded] ; 10 ; > #no substance
 
   }
   
@@ -284,7 +284,7 @@
     au < down ; exists ; 2012 ; Chinese Physics B Volume 21 ; 21 ; >
     au < down ; exists ; 2013 ; Chinese Physics B Volume 22 ; 22 ; >
     au < down ; exists ; 2014 ; Chinese Physics B Volume 23 ; 23 ; >
-    au < down ; exists ; 2015 ; Chinese Physics B Volume 24 ; 24 ; >
+    au < superseded ; exists ; 2015; Chinese Physics B Volume 24 [superseded] ; 24 ; > #no substance
   }
 
   {
@@ -304,7 +304,7 @@
     au < finished ; frozen ; 2012 ; Chinese Physics C Volume 36 ; 36 ; > 
     au < down ; exists ; 2013 ; Chinese Physics C Volume 37 ; 37 ; > 
     au < down ; exists ; 2014 ; Chinese Physics C Volume 38 ; 38 ; > 
-    au < down ; exists ; 2015 ; Chinese Physics C Volume 39 ; 39 ; > 
+    au < superseded ; exists ; 2015; Chinese Physics C Volume 39 [superseded] ; 39 ; > #no substance
 
   }
 
@@ -351,7 +351,7 @@
     au < finished ; crawling ; 2012 ; Chinese Physics Letters Volume 29 ; 29 ; > 
     au < down ; exists ; 2013 ; Chinese Physics Letters Volume 30 ; 30 ; > 
     au < finished ; finished ; 2014 ; Chinese Physics Letters Volume 31 ; 31 ; >
-    au < down ; exists ; 2015 ; Chinese Physics Letters Volume 32 ; 32 ; > 
+    au < superseded ; exists ; 2015 ; Chinese Physics Letters Volume 32 [superseded] ; 32 ; > #no substance
 
   }
 
@@ -397,7 +397,7 @@
     au < finished ; frozen ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 ; > 
     au < finished ; crawling ; 2012 ; Classical and Quantum Gravity Volume 29 ; 29 ; > 
     au < down ; exists ; 2013 ; Classical and Quantum Gravity Volume 30 ; 30 ; > 
-    au < down ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 ; > 
+    au < frozen ; exists ; 2014 ; Classical and Quantum Gravity Volume 31 ; 31 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Classical and Quantum Gravity Volume 32 ; 32 ; > 
 
   }
@@ -458,9 +458,9 @@
     au < down ; exists ; 2013 ; Communications in Theoretical Physics Volume 59 ; 59 ; >
     au < down ; exists ; 2013 ; Communications in Theoretical Physics Volume 60 ; 60 ; >
     au < finished ; frozen ; 2014 ; Communications in Theoretical Physics Volume 61 ; 61 ; >
-    au < down ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 ; >
-    au < down ; exists ; 2015 ; Communications in Theoretical Physics Volume 63 ; 63 ; > 
-    au < down ; exists ; 2015 ; Communications in Theoretical Physics Volume 64 ; 64 ; > 
+    au < frozen ; exists ; 2014 ; Communications in Theoretical Physics Volume 62 ; 62 ; >
+    au < superseded ; exists ; 2015 ; Communications in Theoretical Physics Volume 63 [superseded] ; 63 ; > #no substance
+    au < superseded ; exists ; 2015 ; Communications in Theoretical Physics Volume 64 [superseded] ; 64 ; > #no substance
 
   }
 
@@ -483,7 +483,7 @@
     au < finished ; finished ; 2012 ; Computational Science & Discovery Volume 5 ; 5 ; > 
     au < down ; exists ; 2013 ; Computational Science & Discovery Volume 6 ; 6 ; > 
     au < finished ; finished ; 2014 ; Computational Science & Discovery Volume 7 ; 7 ; reingest2.clockss.org:8085 > 
-    au < down ; exists ; 2015 ; Computational Science & Discovery Volume 8 ; 8 ; > 
+    au < superseded ; exists ; 2015; Computational Science & Discovery Volume 8 [superseded] ; 8 ; > #no substance
 
   }
 
@@ -654,8 +654,8 @@
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 106 ; 106 ; >
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 107 ; 107 ; >
     au < finished ; finished ; 2014 ; EPL (Europhysics Letters) Volume 108 ; 108 ; >
-    au < down ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 ; 109 ; >
-    au < down ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 ; 110 ; >
+    au < superseded ; exists ; 2015 ; EPL (Europhysics Letters) Volume 109 [superseded] ; 109 ; > #no substance
+    au < superseded ; exists ; 2015 ; EPL (Europhysics Letters) Volume 110 [superseded] ; 110 ; > #no substance
     au < doNotProcess ; doNotProcess ; 2015 ; EPL (Europhysics Letters) Volume 111 ; 111 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; EPL (Europhysics Letters) Volume 112 ; 112 ; >
 
@@ -707,7 +707,7 @@
     au < finished ; finished ; 2011 ; European Journal of Physics Volume 32 ; 32 ; > 
     au < finished ; frozen ; 2012 ; European Journal of Physics Volume 33 ; 33 ; > 
     au < down ; exists ; 2013 ; European Journal of Physics Volume 34 ; 34 ; > 
-    au < down ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 ; > 
+    au < frozen ; exists ; 2014 ; European Journal of Physics Volume 35 ; 35 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Physics Volume 36 ; 36 ; > 
 
   }
@@ -770,7 +770,7 @@
     au < finished ; crawling ; 2012 ; Fluid Dynamics Research Volume 44 ; 44 ; > 
     au < down ; exists ; 2013 ; Fluid Dynamics Research Volume 45 ; 45 ; > 
     au < down ; exists ; 2014 ; Fluid Dynamics Research Volume 46 ; 46 ; > 
-    au < down ; exists ; 2015 ; Fluid Dynamics Research Volume 47 ; 47 ; > 
+    au < superseded ; exists ; 2015; Fluid Dynamics Research Volume 47 [superseded] ; 47 ; > #no substance
 
   }
   
@@ -816,7 +816,7 @@
     au < finished ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 ; > 
     au < down ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 ; > 
     au < finished ; finished ; 2014 ; Inverse Problems Volume 30 ; 30 ; reingest3.clockss.org:8083 > 
-    au < superseded ; exists ; 2015 ; Inverse Problems Volume 31 [superseded] ; 31 ; > 
+    au < superseded ; exists ; 2015 ; Inverse Problems Volume 31 [superseded] ; 31 ; > #no substance
     au < expected ; exists ; 2016 ; Inverse Problems Volume 32 ; 32 ; > 
 
   }
@@ -851,7 +851,7 @@
     au < down ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 ; > 
     au < down ; exists ; 2013 ; IOP Conference Series: Earth and Environmental Science Volume 16 ; 16 ; > 
     au < finished ; finished ; 2014 ; IOP Conference Series: Earth and Environmental Science Volume 17 ; 17 ; reingest2.clockss.org:8085 > 
-    au < down ; exists ; 2015 ; IOP Conference Series: Earth and Environmental Science Volume 18 ; 18 ; > 
+    au < superseded ; exists ; 2015; IOP Conference Series: Earth and Environmental Science Volume 18 [superseded] ; 18 ; > #no substance
 
   }
 
@@ -936,12 +936,12 @@
     au < finished ; finished ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 67 ; 67 ; >
     au < finished ; finished ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 68 ; 68 ; >
     au < finished ; finished ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 69 ; 69 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 70 ; 70 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 71 ; 71 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 72 ; 72 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 73 ; 73 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 74 ; 74 ; >
-    au < down ; exists ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 75 ; 75 ; >
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 70 [superseded] ; 70 ; > #no substance
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 71 [superseded] ; 71 ; > #no substance
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 72 [superseded] ; 72 ; > #no substance
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 73 [superseded] ; 73 ; > #no substance
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 74 [superseded] ; 74 ; > #no substance
+    au < superseded ; exists ; 2015; IOP Conference Series: Materials Science and Engineering Volume 75 [superseded] ; 75 ; > #no substance
     au < doNotProcess ; doNotProcess ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; IOP Conference Series: Materials Science and Engineering Volume 78 ; 78 ; >
@@ -1023,7 +1023,7 @@
     au < down ; exists ; 2011 ; Japanese Journal of Applied Physics Volume 50 ; 50 ; >
     au < finished ; finished ; 2012 ; Japanese Journal of Applied Physics Volume 51 ; 51 ; >
     au < down ; exists ; 2013 ; Japanese Journal of Applied Physics Volume 52 ; 52 ; >
-    au < down ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2014 ; Japanese Journal of Applied Physics Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Japanese Journal of Applied Physics Volume 54 ; 54 ; >
     
   }
@@ -1048,7 +1048,7 @@
     au < finished ; frozen ; 2012 ; Journal of Breath Research Volume 6 ; 6 ; > 
     au < down ; exists ; 2013 ; Journal of Breath Research Volume 7 ; 7 ; > 
     au < finished ; finished ; 2014 ; Journal of Breath Research Volume 8 ; 8 ; reingest5.clockss.org:8082 > 
-    au < down ; exists ; 2015 ; Journal of Breath Research Volume 9 ; 9 ; > 
+    au < superseded ; exists ; 2015; Journal of Breath Research Volume 9 [superseded] ; 9 ; > #no substance
 
   }
 
@@ -1074,7 +1074,7 @@
     au < finished ; crawling ; 2012 ; Journal of Cosmology and Astroparticle Physics Volume 2012 ; 2012 ; > 
     au < down ; exists ; 2013 ; Journal of Cosmology and Astroparticle Physics Volume 2013 ; 2013 ; > 
     au < down ; exists ; 2014 ; Journal of Cosmology and Astroparticle Physics Volume 2014 ; 2014 ; > 
-    au < down ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 ; 2015 ; > 
+    au < superseded ; exists ; 2015 ; Journal of Cosmology and Astroparticle Physics Volume 2015 [superseded] ; 2015 ; > #no substance
 
   }
 
@@ -1101,7 +1101,7 @@
     au < finished ; frozen ; 2012 ; Journal of Geophysics and Engineering Volume 9 ; 9 ; > 
     au < down ; exists ; 2013 ; Journal of Geophysics and Engineering Volume 10 ; 10 ; > 
     au < down ; exists ; 2014 ; Journal of Geophysics and Engineering Volume 11 ; 11 ; > 
-    au < down ; exists ; 2015 ; Journal of Geophysics and Engineering Volume 12 ; 12 ; > 
+    au < superseded ; exists ; 2015; Journal of Geophysics and Engineering Volume 12 [superseded] ; 12 ; > #no substance
 
   }
 
@@ -1167,7 +1167,7 @@
     au < finished ; crawling ; 2012 ; Journal of Instrumentation Volume 7 ; 7 ; > 
     au < down ; exists ; 2013 ; Journal of Instrumentation Volume 8 ; 8 ; > 
     au < down ; exists ; 2014 ; Journal of Instrumentation Volume 9 ; 9 ; > 
-    au < down ; exists ; 2015 ; Journal of Instrumentation Volume 10 ; 10 ; > 
+    au < superseded ; exists ; 2015; Journal of Instrumentation Volume 10 [superseded] ; 10 ; > #no substance
 
   }
 
@@ -1207,8 +1207,8 @@
     au < finished ; frozen ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 ; > 
     au < ingNotReady ; exists ; 2012 ; Journal of Micromechanics and Microengineering Volume 22 ; 22 ; > 
     au < down ; exists ; 2013 ; Journal of Micromechanics and Microengineering Volume 23 ; 23 ; > 
-    au < down ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; > 
-    au < down ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 ; 25 ; > 
+    au < frozen ; exists ; 2014 ; Journal of Micromechanics and Microengineering Volume 24 ; 24 ; > 
+    au < superseded ; exists ; 2015 ; Journal of Micromechanics and Microengineering Volume 25 [superseded] ; 25 ; > #no substance
 
   }
 
@@ -1235,7 +1235,7 @@
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 ; > 
     au < down ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 ; > 
     au < down ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 ; > 
-    au < down ; exists ; 2015 ; Journal of Neural Engineering Volume 12 ; 12 ; > 
+    au < superseded ; exists ; 2015; Journal of Neural Engineering Volume 12 [superseded] ; 12 ; > #no substance
 
   }
   
@@ -1279,7 +1279,7 @@
     au < finished ; crawling ; 2012 ; Journal of Optics Volume 14 ; 14 ; > 
     au < down ; exists ; 2013 ; Journal of Optics Volume 15 ; 15 ; > 
     au < down ; exists ; 2014 ; Journal of Optics Volume 16 ; 16 ; > 
-    au < down ; exists ; 2015 ; Journal of Optics Volume 17 ; 17 ; > 
+    au < superseded ; exists ; 2015; Journal of Optics Volume 17 [superseded] ; 17 ; > #no substance
 
   }
 
@@ -1656,7 +1656,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 ; > 
     au < finished ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 ; > 
     au < down ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 ; > 
-    au < down ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 ; > 
+    au < frozen ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 ; > 
     au < doNotProcess ; exists ; 2015 ; Journal of Physics D: Applied Physics Volume 48 ; 48 ; > #PD-1361 login required
 
   }
@@ -1767,7 +1767,7 @@
     au < finished ; finished ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 ; > 
     au < ingNotReady ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 ; > 
     au < down ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 ; > 
-    au < down ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; > 
+    au < frozen ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics G: Nuclear and Particle Physics Volume 42 ; 42 ; > 
 
   }
@@ -1838,7 +1838,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 ; > 
     au < finished ; crawling ; 2012 ; Journal of Physics: Condensed Matter Volume 24 ; 24 ; > 
     au < down ; exists ; 2013 ; Journal of Physics: Condensed Matter Volume 25 ; 25 ; > 
-    au < down ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 ; > 
+    au < frozen ; exists ; 2014 ; Journal of Physics: Condensed Matter Volume 26 ; 26 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics: Condensed Matter Volume 27 ; 27 ; > 
 
   }
@@ -2429,12 +2429,12 @@
     au < finished ; finished ; 2014 ; Journal of Physics: Conference Series Volume 570 ; 570 ; >
     au < finished ; finished ; 2014 ; Journal of Physics: Conference Series Volume 571 ; 571 ; >
     au < finished ; finished ; 2014 ; Journal of Physics: Conference Series Volume 572 ; 572 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 573 ; 573 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 574 ; 574 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 575 ; 575 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 576 ; 576 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 577 ; 577 ; >
-    au < down ; exists ; 2015 ; Journal of Physics: Conference Series Volume 578 ; 578 ; >
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 573 [superseded] ; 573 ; > #no substance
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 574 [superseded] ; 574 ; > #no substance
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 575 [superseded] ; 575 ; > #no substance
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 576 [superseded] ; 576 ; > #no substance
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 577 [superseded] ; 577 ; > #no substance
+    au < superseded ; exists ; 2015; Journal of Physics: Conference Series Volume 578 [superseded] ; 578 ; > #no substance
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics: Conference Series Volume 579 ; 579 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics: Conference Series Volume 580 ; 580 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Physics: Conference Series Volume 581 ; 581 ; >
@@ -2577,7 +2577,7 @@
     au < finished ; crawling ; 2012 ; Journal of Semiconductors Volume 33 ; 33 ; >
     au < down ; exists ; 2013 ; Journal of Semiconductors Volume 34 ; 34 ; >
     au < finished ; finished ; 2014 ; Journal of Semiconductors Volume 35 ; 35 ; >
-    au < down ; exists ; 2015 ; Journal of Semiconductors Volume 36 ; 36 ; >
+    au < superseded ; exists ; 2015; Journal of Semiconductors Volume 36 [superseded] ; 36 ; > #no substance
     
   }
 
@@ -2726,7 +2726,7 @@
     au < finished ; finished ; 2011 ; Measurement Science and Technology Volume 22 ; 22 ; > 
     au < ingNotReady ; exists ; 2012 ; Measurement Science and Technology Volume 23 ; 23 ; > 
     au < down ; exists ; 2013 ; Measurement Science and Technology Volume 24 ; 24 ; > 
-    au < down ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 ; > 
+    au < frozen ; exists ; 2014 ; Measurement Science and Technology Volume 25 ; 25 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Measurement Science and Technology Volume 26 ; 26 ; > 
 
   }
@@ -2744,7 +2744,7 @@
 
     au < finished ; finished ; 2013 ; Methods and Applications in Fluorescence Volume 1 ; 1 ; >
     au < finished ; finished ; 2014 ; Methods and Applications in Fluorescence Volume 2 ; 2 ; >
-    au < down ; exists ; 2015 ; Methods and Applications in Fluorescence Volume 3 ; 3 ; >
+    au < superseded ; exists ; 2015; Methods and Applications in Fluorescence Volume 3 [superseded] ; 3 ; > #no substance
 
   }
 
@@ -2810,7 +2810,7 @@
     au < finished ; frozen ; 2011 ; Metrologia Volume 48 ; 48 ; > 
     au < finished ; crawling ; 2012 ; Metrologia Volume 49 ; 49 ; > 
     au < down ; exists ; 2013 ; Metrologia Volume 50 ; 50 ; > 
-    au < down ; exists ; 2014 ; Metrologia Volume 51 ; 51 ; > 
+    au < frozen ; exists ; 2014 ; Metrologia Volume 51 ; 51 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Metrologia Volume 52 ; 52 ; > 
 
   }
@@ -2848,7 +2848,7 @@
     au < finished ; finished ; 2011 ; Modelling and Simulation in Materials Science and Engineering Volume 19 ; 19 ; > 
     au < finished ; frozen ; 2012 ; Modelling and Simulation in Materials Science and Engineering Volume 20 ; 20 ; > 
     au < down ; exists ; 2013 ; Modelling and Simulation in Materials Science and Engineering Volume 21 ; 21 ; > 
-    au < down ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 ; > 
+    au < frozen ; exists ; 2014 ; Modelling and Simulation in Materials Science and Engineering Volume 22 ; 22 ; > 
     au < doNotProcess ; exists ; 2015 ; Modelling and Simulation in Materials Science and Engineering Volume 23 ; 23 ; > 
 
   }
@@ -2920,7 +2920,7 @@
     au < finished ; crawling ; 2011 ; New Journal of Physics Volume 13 ; 13 ; > 
     au < ingNotReady ; exists ; 2012 ; New Journal of Physics Volume 14 ; 14 ; > 
     au < down ; exists ; 2013 ; New Journal of Physics Volume 15 ; 15 ; > 
-    au < down ; exists ; 2014 ; New Journal of Physics Volume 16 ; 16 ; > 
+    au < frozen ; exists ; 2014 ; New Journal of Physics Volume 16 ; 16 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; New Journal of Physics Volume 17 ; 17 ; > 
 
   }
@@ -2963,7 +2963,7 @@
     au < finished ; frozen ; 2011 ; Nonlinearity Volume 24 ; 24 ; > 
     au < finished ; crawling ; 2012 ; Nonlinearity Volume 25 ; 25 ; > 
     au < down ; exists ; 2013 ; Nonlinearity Volume 26 ; 26 ; > 
-    au < down ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 ; > 
+    au < frozen ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Nonlinearity Volume 28 ; 28 ; > 
 
   }
@@ -3069,7 +3069,7 @@
     au < finished ; frozen ; 2011 ; Nuclear Fusion Volume 51 ; 51 ; > 
     au < finished ; crawling ; 2012 ; Nuclear Fusion Volume 52 ; 52 ; > 
     au < down ; exists ; 2013 ; Nuclear Fusion Volume 53 ; 53 ; > 
-    au < down ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 ; > 
+    au < frozen ; exists ; 2014 ; Nuclear Fusion Volume 54 ; 54 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Nuclear Fusion Volume 55 ; 55 ; > 
 
   }
@@ -3174,8 +3174,8 @@
     au < down ; exists ; 2012 ; Physica Scripta Volume 86 ; 86 ; > 
     au < down ; exists ; 2013 ; Physica Scripta Volume 87 ; 87 ; > 
     au < down ; exists ; 2013 ; Physica Scripta Volume 88 ; 88 ; > 
-    au < down ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 ; > 
-    au < down ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 ; > 
+    au < frozen ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 ; > 
+    au < frozen ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Physica Scripta Volume 91 ; 91 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Physica Scripta Volume 92 ; 92 ; > 
 
@@ -3346,7 +3346,7 @@
     au < finished ; frozen ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 ; > 
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 ; > 
     au < down ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 ; > 
-    au < down ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 ; > 
+    au < superseded ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 [superseded] ; 59 ; > #no successful crawl, although content is substantial. 403 error. 
     au < doNotProcess ; doNotProcess ; 2015 ; Physics in Medicine and Biology Volume 60 ; 60 ; > 
 
   }
@@ -3496,7 +3496,7 @@
     au < finished ; finished ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 ; >
     au < ingNotReady ; exists ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 ; >
     au < down ; exists ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 ; >
-    au < down ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Plasma Physics and Controlled Fusion Volume 57 ; 57 ; >
 
   }
@@ -3565,7 +3565,7 @@
     au < finished ; crawling ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 ; > 
     au < finished ; crawling ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 ; > 
     au < down ; exists ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 ; > 
-    au < down ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 ; > 
+    au < frozen ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Plasma Sources Science and Technology Volume 24 ; 24 ; > 
 
   }
@@ -4027,7 +4027,7 @@
     au < finished ; finished ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 ; > 
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 ; > 
     au < down ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 ; > 
-    au < down ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 ; > 
+    au < frozen ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Semiconductor Science and Technology Volume 30 ; 30 ; > 
 
   }
