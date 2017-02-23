@@ -30,6 +30,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = insc
+      #no longer published.
       
       au < released ; 2001 ; Journal of Insect Science Volume 1 [BioOne] ; 1 >
       au < released ; 2002 ; Journal of Insect Science Volume 2 [BioOne] ; 2 >
@@ -46,7 +47,7 @@
       au < released ; 2013 ; Journal of Insect Science Volume 13 [BioOne] ; 13 >
       au < released ; 2014 ; Journal of Insect Science Volume 14 [BioOne] ; 14 >
       au < released ; 2015 ; Journal of Insect Science Volume 15 [BioOne] ; 15 >
-      au < testing ; 2016 ; Journal of Insect Science Volume 16 [BioOne] ; 16 >
+      au < doNotProcess ; 2016 ; Journal of Insect Science Volume 16 [BioOne] ; 16 >
 
     }
 
