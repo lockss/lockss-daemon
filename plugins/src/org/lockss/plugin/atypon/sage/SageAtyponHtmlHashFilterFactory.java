@@ -69,7 +69,8 @@ public class SageAtyponHtmlHashFilterFactory
         // article right column
         HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "articleRightColumn"),
 
-        
+        // invisible jump to form whose choice labels have changed
+        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
         // toc - access icon container - haven't seen but common for Atypon
         HtmlNodeFilters.tagWithAttribute("td", "class", "accessIconContainer"),
         // toc - article type seems to change and this isn't important
