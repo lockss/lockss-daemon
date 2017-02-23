@@ -51,53 +51,53 @@ import javax.xml.bind.DatatypeConverter;
 import static org.lockss.util.StringUtil.isNullString;
 
 /**
- * A Wrapper around the Data Uri as defined by [RFC2397](http://www.ietf.org/rfc/rfc2397.txt) The
- * schema as defined:
+ * A Wrapper around the Data Uri as defined by
+ * <a href="http://www.ietf.org/rfc/rfc2397.txt">RFC2397</a>.
+ * The schema as defined:
  * <pre>
  *  dataurl    := "data:" [ mediatype ] [ ";base64" ] "," data
  *  mediatype  := [ type "/" subtype ] *( ";" parameter )
  *  data       := *urlchar
  *  parameter  := attribute "=" value
+ * </pre>
  *
- *
- * A data uri may be found in various media
- * examples from html:
- * <code>
- *   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+ * A data uri may be found in various media examples from html:
+ * <pre>
+ *   &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
  *   AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
- *   9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
- * </code>
+ *   9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" /&gt;
+ * </pre>
  *  Other varients include
+ * <pre>
  *  data:,Hello%2C%20World!
  *  data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D
- *  data:text/html,<script>alert('hi');</script>
+ *  data:text/html,&lt;script&gt;alert('hi');&lt;/script&gt;
+ * </pre>
  *
  * from css:
- * <code>
+ * <pre>
  *  body {
- *  background-image:url('data:image/png;base64, SGVsbG8sIFdvcmxkIQ%3D%3D...')
+ *    background-image:url('data:image/png;base64, SGVsbG8sIFdvcmxkIQ%3D%3D...')
  *  }
- * </code>
- *  <code>
- *    font-face {
- *    font-family: 'customFont';
- *    src: url(data:font/svg;charset=utf-8;base64,PD94bWwgdmV...)
- *  </code>
+ * 
+ *  font-face {
+ *  font-family: 'customFont';
+ *  src: url(data:font/svg;charset=utf-8;base64,PD94bWwgdmV...)
+ * </pre>
  *
- *  from javascript:
- * <code>
+ * from javascript:
+ * <pre>
  *  window.open('data:text/html;charset=utf-8,' +
  *    encodeURIComponent( // Escape for URL formatting
- *      '<!DOCTYPE html>'+
- *      '<html lang="en">'+
- *      '<head><title>Embedded Window</title></head>'+
- *      '<body><h1>42</h1></body>'+
- *      '</html>'
+ *      '&lt;!DOCTYPE html&gt;'+
+ *      '&lt;html lang="en"&gt;'+
+ *      '&lt;head&gt;&lt;title&gt;Embedded Window&lt;/title&gt;&lt;/head&gt;'+
+ *      '&lt;body&gt;&lt;h1&gt;42&lt;/h1&gt;&lt;/body&gt;'+
+ *      '&lt;/html&gt;'
  *     )
  *   );
- *  </code>
- * </pre>
- * author: claire griffin date: 2016-04-06.
+ *  </pre>
+ * @author: claire griffin date: 2016-04-06.
  */
 public class DataUri {
 
