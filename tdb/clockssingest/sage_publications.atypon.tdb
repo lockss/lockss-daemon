@@ -3731,7 +3731,7 @@
       #param[base_url] = http://bds.sagepub.com/
 
       au < manifest ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; bdsa ; >
-      au < testing ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa ; >
+      au < ready ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa ; >
       au < manifest ; exists ; 2016 ; Big Data & Society Volume 3 ; 3 ; bdsa ; >
 
   }
@@ -4838,7 +4838,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; csaa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 ; csaa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 ; csaa ; >
-      au < testing ; exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; csaa ; >
+      au < ready ; exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; csaa ; >
       au < manifest ; exists ; 2016 ; Calcutta Statistical Association Bulletin Volume 68 ; 68 ; csaa ; >
 
   }
@@ -8454,7 +8454,7 @@
 
       #param[base_url] = http://dhj.sagepub.com/
 
-      au < testing ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; dhja ; >
+      au < ready ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; dhja ; >
       au < manifest ; exists ; 2016 ; Digital Health Volume 2 ; 2 ; dhja ; >
 
   }
@@ -8819,7 +8819,7 @@
       au < manifest ; exists ; 2012 ; The Downside Review Volume 130 ; 130 ; tdra ; >
       au < manifest ; exists ; 2013 ; The Downside Review Volume 131 ; 131 ; tdra ; >
       au < manifest ; exists ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra ; >
-      au < testing ; exists ; 2015 ; The Downside Review Volume 133 ; 133 ; tdra ; >
+      au < ready ; exists ; 2015 ; The Downside Review Volume 133 ; 133 ; tdra ; >
       au < manifest ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; tdra ; >
 
   }
@@ -14543,7 +14543,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; inqa ; >
       au < doNotProcess ; doNotProcess ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; inqa ; >
       au < manifest ; exists ; 2014 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 51 ; 51 ; inqa ; >
-      au < testing ; exists ; 2015 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 52 ; 52 ; inqa ; >
+      au < ready ; exists ; 2015 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 52 ; 52 ; inqa ; >
       au < manifest ; exists ; 2016 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 53 ; 53 ; inqa ; >
 
     }
@@ -33208,7 +33208,7 @@
      au < manifest ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2 ; pula ; >
      au < manifest ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 3 ; pula ; >
      au < manifest ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 4 ; pula ; >
-     au < testing ; exists ; 2015 ; Pulmonary Circulation Volume 5 ; 5 ; pula ; >
+     au < ready ; exists ; 2015 ; Pulmonary Circulation Volume 5 ; 5 ; pula ; >
      au < manifest ; exists ; 2016 ; Pulmonary Circulation Volume 6 ; 6 ; pula ; >
 
  }
@@ -33812,7 +33812,7 @@
       #param[base_url] = http://rap.sagepub.com/
 
       au < manifest ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; rapa ; >
-      au < testing ; exists ; 2015 ; Research & Politics Volume 2 ; 2 ; rapa ; >
+      au < ready ; exists ; 2015 ; Research & Politics Volume 2 ; 2 ; rapa ; >
       au < manifest ; exists ; 2016 ; Research & Politics Volume 3 ; 3 ; rapa ; >
 
   }
@@ -33913,8 +33913,8 @@
       au < manifest ; exists ; 2013 ; Research in Education Volume 90 ; 90 ; riea ; >
       au < manifest ; exists ; 2014 ; Research in Education Volume 91 ; 91 ; riea ; >
       au < manifest ; exists ; 2014 ; Research in Education Volume 92 ; 92 ; riea ; >
-      au < testing ; exists ; 2015 ; Research in Education Volume 93 ; 93 ; riea ; >
-      au < testing ; exists ; 2015 ; Research in Education Volume 94 ; 94 ; riea ; >
+      au < ready ; exists ; 2015 ; Research in Education Volume 93 ; 93 ; riea ; >
+      au < ready ; exists ; 2015 ; Research in Education Volume 94 ; 94 ; riea ; >
       au < manifest ; exists ; 2016 ; Research in Education Volume 95 ; 95 ; riea ; >
       au < manifest ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea ; >
 
@@ -43965,7 +43965,7 @@
       au < manifest ; exists ; 2012 ; Women's Health Volume 8 ; 8 ; whea ; >
       au < manifest ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; whea ; >
       au < manifest ; exists ; 2014 ; Women's Health Volume 10 ; 10 ; whea ; >
-      au < testing ; exists ; 2015 ; Women's Health Volume 11 ; 11 ; whea ; >
+      au < ready ; exists ; 2015 ; Women's Health Volume 11 ; 11 ; whea ; >
       au < manifest ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; whea ; >
 
   }
