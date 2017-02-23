@@ -1,10 +1,12 @@
 {
   publisher <
-    name = Hindawi Publishing Corporation ;
+    name = Hindawi ;
     info[contract] = 2014 ;
     info[tester] = 8 ;
     info[poller] = 6
   >
+  
+  #the publisher requested that their name be listed simply as "Hindawi." see RT8402
 
   rights = openaccess
   plugin = org.lockss.plugin.hindawi.ClockssHindawiPublishingCorporationPlugin
