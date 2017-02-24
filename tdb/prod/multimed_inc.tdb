@@ -44,6 +44,7 @@
     param[journal_id] = jacmp
 
     implicit < status ; year ; name ; volume ; param[year] >
+    # moved to Wiley
 
     au < manifest ; 2000 ; Journal of Applied Clinical Medical Physics Volume 1 ; 1 ; 2000 >
     au < manifest ; 2001 ; Journal of Applied Clinical Medical Physics Volume 2 ; 2 ; 2001 >
@@ -61,7 +62,7 @@
     au < released ; 2013 ; Journal of Applied Clinical Medical Physics Volume 14 ; 14 ; 2013 >
     au < released ; 2014 ; Journal of Applied Clinical Medical Physics Volume 15 ; 15 ; 2014 >
     au < released ; 2015 ; Journal of Applied Clinical Medical Physics Volume 16 ; 16 ; 2015 >
-    au < manifest ; 2016 ; Journal of Applied Clinical Medical Physics Volume 17 ; 17 ; 2016 >
+    au < doNotProcess ; 2016 ; Journal of Applied Clinical Medical Physics Volume 17 ; 17 ; 2016 >
 
   }
 
