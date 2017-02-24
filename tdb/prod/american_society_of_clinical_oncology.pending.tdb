@@ -18,8 +18,6 @@
       issnl = 0732-183X
     >
 
-    {
-
       #param[base_url] = http://jco.ascopubs.org/
       param[journal_id] = jco
 
@@ -57,8 +55,7 @@
       au < doNotProcess ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
       au < doNotProcess ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
       au < exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
-
-    }
+      au < exists ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 >
 
   }
 
@@ -69,15 +66,12 @@
       issnl = 2378-9506
     >
 
-    {
-
       #param[base_url] = http://jgo.ascopubs.org/ 
       param[journal_id] = jgo
 
       au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
       au < exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
-
-    }
+      au < exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
 
   }
 
@@ -87,8 +81,6 @@
       issn = 1554-7477 ;
       issnl = 1554-7477
     >
-
-    {
 
       #param[base_url] = http://jop.ascopubs.org/ 
       param[journal_id] = jop
@@ -105,8 +97,33 @@
       au < doNotProcess ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 >
       au < doNotProcess ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 >
       au < exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
+      au < exists ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 >
 
-    }
+  }
+
+  {
+    title <
+      name = JCO Clinical Cancer lnformatics ;
+      eissn = 2473-4276 ;
+      issnl = 2473-4276
+    >
+
+      param[journal_id] = cci
+
+      au < exists ; 2017 ; JCO Clinical Cancer lnformatics Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = JCO Precision Oncology ;
+      eissn = 2473-4284 ;
+      issnl = 2473-4284
+    >
+
+      param[journal_id] = po
+
+      au < exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 >
 
   }
 
