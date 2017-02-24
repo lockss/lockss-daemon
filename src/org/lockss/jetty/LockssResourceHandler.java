@@ -710,8 +710,10 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         response.setContentType(ctype);
         if (count != -1)
         {
-	  String origContentLength =
-	    cur.getProperty(HttpFields.__ContentLength);
+	  String origContentLength = null;
+	  if (cur != null) {
+	    origContentLength = cur.getProperty(HttpFields.__ContentLength);
+	  }
 	  if (count==resource.length()) {
 	    response.setField(HttpFields.__ContentLength,metaData.getLength());
 	  } else {
@@ -722,7 +724,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 				Long.toString(count));
 	    }
 	  }
-	  if (!StringUtil.equalStrings(origContentLength, 
+	  if (origContentLength != null &&
+	      !StringUtil.equalStrings(origContentLength, 
 				       response.getField(HttpFields.__ContentLength))) {
 	    response.setField(origPrefix(HttpFields.__ContentLength),
 			      origContentLength);
