@@ -895,7 +895,7 @@
       au < doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
       au < manifest ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >
       au < manifest ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 >
-      au < manifest ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >
+      au < testing ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 >
       au < manifest ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 >
 
     }
@@ -936,7 +936,7 @@
       param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
 
-      au < manifest ; 2015 ; Microbial Genomics Volume 1 ; 1 >
+      au < testing ; 2015 ; Microbial Genomics Volume 1 ; 1 >
       au < manifest ; 2016 ; Microbial Genomics Volume 2 ; 2 >
 
     }
