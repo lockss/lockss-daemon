@@ -40,6 +40,10 @@
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
+      <!--  allow the issue toc from the manifest page but it will normalize back to the manifest page url -->
+      <!--  so that triggered manifest pages won't have 404 links at the top page -->
+      <!-- https://www.xyz.nl/20/volume/0/issue/13/ -->
+      <string>1,"^https?://%s%s/[^/?]+/volume/[^/?]+/issue/[^/]+/$", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>
