@@ -24,7 +24,7 @@
       param[base_url] = http://amd.aom.org/
   
       au < released ; 2015 ; Academy of Management Discoveries (AMD) Volume 1 ; 1 >
-      au < manifest ; 2016 ; Academy of Management Discoveries (AMD) Volume 2 ; 2 >
+      au < testing ; 2016 ; Academy of Management Discoveries (AMD) Volume 2 ; 2 >
       au < expected ; 2017 ; Academy of Management Discoveries (AMD) Volume 3 ; 3 >
 
     }
@@ -107,13 +107,13 @@
       au < manifest ; 1987 ; Academy of Management Journal (AMJ) Volume 30 ; 30 >
       au < manifest ; 1988 ; Academy of Management Journal (AMJ) Volume 31 ; 31 >
       au < manifest ; 1989 ; Academy of Management Journal (AMJ) Volume 32 ; 32 >
-      au < manifest ; 1990 ; Academy of Management Journal (AMJ) Volume 33 ; 33 >
-      au < manifest ; 1991 ; Academy of Management Journal (AMJ) Volume 34 ; 34 >
-      au < manifest ; 1992 ; Academy of Management Journal (AMJ) Volume 35 ; 35 >
-      au < manifest ; 1993 ; Academy of Management Journal (AMJ) Volume 36 ; 36 >
-      au < manifest ; 1994 ; Academy of Management Journal (AMJ) Volume 37 ; 37 >
-      au < manifest ; 1995 ; Academy of Management Journal (AMJ) Volume 38 ; 38 >
-      au < manifest ; 1996 ; Academy of Management Journal (AMJ) Volume 39 ; 39 >
+      au < testing ; 1990 ; Academy of Management Journal (AMJ) Volume 33 ; 33 >
+      au < testing ; 1991 ; Academy of Management Journal (AMJ) Volume 34 ; 34 >
+      au < testing ; 1992 ; Academy of Management Journal (AMJ) Volume 35 ; 35 >
+      au < testing ; 1993 ; Academy of Management Journal (AMJ) Volume 36 ; 36 >
+      au < testing ; 1994 ; Academy of Management Journal (AMJ) Volume 37 ; 37 >
+      au < testing ; 1995 ; Academy of Management Journal (AMJ) Volume 38 ; 38 >
+      au < testing ; 1996 ; Academy of Management Journal (AMJ) Volume 39 ; 39 >
       au < released ; 1997 ; Academy of Management Journal (AMJ) Volume 40 ; 40 >
       au < released ; 1998 ; Academy of Management Journal (AMJ) Volume 41 ; 41 >
       au < released ; 1999 ; Academy of Management Journal (AMJ) Volume 42 ; 42 >
@@ -165,17 +165,17 @@
       au < manifest ; 1987 ; Academy of Management Review (AMR) Volume 12 ; 12 >
       au < manifest ; 1988 ; Academy of Management Review (AMR) Volume 13 ; 13 >
       au < manifest ; 1989 ; Academy of Management Review (AMR) Volume 14 ; 14 >
-      au < manifest ; 1990 ; Academy of Management Review (AMR) Volume 15 ; 15 >
-      au < manifest ; 1991 ; Academy of Management Review (AMR) Volume 16 ; 16 >
-      au < manifest ; 1992 ; Academy of Management Review (AMR) Volume 17 ; 17 >
-      au < manifest ; 1993 ; Academy of Management Review (AMR) Volume 18 ; 18 >
-      au < manifest ; 1994 ; Academy of Management Review (AMR) Volume 19 ; 19 >
-      au < manifest ; 1995 ; Academy of Management Review (AMR) Volume 20 ; 20 >
-      au < manifest ; 1996 ; Academy of Management Review (AMR) Volume 21 ; 21 >
-      au < manifest ; 1997 ; Academy of Management Review (AMR) Volume 22 ; 22 >
-      au < manifest ; 1998 ; Academy of Management Review (AMR) Volume 23 ; 23 >
-      au < manifest ; 1999 ; Academy of Management Review (AMR) Volume 24 ; 24 >
-      au < manifest ; 2000 ; Academy of Management Review (AMR) Volume 25 ; 25 >
+      au < testing ; 1990 ; Academy of Management Review (AMR) Volume 15 ; 15 >
+      au < testing ; 1991 ; Academy of Management Review (AMR) Volume 16 ; 16 >
+      au < testing ; 1992 ; Academy of Management Review (AMR) Volume 17 ; 17 >
+      au < testing ; 1993 ; Academy of Management Review (AMR) Volume 18 ; 18 >
+      au < testing ; 1994 ; Academy of Management Review (AMR) Volume 19 ; 19 >
+      au < testing ; 1995 ; Academy of Management Review (AMR) Volume 20 ; 20 >
+      au < testing ; 1996 ; Academy of Management Review (AMR) Volume 21 ; 21 >
+      au < testing ; 1997 ; Academy of Management Review (AMR) Volume 22 ; 22 >
+      au < testing ; 1998 ; Academy of Management Review (AMR) Volume 23 ; 23 >
+      au < testing ; 1999 ; Academy of Management Review (AMR) Volume 24 ; 24 >
+      au < testing ; 2000 ; Academy of Management Review (AMR) Volume 25 ; 25 >
       au < released ; 2001 ; Academy of Management Review (AMR) Volume 26 ; 26 >
       au < released ; 2002 ; Academy of Management Review (AMR) Volume 27 ; 27 >
       au < released ; 2003 ; Academy of Management Review (AMR) Volume 28 ; 28 >
@@ -191,7 +191,7 @@
       au < released ; 2013 ; Academy of Management Review (AMR) Volume 38 ; 38 >
       au < released ; 2014 ; Academy of Management Review (AMR) Volume 39 ; 39 >
       au < released ; 2015 ; Academy of Management Review (AMR) Volume 40 ; 40 >
-      au < manifest ; 2016 ; Academy of Management Review (AMR) Volume 41 ; 41 >
+      au < testing ; 2016 ; Academy of Management Review (AMR) Volume 41 ; 41 >
       au < manifest ; 2017 ; Academy of Management Review (AMR) Volume 42 ; 42 >
 
     }
@@ -211,19 +211,19 @@
 
       param[base_url] = http://amp.aom.org/
   
-      au < manifest ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >
-      au < manifest ; 1988 ; Academy of Management Perspectives (AMP) Volume 2 ; 2 >
-      au < manifest ; 1989 ; Academy of Management Perspectives (AMP) Volume 3 ; 3 >
-      au < manifest ; 1990 ; Academy of Management Perspectives (AMP) Volume 4 ; 4 >
-      au < manifest ; 1991 ; Academy of Management Perspectives (AMP) Volume 5 ; 5 >
-      au < manifest ; 1992 ; Academy of Management Perspectives (AMP) Volume 6 ; 6 >
-      au < manifest ; 1993 ; Academy of Management Perspectives (AMP) Volume 7 ; 7 >
-      au < manifest ; 1994 ; Academy of Management Perspectives (AMP) Volume 8 ; 8 >
-      au < manifest ; 1995 ; Academy of Management Perspectives (AMP) Volume 9 ; 9 >
-      au < manifest ; 1996 ; Academy of Management Perspectives (AMP) Volume 10 ; 10 >
-      au < manifest ; 1997 ; Academy of Management Perspectives (AMP) Volume 11 ; 11 >
-      au < manifest ; 1998 ; Academy of Management Perspectives (AMP) Volume 12 ; 12 >
-      au < manifest ; 1999 ; Academy of Management Perspectives (AMP) Volume 13 ; 13 >
+      au < testing ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >
+      au < testing ; 1988 ; Academy of Management Perspectives (AMP) Volume 2 ; 2 >
+      au < testing ; 1989 ; Academy of Management Perspectives (AMP) Volume 3 ; 3 >
+      au < testing ; 1990 ; Academy of Management Perspectives (AMP) Volume 4 ; 4 >
+      au < testing ; 1991 ; Academy of Management Perspectives (AMP) Volume 5 ; 5 >
+      au < testing ; 1992 ; Academy of Management Perspectives (AMP) Volume 6 ; 6 >
+      au < testing ; 1993 ; Academy of Management Perspectives (AMP) Volume 7 ; 7 >
+      au < testing ; 1994 ; Academy of Management Perspectives (AMP) Volume 8 ; 8 >
+      au < testing ; 1995 ; Academy of Management Perspectives (AMP) Volume 9 ; 9 >
+      au < testing ; 1996 ; Academy of Management Perspectives (AMP) Volume 10 ; 10 >
+      au < testing ; 1997 ; Academy of Management Perspectives (AMP) Volume 11 ; 11 >
+      au < testing ; 1998 ; Academy of Management Perspectives (AMP) Volume 12 ; 12 >
+      au < testing ; 1999 ; Academy of Management Perspectives (AMP) Volume 13 ; 13 >
       au < released ; 2000 ; Academy of Management Perspectives (AMP) Volume 14 ; 14 >
       au < released ; 2001 ; Academy of Management Perspectives (AMP) Volume 15 ; 15 >
       au < released ; 2002 ; Academy of Management Perspectives (AMP) Volume 16 ; 16 >
@@ -240,7 +240,7 @@
       au < released ; 2013 ; Academy of Management Perspectives (AMP) Volume 27 ; 27 >
       au < released ; 2014 ; Academy of Management Perspectives (AMP) Volume 28 ; 28 >
       au < released ; 2015 ; Academy of Management Perspectives (AMP) Volume 29 ; 29 >
-      au < manifest ; 2016 ; Academy of Management Perspectives (AMP) Volume 30 ; 30 >
+      au < testing ; 2016 ; Academy of Management Perspectives (AMP) Volume 30 ; 30 >
       au < expected ; 2017 ; Academy of Management Perspectives (AMP) Volume 31 ; 31 >
 
     }
