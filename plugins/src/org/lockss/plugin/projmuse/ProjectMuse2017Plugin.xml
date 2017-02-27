@@ -1,0 +1,177 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - EJ</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Project Muse Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!-- content validation w/ no store -->
+    <string>1.72.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Project Muse Journals Plugin, Base URL %s, Journal ID %s, Resource ID %d", base_url, journal_id, resource_id</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?v=.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lockss\?vid=\d+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/issue/\d+(/image/.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/article/\d+(/(pdf|pdfimage|summary|(figure|image|inline)/.+))?$", url_host(base_url)</string>
+    </list>
+  </entry>
+  <!-- Some volume numbers are now 4-digit years, but this works -->  
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss?vid=%d", base_url, resource_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resource_id</key>
+        <displayName>Resource ID</displayName>
+        <description>Internal resource ID</description>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Project Muse</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%sarticle/\d+(/pdf)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017HtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017HtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuse2017ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.projmuse.ProjectMuseHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%slockss?vid=%s", base_url, resource_id</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <list>
+          <string>"%sissue/%s", base_url, issue_id</string>
+        </list>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <!-- https://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js
+   -->
+</map>
