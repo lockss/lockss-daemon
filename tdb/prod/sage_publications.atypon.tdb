@@ -3640,7 +3640,7 @@
         #param[base_url] = http://bds.sagepub.com/
 
         au < manifest ; 2014 ; Big Data & Society Volume 1 ; 1 ; bdsa >
-        au < manifest ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa >
+        au < ready ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa >
         au < ready ; 2016 ; Big Data & Society Volume 3 ; 3 ; bdsa >
 
     }
@@ -8269,7 +8269,7 @@
 
       #param[base_url] = http://dhj.sagepub.com/
 
-      au < manifest ; 2015 ; Digital Health Volume 1 ; 1 ; dhja >
+      au < ready ; 2015 ; Digital Health Volume 1 ; 1 ; dhja >
       au < manifest ; 2016 ; Digital Health Volume 2 ; 2 ; dhja >
 
   }
@@ -32490,7 +32490,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://rap.sagepub.com/
 
         au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 ; rapa >
-        au < manifest ; 2015 ; Research & Politics Volume 2 ; 2 ; rapa >
+        au < ready ; 2015 ; Research & Politics Volume 2 ; 2 ; rapa >
         au < manifest ; 2016 ; Research & Politics Volume 3 ; 3 ; rapa >
 
     }
