@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,16 +21,13 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>    
   <entry>
     <string>au_name</string>
     <string>"JSTOR Current Scholarship Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sclockss-manifest/%s/%d", base_url, journal_id, year</string>
-  </entry>
+  <!--  start_url is same for both GLN and CLOCKSS -->
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
