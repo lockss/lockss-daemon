@@ -39,7 +39,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class HighWireUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class HighWireUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(HighWireUrlNormalizer.class);
   protected static final String TOC_SUFFIX = ".toc";

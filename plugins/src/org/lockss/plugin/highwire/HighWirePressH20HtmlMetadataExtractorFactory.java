@@ -91,7 +91,7 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
         url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       emitter.emitMetadata(cu, am);
     }
   }

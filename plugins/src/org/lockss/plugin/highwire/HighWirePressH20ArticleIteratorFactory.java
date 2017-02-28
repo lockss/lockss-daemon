@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,13 +117,13 @@ public class HighWirePressH20ArticleIteratorFactory
     
     // set up figures-only to be an aspect
     builder.addAspect(FIGURES_REPLACEMENT,
-        ArticleFiles.ROLE_FIGURES_TABLES);
+        ArticleFiles.ROLE_FIGURES);
     
     // set up suppl to be an aspect
     builder.addAspect(SUPPL_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
     
-    // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
+    // add metadata role from abstract, html, or pdf landing page
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
