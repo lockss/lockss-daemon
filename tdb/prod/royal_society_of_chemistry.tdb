@@ -45,7 +45,7 @@
       au < released ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
       au < released ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
       au < manifest ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 >
-      au < ready ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 >
+      au < releasing ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 >
 
     }
   }
@@ -69,7 +69,7 @@
       au < released ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
       au < released ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 >
       au < manifest ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 >
-      au < ready ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 >
+      au < releasing ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 >
 
     }
   }
@@ -196,7 +196,7 @@
       au < released ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 >
       au < released ; 2014 ; Chemical Society Reviews Volume 43 ; 43 ; 2014 >
       au < manifest ; 2015 ; Chemical Society Reviews Volume 44 ; 44 ; 2015 >
-      au < ready ; 2016 ; Chemical Society Reviews Volume 45 ; 45 ; 2016 >
+      au < releasing ; 2016 ; Chemical Society Reviews Volume 45 ; 45 ; 2016 >
 
     }
   }
@@ -241,7 +241,7 @@
       au < released ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 >
       au < released ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
       au < released ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
-      au < ready ; 2016 ; CrystEngComm Volume 18 ; 18 ; 2016 >
+      au < releasing ; 2016 ; CrystEngComm Volume 18 ; 18 ; 2016 >
 
     }
   }
@@ -264,7 +264,7 @@
       au < released ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 >
       au < released ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 >
       au < released ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 >
-      au < ready ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 >
+      au < releasing ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 >
 
     }
   }
@@ -356,10 +356,10 @@
       au < released ; 2015 ; Faraday Discussions Volume 185 ; 185 ; 2015 >
 
       au < manifest ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 >
-      au < ready ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 >
-      au < ready ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 >
-      au < ready ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 >
-      au < ready ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 >
+      au < releasing ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 >
+      au < releasing ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 >
+      au < releasing ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 >
+      au < releasing ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 >
       au < manifest ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 >
       au < manifest ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 >
       au < manifest ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 >
@@ -432,7 +432,7 @@
       au < released ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
       au < released ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
       au < released ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
-      au < ready ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 >
+      au < releasing ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 >
 
     }
   }
@@ -507,7 +507,7 @@
       au < released ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
       au < released ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < released ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
-      au < ready ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
+      au < releasing ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
       au < manifest ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 >
 
     }
@@ -615,7 +615,7 @@
       au < released ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
       au < released ; 2014 ; Natural Product Reports Volume 31 ; 31 ; 2014 >
       au < released ; 2015 ; Natural Product Reports Volume 32 ; 32 ; 2015 >
-      au < ready ; 2016 ; Natural Product Reports Volume 33 ; 33 ; 2016 >
+      au < releasing ; 2016 ; Natural Product Reports Volume 33 ; 33 ; 2016 >
 
     }
   }
@@ -967,9 +967,9 @@
       comment[years] = Published 2010-2016
       param[journal_code] = cy
 
-      au < ready ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 >
-      au < ready ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 >
-      au < ready ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 >
+      au < releasing ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 >
+      au < releasing ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 >
+      au < releasing ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 >
       au < manifest ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 >
       au < manifest ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 >
       au < manifest ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 >
@@ -1009,8 +1009,8 @@
       au < manifest ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 >
       au < manifest ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 >
       au < manifest ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 >
-      au < ready ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
-      au < ready ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
+      au < releasing ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
+      au < releasing ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
       au < manifest ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 >
       au < manifest ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 >
 
@@ -1086,7 +1086,7 @@
       param[journal_code] = en
 
       au < manifest ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 >
-      au < ready ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 >
+      au < releasing ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 >
       au < manifest ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 >
 
   }
@@ -1106,7 +1106,7 @@
       au < released ; 2013 ; Environmental Science: Processes & Impacts Volume 15 ; 15 ; 2013 >
       au < released ; 2014 ; Environmental Science: Processes & Impacts Volume 16 ; 16 ; 2014 >
       au < released ; 2015 ; Environmental Science: Processes & Impacts Volume 17 ; 17 ; 2015 >
-      au < ready ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 >
+      au < releasing ; 2016 ; Environmental Science: Processes & Impacts Volume 18 ; 18 ; 2016 >
 
   }
 
@@ -1122,7 +1122,7 @@
       comment[years] = Published 2015-2016
       param[journal_code] = ew
 
-      au < ready ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
+      au < releasing ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
       au < manifest ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
 
   }
@@ -1336,7 +1336,7 @@
 
       au < released ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 >
-      au < ready ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 >
+      au < releasing ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 >
       au < manifest ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 >
 
   }
@@ -1355,7 +1355,7 @@
 
       au < manifest ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 >
-      au < ready ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 >
+      au < releasing ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 >
       au < manifest ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 >
 
   }
@@ -1374,7 +1374,7 @@
 
       au < manifest ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 >
-      au < ready ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
+      au < releasing ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
       au < manifest ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 >
 
   }
@@ -2010,7 +2010,7 @@
       au < manifest ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 >
       au < manifest ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 >
-      au < ready ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 >
+      au < releasing ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 >
       au < manifest ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 >
       au < manifest ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 >
       au < manifest ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 >
@@ -2065,7 +2065,7 @@
       param[journal_code] = qo
 
       au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
-      au < ready ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
+      au < releasing ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
       au < manifest ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
 
   }
@@ -2122,10 +2122,10 @@
       param[journal_code] = py
 
       au < manifest ; 2010 ; Polymer Chemistry Volume 1 ; 1 ; 2010 >
-      au < ready ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 >
+      au < releasing ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 >
       au < released ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 >
-      au < ready ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 >
-      au < ready ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 >
+      au < releasing ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 >
+      au < releasing ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 >
       au < manifest ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 >
       au < manifest ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 >
 
