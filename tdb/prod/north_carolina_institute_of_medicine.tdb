@@ -16,9 +16,9 @@
     implicit < status ; year ; name ; param[volume_name] >
     # 2002-2013 content on http://classic.ncmedicaljournal.com/
 
-    au < releasing ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
-    au < releasing ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
-    au < releasing ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
+    au < released ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < released ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < released ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
 
   }
 

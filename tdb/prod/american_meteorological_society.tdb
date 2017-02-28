@@ -120,8 +120,8 @@
     au < released ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 >
     au < released ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 >
     au < released ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 >
-    au < releasing ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
-    au < releasing ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
+    au < released ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
+    au < released ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
     au < released ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 >
     au < released ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
     au < released ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
@@ -130,7 +130,7 @@
     au < testing ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
     au < testing ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < released ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
-    au < releasing ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
+    au < released ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
     au < released ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
     au < released ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
     au < testing ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
@@ -153,11 +153,11 @@
     comment[continues] = 0021-8952
     comment[continued_by] = 0894-8763
 
-    au < releasing ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
-    au < releasing ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
+    au < released ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
+    au < released ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
     au < released ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 >
     au < released ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 >
-    au < releasing ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
+    au < released ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
 
   }
 
@@ -181,11 +181,11 @@
     au < released ; 1992 ; Journal of Applied Meteorology Volume 31 ; 31 >
     au < released ; 1993 ; Journal of Applied Meteorology Volume 32 ; 32 >
     au < released ; 1994 ; Journal of Applied Meteorology Volume 33 ; 33 >
-    au < releasing ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
+    au < released ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
     au < released ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 >
     au < released ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
-    au < releasing ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
-    au < releasing ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
+    au < released ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
+    au < released ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
     au < released ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
     au < released ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
     au < released ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 >
@@ -217,7 +217,7 @@
     au < released ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 >
     au < released ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 >
     au < released ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 >
-    au < releasing ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 >
+    au < released ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 >
     au < manifest ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 >
 
   }
@@ -265,7 +265,7 @@
     au < released ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 >
     au < released ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 >
     au < released ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 >
-    au < releasing ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 >
+    au < released ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 >
     au < manifest ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 >
 
   }
@@ -281,20 +281,20 @@
     
     param[journal_id] = clim
 
-    au < releasing ; 1988 ; Journal of Climate Volume 1 ; 1 >
-    au < releasing ; 1989 ; Journal of Climate Volume 2 ; 2 >
-    au < releasing ; 1990 ; Journal of Climate Volume 3 ; 3 >
-    au < releasing ; 1991 ; Journal of Climate Volume 4 ; 4 >
-    au < releasing ; 1992 ; Journal of Climate Volume 5 ; 5 >
-    au < releasing ; 1993 ; Journal of Climate Volume 6 ; 6 >
-    au < releasing ; 1994 ; Journal of Climate Volume 7 ; 7 >
-    au < releasing ; 1995 ; Journal of Climate Volume 8 ; 8 >
-    au < releasing ; 1996 ; Journal of Climate Volume 9 ; 9 >
-    au < releasing ; 1997 ; Journal of Climate Volume 10 ; 10 >
-    au < releasing ; 1998 ; Journal of Climate Volume 11 ; 11 >
-    au < releasing ; 1999 ; Journal of Climate Volume 12 ; 12 >
+    au < released ; 1988 ; Journal of Climate Volume 1 ; 1 >
+    au < released ; 1989 ; Journal of Climate Volume 2 ; 2 >
+    au < released ; 1990 ; Journal of Climate Volume 3 ; 3 >
+    au < released ; 1991 ; Journal of Climate Volume 4 ; 4 >
+    au < released ; 1992 ; Journal of Climate Volume 5 ; 5 >
+    au < released ; 1993 ; Journal of Climate Volume 6 ; 6 >
+    au < released ; 1994 ; Journal of Climate Volume 7 ; 7 >
+    au < released ; 1995 ; Journal of Climate Volume 8 ; 8 >
+    au < released ; 1996 ; Journal of Climate Volume 9 ; 9 >
+    au < released ; 1997 ; Journal of Climate Volume 10 ; 10 >
+    au < released ; 1998 ; Journal of Climate Volume 11 ; 11 >
+    au < released ; 1999 ; Journal of Climate Volume 12 ; 12 >
     au < testing ; 2000 ; Journal of Climate Volume 13 ; 13 >
-    au < releasing ; 2001 ; Journal of Climate Volume 14 ; 14 >
+    au < released ; 2001 ; Journal of Climate Volume 14 ; 14 >
     au < testing ; 2002 ; Journal of Climate Volume 15 ; 15 >
     au < testing ; 2003 ; Journal of Climate Volume 16 ; 16 >
     au < testing ; 2004 ; Journal of Climate Volume 17 ; 17 >
@@ -341,7 +341,7 @@
     au < released ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 >
     au < released ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 >
     au < released ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 >
-    au < releasing ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 >
+    au < released ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 >
     au < manifest ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 >
 
   }
@@ -436,49 +436,49 @@
     au < manifest ; 1959 ; Journal of the Atmospheric Sciences Volume 16 ; 16 >
     au < manifest ; 1960 ; Journal of the Atmospheric Sciences Volume 17 ; 17 >
     au < manifest ; 1961 ; Journal of the Atmospheric Sciences Volume 18 ; 18 >
-    au < releasing ; 1962 ; Journal of the Atmospheric Sciences Volume 19 ; 19 >
-    au < releasing ; 1963 ; Journal of the Atmospheric Sciences Volume 20 ; 20 >
-    au < releasing ; 1964 ; Journal of the Atmospheric Sciences Volume 21 ; 21 >
-    au < releasing ; 1965 ; Journal of the Atmospheric Sciences Volume 22 ; 22 >
-    au < releasing ; 1966 ; Journal of the Atmospheric Sciences Volume 23 ; 23 >
-    au < releasing ; 1967 ; Journal of the Atmospheric Sciences Volume 24 ; 24 >
-    au < releasing ; 1968 ; Journal of the Atmospheric Sciences Volume 25 ; 25 >
-    au < releasing ; 1969 ; Journal of the Atmospheric Sciences Volume 26 ; 26 >
-    au < releasing ; 1970 ; Journal of the Atmospheric Sciences Volume 27 ; 27 >
-    au < releasing ; 1971 ; Journal of the Atmospheric Sciences Volume 28 ; 28 >
-    au < releasing ; 1972 ; Journal of the Atmospheric Sciences Volume 29 ; 29 >
-    au < releasing ; 1973 ; Journal of the Atmospheric Sciences Volume 30 ; 30 >
-    au < releasing ; 1974 ; Journal of the Atmospheric Sciences Volume 31 ; 31 >
-    au < releasing ; 1975 ; Journal of the Atmospheric Sciences Volume 32 ; 32 >
-    au < releasing ; 1976 ; Journal of the Atmospheric Sciences Volume 33 ; 33 >
-    au < releasing ; 1977 ; Journal of the Atmospheric Sciences Volume 34 ; 34 >
-    au < releasing ; 1978 ; Journal of the Atmospheric Sciences Volume 35 ; 35 >
-    au < releasing ; 1979 ; Journal of the Atmospheric Sciences Volume 36 ; 36 >
-    au < releasing ; 1980 ; Journal of the Atmospheric Sciences Volume 37 ; 37 >
-    au < releasing ; 1981 ; Journal of the Atmospheric Sciences Volume 38 ; 38 >
-    au < releasing ; 1982 ; Journal of the Atmospheric Sciences Volume 39 ; 39 >
-    au < releasing ; 1983 ; Journal of the Atmospheric Sciences Volume 40 ; 40 >
-    au < releasing ; 1984 ; Journal of the Atmospheric Sciences Volume 41 ; 41 >
-    au < releasing ; 1985 ; Journal of the Atmospheric Sciences Volume 42 ; 42 >
-    au < releasing ; 1986 ; Journal of the Atmospheric Sciences Volume 43 ; 43 >
-    au < releasing ; 1987 ; Journal of the Atmospheric Sciences Volume 44 ; 44 >
-    au < releasing ; 1988 ; Journal of the Atmospheric Sciences Volume 45 ; 45 >
-    au < releasing ; 1989 ; Journal of the Atmospheric Sciences Volume 46 ; 46 >
-    au < releasing ; 1990 ; Journal of the Atmospheric Sciences Volume 47 ; 47 >
-    au < releasing ; 1991 ; Journal of the Atmospheric Sciences Volume 48 ; 48 >
-    au < releasing ; 1992 ; Journal of the Atmospheric Sciences Volume 49 ; 49 >
-    au < releasing ; 1993 ; Journal of the Atmospheric Sciences Volume 50 ; 50 >
-    au < releasing ; 1994 ; Journal of the Atmospheric Sciences Volume 51 ; 51 >
-    au < releasing ; 1995 ; Journal of the Atmospheric Sciences Volume 52 ; 52 >
-    au < releasing ; 1996 ; Journal of the Atmospheric Sciences Volume 53 ; 53 >
-    au < releasing ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 >
-    au < releasing ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 >
-    au < releasing ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 >
-    au < releasing ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
-    au < releasing ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
-    au < releasing ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
+    au < released ; 1962 ; Journal of the Atmospheric Sciences Volume 19 ; 19 >
+    au < released ; 1963 ; Journal of the Atmospheric Sciences Volume 20 ; 20 >
+    au < released ; 1964 ; Journal of the Atmospheric Sciences Volume 21 ; 21 >
+    au < released ; 1965 ; Journal of the Atmospheric Sciences Volume 22 ; 22 >
+    au < released ; 1966 ; Journal of the Atmospheric Sciences Volume 23 ; 23 >
+    au < released ; 1967 ; Journal of the Atmospheric Sciences Volume 24 ; 24 >
+    au < released ; 1968 ; Journal of the Atmospheric Sciences Volume 25 ; 25 >
+    au < released ; 1969 ; Journal of the Atmospheric Sciences Volume 26 ; 26 >
+    au < released ; 1970 ; Journal of the Atmospheric Sciences Volume 27 ; 27 >
+    au < released ; 1971 ; Journal of the Atmospheric Sciences Volume 28 ; 28 >
+    au < released ; 1972 ; Journal of the Atmospheric Sciences Volume 29 ; 29 >
+    au < released ; 1973 ; Journal of the Atmospheric Sciences Volume 30 ; 30 >
+    au < released ; 1974 ; Journal of the Atmospheric Sciences Volume 31 ; 31 >
+    au < released ; 1975 ; Journal of the Atmospheric Sciences Volume 32 ; 32 >
+    au < released ; 1976 ; Journal of the Atmospheric Sciences Volume 33 ; 33 >
+    au < released ; 1977 ; Journal of the Atmospheric Sciences Volume 34 ; 34 >
+    au < released ; 1978 ; Journal of the Atmospheric Sciences Volume 35 ; 35 >
+    au < released ; 1979 ; Journal of the Atmospheric Sciences Volume 36 ; 36 >
+    au < released ; 1980 ; Journal of the Atmospheric Sciences Volume 37 ; 37 >
+    au < released ; 1981 ; Journal of the Atmospheric Sciences Volume 38 ; 38 >
+    au < released ; 1982 ; Journal of the Atmospheric Sciences Volume 39 ; 39 >
+    au < released ; 1983 ; Journal of the Atmospheric Sciences Volume 40 ; 40 >
+    au < released ; 1984 ; Journal of the Atmospheric Sciences Volume 41 ; 41 >
+    au < released ; 1985 ; Journal of the Atmospheric Sciences Volume 42 ; 42 >
+    au < released ; 1986 ; Journal of the Atmospheric Sciences Volume 43 ; 43 >
+    au < released ; 1987 ; Journal of the Atmospheric Sciences Volume 44 ; 44 >
+    au < released ; 1988 ; Journal of the Atmospheric Sciences Volume 45 ; 45 >
+    au < released ; 1989 ; Journal of the Atmospheric Sciences Volume 46 ; 46 >
+    au < released ; 1990 ; Journal of the Atmospheric Sciences Volume 47 ; 47 >
+    au < released ; 1991 ; Journal of the Atmospheric Sciences Volume 48 ; 48 >
+    au < released ; 1992 ; Journal of the Atmospheric Sciences Volume 49 ; 49 >
+    au < released ; 1993 ; Journal of the Atmospheric Sciences Volume 50 ; 50 >
+    au < released ; 1994 ; Journal of the Atmospheric Sciences Volume 51 ; 51 >
+    au < released ; 1995 ; Journal of the Atmospheric Sciences Volume 52 ; 52 >
+    au < released ; 1996 ; Journal of the Atmospheric Sciences Volume 53 ; 53 >
+    au < released ; 1997 ; Journal of the Atmospheric Sciences Volume 54 ; 54 >
+    au < released ; 1998 ; Journal of the Atmospheric Sciences Volume 55 ; 55 >
+    au < released ; 1999 ; Journal of the Atmospheric Sciences Volume 56 ; 56 >
+    au < released ; 2000 ; Journal of the Atmospheric Sciences Volume 57 ; 57 >
+    au < released ; 2001 ; Journal of the Atmospheric Sciences Volume 58 ; 58 >
+    au < released ; 2002 ; Journal of the Atmospheric Sciences Volume 59 ; 59 >
     au < testing ; 2003 ; Journal of the Atmospheric Sciences Volume 60 ; 60 >
-    au < releasing ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
+    au < released ; 2004 ; Journal of the Atmospheric Sciences Volume 61 ; 61 >
     au < released ; 2005 ; Journal of the Atmospheric Sciences Volume 62 ; 62 >
     au < released ; 2006 ; Journal of the Atmospheric Sciences Volume 63 ; 63 >
     au < released ; 2007 ; Journal of the Atmospheric Sciences Volume 64 ; 64 >
@@ -637,33 +637,33 @@
     au < manifest ; 1971 ; Monthly Weather Review Volume 99 ; 99 >
     au < manifest ; 1972 ; Monthly Weather Review Volume 100 ; 100 >
     au < manifest ; 1973 ; Monthly Weather Review Volume 101 ; 101 >
-    au < releasing ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
-    au < releasing ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
-    au < releasing ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
-    au < releasing ; 1977 ; Monthly Weather Review Volume 105 ; 105 >
-    au < releasing ; 1978 ; Monthly Weather Review Volume 106 ; 106 >
-    au < releasing ; 1979 ; Monthly Weather Review Volume 107 ; 107 >
-    au < releasing ; 1980 ; Monthly Weather Review Volume 108 ; 108 >
-    au < releasing ; 1981 ; Monthly Weather Review Volume 109 ; 109 >
-    au < releasing ; 1982 ; Monthly Weather Review Volume 110 ; 110 >
-    au < releasing ; 1983 ; Monthly Weather Review Volume 111 ; 111 >
-    au < releasing ; 1984 ; Monthly Weather Review Volume 112 ; 112 >
-    au < releasing ; 1985 ; Monthly Weather Review Volume 113 ; 113 >
-    au < releasing ; 1986 ; Monthly Weather Review Volume 114 ; 114 >
-    au < releasing ; 1987 ; Monthly Weather Review Volume 115 ; 115 >
-    au < releasing ; 1988 ; Monthly Weather Review Volume 116 ; 116 >
-    au < releasing ; 1989 ; Monthly Weather Review Volume 117 ; 117 >
-    au < releasing ; 1990 ; Monthly Weather Review Volume 118 ; 118 >
-    au < releasing ; 1991 ; Monthly Weather Review Volume 119 ; 119 >
-    au < releasing ; 1992 ; Monthly Weather Review Volume 120 ; 120 >
-    au < releasing ; 1993 ; Monthly Weather Review Volume 121 ; 121 >
-    au < releasing ; 1994 ; Monthly Weather Review Volume 122 ; 122 >
-    au < releasing ; 1995 ; Monthly Weather Review Volume 123 ; 123 >
-    au < releasing ; 1996 ; Monthly Weather Review Volume 124 ; 124 >
-    au < releasing ; 1997 ; Monthly Weather Review Volume 125 ; 125 >
-    au < releasing ; 1998 ; Monthly Weather Review Volume 126 ; 126 >
-    au < releasing ; 1999 ; Monthly Weather Review Volume 127 ; 127 >
-    au < releasing ; 2000 ; Monthly Weather Review Volume 128 ; 128 >
+    au < released ; 1974 ; Monthly Weather Review Volume 102 ; 102 >
+    au < released ; 1975 ; Monthly Weather Review Volume 103 ; 103 >
+    au < released ; 1976 ; Monthly Weather Review Volume 104 ; 104 >
+    au < released ; 1977 ; Monthly Weather Review Volume 105 ; 105 >
+    au < released ; 1978 ; Monthly Weather Review Volume 106 ; 106 >
+    au < released ; 1979 ; Monthly Weather Review Volume 107 ; 107 >
+    au < released ; 1980 ; Monthly Weather Review Volume 108 ; 108 >
+    au < released ; 1981 ; Monthly Weather Review Volume 109 ; 109 >
+    au < released ; 1982 ; Monthly Weather Review Volume 110 ; 110 >
+    au < released ; 1983 ; Monthly Weather Review Volume 111 ; 111 >
+    au < released ; 1984 ; Monthly Weather Review Volume 112 ; 112 >
+    au < released ; 1985 ; Monthly Weather Review Volume 113 ; 113 >
+    au < released ; 1986 ; Monthly Weather Review Volume 114 ; 114 >
+    au < released ; 1987 ; Monthly Weather Review Volume 115 ; 115 >
+    au < released ; 1988 ; Monthly Weather Review Volume 116 ; 116 >
+    au < released ; 1989 ; Monthly Weather Review Volume 117 ; 117 >
+    au < released ; 1990 ; Monthly Weather Review Volume 118 ; 118 >
+    au < released ; 1991 ; Monthly Weather Review Volume 119 ; 119 >
+    au < released ; 1992 ; Monthly Weather Review Volume 120 ; 120 >
+    au < released ; 1993 ; Monthly Weather Review Volume 121 ; 121 >
+    au < released ; 1994 ; Monthly Weather Review Volume 122 ; 122 >
+    au < released ; 1995 ; Monthly Weather Review Volume 123 ; 123 >
+    au < released ; 1996 ; Monthly Weather Review Volume 124 ; 124 >
+    au < released ; 1997 ; Monthly Weather Review Volume 125 ; 125 >
+    au < released ; 1998 ; Monthly Weather Review Volume 126 ; 126 >
+    au < released ; 1999 ; Monthly Weather Review Volume 127 ; 127 >
+    au < released ; 2000 ; Monthly Weather Review Volume 128 ; 128 >
     au < released ; 2001 ; Monthly Weather Review Volume 129 ; 129 >
     au < released ; 2002 ; Monthly Weather Review Volume 130 ; 130 >
     au < released ; 2003 ; Monthly Weather Review Volume 131 ; 131 >
@@ -702,7 +702,7 @@
     au < released ; 2013 ; Weather, Climate, and Society Volume 5 ; 5 >
     au < released ; 2014 ; Weather, Climate, and Society Volume 6 ; 6 >
     au < released ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 >
-    au < releasing ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 >
+    au < released ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 >
     au < manifest ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 >
 
   }
@@ -718,20 +718,20 @@
     
     param[journal_id] = wefo
     
-    au < releasing ; 1986 ; Weather and Forecasting Volume 1 ; 1 >
-    au < releasing ; 1987 ; Weather and Forecasting Volume 2 ; 2 >
-    au < releasing ; 1988 ; Weather and Forecasting Volume 3 ; 3 >
-    au < releasing ; 1989 ; Weather and Forecasting Volume 4 ; 4 >
-    au < releasing ; 1990 ; Weather and Forecasting Volume 5 ; 5 >
-    au < releasing ; 1991 ; Weather and Forecasting Volume 6 ; 6 >
-    au < releasing ; 1992 ; Weather and Forecasting Volume 7 ; 7 >
-    au < releasing ; 1993 ; Weather and Forecasting Volume 8 ; 8 >
-    au < releasing ; 1994 ; Weather and Forecasting Volume 9 ; 9 >
-    au < releasing ; 1995 ; Weather and Forecasting Volume 10 ; 10 >
-    au < releasing ; 1996 ; Weather and Forecasting Volume 11 ; 11 >
-    au < releasing ; 1997 ; Weather and Forecasting Volume 12 ; 12 >
-    au < releasing ; 1998 ; Weather and Forecasting Volume 13 ; 13 >
-    au < releasing ; 1999 ; Weather and Forecasting Volume 14 ; 14 >
+    au < released ; 1986 ; Weather and Forecasting Volume 1 ; 1 >
+    au < released ; 1987 ; Weather and Forecasting Volume 2 ; 2 >
+    au < released ; 1988 ; Weather and Forecasting Volume 3 ; 3 >
+    au < released ; 1989 ; Weather and Forecasting Volume 4 ; 4 >
+    au < released ; 1990 ; Weather and Forecasting Volume 5 ; 5 >
+    au < released ; 1991 ; Weather and Forecasting Volume 6 ; 6 >
+    au < released ; 1992 ; Weather and Forecasting Volume 7 ; 7 >
+    au < released ; 1993 ; Weather and Forecasting Volume 8 ; 8 >
+    au < released ; 1994 ; Weather and Forecasting Volume 9 ; 9 >
+    au < released ; 1995 ; Weather and Forecasting Volume 10 ; 10 >
+    au < released ; 1996 ; Weather and Forecasting Volume 11 ; 11 >
+    au < released ; 1997 ; Weather and Forecasting Volume 12 ; 12 >
+    au < released ; 1998 ; Weather and Forecasting Volume 13 ; 13 >
+    au < released ; 1999 ; Weather and Forecasting Volume 14 ; 14 >
     au < released ; 2000 ; Weather and Forecasting Volume 15 ; 15 >
     au < released ; 2001 ; Weather and Forecasting Volume 16 ; 16 >
     au < released ; 2002 ; Weather and Forecasting Volume 17 ; 17 >
@@ -748,7 +748,7 @@
     au < released ; 2013 ; Weather and Forecasting Volume 28 ; 28 >
     au < released ; 2014 ; Weather and Forecasting Volume 29 ; 29 >
     au < released ; 2015 ; Weather and Forecasting Volume 30 ; 30 >
-    au < releasing ; 2016 ; Weather and Forecasting Volume 31 ; 31 >
+    au < released ; 2016 ; Weather and Forecasting Volume 31 ; 31 >
     au < manifest ; 2017 ; Weather and Forecasting Volume 32 ; 32 >
     
   }
