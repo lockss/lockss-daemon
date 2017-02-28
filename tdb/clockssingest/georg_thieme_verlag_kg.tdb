@@ -1223,7 +1223,7 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
     au < testing ; exists ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
 
@@ -6346,8 +6346,8 @@
     au < manifest ; exists ; 2007 ; 2007 ; Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Zentralblatt für Neurochirurgie Volume 69 ; 69 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
 
   }
 
