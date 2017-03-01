@@ -73,16 +73,26 @@ public class NpgXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
      * of the content. So look for a PDF but if that's not there, just use 
      * the XML as proof of existence - so all records will emit
      * 
+     * In 2016 all the zip files had the foo.xml at the top level of the archive.
+     * If there was a PDF, it also was at the top level of the archive with the same basename.
+     * 
+     * With the 2017 delivery the file layout became less consistent.
+     *   bonekey12345.xml (the pdf will be a sibling file of the same basename)
+     *   xml/bonekey12345.xml (none of these have pdfs)
+     *   xml_temp/bonekey12345.xml (pdf file will live at pdf_temp/bonekey12345.pdf)
      */
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
         CachedUrl cu,
         ArticleMetadata oneAM) {
       
       String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      /* use the same basename */
+      String pdfFileName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      /* if there was a subdirectory within the archive, replace xml with pdf */
+      String pdfUrl = pdfFileName.replace("zip!/xml","zip!/pdf");
       ArrayList<String> returnList = new ArrayList<String>();
-      returnList.add(pdfName);
-      returnList.add(url_string);
+      returnList.add(pdfUrl); /* the pdf file in its likely location */
+      returnList.add(url_string); /* the xml file itself */
       return returnList;
     }    
     
