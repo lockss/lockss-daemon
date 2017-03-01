@@ -587,7 +587,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Bacteriology Volume 195 ; 195 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Bacteriology Volume 196 ; 196 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Bacteriology Volume 197 ; 197 >
-      au < HighWirePressH20Plugin ; testing ; 2016 ; Journal of Bacteriology Volume 198 ; 198 >
+      au < HighWirePressH20Plugin ; ready ; 2016 ; Journal of Bacteriology Volume 198 ; 198 >
       au < HighWirePressH20Plugin ; expected ; 2017 ; Journal of Bacteriology Volume 199 ; 199 >
   
     }
@@ -667,39 +667,40 @@
         issnl = 0022-538X
       >
       param[base_url] = http://jvi.asm.org/
+      #notReady = Probe url cgi/reprint/  outside of crawl spec counting
       
-      au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Virology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Virology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Virology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Virology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Virology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Virology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Virology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Virology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Virology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Virology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Virology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Virology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Virology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Virology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Virology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Virology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Virology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Virology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Virology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Virology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Virology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Virology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Virology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Virology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Virology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Virology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Virology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Virology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Virology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Virology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Virology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Virology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; notReady ; 1967 ; Journal of Virology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; notReady ; 1968 ; Journal of Virology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; notReady ; 1969 ; Journal of Virology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; notReady ; 1969 ; Journal of Virology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; notReady ; 1970 ; Journal of Virology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; notReady ; 1970 ; Journal of Virology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; notReady ; 1971 ; Journal of Virology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; notReady ; 1971 ; Journal of Virology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; notReady ; 1972 ; Journal of Virology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; notReady ; 1972 ; Journal of Virology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; notReady ; 1973 ; Journal of Virology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; notReady ; 1973 ; Journal of Virology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; notReady ; 1974 ; Journal of Virology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; notReady ; 1974 ; Journal of Virology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; notReady ; 1975 ; Journal of Virology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; notReady ; 1975 ; Journal of Virology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Virology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Virology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Virology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; notReady ; 1976 ; Journal of Virology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; notReady ; 1977 ; Journal of Virology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; notReady ; 1977 ; Journal of Virology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; notReady ; 1977 ; Journal of Virology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; notReady ; 1977 ; Journal of Virology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; notReady ; 1978 ; Journal of Virology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; notReady ; 1978 ; Journal of Virology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; notReady ; 1978 ; Journal of Virology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; notReady ; 1978 ; Journal of Virology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; notReady ; 1979 ; Journal of Virology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; notReady ; 1979 ; Journal of Virology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; notReady ; 1979 ; Journal of Virology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; notReady ; 1979 ; Journal of Virology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of Virology Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 1980 ; Journal of Virology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of Virology Volume 35 ; 35 >
@@ -729,7 +730,7 @@
       au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Virology Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Virology Volume 60 ; 60 >
       au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Virology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Virology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Virology Volume 62 ; 62 >
       au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Virology Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Virology Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Virology Volume 65 ; 65 >
@@ -799,7 +800,7 @@
       au < HighWirePressH20Plugin ; testing ; 1943 ; Microbiology and Molecular Biology Reviews Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1944 ; Microbiology and Molecular Biology Reviews Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; testing ; 1945 ; Microbiology and Molecular Biology Reviews Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1946 ; Microbiology and Molecular Biology Reviews Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1946 ; Microbiology and Molecular Biology Reviews Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; testing ; 1947 ; Microbiology and Molecular Biology Reviews Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; testing ; 1948 ; Microbiology and Molecular Biology Reviews Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; testing ; 1949 ; Microbiology and Molecular Biology Reviews Volume 13 ; 13 >
@@ -918,7 +919,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Molecular and Cellular Biology Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Molecular and Cellular Biology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Molecular and Cellular Biology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; testing ; 2016 ; Molecular and Cellular Biology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; ready ; 2016 ; Molecular and Cellular Biology Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; expected ; 2017 ; Molecular and Cellular Biology Volume 37 ; 37 >
   
     }
