@@ -950,7 +950,6 @@
         param[journal_issn] = 1877-6566
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 ; >
         au < down ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 ; >
         au < superseded ; exists ; 2014 ; HUGO Journal Volume 8 [superseded] ; 8 ; >
         au < superseded ; exists ; 2015 ; HUGO Journal Volume 9 [superseded] ; 9 ; >
