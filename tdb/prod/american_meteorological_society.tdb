@@ -128,16 +128,16 @@
     au < released ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
     au < testing ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
     au < testing ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
-    au < testing ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
+    au < ready ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < released ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
     au < released ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
     au < released ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
     au < released ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
-    au < testing ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
-    au < testing ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
+    au < ready ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
+    au < ready ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
     au < released ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 >
     au < released ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 >
-    au < testing ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
+    au < ready ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
 
   }
 
@@ -293,10 +293,10 @@
     au < released ; 1997 ; Journal of Climate Volume 10 ; 10 >
     au < released ; 1998 ; Journal of Climate Volume 11 ; 11 >
     au < released ; 1999 ; Journal of Climate Volume 12 ; 12 >
-    au < testing ; 2000 ; Journal of Climate Volume 13 ; 13 >
+    au < ready ; 2000 ; Journal of Climate Volume 13 ; 13 >
     au < released ; 2001 ; Journal of Climate Volume 14 ; 14 >
-    au < testing ; 2002 ; Journal of Climate Volume 15 ; 15 >
-    au < testing ; 2003 ; Journal of Climate Volume 16 ; 16 >
+    au < ready ; 2002 ; Journal of Climate Volume 15 ; 15 >
+    au < ready ; 2003 ; Journal of Climate Volume 16 ; 16 >
     au < testing ; 2004 ; Journal of Climate Volume 17 ; 17 >
     au < released ; 2005 ; Journal of Climate Volume 18 ; 18 >
     au < released ; 2006 ; Journal of Climate Volume 19 ; 19 >
@@ -381,14 +381,14 @@
     au < released ; 1992 ; Journal of Physical Oceanography Volume 22 ; 22 >
     au < released ; 1993 ; Journal of Physical Oceanography Volume 23 ; 23 >
     au < released ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 >
-    au < testing ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
+    au < ready ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
     au < released ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 >
-    au < testing ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 >
+    au < notReady ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 > #Error parsing page
     au < released ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
     au < released ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
-    au < testing ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
-    au < testing ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
-    au < testing ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
+    au < ready ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
+    au < ready ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
+    au < ready ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
     au < released ; 2003 ; Journal of Physical Oceanography Volume 33 ; 33 >
     au < released ; 2004 ; Journal of Physical Oceanography Volume 34 ; 34 >
     au < released ; 2005 ; Journal of Physical Oceanography Volume 35 ; 35 >
