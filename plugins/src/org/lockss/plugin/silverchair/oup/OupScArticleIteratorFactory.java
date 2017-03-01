@@ -50,18 +50,15 @@ public class OupScArticleIteratorFactory
   protected static Logger log = Logger.getLogger(OupScArticleIteratorFactory.class);
   
   private static final String ROOT_TEMPLATE = "\"%s%s/article\", base_url, journal_id";
-  private static final String PATTERN_TEMPLATE = "\"^%s%s/article(-(pdf|abstract))/\\d+$\", base_url, journal_id";
+  private static final String PATTERN_TEMPLATE = "\"^%s%s/article(-abstract)?/\", base_url, journal_id";
   
   private static final Pattern HTML_PATTERN = Pattern.compile("/article/(.+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/article/$1";
   private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1";
-  //Need to scrape?
-  private static final String RIS_REPLACEMENT = "/article-pdf/$1";
   private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
   //<meta name="citation_pdf_url" content="https://academic.oup.com/bioinformatics/article-pdf/31/1/119/6999904/btu602.pdf" />
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "<meta[\\s]*name=\"citation_pdf_url\"[\\s]*content=\"(.+/article-pdf/[^.]+\\.pdf)\"[\\s]*/>", Pattern.CASE_INSENSITIVE);
-
+      "<meta[\\s]*name=\"citation_pdf_url\"[\\s]*content=\"(.+/article-pdf/[^.]+\\.pdf)\"", Pattern.CASE_INSENSITIVE);
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -79,6 +76,7 @@ public class OupScArticleIteratorFactory
     builder.addAspect(CITATION_REPLACEMENT,
                       ArticleFiles.ROLE_CITATION);
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+                                  ArticleFiles.ROLE_CITATION,
                                   ArticleFiles.ROLE_ABSTRACT,
                                   ArticleFiles.ROLE_FULL_TEXT_HTML);
     return builder.getSubTreeArticleIterator();

@@ -99,7 +99,7 @@ public class TestOUPDrupalPlugin extends LockssTestCase {
         "https://www.example.com/lockss-manifest/vol_303_manifest.html", 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Oxford University Press Plugin, Base URL http://www.example.com/, Volume 303",
+    assertEquals("Oxford University Press Plugin (Legacy), Base URL http://www.example.com/, Volume 303",
         au.getName());
     assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
   }

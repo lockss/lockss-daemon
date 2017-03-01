@@ -56,6 +56,9 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
     		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
+    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
     	  })
       )
     );

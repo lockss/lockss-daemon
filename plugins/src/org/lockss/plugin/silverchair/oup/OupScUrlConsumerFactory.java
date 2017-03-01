@@ -45,7 +45,7 @@ import org.lockss.util.Logger;
 public class OupScUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(OupScUrlConsumerFactory.class);
 
-  public static final String DEL_URL = "/article-pdf/[^?]+\\.pdf";
+  public static final String DEL_URL = "/article-pdf/[^?]+\\.pdf$";
   public static final String DOC_URL = "/backfile/Content_public/Journal/[^?]+\\.pdf";
   public static final String DOC_ARGS = "\\?Expires=[^&]+&Signature=[^&]+&Key-Pair-Id=.+$";
 
@@ -65,7 +65,6 @@ public class OupScUrlConsumerFactory implements UrlConsumerFactory {
   
   @Override
   public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    log.debug3("Creating a Pub2Web UrlConsumer");
     return new OupScUrlConsumer(facade, fud);
   }
 
