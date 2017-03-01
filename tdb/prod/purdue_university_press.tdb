@@ -202,31 +202,7 @@
   # Journal of Problem Solving (1932-6246)
   
   # Journal of Southeast Asian American Education and Advancement (2153-8999)
-
-  {
   
-    title < 
-      name = JTRP Technical Reports ;
-      issn = 2326-6325 
-    >
-    
-    plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
-    param[base_url] = http://docs.lib.purdue.edu/
-    param[collection_type] = ir_series
-    param[collection] = jtrp
-    implicit < status ; year ; name ; param[collection_heading] >
-
-    # There are more years than listed below; update later
-    # doNotProcess: awaiting site refresh from Bepress
-
-    au < doNotProcess ; 2008 ; JTRP Technical Reports Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; JTRP Technical Reports Volume 2009 ; 2009 >
-    au < doNotProcess ; 2011 ; JTRP Technical Reports Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; JTRP Technical Reports Volume 2012 ; 2012 >
-   
-
-  }
-
   {
 
     title <
