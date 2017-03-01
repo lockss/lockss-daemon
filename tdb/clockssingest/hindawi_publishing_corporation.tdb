@@ -140,7 +140,7 @@
     #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Aerospace Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Aerospace Engineering Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -173,7 +173,7 @@
     #moved to archive
 
     au < frozen ; exists ; 2014 ; Advances in Anatomy Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Anatomy Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -189,7 +189,7 @@
     #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Andrology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Andrology Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -205,7 +205,7 @@
     #moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Anesthesiology Volume 2014 ; 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Anesthesiology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Advances in Anesthesiology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -401,9 +401,8 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Computer Engineering Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; Advances in Computer Engineering Volume 2016 ; 2016 ; 2016 ; >
-    au < expected ; exists ; 2017 ; Advances in Computer Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -610,7 +609,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Evolutionary Biology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -649,7 +648,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Geology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -665,7 +664,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Geriatrics Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -703,7 +702,7 @@
     #Moved to archive
 
     au < frozen ; exists ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Hepatology Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -870,7 +869,7 @@
     #Moved to archive
 
     au < frozen ; exists ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1274,7 +1273,7 @@
     #Moved to archive
 
     au < frozen ; exists ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Radiology Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1343,7 +1342,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -1405,7 +1404,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Advances in Vascular Medicine Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2697,7 +2696,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -2880,7 +2879,7 @@
 
     au < doNotProcess ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -3806,7 +3805,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Brain Science Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -4776,7 +4775,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Palliative Care Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Palliative Care Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2016 ; International Journal of Palliative Care Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -4794,7 +4793,7 @@
 
     au < doNotProcess ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -4854,7 +4853,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; International Journal of Photochemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Photochemistry Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
   
@@ -5172,7 +5171,7 @@
 
     au < doNotProcess ; exists ; 2013 ; International Journal of Superconductivity Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; International Journal of Superconductivity Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; International Journal of Superconductivity Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; International Journal of Superconductivity Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -6180,7 +6179,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Critical Care Medicine Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Critical Care Medicine Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6214,7 +6213,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6315,7 +6314,7 @@
     #Moved to archive
     
     au < frozen ; exists ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Earthquakes Volume 2016 ; 2016 ; 2016 ; >
 
   }
@@ -6433,7 +6432,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6543,7 +6542,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -6905,7 +6904,7 @@
     
     au < doNotProcess ; exists ; 2013 ; Journal of Mining Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Mining Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Mining Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -7253,7 +7252,7 @@
     #Moved to archive
     
     au < finished ; finished ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -7535,7 +7534,7 @@
     #Moved to archive
 
     au < frozen ; exists ; 2014 ; Journal of Radiotherapy Volume 2014 ; 2014 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Radiotherapy Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -7824,7 +7823,7 @@
     param[journal_id] = jsb
     #Moved to archive
 
-    au < frozen ; exists ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Synthetic Biology Volume 2015 ; 2015 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -7942,7 +7941,7 @@
 
     au < doNotProcess ; exists ; 2013 ; Journal of Toxins Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Toxins Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Toxins Volume 2015 ; 2015 ; 2015 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -8003,7 +8002,7 @@
 
     au < doNotProcess ; exists ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -8037,7 +8036,7 @@
     #Moved to archive
 
     au < finished ; finished ; 2014 ; Journal of Viruses Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; Journal of Viruses Volume 2015 ; 2015 ; 2015 ; >
+    au < finished ; manifest ; 2015 ; Journal of Viruses Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
