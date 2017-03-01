@@ -18,7 +18,7 @@
     
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/jtrp-technical-reports-released/
 
-    au < testing ; exists ; 2017 ; JTRP Technical Reports WARC Content 2017 ; 2017 >
+    au < readSource ; manifest ; 2017 ; JTRP Technical Reports WARC Content 2017 ; 2017 >
       
   }
 
