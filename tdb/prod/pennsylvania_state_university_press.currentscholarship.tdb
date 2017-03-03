@@ -4,7 +4,7 @@
     name = Penn State University Press
   >
 
-  plugin = org.lockss.plugin.jstor.ClockssJstorCurrentScholarshipPlugin
+  plugin = org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin
   param[base_url] = http://www.jstor.org/
   implicit < status ; year ; name ; param[year] >
 
