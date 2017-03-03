@@ -51,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>63</string>
+    <string>64</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -72,7 +72,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.70.2</string> <!-- content validation -->
+    <string>1.72.0</string> <!-- no store content validation -->
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -109,6 +109,8 @@
     <list>
       <string>"%s", to_http(base_url)</string>
       <string>"%s", to_https(base_url)</string>
+      <string>http://static.www.bmj.com/</string>
+      <string>https://static.www.bmj.com/</string>
     </list>
   </entry>
   <entry>
@@ -146,7 +148,7 @@
     <list>
       <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
-      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-.*$)", url_host(base_url)</string>
+      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*/article-)", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?(\.toc)?$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
@@ -158,8 +160,8 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
-      <!-- otherwise, all content from glencoesoftware CDN -->
-      <string>1,"^https?://.+([.]glencoesoftware[.]com)/.+"</string>
+      <!-- otherwise, all content from glencoesoftware CDN and non-(js|css) from static BMJ -->
+      <string>1,"^https?://([^/]+\.glencoesoftware\.com/.|static\.www\.bmj\.com/.(?!.+\.(css|js)?))"</string>
     </list>
   </entry>
   <entry>
@@ -172,7 +174,7 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
@@ -187,9 +189,9 @@
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF 
         This usually was an html page with backend error message
-        Make retry/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
-        we will count on polls to catch errors where no PDF was collected -->
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
+        Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
+        we will count on polls to catch errors where no content was stored -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
