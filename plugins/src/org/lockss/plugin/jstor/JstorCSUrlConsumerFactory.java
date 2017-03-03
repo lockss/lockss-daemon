@@ -96,7 +96,16 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
     //?acceptTC=true&coverpage=false
     public static final String DEST_PDF_STRING = PDF_STRING + "\\?acceptTC=true&coverpage=false";
 
- 
+    // Image files are at none-deterministic URLs and are currently served as text/html
+    // though they are PNG, or GIF, or...  and this is a problem for html hash filtering
+    // so remove the content-type header if it is wrong and store it instead as 
+    // x-lockss-served-content-type.
+    // ex: http://www.jstor.org/stable/get_asset/10.5325/jmorahist.15.1.0001?path=long_hashy_string  
+    private static final String UNIDENTIFIED_IMAGE_STRING = "/stable/get_asset/[0-9.]+/[^/?&]+\\?path=";
+    private static final String LOCKSS_ORIG_CONTENT_TYPE = "x-lockss-served-content-type";
+    private Pattern UnDefImagePat = Pattern.compile(UNIDENTIFIED_IMAGE_STRING, Pattern.CASE_INSENSITIVE);
+
+
     protected Pattern origFullTextPat = Pattern.compile(ORIG_STRING, Pattern.CASE_INSENSITIVE);
     protected Pattern destFullTextPat = Pattern.compile(DEST_PDF_STRING, Pattern.CASE_INSENSITIVE);
 
@@ -109,9 +118,12 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
     public void consume() throws IOException {
       if (shouldStoreRedirectsAtOrigUrl()) {
         storeAtOrigUrl();
+      } else if (imageWithIncorrectContentType()) {
+        correctContentTypeHeader();
       }
       super.consume();
     }
+
 
     /**
      * <p>
@@ -130,10 +142,28 @@ public class JstorCSUrlConsumerFactory implements UrlConsumerFactory {
       }
       boolean should =  fud.redirectUrls != null
           && ( (fud.redirectUrls.size() == 1 && fud.redirectUrls.get(0).equals(fud.fetchUrl))
-               || (fud.redirectUrls.size() == 2 && fud.redirectUrls.get(1).equals(fud.fetchUrl)) ) 
-          && destFullTextPat.matcher(fud.fetchUrl).find()
-          && origFullTextPat.matcher(fud.origUrl).find();
+              || (fud.redirectUrls.size() == 2 && fud.redirectUrls.get(1).equals(fud.fetchUrl)) ) 
+              && destFullTextPat.matcher(fud.fetchUrl).find()
+              && origFullTextPat.matcher(fud.origUrl).find();
       return should;
+    }
+
+    // If the URL matches the pattern for an in-line image
+    // and it has content-type set 
+    // and the content type is text/html....
+    protected boolean imageWithIncorrectContentType() {
+      boolean isWrong = (UnDefImagePat.matcher(fud.origUrl).find() &&
+          (fud.headers.get(CachedUrl.PROPERTY_CONTENT_TYPE) != null) &&
+          ((String)fud.headers.get(CachedUrl.PROPERTY_CONTENT_TYPE)).contains("text/html"));
+      log.debug3("is image original content type incorrect? " + isWrong);
+      return isWrong;
+    }    
+
+    // We only go in to this routine if we know the content-type is set (not null) 
+    private void correctContentTypeHeader() {
+      String pub_ctype = (String)fud.headers.get(CachedUrl.PROPERTY_CONTENT_TYPE);
+      fud.headers.remove(CachedUrl.PROPERTY_CONTENT_TYPE);
+      fud.headers.put(LOCKSS_ORIG_CONTENT_TYPE, pub_ctype);
     }
 
   }
