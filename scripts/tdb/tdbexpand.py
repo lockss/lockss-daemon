@@ -316,15 +316,17 @@ def _analyze_range(options, aus, range):
             n = n + 1
         if n == len(range):
             # Only one year to draw from
-            if options.interactive and not _yesno('Only one year to draw from; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries'), range):
+            if options.interactive and not _yesno('Only %dx%d to draw from; add %d %s per year?' % (n, latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
                 return ('warning', None)
             else:
                 return ('single', n, 0)
         else:
+            # More than one year to draw from
             prevyear = range[n]
             if prevyear[1] is None:
+                # Preceded by single year
                 if prevyear[0] > latestyear[0]:
-                    # Invalid
+                    # Invalid: preceded by later year
                     return ('error', 'Invalid progression of years')
                 elif prevyear[0] == latestyear - 1:
                     # Preceded by previous year
@@ -334,13 +336,27 @@ def _analyze_range(options, aus, range):
                     if p == len(range):
                         # Only two years to draw from
                         if n < p - n:
-                            # More of the previous year than the latest year
-                            if options.interactive and not _yesno()
+                            # More of the previous year than latest year
+                            if options.interactive and not _yesno('Only %dx%d and %dx%d to draw from; add %dx%d then %d %s per year?' % (p - n, prevyear[0], n, latestyear[0], p - n - n, latestyear[0], p - n, 'entry' if p - n == 1 else 'entries'), range):
+                                return ('warning', None)
+                            else:
+                                return ('single', p - n, p - n - n)
+                        elif n > p - n:
+                            if options.interactive and not _yesno('Only %dx%d and %dx%d to draw from; add %d %s per year?' % (p - n, prevyear[0], n, latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
+                                return ('warning', None)
+                            else:
+                                return ('single', n, 0)
+                        else:
+                            # Same of the latest year and previous year
+                            return ('single', n, 0)
                     else:
+                        # More than two years to draw from
                         pass ###FIXME
                 else:
-                    pass ###FIXMEs
+                    # Invalid: preceded by much earlier year
+                    pass ###FIXME
             else:
+                # Preceded by double year
                 pass ###FIXME
     else:
         # Ends with double year
