@@ -5554,20 +5554,20 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     # moved to Cambridge University Press
 
-    au < down ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
-    au < down ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 ; >
-    au < down ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 ; >
-    au < down ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
-    au < down ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
-    au < down ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
-    au < down ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
-    au < down ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
-    au < down ; exists ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2008 ; Enterprise & Society Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
     au < finished ; finished ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
     au < finished ; finished ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
     au < finished ; finished ; 2012 ; Enterprise & Society Volume 13 ; 13 ; >
-    au < down ; exists ; 2013 ; Enterprise & Society Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Enterprise & Society Volume 14 ; 14 ; >
     au < finished ; crawling ; 2014 ; Enterprise & Society Volume 15 ; 15 ; reingest5.clockss.org:8082 >
 
     }
@@ -6397,7 +6397,7 @@
     au < finished ; finished ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < finished ; finished ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
     au < finished ; finished ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
-    au < down ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2013 ; European Journal of Orthodontics Volume 35 ; 35 ; >
 
     }
 
@@ -15142,10 +15142,10 @@
     {
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < down ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
-    au < down ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
-    au < down ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
-    au < down ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
+    au < frozen ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
+    au < frozen ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
+    au < frozen ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
 
     }
 
@@ -16942,7 +16942,7 @@
     au < finished ; finished ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
-    au < down ; exists ; 2013 ; Molecular Plant Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Molecular Plant Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Molecular Plant Volume 7 ; 7 ; reingest3.clockss.org:8083 >
 
     }
