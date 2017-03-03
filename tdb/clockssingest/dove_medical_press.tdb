@@ -24,9 +24,9 @@
     
     param[journal_id] = 1
 
-    au < manifest ; exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 1 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 3 ; 2007 ; >
+    au < testing ; exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 1 ; 2005 ; >
+    au < testing ; exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2 ; 2006 ; >
+    au < testing ; exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 3 ; 2007 ; >
     au < testing ; exists ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 4 ; 2008 ; >
     au < testing ; exists ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 5 ; 2009 ; >
     au < testing ; exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 6 ; 2010 ; >
@@ -49,9 +49,9 @@
     
     param[journal_id] = 2
 
-    au < manifest ; exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 1 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; >
+    au < testing ; exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 1 ; 2005 ; >
+    au < testing ; exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2 ; 2006 ; >
+    au < testing ; exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; >
     au < testing ; exists ; 2008 ; Vascular Health and Risk Management Volume 4 ; 4 ; 2008 ; >
     au < testing ; exists ; 2009 ; Vascular Health and Risk Management Volume 5 ; 5 ; 2009 ; >
     au < testing ; exists ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; >
@@ -74,9 +74,9 @@
     
     param[journal_id] = 3
 
-    au < manifest ; exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 1 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 3 ; 2007 ; >
+    au < testing ; exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 1 ; 2005 ; >
+    au < testing ; exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2 ; 2006 ; >
+    au < testing ; exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 3 ; 2007 ; >
     au < testing ; exists ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 4 ; 2008 ; >
     au < testing ; exists ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 5 ; 2009 ; >
     au < testing ; exists ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 6 ; 2010 ; >
@@ -99,8 +99,8 @@
     
     param[journal_id] = 4
 
-    au < manifest ; exists ; 2006 ; Clinical Interventions in Aging Volume 1 ; 1 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2 ; 2007 ; >
+    au < testing ; exists ; 2006 ; Clinical Interventions in Aging Volume 1 ; 1 ; 2006 ; >
+    au < testing ; exists ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2 ; 2007 ; >
     au < testing ; exists ; 2008 ; Clinical Interventions in Aging Volume 3 ; 3 ; 2008 ; >
     au < testing ; exists ; 2009 ; Clinical Interventions in Aging Volume 4 ; 4 ; 2009 ; >
     au < testing ; exists ; 2010 ; Clinical Interventions in Aging Volume 5 ; 5 ; 2010 ; >
@@ -123,8 +123,8 @@
     
     param[journal_id] = 5
 
-    au < manifest ; exists ; 2006 ; International Journal of Nanomedicine Volume 1 ; 1 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2 ; 2007 ; >
+    au < testing ; exists ; 2006 ; International Journal of Nanomedicine Volume 1 ; 1 ; 2006 ; >
+    au < testing ; exists ; 2007 ; International Journal of Nanomedicine Volume 2 ; 2 ; 2007 ; >
     au < testing ; exists ; 2008 ; International Journal of Nanomedicine Volume 3 ; 3 ; 2008 ; >
     au < testing ; exists ; 2009 ; International Journal of Nanomedicine Volume 4 ; 4 ; 2009 ; >
     au < testing ; exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 5 ; 2010 ; >
@@ -147,8 +147,8 @@
     
     param[journal_id] = 6
 
-    au < manifest ; exists ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 1 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2 ; 2007 ; >
+    au < testing ; exists ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 1 ; 2006 ; >
+    au < testing ; exists ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2 ; 2007 ; >
     au < testing ; exists ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 3 ; 2008 ; >
     au < testing ; exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 4 ; 2009 ; >
     au < testing ; exists ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 5 ; 2010 ; >
@@ -194,7 +194,7 @@
     
     param[journal_id] = 8
 
-    au < manifest ; exists ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 1 ; 2007 ; >
+    au < testing ; exists ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 1 ; 2007 ; >
     au < testing ; exists ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2 ; 2008 ; >
     au < testing ; exists ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 3 ; 2009 ; >
     au < testing ; exists ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 4 ; 2010 ; >
@@ -217,7 +217,7 @@
     
     param[journal_id] = 9
 
-    au < manifest ; exists ; 2007 ; Clinical Ophthalmology Volume 1 ; 1 ; 2007 ; >
+    au < testing ; exists ; 2007 ; Clinical Ophthalmology Volume 1 ; 1 ; 2007 ; >
     au < testing ; exists ; 2008 ; Clinical Ophthalmology Volume 2 ; 2 ; 2008 ; >
     au < testing ; exists ; 2009 ; Clinical Ophthalmology Volume 3 ; 3 ; 2009 ; >
     au < testing ; exists ; 2010 ; Clinical Ophthalmology Volume 4 ; 4 ; 2010 ; >
@@ -262,7 +262,7 @@
     
     param[journal_id] = 19
 
-    au < manifest ; exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 1 ; 2007 ; >
+    au < testing ; exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 1 ; 2007 ; >
     au < testing ; exists ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2 ; 2008 ; >
     au < testing ; exists ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 3 ; 2009 ; >
     au < testing ; exists ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 4 ; 2010 ; >
@@ -285,7 +285,7 @@
     
     param[journal_id] = 20
 
-    au < manifest ; exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 1 ; 2007 ; >
+    au < testing ; exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 1 ; 2007 ; >
     au < testing ; exists ; 2008 ; Patient Preference and Adherence Volume 2 ; 2 ; 2008 ; >
     au < testing ; exists ; 2009 ; Patient Preference and Adherence Volume 3 ; 3 ; 2009 ; >
     au < testing ; exists ; 2010 ; Patient Preference and Adherence Volume 4 ; 4 ; 2010 ; >
@@ -1580,9 +1580,9 @@
     
     param[journal_id] = 88
 
-    au < manifest ; exists ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Core Evidence Volume 1 Issues 3 and 4 ; 1 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Core Evidence Volume 2 ; 2 ; 2007 ; >
+    au < testing ; exists ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; >
+    au < testing ; exists ; 2006 ; Core Evidence Volume 1 Issues 3 and 4 ; 1 ; 2006 ; >
+    au < testing ; exists ; 2007 ; Core Evidence Volume 2 ; 2 ; 2007 ; >
     au < testing ; exists ; 2008 ; Core Evidence Volume 3 ; 3 ; 2008 ; >
     au < testing ; exists ; 2009 ; Core Evidence Volume 4 ; 4 ; 2009 ; >
     au < testing ; exists ; 2010 ; Core Evidence Volume 5 ; 5 ; 2010 ; >
