@@ -13,63 +13,63 @@
       issnl = 1079-2082
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.ajhp.org/
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1965 ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
-    au < manifest ; 1966 ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
-    au < manifest ; 1967 ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
-    au < manifest ; 1968 ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
-    au < manifest ; 1969 ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
-    au < manifest ; 1970 ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
-    au < manifest ; 1971 ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
-    au < manifest ; 1972 ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
-    au < manifest ; 1973 ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
-    au < manifest ; 1974 ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
-    au < manifest ; 1975 ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
-    au < manifest ; 1976 ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
-    au < manifest ; 1977 ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
-    au < manifest ; 1978 ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
-    au < manifest ; 1979 ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
-    au < manifest ; 1980 ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
-    au < manifest ; 1981 ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
-    au < manifest ; 1982 ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
-    au < manifest ; 1983 ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
-    au < manifest ; 1984 ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
-    au < manifest ; 1985 ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
-    au < manifest ; 1986 ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
-    au < manifest ; 1987 ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
-    au < manifest ; 1988 ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
-    au < manifest ; 1989 ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
-    au < manifest ; 1990 ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
-    au < manifest ; 1991 ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
-    au < manifest ; 1992 ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
-    au < manifest ; 1993 ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
-    au < manifest ; 1994 ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
-    au < manifest ; 1995 ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
-    au < manifest ; 1996 ; American Journal of Health-System Pharmacy Volume 53 (abstracts only) ; 53 >
-    au < released ; 1997 ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
-    au < released ; 1998 ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
-    au < released ; 1999 ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
-    au < released ; 2000 ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
-    au < released ; 2001 ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
-    au < released ; 2002 ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
-    au < released ; 2003 ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
-    au < released ; 2004 ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
-    au < released ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
-    au < released ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
-    au < released ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
-    au < released ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
-    au < released ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
-    au < released ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
-    au < released ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
-    au < released ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 >
-    au < released ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 >
-    au < released ; 2014 ; American Journal of Health-System Pharmacy Volume 71 ; 71 >
-    au < released ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 >
-    au < testing ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 >
-    au < expected ; 2016 ; American Journal of Health-System Pharmacy Volume 74 ; 74 >
+    au < HWDrupalPlugin ; manifest ; 1965 ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
+    au < HWDrupalPlugin ; manifest ; 1966 ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
+    au < HWDrupalPlugin ; manifest ; 1967 ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
+    au < HWDrupalPlugin ; manifest ; 1968 ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
+    au < HWDrupalPlugin ; manifest ; 1969 ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
+    au < HWDrupalPlugin ; manifest ; 1970 ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
+    au < HWDrupalPlugin ; manifest ; 1971 ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
+    au < HWDrupalPlugin ; manifest ; 1972 ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
+    au < HWDrupalPlugin ; manifest ; 1973 ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
+    au < HWDrupalPlugin ; manifest ; 1974 ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
+    au < HWDrupalPlugin ; manifest ; 1975 ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
+    au < HWDrupalPlugin ; manifest ; 1976 ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
+    au < HWDrupalPlugin ; manifest ; 1977 ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
+    au < HWDrupalPlugin ; manifest ; 1978 ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
+    au < HWDrupalPlugin ; manifest ; 1979 ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
+    au < HWDrupalPlugin ; manifest ; 1980 ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
+    au < HWDrupalPlugin ; manifest ; 1981 ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
+    au < HWDrupalPlugin ; manifest ; 1982 ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
+    au < HWDrupalPlugin ; manifest ; 1983 ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
+    au < HWDrupalPlugin ; manifest ; 1984 ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
+    au < HWDrupalPlugin ; manifest ; 1985 ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
+    au < HWDrupalPlugin ; manifest ; 1986 ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
+    au < HWDrupalPlugin ; manifest ; 1987 ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
+    au < HWDrupalPlugin ; manifest ; 1988 ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
+    au < HWDrupalPlugin ; manifest ; 1989 ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
+    au < HWDrupalPlugin ; manifest ; 1990 ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
+    au < HWDrupalPlugin ; manifest ; 1991 ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
+    au < HWDrupalPlugin ; manifest ; 1992 ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
+    au < HWDrupalPlugin ; manifest ; 1993 ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
+    au < HWDrupalPlugin ; manifest ; 1994 ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
+    au < HWDrupalPlugin ; manifest ; 1995 ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
+    au < HWDrupalPlugin ; manifest ; 1996 ; American Journal of Health-System Pharmacy Volume 53 (abstracts only) ; 53 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Health-System Pharmacy Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Health-System Pharmacy Volume 72 ; 72 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; American Journal of Health-System Pharmacy Volume 73 ; 73 >
+    au < HWDrupalPlugin ; exists ; 2017 ; American Journal of Health-System Pharmacy Volume 74 ; 74 >
 
   }
 
