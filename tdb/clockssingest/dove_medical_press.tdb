@@ -243,7 +243,7 @@
     au < crawling ; exists ; 2008 ; Nanotechnology, Science and Applications Volume 1 ; 1 ; 2008 ; >
     au < crawling ; exists ; 2009 ; Nanotechnology, Science and Applications Volume 2 ; 2 ; 2009 ; >
     au < crawling ; exists ; 2010 ; Nanotechnology, Science and Applications Volume 3 ; 3 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 4 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Nanotechnology, Science and Applications Volume 4 ; 4 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Nanotechnology, Science and Applications Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 0 ; Nanotechnology, Science and Applications Volume 6 ; 6 ; 2013 ; > #no substance
     au < finished ; finished ; 2014 ; Nanotechnology, Science and Applications Volume 7 ; 7 ; 2014 ; >
@@ -311,7 +311,7 @@
     au < crawling ; exists ; 2008 ; OncoTargets and Therapy Volume 1 ; 1 ; 2008 ; >
     au < crawling ; exists ; 2009 ; OncoTargets and Therapy Volume 2 ; 2 ; 2009 ; >
     au < crawling ; exists ; 2010 ; OncoTargets and Therapy Volume 3 ; 3 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; OncoTargets and Therapy Volume 4 ; 4 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; OncoTargets and Therapy Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; OncoTargets and Therapy Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; OncoTargets and Therapy Volume 6 ; 6 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; OncoTargets and Therapy Volume 7 ; 7 ; 2014 ; >
@@ -1250,7 +1250,7 @@
 
     au < crawling ; exists ; 2009 ; Breast Cancer: Targets and Therapy Volume 1 ; 1 ; 2009 ; >
     au < crawling ; exists ; 2010 ; Breast Cancer: Targets and Therapy Volume 2 ; 2 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 3 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Breast Cancer: Targets and Therapy Volume 3 ; 3 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; Breast Cancer: Targets and Therapy Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; Breast Cancer: Targets and Therapy Volume 5 ; 5 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Breast Cancer: Targets and Therapy Volume 6 ; 6 ; 2014 ; >
@@ -1863,7 +1863,7 @@
     
     param[journal_id] = 102
 
-    au < crawling ; exists ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Gastrointestinal Cancer: Targets and Therapy Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Gastrointestinal Cancer: Targets and Therapy Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Gastrointestinal Cancer: Targets and Therapy Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Gastrointestinal Cancer: Targets and Therapy Volume 4 ; 4 ; 2014 ; reingest1.clockss.org:8082 >
