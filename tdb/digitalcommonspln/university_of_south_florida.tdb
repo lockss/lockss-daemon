@@ -21,7 +21,7 @@
     au < released ; 2013 ; 3 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
     au < released ; 2014 ; 4 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
     au < released ; 2015 ; 5 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 >
-    au < manifest ; 2016 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 >
+    au < ready ; 2016 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 >
     au < expected ; 2017 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 >
   
   }
@@ -41,7 +41,7 @@
     au < released ; 2013 ; 1 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 1 ; 1 >
     au < released ; 2014 ; 2 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 2 ; 2 >
     au < released ; 2015 ; 3 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 3 ; 3 >
-    au < manifest ; 2016 ; 4 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 4 ; 4 >
+    au < ready ; 2016 ; 4 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 4 ; 4 >
     au < expected ; 2017 ; 5 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 5 ; 5 >
   
   }
@@ -72,7 +72,7 @@
     au < released ; 2012 ; 7 ; Genocide Studies and Prevention Volume 7 ; 7 >
     au < released ; 2013-2014 ; 8 ; Genocide Studies and Prevention Volume 8 ; 8 >
     au < released ; 2015 ; 9 ; Genocide Studies and Prevention Volume 9 ; 9 >
-    au < manifest ; 2016 ; 10 ; Genocide Studies and Prevention Volume 10 ; 10 >
+    au < ready ; 2016 ; 10 ; Genocide Studies and Prevention Volume 10 ; 10 >
     au < expected ; 2017 ; 11 ; Genocide Studies and Prevention Volume 11 ; 11 >
 
   }
@@ -134,7 +134,7 @@
     au < released ; 2013 ; 42 ; International Journal of Speleology Volume 42 ; 42 >
     au < released ; 2014 ; 43 ; International Journal of Speleology Volume 43 ; 43 >
     au < released ; 2015 ; 44 ; International Journal of Speleology Volume 44 ; 44 >
-    au < manifest ; 2016 ; 45 ; International Journal of Speleology Volume 45 ; 45 >
+    au < ready ; 2016 ; 45 ; International Journal of Speleology Volume 45 ; 45 >
     au < expected ; 2017 ; 46 ; International Journal of Speleology Volume 46 ; 46 >
   
   }
@@ -153,7 +153,7 @@
     
     au < released ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 >
     au < released ; 2013-2015 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
-    au < manifest ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
+    au < ready ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
     au < expected ; 2017 ; 4 ; Journal of African Conflicts and Peace Studies Volume 4 ; 4 >
   
   }
@@ -188,9 +188,8 @@
     au < released ; 2012 ; 15 ; Journal of Ecological Anthropology Volume 15 ; 15 >
     au < released ; 2013 ; 16 ; Journal of Ecological Anthropology Volume 16 ; 16 >
     au < released ; 2014 ; 17 ; Journal of Ecological Anthropology Volume 17 ; 17 >
-    au < released ; 2015 ; 18 ; Journal of Ecological Anthropology Volume 18 ; 18 >
-    au < manifest ; 2016 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 >
-    au < expected ; 2017 ; 20 ; Journal of Ecological Anthropology Volume 20 ; 20 >
+    au < released ; 2016 ; 18 ; Journal of Ecological Anthropology Volume 18 ; 18 >
+    au < expected ; 2017 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 >
   
   }
 
@@ -206,7 +205,7 @@
     param[journal_abbr] = jpr
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < ready ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
     au < expected ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
   
   }
@@ -249,7 +248,7 @@
     au < released ; 2013 ; 6 ; Journal of Strategic Security Volume 6 ; 6 >
     au < released ; 2014 ; 7 ; Journal of Strategic Security Volume 7 ; 7 >
     au < released ; 2015 ; 8 ; Journal of Strategic Security Volume 8 ; 8 >
-    au < manifest ; 2016 ; 9 ; Journal of Strategic Security Volume 9 ; 9 >
+    au < ready ; 2016 ; 9 ; Journal of Strategic Security Volume 9 ; 9 >
     au < expected ; 2017 ; 10 ; Journal of Strategic Security Volume 10 ; 10 >
   
   }
@@ -274,7 +273,7 @@
     au < released ; 2013 ; 6 ; Numeracy Volume 6 ; 6 >
     au < released ; 2014 ; 7 ; Numeracy Volume 7 ; 7 >
     au < released ; 2015 ; 8 ; Numeracy Volume 8 ; 8 >
-    au < manifest ; 2016 ; 9 ; Numeracy Volume 9 ; 9 >
+    au < ready ; 2016 ; 9 ; Numeracy Volume 9 ; 9 >
     au < expected ; 2017 ; 10 ; Numeracy Volume 10 ; 10 >
   
   }
@@ -317,7 +316,7 @@
     au < released ; 2013 ; 3 ; Revista Surco Sur Volume 3 ; 3 >
     au < released ; 2014 ; 4 ; Revista Surco Sur Volume 4 ; 4 >
     au < released ; 2015 ; 5 ; Revista Surco Sur Volume 5 ; 5 >
-    au < manifest ; 2016 ; 6 ; Revista Surco Sur Volume 6 ; 6 >
+    au < ready ; 2016 ; 6 ; Revista Surco Sur Volume 6 ; 6 >
     au < expected ; 2017 ; 7 ; Revista Surco Sur Volume 7 ; 7 >
   
   }
@@ -388,7 +387,7 @@
     au < released ; 2013 ; 1 ; Suburban Sustainability Volume 1 ; 1 >
     au < released ; 2014 ; 2 ; Suburban Sustainability Volume 2 ; 2 >
     au < released ; 2015 ; 3 ; Suburban Sustainability Volume 3 ; 3 >
-    au < manifest ; 2016 ; 4 ; Suburban Sustainability Volume 4 ; 4 >
+    au < ready ; 2016 ; 4 ; Suburban Sustainability Volume 4 ; 4 >
     au < expected ; 2017 ; 5 ; Suburban Sustainability Volume 5 ; 5 >
   
   }
@@ -540,7 +539,7 @@
     au < released ; 2011-2012 ; 4 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 4 ; 4 >
     au < released ; 2012-2013 ; 5 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 5 ; 5 >
     au < released ; 2014-2016 ; 6 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 6 ; 6 >
-    au < manifest ; 2016-2017 ; 7 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 7 ; 7 >
+    au < ready ; 2016-2017 ; 7 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 7 ; 7 >
   
   }
 
