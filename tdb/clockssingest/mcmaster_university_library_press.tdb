@@ -1,0 +1,46 @@
+{
+
+  publisher <
+    name = McMaster University Library Press ;
+    info[contract] = 2017 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+    {
+
+      title < 
+        name = Bridges : Conversations in Global Politics and Public Policy ;
+        eissn = 2291-6490
+      
+      >
+      param[base_url] = https://mulpress.mcmaster.ca/
+      param[journal_id] = bridges
+
+      au < exists ; exists ; 2012 ; Clinical & Investigative Medicine Volume 1 ; 1 ; 2012 ; > 
+      au < exists ; exists ; 2013 ; Clinical & Investigative Medicine Volume 2 ; 2 ; 2013 ; > 
+      au < exists ; exists ; 2014 ; Clinical & Investigative Medicine Volume 3 ; 3 ; 2014 ; > 
+
+    }
+
+    {
+
+      title < 
+        name = Early Theatre ;
+        eissn = 2293-7609
+      
+      >
+      param[base_url] = https://mulpress.mcmaster.ca/
+      param[journal_id] = earlytheatre
+
+      au < exists ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
+      au < exists ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
+      au < exists ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
+
+    }
+
+}
+
