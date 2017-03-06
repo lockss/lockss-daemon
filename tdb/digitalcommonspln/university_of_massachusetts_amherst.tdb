@@ -1616,11 +1616,11 @@
     au < notReady ; 2008 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
     au < notReady ; 2009 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2009 [abstracts only] ; 2009 ; abstracts >
     au < notReady ; 2010 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
-    au < released ; 2011 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2011 ; 2011 ; fulltext >
-    au < released ; 2012 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2012 ; 2012 ; fulltext >
-    au < released ; 2014 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2014 ; 2014 ; fulltext >
-    au < released ; 2015 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2015 ; 2015 ; fulltext >
-    au < released ; 2016 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2016 ; 2016 ; fulltext >
+    au < testing ; 2011 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2011 ; 2011 ; fulltext >
+    au < testing ; 2012 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2012 ; 2012 ; fulltext >
+    au < testing ; 2014 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2014 ; 2014 ; fulltext >
+    au < testing ; 2015 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2015 ; 2015 ; fulltext >
+    au < testing ; 2016 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2016 ; 2016 ; fulltext >
     au < expected ; 2017 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2017 ; 2017 ; fulltext >
 
   }
@@ -2522,9 +2522,9 @@
     param[collection_type] = ir_series
     implicit < status ; year ; name ; param[collection] ; param[collection_heading] >
 
-    au < manifest ; 2009 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2009 ; jitpc2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2010 ; jitpc2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2011 ; jitpc2011 ; 2011 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2009 ; jitpc2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2010 ; jitpc2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Journal of Information Technology and Politics Annual Conference 2011 ; jitpc2011 ; 2011 >
 
   }
 
@@ -2540,32 +2540,32 @@
     param[collection] = larp_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 1976 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1976 ; 1976 >
-    au < manifest ; 1979 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1979 ; 1979 >
-    au < manifest ; 1981 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1981 ; 1981 >
-    au < manifest ; 1982 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1982 ; 1982 >
-    au < manifest ; 1985 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1985 ; 1985 >
-    au < manifest ; 1986 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1986 ; 1986 >
-    au < manifest ; 1987 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1987 ; 1987 >
-    au < manifest ; 1989 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1989 ; 1989 >
-    au < manifest ; 1991 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1991 ; 1991 >
-    au < manifest ; 1992 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1992 ; 1992 >
-    au < manifest ; 1993 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1993 ; 1993 >
-    au < manifest ; 1994 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1994 ; 1994 >
-    au < manifest ; 1997 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1997 ; 1997 >
-    au < manifest ; 1998 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1998 ; 1998 >
-    au < manifest ; 2000 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2000 ; 2000 >
-    au < manifest ; 2001 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2001 ; 2001 >
-    au < manifest ; 2002 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2002 ; 2002 >
-    au < manifest ; 2003 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2003 ; 2003 >
-    au < manifest ; 2004 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2004 ; 2004 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2010 ; 2010 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2012 ; 2012 >
+    au < testing ; 1976 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1976 ; 1976 >
+    au < testing ; 1979 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1979 ; 1979 >
+    au < testing ; 1981 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1981 ; 1981 >
+    au < testing ; 1982 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1982 ; 1982 >
+    au < testing ; 1985 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1985 ; 1985 >
+    au < testing ; 1986 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1986 ; 1986 >
+    au < testing ; 1987 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1987 ; 1987 >
+    au < testing ; 1989 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1989 ; 1989 >
+    au < testing ; 1991 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1991 ; 1991 >
+    au < testing ; 1992 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1992 ; 1992 >
+    au < testing ; 1993 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1993 ; 1993 >
+    au < testing ; 1994 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1994 ; 1994 >
+    au < testing ; 1997 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1997 ; 1997 >
+    au < testing ; 1998 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 1998 ; 1998 >
+    au < testing ; 2000 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2000 ; 2000 >
+    au < testing ; 2001 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2001 ; 2001 >
+    au < testing ; 2002 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2002 ; 2002 >
+    au < testing ; 2003 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2003 ; 2003 >
+    au < testing ; 2004 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2004 ; 2004 >
+    au < testing ; 2005 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2010 ; 2010 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Faculty Publication Series 2012 ; 2012 >
 
   }
 
@@ -2581,14 +2581,14 @@
     param[collection] = larp_grad_research
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2013 ; 2013 >
-    au < manifest ; 2014 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2014 ; 2014 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2013 ; 2013 >
+    au < testing ; 2014 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Graduate Research and Creative Activity 2014 ; 2014 >
 
   }
 
@@ -2604,8 +2604,8 @@
     param[collection] = larp_honors
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Honors Projects 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Honors Projects 2011 ; 2011 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Honors Projects 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Honors Projects 2011 ; 2011 >
 
   }
 
@@ -2621,22 +2621,22 @@
     param[collection] = larp_ms_projects
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 1990 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1990 ; 1990 >
-    au < manifest ; 1996 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1996 ; 1996 >
-    au < manifest ; 1998 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1998 ; 1998 >
-    au < manifest ; 1999 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1999 ; 1999 >
-    au < manifest ; 2002 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2002 ; 2002 >
-    au < manifest ; 2003 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2003 ; 2003 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2013 ; 2013 >
-    au < manifest ; 2014 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2014 ; 2014 >
+    au < testing ; 1990 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1990 ; 1990 >
+    au < testing ; 1996 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1996 ; 1996 >
+    au < testing ; 1998 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1998 ; 1998 >
+    au < testing ; 1999 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 1999 ; 1999 >
+    au < testing ; 2002 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2002 ; 2002 >
+    au < testing ; 2003 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2003 ; 2003 >
+    au < testing ; 2005 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2013 ; 2013 >
+    au < testing ; 2014 ; University of Massachusetts Amherst Landscape Architecture and Regional Planning Masters Projects 2014 ; 2014 >
 
   }
 
@@ -2652,7 +2652,7 @@
     param[collection] = lov_gallery
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2014 ; University of Massachusetts Amherst Landscapes of Violence Gallery 2014 ; 2014 >
+    au < testing ; 2014 ; University of Massachusetts Amherst Landscapes of Violence Gallery 2014 ; 2014 >
 
   }
 
@@ -2667,8 +2667,8 @@
     param[collection] = libcareer
     implicit < status ; name ; param[collection_theme] >  
 
-    au < manifest ; University of Massachusetts Amherst Library Career Reception 2005 ; 2005 >
-    au < manifest ; University of Massachusetts Amherst Library Career Reception 2009 ; 2009 >
+    au < testing ; University of Massachusetts Amherst Library Career Reception 2005 ; 2005 >
+    au < testing ; University of Massachusetts Amherst Library Career Reception 2009 ; 2009 >
 
   }
 
@@ -2684,16 +2684,16 @@
     param[collection] = libraries_news
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2005 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2013 ; 2013 >
-    au < manifest ; 2014 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2014 ; 2014 >
+    au < testing ; 2005 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2013 ; 2013 >
+    au < testing ; 2014 ; University of Massachusetts Amherst Library News for the Friends of the UMass Amherst Libraries 2014 ; 2014 >
 
   }
 
@@ -2709,39 +2709,39 @@
     param[collection] = linguist_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 1977 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1977 ; 1977 >
-    au < manifest ; 1979 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1979 ; 1979 >
-    au < manifest ; 1980 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1980 ; 1980 >
-    au < manifest ; 1981 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1981 ; 1981 >
-    au < manifest ; 1982 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1982 ; 1982 >
-    au < manifest ; 1983 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1983 ; 1983 >
-    au < manifest ; 1984 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1984 ; 1984 >
-    au < manifest ; 1985 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1985 ; 1985 >
-    au < manifest ; 1986 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1986 ; 1986 >
-    au < manifest ; 1988 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1988 ; 1988 >
-    au < manifest ; 1989 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1989 ; 1989 >
-    au < manifest ; 1990 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1990 ; 1990 >
-    au < manifest ; 1991 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1991 ; 1991 >
-    au < manifest ; 1992 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1992 ; 1992 >
-    au < manifest ; 1993 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1993 ; 1993 >
-    au < manifest ; 1994 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1994 ; 1994 >
-    au < manifest ; 1995 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1995 ; 1995 >
-    au < manifest ; 1996 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1996 ; 1996 >
-    au < manifest ; 1997 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1997 ; 1997 >
-    au < manifest ; 1998 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1998 ; 1998 >
-    au < manifest ; 1999 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1999 ; 1999 >
-    au < manifest ; 2000 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2000 ; 2000 >
-    au < manifest ; 2001 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2001 ; 2001 >
-    au < manifest ; 2002 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2002 ; 2002 >
-    au < manifest ; 2003 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2003 ; 2003 >
-    au < manifest ; 2004 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2004 ; 2004 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2011 ; 2011 >
+    au < testing ; 1977 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1977 ; 1977 >
+    au < testing ; 1979 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1979 ; 1979 >
+    au < testing ; 1980 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1980 ; 1980 >
+    au < testing ; 1981 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1981 ; 1981 >
+    au < testing ; 1982 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1982 ; 1982 >
+    au < testing ; 1983 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1983 ; 1983 >
+    au < testing ; 1984 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1984 ; 1984 >
+    au < testing ; 1985 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1985 ; 1985 >
+    au < testing ; 1986 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1986 ; 1986 >
+    au < testing ; 1988 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1988 ; 1988 >
+    au < testing ; 1989 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1989 ; 1989 >
+    au < testing ; 1990 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1990 ; 1990 >
+    au < testing ; 1991 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1991 ; 1991 >
+    au < testing ; 1992 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1992 ; 1992 >
+    au < testing ; 1993 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1993 ; 1993 >
+    au < testing ; 1994 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1994 ; 1994 >
+    au < testing ; 1995 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1995 ; 1995 >
+    au < testing ; 1996 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1996 ; 1996 >
+    au < testing ; 1997 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1997 ; 1997 >
+    au < testing ; 1998 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1998 ; 1998 >
+    au < testing ; 1999 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 1999 ; 1999 >
+    au < testing ; 2000 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2000 ; 2000 >
+    au < testing ; 2001 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2001 ; 2001 >
+    au < testing ; 2002 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2002 ; 2002 >
+    au < testing ; 2003 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2003 ; 2003 >
+    au < testing ; 2004 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2004 ; 2004 >
+    au < testing ; 2005 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Linguistics Department Faculty Publication Series 2011 ; 2011 >
 
   }
 
@@ -2757,7 +2757,7 @@
     param[collection] = livingroutes_stuprojects
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2008 ; University of Massachusetts Amherst Living Routes Student Projects 2008 ; 2008 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Living Routes Student Projects 2008 ; 2008 >
 
   }
 
@@ -2806,7 +2806,7 @@
 
     au < released ; 2014 ; University of Massachusetts Amherst Masters Theses 2014 ; 2014 >
     au < released ; 2015 ; University of Massachusetts Amherst Masters Theses 2015 ; 2015 >
-    au < manifest ; 2016 ; University of Massachusetts Amherst Masters Theses 2016 ; 2016 >
+    au < testing ; 2016 ; University of Massachusetts Amherst Masters Theses 2016 ; 2016 >
     au < expected ; 2017 ; University of Massachusetts Amherst Masters Theses 2017 ; 2017 >
 
   }
@@ -2938,38 +2938,38 @@
     param[collection] = math_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 1980 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1980 ; 1980 >
-    au < manifest ; 1981 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1981 ; 1981 >
-    au < manifest ; 1982 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1982 ; 1982 >
-    au < manifest ; 1983 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1983 ; 1983 >
-    au < manifest ; 1984 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1984 ; 1984 >
-    au < manifest ; 1985 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1985 ; 1985 >
-    au < manifest ; 1986 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1986 ; 1986 >
-    au < manifest ; 1987 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1987 ; 1987 >
-    au < manifest ; 1988 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1988 ; 1988 >
-    au < manifest ; 1989 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1989 ; 1989 >
-    au < manifest ; 1990 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1990 ; 1990 >
-    au < manifest ; 1991 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1991 ; 1991 >
-    au < manifest ; 1992 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1992 ; 1992 >
-    au < manifest ; 1993 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1993 ; 1993 >
-    au < manifest ; 1994 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1994 ; 1994 >
-    au < manifest ; 1995 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1995 ; 1995 >
-    au < manifest ; 1996 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1996 ; 1996 >
-    au < manifest ; 1997 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1997 ; 1997 >
-    au < manifest ; 1998 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1998 ; 1998 >
-    au < manifest ; 1999 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1999 ; 1999 >
-    au < manifest ; 2000 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2000 ; 2000 >
-    au < manifest ; 2001 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2001 ; 2001 >
-    au < manifest ; 2002 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2002 ; 2002 >
-    au < manifest ; 2003 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2003 ; 2003 >
-    au < manifest ; 2004 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2004 ; 2004 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2011 ; 2011 >
+    au < testing ; 1980 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1980 ; 1980 >
+    au < testing ; 1981 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1981 ; 1981 >
+    au < testing ; 1982 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1982 ; 1982 >
+    au < testing ; 1983 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1983 ; 1983 >
+    au < testing ; 1984 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1984 ; 1984 >
+    au < testing ; 1985 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1985 ; 1985 >
+    au < testing ; 1986 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1986 ; 1986 >
+    au < testing ; 1987 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1987 ; 1987 >
+    au < testing ; 1988 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1988 ; 1988 >
+    au < testing ; 1989 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1989 ; 1989 >
+    au < testing ; 1990 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1990 ; 1990 >
+    au < testing ; 1991 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1991 ; 1991 >
+    au < testing ; 1992 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1992 ; 1992 >
+    au < testing ; 1993 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1993 ; 1993 >
+    au < testing ; 1994 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1994 ; 1994 >
+    au < testing ; 1995 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1995 ; 1995 >
+    au < testing ; 1996 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1996 ; 1996 >
+    au < testing ; 1997 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1997 ; 1997 >
+    au < testing ; 1998 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1998 ; 1998 >
+    au < testing ; 1999 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 1999 ; 1999 >
+    au < testing ; 2000 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2000 ; 2000 >
+    au < testing ; 2001 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2001 ; 2001 >
+    au < testing ; 2002 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2002 ; 2002 >
+    au < testing ; 2003 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2003 ; 2003 >
+    au < testing ; 2004 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2004 ; 2004 >
+    au < testing ; 2005 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Mathematics and Statistics Department Faculty Publication Series 2011 ; 2011 >
 
   }
 
@@ -2995,7 +2995,7 @@
     au < released ; 2013 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2013 [abstracts only] ; 2013 ; abstracts >
     au < released ; 2014 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2014 ; 2014 ; fulltext >
     au < released ; 2015 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2015 ; 2015 ; fulltext >
-    au < manifest ; 2016 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2016 ; 2016 ; fulltext >
+    au < testing ; 2016 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2016 ; 2016 ; fulltext >
     au < expected ; 2017 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2017 ; 2017 ; fulltext >
 
   }
@@ -3012,8 +3012,8 @@
     param[collection] = miralook
     implicit < status ; name ; param[collection_heading] >
 
-    au < manifest ; University of Massachusetts Amherst MIRA/LOOK: New Visions for Architecture in Holyoke Research, Creative or Professional Activities ; research >
-    au < manifest ; University of Massachusetts Amherst MIRA/LOOK: New Visions for Architecture in Holyoke Teaching Activities ; teaching >
+    au < testing ; University of Massachusetts Amherst MIRA/LOOK: New Visions for Architecture in Holyoke Research, Creative or Professional Activities ; research >
+    au < testing ; University of Massachusetts Amherst MIRA/LOOK: New Visions for Architecture in Holyoke Teaching Activities ; teaching >
 
   }
 
@@ -3030,14 +3030,14 @@
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
     au < manifest ; 1981 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1981 [abstracts only] ; 1981 ; abstracts >
-    au < manifest ; 1986 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1986 ; 1986 ; fulltext >
+    au < testing ; 1986 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1986 ; 1986 ; fulltext >
     au < manifest ; 1989 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
-    au < manifest ; 1993 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1993 ; 1993 ; fulltext >
+    au < testing ; 1993 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1993 ; 1993 ; fulltext >
     au < manifest ; 1996 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
     au < manifest ; 1999 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
     au < manifest ; 2000 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
     au < manifest ; 2004 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 2004 [abstracts only] ; 2004 ; abstracts >
-    au < manifest ; 2005 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 2005 ; 2005 ; fulltext >
+    au < testing ; 2005 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 2005 ; 2005 ; fulltext >
     au < manifest ; 2008 ; University of Massachusetts Amherst Music and Dance Department Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
 
   }
@@ -3054,7 +3054,7 @@
     param[collection] = music_symposia
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2003 ; University of Massachusetts Amherst Music Education Symposia 2003 ; 2003 >
+    au < testing ; 2003 ; University of Massachusetts Amherst Music Education Symposia 2003 ; 2003 >
 
   }
 
@@ -3070,17 +3070,17 @@
     param[collection] = ncdg
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2003 ; University of Massachusetts Amherst National Center for Digital Government 2003 ; 2003 >
-    au < manifest ; 2004 ; University of Massachusetts Amherst National Center for Digital Government 2004 ; 2004 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst National Center for Digital Government 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst National Center for Digital Government 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst National Center for Digital Government 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst National Center for Digital Government 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst National Center for Digital Government 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst National Center for Digital Government 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst National Center for Digital Government 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst National Center for Digital Government 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst National Center for Digital Government 2013 ; 2013 >
+    au < testing ; 2003 ; University of Massachusetts Amherst National Center for Digital Government 2003 ; 2003 >
+    au < testing ; 2004 ; University of Massachusetts Amherst National Center for Digital Government 2004 ; 2004 >
+    au < testing ; 2005 ; University of Massachusetts Amherst National Center for Digital Government 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst National Center for Digital Government 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst National Center for Digital Government 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst National Center for Digital Government 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst National Center for Digital Government 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst National Center for Digital Government 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst National Center for Digital Government 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst National Center for Digital Government 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst National Center for Digital Government 2013 ; 2013 >
 
   }
 
@@ -3110,13 +3110,13 @@
     param[collection] = oa
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < manifest ; 2008 ; University of Massachusetts Amherst Open Access Week 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst Open Access Week 2009 ; 2009 >
-    au < manifest ; 2010 ; University of Massachusetts Amherst Open Access Week 2010 ; 2010 >
-    au < manifest ; 2011 ; University of Massachusetts Amherst Open Access Week 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Open Access Week 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst Open Access Week 2013 ; 2013 >
-    au < manifest ; 2014 ; University of Massachusetts Amherst Open Access Week 2014 ; 2014 >
+    au < testing ; 2008 ; University of Massachusetts Amherst Open Access Week 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Open Access Week 2009 ; 2009 >
+    au < testing ; 2010 ; University of Massachusetts Amherst Open Access Week 2010 ; 2010 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Open Access Week 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Open Access Week 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst Open Access Week 2013 ; 2013 >
+    au < testing ; 2014 ; University of Massachusetts Amherst Open Access Week 2014 ; 2014 >
 
   }
 
@@ -3132,7 +3132,7 @@
     param[collection] = oa_week
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2009 ; University of Massachusetts Amherst Open Access Week Gallery 2009 ; 2009 >
+    au < testing ; 2009 ; University of Massachusetts Amherst Open Access Week Gallery 2009 ; 2009 >
 
   }
 
@@ -3147,9 +3147,9 @@
     param[collection] = nerr
     implicit < status ; year ; name ; param[collection_theme] >  
 
-    au < manifest ; 2011 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2011 ; 2011 >
-    au < manifest ; 2012 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2012 ; 2012 >
-    au < manifest ; 2013 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2013 ; 2013 >
+    au < testing ; 2011 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2011 ; 2011 >
+    au < testing ; 2012 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2012 ; 2012 >
+    au < testing ; 2013 ; University of Massachusetts Amherst Proceedings of the Northeastern Recreation Research Symposium 2013 ; 2013 >
 
   }
 
@@ -3274,13 +3274,13 @@
     param[collection] = librarian_pubs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < manifest ; 2001 ; University of Massachusetts Amherst University Librarians Publication Series 2001 ; 2001 >
-    au < manifest ; 2004 ; University of Massachusetts Amherst University Librarians Publication Series 2004 ; 2004 >
-    au < manifest ; 2005 ; University of Massachusetts Amherst University Librarians Publication Series 2005 ; 2005 >
-    au < manifest ; 2006 ; University of Massachusetts Amherst University Librarians Publication Series 2006 ; 2006 >
-    au < manifest ; 2007 ; University of Massachusetts Amherst University Librarians Publication Series 2007 ; 2007 >
-    au < manifest ; 2008 ; University of Massachusetts Amherst University Librarians Publication Series 2008 ; 2008 >
-    au < manifest ; 2009 ; University of Massachusetts Amherst University Librarians Publication Series 2009 ; 2009 >
+    au < testing ; 2001 ; University of Massachusetts Amherst University Librarians Publication Series 2001 ; 2001 >
+    au < testing ; 2004 ; University of Massachusetts Amherst University Librarians Publication Series 2004 ; 2004 >
+    au < testing ; 2005 ; University of Massachusetts Amherst University Librarians Publication Series 2005 ; 2005 >
+    au < testing ; 2006 ; University of Massachusetts Amherst University Librarians Publication Series 2006 ; 2006 >
+    au < testing ; 2007 ; University of Massachusetts Amherst University Librarians Publication Series 2007 ; 2007 >
+    au < testing ; 2008 ; University of Massachusetts Amherst University Librarians Publication Series 2008 ; 2008 >
+    au < testing ; 2009 ; University of Massachusetts Amherst University Librarians Publication Series 2009 ; 2009 >
 
   }
 
