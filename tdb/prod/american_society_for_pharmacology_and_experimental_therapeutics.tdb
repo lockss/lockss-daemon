@@ -63,6 +63,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Drug Metabolism and Disposition Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Drug Metabolism and Disposition Volume 43 ; 43 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 >
 
   }
 
@@ -436,6 +437,10 @@
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 361 ; 361 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 362 ; 362 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 363 ; 363 >
 
   }
 
@@ -567,6 +572,8 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Pharmacology Volume 88 ; 88 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Molecular Pharmacology Volume 89 ; 89 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Molecular Pharmacology Volume 90 ; 90 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Molecular Pharmacology Volume 91 ; 91 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Molecular Pharmacology Volume 92 ; 92 >
 
   }
 
@@ -649,6 +656,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Pharmacological Reviews Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Pharmacological Reviews Volume 67 ; 67 >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2016 ; Pharmacological Reviews Volume 68 ; 68 >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2017 ; Pharmacological Reviews Volume 69 ; 69 >
 
   }
 

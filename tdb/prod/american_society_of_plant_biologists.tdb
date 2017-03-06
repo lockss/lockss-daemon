@@ -60,6 +60,7 @@
       au < HighWirePressH20Plugin ; released ; 2014 ; The Plant Cell Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2015 ; The Plant Cell Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; The Plant Cell Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; The Plant Cell Volume 29 ; 29 >
 
     }
 
@@ -256,6 +257,9 @@
     au < HighWirePressH20Plugin ; released ; 2016 ; Plant Physiology Volume 170 ; 170 >
     au < HighWirePressH20Plugin ; ready ; 2016 ; Plant Physiology Volume 171 ; 171 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Plant Physiology Volume 172 ; 172 >
+    au < HighWirePressH20Plugin ; expected ; 2017 ; Plant Physiology Volume 173 ; 173 >
+    au < HighWirePressH20Plugin ; expected ; 2017 ; Plant Physiology Volume 174 ; 174 >
+    au < HighWirePressH20Plugin ; expected ; 2017 ; Plant Physiology Volume 175 ; 175 >
 
   }
 
@@ -287,6 +291,7 @@
       au < manifest ; 2014 ; The Arabidopsis Book Volume 12 ; 12 >
       au < manifest ; 2015 ; The Arabidopsis Book Volume 13 ; 13 >
       au < released ; 2016 ; The Arabidopsis Book Volume 14 ; 14 >
+      au < expected ; 2017 ; The Arabidopsis Book Volume 15 ; 15 >
     }
 
   }
