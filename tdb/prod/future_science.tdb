@@ -25,7 +25,7 @@
     au < released ; 2013 ; Bioanalysis Volume 5 ; 5 >
     au < released ; 2014 ; Bioanalysis Volume 6 ; 6 >
     au < released ; 2015 ; Bioanalysis Volume 7 ; 7 >
-    au < manifest ; 2016 ; Bioanalysis Volume 8 ; 8 >
+    au < ready ; 2016 ; Bioanalysis Volume 8 ; 8 >
     
   }
 
@@ -128,7 +128,7 @@
     
     param[journal_id] = ipk
 
-   au < manifest ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 >
+   au < ready ; 2016 ; International Journal of Pharmacokinetics Volume 1 ; 1 >
  
    }
 
