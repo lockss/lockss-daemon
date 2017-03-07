@@ -126,8 +126,8 @@
     au < released ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
     au < released ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
     au < released ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
-    au < testing ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
-    au < testing ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
+    au < ready ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
+    au < notReady ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > #Error parsing page
     au < ready ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < released ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
     au < released ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
@@ -297,7 +297,7 @@
     au < released ; 2001 ; Journal of Climate Volume 14 ; 14 >
     au < ready ; 2002 ; Journal of Climate Volume 15 ; 15 >
     au < ready ; 2003 ; Journal of Climate Volume 16 ; 16 >
-    au < testing ; 2004 ; Journal of Climate Volume 17 ; 17 >
+    au < notReady ; 2004 ; Journal of Climate Volume 17 ; 17 > #500 Internal Server Error
     au < released ; 2005 ; Journal of Climate Volume 18 ; 18 >
     au < released ; 2006 ; Journal of Climate Volume 19 ; 19 >
     au < released ; 2007 ; Journal of Climate Volume 20 ; 20 >
