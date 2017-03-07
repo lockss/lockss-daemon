@@ -23,8 +23,8 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Discovery Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Discovery Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Discovery Volume 5 ; 5 >
-    au < HWDrupalPlugin ; exists ; 2016 ; Cancer Discovery Volume 6 ; 6 >
-    au < HWDrupalPlugin ; exists ; 2017 ; Cancer Discovery Volume 7 ; 7 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Discovery Volume 6 ; 6 >
+    au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Discovery Volume 7 ; 7 >
 
   }
 
@@ -65,8 +65,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 >
-      au < HWDrupalPlugin ; exists ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 >
+      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 >
 
     }
 
@@ -88,8 +88,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Immunology Research Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Immunology Research Volume 3 ; 3 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Cancer Immunology Research Volume 4 ; 4 >
-      au < HWDrupalPlugin ; exists ; 2017 ; Cancer Immunology Research Volume 5 ; 5 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Immunology Research Volume 4 ; 4 >
+      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Immunology Research Volume 5 ; 5 >
 
     }
 
@@ -116,8 +116,8 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Prevention Research Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Prevention Research Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Cancer Prevention Research Volume 8 ; 8 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Cancer Prevention Research Volume 9 ; 9 >
-      au < HWDrupalPlugin ; exists ; 2017 ; Cancer Prevention Research Volume 10 ; 10 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Cancer Prevention Research Volume 9 ; 9 >
+      au < HWDrupalPlugin ; manifest ; 2017 ; Cancer Prevention Research Volume 10 ; 10 >
 
     }
 
