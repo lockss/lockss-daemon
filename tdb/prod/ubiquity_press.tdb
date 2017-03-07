@@ -136,7 +136,7 @@
       param[base_url] = https://olh.openlibhums.org/
 
       au < manifest ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 >
 
   }
 
@@ -321,7 +321,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://ajar.arena-architecture.eu/
 
-      au < manifest ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 >
 
   }
 
@@ -666,7 +666,7 @@
       param[base_url] = http://openhumanitiesdata.metajnl.com/
 
       au < manifest ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 >
 
   }
 
@@ -914,7 +914,7 @@
       au < manifest ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 >
 
   }
 
@@ -1207,7 +1207,7 @@
       au < released ; 2013 ; 3 ; Incontri. Rivista europea di studi italiani Volume 2013 ; 2013 >
       au < released ; 2014 ; 4 ; Incontri. Rivista europea di studi italiani Volume 2014 ; 2014 >
       au < released ; 2015 ; 5 ; Incontri. Rivista europea di studi italiani Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 6 ; Incontri. Rivista europea di studi italiani Volume 2016 ; 2016 >
 
   }
 
@@ -1447,7 +1447,7 @@
       au < released ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 >
       au < released ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 >
       au < released ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 >
 
   }
 
