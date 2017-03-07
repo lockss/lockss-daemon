@@ -59,7 +59,7 @@
       au < doNotProcess ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 31 ; >
       au < doNotProcess ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrine Reviews Volume 33 ; 33 ; >
-      au < down ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 ; >
       au < finished ; finished ; 2014 ; Endocrine Reviews Volume 35 ; 35 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Endocrine Reviews Volume 36 ; 36 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2016 ; Endocrine Reviews Volume 37 ; 37 ; >
@@ -233,7 +233,7 @@
       au < doNotProcess ; exists ; 2008 ; Endocrinology Volume 149 ; 149 ; >
       au < doNotProcess ; exists ; 2009 ; Endocrinology Volume 150 ; 150 ; >
       au < doNotProcess ; exists ; 2010 ; Endocrinology Volume 151 ; 151 ; >
-      au < down ; exists ; 2011 ; Endocrinology Volume 152 ; 152 ; > # OK to ignore PDF Hash Error (X X). PD-1296
+      au < frozen ; exists ; 2011 ; Endocrinology Volume 152 ; 152 ; > # OK to ignore PDF Hash Error (X X). PD-1296
       au < doNotProcess ; doNotProcess ; 2012 ; Endocrinology Volume 153 ; 153 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Endocrinology Volume 154 ; 154 ; >
       au < finished ; finished ; 2014 ; Endocrinology Volume 155 ; 155 ; reingest1.clockss.org:8082 >
@@ -353,7 +353,7 @@
       au < doNotProcess ; exists ; 2008 ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 ; >
       au < doNotProcess ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 ; >
-      au < down ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ; >
+      au < frozen ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ; >
       au < finished ; finished ; 2014 ; Journal of Clinical Endocrinology & Metabolism Volume 99 ; 99 ; reingest4.clockss.org:8082 >
@@ -380,7 +380,7 @@
 
 #adding all of the AUs to the ingest machines becuase of likely 2017 trigger
 #even recollecting the 2012/2013
-      au < down ; exists ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1987 ; Molecular Endocrinology Volume 1 ; 1 ; >
       au < down ; exists ; 1988 ; Molecular Endocrinology Volume 2 ; 2 ; >
       au < down ; exists ; 1989 ; Molecular Endocrinology Volume 3 ; 3 ; >
       au < down ; exists ; 1990 ; Molecular Endocrinology Volume 4 ; 4 ; >
@@ -389,12 +389,12 @@
       au < down ; exists ; 1993 ; Molecular Endocrinology Volume 7 ; 7 ; >
       au < down ; exists ; 1994 ; Molecular Endocrinology Volume 8 ; 8 ; >
       au < down ; exists ; 1995 ; Molecular Endocrinology Volume 9 ; 9 ; >
-      au < down ; exists ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ; >
-      au < down ; exists ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ; >
-      au < down ; exists ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ; >
-      au < down ; exists ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ; >
-      au < down ; exists ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ; >
-      au < down ; exists ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1996 ; Molecular Endocrinology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 1997 ; Molecular Endocrinology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 1998 ; Molecular Endocrinology Volume 12 ; 12 ; >
+      au < frozen ; exists ; 1999 ; Molecular Endocrinology Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2000 ; Molecular Endocrinology Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2001 ; Molecular Endocrinology Volume 15 ; 15 ; >
       au < down ; exists ; 2002 ; Molecular Endocrinology Volume 16 ; 16 ; >
       au < down ; exists ; 2003 ; Molecular Endocrinology Volume 17 ; 17 ; >
       au < down ; exists ; 2004 ; Molecular Endocrinology Volume 18 ; 18 ; >
