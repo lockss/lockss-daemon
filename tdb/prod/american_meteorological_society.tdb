@@ -67,7 +67,7 @@
     au < released ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 >
     au < released ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 >
     au < released ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 >
-    au < ready ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 >
+    au < releasing ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 >
     au < manifest ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 >
 
   }
@@ -101,7 +101,7 @@
     au < released ; 2013 ; Earth Interactions Volume 17 ; 17 >
     au < released ; 2014 ; Earth Interactions Volume 18 ; 18 >
     au < released ; 2015 ; Earth Interactions Volume 19 ; 19 >
-    au < ready ; 2016 ; Earth Interactions Volume 20 ; 20 >
+    au < releasing ; 2016 ; Earth Interactions Volume 20 ; 20 >
     au < expected ; 2017 ; Earth Interactions Volume 21 ; 21 >
     
   }
@@ -126,18 +126,18 @@
     au < released ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
     au < released ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
     au < released ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
-    au < ready ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
+    au < releasing ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
     au < notReady ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > #Error parsing page
-    au < ready ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
+    au < releasing ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < released ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
     au < released ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
     au < released ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
     au < released ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
-    au < ready ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
-    au < ready ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
+    au < releasing ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
+    au < releasing ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
     au < released ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 >
     au < released ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 >
-    au < ready ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
+    au < releasing ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
 
   }
 
@@ -293,10 +293,10 @@
     au < released ; 1997 ; Journal of Climate Volume 10 ; 10 >
     au < released ; 1998 ; Journal of Climate Volume 11 ; 11 >
     au < released ; 1999 ; Journal of Climate Volume 12 ; 12 >
-    au < ready ; 2000 ; Journal of Climate Volume 13 ; 13 >
+    au < releasing ; 2000 ; Journal of Climate Volume 13 ; 13 >
     au < released ; 2001 ; Journal of Climate Volume 14 ; 14 >
-    au < ready ; 2002 ; Journal of Climate Volume 15 ; 15 >
-    au < ready ; 2003 ; Journal of Climate Volume 16 ; 16 >
+    au < releasing ; 2002 ; Journal of Climate Volume 15 ; 15 >
+    au < releasing ; 2003 ; Journal of Climate Volume 16 ; 16 >
     au < notReady ; 2004 ; Journal of Climate Volume 17 ; 17 > #500 Internal Server Error
     au < released ; 2005 ; Journal of Climate Volume 18 ; 18 >
     au < released ; 2006 ; Journal of Climate Volume 19 ; 19 >
@@ -309,7 +309,7 @@
     au < released ; 2013 ; Journal of Climate Volume 26 ; 26 >
     au < released ; 2014 ; Journal of Climate Volume 27 ; 27 >
     au < released ; 2015 ; Journal of Climate Volume 28 ; 28 >
-    au < ready ; 2016 ; Journal of Climate Volume 29 ; 29 >
+    au < releasing ; 2016 ; Journal of Climate Volume 29 ; 29 >
     au < manifest ; 2017 ; Journal of Climate Volume 30 ; 30 >
 
   }
@@ -381,14 +381,14 @@
     au < released ; 1992 ; Journal of Physical Oceanography Volume 22 ; 22 >
     au < released ; 1993 ; Journal of Physical Oceanography Volume 23 ; 23 >
     au < released ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 >
-    au < ready ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
+    au < releasing ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
     au < released ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 >
     au < notReady ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 > #Error parsing page
     au < released ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
     au < released ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
-    au < ready ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
-    au < ready ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
-    au < ready ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
+    au < releasing ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
+    au < releasing ; 2001 ; Journal of Physical Oceanography Volume 31 ; 31 >
+    au < releasing ; 2002 ; Journal of Physical Oceanography Volume 32 ; 32 >
     au < released ; 2003 ; Journal of Physical Oceanography Volume 33 ; 33 >
     au < released ; 2004 ; Journal of Physical Oceanography Volume 34 ; 34 >
     au < released ; 2005 ; Journal of Physical Oceanography Volume 35 ; 35 >
@@ -402,7 +402,7 @@
     au < released ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 >
     au < released ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 >
     au < released ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 >
-    au < ready ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 >
+    au < releasing ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 >
     au < manifest ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 >
 
   }
@@ -490,7 +490,7 @@
     au < released ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 >
     au < released ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 >
     au < released ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 >
-    au < ready ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 >
+    au < releasing ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 >
     au < manifest ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 >
    
   }
@@ -679,7 +679,7 @@
     au < released ; 2013 ; Monthly Weather Review Volume 141 ; 141 >
     au < released ; 2014 ; Monthly Weather Review Volume 142 ; 142 >
     au < released ; 2015 ; Monthly Weather Review Volume 143 ; 143 >
-    au < ready ; 2016 ; Monthly Weather Review Volume 144 ; 144 >
+    au < releasing ; 2016 ; Monthly Weather Review Volume 144 ; 144 >
     au < manifest ; 2017 ; Monthly Weather Review Volume 145 ; 145 >
     
   }
