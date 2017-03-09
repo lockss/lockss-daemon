@@ -51,10 +51,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; >
-    au < boost ; exists ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; >
-    au < boost ; exists ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; >
     au < expected ; exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; >
 
   }
@@ -75,10 +75,10 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; >
-      au < boost ; exists ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; >
-      au < boost ; exists ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; >
       au < expected ; exists ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; >
 
     }
@@ -102,7 +102,7 @@
     au < exists ; exists ; 2013 ; Education Inquiry Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Education Inquiry Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 ; >
-    au < boost ; exists ; 2016 ; Education Inquiry Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Education Inquiry Volume 7 ; 7 ; >
     au < expected ; exists ; 2017 ; Education Inquiry Volume 8 ; 8 ; >
 
   }
@@ -150,7 +150,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Ethics & Global Politics Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; >
-    au < boost ; exists ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; >
     au < expected ; exists ; 2017 ; Ethics & Global Politics Volume 10 ; 10 ; >
     
   }
@@ -168,7 +168,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 ; >
-    au < boost ; exists ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 ; >
     au < expected ; exists ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 ; >
 
   }
@@ -188,12 +188,12 @@
       # V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
 
       au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; >
-      au < boost ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; >
-      au < boost ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; >
       au < exists ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; >
-      au < boost ; exists ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; >
       au < expected ; exists ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; >
 
     }
@@ -217,10 +217,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; >
-    au < boost ; exists ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; >
-    au < boost ; exists ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; >
     au < expected ; exists ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; >
     
   }
@@ -242,10 +242,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; >
-    au < boost ; exists ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; >
-    au < boost ; exists ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; >
     au < expected ; exists ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; >
 
   }
@@ -266,7 +266,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 ; >
-    au < boost ; exists ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 ; >
     au < expected ; exists ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 ; >
 
   }
@@ -297,7 +297,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Circumpolar Health Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 ; >
-    au < boost ; exists ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 ; >
     au < expected ; exists ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 ; >
 
   }
@@ -315,7 +315,7 @@
     param[journal_id] = zqhw20
     # issn volumes 1-4, 2006-2009
 
-    au < boost ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; >
@@ -325,7 +325,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; >
-    au < boost ; exists ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 ; >
     au < expected ; exists ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; >
 
   }
@@ -348,7 +348,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; >
-    au < boost ; exists ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 ; >
     au < expected ; exists ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 ; >
 
   }
@@ -366,10 +366,10 @@
 
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; >
-    au < boost ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; >
-    au < boost ; exists ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 ; >
     au < expected ; exists ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 ; >
 
   }
@@ -389,7 +389,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; >
-    au < boost ; exists ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 ; >
     au < expected ; exists ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; >
 
   }
@@ -408,7 +408,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; >
-    au < boost ; exists ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 ; >
 
   }
 
@@ -430,7 +430,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; >
-    au < boost ; exists ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; >
 
   }
 
@@ -453,10 +453,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 ; >
-    au < boost ; exists ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; >
-    au < boost ; exists ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; >
 
   }
 
@@ -514,7 +514,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Medical Education Online Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Medical Education Online Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 ; >
-      au < boost ; exists ; 2016 ; Medical Education Online Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Medical Education Online Volume 21 ; 21 ; >
       
     }
   }
@@ -534,7 +534,7 @@
 
     au < doNotProcess ; doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; >
-    au < boost ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; >
@@ -544,7 +544,7 @@
     au < doNotProcess ; doNotProcess ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; >
-    au < boost ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; >
@@ -558,7 +558,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Microbial Ecology in Health and Disease Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; >
-    au < boost ; exists ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 ; >
   }
 
   {
@@ -607,7 +607,7 @@
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = znano20
 
-    au < boost ; exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; >
   }
 
   {
@@ -623,10 +623,10 @@
 
     au < doNotProcess ; doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; >
-    au < boost ; exists ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; >
-    au < boost ; exists ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; >
 
   }
 
@@ -644,14 +644,14 @@
 
     au < doNotProcess ; doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 ; >
     au < doNotProcess ; doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 ; >
-    au < boost ; exists ; 1984 ; Polar Research Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Polar Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1985 ; Polar Research Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1986 ; Polar Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1987 ; Polar Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; Polar Research Volume 6 ; 6 ; >
-    au < boost ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Polar Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; Polar Research Volume 8 ; 8 ; >
-    au < boost ; exists ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; Polar Research Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 1993 ; Polar Research Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1994 ; Polar Research Volume 13 ; 13 ; >
@@ -661,8 +661,8 @@
     au < doNotProcess ; doNotProcess ; 1998 ; Polar Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; Polar Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Polar Research Volume 19 ; 19 ; >
-    au < boost ; exists ; 2001 ; Polar Research Volume 20 ; 20 ; >
-    au < boost ; exists ; 2002 ; Polar Research Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Polar Research Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Polar Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Polar Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Polar Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Polar Research Volume 24 ; 24 ; >
@@ -673,10 +673,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Polar Research Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; >
-    au < boost ; exists ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; >
-    au < boost ; exists ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; >
 
   }
 
@@ -692,15 +692,15 @@
     #param[base_url] = http://www.researchinlearningtechnology.net/
     param[journal_id] = zrlt20
 
-    au < boost ; exists ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ;>
     au < doNotProcess ; doNotProcess ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ;>
     au < doNotProcess ; doNotProcess ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ;>
     au < doNotProcess ; doNotProcess ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ;>
     au < doNotProcess ; doNotProcess ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ;>
-    au < boost ; exists ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ;>
-    au < boost ; exists ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ;>
-    au < boost ; exists ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ;>
+    au < doNotProcess ; doNotProcess ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ;>
+    au < doNotProcess ; doNotProcess ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ;>
+    au < doNotProcess ; doNotProcess ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ;>
     au < doNotProcess ; doNotProcess ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; >
@@ -712,10 +712,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; >
-    au < boost ; exists ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; >
-    au < boost ; exists ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 ; >
 
   }
 
@@ -780,7 +780,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 ; >
-    au < boost ; exists ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; >
 
   }
 
@@ -863,7 +863,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; >
-    au < boost ; exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; >
 
   }
   
@@ -909,10 +909,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; >
-    au < boost ; exists ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; >
-    au < boost ; exists ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 ; >
 
   }
 
@@ -933,7 +933,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Society, Health & Vulnerability Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Society, Health & Vulnerability Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; >
-    au < boost ; exists ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; >
 
   }
 
