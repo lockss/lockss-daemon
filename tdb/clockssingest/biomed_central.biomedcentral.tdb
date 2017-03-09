@@ -1065,7 +1065,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; frozen ; 2010 ; Cell Division Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Cell Division Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Cell Division Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Cell Division Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Cell Division Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Cell Division Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; Cell Division Volume 10 ; 10 ; >
 
@@ -1083,8 +1083,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2045-9769
       #new platform
 
-      au < down ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Cell Regeneration Volume 4 [superseded] ; 4 ; >
 
@@ -1161,11 +1161,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Chinese Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Chinese Medicine Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Chinese Medicine Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Chinese Medicine Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2008 ; Chinese Medicine Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Chinese Medicine Volume 4 ; 4 ; >
       au < finished ; finished ; 2010 ; Chinese Medicine Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Chinese Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Chinese Medicine Volume 7 ; 7 ; >
       au < finished ; finished ; 2013 ; Chinese Medicine Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; Chinese Medicine Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Chinese Medicine Volume 10 [superseded] ; 10 ; >
@@ -1191,9 +1191,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.chiromt.com/
       
-      au < down ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 ; >
-      au < down ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 ; >
-      au < down ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 ; >
       au < finished ; finished ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 ; >
       au < superseded ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 [superseded] ; 23 ; >
 
@@ -1224,9 +1224,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 ; >
       au < doNotProcess ; exists ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 ; >
-      au < down ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 ; >
-      au < down ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 ; >
-      au < down ; exists ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 ; >
 
       }
     }
@@ -1242,7 +1242,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ciliajournal.com/
       param[journal_issn] = 2046-2530
 
-      au < down ; exists ; 2012 ; Cilia Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2012 ; Cilia Volume 1 ; 1 ; >
       au < finished ; finished ; 2013 ; Cilia Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; Cilia Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Cilia Volume 4 [superseded] ; 4 ; >
@@ -1264,11 +1264,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Clinical and Molecular Allergy Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Clinical and Molecular Allergy Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Clinical and Molecular Allergy Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 ; >
       au < finished ; finished ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 ; >
       au < finished ; finished ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 [superseded] ; 13 ; >
@@ -1287,8 +1287,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2045-7022
 
       au < finished ; finished ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 ; >
-      au < down ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 ; >
-      au < down ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 ; >
       au < superseded ; exists ; 2015 ; Clinical and Translational Allergy Volume 5 [superseded] ; 5 ; >
 
@@ -1305,9 +1305,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.clinicalepigeneticsjournal.com/
       param[journal_issn] = 1868-7083
 
-      au < down ; exists ; 2011 ; Clinical Epigenetics Volume 3 ; 3 ; >
-      au < down ; exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 ; >
-      au < down ; exists ; 2013 ; Clinical Epigenetics Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; Clinical Epigenetics Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2012 ; Clinical Epigenetics Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2013 ; Clinical Epigenetics Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Clinical Epigenetics Volume 6 ; 6 ; >
       au < superseded ; exists ; 2015 ; Clinical Epigenetics Volume 7 [superseded] ; 7 ; >
 
@@ -1340,9 +1340,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < down ; exists ; 2010 ; Clinical Proteomics Volume 7 ; 7 ; >
-      au < down ; exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2010 ; Clinical Proteomics Volume 7 ; 7 ; >
+      au < superseded ; exists ; 2011 ; Clinical Proteomics Volume 8 [superseded] ; 8 ; > #never crawled successfully.
+      au < frozen ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 ; >
       au < finished ; finished ; 2013 ; Clinical Proteomics Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 ; >
       au < superseded ; exists ; 2015 ; Clinical Proteomics Volume 12 [superseded] ; 12 ; >
@@ -1360,9 +1360,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.clinicalsarcomaresearch.com/
       param[journal_issn] = 2045-3329
 
-      au < down ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 ; >
-      au < down ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 ; >
-      au < down ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 ; >
       au < superseded ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 [superseded] ; 5 ; >
 
@@ -1385,11 +1385,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Comparative Hepatology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2006 ; Comparative Hepatology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Comparative Hepatology Volume 6 ; 6 ; >
-      au < down ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 ; >
-      au < down ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 ; >
-      au < down ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 ; >
-      au < down ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Comparative Hepatology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2009 ; Comparative Hepatology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2010 ; Comparative Hepatology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2011 ; Comparative Hepatology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Comparative Hepatology Volume 11 ; 11 ; >
 
     }
 
@@ -1404,12 +1404,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1752-1505
 
       au < doNotProcess ; exists ; 2007 ; Conflict and Health Volume 1 ; 1 ; >
-      au < down ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; Conflict and Health Volume 2 ; 2 ; >
       au < finished ; finished ; 2009 ; Conflict and Health Volume 3 ; 3 ; >
-      au < down ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 ; >
-      au < down ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 ; >
-      au < down ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 ; >
-      au < down ; exists ; 2013 ; Conflict and Health Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Conflict and Health Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; Conflict and Health Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; Conflict and Health Volume 8 ; 8 ; >
       au < superseded ; exists ; 2015 ; Conflict and Health Volume 9 [superseded] ; 9 ; >
 
@@ -1456,11 +1456,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Cough Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2006 ; Cough Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Cough Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Cough Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Cough Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Cough Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Cough Volume 5 ; 5 ; >
       au < finished ; finished ; 2010 ; Cough Volume 6 ; 6 ; >
-      au < down ; exists ; 2011 ; Cough Volume 7 ; 7 ; >
-      au < down ; exists ; 2012 ; Cough Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Cough Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Cough Volume 8 ; 8 ; >
       au < finished ; finished ; 2013 ; Cough Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; Cough Volume 10 ; 10 ; >
 
@@ -1536,7 +1536,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.darujps.com/
       param[journal_issn] = 1560-8115
 
-      au < down ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 ; >
       au < finished ; finished ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 ; >
       au < frozen ; exists ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 ; >
       au < superseded ; exists ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 [superseded] ; 23 ; >
@@ -1554,8 +1554,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.dmsjournal.com/
       param[journal_issn] = 1758-5996
 
-      au < down ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 ; >
-      au < down ; exists ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Diabetology & Metabolic Syndrome Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; Diabetology & Metabolic Syndrome Volume 2 ; 2 ; >
       au < down ; exists ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 ; >
       au < down ; exists ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 ; >
       au < finished ; finished ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 ; >
@@ -1576,12 +1576,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Diagnostic Pathology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Diagnostic Pathology Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Diagnostic Pathology Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Diagnostic Pathology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2008 ; Diagnostic Pathology Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Diagnostic Pathology Volume 4 ; 4 ; >
       au < finished ; finished ; 2010 ; Diagnostic Pathology Volume 5 ; 5 ; >
-      au < down ; exists ; 2011 ; Diagnostic Pathology Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Diagnostic Pathology Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Diagnostic Pathology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Diagnostic Pathology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2012 ; Diagnostic Pathology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Diagnostic Pathology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Diagnostic Pathology Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Diagnostic Pathology Volume 10 [superseded] ; 10 ; >
 

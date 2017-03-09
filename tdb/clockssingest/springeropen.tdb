@@ -381,7 +381,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 ; >
-        au < down ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; >
+        au < frozen ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; >
         au < frozen ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; >
         au < superseded ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 [superseded] ; 7 ; >
   
