@@ -409,6 +409,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 ; >
+    au < expected ; exists ; 2017 ; Journal of Market Access & Health Policy Volume 5 ; 5 ; >
 
   }
 
@@ -431,6 +432,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; >
+    au < expected ; exists ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 ; >
 
   }
 
@@ -457,6 +459,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; >
+    au < expected ; exists ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 ; >
 
   }
 
@@ -515,6 +518,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Medical Education Online Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Medical Education Online Volume 21 ; 21 ; >
+      au < expected ; exists ; 2017 ; Medical Education Online Volume 22 ; 22 ; >
       
     }
   }
@@ -559,6 +563,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 ; >
+    au < expected ; exists ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 ; >
   }
 
   {
@@ -570,19 +575,6 @@
     >
 
     comment[continued_by] = 2002-2727
-    {
-    #param[base_url] = http://www.nano-reviews.net/
-    param[journal_id] = znano20
-
-    au < doNotProcess ; doNotProcess ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; >
-    au < exists ; exists ; 2016 ; Nano Reviews [including Supplements] Volume 7 ; 7 ; >
-    }
-    {
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = znano20
 
@@ -592,7 +584,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Nano Reviews [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 ; >
-    }
+    #journal changed names and issn
+
   }
 
   {
@@ -608,6 +601,7 @@
     param[journal_id] = znano20
 
     au < doNotProcess ; doNotProcess ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; >
+    au < expected ; exists ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; >
   }
 
   {
@@ -627,6 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; >
+    au < expected ; exists ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; >
 
   }
 
@@ -677,6 +672,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; >
+    au < expected ; exists ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; >
 
   }
 
@@ -716,6 +712,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 ; >
+    au < expected ; exists ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 ; >
 
   }
 
@@ -781,6 +778,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; >
+    au < expected ; exists ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 ; >
 
   }
 
@@ -864,6 +862,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 ; >
+    au < expected ; exists ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 ; >
 
   }
   
@@ -913,6 +912,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 ; >
+    au < expected ; exists ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 ; >
 
   }
 
@@ -934,6 +934,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Society, Health & Vulnerability Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; >
+    au < expected ; exists ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; >
 
   }
 

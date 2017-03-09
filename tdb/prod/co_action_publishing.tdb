@@ -11,23 +11,6 @@
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.tandfonline.com/
 
-   {
-
-    title <
-      name = Advances in Regenerative Biology ;
-      eissn = 2001-8517 ;
-      issnl = 2001-8517
-    >
-
-    #param[base_url] = http://www.regenerativebiology.net/
-    param[journal_id] = zarb20
-
-    au < exists ; 2014 ; Advances in Regenerative Biology Volume 1 ; 1 >
-    au < exists ; 2015 ; Advances in Regenerative Biology Volume 2 ; 2 >
-    au < exists ; 2016 ; Advances in Regenerative Biology Volume 3 ; 3 >
-
-  }
-
   {
   
     title <
@@ -68,6 +51,7 @@
     au < exists ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 >
     au < exists ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 >
+    au < exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 >
 
   }
 
@@ -113,6 +97,7 @@
     au < exists ; 2014 ; Education Inquiry Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 >
     au < exists ; 2016 ; Education Inquiry Volume 7 ; 7 >
+    au < expected ; 2017 ; Education Inquiry Volume 8 ; 8 >
 
   }
 
@@ -126,6 +111,7 @@
 
     #param[base_url] = http://www.eht-journal.net/
     param[journal_id] = zehtj20
+    # vol. 4 includes Supplements 1. Discontinued. Last article published in 2015.
 
     au < doNotProcess ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 >
@@ -135,7 +121,6 @@
     au < exists ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 >
     au < exists ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 >
     au < exists ; 2015 ; Emerging Health Threats Journal [including Supplements] Volume 8 ; 8 >
-    au < expected ; 2016 ; Emerging Health Threats Journal [including Supplements] Volume 9 ; 9 >
     
   }
 
@@ -160,6 +145,7 @@
     au < exists ; 2014 ; Ethics & Global Politics Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 >
     au < exists ; 2016 ; Ethics & Global Politics Volume 9 ; 9 >
+    au < expected ; 2017 ; Ethics & Global Politics Volume 10 ; 10 >
 
   }
     
@@ -177,6 +163,7 @@
     au < exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 >
     au < doNotProcess ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 >
     au < expected ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 >
+    au < expected ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 >
 
   }
 
@@ -202,6 +189,7 @@
     au < exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 >
     au < exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 >
     au < expected ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 >
+    au < expected ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 >
 
   }
   
@@ -229,6 +217,7 @@
     au < exists ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 >
     au < doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 >
     au < exists ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 >
+    au < expected ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 >
 
   }
 
@@ -253,6 +242,7 @@
     au < exists ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 >
     au < exists ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 >
+    au < expected ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 >
 
   }
 
@@ -272,6 +262,7 @@
     au < exists ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 >
     au < exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 >
     au < exists ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 >
+    au < expected ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 >
 
   }
 
@@ -304,6 +295,7 @@
     au < exists ; 2014 ; International Journal of Circumpolar Health Volume 73 ; 73 >
     au < doNotProcess ; 2015 ; International Journal of Circumpolar Health Volume 74 ; 74 >
     au < exists ; 2016 ; International Journal of Circumpolar Health Volume 75 ; 75 >
+    au < expected ; 2017 ; International Journal of Circumpolar Health Volume 76 ; 76 >
 
   }
 
@@ -330,6 +322,7 @@
     au < exists ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 >
     au < doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 >
     au < exists ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 >
+    au < expected ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 >
     
   }
 
@@ -352,6 +345,7 @@
     au < exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 >
     au < exists ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 >
+    au < expected ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 >
   }
 
   {
@@ -371,6 +365,7 @@
     au < exists ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 >
     au < doNotProcess ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 >
     au < exists ; 2016 ; Journal of Community Hospital Internal Medicine Perspectives Volume 6 ; 6 >
+    au < expected ; 2017 ; Journal of Community Hospital Internal Medicine Perspectives Volume 7 ; 7 >
   }
 
   {
@@ -389,6 +384,7 @@
     au < exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 >
     au < doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 >
     au < exists ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 >
+    au < expected ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 >
 
   }
 
@@ -407,6 +403,7 @@
     au < exists ; 2014 ; Journal of Market Access & Health Policy Volume 2 ; 2 >
     au < doNotProcess ; 2015 ; Journal of Market Access & Health Policy Volume 3 ; 3 >
     au < exists ; 2016 ; Journal of Market Access & Health Policy Volume 4 ; 4 >
+    au < expected ; 2017 ; Journal of Market Access & Health Policy Volume 5 ; 5 >
 
   }
 
@@ -429,6 +426,7 @@
     au < exists ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 >
     au < exists ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 >
+    au < expected ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 >
 
   }
 
@@ -455,6 +453,7 @@
     au < exists ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 >
     au < doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 >
     au < exists ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 >
+    au < expected ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 >
 
   }
 
@@ -510,6 +509,7 @@
     au < exists ; 2014 ; Medical Education Online Volume 19 ; 19 >
     au < doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 >
     au < exists ; 2016 ; Medical Education Online Volume 21 ; 21 >
+    au < expected ; 2017 ; Medical Education Online Volume 22 ; 22 >
     }
 
   }
@@ -553,7 +553,7 @@
     au < exists ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 >
     au < doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 >
     au < exists ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 >
-    
+    au < expected ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 >
 
   }
 
@@ -565,7 +565,6 @@
       issnl = 2000-5121
     >
     comment[continued_by] = 2002-2727
-    {
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = znano20
 
@@ -576,7 +575,7 @@
     au < exists ; 2014 ; Nano Reviews [including Supplements] Volume 5 ; 5 >
     au < exists ; 2015 ; Nano Reviews [including Supplements] Volume 6 ; 6 >
     #journal changed names and issn
-    }
+
   }
 
   {
@@ -608,11 +607,12 @@
     param[journal_id] = zpba20
 
     au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 >
-    au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 21 >
+    au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 >
     au < exists ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 >
     au < doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 >
     au < exists ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 >
+    au < expected ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 >
 
   }
 
@@ -663,6 +663,7 @@
     au < exists ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 >
     au < doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 >
     au < exists ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 >
+    au < expected ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 >
 
   }
 
@@ -702,6 +703,7 @@
     au < exists ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 >
     au < doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 >
     au < exists ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 >
+    au < expected ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 >
 
   }
 
@@ -767,6 +769,7 @@
       au < exists ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 >
       au < doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 >
       au < exists ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 >
+      au < expected ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 >
 
   }
   
@@ -850,6 +853,7 @@
     au < exists ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 >
     au < exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 >
+    au < expected ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
 
   }
 
@@ -900,6 +904,7 @@
     au < exists ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 >
     au < exists ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 >
+    au < expected ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
 
   }
 
