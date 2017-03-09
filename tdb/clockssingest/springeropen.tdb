@@ -447,7 +447,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; Ecological Processes Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; Ecological Processes Volume 4 [superseded] ; 4 ; >
   
@@ -482,7 +482,7 @@
   
         au < doNotProcess ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 ; >
         au < frozen ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; EJNMMI Research Volume 5 [superseded] ; 5 ; >
   
@@ -499,7 +499,7 @@
         param[journal_issn] = 1877-6345 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; >
+        au < frozen ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; >
         au < frozen ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 ; >
         au < superseded ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 [superseded] ; 7 ; >
   
@@ -537,7 +537,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 ; >
         au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 ; >
-        au < down ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; >
+        au < frozen ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; >
         au < frozen ; exists ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; >
         au < superseded ; exists ; 2015 ; Environmental Sciences Europe Volume 27 [superseded] ; 27 ; >
   
@@ -555,7 +555,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; Environmental Systems Research Volume 4 [superseded] ; 4 ; >
   
@@ -573,7 +573,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; EPJ Data Science Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; EPJ Data Science Volume 4 [superseded] ; 4 ; >
   
@@ -590,7 +590,7 @@
         param[journal_issn] = 2195-0008 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 [superseded] ; 3 ; >
   
