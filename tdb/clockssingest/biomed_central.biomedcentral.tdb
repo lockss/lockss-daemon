@@ -532,11 +532,11 @@
       param[base_url] = http://www.biologicalproceduresonline.com/
       param[journal_issn] = 1480-9222
 
-      au < down ; exists ; 2009 ; Biological Procedures Online Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2009 ; Biological Procedures Online Volume 11 ; 11 ; >
       au < frozen ; exists ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 ; >
       au < frozen ; exists ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 ; >
       au < finished ; finished ; 2012 ; Biological Procedures Online Volume 14 ; 14 ; >
-      au < down ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 ; >
       au < frozen ; exists ; 2014 ; Biological Procedures Online Volume 16 ; 16 ; >
       au < superseded ; exists ; 2015 ; Biological Procedures Online Volume 17 [superseded] ; 17 ; >
 
@@ -586,12 +586,12 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
         au < doNotProcess ; exists ; 2006 ; Biology Direct Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2007 ; Biology Direct Volume 2 ; 2 ; >
-        au < down ; exists ; 2008 ; Biology Direct Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2008 ; Biology Direct Volume 3 ; 3 ; >
         au < doNotProcess ; exists ; 2009 ; Biology Direct Volume 4 ; 4 ; >
         au < doNotProcess ; exists ; 2010 ; Biology Direct Volume 5 ; 5 ; >
         au < doNotProcess ; exists ; 2011 ; Biology Direct Volume 6 ; 6 ; >
         au < doNotProcess ; exists ; 2012 ; Biology Direct Volume 7 ; 7 ; >
-        au < down ; exists ; 2013 ; Biology Direct Volume 8 ; 8 ; >
+        au < frozen ; exists ; 2013 ; Biology Direct Volume 8 ; 8 ; >
         au < frozen ; exists ; 2014 ; Biology Direct Volume 9 ; 9 ; >
         au < superseded ; exists ; 2015 ; Biology Direct Volume 10 [superseded] ; 10 ; >
       }
@@ -629,10 +629,10 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[base_url] = http://www.bsd-journal.com/
       param[journal_issn] = 2042-6410
 
-      au < down ; exists ; 2010 ; Biology of Sex Differences Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; Biology of Sex Differences Volume 1 ; 1 ; >
       au < finished ; finished ; 2011 ; Biology of Sex Differences Volume 2 ; 2 ; >
-      au < down ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 ; >
-      au < down ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2012 ; Biology of Sex Differences Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Biology of Sex Differences Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; Biology of Sex Differences Volume 5 ; 5 ; >
       au < superseded ; exists ; 2015 ; Biology of Sex Differences Volume 6 [superseded] ; 6 ; >
 
@@ -650,7 +650,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2050-7771
       comment[moved] = to new platform
 
-      au < down ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Biomarker Research Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 ; >
 
@@ -710,11 +710,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; BioMedical Engineering OnLine Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; BioMedical Engineering OnLine Volume 6 ; 6 ; >
       au < finished ; finished ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 ; >
       au < finished ; finished ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 ; >
-      au < down ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 ; >
-      au < down ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2013 ; BioMedical engineering OnLine Volume 12 ; 12 ; >
       au < frozen ; exists ; 2014 ; BioMedical engineering OnLine Volume 13 ; 13 ; >
       au < superseded ; exists ; 2015 ; BioMedical engineering OnLine Volume 14 [superseded] ; 14 ; >
 
@@ -733,11 +733,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 ; >
       au < finished ; finished ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 ; >
-      au < down ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 ; >
       au < finished ; finished ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 ; >
-      au < down ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 ; >
       au < superseded ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 [superseded] ; 9 ; >
       
@@ -755,11 +755,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       #new platform
 
       au < finished ; finished ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 ; >
       au < finished ; frozen ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 ; >
-      au < down ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 ; >
-      au < down ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 ; >
       au < superseded ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 [superseded] ; 8 ; >
       
@@ -844,7 +844,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cancerandmetabolism.com/
       param[journal_issn] = 2049-3002
 
-      au < down ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Cancer & Metabolism Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Cancer & Metabolism Volume 2 ; 2 ; >
       au < superseded ; exists ; 2015 ; Cancer & Metabolism Volume 3 [superseded] ; 3 ; >
 
@@ -868,11 +868,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Cancer Cell International Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; Cancer Cell International Volume 7 ; 7 ; >
       au < finished ; finished ; 2008 ; Cancer Cell International Volume 8 ; 8 ; >
-      au < down ; exists ; 2009 ; Cancer Cell International Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; Cancer Cell International Volume 9 ; 9 ; >
       au < finished ; frozen ; 2010 ; Cancer Cell International Volume 10 ; 10 ; >
       au < finished ; finished ; 2011 ; Cancer Cell International Volume 11 ; 11 ; >
-      au < down ; exists ; 2012 ; Cancer Cell International Volume 12 ; 12 ; >
-      au < down ; exists ; 2013 ; Cancer Cell International Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2012 ; Cancer Cell International Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; Cancer Cell International Volume 13 ; 13 ; >
       au < frozen ; exists ; 2014 ; Cancer Cell International Volume 14 ; 14 ; >
       au < superseded ; exists ; 2015 ; Cancer Cell International Volume 15 [superseded] ; 15 ; >
 
@@ -922,10 +922,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Carbon Balance and Management Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Carbon Balance and Management Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Carbon Balance and Management Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Carbon Balance and Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2010 ; Carbon Balance and Management Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; Carbon Balance and Management Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Carbon Balance and Management Volume 7 ; 7 ; >
       au < finished ; finished ; 2013 ; Carbon Balance and Management Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; Carbon Balance and Management Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Carbon Balance and Management Volume 10 [superseded] ; 10 ; >
@@ -949,11 +949,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Cardiovascular Diabetology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Cardiovascular Diabetology Volume 6 ; 6 ; >
       au < finished ; finished ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 ; >
       au < finished ; finished ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 ; >
-      au < down ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 ; >
-      au < down ; exists ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 ; >
       au < superseded ; exists ; 2015 ; Cardiovascular Diabetology Volume 14 [superseded] ; 14 ; >
 
@@ -974,12 +974,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Cardiovascular Ultrasound Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Cardiovascular Ultrasound Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Cardiovascular Ultrasound Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Cardiovascular Ultrasound Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Cardiovascular Ultrasound Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 ; >
       au < finished ; frozen ; 2010 ; Cardiovascular Ultrasound Volume 8 ; 8 ; >
       au < finished ; frozen ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 ; >
       au < finished ; finished ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Cardiovascular Ultrasound Volume 13 [superseded] ; 13 ; >
 
@@ -996,8 +996,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1757-1626
       # only vol1 - 3 available. Discontinued in 2010
 
-      au < down ; exists ; 2008 ; Cases Journal Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; Cases Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; Cases Journal Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; Cases Journal Volume 2 ; 2 ; >
       au < finished ; finished ; 2010 ; Cases Journal Volume 3 ; 3 ; >
       au < superseded ; down ; 2011 ; Cases Journal Volume 4 [superseded] ; 4 ; >
 
@@ -1014,7 +1014,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2045-3701
 
       au < finished ; finished ; 2011 ; Cell & Bioscience Volume 1 ; 1 ; >
-      au < down ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 ; >
       au < finished ; finished ; 2013 ; Cell & Bioscience Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 ; >
       au < superseded ; exists ; 2015 ; Cell & Bioscience Volume 5 [superseded] ; 5 ; >
@@ -1037,11 +1037,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Cell Communication and Signaling Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Cell Communication and Signaling Volume 5 ; 5 ; >
       au < finished ; finished ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 ; >
       au < finished ; finished ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 ; >
       au < finished ; frozen ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 ; >
       au < finished ; finished ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Cell Communication and Signaling Volume 13 [superseded] ; 13 ; >
 
@@ -1061,10 +1061,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Cell Division Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Cell Division Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Cell Division Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Cell Division Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Cell Division Volume 4 ; 4 ; >
       au < finished ; frozen ; 2010 ; Cell Division Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Cell Division Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Cell Division Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Cell Division Volume 7 ; 7 ; >
       au < down ; exists ; 2013 ; Cell Division Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Cell Division Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; Cell Division Volume 10 ; 10 ; >
@@ -1137,11 +1137,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1753-2000
 
       au < doNotProcess ; exists ; 2007 ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 ; >
-      au < down ; exists ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 ; >
-      au < down ; exists ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 ; >
       au < finished ; finished ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 ; >
       au < finished ; frozen ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 ; >
-      au < down ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 ; >
       au < finished ; finished ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 ; >
       au < superseded ; exists ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 [superseded] ; 9 ; >
@@ -3042,12 +3042,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Journal of Cardiothoracic Surgery Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Cardiothoracic Surgery Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Journal of Cardiothoracic Surgery Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; Journal of Cardiothoracic Surgery Volume 5 ; 5 ; >
-      au < down ; exists ; 2011 ; Journal of Cardiothoracic Surgery Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2008 ; Journal of Cardiothoracic Surgery Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Journal of Cardiothoracic Surgery Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; Journal of Cardiothoracic Surgery Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 [superseded] ; 10 ; >
 

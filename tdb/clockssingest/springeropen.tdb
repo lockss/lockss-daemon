@@ -227,7 +227,7 @@
         au < doNotProcess ; exists ; 2010 ; Boundary Value Problems Volume 2010 ; 2010 ; >
         au < doNotProcess ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 ; >
-        au < down ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 ; >
+        au < superseded ; exists ; 2013 ; Boundary Value Problems Volume 2013 [superseded] ; 2013 ; >
         au < frozen ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 ; >
         au < doNotProcess ; exists ; 2015 ; Boundary Value Problems Volume 2015 ; 2015 ; >
   
@@ -329,7 +329,7 @@
         param[journal_issn] = 2194-3206 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 [superseded] ; 3 ; >
   
