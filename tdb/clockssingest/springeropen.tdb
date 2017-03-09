@@ -46,7 +46,7 @@
         au < doNotProcess ; exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 ; >
         au < doNotProcess ; exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 ; >
-        au < down ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 ; >
+        au < frozen ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 ; >
         au < doNotProcess ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 ; >
         au < doNotProcess ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 ; >
   
@@ -63,7 +63,7 @@
         param[journal_issn] = 2193-7532 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Agricultural and Food Economics Volume 3 [superseded] ; 3 ; >
   
@@ -82,7 +82,7 @@
   
         au < doNotProcess ; exists ; 2011 ; AMB Express Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; AMB Express Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; AMB Express Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; AMB Express Volume 3 ; 3 ; >
         au < frozen ; exists ; 2014 ; AMB Express Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; AMB Express Volume 5 [superseded] ; 5 ; >
   
@@ -101,7 +101,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; >
         au < finished ; finished ; 2014 ; Annals of Intensive Care Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Annals of Intensive Care Volume 5 [superseded] ; 5 ; >
   
@@ -118,7 +118,7 @@
         param[journal_issn] = 2196-4351 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Applied Adhesion Science Volume 3 [superseded] ; 3 ; >
 
@@ -167,7 +167,7 @@
         param[journal_issn] = 2195-3007 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; >
         au < frozen ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 [superseded] ; 5 ; >
   
@@ -200,7 +200,7 @@
         param[journal_issn] = 1999-3110 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 ; >
+        au < frozen ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 ; >
         au < frozen ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 ; >
         au < superseded ; exists ; 2015 ; Botanical Studies Volume 56 [superseded] ; 56 ; >
   
@@ -1076,7 +1076,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 ; >
-        au < down ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 ; >
+        au < frozen ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 ; >
         au < frozen ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 ; >
         au < doNotProcess ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 ; >
   
@@ -1344,7 +1344,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 [superseded] ; 4 ; >
   

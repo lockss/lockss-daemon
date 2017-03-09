@@ -22,7 +22,7 @@
       param[journal_issn] = 2051-5960
       comment[moved] = to new platform
 
-      au < down ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 ; >
       au < frozen ; exists ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 ; >
 
     }
@@ -46,11 +46,11 @@
       au < doNotProcess ; exists ; 2006 ; Acta Veterinaria Scandinavica Volume 48 ; 48 ; >
       au < doNotProcess ; exists ; 2007 ; Acta Veterinaria Scandinavica Volume 49 ; 49 ; >
       au < finished ; finished ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 ; >
-      au < down ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 ; >
+      au < frozen ; exists ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 ; >
       au < finished ; finished ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 ; >
       au < finished ; frozen ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 ; >
       au < finished ; finished ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 ; >
-      au < down ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 ; >
+      au < frozen ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 ; >
       au < frozen ; exists ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 ; >
       au < superseded ; exists ; 2015 ; Acta Veterinaria Scandinavica Volume 57 [superseded] ; 57 ; >
       
@@ -69,7 +69,7 @@
       param[journal_issn] = 1940-0640
 
       au < finished ; finished ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Addiction Science & Clinical Practice Volume 10 [superseded] ; 10 ; >
 
@@ -87,7 +87,7 @@
       param[journal_issn] = 2048-7010
 
       au < finished ; finished ; 2012 ; Agriculture & Food Security Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; Agriculture & Food Security Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Agriculture & Food Security Volume 4 [superseded] ; 4 ; >
 
@@ -108,11 +108,11 @@
       au < doNotProcess ; exists ; 2006 ; AIDS Research and Therapy Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; AIDS Research and Therapy Volume 4 ; 4 ; >
       au < finished ; finished ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 ; >
       au < finished ; finished ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 ; >
       au < finished ; frozen ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 ; >
       au < finished ; finished ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 ; >
       au < superseded ; exists ; 2015 ; AIDS Research and Therapy Volume 12 [superseded] ; 12 ; >
 
@@ -131,11 +131,11 @@
       au < doNotProcess ; exists ; 2006 ; Algorithms for Molecular Biology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Algorithms for Molecular Biology Volume 2 ; 2 ; >
       au < finished ; finished ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 ; >
       au < finished ; frozen ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Algorithms for Molecular Biology Volume 10 [superseded] ; 10 ; >
 
@@ -155,12 +155,12 @@
       au < doNotProcess ; exists ; 2004-2005 ; Allergy, Asthma & Clinical Immunology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2006 ; Allergy, Asthma & Clinical Immunology Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Allergy, Asthma & Clinical Immunology Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 ; >
-      au < down ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 ; >
       au < finished ; finished ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 ; >
       au < finished ; finished ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 ; >
       au < superseded ; exists ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 [superseded] ; 11 ; >
 
@@ -206,7 +206,7 @@
       param[base_url] = http://www.animalbiotelemetry.com/
       param[journal_issn] = 2050-3385
 
-      au < down ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Animal Biotelemetry Volume 2 ; 2 ; >
       au < superseded ; exists ; 2015 ; Animal Biotelemetry Volume 3 [superseded] ; 3 ; >
 
@@ -230,11 +230,11 @@
       au < doNotProcess ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 ; >
       au < finished ; finished ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 ; >
       au < finished ; finished ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 ; >
-      au < down ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 ; >
       au < frozen ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 ; >
       au < superseded ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 [superseded] ; 14 ; >
 
@@ -257,11 +257,11 @@
       au < doNotProcess ; exists ; 2006 ; Annals of General Psychiatry Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Annals of General Psychiatry Volume 6 ; 6 ; >
       au < finished ; finished ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 ; >
       au < finished ; finished ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 ; >
       au < finished ; frozen ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 ; >
-      au < down ; exists ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 ; >
       au < frozen ; exists ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 ; >
       au < superseded ; exists ; 2015 ; Annals of General Psychiatry Volume 14 [superseded] ; 14 ; >
 
@@ -279,11 +279,11 @@
 
       au < doNotProcess ; exists ; 2007 ; Annals of Surgical Innovation and Research Volume 1 ; 1 ; >
       au < finished ; finished ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 ; >
-      au < down ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 ; >
       au < finished ; finished ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 ; >
-      au < down ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 ; >
       au < superseded ; exists ; 2015 ; Annals of Surgical Innovation and Research Volume 9 [superseded] ; 9 ; >
 
@@ -303,7 +303,7 @@
       param[journal_issn] = 2047-2994
 
       au < finished ; frozen ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 [superseded] ; 4 ; >
        
@@ -333,7 +333,7 @@
       au < superseded ; exists ; 2010 ; Aquatic Biosystems Volume 6 [superseded] ; 6 ; >
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 ; >
       au < finished ; finished ; 2012 ; Aquatic Biosystems Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Aquatic Biosystems Volume 10 ; 10 ; >
       au < superseded ; exists ; 2015 ; Aquatic Biosystems Volume 11 [superseded] ; 11 ; >
 
@@ -354,7 +354,7 @@
       au < frozen ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 ; >
       au < finished ; finished ; 2011 ; Archives of Public Health Volume 69 ; 69 ; >
       au < finished ; frozen ; 2012 ; Archives of Public Health Volume 70 ; 70 ; >
-      au < down ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 ; >
+      au < frozen ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 ; >
       au < finished ; finished ; 2014 ; Archives of Public Health Volume 72 ; 72 ; >
       au < superseded ; exists ; 2015 ; Archives of Public Health Volume 73 [superseded] ; 73 ; >
 
@@ -426,12 +426,12 @@
       param[journal_issn] = 1447-056X
       comment[moved] = to new platform
 
-      au < down ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 ; >
-      au < down ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 ; >
-      au < down ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 ; >
       au < finished ; finished ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 ; >
       au < finished ; finished ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 ; >
-      au < down ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 ; >
       au < frozen ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 ; >
       au < superseded ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 [superseded] ; 14 ; >
 
@@ -470,7 +470,7 @@
       param[base_url] = http://www.bacandrology.com/
       param[journal_issn] = 2051-4190
 
-      au < down ; exists ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 ; >
       au < finished ; finished ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 ; >
       au < superseded ; exists ; 2015 ; Basic and Clinical Andrology Volume 25 [superseded] ; 25 ; >
 
@@ -491,11 +491,11 @@
       au < doNotProcess ; exists ; 2006 ; Behavioral and Brain Functions Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Behavioral and Brain Functions Volume 3 ; 3 ; >
       au < finished ; finished ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 ; >
       au < finished ; finished ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 ; >
       au < finished ; frozen ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 ; >
       au < finished ; finished ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 ; >
 
@@ -511,12 +511,12 @@
       param[base_url] = http://www.biodatamining.org/
       param[journal_issn] = 1756-0381
 
-      au < down ; exists ; 2008 ; BioData Mining Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; BioData Mining Volume 2 ; 2 ; >
-      au < down ; exists ; 2010 ; BioData Mining Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2008 ; BioData Mining Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; BioData Mining Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2010 ; BioData Mining Volume 3 ; 3 ; >
       au < finished ; finished ; 2011 ; BioData Mining Volume 4 ; 4 ; >
       au < finished ; frozen ; 2012 ; BioData Mining Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; BioData Mining Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; BioData Mining Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; BioData Mining Volume 7 ; 7 ; >
       au < superseded ; exists ; 2015 ; BioData Mining Volume 8 [superseded] ; 8 ; >
 
@@ -610,9 +610,9 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       param[journal_issn] = 2045-5380
       #stop publishing after 2015
 
-      au < down ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 ; >
       au < finished ; finished ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 ; >
-      au < down ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 ; >
       au < superseded ; exists ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 [superseded] ; 5 ; >
 
@@ -4632,10 +4632,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
         au < doNotProcess ; exists ; 2005 ; Saline Systems Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2006 ; Saline Systems Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2007 ; Saline Systems Volume 3 ; 3 ; >
-        au < down ; exists ; 2008 ; Saline Systems Volume 4 ; 4 ; >
-        au < down ; exists ; 2009 ; Saline Systems Volume 5 ; 5 ; >
-        au < down ; exists ; 2010 ; Saline Systems Volume 6 ; 6 ; >
-        au < down ; exists ; 2011 ; Saline Systems Volume 7 ; 7 ; >
+        au < frozen ; exists ; 2008 ; Saline Systems Volume 4 ; 4 ; >
+        au < frozen ; exists ; 2009 ; Saline Systems Volume 5 ; 5 ; >
+        au < frozen ; exists ; 2010 ; Saline Systems Volume 6 ; 6 ; >
+        au < frozen ; exists ; 2011 ; Saline Systems Volume 7 ; 7 ; >
         au < doNotProcess ; exists ; 2012 ; Saline Systems Volume 8 ; 8 ; >
         au < doNotProcess ; exists ; 2013 ; Saline Systems Volume 9 ; 9 ; >
         au < doNotProcess ; exists ; 2014 ; Saline Systems Volume 10 ; 10 ; >
@@ -5149,7 +5149,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[platform] = BioMedCentral
       comment[moved] = to new platform
 
-      au < down ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2013 ; Annals of Occupational and Environmental Medicine Volume 25 ; 25 ; >
       au < superseded ; exists ; 2014 ; Annals of Occupational and Environmental Medicine Volume 26 [superseded] ; 26 ; >
       au < doNotProcess ; exists ; 2015 ; Annals of Occupational and Environmental Medicine Volume 27 ; 27 ; >
 
