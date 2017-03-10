@@ -54,7 +54,8 @@ public class TestELifeArchivalUnit extends LockssTestCase {
   static final String PLUGIN_ID = "org.lockss.plugin.elifesciences.ELifeSciencesPlugin";
   static final String PluginName = "eLife Sciences Plugin";
   
-  static final String  METAPRESS_REPAIR_FROM_PEER_REGEXP = "sites/default/files/(css|js)/(css|js)_[^/]+\\.(css|js)$";
+  static final String  ELIFE_REPAIR_FROM_PEER_REGEXP1 = "sites/default/files/(css|js)/(css|js)_[^/]+\\.(css|js)$";
+//  static final String  ELIFE_REPAIR_FROM_PEER_REGEXP2 = "\\.(mp4)$";
   
   public void setUp() throws Exception {
     super.setUp();
@@ -162,7 +163,7 @@ public class TestELifeArchivalUnit extends LockssTestCase {
     
     // if it changes in the plugin, you will likely need to change the test, so verify
     assertEquals(ListUtil.list(
-        METAPRESS_REPAIR_FROM_PEER_REGEXP),
+        ELIFE_REPAIR_FROM_PEER_REGEXP1),
         RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
@@ -174,7 +175,7 @@ public class TestELifeArchivalUnit extends LockssTestCase {
         OTHER_ROOT + "sites/default/files/js/js_9xhttD4CLtluGwHnuEz_uVz7OnsXLXJ3WZVHYkHd3kI.js",
         OTHER_OTHER_ROOT + "sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css",
         OTHER_OTHER_ROOT + "sites/default/files/js/js_9xhttD4CLtluGwHnuEz_uVz7OnsXLXJ3WZVHYkHd3kI.js");
-    Pattern p = Pattern.compile(METAPRESS_REPAIR_FROM_PEER_REGEXP);
+    Pattern p = Pattern.compile(ELIFE_REPAIR_FROM_PEER_REGEXP1);
     for (String urlString : repairList) {
       Matcher m = p.matcher(urlString);
       assertEquals(urlString, true, m.find());

@@ -65,7 +65,9 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
             String tagName = tag.getTagName().toLowerCase();
             try {
               if ("input".equals(tagName) ||
+                  "body".equals(tagName) ||
                   "div".equals(tagName) ||
+                  "p".equals(tagName) ||
                   "a".equals(tagName)) {
                 Attribute a = tag.getAttributeEx(tagName);
                 Vector<Attribute> v = new Vector<Attribute>();
@@ -99,6 +101,7 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      //filter out script, noscript
      HtmlNodeFilters.tag("script"),
      HtmlNodeFilters.tag("head"),
+     HtmlNodeFilters.tag("video"),
      HtmlNodeFilters.tagWithAttribute("header", "class", "section-header"),
      HtmlNodeFilters.tagWithAttribute("header", "id", "section-header"),
      HtmlNodeFilters.tagWithAttribute("footer", "id", "section-footer"),

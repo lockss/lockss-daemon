@@ -43,6 +43,8 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -83,6 +85,13 @@ public class ELifeHtmlMetadataExtractorFactory
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
     }
   }
