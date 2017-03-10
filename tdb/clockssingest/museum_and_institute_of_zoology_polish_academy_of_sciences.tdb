@@ -22,7 +22,7 @@
       param[journal_id] = pjoe
       
       au < testing ; exists ; 2014 ; Polish Journal of Ecology Volume 62 ; 62 ; >
-      au < crawling ; exists ; 2015 ; Polish Journal of Ecology Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2015 ; Polish Journal of Ecology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Polish Journal of Ecology Volume 64 ; 64 ; >
 
     }
