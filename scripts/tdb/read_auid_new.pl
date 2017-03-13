@@ -1863,7 +1863,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssSilverchairJournalsPlugin") {
+  } elsif (($plugin eq "ClockssSilverchairJournalsPlugin") ||
+           ($plugin eq "ClockssAmaSilverchairPlugin")) {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
       $param{base_url}, $param{resource_id}, $param{year});
     $man_url = uri_unescape($url);
