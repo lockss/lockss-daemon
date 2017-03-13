@@ -1854,7 +1854,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
 #      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/p.issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -1873,7 +1873,7 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
 #      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/p.issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
