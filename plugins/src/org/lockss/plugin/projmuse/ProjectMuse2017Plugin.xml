@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - EJ</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -163,8 +163,6 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
-  <!-- https://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js
-   -->
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
