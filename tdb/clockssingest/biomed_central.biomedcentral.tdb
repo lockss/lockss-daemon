@@ -1120,8 +1120,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 ; >
       au < finished ; frozen ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 ; >
 
     }
@@ -1764,10 +1764,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2047-783X
 
       au < frozen ; exists ; 2009 ; European Journal of Medical Research Volume 14 ; 14 ; >
-      au < down ; exists ; 2010 ; European Journal of Medical Research Volume 15 ; 15 ; >
-      au < down ; exists ; 2011 ; European Journal of Medical Research Volume 16 ; 16 ; >
-      au < down ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 ; >
-      au < down ; exists ; 2013 ; European Journal of Medical Research Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2010 ; European Journal of Medical Research Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2011 ; European Journal of Medical Research Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2012 ; European Journal of Medical Research Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2013 ; European Journal of Medical Research Volume 18 ; 18 ; >
       au < finished ; finished ; 2014 ; European Journal of Medical Research Volume 19 ; 19 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; European Journal of Medical Research Volume 20 [superseded] ; 20 ; >
 
@@ -1783,10 +1783,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.evodevojournal.com/
       param[journal_issn] = 2041-9139
 
-      au < down ; exists ; 2010 ; EvoDevo Volume 1 ; 1 ; >
-      au < down ; exists ; 2011 ; EvoDevo Volume 2 ; 2 ; >
-      au < down ; exists ; 2012 ; EvoDevo Volume 3 ; 3 ; >
-      au < down ; exists ; 2013 ; EvoDevo Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; EvoDevo Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; EvoDevo Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; EvoDevo Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; EvoDevo Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; EvoDevo Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2015 ; EvoDevo Volume 6 ; 6 ; >
 
@@ -1839,8 +1839,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.extremephysiolmed.com/
       param[journal_issn] = 2046-7648
 
-      au < down ; exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Extreme Physiology & Medicine Volume 4 [superseded] ; 4 ; >
 
@@ -1856,12 +1856,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.fibrogenesis.com/
       param[journal_issn] = 1755-1536
 
-      au < down ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 ; >
-      au < down ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 ; >
-      au < down ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 ; >
-      au < down ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 ; >
 
@@ -1877,8 +1877,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.flavourjournal.com/
       param[journal_issn] = 2044-7248
 
-      au < down ; exists ; 2012 ; Flavour Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Flavour Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Flavour Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Flavour Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Flavour Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2015 ; Flavour Volume 4 ; 4 ; >
 
@@ -1895,9 +1895,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.fluidsbarrierscns.com/
       param[journal_issn] = 2045-8118
 
-      au < down ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 ; >
 
@@ -1917,12 +1917,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Frontiers in Zoology Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Frontiers in Zoology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Frontiers in Zoology Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Frontiers in Zoology Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Frontiers in Zoology Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Frontiers in Zoology Volume 7 ; 7 ; >
-      au < down ; exists ; 2011 ; Frontiers in Zoology Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Frontiers in Zoology Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Frontiers in Zoology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; Frontiers in Zoology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Frontiers in Zoology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Frontiers in Zoology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2011 ; Frontiers in Zoology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Frontiers in Zoology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Frontiers in Zoology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Frontiers in Zoology Volume 11 ; 11 ; >
       au < doNotProcess ; exists ; 2015 ; Frontiers in Zoology Volume 12 ; 12 ; >
       
@@ -2002,12 +2002,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 ; >
       au < doNotProcess ; exists ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 ; >
       au < doNotProcess ; exists ; 2007 ; Genetics Selection Evolution Volume 39 ; 39 ; >
-      au < down ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 ; >
-      au < down ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 ; >
-      au < down ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 ; >
-      au < down ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 ; >
-      au < down ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 ; >
-      au < down ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 ; >
+      au < frozen ; exists ; 2008 ; Genetics Selection Evolution Volume 40 ; 40 ; >
+      au < frozen ; exists ; 2009 ; Genetics Selection Evolution Volume 41 ; 41 ; >
+      au < frozen ; exists ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 ; >
+      au < frozen ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 ; >
+      au < frozen ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 ; >
       au < frozen ; exists ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 ; >
       au < superseded ; exists ; 2015 ; Genetics Selection Evolution Volume 47 [superseded] ; 47 ; >
 
@@ -2076,10 +2076,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2041-9414
       #ceased June 2014. Moved to MedKnow publications.
 
-      au < down ; exists ; 2010 ; Genome Integrity Volume 1 ; 1 ; >
-      au < down ; exists ; 2011 ; Genome Integrity Volume 2 ; 2 ; >
-      au < down ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 ; >
-      au < down ; exists ; 2013 ; Genome Integrity Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Genome Integrity Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; Genome Integrity Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Genome Integrity Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 ; >
       
     }
@@ -2124,8 +2124,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.gigasciencejournal.com/
       param[journal_issn] = 2047-217X
 
-      au < down ; exists ; 2012 ; GigaScience Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; GigaScience Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; GigaScience Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; GigaScience Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; GigaScience Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; GigaScience Volume 4 [superseded] ; 4 ; >
 
@@ -2144,12 +2144,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Globalization and Health Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2006 ; Globalization and Health Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Globalization and Health Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Globalization and Health Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Globalization and Health Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Globalization and Health Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Globalization and Health Volume 5 ; 5 ; >
       au < finished ; finished ; 2010 ; Globalization and Health Volume 6 ; 6 ; >
-      au < down ; exists ; 2011 ; Globalization and Health Volume 7 ; 7 ; >
-      au < down ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2011 ; Globalization and Health Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 ; >
       au < doNotProcess ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 ; >
 
@@ -2165,7 +2165,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.gutpathogens.com/
       param[journal_issn] = 1757-4749
 
-      au < down ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 ; >
       au < down ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 ; >
       au < down ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 ; >
       au < down ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 ; >
