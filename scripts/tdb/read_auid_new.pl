@@ -1847,7 +1847,7 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
-      $param{base_url}, $param{journal_issn}, $param{volume_name});
+      $param{base_url}, $param{journal_issn});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
@@ -1865,7 +1865,7 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
-      $param{base_url}, $param{journal_issn}, $param{volume_name});
+      $param{base_url}, $param{journal_issn});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
