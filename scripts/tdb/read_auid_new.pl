@@ -1845,6 +1845,42 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
+    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}&vol=$param{volume_name}/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
+    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}&vol=$param{volume_name}/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
   } elsif ($plugin eq "SilverchairJournalsPlugin") {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
       $param{base_url}, $param{resource_id}, $param{year});
