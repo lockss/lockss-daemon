@@ -79,7 +79,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 ; >
-      au < expected ; exists ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; >
 
     }
   }
@@ -151,7 +151,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Ethics & Global Politics Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Ethics & Global Politics Volume 9 ; 9 ; >
-    au < expected ; exists ; 2017 ; Ethics & Global Politics Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2017 ; Ethics & Global Politics Volume 10 ; 10 ; >
     
   }
     
@@ -221,7 +221,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 ; >
-    au < expected ; exists ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 ; >
     
   }
 
@@ -246,7 +246,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 ; >
-    au < expected ; exists ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 ; >
 
   }
 
@@ -326,7 +326,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 ; >
-    au < expected ; exists ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 ; >
 
   }
 
@@ -432,7 +432,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 ; >
-    au < expected ; exists ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 ; >
 
   }
 
@@ -459,7 +459,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 ; >
-    au < expected ; exists ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 ; >
 
   }
 
@@ -481,7 +481,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 ; >
-    au < exists ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 ; >
 
   }
 
@@ -497,15 +497,15 @@
       #param[base_url] = http://med-ed-online.net/
       param[journal_id] = zmeo20
       
-      au < exists ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; >
-      au < exists ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; >
-      au < exists ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; >
-      au < exists ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; >
-      au < exists ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; >
-      au < exists ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; >
-      au < exists ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; >
-      au < exists ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; >
-      au < exists ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2005 ; Medical Education Online Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; Medical Education Online Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; Medical Education Online Volume 12 ; 12 ; >
@@ -518,7 +518,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Medical Education Online Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Medical Education Online Volume 21 ; 21 ; >
-      au < expected ; exists ; 2017 ; Medical Education Online Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2017 ; Medical Education Online Volume 22 ; 22 ; >
       
     }
   }
@@ -621,7 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 ; >
-    au < expected ; exists ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; >
 
   }
 
@@ -712,7 +712,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 ; >
-    au < expected ; exists ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 ; >
 
   }
 
