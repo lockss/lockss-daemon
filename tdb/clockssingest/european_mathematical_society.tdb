@@ -3,7 +3,7 @@
   publisher <
     name = European Mathematical Society ;
     info[contract] = 2015 ;
-    info[tester] = 2 ;
+    info[tester] = 8 ;
     info[poller] = 2
   >
   
@@ -23,8 +23,8 @@
     param[journal_issn] = 2313-1691
     comment[journal_id] = ag
     
-    au < expected ; exists ; 2014 ; Algebraic Geometry Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Algebraic Geometry Volume 2 ; 2 ; >
+    au < exists ; exists ; 2014 ; Algebraic Geometry Volume 1 ; 1 ; >
+    au < exists ; exists ; 2015 ; Algebraic Geometry Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Algebraic Geometry Volume 3 ; 3 ; >
     au < expected ; exists ; 2017 ; Algebraic Geometry Volume 4 ; 4 ; >
     
@@ -45,7 +45,7 @@
     au < exists ; exists ; 2014 ; Annales de l’Institut Henri Poincaré D Volume 1 ; 1 ; >
     au < exists ; exists ; 2015 ; Annales de l’Institut Henri Poincaré D Volume 2 ; 2 ; >
     au < exists ; exists ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 ; >
-    au < exists ; exists ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; >
+    au < expected ; exists ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; >
     
   }
 
@@ -117,7 +117,7 @@
     au < exists ; exists ; 2014 ; Elemente der Mathematik Volume 69 ; 69 ; >
     au < exists ; exists ; 2015 ; Elemente der Mathematik Volume 70 ; 70 ; >
     au < exists ; exists ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; >
-    au < exists ; exists ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
+    au < expected ; exists ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
     
   }
 
@@ -212,7 +212,7 @@
     param[journal_issn] = 2415-6302
     comment[journal_id] = jca
 
-    au < exists ; exists ; 2017 ; Journal of Combinatorial Algebra Volume 1 ; 1 ; >
+    au < expected ; exists ; 2017 ; Journal of Combinatorial Algebra Volume 1 ; 1 ; >
     
   }
 
@@ -313,7 +313,7 @@
     au < exists ; exists ; 2014 ; Journal of the European Mathematical Society Volume 16 ; 16 ; >
     au < exists ; exists ; 2015 ; Journal of the European Mathematical Society Volume 17 ; 17 ; >
     au < exists ; exists ; 2016 ; Journal of the European Mathematical Society Volume 18 ; 18 ; >
-    au < exists ; exists ; 2017 ; Journal of the European Mathematical Society Volume 19 ; 19 ; >
+    au < expected ; exists ; 2017 ; Journal of the European Mathematical Society Volume 19 ; 19 ; >
     
   }
 
@@ -615,7 +615,7 @@
     au < exists ; exists ; 2014 ; Zeitschrift für Analysis und ihre Anwendungen Volume 33 ; 33 ; >
     au < exists ; exists ; 2015 ; Zeitschrift für Analysis und ihre Anwendungen Volume 34 ; 34 ; >
     au < exists ; exists ; 2016 ; Zeitschrift für Analysis und ihre Anwendungen Volume 35 ; 35 ; >
-    au < exists ; exists ; 2017 ; Zeitschrift für Analysis und ihre Anwendungen Volume 36 ; 36 ; >
+    au < expected ; exists ; 2017 ; Zeitschrift für Analysis und ihre Anwendungen Volume 36 ; 36 ; >
     
   }
 
