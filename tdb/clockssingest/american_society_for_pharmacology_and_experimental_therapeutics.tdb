@@ -441,10 +441,14 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 [superseded] ; 356 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 [superseded] ; 357 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 [superseded] ; 358 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; exists ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; exists ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 361 ; 361 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 362 ; 362 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 363 ; 363 ; >
 
   }
   }
@@ -663,6 +667,7 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Pharmacological Reviews Volume 68 [superseded] ; 68 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Pharmacological Reviews Volume 70 ; 70 ; >
     
   }
 
