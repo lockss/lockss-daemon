@@ -912,7 +912,7 @@
         param[journal_issn] = 2194-7899 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Health & Justice Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; Health & Justice Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; Health & Justice Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Health & Justice Volume 3 [superseded] ; 3 ; >
   
@@ -931,7 +931,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Health Economics Review Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 ; >
         au < frozen ; exists ; 2014 ; Health Economics Review Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Health Economics Review Volume 5 [superseded] ; 5 ; >
   
@@ -969,7 +969,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; >
         au < frozen ; exists ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 [superseded] ; 5 ; >
   

@@ -1944,11 +1944,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Genetic Vaccines and Therapy Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Genetic Vaccines and Therapy Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Genetic Vaccines and Therapy Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 ; >
       au < finished ; finished ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 ; >
 
     }
 
@@ -2166,10 +2166,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1757-4749
 
       au < frozen ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 ; >
-      au < down ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 ; >
-      au < down ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 ; >
-      au < down ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 ; >
-      au < down ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Gut Pathogens Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2015 ; Gut Pathogens Volume 7 [superseded] ; 7 ; >
 
@@ -2189,12 +2189,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Harm Reduction Journal Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Harm Reduction Journal Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Harm Reduction Journal Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Harm Reduction Journal Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Harm Reduction Journal Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Harm Reduction Journal Volume 7 ; 7 ; >
-      au < down ; exists ; 2011 ; Harm Reduction Journal Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; Harm Reduction Journal Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Harm Reduction Journal Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Harm Reduction Journal Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2011 ; Harm Reduction Journal Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 ; >
       au < superseded ; exists ; 2015 ; Harm Reduction Journal Volume 12 [superseded] ; 12 ; >
 
@@ -2213,12 +2213,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Head & Face Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2006 ; Head & Face Medicine Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Head & Face Medicine Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Head & Face Medicine Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Head & Face Medicine Volume 5 ; 5 ; >
-      au < down ; exists ; 2010 ; Head & Face Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2011 ; Head & Face Medicine Volume 7 ; 7 ; >
-      au < down ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2008 ; Head & Face Medicine Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Head & Face Medicine Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2010 ; Head & Face Medicine Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2011 ; Head & Face Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 ; >
       au < finished ; finished ; 2015 ; Head & Face Medicine Volume 11 ; 11 ; reingest5.clockss.org:8082 >
 
@@ -2240,12 +2240,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Health and Quality of Life Outcomes Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 ; >
 
@@ -2261,7 +2261,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.hissjournal.com/
       param[journal_issn] = 2047-2501
 
-      au < down ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 ; >
       au < frozen ; exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 ; >
       au < superseded ; exists ; 2015 ; Health Information Science and Systems Volume 3 [superseded] ; 3 ; >
 
@@ -2284,12 +2284,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Health Research Policy and Systems Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Health Research Policy and Systems Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Health Research Policy and Systems Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Health Research Policy and Systems Volume 13 [superseded] ; 13 ; >
 
@@ -2310,12 +2310,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 [superseded] ; 13 ; >
 
@@ -2333,10 +2333,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       # stopped publishing.
 
-      au < down ; exists ; 2010 ; Herpesviridae Volume 1 ; 1 ; >
-      au < down ; exists ; 2011 ; Herpesviridae Volume 2 ; 2 ; >
-      au < down ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 ; >
-      au < down ; exists ; 2013 ; Herpesviridae Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Herpesviridae Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; Herpesviridae Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Herpesviridae Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Herpesviridae Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; Herpesviridae Volume 5 ; 5 ; >
 
     }
@@ -2379,12 +2379,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Human Resources for Health Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Human Resources for Health Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Human Resources for Health Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Human Resources for Health Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Human Resources for Health Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Human Resources for Health Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Human Resources for Health Volume 7 ; 7 ; >
       au < down ; exists ; 2010 ; Human Resources for Health Volume 8 ; 8 ; >
       au < down ; exists ; 2011 ; Human Resources for Health Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Human Resources for Health Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Human Resources for Health Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Human Resources for Health Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Human Resources for Health Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Human Resources for Health Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Human Resources for Health Volume 13 [superseded] ; 13 ; >
 
