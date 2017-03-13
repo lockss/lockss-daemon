@@ -97,6 +97,12 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex) {
+    if (ex instanceof ContentValidationException) {
+      logger.debug3("Warning - not storing file " + url);
+      // no store cache exception and continue
+      return new org.lockss.util.urlconn.CacheException.NoStoreWarningOnly("ContentValidationException" + url);
+    }
+    
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
@@ -105,6 +111,5 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   protected Pattern getNonFatal500Pattern() {    
     return DEFAULT_NON_FATAL_PAT;   
   }
-  
   
 }
