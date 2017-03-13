@@ -1464,7 +1464,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 ; >
-        au < down ; exists ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 ; >
+        au < frozen ; exists ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 ; >
         au < frozen ; exists ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 ; >
         au < doNotProcess ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 ; >
   
