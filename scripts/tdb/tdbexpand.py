@@ -291,7 +291,7 @@ def _find_ranges(options, aus):
             aindex = aindex - 1
         while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
             aindex = aindex - 1
-    ###DEBUG
+    ###DEBUG ###FIXME
     for range in reversed(ranges):
         for auentry in range:
             print auentry[-1].generate_body()
@@ -333,6 +333,8 @@ def _analyze_range(options, aus, range):
                     p = n
                     while p < len(range) and range[p][_IYEAR] == prevyear:
                         p = p + 1
+                    warn = None
+
                     if p == len(range):
                         # Only two years to draw from
                         if n < p - n:
