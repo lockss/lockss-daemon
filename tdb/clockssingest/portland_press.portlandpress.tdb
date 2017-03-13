@@ -4,7 +4,7 @@
     name = Portland Press ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[tester] = 2
+    info[poller] = 2
   >
   # publisher uses three digit volume numbers in manifest URL
   plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
