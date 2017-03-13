@@ -986,7 +986,7 @@
         param[journal_issn] = 2193-9616 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; In Silico Pharmacology Volume 3 [superseded] ; 3 ; >
   
@@ -1038,7 +1038,7 @@
         param[journal_issn] = 2197-425X 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; >
         au < frozen ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 [superseded] ; 3 ; >
   
@@ -1057,7 +1057,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 ; >
-        au < down ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 ; >
+        au < frozen ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 ; >
         au < frozen ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 ; >
         au < superseded ; exists ; 2015 ; International Aquatic Research Volume 7 [superseded] ; 7 ; >
   
@@ -1113,7 +1113,7 @@
   
         au < doNotProcess ; exists ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 ; >
         au < doNotProcess ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 ; >
-        au < down ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; >
+        au < frozen ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; >
         au < frozen ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 ; >
         au < superseded ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 [superseded] ; 8 ; >
   
@@ -1167,7 +1167,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 ; >
-        au < down ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; >
+        au < frozen ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; >
         au < frozen ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 ; >
         au < superseded ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 [superseded] ; 6 ; >
   
@@ -1186,7 +1186,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Recycling of Organic Waste in Agriculture Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 ; >
   
     }
   
@@ -1219,7 +1219,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Nano Letters Volume 2 ; 2 ; >
-        au < down ; exists ; 2013 ; International Nano Letters Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2013 ; International Nano Letters Volume 3 ; 3 ; >
         au < finished ; finished ; 2014 ; International Nano Letters Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 ; >
   
@@ -1237,7 +1237,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 [superseded] ; 4 ; >
   
@@ -1255,7 +1255,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 [superseded] ; 4 ; >
   
@@ -1273,7 +1273,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 [superseded] ; 4 ; >
   
@@ -1291,7 +1291,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 [superseded] ; 4 ; >
   
@@ -1309,7 +1309,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; IZA Journal of Migration Volume 4 [superseded] ; 4 ; >
   
@@ -1326,7 +1326,7 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; >
+        au < frozen ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; >
         au < finished ; finished ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 [superseded] ; 6 ; >
   
