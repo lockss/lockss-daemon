@@ -43,14 +43,14 @@
       eissn = 2056-9211 ;
       issnl = 2056-9211
     >
-    }
+    {
       param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
       param[journal_id] = jbr
     
       au < exists ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
       au < exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
     }
-    }
+    {
       param[base_url] = http://jbr.openlibrary.manchester.ac.uk/
       param[journal_id] = jbr
     
