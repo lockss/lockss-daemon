@@ -126,34 +126,34 @@ then
     # if the AUs are identical, then compare the statuses. Find AUs that are ready or released in clockss, and not marked ready or released in the gln.
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
-      # Find AUs in the gln marked expected, exists, ready, released, superseded (these will be eleminated from the list)
-      scripts/tdb/tdbout -EXYRS -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_exyrs.txt
-      # Find AUs in the gln marked down
-      scripts/tdb/tdbout -D -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
-      # Find AUs in the gln marked doNotProcess
-      scripts/tdb/tdbout -c auid,name -Q 'status is "doNotProcess"' tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_dnp.txt
-      # Merge all AUs to eliminate from list and sort
-      cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
-      # Find AUs in clockss marked finished, filter for odd cases, filter plugin name, and sort.
-      scripts/tdb/tdbout -F -c auid,name tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
-      if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
-      then
-        echo "***AU status diffs: mark ready in GLN***"
-        if [[ $opt_tdb_file == "" ]]
-        then
-          cat $tpath/done_diff.txt | grep "^< " | sed s/..// | head -n20
-        else
-          cat $tpath/done_diff.txt | grep "^< " | sed s/..//
-        fi
-        linenumA=`cat $tpath/done_diff.txt | grep "^< " | wc -l`
-        if [[ $linenumA -lt "$maxnumAUsA" || $opt_tdb_file != "" ]]
-        then
-           maxnumAUsA=$linenumA
-        fi
-        echo "First $maxnumAUsA out of $linenumA"
-      else
-        echo "No status differences"
-      fi
+#      # Find AUs in the gln marked expected, exists, ready, released, superseded (these will be eleminated from the list)
+#      scripts/tdb/tdbout -EXYRS -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_exyrs.txt
+#      # Find AUs in the gln marked down
+#      scripts/tdb/tdbout -D -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
+#      # Find AUs in the gln marked doNotProcess
+#      scripts/tdb/tdbout -c auid,name -Q 'status is "doNotProcess"' tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_dnp.txt
+#      # Merge all AUs to eliminate from list and sort
+#      cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
+#      # Find AUs in clockss marked finished, filter for odd cases, filter plugin name, and sort.
+#      scripts/tdb/tdbout -F -c auid,name tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
+#      if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
+#      then
+#        echo "***AU status diffs: mark ready in GLN***"
+#        if [[ $opt_tdb_file == "" ]]
+#        then
+#          cat $tpath/done_diff.txt | grep "^< " | sed s/..// | head -n20
+#        else
+#          cat $tpath/done_diff.txt | grep "^< " | sed s/..//
+#        fi
+#        linenumA=`cat $tpath/done_diff.txt | grep "^< " | wc -l`
+#        if [[ $linenumA -lt "$maxnumAUsA" || $opt_tdb_file != "" ]]
+#        then
+#           maxnumAUsA=$linenumA
+#        fi
+#        echo "First $maxnumAUsA out of $linenumA"
+#      else
+#        echo "No status differences"
+#      fi
     fi
   fi
 fi
