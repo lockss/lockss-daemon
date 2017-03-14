@@ -3,6 +3,7 @@
   publisher <
     name = IP Publishing Ltd.
   >
+  # all titles moved to Sage April 2016.
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/
@@ -24,24 +25,24 @@
     param[journal_id] = ihe
     param[journal_issn] = 0950-4222
 
-    au < manifest ; 1999 ; Industry and Higher Education Volume 13 ; 13 >
-    au < manifest ; 2000 ; Industry and Higher Education Volume 14 ; 14 >
-    au < manifest ; 2001 ; Industry and Higher Education Volume 15 ; 15 >
-    au < manifest ; 2002 ; Industry and Higher Education Volume 16 ; 16 >
-    au < manifest ; 2003 ; Industry and Higher Education Volume 17 ; 17 >
-    au < manifest ; 2004 ; Industry and Higher Education Volume 18 ; 18 >
-    au < manifest ; 2005 ; Industry and Higher Education Volume 19 ; 19 >
-    au < manifest ; 2006 ; Industry and Higher Education Volume 20 ; 20 >
-    au < manifest ; 2007 ; Industry and Higher Education Volume 21 ; 21 >
-    au < manifest ; 2008 ; Industry and Higher Education Volume 22 ; 22 >
-    au < manifest ; 2009 ; Industry and Higher Education Volume 23 ; 23 >
-    au < manifest ; 2010 ; Industry and Higher Education Volume 24 ; 24 >
-    au < released ; 2011 ; Industry and Higher Education Volume 25 ; 25 >
-    au < released ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
-    au < released ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
-    au < released ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
-    au < released ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
-    au < testing ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
+    au < doNotProcess ; 1999 ; Industry and Higher Education Volume 13 ; 13 >
+    au < doNotProcess ; 2000 ; Industry and Higher Education Volume 14 ; 14 >
+    au < doNotProcess ; 2001 ; Industry and Higher Education Volume 15 ; 15 >
+    au < doNotProcess ; 2002 ; Industry and Higher Education Volume 16 ; 16 >
+    au < doNotProcess ; 2003 ; Industry and Higher Education Volume 17 ; 17 >
+    au < doNotProcess ; 2004 ; Industry and Higher Education Volume 18 ; 18 >
+    au < doNotProcess ; 2005 ; Industry and Higher Education Volume 19 ; 19 >
+    au < doNotProcess ; 2006 ; Industry and Higher Education Volume 20 ; 20 >
+    au < doNotProcess ; 2007 ; Industry and Higher Education Volume 21 ; 21 >
+    au < doNotProcess ; 2008 ; Industry and Higher Education Volume 22 ; 22 >
+    au < doNotProcess ; 2009 ; Industry and Higher Education Volume 23 ; 23 >
+    au < doNotProcess ; 2010 ; Industry and Higher Education Volume 24 ; 24 >
+    au < down ; 2011 ; Industry and Higher Education Volume 25 ; 25 >
+    au < down ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
+    au < down ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
+    au < down ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
+    au < down ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
+    au < doNotProcess ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
 
   }
 
@@ -57,23 +58,23 @@
     param[journal_id] = ije
     param[journal_issn] = 1465-7503
 
-    au < manifest ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
-    au < manifest ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
-    au < manifest ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
-    au < manifest ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
-    au < manifest ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
-    au < manifest ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
-    au < manifest ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
-    au < manifest ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
-    au < manifest ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
-    au < manifest ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
-    au < manifest ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
-    au < released ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
-    au < released ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
-    au < released ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
-    au < released ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 >
-    au < released ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 >
-    au < testing ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
+    au < doNotProcess ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
+    au < doNotProcess ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
+    au < doNotProcess ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
+    au < doNotProcess ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
+    au < doNotProcess ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
+    au < doNotProcess ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
+    au < doNotProcess ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
+    au < doNotProcess ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
+    au < doNotProcess ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
+    au < doNotProcess ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
+    au < doNotProcess ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
+    au < down ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
+    au < down ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
+    au < down ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
+    au < down ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 >
+    au < down ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 >
+    au < doNotProcess ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
 
   }
 
@@ -89,24 +90,24 @@
     param[journal_id] = ooa
     param[journal_issn] = 0030-7270
 
-    au < manifest ; 1999 ; Outlook on Agriculture Volume 28 ; 28 >
-    au < manifest ; 2000 ; Outlook on Agriculture Volume 29 ; 29 >
-    au < manifest ; 2001 ; Outlook on Agriculture Volume 30 ; 30 >
-    au < manifest ; 2002 ; Outlook on Agriculture Volume 31 ; 31 >
-    au < manifest ; 2003 ; Outlook on Agriculture Volume 32 ; 32 >
-    au < manifest ; 2004 ; Outlook on Agriculture Volume 33 ; 33 >
-    au < manifest ; 2005 ; Outlook on Agriculture Volume 34 ; 34 >
-    au < manifest ; 2006 ; Outlook on Agriculture Volume 35 ; 35 >
-    au < manifest ; 2007 ; Outlook on Agriculture Volume 36 ; 36 >
-    au < manifest ; 2008 ; Outlook on Agriculture Volume 37 ; 37 >
-    au < manifest ; 2009 ; Outlook on Agriculture Volume 38 ; 38 >
-    au < manifest ; 2010 ; Outlook on Agriculture Volume 39 ; 39 >
-    au < released ; 2011 ; Outlook on Agriculture Volume 40 ; 40 >
-    au < released ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
-    au < released ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
-    au < released ; 2014 ; Outlook on Agriculture Volume 43 ; 43 >
-    au < released ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
-    au < testing ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
+    au < doNotProcess ; 1999 ; Outlook on Agriculture Volume 28 ; 28 >
+    au < doNotProcess ; 2000 ; Outlook on Agriculture Volume 29 ; 29 >
+    au < doNotProcess ; 2001 ; Outlook on Agriculture Volume 30 ; 30 >
+    au < doNotProcess ; 2002 ; Outlook on Agriculture Volume 31 ; 31 >
+    au < doNotProcess ; 2003 ; Outlook on Agriculture Volume 32 ; 32 >
+    au < doNotProcess ; 2004 ; Outlook on Agriculture Volume 33 ; 33 >
+    au < doNotProcess ; 2005 ; Outlook on Agriculture Volume 34 ; 34 >
+    au < doNotProcess ; 2006 ; Outlook on Agriculture Volume 35 ; 35 >
+    au < doNotProcess ; 2007 ; Outlook on Agriculture Volume 36 ; 36 >
+    au < doNotProcess ; 2008 ; Outlook on Agriculture Volume 37 ; 37 >
+    au < doNotProcess ; 2009 ; Outlook on Agriculture Volume 38 ; 38 >
+    au < doNotProcess ; 2010 ; Outlook on Agriculture Volume 39 ; 39 >
+    au < down ; 2011 ; Outlook on Agriculture Volume 40 ; 40 >
+    au < down ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
+    au < down ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
+    au < down ; 2014 ; Outlook on Agriculture Volume 43 ; 43 >
+    au < down ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
+    au < doNotProcess ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
 
   }
 
@@ -122,23 +123,23 @@
     param[journal_id] = sear
     param[journal_issn] = 0967-828X
 
-    au < manifest ; 2000 ; South East Asia Research Volume 8 ; 8 >
-    au < manifest ; 2001 ; South East Asia Research Volume 9 ; 9 >
-    au < manifest ; 2002 ; South East Asia Research Volume 10 ; 10 >
-    au < manifest ; 2003 ; South East Asia Research Volume 11 ; 11 >
-    au < manifest ; 2004 ; South East Asia Research Volume 12 ; 12 >
-    au < manifest ; 2005 ; South East Asia Research Volume 13 ; 13 >
-    au < manifest ; 2006 ; South East Asia Research Volume 14 ; 14 >
-    au < manifest ; 2007 ; South East Asia Research Volume 15 ; 15 >
-    au < manifest ; 2008 ; South East Asia Research Volume 16 ; 16 >
-    au < manifest ; 2009 ; South East Asia Research Volume 17 ; 17 >
-    au < manifest ; 2010 ; South East Asia Research Volume 18 ; 18 >
-    au < released ; 2011 ; South East Asia Research Volume 19 ; 19 >
-    au < released ; 2012 ; South East Asia Research Volume 20 ; 20 >
-    au < released ; 2013 ; South East Asia Research Volume 21 ; 21 >
-    au < released ; 2014 ; South East Asia Research Volume 22 ; 22 >
-    au < released ; 2015 ; South East Asia Research Volume 23 ; 23 >
-    au < testing ; 2016 ; South East Asia Research Volume 24 ; 24 >
+    au < doNotProcess ; 2000 ; South East Asia Research Volume 8 ; 8 >
+    au < doNotProcess ; 2001 ; South East Asia Research Volume 9 ; 9 >
+    au < doNotProcess ; 2002 ; South East Asia Research Volume 10 ; 10 >
+    au < doNotProcess ; 2003 ; South East Asia Research Volume 11 ; 11 >
+    au < doNotProcess ; 2004 ; South East Asia Research Volume 12 ; 12 >
+    au < doNotProcess ; 2005 ; South East Asia Research Volume 13 ; 13 >
+    au < doNotProcess ; 2006 ; South East Asia Research Volume 14 ; 14 >
+    au < doNotProcess ; 2007 ; South East Asia Research Volume 15 ; 15 >
+    au < doNotProcess ; 2008 ; South East Asia Research Volume 16 ; 16 >
+    au < doNotProcess ; 2009 ; South East Asia Research Volume 17 ; 17 >
+    au < doNotProcess ; 2010 ; South East Asia Research Volume 18 ; 18 >
+    au < down ; 2011 ; South East Asia Research Volume 19 ; 19 >
+    au < down ; 2012 ; South East Asia Research Volume 20 ; 20 >
+    au < down ; 2013 ; South East Asia Research Volume 21 ; 21 >
+    au < down ; 2014 ; South East Asia Research Volume 22 ; 22 >
+    au < down ; 2015 ; South East Asia Research Volume 23 ; 23 >
+    au < doNotProcess ; 2016 ; South East Asia Research Volume 24 ; 24 >
 
   }
 
@@ -154,23 +155,23 @@
     param[journal_id] = tec
     param[journal_issn] = 1354-8166
 
-    au < manifest ; 2000 ; Tourism Economics Volume 6 ; 6 >
-    au < manifest ; 2001 ; Tourism Economics Volume 7 ; 7 >
-    au < manifest ; 2002 ; Tourism Economics Volume 8 ; 8 >
-    au < manifest ; 2003 ; Tourism Economics Volume 9 ; 9 >
-    au < manifest ; 2004 ; Tourism Economics Volume 10 ; 10 >
-    au < manifest ; 2005 ; Tourism Economics Volume 11 ; 11 >
-    au < manifest ; 2006 ; Tourism Economics Volume 12 ; 12 >
-    au < manifest ; 2007 ; Tourism Economics Volume 13 ; 13 >
-    au < manifest ; 2008 ; Tourism Economics Volume 14 ; 14 >
-    au < manifest ; 2009 ; Tourism Economics Volume 15 ; 15 >
-    au < manifest ; 2010 ; Tourism Economics Volume 16 ; 16 >
-    au < released ; 2011 ; Tourism Economics Volume 17 ; 17 >
-    au < released ; 2012 ; Tourism Economics Volume 18 ; 18 >
-    au < released ; 2013 ; Tourism Economics Volume 19 ; 19 >
-    au < released ; 2014 ; Tourism Economics Volume 20 ; 20 >
-    au < released ; 2015 ; Tourism Economics Volume 21 ; 21 >
-    au < testing ; 2016 ; Tourism Economics Volume 22 ; 22 >
+    au < doNotProcess ; 2000 ; Tourism Economics Volume 6 ; 6 >
+    au < doNotProcess ; 2001 ; Tourism Economics Volume 7 ; 7 >
+    au < doNotProcess ; 2002 ; Tourism Economics Volume 8 ; 8 >
+    au < doNotProcess ; 2003 ; Tourism Economics Volume 9 ; 9 >
+    au < doNotProcess ; 2004 ; Tourism Economics Volume 10 ; 10 >
+    au < doNotProcess ; 2005 ; Tourism Economics Volume 11 ; 11 >
+    au < doNotProcess ; 2006 ; Tourism Economics Volume 12 ; 12 >
+    au < doNotProcess ; 2007 ; Tourism Economics Volume 13 ; 13 >
+    au < doNotProcess ; 2008 ; Tourism Economics Volume 14 ; 14 >
+    au < doNotProcess ; 2009 ; Tourism Economics Volume 15 ; 15 >
+    au < doNotProcess ; 2010 ; Tourism Economics Volume 16 ; 16 >
+    au < down ; 2011 ; Tourism Economics Volume 17 ; 17 >
+    au < down ; 2012 ; Tourism Economics Volume 18 ; 18 >
+    au < down ; 2013 ; Tourism Economics Volume 19 ; 19 >
+    au < down ; 2014 ; Tourism Economics Volume 20 ; 20 >
+    au < down ; 2015 ; Tourism Economics Volume 21 ; 21 >
+    au < doNotProcess ; 2016 ; Tourism Economics Volume 22 ; 22 >
 
   }
 }
