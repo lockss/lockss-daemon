@@ -25,9 +25,9 @@
       param[journal_id] = zaie20
       # discontinued in 2013
     
-      au < exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 >
-      au < exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 >
-      au < exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 >
+      au < manifest ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 >
+      au < manifest ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 >
+      au < manifest ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 >
     
     }
     
@@ -71,10 +71,10 @@
       au < doNotProcess ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 >
       au < doNotProcess ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 >
       au < doNotProcess ; 2013 ; Diabetic Foot & Ankle [including Supplements] Volume 4 ; 4 >
-      au < exists ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 >
+      au < manifest ; 2014 ; Diabetic Foot & Ankle [including Supplements] Volume 5 ; 5 >
       au < doNotProcess ; 2015 ; Diabetic Foot & Ankle [including Supplements] Volume 6 ; 6 >
-      au < exists ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 >
-      au < exists ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 >
+      au < manifest ; 2016 ; Diabetic Foot & Ankle [including Supplements] Volume 7 ; 7 >
+      au < manifest ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 >
       
     }
   }
@@ -142,10 +142,10 @@
     au < doNotProcess ; 2011 ; Ethics & Global Politics Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Ethics & Global Politics Volume 5 ; 5 >
     au < doNotProcess ; 2013 ; Ethics & Global Politics Volume 6 ; 6 >
-    au < exists ; 2014 ; Ethics & Global Politics Volume 7 ; 7 >
+    au < manifest ; 2014 ; Ethics & Global Politics Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Ethics & Global Politics Volume 8 ; 8 >
-    au < exists ; 2016 ; Ethics & Global Politics Volume 9 ; 9 >
-    au < expected ; 2017 ; Ethics & Global Politics Volume 10 ; 10 >
+    au < manifest ; 2016 ; Ethics & Global Politics Volume 9 ; 9 >
+    au < manifest ; 2017 ; Ethics & Global Politics Volume 10 ; 10 >
 
   }
     
@@ -214,10 +214,10 @@
     au < doNotProcess ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 >
     au < doNotProcess ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 >
     au < doNotProcess ; 2013 ; Food & Nutrition Research [including Supplements] Volume 57 ; 57 >
-    au < exists ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 >
+    au < manifest ; 2014 ; Food & Nutrition Research [including Supplements] Volume 58 ; 58 >
     au < doNotProcess ; 2015 ; Food & Nutrition Research [including Supplements] Volume 59 ; 59 >
-    au < exists ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 >
-    au < expected ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 >
+    au < manifest ; 2016 ; Food & Nutrition Research [including Supplements] Volume 60 ; 60 >
+    au < manifest ; 2017 ; Food & Nutrition Research [including Supplements] Volume 61 ; 61 >
 
   }
 
@@ -239,10 +239,10 @@
     au < doNotProcess ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 >
     au < doNotProcess ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 >
     au < doNotProcess ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 >
-    au < exists ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 >
+    au < manifest ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 >
-    au < exists ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 >
-    au < expected ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 >
+    au < manifest ; 2016 ; Global Health Action [including Supplements] Volume 9 ; 9 >
+    au < manifest ; 2017 ; Global Health Action [including Supplements] Volume 10 ; 10 >
 
   }
 
@@ -259,9 +259,9 @@
     au < doNotProcess ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 >
-    au < exists ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 >
-    au < exists ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 >
-    au < exists ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 >
+    au < manifest ; 2014 ; Infection Ecology & Epidemiology [including Supplements] Volume 4 ; 4 >
+    au < manifest ; 2015 ; Infection Ecology & Epidemiology [including Supplements] Volume 5 ; 5 >
+    au < manifest ; 2016 ; Infection Ecology & Epidemiology [including Supplements] Volume 6 ; 6 >
     au < expected ; 2017 ; Infection Ecology & Epidemiology [including Supplements] Volume 7 ; 7 >
 
   }
@@ -318,11 +318,11 @@
     au < doNotProcess ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 >
     au < doNotProcess ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 >
     au < doNotProcess ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 >
-    au < exists ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 >
-    au < exists ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 >
+    au < manifest ; 2013 ; International Journal of Qualitative Studies on Health and Well-being Volume 8 ; 8 >
+    au < manifest ; 2014 ; International Journal of Qualitative Studies on Health and Well-being Volume 9 ; 9 >
     au < doNotProcess ; 2015 ; International Journal of Qualitative Studies on Health and Well-being Volume 10 ; 10 >
-    au < exists ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 >
-    au < expected ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 >
+    au < manifest ; 2016 ; International Journal of Qualitative Studies on Health and Well-being Volume 11 ; 11 >
+    au < manifest ; 2017 ; International Journal of Qualitative Studies on Health and Well-being Volume 12 ; 12 >
     
   }
 
@@ -341,10 +341,10 @@
     au < doNotProcess ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 >
-    au < exists ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 >
-    au < exists ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 >
+    au < manifest ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 >
+    au < manifest ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 >
-    au < exists ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 >
+    au < manifest ; 2016 ; Journal of Aesthetics & Culture Volume 8 ; 8 >
     au < expected ; 2017 ; Journal of Aesthetics & Culture Volume 9 ; 9 >
   }
 
@@ -422,11 +422,11 @@
     au < doNotProcess ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 >
-    au < exists ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 >
-    au < exists ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 >
+    au < manifest ; 2013 ; Journal of Oral Microbiology Volume 5 ; 5 >
+    au < manifest ; 2014 ; Journal of Oral Microbiology Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; Journal of Oral Microbiology Volume 7 ; 7 >
-    au < exists ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 >
-    au < expected ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 >
+    au < manifest ; 2016 ; Journal of Oral Microbiology Volume 8 ; 8 >
+    au < manifest ; 2017 ; Journal of Oral Microbiology Volume 9 ; 9 >
 
   }
 
@@ -450,10 +450,10 @@
     au < doNotProcess ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 >
     au < doNotProcess ; 2012 ; Libyan Journal of Medicine [including Supplements] Volume 7 ; 7 >
     au < doNotProcess ; 2013 ; Libyan Journal of Medicine [including Supplements] Volume 8 ; 8 >
-    au < exists ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 >
+    au < manifest ; 2014 ; Libyan Journal of Medicine [including Supplements] Volume 9 ; 9 >
     au < doNotProcess ; 2015 ; Libyan Journal of Medicine [including Supplements] Volume 10 ; 10 >
-    au < exists ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 >
-    au < expected ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 >
+    au < manifest ; 2016 ; Libyan Journal of Medicine [including Supplements] Volume 11 ; 11 >
+    au < manifest ; 2017 ; Libyan Journal of Medicine [including Supplements] Volume 12 ; 12 >
 
   }
 
@@ -472,7 +472,7 @@
     au < doNotProcess ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Mechanical Circulatory Support Volume 3 ; 3 >
-    au < exists ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 >
+    au < manifest ; 2013 ; Mechanical Circulatory Support Volume 4 ; 4 >
   }
 
   {
@@ -505,11 +505,11 @@
     au < doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 >
     au < doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 >
     au < doNotProcess ; 2012 ; Medical Education Online Volume 17 ; 17 >
-    au < exists ; 2013 ; Medical Education Online Volume 18 ; 18 >
-    au < exists ; 2014 ; Medical Education Online Volume 19 ; 19 >
+    au < manifest ; 2013 ; Medical Education Online Volume 18 ; 18 >
+    au < manifest ; 2014 ; Medical Education Online Volume 19 ; 19 >
     au < doNotProcess ; 2015 ; Medical Education Online Volume 20 ; 20 >
-    au < exists ; 2016 ; Medical Education Online Volume 21 ; 21 >
-    au < expected ; 2017 ; Medical Education Online Volume 22 ; 22 >
+    au < manifest ; 2016 ; Medical Education Online Volume 21 ; 21 >
+    au < manifest ; 2017 ; Medical Education Online Volume 22 ; 22 >
     }
 
   }
@@ -609,10 +609,10 @@
     au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 3 ; 3 >
-    au < exists ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 >
+    au < manifest ; 2014 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 4 ; 4 >
     au < doNotProcess ; 2015 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 5 ; 5 >
-    au < exists ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 >
-    au < expected ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 >
+    au < manifest ; 2016 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 6 ; 6 >
+    au < manifest ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 >
 
   }
 
@@ -700,10 +700,10 @@
     au < doNotProcess ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 >
     au < doNotProcess ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 >
     au < doNotProcess ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 >
-    au < exists ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 >
+    au < manifest ; 2014 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 22 ; 22 >
     au < doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 >
-    au < exists ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 >
-    au < expected ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 >
+    au < manifest ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 >
+    au < manifest ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 >
 
   }
 
@@ -766,9 +766,9 @@
       au < doNotProcess ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 >
       au < doNotProcess ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 >
       au < doNotProcess ; 2013 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 3 ; 3 >
-      au < exists ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 >
+      au < manifest ; 2014 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 4 ; 4 >
       au < doNotProcess ; 2015 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 5 ; 5 >
-      au < exists ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 >
+      au < manifest ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 >
       au < expected ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 >
 
   }
