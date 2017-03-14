@@ -3622,14 +3622,14 @@
 
         au < exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; tbtc >
         au < exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; tbtc >
-        au < doNotProcess ; 2008 ; The Bible Translator Volume 59 ; 59 ; tbta >
-        au < doNotProcess ; 2009 ; The Bible Translator Volume 60 ; 60 ; tbta >
-        au < doNotProcess ; 2010 ; The Bible Translator Volume 61 ; 61 ; tbta >
-        au < doNotProcess ; 2011 ; The Bible Translator Volume 62 ; 62 ; tbta >
-        au < doNotProcess ; 2012 ; The Bible Translator Volume 63 ; 63 ; tbta >
-        au < doNotProcess ; 2013 ; The Bible Translator Volume 64 ; 64 ; tbta >
-        au < doNotProcess ; 2014 ; The Bible Translator Volume 65 ; 65 ; tbta >
-        au < doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbta >
+        au < doNotProcess ; 2008 ; The Bible Translator Volume 59 ; 59 ; tbtc >
+        au < doNotProcess ; 2009 ; The Bible Translator Volume 60 ; 60 ; tbtc >
+        au < doNotProcess ; 2010 ; The Bible Translator Volume 61 ; 61 ; tbtc >
+        au < doNotProcess ; 2011 ; The Bible Translator Volume 62 ; 62 ; tbtc >
+        au < doNotProcess ; 2012 ; The Bible Translator Volume 63 ; 63 ; tbtc >
+        au < doNotProcess ; 2013 ; The Bible Translator Volume 64 ; 64 ; tbtc >
+        au < doNotProcess ; 2014 ; The Bible Translator Volume 65 ; 65 ; tbtc >
+        au < doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbtc >
         au < exists ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtc >
 
       }
@@ -4831,6 +4831,8 @@
         au < manifest ; 2012 ; Calcutta Statistical Association Bulletin Volume 64 ; 64 ; csaa >
         au < manifest ; 2013 ; Calcutta Statistical Association Bulletin Volume 65 ; 65 ; csaa >
         au < manifest ; 2014 ; Calcutta Statistical Association Bulletin Volume 66 ; 66 ; csaa >
+        au < exists ; 2015 ; Calcutta Statistical Association Bulletin Volume 67 ; 67 ; csaa >
+        au < exists ; 2016 ; Calcutta Statistical Association Bulletin Volume 68 ; 68 ; csaa >
 
     }
 
@@ -7357,16 +7359,16 @@
         au < manifest ; 2003 ; Criminology and Criminal Justice Volume 3 ; 3 ; crja >
         au < manifest ; 2004 ; Criminology and Criminal Justice Volume 4 ; 4 ; crja >
         au < doNotProcess ; 2005 ; Criminology and Criminal Justice Volume 5 ; 5 ; crja >
-        au < doNotProcess ; 2006 ; Criminology and Criminal Justice Volume 6 ; 6 ; crja >
-        au < doNotProcess ; 2007 ; Criminology and Criminal Justice Volume 7 ; 7 ; crja >
-        au < doNotProcess ; 2008 ; Criminology and Criminal Justice Volume 8 ; 8 ; crja >
-        au < doNotProcess ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; crja >
-        au < doNotProcess ; 2010 ; Criminology and Criminal Justice Volume 10 ; 10 ; crja >
-        au < doNotProcess ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 ; crja >
-        au < doNotProcess ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 ; crja >
-        au < doNotProcess ; 2013 ; Criminology and Criminal Justice Volume 13 ; 13 ; crja >
-        au < doNotProcess ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 ; crja >
-        au < doNotProcess ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 ; crja >
+        au < doNotProcess ; 2006 ; Criminology and Criminal Justice Volume 6 ; 6 ; crjb >
+        au < doNotProcess ; 2007 ; Criminology and Criminal Justice Volume 7 ; 7 ; crjb >
+        au < doNotProcess ; 2008 ; Criminology and Criminal Justice Volume 8 ; 8 ; crjb >
+        au < doNotProcess ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; crjb >
+        au < doNotProcess ; 2010 ; Criminology and Criminal Justice Volume 10 ; 10 ; crjb >
+        au < doNotProcess ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 ; crjb >
+        au < doNotProcess ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 ; crjb >
+        au < doNotProcess ; 2013 ; Criminology and Criminal Justice Volume 13 ; 13 ; crjb >
+        au < doNotProcess ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 ; crjb >
+        au < doNotProcess ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 ; crjb >
         au < manifest ; 2016 ; Criminology and Criminal Justice Volume 16 ; 16 ; crjb >
 
       }
@@ -7692,6 +7694,10 @@
 
       #param[base_url] = http://cst.sagepub.com/
 
+      au < exists ; 2006 ; Critical Studies in Television Volume 1 ; 1 ; csta >
+      au < exists ; 2007 ; Critical Studies in Television Volume 2 ; 2 ; csta >
+      au < exists ; 2008 ; Critical Studies in Television Volume 3 ; 3 ; csta >
+      au < exists ; 2009 ; Critical Studies in Television Volume 4 ; 4 ; csta >
       au < manifest ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; csta >
       au < manifest ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; csta >
       au < manifest ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; csta >
@@ -9282,19 +9288,19 @@
         au < exists ; 2001 ; Educational Management Administration & Leadership Volume 29 ; 29 ; emac >
         au < exists ; 2002 ; Educational Management Administration & Leadership Volume 30 ; 30 ; emac >
         au < exists ; 2003 ; Educational Management Administration & Leadership Volume 31 ; 31 ; emac >
-        au < exists ; 2004 ; Educational Management Administration & Leadership Volume 32 ; 32 ; emac >
-        au < doNotProcess ; 2005 ; Educational Management Administration & Leadership Volume 33 ; 33 ; emaa >
-        au < doNotProcess ; 2006 ; Educational Management Administration & Leadership Volume 34 ; 34 ; emaa >
-        au < doNotProcess ; 2007 ; Educational Management Administration & Leadership Volume 35 ; 35 ; emaa >
-        au < doNotProcess ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; emaa >
-        au < doNotProcess ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ; emaa >
-        au < doNotProcess ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 ; emaa >
-        au < doNotProcess ; 2011 ; Educational Management Administration & Leadership Volume 39 ; 39 ; emaa >
-        au < doNotProcess ; 2012 ; Educational Management Administration & Leadership Volume 40 ; 40 ; emaa >
-        au < doNotProcess ; 2013 ; Educational Management Administration & Leadership Volume 41 ; 41 ; emaa >
-        au < doNotProcess ; 2014 ; Educational Management Administration & Leadership Volume 42 ; 42 ; emaa >
-        au < doNotProcess ; 2015 ; Educational Management Administration & Leadership Volume 43 ; 43 ; emaa >
-        au < exists ; 2016 ; Educational Management Administration & Leadership Volume 44 ; 44 ; emac >
+        au < exists ; 2004 ; Educational Management Administration & Leadership Volume 32 ; 32 ; emad >
+        au < doNotProcess ; 2005 ; Educational Management Administration & Leadership Volume 33 ; 33 ; emad >
+        au < doNotProcess ; 2006 ; Educational Management Administration & Leadership Volume 34 ; 34 ; emad >
+        au < doNotProcess ; 2007 ; Educational Management Administration & Leadership Volume 35 ; 35 ; emad >
+        au < doNotProcess ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; emad >
+        au < doNotProcess ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ; emad >
+        au < doNotProcess ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 ; emad >
+        au < doNotProcess ; 2011 ; Educational Management Administration & Leadership Volume 39 ; 39 ; emad >
+        au < doNotProcess ; 2012 ; Educational Management Administration & Leadership Volume 40 ; 40 ; emad >
+        au < doNotProcess ; 2013 ; Educational Management Administration & Leadership Volume 41 ; 41 ; emad >
+        au < doNotProcess ; 2014 ; Educational Management Administration & Leadership Volume 42 ; 42 ; emad >
+        au < doNotProcess ; 2015 ; Educational Management Administration & Leadership Volume 43 ; 43 ; emad >
+        au < exists ; 2016 ; Educational Management Administration & Leadership Volume 44 ; 44 ; emad >
 
       }
 
@@ -10367,7 +10373,7 @@
       au < manifest ; 2006 ; European Journal of Inflammation Volume 4 ; 4 ; ejia >
       au < manifest ; 2007 ; European Journal of Inflammation Volume 5 ; 5 ; ejia >
       au < manifest ; 2008 ; European Journal of Inflammation Volume 6 ; 6 ; ejia >
-      au < exists ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; ejic >
+      au < exists ; 2009 ; European Journal of Inflammation Volume 7 ; 7 ; ejia >
       au < manifest ; 2010 ; European Journal of Inflammation Volume 8 ; 8 ; ejia >
       au < manifest ; 2011 ; European Journal of Inflammation Volume 9 ; 9 ; ejia >
       au < manifest ; 2012 ; European Journal of Inflammation Volume 10 ; 10 ; ejia >
@@ -10869,23 +10875,23 @@
 
       #param[base_url] = http://ecx.sagepub.com/
 
-      au < exists ; 2000-2001 ; Exceptional Children Volume 67 ; 67 ; ecxb >
-      au < exists ; 2001-2002 ; Exceptional Children Volume 68 ; 68 ; ecxb >
-      au < exists ; 2002-2003 ; Exceptional Children Volume 69 ; 69 ; ecxb >
-      au < exists ; 2003-2004 ; Exceptional Children Volume 70 ; 70 ; ecxb >
-      au < exists ; 2004-2005 ; Exceptional Children Volume 71 ; 71 ; ecxb >
-      au < exists ; 2005-2006 ; Exceptional Children Volume 72 ; 72 ; ecxb >
-      au < exists ; 2006-2007 ; Exceptional Children Volume 73 ; 73 ; ecxb >
-      au < doNotProcess ; 2007-2008 ; Exceptional Children Volume 74 ; 74 ; ecxb >
-      au < doNotProcess ; 2008-2009 ; Exceptional Children Volume 75 ; 75 ; ecxb >
-      au < doNotProcess ; 2009-2010 ; Exceptional Children Volume 76 ; 76 ; ecxb >
-      au < doNotProcess ; 2010-2011 ; Exceptional Children Volume 77 ; 77 ; ecxb >
-      au < doNotProcess ; 2011-2012 ; Exceptional Children Volume 78 ; 78 ; ecxb >
-      au < exists ; 2012-2013 ; Exceptional Children Volume 79 ; 79 ; ecxb >
-      au < doNotProcess ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; ecxb >
-      au < doNotProcess ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; ecxb >
-      au < exists ; 2015-2016 ; Exceptional Children Volume 82 ; 82 ; ecxb >
-      au < exists ; 2016-2017 ; Exceptional Children Volume 83 ; 83 ; ecxb >
+      au < exists ; 2000-2001 ; Exceptional Children Volume 67 ; 67 ; ecxc >
+      au < exists ; 2001-2002 ; Exceptional Children Volume 68 ; 68 ; ecxc >
+      au < exists ; 2002-2003 ; Exceptional Children Volume 69 ; 69 ; ecxc >
+      au < exists ; 2003-2004 ; Exceptional Children Volume 70 ; 70 ; ecxc >
+      au < exists ; 2004-2005 ; Exceptional Children Volume 71 ; 71 ; ecxc >
+      au < exists ; 2005-2006 ; Exceptional Children Volume 72 ; 72 ; ecxc >
+      au < exists ; 2006-2007 ; Exceptional Children Volume 73 ; 73 ; ecxc >
+      au < doNotProcess ; 2007-2008 ; Exceptional Children Volume 74 ; 74 ; ecxc >
+      au < doNotProcess ; 2008-2009 ; Exceptional Children Volume 75 ; 75 ; ecxc >
+      au < doNotProcess ; 2009-2010 ; Exceptional Children Volume 76 ; 76 ; ecxc >
+      au < doNotProcess ; 2010-2011 ; Exceptional Children Volume 77 ; 77 ; ecxc >
+      au < doNotProcess ; 2011-2012 ; Exceptional Children Volume 78 ; 78 ; ecxc >
+      au < exists ; 2012-2013 ; Exceptional Children Volume 79 ; 79 ; ecxc >
+      au < doNotProcess ; 2013-2014 ; Exceptional Children Volume 80 ; 80 ; ecxc >
+      au < doNotProcess ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; ecxc >
+      au < exists ; 2015-2016 ; Exceptional Children Volume 82 ; 82 ; ecxc >
+      au < exists ; 2016-2017 ; Exceptional Children Volume 83 ; 83 ; ecxc >
 
     }
 
@@ -11312,24 +11318,24 @@
         au < exists ; 1996 ; Field Methods Volume 8 ; 8 ; fmxc >
         au < exists ; 1997 ; Field Methods Volume 9 ; 9 ; fmxc >
         au < exists ; 1998 ; Field Methods Volume 10 ; 10 ; fmxc >
-        au < exists ; 1999 ; Field Methods Volume 11 ; 11 ; fmxc >
-        au < exists ; 2000 ; Field Methods Volume 12 ; 12 ; fmxc >
-        au < exists ; 2001 ; Field Methods Volume 13 ; 13 ; fmxc >
-        au < exists ; 2002 ; Field Methods Volume 14 ; 14 ; fmxc >
-        au < exists ; 2003 ; Field Methods Volume 15 ; 15 ; fmxc >
-        au < exists ; 2004 ; Field Methods Volume 16 ; 16 ; fmxc >
-        au < doNotProcess ; 2005 ; Field Methods Volume 17 ; 17 ; fmxa >
-        au < doNotProcess ; 2006 ; Field Methods Volume 18 ; 18 ; fmxa >
-        au < doNotProcess ; 2007 ; Field Methods Volume 19 ; 19 ; fmxa >
-        au < doNotProcess ; 2008 ; Field Methods Volume 20 ; 20 ; fmxa >
-        au < doNotProcess ; 2009 ; Field Methods Volume 21 ; 21 ; fmxa >
-        au < doNotProcess ; 2010 ; Field Methods Volume 22 ; 22 ; fmxa >
-        au < doNotProcess ; 2011 ; Field Methods Volume 23 ; 23 ; fmxa >
-        au < doNotProcess ; 2012 ; Field Methods Volume 24 ; 24 ; fmxa >
-        au < doNotProcess ; 2013 ; Field Methods Volume 25 ; 25 ; fmxa >
-        au < doNotProcess ; 2014 ; Field Methods Volume 26 ; 26 ; fmxa >
-        au < doNotProcess ; 2015 ; Field Methods Volume 27 ; 27 ; fmxa >
-        au < exists ; 2016 ; Field Methods Volume 28 ; 28 ; fmxc >
+        au < exists ; 1999 ; Field Methods Volume 11 ; 11 ; fmxd >
+        au < exists ; 2000 ; Field Methods Volume 12 ; 12 ; fmxd >
+        au < exists ; 2001 ; Field Methods Volume 13 ; 13 ; fmxd >
+        au < exists ; 2002 ; Field Methods Volume 14 ; 14 ; fmxd >
+        au < exists ; 2003 ; Field Methods Volume 15 ; 15 ; fmxd >
+        au < exists ; 2004 ; Field Methods Volume 16 ; 16 ; fmxd >
+        au < doNotProcess ; 2005 ; Field Methods Volume 17 ; 17 ; fmxd >
+        au < doNotProcess ; 2006 ; Field Methods Volume 18 ; 18 ; fmxd >
+        au < doNotProcess ; 2007 ; Field Methods Volume 19 ; 19 ; fmxd >
+        au < doNotProcess ; 2008 ; Field Methods Volume 20 ; 20 ; fmxd >
+        au < doNotProcess ; 2009 ; Field Methods Volume 21 ; 21 ; fmxd >
+        au < doNotProcess ; 2010 ; Field Methods Volume 22 ; 22 ; fmxd >
+        au < doNotProcess ; 2011 ; Field Methods Volume 23 ; 23 ; fmxd >
+        au < doNotProcess ; 2012 ; Field Methods Volume 24 ; 24 ; fmxd >
+        au < doNotProcess ; 2013 ; Field Methods Volume 25 ; 25 ; fmxd >
+        au < doNotProcess ; 2014 ; Field Methods Volume 26 ; 26 ; fmxd >
+        au < doNotProcess ; 2015 ; Field Methods Volume 27 ; 27 ; fmxd >
+        au < exists ; 2016 ; Field Methods Volume 28 ; 28 ; fmxd >
 
       }
 
@@ -11448,6 +11454,23 @@
 
       #param[base_url] = http://fnb.sagepub.com/
 
+      au < exists ; 1998 ; Food and Nutrition Bulletin Volume 19 ; 19 ; fnba >
+      au < exists ; 1999 ; Food and Nutrition Bulletin Volume 20 ; 20 ; fnba >
+      au < exists ; 2000 ; Food and Nutrition Bulletin Volume 21 ; 21 ; fnba >
+      au < exists ; 2001 ; Food and Nutrition Bulletin Volume 22 ; 22 ; fnba >
+      au < exists ; 2002 ; Food and Nutrition Bulletin Volume 23 ; 23 ; fnba >
+      au < exists ; 2003 ; Food and Nutrition Bulletin Volume 24 ; 24 ; fnba >
+      au < exists ; 2004 ; Food and Nutrition Bulletin Volume 25 ; 25 ; fnba >
+      au < exists ; 2005 ; Food and Nutrition Bulletin Volume 26 ; 26 ; fnba >
+      au < exists ; 2006 ; Food and Nutrition Bulletin Volume 27 ; 27 ; fnba >
+      au < exists ; 2007 ; Food and Nutrition Bulletin Volume 28 ; 28 ; fnba >
+      au < exists ; 2008 ; Food and Nutrition Bulletin Volume 29 ; 29 ; fnba >
+      au < exists ; 2009 ; Food and Nutrition Bulletin Volume 30 ; 30 ; fnba >
+      au < exists ; 2010 ; Food and Nutrition Bulletin Volume 31 ; 31 ; fnba >
+      au < exists ; 2011 ; Food and Nutrition Bulletin Volume 32 ; 32 ; fnba >
+      au < exists ; 2012 ; Food and Nutrition Bulletin Volume 33 ; 33 ; fnba >
+      au < exists ; 2013 ; Food and Nutrition Bulletin Volume 34 ; 34 ; fnba >
+      au < exists ; 2014 ; Food and Nutrition Bulletin Volume 35 ; 35 ; fnba >
       au < doNotProcess ; 2015 ; Food and Nutrition Bulletin Volume 36 ; 36 ; fnba >
       au < manifest ; 2016 ; Food and Nutrition Bulletin Volume 37 ; 37 ; fnba >
 
@@ -12565,33 +12588,33 @@
         au < manifest ; 1987-1988 ; Intervention in School and Clinic Volume 23 ; 23 ; isca >
         au < manifest ; 1988-1989 ; Intervention in School and Clinic Volume 24 ; 24 ; isca >
         au < manifest ; 1989-1990 ; Intervention in School and Clinic Volume 25 ; 25 ; isca >
-        au < exists ; 1990-1991 ; Intervention in School and Clinic Volume 26 ; 26 ; iscb >
-        au < exists ; 1991-1992 ; Intervention in School and Clinic Volume 27 ; 27 ; iscb >
-        au < exists ; 1992-1993 ; Intervention in School and Clinic Volume 28 ; 28 ; iscb >
-        au < exists ; 1993-1994 ; Intervention in School and Clinic Volume 29 ; 29 ; iscb >
-        au < exists ; 1994-1995 ; Intervention in School and Clinic Volume 30 ; 30 ; iscb >
-        au < exists ; 1995-1996 ; Intervention in School and Clinic Volume 31 ; 31 ; iscb >
-        au < exists ; 1996-1997 ; Intervention in School and Clinic Volume 32 ; 32 ; iscb >
-        au < exists ; 1997-1998 ; Intervention in School and Clinic Volume 33 ; 33 ; iscb >
-        au < exists ; 1998-1999 ; Intervention in School and Clinic Volume 34 ; 34 ; iscb >
-        au < exists ; 1999-2000 ; Intervention in School and Clinic Volume 35 ; 35 ; iscb >
-        au < exists ; 2000-2001 ; Intervention in School and Clinic Volume 36 ; 36 ; iscb >
-        au < exists ; 2001-2002 ; Intervention in School and Clinic Volume 37 ; 37 ; iscb >
-        au < exists ; 2002-2003 ; Intervention in School and Clinic Volume 38 ; 38 ; iscb >
-        au < exists ; 2003-2004 ; Intervention in School and Clinic Volume 39 ; 39 ; iscb >
-        au < exists ; 2004-2005 ; Intervention in School and Clinic Volume 40 ; 40 ; iscb >
-        au < exists ; 2005-2006 ; Intervention in School and Clinic Volume 41 ; 41 ; iscb >
-        au < exists ; 2006-2007 ; Intervention in School and Clinic Volume 42 ; 42 ; iscb >
-        au < doNotProcess ; 2007-2008 ; Intervention in School and Clinic Volume 43 ; 43 ; iscb >
-        au < exists ; 2008-2009 ; Intervention in School and Clinic Volume 44 ; 44 ; iscb >
-        au < exists ; 2009-2010 ; Intervention in School and Clinic Volume 45 ; 45 ; iscb >
-        au < doNotProcess ; 2010-2011 ; Intervention in School and Clinic Volume 46 ; 46 ; iscb >
-        au < doNotProcess ; 2011-2012 ; Intervention in School and Clinic Volume 47 ; 47 ; iscb >
-        au < doNotProcess ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; iscb >
-        au < doNotProcess ; 2013-2014 ; Intervention in School and Clinic Volume 49 ; 49 ; iscb >
-        au < doNotProcess ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; iscb >
-        au < exists ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; iscb >
-        au < exists ; 2016-2017 ; Intervention in School and Clinic Volume 52 ; 52 ; iscb >
+        au < exists ; 1990-1991 ; Intervention in School and Clinic Volume 26 ; 26 ; iscc >
+        au < exists ; 1991-1992 ; Intervention in School and Clinic Volume 27 ; 27 ; iscc >
+        au < exists ; 1992-1993 ; Intervention in School and Clinic Volume 28 ; 28 ; iscc >
+        au < exists ; 1993-1994 ; Intervention in School and Clinic Volume 29 ; 29 ; iscc >
+        au < exists ; 1994-1995 ; Intervention in School and Clinic Volume 30 ; 30 ; iscc >
+        au < exists ; 1995-1996 ; Intervention in School and Clinic Volume 31 ; 31 ; iscc >
+        au < exists ; 1996-1997 ; Intervention in School and Clinic Volume 32 ; 32 ; iscc >
+        au < exists ; 1997-1998 ; Intervention in School and Clinic Volume 33 ; 33 ; iscc >
+        au < exists ; 1998-1999 ; Intervention in School and Clinic Volume 34 ; 34 ; iscc >
+        au < exists ; 1999-2000 ; Intervention in School and Clinic Volume 35 ; 35 ; iscc >
+        au < exists ; 2000-2001 ; Intervention in School and Clinic Volume 36 ; 36 ; iscc >
+        au < exists ; 2001-2002 ; Intervention in School and Clinic Volume 37 ; 37 ; iscc >
+        au < exists ; 2002-2003 ; Intervention in School and Clinic Volume 38 ; 38 ; iscc >
+        au < exists ; 2003-2004 ; Intervention in School and Clinic Volume 39 ; 39 ; iscc >
+        au < exists ; 2004-2005 ; Intervention in School and Clinic Volume 40 ; 40 ; iscc >
+        au < exists ; 2005-2006 ; Intervention in School and Clinic Volume 41 ; 41 ; iscc >
+        au < exists ; 2006-2007 ; Intervention in School and Clinic Volume 42 ; 42 ; iscc >
+        au < doNotProcess ; 2007-2008 ; Intervention in School and Clinic Volume 43 ; 43 ; iscc >
+        au < exists ; 2008-2009 ; Intervention in School and Clinic Volume 44 ; 44 ; iscc >
+        au < exists ; 2009-2010 ; Intervention in School and Clinic Volume 45 ; 45 ; iscc >
+        au < doNotProcess ; 2010-2011 ; Intervention in School and Clinic Volume 46 ; 46 ; iscc >
+        au < doNotProcess ; 2011-2012 ; Intervention in School and Clinic Volume 47 ; 47 ; iscc >
+        au < doNotProcess ; 2012-2013 ; Intervention in School and Clinic Volume 48 ; 48 ; iscc >
+        au < doNotProcess ; 2013-2014 ; Intervention in School and Clinic Volume 49 ; 49 ; iscc >
+        au < doNotProcess ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; iscc >
+        au < exists ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; iscc >
+        au < exists ; 2016-2017 ; Intervention in School and Clinic Volume 52 ; 52 ; iscc >
 
     }
 
@@ -12736,17 +12759,17 @@
         au < exists ; 2002 ; Health Education & Behavior Volume 29 ; 29 ; hebc >
         au < exists ; 2003 ; Health Education & Behavior Volume 30 ; 30 ; hebc >
         au < exists ; 2004 ; Health Education & Behavior Volume 31 ; 31 ; hebc >
-        au < doNotProcess ; 2005 ; Health Education & Behavior Volume 32 ; 32 ; heba >
-        au < doNotProcess ; 2006 ; Health Education & Behavior Volume 33 ; 33 ; heba >
-        au < doNotProcess ; 2007 ; Health Education & Behavior Volume 34 ; 34 ; heba >
-        au < doNotProcess ; 2008 ; Health Education & Behavior Volume 35 ; 35 ; heba >
-        au < doNotProcess ; 2009 ; Health Education & Behavior Volume 36 ; 36 ; heba >
-        au < doNotProcess ; 2010 ; Health Education & Behavior Volume 37 ; 37 ; heba >
-        au < doNotProcess ; 2011 ; Health Education & Behavior Volume 38 ; 38 ; heba >
-        au < doNotProcess ; 2012 ; Health Education & Behavior Volume 39 ; 39 ; heba >
-        au < doNotProcess ; 2013 ; Health Education & Behavior Volume 40 ; 40 ; heba >
-        au < doNotProcess ; 2014 ; Health Education & Behavior Volume 41 ; 41 ; heba >
-        au < doNotProcess ; 2015 ; Health Education & Behavior Volume 42 ; 42 ; heba >
+        au < doNotProcess ; 2005 ; Health Education & Behavior Volume 32 ; 32 ; hebc >
+        au < doNotProcess ; 2006 ; Health Education & Behavior Volume 33 ; 33 ; hebc >
+        au < doNotProcess ; 2007 ; Health Education & Behavior Volume 34 ; 34 ; hebc >
+        au < doNotProcess ; 2008 ; Health Education & Behavior Volume 35 ; 35 ; hebc >
+        au < doNotProcess ; 2009 ; Health Education & Behavior Volume 36 ; 36 ; hebc >
+        au < doNotProcess ; 2010 ; Health Education & Behavior Volume 37 ; 37 ; hebc >
+        au < doNotProcess ; 2011 ; Health Education & Behavior Volume 38 ; 38 ; hebc >
+        au < doNotProcess ; 2012 ; Health Education & Behavior Volume 39 ; 39 ; hebc >
+        au < doNotProcess ; 2013 ; Health Education & Behavior Volume 40 ; 40 ; hebc >
+        au < doNotProcess ; 2014 ; Health Education & Behavior Volume 41 ; 41 ; hebc >
+        au < doNotProcess ; 2015 ; Health Education & Behavior Volume 42 ; 42 ; hebc >
         au < exists ; 2016 ; Health Education & Behavior Volume 43 ; 43 ; hebc >
 
       }
@@ -12902,17 +12925,17 @@
         au < exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; himc >
         au < exists ; 2004 ; Health Information Management Journal Volume 33 ; 33 ; himc >
         au < exists ; 2005 ; Health Information Management Journal Volume 34 ; 34 ; himc >
-        au < exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; himc >
-        au < exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; himc >
-        au < exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; himc >
-        au < exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; himc >
-        au < exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; himc >
-        au < exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; himc >
-        au < exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; himc >
-        au < exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; himc >
-        au < exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; himc >
-        au < doNotProcess ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; hima >
-        au < exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; himc >
+        au < exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; himd >
+        au < exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; himd >
+        au < exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; himd >
+        au < exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; himd >
+        au < exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; himd >
+        au < exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; himd >
+        au < exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; himd >
+        au < exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; himd >
+        au < exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; himd >
+        au < doNotProcess ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; himd >
+        au < exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; himd >
   
     }
 
@@ -13291,6 +13314,57 @@
 
       #param[base_url] = http://hos.sagepub.com/
 
+      au < exists ; 1962 ; History of Science Volume 1 ; 1 ; hosa >
+      au < exists ; 1963 ; History of Science Volume 2 ; 2 ; hosa >
+      au < exists ; 1964 ; History of Science Volume 3 ; 3 ; hosa >
+      au < exists ; 1965 ; History of Science Volume 4 ; 4 ; hosa >
+      au < exists ; 1966 ; History of Science Volume 5 ; 5 ; hosa >
+      au < exists ; 1967 ; History of Science Volume 6 ; 6 ; hosa >
+      au < exists ; 1968 ; History of Science Volume 7 ; 7 ; hosa >
+      au < exists ; 1969 ; History of Science Volume 8 ; 8 ; hosa >
+      au < exists ; 1970 ; History of Science Volume 9 ; 9 ; hosa >
+      au < exists ; 1971 ; History of Science Volume 10 ; 10 ; hosa >
+      au < exists ; 1973 ; History of Science Volume 11 ; 11 ; hosa >
+      au < exists ; 1974 ; History of Science Volume 12 ; 12 ; hosa >
+      au < exists ; 1975 ; History of Science Volume 13 ; 13 ; hosa >
+      au < exists ; 1976 ; History of Science Volume 14 ; 14 ; hosa >
+      au < exists ; 1977 ; History of Science Volume 15 ; 15 ; hosa >
+      au < exists ; 1978 ; History of Science Volume 16 ; 16 ; hosa >
+      au < exists ; 1979 ; History of Science Volume 17 ; 17 ; hosa >
+      au < exists ; 1980 ; History of Science Volume 18 ; 18 ; hosa >
+      au < exists ; 1981 ; History of Science Volume 19 ; 19 ; hosa >
+      au < exists ; 1982 ; History of Science Volume 20 ; 20 ; hosa >
+      au < exists ; 1983 ; History of Science Volume 21 ; 21 ; hosa >
+      au < exists ; 1984 ; History of Science Volume 22 ; 22 ; hosa >
+      au < exists ; 1985 ; History of Science Volume 23 ; 23 ; hosa >
+      au < exists ; 1986 ; History of Science Volume 24 ; 24 ; hosa >
+      au < exists ; 1987 ; History of Science Volume 25 ; 25 ; hosa >
+      au < exists ; 1988 ; History of Science Volume 26 ; 26 ; hosa >
+      au < exists ; 1989 ; History of Science Volume 27 ; 27 ; hosa >
+      au < exists ; 1990 ; History of Science Volume 28 ; 28 ; hosa >
+      au < exists ; 1991 ; History of Science Volume 29 ; 29 ; hosa >
+      au < exists ; 1992 ; History of Science Volume 30 ; 30 ; hosa >
+      au < exists ; 1993 ; History of Science Volume 31 ; 31 ; hosa >
+      au < exists ; 1994 ; History of Science Volume 32 ; 32 ; hosa >
+      au < exists ; 1995 ; History of Science Volume 33 ; 33 ; hosa >
+      au < exists ; 1996 ; History of Science Volume 34 ; 34 ; hosa >
+      au < exists ; 1997 ; History of Science Volume 35 ; 35 ; hosa >
+      au < exists ; 1998 ; History of Science Volume 36 ; 36 ; hosa >
+      au < exists ; 1999 ; History of Science Volume 37 ; 37 ; hosa >
+      au < exists ; 2000 ; History of Science Volume 38 ; 38 ; hosa >
+      au < exists ; 2001 ; History of Science Volume 39 ; 39 ; hosa >
+      au < exists ; 2002 ; History of Science Volume 40 ; 40 ; hosa >
+      au < exists ; 2003 ; History of Science Volume 41 ; 41 ; hosa >
+      au < exists ; 2004 ; History of Science Volume 42 ; 42 ; hosa >
+      au < exists ; 2005 ; History of Science Volume 43 ; 43 ; hosa >
+      au < exists ; 2006 ; History of Science Volume 44 ; 44 ; hosa >
+      au < exists ; 2007 ; History of Science Volume 45 ; 45 ; hosa >
+      au < exists ; 2008 ; History of Science Volume 46 ; 46 ; hosa >
+      au < exists ; 2009 ; History of Science Volume 47 ; 47 ; hosa >
+      au < exists ; 2010 ; History of Science Volume 48 ; 48 ; hosa >
+      au < exists ; 2011 ; History of Science Volume 49 ; 49 ; hosa >
+      au < exists ; 2012 ; History of Science Volume 50 ; 50 ; hosa >
+      au < exists ; 2013 ; History of Science Volume 51 ; 51 ; hosa >
       au < doNotProcess ; 2014 ; History of Science Volume 52 ; 52 ; hosa >
       au < doNotProcess ; 2015 ; History of Science Volume 53 ; 53 ; hosa >
       au < manifest ; 2016 ; History of Science Volume 54 ; 54 ; hosa >
@@ -14231,7 +14305,7 @@
   
         #param[base_url] = http://jhd.sagepub.com/
   
-        au < exists ; 2016 ; Indian Journal of Human Development Volume 1 ; 1 ; jhdc >
+        au < exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda >
     }
 
     {
@@ -14666,16 +14740,16 @@
         au < manifest ; 2003 ; International Communication Gazette Volume 65 ; 65 ; gaza >
         au < manifest ; 2004 ; International Communication Gazette Volume 66 ; 66 ; gaza >
         au < doNotProcess ; 2005 ; International Communication Gazette Volume 67 ; 67 ; gaza >
-        au < doNotProcess ; 2006 ; International Communication Gazette Volume 68 ; 68 ; gaza >
-        au < doNotProcess ; 2007 ; International Communication Gazette Volume 69 ; 69 ; gaza >
-        au < doNotProcess ; 2008 ; International Communication Gazette Volume 70 ; 70 ; gaza >
-        au < doNotProcess ; 2009 ; International Communication Gazette Volume 71 ; 71 ; gaza >
-        au < doNotProcess ; 2010 ; International Communication Gazette Volume 72 ; 72 ; gaza >
-        au < doNotProcess ; 2011 ; International Communication Gazette Volume 73 ; 73 ; gaza >
-        au < doNotProcess ; 2012 ; International Communication Gazette Volume 74 ; 74 ; gaza >
-        au < doNotProcess ; 2013 ; International Communication Gazette Volume 75 ; 75 ; gaza >
-        au < doNotProcess ; 2014 ; International Communication Gazette Volume 76 ; 76 ; gaza >
-        au < doNotProcess ; 2015 ; International Communication Gazette Volume 77 ; 77 ; gaza >
+        au < doNotProcess ; 2006 ; International Communication Gazette Volume 68 ; 68 ; gazb >
+        au < doNotProcess ; 2007 ; International Communication Gazette Volume 69 ; 69 ; gazb >
+        au < doNotProcess ; 2008 ; International Communication Gazette Volume 70 ; 70 ; gazb >
+        au < doNotProcess ; 2009 ; International Communication Gazette Volume 71 ; 71 ; gazb >
+        au < doNotProcess ; 2010 ; International Communication Gazette Volume 72 ; 72 ; gazb >
+        au < doNotProcess ; 2011 ; International Communication Gazette Volume 73 ; 73 ; gazb >
+        au < doNotProcess ; 2012 ; International Communication Gazette Volume 74 ; 74 ; gazb >
+        au < doNotProcess ; 2013 ; International Communication Gazette Volume 75 ; 75 ; gazb >
+        au < doNotProcess ; 2014 ; International Communication Gazette Volume 76 ; 76 ; gazb >
+        au < doNotProcess ; 2015 ; International Communication Gazette Volume 77 ; 77 ; gazb >
         au < manifest ; 2016 ; International Communication Gazette Volume 78 ; 78 ; gazb >
 
       }
@@ -14707,7 +14781,7 @@
         au < manifest ; 2001 ; International Criminal Justice Review Volume 11 ; 11 ; icja >
         au < manifest ; 2002 ; International Criminal Justice Review Volume 12 ; 12 ; icja >
         au < manifest ; 2003 ; International Criminal Justice Review Volume 13 ; 13 ; icja >
-        au < exists ; 2004 ; International Criminal Justice Review Volume 14 ; 14 ; icjc >
+        au < exists ; 2004 ; International Criminal Justice Review Volume 14 ; 14 ; icja >
         au < doNotProcess ; 2005 ; International Criminal Justice Review Volume 15 ; 15 ; icja >
         au < doNotProcess ; 2006 ; International Criminal Justice Review Volume 16 ; 16 ; icja >
         au < doNotProcess ; 2007 ; International Criminal Justice Review Volume 17 ; 17 ; icja >
@@ -14975,48 +15049,6 @@
 
         #param[base_url] = http://cos.sagepub.com/
 
-        au < exists ; 1960 ; International Journal of Comparative Sociology Volume 1 ; 1 ; cosc >
-        au < exists ; 1961 ; International Journal of Comparative Sociology Volume 2 ; 2 ; cosc >
-        au < exists ; 1962 ; International Journal of Comparative Sociology Volume 3 ; 3 ; cosc >
-        au < exists ; 1963 ; International Journal of Comparative Sociology Volume 4 ; 4 ; cosc >
-        au < exists ; 1964 ; International Journal of Comparative Sociology Volume 5 ; 5 ; cosc >
-        au < exists ; 1965 ; International Journal of Comparative Sociology Volume 6 ; 6 ; cosc >
-        au < exists ; 1966 ; International Journal of Comparative Sociology Volume 7 ; 7 ; cosc >
-        au < exists ; 1967 ; International Journal of Comparative Sociology Volume 8 ; 8 ; cosc >
-        au < exists ; 1968 ; International Journal of Comparative Sociology Volume 9 ; 9 ; cosc >
-        au < exists ; 1969 ; International Journal of Comparative Sociology Volume 10 ; 10 ; cosc >
-        au < exists ; 1970 ; International Journal of Comparative Sociology Volume 11 ; 11 ; cosc >
-        au < exists ; 1971 ; International Journal of Comparative Sociology Volume 12 ; 12 ; cosc >
-        au < exists ; 1972 ; International Journal of Comparative Sociology Volume 13 ; 13 ; cosc >
-        au < exists ; 1973 ; International Journal of Comparative Sociology Volume 14 ; 14 ; cosc >
-        au < exists ; 1974 ; International Journal of Comparative Sociology Volume 15 ; 15 ; cosc >
-        au < exists ; 1975 ; International Journal of Comparative Sociology Volume 16 ; 16 ; cosc >
-        au < exists ; 1976 ; International Journal of Comparative Sociology Volume 17 ; 17 ; cosc >
-        au < exists ; 1977 ; International Journal of Comparative Sociology Volume 18 ; 18 ; cosc >
-        au < exists ; 1978 ; International Journal of Comparative Sociology Volume 19 ; 19 ; cosc >
-        au < exists ; 1979 ; International Journal of Comparative Sociology Volume 20 ; 20 ; cosc >
-        au < exists ; 1980 ; International Journal of Comparative Sociology Volume 21 ; 21 ; cosc >
-        au < exists ; 1981 ; International Journal of Comparative Sociology Volume 22 ; 22 ; cosc >
-        au < exists ; 1982 ; International Journal of Comparative Sociology Volume 23 ; 23 ; cosc >
-        au < exists ; 1983 ; International Journal of Comparative Sociology Volume 24 ; 24 ; cosc >
-        au < exists ; 1984 ; International Journal of Comparative Sociology Volume 25 ; 25 ; cosc >
-        au < exists ; 1985 ; International Journal of Comparative Sociology Volume 26 ; 26 ; cosc >
-        au < exists ; 1986 ; International Journal of Comparative Sociology Volume 27 ; 27 ; cosc >
-        au < exists ; 1987 ; International Journal of Comparative Sociology Volume 28 ; 28 ; cosc >
-        au < exists ; 1988 ; International Journal of Comparative Sociology Volume 29 ; 29 ; cosc >
-        au < exists ; 1989 ; International Journal of Comparative Sociology Volume 30 ; 30 ; cosc >
-        au < exists ; 1990 ; International Journal of Comparative Sociology Volume 31 ; 31 ; cosc >
-        au < exists ; 1991 ; International Journal of Comparative Sociology Volume 32 ; 32 ; cosc >
-        au < exists ; 1992 ; International Journal of Comparative Sociology Volume 33 ; 33 ; cosc >
-        au < exists ; 1993 ; International Journal of Comparative Sociology Volume 34 ; 34 ; cosc >
-        au < exists ; 1994 ; International Journal of Comparative Sociology Volume 35 ; 35 ; cosc >
-        au < exists ; 1995 ; International Journal of Comparative Sociology Volume 36 ; 36 ; cosc >
-        au < exists ; 1996 ; International Journal of Comparative Sociology Volume 37 ; 37 ; cosc >
-        au < exists ; 1997 ; International Journal of Comparative Sociology Volume 38 ; 38 ; cosc >
-        au < exists ; 1998 ; International Journal of Comparative Sociology Volume 39 ; 39 ; cosc >
-        au < exists ; 1999 ; International Journal of Comparative Sociology Volume 40 ; 40 ; cosc >
-        au < exists ; 2000 ; International Journal of Comparative Sociology Volume 41 ; 41 ; cosc >
-        au < exists ; 2001 ; International Journal of Comparative Sociology Volume 42 ; 42 ; cosc >
         au < manifest ; 2002 ; International Journal of Comparative Sociology Volume 43 ; 43 ; cosa >
         au < manifest ; 2003 ; International Journal of Comparative Sociology Volume 44 ; 44 ; cosa >
         au < manifest ; 2004 ; International Journal of Comparative Sociology Volume 45 ; 45 ; cosa >
@@ -15419,17 +15451,17 @@
         au < exists ; 2002 ; International Journal of High Performance Computing Applications Volume 16 ; 16 ; hpcc >
         au < exists ; 2003 ; International Journal of High Performance Computing Applications Volume 17 ; 17 ; hpcc >
         au < exists ; 2004 ; International Journal of High Performance Computing Applications Volume 18 ; 18 ; hpcc >
-        au < doNotProcess ; 2005 ; International Journal of High Performance Computing Applications Volume 19 ; 19 ; hpca >
-        au < doNotProcess ; 2006 ; International Journal of High Performance Computing Applications Volume 20 ; 20 ; hpca >
-        au < doNotProcess ; 2007 ; International Journal of High Performance Computing Applications Volume 21 ; 21 ; hpca >
-        au < doNotProcess ; 2008 ; International Journal of High Performance Computing Applications Volume 22 ; 22 ; hpca >
-        au < doNotProcess ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ; hpca >
-        au < doNotProcess ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 ; hpca >
-        au < doNotProcess ; 2011 ; International Journal of High Performance Computing Applications Volume 25 ; 25 ; hpca >
-        au < doNotProcess ; 2012 ; International Journal of High Performance Computing Applications Volume 26 ; 26 ; hpca >
-        au < doNotProcess ; 2013 ; International Journal of High Performance Computing Applications Volume 27 ; 27 ; hpca >
-        au < doNotProcess ; 2014 ; International Journal of High Performance Computing Applications Volume 28 ; 28 ; hpca >
-        au < doNotProcess ; 2015 ; International Journal of High Performance Computing Applications Volume 29 ; 29 ; hpca >
+        au < doNotProcess ; 2005 ; International Journal of High Performance Computing Applications Volume 19 ; 19 ; hpcc >
+        au < doNotProcess ; 2006 ; International Journal of High Performance Computing Applications Volume 20 ; 20 ; hpcc >
+        au < doNotProcess ; 2007 ; International Journal of High Performance Computing Applications Volume 21 ; 21 ; hpcc >
+        au < doNotProcess ; 2008 ; International Journal of High Performance Computing Applications Volume 22 ; 22 ; hpcc >
+        au < doNotProcess ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ; hpcc >
+        au < doNotProcess ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 ; hpcc >
+        au < doNotProcess ; 2011 ; International Journal of High Performance Computing Applications Volume 25 ; 25 ; hpcc >
+        au < doNotProcess ; 2012 ; International Journal of High Performance Computing Applications Volume 26 ; 26 ; hpcc >
+        au < doNotProcess ; 2013 ; International Journal of High Performance Computing Applications Volume 27 ; 27 ; hpcc >
+        au < doNotProcess ; 2014 ; International Journal of High Performance Computing Applications Volume 28 ; 28 ; hpcc >
+        au < doNotProcess ; 2015 ; International Journal of High Performance Computing Applications Volume 29 ; 29 ; hpcc >
         au < exists ; 2016 ; International Journal of High Performance Computing Applications Volume 30 ; 30 ; hpcc >
 
       }
@@ -15588,19 +15620,19 @@
       au < manifest ; 2001 ; International Journal of Music Education: Original Series Volume os-38 ; os-38 ; ijma >
       au < manifest ; 2002 ; International Journal of Music Education: Original Series Volume os-39 ; os-39 ; ijma >
       au < manifest ; 2003 ; International Journal of Music Education: Original Series Volume os-40 ; os-40 ; ijma >
-      au < exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 ; ijmc >
-      au < exists ; 2005 ; International Journal of Music Education Volume 23 ; 23 ; ijmc >
-      au < exists ; 2006 ; International Journal of Music Education Volume 24 ; 24 ; ijmc >
-      au < exists ; 2007 ; International Journal of Music Education Volume 25 ; 25 ; ijmc >
-      au < exists ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; ijmc >
-      au < exists ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; ijmc >
-      au < exists ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; ijmc >
-      au < exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; ijmc >
-      au < exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; ijmc >
-      au < exists ; 2013 ; International Journal of Music Education Volume 31 ; 31 ; ijmc >
-      au < exists ; 2014 ; International Journal of Music Education Volume 32 ; 32 ; ijmc >
-      au < exists ; 2015 ; International Journal of Music Education Volume 33 ; 33 ; ijmc >
-      au < exists ; 2016 ; International Journal of Music Education Volume 34 ; 34 ; ijmc >
+      au < exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 ; ijma >
+      au < exists ; 2005 ; International Journal of Music Education Volume 23 ; 23 ; ijma >
+      au < exists ; 2006 ; International Journal of Music Education Volume 24 ; 24 ; ijma >
+      au < exists ; 2007 ; International Journal of Music Education Volume 25 ; 25 ; ijma >
+      au < exists ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; ijma >
+      au < exists ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; ijma >
+      au < exists ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; ijma >
+      au < exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; ijma >
+      au < exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; ijma >
+      au < exists ; 2013 ; International Journal of Music Education Volume 31 ; 31 ; ijma >
+      au < exists ; 2014 ; International Journal of Music Education Volume 32 ; 32 ; ijma >
+      au < exists ; 2015 ; International Journal of Music Education Volume 33 ; 33 ; ijma >
+      au < exists ; 2016 ; International Journal of Music Education Volume 34 ; 34 ; ijma >
 
     }
 
@@ -15638,57 +15670,57 @@
 
         au < doesNotExist ; 0 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 ; ijoa >
         au < exists ; 1966 ; International Journal of Offender Therapy and Comparative Criminology Volume 10 ; 10 ; ijoc >
-        au < exists ; 1967 ; International Journal of Offender Therapy and Comparative Criminology Volume 11 ; 11 ; ijoc >
-        au < exists ; 1968 ; International Journal of Offender Therapy and Comparative Criminology Volume 12 ; 12 ; ijoc >
-        au < exists ; 1969 ; International Journal of Offender Therapy and Comparative Criminology Volume 13 ; 13 ; ijoc >
-        au < exists ; 1970 ; International Journal of Offender Therapy and Comparative Criminology Volume 14 ; 14 ; ijoc >
-        au < exists ; 1971 ; International Journal of Offender Therapy and Comparative Criminology Volume 15 ; 15 ; ijoc >
-        au < exists ; 1972 ; International Journal of Offender Therapy and Comparative Criminology Volume 16 ; 16 ; ijoc >
-        au < exists ; 1973 ; International Journal of Offender Therapy and Comparative Criminology Volume 17 ; 17 ; ijoc >
-        au < exists ; 1974 ; International Journal of Offender Therapy and Comparative Criminology Volume 18 ; 18 ; ijoc >
-        au < exists ; 1975 ; International Journal of Offender Therapy and Comparative Criminology Volume 19 ; 19 ; ijoc >
-        au < exists ; 1976 ; International Journal of Offender Therapy and Comparative Criminology Volume 20 ; 20 ; ijoc >
-        au < exists ; 1977 ; International Journal of Offender Therapy and Comparative Criminology Volume 21 ; 21 ; ijoc >
-        au < exists ; 1978 ; International Journal of Offender Therapy and Comparative Criminology Volume 22 ; 22 ; ijoc >
-        au < exists ; 1979 ; International Journal of Offender Therapy and Comparative Criminology Volume 23 ; 23 ; ijoc >
-        au < exists ; 1980 ; International Journal of Offender Therapy and Comparative Criminology Volume 24 ; 24 ; ijoc >
-        au < exists ; 1981 ; International Journal of Offender Therapy and Comparative Criminology Volume 25 ; 25 ; ijoc >
-        au < exists ; 1982 ; International Journal of Offender Therapy and Comparative Criminology Volume 26 ; 26 ; ijoc >
-        au < exists ; 1983 ; International Journal of Offender Therapy and Comparative Criminology Volume 27 ; 27 ; ijoc >
-        au < exists ; 1984 ; International Journal of Offender Therapy and Comparative Criminology Volume 28 ; 28 ; ijoc >
-        au < exists ; 1985 ; International Journal of Offender Therapy and Comparative Criminology Volume 29 ; 29 ; ijoc >
-        au < exists ; 1986 ; International Journal of Offender Therapy and Comparative Criminology Volume 30 ; 30 ; ijoc >
-        au < exists ; 1987 ; International Journal of Offender Therapy and Comparative Criminology Volume 31 ; 31 ; ijoc >
-        au < exists ; 1988 ; International Journal of Offender Therapy and Comparative Criminology Volume 32 ; 32 ; ijoc >
-        au < exists ; 1989 ; International Journal of Offender Therapy and Comparative Criminology Volume 33 ; 33 ; ijoc >
-        au < exists ; 1990 ; International Journal of Offender Therapy and Comparative Criminology Volume 34 ; 34 ; ijoc >
-        au < exists ; 1991 ; International Journal of Offender Therapy and Comparative Criminology Volume 35 ; 35 ; ijoc >
-        au < exists ; 1992 ; International Journal of Offender Therapy and Comparative Criminology Volume 36 ; 36 ; ijoc >
-        au < exists ; 1993 ; International Journal of Offender Therapy and Comparative Criminology Volume 37 ; 37 ; ijoc >
-        au < exists ; 1994 ; International Journal of Offender Therapy and Comparative Criminology Volume 38 ; 38 ; ijoc >
-        au < exists ; 1995 ; International Journal of Offender Therapy and Comparative Criminology Volume 39 ; 39 ; ijoc >
-        au < exists ; 1996 ; International Journal of Offender Therapy and Comparative Criminology Volume 40 ; 40 ; ijoc >
-        au < exists ; 1997 ; International Journal of Offender Therapy and Comparative Criminology Volume 41 ; 41 ; ijoc >
-        au < exists ; 1998 ; International Journal of Offender Therapy and Comparative Criminology Volume 42 ; 42 ; ijoc >
-        au < exists ; 1999 ; International Journal of Offender Therapy and Comparative Criminology Volume 43 ; 43 ; ijoc >
-        au < exists ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 44 ; 44 ; ijoc >
-        au < exists ; 2001 ; International Journal of Offender Therapy and Comparative Criminology Volume 45 ; 45 ; ijoc >
-        au < exists ; 2002 ; International Journal of Offender Therapy and Comparative Criminology Volume 46 ; 46 ; ijoc >
-        au < exists ; 2003 ; International Journal of Offender Therapy and Comparative Criminology Volume 47 ; 47 ; ijoc >
-        au < exists ; 2004 ; International Journal of Offender Therapy and Comparative Criminology Volume 48 ; 48 ; ijoc >
-        au < doNotProcess ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 ; ijoa >
-        au < doNotProcess ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 ; ijoa >
-        au < doNotProcess ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 ; ijoa >
-        au < doNotProcess ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 ; ijoa >
-        au < doNotProcess ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; ijoa >
-        au < doNotProcess ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; ijoa >
-        au < doNotProcess ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 ; ijoa >
-        au < doNotProcess ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 ; ijoa >
-        au < doNotProcess ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 ; ijoa >
-        au < doNotProcess ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; ijoa >
-        au < doNotProcess ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 ; ijoa >
-        au < exists ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoc >
-        au < exists ; 2017 ; International Journal of Offender Therapy and Comparative Criminology Volume 61 ; 61 ; ijoc >
+        au < exists ; 1967 ; International Journal of Offender Therapy and Comparative Criminology Volume 11 ; 11 ; ijod >
+        au < exists ; 1968 ; International Journal of Offender Therapy and Comparative Criminology Volume 12 ; 12 ; ijod >
+        au < exists ; 1969 ; International Journal of Offender Therapy and Comparative Criminology Volume 13 ; 13 ; ijod >
+        au < exists ; 1970 ; International Journal of Offender Therapy and Comparative Criminology Volume 14 ; 14 ; ijod >
+        au < exists ; 1971 ; International Journal of Offender Therapy and Comparative Criminology Volume 15 ; 15 ; ijod >
+        au < exists ; 1972 ; International Journal of Offender Therapy and Comparative Criminology Volume 16 ; 16 ; ijoe >
+        au < exists ; 1973 ; International Journal of Offender Therapy and Comparative Criminology Volume 17 ; 17 ; ijoe >
+        au < exists ; 1974 ; International Journal of Offender Therapy and Comparative Criminology Volume 18 ; 18 ; ijoe >
+        au < exists ; 1975 ; International Journal of Offender Therapy and Comparative Criminology Volume 19 ; 19 ; ijoe >
+        au < exists ; 1976 ; International Journal of Offender Therapy and Comparative Criminology Volume 20 ; 20 ; ijoe >
+        au < exists ; 1977 ; International Journal of Offender Therapy and Comparative Criminology Volume 21 ; 21 ; ijoe >
+        au < exists ; 1978 ; International Journal of Offender Therapy and Comparative Criminology Volume 22 ; 22 ; ijoe >
+        au < exists ; 1979 ; International Journal of Offender Therapy and Comparative Criminology Volume 23 ; 23 ; ijoe >
+        au < exists ; 1980 ; International Journal of Offender Therapy and Comparative Criminology Volume 24 ; 24 ; ijoe >
+        au < exists ; 1981 ; International Journal of Offender Therapy and Comparative Criminology Volume 25 ; 25 ; ijoe >
+        au < exists ; 1982 ; International Journal of Offender Therapy and Comparative Criminology Volume 26 ; 26 ; ijoe >
+        au < exists ; 1983 ; International Journal of Offender Therapy and Comparative Criminology Volume 27 ; 27 ; ijoe >
+        au < exists ; 1984 ; International Journal of Offender Therapy and Comparative Criminology Volume 28 ; 28 ; ijoe >
+        au < exists ; 1985 ; International Journal of Offender Therapy and Comparative Criminology Volume 29 ; 29 ; ijoe >
+        au < exists ; 1986 ; International Journal of Offender Therapy and Comparative Criminology Volume 30 ; 30 ; ijoe >
+        au < exists ; 1987 ; International Journal of Offender Therapy and Comparative Criminology Volume 31 ; 31 ; ijoe >
+        au < exists ; 1988 ; International Journal of Offender Therapy and Comparative Criminology Volume 32 ; 32 ; ijoe >
+        au < exists ; 1989 ; International Journal of Offender Therapy and Comparative Criminology Volume 33 ; 33 ; ijoe >
+        au < exists ; 1990 ; International Journal of Offender Therapy and Comparative Criminology Volume 34 ; 34 ; ijoe >
+        au < exists ; 1991 ; International Journal of Offender Therapy and Comparative Criminology Volume 35 ; 35 ; ijoe >
+        au < exists ; 1992 ; International Journal of Offender Therapy and Comparative Criminology Volume 36 ; 36 ; ijoe >
+        au < exists ; 1993 ; International Journal of Offender Therapy and Comparative Criminology Volume 37 ; 37 ; ijoe >
+        au < exists ; 1994 ; International Journal of Offender Therapy and Comparative Criminology Volume 38 ; 38 ; ijoe >
+        au < exists ; 1995 ; International Journal of Offender Therapy and Comparative Criminology Volume 39 ; 39 ; ijoe >
+        au < exists ; 1996 ; International Journal of Offender Therapy and Comparative Criminology Volume 40 ; 40 ; ijoe >
+        au < exists ; 1997 ; International Journal of Offender Therapy and Comparative Criminology Volume 41 ; 41 ; ijoe >
+        au < exists ; 1998 ; International Journal of Offender Therapy and Comparative Criminology Volume 42 ; 42 ; ijoe >
+        au < exists ; 1999 ; International Journal of Offender Therapy and Comparative Criminology Volume 43 ; 43 ; ijoe >
+        au < exists ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 44 ; 44 ; ijoe >
+        au < exists ; 2001 ; International Journal of Offender Therapy and Comparative Criminology Volume 45 ; 45 ; ijoe >
+        au < exists ; 2002 ; International Journal of Offender Therapy and Comparative Criminology Volume 46 ; 46 ; ijoe >
+        au < exists ; 2003 ; International Journal of Offender Therapy and Comparative Criminology Volume 47 ; 47 ; ijoe >
+        au < exists ; 2004 ; International Journal of Offender Therapy and Comparative Criminology Volume 48 ; 48 ; ijoe >
+        au < doNotProcess ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 ; ijoe >
+        au < doNotProcess ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 ; ijoe >
+        au < doNotProcess ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 ; ijoe >
+        au < doNotProcess ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 ; ijoe >
+        au < doNotProcess ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; ijoe >
+        au < doNotProcess ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; ijoe >
+        au < doNotProcess ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 ; ijoe >
+        au < doNotProcess ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 ; ijoe >
+        au < doNotProcess ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 ; ijoe >
+        au < doNotProcess ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; ijoe >
+        au < doNotProcess ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 ; ijoe >
+        au < exists ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoe >
+        au < exists ; 2017 ; International Journal of Offender Therapy and Comparative Criminology Volume 61 ; 61 ; ijoe >
 
       }
 
@@ -16734,7 +16766,7 @@
         au < manifest ; 1980 ; Irish Theological Quarterly Volume 47 ; 47 ; itqa >
         au < manifest ; 1981 ; Irish Theological Quarterly Volume 48 ; 48 ; itqa >
         au < manifest ; 1982 ; Irish Theological Quarterly Volume 49 ; 49 ; itqa >
-        au < exists ; 1983 ; Irish Theological Quarterly Volume 50 ; 50 ; itqc >
+        au < exists ; 1983 ; Irish Theological Quarterly Volume 50 ; 50 ; itqa >
         au < manifest ; 1985 ; Irish Theological Quarterly Volume 51 ; 51 ; itqa >
         au < manifest ; 1986 ; Irish Theological Quarterly Volume 52 ; 52 ; itqa >
         au < manifest ; 1987 ; Irish Theological Quarterly Volume 53 ; 53 ; itqa >
@@ -17354,14 +17386,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
 
         au < exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; jaxc >
-        au < doNotProcess ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; jaxa >
-        au < doNotProcess ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; jaxa >
-        au < doNotProcess ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; jaxa >
-        au < doNotProcess ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; jaxa >
-        au < doNotProcess ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; jaxa >
-        au < doNotProcess ; 2013 ; Journal of Applied Social Science Volume 7 ; 7 ; jaxa >
-        au < doNotProcess ; 2014 ; Journal of Applied Social Science Volume 8 ; 8 ; jaxa >
-        au < doNotProcess ; 2015 ; Journal of Applied Social Science Volume 9 ; 9 ; jaxa >
+        au < doNotProcess ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; jaxc >
+        au < doNotProcess ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; jaxc >
+        au < doNotProcess ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; jaxc >
+        au < doNotProcess ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; jaxc >
+        au < doNotProcess ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; jaxc >
+        au < doNotProcess ; 2013 ; Journal of Applied Social Science Volume 7 ; 7 ; jaxc >
+        au < doNotProcess ; 2014 ; Journal of Applied Social Science Volume 8 ; 8 ; jaxc >
+        au < doNotProcess ; 2015 ; Journal of Applied Social Science Volume 9 ; 9 ; jaxc >
         au < exists ; 2016 ; Journal of Applied Social Science Volume 10 ; 10 ; jaxc >
 
     }
@@ -17670,10 +17702,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://jbp.sagepub.com/
 
-        au < exists ; 1974-1975 ; Journal of Black Psychology Volume 1 ; 1 ; jbpb >
-        au < exists ; 1975-1976 ; Journal of Black Psychology Volume 2 ; 2 ; jbpb >
-        au < exists ; 1976-1977 ; Journal of Black Psychology Volume 3 ; 3 ; jbpb >
-        au < exists ; 1977-1978 ; Journal of Black Psychology Volume 4 ; 4 ; jbpb >
+        au < exists ; 1974-1975 ; Journal of Black Psychology Volume 1 ; 1 ; jbpa >
+        au < exists ; 1975-1976 ; Journal of Black Psychology Volume 2 ; 2 ; jbpa >
+        au < exists ; 1976-1977 ; Journal of Black Psychology Volume 3 ; 3 ; jbpa >
+        au < exists ; 1977-1978 ; Journal of Black Psychology Volume 4 ; 4 ; jbpa >
         au < manifest ; 1978 ; Journal of Black Psychology Volume 5 ; 5 ; jbpa >
         au < manifest ; 1979 ; Journal of Black Psychology Volume 6 ; 6 ; jbpa >
         au < manifest ; 1980 ; Journal of Black Psychology Volume 7 ; 7 ; jbpa >
@@ -17816,25 +17848,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1995-1996 ; Journal of Building Physics Volume 19 ; 19 ; jenb >
         au < manifest ; 1996-1997 ; Journal of Building Physics Volume 20 ; 20 ; jenb >
         au < manifest ; 1997-1998 ; Journal of Building Physics Volume 21 ; 21 ; jenb >
-        au < exists ; 1998-1999 ; Journal of Building Physics Volume 22 ; 22 ; jenb >
-        au < exists ; 1999-2000 ; Journal of Building Physics Volume 23 ; 23 ; jenb >
-        au < exists ; 2000-2001 ; Journal of Building Physics Volume 24 ; 24 ; jenb >
-        au < exists ; 2001-2002 ; Journal of Building Physics Volume 25 ; 25 ; jenb >
-        au < exists ; 2002-2003 ; Journal of Building Physics Volume 26 ; 26 ; jenb >
-        au < exists ; 2003-2004 ; Journal of Building Physics Volume 27 ; 27 ; jenb >
-        au < doNotProcess ; 2004-2005 ; Journal of Building Physics Volume 28 ; 28 ; jenb >
-        au < doNotProcess ; 2005-2006 ; Journal of Building Physics Volume 29 ; 29 ; jenb >
-        au < doNotProcess ; 2006-2007 ; Journal of Building Physics Volume 30 ; 30 ; jenb >
-        au < doNotProcess ; 2007-2008 ; Journal of Building Physics Volume 31 ; 31 ; jenb >
-        au < doNotProcess ; 2008-2009 ; Journal of Building Physics Volume 32 ; 32 ; jenb >
-        au < doNotProcess ; 2009-2010 ; Journal of Building Physics Volume 33 ; 33 ; jenb >
-        au < doNotProcess ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 ; jenb >
-        au < doNotProcess ; 2011-2012 ; Journal of Building Physics Volume 35 ; 35 ; jenb >
-        au < doNotProcess ; 2012-2013 ; Journal of Building Physics Volume 36 ; 36 ; jenb >
-        au < doNotProcess ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 ; jenb >
-        au < doNotProcess ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; jenb >
-        au < exists ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; jenb >
-        au < exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; jenb >
+        au < exists ; 1998-1999 ; Journal of Building Physics Volume 22 ; 22 ; jenc >
+        au < exists ; 1999-2000 ; Journal of Building Physics Volume 23 ; 23 ; jenc >
+        au < exists ; 2000-2001 ; Journal of Building Physics Volume 24 ; 24 ; jenc >
+        au < exists ; 2001-2002 ; Journal of Building Physics Volume 25 ; 25 ; jenc >
+        au < exists ; 2002-2003 ; Journal of Building Physics Volume 26 ; 26 ; jenc >
+        au < exists ; 2003-2004 ; Journal of Building Physics Volume 27 ; 27 ; jenc >
+        au < doNotProcess ; 2004-2005 ; Journal of Building Physics Volume 28 ; 28 ; jenc >
+        au < doNotProcess ; 2005-2006 ; Journal of Building Physics Volume 29 ; 29 ; jend >
+        au < doNotProcess ; 2006-2007 ; Journal of Building Physics Volume 30 ; 30 ; jend >
+        au < doNotProcess ; 2007-2008 ; Journal of Building Physics Volume 31 ; 31 ; jend >
+        au < doNotProcess ; 2008-2009 ; Journal of Building Physics Volume 32 ; 32 ; jend >
+        au < doNotProcess ; 2009-2010 ; Journal of Building Physics Volume 33 ; 33 ; jend >
+        au < doNotProcess ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 ; jend >
+        au < doNotProcess ; 2011-2012 ; Journal of Building Physics Volume 35 ; 35 ; jend >
+        au < doNotProcess ; 2012-2013 ; Journal of Building Physics Volume 36 ; 36 ; jend >
+        au < doNotProcess ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 ; jend >
+        au < doNotProcess ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; jend >
+        au < exists ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; jend >
+        au < exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; jend >
 
       }
 
@@ -18070,15 +18102,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Journal of Business Communication Volume 39 ; 39 ; jobc >
         au < exists ; 2003 ; Journal of Business Communication Volume 40 ; 40 ; jobc >
         au < exists ; 2004 ; Journal of Business Communication Volume 41 ; 41 ; jobc >
-        au < doNotProcess ; 2005 ; Journal of Business Communication Volume 42 ; 42 ; joba >
-        au < doNotProcess ; 2006 ; Journal of Business Communication Volume 43 ; 43 ; joba >
-        au < doNotProcess ; 2007 ; Journal of Business Communication Volume 44 ; 44 ; joba >
-        au < doNotProcess ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; joba >
-        au < doNotProcess ; 2009 ; Journal of Business Communication Volume 46 ; 46 ; joba >
-        au < doNotProcess ; 2010 ; Journal of Business Communication Volume 47 ; 47 ; joba >
-        au < doNotProcess ; 2011 ; Journal of Business Communication Volume 48 ; 48 ; joba >
-        au < doNotProcess ; 2012 ; Journal of Business Communication Volume 49 ; 49 ; joba >
-        au < doNotProcess ; 2013 ; Journal of Business Communication Volume 50 ; 50 ; joba >
+        au < doNotProcess ; 2005 ; Journal of Business Communication Volume 42 ; 42 ; jobc >
+        au < doNotProcess ; 2006 ; Journal of Business Communication Volume 43 ; 43 ; jobc >
+        au < doNotProcess ; 2007 ; Journal of Business Communication Volume 44 ; 44 ; jobc >
+        au < doNotProcess ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; jobc >
+        au < doNotProcess ; 2009 ; Journal of Business Communication Volume 46 ; 46 ; jobc >
+        au < doNotProcess ; 2010 ; Journal of Business Communication Volume 47 ; 47 ; jobc >
+        au < doNotProcess ; 2011 ; Journal of Business Communication Volume 48 ; 48 ; jobc >
+        au < doNotProcess ; 2012 ; Journal of Business Communication Volume 49 ; 49 ; jobc >
+        au < doNotProcess ; 2013 ; Journal of Business Communication Volume 50 ; 50 ; jobc >
 
       }
 
@@ -18699,7 +18731,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1984 ; Journal of Communication Inquiry Volume 8 ; 8 ; jcia >
         au < manifest ; 1985 ; Journal of Communication Inquiry Volume 9 ; 9 ; jcia >
         au < manifest ; 1986 ; Journal of Communication Inquiry Volume 10 ; 10 ; jcia >
-        au < exists ; 1987 ; Journal of Communication Inquiry Volume 11 ; 11 ; jcic >
+        au < exists ; 1987 ; Journal of Communication Inquiry Volume 11 ; 11 ; jcia >
         au < manifest ; 1988 ; Journal of Communication Inquiry Volume 12 ; 12 ; jcia >
         au < manifest ; 1989 ; Journal of Communication Inquiry Volume 13 ; 13 ; jcia >
         au < manifest ; 1990 ; Journal of Communication Inquiry Volume 14 ; 14 ; jcia >
@@ -19031,17 +19063,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Journal of Contemporary Ethnography Volume 31 ; 31 ; jcec >
         au < exists ; 2003 ; Journal of Contemporary Ethnography Volume 32 ; 32 ; jcec >
         au < exists ; 2004 ; Journal of Contemporary Ethnography Volume 33 ; 33 ; jcec >
-        au < doNotProcess ; 2005 ; Journal of Contemporary Ethnography Volume 34 ; 34 ; jcea >
-        au < doNotProcess ; 2006 ; Journal of Contemporary Ethnography Volume 35 ; 35 ; jcea >
-        au < doNotProcess ; 2007 ; Journal of Contemporary Ethnography Volume 36 ; 36 ; jcea >
-        au < doNotProcess ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 ; jcea >
-        au < doNotProcess ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 ; jcea >
-        au < doNotProcess ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ; jcea >
-        au < doNotProcess ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 ; jcea >
-        au < doNotProcess ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 ; jcea >
-        au < doNotProcess ; 2013 ; Journal of Contemporary Ethnography Volume 42 ; 42 ; jcea >
-        au < doNotProcess ; 2014 ; Journal of Contemporary Ethnography Volume 43 ; 43 ; jcea >
-        au < doNotProcess ; 2015 ; Journal of Contemporary Ethnography Volume 44 ; 44 ; jcea >
+        au < doNotProcess ; 2005 ; Journal of Contemporary Ethnography Volume 34 ; 34 ; jcec >
+        au < doNotProcess ; 2006 ; Journal of Contemporary Ethnography Volume 35 ; 35 ; jcec >
+        au < doNotProcess ; 2007 ; Journal of Contemporary Ethnography Volume 36 ; 36 ; jcec >
+        au < doNotProcess ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 ; jcec >
+        au < doNotProcess ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 ; jcec >
+        au < doNotProcess ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ; jcec >
+        au < doNotProcess ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 ; jcec >
+        au < doNotProcess ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 ; jcec >
+        au < doNotProcess ; 2013 ; Journal of Contemporary Ethnography Volume 42 ; 42 ; jcec >
+        au < doNotProcess ; 2014 ; Journal of Contemporary Ethnography Volume 43 ; 43 ; jcec >
+        au < doNotProcess ; 2015 ; Journal of Contemporary Ethnography Volume 44 ; 44 ; jcec >
         au < exists ; 2016 ; Journal of Contemporary Ethnography Volume 45 ; 45 ; jcec >
 
       }
@@ -19340,7 +19372,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2009 ; Journal of Cutaneous Medicine and Surgery Volume 13 ; 13 ; cmsa >
       au < manifest ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 ; cmsa >
       au < manifest ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 ; cmsa >
-      au < exists ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; cmsc >
+      au < exists ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; cmsa >
       au < manifest ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; cmsa >
       au < doNotProcess ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; cmsa >
       au < doNotProcess ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; cmsa >
@@ -20198,7 +20230,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1987 ; Journal of English Linguistics Volume 20 ; 20 ; enga >
         au < manifest ; 1988 ; Journal of English Linguistics Volume 21 ; 21 ; enga >
         au < manifest ; 1989 ; Journal of English Linguistics Volume 22 ; 22 ; enga >
-        au < exists ; 1990 ; Journal of English Linguistics Volume 23 ; 23 ; engc >
+        au < exists ; 1990 ; Journal of English Linguistics Volume 23 ; 23 ; enga >
         au < manifest ; 1996 ; Journal of English Linguistics Volume 24 ; 24 ; enga >
         au < manifest ; 1997 ; Journal of English Linguistics Volume 25 ; 25 ; enga >
         au < manifest ; 1998 ; Journal of English Linguistics Volume 26 ; 26 ; enga >
@@ -20725,40 +20757,40 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://jfs.sagepub.com/
 
-        au < exists ; 1983 ; Journal of Fire Sciences Volume 1 ; 1 ; jfsc >
-        au < exists ; 1984 ; Journal of Fire Sciences Volume 2 ; 2 ; jfsc >
-        au < exists ; 1985 ; Journal of Fire Sciences Volume 3 ; 3 ; jfsc >
-        au < exists ; 1986 ; Journal of Fire Sciences Volume 4 ; 4 ; jfsc >
-        au < exists ; 1987 ; Journal of Fire Sciences Volume 5 ; 5 ; jfsc >
-        au < exists ; 1988 ; Journal of Fire Sciences Volume 6 ; 6 ; jfsc >
-        au < exists ; 1989 ; Journal of Fire Sciences Volume 7 ; 7 ; jfsc >
-        au < exists ; 1990 ; Journal of Fire Sciences Volume 8 ; 8 ; jfsc >
-        au < exists ; 1991 ; Journal of Fire Sciences Volume 9 ; 9 ; jfsc >
-        au < manifest ; 1992 ; Journal of Fire Sciences Volume 10 ; 10 ; jfsa >
-        au < manifest ; 1993 ; Journal of Fire Sciences Volume 11 ; 11 ; jfsa >
-        au < manifest ; 1994 ; Journal of Fire Sciences Volume 12 ; 12 ; jfsa >
-        au < manifest ; 1995 ; Journal of Fire Sciences Volume 13 ; 13 ; jfsa >
-        au < manifest ; 1996 ; Journal of Fire Sciences Volume 14 ; 14 ; jfsa >
-        au < manifest ; 1997 ; Journal of Fire Sciences Volume 15 ; 15 ; jfsa >
-        au < exists ; 1998 ; Journal of Fire Sciences Volume 16 ; 16 ; jfsc >
-        au < exists ; 1999 ; Journal of Fire Sciences Volume 17 ; 17 ; jfsc >
-        au < exists ; 2000 ; Journal of Fire Sciences Volume 18 ; 18 ; jfsc >
-        au < exists ; 2001 ; Journal of Fire Sciences Volume 19 ; 19 ; jfsc >
-        au < exists ; 2002 ; Journal of Fire Sciences Volume 20 ; 20 ; jfsc >
-        au < exists ; 2003 ; Journal of Fire Sciences Volume 21 ; 21 ; jfsc >
-        au < exists ; 2004 ; Journal of Fire Sciences Volume 22 ; 22 ; jfsc >
-        au < doNotProcess ; 2005 ; Journal of Fire Sciences Volume 23 ; 23 ; jfsa >
-        au < doNotProcess ; 2006 ; Journal of Fire Sciences Volume 24 ; 24 ; jfsa >
-        au < doNotProcess ; 2007 ; Journal of Fire Sciences Volume 25 ; 25 ; jfsa >
-        au < doNotProcess ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 ; jfsa >
-        au < doNotProcess ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 ; jfsa >
-        au < doNotProcess ; 2010 ; Journal of Fire Sciences Volume 28 ; 28 ; jfsa >
-        au < doNotProcess ; 2011 ; Journal of Fire Sciences Volume 29 ; 29 ; jfsa >
-        au < doNotProcess ; 2012 ; Journal of Fire Sciences Volume 30 ; 30 ; jfsa >
-        au < doNotProcess ; 2013 ; Journal of Fire Sciences Volume 31 ; 31 ; jfsa >
-        au < doNotProcess ; 2014 ; Journal of Fire Sciences Volume 32 ; 32 ; jfsa >
-        au < doNotProcess ; 2015 ; Journal of Fire Sciences Volume 33 ; 33 ; jfsa >
-        au < exists ; 2016 ; Journal of Fire Sciences Volume 34 ; 34 ; jfsc >
+        au < exists ; 1983 ; Journal of Fire Sciences Volume 1 ; 1 ; jfse >
+        au < exists ; 1984 ; Journal of Fire Sciences Volume 2 ; 2 ; jfse >
+        au < exists ; 1985 ; Journal of Fire Sciences Volume 3 ; 3 ; jfse >
+        au < exists ; 1986 ; Journal of Fire Sciences Volume 4 ; 4 ; jfse >
+        au < exists ; 1987 ; Journal of Fire Sciences Volume 5 ; 5 ; jfse >
+        au < exists ; 1988 ; Journal of Fire Sciences Volume 6 ; 6 ; jfse >
+        au < exists ; 1989 ; Journal of Fire Sciences Volume 7 ; 7 ; jfse >
+        au < exists ; 1990 ; Journal of Fire Sciences Volume 8 ; 8 ; jfse >
+        au < exists ; 1991 ; Journal of Fire Sciences Volume 9 ; 9 ; jfse >
+        au < doesNotExist ; 1992 ; Journal of Fire Sciences Volume 10 ; 10 ; jfse >
+        au < doesNotExist ; 1993 ; Journal of Fire Sciences Volume 11 ; 11 ; jfse >
+        au < doesNotExist ; 1994 ; Journal of Fire Sciences Volume 12 ; 12 ; jfse >
+        au < doesNotExist ; 1995 ; Journal of Fire Sciences Volume 13 ; 13 ; jfse >
+        au < doesNotExist ; 1996 ; Journal of Fire Sciences Volume 14 ; 14 ; jfse >
+        au < doesNotExist ; 1997 ; Journal of Fire Sciences Volume 15 ; 15 ; jfse >
+        au < exists ; 1998 ; Journal of Fire Sciences Volume 16 ; 16 ; jfse >
+        au < exists ; 1999 ; Journal of Fire Sciences Volume 17 ; 17 ; jfse >
+        au < exists ; 2000 ; Journal of Fire Sciences Volume 18 ; 18 ; jfse >
+        au < exists ; 2001 ; Journal of Fire Sciences Volume 19 ; 19 ; jfse >
+        au < exists ; 2002 ; Journal of Fire Sciences Volume 20 ; 20 ; jfse >
+        au < exists ; 2003 ; Journal of Fire Sciences Volume 21 ; 21 ; jfse >
+        au < exists ; 2004 ; Journal of Fire Sciences Volume 22 ; 22 ; jfse >
+        au < doNotProcess ; 2005 ; Journal of Fire Sciences Volume 23 ; 23 ; jfse >
+        au < doNotProcess ; 2006 ; Journal of Fire Sciences Volume 24 ; 24 ; jfse >
+        au < doNotProcess ; 2007 ; Journal of Fire Sciences Volume 25 ; 25 ; jfse >
+        au < doNotProcess ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 ; jfse >
+        au < doNotProcess ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 ; jfse >
+        au < doNotProcess ; 2010 ; Journal of Fire Sciences Volume 28 ; 28 ; jfse >
+        au < doNotProcess ; 2011 ; Journal of Fire Sciences Volume 29 ; 29 ; jfse >
+        au < doNotProcess ; 2012 ; Journal of Fire Sciences Volume 30 ; 30 ; jfse >
+        au < doNotProcess ; 2013 ; Journal of Fire Sciences Volume 31 ; 31 ; jfse >
+        au < doNotProcess ; 2014 ; Journal of Fire Sciences Volume 32 ; 32 ; jfse >
+        au < doNotProcess ; 2015 ; Journal of Fire Sciences Volume 33 ; 33 ; jfse >
+        au < exists ; 2016 ; Journal of Fire Sciences Volume 34 ; 34 ; jfse >
 
       }
 
@@ -20953,12 +20985,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2007 ; Journal of Hand Surgery (European Volume) Volume 32 ; 32 ; jhsc >
         au < exists ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 ; jhsc >
         au < exists ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 ; jhsc >
-        au < doNotProcess ; 2010 ; Journal of Hand Surgery (European Volume) Volume 35 ; 35 ; jhsa >
-        au < doNotProcess ; 2011 ; Journal of Hand Surgery (European Volume) Volume 36 ; 36 ; jhsa >
-        au < doNotProcess ; 2012 ; Journal of Hand Surgery (European Volume) Volume 37 ; 37 ; jhsa >
-        au < doNotProcess ; 2013 ; Journal of Hand Surgery (European Volume) Volume 38 ; 38 ; jhsa >
-        au < doNotProcess ; 2014 ; Journal of Hand Surgery (European Volume) Volume 39 ; 39 ; jhsa >
-        au < doNotProcess ; 2015 ; Journal of Hand Surgery (European Volume) Volume 40 ; 40 ; jhsa >
+        au < doNotProcess ; 2010 ; Journal of Hand Surgery (European Volume) Volume 35 ; 35 ; jhsc >
+        au < doNotProcess ; 2011 ; Journal of Hand Surgery (European Volume) Volume 36 ; 36 ; jhsc >
+        au < doNotProcess ; 2012 ; Journal of Hand Surgery (European Volume) Volume 37 ; 37 ; jhsc >
+        au < doNotProcess ; 2013 ; Journal of Hand Surgery (European Volume) Volume 38 ; 38 ; jhsc >
+        au < doNotProcess ; 2014 ; Journal of Hand Surgery (European Volume) Volume 39 ; 39 ; jhsc >
+        au < doNotProcess ; 2015 ; Journal of Hand Surgery (European Volume) Volume 40 ; 40 ; jhsc >
         au < exists ; 2016 ; Journal of Hand Surgery (European Volume) Volume 41 ; 41 ; jhsc >
 
       }
@@ -21108,8 +21140,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1992 ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 ; jhca >
         au < manifest ; 1993 ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 ; jhca >
         au < manifest ; 1994 ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 ; jhca >
-        au < exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhcc >
-        au < exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhcc >
+        au < exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 ; jhca >
+        au < exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 ; jhca >
         au < manifest ; 1997 ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 ; jhca >
         au < manifest ; 1998 ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 ; jhca >
         au < manifest ; 1999 ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 ; jhca >
@@ -21245,33 +21277,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1987 ; Journal of Hospitality & Tourism Research Volume 11 ; 11 ; jhtb >
         au < manifest ; 1988 ; Journal of Hospitality & Tourism Research Volume 12 ; 12 ; jhtb >
         au < manifest ; 1989 ; Journal of Hospitality & Tourism Research Volume 13 ; 13 ; jhtb >
-        au < exists ; 1990-1991 ; Journal of Hospitality & Tourism Research Volume 14 ; 14 ; jhtb >
-        au < exists ; 1991-1992 ; Journal of Hospitality & Tourism Research Volume 15 ; 15 ; jhtb >
-        au < exists ; 1993-1993 ; Journal of Hospitality & Tourism Research Volume 16 ; 16 ; jhtb >
-        au < exists ; 1993-1994 ; Journal of Hospitality & Tourism Research Volume 17 ; 17 ; jhtb >
-        au < exists ; 1994-1995 ; Journal of Hospitality & Tourism Research Volume 18 ; 18 ; jhtb >
-        au < exists ; 1995-1996 ; Journal of Hospitality & Tourism Research Volume 19 ; 19 ; jhtb >
-        au < exists ; 1996-1997 ; Journal of Hospitality & Tourism Research Volume 20 ; 20 ; jhtb >
-        au < exists ; 1997-1998 ; Journal of Hospitality & Tourism Research Volume 21 ; 21 ; jhtb >
-        au < exists ; 1998 ; Journal of Hospitality & Tourism Research Volume 22 ; 22 ; jhtc >
-        au < exists ; 1999 ; Journal of Hospitality & Tourism Research Volume 23 ; 23 ; jhtc >
-        au < exists ; 2000 ; Journal of Hospitality & Tourism Research Volume 24 ; 24 ; jhtc >
-        au < exists ; 2001 ; Journal of Hospitality & Tourism Research Volume 25 ; 25 ; jhtc >
-        au < exists ; 2002 ; Journal of Hospitality & Tourism Research Volume 26 ; 26 ; jhtc >
-        au < exists ; 2003 ; Journal of Hospitality & Tourism Research Volume 27 ; 27 ; jhtc >
-        au < exists ; 2004 ; Journal of Hospitality & Tourism Research Volume 28 ; 28 ; jhtc >
-        au < doNotProcess ; 2005 ; Journal of Hospitality & Tourism Research Volume 29 ; 29 ; jhta >
-        au < doNotProcess ; 2006 ; Journal of Hospitality & Tourism Research Volume 30 ; 30 ; jhta >
-        au < doNotProcess ; 2007 ; Journal of Hospitality & Tourism Research Volume 31 ; 31 ; jhta >
-        au < doNotProcess ; 2008 ; Journal of Hospitality & Tourism Research Volume 32 ; 32 ; jhta >
-        au < doNotProcess ; 2009 ; Journal of Hospitality & Tourism Research Volume 33 ; 33 ; jhta >
-        au < doNotProcess ; 2010 ; Journal of Hospitality & Tourism Research Volume 34 ; 34 ; jhta >
-        au < doNotProcess ; 2011 ; Journal of Hospitality & Tourism Research Volume 35 ; 35 ; jhta >
-        au < doNotProcess ; 2012 ; Journal of Hospitality & Tourism Research Volume 36 ; 36 ; jhta >
-        au < doNotProcess ; 2013 ; Journal of Hospitality & Tourism Research Volume 37 ; 37 ; jhta >
-        au < doNotProcess ; 2014 ; Journal of Hospitality & Tourism Research Volume 38 ; 38 ; jhta >
-        au < doNotProcess ; 2015 ; Journal of Hospitality & Tourism Research Volume 39 ; 39 ; jhta >
-        au < exists ; 2016 ; Journal of Hospitality & Tourism Research Volume 40 ; 40 ; jhtc >
+        au < exists ; 1990-1991 ; Journal of Hospitality & Tourism Research Volume 14 ; 14 ; jhtc >
+        au < exists ; 1991-1992 ; Journal of Hospitality & Tourism Research Volume 15 ; 15 ; jhtc >
+        au < exists ; 1993-1993 ; Journal of Hospitality & Tourism Research Volume 16 ; 16 ; jhtc >
+        au < exists ; 1993-1994 ; Journal of Hospitality & Tourism Research Volume 17 ; 17 ; jhtc >
+        au < exists ; 1994-1995 ; Journal of Hospitality & Tourism Research Volume 18 ; 18 ; jhtc >
+        au < exists ; 1995-1996 ; Journal of Hospitality & Tourism Research Volume 19 ; 19 ; jhtc >
+        au < exists ; 1996-1997 ; Journal of Hospitality & Tourism Research Volume 20 ; 20 ; jhtc >
+        au < exists ; 1997-1998 ; Journal of Hospitality & Tourism Research Volume 21 ; 21 ; jhtd >
+        au < exists ; 1998 ; Journal of Hospitality & Tourism Research Volume 22 ; 22 ; jhtd >
+        au < exists ; 1999 ; Journal of Hospitality & Tourism Research Volume 23 ; 23 ; jhtd >
+        au < exists ; 2000 ; Journal of Hospitality & Tourism Research Volume 24 ; 24 ; jhtd >
+        au < exists ; 2001 ; Journal of Hospitality & Tourism Research Volume 25 ; 25 ; jhtd >
+        au < exists ; 2002 ; Journal of Hospitality & Tourism Research Volume 26 ; 26 ; jhtd >
+        au < exists ; 2003 ; Journal of Hospitality & Tourism Research Volume 27 ; 27 ; jhtd >
+        au < exists ; 2004 ; Journal of Hospitality & Tourism Research Volume 28 ; 28 ; jhtd >
+        au < doNotProcess ; 2005 ; Journal of Hospitality & Tourism Research Volume 29 ; 29 ; jhtd >
+        au < doNotProcess ; 2006 ; Journal of Hospitality & Tourism Research Volume 30 ; 30 ; jhtd >
+        au < doNotProcess ; 2007 ; Journal of Hospitality & Tourism Research Volume 31 ; 31 ; jhtd >
+        au < doNotProcess ; 2008 ; Journal of Hospitality & Tourism Research Volume 32 ; 32 ; jhtd >
+        au < doNotProcess ; 2009 ; Journal of Hospitality & Tourism Research Volume 33 ; 33 ; jhtd >
+        au < doNotProcess ; 2010 ; Journal of Hospitality & Tourism Research Volume 34 ; 34 ; jhtd >
+        au < doNotProcess ; 2011 ; Journal of Hospitality & Tourism Research Volume 35 ; 35 ; jhtd >
+        au < doNotProcess ; 2012 ; Journal of Hospitality & Tourism Research Volume 36 ; 36 ; jhtd >
+        au < doNotProcess ; 2013 ; Journal of Hospitality & Tourism Research Volume 37 ; 37 ; jhtd >
+        au < doNotProcess ; 2014 ; Journal of Hospitality & Tourism Research Volume 38 ; 38 ; jhtd >
+        au < doNotProcess ; 2015 ; Journal of Hospitality & Tourism Research Volume 39 ; 39 ; jhtd >
+        au < exists ; 2016 ; Journal of Hospitality & Tourism Research Volume 40 ; 40 ; jhtd >
 
       }
 
@@ -21697,25 +21729,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://jid.sagepub.com/
 
-        au < exists ; 1997 ; Journal of Intellectual Disabilities Volume 1 ; 1 ; jidc >
-        au < exists ; 1998 ; Journal of Intellectual Disabilities Volume 2 ; 2 ; jidc >
-        au < exists ; 1999 ; Journal of Intellectual Disabilities Volume 3 ; 3 ; jidc >
-        au < exists ; 2000 ; Journal of Intellectual Disabilities Volume 4 ; 4 ; jidc >
-        au < exists ; 2001 ; Journal of Intellectual Disabilities Volume 5 ; 5 ; jidc >
-        au < exists ; 2002 ; Journal of Intellectual Disabilities Volume 6 ; 6 ; jidc >
-        au < exists ; 2003 ; Journal of Intellectual Disabilities Volume 7 ; 7 ; jidc >
-        au < exists ; 2004 ; Journal of Intellectual Disabilities Volume 8 ; 8 ; jidc >
-        au < doNotProcess ; 2005 ; Journal of Intellectual Disabilities Volume 9 ; 9 ; jida >
-        au < doNotProcess ; 2006 ; Journal of Intellectual Disabilities Volume 10 ; 10 ; jida >
-        au < doNotProcess ; 2007 ; Journal of Intellectual Disabilities Volume 11 ; 11 ; jida >
-        au < doNotProcess ; 2008 ; Journal of Intellectual Disabilities Volume 12 ; 12 ; jida >
-        au < doNotProcess ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 ; jida >
-        au < doNotProcess ; 2010 ; Journal of Intellectual Disabilities Volume 14 ; 14 ; jida >
-        au < doNotProcess ; 2011 ; Journal of Intellectual Disabilities Volume 15 ; 15 ; jida >
-        au < doNotProcess ; 2012 ; Journal of Intellectual Disabilities Volume 16 ; 16 ; jida >
-        au < doNotProcess ; 2013 ; Journal of Intellectual Disabilities Volume 17 ; 17 ; jida >
-        au < doNotProcess ; 2014 ; Journal of Intellectual Disabilities Volume 18 ; 18 ; jida >
-        au < doNotProcess ; 2015 ; Journal of Intellectual Disabilities Volume 19 ; 19 ; jida >
+        au < exists ; 1997 ; Journal of Intellectual Disabilities Volume 1 ; 1 ; jida >
+        au < exists ; 1998 ; Journal of Intellectual Disabilities Volume 2 ; 2 ; jida >
+        au < exists ; 1999 ; Journal of Intellectual Disabilities Volume 3 ; 3 ; jida >
+        au < exists ; 2000 ; Journal of Intellectual Disabilities Volume 4 ; 4 ; jidb >
+        au < exists ; 2001 ; Journal of Intellectual Disabilities Volume 5 ; 5 ; jidb >
+        au < exists ; 2002 ; Journal of Intellectual Disabilities Volume 6 ; 6 ; jidb >
+        au < exists ; 2003 ; Journal of Intellectual Disabilities Volume 7 ; 7 ; jidb >
+        au < exists ; 2004 ; Journal of Intellectual Disabilities Volume 8 ; 8 ; jidb >
+        au < doNotProcess ; 2005 ; Journal of Intellectual Disabilities Volume 9 ; 9 ; jidc >
+        au < doNotProcess ; 2006 ; Journal of Intellectual Disabilities Volume 10 ; 10 ; jidc >
+        au < doNotProcess ; 2007 ; Journal of Intellectual Disabilities Volume 11 ; 11 ; jidc >
+        au < doNotProcess ; 2008 ; Journal of Intellectual Disabilities Volume 12 ; 12 ; jidc >
+        au < doNotProcess ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 ; jidc >
+        au < doNotProcess ; 2010 ; Journal of Intellectual Disabilities Volume 14 ; 14 ; jidc >
+        au < doNotProcess ; 2011 ; Journal of Intellectual Disabilities Volume 15 ; 15 ; jidc >
+        au < doNotProcess ; 2012 ; Journal of Intellectual Disabilities Volume 16 ; 16 ; jidc >
+        au < doNotProcess ; 2013 ; Journal of Intellectual Disabilities Volume 17 ; 17 ; jidc >
+        au < doNotProcess ; 2014 ; Journal of Intellectual Disabilities Volume 18 ; 18 ; jidc >
+        au < doNotProcess ; 2015 ; Journal of Intellectual Disabilities Volume 19 ; 19 ; jidc >
         au < exists ; 2016 ; Journal of Intellectual Disabilities Volume 20 ; 20 ; jidc >
 
       }
@@ -22083,7 +22115,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 ; lmec >
         au < exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 ; lmec >
         au < exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 ; lmec >
-        au < doNotProcess ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; lmea >
+        au < doNotProcess ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; lmec >
         au < exists ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 ; lmec >
 
     }
@@ -22510,17 +22542,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Journal of Management Education Volume 26 ; 26 ; jmec >
         au < exists ; 2003 ; Journal of Management Education Volume 27 ; 27 ; jmec >
         au < exists ; 2004 ; Journal of Management Education Volume 28 ; 28 ; jmec >
-        au < doNotProcess ; 2005 ; Journal of Management Education Volume 29 ; 29 ; jmea >
-        au < doNotProcess ; 2006 ; Journal of Management Education Volume 30 ; 30 ; jmea >
-        au < doNotProcess ; 2007 ; Journal of Management Education Volume 31 ; 31 ; jmea >
-        au < doNotProcess ; 2008 ; Journal of Management Education Volume 32 ; 32 ; jmea >
-        au < doNotProcess ; 2009 ; Journal of Management Education Volume 33 ; 33 ; jmea >
-        au < doNotProcess ; 2010 ; Journal of Management Education Volume 34 ; 34 ; jmea >
-        au < doNotProcess ; 2011 ; Journal of Management Education Volume 35 ; 35 ; jmea >
-        au < doNotProcess ; 2012 ; Journal of Management Education Volume 36 ; 36 ; jmea >
-        au < doNotProcess ; 2013 ; Journal of Management Education Volume 37 ; 37 ; jmea >
-        au < doNotProcess ; 2014 ; Journal of Management Education Volume 38 ; 38 ; jmea >
-        au < doNotProcess ; 2015 ; Journal of Management Education Volume 39 ; 39 ; jmea >
+        au < doNotProcess ; 2005 ; Journal of Management Education Volume 29 ; 29 ; jmec >
+        au < doNotProcess ; 2006 ; Journal of Management Education Volume 30 ; 30 ; jmec >
+        au < doNotProcess ; 2007 ; Journal of Management Education Volume 31 ; 31 ; jmec >
+        au < doNotProcess ; 2008 ; Journal of Management Education Volume 32 ; 32 ; jmec >
+        au < doNotProcess ; 2009 ; Journal of Management Education Volume 33 ; 33 ; jmec >
+        au < doNotProcess ; 2010 ; Journal of Management Education Volume 34 ; 34 ; jmec >
+        au < doNotProcess ; 2011 ; Journal of Management Education Volume 35 ; 35 ; jmec >
+        au < doNotProcess ; 2012 ; Journal of Management Education Volume 36 ; 36 ; jmec >
+        au < doNotProcess ; 2013 ; Journal of Management Education Volume 37 ; 37 ; jmec >
+        au < doNotProcess ; 2014 ; Journal of Management Education Volume 38 ; 38 ; jmec >
+        au < doNotProcess ; 2015 ; Journal of Management Education Volume 39 ; 39 ; jmec >
         au < exists ; 2016 ; Journal of Management Education Volume 40 ; 40 ; jmec >
 
       }
@@ -25239,7 +25271,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; The Journal of Transport History Volume 33 ; 33 ; jthc >
       au < exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 ; jthc >
       au < exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 ; jthc >
-      au < doNotProcess ; 2015 ; The Journal of Transport History Volume 36 ; 36 ; jtha >
+      au < doNotProcess ; 2015 ; The Journal of Transport History Volume 36 ; 36 ; jthc >
       au < exists ; 2016 ; The Journal of Transport History Volume 37 ; 37 ; jthc >
 
   }
@@ -25698,14 +25730,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2005 ; Journalism & Mass Communication Quarterly Volume 82 ; 82 ; jmqc >
         au < exists ; 2006 ; Journalism & Mass Communication Quarterly Volume 83 ; 83 ; jmqc >
         au < exists ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 ; jmqc >
-        au < doNotProcess ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 ; jmqa >
-        au < doNotProcess ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 ; jmqa >
-        au < doNotProcess ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; jmqa >
-        au < doNotProcess ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; jmqa >
-        au < doNotProcess ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; jmqa >
-        au < doNotProcess ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 ; jmqa >
-        au < doNotProcess ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; jmqa >
-        au < doNotProcess ; 2015 ; Journalism & Mass Communication Quarterly Volume 92 ; 92 ; jmqa >
+        au < doNotProcess ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 ; jmqc >
+        au < doNotProcess ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 ; jmqc >
+        au < doNotProcess ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 ; jmqc >
+        au < doNotProcess ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; jmqc >
+        au < doNotProcess ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; jmqc >
+        au < doNotProcess ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 ; jmqc >
+        au < doNotProcess ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; jmqc >
+        au < doNotProcess ; 2015 ; Journalism & Mass Communication Quarterly Volume 92 ; 92 ; jmqc >
         au < exists ; 2016 ; Journalism & Mass Communication Quarterly Volume 93 ; 93 ; jmqc >
 
       }
@@ -26213,16 +26245,16 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2003 ; Lighting Research and Technology Volume 35 ; 35 ; lrtc >
         au < exists ; 2004 ; Lighting Research and Technology Volume 36 ; 36 ; lrtc >
         au < exists ; 2005 ; Lighting Research and Technology Volume 37 ; 37 ; lrtc >
-        au < doNotProcess ; 2006 ; Lighting Research and Technology Volume 38 ; 38 ; lrta >
-        au < doNotProcess ; 2007 ; Lighting Research and Technology Volume 39 ; 39 ; lrta >
-        au < doNotProcess ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; lrta >
-        au < doNotProcess ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; lrta >
-        au < doNotProcess ; 2010 ; Lighting Research and Technology Volume 42 ; 42 ; lrta >
-        au < doNotProcess ; 2011 ; Lighting Research and Technology Volume 43 ; 43 ; lrta >
-        au < doNotProcess ; 2012 ; Lighting Research and Technology Volume 44 ; 44 ; lrta >
-        au < doNotProcess ; 2013 ; Lighting Research and Technology Volume 45 ; 45 ; lrta >
-        au < doNotProcess ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; lrta >
-        au < doNotProcess ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; lrta >
+        au < doNotProcess ; 2006 ; Lighting Research and Technology Volume 38 ; 38 ; lrtc >
+        au < doNotProcess ; 2007 ; Lighting Research and Technology Volume 39 ; 39 ; lrtc >
+        au < doNotProcess ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; lrtc >
+        au < doNotProcess ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; lrtc >
+        au < doNotProcess ; 2010 ; Lighting Research and Technology Volume 42 ; 42 ; lrtc >
+        au < doNotProcess ; 2011 ; Lighting Research and Technology Volume 43 ; 43 ; lrtc >
+        au < doNotProcess ; 2012 ; Lighting Research and Technology Volume 44 ; 44 ; lrtc >
+        au < doNotProcess ; 2013 ; Lighting Research and Technology Volume 45 ; 45 ; lrtc >
+        au < doNotProcess ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; lrtc >
+        au < doNotProcess ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; lrtc >
         au < exists ; 2016 ; Lighting Research and Technology Volume 48 ; 48 ; lrtc >
 
       }
@@ -26944,7 +26976,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2014 ; Media International Australia Volume 150 ; 150 ; miac >
       au < exists ; 2014 ; Media International Australia Volume 151 ; 151 ; miac >
       au < exists ; 2014 ; Media International Australia Volume 152 ; 152 ; miac >
-      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; miaa >
+      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; miac >
       au < exists ; 2015 ; Media International Australia Volume 154 ; 154 ; miac >
       au < doNotProcess ; 2015 ; Media International Australia Volume 155 ; 155 ; miaa >
       au < expected ; 2015 ; Media International Australia Volume 156 ; 156 ; miaa >
@@ -27030,17 +27062,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Medical Care Research and Review Volume 59 ; 59 ; mcrc >
         au < exists ; 2003 ; Medical Care Research and Review Volume 60 ; 60 ; mcrc >
         au < exists ; 2004 ; Medical Care Research and Review Volume 61 ; 61 ; mcrc >
-        au < doNotProcess ; 2005 ; Medical Care Research and Review Volume 62 ; 62 ; mcra >
-        au < doNotProcess ; 2006 ; Medical Care Research and Review Volume 63 ; 63 ; mcra >
-        au < doNotProcess ; 2007 ; Medical Care Research and Review Volume 64 ; 64 ; mcra >
-        au < doNotProcess ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ; mcra >
-        au < doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; mcra >
-        au < doNotProcess ; 2010 ; Medical Care Research and Review Volume 67 ; 67 ; mcra >
-        au < doNotProcess ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; mcra >
-        au < doNotProcess ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; mcra >
-        au < doNotProcess ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; mcra >
-        au < doNotProcess ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; mcra >
-        au < doNotProcess ; 2015 ; Medical Care Research and Review Volume 72 ; 72 ; mcra >
+        au < doNotProcess ; 2005 ; Medical Care Research and Review Volume 62 ; 62 ; mcrc >
+        au < doNotProcess ; 2006 ; Medical Care Research and Review Volume 63 ; 63 ; mcrc >
+        au < doNotProcess ; 2007 ; Medical Care Research and Review Volume 64 ; 64 ; mcrc >
+        au < doNotProcess ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ; mcrc >
+        au < doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; mcrc >
+        au < doNotProcess ; 2010 ; Medical Care Research and Review Volume 67 ; 67 ; mcrc >
+        au < doNotProcess ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; mcrc >
+        au < doNotProcess ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; mcrc >
+        au < doNotProcess ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; mcrc >
+        au < doNotProcess ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; mcrc >
+        au < doNotProcess ; 2015 ; Medical Care Research and Review Volume 72 ; 72 ; mcrc >
         au < exists ; 2016 ; Medical Care Research and Review Volume 73 ; 73 ; mcrc >
 
       }
@@ -27249,14 +27281,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; mljc >
         au < exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; mljc >
         au < exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; mljc >
-        au < doNotProcess ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; mlja >
-        au < doNotProcess ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; mlja >
-        au < doNotProcess ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; mlja >
-        au < doNotProcess ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; mlja >
-        au < doNotProcess ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; mlja >
-        au < doNotProcess ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; mlja >
-        au < doNotProcess ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; mlja >
-        au < doNotProcess ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; mlja >
+        au < doNotProcess ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; mljc >
+        au < doNotProcess ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; mljc >
+        au < doNotProcess ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; mljc >
+        au < doNotProcess ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; mljc >
+        au < doNotProcess ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; mljc >
+        au < doNotProcess ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; mljc >
+        au < doNotProcess ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; mljc >
+        au < doNotProcess ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; mljc >
         au < exists ; 2016 ; Medico-Legal Journal Volume 84 ; 84 ; mljc >
 
       }
@@ -27746,13 +27778,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2006 ; Music Educators Journal Volume 93 ; 93 ; mejc >
         au < exists ; 2007 ; Music Educators Journal Volume 94 ; 94 ; mejc >
         au < exists ; 2008 ; Music Educators Journal Volume 95 ; 95 ; mejc >
-        au < doNotProcess ; 2009 ; Music Educators Journal Volume 96 ; 96 ; meja >
-        au < doNotProcess ; 2010 ; Music Educators Journal Volume 97 ; 97 ; meja >
-        au < doNotProcess ; 2011 ; Music Educators Journal Volume 98 ; 98 ; meja >
-        au < doNotProcess ; 2012 ; Music Educators Journal Volume 99 ; 99 ; meja >
-        au < doNotProcess ; 2013 ; Music Educators Journal Volume 100 ; 100 ; meja >
-        au < doNotProcess ; 2014 ; Music Educators Journal Volume 101 ; 101 ; meja >
-        au < doNotProcess ; 2015 ; Music Educators Journal Volume 102 ; 102 ; meja >
+        au < doNotProcess ; 2009 ; Music Educators Journal Volume 96 ; 96 ; mejc >
+        au < doNotProcess ; 2010 ; Music Educators Journal Volume 97 ; 97 ; mejc >
+        au < doNotProcess ; 2011 ; Music Educators Journal Volume 98 ; 98 ; mejc >
+        au < doNotProcess ; 2012 ; Music Educators Journal Volume 99 ; 99 ; mejc >
+        au < doNotProcess ; 2013 ; Music Educators Journal Volume 100 ; 100 ; mejc >
+        au < doNotProcess ; 2014 ; Music Educators Journal Volume 101 ; 101 ; mejc >
+        au < doNotProcess ; 2015 ; Music Educators Journal Volume 102 ; 102 ; mejc >
         au < exists ; 2016 ; Music Educators Journal Volume 103 ; 103 ; mejc >
 
       }
@@ -28519,7 +28551,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; nctc >
       au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; nctc >
       au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; nctc >
-      au < doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; ncta >
+      au < doNotProcess ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; nctc >
       au < exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; nctc >
 
     }
@@ -38934,19 +38966,19 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 1984 ; Gifted Child Today Volume 7 ; 7 ; gcta >
         au < doNotProcess ; 1985 ; Gifted Child Today Volume 8 ; 8 ; gcta >
         au < doNotProcess ; 1986 ; Gifted Child Today Volume 9 ; 9 ; gcta >
-        au < doNotProcess ; 1987 ; Gifted Child Today Volume 10 ; 10 ; gcta >
-        au < doNotProcess ; 1988 ; Gifted Child Today Volume 11 ; 11 ; gcta >
-        au < doNotProcess ; 1989 ; Gifted Child Today Volume 12 ; 12 ; gcta >
-        au < doNotProcess ; 1990 ; Gifted Child Today Volume 13 ; 13 ; gcta >
-        au < doNotProcess ; 1991 ; Gifted Child Today Volume 14 ; 14 ; gcta >
-        au < doNotProcess ; 1992 ; Gifted Child Today Volume 15 ; 15 ; gcta >
-        au < doNotProcess ; 1993 ; Gifted Child Today Volume 16 ; 16 ; gcta >
-        au < doNotProcess ; 1994 ; Gifted Child Today Volume 17 ; 17 ; gcta >
-        au < doNotProcess ; 1995 ; Gifted Child Today Volume 18 ; 18 ; gcta >
-        au < doNotProcess ; 1996 ; Gifted Child Today Volume 19 ; 19 ; gcta >
-        au < doNotProcess ; 1997 ; Gifted Child Today Volume 20 ; 20 ; gcta >
-        au < doNotProcess ; 1998 ; Gifted Child Today Volume 21 ; 21 ; gcta >
-        au < doNotProcess ; 1999 ; Gifted Child Today Volume 22 ; 22 ; gcta >
+        au < doNotProcess ; 1987 ; Gifted Child Today Volume 10 ; 10 ; gctb >
+        au < doNotProcess ; 1988 ; Gifted Child Today Volume 11 ; 11 ; gctb >
+        au < doNotProcess ; 1989 ; Gifted Child Today Volume 12 ; 12 ; gctb >
+        au < doNotProcess ; 1990 ; Gifted Child Today Volume 13 ; 13 ; gctb >
+        au < doNotProcess ; 1991 ; Gifted Child Today Volume 14 ; 14 ; gctb >
+        au < doNotProcess ; 1992 ; Gifted Child Today Volume 15 ; 15 ; gctb >
+        au < doNotProcess ; 1993 ; Gifted Child Today Volume 16 ; 16 ; gctb >
+        au < doNotProcess ; 1994 ; Gifted Child Today Volume 17 ; 17 ; gctc >
+        au < doNotProcess ; 1995 ; Gifted Child Today Volume 18 ; 18 ; gctc >
+        au < doNotProcess ; 1996 ; Gifted Child Today Volume 19 ; 19 ; gctc >
+        au < doNotProcess ; 1997 ; Gifted Child Today Volume 20 ; 20 ; gctc >
+        au < doNotProcess ; 1998 ; Gifted Child Today Volume 21 ; 21 ; gctc >
+        au < doNotProcess ; 1999 ; Gifted Child Today Volume 22 ; 22 ; gctc >
         au < exists ; 2000 ; Gifted Child Today Volume 23 ; 23 ; gctc >
         au < exists ; 2001 ; Gifted Child Today Volume 24 ; 24 ; gctc >
         au < exists ; 2002 ; Gifted Child Today Volume 25 ; 25 ; gctc >
@@ -38955,14 +38987,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2005 ; Gifted Child Today Volume 28 ; 28 ; gctc >
         au < exists ; 2006 ; Gifted Child Today Volume 29 ; 29 ; gctc >
         au < exists ; 2007 ; Gifted Child Today Volume 30 ; 30 ; gctc >
-        au < doNotProcess ; 2008 ; Gifted Child Today Volume 31 ; 31 ; gcta >
-        au < doNotProcess ; 2009 ; Gifted Child Today Volume 32 ; 32 ; gcta >
+        au < doNotProcess ; 2008 ; Gifted Child Today Volume 31 ; 31 ; gctc >
+        au < doNotProcess ; 2009 ; Gifted Child Today Volume 32 ; 32 ; gctc >
         au < exists ; 2010 ; Gifted Child Today Volume 33 ; 33 ; gctc >
         au < exists ; 2011 ; Gifted Child Today Volume 34 ; 34 ; gctc >
-        au < doNotProcess ; 2012 ; Gifted Child Today Volume 35 ; 35 ; gcta >
-        au < doNotProcess ; 2013 ; Gifted Child Today Volume 36 ; 36 ; gcta >
-        au < doNotProcess ; 2014 ; Gifted Child Today Volume 37 ; 37 ; gcta >
-        au < doNotProcess ; 2015 ; Gifted Child Today Volume 38 ; 38 ; gcta >
+        au < doNotProcess ; 2012 ; Gifted Child Today Volume 35 ; 35 ; gctc >
+        au < doNotProcess ; 2013 ; Gifted Child Today Volume 36 ; 36 ; gctc >
+        au < doNotProcess ; 2014 ; Gifted Child Today Volume 37 ; 37 ; gctc >
+        au < doNotProcess ; 2015 ; Gifted Child Today Volume 38 ; 38 ; gctc >
         au < exists ; 2016 ; Gifted Child Today Volume 39 ; 39 ; gctc >
 
       }
@@ -39043,14 +39075,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2005 ; Interpretation: A Journal of Bible and Theology Volume 59 ; 59 ; intc >
         au < exists ; 2006 ; Interpretation: A Journal of Bible and Theology Volume 60 ; 60 ; intc >
         au < exists ; 2007 ; Interpretation: A Journal of Bible and Theology Volume 61 ; 61 ; intc >
-        au < doNotProcess ; 2008 ; Interpretation: A Journal of Bible and Theology Volume 62 ; 62 ; inta >
-        au < doNotProcess ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 ; inta >
-        au < doNotProcess ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 ; inta >
-        au < doNotProcess ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 ; inta >
-        au < doNotProcess ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; inta >
-        au < doNotProcess ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 ; inta >
-        au < doNotProcess ; 2014 ; Interpretation: A Journal of Bible and Theology Volume 68 ; 68 ; inta >
-        au < doNotProcess ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 ; inta >
+        au < doNotProcess ; 2008 ; Interpretation: A Journal of Bible and Theology Volume 62 ; 62 ; intc >
+        au < doNotProcess ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 ; intc >
+        au < doNotProcess ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 ; intc >
+        au < doNotProcess ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 ; intc >
+        au < doNotProcess ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; intc >
+        au < doNotProcess ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 ; intc >
+        au < doNotProcess ; 2014 ; Interpretation: A Journal of Bible and Theology Volume 68 ; 68 ; intc >
+        au < doNotProcess ; 2015 ; Interpretation: A Journal of Bible and Theology Volume 69 ; 69 ; intc >
         au < exists ; 2016 ; Interpretation: A Journal of Bible and Theology Volume 70 ; 70 ; intc >
 
       }
@@ -39069,12 +39101,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
 
-        au < doNotProcess ; 1993-1994 ; Journal for the Education of the Gifted Volume 17 ; 17 ; jega >
+        au < doNotProcess ; 1993-1994 ; Journal for the Education of the Gifted Volume 17 ; 17 ; jegb >
         au < doNotProcess ; 1995 ; Journal for the Education of the Gifted Volume 18 ; 18 ; jega >
         au < doNotProcess ; 1996 ; Journal for the Education of the Gifted Volume 19 ; 19 ; jega >
-        au < doNotProcess ; 1997 ; Journal for the Education of the Gifted Volume 20 ; 20 ; jega >
-        au < doNotProcess ; 1998 ; Journal for the Education of the Gifted Volume 21 ; 21 ; jega >
-        au < doNotProcess ; 1999 ; Journal for the Education of the Gifted Volume 22 ; 22 ; jega >
+        au < doNotProcess ; 1997 ; Journal for the Education of the Gifted Volume 20 ; 20 ; jegb >
+        au < doNotProcess ; 1998 ; Journal for the Education of the Gifted Volume 21 ; 21 ; jegb >
+        au < doNotProcess ; 1999 ; Journal for the Education of the Gifted Volume 22 ; 22 ; jegb >
         au < manifest ; 2000 ; Journal for the Education of the Gifted Volume 23 ; 23 ; jegb >
         au < manifest ; 2001 ; Journal for the Education of the Gifted Volume 24 ; 24 ; jegb >
         au < manifest ; 2002 ; Journal for the Education of the Gifted Volume 25 ; 25 ; jegb >
@@ -40345,9 +40377,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < exists ; 2010 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 143 ; 143 ; cphc >
     au < exists ; 2011 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 144 ; 144 ; cphc >
     au < exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 ; cphc >
-    au < doNotProcess ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 ; cpha >
-    au < doNotProcess ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 ; cpha >
-    au < doNotProcess ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 ; cpha >
+    au < doNotProcess ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 ; cphc >
+    au < doNotProcess ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 ; cphc >
+    au < doNotProcess ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 ; cphc >
     au < exists ; 2016 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 149 ; 149 ; cphc >
 
     }
@@ -41383,21 +41415,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 ; ebma >
         au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 ; ebma >
         au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 ; ebma >
-        au < doNotProcess ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 ; ebma >
-        au < doNotProcess ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 ; ebma >
-        au < doNotProcess ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 ; ebma >
-        au < doNotProcess ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 ; ebma >
-        au < doNotProcess ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 ; ebma >
-        au < doNotProcess ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 ; ebma >
-        au < doNotProcess ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 ; ebma >
-        au < doNotProcess ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 ; ebma >
-        au < doNotProcess ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 ; ebma >
-        au < doNotProcess ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 ; ebma >
-        au < doNotProcess ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 ; ebma >
-        au < doNotProcess ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; ebma >
-        au < doNotProcess ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; ebma >
-        au < doNotProcess ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 ; ebma >
-        au < doNotProcess ; 2015 ; Experimental Biology and Medicine Volume 240 ; 240 ; ebma >
+        au < doNotProcess ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 ; ebmb >
+        au < doNotProcess ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 ; ebmb >
+        au < doNotProcess ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 ; ebmb >
+        au < doNotProcess ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 ; ebmb >
+        au < doNotProcess ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 ; ebmb >
+        au < doNotProcess ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 ; ebmb >
+        au < doNotProcess ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 ; ebmb >
+        au < doNotProcess ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 ; ebmb >
+        au < doNotProcess ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 ; ebmb >
+        au < doNotProcess ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 ; ebmb >
+        au < doNotProcess ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 ; ebmb >
+        au < doNotProcess ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; ebmb >
+        au < doNotProcess ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; ebmb >
+        au < doNotProcess ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 ; ebmb >
+        au < doNotProcess ; 2015 ; Experimental Biology and Medicine Volume 240 ; 240 ; ebmb >
         au < manifest ; 2016 ; Experimental Biology and Medicine Volume 241 ; 241 ; ebmb >
         au < manifest ; 2017 ; Experimental Biology and Medicine Volume 242 ; 242 ; ebmb >
 
@@ -41534,6 +41566,41 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; International Journal: Canada's Journal of Global Policy Analysis Volume 69 ; 69 ; ijxa >
         au < doNotProcess ; 2015 ; International Journal: Canada's Journal of Global Policy Analysis Volume 70 ; 70 ; ijxa >
         au < manifest ; 2016 ; International Journal: Canada's Journal of Global Policy Analysis Volume 71 ; 71 ; ijxa >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Care Pathways ;
+        issn = 2040-4026 ;
+        eissn = 2040-4034 ;
+        issnl = 2040-4026
+      >
+
+      {
+
+        #param[base_url] = http://icp.sagepub.com/
+        comment[continued_by] = 2053-4354
+
+        au < exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 ; icpa >
+        au < exists ; 1998 ; International Journal of Care Pathways Volume 2 ; 2 ; icpb >
+        au < exists ; 1999 ; International Journal of Care Pathways Volume 3 ; 3 ; icpb >
+        au < exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; icpb >
+        au < exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; icpc >
+        au < exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; icpc >
+        au < exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; icpc >
+        au < exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; icpc >
+        au < exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; icpc >
+        au < exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc >
+        au < exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; icpc >
+        au < exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; icpc >
+        au < exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; icpc >
+        au < exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; icpc >
+        au < exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; icpc >
+        au < exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; icpc >
 
       }
 
