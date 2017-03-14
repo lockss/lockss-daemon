@@ -312,7 +312,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; >
         au < doesNotExist ; doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 [superseded] ; 4 ; >
   
@@ -1378,7 +1378,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 [superseded] ; 4 ; >
   
@@ -1412,7 +1412,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 ; >
-        au < down ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; >
+        au < frozen ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; >
         au < frozen ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; Journal of Economic Structures Volume 4 [superseded] ; 4 ; >
   
