@@ -51,7 +51,7 @@
     au < released ; 2013 ; Claremont-UC Undergraduate Research Conference Journal Volume 2013 ; 2013 >
     au < released ; 2014 ; Claremont-UC Undergraduate Research Conference Journal Volume 2014 ; 2014 >
     au < released ; 2015 ; Claremont-UC Undergraduate Research Conference Journal Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 >
+    au < ready ; 2016 ; Claremont-UC Undergraduate Research Conference Journal Volume 2016 ; 2016 >
     
   }
 
@@ -83,7 +83,7 @@
     au < released ; 2013 ; Journal of Humanistic Mathematics Volume 3 ; 3 >
     au < released ; 2014 ; Journal of Humanistic Mathematics Volume 4 ; 4 >
     au < released ; 2015 ; Journal of Humanistic Mathematics Volume 5 ; 5 >
-    au < manifest ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
+    au < ready ; 2016 ; Journal of Humanistic Mathematics Volume 6 ; 6 >
     
   }
 
@@ -157,7 +157,7 @@
     au < released ; 2013 ; Performance Practice Review Volume 18 ; 18 >
     au < released ; 2014 ; Performance Practice Review Volume 19 ; 19 >
     au < released ; 2015 ; Performance Practice Review Volume 20 ; 20 >
-    au < manifest ; 2016 ; Performance Practice Review Volume 21 ; 21 >
+    au < ready ; 2016 ; Performance Practice Review Volume 21 ; 21 >
     au < expected ; 2017 ; Performance Practice Review Volume 22 ; 22 >
     
   }
@@ -190,7 +190,7 @@
     au < released ; 2013 ; CODEE Journal Volume 8 ; 8 >
     au < released ; 2014 ; CODEE Journal Volume 9 ; 9 >
     au < released ; 2015 ; CODEE Journal Volume 10 ; 10 >
-    au < manifest ; 2016 ; CODEE Journal Volume 11 ; 11 >
+    au < ready ; 2016 ; CODEE Journal Volume 11 ; 11 >
     au < expected ; 2017 ; CODEE Journal Volume 12 ; 12 >
     
   }
@@ -204,7 +204,7 @@
     # no more content after 2016.
     param[journal_abbr] = hmnj
 
-    au < manifest ; 2016 ; Humanistic Mathematics Network Journal (HMNJ) Volume 1 ; 1 >
+    au < ready ; 2016 ; Humanistic Mathematics Network Journal (HMNJ) Volume 1 ; 1 >
     au < expected ; 2017 ; Humanistic Mathematics Network Journal (HMNJ) Volume 2 ; 2 >
     
   }
