@@ -378,26 +378,26 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "BePressPlugin") {
-        $url = sprintf("%s%s/lockss-volume%d.html",
-            $param{base_url}, $param{journal_abbr}, $param{volume});
-        $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-    if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
-        }
-    }
-    $result = "Manifest"
-      } else {
-    $result = "--"
+      $url = sprintf("%s%s/lockss-volume%d.html",
+          $param{base_url}, $param{journal_abbr}, $param{volume});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+        my $man_contents = $resp->content;
+        if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
+          if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
+            }
+          }
+          $result = "Manifest"
+        } else {
+        $result = "--"
       }
-  } else {
+    } else {
       $result = "--"
   }
         sleep(4);
@@ -410,7 +410,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
     if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
