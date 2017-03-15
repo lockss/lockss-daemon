@@ -1,0 +1,39 @@
+{
+  publisher <
+    name = Conference of Latin Americanist Geographers
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Latin American Geography ;
+      issn = 1545-2476  ;
+      eissn = 1548-5811  ;
+      issnl = 1545-2476
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2002 ; Journal of Latin American Geography -- Volume 1, 2002 ; 3379 >
+        au < exists ; 2003 ; Journal of Latin American Geography -- Volume 2, Number 1, 2003 ; 2584 >
+        au < exists ; 2004 ; Journal of Latin American Geography -- Volume 3, Number 1, 2004 ; 2643 >
+        au < exists ; 2005 ; Journal of Latin American Geography -- Volume 4, 2005 ; 2814 >
+        au < exists ; 2006 ; Journal of Latin American Geography -- Volume 5, 2006 ; 3056 >
+        au < exists ; 2007 ; Journal of Latin American Geography -- Volume 6, 2007 ; 3312 >
+        au < exists ; 2008 ; Journal of Latin American Geography -- Volume 7, 2008 ; 3668 >
+        au < exists ; 2009 ; Journal of Latin American Geography -- Volume 8, 2009 ; 4217 >
+        au < exists ; 2010 ; Journal of Latin American Geography -- Volume 9, 2010 ; 5945 >
+        au < exists ; 2011 ; Journal of Latin American Geography -- Volume 10, 2011 ; 7023 >
+        au < exists ; 2012 ; Journal of Latin American Geography -- Volume 11, 2012 ; 8170 >
+        au < exists ; 2013 ; Journal of Latin American Geography -- Volume 12, 2013 ; 8848 >
+        au < exists ; 2014 ; Journal of Latin American Geography -- Volume 13, 2014 ; 9777 >
+        au < exists ; 2015 ; Journal of Latin American Geography -- Volume 14, 2015 ; 10547 >
+        au < exists ; 2016 ; Journal of Latin American Geography -- Volume 15, 2016 ; 11106 >
+
+    }
+
+}

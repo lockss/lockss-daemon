@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Washington University in St. Louis
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Revista de Estudios Hispánicos ;
+      issn = 0034-818X 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Revista de Estudios Hispánicos -- Tomo XLVI,  2012 ; 8108 >
+        au < exists ; 2013 ; Revista de Estudios Hispánicos -- Tomo XLVII,  2013 ; 8845 >
+        au < exists ; 2014 ; Revista de Estudios Hispánicos -- Tomo XLVIII,  2014 ; 9798 >
+        au < exists ; 2015 ; Revista de Estudios Hispánicos -- Tomo XLIX, 2015 ; 10543 >
+        au < exists ; 2016 ; Revista de Estudios Hispánicos -- Tomo 50, 2016 ; 11171 >
+
+    }
+
+}

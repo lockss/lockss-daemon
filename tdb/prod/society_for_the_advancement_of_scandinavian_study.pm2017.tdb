@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Society for the Advancement of Scandinavian Study
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Scandinavian Studies ;
+      issn = 0036-5637  ;
+      eissn = 2163-8195  ;
+      issnl = 0036-5637
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Scandinavian Studies -- Volume 83, 2011 ; 7717 >
+        au < exists ; 2012 ; Scandinavian Studies -- Volume 84, 2012 ; 8491 >
+        au < exists ; 2013 ; Scandinavian Studies -- Volume 85, 2013 ; 9284 >
+        au < exists ; 2014 ; Scandinavian Studies -- Volume 86, 2014 ; 9880 >
+        au < exists ; 2015 ; Scandinavian Studies -- Volume 87, 2015 ; 10639 >
+        au < exists ; 2016 ; Scandinavian Studies -- Volume 88, 2016 ; 11307 >
+
+    }
+
+}

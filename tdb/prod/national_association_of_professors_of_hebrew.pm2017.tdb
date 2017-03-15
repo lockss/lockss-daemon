@@ -1,0 +1,49 @@
+{
+  publisher <
+    name = National Association of Professors of Hebrew
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Hebrew Studies ;
+      issn = 0146-4094  ;
+      eissn = 2158-1681 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1990 ; Hebrew Studies -- Volume 31, 1990 ; 6603 >
+        au < exists ; 1991 ; Hebrew Studies -- Volume 32, 1991 ; 6602 >
+        au < exists ; 1992 ; Hebrew Studies -- Volume 33, 1992 ; 6601 >
+        au < exists ; 1993 ; Hebrew Studies -- Volume 34, 1993 ; 6600 >
+        au < exists ; 1994 ; Hebrew Studies -- Volume 35, 1994 ; 6599 >
+        au < exists ; 1995 ; Hebrew Studies -- Volume 36, 1995 ; 6598 >
+        au < exists ; 1996 ; Hebrew Studies -- Volume 37, 1996 ; 6597 >
+        au < exists ; 1997 ; Hebrew Studies -- Volume 38, 1997 ; 6596 >
+        au < exists ; 1998 ; Hebrew Studies -- Volume 39, 1998 ; 6595 >
+        au < exists ; 1999 ; Hebrew Studies -- Volume 40, 1999 ; 6594 >
+        au < exists ; 2000 ; Hebrew Studies -- Volume 41, 2000 ; 6593 >
+        au < exists ; 2001 ; Hebrew Studies -- Volume 42, 2001 ; 6584 >
+        au < exists ; 2002 ; Hebrew Studies -- Volume 43, 2002 ; 6585 >
+        au < exists ; 2003 ; Hebrew Studies -- Volume 44, 2003 ; 6586 >
+        au < exists ; 2004 ; Hebrew Studies -- Volume 45, 2004 ; 6587 >
+        au < exists ; 2005 ; Hebrew Studies -- Volume 46, 2005 ; 6588 >
+        au < exists ; 2006 ; Hebrew Studies -- Volume 47, 2006 ; 6589 >
+        au < exists ; 2007 ; Hebrew Studies -- Volume 48, 2007 ; 6590 >
+        au < exists ; 2008 ; Hebrew Studies -- Volume 49, 2008 ; 6591 >
+        au < exists ; 2009 ; Hebrew Studies -- Volume 50, 2009 ; 6592 >
+        au < exists ; 2010 ; Hebrew Studies -- Volume 51, 2010 ; 6567 >
+        au < exists ; 2011 ; Hebrew Studies -- Volume 52, 2011 ; 7831 >
+        au < exists ; 2012 ; Hebrew Studies -- Volume 53, 2012 ; 8524 >
+        au < exists ; 2013 ; Hebrew Studies -- Volume 54, 2013 ; 9437 >
+        au < exists ; 2014 ; Hebrew Studies -- Volume 55, 2014 ; 10255 >
+        au < exists ; 2015 ; Hebrew Studies -- Volume 56, 2015 ; 10850 >
+        au < exists ; 2016 ; Hebrew Studies -- Volume 57, 2016 ; 12225 >
+
+    }
+
+}

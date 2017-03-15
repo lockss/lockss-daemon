@@ -1,0 +1,92 @@
+{
+  publisher <
+    name = Comediantes
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Bulletin of the Comediantes ;
+      issn = 0007-5108  ;
+      eissn = 1944-0928  ;
+      issnl = 0007-5108
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1949 ; Bulletin of the Comediantes -- Volume 1, 1949 ; 6282 >
+        au < exists ; 1950 ; Bulletin of the Comediantes -- Volume 2, 1950 ; 6281 >
+        au < exists ; 1951 ; Bulletin of the Comediantes -- Volume 3, 1951 ; 6280 >
+        au < exists ; 1952 ; Bulletin of the Comediantes -- Volume 4, 1952 ; 6279 >
+        au < exists ; 1953 ; Bulletin of the Comediantes -- Volume 5, 1953 ; 6278 >
+        au < exists ; 1954 ; Bulletin of the Comediantes -- Volume 6, 1954 ; 6277 >
+        au < exists ; 1955 ; Bulletin of the Comediantes -- Volume 7, 1955 ; 6276 >
+        au < exists ; 1956 ; Bulletin of the Comediantes -- Volume 8, 1956 ; 6275 >
+        au < exists ; 1957 ; Bulletin of the Comediantes -- Volume 9, 1957 ; 6274 >
+        au < exists ; 1958 ; Bulletin of the Comediantes -- Volume 10, 1958 ; 6273 >
+        au < exists ; 1959 ; Bulletin of the Comediantes -- Volume 11, 1959 ; 6272 >
+        au < exists ; 1960 ; Bulletin of the Comediantes -- Volume 12, 1960 ; 6271 >
+        au < exists ; 1961 ; Bulletin of the Comediantes -- Volume 13, 1961 ; 6270 >
+        au < exists ; 1962-1963 ; Bulletin of the Comediantes -- Volume 14, 1962-1963 ; 6269 >
+        au < exists ; 1963 ; Bulletin of the Comediantes -- Volume 15, 1963 ; 6268 >
+        au < exists ; 1964 ; Bulletin of the Comediantes -- Volume 16, 1964 ; 6267 >
+        au < exists ; 1965 ; Bulletin of the Comediantes -- Volume 17, 1965 ; 6266 >
+        au < exists ; 1966 ; Bulletin of the Comediantes -- Volume 18, 1966 ; 6265 >
+        au < exists ; 1967 ; Bulletin of the Comediantes -- Volume 19, 1967 ; 6264 >
+        au < exists ; 1968 ; Bulletin of the Comediantes -- Volume 20, 1968 ; 6263 >
+        au < exists ; 1969 ; Bulletin of the Comediantes -- Volume 21, 1969 ; 6262 >
+        au < exists ; 1970 ; Bulletin of the Comediantes -- Volume 22, 1970 ; 6261 >
+        au < exists ; 1971 ; Bulletin of the Comediantes -- Volume 23, 1971 ; 6260 >
+        au < exists ; 1972 ; Bulletin of the Comediantes -- Volume 24, 1972 ; 6259 >
+        au < exists ; 1973 ; Bulletin of the Comediantes -- Volume 25, 1973 ; 6258 >
+        au < exists ; 1974 ; Bulletin of the Comediantes -- Volume 26, 1974 ; 6257 >
+        au < exists ; 1975 ; Bulletin of the Comediantes -- Volume 27, 1975 ; 6256 >
+        au < exists ; 1976 ; Bulletin of the Comediantes -- Volume 28, 1976 ; 6255 >
+        au < exists ; 1977 ; Bulletin of the Comediantes -- Volume 29, 1977 ; 6254 >
+        au < exists ; 1978 ; Bulletin of the Comediantes -- Volume 30, 1978 ; 6253 >
+        au < exists ; 1979 ; Bulletin of the Comediantes -- Volume 31, 1979 ; 6252 >
+        au < exists ; 1980 ; Bulletin of the Comediantes -- Volume 32, 1980 ; 6251 >
+        au < exists ; 1981 ; Bulletin of the Comediantes -- Volume 33, 1981 ; 6250 >
+        au < exists ; 1982 ; Bulletin of the Comediantes -- Volume 34, 1982 ; 6249 >
+        au < exists ; 1983 ; Bulletin of the Comediantes -- Volume 35, 1983 ; 6248 >
+        au < exists ; 1984 ; Bulletin of the Comediantes -- Volume 36, 1984 ; 6247 >
+        au < exists ; 1985 ; Bulletin of the Comediantes -- Volume 37, 1985 ; 6246 >
+        au < exists ; 1986 ; Bulletin of the Comediantes -- Volume 38, 1986 ; 6245 >
+        au < exists ; 1987 ; Bulletin of the Comediantes -- Volume 39, 1987 ; 6244 >
+        au < exists ; 1988 ; Bulletin of the Comediantes -- Volume 40, 1988 ; 6243 >
+        au < exists ; 1989 ; Bulletin of the Comediantes -- Volume 41, 1989 ; 6242 >
+        au < exists ; 1990 ; Bulletin of the Comediantes -- Volume 42, 1990 ; 6241 >
+        au < exists ; 1991 ; Bulletin of the Comediantes -- Volume 43, 1991 ; 6240 >
+        au < exists ; 1992 ; Bulletin of the Comediantes -- Volume 44, 1992 ; 6239 >
+        au < exists ; 1993 ; Bulletin of the Comediantes -- Volume 45, 1993 ; 6238 >
+        au < exists ; 1994 ; Bulletin of the Comediantes -- Volume 46, 1994 ; 6237 >
+        au < exists ; 1995 ; Bulletin of the Comediantes -- Volume 47, 1995 ; 6236 >
+        au < exists ; 1996 ; Bulletin of the Comediantes -- Volume 48, 1996 ; 6235 >
+        au < exists ; 1997 ; Bulletin of the Comediantes -- Volume 49, 1997 ; 6234 >
+        au < exists ; 1998 ; Bulletin of the Comediantes -- Volume 50, 1998 ; 6233 >
+        au < exists ; 1999 ; Bulletin of the Comediantes -- Volume 51, 1999 ; 6232 >
+        au < exists ; 2000 ; Bulletin of the Comediantes -- Volume 52, 2000 ; 6231 >
+        au < exists ; 2001 ; Bulletin of the Comediantes -- Volume 53, 2001 ; 6230 >
+        au < exists ; 2002 ; Bulletin of the Comediantes -- Volume 54, 2002 ; 6229 >
+        au < exists ; 2003 ; Bulletin of the Comediantes -- Volume 55, 2003 ; 6228 >
+        au < exists ; 2004 ; Bulletin of the Comediantes -- Volume 56, 2004 ; 6227 >
+        au < exists ; 2005 ; Bulletin of the Comediantes -- Volume 57, 2005 ; 6226 >
+        au < exists ; 2006 ; Bulletin of the Comediantes -- Volume 58, 2006 ; 6225 >
+        au < exists ; 2007 ; Bulletin of the Comediantes -- Volume 59, 2007 ; 6224 >
+        au < exists ; 2008 ; Bulletin of the Comediantes -- Volume 60, 2008 ; 6223 >
+        au < exists ; 2009 ; Bulletin of the Comediantes -- Volume 61, 2009 ; 5047 >
+        au < exists ; 2010 ; Bulletin of the Comediantes -- Volume 62, 2010 ; 6443 >
+        au < exists ; 2011 ; Bulletin of the Comediantes -- Volume 63, 2011 ; 7430 >
+        au < exists ; 2012 ; Bulletin of the Comediantes -- Volume 64, 2012 ; 8419 >
+        au < exists ; 2013 ; Bulletin of the Comediantes -- Volume 65, 2013 ; 9244 >
+        au < exists ; 2014 ; Bulletin of the Comediantes -- Volume 66, 2014 ; 10206 >
+        au < exists ; 2015 ; Bulletin of the Comediantes -- Volume 67, 2015 ; 10772 >
+        au < exists ; 2016 ; Bulletin of the Comediantes -- Volume 68, 2016 ; 11348 >
+
+    }
+
+}

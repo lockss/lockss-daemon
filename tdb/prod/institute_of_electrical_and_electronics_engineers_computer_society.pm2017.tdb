@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = Institute of Electrical and Electronics Engineers Computer Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = IEEE Annals of the History of Computing ;
+      issn = 1058-6180  ;
+      eissn = 1934-1547  ;
+      issnl = 1058-6180
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; IEEE Annals of the History of Computing -- Volume 30, 2008 ; 3613 >
+        au < exists ; 2009 ; IEEE Annals of the History of Computing -- Volume 31, 2009 ; 4338 >
+        au < exists ; 2010 ; IEEE Annals of the History of Computing -- Volume 32, 2010 ; 6448 >
+        au < exists ; 2011 ; IEEE Annals of the History of Computing -- Volume 33, 2011 ; 6998 >
+        au < exists ; 2012 ; IEEE Annals of the History of Computing -- Volume 34, 2012 ; 8112 >
+        au < exists ; 2013 ; IEEE Annals of the History of Computing -- Volume 35, 2013 ; 9316 >
+        au < exists ; 2014 ; IEEE Annals of the History of Computing -- Volume 36, 2014 ; 10274 >
+        au < exists ; 2015 ; IEEE Annals of the History of Computing -- Volume 37, 2015 ; 10510 >
+        au < exists ; 2016 ; IEEE Annals of the History of Computing -- Volume 38, 2016 ; 11045 >
+
+    }
+
+}

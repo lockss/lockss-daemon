@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = George Washington University, Institute for European, Russian, and Eurasian Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Demokratizatsiya: The Journal of Post-Soviet Democratization ;
+      issn = 1074-6846  ;
+      eissn = 1940-4603  ;
+      issnl = 1074-6846
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2015 ; Demokratizatsiya: The Journal of Post-Soviet Democratization -- Volume 23, 2015 ; 10564 >
+        au < exists ; 2016 ; Demokratizatsiya: The Journal of Post-Soviet Democratization -- Volume 24, 2016 ; 10978 >
+        au < exists ; 2017 ; Demokratizatsiya: The Journal of Post-Soviet Democratization -- Volume 25, 2017 ; 12378 >
+
+    }
+
+}

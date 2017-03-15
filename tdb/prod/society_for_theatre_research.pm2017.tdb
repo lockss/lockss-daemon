@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Society for Theatre Research
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Theatre Notebook ;
+      issn = 0040-5523  ;
+      eissn = 2051-8358 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; Theatre Notebook -- Volume 67, 2013 ; 8953 >
+        au < exists ; 2014 ; Theatre Notebook -- Volume 68, 2014 ; 10057 >
+        au < exists ; 2015 ; Theatre Notebook -- Volume 69, 2015 ; 10717 >
+        au < exists ; 2016 ; Theatre Notebook -- Volume 70, 2016 ; 12188 >
+
+    }
+
+}

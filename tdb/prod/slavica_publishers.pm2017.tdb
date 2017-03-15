@@ -1,0 +1,118 @@
+{
+  publisher <
+    name = Slavica Publishers
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Slavic Linguistics ;
+      issn = 1543-0391  ;
+      eissn = 1068-2090  ;
+      issnl = 1068-2090
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Journal of Slavic Linguistics -- Volume 16, 2008 ; 4113 >
+        au < exists ; 2009 ; Journal of Slavic Linguistics -- Volume 17, 2009 ; 5739 >
+        au < exists ; 2010 ; Journal of Slavic Linguistics -- Volume 18, 2010 ; 6104 >
+        au < exists ; 2011 ; Journal of Slavic Linguistics -- Volume 19, 2011 ; 7566 >
+        au < exists ; 2012 ; Journal of Slavic Linguistics -- Volume 20, 2012 ; 8611 >
+        au < exists ; 2013 ; Journal of Slavic Linguistics -- Volume 21, 2013 ; 9275 >
+        au < exists ; 2014 ; Journal of Slavic Linguistics -- Volume 22, 2014 ; 10089 >
+        au < exists ; 2015 ; Journal of Slavic Linguistics -- Volume 23, 2015 ; 10694 >
+        au < exists ; 2016 ; Journal of Slavic Linguistics -- Volume 24, 2016 ; 11335 >
+
+    }
+    {
+    title <
+      name = Kritika: Explorations in Russian and Eurasian History ;
+      issn = 1531-023X  ;
+      eissn = 1538-5000  ;
+      issnl = 1531-023X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Kritika: Explorations in Russian and Eurasian History -- Volume 1, 2000 (New Series) ; 3488 >
+        au < exists ; 2001 ; Kritika: Explorations in Russian and Eurasian History -- Volume 2, 2001 (New Series) ; 3487 >
+        au < exists ; 2002 ; Kritika: Explorations in Russian and Eurasian History -- Volume 3, 2002 (New Series) ; 363 >
+        au < exists ; 2003 ; Kritika: Explorations in Russian and Eurasian History -- Volume 4, 2003 (New Series) ; 826 >
+        au < exists ; 2004 ; Kritika: Explorations in Russian and Eurasian History -- Volume 5, 2004 (New Series) ; 2435 >
+        au < exists ; 2005 ; Kritika: Explorations in Russian and Eurasian History -- Volume 6, 2005 (New Series) ; 2690 >
+        au < exists ; 2006 ; Kritika: Explorations in Russian and Eurasian History -- Volume 7, 2006 ; 2952 >
+        au < exists ; 2007 ; Kritika: Explorations in Russian and Eurasian History -- Volume 8, 2007 (New Series) ; 3297 >
+        au < exists ; 2008 ; Kritika: Explorations in Russian and Eurasian History -- Volume 9, 2008 (New Series) ; 3656 >
+        au < exists ; 2009 ; Kritika: Explorations in Russian and Eurasian History -- Volume 10, 2009 (New Series) ; 4159 >
+        au < exists ; 2010 ; Kritika: Explorations in Russian and Eurasian History -- Volume 11, 2010 (New Series) ; 5757 >
+        au < exists ; 2011 ; Kritika: Explorations in Russian and Eurasian History -- Volume 12, 2011 (New Series) ; 6691 >
+        au < exists ; 2012 ; Kritika: Explorations in Russian and Eurasian History -- Volume 13, 2012 (New Series) ; 8010 >
+        au < exists ; 2013 ; Kritika: Explorations in Russian and Eurasian History -- Volume 14, 2013 (New Series) ; 8801 >
+        au < exists ; 2014 ; Kritika: Explorations in Russian and Eurasian History -- Volume 15, 2014 (New Series) ; 9731 >
+        au < exists ; 2015 ; Kritika: Explorations in Russian and Eurasian History --  Volume 16, 2015 (New Series) ; 10386 >
+        au < exists ; 2016 ; Kritika: Explorations in Russian and Eurasian History -- Volume 18, 2016 (New Series) ; 12447 >
+        au < exists ; 2016 ; Kritika: Explorations in Russian and Eurasian History -- Volume 17, 2016 (New Series) ; 11013 >
+
+    }
+    {
+    title <
+      name = Pushkin Review ;
+      issn = 1526-1476  ;
+      issnl = 1526-1476
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Pushkin Review -- Volume 14, 2011 ; 8078 >
+        au < exists ; 2012 ; Pushkin Review -- Volume 15, 2012 ; 9271 >
+        au < exists ; 2013-2014 ; Pushkin Review -- Volume 16-17, 2013-2014 ; 10202 >
+
+    }
+    {
+    title <
+      name = Region: Regional Studies of Russia, Eastern Europe, and Central Asia ;
+      issn = 2166-4307  ;
+      eissn = 2165-0659  ;
+      issnl = 2166-4307
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia -- Volume 1, 2012 ; 8106 >
+        au < exists ; 2013 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia -- Volume 2, 2013 ; 9274 >
+        au < exists ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia -- Volume 3, 2014 ; 9967 >
+        au < exists ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia -- Volume 4, 2015 ; 10496 >
+        au < exists ; 2016 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia -- Volume 5, 2016 ; 11085 >
+
+    }
+    {
+    title <
+      name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
+      issn = 1941-9511  ;
+      eissn = 0742-3330  ;
+      issnl = 0742-3330
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2006 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 20,  2006 ; 4114 >
+        au < exists ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 21,  2007 ; 5738 >
+        au < exists ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 22,  2008 ; 6993 >
+        au < exists ; 2009 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 23,  2009 ; 8077 >
+        au < exists ; 2010 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 24,  2010 ; 8637 >
+        au < exists ; 2011 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 25,  2011 ; 9567 >
+        au < exists ; 2012 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 26, 2012 ; 10773 >
+        au < exists ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies -- Volume 27, 2013 ; 11255 >
+
+    }
+
+}

@@ -1,0 +1,108 @@
+{
+  publisher <
+    name = University of Arizona
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Arizona Journal of Hispanic Cultural Studies ;
+      issn = 1096-2492  ;
+      eissn = 1934-9009  ;
+      issnl = 1096-2492
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1997 ; Arizona Journal of Hispanic Cultural Studies -- Volume 1, 1997 ; 5877 >
+        au < exists ; 1998 ; Arizona Journal of Hispanic Cultural Studies -- Volume 2, 1998 ; 5876 >
+        au < exists ; 1999 ; Arizona Journal of Hispanic Cultural Studies -- Volume 3, 1999 ; 5875 >
+        au < exists ; 2000 ; Arizona Journal of Hispanic Cultural Studies -- Volume 4, 2000 ; 5874 >
+        au < exists ; 2001 ; Arizona Journal of Hispanic Cultural Studies -- Volume 5, 2001 ; 5873 >
+        au < exists ; 2002 ; Arizona Journal of Hispanic Cultural Studies -- Volume 6, 2002 ; 5872 >
+        au < exists ; 2003 ; Arizona Journal of Hispanic Cultural Studies -- Volume 7, 2003 ; 5871 >
+        au < exists ; 2004 ; Arizona Journal of Hispanic Cultural Studies -- Volume 8, 2004 ; 5870 >
+        au < exists ; 2005 ; Arizona Journal of Hispanic Cultural Studies -- Volume 9, 2005 ; 5869 >
+        au < exists ; 2006 ; Arizona Journal of Hispanic Cultural Studies -- Volume 10, 2006 ; 3356 >
+        au < exists ; 2007 ; Arizona Journal of Hispanic Cultural Studies -- Volume 11, 2007 ; 3731 >
+        au < exists ; 2008 ; Arizona Journal of Hispanic Cultural Studies -- Volume 12, 2008 ; 4185 >
+        au < exists ; 2009 ; Arizona Journal of Hispanic Cultural Studies -- Volume 13, 2009 ; 5845 >
+        au < exists ; 2010 ; Arizona Journal of Hispanic Cultural Studies -- Volume 14, 2010 ; 7150 >
+        au < exists ; 2011 ; Arizona Journal of Hispanic Cultural Studies -- Volume 15, 2011 ; 8453 >
+        au < exists ; 2012 ; Arizona Journal of Hispanic Cultural Studies -- Volume 16, 2012 ; 9168 >
+        au < exists ; 2013 ; Arizona Journal of Hispanic Cultural Studies -- Volume 17, 2013 ; 10119 >
+        au < exists ; 2014 ; Arizona Journal of Hispanic Cultural Studies -- Volume 18, 2014 ; 10581 >
+        au < exists ; 2015 ; Arizona Journal of Hispanic Cultural Studies -- Volume 19, 2015 ; 11238 >
+
+    }
+    {
+    title <
+      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory ;
+      issn = 0004-1610  ;
+      eissn = 1558-9595  ;
+      issnl = 0004-1610
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1988 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 44, 1988 ; 7502 >
+        au < exists ; 1989 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 45, 1989 ; 7501 >
+        au < exists ; 1990 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 46, 1990 ; 7500 >
+        au < exists ; 1991 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 47, 1991 ; 7499 >
+        au < exists ; 1992 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 48, 1992 ; 7498 >
+        au < exists ; 1993 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 49, 1993 ; 7367 >
+        au < exists ; 1994 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 50, 1994 ; 7503 >
+        au < exists ; 1995 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 51, 1995 ; 7504 >
+        au < exists ; 1996 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 52, 1996 ; 7505 >
+        au < exists ; 1997 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 53, 1997 ; 7506 >
+        au < exists ; 1998 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 54, 1998 ; 7507 >
+        au < exists ; 1999 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 55, 1999 ; 7493 >
+        au < exists ; 2000 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 56, 2000 ; 7494 >
+        au < exists ; 2001 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 57, 2001 ; 7508 >
+        au < exists ; 2002 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 58, 2002 ; 7509 >
+        au < exists ; 2003 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 59, 2003 ; 7495 >
+        au < exists ; 2004 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 60, 2004 ; 7479 >
+        au < exists ; 2005 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 61, 2005 ; 7480 >
+        au < exists ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 62, 2006 ; 2991 >
+        au < exists ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 63, 2007 ; 3288 >
+        au < exists ; 2008 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 64, 2008 ; 3625 >
+        au < exists ; 2009 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 65, 2009 ; 4170 >
+        au < exists ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 66, 2010 ; 5789 >
+        au < exists ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 67, 2011 ; 6900 >
+        au < exists ; 2012 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 68, 2012 ; 8011 >
+        au < exists ; 2013 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 69, 2013 ; 8780 >
+        au < exists ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 70, 2014 ; 9761 >
+        au < exists ; 2015 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 71, 2015 ; 10454 >
+        au < exists ; 2016 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory -- Volume 72, 2016 ; 11066 >
+
+    }
+    {
+    title <
+      name = Journal of the Southwest ;
+      issn = 0894-8410  ;
+      eissn = 2158-1371  ;
+      issnl = 0894-8410
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Journal of the Southwest -- Volume 49, 2007 ; 7603 >
+        au < exists ; 2008 ; Journal of the Southwest -- Volume 50, 2008 ; 7597 >
+        au < exists ; 2009 ; Journal of the Southwest -- Volume 51, 2009 ; 7591 >
+        au < exists ; 2010 ; Journal of the Southwest -- Volume 52, 2010 ; 7596 >
+        au < exists ; 2011 ; Journal of the Southwest -- Volume 53, 2011 ; 7331 >
+        au < exists ; 2012 ; Journal of the Southwest -- Volume 54, 2012 ; 8421 >
+        au < exists ; 2013 ; Journal of the Southwest -- Volume 55, 2013 ; 9173 >
+        au < exists ; 2014 ; Journal of the Southwest -- Volume 56, 2014 ; 10077 >
+        au < exists ; 2015 ; Journal of the Southwest -- Volume 57, 2015 ; 10577 >
+        au < exists ; 2016 ; Journal of the Southwest -- Volume 58, 2016 ; 11176 >
+
+    }
+
+}

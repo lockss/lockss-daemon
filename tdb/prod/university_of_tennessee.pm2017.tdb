@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = University of Tennessee
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Restoration: Studies in English Literary Culture, 1660-1700 ;
+      issn = 1941-952X  ;
+      eissn = 0162-9905  ;
+      issnl = 0162-9905
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 32, 2008 ; 3749 >
+        au < exists ; 2009 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 33, 2009 ; 4368 >
+        au < exists ; 2010 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 34, 2010 ; 6618 >
+        au < exists ; 2011 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 35, 2011 ; 7232 >
+        au < exists ; 2012 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 36, 2012 ; 8418 >
+        au < exists ; 2013 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 37, 2013 ; 9131 >
+        au < exists ; 2014 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 38, 2014 ; 10045 >
+        au < exists ; 2015 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 39, 2015 ; 10819 >
+        au < exists ; 2016 ; Restoration: Studies in English Literary Culture, 1660-1700 -- Volume 40, 2016 ; 11189 >
+
+    }
+
+}

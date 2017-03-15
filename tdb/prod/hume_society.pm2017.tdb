@@ -1,0 +1,66 @@
+{
+  publisher <
+    name = Hume Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Hume Studies ;
+      issn = 1947-9921  ;
+      eissn = 0319-7336  ;
+      issnl = 0319-7336
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1975 ; Hume Studies -- Volume 1, 1975 ; 6102 >
+        au < exists ; 1976 ; Hume Studies -- Volume 2, 1976 ; 6101 >
+        au < exists ; 1977 ; Hume Studies -- Volume 3, 1977 ; 6100 >
+        au < exists ; 1978 ; Hume Studies -- Volume 4, 1978 ; 6099 >
+        au < exists ; 1979 ; Hume Studies -- Volume 5, 1979 ; 6098 >
+        au < exists ; 1980 ; Hume Studies -- Volume 6, 1980 ; 6097 >
+        au < exists ; 1981 ; Hume Studies -- Volume 7, 1981 ; 6096 >
+        au < exists ; 1982 ; Hume Studies -- Volume 8, 1982 ; 6095 >
+        au < exists ; 1983 ; Hume Studies -- Volume 9, 1983 ; 6094 >
+        au < exists ; 1984 ; Hume Studies -- Volume 10, 1984 ; 6093 >
+        au < exists ; 1985 ; Hume Studies -- 10th Anniversary Issue, 1985 ; 6106 >
+        au < exists ; 1985 ; Hume Studies -- Volume 11, 1985 ; 6092 >
+        au < exists ; 1986 ; Hume Studies -- Volume 12, 1986 ; 6091 >
+        au < exists ; 1987 ; Hume Studies -- Volume 13, 1987 ; 6090 >
+        au < exists ; 1988 ; Hume Studies -- Volume 14, 1988 ; 6089 >
+        au < exists ; 1989 ; Hume Studies -- Volume 15, 1989 ; 6088 >
+        au < exists ; 1990 ; Hume Studies -- Volume 16, 1990 ; 6087 >
+        au < exists ; 1991 ; Hume Studies -- Volume 17, 1991 ; 6086 >
+        au < exists ; 1992 ; Hume Studies -- Volume 18, 1992 ; 6085 >
+        au < exists ; 1993 ; Hume Studies -- Volume 19, 1993 ; 6084 >
+        au < exists ; 1994 ; Hume Studies -- Volume 20, 1994 ; 6083 >
+        au < exists ; 1995 ; Hume Studies -- Volume 21, 1995 ; 6082 >
+        au < exists ; 1996 ; Hume Studies -- Volume 22, 1996 ; 6081 >
+        au < exists ; 1997 ; Hume Studies -- Volume 23, 1997 ; 6080 >
+        au < exists ; 1998 ; Hume Studies -- Volume 24, 1998 ; 6079 >
+        au < exists ; 1999 ; Hume Studies -- Volume 25, 1999 ; 6078 >
+        au < exists ; 2000 ; Hume Studies -- Volume 26, 2000 ; 6077 >
+        au < exists ; 2001 ; Hume Studies -- Volume 27, 2001 ; 6076 >
+        au < exists ; 2002 ; Hume Studies -- Volume 28, 2002 ; 6075 >
+        au < exists ; 2003 ; Hume Studies -- Volume 29, 2003 ; 6074 >
+        au < exists ; 2004 ; Hume Studies -- Volume 30, 2004 ; 6073 >
+        au < exists ; 2005 ; Hume Studies -- Volume 31, 2005 ; 6072 >
+        au < exists ; 2006 ; Hume Studies -- Volume 32, 2006 ; 6071 >
+        au < exists ; 2007 ; Hume Studies -- Volume 33, 2007 ; 6070 >
+        au < exists ; 2008 ; Hume Studies -- Volume 34, 2008 ; 5684 >
+        au < exists ; 2009 ; Hume Studies -- Volume 35, 2009 ; 6632 >
+        au < exists ; 2010 ; Hume Studies -- Volume 36, 2010 ; 7387 >
+        au < exists ; 2011 ; Hume Studies -- Volume 37, 2011 ; 8465 >
+        au < exists ; 2012 ; Hume Studies -- Volume 38, 2012 ; 9278 >
+        au < exists ; 2013 ; Hume Studies -- Volume 39, 2013 ; 10153 >
+        au < exists ; 2014 ; Hume Studies -- Volume 40, 2014 ; 10952 >
+        au < exists ; 2015 ; Hume Studies -- Volume 41, 2015 ; 12500 >
+
+    }
+
+}

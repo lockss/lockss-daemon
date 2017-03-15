@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Renaissance Society of America
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Renaissance Quarterly ;
+      issn = 0034-4338  ;
+      eissn = 1935-0236  ;
+      issnl = 0034-4338
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005 ; Renaissance Quarterly -- Volume 58, 2005 ; 3490 >
+        au < exists ; 2006 ; Renaissance Quarterly -- Volume 59, 2006 ; 3489 >
+        au < exists ; 2007 ; Renaissance Quarterly -- Volume 60, 2007 ; 3300 >
+        au < exists ; 2008 ; Renaissance Quarterly -- Volume 61, 2008 ; 3660 >
+
+    }
+
+}

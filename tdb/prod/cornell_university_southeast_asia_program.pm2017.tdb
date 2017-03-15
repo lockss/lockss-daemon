@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = Cornell University Southeast Asia Program
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Indonesia ;
+      issn = 0019-7289  ;
+      issnl = 0019-7289
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Indonesia -- Number 94, October 2012 ; 8500 >
+        au < exists ; 2012 ; Indonesia -- Number 93, April 2012 ; 8278 >
+        au < exists ; 2013 ; Indonesia -- Number 96, October 2013 ; 9355 >
+        au < exists ; 2013 ; Indonesia -- Number 95, April 2013 ; 9111 >
+        au < exists ; 2014 ; Indonesia -- Number 98, October 2014 ; 10240 >
+        au < exists ; 2014 ; Indonesia -- Number 97, April 2014 ; 10060 >
+        au < exists ; 2015 ; Indonesia -- Number 99, April 2015 ; 10637 >
+        au < exists ; 2015 ; Indonesia -- Number 100, October 2015 ; 10899 >
+        au < exists ; 2016 ; Indonesia -- Number 102, October 2016 ; 12334 >
+        au < exists ; 2016 ; Indonesia -- Number 101, April 2016 ; 11355 >
+
+    }
+
+}

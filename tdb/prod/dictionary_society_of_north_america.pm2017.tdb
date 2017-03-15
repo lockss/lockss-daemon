@@ -1,0 +1,58 @@
+{
+  publisher <
+    name = Dictionary Society of North America
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Dictionaries: Journal of the Dictionary Society of North America ;
+      issn = 0197-6745  ;
+      eissn = 2160-5076 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1979 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 1, 1979 ; 7700 >
+        au < exists ; 1980/1981 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 3, 1980/1981 ; 7707 >
+        au < exists ; 1982 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 4, 1982 ; 7708 >
+        au < exists ; 1983 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 5, 1983 ; 7709 >
+        au < exists ; 1984 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 6, 1984 ; 7710 >
+        au < exists ; 1985 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 7, 1985 ; 7712 >
+        au < exists ; 1986 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 8, 1986 ; 7818 >
+        au < exists ; 1987 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 9, 1987 ; 7718 >
+        au < exists ; 1988 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 10, 1988 ; 7713 >
+        au < exists ; 1989 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 11, 1989 ; 7746 >
+        au < exists ; 1990 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 12, 1990 ; 7711 >
+        au < exists ; 1991 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 13, 1991 ; 7714 >
+        au < exists ; 1992 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 14, 1992/93 ; 7762 >
+        au < exists ; 1994 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 15, 1994 ; 7763 >
+        au < exists ; 1995 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 16, 1995 ; 7719 >
+        au < exists ; 1996 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 17, 1996 ; 7764 >
+        au < exists ; 1997 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 18, 1997 ; 7750 >
+        au < exists ; 1998 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 19, 1998 ; 7751 >
+        au < exists ; 1999 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 20, 1999 ; 7752 >
+        au < exists ; 2000 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 21, 2000 ; 7753 >
+        au < exists ; 2001 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 22, 2001 ; 7754 >
+        au < exists ; 2002 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 23, 2002 ; 7755 >
+        au < exists ; 2003 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 24, 2003 ; 7756 >
+        au < exists ; 2004 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 25, 2004 ; 7757 >
+        au < exists ; 2005 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 26, 2005 ; 7758 >
+        au < exists ; 2006 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 27, 2006 ; 7747 >
+        au < exists ; 2007 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 28, 2007 ; 7774 >
+        au < exists ; 2008 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 29, 2008 ; 7720 >
+        au < exists ; 2009 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 30, 2009 ; 7744 >
+        au < exists ; 2010 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 31, 2010 ; 6936 >
+        au < exists ; 2011 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 32, 2011 ; 7896 >
+        au < exists ; 2012 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 33, 2012 ; 8670 >
+        au < exists ; 2013 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 34, 2013 ; 9579 >
+        au < exists ; 2014 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 35, 2014 ; 10245 >
+        au < exists ; 2015 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 36, 2015 ; 10868 >
+        au < exists ; 2016 ; Dictionaries: Journal of the Dictionary Society of North America -- Number 37, 2016 ; 12290 >
+
+    }
+
+}

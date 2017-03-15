@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = George Washington University Institute for Ethnographic Research
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Anthropological Quarterly ;
+      issn = 1534-1518  ;
+      eissn = 0003-5491  ;
+      issnl = 0003-5491
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Anthropological Quarterly -- Volume 73, 2000 ; 42 >
+        au < exists ; 2001 ; Anthropological Quarterly -- Volume 74, 2001 ; 43 >
+        au < exists ; 2002 ; Anthropological Quarterly -- Volume 75, 2002 ; 44 >
+        au < exists ; 2003 ; Anthropological Quarterly -- Volume 76, 2003 ; 838 >
+        au < exists ; 2004 ; Anthropological Quarterly -- Volume 77, 2004 ; 1781 >
+        au < exists ; 2005 ; Anthropological Quarterly -- Volume 78, 2005 ; 2656 >
+        au < exists ; 2006 ; Anthropological Quarterly -- Volume 79, 2006 ; 2977 >
+        au < exists ; 2007 ; Anthropological Quarterly -- Volume 80, 2007 ; 3256 >
+        au < exists ; 2008 ; Anthropological Quarterly -- Volume 81, 2008 ; 3718 >
+        au < exists ; 2009 ; Anthropological Quarterly -- Volume 82, 2009 ; 4273 >
+        au < exists ; 2010 ; Anthropological Quarterly -- Volume 83, 2010 ; 5844 >
+        au < exists ; 2011 ; Anthropological Quarterly -- Volume 84, 2011 ; 6920 >
+        au < exists ; 2012 ; Anthropological Quarterly -- Volume 85, 2012 ; 8048 >
+        au < exists ; 2013 ; Anthropological Quarterly -- Volume 86, 2013 ; 8805 >
+        au < exists ; 2014 ; Anthropological Quarterly -- Volume 87, 2014 ; 9657 >
+        au < exists ; 2015 ; Anthropological Quarterly -- Volume 88, 2015 ; 10433 >
+        au < exists ; 2016 ; Anthropological Quarterly -- Volume 89, 2016 ; 11118 >
+
+    }
+
+}

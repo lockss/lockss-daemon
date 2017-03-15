@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Forum Modernes Theater
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Forum Modernes Theater ;
+      issn = 0930-5874  ;
+      issnl = 0930-5874
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2010 ; Forum Modernes Theater -- Volume 25, 2010 ; 8902 >
+        au < exists ; 2011 ; Forum Modernes Theater -- Volume 26, 2011 ; 10175 >
+        au < exists ; 2012 ; Forum Modernes Theater -- Volume 27, 2012 ; 12224 >
+
+    }
+
+}

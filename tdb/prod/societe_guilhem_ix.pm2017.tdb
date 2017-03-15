@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = Société Guilhem IX
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Tenso ;
+      issn = 0890-3352  ;
+      eissn = 1944-0146  ;
+      issnl = 0890-3352
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1985-1986 ; Tenso -- Volume 1, 1985-1986 ; 7266 >
+        au < exists ; 1987 ; Tenso -- Volume 2, 1987 ; 7262 >
+        au < exists ; 1987-1988 ; Tenso -- Volume 3, 1987-1988 ; 7169 >
+        au < exists ; 1988-1989 ; Tenso -- Volume 4, 1988-1989 ; 7236 >
+        au < exists ; 1989-1990 ; Tenso -- Volume 5, 1989-1990 ; 7237 >
+        au < exists ; 1990-1991 ; Tenso -- Volume 6, 1990-1991 ; 7238 >
+        au < exists ; 1991-1992 ; Tenso -- Volume 7, 1991-1992 ; 7239 >
+        au < exists ; 1992-1993 ; Tenso -- Volume 8, 1992-1993 ; 7240 >
+        au < exists ; 1993-1994 ; Tenso -- Volume 9, 1993-1994 ; 7241 >
+        au < exists ; 1994-1995 ; Tenso -- Volume 10, 1994-1995 ; 7242 >
+        au < exists ; 1995-1996 ; Tenso -- Volume 11, 1995-1996 ; 7243 >
+        au < exists ; 1996-1997 ; Tenso -- Volume 12, 1996-1997 ; 7244 >
+        au < exists ; 1997-1998 ; Tenso -- Volume 13, 1997-1998 ; 7245 >
+        au < exists ; 1999 ; Tenso -- Volume 14, 1999 ; 7246 >
+        au < exists ; 2000 ; Tenso -- Volume 15, 2000 ; 7247 >
+        au < exists ; 2001 ; Tenso -- Volume 16, 2001 ; 7248 >
+        au < exists ; 2002 ; Tenso -- Volume 17, 2002 ; 7235 >
+        au < exists ; 2003 ; Tenso -- Volume 18, 2003 ; 7256 >
+        au < exists ; 2004 ; Tenso -- Volume 19, 2004 ; 7257 >
+        au < exists ; 2005 ; Tenso -- Volume 20, 2005 ; 7258 >
+        au < exists ; 2006 ; Tenso -- Volume 21, 2006 ; 7267 >
+        au < exists ; 2007 ; Tenso -- Volume 22, 2007 ; 7259 >
+        au < exists ; 2008 ; Tenso -- Volume 23, 2008 ; 7260 >
+        au < exists ; 2009 ; Tenso -- Volume 24, 2009 ; 4253 >
+        au < exists ; 2010 ; Tenso -- Volume 25, 2010 ; 5769 >
+        au < exists ; 2011 ; Tenso -- Volume 26, 2011 ; 6858 >
+        au < exists ; 2012 ; Tenso -- Volume 27, 2012 ; 8159 >
+        au < exists ; 2013 ; Tenso -- Volume 28, 2013 ; 8842 >
+        au < exists ; 2014 ; Tenso -- Volume 29, 2014 ; 9813 >
+        au < exists ; 2015 ; Tenso -- Volume 30, 2015 ; 10513 >
+        au < exists ; 2016 ; Tenso -- Volume 31, 2016 ; 11000 >
+        au < exists ; 2017 ; Tenso -- Volume 32, 2017 ; 12423 >
+
+    }
+
+}

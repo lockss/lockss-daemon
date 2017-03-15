@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Society of Biblical Literature
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Biblical Literature ;
+      issn = 0021-9231  ;
+      eissn = 1934-3876  ;
+      issnl = 0021-9231
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Journal of Biblical Literature -- Volume 130, 2011 ; 7488 >
+        au < exists ; 2012 ; Journal of Biblical Literature -- Volume 131, 2012 ; 8150 >
+        au < exists ; 2013 ; Journal of Biblical Literature -- Volume 132, 2013 ; 8875 >
+        au < exists ; 2014 ; Journal of Biblical Literature -- Volume 133, 2014 ; 9796 >
+        au < exists ; 2015 ; Journal of Biblical Literature -- Volume 134, 2015 ; 10592 >
+        au < exists ; 2016 ; Journal of Biblical Literature -- Volume 135, 2016 ; 11087 >
+
+    }
+
+}

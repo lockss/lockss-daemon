@@ -1,0 +1,96 @@
+{
+  publisher <
+    name = Texas Tech University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Conradiana ;
+      issn = 0010-6356  ;
+      eissn = 1935-0252  ;
+      issnl = 0010-6356
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Conradiana -- Volume 39, 2007 ; 3414 >
+        au < exists ; 2008 ; Conradiana -- Volume 40, 2008 ; 3508 >
+        au < exists ; 2009 ; Conradiana -- Volume 41, 2009 ; 6351 >
+        au < exists ; 2010 ; Conradiana -- Volume 42, 2010 ; 7610 >
+        au < exists ; 2011 ; Conradiana -- Volume 43, 2011 ; 9556 >
+        au < exists ; 2012 ; Conradiana -- Volume 44, 2012 ; 9863 >
+        au < exists ; 2013 ; Conradiana -- Volume 45, 2013 ; 10231 >
+        au < exists ; 2014 ; Conradiana -- Volume 46, 2014 ; 10838 >
+
+    }
+    {
+    title <
+      name = Helios ;
+      issn = 0160-0923  ;
+      eissn = 1935-0228  ;
+      issnl = 0160-0923
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Helios -- Volume 34, 2007 ; 3440 >
+        au < exists ; 2008 ; Helios -- Volume 35, 2008 ; 3578 >
+        au < exists ; 2009 ; Helios -- Volume 36, 2009 ; 5695 >
+        au < exists ; 2010 ; Helios -- Volume 37, 2010 ; 6678 >
+        au < exists ; 2011 ; Helios -- Volume 38, 2011 ; 7612 >
+        au < exists ; 2012 ; Helios -- Volume 39, 2012 ; 9582 >
+        au < exists ; 2013 ; Helios -- Volume 40, 2013 ; 9583 >
+        au < exists ; 2014 ; Helios -- Volume 41, 2014 ; 10031 >
+        au < exists ; 2015 ; Helios -- Volume 42, 2015 ; 10753 >
+        au < exists ; 2016 ; Helios -- Volume 43, 2016 ; 11396 >
+
+    }
+    {
+    title <
+      name = Intertexts ;
+      issn = 1092-0625  ;
+      eissn = 2156-5465  ;
+      issnl = 1092-0625
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Intertexts -- Volume 13, 2009 ; 6363 >
+        au < exists ; 2010 ; Intertexts -- Volume 14, 2010 ; 6574 >
+        au < exists ; 2011 ; Intertexts -- Volume 15, 2011 ; 7632 >
+        au < exists ; 2012 ; Intertexts -- Volume 16, 2012 ; 8605 >
+        au < exists ; 2013 ; Intertexts -- Volume 17, 2013 ; 9581 >
+        au < exists ; 2014 ; Intertexts -- Volume 18, 2014 ; 10169 >
+        au < exists ; 2015 ; Intertexts -- Volume 19, 2015 ; 11427 >
+
+    }
+    {
+    title <
+      name = William Carlos Williams Review ;
+      issn = 0196-6286  ;
+      eissn = 1935-0244  ;
+      issnl = 0196-6286
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2006 ; William Carlos Williams Review -- Volume 26, 2006 ; 3411 >
+        au < exists ; 2007 ; William Carlos Williams Review -- Volume 27, 2007 ; 3598 >
+        au < exists ; 2008 ; William Carlos Williams Review -- Volume 28, 2008 ; 7250 >
+        au < exists ; 2009 ; William Carlos Williams Review -- Volume 29, 2009 ; 8440 >
+        au < exists ; 2013 ; William Carlos Williams Review -- Volume 30, 2013 ; 9571 >
+        au < exists ; 2014 ; William Carlos Williams Review -- Volume 31, 2014 ; 10166 >
+        au < exists ; 2015 ; William Carlos Williams Review -- Volume 32, 2015 ; 12239 >
+        au < exists ; 2016 ; William Carlos Williams Review -- Volume 33, 2016 ; 12238 >
+
+    }
+
+}

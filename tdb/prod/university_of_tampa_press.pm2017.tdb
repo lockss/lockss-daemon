@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = University of Tampa Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Tampa Review ;
+      issn = 0896-064X  ;
+      issnl = 0896-064X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; Tampa Review -- 45/46, 2013 ; 9251 >
+        au < exists ; 2014 ; Tampa Review -- 49, 2014 ; 10152 >
+        au < exists ; 2014 ; Tampa Review -- 47/48, 2014 ; 9886 >
+        au < exists ; 2015 ; Tampa Review -- 50, 2015 ; 10801 >
+        au < exists ; 2016 ; Tampa Review -- 51/52, 2016 ; 11412 >
+        au < exists ; 2017 ; Tampa Review -- 53, 2017 ; 12357 >
+
+    }
+
+}
