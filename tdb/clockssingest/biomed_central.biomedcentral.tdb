@@ -1431,12 +1431,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Cost Effectiveness and Resource Allocation Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Cost Effectiveness and Resource Allocation Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Cost Effectiveness and Resource Allocation Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Cost Effectiveness and Resource Allocation Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Cost Effectiveness and Resource Allocation Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Cost Effectiveness and Resource Allocation Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Cost Effectiveness and Resource Allocation Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Cost Effectiveness and Resource Allocation Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Cost Effectiveness and Resource Allocation Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 ; >
 
@@ -3575,8 +3575,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 ; >
       au < finished ; finished ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 ; >
       au < frozen ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 ; >
-      au < down ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; Journal of Ovarian Research Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 ; >
 
@@ -3671,12 +3671,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Journal of Translational Medicine Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Translational Medicine Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Translational Medicine Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Journal of Translational Medicine Volume 13 [superseded] ; 13 ; >
 
@@ -3693,12 +3693,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1752-2897
 
       au < doNotProcess ; exists ; 2007 ; Journal of Trauma Management & Outcomes Volume 1 ; 1 ; >
-      au < down ; exists ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 ; >
-      au < down ; exists ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 ; >
-      au < down ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 ; >
-      au < down ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 ; >
-      au < down ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 ; >
-      au < down ; exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 ; >
       au < superseded ; exists ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 [superseded] ; 9 ; >
 
@@ -4237,12 +4237,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.parasitesandvectors.com/
       param[journal_issn] = 1756-3305
 
-      au < down ; exists ; 2008 ; Parasites & Vectors Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; Parasites & Vectors Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2008 ; Parasites & Vectors Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; Parasites & Vectors Volume 2 ; 2 ; >
       au < finished ; finished ; 2010 ; Parasites & Vectors Volume 3 ; 3 ; >
       au < finished ; frozen ; 2011 ; Parasites & Vectors Volume 4 ; 4 ; >
-      au < down ; exists ; 2012 ; Parasites & Vectors Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; Parasites & Vectors Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2012 ; Parasites & Vectors Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2013 ; Parasites & Vectors Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; Parasites & Vectors Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2015 ; Parasites & Vectors Volume 8 ; 8 ; >
 
@@ -4263,12 +4263,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Particle and Fibre Toxicology Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Particle and Fibre Toxicology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 ; >
       au < finished ; finished ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 ; >
       au < finished ; finished ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Particle and Fibre Toxicology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Particle and Fibre Toxicology Volume 12 ; 12 ; >
 
@@ -4285,12 +4285,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1754-9493
 
       au < doNotProcess ; exists ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 ; >
-      au < down ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 ; >
-      au < down ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 ; >
       au < finished ; finished ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 ; >
       au < finished ; finished ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 ; >
-      au < down ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 ; >
-      au < down ; exists ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 ; >
       au < frozen ; exists ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 ; >
 
@@ -4311,12 +4311,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Pediatric Rheumatology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Pediatric Rheumatology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 ; >
       au < finished ; finished ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Pediatric Rheumatology Volume 13 [superseded] ; 13 ; >
 
@@ -4333,8 +4333,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.perioperativemedicinejournal.com/
       param[journal_issn] = 2047-0525
 
-      au < down ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Perioperative Medicine Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 ; >
 
@@ -4352,12 +4352,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 ; >
       au < finished ; finished ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 ; >
       au < superseded ; exists ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 [superseded] ; 10 ; >
 
@@ -4376,12 +4376,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Plant Methods Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2006 ; Plant Methods Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; Plant Methods Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Plant Methods Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Plant Methods Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Plant Methods Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Plant Methods Volume 5 ; 5 ; >
       au < finished ; finished ; 2010 ; Plant Methods Volume 6 ; 6 ; >
       au < finished ; frozen ; 2011 ; Plant Methods Volume 7 ; 7 ; >
-      au < down ; exists ; 2012 ; Plant Methods Volume 8 ; 8 ; >
-      au < down ; exists ; 2013 ; Plant Methods Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Plant Methods Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Plant Methods Volume 9 ; 9 ; >
       au < frozen ; exists ; 2014 ; Plant Methods Volume 10 ; 10 ; >
       au < superseded ; exists ; 2015 ; Plant Methods Volume 11 [superseded] ; 11 ; >
 
@@ -4402,12 +4402,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Population Health Metrics Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Population Health Metrics Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Population Health Metrics Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Population Health Metrics Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Population Health Metrics Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2008 ; Population Health Metrics Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Population Health Metrics Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 ; >
       au < finished ; frozen ; 2011 ; Population Health Metrics Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Population Health Metrics Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Population Health Metrics Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Population Health Metrics Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Population Health Metrics Volume 13 [superseded] ; 13 ; >
 
@@ -4428,12 +4428,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Proteome Science Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Proteome Science Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Proteome Science Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Proteome Science Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Proteome Science Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Proteome Science Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Proteome Science Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Proteome Science Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Proteome Science Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Proteome Science Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Proteome Science Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Proteome Science Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Proteome Science Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2012 ; Proteome Science Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Proteome Science Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Proteome Science Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Proteome Science Volume 13 [superseded] ; 13 ; >
 
@@ -4451,12 +4451,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Radiation Oncology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Radiation Oncology Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Radiation Oncology Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Radiation Oncology Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; Radiation Oncology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Radiation Oncology Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Radiation Oncology Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Radiation Oncology Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; Radiation Oncology Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Radiation Oncology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Radiation Oncology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Radiation Oncology Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; Radiation Oncology Volume 10 ; 10 ; >
 
@@ -4473,7 +4473,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2050-490X
       comment[moved] = to new platform
 
-      au < down ; exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 ; >
       au < frozen ; exists ; 2014 ; Regenerative Medicine Research Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2015 ; Regenerative Medicine Research Volume 3 ; 3 ; >
 
@@ -4494,12 +4494,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Reproductive Biology and Endocrinology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Reproductive Biology and Endocrinology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Reproductive Biology and Endocrinology Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 ; >
 
@@ -4519,12 +4519,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Reproductive Health Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Reproductive Health Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Reproductive Health Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Reproductive Health Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Reproductive Health Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Reproductive Health Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Reproductive Health Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Reproductive Health Volume 7 ; 7 ; >
       au < finished ; finished ; 2011 ; Reproductive Health Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Reproductive Health Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Reproductive Health Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; Reproductive Health Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Reproductive Health Volume 12 [superseded] ; 12 ; >
 
@@ -4590,12 +4590,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Retrovirology Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Retrovirology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Retrovirology Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Retrovirology Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Retrovirology Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Retrovirology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Retrovirology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Retrovirology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Retrovirology Volume 7 ; 7 ; >
       au < finished ; frozen ; 2011 ; Retrovirology Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Retrovirology Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Retrovirology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Retrovirology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Retrovirology Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Retrovirology Volume 11 ; 11 ; >
       au < doNotProcess ; exists ; 2015 ; Retrovirology Volume 12 ; 12 ; >
 
@@ -4655,12 +4655,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.sjtrem.com/
       param[journal_issn] = 1757-7241
 
-      au < down ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 ; >
-      au < down ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 ; >
-      au < down ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 ; >
-      au < down ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 ; >
-      au < down ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 ; >
-      au < down ; exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 ; >
       au < frozen ; exists ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 ; >
       au < superseded ; exists ; 2015 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 23 [superseded] ; 23 ; >
 
@@ -4678,12 +4678,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Scoliosis Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Scoliosis Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Scoliosis Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Scoliosis Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; Scoliosis Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Scoliosis Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Scoliosis Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Scoliosis Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Scoliosis Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Scoliosis Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Scoliosis Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Scoliosis Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Scoliosis Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Scoliosis Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; Scoliosis Volume 10 ; 10 ; >
 
@@ -4700,10 +4700,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1758-907X
       #stop publishing
 
-      au < down ; exists ; 2010 ; Silence Volume 1 ; 1 ; >
-      au < down ; exists ; 2011 ; Silence Volume 2 ; 2 ; >
-      au < down ; exists ; 2012 ; Silence Volume 3 ; 3 ; >
-      au < down ; exists ; 2013 ; Silence Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Silence Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2011 ; Silence Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Silence Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2013 ; Silence Volume 4 ; 4 ; >
       au < superseded ; exists ; 2014 ; Silence Volume 5 [to delete] ; 5 ; >
 
     }
@@ -4718,9 +4718,9 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.skeletalmusclejournal.com/
       param[journal_issn] = 2044-5040
 
-      au < down ; exists ; 2011 ; Skeletal Muscle Volume 1 ; 1 ; >
-      au < down ; exists ; 2012 ; Skeletal Muscle Volume 2 ; 2 ; >
-      au < down ; exists ; 2013 ; Skeletal Muscle Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2011 ; Skeletal Muscle Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2012 ; Skeletal Muscle Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Skeletal Muscle Volume 3 ; 3 ; >
       au < frozen ; exists ; 2014 ; Skeletal Muscle Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2015 ; Skeletal Muscle Volume 5 ; 5 ; >
 
@@ -4738,12 +4738,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Source Code for Biology and Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; Source Code for Biology and Medicine Volume 10 ; 10 ; >
 
@@ -4791,12 +4791,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 ; >
       au < finished ; finished ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 ; >
 
@@ -4813,8 +4813,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.systematicreviewsjournal.com/
       param[journal_issn] = 2046-4053
 
-      au < down ; exists ; 2012 ; Systematic Reviews Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Systematic Reviews Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Systematic Reviews Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Systematic Reviews Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Systematic Reviews Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2015 ; Systematic Reviews Volume 4 ; 4 ; >
 
@@ -4834,12 +4834,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Theoretical Biology and Medical Modelling Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Theoretical Biology and Medical Modelling Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Theoretical Biology and Medical Modelling Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 ; >
       au < finished ; frozen ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Theoretical Biology and Medical Modelling Volume 11 ; 11 ; >
       au < doNotProcess ; exists ; 2015 ; Theoretical Biology and Medical Modelling Volume 12 ; 12 ; >
 
@@ -4860,12 +4860,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Thrombosis Journal Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; Thrombosis Journal Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; Thrombosis Journal Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 ; >
       au < finished ; finished ; 2011 ; Thrombosis Journal Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Thrombosis Journal Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; Thrombosis Journal Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Thrombosis Journal Volume 12 ; 12 ; >
       au < superseded ; exists ; 2015 ; Thrombosis Journal Volume 13 [superseded] ; 13 ; >
 
@@ -4881,12 +4881,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.thyroidresearchjournal.com/
       param[journal_issn] = 1756-6614
 
-      au < down ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 ; >
-      au < down ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 ; >
-      au < down ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 ; >
-      au < down ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 ; >
-      au < down ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 ; >
-      au < down ; exists ; 2013 ; Thyroid Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2008 ; Thyroid Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; Thyroid Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2010 ; Thyroid Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2011 ; Thyroid Research Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2012 ; Thyroid Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2013 ; Thyroid Research Volume 6 ; 6 ; >
       au < frozen ; exists ; 2014 ; Thyroid Research Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2015 ; Thyroid Research Volume 8 ; 8 ; >
 
@@ -4905,14 +4905,14 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 ; >
-      au < down ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 ; >
-      au < down ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 ; > #malformed
       au < doNotProcess ; doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 ; > #malformed
-      au < down ; exists ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 ; >
-      au < down ; exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 ; >
       au < finished ; finished ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 ; >
       au < doNotProcess ; exists ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 ; >
 
@@ -4929,7 +4929,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2047-9158
 
       au < finished ; finished ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 ; >
       au < superseded ; exists ; 2015 ; Translational Neurodegeneration Volume 4 [superseded] ; 4 ; >
 
@@ -4946,8 +4946,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.transplantationresearch.com/
       param[journal_issn] = 2047-1440
 
-      au < down ; exists ; 2012 ; Transplantation Research Volume 1 ; 1 ; >
-      au < down ; exists ; 2013 ; Transplantation Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2012 ; Transplantation Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2013 ; Transplantation Research Volume 2 ; 2 ; >
       au < frozen ; exists ; 2014 ; Transplantation Research Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2015 ; Transplantation Research Volume 4 ; 4 ; >
 
@@ -4973,12 +4973,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Trials Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; Trials Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; Trials Volume 8 ; 8 ; >
-      au < down ; exists ; 2008 ; Trials Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; Trials Volume 10 ; 10 ; >
-      au < down ; exists ; 2010 ; Trials Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; Trials Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; Trials Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; Trials Volume 11 ; 11 ; >
       au < finished ; frozen ; 2011 ; Trials Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; Trials Volume 13 ; 13 ; >
-      au < down ; exists ; 2013 ; Trials Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2012 ; Trials Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2013 ; Trials Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; Trials Volume 15 ; 15 ; >
       au < superseded ; exists ; 2015 ; Trials Volume 16 [superseded] ; 16 ; >
 
@@ -4994,11 +4994,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.vascularcell.com/
       param[journal_issn] = 2045-824X
 
-      au < down ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 ; >
-      au < down ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 ; >
-      au < down ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 ; >
-      au < down ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 ; >
-      au < down ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 ; >
       au < frozen ; exists ; 2014 ; Vascular Cell Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2015 ; Vascular Cell Volume 7 ; 7 ; >
 
@@ -5015,8 +5015,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1297-9716
 
       au < finished ; finished ; 2011 ; Veterinary Research Volume 42 ; 42 ; >
-      au < down ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 ; >
-      au < down ; exists ; 2013 ; Veterinary Research Volume 44 ; 44 ; >
+      au < frozen ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 ; >
+      au < frozen ; exists ; 2013 ; Veterinary Research Volume 44 ; 44 ; >
       au < frozen ; exists ; 2014 ; Veterinary Research Volume 45 ; 45 ; >
       au < doNotProcess ; exists ; 2015 ; Veterinary Research Volume 46 ; 46 ; >
 
@@ -5036,12 +5036,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Virology Journal Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Virology Journal Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Virology Journal Volume 4 ; 4 ; >
-      au < down ; exists ; 2008 ; Virology Journal Volume 5 ; 5 ; >
-      au < down ; exists ; 2009 ; Virology Journal Volume 6 ; 6 ; >
-      au < down ; exists ; 2010 ; Virology Journal Volume 7 ; 7 ; >
-      au < down ; exists ; 2011 ; Virology Journal Volume 8 ; 8 ; >
-      au < down ; exists ; 2012 ; Virology Journal Volume 9 ; 9 ; >
-      au < down ; exists ; 2013 ; Virology Journal Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; Virology Journal Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; Virology Journal Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; Virology Journal Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2011 ; Virology Journal Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; Virology Journal Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2013 ; Virology Journal Volume 10 ; 10 ; >
       au < frozen ; exists ; 2014 ; Virology Journal Volume 11 ; 11 ; >
       au < doNotProcess ; exists ; 2015 ; Virology Journal Volume 12 ; 12 ; >
 
@@ -5074,12 +5074,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
         param[base_url] = http://www.waojournal.org/
         param[journal_issn] = 1939-4551
 
-        au < down ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 ; >
+        au < frozen ; exists ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 ; >
-        au < down ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 ; >
+        au < frozen ; exists ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 ; >
         au < doNotProcess ; exists ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 ; >
         au < doNotProcess ; exists ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 ; >
-        au < down ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 ; >
+        au < frozen ; exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 ; >
         au < frozen ; exists ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 ; >
         au < doNotProcess ; exists ; 2015 ; World Allergy Organization Journal Volume 8 ; 8 ; >
       
@@ -5099,12 +5099,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; World Journal of Emergency Surgery Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; World Journal of Emergency Surgery Volume 2 ; 2 ; >
-      au < down ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 ; >
-      au < down ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 ; >
-      au < down ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 ; >
-      au < down ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 ; >
-      au < down ; exists ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 ; >
       au < frozen ; exists ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2015 ; World Journal of Emergency Surgery Volume 10 ; 10 ; >
 
@@ -5126,12 +5126,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; World Journal of Surgical Oncology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; World Journal of Surgical Oncology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; World Journal of Surgical Oncology Volume 5 ; 5 ; >
-      au < down ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 ; >
-      au < down ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 ; >
-      au < down ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 ; >
       au < finished ; frozen ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 ; >
-      au < down ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 ; >
-      au < down ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 ; >
       au < frozen ; exists ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; World Journal of Surgical Oncology Volume 13 ; 13 ; >
 

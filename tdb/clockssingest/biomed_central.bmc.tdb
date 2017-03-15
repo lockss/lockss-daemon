@@ -61,12 +61,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Biochemistry Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Biochemistry Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Biochemistry Volume 8 ; 8 ; >
-      au < down ; exists ; 2008 ; BMC Biochemistry Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; BMC Biochemistry Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; BMC Biochemistry Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; BMC Biochemistry Volume 10 ; 10 ; >
       au < finished ; finished ; 2010 ; BMC Biochemistry Volume 11 ; 11 ; >
       au < finished ; frozen ; 2011 ; BMC Biochemistry Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 ; >
-      au < down ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 ; >
       au < superseded ; exists ; 2015 ; BMC Biochemistry Volume 16 [superseded] ; 16 ; >
 
@@ -90,12 +90,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Bioinformatics Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Bioinformatics Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Bioinformatics Volume 8 ; 8 ; >
-      au < down ; exists ; 2008 ; BMC Bioinformatics Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; BMC Bioinformatics Volume 10 ; 10 ; >
-      au < down ; exists ; 2010 ; BMC Bioinformatics Volume 11 ; 11 ; >
-      au < down ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 ; >
-      au < down ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2008 ; BMC Bioinformatics Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; BMC Bioinformatics Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; BMC Bioinformatics Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; BMC Bioinformatics Volume 15 ; 15 ; >
       au < superseded ; exists ; 2015 ; BMC Bioinformatics Volume 16 [superseded] ; 16 ; >
 
@@ -305,12 +305,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Cell Biology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Cell Biology Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Cell Biology Volume 8 ; 8 ; >
-      au < down ; exists ; 2008 ; BMC Cell Biology Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; BMC Cell Biology Volume 10 ; 10 ; >
-      au < down ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; BMC Cell Biology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; BMC Cell Biology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 ; >
       au < finished ; frozen ; 2011 ; BMC Cell Biology Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 ; >
-      au < down ; exists ; 2013 ; BMC Cell Biology Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2013 ; BMC Cell Biology Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; BMC Cell Biology Volume 15 ; 15 ; >
       au < superseded ; exists ; 2015 ; BMC Cell Biology Volume 16 [superseded] ; 16 ; >
 
@@ -474,12 +474,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Developmental Biology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Developmental Biology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Developmental Biology Volume 7 ; 7 ; >
-      au < down ; exists ; 2008 ; BMC Developmental Biology Volume 8 ; 8 ; >
-      au < down ; exists ; 2009 ; BMC Developmental Biology Volume 9 ; 9 ; >
-      au < down ; exists ; 2010 ; BMC Developmental Biology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2008 ; BMC Developmental Biology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; BMC Developmental Biology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2010 ; BMC Developmental Biology Volume 10 ; 10 ; >
       au < finished ; frozen ; 2011 ; BMC Developmental Biology Volume 11 ; 11 ; >
-      au < down ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 ; >
-      au < down ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 ; >
       au < frozen ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 ; >
       au < superseded ; exists ; 2015 ; BMC Developmental Biology Volume 15 [superseded] ; 15 ; >
      
@@ -614,12 +614,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Evolutionary Biology Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Evolutionary Biology Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Evolutionary Biology Volume 7 ; 7 ; >
-      au < down ; exists ; 2008 ; BMC Evolutionary Biology Volume 8 ; 8 ; >
-      au < down ; exists ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 ; >
-      au < down ; exists ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 ; >
-      au < down ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 ; >
-      au < down ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 ; >
-      au < down ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2008 ; BMC Evolutionary Biology Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2013 ; BMC Evolutionary Biology Volume 13 ; 13 ; >
       au < frozen ; exists ; 2014 ; BMC Evolutionary Biology Volume 14 ; 14 ; >
       au < superseded ; exists ; 2015 ; BMC Evolutionary Biology Volume 15 [superseded] ; 15 ; >
 
@@ -700,12 +700,12 @@
       au < doNotProcess ; exists ; 2005 ; BMC Genetics Volume 6 ; 6 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Genetics Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Genetics Volume 8 ; 8 ; >
-      au < down ; exists ; 2008 ; BMC Genetics Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; BMC Genetics Volume 10 ; 10 ; >
-      au < down ; exists ; 2010 ; BMC Genetics Volume 11 ; 11 ; >
-      au < down ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; BMC Genetics Volume 13 ; 13 ; >
-      au < down ; exists ; 2013 ; BMC Genetics Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2008 ; BMC Genetics Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2009 ; BMC Genetics Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; BMC Genetics Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2011 ; BMC Genetics Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; BMC Genetics Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2013 ; BMC Genetics Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; BMC Genetics Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Genetics Volume 16 [superseded] ; 16 ; >
 
@@ -730,10 +730,10 @@
       au < doNotProcess ; exists ; 2006 ; BMC Genomics Volume 7 ; 7 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Genomics Volume 8 ; 8 ; >
       au < down ; exists ; 2008 ; BMC Genomics Volume 9 ; 9 ; >
-      au < down ; exists ; 2009 ; BMC Genomics Volume 10 ; 10 ; >
-      au < down ; exists ; 2010 ; BMC Genomics Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2009 ; BMC Genomics Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; BMC Genomics Volume 11 ; 11 ; >
       au < finished ; frozen ; 2011 ; BMC Genomics Volume 12 ; 12 ; >
-      au < down ; exists ; 2012 ; BMC Genomics Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2012 ; BMC Genomics Volume 13 ; 13 ; >
       au < down ; exists ; 2013 ; BMC Genomics Volume 14 ; 14 ; >
       au < frozen ; exists ; 2014 ; BMC Genomics Volume 15 ; 15 ; >
       au < doNotProcess ; exists ; 2015 ; BMC Genomics Volume 16 ; 16 ; >

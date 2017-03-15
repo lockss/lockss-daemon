@@ -950,7 +950,7 @@
         param[journal_issn] = 1877-6566
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 ; >
+        au < frozen ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 ; >
         au < superseded ; exists ; 2014 ; HUGO Journal Volume 8 [superseded] ; 8 ; >
         au < superseded ; exists ; 2015 ; HUGO Journal Volume 9 [superseded] ; 9 ; >
   
@@ -1446,7 +1446,7 @@
         param[journal_issn] = 1129-2369
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 ; >
+        au < frozen ; exists ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 ; >
         au < frozen ; exists ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 ; >
         au < doNotProcess ; exists ; 2015 ; The Journal of Headache and Pain Volume 16 ; 16 ; >
   
