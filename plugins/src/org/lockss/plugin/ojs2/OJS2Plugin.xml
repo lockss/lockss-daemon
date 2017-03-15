@@ -25,12 +25,12 @@ number:
 
 org.lockss.plugin.ojs2.ClockssOJS2Plugin
 ca.athabascau.plugin.jrp.JournalOfResearchPracticePlugin               (coppulpln, synergiespln?)
-org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin
-org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
-org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
-org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin
-org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
-        
+org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin     (deprecated)
+org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin          (deprecated)
+org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin   (deprecated)
+org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin (deprecated)
+org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin             (deprecated)
+
 Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, synergiespln
 -->
   <entry>
