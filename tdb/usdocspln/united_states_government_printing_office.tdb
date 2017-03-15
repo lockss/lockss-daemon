@@ -233,7 +233,7 @@
     au < released ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
     au < released ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
     au < released ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < exists ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
     au < expected ; 2017 ; Account of the Receipts and Expenditures of the United States 2017 ; https://www.gpo.gov/ ; 2017 >
 
@@ -285,7 +285,7 @@
     au < released ; 2014 ; Additional Government Publications 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Additional Government Publications 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Additional Government Publications 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Additional Government Publications 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Additional Government Publications 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -460,7 +460,7 @@
     au < released ; 2014 ; Congressional Bills 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Bills 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Bills 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Bills 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Bills 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -489,7 +489,7 @@
     au < released ; 2014 ; Congressional Calendars 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Calendars 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Calendars 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Calendars 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Calendars 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -527,7 +527,7 @@
     au < released ; 2014 ; Congressional Committee Prints 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Committee Prints 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Committee Prints 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Committee Prints 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Committee Prints 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -598,7 +598,7 @@
     au < released ; 2014 ; Congressional Documents 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Documents 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Documents 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Documents 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Documents 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -638,7 +638,7 @@
     au < released ; 2014 ; Congressional Hearings 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Hearings 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Hearings 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Hearings 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Hearings 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -673,7 +673,7 @@
     au < released ; 2014 ; Congressional Record 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Record 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Record 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Record 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Record 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -725,8 +725,8 @@
     au < released ; 2002 ; Congressional Record (Bound) 2002 ; http://www.gpo.gov/ ; 2002 >
     au < exists ; 2003 ; Congressional Record (Bound) 2003 ; http://www.gpo.gov/ ; 2003 >
     au < exists ; 2004 ; Congressional Record (Bound) 2004 ; http://www.gpo.gov/ ; 2004 >
-    au < exists ; 2005 ; Congressional Record (Bound) 2005 ; http://www.gpo.gov/ ; 2005 >
-    au < exists ; 2006 ; Congressional Record (Bound) 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < manifest ; 2005 ; Congressional Record (Bound) 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < manifest ; 2006 ; Congressional Record (Bound) 2006 ; http://www.gpo.gov/ ; 2006 >
     }
   }
 
@@ -771,7 +771,7 @@
     au < released ; 2014 ; Congressional Record Index 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Record Index 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Record Index 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Record Index 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Record Index 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -805,7 +805,7 @@
     au < released ; 2014 ; Congressional Reports 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Reports 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Reports 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Congressional Reports 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Congressional Reports 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -825,7 +825,7 @@
     au < released ; 2014 ; Daily Compilation of Presidential Documents 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Daily Compilation of Presidential Documents 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Daily Compilation of Presidential Documents 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Daily Compilation of Presidential Documents 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Daily Compilation of Presidential Documents 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -859,7 +859,7 @@
     au < released ; 2014 ; Economic Indicators 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Economic Indicators 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Economic Indicators 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Economic Indicators 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Economic Indicators 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -892,7 +892,7 @@
     au < released ; 2014 ; Economic Report of the President 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Economic Report of the President 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Economic Report of the President 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Economic Report of the President 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Economic Report of the President 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -948,7 +948,7 @@
     au < released ; 2014 ; Federal Register 2014 ; https://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Federal Register 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Federal Register 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Federal Register 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Federal Register 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1021,7 +1021,7 @@
     au < released ; 2014 ; History of Bills 2014 ; https://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; History of Bills 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; History of Bills 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; History of Bills 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; History of Bills 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1095,7 +1095,7 @@
     au < released ; 2014 ; List of CFR Sections Affected 2014 ; https://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; List of CFR Sections Affected 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; List of CFR Sections Affected 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; List of CFR Sections Affected 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; List of CFR Sections Affected 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1151,7 +1151,7 @@
     au < released ; 2014 ; Public and Private Laws 2014 ; https://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Public and Private Laws 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Public and Private Laws 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; Public and Private Laws 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; Public and Private Laws 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
@@ -1294,7 +1294,7 @@
     au < manifest ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 >
     au < manifest ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 >
-    au < expected ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < manifest ; 2017 ; United States Courts 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
 
