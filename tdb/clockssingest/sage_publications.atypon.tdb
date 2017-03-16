@@ -844,6 +844,12 @@
 
       #param[base_url] = http://alj.sagepub.com/
 
+      au < exists ; exists ; 2010 ; Alternative Law Journal Volume 35 ; 35 ; aljb ; >
+      au < exists ; exists ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb ; >
+      au < exists ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
+      au < exists ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
+      au < exists ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
+      au < exists ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
       au < manifest ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; aljb ; >
 
   }
@@ -4009,7 +4015,7 @@
         au < doNotProcess ; doNotProcess ; 2009 ; British Journal of Pain Volume 3 ; 3 ; bjpa ; >
         au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Pain Volume 4 ; 4 ; bjpa ; >
         au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Pain Volume 5 ; 5 ; bjpa ; >
-        au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Pain Volume 6 ; 6 ; bjpa ; >
+        au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Pain Volume 6 ; 6 ; bjpb ; >
         au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Pain Volume 7 ; 7 ; bjpb ; >
         au < doNotProcess ; doNotProcess ; 2014 ; British Journal of Pain Volume 8 ; 8 ; bjpb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Pain Volume 9 ; 9 ; bjpb ; >
@@ -5109,10 +5115,10 @@
 
         #param[base_url] = http://cde.sagepub.com/
 
-        au < doNotProcess ; doNotProcess ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; cdea ; >
-        au < doNotProcess ; doNotProcess ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; cdea ; >
-        au < doNotProcess ; doNotProcess ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; cdea ; >
-        au < doNotProcess ; doNotProcess ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; cdea ; >
+        au < doNotProcess ; doNotProcess ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; cdeb ; >
+        au < doNotProcess ; doNotProcess ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; cdeb ; >
+        au < doNotProcess ; doNotProcess ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 ; cdeb ; >
+        au < doNotProcess ; doNotProcess ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 ; cdeb ; >
         au < manifest ; exists ; 2016 ; Career Development and Transition for Exceptional Individuals Volume 39 ; 39 ; cdeb ; >
 
       }
@@ -7171,14 +7177,14 @@
       au < manifest ; exists ; 2005 ; Cornell Hospitality Quarterly Volume 46 ; 46 ; cqxa ; >
       au < manifest ; exists ; 2006 ; Cornell Hospitality Quarterly Volume 47 ; 47 ; cqxa ; >
       au < manifest ; exists ; 2007 ; Cornell Hospitality Quarterly Volume 48 ; 48 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Cornell Hospitality Quarterly Volume 49 ; 49 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Cornell Hospitality Quarterly Volume 51 ; 51 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Cornell Hospitality Quarterly Volume 52 ; 52 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; cqxa ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; cqxa ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Cornell Hospitality Quarterly Volume 49 ; 49 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Cornell Hospitality Quarterly Volume 51 ; 51 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Cornell Hospitality Quarterly Volume 52 ; 52 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Cornell Hospitality Quarterly Volume 53 ; 53 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Cornell Hospitality Quarterly Volume 54 ; 54 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Cornell Hospitality Quarterly Volume 55 ; 55 ; cqxb ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Cornell Hospitality Quarterly Volume 56 ; 56 ; cqxb ; >
       au < manifest ; exists ; 2016 ; Cornell Hospitality Quarterly Volume 57 ; 57 ; cqxb ; >
 
     }
@@ -8261,10 +8267,10 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; cbia ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; cbia ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 ; cbia ; >
-      au < doNotProcess ; doNotProcess ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; cbia ; >
-      au < doNotProcess ; doNotProcess ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 ; cbia ; >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; cbia ; >
-      au < doNotProcess ; doNotProcess ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; cbia ; >
+      au < doNotProcess ; doNotProcess ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; cbib ; >
+      au < doNotProcess ; doNotProcess ; 2012-2013 ; Currents in Biblical Research Volume 11 ; 11 ; cbib ; >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; Currents in Biblical Research Volume 12 ; 12 ; cbib ; >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; cbib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Currents in Biblical Research Volume 14 ; 14 ; cbib ; >
       au < manifest ; exists ; 2016-2017 ; Currents in Biblical Research Volume 15 ; 15 ; cbib ; >
 
@@ -10403,10 +10409,10 @@
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         # Previous issues are at the same url.
 
-        au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; cpra ; >
-        au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; cpra ; >
-        au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; cpra ; >
-        au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; cpra ; >
+        au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; cprc ; >
+        au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; cprc ; >
+        au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; cprc ; >
+        au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; cprc ; >
         au < testing ; exists ; 2016 ; European Journal of Preventive Cardiology Volume 23 ; 23 ; cprc ; >
 
       }
@@ -12318,13 +12324,13 @@
       au < manifest ; exists ; 2006 ; Global Health Promotion Volume 13 ; 13 ; peda ; >
       au < manifest ; exists ; 2007 ; Global Health Promotion Volume 14 ; 14 ; peda ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Global Health Promotion Volume 15 ; 15 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Global Health Promotion Volume 16 ; 16 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Global Health Promotion Volume 17 ; 17 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Global Health Promotion Volume 18 ; 18 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Global Health Promotion Volume 19 ; 19 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Global Health Promotion Volume 20 ; 20 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Global Health Promotion Volume 21 ; 21 ; peda ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Global Health Promotion Volume 22 ; 22 ; peda ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Global Health Promotion Volume 16 ; 16 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Global Health Promotion Volume 17 ; 17 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Global Health Promotion Volume 18 ; 18 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Global Health Promotion Volume 19 ; 19 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Global Health Promotion Volume 20 ; 20 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Global Health Promotion Volume 21 ; 21 ; pedb ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Global Health Promotion Volume 22 ; 22 ; pedb ; >
       au < manifest ; exists ; 2016 ; Global Health Promotion Volume 23 ; 23 ; pedb ; >
 
     }
@@ -41056,10 +41062,10 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Asia Pacific Business Review Volume 5 ; 5 ; abra ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Asia Pacific Business Review Volume 6 ; 6 ; abra ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Asia Pacific Business Review Volume 7 ; 7 ; abra ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Asia-Pacific Journal of Management Research and Innovation Volume 8 ; 8 ; abra ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; abra ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; abra ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; abra ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Asia-Pacific Journal of Management Research and Innovation Volume 8 ; 8 ; abrb ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; abrb ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; abrb ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; abrb ; >
     au < manifest ; exists ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; abrb ; >
 
     }
