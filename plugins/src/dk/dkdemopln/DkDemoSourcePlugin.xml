@@ -32,6 +32,10 @@
     </map>
   </entry>
   <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <!-- version available at creation -->
     <string>required_daemon_version</string>
     <string>1.68.0</string>

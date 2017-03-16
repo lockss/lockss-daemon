@@ -52,10 +52,6 @@
     </list>
   </entry>
   <entry>
-    <string>plugin_bulk_content</string>
-    <boolean>true</boolean>
-  </entry>  
-  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>

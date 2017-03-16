@@ -21,6 +21,10 @@
     <string>Parent Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Parent Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
