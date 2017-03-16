@@ -27,7 +27,7 @@
     au < crawling ; exists ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 1 ; 2005 ; >
     au < crawling ; exists ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 3 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 4 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 4 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 5 ; 2009 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 6 ; 2010 ; >
     au < finished ; manifest ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 7 ; 2011 ; reingest5.clockss.org:8082 >
@@ -52,7 +52,7 @@
     au < crawling ; exists ; 2005 ; Vascular Health and Risk Management Volume 1 ; 1 ; 2005 ; >
     au < crawling ; exists ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Vascular Health and Risk Management Volume 4 ; 4 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Vascular Health and Risk Management Volume 4 ; 4 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Vascular Health and Risk Management Volume 5 ; 5 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2011 ; Vascular Health and Risk Management Volume 7 ; 7 ; 2011 ; >
@@ -77,7 +77,7 @@
     au < crawling ; exists ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 1 ; 2005 ; >
     au < crawling ; exists ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 3 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 4 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 4 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 5 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 6 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 7 ; 2011 ; reingest1.clockss.org:8082 >
@@ -263,7 +263,7 @@
     param[journal_id] = 19
 
     au < crawling ; exists ; 2007 ; Drug Design, Development and Therapy Volume 1 ; 1 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2 ; 2008 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 3 ; 2009 ; >
     au < finished ; manifest ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 5 ; 2011 ; >
@@ -286,7 +286,7 @@
     param[journal_id] = 20
 
     au < crawling ; exists ; 2007 ; Patient Preference and Adherence Volume 1 ; 1 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; Patient Preference and Adherence Volume 2 ; 2 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Patient Preference and Adherence Volume 2 ; 2 ; 2008 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2009 ; Patient Preference and Adherence Volume 3 ; 3 ; 2009 ; >
     au < finished ; manifest ; 2010 ; Patient Preference and Adherence Volume 4 ; 4 ; 2010 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; Patient Preference and Adherence Volume 5 ; 5 ; 2011 ; >
@@ -308,7 +308,7 @@
     
     param[journal_id] = 23
 
-    au < crawling ; exists ; 2008 ; OncoTargets and Therapy Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; OncoTargets and Therapy Volume 1 ; 1 ; 2008 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; OncoTargets and Therapy Volume 2 ; 2 ; 2009 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; OncoTargets and Therapy Volume 3 ; 3 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; OncoTargets and Therapy Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 >
@@ -330,7 +330,7 @@
     
     param[journal_id] = 24
 
-    au < crawling ; exists ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Medical Devices: Evidence and Research Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Medical Devices: Evidence and Research Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2010 ; Medical Devices: Evidence and Research Volume 3 ; 3 ; 2010 ; >
     au < finished ; manifest ; 2011 ; Medical Devices: Evidence and Research Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
@@ -352,7 +352,7 @@
     
     param[journal_id] = 25
 
-    au < crawling ; exists ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2 ; 2009 ; >
     au < finished ; manifest ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 3 ; 2010 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 4 ; 2011 ; reingest4.clockss.org:8082 >
@@ -418,7 +418,7 @@
     
     param[journal_id] = 28
 
-    au < crawling ; exists ; 2008 ; Infection and Drug Resistance Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Infection and Drug Resistance Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2009 ; Infection and Drug Resistance Volume 2 ; 2 ; 2009 ; >
     au < finished ; manifest ; 2010 ; Infection and Drug Resistance Volume 3 ; 3 ; 2010 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; Infection and Drug Resistance Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 >
@@ -483,7 +483,7 @@
     
     param[journal_id] = 31
 
-    au < crawling ; exists ; 2008 ; Local and Regional Anesthesia Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Local and Regional Anesthesia Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2009 ; Local and Regional Anesthesia Volume 2 ; 2 ; 2009 ; >
     au < finished ; manifest ; 2010 ; Local and Regional Anesthesia Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; Local and Regional Anesthesia Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
@@ -505,7 +505,7 @@
     
     param[journal_id] = 32
 
-    au < crawling ; exists ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 1 ; 2008 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2 ; 2009 ; >
     au < crawling ; exists ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 3 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 4 ; 2011 ; >
@@ -527,7 +527,7 @@
     
     param[journal_id] = 33
 
-    au < crawling ; exists ; 2008 ; Clinical, Cosmetic and Investigational Dermatology Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Clinical, Cosmetic and Investigational Dermatology Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Clinical, Cosmetic and Investigational Dermatology Volume 2 ; 2 ; 2009 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; Clinical, Cosmetic and Investigational Dermatology Volume 3 ; 3 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Clinical, Cosmetic and Investigational Dermatology Volume 4 ; 4 ; 2011 ; >
@@ -549,7 +549,7 @@
     
     param[journal_id] = 34
 
-    au < crawling ; exists ; 2008 ; Clinical and Experimental Gastroenterology Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Clinical and Experimental Gastroenterology Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Clinical and Experimental Gastroenterology Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Clinical and Experimental Gastroenterology Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Clinical and Experimental Gastroenterology Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
@@ -571,7 +571,7 @@
     
     param[journal_id] = 35
 
-    au < crawling ; exists ; 2008 ; Journal of Inflammation Research Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Journal of Inflammation Research Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Journal of Inflammation Research Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2010 ; Journal of Inflammation Research Volume 3 ; 3 ; 2010 ; >
     au < finished ; manifest ; 2011 ; Journal of Inflammation Research Volume 4 ; 4 ; 2011 ; reingest1.clockss.org:8082 >
