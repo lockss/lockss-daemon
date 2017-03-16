@@ -940,12 +940,12 @@
         au < manifest ; 2008 ; The American Economist Volume 52 ; 52 ; aexb >
         au < manifest ; 2009 ; The American Economist Volume 53 ; 53 ; aexb >
         au < manifest ; 2009 ; The American Economist Volume 54 ; 54 ; aexb >
-        au < doesNotExist ; 2010 ; The American Economist Volume 55 ; 55 ; aexb >
-        au < doesNotExist ; 2011 ; The American Economist Volume 56 ; 56 ; aexb >
-        au < doesNotExist ; 2012 ; The American Economist Volume 57 ; 57 ; aexb >
-        au < doesNotExist ; 2013 ; The American Economist Volume 58 ; 58 ; aexb >
-        au < doesNotExist ; 2014 ; The American Economist Volume 59 ; 59 ; aexb >
-        au < doesNotExist ; 2015 ; The American Economist Volume 60 ; 60 ; aexb >
+        au < exists ; 2010 ; The American Economist Volume 55 ; 55 ; aexb >
+        au < exists ; 2011 ; The American Economist Volume 56 ; 56 ; aexb >
+        au < exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb >
+        au < exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb >
+        au < exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb >
+        au < exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb >
         au < manifest ; 2016 ; The American Economist Volume 61 ; 61 ; aexb >
   
     }
@@ -20785,9 +20785,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 ; jgpb >
         au < manifest ; 1994 ; Journal of Geriatric Psychiatry and Neurology Volume 7 ; 7 ; jgpb >
         au < manifest ; 1995 ; Journal of Geriatric Psychiatry and Neurology Volume 8 ; 8 ; jgpb >
-        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 ; jgpb >
-        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 ; jgpb >
-        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 ; jgpb >
+        au < exists ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 ; jgpb >
+        au < exists ; 1997 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 ; jgpb >
+        au < exists ; 1998 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 ; jgpb >
         au < manifest ; 1999 ; Journal of Geriatric Psychiatry and Neurology Volume 12 ; 12 ; jgpb >
         au < manifest ; 2000 ; Journal of Geriatric Psychiatry and Neurology Volume 13 ; 13 ; jgpb >
         au < manifest ; 2001 ; Journal of Geriatric Psychiatry and Neurology Volume 14 ; 14 ; jgpb >
@@ -30438,7 +30438,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1974 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 18 ; 18 ; prob >
         au < manifest ; 1975 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 19 ; 19 ; prob >
         au < manifest ; 1976 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 20 ; 20 ; prob >
-        au < doesNotExist ; 0 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 ; prob >
+        au < exists ; 1977 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 ; prob >
         au < manifest ; 1978 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 22 ; 22 ; prob >
         au < manifest ; 1979 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 23 ; 23 ; prob >
         au < manifest ; 1980 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 24 ; 24 ; prob >
@@ -31223,8 +31223,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1981 ; Progress in Human Geography Volume 5 ; 5 ; phga >
         au < manifest ; 1982 ; Progress in Human Geography Volume 6 ; 6 ; phga >
         au < manifest ; 1983 ; Progress in Human Geography Volume 7 ; 7 ; phga >
-        au < doesNotExist ; 0 ; Progress in Human Geography Volume 8 ; 8 ; phga >
-        au < doesNotExist ; 0 ; Progress in Human Geography Volume 9 ; 9 ; phga >
+        au < exists ; 1984 ; Progress in Human Geography Volume 8 ; 8 ; phga >
+        au < exists ; 1985 ; Progress in Human Geography Volume 9 ; 9 ; phga >
         au < doesNotExist ; 0 ; Progress in Human Geography Volume 10 ; 10 ; phga >
         au < manifest ; 1987 ; Progress in Human Geography Volume 11 ; 11 ; phgb >
         au < manifest ; 1988 ; Progress in Human Geography Volume 12 ; 12 ; phgb >
@@ -36012,10 +36012,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1921 ; Theology Volume 3 ; 3 ; tjxa >
         au < manifest ; 1922 ; Theology Volume 4 ; 4 ; tjxa >
         au < manifest ; 1922 ; Theology Volume 5 ; 5 ; tjxa >
-        au < doesNotExist ; 0 ; Theology Volume 6 ; 6 ; tjxa >
-        au < doesNotExist ; 0 ; Theology Volume 7 ; 7 ; tjxa >
+        au < exists ; 1923 ; Theology Volume 6 ; 6 ; tjxa >
+        au < exists ; 1924 ; Theology Volume 7 ; 7 ; tjxa >
         au < manifest ; 1924 ; Theology Volume 8 ; 8 ; tjxa >
-        au < doesNotExist ; 0 ; Theology Volume 9 ; 9 ; tjxa >
+        au < exists ; 1925 ; Theology Volume 9 ; 9 ; tjxa >
         au < manifest ; 1925 ; Theology Volume 10 ; 10 ; tjxa >
         au < manifest ; 1925 ; Theology Volume 11 ; 11 ; tjxa >
         au < manifest ; 1926 ; Theology Volume 12 ; 12 ; tjxa >
@@ -39760,9 +39760,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doNotProcess ; 1979 ; Australian Journal of Education Volume 23 ; 23 ; aeda >
       au < doNotProcess ; 1980 ; Australian Journal of Education Volume 24 ; 24 ; aeda >
       au < doNotProcess ; 1981 ; Australian Journal of Education Volume 25 ; 25 ; aeda >
-      au < doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; aeda >
-      au < doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; aeda >
-      au < doesNotExist ; 0 ; Australian Journal of Education Volume 0 ; 0 ; aeda >
+      au < doesNotExist ; 0 ; Australian Journal of Education Volume 26 ; 26 ; aeda >
+      au < doesNotExist ; 0 ; Australian Journal of Education Volume 27 ; 27 ; aeda >
+      au < doesNotExist ; 0 ; Australian Journal of Education Volume 28 ; 28 ; aeda >
       au < doNotProcess ; 1985 ; Australian Journal of Education Volume 29 ; 29 ; aeda >
       au < doNotProcess ; 1986 ; Australian Journal of Education Volume 30 ; 30 ; aeda >
       au < doNotProcess ; 1987 ; Australian Journal of Education Volume 31 ; 31 ; aeda >
