@@ -137,6 +137,12 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       // floating bottom banner announcing access to beta version of new site
       HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
       
+      // grey item on volume issue page, missing on some pages
+      HtmlNodeFilters.tagWithAttribute("li", "class", "tooltip"),
+      // links change over time
+      HtmlNodeFilters.tagWithAttribute("a", "class", "pubmed-link"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "id", "(citation|comment)s?-link"),
+      
       // Journal of Cloud Computing: Advances, Systems and Applications &
       // Boundary Value Problems some articles had clickable badge
       // XXX remove temporarily as this filter is too aggressive, removes interesting info

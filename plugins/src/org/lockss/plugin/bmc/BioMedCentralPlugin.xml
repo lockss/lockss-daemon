@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>30</string>
+        <string>31</string>
       </entry>
     </map>
   </entry>
@@ -195,6 +195,9 @@
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
-    <string>"(\.(css|js)|/images/.+\.(png|gif))(\?\d+)?$", 0</string>
+    <list>
+      <string>"(\.(css|js)|/images/.+\.(png|gif))(\?\d+)?$", 0</string>
+      <string>"/supplements/all$", 0</string>
+    </list>
   </entry>
 </map>
