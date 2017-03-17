@@ -30,7 +30,7 @@
         au < exists ; 2013 ; China Review Volume 13, 2013 ; 9063 >
         au < exists ; 2014 ; China Review Volume 14, 2014 ; 9893 >
         au < exists ; 2015 ; China Review Volume 15, 2015 ; 10596 >
-        au < exists ; 2016 ; China Review Volume 16, 2016 ; 10960 >
+        au < testing ; 2016 ; China Review Volume 16, 2016 ; 10960 >
         au < exists ; 2017 ; China Review Volume 17, 2017 ; 12432 >
 
     }
@@ -43,7 +43,7 @@
       attr[journal_id] = 0000
 
         au < exists ; 2015 ; Journal of Chinese Linguistics Volume 43, 2015 ; 10606 >
-        au < exists ; 2016 ; Journal of Chinese Linguistics Volume 44, 2016 ; 10961 >
+        au < testing ; 2016 ; Journal of Chinese Linguistics Volume 44, 2016 ; 10961 >
         au < exists ; 2017 ; Journal of Chinese Linguistics Volume 45, 2017 ; 12476 >
 
     }
