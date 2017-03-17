@@ -227,6 +227,9 @@ public class TestOJS2Plugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "j_id/article/download/23854/3563_files/3563_files/3563_files/3563_files", false, au);
     shouldCacheTest(ROOT_URL + "j_id/article/download/23854/3563_files/3563_files/3563_files/3563_files/3563_files/foo", false, au);
     
+    shouldCacheTest(ROOT_URL + "j_id/article/download/23854/3563_files/3563_files/1.gif", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/download/23854/3563_files/3563_files/3563_files/1.gif", false, au);
+    
     shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
         ROOT_URL + "index.php/j_id/article/view/123/456", true, au);
     shouldCacheTest(ROOT_URL + "plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=" +
