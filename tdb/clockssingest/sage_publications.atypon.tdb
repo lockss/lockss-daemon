@@ -844,12 +844,12 @@
 
       #param[base_url] = http://alj.sagepub.com/
 
-      au < exists ; exists ; 2010 ; Alternative Law Journal Volume 35 ; 35 ; aljb ; >
-      au < exists ; exists ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb ; >
-      au < exists ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
-      au < exists ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
-      au < exists ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
-      au < exists ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
+      au < manifest ; exists ; 2010 ; Alternative Law Journal Volume 35 ; 35 ; aljb ; >
+      au < manifest ; exists ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb ; >
+      au < manifest ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
+      au < manifest ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
+      au < manifest ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
+      au < manifest ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
       au < manifest ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; aljb ; >
 
   }
@@ -954,12 +954,12 @@
       au < manifest ; exists ; 2008 ; The American Economist Volume 52 ; 52 ; aexb ; >
       au < manifest ; exists ; 2009 ; The American Economist Volume 53 ; 53 ; aexb ; >
       au < manifest ; exists ; 2009 ; The American Economist Volume 54 ; 54 ; aexb ; >
-      au < exists ; exists ; 2010 ; The American Economist Volume 55 ; 55 ; aexb ; >
-      au < exists ; exists ; 2011 ; The American Economist Volume 56 ; 56 ; aexb ; >
-      au < exists ; exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb ; >
-      au < exists ; exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb ; >
-      au < exists ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
-      au < exists ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
+      au < manifest ; exists ; 2010 ; The American Economist Volume 55 ; 55 ; aexb ; >
+      au < manifest ; exists ; 2011 ; The American Economist Volume 56 ; 56 ; aexb ; >
+      au < manifest ; exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb ; >
+      au < manifest ; exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb ; >
+      au < manifest ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
+      au < manifest ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
       au < manifest ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; aexb ; >
 
   }
@@ -1529,7 +1529,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; American Politics Research Volume 42 ; 42 ; aprb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Politics Research Volume 43 ; 43 ; aprb ; >
       au < manifest ; exists ; 2016 ; American Politics Research Volume 44 ; 44 ; aprb ; >
-      au < exists ; exists ; 2017  ; American Politics Research Volume 45 ; 45 ; aprb ; >
+      au < manifest ; exists ; 2017  ; American Politics Research Volume 45 ; 45 ; aprb ; >
 
     }
 
@@ -6271,7 +6271,7 @@
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Communication Disorders Quarterly Volume 35 ; 35 ; cdqc ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; cdqc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Communication Disorders Quarterly Volume 37 ; 37 ; cdqc ; >
-      au < expected ; exists ; 2016-2017 ; Communication Disorders Quarterly Volume 38 ; 38 ; cdqc ; >
+      au < manifest ; exists ; 2016-2017 ; Communication Disorders Quarterly Volume 38 ; 38 ; cdqc ; >
 
     }
 
@@ -14315,7 +14315,7 @@
 
       #param[base_url] = http://jhd.sagepub.com/
 
-      au < exists ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
   }
 
   {
@@ -15707,42 +15707,42 @@
       au < manifest ; exists ; 1969 ; International Journal of Offender Therapy and Comparative Criminology Volume 13 ; 13 ; ijod ; >
       au < manifest ; exists ; 1970 ; International Journal of Offender Therapy and Comparative Criminology Volume 14 ; 14 ; ijod ; >
       au < manifest ; exists ; 1971 ; International Journal of Offender Therapy and Comparative Criminology Volume 15 ; 15 ; ijod ; >
-      au < exists ; exists ; 1972 ; International Journal of Offender Therapy and Comparative Criminology Volume 16 ; 16 ; ijoe ; >
-      au < exists ; exists ; 1973 ; International Journal of Offender Therapy and Comparative Criminology Volume 17 ; 17 ; ijoe ; >
-      au < exists ; exists ; 1974 ; International Journal of Offender Therapy and Comparative Criminology Volume 18 ; 18 ; ijoe ; >
-      au < exists ; exists ; 1975 ; International Journal of Offender Therapy and Comparative Criminology Volume 19 ; 19 ; ijoe ; >
-      au < exists ; exists ; 1976 ; International Journal of Offender Therapy and Comparative Criminology Volume 20 ; 20 ; ijoe ; >
-      au < exists ; exists ; 1977 ; International Journal of Offender Therapy and Comparative Criminology Volume 21 ; 21 ; ijoe ; >
-      au < exists ; exists ; 1978 ; International Journal of Offender Therapy and Comparative Criminology Volume 22 ; 22 ; ijoe ; >
-      au < exists ; exists ; 1979 ; International Journal of Offender Therapy and Comparative Criminology Volume 23 ; 23 ; ijoe ; >
-      au < exists ; exists ; 1980 ; International Journal of Offender Therapy and Comparative Criminology Volume 24 ; 24 ; ijoe ; >
-      au < exists ; exists ; 1981 ; International Journal of Offender Therapy and Comparative Criminology Volume 25 ; 25 ; ijoe ; >
-      au < exists ; exists ; 1982 ; International Journal of Offender Therapy and Comparative Criminology Volume 26 ; 26 ; ijoe ; >
-      au < exists ; exists ; 1983 ; International Journal of Offender Therapy and Comparative Criminology Volume 27 ; 27 ; ijoe ; >
-      au < exists ; exists ; 1984 ; International Journal of Offender Therapy and Comparative Criminology Volume 28 ; 28 ; ijoe ; >
-      au < exists ; exists ; 1985 ; International Journal of Offender Therapy and Comparative Criminology Volume 29 ; 29 ; ijoe ; >
-      au < exists ; exists ; 1986 ; International Journal of Offender Therapy and Comparative Criminology Volume 30 ; 30 ; ijoe ; >
-      au < exists ; exists ; 1987 ; International Journal of Offender Therapy and Comparative Criminology Volume 31 ; 31 ; ijoe ; >
-      au < exists ; exists ; 1988 ; International Journal of Offender Therapy and Comparative Criminology Volume 32 ; 32 ; ijoe ; >
-      au < exists ; exists ; 1989 ; International Journal of Offender Therapy and Comparative Criminology Volume 33 ; 33 ; ijoe ; >
-      au < exists ; exists ; 1990 ; International Journal of Offender Therapy and Comparative Criminology Volume 34 ; 34 ; ijoe ; >
-      au < exists ; exists ; 1991 ; International Journal of Offender Therapy and Comparative Criminology Volume 35 ; 35 ; ijoe ; >
-      au < exists ; exists ; 1992 ; International Journal of Offender Therapy and Comparative Criminology Volume 36 ; 36 ; ijoe ; >
-      au < exists ; exists ; 1993 ; International Journal of Offender Therapy and Comparative Criminology Volume 37 ; 37 ; ijoe ; >
-      au < exists ; exists ; 1994 ; International Journal of Offender Therapy and Comparative Criminology Volume 38 ; 38 ; ijoe ; >
-      au < exists ; exists ; 1995 ; International Journal of Offender Therapy and Comparative Criminology Volume 39 ; 39 ; ijoe ; >
-      au < exists ; exists ; 1996 ; International Journal of Offender Therapy and Comparative Criminology Volume 40 ; 40 ; ijoe ; >
-      au < exists ; exists ; 1997 ; International Journal of Offender Therapy and Comparative Criminology Volume 41 ; 41 ; ijoe ; >
-      au < exists ; exists ; 1998 ; International Journal of Offender Therapy and Comparative Criminology Volume 42 ; 42 ; ijoe ; >
-      au < exists ; exists ; 1999 ; International Journal of Offender Therapy and Comparative Criminology Volume 43 ; 43 ; ijoe ; >
-      au < exists ; exists ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 44 ; 44 ; ijoe ; >
-      au < exists ; exists ; 2001 ; International Journal of Offender Therapy and Comparative Criminology Volume 45 ; 45 ; ijoe ; >
-      au < exists ; exists ; 2002 ; International Journal of Offender Therapy and Comparative Criminology Volume 46 ; 46 ; ijoe ; >
-      au < exists ; exists ; 2003 ; International Journal of Offender Therapy and Comparative Criminology Volume 47 ; 47 ; ijoe ; >
-      au < exists ; exists ; 2004 ; International Journal of Offender Therapy and Comparative Criminology Volume 48 ; 48 ; ijoe ; >
-      au < exists ; exists ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 ; ijoe ; >
-      au < exists ; exists ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 ; ijoe ; >
-      au < exists ; exists ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 ; ijoe ; >
+      au < manifest ; exists ; 1972 ; International Journal of Offender Therapy and Comparative Criminology Volume 16 ; 16 ; ijoe ; >
+      au < manifest ; exists ; 1973 ; International Journal of Offender Therapy and Comparative Criminology Volume 17 ; 17 ; ijoe ; >
+      au < manifest ; exists ; 1974 ; International Journal of Offender Therapy and Comparative Criminology Volume 18 ; 18 ; ijoe ; >
+      au < manifest ; exists ; 1975 ; International Journal of Offender Therapy and Comparative Criminology Volume 19 ; 19 ; ijoe ; >
+      au < manifest ; exists ; 1976 ; International Journal of Offender Therapy and Comparative Criminology Volume 20 ; 20 ; ijoe ; >
+      au < manifest ; exists ; 1977 ; International Journal of Offender Therapy and Comparative Criminology Volume 21 ; 21 ; ijoe ; >
+      au < manifest ; exists ; 1978 ; International Journal of Offender Therapy and Comparative Criminology Volume 22 ; 22 ; ijoe ; >
+      au < manifest ; exists ; 1979 ; International Journal of Offender Therapy and Comparative Criminology Volume 23 ; 23 ; ijoe ; >
+      au < manifest ; exists ; 1980 ; International Journal of Offender Therapy and Comparative Criminology Volume 24 ; 24 ; ijoe ; >
+      au < manifest ; exists ; 1981 ; International Journal of Offender Therapy and Comparative Criminology Volume 25 ; 25 ; ijoe ; >
+      au < manifest ; exists ; 1982 ; International Journal of Offender Therapy and Comparative Criminology Volume 26 ; 26 ; ijoe ; >
+      au < manifest ; exists ; 1983 ; International Journal of Offender Therapy and Comparative Criminology Volume 27 ; 27 ; ijoe ; >
+      au < manifest ; exists ; 1984 ; International Journal of Offender Therapy and Comparative Criminology Volume 28 ; 28 ; ijoe ; >
+      au < manifest ; exists ; 1985 ; International Journal of Offender Therapy and Comparative Criminology Volume 29 ; 29 ; ijoe ; >
+      au < manifest ; exists ; 1986 ; International Journal of Offender Therapy and Comparative Criminology Volume 30 ; 30 ; ijoe ; >
+      au < manifest ; exists ; 1987 ; International Journal of Offender Therapy and Comparative Criminology Volume 31 ; 31 ; ijoe ; >
+      au < manifest ; exists ; 1988 ; International Journal of Offender Therapy and Comparative Criminology Volume 32 ; 32 ; ijoe ; >
+      au < manifest ; exists ; 1989 ; International Journal of Offender Therapy and Comparative Criminology Volume 33 ; 33 ; ijoe ; >
+      au < manifest ; exists ; 1990 ; International Journal of Offender Therapy and Comparative Criminology Volume 34 ; 34 ; ijoe ; >
+      au < manifest ; exists ; 1991 ; International Journal of Offender Therapy and Comparative Criminology Volume 35 ; 35 ; ijoe ; >
+      au < manifest ; exists ; 1992 ; International Journal of Offender Therapy and Comparative Criminology Volume 36 ; 36 ; ijoe ; >
+      au < manifest ; exists ; 1993 ; International Journal of Offender Therapy and Comparative Criminology Volume 37 ; 37 ; ijoe ; >
+      au < manifest ; exists ; 1994 ; International Journal of Offender Therapy and Comparative Criminology Volume 38 ; 38 ; ijoe ; >
+      au < manifest ; exists ; 1995 ; International Journal of Offender Therapy and Comparative Criminology Volume 39 ; 39 ; ijoe ; >
+      au < manifest ; exists ; 1996 ; International Journal of Offender Therapy and Comparative Criminology Volume 40 ; 40 ; ijoe ; >
+      au < manifest ; exists ; 1997 ; International Journal of Offender Therapy and Comparative Criminology Volume 41 ; 41 ; ijoe ; >
+      au < manifest ; exists ; 1998 ; International Journal of Offender Therapy and Comparative Criminology Volume 42 ; 42 ; ijoe ; >
+      au < manifest ; exists ; 1999 ; International Journal of Offender Therapy and Comparative Criminology Volume 43 ; 43 ; ijoe ; >
+      au < manifest ; exists ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 44 ; 44 ; ijoe ; >
+      au < manifest ; exists ; 2001 ; International Journal of Offender Therapy and Comparative Criminology Volume 45 ; 45 ; ijoe ; >
+      au < manifest ; exists ; 2002 ; International Journal of Offender Therapy and Comparative Criminology Volume 46 ; 46 ; ijoe ; >
+      au < manifest ; exists ; 2003 ; International Journal of Offender Therapy and Comparative Criminology Volume 47 ; 47 ; ijoe ; >
+      au < manifest ; exists ; 2004 ; International Journal of Offender Therapy and Comparative Criminology Volume 48 ; 48 ; ijoe ; >
+      au < manifest ; exists ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 ; ijoe ; >
+      au < manifest ; exists ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 ; ijoe ; >
+      au < manifest ; exists ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 ; ijoe ; >
       au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 ; ijoe ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; ijoe ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; ijoe ; >
@@ -15751,8 +15751,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 ; ijoe ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; ijoe ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 ; ijoe ; >
-      au < exists ; exists ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoe ; >
-      au < exists ; exists ; 2017  ; International Journal of Offender Therapy and Comparative Criminology Volume 61 ; 61 ; ijoe ; >
+      au < manifest ; exists ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoe ; >
+      au < manifest ; exists ; 2017  ; International Journal of Offender Therapy and Comparative Criminology Volume 61 ; 61 ; ijoe ; >
 
     }
 
@@ -17784,7 +17784,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Social Science Volume 7 ; 7 ; jaxc ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Social Science Volume 8 ; 8 ; jaxc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Social Science Volume 9 ; 9 ; jaxc ; >
-      au < exists ; exists ; 2016 ; Journal of Applied Social Science Volume 10 ; 10 ; jaxc ; >
+      au < manifest ; exists ; 2016 ; Journal of Applied Social Science Volume 10 ; 10 ; jaxc ; >
 
   }
 
@@ -18313,7 +18313,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Business and Technical Communication Volume 28 ; 28 ; jbtb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Business and Technical Communication Volume 29 ; 29 ; jbtb ; >
       au < manifest ; exists ; 2016 ; Journal of Business and Technical Communication Volume 30 ; 30 ; jbtb ; >
-      au < exists ; exists ; 2017  ; Journal of Business and Technical Communication Volume 31 ; 31 ; jbtb ; >
+      au < manifest ; exists ; 2017  ; Journal of Business and Technical Communication Volume 31 ; 31 ; jbtb ; >
 
     }
 
@@ -21184,9 +21184,9 @@
       au < manifest ; exists ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 ; jgpb ; >
       au < manifest ; exists ; 1994 ; Journal of Geriatric Psychiatry and Neurology Volume 7 ; 7 ; jgpb ; >
       au < manifest ; exists ; 1995 ; Journal of Geriatric Psychiatry and Neurology Volume 8 ; 8 ; jgpb ; >
-      au < exists ; exists ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 ; jgpb ; >
-      au < exists ; exists ; 1997 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 ; jgpb ; >
-      au < exists ; exists ; 1998 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 ; jgpb ; >
+      au < manifest ; exists ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 ; jgpb ; >
+      au < manifest ; exists ; 1997 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 ; jgpb ; >
+      au < manifest ; exists ; 1998 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 ; jgpb ; >
       au < manifest ; exists ; 1999 ; Journal of Geriatric Psychiatry and Neurology Volume 12 ; 12 ; jgpb ; >
       au < manifest ; exists ; 2000 ; Journal of Geriatric Psychiatry and Neurology Volume 13 ; 13 ; jgpb ; >
       au < manifest ; exists ; 2001 ; Journal of Geriatric Psychiatry and Neurology Volume 14 ; 14 ; jgpb ; >
@@ -21232,7 +21232,7 @@
       au < manifest ; exists ; 1974 ; Journal of Hand Surgery (European Volume) Volume 6 ; 6 ; jhsa ; >
       au < manifest ; exists ; 1975 ; Journal of Hand Surgery (European Volume) Volume 7 ; 7 ; jhsa ; >
       au < manifest ; exists ; 1976 ; Journal of Hand Surgery (European Volume) Volume 8 ; 8 ; jhsa ; >
-      au < exists ; exists ; 1977 ; Journal of Hand Surgery (European Volume) Volume 9 ; 9 ; jhsb ; >
+      au < manifest ; exists ; 1977 ; Journal of Hand Surgery (European Volume) Volume 9 ; 9 ; jhsb ; >
       au < manifest ; exists ; 1978 ; Journal of Hand Surgery (European Volume) Volume 10 ; 10 ; jhsb ; >
       au < manifest ; exists ; 1979 ; Journal of Hand Surgery (European Volume) Volume 11 ; 11 ; jhsb ; >
       au < manifest ; exists ; 1980 ; Journal of Hand Surgery (European Volume) Volume 12 ; 12 ; jhsb ; >
@@ -28518,42 +28518,42 @@
       au < manifest ; exists ; 1969 ; NASSP Bulletin Volume 53 ; 53 ; bulc ; >
       au < manifest ; exists ; 1970 ; NASSP Bulletin Volume 54 ; 54 ; bulc ; >
       au < manifest ; exists ; 1971 ; NASSP Bulletin Volume 55 ; 55 ; bulc ; >
-      au < exists ; exists ; 1972 ; NASSP Bulletin Volume 56 ; 56 ; buld ; >
-      au < exists ; exists ; 1973 ; NASSP Bulletin Volume 57 ; 57 ; buld ; >
-      au < exists ; exists ; 1974 ; NASSP Bulletin Volume 58 ; 58 ; buld ; >
-      au < exists ; exists ; 1975 ; NASSP Bulletin Volume 59 ; 59 ; buld ; >
-      au < exists ; exists ; 1976 ; NASSP Bulletin Volume 60 ; 60 ; buld ; >
-      au < exists ; exists ; 1977 ; NASSP Bulletin Volume 61 ; 61 ; buld ; >
-      au < exists ; exists ; 1978 ; NASSP Bulletin Volume 62 ; 62 ; buld ; >
-      au < exists ; exists ; 1979 ; NASSP Bulletin Volume 63 ; 63 ; buld ; >
-      au < exists ; exists ; 1980 ; NASSP Bulletin Volume 64 ; 64 ; buld ; >
-      au < exists ; exists ; 1981 ; NASSP Bulletin Volume 65 ; 65 ; buld ; >
-      au < exists ; exists ; 1982 ; NASSP Bulletin Volume 66 ; 66 ; buld ; >
-      au < exists ; exists ; 1983 ; NASSP Bulletin Volume 67 ; 67 ; buld ; >
-      au < exists ; exists ; 1984 ; NASSP Bulletin Volume 68 ; 68 ; buld ; >
-      au < exists ; exists ; 1985 ; NASSP Bulletin Volume 69 ; 69 ; buld ; >
-      au < exists ; exists ; 1986 ; NASSP Bulletin Volume 70 ; 70 ; buld ; >
-      au < exists ; exists ; 1987 ; NASSP Bulletin Volume 71 ; 71 ; buld ; >
-      au < exists ; exists ; 1988 ; NASSP Bulletin Volume 72 ; 72 ; buld ; >
-      au < exists ; exists ; 1989 ; NASSP Bulletin Volume 73 ; 73 ; buld ; >
-      au < exists ; exists ; 1990 ; NASSP Bulletin Volume 74 ; 74 ; buld ; >
-      au < exists ; exists ; 1991 ; NASSP Bulletin Volume 75 ; 75 ; buld ; >
-      au < exists ; exists ; 1992 ; NASSP Bulletin Volume 76 ; 76 ; buld ; >
-      au < exists ; exists ; 1993 ; NASSP Bulletin Volume 77 ; 77 ; buld ; >
-      au < exists ; exists ; 1994 ; NASSP Bulletin Volume 78 ; 78 ; buld ; >
-      au < exists ; exists ; 1995 ; NASSP Bulletin Volume 79 ; 79 ; buld ; >
-      au < exists ; exists ; 1996 ; NASSP Bulletin Volume 80 ; 80 ; buld ; >
-      au < exists ; exists ; 1997 ; NASSP Bulletin Volume 81 ; 81 ; buld ; >
-      au < exists ; exists ; 1998 ; NASSP Bulletin Volume 82 ; 82 ; buld ; >
-      au < exists ; exists ; 1999 ; NASSP Bulletin Volume 83 ; 83 ; buld ; >
-      au < exists ; exists ; 2000 ; NASSP Bulletin Volume 84 ; 84 ; buld ; >
-      au < exists ; exists ; 2001 ; NASSP Bulletin Volume 85 ; 85 ; buld ; >
-      au < exists ; exists ; 2002 ; NASSP Bulletin Volume 86 ; 86 ; buld ; >
-      au < exists ; exists ; 2003 ; NASSP Bulletin Volume 87 ; 87 ; buld ; >
-      au < exists ; exists ; 2004 ; NASSP Bulletin Volume 88 ; 88 ; buld ; >
-      au < exists ; exists ; 2005 ; NASSP Bulletin Volume 89 ; 89 ; buld ; >
-      au < exists ; exists ; 2006 ; NASSP Bulletin Volume 90 ; 90 ; buld ; >
-      au < exists ; exists ; 2007 ; NASSP Bulletin Volume 91 ; 91 ; buld ; >
+      au < manifest ; exists ; 1972 ; NASSP Bulletin Volume 56 ; 56 ; buld ; >
+      au < manifest ; exists ; 1973 ; NASSP Bulletin Volume 57 ; 57 ; buld ; >
+      au < manifest ; exists ; 1974 ; NASSP Bulletin Volume 58 ; 58 ; buld ; >
+      au < manifest ; exists ; 1975 ; NASSP Bulletin Volume 59 ; 59 ; buld ; >
+      au < manifest ; exists ; 1976 ; NASSP Bulletin Volume 60 ; 60 ; buld ; >
+      au < manifest ; exists ; 1977 ; NASSP Bulletin Volume 61 ; 61 ; buld ; >
+      au < manifest ; exists ; 1978 ; NASSP Bulletin Volume 62 ; 62 ; buld ; >
+      au < manifest ; exists ; 1979 ; NASSP Bulletin Volume 63 ; 63 ; buld ; >
+      au < manifest ; exists ; 1980 ; NASSP Bulletin Volume 64 ; 64 ; buld ; >
+      au < manifest ; exists ; 1981 ; NASSP Bulletin Volume 65 ; 65 ; buld ; >
+      au < manifest ; exists ; 1982 ; NASSP Bulletin Volume 66 ; 66 ; buld ; >
+      au < manifest ; exists ; 1983 ; NASSP Bulletin Volume 67 ; 67 ; buld ; >
+      au < manifest ; exists ; 1984 ; NASSP Bulletin Volume 68 ; 68 ; buld ; >
+      au < manifest ; exists ; 1985 ; NASSP Bulletin Volume 69 ; 69 ; buld ; >
+      au < manifest ; exists ; 1986 ; NASSP Bulletin Volume 70 ; 70 ; buld ; >
+      au < manifest ; exists ; 1987 ; NASSP Bulletin Volume 71 ; 71 ; buld ; >
+      au < manifest ; exists ; 1988 ; NASSP Bulletin Volume 72 ; 72 ; buld ; >
+      au < manifest ; exists ; 1989 ; NASSP Bulletin Volume 73 ; 73 ; buld ; >
+      au < manifest ; exists ; 1990 ; NASSP Bulletin Volume 74 ; 74 ; buld ; >
+      au < manifest ; exists ; 1991 ; NASSP Bulletin Volume 75 ; 75 ; buld ; >
+      au < manifest ; exists ; 1992 ; NASSP Bulletin Volume 76 ; 76 ; buld ; >
+      au < manifest ; exists ; 1993 ; NASSP Bulletin Volume 77 ; 77 ; buld ; >
+      au < manifest ; exists ; 1994 ; NASSP Bulletin Volume 78 ; 78 ; buld ; >
+      au < manifest ; exists ; 1995 ; NASSP Bulletin Volume 79 ; 79 ; buld ; >
+      au < manifest ; exists ; 1996 ; NASSP Bulletin Volume 80 ; 80 ; buld ; >
+      au < manifest ; exists ; 1997 ; NASSP Bulletin Volume 81 ; 81 ; buld ; >
+      au < manifest ; exists ; 1998 ; NASSP Bulletin Volume 82 ; 82 ; buld ; >
+      au < manifest ; exists ; 1999 ; NASSP Bulletin Volume 83 ; 83 ; buld ; >
+      au < manifest ; exists ; 2000 ; NASSP Bulletin Volume 84 ; 84 ; buld ; >
+      au < manifest ; exists ; 2001 ; NASSP Bulletin Volume 85 ; 85 ; buld ; >
+      au < manifest ; exists ; 2002 ; NASSP Bulletin Volume 86 ; 86 ; buld ; >
+      au < manifest ; exists ; 2003 ; NASSP Bulletin Volume 87 ; 87 ; buld ; >
+      au < manifest ; exists ; 2004 ; NASSP Bulletin Volume 88 ; 88 ; buld ; >
+      au < manifest ; exists ; 2005 ; NASSP Bulletin Volume 89 ; 89 ; buld ; >
+      au < manifest ; exists ; 2006 ; NASSP Bulletin Volume 90 ; 90 ; buld ; >
+      au < manifest ; exists ; 2007 ; NASSP Bulletin Volume 91 ; 91 ; buld ; >
       au < doNotProcess ; doNotProcess ; 2008 ; NASSP Bulletin Volume 92 ; 92 ; buld ; >
       au < doNotProcess ; doNotProcess ; 2009 ; NASSP Bulletin Volume 93 ; 93 ; buld ; >
       au < doNotProcess ; doNotProcess ; 2010 ; NASSP Bulletin Volume 94 ; 94 ; buld ; >
@@ -28562,7 +28562,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; NASSP Bulletin Volume 97 ; 97 ; buld ; >
       au < doNotProcess ; doNotProcess ; 2014 ; NASSP Bulletin Volume 98 ; 98 ; buld ; >
       au < doNotProcess ; doNotProcess ; 2015 ; NASSP Bulletin Volume 99 ; 99 ; buld ; >
-      au < exists ; exists ; 2016 ; NASSP Bulletin Volume 100 ; 100 ; buld ; >
+      au < manifest ; exists ; 2016 ; NASSP Bulletin Volume 100 ; 100 ; buld ; >
 
     }
 
@@ -31331,7 +31331,7 @@
         au < manifest ; exists ; 1974 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 18 ; 18 ; prob ; >
         au < manifest ; exists ; 1975 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 19 ; 19 ; prob ; >
         au < manifest ; exists ; 1976 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 20 ; 20 ; prob ; >
-        au < exists ; exists ; 1977 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 ; prob ; >
+        au < manifest ; exists ; 1977 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 ; prob ; >
         au < manifest ; exists ; 1978 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 22 ; 22 ; prob ; >
         au < manifest ; exists ; 1979 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 23 ; 23 ; prob ; >
         au < manifest ; exists ; 1980 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 24 ; 24 ; prob ; >
@@ -32132,8 +32132,8 @@
       au < manifest ; exists ; 1981 ; Progress in Human Geography Volume 5 ; 5 ; phga ; >
       au < manifest ; exists ; 1982 ; Progress in Human Geography Volume 6 ; 6 ; phga ; >
       au < manifest ; exists ; 1983 ; Progress in Human Geography Volume 7 ; 7 ; phga ; >
-      au < exists ; exists ; 1984 ; Progress in Human Geography Volume 8 ; 8 ; phga ; >
-      au < exists ; exists ; 1985 ; Progress in Human Geography Volume 9 ; 9 ; phga ; >
+      au < manifest ; exists ; 1984 ; Progress in Human Geography Volume 8 ; 8 ; phga ; >
+      au < manifest ; exists ; 1985 ; Progress in Human Geography Volume 9 ; 9 ; phga ; >
       au < doesNotExist ; doesNotExist ; 0 ; Progress in Human Geography Volume 10 ; 10 ; phga ; >
       au < manifest ; exists ; 1987 ; Progress in Human Geography Volume 11 ; 11 ; phgb ; >
       au < manifest ; exists ; 1988 ; Progress in Human Geography Volume 12 ; 12 ; phgb ; >
@@ -37071,10 +37071,10 @@
       au < manifest ; exists ; 1921 ; Theology Volume 3 ; 3 ; tjxa ; >
       au < manifest ; exists ; 1922 ; Theology Volume 4 ; 4 ; tjxa ; >
       au < manifest ; exists ; 1922 ; Theology Volume 5 ; 5 ; tjxa ; >
-      au < exists ; exists ; 1923 ; Theology Volume 6 ; 6 ; tjxa ; >
-      au < exists ; exists ; 1924 ; Theology Volume 7 ; 7 ; tjxa ; >
+      au < manifest ; exists ; 1923 ; Theology Volume 6 ; 6 ; tjxa ; >
+      au < manifest ; exists ; 1924 ; Theology Volume 7 ; 7 ; tjxa ; >
       au < manifest ; exists ; 1924 ; Theology Volume 8 ; 8 ; tjxa ; >
-      au < exists ; exists ; 1925 ; Theology Volume 9 ; 9 ; tjxa ; >
+      au < manifest ; exists ; 1925 ; Theology Volume 9 ; 9 ; tjxa ; >
       au < manifest ; exists ; 1925 ; Theology Volume 10 ; 10 ; tjxa ; >
       au < manifest ; exists ; 1925 ; Theology Volume 11 ; 11 ; tjxa ; >
       au < manifest ; exists ; 1926 ; Theology Volume 12 ; 12 ; tjxa ; >
@@ -42481,7 +42481,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 ; ebmb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Experimental Biology and Medicine Volume 240 ; 240 ; ebmb ; >
         au < manifest ; exists ; 2016 ; Experimental Biology and Medicine Volume 241 ; 241 ; ebmb ; >
-        au < exists ; exists ; 2017  ; Experimental Biology and Medicine Volume 242 ; 242 ; ebmb ; >
+        au < manifest ; exists ; 2017  ; Experimental Biology and Medicine Volume 242 ; 242 ; ebmb ; >
 
     }
 
@@ -43878,25 +43878,25 @@
     #param[journal_id] = ihe
     #param[journal_issn] = 0950-4222
 
-    au < exists ; exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 ; ihea ; >
-    au < exists ; exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 ; ihea ; >
-    au < exists ; exists ; 2001 ; Industry and Higher Education Volume 15 ; 15 ; ihea ; >
-    au < exists ; exists ; 2002 ; Industry and Higher Education Volume 16 ; 16 ; ihea ; >
-    au < exists ; exists ; 2003 ; Industry and Higher Education Volume 17 ; 17 ; ihea ; >
-    au < exists ; exists ; 2004 ; Industry and Higher Education Volume 18 ; 18 ; ihea ; >
-    au < exists ; exists ; 2005 ; Industry and Higher Education Volume 19 ; 19 ; ihea ; >
-    au < exists ; exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 ; ihea ; >
-    au < exists ; exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 ; ihea ; >
-    au < exists ; exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 ; ihea ; >
-    au < exists ; exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 ; ihea ; >
-    au < exists ; exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 ; ihea ; >
+    au < manifest ; exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 ; ihea ; >
+    au < manifest ; exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 ; ihea ; >
+    au < manifest ; exists ; 2001 ; Industry and Higher Education Volume 15 ; 15 ; ihea ; >
+    au < manifest ; exists ; 2002 ; Industry and Higher Education Volume 16 ; 16 ; ihea ; >
+    au < manifest ; exists ; 2003 ; Industry and Higher Education Volume 17 ; 17 ; ihea ; >
+    au < manifest ; exists ; 2004 ; Industry and Higher Education Volume 18 ; 18 ; ihea ; >
+    au < manifest ; exists ; 2005 ; Industry and Higher Education Volume 19 ; 19 ; ihea ; >
+    au < manifest ; exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 ; ihea ; >
+    au < manifest ; exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 ; ihea ; >
+    au < manifest ; exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 ; ihea ; >
+    au < manifest ; exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 ; ihea ; >
+    au < manifest ; exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Industry and Higher Education Volume 25 ; 25 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Industry and Higher Education Volume 26 ; 26 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Industry and Higher Education Volume 27 ; 27 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Industry and Higher Education Volume 28 ; 28 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; ihea ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; ihea ; >
-    au < expected ; exists ; 2017 ; Industry and Higher Education Volume 31 ; 31 ; ihea ; >
+    au < manifest ; exists ; 2017 ; Industry and Higher Education Volume 31 ; 31 ; ihea ; >
 
   }
 
@@ -43913,24 +43913,24 @@
     #param[journal_issn] = 1465-7503
     # moved to Sage April 2016.
 
-    au < exists ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; ieia ; >
-    au < exists ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; ieia ; >
-    au < exists ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; ieia ; >
-    au < exists ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; ieia ; >
-    au < exists ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; ieia ; >
-    au < exists ; exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; ieia ; >
-    au < exists ; exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; ieia ; >
-    au < exists ; exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; ieia ; >
-    au < exists ; exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; ieia ; >
-    au < exists ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; ieia ; >
-    au < exists ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; ieia ; >
+    au < manifest ; exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; ieia ; >
+    au < manifest ; exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; ieia ; >
+    au < manifest ; exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; ieia ; >
+    au < manifest ; exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; ieia ; >
+    au < manifest ; exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; ieia ; >
+    au < manifest ; exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; ieia ; >
+    au < manifest ; exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; ieia ; >
+    au < manifest ; exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; ieia ; >
+    au < manifest ; exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; ieia ; >
+    au < manifest ; exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; ieia ; >
+    au < manifest ; exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; ieia ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; ieia ; >
-    au < expected ; exists ; 2017 ; International Journal of Entrepreneurship and Innovation Volume 18 ; 18 ; ieia ; >
+    au < manifest ; exists ; 2017 ; International Journal of Entrepreneurship and Innovation Volume 18 ; 18 ; ieia ; >
 
   }
 
@@ -43947,25 +43947,25 @@
     #param[journal_issn] = 0030-7270
     # moved to Sage April 2016.
 
-    au < exists ; exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 ; oaga ; >
-    au < exists ; exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 ; oaga ; >
-    au < exists ; exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 ; oaga ; >
-    au < exists ; exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 ; oaga ; >
-    au < exists ; exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 ; oaga ; >
-    au < exists ; exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 ; oaga ; >
-    au < exists ; exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 ; oaga ; >
-    au < exists ; exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 ; oaga ; >
-    au < exists ; exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; oaga ; >
-    au < exists ; exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; oaga ; >
-    au < exists ; exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; oaga ; >
-    au < exists ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; oaga ; >
+    au < manifest ; exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 ; oaga ; >
+    au < manifest ; exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 ; oaga ; >
+    au < manifest ; exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 ; oaga ; >
+    au < manifest ; exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 ; oaga ; >
+    au < manifest ; exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 ; oaga ; >
+    au < manifest ; exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 ; oaga ; >
+    au < manifest ; exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 ; oaga ; >
+    au < manifest ; exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 ; oaga ; >
+    au < manifest ; exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; oaga ; >
+    au < manifest ; exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; oaga ; >
+    au < manifest ; exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; oaga ; >
+    au < manifest ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Outlook on Agriculture Volume 40 ; 40 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Outlook on Agriculture Volume 41 ; 41 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Outlook on Agriculture Volume 42 ; 42 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Outlook on Agriculture Volume 43 ; 43 ; oaga ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; oaga ; >
-    au < exists ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; oaga ; >
-    au < expected ; exists ; 2017 ; Outlook on Agriculture Volume 46 ; 46 ; oaga ; >
+    au < manifest ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; oaga ; >
+    au < manifest ; exists ; 2017 ; Outlook on Agriculture Volume 46 ; 46 ; oaga ; >
 
   }
 
@@ -43982,17 +43982,17 @@
     #param[journal_issn] = 0967-828X
     # moved to Sage April 2016.
 
-    au < exists ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; sera ; >
-    au < exists ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; sera ; >
-    au < exists ; exists ; 2002 ; South East Asia Research Volume 10 ; 10 ; sera ; >
-    au < exists ; exists ; 2003 ; South East Asia Research Volume 11 ; 11 ; sera ; >
-    au < exists ; exists ; 2004 ; South East Asia Research Volume 12 ; 12 ; sera ; >
-    au < exists ; exists ; 2005 ; South East Asia Research Volume 13 ; 13 ; sera ; >
-    au < exists ; exists ; 2006 ; South East Asia Research Volume 14 ; 14 ; sera ; >
-    au < exists ; exists ; 2007 ; South East Asia Research Volume 15 ; 15 ; sera ; >
-    au < exists ; exists ; 2008 ; South East Asia Research Volume 16 ; 16 ; sera ; >
-    au < exists ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; sera ; >
-    au < exists ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; sera ; >
+    au < manifest ; exists ; 2000 ; South East Asia Research Volume 8 ; 8 ; sera ; >
+    au < manifest ; exists ; 2001 ; South East Asia Research Volume 9 ; 9 ; sera ; >
+    au < manifest ; exists ; 2002 ; South East Asia Research Volume 10 ; 10 ; sera ; >
+    au < manifest ; exists ; 2003 ; South East Asia Research Volume 11 ; 11 ; sera ; >
+    au < manifest ; exists ; 2004 ; South East Asia Research Volume 12 ; 12 ; sera ; >
+    au < manifest ; exists ; 2005 ; South East Asia Research Volume 13 ; 13 ; sera ; >
+    au < manifest ; exists ; 2006 ; South East Asia Research Volume 14 ; 14 ; sera ; >
+    au < manifest ; exists ; 2007 ; South East Asia Research Volume 15 ; 15 ; sera ; >
+    au < manifest ; exists ; 2008 ; South East Asia Research Volume 16 ; 16 ; sera ; >
+    au < manifest ; exists ; 2009 ; South East Asia Research Volume 17 ; 17 ; sera ; >
+    au < manifest ; exists ; 2010 ; South East Asia Research Volume 18 ; 18 ; sera ; >
     au < doNotProcess ; doNotProcess ; 2011 ; South East Asia Research Volume 19 ; 19 ; sera ; >
     au < doNotProcess ; doNotProcess ; 2012 ; South East Asia Research Volume 20 ; 20 ; sera ; >
     au < doNotProcess ; doNotProcess ; 2013 ; South East Asia Research Volume 21 ; 21 ; sera ; >
@@ -44016,24 +44016,24 @@
     #param[journal_issn] = 1354-8166
     # moved to Sage April 2016.
 
-    au < exists ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 ; teua ; >
-    au < exists ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 ; teua ; >
-    au < exists ; exists ; 2002 ; Tourism Economics Volume 8 ; 8 ; teua ; >
-    au < exists ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 ; teua ; >
-    au < exists ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 ; teua ; >
-    au < exists ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 ; teua ; >
-    au < exists ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 ; teua ; >
-    au < exists ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 ; teua ; >
-    au < exists ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
-    au < exists ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
-    au < exists ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
+    au < manifest ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 ; teua ; >
+    au < manifest ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 ; teua ; >
+    au < manifest ; exists ; 2002 ; Tourism Economics Volume 8 ; 8 ; teua ; >
+    au < manifest ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 ; teua ; >
+    au < manifest ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 ; teua ; >
+    au < manifest ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 ; teua ; >
+    au < manifest ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 ; teua ; >
+    au < manifest ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 ; teua ; >
+    au < manifest ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 ; teua ; >
+    au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 ; teua ; >
+    au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Tourism Economics Volume 17 ; 17 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tourism Economics Volume 18 ; 18 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Tourism Economics Volume 19 ; 19 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tourism Economics Volume 20 ; 20 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tourism Economics Volume 21 ; 21 ; teua ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tourism Economics Volume 22 ; 22 ; teua ; >
-    au < expected ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
+    au < manifest ; exists ; 2017 ; Tourism Economics Volume 23 ; 23 ; teua ; >
 
   }
 }
