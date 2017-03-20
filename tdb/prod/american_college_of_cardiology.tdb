@@ -16,7 +16,7 @@
 
     param[base_url] = http://www.basictranslational.onlinejacc.org/
 
-    au < HWDrupalPlugin ; exists ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Basic To Translational Science Volume 1 ; 1 >
 
   }
 
@@ -39,10 +39,10 @@
     {
     param[base_url] = http://www.imaging.onlinejacc.org/
 
-    au < HWDrupalPlugin ; exists ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
-    au < HWDrupalPlugin ; exists ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
-    au < HWDrupalPlugin ; exists ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
-    au < HWDrupalPlugin ; exists ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
+    au < HWDrupalPlugin ; manifest ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
+    au < HWDrupalPlugin ; manifest ; 2014 ; JACC: Cardiovascular Imaging Volume 7 ; 7 >
+    au < HWDrupalPlugin ; manifest ; 2015 ; JACC: Cardiovascular Imaging Volume 8 ; 8 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Cardiovascular Imaging Volume 9 ; 9 >
     }
 
   }
@@ -66,7 +66,7 @@
     {
     param[base_url] = http://www.interventions.onlinejacc.org/
 
-    au < HWDrupalPlugin ; expected ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
+    au < HWDrupalPlugin ; manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
     }
 
   }
