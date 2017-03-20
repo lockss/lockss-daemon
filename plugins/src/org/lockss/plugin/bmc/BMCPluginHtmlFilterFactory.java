@@ -147,9 +147,6 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       
       // grey item on volume issue page, missing on some pages
       HtmlNodeFilters.tagWithAttribute("li", "class", "tooltip"),
-      // links change over time
-      HtmlNodeFilters.tagWithAttribute("a", "class", "pubmed-link"),
-      HtmlNodeFilters.tagWithAttributeRegex("a", "id", "(citation|comment)s?-link"),
       
   };
   

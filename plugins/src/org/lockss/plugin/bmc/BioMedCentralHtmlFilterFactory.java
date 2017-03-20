@@ -139,9 +139,11 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       
       // grey item on volume issue page, missing on some pages
       HtmlNodeFilters.tagWithAttribute("li", "class", "tooltip"),
-      // links change over time
-      HtmlNodeFilters.tagWithAttribute("a", "class", "pubmed-link"),
-      HtmlNodeFilters.tagWithAttributeRegex("a", "id", "(citation|comment)s?-link"),
+      // Extra links appeared on issue toc for citations
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttribute("p", "class", "nav"),
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class",
+              "(abstract|fulltext|pdf.*)-link")),
       
       // Journal of Cloud Computing: Advances, Systems and Applications &
       // Boundary Value Problems some articles had clickable badge

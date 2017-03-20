@@ -167,9 +167,11 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
       "<li><a href=\"/bmcphysiol/content/14/February/2014\">February 2014 </a></li>\n" + 
       "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> January 2014 </li>\n" + 
       "</ul>\n" +
+      "<p class=\"nav\">\n" + 
       "<a id=\"bmcCitations-link\" href=\"http://www.scfbm.org/content/7/1/4/about#citations-biomedcentral\">Cited on BioMed Central</a>\n" +
       "<a id=\"comments-link\" href=\"http://www.scfbm.org/content/7/1/4/comments\">1 comment</a>" +
-      "<a href=\"http://www.scfbm.org/pubmed/24669838\" class=\"pubmed-link\">PubMed</a>";
+      "<a href=\"http://www.scfbm.org/pubmed/24669838\" class=\"pubmed-link\">PubMed</a>" +
+      "</p>\n";
   
   private static final String linksFiltered =
       " December 2014 November 2014 September 2014 August 2014 June 2014 March 2014 February 2014 ";
