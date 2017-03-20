@@ -226,8 +226,8 @@
 
     au < doNotProcess ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 ; >
-    au < down ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 ; >
-    au < down ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 ; >
+    au < frozen ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 ; >
     au < doNotProcess ; exists ; 2015 ; Journal of European Psychology Students Volume 6 ; 6 ; 2015 ; >
     
@@ -244,8 +244,8 @@
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
 
-    au < down ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 ; >
-    au < down ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; >
+    au < frozen ; exists ; 2012 ; Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 ; >
     au < doNotProcess ; exists ; 2015 ; Journal of Open Archaeology Data Volume 4 ; 4 ; 2015 ; >
 
