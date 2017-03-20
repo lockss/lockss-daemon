@@ -25737,7 +25737,7 @@
       au < manifest ; exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 ; jthc ; >
       au < manifest ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 ; jthc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Transport History Volume 36 ; 36 ; jthc ; >
-      au < expected ; exists ; 2016 ; The Journal of Transport History Volume 37 ; 37 ; jtha ; >
+      au < expected ; exists ; 2016 ; The Journal of Transport History Volume 37 ; 37 ; jthc ; >
 
   }
 
@@ -42939,96 +42939,96 @@
 
         #param[base_url] = http://jrs.sagepub.com/
 
-        au < exists ; exists ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 ; jrsb ; >
-        au < exists ; exists ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 ; jrsb ; >
-        au < exists ; exists ; 1812 ; Journal of the Royal Society of Medicine Volume MCT-3 ; MCT-3 ; jrsb ; >
-        au < exists ; exists ; 1813 ; Journal of the Royal Society of Medicine Volume MCT-4 ; MCT-4 ; jrsb ; >
-        au < exists ; exists ; 1814 ; Journal of the Royal Society of Medicine Volume MCT-5 ; MCT-5 ; jrsb ; >
-        au < exists ; exists ; 1815 ; Journal of the Royal Society of Medicine Volume MCT-6 ; MCT-6 ; jrsb ; >
-        au < exists ; exists ; 1816 ; Journal of the Royal Society of Medicine Volume MCT-7 ; MCT-7 ; jrsb ; >
-        au < exists ; exists ; 1817 ; Journal of the Royal Society of Medicine Volume MCT-8 ; MCT-8 ; jrsb ; >
-        au < exists ; exists ; 1818 ; Journal of the Royal Society of Medicine Volume MCT-9 ; MCT-9 ; jrsb ; >
-        au < exists ; exists ; 1819 ; Journal of the Royal Society of Medicine Volume MCT-10 ; MCT-10 ; jrsb ; >
-        au < exists ; exists ; 1821 ; Journal of the Royal Society of Medicine Volume MCT-11 ; MCT-11 ; jrsb ; >
-        au < exists ; exists ; 1823 ; Journal of the Royal Society of Medicine Volume MCT-12 ; MCT-12 ; jrsb ; >
-        au < exists ; exists ; 1827 ; Journal of the Royal Society of Medicine Volume MCT-13 ; MCT-13 ; jrsb ; >
-        au < exists ; exists ; 1828 ; Journal of the Royal Society of Medicine Volume MCT-14 ; MCT-14 ; jrsb ; >
-        au < exists ; exists ; 1829 ; Journal of the Royal Society of Medicine Volume MCT-15 ; MCT-15 ; jrsb ; >
-        au < exists ; exists ; 1831 ; Journal of the Royal Society of Medicine Volume MCT-16 ; MCT-16 ; jrsb ; >
-        au < exists ; exists ; 1832 ; Journal of the Royal Society of Medicine Volume MCT-17 ; MCT-17 ; jrsb ; >
-        au < exists ; exists ; 1833 ; Journal of the Royal Society of Medicine Volume MCT-18 ; MCT-18 ; jrsb ; >
-        au < exists ; exists ; 1835 ; Journal of the Royal Society of Medicine Volume MCT-19 ; MCT-19 ; jrsb ; >
-        au < exists ; exists ; 1837 ; Journal of the Royal Society of Medicine Volume MCT-20 ; MCT-20 ; jrsb ; >
-        au < exists ; exists ; 1838 ; Journal of the Royal Society of Medicine Volume MCT-21 ; MCT-21 ; jrsb ; >
-        au < exists ; exists ; 1839 ; Journal of the Royal Society of Medicine Volume MCT-22 ; MCT-22 ; jrsb ; >
-        au < exists ; exists ; 1840 ; Journal of the Royal Society of Medicine Volume MCT-23 ; MCT-23 ; jrsb ; >
-        au < exists ; exists ; 1841 ; Journal of the Royal Society of Medicine Volume MCT-24 ; MCT-24 ; jrsb ; >
-        au < exists ; exists ; 1842 ; Journal of the Royal Society of Medicine Volume MCT-25 ; MCT-25 ; jrsb ; >
-        au < exists ; exists ; 1843 ; Journal of the Royal Society of Medicine Volume MCT-26 ; MCT-26 ; jrsb ; >
-        au < exists ; exists ; 1844 ; Journal of the Royal Society of Medicine Volume MCT-27 ; MCT-27 ; jrsb ; >
-        au < exists ; exists ; 1845 ; Journal of the Royal Society of Medicine Volume MCT-28 ; MCT-28 ; jrsb ; >
-        au < exists ; exists ; 1846 ; Journal of the Royal Society of Medicine Volume MCT-29 ; MCT-29 ; jrsb ; >
-        au < exists ; exists ; 1847 ; Journal of the Royal Society of Medicine Volume MCT-30 ; MCT-30 ; jrsb ; >
-        au < exists ; exists ; 1848 ; Journal of the Royal Society of Medicine Volume MCT-31 ; MCT-31 ; jrsb ; >
-        au < exists ; exists ; 1849 ; Journal of the Royal Society of Medicine Volume MCT-32 ; MCT-32 ; jrsb ; >
-        au < exists ; exists ; 1850 ; Journal of the Royal Society of Medicine Volume MCT-33 ; MCT-33 ; jrsb ; >
-        au < exists ; exists ; 1851 ; Journal of the Royal Society of Medicine Volume MCT-34 ; MCT-34 ; jrsb ; >
-        au < exists ; exists ; 1852 ; Journal of the Royal Society of Medicine Volume MCT-35 ; MCT-35 ; jrsb ; >
-        au < exists ; exists ; 1853 ; Journal of the Royal Society of Medicine Volume MCT-36 ; MCT-36 ; jrsb ; >
-        au < exists ; exists ; 1854 ; Journal of the Royal Society of Medicine Volume MCT-37 ; MCT-37 ; jrsb ; >
-        au < exists ; exists ; 1855 ; Journal of the Royal Society of Medicine Volume MCT-38 ; MCT-38 ; jrsb ; >
-        au < exists ; exists ; 1856 ; Journal of the Royal Society of Medicine Volume MCT-39 ; MCT-39 ; jrsb ; >
-        au < exists ; exists ; 1857 ; Journal of the Royal Society of Medicine Volume MCT-40 ; MCT-40 ; jrsb ; >
-        au < exists ; exists ; 1858 ; Journal of the Royal Society of Medicine Volume MCT-41 ; MCT-41 ; jrsb ; >
-        au < exists ; exists ; 1859 ; Journal of the Royal Society of Medicine Volume MCT-42 ; MCT-42 ; jrsb ; >
-        au < exists ; exists ; 1860 ; Journal of the Royal Society of Medicine Volume MCT-43 ; MCT-43 ; jrsb ; >
-        au < exists ; exists ; 1861 ; Journal of the Royal Society of Medicine Volume MCT-44 ; MCT-44 ; jrsb ; >
-        au < exists ; exists ; 1862 ; Journal of the Royal Society of Medicine Volume MCT-45 ; MCT-45 ; jrsb ; >
-        au < exists ; exists ; 1863 ; Journal of the Royal Society of Medicine Volume MCT-46 ; MCT-46 ; jrsb ; >
-        au < exists ; exists ; 1864 ; Journal of the Royal Society of Medicine Volume MCT-47 ; MCT-47 ; jrsb ; >
-        au < exists ; exists ; 1865 ; Journal of the Royal Society of Medicine Volume MCT-48 ; MCT-48 ; jrsb ; >
-        au < exists ; exists ; 1866 ; Journal of the Royal Society of Medicine Volume MCT-49 ; MCT-49 ; jrsb ; >
-        au < exists ; exists ; 1867 ; Journal of the Royal Society of Medicine Volume MCT-50 ; MCT-50 ; jrsb ; >
-        au < exists ; exists ; 1868 ; Journal of the Royal Society of Medicine Volume MCT-51 ; MCT-51 ; jrsb ; >
-        au < exists ; exists ; 1869 ; Journal of the Royal Society of Medicine Volume MCT-52 ; MCT-52 ; jrsb ; >
-        au < exists ; exists ; 1870 ; Journal of the Royal Society of Medicine Volume MCT-53 ; MCT-53 ; jrsb ; >
-        au < exists ; exists ; 1871 ; Journal of the Royal Society of Medicine Volume MCT-54 ; MCT-54 ; jrsb ; >
-        au < exists ; exists ; 1872 ; Journal of the Royal Society of Medicine Volume MCT-55 ; MCT-55 ; jrsb ; >
-        au < exists ; exists ; 1873 ; Journal of the Royal Society of Medicine Volume MCT-56 ; MCT-56 ; jrsb ; >
-        au < exists ; exists ; 1874 ; Journal of the Royal Society of Medicine Volume MCT-57 ; MCT-57 ; jrsb ; >
-        au < exists ; exists ; 1875 ; Journal of the Royal Society of Medicine Volume MCT-58 ; MCT-58 ; jrsb ; >
-        au < exists ; exists ; 1876 ; Journal of the Royal Society of Medicine Volume MCT-59 ; MCT-59 ; jrsb ; >
-        au < exists ; exists ; 1877 ; Journal of the Royal Society of Medicine Volume MCT-60 ; MCT-60 ; jrsb ; >
-        au < exists ; exists ; 1878 ; Journal of the Royal Society of Medicine Volume MCT-61 ; MCT-61 ; jrsb ; >
-        au < exists ; exists ; 1879 ; Journal of the Royal Society of Medicine Volume MCT-62 ; MCT-62 ; jrsb ; >
-        au < exists ; exists ; 1880 ; Journal of the Royal Society of Medicine Volume MCT-63 ; MCT-63 ; jrsb ; >
-        au < exists ; exists ; 1881 ; Journal of the Royal Society of Medicine Volume MCT-64 ; MCT-64 ; jrsb ; >
-        au < exists ; exists ; 1882 ; Journal of the Royal Society of Medicine Volume MCT-65 ; MCT-65 ; jrsb ; >
-        au < exists ; exists ; 1883 ; Journal of the Royal Society of Medicine Volume MCT-66 ; MCT-66 ; jrsb ; >
-        au < exists ; exists ; 1884 ; Journal of the Royal Society of Medicine Volume MCT-67 ; MCT-67 ; jrsb ; >
-        au < exists ; exists ; 1885 ; Journal of the Royal Society of Medicine Volume MCT-68 ; MCT-68 ; jrsb ; >
-        au < exists ; exists ; 1886 ; Journal of the Royal Society of Medicine Volume MCT-69 ; MCT-69 ; jrsb ; >
-        au < exists ; exists ; 1887 ; Journal of the Royal Society of Medicine Volume MCT-70 ; MCT-70 ; jrsb ; >
-        au < exists ; exists ; 1888 ; Journal of the Royal Society of Medicine Volume MCT-71 ; MCT-71 ; jrsb ; >
-        au < exists ; exists ; 1889 ; Journal of the Royal Society of Medicine Volume MCT-72 ; MCT-72 ; jrsb ; >
-        au < exists ; exists ; 1890 ; Journal of the Royal Society of Medicine Volume MCT-73 ; MCT-73 ; jrsb ; >
-        au < exists ; exists ; 1891 ; Journal of the Royal Society of Medicine Volume MCT-74 ; MCT-74 ; jrsb ; >
-        au < exists ; exists ; 1892 ; Journal of the Royal Society of Medicine Volume MCT-75 ; MCT-75 ; jrsb ; >
-        au < exists ; exists ; 1893 ; Journal of the Royal Society of Medicine Volume MCT-76 ; MCT-76 ; jrsb ; >
-        au < exists ; exists ; 1894 ; Journal of the Royal Society of Medicine Volume MCT-77 ; MCT-77 ; jrsb ; >
-        au < exists ; exists ; 1895 ; Journal of the Royal Society of Medicine Volume MCT-78 ; MCT-78 ; jrsb ; >
-        au < exists ; exists ; 1896 ; Journal of the Royal Society of Medicine Volume MCT-79 ; MCT-79 ; jrsb ; >
-        au < exists ; exists ; 1897 ; Journal of the Royal Society of Medicine Volume MCT-80 ; MCT-80 ; jrsb ; >
-        au < exists ; exists ; 1898 ; Journal of the Royal Society of Medicine Volume MCT-81 ; MCT-81 ; jrsb ; >
-        au < exists ; exists ; 1899 ; Journal of the Royal Society of Medicine Volume MCT-82 ; MCT-82 ; jrsb ; >
-        au < exists ; exists ; 1900 ; Journal of the Royal Society of Medicine Volume MCT-83 ; MCT-83 ; jrsb ; >
-        au < exists ; exists ; 1901 ; Journal of the Royal Society of Medicine Volume MCT-84 ; MCT-84 ; jrsb ; >
-        au < exists ; exists ; 1902 ; Journal of the Royal Society of Medicine Volume MCT-85 ; MCT-85 ; jrsb ; >
-        au < exists ; exists ; 1903 ; Journal of the Royal Society of Medicine Volume MCT-86 ; MCT-86 ; jrsb ; >
-        au < exists ; exists ; 1904 ; Journal of the Royal Society of Medicine Volume MCT-87 ; MCT-87 ; jrsb ; >
-        au < exists ; exists ; 1905 ; Journal of the Royal Society of Medicine Volume MCT-88 ; MCT-88 ; jrsb ; >
-        au < exists ; exists ; 1906 ; Journal of the Royal Society of Medicine Volume MCT-89 ; MCT-89 ; jrsb ; >
-        au < exists ; exists ; 1907 ; Journal of the Royal Society of Medicine Volume MCT-90 ; MCT-90 ; jrsb ; >
+        au < exists ; exists ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 ; jrsa ; >
+        au < exists ; exists ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 ; jrsa ; >
+        au < exists ; exists ; 1812 ; Journal of the Royal Society of Medicine Volume MCT-3 ; MCT-3 ; jrsa ; >
+        au < exists ; exists ; 1813 ; Journal of the Royal Society of Medicine Volume MCT-4 ; MCT-4 ; jrsa ; >
+        au < exists ; exists ; 1814 ; Journal of the Royal Society of Medicine Volume MCT-5 ; MCT-5 ; jrsa ; >
+        au < exists ; exists ; 1815 ; Journal of the Royal Society of Medicine Volume MCT-6 ; MCT-6 ; jrsa ; >
+        au < exists ; exists ; 1816 ; Journal of the Royal Society of Medicine Volume MCT-7 ; MCT-7 ; jrsa ; >
+        au < exists ; exists ; 1817 ; Journal of the Royal Society of Medicine Volume MCT-8 ; MCT-8 ; jrsa ; >
+        au < exists ; exists ; 1818 ; Journal of the Royal Society of Medicine Volume MCT-9 ; MCT-9 ; jrsa ; >
+        au < exists ; exists ; 1819 ; Journal of the Royal Society of Medicine Volume MCT-10 ; MCT-10 ; jrsa ; >
+        au < exists ; exists ; 1821 ; Journal of the Royal Society of Medicine Volume MCT-11 ; MCT-11 ; jrsa ; >
+        au < exists ; exists ; 1823 ; Journal of the Royal Society of Medicine Volume MCT-12 ; MCT-12 ; jrsa ; >
+        au < exists ; exists ; 1827 ; Journal of the Royal Society of Medicine Volume MCT-13 ; MCT-13 ; jrsa ; >
+        au < exists ; exists ; 1828 ; Journal of the Royal Society of Medicine Volume MCT-14 ; MCT-14 ; jrsa ; >
+        au < exists ; exists ; 1829 ; Journal of the Royal Society of Medicine Volume MCT-15 ; MCT-15 ; jrsa ; >
+        au < exists ; exists ; 1831 ; Journal of the Royal Society of Medicine Volume MCT-16 ; MCT-16 ; jrsa ; >
+        au < exists ; exists ; 1832 ; Journal of the Royal Society of Medicine Volume MCT-17 ; MCT-17 ; jrsa ; >
+        au < exists ; exists ; 1833 ; Journal of the Royal Society of Medicine Volume MCT-18 ; MCT-18 ; jrsa ; >
+        au < exists ; exists ; 1835 ; Journal of the Royal Society of Medicine Volume MCT-19 ; MCT-19 ; jrsa ; >
+        au < exists ; exists ; 1837 ; Journal of the Royal Society of Medicine Volume MCT-20 ; MCT-20 ; jrsa ; >
+        au < exists ; exists ; 1838 ; Journal of the Royal Society of Medicine Volume MCT-21 ; MCT-21 ; jrsa ; >
+        au < exists ; exists ; 1839 ; Journal of the Royal Society of Medicine Volume MCT-22 ; MCT-22 ; jrsa ; >
+        au < exists ; exists ; 1840 ; Journal of the Royal Society of Medicine Volume MCT-23 ; MCT-23 ; jrsa ; >
+        au < exists ; exists ; 1841 ; Journal of the Royal Society of Medicine Volume MCT-24 ; MCT-24 ; jrsa ; >
+        au < exists ; exists ; 1842 ; Journal of the Royal Society of Medicine Volume MCT-25 ; MCT-25 ; jrsa ; >
+        au < exists ; exists ; 1843 ; Journal of the Royal Society of Medicine Volume MCT-26 ; MCT-26 ; jrsa ; >
+        au < exists ; exists ; 1844 ; Journal of the Royal Society of Medicine Volume MCT-27 ; MCT-27 ; jrsa ; >
+        au < exists ; exists ; 1845 ; Journal of the Royal Society of Medicine Volume MCT-28 ; MCT-28 ; jrsa ; >
+        au < exists ; exists ; 1846 ; Journal of the Royal Society of Medicine Volume MCT-29 ; MCT-29 ; jrsa ; >
+        au < exists ; exists ; 1847 ; Journal of the Royal Society of Medicine Volume MCT-30 ; MCT-30 ; jrsa ; >
+        au < exists ; exists ; 1848 ; Journal of the Royal Society of Medicine Volume MCT-31 ; MCT-31 ; jrsa ; >
+        au < exists ; exists ; 1849 ; Journal of the Royal Society of Medicine Volume MCT-32 ; MCT-32 ; jrsa ; >
+        au < exists ; exists ; 1850 ; Journal of the Royal Society of Medicine Volume MCT-33 ; MCT-33 ; jrsa ; >
+        au < exists ; exists ; 1851 ; Journal of the Royal Society of Medicine Volume MCT-34 ; MCT-34 ; jrsa ; >
+        au < exists ; exists ; 1852 ; Journal of the Royal Society of Medicine Volume MCT-35 ; MCT-35 ; jrsa ; >
+        au < exists ; exists ; 1853 ; Journal of the Royal Society of Medicine Volume MCT-36 ; MCT-36 ; jrsa ; >
+        au < exists ; exists ; 1854 ; Journal of the Royal Society of Medicine Volume MCT-37 ; MCT-37 ; jrsa ; >
+        au < exists ; exists ; 1855 ; Journal of the Royal Society of Medicine Volume MCT-38 ; MCT-38 ; jrsa ; >
+        au < exists ; exists ; 1856 ; Journal of the Royal Society of Medicine Volume MCT-39 ; MCT-39 ; jrsa ; >
+        au < exists ; exists ; 1857 ; Journal of the Royal Society of Medicine Volume MCT-40 ; MCT-40 ; jrsa ; >
+        au < exists ; exists ; 1858 ; Journal of the Royal Society of Medicine Volume MCT-41 ; MCT-41 ; jrsa ; >
+        au < exists ; exists ; 1859 ; Journal of the Royal Society of Medicine Volume MCT-42 ; MCT-42 ; jrsa ; >
+        au < exists ; exists ; 1860 ; Journal of the Royal Society of Medicine Volume MCT-43 ; MCT-43 ; jrsa ; >
+        au < exists ; exists ; 1861 ; Journal of the Royal Society of Medicine Volume MCT-44 ; MCT-44 ; jrsa ; >
+        au < exists ; exists ; 1862 ; Journal of the Royal Society of Medicine Volume MCT-45 ; MCT-45 ; jrsa ; >
+        au < exists ; exists ; 1863 ; Journal of the Royal Society of Medicine Volume MCT-46 ; MCT-46 ; jrsa ; >
+        au < exists ; exists ; 1864 ; Journal of the Royal Society of Medicine Volume MCT-47 ; MCT-47 ; jrsa ; >
+        au < exists ; exists ; 1865 ; Journal of the Royal Society of Medicine Volume MCT-48 ; MCT-48 ; jrsa ; >
+        au < exists ; exists ; 1866 ; Journal of the Royal Society of Medicine Volume MCT-49 ; MCT-49 ; jrsa ; >
+        au < exists ; exists ; 1867 ; Journal of the Royal Society of Medicine Volume MCT-50 ; MCT-50 ; jrsa ; >
+        au < exists ; exists ; 1868 ; Journal of the Royal Society of Medicine Volume MCT-51 ; MCT-51 ; jrsa ; >
+        au < exists ; exists ; 1869 ; Journal of the Royal Society of Medicine Volume MCT-52 ; MCT-52 ; jrsa ; >
+        au < exists ; exists ; 1870 ; Journal of the Royal Society of Medicine Volume MCT-53 ; MCT-53 ; jrsa ; >
+        au < exists ; exists ; 1871 ; Journal of the Royal Society of Medicine Volume MCT-54 ; MCT-54 ; jrsa ; >
+        au < exists ; exists ; 1872 ; Journal of the Royal Society of Medicine Volume MCT-55 ; MCT-55 ; jrsa ; >
+        au < exists ; exists ; 1873 ; Journal of the Royal Society of Medicine Volume MCT-56 ; MCT-56 ; jrsa ; >
+        au < exists ; exists ; 1874 ; Journal of the Royal Society of Medicine Volume MCT-57 ; MCT-57 ; jrsa ; >
+        au < exists ; exists ; 1875 ; Journal of the Royal Society of Medicine Volume MCT-58 ; MCT-58 ; jrsa ; >
+        au < exists ; exists ; 1876 ; Journal of the Royal Society of Medicine Volume MCT-59 ; MCT-59 ; jrsa ; >
+        au < exists ; exists ; 1877 ; Journal of the Royal Society of Medicine Volume MCT-60 ; MCT-60 ; jrsa ; >
+        au < exists ; exists ; 1878 ; Journal of the Royal Society of Medicine Volume MCT-61 ; MCT-61 ; jrsa ; >
+        au < exists ; exists ; 1879 ; Journal of the Royal Society of Medicine Volume MCT-62 ; MCT-62 ; jrsa ; >
+        au < exists ; exists ; 1880 ; Journal of the Royal Society of Medicine Volume MCT-63 ; MCT-63 ; jrsa ; >
+        au < exists ; exists ; 1881 ; Journal of the Royal Society of Medicine Volume MCT-64 ; MCT-64 ; jrsa ; >
+        au < exists ; exists ; 1882 ; Journal of the Royal Society of Medicine Volume MCT-65 ; MCT-65 ; jrsa ; >
+        au < exists ; exists ; 1883 ; Journal of the Royal Society of Medicine Volume MCT-66 ; MCT-66 ; jrsa ; >
+        au < exists ; exists ; 1884 ; Journal of the Royal Society of Medicine Volume MCT-67 ; MCT-67 ; jrsa ; >
+        au < exists ; exists ; 1885 ; Journal of the Royal Society of Medicine Volume MCT-68 ; MCT-68 ; jrsa ; >
+        au < exists ; exists ; 1886 ; Journal of the Royal Society of Medicine Volume MCT-69 ; MCT-69 ; jrsa ; >
+        au < exists ; exists ; 1887 ; Journal of the Royal Society of Medicine Volume MCT-70 ; MCT-70 ; jrsa ; >
+        au < exists ; exists ; 1888 ; Journal of the Royal Society of Medicine Volume MCT-71 ; MCT-71 ; jrsa ; >
+        au < exists ; exists ; 1889 ; Journal of the Royal Society of Medicine Volume MCT-72 ; MCT-72 ; jrsa ; >
+        au < exists ; exists ; 1890 ; Journal of the Royal Society of Medicine Volume MCT-73 ; MCT-73 ; jrsa ; >
+        au < exists ; exists ; 1891 ; Journal of the Royal Society of Medicine Volume MCT-74 ; MCT-74 ; jrsa ; >
+        au < exists ; exists ; 1892 ; Journal of the Royal Society of Medicine Volume MCT-75 ; MCT-75 ; jrsa ; >
+        au < exists ; exists ; 1893 ; Journal of the Royal Society of Medicine Volume MCT-76 ; MCT-76 ; jrsa ; >
+        au < exists ; exists ; 1894 ; Journal of the Royal Society of Medicine Volume MCT-77 ; MCT-77 ; jrsa ; >
+        au < exists ; exists ; 1895 ; Journal of the Royal Society of Medicine Volume MCT-78 ; MCT-78 ; jrsa ; >
+        au < exists ; exists ; 1896 ; Journal of the Royal Society of Medicine Volume MCT-79 ; MCT-79 ; jrsa ; >
+        au < exists ; exists ; 1897 ; Journal of the Royal Society of Medicine Volume MCT-80 ; MCT-80 ; jrsa ; >
+        au < exists ; exists ; 1898 ; Journal of the Royal Society of Medicine Volume MCT-81 ; MCT-81 ; jrsa ; >
+        au < exists ; exists ; 1899 ; Journal of the Royal Society of Medicine Volume MCT-82 ; MCT-82 ; jrsa ; >
+        au < exists ; exists ; 1900 ; Journal of the Royal Society of Medicine Volume MCT-83 ; MCT-83 ; jrsa ; >
+        au < exists ; exists ; 1901 ; Journal of the Royal Society of Medicine Volume MCT-84 ; MCT-84 ; jrsa ; >
+        au < exists ; exists ; 1902 ; Journal of the Royal Society of Medicine Volume MCT-85 ; MCT-85 ; jrsa ; >
+        au < exists ; exists ; 1903 ; Journal of the Royal Society of Medicine Volume MCT-86 ; MCT-86 ; jrsa ; >
+        au < exists ; exists ; 1904 ; Journal of the Royal Society of Medicine Volume MCT-87 ; MCT-87 ; jrsa ; >
+        au < exists ; exists ; 1905 ; Journal of the Royal Society of Medicine Volume MCT-88 ; MCT-88 ; jrsa ; >
+        au < exists ; exists ; 1906 ; Journal of the Royal Society of Medicine Volume MCT-89 ; MCT-89 ; jrsa ; >
+        au < exists ; exists ; 1907 ; Journal of the Royal Society of Medicine Volume MCT-90 ; MCT-90 ; jrsa ; >
         au < manifest ; exists ; 1908 ; Journal of the Royal Society of Medicine Volume 1 ; 1 ; jrsa ; >
         au < manifest ; exists ; 1909 ; Journal of the Royal Society of Medicine Volume 2 ; 2 ; jrsa ; >
         au < manifest ; exists ; 1910 ; Journal of the Royal Society of Medicine Volume 3 ; 3 ; jrsa ; >
@@ -43208,8 +43208,8 @@
 
         #param[base_url] = http://lan.sagepub.com/
 
-        au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; lanc ; >
-        au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; lanc ; >
+        au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; lana ; >
+        au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; lana ; >
         au < manifest ; exists ; 1969 ; Laboratory Animals Volume 3 ; 3 ; lana ; >
         au < manifest ; exists ; 1970 ; Laboratory Animals Volume 4 ; 4 ; lana ; >
         au < manifest ; exists ; 1971 ; Laboratory Animals Volume 5 ; 5 ; lana ; >

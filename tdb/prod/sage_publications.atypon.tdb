@@ -18210,10 +18210,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
       
-      au < doNotProcess ; 2014 ; International Journal of Business Communication Volume 51 ; 51 ; joba >
-      au < doNotProcess ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; joba >
-      au < exists ; 2016 ; International Journal of Business Communication Volume 53 ; 53 ; jobc >
-      au < exists ; 2017 ; International Journal of Business Communication Volume 54 ; 54 ; jobc >
+      au < doNotProcess ; 2014 ; International Journal of Business Communication Volume 51 ; 51 ; jobd >
+      au < doNotProcess ; 2015 ; International Journal of Business Communication Volume 52 ; 52 ; jobd >
+      au < exists ; 2016 ; International Journal of Business Communication Volume 53 ; 53 ; jobd >
+      au < exists ; 2017 ; International Journal of Business Communication Volume 54 ; 54 ; jobd >
 
     }
 
@@ -23217,7 +23217,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://jpo.sagepub.com/
 
-        au < exists ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 ; jpoc >
+        au < exists ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 ; jpoa >
         au < manifest ; 1985 ; Journal of Pediatric Oncology Nursing Volume 2 ; 2 ; jpoa >
         au < manifest ; 1986 ; Journal of Pediatric Oncology Nursing Volume 3 ; 3 ; jpoa >
         au < manifest ; 1987 ; Journal of Pediatric Oncology Nursing Volume 4 ; 4 ; jpoa >
@@ -23278,8 +23278,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1995 ; Journal of Pharmacy Practice Volume 8 ; 8 ; jppa >
         au < manifest ; 1996 ; Journal of Pharmacy Practice Volume 9 ; 9 ; jppa >
         au < manifest ; 1997 ; Journal of Pharmacy Practice Volume 10 ; 10 ; jppa >
-        au < exists ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 ; jppc >
-        au < exists ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 ; jppc >
+        au < exists ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 ; jppa >
+        au < exists ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 ; jppa >
         au < manifest ; 2000 ; Journal of Pharmacy Practice Volume 13 ; 13 ; jppa >
         au < manifest ; 2001 ; Journal of Pharmacy Practice Volume 14 ; 14 ; jppa >
         au < manifest ; 2002 ; Journal of Pharmacy Practice Volume 15 ; 15 ; jppa >
@@ -23991,17 +23991,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Journal of Research in Nursing Volume 7 ; 7 ; jrna >
         au < manifest ; 2003 ; Journal of Research in Nursing Volume 8 ; 8 ; jrna >
         au < manifest ; 2004 ; Journal of Research in Nursing Volume 9 ; 9 ; jrna >
-        au < doNotProcess ; 2005 ; Journal of Research in Nursing Volume 10 ; 10 ; jrna >
-        au < doNotProcess ; 2006 ; Journal of Research in Nursing Volume 11 ; 11 ; jrna >
-        au < doNotProcess ; 2007 ; Journal of Research in Nursing Volume 12 ; 12 ; jrna >
-        au < doNotProcess ; 2008 ; Journal of Research in Nursing Volume 13 ; 13 ; jrna >
-        au < doNotProcess ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 ; jrna >
-        au < doNotProcess ; 2010 ; Journal of Research in Nursing Volume 15 ; 15 ; jrna >
-        au < doNotProcess ; 2011 ; Journal of Research in Nursing Volume 16 ; 16 ; jrna >
-        au < doNotProcess ; 2012 ; Journal of Research in Nursing Volume 17 ; 17 ; jrna >
-        au < doNotProcess ; 2013 ; Journal of Research in Nursing Volume 18 ; 18 ; jrna >
-        au < doNotProcess ; 2014 ; Journal of Research in Nursing Volume 19 ; 19 ; jrna >
-        au < doNotProcess ; 2015 ; Journal of Research in Nursing Volume 20 ; 20 ; jrna >
+        au < doNotProcess ; 2005 ; Journal of Research in Nursing Volume 10 ; 10 ; jrnb >
+        au < doNotProcess ; 2006 ; Journal of Research in Nursing Volume 11 ; 11 ; jrnb >
+        au < doNotProcess ; 2007 ; Journal of Research in Nursing Volume 12 ; 12 ; jrnb >
+        au < doNotProcess ; 2008 ; Journal of Research in Nursing Volume 13 ; 13 ; jrnb >
+        au < doNotProcess ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 ; jrnb >
+        au < doNotProcess ; 2010 ; Journal of Research in Nursing Volume 15 ; 15 ; jrnb >
+        au < doNotProcess ; 2011 ; Journal of Research in Nursing Volume 16 ; 16 ; jrnb >
+        au < doNotProcess ; 2012 ; Journal of Research in Nursing Volume 17 ; 17 ; jrnb >
+        au < doNotProcess ; 2013 ; Journal of Research in Nursing Volume 18 ; 18 ; jrnb >
+        au < doNotProcess ; 2014 ; Journal of Research in Nursing Volume 19 ; 19 ; jrnb >
+        au < doNotProcess ; 2015 ; Journal of Research in Nursing Volume 20 ; 20 ; jrnb >
         au < manifest ; 2016 ; Journal of Research in Nursing Volume 21 ; 21 ; jrnb >
 
       }
@@ -25466,6 +25466,58 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         issnl = 0047-2875
       >
 
+      #param[base_url] = http://jtr.sagepub.com/
+
+      au < exists ; 1968-1969 ; Journal of Travel Research Volume 7 ; 7 ; jtra >
+      au < exists ; 1969-1970 ; Journal of Travel Research Volume 8 ; 8 ; jtra >
+      au < exists ; 1970-1971 ; Journal of Travel Research Volume 9 ; 9 ; jtra >
+      au < exists ; 1971-1972 ; Journal of Travel Research Volume 10 ; 10 ; jtra >
+      au < exists ; 1972-1973 ; Journal of Travel Research Volume 11 ; 11 ; jtrb >
+      au < exists ; 1973-1974 ; Journal of Travel Research Volume 12 ; 12 ; jtrb >
+      au < exists ; 1974-1975 ; Journal of Travel Research Volume 13 ; 13 ; jtrb >
+      au < exists ; 1975-1976 ; Journal of Travel Research Volume 14 ; 14 ; jtrb >
+      au < exists ; 1976-1977 ; Journal of Travel Research Volume 15 ; 15 ; jtrb >
+      au < exists ; 1977-1978 ; Journal of Travel Research Volume 16 ; 16 ; jtrb >
+      au < exists ; 1978-1979 ; Journal of Travel Research Volume 17 ; 17 ; jtrb >
+      au < exists ; 1979-1980 ; Journal of Travel Research Volume 18 ; 18 ; jtrb >
+      au < exists ; 1980-1981 ; Journal of Travel Research Volume 19 ; 19 ; jtrb >
+      au < exists ; 1981-1982 ; Journal of Travel Research Volume 20 ; 20 ; jtrb >
+      au < exists ; 1982-1983 ; Journal of Travel Research Volume 21 ; 21 ; jtrb >
+      au < exists ; 1983-1984 ; Journal of Travel Research Volume 22 ; 22 ; jtrb >
+      au < exists ; 1984-1985 ; Journal of Travel Research Volume 23 ; 23 ; jtrb >
+      au < exists ; 1985-1986 ; Journal of Travel Research Volume 24 ; 24 ; jtrb >
+      au < exists ; 1986-1987 ; Journal of Travel Research Volume 25 ; 25 ; jtrb >
+      au < exists ; 1987-1988 ; Journal of Travel Research Volume 26 ; 26 ; jtrb >
+      au < exists ; 1988-1989 ; Journal of Travel Research Volume 27 ; 27 ; jtrb >
+      au < exists ; 1989-1990 ; Journal of Travel Research Volume 28 ; 28 ; jtrb >
+      au < exists ; 1990-1991 ; Journal of Travel Research Volume 29 ; 29 ; jtrb >
+      au < exists ; 1991-1992 ; Journal of Travel Research Volume 30 ; 30 ; jtrb >
+      au < exists ; 1992-1993 ; Journal of Travel Research Volume 31 ; 31 ; jtrb >
+      au < exists ; 1993-1994 ; Journal of Travel Research Volume 32 ; 32 ; jtrb >
+      au < exists ; 1994-1995 ; Journal of Travel Research Volume 33 ; 33 ; jtrb >
+      au < exists ; 1995-1996 ; Journal of Travel Research Volume 34 ; 34 ; jtrb >
+      au < exists ; 1996-1997 ; Journal of Travel Research Volume 35 ; 35 ; jtrb >
+      au < exists ; 1997-1998 ; Journal of Travel Research Volume 36 ; 36 ; jtrb >
+      au < exists ; 1998-1999 ; Journal of Travel Research Volume 37 ; 37 ; jtrb >
+      au < exists ; 1999-2000 ; Journal of Travel Research Volume 38 ; 38 ; jtrb >
+      au < exists ; 2000-2001 ; Journal of Travel Research Volume 39 ; 39 ; jtrb >
+      au < exists ; 2001-2002 ; Journal of Travel Research Volume 40 ; 40 ; jtrb >
+      au < exists ; 2002-2003 ; Journal of Travel Research Volume 41 ; 41 ; jtrb >
+      au < exists ; 2003-2004 ; Journal of Travel Research Volume 42 ; 42 ; jtrb >
+      au < exists ; 2004-2005 ; Journal of Travel Research Volume 43 ; 43 ; jtrb >
+      au < exists ; 2005-2006 ; Journal of Travel Research Volume 44 ; 44 ; jtrb >
+      au < exists ; 2006-2007 ; Journal of Travel Research Volume 45 ; 45 ; jtrb >
+      au < exists ; 2007-2008 ; Journal of Travel Research Volume 46 ; 46 ; jtrb >
+      au < exists ; 2008-2009 ; Journal of Travel Research Volume 47 ; 47 ; jtrb >
+      au < exists ; 2009 ; Journal of Travel Research Volume 48 ; 48 ; jtrb >
+      au < exists ; 2010 ; Journal of Travel Research Volume 49 ; 49 ; jtrb >
+      au < exists ; 2011 ; Journal of Travel Research Volume 50 ; 50 ; jtrb >
+      au < exists ; 2012 ; Journal of Travel Research Volume 51 ; 51 ; jtrb >
+      au < exists ; 2013 ; Journal of Travel Research Volume 52 ; 52 ; jtrb >
+      au < exists ; 2014 ; Journal of Travel Research Volume 53 ; 53 ; jtrb >
+      au < exists ; 2015 ; Journal of Travel Research Volume 54 ; 54 ; jtrb >
+      au < exists ; 2016 ; Journal of Travel Research Volume 55 ; 55 ; jtrb >
+
     }
 
     {
@@ -26422,21 +26474,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1999 ; Lighting Research and Technology Volume 31 ; 31 ; lrta >
         au < manifest ; 2000 ; Lighting Research and Technology Volume 32 ; 32 ; lrta >
         au < manifest ; 2001 ; Lighting Research and Technology Volume 33 ; 33 ; lrta >
-        au < exists ; 2002 ; Lighting Research and Technology Volume 34 ; 34 ; lrtc >
-        au < exists ; 2003 ; Lighting Research and Technology Volume 35 ; 35 ; lrtc >
-        au < exists ; 2004 ; Lighting Research and Technology Volume 36 ; 36 ; lrtc >
-        au < exists ; 2005 ; Lighting Research and Technology Volume 37 ; 37 ; lrtc >
-        au < doNotProcess ; 2006 ; Lighting Research and Technology Volume 38 ; 38 ; lrtc >
-        au < doNotProcess ; 2007 ; Lighting Research and Technology Volume 39 ; 39 ; lrtc >
-        au < doNotProcess ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; lrtc >
-        au < doNotProcess ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; lrtc >
-        au < doNotProcess ; 2010 ; Lighting Research and Technology Volume 42 ; 42 ; lrtc >
-        au < doNotProcess ; 2011 ; Lighting Research and Technology Volume 43 ; 43 ; lrtc >
-        au < doNotProcess ; 2012 ; Lighting Research and Technology Volume 44 ; 44 ; lrtc >
-        au < doNotProcess ; 2013 ; Lighting Research and Technology Volume 45 ; 45 ; lrtc >
-        au < doNotProcess ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; lrtc >
-        au < doNotProcess ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; lrtc >
-        au < exists ; 2016 ; Lighting Research and Technology Volume 48 ; 48 ; lrtc >
+        au < exists ; 2002 ; Lighting Research and Technology Volume 34 ; 34 ; lrtd >
+        au < exists ; 2003 ; Lighting Research and Technology Volume 35 ; 35 ; lrtd >
+        au < exists ; 2004 ; Lighting Research and Technology Volume 36 ; 36 ; lrtd >
+        au < exists ; 2005 ; Lighting Research and Technology Volume 37 ; 37 ; lrtd >
+        au < doNotProcess ; 2006 ; Lighting Research and Technology Volume 38 ; 38 ; lrtd >
+        au < doNotProcess ; 2007 ; Lighting Research and Technology Volume 39 ; 39 ; lrtd >
+        au < doNotProcess ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ; lrtd >
+        au < doNotProcess ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; lrtd >
+        au < doNotProcess ; 2010 ; Lighting Research and Technology Volume 42 ; 42 ; lrtd >
+        au < doNotProcess ; 2011 ; Lighting Research and Technology Volume 43 ; 43 ; lrtd >
+        au < doNotProcess ; 2012 ; Lighting Research and Technology Volume 44 ; 44 ; lrtd >
+        au < doNotProcess ; 2013 ; Lighting Research and Technology Volume 45 ; 45 ; lrtd >
+        au < doNotProcess ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; lrtd >
+        au < doNotProcess ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; lrtd >
+        au < exists ; 2016 ; Lighting Research and Technology Volume 48 ; 48 ; lrtd >
 
       }
 
@@ -27233,28 +27285,28 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 1992 ; Medical Care Research and Review Volume 49 ; 49 ; mcrc >
         au < exists ; 1993 ; Medical Care Research and Review Volume 50 ; 50 ; mcrc >
         au < exists ; 1994 ; Medical Care Research and Review Volume 51 ; 51 ; mcrc >
-        au < exists ; 1995 ; Medical Care Research and Review Volume 52 ; 52 ; mcrc >
-        au < exists ; 1996 ; Medical Care Research and Review Volume 53 ; 53 ; mcrc >
-        au < exists ; 1997 ; Medical Care Research and Review Volume 54 ; 54 ; mcrc >
-        au < exists ; 1998 ; Medical Care Research and Review Volume 55 ; 55 ; mcrc >
-        au < exists ; 1999 ; Medical Care Research and Review Volume 56 ; 56 ; mcrc >
-        au < exists ; 2000 ; Medical Care Research and Review Volume 57 ; 57 ; mcrc >
-        au < exists ; 2001 ; Medical Care Research and Review Volume 58 ; 58 ; mcrc >
-        au < exists ; 2002 ; Medical Care Research and Review Volume 59 ; 59 ; mcrc >
-        au < exists ; 2003 ; Medical Care Research and Review Volume 60 ; 60 ; mcrc >
-        au < exists ; 2004 ; Medical Care Research and Review Volume 61 ; 61 ; mcrc >
-        au < doNotProcess ; 2005 ; Medical Care Research and Review Volume 62 ; 62 ; mcrc >
-        au < doNotProcess ; 2006 ; Medical Care Research and Review Volume 63 ; 63 ; mcrc >
-        au < doNotProcess ; 2007 ; Medical Care Research and Review Volume 64 ; 64 ; mcrc >
-        au < doNotProcess ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ; mcrc >
-        au < doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; mcrc >
-        au < doNotProcess ; 2010 ; Medical Care Research and Review Volume 67 ; 67 ; mcrc >
-        au < doNotProcess ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; mcrc >
-        au < doNotProcess ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; mcrc >
-        au < doNotProcess ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; mcrc >
-        au < doNotProcess ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; mcrc >
-        au < doNotProcess ; 2015 ; Medical Care Research and Review Volume 72 ; 72 ; mcrc >
-        au < exists ; 2016 ; Medical Care Research and Review Volume 73 ; 73 ; mcrc >
+        au < exists ; 1995 ; Medical Care Research and Review Volume 52 ; 52 ; mcrd >
+        au < exists ; 1996 ; Medical Care Research and Review Volume 53 ; 53 ; mcrd >
+        au < exists ; 1997 ; Medical Care Research and Review Volume 54 ; 54 ; mcrd >
+        au < exists ; 1998 ; Medical Care Research and Review Volume 55 ; 55 ; mcrd >
+        au < exists ; 1999 ; Medical Care Research and Review Volume 56 ; 56 ; mcrd >
+        au < exists ; 2000 ; Medical Care Research and Review Volume 57 ; 57 ; mcrd >
+        au < exists ; 2001 ; Medical Care Research and Review Volume 58 ; 58 ; mcrd >
+        au < exists ; 2002 ; Medical Care Research and Review Volume 59 ; 59 ; mcrd >
+        au < exists ; 2003 ; Medical Care Research and Review Volume 60 ; 60 ; mcrd >
+        au < exists ; 2004 ; Medical Care Research and Review Volume 61 ; 61 ; mcrd >
+        au < doNotProcess ; 2005 ; Medical Care Research and Review Volume 62 ; 62 ; mcrd >
+        au < doNotProcess ; 2006 ; Medical Care Research and Review Volume 63 ; 63 ; mcrd >
+        au < doNotProcess ; 2007 ; Medical Care Research and Review Volume 64 ; 64 ; mcrd >
+        au < doNotProcess ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ; mcrd >
+        au < doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; mcrd >
+        au < doNotProcess ; 2010 ; Medical Care Research and Review Volume 67 ; 67 ; mcrd >
+        au < doNotProcess ; 2011 ; Medical Care Research and Review Volume 68 ; 68 ; mcrd >
+        au < doNotProcess ; 2012 ; Medical Care Research and Review Volume 69 ; 69 ; mcrd >
+        au < doNotProcess ; 2013 ; Medical Care Research and Review Volume 70 ; 70 ; mcrd >
+        au < doNotProcess ; 2014 ; Medical Care Research and Review Volume 71 ; 71 ; mcrd >
+        au < doNotProcess ; 2015 ; Medical Care Research and Review Volume 72 ; 72 ; mcrd >
+        au < exists ; 2016 ; Medical Care Research and Review Volume 73 ; 73 ; mcrd >
 
       }
 
@@ -42035,6 +42087,30 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       comment[RSM] = from Royal Society of Medicine. http://jtt.rsmjournals.com/
+        #param[base_url] = http://jtt.sagepub.com/
+
+        au < exists ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 ; jtta >
+        au < exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; jtta >
+        au < exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 ; jtta >
+        au < exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 ; jtta >
+        au < exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 ; jtta >
+        au < exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 ; jtta >
+        au < exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 ; jtta >
+        au < exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 ; jtta >
+        au < exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 ; jtta >
+        au < exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 ; jtta >
+        au < exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 ; jtta >
+        au < exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 ; jtta >
+        au < exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 ; jtta >
+        au < exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; jtta >
+        au < exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; jtta >
+        au < exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; jtta >
+        au < exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; jtta >
+        au < exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; jtta >
+        au < exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; jtta >
+        au < exists ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 ; jtta >
+        au < exists ; 2015 ; Journal of Telemedicine and Telecare Volume 21 ; 21 ; jtta >
+        au < exists ; 2016 ; Journal of Telemedicine and Telecare Volume 22 ; 22 ; jtta >
 
     }
 
@@ -43065,6 +43141,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; Industry and Higher Education Volume 28 ; 28 ; ihea >
     au < doNotProcess ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; ihea >
     au < exists ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; ihea >
+    au < exists ; 2017 ; Industry and Higher Education Volume 31 ; 31 ; ihea >
 
   }
 
@@ -43097,6 +43174,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; ieia >
     au < doNotProcess ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; ieia >
     au < exists ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; ieia >
+    au < exists ; 2017 ; International Journal of Entrepreneurship and Innovation Volume 18 ; 18 ; ieia >
 
   }
 
