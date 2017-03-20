@@ -51,8 +51,11 @@ public class NpgZipXmlArticleIteratorFactory extends SourceZipXmlArticleIterator
   // bonekey20040128test.xml, bonekey201453_test.xml, and one in a deep set of directories...
   // This plugin will emit even if it doesn't have a matching pdf so need to exclude
   // extraneous XML files
+  // drat - they redelivered two 'fixed' zips and these break the mold
+  // bonekey_2001_bonekey2001032_xml_pdf/xml/bonekey2001032.xml
+  // so allow this as well...
   protected static final String ONLY_BONEKEY_ARTICLE_XML_TEMPLATE =
-      "\"%s%d/.*\\.zip!/([^/]+/)?bonekey[0-9]+\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.zip!/(bonekey_[0-9]+_bonekey[0-9]+_xml_pdf/)?([^/]+/)?bonekey[0-9]+\\.xml$\", base_url, year";
 
   @Override
   protected String getIncludePatternTemplate() {
