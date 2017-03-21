@@ -39,9 +39,9 @@
       # manifest pages on this platform for 2003 onward only
 
 
-      au < ready ; exists ; 2003 ; American Journal of Archaeology Volume 107 ; 2003 ; >
+      au < crawling ; exists ; 2003 ; American Journal of Archaeology Volume 107 ; 2003 ; >
       au < manifest ; exists ; 2004 ; American Journal of Archaeology Volume 108 ; 2004 ; >
-      au < ready ; exists ; 2005 ; American Journal of Archaeology Volume 109 ; 2005 ; >
+      au < crawling ; exists ; 2005 ; American Journal of Archaeology Volume 109 ; 2005 ; >
       au < manifest ; exists ; 2006 ; American Journal of Archaeology Volume 110 ; 2006 ; >
       au < manifest ; exists ; 2007 ; American Journal of Archaeology Volume 111 ; 2007 ; >
       au < manifest ; exists ; 2008 ; American Journal of Archaeology Volume 112 ; 2008 ; >
@@ -51,8 +51,8 @@
       au < manifest ; exists ; 2012 ; American Journal of Archaeology Volume 116 ; 2012 ; >
       au < manifest ; exists ; 2013 ; American Journal of Archaeology Volume 117 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Archaeology Volume 118 ; 2014 ; >
-      au < ready ; exists ; 2015 ; American Journal of Archaeology Volume 119 ; 2015 ; >
-      au < ready ; exists ; 2016 ; American Journal of Archaeology Volume 120 ; 2016 ; >
+      au < crawling ; exists ; 2015 ; American Journal of Archaeology Volume 119 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; American Journal of Archaeology Volume 120 ; 2016 ; >
       au < expected ; exists ; 2017 ; American Journal of Archaeology Volume 121 ; 2017 ; >
       
     }  
