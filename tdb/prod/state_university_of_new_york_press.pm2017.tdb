@@ -32,10 +32,10 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2013 ; Journal of Japanese Philosophy Volume 1, 2013 ; 10158 >
-        au < exists ; 2014 ; Journal of Japanese Philosophy Volume 2, 2014 ; 10263 >
-        au < exists ; 2015 ; Journal of Japanese Philosophy Volume 3, 2015 ; 10843 >
-        au < testing ; 2016 ; Journal of Japanese Philosophy Volume 4, 2016 ; 12242 >
+        au < exists ; 2013 ; Journal of Japanese Philosophy Volume 1 [2013] ; 10158 >
+        au < exists ; 2014 ; Journal of Japanese Philosophy Volume 2 [2014] ; 10263 >
+        au < exists ; 2015 ; Journal of Japanese Philosophy Volume 3 [2015] ; 10843 >
+        au < testing ; 2016 ; Journal of Japanese Philosophy Volume 4 [2016] ; 12242 >
 
     }
     {
@@ -49,10 +49,10 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2011 ; Mediaevalia Volume 32, 2011 ; 8228 >
-        au < exists ; 2012 ; Mediaevalia Volume 33, 2012 ; 8932 >
-        au < exists ; 2013 ; Mediaevalia Volume 34, 2013 ; 10178 >
-        au < exists ; 2014 ; Mediaevalia Volume 35, 2014 ; 10795 >
+        au < exists ; 2011 ; Mediaevalia Volume 32 [2011] ; 8228 >
+        au < exists ; 2012 ; Mediaevalia Volume 33 [2012] ; 8932 >
+        au < exists ; 2013 ; Mediaevalia Volume 34 [2013] ; 10178 >
+        au < exists ; 2014 ; Mediaevalia Volume 35 [2014] ; 10795 >
         au < exists ; 2015/2016 ; Mediaevalia Volume 36/37, 2015/2016 ; 11364 >
 
     }
@@ -67,11 +67,11 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1, 2012 ; 8710 >
-        au < exists ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2, 2013 ; 8931 >
-        au < exists ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3, 2014 ; 9924 >
-        au < exists ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4, 2015 ; 10612 >
-        au < testing ; 2016 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 5, 2016 ; 12185 >
+        au < exists ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 [2012] ; 8710 >
+        au < exists ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 [2013] ; 8931 >
+        au < exists ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 [2014] ; 9924 >
+        au < exists ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4 [2015] ; 10612 >
+        au < testing ; 2016 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 5 [2016] ; 12185 >
 
     }
     {
@@ -88,9 +88,9 @@
         au < exists ; 2011 ; philoSOPHIA Volume 1 ; 8344 >
         au < exists ; 2012 ; philoSOPHIA Volume 2 ; 8468 >
         au < exists ; 2013 ; philoSOPHIA Volume 3 ; 9260 >
-        au < exists ; 2014 ; philoSOPHIA Volume 4, 2014 ; 10093 >
-        au < exists ; 2015 ; philoSOPHIA Volume 5, 2015 ; 10661 >
-        au < testing ; 2016 ; philoSOPHIA Volume 6, 2016 ; 11343 >
+        au < exists ; 2014 ; philoSOPHIA Volume 4 [2014] ; 10093 >
+        au < exists ; 2015 ; philoSOPHIA Volume 5 [2015] ; 10661 >
+        au < testing ; 2016 ; philoSOPHIA Volume 6 [2016] ; 11343 >
 
     }
 
