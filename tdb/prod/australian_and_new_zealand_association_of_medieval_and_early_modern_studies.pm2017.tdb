@@ -18,39 +18,39 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1983 ; Parergon Number 1,1983 ; 8296 >
-        au < exists ; 1984 ; Parergon Number 2, 1984 ; 8297 >
-        au < exists ; 1985 ; Parergon Number 3, 1985 ; 8298 >
-        au < exists ; 1986 ; Parergon Number 4, 1986 ; 8299 >
-        au < exists ; 1987 ; Parergon Number 5, 1987 ; 8357 >
-        au < exists ; 1988 ; Parergon Number 6, 1988 ; 8351 >
-        au < exists ; 1989 ; Parergon Number 7, 1989 ; 8356 >
-        au < exists ; 1990 ; Parergon Volume 8, 1990 ; 8355 >
-        au < exists ; 1991 ; Parergon Volume 9, 1991 ; 8354 >
-        au < exists ; 1992 ; Parergon Volume 10, 1992 ; 8353 >
-        au < exists ; 1993 ; Parergon Volume 11, 1993 ; 8352 >
-        au < exists ; 1994-1995 ; Parergon Volume 12, 1994-1995 ; 8253 >
-        au < exists ; 1995-1996 ; Parergon Volume 13, 1995-1996 ; 8229 >
-        au < exists ; 1996-1997 ; Parergon Volume 14, 1996-1997 ; 8200 >
-        au < exists ; 1997-1998 ; Parergon Volume 15, 1997-1998 ; 8151 >
-        au < exists ; 1998-1999 ; Parergon Volume 16, 1998-1999 ; 8127 >
-        au < exists ; 1999-2000 ; Parergon Volume 17, 1999-2000 ; 8055 >
-        au < exists ; 2000-2001 ; Parergon Volume 18, 2000-2001 ; 8054 >
-        au < exists ; 2002 ; Parergon Volume 19, 2002 ; 8057 >
-        au < exists ; 2003 ; Parergon Volume 20, 2003 ; 8056 >
-        au < exists ; 2004 ; Parergon Volume 21, 2004 ; 7946 >
-        au < exists ; 2005 ; Parergon Volume 22, 2005 ; 2820 >
-        au < exists ; 2006 ; Parergon Volume 23, 2006 ; 3138 >
-        au < exists ; 2007 ; Parergon Volume 24, 2007 ; 3448 >
-        au < exists ; 2008 ; Parergon Volume 25, 2008 ; 4018 >
-        au < exists ; 2009 ; Parergon Volume 26, 2009 ; 5663 >
-        au < exists ; 2010 ; Parergon Volume 27, 2010 ; 6405 >
-        au < exists ; 2011 ; Parergon Volume 28, 2011 ; 7497 >
-        au < exists ; 2012 ; Parergon Volume 29, 2012 ; 8424 >
-        au < exists ; 2013 ; Parergon Volume 30, 2013 ; 9302 >
-        au < exists ; 2014 ; Parergon Volume 31, 2014 ; 10165 >
-        au < exists ; 2015 ; Parergon Volume 32, 2015 ; 10759 >
-        au < testing ; 2016 ; Parergon Volume 33, 2016 ; 12184 >
+        au < exists ; 1983 ; Parergon Volume 1 [1983] ; 8296 >
+        au < exists ; 1984 ; Parergon Volume 2 [1984] ; 8297 >
+        au < exists ; 1985 ; Parergon Volume 3 [1985] ; 8298 >
+        au < exists ; 1986 ; Parergon Volume 4 [1986] ; 8299 >
+        au < exists ; 1987 ; Parergon Volume 5 [1987] ; 8357 >
+        au < exists ; 1988 ; Parergon Volume 6 [1988] ; 8351 >
+        au < exists ; 1989 ; Parergon Volume 7 [1989] ; 8356 >
+        au < exists ; 1990 ; Parergon Volume 8 [1990] ; 8355 >
+        au < exists ; 1991 ; Parergon Volume 9 [1991] ; 8354 >
+        au < exists ; 1992 ; Parergon Volume 10 [1992] ; 8353 >
+        au < exists ; 1993 ; Parergon Volume 11 [1993] ; 8352 >
+        au < exists ; 1994-1995 ; Parergon Volume 12 [1994-1995] ; 8253 >
+        au < exists ; 1995-1996 ; Parergon Volume 13 [1995-1996] ; 8229 >
+        au < exists ; 1996-1997 ; Parergon Volume 14 [1996-1997] ; 8200 >
+        au < exists ; 1997-1998 ; Parergon Volume 15 [1997-1998] ; 8151 >
+        au < exists ; 1998-1999 ; Parergon Volume 16 [1998-1999] ; 8127 >
+        au < exists ; 1999-2000 ; Parergon Volume 17 [1999-2000] ; 8055 >
+        au < exists ; 2000-2001 ; Parergon Volume 18 [2000-2001] ; 8054 >
+        au < exists ; 2002 ; Parergon Volume 19 [2002] ; 8057 >
+        au < exists ; 2003 ; Parergon Volume 20 [2003] ; 8056 >
+        au < exists ; 2004 ; Parergon Volume 21 [2004] ; 7946 >
+        au < exists ; 2005 ; Parergon Volume 22 [2005] ; 2820 >
+        au < exists ; 2006 ; Parergon Volume 23 [2006] ; 3138 >
+        au < exists ; 2007 ; Parergon Volume 24 [2007] ; 3448 >
+        au < exists ; 2008 ; Parergon Volume 25 [2008] ; 4018 >
+        au < exists ; 2009 ; Parergon Volume 26 [2009] ; 5663 >
+        au < exists ; 2010 ; Parergon Volume 27 [2010] ; 6405 >
+        au < exists ; 2011 ; Parergon Volume 28 [2011] ; 7497 >
+        au < exists ; 2012 ; Parergon Volume 29 [2012] ; 8424 >
+        au < exists ; 2013 ; Parergon Volume 30 [2013] ; 9302 >
+        au < exists ; 2014 ; Parergon Volume 31 [2014] ; 10165 >
+        au < exists ; 2015 ; Parergon Volume 32 [2015] ; 10759 >
+        au < testing ; 2016 ; Parergon Volume 33 [2016] ; 12184 >
 
     }
 
