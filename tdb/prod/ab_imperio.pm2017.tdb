@@ -16,23 +16,23 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2000 ; Ab Imperio 2000 ; 9347 >
-        au < exists ; 2001 ; Ab Imperio 2001 ; 9346 >
-        au < exists ; 2002 ; Ab Imperio 2002 ; 9345 >
-        au < exists ; 2003 ; Ab Imperio 2003 ; 9344 >
-        au < exists ; 2004 ; Ab Imperio 2004 ; 9343 >
-        au < exists ; 2005 ; Ab Imperio 2005 ; 9342 >
-        au < exists ; 2006 ; Ab Imperio 2006 ; 9341 >
-        au < exists ; 2007 ; Ab Imperio 2007 ; 9340 >
-        au < exists ; 2008 ; Ab Imperio 2008 ; 9339 >
-        au < exists ; 2009 ; Ab Imperio 2009 ; 9338 >
-        au < exists ; 2010 ; Ab Imperio 2010 ; 9337 >
-        au < exists ; 2011 ; Ab Imperio 2011 ; 8029 >
-        au < exists ; 2012 ; Ab Imperio 2012 ; 8317 >
-        au < exists ; 2013 ; Ab Imperio 2013 ; 9074 >
-        au < exists ; 2014 ; Ab Imperio 2014 ; 9987 >
-        au < exists ; 2015 ; Ab Imperio 2015 ; 10643 >
-        au < testing ; 2016 ; Ab Imperio 2016 ; 11216 >
+        au < manifest ; 2000 ; Ab Imperio 2000 ; 9347 >
+        au < manifest ; 2001 ; Ab Imperio 2001 ; 9346 >
+        au < manifest ; 2002 ; Ab Imperio 2002 ; 9345 >
+        au < manifest ; 2003 ; Ab Imperio 2003 ; 9344 >
+        au < manifest ; 2004 ; Ab Imperio 2004 ; 9343 >
+        au < manifest ; 2005 ; Ab Imperio 2005 ; 9342 >
+        au < manifest ; 2006 ; Ab Imperio 2006 ; 9341 >
+        au < manifest ; 2007 ; Ab Imperio 2007 ; 9340 >
+        au < manifest ; 2008 ; Ab Imperio 2008 ; 9339 >
+        au < manifest ; 2009 ; Ab Imperio 2009 ; 9338 >
+        au < manifest ; 2010 ; Ab Imperio 2010 ; 9337 >
+        au < manifest ; 2011 ; Ab Imperio 2011 ; 8029 >
+        au < manifest ; 2012 ; Ab Imperio 2012 ; 8317 >
+        au < manifest ; 2013 ; Ab Imperio 2013 ; 9074 >
+        au < manifest ; 2014 ; Ab Imperio 2014 ; 9987 >
+        au < manifest ; 2015 ; Ab Imperio 2015 ; 10643 >
+        au < manifest ; 2016 ; Ab Imperio 2016 ; 11216 >
 
     }
 

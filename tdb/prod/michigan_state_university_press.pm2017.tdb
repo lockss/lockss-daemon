@@ -18,22 +18,22 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2001 ; CR: The New Centennial Review Volume 1 [2001] ; 1731 >
-        au < exists ; 2002 ; CR: The New Centennial Review Volume 2 [2002] ; 467 >
-        au < exists ; 2003 ; CR: The New Centennial Review Volume 3 [2003] ; 877 >
-        au < exists ; 2004 ; CR: The New Centennial Review Volume 4 [2004] ; 2527 >
-        au < exists ; 2005 ; CR: The New Centennial Review Volume 5 [2005] ; 2781 >
-        au < exists ; 2006 ; CR: The New Centennial Review Volume 6 [2006] ; 3080 >
-        au < exists ; 2007 ; CR: The New Centennial Review Volume 7 [2007] ; 3481 >
-        au < exists ; 2008 ; CR: The New Centennial Review Volume 8 [2008] ; 3919 >
-        au < exists ; 2009 ; CR: The New Centennial Review Volume 9 [2009] ; 4411 >
-        au < exists ; 2010 ; CR: The New Centennial Review Volume 10 [2010] ; 6434 >
-        au < exists ; 2011 ; CR: The New Centennial Review Volume 11 [2011] ; 7935 >
-        au < exists ; 2012 ; CR: The New Centennial Review Volume 12 [2012] ; 8517 >
-        au < exists ; 2013 ; CR: The New Centennial Review Volume 13 [2013] ; 9246 >
-        au < exists ; 2014 ; CR: The New Centennial Review Volume 14 [2014] ; 9759 >
-        au < exists ; 2015 ; CR: The New Centennial Review Volume 15 [2015] ; 10520 >
-        au < testing ; 2016 ; CR: The New Centennial Review Volume 16 [2016] ; 11248 >
+        au < manifest ; 2001 ; CR: The New Centennial Review Volume 1 [2001] ; 1731 >
+        au < manifest ; 2002 ; CR: The New Centennial Review Volume 2 [2002] ; 467 >
+        au < manifest ; 2003 ; CR: The New Centennial Review Volume 3 [2003] ; 877 >
+        au < manifest ; 2004 ; CR: The New Centennial Review Volume 4 [2004] ; 2527 >
+        au < manifest ; 2005 ; CR: The New Centennial Review Volume 5 [2005] ; 2781 >
+        au < manifest ; 2006 ; CR: The New Centennial Review Volume 6 [2006] ; 3080 >
+        au < manifest ; 2007 ; CR: The New Centennial Review Volume 7 [2007] ; 3481 >
+        au < manifest ; 2008 ; CR: The New Centennial Review Volume 8 [2008] ; 3919 >
+        au < manifest ; 2009 ; CR: The New Centennial Review Volume 9 [2009] ; 4411 >
+        au < manifest ; 2010 ; CR: The New Centennial Review Volume 10 [2010] ; 6434 >
+        au < manifest ; 2011 ; CR: The New Centennial Review Volume 11 [2011] ; 7935 >
+        au < manifest ; 2012 ; CR: The New Centennial Review Volume 12 [2012] ; 8517 >
+        au < manifest ; 2013 ; CR: The New Centennial Review Volume 13 [2013] ; 9246 >
+        au < manifest ; 2014 ; CR: The New Centennial Review Volume 14 [2014] ; 9759 >
+        au < manifest ; 2015 ; CR: The New Centennial Review Volume 15 [2015] ; 10520 >
+        au < manifest ; 2016 ; CR: The New Centennial Review Volume 16 [2016] ; 11248 >
 
     }
     {
@@ -47,27 +47,27 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1994 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 1 [Spring 1994] ; 5984 >
-        au < exists ; 1995 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 2 [Spring 1995] ; 5983 >
-        au < exists ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 [Spring 1996] ; 5982 >
-        au < exists ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 [Spring 1997] ; 5981 >
-        au < exists ; 1998 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 5 [Spring 1998] ; 5980 >
-        au < exists ; 1999 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 6 [Spring 1999] ; 5979 >
-        au < exists ; 2000 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 7 [Spring 2000] ; 5978 >
-        au < exists ; 2001 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 8 [Spring 2001] ; 5977 >
-        au < exists ; 2002 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 9 [Spring 2002] ; 5976 >
-        au < exists ; 2003 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 10 [Spring 2003] ; 5975 >
-        au < exists ; 2004 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 11 [Spring 2004] ; 5974 >
-        au < exists ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 12-13 [2005-2006] ; 3787 >
-        au < exists ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 14 [2007] ; 3720 >
-        au < exists ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 [2008-2009] ; 4349 >
-        au < exists ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 [2010] ; 6338 >
-        au < exists ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 [2011] ; 6979 >
-        au < exists ; 2012 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 19 [2012] ; 8373 >
-        au < exists ; 2013 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 20 [2013] ; 9258 >
-        au < exists ; 2014 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 21 [2014] ; 9999 >
-        au < exists ; 2015 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 22 [2015] ; 10659 >
-        au < testing ; 2016 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 23 [2016] ; 12132 >
+        au < manifest ; 1994 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 1 [Spring 1994] ; 5984 >
+        au < manifest ; 1995 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 2 [Spring 1995] ; 5983 >
+        au < manifest ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 [Spring 1996] ; 5982 >
+        au < manifest ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 [Spring 1997] ; 5981 >
+        au < manifest ; 1998 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 5 [Spring 1998] ; 5980 >
+        au < manifest ; 1999 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 6 [Spring 1999] ; 5979 >
+        au < manifest ; 2000 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 7 [Spring 2000] ; 5978 >
+        au < manifest ; 2001 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 8 [Spring 2001] ; 5977 >
+        au < manifest ; 2002 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 9 [Spring 2002] ; 5976 >
+        au < manifest ; 2003 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 10 [Spring 2003] ; 5975 >
+        au < manifest ; 2004 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 11 [Spring 2004] ; 5974 >
+        au < manifest ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 12-13 [2005-2006] ; 3787 >
+        au < manifest ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 14 [2007] ; 3720 >
+        au < manifest ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 [2008-2009] ; 4349 >
+        au < manifest ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 [2010] ; 6338 >
+        au < manifest ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 [2011] ; 6979 >
+        au < manifest ; 2012 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 19 [2012] ; 8373 >
+        au < manifest ; 2013 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 20 [2013] ; 9258 >
+        au < manifest ; 2014 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 21 [2014] ; 9999 >
+        au < manifest ; 2015 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 22 [2015] ; 10659 >
+        au < manifest ; 2016 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 23 [2016] ; 12132 >
 
     }
     {
@@ -81,25 +81,25 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 1 [1999] ; 6052 >
-        au < exists ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 2 [2000] ; 6051 >
-        au < exists ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 3 [2001] ; 6050 >
-        au < exists ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 4 [2002] ; 6049 >
-        au < exists ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 5 [2003] ; 907 >
-        au < exists ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 6 [2004] ; 2526 >
-        au < exists ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 7 [2005] ; 2775 >
-        au < exists ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 [2006] ; 3060 >
-        au < exists ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 [2007] ; 3376 >
-        au < exists ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 [2008] ; 3755 >
-        au < exists ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 [2009] ; 4222 >
-        au < exists ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 [2010] ; 5773 >
-        au < exists ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 [2011] ; 6715 >
-        au < exists ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 [2012] ; 8161 >
-        au < exists ; 2013 ; Fourth Genre: Explorations in Nonfiction Volume 15 [2013] ; 8835 >
-        au < exists ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 [2014] ; 9685 >
-        au < exists ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 [2015] ; 10404 >
-        au < testing ; 2016 ; Fourth Genre: Explorations in Nonfiction Volume 18 [2016] ; 11123 >
-        au < exists ; 2017 ; Fourth Genre: Explorations in Nonfiction Volume 19 [2017] ; 12411 >
+        au < manifest ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 1 [1999] ; 6052 >
+        au < manifest ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 2 [2000] ; 6051 >
+        au < manifest ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 3 [2001] ; 6050 >
+        au < manifest ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 4 [2002] ; 6049 >
+        au < manifest ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 5 [2003] ; 907 >
+        au < manifest ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 6 [2004] ; 2526 >
+        au < manifest ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 7 [2005] ; 2775 >
+        au < manifest ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 [2006] ; 3060 >
+        au < manifest ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 [2007] ; 3376 >
+        au < manifest ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 [2008] ; 3755 >
+        au < manifest ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 [2009] ; 4222 >
+        au < manifest ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 [2010] ; 5773 >
+        au < manifest ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 [2011] ; 6715 >
+        au < manifest ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 [2012] ; 8161 >
+        au < manifest ; 2013 ; Fourth Genre: Explorations in Nonfiction Volume 15 [2013] ; 8835 >
+        au < manifest ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 [2014] ; 9685 >
+        au < manifest ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 [2015] ; 10404 >
+        au < manifest ; 2016 ; Fourth Genre: Explorations in Nonfiction Volume 18 [2016] ; 11123 >
+        au < manifest ; 2017 ; Fourth Genre: Explorations in Nonfiction Volume 19 [2017] ; 12411 >
 
     }
     {
@@ -113,22 +113,22 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2002 ; French Colonial History Volume 2 [2002] ; 6047 >
-        au < exists ; 2002 ; French Colonial History Volume 1 [2002] ; 6048 >
-        au < exists ; 2003 ; French Colonial History Volume 3 [2003] ; 864 >
-        au < exists ; 2003 ; French Colonial History Volume 4 [2003] ; 905 >
-        au < exists ; 2004 ; French Colonial History Volume 5 [2004] ; 2510 >
-        au < exists ; 2005 ; French Colonial History Volume 6 [2005] ; 2859 >
-        au < exists ; 2006 ; French Colonial History Volume 7 [2006] ; 3100 >
-        au < exists ; 2007 ; French Colonial History Volume 8 [2007] ; 3384 >
-        au < exists ; 2008 ; French Colonial History Volume 9 [2008] ; 3754 >
-        au < exists ; 2009 ; French Colonial History Volume 10 [2009] ; 4366 >
-        au < exists ; 2010 ; French Colonial History Volume 11 [2010] ; 5750 >
-        au < exists ; 2011 ; French Colonial History Volume 12 [2011] ; 7233 >
-        au < exists ; 2012 ; French Colonial History Volume 13 [2012] ; 8280 >
-        au < exists ; 2013 ; French Colonial History Volume 14 [2013] ; 9083 >
-        au < exists ; 2014 ; French Colonial History Volume 15 [2014] ; 10059 >
-        au < testing ; 2016 ; French Colonial History Volume 16 [2016] ; 12412 >
+        au < manifest ; 2002 ; French Colonial History Volume 2 [2002] ; 6047 >
+        au < manifest ; 2002 ; French Colonial History Volume 1 [2002] ; 6048 >
+        au < manifest ; 2003 ; French Colonial History Volume 3 [2003] ; 864 >
+        au < manifest ; 2003 ; French Colonial History Volume 4 [2003] ; 905 >
+        au < manifest ; 2004 ; French Colonial History Volume 5 [2004] ; 2510 >
+        au < manifest ; 2005 ; French Colonial History Volume 6 [2005] ; 2859 >
+        au < manifest ; 2006 ; French Colonial History Volume 7 [2006] ; 3100 >
+        au < manifest ; 2007 ; French Colonial History Volume 8 [2007] ; 3384 >
+        au < manifest ; 2008 ; French Colonial History Volume 9 [2008] ; 3754 >
+        au < manifest ; 2009 ; French Colonial History Volume 10 [2009] ; 4366 >
+        au < manifest ; 2010 ; French Colonial History Volume 11 [2010] ; 5750 >
+        au < manifest ; 2011 ; French Colonial History Volume 12 [2011] ; 7233 >
+        au < manifest ; 2012 ; French Colonial History Volume 13 [2012] ; 8280 >
+        au < manifest ; 2013 ; French Colonial History Volume 14 [2013] ; 9083 >
+        au < manifest ; 2014 ; French Colonial History Volume 15 [2014] ; 10059 >
+        au < manifest ; 2016 ; French Colonial History Volume 16 [2016] ; 12412 >
 
     }
     {
@@ -142,16 +142,16 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2007-2008 ; Journal for the Study of Radicalism Volume 1 [2007-2008] ; 3671 >
-        au < exists ; 2008-2009 ; Journal for the Study of Radicalism Volume 2 [2008-2009] ; 3841 >
-        au < exists ; 2009-2010 ; Journal for the Study of Radicalism Volume 3 [2009-2010] ; 4267 >
-        au < exists ; 2010-2011 ; Journal for the Study of Radicalism Volume 4 [2010-2011] ; 5749 >
-        au < exists ; 2011-2012 ; Journal for the Study of Radicalism Volume 5 [2011-2012] ; 7234 >
-        au < exists ; 2012 ; Journal for the Study of Radicalism Volume 6 [2012] ; 8165 >
-        au < exists ; 2013 ; Journal for the Study of Radicalism Volume 7 [2013] ; 9073 >
-        au < exists ; 2014 ; Journal for the Study of Radicalism Volume 8 [2014] ; 9689 >
-        au < exists ; 2015 ; Journal for the Study of Radicalism Volume 9 [2015] ; 10339 >
-        au < testing ; 2016 ; Journal for the Study of Radicalism Volume 10 [2016] ; 11065 >
+        au < manifest ; 2007-2008 ; Journal for the Study of Radicalism Volume 1 [2007-2008] ; 3671 >
+        au < manifest ; 2008-2009 ; Journal for the Study of Radicalism Volume 2 [2008-2009] ; 3841 >
+        au < manifest ; 2009-2010 ; Journal for the Study of Radicalism Volume 3 [2009-2010] ; 4267 >
+        au < manifest ; 2010-2011 ; Journal for the Study of Radicalism Volume 4 [2010-2011] ; 5749 >
+        au < manifest ; 2011-2012 ; Journal for the Study of Radicalism Volume 5 [2011-2012] ; 7234 >
+        au < manifest ; 2012 ; Journal for the Study of Radicalism Volume 6 [2012] ; 8165 >
+        au < manifest ; 2013 ; Journal for the Study of Radicalism Volume 7 [2013] ; 9073 >
+        au < manifest ; 2014 ; Journal for the Study of Radicalism Volume 8 [2014] ; 9689 >
+        au < manifest ; 2015 ; Journal for the Study of Radicalism Volume 9 [2015] ; 10339 >
+        au < manifest ; 2016 ; Journal for the Study of Radicalism Volume 10 [2016] ; 11065 >
 
     }
     {
@@ -165,22 +165,22 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1994 ; Northeast African Studies Volume 1 [1994 (New Series)] ; 6067 >
-        au < exists ; 1995 ; Northeast African Studies Volume 2 [1995 (New Series)] ; 6066 >
-        au < exists ; 1996 ; Northeast African Studies Volume 3 [1996 (New Series)] ; 6065 >
-        au < exists ; 1997 ; Northeast African Studies Volume 4 [1997 (New Series)] ; 6064 >
-        au < exists ; 1998 ; Northeast African Studies Volume 5 [1998 (New Series)] ; 4052 >
-        au < exists ; 1999 ; Northeast African Studies New Series, Volume 6 [1999] ; 464 >
-        au < exists ; 2000 ; Northeast African Studies New Series, Volume 7 [2000] ; 2514 >
-        au < exists ; 2001 ; Northeast African Studies New Series, Volume 8 [2001] ; 2854 >
-        au < exists ; 2002 ; Northeast African Studies New Series, Volume 9 [2002] ; 3371 >
-        au < exists ; 2003 ; Northeast African Studies Volume 10 [2003 (New Series)] ; 3872 >
-        au < exists ; 2004 ; Northeast African Studies Volume 11 [2004 (New Series)] ; 7072 >
-        au < exists ; 2012 ; Northeast African Studies Volume 12 [2012 (New Series)] ; 8291 >
-        au < exists ; 2013 ; Northeast African Studies Volume 13 [2013 (New Series)] ; 9264 >
-        au < exists ; 2014 ; Northeast African Studies Volume 14 [2014  (New Series)] ; 9917 >
-        au < exists ; 2015 ; Northeast African Studies Volume 15 [2015 (New Series)] ; 10605 >
-        au < testing ; 2016 ; Northeast African Studies Volume 16 [2016 (New Series)] ; 11277 >
+        au < manifest ; 1994 ; Northeast African Studies Volume 1 [1994 (New Series)] ; 6067 >
+        au < manifest ; 1995 ; Northeast African Studies Volume 2 [1995 (New Series)] ; 6066 >
+        au < manifest ; 1996 ; Northeast African Studies Volume 3 [1996 (New Series)] ; 6065 >
+        au < manifest ; 1997 ; Northeast African Studies Volume 4 [1997 (New Series)] ; 6064 >
+        au < manifest ; 1998 ; Northeast African Studies Volume 5 [1998 (New Series)] ; 4052 >
+        au < manifest ; 1999 ; Northeast African Studies New Series, Volume 6 [1999] ; 464 >
+        au < manifest ; 2000 ; Northeast African Studies New Series, Volume 7 [2000] ; 2514 >
+        au < manifest ; 2001 ; Northeast African Studies New Series, Volume 8 [2001] ; 2854 >
+        au < manifest ; 2002 ; Northeast African Studies New Series, Volume 9 [2002] ; 3371 >
+        au < manifest ; 2003 ; Northeast African Studies Volume 10 [2003 (New Series)] ; 3872 >
+        au < manifest ; 2004 ; Northeast African Studies Volume 11 [2004 (New Series)] ; 7072 >
+        au < manifest ; 2012 ; Northeast African Studies Volume 12 [2012 (New Series)] ; 8291 >
+        au < manifest ; 2013 ; Northeast African Studies Volume 13 [2013 (New Series)] ; 9264 >
+        au < manifest ; 2014 ; Northeast African Studies Volume 14 [2014  (New Series)] ; 9917 >
+        au < manifest ; 2015 ; Northeast African Studies Volume 15 [2015 (New Series)] ; 10605 >
+        au < manifest ; 2016 ; Northeast African Studies Volume 16 [2016 (New Series)] ; 11277 >
 
     }
     {
@@ -194,10 +194,10 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue [Fall 2013] ; 9435 >
-        au < exists ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 [2014] ; 9675 >
-        au < exists ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 [2015] ; 10424 >
-        au < testing ; 2016 ; QED: A Journal in GLBTQ Worldmaking Volume 3 [2016] ; 11155 >
+        au < manifest ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue [Fall 2013] ; 9435 >
+        au < manifest ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 [2014] ; 9675 >
+        au < manifest ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 [2015] ; 10424 >
+        au < manifest ; 2016 ; QED: A Journal in GLBTQ Worldmaking Volume 3 [2016] ; 11155 >
 
     }
     {
@@ -211,16 +211,16 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2003 ; Red Cedar Review Volume 38 [2003] ; 6044 >
-        au < exists ; 2004 ; Red Cedar Review Volume 39 [2004] ; 6043 >
-        au < exists ; 2005 ; Red Cedar Review Volume 40 [2005] ; 2839 >
-        au < exists ; 2006 ; Red Cedar Review Volume 41 [2006] ; 3066 >
-        au < exists ; 2007 ; Red Cedar Review Volume 42 [2007] ; 3434 >
-        au < exists ; 2008 ; Red Cedar Review Volume 43 [2008] ; 3756 >
-        au < exists ; 2009 ; Red Cedar Review Volume 44 [2009] ; 4416 >
-        au < exists ; 2010 ; Red Cedar Review Volume 45 [2010] ; 5838 >
-        au < exists ; 2011 ; Red Cedar Review Volume 46 [2011] ; 6823 >
-        au < exists ; 2012 ; Red Cedar Review Volume 47 [2012] ; 8374 >
+        au < manifest ; 2003 ; Red Cedar Review Volume 38 [2003] ; 6044 >
+        au < manifest ; 2004 ; Red Cedar Review Volume 39 [2004] ; 6043 >
+        au < manifest ; 2005 ; Red Cedar Review Volume 40 [2005] ; 2839 >
+        au < manifest ; 2006 ; Red Cedar Review Volume 41 [2006] ; 3066 >
+        au < manifest ; 2007 ; Red Cedar Review Volume 42 [2007] ; 3434 >
+        au < manifest ; 2008 ; Red Cedar Review Volume 43 [2008] ; 3756 >
+        au < manifest ; 2009 ; Red Cedar Review Volume 44 [2009] ; 4416 >
+        au < manifest ; 2010 ; Red Cedar Review Volume 45 [2010] ; 5838 >
+        au < manifest ; 2011 ; Red Cedar Review Volume 46 [2011] ; 6823 >
+        au < manifest ; 2012 ; Red Cedar Review Volume 47 [2012] ; 8374 >
 
     }
     {
@@ -234,25 +234,25 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1998 ; Rhetoric & Public Affairs Volume 1 [1998] ; 5020 >
-        au < exists ; 1999 ; Rhetoric & Public Affairs Volume 2 [1999] ; 5019 >
-        au < exists ; 2000 ; Rhetoric & Public Affairs Volume 3 [2000] ; 588 >
-        au < exists ; 2001 ; Rhetoric & Public Affairs Volume 4 [2001] ; 589 >
-        au < exists ; 2002 ; Rhetoric & Public Affairs Volume 5 [2002] ; 590 >
-        au < exists ; 2003 ; Rhetoric & Public Affairs Volume 6 [2003] ; 897 >
-        au < exists ; 2004 ; Rhetoric & Public Affairs Volume 7 [2004] ; 2506 >
-        au < exists ; 2005 ; Rhetoric & Public Affairs Volume 8 [2005] ; 2800 >
-        au < exists ; 2006 ; Rhetoric & Public Affairs Volume 9 [2006] ; 3068 >
-        au < exists ; 2007 ; Rhetoric & Public Affairs Volume 10 [2007] ; 3330 >
-        au < exists ; 2008 ; Rhetoric & Public Affairs Volume 11 [2008] ; 3717 >
-        au < exists ; 2009 ; Rhetoric & Public Affairs Volume 12 [2009] ; 4259 >
-        au < exists ; 2010 ; Rhetoric & Public Affairs Volume 13 [2010] ; 5772 >
-        au < exists ; 2011 ; Rhetoric & Public Affairs Volume 14 [2011] ; 6977 >
-        au < exists ; 2012 ; Rhetoric & Public Affairs Volume 15 [2012] ; 8115 >
-        au < exists ; 2013 ; Rhetoric & Public Affairs Volume 16 [2013] ; 8871 >
-        au < exists ; 2014 ; Rhetoric & Public Affairs Volume 17 [2014] ; 9760 >
-        au < exists ; 2015 ; Rhetoric & Public Affairs Volume 18 [2015] ; 10471 >
-        au < testing ; 2016 ; Rhetoric & Public Affairs Volume 19 [2016] ; 11202 >
+        au < manifest ; 1998 ; Rhetoric & Public Affairs Volume 1 [1998] ; 5020 >
+        au < manifest ; 1999 ; Rhetoric & Public Affairs Volume 2 [1999] ; 5019 >
+        au < manifest ; 2000 ; Rhetoric & Public Affairs Volume 3 [2000] ; 588 >
+        au < manifest ; 2001 ; Rhetoric & Public Affairs Volume 4 [2001] ; 589 >
+        au < manifest ; 2002 ; Rhetoric & Public Affairs Volume 5 [2002] ; 590 >
+        au < manifest ; 2003 ; Rhetoric & Public Affairs Volume 6 [2003] ; 897 >
+        au < manifest ; 2004 ; Rhetoric & Public Affairs Volume 7 [2004] ; 2506 >
+        au < manifest ; 2005 ; Rhetoric & Public Affairs Volume 8 [2005] ; 2800 >
+        au < manifest ; 2006 ; Rhetoric & Public Affairs Volume 9 [2006] ; 3068 >
+        au < manifest ; 2007 ; Rhetoric & Public Affairs Volume 10 [2007] ; 3330 >
+        au < manifest ; 2008 ; Rhetoric & Public Affairs Volume 11 [2008] ; 3717 >
+        au < manifest ; 2009 ; Rhetoric & Public Affairs Volume 12 [2009] ; 4259 >
+        au < manifest ; 2010 ; Rhetoric & Public Affairs Volume 13 [2010] ; 5772 >
+        au < manifest ; 2011 ; Rhetoric & Public Affairs Volume 14 [2011] ; 6977 >
+        au < manifest ; 2012 ; Rhetoric & Public Affairs Volume 15 [2012] ; 8115 >
+        au < manifest ; 2013 ; Rhetoric & Public Affairs Volume 16 [2013] ; 8871 >
+        au < manifest ; 2014 ; Rhetoric & Public Affairs Volume 17 [2014] ; 9760 >
+        au < manifest ; 2015 ; Rhetoric & Public Affairs Volume 18 [2015] ; 10471 >
+        au < manifest ; 2016 ; Rhetoric & Public Affairs Volume 19 [2016] ; 11202 >
 
     }
 

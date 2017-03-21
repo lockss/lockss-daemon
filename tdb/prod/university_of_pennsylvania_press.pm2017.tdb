@@ -18,12 +18,12 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2011 ; Change Over Time Volume 1 [2011] ; 7182 >
-        au < exists ; 2012 ; Change Over Time Volume 2 [2012] ; 8292 >
-        au < exists ; 2013 ; Change Over Time Volume 3 [2013] ; 8911 >
-        au < exists ; 2014 ; Change Over Time Volulme 4, 2014 ; 9932 >
-        au < exists ; 2015 ; Change Over Time Volume 5 [2015] ; 10575 >
-        au < testing ; 2016 ; Change Over Time Volume 6 [2016] ; 11257 >
+        au < manifest ; 2011 ; Change Over Time Volume 1 [2011] ; 7182 >
+        au < manifest ; 2012 ; Change Over Time Volume 2 [2012] ; 8292 >
+        au < manifest ; 2013 ; Change Over Time Volume 3 [2013] ; 8911 >
+        au < manifest ; 2014 ; Change Over Time Volulme 4, 2014 ; 9932 >
+        au < manifest ; 2015 ; Change Over Time Volume 5 [2015] ; 10575 >
+        au < manifest ; 2016 ; Change Over Time Volume 6 [2016] ; 11257 >
 
     }
     {
@@ -37,19 +37,19 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2005 ; Dissent Volume 52 [2005] ; 7345 >
-        au < exists ; 2006 ; Dissent Volume 53 [2006] ; 7346 >
-        au < exists ; 2007 ; Dissent Volume 54 [2007] ; 7347 >
-        au < exists ; 2008 ; Dissent Volume 55 [2008] ; 7348 >
-        au < exists ; 2009 ; Dissent Volume 56 [2009] ; 4075 >
-        au < exists ; 2010 ; Dissent Volume 57 [2010] ; 5713 >
-        au < exists ; 2011 ; Dissent Volume 58 [2011] ; 6681 >
-        au < exists ; 2012 ; Dissent Volume 59 [2012] ; 7874 >
-        au < exists ; 2013 ; Dissent Volume 60 [2013] ; 8642 >
-        au < exists ; 2014 ; Dissent Volume 61 [2014] ; 9562 >
-        au < exists ; 2015 ; Dissent Volume 62 [2015] ; 10281 >
-        au < testing ; 2016 ; Dissent Volume 63 [2016] ; 10988 >
-        au < exists ; 2017 ; Dissent Volume 64 [2017] ; 12377 >
+        au < manifest ; 2005 ; Dissent Volume 52 [2005] ; 7345 >
+        au < manifest ; 2006 ; Dissent Volume 53 [2006] ; 7346 >
+        au < manifest ; 2007 ; Dissent Volume 54 [2007] ; 7347 >
+        au < manifest ; 2008 ; Dissent Volume 55 [2008] ; 7348 >
+        au < manifest ; 2009 ; Dissent Volume 56 [2009] ; 4075 >
+        au < manifest ; 2010 ; Dissent Volume 57 [2010] ; 5713 >
+        au < manifest ; 2011 ; Dissent Volume 58 [2011] ; 6681 >
+        au < manifest ; 2012 ; Dissent Volume 59 [2012] ; 7874 >
+        au < manifest ; 2013 ; Dissent Volume 60 [2013] ; 8642 >
+        au < manifest ; 2014 ; Dissent Volume 61 [2014] ; 9562 >
+        au < manifest ; 2015 ; Dissent Volume 62 [2015] ; 10281 >
+        au < manifest ; 2016 ; Dissent Volume 63 [2016] ; 10988 >
+        au < manifest ; 2017 ; Dissent Volume 64 [2017] ; 12377 >
 
     }
     {
@@ -63,21 +63,21 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 [2003] ; 3499 >
-        au < exists ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 [2004] ; 3498 >
-        au < exists ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 [2005] ; 3497 >
-        au < exists ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 [2006] ; 3061 >
-        au < exists ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 [2007] ; 3358 >
-        au < exists ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 [2008] ; 3707 >
-        au < exists ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 [2009] ; 4109 >
-        au < exists ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 [2010] ; 5649 >
-        au < exists ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 [2011] ; 6536 >
-        au < exists ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 [2012] ; 7857 >
-        au < exists ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 [2013] ; 8632 >
-        au < exists ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 [2014] ; 9563 >
-        au < exists ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 [2015] ; 10317 >
-        au < testing ; 2016 ; Early American Studies: An Interdisciplinary Journal Volume 14 [2016] ; 10989 >
-        au < exists ; 2017 ; Early American Studies: An Interdisciplinary Journal Volume 15 [2017] ; 12359 >
+        au < manifest ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 [2003] ; 3499 >
+        au < manifest ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 [2004] ; 3498 >
+        au < manifest ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 [2005] ; 3497 >
+        au < manifest ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 [2006] ; 3061 >
+        au < manifest ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 [2007] ; 3358 >
+        au < manifest ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 [2008] ; 3707 >
+        au < manifest ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 [2009] ; 4109 >
+        au < manifest ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 [2010] ; 5649 >
+        au < manifest ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 [2011] ; 6536 >
+        au < manifest ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 [2012] ; 7857 >
+        au < manifest ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 [2013] ; 8632 >
+        au < manifest ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 [2014] ; 9563 >
+        au < manifest ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 [2015] ; 10317 >
+        au < manifest ; 2016 ; Early American Studies: An Interdisciplinary Journal Volume 14 [2016] ; 10989 >
+        au < manifest ; 2017 ; Early American Studies: An Interdisciplinary Journal Volume 15 [2017] ; 12359 >
 
     }
     {
@@ -91,19 +91,19 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2005 ; Hispanic Review Volume 73 [2005] ; 2634 >
-        au < exists ; 2006 ; Hispanic Review Volume 74 [2006] ; 2895 >
-        au < exists ; 2007 ; Hispanic Review Volume 75 [2007] ; 3319 >
-        au < exists ; 2008 ; Hispanic Review Volume 76 [2008] ; 3679 >
-        au < exists ; 2009 ; Hispanic Review Volume 77 [2009] ; 4100 >
-        au < exists ; 2010 ; Hispanic Review Volume 78 [2010] ; 5669 >
-        au < exists ; 2011 ; Hispanic Review Volume 79 [2011] ; 6626 >
-        au < exists ; 2012 ; Hispanic Review Volume 80 [2012] ; 7858 >
-        au < exists ; 2013 ; Hispanic Review Volume 81 [2013] ; 8633 >
-        au < exists ; 2014 ; Hispanic Review Volume 82 [2014] ; 9592 >
-        au < exists ; 2015 ; Hispanic Review Volume 83 [2015] ; 10318 >
-        au < testing ; 2016 ; Hispanic Review Volume 84 [2016] ; 10990 >
-        au < exists ; 2017 ; Hispanic Review Volume 85 [2017] ; 12366 >
+        au < manifest ; 2005 ; Hispanic Review Volume 73 [2005] ; 2634 >
+        au < manifest ; 2006 ; Hispanic Review Volume 74 [2006] ; 2895 >
+        au < manifest ; 2007 ; Hispanic Review Volume 75 [2007] ; 3319 >
+        au < manifest ; 2008 ; Hispanic Review Volume 76 [2008] ; 3679 >
+        au < manifest ; 2009 ; Hispanic Review Volume 77 [2009] ; 4100 >
+        au < manifest ; 2010 ; Hispanic Review Volume 78 [2010] ; 5669 >
+        au < manifest ; 2011 ; Hispanic Review Volume 79 [2011] ; 6626 >
+        au < manifest ; 2012 ; Hispanic Review Volume 80 [2012] ; 7858 >
+        au < manifest ; 2013 ; Hispanic Review Volume 81 [2013] ; 8633 >
+        au < manifest ; 2014 ; Hispanic Review Volume 82 [2014] ; 9592 >
+        au < manifest ; 2015 ; Hispanic Review Volume 83 [2015] ; 10318 >
+        au < manifest ; 2016 ; Hispanic Review Volume 84 [2016] ; 10990 >
+        au < manifest ; 2017 ; Hispanic Review Volume 85 [2017] ; 12366 >
 
     }
     {
@@ -117,14 +117,14 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 [2010] ; 6361 >
-        au < exists ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 [2011] ; 6682 >
-        au < exists ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 [2012] ; 8012 >
-        au < exists ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 [2013] ; 8756 >
-        au < exists ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 [2014] ; 9628 >
-        au < exists ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 [2015] ; 10470 >
-        au < testing ; 2016 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 7 [2016] ; 11084 >
-        au < exists ; 2017 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 8 [2017] ; 12477 >
+        au < manifest ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 [2010] ; 6361 >
+        au < manifest ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 [2011] ; 6682 >
+        au < manifest ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 [2012] ; 8012 >
+        au < manifest ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 [2013] ; 8756 >
+        au < manifest ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 [2014] ; 9628 >
+        au < manifest ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 [2015] ; 10470 >
+        au < manifest ; 2016 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 7 [2016] ; 11084 >
+        au < manifest ; 2017 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 8 [2017] ; 12477 >
 
     }
     {
@@ -138,10 +138,10 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 [2013] ; 8912 >
-        au < exists ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 [2014] ; 9827 >
-        au < exists ; 2015 ; J19: The Journal of Nineteenth-Century Americanists Volume 3 [2015] ; 10552 >
-        au < testing ; 2016 ; J19: The Journal of Nineteenth-Century Americanists Volume 4 [2016] ; 11185 >
+        au < manifest ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 [2013] ; 8912 >
+        au < manifest ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 [2014] ; 9827 >
+        au < manifest ; 2015 ; J19: The Journal of Nineteenth-Century Americanists Volume 3 [2015] ; 10552 >
+        au < manifest ; 2016 ; J19: The Journal of Nineteenth-Century Americanists Volume 4 [2016] ; 11185 >
 
     }
     {
@@ -155,22 +155,22 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2001-2002 ; Jewish Quarterly Review Volume 92 [2001-2002] ; 6417 >
-        au < exists ; 2002-2003 ; Jewish Quarterly Review Volume 93 [2002-2003] ; 6418 >
-        au < exists ; 2004 ; Jewish Quarterly Review Volume 94 [2004] ; 6419 >
-        au < exists ; 2005 ; Jewish Quarterly Review Volume 95 [2005] ; 2633 >
-        au < exists ; 2006 ; Jewish Quarterly Review Volume 96 [2006] ; 2874 >
-        au < exists ; 2007 ; Jewish Quarterly Review Volume 97 [2007] ; 3249 >
-        au < exists ; 2008 ; Jewish Quarterly Review Volume 98 [2008] ; 3659 >
-        au < exists ; 2009 ; Jewish Quarterly Review Volume 99 [2009] ; 4130 >
-        au < exists ; 2010 ; Jewish Quarterly Review Volume 100 [2010] ; 5656 >
-        au < exists ; 2011 ; Jewish Quarterly Review Volume 101 [2011] ; 6543 >
-        au < exists ; 2012 ; Jewish Quarterly Review Volume 102 [2012] ; 8002 >
-        au < exists ; 2013 ; Jewish Quarterly Review Volume 103 [2013] ; 8757 >
-        au < exists ; 2014 ; Jewish Quarterly Review Volume 104 [2014] ; 9650 >
-        au < exists ; 2015 ; Jewish Quarterly Review Volume 105 [2015] ; 10418 >
-        au < testing ; 2016 ; Jewish Quarterly Review Volume 106 [2016] ; 11001 >
-        au < exists ; 2017 ; Jewish Quarterly Review Volume 107 [2017] ; 12425 >
+        au < manifest ; 2001-2002 ; Jewish Quarterly Review Volume 92 [2001-2002] ; 6417 >
+        au < manifest ; 2002-2003 ; Jewish Quarterly Review Volume 93 [2002-2003] ; 6418 >
+        au < manifest ; 2004 ; Jewish Quarterly Review Volume 94 [2004] ; 6419 >
+        au < manifest ; 2005 ; Jewish Quarterly Review Volume 95 [2005] ; 2633 >
+        au < manifest ; 2006 ; Jewish Quarterly Review Volume 96 [2006] ; 2874 >
+        au < manifest ; 2007 ; Jewish Quarterly Review Volume 97 [2007] ; 3249 >
+        au < manifest ; 2008 ; Jewish Quarterly Review Volume 98 [2008] ; 3659 >
+        au < manifest ; 2009 ; Jewish Quarterly Review Volume 99 [2009] ; 4130 >
+        au < manifest ; 2010 ; Jewish Quarterly Review Volume 100 [2010] ; 5656 >
+        au < manifest ; 2011 ; Jewish Quarterly Review Volume 101 [2011] ; 6543 >
+        au < manifest ; 2012 ; Jewish Quarterly Review Volume 102 [2012] ; 8002 >
+        au < manifest ; 2013 ; Jewish Quarterly Review Volume 103 [2013] ; 8757 >
+        au < manifest ; 2014 ; Jewish Quarterly Review Volume 104 [2014] ; 9650 >
+        au < manifest ; 2015 ; Jewish Quarterly Review Volume 105 [2015] ; 10418 >
+        au < manifest ; 2016 ; Jewish Quarterly Review Volume 106 [2016] ; 11001 >
+        au < manifest ; 2017 ; Jewish Quarterly Review Volume 107 [2017] ; 12425 >
 
     }
     {
@@ -184,22 +184,22 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2001 ; Journal for Early Modern Cultural Studies Volume 1 [2001] ; 8133 >
-        au < exists ; 2002 ; Journal for Early Modern Cultural Studies Volume 2 [2002] ; 8132 >
-        au < exists ; 2003 ; Journal for Early Modern Cultural Studies Volume 3 [2003] ; 8131 >
-        au < exists ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 [2004] ; 6686 >
-        au < exists ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 [2005] ; 2766 >
-        au < exists ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 [2006] ; 3011 >
-        au < exists ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 [2007] ; 3354 >
-        au < exists ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 [2008] ; 3814 >
-        au < exists ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 [2009] ; 4320 >
-        au < exists ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 [2010] ; 6178 >
-        au < exists ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 [2011] ; 7567 >
-        au < exists ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 [2012] ; 7859 >
-        au < exists ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 [2013] ; 8634 >
-        au < exists ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 [2014] ; 9560 >
-        au < exists ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 [2015] ; 10288 >
-        au < testing ; 2016 ; Journal for Early Modern Cultural Studies Volume 16 [2016] ; 10991 >
+        au < manifest ; 2001 ; Journal for Early Modern Cultural Studies Volume 1 [2001] ; 8133 >
+        au < manifest ; 2002 ; Journal for Early Modern Cultural Studies Volume 2 [2002] ; 8132 >
+        au < manifest ; 2003 ; Journal for Early Modern Cultural Studies Volume 3 [2003] ; 8131 >
+        au < manifest ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 [2004] ; 6686 >
+        au < manifest ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 [2005] ; 2766 >
+        au < manifest ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 [2006] ; 3011 >
+        au < manifest ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 [2007] ; 3354 >
+        au < manifest ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 [2008] ; 3814 >
+        au < manifest ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 [2009] ; 4320 >
+        au < manifest ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 [2010] ; 6178 >
+        au < manifest ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 [2011] ; 7567 >
+        au < manifest ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 [2012] ; 7859 >
+        au < manifest ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 [2013] ; 8634 >
+        au < manifest ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 [2014] ; 9560 >
+        au < manifest ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 [2015] ; 10288 >
+        au < manifest ; 2016 ; Journal for Early Modern Cultural Studies Volume 16 [2016] ; 10991 >
 
     }
     {
@@ -213,8 +213,8 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2015 ; Journal of Ecumenical Studies Volume 50 [2015] ; 10728 >
-        au < testing ; 2016 ; Journal of Ecumenical Studies Volume 51 [2016] ; 11122 >
+        au < manifest ; 2015 ; Journal of Ecumenical Studies Volume 50 [2015] ; 10728 >
+        au < manifest ; 2016 ; Journal of Ecumenical Studies Volume 51 [2016] ; 11122 >
 
     }
     {
@@ -228,19 +228,19 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2005 ; Journal of the Early Republic Volume 25 [2005] ; 2695 >
-        au < exists ; 2006 ; Journal of the Early Republic Volume 26 [2006] ; 2959 >
-        au < exists ; 2007 ; Journal of the Early Republic Volume 27 [2007] ; 3239 >
-        au < exists ; 2008 ; Journal of the Early Republic Volume 28 [2008] ; 3516 >
-        au < exists ; 2009 ; Journal of the Early Republic Volume 29 [2009] ; 4156 >
-        au < exists ; 2010 ; Journal of the Early Republic Volume 30 [2010] ; 5685 >
-        au < exists ; 2011 ; Journal of the Early Republic Volume 31 [2011] ; 6637 >
-        au < exists ; 2012 ; Journal of the Early Republic Volume 32 [2012] ; 8001 >
-        au < exists ; 2013 ; Journal of the Early Republic Volume 33 [2013] ; 8758 >
-        au < exists ; 2014 ; Journal of the Early Republic Volume 34 [2014] ; 9629 >
-        au < exists ; 2015 ; Journal of the Early Republic Volume 35 [2015] ; 10419 >
-        au < testing ; 2016 ; Journal of the Early Republic Volume 36 [2016] ; 10995 >
-        au < exists ; 2017 ; Journal of the Early Republic Volume 37 [2017] ; 12409 >
+        au < manifest ; 2005 ; Journal of the Early Republic Volume 25 [2005] ; 2695 >
+        au < manifest ; 2006 ; Journal of the Early Republic Volume 26 [2006] ; 2959 >
+        au < manifest ; 2007 ; Journal of the Early Republic Volume 27 [2007] ; 3239 >
+        au < manifest ; 2008 ; Journal of the Early Republic Volume 28 [2008] ; 3516 >
+        au < manifest ; 2009 ; Journal of the Early Republic Volume 29 [2009] ; 4156 >
+        au < manifest ; 2010 ; Journal of the Early Republic Volume 30 [2010] ; 5685 >
+        au < manifest ; 2011 ; Journal of the Early Republic Volume 31 [2011] ; 6637 >
+        au < manifest ; 2012 ; Journal of the Early Republic Volume 32 [2012] ; 8001 >
+        au < manifest ; 2013 ; Journal of the Early Republic Volume 33 [2013] ; 8758 >
+        au < manifest ; 2014 ; Journal of the Early Republic Volume 34 [2014] ; 9629 >
+        au < manifest ; 2015 ; Journal of the Early Republic Volume 35 [2015] ; 10419 >
+        au < manifest ; 2016 ; Journal of the Early Republic Volume 36 [2016] ; 10995 >
+        au < manifest ; 2017 ; Journal of the Early Republic Volume 37 [2017] ; 12409 >
 
     }
     {
@@ -254,28 +254,28 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 1996 ; Journal of the History of Ideas Volume 57 [1996] ; 296 >
-        au < exists ; 1997 ; Journal of the History of Ideas Volume 58 [1997] ; 297 >
-        au < exists ; 1998 ; Journal of the History of Ideas Volume 59 [1998] ; 298 >
-        au < exists ; 1999 ; Journal of the History of Ideas Volume 60 [1999] ; 299 >
-        au < exists ; 2000 ; Journal of the History of Ideas Volume 61 [2000] ; 300 >
-        au < exists ; 2001 ; Journal of the History of Ideas Volume 62 [2001] ; 301 >
-        au < exists ; 2002 ; Journal of the History of Ideas Volume 63 [2002] ; 302 >
-        au < exists ; 2003 ; Journal of the History of Ideas Volume 64 [2003] ; 910 >
-        au < exists ; 2004 ; Journal of the History of Ideas Volume 65 [2004] ; 2516 >
-        au < exists ; 2005 ; Journal of the History of Ideas Volume 66 [2005] ; 2818 >
-        au < exists ; 2006 ; Journal of the History of Ideas Volume 67 [2006] ; 2967 >
-        au < exists ; 2007 ; Journal of the History of Ideas Volume 68 [2007] ; 3247 >
-        au < exists ; 2008 ; Journal of the History of Ideas Volume 69 [2008] ; 3523 >
-        au < exists ; 2009 ; Journal of the History of Ideas Volume 70 [2009] ; 4061 >
-        au < exists ; 2010 ; Journal of the History of Ideas Volume 71 [2010] ; 5683 >
-        au < exists ; 2011 ; Journal of the History of Ideas Volume 72 [2011] ; 6638 >
-        au < exists ; 2012 ; Journal of the History of Ideas Volume 73 [2012] ; 7860 >
-        au < exists ; 2013 ; Journal of the History of Ideas Volume 74 [2013] ; 8660 >
-        au < exists ; 2014 ; Journal of the History of Ideas Volume 75 [2014] ; 9591 >
-        au < exists ; 2015 ; Journal of the History of Ideas Volume 76 [2015] ; 10320 >
-        au < testing ; 2016 ; Journal of the History of Ideas Volume 77 [2016] ; 10992 >
-        au < exists ; 2017 ; Journal of the History of Ideas Volume 78 [2017] ; 12367 >
+        au < manifest ; 1996 ; Journal of the History of Ideas Volume 57 [1996] ; 296 >
+        au < manifest ; 1997 ; Journal of the History of Ideas Volume 58 [1997] ; 297 >
+        au < manifest ; 1998 ; Journal of the History of Ideas Volume 59 [1998] ; 298 >
+        au < manifest ; 1999 ; Journal of the History of Ideas Volume 60 [1999] ; 299 >
+        au < manifest ; 2000 ; Journal of the History of Ideas Volume 61 [2000] ; 300 >
+        au < manifest ; 2001 ; Journal of the History of Ideas Volume 62 [2001] ; 301 >
+        au < manifest ; 2002 ; Journal of the History of Ideas Volume 63 [2002] ; 302 >
+        au < manifest ; 2003 ; Journal of the History of Ideas Volume 64 [2003] ; 910 >
+        au < manifest ; 2004 ; Journal of the History of Ideas Volume 65 [2004] ; 2516 >
+        au < manifest ; 2005 ; Journal of the History of Ideas Volume 66 [2005] ; 2818 >
+        au < manifest ; 2006 ; Journal of the History of Ideas Volume 67 [2006] ; 2967 >
+        au < manifest ; 2007 ; Journal of the History of Ideas Volume 68 [2007] ; 3247 >
+        au < manifest ; 2008 ; Journal of the History of Ideas Volume 69 [2008] ; 3523 >
+        au < manifest ; 2009 ; Journal of the History of Ideas Volume 70 [2009] ; 4061 >
+        au < manifest ; 2010 ; Journal of the History of Ideas Volume 71 [2010] ; 5683 >
+        au < manifest ; 2011 ; Journal of the History of Ideas Volume 72 [2011] ; 6638 >
+        au < manifest ; 2012 ; Journal of the History of Ideas Volume 73 [2012] ; 7860 >
+        au < manifest ; 2013 ; Journal of the History of Ideas Volume 74 [2013] ; 8660 >
+        au < manifest ; 2014 ; Journal of the History of Ideas Volume 75 [2014] ; 9591 >
+        au < manifest ; 2015 ; Journal of the History of Ideas Volume 76 [2015] ; 10320 >
+        au < manifest ; 2016 ; Journal of the History of Ideas Volume 77 [2016] ; 10992 >
+        au < manifest ; 2017 ; Journal of the History of Ideas Volume 78 [2017] ; 12367 >
 
     }
     {
@@ -289,17 +289,17 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 [2006] ; 3743 >
-        au < exists ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 [2007] ; 3744 >
-        au < exists ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 [2008] ; 3759 >
-        au < exists ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 [2009] ; 4245 >
-        au < exists ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 [2010] ; 5930 >
-        au < exists ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 [2011] ; 7149 >
-        au < exists ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 [2012] ; 8293 >
-        au < exists ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 [2013] ; 9057 >
-        au < exists ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 [2014] ; 9971 >
-        au < exists ; 2015 ; Magic, Ritual, and Witchcraft Volume 10 [2015] ; 10651 >
-        au < testing ; 2016 ; Magic, Ritual, and Witchcraft Volume 11 [2016] ; 11264 >
+        au < manifest ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 [2006] ; 3743 >
+        au < manifest ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 [2007] ; 3744 >
+        au < manifest ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 [2008] ; 3759 >
+        au < manifest ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 [2009] ; 4245 >
+        au < manifest ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 [2010] ; 5930 >
+        au < manifest ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 [2011] ; 7149 >
+        au < manifest ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 [2012] ; 8293 >
+        au < manifest ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 [2013] ; 9057 >
+        au < manifest ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 [2014] ; 9971 >
+        au < manifest ; 2015 ; Magic, Ritual, and Witchcraft Volume 10 [2015] ; 10651 >
+        au < manifest ; 2016 ; Magic, Ritual, and Witchcraft Volume 11 [2016] ; 11264 >
 
     }
     {
@@ -313,16 +313,16 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2007 ; Revista Hispánica Moderna Volume 60 [2007] ; 6430 >
-        au < exists ; 2008 ; Revista Hispánica Moderna Volume 61 [2008] ; 6431 >
-        au < exists ; 2009 ; Revista Hispánica Moderna Volume 62 [2009] ; 4176 >
-        au < exists ; 2010 ; Revista Hispánica Moderna Volume 63 [2010] ; 5808 >
-        au < exists ; 2011 ; Revista Hispánica Moderna Volume 64 [2011] ; 6939 >
-        au < exists ; 2012 ; Revista Hispánica Moderna Volume 65 [2012] ; 8267 >
-        au < exists ; 2013 ; Revista Hispánica Moderna Volume 66 [2013] ; 8948 >
-        au < exists ; 2014 ; Revista Hispánica Moderna Volume 67 [2014] ; 9972 >
-        au < exists ; 2015 ; Revista Hispánica Moderna Volume 68 [2015] ; 10652 >
-        au < testing ; 2016 ; Revista Hispánica Moderna Volume 69 [2016] ; 11284 >
+        au < manifest ; 2007 ; Revista Hispánica Moderna Volume 60 [2007] ; 6430 >
+        au < manifest ; 2008 ; Revista Hispánica Moderna Volume 61 [2008] ; 6431 >
+        au < manifest ; 2009 ; Revista Hispánica Moderna Volume 62 [2009] ; 4176 >
+        au < manifest ; 2010 ; Revista Hispánica Moderna Volume 63 [2010] ; 5808 >
+        au < manifest ; 2011 ; Revista Hispánica Moderna Volume 64 [2011] ; 6939 >
+        au < manifest ; 2012 ; Revista Hispánica Moderna Volume 65 [2012] ; 8267 >
+        au < manifest ; 2013 ; Revista Hispánica Moderna Volume 66 [2013] ; 8948 >
+        au < manifest ; 2014 ; Revista Hispánica Moderna Volume 67 [2014] ; 9972 >
+        au < manifest ; 2015 ; Revista Hispánica Moderna Volume 68 [2015] ; 10652 >
+        au < manifest ; 2016 ; Revista Hispánica Moderna Volume 69 [2016] ; 11284 >
 
     }
     {
@@ -336,18 +336,18 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2006 ; The Eighteenth Century Volume 47 [2006] ; 3486 >
-        au < exists ; 2007 ; The Eighteenth Century Volume 48 [2007] ; 3405 >
-        au < exists ; 2008 ; The Eighteenth Century Volume 49 [2008] ; 3738 >
-        au < exists ; 2009 ; The Eighteenth Century Volume 50 [2009] ; 5818 >
-        au < exists ; 2010 ; The Eighteenth Century Volume 51 [2010] ; 6344 >
-        au < exists ; 2011 ; The Eighteenth Century Volume 52 [2011] ; 6838 >
-        au < exists ; 2012 ; The Eighteenth Century Volume 53 [2012] ; 8045 >
-        au < exists ; 2013 ; The Eighteenth Century Volume 54 [2013] ; 8815 >
-        au < exists ; 2014 ; The Eighteenth Century Volume 55 [2014] ; 9737 >
-        au < exists ; 2015 ; The Eighteenth Century Volume 56 [2015] ; 10466 >
-        au < testing ; 2016 ; The Eighteenth Century Volume 57 [2016] ; 11083 >
-        au < exists ; 2017 ; The Eighteenth Century Volume 58 [2017] ; 12463 >
+        au < manifest ; 2006 ; The Eighteenth Century Volume 47 [2006] ; 3486 >
+        au < manifest ; 2007 ; The Eighteenth Century Volume 48 [2007] ; 3405 >
+        au < manifest ; 2008 ; The Eighteenth Century Volume 49 [2008] ; 3738 >
+        au < manifest ; 2009 ; The Eighteenth Century Volume 50 [2009] ; 5818 >
+        au < manifest ; 2010 ; The Eighteenth Century Volume 51 [2010] ; 6344 >
+        au < manifest ; 2011 ; The Eighteenth Century Volume 52 [2011] ; 6838 >
+        au < manifest ; 2012 ; The Eighteenth Century Volume 53 [2012] ; 8045 >
+        au < manifest ; 2013 ; The Eighteenth Century Volume 54 [2013] ; 8815 >
+        au < manifest ; 2014 ; The Eighteenth Century Volume 55 [2014] ; 9737 >
+        au < manifest ; 2015 ; The Eighteenth Century Volume 56 [2015] ; 10466 >
+        au < manifest ; 2016 ; The Eighteenth Century Volume 57 [2016] ; 11083 >
+        au < manifest ; 2017 ; The Eighteenth Century Volume 58 [2017] ; 12463 >
 
     }
 

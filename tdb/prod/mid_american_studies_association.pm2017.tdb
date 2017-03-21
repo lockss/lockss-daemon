@@ -18,14 +18,14 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2007 ; American Studies Volume 48 [2007] ; 5849 >
-        au < exists ; 2008 ; American Studies Volume 49 [2008] ; 6427 >
-        au < exists ; 2009 ; American Studies Volume 50 [2009] ; 6950 >
-        au < exists ; 2010 ; American Studies Volume 51 [2010] ; 7689 >
-        au < exists ; 2012-2013 ; American Studies Volume 52 [2012-2013] ; 8900 >
-        au < exists ; 2014 ; American Studies Volume 53 [2014] ; 9985 >
-        au < exists ; 2015-2016 ; American Studies Volume 54 [2015-2016] ; 10584 >
-        au < testing ; 2016 ; American Studies Volume 55 [2016] ; 11278 >
+        au < manifest ; 2007 ; American Studies Volume 48 [2007] ; 5849 >
+        au < manifest ; 2008 ; American Studies Volume 49 [2008] ; 6427 >
+        au < manifest ; 2009 ; American Studies Volume 50 [2009] ; 6950 >
+        au < manifest ; 2010 ; American Studies Volume 51 [2010] ; 7689 >
+        au < manifest ; 2012-2013 ; American Studies Volume 52 [2012-2013] ; 8900 >
+        au < manifest ; 2014 ; American Studies Volume 53 [2014] ; 9985 >
+        au < manifest ; 2015-2016 ; American Studies Volume 54 [2015-2016] ; 10584 >
+        au < manifest ; 2016 ; American Studies Volume 55 [2016] ; 11278 >
 
     }
 
