@@ -65,7 +65,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < down ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Media and Communication Volume 1 ; 1 ; 2013 ; >
 
   }
 
@@ -78,7 +78,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher? http://www.librelloph.com/politicsandgovernance/issue/view/14
 
-      au < down ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Politics and Governance Volume 1 ; 1 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; Politics and Governance Volume 2 ; 2 ; 2014 ; >
 
   }
@@ -92,7 +92,7 @@
       comment[issn] = missing
       comment[publisher] = as of 2014 moved to another publisher
 
-      au < down ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Social Inclusion Volume 1 ; 1 ; 2013 ; >
 
   }
 }
