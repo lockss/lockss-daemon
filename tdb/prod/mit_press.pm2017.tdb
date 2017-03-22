@@ -18,24 +18,25 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2001 ; Computer Music Journal Volume 25 [2001] ; 120 >
-        au < manifest ; 2002 ; Computer Music Journal Volume 26 [2002] ; 121 >
-        au < manifest ; 2003 ; Computer Music Journal Volume 27 [2003] ; 880 >
-        au < manifest ; 2004 ; Computer Music Journal Volume 28 [2004] ; 2450 >
-        au < manifest ; 2005 ; Computer Music Journal Volume 29 [2005] ; 2705 >
-        au < manifest ; 2006 ; Computer Music Journal Volume 30 [2006] ; 2992 >
-        au < manifest ; 2007 ; Computer Music Journal Volume 31 [2007] ; 3353 >
-        au < manifest ; 2008 ; Computer Music Journal Volume 32 [2008] ; 3706 >
-        au < manifest ; 2009 ; Computer Music Journal Volume 33 [2009] ; 4211 >
-        au < manifest ; 2010 ; Computer Music Journal Volume 34 [2010] ; 5820 >
-        au < manifest ; 2011 ; Computer Music Journal Volume 35 [2011] ; 6911 >
-        au < manifest ; 2012 ; Computer Music Journal Volume 36 [2012] ; 8066 >
-        au < manifest ; 2013 ; Computer Music Journal Volume 37 [2013] ; 9049 >
-        au < manifest ; 2014 ; Computer Music Journal Volume 38 [2014] ; 9867 >
-        au < manifest ; 2015 ; Computer Music Journal Volume 39 [2015] ; 10511 >
-        au < manifest ; 2016 ; Computer Music Journal Volume 40 [2016] ; 11132 >
+        au < testing ; 2001 ; Computer Music Journal Volume 25 [2001] ; 120 >
+        au < testing ; 2002 ; Computer Music Journal Volume 26 [2002] ; 121 >
+        au < testing ; 2003 ; Computer Music Journal Volume 27 [2003] ; 880 >
+        au < testing ; 2004 ; Computer Music Journal Volume 28 [2004] ; 2450 >
+        au < testing ; 2005 ; Computer Music Journal Volume 29 [2005] ; 2705 >
+        au < testing ; 2006 ; Computer Music Journal Volume 30 [2006] ; 2992 >
+        au < testing ; 2007 ; Computer Music Journal Volume 31 [2007] ; 3353 >
+        au < testing ; 2008 ; Computer Music Journal Volume 32 [2008] ; 3706 >
+        au < testing ; 2009 ; Computer Music Journal Volume 33 [2009] ; 4211 >
+        au < testing ; 2010 ; Computer Music Journal Volume 34 [2010] ; 5820 >
+        au < testing ; 2011 ; Computer Music Journal Volume 35 [2011] ; 6911 >
+        au < testing ; 2012 ; Computer Music Journal Volume 36 [2012] ; 8066 >
+        au < testing ; 2013 ; Computer Music Journal Volume 37 [2013] ; 9049 >
+        au < testing ; 2014 ; Computer Music Journal Volume 38 [2014] ; 9867 >
+        au < testing ; 2015 ; Computer Music Journal Volume 39 [2015] ; 10511 >
+        au < testing ; 2016 ; Computer Music Journal Volume 40 [2016] ; 11132 >
 
     }
+    
     {
     title <
       name = Global Environmental Politics ;
@@ -47,23 +48,24 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2003 ; Global Environmental Politics Volume 3 [2003] ; 867 >
-        au < manifest ; 2004 ; Global Environmental Politics Volume 4 [2004] ; 2451 >
-        au < manifest ; 2005 ; Global Environmental Politics Volume 5 [2005] ; 2668 >
-        au < manifest ; 2006 ; Global Environmental Politics Volume 6 [2006] ; 2964 >
-        au < manifest ; 2007 ; Global Environmental Politics Volume 7 [2007] ; 3279 >
-        au < manifest ; 2008 ; Global Environmental Politics Volume 8 [2008] ; 3721 >
-        au < manifest ; 2009 ; Global Environmental Politics Volume 9 [2009] ; 4070 >
-        au < manifest ; 2010 ; Global Environmental Politics Volume 10 [2010] ; 5815 >
-        au < manifest ; 2011 ; Global Environmental Politics Volume 11 [2011] ; 6685 >
-        au < manifest ; 2012 ; Global Environmental Politics Volume 12 [2012] ; 7906 >
-        au < manifest ; 2013 ; Global Environmental Politics Volume 13 [2013] ; 8738 >
-        au < manifest ; 2014 ; Global Environmental Politics Volume 14 [2014] ; 9649 >
-        au < manifest ; 2015 ; Global Environmental Politics Volume 15 [2015] ; 10323 >
-        au < manifest ; 2016 ; Global Environmental Politics Volume 16 [2016] ; 10934 >
-        au < manifest ; 2016 ; Global Environmental Politics Volume 17 [2016] ; 12364 >
+        au < testing ; 2003 ; Global Environmental Politics Volume 3 [2003] ; 867 >
+        au < testing ; 2004 ; Global Environmental Politics Volume 4 [2004] ; 2451 >
+        au < testing ; 2005 ; Global Environmental Politics Volume 5 [2005] ; 2668 >
+        au < testing ; 2006 ; Global Environmental Politics Volume 6 [2006] ; 2964 >
+        au < testing ; 2007 ; Global Environmental Politics Volume 7 [2007] ; 3279 >
+        au < testing ; 2008 ; Global Environmental Politics Volume 8 [2008] ; 3721 >
+        au < testing ; 2009 ; Global Environmental Politics Volume 9 [2009] ; 4070 >
+        au < testing ; 2010 ; Global Environmental Politics Volume 10 [2010] ; 5815 >
+        au < testing ; 2011 ; Global Environmental Politics Volume 11 [2011] ; 6685 >
+        au < testing ; 2012 ; Global Environmental Politics Volume 12 [2012] ; 7906 >
+        au < testing ; 2013 ; Global Environmental Politics Volume 13 [2013] ; 8738 >
+        au < testing ; 2014 ; Global Environmental Politics Volume 14 [2014] ; 9649 >
+        au < testing ; 2015 ; Global Environmental Politics Volume 15 [2015] ; 10323 >
+        au < testing ; 2016 ; Global Environmental Politics Volume 16 [2016] ; 10934 >
+        au < testing ; 2016 ; Global Environmental Politics Volume 17 [2016] ; 12364 >
 
     }
+    
     {
     title <
       name = Innovations: Technology, Governance, Globalization ;
@@ -75,10 +77,11 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2012 ; Innovations: Technology, Governance, Globalization Volume 7 [2012] ; 8403 >
-        au < manifest ; 2013 ; Innovations: Technology, Governance, Globalization Volume 8 [2013] ; 9362 >
+        au < testing ; 2012 ; Innovations: Technology, Governance, Globalization Volume 7 [2012] ; 8403 >
+        au < testing ; 2013 ; Innovations: Technology, Governance, Globalization Volume 8 [2013] ; 9362 >
 
     }
+    
     {
     title <
       name = International Organization ;
@@ -90,9 +93,10 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2002 ; International Organization Volume 56 [2002] ; 276 >
+        au < testing ; 2002 ; International Organization Volume 56 [2002] ; 276 >
 
     }
+    
     {
     title <
       name = International Security ;
@@ -147,6 +151,7 @@
         au < manifest ; 2016 ; International Security Volume 41 [2016] ; 11352 >
 
     }
+    
     {
     title <
       name = Journal of Cold War Studies ;
@@ -178,6 +183,7 @@
         au < manifest ; 2016 ; Journal of Cold War Studies Volume 18 [2016] ; 11053 >
 
     }
+    
     {
     title <
       name = Journal of Interdisciplinary History ;
@@ -209,6 +215,7 @@
         au < manifest ; 2016-2017 ; Journal of Interdisciplinary History Volume 47 [2016-2017] ; 11186 >
 
     }
+    
     {
     title <
       name = Leonardo ;
@@ -272,6 +279,7 @@
         au < manifest ; 2017 ; Leonardo Volume 50 [2017] ; 12351 >
 
     }
+    
     {
     title <
       name = Leonardo Music Journal ;
@@ -311,6 +319,7 @@
         au < manifest ; 2016 ; Leonardo Music Journal Volume 26 [2016] ; 12228 >
 
     }
+    
     {
     title <
       name = Linguistic Inquiry ;
@@ -342,6 +351,7 @@
         au < manifest ; 2017 ; Linguistic Inquiry Volume 48 [2017] ; 12341 >
 
     }
+    
     {
     title <
       name = PAJ: A Journal of Performance and Art ;
@@ -394,6 +404,7 @@
         au < manifest ; 2017 ; PAJ: A Journal of Performance and Art Volume 39 [2017 (115-117)] ; 12335 >
 
     }
+    
     {
     title <
       name = Perspectives on Science ;
@@ -427,6 +438,7 @@
         au < manifest ; 2017 ; Perspectives on Science Volume 25 [2017] ; 12361 >
 
     }
+    
     {
     title <
       name = TDR: The Drama Review ;
@@ -459,6 +471,7 @@
         au < manifest ; 2017 ; TDR: The Drama Review Volume 61 [2017 (233-236)] ; 12434 >
 
     }
+    
     {
     title <
       name = The American Journal of Bioethics ;
@@ -476,6 +489,7 @@
         au < manifest ; 2004 ; The American Journal of Bioethics Volume 4 [2004] ; 2432 >
 
     }
+    
     {
     title <
       name = The Harvard International Journal of Press/Politics ;
@@ -491,6 +505,7 @@
         au < manifest ; 2000 ; The Harvard International Journal of Press/Politics Volume 5 [2000] ; 567 >
 
     }
+    
     {
     title <
       name = The Washington Quarterly ;
