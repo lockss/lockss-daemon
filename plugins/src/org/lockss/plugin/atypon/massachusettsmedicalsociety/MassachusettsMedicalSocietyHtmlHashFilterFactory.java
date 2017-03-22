@@ -101,6 +101,8 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         HtmlNodeFilters.tagWithAttribute("dd", "id", "letters"),
         //Contains links to articles currently citing in other volumes
         HtmlNodeFilters.tagWithAttribute("dd", "id", "citedby"),
+        //Contains article metrics that change
+        HtmlNodeFilters.tagWithAttribute("dd", "id", "metrics"),
         //Contains a link to the correction or the article which is possibly part of another au
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleCorrection"),
         //Group of images/videos that link to other articles

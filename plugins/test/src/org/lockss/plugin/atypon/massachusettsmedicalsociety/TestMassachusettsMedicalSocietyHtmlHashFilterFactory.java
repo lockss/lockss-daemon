@@ -71,6 +71,7 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
               "<html><div id = \"galleryContent\">abc</div></html>",
               "<html><div class = \"discussion\">abc</div></html>",
               "<html><dt id = \"citedbyTab\">abc</dt></html>",
+              "<html><dd id = \"metrics\">abc</dd></html>",
               "<html><div class = \"articleActivity\">abc</div></html>",
               "<html><div id = \"institutionBox\">abc</div></html>",
               "<html><div id = \"copyright\">abc</div></html>",
@@ -223,6 +224,13 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
     private static final String submitLetterHtmlHashFiltered =
                     " <div class=\"submitLetter\"> </div> " +
                     "<li id=\"submitLetter\">Hello </li>";
+
+    private static final String metricsTabHtmlHash =
+        " <dd id=\"metrics\"> " +
+        "    <div class=\"ppam\"> " +
+        "    </div> </dd>";
+    private static final String metricsTabHtmlHashFiltered = " ";
+
   
     public void testModifiedHtmlHashFiltering() throws Exception {
       InputStream actIn = fact.createFilteredInputStream(mau,
@@ -318,6 +326,14 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
           Constants.DEFAULT_ENCODING);
 
       assertEquals(submitLetterHtmlHashFiltered, StringUtil.fromInputStream(actIn));
+    }
+    
+    public void testMetricsTabHtmlHashFiltering() throws Exception {
+      InputStream actIn = fact.createFilteredInputStream(mau, 
+          new StringInputStream(metricsTabHtmlHash),
+          Constants.DEFAULT_ENCODING);
+
+      assertEquals(metricsTabHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
 
 }
