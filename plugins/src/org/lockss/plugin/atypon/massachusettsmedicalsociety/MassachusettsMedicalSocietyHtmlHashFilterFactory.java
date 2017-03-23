@@ -93,6 +93,8 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory extends BaseAtypon
         HtmlNodeFilters.tagWithAttribute("div", "id", "bottomAdBar"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "bottomAd"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "bannerAdTower"),
+        //filtering button links to references - some added later
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/servlet/linkout?"),
         //Certain ads do not have a specified div and must be removed based on regex
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/action/clickThrough"),
         //Contains comments by users with possible links to articles in other journals/volumes

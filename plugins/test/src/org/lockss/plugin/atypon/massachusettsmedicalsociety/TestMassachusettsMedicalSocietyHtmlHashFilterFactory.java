@@ -231,6 +231,13 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
         "    </div> </dd>";
     private static final String metricsTabHtmlHashFiltered = " ";
 
+    private static final String servletLinkoutHtmlHash =
+        "<a href=\"/servlet/linkout?suffix=r003&amp;dbid=16&amp;doi=10.1056%2FNEJMp1610712&amp;key=10.1215%2F03616878-3620953\"" +
+        "onclick=\"newWindow(this.href);return false\">CrossRef</a> Hello " +
+        "<a href=\"/servlet/linkout?suffix=r003&amp;dbid=128&amp;doi=10.1056%2FNEJMp1610712&amp;key=000383349500016\" " +
+        "onclick=\"newWindow(this.href);return false\">Web of Science</a> World ";
+
+    private static final String servletLinkoutHtmlHashFiltered = " Hello World ";
   
     public void testModifiedHtmlHashFiltering() throws Exception {
       InputStream actIn = fact.createFilteredInputStream(mau,
@@ -335,5 +342,12 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
 
       assertEquals(metricsTabHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
+    
+    public void testServletLinkoutTabHtmlHashFiltering() throws Exception {
+      InputStream actIn = fact.createFilteredInputStream(mau, 
+          new StringInputStream(servletLinkoutHtmlHash),
+          Constants.DEFAULT_ENCODING);
 
+      assertEquals(servletLinkoutHtmlHashFiltered, StringUtil.fromInputStream(actIn));
+    }
 }
