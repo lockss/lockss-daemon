@@ -2007,8 +2007,53 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
+  } elsif ($plugin eq "ClockssJstorCurrentScholarshipPlugin"){
+      $url = sprintf("%sclockss-manifest/%s/%s",
+      $param{base_url}, $param{journal_id}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #JSTOR Current Scholarship links http://www.jstor.org/stable/10.2972/hesperia.84.issue-1
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
+                  ($man_contents =~ m/stable\/[0-9.]+\//))) {
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(4);
+  }elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
+      #clockss and lockss use the same manifest page
+      $url = sprintf("%sclockss-manifest/%s/%s",
+      $param{base_url}, $param{journal_id}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #JSTOR Current Scholarship links http://www.jstor.org/stable/10.2972/hesperia.84.issue-1
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
+                  ($man_contents =~ m/stable\/[0-9.]+\//))) {
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(4);
   }
-
+  
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
