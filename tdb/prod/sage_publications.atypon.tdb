@@ -837,6 +837,16 @@
 
         #param[base_url] = http://alj.sagepub.com/
 
+        au < exists ; 2000 ; Alternative Law Journal Volume 25 ; 25 ; aljb >
+        au < exists ; 2001 ; Alternative Law Journal Volume 26 ; 26 ; aljb >
+        au < exists ; 2002 ; Alternative Law Journal Volume 27 ; 27 ; aljb >
+        au < exists ; 2003 ; Alternative Law Journal Volume 28 ; 28 ; aljb >
+        au < exists ; 2004 ; Alternative Law Journal Volume 29 ; 29 ; aljb >
+        au < exists ; 2005 ; Alternative Law Journal Volume 30 ; 30 ; aljb >
+        au < exists ; 2006 ; Alternative Law Journal Volume 31 ; 31 ; aljb >
+        au < exists ; 2007 ; Alternative Law Journal Volume 32 ; 32 ; aljb >
+        au < exists ; 2008 ; Alternative Law Journal Volume 33 ; 33 ; aljb >
+        au < manifest ; 2009 ; Alternative Law Journal Volume 34 ; 34 ; aljb >
         au < manifest ; 2010 ; Alternative Law Journal Volume 35 ; 35 ; aljb >
         au < manifest ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb >
         au < manifest ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb >
@@ -6603,11 +6613,12 @@
 
         #param[base_url] = http://chp.sagepub.com/
 
-        au < doNotProcess ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; chpa >
-        au < doNotProcess ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; chpa >
-        au < doNotProcess ; 2013 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 18 ; 18 ; chpa >
-        au < doNotProcess ; 2014 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 19 ; 19 ; chpa >
-        au < doNotProcess ; 2015 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 20 ; 20 ; chpa >
+        au < exists ; 2010 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 ; chpb >
+        au < doNotProcess ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; chpc >
+        au < doNotProcess ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; chpc >
+        au < doNotProcess ; 2013 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 18 ; 18 ; chpc >
+        au < doNotProcess ; 2014 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 19 ; 19 ; chpc >
+        au < doNotProcess ; 2015 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 20 ; 20 ; chpc >
         au < manifest ; 2016 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 21 ; 21 ; chpc >
         au < manifest ; 2017 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 22 ; 22 ; chpc >
 
@@ -13384,12 +13395,12 @@
         au < manifest ; 2007 ; History and Sociology of South Asia Volume 1 ; 1 ; hsaa >
         au < doNotProcess ; 2008 ; History and Sociology of South Asia Volume 2 ; 2 ; hsaa >
         au < doNotProcess ; 2009 ; History and Sociology of South Asia Volume 3 ; 3 ; hsaa >
-        au < doNotProcess ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 ; hsaa >
-        au < doNotProcess ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 ; hsaa >
-        au < doNotProcess ; 2012 ; History and Sociology of South Asia Volume 6 ; 6 ; hsaa >
-        au < doNotProcess ; 2013 ; History and Sociology of South Asia Volume 7 ; 7 ; hsaa >
-        au < doNotProcess ; 2014 ; History and Sociology of South Asia Volume 8 ; 8 ; hsaa >
-        au < doNotProcess ; 2015 ; History and Sociology of South Asia Volume 9 ; 9 ; hsaa >
+        au < doNotProcess ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 ; hsab >
+        au < doNotProcess ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 ; hsab >
+        au < doNotProcess ; 2012 ; History and Sociology of South Asia Volume 6 ; 6 ; hsab >
+        au < doNotProcess ; 2013 ; History and Sociology of South Asia Volume 7 ; 7 ; hsab >
+        au < doNotProcess ; 2014 ; History and Sociology of South Asia Volume 8 ; 8 ; hsab >
+        au < doNotProcess ; 2015 ; History and Sociology of South Asia Volume 9 ; 9 ; hsab >
         au < manifest ; 2016 ; History and Sociology of South Asia Volume 10 ; 10 ; hsab >
 
       }
@@ -14760,11 +14771,11 @@
         au < doNotProcess ; 2008 ; International Area Studies Review Volume 11 ; 11 ; iasa >
         au < doNotProcess ; 2009 ; International Area Studies Review Volume 12 ; 12 ; iasa >
         au < doNotProcess ; 2010 ; International Area Studies Review Volume 13 ; 13 ; iasa >
-        au < doNotProcess ; 2011 ; International Area Studies Review Volume 14 ; 14 ; iasa >
-        au < doNotProcess ; 2012 ; International Area Studies Review Volume 15 ; 15 ; iasa >
-        au < doNotProcess ; 2013 ; International Area Studies Review Volume 16 ; 16 ; iasa >
-        au < doNotProcess ; 2014 ; International Area Studies Review Volume 17 ; 17 ; iasa >
-        au < doNotProcess ; 2015 ; International Area Studies Review Volume 18 ; 18 ; iasa >
+        au < doNotProcess ; 2011 ; International Area Studies Review Volume 14 ; 14 ; iasb >
+        au < doNotProcess ; 2012 ; International Area Studies Review Volume 15 ; 15 ; iasb >
+        au < doNotProcess ; 2013 ; International Area Studies Review Volume 16 ; 16 ; iasb >
+        au < doNotProcess ; 2014 ; International Area Studies Review Volume 17 ; 17 ; iasb >
+        au < doNotProcess ; 2015 ; International Area Studies Review Volume 18 ; 18 ; iasb >
         au < manifest ; 2016 ; International Area Studies Review Volume 19 ; 19 ; iasb >
 
       }
@@ -15143,7 +15154,7 @@
       #param[base_url] = http://ice.sagepub.com/
       comment[merged_from] = 1366-5456 and 0021-9657
       
-      au < doNotProcess ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 ; icea >
+      au < doNotProcess ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 ; icec >
       au < manifest ; 2016 ; International Journal of Christianity and Education Volume 20 ; 20 ; icec >
       
   }
@@ -20200,7 +20211,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://ini.sagepub.com/
 
         au < doNotProcess ; 2007 ; Innate Immunity Volume 13 ; 13 ; inia >
-        au < doNotProcess ; 2008 ; Innate Immunity Volume 14 ; 14 ; inia >
+        au < doNotProcess ; 2008 ; Innate Immunity Volume 14 ; 14 ; inib >
         au < manifest ; 2009 ; Innate Immunity Volume 15 ; 15 ; inib >
         au < doNotProcess ; 2010 ; Innate Immunity Volume 16 ; 16 ; inib >
         au < doNotProcess ; 2011 ; Innate Immunity Volume 17 ; 17 ; inib >
@@ -22111,6 +22122,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; JALA (Charlottesville, Va.) Volume 13 ; 13 ; jlab >
         au < doNotProcess ; 2009 ; JALA (Charlottesville, Va.) Volume 14 ; 14 ; jlab >
         au < doNotProcess ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 ; jlab >
+        au < exists ; 2011 ; JALA (Charlottesville, Va.) Volume 16 ; 16 ; jlab >
+        au < exists ; 2012 ; JALA (Charlottesville, Va.) Volume 17 ; 17 ; jlac >
+        au < exists ; 2013 ; JALA (Charlottesville, Va.) Volume 18 ; 18 ; jlac >
+        au < exists ; 2014 ; JALA (Charlottesville, Va.) Volume 19 ; 19 ; jlac >
+        au < exists ; 2015 ; JALA (Charlottesville, Va.) Volume 20 ; 20 ; jlac >
+        au < exists ; 2016 ; JALA (Charlottesville, Va.) Volume 21 ; 21 ; jlac >
+        au < exists ; 2017 ; JALA (Charlottesville, Va.) Volume 22 ; 22 ; jlad >
 
       }
 
@@ -25155,7 +25173,137 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       comment[continued_by] = 1757-9139
-      comment[rsh] = journal name changed to Perspectives in Public Health
+      comment[rsh] = journal name changed to Perspectives in Public Health in 2009
+      #param[base_url] = http://rsh.sagepub.com/
+
+      au < exists ; 1879 ; The Journal of the Royal Society for the Promotion of Health Volume 1 ; 1 ; rshf >
+      au < exists ; 1881 ; The Journal of the Royal Society for the Promotion of Health Volume 2 ; 2 ; rshf >
+      au < exists ; 1882 ; The Journal of the Royal Society for the Promotion of Health Volume 3 ; 3 ; rshf >
+      au < exists ; 1883 ; The Journal of the Royal Society for the Promotion of Health Volume 4 ; 4 ; rshf >
+      au < exists ; 1884 ; The Journal of the Royal Society for the Promotion of Health Volume 5 ; 5 ; rshf >
+      au < exists ; 1885 ; The Journal of the Royal Society for the Promotion of Health Volume 6 ; 6 ; rshf >
+      au < exists ; 1886 ; The Journal of the Royal Society for the Promotion of Health Volume 7 ; 7 ; rshf >
+      au < exists ; 1887 ; The Journal of the Royal Society for the Promotion of Health Volume 8 ; 8 ; rshf >
+      au < exists ; 1888 ; The Journal of the Royal Society for the Promotion of Health Volume 9 ; 9 ; rshf >
+      au < exists ; 1889 ; The Journal of the Royal Society for the Promotion of Health Volume 10 ; 10 ; rshg >
+      au < exists ; 1890 ; The Journal of the Royal Society for the Promotion of Health Volume 11 ; 11 ; rshg >
+      au < exists ; 1891 ; The Journal of the Royal Society for the Promotion of Health Volume 12 ; 12 ; rshg >
+      au < exists ; 1892 ; The Journal of the Royal Society for the Promotion of Health Volume 13 ; 13 ; rshg >
+      au < exists ; 1893 ; The Journal of the Royal Society for the Promotion of Health Volume 14 ; 14 ; rshg >
+      au < exists ; 1894 ; The Journal of the Royal Society for the Promotion of Health Volume 15 ; 15 ; rshh >
+      au < exists ; 1895 ; The Journal of the Royal Society for the Promotion of Health Volume 16 ; 16 ; rshh >
+      au < exists ; 1896 ; The Journal of the Royal Society for the Promotion of Health Volume 17 ; 17 ; rshh >
+      au < exists ; 1897 ; The Journal of the Royal Society for the Promotion of Health Volume 18 ; 18 ; rshh >
+      au < exists ; 1898 ; The Journal of the Royal Society for the Promotion of Health Volume 19 ; 19 ; rshh >
+      au < exists ; 1899 ; The Journal of the Royal Society for the Promotion of Health Volume 20 ; 20 ; rshh >
+      au < exists ; 1900 ; The Journal of the Royal Society for the Promotion of Health Volume 21 ; 21 ; rshh >
+      au < exists ; 1901 ; The Journal of the Royal Society for the Promotion of Health Volume 22 ; 22 ; rshh >
+      au < exists ; 1902 ; The Journal of the Royal Society for the Promotion of Health Volume 23 ; 23 ; rshh >
+      au < exists ; 1903 ; The Journal of the Royal Society for the Promotion of Health Volume 24 ; 24 ; rshh >
+      au < exists ; 1904 ; The Journal of the Royal Society for the Promotion of Health Volume 25 ; 25 ; rsha >
+      au < exists ; 1905 ; The Journal of the Royal Society for the Promotion of Health Volume 26 ; 26 ; rsha >
+      au < exists ; 1906 ; The Journal of the Royal Society for the Promotion of Health Volume 27 ; 27 ; rsha >
+      au < exists ; 1907 ; The Journal of the Royal Society for the Promotion of Health Volume 28 ; 28 ; rsha >
+      au < exists ; 1908 ; The Journal of the Royal Society for the Promotion of Health Volume 29 ; 29 ; rsha >
+      au < exists ; 1909 ; The Journal of the Royal Society for the Promotion of Health Volume 30 ; 30 ; rsha >
+      au < exists ; 1910 ; The Journal of the Royal Society for the Promotion of Health Volume 31 ; 31 ; rsha >
+      au < exists ; 1911 ; The Journal of the Royal Society for the Promotion of Health Volume 32 ; 32 ; rsha >
+      au < exists ; 1912 ; The Journal of the Royal Society for the Promotion of Health Volume 33 ; 33 ; rsha >
+      au < exists ; 1913 ; The Journal of the Royal Society for the Promotion of Health Volume 34 ; 34 ; rsha >
+      au < exists ; 1914 ; The Journal of the Royal Society for the Promotion of Health Volume 35 ; 35 ; rsha >
+      au < exists ; 1915 ; The Journal of the Royal Society for the Promotion of Health Volume 36 ; 36 ; rsha >
+      au < exists ; 1916 ; The Journal of the Royal Society for the Promotion of Health Volume 37 ; 37 ; rsha >
+      au < exists ; 1917 ; The Journal of the Royal Society for the Promotion of Health Volume 38 ; 38 ; rsha >
+      au < exists ; 1918 ; The Journal of the Royal Society for the Promotion of Health Volume 39 ; 39 ; rsha >
+      au < exists ; 1919 ; The Journal of the Royal Society for the Promotion of Health Volume 40 ; 40 ; rsha >
+      au < exists ; 1920 ; The Journal of the Royal Society for the Promotion of Health Volume 41 ; 41 ; rsha >
+      au < exists ; 1921 ; The Journal of the Royal Society for the Promotion of Health Volume 42 ; 42 ; rsha >
+      au < exists ; 1922 ; The Journal of the Royal Society for the Promotion of Health Volume 43 ; 43 ; rsha >
+      au < exists ; 1923 ; The Journal of the Royal Society for the Promotion of Health Volume 44 ; 44 ; rsha >
+      au < exists ; 1924 ; The Journal of the Royal Society for the Promotion of Health Volume 45 ; 45 ; rsha >
+      au < exists ; 1925 ; The Journal of the Royal Society for the Promotion of Health Volume 46 ; 46 ; rsha >
+      au < exists ; 1926 ; The Journal of the Royal Society for the Promotion of Health Volume 47 ; 47 ; rsha >
+      au < exists ; 1927 ; The Journal of the Royal Society for the Promotion of Health Volume 48 ; 48 ; rsha >
+      au < exists ; 1928 ; The Journal of the Royal Society for the Promotion of Health Volume 49 ; 49 ; rsha >
+      au < exists ; 1929 ; The Journal of the Royal Society for the Promotion of Health Volume 50 ; 50 ; rsha >
+      au < exists ; 1930 ; The Journal of the Royal Society for the Promotion of Health Volume 51 ; 51 ; rsha >
+      au < exists ; 1931 ; The Journal of the Royal Society for the Promotion of Health Volume 52 ; 52 ; rsha >
+      au < exists ; 1932 ; The Journal of the Royal Society for the Promotion of Health Volume 53 ; 53 ; rsha >
+      au < exists ; 1933 ; The Journal of the Royal Society for the Promotion of Health Volume 54 ; 54 ; rsha >
+      au < exists ; 1934 ; The Journal of the Royal Society for the Promotion of Health Volume 55 ; 55 ; rsha >
+      au < exists ; 1935 ; The Journal of the Royal Society for the Promotion of Health Volume 56 ; 56 ; rsha >
+      au < exists ; 1936 ; The Journal of the Royal Society for the Promotion of Health Volume 57 ; 57 ; rsha >
+      au < exists ; 1937 ; The Journal of the Royal Society for the Promotion of Health Volume 58 ; 58 ; rsha >
+      au < exists ; 1938 ; The Journal of the Royal Society for the Promotion of Health Volume 59 ; 59 ; rsha >
+      au < exists ; 1939 ; The Journal of the Royal Society for the Promotion of Health Volume 60 ; 60 ; rsha >
+      au < exists ; 1940 ; The Journal of the Royal Society for the Promotion of Health Volume 61 ; 61 ; rsha >
+      au < exists ; 1942 ; The Journal of the Royal Society for the Promotion of Health Volume 62 ; 62 ; rsha >
+      au < exists ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 63 ; 63 ; rsha >
+      au < exists ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 64 ; 64 ; rsha >
+      au < exists ; 1945 ; The Journal of the Royal Society for the Promotion of Health Volume 65 ; 65 ; rsha >
+      au < exists ; 1946 ; The Journal of the Royal Society for the Promotion of Health Volume 66 ; 66 ; rsha >
+      au < exists ; 1947 ; The Journal of the Royal Society for the Promotion of Health Volume 67 ; 67 ; rsha >
+      au < exists ; 1948 ; The Journal of the Royal Society for the Promotion of Health Volume 68 ; 68 ; rsha >
+      au < exists ; 1949 ; The Journal of the Royal Society for the Promotion of Health Volume 69 ; 69 ; rsha >
+      au < exists ; 1950 ; The Journal of the Royal Society for the Promotion of Health Volume 70 ; 70 ; rsha >
+      au < exists ; 1951 ; The Journal of the Royal Society for the Promotion of Health Volume 71 ; 71 ; rsha >
+      au < exists ; 1952 ; The Journal of the Royal Society for the Promotion of Health Volume 72 ; 72 ; rsha >
+      au < exists ; 1953 ; The Journal of the Royal Society for the Promotion of Health Volume 73 ; 73 ; rsha >
+      au < exists ; 1954 ; The Journal of the Royal Society for the Promotion of Health Volume 74 ; 74 ; rsha >
+      au < exists ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 75 ; 75 ; rshb >
+      au < exists ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 76 ; 76 ; rshb >
+      au < exists ; 1957 ; The Journal of the Royal Society for the Promotion of Health Volume 77 ; 77 ; rshb >
+      au < exists ; 1958 ; The Journal of the Royal Society for the Promotion of Health Volume 78 ; 78 ; rshb >
+      au < exists ; 1959 ; The Journal of the Royal Society for the Promotion of Health Volume 79 ; 79 ; rshb >
+      au < exists ; 1960 ; The Journal of the Royal Society for the Promotion of Health Volume 80 ; 80 ; rshc >
+      au < exists ; 1961 ; The Journal of the Royal Society for the Promotion of Health Volume 81 ; 81 ; rshc >
+      au < exists ; 1962 ; The Journal of the Royal Society for the Promotion of Health Volume 82 ; 82 ; rshc >
+      au < exists ; 1963 ; The Journal of the Royal Society for the Promotion of Health Volume 83 ; 83 ; rshc >
+      au < exists ; 1964 ; The Journal of the Royal Society for the Promotion of Health Volume 84 ; 84 ; rshc >
+      au < exists ; 1965 ; The Journal of the Royal Society for the Promotion of Health Volume 85 ; 85 ; rshc >
+      au < exists ; 1966 ; The Journal of the Royal Society for the Promotion of Health Volume 86 ; 86 ; rshc >
+      au < exists ; 1967 ; The Journal of the Royal Society for the Promotion of Health Volume 87 ; 87 ; rshc >
+      au < exists ; 1968 ; The Journal of the Royal Society for the Promotion of Health Volume 88 ; 88 ; rshc >
+      au < exists ; 1969 ; The Journal of the Royal Society for the Promotion of Health Volume 89 ; 89 ; rshc >
+      au < exists ; 1970 ; The Journal of the Royal Society for the Promotion of Health Volume 90 ; 90 ; rshc >
+      au < exists ; 1971 ; The Journal of the Royal Society for the Promotion of Health Volume 91 ; 91 ; rshc >
+      au < exists ; 1972 ; The Journal of the Royal Society for the Promotion of Health Volume 92 ; 92 ; rshc >
+      au < exists ; 1973 ; The Journal of the Royal Society for the Promotion of Health Volume 93 ; 93 ; rshc >
+      au < exists ; 1974 ; The Journal of the Royal Society for the Promotion of Health Volume 94 ; 94 ; rshc >
+      au < exists ; 1975 ; The Journal of the Royal Society for the Promotion of Health Volume 95 ; 95 ; rshc >
+      au < exists ; 1976 ; The Journal of the Royal Society for the Promotion of Health Volume 96 ; 96 ; rshc >
+      au < exists ; 1977 ; The Journal of the Royal Society for the Promotion of Health Volume 97 ; 97 ; rshc >
+      au < exists ; 1978 ; The Journal of the Royal Society for the Promotion of Health Volume 98 ; 98 ; rshc >
+      au < exists ; 1979 ; The Journal of the Royal Society for the Promotion of Health Volume 99 ; 99 ; rshc >
+      au < exists ; 1980 ; The Journal of the Royal Society for the Promotion of Health Volume 100 ; 100 ; rshc >
+      au < exists ; 1981 ; The Journal of the Royal Society for the Promotion of Health Volume 101 ; 101 ; rshc >
+      au < exists ; 1982 ; The Journal of the Royal Society for the Promotion of Health Volume 102 ; 102 ; rshc >
+      au < exists ; 1983 ; The Journal of the Royal Society for the Promotion of Health Volume 103 ; 103 ; rshd >
+      au < exists ; 1984 ; The Journal of the Royal Society for the Promotion of Health Volume 104 ; 104 ; rshd >
+      au < exists ; 1985 ; The Journal of the Royal Society for the Promotion of Health Volume 105 ; 105 ; rshd >
+      au < exists ; 1986 ; The Journal of the Royal Society for the Promotion of Health Volume 106 ; 106 ; rshd >
+      au < exists ; 1987 ; The Journal of the Royal Society for the Promotion of Health Volume 107 ; 107 ; rshd >
+      au < exists ; 1988 ; The Journal of the Royal Society for the Promotion of Health Volume 108 ; 108 ; rshd >
+      au < exists ; 1989 ; The Journal of the Royal Society for the Promotion of Health Volume 109 ; 109 ; rshd >
+      au < exists ; 1990 ; The Journal of the Royal Society for the Promotion of Health Volume 110 ; 110 ; rshd >
+      au < exists ; 1991 ; The Journal of the Royal Society for the Promotion of Health Volume 111 ; 111 ; rshd >
+      au < exists ; 1992 ; The Journal of the Royal Society for the Promotion of Health Volume 112 ; 112 ; rshd >
+      au < exists ; 1993 ; The Journal of the Royal Society for the Promotion of Health Volume 113 ; 113 ; rshd >
+      au < exists ; 1994 ; The Journal of the Royal Society for the Promotion of Health Volume 114 ; 114 ; rshd >
+      au < exists ; 1995 ; The Journal of the Royal Society for the Promotion of Health Volume 115 ; 115 ; rshd >
+      au < exists ; 1996 ; The Journal of the Royal Society for the Promotion of Health Volume 116 ; 116 ; rshd >
+      au < exists ; 1997 ; The Journal of the Royal Society for the Promotion of Health Volume 117 ; 117 ; rshd >
+      au < exists ; 1998 ; The Journal of the Royal Society for the Promotion of Health Volume 118 ; 118 ; rshe >
+      au < exists ; 1999 ; The Journal of the Royal Society for the Promotion of Health Volume 119 ; 119 ; rshe >
+      au < exists ; 2000 ; The Journal of the Royal Society for the Promotion of Health Volume 120 ; 120 ; rshe >
+      au < exists ; 2001 ; The Journal of the Royal Society for the Promotion of Health Volume 121 ; 121 ; rshe >
+      au < exists ; 2002 ; The Journal of the Royal Society for the Promotion of Health Volume 122 ; 122 ; rshe >
+      au < exists ; 2003 ; The Journal of the Royal Society for the Promotion of Health Volume 123 ; 123 ; rshe >
+      au < exists ; 2004 ; The Journal of the Royal Society for the Promotion of Health Volume 124 ; 124 ; rshe >
+      au < exists ; 2005 ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 ; rshe >
+      au < exists ; 2006 ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 ; rshe >
+      au < exists ; 2007 ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 ; rshe >
+      au < exists ; 2008 ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 ; rshe >
 
     }
 
@@ -25168,7 +25316,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       comment[continues] = 1466-4240
-      comment[pph] = name changed from The Journal of the Royal Society for the Promotion of Health
+      #Before 2009, The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
+      #param[base_url] = http://rsh.sagepub.com/
+
+      au < exists ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; rshi >
+      au < exists ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ; rshi >
+      au < exists ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; rshi >
+      au < exists ; 2012 ; Perspectives in Public Health Volume 132 ; 132 ; rshi >
+      au < exists ; 2013 ; Perspectives in Public Health Volume 133 ; 133 ; rshi >
+      au < exists ; 2014 ; Perspectives in Public Health Volume 134 ; 134 ; rshi >
+      au < exists ; 2015 ; Perspectives in Public Health Volume 135 ; 135 ; rshi >
+      au < exists ; 2016 ; Perspectives in Public Health Volume 136 ; 136 ; rshi >
 
     }
 
@@ -25721,7 +25879,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Journal of Vibration and Control Volume 8 ; 8 ; jvca >
         au < manifest ; 2003 ; Journal of Vibration and Control Volume 9 ; 9 ; jvca >
         au < manifest ; 2004 ; Journal of Vibration and Control Volume 10 ; 10 ; jvca >
-        au < doNotProcess ; 2005 ; Journal of Vibration and Control Volume 11 ; 11 ; jvcb >
+        au < doNotProcess ; 2005 ; Journal of Vibration and Control Volume 11 ; 11 ; jvca >
         au < doNotProcess ; 2006 ; Journal of Vibration and Control Volume 12 ; 12 ; jvcb >
         au < doNotProcess ; 2007 ; Journal of Vibration and Control Volume 13 ; 13 ; jvcb >
         au < doNotProcess ; 2008 ; Journal of Vibration and Control Volume 14 ; 14 ; jvcb >
@@ -26507,8 +26665,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
 
-      au < doNotProcess ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; lrxa >
-      au < exists ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 ; lrxc >
+      au < doNotProcess ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; lrxe >
+      au < exists ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 ; lrxe >
 
     }
 
@@ -26983,7 +27141,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1970 ; Measurement and Control Volume 3 ; 3 ; maca >
         au < manifest ; 1971 ; Measurement and Control Volume 4 ; 4 ; maca >
         au < manifest ; 1972 ; Measurement and Control Volume 5 ; 5 ; maca >
-        au < exists ; 1973 ; Measurement and Control Volume 6 ; 6 ; macc >
+        au < exists ; 1973 ; Measurement and Control Volume 6 ; 6 ; maca >
         au < manifest ; 1974 ; Measurement and Control Volume 7 ; 7 ; maca >
         au < manifest ; 1975 ; Measurement and Control Volume 8 ; 8 ; maca >
         au < manifest ; 1976 ; Measurement and Control Volume 9 ; 9 ; maca >
@@ -27001,8 +27159,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1988 ; Measurement and Control Volume 21 ; 21 ; maca >
         au < manifest ; 1989 ; Measurement and Control Volume 22 ; 22 ; maca >
         au < manifest ; 1990 ; Measurement and Control Volume 23 ; 23 ; maca >
-        au < exists ; 1991 ; Measurement and Control Volume 24 ; 24 ; macc >
-        au < exists ; 1992 ; Measurement and Control Volume 25 ; 25 ; macc >
+        au < exists ; 1991 ; Measurement and Control Volume 24 ; 24 ; maca >
+        au < exists ; 1992 ; Measurement and Control Volume 25 ; 25 ; maca >
         au < manifest ; 1993 ; Measurement and Control Volume 26 ; 26 ; maca >
         au < manifest ; 1994 ; Measurement and Control Volume 27 ; 27 ; maca >
         au < manifest ; 1995 ; Measurement and Control Volume 28 ; 28 ; maca >
@@ -27180,44 +27338,44 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2006 ; Media International Australia Volume 121 ; 121 ; miac >
       au < manifest ; 2007 ; Media International Australia Volume 122 ; 122 ; miac >
       au < manifest ; 2007 ; Media International Australia Volume 123 ; 123 ; miac >
-      au < exists ; 2007 ; Media International Australia Volume 124 ; 124 ; miac >
-      au < exists ; 2007 ; Media International Australia Volume 125 ; 125 ; miac >
-      au < exists ; 2008 ; Media International Australia Volume 126 ; 126 ; miac >
-      au < exists ; 2008 ; Media International Australia Volume 127 ; 127 ; miac >
-      au < exists ; 2008 ; Media International Australia Volume 128 ; 128 ; miac >
-      au < exists ; 2008 ; Media International Australia Volume 129 ; 129 ; miac >
-      au < exists ; 2009 ; Media International Australia Volume 130 ; 130 ; miac >
-      au < exists ; 2009 ; Media International Australia Volume 131 ; 131 ; miac >
-      au < exists ; 2009 ; Media International Australia Volume 132 ; 132 ; miac >
-      au < exists ; 2009 ; Media International Australia Volume 133 ; 133 ; miac >
-      au < exists ; 2010 ; Media International Australia Volume 134 ; 134 ; miac >
-      au < exists ; 2010 ; Media International Australia Volume 135 ; 135 ; miac >
-      au < exists ; 2010 ; Media International Australia Volume 136 ; 136 ; miac >
-      au < exists ; 2010 ; Media International Australia Volume 137 ; 137 ; miac >
-      au < exists ; 2011 ; Media International Australia Volume 138 ; 138 ; miac >
-      au < exists ; 2011 ; Media International Australia Volume 139 ; 139 ; miac >
-      au < exists ; 2011 ; Media International Australia Volume 140 ; 140 ; miac >
-      au < exists ; 2011 ; Media International Australia Volume 141 ; 141 ; miac >
-      au < exists ; 2012 ; Media International Australia Volume 142 ; 142 ; miac >
-      au < exists ; 2012 ; Media International Australia Volume 143 ; 143 ; miac >
-      au < exists ; 2012 ; Media International Australia Volume 144 ; 144 ; miac >
-      au < exists ; 2012 ; Media International Australia Volume 145 ; 145 ; miac >
-      au < exists ; 2013 ; Media International Australia Volume 146 ; 146 ; miac >
-      au < exists ; 2013 ; Media International Australia Volume 147 ; 147 ; miac >
-      au < exists ; 2013 ; Media International Australia Volume 148 ; 148 ; miac >
-      au < exists ; 2013 ; Media International Australia Volume 149 ; 149 ; miac >
-      au < exists ; 2014 ; Media International Australia Volume 150 ; 150 ; miac >
-      au < exists ; 2014 ; Media International Australia Volume 151 ; 151 ; miac >
-      au < exists ; 2014 ; Media International Australia Volume 152 ; 152 ; miac >
-      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; miac >
-      au < exists ; 2015 ; Media International Australia Volume 154 ; 154 ; miac >
-      au < doNotProcess ; 2015 ; Media International Australia Volume 155 ; 155 ; miaa >
-      au < expected ; 2015 ; Media International Australia Volume 156 ; 156 ; miaa >
-      au < expected ; 2015 ; Media International Australia Volume 157 ; 157 ; miaa >
-      au < exists ; 2016 ; Media International Australia Volume 158 ; 158 ; miac >
-      au < exists ; 2016 ; Media International Australia Volume 159 ; 159 ; miac >
-      au < exists ; 2016 ; Media International Australia Volume 160 ; 160 ; miac >
-      au < exists ; 2016 ; Media International Australia Volume 161 ; 161 ; miac >
+      au < exists ; 2007 ; Media International Australia Volume 124 ; 124 ; miad >
+      au < exists ; 2007 ; Media International Australia Volume 125 ; 125 ; miad >
+      au < exists ; 2008 ; Media International Australia Volume 126 ; 126 ; miad >
+      au < exists ; 2008 ; Media International Australia Volume 127 ; 127 ; miad >
+      au < exists ; 2008 ; Media International Australia Volume 128 ; 128 ; miad >
+      au < exists ; 2008 ; Media International Australia Volume 129 ; 129 ; miad >
+      au < exists ; 2009 ; Media International Australia Volume 130 ; 130 ; miad >
+      au < exists ; 2009 ; Media International Australia Volume 131 ; 131 ; miad >
+      au < exists ; 2009 ; Media International Australia Volume 132 ; 132 ; miad >
+      au < exists ; 2009 ; Media International Australia Volume 133 ; 133 ; miad >
+      au < exists ; 2010 ; Media International Australia Volume 134 ; 134 ; miad >
+      au < exists ; 2010 ; Media International Australia Volume 135 ; 135 ; miad >
+      au < exists ; 2010 ; Media International Australia Volume 136 ; 136 ; miad >
+      au < exists ; 2010 ; Media International Australia Volume 137 ; 137 ; miad >
+      au < exists ; 2011 ; Media International Australia Volume 138 ; 138 ; miad >
+      au < exists ; 2011 ; Media International Australia Volume 139 ; 139 ; miad >
+      au < exists ; 2011 ; Media International Australia Volume 140 ; 140 ; miad >
+      au < exists ; 2011 ; Media International Australia Volume 141 ; 141 ; miad >
+      au < exists ; 2012 ; Media International Australia Volume 142 ; 142 ; miad >
+      au < exists ; 2012 ; Media International Australia Volume 143 ; 143 ; miad >
+      au < exists ; 2012 ; Media International Australia Volume 144 ; 144 ; miad >
+      au < exists ; 2012 ; Media International Australia Volume 145 ; 145 ; miad >
+      au < exists ; 2013 ; Media International Australia Volume 146 ; 146 ; miad >
+      au < exists ; 2013 ; Media International Australia Volume 147 ; 147 ; miad >
+      au < exists ; 2013 ; Media International Australia Volume 148 ; 148 ; miad >
+      au < exists ; 2013 ; Media International Australia Volume 149 ; 149 ; miad >
+      au < exists ; 2014 ; Media International Australia Volume 150 ; 150 ; miad >
+      au < exists ; 2014 ; Media International Australia Volume 151 ; 151 ; miad >
+      au < exists ; 2014 ; Media International Australia Volume 152 ; 152 ; miad >
+      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; miad >
+      au < exists ; 2015 ; Media International Australia Volume 154 ; 154 ; miad >
+      au < doNotProcess ; 2015 ; Media International Australia Volume 155 ; 155 ; miad >
+      au < expected ; 2015 ; Media International Australia Volume 156 ; 156 ; miad >
+      au < expected ; 2015 ; Media International Australia Volume 157 ; 157 ; miad >
+      au < exists ; 2016 ; Media International Australia Volume 158 ; 158 ; miad >
+      au < exists ; 2016 ; Media International Australia Volume 159 ; 159 ; miad >
+      au < exists ; 2016 ; Media International Australia Volume 160 ; 160 ; miad >
+      au < exists ; 2016 ; Media International Australia Volume 161 ; 161 ; miad >
 
     }
 
@@ -27414,98 +27572,98 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[base_url] = http://mlj.sagepub.com/
       # no issue MLST-24
 
-        au < doNotProcess ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 ; mlja >
-        au < doNotProcess ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 ; mlja >
-        au < doNotProcess ; 1905 ; Medico-Legal Journal Volume MLST-3 ; MLST-3 ; mlja >
-        au < doNotProcess ; 1906 ; Medico-Legal Journal Volume MLST-4 ; MLST-4 ; mlja >
-        au < doNotProcess ; 1907 ; Medico-Legal Journal Volume MLST-5 ; MLST-5 ; mlja >
-        au < doNotProcess ; 1908 ; Medico-Legal Journal Volume MLST-6 ; MLST-6 ; mlja >
-        au < doNotProcess ; 1909-1910 ; Medico-Legal Journal Volume MLST-7 ; MLST-7 ; mlja >
-        au < doNotProcess ; 1910-1911 ; Medico-Legal Journal Volume MLST-8 ; MLST-8 ; mlja >
-        au < doNotProcess ; 1911-1912 ; Medico-Legal Journal Volume MLST-9 ; MLST-9 ; mlja >
-        au < doNotProcess ; 1912-1913 ; Medico-Legal Journal Volume MLST-10 ; MLST-10 ; mlja >
-        au < doNotProcess ; 1913-1914 ; Medico-Legal Journal Volume MLST-11 ; MLST-11 ; mlja >
-        au < doNotProcess ; 1914 ; Medico-Legal Journal Volume MLST-12 ; MLST-12 ; mlja >
-        au < doNotProcess ; 1915-1918 ; Medico-Legal Journal Volume MLST-13 ; MLST-13 ; mlja >
-        au < doNotProcess ; 1919-1920 ; Medico-Legal Journal Volume MLST-14 ; MLST-14 ; mlja >
-        au < doNotProcess ; 1920-1921 ; Medico-Legal Journal Volume MLST-15 ; MLST-15 ; mlja >
-        au < doNotProcess ; 1921-1922 ; Medico-Legal Journal Volume MLST-16 ; MLST-16 ; mlja >
-        au < doNotProcess ; 1922-1923 ; Medico-Legal Journal Volume MLST-17 ; MLST-17 ; mlja >
-        au < doNotProcess ; 1923-1924 ; Medico-Legal Journal Volume MLST-18 ; MLST-18 ; mlja >
-        au < doNotProcess ; 1924-1925 ; Medico-Legal Journal Volume MLST-19 ; MLST-19 ; mlja >
-        au < doNotProcess ; 1925-1926 ; Medico-Legal Journal Volume MLST-20 ; MLST-20 ; mlja >
-        au < doNotProcess ; 1926 ; Medico-Legal Journal Volume MLST-21 ; MLST-21 ; mlja >
-        au < doNotProcess ; 1927-1928 ; Medico-Legal Journal Volume MLST-22 ; MLST-22 ; mlja >
-        au < doNotProcess ; 1928-1929 ; Medico-Legal Journal Volume MLST-23 ; MLST-23 ; mlja >
-        au < doNotProcess ; 1930-1931 ; Medico-Legal Journal Volume MLST-25 ; MLST-25 ; mlja >
-        au < doNotProcess ; 1931-1932 ; Medico-Legal Journal Volume MLST-26 ; MLST-26 ; mlja >
-        au < doNotProcess ; 1933 ; Medico-Legal Journal Volume 1 ; 1 ; mlja >
-        au < doNotProcess ; 1934 ; Medico-Legal Journal Volume 2 ; 2 ; mlja >
-        au < doNotProcess ; 1935 ; Medico-Legal Journal Volume 3 ; 3 ; mlja >
-        au < doNotProcess ; 1936 ; Medico-Legal Journal Volume 4 ; 4 ; mlja >
-        au < doNotProcess ; 1937 ; Medico-Legal Journal Volume 5 ; 5 ; mlja >
-        au < doNotProcess ; 1938 ; Medico-Legal Journal Volume 6 ; 6 ; mlja >
-        au < doNotProcess ; 1939 ; Medico-Legal Journal Volume 7 ; 7 ; mlja >
-        au < doNotProcess ; 1940 ; Medico-Legal Journal Volume 8 ; 8 ; mlja >
-        au < doNotProcess ; 1941 ; Medico-Legal Journal Volume 9 ; 9 ; mlja >
-        au < doNotProcess ; 1942 ; Medico-Legal Journal Volume 10 ; 10 ; mlja >
-        au < doNotProcess ; 1943 ; Medico-Legal Journal Volume 11 ; 11 ; mlja >
-        au < doNotProcess ; 1944 ; Medico-Legal Journal Volume 12 ; 12 ; mlja >
-        au < doNotProcess ; 1945 ; Medico-Legal Journal Volume 13 ; 13 ; mlja >
-        au < doNotProcess ; 1946 ; Medico-Legal Journal Volume 14 ; 14 ; mlja >
-        au < doNotProcess ; 1947 ; Medico-Legal Journal Volume 15 ; 15 ; mlja >
-        au < doNotProcess ; 1948 ; Medico-Legal Journal Volume 16 ; 16 ; mlja >
-        au < doNotProcess ; 1949 ; Medico-Legal Journal Volume 17 ; 17 ; mlja >
-        au < doNotProcess ; 1950 ; Medico-Legal Journal Volume 18 ; 18 ; mlja >
-        au < doNotProcess ; 1951 ; Medico-Legal Journal Volume 19 ; 19 ; mlja >
-        au < doNotProcess ; 1952 ; Medico-Legal Journal Volume 20 ; 20 ; mlja >
-        au < doNotProcess ; 1953 ; Medico-Legal Journal Volume 21 ; 21 ; mlja >
-        au < doNotProcess ; 1954 ; Medico-Legal Journal Volume 22 ; 22 ; mlja >
-        au < doNotProcess ; 1955 ; Medico-Legal Journal Volume 23 ; 23 ; mlja >
-        au < doNotProcess ; 1956 ; Medico-Legal Journal Volume 24 ; 24 ; mlja >
-        au < doNotProcess ; 1957 ; Medico-Legal Journal Volume 25 ; 25 ; mlja >
-        au < doNotProcess ; 1958 ; Medico-Legal Journal Volume 26 ; 26 ; mlja >
-        au < doNotProcess ; 1959 ; Medico-Legal Journal Volume 27 ; 27 ; mlja >
-        au < doNotProcess ; 1960 ; Medico-Legal Journal Volume 28 ; 28 ; mlja >
-        au < doNotProcess ; 1961 ; Medico-Legal Journal Volume 29 ; 29 ; mlja >
-        au < doNotProcess ; 1962 ; Medico-Legal Journal Volume 30 ; 30 ; mlja >
-        au < doNotProcess ; 1963 ; Medico-Legal Journal Volume 31 ; 31 ; mlja >
-        au < doNotProcess ; 1964 ; Medico-Legal Journal Volume 32 ; 32 ; mlja >
-        au < doNotProcess ; 1965 ; Medico-Legal Journal Volume 33 ; 33 ; mlja >
-        au < doNotProcess ; 1966 ; Medico-Legal Journal Volume 34 ; 34 ; mlja >
-        au < doNotProcess ; 1967 ; Medico-Legal Journal Volume 35 ; 35 ; mlja >
-        au < doNotProcess ; 1968 ; Medico-Legal Journal Volume 36 ; 36 ; mlja >
-        au < doNotProcess ; 1969 ; Medico-Legal Journal Volume 37 ; 37 ; mlja >
-        au < doNotProcess ; 1970 ; Medico-Legal Journal Volume 38 ; 38 ; mlja >
-        au < doNotProcess ; 1971 ; Medico-Legal Journal Volume 39 ; 39 ; mlja >
-        au < doNotProcess ; 1972 ; Medico-Legal Journal Volume 40 ; 40 ; mlja >
-        au < doNotProcess ; 1973 ; Medico-Legal Journal Volume 41 ; 41 ; mlja >
-        au < doNotProcess ; 1974 ; Medico-Legal Journal Volume 42 ; 42 ; mlja >
-        au < doNotProcess ; 1975 ; Medico-Legal Journal Volume 43 ; 43 ; mlja >
-        au < doNotProcess ; 1976 ; Medico-Legal Journal Volume 44 ; 44 ; mlja >
-        au < doNotProcess ; 1977 ; Medico-Legal Journal Volume 45 ; 45 ; mlja >
-        au < doNotProcess ; 1978 ; Medico-Legal Journal Volume 46 ; 46 ; mlja >
-        au < doNotProcess ; 1979 ; Medico-Legal Journal Volume 47 ; 47 ; mlja >
-        au < doNotProcess ; 1980 ; Medico-Legal Journal Volume 48 ; 48 ; mlja >
-        au < doNotProcess ; 1981 ; Medico-Legal Journal Volume 49 ; 49 ; mlja >
-        au < doNotProcess ; 1982 ; Medico-Legal Journal Volume 50 ; 50 ; mlja >
-        au < doNotProcess ; 1983 ; Medico-Legal Journal Volume 51 ; 51 ; mlja >
-        au < doNotProcess ; 1984 ; Medico-Legal Journal Volume 52 ; 52 ; mlja >
-        au < doNotProcess ; 1985 ; Medico-Legal Journal Volume 53 ; 53 ; mlja >
-        au < doNotProcess ; 1986 ; Medico-Legal Journal Volume 54 ; 54 ; mlja >
-        au < doNotProcess ; 1987 ; Medico-Legal Journal Volume 55 ; 55 ; mlja >
-        au < doNotProcess ; 1988 ; Medico-Legal Journal Volume 56 ; 56 ; mlja >
-        au < doNotProcess ; 1989 ; Medico-Legal Journal Volume 57 ; 57 ; mlja >
-        au < doNotProcess ; 1990 ; Medico-Legal Journal Volume 58 ; 58 ; mlja >
-        au < doNotProcess ; 1991 ; Medico-Legal Journal Volume 59 ; 59 ; mlja >
-        au < doNotProcess ; 1992 ; Medico-Legal Journal Volume 60 ; 60 ; mlja >
-        au < doNotProcess ; 1993 ; Medico-Legal Journal Volume 61 ; 61 ; mlja >
-        au < doNotProcess ; 1994 ; Medico-Legal Journal Volume 62 ; 62 ; mlja >
-        au < doNotProcess ; 1995 ; Medico-Legal Journal Volume 63 ; 63 ; mlja >
-        au < doNotProcess ; 1996 ; Medico-Legal Journal Volume 64 ; 64 ; mlja >
-        au < doNotProcess ; 1997 ; Medico-Legal Journal Volume 65 ; 65 ; mlja >
-        au < doNotProcess ; 1998 ; Medico-Legal Journal Volume 66 ; 66 ; mlja >
-        au < doNotProcess ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; mlja >
+        au < doNotProcess ; 1903 ; Medico-Legal Journal Volume MLST-1 ; 1 ; mlja >
+        au < doNotProcess ; 1904 ; Medico-Legal Journal Volume MLST-2 ; 2 ; mlja >
+        au < doNotProcess ; 1905 ; Medico-Legal Journal Volume MLST-3 ; 3 ; mlja >
+        au < doNotProcess ; 1906 ; Medico-Legal Journal Volume MLST-4 ; 4 ; mlja >
+        au < doNotProcess ; 1907 ; Medico-Legal Journal Volume MLST-5 ; 5 ; mlja >
+        au < doNotProcess ; 1908 ; Medico-Legal Journal Volume MLST-6 ; 6 ; mlja >
+        au < doNotProcess ; 1909-1910 ; Medico-Legal Journal Volume MLST-7 ; 7 ; mlja >
+        au < doNotProcess ; 1910-1911 ; Medico-Legal Journal Volume MLST-8 ; 8 ; mlja >
+        au < doNotProcess ; 1911-1912 ; Medico-Legal Journal Volume MLST-9 ; 9 ; mlja >
+        au < doNotProcess ; 1912-1913 ; Medico-Legal Journal Volume MLST-10 ; 10 ; mlja >
+        au < doNotProcess ; 1913-1914 ; Medico-Legal Journal Volume MLST-11 ; 11 ; mlja >
+        au < doNotProcess ; 1914 ; Medico-Legal Journal Volume MLST-12 ; 12 ; mlja >
+        au < doNotProcess ; 1915-1918 ; Medico-Legal Journal Volume MLST-13 ; 13 ; mlja >
+        au < doNotProcess ; 1919-1920 ; Medico-Legal Journal Volume MLST-14 ; 14 ; mlja >
+        au < doNotProcess ; 1920-1921 ; Medico-Legal Journal Volume MLST-15 ; 15 ; mlja >
+        au < doNotProcess ; 1921-1922 ; Medico-Legal Journal Volume MLST-16 ; 16 ; mlja >
+        au < doNotProcess ; 1922-1923 ; Medico-Legal Journal Volume MLST-17 ; 17 ; mlja >
+        au < doNotProcess ; 1923-1924 ; Medico-Legal Journal Volume MLST-18 ; 18 ; mlja >
+        au < doNotProcess ; 1924-1925 ; Medico-Legal Journal Volume MLST-19 ; 19 ; mlja >
+        au < doNotProcess ; 1925-1926 ; Medico-Legal Journal Volume MLST-20 ; 20 ; mlja >
+        au < doNotProcess ; 1926 ; Medico-Legal Journal Volume MLST-21 ; 21 ; mlja >
+        au < doNotProcess ; 1927-1928 ; Medico-Legal Journal Volume MLST-22 ; 22 ; mlja >
+        au < doNotProcess ; 1928-1929 ; Medico-Legal Journal Volume MLST-23 ; 23 ; mlja >
+        au < doNotProcess ; 1930-1931 ; Medico-Legal Journal Volume MLST-25 ; 25 ; mlja >
+        au < doNotProcess ; 1931-1932 ; Medico-Legal Journal Volume MLST-26 ; 26 ; mlja >
+        au < doNotProcess ; 1933 ; Medico-Legal Journal Volume 1 ; 1 ; mljb >
+        au < doNotProcess ; 1934 ; Medico-Legal Journal Volume 2 ; 2 ; mljb >
+        au < doNotProcess ; 1935 ; Medico-Legal Journal Volume 3 ; 3 ; mljb >
+        au < doNotProcess ; 1936 ; Medico-Legal Journal Volume 4 ; 4 ; mljb >
+        au < doNotProcess ; 1937 ; Medico-Legal Journal Volume 5 ; 5 ; mljb >
+        au < doNotProcess ; 1938 ; Medico-Legal Journal Volume 6 ; 6 ; mljb >
+        au < doNotProcess ; 1939 ; Medico-Legal Journal Volume 7 ; 7 ; mljb >
+        au < doNotProcess ; 1940 ; Medico-Legal Journal Volume 8 ; 8 ; mljb >
+        au < doNotProcess ; 1941 ; Medico-Legal Journal Volume 9 ; 9 ; mljb >
+        au < doNotProcess ; 1942 ; Medico-Legal Journal Volume 10 ; 10 ; mljb >
+        au < doNotProcess ; 1943 ; Medico-Legal Journal Volume 11 ; 11 ; mljb >
+        au < doNotProcess ; 1944 ; Medico-Legal Journal Volume 12 ; 12 ; mljb >
+        au < doNotProcess ; 1945 ; Medico-Legal Journal Volume 13 ; 13 ; mljb >
+        au < doNotProcess ; 1946 ; Medico-Legal Journal Volume 14 ; 14 ; mljb >
+        au < doNotProcess ; 1947 ; Medico-Legal Journal Volume 15 ; 15 ; mljb >
+        au < doNotProcess ; 1948 ; Medico-Legal Journal Volume 16 ; 16 ; mljb >
+        au < doNotProcess ; 1949 ; Medico-Legal Journal Volume 17 ; 17 ; mljb >
+        au < doNotProcess ; 1950 ; Medico-Legal Journal Volume 18 ; 18 ; mljb >
+        au < doNotProcess ; 1951 ; Medico-Legal Journal Volume 19 ; 19 ; mljb >
+        au < doNotProcess ; 1952 ; Medico-Legal Journal Volume 20 ; 20 ; mljb >
+        au < doNotProcess ; 1953 ; Medico-Legal Journal Volume 21 ; 21 ; mljb >
+        au < doNotProcess ; 1954 ; Medico-Legal Journal Volume 22 ; 22 ; mljb >
+        au < doNotProcess ; 1955 ; Medico-Legal Journal Volume 23 ; 23 ; mljb >
+        au < doNotProcess ; 1956 ; Medico-Legal Journal Volume 24 ; 24 ; mljb >
+        au < doNotProcess ; 1957 ; Medico-Legal Journal Volume 25 ; 25 ; mljb >
+        au < doNotProcess ; 1958 ; Medico-Legal Journal Volume 26 ; 26 ; mljb >
+        au < doNotProcess ; 1959 ; Medico-Legal Journal Volume 27 ; 27 ; mljc >
+        au < doNotProcess ; 1960 ; Medico-Legal Journal Volume 28 ; 28 ; mljc >
+        au < doNotProcess ; 1961 ; Medico-Legal Journal Volume 29 ; 29 ; mljc >
+        au < doNotProcess ; 1962 ; Medico-Legal Journal Volume 30 ; 30 ; mljc >
+        au < doNotProcess ; 1963 ; Medico-Legal Journal Volume 31 ; 31 ; mljc >
+        au < doNotProcess ; 1964 ; Medico-Legal Journal Volume 32 ; 32 ; mljc >
+        au < doNotProcess ; 1965 ; Medico-Legal Journal Volume 33 ; 33 ; mljc >
+        au < doNotProcess ; 1966 ; Medico-Legal Journal Volume 34 ; 34 ; mljc >
+        au < doNotProcess ; 1967 ; Medico-Legal Journal Volume 35 ; 35 ; mljc >
+        au < doNotProcess ; 1968 ; Medico-Legal Journal Volume 36 ; 36 ; mljc >
+        au < doNotProcess ; 1969 ; Medico-Legal Journal Volume 37 ; 37 ; mljc >
+        au < doNotProcess ; 1970 ; Medico-Legal Journal Volume 38 ; 38 ; mljc >
+        au < doNotProcess ; 1971 ; Medico-Legal Journal Volume 39 ; 39 ; mljc >
+        au < doNotProcess ; 1972 ; Medico-Legal Journal Volume 40 ; 40 ; mljc >
+        au < doNotProcess ; 1973 ; Medico-Legal Journal Volume 41 ; 41 ; mljc >
+        au < doNotProcess ; 1974 ; Medico-Legal Journal Volume 42 ; 42 ; mljc >
+        au < doNotProcess ; 1975 ; Medico-Legal Journal Volume 43 ; 43 ; mljc >
+        au < doNotProcess ; 1976 ; Medico-Legal Journal Volume 44 ; 44 ; mljc >
+        au < doNotProcess ; 1977 ; Medico-Legal Journal Volume 45 ; 45 ; mljc >
+        au < doNotProcess ; 1978 ; Medico-Legal Journal Volume 46 ; 46 ; mljc >
+        au < doNotProcess ; 1979 ; Medico-Legal Journal Volume 47 ; 47 ; mljc >
+        au < doNotProcess ; 1980 ; Medico-Legal Journal Volume 48 ; 48 ; mljc >
+        au < doNotProcess ; 1981 ; Medico-Legal Journal Volume 49 ; 49 ; mljc >
+        au < doNotProcess ; 1982 ; Medico-Legal Journal Volume 50 ; 50 ; mljc >
+        au < doNotProcess ; 1983 ; Medico-Legal Journal Volume 51 ; 51 ; mljc >
+        au < doNotProcess ; 1984 ; Medico-Legal Journal Volume 52 ; 52 ; mljc >
+        au < doNotProcess ; 1985 ; Medico-Legal Journal Volume 53 ; 53 ; mljc >
+        au < doNotProcess ; 1986 ; Medico-Legal Journal Volume 54 ; 54 ; mljc >
+        au < doNotProcess ; 1987 ; Medico-Legal Journal Volume 55 ; 55 ; mljc >
+        au < doNotProcess ; 1988 ; Medico-Legal Journal Volume 56 ; 56 ; mljc >
+        au < doNotProcess ; 1989 ; Medico-Legal Journal Volume 57 ; 57 ; mljc >
+        au < doNotProcess ; 1990 ; Medico-Legal Journal Volume 58 ; 58 ; mljc >
+        au < doNotProcess ; 1991 ; Medico-Legal Journal Volume 59 ; 59 ; mljc >
+        au < doNotProcess ; 1992 ; Medico-Legal Journal Volume 60 ; 60 ; mljc >
+        au < doNotProcess ; 1993 ; Medico-Legal Journal Volume 61 ; 61 ; mljc >
+        au < doNotProcess ; 1994 ; Medico-Legal Journal Volume 62 ; 62 ; mljc >
+        au < doNotProcess ; 1995 ; Medico-Legal Journal Volume 63 ; 63 ; mljc >
+        au < doNotProcess ; 1996 ; Medico-Legal Journal Volume 64 ; 64 ; mljc >
+        au < doNotProcess ; 1997 ; Medico-Legal Journal Volume 65 ; 65 ; mljc >
+        au < doNotProcess ; 1998 ; Medico-Legal Journal Volume 66 ; 66 ; mljc >
+        au < doNotProcess ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; mljc >
         au < manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; mljc >
         au < manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; mljc >
         au < manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; mljc >
@@ -29296,17 +29454,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Organization & Environment Volume 15 ; 15 ; oaec >
         au < manifest ; 2003 ; Organization & Environment Volume 16 ; 16 ; oaec >
         au < manifest ; 2004 ; Organization & Environment Volume 17 ; 17 ; oaec >
-        au < doNotProcess ; 2005 ; Organization & Environment Volume 18 ; 18 ; oaea >
-        au < doNotProcess ; 2006 ; Organization & Environment Volume 19 ; 19 ; oaea >
-        au < doNotProcess ; 2007 ; Organization & Environment Volume 20 ; 20 ; oaea >
-        au < doNotProcess ; 2008 ; Organization & Environment Volume 21 ; 21 ; oaea >
-        au < doNotProcess ; 2009 ; Organization & Environment Volume 22 ; 22 ; oaea >
-        au < doNotProcess ; 2010 ; Organization & Environment Volume 23 ; 23 ; oaea >
-        au < doNotProcess ; 2011 ; Organization & Environment Volume 24 ; 24 ; oaea >
-        au < doNotProcess ; 2012 ; Organization & Environment Volume 25 ; 25 ; oaea >
-        au < doNotProcess ; 2013 ; Organization & Environment Volume 26 ; 26 ; oaea >
-        au < doNotProcess ; 2014 ; Organization & Environment Volume 27 ; 27 ; oaea >
-        au < doNotProcess ; 2015 ; Organization & Environment Volume 28 ; 28 ; oaea >
+        au < doNotProcess ; 2005 ; Organization & Environment Volume 18 ; 18 ; oaec >
+        au < doNotProcess ; 2006 ; Organization & Environment Volume 19 ; 19 ; oaec >
+        au < doNotProcess ; 2007 ; Organization & Environment Volume 20 ; 20 ; oaec >
+        au < doNotProcess ; 2008 ; Organization & Environment Volume 21 ; 21 ; oaec >
+        au < doNotProcess ; 2009 ; Organization & Environment Volume 22 ; 22 ; oaec >
+        au < doNotProcess ; 2010 ; Organization & Environment Volume 23 ; 23 ; oaec >
+        au < doNotProcess ; 2011 ; Organization & Environment Volume 24 ; 24 ; oaec >
+        au < doNotProcess ; 2012 ; Organization & Environment Volume 25 ; 25 ; oaec >
+        au < doNotProcess ; 2013 ; Organization & Environment Volume 26 ; 26 ; oaec >
+        au < doNotProcess ; 2014 ; Organization & Environment Volume 27 ; 27 ; oaec >
+        au < doNotProcess ; 2015 ; Organization & Environment Volume 28 ; 28 ; oaec >
         au < manifest ; 2016 ; Organization & Environment Volume 29 ; 29 ; oaec >
 
       }
@@ -29438,50 +29596,50 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://oto.sagepub.com/
 
-        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 ; otoc >
-        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 ; otoc >
-        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 ; otoc >
-        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 115 ; 115 ; otoc >
-        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 ; otoc >
-        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 ; otoc >
-        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 118 ; 118 ; otoc >
-        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 119 ; 119 ; otoc >
-        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 ; otoc >
-        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 121 ; 121 ; otoc >
-        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 122 ; 122 ; otoc >
-        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 123 ; 123 ; otoc >
-        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 ; otoc >
-        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 ; otoc >
-        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 ; otoc >
-        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 ; otoc >
-        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 ; otoc >
-        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 ; otoc >
-        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 ; otoc >
-        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 ; otoc >
-        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 132 ; 132 ; otoc >
-        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 133 ; 133 ; otoc >
-        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 ; otoc >
-        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 ; otoc >
-        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 ; otoc >
-        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 ; otoc >
-        au < doNotProcess ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 ; otoa >
-        au < doNotProcess ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 ; otoa >
-        au < doNotProcess ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 ; otoa >
-        au < doNotProcess ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 ; otoa >
-        au < doNotProcess ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 ; otoa >
-        au < doNotProcess ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 ; otoa >
-        au < doNotProcess ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 ; otoa >
-        au < doNotProcess ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 ; otoa >
-        au < doNotProcess ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 ; otoa >
-        au < doNotProcess ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; otoa >
-        au < doNotProcess ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 ; otoa >
-        au < doNotProcess ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; otoa >
-        au < doNotProcess ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 150 ; 150 ; otoa >
-        au < doNotProcess ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 ; otoa >
-        au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; otoa >
-        au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 ; otoa >
-        au < exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 ; otoc >
-        au < exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 ; otoc >
+        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 ; otoj >
+        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 ; otoj >
+        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 ; otoj >
+        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 115 ; 115 ; otoj >
+        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 ; otoj >
+        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 ; otoj >
+        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 118 ; 118 ; otoj >
+        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 119 ; 119 ; otoj >
+        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 ; otoj >
+        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 121 ; 121 ; otoj >
+        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 122 ; 122 ; otoj >
+        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 123 ; 123 ; otoj >
+        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 ; otoj >
+        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 ; otoj >
+        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 ; otoj >
+        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 ; otoj >
+        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 ; otoj >
+        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 ; otoj >
+        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 ; otoj >
+        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 ; otoj >
+        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 132 ; 132 ; otoj >
+        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 133 ; 133 ; otoj >
+        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 ; otoj >
+        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 ; otoj >
+        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 ; otoj >
+        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 ; otoj >
+        au < doNotProcess ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 ; otoj >
+        au < doNotProcess ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 ; otoj >
+        au < doNotProcess ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 ; otoj >
+        au < doNotProcess ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 ; otoj >
+        au < doNotProcess ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 ; otoj >
+        au < doNotProcess ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 ; otoj >
+        au < doNotProcess ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 ; otoj >
+        au < doNotProcess ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 ; otoj >
+        au < doNotProcess ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 ; otoj >
+        au < doNotProcess ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; otoj >
+        au < doNotProcess ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 ; otoj >
+        au < doNotProcess ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; otoj >
+        au < doNotProcess ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 150 ; 150 ; otoj >
+        au < doNotProcess ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 ; otoj >
+        au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; otoj >
+        au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 ; otoj >
+        au < exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 ; otoj >
+        au < exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 ; otoj >
 
       }
 
@@ -29545,6 +29703,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://par.sagepub.com/
 
+      au < exists ; 1997 ; Paradigm Volume 1 ; 1 ; para >
+      au < exists ; 1998 ; Paradigm Volume 2 ; 2 ; para >
+      au < exists ; 1999 ; Paradigm Volume 3 ; 3 ; para >
+      au < exists ; 2000 ; Paradigm Volume 4 ; 4 ; para >
+      au < exists ; 2001 ; Paradigm Volume 5 ; 5 ; para >
+      au < exists ; 2002 ; Paradigm Volume 6 ; 6 ; para >
+      au < exists ; 2003 ; Paradigm Volume 7 ; 7 ; para >
+      au < exists ; 2004 ; Paradigm Volume 8 ; 8 ; para >
+      au < exists ; 2005 ; Paradigm Volume 9 ; 9 ; para >
+      au < exists ; 2006 ; Paradigm Volume 10 ; 10 ; para >
+      au < exists ; 2007 ; Paradigm Volume 11 ; 11 ; para >
+      au < exists ; 2008 ; Paradigm Volume 12 ; 12 ; para >
+      au < exists ; 2009 ; Paradigm Volume 13 ; 13 ; para >
+      au < exists ; 2010 ; Paradigm Volume 14 ; 14 ; para >
+      au < exists ; 2011 ; Paradigm Volume 15 ; 15 ; para >
+      au < exists ; 2012 ; Paradigm Volume 16 ; 16 ; para >
+      au < exists ; 2013 ; Paradigm Volume 17 ; 17 ; para >
       au < doNotProcess ; 2014 ; Paradigm Volume 18 ; 18 ; para >
       au < doNotProcess ; 2015 ; Paradigm Volume 19 ; 19 ; para >
       au < manifest ; 2016 ; Paradigm Volume 20 ; 20 ; para >
@@ -29695,21 +29870,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://psp.sagepub.com/
 
         au < doNotProcess ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 ; pspa >
-        au < doNotProcess ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 ; pspa >
-        au < doNotProcess ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 ; pspa >
-        au < doNotProcess ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 ; pspa >
-        au < doNotProcess ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 ; pspa >
-        au < doNotProcess ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 ; pspa >
-        au < doNotProcess ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 ; pspa >
-        au < doNotProcess ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 ; pspa >
-        au < doNotProcess ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 ; pspa >
+        au < doNotProcess ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 ; pspc >
+        au < doNotProcess ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 ; pspc >
+        au < doNotProcess ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 ; pspc >
+        au < doNotProcess ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 ; pspc >
+        au < doNotProcess ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 ; pspc >
+        au < doNotProcess ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 ; pspc >
+        au < doNotProcess ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 ; pspc >
+        au < doNotProcess ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 ; pspc >
         au < manifest ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 ; pspc >
         au < manifest ; 1985 ; Personality and Social Psychology Bulletin Volume 11 ; 11 ; pspc >
         au < manifest ; 1986 ; Personality and Social Psychology Bulletin Volume 12 ; 12 ; pspc >
         au < manifest ; 1987 ; Personality and Social Psychology Bulletin Volume 13 ; 13 ; pspc >
         au < manifest ; 1988 ; Personality and Social Psychology Bulletin Volume 14 ; 14 ; pspc >
         au < manifest ; 1989 ; Personality and Social Psychology Bulletin Volume 15 ; 15 ; pspc >
-        au < doNotProcess ; 1990 ; Personality and Social Psychology Bulletin Volume 16 ; 16 ; pspa >
+        au < doNotProcess ; 1990 ; Personality and Social Psychology Bulletin Volume 16 ; 16 ; pspc >
         au < manifest ; 1991 ; Personality and Social Psychology Bulletin Volume 17 ; 17 ; pspc >
         au < manifest ; 1992 ; Personality and Social Psychology Bulletin Volume 18 ; 18 ; pspc >
         au < manifest ; 1993 ; Personality and Social Psychology Bulletin Volume 19 ; 19 ; pspc >
@@ -29724,17 +29899,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Personality and Social Psychology Bulletin Volume 28 ; 28 ; pspc >
         au < manifest ; 2003 ; Personality and Social Psychology Bulletin Volume 29 ; 29 ; pspc >
         au < manifest ; 2004 ; Personality and Social Psychology Bulletin Volume 30 ; 30 ; pspc >
-        au < doNotProcess ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 ; pspa >
-        au < doNotProcess ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 ; pspa >
-        au < doNotProcess ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 ; pspa >
-        au < doNotProcess ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 ; pspa >
-        au < doNotProcess ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ; pspa >
-        au < doNotProcess ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 ; pspa >
-        au < doNotProcess ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 ; pspa >
-        au < doNotProcess ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 ; pspa >
-        au < doNotProcess ; 2013 ; Personality and Social Psychology Bulletin Volume 39 ; 39 ; pspa >
-        au < doNotProcess ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; pspa >
-        au < doNotProcess ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; pspa >
+        au < doNotProcess ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 ; pspc >
+        au < doNotProcess ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 ; pspc >
+        au < doNotProcess ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 ; pspc >
+        au < doNotProcess ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 ; pspc >
+        au < doNotProcess ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ; pspc >
+        au < doNotProcess ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 ; pspc >
+        au < doNotProcess ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 ; pspc >
+        au < doNotProcess ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 ; pspc >
+        au < doNotProcess ; 2013 ; Personality and Social Psychology Bulletin Volume 39 ; 39 ; pspc >
+        au < doNotProcess ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; pspc >
+        au < doNotProcess ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; pspc >
         au < manifest ; 2016 ; Personality and Social Psychology Bulletin Volume 42 ; 42 ; pspc >
 
       }
@@ -30763,14 +30938,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2005 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 49 ; 49 ; proc >
         au < exists ; 2006 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 50 ; 50 ; proc >
         au < exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 ; proc >
-        au < doNotProcess ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; proa >
-        au < doNotProcess ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; proa >
-        au < doNotProcess ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; proa >
-        au < doNotProcess ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; proa >
-        au < doNotProcess ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; proa >
-        au < doNotProcess ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; proa >
-        au < doNotProcess ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 ; proa >
-        au < doNotProcess ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 ; proa >
+        au < doNotProcess ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 ; proc >
+        au < doNotProcess ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; proc >
+        au < doNotProcess ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; proc >
+        au < doNotProcess ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; proc >
+        au < doNotProcess ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; proc >
+        au < doNotProcess ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; proc >
+        au < doNotProcess ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 ; proc >
+        au < doNotProcess ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 ; proc >
         au < exists ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; proc >
 
       }
@@ -30831,14 +31006,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 219 ; 219 ; piac >
         au < manifest ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 220 ; 220 ; piac >
         au < manifest ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 221 ; 221 ; piac >
-        au < doNotProcess ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; piaa >
-        au < doNotProcess ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; piaa >
-        au < doNotProcess ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; piaa >
-        au < doNotProcess ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; piaa >
-        au < doNotProcess ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; piaa >
-        au < doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; piaa >
-        au < doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; piaa >
-        au < doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 229 ; 229 ; piaa >
+        au < doNotProcess ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; piac >
+        au < doNotProcess ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; piac >
+        au < doNotProcess ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; piac >
+        au < doNotProcess ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; piac >
+        au < doNotProcess ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; piac >
+        au < doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; piac >
+        au < doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; piac >
+        au < doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 229 ; 229 ; piac >
         au < manifest ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 230 ; 230 ; piac >
 
       }
@@ -32054,50 +32229,51 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://ppm.sagepub.com/
 
-      au < manifest ; 1973 ; Public Personnel Management Volume 2 ; 2 ; ppma >
-      au < doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 ; ppma >
-      au < exists ; 1975 ; Public Personnel Management Volume 4 ; 4 ; ppmc >
-      au < exists ; 1976 ; Public Personnel Management Volume 5 ; 5 ; ppmc >
-      au < exists ; 1977 ; Public Personnel Management Volume 6 ; 6 ; ppmc >
-      au < exists ; 1978 ; Public Personnel Management Volume 7 ; 7 ; ppmc >
-      au < exists ; 1979 ; Public Personnel Management Volume 8 ; 8 ; ppmc >
-      au < exists ; 1980 ; Public Personnel Management Volume 9 ; 9 ; ppmc >
-      au < exists ; 1981 ; Public Personnel Management Volume 10 ; 10 ; ppmc >
-      au < manifest ; 1982 ; Public Personnel Management Volume 11 ; 11 ; ppma >
-      au < manifest ; 1983 ; Public Personnel Management Volume 12 ; 12 ; ppma >
-      au < manifest ; 1984 ; Public Personnel Management Volume 13 ; 13 ; ppma >
-      au < doNotProcess ; 1985 ; Public Personnel Management Volume 14 ; 14 ; ppma >
-      au < doNotProcess ; 1986 ; Public Personnel Management Volume 15 ; 15 ; ppma >
-      au < doNotProcess ; 1987 ; Public Personnel Management Volume 16 ; 16 ; ppma >
-      au < doNotProcess ; 1988 ; Public Personnel Management Volume 17 ; 17 ; ppma >
-      au < manifest ; 1989 ; Public Personnel Management Volume 18 ; 18 ; ppma >
-      au < doNotProcess ; 1990 ; Public Personnel Management Volume 19 ; 19 ; ppma >
-      au < doNotProcess ; 1991 ; Public Personnel Management Volume 20 ; 20 ; ppma >
-      au < doNotProcess ; 1992 ; Public Personnel Management Volume 21 ; 21 ; ppma >
-      au < manifest ; 1993 ; Public Personnel Management Volume 22 ; 22 ; ppma >
-      au < doNotProcess ; 1994 ; Public Personnel Management Volume 23 ; 23 ; ppma >
-      au < manifest ; 1995 ; Public Personnel Management Volume 24 ; 24 ; ppma >
-      au < manifest ; 1996 ; Public Personnel Management Volume 25 ; 25 ; ppma >
-      au < manifest ; 1997 ; Public Personnel Management Volume 26 ; 26 ; ppma >
-      au < doNotProcess ; 1998 ; Public Personnel Management Volume 27 ; 27 ; ppma >
-      au < doNotProcess ; 1999 ; Public Personnel Management Volume 28 ; 28 ; ppma >
-      au < manifest ; 2000 ; Public Personnel Management Volume 29 ; 29 ; ppma >
-      au < manifest ; 2001 ; Public Personnel Management Volume 30 ; 30 ; ppma >
-      au < manifest ; 2002 ; Public Personnel Management Volume 31 ; 31 ; ppma >
-      au < manifest ; 2003 ; Public Personnel Management Volume 32 ; 32 ; ppma >
-      au < manifest ; 2004 ; Public Personnel Management Volume 33 ; 33 ; ppma >
-      au < manifest ; 2005 ; Public Personnel Management Volume 34 ; 34 ; ppma >
-      au < manifest ; 2006 ; Public Personnel Management Volume 35 ; 35 ; ppma >
-      au < exists ; 2007 ; Public Personnel Management Volume 36 ; 36 ; ppmc >
-      au < doNotProcess ; 2008 ; Public Personnel Management Volume 37 ; 37 ; ppma >
-      au < doNotProcess ; 2009 ; Public Personnel Management Volume 38 ; 38 ; ppma >
-      au < doNotProcess ; 2010 ; Public Personnel Management Volume 39 ; 39 ; ppma >
-      au < doNotProcess ; 2011 ; Public Personnel Management Volume 40 ; 40 ; ppma >
-      au < doNotProcess ; 2012 ; Public Personnel Management Volume 41 ; 41 ; ppma >
-      au < doNotProcess ; 2013 ; Public Personnel Management Volume 42 ; 42 ; ppma >
-      au < doNotProcess ; 2014 ; Public Personnel Management Volume 43 ; 43 ; ppma >
-      au < doNotProcess ; 2015 ; Public Personnel Management Volume 44 ; 44 ; ppma >
-      au < exists ; 2016 ; Public Personnel Management Volume 45 ; 45 ; ppmc >
+      au < exists ; 1972 ; Public Personnel Management Volume 1 ; 1 ; ppmc >
+      au < exists ; 1973 ; Public Personnel Management Volume 2 ; 2 ; ppmd >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 ; ppmd >
+      au < exists ; 1975 ; Public Personnel Management Volume 4 ; 4 ; ppmd >
+      au < exists ; 1976 ; Public Personnel Management Volume 5 ; 5 ; ppmd >
+      au < exists ; 1977 ; Public Personnel Management Volume 6 ; 6 ; ppmd >
+      au < exists ; 1978 ; Public Personnel Management Volume 7 ; 7 ; ppmd >
+      au < exists ; 1979 ; Public Personnel Management Volume 8 ; 8 ; ppmd >
+      au < exists ; 1980 ; Public Personnel Management Volume 9 ; 9 ; ppmd >
+      au < exists ; 1981 ; Public Personnel Management Volume 10 ; 10 ; ppmd >
+      au < exists ; 1982 ; Public Personnel Management Volume 11 ; 11 ; ppmd >
+      au < exists ; 1983 ; Public Personnel Management Volume 12 ; 12 ; ppmd >
+      au < exists ; 1984 ; Public Personnel Management Volume 13 ; 13 ; ppmd >
+      au < doNotProcess ; 1985 ; Public Personnel Management Volume 14 ; 14 ; ppmd >
+      au < doNotProcess ; 1986 ; Public Personnel Management Volume 15 ; 15 ; ppmd >
+      au < doNotProcess ; 1987 ; Public Personnel Management Volume 16 ; 16 ; ppmd >
+      au < doNotProcess ; 1988 ; Public Personnel Management Volume 17 ; 17 ; ppmd >
+      au < exists ; 1989 ; Public Personnel Management Volume 18 ; 18 ; ppmd >
+      au < doNotProcess ; 1990 ; Public Personnel Management Volume 19 ; 19 ; ppmd >
+      au < doNotProcess ; 1991 ; Public Personnel Management Volume 20 ; 20 ; ppmd >
+      au < doNotProcess ; 1992 ; Public Personnel Management Volume 21 ; 21 ; ppmd >
+      au < exists ; 1993 ; Public Personnel Management Volume 22 ; 22 ; ppmd >
+      au < doNotProcess ; 1994 ; Public Personnel Management Volume 23 ; 23 ; ppmd >
+      au < exists ; 1995 ; Public Personnel Management Volume 24 ; 24 ; ppmd >
+      au < exists ; 1996 ; Public Personnel Management Volume 25 ; 25 ; ppmd >
+      au < exists ; 1997 ; Public Personnel Management Volume 26 ; 26 ; ppmd >
+      au < doNotProcess ; 1998 ; Public Personnel Management Volume 27 ; 27 ; ppmd >
+      au < doNotProcess ; 1999 ; Public Personnel Management Volume 28 ; 28 ; ppmd >
+      au < exists ; 2000 ; Public Personnel Management Volume 29 ; 29 ; ppmd >
+      au < exists ; 2001 ; Public Personnel Management Volume 30 ; 30 ; ppmd >
+      au < exists ; 2002 ; Public Personnel Management Volume 31 ; 31 ; ppmd >
+      au < exists ; 2003 ; Public Personnel Management Volume 32 ; 32 ; ppmd >
+      au < exists ; 2004 ; Public Personnel Management Volume 33 ; 33 ; ppmd >
+      au < exists ; 2005 ; Public Personnel Management Volume 34 ; 34 ; ppmd >
+      au < exists ; 2006 ; Public Personnel Management Volume 35 ; 35 ; ppmd >
+      au < exists ; 2007 ; Public Personnel Management Volume 36 ; 36 ; ppmd >
+      au < doNotProcess ; 2008 ; Public Personnel Management Volume 37 ; 37 ; ppmd >
+      au < doNotProcess ; 2009 ; Public Personnel Management Volume 38 ; 38 ; ppmd >
+      au < doNotProcess ; 2010 ; Public Personnel Management Volume 39 ; 39 ; ppmd >
+      au < doNotProcess ; 2011 ; Public Personnel Management Volume 40 ; 40 ; ppmd >
+      au < doNotProcess ; 2012 ; Public Personnel Management Volume 41 ; 41 ; ppmd >
+      au < doNotProcess ; 2013 ; Public Personnel Management Volume 42 ; 42 ; ppmd >
+      au < doNotProcess ; 2014 ; Public Personnel Management Volume 43 ; 43 ; ppmd >
+      au < doNotProcess ; 2015 ; Public Personnel Management Volume 44 ; 44 ; ppmd >
+      au < exists ; 2016 ; Public Personnel Management Volume 45 ; 45 ; ppmd >
 
     }
 
@@ -32264,6 +32440,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://pul.sagepub.com/
 
+        au < exists ; 2011 ; Pulmonary Circulation Volume 1 ; 1 ; pula >
+        au < exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2 ; pula >
+        au < exists ; 2013 ; Pulmonary Circulation Volume 3 ; 3 ; pula >
+        au < exists ; 2014 ; Pulmonary Circulation Volume 4 ; 4 ; pula >
+        au < exists ; 2015 ; Pulmonary Circulation Volume 5 ; 5 ; pula >
         au < manifest ; 2016 ; Pulmonary Circulation Volume 6 ; 6 ; pula >
 
     }
@@ -32762,39 +32943,39 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://rse.sagepub.com/
 
-        au < exists ; 1984 ; Remedial and Special Education Volume 5 ; 5 ; rsec >
-        au < exists ; 1985 ; Remedial and Special Education Volume 6 ; 6 ; rsec >
-        au < exists ; 1986 ; Remedial and Special Education Volume 7 ; 7 ; rsec >
-        au < exists ; 1987 ; Remedial and Special Education Volume 8 ; 8 ; rsec >
-        au < exists ; 1988 ; Remedial and Special Education Volume 9 ; 9 ; rsec >
-        au < exists ; 1989 ; Remedial and Special Education Volume 10 ; 10 ; rsec >
-        au < exists ; 1990 ; Remedial and Special Education Volume 11 ; 11 ; rsec >
-        au < exists ; 1991 ; Remedial and Special Education Volume 12 ; 12 ; rsec >
-        au < exists ; 1992 ; Remedial and Special Education Volume 13 ; 13 ; rsec >
-        au < exists ; 1993 ; Remedial and Special Education Volume 14 ; 14 ; rsec >
+        au < exists ; 1984 ; Remedial and Special Education Volume 5 ; 5 ; rsed >
+        au < exists ; 1985 ; Remedial and Special Education Volume 6 ; 6 ; rsed >
+        au < exists ; 1986 ; Remedial and Special Education Volume 7 ; 7 ; rsed >
+        au < exists ; 1987 ; Remedial and Special Education Volume 8 ; 8 ; rsed >
+        au < exists ; 1988 ; Remedial and Special Education Volume 9 ; 9 ; rsed >
+        au < exists ; 1989 ; Remedial and Special Education Volume 10 ; 10 ; rsed >
+        au < exists ; 1990 ; Remedial and Special Education Volume 11 ; 11 ; rsed >
+        au < exists ; 1991 ; Remedial and Special Education Volume 12 ; 12 ; rsed >
+        au < exists ; 1992 ; Remedial and Special Education Volume 13 ; 13 ; rsed >
+        au < exists ; 1993 ; Remedial and Special Education Volume 14 ; 14 ; rsed >
         au < manifest ; 1994 ; Remedial and Special Education Volume 15 ; 15 ; rsea >
         au < manifest ; 1995 ; Remedial and Special Education Volume 16 ; 16 ; rsea >
         au < manifest ; 1996 ; Remedial and Special Education Volume 17 ; 17 ; rsea >
         au < manifest ; 1997 ; Remedial and Special Education Volume 18 ; 18 ; rsea >
         au < manifest ; 1998 ; Remedial and Special Education Volume 19 ; 19 ; rsea >
         au < manifest ; 1999 ; Remedial and Special Education Volume 20 ; 20 ; rsea >
-        au < exists ; 2000 ; Remedial and Special Education Volume 21 ; 21 ; rsec >
-        au < exists ; 2001 ; Remedial and Special Education Volume 22 ; 22 ; rsec >
-        au < exists ; 2002 ; Remedial and Special Education Volume 23 ; 23 ; rsec >
-        au < exists ; 2003 ; Remedial and Special Education Volume 24 ; 24 ; rsec >
-        au < exists ; 2004 ; Remedial and Special Education Volume 25 ; 25 ; rsec >
-        au < exists ; 2005 ; Remedial and Special Education Volume 26 ; 26 ; rsec >
-        au < exists ; 2006 ; Remedial and Special Education Volume 27 ; 27 ; rsec >
-        au < exists ; 2007 ; Remedial and Special Education Volume 28 ; 28 ; rsec >
-        au < exists ; 2008 ; Remedial and Special Education Volume 29 ; 29 ; rsec >
-        au < exists ; 2009 ; Remedial and Special Education Volume 30 ; 30 ; rsec >
-        au < doNotProcess ; 2010 ; Remedial and Special Education Volume 31 ; 31 ; rsea >
-        au < doNotProcess ; 2011 ; Remedial and Special Education Volume 32 ; 32 ; rsea >
-        au < doNotProcess ; 2012 ; Remedial and Special Education Volume 33 ; 33 ; rsea >
-        au < doNotProcess ; 2013 ; Remedial and Special Education Volume 34 ; 34 ; rsea >
-        au < doNotProcess ; 2014 ; Remedial and Special Education Volume 35 ; 35 ; rsea >
-        au < doNotProcess ; 2015 ; Remedial and Special Education Volume 36 ; 36 ; rsea >
-        au < exists ; 2016 ; Remedial and Special Education Volume 37 ; 37 ; rsec >
+        au < exists ; 2000 ; Remedial and Special Education Volume 21 ; 21 ; rsed >
+        au < exists ; 2001 ; Remedial and Special Education Volume 22 ; 22 ; rsed >
+        au < exists ; 2002 ; Remedial and Special Education Volume 23 ; 23 ; rsed >
+        au < exists ; 2003 ; Remedial and Special Education Volume 24 ; 24 ; rsed >
+        au < exists ; 2004 ; Remedial and Special Education Volume 25 ; 25 ; rsed >
+        au < exists ; 2005 ; Remedial and Special Education Volume 26 ; 26 ; rsed >
+        au < exists ; 2006 ; Remedial and Special Education Volume 27 ; 27 ; rsed >
+        au < exists ; 2007 ; Remedial and Special Education Volume 28 ; 28 ; rsed >
+        au < exists ; 2008 ; Remedial and Special Education Volume 29 ; 29 ; rsed >
+        au < exists ; 2009 ; Remedial and Special Education Volume 30 ; 30 ; rsed >
+        au < doNotProcess ; 2010 ; Remedial and Special Education Volume 31 ; 31 ; rsed >
+        au < doNotProcess ; 2011 ; Remedial and Special Education Volume 32 ; 32 ; rsed >
+        au < doNotProcess ; 2012 ; Remedial and Special Education Volume 33 ; 33 ; rsed >
+        au < doNotProcess ; 2013 ; Remedial and Special Education Volume 34 ; 34 ; rsed >
+        au < doNotProcess ; 2014 ; Remedial and Special Education Volume 35 ; 35 ; rsed >
+        au < doNotProcess ; 2015 ; Remedial and Special Education Volume 36 ; 36 ; rsed >
+        au < exists ; 2016 ; Remedial and Special Education Volume 37 ; 37 ; rsed >
 
       }
 
@@ -32868,17 +33049,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://rea.sagepub.com/
 
-        au < exists ; 2005 ; Research Ethics Volume 1 ; 1 ; reac >
-        au < exists ; 2006 ; Research Ethics Volume 2 ; 2 ; reac >
-        au < exists ; 2007 ; Research Ethics Volume 3 ; 3 ; reac >
-        au < doNotProcess ; 2008 ; Research Ethics Volume 4 ; 4 ; reaa >
-        au < doNotProcess ; 2009 ; Research Ethics Volume 5 ; 5 ; reaa >
-        au < doNotProcess ; 2010 ; Research Ethics Volume 6 ; 6 ; reaa >
-        au < doNotProcess ; 2011 ; Research Ethics Volume 7 ; 7 ; reaa >
-        au < doNotProcess ; 2012 ; Research Ethics Volume 8 ; 8 ; reaa >
-        au < doNotProcess ; 2013 ; Research Ethics Volume 9 ; 9 ; reaa >
-        au < doNotProcess ; 2014 ; Research Ethics Volume 10 ; 10 ; reaa >
-        au < doNotProcess ; 2015 ; Research Ethics Volume 11 ; 11 ; reaa >
+        au < doNotProcess ; 2009 ; Research Ethics Volume 5 ; 5 ; reab >
+        au < doNotProcess ; 2010 ; Research Ethics Volume 6 ; 6 ; reab >
+        au < doNotProcess ; 2011 ; Research Ethics Volume 7 ; 7 ; reab >
+        au < doNotProcess ; 2012 ; Research Ethics Volume 8 ; 8 ; reab >
+        au < doNotProcess ; 2013 ; Research Ethics Volume 9 ; 9 ; reab >
+        au < doNotProcess ; 2014 ; Research Ethics Volume 10 ; 10 ; reab >
+        au < doNotProcess ; 2015 ; Research Ethics Volume 11 ; 11 ; reab >
         au < manifest ; 2016 ; Research Ethics Volume 12 ; 12 ; reab >
 
       }
@@ -32938,6 +33115,23 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2007 ; Research in Education Volume 77 ; 77 ; riea >
       au < manifest ; 2007 ; Research in Education Volume 78 ; 78 ; riea >
       au < manifest ; 2008 ; Research in Education Volume 79 ; 79 ; riea >
+      au < exists ; 2008 ; Research in Education Volume 80 ; 80 ; riea >
+      au < exists ; 2009 ; Research in Education Volume 81 ; 81 ; riea >
+      au < exists ; 2009 ; Research in Education Volume 82 ; 82 ; riea >
+      au < exists ; 2010 ; Research in Education Volume 83 ; 83 ; riea >
+      au < exists ; 2010 ; Research in Education Volume 84 ; 84 ; riea >
+      au < exists ; 2011 ; Research in Education Volume 85 ; 85 ; riea >
+      au < exists ; 2011 ; Research in Education Volume 86 ; 86 ; riea >
+      au < exists ; 2012 ; Research in Education Volume 87 ; 87 ; riea >
+      au < exists ; 2012 ; Research in Education Volume 88 ; 88 ; riea >
+      au < exists ; 2013 ; Research in Education Volume 89 ; 89 ; riea >
+      au < exists ; 2013 ; Research in Education Volume 90 ; 90 ; riea >
+      au < exists ; 2014 ; Research in Education Volume 91 ; 91 ; riea >
+      au < exists ; 2014 ; Research in Education Volume 92 ; 92 ; riea >
+      au < exists ; 2015 ; Research in Education Volume 93 ; 93 ; riea >
+      au < exists ; 2015 ; Research in Education Volume 94 ; 94 ; riea >
+      au < exists ; 2016 ; Research in Education Volume 95 ; 95 ; riea >
+      au < exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea >
 
     }
 
@@ -33132,99 +33326,99 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 1904 ; Review & Expositor Volume 1 ; 1 ; raea >
     au < doNotProcess ; 1905 ; Review & Expositor Volume 2 ; 2 ; raea >
     au < doNotProcess ; 1906 ; Review & Expositor Volume 3 ; 3 ; raea >
-    au < doNotProcess ; 1907 ; Review & Expositor Volume 4 ; 4 ; raea >
-    au < doNotProcess ; 1908 ; Review & Expositor Volume 5 ; 5 ; raea >
-    au < doNotProcess ; 1909 ; Review & Expositor Volume 6 ; 6 ; raea >
-    au < doNotProcess ; 1910 ; Review & Expositor Volume 7 ; 7 ; raea >
-    au < doNotProcess ; 1911 ; Review & Expositor Volume 8 ; 8 ; raea >
-    au < doNotProcess ; 1912 ; Review & Expositor Volume 9 ; 9 ; raea >
-    au < doNotProcess ; 1913 ; Review & Expositor Volume 10 ; 10 ; raea >
-    au < doNotProcess ; 1914 ; Review & Expositor Volume 11 ; 11 ; raea >
-    au < doNotProcess ; 1915 ; Review & Expositor Volume 12 ; 12 ; raea >
-    au < doNotProcess ; 1916 ; Review & Expositor Volume 13 ; 13 ; raea >
-    au < doNotProcess ; 1917 ; Review & Expositor Volume 14 ; 14 ; raea >
-    au < doNotProcess ; 1918 ; Review & Expositor Volume 15 ; 15 ; raea >
-    au < doNotProcess ; 1919 ; Review & Expositor Volume 16 ; 16 ; raea >
-    au < doNotProcess ; 1920 ; Review & Expositor Volume 17 ; 17 ; raea >
-    au < doNotProcess ; 1921 ; Review & Expositor Volume 18 ; 18 ; raea >
-    au < doNotProcess ; 1922 ; Review & Expositor Volume 19 ; 19 ; raea >
-    au < doNotProcess ; 1923 ; Review & Expositor Volume 20 ; 20 ; raea >
-    au < doNotProcess ; 1924 ; Review & Expositor Volume 21 ; 21 ; raea >
-    au < doNotProcess ; 1925 ; Review & Expositor Volume 22 ; 22 ; raea >
-    au < doNotProcess ; 1926 ; Review & Expositor Volume 23 ; 23 ; raea >
-    au < doNotProcess ; 1927 ; Review & Expositor Volume 24 ; 24 ; raea >
-    au < doNotProcess ; 1928 ; Review & Expositor Volume 25 ; 25 ; raea >
-    au < doNotProcess ; 1929 ; Review & Expositor Volume 26 ; 26 ; raea >
-    au < doNotProcess ; 1930 ; Review & Expositor Volume 27 ; 27 ; raea >
-    au < doNotProcess ; 1931 ; Review & Expositor Volume 28 ; 28 ; raea >
-    au < doNotProcess ; 1932 ; Review & Expositor Volume 29 ; 29 ; raea >
-    au < doNotProcess ; 1933 ; Review & Expositor Volume 30 ; 30 ; raea >
-    au < doNotProcess ; 1934 ; Review & Expositor Volume 31 ; 31 ; raea >
-    au < doNotProcess ; 1935 ; Review & Expositor Volume 32 ; 32 ; raea >
-    au < doNotProcess ; 1936 ; Review & Expositor Volume 33 ; 33 ; raea >
-    au < doNotProcess ; 1937 ; Review & Expositor Volume 34 ; 34 ; raea >
-    au < doNotProcess ; 1938 ; Review & Expositor Volume 35 ; 35 ; raea >
-    au < doNotProcess ; 1939 ; Review & Expositor Volume 36 ; 36 ; raea >
-    au < doNotProcess ; 1940 ; Review & Expositor Volume 37 ; 37 ; raea >
-    au < doNotProcess ; 1941 ; Review & Expositor Volume 38 ; 38 ; raea >
-    au < doNotProcess ; 1942 ; Review & Expositor Volume 39 ; 39 ; raea >
-    au < doNotProcess ; 1943 ; Review & Expositor Volume 40 ; 40 ; raea >
-    au < doNotProcess ; 1944 ; Review & Expositor Volume 41 ; 41 ; raea >
-    au < doNotProcess ; 1945 ; Review & Expositor Volume 42 ; 42 ; raea >
-    au < doNotProcess ; 1946 ; Review & Expositor Volume 43 ; 43 ; raea >
-    au < doNotProcess ; 1947 ; Review & Expositor Volume 44 ; 44 ; raea >
-    au < doNotProcess ; 1948 ; Review & Expositor Volume 45 ; 45 ; raea >
-    au < doNotProcess ; 1949 ; Review & Expositor Volume 46 ; 46 ; raea >
-    au < doNotProcess ; 1950 ; Review & Expositor Volume 47 ; 47 ; raea >
-    au < doNotProcess ; 1951 ; Review & Expositor Volume 48 ; 48 ; raea >
-    au < doNotProcess ; 1952 ; Review & Expositor Volume 49 ; 49 ; raea >
-    au < doNotProcess ; 1953 ; Review & Expositor Volume 50 ; 50 ; raea >
-    au < doNotProcess ; 1954 ; Review & Expositor Volume 51 ; 51 ; raea >
-    au < doNotProcess ; 1955 ; Review & Expositor Volume 52 ; 52 ; raea >
-    au < doNotProcess ; 1956 ; Review & Expositor Volume 53 ; 53 ; raea >
-    au < doNotProcess ; 1957 ; Review & Expositor Volume 54 ; 54 ; raea >
-    au < doNotProcess ; 1958 ; Review & Expositor Volume 55 ; 55 ; raea >
-    au < doNotProcess ; 1959 ; Review & Expositor Volume 56 ; 56 ; raea >
-    au < doNotProcess ; 1960 ; Review & Expositor Volume 57 ; 57 ; raea >
-    au < doNotProcess ; 1961 ; Review & Expositor Volume 58 ; 58 ; raea >
-    au < doNotProcess ; 1962 ; Review & Expositor Volume 59 ; 59 ; raea >
-    au < doNotProcess ; 1963 ; Review & Expositor Volume 60 ; 60 ; raea >
-    au < doNotProcess ; 1964 ; Review & Expositor Volume 61 ; 61 ; raea >
-    au < doNotProcess ; 1965 ; Review & Expositor Volume 62 ; 62 ; raea >
-    au < doNotProcess ; 1966 ; Review & Expositor Volume 63 ; 63 ; raea >
-    au < doNotProcess ; 1967 ; Review & Expositor Volume 64 ; 64 ; raea >
-    au < doNotProcess ; 1968 ; Review & Expositor Volume 65 ; 65 ; raea >
-    au < doNotProcess ; 1969 ; Review & Expositor Volume 66 ; 66 ; raea >
-    au < doNotProcess ; 1970 ; Review & Expositor Volume 67 ; 67 ; raea >
-    au < doNotProcess ; 1971 ; Review & Expositor Volume 68 ; 68 ; raea >
-    au < doNotProcess ; 1972 ; Review & Expositor Volume 69 ; 69 ; raea >
-    au < doNotProcess ; 1973 ; Review & Expositor Volume 70 ; 70 ; raea >
-    au < doNotProcess ; 1974 ; Review & Expositor Volume 71 ; 71 ; raea >
-    au < doNotProcess ; 1975 ; Review & Expositor Volume 72 ; 72 ; raea >
-    au < doNotProcess ; 1976 ; Review & Expositor Volume 73 ; 73 ; raea >
-    au < doNotProcess ; 1977 ; Review & Expositor Volume 74 ; 74 ; raea >
-    au < doNotProcess ; 1978 ; Review & Expositor Volume 75 ; 75 ; raea >
-    au < doNotProcess ; 1979 ; Review & Expositor Volume 76 ; 76 ; raea >
-    au < doNotProcess ; 1980 ; Review & Expositor Volume 77 ; 77 ; raea >
-    au < doNotProcess ; 1981 ; Review & Expositor Volume 78 ; 78 ; raea >
-    au < doNotProcess ; 1982 ; Review & Expositor Volume 79 ; 79 ; raea >
-    au < doNotProcess ; 1983 ; Review & Expositor Volume 80 ; 80 ; raea >
-    au < doNotProcess ; 1984 ; Review & Expositor Volume 81 ; 81 ; raea >
-    au < doNotProcess ; 1985 ; Review & Expositor Volume 82 ; 82 ; raea >
-    au < doNotProcess ; 1986 ; Review & Expositor Volume 83 ; 83 ; raea >
-    au < doNotProcess ; 1987 ; Review & Expositor Volume 84 ; 84 ; raea >
-    au < doNotProcess ; 1988 ; Review & Expositor Volume 85 ; 85 ; raea >
-    au < doNotProcess ; 1989 ; Review & Expositor Volume 86 ; 86 ; raea >
-    au < doNotProcess ; 1990 ; Review & Expositor Volume 87 ; 87 ; raea >
-    au < doNotProcess ; 1991 ; Review & Expositor Volume 88 ; 88 ; raea >
-    au < doNotProcess ; 1992 ; Review & Expositor Volume 89 ; 89 ; raea >
-    au < doNotProcess ; 1993 ; Review & Expositor Volume 90 ; 90 ; raea >
-    au < doNotProcess ; 1994 ; Review & Expositor Volume 91 ; 91 ; raea >
-    au < doNotProcess ; 1995 ; Review & Expositor Volume 92 ; 92 ; raea >
-    au < doNotProcess ; 1996 ; Review & Expositor Volume 93 ; 93 ; raea >
-    au < doNotProcess ; 1997 ; Review & Expositor Volume 94 ; 94 ; raea >
-    au < doNotProcess ; 1998 ; Review & Expositor Volume 95 ; 95 ; raea >
-    au < doNotProcess ; 1999 ; Review & Expositor Volume 96 ; 96 ; raea >
+    au < doNotProcess ; 1907 ; Review & Expositor Volume 4 ; 4 ; raeb >
+    au < doNotProcess ; 1908 ; Review & Expositor Volume 5 ; 5 ; raeb >
+    au < doNotProcess ; 1909 ; Review & Expositor Volume 6 ; 6 ; raeb >
+    au < doNotProcess ; 1910 ; Review & Expositor Volume 7 ; 7 ; raeb >
+    au < doNotProcess ; 1911 ; Review & Expositor Volume 8 ; 8 ; raeb >
+    au < doNotProcess ; 1912 ; Review & Expositor Volume 9 ; 9 ; raeb >
+    au < doNotProcess ; 1913 ; Review & Expositor Volume 10 ; 10 ; raeb >
+    au < doNotProcess ; 1914 ; Review & Expositor Volume 11 ; 11 ; raeb >
+    au < doNotProcess ; 1915 ; Review & Expositor Volume 12 ; 12 ; raeb >
+    au < doNotProcess ; 1916 ; Review & Expositor Volume 13 ; 13 ; raeb >
+    au < doNotProcess ; 1917 ; Review & Expositor Volume 14 ; 14 ; raeb >
+    au < doNotProcess ; 1918 ; Review & Expositor Volume 15 ; 15 ; raeb >
+    au < doNotProcess ; 1919 ; Review & Expositor Volume 16 ; 16 ; raeb >
+    au < doNotProcess ; 1920 ; Review & Expositor Volume 17 ; 17 ; raeb >
+    au < doNotProcess ; 1921 ; Review & Expositor Volume 18 ; 18 ; raeb >
+    au < doNotProcess ; 1922 ; Review & Expositor Volume 19 ; 19 ; raeb >
+    au < doNotProcess ; 1923 ; Review & Expositor Volume 20 ; 20 ; raeb >
+    au < doNotProcess ; 1924 ; Review & Expositor Volume 21 ; 21 ; raeb >
+    au < doNotProcess ; 1925 ; Review & Expositor Volume 22 ; 22 ; raeb >
+    au < doNotProcess ; 1926 ; Review & Expositor Volume 23 ; 23 ; raeb >
+    au < doNotProcess ; 1927 ; Review & Expositor Volume 24 ; 24 ; raeb >
+    au < doNotProcess ; 1928 ; Review & Expositor Volume 25 ; 25 ; raeb >
+    au < doNotProcess ; 1929 ; Review & Expositor Volume 26 ; 26 ; raeb >
+    au < doNotProcess ; 1930 ; Review & Expositor Volume 27 ; 27 ; raeb >
+    au < doNotProcess ; 1931 ; Review & Expositor Volume 28 ; 28 ; raeb >
+    au < doNotProcess ; 1932 ; Review & Expositor Volume 29 ; 29 ; raeb >
+    au < doNotProcess ; 1933 ; Review & Expositor Volume 30 ; 30 ; raeb >
+    au < doNotProcess ; 1934 ; Review & Expositor Volume 31 ; 31 ; raeb >
+    au < doNotProcess ; 1935 ; Review & Expositor Volume 32 ; 32 ; raeb >
+    au < doNotProcess ; 1936 ; Review & Expositor Volume 33 ; 33 ; raeb >
+    au < doNotProcess ; 1937 ; Review & Expositor Volume 34 ; 34 ; raeb >
+    au < doNotProcess ; 1938 ; Review & Expositor Volume 35 ; 35 ; raeb >
+    au < doNotProcess ; 1939 ; Review & Expositor Volume 36 ; 36 ; raeb >
+    au < doNotProcess ; 1940 ; Review & Expositor Volume 37 ; 37 ; raeb >
+    au < doNotProcess ; 1941 ; Review & Expositor Volume 38 ; 38 ; raeb >
+    au < doNotProcess ; 1942 ; Review & Expositor Volume 39 ; 39 ; raeb >
+    au < doNotProcess ; 1943 ; Review & Expositor Volume 40 ; 40 ; raeb >
+    au < doNotProcess ; 1944 ; Review & Expositor Volume 41 ; 41 ; raeb >
+    au < doNotProcess ; 1945 ; Review & Expositor Volume 42 ; 42 ; raeb >
+    au < doNotProcess ; 1946 ; Review & Expositor Volume 43 ; 43 ; raeb >
+    au < doNotProcess ; 1947 ; Review & Expositor Volume 44 ; 44 ; raeb >
+    au < doNotProcess ; 1948 ; Review & Expositor Volume 45 ; 45 ; raeb >
+    au < doNotProcess ; 1949 ; Review & Expositor Volume 46 ; 46 ; raeb >
+    au < doNotProcess ; 1950 ; Review & Expositor Volume 47 ; 47 ; raeb >
+    au < doNotProcess ; 1951 ; Review & Expositor Volume 48 ; 48 ; raeb >
+    au < doNotProcess ; 1952 ; Review & Expositor Volume 49 ; 49 ; raeb >
+    au < doNotProcess ; 1953 ; Review & Expositor Volume 50 ; 50 ; raeb >
+    au < doNotProcess ; 1954 ; Review & Expositor Volume 51 ; 51 ; raeb >
+    au < doNotProcess ; 1955 ; Review & Expositor Volume 52 ; 52 ; raeb >
+    au < doNotProcess ; 1956 ; Review & Expositor Volume 53 ; 53 ; raeb >
+    au < doNotProcess ; 1957 ; Review & Expositor Volume 54 ; 54 ; raeb >
+    au < doNotProcess ; 1958 ; Review & Expositor Volume 55 ; 55 ; raeb >
+    au < doNotProcess ; 1959 ; Review & Expositor Volume 56 ; 56 ; raeb >
+    au < doNotProcess ; 1960 ; Review & Expositor Volume 57 ; 57 ; raeb >
+    au < doNotProcess ; 1961 ; Review & Expositor Volume 58 ; 58 ; raeb >
+    au < doNotProcess ; 1962 ; Review & Expositor Volume 59 ; 59 ; raeb >
+    au < doNotProcess ; 1963 ; Review & Expositor Volume 60 ; 60 ; raeb >
+    au < doNotProcess ; 1964 ; Review & Expositor Volume 61 ; 61 ; raeb >
+    au < doNotProcess ; 1965 ; Review & Expositor Volume 62 ; 62 ; raeb >
+    au < doNotProcess ; 1966 ; Review & Expositor Volume 63 ; 63 ; raeb >
+    au < doNotProcess ; 1967 ; Review & Expositor Volume 64 ; 64 ; raeb >
+    au < doNotProcess ; 1968 ; Review & Expositor Volume 65 ; 65 ; raeb >
+    au < doNotProcess ; 1969 ; Review & Expositor Volume 66 ; 66 ; raeb >
+    au < doNotProcess ; 1970 ; Review & Expositor Volume 67 ; 67 ; raeb >
+    au < doNotProcess ; 1971 ; Review & Expositor Volume 68 ; 68 ; raeb >
+    au < doNotProcess ; 1972 ; Review & Expositor Volume 69 ; 69 ; raeb >
+    au < doNotProcess ; 1973 ; Review & Expositor Volume 70 ; 70 ; raeb >
+    au < doNotProcess ; 1974 ; Review & Expositor Volume 71 ; 71 ; raeb >
+    au < doNotProcess ; 1975 ; Review & Expositor Volume 72 ; 72 ; raeb >
+    au < doNotProcess ; 1976 ; Review & Expositor Volume 73 ; 73 ; raeb >
+    au < doNotProcess ; 1977 ; Review & Expositor Volume 74 ; 74 ; raeb >
+    au < doNotProcess ; 1978 ; Review & Expositor Volume 75 ; 75 ; raeb >
+    au < doNotProcess ; 1979 ; Review & Expositor Volume 76 ; 76 ; raeb >
+    au < doNotProcess ; 1980 ; Review & Expositor Volume 77 ; 77 ; raeb >
+    au < doNotProcess ; 1981 ; Review & Expositor Volume 78 ; 78 ; raeb >
+    au < doNotProcess ; 1982 ; Review & Expositor Volume 79 ; 79 ; raeb >
+    au < doNotProcess ; 1983 ; Review & Expositor Volume 80 ; 80 ; raeb >
+    au < doNotProcess ; 1984 ; Review & Expositor Volume 81 ; 81 ; raeb >
+    au < doNotProcess ; 1985 ; Review & Expositor Volume 82 ; 82 ; raeb >
+    au < doNotProcess ; 1986 ; Review & Expositor Volume 83 ; 83 ; raeb >
+    au < doNotProcess ; 1987 ; Review & Expositor Volume 84 ; 84 ; raeb >
+    au < doNotProcess ; 1988 ; Review & Expositor Volume 85 ; 85 ; raeb >
+    au < doNotProcess ; 1989 ; Review & Expositor Volume 86 ; 86 ; raeb >
+    au < doNotProcess ; 1990 ; Review & Expositor Volume 87 ; 87 ; raeb >
+    au < doNotProcess ; 1991 ; Review & Expositor Volume 88 ; 88 ; raeb >
+    au < doNotProcess ; 1992 ; Review & Expositor Volume 89 ; 89 ; raeb >
+    au < doNotProcess ; 1993 ; Review & Expositor Volume 90 ; 90 ; raeb >
+    au < doNotProcess ; 1994 ; Review & Expositor Volume 91 ; 91 ; raeb >
+    au < doNotProcess ; 1995 ; Review & Expositor Volume 92 ; 92 ; raeb >
+    au < doNotProcess ; 1996 ; Review & Expositor Volume 93 ; 93 ; raeb >
+    au < doNotProcess ; 1997 ; Review & Expositor Volume 94 ; 94 ; raeb >
+    au < doNotProcess ; 1998 ; Review & Expositor Volume 95 ; 95 ; raeb >
+    au < doNotProcess ; 1999 ; Review & Expositor Volume 96 ; 96 ; raeb >
     au < manifest ; 2000 ; Review & Expositor Volume 97 ; 97 ; raeb >
     au < manifest ; 2001 ; Review & Expositor Volume 98 ; 98 ; raeb >
     au < manifest ; 2002 ; Review & Expositor Volume 99 ; 99 ; raeb >
@@ -33912,7 +34106,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Science, Technology & Human Values Volume 27 ; 27 ; sthc >
         au < exists ; 2003 ; Science, Technology & Human Values Volume 28 ; 28 ; sthc >
         au < exists ; 2004 ; Science, Technology & Human Values Volume 29 ; 29 ; sthc >
-        au < doNotProcess ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 ; stha >
+        au < doNotProcess ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 ; sthc >
         au < exists ; 2006 ; Science, Technology & Human Values Volume 31 ; 31 ; sthc >
         au < exists ; 2007 ; Science, Technology & Human Values Volume 32 ; 32 ; sthc >
         au < doNotProcess ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; stha >
@@ -34412,33 +34606,33 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1987 ; Small Group Research Volume 18 ; 18 ; sgrb >
         au < manifest ; 1988 ; Small Group Research Volume 19 ; 19 ; sgrb >
         au < manifest ; 1989 ; Small Group Research Volume 20 ; 20 ; sgrb >
-        au < exists ; 1990 ; Small Group Research Volume 21 ; 21 ; sgrc >
-        au < exists ; 1991 ; Small Group Research Volume 22 ; 22 ; sgrc >
-        au < exists ; 1992 ; Small Group Research Volume 23 ; 23 ; sgrc >
-        au < exists ; 1993 ; Small Group Research Volume 24 ; 24 ; sgrc >
-        au < exists ; 1994 ; Small Group Research Volume 25 ; 25 ; sgrc >
-        au < exists ; 1995 ; Small Group Research Volume 26 ; 26 ; sgrc >
-        au < exists ; 1996 ; Small Group Research Volume 27 ; 27 ; sgrc >
-        au < exists ; 1997 ; Small Group Research Volume 28 ; 28 ; sgrc >
-        au < exists ; 1998 ; Small Group Research Volume 29 ; 29 ; sgrc >
-        au < exists ; 1999 ; Small Group Research Volume 30 ; 30 ; sgrc >
-        au < exists ; 2000 ; Small Group Research Volume 31 ; 31 ; sgrc >
-        au < exists ; 2001 ; Small Group Research Volume 32 ; 32 ; sgrc >
-        au < exists ; 2002 ; Small Group Research Volume 33 ; 33 ; sgrc >
-        au < exists ; 2003 ; Small Group Research Volume 34 ; 34 ; sgrc >
-        au < exists ; 2004 ; Small Group Research Volume 35 ; 35 ; sgrc >
-        au < exists ; 2005 ; Small Group Research Volume 36 ; 36 ; sgrc >
-        au < doNotProcess ; 2006 ; Small Group Research Volume 37 ; 37 ; sgra >
-        au < doNotProcess ; 2007 ; Small Group Research Volume 38 ; 38 ; sgra >
-        au < doNotProcess ; 2008 ; Small Group Research Volume 39 ; 39 ; sgra >
-        au < exists ; 2009 ; Small Group Research Volume 40 ; 40 ; sgrc >
-        au < doNotProcess ; 2010 ; Small Group Research Volume 41 ; 41 ; sgra >
-        au < doNotProcess ; 2011 ; Small Group Research Volume 42 ; 42 ; sgra >
-        au < doNotProcess ; 2012 ; Small Group Research Volume 43 ; 43 ; sgra >
-        au < doNotProcess ; 2013 ; Small Group Research Volume 44 ; 44 ; sgra >
-        au < doNotProcess ; 2014 ; Small Group Research Volume 45 ; 45 ; sgra >
-        au < doNotProcess ; 2015 ; Small Group Research Volume 46 ; 46 ; sgra >
-        au < exists ; 2016 ; Small Group Research Volume 47 ; 47 ; sgrc >
+        au < exists ; 1990 ; Small Group Research Volume 21 ; 21 ; sgrd >
+        au < exists ; 1991 ; Small Group Research Volume 22 ; 22 ; sgrd >
+        au < exists ; 1992 ; Small Group Research Volume 23 ; 23 ; sgrd >
+        au < exists ; 1993 ; Small Group Research Volume 24 ; 24 ; sgrd >
+        au < exists ; 1994 ; Small Group Research Volume 25 ; 25 ; sgrd >
+        au < exists ; 1995 ; Small Group Research Volume 26 ; 26 ; sgrd >
+        au < exists ; 1996 ; Small Group Research Volume 27 ; 27 ; sgrd >
+        au < exists ; 1997 ; Small Group Research Volume 28 ; 28 ; sgrd >
+        au < exists ; 1998 ; Small Group Research Volume 29 ; 29 ; sgrd >
+        au < exists ; 1999 ; Small Group Research Volume 30 ; 30 ; sgrd >
+        au < exists ; 2000 ; Small Group Research Volume 31 ; 31 ; sgrd >
+        au < exists ; 2001 ; Small Group Research Volume 32 ; 32 ; sgrd >
+        au < exists ; 2002 ; Small Group Research Volume 33 ; 33 ; sgrd >
+        au < exists ; 2003 ; Small Group Research Volume 34 ; 34 ; sgrd >
+        au < exists ; 2004 ; Small Group Research Volume 35 ; 35 ; sgrd >
+        au < exists ; 2005 ; Small Group Research Volume 36 ; 36 ; sgrd >
+        au < doNotProcess ; 2006 ; Small Group Research Volume 37 ; 37 ; sgrd >
+        au < doNotProcess ; 2007 ; Small Group Research Volume 38 ; 38 ; sgrd >
+        au < doNotProcess ; 2008 ; Small Group Research Volume 39 ; 39 ; sgrd >
+        au < exists ; 2009 ; Small Group Research Volume 40 ; 40 ; sgrd >
+        au < doNotProcess ; 2010 ; Small Group Research Volume 41 ; 41 ; sgrd >
+        au < doNotProcess ; 2011 ; Small Group Research Volume 42 ; 42 ; sgrd >
+        au < doNotProcess ; 2012 ; Small Group Research Volume 43 ; 43 ; sgrd >
+        au < doNotProcess ; 2013 ; Small Group Research Volume 44 ; 44 ; sgrd >
+        au < doNotProcess ; 2014 ; Small Group Research Volume 45 ; 45 ; sgrd >
+        au < doNotProcess ; 2015 ; Small Group Research Volume 46 ; 46 ; sgrd >
+        au < exists ; 2016 ; Small Group Research Volume 47 ; 47 ; sgrd >
 
       }
 
@@ -34634,18 +34828,18 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://spq.sagepub.com/
 
-        au < doNotProcess ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; spqa >
-        au < doNotProcess ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; spqa >
-        au < doNotProcess ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 ; spqa >
-        au < doNotProcess ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 ; spqa >
-        au < doNotProcess ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 ; spqa >
-        au < doNotProcess ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; spqa >
-        au < doNotProcess ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 ; spqa >
-        au < doNotProcess ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 ; spqa >
-        au < doNotProcess ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 ; spqa >
-        au < doNotProcess ; 2013 ; Social Psychology Quarterly Volume 76 ; 76 ; spqa >
-        au < doNotProcess ; 2014 ; Social Psychology Quarterly Volume 77 ; 77 ; spqa >
-        au < doNotProcess ; 2015 ; Social Psychology Quarterly Volume 78 ; 78 ; spqa >
+        au < doNotProcess ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; spqc >
+        au < doNotProcess ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; spqc >
+        au < doNotProcess ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 ; spqc >
+        au < doNotProcess ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 ; spqc >
+        au < doNotProcess ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 ; spqc >
+        au < doNotProcess ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; spqc >
+        au < doNotProcess ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 ; spqc >
+        au < doNotProcess ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 ; spqc >
+        au < doNotProcess ; 2012 ; Social Psychology Quarterly Volume 75 ; 75 ; spqc >
+        au < doNotProcess ; 2013 ; Social Psychology Quarterly Volume 76 ; 76 ; spqc >
+        au < doNotProcess ; 2014 ; Social Psychology Quarterly Volume 77 ; 77 ; spqc >
+        au < doNotProcess ; 2015 ; Social Psychology Quarterly Volume 78 ; 78 ; spqc >
         au < manifest ; 2016 ; Social Psychology Quarterly Volume 79 ; 79 ; spqc >
 
       }
@@ -34688,16 +34882,16 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2003 ; Social Science Computer Review Volume 21 ; 21 ; sscc >
         au < exists ; 2004 ; Social Science Computer Review Volume 22 ; 22 ; sscc >
         au < exists ; 2005 ; Social Science Computer Review Volume 23 ; 23 ; sscc >
-        au < doNotProcess ; 2006 ; Social Science Computer Review Volume 24 ; 24 ; ssca >
+        au < doNotProcess ; 2006 ; Social Science Computer Review Volume 24 ; 24 ; sscc >
         au < exists ; 2007 ; Social Science Computer Review Volume 25 ; 25 ; sscc >
-        au < doNotProcess ; 2008 ; Social Science Computer Review Volume 26 ; 26 ; ssca >
+        au < doNotProcess ; 2008 ; Social Science Computer Review Volume 26 ; 26 ; sscc >
         au < exists ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; sscc >
-        au < doNotProcess ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; ssca >
-        au < doNotProcess ; 2011 ; Social Science Computer Review Volume 29 ; 29 ; ssca >
-        au < doNotProcess ; 2012 ; Social Science Computer Review Volume 30 ; 30 ; ssca >
-        au < doNotProcess ; 2013 ; Social Science Computer Review Volume 31 ; 31 ; ssca >
-        au < doNotProcess ; 2014 ; Social Science Computer Review Volume 32 ; 32 ; ssca >
-        au < doNotProcess ; 2015 ; Social Science Computer Review Volume 33 ; 33 ; ssca >
+        au < doNotProcess ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; sscc >
+        au < doNotProcess ; 2011 ; Social Science Computer Review Volume 29 ; 29 ; sscc >
+        au < doNotProcess ; 2012 ; Social Science Computer Review Volume 30 ; 30 ; sscc >
+        au < doNotProcess ; 2013 ; Social Science Computer Review Volume 31 ; 31 ; sscc >
+        au < doNotProcess ; 2014 ; Social Science Computer Review Volume 32 ; 32 ; sscc >
+        au < doNotProcess ; 2015 ; Social Science Computer Review Volume 33 ; 33 ; sscc >
         au < exists ; 2016 ; Social Science Computer Review Volume 34 ; 34 ; sscc >
 
       }
@@ -34760,17 +34954,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Social Science Information Volume 41 ; 41 ; ssic >
         au < manifest ; 2003 ; Social Science Information Volume 42 ; 42 ; ssic >
         au < manifest ; 2004 ; Social Science Information Volume 43 ; 43 ; ssic >
-        au < doNotProcess ; 2005 ; Social Science Information Volume 44 ; 44 ; ssia >
-        au < doNotProcess ; 2006 ; Social Science Information Volume 45 ; 45 ; ssia >
-        au < doNotProcess ; 2007 ; Social Science Information Volume 46 ; 46 ; ssia >
-        au < doNotProcess ; 2008 ; Social Science Information Volume 47 ; 47 ; ssia >
+        au < doNotProcess ; 2005 ; Social Science Information Volume 44 ; 44 ; ssic >
+        au < doNotProcess ; 2006 ; Social Science Information Volume 45 ; 45 ; ssic >
+        au < doNotProcess ; 2007 ; Social Science Information Volume 46 ; 46 ; ssic >
+        au < doNotProcess ; 2008 ; Social Science Information Volume 47 ; 47 ; ssic >
         au < manifest ; 2009 ; Social Science Information Volume 48 ; 48 ; ssic >
-        au < doNotProcess ; 2010 ; Social Science Information Volume 49 ; 49 ; ssia >
-        au < doNotProcess ; 2011 ; Social Science Information Volume 50 ; 50 ; ssia >
-        au < doNotProcess ; 2012 ; Social Science Information Volume 51 ; 51 ; ssia >
-        au < doNotProcess ; 2013 ; Social Science Information Volume 52 ; 52 ; ssia >
-        au < doNotProcess ; 2014 ; Social Science Information Volume 53 ; 53 ; ssia >
-        au < doNotProcess ; 2015 ; Social Science Information Volume 54 ; 54 ; ssia >
+        au < doNotProcess ; 2010 ; Social Science Information Volume 49 ; 49 ; ssic >
+        au < doNotProcess ; 2011 ; Social Science Information Volume 50 ; 50 ; ssic >
+        au < doNotProcess ; 2012 ; Social Science Information Volume 51 ; 51 ; ssic >
+        au < doNotProcess ; 2013 ; Social Science Information Volume 52 ; 52 ; ssic >
+        au < doNotProcess ; 2014 ; Social Science Information Volume 53 ; 53 ; ssic >
+        au < doNotProcess ; 2015 ; Social Science Information Volume 54 ; 54 ; ssic >
         au < manifest ; 2016 ; Social Science Information Volume 55 ; 55 ; ssic >
 
       }
@@ -35104,14 +35298,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2005 ; South African Journal of Psychology Volume 35 ; 35 ; sapc >
       au < manifest ; 2006 ; South African Journal of Psychology Volume 36 ; 36 ; sapc >
       au < manifest ; 2007 ; South African Journal of Psychology Volume 37 ; 37 ; sapc >
-      au < doNotProcess ; 2008 ; South African Journal of Psychology Volume 38 ; 38 ; sapa >
-      au < doNotProcess ; 2009 ; South African Journal of Psychology Volume 39 ; 39 ; sapa >
-      au < doNotProcess ; 2010 ; South African Journal of Psychology Volume 40 ; 40 ; sapa >
-      au < doNotProcess ; 2011 ; South African Journal of Psychology Volume 41 ; 41 ; sapa >
-      au < doNotProcess ; 2012 ; South African Journal of Psychology Volume 42 ; 42 ; sapa >
-      au < doNotProcess ; 2013 ; South African Journal of Psychology Volume 43 ; 43 ; sapa >
-      au < doNotProcess ; 2014 ; South African Journal of Psychology Volume 44 ; 44 ; sapa >
-      au < doNotProcess ; 2015 ; South African Journal of Psychology Volume 45 ; 45 ; sapa >
+      au < doNotProcess ; 2008 ; South African Journal of Psychology Volume 38 ; 38 ; sapc >
+      au < doNotProcess ; 2009 ; South African Journal of Psychology Volume 39 ; 39 ; sapc >
+      au < doNotProcess ; 2010 ; South African Journal of Psychology Volume 40 ; 40 ; sapc >
+      au < doNotProcess ; 2011 ; South African Journal of Psychology Volume 41 ; 41 ; sapc >
+      au < doNotProcess ; 2012 ; South African Journal of Psychology Volume 42 ; 42 ; sapc >
+      au < doNotProcess ; 2013 ; South African Journal of Psychology Volume 43 ; 43 ; sapc >
+      au < doNotProcess ; 2014 ; South African Journal of Psychology Volume 44 ; 44 ; sapc >
+      au < doNotProcess ; 2015 ; South African Journal of Psychology Volume 45 ; 45 ; sapc >
       au < manifest ; 2016 ; South African Journal of Psychology Volume 46 ; 46 ; sapc >
 
     }
@@ -35790,10 +35984,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Surgical Innovation Volume 9 ; 9 ; sria >
         au < manifest ; 2003 ; Surgical Innovation Volume 10 ; 10 ; sria >
         au < manifest ; 2004 ; Surgical Innovation Volume 11 ; 11 ; sria >
-        au < doNotProcess ; 2005 ; Surgical Innovation Volume 12 ; 12 ; sria >
-        au < doNotProcess ; 2006 ; Surgical Innovation Volume 13 ; 13 ; sria >
-        au < doNotProcess ; 2007 ; Surgical Innovation Volume 14 ; 14 ; sria >
-        au < doNotProcess ; 2008 ; Surgical Innovation Volume 15 ; 15 ; sria >
+        au < doNotProcess ; 2005 ; Surgical Innovation Volume 12 ; 12 ; srib >
+        au < doNotProcess ; 2006 ; Surgical Innovation Volume 13 ; 13 ; srib >
+        au < doNotProcess ; 2007 ; Surgical Innovation Volume 14 ; 14 ; srib >
+        au < doNotProcess ; 2008 ; Surgical Innovation Volume 15 ; 15 ; srib >
         au < manifest ; 2009 ; Surgical Innovation Volume 16 ; 16 ; srib >
         au < doNotProcess ; 2010 ; Surgical Innovation Volume 17 ; 17 ; srib >
         au < doNotProcess ; 2011 ; Surgical Innovation Volume 18 ; 18 ; srib >
@@ -39461,56 +39655,56 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
 
         au < doNotProcess ; 1948-1949 ; Political Science Volume 1 ; 1 ; pnza >
-        au < doNotProcess ; 1950 ; Political Science Volume 2 ; 2 ; pnza >
-        au < doNotProcess ; 1951 ; Political Science Volume 3 ; 3 ; pnza >
-        au < doNotProcess ; 1952 ; Political Science Volume 4 ; 4 ; pnza >
-        au < doNotProcess ; 1953 ; Political Science Volume 5 ; 5 ; pnza >
-        au < doNotProcess ; 1954 ; Political Science Volume 6 ; 6 ; pnza >
-        au < doNotProcess ; 1955 ; Political Science Volume 7 ; 7 ; pnza >
-        au < doNotProcess ; 1956 ; Political Science Volume 8 ; 8 ; pnza >
-        au < doNotProcess ; 1957 ; Political Science Volume 9 ; 9 ; pnza >
-        au < doNotProcess ; 1958 ; Political Science Volume 10 ; 10 ; pnza >
-        au < doNotProcess ; 1959 ; Political Science Volume 11 ; 11 ; pnza >
-        au < doNotProcess ; 1960 ; Political Science Volume 12 ; 12 ; pnza >
-        au < doNotProcess ; 1961 ; Political Science Volume 13 ; 13 ; pnza >
-        au < doNotProcess ; 1962 ; Political Science Volume 14 ; 14 ; pnza >
-        au < doNotProcess ; 1963 ; Political Science Volume 15 ; 15 ; pnza >
-        au < doNotProcess ; 1964 ; Political Science Volume 16 ; 16 ; pnza >
-        au < doNotProcess ; 1965 ; Political Science Volume 17 ; 17 ; pnza >
-        au < doNotProcess ; 1966 ; Political Science Volume 18 ; 18 ; pnza >
-        au < doNotProcess ; 1967 ; Political Science Volume 19 ; 19 ; pnza >
-        au < doNotProcess ; 1968 ; Political Science Volume 20 ; 20 ; pnza >
-        au < doNotProcess ; 1969 ; Political Science Volume 21 ; 21 ; pnza >
-        au < doNotProcess ; 1970 ; Political Science Volume 22 ; 22 ; pnza >
-        au < doNotProcess ; 1971 ; Political Science Volume 23 ; 23 ; pnza >
-        au < doNotProcess ; 1972 ; Political Science Volume 24 ; 24 ; pnza >
-        au < doNotProcess ; 1973 ; Political Science Volume 25 ; 25 ; pnza >
-        au < doNotProcess ; 1974 ; Political Science Volume 26 ; 26 ; pnza >
-        au < doNotProcess ; 1975 ; Political Science Volume 27 ; 27 ; pnza >
-        au < doNotProcess ; 1976 ; Political Science Volume 28 ; 28 ; pnza >
-        au < doNotProcess ; 1977 ; Political Science Volume 29 ; 29 ; pnza >
-        au < doNotProcess ; 1978 ; Political Science Volume 30 ; 30 ; pnza >
-        au < doNotProcess ; 1979 ; Political Science Volume 31 ; 31 ; pnza >
-        au < doNotProcess ; 1980 ; Political Science Volume 32 ; 32 ; pnza >
-        au < doNotProcess ; 1981 ; Political Science Volume 33 ; 33 ; pnza >
-        au < doNotProcess ; 1982 ; Political Science Volume 34 ; 34 ; pnza >
-        au < doNotProcess ; 1983 ; Political Science Volume 35 ; 35 ; pnza >
-        au < doNotProcess ; 1984 ; Political Science Volume 36 ; 36 ; pnza >
-        au < doNotProcess ; 1985 ; Political Science Volume 37 ; 37 ; pnza >
-        au < doNotProcess ; 1986 ; Political Science Volume 38 ; 38 ; pnza >
-        au < doNotProcess ; 1987 ; Political Science Volume 39 ; 39 ; pnza >
-        au < doNotProcess ; 1988 ; Political Science Volume 40 ; 40 ; pnza >
-        au < doNotProcess ; 1989 ; Political Science Volume 41 ; 41 ; pnza >
-        au < doNotProcess ; 1990 ; Political Science Volume 42 ; 42 ; pnza >
-        au < doNotProcess ; 1991 ; Political Science Volume 43 ; 43 ; pnza >
-        au < doNotProcess ; 1992 ; Political Science Volume 44 ; 44 ; pnza >
-        au < doNotProcess ; 1993 ; Political Science Volume 45 ; 45 ; pnza >
-        au < doNotProcess ; 1994 ; Political Science Volume 46 ; 46 ; pnza >
-        au < doNotProcess ; 1995 ; Political Science Volume 47 ; 47 ; pnza >
-        au < doNotProcess ; 1996 ; Political Science Volume 48 ; 48 ; pnza >
-        au < doNotProcess ; 1997 ; Political Science Volume 49 ; 49 ; pnza >
-        au < doNotProcess ; 1998 ; Political Science Volume 50 ; 50 ; pnza >
-        au < doNotProcess ; 1999 ; Political Science Volume 51 ; 51 ; pnza >
+        au < doNotProcess ; 1950 ; Political Science Volume 2 ; 2 ; pnzb >
+        au < doNotProcess ; 1951 ; Political Science Volume 3 ; 3 ; pnzb >
+        au < doNotProcess ; 1952 ; Political Science Volume 4 ; 4 ; pnzb >
+        au < doNotProcess ; 1953 ; Political Science Volume 5 ; 5 ; pnzb >
+        au < doNotProcess ; 1954 ; Political Science Volume 6 ; 6 ; pnzb >
+        au < doNotProcess ; 1955 ; Political Science Volume 7 ; 7 ; pnzb >
+        au < doNotProcess ; 1956 ; Political Science Volume 8 ; 8 ; pnzb >
+        au < doNotProcess ; 1957 ; Political Science Volume 9 ; 9 ; pnzb >
+        au < doNotProcess ; 1958 ; Political Science Volume 10 ; 10 ; pnzb >
+        au < doNotProcess ; 1959 ; Political Science Volume 11 ; 11 ; pnzb >
+        au < doNotProcess ; 1960 ; Political Science Volume 12 ; 12 ; pnzb >
+        au < doNotProcess ; 1961 ; Political Science Volume 13 ; 13 ; pnzb >
+        au < doNotProcess ; 1962 ; Political Science Volume 14 ; 14 ; pnzb >
+        au < doNotProcess ; 1963 ; Political Science Volume 15 ; 15 ; pnzb >
+        au < doNotProcess ; 1964 ; Political Science Volume 16 ; 16 ; pnzb >
+        au < doNotProcess ; 1965 ; Political Science Volume 17 ; 17 ; pnzb >
+        au < doNotProcess ; 1966 ; Political Science Volume 18 ; 18 ; pnzb >
+        au < doNotProcess ; 1967 ; Political Science Volume 19 ; 19 ; pnzb >
+        au < doNotProcess ; 1968 ; Political Science Volume 20 ; 20 ; pnzb >
+        au < doNotProcess ; 1969 ; Political Science Volume 21 ; 21 ; pnzb >
+        au < doNotProcess ; 1970 ; Political Science Volume 22 ; 22 ; pnzb >
+        au < doNotProcess ; 1971 ; Political Science Volume 23 ; 23 ; pnzb >
+        au < doNotProcess ; 1972 ; Political Science Volume 24 ; 24 ; pnzb >
+        au < doNotProcess ; 1973 ; Political Science Volume 25 ; 25 ; pnzb >
+        au < doNotProcess ; 1974 ; Political Science Volume 26 ; 26 ; pnzb >
+        au < doNotProcess ; 1975 ; Political Science Volume 27 ; 27 ; pnzb >
+        au < doNotProcess ; 1976 ; Political Science Volume 28 ; 28 ; pnzb >
+        au < doNotProcess ; 1977 ; Political Science Volume 29 ; 29 ; pnzb >
+        au < doNotProcess ; 1978 ; Political Science Volume 30 ; 30 ; pnzb >
+        au < doNotProcess ; 1979 ; Political Science Volume 31 ; 31 ; pnzb >
+        au < doNotProcess ; 1980 ; Political Science Volume 32 ; 32 ; pnzb >
+        au < doNotProcess ; 1981 ; Political Science Volume 33 ; 33 ; pnzb >
+        au < doNotProcess ; 1982 ; Political Science Volume 34 ; 34 ; pnzb >
+        au < doNotProcess ; 1983 ; Political Science Volume 35 ; 35 ; pnzb >
+        au < doNotProcess ; 1984 ; Political Science Volume 36 ; 36 ; pnzb >
+        au < doNotProcess ; 1985 ; Political Science Volume 37 ; 37 ; pnzb >
+        au < doNotProcess ; 1986 ; Political Science Volume 38 ; 38 ; pnzb >
+        au < doNotProcess ; 1987 ; Political Science Volume 39 ; 39 ; pnzb >
+        au < doNotProcess ; 1988 ; Political Science Volume 40 ; 40 ; pnzb >
+        au < doNotProcess ; 1989 ; Political Science Volume 41 ; 41 ; pnzb >
+        au < doNotProcess ; 1990 ; Political Science Volume 42 ; 42 ; pnzb >
+        au < doNotProcess ; 1991 ; Political Science Volume 43 ; 43 ; pnzb >
+        au < doNotProcess ; 1992 ; Political Science Volume 44 ; 44 ; pnzb >
+        au < doNotProcess ; 1993 ; Political Science Volume 45 ; 45 ; pnzb >
+        au < doNotProcess ; 1994 ; Political Science Volume 46 ; 46 ; pnzb >
+        au < doNotProcess ; 1995 ; Political Science Volume 47 ; 47 ; pnzb >
+        au < doNotProcess ; 1996 ; Political Science Volume 48 ; 48 ; pnzb >
+        au < doNotProcess ; 1997 ; Political Science Volume 49 ; 49 ; pnzb >
+        au < doNotProcess ; 1998 ; Political Science Volume 50 ; 50 ; pnzb >
+        au < doNotProcess ; 1999 ; Political Science Volume 51 ; 51 ; pnzb >
         au < manifest ; 2000 ; Political Science Volume 52 ; 52 ; pnzb >
         au < manifest ; 2001 ; Political Science Volume 53 ; 53 ; pnzb >
         au < manifest ; 2002 ; Political Science Volume 54 ; 54 ; pnzb >
@@ -39882,10 +40076,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
 
-        au < doNotProcess ; 1999 ; Social Change Volume 29 ; 29 ; scha >
-        au < exists ; 2000 ; Social Change Volume 30 ; 30 ; schc >
         au < manifest ; 2001 ; Social Change Volume 31 ; 31 ; scha >
-        au < exists ; 2002 ; Social Change Volume 32 ; 32 ; schc >
+        au < exists ; 2002 ; Social Change Volume 32 ; 32 ; scha >
         au < manifest ; 2003 ; Social Change Volume 33 ; 33 ; scha >
         au < manifest ; 2004 ; Social Change Volume 34 ; 34 ; scha >
         au < manifest ; 2005 ; Social Change Volume 35 ; 35 ; scha >
@@ -41136,9 +41328,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doNotProcess ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 ; uroa >
       au < doNotProcess ; 2011 ; British Journal of Medical and Surgical Urology Volume 4 ; 4 ; uroa >
       au < manifest ; 2012 ; British Journal of Medical and Surgical Urology Volume 5 ; 5 ; uroa >
-      au < doNotProcess ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; uroa >
-      au < doNotProcess ; 2014 ; Journal of Clinical Urology Volume 7 ; 7 ; uroa >
-      au < doNotProcess ; 2015 ; Journal of Clinical Urology Volume 8 ; 8 ; uroa >
+      au < doNotProcess ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; urob >
+      au < doNotProcess ; 2014 ; Journal of Clinical Urology Volume 7 ; 7 ; urob >
+      au < doNotProcess ; 2015 ; Journal of Clinical Urology Volume 8 ; 8 ; urob >
       au < manifest ; 2016 ; Journal of Clinical Urology Volume 9 ; 9 ; urob >
 
     }
@@ -41198,26 +41390,26 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 1977 ; Transactional Analysis Journal Volume 7 ; 7 ; taxa >
     au < doNotProcess ; 1978 ; Transactional Analysis Journal Volume 8 ; 8 ; taxa >
     au < doNotProcess ; 1979 ; Transactional Analysis Journal Volume 9 ; 9 ; taxa >
-    au < doNotProcess ; 1980 ; Transactional Analysis Journal Volume 10 ; 10 ; taxa >
-    au < doNotProcess ; 1981 ; Transactional Analysis Journal Volume 11 ; 11 ; taxa >
-    au < doNotProcess ; 1982 ; Transactional Analysis Journal Volume 12 ; 12 ; taxa >
-    au < doNotProcess ; 1983 ; Transactional Analysis Journal Volume 13 ; 13 ; taxa >
-    au < doNotProcess ; 1984 ; Transactional Analysis Journal Volume 14 ; 14 ; taxa >
-    au < doNotProcess ; 1985 ; Transactional Analysis Journal Volume 15 ; 15 ; taxa >
-    au < doNotProcess ; 1986 ; Transactional Analysis Journal Volume 16 ; 16 ; taxa >
-    au < doNotProcess ; 1987 ; Transactional Analysis Journal Volume 17 ; 17 ; taxa >
-    au < doNotProcess ; 1988 ; Transactional Analysis Journal Volume 18 ; 18 ; taxa >
-    au < doNotProcess ; 1989 ; Transactional Analysis Journal Volume 19 ; 19 ; taxa >
-    au < doNotProcess ; 1990 ; Transactional Analysis Journal Volume 20 ; 20 ; taxa >
-    au < doNotProcess ; 1991 ; Transactional Analysis Journal Volume 21 ; 21 ; taxa >
-    au < doNotProcess ; 1992 ; Transactional Analysis Journal Volume 22 ; 22 ; taxa >
-    au < doNotProcess ; 1993 ; Transactional Analysis Journal Volume 23 ; 23 ; taxa >
-    au < doNotProcess ; 1994 ; Transactional Analysis Journal Volume 24 ; 24 ; taxa >
-    au < doNotProcess ; 1995 ; Transactional Analysis Journal Volume 25 ; 25 ; taxa >
-    au < doNotProcess ; 1996 ; Transactional Analysis Journal Volume 26 ; 26 ; taxa >
-    au < doNotProcess ; 1997 ; Transactional Analysis Journal Volume 27 ; 27 ; taxa >
-    au < doNotProcess ; 1998 ; Transactional Analysis Journal Volume 28 ; 28 ; taxa >
-    au < doNotProcess ; 1999 ; Transactional Analysis Journal Volume 29 ; 29 ; taxa >
+    au < doNotProcess ; 1980 ; Transactional Analysis Journal Volume 10 ; 10 ; taxb >
+    au < doNotProcess ; 1981 ; Transactional Analysis Journal Volume 11 ; 11 ; taxb >
+    au < doNotProcess ; 1982 ; Transactional Analysis Journal Volume 12 ; 12 ; taxb >
+    au < doNotProcess ; 1983 ; Transactional Analysis Journal Volume 13 ; 13 ; taxb >
+    au < doNotProcess ; 1984 ; Transactional Analysis Journal Volume 14 ; 14 ; taxb >
+    au < doNotProcess ; 1985 ; Transactional Analysis Journal Volume 15 ; 15 ; taxb >
+    au < doNotProcess ; 1986 ; Transactional Analysis Journal Volume 16 ; 16 ; taxb >
+    au < doNotProcess ; 1987 ; Transactional Analysis Journal Volume 17 ; 17 ; taxb >
+    au < doNotProcess ; 1988 ; Transactional Analysis Journal Volume 18 ; 18 ; taxb >
+    au < doNotProcess ; 1989 ; Transactional Analysis Journal Volume 19 ; 19 ; taxb >
+    au < doNotProcess ; 1990 ; Transactional Analysis Journal Volume 20 ; 20 ; taxb >
+    au < doNotProcess ; 1991 ; Transactional Analysis Journal Volume 21 ; 21 ; taxb >
+    au < doNotProcess ; 1992 ; Transactional Analysis Journal Volume 22 ; 22 ; taxb >
+    au < doNotProcess ; 1993 ; Transactional Analysis Journal Volume 23 ; 23 ; taxb >
+    au < doNotProcess ; 1994 ; Transactional Analysis Journal Volume 24 ; 24 ; taxb >
+    au < doNotProcess ; 1995 ; Transactional Analysis Journal Volume 25 ; 25 ; taxb >
+    au < doNotProcess ; 1996 ; Transactional Analysis Journal Volume 26 ; 26 ; taxb >
+    au < doNotProcess ; 1997 ; Transactional Analysis Journal Volume 27 ; 27 ; taxb >
+    au < doNotProcess ; 1998 ; Transactional Analysis Journal Volume 28 ; 28 ; taxb >
+    au < doNotProcess ; 1999 ; Transactional Analysis Journal Volume 29 ; 29 ; taxb >
     au < manifest ; 2000 ; Transactional Analysis Journal Volume 30 ; 30 ; taxb >
     au < manifest ; 2001 ; Transactional Analysis Journal Volume 31 ; 31 ; taxb >
     au < manifest ; 2002 ; Transactional Analysis Journal Volume 32 ; 32 ; taxb >
@@ -41872,17 +42064,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
-        name = International Journal of Green Nanotechnology ;
-        issn = 1943-0892 ;
-        eissn = 1943-0906 ;
-        issnl = 1943-0892
-      >
-
-    }
-
-    {
-
-      title <
         name = International Journal of Maritime History ;
         issn = 0843-8714 ;
         eissn = 2052-7756 ;
@@ -42512,13 +42693,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2004 ; Menopause International Volume 10 ; 10 ; mina >
         au < doNotProcess ; 2005 ; Menopause International Volume 11 ; 11 ; mina >
         au < doNotProcess ; 2006 ; Menopause International Volume 12 ; 12 ; mina >
-        au < doNotProcess ; 2007 ; Menopause International Volume 13 ; 13 ; mina >
-        au < doNotProcess ; 2008 ; Menopause International Volume 14 ; 14 ; mina >
-        au < doNotProcess ; 2009 ; Menopause International Volume 15 ; 15 ; mina >
-        au < doNotProcess ; 2010 ; Menopause International Volume 16 ; 16 ; mina >
-        au < doNotProcess ; 2011 ; Menopause International Volume 17 ; 17 ; mina >
-        au < doNotProcess ; 2012 ; Menopause International Volume 18 ; 18 ; mina >
-        au < doNotProcess ; 2013 ; Menopause International Volume 19 ; 19 ; mina >
+        au < doNotProcess ; 2007 ; Menopause International Volume 13 ; 13 ; minb >
+        au < doNotProcess ; 2008 ; Menopause International Volume 14 ; 14 ; minb >
+        au < doNotProcess ; 2009 ; Menopause International Volume 15 ; 15 ; minb >
+        au < doNotProcess ; 2010 ; Menopause International Volume 16 ; 16 ; minb >
+        au < doNotProcess ; 2011 ; Menopause International Volume 17 ; 17 ; minb >
+        au < doNotProcess ; 2012 ; Menopause International Volume 18 ; 18 ; minb >
+        au < doNotProcess ; 2013 ; Menopause International Volume 19 ; 19 ; minb >
 
       }
 
@@ -43208,6 +43389,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; Outlook on Agriculture Volume 43 ; 43 ; oaga >
     au < doNotProcess ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; oaga >
     au < manifest ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; oaga >
+    au < exists ; 2017 ; Outlook on Agriculture Volume 46 ; 46 ; oaga >
 
   }
 
