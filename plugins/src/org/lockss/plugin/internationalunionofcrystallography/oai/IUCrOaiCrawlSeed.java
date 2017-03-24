@@ -1,5 +1,6 @@
 package org.lockss.plugin.internationalunionofcrystallography.oai;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,15 +22,21 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.util.CIProperties;
+import org.lockss.util.Constants;
 import org.lockss.util.Interval;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 import com.lyncode.xoai.model.oaipmh.Record;
 import com.lyncode.xoai.model.xoai.Element;
 import com.lyncode.xoai.model.xoai.Field;
 import com.lyncode.xoai.serviceprovider.exceptions.BadArgumentException;
+import com.lyncode.xoai.serviceprovider.exceptions.InvalidOAIResponse;
 import com.lyncode.xoai.serviceprovider.model.Context;
 import com.lyncode.xoai.serviceprovider.model.Context.KnownTransformer;
 import com.lyncode.xoai.serviceprovider.parameters.ListRecordsParameters;
@@ -47,6 +54,7 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   private static Logger logger =
 	      Logger.getLogger(IUCrOaiCrawlSeed.class);
+  private boolean error = false;
 
   public IUCrOaiCrawlSeed(CrawlerFacade cf) {
     super(cf);
@@ -69,7 +77,7 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
-	      throws ConfigurationException {
+	      throws ConfigurationException, IOException {
 	    try {
 	      String link;
 	      int recNum = -1;
@@ -99,10 +107,33 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	        }
 	      }
 	      return idSet;
+	    } catch (InvalidOAIResponse e) {
+	    	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
+	    		  error = true;
+	    		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
+	    		  return null;
+	    	  } else {
+	    		  throw e;
+	    	  }
 	    } catch (BadArgumentException e) {
 	      throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
 	    }
 	  }
+  
+  protected void storeStartUrls(Collection<String> urlList, String url) throws IOException {
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("<html>\n");
+	  for (String u : urlList) {
+		  sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+	  }
+	  sb.append("</html>");
+	  CIProperties headers = new CIProperties();
+	  //Should use a constant here
+	  headers.setProperty("content-type", "text/html; charset=utf-8");
+      UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, url);
+      UrlCacher cacher = facade.makeUrlCacher(ud);
+      cacher.storeContent();
+  }
   
   protected String findRecordArticleLink(Record rec) { 
 	  MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
@@ -163,15 +194,23 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
    * @param id
    * @param url
    * @return
+ * @throws IOException 
    */
-  public Collection<String> idsToUrls(Collection<String> ids) {
-	Collection<String> urlList = new ArrayList<String>();
-	for (String id : ids) {
-		Matcher idMatch = idPattern.matcher(id);
-		if(idMatch.find()) {
-			urlList.add(baseUrl + START_URL_PREFIX + idMatch.group(1));
-		}
-	}
+  public Collection<String> idsToUrls(Collection<String> ids) throws IOException {
+	String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+	List<String> urlList = new ArrayList<String>();
+	if(error) {
+		  urlList.add(storeUrl);
+	  } else if(!ids.isEmpty()) {
+			for (String id : ids) {
+				Matcher idMatch = idPattern.matcher(id);
+				if(idMatch.find()) {
+					urlList.add(baseUrl + START_URL_PREFIX + idMatch.group(1));
+				}
+			}
+		  Collections.sort(urlList);
+		  storeStartUrls(urlList, storeUrl);
+	  }
 	return urlList;
   }
 }
