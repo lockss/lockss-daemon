@@ -1,0 +1,159 @@
+{
+  publisher <
+    name = West Virginia University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Education and Treatment of Children ;
+      issn = 0748-8491  ;
+      eissn = 1934-8924  ;
+      issnl = 0748-8491
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Education and Treatment of Children Volume 30, 2007 ; 3242 >
+        au < exists ; 2008 ; Education and Treatment of Children Volume 31, 2008 ; 3834 >
+        au < exists ; 2009 ; Education and Treatment of Children Volume 32, 2009 ; 4098 >
+        au < exists ; 2010 ; Education and Treatment of Children Volume 33, 2010 ; 5751 >
+        au < exists ; 2011 ; Education and Treatment of Children Volume 34, 2011 ; 6668 >
+        au < exists ; 2012 ; Education and Treatment of Children Volume 35, 2012 ; 7913 >
+        au < exists ; 2013 ; Education and Treatment of Children Volume 36, 2013 ; 8606 >
+        au < exists ; 2014 ; Education and Treatment of Children Volume 37, 2014 ; 9617 >
+        au < exists ; 2015 ; Education and Treatment of Children Volume 38, 2015 ; 10389 >
+        au < exists ; 2016 ; Education and Treatment of Children Volume 39, 2016 ; 11052 >
+        au < exists ; 2017 ; Education and Treatment of Children Volume 40, 2017 ; 12466 >
+
+    }
+    {
+    title <
+      name = Essays in Medieval Studies ;
+      issn = 1538-4608  ;
+      eissn = 1043-2213  ;
+      issnl = 1043-2213
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Essays in Medieval Studies Volume 18, 2001 ; 217 >
+        au < exists ; 2002 ; Essays in Medieval Studies Volume 19, 2002 ; 827 >
+        au < exists ; 2003 ; Essays in Medieval Studies Volume 20, 2003 ; 2434 >
+        au < exists ; 2004 ; Essays in Medieval Studies Volume 21, 2004 ; 2724 >
+        au < exists ; 2005 ; Essays in Medieval Studies Volume 22, 2005 ; 2971 >
+        au < exists ; 2006 ; Essays in Medieval Studies Volume 23, 2006 ; 3331 >
+        au < exists ; 2007 ; Essays in Medieval Studies Volume 24, 2007 ; 3808 >
+        au < exists ; 2008 ; Essays in Medieval Studies Volume 25, 2008 ; 4254 >
+        au < exists ; 2010 ; Essays in Medieval Studies Volume 26, 2010 ; 6942 >
+        au < exists ; 2011 ; Essays in Medieval Studies Volume 27, 2011 ; 8451 >
+        au < exists ; 2012 ; Essays in Medieval Studies Volume 28, 2012 ; 9077 >
+        au < exists ; 2013 ; Essays in Medieval Studies Volume 29, 2013 ; 10101 >
+        au < exists ; 2014 ; Essays in Medieval Studies Volume 30, 2014 ; 10720 >
+        au < exists ; 2015 ; Essays in Medieval Studies Volume 31, 2015 ; 11423 >
+
+    }
+    {
+    title <
+      name = Labor Studies Journal ;
+      issn = 0160-449X  ;
+      eissn = 1538-9758  ;
+      issnl = 0160-449X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2002-2003 ; Labor Studies Journal Volume 27, 2002-2003 ; 366 >
+        au < exists ; 2003-2004 ; Labor Studies Journal Volume 28, 2003-2004 ; 885 >
+        au < exists ; 2004-2005 ; Labor Studies Journal Volume 29, 2004-2005 ; 2482 >
+        au < exists ; 2005-2006 ; Labor Studies Journal Volume 30, 2005-2006 ; 2757 >
+        au < exists ; 2006-2007 ; Labor Studies Journal Volume 31, 2006-2007 ; 2981 >
+
+    }
+    {
+    title <
+      name = Tolkien Studies ;
+      issn = 1547-3155  ;
+      eissn = 1547-3163  ;
+      issnl = 1547-3155
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Tolkien Studies Volume 1, 2004 ; 2604 >
+        au < exists ; 2005 ; Tolkien Studies Volume 2, 2005 ; 2765 >
+        au < exists ; 2006 ; Tolkien Studies Volume 3, 2006 ; 3044 >
+        au < exists ; 2007 ; Tolkien Studies Volume 4, 2007 ; 3377 >
+        au < exists ; 2008 ; Tolkien Studies Volume 5, 2008 ; 3820 >
+        au < exists ; 2009 ; Tolkien Studies Volume 6, 2009 ; 4364 >
+        au < exists ; 2010 ; Tolkien Studies Volume 7, 2010 ; 6411 >
+        au < exists ; 2011 ; Tolkien Studies Volume 8, 2011 ; 7304 >
+        au < exists ; 2012 ; Tolkien Studies Volume 9, 2012 ; 8422 >
+        au < exists ; 2013 ; Tolkien Studies Volume 10, 2013 ; 9240 >
+        au < exists ; 2014 ; Tolkien Studies Volume 11, 2014 ; 10241 >
+        au < exists ; 2015 ; Tolkien Studies Volume 12, 2015 ; 10865 >
+        au < exists ; 2016 ; Tolkien Studies Volume 13, 2016 ; 12223 >
+
+    }
+    {
+    title <
+      name = Victorian Poetry ;
+      issn = 0042-5206  ;
+      eissn = 1530-7190  ;
+      issnl = 0042-5206
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Victorian Poetry Volume 38, 2000 ; 701 >
+        au < exists ; 2001 ; Victorian Poetry Volume 39, 2001 ; 702 >
+        au < exists ; 2002 ; Victorian Poetry Volume 40, 2002 ; 703 >
+        au < exists ; 2003 ; Victorian Poetry Volume 41, 2003 ; 879 >
+        au < exists ; 2004 ; Victorian Poetry Volume 42, 2004 ; 2486 >
+        au < exists ; 2005 ; Victorian Poetry Volume 43, 2005 ; 2779 >
+        au < exists ; 2006 ; Victorian Poetry Volume 44, 2006 ; 3002 >
+        au < exists ; 2007 ; Victorian Poetry Volume 45, 2007 ; 3274 >
+        au < exists ; 2008 ; Victorian Poetry Volume 46, 2008 ; 3825 >
+        au < exists ; 2009 ; Victorian Poetry Volume 47, 2009 ; 4244 >
+        au < exists ; 2010 ; Victorian Poetry Volume 48, 2010 ; 5943 >
+        au < exists ; 2011 ; Victorian Poetry Volume 49, 2011 ; 7064 >
+        au < exists ; 2012 ; Victorian Poetry Volume 50, 2012 ; 8184 >
+        au < exists ; 2013 ; Victorian Poetry Volume 51, 2013 ; 9051 >
+        au < exists ; 2014 ; Victorian Poetry Volume 52, 2014 ; 9828 >
+        au < exists ; 2015 ; Victorian Poetry Volume 53, 2015 ; 10735 >
+        au < exists ; 2016 ; Victorian Poetry Volume 54, 2016 ; 11213 >
+
+    }
+    {
+    title <
+      name = West Virginia History:  A Journal of Regional Studies ;
+      issn = 1940-5057  ;
+      eissn = 0043-325X  ;
+      issnl = 0043-325X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1, 2007 ; 3724 >
+        au < exists ; 2008 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2, 2008 ; 3760 >
+        au < exists ; 2009 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3, 2009 ; 4327 >
+        au < exists ; 2010 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 4, 2010 ; 6111 >
+        au < exists ; 2011 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 5, 2011 ; 7008 >
+        au < exists ; 2012 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 6, 2012 ; 8249 >
+        au < exists ; 2013 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 7, 2013 ; 8941 >
+        au < exists ; 2014 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 8, 2014 ; 10052 >
+        au < exists ; 2015 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 9, 2015 ; 10736 >
+        au < exists ; 2016 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 10, 2016 ; 11215 >
+
+    }
+
+}

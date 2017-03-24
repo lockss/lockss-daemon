@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Advertising Educational Foundation
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Advertising & Society Quarterly ;
+      issn =   ;
+      eissn = 1534-7311  ;
+      issnl = 1534-7311
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Advertising & Society Quarterly Volume 1, 2000 ; 730 >
+        au < exists ; 2001 ; Advertising & Society Quarterly Volume 2, 2001 ; 729 >
+        au < exists ; 2002 ; Advertising & Society Quarterly Volume 3, 2002 ; 731 >
+        au < exists ; 2003 ; Advertising & Society Quarterly Volume 4, 2003 ; 892 >
+        au < exists ; 2004 ; Advertising & Society Quarterly Volume 5, 2004 ; 2497 >
+        au < exists ; 2005 ; Advertising & Society Quarterly Volume 6, 2005 ; 2798 >
+        au < exists ; 2006 ; Advertising & Society Quarterly Volume 7, 2006 ; 3133 >
+        au < exists ; 2007 ; Advertising & Society Quarterly Volume 8, 2007 ; 3292 >
+        au < exists ; 2008 ; Advertising & Society Quarterly Volume 9, 2008 ; 3716 >
+        au < exists ; 2009 ; Advertising & Society Quarterly Volume 10, 2009 ; 4235 >
+        au < exists ; 2010-2011 ; Advertising & Society Quarterly Volume 11, 2010-2011 ; 5936 >
+        au < exists ; 2011-2012 ; Advertising & Society Quarterly Volume 12, 2011-2012 ; 7007 >
+        au < exists ; 2012-2013 ; Advertising & Society Quarterly Volume 13, 2012-2013 ; 8329 >
+        au < exists ; 2013-2014 ; Advertising & Society Quarterly Volume 14, 2013-2014 ; 9101 >
+        au < exists ; 2014-2015 ; Advertising & Society Quarterly Volume 15, 2014-2015 ; 9820 >
+        au < exists ; 2015-2016 ; Advertising & Society Quarterly Volume 16, 2015-2016 ; 10472 >
+        au < exists ; 2016-2017 ; Advertising & Society Quarterly Volume 17, 2016-2017 ; 11410 >
+        au < exists ; 2017 ; Advertising & Society Quarterly Volume 18, 2017 ; 12509 >
+
+    }
+
+}

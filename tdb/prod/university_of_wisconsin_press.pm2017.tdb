@@ -1,0 +1,272 @@
+{
+  publisher <
+    name = University of Wisconsin Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Arctic Anthropology ;
+      issn = 0066-6939  ;
+      eissn = 1933-8139  ;
+      issnl = 0066-6939
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Arctic Anthropology Volume 40, 2003 ; 6350 >
+        au < exists ; 2004 ; Arctic Anthropology Volume 41, 2004 ; 6349 >
+        au < exists ; 2005 ; Arctic Anthropology Volume 42, 2005 ; 6348 >
+        au < exists ; 2006 ; Arctic Anthropology Volume 43, 2006 ; 6347 >
+        au < exists ; 2007 ; Arctic Anthropology Volume 44, 2007 ; 6346 >
+        au < exists ; 2008 ; Arctic Anthropology Volume 45, 2008 ; 3829 >
+        au < exists ; 2009 ; Arctic Anthropology Volume 46, 2009 ; 5715 >
+        au < exists ; 2010 ; Arctic Anthropology Volume 47, 2010 ; 6407 >
+        au < exists ; 2011 ; Arctic Anthropology Volume 48, 2011 ; 7568 >
+        au < exists ; 2012 ; Arctic Anthropology Volume 49, 2012 ; 8428 >
+        au < exists ; 2013 ; Arctic Anthropology Volume 50, 2013 ; 9430 >
+        au < exists ; 2014 ; Arctic Anthropology Volume 51, 2014 ; 10183 >
+        au < exists ; 2015 ; Arctic Anthropology Volume 52, 2015 ; 10724 >
+        au < exists ; 2016 ; Arctic Anthropology Volume 53, 2016 ; 12106 >
+
+    }
+    {
+    title <
+      name = Contemporary Literature ;
+      issn = 0010-7484  ;
+      eissn = 1548-9949  ;
+      issnl = 0010-7484
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Contemporary Literature Volume 45, 2004 ; 2523 >
+        au < exists ; 2005 ; Contemporary Literature Volume 46, 2005 ; 2770 >
+        au < exists ; 2006 ; Contemporary Literature Volume 47, 2006 ; 3081 >
+        au < exists ; 2007 ; Contemporary Literature Volume 48, 2007 ; 3374 >
+        au < exists ; 2008 ; Contemporary Literature Volume 49, 2008 ; 3807 >
+        au < exists ; 2009 ; Contemporary Literature Volume 50, 2009 ; 4404 >
+        au < exists ; 2010 ; Contemporary Literature Volume 51, 2010 ; 6386 >
+        au < exists ; 2011 ; Contemporary Literature Volume 52, 2011 ; 7428 >
+        au < exists ; 2012 ; Contemporary Literature Volume 53, 2012 ; 8336 >
+        au < exists ; 2013 ; Contemporary Literature Volume 54, 2013 ; 9098 >
+        au < exists ; 2014 ; Contemporary Literature Volume 55, 2014 ; 9986 >
+        au < exists ; 2015 ; Contemporary Literature Volume 56, 2015 ; 10628 >
+        au < exists ; 2016 ; Contemporary Literature Volume 57, 2016 ; 11232 >
+
+    }
+    {
+    title <
+      name = Ecological Restoration ;
+      issn = 1543-4060  ;
+      eissn = 1543-4079  ;
+      issnl = 1543-4060
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2010 ; Ecological Restoration Volume 28, 2010 ; 6341 >
+        au < exists ; 2011 ; Ecological Restoration Volume 29, 2011 ; 7179 >
+        au < exists ; 2012 ; Ecological Restoration Volume 30, 2012 ; 8005 >
+        au < exists ; 2013 ; Ecological Restoration Volume 31, 2013 ; 8735 >
+        au < exists ; 2014 ; Ecological Restoration Volume 32, 2014 ; 9681 >
+        au < exists ; 2015 ; Ecological Restoration Volume 33, 2015 ; 10413 >
+        au < exists ; 2016 ; Ecological Restoration Volume 34,  2016 ; 10975 >
+        au < exists ; 2017 ; Ecological Restoration Volume 35, 2017 ; 12396 >
+
+    }
+    {
+    title <
+      name = Ghana Studies ;
+      issn = 1536-5514  ;
+      eissn = 2333-7168  ;
+      issnl = 1536-5514
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; Ghana Studies Volume 17, 2014 ; 10219 >
+        au < exists ; 2015 ; Ghana Studies Volume 18, 2015 ; 10933 >
+        au < exists ; 2016 ; Ghana Studies Volume 19, 2016 ; 12302 >
+
+    }
+    {
+    title <
+      name = Land Economics ;
+      issn = 0023-7639  ;
+      eissn = 1543-8325  ;
+      issnl = 0023-7639
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Land Economics Volume 84, 2008 ; 7538 >
+        au < exists ; 2009 ; Land Economics Volume 85, 2009 ; 7539 >
+        au < exists ; 2010 ; Land Economics Volume 86, 2010 ; 7540 >
+        au < exists ; 2011 ; Land Economics Volume 87, 2011 ; 7541 >
+        au < exists ; 2012 ; Land Economics Volume 88, 2012 ; 7871 >
+        au < exists ; 2013 ; Land Economics Volume 89, 2013 ; 8618 >
+        au < exists ; 2014 ; Land Economics Volume 90, 2014 ; 9588 >
+        au < exists ; 2015 ; Land Economics Volume 91. 2015 ; 10297 >
+        au < exists ; 2016 ; Land Economics Volume 92, 2016 ; 10901 >
+        au < exists ; 2017 ; Land Economics Volume 93, 2017 ; 12303 >
+
+    }
+    {
+    title <
+      name = Landscape Journal: design, planning, and management of the land ;
+      issn = 0277-2426  ;
+      eissn = 1553-2704  ;
+      issnl = 0277-2426
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Landscape Journal: design, planning, and management of the land Volume 30, 2011 ; 6860 >
+        au < exists ; 2012 ; Landscape Journal: design, planning, and management of the land Volume 31, 2012 ; 8789 >
+        au < exists ; 2013 ; Landscape Journal: design, planning, and management of the land Volume 32, 2013 ; 9311 >
+        au < exists ; 2014 ; Landscape Journal: design, planning, and management of the land Volume 33 ; 10149 >
+        au < exists ; 2015 ; Landscape Journal: design, planning, and management of the land Volume 34, 2015 ; 10739 >
+        au < exists ; 2016 ; Landscape Journal: design, planning, and management of the land Volume 35, 2016 ; 12144 >
+
+    }
+    {
+    title <
+      name = Luso-Brazilian Review ;
+      issn = 0024-7413  ;
+      eissn = 1548-9957  ;
+      issnl = 0024-7413
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Luso-Brazilian Review Volume 41, 2004 ; 2577 >
+        au < exists ; 2005 ; Luso-Brazilian Review Volume 42, 2005 ; 2846 >
+        au < exists ; 2006 ; Luso-Brazilian Review Volume 43, 2006 ; 3106 >
+        au < exists ; 2007 ; Luso-Brazilian Review Volume 44, 2007 ; 3441 >
+        au < exists ; 2008 ; Luso-Brazilian Review Volume 45, 2008 ; 3900 >
+        au < exists ; 2009 ; Luso-Brazilian Review Volume 46, 2009 ; 4390 >
+        au < exists ; 2010 ; Luso-Brazilian Review Volume 47, 2010 ; 6384 >
+        au < exists ; 2011 ; Luso-Brazilian Review Volume 48, 2011 ; 7386 >
+        au < exists ; 2012 ; Luso-Brazilian Review Volume 49, 2012 ; 8433 >
+        au < exists ; 2013 ; Luso-Brazilian Review Volume 50, 2013 ; 9363 >
+        au < exists ; 2014 ; Luso-Brazilian Review Volume 51, 2014 ; 9990 >
+        au < exists ; 2015 ; Luso-Brazilian Review Volume 52, 2015 ; 10641 >
+        au < exists ; 2016 ; Luso-Brazilian Review Volume 53, 2016 ; 11243 >
+
+    }
+    {
+    title <
+      name = Monatshefte ;
+      issn = 0026-9271  ;
+      eissn = 1934-2810  ;
+      issnl = 0026-9271
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Monatshefte Volume 99, 2007 ; 3299 >
+        au < exists ; 2008 ; Monatshefte Volume 100, 2008 ; 3729 >
+        au < exists ; 2009 ; Monatshefte Volume 101, 2009 ; 4230 >
+        au < exists ; 2010 ; Monatshefte Volume 102, 2010 ; 5834 >
+        au < exists ; 2011 ; Monatshefte Volume 103, 2011 ; 6919 >
+        au < exists ; 2012 ; Monatshefte Volume 104, 2012 ; 8104 >
+        au < exists ; 2013 ; Monatshefte Volume 105, 2013 ; 8852 >
+        au < exists ; 2014 ; Monatshefte Volume 106, 2014 ; 9789 >
+        au < exists ; 2015 ; Monatshefte Volume 107, 2015 ; 10448 >
+        au < exists ; 2016 ; Monatshefte Volume 108, 2016 ; 11072 >
+        au < exists ; 2017 ; Monatshefte Volume 109, 2017 ; 12460 >
+
+    }
+    {
+    title <
+      name = Native Plants Journal ;
+      issn = 1522-8339  ;
+      eissn = 1548-4785 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Native Plants Journal Volume 5, 2004 ; 2508 >
+        au < exists ; 2005 ; Native Plants Journal Volume 6, 2005 ; 2737 >
+        au < exists ; 2006 ; Native Plants Journal Volume 7, 2006 ; 3016 >
+        au < exists ; 2007 ; Native Plants Journal Volume 8, 2007 ; 3308 >
+        au < exists ; 2008 ; Native Plants Journal Volume 9, 2008 ; 3788 >
+        au < exists ; 2009 ; Native Plants Journal Volume 10, 2009 ; 4262 >
+        au < exists ; 2010 ; Native Plants Journal Volume 11, 2010 ; 6169 >
+        au < exists ; 2011 ; Native Plants Journal Volume 12, 2011 ; 7144 >
+        au < exists ; 2012 ; Native Plants Journal Volume 13, 2012 ; 8192 >
+        au < exists ; 2013 ; Native Plants Journal Volume 14, 2013 ; 8903 >
+        au < exists ; 2014 ; Native Plants Journal Volume 15, 2014 ; 9918 >
+        au < exists ; 2015 ; Native Plants Journal Volume 16, 2015 ; 10540 >
+        au < exists ; 2016 ; Native Plants Journal Volume 17, 2016 ; 11147 >
+
+    }
+    {
+    title <
+      name = SubStance ;
+      issn = 1527-2095  ;
+      eissn = 0049-2426  ;
+      issnl = 0049-2426
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999 ; SubStance Volume 28, 1999 (89-90) ; 646 >
+        au < exists ; 2000 ; SubStance Volume 29, 2000 (91-93) ; 647 >
+        au < exists ; 2001 ; SubStance Volume 30, 2001 (94-96) ; 648 >
+        au < exists ; 2002 ; SubStance Volume 31, 2002 (97-99) ; 649 >
+        au < exists ; 2003 ; SubStance Volume 32, 2003 (100-102) ; 873 >
+        au < exists ; 2004 ; SubStance Volume 33, 2004 (103-105) ; 2465 >
+        au < exists ; 2005 ; SubStance Volume 34, 2005 (106-108) ; 2741 >
+        au < exists ; 2006 ; SubStance Volume 35, 2006 (109-111) ; 3026 >
+        au < exists ; 2007 ; SubStance Volume 36, 2007 (112-114) ; 3270 >
+        au < exists ; 2008 ; SubStance Volume 37, 2008 (115-117) ; 3680 >
+        au < exists ; 2009 ; SubStance Volume 38, 2009 (118-120) ; 4228 >
+        au < exists ; 2010 ; SubStance Volume 39, 2010 (121-123) ; 5833 >
+        au < exists ; 2011 ; SubStance Volume 40, 2011 (124-126) ; 6983 >
+        au < exists ; 2012 ; SubStance Volume 41, 2012 (127-129) ; 8121 >
+        au < exists ; 2013 ; SubStance Volume 42, 2013 (130-132) ; 8935 >
+        au < exists ; 2014 ; SubStance Volume 43, 2014 (133-135) ; 9738 >
+        au < exists ; 2015 ; SubStance Volume 44, 2015 ; 10487 >
+        au < exists ; 2016 ; SubStance Volume 45, 2016 ; 11090 >
+        au < exists ; 2017 ; SubStance Volume 46, 2017 ; 12448 >
+
+    }
+    {
+    title <
+      name = Journal of Human Resources ;
+      issn = 0022-166X  ;
+      eissn = 1548-8004  ;
+      issnl = 0022-166X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Journal of Human Resources Volume 43, 2008 ; 7533 >
+        au < exists ; 2009 ; Journal of Human Resources Volume 44, 2009 ; 7534 >
+        au < exists ; 2010 ; Journal of Human Resources Volume 45, 2010 ; 7535 >
+        au < exists ; 2011 ; Journal of Human Resources Volume 46, 2011 ; 7536 >
+        au < exists ; 2012 ; Journal of Human Resources Volume 47, 2012 ; 7900 >
+        au < exists ; 2013 ; Journal of Human Resources Volume 48, 2013 ; 8736 >
+        au < exists ; 2014 ; Journal of Human Resources Volume 49, 2014 ; 9660 >
+        au < exists ; 2015 ; Journal of Human Resources Volume 50, 2015 ; 10392 >
+        au < exists ; 2016 ; Journal of Human Resources Volume 51, 2016 ; 10943 >
+        au < exists ; 2017 ; Journal of Human Resources Volume 52, 2017 ; 12422 >
+
+    }
+
+}

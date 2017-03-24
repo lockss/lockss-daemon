@@ -1,0 +1,711 @@
+{
+  publisher <
+    name = University of Nebraska Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = An Sionnach: A Journal of Literature, Culture, and the Arts ;
+      issn = 1554-8953  ;
+      eissn = 1944-6535  ;
+      issnl = 1554-8953
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5, 2009 ; 5662 >
+
+    }
+    {
+    title <
+      name = Anthropological Linguistics ;
+      issn = 1944-6527  ;
+      eissn = 0003-5483  ;
+      issnl = 0003-5483
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Anthropological Linguistics Volume 51, 2009 ; 5771 >
+        au < exists ; 2010 ; Anthropological Linguistics Volume 52, 2010 ; 6635 >
+        au < exists ; 2011 ; Anthropological Linguistics Volume 53, 2011 ; 7844 >
+        au < exists ; 2012 ; Anthropological Linguistics Volume 54, 2012 ; 8598 >
+        au < exists ; 2013 ; Anthropological Linguistics Volume 55, 2013 ; 9541 >
+        au < exists ; 2014 ; Anthropological Linguistics Volume 56, 2014 ; 10423 >
+        au < exists ; 2015 ; Anthropological Linguistics Volume 57, 2015 ; 11005 >
+        au < exists ; 2016 ; Anthropological Linguistics Volume 58, 2016 ; 12247 >
+
+    }
+    {
+    title <
+      name = Collaborative Anthropologies ;
+      issn = 2152-4009  ;
+      eissn = 1943-2550  ;
+      issnl = 1943-2550
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Collaborative Anthropologies Volume 1, 2008 ; 5704 >
+        au < exists ; 2009 ; Collaborative Anthropologies Volume 2, 2009 ; 5790 >
+        au < exists ; 2010 ; Collaborative Anthropologies Volume 3, 2010 ; 6563 >
+        au < exists ; 2011 ; Collaborative Anthropologies Volume 4, 2011 ; 7829 >
+        au < exists ; 2012 ; Collaborative Anthropologies Volume 5, 2012 ; 8557 >
+        au < exists ; 2013 ; Collaborative Anthropologies Volume 6, 2013 ; 9673 >
+        au < exists ; 2014-2015 ; Collaborative Anthropologies Volume 7, 2014-2015 ; 10400 >
+        au < exists ; 2015-2016 ; Collaborative Anthropologies Volume 8, 2015-2016 ; 12426 >
+
+    }
+    {
+    title <
+      name = French Forum ;
+      issn = 0098-9355  ;
+      eissn = 1534-1836  ;
+      issnl = 0098-9355
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; French Forum Volume 26, 2001 ; 227 >
+        au < exists ; 2002 ; French Forum Volume 27, 2002 ; 228 >
+        au < exists ; 2003 ; French Forum Volume 28, 2003 ; 964 >
+        au < exists ; 2004 ; French Forum Volume 29, 2004 ; 2544 >
+        au < exists ; 2005 ; French Forum Volume 30, 2005 ; 2748 >
+        au < exists ; 2006 ; French Forum Volume 31, 2006 ; 3123 >
+        au < exists ; 2007 ; French Forum Volume 32, 2007 ; 3635 >
+        au < exists ; 2008 ; French Forum Volume 33, 2008 ; 4000 >
+        au < exists ; 2009 ; French Forum Volume 34, 2009 ; 4419 >
+        au < exists ; 2010 ; French Forum Volume 35, 2010 ; 6167 >
+        au < exists ; 2011 ; French Forum Volume 36, 2011 ; 7438 >
+        au < exists ; 2012 ; French Forum Volume 37, 2012 ; 8503 >
+        au < exists ; 2013 ; French Forum Volume 38, 2013 ; 9326 >
+        au < exists ; 2014 ; French Forum Volume 39, 2014 ; 10105 >
+        au < exists ; 2015 ; French Forum Volume 40, 2015 ; 10668 >
+        au < exists ; 2016-2017 ; French Forum Volume 41, 2016-2017 ; 12358 >
+
+    }
+    {
+    title <
+      name = Frontiers: A Journal of Women Studies ;
+      issn = 0160-9009  ;
+      eissn = 1536-0334  ;
+      issnl = 0160-9009
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Frontiers: A Journal of Women Studies Volume 22, 2001 ; 229 >
+        au < exists ; 2002 ; Frontiers: A Journal of Women Studies Volume 23, 2002 ; 230 >
+        au < exists ; 2003 ; Frontiers: A Journal of Women Studies Volume 24, 2003 ; 934 >
+        au < exists ; 2004 ; Frontiers: A Journal of Women Studies Volume 25, 2004 ; 2512 >
+        au < exists ; 2005 ; Frontiers: A Journal of Women Studies Volume 26, 2005 ; 2780 >
+        au < exists ; 2006 ; Frontiers: A Journal of Women Studies Volume 27, 2006 ; 3117 >
+        au < exists ; 2007 ; Frontiers: A Journal of Women Studies Volume 28, 2007 ; 3426 >
+        au < exists ; 2008 ; Frontiers: A Journal of Women Studies Volume 29, 2008 ; 3741 >
+        au < exists ; 2009 ; Frontiers: A Journal of Women Studies Volume 30, 2009 ; 4257 >
+        au < exists ; 2010 ; Frontiers: A Journal of Women Studies Volume 31, 2010 ; 5673 >
+        au < exists ; 2011 ; Frontiers: A Journal of Women Studies Volume 32, 2011 ; 7293 >
+        au < exists ; 2012 ; Frontiers: A Journal of Women Studies Volume 33, 2012 ; 8239 >
+        au < exists ; 2013 ; Frontiers: A Journal of Women Studies Volume 34, 2013 ; 8886 >
+        au < exists ; 2014 ; Frontiers: A Journal of Women Studies Volume 35, 2014 ; 9829 >
+        au < exists ; 2015 ; Frontiers: A Journal of Women Studies Volume 36, 2015 ; 10468 >
+        au < exists ; 2016 ; Frontiers: A Journal of Women Studies Volume 37, 2016 ; 11208 >
+
+    }
+    {
+    title <
+      name = Gettysburg Magazine ;
+      issn = 2372-6059  ;
+      eissn = 2377-0783  ;
+      issnl = 2372-6059
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2015 ; Gettysburg Magazine Number 52, 2015 ; 10319 >
+        au < exists ; 2015 ; Gettysburg Magazine Number 53, July 2015 ; 10709 >
+        au < exists ; 2016 ; Gettysburg Magazine Number 54, January 2016 ; 10883 >
+        au < exists ; 2016 ; Gettysburg Magazine Number 55, July 2016 ; 11336 >
+        au < exists ; 2017 ; Gettysburg Magazine Number 56, January 2017 ; 12414 >
+
+    }
+    {
+    title <
+      name = Great Plains Quarterly ;
+      issn = 0275-7664  ;
+      eissn = 2333-5092  ;
+      issnl = 0275-7664
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; Great Plains Quarterly Volume 34, 2014 ; 9642 >
+        au < exists ; 2015 ; Great Plains Quarterly Volume 35, 2015 ; 10387 >
+        au < exists ; 2016 ; Great Plains Quarterly Volume 36, 2016 ; 10974 >
+        au < exists ; 2017 ; Great Plains Quarterly Volume 37, 2017 ; 12372 >
+
+    }
+    {
+    title <
+      name = Great Plains Research ;
+      issn = 1052-5165  ;
+      eissn = 2334-2463  ;
+      issnl = 2334-2463
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; Great Plains Research Volume 24, Number 1, Spring 2014 ; 9810 >
+        au < exists ; 2015 ; Great Plains Research Volume 25, 2015 ; 10536 >
+        au < exists ; 2016 ; Great Plains Research Volume 26, 2016 ; 11149 >
+
+    }
+    {
+    title <
+      name = Histories of Anthropology Annual ;
+      issn = 1940-5138  ;
+      eissn = 1557-637X  ;
+      issnl = 1557-637X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005 ; Histories of Anthropology Annual Volume 1, 2005 ; 3999 >
+        au < exists ; 2006 ; Histories of Anthropology Annual Volume 2, 2006 ; 3998 >
+        au < exists ; 2007 ; Histories of Anthropology Annual Volume 3, 2007 ; 3997 >
+        au < exists ; 2008 ; Histories of Anthropology Annual Volume 4, 2008 ; 3959 >
+        au < exists ; 2009 ; Histories of Anthropology Annual Volume 5, 2009 ; 4932 >
+        au < exists ; 2010 ; Histories of Anthropology Annual Volume 6, 2010 ; 6488 >
+        au < exists ; 2011 ; Histories of Anthropology Annual Volume 7, 2011 ; 7823 >
+
+    }
+    {
+    title <
+      name = Journal of Austrian Studies ;
+      issn = 2165-669X  ;
+      issnl = 2165-669X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Journal of Austrian Studies Volume 45, 2012 ; 8862 >
+        au < exists ; 2013 ; Journal of Austrian Studies Volume 46, 2013 ; 8813 >
+        au < exists ; 2014 ; Journal of Austrian Studies Volume 47, 2014 ; 9938 >
+        au < exists ; 2015 ; Journal of Austrian Studies Volume 48, 2015 ; 10566 >
+        au < exists ; 2016 ; Journal of Austrian Studies Volume 49, 2016 ; 12230 >
+
+    }
+    {
+    title <
+      name = Journal of Black Sexuality and Relationships ;
+      issn = 2334-2668  ;
+      eissn = 2376-7510  ;
+      issnl = 2334-2668
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; Journal of Black Sexuality and Relationships Volume 1, 2014 ; 10290 >
+        au < exists ; 2015 ; Journal of Black Sexuality and Relationships Volume 2, 2015 ; 10808 >
+        au < exists ; 2016 ; Journal of Black Sexuality and Relationships Volume 3, 2016 ; 12350 >
+
+    }
+    {
+    title <
+      name = Journal of Literature and Trauma Studies ;
+      issn = 2162-3627  ;
+      eissn = 2045-4740  ;
+      issnl = 2162-3627
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Journal of Literature and Trauma Studies Volume 1, 2012 ; 8321 >
+        au < exists ; 2013 ; Journal of Literature and Trauma Studies Volume 2, 2013 ; 10061 >
+        au < exists ; 2014 ; Journal of Literature and Trauma Studies Volume 3, 2014 ; 10603 >
+        au < exists ; 2015 ; Journal of Literature and Trauma Studies Volume 4, 2015 ; 11259 >
+
+    }
+    {
+    title <
+      name = Journal of Sports Media ;
+      issn = 1558-4313  ;
+      eissn = 1940-5073  ;
+      issnl = 1558-4313
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2006 ; Journal of Sports Media Volume 1, 2006 ; 3784 >
+        au < exists ; 2007 ; Journal of Sports Media Volume 2, 2007 ; 3766 >
+        au < exists ; 2008 ; Journal of Sports Media Volume 3, 2008 ; 3725 >
+        au < exists ; 2009 ; Journal of Sports Media Volume 4, 2009 ; 4165 >
+        au < exists ; 2010 ; Journal of Sports Media Volume 5, 2010 ; 5774 >
+        au < exists ; 2011 ; Journal of Sports Media Volume 6, 2011 ; 6718 >
+        au < exists ; 2012 ; Journal of Sports Media Volume 7, 2012 ; 8134 >
+        au < exists ; 2013 ; Journal of Sports Media Volume 8, 2013 ; 9113 >
+        au < exists ; 2014 ; Journal of Sports Media Volume 9, 2014 ; 9935 >
+        au < exists ; 2015 ; Journal of Sports Media Volume 10, 2015 ; 10491 >
+        au < exists ; 2016 ; Journal of Sports Media Volume 11, 2016 ; 11314 >
+
+    }
+    {
+    title <
+      name = Legacy: A Journal of American Women Writers ;
+      issn = 1534-0643  ;
+      eissn = 0748-4321  ;
+      issnl = 0748-4321
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Legacy: A Journal of American Women Writers Volume 17, 2000 ; 380 >
+        au < exists ; 2001 ; Legacy: A Journal of American Women Writers Volume 18, 2001 ; 381 >
+        au < exists ; 2002 ; Legacy: A Journal of American Women Writers Volume 19, 2002 ; 817 >
+        au < exists ; 2003 ; Legacy: A Journal of American Women Writers Volume 20, 2003 ; 1714 >
+        au < exists ; 2004 ; Legacy: A Journal of American Women Writers Volume 21, 2004 ; 2539 >
+        au < exists ; 2005 ; Legacy: A Journal of American Women Writers Volume 22, 2005 ; 2801 >
+        au < exists ; 2006 ; Legacy: A Journal of American Women Writers Volume 23, 2006 ; 3091 >
+        au < exists ; 2007 ; Legacy: A Journal of American Women Writers Volume 24, 2007 ; 3408 >
+        au < exists ; 2008 ; Legacy: A Journal of American Women Writers Volume 25, 2008 ; 3757 >
+        au < exists ; 2009 ; Legacy: A Journal of American Women Writers Volume 26, 2009 ; 4329 >
+        au < exists ; 2010 ; Legacy: A Journal of American Women Writers Volume 27, 2010 ; 5836 >
+        au < exists ; 2011 ; Legacy: A Journal of American Women Writers Volume 28, 2011 ; 7349 >
+        au < exists ; 2012 ; Legacy: A Journal of American Women Writers Volume 29, 2012 ; 8346 >
+        au < exists ; 2013 ; Legacy: A Journal of American Women Writers Volume 30, 2013 ; 9107 >
+        au < exists ; 2014 ; Legacy: A Journal of American Women Writers Volume 31, 2014 ; 10014 >
+        au < exists ; 2015 ; Legacy: A Journal of American Women Writers Volume 32, 2015 ; 10622 >
+        au < exists ; 2016 ; Legacy: A Journal of American Women Writers Volume 33, 2016 ; 11334 >
+
+    }
+    {
+    title <
+      name = Middle West Review ;
+      issn = 2372-5664  ;
+      eissn = 2372-5672 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; Middle West Review Volume 1, 2014 ; 10291 >
+        au < exists ; 2015 ; Middle West Review Volume 2, 2015 ; 10803 >
+        au < exists ; 2016 ; Middle West Review Volume 3, 2016 ; 11422 >
+
+    }
+    {
+    title <
+      name = NINE: A Journal of Baseball History and Culture ;
+      issn = 1188-9330  ;
+      eissn = 1534-1844  ;
+      issnl = 1188-9330
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000-2001 ; NINE: A Journal of Baseball History and Culture Volume 9, 2000-2001 ; 474 >
+        au < exists ; 2001-2002 ; NINE: A Journal of Baseball History and Culture Volume 10, 2001-2002 ; 475 >
+        au < exists ; 2002-2003 ; NINE: A Journal of Baseball History and Culture Volume 11, 2002-2003 ; 476 >
+        au < exists ; 2003-2004 ; NINE: A Journal of Baseball History and Culture Volume 12, 2003-2004 ; 947 >
+        au < exists ; 2004-2005 ; NINE: A Journal of Baseball History and Culture Volume 13, 2004-2005 ; 2558 >
+        au < exists ; 2005 ; NINE: A Journal of Baseball History and Culture Volume 14, 2005 ; 2863 >
+        au < exists ; 2006 ; NINE: A Journal of Baseball History and Culture Volume 15, 2006 ; 3141 >
+        au < exists ; 2007 ; NINE: A Journal of Baseball History and Culture Volume 16, 2007 ; 3453 >
+        au < exists ; 2008 ; NINE: A Journal of Baseball History and Culture Volume 17, 2008 ; 3877 >
+        au < exists ; 2009 ; NINE: A Journal of Baseball History and Culture Volume 18, 2009 ; 5021 >
+        au < exists ; 2010 ; NINE: A Journal of Baseball History and Culture Volume 19, 2010 ; 6562 >
+        au < exists ; 2011 ; NINE: A Journal of Baseball History and Culture Volume 20, 2011 ; 8138 >
+        au < exists ; 2012 ; NINE: A Journal of Baseball History and Culture Volume 21, 2012 ; 8879 >
+        au < exists ; 2013 ; NINE: A Journal of Baseball History and Culture Volume 22, 2013 ; 9691 >
+        au < exists ; 2014-2015 ; NINE: A Journal of Baseball History and Culture Volume 23, 2014-2015 ; 10663 >
+
+    }
+    {
+    title <
+      name = Native South ;
+      issn = 2152-4025  ;
+      eissn = 1943-2569  ;
+      issnl = 1943-2569
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Native South Volume 1, 2008 ; 5725 >
+        au < exists ; 2009 ; Native South Volume 2, 2009 ; 5791 >
+        au < exists ; 2010 ; Native South Volume 3, 2010 ; 6421 >
+        au < exists ; 2011 ; Native South Volume 4, 2011 ; 7527 >
+        au < exists ; 2012 ; Native South Volume 5, 2012 ; 8435 >
+        au < exists ; 2013 ; Native South Volume 6, 2013 ; 9277 >
+        au < exists ; 2014 ; Native South Volume 7, 2014 ; 10099 >
+        au < exists ; 2015 ; Native South Volume 8, 2015 ; 10673 >
+        au < exists ; 2016 ; Native South Volume 9, 2016 ; 11347 >
+
+    }
+    {
+    title <
+      name = Nineteenth-Century French Studies ;
+      issn = 0146-7891  ;
+      eissn = 1536-0172  ;
+      issnl = 0146-7891
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Nineteenth-Century French Studies Volume 29, 2001 ; 465 >
+        au < exists ; 2001-2002 ; Nineteenth-Century French Studies Volume 30, 2001-2002 ; 466 >
+        au < exists ; 2002-2003 ; Nineteenth-Century French Studies Volume 31, 2002-2003 ; 750 >
+        au < exists ; 2003-2004 ; Nineteenth-Century French Studies Volume 32, 2003-2004 ; 1703 >
+        au < exists ; 2004-2005 ; Nineteenth-Century French Studies Volume 33, 2004-2005 ; 2591 >
+        au < exists ; 2005-2006 ; Nineteenth-Century French Studies Volume 34, 2005-2006 ; 2866 >
+        au < exists ; 2006-2007 ; Nineteenth-Century French Studies Volume 35, 2006-2007 ; 3181 >
+        au < exists ; 2007 ; Nineteenth-Century French Studies Volume 36, 2007 ; 3494 >
+        au < exists ; 2008 ; Nineteenth-Century French Studies Volume 37, 2008 ; 4014 >
+        au < exists ; 2009 ; Nineteenth-Century French Studies Volume 38, 2009 ; 5044 >
+        au < exists ; 2010 ; Nineteenth-Century French Studies Volume 39, 2010 ; 6531 >
+        au < exists ; 2011 ; Nineteenth-Century French Studies Volume 40, 2011 ; 7650 >
+        au < exists ; 2012 ; Nineteenth-Century French Studies Volume 41, 2012 ; 8505 >
+        au < exists ; 2013 ; Nineteenth-Century French Studies Volume 42, 2013 ; 9327 >
+        au < exists ; 2014 ; Nineteenth-Century French Studies Volume 43, 2014 ; 10189 >
+        au < exists ; 2015-2016 ; Nineteenth-Century French Studies Volume 44, 2015-2016 ; 10796 >
+        au < exists ; 2016-2017 ; Nineteenth-Century French Studies Volume 45, 2016-2017 ; 11414 >
+
+    }
+    {
+    title <
+      name = Nouvelles Études Francophones ;
+      issn = 1552-3152  ;
+      eissn = 2156-9428  ;
+      issnl = 1552-3152
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2010 ; Nouvelles Études Francophones Volume 25,  2010 ; 6432 >
+        au < exists ; 2011 ; Nouvelles Études Francophones Volume 26,  2011 ; 7204 >
+        au < exists ; 2012 ; Nouvelles Études Francophones Volume 27,  2012 ; 8443 >
+        au < exists ; 2013 ; Nouvelles Études Francophones Volume 28,  2013 ; 9662 >
+        au < exists ; 2014 ; Nouvelles Études Francophones Volume 29, 2014 ; 10449 >
+        au < exists ; 2015 ; Nouvelles Études Francophones Volume 30, 2015 ; 10763 >
+        au < exists ; 2016 ; Nouvelles Études Francophones Volume 31, 2016 ; 11350 >
+
+    }
+    {
+    title <
+      name = Prairie Schooner ;
+      issn = 0032-6682  ;
+      eissn = 1542-426X  ;
+      issnl = 0032-6682
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Prairie Schooner Volume 77, 2003 ; 878 >
+        au < exists ; 2004 ; Prairie Schooner Volume 78, 2004 ; 2455 >
+        au < exists ; 2005 ; Prairie Schooner Volume 79, 2005 ; 2719 >
+        au < exists ; 2006 ; Prairie Schooner Volume 80, 2006 ; 3057 >
+        au < exists ; 2007 ; Prairie Schooner Volume 81, 2007 ; 3443 >
+        au < exists ; 2008 ; Prairie Schooner Volume 82, 2008 ; 3774 >
+        au < exists ; 2009 ; Prairie Schooner Volume 83, 2009 ; 4270 >
+        au < exists ; 2010 ; Prairie Schooner Volume 84, 2010 ; 6158 >
+        au < exists ; 2011 ; Prairie Schooner Volume 85, 2011 ; 7028 >
+        au < exists ; 2012 ; Prairie Schooner Volume 86, 2012 ; 8215 >
+        au < exists ; 2013 ; Prairie Schooner Volume 87, 2013 ; 8870 >
+        au < exists ; 2014 ; Prairie Schooner Volume 88, 2014 ; 9887 >
+        au < exists ; 2015 ; Prairie Schooner Volume 89, 2015 ; 10750 >
+
+    }
+    {
+    title <
+      name = Qui Parle: Critical Humanities and Social Sciences ;
+      issn = 1938-8020  ;
+      eissn = 1041-8385  ;
+      issnl = 1041-8385
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Qui Parle: Critical Humanities and Social Sciences Volume 18, 2009 ; 5046 >
+        au < exists ; 2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 19, 2010 ; 6477 >
+        au < exists ; 2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 20, 2011 ; 7678 >
+        au < exists ; 2012 ; Qui Parle: Critical Humanities and Social Sciences Volume 21, 2012 ; 8522 >
+        au < exists ; 2013 ; Qui Parle: Critical Humanities and Social Sciences Volume 22, 2013 ; 9323 >
+        au < exists ; 2014 ; Qui Parle: Critical Humanities and Social Sciences Volume 23, 2014 ; 10192 >
+        au < exists ; 2015-2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 24, 2015-2016 ; 10837 >
+        au < exists ; 2016 ; Qui Parle: Critical Humanities and Social Sciences Volume 25, 2016 ; 12204 >
+
+    }
+    {
+    title <
+      name = Resilience: A Journal of the Environmental Humanities ;
+      issn =   ;
+      eissn = 2330-8117  ;
+      issnl = 2330-8117
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; Resilience: A Journal of the Environmental Humanities Volume 1, 2013 ; 10289 >
+        au < exists ; 2014 ; Resilience: A Journal of the Environmental Humanities Volume 2, 2014 ; 10667 >
+        au < exists ; 2015-2016 ; Resilience: A Journal of the Environmental Humanities Volume 3, 2015-2016 ; 12315 >
+
+    }
+    {
+    title <
+      name = Storyworlds: A Journal of Narrative Studies ;
+      issn = 1946-2204  ;
+      eissn = 2156-7204  ;
+      issnl = 1946-2204
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Storyworlds: A Journal of Narrative Studies Volume 1, 2009 ; 6352 >
+        au < exists ; 2010 ; Storyworlds: A Journal of Narrative Studies Volume 2, 2010 ; 6353 >
+        au < exists ; 2011 ; Storyworlds: A Journal of Narrative Studies Volume 3, 2011 ; 7252 >
+        au < exists ; 2012 ; Storyworlds: A Journal of Narrative Studies Volume 4, 2012 ; 8371 >
+        au < exists ; 2013 ; Storyworlds: A Journal of Narrative Studies Volume 5, 2013 ; 9066 >
+        au < exists ; 2014 ; Storyworlds: A Journal of Narrative Studies Volume 6, 2014 ; 9890 >
+        au < exists ; 2015 ; Storyworlds: A Journal of Narrative Studies Volume 7, 2015 ; 10743 >
+        au < exists ; 2016 ; Storyworlds: A Journal of Narrative Studies Volume 8, 2016 ; 11405 >
+
+    }
+    {
+    title <
+      name = Studies in American Indian Literatures ;
+      issn = 0730-3238  ;
+      eissn = 1548-9590  ;
+      issnl = 0730-3238
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Studies in American Indian Literatures Volume 16,  2004 ; 2496 >
+        au < exists ; 2005 ; Studies in American Indian Literatures Volume 17,  2005 ; 2743 >
+        au < exists ; 2006 ; Studies in American Indian Literatures Volume 18,  2006 ; 3008 >
+        au < exists ; 2007 ; Studies in American Indian Literatures Volume 19,  2007 ; 3406 >
+        au < exists ; 2008 ; Studies in American Indian Literatures Volume 20,  2008 ; 3752 >
+        au < exists ; 2009 ; Studies in American Indian Literatures Volume 21,  2009 ; 4346 >
+        au < exists ; 2010 ; Studies in American Indian Literatures Volume 22,  2010 ; 6114 >
+        au < exists ; 2011 ; Studies in American Indian Literatures Volume 23,  2011 ; 7180 >
+        au < exists ; 2012 ; Studies in American Indian Literatures Volume 24,  2012 ; 8237 >
+        au < exists ; 2013 ; Studies in American Indian Literatures Volume 25,  2013 ; 8928 >
+        au < exists ; 2014 ; Studies in American Indian Literatures Volume 26,  2014 ; 9783 >
+        au < exists ; 2015 ; Studies in American Indian Literatures Volume 27, 2015 ; 10683 >
+        au < exists ; 2016 ; Studies in American Indian Literatures Volume 28, 2016 ; 11198 >
+
+    }
+    {
+    title <
+      name = Studies in American Naturalism ;
+      issn = 1944-6519  ;
+      eissn = 1931-2555  ;
+      issnl = 1931-2555
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Studies in American Naturalism Volume 4, 2009 ; 5779 >
+        au < exists ; 2010 ; Studies in American Naturalism Volume 5, 2010 ; 6652 >
+        au < exists ; 2011 ; Studies in American Naturalism Volume 6, 2011 ; 8026 >
+        au < exists ; 2012 ; Studies in American Naturalism Volume 7, 2012 ; 8703 >
+        au < exists ; 2013 ; Studies in American Naturalism Volume 8, 2013 ; 9287 >
+        au < exists ; 2014 ; Studies in American Naturalism Volume 9, 2014 ; 10191 >
+        au < exists ; 2015 ; Studies in American Naturalism Volume 10, 2015 ; 10920 >
+        au < exists ; 2016 ; Studies in American Naturalism Volume 11, 2016 ; 12421 >
+
+    }
+    {
+    title <
+      name = The American Indian Quarterly ;
+      issn = 0095-182X  ;
+      eissn = 1534-1828  ;
+      issnl = 0095-182X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; The American Indian Quarterly Volume 24, 2000 ; 9 >
+        au < exists ; 2001 ; The American Indian Quarterly Volume 25, 2001 ; 10 >
+        au < exists ; 2002 ; The American Indian Quarterly Volume 26, 2002 ; 891 >
+        au < exists ; 2003 ; The American Indian Quarterly Volume 27, 2003 ; 2575 >
+        au < exists ; 2004 ; The American Indian Quarterly Volume 28, 2004 ; 2610 >
+        au < exists ; 2005 ; The American Indian Quarterly Volume 29, 2005 ; 2825 >
+        au < exists ; 2006 ; The American Indian Quarterly Volume 30, 2006 ; 2973 >
+        au < exists ; 2007 ; The American Indian Quarterly Volume 31, 2007 ; 3260 >
+        au < exists ; 2008 ; The American Indian Quarterly Volume 32, 2008 ; 3517 >
+        au < exists ; 2009 ; The American Indian Quarterly Volume 33, 2009 ; 4068 >
+        au < exists ; 2010 ; The American Indian Quarterly Volume 34, 2010 ; 5716 >
+        au < exists ; 2011 ; The American Indian Quarterly Volume 35, 2011 ; 6679 >
+        au < exists ; 2012 ; The American Indian Quarterly Volume 36, 2012 ; 7903 >
+        au < exists ; 2013 ; The American Indian Quarterly Volume 37, 2013 ; 9096 >
+        au < exists ; 2014 ; The American Indian Quarterly Volume 38, 2014 ; 9561 >
+        au < exists ; 2015 ; The American Indian Quarterly Volume 39, 2015 ; 10295 >
+        au < exists ; 2016 ; The American Indian Quarterly Volume 40, 2016 ; 10882 >
+        au < exists ; 2017 ; The American Indian Quarterly Volume 41, 2017 ; 12501 >
+
+    }
+    {
+    title <
+      name = The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis ;
+      issn =   ;
+      eissn = 2328-4048  ;
+      issnl = 2328-4048
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2014 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 1, 2014 ; 10395 >
+        au < exists ; 2015 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 2, 2015 ; 10973 >
+        au < exists ; 2016 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 3, 2016 ; 12465 >
+
+    }
+    {
+    title <
+      name = Theoretical & Applied Ethics ;
+      issn =   ;
+      eissn = 2156-7174  ;
+      issnl = 2156-7174
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; Theoretical & Applied Ethics Volume 2, 2013 ; 9356 >
+        au < exists ; 2014 ; Theoretical & Applied Ethics Volume 3, 2014 ; 10415 >
+
+    }
+    {
+    title <
+      name = Women and Music: A Journal of Gender and Culture ;
+      issn = 1553-0612  ;
+      eissn = 1090-7505  ;
+      issnl = 1090-7505
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; Women and Music: A Journal of Gender and Culture Volume 8, 2004 ; 2602 >
+        au < exists ; 2005 ; Women and Music: A Journal of Gender and Culture Volume 9, 2005 ; 2873 >
+        au < exists ; 2006 ; Women and Music: A Journal of Gender and Culture Volume 10, 2006 ; 3222 >
+        au < exists ; 2007 ; Women and Music: A Journal of Gender and Culture Volume 11, 2007 ; 3471 >
+        au < exists ; 2008 ; Women and Music: A Journal of Gender and Culture Volume 12, 2008 ; 4011 >
+        au < exists ; 2009 ; Women and Music: A Journal of Gender and Culture Volume 13, 2009 ; 5651 >
+        au < exists ; 2010 ; Women and Music: A Journal of Gender and Culture Volume 14, 2010 ; 6410 >
+        au < exists ; 2011 ; Women and Music: A Journal of Gender and Culture Volume 15, 2011 ; 7723 >
+        au < exists ; 2012 ; Women and Music: A Journal of Gender and Culture Volume 16, 2012 ; 8512 >
+        au < exists ; 2013 ; Women and Music: A Journal of Gender and Culture Volume 17, 2013 ; 9348 >
+        au < exists ; 2014 ; Women and Music: A Journal of Gender and Culture Volume 18, 2014 ; 10242 >
+        au < exists ; 2015 ; Women and Music: A Journal of Gender and Culture Volume 19, 2015 ; 10760 >
+        au < exists ; 2016 ; Women and Music: A Journal of Gender and Culture Volume 20, 2016 ; 12102 >
+
+    }
+    {
+    title <
+      name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
+      issn = 1058-7446  ;
+      eissn = 1940-512X  ;
+      issnl = 1058-7446
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1985 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 1, 1985 ; 6006 >
+        au < exists ; 1986 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 3, 1986 ; 6004 >
+        au < exists ; 1986 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 2, 1986 ; 6005 >
+        au < exists ; 1988 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 4, 1988 ; 6003 >
+        au < exists ; 1989 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 5, 1989 ; 6002 >
+        au < exists ; 1991 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 7, 1991 ; 6000 >
+        au < exists ; 1991 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 6, 1991 ; 6001 >
+        au < exists ; 1993 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 8, 1993 ; 5999 >
+        au < exists ; 1994 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 9, 1994 ; 5998 >
+        au < exists ; 1995 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 11, 1995 ; 5996 >
+        au < exists ; 1995 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 10, 1995 ; 5997 >
+        au < exists ; 1996 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 12, 1996 ; 5995 >
+        au < exists ; 1997 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 13, 1997 ; 5994 >
+        au < exists ; 1999 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 14, 1999 ; 5993 >
+        au < exists ; 2000 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 16, 2000 ; 5991 >
+        au < exists ; 2000 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 15, 2000 ; 5992 >
+        au < exists ; 2001 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 17, 2001 ; 5990 >
+        au < exists ; 2002 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 18, 2002 ; 5989 >
+        au < exists ; 2003 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 19, 2003 ; 5987 >
+        au < exists ; 2004 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 20, 2004 ; 5988 >
+        au < exists ; 2005 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 21, 2005 ; 5986 >
+        au < exists ; 2006 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 22, 2006 ; 5985 >
+        au < exists ; 2007 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23, 2007 ; 3700 >
+        au < exists ; 2008 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24, 2008 ; 4042 >
+        au < exists ; 2009 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25, 2009 ; 5664 >
+        au < exists ; 2010 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 26, 2010 ; 6625 >
+        au < exists ; 2011 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 27, 2011 ; 7824 >
+        au < exists ; 2012 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 28, 2012 ; 8602 >
+        au < exists ; 2013 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 29, 2013 ; 9544 >
+        au < exists ; 2014 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 30, 2014 ; 10271 >
+        au < exists ; 2015 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 31, 2015 ; 10907 >
+        au < exists ; 2016 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 32, 2016 ; 12301 >
+
+    }
+    {
+    title <
+      name = symploke ;
+      issn = 1069-0697  ;
+      eissn = 1534-0627  ;
+      issnl = 1069-0697
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1997 ; symploke Volume 5, 1997 ; 2684 >
+        au < exists ; 1998 ; symploke Volume 6, 1998 ; 2685 >
+        au < exists ; 1999 ; symploke Volume 7, 1999 ; 650 >
+        au < exists ; 2000 ; symploke Volume 8, 2000 ; 651 >
+        au < exists ; 2001 ; symploke Volume 9, 2001 ; 652 >
+        au < exists ; 2002 ; symploke Volume 10, 2002 ; 757 >
+        au < exists ; 2003 ; symploke Volume 11, 2003 ; 1713 >
+        au < exists ; 2004 ; symploke Volume 12, 2004 ; 2650 >
+        au < exists ; 2005 ; symploke Volume 13, 2005 ; 3101 >
+        au < exists ; 2006 ; symploke Volume 14, 2006 ; 3305 >
+        au < exists ; 2007 ; symploke Volume 15, 2007 ; 3746 >
+        au < exists ; 2008 ; symploke Volume 16, 2008 ; 4420 >
+        au < exists ; 2009 ; symploke Volume 17, 2009 ; 6532 >
+        au < exists ; 2010 ; symploke Volume 18, 2010 ; 7261 >
+        au < exists ; 2011 ; symploke Volume 19, 2011 ; 7866 >
+        au < exists ; 2012 ; symploke Volume 20, 2012 ; 8591 >
+        au < exists ; 2013 ; symploke Volume 21, 2013 ; 9565 >
+        au < exists ; 2014 ; symploke Volume 22, 2014 ; 10335 >
+        au < exists ; 2015 ; symploke Volume 23, 2015 ; 10885 >
+        au < exists ; 2016 ; symploke Volume 24,2016 ; 12287 >
+
+    }
+
+}

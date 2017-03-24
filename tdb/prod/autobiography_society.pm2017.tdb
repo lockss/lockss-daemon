@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Autobiography Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = a/b: Auto/Biography Studies ;
+      issn = 0898-9575  ;
+      eissn = 2151-7290  ;
+      issnl = 0898-9575
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; a/b: Auto/Biography Studies Volume 24, 2009 ; 6451 >
+        au < exists ; 2010 ; a/b: Auto/Biography Studies Volume 25, 2010 ; 7748 >
+        au < exists ; 2011 ; a/b: Auto/Biography Studies Volume 26, 2011 ; 8272 >
+        au < exists ; 2012 ; a/b: Auto/Biography Studies Volume 27, 2012 ; 8704 >
+        au < exists ; 2013 ; a/b: Auto/Biography Studies Volume 28, 2013 ; 9242 >
+
+    }
+
+}

@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = George Mason University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Social History ;
+      issn = 1527-1897  ;
+      eissn = 0022-4529  ;
+      issnl = 0022-4529
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999-2000 ; Journal of Social History Volume 33, 1999-2000 ; 340 >
+        au < exists ; 2000-2001 ; Journal of Social History Volume 34, 2000-2001 ; 341 >
+        au < exists ; 2001-2002 ; Journal of Social History Volume 35, 2001-2002 ; 342 >
+        au < exists ; 2002-2003 ; Journal of Social History Volume 36, 2002-2003 ; 343 >
+        au < exists ; 2003-2004 ; Journal of Social History Volume 37, 2003-2004 ; 962 >
+        au < exists ; 2004-2005 ; Journal of Social History Volume 38, 2004-2005 ; 2570 >
+        au < exists ; 2005-2006 ; Journal of Social History Volume 39, 2005-2006 ; 2843 >
+        au < exists ; 2006-2007 ; Journal of Social History Volume 40, 2006-2007 ; 3142 >
+        au < exists ; 2007 ; Journal of Social History Volume 41, 2007 ; 3491 >
+        au < exists ; 2008 ; Journal of Social History Volume 42, 2008 ; 3970 >
+        au < exists ; 2009 ; Journal of Social History Volume 43, 2009 ; 5659 >
+        au < exists ; 2010 ; Journal of Social History Volume 44, 2010 ; 6530 >
+        au < exists ; 2011 ; Journal of Social History Volume 45, 2011 ; 7702 >
+        au < exists ; 2012-2013 ; Journal of Social History Volume 46, 2012-2013 ; 8461 >
+        au < exists ; 2013-2014 ; Journal of Social History Volume 47, 2013-2014 ; 9303 >
+        au < exists ; 2014-2015 ; Journal of Social History Volume 48, 2014-2015 ; 10162 >
+        au < exists ; 2015-2016 ; Journal of Social History Volume 49, 2015-2016 ; 10782 >
+        au < exists ; 2016-2017 ; Journal of Social History Volume 50, 2016-2017 ; 11426 >
+
+    }
+
+}

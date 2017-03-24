@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = Association Le Mouvement Social
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Le mouvement social ;
+      issn = 0027-2671  ;
+      eissn = 1961-8646  ;
+      issnl = 0027-2671
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2009 ; Le mouvement social Number 226, janvier-mars 2009 ; 4150 >
+        au < exists ; 2009 ; Le mouvement social Number 227, avril-juin 2009 ; 4328 >
+        au < exists ; 2009 ; Le mouvement social Number 228, juillet-septembre 2009 ; 4412 >
+        au < exists ; 2009 ; Le mouvement social Number 229, octobre-décembre 2009 ; 5657 >
+        au < exists ; 2010 ; Le mouvement social Number 230, janvier-mars 2010 ; 5856 >
+        au < exists ; 2010 ; Le mouvement social Number 231, avril-juin 2010 ; 6368 >
+        au < exists ; 2010 ; Le mouvement social Number 232, juillet-septembre 2010 ; 6452 >
+        au < exists ; 2010 ; Le mouvement social Number 233, octobre-décembre 2010 ; 6640 >
+        au < exists ; 2011 ; Le mouvement social Number 234, janvier-mars 2011 ; 6898 >
+        au < exists ; 2011 ; Le mouvement social Numéro 236, juillet-septembre 2011 ; 7586 >
+        au < exists ; 2011 ; Le mouvement social Numéro 237, octobre-décembre 2011 ; 7779 >
+        au < exists ; 2012 ; Le mouvement social Numéro 238, janvier-mars 2012 ; 8071 >
+        au < exists ; 2012 ; Le mouvement social Numéro 239, avril-juin 2012 ; 8290 >
+        au < exists ; 2012 ; Le mouvement social Numéro 240, juillet-septembre 2012 ; 8450 >
+        au < exists ; 2012 ; Le mouvement social Numéro 241, octobre-décembre 2012 ; 8659 >
+        au < exists ; 2013 ; Le mouvement social Numéro 242, janvier-mars 2013 ; 8854 >
+        au < exists ; 2013 ; Le mouvement social Numéro 243, avril-juin 2013 ; 9204 >
+        au < exists ; 2013 ; Le mouvement social Numéro 244, juillet-septembre 2013 ; 9314 >
+        au < exists ; 2013 ; Le mouvement social Numéro 245,  octobre-décembre 2013 ; 9476 >
+        au < exists ; 2014 ; Le mouvement social Numéro 246,  janvier-mars 2014 ; 9733 >
+        au < exists ; 2014 ; Le mouvement social Numéro 247, avril-juin 2014 ; 10044 >
+        au < exists ; 2014 ; Le mouvement social Numéro 248, juillet-septembre 2014 ; 10146 >
+        au < exists ; 2014 ; Le mouvement social Numéro 249, octobre-décembre 2014 ; 10252 >
+        au < exists ; 2015 ; Le mouvement social Numéro 250, janvier-mars 2015 ; 10465 >
+        au < exists ; 2015 ; Le mouvement social Numéro 251, Avril-Juin 2015 ; 10706 >
+        au < exists ; 2015 ; Le mouvement social Numéro 252, juillet-septembre 2015 ; 10783 >
+        au < exists ; 2015 ; Le mouvement social Numéro 253, octobre-décembre 2015 ; 10873 >
+        au < exists ; 2016 ; Le mouvement social Numéro 254, janvier-mars 2016 ; 11157 >
+        au < exists ; 2016 ; Le mouvement social Numéro 255, Avril-Juin 2016 ; 11315 >
+        au < exists ; 2016 ; Le mouvement social Numéro 256, juillet-septembre 2016 ; 12151 >
+        au < exists ; 2016 ; Le mouvement social Numéro 257, octobre-décembre 2016 ; 12440 >
+        au < exists ; DDDD ; Le mouvement social Number 235, avril-juin 2011  ; 7308 >
+
+    }
+
+}

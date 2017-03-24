@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = University of Manitoba
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Mosaic, an interdisciplinary critical journal ;
+      issn = 0027-1276  ;
+      eissn = 1925-5683  ;
+      issnl = 0027-1276
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Mosaic, an interdisciplinary critical journal Volume 44, 2011 ; 6944 >
+        au < exists ; 2012 ; Mosaic, an interdisciplinary critical journal Volume 45, 2012 ; 8119 >
+        au < exists ; 2013 ; Mosaic, an interdisciplinary critical journal Volume 46, 2013 ; 8824 >
+        au < exists ; 2014 ; Mosaic, an interdisciplinary critical journal Volume 47, 2014 ; 9786 >
+        au < exists ; 2015 ; Mosaic, an interdisciplinary critical journal Volume 48, 2015 ; 10512 >
+        au < exists ; 2016 ; Mosaic, an interdisciplinary critical journal Volume 49, 2016 ; 11039 >
+        au < exists ; 2017 ; Mosaic, an interdisciplinary critical journal Volume 50, 2017 ; 12467 >
+
+    }
+
+}

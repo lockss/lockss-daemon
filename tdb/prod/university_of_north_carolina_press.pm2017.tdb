@@ -1,0 +1,391 @@
+{
+  publisher <
+    name = University of North Carolina Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Appalachian Heritage ;
+      issn = 0363-2318  ;
+      eissn = 1940-5081  ;
+      issnl = 0363-2318
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1973 ; Appalachian Heritage Volume 1, 1973 ; 7436 >
+        au < exists ; 1974 ; Appalachian Heritage Volume 2, 1974 ; 7435 >
+        au < exists ; 1975 ; Appalachian Heritage Volume 3, 1975 ; 7434 >
+        au < exists ; 1976 ; Appalachian Heritage Volume 4, 1976 ; 7433 >
+        au < exists ; 1977 ; Appalachian Heritage Volume 5, 1977 ; 7427 >
+        au < exists ; 1978 ; Appalachian Heritage Volume 6, 1978 ; 7426 >
+        au < exists ; 1979 ; Appalachian Heritage Volume 7, 1979 ; 7425 >
+        au < exists ; 1980 ; Appalachian Heritage Volume 8, 1980 ; 7424 >
+        au < exists ; 1981 ; Appalachian Heritage Volume 9, 1981 ; 7373 >
+        au < exists ; 1982 ; Appalachian Heritage Volume 10, 1982 ; 7372 >
+        au < exists ; 1983 ; Appalachian Heritage Volume 11, 1983 ; 7366 >
+        au < exists ; 1984 ; Appalachian Heritage Volume 12, 1984 ; 7365 >
+        au < exists ; 1985 ; Appalachian Heritage Volume 13, 1985 ; 7364 >
+        au < exists ; 1986 ; Appalachian Heritage Volume 14, 1986 ; 7358 >
+        au < exists ; 1987 ; Appalachian Heritage Volume 15, 1987 ; 7356 >
+        au < exists ; 1988 ; Appalachian Heritage Volume 16, 1988 ; 7355 >
+        au < exists ; 1989 ; Appalachian Heritage Volume 17, 1989 ; 7354 >
+        au < exists ; 1990 ; Appalachian Heritage Volume 18, 1990 ; 7353 >
+        au < exists ; 1991 ; Appalachian Heritage Volume 19, 1991 ; 7352 >
+        au < exists ; 1992 ; Appalachian Heritage Volume 20, 1992 ; 7344 >
+        au < exists ; 1993 ; Appalachian Heritage Volume 21, 1993 ; 7343 >
+        au < exists ; 1994 ; Appalachian Heritage Volume 22, 1994 ; 7342 >
+        au < exists ; 1995 ; Appalachian Heritage Volume 23, 1995 ; 7341 >
+        au < exists ; 1996 ; Appalachian Heritage Volume 24, 1996 ; 7340 >
+        au < exists ; 1997 ; Appalachian Heritage Volume 25, 1997 ; 7339 >
+        au < exists ; 1998 ; Appalachian Heritage Volume 26, 1998 ; 7329 >
+        au < exists ; 1999 ; Appalachian Heritage Volume 27, 1999 ; 7333 >
+        au < exists ; 2000 ; Appalachian Heritage Volume 28, 2000 ; 7334 >
+        au < exists ; 2001 ; Appalachian Heritage Volume 29, 2001 ; 7335 >
+        au < exists ; 2002 ; Appalachian Heritage Volume 30, 2002 ; 7268 >
+        au < exists ; 2003 ; Appalachian Heritage Volume 31, 2003 ; 7269 >
+        au < exists ; 2004 ; Appalachian Heritage Volume 32, 2004 ; 7207 >
+        au < exists ; 2005 ; Appalachian Heritage Volume 33, 2005 ; 7263 >
+        au < exists ; 2006 ; Appalachian Heritage Volume 34, 2006 ; 7264 >
+        au < exists ; 2007 ; Appalachian Heritage Volume 35, 2007 ; 7265 >
+        au < exists ; 2008 ; Appalachian Heritage Volume 36, 2008 ; 3727 >
+        au < exists ; 2009 ; Appalachian Heritage Volume 37, 2009 ; 4145 >
+        au < exists ; 2010 ; Appalachian Heritage Volume 38, 2010 ; 5733 >
+        au < exists ; 2011 ; Appalachian Heritage Volume 39, 2011 ; 6811 >
+        au < exists ; 2012 ; Appalachian Heritage Volume 40, 2012 ; 8008 >
+        au < exists ; 2013 ; Appalachian Heritage Volume 41, 2013 ; 8933 >
+        au < exists ; 2014 ; Appalachian Heritage Volume 42, 2014 ; 9875 >
+        au < exists ; 2015 ; Appalachian Heritage Volume 43, 2015 ; 10800 >
+        au < exists ; 2016 ; Appalachian Heritage Volume 44, 2016 ; 11408 >
+
+    }
+    {
+    title <
+      name = Early American Literature ;
+      issn = 0012-8163  ;
+      eissn = 1534-147X  ;
+      issnl = 0012-8163
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Early American Literature Volume 35, 2000 ; 169 >
+        au < exists ; 2001 ; Early American Literature Volume 36, 2001 ; 170 >
+        au < exists ; 2002 ; Early American Literature Volume 37, 2002 ; 171 >
+        au < exists ; 2003 ; Early American Literature Volume 38, 2003 ; 849 >
+        au < exists ; 2004 ; Early American Literature Volume 39, 2004 ; 2445 >
+        au < exists ; 2005 ; Early American Literature Volume 40, 2005 ; 2664 >
+        au < exists ; 2006 ; Early American Literature Volume 41, 2006 ; 2968 >
+        au < exists ; 2007 ; Early American Literature Volume 42, 2007 ; 3246 >
+        au < exists ; 2008 ; Early American Literature Volume 43, 2008 ; 3736 >
+        au < exists ; 2009 ; Early American Literature Volume 44, 2009 ; 4261 >
+        au < exists ; 2010 ; Early American Literature Volume 45, 2010 ; 5926 >
+        au < exists ; 2011 ; Early American Literature Volume 46, 2011 ; 6954 >
+        au < exists ; 2012 ; Early American Literature Volume 47, 2012 ; 8167 >
+        au < exists ; 2013 ; Early American Literature Volume 48, 2013 ; 8811 >
+        au < exists ; 2014 ; Early American Literature Volume 49, 2014 ; 9743 >
+        au < exists ; 2015 ; Early American Literature Volume 50, 2015 ; 10396 >
+        au < exists ; 2016 ; Early American Literature Volume 51, 2016 ; 11064 >
+        au < exists ; 2017 ; Early American Literature Volume 52, 2017 ; 12470 >
+
+    }
+    {
+    title <
+      name = Social Forces ;
+      issn = 0037-7732  ;
+      eissn = 1534-7605  ;
+      issnl = 0037-7732
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000-2001 ; Social Forces Volume 79, 2000-2001 ; 640 >
+        au < exists ; 2001-2002 ; Social Forces Volume 80, 2001-2002 ; 641 >
+        au < exists ; 2002-2003 ; Social Forces Volume 81, 2002-2003 ; 735 >
+        au < exists ; 2003-2004 ; Social Forces Volume 82, 2003-2004 ; 971 >
+        au < exists ; 2004-2005 ; Social Forces Volume 83, 2004-2005 ; 2593 >
+        au < exists ; 2005-2006 ; Social Forces Volume 84, 2005-2006 ; 2865 >
+        au < exists ; 2006-2007 ; Social Forces Volume 85, 2006-2007 ; 3147 >
+        au < exists ; 2007-2008 ; Social Forces Volume 86, 2007-2008 ; 3469 >
+        au < exists ; 2008-2009 ; Social Forces Volume 87, 2008-2009 ; 4065 >
+        au < exists ; 2009-2010 ; Social Forces Volume 88, 2009-2010 ; 5689 >
+        au < exists ; 2010-2011 ; Social Forces Volume 89, 2010-2011 ; 6984 >
+        au < exists ; 2011-2012 ; Social Forces Volume 90, 2011-2012 ; 7887 >
+        au < exists ; 2012-2013 ; Social Forces Volume 91, 2012-2013 ; 8444 >
+        au < exists ; 2013-2014 ; Social Forces Volume 92, 2013-2014 ; 9276 >
+        au < exists ; 2014-2015 ; Social Forces Volume 93, 2014-2015 ; 10170 >
+        au < exists ; 2015-2016 ; Social Forces Volume 94, 2015-2016 ; 10747 >
+        au < exists ; 2016-2017 ; Social Forces Volume 95, 2016-2017 ; 12121 >
+
+    }
+    {
+    title <
+      name = Southeastern Geographer ;
+      issn = 0038-366X  ;
+      eissn = 1549-6929  ;
+      issnl = 0038-366X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1961 ; Southeastern Geographer Volume 1, 1961 ; 7172 >
+        au < exists ; 1962 ; Southeastern Geographer Volume 2, 1962 ; 7173 >
+        au < exists ; 1963 ; Southeastern Geographer Volume 3, 1963 ; 10254 >
+        au < exists ; 1964 ; Southeastern Geographer Volume 4, 1964 ; 7175 >
+        au < exists ; 1965 ; Southeastern Geographer Volume 5, 1965 ; 7176 >
+        au < exists ; 1966 ; Southeastern Geographer Volume 6, 1966 ; 7177 >
+        au < exists ; 1967 ; Southeastern Geographer Volume 7, 1967 ; 7178 >
+        au < exists ; 1968 ; Southeastern Geographer Volume 8, 1968 ; 9089 >
+        au < exists ; 1969 ; Southeastern Geographer Volume 9, 1969 ; 9438 >
+        au < exists ; 1970 ; Southeastern Geographer Volume 10, 1970 ; 7156 >
+        au < exists ; 1971 ; Southeastern Geographer Volume 11, 1971 ; 7157 >
+        au < exists ; 1972 ; Southeastern Geographer Volume 12, 1972 ; 7158 >
+        au < exists ; 1973 ; Southeastern Geographer Volume 13, 1973 ; 7159 >
+        au < exists ; 1974 ; Southeastern Geographer Volume 14, 1974 ; 7160 >
+        au < exists ; 1975 ; Southeastern Geographer Volume 15, 1975 ; 7161 >
+        au < exists ; 1976 ; Southeastern Geographer Volume 16, 1976 ; 7162 >
+        au < exists ; 1977 ; Southeastern Geographer Volume 17, 1977 ; 7163 >
+        au < exists ; 1978 ; Southeastern Geographer Volume 18, 1978 ; 7164 >
+        au < exists ; 1979 ; Southeastern Geographer Volume 19, 1979 ; 7165 >
+        au < exists ; 1980 ; Southeastern Geographer Volume 20, 1980 ; 7166 >
+        au < exists ; 1981 ; Southeastern Geographer Volume 21, 1981 ; 7167 >
+        au < exists ; 1982 ; Southeastern Geographer Volume 22, 1982 ; 7168 >
+        au < exists ; 1983 ; Southeastern Geographer Volume 23, 1983 ; 7130 >
+        au < exists ; 1984 ; Southeastern Geographer Volume 24, 1984 ; 7131 >
+        au < exists ; 1985 ; Southeastern Geographer Volume 25, 1985 ; 7141 >
+        au < exists ; 1986 ; Southeastern Geographer Volume 26, 1986 ; 7140 >
+        au < exists ; 1987 ; Southeastern Geographer Volume 27, 1987 ; 7139 >
+        au < exists ; 1988 ; Southeastern Geographer Volume 28, 1988 ; 7138 >
+        au < exists ; 1989 ; Southeastern Geographer Volume 29, 1989 ; 7137 >
+        au < exists ; 1990 ; Southeastern Geographer Volume 30, 1990 ; 7136 >
+        au < exists ; 1991 ; Southeastern Geographer Volume 31, 1991 ; 7135 >
+        au < exists ; 1992 ; Southeastern Geographer Volume 32, 1992 ; 7134 >
+        au < exists ; 1993 ; Southeastern Geographer Volume 33, 1993 ; 7133 >
+        au < exists ; 1994 ; Southeastern Geographer Volume 34, 1994 ; 7132 >
+        au < exists ; 1995 ; Southeastern Geographer Volume 35, 1995 ; 7074 >
+        au < exists ; 1996 ; Southeastern Geographer Volume 36, 1996 ; 7047 >
+        au < exists ; 1997 ; Southeastern Geographer Volume 37, 1997 ; 7075 >
+        au < exists ; 1998 ; Southeastern Geographer Volume 38, 1998 ; 9090 >
+        au < exists ; 1999 ; Southeastern Geographer Volume 39, 1999 ; 7045 >
+        au < exists ; 2000 ; Southeastern Geographer Volume 40, 2000 ; 7046 >
+        au < exists ; 2001 ; Southeastern Geographer Volume 41, 2001 ; 7048 >
+        au < exists ; 2002 ; Southeastern Geographer Volume 42, 2002 ; 7003 >
+        au < exists ; 2003 ; Southeastern Geographer Volume 43, 2003 ; 7049 >
+        au < exists ; 2004 ; Southeastern Geographer Volume 44, 2004 ; 2532 >
+        au < exists ; 2005 ; Southeastern Geographer Volume 45, 2005 ; 2796 >
+        au < exists ; 2006 ; Southeastern Geographer Volume 46, 2006 ; 3041 >
+        au < exists ; 2007 ; Southeastern Geographer Volume 47, 2007 ; 3375 >
+        au < exists ; 2008 ; Southeastern Geographer Volume 48, 2008 ; 3835 >
+        au < exists ; 2009 ; Southeastern Geographer Volume 49, 2009 ; 4180 >
+        au < exists ; 2010 ; Southeastern Geographer Volume 50, 2010 ; 6110 >
+        au < exists ; 2011 ; Southeastern Geographer Volume 51, 2011 ; 7083 >
+        au < exists ; 2012 ; Southeastern Geographer Volume 52, 2012 ; 8196 >
+        au < exists ; 2013 ; Southeastern Geographer Volume 53, 2013 ; 8816 >
+        au < exists ; 2014 ; Southeastern Geographer Volume 54, 2014 ; 9876 >
+        au < exists ; 2015 ; Southeastern Geographer Volume 55, 2015 ; 10692 >
+        au < exists ; 2016 ; Southeastern Geographer Volume 56, 2016 ; 11076 >
+        au < exists ; 2017 ; Southeastern Geographer Volume 57, 2017 ; 12471 >
+
+    }
+    {
+    title <
+      name = Southern Cultures ;
+      issn = 1068-8218  ;
+      eissn = 1534-1488  ;
+      issnl = 1068-8218
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1993 ; Southern Cultures Inaugural Issue, 1993 ; 7183 >
+        au < exists ; 1994-1995 ; Southern Cultures Volume 1, 1994-1995 ; 7015 >
+        au < exists ; 1995 ; Southern Cultures Volume 2, 1995 ; 7016 >
+        au < exists ; 1997 ; Southern Cultures Volume 3, 1997 ; 7024 >
+        au < exists ; 1998 ; Southern Cultures Volume 4, 1998 ; 7017 >
+        au < exists ; 1999 ; Southern Cultures Volume 5, 1999 ; 7018 >
+        au < exists ; 2000 ; Southern Cultures Volume 6, 2000 ; 614 >
+        au < exists ; 2001 ; Southern Cultures Volume 7, 2001 ; 615 >
+        au < exists ; 2002 ; Southern Cultures Volume 8, 2002 ; 616 >
+        au < exists ; 2003 ; Southern Cultures Volume 9, 2003 ; 847 >
+        au < exists ; 2004 ; Southern Cultures Volume 10, 2004 ; 2417 >
+        au < exists ; 2005 ; Southern Cultures Volume 11, 2005 ; 2687 >
+        au < exists ; 2006 ; Southern Cultures Volume 12, 2006 ; 2961 >
+        au < exists ; 2007 ; Southern Cultures Volume 13, 2007 ; 3236 >
+        au < exists ; 2008 ; Southern Cultures Volume 14, 2008 ; 3647 >
+        au < exists ; 2009 ; Southern Cultures Volume 15, 2009 ; 4154 >
+        au < exists ; 2010 ; Southern Cultures Volume 16, 2010 ; 5805 >
+        au < exists ; 2011 ; Southern Cultures Volume 17, 2011 ; 6837 >
+        au < exists ; 2012 ; Southern Cultures Volume 18, 2012 ; 7999 >
+        au < exists ; 2013 ; Southern Cultures Volume 19, 2013 ; 8729 >
+        au < exists ; 2014 ; Southern Cultures Volume 20, 2014 ; 9647 >
+        au < exists ; 2015 ; Southern Cultures Volume 21, 2015 ; 10515 >
+        au < exists ; 2016 ; Southern Cultures Volume 22, 2016 ; 11004 >
+
+    }
+    {
+    title <
+      name = Studies in Philology ;
+      issn = 0039-3738  ;
+      eissn = 1543-0383  ;
+      issnl = 0039-3738
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Studies in Philology Volume 100, 2003 ; 794 >
+        au < exists ; 2004 ; Studies in Philology Volume 101, 2004 ; 1759 >
+        au < exists ; 2005 ; Studies in Philology Volume 102, 2005 ; 2629 >
+        au < exists ; 2006 ; Studies in Philology Volume 103, 2006 ; 2903 >
+        au < exists ; 2007 ; Studies in Philology Volume 104, 2007 ; 3238 >
+        au < exists ; 2008 ; Studies in Philology Volume 105, 2008 ; 3600 >
+        au < exists ; 2009 ; Studies in Philology Volume 106, 2009 ; 4091 >
+        au < exists ; 2010 ; Studies in Philology Volume 107, 2010 ; 5728 >
+        au < exists ; 2011 ; Studies in Philology Volume 108, 2011 ; 6713 >
+        au < exists ; 2012 ; Studies in Philology Volume 109, 2012 ; 7907 >
+        au < exists ; 2013 ; Studies in Philology Volume 110, 2013 ; 8712 >
+        au < exists ; 2014 ; Studies in Philology Volume 111, 2014 ; 9593 >
+        au < exists ; 2015 ; Studies in Philology Volume 112, 2015 ; 10327 >
+        au < exists ; 2016 ; Studies in Philology Volume 113, 2016 ; 11077 >
+        au < exists ; 2017 ; Studies in Philology Volume 114, 2017 ; 12259 >
+
+    }
+    {
+    title <
+      name = The Comparatist ;
+      issn = 0195-7678  ;
+      eissn = 1559-0887  ;
+      issnl = 0195-7678
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1992 ; The Comparatist Volume 16, May 1992 ; 6852 >
+        au < exists ; 1995 ; The Comparatist Volume 19, May 1995 ; 6849 >
+        au < exists ; 1996 ; The Comparatist Volume 20, May 1996 ; 6848 >
+        au < exists ; 1997 ; The Comparatist Volume 21, May 1997 ; 6804 >
+        au < exists ; 1999 ; The Comparatist Volume 23, May 1999 ; 6857 >
+        au < exists ; 2000 ; The Comparatist Volume 24, May 2000 ; 6856 >
+        au < exists ; 2001 ; The Comparatist Volume 25, May 2001 ; 6855 >
+        au < exists ; 2002 ; The Comparatist Volume 26, May 2002 ; 6839 >
+        au < exists ; 2003 ; The Comparatist Volume 27, May 2003 ; 6840 >
+        au < exists ; 2004 ; The Comparatist Volume 28, May 2004 ; 6841 >
+        au < exists ; 2005 ; The Comparatist Volume 29, May 2005 ; 2914 >
+        au < exists ; 2006 ; The Comparatist Volume 30, May 2006 ; 3032 >
+        au < exists ; 2007 ; The Comparatist Volume 31, May 2007 ; 3389 >
+        au < exists ; 2008 ; The Comparatist Volume 32, May 2008 ; 3785 >
+        au < exists ; 2009 ; The Comparatist Volume 33, May 2009 ; 4380 >
+        au < exists ; 2010 ; The Comparatist Volume 34, May 2010 ; 6337 >
+        au < exists ; 2011 ; The Comparatist Volume 35, May 2011 ; 7423 >
+        au < exists ; 2012 ; The Comparatist Volume 36, May 2012 ; 8311 >
+        au < exists ; 2013 ; The Comparatist Volume 37, May 2013 ; 9060 >
+        au < exists ; 2014 ; The Comparatist Volume 38, October 2014 ; 10214 >
+        au < exists ; 2015 ; The Comparatist Volume 39, October 2015 ; 10829 >
+        au < exists ; 2016 ; The Comparatist Volume 40, October 2016 ; 12183 >
+
+    }
+    {
+    title <
+      name = The High School Journal ;
+      issn = 0018-1498  ;
+      eissn = 1534-5157  ;
+      issnl = 0018-1498
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; The High School Journal Volume 84, 2001 ; 267 >
+        au < exists ; 2001-2002 ; The High School Journal Volume 85, 2001-2002 ; 268 >
+        au < exists ; 2002-2003 ; The High School Journal Volume 86, 2002-2003 ; 269 >
+        au < exists ; 2003-2004 ; The High School Journal Volume 87, 2003-2004 ; 1708 >
+        au < exists ; 2004-2005 ; The High School Journal Volume 88, 2004-2005 ; 2578 >
+        au < exists ; 2005-2006 ; The High School Journal Volume 89, 2005-2006 ; 2851 >
+        au < exists ; 2006-2007 ; The High School Journal Volume 90, 2006-2007 ; 3151 >
+        au < exists ; 2007 ; The High School Journal Volume 91, 2007 ; 3495 >
+        au < exists ; 2008 ; The High School Journal Volume 92, 2008 ; 4041 >
+        au < exists ; 2009 ; The High School Journal Volume 93, 2009 ; 5688 >
+        au < exists ; 2010 ; The High School Journal Volume 94, 2010 ; 6693 >
+        au < exists ; 2011 ; The High School Journal Volume 95, 2011 ; 7665 >
+        au < exists ; 2012 ; The High School Journal Volume 96, 2012 ; 8520 >
+        au < exists ; 2013 ; The High School Journal Volume 97, 2013 ; 9431 >
+        au < exists ; 2014-2015 ; The High School Journal Volume 98, 2014-2015 ; 10218 >
+        au < exists ; 2015 ; The High School Journal Volume 99, 2015 ; 10824 >
+        au < exists ; 2016 ; The High School Journal Volume 100, 2016 ; 12154 >
+
+    }
+    {
+    title <
+      name = The Journal of the Civil War Era ;
+      issn = 2154-4727  ;
+      eissn = 2159-9807  ;
+      issnl = 2154-4727
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; The Journal of the Civil War Era Volume 1, 2011 ; 6918 >
+        au < exists ; 2012 ; The Journal of the Civil War Era Volume 2, 2012 ; 8024 >
+        au < exists ; 2013 ; The Journal of the Civil War Era Volume 3, 2013 ; 8783 >
+        au < exists ; 2014 ; The Journal of the Civil War Era Volume 4, 2014 ; 9644 >
+        au < exists ; 2015 ; The Journal of the Civil War Era Volume 5, 2015 ; 10348 >
+        au < exists ; 2016 ; The Journal of the Civil War Era Volume 6, 2016 ; 11044 >
+        au < exists ; 2017 ; The Journal of the Civil War Era Volume 7, 2017 ; 12322 >
+
+    }
+    {
+    title <
+      name = The Southern Literary Journal ;
+      issn = 0038-4291  ;
+      eissn = 1534-1461  ;
+      issnl = 0038-4291
+
+    >
+
+      attr[journal_id] = 0000
+
+        #NONE OF THIS  TITLE FOUND - changed to "South" in Fall of 2016 and PMuse lists the volumes under the new title
+
+    }
+    {
+    title <
+      name = South: a scholary journal ;
+      issn = 2474-8102  ;
+      eissn = 2470-9506  ;
+      issnl = 2474-8102
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000-2001 ; South: a scholary journal Volume 33, 2000-2001 ; 630 >
+        au < exists ; 2001-2002 ; South: a scholary journal Volume 34, 2001-2002 ; 631 >
+        au < exists ; 2002-2003 ; South: a scholary journal Volume 35, 2002-2003 ; 813 >
+        au < exists ; 2003-2004 ; South: a scholary journal Volume 36, 2003-2004 ; 1734 >
+        au < exists ; 2004-2005 ; South: a scholary journal Volume 37, 2004-2005 ; 2615 >
+        au < exists ; 2005-2006 ; South: a scholary journal Volume 38, 2005-2006 ; 2884 >
+        au < exists ; 2006-2007 ; South: a scholary journal Volume 39, 2006-2007 ; 3225 >
+        au < exists ; 2007-2008 ; South: a scholary journal Volume 40, 2007-2008 ; 3631 >
+        au < exists ; 2008-2009 ; South: a scholary journal Volume 41, 2008-2009 ; 4174 >
+        au < exists ; 2009-2010 ; South: a scholary journal Volume 42, 2009-2010 ; 5788 >
+        au < exists ; 2010-2011 ; South: a scholary journal Volume 43, 2010-2011 ; 6989 >
+        au < exists ; 2011-2012 ; South: a scholary journal Volume 44, 2011-2012 ; 8025 >
+        au < exists ; 2012-2013 ; South: a scholary journal Volume 45, 2012-2013 ; 9205 >
+        au < exists ; 2013-2014 ; South: a scholary journal Volume 46, 2013-2014 ; 9651 >
+        au < exists ; 2014-2015 ; South: a scholary journal Volume 47, 2014-2015 ; 10638 >
+        au < exists ; 2015-2016 ; South: a scholary journal Volume 48, 2015-2016 ; 11283 >
+
+    }
+
+}

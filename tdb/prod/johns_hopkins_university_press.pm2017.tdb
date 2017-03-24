@@ -1,0 +1,2888 @@
+{
+  publisher <
+    name = Johns Hopkins University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = American Imago ;
+      issn = 0065-860X  ;
+      eissn = 1085-7931  ;
+      issnl = 0065-860X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995 ; American Imago Volume 52, 1995 ; 1 >
+        au < exists ; 1996 ; American Imago Volume 53, 1996 ; 2 >
+        au < exists ; 1997 ; American Imago Volume 54, 1997 ; 3 >
+        au < exists ; 1998 ; American Imago Volume 55, 1998 ; 4 >
+        au < exists ; 1999 ; American Imago Volume 56, 1999 ; 5 >
+        au < exists ; 2000 ; American Imago Volume 57, 2000 ; 6 >
+        au < exists ; 2001 ; American Imago Volume 58, 2001 ; 7 >
+        au < exists ; 2002 ; American Imago Volume 59, 2002 ; 8 >
+        au < exists ; 2003 ; American Imago Volume 60, 2003 ; 894 >
+        au < exists ; 2004 ; American Imago Volume 61, 2004 ; 2475 >
+        au < exists ; 2005 ; American Imago Volume 62, 2005 ; 2747 >
+        au < exists ; 2006 ; American Imago Volume 63, 2006 ; 3001 >
+        au < exists ; 2007 ; American Imago Volume 64, 2007 ; 3361 >
+        au < exists ; 2008 ; American Imago Volume 65, 2008 ; 3812 >
+        au < exists ; 2009 ; American Imago Volume 66, 2009 ; 4309 >
+        au < exists ; 2010 ; American Imago Volume 67, 2010 ; 6115 >
+        au < exists ; 2011 ; American Imago Volume 68, 2011 ; 7546 >
+        au < exists ; 2012 ; American Imago Volume 69, 2012 ; 8402 >
+        au < exists ; 2013 ; American Imago Volume 70, 2013 ; 9047 >
+        au < exists ; 2014 ; American Imago Volume 71, 2014 ; 9803 >
+        au < exists ; 2015 ; American Imago Volume 72, 2015 ; 10509 >
+        au < exists ; 2016 ; American Imago Volume 73, 2016 ; 11127 >
+
+    }
+    {
+    title <
+      name = American Jewish History ;
+      issn = 0164-0178  ;
+      eissn = 1086-3141  ;
+      issnl = 0164-0178
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; American Jewish History Volume 84, 1996 ; 12 >
+        au < exists ; 1997 ; American Jewish History Volume 85, 1997 ; 13 >
+        au < exists ; 1998 ; American Jewish History Volume 86, 1998 ; 14 >
+        au < exists ; 1999 ; American Jewish History Volume 87, 1999 ; 15 >
+        au < exists ; 2000 ; American Jewish History Volume 88, 2000 ; 16 >
+        au < exists ; 2001 ; American Jewish History Volume 89, 2001 ; 17 >
+        au < exists ; 2002 ; American Jewish History Volume 90, 2002 ; 776 >
+        au < exists ; 2003 ; American Jewish History Volume 91, 2003 ; 2548 >
+        au < exists ; 2004 ; American Jewish History Volume 92, 2004 ; 2805 >
+        au < exists ; 2007 ; American Jewish History Volume 93, 2007 ; 3423 >
+        au < exists ; 2008 ; American Jewish History Volume 94, 2008 ; 4089 >
+        au < exists ; 2009 ; American Jewish History Volume 95, 2009 ; 6216 >
+        au < exists ; 2010 ; American Jewish History Volume 96, 2010 ; 8252 >
+        au < exists ; 2013 ; American Jewish History Volume 97, 2013 ; 8497 >
+        au < exists ; 2014 ; American Jewish History Volume 98, 2014 ; 9589 >
+        au < exists ; 2015 ; American Jewish History Volume 99, 2015 ; 10285 >
+        au < exists ; 2016 ; American Jewish History Volume 100, 2016 ; 10894 >
+        au < exists ; 2017 ; American Jewish History Volume 101, 2017 ; 12269 >
+
+    }
+    {
+    title <
+      name = American Journal of Mathematics ;
+      issn = 0002-9327  ;
+      eissn = 1080-6377  ;
+      issnl = 0002-9327
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; American Journal of Mathematics Volume 118, 1996 ; 18 >
+        au < exists ; 1997 ; American Journal of Mathematics Volume 119, 1997 ; 19 >
+        au < exists ; 1998 ; American Journal of Mathematics Volume 120, 1998 ; 20 >
+        au < exists ; 1999 ; American Journal of Mathematics Volume 121, 1999 ; 21 >
+        au < exists ; 2000 ; American Journal of Mathematics Volume 122, 2000 ; 22 >
+        au < exists ; 2001 ; American Journal of Mathematics Volume 123, 2001 ; 23 >
+        au < exists ; 2002 ; American Journal of Mathematics Volume 124, 2002 ; 24 >
+        au < exists ; 2003 ; American Journal of Mathematics Volume 125, 2003 ; 785 >
+        au < exists ; 2004 ; American Journal of Mathematics Volume 126, 2004 ; 1753 >
+        au < exists ; 2005 ; American Journal of Mathematics Volume 127, 2005 ; 2635 >
+        au < exists ; 2006 ; American Journal of Mathematics Volume 128, 2006 ; 2912 >
+        au < exists ; 2007 ; American Journal of Mathematics Volume 129, 2007 ; 3231 >
+        au < exists ; 2008 ; American Journal of Mathematics Volume 130, 2008 ; 3636 >
+        au < exists ; 2009 ; American Journal of Mathematics Volume 131, 2009 ; 4140 >
+        au < exists ; 2010 ; American Journal of Mathematics Volume 132, 2010 ; 5775 >
+        au < exists ; 2011 ; American Journal of Mathematics Volume 133, 2011 ; 6799 >
+        au < exists ; 2012 ; American Journal of Mathematics Volume 134, 2012 ; 7908 >
+        au < exists ; 2013 ; American Journal of Mathematics Volume 135, 2013 ; 8728 >
+        au < exists ; 2014 ; American Journal of Mathematics Volume 136, 2014 ; 9618 >
+        au < exists ; 2015 ; American Journal of Mathematics Volume 137, 2015 ; 10380 >
+        au < exists ; 2016 ; American Journal of Mathematics Volume 138, 2016 ; 10966 >
+        au < exists ; 2017 ; American Journal of Mathematics Volume 139, 2017 ; 12337 >
+
+    }
+    {
+    title <
+      name = American Journal of Philology ;
+      issn = 0002-9475  ;
+      eissn = 1086-3168  ;
+      issnl = 0002-9475
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; American Journal of Philology Volume 117, 1996 (465-468) ; 25 >
+        au < exists ; 1997 ; American Journal of Philology Volume 118, 1997 (469-472) ; 26 >
+        au < exists ; 1998 ; American Journal of Philology Volume 119, 1998 (473-476) ; 27 >
+        au < exists ; 1999 ; American Journal of Philology Volume 120, 1999 (477-480) ; 28 >
+        au < exists ; 2000 ; American Journal of Philology Volume 121, 2000 (481-484) ; 29 >
+        au < exists ; 2001 ; American Journal of Philology Volume 122, 2001 (485-488) ; 30 >
+        au < exists ; 2002 ; American Journal of Philology Volume 123, 2002 (489-492) ; 31 >
+        au < exists ; 2003 ; American Journal of Philology Volume 124, 2003 (493-496) ; 882 >
+        au < exists ; 2004 ; American Journal of Philology Volume 125, 2004 (497-500) ; 2454 >
+        au < exists ; 2005 ; American Journal of Philology Volume 126, 2005 (501-504) ; 2739 >
+        au < exists ; 2006 ; American Journal of Philology Volume 127, 2006 (505-508) ; 3029 >
+        au < exists ; 2007 ; American Journal of Philology Volume 128, 2007 (509-512) ; 3307 >
+        au < exists ; 2008 ; American Journal of Philology Volume 129, 2008 (513-516) ; 3705 >
+        au < exists ; 2009 ; American Journal of Philology Volume 130, 2009 (517-520) ; 4215 >
+        au < exists ; 2010 ; American Journal of Philology Volume 131, 2010 (521-524) ; 5778 >
+        au < exists ; 2011 ; American Journal of Philology Volume 132, 2011 (525-529) ; 7027 >
+        au < exists ; 2012 ; American Journal of Philology Volume 133, 2012 (529-532) ; 8166 >
+        au < exists ; 2013 ; American Journal of Philology Volume 134, 2013 (533-536) ; 8887 >
+        au < exists ; 2014 ; American Journal of Philology Volume 135, 2014 (537-540) ; 9823 >
+        au < exists ; 2015 ; American Journal of Philology Volume 136, 2015 (541-544) ; 10556 >
+        au < exists ; 2016 ; American Journal of Philology Volume 137, 2016  (545-548) ; 11169 >
+
+    }
+    {
+    title <
+      name = American Quarterly ;
+      issn = 0003-0678  ;
+      eissn = 1080-6490  ;
+      issnl = 0003-0678
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; American Quarterly Volume 48, 1996 ; 47 >
+        au < exists ; 1997 ; American Quarterly Volume 49, 1997 ; 48 >
+        au < exists ; 1998 ; American Quarterly Volume 50, 1998 ; 49 >
+        au < exists ; 1999 ; American Quarterly Volume 51, 1999 ; 50 >
+        au < exists ; 2000 ; American Quarterly Volume 52, 2000 ; 51 >
+        au < exists ; 2001 ; American Quarterly Volume 53, 2001 ; 52 >
+        au < exists ; 2002 ; American Quarterly Volume 54, 2002 ; 53 >
+        au < exists ; 2003 ; American Quarterly Volume 55, 2003 ; 837 >
+        au < exists ; 2004 ; American Quarterly Volume 56, 2004 ; 2439 >
+        au < exists ; 2005 ; American Quarterly Volume 57, 2005 ; 2701 >
+        au < exists ; 2006 ; American Quarterly Volume 58, 2006 ; 2998 >
+        au < exists ; 2007 ; American Quarterly Volume 59, 2007 ; 3283 >
+        au < exists ; 2008 ; American Quarterly Volume 60, 2008 ; 3653 >
+        au < exists ; 2009 ; American Quarterly Volume 61, 2009 ; 4209 >
+        au < exists ; 2010 ; American Quarterly Volume 62, 2010 ; 5812 >
+        au < exists ; 2011 ; American Quarterly Volume 63, 2011 ; 6999 >
+        au < exists ; 2012 ; American Quarterly Volume 64, 2012 ; 8158 >
+        au < exists ; 2013 ; American Quarterly Volume 65, 2013 ; 8890 >
+        au < exists ; 2014 ; American Quarterly Volume 66, 2014 ; 9800 >
+        au < exists ; 2015 ; American Quarterly Volume 67, 2015 ; 10525 >
+        au < exists ; 2016 ; American Quarterly Volume 68, 2016 ; 11114 >
+        au < exists ; 2017 ; American Quarterly Volume 69, 2017 ; 12516 >
+
+    }
+    {
+    title <
+      name = Arethusa ;
+      issn = 0004-0975  ;
+      eissn = 1080-6504  ;
+      issnl = 0004-0975
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; Arethusa Volume 29, 1996 ; 54 >
+        au < exists ; 1997 ; Arethusa Volume 30, 1997 ; 55 >
+        au < exists ; 1998 ; Arethusa Volume 31, 1998 ; 56 >
+        au < exists ; 1999 ; Arethusa Volume 32, 1999 ; 57 >
+        au < exists ; 2000 ; Arethusa Volume 33, 2000 ; 58 >
+        au < exists ; 2001 ; Arethusa Volume 34, 2001 ; 59 >
+        au < exists ; 2002 ; Arethusa Volume 35, 2002 ; 60 >
+        au < exists ; 2003 ; Arethusa Volume 36, 2003 ; 790 >
+        au < exists ; 2004 ; Arethusa Volume 37, 2004 ; 2507 >
+        au < exists ; 2005 ; Arethusa Volume 38, 2005 ; 2646 >
+        au < exists ; 2006 ; Arethusa Volume 39, 2006 ; 2932 >
+        au < exists ; 2007 ; Arethusa Volume 40, 2007 ; 3212 >
+        au < exists ; 2008 ; Arethusa Volume 41, 2008 ; 3666 >
+        au < exists ; 2009 ; Arethusa Volume 42, 2009 ; 4046 >
+        au < exists ; 2010 ; Arethusa Volume 43, 2010 ; 5693 >
+        au < exists ; 2011 ; Arethusa Volume 44, 2011 ; 6654 >
+        au < exists ; 2012 ; Arethusa Volume 45, 2012 ; 7992 >
+        au < exists ; 2013 ; Arethusa Volume 46, 2013 ; 8725 >
+        au < exists ; 2014 ; Arethusa Volume 47, 2014 ; 9623 >
+        au < exists ; 2015 ; Arethusa Volume 48, 2015 ; 10283 >
+        au < exists ; 2016 ; Arethusa Volume 49, 2016 ; 10909 >
+        au < exists ; 2017 ; Arethusa Volume 50, 2017 ; 12304 >
+
+    }
+    {
+    title <
+      name = Book History ;
+      issn = 1529-1499  ;
+      eissn = 1098-7371  ;
+      issnl = 1098-7371
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1998 ; Book History Volume 1, 1998 ; 82 >
+        au < exists ; 1999 ; Book History Volume 2, 1999 ; 83 >
+        au < exists ; 2000 ; Book History Volume 3, 2000 ; 84 >
+        au < exists ; 2001 ; Book History Volume 4, 2001 ; 85 >
+        au < exists ; 2002 ; Book History Volume 5, 2002 ; 761 >
+        au < exists ; 2003 ; Book History Volume 6, 2003 ; 1762 >
+        au < exists ; 2004 ; Book History Volume 7, 2004 ; 2587 >
+        au < exists ; 2005 ; Book History Volume 8, 2005 ; 2858 >
+        au < exists ; 2006 ; Book History Volume 9, 2006 ; 3140 >
+        au < exists ; 2007 ; Book History Volume 10, 2007 ; 3473 >
+        au < exists ; 2008 ; Book History Volume 11, 2008 ; 3993 >
+        au < exists ; 2009 ; Book History Volume 12, 2009 ; 4393 >
+        au < exists ; 2010 ; Book History Volume 13, 2010 ; 6177 >
+        au < exists ; 2011 ; Book History Volume 14, 2011 ; 7025 >
+        au < exists ; 2012 ; Book History Volume 15, 2012 ; 8498 >
+        au < exists ; 2013 ; Book History Volume 16, 2013 ; 9377 >
+        au < exists ; 2014 ; Book History Volume 17, 2014 ; 10212 >
+        au < exists ; 2015 ; Book History Volume 18, 2015 ; 10807 >
+        au < exists ; 2016 ; Book History Volume 19, 2016 ; 12296 >
+
+    }
+    {
+    title <
+      name = Bookbird: A Journal of International Children's Literature ;
+      issn = 0006-7377  ;
+      eissn = 1918-6983  ;
+      issnl = 0006-7377
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46, 2008 ; 4080 >
+        au < exists ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47, 2009 ; 4081 >
+        au < exists ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48, 2010 ; 5746 >
+        au < exists ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49, 2011 ; 6776 >
+        au < exists ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50, 2012 ; 7928 >
+        au < exists ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51, 2013 ; 8713 >
+        au < exists ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52, 2014 ; 9765 >
+        au < exists ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53, 2015 ; 10385 >
+        au < exists ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54, 2016 ; 10965 >
+        au < exists ; 2017 ; Bookbird: A Journal of International Children's Literature Volume 55, 2017 ; 12368 >
+
+    }
+    {
+    title <
+      name = Bulletin of the Center for Children's Books ;
+      issn = 0008-9036  ;
+      eissn = 1558-6766  ;
+      issnl = 0008-9036
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005-2006 ; Bulletin of the Center for Children's Books Volume 59, 2005-2006 ; 2861 >
+        au < exists ; 2006-2007 ; Bulletin of the Center for Children's Books Volume 60, 2006-2007 ; 3130 >
+        au < exists ; 2007-2008 ; Bulletin of the Center for Children's Books Volume 61, 2007-2008 ; 3468 >
+        au < exists ; 2008-2009 ; Bulletin of the Center for Children's Books Volume 62, 2008-2009 ; 3891 >
+        au < exists ; 2009-2010 ; Bulletin of the Center for Children's Books Volume 63, 2009-2010 ; 4927 >
+        au < exists ; 2010-2011 ; Bulletin of the Center for Children's Books Volume 64, 2010-2011 ; 6423 >
+        au < exists ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65, 2011-2012 ; 7552 >
+        au < exists ; 2012-2013 ; Bulletin of the Center for Children's Books Volume 66, 2012-2013 ; 8445 >
+        au < exists ; 2013-2014 ; Bulletin of the Center for Children's Books Volume 67, 2013-2014 ; 9279 >
+        au < exists ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68, 2014-2015 ; 10147 >
+        au < exists ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69, 2015-2016 ; 10749 >
+        au < exists ; 2016-2017 ; Bulletin of the Center for Children's Books Volume 70, 2016-2017 ; 11361 >
+
+    }
+    {
+    title <
+      name = Bulletin of the History of Medicine ;
+      issn = 0007-5140  ;
+      eissn = 1086-3176  ;
+      issnl = 0007-5140
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; Bulletin of the History of Medicine Volume 70, 1996 ; 86 >
+        au < exists ; 1997 ; Bulletin of the History of Medicine Volume 71, 1997 ; 87 >
+        au < exists ; 1998 ; Bulletin of the History of Medicine Volume 72, 1998 ; 88 >
+        au < exists ; 1999 ; Bulletin of the History of Medicine Volume 73, 1999 ; 89 >
+        au < exists ; 2000 ; Bulletin of the History of Medicine Volume 74, 2000 ; 90 >
+        au < exists ; 2001 ; Bulletin of the History of Medicine Volume 75, 2001 ; 91 >
+        au < exists ; 2002 ; Bulletin of the History of Medicine Volume 76, 2002 ; 92 >
+        au < exists ; 2003 ; Bulletin of the History of Medicine Volume 77, 2003 ; 831 >
+        au < exists ; 2004 ; Bulletin of the History of Medicine Volume 78, 2004 ; 2413 >
+        au < exists ; 2005 ; Bulletin of the History of Medicine Volume 79, 2005 ; 2693 >
+        au < exists ; 2006 ; Bulletin of the History of Medicine Volume 80, 2006 ; 2974 >
+        au < exists ; 2007 ; Bulletin of the History of Medicine Volume 81, 2007 ; 3267 >
+        au < exists ; 2008 ; Bulletin of the History of Medicine Volume 82, 2008 ; 3616 >
+        au < exists ; 2009 ; Bulletin of the History of Medicine Volume 83, 2009 ; 4147 >
+        au < exists ; 2010 ; Bulletin of the History of Medicine Volume 84, 2010 ; 5780 >
+        au < exists ; 2011 ; Bulletin of the History of Medicine Volume 85, 2011 ; 6978 >
+        au < exists ; 2012 ; Bulletin of the History of Medicine Volume 86, 2012 ; 8244 >
+        au < exists ; 2013 ; Bulletin of the History of Medicine Volume 87, 2013 ; 8918 >
+        au < exists ; 2014 ; Bulletin of the History of Medicine Volume 88, 2014 ; 9874 >
+        au < exists ; 2015 ; Bulletin of the History of Medicine Volume 89, 2015 ; 10574 >
+        au < exists ; 2016 ; Bulletin of the History of Medicine Volume 90, 2016 ; 11111 >
+        au < exists ; 2017 ; Bulletin of the History of Medicine Volume 91, 2017 ; 12512 >
+
+    }
+    {
+    title <
+      name = CEA Critic ;
+      issn = 0007-8069 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; CEA Critic Volume 75, 2013 ; 8885 >
+        au < exists ; 2014 ; CEA Critic Volume 76, 2014 ; 9801 >
+        au < exists ; 2015 ; CEA Critic Volume 77, 2015 ; 10526 >
+        au < exists ; 2016 ; CEA Critic Volume 78, 2016 ; 11276 >
+        au < exists ; 2017 ; CEA Critic Volume 79, 2017 ; 12514 >
+
+    }
+    {
+    title <
+      name = Callaloo ;
+      issn = 0161-2492  ;
+      eissn = 1080-6512  ;
+      issnl = 0161-2492
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995 ; Callaloo Volume 18, 1995 ; 98 >
+        au < exists ; 1996 ; Callaloo Volume 19, 1996 ; 99 >
+        au < exists ; 1997 ; Callaloo Volume 20, 1997 ; 100 >
+        au < exists ; 1998 ; Callaloo Volume 21, 1998 ; 101 >
+        au < exists ; 1999 ; Callaloo Volume 22, 1999 ; 102 >
+        au < exists ; 2000 ; Callaloo Volume 23, 2000 ; 103 >
+        au < exists ; 2001 ; Callaloo Volume 24, 2001 ; 104 >
+        au < exists ; 2002 ; Callaloo Volume 25, 2002 ; 105 >
+        au < exists ; 2003 ; Callaloo Volume 26, 2003 ; 836 >
+        au < exists ; 2004 ; Callaloo Volume 27, 2004 ; 2132 >
+        au < exists ; 2005 ; Callaloo Volume 28, 2005 ; 2760 >
+        au < exists ; 2006 ; Callaloo Volume 29, 2006 ; 3010 >
+        au < exists ; 2007 ; Callaloo Volume 30, 2007 ; 3428 >
+        au < exists ; 2008 ; Callaloo Volume 31, 2008 ; 3804 >
+        au < exists ; 2009 ; Callaloo Volume 32, 2009 ; 4111 >
+        au < exists ; 2010 ; Callaloo Volume 33, 2010 ; 5843 >
+        au < exists ; 2011 ; Callaloo Volume 34, 2011 ; 6822 >
+        au < exists ; 2012 ; Callaloo Volume 35, 2012 ; 8169 >
+        au < exists ; 2013 ; Callaloo Volume 36, 2013 ; 9065 >
+        au < exists ; 2014 ; Callaloo Volume 37, 2014 ; 9672 >
+        au < exists ; 2015 ; Callaloo Volume 38, 2015 ; 10439 >
+        au < exists ; 2016 ; Callaloo Volume 39, 2016 ; 11193 >
+
+    }
+    {
+    title <
+      name = Children's Literature ;
+      issn = 0092-8208  ;
+      eissn = 1543-3374  ;
+      issnl = 0092-8208
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1972 ; Children's Literature Volume 1, 1972 ; 3948 >
+        au < exists ; 1973 ; Children's Literature Volume 2, 1973 ; 3947 >
+        au < exists ; 1974 ; Children's Literature Volume 3, 1974 ; 3946 >
+        au < exists ; 1975 ; Children's Literature Volume 4, 1975 ; 3945 >
+        au < exists ; 1976 ; Children's Literature Volume 5, 1976 ; 3944 >
+        au < exists ; 1977 ; Children's Literature Volume 6, 1977 ; 3943 >
+        au < exists ; 1978 ; Children's Literature Volume 7, 1978 ; 3942 >
+        au < exists ; 1980 ; Children's Literature Volume 8, 1980 ; 3941 >
+        au < exists ; 1981 ; Children's Literature Volume 9, 1981 ; 3940 >
+        au < exists ; 1982 ; Children's Literature Volume 10, 1982 ; 3939 >
+        au < exists ; 1983 ; Children's Literature Volume 11, 1983 ; 3938 >
+        au < exists ; 1984 ; Children's Literature Volume 12, 1984 ; 3937 >
+        au < exists ; 1985 ; Children's Literature Volume 13, 1985 ; 3936 >
+        au < exists ; 1986 ; Children's Literature Volume 14, 1986 ; 3935 >
+        au < exists ; 1987 ; Children's Literature Volume 15, 1987 ; 3934 >
+        au < exists ; 1988 ; Children's Literature Volume 16, 1988 ; 3933 >
+        au < exists ; 1989 ; Children's Literature Volume 17, 1989 ; 3932 >
+        au < exists ; 1990 ; Children's Literature Volume 18, 1990 ; 3931 >
+        au < exists ; 1991 ; Children's Literature Volume 19, 1991 ; 3930 >
+        au < exists ; 1992 ; Children's Literature Volume 20, 1992 ; 3929 >
+        au < exists ; 1993 ; Children's Literature Volume 21, 1993  ; 3928 >
+        au < exists ; 1994 ; Children's Literature Volume 22, 1994  ; 3927 >
+        au < exists ; 1995 ; Children's Literature Volume 23, 1995  ; 3926 >
+        au < exists ; 1996 ; Children's Literature Volume 24, 1996 ; 3925 >
+        au < exists ; 1997 ; Children's Literature Volume 25, 1997 ; 3924 >
+        au < exists ; 1998 ; Children's Literature Volume 26, 1998 ; 3923 >
+        au < exists ; 1999 ; Children's Literature Volume 27, 1999 ; 3922 >
+        au < exists ; 2000 ; Children's Literature Volume 28, 2000 ; 3921 >
+        au < exists ; 2001 ; Children's Literature Volume 29, 2001 ; 3920 >
+        au < exists ; 2002 ; Children's Literature Volume 30, 2002 ; 3969 >
+        au < exists ; 2003 ; Children's Literature Volume 31, 2003 ; 921 >
+        au < exists ; 2004 ; Children's Literature Volume 32, 2004 ; 2499 >
+        au < exists ; 2005 ; Children's Literature Volume 33, 2005 ; 2788 >
+        au < exists ; 2006 ; Children's Literature Volume 34, 2006 ; 3049 >
+        au < exists ; 2007 ; Children's Literature Volume 35, 2007 ; 3380 >
+        au < exists ; 2008 ; Children's Literature Volume 36, 2008 ; 3762 >
+        au < exists ; 2009 ; Children's Literature Volume 37, 2009 ; 4272 >
+        au < exists ; 2010 ; Children's Literature Volume 38, 2010 ; 6159 >
+        au < exists ; 2011 ; Children's Literature Volume 39, 2011 ; 7106 >
+        au < exists ; 2012 ; Children's Literature Volume 40, 2012 ; 8335 >
+        au < exists ; 2013 ; Children's Literature Volume 41, 2013 ; 9100 >
+        au < exists ; 2014 ; Children's Literature Volume 42, 2014 ; 9998 >
+        au < exists ; 2015 ; Children's Literature Volume 43, 2015 ; 10642 >
+        au < exists ; 2016 ; Children's Literature Volume 44, 2016 ; 11235 >
+
+    }
+    {
+    title <
+      name = Children's Literature Association Quarterly ;
+      issn = 0885-0429  ;
+      eissn = 1553-1201  ;
+      issnl = 0885-0429
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1976-1977 ; Children's Literature Association Quarterly Volume 1, 1976-1977 ; 3990 >
+        au < exists ; 1977 ; Children's Literature Association Quarterly Volume 2, 1977 ; 3989 >
+        au < exists ; 1978 ; Children's Literature Association Quarterly 1978 ; 7731 >
+        au < exists ; 1978-1979 ; Children's Literature Association Quarterly Volume 3, 1978-1979 ; 3988 >
+        au < exists ; 1979 ; Children's Literature Association Quarterly Volume 4, 1979 ; 3987 >
+        au < exists ; 1979 ; Children's Literature Association Quarterly 1979 ; 7722 >
+        au < exists ; 1980 ; Children's Literature Association Quarterly Volume 5, 1980 ; 3986 >
+        au < exists ; 1980 ; Children's Literature Association Quarterly 1980 ; 7732 >
+        au < exists ; 1981 ; Children's Literature Association Quarterly Volume 6, 1981 ; 3985 >
+        au < exists ; 1981 ; Children's Literature Association Quarterly 1981 ; 7733 >
+        au < exists ; 1982 ; Children's Literature Association Quarterly Volume 7, 1982 ; 3984 >
+        au < exists ; 1982 ; Children's Literature Association Quarterly 1982 ; 7741 >
+        au < exists ; 1983 ; Children's Literature Association Quarterly Volume 8, 1983 ; 3983 >
+        au < exists ; 1984-1985 ; Children's Literature Association Quarterly Volume 9, 1984-1985 ; 3982 >
+        au < exists ; 1985 ; Children's Literature Association Quarterly Volume 10, 1985 ; 3981 >
+        au < exists ; 1986 ; Children's Literature Association Quarterly 1986 ; 7734 >
+        au < exists ; 1986-1987 ; Children's Literature Association Quarterly Volume 11, 1986-1987 ; 3980 >
+        au < exists ; 1987 ; Children's Literature Association Quarterly Volume 12, 1987 ; 3979 >
+        au < exists ; 1987 ; Children's Literature Association Quarterly 1987 ; 7735 >
+        au < exists ; 1988 ; Children's Literature Association Quarterly Volume 13, 1988 ; 3978 >
+        au < exists ; 1988 ; Children's Literature Association Quarterly 1988 ; 7736 >
+        au < exists ; 1989 ; Children's Literature Association Quarterly Volume 14, 1989 ; 3977 >
+        au < exists ; 1989 ; Children's Literature Association Quarterly 1989 ; 7737 >
+        au < exists ; 1990 ; Children's Literature Association Quarterly Volume 15, 1990 ; 3976 >
+        au < exists ; 1990 ; Children's Literature Association Quarterly 1990 ; 7738 >
+        au < exists ; 1991 ; Children's Literature Association Quarterly Volume 16, 1991 ; 3975 >
+        au < exists ; 1991 ; Children's Literature Association Quarterly 1991 ; 7742 >
+        au < exists ; 1992 ; Children's Literature Association Quarterly Volume 17, 1992 ; 3974 >
+        au < exists ; 1993 ; Children's Literature Association Quarterly Volume 18, 1993 ; 3973 >
+        au < exists ; 1994 ; Children's Literature Association Quarterly Volume 19, 1994 ; 3972 >
+        au < exists ; 1995 ; Children's Literature Association Quarterly Volume 20, 1995 ; 3971 >
+        au < exists ; 1996 ; Children's Literature Association Quarterly Volume 21, 1996 ; 3968 >
+        au < exists ; 1997 ; Children's Literature Association Quarterly Volume 22, 1997 ; 3967 >
+        au < exists ; 1998 ; Children's Literature Association Quarterly Volume 23, 1998 ; 3966 >
+        au < exists ; 1999 ; Children's Literature Association Quarterly Volume 24, 1999 ; 3965 >
+        au < exists ; 2000 ; Children's Literature Association Quarterly Volume 25, 2000 ; 3964 >
+        au < exists ; 2001 ; Children's Literature Association Quarterly Volume 26, 2001 ; 3963 >
+        au < exists ; 2002 ; Children's Literature Association Quarterly Volume 27, 2002 ; 3962 >
+        au < exists ; 2003 ; Children's Literature Association Quarterly Volume 28, 2003 ; 3961 >
+        au < exists ; 2004 ; Children's Literature Association Quarterly Volume 29, 2004 ; 3960 >
+        au < exists ; 2005 ; Children's Literature Association Quarterly Volume 30, 2005 ; 2809 >
+        au < exists ; 2006 ; Children's Literature Association Quarterly Volume 31, 2006 ; 3067 >
+        au < exists ; 2007 ; Children's Literature Association Quarterly Volume 32, 2007 ; 3291 >
+        au < exists ; 2008 ; Children's Literature Association Quarterly Volume 33, 2008 ; 3617 >
+        au < exists ; 2009 ; Children's Literature Association Quarterly Volume 34, 2009 ; 4135 >
+        au < exists ; 2010 ; Children's Literature Association Quarterly Volume 35, 2010 ; 5756 >
+        au < exists ; 2011 ; Children's Literature Association Quarterly Volume 36, 2011 ; 6833 >
+        au < exists ; 2012 ; Children's Literature Association Quarterly Volume 37, 2012 ; 8105 >
+        au < exists ; 2013 ; Children's Literature Association Quarterly Volume 38, 2013 ; 8799 >
+        au < exists ; 2014 ; Children's Literature Association Quarterly Volume 39, 2014 ; 9747 >
+        au < exists ; 2015 ; Children's Literature Association Quarterly Volume 40, 2015 ; 10434 >
+        au < exists ; 2016 ; Children's Literature Association Quarterly Volume 41, 2016 ; 11008 >
+        au < exists ; 2017 ; Children's Literature Association Quarterly Volume 42, 2017 ; 12424 >
+
+    }
+    {
+    title <
+      name = Comparative Technology Transfer and Society ;
+      issn = 1542-0132  ;
+      eissn = 1543-3404  ;
+      issnl = 1542-0132
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Comparative Technology Transfer and Society Volume 1, 2003 ; 902 >
+        au < exists ; 2004 ; Comparative Technology Transfer and Society Volume 2, 2004 ; 2447 >
+        au < exists ; 2005 ; Comparative Technology Transfer and Society Volume 3, 2005 ; 2753 >
+        au < exists ; 2006 ; Comparative Technology Transfer and Society Volume 4, 2006 ; 3031 >
+        au < exists ; 2007 ; Comparative Technology Transfer and Society Volume 5, 2007 ; 3346 >
+        au < exists ; 2008 ; Comparative Technology Transfer and Society Volume 6, 2008 ; 3793 >
+        au < exists ; 2009 ; Comparative Technology Transfer and Society Volume 7, 2009 ; 4359 >
+
+    }
+    {
+    title <
+      name = Configurations ;
+      issn = 1063-1801  ;
+      eissn = 1080-6520  ;
+      issnl = 1063-1801
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1993 ; Configurations Volume 1, 1993 ; 125 >
+        au < exists ; 1994 ; Configurations Volume 2, 1994 ; 126 >
+        au < exists ; 1995 ; Configurations Volume 3, 1995 ; 127 >
+        au < exists ; 1996 ; Configurations Volume 4, 1996 ; 128 >
+        au < exists ; 1997 ; Configurations Volume 5, 1997 ; 129 >
+        au < exists ; 1998 ; Configurations Volume 6, 1998 ; 130 >
+        au < exists ; 1999 ; Configurations Volume 7, 1999 ; 131 >
+        au < exists ; 2000 ; Configurations Volume 8, 2000 ; 132 >
+        au < exists ; 2001 ; Configurations Volume 9, 2001 ; 133 >
+        au < exists ; 2002 ; Configurations Volume 10, 2002 ; 816 >
+        au < exists ; 2003 ; Configurations Volume 11, 2003 ; 2448 >
+        au < exists ; 2004 ; Configurations Volume 12, 2004 ; 2759 >
+        au < exists ; 2005 ; Configurations Volume 13, 2005 ; 3336 >
+        au < exists ; 2006 ; Configurations Volume 14, 2006 ; 3848 >
+        au < exists ; 2007 ; Configurations Volume 15, 2007 ; 3949 >
+        au < exists ; 2008 ; Configurations Volume 16, 2008 ; 4350 >
+        au < exists ; 2009 ; Configurations Volume 17, 2009 ; 5753 >
+        au < exists ; 2010 ; Configurations Volume 18, 2010 ; 6910 >
+        au < exists ; 2011 ; Configurations Volume 19, 2011 ; 7854 >
+        au < exists ; 2012 ; Configurations Volume 20, 2012 ; 8794 >
+        au < exists ; 2013 ; Configurations Volume 21, 2013 ; 9282 >
+        au < exists ; 2014 ; Configurations Volume 22, 2014 ; 10025 >
+        au < exists ; 2015 ; Configurations Volume 23, 2015 ; 10476 >
+        au < exists ; 2016 ; Configurations Volume 24, 2016 ; 10970 >
+        au < exists ; 2017 ; Configurations Volume 25, 2017 ; 12307 >
+
+    }
+    {
+    title <
+      name = Dickens Quarterly ;
+      issn = 0742-5473  ;
+      eissn = 2169-5377  ;
+      issnl = 0742-5473
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2015 ; Dickens Quarterly Volume 32, 2015 ; 10436 >
+        au < exists ; 2016 ; Dickens Quarterly Volume 33, 2016 ; 11067 >
+        au < exists ; 2017 ; Dickens Quarterly Volume 34, 2017 ; 12461 >
+
+    }
+    {
+    title <
+      name = Digital Philology: A Journal of Medieval Cultures ;
+      issn = 2162-9544  ;
+      eissn = 2162-9552  ;
+      issnl = 2162-9544
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1, 2012 ; 8392 >
+        au < exists ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2, 2013 ; 9152 >
+        au < exists ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3, 2014 ; 10097 >
+        au < exists ; 2015 ; Digital Philology: A Journal of Medieval Cultures Volume 4, 2015 ; 10723 >
+        au < exists ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5, 2016 ; 11233 >
+
+    }
+    {
+    title <
+      name = ELH ;
+      issn = 0013-8304  ;
+      eissn = 1080-6547  ;
+      issnl = 0013-8304
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1993 ; ELH Volume 60, 1993 ; 207 >
+        au < exists ; 1994 ; ELH Volume 61, 1994 ; 208 >
+        au < exists ; 1995 ; ELH Volume 62, 1995 ; 209 >
+        au < exists ; 1996 ; ELH Volume 63, 1996 ; 210 >
+        au < exists ; 1997 ; ELH Volume 64, 1997 ; 211 >
+        au < exists ; 1998 ; ELH Volume 65, 1998 ; 212 >
+        au < exists ; 1999 ; ELH Volume 66, 1999 ; 213 >
+        au < exists ; 2000 ; ELH Volume 67, 2000 ; 214 >
+        au < exists ; 2001 ; ELH Volume 68, 2001 ; 215 >
+        au < exists ; 2002 ; ELH Volume 69, 2002 ; 216 >
+        au < exists ; 2003 ; ELH Volume 70, 2003 ; 869 >
+        au < exists ; 2004 ; ELH Volume 71, 2004 ; 2490 >
+        au < exists ; 2005 ; ELH Volume 72, 2005 ; 2696 >
+        au < exists ; 2006 ; ELH Volume 73, 2006 ; 2980 >
+        au < exists ; 2007 ; ELH Volume 74, 2007 ; 3255 >
+        au < exists ; 2008 ; ELH Volume 75, 2008 ; 3685 >
+        au < exists ; 2009 ; ELH Volume 76, 2009 ; 4124 >
+        au < exists ; 2010 ; ELH Volume 77, 2010 ; 5734 >
+        au < exists ; 2011 ; ELH Volume 78, 2011 ; 6700 >
+        au < exists ; 2012 ; ELH Volume 79, 2012 ; 8070 >
+        au < exists ; 2013 ; ELH Volume 80, 2013 ; 8834 >
+        au < exists ; 2014 ; ELH Volume 81, 2014 ; 9762 >
+        au < exists ; 2015 ; ELH Volume 82, 2015 ; 10455 >
+        au < exists ; 2016 ; ELH Volume 83, 2016 ; 11061 >
+        au < exists ; 2017 ; ELH Volume 84, 2017 ; 12450 >
+
+    }
+    {
+    title <
+      name = Eighteenth-Century Studies ;
+      issn = 0013-2586  ;
+      eissn = 1086-315X  ;
+      issnl = 0013-2586
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995-1996 ; Eighteenth-Century Studies Volume 29, 1995-1996 ; 192 >
+        au < exists ; 1996-1997 ; Eighteenth-Century Studies Volume 30, 1996-1997 ; 193 >
+        au < exists ; 1997-1998 ; Eighteenth-Century Studies Volume 31, 1997-1998 ; 194 >
+        au < exists ; 1998-1999 ; Eighteenth-Century Studies Volume 32, 1998-1999 ; 195 >
+        au < exists ; 1999-2000 ; Eighteenth-Century Studies Volume 33, 1999-2000 ; 196 >
+        au < exists ; 2000-2001 ; Eighteenth-Century Studies Volume 34, 2000-2001 ; 197 >
+        au < exists ; 2001-2002 ; Eighteenth-Century Studies Volume 35, 2001-2002 ; 198 >
+        au < exists ; 2002-2003 ; Eighteenth-Century Studies Volume 36, 2002-2003 ; 199 >
+        au < exists ; 2003-2004 ; Eighteenth-Century Studies Volume 37, 2003-2004 ; 968 >
+        au < exists ; 2004-2005 ; Eighteenth-Century Studies Volume 38, 2004-2005 ; 2582 >
+        au < exists ; 2005-2006 ; Eighteenth-Century Studies Volume 39, 2005-2006 ; 2855 >
+        au < exists ; 2006-2007 ; Eighteenth-Century Studies Volume 40, 2006-2007 ; 3145 >
+        au < exists ; 2007-2008 ; Eighteenth-Century Studies Volume 41, 2007-2008 ; 3477 >
+        au < exists ; 2008-2009 ; Eighteenth-Century Studies Volume 42, 2008-2009 ; 3898 >
+        au < exists ; 2009-2010 ; Eighteenth-Century Studies Volume 43, 2009-2010 ; 4424 >
+        au < exists ; 2010-2011 ; Eighteenth-Century Studies Volume 44, 2010-2011 ; 6429 >
+        au < exists ; 2011-2012 ; Eighteenth-Century Studies Volume 45, 2011-2012 ; 7674 >
+        au < exists ; 2012-2013 ; Eighteenth-Century Studies Volume 46, 2012-2013 ; 8513 >
+        au < exists ; 2013-2014 ; Eighteenth-Century Studies Volume 47, 2013-2014 ; 9324 >
+        au < exists ; 2014-2015 ; Eighteenth-Century Studies Volume 48, 2014-2015 ; 10197 >
+        au < exists ; 2015-2016 ; Eighteenth-Century Studies Volume 49, 2015-2016 ; 10792 >
+        au < exists ; 2016 ; Eighteenth-Century Studies Volume 50, 2016 ; 12156 >
+
+    }
+    {
+    title <
+      name = Feminist Formations ;
+      issn = 2151-7363  ;
+      eissn = 2151-7371  ;
+      issnl = 2151-7363
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999 ; Feminist Formations Volume 11, 1999 ; 488 >
+        au < exists ; 2000 ; Feminist Formations Volume 12, 2000 ; 489 >
+        au < exists ; 2001 ; Feminist Formations Volume 13, 2001 ; 490 >
+        au < exists ; 2002 ; Feminist Formations Volume 14, 2002 ; 491 >
+        au < exists ; 2003 ; Feminist Formations Volume 15, 2003 ; 889 >
+        au < exists ; 2004 ; Feminist Formations Volume 16, 2004 ; 2517 >
+        au < exists ; 2005 ; Feminist Formations Volume 17, 2005 ; 2703 >
+        au < exists ; 2006 ; Feminist Formations Volume 18, 2006 ; 2985 >
+        au < exists ; 2007 ; Feminist Formations Volume 19, 2007 ; 3306 >
+        au < exists ; 2008 ; Feminist Formations Volume 20, 2008 ; 3712 >
+        au < exists ; 2009 ; Feminist Formations Volume 21, 2009 ; 4237 >
+        au < exists ; 2010 ; Feminist Formations Volume 22, 2010 ; 5937 >
+        au < exists ; 2011 ; Feminist Formations Volume 23, 2011 ; 7061 >
+        au < exists ; 2012 ; Feminist Formations Volume 24, 2012 ; 8289 >
+        au < exists ; 2013 ; Feminist Formations Volume 25, 2013 ; 8905 >
+        au < exists ; 2014 ; Feminist Formations Volume 26, 2014 ; 9885 >
+        au < exists ; 2015 ; Feminist Formations Volume 27, 2015 ; 10631 >
+        au < exists ; 2016 ; Feminist Formations Volume 28, 2016 ; 11404 >
+
+    }
+    {
+    title <
+      name = German Studies Review ;
+      issn = 0149-7952  ;
+      eissn = 2164-8646  ;
+      issnl = 0149-7952
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2012 ; German Studies Review Volume 35, 2012 ; 7994 >
+        au < exists ; 2013 ; German Studies Review Volume 36, 2013 ; 8803 >
+        au < exists ; 2014 ; German Studies Review Volume 37, 2014 ; 9750 >
+        au < exists ; 2015 ; German Studies Review Volume 38, 2015 ; 10347 >
+        au < exists ; 2016 ; German Studies Review Volume 39, 2016 ; 10981 >
+        au < exists ; 2017 ; German Studies Review Volume 40, 2017 ; 12407 >
+
+    }
+    {
+    title <
+      name = Hispania ;
+      issn = 2153-6414  ;
+      eissn = 0018-2133  ;
+      issnl = 0018-2133
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2010 ; Hispania Volume 93, 2010 ; 5921 >
+        au < exists ; 2011 ; Hispania Volume 94, 2011 ; 6781 >
+        au < exists ; 2012 ; Hispania Volume 95, 2012 ; 8140 >
+        au < exists ; 2013 ; Hispania Volume 96, 2013 ; 8853 >
+        au < exists ; 2014 ; Hispania Volume 97, 2014 ; 9816 >
+        au < exists ; 2015 ; Hispania Volume 98, 2015 ; 10503 >
+        au < exists ; 2016 ; Hispania Volume 99, 2016 ; 11043 >
+        au < exists ; 2017 ; Hispania Volume 100, 2017 ; 12491 >
+
+    }
+    {
+    title <
+      name = Historically Speaking ;
+      issn = 1941-4188  ;
+      eissn = 1944-6438  ;
+      issnl = 1941-4188
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999-2000 ; Historically Speaking Volume 1, 1999-2000 ; 7050 >
+        au < exists ; 2000-2001 ; Historically Speaking Volume 2, 2000-2001 ; 7070 >
+        au < exists ; 2001-2002 ; Historically Speaking Volume 3, 2001-2002 ; 7076 >
+        au < exists ; 2002-2003 ; Historically Speaking Volume 4, 2002-2003 ; 7012 >
+        au < exists ; 2003-2004 ; Historically Speaking Volume 5, 2003-2004 ; 7002 >
+        au < exists ; 2004-2005 ; Historically Speaking Volume 6, 2004-2005 ; 6995 >
+        au < exists ; 2005-2006 ; Historically Speaking Volume 7, 2005-2006 ; 6996 >
+        au < exists ; 2006-2007 ; Historically Speaking Volume 8, 2006-2007 ; 6994 >
+        au < exists ; 2007-2008 ; Historically Speaking Volume 9, 2007-2008 ; 6955 >
+        au < exists ; 2009 ; Historically Speaking Volume 10, 2009 ; 4162 >
+        au < exists ; 2010 ; Historically Speaking Volume 11, 2010 ; 5767 >
+        au < exists ; 2011 ; Historically Speaking Volume 12, 2011 ; 6711 >
+        au < exists ; 2012 ; Historically Speaking Volume 13, 2012 ; 7914 >
+        au < exists ; 2013 ; Historically Speaking Volume 14, 2013 ; 8790 >
+
+    }
+    {
+    title <
+      name = Human Rights Quarterly ;
+      issn = 0275-0392  ;
+      eissn = 1085-794X  ;
+      issnl = 0275-0392
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995 ; Human Rights Quarterly Volume 17, 1995 ; 259 >
+        au < exists ; 1996 ; Human Rights Quarterly Volume 18, 1996 ; 260 >
+        au < exists ; 1997 ; Human Rights Quarterly Volume 19, 1997 ; 261 >
+        au < exists ; 1998 ; Human Rights Quarterly Volume 20, 1998 ; 262 >
+        au < exists ; 1999 ; Human Rights Quarterly Volume 21, 1999 ; 263 >
+        au < exists ; 2000 ; Human Rights Quarterly Volume 22, 2000 ; 264 >
+        au < exists ; 2001 ; Human Rights Quarterly Volume 23, 2001 ; 265 >
+        au < exists ; 2002 ; Human Rights Quarterly Volume 24, 2002 ; 266 >
+        au < exists ; 2003 ; Human Rights Quarterly Volume 25, 2003 ; 797 >
+        au < exists ; 2004 ; Human Rights Quarterly Volume 26, 2004 ; 1763 >
+        au < exists ; 2005 ; Human Rights Quarterly Volume 27, 2005 ; 2660 >
+        au < exists ; 2006 ; Human Rights Quarterly Volume 28, 2006 ; 2940 >
+        au < exists ; 2007 ; Human Rights Quarterly Volume 29, 2007 ; 3219 >
+        au < exists ; 2008 ; Human Rights Quarterly Volume 30, 2008 ; 3641 >
+        au < exists ; 2009 ; Human Rights Quarterly Volume 31, 2009 ; 4072 >
+        au < exists ; 2010 ; Human Rights Quarterly Volume 32, 2010 ; 5703 >
+        au < exists ; 2011 ; Human Rights Quarterly Volume 33, 2011 ; 6732 >
+        au < exists ; 2012 ; Human Rights Quarterly Volume 34, 2012 ; 8009 >
+        au < exists ; 2013 ; Human Rights Quarterly Volume 35, 2013 ; 8751 >
+        au < exists ; 2014 ; Human Rights Quarterly Volume 36, 2014 ; 9646 >
+        au < exists ; 2015 ; Human Rights Quarterly Volume 37, 2015 ; 10382 >
+        au < exists ; 2016 ; Human Rights Quarterly Volume 38, 2016 ; 10950 >
+        au < exists ; 2017 ; Human Rights Quarterly Volume 39, 2017 ; 12355 >
+
+    }
+    {
+    title <
+      name = Journal of Asian American Studies ;
+      issn = 1097-2129  ;
+      eissn = 1096-8598  ;
+      issnl = 1096-8598
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1998 ; Journal of Asian American Studies Volume 1, 1998 ; 284 >
+        au < exists ; 1999 ; Journal of Asian American Studies Volume 2, 1999 ; 285 >
+        au < exists ; 2000 ; Journal of Asian American Studies Volume 3, 2000 ; 286 >
+        au < exists ; 2001 ; Journal of Asian American Studies Volume 4, 2001 ; 287 >
+        au < exists ; 2002 ; Journal of Asian American Studies Volume 5, 2002 ; 288 >
+        au < exists ; 2003 ; Journal of Asian American Studies Volume 6, 2003 ; 1716 >
+        au < exists ; 2004 ; Journal of Asian American Studies Volume 7, 2004 ; 2725 >
+        au < exists ; 2005 ; Journal of Asian American Studies Volume 8, 2005 ; 2813 >
+        au < exists ; 2006 ; Journal of Asian American Studies Volume 9, 2006 ; 3000 >
+        au < exists ; 2007 ; Journal of Asian American Studies Volume 10, 2007 ; 3318 >
+        au < exists ; 2008 ; Journal of Asian American Studies Volume 11, 2008 ; 3728 >
+        au < exists ; 2009 ; Journal of Asian American Studies Volume 12, 2009 ; 4265 >
+        au < exists ; 2010 ; Journal of Asian American Studies Volume 13, 2010 ; 5764 >
+        au < exists ; 2011 ; Journal of Asian American Studies Volume 14, 2011 ; 6859 >
+        au < exists ; 2012 ; Journal of Asian American Studies Volume 15, 2012 ; 8065 >
+        au < exists ; 2013 ; Journal of Asian American Studies Volume 16, 2013 ; 8804 >
+        au < exists ; 2014 ; Journal of Asian American Studies Volume 17, 2014 ; 9661 >
+        au < exists ; 2015 ; Journal of Asian American Studies Volume 18, 2015 ; 10422 >
+        au < exists ; 2016 ; Journal of Asian American Studies Volume 19, 2016 ; 11059 >
+        au < exists ; 2017 ; Journal of Asian American Studies Volume 20, 2017 ; 12342 >
+
+    }
+    {
+    title <
+      name = Journal of College Student Development ;
+      issn = 0897-5264  ;
+      eissn = 1543-3382  ;
+      issnl = 0897-5264
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Journal of College Student Development Volume 44, 2003 ; 844 >
+        au < exists ; 2004 ; Journal of College Student Development Volume 45, 2004 ; 2416 >
+        au < exists ; 2005 ; Journal of College Student Development Volume 46, 2005 ; 2627 >
+        au < exists ; 2006 ; Journal of College Student Development Volume 47, 2006 ; 2905 >
+        au < exists ; 2007 ; Journal of College Student Development Volume 48, 2007 ; 3254 >
+        au < exists ; 2008 ; Journal of College Student Development Volume 49, 2008 ; 3610 >
+        au < exists ; 2009 ; Journal of College Student Development Volume 50, 2009 ; 4132 >
+        au < exists ; 2010 ; Journal of College Student Development Volume 51, 2010 ; 5770 >
+        au < exists ; 2011 ; Journal of College Student Development Volume 52, 2011 ; 6802 >
+        au < exists ; 2012 ; Journal of College Student Development Volume 53, 2012 ; 7910 >
+        au < exists ; 2013 ; Journal of College Student Development Volume 54, 2013 ; 8739 >
+        au < exists ; 2014 ; Journal of College Student Development Volume 55, 2014 ; 9637 >
+        au < exists ; 2015 ; Journal of College Student Development Volume 56, 2015 ; 10337 >
+        au < exists ; 2016 ; Journal of College Student Development Volume 57, 2016 ; 10929 >
+        au < exists ; 2017 ; Journal of College Student Development Volume 58, 2017 ; 12316 >
+
+    }
+    {
+    title <
+      name = Journal of Colonialism and Colonial History ;
+      issn =   ;
+      eissn = 1532-5768 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; Journal of Colonialism and Colonial History Volume 1, 2000 ; 109 >
+        au < exists ; 2001 ; Journal of Colonialism and Colonial History Volume 2, 2001 ; 110 >
+        au < exists ; 2002 ; Journal of Colonialism and Colonial History Volume 3, 2002 ; 111 >
+        au < exists ; 2003 ; Journal of Colonialism and Colonial History Volume 4, 2003 ; 896 >
+        au < exists ; 2004 ; Journal of Colonialism and Colonial History Volume 5, 2004 ; 2494 >
+        au < exists ; 2005 ; Journal of Colonialism and Colonial History Volume 6, 2005 ; 2746 >
+        au < exists ; 2006 ; Journal of Colonialism and Colonial History Volume 7, 2006 ; 3037 >
+        au < exists ; 2007 ; Journal of Colonialism and Colonial History Volume 8, 2007 ; 3367 >
+        au < exists ; 2008 ; Journal of Colonialism and Colonial History Volume 9, 2008 ; 3735 >
+        au < exists ; 2009 ; Journal of Colonialism and Colonial History Volume 10, 2009 ; 4334 >
+        au < exists ; 2010 ; Journal of Colonialism and Colonial History Volume 11, 2010 ; 6109 >
+        au < exists ; 2011 ; Journal of Colonialism and Colonial History Volume 12, 2011 ; 7170 >
+        au < exists ; 2012 ; Journal of Colonialism and Colonial History Volume 13, 2012 ; 8257 >
+        au < exists ; 2013 ; Journal of Colonialism and Colonial History Volume 14, 2013 ; 8864 >
+        au < exists ; 2014 ; Journal of Colonialism and Colonial History Volume 15, 2014 ; 9872 >
+        au < exists ; 2015 ; Journal of Colonialism and Colonial History Volume 16, 2015 ; 10506 >
+        au < exists ; 2016 ; Journal of Colonialism and Colonial History Volume 17, 2016 ; 11107 >
+
+    }
+    {
+    title <
+      name = Journal of Democracy ;
+      issn = 1045-5736  ;
+      eissn = 1086-3214  ;
+      issnl = 1045-5736
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1990 ; Journal of Democracy Volume 1, 1990 ; 3585 >
+        au < exists ; 1991 ; Journal of Democracy Volume 2, 1991 ; 3584 >
+        au < exists ; 1992 ; Journal of Democracy Volume 3, 1992 ; 3583 >
+        au < exists ; 1993 ; Journal of Democracy Volume 4, 1993 ; 3582 >
+        au < exists ; 1994 ; Journal of Democracy Volume 5, 1994 ; 3581 >
+        au < exists ; 1995 ; Journal of Democracy Volume 6, 1995 ; 323 >
+        au < exists ; 1996 ; Journal of Democracy Volume 7, 1996 ; 324 >
+        au < exists ; 1997 ; Journal of Democracy Volume 8, 1997 ; 325 >
+        au < exists ; 1998 ; Journal of Democracy Volume 9, 1998 ; 326 >
+        au < exists ; 1999 ; Journal of Democracy Volume 10, 1999 ; 327 >
+        au < exists ; 2000 ; Journal of Democracy Volume 11, 2000 ; 328 >
+        au < exists ; 2001 ; Journal of Democracy Volume 12, 2001 ; 329 >
+        au < exists ; 2002 ; Journal of Democracy Volume 13, 2002 ; 330 >
+        au < exists ; 2003 ; Journal of Democracy Volume 14, 2003 ; 786 >
+        au < exists ; 2004 ; Journal of Democracy Volume 15, 2004 ; 1743 >
+        au < exists ; 2005 ; Journal of Democracy Volume 16, 2005 ; 2625 >
+        au < exists ; 2006 ; Journal of Democracy Volume 17, 2006 ; 2926 >
+        au < exists ; 2007 ; Journal of Democracy Volume 18, 2007 ; 3204 >
+        au < exists ; 2008 ; Journal of Democracy Volume 19, 2008 ; 3609 >
+        au < exists ; 2009 ; Journal of Democracy Volume 20, 2009 ; 4106 >
+        au < exists ; 2010 ; Journal of Democracy Volume 21, 2010 ; 5745 >
+        au < exists ; 2011 ; Journal of Democracy Volume 22, 2011 ; 6773 >
+        au < exists ; 2012 ; Journal of Democracy Volume 23, 2012 ; 7897 >
+        au < exists ; 2013 ; Journal of Democracy Volume 24, 2013 ; 8667 >
+        au < exists ; 2014 ; Journal of Democracy Volume 25, 2014 ; 9599 >
+        au < exists ; 2015 ; Journal of Democracy Volume 26, 2015 ; 10294 >
+        au < exists ; 2016 ; Journal of Democracy Volume 27, 2016 ; 10914 >
+        au < exists ; 2017 ; Journal of Democracy Volume 28, 2017 ; 12286 >
+
+    }
+    {
+    title <
+      name = Journal of Early Christian Studies ;
+      issn = 1067-6341  ;
+      eissn = 1086-3184  ;
+      issnl = 1067-6341
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1993 ; Journal of Early Christian Studies Volume 1, 1993 ; 3824 >
+        au < exists ; 1994 ; Journal of Early Christian Studies Volume 2, 1994 ; 3823 >
+        au < exists ; 1995 ; Journal of Early Christian Studies Volume 3, 1995 ; 3817 >
+        au < exists ; 1996 ; Journal of Early Christian Studies Volume 4, 1996 ; 172 >
+        au < exists ; 1997 ; Journal of Early Christian Studies Volume 5, 1997 ; 173 >
+        au < exists ; 1998 ; Journal of Early Christian Studies Volume 6, 1998 ; 174 >
+        au < exists ; 1999 ; Journal of Early Christian Studies Volume 7, 1999 ; 175 >
+        au < exists ; 2000 ; Journal of Early Christian Studies Volume 8, 2000 ; 176 >
+        au < exists ; 2001 ; Journal of Early Christian Studies Volume 9, 2001 ; 177 >
+        au < exists ; 2002 ; Journal of Early Christian Studies Volume 10, 2002 ; 178 >
+        au < exists ; 2003 ; Journal of Early Christian Studies Volume 11, 2003 ; 840 >
+        au < exists ; 2004 ; Journal of Early Christian Studies Volume 12, 2004 ; 2429 >
+        au < exists ; 2005 ; Journal of Early Christian Studies Volume 13, 2005 ; 2718 >
+        au < exists ; 2006 ; Journal of Early Christian Studies Volume 14, 2006 ; 2984 >
+        au < exists ; 2007 ; Journal of Early Christian Studies Volume 15, 2007 ; 3259 >
+        au < exists ; 2008 ; Journal of Early Christian Studies Volume 16, 2008 ; 3710 >
+        au < exists ; 2009 ; Journal of Early Christian Studies Volume 17, 2009 ; 4148 >
+        au < exists ; 2010 ; Journal of Early Christian Studies Volume 18, 2010 ; 5755 >
+        au < exists ; 2011 ; Journal of Early Christian Studies Volume 19, 2011 ; 6704 >
+        au < exists ; 2012 ; Journal of Early Christian Studies Volume 20, 2012 ; 8114 >
+        au < exists ; 2013 ; Journal of Early Christian Studies Volume 21, 2013 ; 8814 >
+        au < exists ; 2014 ; Journal of Early Christian Studies Volume 22, 2014 ; 9758 >
+        au < exists ; 2015 ; Journal of Early Christian Studies Volume 23, 2015 ; 10429 >
+        au < exists ; 2016 ; Journal of Early Christian Studies Volume 24, 2016 ; 11027 >
+        au < exists ; 2017 ; Journal of Early Christian Studies Volume 25, 2017 ; 12445 >
+
+    }
+    {
+    title <
+      name = Journal of Health Care for the Poor and Underserved ;
+      issn = 1049-2089  ;
+      eissn = 1548-6869  ;
+      issnl = 1049-2089
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1990-1991 ; Journal of Health Care for the Poor and Underserved Volume 1, 1990-1991 ; 4287 >
+        au < exists ; 1991 ; Journal of Health Care for the Poor and Underserved Volume 2, 1991 ; 4286 >
+        au < exists ; 1992 ; Journal of Health Care for the Poor and Underserved Volume 3, 1992 ; 4285 >
+        au < exists ; 1993 ; Journal of Health Care for the Poor and Underserved Volume 4, 1993 ; 4284 >
+        au < exists ; 1994 ; Journal of Health Care for the Poor and Underserved Volume 5, 1994 ; 4283 >
+        au < exists ; 1995 ; Journal of Health Care for the Poor and Underserved Volume 6, 1995 ; 4282 >
+        au < exists ; 1996 ; Journal of Health Care for the Poor and Underserved Volume 7, 1996 ; 4281 >
+        au < exists ; 1997 ; Journal of Health Care for the Poor and Underserved Volume 8, 1997 ; 4280 >
+        au < exists ; 1998 ; Journal of Health Care for the Poor and Underserved Volume 9, 1998 ; 4279 >
+        au < exists ; 1999 ; Journal of Health Care for the Poor and Underserved Volume 10, 1999 ; 4278 >
+        au < exists ; 2000 ; Journal of Health Care for the Poor and Underserved Volume 11, 2000 ; 4277 >
+        au < exists ; 2001 ; Journal of Health Care for the Poor and Underserved Volume 12, 2001 ; 4276 >
+        au < exists ; 2002 ; Journal of Health Care for the Poor and Underserved Volume 13, 2002 ; 4275 >
+        au < exists ; 2003 ; Journal of Health Care for the Poor and Underserved Volume 14, 2003 ; 4274 >
+        au < exists ; 2004 ; Journal of Health Care for the Poor and Underserved Volume 15, 2004 ; 2204 >
+        au < exists ; 2005 ; Journal of Health Care for the Poor and Underserved Volume 16, 2005 ; 2686 >
+        au < exists ; 2006 ; Journal of Health Care for the Poor and Underserved Volume 17, 2006 ; 2942 >
+        au < exists ; 2007 ; Journal of Health Care for the Poor and Underserved Volume 18, 2007 ; 3250 >
+        au < exists ; 2008 ; Journal of Health Care for the Poor and Underserved Volume 19, 2008 ; 3643 >
+        au < exists ; 2009 ; Journal of Health Care for the Poor and Underserved Volume 20, 2009 ; 4105 >
+        au < exists ; 2010 ; Journal of Health Care for the Poor and Underserved Volume 21, 2010 ; 5801 >
+        au < exists ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22, 2011 ; 6774 >
+        au < exists ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23, 2012 ; 8052 >
+        au < exists ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24, 2013 ; 8737 >
+        au < exists ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25, 2014 ; 9638 >
+        au < exists ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26, 2015 ; 10421 >
+        au < exists ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27, 2016 ; 10921 >
+        au < exists ; 2017 ; Journal of Health Care for the Poor and Underserved Volume 28, 2017 ; 12392 >
+
+    }
+    {
+    title <
+      name = Journal of Late Antiquity ;
+      issn = 1939-6716  ;
+      eissn = 1942-1273  ;
+      issnl = 1939-6716
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; Journal of Late Antiquity Volume 1, 2008 ; 3745 >
+        au < exists ; 2009 ; Journal of Late Antiquity Volume 2, 2009 ; 4216 >
+        au < exists ; 2010 ; Journal of Late Antiquity Volume 3, 2010 ; 5848 >
+        au < exists ; 2011 ; Journal of Late Antiquity Volume 4, 2011 ; 7079 >
+        au < exists ; 2012 ; Journal of Late Antiquity Volume 5, 2012 ; 8382 >
+        au < exists ; 2013 ; Journal of Late Antiquity Volume 6, 2013 ; 9147 >
+        au < exists ; 2014 ; Journal of Late Antiquity Volume 7, 2014 ; 10194 >
+        au < exists ; 2015 ; Journal of Late Antiquity Volume 8, 2015 ; 10681 >
+        au < exists ; 2016 ; Journal of Late Antiquity Volume 9, 2016 ; 11221 >
+
+    }
+    {
+    title <
+      name = Journal of Modern Greek Studies ;
+      issn = 0738-1727  ;
+      eissn = 1086-3265  ;
+      issnl = 0738-1727
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1983 ; Journal of Modern Greek Studies Volume 1, 1983 ; 4200 >
+        au < exists ; 1984 ; Journal of Modern Greek Studies Volume 2, 1984 ; 4199 >
+        au < exists ; 1985 ; Journal of Modern Greek Studies Volume 3, 1985 ; 4198 >
+        au < exists ; 1986 ; Journal of Modern Greek Studies Volume 4, 1986  ; 4197 >
+        au < exists ; 1987 ; Journal of Modern Greek Studies Volume 5, 1987 ; 4196 >
+        au < exists ; 1988 ; Journal of Modern Greek Studies Volume 6, 1988 ; 4195 >
+        au < exists ; 1989 ; Journal of Modern Greek Studies Volume 7, 1989 ; 4194 >
+        au < exists ; 1990 ; Journal of Modern Greek Studies Volume 8, 1990 ; 4193 >
+        au < exists ; 1991 ; Journal of Modern Greek Studies Volume 9, 1991 ; 4192 >
+        au < exists ; 1992 ; Journal of Modern Greek Studies Volume 10, 1992 ; 4191 >
+        au < exists ; 1993 ; Journal of Modern Greek Studies Volume 11, 1993 ; 4190 >
+        au < exists ; 1994 ; Journal of Modern Greek Studies Volume 12, 1994 ; 4189 >
+        au < exists ; 1995 ; Journal of Modern Greek Studies Volume 13, 1995 ; 4188 >
+        au < exists ; 1996 ; Journal of Modern Greek Studies Volume 14, 1996 ; 421 >
+        au < exists ; 1997 ; Journal of Modern Greek Studies Volume 15, 1997 ; 422 >
+        au < exists ; 1998 ; Journal of Modern Greek Studies Volume 16, 1998 ; 423 >
+        au < exists ; 1999 ; Journal of Modern Greek Studies Volume 17, 1999 ; 424 >
+        au < exists ; 2000 ; Journal of Modern Greek Studies Volume 18, 2000 ; 425 >
+        au < exists ; 2001 ; Journal of Modern Greek Studies Volume 19, 2001 ; 426 >
+        au < exists ; 2002 ; Journal of Modern Greek Studies Volume 20, 2002 ; 427 >
+        au < exists ; 2003 ; Journal of Modern Greek Studies Volume 21, 2003 ; 904 >
+        au < exists ; 2004 ; Journal of Modern Greek Studies Volume 22, 2004 ; 2513 >
+        au < exists ; 2005 ; Journal of Modern Greek Studies Volume 23, 2005 ; 2790 >
+        au < exists ; 2006 ; Journal of Modern Greek Studies Volume 24, 2006 ; 3055 >
+        au < exists ; 2007 ; Journal of Modern Greek Studies Volume 25, 2007 ; 3421 >
+        au < exists ; 2008 ; Journal of Modern Greek Studies Volume 26, 2008 ; 3711 >
+        au < exists ; 2009 ; Journal of Modern Greek Studies Volume 27, 2009 ; 4348 >
+        au < exists ; 2010 ; Journal of Modern Greek Studies Volume 28, 2010 ; 6402 >
+        au < exists ; 2011 ; Journal of Modern Greek Studies Volume 29, 2011 ; 7298 >
+        au < exists ; 2012 ; Journal of Modern Greek Studies Volume 30, 2012 ; 8282 >
+        au < exists ; 2013 ; Journal of Modern Greek Studies Volume 31, 2013 ; 9069 >
+        au < exists ; 2014 ; Journal of Modern Greek Studies Volume 32, 2014 ; 10108 >
+        au < exists ; 2015 ; Journal of Modern Greek Studies Volume 33, 2015 ; 10619 >
+        au < exists ; 2016 ; Journal of Modern Greek Studies Volume 34, 2016 ; 11145 >
+
+    }
+    {
+    title <
+      name = Journal of Women's History ;
+      issn = 1042-7961  ;
+      eissn = 1527-2036  ;
+      issnl = 1042-7961
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1989-1990 ; Journal of Women's History Volume 1, 1989-1990 ; 4994 >
+        au < exists ; 1990-1991 ; Journal of Women's History Volume 2, 1990-1991 ; 4993 >
+        au < exists ; 1991-1992 ; Journal of Women's History Volume 3, 1991-1992 ; 4992 >
+        au < exists ; 1992-1993 ; Journal of Women's History Volume 4, 1992-1993 ; 4991 >
+        au < exists ; 1993-1994 ; Journal of Women's History Volume 5, 1993-1994 ; 4990 >
+        au < exists ; 1994 ; Journal of Women's History Volume 6, 1994 ; 4989 >
+        au < exists ; 1995 ; Journal of Women's History Volume 7, 1995 ; 4988 >
+        au < exists ; 1996-1997 ; Journal of Women's History Volume 8, 1996-1997 ; 4987 >
+        au < exists ; 1997-1998 ; Journal of Women's History Volume 9, 1997-1998 ; 4986 >
+        au < exists ; 1998-1999 ; Journal of Women's History Volume 10, 1998-1999 ; 4985 >
+        au < exists ; 1999-2000 ; Journal of Women's History Volume 11, 1999-2000 ; 331 >
+        au < exists ; 2000-2001 ; Journal of Women's History Volume 12, 2000-2001 ; 332 >
+        au < exists ; 2001-2002 ; Journal of Women's History Volume 13, 2001-2002 ; 333 >
+        au < exists ; 2002-2003 ; Journal of Women's History Volume 14, 2002-2003 ; 334 >
+        au < exists ; 2003-2004 ; Journal of Women's History Volume 15, 2003-2004 ; 927 >
+        au < exists ; 2004 ; Journal of Women's History Volume 16, 2004 ; 2424 >
+        au < exists ; 2005 ; Journal of Women's History Volume 17, 2005 ; 2711 >
+        au < exists ; 2006 ; Journal of Women's History Volume 18, 2006 ; 2963 >
+        au < exists ; 2007 ; Journal of Women's History Volume 19, 2007 ; 3281 >
+        au < exists ; 2008 ; Journal of Women's History Volume 20, 2008 ; 3618 >
+        au < exists ; 2009 ; Journal of Women's History Volume 21, 2009 ; 4123 >
+        au < exists ; 2010 ; Journal of Women's History Volume 22, 2010 ; 5748 >
+        au < exists ; 2011 ; Journal of Women's History Volume 23, 2011 ; 6887 >
+        au < exists ; 2012 ; Journal of Women's History Volume 24, 2012 ; 8126 >
+        au < exists ; 2013 ; Journal of Women's History Volume 25, 2013 ; 8812 >
+        au < exists ; 2014 ; Journal of Women's History Volume 26, 2014 ; 9793 >
+        au < exists ; 2015 ; Journal of Women's History Volume 27, 2015 ; 10461 >
+        au < exists ; 2016 ; Journal of Women's History Volume 28, 2016 ; 11099 >
+        au < exists ; 2017 ; Journal of Women's History Volume 29, 2017 ; 12459 >
+
+    }
+    {
+    title <
+      name = Journal of the History of Philosophy ;
+      issn = 0022-5053  ;
+      eissn = 1538-4586  ;
+      issnl = 0022-5053
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1963 ; Journal of the History of Philosophy Volume 1, 1963 ; 3566 >
+        au < exists ; 1964 ; Journal of the History of Philosophy Volume 2, 1964 ; 3565 >
+        au < exists ; 1965 ; Journal of the History of Philosophy Volume 3, 1965 ; 3564 >
+        au < exists ; 1966 ; Journal of the History of Philosophy Volume 4, 1966 ; 3563 >
+        au < exists ; 1967 ; Journal of the History of Philosophy Volume 5, 1967 ; 3562 >
+        au < exists ; 1968 ; Journal of the History of Philosophy Volume 6, 1968 ; 3561 >
+        au < exists ; 1969 ; Journal of the History of Philosophy Volume 7, 1969 ; 3560 >
+        au < exists ; 1970 ; Journal of the History of Philosophy Volume 8, 1970 ; 3559 >
+        au < exists ; 1971 ; Journal of the History of Philosophy Volume 9, 1971 ; 3558 >
+        au < exists ; 1972 ; Journal of the History of Philosophy Volume 10, 1972 ; 3557 >
+        au < exists ; 1973 ; Journal of the History of Philosophy Volume 11, 1973 ; 3556 >
+        au < exists ; 1974 ; Journal of the History of Philosophy Volume 12, 1974 ; 3555 >
+        au < exists ; 1975 ; Journal of the History of Philosophy Volume 13, 1975 ; 3554 >
+        au < exists ; 1976 ; Journal of the History of Philosophy Volume 14, 1976 ; 3553 >
+        au < exists ; 1977 ; Journal of the History of Philosophy Volume 15, 1977 ; 3552 >
+        au < exists ; 1978 ; Journal of the History of Philosophy Volume 16, 1978 ; 3551 >
+        au < exists ; 1979 ; Journal of the History of Philosophy Volume 17, 1979 ; 3550 >
+        au < exists ; 1980 ; Journal of the History of Philosophy Volume 18, 1980 ; 3549 >
+        au < exists ; 1981 ; Journal of the History of Philosophy Volume 19, 1981 ; 3548 >
+        au < exists ; 1982 ; Journal of the History of Philosophy Volume 20, 1982 ; 3547 >
+        au < exists ; 1983 ; Journal of the History of Philosophy Volume 21, 1983 ; 3546 >
+        au < exists ; 1984 ; Journal of the History of Philosophy Volume 22, 1984 ; 3545 >
+        au < exists ; 1985 ; Journal of the History of Philosophy Volume 23, 1985 ; 3544 >
+        au < exists ; 1986 ; Journal of the History of Philosophy Volume 24, 1986 ; 3543 >
+        au < exists ; 1987 ; Journal of the History of Philosophy Volume 25, 1987 ; 3542 >
+        au < exists ; 1988 ; Journal of the History of Philosophy Volume 26, 1988 ; 3541 >
+        au < exists ; 1989 ; Journal of the History of Philosophy Volume 27, 1989 ; 3540 >
+        au < exists ; 1990 ; Journal of the History of Philosophy Volume 28, 1990 ; 3539 >
+        au < exists ; 1991 ; Journal of the History of Philosophy Volume 29, 1991 ; 3538 >
+        au < exists ; 1992 ; Journal of the History of Philosophy Volume 30, 1992 ; 3537 >
+        au < exists ; 1993 ; Journal of the History of Philosophy Volume 31, 1993 ; 3536 >
+        au < exists ; 1994 ; Journal of the History of Philosophy Volume 32, 1994 ; 3535 >
+        au < exists ; 1995 ; Journal of the History of Philosophy Volume 33, 1995 ; 3534 >
+        au < exists ; 1996 ; Journal of the History of Philosophy Volume 34, 1996 ; 3533 >
+        au < exists ; 1997 ; Journal of the History of Philosophy Volume 35, 1997 ; 3532 >
+        au < exists ; 1998 ; Journal of the History of Philosophy Volume 36, 1998 ; 3531 >
+        au < exists ; 1999 ; Journal of the History of Philosophy Volume 37, 1999 ; 3530 >
+        au < exists ; 2000 ; Journal of the History of Philosophy Volume 38, 2000 ; 2677 >
+        au < exists ; 2001 ; Journal of the History of Philosophy Volume 39, 2001 ; 1732 >
+        au < exists ; 2002 ; Journal of the History of Philosophy Volume 40, 2002 ; 258 >
+        au < exists ; 2003 ; Journal of the History of Philosophy Volume 41, 2003 ; 767 >
+        au < exists ; 2004 ; Journal of the History of Philosophy Volume 42, 2004 ; 1739 >
+        au < exists ; 2005 ; Journal of the History of Philosophy Volume 43, 2005 ; 2631 >
+        au < exists ; 2006 ; Journal of the History of Philosophy Volume 44, 2006 ; 2901 >
+        au < exists ; 2007 ; Journal of the History of Philosophy Volume 45, 2007 ; 3194 >
+        au < exists ; 2008 ; Journal of the History of Philosophy Volume 46, 2008 ; 3502 >
+        au < exists ; 2009 ; Journal of the History of Philosophy Volume 47, 2009 ; 4039 >
+        au < exists ; 2010 ; Journal of the History of Philosophy Volume 48, 2010 ; 5691 >
+        au < exists ; 2011 ; Journal of the History of Philosophy Volume 49, 2011 ; 6629 >
+        au < exists ; 2012 ; Journal of the History of Philosophy Volume 50, 2012 ; 7911 >
+        au < exists ; 2013 ; Journal of the History of Philosophy Volume 51, 2013 ; 8730 >
+        au < exists ; 2014 ; Journal of the History of Philosophy Volume 52, 2014 ; 9626 >
+        au < exists ; 2015 ; Journal of the History of Philosophy Volume 53, 2015 ; 10338 >
+        au < exists ; 2016 ; Journal of the History of Philosophy Volume 54, 2016 ; 10893 >
+        au < exists ; 2017 ; Journal of the History of Philosophy Volume 55, 2017 ; 12309 >
+
+    }
+    {
+    title <
+      name = Kennedy Institute of Ethics Journal ;
+      issn = 1054-6863  ;
+      eissn = 1086-3249  ;
+      issnl = 1054-6863
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1991 ; Kennedy Institute of Ethics Journal Volume 1, 1991 ; 3918 >
+        au < exists ; 1992 ; Kennedy Institute of Ethics Journal Volume 2, 1992 ; 3917 >
+        au < exists ; 1993 ; Kennedy Institute of Ethics Journal Volume 3, 1993 ; 3916 >
+        au < exists ; 1994 ; Kennedy Institute of Ethics Journal Volume 4, 1994 ; 3915 >
+        au < exists ; 1995 ; Kennedy Institute of Ethics Journal Volume 5, 1995 ; 3914 >
+        au < exists ; 1996 ; Kennedy Institute of Ethics Journal Volume 6, 1996 ; 356 >
+        au < exists ; 1997 ; Kennedy Institute of Ethics Journal Volume 7, 1997 ; 357 >
+        au < exists ; 1998 ; Kennedy Institute of Ethics Journal Volume 8, 1998 ; 358 >
+        au < exists ; 1999 ; Kennedy Institute of Ethics Journal Volume 9, 1999 ; 359 >
+        au < exists ; 2000 ; Kennedy Institute of Ethics Journal Volume 10, 2000 ; 360 >
+        au < exists ; 2001 ; Kennedy Institute of Ethics Journal Volume 11, 2001 ; 361 >
+        au < exists ; 2002 ; Kennedy Institute of Ethics Journal Volume 12, 2002 ; 362 >
+        au < exists ; 2003 ; Kennedy Institute of Ethics Journal Volume 13, 2003 ; 872 >
+        au < exists ; 2004 ; Kennedy Institute of Ethics Journal Volume 14, 2004 ; 2483 >
+        au < exists ; 2005 ; Kennedy Institute of Ethics Journal Volume 15, 2005 ; 2714 >
+        au < exists ; 2006 ; Kennedy Institute of Ethics Journal Volume 16, 2006 ; 3018 >
+        au < exists ; 2007 ; Kennedy Institute of Ethics Journal Volume 17, 2007 ; 3271 >
+        au < exists ; 2008 ; Kennedy Institute of Ethics Journal Volume 18, 2008 ; 3763 >
+        au < exists ; 2009 ; Kennedy Institute of Ethics Journal Volume 19, 2009 ; 4166 >
+        au < exists ; 2010 ; Kennedy Institute of Ethics Journal Volume 20, 2010 ; 6155 >
+        au < exists ; 2011 ; Kennedy Institute of Ethics Journal Volume 21, 2011 ; 7118 >
+        au < exists ; 2012 ; Kennedy Institute of Ethics Journal Volume 22, 2012 ; 8265 >
+        au < exists ; 2013 ; Kennedy Institute of Ethics Journal Volume 23, 2013 ; 8883 >
+        au < exists ; 2014 ; Kennedy Institute of Ethics Journal Volume 24, 2014 ; 9856 >
+        au < exists ; 2015 ; Kennedy Institute of Ethics Journal Volume 25, 2015 ; 10535 >
+        au < exists ; 2016 ; Kennedy Institute of Ethics Journal Volume 26, 2016 ; 11184 >
+
+    }
+    {
+    title <
+      name = L'Esprit Créateur ;
+      issn = 0014-0767  ;
+      eissn = 1931-0234  ;
+      issnl = 0014-0767
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1986 ; L'Esprit Créateur Volume 26, 1986 ; 9442 >
+        au < exists ; 1987 ; L'Esprit Créateur Volume 27, 1987 ; 9443 >
+        au < exists ; 1988 ; L'Esprit Créateur Volume 28, 1988 ; 9444 >
+        au < exists ; 1989 ; L'Esprit Créateur Volume 29, 1989 ; 9445 >
+        au < exists ; 1990 ; L'Esprit Créateur Volume 30, 1990 ; 9446 >
+        au < exists ; 1991 ; L'Esprit Créateur Volume 31, 1991 ; 9447 >
+        au < exists ; 1992 ; L'Esprit Créateur Volume 32, 1992 ; 9448 >
+        au < exists ; 1993 ; L'Esprit Créateur Volume 33, 1993 ; 9449 >
+        au < exists ; 1994 ; L'Esprit Créateur Volume 34, 1994 ; 9450 >
+        au < exists ; 1995 ; L'Esprit Créateur Volume 35, 1995 ; 9451 >
+        au < exists ; 1996 ; L'Esprit Créateur Volume 36, 1996 ; 4340 >
+        au < exists ; 1997 ; L'Esprit Créateur Volume 37, 1997 ; 4339 >
+        au < exists ; 1998 ; L'Esprit Créateur Volume 38, 1998 ; 4208 >
+        au < exists ; 1999 ; L'Esprit Créateur Volume 39, 1999 ; 4207 >
+        au < exists ; 2000 ; L'Esprit Créateur Volume 40, 2000 ; 4206 >
+        au < exists ; 2001 ; L'Esprit Créateur Volume 41, 2001 ; 4205 >
+        au < exists ; 2002 ; L'Esprit Créateur Volume 42, 2002 ; 4204 >
+        au < exists ; 2003 ; L'Esprit Créateur Volume 43, 2003 ; 4203 >
+        au < exists ; 2004 ; L'Esprit Créateur Volume 44, 2004 ; 4201 >
+        au < exists ; 2005 ; L'Esprit Créateur Volume 45, 2005 ; 4202 >
+        au < exists ; 2006 ; L'Esprit Créateur Volume 46, 2006 ; 3039 >
+        au < exists ; 2007 ; L'Esprit Créateur Volume 47, 2007 ; 3316 >
+        au < exists ; 2008 ; L'Esprit Créateur Volume 48, 2008 ; 3693 >
+        au < exists ; 2009 ; L'Esprit Créateur Volume 49, 2009 ; 4249 >
+        au < exists ; 2010 ; L'Esprit Créateur Volume 50, 2010 ; 5944 >
+        au < exists ; 2011 ; L'Esprit Créateur Volume 51, 2011 ; 6872 >
+        au < exists ; 2012 ; L'Esprit Créateur Volume 52, 2012 ; 8149 >
+        au < exists ; 2013 ; L'Esprit Créateur Volume 53, 2013 ; 9071 >
+        au < exists ; 2014 ; L'Esprit Créateur Volume 54, 2014 ; 9745 >
+        au < exists ; 2015 ; L'Esprit Créateur Volume 55, 2015 ; 10586 >
+        au < exists ; 2016 ; L'Esprit Créateur Volume 56, 2016 ; 11125 >
+
+    }
+    {
+    title <
+      name = Late Imperial China ;
+      issn = 0884-3236  ;
+      eissn = 1086-3257  ;
+      issnl = 0884-3236
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1967-1968 ; Late Imperial China Volume 1, 1967-1968 ; 6541 >
+        au < exists ; 1969-1972 ; Late Imperial China Volume 2, 1969-1972 ; 6540 >
+        au < exists ; 1975-1978 ; Late Imperial China Volume 3, 1975-1978 ; 6539 >
+        au < exists ; 1981-1983 ; Late Imperial China Volume 4, 1981-1983 ; 6538 >
+        au < exists ; 1984 ; Late Imperial China Volume 5, 1984 ; 6537 >
+        au < exists ; 1985 ; Late Imperial China Volume 6, 1985 ; 6063 >
+        au < exists ; 1986 ; Late Imperial China Volume 7, 1986 ; 6062 >
+        au < exists ; 1987 ; Late Imperial China Volume 8, 1987 ; 6061 >
+        au < exists ; 1988 ; Late Imperial China Volume 9, 1988 ; 6060 >
+        au < exists ; 1989 ; Late Imperial China Volume 10, 1989 ; 6059 >
+        au < exists ; 1990 ; Late Imperial China Volume 11, 1990 ; 6058 >
+        au < exists ; 1991 ; Late Imperial China Volume 12, 1991 ; 6057 >
+        au < exists ; 1992 ; Late Imperial China Volume 13, 1992 ; 6056 >
+        au < exists ; 1993 ; Late Imperial China Volume 14, 1993 ; 6055 >
+        au < exists ; 1994 ; Late Imperial China Volume 15, 1994 ; 6054 >
+        au < exists ; 1995 ; Late Imperial China Volume 16, 1995 ; 6053 >
+        au < exists ; 1996 ; Late Imperial China Volume 17, 1996 ; 373 >
+        au < exists ; 1997 ; Late Imperial China Volume 18, 1997 ; 374 >
+        au < exists ; 1998 ; Late Imperial China Volume 19, 1998 ; 375 >
+        au < exists ; 1999 ; Late Imperial China Volume 20, 1999 ; 376 >
+        au < exists ; 2000 ; Late Imperial China Volume 21, 2000 ; 377 >
+        au < exists ; 2001 ; Late Imperial China Volume 22, 2001 ; 378 >
+        au < exists ; 2002 ; Late Imperial China Volume 23, 2002 ; 379 >
+        au < exists ; 2003 ; Late Imperial China Volume 24, 2003 ; 956 >
+        au < exists ; 2004 ; Late Imperial China Volume 25, 2004 ; 2567 >
+        au < exists ; 2005 ; Late Imperial China Volume 26, 2005 ; 2807 >
+        au < exists ; 2006 ; Late Imperial China Volume 27, 2006 ; 3114 >
+        au < exists ; 2007 ; Late Imperial China Volume 28, 2007 ; 3432 >
+        au < exists ; 2008 ; Late Imperial China Volume 29, 2008 ; 3764 >
+        au < exists ; 2009 ; Late Imperial China Volume 30, 2009 ; 4370 >
+        au < exists ; 2010 ; Late Imperial China Volume 31, 2010 ; 6339 >
+        au < exists ; 2011 ; Late Imperial China Volume 32, 2011 ; 7327 >
+        au < exists ; 2012 ; Late Imperial China Volume 33, 2012 ; 8386 >
+        au < exists ; 2013 ; Late Imperial China Volume 34, 2013 ; 9151 >
+        au < exists ; 2014 ; Late Imperial China Volume 35, 2014 ; 10064 >
+        au < exists ; 2015 ; Late Imperial China Volume 36, 2015 ; 10686 >
+        au < exists ; 2016 ; Late Imperial China Volume 37, 2016 ; 11268 >
+
+    }
+    {
+    title <
+      name = Leviathan ;
+      issn = 1525-6995  ;
+      eissn = 1750-1849  ;
+      issnl = 1525-6995
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999 ; Leviathan Volume 1, 1999 ; 8574 >
+        au < exists ; 2000 ; Leviathan Volume 2, 2000 ; 8575 >
+        au < exists ; 2001 ; Leviathan Volume 3, 2001 ; 8576 >
+        au < exists ; 2002 ; Leviathan Volume 4, 2002 ; 8577 >
+        au < exists ; 2003 ; Leviathan Volume 5, 2003 ; 8578 >
+        au < exists ; 2004 ; Leviathan Volume 6, 2004 ; 8579 >
+        au < exists ; 2005 ; Leviathan Volume 7, 2005 ; 8580 >
+        au < exists ; 2006 ; Leviathan Volume 8, 2006 ; 8581 >
+        au < exists ; 2007 ; Leviathan Volume 9, 2007 ; 8582 >
+        au < exists ; 2008 ; Leviathan Volume 10, 2008 ; 8583 >
+        au < exists ; 2009 ; Leviathan Volume 11, 2009 ; 8584 >
+        au < exists ; 2010 ; Leviathan Volume 12, 2010 ; 8585 >
+        au < exists ; 2011 ; Leviathan Volume 13, 2011 ; 8586 >
+        au < exists ; 2012 ; Leviathan Volume 14, 2012 ; 8587 >
+        au < exists ; 2013 ; Leviathan Volume 15, 2013 ; 9080 >
+        au < exists ; 2014 ; Leviathan Volume 16, 2014 ; 9963 >
+        au < exists ; 2015 ; Leviathan Volume 17, 2015 ; 10583 >
+        au < exists ; 2016 ; Leviathan Volume 18, 2016 ; 11167 >
+        au < exists ; 2017 ; Leviathan Volume 19, 2017 ; 12490 >
+
+    }
+    {
+    title <
+      name = Library Trends ;
+      issn = 0024-2594  ;
+      eissn = 1559-0682  ;
+      issnl = 0024-2594
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005-2006 ; Library Trends Volume 54, 2005-2006 ; 2935 >
+        au < exists ; 2006-2007 ; Library Trends Volume 55, 2006-2007 ; 3132 >
+        au < exists ; 2007-2008 ; Library Trends Volume 56, 2007-2008 ; 3474 >
+        au < exists ; 2008 ; Library Trends Volume 57, 2008 ; 3950 >
+        au < exists ; 2009 ; Library Trends Volume 58, 2009 ; 4425 >
+        au < exists ; 2010 ; Library Trends Volume 59, 2010 ; 6564 >
+        au < exists ; 2011-2012 ; Library Trends Volume 60, 2011-2012 ; 7421 >
+        au < exists ; 2012-2013 ; Library Trends Volume 61, 2012-2013 ; 8460 >
+        au < exists ; 2013-2014 ; Library Trends Volume 62, 2013-2014 ; 9375 >
+        au < exists ; 2014-2015 ; Library Trends Volume 63, 2014-2015 ; 10201 >
+        au < exists ; 2015-2016 ; Library Trends Volume 64, 2015-2016 ; 10833 >
+        au < exists ; 2016 ; Library Trends Volume 65, 2016 ; 11402 >
+
+    }
+    {
+    title <
+      name = Literature and Medicine ;
+      issn = 0278-9671  ;
+      eissn = 1080-6571  ;
+      issnl = 0278-9671
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1982 ; Literature and Medicine Volume 1, 1982 ; 5897 >
+        au < exists ; 1983 ; Literature and Medicine Volume 2, 1983 ; 5896 >
+        au < exists ; 1984 ; Literature and Medicine Volume 3, 1984 ; 5895 >
+        au < exists ; 1985 ; Literature and Medicine Volume 4, 1985 ; 5894 >
+        au < exists ; 1986 ; Literature and Medicine Volume 5, 1986 ; 5893 >
+        au < exists ; 1987 ; Literature and Medicine Volume 6, 1987 ; 5892 >
+        au < exists ; 1988 ; Literature and Medicine Volume 7, 1988 ; 5891 >
+        au < exists ; 1989 ; Literature and Medicine Volume 8, 1989 ; 5890 >
+        au < exists ; 1990 ; Literature and Medicine Volume 9, 1990 ; 5889 >
+        au < exists ; 1991 ; Literature and Medicine Volume 10, 1991 ; 5888 >
+        au < exists ; 1992 ; Literature and Medicine Volume 11, 1992 ; 5887 >
+        au < exists ; 1993 ; Literature and Medicine Volume 12, 1993 ; 5886 >
+        au < exists ; 1994 ; Literature and Medicine Volume 13, 1994 ; 5860 >
+        au < exists ; 1995 ; Literature and Medicine Volume 14, 1995 ; 387 >
+        au < exists ; 1996 ; Literature and Medicine Volume 15, 1996 ; 388 >
+        au < exists ; 1997 ; Literature and Medicine Volume 16, 1997 ; 389 >
+        au < exists ; 1998 ; Literature and Medicine Volume 17, 1998 ; 390 >
+        au < exists ; 1999 ; Literature and Medicine Volume 18, 1999 ; 391 >
+        au < exists ; 2000 ; Literature and Medicine Volume 19, 2000 ; 392 >
+        au < exists ; 2001 ; Literature and Medicine Volume 20, 2001 ; 393 >
+        au < exists ; 2002 ; Literature and Medicine Volume 21, 2002 ; 394 >
+        au < exists ; 2003 ; Literature and Medicine Volume 22, 2003 ; 923 >
+        au < exists ; 2004 ; Literature and Medicine Volume 23, 2004 ; 2543 >
+        au < exists ; 2005 ; Literature and Medicine Volume 24, 2005 ; 2823 >
+        au < exists ; 2006 ; Literature and Medicine Volume 25, 2006 ; 3131 >
+        au < exists ; 2007 ; Literature and Medicine Volume 26, 2007 ; 3518 >
+        au < exists ; 2008 ; Literature and Medicine Volume 27, 2008 ; 4229 >
+        au < exists ; 2009 ; Literature and Medicine Volume 28, 2009 ; 5855 >
+        au < exists ; 2011 ; Literature and Medicine Volume 29, 2011 ; 7564 >
+        au < exists ; 2012 ; Literature and Medicine Volume 30, 2012 ; 8416 >
+        au < exists ; 2013 ; Literature and Medicine Volume 31, 2013 ; 9333 >
+        au < exists ; 2014 ; Literature and Medicine Volume 32, 2014 ; 10063 >
+        au < exists ; 2015 ; Literature and Medicine Volume 33, 2015 ; 10678 >
+        au < exists ; 2016 ; Literature and Medicine Volume 34, 2016 ; 11362 >
+
+    }
+    {
+    title <
+      name = MFS Modern Fiction Studies ;
+      issn = 0026-7724  ;
+      eissn = 1080-658X  ;
+      issnl = 0026-7724
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1985 ; MFS Modern Fiction Studies Volume 31, 1985 ; 3869 >
+        au < exists ; 1986 ; MFS Modern Fiction Studies Volume 32, 1986 ; 3870 >
+        au < exists ; 1987 ; MFS Modern Fiction Studies Volume 33, 1987 ; 3893 >
+        au < exists ; 1988 ; MFS Modern Fiction Studies Volume 34, 1988 ; 3842 >
+        au < exists ; 1989 ; MFS Modern Fiction Studies Volume 35, 1989 ; 3843 >
+        au < exists ; 1990 ; MFS Modern Fiction Studies Volume 36, 1990 ; 3879 >
+        au < exists ; 1991 ; MFS Modern Fiction Studies Volume 37, 1991 ; 3819 >
+        au < exists ; 1992 ; MFS Modern Fiction Studies Volume 38, 1992 ; 3818 >
+        au < exists ; 1993 ; MFS Modern Fiction Studies Volume 39, 1993 ; 3816 >
+        au < exists ; 1994 ; MFS Modern Fiction Studies Volume 40, 1994 ; 412 >
+        au < exists ; 1995 ; MFS Modern Fiction Studies Volume 41, 1995 ; 413 >
+        au < exists ; 1996 ; MFS Modern Fiction Studies Volume 42, 1996 ; 414 >
+        au < exists ; 1997 ; MFS Modern Fiction Studies Volume 43, 1997 ; 415 >
+        au < exists ; 1998 ; MFS Modern Fiction Studies Volume 44, 1998 ; 416 >
+        au < exists ; 1999 ; MFS Modern Fiction Studies Volume 45, 1999 ; 417 >
+        au < exists ; 2000 ; MFS Modern Fiction Studies Volume 46, 2000 ; 418 >
+        au < exists ; 2001 ; MFS Modern Fiction Studies Volume 47, 2001 ; 419 >
+        au < exists ; 2002 ; MFS Modern Fiction Studies Volume 48, 2002 ; 420 >
+        au < exists ; 2003 ; MFS Modern Fiction Studies Volume 49, 2003 ; 874 >
+        au < exists ; 2004 ; MFS Modern Fiction Studies Volume 50, 2004 ; 2459 >
+        au < exists ; 2005 ; MFS Modern Fiction Studies Volume 51, 2005 ; 2715 >
+        au < exists ; 2006 ; MFS Modern Fiction Studies Volume 52, 2006 ; 3030 >
+        au < exists ; 2007 ; MFS Modern Fiction Studies Volume 53, 2007 ; 3324 >
+        au < exists ; 2008 ; MFS Modern Fiction Studies Volume 54, 2008 ; 3703 >
+        au < exists ; 2009 ; MFS Modern Fiction Studies Volume 55, 2009 ; 4221 >
+        au < exists ; 2010 ; MFS Modern Fiction Studies Volume 56, 2010 ; 5824 >
+        au < exists ; 2011 ; MFS Modern Fiction Studies Volume 57, 2011 ; 6831 >
+        au < exists ; 2012 ; MFS Modern Fiction Studies Volume 58, 2012 ; 8186 >
+        au < exists ; 2013 ; MFS Modern Fiction Studies Volume 59, 2013 ; 8894 >
+        au < exists ; 2014 ; MFS Modern Fiction Studies Volume 60, 2014 ; 9792 >
+        au < exists ; 2015 ; MFS Modern Fiction Studies Volume 61, 2015 ; 10524 >
+        au < exists ; 2016 ; MFS Modern Fiction Studies Volume 62, 2016 ; 11115 >
+        au < exists ; 2017 ; MFS Modern Fiction Studies Volume 63, 2017 ; 12487 >
+
+    }
+    {
+    title <
+      name = MLN ;
+      issn = 0026-7910  ;
+      eissn = 1080-6598  ;
+      issnl = 0026-7910
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1993 ; MLN Volume 108, 1993 ; 1476 >
+        au < exists ; 1995 ; MLN Volume 110, 1995 ; 436 >
+        au < exists ; 1996 ; MLN Volume 111, 1996 ; 437 >
+        au < exists ; 1997 ; MLN Volume 112, 1997 ; 438 >
+        au < exists ; 1998 ; MLN Volume 113, 1998 ; 439 >
+        au < exists ; 1999 ; MLN Volume 114, 1999 ; 440 >
+        au < exists ; 2000 ; MLN Volume 115, 2000 ; 441 >
+        au < exists ; 2001 ; MLN Volume 116, 2001 ; 442 >
+        au < exists ; 2002 ; MLN Volume 117, 2002 ; 443 >
+        au < exists ; 2003 ; MLN Volume 118, 2003 ; 875 >
+        au < exists ; 2004 ; MLN Volume 119, 2004 ; 2428 >
+        au < exists ; 2005 ; MLN Volume 120, 2005 ; 2697 >
+        au < exists ; 2006 ; MLN Volume 121, 2006 ; 2982 >
+        au < exists ; 2007 ; MLN Volume 122, 2007 ; 3317 >
+        au < exists ; 2008 ; MLN Volume 123, 2008 ; 3652 >
+        au < exists ; 2009 ; MLN Volume 124, 2009 ; 4179 >
+        au < exists ; 2010 ; MLN Volume 125, 2010 ; 5918 >
+        au < exists ; 2011 ; MLN Volume 126, 2011 ; 7026 >
+        au < exists ; 2012 ; MLN Volume 127, 2012 ; 8235 >
+        au < exists ; 2013 ; MLN Volume 128, 2013 ; 8926 >
+        au < exists ; 2014 ; MLN Volume 129, 2014 ; 9812 >
+        au < exists ; 2015 ; MLN Volume 130, 2015 ; 10530 >
+        au < exists ; 2016 ; MLN Volume 131, 2016 ; 11177 >
+        au < exists ; 2017 ; MLN Volume 132, 2017 ; 12495 >
+
+    }
+    {
+    title <
+      name = Milton Quarterly ;
+      issn = 0026-4326  ;
+      eissn = 1094-348X  ;
+      issnl = 0026-4326
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1997 ; Milton Quarterly Volume 31, 1997 ; 459 >
+        au < exists ; 1998 ; Milton Quarterly Volume 32, 1998 ; 460 >
+        au < exists ; 1999 ; Milton Quarterly Volume 33, 1999 ; 461 >
+        au < exists ; 2000 ; Milton Quarterly Volume 34, 2000 ; 462 >
+
+    }
+    {
+    title <
+      name = Modernism/modernity ;
+      issn = 1071-6068  ;
+      eissn = 1080-6601  ;
+      issnl = 1071-6068
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1994 ; Modernism/modernity Volume 1, 1994 ; 448 >
+        au < exists ; 1995 ; Modernism/modernity Volume 2, 1995 ; 449 >
+        au < exists ; 1996 ; Modernism/modernity Volume 3, 1996 ; 450 >
+        au < exists ; 1997 ; Modernism/modernity Volume 4, 1997 ; 451 >
+        au < exists ; 1998 ; Modernism/modernity Volume 5, 1998 ; 452 >
+        au < exists ; 1999 ; Modernism/modernity Volume 6, 1999 ; 453 >
+        au < exists ; 2000 ; Modernism/modernity Volume 7, 2000 ; 454 >
+        au < exists ; 2001 ; Modernism/modernity Volume 8, 2001 ; 455 >
+        au < exists ; 2002 ; Modernism/modernity Volume 9, 2002 ; 456 >
+        au < exists ; 2003 ; Modernism/modernity Volume 10, 2003 ; 796 >
+        au < exists ; 2004 ; Modernism/modernity Volume 11, 2004 ; 2426 >
+        au < exists ; 2005 ; Modernism/modernity Volume 12, 2005 ; 2651 >
+        au < exists ; 2006 ; Modernism/modernity Volume 13, 2006 ; 2900 >
+        au < exists ; 2007 ; Modernism/modernity Volume 14, 2007 ; 3205 >
+        au < exists ; 2008 ; Modernism/modernity Volume 15, 2008 ; 3619 >
+        au < exists ; 2009 ; Modernism/modernity Volume 16, 2009 ; 4050 >
+        au < exists ; 2010 ; Modernism/modernity Volume 17, 2010 ; 5766 >
+        au < exists ; 2011 ; Modernism/modernity Volume 18, 2011 ; 6813 >
+        au < exists ; 2012 ; Modernism/modernity Volume 19, 2012 ; 8318 >
+        au < exists ; 2013 ; Modernism/modernity Volume 20, 2013 ; 9093 >
+        au < exists ; 2014 ; Modernism/modernity Volume 21, 2014 ; 9746 >
+        au < exists ; 2015 ; Modernism/modernity Volume 22, 2015 ; 10457 >
+        au < exists ; 2016 ; Modernism/modernity Volume 23, 2016 ; 10967 >
+        au < exists ; 2017 ; Modernism/modernity Volume 24, 2017 ; 12474 >
+
+    }
+    {
+    title <
+      name = NWSA Journal ;
+      issn = 1040-0656  ;
+      eissn = 1527-1889  ;
+      issnl = 1040-0656
+
+    >
+
+      attr[journal_id] = 0000
+
+        #NONE OF THIS  TITLE FOUND on PMuse volume page
+
+    }
+    {
+    title <
+      name = Narrative Inquiry in Bioethics ;
+      issn = 2157-1732  ;
+      eissn = 2157-1740  ;
+      issnl = 2157-1732
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Narrative Inquiry in Bioethics Volume 1, 2011 ; 7646 >
+        au < exists ; 2012 ; Narrative Inquiry in Bioethics Volume 2, 2012 ; 8305 >
+        au < exists ; 2013 ; Narrative Inquiry in Bioethics Volume 3, 2013 ; 9112 >
+        au < exists ; 2014 ; Narrative Inquiry in Bioethics Volume 4, 2014 ; 9882 >
+        au < exists ; 2015 ; Narrative Inquiry in Bioethics Volume 5, 2015 ; 10443 >
+        au < exists ; 2016 ; Narrative Inquiry in Bioethics Volume 6, 2016 ; 11267 >
+
+    }
+    {
+    title <
+      name = New Literary History ;
+      issn = 0028-6087  ;
+      eissn = 1080-661X  ;
+      issnl = 0028-6087
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995 ; New Literary History Volume 26, 1995 ; 477 >
+        au < exists ; 1996 ; New Literary History Volume 27, 1996 ; 478 >
+        au < exists ; 1997 ; New Literary History Volume 28, 1997 ; 479 >
+        au < exists ; 1998 ; New Literary History Volume 29, 1998 ; 480 >
+        au < exists ; 1999 ; New Literary History Volume 30, 1999 ; 481 >
+        au < exists ; 2000 ; New Literary History Volume 31, 2000 ; 482 >
+        au < exists ; 2001 ; New Literary History Volume 32, 2001 ; 483 >
+        au < exists ; 2002 ; New Literary History Volume 33, 2002 ; 484 >
+        au < exists ; 2003 ; New Literary History Volume 34, 2003 ; 825 >
+        au < exists ; 2004 ; New Literary History Volume 35, 2004 ; 2481 >
+        au < exists ; 2005 ; New Literary History Volume 36, 2005 ; 2733 >
+        au < exists ; 2006 ; New Literary History Volume 37, 2006 ; 3089 >
+        au < exists ; 2007 ; New Literary History Volume 38, 2007 ; 3400 >
+        au < exists ; 2008 ; New Literary History Volume 39, 2008 ; 3827 >
+        au < exists ; 2009 ; New Literary History Volume 40, 2009 ; 4172 >
+        au < exists ; 2010 ; New Literary History Volume 41, 2010 ; 6371 >
+        au < exists ; 2011 ; New Literary History Volume 42, 2011 ; 7328 >
+        au < exists ; 2012 ; New Literary History Volume 43, 2012 ; 8319 >
+        au < exists ; 2013 ; New Literary History Volume 44, 2013 ; 9081 >
+        au < exists ; 2014 ; New Literary History Volume 45, 2014 ; 9899 >
+        au < exists ; 2015 ; New Literary History Volume 46, 2015 ; 10626 >
+        au < exists ; 2016 ; New Literary History Volume 47, 2016 ; 11311 >
+        au < exists ; 2017 ; New Literary History Volume 48, 2017 ; 12515 >
+
+    }
+    {
+    title <
+      name = Partial Answers: Journal of Literature and the History of Ideas ;
+      issn = 1565-3668  ;
+      issnl = 1936-9247
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1, 2003 ; 3897 >
+        au < exists ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2, 2004 ; 3896 >
+        au < exists ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3, 2005 ; 3895 >
+        au < exists ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4, 2006 ; 3894 >
+        au < exists ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5, 2007 ; 3341 >
+        au < exists ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6, 2008 ; 3519 >
+        au < exists ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7, 2009 ; 4048 >
+        au < exists ; 2010 ; Partial Answers: Journal of Literature and the History of Ideas Volume 8, 2010 ; 5696 >
+        au < exists ; 2011 ; Partial Answers: Journal of Literature and the History of Ideas Volume 9, 2011 ; 6641 >
+        au < exists ; 2012 ; Partial Answers: Journal of Literature and the History of Ideas Volume 10, 2012 ; 7989 >
+        au < exists ; 2013 ; Partial Answers: Journal of Literature and the History of Ideas Volume 11, 2013 ; 8718 >
+        au < exists ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12, 2014 ; 9603 >
+        au < exists ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13, 2015 ; 10299 >
+        au < exists ; 2016 ; Partial Answers: Journal of Literature and the History of Ideas Volume 14, 2016 ; 10898 >
+        au < exists ; 2017 ; Partial Answers: Journal of Literature and the History of Ideas Volume 15, 2017 ; 12318 >
+
+    }
+    {
+    title <
+      name = Perspectives in Biology and Medicine ;
+      issn = 0031-5982  ;
+      eissn = 1529-8795  ;
+      issnl = 0031-5982
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1958 ; Perspectives in Biology and Medicine Volume 1, 1958 ; 6323 >
+        au < exists ; 1959 ; Perspectives in Biology and Medicine Volume 2, 1959 ; 6322 >
+        au < exists ; 1960 ; Perspectives in Biology and Medicine Volume 3, 1960 ; 6321 >
+        au < exists ; 1961 ; Perspectives in Biology and Medicine Volume 4, 1961 ; 6320 >
+        au < exists ; 1962 ; Perspectives in Biology and Medicine Volume 5, 1962 ; 6319 >
+        au < exists ; 1963 ; Perspectives in Biology and Medicine Volume 6, 1963 ; 6318 >
+        au < exists ; 1964 ; Perspectives in Biology and Medicine Volume 7, 1964 ; 6317 >
+        au < exists ; 1965 ; Perspectives in Biology and Medicine Volume 8, 1965 ; 6316 >
+        au < exists ; 1966 ; Perspectives in Biology and Medicine Volume 9, 1966 ; 6315 >
+        au < exists ; 1967 ; Perspectives in Biology and Medicine Volume 10, 1967 ; 6314 >
+        au < exists ; 1968 ; Perspectives in Biology and Medicine Volume 11, 1968 ; 6313 >
+        au < exists ; 1969 ; Perspectives in Biology and Medicine Volume 12, 1969 ; 6312 >
+        au < exists ; 1970 ; Perspectives in Biology and Medicine Volume 13, 1970 ; 6311 >
+        au < exists ; 1971 ; Perspectives in Biology and Medicine Volume 14, 1971 ; 6310 >
+        au < exists ; 1972 ; Perspectives in Biology and Medicine Volume 15, 1972 ; 6309 >
+        au < exists ; 1973 ; Perspectives in Biology and Medicine Volume 16, 1973 ; 6308 >
+        au < exists ; 1974 ; Perspectives in Biology and Medicine Volume 17, 1974 ; 6307 >
+        au < exists ; 1975 ; Perspectives in Biology and Medicine Volume 18, 1975 ; 6306 >
+        au < exists ; 1976 ; Perspectives in Biology and Medicine Volume 19, 1976 ; 6305 >
+        au < exists ; 1977 ; Perspectives in Biology and Medicine Volume 20, 1977 ; 6304 >
+        au < exists ; 1978 ; Perspectives in Biology and Medicine Volume 21, 1978 ; 6303 >
+        au < exists ; 1979 ; Perspectives in Biology and Medicine Volume 22, 1979 ; 6302 >
+        au < exists ; 1980 ; Perspectives in Biology and Medicine Volume 23, 1980 ; 6301 >
+        au < exists ; 1981 ; Perspectives in Biology and Medicine Volume 24, 1981 ; 6300 >
+        au < exists ; 1982 ; Perspectives in Biology and Medicine Volume 25,1982 ; 6170 >
+        au < exists ; 1983 ; Perspectives in Biology and Medicine Volume 26, 1983 ; 6299 >
+        au < exists ; 1984 ; Perspectives in Biology and Medicine Volume 27, 1984 ; 6298 >
+        au < exists ; 1985 ; Perspectives in Biology and Medicine Volume 28, 1985 ; 6297 >
+        au < exists ; 1986 ; Perspectives in Biology and Medicine Volume 29, 1986 ; 6296 >
+        au < exists ; 1987 ; Perspectives in Biology and Medicine Volume 30, 1987 ; 6295 >
+        au < exists ; 1988 ; Perspectives in Biology and Medicine Volume 31, 1988 ; 6294 >
+        au < exists ; 1989 ; Perspectives in Biology and Medicine Volume 32, 1989 ; 6293 >
+        au < exists ; 1990 ; Perspectives in Biology and Medicine Volume 33, 1990 ; 6292 >
+        au < exists ; 1991 ; Perspectives in Biology and Medicine Volume 34, 1991 ; 6291 >
+        au < exists ; 1992 ; Perspectives in Biology and Medicine Volume 35, 1992 ; 6290 >
+        au < exists ; 1993 ; Perspectives in Biology and Medicine Volume 36, 1993 ; 6289 >
+        au < exists ; 1994 ; Perspectives in Biology and Medicine Volume 37, 1994 ; 6288 >
+        au < exists ; 1995 ; Perspectives in Biology and Medicine Volume 38, 1995 ; 6287 >
+        au < exists ; 1996 ; Perspectives in Biology and Medicine Volume 39, 1996 ; 6286 >
+        au < exists ; 1997 ; Perspectives in Biology and Medicine Volume 40, 1997 ; 6285 >
+        au < exists ; 1998 ; Perspectives in Biology and Medicine Volume 41, 1998 ; 6284 >
+        au < exists ; 1999 ; Perspectives in Biology and Medicine Volume 42, 1999 ; 6283 >
+        au < exists ; 2000 ; Perspectives in Biology and Medicine Volume 43, 2000 ; 509 >
+        au < exists ; 2001 ; Perspectives in Biology and Medicine Volume 44, 2001 ; 510 >
+        au < exists ; 2002 ; Perspectives in Biology and Medicine Volume 45, 2002 ; 511 >
+        au < exists ; 2003 ; Perspectives in Biology and Medicine Volume 46, 2003 ; 791 >
+        au < exists ; 2004 ; Perspectives in Biology and Medicine Volume 47, 2004 ; 1741 >
+        au < exists ; 2005 ; Perspectives in Biology and Medicine Volume 48, 2005 ; 2622 >
+        au < exists ; 2006 ; Perspectives in Biology and Medicine Volume 49, 2006 ; 2916 >
+        au < exists ; 2007 ; Perspectives in Biology and Medicine Volume 50, 2007 ; 3206 >
+        au < exists ; 2008 ; Perspectives in Biology and Medicine Volume 51, 2008 ; 3515 >
+        au < exists ; 2009 ; Perspectives in Biology and Medicine Volume 52, 2009 ; 4079 >
+        au < exists ; 2010 ; Perspectives in Biology and Medicine Volume 53, 2010 ; 5754 >
+        au < exists ; 2011 ; Perspectives in Biology and Medicine Volume 54, 2011 ; 6688 >
+        au < exists ; 2012 ; Perspectives in Biology and Medicine Volume 55, 2012 ; 8060 >
+        au < exists ; 2013 ; Perspectives in Biology and Medicine Volume 56, 2013 ; 9106 >
+        au < exists ; 2014 ; Perspectives in Biology and Medicine Volume 57, 2014 ; 10207 >
+        au < exists ; 2015 ; Perspectives in Biology and Medicine Volume 58, 2015 ; 10848 >
+        au < exists ; 2016 ; Perspectives in Biology and Medicine Volume 59, 2016 ; 11344 >
+
+    }
+    {
+    title <
+      name = Philosophy and Literature ;
+      issn = 0190-0013  ;
+      eissn = 1086-329X  ;
+      issnl = 0190-0013
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1977 ; Philosophy and Literature Volume 1, 1977 ; 6866 >
+        au < exists ; 1978 ; Philosophy and Literature Volume 2, 1978 ; 6867 >
+        au < exists ; 1979 ; Philosophy and Literature Volume 3, 1979 ; 6868 >
+        au < exists ; 1980 ; Philosophy and Literature Volume 4, 1980 ; 6869 >
+        au < exists ; 1981 ; Philosophy and Literature Volume 5, 1981 ; 6870 >
+        au < exists ; 1982 ; Philosophy and Literature Volume 6, 1982 ; 6874 >
+        au < exists ; 1983 ; Philosophy and Literature Volume 7, 1983 ; 6875 >
+        au < exists ; 1984 ; Philosophy and Literature Volume 8, 1984 ; 6876 >
+        au < exists ; 1985 ; Philosophy and Literature Volume 9, 1985 ; 6877 >
+        au < exists ; 1986 ; Philosophy and Literature Volume 10, 1986 ; 6878 >
+        au < exists ; 1987 ; Philosophy and Literature Volume 11, 1987 ; 6879 >
+        au < exists ; 1988 ; Philosophy and Literature Volume 12, 1988 ; 6880 >
+        au < exists ; 1989 ; Philosophy and Literature Volume 13, 1989 ; 6881 >
+        au < exists ; 1990 ; Philosophy and Literature Volume 14, 1990 ; 6808 >
+        au < exists ; 1991 ; Philosophy and Literature Volume 15, 1991 ; 6882 >
+        au < exists ; 1992 ; Philosophy and Literature Volume 16, 1992 ; 6883 >
+        au < exists ; 1993 ; Philosophy and Literature Volume 17, 1993 ; 6884 >
+        au < exists ; 1994 ; Philosophy and Literature Volume 18, 1994 ; 6885 >
+        au < exists ; 1995 ; Philosophy and Literature Volume 19, 1995 ; 526 >
+        au < exists ; 1996 ; Philosophy and Literature Volume 20, 1996 ; 527 >
+        au < exists ; 1997 ; Philosophy and Literature Volume 21, 1997 ; 528 >
+        au < exists ; 1998 ; Philosophy and Literature Volume 22, 1998 ; 529 >
+        au < exists ; 1999 ; Philosophy and Literature Volume 23, 1999 ; 530 >
+        au < exists ; 2000 ; Philosophy and Literature Volume 24, 2000 ; 531 >
+        au < exists ; 2001 ; Philosophy and Literature Volume 25, 2001 ; 532 >
+        au < exists ; 2002 ; Philosophy and Literature Volume 26, 2002 ; 533 >
+        au < exists ; 2003 ; Philosophy and Literature Volume 27, 2003 ; 948 >
+        au < exists ; 2004 ; Philosophy and Literature Volume 28, 2004 ; 2502 >
+        au < exists ; 2005 ; Philosophy and Literature Volume 29, 2005 ; 2749 >
+        au < exists ; 2006 ; Philosophy and Literature Volume 30, 2006 ; 3083 >
+        au < exists ; 2007 ; Philosophy and Literature Volume 31, 2007 ; 3332 >
+        au < exists ; 2008 ; Philosophy and Literature Volume 32, 2008 ; 3713 >
+        au < exists ; 2009 ; Philosophy and Literature Volume 33, 2009 ; 4232 >
+        au < exists ; 2010 ; Philosophy and Literature Volume 34, 2010 ; 5867 >
+        au < exists ; 2011 ; Philosophy and Literature Volume 35, 2011 ; 7171 >
+        au < exists ; 2012 ; Philosophy and Literature Volume 36, 2012 ; 8434 >
+        au < exists ; 2013 ; Philosophy and Literature Volume 37, 2013 ; 9254 >
+        au < exists ; 2014 ; Philosophy and Literature Volume 38, 2014 ; 10124 >
+        au < exists ; 2015 ; Philosophy and Literature Volume 39, 2015 ; 10780 >
+        au < exists ; 2016 ; Philosophy and Literature Volume 40, 2016 ; 11358 >
+
+    }
+    {
+    title <
+      name = Philosophy, Psychiatry, & Psychology ;
+      issn = 1071-6076  ;
+      eissn = 1086-3303  ;
+      issnl = 1071-6076
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1994 ; Philosophy, Psychiatry, & Psychology Volume 1, 1994 ; 3845 >
+        au < exists ; 1995 ; Philosophy, Psychiatry, & Psychology Volume 2, 1995 ; 3844 >
+        au < exists ; 1996 ; Philosophy, Psychiatry, & Psychology Volume 3, 1996 ; 560 >
+        au < exists ; 1997 ; Philosophy, Psychiatry, & Psychology Volume 4, 1997 ; 561 >
+        au < exists ; 1998 ; Philosophy, Psychiatry, & Psychology Volume 5, 1998 ; 562 >
+        au < exists ; 1999 ; Philosophy, Psychiatry, & Psychology Volume 6, 1999 ; 563 >
+        au < exists ; 2000 ; Philosophy, Psychiatry, & Psychology Volume 7, 2000 ; 564 >
+        au < exists ; 2001 ; Philosophy, Psychiatry, & Psychology Volume 8, 2001 ; 565 >
+        au < exists ; 2002 ; Philosophy, Psychiatry, & Psychology Volume 9, 2002 ; 909 >
+        au < exists ; 2003 ; Philosophy, Psychiatry, & Psychology Volume 10, 2003 ; 960 >
+        au < exists ; 2004 ; Philosophy, Psychiatry, & Psychology Volume 11, 2004 ; 2452 >
+        au < exists ; 2005 ; Philosophy, Psychiatry, & Psychology Volume 12, 2005 ; 2829 >
+        au < exists ; 2006 ; Philosophy, Psychiatry, & Psychology Volume 13, 2006 ; 3173 >
+        au < exists ; 2007 ; Philosophy, Psychiatry, & Psychology Volume 14, 2007 ; 3606 >
+        au < exists ; 2008 ; Philosophy, Psychiatry, & Psychology Volume 15, 2008 ; 4110 >
+        au < exists ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16, 2009 ; 4928 >
+        au < exists ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17, 2010 ; 6157 >
+        au < exists ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18, 2011 ; 7309 >
+        au < exists ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19, 2012 ; 8294 >
+        au < exists ; 2013 ; Philosophy, Psychiatry, & Psychology Volume 20, 2013 ; 9171 >
+        au < exists ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21, 2014 ; 10199 >
+        au < exists ; 2015 ; Philosophy, Psychiatry, & Psychology Volume 22, 2015 ; 10853 >
+        au < exists ; 2016 ; Philosophy, Psychiatry, & Psychology Volume 23, 2016 ; 11401 >
+        au < exists ; 2017 ; Philosophy, Psychiatry, & Psychology Volume 24, 2017 ; 12499 >
+
+    }
+    {
+    title <
+      name = Poe Studies ;
+      issn = 1947-4644  ;
+      eissn = 1754-6095  ;
+      issnl = 1947-4644
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Poe Studies Volume 34, 2001 ; 8563 >
+        au < exists ; 2002 ; Poe Studies Volume 35, 2002 ; 8564 >
+        au < exists ; 2003 ; Poe Studies Volume 36, 2003 ; 8565 >
+        au < exists ; 2004 ; Poe Studies Volume 37, 2004 ; 8566 >
+        au < exists ; 2005 ; Poe Studies Volume 38, 2005 ; 8567 >
+        au < exists ; 2006 ; Poe Studies Volume 39-40, 2006 ; 8568 >
+        au < exists ; 2008 ; Poe Studies Volume 41, 2008 ; 8570 >
+        au < exists ; 2009 ; Poe Studies Volume 42, 2009 ; 8571 >
+        au < exists ; 2010 ; Poe Studies Volume 43, 2010 ; 8572 >
+        au < exists ; 2011 ; Poe Studies Volume 44, 2011 ; 8573 >
+        au < exists ; 2012 ; Poe Studies Volume 45, 2012 ; 9605 >
+        au < exists ; 2013 ; Poe Studies Volume 46, 2013 ; 9575 >
+        au < exists ; 2014 ; Poe Studies Volume 47, 2014 ; 10277 >
+        au < exists ; 2015 ; Poe Studies Volume 48, 2015 ; 10857 >
+        au < exists ; 2016 ; Poe Studies Volume 49, 2016 ; 12236 >
+
+    }
+    {
+    title <
+      name = Postmodern Culture ;
+      issn =   ;
+      eissn = 1053-1920 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1990-1991 ; Postmodern Culture Volume 1, 1990-1991 ; 536 >
+        au < exists ; 1991-1992 ; Postmodern Culture Volume 2, 1991-1992 ; 537 >
+        au < exists ; 1992-1993 ; Postmodern Culture Volume 3, 1992-1993 ; 538 >
+        au < exists ; 1993-1994 ; Postmodern Culture Volume 4, 1993-1994 ; 539 >
+        au < exists ; 1994-1995 ; Postmodern Culture Volume 5, 1994-1995 ; 540 >
+        au < exists ; 1995-1996 ; Postmodern Culture Volume 6, 1995-1996 ; 541 >
+        au < exists ; 1996-1997 ; Postmodern Culture Volume 7, 1996-1997 ; 542 >
+        au < exists ; 1997-1998 ; Postmodern Culture Volume 8, 1997-1998 ; 543 >
+        au < exists ; 1998-1999 ; Postmodern Culture Volume 9, 1998-1999 ; 544 >
+        au < exists ; 1999-2000 ; Postmodern Culture Volume 10, 1999-2000 ; 545 >
+        au < exists ; 2000-2001 ; Postmodern Culture Volume 11, 2000-2001 ; 546 >
+        au < exists ; 2001-2002 ; Postmodern Culture Volume 12, 2001-2002 ; 547 >
+        au < exists ; 2002-2003 ; Postmodern Culture Volume 13, 2002-2003 ; 771 >
+        au < exists ; 2003-2004 ; Postmodern Culture Volume 14, 2003-2004 ; 1707 >
+        au < exists ; 2004-2005 ; Postmodern Culture Volume 15, 2004-2005 ; 2594 >
+        au < exists ; 2005-2006 ; Postmodern Culture Volume 16, 2005-2006 ; 2904 >
+        au < exists ; 2006-2007 ; Postmodern Culture Volume 17, 2006-2007 ; 3273 >
+        au < exists ; 2007 ; Postmodern Culture Volume 18, 2007 ; 3776 >
+        au < exists ; 2008-2009 ; Postmodern Culture Volume 19, 2008-2009 ; 4418 >
+        au < exists ; 2009-2010 ; Postmodern Culture Volume 20, 2009-2010 ; 6631 >
+        au < exists ; 2010-2011 ; Postmodern Culture Volume 21, 2010-2011 ; 7675 >
+        au < exists ; 2011-2012 ; Postmodern Culture Volume 22, 2011-2012 ; 8405 >
+        au < exists ; 2012-2013 ; Postmodern Culture Volume 23, 2012-2013 ; 9208 >
+        au < exists ; 2013-2014 ; Postmodern Culture Volume 24, 2013-2014 ; 10351 >
+        au < exists ; 2014-2015 ; Postmodern Culture Volume 25, 2014-2015 ; 10847 >
+        au < exists ; 2015-2016 ; Postmodern Culture Volume 26, 2015-2016 ; 11416 >
+
+    }
+    {
+    title <
+      name = Progress in Community Health Partnerships: Research, Education, and Action ;
+      issn = 1557-0541  ;
+      eissn = 1557-055X  ;
+      issnl = 1557-0541
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1, 2007 ; 3233 >
+        au < exists ; 2008 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2, 2008 ; 3658 >
+        au < exists ; 2009 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 3, 2009 ; 4167 >
+        au < exists ; 2010 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 4, 2010 ; 5927 >
+        au < exists ; 2011 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 5, 2011 ; 6901 >
+        au < exists ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6, 2012 ; 8116 >
+        au < exists ; 2013 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 7, 2013 ; 8865 >
+        au < exists ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8, 2014 ; 9966 >
+        au < exists ; 2015 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 9, 2015 ; 10621 >
+        au < exists ; 2016 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 10, 2016 ; 11080 >
+
+    }
+    {
+    title <
+      name = Reviews in American History ;
+      issn = 0048-7511  ;
+      eissn = 1080-6628  ;
+      issnl = 0048-7511
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1995 ; Reviews in American History Volume 23, 1995 ; 573 >
+        au < exists ; 1996 ; Reviews in American History Volume 24, 1996 ; 574 >
+        au < exists ; 1997 ; Reviews in American History Volume 25, 1997 ; 575 >
+        au < exists ; 1998 ; Reviews in American History Volume 26, 1998 ; 576 >
+        au < exists ; 1999 ; Reviews in American History Volume 27, 1999 ; 577 >
+        au < exists ; 2000 ; Reviews in American History Volume 28, 2000 ; 578 >
+        au < exists ; 2001 ; Reviews in American History Volume 29, 2001 ; 579 >
+        au < exists ; 2002 ; Reviews in American History Volume 30, 2002 ; 580 >
+        au < exists ; 2003 ; Reviews in American History Volume 31, 2003 ; 852 >
+        au < exists ; 2004 ; Reviews in American History Volume 32, 2004 ; 2442 >
+        au < exists ; 2005 ; Reviews in American History Volume 33, 2005 ; 2700 >
+        au < exists ; 2006 ; Reviews in American History Volume 34, 2006 ; 2996 >
+        au < exists ; 2007 ; Reviews in American History Volume 35, 2007 ; 3296 >
+        au < exists ; 2008 ; Reviews in American History Volume 36, 2008 ; 3654 >
+        au < exists ; 2009 ; Reviews in American History Volume 37, 2009 ; 4168 >
+        au < exists ; 2010 ; Reviews in American History Volume 38, 2010 ; 5795 >
+        au < exists ; 2011 ; Reviews in American History Volume 39, 2011 ; 6891 >
+        au < exists ; 2012 ; Reviews in American History Volume 40, 2012 ; 8122 >
+        au < exists ; 2013 ; Reviews in American History Volume 41, 2013 ; 8826 >
+        au < exists ; 2014 ; Reviews in American History Volume 42, 2014 ; 9766 >
+        au < exists ; 2015 ; Reviews in American History Volume 43, 2015 ; 10459 >
+        au < exists ; 2016 ; Reviews in American History Volume 44, 2016 ; 11060 >
+        au < exists ; 2017 ; Reviews in American History Volume 45, 2017 ; 12446 >
+
+    }
+    {
+    title <
+      name = SAIS Review ;
+      issn = 0036-0775  ;
+      eissn = 1088-3142 
+    >
+
+      attr[journal_id] = 0000
+
+        #NONE OF THIS  TITLE FOUND - Changed to title below and PMuse lists under that title on volume info
+
+    }
+    {
+    title <
+      name = SAIS Review of International Affairs ;
+      issn = 1945-4716  ;
+      eissn = 1945-4724 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1981 ; SAIS Review of International Affairs Volume 1, 1981 ; 7317 >
+        au < exists ; 1982 ; SAIS Review of International Affairs Volume 2, 1982 ; 7318 >
+        au < exists ; 1982 ; SAIS Review of International Affairs Volume 3, 1982 ; 7324 >
+        au < exists ; 1984 ; SAIS Review of International Affairs Volume 4, 1984 ; 7320 >
+        au < exists ; 1985 ; SAIS Review of International Affairs Volume 5, 1985 ; 7321 >
+        au < exists ; 1986 ; SAIS Review of International Affairs Volume 6, 1986 ; 7322 >
+        au < exists ; 1987 ; SAIS Review of International Affairs Volume 7, 1987 ; 7288 >
+        au < exists ; 1988 ; SAIS Review of International Affairs Volume 8, 1988 ; 7289 >
+        au < exists ; 1989 ; SAIS Review of International Affairs Volume 9, 1989 ; 7299 >
+        au < exists ; 1990 ; SAIS Review of International Affairs Volume 10, 1990 ; 7301 >
+        au < exists ; 1991 ; SAIS Review of International Affairs Volume 11, 1991 ; 7311 >
+        au < exists ; 1992 ; SAIS Review of International Affairs Volume 12, 1992 ; 7230 >
+        au < exists ; 1993 ; SAIS Review of International Affairs Volume 13, 1993 ; 7312 >
+        au < exists ; 1994 ; SAIS Review of International Affairs Volume 14, 1994 ; 7313 >
+        au < exists ; 1995 ; SAIS Review of International Affairs Volume 15, 1995 ; 600 >
+        au < exists ; 1996 ; SAIS Review of International Affairs Volume 16, 1996 ; 601 >
+        au < exists ; 1997 ; SAIS Review of International Affairs Volume 17, 1997 ; 602 >
+        au < exists ; 1998 ; SAIS Review of International Affairs Volume 18, 1998 ; 603 >
+        au < exists ; 1999 ; SAIS Review of International Affairs Volume 19, 1999 ; 604 >
+        au < exists ; 2000 ; SAIS Review of International Affairs Volume 20, 2000 ; 605 >
+        au < exists ; 2001 ; SAIS Review of International Affairs Volume 21, 2001 ; 606 >
+        au < exists ; 2002 ; SAIS Review of International Affairs Volume 22, 2002 ; 607 >
+        au < exists ; 2003 ; SAIS Review of International Affairs Volume 23, 2003 ; 843 >
+        au < exists ; 2004 ; SAIS Review of International Affairs Volume 24, 2004 ; 2430 >
+        au < exists ; 2005 ; SAIS Review of International Affairs Volume 25, 2005 ; 2750 >
+        au < exists ; 2006 ; SAIS Review of International Affairs Volume 26, 2006 ; 3047 >
+        au < exists ; 2007 ; SAIS Review of International Affairs Volume 27, 2007 ; 3294 >
+        au < exists ; 2008 ; SAIS Review of International Affairs Volume 28, 2008 ; 3620 >
+        au < exists ; 2009 ; SAIS Review of International Affairs Volume 29, 2009 ; 4341 >
+        au < exists ; 2010 ; SAIS Review of International Affairs Volume 30, 2010 ; 5938 >
+        au < exists ; 2011 ; SAIS Review of International Affairs Volume 31, 2011 ; 6948 >
+        au < exists ; 2012 ; SAIS Review of International Affairs Volume 32, 2012 ; 8284 >
+        au < exists ; 2013 ; SAIS Review of International Affairs Volume 33, 2013 ; 9170 >
+        au < exists ; 2014 ; SAIS Review of International Affairs Volume 34, 2014 ; 10056 >
+        au < exists ; 2015 ; SAIS Review of International Affairs Volume 35, 2015 ; 10636 >
+        au < exists ; 2016 ; SAIS Review of International Affairs Volume 36, 2016 ; 11301 >
+
+    }
+    {
+    title <
+      name = SEL Studies in English Literature 1500-1900 ;
+      issn = 0039-3657  ;
+      eissn = 1522-9270  ;
+      issnl = 0039-3657
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39, 1999 ; 617 >
+        au < exists ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40, 2000 ; 618 >
+        au < exists ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41, 2001 ; 619 >
+        au < exists ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42, 2002 ; 620 >
+        au < exists ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43, 2003 ; 803 >
+        au < exists ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44, 2004 ; 1788 >
+        au < exists ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45, 2005 ; 2669 >
+        au < exists ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46, 2006 ; 2983 >
+        au < exists ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47, 2007 ; 3232 >
+        au < exists ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48, 2008 ; 3571 >
+        au < exists ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49, 2009 ; 4078 >
+        au < exists ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50, 2010 ; 5726 >
+        au < exists ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51, 2011 ; 6692 >
+        au < exists ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52, 2012 ; 8069 >
+        au < exists ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53, 2013 ; 8884 >
+        au < exists ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54, 2014 ; 9741 >
+        au < exists ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55, 2015 ; 10432 >
+        au < exists ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56, 2016 ; 11030 >
+        au < exists ; 2017 ; SEL Studies in English Literature 1500-1900 Volume 57, 2017 ; 12381 >
+
+    }
+    {
+    title <
+      name = Sewanee Review ;
+      issn = 0037-3052  ;
+      eissn = 1934-421X  ;
+      issnl = 0037-3052
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2007 ; Sewanee Review Volume 115, 2007 ; 3325 >
+        au < exists ; 2008 ; Sewanee Review Volume 116, 2008 ; 3657 >
+        au < exists ; 2009 ; Sewanee Review Volume 117, 2009 ; 4178 >
+        au < exists ; 2010 ; Sewanee Review Volume 118, 2010 ; 5814 >
+        au < exists ; 2011 ; Sewanee Review Volume 119, 2011 ; 6892 >
+        au < exists ; 2012 ; Sewanee Review Volume 120, 2012 ; 8016 >
+        au < exists ; 2013 ; Sewanee Review Volume 121, 2013 ; 8740 >
+        au < exists ; 2014 ; Sewanee Review Volume 122, 2014 ; 9664 >
+        au < exists ; 2015 ; Sewanee Review Volume 123, 2015 ; 10384 >
+        au < exists ; 2016 ; Sewanee Review Volume 124, 2016 ; 11070 >
+        au < exists ; 2017 ; Sewanee Review Volume 125, 2017 ; 12349 >
+
+    }
+    {
+    title <
+      name = Shakespeare Bulletin ;
+      issn = 0748-2558  ;
+      eissn = 1931-1427  ;
+      issnl = 0748-2558
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2006 ; Shakespeare Bulletin Volume 24, 2006 ; 3033 >
+        au < exists ; 2007 ; Shakespeare Bulletin Volume 25, 2007 ; 3315 >
+        au < exists ; 2008 ; Shakespeare Bulletin Volume 26, 2008 ; 3655 >
+        au < exists ; 2009 ; Shakespeare Bulletin Volume 27, 2009 ; 4164 >
+        au < exists ; 2010 ; Shakespeare Bulletin Volume 28, 2010 ; 5809 >
+        au < exists ; 2011 ; Shakespeare Bulletin Volume 29, 2011 ; 6940 >
+        au < exists ; 2012 ; Shakespeare Bulletin Volume 30, 2012 ; 8251 >
+        au < exists ; 2013 ; Shakespeare Bulletin Volume 31, 2013 ; 8915 >
+        au < exists ; 2014 ; Shakespeare Bulletin Volume 32, 2014 ; 9830 >
+        au < exists ; 2015 ; Shakespeare Bulletin Volume 33, 2015 ; 10458 >
+        au < exists ; 2016 ; Shakespeare Bulletin Volume 34, 2016 ; 11088 >
+        au < exists ; 2017 ; Shakespeare Bulletin Volume 35, 2017 ; 12436 >
+
+    }
+    {
+    title <
+      name = Shakespeare Quarterly ;
+      issn = 0037-3222  ;
+      eissn = 1538-3555  ;
+      issnl = 0037-3222
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Shakespeare Quarterly Volume 52, 2001 ; 628 >
+        au < exists ; 2002 ; Shakespeare Quarterly Volume 53, 2002 ; 629 >
+        au < exists ; 2003 ; Shakespeare Quarterly Volume 54, 2003 ; 944 >
+        au < exists ; 2004 ; Shakespeare Quarterly Volume 55, 2004 ; 2557 >
+        au < exists ; 2005 ; Shakespeare Quarterly Volume 56, 2005 ; 2841 >
+        au < exists ; 2006 ; Shakespeare Quarterly Volume 57, 2006 ; 3052 >
+        au < exists ; 2007 ; Shakespeare Quarterly Volume 58, 2007 ; 3313 >
+        au < exists ; 2008 ; Shakespeare Quarterly Volume 59, 2008 ; 3694 >
+        au < exists ; 2009 ; Shakespeare Quarterly Volume 60, 2009 ; 4239 >
+        au < exists ; 2010 ; Shakespeare Quarterly Volume 61, 2010 ; 5878 >
+        au < exists ; 2011 ; Shakespeare Quarterly Volume 62, 2011 ; 6985 >
+        au < exists ; 2012 ; Shakespeare Quarterly Volume 63, 2012 ; 8185 >
+        au < exists ; 2013 ; Shakespeare Quarterly Volume 64, 2013 ; 8934 >
+        au < exists ; 2014 ; Shakespeare Quarterly Volume 65, 2014 ; 9909 >
+        au < exists ; 2015 ; Shakespeare Quarterly Volume 66, 2015 ; 10516 >
+        au < exists ; 2016 ; Shakespeare Quarterly Volume 67, 2016 ; 11354 >
+
+    }
+    {
+    title <
+      name = Sirena: poesia, arte y critica ;
+      issn = 1548-6400  ;
+      eissn = 1554-7655  ;
+      issnl = 1548-6400
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2712 >
+        au < exists ; 2006 ; Sirena: poesia, arte y critica 2006 ; 2950 >
+        au < exists ; 2007 ; Sirena: poesia, arte y critica 2007 ; 3269 >
+        au < exists ; 2008 ; Sirena: poesia, arte y critica 2008 ; 3695 >
+        au < exists ; 2009 ; Sirena: poesia, arte y critica 2009 ; 4310 >
+        au < exists ; 2010 ; Sirena: poesia, arte y critica 2010 ; 5900 >
+
+    }
+    {
+    title <
+      name = Social Research: An International Quarterly ;
+      issn = 0037-783X  ;
+      eissn = 1944-768X  ;
+      issnl = 0037-783X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2002 ; Social Research: An International Quarterly Volume 69, 2002 ; 10208 >
+        au < exists ; 2003 ; Social Research: An International Quarterly Volume 70, 2003 ; 10209 >
+        au < exists ; 2004 ; Social Research: An International Quarterly Volume 71, 2004 ; 9479 >
+        au < exists ; 2005 ; Social Research: An International Quarterly Volume 72, 2005 ; 9480 >
+        au < exists ; 2006 ; Social Research: An International Quarterly Volume 73, 2006 ; 9481 >
+        au < exists ; 2007 ; Social Research: An International Quarterly Volume 74, 2007 ; 9482 >
+        au < exists ; 2008 ; Social Research: An International Quarterly Volume 75, 2008 ; 9483 >
+        au < exists ; 2009 ; Social Research: An International Quarterly Volume 76, 2009 ; 9484 >
+        au < exists ; 2010 ; Social Research: An International Quarterly Volume 77, 2010 ; 9486 >
+        au < exists ; 2011 ; Social Research: An International Quarterly Volume 78, 2011 ; 9489 >
+        au < exists ; 2012 ; Social Research: An International Quarterly Volume 79, 2012 ; 9490 >
+        au < exists ; 2013 ; Social Research: An International Quarterly Volume 80, 2013 ; 9491 >
+        au < exists ; 2014 ; Social Research: An International Quarterly Volume 81, 2014 ; 9904 >
+        au < exists ; 2015 ; Social Research: An International Quarterly Volume 82, 2015 ; 10528 >
+        au < exists ; 2016 ; Social Research: An International Quarterly Volume 83, 2016 ; 11254 >
+
+    }
+    {
+    title <
+      name = South Central Review ;
+      issn = 0743-6831  ;
+      eissn = 1549-3377  ;
+      issnl = 0743-6831
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2004 ; South Central Review Volume 21, 2004 ; 2478 >
+        au < exists ; 2005 ; South Central Review Volume 22, 2005 ; 2710 >
+        au < exists ; 2006 ; South Central Review Volume 23, 2006 ; 2993 >
+        au < exists ; 2007 ; South Central Review Volume 24, 2007 ; 3286 >
+        au < exists ; 2008 ; South Central Review Volume 25, 2008 ; 3621 >
+        au < exists ; 2009 ; South Central Review Volume 26, 2009 ; 4210 >
+        au < exists ; 2010 ; South Central Review Volume 27, 2010 ; 6041 >
+        au < exists ; 2011 ; South Central Review Volume 28, 2011 ; 6896 >
+        au < exists ; 2012 ; South Central Review Volume 29, 2012 ; 8375 >
+        au < exists ; 2013 ; South Central Review Volume 30, 2013 ; 9116 >
+        au < exists ; 2014 ; South Central Review Volume 31, 2014 ; 9768 >
+        au < exists ; 2015 ; South Central Review Volume 32, 2015 ; 10527 >
+        au < exists ; 2016 ; South Central Review Volume 33, 2016 ; 11116 >
+        au < exists ; 2017 ; South Central Review Volume 34, 2017 ; 12513 >
+
+    }
+    {
+    title <
+      name = Spiritus: A Journal of Christian Spirituality ;
+      issn = 1533-1709  ;
+      eissn = 1535-3117  ;
+      issnl = 1533-1709
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1, 2001 ; 612 >
+        au < exists ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2, 2002 ; 613 >
+        au < exists ; 2003 ; Spiritus: A Journal of Christian Spirituality Volume 3, 2003 ; 890 >
+        au < exists ; 2004 ; Spiritus: A Journal of Christian Spirituality Volume 4, 2004 ; 2485 >
+        au < exists ; 2005 ; Spiritus: A Journal of Christian Spirituality Volume 5, 2005 ; 2763 >
+        au < exists ; 2006 ; Spiritus: A Journal of Christian Spirituality Volume 6, 2006 ; 3035 >
+        au < exists ; 2007 ; Spiritus: A Journal of Christian Spirituality Volume 7, 2007 ; 3363 >
+        au < exists ; 2008 ; Spiritus: A Journal of Christian Spirituality Volume 8, 2008 ; 3747 >
+        au < exists ; 2009 ; Spiritus: A Journal of Christian Spirituality Volume 9, 2009 ; 4251 >
+        au < exists ; 2010 ; Spiritus: A Journal of Christian Spirituality Volume 10, 2010 ; 5901 >
+        au < exists ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11, 2011 ; 7029 >
+        au < exists ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12, 2012 ; 8316 >
+        au < exists ; 2013 ; Spiritus: A Journal of Christian Spirituality Volume 13, 2013 ; 9054 >
+        au < exists ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14, 2014 ; 9936 >
+        au < exists ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15, 2015 ; 10573 >
+        au < exists ; 2016 ; Spiritus: A Journal of Christian Spirituality Volume 16, 2016 ; 11168 >
+
+    }
+    {
+    title <
+      name = Studies in American Fiction ;
+      issn = 0091-8083  ;
+      eissn = 2158-415X 
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1973 ; Studies in American Fiction Volume 1, 1973 ; 7418 >
+        au < exists ; 1974 ; Studies in American Fiction Volume 2, 1974 ; 7371 >
+        au < exists ; 1975 ; Studies in American Fiction Volume 3, 1975 ; 7419 >
+        au < exists ; 1976 ; Studies in American Fiction Volume 4, 1976 ; 7420 >
+        au < exists ; 1977 ; Studies in American Fiction Volume 5, 1977 ; 7404 >
+        au < exists ; 1978 ; Studies in American Fiction Volume 6, 1978 ; 7405 >
+        au < exists ; 1979 ; Studies in American Fiction Volume 7, 1979 ; 7406 >
+        au < exists ; 1980 ; Studies in American Fiction Volume 8, 1980 ; 7407 >
+        au < exists ; 1981 ; Studies in American Fiction Volume 9, 1981 ; 7408 >
+        au < exists ; 1982 ; Studies in American Fiction Volume 10, 1982 ; 7409 >
+        au < exists ; 1983 ; Studies in American Fiction Volume 11, 1983 ; 7410 >
+        au < exists ; 1984 ; Studies in American Fiction Volume 12, 1984 ; 7411 >
+        au < exists ; 1985 ; Studies in American Fiction Volume 13, 1985 ; 7412 >
+        au < exists ; 1986 ; Studies in American Fiction Volume 14, 1986 ; 7413 >
+        au < exists ; 1987 ; Studies in American Fiction Volume 15, 1987 ; 7414 >
+        au < exists ; 1988 ; Studies in American Fiction Volume 16, 1988 ; 7392 >
+        au < exists ; 1989 ; Studies in American Fiction Volume 17, 1989 ; 7393 >
+        au < exists ; 1990 ; Studies in American Fiction Volume 18, 1990 ; 7394 >
+        au < exists ; 1991 ; Studies in American Fiction Volume 19, 1991 ; 7395 >
+        au < exists ; 1992 ; Studies in American Fiction Volume 20, 1992 ; 7396 >
+        au < exists ; 1992 ; Studies in American Fiction Volume 21, 1992 ; 7397 >
+        au < exists ; 1993 ; Studies in American Fiction Volume 22, 1993 ; 7398 >
+        au < exists ; 1994 ; Studies in American Fiction Volume 23, 1994 ; 7399 >
+        au < exists ; 1995 ; Studies in American Fiction Volume 24, 1995 ; 7400 >
+        au < exists ; 1996 ; Studies in American Fiction Volume 25, 1996 ; 7401 >
+        au < exists ; 1998 ; Studies in American Fiction Volume 26, 1998 ; 7377 >
+        au < exists ; 1999 ; Studies in American Fiction Volume 27, 1999 ; 7378 >
+        au < exists ; 2000 ; Studies in American Fiction Volume 28, 2000 ; 7360 >
+        au < exists ; 2001 ; Studies in American Fiction Volume 29, 2001 ; 7379 >
+        au < exists ; 2002 ; Studies in American Fiction Volume 30, 2002 ; 7380 >
+        au < exists ; 2003 ; Studies in American Fiction Volume 31, 2003 ; 7389 >
+        au < exists ; 2004 ; Studies in American Fiction Volume 32, 2004 ; 7390 >
+        au < exists ; 2005 ; Studies in American Fiction Volume 33, 2005 ; 7391 >
+        au < exists ; 2006 ; Studies in American Fiction Volume 34, 2006 ; 7381 >
+        au < exists ; 2007 ; Studies in American Fiction Volume 35, 2007 ; 7382 >
+        au < exists ; 2008 ; Studies in American Fiction Volume 36, 2008 ; 7383 >
+        au < exists ; 2010 ; Studies in American Fiction Volume 37, 2010 ; 6542 >
+        au < exists ; 2011 ; Studies in American Fiction Volume 38, 2011 ; 7743 >
+        au < exists ; 2012 ; Studies in American Fiction Volume 39, 2012 ; 8302 >
+        au < exists ; 2013 ; Studies in American Fiction Volume 40, 2013 ; 9067 >
+        au < exists ; 2014 ; Studies in American Fiction Volume 41, 2014 ; 9937 >
+        au < exists ; 2015 ; Studies in American Fiction Volume 42, 2015 ; 10594 >
+        au < exists ; 2016 ; Studies in American Fiction Volume 43, 2016 ; 11182 >
+
+    }
+    {
+    title <
+      name = Studies in Eighteenth-Century Culture ;
+      issn = 0360-2370  ;
+      eissn = 1938-6133  ;
+      issnl = 0360-2370
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1991 ; Studies in Eighteenth-Century Culture Volume 20, 1991 ; 4305 >
+        au < exists ; 1992 ; Studies in Eighteenth-Century Culture Volume 21, 1992 ; 4304 >
+        au < exists ; 1993 ; Studies in Eighteenth-Century Culture Volume 22, 1993 ; 4303 >
+        au < exists ; 1994 ; Studies in Eighteenth-Century Culture Volume 23, 1994 ; 4302 >
+        au < exists ; 1995 ; Studies in Eighteenth-Century Culture Volume 24, 1995 ; 4301 >
+        au < exists ; 1996 ; Studies in Eighteenth-Century Culture Volume 25, 1996 ; 4300 >
+        au < exists ; 1997 ; Studies in Eighteenth-Century Culture Volume 26, 1997 ; 4299 >
+        au < exists ; 1998 ; Studies in Eighteenth-Century Culture Volume 27, 1998 ; 4298 >
+        au < exists ; 1999 ; Studies in Eighteenth-Century Culture Volume 28, 1999 ; 4297 >
+        au < exists ; 2000 ; Studies in Eighteenth-Century Culture Volume 29, 2000 ; 4296 >
+        au < exists ; 2001 ; Studies in Eighteenth-Century Culture Volume 30, 2001 ; 4295 >
+        au < exists ; 2002 ; Studies in Eighteenth-Century Culture Volume 31, 2002 ; 4294 >
+        au < exists ; 2003 ; Studies in Eighteenth-Century Culture Volume 32, 2003 ; 4293 >
+        au < exists ; 2004 ; Studies in Eighteenth-Century Culture Volume 33, 2004 ; 4292 >
+        au < exists ; 2005 ; Studies in Eighteenth-Century Culture Volume 34, 2005 ; 4291 >
+        au < exists ; 2006 ; Studies in Eighteenth-Century Culture Volume 35, 2006 ; 4290 >
+        au < exists ; 2007 ; Studies in Eighteenth-Century Culture Volume 36, 2007 ; 3427 >
+        au < exists ; 2008 ; Studies in Eighteenth-Century Culture Volume 37, 2008 ; 3737 >
+        au < exists ; 2009 ; Studies in Eighteenth-Century Culture Volume 38, 2009 ; 4389 >
+        au < exists ; 2010 ; Studies in Eighteenth-Century Culture Volume 39, 2010 ; 5816 >
+        au < exists ; 2011 ; Studies in Eighteenth-Century Culture Volume 40, 2011 ; 6871 >
+        au < exists ; 2012 ; Studies in Eighteenth-Century Culture Volume 41, 2012 ; 8042 >
+        au < exists ; 2013 ; Studies in Eighteenth-Century Culture Volume 42, 2013 ; 8808 >
+        au < exists ; 2014 ; Studies in Eighteenth-Century Culture Volume 43, 2014 ; 9891 >
+        au < exists ; 2015 ; Studies in Eighteenth-Century Culture Volume 44, 2015 ; 10438 >
+        au < exists ; 2016 ; Studies in Eighteenth-Century Culture Volume 45, 2016 ; 11069 >
+        au < exists ; 2017 ; Studies in Eighteenth-Century Culture Volume 46, 2017 ; 12308 >
+
+    }
+    {
+    title <
+      name = TAPA ;
+      issn = 0360-5949  ;
+      eissn = 1533-0699  ;
+      issnl = 0360-5949
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2000 ; TAPA Volume 130, 2000 ; 45 >
+        au < exists ; 2001 ; TAPA Volume 131, 2001 ; 46 >
+        au < exists ; 2002 ; TAPA Volume 132, 2002 ; 760 >
+        au < exists ; 2003 ; TAPA Volume 133, 2003 ; 914 >
+        au < exists ; 2004 ; TAPA Volume 134, 2004 ; 2491 >
+        au < exists ; 2005 ; TAPA Volume 135, 2005 ; 2774 >
+        au < exists ; 2006 ; TAPA Volume 136, 2006 ; 3050 >
+        au < exists ; 2007 ; TAPA Volume 137, 2007 ; 3407 >
+        au < exists ; 2008 ; TAPA Volume 138, 2008 ; 3753 >
+        au < exists ; 2009 ; TAPA Volume 139, 2009 ; 4266 >
+        au < exists ; 2010 ; TAPA Volume 140, 2010 ; 5802 >
+        au < exists ; 2011 ; TAPA Volume 141, 2011 ; 6935 >
+        au < exists ; 2012 ; TAPA Volume 142, 2012 ; 8283 >
+        au < exists ; 2013 ; TAPA Volume 143, 2013 ; 9056 >
+        au < exists ; 2014 ; TAPA Volume 144, 2014 ; 9934 >
+        au < exists ; 2015 ; TAPA Volume 145, 2015 ; 10600 >
+        au < exists ; 2016 ; TAPA Volume 146, 2016 ; 11226 >
+
+    }
+    {
+    title <
+      name = Technology and Culture ;
+      issn = 0040-165X  ;
+      eissn = 1097-3729  ;
+      issnl = 0040-165X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1998 ; Technology and Culture Volume 39, 1998 ; 660 >
+        au < exists ; 1999 ; Technology and Culture Volume 40, 1999 ; 661 >
+        au < exists ; 2000 ; Technology and Culture Volume 41, 2000 ; 662 >
+        au < exists ; 2001 ; Technology and Culture Volume 42, 2001 ; 663 >
+        au < exists ; 2002 ; Technology and Culture Volume 43, 2002 ; 664 >
+        au < exists ; 2003 ; Technology and Culture Volume 44, 2003 ; 841 >
+        au < exists ; 2004 ; Technology and Culture Volume 45, 2004 ; 1760 >
+        au < exists ; 2005 ; Technology and Culture Volume 46, 2005 ; 2694 >
+        au < exists ; 2006 ; Technology and Culture Volume 47, 2006 ; 3006 >
+        au < exists ; 2007 ; Technology and Culture Volume 48, 2007 ; 3217 >
+        au < exists ; 2008 ; Technology and Culture Volume 49, 2008 ; 3575 >
+        au < exists ; 2009 ; Technology and Culture Volume 50, 2009 ; 4092 >
+        au < exists ; 2010 ; Technology and Culture Volume 51, 2010 ; 5741 >
+        au < exists ; 2011 ; Technology and Culture Volume 52, 2011 ; 6710 >
+        au < exists ; 2012 ; Technology and Culture Volume 53, 2012 ; 8028 >
+        au < exists ; 2013 ; Technology and Culture Volume 54, 2013 ; 8793 >
+        au < exists ; 2014 ; Technology and Culture Volume 55, 2014 ; 9742 >
+        au < exists ; 2015 ; Technology and Culture Volume 56, 2015 ; 10397 >
+        au < exists ; 2016 ; Technology and Culture Volume 57, 2016 ; 11042 >
+        au < exists ; 2017 ; Technology and Culture Volume 58, 2017 ; 12373 >
+
+    }
+    {
+    title <
+      name = The Emily Dickinson Journal ;
+      issn = 1059-6879  ;
+      eissn = 1096-858X  ;
+      issnl = 1059-6879
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1992 ; The Emily Dickinson Journal Volume 1, 1992 ; 3913 >
+        au < exists ; 1993 ; The Emily Dickinson Journal Volume 2, 1993 ; 3912 >
+        au < exists ; 1994 ; The Emily Dickinson Journal Volume 3, 1994 ; 3911 >
+        au < exists ; 1995 ; The Emily Dickinson Journal Volume 4, 1995 ; 3910 >
+        au < exists ; 1996 ; The Emily Dickinson Journal Volume 5, 1996 ; 3909 >
+        au < exists ; 1997 ; The Emily Dickinson Journal Volume 6, 1997 ; 3908 >
+        au < exists ; 1998 ; The Emily Dickinson Journal Volume 7, 1998 ; 200 >
+        au < exists ; 1999 ; The Emily Dickinson Journal Volume 8, 1999 ; 201 >
+        au < exists ; 2000 ; The Emily Dickinson Journal Volume 9, 2000 ; 202 >
+        au < exists ; 2001 ; The Emily Dickinson Journal Volume 10, 2001 ; 203 >
+        au < exists ; 2002 ; The Emily Dickinson Journal Volume 11, 2002 ; 204 >
+        au < exists ; 2003 ; The Emily Dickinson Journal Volume 12, 2003 ; 883 >
+        au < exists ; 2004 ; The Emily Dickinson Journal Volume 13, 2004 ; 2462 >
+        au < exists ; 2005 ; The Emily Dickinson Journal Volume 14, 2005 ; 2795 >
+        au < exists ; 2006 ; The Emily Dickinson Journal Volume 15, 2006 ; 3103 >
+        au < exists ; 2007 ; The Emily Dickinson Journal Volume 16, 2007 ; 3343 >
+        au < exists ; 2008 ; The Emily Dickinson Journal Volume 17, 2008 ; 3709 >
+        au < exists ; 2009 ; The Emily Dickinson Journal Volume 18, 2009 ; 4308 >
+        au < exists ; 2010 ; The Emily Dickinson Journal Volume 19, 2010 ; 6112 >
+        au < exists ; 2011 ; The Emily Dickinson Journal Volume 20, 2011 ; 7231 >
+        au < exists ; 2012 ; The Emily Dickinson Journal Volume 21, 2012 ; 8274 >
+        au < exists ; 2013 ; The Emily Dickinson Journal Volume 22, 2013 ; 8914 >
+        au < exists ; 2014 ; The Emily Dickinson Journal Volume 23, 2014 ; 9906 >
+        au < exists ; 2015 ; The Emily Dickinson Journal Volume 24, 2015 ; 10560 >
+        au < exists ; 2016 ; The Emily Dickinson Journal Volume 25, 2016 ; 11227 >
+
+    }
+    {
+    title <
+      name = The Henry James Review ;
+      issn = 0273-0340  ;
+      eissn = 1080-6555  ;
+      issnl = 0273-0340
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1979-1980 ; The Henry James Review Volume 1, 1979-1980 ; 5010 >
+        au < exists ; 1980-1981 ; The Henry James Review Volume 2, 1980-1981 ; 5009 >
+        au < exists ; 1981-1982 ; The Henry James Review Volume 3, 1981-1982 ; 5008 >
+        au < exists ; 1982-1983 ; The Henry James Review Volume 4, 1982-1983 ; 5007 >
+        au < exists ; 1983-1984 ; The Henry James Review Volume 5, 1983-1984 ; 5006 >
+        au < exists ; 1984-1985 ; The Henry James Review Volume 6, 1984-1985 ; 5005 >
+        au < exists ; 1985-1986 ; The Henry James Review Volume 7, 1985-1986 ; 5004 >
+        au < exists ; 1986-1987 ; The Henry James Review Volume 8, 1986-1987 ; 5003 >
+        au < exists ; 1988 ; The Henry James Review Volume 9, 1988 ; 5002 >
+        au < exists ; 1989 ; The Henry James Review Volume 10, 1989 ; 5001 >
+        au < exists ; 1990 ; The Henry James Review Volume 11, 1990 ; 5000 >
+        au < exists ; 1991 ; The Henry James Review Volume 12, 1991 ; 4999 >
+        au < exists ; 1992 ; The Henry James Review Volume 13, 1992 ; 4998 >
+        au < exists ; 1993 ; The Henry James Review Volume 14, 1993 ; 4997 >
+        au < exists ; 1994 ; The Henry James Review Volume 15, 1994 ; 4996 >
+        au < exists ; 1995 ; The Henry James Review Volume 16, 1995 ; 244 >
+        au < exists ; 1996 ; The Henry James Review Volume 17, 1996 ; 245 >
+        au < exists ; 1997 ; The Henry James Review Volume 18, 1997 ; 246 >
+        au < exists ; 1998 ; The Henry James Review Volume 19, 1998 ; 247 >
+        au < exists ; 1999 ; The Henry James Review Volume 20, 1999 ; 248 >
+        au < exists ; 2000 ; The Henry James Review Volume 21, 2000 ; 249 >
+        au < exists ; 2001 ; The Henry James Review Volume 22, 2001 ; 250 >
+        au < exists ; 2002 ; The Henry James Review Volume 23, 2002 ; 251 >
+        au < exists ; 2003 ; The Henry James Review Volume 24, 2003 ; 810 >
+        au < exists ; 2004 ; The Henry James Review Volume 25, 2004 ; 1769 >
+        au < exists ; 2005 ; The Henry James Review Volume 26, 2005 ; 2658 >
+        au < exists ; 2006 ; The Henry James Review Volume 27, 2006 ; 2936 >
+        au < exists ; 2007 ; The Henry James Review Volume 28, 2007 ; 3218 >
+        au < exists ; 2008 ; The Henry James Review Volume 29, 2008 ; 3570 >
+        au < exists ; 2009 ; The Henry James Review Volume 30, 2009 ; 4071 >
+        au < exists ; 2010 ; The Henry James Review Volume 31, 2010 ; 5735 >
+        au < exists ; 2011 ; The Henry James Review Volume 32, 2011 ; 6687 >
+        au < exists ; 2012 ; The Henry James Review Volume 33, 2012 ; 8027 >
+        au < exists ; 2013 ; The Henry James Review Volume 34, 2013 ; 8800 >
+        au < exists ; 2014 ; The Henry James Review Volume 35, 2014 ; 9652 >
+        au < exists ; 2015 ; The Henry James Review Volume 36, 2015 ; 10349 >
+        au < exists ; 2016 ; The Henry James Review Volume 37, 2016 ; 10986 >
+        au < exists ; 2017 ; The Henry James Review Volume 38, 2017 ; 12400 >
+
+    }
+    {
+    title <
+      name = The Hopkins Review ;
+      issn = 1939-6589  ;
+      eissn = 1939-9774  ;
+      issnl = 1939-6589
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; The Hopkins Review Volume 1, 2008 (New Series) ; 3602 >
+        au < exists ; 2009 ; The Hopkins Review Volume 2, 2009 (New Series) ; 4027 >
+        au < exists ; 2010 ; The Hopkins Review Volume 3, 2010 (New Series) ; 5679 >
+        au < exists ; 2011 ; The Hopkins Review Volume 4, 2011 (New Series) ; 6627 >
+        au < exists ; 2012 ; The Hopkins Review Volume 5, 2012 (New Series) ; 7883 >
+        au < exists ; 2013 ; The Hopkins Review Volume 6, 2013 (New Series) ; 8731 >
+        au < exists ; 2014 ; The Hopkins Review Volume 7, 2014 (New Series) ; 9621 >
+        au < exists ; 2015 ; The Hopkins Review Volume 8, 2015 (New Series) ; 10325 >
+        au < exists ; 2016 ; The Hopkins Review Volume 9, 2016 (New Series) ; 10968 >
+        au < exists ; 2017 ; The Hopkins Review Volume 10, 2017 (New Series) ; 12356 >
+
+    }
+    {
+    title <
+      name = The Journal of the History of Childhood and Youth ;
+      issn = 1939-6724  ;
+      eissn = 1941-3599  ;
+      issnl = 1939-6724
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2008 ; The Journal of the History of Childhood and Youth Volume 1, 2008 ; 3572 >
+        au < exists ; 2009 ; The Journal of the History of Childhood and Youth Volume 2, 2009 ; 4093 >
+        au < exists ; 2010 ; The Journal of the History of Childhood and Youth Volume 3, 2010 ; 5707 >
+        au < exists ; 2011 ; The Journal of the History of Childhood and Youth Volume 4, 2011 ; 6824 >
+        au < exists ; 2012 ; The Journal of the History of Childhood and Youth Volume 5, 2012 ; 8156 >
+        au < exists ; 2013 ; The Journal of the History of Childhood and Youth Volume 6, 2013 ; 8952 >
+        au < exists ; 2014 ; The Journal of the History of Childhood and Youth Volume 7, 2014 ; 9639 >
+        au < exists ; 2015 ; The Journal of the History of Childhood and Youth Volume 8, 2015 ; 10336 >
+        au < exists ; 2016 ; The Journal of the History of Childhood and Youth Volume 9, 2016 ; 11011 >
+        au < exists ; 2017 ; The Journal of the History of Childhood and Youth Volume 10, 2017 ; 12321 >
+
+    }
+    {
+    title <
+      name = The Lion and the Unicorn ;
+      issn = 0147-2593  ;
+      eissn = 1080-6563  ;
+      issnl = 0147-2593
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1977 ; The Lion and the Unicorn Volume 1, 1977 ; 3889 >
+        au < exists ; 1978 ; The Lion and the Unicorn Volume 2, 1978 ; 3888 >
+        au < exists ; 1979 ; The Lion and the Unicorn Volume 3, 1979 ; 3887 >
+        au < exists ; 1980 ; The Lion and the Unicorn Volume 4, 1980 ; 3886 >
+        au < exists ; 1981 ; The Lion and the Unicorn Volume 5, 1981 ; 3885 >
+        au < exists ; 1982 ; The Lion and the Unicorn Volume 6, 1982 ; 3884 >
+        au < exists ; 1983-1984 ; The Lion and the Unicorn Volume 7/8, 1983-1984 ; 3883 >
+        au < exists ; 1985 ; The Lion and the Unicorn Volume 9, 1985 ; 3881 >
+        au < exists ; 1986 ; The Lion and the Unicorn Volume 10, 1986 ; 3880 >
+        au < exists ; 1987 ; The Lion and the Unicorn Volume 11, 1987 ; 3865 >
+        au < exists ; 1988 ; The Lion and the Unicorn Volume 12, 1988 ; 3864 >
+        au < exists ; 1989 ; The Lion and the Unicorn Volume 13, 1989 ; 3863 >
+        au < exists ; 1990 ; The Lion and the Unicorn Volume 14, 1990 ; 3862 >
+        au < exists ; 1991 ; The Lion and the Unicorn Volume 15, 1991 ; 3861 >
+        au < exists ; 1992 ; The Lion and the Unicorn Volume 16, 1992 ; 3860 >
+        au < exists ; 1993 ; The Lion and the Unicorn Volume 17, 1993 ; 3859 >
+        au < exists ; 1994 ; The Lion and the Unicorn Volume 18, 1994 ; 3858 >
+        au < exists ; 1995 ; The Lion and the Unicorn Volume 19, 1995 ; 687 >
+        au < exists ; 1996 ; The Lion and the Unicorn Volume 20, 1996 ; 688 >
+        au < exists ; 1997 ; The Lion and the Unicorn Volume 21, 1997 ; 689 >
+        au < exists ; 1998 ; The Lion and the Unicorn Volume 22, 1998 ; 690 >
+        au < exists ; 1999 ; The Lion and the Unicorn Volume 23, 1999 ; 691 >
+        au < exists ; 2000 ; The Lion and the Unicorn Volume 24, 2000 ; 692 >
+        au < exists ; 2001 ; The Lion and the Unicorn Volume 25, 2001 ; 693 >
+        au < exists ; 2002 ; The Lion and the Unicorn Volume 26, 2002 ; 694 >
+        au < exists ; 2003 ; The Lion and the Unicorn Volume 27, 2003 ; 820 >
+        au < exists ; 2004 ; The Lion and the Unicorn Volume 28, 2004 ; 1747 >
+        au < exists ; 2005 ; The Lion and the Unicorn Volume 29, 2005 ; 2623 >
+        au < exists ; 2006 ; The Lion and the Unicorn Volume 30, 2006 ; 2919 >
+        au < exists ; 2007 ; The Lion and the Unicorn Volume 31, 2007 ; 3253 >
+        au < exists ; 2008 ; The Lion and the Unicorn Volume 32, 2008 ; 3624 >
+        au < exists ; 2009 ; The Lion and the Unicorn Volume 33, 2009 ; 4102 >
+        au < exists ; 2010 ; The Lion and the Unicorn Volume 34, 2010 ; 5817 >
+        au < exists ; 2011 ; The Lion and the Unicorn Volume 35, 2011 ; 6980 >
+        au < exists ; 2012 ; The Lion and the Unicorn Volume 36, 2012 ; 8250 >
+        au < exists ; 2013 ; The Lion and the Unicorn Volume 37, 2013 ; 8917 >
+        au < exists ; 2014 ; The Lion and the Unicorn Volume 38, 2014 ; 9992 >
+        au < exists ; 2015 ; The Lion and the Unicorn Volume 39, 2015 ; 10701 >
+        au < exists ; 2016 ; The Lion and the Unicorn Volume 40, 2016 ; 11260 >
+
+    }
+    {
+    title <
+      name = The Review of Higher Education ;
+      issn = 0162-5748  ;
+      eissn = 1090-7009  ;
+      issnl = 0162-5748
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1977-1978 ; The Review of Higher Education Volume 1, 1977-1978 ; 12264 >
+        au < exists ; 1978-1979 ; The Review of Higher Education Volume 2, 1978-1979 ; 12283 >
+        au < exists ; 1979-1980 ; The Review of Higher Education Volume 3, 1979-1980 ; 12282 >
+        au < exists ; 1980-1981 ; The Review of Higher Education Volume 4, 1980-1981 ; 12281 >
+        au < exists ; 1981-1982 ; The Review of Higher Education Volume 5, 1981-1982 ; 12280 >
+        au < exists ; 1982-1983 ; The Review of Higher Education Volume 6, 1982-1983 ; 12279 >
+        au < exists ; 1983-1984 ; The Review of Higher Education Volume 7, 1983-1984 ; 12278 >
+        au < exists ; 1984-1985 ; The Review of Higher Education Volume 8, 1984-1985 ; 12277 >
+        au < exists ; 1985-1986 ; The Review of Higher Education Volume 9, 1985-1986 ; 12276 >
+        au < exists ; 1986-1987 ; The Review of Higher Education Volume 10, 1986-1987 ; 12275 >
+        au < exists ; 1987-1988 ; The Review of Higher Education Volume 11, 1987-1988 ; 12274 >
+        au < exists ; 1988-1989 ; The Review of Higher Education Volume 12, 1988-1989 ; 12273 >
+        au < exists ; 1989-1990 ; The Review of Higher Education Volume 13, 1989-1990 ; 12272 >
+        au < exists ; 1990-1991 ; The Review of Higher Education Volume 14, 1990-1991 ; 12271 >
+        au < exists ; 1991-1992 ; The Review of Higher Education Volume 15, 1991-1992 ; 12266 >
+        au < exists ; 1992-1993 ; The Review of Higher Education Volume 16, 1992-1993 ; 12263 >
+        au < exists ; 1993-1994 ; The Review of Higher Education Volume 17, 1993-1994 ; 12262 >
+        au < exists ; 1994-1995 ; The Review of Higher Education Volume 18, 1994-1995 ; 12261 >
+        au < exists ; 1995-1996 ; The Review of Higher Education Volume 19, 1995-1996 ; 12260 >
+        au < exists ; 1996-1997 ; The Review of Higher Education Volume 20, 1996-1997 ; 591 >
+        au < exists ; 1997-1998 ; The Review of Higher Education Volume 21, 1997-1998 ; 592 >
+        au < exists ; 1998-1999 ; The Review of Higher Education Volume 22, 1998-1999 ; 593 >
+        au < exists ; 1999-2000 ; The Review of Higher Education Volume 23, 1999-2000 ; 594 >
+        au < exists ; 2000-2001 ; The Review of Higher Education Volume 24, 2000-2001 ; 595 >
+        au < exists ; 2001-2002 ; The Review of Higher Education Volume 25, 2001-2002 ; 596 >
+        au < exists ; 2002-2003 ; The Review of Higher Education Volume 26, 2002-2003 ; 597 >
+        au < exists ; 2003-2004 ; The Review of Higher Education Volume 27, 2003-2004 ; 963 >
+        au < exists ; 2004-2005 ; The Review of Higher Education Volume 28, 2004-2005 ; 2569 >
+        au < exists ; 2005-2006 ; The Review of Higher Education Volume 29, 2005-2006 ; 2840 >
+        au < exists ; 2006-2007 ; The Review of Higher Education Volume 30, 2006-2007 ; 3139 >
+        au < exists ; 2007-2008 ; The Review of Higher Education Volume 31, 2007-2008 ; 3482 >
+        au < exists ; 2008-2009 ; The Review of Higher Education Volume 32, 2008-2009 ; 3878 >
+        au < exists ; 2009-2010 ; The Review of Higher Education Volume 33, 2009-2010 ; 4415 >
+        au < exists ; 2010-2011 ; The Review of Higher Education Volume 34, 2010-2011 ; 6439 >
+        au < exists ; 2011-2012 ; The Review of Higher Education Volume 35, 2011-2012 ; 7565 >
+        au < exists ; 2012-2013 ; The Review of Higher Education Volume 36, 2012-2013 ; 8466 >
+        au < exists ; 2013-2014 ; The Review of Higher Education Volume 37, 2013-2014 ; 9322 >
+        au < exists ; 2014-2015 ; The Review of Higher Education Volume 38, 2014-2015 ; 10159 >
+        au < exists ; 2015-2016 ; The Review of Higher Education Volume 39, 2015-2016 ; 10764 >
+        au < exists ; 2016 ; The Review of Higher Education Volume 40, 2016 ; 11407 >
+
+    }
+    {
+    title <
+      name = The Yale Journal of Criticism ;
+      issn = 0893-5378  ;
+      eissn = 1080-6636  ;
+      issnl = 0893-5378
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; The Yale Journal of Criticism Volume 9, 1996 ; 721 >
+        au < exists ; 1997 ; The Yale Journal of Criticism Volume 10, 1997 ; 722 >
+        au < exists ; 1998 ; The Yale Journal of Criticism Volume 11, 1998 ; 723 >
+        au < exists ; 1999 ; The Yale Journal of Criticism Volume 12, 1999 ; 724 >
+        au < exists ; 2000 ; The Yale Journal of Criticism Volume 13, 2000 ; 725 >
+        au < exists ; 2001 ; The Yale Journal of Criticism Volume 14, 2001 ; 726 >
+        au < exists ; 2002 ; The Yale Journal of Criticism Volume 15, 2002 ; 727 >
+        au < exists ; 2003 ; The Yale Journal of Criticism Volume 16, 2003 ; 886 >
+        au < exists ; 2004 ; The Yale Journal of Criticism Volume 17, 2004 ; 2476 >
+        au < exists ; 2005 ; The Yale Journal of Criticism Volume 18, 2005 ; 2778 >
+
+    }
+    {
+    title <
+      name = Theatre Journal ;
+      issn = 0192-2882  ;
+      eissn = 1086-332X  ;
+      issnl = 0192-2882
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; Theatre Journal Volume 48, 1996 ; 669 >
+        au < exists ; 1997 ; Theatre Journal Volume 49, 1997 ; 670 >
+        au < exists ; 1998 ; Theatre Journal Volume 50, 1998 ; 671 >
+        au < exists ; 1999 ; Theatre Journal Volume 51, 1999 ; 672 >
+        au < exists ; 2000 ; Theatre Journal Volume 52, 2000 ; 673 >
+        au < exists ; 2001 ; Theatre Journal Volume 53, 2001 ; 674 >
+        au < exists ; 2002 ; Theatre Journal Volume 54, 2002 ; 675 >
+        au < exists ; 2003 ; Theatre Journal Volume 55, 2003 ; 856 >
+        au < exists ; 2004 ; Theatre Journal Volume 56, 2004 ; 2421 >
+        au < exists ; 2005 ; Theatre Journal Volume 57, 2005 ; 2689 >
+        au < exists ; 2006 ; Theatre Journal Volume 58, 2006 ; 2975 >
+        au < exists ; 2007 ; Theatre Journal Volume 59, 2007 ; 3264 >
+        au < exists ; 2008 ; Theatre Journal Volume 60, 2008 ; 3622 >
+        au < exists ; 2009 ; Theatre Journal Volume 61, 2009 ; 4242 >
+        au < exists ; 2010 ; Theatre Journal Volume 62, 2010 ; 6156 >
+        au < exists ; 2011 ; Theatre Journal Volume 63, 2011 ; 6987 >
+        au < exists ; 2012 ; Theatre Journal Volume 64, 2012 ; 8141 >
+        au < exists ; 2013 ; Theatre Journal Volume 65, 2013 ; 8844 >
+        au < exists ; 2014 ; Theatre Journal Volume 66, 2014 ; 9857 >
+        au < exists ; 2015 ; Theatre Journal Volume 67, 2015 ; 10517 >
+        au < exists ; 2016 ; Theatre Journal Volume 68, 2016 ; 11146 >
+
+    }
+    {
+    title <
+      name = Theatre Topics ;
+      issn = 1054-8378  ;
+      eissn = 1086-3346  ;
+      issnl = 1054-8378
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1991 ; Theatre Topics Volume 1, 1991 ; 5015 >
+        au < exists ; 1992 ; Theatre Topics Volume 2, 1992 ; 5014 >
+        au < exists ; 1993 ; Theatre Topics Volume 3, 1993 ; 5013 >
+        au < exists ; 1994 ; Theatre Topics Volume 4, 1994 ; 5012 >
+        au < exists ; 1995 ; Theatre Topics Volume 5, 1995 ; 5011 >
+        au < exists ; 1996 ; Theatre Topics Volume 6, 1996 ; 680 >
+        au < exists ; 1997 ; Theatre Topics Volume 7, 1997 ; 681 >
+        au < exists ; 1998 ; Theatre Topics Volume 8, 1998 ; 682 >
+        au < exists ; 1999 ; Theatre Topics Volume 9, 1999 ; 683 >
+        au < exists ; 2000 ; Theatre Topics Volume 10, 2000 ; 684 >
+        au < exists ; 2001 ; Theatre Topics Volume 11, 2001 ; 685 >
+        au < exists ; 2002 ; Theatre Topics Volume 12, 2002 ; 686 >
+        au < exists ; 2003 ; Theatre Topics Volume 13, 2003 ; 865 >
+        au < exists ; 2004 ; Theatre Topics Volume 14, 2004 ; 2443 >
+        au < exists ; 2005 ; Theatre Topics Volume 15, 2005 ; 2717 >
+        au < exists ; 2006 ; Theatre Topics Volume 16, 2006 ; 2994 >
+        au < exists ; 2007 ; Theatre Topics Volume 17, 2007 ; 3293 >
+        au < exists ; 2008 ; Theatre Topics Volume 18, 2008 ; 3623 >
+        au < exists ; 2009 ; Theatre Topics Volume 19, 2009 ; 4160 >
+        au < exists ; 2010 ; Theatre Topics Volume 20, 2010 ; 5784 >
+        au < exists ; 2011 ; Theatre Topics Volume 21, 2011 ; 6861 >
+        au < exists ; 2012 ; Theatre Topics Volume 22, 2012 ; 8073 >
+        au < exists ; 2013 ; Theatre Topics Volume 23, 2013 ; 8851 >
+        au < exists ; 2014 ; Theatre Topics Volume 24, 2014 ; 9807 >
+        au < exists ; 2015 ; Theatre Topics Volume 25, 2015 ; 10473 >
+        au < exists ; 2016 ; Theatre Topics Volume 26, 2016 ; 11102 >
+
+    }
+    {
+    title <
+      name = Theory & Event ;
+      issn =   ;
+      eissn = 1092-311X  ;
+      issnl = 1092-311X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1997 ; Theory & Event Volume 1, 1997 ; 744 >
+        au < exists ; 1998 ; Theory & Event Volume 2, 1998 ; 745 >
+        au < exists ; 1999 ; Theory & Event Volume 3, 1999 ; 746 >
+        au < exists ; 2000 ; Theory & Event Volume 4, 2000 ; 747 >
+        au < exists ; 2001 ; Theory & Event Volume 5, 2001 ; 748 >
+        au < exists ; 2002-2003 ; Theory & Event Volume 6, 2002-2003 ; 749 >
+        au < exists ; 2003 ; Theory & Event Volume 7, 2003 ; 1710 >
+        au < exists ; 2004 ; Theory & Event Volume 8, 2004 ; 2699 >
+        au < exists ; 2006 ; Theory & Event Volume 9, 2006 ; 2989 >
+        au < exists ; 2007 ; Theory & Event Volume 10, 2007 ; 3335 >
+        au < exists ; 2008 ; Theory & Event Volume 11, 2008 ; 3698 >
+        au < exists ; 2009 ; Theory & Event Volume 12, 2009 ; 4312 >
+        au < exists ; 2010 ; Theory & Event Volume 13, 2010 ; 5941 >
+        au < exists ; 2011 ; Theory & Event Volume 14, 2011 ; 7000 >
+        au < exists ; 2012 ; Theory & Event Volume 15, 2012 ; 8125 >
+        au < exists ; 2013 ; Theory & Event Volume 16, 2013 ; 8822 >
+        au < exists ; 2014 ; Theory & Event Volume 17, 2014 ; 9755 >
+        au < exists ; 2015 ; Theory & Event Volume 18, 2015 ; 10306 >
+        au < exists ; 2016 ; Theory & Event Volume 19, 2016 ; 10908 >
+        au < exists ; 2017 ; Theory & Event Volume 20, 2017 ; 12319 >
+
+    }
+    {
+    title <
+      name = Victorian Periodicals Review ;
+      issn = 0709-4698  ;
+      eissn = 1712-526X  ;
+      issnl = 0709-4698
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2005 ; Victorian Periodicals Review Volume 38, 2005 ; 2768 >
+        au < exists ; 2006 ; Victorian Periodicals Review Volume 39, 2006 ; 3034 >
+        au < exists ; 2007 ; Victorian Periodicals Review Volume 40, 2007 ; 3348 >
+        au < exists ; 2008 ; Victorian Periodicals Review Volume 41, 2008 ; 3780 >
+        au < exists ; 2009 ; Victorian Periodicals Review Volume 42, 2009 ; 4220 >
+        au < exists ; 2010 ; Victorian Periodicals Review Volume 43, 2010 ; 5828 >
+        au < exists ; 2011 ; Victorian Periodicals Review Volume 44, 2011 ; 6913 >
+        au < exists ; 2012 ; Victorian Periodicals Review Volume 45, 2012 ; 8216 >
+        au < exists ; 2013 ; Victorian Periodicals Review Volume 46, 2013 ; 8916 >
+        au < exists ; 2014 ; Victorian Periodicals Review Volume 47, 2014 ; 9866 >
+        au < exists ; 2015 ; Victorian Periodicals Review Volume 48, 2015 ; 10531 >
+        au < exists ; 2016 ; Victorian Periodicals Review Volume 49, 2016 ; 11120 >
+        au < exists ; 2017 ; Victorian Periodicals Review Volume 50, 2017 ; 12517 >
+
+    }
+    {
+    title <
+      name = Wallace Stevens Journal ;
+      issn = 0148-7132  ;
+      eissn = 2160-0570  ;
+      issnl = 0148-7132
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2011 ; Wallace Stevens Journal Volume 35, 2011 ; 6906 >
+        au < exists ; 2012 ; Wallace Stevens Journal Volume 36, 2012 ; 8295 >
+        au < exists ; 2013 ; Wallace Stevens Journal Volume 37, 2013 ; 8861 >
+        au < exists ; 2014 ; Wallace Stevens Journal Volume 38, 2014 ; 9858 >
+        au < exists ; 2015 ; Wallace Stevens Journal Volume 39, 2015 ; 10460 >
+        au < exists ; 2016 ; Wallace Stevens Journal Volume  40, 2016 ; 10980 >
+        au < exists ; 2017 ; Wallace Stevens Journal Volume 41, 2017 ; 12435 >
+
+    }
+    {
+    title <
+      name = Wide Angle ;
+      issn = 0160-6840  ;
+      eissn = 1086-3354  ;
+      issnl = 0160-6840
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; Wide Angle Volume 18, 1996 ; 704 >
+        au < exists ; 1997 ; Wide Angle Volume 19, 1997 ; 705 >
+        au < exists ; 1998 ; Wide Angle Volume 20, 1998 ; 706 >
+        au < exists ; 1999 ; Wide Angle Volume 21, 1999 ; 707 >
+
+    }
+    {
+    title <
+      name = ariel: A Review of International English Literature ;
+      issn = 0004-1327  ;
+      eissn = 1920-1222  ;
+      issnl = 0004-1327
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2013 ; ariel: A Review of International English Literature Volume 44, 2013 ; 9557 >
+        au < exists ; 2014 ; ariel: A Review of International English Literature Volume 45, 2014 ; 10122 >
+        au < exists ; 2015 ; ariel: A Review of International English Literature Volume 46, 2015 ; 10715 >
+        au < exists ; 2016 ; ariel: A Review of International English Literature Volume 47, 2016 ; 11286 >
+        au < exists ; 2017 ; ariel: A Review of International English Literature Volume 48, 2017 ; 12390 >
+
+    }
+    {
+    title <
+      name = diacritics ;
+      issn = 0300-7162  ;
+      eissn = 1080-6539  ;
+      issnl = 0300-7162
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1996 ; diacritics Volume 26, 1996 ; 158 >
+        au < exists ; 1997 ; diacritics Volume 27, 1997 ; 159 >
+        au < exists ; 1998 ; diacritics Volume 28, 1998 ; 160 >
+        au < exists ; 1999 ; diacritics Volume 29, 1999 ; 161 >
+        au < exists ; 2000 ; diacritics Volume 30, 2000 ; 162 >
+        au < exists ; 2001 ; diacritics Volume 31, 2001 ; 784 >
+        au < exists ; 2002 ; diacritics Volume 32, 2002 ; 2552 >
+        au < exists ; 2003 ; diacritics Volume 33, 2003 ; 2732 >
+        au < exists ; 2004 ; diacritics Volume 34, 2004 ; 3015 >
+        au < exists ; 2005 ; diacritics Volume 35, 2005 ; 3309 >
+        au < exists ; 2006 ; diacritics Volume 36, 2006 ; 3569 >
+        au < exists ; 2007 ; diacritics Volume 37, 2007 ; 3956 >
+        au < exists ; 2008 ; diacritics Volume 38, 2008 ; 4409 >
+        au < exists ; 2009 ; diacritics Volume 39, 2009 ; 7780 >
+        au < exists ; 2012 ; diacritics Volume 40, 2012 ; 8484 >
+        au < exists ; 2013 ; diacritics Volume 41, 2013 ; 9304 >
+        au < exists ; 2014 ; diacritics Volume 42, 2014 ; 10233 >
+        au < exists ; 2015 ; diacritics Volume 43, 2015 ; 10812 >
+        au < exists ; 2016 ; diacritics Volume 44, 2016 ; 12248 >
+
+    }
+    {
+    title <
+      name = portal: Libraries and the Academy ;
+      issn = 1531-2542  ;
+      eissn = 1530-7131  ;
+      issnl = 1530-7131
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 2001 ; portal: Libraries and the Academy Volume 1, 2001 ; 534 >
+        au < exists ; 2002 ; portal: Libraries and the Academy Volume 2, 2002 ; 535 >
+        au < exists ; 2003 ; portal: Libraries and the Academy Volume 3, 2003 ; 787 >
+        au < exists ; 2004 ; portal: Libraries and the Academy Volume 4, 2004 ; 1746 >
+        au < exists ; 2005 ; portal: Libraries and the Academy Volume 5, 2005 ; 2638 >
+        au < exists ; 2006 ; portal: Libraries and the Academy Volume 6, 2006 ; 2929 >
+        au < exists ; 2007 ; portal: Libraries and the Academy Volume 7, 2007 ; 3202 >
+        au < exists ; 2008 ; portal: Libraries and the Academy Volume 8, 2008 ; 3520 >
+        au < exists ; 2009 ; portal: Libraries and the Academy Volume 9, 2009 ; 4055 >
+        au < exists ; 2010 ; portal: Libraries and the Academy Volume 10, 2010 ; 5718 >
+        au < exists ; 2011 ; portal: Libraries and the Academy Volume 11, 2011 ; 6651 >
+        au < exists ; 2012 ; portal: Libraries and the Academy Volume 12, 2012 ; 7884 >
+        au < exists ; 2013 ; portal: Libraries and the Academy Volume 13, 2013 ; 8782 >
+        au < exists ; 2014 ; portal: Libraries and the Academy Volume 14, 2014 ; 9590 >
+        au < exists ; 2015 ; portal: Libraries and the Academy Volume 15, 2015 ; 10324 >
+        au < exists ; 2016 ; portal: Libraries and the Academy Volume 16, 2016 ; 10969 >
+        au < exists ; 2017 ; portal: Libraries and the Academy Volume 17, 2017 ; 12284 >
+
+    }
+
+}

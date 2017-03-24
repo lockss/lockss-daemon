@@ -1,0 +1,69 @@
+{
+  publisher <
+    name = Rocky Mountain Modern Language Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Rocky Mountain Review of Language and Literature ;
+      issn = 1948-2825  ;
+      eissn = 1948-2833  ;
+      issnl = 1948-2825
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < exists ; 1966 ; Rocky Mountain Review of Language and Literature Volume 20, 1966 ; 7725 >
+        au < exists ; 1966 ; Rocky Mountain Review of Language and Literature Volume 19, 1966 ; 7800 >
+        au < exists ; 1967 ; Rocky Mountain Review of Language and Literature Volume 21, 1967 ; 7698 >
+        au < exists ; 1968 ; Rocky Mountain Review of Language and Literature Volume 22, 1968 ; 7726 >
+        au < exists ; 1969 ; Rocky Mountain Review of Language and Literature Volume 23, 1969 ; 7727 >
+        au < exists ; 1970 ; Rocky Mountain Review of Language and Literature Volume 24, 1970 ; 7728 >
+        au < exists ; 1971 ; Rocky Mountain Review of Language and Literature Volume 25, 1971 ; 7729 >
+        au < exists ; 1972 ; Rocky Mountain Review of Language and Literature Volume 26, 1972 ; 7730 >
+        au < exists ; 1973 ; Rocky Mountain Review of Language and Literature Volume 27, 1973 ; 7745 >
+        au < exists ; 1974 ; Rocky Mountain Review of Language and Literature Volume 28, 1974 ; 7759 >
+        au < exists ; 1975 ; Rocky Mountain Review of Language and Literature Volume 29, 1975 ; 7760 >
+        au < exists ; 1976 ; Rocky Mountain Review of Language and Literature Volume 30, 1976 ; 7772 >
+        au < exists ; 1977 ; Rocky Mountain Review of Language and Literature Volume 31, 1977 ; 7773 >
+        au < exists ; 1978 ; Rocky Mountain Review of Language and Literature Volume 32, 1978 ; 7775 >
+        au < exists ; 1979 ; Rocky Mountain Review of Language and Literature Volume 33,  1979 ; 7776 >
+        au < exists ; 1980 ; Rocky Mountain Review of Language and Literature Volume 34, 1980 ; 7777 >
+        au < exists ; 1981 ; Rocky Mountain Review of Language and Literature Volume 35, 1981 ; 7786 >
+        au < exists ; 1982 ; Rocky Mountain Review of Language and Literature Volume 36, 1982 ; 7781 >
+        au < exists ; 1983 ; Rocky Mountain Review of Language and Literature Volume 37, 1983 ; 7782 >
+        au < exists ; 1984 ; Rocky Mountain Review of Language and Literature Volume 38, 1984 ; 7783 >
+        au < exists ; 1985 ; Rocky Mountain Review of Language and Literature Volume 39, 1985 ; 7784 >
+        au < exists ; 1986 ; Rocky Mountain Review of Language and Literature Volume 40, 1986 ; 7785 >
+        au < exists ; 1987 ; Rocky Mountain Review of Language and Literature Volume 41, 1987 ; 7787 >
+        au < exists ; 1988 ; Rocky Mountain Review of Language and Literature Volume 42, 1988 ; 7788 >
+        au < exists ; 1989 ; Rocky Mountain Review of Language and Literature Volume 43, 1989 ; 7789 >
+        au < exists ; 1990 ; Rocky Mountain Review of Language and Literature Volume 44, 1990 ; 7790 >
+        au < exists ; 1991 ; Rocky Mountain Review of Language and Literature Volume 45, 1991 ; 7791 >
+        au < exists ; 1992 ; Rocky Mountain Review of Language and Literature Volume 46, 1992 ; 7792 >
+        au < exists ; 1993 ; Rocky Mountain Review of Language and Literature Volume 47, 1993 ; 7793 >
+        au < exists ; 1994 ; Rocky Mountain Review of Language and Literature Volume 48, 1994 ; 7794 >
+        au < exists ; 1995 ; Rocky Mountain Review of Language and Literature Volume 49, 1995 ; 7795 >
+        au < exists ; 1996 ; Rocky Mountain Review of Language and Literature Volume 50, 1996 ; 7796 >
+        au < exists ; 1997 ; Rocky Mountain Review of Language and Literature Volume 51, 1997 ; 7801 >
+        au < exists ; 1998 ; Rocky Mountain Review of Language and Literature Volume 52, 1998 ; 7802 >
+        au < exists ; 1999 ; Rocky Mountain Review of Language and Literature Volume 53, 1999 ; 7803 >
+        au < exists ; 2000 ; Rocky Mountain Review of Language and Literature Volume 54, 2000 ; 7804 >
+        au < exists ; 2001 ; Rocky Mountain Review of Language and Literature Volume 55, 2001 ; 7805 >
+        au < exists ; 2002 ; Rocky Mountain Review of Language and Literature Volume 56, 2002 ; 7809 >
+        au < exists ; 2003 ; Rocky Mountain Review of Language and Literature Volume 57, 2003 ; 7820 >
+        au < exists ; 2011 ; Rocky Mountain Review of Language and Literature Volume 65, 2011 ; 7676 >
+        au < exists ; 2012 ; Rocky Mountain Review of Language and Literature Volume 66, 2012 ; 8287 >
+        au < exists ; 2013 ; Rocky Mountain Review of Language and Literature Volume 67, 2013 ; 9048 >
+        au < exists ; 2014 ; Rocky Mountain Review of Language and Literature Volume 68, 2014 ; 10054 >
+        au < exists ; 2015 ; Rocky Mountain Review of Language and Literature Volume 69, 2015 ; 10597 >
+        au < exists ; 2016 ; Rocky Mountain Review of Language and Literature Volume 70, 2016 ; 11306 >
+
+    }
+
+}
