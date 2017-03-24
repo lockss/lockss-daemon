@@ -52,9 +52,9 @@ public class OupScArticleIteratorFactory
   private static final String ROOT_TEMPLATE = "\"%s%s/article\", base_url, journal_id";
   private static final String PATTERN_TEMPLATE = "\"^%s%s/article(-abstract)?/\", base_url, journal_id";
   
-  private static final Pattern HTML_PATTERN = Pattern.compile("/article/(.+)$", Pattern.CASE_INSENSITIVE);
-  private static final String HTML_REPLACEMENT = "/article/$1";
-  private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1";
+  private static final Pattern HTML_PATTERN = Pattern.compile("/article/([0-9i]+)/(.*)$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/article/$1/$2";
+  private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
   private static final String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
   //<meta name="citation_pdf_url" content="https://academic.oup.com/bioinformatics/article-pdf/31/1/119/6999904/btu602.pdf" />
   protected static final Pattern PDF_PATTERN = Pattern.compile(
@@ -105,7 +105,7 @@ public class OupScArticleIteratorFactory
       }
       
       protected void guessPdf(ArticleFiles af) {
-        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML);
         if (cu == null || !cu.hasContent()) {
           return;
         }

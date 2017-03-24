@@ -70,6 +70,7 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-body"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "OUP_Issues_List"),
               HtmlNodeFilters.tagWithAttributeRegex("div", "class", "IssuesAndVolumeListManifest"),
+              HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
               
           })),
       

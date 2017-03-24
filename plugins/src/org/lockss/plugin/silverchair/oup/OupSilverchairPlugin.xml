@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -106,13 +106,6 @@
     <string>host:base_url</string>
   </entry>
   <entry>
-    <string>plugin_cache_result_list</string>
-    <list>
-      <!-- Mismatched actual length from Content-Length header should be ignored for Nature-->
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
-    </list>
-  </entry> 
-  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.silverchair.oup.OupScHtmlCrawlFilterFactory</string>
   </entry>
@@ -162,6 +155,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>

@@ -144,7 +144,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
    * @throws ConfigurationException
    */
   protected Collection<String> getRecordList(ListRecordsParameters params)
-      throws ConfigurationException {
+      throws ConfigurationException, IOException {
     try {
       Collection<String> idList = new ArrayList<String>();
       for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
@@ -184,7 +184,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
    * @param url
    * @return
    */
-  public Collection<String> idsToUrls(Collection<String> ids) {
+  public Collection<String> idsToUrls(Collection<String> ids) throws IOException {
     Collection<String> urlList = new ArrayList<String>();
     for (String id : ids) {
       if (id.contains(":") && !id.endsWith(":")) {
