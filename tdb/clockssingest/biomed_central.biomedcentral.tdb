@@ -2150,7 +2150,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Globalization and Health Volume 7 ; 7 ; >
       au < frozen ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 ; >
       au < frozen ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2014 ; Globalization and Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 ; >
 
     }
@@ -2316,7 +2316,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 ; >
       au < frozen ; exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 ; >
       au < frozen ; exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 [superseded] ; 13 ; >
 
     }
@@ -3331,7 +3331,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 ; >
       au < frozen ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 ; >
       au < frozen ; exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Medical Case Reports Volume 9 [superseded] ; 9 ; >
 
     }
@@ -3467,7 +3467,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 ; >
       au < frozen ; exists ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 [superseded] ; 12 ; >
 
     }
@@ -3785,7 +3785,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; frozen ; 2011 ; Malaria Journal Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Malaria Journal Volume 11 ; 11 ; >
       au < frozen ; exists ; 2013 ; Malaria Journal Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2014 ; Malaria Journal Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2014 ; Malaria Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Malaria Journal Volume 14 [superseded] ; 14 ; >
 
     }
@@ -3983,7 +3983,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; frozen ; 2011 ; Molecular Cancer Volume 10 ; 10 ; >
       au < frozen ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 ; >
       au < frozen ; exists ; 2013 ; Molecular Cancer Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2014 ; Molecular Cancer Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 ; >
 
     }
@@ -5199,7 +5199,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       comment[platform] = BioMedCentral
       comment[moved] = to new platform
 
-      au < frozen ; exists ; 2014 ; Climate Change Responses Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; Climate Change Responses Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Climate Change Responses Volume 2 ; 2 ; >
 
     }
