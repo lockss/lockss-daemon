@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Keats-Shelley Association of America
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Keats-Shelley Journal ;
+      issn = 0453-4387  ;
+      eissn = 2328-112X  ;
+      issnl = 0453-4387
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2013 ; Keats-Shelley Journal Volume 62 [2013] ; 9752 >
+        au < manifest ; 2014 ; Keats-Shelley Journal Volume 63 [2014] ; 10635 >
+        au < manifest ; 2015 ; Keats-Shelley Journal Volume 64 [2015] ; 11400 >
+
+    }
+
+}

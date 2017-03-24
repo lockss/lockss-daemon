@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = Modern Language Association Division on Medieval Hispanic Languages, Literatures, and Cultures
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures ;
+      issn = 0193-3892  ;
+      eissn = 1947-4261  ;
+      issnl = 0193-3892
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < testing ; 2000 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 29 [2000] ; 7142 >
+        au < testing ; 2001-2002 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 30 [2001-2002] ; 7042 >
+        au < testing ; 2002-2003 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 31 [2002-2003] ; 7152 >
+        au < testing ; 2003-2004 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 32 [2003-2004] ; 7153 >
+        au < testing ; 2004-2005 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 33 [2004-2005] ; 7154 >
+        au < testing ; 2005-2006 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 34 [2005-2006] ; 7155 >
+        au < testing ; 2006-2007 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 35 [2006-2007] ; 7143 >
+        au < testing ; 2008 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 36 [2008] ; 7147 >
+        au < testing ; 2008-2009 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 [2008-2009] ; 4163 >
+        au < testing ; 2009-2010 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 [2009-2010] ; 5699 >
+        au < testing ; 2010 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 39 [2010] ; 6749 >
+        au < testing ; 2011 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 40 [2011] ; 7868 >
+        au < testing ; 2012 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 41 [2012] ; 8669 >
+        au < testing ; 2013 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 42 [2013] ; 9677 >
+        au < testing ; 2014 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 43 [2014] ; 10425 >
+        au < testing ; 2015 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 44 [2015] ; 11211 >
+        au < testing ; 2016 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 45 [2016] ; 12494 >
+
+    }
+
+}

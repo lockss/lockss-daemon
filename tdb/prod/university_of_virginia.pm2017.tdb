@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = University of Virginia
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Virginia Quarterly Review ;
+      issn = 0042-675X  ;
+      eissn = 2154-6932  ;
+      issnl = 0042-675X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2014 ; Virginia Quarterly Review Volume 90 [2014] ; 9892 >
+        au < manifest ; 2015 ; Virginia Quarterly Review Volume 91 [2015] ; 10340 >
+        au < ready ; 2016 ; Virginia Quarterly Review Volume 92 [2016] ; 11245 >
+        au < manifest ; 2017 ; Virginia Quarterly Review Volume 93 [2017] ; 12297 >
+
+    }
+
+}

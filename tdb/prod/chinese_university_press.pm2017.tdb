@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Chinese University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Asian Journal of English Language Teaching ;
+      issn = 1026-2652 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2013 ; Asian Journal of English Language Teaching Volume 23 [2013] ; 9674 >
+        au < manifest ; 2014 ; Asian Journal of English Language Teaching Volume 24 [2014] ; 10246 >
+
+    }
+    {
+    title <
+      name = China Review ;
+      issn = 1680-2012 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2013 ; China Review Volume 13 [2013] ; 9063 >
+        au < manifest ; 2014 ; China Review Volume 14 [2014] ; 9893 >
+        au < manifest ; 2015 ; China Review Volume 15 [2015] ; 10596 >
+        au < manifest ; 2016 ; China Review Volume 16 [2016] ; 10960 >
+        au < manifest ; 2017 ; China Review Volume 17 [2017] ; 12432 >
+
+    }
+    {
+    title <
+      name = Journal of Chinese Linguistics ;
+      issn = 0091-3723 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2015 ; Journal of Chinese Linguistics Volume 43 [2015] ; 10606 >
+        au < manifest ; 2016 ; Journal of Chinese Linguistics Volume 44 [2016] ; 10961 >
+        au < manifest ; 2017 ; Journal of Chinese Linguistics Volume 45 [2017] ; 12476 >
+
+    }
+
+}

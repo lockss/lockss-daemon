@@ -1,0 +1,62 @@
+{
+  publisher <
+    name = Fordham University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Joyce Studies Annual ;
+      issn = 1049-0809  ;
+      eissn = 1538-4241  ;
+      issnl = 1049-0809
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2001 ; Joyce Studies Annual Volume 12 [Summer 2001] ; 335 >
+        au < manifest ; 2002 ; Joyce Studies Annual Volume 13 [Summer 2002] ; 753 >
+        au < manifest ; 2003 ; Joyce Studies Annual Volume 14 [Summer 2003] ; 2479 >
+        au < manifest ; 2007 ; Joyce Studies Annual Volume 2007 ; 3573 >
+        au < manifest ; 2008 ; Joyce Studies Annual Volume 2008 ; 4057 >
+        au < manifest ; 2009 ; Joyce Studies Annual Volume 2009 ; 5799 >
+        au < manifest ; 2010 ; Joyce Studies Annual Volume 2010 ; 7009 >
+        au < manifest ; 2011 ; Joyce Studies Annual Volume 2011 ; 8041 >
+        au < manifest ; 2012 ; Joyce Studies Annual 2012 ; 9262 >
+        au < manifest ; 2013 ; Joyce Studies Annual 2013 ; 9552 >
+        au < manifest ; 2014 ; Joyce Studies Annual 2014 ; 10321 >
+        au < manifest ; 2015 ; Joyce Studies Annual 2015 ; 10881 >
+        au < manifest ; 2016 ; Joyce Studies Annual 2016 ; 12454 >
+
+    }
+    {
+    title <
+      name = Traditio ;
+      issn = 0362-1529 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2002 ; Traditio Volume 57 [2002] ; 8286 >
+        au < manifest ; 2003 ; Traditio Volume 58 [2003] ; 8260 >
+        au < manifest ; 2004 ; Traditio Volume 59 [2004] ; 8339 >
+        au < manifest ; 2005 ; Traditio Volume 60 [2005] ; 8330 >
+        au < manifest ; 2006 ; Traditio Volume 61 [2006] ; 8343 >
+        au < manifest ; 2007 ; Traditio Volume 62 [2007] ; 8377 >
+        au < manifest ; 2008 ; Traditio Volume 63 [2008] ; 8378 >
+        au < manifest ; 2009 ; Traditio Volume 64 [2009] ; 8347 >
+        au < manifest ; 2010 ; Traditio Volume 65 [2010] ; 8348 >
+        au < manifest ; 2011 ; Traditio Volume 66 [2011] ; 8103 >
+        au < manifest ; 2012 ; Traditio Volume 67 [2012] ; 9263 >
+        au < manifest ; 2013 ; Traditio Volume 68 [2013] ; 9782 >
+        au < manifest ; 2014 ; Traditio Volume 69 [2014] ; 10342 >
+        au < manifest ; 2015 ; Traditio Volume 70 [2015] ; 10976 >
+        au < manifest ; 2016 ; Traditio Volume 71 [2016] ; 12401 >
+
+    }
+
+}

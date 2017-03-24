@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = University of Tulsa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = James Joyce Quarterly ;
+      issn = 0021-4183  ;
+      eissn = 1938-6036  ;
+      issnl = 0021-4183
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2006-2007 ; James Joyce Quarterly Volume 44 [2006-2007] ; 3415 >
+        au < manifest ; 2007 ; James Joyce Quarterly Volume 45 [2007] ; 4032 >
+        au < manifest ; 2008 ; James Joyce Quarterly Volume 46 [2008] ; 5682 >
+        au < manifest ; 2009 ; James Joyce Quarterly Volume 47 [2009] ; 6772 >
+        au < manifest ; 2010 ; James Joyce Quarterly Volume 48 [2010] ; 8242 >
+        au < manifest ; 2011 ; James Joyce Quarterly Volume 49 [2011] ; 9253 >
+        au < manifest ; 2012-2013 ; James Joyce Quarterly Volume 50 [2012-2013] ; 10238 >
+        au < manifest ; 2013-2014 ; James Joyce Quarterly Volume 51 [2013-2014] ; 10971 >
+        au < manifest ; 2014 ; James Joyce Quarterly Volume 52 [2014] ; 12310 >
+
+    }
+    {
+    title <
+      name = Tulsa Studies in Women's Literature ;
+      issn = 0732-7730  ;
+      eissn = 1936-1645  ;
+      issnl = 0732-7730
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2007 ; Tulsa Studies in Women's Literature Volume 26 [2007] ; 3458 >
+        au < manifest ; 2008 ; Tulsa Studies in Women's Literature Volume 27 [2008] ; 3954 >
+        au < manifest ; 2009 ; Tulsa Studies in Women's Literature Volume 28 [2009] ; 5719 >
+        au < manifest ; 2010 ; Tulsa Studies in Women's Literature Volume 29 [2010] ; 7332 >
+        au < manifest ; 2011 ; Tulsa Studies in Women's Literature Volume 30 [2011] ; 8414 >
+        au < manifest ; 2012 ; Tulsa Studies in Women's Literature Volume 31 [2012] ; 9269 >
+        au < manifest ; 2013 ; Tulsa Studies in Women's Literature Volume 32 [2013] ; 9632 >
+        au < manifest ; 2014 ; Tulsa Studies in Women's Literature Volume 33 [2014] ; 10102 >
+        au < manifest ; 2015 ; Tulsa Studies in Women's Literature Volume 34 [2015] ; 10625 >
+        au < ready ; 2016 ; Tulsa Studies in Women's Literature Volume 35 [2016] ; 11266 >
+
+    }
+
+}

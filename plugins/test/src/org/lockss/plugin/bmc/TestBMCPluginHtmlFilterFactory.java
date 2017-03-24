@@ -152,6 +152,29 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   private static final String citationFiltered =
       " AbstractFull textPDF ";
 
+  private static final String links = "" +
+      "<ul>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/December/2014\">December 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/November/2014\">November 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> October 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/September/2014\">September 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/August/2014\">August 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> July 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/June/2014\">June 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> May 2014 </li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> April 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/March/2014\">March 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/February/2014\">February 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> January 2014 </li>\n" + 
+      "</ul>\n" +
+      "<p class=\"nav\">\n" + 
+      "<a id=\"bmcCitations-link\" href=\"http://www.scfbm.org/content/7/1/4/about#citations-biomedcentral\">Cited on BioMed Central</a>\n" +
+      "<a id=\"comments-link\" href=\"http://www.scfbm.org/content/7/1/4/comments\">1 comment</a>" +
+      "<a href=\"http://www.scfbm.org/pubmed/24669838\" class=\"pubmed-link\">PubMed</a>" +
+      "</p>\n";
+  
+  private static final String linksFiltered =
+      " December 2014 November 2014 September 2014 August 2014 June 2014 March 2014 February 2014 ";
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -249,5 +272,11 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     InputStream inA;
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citation), ENC);
     assertEquals(citationFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  public void testissueLinks() throws Exception {
+    InputStream inA;
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(links), ENC);
+    assertEquals(linksFiltered,StringUtil.fromInputStream(inA));
   }
 }

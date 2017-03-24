@@ -598,23 +598,6 @@
     {
   
         title <
-          name = Science Bulletin ;
-          issn = 2095-9273 ;
-          eissn = 2095-9281
-        >
-  
-        comment[base_url] = http://www.springer.com/11434/
-        param[journal_issn] = 2095-9273
-        comment[platform] = Springer
-        comment[continues] = 1001-6538
-
-        au < exists ; 2015 ; Science Bulletin Volume 60 ; 60 >
-
-    }
-  
-    {
-  
-        title <
           name = Tropical Plant Pathology ;
           issn = 1982-5676 ;
           eissn = 1983-2052

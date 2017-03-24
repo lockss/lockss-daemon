@@ -832,7 +832,7 @@
       au < zapped ; finished ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
       au < zapped ; finished ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
       au < superseded ; down ; 2010 ; Aesthetic Surgery Journal Volume 30 [superseded] ; 30 ; >
-      au < superseded ; down ; 2011 ; Aesthetic Surgery Journal Volume 31 [superseded] ; 31 ; >
+      au < superseded ; finished ; 2011 ; Aesthetic Surgery Journal Volume 31 [superseded] ; 31 ; >
       au < superseded ; down ; 2012 ; Aesthetic Surgery Journal Volume 32 [superseded] ; 32 ; >
       au < superseded ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 [superseded] ; 33 ; >
       au < superseded ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 [superseded] ; 34 ; >
@@ -3281,8 +3281,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Asian Journal of Management Cases Volume 5 [superseded] ; 5 ; >
-      au < superseded ; down ; 2009 ; Asian Journal of Management Cases Volume 6 [superseded] ; 6 ; >
+      au < superseded ; finished ; 2008 ; Asian Journal of Management Cases Volume 5 [superseded] ; 5 ; >
+      au < superseded ; finished ; 2009 ; Asian Journal of Management Cases Volume 6 [superseded] ; 6 ; >
 
     }
 
@@ -3403,7 +3403,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 [superseded] ; 20 ; >
+      au < superseded ; finished ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 [superseded] ; 20 ; >
       au < superseded ; down ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 [superseded] ; 21 ; >
 
     }
@@ -3917,7 +3917,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; exists ; 2009 ; Behavior Modification Volume 32 [to delete] ; 32 ; >
-      au < superseded ; down ; 2009 ; Behavior Modification Volume 33 [superseded] ; 33 ; >
+      au < superseded ; finished ; 2009 ; Behavior Modification Volume 33 [superseded] ; 33 ; >
 
     }
 
@@ -6268,7 +6268,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; exists ; 2008 ; Clin-Alert Volume 46 [to delete] ; 46 ; >
-      au < superseded ; down ; 2009 ; Clin-Alert Volume 47 [superseded] ; 47 ; >
+      au < superseded ; finished ; 2009 ; Clin-Alert Volume 47 [superseded] ; 47 ; >
 
     }
 
@@ -14795,7 +14795,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; History of Psychiatry Volume 19 [superseded] ; 19 ; >
+      au < superseded ; finished ; 2008 ; History of Psychiatry Volume 19 [superseded] ; 19 ; >
       au < zapped ; finished ; 2009 ; History of Psychiatry Volume 20 ; 20 ; reingest1.clockss.org:8082 >
 
     }
@@ -16821,7 +16821,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; International Journal of Bilingualism Volume 12 [superseded] ; 12 ; >
+      au < superseded ; finished ; 2008 ; International Journal of Bilingualism Volume 12 [superseded] ; 12 ; >
       au < zapped ; finished ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
@@ -18750,7 +18750,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; International Review of Administrative Sciences Volume 74 [superseded] ; 74 ; >
+      au < superseded ; finished ; 2008 ; International Review of Administrative Sciences Volume 74 [superseded] ; 74 ; >
       au < zapped ; finished ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ; reingest1.clockss.org:8082 >
 
     }
@@ -20328,7 +20328,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 ; >
-      au < superseded ; down ; 2009 ; Journal of Biological Rhythms Volume 24 [superseded] ; 24 ; >
+      au < superseded ; finished ; 2009 ; Journal of Biological Rhythms Volume 24 [superseded] ; 24 ; >
 
     }
 
@@ -20387,7 +20387,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Biomaterials Applications Volume 23 [superseded] ; 23 ; >
+      au < superseded ; finished ; 2008 ; Journal of Biomaterials Applications Volume 23 [superseded] ; 23 ; >
       au < superseded ; exists ; 2009 ; Journal of Biomaterials Applications Volume 24 [superseded] ; 24 ; >
 
     }
@@ -21336,7 +21336,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Classical Sociology Volume 8 [superseded] ; 8 ; >
+      au < superseded ; finished ; 2008 ; Journal of Classical Sociology Volume 8 [superseded] ; 8 ; >
       au < finished ; finished ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
 
     }
@@ -22404,7 +22404,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Dental Research Volume 87 [superseded] ; 87 ; >
+      au < superseded ; finished ; 2008 ; Journal of Dental Research Volume 87 [superseded] ; 87 ; >
       au < finished ; finished ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
 
     }
@@ -22610,7 +22610,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 [superseded] ; 24 ; >
+      au < superseded ; finished ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 [superseded] ; 24 ; >
       au < zapped ; finished ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 ; >
 
     }
@@ -24066,7 +24066,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < zapped ; finished ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 ; >
-      au < superseded ; down ; 2009 ; Journal of Fire Sciences Volume 27 [superseded] ; 27 ; >
+      au < superseded ; finished ; 2009 ; Journal of Fire Sciences Volume 27 [superseded] ; 27 ; >
 
     }
 
@@ -25024,7 +25024,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Industrial Textiles Volume 38 [superseded] ; 38 ; >
+      au < superseded ; finished ; 2008 ; Journal of Industrial Textiles Volume 38 [superseded] ; 38 ; >
       au < zapped ; finished ; 2009 ; Journal of Industrial Textiles Volume 39 ; 39 ; >
 
     }
@@ -25620,7 +25620,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Language and Social Psychology Volume 27 [superseded] ; 27 ; >
+      au < superseded ; finished ; 2008 ; Journal of Language and Social Psychology Volume 27 [superseded] ; 27 ; >
       au < finished ; finished ; 2009 ; Journal of Language and Social Psychology Volume 28 ; 28 ; >
 
     }
@@ -27799,7 +27799,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Journal of Research in Nursing Volume 13 [superseded] ; 13 ; >
+      au < superseded ; finished ; 2008 ; Journal of Research in Nursing Volume 13 [superseded] ; 13 ; >
       au < zapped ; finished ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 ; >
 
     }
@@ -28391,7 +28391,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < superseded ; down ; 2008 ; Journal of Sport & Social Issues Volume 32 [superseded] ; 32 ; >
-      au < superseded ; down ; 2009 ; Journal of Sport & Social Issues Volume 33 [superseded] ; 33 ; >
+      au < superseded ; finished ; 2009 ; Journal of Sport & Social Issues Volume 33 [superseded] ; 33 ; >
 
     }
 
@@ -29028,7 +29028,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < finished ; finished ; 2008 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 ; >
-      au < superseded ; down ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 [superseded] ; 8 ; >
+      au < superseded ; finished ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 [superseded] ; 8 ; >
 
     }
 
@@ -30787,7 +30787,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Management & Organizational History Volume 3 [superseded] ; 3 ; >
+      au < superseded ; finished ; 2008 ; Management & Organizational History Volume 3 [superseded] ; 3 ; >
       au < zapped ; finished ; 2009 ; Management & Organizational History Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
@@ -32361,7 +32361,7 @@
       au < finished ; finished ; 2013 ; Music Educators Journal Volume 100 ; 100 ; >
       au < finished ; finished ; 2014 ; Music Educators Journal Volume 101 ; 101 ; >
       au < finished ; finished ; 2015 ; Music Educators Journal Volume 102 ; 102 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Music Educators Journal Volume 103 ; 103 ; >
+      au < superseded ; exists ; 2016 ; Music Educators Journal Volume 103 [superseded] ; 103 ; >
 
     }
 
@@ -33408,7 +33408,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Nursing Ethics Volume 15 [superseded] ; 15 ; >
+      au < superseded ; finished ; 2008 ; Nursing Ethics Volume 15 [superseded] ; 15 ; >
       au < zapped ; finished ; 2009 ; Nursing Ethics Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
     }
@@ -34298,7 +34298,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Personality and Social Psychology Bulletin Volume 34 [superseded] ; 34 ; >
+      au < superseded ; finished ; 2008 ; Personality and Social Psychology Bulletin Volume 34 [superseded] ; 34 ; >
       au < zapped ; finished ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ; reingest3.clockss.org:8083 >
 
     }
@@ -37426,7 +37426,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < finished ; finished ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
-      au < superseded ; down ; 2009 ; Punishment & Society Volume 11 [superseded] ; 11 ; >
+      au < superseded ; finished ; 2009 ; Punishment & Society Volume 11 [superseded] ; 11 ; >
 
     }
 
@@ -37527,7 +37527,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Qualitative Inquiry Volume 14 [superseded] ; 14 ; >
+      au < superseded ; finished ; 2008 ; Qualitative Inquiry Volume 14 [superseded] ; 14 ; >
       au < finished ; finished ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
     }
@@ -37622,7 +37622,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Qualitative Social Work Volume 7 [superseded] ; 7 ; >
+      au < superseded ; finished ; 2008 ; Qualitative Social Work Volume 7 [superseded] ; 7 ; >
       au < zapped ; finished ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
     }
@@ -41927,7 +41927,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Textile Research Journal Volume 78 [superseded] ; 78 ; >
+      au < superseded ; finished ; 2008 ; Textile Research Journal Volume 78 [superseded] ; 78 ; >
       au < zapped ; finished ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
 
     }
@@ -42543,7 +42543,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Theory, Culture & Society Volume 25 [superseded] ; 25 ; >
+      au < superseded ; finished ; 2008 ; Theory, Culture & Society Volume 25 [superseded] ; 25 ; >
       au < zapped ; finished ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
     }
@@ -43009,7 +43009,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < finished ; finished ; 2008 ; Thesis Eleven Volume 92 ; 92 ; >
-      au < superseded ; down ; 2008 ; Thesis Eleven Volume 93 [superseded] ; 93 ; >
+      au < superseded ; finished ; 2008 ; Thesis Eleven Volume 93 [superseded] ; 93 ; >
       au < finished ; finished ; 2008 ; Thesis Eleven Volume 94 ; 94 ; >
       au < superseded ; down ; 2008 ; Thesis Eleven Volume 95 [superseded] ; 95 ; >
       au < zapped ; finished ; 2009 ; Thesis Eleven Volume 96 ; 96 ; reingest2.clockss.org:8085 >
@@ -43153,7 +43153,7 @@
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 132 ; 132 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 133 ; 133 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 134 ; 134 ; >
-      au < frozen ; exists ; 2016 ; Thesis Eleven Volume 135 ; 135 ; >
+      au < superseded ; exists ; 2016 ; Thesis Eleven Volume 135 [superseded] ; 135 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 136 ; 136 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; >
 
@@ -43472,7 +43472,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Toxicology and Industrial Health Volume 24 [superseded] ; 24 ; >
+      au < superseded ; finished ; 2008 ; Toxicology and Industrial Health Volume 24 [superseded] ; 24 ; >
       au < zapped ; finished ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ; reingest4.clockss.org:8082 >
 
     }
@@ -43812,7 +43812,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < superseded ; down ; 2008 ; Trauma Volume 10 [superseded] ; 10 ; >
+      au < superseded ; finished ; 2008 ; Trauma Volume 10 [superseded] ; 10 ; >
       au < zapped ; finished ; 2009 ; Trauma Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
     }
@@ -44914,7 +44914,7 @@
       au < finished ; finished ; 2013 ; Word of Mouth Volume 25 ; 25 ; >
       au < finished ; finished ; 2014 ; Word of Mouth Volume 26 ; 26 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Word of Mouth Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; Word of Mouth Volume 28 ; 28 ; >
+      au < superseded ; exists ; 2016 ; Word of Mouth Volume 28 [superseded] ; 28 ; >
 
 
     }

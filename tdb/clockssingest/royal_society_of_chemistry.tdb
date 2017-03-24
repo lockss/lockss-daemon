@@ -271,63 +271,64 @@
 
       param[journal_code] = fd
 
-      au < finished ; finished ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; >
-      au < finished ; finished ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; >
-      au < finished ; finished ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; >
-      au < finished ; finished ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 ; >
+      au < down ; down ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 ; >
+      au < down ; down ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 ; >
+      au < down ; down ; 2010 ; Faraday Discussions Volume 146 ; 146 ; 2010 ; >
+      au < down ; down ; 2010 ; Faraday Discussions Volume 147 ; 147 ; 2010 ; >
 
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 ; >
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 ; >
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 ; >
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; >
-      au < finished ; finished ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 ; >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 ; >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 ; >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 ; >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 ; reingest1.clockss.org:8082 >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 ; >
+      au < down ; down ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 ; >
 
-      au < finished ; finished ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 ; >
-      au < finished ; finished ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 ; >
-      au < finished ; frozen ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 ; >
-      au < finished ; finished ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 ; >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 154 ; 154 ; 2012 ; reingest2.clockss.org:8085 >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 155 ; 155 ; 2012 ; >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 156 ; 156 ; 2012 ; >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 157 ; 157 ; 2012 ; reingest2.clockss.org:8085 >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 158 ; 158 ; 2012 ; >
+      au < down ; down ; 2012 ; Faraday Discussions Volume 159 ; 159 ; 2012 ; >
 
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 ; >
-      au < crawling ; exists ; 2013 ; Faraday Discussions Volume 163 ; 163 ; 2013 ; >
-      au < finished ; frozen ; 2013 ; Faraday Discussions Volume 164 ; 164 ; 2013 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 ; >
-      au < finished ; finished ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 ; >
-      au < crawling ; exists ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 ; >
+      au < down ; down ; 2013 ; Faraday Discussions Volume 160 ; 160 ; 2013 ; reingest2.clockss.org:8085 >
+      au < down ; down ; 2013 ; Faraday Discussions Volume 161 ; 161 ; 2013 ; reingest2.clockss.org:8085 >
+      au < down ; exists ; 2013 ; Faraday Discussions Volume 162 ; 162 ; 2013 ; >
+      au < down ; exists ; 2013 ; Faraday Discussions Volume 163 ; 163 ; 2013 ; >
+      au < down ; down ; 2013 ; Faraday Discussions Volume 164 ; 164 ; 2013 ; reingest2.clockss.org:8085 >
+      au < down ; exists ; 2013 ; Faraday Discussions Volume 165 ; 165 ; 2013 ; >
+      au < down ; down ; 2013 ; Faraday Discussions Volume 166 ; 166 ; 2013 ; >
+      au < down ; exists ; 2013 ; Faraday Discussions Volume 167 ; 167 ; 2013 ; >
 
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 ; >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 ; >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 ; >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 ; >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 ; >
-      au < deepCrawl ; exists ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 ; >
-      au < finished ; finished ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 168 ; 168 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 169 ; 169 ; 2014 ; reingest1.clockss.org:8082 >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 170 ; 170 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 171 ; 171 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 172 ; 172 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 173 ; 173 ; 2014 ; reingest2.clockss.org:8085 >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 174 ; 174 ; 2014 ; >
+      au < down ; exists ; 2014 ; Faraday Discussions Volume 175 ; 175 ; 2014 ; >
+      au < down ; down ; 2014 ; Faraday Discussions Volume 176 ; 176 ; 2014 ; >
 
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 184 ; 184 ; 2015 ; >
-      au < deepCrawl ; exists ; 2015 ; Faraday Discussions Volume 185 ; 185 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 177 ; 177 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 178 ; 178 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 179 ; 179 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 180 ; 180 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 184 ; 184 ; 2015 ; >
+      au < down ; exists ; 2015 ; Faraday Discussions Volume 185 ; 185 ; 2015 ; >
 
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
-      au < crawling ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 188 ; 188 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 189 ; 189 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 190 ; 190 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 191 ; 191 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 192 ; 192 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 193 ; 193 ; 2016 ; >
+      au < down ; exists ; 2016 ; Faraday Discussions Volume 194 ; 194 ; 2016 ; >
+      au < exists ; exists ; 2016 ; Faraday Discussions Volume 195 ; 195 ; 2016 ; >
 
   }
 
@@ -671,7 +672,7 @@
 
       param[journal_code] = se
 
-      au < expected ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
+      au < manifest ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; >
 
   }
 
@@ -900,7 +901,7 @@
       au < crawling ; exists ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; >
 
   }
@@ -939,8 +940,8 @@
       au < crawling ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -1014,8 +1015,8 @@
       comment[years] = Published 2014-2016
       param[journal_code] = en
 
-      au < crawling ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -1051,7 +1052,7 @@
       comment[years] = Published 2015-2016
       param[journal_code] = ew
 
-      au < crawling ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 ; >
 
   }
@@ -1148,8 +1149,8 @@
       au < crawling ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
       au < crawling ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; reingest4.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -1183,8 +1184,8 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qi
 
-      au < crawling ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Inorganic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; reingest3.clockss.org:8083 >
+      au < frozen ; exists ; 2015 ; Inorganic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Inorganic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -1265,7 +1266,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
       au < crawling ; exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
 
   }
@@ -1283,8 +1284,8 @@
       param[journal_code] = tb
 
       au < crawling ; exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 ; >
 
   }
@@ -1302,8 +1303,8 @@
       param[journal_code] = tc
 
       au < crawling ; exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; >
 
   }
@@ -1918,8 +1919,8 @@
       comment[years] = Published 2014-2016
       param[journal_code] = mh
 
-      au < crawling ; exists ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -1940,8 +1941,8 @@
       au < crawling ; exists ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; >
       au < crawling ; exists ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; >
       au < crawling ; exists ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; >
+      au < frozen ; exists ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 ; >
 
   }
@@ -1994,7 +1995,7 @@
       param[journal_code] = qo
 
       au < crawling ; exists ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; >
 
   }
@@ -2120,7 +2121,7 @@
   {
 
       title <
-        name = Proceedings of the Chemical Society, London ;
+        name = Proceedings of the Chemical Society ;
         issn = 0369-8718
       >
 

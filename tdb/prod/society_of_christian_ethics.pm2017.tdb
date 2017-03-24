@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Society of Christian Ethics
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of the Society of Christian Ethics ;
+      issn = 1540-7942  ;
+      eissn = 2326-2176  ;
+      issnl = 1540-7942
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2012 ; Journal of the Society of Christian Ethics Volume 32 [2012] ; 8526 >
+        au < manifest ; 2013 ; Journal of the Society of Christian Ethics Volume 33 [2013] ; 9283 >
+        au < manifest ; 2014 ; Journal of the Society of Christian Ethics Volume 34 [2014] ; 10115 >
+        au < manifest ; 2015 ; Journal of the Society of Christian Ethics Volume 35 [2015] ; 10615 >
+        au < manifest ; 2016 ; Journal of the Society of Christian Ethics Volume 36 [2016] ; 11261 >
+
+    }
+
+}

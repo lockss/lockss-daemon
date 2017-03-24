@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = University of North Texas
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Studies in the Novel ;
+      issn = 1934-1512  ;
+      eissn = 0039-3827  ;
+      issnl = 0039-3827
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2008 ; Studies in the Novel Volume 40 [2008] ; 3952 >
+        au < manifest ; 2009 ; Studies in the Novel Volume 41 [2009] ; 5933 >
+        au < manifest ; 2010 ; Studies in the Novel Volume 42 [2010] ; 6444 >
+        au < manifest ; 2011 ; Studies in the Novel Volume 43 [2011] ; 7532 >
+        au < manifest ; 2012 ; Studies in the Novel Volume 44 [2012] ; 8437 >
+        au < manifest ; 2013 ; Studies in the Novel Volume 45 [2013] ; 8946 >
+        au < manifest ; 2014 ; Studies in the Novel Volume 46 [2014] ; 9795 >
+        au < manifest ; 2015 ; Studies in the Novel Volume 47 [2015] ; 10475 >
+        au < ready ; 2016 ; Studies in the Novel Volume 48 [2016] ; 11022 >
+        au < manifest ; 2017 ; Studies in the Novel Volume 49 [2017] ; 12489 >
+
+    }
+
+}

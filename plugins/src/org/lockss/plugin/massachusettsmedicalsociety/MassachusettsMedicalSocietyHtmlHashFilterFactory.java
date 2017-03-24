@@ -103,6 +103,9 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         HtmlNodeFilters.tagWithAttribute("div", "id", "galleryContent"),
         //constantly changing discussion thread with links to current article +?sort=newest...
         HtmlNodeFilters.tagWithAttribute("div", "class", "discussion"),
+        //Metrics information that can change, Citing tab label contains number of cites
+        HtmlNodeFilters.tagWithAttribute("dd", "id", "metrics"),
+
         /*
          * Hash filter
          */

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,6 +65,7 @@ public class HighWireContentValidator {
           StringUtil.endsWithIgnoreCase(url, MOV_EXT) ||
           StringUtil.endsWithIgnoreCase(url, MP4_EXT) ||
           StringUtil.endsWithIgnoreCase(url, ZIP_EXT)) {
+        log.warning("URL MIME type mismatch: " + url);
         throw new ContentValidationException("URL MIME type mismatch");
       }
     }

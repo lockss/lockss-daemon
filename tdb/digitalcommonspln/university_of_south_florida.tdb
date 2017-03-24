@@ -21,7 +21,8 @@
     au < released ; 2013 ; 3 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 3 ; 3 >
     au < released ; 2014 ; 4 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 4 ; 4 >
     au < released ; 2015 ; 5 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 5 ; 5 >
-    au < manifest ; 2016 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 >
+    au < released ; 2016 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 6 ; 6 >
+    au < expected ; 2017 ; 6 ; ABO: Interactive Journal for Women in the Arts, 1640-1830 Volume 7 ; 7 >
   
   }
 
@@ -40,7 +41,8 @@
     au < released ; 2013 ; 1 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 1 ; 1 >
     au < released ; 2014 ; 2 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 2 ; 2 >
     au < released ; 2015 ; 3 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 3 ; 3 >
-    au < manifest ; 2016 ; 4 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 4 ; 4 >
+    au < released ; 2016 ; 4 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 4 ; 4 >
+    au < expected ; 2017 ; 5 ; Alambique: Revista académica de ciencia ficción y fantasia / Jornal acadêmico de ficção científica e fantasía Volume 5 ; 5 >
   
   }
 
@@ -70,7 +72,8 @@
     au < released ; 2012 ; 7 ; Genocide Studies and Prevention Volume 7 ; 7 >
     au < released ; 2013-2014 ; 8 ; Genocide Studies and Prevention Volume 8 ; 8 >
     au < released ; 2015 ; 9 ; Genocide Studies and Prevention Volume 9 ; 9 >
-    au < manifest ; 2016 ; 10 ; Genocide Studies and Prevention Volume 10 ; 10 >
+    au < released ; 2016 ; 10 ; Genocide Studies and Prevention Volume 10 ; 10 >
+    au < expected ; 2017 ; 11 ; Genocide Studies and Prevention Volume 11 ; 11 >
 
   }
   
@@ -87,36 +90,36 @@
     param[journal_abbr] = ijs
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < ready ; 1972 ; 1 ; International Journal of Speleology Volume 1 ; 1 >
-    au < ready ; 1973 ; 2 ; International Journal of Speleology Volume 2 ; 2 >
-    au < ready ; 1974 ; 3 ; International Journal of Speleology Volume 3 ; 3 >
-    au < ready ; 1975 ; 4 ; International Journal of Speleology Volume 4 ; 4 >
-    au < ready ; 1976 ; 5 ; International Journal of Speleology Volume 5 ; 5 >
-    au < ready ; 1977 ; 6 ; International Journal of Speleology Volume 6 ; 6 >
-    au < ready ; 1978 ; 7 ; International Journal of Speleology Volume 7 ; 7 >
-    au < ready ; 1979 ; 8 ; International Journal of Speleology Volume 8 ; 8 >
-    au < ready ; 1980 ; 9 ; International Journal of Speleology Volume 9 ; 9 >
-    au < ready ; 1981 ; 10 ; International Journal of Speleology Volume 10 ; 10 >
-    au < ready ; 1982 ; 11 ; International Journal of Speleology Volume 11 ; 11 >
-    au < ready ; 1983 ; 12 ; International Journal of Speleology Volume 12 ; 12 >
-    au < ready ; 1984 ; 13 ; International Journal of Speleology Volume 13 ; 13 >
-    au < ready ; 1985 ; 14 ; International Journal of Speleology Volume 14 ; 14 >
-    au < ready ; 1986 ; 15 ; International Journal of Speleology Volume 15 ; 15 >
-    au < ready ; 1987 ; 16 ; International Journal of Speleology Volume 16 ; 16 >
-    au < ready ; 1988 ; 17 ; International Journal of Speleology Volume 17 ; 17 >
-    au < ready ; 1989 ; 18 ; International Journal of Speleology Volume 18 ; 18 >
-    au < ready ; 1990 ; 19 ; International Journal of Speleology Volume 19 ; 19 >
-    au < ready ; 1991 ; 20 ; International Journal of Speleology Volume 20 ; 20 >
-    au < ready ; 1992 ; 21 ; International Journal of Speleology Volume 21 ; 21 >
-    au < ready ; 1993 ; 22 ; International Journal of Speleology Volume 22 ; 22 >
-    au < ready ; 1994 ; 23 ; International Journal of Speleology Volume 23 ; 23 >
-    au < ready ; 1995 ; 24 ; International Journal of Speleology Volume 24 ; 24 >
-    au < ready ; 1996 ; 25 ; International Journal of Speleology Volume 25 ; 25 >
-    au < ready ; 1997 ; 26 ; International Journal of Speleology Volume 26 ; 26 >
-    au < ready ; 1998 ; 27 ; International Journal of Speleology Volume 27 ; 27 >
-    au < ready ; 1999 ; 28 ; International Journal of Speleology Volume 28 ; 28 >
-    au < ready ; 2000 ; 29 ; International Journal of Speleology Volume 29 ; 29 >
-    au < ready ; 2001 ; 30 ; International Journal of Speleology Volume 30 ; 30 >
+    au < released ; 1972 ; 1 ; International Journal of Speleology Volume 1 ; 1 >
+    au < released ; 1973 ; 2 ; International Journal of Speleology Volume 2 ; 2 >
+    au < released ; 1974 ; 3 ; International Journal of Speleology Volume 3 ; 3 >
+    au < released ; 1975 ; 4 ; International Journal of Speleology Volume 4 ; 4 >
+    au < released ; 1976 ; 5 ; International Journal of Speleology Volume 5 ; 5 >
+    au < released ; 1977 ; 6 ; International Journal of Speleology Volume 6 ; 6 >
+    au < released ; 1978 ; 7 ; International Journal of Speleology Volume 7 ; 7 >
+    au < released ; 1979 ; 8 ; International Journal of Speleology Volume 8 ; 8 >
+    au < released ; 1980 ; 9 ; International Journal of Speleology Volume 9 ; 9 >
+    au < released ; 1981 ; 10 ; International Journal of Speleology Volume 10 ; 10 >
+    au < released ; 1982 ; 11 ; International Journal of Speleology Volume 11 ; 11 >
+    au < released ; 1983 ; 12 ; International Journal of Speleology Volume 12 ; 12 >
+    au < released ; 1984 ; 13 ; International Journal of Speleology Volume 13 ; 13 >
+    au < released ; 1985 ; 14 ; International Journal of Speleology Volume 14 ; 14 >
+    au < released ; 1986 ; 15 ; International Journal of Speleology Volume 15 ; 15 >
+    au < released ; 1987 ; 16 ; International Journal of Speleology Volume 16 ; 16 >
+    au < released ; 1988 ; 17 ; International Journal of Speleology Volume 17 ; 17 >
+    au < released ; 1989 ; 18 ; International Journal of Speleology Volume 18 ; 18 >
+    au < released ; 1990 ; 19 ; International Journal of Speleology Volume 19 ; 19 >
+    au < released ; 1991 ; 20 ; International Journal of Speleology Volume 20 ; 20 >
+    au < released ; 1992 ; 21 ; International Journal of Speleology Volume 21 ; 21 >
+    au < released ; 1993 ; 22 ; International Journal of Speleology Volume 22 ; 22 >
+    au < released ; 1994 ; 23 ; International Journal of Speleology Volume 23 ; 23 >
+    au < released ; 1995 ; 24 ; International Journal of Speleology Volume 24 ; 24 >
+    au < released ; 1996 ; 25 ; International Journal of Speleology Volume 25 ; 25 >
+    au < released ; 1997 ; 26 ; International Journal of Speleology Volume 26 ; 26 >
+    au < released ; 1998 ; 27 ; International Journal of Speleology Volume 27 ; 27 >
+    au < released ; 1999 ; 28 ; International Journal of Speleology Volume 28 ; 28 >
+    au < released ; 2000 ; 29 ; International Journal of Speleology Volume 29 ; 29 >
+    au < released ; 2001 ; 30 ; International Journal of Speleology Volume 30 ; 30 >
     au < released ; 2002 ; 31 ; International Journal of Speleology Volume 31 ; 31 >
     au < released ; 2003 ; 32 ; International Journal of Speleology Volume 32 ; 32 >
     au < released ; 2004 ; 33 ; International Journal of Speleology Volume 33 ; 33 >
@@ -131,7 +134,8 @@
     au < released ; 2013 ; 42 ; International Journal of Speleology Volume 42 ; 42 >
     au < released ; 2014 ; 43 ; International Journal of Speleology Volume 43 ; 43 >
     au < released ; 2015 ; 44 ; International Journal of Speleology Volume 44 ; 44 >
-    au < manifest ; 2016 ; 45 ; International Journal of Speleology Volume 45 ; 45 >
+    au < released ; 2016 ; 45 ; International Journal of Speleology Volume 45 ; 45 >
+    au < manifest ; 2017 ; 46 ; International Journal of Speleology Volume 46 ; 46 >
   
   }
 
@@ -149,7 +153,8 @@
     
     au < released ; 2008-2009 ; 1 ; Journal of African Conflicts and Peace Studies Volume 1 ; 1 >
     au < released ; 2013-2015 ; 2 ; Journal of African Conflicts and Peace Studies Volume 2 ; 2 >
-    au < manifest ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
+    au < released ; 2016 ; 3 ; Journal of African Conflicts and Peace Studies Volume 3 ; 3 >
+    au < expected ; 2017 ; 4 ; Journal of African Conflicts and Peace Studies Volume 4 ; 4 >
   
   }
 
@@ -183,8 +188,8 @@
     au < released ; 2012 ; 15 ; Journal of Ecological Anthropology Volume 15 ; 15 >
     au < released ; 2013 ; 16 ; Journal of Ecological Anthropology Volume 16 ; 16 >
     au < released ; 2014 ; 17 ; Journal of Ecological Anthropology Volume 17 ; 17 >
-    au < released ; 2015 ; 18 ; Journal of Ecological Anthropology Volume 18 ; 18 >
-    au < manifest ; 2016 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 >
+    au < released ; 2016 ; 18 ; Journal of Ecological Anthropology Volume 18 ; 18 >
+    au < manifest ; 2017 ; 19 ; Journal of Ecological Anthropology Volume 19 ; 19 >
   
   }
 
@@ -200,7 +205,8 @@
     param[journal_abbr] = jpr
     implicit < status ; year ; volume ; name ; param[volume] >
     
-    au < manifest ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < released ; 2016 ; 1 ; Journal of Practitioner Research Volume 1 ; 1 >
+    au < expected ; 2017 ; 2 ; Journal of Practitioner Research Volume 2 ; 2 >
   
   }
 
@@ -242,7 +248,8 @@
     au < released ; 2013 ; 6 ; Journal of Strategic Security Volume 6 ; 6 >
     au < released ; 2014 ; 7 ; Journal of Strategic Security Volume 7 ; 7 >
     au < released ; 2015 ; 8 ; Journal of Strategic Security Volume 8 ; 8 >
-    au < manifest ; 2016 ; 9 ; Journal of Strategic Security Volume 9 ; 9 >
+    au < released ; 2016 ; 9 ; Journal of Strategic Security Volume 9 ; 9 >
+    au < manifest ; 2017 ; 10 ; Journal of Strategic Security Volume 10 ; 10 >
   
   }
 
@@ -266,7 +273,8 @@
     au < released ; 2013 ; 6 ; Numeracy Volume 6 ; 6 >
     au < released ; 2014 ; 7 ; Numeracy Volume 7 ; 7 >
     au < released ; 2015 ; 8 ; Numeracy Volume 8 ; 8 >
-    au < manifest ; 2016 ; 9 ; Numeracy Volume 9 ; 9 >
+    au < released ; 2016 ; 9 ; Numeracy Volume 9 ; 9 >
+    au < manifest ; 2017 ; 10 ; Numeracy Volume 10 ; 10 >
   
   }
 
@@ -308,7 +316,8 @@
     au < released ; 2013 ; 3 ; Revista Surco Sur Volume 3 ; 3 >
     au < released ; 2014 ; 4 ; Revista Surco Sur Volume 4 ; 4 >
     au < released ; 2015 ; 5 ; Revista Surco Sur Volume 5 ; 5 >
-    au < manifest ; 2016 ; 6 ; Revista Surco Sur Volume 6 ; 6 >
+    au < released ; 2016 ; 6 ; Revista Surco Sur Volume 6 ; 6 >
+    au < expected ; 2017 ; 7 ; Revista Surco Sur Volume 7 ; 7 >
   
   }
 
@@ -378,7 +387,8 @@
     au < released ; 2013 ; 1 ; Suburban Sustainability Volume 1 ; 1 >
     au < released ; 2014 ; 2 ; Suburban Sustainability Volume 2 ; 2 >
     au < released ; 2015 ; 3 ; Suburban Sustainability Volume 3 ; 3 >
-    au < manifest ; 2016 ; 4 ; Suburban Sustainability Volume 4 ; 4 >
+    au < released ; 2016 ; 4 ; Suburban Sustainability Volume 4 ; 4 >
+    au < expected ; 2017 ; 5 ; Suburban Sustainability Volume 5 ; 5 >
   
   }
 
@@ -529,7 +539,7 @@
     au < released ; 2011-2012 ; 4 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 4 ; 4 >
     au < released ; 2012-2013 ; 5 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 5 ; 5 >
     au < released ; 2014-2016 ; 6 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 6 ; 6 >
-    au < manifest ; 2016-2017 ; 7 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 7 ; 7 >
+    au < released ; 2016-2017 ; 7 ; Undergraduate Journal of Mathematical Modeling: One + Two Volume 7 ; 7 >
   
   }
 
@@ -556,6 +566,7 @@
     au < released ; 2012 ; University of South Florida Academic Resources Faculty and Staff Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Academic Resources Faculty and Staff Publications 2013 ; 2013 ; fulltext >
     au < manifest ; 2016 ; University of South Florida Academic Resources Faculty and Staff Publications 2016 ; 2016 ; fulltext >
+    au < expected ; 2017 ; University of South Florida Academic Resources Faculty and Staff Publications 2017 ; 2017 ; fulltext >
 
   }
 
@@ -613,6 +624,7 @@
     au < released ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 ; 2014 ; fulltext >
     au < released ; 2015 ; University of South Florida Academic Services Faculty and Staff Publications 2015 ; 2015 ; fulltext >
     au < manifest ; 2016 ; University of South Florida Academic Services Faculty and Staff Publications 2016 ; 2016 ; fulltext >
+    au < expected ; 2017 ; University of South Florida Academic Services Faculty and Staff Publications 2017 ; 2017 ; fulltext >
 
   }
 
@@ -1327,6 +1339,7 @@
     au < released ; 2014 ; University of South Florida Government and International Affairs Faculty Publications 2014 ; 2014 ; fulltext >
     au < released ; 2015 ; University of South Florida Government and International Affairs Faculty Publications 2015 ; 2015 ; fulltext >
     au < manifest ; 2016 ; University of South Florida Government and International Affairs Faculty Publications 2016 ; 2016 ; fulltext >
+    au < expected ; 2017 ; University of South Florida Government and International Affairs Faculty Publications 2017 ; 2017 ; fulltext >
 
   }
 
@@ -2068,6 +2081,7 @@
     au < released ; 2013 ; University of South Florida Scholar Commons Projects and Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Scholar Commons Projects and Publications 2014 ; 2014 >
     au < manifest ; 2016 ; University of South Florida Scholar Commons Projects and Publications 2016 ; 2016 >
+    au < expected ; 2017 ; University of South Florida Scholar Commons Projects and Publications 2017 ; 2017 >
 
   }
 
@@ -2381,6 +2395,7 @@
     au < released ; 2014 ; University of South Florida Theatre and Dance Faculty Publications 2014 ; 2014 >
     au < released ; 2015 ; University of South Florida Theatre and Dance Faculty Publications 2015 ; 2015 >
     au < manifest ; 2016 ; University of South Florida Theatre and Dance Faculty Publications 2016 ; 2016 >
+    au < expected ; 2017 ; University of South Florida Theatre and Dance Faculty Publications 2017 ; 2017 >
 
   }
 
@@ -2449,6 +2464,7 @@
     au < released ; 2014 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2014 ; 2014 >
     au < released ; 2015 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2015 ; 2015 >
     au < manifest ; 2016 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2016 ; 2016 >
+    au < expected ; 2017 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2017 ; 2017 >
 
   }
 

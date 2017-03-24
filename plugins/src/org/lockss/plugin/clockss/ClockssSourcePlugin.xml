@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <!-- support for guessing at encoding, setting provider -->
@@ -19,6 +19,10 @@
   <entry>
     <string>plugin_name</string>
     <string>Parent Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
   </entry>
   <entry>
     <string>au_name</string>

@@ -106,7 +106,7 @@
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; reingest4.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; >
-      au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; >
+      au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; >
 
     }
 
@@ -2273,7 +2273,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Journal of Neurophysiology Volume 113 ; 113 ; reingest5.clockss.org:8082 >
@@ -2693,7 +2693,7 @@
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2014 ; Physiology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; finished ; finished ; 2015 ; Physiology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2016 ; Physiology Volume 31 ; 31 ; >
-      au < aps.ClockssAPSDrupalPlugin ; expected ; exists ; 2017 ; Physiology Volume 32 ; 32 ; >
+      au < aps.ClockssAPSDrupalPlugin ; manifest ; exists ; 2017 ; Physiology Volume 32 ; 32 ; >
 
     }
 

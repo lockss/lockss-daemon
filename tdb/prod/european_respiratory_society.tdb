@@ -44,7 +44,7 @@
     param[base_url] = http://openres.ersjournals.com/
 
     au < ers.ERSDrupalPlugin ; released ; 2015 ; ERJ Open Research Volume 1 ; 1 >
-    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; ERJ Open Research Volume 2 ; 2 >
+    au < ers.ERSDrupalPlugin ; ready ; 2016 ; ERJ Open Research Volume 2 ; 2 >
     
   }
 
@@ -110,8 +110,8 @@
     au < ers.ERSDrupalPlugin ; manifest ; 2014 ; European respiratory Journal Volume 44 ; 44 >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
-    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; European Respiratory Journal Volume 47 ; 47 >
-    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; European Respiratory Journal Volume 48 ; 48 >
+    au < ers.ERSDrupalPlugin ; ready ; 2016 ; European Respiratory Journal Volume 47 ; 47 >
+    au < ers.ERSDrupalPlugin ; ready ; 2016 ; European Respiratory Journal Volume 48 ; 48 >
     
   }
 
@@ -137,7 +137,7 @@
     au < ers.ERSDrupalPlugin ; manifest ; 2013 ; European Respiratory Review Volume 22 ; 22 >
     au < ers.ERSDrupalPlugin ; manifest ; 2014 ; European Respiratory Review Volume 23 ; 23 >
     au < ers.ERSDrupalPlugin ; released ; 2015 ; European Respiratory Review Volume 24 ; 24 >
-    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; European Respiratory Review Volume 25 ; 25 >
+    au < ers.ERSDrupalPlugin ; ready ; 2016 ; European Respiratory Review Volume 25 ; 25 >
 
   }
 

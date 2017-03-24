@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Ohio State University College of Education
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Theory Into Practice ;
+      issn = 0040-5841  ;
+      eissn = 1543-0421  ;
+      issnl = 0040-5841
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2003 ; Theory Into Practice Volume 42 [2003] ; 861 >
+        au < manifest ; 2004 ; Theory Into Practice Volume 43 [2004] ; 2203 >
+
+    }
+
+}

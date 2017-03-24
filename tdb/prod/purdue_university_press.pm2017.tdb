@@ -1,0 +1,121 @@
+{
+  publisher <
+    name = Purdue University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Education and Culture ;
+      issn = 1085-4908  ;
+      eissn = 1559-1786  ;
+      issnl = 1085-4908
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1976 ; Education and Culture Volume 1 [1976] ; 8079 >
+        au < manifest ; 1977 ; Education and Culture Volume 2 [1977] ; 8080 >
+        au < manifest ; 1983 ; Education and Culture Volume 3 [Fall 1983] ; 8081 >
+        au < manifest ; 1984 ; Education and Culture Volume 4 [Fall 1984] ; 8082 >
+        au < manifest ; 1985 ; Education and Culture Volume 5 [Fall 1985] ; 8083 >
+        au < manifest ; 1986 ; Education and Culture Volume 6 [Fall 1986] ; 8084 >
+        au < manifest ; 1987 ; Education and Culture Volume 7 [Fall 1987] ; 8085 >
+        au < manifest ; 1988 ; Education and Culture Volume 8 [Fall 1988] ; 8086 >
+        au < manifest ; 1989 ; Education and Culture Volume 9 [Fall 1989] ; 8087 >
+        au < manifest ; 1993 ; Education and Culture Volume 10 [Spring 1993] ; 8088 >
+        au < manifest ; 1994 ; Education and Culture Volume 11 [1994] ; 8089 >
+        au < manifest ; 1995 ; Education and Culture Volume 12 [1995] ; 8090 >
+        au < manifest ; 1996 ; Education and Culture Volume 13 [1996] ; 8091 >
+        au < manifest ; 1997 ; Education and Culture Volume 14 [1997] ; 8092 >
+        au < manifest ; 1999 ; Education and Culture Volume 15 [1999] ; 8093 >
+        au < manifest ; 1999-2000 ; Education and Culture Volume 16 [1999-2000] ; 8094 >
+        au < manifest ; 2001 ; Education and Culture Volume 17 [2001] ; 8095 >
+        au < manifest ; 2002 ; Education and Culture Volume 18 [2002] ; 8096 >
+        au < manifest ; 2003 ; Education and Culture Volume 19 [2003] ; 8097 >
+        au < manifest ; 2004 ; Education and Culture Volume 20 [2004] ; 8099 >
+        au < manifest ; 2005 ; Education and Culture Volume 21 [2005] ; 8100 >
+        au < manifest ; 2006 ; Education and Culture Volume 22 [2006] ; 3110 >
+        au < manifest ; 2007 ; Education and Culture Volume 23 [2007] ; 3378 >
+        au < manifest ; 2008 ; Education and Culture Volume 24 [2008] ; 4356 >
+        au < manifest ; 2009 ; Education and Culture Volume 25 [2009] ; 5711 >
+        au < manifest ; 2010 ; Education and Culture Volume 26 [2010] ; 6374 >
+        au < manifest ; 2011 ; Education and Culture Volume 27 [2011] ; 7362 >
+        au < manifest ; 2012 ; Education and Culture Volume 28 [2012] ; 8370 >
+        au < manifest ; 2013 ; Education and Culture Volume 29 [2013] ; 9130 >
+        au < manifest ; 2014 ; Education and Culture Volume 30 [2014] ; 9983 >
+        au < manifest ; 2015 ; Education and Culture Volume 31 [2015] ; 10618 >
+        au < manifest ; 2016 ; Education and Culture Volume 32 [2016] ; 11262 >
+
+    }
+    {
+    title <
+      name = Philip Roth Studies ;
+      issn = 1547-3929  ;
+      eissn = 1940-5278  ;
+      issnl = 1547-3929
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2005 ; Philip Roth Studies Volume 1 [2005] ; 6380 >
+        au < manifest ; 2006 ; Philip Roth Studies Volume 2 [2006] ; 6379 >
+        au < manifest ; 2007 ; Philip Roth Studies Volume 3 [2007] ; 6378 >
+        au < manifest ; 2008 ; Philip Roth Studies Volume 4 [2008] ; 6377 >
+        au < manifest ; 2009 ; Philip Roth Studies Volume 5 [2009] ; 6376 >
+        au < manifest ; 2010 ; Philip Roth Studies Volume 6 [2010] ; 6369 >
+        au < manifest ; 2011 ; Philip Roth Studies Volume 7 [2011] ; 7181 >
+        au < manifest ; 2012 ; Philip Roth Studies Volume 8 [2012] ; 8338 >
+        au < manifest ; 2013 ; Philip Roth Studies Volume 9 [2013] ; 8847 >
+        au < manifest ; 2014 ; Philip Roth Studies Volume 10 [2014] ; 9964 >
+        au < manifest ; 2015 ; Philip Roth Studies Volume 11 [2015] ; 10479 >
+        au < manifest ; 2016 ; Philip Roth Studies Volume 12 [2016] ; 11108 >
+
+    }
+    {
+    title <
+      name = Shofar: An Interdisciplinary Journal of Jewish Studies ;
+      issn = 0882-8539  ;
+      eissn = 1534-5165  ;
+      issnl = 0882-8539
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1990-1991 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 9 [1990-1991] ; 6606 >
+        au < manifest ; 1991-1992 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 10 [1991-1992] ; 7051 >
+        au < manifest ; 1992-1993 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 11 [1992-1993] ; 7052 >
+        au < manifest ; 1993-1994 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 12 [1993-1994] ; 7053 >
+        au < manifest ; 1994-1995 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 13 [1994-1995] ; 7054 >
+        au < manifest ; 1995-1996 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 14 [1995-1996] ; 7055 >
+        au < manifest ; 1996-1997 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 15 [1996-1997] ; 7056 >
+        au < manifest ; 1997-1998 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 16 [1997-1998] ; 7057 >
+        au < manifest ; 1998-1999 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 17 [1998-1999] ; 7058 >
+        au < manifest ; 1999-2000 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 18 [1999-2000] ; 7059 >
+        au < manifest ; 2000-2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 [2000-2001] ; 626 >
+        au < manifest ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 [2001-2002] ; 627 >
+        au < manifest ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 [2002-2003] ; 734 >
+        au < manifest ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 [2003-2004] ; 967 >
+        au < manifest ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 [2004-2005] ; 2611 >
+        au < manifest ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 [2005-2006] ; 2852 >
+        au < manifest ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 [2006-2007] ; 3137 >
+        au < manifest ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 [2007-2008] ; 4153 >
+        au < manifest ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 [2008-2009] ; 4354 >
+        au < manifest ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 [2009-2010] ; 6373 >
+        au < manifest ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 [2010-2011] ; 7060 >
+        au < manifest ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 [2011-2012] ; 8340 >
+        au < manifest ; 2012-2013 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 [2012-2013] ; 8622 >
+        au < manifest ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 [2013-2014] ; 9577 >
+        au < manifest ; 2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 [2014] ; 10193 >
+        au < manifest ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 34 [2015-2016] ; 10787 >
+        au < manifest ; 2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 35 [2016] ; 12305 >
+
+    }
+
+}

@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = University of California Santa Barbara, Center for Black Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Haitian Studies ;
+      issn = 1090-3488  ;
+      eissn = 2333-7311  ;
+      issnl = 1090-3488
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2013 ; Journal of Haitian Studies Volume 19 [2013] ; 9678 >
+        au < manifest ; 2014 ; Journal of Haitian Studies Volume 20 [2014] ; 10155 >
+        au < manifest ; 2015 ; Journal of Haitian Studies Volume 21 [2015] ; 10751 >
+        au < ready ; 2016 ; Journal of Haitian Studies Volume 22 [2016] ; 11346 >
+
+    }
+
+}

@@ -123,7 +123,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Clinical Practice Volume 9 ; 9 ; >
-    au < down ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 ; >
     au < finished ; finished ; 2014 ; Clinical Practice Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     
   }
@@ -189,8 +189,8 @@
     param[journal_id] = dmt
     #No longer published by Future Medicine, no content online
 
-    au < down ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 ; >
-    au < down ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Diabetes Management Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; Diabetes Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
   
@@ -401,8 +401,8 @@
     param[journal_id] = iim
     #No longer published by Future Medicine, no content online
 
-    au < down ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; >
-    au < down ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; >
     au < finished ; finished ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     
   }
@@ -441,7 +441,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     
@@ -494,7 +494,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; >
-    au < down ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; >
     au < frozen ; exists ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; >
     au < finished ; finished ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     
@@ -562,7 +562,7 @@
     au < finished ; finished ; 2014 ; Melanoma Management Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Melanoma Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Melanoma Management Volume 3 ; 3 ; >
-    au < expected ; exists ; 2017 ; Melanoma Management Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2017 ; Melanoma Management Volume 4 ; 4 ; >
 
   }
 
@@ -622,7 +622,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < down ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     
   }
@@ -769,7 +769,7 @@
     au < crawling ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 ; >
     au < finished ; finished ; 2015 ; Women's Health Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
+    au < superseded ; exists ; 2016 ; Women's Health Volume 12 [superseded] ; 12 ; >
     
   }
 

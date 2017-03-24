@@ -1,0 +1,74 @@
+{
+  publisher <
+    name = University of North Carolina at Chapel Hill Department of Romance Languages and Literatures
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Hispanófila ;
+      issn = 0018-2206  ;
+      eissn = 2165-6185  ;
+      issnl = 0018-2206
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2008 ; Hispanófila Volume 153 [2008] ; 8332 >
+        au < manifest ; 2008 ; Hispanófila Volume 152 [2008] ; 8333 >
+        au < manifest ; 2008 ; Hispanófila Volume 151 [2008] ; 8334 >
+        au < manifest ; 2009 ; Hispanófila Volume 154 [2009] ; 8324 >
+        au < manifest ; 2009 ; Hispanófila Volume 155 [2009] ; 8325 >
+        au < manifest ; 2009 ; Hispanófila Volume 156 [2009] ; 8326 >
+        au < manifest ; 2009 ; Hispanófila Volume 157 [2009] ; 8327 >
+        au < manifest ; 2010 ; Hispanófila Volume 160 [Septiembre 2010] ; 8178 >
+        au < manifest ; 2010 ; Hispanófila Volume 159 [Mayo 2010] ; 8179 >
+        au < manifest ; 2010 ; Hispanófila Volume 158 [Enero 2010] ; 8180 >
+        au < manifest ; 2011 ; Hispanófila Volume 162 [2011] ; 7814 >
+        au < manifest ; 2011 ; Hispanófila Volume 161 [2011] ; 8021 >
+        au < manifest ; 2011 ; Hispanófila Volume 163 [2011] ; 8162 >
+        au < manifest ; 2012 ; Hispanófila Volume 164 [2012] ; 8323 >
+        au < manifest ; 2012 ; Hispanófila Volume 165 [2012] ; 8426 >
+        au < manifest ; 2012 ; Hispanófila Volume 166 [2012] ; 8604 >
+        au < manifest ; 2013 ; Hispanófila Volume 167 [2013] ; 9078 >
+        au < manifest ; 2013 ; Hispanófila Volume 168 [2013] ; 9167 >
+        au < manifest ; 2013 ; Hispanófila Volume 169 [2013] ; 9554 >
+        au < manifest ; 2014 ; Hispanófila Volume 170 [2014] ; 9914 >
+        au < manifest ; 2014 ; Hispanófila Volume 171 [Junio 2014] ; 10278 >
+        au < manifest ; 2014 ; Hispanófila Volume 172 [Diciembre 2014] ; 10504 >
+        au < manifest ; 2015 ; Hispanófila Volume 173 [Enero 2015] ; 10982 >
+        au < manifest ; 2015 ; Hispanófila Volume 174 [Junio 2015] ; 10983 >
+        au < manifest ; 2015 ; Hispanófila Volume 175 [Diciembre 2015] ; 11239 >
+        au < ready ; 2016 ; Hispanófila Volume 176 [Enero 2016] ; 12235 >
+        au < ready ; 2016 ; Hispanófila Volume 177 [Junio 2016] ; 12237 >
+
+    }
+    {
+    title <
+      name = Romance Notes ;
+      issn = 0035-7995  ;
+      eissn = 2165-7599  ;
+      issnl = 0035-7995
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2006 ; Romance Notes Volume 47 [2006] ; 8322 >
+        au < manifest ; 2007 ; Romance Notes Volume 48 [2007] ; 8211 >
+        au < manifest ; 2009 ; Romance Notes Volume 49 [2009] ; 8210 >
+        au < manifest ; 2010 ; Romance Notes Volume 50 [2010] ; 7815 >
+        au < manifest ; 2011 ; Romance Notes Volume 51 [2011] ; 8124 >
+        au < manifest ; 2012 ; Romance Notes Volume 52 [2012] ; 8409 >
+        au < manifest ; 2013 ; Romance Notes Volume 53 [2013] ; 9132 >
+        au < manifest ; 2014 ; Romance Notes Volume 54 [2014] ; 9680 >
+        au < manifest ; 2015 ; Romance Notes Volume 55 [2015] ; 10744 >
+        au < ready ; 2016 ; Romance Notes Volume 56 [2016] ; 11240 >
+
+    }
+
+}

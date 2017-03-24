@@ -92,7 +92,7 @@
     au < finished ; finished ; 2010 ; Building Acoustics Volume 17 ; 17 ; >
     au < finished ; finished ; 2011 ; Building Acoustics Volume 18 ; 18 ; >
     au < finished ; finished ; 2012 ; Building Acoustics Volume 19 ; 19 ; >
-    au < down ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2014 ; Building Acoustics Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2015 ; Building Acoustics Volume 22 ; 22 ; >
 
@@ -121,7 +121,7 @@
     au < doNotProcess ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
     au < superseded ; finished ; 2010 ; Energy & Environment Volume 21 [superseded] ; 21 ; >
     au < superseded ; finished ; 2011 ; Energy & Environment Volume 22 [superseded] ; 22 ; >
-    au < superseded ; down ; 2012 ; Energy & Environment Volume 23 [superseded] ; 23 ; >
+    au < superseded ; finished ; 2012 ; Energy & Environment Volume 23 [superseded] ; 23 ; >
     au < superseded ; exists ; 2013 ; Energy & Environment Volume 24 [superseded] ; 24 ; >
     au < doNotProcess ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
@@ -151,7 +151,7 @@
     au < finished ; finished ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 ; >
     au < finished ; finished ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 ; >
     au < finished ; finished ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 ; >
-    au < down ; exists ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 ; >
 
@@ -178,7 +178,7 @@
     au < finished ; finished ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; >
     au < finished ; finished ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; >
     au < finished ; finished ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 ; >
-    au < down ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 ; >
 
@@ -223,7 +223,7 @@
     au < finished ; finished ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 ; >
     au < finished ; finished ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 ; >
     au < finished ; finished ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 ; >
-    au < down ; exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 ; >
 
@@ -313,7 +313,7 @@
     au < finished ; finished ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; >
-    au < down ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 ; >
 
@@ -350,7 +350,7 @@
     au < finished ; finished ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 ; >
     au < finished ; finished ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 ; >
     au < finished ; finished ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; >
-    au < down ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
 
   }
 
@@ -379,7 +379,7 @@
     au < finished ; finished ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; >
     au < finished ; finished ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; >
     au < finished ; finished ; 2012 ; International Journal of Space Structures Volume 27 ; 27 ; >
-    au < down ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 ; >
 
@@ -403,7 +403,7 @@
     au < finished ; finished ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 ; >
     au < finished ; frozen ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 ; >
-    au < down ; exists ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Sports Science and Coaching Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Sports Science and Coaching Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Sports Science and Coaching Volume 10 ; 10 ; >
 
@@ -424,7 +424,7 @@
     au < finished ; finished ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; >
-    au < down ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 ; >
 
@@ -447,7 +447,7 @@
     au < finished ; finished ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 ; >
     au < finished ; finished ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; >
     au < finished ; frozen ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; >
-    au < down ; exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 ; >
 
@@ -483,7 +483,7 @@
 
     au < superseded ; finished ; 2010 ; Journal of Structural Fire Engineering Volume 1 [superseded] ; 1 ; >
     au < superseded ; finished ; 2011 ; Journal of Structural Fire Engineering Volume 2 [superseded] ; 2 ; >
-    au < superseded ; down ; 2012 ; Journal of Structural Fire Engineering Volume 3 [superseded] ; 3 ; >
+    au < superseded ; finished ; 2012 ; Journal of Structural Fire Engineering Volume 3 [superseded] ; 3 ; >
     au < superseded ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 [superseded] ; 4 ; >
 
   }
@@ -512,7 +512,7 @@
     au < finished ; finished ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 ; >
     au < finished ; finished ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 ; >
     au < finished ; finished ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 ; >
-    au < down ; exists ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 ; >
 
@@ -531,7 +531,7 @@
     # moved to Sage
 
     au < superseded ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 [superseded] ; 42 ; >
-    au < superseded ; down ; 2012 ; Noise & Vibration Worldwide Volume 43 [superseded] ; 43 ; >
+    au < superseded ; finished ; 2012 ; Noise & Vibration Worldwide Volume 43 [superseded] ; 43 ; >
     au < superseded ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 [superseded] ; 44 ; >
     au < doNotProcess ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
@@ -600,7 +600,7 @@
     au < finished ; finished ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 ; >
     au < finished ; finished ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 ; >
     au < finished ; finished ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 ; >
-    au < down ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; >
 
   }
 
@@ -619,7 +619,7 @@
     au < finished ; finished ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; >
-    au < down ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
 
   }
 
@@ -645,7 +645,7 @@
     au < doNotProcess ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
     au < superseded ; finished ; 2010 ; Wind Engineering Volume 34 [superseded] ; 34 ; >
     au < superseded ; finished ; 2011 ; Wind Engineering Volume 35 [superseded] ; 35 ; >
-    au < superseded ; down ; 2012 ; Wind Engineering Volume 36 [superseded] ; 36 ; >
+    au < superseded ; finished ; 2012 ; Wind Engineering Volume 36 [superseded] ; 36 ; >
     au < superseded ; exists ; 2013 ; Wind Engineering Volume 37 [superseded] ; 37 ; >
     au < doNotProcess ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 ; >
@@ -662,7 +662,7 @@
     param[journal_issn] = 1708-5284
 
     au < superseded ; finished ; 2011 ; World Journal of Engineering Volume 8 [superseded] ; 8 ; >
-    au < superseded ; down ; 2012 ; World Journal of Engineering Volume 9 [superseded] ; 9 ; >
+    au < superseded ; finished ; 2012 ; World Journal of Engineering Volume 9 [superseded] ; 9 ; >
     au < superseded ; exists ; 2013 ; World Journal of Engineering Volume 10 [superseded] ; 10 ; >
     au < doNotProcess ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; >

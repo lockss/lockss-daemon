@@ -1,0 +1,44 @@
+{
+  publisher <
+    name = University of St. Thomas Center for Catholic Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Logos: A Journal of Catholic Thought and Culture ;
+      issn = 1091-6687  ;
+      eissn = 1533-791X  ;
+      issnl = 1091-6687
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1997-1998 ; Logos: A Journal of Catholic Thought and Culture Volume 1 [1997-1998] ; 7066 >
+        au < manifest ; 1999 ; Logos: A Journal of Catholic Thought and Culture Volume 2 [1999] ; 7065 >
+        au < manifest ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 [2000] ; 398 >
+        au < manifest ; 2001 ; Logos: A Journal of Catholic Thought and Culture Volume 4 [2001] ; 399 >
+        au < manifest ; 2002 ; Logos: A Journal of Catholic Thought and Culture Volume 5 [2002] ; 400 >
+        au < manifest ; 2003 ; Logos: A Journal of Catholic Thought and Culture Volume 6 [2003] ; 871 >
+        au < manifest ; 2004 ; Logos: A Journal of Catholic Thought and Culture Volume 7 [2004] ; 1737 >
+        au < manifest ; 2005 ; Logos: A Journal of Catholic Thought and Culture Volume 8 [2005] ; 2632 >
+        au < manifest ; 2006 ; Logos: A Journal of Catholic Thought and Culture Volume 9 [2006] ; 2910 >
+        au < manifest ; 2007 ; Logos: A Journal of Catholic Thought and Culture Volume 10 [2007] ; 3207 >
+        au < manifest ; 2008 ; Logos: A Journal of Catholic Thought and Culture Volume 11 [2008] ; 3510 >
+        au < manifest ; 2009 ; Logos: A Journal of Catholic Thought and Culture Volume 12 [2009] ; 4082 >
+        au < manifest ; 2010 ; Logos: A Journal of Catholic Thought and Culture Volume 13 [2010] ; 5768 >
+        au < manifest ; 2011 ; Logos: A Journal of Catholic Thought and Culture Volume 14 [2011] ; 6780 >
+        au < manifest ; 2012 ; Logos: A Journal of Catholic Thought and Culture Volume 15 [2012] ; 7828 >
+        au < manifest ; 2013 ; Logos: A Journal of Catholic Thought and Culture Volume 16 [2013] ; 8616 >
+        au < manifest ; 2014 ; Logos: A Journal of Catholic Thought and Culture Volume 17 [2014] ; 9585 >
+        au < manifest ; 2015 ; Logos: A Journal of Catholic Thought and Culture Volume 18 [2015] ; 10267 >
+        au < ready ; 2016 ; Logos: A Journal of Catholic Thought and Culture Volume 19 [2016] ; 10878 >
+        au < manifest ; 2017 ; Logos: A Journal of Catholic Thought and Culture Volume 20 [2017] ; 12240 >
+
+    }
+
+}

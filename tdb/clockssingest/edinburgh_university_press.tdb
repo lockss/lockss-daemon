@@ -486,14 +486,14 @@
     comment[3] = AU not added to ingest machines, but added to production machines in error.
     
     au < crawling ; down ; 1994 ; History and Computing Volume 6 (1994) ; 6 ; >
-    au < crawling ; down ; 1995 ; History and Computing Volume 7 (1995) ; 7 ; >
-    au < crawling ; down ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
+    au < crawling ; finished ; 1995 ; History and Computing Volume 7 (1995) ; 7 ; >
+    au < crawling ; finished ; 1996 ; History and Computing Volume 8 (1996) ; 8 ; >
     au < crawling ; down ; 1997 ; History and Computing Volume 9 (1997) ; 9 ; >
     au < doNotProcess ; down ; 1998 ; History and Computing Volume 10 (1998) ; 10 ; > # no substance
-    au < crawling ; down ; 1999 ; History and Computing Volume 11 (1999) ; 11 ; >
-    au < crawling ; down ; 2000 ; History and Computing Volume 12 (2000) ; 12 ; >
-    au < crawling ; down ; 2001 ; History and Computing Volume 13 (2001) ; 13 ; >
-    au < crawling ; down ; 2002 ; History and Computing Volume 14 (2002) ; 14 ; >
+    au < crawling ; finished ; 1999 ; History and Computing Volume 11 (1999) ; 11 ; >
+    au < crawling ; finished ; 2000 ; History and Computing Volume 12 (2000) ; 12 ; >
+    au < crawling ; finished ; 2001 ; History and Computing Volume 13 (2001) ; 13 ; >
+    au < crawling ; finished ; 2002 ; History and Computing Volume 14 (2002) ; 14 ; >
     
     }
 
@@ -521,11 +521,11 @@
     au < finished ; finished ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 ; >
     au < finished ; finished ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 ; >
     au < finished ; finished ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 ; >
-    au < crawling ; down ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 ; >
+    au < crawling ; finished ; 2013 ; International Journal of Humanities and Arts Computing Volume 7 (2013) ; 7 ; >
     au < finished ; finished ; 2014 ; International Journal of Humanities and Arts Computing Volume 8 (2014) ; 8 ; >
     au < finished ; finished ; 2015 ; International Journal of Humanities and Arts Computing Volume 9 (2015) ; 9 ; >
     au < crawling ; exists ; 2016 ; International Journal of Humanities and Arts Computing Volume 10 (2016) ; 10 ; >
-    au < down ; notReady ; 2017 ; International Journal of Humanities and Arts Computing Volume 11 (2017) [to delete] ; 11 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Humanities and Arts Computing Volume 11 (2017) ; 11 ; >
     au < down ; notReady ; 2018 ; International Journal of Humanities and Arts Computing Volume 12 (2018) [to delete] ; 12 ; >
     au < down ; notReady ; 2019 ; International Journal of Humanities and Arts Computing Volume 13 (2019) [to delete] ; 13 ; >
     au < down ; notReady ; 2020 ; International Journal of Humanities and Arts Computing Volume 14 (2020) [to delete] ; 14 ; >
@@ -654,7 +654,7 @@
     au < finished ; finished ; 2009 ; Journal of International Political Theory Volume 5 ; 5 ; >
     au < finished ; finished ; 2010 ; Journal of International Political Theory Volume 6 ; 6 ; >
     au < finished ; finished ; 2011 ; Journal of International Political Theory Volume 7 ; 7 ; >
-    au < down ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 ; >
     au < superseded ; exists ; 2013 ; Journal of International Political Theory Volume 9 [superseded] ; 9 ; >
     
     }
@@ -787,7 +787,7 @@
     au < finished ; finished ; 2014 ; Journal of Scottish Philosophy Volume 12 ; 12 ; >
     au < finished ; finished ; 2015 ; Journal of Scottish Philosophy Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Scottish Philosophy Volume 14 ; 14 ; >
-    au < expected ; exists ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; >
 
   }
 

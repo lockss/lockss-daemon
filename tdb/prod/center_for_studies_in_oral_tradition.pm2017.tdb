@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = Center for Studies in Oral Tradition
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Oral Tradition ;
+      issn = 0883-5365  ;
+      eissn = 1542-4308  ;
+      issnl = 0883-5365
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2003 ; Oral Tradition Volume 18 [2003] ; 1758 >
+        au < manifest ; 2004 ; Oral Tradition Volume 19 [2004] ; 2546 >
+        au < manifest ; 2005 ; Oral Tradition Volume 20 [2005] ; 2811 >
+        au < manifest ; 2006 ; Oral Tradition Volume 21 [2006] ; 3160 >
+        au < manifest ; 2007 ; Oral Tradition Volume 22 [2007] ; 3526 >
+        au < manifest ; 2008 ; Oral Tradition Volume 23 [2008] ; 3902 >
+        au < manifest ; 2009 ; Oral Tradition Volume 24 [2009] ; 6365 >
+        au < manifest ; 2010 ; Oral Tradition Volume 25 [2010] ; 6580 >
+        au < manifest ; 2011 ; Oral Tradition Volume 26 [2011] ; 7830 >
+        au < manifest ; 2012 ; Oral Tradition Volume 27 [2012] ; 8788 >
+        au < manifest ; 2013 ; Oral Tradition Volume 28 [2013] ; 9748 >
+        au < manifest ; 2014-2015 ; Oral Tradition Volume 29 [2014-2015] ; 10464 >
+        au < manifest ; 2016 ; Oral Tradition Volume 30 [2016] ; 11282 >
+
+    }
+
+}

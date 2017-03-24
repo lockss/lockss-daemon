@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -55,10 +55,6 @@
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>
-  <entry>
-    <string>plugin_bulk_content</string>
-    <boolean>true</boolean>
-  </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.mdpi.MdpiZipXmlArticleIteratorFactory</string>

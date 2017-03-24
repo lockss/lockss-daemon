@@ -1,0 +1,45 @@
+{
+  publisher <
+    name = National Bureau of Asian Research
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Asia Policy ;
+      issn = 1559-0968  ;
+      eissn = 1559-2960 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2006 ; Asia Policy Number 1 [January 2006] ; 6656 >
+        au < manifest ; 2006 ; Asia Policy Number 2 [July 2006] ; 6657 >
+        au < manifest ; 2007 ; Asia Policy Number 3 [January 2007] ; 6658 >
+        au < manifest ; 2007 ; Asia Policy Number 4 [July 2007] ; 6659 >
+        au < manifest ; 2008 ; Asia Policy Number 5 [January 2008] ; 6660 >
+        au < manifest ; 2008 ; Asia Policy Number 6 [July 2008] ; 6661 >
+        au < manifest ; 2009 ; Asia Policy Number 7 [January 2009] ; 6662 >
+        au < manifest ; 2009 ; Asia Policy Number 8 [July 2009] ; 6663 >
+        au < manifest ; 2010 ; Asia Policy Number 9 [January 2010] ; 6664 >
+        au < manifest ; 2010 ; Asia Policy Number 10 [July 2010] ; 6665 >
+        au < manifest ; 2011 ; Asia Policy Number 11 [January 2011] ; 6765 >
+        au < manifest ; 2011 ; Asia Policy Number 12 [July 2011] ; 7385 >
+        au < manifest ; 2012 ; Asia Policy Number 13 [January 2012] ; 7937 >
+        au < manifest ; 2012 ; Asia Policy Number 14 [July 2012] ; 8413 >
+        au < manifest ; 2013 ; Asia Policy Number 15 [January 2013] ; 8732 >
+        au < manifest ; 2013 ; Asia Policy Number 16 [July 2013] ; 9248 >
+        au < manifest ; 2014 ; Asia Policy Number 17 [January 2014] ; 9640 >
+        au < manifest ; 2014 ; Asia Policy Number 18 [July 2014] ; 10113 >
+        au < manifest ; 2015 ; Asia Policy Number 19 [January 2015] ; 10350 >
+        au < manifest ; 2015 ; Asia Policy Number 20 [July 2015] ; 10732 >
+        au < manifest ; 2016 ; Asia Policy Number 21 [January 2016] ; 10944 >
+        au < manifest ; 2016 ; Asia Policy Number 22 [July 2016] ; 11351 >
+        au < manifest ; 2017 ; Asia Policy Number 23 [January 2017] ; 12353 >
+
+    }
+
+}

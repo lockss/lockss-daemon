@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Midwest Modern Language Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of the Midwest Modern Language Association ;
+      issn = 0742-5562  ;
+      eissn = 2162-6294 
+    >
+
+      attr[journal_id] = 0000
+
+        au < testing ; 2011 ; Journal of the Midwest Modern Language Association Volume 44 [2011] ; 10081 >
+        au < testing ; 2012 ; Journal of the Midwest Modern Language Association Volume 45 [2012] ; 9941 >
+        au < testing ; 2013 ; Journal of the Midwest Modern Language Association Volume 46 [2013] ; 9865 >
+        au < testing ; 2014 ; Journal of the Midwest Modern Language Association Volume 47 [2014] ; 10725 >
+        au < testing ; 2015 ; Journal of the Midwest Modern Language Association Volume 48 [2015] ; 10818 >
+        au < testing ; 2016 ; Journal of the Midwest Modern Language Association Volume 49 [2016] ; 12453 >
+
+    }
+
+}

@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Center for Literary Publishing
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Colorado Review ;
+      issn = 1046-3348 
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2009 ; Colorado Review Volume 36 [2009] ; 9298 >
+        au < manifest ; 2010 ; Colorado Review Volume 37 [2010] ; 9297 >
+        au < manifest ; 2011 ; Colorado Review Volume 38 [2011] ; 9296 >
+        au < manifest ; 2012 ; Colorado Review Volume 39 [2012] ; 9295 >
+        au < manifest ; 2013 ; Colorado Review Volume 40 [2013] ; 9105 >
+        au < manifest ; 2014 ; Colorado Review Volume 41 [2014] ; 9802 >
+        au < manifest ; 2015 ; Colorado Review Volume 42 [2015] ; 10508 >
+        au < manifest ; 2016 ; Colorado Review Volume 43 [2016] ; 11016 >
+        au < manifest ; 2017 ; Colorado Review Volume 44 [2017] ; 12510 >
+
+    }
+
+}

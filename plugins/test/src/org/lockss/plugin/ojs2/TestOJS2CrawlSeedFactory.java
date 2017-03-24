@@ -51,15 +51,17 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
   protected MockLockssDaemon theDaemon;
   protected MockArchivalUnit mau = null;
   protected MockArchivalUnit dual_mau = null;
+  protected MockArchivalUnit noindex_mau = null;
   protected MockAuState aus = new MockAuState();
   protected MockCrawlRule crawlRule = null;
   protected String permissionUri = "index.php/jid/about/editorialPolicies";
+  protected String permissionNoIndexUri = "jid/about/editorialPolicies";
   protected List<String> permissionUrls;
   protected String startUrl = "http://www.example.com/index.php/jid/gateway/lockss?year=2020";
   protected List<String> startUrls;
   protected MockLinkExtractor extractor = new MockLinkExtractor();
   protected OJS2CrawlSeedFactory csf;
-  protected CrawlSeed cs, dual_cs;
+  protected CrawlSeed cs, dual_cs, noindex_cs;
   protected MockServiceProvider msp;
   protected Configuration config;
   protected DateFormat df;
@@ -77,6 +79,11 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     dual_mau = new MockArchivalUnit();
     dual_mau.setPlugin(new MockPlugin(theDaemon));
     dual_mau.setAuId("MyMockTestAu");
+
+    // to test the other type of crawl seed 
+    noindex_mau = new MockArchivalUnit();
+    noindex_mau.setPlugin(new MockPlugin(theDaemon));
+    noindex_mau.setAuId("MyMockTestAu");
     
     // %sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year
     config = ConfigManager.newConfiguration();
@@ -90,6 +97,11 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     config.put(ConfigParamDescr.BASE_URL.getKey(), "https://ejournals.library.ualberta.ca/");
     dual_mau.setConfiguration(config);
     dual_cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(dual_mau));
+    // currently the only host that causes a special CrawlSeed without index.php
+    config.put(ConfigParamDescr.BASE_URL.getKey(), "https://mulpress.mcmaster.ca/");
+    noindex_mau.setConfiguration(config);
+    noindex_cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(noindex_mau));
+
   }
   
   public void testNullAu() throws PluginException, ConfigurationException {
@@ -135,6 +147,14 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     assertEquals(dualUrls, dual_cs.getPermissionUrls());
   }
   
+  public void testNoIndexPermissionUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    permissionUrls = ListUtil.list("https://mulpress.mcmaster.ca/" + permissionUri);
+    noindex_mau.setPermissionUrls(permissionUrls);
+    List<String> permUrls = ListUtil.list("https://mulpress.mcmaster.ca/" + permissionNoIndexUri);
+    assertEquals(permUrls, noindex_cs.getPermissionUrls());
+  }
+  
   public void testStartUrl() 
       throws ConfigurationException, PluginException, IOException {
     assertEquals(startUrls, cs.getStartUrls());
@@ -146,6 +166,13 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     List<String> dualUrls = ListUtil.list("http://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020", 
                                           "https://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020");
     assertEquals(dualUrls, dual_cs.getStartUrls());
+  }
+
+  public void testNoIndexStartUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    noindex_mau.setStartUrls(ListUtil.list("https://mulpress.mcmaster.ca/index.php/jid/gateway/lockss?year=2020"));
+    List<String> noindexUrls = ListUtil.list("https://mulpress.mcmaster.ca/jid/gateway/lockss?year=2020");
+    assertEquals(noindexUrls, noindex_cs.getStartUrls());
   }
   
   public void testIsFailOnStartUrl() {

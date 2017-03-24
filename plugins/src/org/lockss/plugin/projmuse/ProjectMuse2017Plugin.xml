@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - EJ</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -39,7 +39,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Project Muse Journals Plugin, Base URL %s, Journal ID %s, Resource ID %d", base_url, journal_id, resource_id</string>
+    <string>"Project Muse Journals Plugin, Base URL %s, Resource ID %d", base_url, resource_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -65,15 +65,6 @@
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
@@ -172,6 +163,27 @@
     <string>au_refetch_depth</string>
     <int>2</int>
   </entry>
-  <!-- https://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js
-   -->
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>cdn\.jsdelivr\.net</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>/article/[^/]+/pdfimage$</string>
+      <string>[.](css|js)$</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/article/[^/]+/pdfimage$", 0</string>
+      <string>"[.](css|js)$", 0</string>
+    </list>
+  </entry>
 </map>

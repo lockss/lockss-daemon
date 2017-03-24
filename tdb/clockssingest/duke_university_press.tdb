@@ -82,7 +82,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; American Literature Volume 86 ; 86 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; American Literature Volume 87 ; 87 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; American Literature Volume 88 ; 88 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; American Literature Volume 89 ; 89 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; American Literature Volume 89 ; 89 ; >
 
     }
 
@@ -344,7 +344,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Comparative Literature Volume 66 ; 66 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Comparative Literature Volume 67 ; 67 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; Comparative Literature Volume 68 ; 68 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; Comparative Literature Volume 69 ; 69 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Comparative Literature Volume 69 ; 69 ; >
 
     }
 
@@ -675,7 +675,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; >
 
   }
 
@@ -811,7 +811,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; History of Political Economy Volume 46 ; 46 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; History of Political Economy Volume 47 ; 47 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; History of Political Economy Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
 
     }
 
@@ -1017,7 +1017,7 @@
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -1200,7 +1200,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; New German Critique Volume 41 ; 41 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; New German Critique Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; New German Critique Volume 43 ; 43 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; New German Critique Volume 44 ; 44 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; New German Critique Volume 44 ; 44 ; >
 
      }
 
@@ -1552,7 +1552,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Radical History Review Volume 2014 ; 2014 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; Radical History Review Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2016 ; Radical History Review Volume 2016 ; 2016 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
 
       }
 

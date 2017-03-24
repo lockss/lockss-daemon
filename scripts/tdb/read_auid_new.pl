@@ -378,26 +378,26 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "BePressPlugin") {
-        $url = sprintf("%s%s/lockss-volume%d.html",
-            $param{base_url}, $param{journal_abbr}, $param{volume});
-        $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
-    if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
-        }
-    }
-    $result = "Manifest"
-      } else {
-    $result = "--"
+      $url = sprintf("%s%s/lockss-volume%d.html",
+          $param{base_url}, $param{journal_abbr}, $param{volume});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+        my $man_contents = $resp->content;
+        if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
+          if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
+            }
+          }
+          $result = "Manifest"
+        } else {
+        $result = "--"
       }
-  } else {
+    } else {
       $result = "--"
   }
         sleep(4);
@@ -410,7 +410,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/)) && ($man_contents =~ m/$param{journal_abbr}\/vol$param{volume}/)) {
     if ($man_contents =~ m/<title>(.*) --.*<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
@@ -1845,6 +1845,50 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
+    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+      $param{base_url}, $param{journal_issn});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
+    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+      $param{base_url}, $param{journal_issn});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
   } elsif ($plugin eq "SilverchairJournalsPlugin") {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
       $param{base_url}, $param{resource_id}, $param{year});
@@ -1863,7 +1907,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssSilverchairJournalsPlugin") {
+  } elsif (($plugin eq "ClockssSilverchairJournalsPlugin") ||
+           ($plugin eq "ClockssAmaSilverchairPlugin")) {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
       $param{base_url}, $param{resource_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -1962,8 +2007,53 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
+  } elsif ($plugin eq "ClockssJstorCurrentScholarshipPlugin"){
+      $url = sprintf("%sclockss-manifest/%s/%s",
+      $param{base_url}, $param{journal_id}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #JSTOR Current Scholarship links http://www.jstor.org/stable/10.2972/hesperia.84.issue-1
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
+                  ($man_contents =~ m/stable\/[0-9.]+\//))) {
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(4);
+  }elsif ($plugin eq "JstorCurrentScholarshipPlugin"){
+      #clockss and lockss use the same manifest page
+      $url = sprintf("%sclockss-manifest/%s/%s",
+      $param{base_url}, $param{journal_id}, $param{year});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #JSTOR Current Scholarship links http://www.jstor.org/stable/10.2972/hesperia.84.issue-1
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && 
+                  ($man_contents =~ m/stable\/[0-9.]+\//))) {
+              $result = "Manifest";
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(4);
   }
-
+  
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;

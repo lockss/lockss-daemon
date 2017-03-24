@@ -1203,7 +1203,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy Volume 43 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Endoscopy Volume 44 ; 44 ; >
-   au < finished ; crawling ; 2013 ; 2013 ; Endoscopy Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+   au < finished ; finished ; 2013 ; 2013 ; Endoscopy Volume 45 ; 45 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Endoscopy Volume 46 ; 46 ; >
    au < finished ; finished ; 2015 ; 2015 ; Endoscopy Volume 47 ; 47 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Endoscopy Volume 48 ; 48 ; >
@@ -1223,8 +1223,8 @@
 
     au < finished ; finished ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Endoscopy international open Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Endoscopy international open Volume 4 ; 4 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Endoscopy international open Volume 5 ; 5 ; >
 
   }
@@ -1419,7 +1419,7 @@
     au < finished ; finished ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 ; >
     au < finished ; finished ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 ; >
     au < finished ; finished ; 2015 ; 2015 ; European Journal of Pediatric Surgery Reports Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2016 ; 2016 ; European Journal of Pediatric Surgery Reports Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; European Journal of Pediatric Surgery Reports Volume 4 ; 4 ; >
 
   }
 
@@ -2497,7 +2497,7 @@
     comment[years] = 2015-current
 
     au < finished ; finished ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
 
   }
 
@@ -2944,7 +2944,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 227 ; 227 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Klinische Monatsblätter für Augenheilkunde Volume 228 ; 228 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Klinische Monatsblätter für Augenheilkunde Volume 229 ; 229 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 230 ; 230 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 230 ; 230 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 231 ; 231 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 232 ; 232 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 ; >
@@ -2997,7 +2997,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 42 ; 42 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 43 ; 43 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 ; >
@@ -3396,7 +3396,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Neuropediatrics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Neuropediatrics Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Neuropediatrics Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; 2013 ; Neuropediatrics Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; 2013 ; Neuropediatrics Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Neuropediatrics Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 ; >
@@ -3909,7 +3909,7 @@
     au < finished ; finished ; 2012 ; 2012 ; physiopraxis Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; 2013 ; physiopraxis Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; physiopraxis Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 2015 ; physiopraxis Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2015 ; 2015 ; physiopraxis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; physiopraxis Volume 14 ; 14 ; >
 
   }
@@ -4360,7 +4360,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Radiopraxis Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 2015 ; Radiopraxis Volume 8 ; 8 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Radiopraxis Volume 9 ; 9 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
 
   }
 
@@ -4430,7 +4430,7 @@
     # move from Scielo, May 2016
 
    au < crawling ; exists ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
 
   }
 
@@ -4564,7 +4564,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Hearing Volume 35 ; 35 ; >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Hearing Volume 36 ; 36 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Hearing Volume 37 ; 37 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 ; >
 
   }
 
@@ -4613,7 +4613,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Interventional Radiology Volume 33 ; 33 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
 
   }
 
@@ -4701,7 +4701,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 18 ; 18 ; >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Musculoskeletal Radiology Volume 20 ; 20 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Musculoskeletal Radiology Volume 21 ; 21 ; >
 
   }
 
@@ -4804,7 +4804,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Seminars in Plastic Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Seminars in Plastic Surgery Volume 30 ; 30 ; >
-   au < expected ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
+   au < manifest ; exists ; 2017 ; 2017 ; Seminars in Plastic Surgery Volume 31 ; 31 ; >
 
   }
 
@@ -5205,7 +5205,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Sportverletzung - Sportschaden Volume 24 ; 24 ; >
    au < finished ; finished ; 2011 ; 2011 ; Sportverletzung - Sportschaden Volume 25 ; 25 ; >
    au < finished ; finished ; 2012 ; 2012 ; Sportverletzung - Sportschaden Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+   au < finished ; finished ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 27 ; 27 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 28 ; 28 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Sportverletzung - Sportschaden Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2016 ; 2016 ; Sportverletzung - Sportschaden Volume 30 ; 30 ; >
@@ -5381,7 +5381,7 @@
     #years = 2017-current
     #First issue online will be available soon. 
 
-    au < expected ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
 
   }
 
@@ -5423,7 +5423,7 @@
    au < finished ; finished ; 2012 ; 2012 ; SYNTHESIS Volume 44 ; 44 ; >
    au < finished ; crawling ; 2013 ; 2013 ; SYNTHESIS Volume 45 ; 45 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; SYNTHESIS Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-   au < frozen ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 47 ; 47 ; >
+   au < finished ; manifest ; 2015 ; 2015 ; SYNTHESIS Volume 47 ; 47 ; reingest1.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; SYNTHESIS Volume 48 ; 48 ; >
    au < manifest ; exists ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 ; >
 
@@ -5545,7 +5545,7 @@
     au < finished ; finished ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; The Thoracic and Cardiovascular Surgeon Reports Volume 5 ; 5 ; >
     au < manifest ; exists ; 2017 ; 2017 ; The Thoracic and Cardiovascular Surgeon Reports Volume 6 ; 6 ; >
 
   }
@@ -5586,7 +5586,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 6 ; 6 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 7 ; 7 ; >
 
   }
 
@@ -5672,7 +5672,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 35 ; 35 ; >
     au < finished ; finished ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 37 ; 37 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 38 ; 38 ; >
 
   }
 
@@ -5844,7 +5844,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zahnmedizin up2date Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; Zahnmedizin up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Zahnmedizin up2date Volume 10 ; 10 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Zahnmedizin up2date Volume 11 ; 11 ; >
 
   }
 
@@ -6089,7 +6089,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 152 ; 152 ; >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 153 ; 153 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 154 ; 154 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 155 ; 155 ; >
 
   }
 
@@ -6259,7 +6259,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 139 ; 139 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 140 ; 140 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 2016 ; Zeitschrift für Chirurgie Volume 141 ; 141 ; >
-    au < expected ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Zeitschrift für Chirurgie Volume 142 ; 142 ; >
 
   }
 
@@ -6346,8 +6346,8 @@
     au < manifest ; exists ; 2007 ; 2007 ; Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Zentralblatt für Neurochirurgie Volume 69 ; 69 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Zentralblatt für Neurochirurgie Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
 
   }
 

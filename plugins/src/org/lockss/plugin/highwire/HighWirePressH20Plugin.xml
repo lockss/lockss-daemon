@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>120</string>
+    <string>121</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.68.4</string> <!-- plugin_fetch_rate_limiter_source title_attribute: with default -->
+    <string>1.70.0</string>  <!-- HTTP-To-HTTPS -->
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -199,11 +199,11 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

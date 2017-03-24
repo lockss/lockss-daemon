@@ -23,14 +23,14 @@
     param[journal_id] = ast
     # purchased by Sage 11/15 (moved to H20)
 
-    au < down ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
-    au < down ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
-    au < down ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; >
-    au < down ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; >
-    au < down ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; >
-    au < down ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; >
-    au < down ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; >
-    au < down ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
     au < superseded ; exists ; 2008 ; Adsorption Science & Technology Volume 26 [superseded] ; 26 ; >
     au < superseded ; exists ; 2009 ; Adsorption Science & Technology Volume 27 [superseded] ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
@@ -53,14 +53,14 @@
     param[journal_id] = ase
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
     au < finished ; finished ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
-    au < down ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
-    au < down ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
-    au < down ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
-    au < down ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
-    au < down ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
     au < superseded ; exists ; 2008 ; Advances in Structural Engineering Volume 11 [superseded] ; 11 ; >
     au < superseded ; exists ; 2009 ; Advances in Structural Engineering Volume 12 [superseded] ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
@@ -83,17 +83,17 @@
     param[journal_id] = ba
     # purchased by Sage 11/15
 
-    au < down ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 ; >
-    au < down ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 ; >
-    au < down ; exists ; 2001 ; Building Acoustics Volume 8 ; 8 ; >
-    au < down ; exists ; 2002 ; Building Acoustics Volume 9 ; 9 ; >
-    au < down ; exists ; 2003 ; Building Acoustics Volume 10 ; 10 ; >
-    au < down ; exists ; 2004 ; Building Acoustics Volume 11 ; 11 ; >
-    au < down ; exists ; 2005 ; Building Acoustics Volume 12 ; 12 ; >
-    au < down ; exists ; 2006 ; Building Acoustics Volume 13 ; 13 ; >
-    au < down ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 ; >
-    au < down ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 ; >
-    au < down ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; Building Acoustics Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2002 ; Building Acoustics Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2003 ; Building Acoustics Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Building Acoustics Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; Building Acoustics Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2006 ; Building Acoustics Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Building Acoustics Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2008 ; Building Acoustics Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2009 ; Building Acoustics Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 ; >
@@ -115,15 +115,15 @@
     param[journal_id] = ee
     # purchased by Sage 11/15
 
-    au < down ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
-    au < down ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 ; >
-    au < down ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 ; >
-    au < down ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 ; >
-    au < down ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 ; >
-    au < down ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 ; >
-    au < down ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 ; >
-    au < down ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 ; >
-    au < down ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
     au < superseded ; exists ; 2008 ; Energy & Environment Volume 19 [superseded] ; 19 ; >
     au < superseded ; exists ; 2009 ; Energy & Environment Volume 20 [superseded] ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
@@ -146,16 +146,16 @@
     param[journal_id] = eee
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 ; >
-    au < down ; exists ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 ; >
-    au < down ; exists ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 ; >
-    au < down ; exists ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 ; >
-    au < down ; exists ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 ; >
-    au < down ; exists ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 ; >
-    au < down ; exists ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 ; >
-    au < down ; exists ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 ; >
-    au < down ; exists ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 ; >
-    au < down ; exists ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 ; >
@@ -177,14 +177,14 @@
     param[journal_id] = ija
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
-    au < down ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 ; >
-    au < down ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 ; >
     au < finished ; finished ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 ; >
-    au < down ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 ; >
     au < finished ; finished ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < down ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 ; >
@@ -224,13 +224,13 @@
     param[journal_id] = ijac
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 ; >
-    au < down ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 ; >
-    au < down ; exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 ; >
-    au < down ; exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 ; >
-    au < down ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 ; >
-    au < down ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 ; >
-    au < down ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 ; >
@@ -326,7 +326,7 @@
     param[journal_id] = ijis
     # transfering to Emerald Publishing
 
-    au < down ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
     au < finished ; finished ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -349,7 +349,7 @@
     param[journal_id] = ijmav
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; >
@@ -410,17 +410,17 @@
     param[journal_id] = ijss
     # purchased by Sage 11/15
 
-    au < down ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 ; >
-    au < down ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 ; >
-    au < down ; exists ; 2001 ; International Journal of Space Structures Volume 16 ; 16 ; >
-    au < down ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 ; >
-    au < down ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 ; >
-    au < down ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2001 ; International Journal of Space Structures Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 ; >
     au < finished ; finished ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < down ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 ; >
-    au < down ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; >
-    au < down ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; >
-    au < down ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Space Structures Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Space Structures Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Space Structures Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Space Structures Volume 27 ; 27 ; >
@@ -442,10 +442,10 @@
     param[journal_id] = ijssc
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 ; >
-    au < down ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 ; >
-    au < down ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 ; >
-    au < down ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; International Journal of Sports Science and Coaching Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Sports Science and Coaching Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sports Science and Coaching Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sports Science and Coaching Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sports Science and Coaching Volume 7 ; 7 ; >
@@ -467,7 +467,7 @@
     param[journal_id] = ijscd
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; >
@@ -488,7 +488,7 @@
     param[journal_id] = ijtst
     # transfering to Emerald Publishing
 
-    au < down ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; International Journal of Transportation Science and Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2015 ; International Journal of Transportation Science and Technology Volume 4 ; 4 ; >
@@ -507,9 +507,9 @@
     param[journal_id] = jact
     # purchased by Sage 11/15
 
-    au < down ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; >
-    au < down ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; >
-    au < down ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; >
@@ -745,8 +745,8 @@
     param[journal_id] = wjoe
     # transfering to Emerald Publishing
 
-    au < down ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
-    au < down ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 ; >
     au < finished ; finished ; 2013 ; World Journal of Engineering Volume 10 ; 10 ; >
     au < finished ; finished ; 2014 ; World Journal of Engineering Volume 11 ; 11 ; >
     au < finished ; finished ; 2015 ; World Journal of Engineering Volume 12 ; 12 ; reingest5.clockss.org:8082 >

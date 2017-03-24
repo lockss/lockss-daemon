@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>59</string>
+    <string>62</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -25,12 +25,12 @@ number:
 
 org.lockss.plugin.ojs2.ClockssOJS2Plugin
 ca.athabascau.plugin.jrp.JournalOfResearchPracticePlugin               (coppulpln, synergiespln?)
-org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin
-org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
-org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
-org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin
-org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
-        
+org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin     (deprecated)
+org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin          (deprecated)
+org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin   (deprecated)
+org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin (deprecated)
+org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin             (deprecated)
+
 Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, synergiespln
 -->
   <entry>
@@ -135,6 +135,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>2,"(/[^.?/]+)(\1){2,}"</string>
       <!-- all content from CDN -->
       <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
@@ -142,7 +143,6 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       <string>4,"^https?://%s%s", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", url_host(base_url), url_path(base_url), journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
-      <string>2,"/([^.?/]+)/\1/\1/"</string>
       <string>2,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), url_path(base_url), journal_id</string>

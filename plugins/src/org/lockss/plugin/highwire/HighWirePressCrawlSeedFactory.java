@@ -43,6 +43,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 /**
  * <p>
@@ -71,8 +72,8 @@ public class HighWirePressCrawlSeedFactory implements CrawlSeedFactory {
       Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
       for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
         String url = iter.next();
-        uUrls.add(HttpToHttpsUtil.UrlUtil.replaceScheme(url, "https", "http"));
-        uUrls.add(HttpToHttpsUtil.UrlUtil.replaceScheme(url, "http", "https"));
+        uUrls.add(UrlUtil.replaceScheme(url, "https", "http"));
+        uUrls.add(UrlUtil.replaceScheme(url, "http", "https"));
       }
       return uUrls;
     }

@@ -4,7 +4,7 @@
     name = Portland Press ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[tester] = 2
+    info[poller] = 2
   >
   # publisher uses three digit volume numbers in manifest URL
   plugin = org.lockss.plugin.portlandpress.ClockssPortlandPressPlugin
@@ -464,22 +464,22 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 438 ; 438 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 439 ; 439 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Journal Volume 440 ; 440 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 441 ; 441 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 442 ; 442 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 443 ; 443 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 444 ; 444 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 445 ; 445 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 446 ; 446 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 447 ; 447 ; >
-    au < down ; exists ; 2012 ; Biochemical Journal Volume 448 ; 448 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 449 ; 449 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 450 ; 450 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 ; >
-    au < down ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 441 ; 441 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 442 ; 442 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 443 ; 443 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 444 ; 444 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 445 ; 445 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 446 ; 446 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 447 ; 447 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Journal Volume 448 ; 448 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 449 ; 449 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 450 ; 450 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 457 ; 457 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 458 ; 458 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Journal Volume 459 ; 459 ; >
@@ -542,8 +542,8 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 ; >
-    au < down ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 ; >
-    au < down ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 ; >
+    au < frozen ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 ; >
+    au < frozen ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 ; >
     
   }
@@ -664,8 +664,8 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bioscience Reports Volume 29 ; 029 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Bioscience Reports Volume 30 ; 030 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Bioscience Reports Volume 31 ; 031 ; >
-    au < down ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 ; >
-    au < down ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 ; >
+    au < frozen ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 ; >
+    au < frozen ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bioscience Reports Volume 34 ; 034 ; >
 
   }
@@ -814,10 +814,10 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Clinical Science Volume 119 ; 119 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Science Volume 120 ; 120 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Science Volume 121 ; 121 ; >
-    au < down ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
-    au < down ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
-    au < down ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
-    au < down ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
+    au < frozen ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
+    au < frozen ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
+    au < frozen ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
+    au < frozen ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 ; >
         
@@ -854,10 +854,10 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 49 ; 049 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 50 ; 050 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Essays in Biochemistry Volume 51 ; 051 ; >
-    au < down ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 ; >
-    au < down ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 ; >
-    au < down ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 ; >
-    au < down ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 ; >
+    au < frozen ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 ; >
+    au < frozen ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 ; >
+    au < frozen ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 ; >
+    au < frozen ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Essays in Biochemistry Volume 56 ; 056 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Essays in Biochemistry Volume 57 ; 057 ; >
 

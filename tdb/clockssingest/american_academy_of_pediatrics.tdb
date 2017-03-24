@@ -55,7 +55,7 @@
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 16 ; 16 ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; >
@@ -72,8 +72,8 @@
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; AAP Grand Rounds Volume 33 [superseded] ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; AAP Grand Rounds Volume 34 [superseded] ; 34 ; >
 
-      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
-      au < aap.ClockssAAPDrupalPlugin ; exists ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2017 ; AAP Grand Rounds Volume 37 ; 37 ; >

@@ -49,6 +49,7 @@ public class AOFoundationSourceXmlMetadataExtractorFactory extends SourceXmlMeta
   private static final Logger log = Logger.getLogger(AOFoundationSourceXmlMetadataExtractorFactory.class);
   
   private static final String ECM_PUBLISHER = "AO Foundation";
+  private static final String ECM_TITLE = "European Cells and Materials";
   private static SourceXmlSchemaHelper CrossRefHelper = null;
   
   @Override
@@ -91,7 +92,17 @@ public class AOFoundationSourceXmlMetadataExtractorFactory extends SourceXmlMeta
       log.debug("in AOFoundation postcook");
       // In the AOFoundation metadata, the registrant is incorrectly set to WEB-FORM
       String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
+      // they cannot seem to avoid spelling errors in the publication name. I'm going to manually set it 
+      // after doing a basic check.  The variants seen so far are:
+      // European Cells and Material,European Cells and Materials,European Cells and Matherials, European Cells a¨nd Materials
+      // European cells amd Material,European cells amd Materials, Europen Cells and Materials,etc
       String jname = thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE);
+      if (jname == null) {
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, ECM_TITLE);
+      }
+      else if (jname.startsWith("Euro")) {
+        thisAM.replace(MetadataField.FIELD_PUBLICATION_TITLE, ECM_TITLE);
+      }
       if ("WEB-FORM".equals(pname)) {
         // for now this is the only journal handled by this plugin
         // if ("European Cells and Materials".equals(jname)) {

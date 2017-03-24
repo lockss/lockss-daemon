@@ -79,7 +79,7 @@
       param[base_url] = http://endo.endojournals.org/
 
       au < finished ; finished ; 2012 ; Endocrinology Volume 153 ; 153 ; >
-      au < down ; exists ; 2013 ; Endocrinology Volume 154 ; 154 ; >
+      au < superseded ; exists ; 2013 ; Endocrinology Volume 154 [superseded] ; 154 ; >
 
     }
 
@@ -100,7 +100,7 @@
       param[base_url] = http://jcem.endojournals.org/
 
       au < finished ; frozen ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
-      au < down ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 ; >
+      au < superseded ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 [superseded] ; 98 ; >
 
     }
 

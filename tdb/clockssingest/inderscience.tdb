@@ -950,7 +950,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Behavioural and Healthcare Research Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Behavioural and Healthcare Research Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; International Journal of Behavioural and Healthcare Research Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Behavioural and Healthcare Research Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Behavioural and Healthcare Research Volume 6 ; 6 ; >
 
     }
 
@@ -1347,7 +1347,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 ; >
       au < crawling ; down ; 2015-2016 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Business Forecasting and Marketing Intelligence Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Business Forecasting and Marketing Intelligence Volume 3 ; 3 ; >
 
     }
 
@@ -1534,7 +1534,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Business Process Integration and Management Volume 6 ; 6 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Business Process Integration and Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2015-2016 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2015-2016 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; >
 
     }
 
@@ -1552,7 +1552,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 ; >
       au < finished ; finished ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; >
-      au < exists ; exists ; 2017 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; >
 
     }
 
@@ -1698,7 +1698,7 @@
 
       param[journal_id] = ijcast
 
-      au < ready ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
 
     }
 
@@ -2311,7 +2311,7 @@
       param[journal_id] = ijds
 
       au < crawling ; down ; 2015-2016 ; International Journal of Data Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Data Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Data Science Volume 2 ; 2 ; >
 
     }
 
@@ -3138,7 +3138,7 @@
       au < finished ; finished ; 2015 ; International Journal of Environment and Pollution Volume 57 ; 57 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Environment and Pollution Volume 58 ; 58 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2016 ; International Journal of Environment and Pollution Volume 59 ; 59 ; >
-      au < ready ; exists ; 2016 ; International Journal of Environment and Pollution Volume 60 ; 60 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Environment and Pollution Volume 60 ; 60 ; >
 
     }
 
@@ -3341,7 +3341,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012-2014 ; International Journal of Experimental and Computational Biomechanics Volume 2 ; 2 ; >
       au < finished ; finished ; 2015 ; International Journal of Experimental and Computational Biomechanics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Experimental and Computational Biomechanics Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Experimental and Computational Biomechanics Volume 4 ; 4 ; >
 
     }
 
@@ -5295,7 +5295,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Management Concepts and Philosophy Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; International Journal of Management Concepts and Philosophy Volume 8 ; 8 ; >
       au < finished ; finished ; 2015 ; International Journal of Management Concepts and Philosophy Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Management Concepts and Philosophy Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Management Concepts and Philosophy Volume 10 ; 10 ; >
 
     }
 
@@ -5886,7 +5886,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Mobile Network Design and Innovation Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       # below au was incorrectly moved to production too early - take it down until year span over
       au < crawling ; down ; 2015-2016 ; International Journal of Mobile Network Design and Innovation Volume 6 ; 6 ; >
-      au < expected ; exists ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Mobile Network Design and Innovation Volume 7 ; 7 ; >
 
     }
 
@@ -5906,7 +5906,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; >
 
     }
 
@@ -6547,7 +6547,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; International Journal of Power Electronics Volume 6 ; 6 ; >
       au < finished ; finished ; 2015 ; International Journal of Power Electronics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2016 ; International Journal of Power Electronics Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Power Electronics Volume 8 ; 8 ; >
 
     }
 
@@ -6647,7 +6647,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; >
 
     }
 
@@ -6865,7 +6865,7 @@
 
       au < doNotProcess ; doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 ; >
       au < crawling ; down ; 2012-2016 ; International Journal of Public Sector Performance Management Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; International Journal of Public Sector Performance Management Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Public Sector Performance Management Volume 3 ; 3 ; >
 
     }
 
@@ -6902,7 +6902,7 @@
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Quality Engineering and Technology Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2016 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 ; >
 
     }
 
@@ -8354,7 +8354,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Tourism Policy Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < crawling ; down ; 2015-2016 ; International Journal of Tourism Policy Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Tourism Policy Volume 7 ; 7 ; >
 
     }
 
@@ -8395,9 +8395,9 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; >
+      au < frozen ; down ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
       # below au was incorrectly moved to production too early - take it down until year span over
-      au < crawling ; down ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
-      au < ready ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
 
     }
 
@@ -8455,7 +8455,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 ; >
       au < crawling ; down ; 2013-2016 ; International Journal of Value Chain Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2017 ; International Journal of Value Chain Management Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Value Chain Management Volume 8 ; 8 ; >
 
     }
 

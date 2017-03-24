@@ -145,6 +145,9 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       // floating bottom banner announcing access to beta version of new site
       HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "^banner-footer"),
       
+      // grey item on volume issue page, missing on some pages
+      HtmlNodeFilters.tagWithAttribute("li", "class", "tooltip"),
+      
   };
   
   // HTML transform to convert all remaining nodes to plaintext nodes

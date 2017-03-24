@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Society for Military History
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = The Journal of Military History ;
+      issn = 0899-3718  ;
+      eissn = 1543-7795  ;
+      issnl = 0899-3718
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2003 ; The Journal of Military History Volume 67 [2003] ; 846 >
+        au < manifest ; 2004 ; The Journal of Military History Volume 68 [2004] ; 1733 >
+        au < manifest ; 2005 ; The Journal of Military History Volume 69 [2005] ; 2619 >
+        au < manifest ; 2006 ; The Journal of Military History Volume 70 [2006] ; 2902 >
+        au < manifest ; 2007 ; The Journal of Military History Volume 71 [2007] ; 3193 >
+        au < manifest ; 2008 ; The Journal of Military History Volume 72 [2008] ; 3588 >
+        au < manifest ; 2009 ; The Journal of Military History Volume 73 [2009] ; 4107 >
+
+    }
+
+}

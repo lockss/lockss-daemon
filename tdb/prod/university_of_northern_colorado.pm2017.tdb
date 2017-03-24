@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = University of Northern Colorado
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Confluencia: Revista Hispánica de Cultura y Literatura ;
+      issn = 0888-6091  ;
+      eissn = 2328-6962  ;
+      issnl = 0888-6091
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2014-2015 ; Confluencia: Revista Hispánica de Cultura y Literatura Volume 30 [2014-2015] ; 10284 >
+        au < ready ; 2015-2016 ; Confluencia: Revista Hispánica de Cultura y Literatura Volume 31 [2015-2016] ; 10816 >
+        au < ready ; 2016 ; Confluencia: Revista Hispánica de Cultura y Literatura Volume 32 [2016] ; 12211 >
+
+    }
+
+}

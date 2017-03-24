@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>67</string>
+    <string>68</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -211,6 +211,20 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.atypon.BaseAtyponUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
+        Make no store/no_fail due to html returned for http://caseconnector.jbjs.org/content/2/2/e16
+        we will count on polls to catch errors where no content was stored -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponContentValidator$Factory</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>

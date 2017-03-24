@@ -76,6 +76,17 @@ implements SourceXmlSchemaHelper {
       }
     }
   };
+  
+  private final static NodeValue CLEAN_TEXT = new NodeValue() {
+    @Override
+    public String getValue(Node node) {
+      if (node == null) {
+        return null;
+      }
+      log.debug3("Cleaning text value - strip lead/trail space");
+      return StringUtils.strip(node.getTextContent());
+    }
+  };
 
   // this is global for all articles in the file - not always correct, don't cook
   private static final String top = "/ARTICLEDATA";
@@ -101,7 +112,7 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
-    articleMap.put(pub_title, XmlDomMetadataExtractor.TEXT_VALUE); 
+    articleMap.put(pub_title, CLEAN_TEXT); 
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 

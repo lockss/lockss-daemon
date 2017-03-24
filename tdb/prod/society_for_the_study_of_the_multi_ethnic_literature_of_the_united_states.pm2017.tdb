@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Society for the Study of the Multi-Ethnic Literature of the United States
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = MELUS: Multi-Ethnic Literature of the U.S. ;
+      issn = 0163-755X  ;
+      eissn = 1946-3170  ;
+      issnl = 0163-755X
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [2009] ; 4313 >
+        au < manifest ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 [2010] ; 5919 >
+        au < manifest ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 [2011] ; 6952 >
+        au < manifest ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 [2012] ; 8146 >
+        au < manifest ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 [2013] ; 8913 >
+        au < manifest ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 [2014] ; 9774 >
+        au < manifest ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 [2015] ; 10548 >
+        au < manifest ; 2016 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 41 [2016] ; 11049 >
+
+    }
+
+}

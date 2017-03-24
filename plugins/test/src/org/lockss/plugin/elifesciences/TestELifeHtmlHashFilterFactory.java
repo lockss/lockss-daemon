@@ -57,9 +57,11 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "<head prefix=\"og: http://ogp.me/ns#\" >" + 
       "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />" +
       "</head>" +
+      "<body class=\"html not-front not-logged-in page-node page-node-493560 node-type-elife-article-ver\">" +
       "<script type=\"text/javascript\" src=\"http://hello.org/sites/stuff.js\"></script>" +
       "<header id=\"section-header\" class=\"section section-header\">" +
       "</header>" +
+      "<p class=\"first-child\">" +
       "<footer id=\"section-footer\" class=\"section section-footer\">" +
       "</footer>" +
       "<div class=\"grid-31 prefix-2 region region-responsive-header\" id=\"region-responsive-header\">" +
@@ -87,12 +89,16 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
       "<div class=\"elife-article-criticalrelation\">" +
       "</div>" +
       "<div id=\"content\">X" +
-      "</div> ";
+      "</div>" +
+      "</body>";
   private static final String withoutStuffToHashOut =
+      "<body>" + // attribute stripped class=...
+      "<p>" + // attribute stripped class=...
       "<div>" + // attribute stripped class=\"elife-article-corrections\"
       "</div>" +
       "<div>X" +
-      "</div> ";
+      "</div>" +
+      "</body>";
   
   private static final String withCommentSection=
       "<div class=\"panel-separator\"></div>" +

@@ -1,0 +1,50 @@
+{
+  publisher <
+    name = Victorian Studies Association of Western Canada
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Victorian Review ;
+      issn = 0848-1512  ;
+      eissn = 1923-3280  ;
+      issnl = 0848-1512
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1990 ; Victorian Review Volume 16 [1990] ; 7699 >
+        au < manifest ; 1991 ; Victorian Review Volume 17 [1991] ; 7848 >
+        au < manifest ; 1992 ; Victorian Review Volume 18 [1992] ; 7849 >
+        au < manifest ; 1993 ; Victorian Review Volume 19 [1993] ; 7861 >
+        au < manifest ; 1994 ; Victorian Review Volume 20 [1994] ; 7850 >
+        au < manifest ; 1995 ; Victorian Review Volume 21 [1995] ; 7851 >
+        au < manifest ; 1996 ; Victorian Review Volume 22 [1996] ; 7852 >
+        au < manifest ; 1997 ; Victorian Review Volume 23 [1997] ; 7862 >
+        au < manifest ; 1998 ; Victorian Review Volume 24 [1998] ; 7872 >
+        au < manifest ; 1999 ; Victorian Review Volume 25 [1999] ; 7876 >
+        au < manifest ; 2000 ; Victorian Review Volume 26 [2000] ; 7873 >
+        au < manifest ; 2001 ; Victorian Review Volume 27 [2001] ; 7875 >
+        au < manifest ; 2002 ; Victorian Review Volume 28 [2002] ; 7877 >
+        au < manifest ; 2003 ; Victorian Review Volume 29 [2003] ; 7879 >
+        au < manifest ; 2004 ; Victorian Review Volume 30 [2004] ; 7889 >
+        au < manifest ; 2005 ; Victorian Review Volume 31 [2005] ; 7890 >
+        au < manifest ; 2006 ; Victorian Review Volume 32 [2006] ; 7880 >
+        au < manifest ; 2007 ; Victorian Review Volume 33 [2007] ; 8361 >
+        au < manifest ; 2008 ; Victorian Review Volume 34 [2008] ; 8362 >
+        au < manifest ; 2009 ; Victorian Review Volume 35 [2009] ; 8358 >
+        au < manifest ; 2010 ; Victorian Review Volume 36 [2010] ; 8359 >
+        au < manifest ; 2011 ; Victorian Review Volume 37 [2011] ; 8360 >
+        au < manifest ; 2012 ; Victorian Review Volume 38 [2012] ; 9988 >
+        au < manifest ; 2013 ; Victorian Review Volume 39 [2013] ; 9989 >
+        au < manifest ; 2014 ; Victorian Review Volume 40 [2014] ; 10799 >
+        au < manifest ; 2015 ; Victorian Review Volume 41 [2015] ; 12179 >
+
+    }
+
+}

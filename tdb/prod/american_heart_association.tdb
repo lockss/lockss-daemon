@@ -42,43 +42,43 @@
       param[base_url] = http://atvb.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; released ; 1981 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; released ; 1982 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; released ; 1983 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; released ; 1984 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; released ; 1985 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; released ; 1986 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; released ; 1987 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; released ; 1988 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; released ; 1989 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; released ; 1990 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; released ; 1991 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; released ; 1992 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; released ; 1993 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; released ; 1994 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; released ; 1995 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; released ; 1996 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; released ; 1997 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; released ; 1998 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; released ; 1999 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; released ; 2000 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; released ; 2001 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; released ; 2002 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; released ; 2003 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; released ; 2004 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; released ; 2005 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; released ; 2006 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; released ; 2007 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 35 ; 35 >
       au < aha.AHADrupalPlugin ; manifest ; 2016 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 36 ; 36 >
-      au < aha.AHADrupalPlugin ; expected ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
+      au < aha.AHADrupalPlugin ; exists ; 2017 ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 37 ; 37 >
 
     }
 

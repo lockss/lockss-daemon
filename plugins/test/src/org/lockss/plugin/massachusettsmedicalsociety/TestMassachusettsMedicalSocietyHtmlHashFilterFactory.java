@@ -73,6 +73,7 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
 	      "<html><div id = \"galleryContent\">abc</div></html>",
 	      "<html><div class = \"discussion\">abc</div></html>",
 	      "<html><dt id = \"citedbyTab\">abc</dt></html>",
+	      "<html><dd id = \"metrics\">abc</dd></html>",
 	      "<html><div class = \"articleActivity\">abc</div></html>",
 	      "<html><div id = \"institutionBox\">abc</div></html>",
 	      "<html><div id = \"copyright\">abc</div></html>",

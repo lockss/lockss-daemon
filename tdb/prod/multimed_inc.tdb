@@ -28,7 +28,8 @@
     au < released ; 2013 ; Current Oncology Volume 20 ; 20 ; 2013 >
     au < released ; 2014 ; Current Oncology Volume 21 ; 21 ; 2014 >
     au < released ; 2015 ; Current Oncology Volume 22 ; 22 ; 2015 >
-    au < manifest ; 2016 ; Current Oncology Volume 23 ; 23 ; 2016 >
+    au < released ; 2016 ; Current Oncology Volume 23 ; 23 ; 2016 >
+    au < expected ; 2017 ; Current Oncology Volume 24 ; 24 ; 2017 >
 
   }
 
@@ -46,11 +47,11 @@
     implicit < status ; year ; name ; volume ; param[year] >
     # moved to Wiley
 
-    au < manifest ; 2000 ; Journal of Applied Clinical Medical Physics Volume 1 ; 1 ; 2000 >
-    au < manifest ; 2001 ; Journal of Applied Clinical Medical Physics Volume 2 ; 2 ; 2001 >
-    au < manifest ; 2002 ; Journal of Applied Clinical Medical Physics Volume 3 ; 3 ; 2002 >
-    au < manifest ; 2003 ; Journal of Applied Clinical Medical Physics Volume 4 ; 4 ; 2003 >
-    au < manifest ; 2004 ; Journal of Applied Clinical Medical Physics Volume 5 ; 5 ; 2004 >
+    au < doNotProcess ; 2000 ; Journal of Applied Clinical Medical Physics Volume 1 ; 1 ; 2000 >
+    au < doNotProcess ; 2001 ; Journal of Applied Clinical Medical Physics Volume 2 ; 2 ; 2001 >
+    au < doNotProcess ; 2002 ; Journal of Applied Clinical Medical Physics Volume 3 ; 3 ; 2002 >
+    au < doNotProcess ; 2003 ; Journal of Applied Clinical Medical Physics Volume 4 ; 4 ; 2003 >
+    au < doNotProcess ; 2004 ; Journal of Applied Clinical Medical Physics Volume 5 ; 5 ; 2004 >
     au < released ; 2005 ; Journal of Applied Clinical Medical Physics Volume 6 ; 6 ; 2005 >
     au < released ; 2006 ; Journal of Applied Clinical Medical Physics Volume 7 ; 7 ; 2006 >
     au < released ; 2007 ; Journal of Applied Clinical Medical Physics Volume 8 ; 8 ; 2007 >
@@ -115,7 +116,8 @@
       au < released ; 2013 ; Peritoneal Dialysis International Volume 33 ; 33 >
       au < released ; 2014 ; Peritoneal Dialysis International Volume 34 ; 34 >
       au < released ; 2015 ; Peritoneal Dialysis International Volume 35 ; 35 >
-      au < manifest ; 2016 ; Peritoneal Dialysis International Volume 36 ; 36 >
+      au < ready ; 2016 ; Peritoneal Dialysis International Volume 36 ; 36 >
+      au < expected ; 2017 ; Peritoneal Dialysis International Volume 37 ; 37 >
 
     }
 

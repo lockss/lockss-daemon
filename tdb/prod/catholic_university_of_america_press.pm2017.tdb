@@ -1,0 +1,125 @@
+{
+  publisher <
+    name = Catholic University of America Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Bulletin of Medieval Canon Law ;
+      issn = 0146-2989  ;
+      eissn = 2372-2509  ;
+      issnl = 0146-2989
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2013 ; Bulletin of Medieval Canon Law Volume 30 [2013] ; 9910 >
+        au < manifest ; 2014 ; Bulletin of Medieval Canon Law Volume 31 [2014] ; 10834 >
+        au < manifest ; 2015 ; Bulletin of Medieval Canon Law Volume 32 [2015] ; 11204 >
+
+    }
+    {
+    title <
+      name = Quaestiones Disputatae ;
+      issn = 2150-5756  ;
+      eissn = 2374-555X  ;
+      issnl = 2150-5756
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2014-2015 ; Quaestiones Disputatae Volume 5 [2014-2015] ; 10539 >
+        au < manifest ; 2015-2016 ; Quaestiones Disputatae Volume 6 [2015-2016] ; 10768 >
+        au < manifest ; 2016-2017 ; Quaestiones Disputatae Volume 7 [2016-2017] ; 12462 >
+
+    }
+    {
+    title <
+      name = The Catholic Historical Review ;
+      issn = 0008-8080  ;
+      eissn = 1534-0708  ;
+      issnl = 0008-8080
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1995 ; The Catholic Historical Review Volume 81 [1995] ; 7439 >
+        au < manifest ; 1996 ; The Catholic Historical Review Volume 82 [1996] ; 7440 >
+        au < manifest ; 1997 ; The Catholic Historical Review Volume 83 [1997] ; 7359 >
+        au < manifest ; 1998 ; The Catholic Historical Review Volume 84 [1998] ; 7441 >
+        au < manifest ; 1999 ; The Catholic Historical Review Volume 85 [1999] ; 7437 >
+        au < manifest ; 2000 ; The Catholic Historical Review Volume 86 [2000] ; 106 >
+        au < manifest ; 2001 ; The Catholic Historical Review Volume 87 [2001] ; 107 >
+        au < manifest ; 2002 ; The Catholic Historical Review Volume 88 [2002] ; 108 >
+        au < manifest ; 2003 ; The Catholic Historical Review Volume 89 [2003] ; 858 >
+        au < manifest ; 2004 ; The Catholic Historical Review Volume 90 [2004] ; 2471 >
+        au < manifest ; 2005 ; The Catholic Historical Review Volume 91 [2005] ; 2730 >
+        au < manifest ; 2006 ; The Catholic Historical Review Volume 92 [2006] ; 2986 >
+        au < manifest ; 2007 ; The Catholic Historical Review Volume 93 [2007] ; 3295 >
+        au < manifest ; 2008 ; The Catholic Historical Review Volume 94 [2008] ; 3697 >
+        au < manifest ; 2009 ; The Catholic Historical Review Volume 95 [2009] ; 4096 >
+        au < manifest ; 2010 ; The Catholic Historical Review Volume 96 [2010] ; 5737 >
+        au < manifest ; 2011 ; The Catholic Historical Review Volume 97 [2011] ; 6714 >
+        au < manifest ; 2012 ; The Catholic Historical Review Volume 98 [2012] ; 8015 >
+        au < manifest ; 2013 ; The Catholic Historical Review Volume 99 [2013] ; 9064 >
+        au < manifest ; 2014 ; The Catholic Historical Review Volume 100 [2014] ; 9687 >
+        au < manifest ; 2015 ; The Catholic Historical Review Volume 101 [2015] ; 10427 >
+        au < manifest ; 2016 ; The Catholic Historical Review Volume 102 [2016] ; 11170 >
+        au < manifest ; 2017 ; The Catholic Historical Review Volume 103 [2017] ; 12486 >
+
+    }
+    {
+    title <
+      name = The Jurist: Studies in Church Law and Ministry ;
+      issn = 0022-6858  ;
+      issnl = 0022-6858
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2007 ; The Jurist: Studies in Church Law and Ministry Volume 67 [2007] ; 9545 >
+        au < manifest ; 2008 ; The Jurist: Studies in Church Law and Ministry Volume 68 [2008] ; 9546 >
+        au < manifest ; 2009 ; The Jurist: Studies in Church Law and Ministry Volume 69 [2009] ; 9547 >
+        au < manifest ; 2010 ; The Jurist: Studies in Church Law and Ministry Volume 70 [2010] ; 9548 >
+        au < manifest ; 2011 ; The Jurist: Studies in Church Law and Ministry Volume 71 [2011] ; 9549 >
+        au < manifest ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 [2012] ; 8657 >
+        au < manifest ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 [2013] ; 9229 >
+        au < manifest ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 [2014] ; 10727 >
+        au < manifest ; 2015 ; The Jurist: Studies in Church Law and Ministry Volume 75 [2015] ; 10730 >
+        au < manifest ; 2016 ; The Jurist: Studies in Church Law and Ministry Volume 76 [2016] ; 12193 >
+
+    }
+    {
+    title <
+      name = U.S. Catholic Historian ;
+      issn = 0735-8318  ;
+      eissn = 1947-8224  ;
+      issnl = 0735-8318
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2007 ; U.S. Catholic Historian Volume 25 [2007] ; 8518 >
+        au < manifest ; 2008 ; U.S. Catholic Historian Volume 26 [2008] ; 8519 >
+        au < manifest ; 2009 ; U.S. Catholic Historian Volume 27 [2009] ; 4248 >
+        au < manifest ; 2010 ; U.S. Catholic Historian Volume 28 [2010] ; 6220 >
+        au < manifest ; 2011 ; U.S. Catholic Historian Volume 29 [2011] ; 7305 >
+        au < manifest ; 2012 ; U.S. Catholic Historian Volume 30 [2012] ; 8376 >
+        au < manifest ; 2013 ; U.S. Catholic Historian Volume 31 [2013] ; 9179 >
+        au < manifest ; 2014 ; U.S. Catholic Historian Volume 32 [2014] ; 9979 >
+        au < manifest ; 2015 ; U.S. Catholic Historian Volume 33 [2015] ; 10541 >
+        au < manifest ; 2016 ; U.S. Catholic Historian Volume 34 [2016] ; 11032 >
+        au < manifest ; 2017 ; U.S. Catholic Historian Volume 35 [2017] ; 12428 >
+
+    }
+
+}

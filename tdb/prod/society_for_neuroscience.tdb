@@ -15,8 +15,8 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < sfn.SFNDrupalPlugin ; released ; 2014 ; eNeuro Volume 1 ; 1 >
-      au < sfn.SFNDrupalPlugin ; manifest ; 2015 ; eNeuro Volume 2 ; 2 >
-      au < sfn.SFNDrupalPlugin ; manifest ; 2016 ; eNeuro Volume 3 ; 3 >
+      au < sfn.SFNDrupalPlugin ; testing ; 2015 ; eNeuro Volume 2 ; 2 >
+      au < sfn.SFNDrupalPlugin ; ready ; 2016 ; eNeuro Volume 3 ; 3 >
       au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
 
   }
@@ -69,7 +69,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Neuroscience Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Neuroscience Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Neuroscience Volume 35 ; 35 >
-      au < sfn.SFNDrupalPlugin ; manifest ; 2016 ; Journal of Neuroscience Volume 36 ; 36 >
+      au < sfn.SFNDrupalPlugin ; ready ; 2016 ; Journal of Neuroscience Volume 36 ; 36 >
       au < sfn.SFNDrupalPlugin ; manifest ; 2017 ; Journal of Neuroscience Volume 37 ; 37 >
 
     }

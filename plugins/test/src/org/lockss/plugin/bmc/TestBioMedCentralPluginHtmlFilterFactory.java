@@ -61,6 +61,42 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   
   private static final String whiteSpace2 = "\n\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
  
+  private static final String link1 = "" +
+      "<ul>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/December/2014\">December 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/November/2014\">November 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> October 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/September/2014\">September 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/August/2014\">August 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> July 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/June/2014\">June 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> May 2014 </li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> April 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/March/2014\">March 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/February/2014\">February 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' title='No publications this month' class='tooltip'> January 2014 </li>\n" + 
+      "</ul>" +
+      "<p class=\"nav\">\n" + 
+      "<a id=\"bmcCitations-link\" href=\"http://www.scfbm.org/content/7/1/4/about#citations-biomedcentral\">Cited on BioMed Central</a>\n" +
+      "<a id=\"comments-link\" href=\"http://www.scfbm.org/content/7/1/4/comments\">1 comment</a>" +
+      "<a href=\"http://www.scfbm.org/pubmed/24669838\" class=\"pubmed-link\">PubMed</a>" +
+      "</p>";
+  
+  private static final String link2 = "" +
+      "<ul>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/December/2014\">December 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/November/2014\">November 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/September/2014\">September 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/August/2014\">August 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' class='tooltip'> July 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/June/2014\">June 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' class='tooltip'> May 2014 </li>\n" + 
+      "<li style='color:#A4A4A4' class='tooltip'> April 2014 </li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/March/2014\">March 2014 </a></li>\n" + 
+      "<li><a href=\"/bmcphysiol/content/14/February/2014\">February 2014 </a></li>\n" + 
+      "<li style='color:#A4A4A4' class='tooltip'> January 2014 </li>\n" + 
+      "</ul>";
+ 
   private static final String impactFactorHtmlHash =
     "<div id=\"\" style=\"width:830px; height:600px\">\n" +
     "<div id=\"impact-factor\" class=\"official\">\n" +
@@ -224,6 +260,9 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
 
     /* whiteSpace test */
     checkHashFilter2(whiteSpace1, whiteSpace2);
+
+    /* grey link test */
+    checkHashFilter2(link1, link2);
 
     /* impactFactor test */
     checkHashFilter1(impactFactorHtmlHash, impactFactorHtmlHashFiltered);

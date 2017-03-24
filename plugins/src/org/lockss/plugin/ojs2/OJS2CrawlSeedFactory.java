@@ -62,6 +62,11 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     dualBaseUrlHosts.add("ejournals.library.ualberta.ca");
     dualBaseUrlHosts.add("scholarworks.iu.edu");
   }
+
+  protected static final HashSet<String> noIndexBaseUrlHosts = new HashSet<String>();
+  static {
+   noIndexBaseUrlHosts.add("mulpress.mcmaster.ca");
+  }
   
   
   public static class DualBaseUrlCrawlSeed extends BaseCrawlSeed {
@@ -93,8 +98,42 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
       }
       return uUrls;
     }
-    
+
   }
+
+  public static class NoIndexBaseUrlCrawlSeed extends BaseCrawlSeed {
+    
+    public NoIndexBaseUrlCrawlSeed(CrawlerFacade crawlerFacade) {
+      super(crawlerFacade);
+    }
+    
+    @Override
+    public Collection<String> doGetPermissionUrls() throws ConfigurationException,
+        PluginException, IOException {
+      Collection<String> uUrls = removeIndex(super.doGetPermissionUrls());
+      return uUrls;
+    }
+    
+    @Override
+    public Collection<String> doGetStartUrls() throws ConfigurationException,
+        PluginException, IOException {
+      Collection<String> uUrls = removeIndex(super.doGetStartUrls());
+      return uUrls;
+    }
+
+    private Collection<String> removeIndex(Collection<String> sUrls) {
+      Collection<String> uUrls = new ArrayList<String>(sUrls.size());
+      for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
+        String url = iter.next();
+        // we know these will contain index.php
+        uUrls.add(url.replace("index.php/", ""));
+      }
+      return uUrls;
+    }
+
+  }
+  
+  
   
   @Override
   public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
@@ -103,6 +142,8 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
       if (baseUrl != null) {
         if (dualBaseUrlHosts.contains(UrlUtil.getHost(baseUrl))) {
           return new DualBaseUrlCrawlSeed(facade);
+        } else if (noIndexBaseUrlHosts.contains(UrlUtil.getHost(baseUrl))) {
+          return new NoIndexBaseUrlCrawlSeed(facade);
         }
       }
     } catch (Exception e) {

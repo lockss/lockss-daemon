@@ -44,7 +44,7 @@ import org.lockss.plugin.definable.*;
 
 public class TestProjectMuse2017Plugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String JRNL_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
+//  static final String JRNL_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String RES_KEY = "resource_id";
 
   private DefinablePlugin plugin;
@@ -66,7 +66,7 @@ public class TestProjectMuse2017Plugin extends LockssTestCase {
   public void testCreateAu() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(JRNL_KEY, "987");
+//    props.setProperty(JRNL_KEY, "987");
     props.setProperty(RES_KEY, "322");
 
     try {
@@ -87,7 +87,7 @@ public class TestProjectMuse2017Plugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
-    props.setProperty(JRNL_KEY, "987");
+//    props.setProperty(JRNL_KEY, "987");
     props.setProperty(RES_KEY, "322");
 
     try {
@@ -103,11 +103,11 @@ public class TestProjectMuse2017Plugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY,
                       "http://www.example.com/");
-    props.setProperty(JRNL_KEY, "987");
+//    props.setProperty(JRNL_KEY, "987");
     props.setProperty(RES_KEY, "322");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Project Muse Journals Plugin, Base URL http://www.example.com/, Journal ID 987, Resource ID 322", au.getName());
+    assertEquals("Project Muse Journals Plugin, Base URL http://www.example.com/, Resource ID 322", au.getName());
   }
 
   public void testGetPluginId() {
@@ -117,7 +117,6 @@ public class TestProjectMuse2017Plugin extends LockssTestCase {
   
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               ConfigParamDescr.JOURNAL_ID,
                                new ConfigParamDescr()
                                .setKey("resource_id")
                                .setDisplayName("Resource ID")

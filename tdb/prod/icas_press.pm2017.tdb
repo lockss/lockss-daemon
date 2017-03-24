@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = ICAS Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Journal of Shi'a Islamic Studies ;
+      issn = 1748-9423  ;
+      eissn = 2051-557X  ;
+      issnl = 1748-9423
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 2012 ; Journal of Shi'a Islamic Studies Volume 5 [2012] ; 8372 >
+        au < manifest ; 2013 ; Journal of Shi'a Islamic Studies Volume 6 [2013] ; 8792 >
+        au < manifest ; 2014 ; Journal of Shi'a Islamic Studies Volume 7 [2014] ; 9944 >
+        au < manifest ; 2015 ; Journal of Shi'a Islamic Studies Volume 8 [2015] ; 10737 >
+        au < manifest ; 2016 ; Journal of Shi'a Islamic Studies Volume 9 [2016] ; 11274 >
+
+    }
+
+}

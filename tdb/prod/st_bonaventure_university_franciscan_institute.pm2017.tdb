@@ -1,0 +1,95 @@
+{
+  publisher <
+    name = St. Bonaventure University Franciscan Institute
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+
+    {
+    title <
+      name = Franciscan Studies ;
+      issn = 0080-5459  ;
+      eissn = 1945-9718  ;
+      issnl = 0080-5459
+
+    >
+
+      attr[journal_id] = 0000
+
+        au < manifest ; 1943 ; Franciscan Studies Volume 3 [1943] ; 9092 >
+        au < manifest ; 1944 ; Franciscan Studies Volume 4 [1944] ; 9091 >
+        au < manifest ; 1946 ; Franciscan Studies Volume 6 [1946] ; 7695 >
+        au < manifest ; 1947 ; Franciscan Studies Volume 7 [1947] ; 7694 >
+        au < manifest ; 1948 ; Franciscan Studies Volume 8 [1948] ; 7693 >
+        au < manifest ; 1949 ; Franciscan Studies Volume 9 [1949] ; 7691 >
+        au < manifest ; 1950 ; Franciscan Studies Volume 10 [1950] ; 7690 >
+        au < manifest ; 1951 ; Franciscan Studies Volume 11 [1951] ; 7688 >
+        au < manifest ; 1952 ; Franciscan Studies Volume 12 [1952] ; 7687 >
+        au < manifest ; 1953 ; Franciscan Studies Volume 13 [1953] ; 7686 >
+        au < manifest ; 1954 ; Franciscan Studies Volume 14 [1954] ; 7685 >
+        au < manifest ; 1955 ; Franciscan Studies Volume 15 [1955] ; 7684 >
+        au < manifest ; 1956 ; Franciscan Studies Volume 16 [1956] ; 7682 >
+        au < manifest ; 1957 ; Franciscan Studies Volume 17 [1957] ; 7681 >
+        au < manifest ; 1958 ; Franciscan Studies Volume 18 [1958] ; 7680 >
+        au < manifest ; 1959 ; Franciscan Studies Volume 19 [1959] ; 7672 >
+        au < manifest ; 1960 ; Franciscan Studies Volume 20 [1960] ; 7671 >
+        au < manifest ; 1961 ; Franciscan Studies Volume 21 [1961] ; 7670 >
+        au < manifest ; 1962 ; Franciscan Studies Volume 22 [1962] ; 7669 >
+        au < manifest ; 1963 ; Franciscan Studies Volume 23 [1963] ; 7668 >
+        au < manifest ; 1964 ; Franciscan Studies Volume 24 [1964 (not available)] ; 7667 >
+        au < manifest ; 1965 ; Franciscan Studies Volume 25 [1965 (not available)] ; 7666 >
+        au < manifest ; 1966 ; Franciscan Studies Volume 26 [1966] ; 7662 >
+        au < manifest ; 1967 ; Franciscan Studies Volume 27 [1967] ; 7661 >
+        au < manifest ; 1968 ; Franciscan Studies Volume 28 [1968] ; 7660 >
+        au < manifest ; 1969 ; Franciscan Studies Volume 29 [1969] ; 7659 >
+        au < manifest ; 1970 ; Franciscan Studies Volume 30 [1970] ; 7658 >
+        au < manifest ; 1971 ; Franciscan Studies Volume 31 [1971 (not available)] ; 7657 >
+        au < manifest ; 1972 ; Franciscan Studies Volume 32 [1972 (not available)] ; 7656 >
+        au < manifest ; 1973 ; Franciscan Studies Volume 33 [1973 (not available)] ; 7655 >
+        au < manifest ; 1974 ; Franciscan Studies Volume 34 [1974] ; 7654 >
+        au < manifest ; 1975 ; Franciscan Studies Volume 35 [1975] ; 7648 >
+        au < manifest ; 1976 ; Franciscan Studies Volume 36 [1976] ; 7647 >
+        au < manifest ; 1977 ; Franciscan Studies Volume 37 [1977] ; 7607 >
+        au < manifest ; 1978 ; Franciscan Studies Volume 38 [1978] ; 7604 >
+        au < manifest ; 1979 ; Franciscan Studies Volume 39 [1979] ; 7633 >
+        au < manifest ; 1980 ; Franciscan Studies Volume 40 [1980] ; 7634 >
+        au < manifest ; 1981 ; Franciscan Studies Volume 41 [1981] ; 7608 >
+        au < manifest ; 1982 ; Franciscan Studies Volume 42 [1982] ; 7635 >
+        au < manifest ; 1983 ; Franciscan Studies Volume 43 [1983] ; 7636 >
+        au < manifest ; 1984 ; Franciscan Studies Volume 44 [1984] ; 7637 >
+        au < manifest ; 1985 ; Franciscan Studies Volume 45 [1985] ; 7638 >
+        au < manifest ; 1986 ; Franciscan Studies Volume 46 [1986] ; 7639 >
+        au < manifest ; 1987 ; Franciscan Studies Volume 47 [1987] ; 7640 >
+        au < manifest ; 1988 ; Franciscan Studies Volume 48 [1988] ; 7641 >
+        au < manifest ; 1989 ; Franciscan Studies Volume 49 [1989] ; 7593 >
+        au < manifest ; 1990 ; Franciscan Studies Volume 50 [1990] ; 7594 >
+        au < manifest ; 1991 ; Franciscan Studies Volume 51 [1991] ; 7595 >
+        au < manifest ; 1992 ; Franciscan Studies Volume 52 [1992] ; 7580 >
+        au < manifest ; 1993 ; Franciscan Studies Volume 53 [1993] ; 7579 >
+        au < manifest ; 1994-1997 ; Franciscan Studies Volume 54 [1994-1997] ; 7578 >
+        au < manifest ; 1998 ; Franciscan Studies Volume 56 [1998] ; 7576 >
+        au < manifest ; 1998 ; Franciscan Studies Volume 55 [1998] ; 7577 >
+        au < manifest ; 1999 ; Franciscan Studies Volume 57 [1999] ; 7573 >
+        au < manifest ; 2000 ; Franciscan Studies Volume 58 [2000] ; 7574 >
+        au < manifest ; 2001 ; Franciscan Studies Volume 59 [2001] ; 7575 >
+        au < manifest ; 2002 ; Franciscan Studies Volume 60 [2002] ; 7447 >
+        au < manifest ; 2003 ; Franciscan Studies Volume 61 [2003] ; 7442 >
+        au < manifest ; 2004 ; Franciscan Studies Volume 62 [2004] ; 7443 >
+        au < manifest ; 2005 ; Franciscan Studies Volume 63 [2005] ; 7444 >
+        au < manifest ; 2006 ; Franciscan Studies Volume 64 [2006] ; 7445 >
+        au < manifest ; 2007 ; Franciscan Studies Volume 65 [2007] ; 7446 >
+        au < manifest ; 2008 ; Franciscan Studies Volume 66 [2008] ; 4099 >
+        au < manifest ; 2009 ; Franciscan Studies Volume 67 [2009] ; 5708 >
+        au < manifest ; 2010 ; Franciscan Studies Volume 68 [2010] ; 6667 >
+        au < manifest ; 2011 ; Franciscan Studies Volume 69 [2011] ; 7996 >
+        au < manifest ; 2012 ; Franciscan Studies Volume 70 [2012] ; 8653 >
+        au < manifest ; 2013 ; Franciscan Studies Volume 71 [2013] ; 10230 >
+        au < wanted ; 2014 ; Franciscan Studies Volume 72 [2014] ; 12137 >
+        au < wanted ; 2015 ; Franciscan Studies Volume 73 [2015] ; 12138 >
+        au < manifest ; 2016 ; Franciscan Studies Volume 74 [2016] ; 12150 >
+
+    }
+
+}

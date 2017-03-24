@@ -42,7 +42,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class HighWirePressH20UrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class HighWirePressH20UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(HighWirePressH20UrlNormalizer.class);
   protected static final String SID_PARAM = "?sid=";

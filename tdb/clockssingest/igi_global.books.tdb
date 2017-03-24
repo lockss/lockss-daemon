@@ -2178,8 +2178,6 @@
     au < crawling ; exists ; 2013 ; 9781466627802 ; 9781466627796 ; 10.4018/978-1-4666-2779-6 ; 69825 ; Web Portal Design, Implementation, Integration, and Optimization ; Jana Polgar (Dialog IT, Australia) and Greg Adamson (University of Melbourne, Australia) ; >
     au < crawling ; exists ; 2013 ; 9781466620247 ; 9781466620230 ; 10.4018/978-1-4666-2023-0 ; 64897 ; Web-Based and Blended Educational Tools and Innovations ; Nikos Karacapilidis (University of Patras, Greece), Mahesh Raisinghani (Texas Woman’s University, USA) and Eugenia M. W. Ng (Hong Kong Institute of Education, China) ; >
     au < crawling ; exists ; 2013 ; 9781466620278 ; 9781466620261 ; 10.4018/978-1-4666-2026-1 ; 64899 ; Web-Based Multimedia Advancements in Data Communications and Networking Technologies ; Varadharajan Sridhar (Sasken Communication Technologies) and Debashis Saha (Indian Institute of Management (Calcutta), India ) ; >
-    #implicit < status ; status2 ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; hidden[proxy] >
-
     au < exists ; exists ; 2014 ; 9781466645196 ; 9781466645189 ; 10.4018/978-1-4666-4518-9 ; 76713 ; A Systemic Perspective to Managing Complexity with Enterprise Architecture ;  ; >
     au < exists ; exists ; 2014 ; 9781466647985 ; 9781466647978 ; 10.4018/978-1-4666-4797-8 ; 78266 ; Academic Knowledge Construction and Multimodal Curriculum Development ;  ; >
     au < exists ; exists ; 2014 ; 9781466661394 ; 9781466661387 ; 10.4018/978-1-4666-6138-7 ; 102181 ; Achieving Effective Integrated E-Care Beyond the Silos ;  ; >
@@ -2224,26 +2222,261 @@
     au < exists ; exists ; 2014 ; 9781466658172 ; 9781466658165 ; 10.4018/978-1-4666-5816-5 ; 94866 ; Cases on Teaching Critical Thinking through Visual Representation Strategies ;  ; >
     au < exists ; exists ; 2014 ; 9781466644717 ; 9781466644700 ; 10.4018/978-1-4666-4470-0 ; 75840 ; Cases on the Assessment of Scenario and Game-Based Virtual Worlds in Higher Education ;  ; >
     au < exists ; exists ; 2014 ; 9781466644830 ; 9781466644823 ; 10.4018/978-1-4666-4482-3 ; 102218 ; Cases on the Societal Effects of Persuasive Games ;  ; >
-
+    au < exists ; exists ; 2014 ; 9781466660717 ; 9781466660700 ; 10.4018/978-1-4666-6070-0 ; 99516 ; Chaos and Complexity Theory in World Politics ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646322 ; 9781466646315 ; 10.4018/978-1-4666-4631-5 ; 77387 ; Cloud Computing and Virtualization Technologies in Libraries ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661196 ; 9781466661189 ; 10.4018/978-1-4666-6118-9 ; 102171 ; Cloud Computing Applications for Quality Health Care Delivery ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662131 ; 9781466662124 ; 10.4018/978-1-4666-6212-4 ; 102223 ; Cognitive Radio Sensor Networks: Applications, Architectures, and Challenges ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643666 ; 9781466643659 ; 10.4018/978-1-4666-4365-9 ; 75483 ; Collaboration in International and Comparative Librarianship ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644793 ; 9781466644786 ; 10.4018/978-1-4666-4478-6 ; 75842 ; Collaborative Communication Processes and Decision Making in Organizations ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643628 ; 9781466643611 ; 10.4018/978-1-4666-4361-1 ; 75482 ; Collaborative Models for Librarian and Teacher Partnerships ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650008 ; 9781466649996 ; 10.4018/978-1-4666-4999-6 ; 84115 ; Communication and Language Analysis in the Corporate World ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650046 ; 9781466650039 ; 10.4018/978-1-4666-5003-9 ; 84119 ; Communication and Language Analysis in the Public Sphere ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645233 ; 9781466645226 ; 10.4018/978-1-4666-4522-6 ; 76714 ; Communication Infrastructures for Cloud Computing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649095 ; 9781466649088 ; 10.4018/978-1-4666-4908-8 ; 78942 ; Computational Intelligence in Remanufacturing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660434 ; 9781466660427 ; 10.4018/978-1-4666-6042-7 ; 99432 ; Computational Linguistics: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646285 ; 9781466646278 ; 10.4018/978-1-4666-4627-8 ; 77386 ; Computational Solutions for Knowledge, Art, and Entertainment: Information Exchange Beyond Text ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660311 ; 9781466660304 ; 10.4018/978-1-4666-6030-4 ; 97391 ; Computer Vision and Image Processing in Intelligent Systems and Multimedia Technologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646483 ; 9781466646476 ; 10.4018/978-1-4666-4647-6 ; 77391 ; Computer-Mediated Briefing for Architects ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662537 ; 9781466662520 ; 10.4018/978-1-4666-6252-0 ; 102250 ; Contemporary Advancements in Information Technology Development in Dynamic Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650329 ; 9781466650312 ; 10.4018/978-1-4666-5031-2 ; 84270 ; Contemporary Social Issues in East Asian Societies: Examining the Spectrum of Public and Private Spheres ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659797 ; 9781466659780 ; 10.4018/978-1-4666-5978-0 ; 97314 ; Convergence of Broadband, Broadcast, and Cellular Network Technologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646964 ; 9781466646957 ; 10.4018/978-1-4666-4695-7 ; 77403 ; Creating Personal, Social, and Urban Awareness through Pervasive Computing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647084 ; 9781466647077 ; 10.4018/978-1-4666-4707-7 ; 78243 ; Crisis Management: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650602 ; 9781466650596 ; 10.4018/978-1-4666-5059-6 ; 84176 ; Critical Practice in P-12 Education: Transformative Teaching and Learning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649293 ; 9781466649286 ; 10.4018/978-1-4666-4928-6 ; 78946 ; Cross-Cultural Considerations in the Education of Young Immigrant Learners ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649804 ; 9781466649798 ; 10.4018/978-1-4666-4979-8 ; 84015 ; Cross-Cultural Interaction: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650244 ; 9781466650237 ; 10.4018/978-1-4666-5023-7 ; 84170 ; Cross-Cultural Online Learning in Higher Education and Corporate Training ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643260 ; 9781466643253 ; 10.4018/978-1-4666-4325-3 ; 75476 ; Cross-Cultural Training and Teamwork in Healthcare ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651753 ; 9781466651746 ; 10.4018/978-1-4666-5174-6 ; 90601 ; Cutting-Edge Technologies and Social Media Use in Higher Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659438 ; 9781466659421 ; 10.4018/978-1-4666-5942-1 ; 97261 ; Cyber Behavior: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660878 ; 9781466660861 ; 10.4018/978-1-4666-6086-1 ; 99890 ; Data Mining and Analysis in the Engineering Field ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649217 ; 9781466649200 ; 10.4018/978-1-4666-4920-0 ; 78944 ; Data Science and Simulation in Transportation Research ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658219 ; 9781466658202 ; 10.4018/978-1-4666-5820-2 ; 94868 ; Design, Development, and Use of Secure Electronic Voting Systems ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648616 ; 9781466648609 ; 10.4018/978-1-4666-4860-9 ; 78887 ; Developing Business Strategies and Identifying Risk Factors in Modern Organization ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658691 ; 9781466658684 ; 10.4018/978-1-4666-5868-4 ; 95210 ; Digital Access and E-Government: Perspectives from Developing and Emerging Countries ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661158 ; 9781466661141 ; 10.4018/978-1-4666-6114-1 ; 102169 ; Digital Arts and Entertainment: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649170 ; 9781466649163 ; 10.4018/978-1-4666-4916-3 ; 78964 ; Digital Rhetoric and Global Literacies: Communication Modes and Digital Practices in the Networked World ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644434 ; 9781466644427 ; 10.4018/978-1-4666-4442-7 ; 75833 ; Disability Informatics and Web Accessibility for Motor Limitations ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644311 ; 9781466644304 ; 10.4018/978-1-4666-4430-4 ; 75830 ; Dynamics of Competitive Advantage and Consumer Perception in Social Marketing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643307 ; 9781466643291 ; 10.4018/978-1-4666-4329-1 ; 75477 ; Econometric Methods for Analyzing Economic Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647466 ; 9781466647459 ; 10.4018/978-1-4666-4745-9 ; 78253 ; Economic Behavior, Game Theory, and Technology in Emerging Markets ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661035 ; 9781466661028 ; 10.4018/978-1-4666-6102-8 ; 99913 ; Educational Technology Use and Design for Improved Learning Opportunities ;  ; >
+    au < exists ; exists ; 2014 ; 9781466652071 ; 9781466652064 ; 10.4018/978-1-4666-5206-4 ; 90652 ; Educational, Psychological, and Behavioral Considerations in Niche Online Communities ;  ; >
     au < exists ; exists ; 2014 ; 9781466647329 ; 9781466647312 ; 10.4018/978-1-4666-4731-2 ; 78248 ; Effective Human Resources Management in Small and Medium Enterprises: Global Perspectives ;  ; >
-    au < exists ; exists ; 2014 ; 9781466659711 ; 9781466659704 ; 10.4018/978-1-4666-5970-4 ; 97310 ; Information Systems and Technology for Organizational Agility, Intelligence, and Resilience ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661639 ; 9781466661622 ; 10.4018/978-1-4666-6162-2 ; 102193 ; Effects of Information Capitalism and Globalization on Teaching and Learning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661073 ; 9781466661066 ; 10.4018/978-1-4666-6106-6 ; 99994 ; E-Governance and Social Inclusion: Concepts and Cases ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645516 ; 9781466645509 ; 10.4018/978-1-4666-4550-9 ; 76721 ; E-Innovation for Sustainable Development of Rural Resources During Global Economic Crisis ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648777 ; 9781466648760 ; 10.4018/978-1-4666-4876-0 ; 78922 ; E-Learning 2.0 Technologies and Web Applications in Higher Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661554 ; 9781466661547 ; 10.4018/978-1-4666-6154-7 ; 102189 ; E-Learning as a Socio-Cultural System: A Multidimensional Analysis ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651913 ; 9781466651906 ; 10.4018/978-1-4666-5190-6 ; 90648 ; Electronic Payment Systems for Competitive Advantage in E-Commerce ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645714 ; 9781466645707 ; 10.4018/978-1-4666-4570-7 ; 76725 ; Emerging Business Opportunities in Africa: Market Entry, Competitive Strategy, and the Promotion of Foreign Direct Investments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650640 ; 9781466650633 ; 10.4018/978-1-4666-5063-3 ; 84177 ; Emerging Methods in Predictive Analytics: Risk Management and Decision-Making ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660830 ; 9781466660823 ; 10.4018/978-1-4666-6082-3 ; 99888 ; Emerging Mobile and Web 2.0 Technologies for Connected E-Government ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647589 ; 9781466647572 ; 10.4018/978-1-4666-4757-2 ; 78256 ; Emerging Pedagogies in the Networked Knowledge Society: Practices Integrating Social Media and Globalization ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646247 ; 9781466646230 ; 10.4018/978-1-4666-4623-0 ; 77385 ; Emerging Research and Trends in Interactivity and the Human-Computer Interface ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660953 ; 9781466660946 ; 10.4018/978-1-4666-6094-6 ; 99909 ; Emerging Theory and Practice in Neuroprosthetics ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659513 ; 9781466659506 ; 10.4018/978-1-4666-5950-6 ; 97265 ; Emerging Trends in Smart Banking: Risk Management Under Basel II and III ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648029 ; 9781466648012 ; 10.4018/978-1-4666-4801-2 ; 78267 ; Enabling the New Era of Cloud Computing: Data Security, Transfer, and Management ;  ; >
+    au < exists ; exists ; 2014 ; 9781466652033 ; 9781466652026 ; 10.4018/978-1-4666-5202-6 ; 90651 ; Encyclopedia of Business Analytics and Optimization ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661752 ; 9781466661745 ; 10.4018/978-1-4666-6174-5 ; 102199 ; Engaging Language Learners through Technology Integration: Theory, Applications, and Outcomes ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661318 ; 9781466661301 ; 10.4018/978-1-4666-6130-1 ; 102177 ; Enhancing the Human Experience through Assistive Technologies and E-Accessibility ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651302 ; 9781466651296 ; 10.4018/978-1-4666-5129-6 ; 90538 ; Evaluating Websites and Web Services: Interdisciplinary Perspectives on User Satisfaction ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661233 ; 9781466661226 ; 10.4018/978-1-4666-6122-6 ; 102173 ; Evolving Issues Surrounding Technoethics and Society in the Digital Age ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660038 ; 9781466660021 ; 10.4018/978-1-4666-6002-1 ; 97342 ; Examining Paratextual Theory and its Applications in Digital Culture ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659872 ; 9781466659865 ; 10.4018/978-1-4666-5986-5 ; 97318 ; Examining the Informing View of Organization: Applying Theoretical and Managerial Approaches ;  ; >
+    au < exists ; exists ; 2014 ; 9781466657779 ; 9781466657762 ; 10.4018/978-1-4666-5776-2 ; 94524 ; Exchanging Terrorism Oxygen for Media Airwaves: The Age of Terroredia ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647862 ; 9781466647855 ; 10.4018/978-1-4666-4785-5 ; 78263 ; Exploring Innovative and Successful Applications of Soft Computing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643468 ; 9781466643451 ; 10.4018/978-1-4666-4345-1 ; 75468 ; Exploring Multimodal Composition and Digital Writing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643420 ; 9781466643413 ; 10.4018/978-1-4666-4341-3 ; 75467 ; Exploring Technology for Writing and Writing Instruction ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659674 ; 9781466659667 ; 10.4018/978-1-4666-5966-7 ; 97308 ; Face Recognition in Adverse Conditions ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650282 ; 9781466650275 ; 10.4018/978-1-4666-5027-5 ; 84171 ; Feral Information Systems Development: Managerial Implications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643703 ; 9781466643697 ; 10.4018/978-1-4666-4369-7 ; 75484 ; Formal Languages for Computer Simulation: Transdisciplinary Models and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643147 ; 9781466643130 ; 10.4018/978-1-4666-4313-0 ; 75473 ; Frameworks of IT Prosumption for Business Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660519 ; 9781466660502 ; 10.4018/978-1-4666-6050-2 ; 99436 ; Game Theory Applications in Network Design ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650725 ; 9781466650718 ; 10.4018/978-1-4666-5071-8 ; 84179 ; Gamification for Human Factors Integration: Social, Education, and Psychological Issues ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661431 ; 9781466661424 ; 10.4018/978-1-4666-6142-4 ; 102183 ; Gender Considerations and Influence in the Digital Media and Gaming Industry ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645356 ; 9781466645349 ; 10.4018/978-1-4666-4534-9 ; 76717 ; Gender Divide and the Computer Game Industry ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660557 ; 9781466660540 ; 10.4018/978-1-4666-6054-0 ; 99486 ; Geo-Regional Competitiveness in Central and Eastern Europe, the Baltic Countries, and Russia ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660113 ; 9781466660106 ; 10.4018/978-1-4666-6010-6 ; 97375 ; Global Issues and Ethical Considerations in Human Enhancement Technologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658295 ; 9781466658288 ; 10.4018/978-1-4666-5828-8 ; 94872 ; Global Perspectives on Achieving Success in High and Low Cost Operating Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646360 ; 9781466646353 ; 10.4018/978-1-4666-4635-3 ; 77388 ; Global Strategies in Banking and Finance ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649378 ; 9781466649361 ; 10.4018/978-1-4666-4936-1 ; 78948 ; Global Trends in Intelligent Computing Research and Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646407 ; 9781466646391 ; 10.4018/978-1-4666-4639-1 ; 77389 ; Globalization and Governance in the International Political Economy ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651470 ; 9781466651463 ; 10.4018/978-1-4666-5146-3 ; 90543 ; Governometrics and Technological Innovation for Public Policy Design and Precision ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651678 ; 9781466651661 ; 10.4018/978-1-4666-5166-1 ; 90599 ; Green Technology Applications for Enterprise and Academic Innovation ;  ; >
     au < exists ; exists ; 2014 ; 9781466658776 ; 9781466658844 ; 10.4018/978-1-4666-5884-4 ; 95218 ; Handbook of Research on Demand-Driven Web Services: Theory, Technologies, and Applications ;  ; >
-    au < exists ; exists ; 2014 ; 9781466658776 ; 9781466658769 ; 10.4018/978-1-4666-5876-9 ; 95214 ; Multicultural Awareness and Technology in Higher Education: Global Perspectives ;  ; >
-    au < exists ; exists ; 2014 ; 9781466658059 ; 9781466658042 ; 10.4018/978-1-4666-5804-2 ; 94860 ; Judiciary-Friendly Forensics of Software Copyright Infringement ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643741 ; 9781466643734 ; 10.4018/978-1-4666-4373-4 ; 75485 ; Handbook of Research on Enterprise 2.0: Technological, Social, and Organizational Dimensions ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644595 ; 9781466644588 ; 10.4018/978-1-4666-4458-8 ; 75837 ; Handbook of Research on Transnational Higher Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644755 ; 9781466644748 ; 10.4018/978-1-4666-4474-8 ; 75841 ; Handbook of Research on Strategic Performance Management and Measurement Using Data Envelopment Analysis ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645479 ; 9781466645462 ; 10.4018/978-1-4666-4546-2 ; 76720 ; Handbook of Research on Patient Safety and Quality Care through Health Informatics ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650404 ; 9781466650398 ; 10.4018/978-1-4666-5039-8 ; 84172 ; Handbook of Research on Design and Management of Lean Production Systems ;  ; >
     au < exists ; exists ; 2014 ; 9781466650084 ; 9781466650077 ; 10.4018/978-1-4666-5007-7 ; 84166 ; Handbook of Research on Management of Cultural Products: E-Relationship Marketing and Accessibility Perspectives ;  ; >
-    au < exists ; exists ; 2014 ; 9781466649019 ; 9781466649002 ; 10.4018/978-1-4666-4900-2 ; 78940 ; Technology Development and Platform Enhancements for Successful Global E-Government Design ;  ; >
-    au < exists ; exists ; 2014 ; 9781466647947 ; 9781466647930 ; 10.4018/978-1-4666-4793-0 ; 78265 ; Perspectives on Theory U: Insights from the Field ;  ; >
-    au < exists ; exists ; 2014 ; 9781466647787 ; 9781466647770 ; 10.4018/978-1-4666-4777-0 ; 78261 ; Risk Analysis for Prevention of Hazardous Situations in Petroleum and Natural Gas Engineering ;  ; >
-    au < exists ; exists ; 2014 ; 9781466647503 ; 9781466647497 ; 10.4018/978-1-4666-4749-7 ; 78254 ; Transcultural Marketing for Incremental and Radical Innovation ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651555 ; 9781466651548 ; 10.4018/978-1-4666-5154-8 ; 90575 ; Handbook of Research on Strategic Business Infrastructure Development and Contemporary Issues in Finance ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651630 ; 9781466651623 ; 10.4018/978-1-4666-5162-3 ; 90598 ; Handbook of Research on Emerging Priorities and Trends in Distance Education: Communication, Pedagogy, and Technology ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651715 ; 9781466651708 ; 10.4018/978-1-4666-5170-8 ; 90600 ; Handbook of Research on Progressive Trends in Wireless Communications and Networking ;  ; >
+    au < exists ; exists ; 2014 ; 9781466657854 ; 9781466657847 ; 10.4018/978-1-4666-5784-7 ; 94528 ; Handbook of Research on High Performance and Cloud Computing in Scientific Research and Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658578 ; 9781466658561 ; 10.4018/978-1-4666-5856-1 ; 94912 ; Handbook of Research on Pedagogical Innovations for Sustainable Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658813 ; 9781466658806 ; 10.4018/978-1-4666-5880-6 ; 95216 ; Handbook of Research on Consumerism in Business and Marketing: Concepts and Practices ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659636 ; 9781466659629 ; 10.4018/978-1-4666-5962-9 ; 97293 ; Handbook of Research on Strategic Management in Small and Medium Enterprises ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659834 ; 9781466659827 ; 10.4018/978-1-4666-5982-7 ; 97316 ; Handbook of Research on Digital Tools for Writing Instruction in K-12 Settings ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659995 ; 9781466659988 ; 10.4018/978-1-4666-5998-8 ; 97340 ; Handbook of Research on Trends in European Higher Education Convergence ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660274 ; 9781466660267 ; 10.4018/978-1-4666-6026-7 ; 97389 ; Handbook of Research on Emerging Advancements and Technologies in Software Engineering ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660472 ; 9781466660465 ; 10.4018/978-1-4666-6046-5 ; 99434 ; Handbook of Research on Education and Technology in a Changing Society ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660670 ; 9781466660663 ; 10.4018/978-1-4666-6066-3 ; 99492 ; Handbook of Research on Political Activism in the Information Age ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660755 ; 9781466660748 ; 10.4018/978-1-4666-6074-8 ; 99529 ; Handbook of Research on Retailer-Consumer Relationship Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661790 ; 9781466661783 ; 10.4018/978-1-4666-6178-3 ; 102201 ; Handbook of Research on Architectural Trends in Service-Driven Computing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661912 ; 9781466661905 ; 10.4018/978-1-4666-6190-5 ; 102210 ; Handbook of Research on the Impact of Culture and Society on the Entertainment Industry ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661950 ; 9781466661943 ; 10.4018/978-1-4666-6194-3 ; 102212 ; Handbook of Research on Embedded Systems Design ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661998 ; 9781466661981 ; 10.4018/978-1-4666-6198-1 ; 102214 ; Handbook of Research on Higher Education in the MENA Region: Policy and Practice ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662216 ; 9781466662209 ; 10.4018/978-1-4666-6220-9 ; 102230 ; Handbook of Research on Effective Marketing in Contemporary Globalism ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644519 ; 9781466644502 ; 10.4018/978-1-4666-4450-2 ; 75835 ; Handbook of Research on Novel Soft Computing Intelligent Algorithms: Theory and Practical Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658257 ; 9781466658240 ; 10.4018/978-1-4666-5824-0 ; 94870 ; Handbook of Research on Nanoscience, Nanotechnology, and Advanced Materials ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662254 ; 9781466662247 ; 10.4018/978-1-4666-6224-7 ; 102232 ; Handbook of Research on Economic Growth and Technological Change in Latin America ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662377 ; 9781466662360 ; 10.4018/978-1-4666-6236-0 ; 102238 ; Handbook of Research on Advanced ICT Integration for Governance and Policy Modeling ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662612 ; 9781466662605 ; 10.4018/978-1-4666-6260-5 ; 102254 ; Handbook of Research on Adult and Community Health Education: Tools, Trends, and Methodologies ;  ; >
     au < exists ; exists ; 2014 ; 9781466647282 ; 9781466647275 ; 10.4018/978-1-4666-4727-5 ; 78247 ; Harnessing Dynamic Knowledge Principles in the Technology-Driven World ;  ; >
-    au < exists ; exists ; 2014 ; 9781466646681 ; 9781466646674 ; 10.4018/978-1-4666-4667-4 ; 77396 ; Uncovering Essential Software Artifacts through Business Process Archeology ;  ; >
-    au < exists ; exists ; 2014 ; 9781466646605 ; 9781466646599 ; 10.4018/978-1-4666-4659-9 ; 77394 ; Theory and Application of Multi-Formalism Modeling ;  ; >
-    au < exists ; exists ; 2014 ; 9781466646445 ; 9781466646438 ; 10.4018/978-1-4666-4643-8 ; 77390 ; Socio-Cybernetic Study of God and the World-System ;  ; >
-    au < exists ; exists ; 2014 ; 9781466646124 ; 9781466646117 ; 10.4018/978-1-4666-4611-7 ; 77382 ; Pedagogical Considerations and Opportunities for Teaching and Learning on the Web ;  ; >
-    au < exists ; exists ; 2014 ; 9781466645271 ; 9781466645264 ; 10.4018/978-1-4666-4526-4 ; 76715 ; Organizational, Legal, and Technological Dimensions of Information System Administration ;  ; >
-    au < exists ; exists ; 2014 ; 9781466645073 ; 9781466645066 ; 10.4018/978-1-4666-4506-6 ; 76710 ; Management Science, Logistics, and Operations Research ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651951 ; 9781466651944 ; 10.4018/978-1-4666-5194-4 ; 90649 ; Harnessing the Power of Social Media and Web Analytics ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662490 ; 9781466662483 ; 10.4018/978-1-4666-6248-3 ; 102248 ; Human Rights and the Impact of ICT in the Public Sphere: Participation, Democracy, and Political Autonomy ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662292 ; 9781466662285 ; 10.4018/978-1-4666-6228-5 ; 102234 ; Human-Computer Interfaces and Interactivity: Emergent Research and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659759 ; 9781466659742 ; 10.4018/978-1-4666-5974-2 ; 97312 ; ICT Management in Non-Profit Organizations ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651517 ; 9781466651500 ; 10.4018/978-1-4666-5150-0 ; 90544 ; Identity and Leadership in Virtual Communities: Establishing Credibility and Influence ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661356 ; 9781466661349 ; 10.4018/978-1-4666-6134-9 ; 102179 ; Impact of Emerging Digital Technologies on Leadership in Global Business ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658455 ; 9781466658448 ; 10.4018/978-1-4666-5844-8 ; 94906 ; Impacts of the Knowledge Society on Economic and Social Growth in Africa ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644557 ; 9781466644540 ; 10.4018/978-1-4666-4454-0 ; 75836 ; Infonomics and the Business of Free: Modern Value Creation for Information Services ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643543 ; 9781466643536 ; 10.4018/978-1-4666-4353-6 ; 75479 ; Information Access and Library User Needs in Developing Countries ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648937 ; 9781466648920 ; 10.4018/978-1-4666-4892-0 ; 78926 ; Information Quality and Governance for Business Intelligence ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661592 ; 9781466661585 ; 10.4018/978-1-4666-6158-5 ; 102191 ; Information Security in Diverse Computing Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659711 ; 9781466659704 ; 10.4018/978-1-4666-5970-4 ; 97310 ; Information Systems and Technology for Organizational Agility, Intelligence, and Resilience ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647404 ; 9781466647398 ; 10.4018/978-1-4666-4739-8 ; 78251 ; Information Technology and Collection Management for Library User Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646728 ; 9781466646711 ; 10.4018/978-1-4666-4671-1 ; 77397 ; Innovations in Services Marketing and Management: Strategies for Emerging Economies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660151 ; 9781466660144 ; 10.4018/978-1-4666-6014-4 ; 97377 ; Innovative Applications and Developments of Micro-Pattern Gaseous Detectors ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643109 ; 9781466643093 ; 10.4018/978-1-4666-4309-3 ; 75472 ; Innovative Approaches of Data Visualization and Visual Analytics ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650206 ; 9781466650190 ; 10.4018/978-1-4666-5019-0 ; 84169 ; Innovative Document Summarization Techniques: Revolutionizing Knowledge Understanding ;  ; >
     au < exists ; exists ; 2014 ; 9781466644274 ; 9781466644267 ; 10.4018/978-1-4666-4426-7 ; 75828 ; Innovative Methods and Technologies for Electronic Discourse Analysis ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651999 ; 9781466651982 ; 10.4018/978-1-4666-5198-2 ; 90650 ; Innovative Techniques and Applications of Entity Resolution ;  ; >
+    au < exists ; exists ; 2014 ; 9781466657939 ; 9781466657922 ; 10.4018/978-1-4666-5792-2 ; 94532 ; Innovative Technologies to Benefit Children on the Autism Spectrum ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661837 ; 9781466661820 ; 10.4018/978-1-4666-6182-0 ; 102203 ; Integrating Social Media into Business Practice, Applications, Management, and Models ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659551 ; 9781466659544 ; 10.4018/978-1-4666-5954-4 ; 97267 ; Interdisciplinary Applications of Agent-Based Social Simulation and Modeling ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661677 ; 9781466661660 ; 10.4018/978-1-4666-6166-0 ; 102195 ; Interdisciplinary Mobile Media and Communications: Social, Political, and Economic Implications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647541 ; 9781466647534 ; 10.4018/978-1-4666-4753-4 ; 78255 ; International Business Strategy and Entrepreneurship: An Information Technology Perspective ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650480 ; 9781466650473 ; 10.4018/978-1-4666-5047-3 ; 84231 ; International Cross-Listing of Chinese Firms ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644991 ; 9781466644984 ; 10.4018/978-1-4666-4498-4 ; 75848 ; International Education and the Next-Generation Workforce: Competition in the Global Economy ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645790 ; 9781466645783 ; 10.4018/978-1-4666-4578-3 ; 76727 ; Internet Mercenaries and Viral Marketing: The Case of Chinese Social Media ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662575 ; 9781466662568 ; 10.4018/978-1-4666-6256-8 ; 102252 ; Inventive Approaches for Technology Integration and Information Resources Management ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647206 ; 9781466647190 ; 10.4018/978-1-4666-4719-0 ; 78246 ; IT in the Public Sphere: Applications in Administration, Government, Politics, and Planning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658059 ; 9781466658042 ; 10.4018/978-1-4666-5804-2 ; 94860 ; Judiciary-Friendly Forensics of Software Copyright Infringement ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645035 ; 9781466645028 ; 10.4018/978-1-4666-4502-8 ; 76709 ; K-12 Education: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647121 ; 9781466647114 ; 10.4018/978-1-4666-4711-4 ; 78244 ; Knowledge Discovery, Transfer, and Management in the Information Age ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646803 ; 9781466646797 ; 10.4018/978-1-4666-4679-7 ; 77399 ; Knowledge Management and Competitive Advantage: Issues and Potential Solutions ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651876 ; 9781466651869 ; 10.4018/978-1-4666-5186-9 ; 90644 ; Knowledge Management Practice in Organizations: The View from Inside ;  ; >
+    au < exists ; exists ; 2014 ; 9781466652118 ; 9781466652101 ; 10.4018/978-1-4666-5210-1 ; 90653 ; Knowledge-Based Economic Policy Development in the Arab World ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647244 ; 9781466647237 ; 10.4018/978-1-4666-4723-7 ; 78250 ; Labor and Health Economics in the Mediterranean Region: Migration and Mobility of Medical Doctors ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648852 ; 9781466648845 ; 10.4018/978-1-4666-4884-5 ; 78924 ; Learning Models for Innovation in Organizations: Examining Roles of Knowledge Transfer and Human Resources Management ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651593 ; 9781466651586 ; 10.4018/978-1-4666-5158-6 ; 90584 ; Library and Information Science Research in Asia-Oceania: Theory and Practice ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649255 ; 9781466649248 ; 10.4018/978-1-4666-4924-8 ; 78945 ; Literacy Enrichment and Technology Integration in Pre-Service Teacher Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645073 ; 9781466645066 ; 10.4018/978-1-4666-4506-6 ; 76710 ; Management Science, Logistics, and Operations Research ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643185 ; 9781466643178 ; 10.4018/978-1-4666-4317-8 ; 75474 ; Marine Technology and Sustainable Development: Green Innovations ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648654 ; 9781466648647 ; 10.4018/978-1-4666-4864-7 ; 78919 ; Marketing in the Cyber Era: Strategies and Emerging Trends ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649927 ; 9781466649910 ; 10.4018/978-1-4666-4991-0 ; 84113 ; Mathematics of Uncertainty Modeling in the Analysis of Engineering and Science Problems ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661479 ; 9781466661462 ; 10.4018/978-1-4666-6146-2 ; 102185 ; Medical Diagnosis Using Artificial Neural Networks ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647824 ; 9781466647817 ; 10.4018/978-1-4666-4781-7 ; 78262 ; Mobile Networks and Cloud Computing Convergence for Progressive Services and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643345 ; 9781466643338 ; 10.4018/978-1-4666-4333-8 ; 75478 ; Mobile Pedagogy and Perspectives on Teaching and Learning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661714 ; 9781466661707 ; 10.4018/978-1-4666-6170-7 ; 102197 ; Mobile Technologies for Activity-Travel Data Collection and Analysis ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658776 ; 9781466658769 ; 10.4018/978-1-4666-5876-9 ; 95214 ; Multicultural Awareness and Technology in Higher Education: Global Perspectives ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647169 ; 9781466647152 ; 10.4018/978-1-4666-4715-2 ; 78245 ; Multidisciplinary Perspectives on Telecommunications, Wireless Systems, and Mobile Computing ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658097 ; 9781466658080 ; 10.4018/978-1-4666-5808-0 ; 94862 ; Multidisciplinary Perspectives in Cryptology and Information Security ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651265 ; 9781466651258 ; 10.4018/978-1-4666-5125-8 ; 90533 ; Nanotechnology: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466642546 ; 9781466642539 ; 10.4018/978-1-4666-4253-9 ; 75469 ; Natural Computing for Simulation and Knowledge Discovery ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647909 ; 9781466647893 ; 10.4018/978-1-4666-4789-3 ; 78264 ; Network Security Technologies: Design and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660595 ; 9781466660588 ; 10.4018/978-1-4666-6058-8 ; 99488 ; Network Topology in Command and Control: Organization, Operation, and Evolution ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650367 ; 9781466650350 ; 10.4018/978-1-4666-5035-0 ; 84271 ; New Media and Communication Across Religions and Cultures ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651340 ; 9781466651333 ; 10.4018/978-1-4666-5133-3 ; 90539 ; Nuclear Power Plant Instrumentation and Control Systems for Safety and Security ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658332 ; 9781466658325 ; 10.4018/978-1-4666-5832-5 ; 94900 ; Online Tutor 2.0: Methodologies and Case Studies for Successful Learning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466657977 ; 9781466657960 ; 10.4018/978-1-4666-5796-0 ; 94534 ; Optimum Design of Renewable Energy Systems: Microgrid and Nature Grid Methods ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645271 ; 9781466645264 ; 10.4018/978-1-4666-4526-4 ; 76715 ; Organizational, Legal, and Technological Dimensions of Information System Administration ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658011 ; 9781466658004 ; 10.4018/978-1-4666-5800-4 ; 94858 ; Overcoming Challenges in Software Engineering Education: Delivering Non-Technical Knowledge and Skills ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644632 ; 9781466644625 ; 10.4018/978-1-4666-4462-5 ; 75838 ; Packaging Digital Information for Enhanced Learning and Analysis: Data Visualization, Spatialization, and Multidimensionality ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646124 ; 9781466646117 ; 10.4018/978-1-4666-4611-7 ; 77382 ; Pedagogical Considerations and Opportunities for Teaching and Learning on the Web ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647046 ; 9781466647039 ; 10.4018/978-1-4666-4703-9 ; 77405 ; Perceptions of Knowledge Visualization: Explaining Concepts through Meaningful Images ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647947 ; 9781466647930 ; 10.4018/978-1-4666-4793-0 ; 78265 ; Perspectives on Theory U: Insights from the Field ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646841 ; 9781466646834 ; 10.4018/978-1-4666-4683-4 ; 77400 ; Pervasive Cloud Computing Technologies: Future Outlooks and Interdisciplinary Perspectives ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660632 ; 9781466660625 ; 10.4018/978-1-4666-6062-5 ; 99490 ; Political Campaigning in the Information Age ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660199 ; 9781466660182 ; 10.4018/978-1-4666-6018-2 ; 97379 ; Post-Keynesian Empirical Research and the Debate on Financial Market Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649132 ; 9781466649125 ; 10.4018/978-1-4666-4912-5 ; 78943 ; Practical Applications and Experiences in K-20 Blended Learning Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646643 ; 9781466646636 ; 10.4018/978-1-4666-4663-6 ; 77395 ; Progressive Trends in Knowledge and System-Based Science for Service Innovation ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647626 ; 9781466647619 ; 10.4018/978-1-4666-4761-9 ; 78257 ; Progressive Trends in Electronic Resource Management in Libraries ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649880 ; 9781466649873 ; 10.4018/978-1-4666-4987-3 ; 84096 ; Promoting Active Learning through the Flipped Classroom Model ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647749 ; 9781466647732 ; 10.4018/978-1-4666-4773-2 ; 78260 ; Psychology, Pedagogy, and Assessment in Serious Games ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647701 ; 9781466647695 ; 10.4018/978-1-4666-4769-5 ; 78259 ; Quality Innovation: Knowledge, Theory, and Practices ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646889 ; 9781466646872 ; 10.4018/978-1-4666-4687-2 ; 77401 ; Quantum and Optical Dynamics of Matter for Nanotechnology ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650565 ; 9781466650558 ; 10.4018/978-1-4666-5055-8 ; 84175 ; Reforming Teacher Education for Online Pedagogy Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651388 ; 9781466651371 ; 10.4018/978-1-4666-5137-1 ; 90540 ; Remote Workforce Training: Effective Technologies and Strategies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466644472 ; 9781466644465 ; 10.4018/978-1-4666-4446-5 ; 75834 ; Research and Design Innovations for Mobile User Experience ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645592 ; 9781466645585 ; 10.4018/978-1-4666-4558-5 ; 76722 ; Research Developments in Computer Vision and Image Processing: Methodologies and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645554 ; 9781466645547 ; 10.4018/978-1-4666-4554-7 ; 76732 ; Research Developments in Wood Engineering and Technology ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648692 ; 9781466648685 ; 10.4018/978-1-4666-4868-5 ; 78920 ; Research Developments in Biometrics and Video Processing Techniques ;  ; >
     au < exists ; exists ; 2014 ; 9781466643222 ; 9781466643215 ; 10.4018/978-1-4666-4321-5 ; 75475 ; Research Perspectives on the Role of Informatics in Health Policy and Management ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645639 ; 9781466645622 ; 10.4018/978-1-4666-4562-2 ; 76723 ; Rethinking the Conceptual Base for New Practical Applications in Information Value and Quality ;  ; >
+    au < exists ; exists ; 2014 ; 9781466651432 ; 9781466651425 ; 10.4018/978-1-4666-5142-5 ; 90542 ; Revolutionizing Enterprise Interoperability through Scientific Foundations ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646766 ; 9781466646759 ; 10.4018/978-1-4666-4675-9 ; 77398 ; Revolutionizing the Development of Library and Information Professionals: Planning for the Future ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647787 ; 9781466647770 ; 10.4018/978-1-4666-4777-0 ; 78261 ; Risk Analysis for Prevention of Hazardous Situations in Petroleum and Natural Gas Engineering ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646087 ; 9781466646070 ; 10.4018/978-1-4666-4607-0 ; 77381 ; Robotics: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650442 ; 9781466650435 ; 10.4018/978-1-4666-5043-5 ; 84173 ; Rural Community Libraries in Africa: Challenges and Impacts ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646926 ; 9781466646919 ; 10.4018/978-1-4666-4691-9 ; 77402 ; Security, Privacy, Trust, and Resource Management in Mobile and Wireless Communications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466657892 ; 9781466657885 ; 10.4018/978-1-4666-5788-5 ; 94530 ; Security, Trust, and Regulatory Aspects of Cloud Computing in Business Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658417 ; 9781466658400 ; 10.4018/978-1-4666-5840-0 ; 94904 ; Servant Leadership: Research and Practice ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658370 ; 9781466658363 ; 10.4018/978-1-4666-5836-3 ; 94902 ; Smart Manufacturing Innovation and Transformation: Interconnection and Intelligence ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661516 ; 9781466661509 ; 10.4018/978-1-4666-6150-9 ; 102187 ; Social Media and Mobile Technologies for Healthcare ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646445 ; 9781466646438 ; 10.4018/978-1-4666-4643-8 ; 77390 ; Socio-Cybernetic Study of God and the World-System ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643024 ; 9781466643017 ; 10.4018/978-1-4666-4301-7 ; 75344 ; Software Design and Development: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643062 ; 9781466643055 ; 10.4018/978-1-4666-4305-5 ; 75470 ; Solutions for Sustaining Scalability in Internet Growth ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645318 ; 9781466645301 ; 10.4018/978-1-4666-4530-1 ; 76716 ; Strategic Approaches for Human Capital Management and Development in a Turbulent Economy ;  ; >
+    au < exists ; exists ; 2014 ; 9781466662339 ; 9781466662322 ; 10.4018/978-1-4666-6232-2 ; 102236 ; Strategic Marketing in Fragile Economic Conditions ;  ; >
+    au < exists ; exists ; 2014 ; 9781466659957 ; 9781466659940 ; 10.4018/978-1-4666-5994-0 ; 97322 ; Strategies in Sports Marketing: Technologies and Emerging Trends ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658134 ; 9781466658127 ; 10.4018/978-1-4666-5812-7 ; 94864 ; Succession Planning and Implementation in Libraries: Practices and Resources ;  ; >
+    au < exists ; exists ; 2014 ; 9781466652187 ; 9781466651418 ; 10.4018/978-1-4666-5141-8 ; 90541 ; Surface Engineering Techniques and Applications: Research Advancements ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649965 ; 9781466649958 ; 10.4018/978-1-4666-4995-8 ; 84114 ; Sustainability Science for Social, Economic, and Environmental Development ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648531 ; 9781466648524 ; 10.4018/978-1-4666-4852-4 ; 78818 ; Sustainable Practices: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646568 ; 9781466646551 ; 10.4018/978-1-4666-4655-1 ; 77393 ; Synergic Integration of Formal and Informal E-Learning Environments for Adult Lifelong Learners ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660991 ; 9781466660984 ; 10.4018/978-1-4666-6098-4 ; 99911 ; Systems and Software Development, Modeling, and Analysis: New Perspectives and Methodologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649330 ; 9781466649323 ; 10.4018/978-1-4666-4932-3 ; 78947 ; Techniques and Principles in Three-Dimensional Imaging: An Introductory Approach ;  ; >
+    au < exists ; exists ; 2014 ; 9781466661271 ; 9781466661264 ; 10.4018/978-1-4666-6126-4 ; 102175 ; Technological Advancements and the Impact of Actor-Network Theory ;  ; >
+    au < exists ; exists ; 2014 ; 9781466643505 ; 9781466643499 ; 10.4018/978-1-4666-4349-9 ; 75471 ; Technologies for Urban and Spatial Planning: Virtual Cities and Territories ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647367 ; 9781466647350 ; 10.4018/978-1-4666-4735-0 ; 78249 ; Technology and Professional Identity of Librarians: The Making of the Cybrarian ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649019 ; 9781466649002 ; 10.4018/978-1-4666-4900-2 ; 78940 ; Technology Development and Platform Enhancements for Successful Global E-Government Design ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645431 ; 9781466645424 ; 10.4018/978-1-4666-4542-4 ; 76719 ; Technology Platform Innovations and Forthcoming Trends in Ubiquitous Learning ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645875 ; 9781466645868 ; 10.4018/978-1-4666-4586-8 ; 76729 ; Technology versus Ecology: Human Superiority and the Ongoing Conflict with Nature ;  ; >
+    au < exists ; exists ; 2014 ; 9781466649057 ; 9781466649040 ; 10.4018/978-1-4666-4904-0 ; 78941 ; The Social Classroom: Integrating Social Network Use in Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646605 ; 9781466646599 ; 10.4018/978-1-4666-4659-9 ; 77394 ; Theory and Application of Multi-Formalism Modeling ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647503 ; 9781466647497 ; 10.4018/978-1-4666-4749-7 ; 78254 ; Transcultural Marketing for Incremental and Radical Innovation ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645394 ; 9781466645387 ; 10.4018/978-1-4666-4538-7 ; 76718 ; Transforming K-12 Classrooms with Digital Technology ;  ; >
+    au < exists ; exists ; 2014 ; 9781466660397 ; 9781466660380 ; 10.4018/978-1-4666-6038-0 ; 97863 ; Transforming Politics and Policy in the Digital Age ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645110 ; 9781466645103 ; 10.4018/978-1-4666-4510-3 ; 76711 ; Trends in E-Business, E-Services, and E-Commerce: Impact of Technology on Goods, Services, and Business Transactions ;  ; >
+    au < exists ; exists ; 2014 ; 9781466647664 ; 9781466647657 ; 10.4018/978-1-4666-4765-7 ; 78258 ; Trust Management in Mobile Environments: Autonomic and Usable Models ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645837 ; 9781466645820 ; 10.4018/978-1-4666-4582-0 ; 76728 ; Uberveillance and the Social Implications of Microchip Implants: Emerging Technologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466646681 ; 9781466646674 ; 10.4018/978-1-4666-4667-4 ; 77396 ; Uncovering Essential Software Artifacts through Business Process Archeology ;  ; >
+    au < exists ; exists ; 2014 ; 9781466645677 ; 9781466645660 ; 10.4018/978-1-4666-4566-0 ; 76724 ; User Behavior in Ubiquitous Online Environments ;  ; >
+    au < exists ; exists ; 2014 ; 9781466650121 ; 9781466650114 ; 10.4018/978-1-4666-5011-4 ; 84167 ; Using Technology Tools to Innovate Assessment, Reporting, and Teaching Practices in Engineering Education ;  ; >
+    au < exists ; exists ; 2014 ; 9781466648975 ; 9781466648968 ; 10.4018/978-1-4666-4896-8 ; 78939 ; Video Surveillance Techniques and Technologies ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658615 ; 9781466658608 ; 10.4018/978-1-4666-5860-8 ; 95023 ; Women in IT in the New Social Era: A Critical Evidence-Based Review of Gender Inequality and the Potential for Change ;  ; >
+    au < exists ; exists ; 2014 ; 9781466658530 ; 9781466658523 ; 10.4018/978-1-4666-5852-3 ; 94910 ; X-Ray Line Profile Analysis in Materials Science ;  ; >
+    au < exists ; exists ; 2015 ; 9781466685116 ; 9781466685109 ; 10.4018/978-1-4666-8510-9 ; 124173 ; Achieving Enterprise Agility through Innovative Software Development ;  ; >
+    au < exists ; exists ; 2015 ; 9781466686779 ; 9781466686762 ; 10.4018/978-1-4666-8676-2 ; 126410 ; Advanced Research on Cloud Computing Design and Applications ;  ; >
+    au < exists ; exists ; 2015 ; 9781466674820 ; 9781466674813 ; 10.4018/978-1-4666-7481-3 ; 118277 ; Advanced Technological Solutions for E-Health and Dementia Patient Monitoring ;  ; >
+    au < exists ; exists ; 2015 ; 9781466662858 ; 9781466662841 ; 10.4018/978-1-4666-6284-1 ; 104617 ; Advancing Higher Education with Mobile Learning Technologies: Cases, Trends, and Inquiry-Based Methods ;  ; >
+    au < exists ; exists ; 2015 ; 9781466675223 ; 9781466675216 ; 10.4018/978-1-4666-7521-6 ; 118343 ; Agricultural Management Strategies in a Changing Economy ;  ; >
+    au < exists ; exists ; 2015 ; 9781466686809 ; 9781466686793 ; 10.4018/978-1-4666-8679-3 ; 126411 ; Analyzing Art, Culture, and Design in the Digital Age ;  ; >
+    au < exists ; exists ; 2015 ; 9781466682634 ; 9781466682627 ; 10.4018/978-1-4666-8262-7 ; 121181 ; Analyzing the Cultural Diversity of Consumers in the Global Marketplace ;  ; >
+    au < exists ; exists ; 2015 ; 9781466662773 ; 9781466662766 ; 10.4018/978-1-4666-6276-6 ; 104613 ; Artificial Intelligence Applications in Distance Education ;  ; >
+    au < exists ; exists ; 2015 ; 9781466681484 ; 9781466681477 ; 10.4018/978-1-4666-8147-7 ; 120093 ; Artificial Intelligence Technologies and the Evolution of Web 3.0 ;  ; >
+    au < exists ; exists ; 2015 ; 9781466664425 ; 9781466664418 ; 10.4018/978-1-4666-6441-8 ; 108286 ; Asian Business and Management Practices: Trends and Global Considerations ;  ; >
+    au < exists ; exists ; 2015 ; 9781466673175 ; 9781466673168 ; 10.4018/978-1-4666-7316-8 ; 112224 ; Assessing the Role of Mobile Technologies and Distance Learning in Higher Education ;  ; >
+    au < exists ; exists ; 2015 ; 9781466673748 ; 9781466673731 ; 10.4018/978-1-4666-7373-1 ; 115490 ; Assistive Technologies for Physical and Cognitive Disabilities ;  ; >
+    au < exists ; exists ; 2015 ; 9781466662698 ; 9781466662681 ; 10.4018/978-1-4666-6268-1 ; 104545 ; Banking, Finance, and Accounting: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2015 ; 9781466666122 ; 9781466666115 ; 10.4018/978-1-4666-6611-5 ; 110030 ; Big Data Analytics in Bioinformatics and Healthcare ;  ; >
+    au < exists ; exists ; 2015 ; 9781466672550 ; 9781466672543 ; 10.4018/978-1-4666-7254-3 ; 112148 ; Business Ethics and Diversity in the Modern Workplace ;  ; >
+    au < exists ; exists ; 2015 ; 9781466681965 ; 9781466681958 ; 10.4018/978-1-4666-8195-8 ; 121153 ; Business Law and Ethics: Concepts, Methodologies, Tools, and Applications ;  ; >
+    #implicit < status ; status2 ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; hidden[proxy] >
 
 
     au < exists ; exists ; 2017 ; 9781522509035 ; 9781522509028 ; 10.4018/978-1-5225-0902-8 ; 152723 ; Business Analytics and Cyber Security Management in Organizations ; Rajagopal (EGADE Business School, Tecnologico de Monterrey, Mexico City, Mexico & Boston University, USA) and Ramesh Behl (International Management Institute, Bhubaneswar, India) ; >
@@ -2356,7 +2589,6 @@
     au < exists ; exists ; 2017 ; 9781522505082 ; 9781522505075 ; 10.4018/978-1-5225-0507-5 ; 147021 ; Optimizing K-12 Education through Online and Blended Learning ;  ; >
     au < exists ; exists ; 2017 ; 9781522504849 ; 9781522504832 ; 10.4018/978-1-5225-0483-2 ; 146992 ; Preparing Foreign Language Teachers for Next-Generation Education ;  ; >
     au < exists ; exists ; 2017 ; 9781522506645 ; 9781522506638 ; 10.4018/978-1-5225-0663-8 ; 148135 ; Transformative Healthcare Practice through Patient Engagement ;  ; >
-    au < exists ; exists ; 2017 ; 9781522506645 ; 9781522506638 ; 10.4018/978-1-5225-0663-8 ; 148135 ; Transformative Healthcare Practice through Patient Engagement ;  ; >
 
     au < exists ; exists ; 2017 ; 9781522508625 ; 9781522508618 ; 10.4018/978-1-5225-0861-8 ; 151378 ; Strategic IT Governance and Alignment in Business Settings ;  ; >
     au < exists ; exists ; 2017 ; 9781522508397 ; 9781522508380 ; 10.4018/978-1-5225-0838-0 ; 150440 ; Handbook of Research on Social, Cultural, and Educational Considerations of Indigenous Knowledge in Developing Countries ;  ; >
@@ -2372,7 +2604,6 @@
     au < exists ; exists ; 2017 ; 9781683180173 ; 9781683180128 ; 10.4018/978-1-68318-012-8 ; 147406 ; Encouraging Participative Consumerism Through Evolutionary Digital Marketing ;  ; >
     au < exists ; exists ; 2017 ; 9781522506089 ; 9781522506072 ; 10.4018/978-1-5225-0607-2 ; 147340 ; Examining the Development, Regulation, and Consumption of Functional Foods ;  ; >
     au < exists ; exists ; 2017 ; 9781522506034 ; 9781522506027 ; 10.4018/978-1-5225-0602-7 ; 147337 ; Security Management in Mobile Cloud Computing ;  ; >
-    au < exists ; exists ; 2017 ; 9781522505976 ; 9781522505969 ; 10.4018/978-1-5225-0596-9 ; 147278 ; Data Envelopment Analysis and Effective Performance Assessment ;  ; >
     au < exists ; exists ; 2017 ; 9781522505891 ; 9781522505884 ; 10.4018/978-1-5225-0588-4 ; 147176 ; Modeling and Simulation Techniques in Structural Engineering ;  ; >
     au < exists ; exists ; 2017 ; 9781522505808 ; 9781522505792 ; 10.4018/978-1-5225-0579-2 ; 147129 ; Strategic Place Branding Methodologies and Theory for Tourist Attraction ;  ; >
     au < exists ; exists ; 2017 ; 9781522505631 ; 9781522505624 ; 10.4018/978-1-5225-0562-4 ; 147124 ; Engaging 21st Century Writers with Social Media ;  ; >
