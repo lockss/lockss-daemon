@@ -72,7 +72,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // KEEP top part of main content area [TOC, abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle[^-_]"), // avoid match on pageArticle, article-card
             // KEEP abstract [abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
             // KEEP active content area [abs, full, ref, suppl]

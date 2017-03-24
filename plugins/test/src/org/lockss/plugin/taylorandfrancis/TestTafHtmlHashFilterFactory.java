@@ -113,6 +113,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 
   private static final String withPeopleAlsoRead =
 "    <div class=\"overview borderedmodule-last\">Hello World" +
+"    <div class=\"tocArticleEntry\"> Hello Article </div>" +
 "    <div class=\"widget combinedRecommendationsWidget none  widget-none  widget-compact-vertical\" id=\"abcde\"  >" + //147_1
 "      <div class=\"wrapped \" ><h1 class=\"widget-header header-none  header-compact-vertical\">People also read</h1>" + //148_2 wrapped
 "        <div class=\"widget-body body body-none  body-compact-vertical\">" + //149_3 widget-body
@@ -145,7 +146,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   
   
   private static final String withoutPeopleAlsoRead =  
-" Hello World ";
+" Hello World Hello Article ";
   
   private static final String withArticleMetrics = 
 "    <div class=\"overview borderedmodule-last\">Hello Kitty" +      
@@ -164,6 +165,7 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
 
   private static final String withoutArticleMetrics =  
 " Hello Kitty ";
+
   
   /*
    *  Compare Html and HtmlHashFiltered
@@ -189,13 +191,14 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
   public void testPeopleAlsoRead() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withPeopleAlsoRead), Constants.DEFAULT_ENCODING);
+    //System.out.println("[" + StringUtil.fromInputStream(actIn) + "]");
+
     assertEquals(withoutPeopleAlsoRead, StringUtil.fromInputStream(actIn));
   }
   
   public void testArticleMetrics() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withArticleMetrics), Constants.DEFAULT_ENCODING);
-    //System.out.println("[" + StringUtil.fromInputStream(actIn) + "]");
     assertEquals(withoutArticleMetrics, StringUtil.fromInputStream(actIn));
   }
 }
