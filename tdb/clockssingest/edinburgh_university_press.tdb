@@ -1345,7 +1345,7 @@
     au < finished ; finished ; 2014 ; Studies in World Christianity Volume 20 ; 20 ; >
     au < finished ; finished ; 2015 ; Studies in World Christianity Volume 21 ; 21 ; >
     au < crawling ; exists ; 2016 ; Studies in World Christianity Volume 22 ; 22 ; >
-    au < expected ; exists ; 2017 ; Studies in World Christianity Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2017 ; Studies in World Christianity Volume 23 ; 23 ; >
 
   }
 
@@ -1415,7 +1415,7 @@
        param[journal_id] = cost
        #move to Edinburgh University Press (EUP) in 2017
    
-       au < exists ; exists ; 1965-1967 ; Costume Volume 1 ; 1 ; >
+       au < manifest ; exists ; 1965-1967 ; Costume Volume 1 ; 1 ; >
        au < exists ; exists ; 1968 ; Costume Volume 2 ; 2 ; >
        au < exists ; exists ; 1969 ; Costume Volume 3 ; 3 ; >
        au < exists ; exists ; 1970 ; Costume Volume 4 ; 4 ; >
@@ -1465,7 +1465,7 @@
        au < doNotProcess ; doNotProcess ; 2014 ; Costume Volume 48 ; 48 ; >
        au < doNotProcess ; doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; >
        au < doNotProcess ; exists ; 2016 ; Costume Volume 50 ; 50 ; >
-       au < expected ; exists ; 2017 ; Costume Volume 51 ; 51 ; > #moving to edinburgh
+       au < manifest ; exists ; 2017 ; Costume Volume 51 ; 51 ; > #moving to edinburgh
      
      }  
      

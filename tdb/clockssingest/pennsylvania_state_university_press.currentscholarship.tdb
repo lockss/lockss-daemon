@@ -52,10 +52,10 @@
       
  
       au < crawling ; exists ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; >
+      au < manifest ; exists ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Comparative Literature Studies Volume 52 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; >
       
@@ -72,8 +72,8 @@
     
       param[journal_id] = critphilrace
 
-      au < exists ; exists ; 2013 ; Critical Philosophy of Race Volume 1 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Critical Philosophy of Race Volume 2 ; 2014 ; >
+      au < manifest ; exists ; 2013 ; Critical Philosophy of Race Volume 1 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Critical Philosophy of Race Volume 2 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Critical Philosophy of Race Volume 3 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Critical Philosophy of Race Volume 4 ; 2016 ; >
       
@@ -90,10 +90,10 @@
       param[journal_id] = edgallpoerev
 
       au < crawling ; exists ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; >
-      au < exists ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; >
+      au < manifest ; exists ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; >
 
@@ -110,9 +110,9 @@
       param[journal_id] = eugeoneirevi
 
       au < manifest ; exists ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; >
-      au < exists ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; >
+      au < manifest ; exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 2013 ; >
-      au < exists ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Eugene O'Neill Review Volume 36 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; >
       
@@ -131,10 +131,10 @@
 
 
       au < manifest ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; >
-      au < exists ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; >
+      au < manifest ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The F. Scott Fitzgerald Review Volume 13 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The F. Scott Fitzgerald Review Volume 14 ; 2016 ; >
       
@@ -153,9 +153,9 @@
       comment[continues] = 2157-2968
 
       au < crawling ; exists ; 2010 ; The Good Society Volume 19 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The Good Society Volume 21 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The Good Society Volume 22 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; The Good Society Volume 20 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; The Good Society Volume 21 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; The Good Society Volume 22 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Good Society Volume 23 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Good Society Volume 24 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Good Society Volume 25 ; 2016 ; >
@@ -174,9 +174,9 @@
       param[journal_id] = intelitestud
       # 2009, 2010 volume numbers don't line up with years
 
-      au < exists ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2009 ; Interdisciplinary Literary Studies Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Interdisciplinary Literary Studies Volume 2010; 2010 ; >
-      au < exists ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Interdisciplinary Literary Studies Volume 13 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 2014 ; >
@@ -196,7 +196,7 @@
 
       param[journal_id] = jafrireli
 
-      au < exists ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
+      au < manifest ; exists ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 3 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Journal of Africana Religions Volume 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; >
@@ -215,8 +215,8 @@
       param[journal_id] = jasseinsteffe
 
       au < manifest ; exists ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; >
-      au < exists ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; >
+      au < manifest ; exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 2016 ; >
@@ -234,9 +234,9 @@
 
       param[journal_id] = jaynrandstud
 
-      au < exists ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; >
@@ -255,7 +255,7 @@
       param[journal_id] = jeasmedarcherstu
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; >
 
@@ -273,7 +273,7 @@
       param[journal_id] = jgeneeduc
 
       au < manifest ; exists ; 2010 ; The Journal of General Education Volume 59 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of General Education Volume 61 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of General Education Volume 62 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of General Education Volume 63 ; 2014 ; >
@@ -295,9 +295,9 @@
       comment[continues] = Mystics Quarterly 0742-5503
 
       au < manifest ; exists ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; >
+      au < manifest ; exists ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 2016 ; >
@@ -317,7 +317,7 @@
       # volume numbers don't line up with years - how to handle already processed content?
 
       au < crawling ; exists ; 2010 ; Journal of Modern Periodical Studies Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Journal of Modern Periodical Studies Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 5 ; 5 ; >
@@ -338,10 +338,10 @@
       param[journal_id] = jmorahist
 
       au < manifest ; exists ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; >
+      au < manifest ; exists ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Journal of Moravian History Volume 15 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Moravian History Volume 16 ; 2016 ; >
       
@@ -359,8 +359,8 @@
 
       param[journal_id] = jnietstud
 
-      au < exists ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; >
+      au < manifest ; exists ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 2015 ; >
@@ -383,7 +383,7 @@
       au < exists ; exists ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 2013 ; >
-      au < exists ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Journal of Speculative Philosophy Volume 30 ; 2016 ; >
       
@@ -402,9 +402,9 @@
       
 
       au < manifest ; exists ; 2010 ; The Mark Twain Annual Volume 8 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; The Mark Twain Annual Volume 9 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; The Mark Twain Annual Volume 10 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; The Mark Twain Annual Volume 11 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Mark Twain Annual Volume 12 ; 2014 ; >
       au < crawling ; exists ; 2015 ; The Mark Twain Annual Volume 13 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The Mark Twain Annual Volume 14 ; 2016 ; >
@@ -426,9 +426,9 @@
       param[journal_id] = mediterraneanstu
 
       au < doNotProcess ; doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 2010 ; >
-      au < exists ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 2014 ; >
+      au < manifest ; exists ; 2012 ; Mediterranean Studies Volume 20 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Mediterranean Studies Volume 21 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Mediterranean Studies Volume 22 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Mediterranean Studies Volume 23 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Mediterranean Studies Volume 24 ; 2016 ; >
       
@@ -448,7 +448,7 @@
 
       au < notReady ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
+      au < manifest ; exists ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Pacific Coast Philology Volume 50 ; 2015 ; >
@@ -468,7 +468,7 @@
 
       au < manifest ; exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 2012 ; >
+      au < manifest ; exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 2015 ; >
@@ -488,7 +488,7 @@
       param[journal_id] = philrhet
 
       au < manifest ; exists ; 2010 ; Philosophy and Rhetoric Volume 43 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Philosophy and Rhetoric Volume 44 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Philosophy and Rhetoric Volume 45 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Philosophy and Rhetoric Volume 46 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Philosophy and Rhetoric Volume 47 ; 2014 ; >
@@ -508,9 +508,9 @@
 
       param[journal_id] = preternature
 
-      au < exists ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 2012 ; >
+      au < manifest ; exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 ; 2016 ; >
 
@@ -530,8 +530,8 @@
       param[journal_id] = reception
 
       au < manifest ; exists ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; >
+      au < manifest ; exists ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 2013 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 2014 ; 6 ; >
       au < crawling ; exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 2015 ; >
@@ -552,9 +552,9 @@
 
 
       au < crawling ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 2010 ; >
-      au < exists ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 2011 ; >
-      au < exists ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; >
-      au < exists ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; >
       au < crawling ; exists ; 2015 ; SHAW The Annual of Bernard Shaw Studies Volume 35 ; 2015 ; >
       au < manifest ; exists ; 2016 ; SHAW The Annual of Bernard Shaw Studies Volume 36 ; 2016 ; >
@@ -573,10 +573,10 @@
       param[journal_id] = soundings
 
       au < manifest ; exists ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; >
+      au < manifest ; exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 ; 2016 ; >
       
@@ -594,9 +594,9 @@
       param[journal_id] = steinbeckreview
 
       au < manifest ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Steinbeck Review Volume 13 ; 2016 ; >
@@ -615,10 +615,10 @@
       param[journal_id] = studamerjewilite
 
       au < manifest ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
+      au < manifest ; exists ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Studies in American Jewish Literature Volume 34 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; >
       
@@ -636,10 +636,10 @@
       param[journal_id] = transportationj
 
       au < manifest ; exists ; 2010 ; Transportation Journal Volume 49 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Transportation Journal Volume 53 ; 2014 ; >
+      au < manifest ; exists ; 2011 ; Transportation Journal Volume 50 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Transportation Journal Volume 51 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Transportation Journal Volume 52 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Transportation Journal Volume 53 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Transportation Journal Volume 54 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Transportation Journal Volume 55 ; 2016 ; >
       
@@ -657,9 +657,9 @@
       param[journal_id] = utopianstudies
 
       au < manifest ; exists ; 2010 ; Utopian Studies Volume 21 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; >
+      au < manifest ; exists ; 2011 ; Utopian Studies Volume 22 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Utopian Studies Volume 23 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Utopian Studies Volume 24 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Utopian Studies Volume 26 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Utopian Studies Volume 27 ; 2016 ; >
