@@ -128,7 +128,7 @@
     au < crawling ; exists ; 2008 ; International Journal of Nanomedicine Volume 3 ; 3 ; 2008 ; >
     au < finished ; manifest ; 2009 ; International Journal of Nanomedicine Volume 4 ; 4 ; 2009 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 5 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Nanomedicine Volume 6 ; 6 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; International Journal of Nanomedicine Volume 6 ; 6 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; International Journal of Nanomedicine Volume 7 ; 7 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; International Journal of Nanomedicine Volume 8 ; 8 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Nanomedicine Volume 9 ; 9 ; 2014 ; >
@@ -150,7 +150,7 @@
     au < finished ; manifest ; 2006 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 1 ; 1 ; 2006 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 2 ; 2 ; 2007 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 3 ; 3 ; 2008 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 4 ; 2009 ; >
+    au < finished ; manifest ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 4 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 5 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 6 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 7 ; 2012 ; reingest5.clockss.org:8082 >
@@ -197,7 +197,7 @@
     au < finished ; manifest ; 2007 ; Biologics: Targets and Therapy Volume 1 ; 1 ; 2007 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2008 ; Biologics: Targets and Therapy Volume 2 ; 2 ; 2008 ; >
     au < finished ; manifest ; 2009 ; Biologics: Targets and Therapy Volume 3 ; 3 ; 2009 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 4 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; Biologics: Targets and Therapy Volume 4 ; 4 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Biologics: Targets and Therapy Volume 5 ; 5 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Biologics: Targets and Therapy Volume 6 ; 6 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Biologics: Targets and Therapy Volume 7 ; 7 ; 2013 ; reingest5.clockss.org:8082 >
@@ -266,7 +266,7 @@
     au < finished ; manifest ; 2008 ; Drug Design, Development and Therapy Volume 2 ; 2 ; 2008 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; Drug Design, Development and Therapy Volume 3 ; 3 ; 2009 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Drug Design, Development and Therapy Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 5 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Drug Design, Development and Therapy Volume 5 ; 5 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Drug Design, Development and Therapy Volume 6 ; 6 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Drug Design, Development and Therapy Volume 7 ; 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Drug Design, Development and Therapy Volume 8 ; 8 ; 2014 ; >
@@ -353,7 +353,7 @@
     param[journal_id] = 25
 
     au < finished ; manifest ; 2008 ; Advances and Applications in Bioinformatics and Chemistry Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2 ; 2009 ; >
+    au < finished ; manifest ; 2009 ; Advances and Applications in Bioinformatics and Chemistry Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Advances and Applications in Bioinformatics and Chemistry Volume 3 ; 3 ; 2010 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; Advances and Applications in Bioinformatics and Chemistry Volume 4 ; 4 ; 2011 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Advances and Applications in Bioinformatics and Chemistry Volume 5 ; 5 ; 2012 ; reingest2.clockss.org:8085 >
@@ -396,7 +396,7 @@
     
     param[journal_id] = 27
 
-    au < crawling ; exists ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 1 ; 2008 ; >
+    au < finished ; manifest ; 2008 ; Journal of Asthma and Allergy Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Journal of Asthma and Allergy Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Journal of Asthma and Allergy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Journal of Asthma and Allergy Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
@@ -507,7 +507,7 @@
 
     au < finished ; manifest ; 2008 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 1 ; 1 ; 2008 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2009 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 2 ; 2 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 3 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 5 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
@@ -596,7 +596,7 @@
     au < finished ; manifest ; 2008 ; The Application of Clinical Genetics Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; The Application of Clinical Genetics Volume 2 ; 2 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; The Application of Clinical Genetics Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2011 ; The Application of Clinical Genetics Volume 4 ; 4 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; The Application of Clinical Genetics Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; The Application of Clinical Genetics Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; The Application of Clinical Genetics Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; The Application of Clinical Genetics Volume 7 ; 7 ; 2014 ; >
@@ -726,8 +726,8 @@
     param[journal_id] = 42
 
     au < finished ; manifest ; 2008 ; Integrated Blood Pressure Control Volume 1 ; 1 ; 2008 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 3 ; 2010 ; >
+    au < finished ; manifest ; 2009 ; Integrated Blood Pressure Control Volume 2 ; 2 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Integrated Blood Pressure Control Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; Integrated Blood Pressure Control Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Integrated Blood Pressure Control Volume 5 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Integrated Blood Pressure Control Volume 6 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
@@ -748,8 +748,8 @@
     param[journal_id] = 43
 
     au < finished ; manifest ; 2009 ; Clinical Epidemiology Volume 1 ; 1 ; 2009 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Clinical Epidemiology Volume 2 ; 2 ; 2010 ; >
-    au < crawling ; exists ; 2011 ; Clinical Epidemiology Volume 3 ; 3 ; 2011 ; >
+    au < finished ; manifest ; 2010 ; Clinical Epidemiology Volume 2 ; 2 ; 2010 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; Clinical Epidemiology Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Clinical Epidemiology Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; Clinical Epidemiology Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Clinical Epidemiology Volume 6 ; 6 ; 2014 ; >
@@ -834,7 +834,7 @@
 
     au < finished ; manifest ; 2009 ; Open Access Emergency Medicine Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Open Access Emergency Medicine Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2011 ; Open Access Emergency Medicine Volume 3 ; 3 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Open Access Emergency Medicine Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Open Access Emergency Medicine Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; Open Access Emergency Medicine Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Open Access Emergency Medicine Volume 6 ; 6 ; 2014 ; >
@@ -854,7 +854,7 @@
     param[journal_id] = 48
 
     au < finished ; manifest ; 2009 ; International Journal of Interferon, Cytokine and Mediator Research Volume 1 ; 1 ; 2009 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; International Journal of Interferon, Cytokine and Mediator Research Volume 2 ; 2 ; 2010 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; International Journal of Interferon, Cytokine and Mediator Research Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; International Journal of Interferon, Cytokine and Mediator Research Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; International Journal of Interferon, Cytokine and Mediator Research Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
@@ -1025,7 +1025,7 @@
 
     au < finished ; manifest ; 2008 ; Risk Management and Healthcare Policy Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Risk Management and Healthcare Policy Volume 2 ; 2 ; 2009 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; Risk Management and Healthcare Policy Volume 3 ; 3 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Risk Management and Healthcare Policy Volume 4 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Risk Management and Healthcare Policy Volume 5 ; 5 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; Risk Management and Healthcare Policy Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
@@ -1045,7 +1045,7 @@
     
     param[journal_id] = 57
 
-    au < crawling ; exists ; 2009 ; Transplant Research and Risk Management Volume 1 ; 1 ; 2009 ; >
+    au < finished ; manifest ; 2009 ; Transplant Research and Risk Management Volume 1 ; 1 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Transplant Research and Risk Management Volume 2 ; 2 ; 2010 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Transplant Research and Risk Management Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Transplant Research and Risk Management Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
@@ -1353,7 +1353,7 @@
     param[journal_id] = 75
 
     au < finished ; manifest ; 2009 ; Neurobehavioral HIV Medicine Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; Neurobehavioral HIV Medicine Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Neurobehavioral HIV Medicine Volume 3 ; 3 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Neurobehavioral HIV Medicine Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; Neurobehavioral HIV Medicine Volume 5 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
@@ -1436,7 +1436,7 @@
     
     param[journal_id] = 81
 
-    au < crawling ; exists ; 2009 ; Open Access Bioinformatics Volume 1 ; 1 ; 2009 ; >
+    au < finished ; manifest ; 2009 ; Open Access Bioinformatics Volume 1 ; 1 ; 2009 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Open Access Bioinformatics Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Open Access Bioinformatics Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Open Access Bioinformatics Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
@@ -1582,7 +1582,7 @@
 
     au < finished ; manifest ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2006 ; Core Evidence Volume 1 Issues 3 and 4 ; 1 ; 2006 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2007 ; Core Evidence Volume 2 ; 2 ; 2007 ; >
+    au < finished ; manifest ; 2007 ; Core Evidence Volume 2 ; 2 ; 2007 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Core Evidence Volume 3 ; 3 ; 2008 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; Core Evidence Volume 4 ; 4 ; 2009 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Core Evidence Volume 5 ; 5 ; 2010 ; reingest5.clockss.org:8082 >
@@ -1626,7 +1626,7 @@
     param[journal_id] = 90
 
     au < finished ; manifest ; 2009 ; Patient Intelligence Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2010 ; Patient Intelligence Volume 2 ; 2 ; 2010 ; >
+    au < finished ; manifest ; 2010 ; Patient Intelligence Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; Patient Intelligence Volume 3 ; 3 ; 2011 ; >
     au < finished ; manifest ; 2012 ; Patient Intelligence Volume 4 ; 4 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Patient Intelligence Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
@@ -2336,7 +2336,7 @@
     
     param[journal_id] = 134
 
-    au < crawling ; exists ; 2011 ; Reports in Organic Chemistry Volume 1 ; 1 ; 2011 ; >
+    au < finished ; manifest ; 2011 ; Reports in Organic Chemistry Volume 1 ; 1 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Reports in Organic Chemistry Volume 2 ; 2 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; Reports in Organic Chemistry Volume 3 ; 3 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Reports in Organic Chemistry Volume 4 ; 4 ; 2014 ; >
