@@ -1824,7 +1824,7 @@
       param[journal_id] = cost
       #move to Edinburgh University Press (EUP) in 2017
 
-      au < exists ; 1965-1967 ; Costume Volume 1 ; 1 >
+      au < manifest ; 1965-1967 ; Costume Volume 1 ; 1 >
       au < exists ; 1968 ; Costume Volume 2 ; 2 >
       au < exists ; 1969 ; Costume Volume 3 ; 3 >
       au < exists ; 1970 ; Costume Volume 4 ; 4 >
@@ -1874,7 +1874,7 @@
       au < doNotProcess ; 2014 ; Costume Volume 48 ; 48 >
       au < doNotProcess ; 2015 ; Costume Volume 49 ; 49 >
       au < doNotProcess ; 2016 ; Costume Volume 50 ; 50 >
-      au < expected ; 2017 ; Costume Volume 51 ; 51 > #moving to Edinburgh
+      au < manifest ; 2017 ; Costume Volume 51 ; 51 > #moving to Edinburgh
   
     }
   
