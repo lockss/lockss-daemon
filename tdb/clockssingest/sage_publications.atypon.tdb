@@ -22397,6 +22397,7 @@
       {
 
         #param[base_url] = http://jla.sagepub.com/
+        #continued_by = 2211-0682
 
         au < manifest ; exists ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 ; jlab ; >
         au < manifest ; exists ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 ; jlab ; >
@@ -22411,12 +22412,6 @@
         au < doNotProcess ; doNotProcess ; 2009 ; JALA (Charlottesville, Va.) Volume 14 ; 14 ; jlab ; >
         au < doNotProcess ; doNotProcess ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 ; jlab ; >
         au < manifest ; exists ; 2011 ; JALA (Charlottesville, Va.) Volume 16 ; 16 ; jlab ; >
-        au < manifest ; exists ; 2012 ; JALA (Charlottesville, Va.) Volume 17 ; 17 ; jlac ; >
-        au < manifest ; exists ; 2013 ; JALA (Charlottesville, Va.) Volume 18 ; 18 ; jlac ; >
-        au < manifest ; exists ; 2014 ; JALA (Charlottesville, Va.) Volume 19 ; 19 ; jlac ; >
-        au < manifest ; exists ; 2015 ; JALA (Charlottesville, Va.) Volume 20 ; 20 ; jlac ; >
-        au < exists ; exists ; 2016 ; JALA (Charlottesville, Va.) Volume 21 ; 21 ; jlac ; >
-        au < manifest ; exists ; 2017 ; JALA (Charlottesville, Va.) Volume 22 ; 22 ; jlad ; >
 
       }
 
@@ -22430,18 +22425,33 @@
     >
 
       #param[base_url] = http://jla.sagepub.com/
+      #continues = 1535-5535
+      #continued_by = 2472-6303
 
     {
 
-
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; jlaa ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 ; jlaa ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Laboratory Automation Volume 18 ; 18 ; jlaa ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Laboratory Automation Volume 19 ; 19 ; jlaa ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Laboratory Automation Volume 20 ; 20 ; jlaa ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Laboratory Automation Volume 16 ; 16 ; jlac ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Laboratory Automation Volume 17 ; 17 ; jlac ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Laboratory Automation Volume 18 ; 18 ; jlac ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Laboratory Automation Volume 19 ; 19 ; jlac ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Laboratory Automation Volume 20 ; 20 ; jlac ; >
       au < manifest ; exists ; 2016 ; Journal of Laboratory Automation Volume 21 ; 21 ; jlac ; >
 
     }
+
+  }
+
+  {
+
+      title <
+        name = SLAS TECHNOLOGY: Translating Life Sciences Innovation ;
+        issn = 2472-6303 ;
+        eissn = 2472-6311
+    >
+
+      #continues = 2211-0682
+
+      au < manifest ; exists ; 2017 ; SLAS TECHNOLOGY: Translating Life Sciences Innovation Volume 22 ; 22 ; jlad ; >
 
   }
 
