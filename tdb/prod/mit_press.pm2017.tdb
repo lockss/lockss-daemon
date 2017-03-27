@@ -19,20 +19,20 @@
       attr[journal_id] = 34
 
         au < testing ; 2001 ; Computer Music Journal Volume 25 [2001] ; 120 >
-        au < testing ; 2002 ; Computer Music Journal Volume 26 [2002] ; 121 >
-        au < testing ; 2003 ; Computer Music Journal Volume 27 [2003] ; 880 >
-        au < testing ; 2004 ; Computer Music Journal Volume 28 [2004] ; 2450 >
-        au < testing ; 2005 ; Computer Music Journal Volume 29 [2005] ; 2705 >
-        au < testing ; 2006 ; Computer Music Journal Volume 30 [2006] ; 2992 >
-        au < testing ; 2007 ; Computer Music Journal Volume 31 [2007] ; 3353 >
-        au < testing ; 2008 ; Computer Music Journal Volume 32 [2008] ; 3706 >
-        au < testing ; 2009 ; Computer Music Journal Volume 33 [2009] ; 4211 >
-        au < testing ; 2010 ; Computer Music Journal Volume 34 [2010] ; 5820 >
-        au < testing ; 2011 ; Computer Music Journal Volume 35 [2011] ; 6911 >
-        au < testing ; 2012 ; Computer Music Journal Volume 36 [2012] ; 8066 >
-        au < testing ; 2013 ; Computer Music Journal Volume 37 [2013] ; 9049 >
-        au < testing ; 2014 ; Computer Music Journal Volume 38 [2014] ; 9867 >
-        au < testing ; 2015 ; Computer Music Journal Volume 39 [2015] ; 10511 >
+        au < ready ; 2002 ; Computer Music Journal Volume 26 [2002] ; 121 >
+        au < ready ; 2003 ; Computer Music Journal Volume 27 [2003] ; 880 >
+        au < ready ; 2004 ; Computer Music Journal Volume 28 [2004] ; 2450 >
+        au < ready ; 2005 ; Computer Music Journal Volume 29 [2005] ; 2705 >
+        au < ready ; 2006 ; Computer Music Journal Volume 30 [2006] ; 2992 >
+        au < ready ; 2007 ; Computer Music Journal Volume 31 [2007] ; 3353 >
+        au < ready ; 2008 ; Computer Music Journal Volume 32 [2008] ; 3706 >
+        au < ready ; 2009 ; Computer Music Journal Volume 33 [2009] ; 4211 >
+        au < ready ; 2010 ; Computer Music Journal Volume 34 [2010] ; 5820 >
+        au < ready ; 2011 ; Computer Music Journal Volume 35 [2011] ; 6911 >
+        au < ready ; 2012 ; Computer Music Journal Volume 36 [2012] ; 8066 >
+        au < ready ; 2013 ; Computer Music Journal Volume 37 [2013] ; 9049 >
+        au < ready ; 2014 ; Computer Music Journal Volume 38 [2014] ; 9867 >
+        au < ready ; 2015 ; Computer Music Journal Volume 39 [2015] ; 10511 >
         au < ready ; 2016 ; Computer Music Journal Volume 40 [2016] ; 11132 >
 
     }
@@ -48,19 +48,19 @@
 
       attr[journal_id] = 219
 
-        au < testing ; 2003 ; Global Environmental Politics Volume 3 [2003] ; 867 >
-        au < testing ; 2004 ; Global Environmental Politics Volume 4 [2004] ; 2451 >
-        au < testing ; 2005 ; Global Environmental Politics Volume 5 [2005] ; 2668 >
-        au < testing ; 2006 ; Global Environmental Politics Volume 6 [2006] ; 2964 >
-        au < testing ; 2007 ; Global Environmental Politics Volume 7 [2007] ; 3279 >
-        au < testing ; 2008 ; Global Environmental Politics Volume 8 [2008] ; 3721 >
-        au < testing ; 2009 ; Global Environmental Politics Volume 9 [2009] ; 4070 >
-        au < testing ; 2010 ; Global Environmental Politics Volume 10 [2010] ; 5815 >
-        au < testing ; 2011 ; Global Environmental Politics Volume 11 [2011] ; 6685 >
-        au < testing ; 2012 ; Global Environmental Politics Volume 12 [2012] ; 7906 >
-        au < testing ; 2013 ; Global Environmental Politics Volume 13 [2013] ; 8738 >
-        au < testing ; 2014 ; Global Environmental Politics Volume 14 [2014] ; 9649 >
-        au < testing ; 2015 ; Global Environmental Politics Volume 15 [2015] ; 10323 >
+        au < ready ; 2003 ; Global Environmental Politics Volume 3 [2003] ; 867 >
+        au < ready ; 2004 ; Global Environmental Politics Volume 4 [2004] ; 2451 >
+        au < ready ; 2005 ; Global Environmental Politics Volume 5 [2005] ; 2668 >
+        au < ready ; 2006 ; Global Environmental Politics Volume 6 [2006] ; 2964 >
+        au < ready ; 2007 ; Global Environmental Politics Volume 7 [2007] ; 3279 >
+        au < ready ; 2008 ; Global Environmental Politics Volume 8 [2008] ; 3721 >
+        au < ready ; 2009 ; Global Environmental Politics Volume 9 [2009] ; 4070 >
+        au < ready ; 2010 ; Global Environmental Politics Volume 10 [2010] ; 5815 >
+        au < ready ; 2011 ; Global Environmental Politics Volume 11 [2011] ; 6685 >
+        au < ready ; 2012 ; Global Environmental Politics Volume 12 [2012] ; 7906 >
+        au < ready ; 2013 ; Global Environmental Politics Volume 13 [2013] ; 8738 >
+        au < ready ; 2014 ; Global Environmental Politics Volume 14 [2014] ; 9649 >
+        au < ready ; 2015 ; Global Environmental Politics Volume 15 [2015] ; 10323 >
         au < ready ; 2016 ; Global Environmental Politics Volume 16 [2016] ; 10934 >
         au < ready ; 2016 ; Global Environmental Politics Volume 17 [2016] ; 12364 >
 
@@ -77,8 +77,8 @@
 
       attr[journal_id] = 554
 
-        au < testing ; 2012 ; Innovations: Technology, Governance, Globalization Volume 7 [2012] ; 8403 >
-        au < testing ; 2013 ; Innovations: Technology, Governance, Globalization Volume 8 [2013] ; 9362 >
+        au < ready ; 2012 ; Innovations: Technology, Governance, Globalization Volume 7 [2012] ; 8403 >
+        au < ready ; 2013 ; Innovations: Technology, Governance, Globalization Volume 8 [2013] ; 9362 >
 
     }
     
@@ -93,7 +93,7 @@
 
       attr[journal_id] = 83
 
-        au < testing ; 2002 ; International Organization Volume 56 [2002] ; 276 >
+        au < ready ; 2002 ; International Organization Volume 56 [2002] ; 276 >
 
     }
     
