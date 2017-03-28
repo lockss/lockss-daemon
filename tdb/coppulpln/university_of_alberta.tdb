@@ -72,7 +72,7 @@
         param[journal_id] = ari
 
         au < manifest ; 2016 ; Art/Research International Volume 2016 ; 2016 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < expected ; 2017 ; Art/Research International Volume 2017 ; 2017 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < manifest ; 2017 ; Art/Research International Volume 2017 ; 2017 ; 2 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -281,7 +281,8 @@
       au < released ; 2013 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 40 ; 2013 ; 40 ; https://ejournals.library.ualberta.ca/ >
       au < released ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 2014 ; 41 ; https://ejournals.library.ualberta.ca/ >
       au < released ; 2015 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 42 ; 2015 ; 42 ; https://ejournals.library.ualberta.ca/ >
-      au < expected ; 2016 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 43 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2016 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 43 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2017 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 44 ; 2017 ; 44 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -795,7 +796,8 @@
       au < released ; 2012 ; Multilingual Discourses Volume 1 (2012) ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
       au < released ; 2014 ; Multilingual Discourses Volume 1 (2014) ; 2014 ; 1 ; https://ejournals.library.ualberta.ca/ >
       au < released ; 2015 ; Multilingual Discourses Volume 2 ; 2015 ; 2 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2016 ; Multilingual Discourses Volume 3 ; 2016 ; 3 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2016 ; Multilingual Discourses Volume 3 ; 2016 ; 3 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2017 ; Multilingual Discourses Volume 4 ; 2017 ; 4 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
