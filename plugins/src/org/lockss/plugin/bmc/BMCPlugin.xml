@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>57</string>
+    <string>58</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -47,16 +47,24 @@
     <string>1.68.4</string> <!-- Daemon version at time of update -->
   </entry>
   <entry>
-<!--  supplements now start from their own page; crawl rules limit to just the correct volume -->  
     <string>au_start_url</string>
-    <list>
     <string>"%s%s/%s", base_url, journal_issn, volume_name</string>
-    <string>"%s%s/supplements/all", base_url, journal_issn</string>
-    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
     <string>"%slockss/", base_url</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"%srender/render\.asp\?.*access=denied", base_url</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.bmc.BMCLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.bmc.BMCHtmlLinkExtractor$Factory</string>
   </entry>
 
   <entry>
@@ -112,7 +120,7 @@
            http://www.biomedcentral.com/1471-20164/14/S8/S2(/abstract)?  
            but we don't know the specific journal_id so we have to wildcard 
            risk of going to other journal supplement if they have same volume -->
-      <string>1, "^%s[^/]+/supplements/%s/", base_url, volume_name</string>        
+      <string>1, "^%s[^/]+/supplements/(%s/|all)", base_url, volume_name</string>        
     </list>
   </entry>
   <entry>
@@ -168,7 +176,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>5000</long> <!-- Increasing progressively -->
+    <long>1000</long> <!-- No longer crawls the publisher site, but raise this value to 3000 after validation -->
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -199,7 +207,6 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>(\.(css|js)|-toc.gif|/images/.+\.(png|gif))(\?\d+)?$</string>
-      <string>/supplements/all$</string>
     </list>
   </entry>
   <entry>

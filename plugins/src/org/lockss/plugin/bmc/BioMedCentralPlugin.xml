@@ -12,12 +12,8 @@
     <string>BioMed Central</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>5000</long> <!-- Increasing progressively -->
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>57</string>
+    <string>58</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,28 +37,32 @@
     <string>"BioMed Central Plugin (BMC Journals, Chemistry Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>BioMed Central Plugin (BMC Journals, Chemistry Central)</string>
+  </entry>
+  <entry>
     <string>required_daemon_version</string>
     <string>1.68.4</string> <!-- Daemon version at time of update -->
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>au_start_url</string>
+    <string>"%scontent/%s", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals, Chemistry Central)</string>
-  </entry>
-   <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
+    <string>au_permission_url</string>
+    <string>"%slockss/", base_url</string>
   </entry>
   <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"%srender/render\.asp\?.*access=denied", base_url</string>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.bmc.BMCLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.bmc.BMCHtmlLinkExtractor$Factory</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
@@ -73,16 +73,6 @@
       <string>500=org.lockss.plugin.bmc.BioMedCentralPluginHttpResponseHandler</string>
       <string>503=org.lockss.plugin.bmc.BioMedCentralPluginHttpResponseHandler</string>
     </list>
-  </entry>
-  
-   <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.bmc.BioMedCentralPluginHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
   </entry>
      <!-- standard layout is <base>/content/<vol>/....-->
      <!-- standard layout is <base>/content/pdf/....-->
@@ -110,20 +100,13 @@
       <string>1,"^%slockss/", base_url</string>
       <string>1,"^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|comments|ref|figure/.*|suppl/.*|table/.*|/))?$", base_url, volume_name</string>
       <string>1,"^%scontent/(download/(figures|supplementary|xml)|files/pdf|pdf|xml|supplementary|html)/", base_url</string>
-      <string>1,"^%ssupplements/(%s|notes)/", base_url, volume_name</string>
+      <!-- supplements now start from different page: base_url/supplements/all; crawl rules limit to volume & all -->
+      <string>1,"^%ssupplements/((%s|notes)/|all$)", base_url, volume_name</string>
       <string>1,"^%srender/render.asp\?", base_url</string>
       <!-- Genome Biology again include:  http://genomebiology.com/content/issue/image/12/12 -->
       <string>1,"^%scontent/issue/image/%s/", base_url, volume_name</string>
- </list>
-  </entry>
-  <entry>
-    <!--  supplements now start from different page: base_url/supplements/all; crawl rules limit to volume-->
-    <string>au_start_url</string>
-    <list>
-    <string>"%scontent/%s", base_url, volume_name</string>
-    <string>"%ssupplements/all", base_url, volume_name</string>
     </list>
-   </entry>
+  </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <!-- examples:
@@ -148,10 +131,6 @@
 	    <string>"%scontent/%s", base_url, volume_name</string>
 	  </entry>
   	</map>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"%slockss/", base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -189,10 +168,38 @@
     <string>key:BioMed Central</string>
   </entry>
   <entry>
+    <string>au_def_pause_time</string>
+    <long>1000</long> <!-- No longer crawls the publisher site, but raise this value to 3000 after validation -->
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralTOCArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bmc.BioMedCentralPluginHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>(\.(css|js)|/images/.+\.(png|gif))(\?\d+)?$</string>
-      <string>/supplements/all$</string>
     </list>
   </entry>
   <entry>
