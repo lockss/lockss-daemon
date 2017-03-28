@@ -224,8 +224,8 @@
     
     au < released ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
     au < released ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
-    au < exists ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
-    au < exists ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
+    au < manifest ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
+    au < manifest ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
  
   }
   
@@ -241,21 +241,21 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     # see http://scholarworks.umass.edu/mot/all_issues.html
 
-    au < exists ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
-    au < exists ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
-    au < exists ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
-    au < exists ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
-    au < exists ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
-    au < exists ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
-    au < exists ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
-    au < exists ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
-    au < exists ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
-    au < exists ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
-    au < exists ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
-    au < exists ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
-    au < exists ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
+    au < manifest ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
+    au < manifest ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
+    au < manifest ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
+    au < manifest ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
+    au < manifest ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
+    au < manifest ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
+    au < manifest ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
+    au < manifest ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
+    au < manifest ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
+    au < manifest ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
+    au < manifest ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
+    au < manifest ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
+    au < manifest ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
     au < released ; 2014 ; 19 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
-    au < exists ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
+    au < manifest ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
  
   }
   
