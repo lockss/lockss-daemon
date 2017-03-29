@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>58</string>
+    <string>59</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -176,7 +176,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1000</long> <!-- No longer crawls the publisher site, but raise this value to 3000 after validation -->
+    <long>100</long> <!-- No longer crawls the publisher site, but raise this value to 3000 after validation -->
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
