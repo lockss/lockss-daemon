@@ -72,7 +72,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             // KEEP top part of main content area [TOC, abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle[^-_]"), // avoid match on pageArticle, article-card
+            //need to keep the second \\b so we don't pick up articleMetrics, or articleTools
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
             // KEEP abstract [abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
             // KEEP active content area [abs, full, ref, suppl]
@@ -80,11 +81,34 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "fulltextPanel"), // full text [full]
             HtmlNodeFilters.tagWithAttribute("div", "id", "referencesPanel"), // references [ref]
             HtmlNodeFilters.tagWithAttribute("div", "id", "supplementaryPanel"), // supplementary materials [suppl]
+            //HtmlNodeFilters.tagWithAttribute("div", "class", "figuresContent"), //doi/figures/...
             // KEEP citation format form [showCitFormats]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citationContainer"),
+            //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citationFormats"),
             // KEEP popup window content area [showPopup]
             HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
+            // New skin 2017 - re-examining all aspects from scratch
+            // TOC
+            HtmlNodeFilters.tagWithAttribute("div", "class","tocArticleEntry"),
+            // Abstract
+            // Full text html - used doi/(full|abs)/10.1080/01650424.2016.1167222
+            HtmlNodeFilters.tagWithAttribute("div", "class","publicationContentTitle"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class","abstractSection "),
+            HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Fulltext"),                          
+            // Figures page (may or may not have contents
+            HtmlNodeFilters.tagWithAttribute("div","class","figuresContent"),
+            // showCitFormats form page
+            HtmlNodeFilters.tagWithAttribute("div","class","downloadCitation"),
+            // an article with suppl and in-line video plus zip
+            //doi/suppl/10.1080/11263504.2013.877535
+            //and one with multiple downloadable files
+            //doi/suppl/10.1080/1070289X.2013.822381
+            HtmlNodeFilters.tagWithAttribute("div","class", "supplemental-material-container"),
             
+
+            // we get rid of all tags at the end so won't keep links unless explicitly
+            // included here
+            // This includes the links on a manifest page
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {
@@ -161,6 +185,19 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumb"),
             //descriptive text that often changes
             HtmlNodeFilters.tagWithAttribute("td", "class", "note"),
+            
+            // New skin 2017 - exclusion based on new includes
+            // the following are brought in by regex "\\barticle[^-]"
+            // which needs to stay in for old/gln content...work around
+            //HtmlNodeFilters.tagWithAttribute("div", "class","articleMetricsContainer"), // brought in by the regex "\\barticle[^-]"
+            //HtmlNodeFilters.tagWithAttribute("div", "class", "articleTools"),
+            //TOC
+            HtmlNodeFilters.tagWithAttribute("div", "class", "sfxLinkButton"),
+            //Abstract
+            //Full
+            HtmlNodeFilters.tagWithAttribute("span", "class","ref-lnk"), //in-line rollover ref info
+            //Figures
+            //showCit
             new NodeFilter() {
               @Override
               public boolean accept(Node node) {
