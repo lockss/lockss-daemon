@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -65,6 +65,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
+      <string>1,"^%sauid=.*$", base_url</string>
       <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
       <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
       <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
