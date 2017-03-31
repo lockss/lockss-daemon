@@ -75,12 +75,13 @@ public class UrlFetcherOaiClient implements OAIClient{
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
-    
+    LockssWatchdog wdog = uf.getWatchdog();
     facade.getCrawlerStatus().addPendingUrl(url);
     int retriesLeft = -1;
     int totalRetries = -1;
     while (true) {
         try {
+          wdog.pokeWDog();
           content = uf.getUncachedInputStream();
           if(content == null) {
         	  throw new HttpException("UrlFetcher returned null for an OAI response");
