@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "http://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd">
+<article article-type="research-article" xml:lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="doi">10.4028/info-here</journal-id>
+      <journal-id journal-id-type="publisher-id">KEM</journal-id>
+      <journal-title-group>
+        <journal-title>Key Engineering Materials</journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1662-9795</issn>
+      <issn pub-type="ppub">1013-9826</issn>
+      <publisher>
+        <publisher-name>Trans Tech Publications</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.4028/info-here</article-id>
+      <article-id pub-id-type="publisher-id">608xx</article-id>
+      <title-group>
+        <article-title>Doing Important Things in Science</article-title>
+      </title-group>
+      <aff id="aff-14012">Universidad of Science, Spain</aff>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ramirez</surname>
+            <given-names>Sandra</given-names>
+          </name>
+          <email>blah@foo</email>
+          <xref ref-type="aff" rid="aff-140xx" />
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Arcos</surname>
+            <given-names>Blah</given-names>
+          </name>
+          <email>bla@foo</email>
+          <xref ref-type="aff" rid="aff-183xx" />
+        </contrib>
+      </contrib-group>
+      <pub-date pub-type="ppub" iso-8601-date="20080929">
+        <day>29</day>
+        <month>9</month>
+        <year>2008</year>
+      </pub-date>
+      <pub-date pub-type="epub" iso-8601-date="20080307">
+        <day>7</day>
+        <month>3</month>
+        <year>2008</year>
+      </pub-date>
+      <volume>377</volume>
+      <fpage>19</fpage>
+      <lpage>42</lpage>
+      <permissions>
+        <copyright-statement>Copyright &amp;#x00A9; 2008, Trans Tech Publications</copyright-statement>
+        <copyright-year>2008</copyright-year>
+        <copyright-holder>Trans Tech Publications</copyright-holder>
+      </permissions>
+      <abstract>
+        <p>The research on stuff.</p>
+      </abstract>
+      <kwd-group kwd-group-type="author">
+        <kwd>Tissue Engineering</kwd>
+        <kwd>Biocompatibility</kwd>
+        <kwd>Silicon</kwd>
+        <kwd>Biphasic Calcium Phosphate (BCP)</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+</article>

@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- Created by ONIX Export Engine V3.3.0.5, März 2017, Infos: www.onixtools.de -->
+<!-- Copyright (c) 2017, BARKMANN software &amp; services - All rights reserved -->
+<ONIXMessage xmlns='http://www.editeur.org/onix/2.1/reference' release='2.1'>
+<Header>
+   <SenderIdentifier>
+      <SenderIDType>05</SenderIDType>
+      <IDValue>5003115</IDValue>
+   </SenderIdentifier>
+   <FromCompany>Peter Lang AG, Internationaler Verlag der Wissenschaften</FromCompany>
+   <FromPerson>Fred Smith</FromPerson>
+   <FromEmail>foo@blah</FromEmail>
+   <SentDate>201703230831</SentDate>
+</Header>
+<Product>
+   <RecordReference>1113035202111</RecordReference>
+   <NotificationType>03</NotificationType>
+   <RecordSourceIdentifierType>05</RecordSourceIdentifierType>
+   <RecordSourceIdentifier>5003115</RecordSourceIdentifier>
+   <RecordSourceName>Peter Lang AG, Internationaler Verlag der Wissenschaften</RecordSourceName>
+   <ProductIdentifier><ProductIDType>01</ProductIDType><IDTypeName>Publishers Order No</IDTypeName><IDValue>10390E</IDValue></ProductIdentifier>
+   <ProductIdentifier><ProductIDType>15</ProductIDType><IDValue>1113035202111</IDValue></ProductIdentifier>
+   <ProductIdentifier><ProductIDType>03</ProductIDType><IDValue>1113035202111</IDValue></ProductIdentifier>
+   <ProductIdentifier><ProductIDType>06</ProductIDType><IDValue>10.3726/111-3-0352-0211-1</IDValue></ProductIdentifier>
+   <Barcode>01</Barcode>
+   <ProductForm>DG</ProductForm>
+   <ProductContentType>10</ProductContentType>
+   <EpubType>002</EpubType>
+   <EpubFormat>02</EpubFormat>
+   <EpubTypeNote>00</EpubTypeNote>
+   <Title>
+      <TitleType>01</TitleType>
+      <TitleText>A Title for This(1815-1914)</TitleText>
+      <Subtitle>an Interesting SubTitle</Subtitle>
+   </Title>
+   <ThesisType>02</ThesisType>
+   <Contributor>
+      <SequenceNumber>1</SequenceNumber>
+      <ContributorRole>A01</ContributorRole>
+      <PersonName>Joe Smith</PersonName>
+      <PersonNameInverted>Smith, Joe</PersonNameInverted>
+      <NamesBeforeKey>Joe</NamesBeforeKey>
+      <KeyNames>Smith</KeyNames>
+   </Contributor>
+   <EditionTypeCode>NED</EditionTypeCode>
+   <Language><LanguageRole>01</LanguageRole><LanguageCode>fre</LanguageCode></Language>
+   <PagesRoman>XXVII</PagesRoman>
+   <PagesArabic>870</PagesArabic>
+   <MainSubject>
+      <MainSubjectSchemeIdentifier>10</MainSubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2014</SubjectSchemeVersion>
+      <SubjectCode>HIS010020</SubjectCode>
+   </MainSubject>
+   <MainSubject>
+      <MainSubjectSchemeIdentifier>26</MainSubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.0</SubjectSchemeVersion>
+      <SubjectCode>9556</SubjectCode>
+   </MainSubject>
+   <MainSubject>
+      <MainSubjectSchemeIdentifier>93</MainSubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>NHD</SubjectCode>
+   </MainSubject>
+   <Subject>
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>JPH</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>KCA</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>KCP</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>94</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>1DFH</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>3MN</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>3MP</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>96</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>1.1</SubjectSchemeVersion>
+      <SubjectCode>3MR</SubjectCode>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2014</SubjectSchemeVersion>
+      <SubjectCode>BUS027000</SubjectCode>
+      <SubjectHeadingText>BUSINESS &amp; ECONOMICS / Finance / General</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2014</SubjectSchemeVersion>
+      <SubjectCode>BUS069020</SubjectCode>
+      <SubjectHeadingText>BUSINESS &amp; ECONOMICS / International / Economics</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2014</SubjectSchemeVersion>
+      <SubjectCode>POL013000</SubjectCode>
+      <SubjectHeadingText>POLITICAL SCIENCE / Labor &amp; Industrial Relations</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>HBLL</SubjectCode>
+      <SubjectHeadingText>Modern history to 20th century: c 1700 to c 1900</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>JPA</SubjectCode>
+      <SubjectHeadingText>Political science &amp; theory</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>KCA</SubjectCode>
+      <SubjectHeadingText>Economic theory &amp; philosophy</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+      <SubjectSchemeVersion>2.1</SubjectSchemeVersion>
+      <SubjectCode>KCP</SubjectCode>
+      <SubjectHeadingText>Political economy</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>1815</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>1914</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>central</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>Développement</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>douanière</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>économique</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>élites</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>Etat</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>politique</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>service</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>siècle</SubjectHeadingText>
+   </Subject>
+   <Subject>
+      <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+      <SubjectHeadingText>suisse</SubjectHeadingText>
+   </Subject>
+   <AudienceCode>06</AudienceCode>
+   <MediaFile>
+      <MediaFileTypeCode>04</MediaFileTypeCode>
+      <MediaFileFormatCode>03</MediaFileFormatCode>
+      <ImageResolution>72</ImageResolution>
+      <MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+      <MediaFileLink>http://sitefusion.peterlang.com/exportdatas/exportimages/onix/cover/9783039103904.jpg</MediaFileLink>
+      <TextWithDownload>Copyright Peter Lang AG</TextWithDownload>
+   </MediaFile>
+   <ProductWebsite>
+      <WebsiteRole>02</WebsiteRole>
+      <ProductWebsiteLink>https://www.peterlang.com/view/product/9579?format=EPDF</ProductWebsiteLink>
+   </ProductWebsite>
+   <Publisher>
+      <PublishingRole>01</PublishingRole>
+      <NameCodeType>05</NameCodeType>
+      <NameCodeValue>5003115</NameCodeValue>
+      <PublisherName>Peter Lang AG, Internationaler Verlag der Wissenschaften</PublisherName>
+      <Website><WebsiteRole>01</WebsiteRole><WebsiteLink>https://www.peterlang.com</WebsiteLink></Website>
+   </Publisher>
+   <CityOfPublication>Brussels</CityOfPublication>
+   <CountryOfPublication>BE</CountryOfPublication>
+   <PublishingStatus>04</PublishingStatus>
+   <PublicationDate>20140923</PublicationDate>
+   <CopyrightYear>2005</CopyrightYear>
+   <YearFirstPublished>2014</YearFirstPublished>
+   <SalesRights><SalesRightsType>01</SalesRightsType><RightsTerritory>WORLD</RightsTerritory></SalesRights>
+   <RelatedProduct>
+      <RelationCode>13</RelationCode>
+      <ProductIdentifier><ProductIDType>01</ProductIDType><IDTypeName>Publishers Order No</IDTypeName><IDValue>10390</IDValue></ProductIdentifier>
+      <ProductIdentifier><ProductIDType>03</ProductIDType><IDValue>1113039103222</IDValue></ProductIdentifier>
+      <ProductIdentifier><ProductIDType>15</ProductIDType><IDValue>1113039103222</IDValue></ProductIdentifier>
+      <ProductForm>BB</ProductForm>
+   </RelatedProduct>
+   <SupplyDetail>
+      <SupplierIdentifier>
+         <SupplierIDType>05</SupplierIDType>
+         <IDValue>5003115</IDValue>
+      </SupplierIdentifier>
+      <SupplierName>Peter Lang AG, Internationaler Verlag der Wissenschaften</SupplierName>
+      <TelephoneNumber>+41 32 376 17 70</TelephoneNumber>
+      <EmailAddress>foo@blah</EmailAddress>
+      <Website>
+         <WebsiteRole>33</WebsiteRole>
+         <WebsiteLink>https://www.peterlang.com</WebsiteLink>
+      </Website>
+      <SupplierRole>01</SupplierRole>
+      <ProductAvailability>20</ProductAvailability>
+      <OnSaleDate>20140923</OnSaleDate>
+      <Price>
+         <PriceTypeCode>04</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>83.04</PriceAmount>
+         <CurrencyCode>EUR</CurrencyCode>
+         <CountryCode>AT</CountryCode>
+         <TaxRateCode1>S</TaxRateCode1>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+      <Price>
+         <PriceTypeCode>04</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>82.35</PriceAmount>
+         <CurrencyCode>EUR</CurrencyCode>
+         <CountryCode>DE</CountryCode>
+         <TaxRateCode1>S</TaxRateCode1>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+      <Price>
+         <PriceTypeCode>01</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>69.20</PriceAmount>
+         <CurrencyCode>EUR</CurrencyCode>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+      <Price>
+         <PriceTypeCode>01</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>55.00</PriceAmount>
+         <CurrencyCode>GBP</CurrencyCode>
+         <CountryCode>GB</CountryCode>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+      <Price>
+         <PriceTypeCode>01</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>89.95</PriceAmount>
+         <CurrencyCode>USD</CurrencyCode>
+         <CountryCode>US</CountryCode>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+      <Price>
+         <PriceTypeCode>02</PriceTypeCode>
+         <MinimumOrderQuantity>1</MinimumOrderQuantity>
+         <PriceStatus>02</PriceStatus>
+         <PriceAmount>87.45</PriceAmount>
+         <CurrencyCode>CHF</CurrencyCode>
+         <CountryCode>CH</CountryCode>
+         <TaxRateCode1>S</TaxRateCode1>
+         <PriceEffectiveFrom>20020101</PriceEffectiveFrom>
+      </Price>
+   </SupplyDetail>
+</Product>
+</ONIXMessage>
