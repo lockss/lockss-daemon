@@ -29,19 +29,11 @@
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
-import org.lockss.util.IOUtil;
-import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
 
 public class TestTafHtmlHashFilterFactory extends LockssTestCase {
@@ -213,49 +205,4 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutArticleMetrics, StringUtil.fromInputStream(actIn));
   }
  
-  private static final List<String> allfiles = (ArrayList) ListUtil.list(
-      "tf_manifest.html",
-      "tf_figures_none.html",
-      "tf_figures_with.html",
-      "tf_full.html",
-      "tf_showCit.html",
-      "tf_full_good.html",
-      "tf_abs.html",
-      "tf_suppl.html",
-      "tf_suppl_multi.html",
-      "tf_toc.html");
-
-  public void testFromFile() throws Exception {
-    InputStream file_input = null;
-    try {
-      
-      for (String realTestFile : allfiles) {
-      file_input = getResourceAsStream(realTestFile);
-      String htmlContent = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-
-
-      InputStream actIn =
-        fact.createFilteredInputStream(mau, new StringInputStream(htmlContent),
-              Constants.DEFAULT_ENCODING);
-      String bigOutputString = StringUtil.fromInputStream(actIn);
-
-      File file = null;
-      
-      file = new File("/Users/alexohlson/TEMP/", realTestFile + ".out");
-      if (!file.exists()) {
-        file.createNewFile();
-      }
-
-      FileOutputStream fos = new FileOutputStream(file);
-      PrintWriter pw = new PrintWriter(fos);
-      pw.print(bigOutputString);
-      pw.flush();
-      pw.close();
-      fos.close();
-      }
-    }finally {
-      IOUtil.safeClose(file_input);
-    }
-  }
 }
