@@ -77,6 +77,7 @@ public class HashCUS extends LockssServlet {
   static final String KEY_RECORD = "record";
   static final String KEY_BACKGROUND = "background";
   static final String KEY_EXCLUDE_SUSPECT = "excludeSuspect";
+  static final String KEY_INCLUDE_WEIGHT = "includeWeight";
   static final String KEY_ACTION = "action";
   static final String KEY_MIME = "mime";
   static final String KEY_FILE_ID = "file";
@@ -233,6 +234,7 @@ public class HashCUS extends LockssServlet {
       params.setAlgorithm(getParameter(KEY_ALG));
       params.setChallenge(getParameter(KEY_CHALLENGE));
       params.setVerifier(getParameter(KEY_VERIFIER));
+      params.setIncludeWeight(getParameter(KEY_INCLUDE_WEIGHT) != null);
       if (log.isDebug3()) log.debug3("params = " + params);
 
       errMsg = hasher.processParams(params, result);
@@ -830,6 +832,12 @@ public class HashCUS extends LockssServlet {
     tbl.add("&nbsp;&nbsp;");
     tbl.add(checkBox("Background", "false", KEY_BACKGROUND,
 		     params.isAsynchronous()));
+    tbl.newRow();
+    tbl.newCell();
+    tbl.newCell();
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(checkBox("Include Weight", "false", KEY_INCLUDE_WEIGHT,
+                     params.isIncludeWeight()));
 
     centeredBlock.add(tbl);
     centeredBlock.add("<br>");

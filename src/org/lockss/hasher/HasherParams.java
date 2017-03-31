@@ -40,6 +40,7 @@ public class HasherParams {
   private String upper;
   private boolean recordFilteredStream;
   private boolean excludeSuspectVersions;
+  private boolean includeWeight;
   private String algorithm;
   private String hashType;
   private String resultEncoding;
@@ -66,7 +67,7 @@ public class HasherParams {
   public void setAsynchronous(boolean asynchronous) {
     this.asynchronous = asynchronous;
   }
-
+  
   public String getAuId() {
     return auId;
   }
@@ -113,6 +114,15 @@ public class HasherParams {
 
   public void setExcludeSuspectVersions(boolean excludeSuspectVersions) {
     this.excludeSuspectVersions = excludeSuspectVersions;
+  }
+  
+
+  public boolean isIncludeWeight() {
+    return includeWeight;
+  }
+
+  public void setIncludeWeight(boolean includeWeight) {
+    this.includeWeight= includeWeight;
   }
 
   public String getAlgorithm() {

@@ -44,6 +44,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.poller.Poll;
 import org.lockss.poller.PollSpec;
 import org.lockss.protocol.LcapMessage;
@@ -140,10 +141,12 @@ public class SimpleHasher {
   };
 
   private MessageDigest digest;
+  private PatternFloatMap resultWeightMap = null;
   private byte[] challenge;
   private byte[] verifier;
   private boolean isFiltered = false;
   private boolean isIncludeUrl = false;
+  private boolean isIncludeWeight = false;
   private boolean isExcludeSuspectVersions = false;
   private boolean isBase64 = false;
 
@@ -190,6 +193,14 @@ public class SimpleHasher {
    */
   public void setIncludeUrl(boolean val) {
     isIncludeUrl = val;
+  }
+  
+  /**
+   * Determines whether to include the weight of of each file in its hash
+   * @param val if true include weight of each file in its hash
+   */
+  public void setIncludeWeight(boolean val) {
+    isIncludeWeight = val;
   }
 
   /**
@@ -239,6 +250,15 @@ public class SimpleHasher {
 
     hasher.setIncludeUrl(isIncludeUrl);
     hasher.setExcludeSuspectVersions(isExcludeSuspectVersions);
+    if(isIncludeWeight) {
+      try {
+        resultWeightMap = cus.getArchivalUnit().makeUrlPollResultWeightMap();
+      } catch (NullPointerException e) {
+        log.warning("No AU, thus no weightMap: " + cus);
+      } catch (ArchivalUnit.ConfigurationException e) {
+        log.warning("Error building weightMap", e);
+      }
+    }
     doHash(hasher);
     if (footer != null) {
       blockOuts.println(footer);
@@ -298,7 +318,11 @@ public class SimpleHasher {
 	  // Pylorus' diff() depends upon the first 20 characters of this string
 	  outs.println("Hash error (see log)        " + block.getUrl());
 	} else {
-	  outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+	  if(isIncludeWeight) {
+	    outs.println(byteString(ver.getHashes()[0]) + "   " + getUrlResultWeight(block.getUrl()) + "   " + block.getUrl());
+	  } else {
+	    outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+	  }
 	}
       }
     }
@@ -310,6 +334,13 @@ public class SimpleHasher {
         return ByteArray.toHexString(a);
       }
     }
+  }
+  
+  protected float getUrlResultWeight(String url) {
+    if (resultWeightMap == null || resultWeightMap.isEmpty()) {
+      return 1.0f;
+    }
+    return resultWeightMap.getMatch(url, 1.0f);
   }
 
   /**
@@ -388,7 +419,7 @@ public class SimpleHasher {
 	  break;
 	case V3Tree:
 	case V3File:
-	  doV3(params.getMachineName(), params.isExcludeSuspectVersions(),
+	  doV3(params.getMachineName(), params.isExcludeSuspectVersions(), params.isIncludeWeight(),
 	      result);
 	  break;
 	}
@@ -816,7 +847,13 @@ public class SimpleHasher {
     result.setShowResult(true);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Done.");
   }
-
+  
+  void doV3(String machineName, boolean excludeSuspectVersions,
+      HasherResult result) throws IOException {
+    doV3(machineName, excludeSuspectVersions, false, result);
+  }
+  
+  
   /**
    * Performs a version 3 hashing operation.
    * 
@@ -828,7 +865,7 @@ public class SimpleHasher {
    *          A HasherResult where to store the result of the hashing operation.
    * @throws IOException
    */
-  void doV3(String machineName, boolean excludeSuspectVersions,
+  void doV3(String machineName, boolean excludeSuspectVersions, boolean includeWeight,
       HasherResult result) throws IOException {
     final String DEBUG_HEADER = "doV3(): ";
     if (log.isDebug2()) {
@@ -859,6 +896,7 @@ public class SimpleHasher {
 
     setFiltered(true);
     setExcludeSuspectVersions(excludeSuspectVersions);
+    setIncludeWeight(includeWeight);
     setBase64Result(result.getResultEncoding() == ResultEncoding.Base64);
     doV3Hash(result.getCus(), result.getBlockFile(), sb.toString(), "# end\n");
     result.setShowResult(true);
