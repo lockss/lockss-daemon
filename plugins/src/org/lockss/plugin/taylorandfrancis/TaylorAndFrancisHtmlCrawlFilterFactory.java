@@ -48,6 +48,15 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlF
 
   static NodeFilter[] filters = new NodeFilter[]{
     
+    /*******based on analysis on 3/31/17*****************/
+    // found overcrawling due to new section at the bottom of full-text called "Notes" with
+    // live links to references AND the same live links in spans used for scrollable overlays.
+    // see http://www.tandfonline.com/doi/full/10.1080/0163660X.2015.1064710
+    // <span class="ref-overlay scrollable-ref"> 
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^ref-overlay"), 
+    //<div class="summation-section">
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summation-section"), 
+    
     /*******based on analysis on 9/15/16*****************/
     
     // http://www.tandfonline.com/toc/twst20/29/1
