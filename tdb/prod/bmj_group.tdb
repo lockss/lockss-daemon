@@ -160,7 +160,7 @@
 
     param[base_url] = http://adc.bmj.com/
 
-    au < bmj.BMJDrupalPlugin ; exists ; 1926 ; Archives of Disease in Childhood Volume 1 ; 1 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 1926 ; Archives of Disease in Childhood Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 1927 ; Archives of Disease in Childhood Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; down ; 1928 ; Archives of Disease in Childhood Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 1929 ; Archives of Disease in Childhood Volume 4 ; 4 >
@@ -456,7 +456,7 @@
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 354 ; 354 >
     au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 355 ; 355 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 356 ; 356 >
-    au < bmj.BMJDrupalPlugin ; expected ; 2017 ; BMJ Volume 357 ; 357 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 357 ; 357 >
 
   }
 
@@ -471,8 +471,8 @@
     param[base_url] = http://innovations.bmj.com/
 
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Innovations Volume 1 ; 1 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; BMJ Innovations Volume 2 ; 2 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Innovations Volume 3 ; 3 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Innovations Volume 2 ; 2 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Innovations Volume 3 ; 3 >
 
   }
   
@@ -490,7 +490,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Open Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Volume 5 ; 5 >
     au < bmj.BMJDrupalPlugin ; exists ; 2016 ; BMJ Open Volume 6 ; 6 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Open Volume 7 ; 7 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Volume 7 ; 7 >
 
   }
   
@@ -834,8 +834,8 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; Drug and Therapeutics Bulletin Volume 54 ; 54 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Drug and Therapeutics Bulletin Volume 55 ; 55 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Drug and Therapeutics Bulletin Volume 54 ; 54 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Drug and Therapeutics Bulletin Volume 55 ; 55 >
 
   }
 
@@ -2454,8 +2454,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; down ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; Sexually Transmitted Infections Volume 93 ; 93 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; Sexually Transmitted Infections Volume 93 ; 93 >
 
   }
 
