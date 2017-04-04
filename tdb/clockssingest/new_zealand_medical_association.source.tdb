@@ -9,8 +9,8 @@
   {
   
     title <
-       name = New Zealand Medical Journal Source Content ;
-       issn = 2473-1838
+       name = New Zealand Medical Journal ;
+       issn = 1175-8716
     >
     
     plugin = org.lockss.plugin.clockss.nzma.ClockssNZMASourcePlugin
