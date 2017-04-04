@@ -18,10 +18,10 @@
 
       attr[journal_id] = 0000
 
-        au < exists ; 2014 ; British Journal of Canadian Studies Volume 27, 2014 ; 9788 >
-        au < exists ; 2015 ; British Journal of Canadian Studies Volume 28, 2015 ; 10702 >
-        au < exists ; 2016 ; British Journal of Canadian Studies Volume 29, 2016 ; 11101 >
-        au < exists ; 2017 ; British Journal of Canadian Studies Volume 30, 2017 ; 12506 >
+        au < manifest ; 2014 ; British Journal of Canadian Studies Volume 27 [2014] ; 9788 >
+        au < manifest ; 2015 ; British Journal of Canadian Studies Volume 28 [2015] ; 10702 >
+        au < manifest ; 2016 ; British Journal of Canadian Studies Volume 29 [2016] ; 11101 >
+        au < manifest ; 2017 ; British Journal of Canadian Studies Volume 30 [2017] ; 12506 >
 
     }
     {
@@ -35,8 +35,8 @@
 
       attr[journal_id] = 419
 
-        au < exists ; 2009 ; The Bulletin of Hispanic Studies Volume 86, 2009 ; 4097 >
-        au < exists ; 2010 ; The Bulletin of Hispanic Studies Volume 87, 2010 ; 5729 >
+        au < manifest ; 2009 ; The Bulletin of Hispanic Studies Volume 86 [2009] ; 4097 >
+        au < manifest ; 2010 ; The Bulletin of Hispanic Studies Volume 87 [2010] ; 5729 >
 
     }
     {
@@ -50,9 +50,9 @@
 
       attr[journal_id] = 651
 
-        au < exists ; 2014 ; European Journal of Language Policy Volume 6, 2014 ; 10276 >
-        au < exists ; 2015 ; European Journal of Language Policy Volume 7, 2015 ; 10695 >
-        au < exists ; 2016 ; European Journal of Language Policy Volume 8, 2016 ; 11359 >
+        au < manifest ; 2014 ; European Journal of Language Policy Volume 6 [2014] ; 10276 >
+        au < manifest ; 2015 ; European Journal of Language Policy Volume 7 [2015] ; 10695 >
+        au < manifest ; 2016 ; European Journal of Language Policy Volume 8 [2016] ; 11359 >
 
     }
     {
@@ -66,15 +66,15 @@
 
       attr[journal_id] = 456
 
-        au < exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3, 2009 ; 4139 >
-        au < exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4, 2010 ; 5811 >
-        au < exists ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5, 2011 ; 6916 >
-        au < exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6, 2012 ; 8040 >
-        au < exists ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7, 2013 ; 8880 >
-        au < exists ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8, 2014 ; 9809 >
-        au < exists ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9, 2015 ; 10494 >
-        au < exists ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10, 2016 ; 11024 >
-        au < exists ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11, 2017 ; 12415 >
+        au < manifest ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 [2009] ; 4139 >
+        au < manifest ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 [2010] ; 5811 >
+        au < manifest ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 [2011] ; 6916 >
+        au < manifest ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 [2012] ; 8040 >
+        au < manifest ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 [2013] ; 8880 >
+        au < manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 [2014] ; 9809 >
+        au < manifest ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 [2015] ; 10494 >
+        au < manifest ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 [2016] ; 11024 >
+        au < manifest ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 [2017] ; 12415 >
 
     }
     {
@@ -88,16 +88,16 @@
 
       attr[journal_id] = 465
 
-        au < exists ; 2007 ; Music, Sound, and the Moving Image Volume 1, 2007 ; 4394 >
-        au < exists ; 2008 ; Music, Sound, and the Moving Image Volume 2, 2008  ; 4395 >
-        au < exists ; 2009 ; Music, Sound, and the Moving Image Volume 3, 2009 ; 4930 >
-        au < exists ; 2010 ; Music, Sound, and the Moving Image Volume 4, 2010 ; 6408 >
-        au < exists ; 2011 ; Music, Sound, and the Moving Image Volume 5, 2011 ; 7545 >
-        au < exists ; 2012 ; Music, Sound, and the Moving Image Volume 6, 2012 ; 8407 >
-        au < exists ; 2013 ; Music, Sound, and the Moving Image Volume 7, 2013 ; 9247 >
-        au < exists ; 2014 ; Music, Sound, and the Moving Image Volume 8, 2014 ; 10110 >
-        au < exists ; 2015 ; Music, Sound, and the Moving Image Volume 9, 2015 ; 10703 >
-        au < exists ; 2016 ; Music, Sound, and the Moving Image Volume 10, 2016 ; 11360 >
+        au < manifest ; 2007 ; Music, Sound, and the Moving Image Volume 1 [2007] ; 4394 >
+        au < manifest ; 2008 ; Music, Sound, and the Moving Image Volume 2 [2008 ] ; 4395 >
+        au < manifest ; 2009 ; Music, Sound, and the Moving Image Volume 3 [2009] ; 4930 >
+        au < manifest ; 2010 ; Music, Sound, and the Moving Image Volume 4 [2010] ; 6408 >
+        au < manifest ; 2011 ; Music, Sound, and the Moving Image Volume 5 [2011] ; 7545 >
+        au < manifest ; 2012 ; Music, Sound, and the Moving Image Volume 6 [2012] ; 8407 >
+        au < manifest ; 2013 ; Music, Sound, and the Moving Image Volume 7 [2013] ; 9247 >
+        au < manifest ; 2014 ; Music, Sound, and the Moving Image Volume 8 [2014] ; 10110 >
+        au < manifest ; 2015 ; Music, Sound, and the Moving Image Volume 9 [2015] ; 10703 >
+        au < manifest ; 2016 ; Music, Sound, and the Moving Image Volume 10 [2016] ; 11360 >
 
     }
     {
@@ -111,14 +111,14 @@
 
       attr[journal_id] = 420
 
-        au < exists ; 2009 ; Romani Studies Volume 19, 2009 ; 4318 >
-        au < exists ; 2010 ; Romani Studies Volume 20, 2010 ; 6409 >
-        au < exists ; 2011 ; Romani Studies Volume 21, 2011 ; 7422 >
-        au < exists ; 2012 ; Romani Studies Volume 22, 2012 ; 8273 >
-        au < exists ; 2013 ; Romani Studies Volume 23, 2013 ; 9110 >
-        au < exists ; 2014 ; Romani Studies Volume 24, 2014 ; 9943 >
-        au < exists ; 2015 ; Romani Studies Volume 25, 2015 ; 10679 >
-        au < exists ; 2016 ; Romani Studies Volume 26, 2016 ; 11148 >
+        au < manifest ; 2009 ; Romani Studies Volume 19 [2009] ; 4318 >
+        au < manifest ; 2010 ; Romani Studies Volume 20 [2010] ; 6409 >
+        au < manifest ; 2011 ; Romani Studies Volume 21 [2011] ; 7422 >
+        au < manifest ; 2012 ; Romani Studies Volume 22 [2012] ; 8273 >
+        au < manifest ; 2013 ; Romani Studies Volume 23 [2013] ; 9110 >
+        au < manifest ; 2014 ; Romani Studies Volume 24 [2014] ; 9943 >
+        au < manifest ; 2015 ; Romani Studies Volume 25 [2015] ; 10679 >
+        au < manifest ; 2016 ; Romani Studies Volume 26 [2016] ; 11148 >
 
     }
     {
@@ -132,16 +132,16 @@
 
       attr[journal_id] = 466
 
-        au < exists ; 2008 ; Science Fiction Film and Television Volume 1, 2008 ; 4397 >
-        au < exists ; 2009 ; Science Fiction Film and Television Volume 2, 2009 ; 4398 >
-        au < exists ; 2010 ; Science Fiction Film and Television Volume 3, 2010 ; 5863 >
-        au < exists ; 2011 ; Science Fiction Film and Television Volume 4, 2011 ; 6915 >
-        au < exists ; 2012 ; Science Fiction Film and Television Volume 5, 2012 ; 8194 >
-        au < exists ; 2013 ; Science Fiction Film and Television Volume 6, 2013 ; 8798 >
-        au < exists ; 2014 ; Science Fiction Film and Television Volume 7, 2014 ; 9654 >
-        au < exists ; 2015 ; Science Fiction Film and Television Volume 8, 2015 ; 10401 >
-        au < exists ; 2016 ; Science Fiction Film and Television Volume 9, 2016 ; 11020 >
-        au < exists ; 2017 ; Science Fiction Film and Television Volume 10, 2017 ; 12416 >
+        au < manifest ; 2008 ; Science Fiction Film and Television Volume 1 [2008] ; 4397 >
+        au < manifest ; 2009 ; Science Fiction Film and Television Volume 2 [2009] ; 4398 >
+        au < manifest ; 2010 ; Science Fiction Film and Television Volume 3 [2010] ; 5863 >
+        au < manifest ; 2011 ; Science Fiction Film and Television Volume 4 [2011] ; 6915 >
+        au < manifest ; 2012 ; Science Fiction Film and Television Volume 5 [2012] ; 8194 >
+        au < manifest ; 2013 ; Science Fiction Film and Television Volume 6 [2013] ; 8798 >
+        au < manifest ; 2014 ; Science Fiction Film and Television Volume 7 [2014] ; 9654 >
+        au < manifest ; 2015 ; Science Fiction Film and Television Volume 8 [2015] ; 10401 >
+        au < manifest ; 2016 ; Science Fiction Film and Television Volume 9 [2016] ; 11020 >
+        au < manifest ; 2017 ; Science Fiction Film and Television Volume 10 [2017] ; 12416 >
 
     }
     {
@@ -155,14 +155,14 @@
 
       attr[journal_id] = 421
 
-        au < exists ; 2009 ; The Byron Journal Volume 37, 2009 ; 4423 >
-        au < exists ; 2010 ; The Byron Journal Volume 38, 2010 ; 6219 >
-        au < exists ; 2011 ; The Byron Journal Volume 39, 2011 ; 7483 >
-        au < exists ; 2012 ; The Byron Journal Volume 40, 2012 ; 8381 >
-        au < exists ; 2013 ; The Byron Journal Volume 41, 2013 ; 9569 >
-        au < exists ; 2014 ; The Byron Journal Volume 42, 2014 ; 10084 >
-        au < exists ; 2015 ; The Byron Journal Volume 43, 2015 ; 10682 >
-        au < exists ; 2016 ; The Byron Journal Volume 44, 2016 ; 11269 >
+        au < manifest ; 2009 ; The Byron Journal Volume 37 [2009] ; 4423 >
+        au < manifest ; 2010 ; The Byron Journal Volume 38 [2010] ; 6219 >
+        au < manifest ; 2011 ; The Byron Journal Volume 39 [2011] ; 7483 >
+        au < manifest ; 2012 ; The Byron Journal Volume 40 [2012] ; 8381 >
+        au < manifest ; 2013 ; The Byron Journal Volume 41 [2013] ; 9569 >
+        au < manifest ; 2014 ; The Byron Journal Volume 42 [2014] ; 10084 >
+        au < manifest ; 2015 ; The Byron Journal Volume 43 [2015] ; 10682 >
+        au < manifest ; 2016 ; The Byron Journal Volume 44 [2016] ; 11269 >
 
     }
 
