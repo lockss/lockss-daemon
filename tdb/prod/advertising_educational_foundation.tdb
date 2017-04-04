@@ -9,11 +9,11 @@
 
   {
     title <
-      name = Advertising & Society Review ;
+      name = Advertising & Society Quarterly ;
       eissn = 1534-7311 ;
       issnl = 1534-7311
     >
-
+    #title changed to 'Quarterly' at Volume 18.
     param[journal_dir] = advertising_and_society_review
     attr[journal_id] = asr
 

@@ -168,14 +168,14 @@ echo " "
 echo "---------------------"
 echo "---------------------"
 echo "GLN. ISSN issues"
-scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/prod/*.tdb | sed 's/\t\(.*\) & /\t\1 and /' | sort -u > $tpath/issn
+scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/prod/*.tdb | sed 's/\t\(.*\) & /\t\1 and /' | sed 's/\tThe /\t/' | sort -u > $tpath/issn
 scripts/tdb/scrub_table.pl $tpath/issn
 #
 # Find issn problems in clockss title database
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. ISSN issues"
-scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/clockssingest/*.tdb | sed 's/\t\(.*\) & /\t\1 and /' | sort -u > $tpath/issn
+scripts/tdb/tdbout -t publisher,title,issn,eissn tdb/clockssingest/*.tdb | sed 's/\t\(.*\) & /\t\1 and /' | sed 's/\tThe /\t/' | sort -u > $tpath/issn
 scripts/tdb/scrub_table.pl $tpath/issn
 #
 # Find issn problems in ibictpln title database

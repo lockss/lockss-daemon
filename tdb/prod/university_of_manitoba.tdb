@@ -8,10 +8,10 @@
 
   {
     title <
-      name = Mosaic: a journal for the interdisciplinary study of literature ;
+      name = Mosaic, an interdisciplinary critical journal ;
       issn = 0027-1276 ;
       eissn = 1925-5683 ;
-      issnl = 0027-1276     
+      issnl = 0027-1276
     >
 
     param[journal_dir] = mosaic
@@ -22,8 +22,8 @@
       param[base_url] = http://muse.jhu.edu/
 
       au < down ; 2011 ; Mosaic: a journal for the interdisciplinary study of literature Volume 44 ; 44 >
-      au < down ; 2012 ; Mosaic: A journal for the interdisciplinary study of literature Volume 45 ; 45 >
-      au < down ; 2013 ; Mosaic: A journal for the interdisciplinary study of literature Volume 46 ; 46 >
+      au < down ; 2012 ; Mosaic: a journal for the interdisciplinary study of literature Volume 45 ; 45 >
+      au < down ; 2013 ; Mosaic: a journal for the interdisciplinary study of literature Volume 46 ; 46 >
 
     }
 
@@ -32,8 +32,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < down ; 2014 ; Mosaic: a journal for the interdisciplinary study of literature Volume 47 ; 47 >
-      au < down ; 2015 ; Mosaic: A journal for the interdisciplinary study of literature Volume 48 ; 48 >
-      au < doNotProcess ; 2016 ; Mosaic: A journal for the interdisciplinary study of literature Volume 49 ; 49 >
+      au < down ; 2015 ; Mosaic: a journal for the interdisciplinary study of literature Volume 48 ; 48 >
+      au < doNotProcess ; 2016 ; Mosaic, an interdisciplinary critical journal Volume 49 ; 49 >
 
     }
 
