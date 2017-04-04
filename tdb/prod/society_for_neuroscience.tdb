@@ -15,7 +15,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < sfn.SFNDrupalPlugin ; released ; 2014 ; eNeuro Volume 1 ; 1 >
-      au < sfn.SFNDrupalPlugin ; testing ; 2015 ; eNeuro Volume 2 ; 2 >
+      au < sfn.SFNDrupalPlugin ; ready ; 2015 ; eNeuro Volume 2 ; 2 >
       au < sfn.SFNDrupalPlugin ; ready ; 2016 ; eNeuro Volume 3 ; 3 >
       au < sfn.SFNDrupalPlugin ; exists ; 2017 ; eNeuro Volume 4 ; 4 >
 
