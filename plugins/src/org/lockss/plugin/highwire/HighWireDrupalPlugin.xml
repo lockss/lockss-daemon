@@ -51,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>64</string>
+    <string>65</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -160,6 +160,8 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
+      <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
       <!-- otherwise, all content from glencoesoftware CDN and non-(js|css) from static BMJ -->
       <string>1,"^https?://([^/]+\.glencoesoftware\.com/.|static\.www\.bmj\.com/.(?!.+\.(css|js)?))"</string>
     </list>
