@@ -129,7 +129,7 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
     assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff",
         normalizer.normalizeUrl("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff?-2mifpm", m_mau2));
     
-    assertEquals("http://www.example.com/content/1/1/e00078-15/DC6/embed/inline-supplementary-material-6.mov",
+    assertEquals("http://www.example.com/content/1/1/e00078-15/DC6/embed/inline-supplementary-material-1.mov",
         normalizer.normalizeUrl("http://www.example.com/content/1/1/e00078-15/DC6/embed/inline-supplementary-material-1.mov?download=no", m_mau));
     
     assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
