@@ -18,11 +18,11 @@
 
       attr[journal_id] = 483
 
-        au < exists ; 2009 ; a/b: Auto/Biography Studies Volume 24, 2009 ; 6451 >
-        au < exists ; 2010 ; a/b: Auto/Biography Studies Volume 25, 2010 ; 7748 >
-        au < exists ; 2011 ; a/b: Auto/Biography Studies Volume 26, 2011 ; 8272 >
-        au < exists ; 2012 ; a/b: Auto/Biography Studies Volume 27, 2012 ; 8704 >
-        au < exists ; 2013 ; a/b: Auto/Biography Studies Volume 28, 2013 ; 9242 >
+        au < manifest ; 2009 ; a/b: Auto/Biography Studies Volume 24 [2009] ; 6451 >
+        au < manifest ; 2010 ; a/b: Auto/Biography Studies Volume 25 [2010] ; 7748 >
+        au < manifest ; 2011 ; a/b: Auto/Biography Studies Volume 26 [2011] ; 8272 >
+        au < manifest ; 2012 ; a/b: Auto/Biography Studies Volume 27 [2012] ; 8704 >
+        au < manifest ; 2013 ; a/b: Auto/Biography Studies Volume 28 [2013] ; 9242 >
 
     }
 

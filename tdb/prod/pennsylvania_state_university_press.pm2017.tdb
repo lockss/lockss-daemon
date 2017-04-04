@@ -18,24 +18,24 @@
 
       attr[journal_id] = 33
 
-        au < exists ; 1999 ; Comparative Literature Studies Volume 36, 1999 ; 116 >
-        au < exists ; 2000 ; Comparative Literature Studies Volume 37, 2000 ; 117 >
-        au < exists ; 2001 ; Comparative Literature Studies Volume 38, 2001 ; 118 >
-        au < exists ; 2002 ; Comparative Literature Studies Volume 39, 2002 ; 119 >
-        au < exists ; 2003 ; Comparative Literature Studies Volume 40, 2003 ; 777 >
-        au < exists ; 2004 ; Comparative Literature Studies Volume 41, 2004 ; 2414 >
-        au < exists ; 2005 ; Comparative Literature Studies Volume 42, 2005 ; 2771 >
-        au < exists ; 2006 ; Comparative Literature Studies Volume 43, 2006 ; 3127 >
-        au < exists ; 2007 ; Comparative Literature Studies Volume 44, 2007 ; 3455 >
-        au < exists ; 2008 ; Comparative Literature Studies Volume 45, 2008 ; 3783 >
-        au < exists ; 2009 ; Comparative Literature Studies Volume 46, 2009 ; 4108 >
-        au < exists ; 2010 ; Comparative Literature Studies Volume 47, 2010 ; 5825 >
-        au < exists ; 2011 ; Comparative Literature Studies Volume 48, 2011 ; 7013 >
-        au < exists ; 2012 ; Comparative Literature Studies Volume 49, 2012 ; 8013 >
-        au < exists ; 2013 ; Comparative Literature Studies Volume 50, 2013 ; 8825 >
-        au < exists ; 2014 ; Comparative Literature Studies Volume 51, 2014 ; 9871 >
-        au < exists ; 2015 ; Comparative Literature Studies Volume 52, 2015 ; 10435 >
-        au < exists ; 2016 ; Comparative Literature Studies Volume 53, 2016 ; 11091 >
+        au < manifest ; 1999 ; Comparative Literature Studies Volume 36 [1999] ; 116 >
+        au < manifest ; 2000 ; Comparative Literature Studies Volume 37 [2000] ; 117 >
+        au < manifest ; 2001 ; Comparative Literature Studies Volume 38 [2001] ; 118 >
+        au < manifest ; 2002 ; Comparative Literature Studies Volume 39 [2002] ; 119 >
+        au < manifest ; 2003 ; Comparative Literature Studies Volume 40 [2003] ; 777 >
+        au < manifest ; 2004 ; Comparative Literature Studies Volume 41 [2004] ; 2414 >
+        au < manifest ; 2005 ; Comparative Literature Studies Volume 42 [2005] ; 2771 >
+        au < manifest ; 2006 ; Comparative Literature Studies Volume 43 [2006] ; 3127 >
+        au < manifest ; 2007 ; Comparative Literature Studies Volume 44 [2007] ; 3455 >
+        au < manifest ; 2008 ; Comparative Literature Studies Volume 45 [2008] ; 3783 >
+        au < manifest ; 2009 ; Comparative Literature Studies Volume 46 [2009] ; 4108 >
+        au < manifest ; 2010 ; Comparative Literature Studies Volume 47 [2010] ; 5825 >
+        au < manifest ; 2011 ; Comparative Literature Studies Volume 48 [2011] ; 7013 >
+        au < manifest ; 2012 ; Comparative Literature Studies Volume 49 [2012] ; 8013 >
+        au < manifest ; 2013 ; Comparative Literature Studies Volume 50 [2013] ; 8825 >
+        au < manifest ; 2014 ; Comparative Literature Studies Volume 51 [2014] ; 9871 >
+        au < manifest ; 2015 ; Comparative Literature Studies Volume 52 [2015] ; 10435 >
+        au < manifest ; 2016 ; Comparative Literature Studies Volume 53 [2016] ; 11091 >
 
     }
     {
@@ -49,11 +49,11 @@
 
       attr[journal_id] = 595
 
-        au < exists ; 2013 ; Critical Philosophy of Race Volume 1, 2013 ; 8818 >
-        au < exists ; 2014 ; Critical Philosophy of Race Volume 2, 2014 ; 9688 >
-        au < exists ; 2015 ; Critical Philosophy of Race Volume 3, 2015 ; 10303 >
-        au < exists ; 2016 ; Critical Philosophy of Race Volume 4, 2016 ; 11117 >
-        au < exists ; 2017 ; Critical Philosophy of Race Volume 5, 2017 ; 12295 >
+        au < manifest ; 2013 ; Critical Philosophy of Race Volume 1 [2013] ; 8818 >
+        au < manifest ; 2014 ; Critical Philosophy of Race Volume 2 [2014] ; 9688 >
+        au < manifest ; 2015 ; Critical Philosophy of Race Volume 3 [2015] ; 10303 >
+        au < manifest ; 2016 ; Critical Philosophy of Race Volume 4 [2016] ; 11117 >
+        au < manifest ; 2017 ; Critical Philosophy of Race Volume 5 [2017] ; 12295 >
 
     }
     {
@@ -67,12 +67,12 @@
 
       attr[journal_id] = 555
 
-        au < exists ; 2012 ; Interdisciplinary Literary Studies Volume 14, 2012 ; 8068 >
-        au < exists ; 2013 ; Interdisciplinary Literary Studies Volume 15, 2013 ; 8831 >
-        au < exists ; 2014 ; Interdisciplinary Literary Studies Volume 16, 2014 ; 9780 >
-        au < exists ; 2015 ; Interdisciplinary Literary Studies Volume 17, 2015 ; 10428 >
-        au < exists ; 2016 ; Interdisciplinary Literary Studies Volume 18, 2016 ; 11019 >
-        au < exists ; 2017 ; Interdisciplinary Literary Studies Volume 19, 2017 ; 12457 >
+        au < manifest ; 2012 ; Interdisciplinary Literary Studies Volume 14 [2012] ; 8068 >
+        au < manifest ; 2013 ; Interdisciplinary Literary Studies Volume 15 [2013] ; 8831 >
+        au < manifest ; 2014 ; Interdisciplinary Literary Studies Volume 16 [2014] ; 9780 >
+        au < manifest ; 2015 ; Interdisciplinary Literary Studies Volume 17 [2015] ; 10428 >
+        au < manifest ; 2016 ; Interdisciplinary Literary Studies Volume 18 [2016] ; 11019 >
+        au < manifest ; 2017 ; Interdisciplinary Literary Studies Volume 19 [2017] ; 12457 >
 
     }
     {
@@ -86,11 +86,11 @@
 
       attr[journal_id] = 598
 
-        au < exists ; 2013 ; Journal of Africana Religions Volume 1, 2013 ; 8621 >
-        au < exists ; 2014 ; Journal of Africana Religions Volume 2, 2014 ; 9601 >
-        au < exists ; 2015 ; Journal of Africana Religions Volume 3, 2015 ; 10296 >
-        au < exists ; 2016 ; Journal of Africana Religions Volume 4, 2016 ; 10905 >
-        au < exists ; 2017 ; Journal of Africana Religions Volume 5, 2017 ; 12268 >
+        au < manifest ; 2013 ; Journal of Africana Religions Volume 1 [2013] ; 8621 >
+        au < manifest ; 2014 ; Journal of Africana Religions Volume 2 [2014] ; 9601 >
+        au < manifest ; 2015 ; Journal of Africana Religions Volume 3 [2015] ; 10296 >
+        au < manifest ; 2016 ; Journal of Africana Religions Volume 4 [2016] ; 10905 >
+        au < manifest ; 2017 ; Journal of Africana Religions Volume 5 [2017] ; 12268 >
 
     }
     {
@@ -104,11 +104,11 @@
 
       attr[journal_id] = 565
 
-        au < exists ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2, 2012 ; 8003 >
-        au < exists ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3, 2013 ; 9272 >
-        au < exists ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4, 2014 ; 10269 >
-        au < exists ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5, 2015 ; 10876 >
-        au < exists ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 6, 2016 ; 11291 >
+        au < manifest ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 [2012] ; 8003 >
+        au < manifest ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 [2013] ; 9272 >
+        au < manifest ; 2014 ; Journal of Assessment and Institutional Effectiveness Volume 4 [2014] ; 10269 >
+        au < manifest ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 5 [2015] ; 10876 >
+        au < manifest ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 6 [2016] ; 11291 >
 
     }
     {
@@ -122,11 +122,11 @@
 
       attr[journal_id] = 600
 
-        au < exists ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1, 2013 ; 8819 >
-        au < exists ; 2014 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 2, 2014 ; 9797 >
-        au < exists ; 2015 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 3, 2015 ; 10453 >
-        au < exists ; 2016 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 4, 2016 ; 11023 >
-        au < exists ; 2017 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 5, 2017 ; 12433 >
+        au < manifest ; 2013 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 1 [2013] ; 8819 >
+        au < manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 2 [2014] ; 9797 >
+        au < manifest ; 2015 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 3 [2015] ; 10453 >
+        au < manifest ; 2016 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 4 [2016] ; 11023 >
+        au < manifest ; 2017 ; Journal of Eastern Mediterranean Archaeology and Heritage Studies Volume 5 [2017] ; 12433 >
 
     }
     {
@@ -140,14 +140,14 @@
 
       attr[journal_id] = 484
 
-        au < exists ; 2010 ; The Journal of Medieval Religious Cultures Volume 36, 2010 ; 6168 >
-        au < exists ; 2011 ; The Journal of Medieval Religious Cultures Volume 37, 2011 ; 6695 >
-        au < exists ; 2012 ; The Journal of Medieval Religious Cultures Volume 38, 2012 ; 7931 >
-        au < exists ; 2013 ; The Journal of Medieval Religious Cultures Volume 39, 2013 ; 8666 >
-        au < exists ; 2014 ; The Journal of Medieval Religious Cultures Volume 40, 2014 ; 9597 >
-        au < exists ; 2015 ; The Journal of Medieval Religious Cultures Volume 41, 2015 ; 10273 >
-        au < exists ; 2016 ; The Journal of Medieval Religious Cultures Volume 42, 2016 ; 10927 >
-        au < exists ; 2017 ; The Journal of Medieval Religious Cultures Volume 43, 2017 ; 12294 >
+        au < manifest ; 2010 ; The Journal of Medieval Religious Cultures Volume 36 [2010] ; 6168 >
+        au < manifest ; 2011 ; The Journal of Medieval Religious Cultures Volume 37 [2011] ; 6695 >
+        au < manifest ; 2012 ; The Journal of Medieval Religious Cultures Volume 38 [2012] ; 7931 >
+        au < manifest ; 2013 ; The Journal of Medieval Religious Cultures Volume 39 [2013] ; 8666 >
+        au < manifest ; 2014 ; The Journal of Medieval Religious Cultures Volume 40 [2014] ; 9597 >
+        au < manifest ; 2015 ; The Journal of Medieval Religious Cultures Volume 41 [2015] ; 10273 >
+        au < manifest ; 2016 ; The Journal of Medieval Religious Cultures Volume 42 [2016] ; 10927 >
+        au < manifest ; 2017 ; The Journal of Medieval Religious Cultures Volume 43 [2017] ; 12294 >
 
     }
     {
@@ -161,12 +161,12 @@
 
       attr[journal_id] = 473
 
-        au < exists ; 2010 ; The Journal of Modern Periodical Studies Volume 1, 2010 ; 6357 >
-        au < exists ; 2011 ; The Journal of Modern Periodical Studies Volume 2, 2011 ; 7338 >
-        au < exists ; 2012 ; The Journal of Modern Periodical Studies Volume 3, 2012 ; 8401 >
-        au < exists ; 2013 ; The Journal of Modern Periodical Studies Volume 4, 2013 ; 9376 >
-        au < exists ; 2014 ; The Journal of Modern Periodical Studies Volume 5, 2014 ; 10120 >
-        au < exists ; 2015 ; The Journal of Modern Periodical Studies Volume 6, 2015 ; 10814 >
+        au < manifest ; 2010 ; The Journal of Modern Periodical Studies Volume 1 [2010] ; 6357 >
+        au < manifest ; 2011 ; The Journal of Modern Periodical Studies Volume 2 [2011] ; 7338 >
+        au < manifest ; 2012 ; The Journal of Modern Periodical Studies Volume 3 [2012] ; 8401 >
+        au < manifest ; 2013 ; The Journal of Modern Periodical Studies Volume 4 [2013] ; 9376 >
+        au < manifest ; 2014 ; The Journal of Modern Periodical Studies Volume 5 [2014] ; 10120 >
+        au < manifest ; 2015 ; The Journal of Modern Periodical Studies Volume 6 [2015] ; 10814 >
 
     }
     {
@@ -180,11 +180,11 @@
 
       attr[journal_id] = 558
 
-        au < exists ; 2012 ; Journal of Moravian History Volume 12, 2012 ; 8301 >
-        au < exists ; 2013 ; Journal of Moravian History Volume 13, 2013 ; 9082 >
-        au < exists ; 2014 ; Journal of Moravian History Volume 14, 2014 ; 9984 >
-        au < exists ; 2015 ; Journal of Moravian History Volume 15, 2015 ; 10632 >
-        au < exists ; 2016 ; Journal of Moravian History Volume 16, 2016 ; 11178 >
+        au < manifest ; 2012 ; Journal of Moravian History Volume 12 [2012] ; 8301 >
+        au < manifest ; 2013 ; Journal of Moravian History Volume 13 [2013] ; 9082 >
+        au < manifest ; 2014 ; Journal of Moravian History Volume 14 [2014] ; 9984 >
+        au < manifest ; 2015 ; Journal of Moravian History Volume 15 [2015] ; 10632 >
+        au < manifest ; 2016 ; Journal of Moravian History Volume 16 [2016] ; 11178 >
 
     }
     {
@@ -198,11 +198,11 @@
 
       attr[journal_id] = 561
 
-        au < exists ; 2012 ; Mediterranean Studies Volume 20, 2012 ; 8328 >
-        au < exists ; 2013 ; Mediterranean Studies Volume 21, 2013 ; 9153 >
-        au < exists ; 2014 ; Mediterranean Studies Volume 22, 2014 ; 10043 >
-        au < exists ; 2015 ; Mediterranean Studies Volume 23, 2015 ; 10650 >
-        au < exists ; 2016 ; Mediterranean Studies Volume 24, 2016 ; 11183 >
+        au < manifest ; 2012 ; Mediterranean Studies Volume 20 [2012] ; 8328 >
+        au < manifest ; 2013 ; Mediterranean Studies Volume 21 [2013] ; 9153 >
+        au < manifest ; 2014 ; Mediterranean Studies Volume 22 [2014] ; 10043 >
+        au < manifest ; 2015 ; Mediterranean Studies Volume 23 [2015] ; 10650 >
+        au < manifest ; 2016 ; Mediterranean Studies Volume 24 [2016] ; 11183 >
 
     }
     {
@@ -216,9 +216,9 @@
 
       attr[journal_id] = 635
 
-        au < exists ; 2014 ; Pacific Coast Philology Volume 49, 2014 ; 9877 >
-        au < exists ; 2015 ; Pacific Coast Philology Volume 50, 2015 ; 10538 >
-        au < exists ; 2016 ; Pacific Coast Philology Volume 51, 2016 ; 11126 >
+        au < manifest ; 2014 ; Pacific Coast Philology Volume 49 [2014] ; 9877 >
+        au < manifest ; 2015 ; Pacific Coast Philology Volume 50 [2015] ; 10538 >
+        au < manifest ; 2016 ; Pacific Coast Philology Volume 51 [2016] ; 11126 >
 
     }
     {
@@ -232,14 +232,14 @@
 
       attr[journal_id] = 476
 
-        au < exists ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77, 2010 ; 5665 >
-        au < exists ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78, 2011 ; 6696 >
-        au < exists ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79, 2012 ; 8163 >
-        au < exists ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80, 2013 ; 8620 >
-        au < exists ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81, 2014 ; 9600 >
-        au < exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82, 2015 ; 10333 >
-        au < exists ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83, 2016 ; 10900 >
-        au < exists ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84, 2017 ; 12293 >
+        au < manifest ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 [2010] ; 5665 >
+        au < manifest ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 [2011] ; 6696 >
+        au < manifest ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 [2012] ; 8163 >
+        au < manifest ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 [2013] ; 8620 >
+        au < manifest ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 [2014] ; 9600 >
+        au < manifest ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 [2015] ; 10333 >
+        au < manifest ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 [2016] ; 10900 >
+        au < manifest ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 [2017] ; 12293 >
 
     }
     {
@@ -253,25 +253,25 @@
 
       attr[journal_id] = 151
 
-        au < exists ; 1999 ; Philosophy and Rhetoric Volume 32, 1999 ; 505 >
-        au < exists ; 2000 ; Philosophy and Rhetoric Volume 33, 2000 ; 506 >
-        au < exists ; 2001 ; Philosophy and Rhetoric Volume 34, 2001 ; 507 >
-        au < exists ; 2002 ; Philosophy and Rhetoric Volume 35, 2002 ; 508 >
-        au < exists ; 2003 ; Philosophy and Rhetoric Volume 36, 2003 ; 939 >
-        au < exists ; 2004 ; Philosophy and Rhetoric Volume 37, 2004 ; 2500 >
-        au < exists ; 2005 ; Philosophy and Rhetoric Volume 38, 2005 ; 2742 >
-        au < exists ; 2006 ; Philosophy and Rhetoric Volume 39, 2006 ; 3071 >
-        au < exists ; 2007 ; Philosophy and Rhetoric Volume 40, 2007 ; 3321 >
-        au < exists ; 2008 ; Philosophy and Rhetoric Volume 41, 2008 ; 3681 >
-        au < exists ; 2009 ; Philosophy and Rhetoric Volume 42, 2009 ; 4056 >
-        au < exists ; 2010 ; Philosophy and Rhetoric Volume 43, 2010 ; 5829 >
-        au < exists ; 2011 ; Philosophy and Rhetoric Volume 44, 2011 ; 6815 >
-        au < exists ; 2012 ; Philosophy and Rhetoric Volume 45, 2012 ; 8000 >
-        au < exists ; 2013 ; Philosophy and Rhetoric Volume 46, 2013 ; 8754 >
-        au < exists ; 2014 ; Philosophy and Rhetoric Volume 47, 2014 ; 9669 >
-        au < exists ; 2015 ; Philosophy and Rhetoric Volume 48, 2015 ; 10394 >
-        au < exists ; 2016 ; Philosophy and Rhetoric Volume 49, 2016 ; 10951 >
-        au < exists ; 2017 ; Philosophy and Rhetoric Volume 50, 2017 ; 12380 >
+        au < manifest ; 1999 ; Philosophy and Rhetoric Volume 32 [1999] ; 505 >
+        au < manifest ; 2000 ; Philosophy and Rhetoric Volume 33 [2000] ; 506 >
+        au < manifest ; 2001 ; Philosophy and Rhetoric Volume 34 [2001] ; 507 >
+        au < manifest ; 2002 ; Philosophy and Rhetoric Volume 35 [2002] ; 508 >
+        au < manifest ; 2003 ; Philosophy and Rhetoric Volume 36 [2003] ; 939 >
+        au < manifest ; 2004 ; Philosophy and Rhetoric Volume 37 [2004] ; 2500 >
+        au < manifest ; 2005 ; Philosophy and Rhetoric Volume 38 [2005] ; 2742 >
+        au < manifest ; 2006 ; Philosophy and Rhetoric Volume 39 [2006] ; 3071 >
+        au < manifest ; 2007 ; Philosophy and Rhetoric Volume 40 [2007] ; 3321 >
+        au < manifest ; 2008 ; Philosophy and Rhetoric Volume 41 [2008] ; 3681 >
+        au < manifest ; 2009 ; Philosophy and Rhetoric Volume 42 [2009] ; 4056 >
+        au < manifest ; 2010 ; Philosophy and Rhetoric Volume 43 [2010] ; 5829 >
+        au < manifest ; 2011 ; Philosophy and Rhetoric Volume 44 [2011] ; 6815 >
+        au < manifest ; 2012 ; Philosophy and Rhetoric Volume 45 [2012] ; 8000 >
+        au < manifest ; 2013 ; Philosophy and Rhetoric Volume 46 [2013] ; 8754 >
+        au < manifest ; 2014 ; Philosophy and Rhetoric Volume 47 [2014] ; 9669 >
+        au < manifest ; 2015 ; Philosophy and Rhetoric Volume 48 [2015] ; 10394 >
+        au < manifest ; 2016 ; Philosophy and Rhetoric Volume 49 [2016] ; 10951 >
+        au < manifest ; 2017 ; Philosophy and Rhetoric Volume 50 [2017] ; 12380 >
 
     }
     {
@@ -285,11 +285,11 @@
 
       attr[journal_id] = 562
 
-        au < exists ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1, 2012 ; 8168 >
-        au < exists ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2, 2013 ; 8859 >
-        au < exists ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3, 2014 ; 9769 >
-        au < exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4, 2015 ; 10482 >
-        au < exists ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5, 2016 ; 11081 >
+        au < manifest ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 [2012] ; 8168 >
+        au < manifest ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 [2013] ; 8859 >
+        au < manifest ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 [2014] ; 9769 >
+        au < manifest ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 [2015] ; 10482 >
+        au < manifest ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 [2016] ; 11081 >
 
     }
     {
@@ -303,10 +303,10 @@
 
       attr[journal_id] = 602
 
-        au < exists ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5, 2013 ; 9207 >
-        au < exists ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6, 2014 ; 10087 >
-        au < exists ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7, 2015 ; 10688 >
-        au < exists ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8, 2016 ; 11275 >
+        au < manifest ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 [2013] ; 9207 >
+        au < manifest ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 [2014] ; 10087 >
+        au < manifest ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 [2015] ; 10688 >
+        au < manifest ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 [2016] ; 11275 >
 
     }
     {
@@ -320,9 +320,9 @@
 
       attr[journal_id] = 170
 
-        au < exists ; 1999 ; Resources for American Literary Study Volume 25, 1999 ; 585 >
-        au < exists ; 2000 ; Resources for American Literary Study Volume 26, 2000 ; 586 >
-        au < exists ; 2001 ; Resources for American Literary Study Volume 27, 2001 ; 587 >
+        au < manifest ; 1999 ; Resources for American Literary Study Volume 25 [1999] ; 585 >
+        au < manifest ; 2000 ; Resources for American Literary Study Volume 26 [2000] ; 586 >
+        au < manifest ; 2001 ; Resources for American Literary Study Volume 27 [2001] ; 587 >
 
     }
     {
@@ -336,23 +336,23 @@
 
       attr[journal_id] = 180
 
-        au < exists ; 2000 ; SHAW: The Journal of Bernard Shaw Studies Volume 20, 2000 ; 623 >
-        au < exists ; 2001 ; SHAW: The Journal of Bernard Shaw Studies Volume 21, 2001 ; 624 >
-        au < exists ; 2002 ; SHAW: The Journal of Bernard Shaw Studies Volume 22, 2002 ; 625 >
-        au < exists ; 2003 ; SHAW: The Journal of Bernard Shaw Studies Volume 23, 2003 ; 1715 >
-        au < exists ; 2004 ; SHAW: The Journal of Bernard Shaw Studies Volume 24, 2004 ; 2576 >
-        au < exists ; 2005 ; SHAW: The Journal of Bernard Shaw Studies Volume 25, 2005 ; 2837 >
-        au < exists ; 2006 ; SHAW: The Journal of Bernard Shaw Studies Volume 26, 2006 ; 3128 >
-        au < exists ; 2007 ; SHAW: The Journal of Bernard Shaw Studies Volume 27, 2007 ; 3496 >
-        au < exists ; 2008 ; SHAW: The Journal of Bernard Shaw Studies Volume 28, 2008 ; 4069 >
-        au < exists ; 2009 ; SHAW: The Journal of Bernard Shaw Studies Volume 29, 2009 ; 5743 >
-        au < exists ; 2010 ; SHAW: The Journal of Bernard Shaw Studies Volume 30, 2010 ; 6328 >
-        au < exists ; 2011 ; SHAW: The Journal of Bernard Shaw Studies Volume 31, 2011 ; 7384 >
-        au < exists ; 2012 ; SHAW: The Journal of Bernard Shaw Studies Volume 32, 2012 ; 8458 >
-        au < exists ; 2013 ; SHAW: The Journal of Bernard Shaw Studies Volume 33, 2013 ; 9309 >
-        au < exists ; 2014 ; SHAW: The Journal of Bernard Shaw Studies Volume 34, 2014 ; 10177 >
-        au < exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35, 2015 ; 10675 >
-        au < exists ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36, 2016 ; 11219 >
+        au < manifest ; 2000 ; SHAW: The Journal of Bernard Shaw Studies Volume 20 [2000] ; 623 >
+        au < manifest ; 2001 ; SHAW: The Journal of Bernard Shaw Studies Volume 21 [2001] ; 624 >
+        au < manifest ; 2002 ; SHAW: The Journal of Bernard Shaw Studies Volume 22 [2002] ; 625 >
+        au < manifest ; 2003 ; SHAW: The Journal of Bernard Shaw Studies Volume 23 [2003] ; 1715 >
+        au < manifest ; 2004 ; SHAW: The Journal of Bernard Shaw Studies Volume 24 [2004] ; 2576 >
+        au < manifest ; 2005 ; SHAW: The Journal of Bernard Shaw Studies Volume 25 [2005] ; 2837 >
+        au < manifest ; 2006 ; SHAW: The Journal of Bernard Shaw Studies Volume 26 [2006] ; 3128 >
+        au < manifest ; 2007 ; SHAW: The Journal of Bernard Shaw Studies Volume 27 [2007] ; 3496 >
+        au < manifest ; 2008 ; SHAW: The Journal of Bernard Shaw Studies Volume 28 [2008] ; 4069 >
+        au < manifest ; 2009 ; SHAW: The Journal of Bernard Shaw Studies Volume 29 [2009] ; 5743 >
+        au < manifest ; 2010 ; SHAW: The Journal of Bernard Shaw Studies Volume 30 [2010] ; 6328 >
+        au < manifest ; 2011 ; SHAW: The Journal of Bernard Shaw Studies Volume 31 [2011] ; 7384 >
+        au < manifest ; 2012 ; SHAW: The Journal of Bernard Shaw Studies Volume 32 [2012] ; 8458 >
+        au < manifest ; 2013 ; SHAW: The Journal of Bernard Shaw Studies Volume 33 [2013] ; 9309 >
+        au < manifest ; 2014 ; SHAW: The Journal of Bernard Shaw Studies Volume 34 [2014] ; 10177 >
+        au < manifest ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 [2015] ; 10675 >
+        au < manifest ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 [2016] ; 11219 >
 
     }
     {
@@ -366,12 +366,12 @@
 
       attr[journal_id] = 564
 
-        au < exists ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95, 2012 ; 8051 >
-        au < exists ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96, 2013 ; 8760 >
-        au < exists ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97, 2014 ; 9667 >
-        au < exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98, 2015 ; 10370 >
-        au < exists ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99, 2016 ; 10949 >
-        au < exists ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100, 2017 ; 12332 >
+        au < manifest ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 [2012] ; 8051 >
+        au < manifest ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 [2013] ; 8760 >
+        au < manifest ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 [2014] ; 9667 >
+        au < manifest ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 [2015] ; 10370 >
+        au < manifest ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 [2016] ; 10949 >
+        au < manifest ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 [2017] ; 12332 >
 
     }
     {
@@ -385,8 +385,8 @@
 
       attr[journal_id] = 656
 
-        au < exists ; 2015 ; Studies in American Humor Series 4, Volume 1, 2015 ; 10559 >
-        au < exists ; 2016 ; Studies in American Humor Series 4, Volume 2, 2016 ; 11121 >
+        au < manifest ; 2015 ; Studies in American Humor Series 4, Volume 1 [2015] ; 10559 >
+        au < manifest ; 2016 ; Studies in American Humor Series 4, Volume 2 [2016] ; 11121 >
 
     }
     {
@@ -400,16 +400,16 @@
 
       attr[journal_id] = 443
 
-        au < exists ; 2008 ; Studies in American Jewish Literature Volume 27, 2008 ; 4355 >
-        au < exists ; 2009 ; Studies in American Jewish Literature Volume 28, 2009 ; 5705 >
-        au < exists ; 2010 ; Studies in American Jewish Literature Volume 29, 2010 ; 6577 >
-        au < exists ; 2011 ; Studies in American Jewish Literature Volume 30, 2011 ; 7590 >
-        au < exists ; 2012 ; Studies in American Jewish Literature Volume 31, 2012 ; 8189 >
-        au < exists ; 2013 ; Studies in American Jewish Literature Volume 32, 2013 ; 8837 >
-        au < exists ; 2014 ; Studies in American Jewish Literature Volume 33, 2014 ; 9805 >
-        au < exists ; 2015 ; Studies in American Jewish Literature Volume 34, 2015 ; 10484 >
-        au < exists ; 2016 ; Studies in American Jewish Literature Volume 35, 2016 ; 11131 >
-        au < exists ; 2017 ; Studies in American Jewish Literature Volume 36, 2017 ; 12451 >
+        au < manifest ; 2008 ; Studies in American Jewish Literature Volume 27 [2008] ; 4355 >
+        au < manifest ; 2009 ; Studies in American Jewish Literature Volume 28 [2009] ; 5705 >
+        au < manifest ; 2010 ; Studies in American Jewish Literature Volume 29 [2010] ; 6577 >
+        au < manifest ; 2011 ; Studies in American Jewish Literature Volume 30 [2011] ; 7590 >
+        au < manifest ; 2012 ; Studies in American Jewish Literature Volume 31 [2012] ; 8189 >
+        au < manifest ; 2013 ; Studies in American Jewish Literature Volume 32 [2013] ; 8837 >
+        au < manifest ; 2014 ; Studies in American Jewish Literature Volume 33 [2014] ; 9805 >
+        au < manifest ; 2015 ; Studies in American Jewish Literature Volume 34 [2015] ; 10484 >
+        au < manifest ; 2016 ; Studies in American Jewish Literature Volume 35 [2016] ; 11131 >
+        au < manifest ; 2017 ; Studies in American Jewish Literature Volume 36 [2017] ; 12451 >
 
     }
     {
@@ -423,25 +423,25 @@
 
       attr[journal_id] = 38
 
-        au < exists ; 2000 ; The Chaucer Review Volume 34, 2000 ; 137 >
-        au < exists ; 2000-2001 ; The Chaucer Review Volume 35, 2000-2001 ; 138 >
-        au < exists ; 2001-2002 ; The Chaucer Review Volume 36, 2001-2002 ; 139 >
-        au < exists ; 2002-2003 ; The Chaucer Review Volume 37, 2002-2003 ; 140 >
-        au < exists ; 2003-2004 ; The Chaucer Review Volume 38,  2003-2004 ; 972 >
-        au < exists ; 2004-2005 ; The Chaucer Review Volume 39,  2004-2005 ; 2549 >
-        au < exists ; 2005-2006 ; The Chaucer Review Volume 40,  2005-2006 ; 2802 >
-        au < exists ; 2006-2007 ; The Chaucer Review Volume 41,  2006-2007 ; 3092 >
-        au < exists ; 2007-2008 ; The Chaucer Review Volume 42,  2007-2008 ; 3425 >
-        au < exists ; 2008-2009 ; The Chaucer Review Volume 43,  2008-2009 ; 3799 >
-        au < exists ; 2009-2010 ; The Chaucer Review Volume 44,  2009-2010 ; 4376 >
-        au < exists ; 2010-2011 ; The Chaucer Review Volume 45,  2010-2011 ; 6107 >
-        au < exists ; 2011-2012 ; The Chaucer Review Volume 46,  2011-2012 ; 7307 >
-        au < exists ; 2012-2013 ; The Chaucer Review Volume 47,  2012-2013 ; 8399 >
-        au < exists ; 2013-2014 ; The Chaucer Review Volume 48,  2013-2014 ; 9178 >
-        au < exists ; 2014-2015 ; The Chaucer Review Volume 49, 2014-2015 ; 10083 >
-        au < exists ; 2015 ; The Chaucer Review Volume 50, 2015 ; 10699 >
-        au < exists ; 2016 ; The Chaucer Review Volume 51, 2016 ; 10911 >
-        au < exists ; 2017 ; The Chaucer Review Volume 52, 2017 ; 12292 >
+        au < manifest ; 2000 ; The Chaucer Review Volume 34 [2000] ; 137 >
+        au < manifest ; 2000-2001 ; The Chaucer Review Volume 35 [2000-2001] ; 138 >
+        au < manifest ; 2001-2002 ; The Chaucer Review Volume 36 [2001-2002] ; 139 >
+        au < manifest ; 2002-2003 ; The Chaucer Review Volume 37 [2002-2003] ; 140 >
+        au < manifest ; 2003-2004 ; The Chaucer Review Volume 38 [2003-2004] ; 972 >
+        au < manifest ; 2004-2005 ; The Chaucer Review Volume 39 [2004-2005] ; 2549 >
+        au < manifest ; 2005-2006 ; The Chaucer Review Volume 40 [2005-2006] ; 2802 >
+        au < manifest ; 2006-2007 ; The Chaucer Review Volume 41 [2006-2007] ; 3092 >
+        au < manifest ; 2007-2008 ; The Chaucer Review Volume 42 [2007-2008] ; 3425 >
+        au < manifest ; 2008-2009 ; The Chaucer Review Volume 43 [2008-2009] ; 3799 >
+        au < manifest ; 2009-2010 ; The Chaucer Review Volume 44 [2009-2010] ; 4376 >
+        au < manifest ; 2010-2011 ; The Chaucer Review Volume 45 [2010-2011] ; 6107 >
+        au < manifest ; 2011-2012 ; The Chaucer Review Volume 46 [2011-2012] ; 7307 >
+        au < manifest ; 2012-2013 ; The Chaucer Review Volume 47 [2012-2013] ; 8399 >
+        au < manifest ; 2013-2014 ; The Chaucer Review Volume 48 [2013-2014] ; 9178 >
+        au < manifest ; 2014-2015 ; The Chaucer Review Volume 49 [2014-2015] ; 10083 >
+        au < manifest ; 2015 ; The Chaucer Review Volume 50 [2015] ; 10699 >
+        au < manifest ; 2016 ; The Chaucer Review Volume 51 [2016] ; 10911 >
+        au < manifest ; 2017 ; The Chaucer Review Volume 52 [2017] ; 12292 >
 
     }
     {
@@ -455,9 +455,9 @@
 
       attr[journal_id] = 658
 
-        au < exists ; 2015 ; The Cormac McCarthy Journal Volume 13, 2015 ; 10769 >
-        au < exists ; 2016 ; The Cormac McCarthy Journal Volume 14, 2016 ; 11057 >
-        au < exists ; 2017 ; The Cormac McCarthy Journal Volume 15, 2017 ; 12478 >
+        au < manifest ; 2015 ; The Cormac McCarthy Journal Volume 13 [2015] ; 10769 >
+        au < manifest ; 2016 ; The Cormac McCarthy Journal Volume 14 [2016] ; 11057 >
+        au < manifest ; 2017 ; The Cormac McCarthy Journal Volume 15 [2017] ; 12478 >
 
     }
     {
@@ -471,10 +471,10 @@
 
       attr[journal_id] = 597
 
-        au < exists ; 2013 ; The Edgar Allan Poe Review Volume 14,  2013 ; 9062 >
-        au < exists ; 2014 ; The Edgar Allan Poe Review Volume 15,  2014 ; 9873 >
-        au < exists ; 2015 ; The Edgar Allan Poe Review Volume 16, 2015 ; 10604 >
-        au < exists ; 2016 ; The Edgar Allan Poe Review Volume 17, 2016 ; 11143 >
+        au < manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 [2013] ; 9062 >
+        au < manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 [2014] ; 9873 >
+        au < manifest ; 2015 ; The Edgar Allan Poe Review Volume 16 [2015] ; 10604 >
+        au < manifest ; 2016 ; The Edgar Allan Poe Review Volume 17 [2016] ; 11143 >
 
     }
     {
@@ -488,11 +488,11 @@
 
       attr[journal_id] = 551
 
-        au < exists ; 2012 ; Eugene O'Neill Review Volume 33, 2012 ; 8098 >
-        au < exists ; 2013 ; Eugene O'Neill Review Volume 34, 2013 ; 8832 >
-        au < exists ; 2014 ; Eugene O'Neill Review Volume 35, 2014 ; 9756 >
-        au < exists ; 2015 ; Eugene O'Neill Review Volume 36, 2015 ; 10519 >
-        au < exists ; 2016 ; Eugene O'Neill Review Volume 37, 2016 ; 11003 >
+        au < manifest ; 2012 ; Eugene O'Neill Review Volume 33 [2012] ; 8098 >
+        au < manifest ; 2013 ; Eugene O'Neill Review Volume 34 [2013] ; 8832 >
+        au < manifest ; 2014 ; Eugene O'Neill Review Volume 35 [2014] ; 9756 >
+        au < manifest ; 2015 ; Eugene O'Neill Review Volume 36 [2015] ; 10519 >
+        au < manifest ; 2016 ; Eugene O'Neill Review Volume 37 [2016] ; 11003 >
 
     }
     {
@@ -506,10 +506,10 @@
 
       attr[journal_id] = 620
 
-        au < exists ; 2013 ; The F. Scott Fitzgerald Review Volume 11, 2013 ; 9378 >
-        au < exists ; 2014 ; The F. Scott Fitzgerald Review Volume 12, 2014 ; 10232 >
-        au < exists ; 2015 ; The F. Scott Fitzgerald Review Volume 13, 2015 ; 10863 >
-        au < exists ; 2016 ; The F. Scott Fitzgerald Review Volume 14, 2016 ; 12222 >
+        au < manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 [2013] ; 9378 >
+        au < manifest ; 2014 ; The F. Scott Fitzgerald Review Volume 12 [2014] ; 10232 >
+        au < manifest ; 2015 ; The F. Scott Fitzgerald Review Volume 13 [2015] ; 10863 >
+        au < manifest ; 2016 ; The F. Scott Fitzgerald Review Volume 14 [2016] ; 12222 >
 
     }
     {
@@ -523,20 +523,20 @@
 
       attr[journal_id] = 69
 
-        au < exists ; 2002 ; The Good Society Volume 11, 2002 ; 236 >
-        au < exists ; 2003 ; The Good Society Volume 12, 2003 ; 1718 >
-        au < exists ; 2004 ; The Good Society Volume 13, 2004 ; 2595 >
-        au < exists ; 2005 ; The Good Society Volume 14, 2005 ; 2875 >
-        au < exists ; 2006 ; The Good Society Volume 15, 2006 ; 3190 >
-        au < exists ; 2007 ; The Good Society Volume 16, 2007 ; 3628 >
-        au < exists ; 2008 ; The Good Society Volume 17, 2008 ; 3901 >
-        au < exists ; 2009 ; The Good Society Volume 18, 2009 ; 4385 >
-        au < exists ; 2010 ; The Good Society Volume 19, 2010 ; 6327 >
-        au < exists ; 2011 ; The Good Society Volume 20, 2011 ; 7592 >
-        au < exists ; 2012 ; The Good Society Volume 21, 2012 ; 8415 >
-        au < exists ; 2013 ; The Good Society Volume 22, 2013 ; 9197 >
-        au < exists ; 2014 ; The Good Society Volume 23, 2014 ; 10092 >
-        au < exists ; 2015 ; The Good Society Volume 24, 2015 ; 10765 >
+        au < manifest ; 2002 ; The Good Society Volume 11 [2002] ; 236 >
+        au < manifest ; 2003 ; The Good Society Volume 12 [2003] ; 1718 >
+        au < manifest ; 2004 ; The Good Society Volume 13 [2004] ; 2595 >
+        au < manifest ; 2005 ; The Good Society Volume 14 [2005] ; 2875 >
+        au < manifest ; 2006 ; The Good Society Volume 15 [2006] ; 3190 >
+        au < manifest ; 2007 ; The Good Society Volume 16 [2007] ; 3628 >
+        au < manifest ; 2008 ; The Good Society Volume 17 [2008] ; 3901 >
+        au < manifest ; 2009 ; The Good Society Volume 18 [2009] ; 4385 >
+        au < manifest ; 2010 ; The Good Society Volume 19 [2010] ; 6327 >
+        au < manifest ; 2011 ; The Good Society Volume 20 [2011] ; 7592 >
+        au < manifest ; 2012 ; The Good Society Volume 21 [2012] ; 8415 >
+        au < manifest ; 2013 ; The Good Society Volume 22 [2013] ; 9197 >
+        au < manifest ; 2014 ; The Good Society Volume 23 [2014] ; 10092 >
+        au < manifest ; 2015 ; The Good Society Volume 24 [2015] ; 10765 >
 
     }
     {
@@ -550,9 +550,9 @@
 
       attr[journal_id] = 631
 
-        au < exists ; 2014 ; Journal of Ayn Rand Studies Volume 14, 2014 ; 10085 >
-        au < exists ; 2015 ; Journal of Ayn Rand Studies Volume 15, 2015 ; 10697 >
-        au < exists ; 2016 ; Journal of Ayn Rand Studies Volume 16, 2016 ; 12218 >
+        au < manifest ; 2014 ; Journal of Ayn Rand Studies Volume 14 [2014] ; 10085 >
+        au < manifest ; 2015 ; Journal of Ayn Rand Studies Volume 15 [2015] ; 10697 >
+        au < manifest ; 2016 ; Journal of Ayn Rand Studies Volume 16 [2016] ; 12218 >
 
     }
     {
@@ -566,24 +566,24 @@
 
       attr[journal_id] = 89
 
-        au < exists ; 1999 ; The Journal of General Education Volume 48, 1999 ; 291 >
-        au < exists ; 2000 ; The Journal of General Education Volume 49, 2000 ; 292 >
-        au < exists ; 2001 ; The Journal of General Education Volume 50, 2001 ; 293 >
-        au < exists ; 2002 ; The Journal of General Education Volume 51, 2002 ; 294 >
-        au < exists ; 2003 ; The Journal of General Education Volume 52, 2003 ; 932 >
-        au < exists ; 2004 ; The Journal of General Education Volume 53, 2004 ; 2553 >
-        au < exists ; 2005-2006 ; The Journal of General Education Volume 54, 2005-2006 ; 2838 >
-        au < exists ; 2006 ; The Journal of General Education Volume 55, 2006 ; 3154 >
-        au < exists ; 2007 ; The Journal of General Education Volume 56, 2007 ; 3456 >
-        au < exists ; 2008 ; The Journal of General Education Volume 57, 2008 ; 3867 >
-        au < exists ; 2009 ; The Journal of General Education Volume 58, 2009 ; 4269 >
-        au < exists ; 2010 ; The Journal of General Education Volume 59, 2010 ; 6388 >
-        au < exists ; 2011 ; The Journal of General Education Volume 60, 2011 ; 7571 >
-        au < exists ; 2012 ; The Journal of General Education Volume 61, 2012 ; 8135 >
-        au < exists ; 2013 ; The Journal of General Education Volume 62, 2013 ; 8882 >
-        au < exists ; 2014 ; The Journal of General Education Volume 63, 2014 ; 9767 >
-        au < exists ; 2015 ; The Journal of General Education Volume 64, 2015 ; 10441 >
-        au < exists ; 2016 ; The Journal of General Education Volume 65, 2016 ; 11312 >
+        au < manifest ; 1999 ; The Journal of General Education Volume 48 [1999] ; 291 >
+        au < manifest ; 2000 ; The Journal of General Education Volume 49 [2000] ; 292 >
+        au < manifest ; 2001 ; The Journal of General Education Volume 50 [2001] ; 293 >
+        au < manifest ; 2002 ; The Journal of General Education Volume 51 [2002] ; 294 >
+        au < manifest ; 2003 ; The Journal of General Education Volume 52 [2003] ; 932 >
+        au < manifest ; 2004 ; The Journal of General Education Volume 53 [2004] ; 2553 >
+        au < manifest ; 2005-2006 ; The Journal of General Education Volume 54 [2005-2006] ; 2838 >
+        au < manifest ; 2006 ; The Journal of General Education Volume 55 [2006] ; 3154 >
+        au < manifest ; 2007 ; The Journal of General Education Volume 56 [2007] ; 3456 >
+        au < manifest ; 2008 ; The Journal of General Education Volume 57 [2008] ; 3867 >
+        au < manifest ; 2009 ; The Journal of General Education Volume 58 [2009] ; 4269 >
+        au < manifest ; 2010 ; The Journal of General Education Volume 59 [2010] ; 6388 >
+        au < manifest ; 2011 ; The Journal of General Education Volume 60 [2011] ; 7571 >
+        au < manifest ; 2012 ; The Journal of General Education Volume 61 [2012] ; 8135 >
+        au < manifest ; 2013 ; The Journal of General Education Volume 62 [2013] ; 8882 >
+        au < manifest ; 2014 ; The Journal of General Education Volume 63 [2014] ; 9767 >
+        au < manifest ; 2015 ; The Journal of General Education Volume 64 [2015] ; 10441 >
+        au < manifest ; 2016 ; The Journal of General Education Volume 65 [2016] ; 11312 >
 
     }
     {
@@ -597,31 +597,31 @@
 
       attr[journal_id] = 142
 
-        au < exists ; 2002 ; The Journal of Nietzsche Studies Issue 23, Spring 2002 ; 473 >
-        au < exists ; 2002 ; The Journal of Nietzsche Studies Issue 24, Fall 2002 ; 766 >
-        au < exists ; 2003 ; The Journal of Nietzsche Studies Issue 25, Spring 2003 ; 952 >
-        au < exists ; 2003 ; The Journal of Nietzsche Studies Issue 26, Autumn 2003 ; 1726 >
-        au < exists ; 2004 ; The Journal of Nietzsche Studies Issue 27, Spring 2004 ; 2440 >
-        au < exists ; 2004 ; The Journal of Nietzsche Studies Issue 28, Autumn 2004 ; 2599 >
-        au < exists ; 2005 ; The Journal of Nietzsche Studies Issue 29, Spring 2005 ; 2761 >
-        au < exists ; 2005 ; The Journal of Nietzsche Studies Issue 30, Autumn 2005 ; 2856 >
-        au < exists ; 2006 ; The Journal of Nietzsche Studies Issue 31, Spring 2006 ; 3079 >
-        au < exists ; 2006 ; The Journal of Nietzsche Studies Issue 32, Autumn 2006 ; 3164 >
-        au < exists ; 2007 ; The Journal of Nietzsche Studies Issue 33, Spring 2007 ; 3433 >
-        au < exists ; 2007 ; The Journal of Nietzsche Studies Issue 34, Autumn 2007 ; 3503 >
-        au < exists ; 2008 ; The Journal of Nietzsche Studies Issue 35/36, Spring/Autumn 2008 ; 4020 >
-        au < exists ; 2009 ; The Journal of Nietzsche Studies Issue 37, Spring 2009 ; 4227 >
-        au < exists ; 2009 ; The Journal of Nietzsche Studies Issue 38, Autumn 2009 ; 4427 >
-        au < exists ; 2010 ; The Journal of Nietzsche Studies Issue 39, Spring 2010 ; 5854 >
-        au < exists ; 2010 ; The Journal of Nietzsche Studies Issue 40, Autumn 2010 ; 6556 >
-        au < exists ; 2011 ; The Journal of Nietzsche Studies Issue 41, Spring 2011 ; 7105 >
-        au < exists ; 2011 ; The Journal of Nietzsche Studies Issue 42, Autumn 2011 ; 7692 >
-        au < exists ; 2012 ; The Journal of Nietzsche Studies Volume 43, 2012 ; 8221 >
-        au < exists ; 2013 ; The Journal of Nietzsche Studies Volume 44, 2013 ; 9055 >
-        au < exists ; 2014 ; The Journal of Nietzsche Studies Volume 45, 2014 ; 9811 >
-        au < exists ; 2015 ; The Journal of Nietzsche Studies Volume 46, 2015 ; 10534 >
-        au < exists ; 2016 ; The Journal of Nietzsche Studies Volume 47, 2016 ; 10993 >
-        au < exists ; 2017 ; The Journal of Nietzsche Studies Volume 48, 2017 ; 12456 >
+        au < manifest ; 2002 ; The Journal of Nietzsche Studies Issue 23 [Spring 2002] ; 473 >
+        au < manifest ; 2002 ; The Journal of Nietzsche Studies Issue 24 [Fall 2002] ; 766 >
+        au < manifest ; 2003 ; The Journal of Nietzsche Studies Issue 25 [Spring 2003] ; 952 >
+        au < manifest ; 2003 ; The Journal of Nietzsche Studies Issue 26 [Autumn 2003] ; 1726 >
+        au < manifest ; 2004 ; The Journal of Nietzsche Studies Issue 27 [Spring 2004] ; 2440 >
+        au < manifest ; 2004 ; The Journal of Nietzsche Studies Issue 28 [Autumn 2004] ; 2599 >
+        au < manifest ; 2005 ; The Journal of Nietzsche Studies Issue 29 [Spring 2005] ; 2761 >
+        au < manifest ; 2005 ; The Journal of Nietzsche Studies Issue 30 [Autumn 2005] ; 2856 >
+        au < manifest ; 2006 ; The Journal of Nietzsche Studies Issue 31 [Spring 2006] ; 3079 >
+        au < manifest ; 2006 ; The Journal of Nietzsche Studies Issue 32 [Autumn 2006] ; 3164 >
+        au < manifest ; 2007 ; The Journal of Nietzsche Studies Issue 33 [Spring 2007] ; 3433 >
+        au < manifest ; 2007 ; The Journal of Nietzsche Studies Issue 34 [Autumn 2007] ; 3503 >
+        au < manifest ; 2008 ; The Journal of Nietzsche Studies Issue 35-36 [Spring/Autumn 2008] ; 4020 >
+        au < manifest ; 2009 ; The Journal of Nietzsche Studies Issue 37 [Spring 2009] ; 4227 >
+        au < manifest ; 2009 ; The Journal of Nietzsche Studies Issue 38 [Autumn 2009] ; 4427 >
+        au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 39 [Spring 2010] ; 5854 >
+        au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 40 [Autumn 2010] ; 6556 >
+        au < manifest ; 2011 ; The Journal of Nietzsche Studies Issue 41 [Spring 2011] ; 7105 >
+        au < manifest ; 2011 ; The Journal of Nietzsche Studies Issue 42 [Autumn 2011] ; 7692 >
+        au < manifest ; 2012 ; The Journal of Nietzsche Studies Volume 43 [2012] ; 8221 >
+        au < manifest ; 2013 ; The Journal of Nietzsche Studies Volume 44 [2013] ; 9055 >
+        au < manifest ; 2014 ; The Journal of Nietzsche Studies Volume 45 [2014] ; 9811 >
+        au < manifest ; 2015 ; The Journal of Nietzsche Studies Volume 46 [2015] ; 10534 >
+        au < manifest ; 2016 ; The Journal of Nietzsche Studies Volume 47 [2016] ; 10993 >
+        au < manifest ; 2017 ; The Journal of Nietzsche Studies Volume 48 [2017] ; 12456 >
 
     }
     {
@@ -635,25 +635,25 @@
 
       attr[journal_id] = 104
 
-        au < exists ; 1999 ; The Journal of Speculative Philosophy New Series, Volume 13, 1999 ; 344 >
-        au < exists ; 2000-2001 ; The Journal of Speculative Philosophy New Series, Volume 14, 2000-2001 ; 345 >
-        au < exists ; 2001 ; The Journal of Speculative Philosophy New Series, Volume 15, 2001 ; 346 >
-        au < exists ; 2002 ; The Journal of Speculative Philosophy New Series, Volume 16, 2002 ; 347 >
-        au < exists ; 2003 ; The Journal of Speculative Philosophy New Series, Volume 17, 2003 ; 935 >
-        au < exists ; 2004 ; The Journal of Speculative Philosophy New Series, Volume 18, 2004 ; 1774 >
-        au < exists ; 2005 ; The Journal of Speculative Philosophy New Series, Volume 19, 2005 ; 2751 >
-        au < exists ; 2006 ; The Journal of Speculative Philosophy New Series, Volume 20, 2006 ; 3148 >
-        au < exists ; 2007 ; The Journal of Speculative Philosophy New Series, Volume 21, 2007 ; 3466 >
-        au < exists ; 2008 ; The Journal of Speculative Philosophy New Series, Volume 22, 2008 ; 3907 >
-        au < exists ; 2009-2010 ; The Journal of Speculative Philosophy New Series, Volume 23, 2009-2010 ; 4379 >
-        au < exists ; 2010 ; The Journal of Speculative Philosophy New Series, Volume 24, 2010 ; 6222 >
-        au < exists ; 2011 ; The Journal of Speculative Philosophy New Series, Volume 25, 2011 ; 7146 >
-        au < exists ; 2012 ; The Journal of Speculative Philosophy New Series, Volume 26, 2012 ; 8384 >
-        au < exists ; 2013 ; The Journal of Speculative Philosophy New Series, Volume 27, 2013 ; 8817 >
-        au < exists ; 2014 ; The Journal of Speculative Philosophy New Series, Volume 28, 2014 ; 9732 >
-        au < exists ; 2015 ; The Journal of Speculative Philosophy New Series, Volume 29, 2015 ; 10330 >
-        au < exists ; 2016 ; The Journal of Speculative Philosophy New Series, Volume 30, 2016 ; 10979 >
-        au < exists ; 2017 ; The Journal of Speculative Philosophy New Series, Volume 31, 2017 ; 12343 >
+        au < manifest ; 1999 ; The Journal of Speculative Philosophy New Series, Volume 13 [1999] ; 344 >
+        au < manifest ; 2000-2001 ; The Journal of Speculative Philosophy New Series, Volume 14 [2000-2001] ; 345 >
+        au < manifest ; 2001 ; The Journal of Speculative Philosophy New Series, Volume 15 [2001] ; 346 >
+        au < manifest ; 2002 ; The Journal of Speculative Philosophy New Series, Volume 16 [2002] ; 347 >
+        au < manifest ; 2003 ; The Journal of Speculative Philosophy New Series, Volume 17 [2003] ; 935 >
+        au < manifest ; 2004 ; The Journal of Speculative Philosophy New Series, Volume 18 [2004] ; 1774 >
+        au < manifest ; 2005 ; The Journal of Speculative Philosophy New Series, Volume 19 [2005] ; 2751 >
+        au < manifest ; 2006 ; The Journal of Speculative Philosophy New Series, Volume 20 [2006] ; 3148 >
+        au < manifest ; 2007 ; The Journal of Speculative Philosophy New Series, Volume 21 [2007] ; 3466 >
+        au < manifest ; 2008 ; The Journal of Speculative Philosophy New Series, Volume 22 [2008] ; 3907 >
+        au < manifest ; 2009-2010 ; The Journal of Speculative Philosophy New Series, Volume 23 [2009-2010] ; 4379 >
+        au < manifest ; 2010 ; The Journal of Speculative Philosophy New Series, Volume 24 [2010] ; 6222 >
+        au < manifest ; 2011 ; The Journal of Speculative Philosophy New Series, Volume 25 [2011] ; 7146 >
+        au < manifest ; 2012 ; The Journal of Speculative Philosophy New Series, Volume 26 [2012] ; 8384 >
+        au < manifest ; 2013 ; The Journal of Speculative Philosophy New Series, Volume 27 [2013] ; 8817 >
+        au < manifest ; 2014 ; The Journal of Speculative Philosophy New Series, Volume 28 [2014] ; 9732 >
+        au < manifest ; 2015 ; The Journal of Speculative Philosophy New Series, Volume 29 [2015] ; 10330 >
+        au < manifest ; 2016 ; The Journal of Speculative Philosophy New Series, Volume 30 [2016] ; 10979 >
+        au < manifest ; 2017 ; The Journal of Speculative Philosophy New Series, Volume 31 [2017] ; 12343 >
 
     }
     {
@@ -667,10 +667,10 @@
 
       attr[journal_id] = 603
 
-        au < exists ; 2013 ; The Mark Twain Annual Volume 11, 2013 ; 9441 >
-        au < exists ; 2014 ; The Mark Twain Annual Volume 12, 2014 ; 10215 >
-        au < exists ; 2015 ; The Mark Twain Annual Volume 13, 2015 ; 10815 >
-        au < exists ; 2016 ; The Mark Twain Annual Volume 14, 2016 ; 12146 >
+        au < manifest ; 2013 ; The Mark Twain Annual Volume 11 [2013] ; 9441 >
+        au < manifest ; 2014 ; The Mark Twain Annual Volume 12 [2014] ; 10215 >
+        au < manifest ; 2015 ; The Mark Twain Annual Volume 13 [2015] ; 10815 >
+        au < manifest ; 2016 ; The Mark Twain Annual Volume 14 [2016] ; 12146 >
 
     }
     {
@@ -684,12 +684,12 @@
 
       attr[journal_id] = 569
 
-        au < exists ; 2012 ; Transportation Journal Volume 51, 2012 ; 7930 >
-        au < exists ; 2013 ; Transportation Journal Volume 52, 2013 ; 8705 >
-        au < exists ; 2014 ; Transportation Journal Volume 53, 2014 ; 9602 >
-        au < exists ; 2015 ; Transportation Journal Volume 54, 2015 ; 10346 >
-        au < exists ; 2016 ; Transportation Journal Volume 55, 2016 ; 10902 >
-        au < exists ; 2017 ; Transportation Journal Volume 56, 2017 ; 12327 >
+        au < manifest ; 2012 ; Transportation Journal Volume 51 [2012] ; 7930 >
+        au < manifest ; 2013 ; Transportation Journal Volume 52 [2013] ; 8705 >
+        au < manifest ; 2014 ; Transportation Journal Volume 53 [2014] ; 9602 >
+        au < manifest ; 2015 ; Transportation Journal Volume 54 [2015] ; 10346 >
+        au < manifest ; 2016 ; Transportation Journal Volume 55 [2016] ; 10902 >
+        au < manifest ; 2017 ; Transportation Journal Volume 56 [2017] ; 12327 >
 
     }
     {
@@ -703,13 +703,13 @@
 
       attr[journal_id] = 507
 
-        au < exists ; 2010 ; Utopian Studies Volume 21, 2010 ; 6336 >
-        au < exists ; 2011 ; Utopian Studies Volume 22, 2011 ; 6816 >
-        au < exists ; 2012 ; Utopian Studies Volume 23, 2012 ; 8246 >
-        au < exists ; 2013 ; Utopian Studies Volume 24, 2013 ; 8938 >
-        au < exists ; 2014 ; Utopian Studies Volume 25, 2014 ; 9903 >
-        au < exists ; 2015 ; Utopian Studies Volume 26, 2015 ; 10562 >
-        au < exists ; 2016 ; Utopian Studies Volume 27, 2016 ; 11048 >
+        au < manifest ; 2010 ; Utopian Studies Volume 21 [2010] ; 6336 >
+        au < manifest ; 2011 ; Utopian Studies Volume 22 [2011] ; 6816 >
+        au < manifest ; 2012 ; Utopian Studies Volume 23 [2012] ; 8246 >
+        au < manifest ; 2013 ; Utopian Studies Volume 24 [2013] ; 8938 >
+        au < manifest ; 2014 ; Utopian Studies Volume 25 [2014] ; 9903 >
+        au < manifest ; 2015 ; Utopian Studies Volume 26 [2015] ; 10562 >
+        au < manifest ; 2016 ; Utopian Studies Volume 27 [2016] ; 11048 >
 
     }
 
