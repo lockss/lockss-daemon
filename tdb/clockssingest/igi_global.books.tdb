@@ -3211,6 +3211,12 @@
     au < exists ; exists ; 2017 ; 9781522517283 ; 9781522517276 ; 10.4018/978-1-5225-1727-6 ; 163940 ; Handbook of Research on the Facilitation of Civic Engagement through Community Art ;  ; >
     au < exists ; exists ; 2017 ; 9781522524991 ; 9781522524984 ; 10.4018/978-1-5225-2498-4 ; 176081 ; Handbook of Research on Applied Cybernetics and Systems Science ;  ; >
     au < exists ; exists ; 2017 ; 9781522526698 ; 9781522526681 ; 10.4018/978-1-5225-2668-1 ; 178167 ; Handbook of Research on Technology Adoption, Social Policy, and Global Integration ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508984 ; 9781522508977 ; 10.4018/978-1-5225-0897-7 ; 152430 ; Handbook of Research on Promoting Cross-Cultural Competence and Social Justice in Teacher Education ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519799 ; 9781522519782 ; 10.4018/978-1-5225-1978-2 ; 170033 ; Handbook of Research on Entrepreneurial Development and Innovation Within Smart Cities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519768 ; 9781522518808 ; 10.4018/978-1-5225-1880-8 ; 167083 ; Handbook of Research on Science Education and University Outreach as a Tool for Regional Development ;  ; >
+    au < exists ; exists ; 2017 ; 9781522509745 ; 9781522509738 ; 10.4018/978-1-5225-0973-8 ; 154859 ; Handbook of Research on Information Management for Effective Logistics and Supply Chains ;  ; >
+    au < exists ; exists ; 2017 ; 9781522520320 ; 9781522520313 ; 10.4018/978-1-5225-2031-3 ; 171021 ; Handbook of Research on Advanced Data Mining Techniques and Applications for Business Intelligence ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508786 ; 9781522508779 ; 10.4018/978-1-5225-0877-9 ; 152132 ; Handbook of Research on Building, Growing, and Sustaining Quality E-Learning Programs ;  ; >
     au < exists ; exists ; 2017 ; 9781522504962 ; 9781522504955 ; 10.4018/978-1-5225-0495-5 ; 147017 ; Harnessing Social Media as a Knowledge Management Tool ;  ; >
     au < exists ; exists ; 2017 ; 9781522522638 ; 9781522522621 ; 10.4018/978-1-5225-2262-1 ; 173017 ; Health Information Systems and the Advancement of Medical Practice in Developing Countries ;  ; >
     au < exists ; exists ; 2017 ; 9781522519294 ; 9781522519287 ; 10.4018/978-1-5225-1928-7 ; 168537 ; Health Literacy: Breakthroughs in Research and Practice ;  ; >
@@ -3314,60 +3320,164 @@
     au < exists ; exists ; 2017 ; 9781522518631 ; 9781522518624 ; 10.4018/978-1-5225-1862-4 ; 166730 ; Politics, Protest, and Empowerment in Digital Spaces ;  ; >
     au < exists ; exists ; 2017 ; 9781522504849 ; 9781522504832 ; 10.4018/978-1-5225-0483-2 ; 146992 ; Preparing Foreign Language Teachers for Next-Generation Education ;  ; >
     au < exists ; exists ; 2017 ; 9781522517542 ; 9781522517535 ; 10.4018/978-1-5225-1753-5 ; 164945 ; Preparing Pre-Service Teachers for the Inclusive Classroom ;  ; >
-
-
-    #implicit < status ; status2 ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author ; hidden[proxy] >
-    au < exists ; exists ; 2017 ; 9781522508984 ; 9781522508977 ; 10.4018/978-1-5225-0897-7 ; 152430 ; Handbook of Research on Promoting Cross-Cultural Competence and Social Justice in Teacher Education ; Jared Keengwe (University of North Dakota, USA) ; >
-    au < exists ; exists ; 2017 ; 9781522519799 ; 9781522519782 ; 10.4018/978-1-5225-1978-2 ; 170033 ; Handbook of Research on Entrepreneurial Development and Innovation Within Smart Cities ; Luisa Cagica Carvalho (Universidade Aberta, Portugal & CEFAGE - Universidade de Évora, Portugal) ; >
-    au < exists ; exists ; 2017 ; 9781522519645 ; 9781522519638 ; 10.4018/978-1-5225-1963-8 ; 169445 ; Social Media Performance Evaluation and Success Measurements ; Michael A. Brown Sr. (Florida International University, USA) ; >
-    au < exists ; exists ; 2017 ; 9781522518983 ; 9781522518976 ; 10.4018/978-1-5225-1897-6 ; 167943 ; Solutions for High-Touch Communications in a High-Tech World ; Michael A. Brown Sr. (Florida International University, USA) ; >
-    au < exists ; exists ; 2017 ; 9781522519768 ; 9781522518808 ; 10.4018/978-1-5225-1880-8 ; 167083 ; Handbook of Research on Science Education and University Outreach as a Tool for Regional Development ; B. Pandu Ranga Narasimharao (Indira Gandhi National Open University IGNOU, India), Elizabeth Wright (Keck Graduate Institute (KGI), USA), Shashidhara Prasad (University of Mysore, India) and Meghana Joshi (Keck Graduate Institute (KGI), USA) ; >
-    au < exists ; exists ; 2017 ; 9781522510383 ; 9781522510376 ; 10.4018/978-1-5225-1037-6 ; 156641 ; Technologies for the Treatment and Recovery of Nutrients from Industrial Wastewater ; Ángeles Val del Río (University of Santiago de Compostela, Spain), José Luis Campos Gómez (University Adolfo Ibáñez, Chile) and Anuska Mosquera Corral (University of Santiago de Compostela, Spain) ; >
-    au < exists ; exists ; 2017 ; 9781522524939 ; 9781522524922 ; 10.4018/978-1-5225-2492-2 ; 176067 ; Smart Technology Applications in Business Environments ; Tomayess Issa (University of Curtin, Australia), Piet Kommers (University of Twente, Netherlands), Theodora Issa (University of Curtin, Australia), Pedro Isais (Portuguese Open University, Portugal) and Touma B. Issa (Murdoch University, Australia) ; >
-    au < exists ; exists ; 2017 ; 9781522524472 ; 9781522524465 ; 10.4018/978-1-5225-2446-5 ; 175800 ; Volunteered Geographic Information and the Future of Geospatial Data ; Cláudio Elízio Calazans Campelo (Federal University of Campina Grande, Brazil), Michela Bertolotto (University College Dublin, Ireland) and Padraig Corcoran (Cardiff University, UK) ; >
-    au < exists ; exists ; 2017 ; 9781522522935 ; 9781522522928 ; 10.4018/978-1-5225-2292-8 ; 173027 ; Sliding Mode in Intellectual Control and Communication: Emerging Research and Opportunities ; Vardan Mkrttchian (HHH University, Australia) and Ekaterina Aleshina (Penza State University, Russia) ; >
-    au < exists ; exists ; 2017 ; 9781522522072 ; 9781522522065 ; 10.4018/978-1-5225-2206-5 ; 172772 ; Promotional Strategies and New Service Opportunities in Emerging Economies ; Vipin Nadda (University of Sunderland, UK), Sumesh Dadwal (Northumbria University, UK) and Roya Rahimi (University of Wolverhampton, UK) ; >
-    au < exists ; exists ; 2017 ; 9781522518150 ; 9781522518143 ; 10.4018/978-1-5225-1814-3 ; 165961 ; Remote Sensing Techniques and GIS Applications in Earth and Environmental Studies ; Abhisek Santra (Haldia Institute of Technology, India) and Shreyashi Santra Mitra (Haldia Institute of Technology, India) ; >
-    au < exists ; exists ; 2017 ; 9781522518129 ; 9781522518112 ; 10.4018/978-1-5225-1811-2 ; 165960 ; Technical Education and Vocational Training in Developing Nations ; Ugochukwu Chinonso Okolie (Ebonyi State University, Nigeria) and Asfa M. Yasin (PSS Central Institute of Vocational Education (NCERT), India) ; >
-    au < exists ; exists ; 2017 ; 9781522517160 ; 9781522517153 ; 10.4018/978-1-5225-1715-3 ; 163663 ; Sustainable Potato Production and the Impact of Climate Change ; Sunil Londhe (International Centre for Research in Agroforestry (ICRAF), India) ; >
-    au < exists ; exists ; 2017 ; 9781522516699 ; 9781522516682 ; 10.4018/978-1-5225-1668-2 ; 162404 ; Teacher Education for Ethical Professional Practice in the 21st Century ; Oliver Dreon (Millersville University, USA) and Drew Polly (University of North Carolina at Charlotte, USA) ; >
-    au < exists ; exists ; 2017 ; 9781522516576 ; 9781522516569 ; 10.4018/978-1-5225-1656-9 ; 160868 ; Strategic Imperatives and Core Competencies in the Era of Robotics and Artificial Intelligence ; Roman Batko (Jagiellonian University, Poland) and Anna Szopa (Jagiellonian University, Poland) ; >
-    au < exists ; exists ; 2017 ; 9781522516989 ; 9781522516972 ; 10.4018/978-1-5225-1697-2 ; 163092 ; Scholarly Communication and the Publish or Perish Pressures of Academia ; Achala Munigal (Osmania University, India) ; >
-    au < exists ; exists ; 2017 ; 9781522509899 ; 9781522509882 ; 10.4018/978-1-5225-0988-2 ; 154883 ; Violence and Society: Breakthroughs in Research and Practice ; Information Resources Management Association (USA) ; >
-    au < exists ; exists ; 2017 ; 9781522509608 ; 9781522509592 ; 10.4018/978-1-5225-0959-2 ; 154508 ; Tools and Techniques for Economic Decision Analysis ; Jelena Stanković (University of Niš, Serbia), Pavlos Delias (Eastern Macedonia and Thrace Institute of Technology, Greece), Srđan Marinković (University of Niš, Serbia) and Sylvie Rochhia (Université Côte d’Azur, CNRS, GREDEG, France) ; >
-    au < exists ; exists ; 2017 ; 9781522508175 ; 9781522508168 ; 10.4018/978-1-5225-0816-8 ; 149969 ; Supporting the Education of Children with Autism Spectrum Disorders ; Yefim Kats (Chestnut Hill College, USA) ; >
-
-    au < exists ; exists ; 2017 ; 9781522506584 ; 9781522506577 ; 10.4018/978-1-5225-0657-7 ; 147736 ; Sexual Misconduct in the Education and Human Services Sector ;  ; >
-    au < exists ; exists ; 2017 ; 9781522510475 ; 9781522510468 ; 10.4018/978-1-5225-1046-8 ; 156644 ; Reconsidering the Impact of Climate Change on Global Water Supply, Use, and Management ;  ; >
-    au < exists ; exists ; 2017 ; 9781522509745 ; 9781522509738 ; 10.4018/978-1-5225-0973-8 ; 154859 ; Handbook of Research on Information Management for Effective Logistics and Supply Chains ;  ; >
-    au < exists ; exists ; 2017 ; 9781522520320 ; 9781522520313 ; 10.4018/978-1-5225-2031-3 ; 171021 ; Handbook of Research on Advanced Data Mining Techniques and Applications for Business Intelligence ;  ; >
-    au < exists ; exists ; 2017 ; 9781522519010 ; 9781522519003 ; 10.4018/978-1-5225-1900-3 ; 168133 ; Value Relevance of Accounting Information in Capital Markets ;  ; >
-    au < exists ; exists ; 2017 ; 9781522518099 ; 9781522518082 ; 10.4018/978-1-5225-1808-2 ; 165959 ; Training Initiatives and Strategies for the Modern Workforce ;  ; >
-    au < exists ; exists ; 2017 ; 9781522508786 ; 9781522508779 ; 10.4018/978-1-5225-0877-9 ; 152132 ; Handbook of Research on Building, Growing, and Sustaining Quality E-Learning Programs ;  ; >
-    au < exists ; exists ; 2017 ; 9781522508205 ; 9781522508199 ; 10.4018/978-1-5225-0819-9 ; 150147 ; World University Rankings and the Future of Higher Education ;  ; >
-    au < exists ; exists ; 2017 ; 9781683180043 ; 9781683180036 ; 10.4018/978-1-68318-003-6 ; 147373 ; Strategic Policy-Based Network Management in Contemporary Organizations ;  ; >
-    au < exists ; exists ; 2017 ; 9781522505266 ; 9781522505259 ; 10.4018/978-1-5225-0525-9 ; 147027 ; Seduction in Popular Culture, Psychology, and Philosophy ;  ; >
-    au < exists ; exists ; 2017 ; 9781522506645 ; 9781522506638 ; 10.4018/978-1-5225-0663-8 ; 148135 ; Transformative Healthcare Practice through Patient Engagement ;  ; >
-
-    au < exists ; exists ; 2017 ; 9781522508625 ; 9781522508618 ; 10.4018/978-1-5225-0861-8 ; 151378 ; Strategic IT Governance and Alignment in Business Settings ;  ; >
-    au < exists ; exists ; 2017 ; 9781522507550 ; 9781522507543 ; 10.4018/978-1-5225-0754-3 ; 149286 ; Recent Advances in Drug Delivery Technology ;  ; >
-    au < exists ; exists ; 2017 ; 9781522506034 ; 9781522506027 ; 10.4018/978-1-5225-0602-7 ; 147337 ; Security Management in Mobile Cloud Computing ;  ; >
-    au < exists ; exists ; 2017 ; 9781522505808 ; 9781522505792 ; 10.4018/978-1-5225-0579-2 ; 147129 ; Strategic Place Branding Methodologies and Theory for Tourist Attraction ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524878 ; 9781522524861 ; 10.4018/978-1-5225-2486-1 ; 176065 ; Privacy and Security Policies in Big Data ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525325 ; 9781522525318 ; 10.4018/978-1-5225-2531-8 ; 176483 ; Probabilistic Nodes Combination (PNC) for Object Modeling and Contour Reconstruction ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521525 ; 9781522521518 ; 10.4018/978-1-5225-2151-8 ; 172431 ; Project Portfolio Management Strategies for Effective Organizational Operations ;  ; >
     au < exists ; exists ; 2017 ; 9781522505112 ; 9781522505105 ; 10.4018/978-1-5225-0510-5 ; 147022 ; Projective Processes and Neuroscience in Art and Design ;  ; >
-
+    au < exists ; exists ; 2017 ; 9781522517344 ; 9781522517320 ; 10.4018/978-1-5225-1732-0 ; 164384 ; Promoting Intercultural Communication Competencies in Higher Education ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522072 ; 9781522522065 ; 10.4018/978-1-5225-2206-5 ; 172772 ; Promotional Strategies and New Service Opportunities in Emerging Economies ;  ; >
     au < exists ; exists ; 2017 ; 9781522516750 ; 9781522516743 ; 10.4018/978-1-5225-1674-3 ; 162421 ; Public Health and Welfare: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522164 ; 9781522522157 ; 10.4018/978-1-5225-2215-7 ; 172958 ; Public Sector Entrepreneurship and the Integration of Innovative Business Models ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524243 ; 9781522524236 ; 10.4018/978-1-5225-2423-6 ; 175793 ; Recent Advances in Applied Thermal Imaging for Industrial Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522507550 ; 9781522507543 ; 10.4018/978-1-5225-0754-3 ; 149286 ; Recent Advances in Drug Delivery Technology ;  ; >
+    au < exists ; exists ; 2017 ; 9781522523239 ; 9781522523222 ; 10.4018/978-1-5225-2322-2 ; 173681 ; Recent Developments in Intelligent Nature-Inspired Computing ;  ; >
+    au < exists ; exists ; 2017 ; 9781522510475 ; 9781522510468 ; 10.4018/978-1-5225-1046-8 ; 156644 ; Reconsidering the Impact of Climate Change on Global Water Supply, Use, and Management ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518150 ; 9781522518143 ; 10.4018/978-1-5225-1814-3 ; 165961 ; Remote Sensing Techniques and GIS Applications in Earth and Environmental Studies ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519195 ; 9781522519188 ; 10.4018/978-1-5225-1918-8 ; 168522 ; Remote Work and Collaboration: Breakthroughs in Research and Practice ;  ; >
     au < exists ; exists ; 2017 ; 9781522516729 ; 9781522516712 ; 10.4018/978-1-5225-1671-2 ; 162405 ; Renewable and Alternative Energy: Concepts, Methodologies, Tools, and Applications ;  ; >
-    au < exists ; exists ; 2017 ; 9781522508472 ; 9781522508465 ; 10.4018/978-1-5225-0846-5 ; 150442 ; Social Media Listening and Monitoring for Business Applications ;  ; >
-    au < exists ; exists ; 2017 ; 9781522508755 ; 9781522508748 ; 10.4018/978-1-5225-0874-8 ; 152131 ; Student Experiences and Educational Outcomes in Community Engagement for the 21st Century ;  ; >
     au < exists ; exists ; 2017 ; 9781522508311 ; 9781522508304 ; 10.4018/978-1-5225-0830-4 ; 150396 ; Research 2.0 and the Impact of Digital Technologies on Scholarly Inquiry ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518693 ; 9781522518686 ; 10.4018/978-1-5225-1868-6 ; 166732 ; Research Paradigms and Contemporary Perspectives on Human-Technology Interaction ;  ; >
+    au < exists ; exists ; 2017 ; 9781522520245 ; 9781522520238 ; 10.4018/978-1-5225-2023-8 ; 171019 ; Resource Allocation in Next-Generation Broadband Wireless Access Networks ;  ; >
+    au < exists ; exists ; 2017 ; 9781522517221 ; 9781522517214 ; 10.4018/978-1-5225-1721-4 ; 163866 ; Resource Management and Efficiency in Cloud Computing Environments ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525042 ; 9781522525035 ; 10.4018/978-1-5225-2503-5 ; 176082 ; Risk Management Strategies in Public-Private Partnerships ;  ; >
+    au < exists ; exists ; 2017 ; 9781522523437 ; 9781522523420 ; 10.4018/978-1-5225-2342-0 ; 173688 ; Routing Protocols and Architectural Solutions for Optimal Wireless Networks and Security ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516989 ; 9781522516972 ; 10.4018/978-1-5225-1697-2 ; 163092 ; Scholarly Communication and the Publish or Perish Pressures of Academia ;  ; >
+    au < exists ; exists ; 2017 ; 9781522517047 ; 9781522517030 ; 10.4018/978-1-5225-1703-0 ; 163264 ; Securing Government Information and Data in Developing Countries ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522973 ; 9781522522966 ; 10.4018/978-1-5225-2296-6 ; 173469 ; Security Breaches and Threat Prevention in the Internet of Things ;  ; >
+    au < exists ; exists ; 2017 ; 9781522506034 ; 9781522506027 ; 10.4018/978-1-5225-0602-7 ; 147337 ; Security Management in Mobile Cloud Computing ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518303 ; 9781522518297 ; 10.4018/978-1-5225-1829-7 ; 166368 ; Security Solutions and Applied Cryptography in Smart Grid Communications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522507420 ; 9781522507413 ; 10.4018/978-1-5225-0741-3 ; 149283 ; Security Solutions for Hyperconnectivity and the Internet of Things ;  ; >
+    au < exists ; exists ; 2017 ; 9781522505266 ; 9781522505259 ; 10.4018/978-1-5225-0525-9 ; 147027 ; Seduction in Popular Culture, Psychology, and Philosophy ;  ; >
+    au < exists ; exists ; 2017 ; 9781522506584 ; 9781522506577 ; 10.4018/978-1-5225-0657-7 ; 147736 ; Sexual Misconduct in the Education and Human Services Sector ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522935 ; 9781522522928 ; 10.4018/978-1-5225-2292-8 ; 173027 ; Sliding Mode in Intellectual Control and Communication: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524939 ; 9781522524922 ; 10.4018/978-1-5225-2492-2 ; 176067 ; Smart Technology Applications in Business Environments ;  ; >
     au < exists ; exists ; 2017 ; 9781522506492 ; 9781522506485 ; 10.4018/978-1-5225-0648-5 ; 147733 ; Social Media Data Extraction and Content Analysis ;  ; >
-    au < exists ; exists ; 2017 ; 9781522504931 ; 9781522504924 ; 10.4018/978-1-5225-0492-4 ; 147016 ; Sustainable Nanosystems Development, Properties, and Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508472 ; 9781522508465 ; 10.4018/978-1-5225-0846-5 ; 150442 ; Social Media Listening and Monitoring for Business Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519645 ; 9781522519638 ; 10.4018/978-1-5225-1963-8 ; 169445 ; Social Media Performance Evaluation and Success Measurements ;  ; >
+    au < exists ; exists ; 2017 ; 9781522523659 ; 9781522523642 ; 10.4018/978-1-5225-2364-2 ; 174110 ; Social, Health, and Environmental Infrastructures for Economic Growth ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521402 ; 9781522521396 ; 10.4018/978-1-5225-2139-6 ; 172411 ; Socio-Economic Perspectives on Consumer Engagement and Buying Behavior ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518983 ; 9781522518976 ; 10.4018/978-1-5225-1897-6 ; 167943 ; Solutions for High-Touch Communications in a High-Tech World ;  ; >
     au < exists ; exists ; 2017 ; 9781522519751 ; 9781522519744 ; 10.4018/978-1-5225-1974-4 ; 169974 ; Strategic Human Capital Development and Management in Emerging Economies ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516576 ; 9781522516569 ; 10.4018/978-1-5225-1656-9 ; 160868 ; Strategic Imperatives and Core Competencies in the Era of Robotics and Artificial Intelligence ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516811 ; 9781522516804 ; 10.4018/978-1-5225-1680-4 ; 162502 ; Strategic Information Systems and Technologies in Modern Organizations ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508625 ; 9781522508618 ; 10.4018/978-1-5225-0861-8 ; 151378 ; Strategic IT Governance and Alignment in Business Settings ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524762 ; 9781522524755 ; 10.4018/978-1-5225-2475-5 ; 176051 ; Strategic Marketing Management and Tactics in the Service Industry ;  ; >
+    au < exists ; exists ; 2017 ; 9781522505808 ; 9781522505792 ; 10.4018/978-1-5225-0579-2 ; 147129 ; Strategic Place Branding Methodologies and Theory for Tourist Attraction ;  ; >
+    au < exists ; exists ; 2017 ; 9781683180043 ; 9781683180036 ; 10.4018/978-1-68318-003-6 ; 147373 ; Strategic Policy-Based Network Management in Contemporary Organizations ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516873 ; 9781522516866 ; 10.4018/978-1-5225-1686-6 ; 162655 ; Strategic Uses of Social Media for Improved Customer Retention ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522133 ; 9781522522126 ; 10.4018/978-1-5225-2212-6 ; 172774 ; Strategies for Increasing Diversity in Engineering Majors and Careers ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521747 ; 9781522521730 ; 10.4018/978-1-5225-2173-0 ; 172438 ; Student Activism as a Vehicle for Change on College Campuses: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525523 ; 9781522525516 ; 10.4018/978-1-5225-2551-6 ; 176946 ; Student Culture and Identity in Higher Education ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508755 ; 9781522508748 ; 10.4018/978-1-5225-0874-8 ; 152131 ; Student Experiences and Educational Outcomes in Community Engagement for the 21st Century ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516903 ; 9781522516897 ; 10.4018/978-1-5225-1689-7 ; 162780 ; Student-Driven Learning Strategies for the 21st Century Classroom ;  ; >
+    au < exists ; exists ; 2017 ; 9781522509578 ; 9781522509561 ; 10.4018/978-1-5225-0956-1 ; 154507 ; Supply Chain Management in the Big Data Era ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508175 ; 9781522508168 ; 10.4018/978-1-5225-0816-8 ; 149969 ; Supporting the Education of Children with Autism Spectrum Disorders ;  ; >
+    au < exists ; exists ; 2017 ; 9781522520764 ; 9781522520757 ; 10.4018/978-1-5225-2075-7 ; 171693 ; Sustainable Entrepreneurship and Investments in the Green Economy ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525660 ; 9781522525653 ; 10.4018/978-1-5225-2565-3 ; 177075 ; Sustainable ICT Adoption and Integration for Socio-Economic Development ;  ; >
+    au < exists ; exists ; 2017 ; 9781522522874 ; 9781522522867 ; 10.4018/978-1-5225-2286-7 ; 173025 ; Sustainable Local Energy Planning and Decision Making: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522504931 ; 9781522504924 ; 10.4018/978-1-5225-0492-4 ; 147016 ; Sustainable Nanosystems Development, Properties, and Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522517160 ; 9781522517153 ; 10.4018/978-1-5225-1715-3 ; 163663 ; Sustainable Potato Production and the Impact of Climate Change ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516699 ; 9781522516682 ; 10.4018/978-1-5225-1668-2 ; 162404 ; Teacher Education for Ethical Professional Practice in the 21st Century ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518129 ; 9781522518112 ; 10.4018/978-1-5225-1811-2 ; 165960 ; Technical Education and Vocational Training in Developing Nations ;  ; >
+    au < exists ; exists ; 2017 ; 9781522523208 ; 9781522523192 ; 10.4018/978-1-5225-2319-2 ; 173680 ; Technological Integration as a Catalyst for Industrial Development and Economic Growth ;  ; >
+    au < exists ; exists ; 2017 ; 9781522516224 ; 9781522516217 ; 10.4018/978-1-5225-1621-7 ; 159229 ; Technological Pedagogical Content Knowledge (TPACK) Framework for K-12 Teacher Preparation: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522510383 ; 9781522510376 ; 10.4018/978-1-5225-1037-6 ; 156641 ; Technologies for the Treatment and Recovery of Nutrients from Industrial Wastewater ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521808 ; 9781522521792 ; 10.4018/978-1-5225-2179-2 ; 172440 ; Technology-Driven Productivity Improvements and the Future of Work: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521976 ; 9781522521969 ; 10.4018/978-1-5225-2196-9 ; 172446 ; The Developing Role of Public Libraries in Emergency Management: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525615 ; 9781522525608 ; 10.4018/978-1-5225-2560-8 ; 176949 ; The Future of Accessibility in International Higher Education ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518334 ; 9781522518327 ; 10.4018/978-1-5225-1832-7 ; 166369 ; The Internet of Things: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521051 ; 9781522521044 ; 10.4018/978-1-5225-2104-4 ; 172010 ; The Internet of Things in the Modern Business Environment ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518495 ; 9781522518488 ; 10.4018/978-1-5225-1848-8 ; 166428 ; Theoretical and Practical Advancements for Fuzzy System Integration ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524731 ; 9781522524724 ; 10.4018/978-1-5225-2472-4 ; 175876 ; Therapeutic Jurisprudence and Overcoming Violence Against Women ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519393 ; 9781522519386 ; 10.4018/978-1-5225-1938-6 ; 168887 ; Threat Mitigation and Detection of Cyber Warfare and Terrorism Activities ;  ; >
+    au < exists ; exists ; 2017 ; 9781522509608 ; 9781522509592 ; 10.4018/978-1-5225-0959-2 ; 154508 ; Tools and Techniques for Economic Decision Analysis ;  ; >
+    au < exists ; exists ; 2017 ; 9781522520795 ; 9781522520788 ; 10.4018/978-1-5225-2078-8 ; 171694 ; Tourism and Opportunities for Economic Development in Asia ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518099 ; 9781522518082 ; 10.4018/978-1-5225-1808-2 ; 165959 ; Training Initiatives and Strategies for the Modern Workforce ;  ; >
+    au < exists ; exists ; 2017 ; 9781522521617 ; 9781522521600 ; 10.4018/978-1-5225-2160-0 ; 172435 ; Transcontinental Strategies for Industrial Development and Economic Growth ;  ; >
+    au < exists ; exists ; 2017 ; 9781522506645 ; 9781522506638 ; 10.4018/978-1-5225-0663-8 ; 148135 ; Transformative Healthcare Practice through Patient Engagement ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518181 ; 9781522518174 ; 10.4018/978-1-5225-1817-4 ; 165978 ; Transforming Gaming and Computer Simulation Technologies across Industries ;  ; >
+    au < exists ; exists ; 2017 ; 9781522523130 ; 9781522523123 ; 10.4018/978-1-5225-2312-3 ; 173677 ; Transport of Information-Carriers in Semiconductors and Nanodevices ;  ; >
+    au < exists ; exists ; 2017 ; 9781522525462 ; 9781522525455 ; 10.4018/978-1-5225-2545-5 ; 176625 ; Ubiquitous Machine Learning and Its Applications ;  ; >
+    au < exists ; exists ; 2017 ; 9781522519010 ; 9781522519003 ; 10.4018/978-1-5225-1900-3 ; 168133 ; Value Relevance of Accounting Information in Capital Markets ;  ; >
+    au < exists ; exists ; 2017 ; 9781522509899 ; 9781522509882 ; 10.4018/978-1-5225-0988-2 ; 154883 ; Violence and Society: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524472 ; 9781522524465 ; 10.4018/978-1-5225-2446-5 ; 175800 ; Volunteered Geographic Information and the Future of Geospatial Data ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518785 ; 9781522518778 ; 10.4018/978-1-5225-1877-8 ; 166924 ; Web Data Mining and the Development of Knowledge-Based Decision Support Systems ;  ; >
+    au < exists ; exists ; 2017 ; 9781522524847 ; 9781522524830 ; 10.4018/978-1-5225-2483-0 ; 176064 ; Web Semantics for Textual and Visual Information Retrieval ;  ; >
+    au < exists ; exists ; 2017 ; 9781522506140 ; 9781522506133 ; 10.4018/978-1-5225-0613-3 ; 147342 ; Web Usage Mining Techniques and Applications Across Industries ;  ; >
+    au < exists ; exists ; 2017 ; 9781522518754 ; 9781522518747 ; 10.4018/978-1-5225-1874-7 ; 166923 ; Workforce Development Theory and Practice in the Mental Health Sector ;  ; >
+    au < exists ; exists ; 2017 ; 9781522508205 ; 9781522508199 ; 10.4018/978-1-5225-0819-9 ; 150147 ; World University Rankings and the Future of Higher Education ;  ; >
 
-    au < exists ; exists ; 2018 ; 9781522525790 ; 9781522525783 ; 10.4018/978-1-5225-2578-3 ; 177376 ; Global Ideologies Surrounding Children's Rights and Social Justice ;  ; >
-    au < exists ; exists ; 2018 ; 9781522525769 ; 9781522525752 ; 10.4018/978-1-5225-2575-2 ; 177114 ; Smart Technologies for Emergency Response and Disaster Management ;  ; >
     au < exists ; exists ; 2018 ; 9781522525073 ; 9781522525066 ; 10.4018/978-1-5225-2506-6 ; 176083 ; Advanced Cloud Computing Security Techniques and Applications ;  ; >
+    au < exists ; exists ; 2018 ; 9781522521853 ; 9781522521846 ; 10.4018/978-1-5225-2184-6 ; 172442 ; Advanced Concept Maps in STEM Education: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526087 ; 9781522526070 ; 10.4018/978-1-5225-2607-0 ; 177903 ; Applying Big Data Analytics in Bioinformatics and Medicine ;  ; >
+    au < exists ; exists ; 2018 ; 9781522531593 ; 9781522531586 ; 10.4018/978-1-5225-3158-6 ; 179833 ; Biomedical Engineering: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2018 ; 9781522524182 ; 9781522524175 ; 10.4018/978-1-5225-2417-5 ; 175677 ; Building Brand Equity and Consumer Trust Through Radical Transparency Practices ;  ; >
+    au < exists ; exists ; 2018 ; 9781522531548 ; 9781522531531 ; 10.4018/978-1-5225-3153-1 ; 179832 ; Business Education and Ethics: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526896 ; 9781522526889 ; 10.4018/978-1-5225-2688-9 ; 178183 ; Business Models for Renewable Energy Initiatives: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527251 ; 9781522527244 ; 10.4018/978-1-5225-2724-4 ; 178537 ; Cases on Audio-Visual Media in Language Education ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528838 ; 9781522528821 ; 10.4018/978-1-5225-2882-1 ; 178959 ; Complementary and Alternative Medicine and Kidney Health ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526377 ; 9781522526360 ; 10.4018/978-1-5225-2636-0 ; 178047 ; Computational Techniques for Modeling Atmospheric Processes ;  ; >
+    au < exists ; exists ; 2018 ; 9781522521778 ; 9781522521761 ; 10.4018/978-1-5225-2176-1 ; 172439 ; Concept Parsing Algorithms (CPA) for Textual Analysis and Discovery: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526926 ; 9781522526919 ; 10.4018/978-1-5225-2691-9 ; 178205 ; Cross-Cultural Analysis of Image-Based Assessments: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522530169 ; 9781522530152 ; 10.4018/978-1-5225-3015-2 ; 179332 ; Deep Learning Innovations and Their Convergence With Big Data ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526575 ; 9781522526568 ; 10.4018/978-1-5225-2656-8 ; 178149 ; Driving Traffic and Customer Activity Through Affiliate Marketing ;  ; >
+    au < exists ; exists ; 2018 ; 9781522530800 ; 9781522530794 ; 10.4018/978-1-5225-3079-4 ; 179351 ; Dynamic Stability of Hydraulic Gates and Engineering for Flood Prevention ;  ; >
     au < exists ; exists ; 2018 ; 9781522522560 ; 9781522522553 ; 10.4018/978-1-5225-2255-3 ; 173015 ; Encyclopedia of Information Science and Technology, Fourth Edition ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526407 ; 9781522526391 ; 10.4018/978-1-5225-2639-1 ; 178082 ; End-User Considerations in Educational Technology Design ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527312 ; 9781522527305 ; 10.4018/978-1-5225-2730-5 ; 178539 ; Ensuring Research Integrity and the Ethical Management of Data ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526285 ; 9781522526278 ; 10.4018/978-1-5225-2627-8 ; 178021 ; Enterprise Resiliency in the Continuum of Change: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527343 ; 9781522527336 ; 10.4018/978-1-5225-2733-6 ; 178540 ; Establishing Food Security and Alternatives to International Trade in Emerging Economies ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526117 ; 9781522526100 ; 10.4018/978-1-5225-2610-0 ; 177905 ; Examining the Changing Role of Supervision in Doctoral Research Projects: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522529859 ; 9781522529842 ; 10.4018/978-1-5225-2984-2 ; 179303 ; Extending the Principles of Flipped Learning to Achieve Measurable Results: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527015 ; 9781522527008 ; 10.4018/978-1-5225-2700-8 ; 178208 ; Financial Entrepreneurship for Economic Growth in Emerging Nations ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526315 ; 9781522526308 ; 10.4018/978-1-5225-2630-8 ; 178023 ; Formative Assessment Practices for Pre-Service Teacher Practicum Feedback: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525820 ; 9781522525813 ; 10.4018/978-1-5225-2581-3 ; 177377 ; Funding Challenges and Successes in Arts Education ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525950 ; 9781522525943 ; 10.4018/978-1-5225-2594-3 ; 177380 ; Game Theory: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2018 ; 9781522529828 ; 9781522529811 ; 10.4018/978-1-5225-2981-1 ; 179302 ; Gaming Innovations in Higher Education: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526742 ; 9781522526735 ; 10.4018/978-1-5225-2673-5 ; 178178 ; Geopolitics and Strategic Management in the Global Economy ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528364 ; 9781522528357 ; 10.4018/978-1-5225-2835-7 ; 178739 ; Global Entrepreneurship and New Venture Creation in the Sharing Economy ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525790 ; 9781522525783 ; 10.4018/978-1-5225-2578-3 ; 177376 ; Global Ideologies Surrounding Children's Rights and Social Justice ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527282 ; 9781522527275 ; 10.4018/978-1-5225-2727-5 ; 178538 ; Global Observations of the Influence of Culture on Consumer Buying Behavior ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528159 ; 9781522528142 ; 10.4018/978-1-5225-2814-2 ; 178732 ; Graph Theoretic Approaches for Analyzing Large-Scale Social Networks ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526636 ; 9781522526629 ; 10.4018/978-1-5225-2662-9 ; 178152 ; Green Initiatives for Business Sustainability and Value Creation ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526438 ; 9781522526421 ; 10.4018/978-1-5225-2642-1 ; 178083 ; Handbook of Research on Cross-Disciplinary Approaches to Action Research and Action Learning ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526469 ; 9781522526452 ; 10.4018/978-1-5225-2645-2 ; 178122 ; Handbook of Research on Administrative Leadership in Open and Distance Learning Programs ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526988 ; 9781522526971 ; 10.4018/978-1-5225-2697-1 ; 178207 ; Handbook of Research on Digital Marketing Strategies for Fashion and Luxury Brands ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527077 ; 9781522527060 ; 10.4018/978-1-5225-2706-0 ; 178210 ; Handbook of Research on Mobile Devices and Smart Gadgets in K-12 Education ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527107 ; 9781522527091 ; 10.4018/978-1-5225-2709-1 ; 178212 ; Handbook of Research on Trends and Digital Advances in Engineering Geology ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528395 ; 9781522528388 ; 10.4018/978-1-5225-2838-8 ; 178916 ; Handbook of Research on Human Development in the Digital Age ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528494 ; 9781522528487 ; 10.4018/978-1-5225-2848-7 ; 178918 ; Handbook of Research on Advanced Concepts in Real-Time Image and Video Processing ;  ; >
+    au < exists ; exists ; 2018 ; 9781522529408 ; 9781522529392 ; 10.4018/978-1-5225-2939-2 ; 179211 ; Handbook of Research on Sociopolitical Factors Impacting Economic Growth in Islamic Nations ;  ; >
+    au < exists ; exists ; 2018 ; 9781522529545 ; 9781522529538 ; 10.4018/978-1-5225-2953-8 ; 179215 ; Handbook of Research on Digital Content, Mobile Learning, and Technology Integration Models in Teacher Education ;  ; >
+    au < exists ; exists ; 2018 ; 9781522531692 ; 9781522531685 ; 10.4018/978-1-5225-3168-5 ; 179835 ; Health Economics and Healthcare Reform: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527206 ; 9781522527190 ; 10.4018/978-1-5225-2719-0 ; 178483 ; Hydrology and Best Practices for Managing Water Resources in Arid and Semi-Arid Lands ;  ; >
+    au < exists ; exists ; 2018 ; 9781522522669 ; 9781522522652 ; 10.4018/978-1-5225-2265-2 ; 173018 ; Ideological Function of Deming Theory in Higher Education: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526056 ; 9781522526049 ; 10.4018/978-1-5225-2604-9 ; 177555 ; Information Technology Risk Management and Compliance in Modern Organizations ;  ; >
+    au < exists ; exists ; 2018 ; 9781522530657 ; 9781522530640 ; 10.4018/978-1-5225-3064-0 ; 179348 ; Intelligent Vehicles and Materials Transportation in the Manufacturing Sector: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527176 ; 9781522527169 ; 10.4018/978-1-5225-2716-9 ; 178214 ; Managerial Strategies for Business Sustainability During Turbulent Times ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526148 ; 9781522526131 ; 10.4018/978-1-5225-2613-1 ; 177906 ; Managing Self-Directed Learning in Primary School Education: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526001 ; 9781522525998 ; 10.4018/978-1-5225-2599-8 ; 177408 ; Mobile Commerce: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528067 ; 9781522528050 ; 10.4018/978-1-5225-2805-0 ; 178729 ; Modern Technologies for Big Data Classification and Clustering ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526544 ; 9781522526537 ; 10.4018/978-1-5225-2653-7 ; 178124 ; Novel Design and the Applications of Smart-M3 Platforms in the Internet of Things: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527046 ; 9781522527039 ; 10.4018/978-1-5225-2703-9 ; 178209 ; Novel Six Sigma Approaches to Risk Assessment and Management: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527145 ; 9781522527138 ; 10.4018/978-1-5225-2713-8 ; 178213 ; Numerical and Analytical Solutions for Solving Nonlinear Equations in Heat Transfer ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526223 ; 9781522526216 ; 10.4018/978-1-5225-2621-6 ; 177908 ; Open and Distance Learning Initiatives for Sustainable Development ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526179 ; 9781522526162 ; 10.4018/978-1-5225-2616-2 ; 177907 ; Optimizing Human-Computer Interaction With Emerging Technologies ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526254 ; 9781522526247 ; 10.4018/978-1-5225-2624-7 ; 177909 ; Optimizing Open and Distance Learning in Higher Education Institutions ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526865 ; 9781522526858 ; 10.4018/978-1-5225-2685-8 ; 178182 ; Personalized Professional Learning for Educators: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522524441 ; 9781522524434 ; 10.4018/978-1-5225-2443-4 ; 175799 ; Philosophical Perceptions on Logic and Order ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528005 ; 9781522527992 ; 10.4018/978-1-5225-2799-2 ; 178727 ; Powering the Internet of Things With 5G Networks ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527770 ; 9781522527763 ; 10.4018/978-1-5225-2776-3 ; 178720 ; Smart Grid Test Bed Using OPNET and Power Line Communication: Emerging Research and Opportunities ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525905 ; 9781522525899 ; 10.4018/978-1-5225-2589-9 ; 177379 ; Smart Technologies: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525769 ; 9781522525752 ; 10.4018/978-1-5225-2575-2 ; 177114 ; Smart Technologies for Emergency Response and Disaster Management ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528982 ; 9781522528975 ; 10.4018/978-1-5225-2897-5 ; 179197 ; Social Media for Knowledge Management Applications in Modern Organizations ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528463 ; 9781522528456 ; 10.4018/978-1-5225-2845-6 ; 178917 ; Solutions for Cyber-Physical Systems Ubiquity ;  ; >
+    au < exists ; exists ; 2018 ; 9781522525851 ; 9781522525844 ; 10.4018/978-1-5225-2584-4 ; 177378 ; Student Engagement and Participation: Concepts, Methodologies, Tools, and Applications ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526346 ; 9781522526339 ; 10.4018/978-1-5225-2633-9 ; 178046 ; Sustainable Health and Long-Term Care Solutions for an Aging Population ;  ; >
+    au < exists ; exists ; 2018 ; 9781522531647 ; 9781522531630 ; 10.4018/978-1-5225-3163-0 ; 179834 ; The Dark Web: Breakthroughs in Research and Practice ;  ; >
+    au < exists ; exists ; 2018 ; 9781522528241 ; 9781522528234 ; 10.4018/978-1-5225-2823-4 ; 178735 ; Transformative Practice and Research in Organizational Communication ;  ; >
+    au < exists ; exists ; 2018 ; 9781522526605 ; 9781522526599 ; 10.4018/978-1-5225-2659-9 ; 178150 ; Urbanization and Its Impact on Socio-Economic Growth in Developing Regions ;  ; >
+    au < exists ; exists ; 2018 ; 9781522527510 ; 9781522527503 ; 10.4018/978-1-5225-2750-3 ; 178649 ; Virtual Traumascapes and Exploring the Roots of Dark Tourism ;  ; >
 
     }
   }
