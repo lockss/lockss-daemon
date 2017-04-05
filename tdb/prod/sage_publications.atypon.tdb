@@ -27618,7 +27618,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2014 ; Media International Australia Volume 150 ; 150 ; miad >
       au < manifest ; 2014 ; Media International Australia Volume 151 ; 151 ; miad >
       au < manifest ; 2014 ; Media International Australia Volume 152 ; 152 ; miad >
-      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; miad >
+      au < exists ; 2014 ; Media International Australia Volume 153 ; 153 ; miad >
       au < manifest ; 2015 ; Media International Australia Volume 154 ; 154 ; miad >
       au < doNotProcess ; 2015 ; Media International Australia Volume 155 ; 155 ; miad >
       au < manifest ; 2015 ; Media International Australia Volume 156 ; 156 ; miad >
@@ -32467,7 +32467,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < manifest ; 1973 ; Public Finance Review Volume 1 ; 1 ; pfra >
         au < manifest ; 1974 ; Public Finance Review Volume 2 ; 2 ; pfra >
-        au < doesNotExist ; 0 ; Public Finance Review Volume 3 ; 3 ; pfra >
+        au < exists ; 1975 ; Public Finance Review Volume 3 ; 3 ; pfra >
         au < manifest ; 1976 ; Public Finance Review Volume 4 ; 4 ; pfra >
         au < manifest ; 1977 ; Public Finance Review Volume 5 ; 5 ; pfra >
         au < manifest ; 1978 ; Public Finance Review Volume 6 ; 6 ; pfra >
@@ -32539,7 +32539,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       au < manifest ; 1972 ; Public Personnel Management Volume 1 ; 1 ; ppmc >
       au < manifest ; 1973 ; Public Personnel Management Volume 2 ; 2 ; ppmd >
-      au < doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 ; ppmd >
+      au < exists ; 1974 ; Public Personnel Management Volume 3 ; 3 ; ppmd >
       au < manifest ; 1975 ; Public Personnel Management Volume 4 ; 4 ; ppmd >
       au < manifest ; 1976 ; Public Personnel Management Volume 5 ; 5 ; ppmd >
       au < manifest ; 1977 ; Public Personnel Management Volume 6 ; 6 ; ppmd >
@@ -33896,7 +33896,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1985 ; Review of Public Personnel Administration Volume 5 ; 5 ; ropa >
         au < manifest ; 1985-1986 ; Review of Public Personnel Administration Volume 6 ; 6 ; ropa >
         au < manifest ; 1986-1987 ; Review of Public Personnel Administration Volume 7 ; 7 ; ropa >
-        au < doesNotExist ; 0 ; Review of Public Personnel Administration Volume 8 ; 8 ; ropa >
+        au < exists ; 1988 ; Review of Public Personnel Administration Volume 8 ; 8 ; ropa >
         au < manifest ; 1989 ; Review of Public Personnel Administration Volume 9 ; 9 ; ropa >
         au < manifest ; 1989-1990 ; Review of Public Personnel Administration Volume 10 ; 10 ; ropa >
         au < manifest ; 1991 ; Review of Public Personnel Administration Volume 11 ; 11 ; ropa >
@@ -35919,7 +35919,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1997 ; Space and Culture Volume 1 ; 1 ; saca >
         au < manifest ; 1998 ; Space and Culture Volume 2 ; 2 ; saca >
         au < manifest ; 2000 ; Space and Culture Volume 3 ; 3 ; saca >
-        au < doesNotExist ; 0 ; Space and Culture Volume 4 ; 4 ; saca >
+        au < exists ; 2001 ; Space and Culture Volume 4 ; 4 ; saca >
         au < manifest ; 2002 ; Space and Culture Volume 5 ; 5 ; saca >
         au < manifest ; 2003 ; Space and Culture Volume 6 ; 6 ; saca >
         au < manifest ; 2004 ; Space and Culture Volume 7 ; 7 ; saca >
@@ -38025,7 +38025,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1990 ; Toxicology and Industrial Health Volume 6 ; 6 ; tiha >
         au < manifest ; 1991 ; Toxicology and Industrial Health Volume 7 ; 7 ; tiha >
         au < manifest ; 1992 ; Toxicology and Industrial Health Volume 8 ; 8 ; tiha >
-        au < doesNotExist ; 0 ; Toxicology and Industrial Health Volume 9 ; 9 ; tiha >
+        au < exists ; 1993 ; Toxicology and Industrial Health Volume 9 ; 9 ; tiha >
         au < manifest ; 1994 ; Toxicology and Industrial Health Volume 10 ; 10 ; tiha >
         au < manifest ; 1995 ; Toxicology and Industrial Health Volume 11 ; 11 ; tiha >
         au < manifest ; 1996 ; Toxicology and Industrial Health Volume 12 ; 12 ; tiha >
@@ -38523,9 +38523,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://upd.sagepub.com/
 
         au < manifest ; 1984-1985 ; Update: Applications of Research in Music Education Volume 3 ; 3 ; upda >
-        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 4 ; 4 ; upda >
-        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 5 ; 5 ; upda >
-        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 6 ; 6 ; upda >
+        au < exists ; 1985-1986 ; Update: Applications of Research in Music Education Volume 4 ; 4 ; upda >
+        au < exists ; 1986-1987 ; Update: Applications of Research in Music Education Volume 5 ; 5 ; upda >
+        au < exists ; 1987-1988 ; Update: Applications of Research in Music Education Volume 6 ; 6 ; upda >
         au < manifest ; 1988-1989 ; Update: Applications of Research in Music Education Volume 7 ; 7 ; upda >
         au < manifest ; 1989-1990 ; Update: Applications of Research in Music Education Volume 8 ; 8 ; upda >
         au < manifest ; 1990-1991 ; Update: Applications of Research in Music Education Volume 9 ; 9 ; upda >
