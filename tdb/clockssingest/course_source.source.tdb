@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = CourseSource ;
+    info[contract] = 2017 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+       name = CourseSource ;
+       issn = 2332-6530
+    >
+    
+    plugin = org.lockss.plugin.clockss.coursesource.ClockssCourseSourceSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/coursesource-released/
+    #testing - http://content5.lockss.org/sourcefiles/coursesource-released/
+    
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    au < testing ; exists ; 2017 ; CourseSource Source Content 2017 ; 2017 >
+
+  }
+
+}
