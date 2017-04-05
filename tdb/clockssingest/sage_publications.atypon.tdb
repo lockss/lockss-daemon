@@ -10668,9 +10668,7 @@
 
     #param[base_url] = http://ept.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; European Journal of Political Theory Volume 1 ; 1 ; epta ; >
       au < manifest ; exists ; 2003 ; European Journal of Political Theory Volume 2 ; 2 ; epta ; >
@@ -14327,6 +14325,20 @@
       #param[base_url] = http://jhd.sagepub.com/
 
       au < manifest ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
+  }
+
+  {
+
+    title <
+      name = Indian Journal of Public Administration ;
+      issn = 0019-5561
+    >
+
+      #param[base_url] = http://ipa.sagepub.com/
+
+      au < exists ; exists ; 2005 ; Indian Journal of Public Administration Volume 51 ; 51 ; ipaa ; >
+
+      au < exists ; exists ; 2017 ; Indian Journal of Public Administration Volume 63 ; 63 ; ipaa ; >
   }
 
   {
@@ -25986,7 +25998,6 @@
 
     {
 
-
       au < manifest ; exists ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 ; vdia ; >
       au < manifest ; exists ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 ; vdia ; >
       au < manifest ; exists ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 ; vdia ; >
@@ -26030,11 +26041,7 @@
 
     #param[base_url] = http://jvc.sagepub.com/
 
-    
     {
-
-      
-      comment[notReady] = V20. 503 Error Unavailable on content3 on probe link  http://jvc.sagepub.com/content/20/15/2352.long
 
       au < manifest ; exists ; 1995 ; Journal of Vibration and Control Volume 1 ; 1 ; jvca ; >
       au < manifest ; exists ; 1996 ; Journal of Vibration and Control Volume 2 ; 2 ; jvca ; >
@@ -26073,9 +26080,7 @@
 
     #param[base_url] = http://vcu.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Journal of Visual Culture Volume 1 ; 1 ; vcua ; >
       au < manifest ; exists ; 2003 ; Journal of Visual Culture Volume 2 ; 2 ; vcua ; >
@@ -26100,6 +26105,20 @@
   {
 
     title <
+      name = Journal of VitreoRetinal Diseases ;
+      issn = 2474-1264 ;
+      eissn = 2474-1272
+    >
+
+      #param[base_url] = http://vrd.sagepub.com/
+
+      au < exists ; exists ; 2017 ; Journal of VitreoRetinal Diseases Volume 1 ; 1 ; vrda ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Wide Bandgap Materials ;
       issn = 1524-511X ;
       eissn = 1530-8081
@@ -26108,7 +26127,6 @@
     #param[base_url] = http://jwb.sagepub.com/
 
     {
-
 
       au < doNotProcess ; doNotProcess ; 2000 ; Journal of Wide Bandgap Materials Volume 7 ; 7 ; jwba ; >
       au < doNotProcess ; doNotProcess ; 2001 ; Journal of Wide Bandgap Materials Volume 8 ; 8 ; jwba ; >
@@ -35121,9 +35139,7 @@
 
     #param[base_url] = http://sgr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1970 ; Small Group Research Volume 1 ; 1 ; sgra ; >
       au < manifest ; exists ; 1971 ; Small Group Research Volume 2 ; 2 ; sgra ; >
@@ -35187,9 +35203,7 @@
 
     #param[base_url] = http://sls.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; Social & Legal Studies Volume 1 ; 1 ; slsa ; >
       au < manifest ; exists ; 1993 ; Social & Legal Studies Volume 2 ; 2 ; slsa ; >
@@ -35231,9 +35245,7 @@
 
     #param[base_url] = http://scp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1953 ; Social Compass Volume 1 ; 1 ; scpa ; >
       au < manifest ; exists ; 1954 ; Social Compass Volume 2 ; 2 ; scpa ; >
@@ -35345,7 +35357,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2010 ; Social Psychological and Personality Science Volume 1 ; 1 ; sppa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Social Psychological and Personality Science Volume 2 ; 2 ; sppa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Social Psychological and Personality Science Volume 3 ; 3 ; sppa ; >
@@ -35369,7 +35380,6 @@
     #param[base_url] = http://spq.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; spqc ; >
       au < manifest ; exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; spqc ; >
@@ -35399,9 +35409,7 @@
 
     #param[base_url] = http://ssc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1983 ; Social Science Computer Review Volume 1 ; 1 ; ssca ; >
       au < manifest ; exists ; 1984 ; Social Science Computer Review Volume 2 ; 2 ; sscb ; >
@@ -35452,9 +35460,7 @@
 
     #param[base_url] = http://ssi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1962 ; Social Science Information Volume 1 ; 1 ; ssib ; >
       au < manifest ; exists ; 1963 ; Social Science Information Volume 2 ; 2 ; ssib ; >
@@ -35526,9 +35532,7 @@
 
     #param[base_url] = http://sss.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1971 ; Social Studies of Science Volume 1 ; 1 ; sssa ; >
       au < manifest ; exists ; 1972 ; Social Studies of Science Volume 2 ; 2 ; sssa ; >
@@ -35618,6 +35622,84 @@
   {
 
     title <
+      name = Sociological Bulletin ;
+      issn = 0038-0229
+    >
+
+        #param[base_url] = http://sob.sagepub.com/
+
+      au < exists ; exists ; 1952 ; Sociological Bulletin Volume 1 ; 1 ; soba ; >
+      au < exists ; exists ; 1953 ; Sociological Bulletin Volume 2 ; 2 ; soba ; >
+      au < exists ; exists ; 1954 ; Sociological Bulletin Volume 3 ; 3 ; soba ; >
+      au < exists ; exists ; 1955 ; Sociological Bulletin Volume 4 ; 4 ; soba ; >
+      au < exists ; exists ; 1956 ; Sociological Bulletin Volume 5 ; 5 ; soba ; >
+      au < exists ; exists ; 1957 ; Sociological Bulletin Volume 6 ; 6 ; soba ; >
+      au < exists ; exists ; 1958 ; Sociological Bulletin Volume 7 ; 7 ; soba ; >
+      au < exists ; exists ; 1959 ; Sociological Bulletin Volume 8 ; 8 ; soba ; >
+      au < exists ; exists ; 1960 ; Sociological Bulletin Volume 9 ; 9 ; soba ; >
+      au < exists ; exists ; 1962 ; Sociological Bulletin Volume 10 ; 10 ; soba ; >
+      au < exists ; exists ; 1962 ; Sociological Bulletin Volume 11 ; 11 ; soba ; >
+      au < exists ; exists ; 1963 ; Sociological Bulletin Volume 12 ; 12 ; soba ; >
+      au < exists ; exists ; 1964 ; Sociological Bulletin Volume 13 ; 13 ; soba ; >
+      au < exists ; exists ; 1965 ; Sociological Bulletin Volume 14 ; 14 ; soba ; >
+      au < exists ; exists ; 1966 ; Sociological Bulletin Volume 15 ; 15 ; soba ; >
+      au < exists ; exists ; 1967 ; Sociological Bulletin Volume 16 ; 16 ; soba ; >
+      au < exists ; exists ; 1968 ; Sociological Bulletin Volume 17 ; 17 ; soba ; >
+      au < exists ; exists ; 1969 ; Sociological Bulletin Volume 18 ; 18 ; soba ; >
+      au < exists ; exists ; 1970 ; Sociological Bulletin Volume 19 ; 19 ; soba ; >
+      au < exists ; exists ; 1971 ; Sociological Bulletin Volume 20 ; 20 ; soba ; >
+      au < exists ; exists ; 1972 ; Sociological Bulletin Volume 21 ; 21 ; soba ; >
+      au < exists ; exists ; 1973 ; Sociological Bulletin Volume 22 ; 22 ; soba ; >
+      au < exists ; exists ; 1974 ; Sociological Bulletin Volume 23 ; 23 ; soba ; >
+      au < exists ; exists ; 1975 ; Sociological Bulletin Volume 24 ; 24 ; soba ; >
+      au < exists ; exists ; 1976 ; Sociological Bulletin Volume 25 ; 25 ; soba ; >
+      au < exists ; exists ; 1977 ; Sociological Bulletin Volume 26 ; 26 ; soba ; >
+      au < exists ; exists ; 1978 ; Sociological Bulletin Volume 27 ; 27 ; soba ; >
+      au < exists ; exists ; 1979 ; Sociological Bulletin Volume 28 ; 28 ; soba ; >
+      au < exists ; exists ; 1980 ; Sociological Bulletin Volume 29 ; 29 ; soba ; >
+      au < exists ; exists ; 1982 ; Sociological Bulletin Volume 30 ; 30 ; soba ; >
+      au < exists ; exists ; 1982 ; Sociological Bulletin Volume 31 ; 31 ; soba ; >
+      au < exists ; exists ; 1983 ; Sociological Bulletin Volume 32 ; 32 ; soba ; >
+      au < exists ; exists ; 1984 ; Sociological Bulletin Volume 33 ; 33 ; soba ; >
+      au < exists ; exists ; 1985 ; Sociological Bulletin Volume 34 ; 34 ; soba ; >
+      au < exists ; exists ; 1986 ; Sociological Bulletin Volume 35 ; 35 ; soba ; >
+      au < exists ; exists ; 1987 ; Sociological Bulletin Volume 36 ; 36 ; soba ; >
+      au < exists ; exists ; 1988 ; Sociological Bulletin Volume 37 ; 37 ; soba ; >
+      au < exists ; exists ; 1989 ; Sociological Bulletin Volume 38 ; 38 ; soba ; >
+      au < exists ; exists ; 1990 ; Sociological Bulletin Volume 39 ; 39 ; soba ; >
+      au < exists ; exists ; 1991 ; Sociological Bulletin Volume 40 ; 40 ; soba ; >
+      au < exists ; exists ; 1992 ; Sociological Bulletin Volume 41 ; 41 ; soba ; >
+      au < exists ; exists ; 1993 ; Sociological Bulletin Volume 42 ; 42 ; soba ; >
+      au < exists ; exists ; 1994 ; Sociological Bulletin Volume 43 ; 43 ; soba ; >
+      au < exists ; exists ; 1995 ; Sociological Bulletin Volume 44 ; 44 ; soba ; >
+      au < exists ; exists ; 1996 ; Sociological Bulletin Volume 45 ; 45 ; soba ; >
+      au < exists ; exists ; 1997 ; Sociological Bulletin Volume 46 ; 46 ; soba ; >
+      au < exists ; exists ; 1998 ; Sociological Bulletin Volume 47 ; 47 ; soba ; >
+      au < exists ; exists ; 1999 ; Sociological Bulletin Volume 48 ; 48 ; soba ; >
+      au < exists ; exists ; 2000 ; Sociological Bulletin Volume 49 ; 49 ; soba ; >
+      au < exists ; exists ; 2001 ; Sociological Bulletin Volume 50 ; 50 ; soba ; >
+      au < exists ; exists ; 2002 ; Sociological Bulletin Volume 51 ; 51 ; soba ; >
+      au < exists ; exists ; 2003 ; Sociological Bulletin Volume 52 ; 52 ; soba ; >
+      au < exists ; exists ; 2004 ; Sociological Bulletin Volume 53 ; 53 ; soba ; >
+      au < exists ; exists ; 2005 ; Sociological Bulletin Volume 54 ; 54 ; soba ; >
+      au < exists ; exists ; 2006 ; Sociological Bulletin Volume 55 ; 55 ; soba ; >
+      au < exists ; exists ; 2007 ; Sociological Bulletin Volume 56 ; 56 ; soba ; >
+      au < exists ; exists ; 2008 ; Sociological Bulletin Volume 57 ; 57 ; soba ; >
+      au < exists ; exists ; 2009 ; Sociological Bulletin Volume 58 ; 58 ; soba ; >
+      au < exists ; exists ; 2010 ; Sociological Bulletin Volume 59 ; 59 ; soba ; >
+      au < exists ; exists ; 2011 ; Sociological Bulletin Volume 60 ; 60 ; soba ; >
+      au < exists ; exists ; 2012 ; Sociological Bulletin Volume 61 ; 61 ; soba ; >
+      au < exists ; exists ; 2013 ; Sociological Bulletin Volume 62 ; 62 ; soba ; >
+      au < exists ; exists ; 2014 ; Sociological Bulletin Volume 63 ; 63 ; soba ; >
+      au < exists ; exists ; 2015 ; Sociological Bulletin Volume 64 ; 64 ; soba ; >
+      au < exists ; exists ; 2016 ; Sociological Bulletin Volume 65 ; 65 ; soba ; >
+      au < expected ; exists ; 2017 ; Sociological Bulletin Volume 66 ; 66 ; soba ; >
+
+  }
+
+  {
+
+    title <
       name = Sociological Methods & Research ;
       issn = 0049-1241 ;
       eissn = 1552-8294
@@ -35625,9 +35707,7 @@
 
     #param[base_url] = http://smr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1972 ; Sociological Methods & Research Volume 1 ; 1 ; smra ; >
       au < manifest ; exists ; 1973 ; Sociological Methods & Research Volume 2 ; 2 ; smra ; >
@@ -35682,6 +35762,53 @@
   {
 
     title <
+      name = The Sociological Review ;
+      issn = 0038-0261 ;
+      eissn = 1467-954X
+    >
+
+      #param[base_url] = http://sor.sagepub.com/
+      #content available from 1908 volume a1 to 1999 volume 47
+
+      au < exists ; exists ; 2000 ; The Sociological Review Volume 48 ; 48 ; sora ; >
+      au < exists ; exists ; 2001 ; The Sociological Review Volume 49 ; 49 ; sora ; >
+      au < exists ; exists ; 2002 ; The Sociological Review Volume 50 ; 50 ; sora ; >
+      au < exists ; exists ; 2003 ; The Sociological Review Volume 51 ; 51 ; sora ; >
+      au < exists ; exists ; 2004 ; The Sociological Review Volume 52 ; 52 ; sora ; >
+      au < exists ; exists ; 2005 ; The Sociological Review Volume 53 ; 53 ; sora ; >
+      au < exists ; exists ; 2006 ; The Sociological Review Volume 54 ; 54 ; sora ; >
+      au < exists ; exists ; 2007 ; The Sociological Review Volume 55 ; 55 ; sora ; >
+      au < exists ; exists ; 2008 ; The Sociological Review Volume 56 ; 56 ; sora ; >
+      au < exists ; exists ; 2009 ; The Sociological Review Volume 57 ; 57 ; sora ; >
+      au < exists ; exists ; 2010 ; The Sociological Review Volume 58 ; 58 ; sora ; >
+      au < exists ; exists ; 2011 ; The Sociological Review Volume 59 ; 59 ; sora ; >
+      au < exists ; exists ; 2012 ; The Sociological Review Volume 60 ; 60 ; sora ; >
+      au < exists ; exists ; 2013 ; The Sociological Review Volume 61 ; 61 ; sora ; >
+      au < exists ; exists ; 2014 ; The Sociological Review Volume 62 ; 62 ; sora ; >
+      au < exists ; exists ; 2015 ; The Sociological Review Volume 63 ; 63 ; sora ; >
+      au < exists ; exists ; 2016 ; The Sociological Review Volume 64 ; 64 ; sora ; >
+      au < exists ; exists ; 2017 ; The Sociological Review Volume 65 ; 65 ; sora ; >
+
+  }
+
+  {
+
+    title <
+      name = The Sociological Review Monographs ;
+      issn = 0081-1769 ;
+      eissn = 2059-7932
+    >
+
+      #param[base_url] = http://som.sagepub.com/
+
+      au < exists ; exists ; 2016 ; The Sociological Review Monographs Volume 64 ; 64 ; soma ; >
+      au < exists ; exists ; 2017 ; The Sociological Review Monographs Volume 65 ; 65 ; soma ; >
+
+  }
+
+  {
+
+    title <
       name = Sociology ;
       issn = 0038-0385 ;
       eissn = 1469-8684
@@ -35689,9 +35816,7 @@
 
     #param[base_url] = http://soc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1967 ; Sociology Volume 1 ; 1 ; soca ; >
       au < manifest ; exists ; 1968 ; Sociology Volume 2 ; 2 ; soca ; >
