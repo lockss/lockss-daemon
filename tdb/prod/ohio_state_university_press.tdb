@@ -9,7 +9,7 @@
 
   {
     title <
-      name = American Periodicals: A Journal of History, Criticism, and Bibliography ;
+      name = American Periodicals: A Journal of History & Criticism ;
       issn = 1054-7479 ;
       eissn = 1548-4238 ;
       issnl = 1054-7479
@@ -22,17 +22,17 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < down ; 2003 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 13 ; 13 >
-      au < down ; 2004 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 14 ; 14 >
-      au < down ; 2005 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 15 ; 15 >
-      au < down ; 2006 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 16 ; 16 >
-      au < down ; 2007 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 17 ; 17 >
-      au < down ; 2008 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 18 ; 18 >
-      au < down ; 2009 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 19 ; 19 >
-      au < down ; 2010 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 20 ; 20 >
-      au < down ; 2011 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 21 ; 21 >
-      au < down ; 2012 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 22 ; 22 >
-      au < down ; 2013 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 23 ; 23 >
+      au < down ; 2003 ; American Periodicals: A Journal of History & Criticism Volume 13 ; 13 >
+      au < down ; 2004 ; American Periodicals: A Journal of History & Criticism Volume 14 ; 14 >
+      au < down ; 2005 ; American Periodicals: A Journal of History & Criticism Volume 15 ; 15 >
+      au < down ; 2006 ; American Periodicals: A Journal of History & Criticism Volume 16 ; 16 >
+      au < down ; 2007 ; American Periodicals: A Journal of History & Criticism Volume 17 ; 17 >
+      au < down ; 2008 ; American Periodicals: A Journal of History & Criticism Volume 18 ; 18 >
+      au < down ; 2009 ; American Periodicals: A Journal of History & Criticism Volume 19 ; 19 >
+      au < down ; 2010 ; American Periodicals: A Journal of History & Criticism Volume 20 ; 20 >
+      au < down ; 2011 ; American Periodicals: A Journal of History & Criticism Volume 21 ; 21 >
+      au < down ; 2012 ; American Periodicals: A Journal of History & Criticism Volume 22 ; 22 >
+      au < down ; 2013 ; American Periodicals: A Journal of History & Criticism Volume 23 ; 23 >
 
     }
 
@@ -40,10 +40,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < down ; 2014 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 24 ; 24 >
-      au < down ; 2015 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 25 ; 25 >
+      au < down ; 2014 ; American Periodicals: A Journal of History & Criticism Volume 24 ; 24 >
+      au < down ; 2015 ; American Periodicals: A Journal of History & Criticism Volume 25 ; 25 >
 
-      au < doNotProcess ; 2016 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 26 ; 26 >
+      au < doNotProcess ; 2016 ; American Periodicals: A Journal of History & Criticism Volume 26 ; 26 >
 
     }
 
