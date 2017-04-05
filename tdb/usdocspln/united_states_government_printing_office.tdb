@@ -459,7 +459,7 @@
     au < released ; 2013 ; Congressional Bills 2013 ; http://www.gpo.gov/ ; 2013 >
     au < released ; 2014 ; Congressional Bills 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Congressional Bills 2015 ; https://www.gpo.gov/ ; 2015 >
-    au < manifest ; 2016 ; Congressional Bills 2016 ; https://www.gpo.gov/ ; 2016 >
+    au < ready ; 2016 ; Congressional Bills 2016 ; https://www.gpo.gov/ ; 2016 >
     au < manifest ; 2017 ; Congressional Bills 2017 ; https://www.gpo.gov/ ; 2017 >
 
   }
@@ -687,34 +687,34 @@
     {
     param[collection_id] = GPO-CRECB
 
-    au < exists ; 1971 ; Congressional Record (Bound) 1971 ; http://www.gpo.gov/ ; 1971 >
-    au < exists ; 1972 ; Congressional Record (Bound) 1972 ; http://www.gpo.gov/ ; 1972 >
-    au < exists ; 1973 ; Congressional Record (Bound) 1973 ; http://www.gpo.gov/ ; 1973 >
-    au < exists ; 1974 ; Congressional Record (Bound) 1974 ; http://www.gpo.gov/ ; 1974 >
-    au < exists ; 1975 ; Congressional Record (Bound) 1975 ; http://www.gpo.gov/ ; 1975 >
-    au < exists ; 1976 ; Congressional Record (Bound) 1976 ; http://www.gpo.gov/ ; 1976 >
-    au < exists ; 1977 ; Congressional Record (Bound) 1977 ; http://www.gpo.gov/ ; 1977 >
-    au < exists ; 1978 ; Congressional Record (Bound) 1978 ; http://www.gpo.gov/ ; 1978 >
-    au < exists ; 1979 ; Congressional Record (Bound) 1979 ; http://www.gpo.gov/ ; 1979 >
-    au < exists ; 1980 ; Congressional Record (Bound) 1980 ; http://www.gpo.gov/ ; 1980 >
-    au < exists ; 1981 ; Congressional Record (Bound) 1981 ; http://www.gpo.gov/ ; 1981 >
-    au < exists ; 1982 ; Congressional Record (Bound) 1982 ; http://www.gpo.gov/ ; 1982 >
-    au < exists ; 1983 ; Congressional Record (Bound) 1983 ; http://www.gpo.gov/ ; 1983 >
-    au < exists ; 1984 ; Congressional Record (Bound) 1984 ; http://www.gpo.gov/ ; 1984 >
-    au < exists ; 1985 ; Congressional Record (Bound) 1985 ; http://www.gpo.gov/ ; 1985 >
-    au < exists ; 1986 ; Congressional Record (Bound) 1986 ; http://www.gpo.gov/ ; 1986 >
-    au < exists ; 1987 ; Congressional Record (Bound) 1987 ; http://www.gpo.gov/ ; 1987 >
-    au < exists ; 1988 ; Congressional Record (Bound) 1988 ; http://www.gpo.gov/ ; 1988 >
-    au < exists ; 1989 ; Congressional Record (Bound) 1989 ; http://www.gpo.gov/ ; 1989 >
-    au < exists ; 1990 ; Congressional Record (Bound) 1990 ; http://www.gpo.gov/ ; 1990 >
-    au < exists ; 1991 ; Congressional Record (Bound) 1991 ; http://www.gpo.gov/ ; 1991 >
-    au < exists ; 1992 ; Congressional Record (Bound) 1992 ; http://www.gpo.gov/ ; 1992 >
-    au < exists ; 1993 ; Congressional Record (Bound) 1993 ; http://www.gpo.gov/ ; 1993 >
-    au < exists ; 1994 ; Congressional Record (Bound) 1994 ; http://www.gpo.gov/ ; 1994 >
-    au < exists ; 1995 ; Congressional Record (Bound) 1995 ; http://www.gpo.gov/ ; 1995 >
-    au < exists ; 1996 ; Congressional Record (Bound) 1996 ; http://www.gpo.gov/ ; 1996 >
-    au < exists ; 1997 ; Congressional Record (Bound) 1997 ; http://www.gpo.gov/ ; 1997 >
-    au < exists ; 1998 ; Congressional Record (Bound) 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < exists ; 1971 ; Congressional Record (Bound) 1971 ; https://www.gpo.gov/ ; 1971 >
+    au < exists ; 1972 ; Congressional Record (Bound) 1972 ; https://www.gpo.gov/ ; 1972 >
+    au < exists ; 1973 ; Congressional Record (Bound) 1973 ; https://www.gpo.gov/ ; 1973 >
+    au < exists ; 1974 ; Congressional Record (Bound) 1974 ; https://www.gpo.gov/ ; 1974 >
+    au < exists ; 1975 ; Congressional Record (Bound) 1975 ; https://www.gpo.gov/ ; 1975 >
+    au < exists ; 1976 ; Congressional Record (Bound) 1976 ; https://www.gpo.gov/ ; 1976 >
+    au < exists ; 1977 ; Congressional Record (Bound) 1977 ; https://www.gpo.gov/ ; 1977 >
+    au < exists ; 1978 ; Congressional Record (Bound) 1978 ; https://www.gpo.gov/ ; 1978 >
+    au < exists ; 1979 ; Congressional Record (Bound) 1979 ; https://www.gpo.gov/ ; 1979 >
+    au < exists ; 1980 ; Congressional Record (Bound) 1980 ; https://www.gpo.gov/ ; 1980 >
+    au < exists ; 1981 ; Congressional Record (Bound) 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < exists ; 1982 ; Congressional Record (Bound) 1982 ; https://www.gpo.gov/ ; 1982 >
+    au < exists ; 1983 ; Congressional Record (Bound) 1983 ; https://www.gpo.gov/ ; 1983 >
+    au < exists ; 1984 ; Congressional Record (Bound) 1984 ; https://www.gpo.gov/ ; 1984 >
+    au < exists ; 1985 ; Congressional Record (Bound) 1985 ; https://www.gpo.gov/ ; 1985 >
+    au < exists ; 1986 ; Congressional Record (Bound) 1986 ; https://www.gpo.gov/ ; 1986 >
+    au < exists ; 1987 ; Congressional Record (Bound) 1987 ; https://www.gpo.gov/ ; 1987 >
+    au < exists ; 1988 ; Congressional Record (Bound) 1988 ; https://www.gpo.gov/ ; 1988 >
+    au < exists ; 1989 ; Congressional Record (Bound) 1989 ; https://www.gpo.gov/ ; 1989 >
+    au < exists ; 1990 ; Congressional Record (Bound) 1990 ; https://www.gpo.gov/ ; 1990 >
+    au < exists ; 1991 ; Congressional Record (Bound) 1991 ; https://www.gpo.gov/ ; 1991 >
+    au < exists ; 1992 ; Congressional Record (Bound) 1992 ; https://www.gpo.gov/ ; 1992 >
+    au < exists ; 1993 ; Congressional Record (Bound) 1993 ; https://www.gpo.gov/ ; 1993 >
+    au < exists ; 1994 ; Congressional Record (Bound) 1994 ; https://www.gpo.gov/ ; 1994 >
+    au < exists ; 1995 ; Congressional Record (Bound) 1995 ; https://www.gpo.gov/ ; 1995 >
+    au < exists ; 1996 ; Congressional Record (Bound) 1996 ; https://www.gpo.gov/ ; 1996 >
+    au < exists ; 1997 ; Congressional Record (Bound) 1997 ; https://www.gpo.gov/ ; 1997 >
+    au < exists ; 1998 ; Congressional Record (Bound) 1998 ; https://www.gpo.gov/ ; 1998 >
     }
     {
     param[collection_id] = CRECB
@@ -725,8 +725,8 @@
     au < released ; 2002 ; Congressional Record (Bound) 2002 ; http://www.gpo.gov/ ; 2002 > #actually empty...See https://www.gpo.gov/smap/fdsys/sitemap_2002/2002_CRECB_sitemap.xml
     au < doesNotExist ; 2003 ; Congressional Record (Bound) 2003 ; http://www.gpo.gov/ ; 2003 >
     au < doesNotExist ; 2004 ; Congressional Record (Bound) 2004 ; http://www.gpo.gov/ ; 2004 >
-    au < manifest ; 2005 ; Congressional Record (Bound) 2005 ; http://www.gpo.gov/ ; 2005 >
-    au < manifest ; 2006 ; Congressional Record (Bound) 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < manifest ; 2005 ; Congressional Record (Bound) 2005 ; https://www.gpo.gov/ ; 2005 >
+    au < manifest ; 2006 ; Congressional Record (Bound) 2006 ; https://www.gpo.gov/ ; 2006 >
     }
   }
 
