@@ -231,6 +231,8 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Circulation Volume 132 ; 132 >
       au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Volume 133 ; 133 >
       au < aha.AHADrupalPlugin ; manifest ; 2016 ; Circulation Volume 134 ; 134 >
+      au < aha.AHADrupalPlugin ; expected ; 2017 ; Circulation Volume 135 ; 135 >
+      au < aha.AHADrupalPlugin ; expected ; 2017 ; Circulation Volume 136 ; 136 >
 
     }
 
@@ -368,6 +370,8 @@
       au < HighWirePressH20Plugin ; released ; 2015 ; Circulation Research Volume 117 ; 117 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Circulation Research Volume 118 ; 118 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Circulation Research Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; Circulation Research Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; Circulation Research Volume 121 ; 121 >
 
     }
 
@@ -622,6 +626,8 @@
       au < HighWirePressH20Plugin ; released ; 2015 ; Hypertension Volume 66 ; 66 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Hypertension Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Hypertension Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; Hypertension Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; Hypertension Volume 70 ; 70 >
 
     }
 
@@ -687,6 +693,7 @@
       au < HighWirePressH20Plugin ; released ; 2014 ; Stroke Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Stroke Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Stroke Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; expected ; 2017 ; Stroke Volume 48 ; 48 >
 
     }
 
