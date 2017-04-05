@@ -1012,7 +1012,7 @@
       au < released ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
       au < released ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
       au < released ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 >
-      au < manifest ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 >
+      au < ready ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 >
 
   }
 
@@ -1353,7 +1353,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tb
 
-      au < manifest ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 >
+      au < ready ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 >
       au < released ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 >
       au < released ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 >
@@ -1991,7 +1991,7 @@
 
       au < manifest ; 2014 ; Materials Horizons Volume 1 ; 1 ; 2014 >
       au < manifest ; 2015 ; Materials Horizons Volume 2 ; 2 ; 2015 >
-      au < manifest ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 >
+      au < ready ; 2016 ; Materials Horizons Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -2066,7 +2066,7 @@
 
       au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 >
       au < released ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 >
-      au < manifest ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
+      au < ready ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -2381,11 +2381,11 @@
       comment[years] = Published 2011-2016
       param[journal_code] = ra
 
-      au < manifest ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 >
+      au < ready ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 >
       au < manifest ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 >
       au < manifest ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 >
       au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 >
-      au < manifest ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
+      au < ready ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
       au < manifest ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
 
   }
@@ -2415,7 +2415,7 @@
 
       param[journal_code] = tx
 
-      au < manifest ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 >
+      au < ready ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 >
       au < manifest ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 >
       au < ready ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 >
       au < ready ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 >
