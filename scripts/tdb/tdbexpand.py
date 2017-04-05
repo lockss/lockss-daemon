@@ -272,6 +272,7 @@ def _recognize(options, aus):
         sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
 
 def _find_ranges(options, aus):
+    ''''''
     ranges = list()
     aindex = len(aus) - 1
     while aindex >= 0:
@@ -291,12 +292,12 @@ def _find_ranges(options, aus):
             aindex = aindex - 1
         while aindex >= 0 and aus[aindex][_TITLE] == ranges[-1][-1][_TITLE]:
             aindex = aindex - 1
+    ranges.reverse()
     ###DEBUG ###FIXME
-    for range in reversed(ranges):
+    for range in ranges:
         for auentry in range:
             print auentry[-1].generate_body()
         print
-    ranges.reverse()
     return ranges
 
 def _analyze_ranges(options, aus, ranges):
@@ -308,8 +309,8 @@ def _analyze_range(options, aus, range):
     latestyear = latestau[_IYEAR]
     if latestyear is None:
         # Does not have years
-        pass ###FIXME
-    elif latestyear[1] is None:
+        return ('error', 'no years') ###FIXME
+    if latestyear[1] is None:
         # Ends with single year
         n = 1
         while n < len(range) and range[n][_IYEAR] == latestyear:
@@ -317,9 +318,28 @@ def _analyze_range(options, aus, range):
         if n == len(range):
             # Only one year to draw from
             if options.interactive and not _yesno('Only %dx%d to draw from; add %d %s per year?' % (n, latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
-                return ('warning', None)
+                return ('warning', None) ###FIXME
             else:
                 return ('single', n, 0)
+        # More than one year to draw from
+        prevyear = range[n]
+        if (prevyear[1] is None and prevyear[1] != latestyear[1] - 1) \
+                or (prevyear[1] is not None and (prevyear[1] != latestyear[0] or prevyear[0] != latestyear[0] - 1)):
+            # Preceding year in invalid progression
+            return ('error', 'invalid progression')
+        # Preceding year in valid progression
+        if prevyear[1] is None:
+            # Preceded by single year
+            p = n
+            while p < len(range) and range[p][_IYEAR] == prevyear:
+                p = p + 1
+            # FIXME do errors first, then remaining cases are almost the same
+            if p == len(range) or (range[p][1] is None and range[p][0] == prevyear[0] - 1):
+                # Only two years to draw from
+
+
+
+
         else:
             # More than one year to draw from
             prevyear = range[n]
