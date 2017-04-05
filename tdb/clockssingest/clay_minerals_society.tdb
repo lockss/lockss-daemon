@@ -31,8 +31,8 @@
     au < gsw.ClockssGSWDrupalPlugin ; exists ; exists ; 2007 ; Clays and Clay Minerals Volume 55 ; 55 ; >
     au < gsw.ClockssGSWDrupalPlugin ; exists ; exists ; 2008 ; Clays and Clay Minerals Volume 56 ; 56 ; >
     au < gsw.ClockssGSWDrupalPlugin ; exists ; exists ; 2009 ; Clays and Clay Minerals Volume 57 ; 57 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; manifest ; exists ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; manifest ; exists ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; testing ; exists ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; testing ; exists ; 2011 ; Clays and Clay Minerals Volume 59 ; 59 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Clays and Clay Minerals Volume 60 ; 60 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2013 ; Clays and Clay Minerals Volume 61 [superseded] ; 61 ; >
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 2013 ; Clays and Clay Minerals Volume 61 ; 61 ; >
@@ -40,7 +40,7 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Clays and Clay Minerals Volume 63 [superseded] ; 63 ; >
     au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Clays and Clay Minerals Volume 63 ; 63 ; reingest1.clockss.org:8082 >
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; expected ; exists ; 2017 ; Clays and Clay Minerals Volume 65 ; 65 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Clays and Clay Minerals Volume 65 ; 65 ; >
 
   }
 
