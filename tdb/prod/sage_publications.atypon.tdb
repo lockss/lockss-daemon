@@ -3625,6 +3625,79 @@
 
     }
 
+  {
+
+      title <
+        name = Behavioral Disorders ;
+        issn = 0198-7429 ;
+        eissn = 2163-5307
+      >
+
+        #param[base_url] = http://bhd.sagepub.com/
+
+        au < exists ; 1975-1976 ; Behavioral Disorders Volume 1 ; 1 ; bhda >
+        au < exists ; 1976-1977 ; Behavioral Disorders Volume 2 ; 2 ; bhda >
+        au < exists ; 1977-1978 ; Behavioral Disorders Volume 3 ; 3 ; bhdb >
+        au < exists ; 1978-1979 ; Behavioral Disorders Volume 4 ; 4 ; bhda >
+        au < exists ; 1979-1980 ; Behavioral Disorders Volume 5 ; 5 ; bhda >
+        au < exists ; 1980-1981 ; Behavioral Disorders Volume 6 ; 6 ; bhda >
+        au < exists ; 1981-1982 ; Behavioral Disorders Volume 7 ; 7 ; bhda >
+        au < exists ; 1982-1983 ; Behavioral Disorders Volume 8 ; 8 ; bhda >
+        au < exists ; 1983-1984 ; Behavioral Disorders Volume 9 ; 9 ; bhda >
+        au < exists ; 1984-1985 ; Behavioral Disorders Volume 10 ; 10 ; bhda >
+        au < exists ; 1985-1986 ; Behavioral Disorders Volume 11 ; 11 ; bhda >
+        au < exists ; 1986-1987 ; Behavioral Disorders Volume 12 ; 12 ; bhda >
+        au < exists ; 1987-1988 ; Behavioral Disorders Volume 13 ; 13 ; bhda >
+        au < exists ; 1988-1989 ; Behavioral Disorders Volume 14 ; 14 ; bhda >
+        au < exists ; 1989-1990 ; Behavioral Disorders Volume 15 ; 15 ; bhda >
+        au < exists ; 1990-1991 ; Behavioral Disorders Volume 16 ; 16 ; bhda >
+        au < exists ; 1991-1992 ; Behavioral Disorders Volume 17 ; 17 ; bhda >
+        au < exists ; 1992-1993 ; Behavioral Disorders Volume 18 ; 18 ; bhda >
+        au < exists ; 1993-1994 ; Behavioral Disorders Volume 19 ; 19 ; bhda >
+        au < exists ; 1994-1995 ; Behavioral Disorders Volume 20 ; 20 ; bhda >
+        au < exists ; 1995-1996 ; Behavioral Disorders Volume 21 ; 21 ; bhda >
+        au < exists ; 1996-1997 ; Behavioral Disorders Volume 22 ; 22 ; bhda >
+        au < exists ; 1997-1998 ; Behavioral Disorders Volume 23 ; 23 ; bhda >
+        au < exists ; 1998-1999 ; Behavioral Disorders Volume 24 ; 24 ; bhda >
+        au < exists ; 1999-2000 ; Behavioral Disorders Volume 25 ; 25 ; bhda >
+        au < exists ; 2000-2001 ; Behavioral Disorders Volume 26 ; 26 ; bhda >
+        au < exists ; 2001-2002 ; Behavioral Disorders Volume 27 ; 27 ; bhda >
+        au < exists ; 2002-2003 ; Behavioral Disorders Volume 28 ; 28 ; bhda >
+        au < exists ; 2003-2004 ; Behavioral Disorders Volume 29 ; 29 ; bhda >
+        au < exists ; 2004-2005 ; Behavioral Disorders Volume 30 ; 30 ; bhda >
+        au < exists ; 2005-2006 ; Behavioral Disorders Volume 31 ; 31 ; bhda >
+        au < exists ; 2006-2007 ; Behavioral Disorders Volume 32 ; 32 ; bhda >
+        au < doesNotExist ; 2007-2008 ; Behavioral Disorders Volume 33 ; 33 ; bhda >
+        au < doesNotExist ; 2008-2009 ; Behavioral Disorders Volume 34 ; 34 ; bhda >
+        au < doesNotExist ; 2009-2010 ; Behavioral Disorders Volume 35 ; 35 ; bhda >
+        au < doesNotExist ; 2010-2011 ; Behavioral Disorders Volume 36 ; 36 ; bhda >
+        au < exists ; 2011-2012 ; Behavioral Disorders Volume 37 ; 37 ; bhda >
+        au < exists ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda >
+        au < exists ; 2013-2014 ; Behavioral Disorders Volume 39 ; 39 ; bhda >
+        au < exists ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda >
+        au < exists ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda >
+        au < exists ; 2016-2017 ; Behavioral Disorders Volume 42 ; 42 ; bhda >
+
+  }
+
+  {
+
+      title <
+        name = Beyond Behavior ;
+        issn = 0260-0935
+      >
+
+        #param[base_url] = http://bbx.sagepub.com/
+
+        au < exists ; 2011-2012 ; Beyond Behavior Volume 21 ; 21 ; bbxa >
+        au < exists ; 2012-2013 ; Beyond Behavior Volume 22 ; 22 ; bbxa >
+        au < exists ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa >
+        au < exists ; 2015 ; Beyond Behavior Volume 24 ; 24 ; bbxa >
+        au < exists ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa >
+        au < expected ; 2017 ; Beyond Behavior Volume 26 ; 26 ; bbxa >
+
+  }
+
     {
 
       title <
@@ -12221,6 +12294,26 @@
       au < manifest ; 2016 ; Global Media and China Volume 1 ; 1 ; gcha >
   
     }
+
+  {
+
+    title <
+      name = Global Spine Journal ;
+      issn = 2192-5682 ;
+      eissn = 2192-5690
+    >
+
+      #param[base_url] = http://gsj.sagepub.com/
+
+      au < exists ; 2011 ; Global Spine Journal Volume 1 ; 1 ; gsja >
+      au < exists ; 2012 ; Global Spine Journal Volume 2 ; 2 ; gsja >
+      au < exists ; 2013 ; Global Spine Journal Volume 3 ; 3 ; gsja >
+      au < exists ; 2014 ; Global Spine Journal Volume 4 ; 4 ; gsja >
+      au < exists ; 2015 ; Global Spine Journal Volume 5 ; 5 ; gsja >
+      au < exists ; 2016 ; Global Spine Journal Volume 6 ; 6 ; gsja >
+      au < exists ; 2017 ; Global Spine Journal Volume 7 ; 7 ; gsja >
+
+  }
 
   {
 
@@ -20955,6 +21048,51 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of General Management ;
+      issn = 0306-3070 ;
+      eissn = 1759-6106
+    >
+
+    #param[base_url] = http://gem.sagepub.com/
+
+      au < exists ; 1985-1986 ; Journal of General Management Volume 11 ; 11 ; gema >
+      au < doesNotExist ; 1986-1987 ; Journal of General Management Volume 12 ; 12 ; gema >
+      au < doesNotExist ; 1987-1988 ; Journal of General Management Volume 13 ; 13 ; gema >
+      au < doesNotExist ; 1988-1989 ; Journal of General Management Volume 14 ; 14 ; gema >
+      au < doesNotExist ; 1989-1990 ; Journal of General Management Volume 15 ; 15 ; gema >
+      au < doesNotExist ; 1990-1991 ; Journal of General Management Volume 16 ; 16 ; gema >
+      au < exists ; 1991-1992 ; Journal of General Management Volume 17 ; 17 ; gema >
+      au < exists ; 1992-1993 ; Journal of General Management Volume 18 ; 18 ; gema >
+      au < exists ; 1993-1994 ; Journal of General Management Volume 19 ; 19 ; gema >
+      au < exists ; 1994-1995 ; Journal of General Management Volume 20 ; 20 ; gema >
+      au < exists ; 1995-1996 ; Journal of General Management Volume 21 ; 21 ; gema >
+      au < exists ; 1996-1997 ; Journal of General Management Volume 22 ; 22 ; gema >
+      au < exists ; 1997-1998 ; Journal of General Management Volume 23 ; 23 ; gema >
+      au < exists ; 1998-1999 ; Journal of General Management Volume 24 ; 24 ; gema >
+      au < exists ; 1999-2000 ; Journal of General Management Volume 25 ; 25 ; gema >
+      au < exists ; 2000-2001 ; Journal of General Management Volume 26 ; 26 ; gema >
+      au < exists ; 2001-2002 ; Journal of General Management Volume 27 ; 27 ; gema >
+      au < doesNotExist ; 2002-2003 ; Journal of General Management Volume 28 ; 28 ; gema >
+      au < doesNotExist ; 2003-2004 ; Journal of General Management Volume 29 ; 29 ; gema >
+      au < doesNotExist ; 2004-2005 ; Journal of General Management Volume 30 ; 30 ; gema >
+      au < exists ; 2005-2006 ; Journal of General Management Volume 31 ; 31 ; gema >
+      au < exists ; 2006-2007 ; Journal of General Management Volume 32 ; 32 ; gema >
+      au < exists ; 2007-2008 ; Journal of General Management Volume 33 ; 33 ; gema >
+      au < exists ; 2008-2009 ; Journal of General Management Volume 34 ; 34 ; gema >
+      au < doesNotExist ; 2009-2010 ; Journal of General Management Volume 35 ; 35 ; gema >
+      au < doesNotExist ; 2010-2011 ; Journal of General Management Volume 36 ; 36 ; gema >
+      au < exists ; 2011-2012 ; Journal of General Management Volume 37 ; 37 ; gema >
+      au < exists ; 2012-2013 ; Journal of General Management Volume 38 ; 38 ; gema >
+      au < exists ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema >
+      au < exists ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema >
+      au < doesNotExist ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema >
+      au < exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema >
+
+  }
+
     {
       title <
         name = Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector ;
@@ -29226,6 +29364,22 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; njna >
         au < doNotProcess ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; njna >
         au < manifest ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 ; njna >
+
+  }
+
+  {
+
+    title <
+      name = Nordic Studies on Alcohol and Drugs ;
+      issn = 1455-0725 ;
+      eissn = 1458-6126 
+    >
+
+        #param[base_url] = http://nad.sagepub.com/
+
+        au < exists ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada >
+        au < exists ; 2016 ; Nordic Studies on Alcohol and Drugs Volume 33 ; 33 ; nada >
+        au < exists ; 2017 ; Nordic Studies on Alcohol and Drugs Volume 34 ; 34 ; nada >
 
   }
 
