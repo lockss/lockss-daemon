@@ -23283,6 +23283,20 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
     }
 
+  {
+
+    title <
+      name = Journal of Palliative Care ;
+      issn = 0825-8597 ;
+      eissn = 2369-5293
+    >
+
+      #param[base_url] = http://pal.sagepub.com/
+
+      au < exists ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala >
+
+  }
+
     {
 
       title <
@@ -30491,6 +30505,22 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Plastic Surgery Case Studies ;
+      issn = 2513-826X ;
+      eissn = 2513-826X
+    >
+
+      #param[base_url] = http://pcs.sagepub.com/
+
+      au < exists ; 2015 ; Plastic Surgery Case Studies Volume 1 ; 1 ; pcsa >
+      au < exists ; 2016 ; Plastic Surgery Case Studies Volume 2 ; 2 ; pcsa >
+      au < exists ; 2017 ; Plastic Surgery Case Studies Volume 3 ; 3 ; pcsa >
+
+  }
 
   {
 
@@ -40084,9 +40114,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       #param[base_url] = http://pnz.sagepub.com/
+      #move to T&F 
 
       {
-
 
         au < doNotProcess ; 1948-1949 ; Political Science Volume 1 ; 1 ; pnza >
         au < doNotProcess ; 1950 ; Political Science Volume 2 ; 2 ; pnzb >
@@ -40171,7 +40201,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       #param[base_url] = http://pau.sagepub.com/
 
       {
-
 
         au < doNotProcess ; 1906 ; Proceedings of the Institution of Automobile Engineers Volume 1 ; 1 ; paua >
         au < doNotProcess ; 1907 ; Proceedings of the Institution of Automobile Engineers Volume 2 ; 2 ; paua >

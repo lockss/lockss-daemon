@@ -23570,6 +23570,20 @@
   {
 
     title <
+      name = Journal of Palliative Care ;
+      issn = 0825-8597 ;
+      eissn = 2369-5293
+    >
+
+      #param[base_url] = http://pal.sagepub.com/
+
+      au < exists ; exists ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Parenteral and Enteral Nutrition ;
       issn = 0148-6071 ;
       eissn = 1941-2444
@@ -23577,9 +23591,7 @@
 
     #param[base_url] = http://pen.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1977 ; Journal of Parenteral and Enteral Nutrition Volume 1 ; 1 ; pena ; >
       au < manifest ; exists ; 1978 ; Journal of Parenteral and Enteral Nutrition Volume 2 ; 2 ; pena ; >
@@ -23684,9 +23696,7 @@
 
     #param[base_url] = http://jpr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1964 ; Journal of Peace Research Volume 1 ; 1 ; jpra ; >
       au < manifest ; exists ; 1965 ; Journal of Peace Research Volume 2 ; 2 ; jpra ; >
@@ -30854,9 +30864,7 @@
 
     #param[base_url] = http://plt.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Planning Theory Volume 1 ; 1 ; plta ; >
       au < manifest ; exists ; 2003 ; Planning Theory Volume 2 ; 2 ; plta ; >
@@ -30881,10 +30889,25 @@
   {
 
     title <
+      name = Plastic Surgery Case Studies ;
+      issn = 2513-826X ;
+      eissn = 2513-826X
+    >
+
+      #param[base_url] = http://pcs.sagepub.com/
+
+      au < exists ; exists ; 2015 ; Plastic Surgery Case Studies Volume 1 ; 1 ; pcsa ; >
+      au < exists ; exists ; 2016 ; Plastic Surgery Case Studies Volume 2 ; 2 ; pcsa ; >
+      au < exists ; exists ; 2017 ; Plastic Surgery Case Studies Volume 3 ; 3 ; pcsa ; >
+
+  }
+
+  {
+
+    title <
       name = The Police Journal: Theory, Practice and Principles ;
       issn = 0032-258X ;
-      eissn = 1740-5599 ;
-      issnl = 0032-258X
+      eissn = 1740-5599 
     >
 
       #param[base_url] = http://pjx.sagepub.com/
@@ -40660,9 +40683,9 @@
     >
 
     #param[base_url] = http://pnz.sagepub.com/
+    #move to T&F 
 
     {
-
 
       au < manifest ; exists ; 1948-1949 ; Political Science Volume 1 ; 1 ; pnza ; >
       au < exists ; exists ; 1950 ; Political Science Volume 2 ; 2 ; pnzb ; >
