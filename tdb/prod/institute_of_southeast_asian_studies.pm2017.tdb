@@ -15,10 +15,21 @@
       issnl = 0217-4472
 
     >
-
-      attr[journal_id] = 0000
       #NONE OF THIS TITLE FOUND -became Journal of Southeast Asian Economies (JSEAE) in 2013 - PMuse lists the volumes under that title
+      #2013-present are listed under Journal of Southeast Asian Economies (JSEAE) 2339-5095
+    
+      attr[journal_id] = 347
 
+        au < manifest ; 2003 ; JASEAN Economic Bulletin Volume 20 [2003] ; 6186 >
+        au < manifest ; 2004 ; JASEAN Economic Bulletin Volume 21 [2004] ; 6185 >
+        au < manifest ; 2005 ; JASEAN Economic Bulletin Volume 22 [2005] ; 6184 >
+        au < manifest ; 2006 ; JASEAN Economic Bulletin Volume 23 [2006] ; 3171 >
+        au < manifest ; 2007 ; JASEAN Economic Bulletin Volume 24 [2007] ; 3403 >
+        au < manifest ; 2008 ; JASEAN Economic Bulletin Volume 25 [2008] ; 3849 >
+        au < manifest ; 2009 ; JASEAN Economic Bulletin Volume 26 [2009] ; 4335 >
+        au < manifest ; 2010 ; JASEAN Economic Bulletin Volume 27 [2010] ; 6162 >
+        au < manifest ; 2011 ; JASEAN Economic Bulletin Volume 28 [2011] ; 7116 >
+        au < manifest ; 2012 ; JASEAN Economic Bulletin Volume 29 [2012] ; 8188 >
 
     }
     {
@@ -58,17 +69,8 @@
     >
     
       attr[journal_id] = 347
+      #2003-2012 are listed under JASEAN Economic Bulletin 0217-4472
 
-        au < manifest ; 2003 ; Journal of Southeast Asian Economies (JSEAE) Volume 20 [2003] ; 6186 >
-        au < manifest ; 2004 ; Journal of Southeast Asian Economies (JSEAE) Volume 21 [2004] ; 6185 >
-        au < manifest ; 2005 ; Journal of Southeast Asian Economies (JSEAE) Volume 22 [2005] ; 6184 >
-        au < manifest ; 2006 ; Journal of Southeast Asian Economies (JSEAE) Volume 23 [2006] ; 3171 >
-        au < manifest ; 2007 ; Journal of Southeast Asian Economies (JSEAE) Volume 24 [2007] ; 3403 >
-        au < manifest ; 2008 ; Journal of Southeast Asian Economies (JSEAE) Volume 25 [2008] ; 3849 >
-        au < manifest ; 2009 ; Journal of Southeast Asian Economies (JSEAE) Volume 26 [2009] ; 4335 >
-        au < manifest ; 2010 ; Journal of Southeast Asian Economies (JSEAE) Volume 27 [2010] ; 6162 >
-        au < manifest ; 2011 ; Journal of Southeast Asian Economies (JSEAE) Volume 28 [2011] ; 7116 >
-        au < manifest ; 2012 ; Journal of Southeast Asian Economies (JSEAE) Volume 29 [2012] ; 8188 >
         au < manifest ; 2013 ; Journal of Southeast Asian Economies (JSEAE) Volume 30 [2013] ; 9200 >
         au < manifest ; 2014 ; Journal of Southeast Asian Economies (JSEAE) Volume 31 [2014] ; 9982 >
         au < manifest ; 2015 ; Journal of Southeast Asian Economies (JSEAE) Volume 32 [2015] ; 10587 >
