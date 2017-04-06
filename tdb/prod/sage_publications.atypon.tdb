@@ -8892,9 +8892,9 @@
 
         # Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
-        au < doNotProcess ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; dija >
-        au < doNotProcess ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; dija >
-        au < doNotProcess ; 2015 ; Therapeutic Innovation & Regulatory Science Volume 49 ; 49 ; dija >
+        au < doNotProcess ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; dijc >
+        au < doNotProcess ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; dijc >
+        au < doNotProcess ; 2015 ; Therapeutic Innovation & Regulatory Science Volume 49 ; 49 ; dijc >
         au < manifest ; 2016 ; Therapeutic Innovation & Regulatory Science Volume 50 ; 50 ; dijc >
 
       }
@@ -12683,14 +12683,14 @@
         au < doNotProcess ; 2005 ; The International Journal of Press/Politics Volume 10 ; 10 ; hija >
         au < doNotProcess ; 2006 ; The International Journal of Press/Politics Volume 11 ; 11 ; hija >
         au < doNotProcess ; 2007 ; The International Journal of Press/Politics Volume 12 ; 12 ; hija >
-        au < doNotProcess ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 ; hija >
-        au < doNotProcess ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ; hija >
-        au < doNotProcess ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 ; hija >
-        au < doNotProcess ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 ; hija >
-        au < doNotProcess ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 ; hija >
-        au < doNotProcess ; 2013 ; The International Journal of Press/Politics Volume 18 ; 18 ; hija >
-        au < doNotProcess ; 2014 ; The International Journal of Press/Politics Volume 19 ; 19 ; hija >
-        au < doNotProcess ; 2015 ; The International Journal of Press/Politics Volume 20 ; 20 ; hija >
+        au < doNotProcess ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 ; hijb >
+        au < doNotProcess ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ; hijb >
+        au < doNotProcess ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 ; hijb >
+        au < doNotProcess ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 ; hijb >
+        au < doNotProcess ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 ; hijb >
+        au < doNotProcess ; 2013 ; The International Journal of Press/Politics Volume 18 ; 18 ; hijb >
+        au < doNotProcess ; 2014 ; The International Journal of Press/Politics Volume 19 ; 19 ; hijb >
+        au < doNotProcess ; 2015 ; The International Journal of Press/Politics Volume 20 ; 20 ; hijb >
         au < manifest ; 2016 ; The International Journal of Press/Politics Volume 21 ; 21 ; hijb >
 
       }
@@ -21940,13 +21940,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://bji.sagepub.com/
 
-        au < doNotProcess ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ; bjia >
-        au < doNotProcess ; 2010 ; Journal of Infection Prevention Volume 11 ; 11 ; bjia >
-        au < doNotProcess ; 2011 ; Journal of Infection Prevention Volume 12 ; 12 ; bjia >
-        au < doNotProcess ; 2012 ; Journal of Infection Prevention Volume 13 ; 13 ; bjia >
-        au < doNotProcess ; 2013 ; Journal of Infection Prevention Volume 14 ; 14 ; bjia >
-        au < doNotProcess ; 2014 ; Journal of Infection Prevention Volume 15 ; 15 ; bjia >
-        au < doNotProcess ; 2015 ; Journal of Infection Prevention Volume 16 ; 16 ; bjia >
+        au < doNotProcess ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ; bjib >
+        au < doNotProcess ; 2010 ; Journal of Infection Prevention Volume 11 ; 11 ; bjib >
+        au < doNotProcess ; 2011 ; Journal of Infection Prevention Volume 12 ; 12 ; bjib >
+        au < doNotProcess ; 2012 ; Journal of Infection Prevention Volume 13 ; 13 ; bjib >
+        au < doNotProcess ; 2013 ; Journal of Infection Prevention Volume 14 ; 14 ; bjib >
+        au < doNotProcess ; 2014 ; Journal of Infection Prevention Volume 15 ; 15 ; bjib >
+        au < doNotProcess ; 2015 ; Journal of Infection Prevention Volume 16 ; 16 ; bjib >
         au < ready ; 2016 ; Journal of Infection Prevention Volume 17 ; 17 ; bjib >
 
       }
@@ -25345,9 +25345,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 ; jiaa >
         au < doNotProcess ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 ; jiaa >
         au < doNotProcess ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 ; jiaa >
-        au < doNotProcess ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; jiaa >
-        au < doNotProcess ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 ; jiaa >
-        au < doNotProcess ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 ; jiaa >
+        au < doNotProcess ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 ; jiab >
+        au < doNotProcess ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 ; jiab >
+        au < doNotProcess ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 ; jiab >
         au < manifest ; 2016 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 15 ; 15 ; jiab >
 
       }
@@ -26501,8 +26501,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://lin.sagepub.com/
 
-        au < doNotProcess ; 2014 ; Language and Linguistics Volume 15 ; 15 ; lina >
-        au < doNotProcess ; 2015 ; Language and Linguistics Volume 16 ; 16 ; lina >
+        au < doNotProcess ; 2014 ; Language and Linguistics Volume 15 ; 15 ; linb >
+        au < doNotProcess ; 2015 ; Language and Linguistics Volume 16 ; 16 ; linb >
         au < manifest ; 2016 ; Language and Linguistics Volume 17 ; 17 ; linb >
 
       }
@@ -37317,7 +37317,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2012 ; Theory and Research in Education Volume 10 ; 10 ; trea >
         au < doNotProcess ; 2013 ; Theory and Research in Education Volume 11 ; 11 ; trea >
         au < doNotProcess ; 2014 ; Theory and Research in Education Volume 12 ; 12 ; trea >
-        au < doNotProcess ; 2015 ; Theory and Research in Education Volume 13 ; 13 ; trea >
+        au < doNotProcess ; 2015 ; Theory and Research in Education Volume 13 ; 13 ; treb >
         au < manifest ; 2016 ; Theory and Research in Education Volume 14 ; 14 ; treb >
 
       }
@@ -42998,8 +42998,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://shr.sagepub.com/
         comment[continues] = 2042-5333
 
-        au < doNotProcess ; 2014 ; JRSM Open Volume 5 ; 5 ; shra >
-        au < doNotProcess ; 2015 ; JRSM Open Volume 6 ; 6 ; shra >
+        au < doNotProcess ; 2014 ; JRSM Open Volume 5 ; 5 ; shrb >
+        au < doNotProcess ; 2015 ; JRSM Open Volume 6 ; 6 ; shrb >
         au < manifest ; 2016 ; JRSM Open Volume 7 ; 7 ; shrb >
 
     }
@@ -43150,8 +43150,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://min.sagepub.com/
         comment[continues] = 1754-0453
 
-        au < doNotProcess ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; mina >
-        au < doNotProcess ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; mina >
+        au < doNotProcess ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; minc >
+        au < doNotProcess ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; minc >
         au < manifest ; 2016 ; Post Reproductive Health Volume 22 ; 22 ; minc >
 
     }
@@ -43260,14 +43260,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://ult.sagepub.com/
 
-        au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 ; ulta >
-        au < doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 ; ulta >
-        au < doNotProcess ; 2006 ; Ultrasound Volume 14 ; 14 ; ulta >
-        au < doNotProcess ; 2007 ; Ultrasound Volume 15 ; 15 ; ulta >
-        au < doNotProcess ; 2008 ; Ultrasound Volume 16 ; 16 ; ulta >
-        au < doNotProcess ; 2009 ; Ultrasound Volume 17 ; 17 ; ulta >
-        au < doNotProcess ; 2010 ; Ultrasound Volume 18 ; 18 ; ulta >
-        au < doNotProcess ; 2011 ; Ultrasound Volume 19 ; 19 ; ulta >
+        au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 ; ultb >
+        au < doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 ; ultb >
+        au < doNotProcess ; 2006 ; Ultrasound Volume 14 ; 14 ; ultb >
+        au < doNotProcess ; 2007 ; Ultrasound Volume 15 ; 15 ; ultb >
+        au < doNotProcess ; 2008 ; Ultrasound Volume 16 ; 16 ; ultb >
+        au < doNotProcess ; 2009 ; Ultrasound Volume 17 ; 17 ; ultb >
+        au < doNotProcess ; 2010 ; Ultrasound Volume 18 ; 18 ; ultb >
+        au < doNotProcess ; 2011 ; Ultrasound Volume 19 ; 19 ; ultb >
         au < manifest ; 2012 ; Ultrasound Volume 20 ; 20 ; ultb >
         au < doNotProcess ; 2013 ; Ultrasound Volume 21 ; 21 ; ultb >
         au < doNotProcess ; 2014 ; Ultrasound Volume 22 ; 22 ; ultb >
@@ -43303,12 +43303,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      {
       #param[base_url] = http://vas.sagepub.com/
 
-      au < doNotProcess ; 2004 ; Vascular Volume 12 ; 12 ; vasa >
-      au < doNotProcess ; 2005 ; Vascular Volume 13 ; 13 ; vasa >
-      au < doNotProcess ; 2006 ; Vascular Volume 14 ; 14 ; vasa >
-      au < doNotProcess ; 2007 ; Vascular Volume 15 ; 15 ; vasa >
-      au < doNotProcess ; 2008 ; Vascular Volume 16 ; 16 ; vasa >
-      au < doNotProcess ; 2009 ; Vascular Volume 17 ; 17 ; vasa >
+      au < doNotProcess ; 2004 ; Vascular Volume 12 ; 12 ; vasb >
+      au < doNotProcess ; 2005 ; Vascular Volume 13 ; 13 ; vasb >
+      au < doNotProcess ; 2006 ; Vascular Volume 14 ; 14 ; vasb >
+      au < doNotProcess ; 2007 ; Vascular Volume 15 ; 15 ; vasb >
+      au < doNotProcess ; 2008 ; Vascular Volume 16 ; 16 ; vasb >
+      au < doNotProcess ; 2009 ; Vascular Volume 17 ; 17 ; vasb >
       au < manifest ; 2010 ; Vascular Volume 18 ; 18 ; vasb >
       au < doNotProcess ; 2011 ; Vascular Volume 19 ; 19 ; vasb >
       au < manifest ; 2012 ; Vascular Volume 20 ; 20 ; vasb >
