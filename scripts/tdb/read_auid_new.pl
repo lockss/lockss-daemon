@@ -685,10 +685,10 @@ while (my $line = <>) {
            ($plugin eq "ClockssAmmonsScientificPlugin") ||
            ($plugin eq "ClockssASCEPlugin") ||
            ($plugin eq "ClockssBIRAtyponPlugin") ||
-           ($plugin eq "ClockssFutureSciencePlugin") ||
            ($plugin eq "ClockssEdinburghUniversityPressPlugin") ||
            ($plugin eq "ClockssEmeraldGroupPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyPlugin") ||
+           ($plugin eq "ClockssFutureSciencePlugin") ||
            ($plugin eq "ClockssIndersciencePlugin") ||
 #           ($plugin eq "ClockssJstorPlugin") ||
            ($plugin eq "ClockssLiverpoolJournalsPlugin") ||
@@ -799,9 +799,9 @@ while (my $line = <>) {
            ($plugin eq "ClockssFutureScienceBooksPlugin") ||
            ($plugin eq "ClockssLiverpoolBooksPlugin") ||
            ($plugin eq "ClockssNRCResearchPressBooksPlugin") ||
+           ($plugin eq "ClockssPracticalActionBooksPlugin") ||
            ($plugin eq "ClockssSEGBooksPlugin") ||
            ($plugin eq "ClockssSiamBooksPlugin") ||
-           ($plugin eq "ClockssPracticalActionBooksPlugin") ||
            ($plugin eq "ClockssWageningenBooksPlugin")) {
       $url = sprintf("%sclockss/eisbn/%s",
       $param{base_url}, $param{book_eisbn});
