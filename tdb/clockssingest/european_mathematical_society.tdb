@@ -59,9 +59,9 @@
     param[journal_issn] = 0010-2571
     comment[journal_id] = cmh
     
-    au < crawling ; exists ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 ; >
-    au < crawling ; exists ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 ; >
-    au < crawling ; exists ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 ; >
+    au < frozen ; exists ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 ; >
+    au < frozen ; exists ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 ; >
+    au < frozen ; exists ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 ; >
     au < crawling ; exists ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 ; >
     au < manifest ; exists ; 2001 ; Commentarii Mathematici Helvetici Volume 76 ; 76 ; >
     au < manifest ; exists ; 2002 ; Commentarii Mathematici Helvetici Volume 77 ; 77 ; >
