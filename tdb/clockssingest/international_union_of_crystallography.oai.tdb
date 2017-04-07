@@ -50,7 +50,7 @@
     au < ready ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 September ; 2016-09 ; >
     au < ready ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 October ; 2016-10 ; >
     au < crawling ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 November ; 2016-11 ; >
-    au < expected ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 December ; 2016-12 ; >
+    au < expected ; exists ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 December ; 2016-12 ; > #no substance but should check again along with 2017 AUs
 
     au < expected ; exists ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 January ; 2017-01 ; >
 
@@ -131,7 +131,7 @@
     au < finished ; crawling ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 September ; 2014-09 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 October ; 2014-10 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 November ; 2014-11 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 December ; 2014-12 ; >
+    au < doesNotExist ; doesNotExist ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 December ; 2014-12 ; >
     # changed name and issn.
   
   }
