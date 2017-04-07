@@ -1,8 +1,5 @@
 /*
- * $Id$
- *
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,17 +28,73 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.nio.charset.Charset;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.auth.*;
-import org.apache.commons.httpclient.cookie.CookiePolicy;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.RequestEntity;
-import org.apache.commons.httpclient.params.*;
-import org.apache.commons.httpclient.protocol.*;
-import org.apache.commons.httpclient.util.*;
+import javax.net.ssl.SSLContext;
+
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.Header;
+//HC3 import org.apache.commons.httpclient.HttpConnection;
+//HC3 import org.apache.commons.httpclient.HttpException;
+//HC3 import org.apache.commons.httpclient.HttpState;
+//HC3 import org.apache.commons.httpclient.auth.BasicScheme;
+import org.apache.http.Consts;
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpHost;
+import org.apache.http.HttpResponse;
+import org.apache.http.auth.AuthScope;
+//HC3 import org.apache.commons.httpclient.auth.*;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.AuthCache;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.config.CookieSpecs;
+import org.apache.http.client.config.RequestConfig;
+//HC3 import org.apache.commons.httpclient.cookie.CookiePolicy;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.client.utils.DateUtils;
+import org.apache.http.config.ConnectionConfig;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.config.SocketConfig;
+import org.apache.http.conn.HttpClientConnectionManager;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+//HC3 import org.apache.commons.httpclient.methods.GetMethod;
+//HC3 import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.RequestBuilder;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.cookie.SetCookie;
+//HC3 import org.apache.commons.httpclient.methods.RequestEntity;
+//HC3 import org.apache.commons.httpclient.params.*;
+//HC3 import org.apache.commons.httpclient.params.DefaultHttpParams;
+//HC3 import org.apache.commons.httpclient.params.HttpMethodParams;
+//HC3 import org.apache.commons.httpclient.params.HttpParams;
+import org.apache.http.impl.auth.BasicScheme;
+import org.apache.http.impl.client.BasicAuthCache;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.impl.cookie.BasicClientCookie;
+//HC3 import org.apache.commons.httpclient.protocol.*;
+//HC3 import org.apache.commons.httpclient.protocol.Protocol;
+//HC3 import org.apache.commons.httpclient.protocol.SSLProtocolSocketFactory;
+//HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+//HC3 import org.apache.commons.httpclient.util.*;
+//HC3 import org.apache.commons.httpclient.util.DateParseException;
+//HC3 import org.apache.commons.httpclient.util.DateUtil;
 import org.apache.commons.collections4.map.*;
 
 import org.lockss.config.*;
@@ -111,30 +164,46 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static DispatchingSSLProtocolSocketFactory DISP_FACT =
     new DispatchingSSLProtocolSocketFactory();
   static {
-    // Install our http factory
-    Protocol http_proto =
-      new Protocol("http",
-		   LockssDefaultProtocolSocketFactory.getSocketFactory(),
-		   80);
-    Protocol.registerProtocol("http", http_proto);
-
-    // Install our https factory
-    Protocol https_proto = new Protocol("https", DISP_FACT, 443);
-    Protocol.registerProtocol("https", https_proto);
+//HC3     // Install our http factory
+//HC3     Protocol http_proto =
+//HC3       new Protocol("http",
+//HC3 		   LockssDefaultProtocolSocketFactory.getSocketFactory(),
+//HC3 		   80);
+//HC3     Protocol.registerProtocol("http", http_proto);
+//HC3 
+//HC3     // Install our https factory
+//HC3     Protocol https_proto = new Protocol("https", DISP_FACT, 443);
+//HC3     Protocol.registerProtocol("https", https_proto);
+    Registry<ConnectionSocketFactory> r =
+	RegistryBuilder.<ConnectionSocketFactory>create()
+	.register("http", LockssDefaultProtocolSocketFactory.getSocketFactory())
+	.register("https", DISP_FACT)
+	.build();
+    if (log.isDebug3()) log.debug3("static {} : r = " + r);
 
     DISP_FACT.setDefaultFactory(getDefaultSocketFactory(DEFAULT_SERVER_TRUST_LEVEL));
   }
 
-  private static ServerTrustLevel serverTrustLevel;
+//HC3   private static ServerTrustLevel serverTrustLevel;
   private static String acceptHeader = DEFAULT_ACCEPT_HEADER;
   private static Set<String> singleValuedHdrs =
     new HashSet(DEFAULT_SINGLE_VALUED_HEADERS);
 
-  private static SecureProtocolSocketFactory
+//  private static SecureProtocolSocketFactory
+  private static LayeredConnectionSocketFactory
     getDefaultSocketFactory(ServerTrustLevel stl) {
     switch (stl) {
     case Trusted:
-      return new SSLProtocolSocketFactory();
+//HC3       return new SSLProtocolSocketFactory();
+      SSLContext sslContext = null;
+      try {
+	sslContext = SSLContext.getDefault();
+      } catch (NoSuchAlgorithmException e) {
+	// This could happen if the JVM does not have the appropriate security
+	// extensions.
+	throw new RuntimeException(e);
+      }
+      return new SSLConnectionSocketFactory(sslContext);
     case SelfSigned:
       return new EasySSLProtocolSocketFactory();
     case Untrusted:
@@ -148,32 +217,67 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public static void setConfig(Configuration config,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
+    final String DEBUG_HEADER = "setConfig(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "diffs.contains(" + PREFIX + ") = " + diffs.contains(PREFIX));
     if (diffs.contains(PREFIX)) {
       acceptHeader = config.get(PARAM_ACCEPT_HEADER, DEFAULT_ACCEPT_HEADER);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "acceptHeader = " + acceptHeader);
 
       Set<String> set = new HashSet();
       for (String s : (List<String>)config.getList(PARAM_SINGLE_VALUED_HEADERS,
 						   DEFAULT_SINGLE_VALUED_HEADERS)) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "s = " + s);
 	set.add(s.toLowerCase());
       }
+
       singleValuedHdrs = set;
 
-      HttpParams params = DefaultHttpParams.getDefaultParams();
+//HC3       HttpParams params = DefaultHttpParams.getDefaultParams();
 
       if (diffs.contains(PARAM_COOKIE_POLICY)) {
 	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
-	params.setParameter(HttpMethodParams.COOKIE_POLICY,
-			    getCookiePolicy(policy));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "policy = " + policy);
+//HC3         params.setParameter(HttpMethodParams.COOKIE_POLICY,
+//HC3                             getCookiePolicy(policy));
+	cookiePolicy = getCookiePolicy(policy);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "cookiePolicy = " + cookiePolicy);
       }
+
       if (diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
 	boolean val = config.getBoolean(PARAM_SINGLE_COOKIE_HEADER,
 					DEFAULT_SINGLE_COOKIE_HEADER);
-	params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
-				   val);
+	log.debug3(DEBUG_HEADER + "val = " + val);
+//HC3         params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
+//HC3 		   val);
+
+	if (val) {
+	  // Per http://mail-archives.apache.org/mod_mbox/hc-httpclient-users/201405.mbox/ajax/%3C1399818037.8345.0.camel%40ubuntu%3E
+	  //
+	  // > So to my understanding after reading the code for BrowserCompatSpec [0] is
+	  // > that when using the "CookieSpecs.BROWSER_COMPATIBILITY" when building the
+	  // > cookie spec the single cookie header policy is already in place?
+	  // >
+	  // >
+	  //
+	  // Yes, this is correct. 
+	  cookiePolicy = CookieSpecs.BROWSER_COMPATIBILITY;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "cookiePolicy = " + cookiePolicy);
+	}
       }
+
       if (diffs.contains(PARAM_HEADER_CHARSET)) {
 	String val = config.get(PARAM_HEADER_CHARSET, DEFAULT_HEADER_CHARSET);
-	params.setParameter(HttpMethodParams.HTTP_ELEMENT_CHARSET, val);
+	log.debug3(DEBUG_HEADER + "val = " + val);
+
+//HC3         params.setParameter(HttpMethodParams.HTTP_ELEMENT_CHARSET, val);
+	charset = getCharset(val);
+	log.debug3(DEBUG_HEADER + "charset = " + charset);
       }
       ServerTrustLevel stl =
 	(ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
@@ -184,46 +288,143 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   static String getCookiePolicy(String policy) {
+    if (policy == null) {
+      policy =
+	  CurrentConfig.getParam(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
+    }
+
     if (Constants.COOKIE_POLICY_RFC_2109.equalsIgnoreCase(policy)) {
-      return CookiePolicy.RFC_2109;
+//HC3       return CookiePolicy.RFC_2109;
+      return CookieSpecs.DEFAULT;
     } else if (Constants.COOKIE_POLICY_NETSCAPE.equalsIgnoreCase(policy)) {
-      return CookiePolicy.NETSCAPE;
+//HC3       return CookiePolicy.NETSCAPE;
+      return CookieSpecs.NETSCAPE;
     } else if (Constants.COOKIE_POLICY_IGNORE.equalsIgnoreCase(policy)) {
-      return CookiePolicy.IGNORE_COOKIES;
+//HC3       return CookiePolicy.IGNORE_COOKIES;
+      return CookieSpecs.IGNORE_COOKIES;
     } else if (Constants.COOKIE_POLICY_COMPATIBILITY.equalsIgnoreCase(policy)) {
-      return CookiePolicy.BROWSER_COMPATIBILITY;
+//HC3       return CookiePolicy.BROWSER_COMPATIBILITY;
+      return CookieSpecs.BROWSER_COMPATIBILITY;
     } else {
-      log.warning("Unknown cookie policy: " + policy +
-		  ", using BROWSER_COMPATIBILITY");
-      return CookiePolicy.BROWSER_COMPATIBILITY;
+//HC3       log.warning("Unknown cookie policy: " + policy +
+//HC3                   ", using BROWSER_COMPATIBILITY");
+//HC3       return CookiePolicy.BROWSER_COMPATIBILITY;
+      log.warning("Unknown cookie policy: " + policy + ", using DEFAULT");
+      return CookieSpecs.DEFAULT;
     }
   }
 
-  private HttpClient client;
-  private HttpMethod method;
+  private static Charset getCharset(String charSetText) {
+    if (charSetText == null) {
+      charSetText =
+	  CurrentConfig.getParam(PARAM_HEADER_CHARSET, DEFAULT_HEADER_CHARSET);
+    }
+
+    Charset charSet = Consts.ISO_8859_1;
+
+    switch (charSetText) {
+    case "US-ASCII":
+      charSet = Consts.ASCII;
+      break;
+    case "UTF-8":
+      charSet = Consts.UTF_8;
+      break;
+    default:
+    }
+
+    return charSet;
+  }
+
+//HC3   private HttpClient client;
+  private CloseableHttpClient client;
+//HC3   private HttpMethod method;
+  private LockssMethodImpl method;
   private int methodCode;
   private LockssUrlConnectionPool connectionPool;
   private int responseCode;
+  private HttpResponse response;
+  private RequestBuilder reqBuilder = null;
+  private HttpUriRequest httpUriRequest = null;
+  private HttpClientBuilder clientBuilder = null;
+  private HttpClientContext context = null;
+  private RequestConfig.Builder requestConfigBuilder = null;
+  private RequestConfig reqConfig = null;
+  private static String cookiePolicy = CookieSpecs.DEFAULT;
+  private static Charset charset = null;
+  private ConnectionConfig.Builder connectionConfigBuilder = null;
+  private HttpClientConnectionManager connManager = null;
+  private boolean followRedirects = true;
 
   /** Create a connection object, defaulting to GET method */
-  public HttpClientUrlConnection(String urlString, HttpClient client)
+//HC3   public HttpClientUrlConnection(String urlString, HttpClient client)
+  public HttpClientUrlConnection(String urlString,
+      HttpClientContext clientContext)
       throws IOException {
-    this(LockssUrlConnection.METHOD_GET, urlString, client, null);
+//HC3     this(LockssUrlConnection.METHOD_GET, urlString, client, null);
+    this(LockssUrlConnection.METHOD_GET, urlString, clientContext, null);
   }
 
   /** Create a connection object, with specified method */
+//HC3   public HttpClientUrlConnection(int methodCode, String urlString,
+//HC3 	    HttpClient client, LockssUrlConnectionPool connectionPool)
   public HttpClientUrlConnection(int methodCode, String urlString,
-				 HttpClient client,
-				 LockssUrlConnectionPool connectionPool)
-      throws IOException {
+      HttpClientContext clientContext, LockssUrlConnectionPool connectionPool)
+	  throws IOException {
     super(urlString);
-    this.client = client != null ? client : new HttpClient();
+    final String DEBUG_HEADER = "HttpClientUrlConnection(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "methodCode = " + methodCode);
+      log.debug2(DEBUG_HEADER + "urlString = " + urlString);
+      log.debug2(DEBUG_HEADER + "clientContext = " + clientContext);
+      log.debug2(DEBUG_HEADER + "connectionPool = " + connectionPool);
+    }
+
+//HC3     this.client = client != null ? client : new HttpClient();
     this.methodCode = methodCode;
     method = createMethod(methodCode, urlString);
     this.connectionPool = connectionPool;
+
+    reqBuilder = RequestBuilder.get().setUri(urlString);
+
+    // Handle cookies.
+    CookieStore cookieStore = null;
+
+    if (clientContext == null) {
+      context = HttpClientContext.create();
+    } else {
+      context = clientContext;
+      cookieStore = context.getCookieStore();
+    }
+
+    requestConfigBuilder = RequestConfig.custom();
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "cookieStore = " + cookieStore);
+    if (cookieStore == null) {
+      cookieStore = new BasicCookieStore();
+      context.setCookieStore(cookieStore);
+      requestConfigBuilder.setCookieSpec(cookiePolicy);
+    }
+
+    clientBuilder = HttpClients.custom();
+    clientBuilder.setDefaultCookieStore(cookieStore);
+
+    connectionConfigBuilder = ConnectionConfig.custom();
+    connectionConfigBuilder.setCharset(charset);
+
+    if (connectionPool == null) {
+      if (methodCode == LockssUrlConnection.METHOD_POST) {
+	connManager = new PoolingHttpClientConnectionManager();
+      } else {
+	connManager = new BasicHttpClientConnectionManager();
+      }
+    } else {
+      connManager = connectionPool.getHttpClientConnectionManager(methodCode);
+    }
   }
 
-  private HttpMethod createMethod(int methodCode, String urlString)
+//  private HttpMethod createMethod(int methodCode, String urlString)
+  private LockssMethodImpl createMethod(int methodCode, String urlString)
       throws IOException {
     String u_str = urlString;
     try {
@@ -236,7 +437,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       }
       switch (methodCode) {
         case LockssUrlConnection.METHOD_GET:
-          return newLockssGetMethodImpl(u_str);
+          return new LockssGetMethodImpl(u_str);
         case LockssUrlConnection.METHOD_PROXY:
           return new LockssProxyGetMethodImpl(u_str);
         case LockssUrlConnection.METHOD_POST:
@@ -262,15 +463,16 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   /** for testing */
-  protected HttpClientUrlConnection(String urlString, HttpClient client,
-				    LockssGetMethod method)
-      throws IOException {
-    super(urlString);
-    this.client = client;
-    this.method = method;
-  }
+//HC3   protected HttpClientUrlConnection(String urlString, HttpClient client,
+//HC3 				      LockssGetMethod method)
+//HC3       throws IOException {
+//HC3     super(urlString);
+//HC3     this.client = client;
+//HC3     this.method = method;
+//HC3   }
 
-  protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
+//HC3   protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
+  protected LockssGetMethodImpl newLockssGetMethodImpl(String urlString) {
       return new LockssGetMethodImpl(urlString);
   }
 
@@ -280,23 +482,34 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   /** Execute the request. */
   public void execute() throws IOException {
+    final String DEBUG_HEADER = "execute(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "isExecuted = " + isExecuted);
+
     assertNotExecuted();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "methodCode = " + methodCode);
     if (methodCode != LockssUrlConnection.METHOD_PROXY) {
       mimicSunRequestHeaders();
     }
-    HostConfiguration hostConfig = client.getHostConfiguration();
+
+//HC3     HostConfiguration hostConfig = client.getHostConfiguration();
     if (proxyHost != null) {
-      hostConfig.setProxy(proxyHost, proxyPort);
+//HC3       hostConfig.setProxy(proxyHost, proxyPort);
+      requestConfigBuilder.setProxy(new HttpHost(proxyHost, proxyPort));
     } else {
-      hostConfig.setProxyHost(null);
+//HC3       hostConfig.setProxyHost(null);
+      requestConfigBuilder.setProxy(null);
     }
     if (localAddress != null) {
-      hostConfig.setLocalAddress(localAddress.getInetAddr());
+//HC3       hostConfig.setLocalAddress(localAddress.getInetAddr());
+      requestConfigBuilder.setLocalAddress(localAddress.getInetAddr());
     } else {
-      hostConfig.setLocalAddress(null);
+//HC3       hostConfig.setLocalAddress(null);
+      requestConfigBuilder.setLocalAddress(null);
     }
+
     if (sockFact != null) {
-      SecureProtocolSocketFactory hcSockFact =
+//HC3       SecureProtocolSocketFactory hcSockFact =
+      LayeredConnectionSocketFactory hcSockFact =
 	sockFact.getHttpClientSecureProtocolSocketFactory();
       String host = url.getHost();
       int port = url.getPort();
@@ -313,12 +526,86 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     responseCode = executeOnce(method);
   }
 
-  private int executeOnce(HttpMethod method) throws IOException {
+//HC3   private int executeOnce(HttpMethod method) throws IOException {
+  private int executeOnce(LockssMethodImpl method) throws IOException {
+    final String DEBUG_HEADER = "executeOnce(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "method = " + method);
+
     try {
-      return client.executeMethod(method);
-    } catch (ConnectTimeoutException /*| java.net.SocketTimeoutException*/ e) {
-      // Thrown by HttpClient if the connect timeout elapses before
-      // socket.connect() returns.
+      ConnectionConfig connConfig = connectionConfigBuilder.build();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "connConfig = " + connConfig);
+
+      if (connManager instanceof PoolingHttpClientConnectionManager) {
+	((PoolingHttpClientConnectionManager)connManager)
+	.setDefaultConnectionConfig(connConfig);
+      } else {
+	((BasicHttpClientConnectionManager)connManager)
+	.setConnectionConfig(connConfig);
+      }
+
+      SocketConfig socketConfig = null;
+
+      if (connectionPool != null) {
+	int connectTimeout = connectionPool.getConnectTimeout();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "connectTimeout = " + connectTimeout);
+
+	if (connectTimeout != -1) {
+	  requestConfigBuilder.setConnectTimeout(connectTimeout);
+	}
+
+	int dataTimeout = connectionPool.getDataTimeout();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "dataTimeout = " + dataTimeout);
+
+	if (dataTimeout != -1) {
+	  requestConfigBuilder.setSocketTimeout(dataTimeout);
+	}
+
+	socketConfig = SocketConfig.custom()
+	    .setSoKeepAlive(connectionPool.getKeepAlive()).build();
+      } else {
+	socketConfig = SocketConfig.DEFAULT;
+      }
+
+      reqConfig = requestConfigBuilder.build();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reqConfig = " + reqConfig);
+
+      clientBuilder.setConnectionManager(connManager)
+      .setDefaultSocketConfig(socketConfig).setDefaultRequestConfig(reqConfig);
+
+      if (!followRedirects) {
+	clientBuilder.disableRedirectHandling();
+      }
+
+      client = clientBuilder.build();
+
+      httpUriRequest = reqBuilder.build();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "httpUriRequest = " + httpUriRequest);
+
+      logContext(DEBUG_HEADER);
+
+      if (log.isDebug3()) {
+	for (Header header : httpUriRequest.getAllHeaders()) {
+	  log.debug3(DEBUG_HEADER + "header = " + header);
+	}
+      }
+
+      response = executeRequest(httpUriRequest, context);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "response = " + response);
+
+      logContext(DEBUG_HEADER);
+
+//HC3       return client.executeMethod(method);
+      return response.getStatusLine().getStatusCode();
+//HC3     } catch (ConnectTimeoutException /*| java.net.SocketTimeoutException*/ e) {
+//HC3       // Thrown by HttpClient if the connect timeout elapses before
+//HC3       // socket.connect() returns.
+    } catch (ClientProtocolException e) {
+      // Thrown by HttpClient4 for a variety of reasons.
+      // TODO: Do we want to rename it?
       // Turn this into a non HttpClient-specific exception
       throw new ConnectionTimeoutException("Host did not respond", e);
       // XXX If socket.connect() returns an error because the underlying
@@ -331,10 +618,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // ConnectionTimeoutException, the solution for now is to use
       // java-level connect timeouts that are shorter than the underlying
       // socket connect timeout.
-    } catch (NoHttpResponseException e) {
-      // Thrown by HttpClient if the server closes the connection before
-      // sending a response.
-      // Turn this into a non HttpClient-specific exception
+//HC3     } catch (NoHttpResponseException e) {
+//HC3       // Thrown by HttpClient if the server closes the connection before
+//HC3       // sending a response.
+//HC3       // Turn this into a non HttpClient-specific exception
+    } catch (IOException e) {
       java.net.SocketException se =
 	new java.net.SocketException("Connection reset by peer");
       se.initCause(e);
@@ -342,95 +630,216 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
+  protected HttpResponse executeRequest(HttpUriRequest httpUriRequest,
+	HttpClientContext context) throws ClientProtocolException, IOException {
+    return client.execute(httpUriRequest, context);
+  }
+
   public boolean canProxy() {
     return true;
   }
 
   public void setRequestProperty(String key, String value) {
+    final String DEBUG_HEADER = "setRequestProperty(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "key = " + key);
+      log.debug2(DEBUG_HEADER + "value = " + value);
+    }
+
     assertNotExecuted();
-    method.setRequestHeader(key, value);
+//HC3     method.setRequestHeader(key, value);
+    reqBuilder.setHeader(key, value);
   }
 
   public void addRequestProperty(String key, String value) {
+    final String DEBUG_HEADER = "addRequestProperty(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "key = " + key);
+      log.debug2(DEBUG_HEADER + "value = " + value);
+    }
+
     assertNotExecuted();
-    method.addRequestHeader(key, value);
+//HC3     method.addRequestHeader(key, value);
+    reqBuilder.addHeader(key, value);
   }
 
-  public void setHeaderCharset(String charset) {
+//HC3   public void setHeaderCharset(String charset) {
+  public void setHeaderCharset(String charsetText) {
+    final String DEBUG_HEADER = "setHeaderCharset(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "charsetText = " + charsetText);
+
     assertNotExecuted();
-    HttpMethodParams params = method.getParams();
-    params.setHttpElementCharset(charset);
+//HC3     HttpMethodParams params = method.getParams();
+//HC3     params.setHttpElementCharset(charset);
+    charset = getCharset(charsetText);
+    reqBuilder.setCharset(charset);
   }
 
   public void setFollowRedirects(boolean followRedirects) {
+    final String DEBUG_HEADER = "setFollowRedirects(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "followRedirects = " + followRedirects);
+
     assertNotExecuted();
-    method.setFollowRedirects(followRedirects);
+//HC3     method.setFollowRedirects(followRedirects);
+    this.followRedirects = followRedirects;
   }
 
   public void setCookiePolicy(String policy) {
+    final String DEBUG_HEADER = "setCookiePolicy(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "policy = " + policy);
+
     assertNotExecuted();
-    HttpParams params = method.getParams();
-    params.setParameter(HttpMethodParams.COOKIE_POLICY,
-                        getCookiePolicy(policy));
+//HC3     HttpParams params = method.getParams();
+//HC3     params.setParameter(HttpMethodParams.COOKIE_POLICY,
+//HC3                         getCookiePolicy(policy));
+    cookiePolicy = getCookiePolicy(policy);
   }
 
   public void setKeepAlive(boolean val) {
+    final String DEBUG_HEADER = "setKeepAlive(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "val = " + val);
+
     assertNotExecuted();
-    HttpParams params = method.getParams();
-    params.setBooleanParameter(SO_KEEPALIVE, val);
+//HC3     HttpParams params = method.getParams();
+//HC3     params.setBooleanParameter(SO_KEEPALIVE, val);
     // method params don't current work, set in connection pool also,
     // though that won't affect already-open sockets
     connectionPool.setKeepAlive(val);
   }
 
   public void addCookie(String domain, String path, String name, String value) {
+    final String DEBUG_HEADER = "addCookie(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "domain = " + domain);
+      log.debug2(DEBUG_HEADER + "path = " + path);
+      log.debug2(DEBUG_HEADER + "name = " + name);
+      log.debug2(DEBUG_HEADER + "value = " + value);
+    }
+
     assertNotExecuted();
-    HttpState state = client.getState();
-    Cookie cook = new Cookie(domain, name, value, path, null, false);
-    state.addCookie(cook);
+//HC3     HttpState state = client.getState();
+//HC3     Cookie cook = new Cookie(domain, name, value, path, null, false);
+//HC3     state.addCookie(cook);
+    SetCookie cookie = new BasicClientCookie(name, value);
+    cookie.setDomain(domain);
+    cookie.setPath(path);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cookie = " + cookie);
+
+    context.getCookieStore().addCookie(cookie);
   }
 
   public void setCredentials(String username, String password) {
+    final String DEBUG_HEADER = "setCredentials(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "username = " + username);
+      log.debug2(DEBUG_HEADER + "password = " + password);
+    }
+
     assertNotExecuted();
-    Credentials credentials = new UsernamePasswordCredentials(username,
-							      password);
-    HttpState state = client.getState();
-    state.setCredentials(AuthScope.ANY, credentials);
+//HC3     Credentials credentials = new UsernamePasswordCredentials(username,
+//HC3 	      password);
+//HC3     HttpState state = client.getState();
+//HC3     state.setCredentials(AuthScope.ANY, credentials);
+    CredentialsProvider provider = new BasicCredentialsProvider();
+
+    provider.setCredentials(AuthScope.ANY,
+	new UsernamePasswordCredentials(username, password));
+
+    context.setCredentialsProvider(provider);
+
+    // Check whether preemptive authentication is to be used.
     if (CurrentConfig.getBooleanParam(PARAM_USE_PREEMPTIVE_AUTH,
                                       DEFAULT_USE_PREEMPTIVE_AUTH)) {
-      HttpClientParams params = client.getParams();
-      params.setAuthenticationPreemptive(true);
+//HC3       HttpClientParams params = client.getParams();
+//HC3       params.setAuthenticationPreemptive(true);
+      // Yes.
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Using Preemptive Authorization...");
+
+      // Set up the target host.
+      String host = url.getHost();
+      String protocol = url.getProtocol().toLowerCase();
+      int port = url.getPort();
+
+      if (port <= 0) {
+  	port = UrlUtil.getDefaultPort(protocol);
+      }
+
+      HttpHost targetHost = new HttpHost(host, port, protocol);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "targetHost = " + targetHost);
+
+      // The local authentication cache.
+      AuthCache authCache = new BasicAuthCache();
+
+      // Generate the BASIC authentication scheme as defined in RFC 2617.
+      BasicScheme basicAuth = new BasicScheme();
+
+      // Add it to the local authentication cache.
+      authCache.put(targetHost, basicAuth);
+   
+      // Add local authentication cache to the execution context.
+      context.setAuthCache(authCache);
     }
   }
 
     /** method for passing through the post content */
-  public void setRequestEntity(RequestEntity entity) {
+//HC3   public void setRequestEntity(RequestEntity entity) {
+  public void setRequestEntity(HttpEntity entity) {
+    final String DEBUG_HEADER = "setRequestEntity(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
     assertNotExecuted();
-    if(method instanceof PostMethod) {
-      ((PostMethod) method).setRequestEntity(entity);
+//HC3     if(method instanceof PostMethod) {
+//HC3       ((PostMethod) method).setRequestEntity(entity);
+//HC3     }
+    if(method instanceof LockssPostMethodImpl) {
+      reqBuilder.setEntity(entity);
     }
   }
 
-  HttpClient getClient() {
-    return client;
-  }
+//HC3   HttpClient getClient() {
+//HC3     return client;
+//HC3   }
 
   public String getResponseHeaderFieldVal(int n) {
+    final String DEBUG_HEADER = "getResponseHeaderFieldVal(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "n = " + n);
+
     assertExecuted();
+    String result = null;
+
     try {
-      return method.getResponseHeaders()[n].getValue();
+//HC3       return method.getResponseHeaders()[n].getValue();
+      result = response.getAllHeaders()[n].getValue();
     } catch (ArrayIndexOutOfBoundsException e) {
-      return null;
+//HC3       return null;
+      // Use the default.
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   public String getResponseHeaderFieldKey(int n) {
+    final String DEBUG_HEADER = "getResponseHeaderFieldKey(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "n = " + n);
+
     assertExecuted();
+    String result = null;
+
     try {
-      return method.getResponseHeaders()[n].getName();
+//HC3       return method.getResponseHeaders()[n].getName();
+      result = response.getAllHeaders()[n].getName();
     } catch (ArrayIndexOutOfBoundsException e) {
-      return null;
+//HC3       return null;
+      // Use the default.
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   public int getResponseCode() {
@@ -440,42 +849,80 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public String getResponseMessage() {
     assertExecuted();
-    return method.getStatusText();
+//HC3     return method.getStatusText();
+    return response.getStatusLine().getReasonPhrase();
   }
 
   public long getResponseDate() {
+    final String DEBUG_HEADER = "getResponseDate(): ";
     assertExecuted();
+
     String datestr = getResponseHeaderValue("date");
-    if (datestr == null) {
-      return -1;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "datestr = " + datestr);
+//HC3     if (datestr == null) {
+//HC3       return -1;
+//HC3     }
+//HC3     try {
+    long result = -1L;
+
+    if (datestr != null) {
+//HC3       return DateUtil.parseDate(datestr).getTime();
+      Date date = DateUtils.parseDate(datestr);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
+
+      if (date != null) {
+	result = date.getTime();
+//HC3       } catch (DateParseException e) {
+      } else {
+	log.error("Error parsing response Date: header: " + datestr);
+      }
+//HC3     } catch (DateParseException e) {
+//HC3       log.error("Error parsing response Date: header: " + datestr, e);
+//HC3       return -1;
     }
-    try {
-      return DateUtil.parseDate(datestr).getTime();
-    } catch (DateParseException e) {
-      log.error("Error parsing response Date: header: " + datestr, e);
-      return -1;
-    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   public long getResponseLastModified() {
+    final String DEBUG_HEADER = "getResponseLastModified(): ";
     String datestr = getResponseHeaderValue("last-modified");
-    if (datestr == null) {
-      return -1;
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "datestr = " + datestr);
+//HC3     if (datestr == null) {
+//HC3       return -1;
+//HC3     }
+//HC3     try {
+    long result = -1L;
+
+    if (datestr != null) {
+//HC3       return DateUtil.parseDate(datestr).getTime();
+      Date date = DateUtils.parseDate(datestr);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
+
+      if (date != null) {
+	result = date.getTime();
+      } else {
+	log.error("Error parsing response last-modified: header: " + datestr);
+      }
+//HC3     } catch (DateParseException e) {
+//HC3     log.error("Error parsing response last-modified: header: " + datestr, e);
+//HC3     return -1;
     }
-    try {
-      return DateUtil.parseDate(datestr).getTime();
-    } catch (DateParseException e) {
-      log.error("Error parsing response last-modified: header: " + datestr, e);
-      return -1;
-    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
+
   public long getResponseContentLength() {
     assertExecuted();
-    if (method instanceof LockssGetMethod) {
-      LockssGetMethod getmeth = (LockssGetMethod)method;
-      return getmeth.getResponseContentLength();
-    }
-    throw new UnsupportedOperationException(method.getClass().toString());
+//HC3     if (method instanceof LockssGetMethod) {
+//HC3       LockssGetMethod getmeth = (LockssGetMethod)method;
+//HC3       return getmeth.getResponseContentLength();
+//HC3     }
+//HC3  
+//HC3     throw new UnsupportedOperationException(method.getClass().toString());
+    return response.getEntity().getContentLength();
   }
 
   public String getResponseContentType() {
@@ -487,14 +934,36 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   public String getResponseHeaderValue(String name) {
+    final String DEBUG_HEADER = "getResponseHeaderValue(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "name = " + name);
+
     assertExecuted();
-    Header header = method.getResponseHeader(name);
+
+    if (response == null) {
+      return null;
+    }
+
+    if (log.isDebug3()) {
+      org.apache.http.Header[] headers = response.getAllHeaders();
+      log.debug3(DEBUG_HEADER + "headers.length = " + headers.length);
+      for (int ix = 0; ix < headers.length; ix++) {
+	org.apache.http.Header hdr = headers[ix];
+	log.debug3(DEBUG_HEADER + "name = " + hdr.getName() + ", value = "
+	    + hdr.getValue());
+      }
+    }
+    
+//HC3     Header header = method.getResponseHeader(name);
+    Header header = response.getFirstHeader(name);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "header = " + header);
+
     return (header != null) ? header.getValue() : null;
   }
 
   public InputStream getResponseInputStream() throws IOException {
     assertExecuted();
-    InputStream in = method.getResponseBodyAsStream();
+//HC3     InputStream in = method.getResponseBodyAsStream();
+    InputStream in = getResponseBodyAsStream();
     if (in == null) {
       // this is a normal occurrence (e.g., with 304 response)
       log.debug2("Returning null input stream");
@@ -507,11 +976,27 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return in;
   }
 
+  protected InputStream getResponseBodyAsStream() throws IOException {
+    if (response == null) {
+      log.debug2("Returning null input stream for null response");
+      return null;
+    }
+
+    HttpEntity entity = response.getEntity();
+    if (entity == null) {
+      log.debug2("Returning null input stream for null entity");
+      return null;
+    }
+
+    return entity.getContent();
+  }
+
   public void storeResponseHeaderInto(Properties props, String prefix) {
     // store all header properties (this is the only way to iterate)
     // first collect all values for any repeated headers.
     MultiValueMap<String,String> map = new MultiValueMap<String,String>();
-    Header[] headers = method.getResponseHeaders();
+//HC3     Header[] headers = method.getResponseHeaders();
+    Header[] headers = getResponseHeaders();
     for (int ix = 0; ix < headers.length; ix++) {
       Header hdr = headers[ix];
       String key = hdr.getName();
@@ -539,27 +1024,34 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
+  protected Header[] getResponseHeaders() {
+    return response.getAllHeaders();
+  }
+
   public String getActualUrl() {
-    try {
-      String path = method.getPath();
-      String query = method.getQueryString();
-      if (!StringUtil.isNullString(query)) {
-	path = path + "?" + query;
-      }
-      URI uri = new URI(new URI(urlString, false), path, true);
-      return uri.toString();
-    } catch(URIException e) {
-      log.warning("getActualUrl(): ", e);
-      return urlString;
-    }
+//HC3     try {
+//HC3       String path = method.getPath();
+//HC3       String query = method.getQueryString();
+//HC3       if (!StringUtil.isNullString(query)) {
+//HC3 	path = path + "?" + query;
+//HC3       }
+//HC3       URI uri = new URI(new URI(urlString, false), path, true);
+//HC3       return uri.toString();
+//HC3     } catch(URIException e) {
+//HC3       log.warning("getActualUrl(): ", e);
+//HC3       return urlString;
+//HC3     }
+    return reqBuilder.build().getRequestLine().getUri();
   }
 
   /** Mimic Java 1.3 HttpURLConnection default request header behavior */
   private void mimicSunRequestHeaders() {
-    if (!isHeaderSet(method.getRequestHeader("Accept"))) {
+//HC3     if (!isHeaderSet(method.getRequestHeader("Accept"))) {
+    if (!isHeaderSet(reqBuilder.getFirstHeader("Accept"))) {
       setRequestProperty("Accept", acceptHeader);
     }
-    if (!isHeaderSet(method.getRequestHeader("Connection"))) {
+//HC3     if (!isHeaderSet(method.getRequestHeader("Connection"))) {
+    if (!isHeaderSet(reqBuilder.getFirstHeader("Connection"))) {
       setRequestProperty("Connection", "keep-alive");
     }
   }
@@ -573,25 +1065,73 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    */
   public void release() {
     assertExecuted();
-    method.releaseConnection();
+    try {
+//HC3     method.releaseConnection();
+      client.close();
+      connectionPool.resetHttpClientConnectionManager();
+    } catch (IOException ioe) {
+      // Nothing to do.
+    }
   }
 
   /**
    * Abort the request.
    */
   public void abort() {
-    method.abort();
+//HC3     method.abort();
+    httpUriRequest.abort();
+  }
+
+  private void logContext(String debugHeader) {
+    if (log.isDebug3()) {
+      log.debug3(debugHeader + "context = " + context);
+
+      if (context != null) {
+	log.debug3(debugHeader + "Cookie spec = " + context.getCookieSpec());
+	log.debug3(debugHeader
+	    + "Cookie origin = " + context.getCookieOrigin());
+	log.debug3(debugHeader
+	    + "Cookies = " + context.getCookieStore().getCookies());
+
+	for (Cookie cookie : context.getCookieStore().getCookies()) {
+	  log.debug3(debugHeader + "cookie = " + cookie);
+	}
+      }
+    }
+  }
+
+  RequestBuilder getRequestBuilder() {
+    return reqBuilder;
+  }
+
+  RequestConfig getRequestConfig() {
+    return reqConfig;
+  }
+
+  boolean getFollowRedirects() {
+    return followRedirects;
+  }
+
+  Charset getCharset() {
+    return charset;
   }
 
   /** Common interface for our methods makes testing more convenient */
-  interface LockssGetMethod extends HttpMethod {
-    long getResponseContentLength();
+//HC3   interface LockssGetMethod extends HttpMethod {
+  interface LockssGetMethod {
+//HC3     long getResponseContentLength();
+  }
+
+  static abstract class LockssMethodImpl implements LockssGetMethod {
+    public LockssMethodImpl(String url) {
+    }
   }
 
   /** Same as GET method
    */
   static class LockssGetMethodImpl
-      extends GetMethod implements LockssGetMethod {
+//HC3       extends GetMethod implements LockssGetMethod {
+  extends LockssMethodImpl {
 
     public LockssGetMethodImpl(String url) {
       super(url);
@@ -603,12 +1143,14 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   /**
    * same as the POST method
    */
-  interface LockssPostMethod extends HttpMethod {
-    long getResponseContentLength();
+//HC3 interface LockssPostMethod extends HttpMethod {
+  interface LockssPostMethod {
+//HC3     long getResponseContentLength();
   }
 
   static class LockssPostMethodImpl
-    extends PostMethod implements LockssPostMethod {
+//HC3     extends PostMethod implements LockssPostMethod {
+  extends LockssMethodImpl implements LockssPostMethod {
 
     public LockssPostMethodImpl(String url) {
       super(url);
@@ -623,11 +1165,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       super(url);
     }
 
-    protected void addRequestHeaders(HttpState state, HttpConnection conn)
-	throws IOException, HttpException {
-      // Suppress this - don't want any automatic header processing when
-      // acting as a proxy.
-    }
+//HC3     protected void addRequestHeaders(HttpState state, HttpConnection conn)
+//HC3 	throws IOException, HttpException {
+//HC3       // Suppress this - don't want any automatic header processing when
+//HC3       // acting as a proxy.
+//HC3     }
   }
 
   /** Extension of ConnectionTimeoutException used as a wrapper for the

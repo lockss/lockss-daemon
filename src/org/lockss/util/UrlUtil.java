@@ -1,8 +1,5 @@
 /*
- * $Id$
- *
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,8 +27,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.URIException;
+//HC3 import org.apache.commons.httpclient.HttpClient;
+//HC3 import org.apache.commons.httpclient.URIException;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.client.utils.URIBuilder;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginBehaviorException;
 import org.lockss.plugin.ArchivalUnit;
@@ -47,6 +46,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -992,10 +992,13 @@ public class UrlUtil {
   public static boolean isAbsoluteUrl(String url) {
     if (url != null) {
       try {
-        org.apache.commons.httpclient.URI resultURI =
-            new org.apache.commons.httpclient.URI(url, true);
-        return resultURI.isAbsoluteURI();
-      } catch (URIException e) {
+//	org.apache.commons.httpclient.URI resultURI =
+//	    new org.apache.commons.httpclient.URI(url, true);
+	URI resultURI = new URIBuilder(url).build();
+//      return resultURI.isAbsoluteURI();
+	return resultURI.isAbsolute();
+//    } catch (URIException e) {
+      } catch (URISyntaxException e) {
       }
     }
     return false;
@@ -1048,9 +1051,11 @@ public class UrlUtil {
   public static String stripQuery(String url) throws MalformedURLException {
     if (url != null) {
       try {
-        org.apache.commons.httpclient.URI uri =
-            new org.apache.commons.httpclient.URI(url, true);
-        if (uri.isAbsoluteURI()) {
+//	org.apache.commons.httpclient.URI uri =
+//	    new org.apache.commons.httpclient.URI(url, true);
+	URI uri = new URIBuilder(url).build();
+//      if (uri.isAbsoluteURI()) {
+	if (uri.isAbsolute()) {
           StringBuffer sb = new StringBuffer();
           sb.append(uri.getScheme());
           sb.append("://");
@@ -1058,7 +1063,8 @@ public class UrlUtil {
           sb.append(uri.getPath());
           return sb.toString();
         }
-      } catch (URIException e) {
+//    } catch (URIException e) {
+      } catch (URISyntaxException e) {
         throw newMalformedURLException(e);
       }
     }
@@ -1302,16 +1308,35 @@ public class UrlUtil {
   openConnection(int methodCode, String urlString,
                  LockssUrlConnectionPool connectionPool)
       throws IOException {
+    final String DEBUG_HEADER = "openConnection(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "methodCode = " + methodCode);
+      log.debug2(DEBUG_HEADER + "urlString = " + urlString);
+      log.debug2(DEBUG_HEADER + "connectionPool = " + connectionPool);
+    }
+
     LockssUrlConnection luc;
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "isHttpOrHttpsUrl(urlString) = " + isHttpOrHttpsUrl(urlString));
     if (isHttpOrHttpsUrl(urlString)) {
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "useHttpClient = " + useHttpClient);
       if (useHttpClient) {
-        HttpClient client = null;
+//HC3       HttpClient client = null;
+	HttpClientContext clientContext = null;
+
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "connectionPool = " + connectionPool);
         if (connectionPool != null) {
-          client = connectionPool.getHttpClient();
+//HC3           client = connectionPool.getHttpClient();
+          clientContext = connectionPool.getHttpClientContext();
         } else {
-          client = new HttpClient();
+//HC3         client = new HttpClient();
+          clientContext = HttpClientContext.create();
         }
-        luc = new HttpClientUrlConnection(methodCode, urlString, client,
+//HC3         luc = new HttpClientUrlConnection(methodCode, urlString, client,
+        luc = new HttpClientUrlConnection(methodCode, urlString, clientContext,
             connectionPool);
       } else {
         luc = new JavaHttpUrlConnection(urlString);
@@ -1319,6 +1344,7 @@ public class UrlUtil {
     } else {
       luc = new JavaUrlConnection(urlString);
     }
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "luc = " + luc);
     return luc;
   }
 

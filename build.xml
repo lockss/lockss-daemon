@@ -261,8 +261,8 @@ Args:
   				  value="${lib}/commons-codec-1.10.jar"/>
   <property name="commons.compress.jar"
   				  value="${lib}/commons-compress-1.10.jar"/>
-  <property name="commons.httpclient.jar"
-  			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
+  <!-- property name="commons.httpclient.jar"
+  			value="${lib}/commons-httpclient-3.0-rc4.jar"/ -->
   <property name="commons.io.jar"
 	        value="${lib}/commons-io-2.4.jar" />
   <property name="commons.jxpath.jar"
