@@ -62,7 +62,7 @@
     au < frozen ; exists ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 ; >
     au < frozen ; exists ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 ; >
     au < frozen ; exists ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 ; >
-    au < crawling ; exists ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 ; >
+    au < frozen ; exists ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 ; >
     au < manifest ; exists ; 2001 ; Commentarii Mathematici Helvetici Volume 76 ; 76 ; >
     au < manifest ; exists ; 2002 ; Commentarii Mathematici Helvetici Volume 77 ; 77 ; >
     au < manifest ; exists ; 2003 ; Commentarii Mathematici Helvetici Volume 78 ; 78 ; >
@@ -351,9 +351,9 @@
     param[journal_issn] = 0032-5155
     comment[journal_id] = pm
     
-    au < crawling ; exists ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; >
-    au < crawling ; exists ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; >
+    au < frozen ; exists ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; >
+    au < frozen ; exists ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; >
     au < crawling ; exists ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; >
     au < crawling ; exists ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 ; >
     au < manifest ; exists ; 2012 ; Portugaliae Mathematica Volume 69 ; 69 ; >

@@ -280,7 +280,7 @@
     au < manifest ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 ; >
     au < manifest ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 ; >
     au < manifest ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 ; >
-    au < crawling ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 ; >
+    au < frozen ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 ; >
     au < finished ; frozen ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 ; >
     au < finished ; frozen ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 ; >
     au < finished ; frozen ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
@@ -794,7 +794,7 @@
 
     param[journal_id] = emm
 
-    au < crawling ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; >
+    au < frozen ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; >
     au < finished ; frozen ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 ; >
     au < finished ; finished ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 ; >
     au < finished ; finished ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
