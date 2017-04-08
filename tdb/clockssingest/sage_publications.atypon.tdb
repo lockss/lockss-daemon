@@ -16994,6 +16994,8 @@
     >
 
     #param[base_url] = http://iss.sagepub.com/
+    #try this to see if it will allow the AU to go through...
+    attr[EncodingMatchRange]=200
 
     
     {
@@ -17029,7 +17031,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Sociology Volume 28 ; 28 ; issa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Sociology Volume 29 ; 29 ; issa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Sociology Volume 30 ; 30 ; issa ; >
-      au < notReady ; exists ; 2016 ; International Sociology Volume 31 ; 31 ; issa ; > #org.htmlparser.util.EncodingChangeException: Unable to sync new encoding within range of +/- 100 chars
+      au < testing ; exists ; 2016 ; International Sociology Volume 31 ; 31 ; issa ; > #org.htmlparser.util.EncodingChangeException: Unable to sync new encoding within range of +/- 100 chars
 
     }
 
@@ -35731,6 +35733,7 @@
     >
 
     #param[base_url] = http://ssi.sagepub.com/
+    attr[EncodingMatchRange]=200
 
     {
 

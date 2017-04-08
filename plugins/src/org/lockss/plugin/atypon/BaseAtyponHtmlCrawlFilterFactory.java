@@ -41,9 +41,12 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.LinkTag;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.metapress.MetapressHtmlCrawlFilterFactory;
+import org.lockss.util.Logger;
 
 /**
  * BaseAtyponHtmlCrawlFilterFactory
@@ -58,6 +61,7 @@ import org.lockss.plugin.*;
  *  */
 
 public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
+  protected static Logger log = Logger.getLogger(BaseAtyponHtmlCrawlFilterFactory.class);
   protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     
@@ -162,8 +166,22 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) throws PluginException{
 
-    return new HtmlFilterInputStream(in, encoding,
+    HtmlFilterInputStream hfis =  new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)));
+    // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
+    // Unable to sync new encoding within range of +/- 100 chars
+    // Allows the default of 100 to be overridden in tdb
+    if (au != null) {
+      TdbAu tdbau = au.getTdbAu();
+      if (tdbau != null) {
+        String range = tdbau.getAttr("EncodingMatchRange");
+        if (range != null && !range.isEmpty()) {
+          hfis.setEncodingMatchRange(Integer.parseInt(range));
+          log.debug3("Set setEncodingMatchRange: " + range);
+        }
+      } else {log.debug("tdbau was null");}
+    } else {log.warning("au was null");}
+    return hfis;
   }
   
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
@@ -177,7 +195,21 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
               InputStream in, String encoding, NodeFilter[] moreNodes) 
     throws PluginException {
     NodeFilter[] bothFilters = addTo(moreNodes);
-    return new HtmlFilterInputStream(in, encoding,
+    HtmlFilterInputStream hfis =  new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)));
+    // to handle errors like java.io.IOException: org.htmlparser.util.EncodingChangeException:
+    // Unable to sync new encoding within range of +/- 100 chars
+    // Allows the default of 100 to be overridden in tdb
+    if (au != null) {
+      TdbAu tdbau = au.getTdbAu();
+      if (tdbau != null) {
+        String range = tdbau.getAttr("EncodingMatchRange");
+        if (range != null && !range.isEmpty()) {
+          hfis.setEncodingMatchRange(Integer.parseInt(range));
+          log.debug3("Set setEncodingMatchRange: " + range);
+        }
+      } else {log.debug("tdbau was null");}
+    } else {log.warning("au was null");}
+    return hfis;
   }
 }
