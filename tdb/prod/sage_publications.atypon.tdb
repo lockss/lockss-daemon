@@ -6618,6 +6618,36 @@
 
   }
 
+  {
+
+      title <
+        name = Competition and Regulation in Network Industries ;
+        issn = 1783-5917 ;
+        eissn = 2399-2956
+      >
+
+        #param[base_url] = http://crn.sagepub.com/
+
+      au < exists ; 2010 ; Competition and Regulation in Network Industries Volume 1 ; 1 ; crna >
+      au < exists ; 2011 ; Competition and Regulation in Network Industries Volume 2 ; 2 ; crna >
+      au < exists ; 2002 ; Competition and Regulation in Network Industries Volume 3 ; 3 ; crna >
+      au < exists ; 2003 ; Competition and Regulation in Network Industries Volume 4 ; 4 ; crna >
+      au < exists ; 2004 ; Competition and Regulation in Network Industries Volume 5 ; 5 ; crna >
+      au < exists ; 2005 ; Competition and Regulation in Network Industries Volume 6 ; 6 ; crna >
+      au < exists ; 2006 ; Competition and Regulation in Network Industries Volume 7 ; 7 ; crna >
+      au < exists ; 2007 ; Competition and Regulation in Network Industries Volume 8 ; 8 ; crna >
+      au < exists ; 2008 ; Competition and Regulation in Network Industries Volume 9 ; 9 ; crna >
+      au < exists ; 2009 ; Competition and Regulation in Network Industries Volume 10 ; 10 ; crna >
+      au < exists ; 2010 ; Competition and Regulation in Network Industries Volume 11 ; 11 ; crna >
+      au < exists ; 2011 ; Competition and Regulation in Network Industries Volume 12 ; 12 ; crna >
+      au < exists ; 2012 ; Competition and Regulation in Network Industries Volume 13 ; 13 ; crna >
+      au < exists ; 2013 ; Competition and Regulation in Network Industries Volume 14 ; 14 ; crna >
+      au < exists ; 2014 ; Competition and Regulation in Network Industries Volume 15 ; 15 ; crna >
+      au < exists ; 2015 ; Competition and Regulation in Network Industries Volume 16 ; 16 ; crna >
+      au < exists ; 2016 ; Competition and Regulation in Network Industries Volume 17 ; 17 ; crna >
+
+  }
+
     {
 
       title <
@@ -10737,13 +10767,44 @@
 
   }
 
+
+  {
+
+    title <
+      name = European Journal of Social Security ;
+      issn = 1388-2627 ;
+      eissn = 2399-2948
+    >
+
+    #param[base_url] = http://ejs.sagepub.com/
+
+      au < exists ; 2009 ; European Journal of Social Security Volume 1 ; 1 ; ejsa >
+      au < exists ; 2010 ; European Journal of Social Security Volume 2 ; 2 ; ejsa >
+      au < exists ; 2011 ; European Journal of Social Security Volume 3 ; 3 ; ejsa >
+      au < exists ; 2002 ; European Journal of Social Security Volume 4 ; 4 ; ejsa >
+      au < exists ; 2003 ; European Journal of Social Security Volume 5 ; 5 ; ejsa >
+      au < exists ; 2004 ; European Journal of Social Security Volume 6 ; 6 ; ejsa >
+      au < exists ; 2005 ; European Journal of Social Security Volume 7 ; 7 ; ejsa >
+      au < exists ; 2006 ; European Journal of Social Security Volume 8 ; 8 ; ejsa >
+      au < exists ; 2007 ; European Journal of Social Security Volume 9 ; 9 ; ejsa >
+      au < exists ; 2008 ; European Journal of Social Security Volume 10 ; 10 ; ejsa >
+      au < exists ; 2009 ; European Journal of Social Security Volume 11 ; 11 ; ejsa >
+      au < exists ; 2010 ; European Journal of Social Security Volume 12 ; 12 ; ejsa >
+      au < exists ; 2011 ; European Journal of Social Security Volume 13 ; 13 ; ejsa >
+      au < exists ; 2012 ; European Journal of Social Security Volume 14 ; 14 ; ejsa >
+      au < exists ; 2013 ; European Journal of Social Security Volume 15 ; 15 ; ejsa >
+      au < exists ; 2014 ; European Journal of Social Security Volume 16 ; 16 ; ejsa >
+      au < exists ; 2015 ; European Journal of Social Security Volume 17 ; 17 ; ejsa >
+      au < exists ; 2016 ; European Journal of Social Security Volume 18 ; 18 ; ejsa >
+
+  }
+
     {
 
       title <
         name = European Journal of Social Theory ;
         issn = 1368-4310 ;
-        eissn = 1461-7137 ;
-        issnl = 1368-4310
+        eissn = 1461-7137 
       >
 
       {
@@ -10814,6 +10875,26 @@
       }
 
     }
+
+  {
+
+    title <
+      name = European Labour Law Journal ;
+      issn = 2031-9525 ;
+      eissn = 2399-5556
+    >
+
+      #param[base_url] = http://ell.sagepub.com/
+
+      au < exists ; 2010 ; European Labour Law Journal Volume 1 ; 1 ; ella >
+      au < exists ; 2011 ; European Labour Law Journal Volume 2 ; 2 ; ella >
+      au < exists ; 2012 ; European Labour Law Journal Volume 3 ; 3 ; ella >
+      au < exists ; 2013 ; European Labour Law Journal Volume 4 ; 4 ; ella >
+      au < exists ; 2014 ; European Labour Law Journal Volume 5 ; 5 ; ella >
+      au < exists ; 2015 ; European Labour Law Journal Volume 6 ; 6 ; ella >
+      au < exists ; 2016 ; European Labour Law Journal Volume 7 ; 7 ; ella >
+
+  }
 
     {
 
@@ -20210,6 +20291,28 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       
   }
 
+  {
+
+    title <
+      name = The Journal of Egyptian Archaeology ;
+      issn = 0307-5133 ;
+      eissn = 2514-0582
+    >
+
+      #param[base_url] = http://ega.sagepub.com/
+
+      au < exists ; 2007 ; The Journal of Egyptian Archaeology Volume 93 ; 93 ; egaa >
+      au < exists ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa >
+      au < exists ; 2009 ; The Journal of Egyptian Archaeology Volume 95 ; 95 ; egaa >
+      au < exists ; 2010 ; The Journal of Egyptian Archaeology Volume 96 ; 96 ; egaa >
+      au < exists ; 2011 ; The Journal of Egyptian Archaeology Volume 97 ; 97 ; egaa >
+      au < exists ; 2012 ; The Journal of Egyptian Archaeology Volume 98 ; 98 ; egaa >
+      au < exists ; 2013 ; The Journal of Egyptian Archaeology Volume 99 ; 99 ; egaa >
+      au < exists ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa >
+      au < exists ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa >
+
+  }
+
     {
 
       title <
@@ -27066,6 +27169,43 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+      title <
+        name = Maastricht Journal of European and Comparative Law ;
+        issn = 1023-263X ;
+        eissn = 2399-5548
+      >
+
+      #param[base_url] = http://maa.sagepub.com/
+
+      au < exists ; 1994 ; Maastricht Journal of European and Comparative Law Volume 1 ; 1 ; maaa >
+      au < exists ; 1995 ; Maastricht Journal of European and Comparative Law Volume 2 ; 2 ; maaa >
+      au < exists ; 1996 ; Maastricht Journal of European and Comparative Law Volume 3 ; 3 ; maaa >
+      au < exists ; 1997 ; Maastricht Journal of European and Comparative Law Volume 4 ; 4 ; maaa >
+      au < exists ; 1998 ; Maastricht Journal of European and Comparative Law Volume 5 ; 5 ; maaa >
+      au < exists ; 1999 ; Maastricht Journal of European and Comparative Law Volume 6 ; 6 ; maaa >
+      au < exists ; 2000 ; Maastricht Journal of European and Comparative Law Volume 7 ; 7 ; maaa >
+      au < exists ; 2001 ; Maastricht Journal of European and Comparative Law Volume 8 ; 8 ; maaa >
+      au < exists ; 2002 ; Maastricht Journal of European and Comparative Law Volume 9 ; 9 ; maaa >
+      au < exists ; 2003 ; Maastricht Journal of European and Comparative Law Volume 10 ; 10 ; maaa >
+      au < exists ; 2004 ; Maastricht Journal of European and Comparative Law Volume 11 ; 11 ; maaa >
+      au < exists ; 2005 ; Maastricht Journal of European and Comparative Law Volume 12 ; 12 ; maaa >
+      au < exists ; 2006 ; Maastricht Journal of European and Comparative Law Volume 13 ; 13 ; maaa >
+      au < exists ; 2007 ; Maastricht Journal of European and Comparative Law Volume 14 ; 14 ; maaa >
+      au < exists ; 2008 ; Maastricht Journal of European and Comparative Law Volume 15 ; 15 ; maaa >
+      au < exists ; 2009 ; Maastricht Journal of European and Comparative Law Volume 16 ; 16 ; maaa >
+      au < exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa >
+      au < exists ; 2011 ; Maastricht Journal of European and Comparative Law Volume 18 ; 18 ; maaa >
+      au < exists ; 2012 ; Maastricht Journal of European and Comparative Law Volume 19 ; 19 ; maaa >
+      au < exists ; 2013 ; Maastricht Journal of European and Comparative Law Volume 20 ; 20 ; maaa >
+      au < exists ; 2014 ; Maastricht Journal of European and Comparative Law Volume 21 ; 21 ; maaa >
+      au < exists ; 2015 ; Maastricht Journal of European and Comparative Law Volume 22 ; 22 ; maaa >
+      au < exists ; 2016 ; Maastricht Journal of European and Comparative Law Volume 23 ; 23 ; maaa >
+      au < exists ; 2017 ; Maastricht Journal of European and Comparative Law Volume 24 ; 24 ; maaa >
+
+  }
+
     {
 
       title <
@@ -28915,6 +29055,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Netherlands Quarterly of Human Rights ;
+      issn = 0924-0519 ;
+      eissn = 2214-7357
+    >
+
+      #param[base_url] = http://nqh.sagepub.com/
+
+      au < exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha >
+      au < exists ; 2017 ; Netherlands Quarterly of Human Rights Volume 35 ; 35 ; nqha >
+
+  }
+
     {
 
       title <
@@ -29066,6 +29221,27 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+      title <
+        name = New Journal of European Criminal Law ;
+        issn = 2032-2844 ;
+        eissn = 2399-293X
+      >
+
+      #param[base_url] = http://nje.sagepub.com/
+
+      au < exists ; 2009 ; New Journal of European Criminal Law Volume 1a ; 1a ; njea >
+      au < exists ; 2010 ; New Journal of European Criminal Law Volume 1 ; 1 ; njea >
+      au < exists ; 2011 ; New Journal of European Criminal Law Volume 2 ; 2 ; njea >
+      au < exists ; 2012 ; New Journal of European Criminal Law Volume 3 ; 3 ; njea >
+      au < exists ; 2013 ; New Journal of European Criminal Law Volume 4 ; 4 ; njea >
+      au < exists ; 2014 ; New Journal of European Criminal Law Volume 5 ; 5 ; njea >
+      au < exists ; 2015 ; New Journal of European Criminal Law Volume 6 ; 6 ; njea >
+      au < exists ; 2016 ; New Journal of European Criminal Law Volume 7 ; 7 ; njea >
+
+  }
 
     {
 
@@ -30505,6 +30681,43 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Plastic Surgery ;
+      issn = 2292-5503 ;
+      eissn = 2292-5511
+    >
+
+      #param[base_url] = http://psg.sagepub.com/
+
+      au < exists ; 1993 ; Plastic Surgery Volume 1 ; 1 ; psga >
+      au < exists ; 1994 ; Plastic Surgery Volume 2 ; 2 ; psga >
+      au < exists ; 1995 ; Plastic Surgery Volume 3 ; 3 ; psga >
+      au < exists ; 1996 ; Plastic Surgery Volume 4 ; 4 ; psga >
+      au < exists ; 1997 ; Plastic Surgery Volume 5 ; 5 ; psga >
+      au < exists ; 1998 ; Plastic Surgery Volume 6 ; 6 ; psga >
+      au < exists ; 1999 ; Plastic Surgery Volume 7 ; 7 ; psga >
+      au < exists ; 2000 ; Plastic Surgery Volume 8 ; 8 ; psga >
+      au < exists ; 2001 ; Plastic Surgery Volume 9 ; 9 ; psga >
+      au < exists ; 2002 ; Plastic Surgery Volume 10 ; 10 ; psga >
+      au < exists ; 2003 ; Plastic Surgery Volume 11 ; 11 ; psga >
+      au < exists ; 2004 ; Plastic Surgery Volume 12 ; 12 ; psga >
+      au < exists ; 2005 ; Plastic Surgery Volume 13 ; 13 ; psga >
+      au < exists ; 2006 ; Plastic Surgery Volume 14 ; 14 ; psga >
+      au < exists ; 2007 ; Plastic Surgery Volume 15 ; 15 ; psga >
+      au < exists ; 2008 ; Plastic Surgery Volume 16 ; 16 ; psga >
+      au < exists ; 2009 ; Plastic Surgery Volume 17 ; 17 ; psga >
+      au < exists ; 2010 ; Plastic Surgery Volume 18 ; 18 ; psga >
+      au < exists ; 2011 ; Plastic Surgery Volume 19 ; 19 ; psga >
+      au < exists ; 2012 ; Plastic Surgery Volume 20 ; 20 ; psga >
+      au < exists ; 2013 ; Plastic Surgery Volume 21 ; 21 ; psga >
+      au < exists ; 2014 ; Plastic Surgery Volume 22 ; 22 ; psga >
+      au < exists ; 2015 ; Plastic Surgery Volume 23 ; 23 ; psga >
+      au < exists ; 2016 ; Plastic Surgery Volume 24 ; 24 ; psga >
+
+  }
 
   {
 

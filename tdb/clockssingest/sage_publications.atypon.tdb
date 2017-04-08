@@ -6182,9 +6182,7 @@
 
     #param[base_url] = http://ctj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2004 ; Clinical Trials Volume 1 ; 1 ; ctja ; >
       au < manifest ; exists ; 2005 ; Clinical Trials Volume 2 ; 2 ; ctja ; >
@@ -6214,9 +6212,7 @@
 
     #param[base_url] = http://ctr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1982 ; Clothing and Textiles Research Journal Volume 1 ; 1 ; ctra ; >
       au < manifest ; exists ; 1983 ; Clothing and Textiles Research Journal Volume 2 ; 2 ; ctra ; >
@@ -6312,9 +6308,7 @@
 
     #param[base_url] = http://cdq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1976 ; Communication Disorders Quarterly Volume 1 ; 1 ; cdqa ; >
       au < manifest ; exists ; 1978 ; Communication Disorders Quarterly Volume 2 ; 2 ; cdqa ; >
@@ -6369,9 +6363,7 @@
 
     #param[base_url] = http://crx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1974 ; Communication Research Volume 1 ; 1 ; crxa ; >
       au < manifest ; exists ; 1975 ; Communication Research Volume 2 ; 2 ; crxa ; >
@@ -6431,9 +6423,7 @@
 
     #param[base_url] = http://crw.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1973 ; Community College Review Volume 1 ; 1 ; crwa ; >
       au < manifest ; exists ; 1974 ; Community College Review Volume 2 ; 2 ; crwa ; >
@@ -6495,9 +6485,7 @@
 
     #param[base_url] = http://cps.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1968-1969 ; Comparative Political Studies Volume 1 ; 1 ; cpsa ; >
       au < manifest ; exists ; 1969-1970 ; Comparative Political Studies Volume 2 ; 2 ; cpsa ; >
@@ -6564,9 +6552,7 @@
 
     #param[base_url] = http://cbr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1969 ; Compensation & Benefits Review Volume 1 ; 1 ; cbra ; >
       au < manifest ; exists ; 1970 ; Compensation & Benefits Review Volume 2 ; 2 ; cbra ; >
@@ -6652,6 +6638,36 @@
 
   }
 
+  {
+
+      title <
+        name = Competition and Regulation in Network Industries ;
+        issn = 1783-5917 ;
+        eissn = 2399-2956
+      >
+
+        #param[base_url] = http://crn.sagepub.com/
+
+      au < exists ; exists ; 2010 ; Competition and Regulation in Network Industries Volume 1 ; 1 ; crna ; >
+      au < exists ; exists ; 2011 ; Competition and Regulation in Network Industries Volume 2 ; 2 ; crna ; >
+      au < exists ; exists ; 2002 ; Competition and Regulation in Network Industries Volume 3 ; 3 ; crna ; >
+      au < exists ; exists ; 2003 ; Competition and Regulation in Network Industries Volume 4 ; 4 ; crna ; >
+      au < exists ; exists ; 2004 ; Competition and Regulation in Network Industries Volume 5 ; 5 ; crna ; >
+      au < exists ; exists ; 2005 ; Competition and Regulation in Network Industries Volume 6 ; 6 ; crna ; >
+      au < exists ; exists ; 2006 ; Competition and Regulation in Network Industries Volume 7 ; 7 ; crna ; >
+      au < exists ; exists ; 2007 ; Competition and Regulation in Network Industries Volume 8 ; 8 ; crna ; >
+      au < exists ; exists ; 2008 ; Competition and Regulation in Network Industries Volume 9 ; 9 ; crna ; >
+      au < exists ; exists ; 2009 ; Competition and Regulation in Network Industries Volume 10 ; 10 ; crna ; >
+      au < exists ; exists ; 2010 ; Competition and Regulation in Network Industries Volume 11 ; 11 ; crna ; >
+      au < exists ; exists ; 2011 ; Competition and Regulation in Network Industries Volume 12 ; 12 ; crna ; >
+      au < exists ; exists ; 2012 ; Competition and Regulation in Network Industries Volume 13 ; 13 ; crna ; >
+      au < exists ; exists ; 2013 ; Competition and Regulation in Network Industries Volume 14 ; 14 ; crna ; >
+      au < exists ; exists ; 2014 ; Competition and Regulation in Network Industries Volume 15 ; 15 ; crna ; >
+      au < exists ; exists ; 2015 ; Competition and Regulation in Network Industries Volume 16 ; 16 ; crna ; >
+      au < exists ; exists ; 2016 ; Competition and Regulation in Network Industries Volume 17 ; 17 ; crna ; >
+
+  }
+
     {
 
       title <
@@ -6721,7 +6737,6 @@
 
     {
 
-
       au < manifest ; exists ; 2010 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 ; chpb ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; chpc ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; chpc ; >
@@ -6745,9 +6760,7 @@
 
     #param[base_url] = http://cer.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1993 ; Concurrent Engineering Volume 1 ; 1 ; cera ; >
       au < manifest ; exists ; 1994 ; Concurrent Engineering Volume 2 ; 2 ; cera ; >
@@ -9610,9 +9623,7 @@
 
     #param[base_url] = http://epx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Educational Policy Volume 1 ; 1 ; epxa ; >
       au < manifest ; exists ; 1988 ; Educational Policy Volume 2 ; 2 ; epxa ; >
@@ -10819,6 +10830,37 @@
   {
 
     title <
+      name = European Journal of Social Security ;
+      issn = 1388-2627 ;
+      eissn = 2399-2948
+    >
+
+    #param[base_url] = http://ejs.sagepub.com/
+
+      au < exists ; exists ; 2009 ; European Journal of Social Security Volume 1 ; 1 ; ejsa ; >
+      au < exists ; exists ; 2010 ; European Journal of Social Security Volume 2 ; 2 ; ejsa ; >
+      au < exists ; exists ; 2011 ; European Journal of Social Security Volume 3 ; 3 ; ejsa ; >
+      au < exists ; exists ; 2002 ; European Journal of Social Security Volume 4 ; 4 ; ejsa ; >
+      au < exists ; exists ; 2003 ; European Journal of Social Security Volume 5 ; 5 ; ejsa ; >
+      au < exists ; exists ; 2004 ; European Journal of Social Security Volume 6 ; 6 ; ejsa ; >
+      au < exists ; exists ; 2005 ; European Journal of Social Security Volume 7 ; 7 ; ejsa ; >
+      au < exists ; exists ; 2006 ; European Journal of Social Security Volume 8 ; 8 ; ejsa ; >
+      au < exists ; exists ; 2007 ; European Journal of Social Security Volume 9 ; 9 ; ejsa ; >
+      au < exists ; exists ; 2008 ; European Journal of Social Security Volume 10 ; 10 ; ejsa ; >
+      au < exists ; exists ; 2009 ; European Journal of Social Security Volume 11 ; 11 ; ejsa ; >
+      au < exists ; exists ; 2010 ; European Journal of Social Security Volume 12 ; 12 ; ejsa ; >
+      au < exists ; exists ; 2011 ; European Journal of Social Security Volume 13 ; 13 ; ejsa ; >
+      au < exists ; exists ; 2012 ; European Journal of Social Security Volume 14 ; 14 ; ejsa ; >
+      au < exists ; exists ; 2013 ; European Journal of Social Security Volume 15 ; 15 ; ejsa ; >
+      au < exists ; exists ; 2014 ; European Journal of Social Security Volume 16 ; 16 ; ejsa ; >
+      au < exists ; exists ; 2015 ; European Journal of Social Security Volume 17 ; 17 ; ejsa ; >
+      au < exists ; exists ; 2016 ; European Journal of Social Security Volume 18 ; 18 ; ejsa ; >
+
+  }
+
+  {
+
+    title <
       name = European Journal of Social Theory ;
       issn = 1368-4310 ;
       eissn = 1461-7137
@@ -10826,9 +10868,7 @@
 
     #param[base_url] = http://est.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1998 ; European Journal of Social Theory Volume 1 ; 1 ; esta ; >
       au < manifest ; exists ; 1999 ; European Journal of Social Theory Volume 2 ; 2 ; esta ; >
@@ -10864,9 +10904,7 @@
 
     #param[base_url] = http://ejw.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1994 ; European Journal of Women's Studies Volume 1 ; 1 ; ejwa ; >
       au < manifest ; exists ; 1995 ; European Journal of Women's Studies Volume 2 ; 2 ; ejwa ; >
@@ -10899,6 +10937,26 @@
   {
 
     title <
+      name = European Labour Law Journal ;
+      issn = 2031-9525 ;
+      eissn = 2399-5556
+    >
+
+      #param[base_url] = http://ell.sagepub.com/
+
+      au < exists ; exists ; 2010 ; European Labour Law Journal Volume 1 ; 1 ; ella ; >
+      au < exists ; exists ; 2011 ; European Labour Law Journal Volume 2 ; 2 ; ella ; >
+      au < exists ; exists ; 2012 ; European Labour Law Journal Volume 3 ; 3 ; ella ; >
+      au < exists ; exists ; 2013 ; European Labour Law Journal Volume 4 ; 4 ; ella ; >
+      au < exists ; exists ; 2014 ; European Labour Law Journal Volume 5 ; 5 ; ella ; >
+      au < exists ; exists ; 2015 ; European Labour Law Journal Volume 6 ; 6 ; ella ; >
+      au < exists ; exists ; 2016 ; European Labour Law Journal Volume 7 ; 7 ; ella ; >
+
+  }
+
+  {
+
+    title <
       name = European Physical Education Review ;
       issn = 1356-336X ;
       eissn = 1741-2749
@@ -10906,9 +10964,7 @@
 
     #param[base_url] = http://epe.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; European Physical Education Review Volume 1 ; 1 ; epea ; >
       au < manifest ; exists ; 1996 ; European Physical Education Review Volume 2 ; 2 ; epea ; >
@@ -10947,9 +11003,7 @@
 
     #param[base_url] = http://eup.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2000 ; European Union Politics Volume 1 ; 1 ; eupa ; >
       au < manifest ; exists ; 2001 ; European Union Politics Volume 2 ; 2 ; eupa ; >
@@ -10983,9 +11037,7 @@
 
     #param[base_url] = http://eur.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1994 ; European Urban and Regional Studies Volume 1 ; 1 ; eura ; >
       au < manifest ; exists ; 1995 ; European Urban and Regional Studies Volume 2 ; 2 ; eura ; >
@@ -11038,9 +11090,7 @@
 
     #param[base_url] = http://evi.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Evaluation Volume 1 ; 1 ; evia ; >
       au < manifest ; exists ; 1996 ; Evaluation Volume 2 ; 2 ; evia ; >
@@ -11079,9 +11129,7 @@
 
     #param[base_url] = http://ehp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1978 ; Evaluation & the Health Professions Volume 1 ; 1 ; ehpa ; >
       au < manifest ; exists ; 1979 ; Evaluation & the Health Professions Volume 2 ; 2 ; ehpa ; >
@@ -11137,9 +11185,7 @@
 
     #param[base_url] = http://erx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1977 ; Evaluation Review Volume 1 ; 1 ; erxa ; >
       au < manifest ; exists ; 1978 ; Evaluation Review Volume 2 ; 2 ; erxa ; >
@@ -20492,6 +20538,28 @@
   {
 
     title <
+      name = The Journal of Egyptian Archaeology ;
+      issn = 0307-5133 ;
+      eissn = 2514-0582
+    >
+
+      #param[base_url] = http://ega.sagepub.com/
+
+      au < exists ; exists ; 2007 ; The Journal of Egyptian Archaeology Volume 93 ; 93 ; egaa ; >
+      au < exists ; exists ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa ; >
+      au < exists ; exists ; 2009 ; The Journal of Egyptian Archaeology Volume 95 ; 95 ; egaa ; >
+      au < exists ; exists ; 2010 ; The Journal of Egyptian Archaeology Volume 96 ; 96 ; egaa ; >
+      au < exists ; exists ; 2011 ; The Journal of Egyptian Archaeology Volume 97 ; 97 ; egaa ; >
+      au < exists ; exists ; 2012 ; The Journal of Egyptian Archaeology Volume 98 ; 98 ; egaa ; >
+      au < exists ; exists ; 2013 ; The Journal of Egyptian Archaeology Volume 99 ; 99 ; egaa ; >
+      au < exists ; exists ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa ; >
+      au < exists ; exists ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Elastomers and Plastics ;
       issn = 0095-2443 ;
       eissn = 1530-8006
@@ -20499,9 +20567,7 @@
 
     #param[base_url] = http://jep.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1969 ; Journal of Elastomers and Plastics Volume 1 ; 1 ; jepa ; >
       au < manifest ; exists ; 1970 ; Journal of Elastomers and Plastics Volume 2 ; 2 ; jepa ; >
@@ -20566,9 +20632,7 @@
 
     #param[base_url] = http://emf.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2002 ; Journal of Emerging Market Finance Volume 1 ; 1 ; emfa ; >
       au < manifest ; exists ; 2003 ; Journal of Emerging Market Finance Volume 2 ; 2 ; emfa ; >
@@ -20600,9 +20664,7 @@
 
     #param[base_url] = http://ebx.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1993 ; Journal of Emotional and Behavioral Disorders Volume 1 ; 1 ; ebxa ; >
       au < manifest ; exists ; 1994 ; Journal of Emotional and Behavioral Disorders Volume 2 ; 2 ; ebxa ; >
@@ -20679,9 +20741,7 @@
 
     #param[base_url] = http://eng.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1967 ; Journal of English Linguistics Volume 1 ; 1 ; enga ; >
       au < manifest ; exists ; 1968 ; Journal of English Linguistics Volume 2 ; 2 ; enga ; >
@@ -20742,9 +20802,7 @@
 
     #param[base_url] = http://joe.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; Journal of Entrepreneurship Volume 1 ; 1 ; joea ; >
       au < manifest ; exists ; 1993 ; Journal of Entrepreneurship Volume 2 ; 2 ; joea ; >
@@ -20786,9 +20844,7 @@
 
     #param[base_url] = http://jed.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1992 ; The Journal of Environment & Development Volume 1 ; 1 ; jeda ; >
       au < manifest ; exists ; 1993 ; The Journal of Environment & Development Volume 2 ; 2 ; jeda ; >
@@ -20845,9 +20901,7 @@
 
     #param[base_url] = http://esp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1991 ; Journal of European Social Policy Volume 1 ; 1 ; espa ; >
       au < manifest ; exists ; 1992 ; Journal of European Social Policy Volume 2 ; 2 ; espa ; >
@@ -20890,9 +20944,7 @@
 
     #param[base_url] = http://jes.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1971 ; Journal of European Studies Volume 1 ; 1 ; jesa ; >
       au < manifest ; exists ; 1972 ; Journal of European Studies Volume 2 ; 2 ; jesa ; >
@@ -26701,9 +26753,7 @@
 
     #param[base_url] = http://las.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1958 ; Language and Speech Volume 1 ; 1 ; lasa ; >
       au < manifest ; exists ; 1959 ; Language and Speech Volume 2 ; 2 ; lasa ; >
@@ -26779,9 +26829,7 @@
 
     #param[base_url] = http://ltr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Language Teaching Research Volume 1 ; 1 ; ltra ; >
       au < manifest ; exists ; 1998 ; Language Teaching Research Volume 2 ; 2 ; ltra ; >
@@ -26870,9 +26918,7 @@
 
     #param[base_url] = http://lap.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1974 ; Latin American Perspectives Volume 1 ; 1 ; lapa ; >
       au < manifest ; exists ; 1975 ; Latin American Perspectives Volume 2 ; 2 ; lapa ; >
@@ -26932,9 +26978,7 @@
 
     #param[base_url] = http://lch.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2005 ; Law, Culture and the Humanities Volume 1 ; 1 ; lcha ; >
       au < manifest ; exists ; 2006 ; Law, Culture and the Humanities Volume 2 ; 2 ; lcha ; >
@@ -26963,9 +27007,7 @@
 
     #param[base_url] = http://lea.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 2005 ; Leadership Volume 1 ; 1 ; leaa ; >
       au < manifest ; exists ; 2006 ; Leadership Volume 2 ; 2 ; leaa ; >
@@ -26994,9 +27036,7 @@
 
     #param[base_url] = http://lrt.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1969 ; Lighting Research and Technology Volume 1 ; 1 ; lrta ; >
       au < manifest ; exists ; 1970 ; Lighting Research and Technology Volume 2 ; 2 ; lrta ; >
@@ -27063,7 +27103,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; lrxe ; >
       au < manifest ; exists ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 ; lrxe ; >
 
@@ -27121,7 +27160,6 @@
 
     {
 
-
       au < manifest ; exists ; 1986-1987 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 1 ; 1 ; leca ; >
       au < manifest ; exists ; 1987-1988 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 2 ; 2 ; leca ; >
       au < manifest ; exists ; 1988-1989 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 3 ; 3 ; leca ; >
@@ -27168,9 +27206,7 @@
 
     #param[base_url] = http://lup.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1991 ; Lupus Volume 1 ; 1 ; lupa ; >
       au < manifest ; exists ; 1993 ; Lupus Volume 2 ; 2 ; lupa ; >
@@ -27202,6 +27238,42 @@
 
   }
 
+  {
+
+      title <
+        name = Maastricht Journal of European and Comparative Law ;
+        issn = 1023-263X ;
+        eissn = 2399-5548
+      >
+
+      #param[base_url] = http://maa.sagepub.com/
+
+      au < exists ; exists ; 1994 ; Maastricht Journal of European and Comparative Law Volume 1 ; 1 ; maaa ; >
+      au < exists ; exists ; 1995 ; Maastricht Journal of European and Comparative Law Volume 2 ; 2 ; maaa ; >
+      au < exists ; exists ; 1996 ; Maastricht Journal of European and Comparative Law Volume 3 ; 3 ; maaa ; >
+      au < exists ; exists ; 1997 ; Maastricht Journal of European and Comparative Law Volume 4 ; 4 ; maaa ; >
+      au < exists ; exists ; 1998 ; Maastricht Journal of European and Comparative Law Volume 5 ; 5 ; maaa ; >
+      au < exists ; exists ; 1999 ; Maastricht Journal of European and Comparative Law Volume 6 ; 6 ; maaa ; >
+      au < exists ; exists ; 2000 ; Maastricht Journal of European and Comparative Law Volume 7 ; 7 ; maaa ; >
+      au < exists ; exists ; 2001 ; Maastricht Journal of European and Comparative Law Volume 8 ; 8 ; maaa ; >
+      au < exists ; exists ; 2002 ; Maastricht Journal of European and Comparative Law Volume 9 ; 9 ; maaa ; >
+      au < exists ; exists ; 2003 ; Maastricht Journal of European and Comparative Law Volume 10 ; 10 ; maaa ; >
+      au < exists ; exists ; 2004 ; Maastricht Journal of European and Comparative Law Volume 11 ; 11 ; maaa ; >
+      au < exists ; exists ; 2005 ; Maastricht Journal of European and Comparative Law Volume 12 ; 12 ; maaa ; >
+      au < exists ; exists ; 2006 ; Maastricht Journal of European and Comparative Law Volume 13 ; 13 ; maaa ; >
+      au < exists ; exists ; 2007 ; Maastricht Journal of European and Comparative Law Volume 14 ; 14 ; maaa ; >
+      au < exists ; exists ; 2008 ; Maastricht Journal of European and Comparative Law Volume 15 ; 15 ; maaa ; >
+      au < exists ; exists ; 2009 ; Maastricht Journal of European and Comparative Law Volume 16 ; 16 ; maaa ; >
+      au < exists ; exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa ; >
+      au < exists ; exists ; 2011 ; Maastricht Journal of European and Comparative Law Volume 18 ; 18 ; maaa ; >
+      au < exists ; exists ; 2012 ; Maastricht Journal of European and Comparative Law Volume 19 ; 19 ; maaa ; >
+      au < exists ; exists ; 2013 ; Maastricht Journal of European and Comparative Law Volume 20 ; 20 ; maaa ; >
+      au < exists ; exists ; 2014 ; Maastricht Journal of European and Comparative Law Volume 21 ; 21 ; maaa ; >
+      au < exists ; exists ; 2015 ; Maastricht Journal of European and Comparative Law Volume 22 ; 22 ; maaa ; >
+      au < exists ; exists ; 2016 ; Maastricht Journal of European and Comparative Law Volume 23 ; 23 ; maaa ; >
+      au < exists ; exists ; 2017 ; Maastricht Journal of European and Comparative Law Volume 24 ; 24 ; maaa ; >
+
+  }
 
     {
 
@@ -27248,9 +27320,7 @@
 
     #param[base_url] = http://moh.sagepub.com/
 
-    
     {
-
 
       # Leaving Sage for Taylor & Francis in 2013. Backfiles available with Sage.
 
@@ -27276,9 +27346,7 @@
 
     #param[base_url] = http://mcq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Management Communication Quarterly Volume 1 ; 1 ; mcqa ; >
       au < manifest ; exists ; 1988 ; Management Communication Quarterly Volume 2 ; 2 ; mcqa ; >
@@ -27325,9 +27393,7 @@
 
     #param[base_url] = http://mie.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Management in Education Volume 1 ; 1 ; miea ; >
       au < manifest ; exists ; 1988 ; Management in Education Volume 2 ; 2 ; miea ; >
@@ -27636,9 +27702,7 @@
 
     #param[base_url] = http://mcs.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1979 ; Media, Culture & Society Volume 1 ; 1 ; mcsa ; >
       au < manifest ; exists ; 1980 ; Media, Culture & Society Volume 2 ; 2 ; mcsa ; >
@@ -27694,9 +27758,7 @@
 
     #param[base_url] = http://mwc.sagepub.com/
 
-    
     {
-
 
       au < doNotProcess ; doNotProcess ; 2008 ; Media, War & Conflict Volume 1 ; 1 ; mwca ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Media, War & Conflict Volume 2 ; 2 ; mwca ; >
@@ -27804,9 +27866,7 @@
 
     #param[base_url] = http://mcr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1944 ; Medical Care Research and Review Volume 1 ; 1 ; mcra ; >
       au < manifest ; exists ; 1945 ; Medical Care Research and Review Volume 2 ; 2 ; mcra ; >
@@ -27896,9 +27956,7 @@
 
     #param[base_url] = http://mdm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1981 ; Medical Decision Making Volume 1 ; 1 ; mdma ; >
       au < manifest ; exists ; 1982 ; Medical Decision Making Volume 2 ; 2 ; mdma ; >
@@ -28832,9 +28890,7 @@
 
     #param[base_url] = http://ner.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1959 ; National Institute Economic Review Volume 1 ; 1 ; nera ; >
       au < manifest ; exists ; 1959 ; National Institute Economic Review Volume 2 ; 2 ; nera ; >
@@ -29082,6 +29138,21 @@
   {
 
     title <
+      name = Netherlands Quarterly of Human Rights ;
+      issn = 0924-0519 ;
+      eissn = 2214-7357
+    >
+
+      #param[base_url] = http://nqh.sagepub.com/
+
+      au < exists ; exists ; 2016 ; Netherlands Quarterly of Human Rights Volume 34 ; 34 ; nqha ; >
+      au < exists ; exists ; 2017 ; Netherlands Quarterly of Human Rights Volume 35 ; 35 ; nqha ; >
+
+  }
+
+  {
+
+    title <
       name = The Neurohospitalist ;
       issn = 1941-8744 ;
       eissn = 1941-8752
@@ -29090,7 +29161,6 @@
     #param[base_url] = http://nho.sagepub.com/
 
     {
-
 
       au < doNotProcess ; doNotProcess ; 2011 ; The Neurohospitalist Volume 1 ; 1 ; nhoa ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; nhoa ; >
@@ -29154,9 +29224,7 @@
 
     #param[base_url] = http://nnr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Neurorehabilitation and Neural Repair Volume 1 ; 1 ; nnra ; >
       au < manifest ; exists ; 1988 ; Neurorehabilitation and Neural Repair Volume 2 ; 2 ; nnra ; >
@@ -29203,9 +29271,7 @@
 
     #param[base_url] = http://nro.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; The Neuroscientist Volume 1 ; 1 ; nroa ; >
       au < manifest ; exists ; 1996 ; The Neuroscientist Volume 2 ; 2 ; nroa ; >
@@ -29231,6 +29297,27 @@
       au < crawling ; exists ; 2016 ; The Neuroscientist Volume 22 ; 22 ; nroa ; >
 
     }
+
+  }
+
+  {
+
+      title <
+        name = New Journal of European Criminal Law ;
+        issn = 2032-2844 ;
+        eissn = 2399-293X
+      >
+
+      #param[base_url] = http://nje.sagepub.com/
+
+      au < exists ; exists ; 2009 ; New Journal of European Criminal Law Volume 1a ; 1a ; njea ; >
+      au < exists ; exists ; 2010 ; New Journal of European Criminal Law Volume 1 ; 1 ; njea ; >
+      au < exists ; exists ; 2011 ; New Journal of European Criminal Law Volume 2 ; 2 ; njea ; >
+      au < exists ; exists ; 2012 ; New Journal of European Criminal Law Volume 3 ; 3 ; njea ; >
+      au < exists ; exists ; 2013 ; New Journal of European Criminal Law Volume 4 ; 4 ; njea ; >
+      au < exists ; exists ; 2014 ; New Journal of European Criminal Law Volume 5 ; 5 ; njea ; >
+      au < exists ; exists ; 2015 ; New Journal of European Criminal Law Volume 6 ; 6 ; njea ; >
+      au < exists ; exists ; 2016 ; New Journal of European Criminal Law Volume 7 ; 7 ; njea ; >
 
   }
 
@@ -29265,9 +29352,7 @@
 
     #param[base_url] = http://nms.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1999 ; New Media & Society Volume 1 ; 1 ; nmsa ; >
       au < manifest ; exists ; 2000 ; New Media & Society Volume 2 ; 2 ; nmsa ; >
@@ -29888,9 +29973,7 @@
 
     #param[base_url] = http://org.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1994 ; Organization Volume 1 ; 1 ; orga ; >
       au < manifest ; exists ; 1995 ; Organization Volume 2 ; 2 ; orga ; >
@@ -29930,9 +30013,7 @@
 
     #param[base_url] = http://oae.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Organization & Environment Volume 1 ; 1 ; oaea ; >
       au < manifest ; exists ; 1988 ; Organization & Environment Volume 2 ; 2 ; oaea ; >
@@ -29978,9 +30059,7 @@
 
     #param[base_url] = http://oss.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1980 ; Organization Studies Volume 1 ; 1 ; ossa ; >
       au < manifest ; exists ; 1981 ; Organization Studies Volume 2 ; 2 ; ossa ; >
@@ -30036,7 +30115,6 @@
 
     {
 
-
       au < doNotProcess ; doNotProcess ; 2011 ; Organizational Psychology Review Volume 1 ; 1 ; opra ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Organizational Psychology Review Volume 2 ; 2 ; opra ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Organizational Psychology Review Volume 3 ; 3 ; opra ; >
@@ -30058,9 +30136,7 @@
 
     #param[base_url] = http://orm.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1998 ; Organizational Research Methods Volume 1 ; 1 ; orma ; >
       au < manifest ; exists ; 1999 ; Organizational Research Methods Volume 2 ; 2 ; orma ; >
@@ -30097,7 +30173,6 @@
     #param[base_url] = http://oto.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 ; otoj ; >
       au < manifest ; exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 ; otoj ; >
@@ -30158,9 +30233,7 @@
 
     #param[base_url] = http://pmj.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1987 ; Palliative Medicine Volume 1 ; 1 ; pmja ; >
       au < manifest ; exists ; 1988 ; Palliative Medicine Volume 2 ; 2 ; pmja ; >
@@ -30240,9 +30313,7 @@
 
     #param[base_url] = http://ppq.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1995 ; Party Politics Volume 1 ; 1 ; ppqa ; >
       au < manifest ; exists ; 1996 ; Party Politics Volume 2 ; 2 ; ppqa ; >
@@ -30322,9 +30393,7 @@
 
     #param[base_url] = http://prf.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1986 ; Perfusion Volume 1 ; 1 ; prfa ; >
       au < manifest ; exists ; 1987 ; Perfusion Volume 2 ; 2 ; prfa ; >
@@ -30372,9 +30441,7 @@
 
     #param[base_url] = http://psp.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 ; pspa ; >
       au < manifest ; exists ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 ; pspc ; >
@@ -30433,9 +30500,7 @@
 
     #param[base_url] = http://psr.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 ; psra ; >
       au < manifest ; exists ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 ; psra ; >
@@ -30473,7 +30538,6 @@
     #param[base_url] = http://pps.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 ; ppsa ; >
       au < manifest ; exists ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 ; ppsa ; >
@@ -30740,9 +30804,7 @@
 
     #param[base_url] = http://psc.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1973 ; Philosophy & Social Criticism Volume 1 ; 1 ; psca ; >
       au < manifest ; exists ; 1974 ; Philosophy & Social Criticism Volume 2 ; 2 ; psca ; >
@@ -30801,9 +30863,7 @@
 
     #param[base_url] = http://pos.sagepub.com/
 
-    
     {
-
 
       au < manifest ; exists ; 1971 ; Philosophy of the Social Sciences Volume 1 ; 1 ; posa ; >
       au < manifest ; exists ; 1972 ; Philosophy of the Social Sciences Volume 2 ; 2 ; posa ; >
@@ -30885,6 +30945,43 @@
       au < crawling ; exists ; 2016 ; Planning Theory Volume 15 ; 15 ; plta ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Plastic Surgery ;
+      issn = 2292-5503 ;
+      eissn = 2292-5511
+    >
+
+      #param[base_url] = http://psg.sagepub.com/
+
+      au < exists ; exists ; 1993 ; Plastic Surgery Volume 1 ; 1 ; psga ; >
+      au < exists ; exists ; 1994 ; Plastic Surgery Volume 2 ; 2 ; psga ; >
+      au < exists ; exists ; 1995 ; Plastic Surgery Volume 3 ; 3 ; psga ; >
+      au < exists ; exists ; 1996 ; Plastic Surgery Volume 4 ; 4 ; psga ; >
+      au < exists ; exists ; 1997 ; Plastic Surgery Volume 5 ; 5 ; psga ; >
+      au < exists ; exists ; 1998 ; Plastic Surgery Volume 6 ; 6 ; psga ; >
+      au < exists ; exists ; 1999 ; Plastic Surgery Volume 7 ; 7 ; psga ; >
+      au < exists ; exists ; 2000 ; Plastic Surgery Volume 8 ; 8 ; psga ; >
+      au < exists ; exists ; 2001 ; Plastic Surgery Volume 9 ; 9 ; psga ; >
+      au < exists ; exists ; 2002 ; Plastic Surgery Volume 10 ; 10 ; psga ; >
+      au < exists ; exists ; 2003 ; Plastic Surgery Volume 11 ; 11 ; psga ; >
+      au < exists ; exists ; 2004 ; Plastic Surgery Volume 12 ; 12 ; psga ; >
+      au < exists ; exists ; 2005 ; Plastic Surgery Volume 13 ; 13 ; psga ; >
+      au < exists ; exists ; 2006 ; Plastic Surgery Volume 14 ; 14 ; psga ; >
+      au < exists ; exists ; 2007 ; Plastic Surgery Volume 15 ; 15 ; psga ; >
+      au < exists ; exists ; 2008 ; Plastic Surgery Volume 16 ; 16 ; psga ; >
+      au < exists ; exists ; 2009 ; Plastic Surgery Volume 17 ; 17 ; psga ; >
+      au < exists ; exists ; 2010 ; Plastic Surgery Volume 18 ; 18 ; psga ; >
+      au < exists ; exists ; 2011 ; Plastic Surgery Volume 19 ; 19 ; psga ; >
+      au < exists ; exists ; 2012 ; Plastic Surgery Volume 20 ; 20 ; psga ; >
+      au < exists ; exists ; 2013 ; Plastic Surgery Volume 21 ; 21 ; psga ; >
+      au < exists ; exists ; 2014 ; Plastic Surgery Volume 22 ; 22 ; psga ; >
+      au < exists ; exists ; 2015 ; Plastic Surgery Volume 23 ; 23 ; psga ; >
+      au < exists ; exists ; 2016 ; Plastic Surgery Volume 24 ; 24 ; psga ; >
 
   }
 
