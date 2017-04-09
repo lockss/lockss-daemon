@@ -228,13 +228,13 @@ public class ConfigManager implements LockssManager {
 
   /** Checksum algorithm used to verify remote config failover file */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
-    "remoteConfigFailoverChecksumAlgorithm";
+    PLATFORM + "remoteConfigFailoverChecksumAlgorithm";
   public static final String DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_ALGORITHM =
     "SHA-256";
 
   /** Failover file not accepted unled it has a checksum. */
   public static final String PARAM_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
-    "remoteConfigFailoverChecksumRequired";
+    PLATFORM + "remoteConfigFailoverChecksumRequired";
   public static final boolean DEFAULT_REMOTE_CONFIG_FAILOVER_CHECKSUM_REQUIRED =
     true;
 
