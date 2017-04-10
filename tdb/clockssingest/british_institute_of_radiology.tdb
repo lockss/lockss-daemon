@@ -120,6 +120,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjr
+      attr[EncodingMatchRange]=200
     
       au < manifest ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; >
       au < manifest ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; >
@@ -137,7 +138,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; >
       au < finished ; finished ; 2014 ; British Journal of Radiology Volume 87 ; 87 ; >
       au < frozen ; exists ; 2015 ; British Journal of Radiology Volume 88 ; 88 ; >
-      au < notReady ; exists ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; > #Error parsing page
+      au < testing ; exists ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; > #Error parsing page
       au < manifest ; exists ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; > #Error parsing page
       
     }

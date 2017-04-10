@@ -115,6 +115,7 @@
     >
 
     param[journal_id] = jam
+    attr[EncodingMatchRange]=200
     comment[continued_by] = 0733-3021
 
     au < released ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 >
@@ -127,7 +128,7 @@
     au < released ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
     au < released ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
     au < released ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
-    au < notReady ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > #Error parsing page
+    au < testing ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 > #Error parsing page
     au < released ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
     au < released ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
     au < released ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
@@ -356,6 +357,7 @@
     >
     
     param[journal_id] = phoc
+    attr[EncodingMatchRange]=200
 
     au < released ; 1971 ; Journal of Physical Oceanography Volume 1 ; 1 >  
     au < released ; 1972 ; Journal of Physical Oceanography Volume 2 ; 2 >  
@@ -383,7 +385,7 @@
     au < released ; 1994 ; Journal of Physical Oceanography Volume 24 ; 24 >
     au < released ; 1995 ; Journal of Physical Oceanography Volume 25 ; 25 >
     au < released ; 1996 ; Journal of Physical Oceanography Volume 26 ; 26 >
-    au < notReady ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 > #Error parsing page
+    au < testing ; 1997 ; Journal of Physical Oceanography Volume 27 ; 27 > #Error parsing page
     au < released ; 1998 ; Journal of Physical Oceanography Volume 28 ; 28 >
     au < released ; 1999 ; Journal of Physical Oceanography Volume 29 ; 29 >
     au < released ; 2000 ; Journal of Physical Oceanography Volume 30 ; 30 >
