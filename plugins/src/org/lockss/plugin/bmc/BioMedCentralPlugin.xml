@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>59</string>
+    <string>60</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -166,6 +166,11 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:BioMed Central</string>
+  </entry>
+  <entry>
+    <!-- au_start_url to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
