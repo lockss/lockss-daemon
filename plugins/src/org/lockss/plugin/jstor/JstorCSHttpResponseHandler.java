@@ -54,7 +54,7 @@ public class JstorCSHttpResponseHandler implements CacheResultHandler {
   @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
-    throw new UnsupportedOperationException("Unexpected call to BaseAtyponHttpResponseHandler.init()");
+    throw new UnsupportedOperationException("Unexpected call to JstorCSHttpResponseHandler.init()");
   }
 
   @Override
