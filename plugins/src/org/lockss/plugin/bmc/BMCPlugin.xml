@@ -58,10 +58,11 @@
     <string>au_redirect_to_login_url_pattern</string>
     <string>"%srender/render\.asp\?.*access=denied", base_url</string>
   </entry>
-  <entry>
+  <!-- Remove login checker as caused "Not in GZIP format" for some content (PDF, epub, etc.) -->
+  <!-- entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.bmc.BMCLoginPageChecker</string>
-  </entry>
+  </entry> -->
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.bmc.BMCHtmlLinkExtractor$Factory</string>
@@ -181,7 +182,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>100</long> <!-- No longer crawls the publisher site, but raise this value to 3000 after validation -->
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
