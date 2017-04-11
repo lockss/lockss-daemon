@@ -3119,7 +3119,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.jclinbioinformatics.com/
       param[journal_issn] = 2403-9113
-      #stop publishing
+      #stop publishing, move to Shanghai Institute of Clinical Bioinformatics
 
       au < frozen ; exists ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 ; >
       au < frozen ; exists ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 ; >

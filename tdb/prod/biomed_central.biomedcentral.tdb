@@ -3147,6 +3147,7 @@
 
       param[base_url] = http://www.jclinbioinformatics.com/
       param[journal_issn] = 2403-9113
+      #stop publishing, move to Shanghai Institute of Clinical Bioinformatics
 
       au < down ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 >
       au < doNotProcess ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
