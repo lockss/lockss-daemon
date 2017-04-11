@@ -3553,6 +3553,7 @@
 
     param[base_url] = http://blms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    #moving to wiley
 
     au < doNotProcess ; exists ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1970 ; Bulletin of the London Mathematical Society Volume 2 ; 2 ; >
@@ -3602,7 +3603,6 @@
     au < finished ; finished ; 2014 ; Bulletin of the London Mathematical Society Volume 46 ; 46 ; >
     au < finished ; finished ; 2015 ; Bulletin of the London Mathematical Society Volume 47 ; 47 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2016 ; Bulletin of the London Mathematical Society Volume 48 [superseded] ; 48 ; >
-    au < doNotProcess ; exists ; 2017 ; Bulletin of the London Mathematical Society Volume 49 ; 49 ; > #moving to wiley
 
     }
 
@@ -13797,7 +13797,8 @@
     param[base_url] = http://jlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[jlms19] = malformed manifest page
-
+    #moving to wiley
+    
     au < doNotProcess ; exists ; 1926 ; Journal of the London Mathematical Society Volume s1-1 ; s1-1 ; >
     au < doNotProcess ; exists ; 1927 ; Journal of the London Mathematical Society Volume s1-2 ; s1-2 ; >
     au < doNotProcess ; exists ; 1928 ; Journal of the London Mathematical Society Volume s1-3 ; s1-3 ; >
@@ -13936,7 +13937,6 @@
     au < finished ; finished ; 2015 ; Journal of the London Mathematical Society Volume 92 ; 92 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Journal of the London Mathematical Society Volume 93 ; 93 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; Journal of the London Mathematical Society Volume 94 [superseded] ; 94 ; >
-    au < doNotProcess ; exists ; 2017 ; Journal of the London Mathematical Society Volume 95 ; 95 ; > #moving to wiley
 
     }
 
@@ -15333,6 +15333,7 @@
 
     param[base_url] = http://jtopol.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to wiley
 
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
@@ -15343,7 +15344,6 @@
     au < finished ; finished ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
     au < finished ; finished ; 2015 ; Journal of Topology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; Journal of Topology Volume 9 [superseded] ; 9 ; >
-    au < doNotProcess ; exists ; 2017 ; Journal of Topology Volume 10 ; 10 ; > #moving to wiley
 
     }
 
@@ -19863,6 +19863,7 @@
 
     param[base_url] = http://plms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    #moving to wiley
 
     au < doNotProcess ; exists ; 1865 ; Proceedings of the London Mathematical Society Volume s1-1 ; s1-1 ; >
     au < doNotProcess ; exists ; 1866 ; Proceedings of the London Mathematical Society Volume s1-2 ; s1-2 ; >
@@ -20067,7 +20068,6 @@
     au < finished ; finished ; 2015 ; Proceedings of the London Mathematical Society Volume 111 ; 111 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Proceedings of the London Mathematical Society Volume 112 ; 112 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2016 ; Proceedings of the London Mathematical Society Volume 113 [superseded] ; 113 ; >
-    au < doNotProcess ; exists ; 2017 ; Proceedings of the London Mathematical Society Volume 114 ; 114 ; > #moving to wiley
 
     }
 
@@ -23127,11 +23127,11 @@
 
     param[base_url] = http://tlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    #move to wiley
 
     au < finished ; finished ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
     au < finished ; finished ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 [superseded] ; 3 ; >
-    au < doNotProcess ; exists ; 2017 ; Transactions of the London Mathematical Society Volume 4 ; 4 ; > #moving to wiley.
 
   }
 
