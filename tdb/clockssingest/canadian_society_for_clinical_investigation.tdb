@@ -21,8 +21,8 @@
       param[base_url] = http://cimonline.ca/
       param[journal_id] = cim
 
-      au < testing ; exists ; 2007 ; Clinical & Investigative Medicine Volume 30 ; 30 ; 2007 ; >
-      au < testing ; exists ; 2008 ; Clinical & Investigative Medicine Volume 31 ; 31 ; 2008 ; >
+      au < ready ; exists ; 2007 ; Clinical & Investigative Medicine Volume 30 ; 30 ; 2007 ; >
+      au < ready ; exists ; 2008 ; Clinical & Investigative Medicine Volume 31 ; 31 ; 2008 ; >
       au < frozen ; exists ; 2009 ; Clinical & Investigative Medicine Volume 32 ; 32 ; 2009 ; >
       au < crawling ; exists ; 2010 ; Clinical & Investigative Medicine Volume 33 ; 33 ; 2010 ; > 
       au < crawling ; exists ; 2011 ; Clinical & Investigative Medicine Volume 34 ; 34 ; 2011 ; > 
@@ -30,7 +30,7 @@
       au < crawling ; exists ; 2013 ; Clinical & Investigative Medicine Volume 36 ; 36 ; 2013 ; > 
       au < crawling ; exists ; 2014 ; Clinical & Investigative Medicine Volume 37 ; 37 ; 2014 ; > 
       au < crawling ; exists ; 2015 ; Clinical & Investigative Medicine Volume 38 ; 38 ; 2015 ; > 
-      au < testing ; exists ; 2016 ; Clinical & Investigative Medicine Volume 39 ; 39 ; 2016 ; > 
+      au < notReady ; exists ; 2016 ; Clinical & Investigative Medicine Volume 39 ; 39 ; 2016 ; > #found login page http://cimonline.ca/index.php/cim/login?source=%2Findex.php%2Fcim%2Fartic
       au < manifest ; exists ; 2017 ; Clinical & Investigative Medicine Volume 40 ; 40 ; 2017 ; > 
 
     }
