@@ -155,7 +155,13 @@ ArticleMetadataExtractorFactory {
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
 
-      processToc(cu.getUnfilteredInputStream(), cu.getEncoding(), cu.getUrl());
+      InputStream in = cu.getUnfilteredInputStream();
+      processToc(in, cu.getEncoding(), cu.getUrl());
+      try {
+        in.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      } 
       return null;
 
     }
