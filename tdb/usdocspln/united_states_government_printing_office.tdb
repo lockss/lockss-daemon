@@ -89,6 +89,7 @@
     au < released ; 1867 ; Account of the Receipts and Expenditures of the United States 1867 ; https://www.gpo.gov/ ; 1867 >
     au < released ; 1868 ; Account of the Receipts and Expenditures of the United States 1868 ; https://www.gpo.gov/ ; 1868 >
     au < released ; 1869 ; Account of the Receipts and Expenditures of the United States 1869 ; https://www.gpo.gov/ ; 1869 >
+    au < exists ; 1870 ; Account of the Receipts and Expenditures of the United States 1870 ; https://www.gpo.gov/ ; 1870 >
     au < released ; 1871 ; Account of the Receipts and Expenditures of the United States 1871 ; https://www.gpo.gov/ ; 1871 >
     au < released ; 1872 ; Account of the Receipts and Expenditures of the United States 1872 ; https://www.gpo.gov/ ; 1872 >
     au < released ; 1873 ; Account of the Receipts and Expenditures of the United States 1873 ; https://www.gpo.gov/ ; 1873 >
@@ -242,7 +243,7 @@
   {
 
     title <
-      name = Additional Government Publications
+      name = Additional Government Publications and Archives
     >
 
     param[collection_id] = GPO
@@ -251,12 +252,30 @@
     au < released ; 1936 ; Additional Government Publications 1936 ; http://www.gpo.gov/ ; 1936 >
     au < released ; 1963 ; Additional Government Publications 1963 ; https://www.gpo.gov/ ; 1963 >
     au < released ; 1964 ; Additional Government Publications 1964 ; https://www.gpo.gov/ ; 1964 >
+    au < exists ; 1965 ; Additional Government Publications 1965 ; https://www.gpo.gov/ ; 1965 >
+    au < exists ; 1966 ; Additional Government Publications 1966 ; https://www.gpo.gov/ ; 1966 >
+    au < exists ; 1967 ; Additional Government Publications 1967 ; https://www.gpo.gov/ ; 1967 >
+    au < exists ; 1968 ; Additional Government Publications 1968 ; https://www.gpo.gov/ ; 1968 >
+    au < exists ; 1969 ; Additional Government Publications 1969 ; https://www.gpo.gov/ ; 1969 >
     au < released ; 1970 ; Additional Government Publications 1970 ; http://www.gpo.gov/ ; 1970 >
     au < released ; 1971 ; Additional Government Publications 1971 ; https://www.gpo.gov/ ; 1971 >
+    au < exists ; 1972 ; Additional Government Publications 1972 ; https://www.gpo.gov/ ; 1972 >
+    au < exists ; 1973 ; Additional Government Publications 1973 ; https://www.gpo.gov/ ; 1973 >
+    au < exists ; 1974 ; Additional Government Publications 1974 ; https://www.gpo.gov/ ; 1974 >
     au < released ; 1975 ; Additional Government Publications 1975 ; https://www.gpo.gov/ ; 1975 >
+    au < exists ; 1976 ; Additional Government Publications 1976 ; https://www.gpo.gov/ ; 1976 >
+    au < exists ; 1977 ; Additional Government Publications 1977 ; https://www.gpo.gov/ ; 1977 >
+    au < exists ; 1978 ; Additional Government Publications 1978 ; https://www.gpo.gov/ ; 1978 >
+    au < exists ; 1979 ; Additional Government Publications 1979 ; https://www.gpo.gov/ ; 1979 >
+    au < exists ; 1980 ; Additional Government Publications 1980 ; https://www.gpo.gov/ ; 1980 >
     au < released ; 1981 ; Additional Government Publications 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < exists ; 1982 ; Additional Government Publications 1982 ; https://www.gpo.gov/ ; 1982 >
+    au < exists ; 1983 ; Additional Government Publications 1983 ; https://www.gpo.gov/ ; 1983 >
+    au < exists ; 1984 ; Additional Government Publications 1984 ; https://www.gpo.gov/ ; 1984 >
+    au < exists ; 1985 ; Additional Government Publications 1985 ; https://www.gpo.gov/ ; 1985 >
     au < released ; 1986 ; Additional Government Publications 1986 ; http://www.gpo.gov/ ; 1986 >
     au < released ; 1987 ; Additional Government Publications 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < exists ; 1988 ; Additional Government Publications 1988 ; https://www.gpo.gov/ ; 1988 >
     au < released ; 1989 ; Additional Government Publications 1989 ; http://www.gpo.gov/ ; 1989 >
     au < released ; 1990 ; Additional Government Publications 1990 ; http://www.gpo.gov/ ; 1990 >
     au < released ; 1991 ; Additional Government Publications 1991 ; https://www.gpo.gov/ ; 1991 >
@@ -567,6 +586,7 @@
 
     param[collection_id] = CDOC
 
+    #au < exists ; 1796 ; Congressional Documents 1796 ; https://www.gpo.gov/ ; 1796 > #empty
     au < released ; 1862 ; Congressional Documents 1862 ; http://www.gpo.gov/ ; 1862 >
     au < released ; 1913 ; Congressional Documents 1913 ; https://www.gpo.gov/ ; 1913 >
     au < released ; 1936 ; Congressional Documents 1936 ; http://www.gpo.gov/ ; 1936 >
@@ -685,6 +705,7 @@
     comment[0] = published from 1971 to 2006
 
     {
+    #This material included in the collection "GPO"
     param[collection_id] = GPO-CRECB
 
     au < exists ; 1971 ; Congressional Record (Bound) 1971 ; https://www.gpo.gov/ ; 1971 >
