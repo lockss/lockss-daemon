@@ -309,7 +309,7 @@ def _analyze_range(options, aus, range):
     latestyear = latestau[_IYEAR]
     if latestyear is None:
         # Does not have years
-        return ('error', 'no years') ###FIXME
+        return ('error', 'no years')
     if latestyear[1] is None:
         # Ends with single year
         n = 1
@@ -317,73 +317,45 @@ def _analyze_range(options, aus, range):
             n = n + 1
         if n == len(range):
             # Only one year to draw from
-            if options.interactive and not _yesno('Only %dx%d to draw from; add %d %s per year?' % (n, latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
+            if options.interactive and not _yesno('Only %d %s for %d to draw from; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries', latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
                 return ('warning', None) ###FIXME
             else:
                 return ('single', n, 0)
         # More than one year to draw from
-        prevyear = range[n]
-        if (prevyear[1] is None and prevyear[1] != latestyear[1] - 1) \
+        prevyear = range[n][_IYEAR]
+        if (prevyear[1] is None and prevyear[0] != latestyear[0] - 1) \
                 or (prevyear[1] is not None and (prevyear[1] != latestyear[0] or prevyear[0] != latestyear[0] - 1)):
-            # Preceding year in invalid progression
+            # Preceding year out of sequence
             return ('error', 'invalid progression')
-        # Preceding year in valid progression
+        # Preceding year in sequence
         if prevyear[1] is None:
-            # Preceded by single year
+            # Preceding year is single year
             p = n
             while p < len(range) and range[p][_IYEAR] == prevyear:
                 p = p + 1
-            # FIXME do errors first, then remaining cases are almost the same
-            if p == len(range) or (range[p][1] is None and range[p][0] == prevyear[0] - 1):
-                # Only two years to draw from
-
-
-
-
-        else:
-            # More than one year to draw from
-            prevyear = range[n]
-            if prevyear[1] is None:
-                # Preceded by single year
-                if prevyear[0] > latestyear[0]:
-                    # Invalid: preceded by later year
-                    return ('error', 'Invalid progression of years')
-                elif prevyear[0] == latestyear - 1:
-                    # Preceded by previous year
-                    p = n
-                    while p < len(range) and range[p][_IYEAR] == prevyear:
-                        p = p + 1
-                    warn = None
-
-                    if p == len(range):
-                        # Only two years to draw from
-                        if n < p - n:
-                            # More of the previous year than latest year
-                            if options.interactive and not _yesno('Only %dx%d and %dx%d to draw from; add %dx%d then %d %s per year?' % (p - n, prevyear[0], n, latestyear[0], p - n - n, latestyear[0], p - n, 'entry' if p - n == 1 else 'entries'), range):
-                                return ('warning', None)
-                            else:
-                                return ('single', p - n, p - n - n)
-                        elif n > p - n:
-                            if options.interactive and not _yesno('Only %dx%d and %dx%d to draw from; add %d %s per year?' % (p - n, prevyear[0], n, latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
-                                return ('warning', None)
-                            else:
-                                return ('single', n, 0)
-                        else:
-                            # Same of the latest year and previous year
-                            return ('single', n, 0)
-                    else:
-                        # More than two years to draw from
-                        pass ###FIXME
+            if p != len(range) and (range[p][_IYEAR][1] is None or range[p][_IYEAR][0] != prevyear[0] - 1):
+                # Preceding year preceded by single year out of sequence or double year
+                return ('error', 'invalid progression')
+            # Preceding year preceded by nothing or single year in sequence
+            if n == p - n:
+                # Sequence of single years with stride n
+                return ('single', n, 0)
+            if n < p - n:
+                # Sequence of single years with stride n and p already in
+                if options.interactive and not _yesno('Add %d %s for %d then %d %s per year?' % (p - n - n, 'entry' if n == 1 else 'entries', latestyear[0], p - n, 'entry' if n == 1 else 'entries'), range):
+                    return ('warning', None) ###FIXME
                 else:
-                    # Invalid: preceded by much earlier year
-                    pass ###FIXME
-            else:
-                # Preceded by double year
-                pass ###FIXME
-    else:
-        # Ends with double year
-        pass ###FIXME
-
+                    return ('single', p - n, n)
+            # n > p - n
+            if p == len(range):
+                # Only two years to draw from, and fewer of the preceding year than the latest
+                if options.interactive and not _yesno('Only %d %s for %d and %d %s for %d to draw from; add %d %s per year?' % (p - n, 'entry' if n == 1 else 'entries', prevyear[0], n, 'entry' if n == 1 else 'entries', latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
+                    return ('warning', None) ###FIXME
+                else:
+                    return ('single', n, 0)
+            # Fewer of the preceding year than of the latest year
+            return ('error', 'invalid progression')
+    return ('not yet implemented', None)
 
 def _yesno(st, range=None):
     if range:
