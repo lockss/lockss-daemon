@@ -8,8 +8,9 @@
     info[platform] = Atypon
   >
   
-  # Live on Atypon 1/1/2017. 
+  # Live on Atypon 1/1/2017.
 
+  attr[EncodingMatchRange]=200
   plugin = org.lockss.plugin.atypon.sage.ClockssSageAtyponJournalsPlugin
   param[base_url] = http://journals.sagepub.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[journal_id] ; hidden[proxy] >
@@ -17131,7 +17132,7 @@
 
     #param[base_url] = http://iss.sagepub.com/
     #try this to see if it will allow the AU to go through...
-    attr[EncodingMatchRange]=200
+    #attr[EncodingMatchRange]=200
 
     
     {
@@ -35918,7 +35919,7 @@
     >
 
     #param[base_url] = http://ssi.sagepub.com/
-    attr[EncodingMatchRange]=200
+    #attr[EncodingMatchRange]=200
 
     {
 
@@ -35976,7 +35977,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Social Science Information Volume 52 ; 52 ; ssic ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Social Science Information Volume 53 ; 53 ; ssic ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Social Science Information Volume 54 ; 54 ; ssic ; >
-      au < notReady ; exists ; 2016 ; Social Science Information Volume 55 ; 55 ; ssic ; > #org.htmlparser.util.EncodingChangeException: Unable to sync new encoding within range of +/- 100 chars
+      au < testing ; exists ; 2016 ; Social Science Information Volume 55 ; 55 ; ssic ; > #org.htmlparser.util.EncodingChangeException: Unable to sync new encoding within range of +/- 100 chars
 
     }
 
