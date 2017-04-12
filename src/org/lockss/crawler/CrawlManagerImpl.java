@@ -2028,7 +2028,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (r1 == r2) {
 	return 0;
       }
-      // Avoid NPEs, and ensure reqs representing inactive AUs sort last
+      // An AU may be deleted at any point here.  Avoid NPEs by getting all
+      // info before inactive check.
+      ArchivalUnit au1 = r1.getAu();
+      ArchivalUnit au2 = r2.getAu();
+      AuState aus1 = r1.getAuState();
+      AuState aus2 = r2.getAuState();
+
+      // ensure reqs representing inactive AUs sort last
       if (!r1.isActive()) {
 	if (!r2.isActive()) {
 	  // doesn't matter, but must return consistent order
@@ -2041,11 +2048,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  return -1;
 	}
       }
-
-      ArchivalUnit au1 = r1.getAu();
-      ArchivalUnit au2 = r2.getAu();
-      AuState aus1 = r1.getAuState();
-      AuState aus2 = r2.getAuState();
 
       CompareToBuilder ctb = 
 	new CompareToBuilder()
