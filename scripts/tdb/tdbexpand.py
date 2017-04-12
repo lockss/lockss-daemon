@@ -47,8 +47,8 @@ class _TdbExpandOptions(object):
     def make_parser():
         usage = '%prog {--interative|--non-interactive} [OPTIONS] FILE...'
         parser = optparse.OptionParser(version=__version__, usage=usage, description=__doc__)
-        parser.add_option('--copyright', '-C', action='store_true', help='show copyright and exit')
-        parser.add_option('--license', '-L', action='store_true', help='show license and exit')
+        parser.add_option('--copyright', '-C', action='store_true', help='Show copyright and exit')
+        parser.add_option('--license', '-L', action='store_true', help='Show license and exit')
         # Mode
         group = optparse.OptionGroup(parser, 'Mode')
         group.add_option('--interactive', action='store_true', help='Prompt user interactively')
@@ -56,8 +56,8 @@ class _TdbExpandOptions(object):
         parser.add_option_group(group)
         # Options
         group = optparse.OptionGroup(parser, 'Options')
-        group.add_option('--end-year', type='int', help='last year in which to add entries (default: this year)')
-        group.add_option('--start-year', type='int', help='first year in which to add entries (default: this year)')
+        group.add_option('--end-year', type='int', help='Last year in which to add entries (default: this year)')
+        group.add_option('--start-year', type='int', help='First year in which to add entries (default: this year)')
         group.add_option('--stoppers', default='doesNotExist', help='AU statuses indicating the end of a run (comma-separated, default: %default)')
         group.add_option('--year-required', action='store_true', help='Only process AUs with a year marker')
         parser.add_option_group(group)
@@ -295,9 +295,10 @@ def _find_ranges(options, aus):
     ranges.reverse()
     ###DEBUG ###FIXME
     for range in ranges:
+        print '--------'
         for auentry in range:
             print auentry[-1].generate_body()
-        print
+    print '--------'
     return ranges
 
 def _analyze_ranges(options, aus, ranges):
@@ -305,37 +306,40 @@ def _analyze_ranges(options, aus, ranges):
         print ('>>>>>>>', _analyze_range(options, aus, range)) ###FIXME
 
 def _analyze_range(options, aus, range):
+    return _analyze_range_target(options, aus, range, _IYEAR)
+
+def _analyze_range_target(options, aus, range, target):
     latestau = range[0]
-    latestyear = latestau[_IYEAR]
+    latestyear = latestau[target]
     if latestyear is None:
         # Does not have years
         return ('error', 'no years')
     if latestyear[1] is None:
         # Ends with single year
         n = 1
-        while n < len(range) and range[n][_IYEAR] == latestyear:
+        while n < len(range) and range[n][target] == latestyear:
             n = n + 1
         if n == len(range):
             # Only one year to draw from
             if options.interactive and not _yesno('Only %d %s for %d to draw from; add %d %s per year?' % (n, 'entry' if n == 1 else 'entries', latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
-                return ('warning', None) ###FIXME
+                return ('warning', None) ###fixwarning
             else:
                 return ('single', n, 0)
         # More than one year to draw from
-        prevyear = range[n][_IYEAR]
+        prevyear = range[n][target]
         if (prevyear[1] is None and prevyear[0] != latestyear[0] - 1) \
                 or (prevyear[1] is not None and (prevyear[1] != latestyear[0] or prevyear[0] != latestyear[0] - 1)):
             # Preceding year out of sequence
-            return ('error', 'invalid progression')
+            return ('error', 'invalid progression 1')
         # Preceding year in sequence
         if prevyear[1] is None:
             # Preceding year is single year
             p = n
-            while p < len(range) and range[p][_IYEAR] == prevyear:
+            while p < len(range) and range[p][target] == prevyear:
                 p = p + 1
-            if p != len(range) and (range[p][_IYEAR][1] is None or range[p][_IYEAR][0] != prevyear[0] - 1):
+            if p != len(range) and (range[p][target][1] is not None or range[p][target][0] != prevyear[0] - 1):
                 # Preceding year preceded by single year out of sequence or double year
-                return ('error', 'invalid progression')
+                return ('error', 'invalid progression 2')
             # Preceding year preceded by nothing or single year in sequence
             if n == p - n:
                 # Sequence of single years with stride n
@@ -343,18 +347,18 @@ def _analyze_range(options, aus, range):
             if n < p - n:
                 # Sequence of single years with stride n and p already in
                 if options.interactive and not _yesno('Add %d %s for %d then %d %s per year?' % (p - n - n, 'entry' if n == 1 else 'entries', latestyear[0], p - n, 'entry' if n == 1 else 'entries'), range):
-                    return ('warning', None) ###FIXME
+                    return ('warning', None) ###fixwarning
                 else:
                     return ('single', p - n, n)
             # n > p - n
             if p == len(range):
                 # Only two years to draw from, and fewer of the preceding year than the latest
                 if options.interactive and not _yesno('Only %d %s for %d and %d %s for %d to draw from; add %d %s per year?' % (p - n, 'entry' if n == 1 else 'entries', prevyear[0], n, 'entry' if n == 1 else 'entries', latestyear[0], n, 'entry' if n == 1 else 'entries'), range):
-                    return ('warning', None) ###FIXME
+                    return ('warning', None) ###fixwarning
                 else:
                     return ('single', n, 0)
             # Fewer of the preceding year than of the latest year
-            return ('error', 'invalid progression')
+            return ('error', 'invalid progression 3')
     return ('not yet implemented', None)
 
 def _yesno(st, range=None):
