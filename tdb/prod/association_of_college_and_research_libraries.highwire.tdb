@@ -1,0 +1,172 @@
+{
+
+  publisher <
+    name = Association of College & Research Libraries
+  >
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = College & Research Libraries ;
+      issn = 0010-0870 ;
+      eissn = 2150-6701 ;
+      issnl = 0010-0870
+    >
+    
+    {
+      
+      param[base_url] = http://crl.acrl.org/
+  
+      au < doNotProcess ; 1939-1940 ; College & Research Libraries Volume 1 ; 1 >
+      au < doNotProcess ; 1940-1941 ; College & Research Libraries Volume 2 ; 2 >
+      au < doNotProcess ; 1941-1942 ; College & Research Libraries Volume 3 ; 3 >
+      au < doNotProcess ; 1942-1943 ; College & Research Libraries Volume 4 ; 4 >
+      au < doNotProcess ; 1943-1944 ; College & Research Libraries Volume 5 ; 5 >
+      au < doNotProcess ; 1944-1945 ; College & Research Libraries Volume 6 ; 6 >
+      au < doNotProcess ; 1946 ; College & Research Libraries Volume 7 ; 7 >
+      au < down ; 1947 ; College & Research Libraries Volume 8 ; 8 >
+      au < down ; 1948 ; College & Research Libraries Volume 9 ; 9 >
+      au < doNotProcess ; 1949 ; College & Research Libraries Volume 10 ; 10 >
+      au < doNotProcess ; 1950 ; College & Research Libraries Volume 11 ; 11 >
+      au < doNotProcess ; 1951 ; College & Research Libraries Volume 12 ; 12 >
+      au < doNotProcess ; 1952 ; College & Research Libraries Volume 13 ; 13 >
+      au < doNotProcess ; 1953 ; College & Research Libraries Volume 14 ; 14 >
+      au < doNotProcess ; 1954 ; College & Research Libraries Volume 15 ; 15 >
+      au < doNotProcess ; 1955 ; College & Research Libraries Volume 16 ; 16 >
+      au < doNotProcess ; 1956 ; College & Research Libraries Volume 17 ; 17 >
+      au < doNotProcess ; 1957 ; College & Research Libraries Volume 18 ; 18 >
+      au < doNotProcess ; 1958 ; College & Research Libraries Volume 19 ; 19 >
+      au < doNotProcess ; 1959 ; College & Research Libraries Volume 20 ; 20 >
+      au < doNotProcess ; 1960 ; College & Research Libraries Volume 21 ; 21 >
+      au < doNotProcess ; 1961 ; College & Research Libraries Volume 22 ; 22 >
+      au < doNotProcess ; 1962 ; College & Research Libraries Volume 23 ; 23 >
+      au < doNotProcess ; 1963 ; College & Research Libraries Volume 24 ; 24 >
+      au < doNotProcess ; 1964 ; College & Research Libraries Volume 25 ; 25 >
+      au < doNotProcess ; 1965 ; College & Research Libraries Volume 26 ; 26 >
+      au < doNotProcess ; 1966 ; College & Research Libraries Volume 27 ; 27 >
+      au < doNotProcess ; 1967 ; College & Research Libraries Volume 28 ; 28 >
+      au < doNotProcess ; 1968 ; College & Research Libraries Volume 29 ; 29 >
+      au < doNotProcess ; 1969 ; College & Research Libraries Volume 30 ; 30 >
+      au < doNotProcess ; 1970 ; College & Research Libraries Volume 31 ; 31 >
+      au < doNotProcess ; 1971 ; College & Research Libraries Volume 32 ; 32 >
+      au < doNotProcess ; 1972 ; College & Research Libraries Volume 33 ; 33 >
+      au < doNotProcess ; 1973 ; College & Research Libraries Volume 34 ; 34 >
+      au < doNotProcess ; 1974 ; College & Research Libraries Volume 35 ; 35 >
+      au < doNotProcess ; 1975 ; College & Research Libraries Volume 36 ; 36 >
+      au < doNotProcess ; 1976 ; College & Research Libraries Volume 37 ; 37 >
+      au < doNotProcess ; 1977 ; College & Research Libraries Volume 38 ; 38 >
+      au < doNotProcess ; 1978 ; College & Research Libraries Volume 39 ; 39 >
+      au < doNotProcess ; 1979 ; College & Research Libraries Volume 40 ; 40 >
+      au < doNotProcess ; 1980 ; College & Research Libraries Volume 41 ; 41 >
+      au < doNotProcess ; 1981 ; College & Research Libraries Volume 42 ; 42 >
+      au < doNotProcess ; 1982 ; College & Research Libraries Volume 43 ; 43 >
+      au < doNotProcess ; 1983 ; College & Research Libraries Volume 44 ; 44 >
+      au < doNotProcess ; 1984 ; College & Research Libraries Volume 45 ; 45 >
+      au < doNotProcess ; 1985 ; College & Research Libraries Volume 46 ; 46 >
+      au < doNotProcess ; 1986 ; College & Research Libraries Volume 47 ; 47 >
+      au < doNotProcess ; 1987 ; College & Research Libraries Volume 48 ; 48 >
+      au < doNotProcess ; 1988 ; College & Research Libraries Volume 49 ; 49 >
+      au < doNotProcess ; 1989 ; College & Research Libraries Volume 50 ; 50 >
+      au < down ; 1990 ; College & Research Libraries Volume 51 ; 51 >
+      au < down ; 1991 ; College & Research Libraries Volume 52 ; 52 >
+      au < down ; 1992 ; College & Research Libraries Volume 53 ; 53 >
+      au < down ; 1993 ; College & Research Libraries Volume 54 ; 54 >
+      au < down ; 1994 ; College & Research Libraries Volume 55 ; 55 >
+      au < down ; 1995 ; College & Research Libraries Volume 56 ; 56 >
+      au < down ; 1996 ; College & Research Libraries Volume 57 ; 57 >
+      au < down ; 1997 ; College & Research Libraries Volume 58 ; 58 >
+      au < down ; 1998 ; College & Research Libraries Volume 59 ; 59 >
+      au < down ; 1999 ; College & Research Libraries Volume 60 ; 60 >
+      au < down ; 2000 ; College & Research Libraries Volume 61 ; 61 >
+      au < down ; 2001 ; College & Research Libraries Volume 62 ; 62 >
+      au < down ; 2002 ; College & Research Libraries Volume 63 ; 63 >
+      au < down ; 2003 ; College & Research Libraries Volume 64 ; 64 >
+      au < down ; 2004 ; College & Research Libraries Volume 65 ; 65 >
+      au < down ; 2005 ; College & Research Libraries Volume 66 ; 66 >
+      au < down ; 2006 ; College & Research Libraries Volume 67 ; 67 >
+      au < down ; 2007 ; College & Research Libraries Volume 68 ; 68 >
+      au < down ; 2008 ; College & Research Libraries Volume 69 ; 69 >
+      au < down ; 2009 ; College & Research Libraries Volume 70 ; 70 >
+      au < down ; 2010 ; College & Research Libraries Volume 71 ; 71 >
+      au < down ; 2011 ; College & Research Libraries Volume 72 ; 72 >
+      au < down ; 2012 ; College & Research Libraries Volume 73 ; 73 >
+      au < down ; 2013 ; College & Research Libraries Volume 74 ; 74 >
+      au < down ; 2014 ; College & Research Libraries Volume 75 ; 75 >
+      au < down ; 2015 ; College & Research Libraries Volume 76 ; 76 >
+      au < doNotProcess ; 2016 ; College & Research Libraries Volume 77 ; 77 >
+      au < doNotProcess ; 2017 ; College & Research Libraries Volume 78 ; 78 >
+
+    }
+
+  }
+  
+  {
+
+      title <
+        name = College & Research Libraries News ;
+        issn = 0099-0086 ;
+        eissn = 2150-6698 
+    >
+
+    {
+
+      param[base_url] = http://crln.acrl.org/
+
+      au < down ; 2004 ; College & Research Libraries News Volume 65 ; 65 >
+      au < down ; 2005 ; College & Research Libraries News Volume 66 ; 66 >
+      au < down ; 2006 ; College & Research Libraries News Volume 67 ; 67 >
+      au < down ; 2007 ; College & Research Libraries News Volume 68 ; 68 >
+      au < down ; 2008 ; College & Research Libraries News Volume 69 ; 69 >
+      au < down ; 2009 ; College & Research Libraries News Volume 70 ; 70 >
+      au < down ; 2010 ; College & Research Libraries News Volume 71 ; 71 >
+      au < down ; 2011 ; College & Research Libraries News Volume 72 ; 72 >
+      au < down ; 2012 ; College & Research Libraries News Volume 73 ; 73 >
+      au < down ; 2013 ; College & Research Libraries News Volume 74 ; 74 >
+      au < down ; 2014 ; College & Research Libraries News Volume 75 ; 75 >
+      au < down ; 2015 ; College & Research Libraries News Volume 76 ; 76 >
+      au < doNotProcess ; 2016 ; College & Research Libraries News Volume 77 ; 77 >
+      au < doNotProcess ; 2017 ; College & Research Libraries News Volume 78 ; 78 >
+
+    }
+
+  }
+  
+  {
+
+      title <
+        name = RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage ;
+        issn = 1529-6407 ;
+        eissn = 2150-668X 
+    >
+
+    {
+
+      param[base_url] = http://rbm.acrl.org/
+
+      au < down ; 2000 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 1 ; 1 >
+      au < down ; 2001 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 2 ; 2 >
+      au < down ; 2002 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 3 ; 3 >
+      au < down ; 2003 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 4 ; 4 >
+      au < down ; 2004 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 5 ; 5 >
+      au < down ; 2005 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 6 ; 6 >
+      au < down ; 2006 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 7 ; 7 >
+      au < down ; 2007 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 8 ; 8 >
+      au < down ; 2008 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 9 ; 9 >
+      au < down ; 2009 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 10 ; 10 >
+      au < down ; 2010 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 11 ; 11 >
+      au < down ; 2011 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 12 ; 12 >
+      au < down ; 2012 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 13 ; 13 >
+      au < down ; 2013 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 14 ; 14 >
+      au < down ; 2014 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 15 ; 15 >
+      au < down ; 2015 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 16 ; 16 >
+      au < doNotProcess ; 2016 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 17 ; 17 >
+      au < doNotProcess ; 2017 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 18 ; 18 >
+
+    }
+
+  }
+
+}
