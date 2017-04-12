@@ -1020,13 +1020,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(1, leaf.getCurrentVersion());
   }
 
-  static String LONG_URL = "http://ijs.macroeconomicsresearch.org/articles/renderlist.action/fmt=ahah&items=http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY585,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY592,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY591,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY593,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY594,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY601,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY602,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY603,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY604,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY611,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY614,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY619,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY618,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY620,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY621,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY626,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY629,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY630,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY635,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY633,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY637,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY639,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY643,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY649,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY650,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY652,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY655,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY656,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY659,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY666,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY673";
+  static String LONG_1 = "http://ijs.macroeconomicsresearch.org/articles/renderlist.action/fmt=ahah&items=http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY585,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY592,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY591,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY593,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY594,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY601,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY602,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY603,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY604,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY611,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY614,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY619,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY618,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY620,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY621,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY626,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY629,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY630,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY635,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY633,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY637,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY639,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY643,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY649,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY650,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY652,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY655,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY656,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY659,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY666,http:s/sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY673";
 
-  public void testLongPath() throws Exception {
+  static String LONG_2 = "http://mic.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.064675-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.070672-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.070763-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.071332-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.073783-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.074443-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.071688-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.074252-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.072405-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.068726-0,http://sgm.metastore.ingenta.com/content/journal/micro/10.1099/mic.0.071159-0";
+
+  public void testLongPath(String url) throws Exception {
 //     findMaxDirPath(getTempDir());
 //     findMaxDirPathNio(getTempDir());
     
-    String longUrl = trimUrlForOs(LONG_URL);
+    String longUrl = trimUrlForOs(url);
 
     RepositoryNode leaf =
       repo.createNewNode(longUrl);
@@ -1044,6 +1046,34 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(longUrl, leaf.getNodeUrl());
     RepositoryNode.RepositoryNodeContents rnc = leaf.getNodeContents();
     assertInputStreamMatchesString("test stream", rnc.getInputStream());
+
+    RepositoryNode top = repo.getNode(AuUrl.PROTOCOL_COLON);
+    List<String> tree = getSubTreeUrls(top);
+    assertEquals(ListUtil.list(url), tree);
+  }
+
+  public void testLongPath1() throws Exception {
+    testLongPath(LONG_1);
+  }
+
+  public void testLongPath2() throws Exception {
+    testLongPath(LONG_2);
+  }
+
+  List<String> getSubTreeUrls(RepositoryNode node) throws Exception {
+    List<String> res = new ArrayList<String>();
+    addSubTreeUrls(res, node);
+    return res;
+  }
+
+  void addSubTreeUrls(List<String> res, RepositoryNode node) throws Exception {
+    if (node.hasContent()) {
+      res.add(node.getNodeUrl());
+    }
+    Iterator<RepositoryNode> iter = node.listChildren(null, false);
+    while (iter.hasNext()) {
+      addSubTreeUrls(res, iter.next());
+    }
   }
 
   String trimUrlForOs(String url) {

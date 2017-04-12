@@ -2225,6 +2225,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // No backslashes should be left except in files created before long
     // componenets enabled - leave them alone.
 //     path = path.replaceAll("\\\\", "");
+    path = LockssRepositoryImpl.unescape(path);
     return path;
   }
 }
