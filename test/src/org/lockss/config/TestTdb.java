@@ -606,8 +606,9 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t2p1), diffs13.rawNewTdbTitles());
     assertSameElements(ListUtil.list(t2p1),
 		       fromIter(diffs13.newTdbTitleIterator()));
-    assertSameElements(ListUtil.list(a1t1p1, a1t3p1), diffs13.rawNewTdbAus());
-    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a2t2p1, a1t3p1),
+    assertSameElements(ListUtil.list(a1t1p1, a2t1p1, a1t3p1), 
+		       diffs13.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a2t1p1, a2t2p1, a1t3p1),
 		       fromIter(diffs13.newTdbAuIterator()));
 
     Tdb.Differences diffs31 = tdb3.computeDifferences(tdb1);
@@ -621,10 +622,12 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t2p1_changed), diffs31.rawNewTdbTitles());
     assertSameElements(ListUtil.list(t2p1_changed),
 		       fromIter(diffs31.newTdbTitleIterator()));
-    assertSameElements(ListUtil.list(a1t3p1_changed, a1t1p1_changed),
+    assertSameElements(ListUtil.list(a1t3p1_changed, a2t1p1_changed,
+				     a1t1p1_changed),
 		       diffs31.rawNewTdbAus());
     assertSameElements(ListUtil.list(a1t3p1_changed, a1t1p1_changed,
-				     a1t2p1_changed, a2t2p1_changed),
+				     a1t2p1_changed, a2t1p1_changed,
+				     a2t2p1_changed),
 		       fromIter(diffs31.newTdbAuIterator()));
     
     Tdb tdb4 = new Tdb();
@@ -642,8 +645,8 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t1p2), diffs14.rawNewTdbTitles());
     assertSameElements(ListUtil.list(t1p2),
 		       fromIter(diffs14.newTdbTitleIterator()));
-    assertSameElements(ListUtil.list(a2t2p2), diffs14.rawNewTdbAus());
-    assertSameElements(ListUtil.list(a1t1p2, a2t1p2, a2t2p2),
+    assertSameElements(ListUtil.list(a1t2p2, a2t2p2), diffs14.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p2, a1t2p2, a2t1p2, a2t2p2),
 		       fromIter(diffs14.newTdbAuIterator()));
 
 
@@ -657,9 +660,10 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t1p2_changed), diffs41.rawNewTdbTitles());
     assertSameElements(ListUtil.list(t1p2_changed),
 		       fromIter(diffs41.newTdbTitleIterator()));
-    assertSameElements(ListUtil.list(a2t2p2_changed), diffs41.rawNewTdbAus());
-    assertSameElements(ListUtil.list(a1t1p2_changed, a2t1p2_changed,
-				     a2t2p2_changed),
+    assertSameElements(ListUtil.list(a1t2p2_changed, a2t2p2_changed),
+		       diffs41.rawNewTdbAus());
+    assertSameElements(ListUtil.list(a1t1p2_changed, a1t2p2_changed,
+				     a2t1p2_changed, a2t2p2_changed),
 		       fromIter(diffs41.newTdbAuIterator()));
 
 
@@ -679,9 +683,10 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t2p1, t1p2), diffs15.rawNewTdbTitles());
     assertSameElements(ListUtil.list(t1p2, t2p1),
 		       fromIter(diffs15.newTdbTitleIterator()));
-    assertSameElements(ListUtil.list(a1t1p1, a2t2p2, a1t3p1),
+    assertSameElements(ListUtil.list(a1t1p1, a1t2p2, a2t1p1, a2t2p2, a1t3p1),
 		       diffs15.rawNewTdbAus());
-    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a2t2p1, a1t3p1,
+    assertSameElements(ListUtil.list(a1t1p1, a1t2p1, a1t2p2,
+				     a2t1p1, a2t2p1, a1t3p1,
 				     a1t1p2, a2t1p2, a2t2p2),
 		       fromIter(diffs15.newTdbAuIterator()));
     
@@ -699,9 +704,11 @@ public class TestTdb extends LockssTestCase {
     assertSameElements(ListUtil.list(t1p2_changed, t2p1_changed),
 		       fromIter(diffs51.newTdbTitleIterator()));
     assertSameElements(ListUtil.list(a1t1p1_changed, a2t2p2_changed,
+				     a2t1p1_changed, a1t2p2_changed,
 				     a1t3p1_changed),
 		       diffs51.rawNewTdbAus());
     assertSameElements(ListUtil.list(a1t1p1_changed, a1t2p1_changed,
+				     a2t1p1_changed, a1t2p2_changed,
 				     a2t2p1_changed, a1t3p1_changed,
 				     a1t1p2_changed, a2t1p2_changed,
 				     a2t2p2_changed),

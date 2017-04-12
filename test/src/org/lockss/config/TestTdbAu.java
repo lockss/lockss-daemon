@@ -74,7 +74,7 @@ public class TestTdbAu extends LockssTestCase {
   }
 
   /**
-   * Test equals() method
+   * Test isDown() method
    * @throws TdbException for invalid Tdb operations
    */
   public void testIsDown() throws TdbException{
@@ -148,6 +148,14 @@ public class TestTdbAu extends LockssTestCase {
     au4.setParam("name1", "val1");
     au4.setParam("name2", "val3");
     assertNotEquals(au3, au4);
+    
+    // differs from title1 only by name
+    TdbAu au5 = new TdbAu("Test AU different name", "pluginA");
+    log.critical("au1: " + au1);
+    log.critical("au5: " + au5);
+    au5.setParam("name1", "val1");
+    au5.setParam("name2", "val2");
+    assertNotEquals(au1, au5);
     
     // au1 and au2 differ only by a property
     au1.setPropertyByName("issn", "1234-5678");

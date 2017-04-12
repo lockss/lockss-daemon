@@ -184,7 +184,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
 
   /**
    * Determines two TdbsAus are equal. Equality is based on 
-   * equality of their Ids, plus the equality of their attributes
+   * equality of their Ids, plus name, attributes
    * and properties. The parent hierarchy is not checked.
    * 
    * @param o the other object
@@ -199,6 +199,7 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
     if (o instanceof TdbAu) {
       TdbAu other = (TdbAu)o;
       return tdbAuId.equals(other.getId()) &&
+             getName().equals(other.getName()) &&
              getAttrs().equals(other.getAttrs()) &&
              getProperties().equals(other.getProperties());
     }
@@ -207,12 +208,16 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
 
   /**
    * Return the hashcode.  The hashcode of this instance
-   * is the hashcode of its Id.
+   * is the hashcode of its Id, plus name, attributes
+   * and properties.
    * 
    * @returns hashcode of this instance
    */
   public int hashCode() {
-      return getId().hashCode();
+    int result = getId().hashCode();
+    result = 31 * result + getAttrs().hashCode();
+    result = 31 * result + getProperties().hashCode();
+    return result;
   }
 
   /**
