@@ -71,9 +71,9 @@ public class V3PollFactory extends BasePollFactory {
   public static final boolean DEFAULT_ENABLE_V3_POLLER = true;
 
   /** Curve expressing probability of accepting invitation based on number
-   * of safe replicas known.  E.g., <code>[10,100],[10,10] sets probability
-   * to 100% if 10 of fewer repairers, else 10%.  If not set, number of
-   * repairers is not considered.
+   * of safe replicas known.  E.g., <code>[10,100],[10,10]</code> sets
+   * probability to 100% if 10 or fewer repairers, else 10%.  If not set,
+   * number of repairers is not considered.
    * @see org.lockss.util.CompoundLinearSlope */
   public static final String PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE =
     PREFIX + "acceptProbabilitySafetyCurve";
