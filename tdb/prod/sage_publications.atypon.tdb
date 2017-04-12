@@ -3711,17 +3711,17 @@
 
         #param[base_url] = http://tbt.sagepub.com/
 
-        au < exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; tbtc >
-        au < exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; tbtc >
-        au < doNotProcess ; 2008 ; The Bible Translator Volume 59 ; 59 ; tbtc >
-        au < doNotProcess ; 2009 ; The Bible Translator Volume 60 ; 60 ; tbtc >
-        au < doNotProcess ; 2010 ; The Bible Translator Volume 61 ; 61 ; tbtc >
-        au < doNotProcess ; 2011 ; The Bible Translator Volume 62 ; 62 ; tbtc >
-        au < doNotProcess ; 2012 ; The Bible Translator Volume 63 ; 63 ; tbtc >
-        au < doNotProcess ; 2013 ; The Bible Translator Volume 64 ; 64 ; tbtc >
-        au < doNotProcess ; 2014 ; The Bible Translator Volume 65 ; 65 ; tbtc >
-        au < doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbtc >
-        au < exists ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtc >
+        au < exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; tbtd >
+        au < exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; tbtd >
+        au < doNotProcess ; 2008 ; The Bible Translator Volume 59 ; 59 ; tbtd >
+        au < doNotProcess ; 2009 ; The Bible Translator Volume 60 ; 60 ; tbtd >
+        au < doNotProcess ; 2010 ; The Bible Translator Volume 61 ; 61 ; tbtd >
+        au < doNotProcess ; 2011 ; The Bible Translator Volume 62 ; 62 ; tbtd >
+        au < doNotProcess ; 2012 ; The Bible Translator Volume 63 ; 63 ; tbtd >
+        au < doNotProcess ; 2013 ; The Bible Translator Volume 64 ; 64 ; tbtd >
+        au < doNotProcess ; 2014 ; The Bible Translator Volume 65 ; 65 ; tbtd >
+        au < doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbtd >
+        au < exists ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtd >
 
       }
 
@@ -31439,17 +31439,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; The Prison Journal Volume 82 ; 82 ; tpjc >
         au < exists ; 2003 ; The Prison Journal Volume 83 ; 83 ; tpjc >
         au < exists ; 2004 ; The Prison Journal Volume 84 ; 84 ; tpjc >
-        au < doNotProcess ; 2005 ; The Prison Journal Volume 85 ; 85 ; tpja >
+        au < doNotProcess ; 2005 ; The Prison Journal Volume 85 ; 85 ; tpjc >
         au < exists ; 2006 ; The Prison Journal Volume 86 ; 86 ; tpjc >
-        au < doNotProcess ; 2007 ; The Prison Journal Volume 87 ; 87 ; tpja >
-        au < doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; tpja >
-        au < doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 ; tpja >
-        au < doNotProcess ; 2010 ; The Prison Journal Volume 90 ; 90 ; tpja >
-        au < doNotProcess ; 2011 ; The Prison Journal Volume 91 ; 91 ; tpja >
-        au < doNotProcess ; 2012 ; The Prison Journal Volume 92 ; 92 ; tpja >
-        au < doNotProcess ; 2013 ; The Prison Journal Volume 93 ; 93 ; tpja >
-        au < doNotProcess ; 2014 ; The Prison Journal Volume 94 ; 94 ; tpja >
-        au < doNotProcess ; 2015 ; The Prison Journal Volume 95 ; 95 ; tpja >
+        au < doNotProcess ; 2007 ; The Prison Journal Volume 87 ; 87 ; tpjc >
+        au < doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; tpjc >
+        au < doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 ; tpjc >
+        au < doNotProcess ; 2010 ; The Prison Journal Volume 90 ; 90 ; tpjc >
+        au < doNotProcess ; 2011 ; The Prison Journal Volume 91 ; 91 ; tpjc >
+        au < doNotProcess ; 2012 ; The Prison Journal Volume 92 ; 92 ; tpjc >
+        au < doNotProcess ; 2013 ; The Prison Journal Volume 93 ; 93 ; tpjc >
+        au < doNotProcess ; 2014 ; The Prison Journal Volume 94 ; 94 ; tpjc >
+        au < doNotProcess ; 2015 ; The Prison Journal Volume 95 ; 95 ; tpjc >
         au < exists ; 2016 ; The Prison Journal Volume 96 ; 96 ; tpjc >
 
       }
@@ -36944,6 +36944,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Teaching of Psychology Volume 41 ; 41 ; topa >
         au < doNotProcess ; 2015 ; Teaching of Psychology Volume 42 ; 42 ; topa >
         au < manifest ; 2016 ; Teaching of Psychology Volume 43 ; 43 ; topa >
+        au < exists ; 2017 ; Teaching of Psychology Volume 44 ; 44 ; topa >
 
       }
 
@@ -37179,17 +37180,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2002 ; Textile Research Journal Volume 72 ; 72 ; trjc >
         au < manifest ; 2003 ; Textile Research Journal Volume 73 ; 73 ; trjc >
         au < manifest ; 2004 ; Textile Research Journal Volume 74 ; 74 ; trjc >
-        au < doNotProcess ; 2005 ; Textile Research Journal Volume 75 ; 75 ; trja >
-        au < doNotProcess ; 2006 ; Textile Research Journal Volume 76 ; 76 ; trja >
-        au < doNotProcess ; 2007 ; Textile Research Journal Volume 77 ; 77 ; trja >
-        au < doNotProcess ; 2008 ; Textile Research Journal Volume 78 ; 78 ; trja >
-        au < doNotProcess ; 2009 ; Textile Research Journal Volume 79 ; 79 ; trja >
-        au < doNotProcess ; 2010 ; Textile Research Journal Volume 80 ; 80 ; trja >
-        au < doNotProcess ; 2011 ; Textile Research Journal Volume 81 ; 81 ; trja >
-        au < doNotProcess ; 2012 ; Textile Research Journal Volume 82 ; 82 ; trja >
-        au < doNotProcess ; 2013 ; Textile Research Journal Volume 83 ; 83 ; trja >
-        au < doNotProcess ; 2014 ; Textile Research Journal Volume 84 ; 84 ; trja >
-        au < doNotProcess ; 2015 ; Textile Research Journal Volume 85 ; 85 ; trja >
+        au < doNotProcess ; 2005 ; Textile Research Journal Volume 75 ; 75 ; trjc >
+        au < doNotProcess ; 2006 ; Textile Research Journal Volume 76 ; 76 ; trjc >
+        au < doNotProcess ; 2007 ; Textile Research Journal Volume 77 ; 77 ; trjc >
+        au < doNotProcess ; 2008 ; Textile Research Journal Volume 78 ; 78 ; trjc >
+        au < doNotProcess ; 2009 ; Textile Research Journal Volume 79 ; 79 ; trjc >
+        au < doNotProcess ; 2010 ; Textile Research Journal Volume 80 ; 80 ; trjc >
+        au < doNotProcess ; 2011 ; Textile Research Journal Volume 81 ; 81 ; trjc >
+        au < doNotProcess ; 2012 ; Textile Research Journal Volume 82 ; 82 ; trjc >
+        au < doNotProcess ; 2013 ; Textile Research Journal Volume 83 ; 83 ; trjc >
+        au < doNotProcess ; 2014 ; Textile Research Journal Volume 84 ; 84 ; trjc >
+        au < doNotProcess ; 2015 ; Textile Research Journal Volume 85 ; 85 ; trjc >
         au < manifest ; 2016 ; Textile Research Journal Volume 86 ; 86 ; trjc >
 
       }
@@ -38560,17 +38561,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2002 ; Transcultural Psychiatry Volume 39 ; 39 ; tpsc >
         au < exists ; 2003 ; Transcultural Psychiatry Volume 40 ; 40 ; tpsc >
         au < exists ; 2004 ; Transcultural Psychiatry Volume 41 ; 41 ; tpsc >
-        au < doNotProcess ; 2005 ; Transcultural Psychiatry Volume 42 ; 42 ; tpsa >
-        au < doNotProcess ; 2006 ; Transcultural Psychiatry Volume 43 ; 43 ; tpsa >
-        au < doNotProcess ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 ; tpsa >
-        au < doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; tpsa >
+        au < doNotProcess ; 2005 ; Transcultural Psychiatry Volume 42 ; 42 ; tpsc >
+        au < doNotProcess ; 2006 ; Transcultural Psychiatry Volume 43 ; 43 ; tpsc >
+        au < doNotProcess ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 ; tpsc >
+        au < doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; tpsc >
         au < exists ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; tpsc >
-        au < doNotProcess ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; tpsa >
-        au < doNotProcess ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; tpsa >
-        au < doNotProcess ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; tpsa >
-        au < doNotProcess ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; tpsa >
-        au < doNotProcess ; 2014 ; Transcultural Psychiatry Volume 51 ; 51 ; tpsa >
-        au < doNotProcess ; 2015 ; Transcultural Psychiatry Volume 52 ; 52 ; tpsa >
+        au < doNotProcess ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; tpsc >
+        au < doNotProcess ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; tpsc >
+        au < doNotProcess ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; tpsc >
+        au < doNotProcess ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; tpsc >
+        au < doNotProcess ; 2014 ; Transcultural Psychiatry Volume 51 ; 51 ; tpsc >
+        au < doNotProcess ; 2015 ; Transcultural Psychiatry Volume 52 ; 52 ; tpsc >
         au < exists ; 2016 ; Transcultural Psychiatry Volume 53 ; 53 ; tpsc >
 
       }
@@ -39196,15 +39197,15 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2004 ; Vascular Medicine Volume 9 ; 9 ; vmjc >
         au < manifest ; 2005 ; Vascular Medicine Volume 10 ; 10 ; vmjc >
         au < manifest ; 2006 ; Vascular Medicine Volume 11 ; 11 ; vmjc >
-        au < doNotProcess ; 2007 ; Vascular Medicine Volume 12 ; 12 ; vmja >
-        au < doNotProcess ; 2008 ; Vascular Medicine Volume 13 ; 13 ; vmja >
+        au < doNotProcess ; 2007 ; Vascular Medicine Volume 12 ; 12 ; vmjc >
+        au < doNotProcess ; 2008 ; Vascular Medicine Volume 13 ; 13 ; vmjc >
         au < manifest ; 2009 ; Vascular Medicine Volume 14 ; 14 ; vmjc >
-        au < doNotProcess ; 2010 ; Vascular Medicine Volume 15 ; 15 ; vmja >
-        au < doNotProcess ; 2011 ; Vascular Medicine Volume 16 ; 16 ; vmja >
-        au < doNotProcess ; 2012 ; Vascular Medicine Volume 17 ; 17 ; vmja >
-        au < doNotProcess ; 2013 ; Vascular Medicine Volume 18 ; 18 ; vmja >
-        au < doNotProcess ; 2014 ; Vascular Medicine Volume 19 ; 19 ; vmja >
-        au < doNotProcess ; 2015 ; Vascular Medicine Volume 20 ; 20 ; vmja >
+        au < doNotProcess ; 2010 ; Vascular Medicine Volume 15 ; 15 ; vmjc >
+        au < doNotProcess ; 2011 ; Vascular Medicine Volume 16 ; 16 ; vmjc >
+        au < doNotProcess ; 2012 ; Vascular Medicine Volume 17 ; 17 ; vmjc >
+        au < doNotProcess ; 2013 ; Vascular Medicine Volume 18 ; 18 ; vmjc >
+        au < doNotProcess ; 2014 ; Vascular Medicine Volume 19 ; 19 ; vmjc >
+        au < doNotProcess ; 2015 ; Vascular Medicine Volume 20 ; 20 ; vmjc >
         au < manifest ; 2016 ; Vascular Medicine Volume 21 ; 21 ; vmjc >
 
       }
@@ -39778,11 +39779,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2009 ; Workplace Health & Safety Volume 57 ; 57 ; whsc >
       au < manifest ; 2010 ; Workplace Health & Safety Volume 58 ; 58 ; whsc >
       au < manifest ; 2011 ; Workplace Health & Safety Volume 59 ; 59 ; whsc >
-      au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; whsc >
-      au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; whsc >
-      au < doNotProcess ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; whsa >
-      au < doNotProcess ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; whsa >
-      au < exists ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; whsc >
+      au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; whsd >
+      au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; whsd >
+      au < doNotProcess ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; whsd >
+      au < doNotProcess ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; whsd >
+      au < exists ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; whsd >
 
   }
 
@@ -44189,6 +44190,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; South East Asia Research Volume 22 ; 22 ; sera >
     au < doNotProcess ; 2015 ; South East Asia Research Volume 23 ; 23 ; sera >
     au < manifest ; 2016 ; South East Asia Research Volume 24 ; 24 ; sera >
+    au < exists ; 2017 ; South East Asia Research Volume 25 ; 25 ; sera >
 
   }
 
