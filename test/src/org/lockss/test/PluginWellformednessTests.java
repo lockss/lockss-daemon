@@ -216,6 +216,16 @@ public final class PluginWellformednessTests extends LockssTestCase {
 		    plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER) +
 		    " should be " + pluginName);
       }
+      if (dplug.getPluginId().endsWith("SourcePlugin")) {
+	if (plugDef.containsKey(DefinablePlugin.KEY_PLUGIN_BULK_CONTENT)) {
+	  if (!plugDef.getBoolean(DefinablePlugin.KEY_PLUGIN_BULK_CONTENT)) {
+	    log.warning("Plugin name " + pluginName + " suggests it's a source plugin, but it has " + DefinablePlugin.KEY_PLUGIN_BULK_CONTENT + " explicitly set false");
+	  }
+	} else {
+	  fail("Plugin " + pluginName + " is treated as a source/bulk plugin becuase of its name - it should have " + DefinablePlugin.KEY_PLUGIN_BULK_CONTENT + " set to true");
+	}
+      }
+
       // assertEquals("Wrong plugin_id", pluginName,
       // 		   plugDef.getString(DefinablePlugin.KEY_PLUGIN_IDENTIFIER));
     }
