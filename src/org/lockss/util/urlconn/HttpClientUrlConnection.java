@@ -31,6 +31,7 @@ import java.io.*;
 import java.net.ConnectException;
 import java.net.CookieHandler;
 import java.net.CookieManager;
+import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.nio.charset.Charset;
@@ -571,11 +572,17 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	  requestConfigBuilder.setSocketTimeout(dataTimeout);
 	}
 
-	socketConfig = SocketConfig.custom()
-	    .setSoKeepAlive(connectionPool.getKeepAlive()).build();
+	boolean keepAlive = connectionPool.getKeepAlive();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "keepAlive = " + keepAlive);
+
+	socketConfig = SocketConfig.custom().setSoKeepAlive(keepAlive).build();
       } else {
 	socketConfig = SocketConfig.DEFAULT;
       }
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "socketConfig.isSoKeepAlive() = " + socketConfig.isSoKeepAlive());
 
       reqConfig = requestConfigBuilder.build();
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reqConfig = " + reqConfig);
@@ -631,15 +638,27 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3       // sending a response.
 //HC3       // Turn this into a non HttpClient-specific exception
     } catch (UnknownHostException uhe) {
-      log.error("Unknown host", uhe);
+      log.error("UnknownHostException caught", uhe);
       throw uhe;
     } catch (SocketTimeoutException ste) {
-      log.error("Read timed out", ste);
+      log.error("SocketTimeoutException caught", ste);
       throw ste;
     } catch (HttpHostConnectException hhce) {
-      ConnectException ce = new ConnectException("Connection refused");
-      ce.initCause(hhce);
-      throw ce;
+      log.error("HttpHostConnectException caught", hhce);
+      String message = hhce.getMessage();
+      if (message.endsWith("Connection refused")) {
+	ConnectException ce = new ConnectException("Connection refused");
+	ce.initCause(hhce);
+	throw ce;
+      }
+
+      ConnectionTimeoutException cte =
+	  new ConnectionTimeoutException("Host did not respond");
+      cte.initCause(hhce);
+      throw cte;
+    } catch (SocketException se) {
+      log.error("SocketException caught", se);
+      throw se;
     } catch (IOException e) {
       java.net.SocketException se =
 	new java.net.SocketException("Connection reset by peer");
