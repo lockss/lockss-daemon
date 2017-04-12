@@ -21,8 +21,8 @@
       param[base_url] = http://cimonline.ca/
       param[journal_id] = cim
 
-      au < ready ; exists ; 2007 ; Clinical & Investigative Medicine Volume 30 ; 30 ; 2007 ; >
-      au < ready ; exists ; 2008 ; Clinical & Investigative Medicine Volume 31 ; 31 ; 2008 ; >
+      au < crawling ; exists ; 2007 ; Clinical & Investigative Medicine Volume 30 ; 30 ; 2007 ; >
+      au < crawling ; exists ; 2008 ; Clinical & Investigative Medicine Volume 31 ; 31 ; 2008 ; >
       au < frozen ; exists ; 2009 ; Clinical & Investigative Medicine Volume 32 ; 32 ; 2009 ; >
       au < crawling ; exists ; 2010 ; Clinical & Investigative Medicine Volume 33 ; 33 ; 2010 ; > 
       au < crawling ; exists ; 2011 ; Clinical & Investigative Medicine Volume 34 ; 34 ; 2011 ; > 
