@@ -39,19 +39,19 @@
       issnl = 2056-9211
     >
       param[journal_id] = jbr
-      #journal moved to https in 2016.
+      #****journal moved to https in 2016.
       {
       param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
 
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
       au < crawling ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
+      au < expected ; exists ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
       }
 
       {
       param[base_url] = http://jbr.openlibrary.manchester.ac.uk/
     
       au < finished ; finished ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
-      au < expected ; exists ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
 
       }
 
