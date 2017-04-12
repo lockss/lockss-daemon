@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +39,7 @@ import java.net.HttpURLConnection;
 import java.util.*;
 import org.apache.commons.collections.SetUtils;
 import org.apache.commons.collections.map.LRUMap;
-import org.apache.commons.httpclient.util.*;
+//HC3 import org.apache.commons.httpclient.util.*;
 import org.apache.commons.logging.Log;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
@@ -913,7 +909,8 @@ public class ProxyHandler extends AbstractHttpHandler {
               if (HeaderUtil.isEarlier(ifModified, cuLast)) {
                 ifModified = cuLast;
               }
-            } catch (DateParseException e) {
+//H*C3             } catch (DateParseException e) {
+            } catch (RuntimeException e) {
               // preserve user's header if parse failure
             }
           }

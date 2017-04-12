@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,10 +30,15 @@ package org.lockss.util.urlconn;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.conn.HttpClientConnectionManager;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.params.*;
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.params.*;
 
 /**
  * Test class for org.lockss.util.urlconn.LockssUrlConnectionPool
@@ -57,70 +58,101 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
   public void tearDown() throws Exception {
   }
 
-  public void testCreateAndCacheHttpClient() {
+//HC3   public void testCreateAndCacheHttpClient() {
+  public void testCreateAndCacheHttpClientContext() {
     assertEquals(0, newClientCtr);
-    HttpClient client = pool.getHttpClient();
+//HC3     HttpClient client = pool.getHttpClient();
+    HttpClientContext clientContext = pool.getHttpClientContext();
     assertEquals(1, newClientCtr);
-    assertSame(client, pool.getHttpClient());
+//HC3     assertSame(client, pool.getHttpClient());
+    assertSame(clientContext, pool.getHttpClientContext());
     assertEquals(1, newClientCtr);
   }
 
-  private int getConnectionTimeout(HttpClient client) {
-    HttpParams params = client.getHttpConnectionManager().getParams();
-    return params.getIntParameter(HttpConnectionParams.CONNECTION_TIMEOUT, -1);
-  }
+//HC3   private int getConnectionTimeout(HttpClient client) {
+//HC3     HttpParams params = client.getHttpConnectionManager().getParams();
+//HC3     return params.getIntParameter(HttpConnectionParams.CONNECTION_TIMEOUT, -1);
+//HC3   }
 
-  private int getTimeout(HttpClient client) {
-    HttpParams params = client.getHttpConnectionManager().getParams();
-    return params.getIntParameter(HttpConnectionParams.SO_TIMEOUT, -1);
-  }
+//HC3   private int getTimeout(HttpClient client) {
+//HC3     HttpParams params = client.getHttpConnectionManager().getParams();
+//HC3     return params.getIntParameter(HttpConnectionParams.SO_TIMEOUT, -1);
+//HC3   }
 
   public void testTimeoutsAfter() {
     assertEquals(0, newClientCtr);
-    HttpClient client = pool.getHttpClient();
+//HC3     HttpClient client = pool.getHttpClient();
+    pool.getHttpClientContext();
     assertEquals(1, newClientCtr);
-    assertEquals(-1, getConnectionTimeout(client));
-    assertEquals(-1, getTimeout(client));
+//HC3     assertEquals(-1, getConnectionTimeout(client));
+    assertEquals(-1, pool.getConnectTimeout());
+//HC3     assertEquals(-1, getTimeout(client));
+    assertEquals(-1, pool.getDataTimeout());
     pool.setConnectTimeout(444);
-    assertEquals(444, getConnectionTimeout(client));
-    assertEquals(-1, getTimeout(client));
+//HC3     assertEquals(444, getConnectionTimeout(client));
+    assertEquals(444, pool.getConnectTimeout());
+//HC3     assertEquals(-1, getTimeout(client));
+    assertEquals(-1, pool.getDataTimeout());
     pool.setDataTimeout(666);
-    assertEquals(444, getConnectionTimeout(client));
-    assertEquals(666, getTimeout(client));
+//HC3     assertEquals(444, getConnectionTimeout(client));
+    assertEquals(444, pool.getConnectTimeout());
+//HC3     assertEquals(666, getTimeout(client));
+    assertEquals(666, pool.getDataTimeout());
   }
 
   public void testTimeoutsBefore() {
     pool.setConnectTimeout(123);
     pool.setDataTimeout(321);
     assertEquals(0, newClientCtr);
-    HttpClient client = pool.getHttpClient();
+//HC3     HttpClient client = pool.getHttpClient();
+    pool.getHttpClientContext();
     assertEquals(1, newClientCtr);
-    assertEquals(123, getConnectionTimeout(client));
-    assertEquals(321, getTimeout(client));
+//HC3     assertEquals(123, getConnectionTimeout(client));
+    assertEquals(123, pool.getConnectTimeout());
+//HC3     assertEquals(321, getTimeout(client));
+    assertEquals(321, pool.getDataTimeout());
     pool.setConnectTimeout(444);
-    assertEquals(444, getConnectionTimeout(client));
-    assertEquals(321, getTimeout(client));
+//HC3     assertEquals(444, getConnectionTimeout(client));
+    assertEquals(444, pool.getConnectTimeout());
+//HC3     assertEquals(321, getTimeout(client));
+    assertEquals(321, pool.getDataTimeout());
     pool.setDataTimeout(666);
-    assertEquals(444, getConnectionTimeout(client));
-    assertEquals(666, getTimeout(client));
+//HC3     assertEquals(444, getConnectionTimeout(client));
+    assertEquals(444, pool.getConnectTimeout());
+//HC3     assertEquals(666, getTimeout(client));
+    assertEquals(666, pool.getDataTimeout());
   }
 
   public void testStaleCheckedEnbled() {
-    assertTrue(pool.getConnectionManagerParams().isStaleCheckingEnabled());
+//HC3    assertTrue(pool.getConnectionManagerParams().isStaleCheckingEnabled());
+    // From https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/config/RequestConfig.html:
+    // The default setting for stale connection checking changed to false, and the feature was deprecated starting with version 4.4.
+    assertFalse(RequestConfig.DEFAULT.isStaleConnectionCheckEnabled());
   }
 
   public void testMultiThreaded() {
     pool.setMultiThreaded(8, 3);
-    HttpClient client = pool.getHttpClient();
-    HttpConnectionManager mgr = client.getHttpConnectionManager();
-    assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
-    MultiThreadedHttpConnectionManager mtm =
-      (MultiThreadedHttpConnectionManager)mgr;
-    assertEquals(8, mtm.getParams().getMaxTotalConnections());
-    assertEquals(3, mtm.getParams().getDefaultMaxConnectionsPerHost());
+//HC3     HttpClient client = pool.getHttpClient();
+//HC3     HttpConnectionManager mgr = client.getHttpConnectionManager();
+    HttpClientConnectionManager mgr = pool.getHttpClientConnectionManager();
+//HC3     assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
+    assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+//HC3     MultiThreadedHttpConnectionManager mtm =
+//HC3       (MultiThreadedHttpConnectionManager)mgr;
+    PoolingHttpClientConnectionManager mtm = null;
+    try {
+      mtm = (PoolingHttpClientConnectionManager)mgr;
+//HC3     assertEquals(8, mtm.getParams().getMaxTotalConnections());
+      assertEquals(8, mtm.getMaxTotal());
+//HC3     assertEquals(3, mtm.getParams().getDefaultMaxConnectionsPerHost());
+      assertEquals(3, mtm.getDefaultMaxPerRoute());
+    } finally {
+      mtm.close();
+    }
   }
 
-  class MyMockHttpClient extends HttpClient {
+//HC3   class MyMockHttpClient extends HttpClient {
+  class MyMockHttpClientContext extends HttpClientContext {
     int cto = -1;
     int dto = -1;
 
@@ -142,10 +174,12 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
 
 
   class MyMockLockssUrlConnectionPool extends LockssUrlConnectionPool {
-    protected HttpClient newHttpClient() {
+//HC3     protected HttpClient newHttpClient() {
+    protected HttpClientContext newHttpClientContext() {
       newClientCtr++;
 //       return super.newHttpClient();
-      return new MyMockHttpClient();
+//HC3       return new MyMockHttpClient();
+      return new MyMockHttpClientContext();
     }
   }
 }

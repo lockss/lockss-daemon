@@ -277,7 +277,8 @@ public class FuncLockssHttpClient extends LockssTestCase {
     // check for the standard default request headers
     assertHeaderLine("^Accept:", req);
     assertHeaderLine("^Connection:", req);
-    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+//HC3    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+    assertHeaderLine("^User-Agent: Apache-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
     conn.release();
@@ -330,7 +331,8 @@ public class FuncLockssHttpClient extends LockssTestCase {
     // check for the standard default request headers
     assertHeaderLine("^Accept:", req);
     assertHeaderLine("^Connection:", req);
-    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+//HC3    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+    assertHeaderLine("^User-Agent: Apache-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
     for (int i = 0; true; i++) {
@@ -609,7 +611,8 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertMatchesRE("^GET / HTTP/", req);
     assertNoHeaderLine("^Accept:", req);
     assertNoHeaderLine("^Connection:", req);
-    assertNoHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+//HC3    assertNoHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+    assertNoHeaderLine("^User-Agent: Apache-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
     conn.release();

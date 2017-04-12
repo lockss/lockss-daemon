@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,8 +27,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import java.util.Date;
+
 import org.apache.commons.collections.map.LRUMap;
-import org.apache.commons.httpclient.util.DateUtil;
+//HC3 import org.apache.commons.httpclient.util.DateUtil;
+import org.apache.http.client.utils.DateUtils;
 import org.mortbay.util.*;
 
 
@@ -173,20 +172,23 @@ public class HeaderUtil {
   /** Return the earlier of two date strings.  Non-null date is preferred
    * over null date. */
   public static String earlier(String datestr1, String datestr2)
-      throws org.apache.commons.httpclient.util.DateParseException {
+//HC3       throws org.apache.commons.httpclient.util.DateParseException {
+  {
     return dateMinMax(datestr1, datestr2, true);
   }
 
   /** Return the later of two date strings.  Non-null date is preferred
    * over null date. */
   public static String later(String datestr1, String datestr2)
-      throws org.apache.commons.httpclient.util.DateParseException {
+//HC3       throws org.apache.commons.httpclient.util.DateParseException {
+  {
     return dateMinMax(datestr1, datestr2, false);
   }
 
   private static String dateMinMax(String datestr1, String datestr2,
 				   boolean earlier)
-      throws org.apache.commons.httpclient.util.DateParseException {
+//HC3       throws org.apache.commons.httpclient.util.DateParseException {
+  {
     if (StringUtil.isNullString(datestr1)) datestr1 = null;
     if (StringUtil.isNullString(datestr2)) datestr2 = null;
     if (datestr1 == null) {
@@ -205,12 +207,27 @@ public class HeaderUtil {
   /** Return true iff the first date string is strictly earlier than the
    * second */
   public static boolean isEarlier(String datestr1, String datestr2)
-      throws org.apache.commons.httpclient.util.DateParseException {
+//HC3       throws org.apache.commons.httpclient.util.DateParseException {
+  {
     // common case, no conversion necessary
     if (datestr1.equalsIgnoreCase(datestr2)) return false;
-    long d1 = DateUtil.parseDate(datestr1).getTime();
-    long d2 = DateUtil.parseDate(datestr2).getTime();
-    return d1 < d2;
-  }
+//HC3     long d1 = DateUtil.parseDate(datestr1).getTime();
+    Date date = DateUtils.parseDate(datestr1);
 
+    if (date == null) {
+      throw new RuntimeException("Error parsing response Date: header: "
+	  + datestr1);
+    }
+
+    long d1 = date.getTime();
+//HC3     long d2 = DateUtil.parseDate(datestr2).getTime();
+    date = DateUtils.parseDate(datestr2);
+
+    if (date == null) {
+      throw new RuntimeException("Error parsing response Date: header: "
+	  + datestr1);
+    }
+
+    return d1 < date.getTime();
+  }
 }

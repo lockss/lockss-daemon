@@ -37,10 +37,13 @@ import java.net.*;
 import java.util.*;
 import java.security.*;
 import javax.net.ssl.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.params.HttpConnectionParams;
-import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 
+import org.apache.http.HttpHost;
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.params.HttpConnectionParams;
+//HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
+import org.apache.http.protocol.HttpContext;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -66,7 +69,8 @@ public class TestDispatchingSSLProtocolSocketFactory extends LockssTestCase {
   public void testHostFact() {
     String host = "props.lockss.org";
     int port = 8000;
-    SecureProtocolSocketFactory hostFact =
+//HC3     SecureProtocolSocketFactory hostFact =
+    LayeredConnectionSocketFactory hostFact =
       new AuthSSLProtocolSocketFactory(null, null);
     assertSame(easyFact, fact.getFactory(host, port));
     fact.setFactory(host, port, hostFact);
@@ -89,23 +93,28 @@ public class TestDispatchingSSLProtocolSocketFactory extends LockssTestCase {
     fact.setFactory(host1, port2, fact2);
     fact.setFactory(host2, port1, fact3);
     fact.setDefaultFactory(fact4);
-    fact.createSocket(host1, port1);
+//HC3     fact.createSocket(host1, port1);
+    fact.createLayeredSocket(null, host1, port1, null);
     assertEquals(ListUtil.list(host1), fact1.getHosts());
     assertEmpty(fact2.getHosts());
-    fact.createSocket(host1, port2);
+//HC3     fact.createSocket(host1, port2);
+    fact.createLayeredSocket(null, host1, port2, null);
     assertEquals(ListUtil.list(host1), fact1.getHosts());
     assertEquals(ListUtil.list(host1), fact2.getHosts());
-    fact.createSocket(host2, port1);
+//HC3     fact.createSocket(host2, port1);
+    fact.createLayeredSocket(null, host2, port1, null);
     assertEquals(ListUtil.list(host1), fact1.getHosts());
     assertEquals(ListUtil.list(host1), fact2.getHosts());
     assertEquals(ListUtil.list(host2), fact3.getHosts());
     assertEmpty(fact4.getHosts());
-    fact.createSocket(host2, port2);
+//HC3     fact.createSocket(host2, port2);
+    fact.createLayeredSocket(null, host2, port2, null);
     assertEquals(ListUtil.list(host2), fact4.getHosts());
   }
 
   static class MySecureProtocolSocketFactory
-    implements SecureProtocolSocketFactory {
+//HC3     implements SecureProtocolSocketFactory {
+    implements LayeredConnectionSocketFactory {
 
     List hosts = new ArrayList();
 
@@ -113,25 +122,48 @@ public class TestDispatchingSSLProtocolSocketFactory extends LockssTestCase {
       return hosts;
     }
 
-    public Socket createSocket(String host, int port,
-			       InetAddress clientHost, int clientPort) {
-      hosts.add(host);
-      return null;
-    }
-    public Socket createSocket(String host, int port,
-			       InetAddress localAddress, int localPort,
-			       HttpConnectionParams params) {
-      hosts.add(host);
+//HC3     public Socket createSocket(String host, int port,
+//HC3 			       InetAddress clientHost, int clientPort) {
+//HC3       hosts.add(host);
+//HC3       return null;
+//HC3     }
+//HC3     public Socket createSocket(String host, int port,
+//HC3 			       InetAddress localAddress, int localPort,
+//HC3 			       HttpConnectionParams params) {
+//HC3       hosts.add(host);
+//HC3       return null;
+//HC3     }
+//HC3 
+//HC3     public Socket createSocket(String host, int port) {
+//HC3       hosts.add(host);
+//HC3       return null;
+//HC3     }
+//HC3 
+//HC3     public Socket createSocket(Socket socket, String host,
+//HC3 			       int port, boolean autoClose) {
+//HC3       hosts.add(host);
+//HC3       return null;
+//HC3     }
+
+    @Override
+    public Socket connectSocket(int connectTimeout, Socket socket,
+	HttpHost httpHost, InetSocketAddress remoteAddress,
+	InetSocketAddress localAddress, HttpContext context)
+	    throws IOException {
+      hosts.add(httpHost.getHostName());
       return null;
     }
 
-    public Socket createSocket(String host, int port) {
-      hosts.add(host);
+    @Override
+    public Socket createSocket(HttpContext context) throws IOException {
+      hosts.add(((HttpHost)context.getAttribute(
+	  HttpClientUrlConnection.SO_HTTP_HOST)).getHostName());
       return null;
     }
 
-    public Socket createSocket(Socket socket, String host,
-			       int port, boolean autoClose) {
+    @Override
+    public Socket createLayeredSocket(Socket socket, String host, int port,
+	HttpContext context) throws IOException, UnknownHostException {
       hosts.add(host);
       return null;
     }

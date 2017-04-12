@@ -186,9 +186,8 @@ public class LockssUrlConnectionPool {
     return clientContext;
   }
 
-  /** Return (creating if necessary) an HttpClientContext */
-  // TODO: Avoid making it public.
-  public HttpClientConnectionManager getHttpClientConnectionManager(
+  /** Return (creating if necessary) an HttpClientConnectionManager */
+  protected HttpClientConnectionManager getHttpClientConnectionManager(
       int methodCode) {
     final String DEBUG_HEADER = "getHttpClientConnectionManager(): ";
     if (log.isDebug3())

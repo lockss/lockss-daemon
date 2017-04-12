@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +38,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.*;
-import org.apache.commons.httpclient.util.DateParseException;
+//HC3 import org.apache.commons.httpclient.util.DateParseException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -1098,7 +1094,8 @@ public class ServeContent extends LockssServlet {
           resp.setStatus(HttpResponse.__304_Not_Modified);
           return;
         }
-      } catch (org.apache.commons.httpclient.util.DateParseException e) {
+//HC3       } catch (org.apache.commons.httpclient.util.DateParseException e) {
+      } catch (RuntimeException e) {
         // ignore error, serve file
         log.warning("Handling ifModifiedSince: " + ifModifiedSince
                     + "or cuLastModified: " + cuLastModified + " throws ", e);
@@ -1442,7 +1439,8 @@ public class ServeContent extends LockssServlet {
       }
       try {
         ifModified = HeaderUtil.later(ifModified, cuLast);
-      } catch (DateParseException e) {
+//HC3       } catch (DateParseException e) {
+      } catch (RuntimeException e) {
         // preserve user's header if parse failure
         // ignore error, serve file
         log.warning("Handling ifModifiedSince: " + ifModified

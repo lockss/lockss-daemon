@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +33,9 @@ import java.text.*;
 import java.util.*;
 import java.util.zip.*;
 
+import org.apache.http.client.utils.DateUtils;
 import org.archive.util.*;
-import org.apache.commons.httpclient.util.DateUtil;
+//HC3 import org.apache.commons.httpclient.util.DateUtil;
 import org.apache.commons.io.output.CountingOutputStream;
 
 import org.lockss.app.*;
@@ -109,13 +106,22 @@ public class ZipExporter extends Exporter {
   }
   
   private long dateAsLong(String datestr) {
-    try {
-      return DateUtil.parseDate(datestr).getTime();
-    } catch (org.apache.commons.httpclient.util.DateParseException e) {
-      log.warning("Error parsing response header: " + datestr
-		  + ": " + e.getMessage());
-      return -1;
+    final String DEBUG_HEADER = "dateAsLong(): ";
+//HC3       return DateUtil.parseDate(datestr).getTime();
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "datestr = " + datestr);
+    long result = -1L;
+
+    Date date = DateUtils.parseDate(datestr);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
+
+    if (date != null) {
+      result = date.getTime();
+    } else {
+      log.error("Error parsing response Date: header: " + datestr);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   private void closeZip() throws IOException {

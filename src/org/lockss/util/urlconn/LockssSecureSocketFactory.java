@@ -1,8 +1,6 @@
 /*
- * $Id$
- *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,7 +28,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
-import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+//HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
 
 /** Encapsulates secure socket factory used by implementations of
  * LockssUrlConnection.
@@ -38,7 +37,8 @@ import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 public class LockssSecureSocketFactory {
   protected String serverAuthKeystoreName;
   protected String clientAuthKeystoreName;
-  protected SecureProtocolSocketFactory httpClientSecureSockFact;
+//HC3   protected SecureProtocolSocketFactory httpClientSecureSockFact;
+  protected LayeredConnectionSocketFactory httpClientSecureSockFact;
 
   public LockssSecureSocketFactory(String serverAuthKeystoreName,
 				   String clientAuthKeystoreName) {
@@ -46,9 +46,13 @@ public class LockssSecureSocketFactory {
     this.clientAuthKeystoreName = clientAuthKeystoreName;
   }
 
+//HC3   /** Return (creating if necessary) an HttpClient
+//HC3    * SecureProtocolSocketFactory */
+//HC3   public SecureProtocolSocketFactory getHttpClientSecureProtocolSocketFactory() {
   /** Return (creating if necessary) an HttpClient
-   * SecureProtocolSocketFactory */
-  public SecureProtocolSocketFactory getHttpClientSecureProtocolSocketFactory() {
+   * LayeredConnectionSocketFactory */
+  public LayeredConnectionSocketFactory
+  getHttpClientSecureProtocolSocketFactory() {
     if (httpClientSecureSockFact == null) {
       httpClientSecureSockFact =
 	newAuthSSLProtocolSocketFactory(serverAuthKeystoreName,

@@ -28,8 +28,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
+import java.net.ConnectException;
 import java.net.CookieHandler;
 import java.net.CookieManager;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
 import java.nio.charset.Charset;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
@@ -64,6 +67,7 @@ import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.config.SocketConfig;
 import org.apache.http.conn.HttpClientConnectionManager;
+import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -105,7 +109,7 @@ import org.lockss.util.*;
  * because HttpClient doesn't.
  */
 public class HttpClientUrlConnection extends BaseLockssUrlConnection {
-  private static Logger log = Logger.getLogger("HttpClientUrlConnection");
+  public static Logger log = Logger.getLogger("HttpClientUrlConnection");
 
   /* Accept header value.  Can be overridden by plugin. */
   static final String PARAM_ACCEPT_HEADER = PREFIX + "acceptHeader";
@@ -157,6 +161,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    * LockssDefaultProtocolSocketFactory */
   public static String SO_KEEPALIVE = "lockss_so_keepalive";
 
+  public static String SO_CONN_TIMEOUT = "lockss_so_conn_timeout";
+  public static String SO_AUTO_CLOSE = "lockss_so_auto_close";
+  public static String SO_HTTP_HOST = "lockss_http_so_host";
+
   // Set up a flexible SSL protocol factory.  It doesn't work to set the
   // Protocol in the HostConfiguration - HttpClient.executeMethod()
   // overwrites it.  So we must communicate the per-host policies to a
@@ -190,7 +198,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     new HashSet(DEFAULT_SINGLE_VALUED_HEADERS);
 
 //  private static SecureProtocolSocketFactory
-  private static LayeredConnectionSocketFactory
+  static LayeredConnectionSocketFactory
     getDefaultSocketFactory(ServerTrustLevel stl) {
     switch (stl) {
     case Trusted:
@@ -622,6 +630,16 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3       // Thrown by HttpClient if the server closes the connection before
 //HC3       // sending a response.
 //HC3       // Turn this into a non HttpClient-specific exception
+    } catch (UnknownHostException uhe) {
+      log.error("Unknown host", uhe);
+      throw uhe;
+    } catch (SocketTimeoutException ste) {
+      log.error("Read timed out", ste);
+      throw ste;
+    } catch (HttpHostConnectException hhce) {
+      ConnectException ce = new ConnectException("Connection refused");
+      ce.initCause(hhce);
+      throw ce;
     } catch (IOException e) {
       java.net.SocketException se =
 	new java.net.SocketException("Connection reset by peer");

@@ -484,7 +484,7 @@ Args:
     <pathelement path="${commons.codec.jar}" />
     <pathelement path="${commons.configuration.jar}" />
     <pathelement path="${commons.compress.jar}" />
-    <pathelement path="${commons.httpclient.jar}" />
+    <!-- pathelement path="${commons.httpclient.jar}" / -->
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
     <pathelement path="${commons.compress.jar}" />

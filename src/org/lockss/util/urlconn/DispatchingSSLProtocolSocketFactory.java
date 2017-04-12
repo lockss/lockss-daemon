@@ -1,11 +1,6 @@
 /*
- * $Id$
- */
-/*
 
-/*
-
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +32,12 @@ import java.io.IOException;
 import java.net.*;
 
 import org.apache.commons.collections.map.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.params.HttpConnectionParams;
-import org.apache.commons.httpclient.protocol.*;
-
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.params.HttpConnectionParams;
+//HC3 import org.apache.commons.httpclient.protocol.*;
+import org.apache.http.HttpHost;
+import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
+import org.apache.http.protocol.HttpContext;
 import org.lockss.util.*;
 
 /**
@@ -50,7 +47,8 @@ import org.lockss.util.*;
  * HttpClient's global factory bu HttpClientUrlConnection
  */
 public class DispatchingSSLProtocolSocketFactory
-  implements SecureProtocolSocketFactory {
+//HC3   implements SecureProtocolSocketFactory {
+  implements LayeredConnectionSocketFactory {
 
   public static DispatchingSSLProtocolSocketFactory INSTANCE =
     new DispatchingSSLProtocolSocketFactory();
@@ -59,7 +57,8 @@ public class DispatchingSSLProtocolSocketFactory
     Logger.getLogger("DispatchingSSLProtocolSocketFactory");
 
   MultiKeyMap hostmap = new MultiKeyMap(); // Maps host,port to factory
-  SecureProtocolSocketFactory defaultFact;
+//HC3   SecureProtocolSocketFactory defaultFact;
+  LayeredConnectionSocketFactory defaultFact;
 
   /**
    * Constructor for DispatchingSSLProtocolSocketFactory.
@@ -78,13 +77,15 @@ public class DispatchingSSLProtocolSocketFactory
    */
   public void setFactory(String host,
 			 int port,
-			 SecureProtocolSocketFactory fact) {
+//HC3 			       SecureProtocolSocketFactory fact) {
+			 LayeredConnectionSocketFactory fact) {
     log.debug3("setFactory(" + host + ", " + port + ", " + fact + ")");
     hostmap.put(host.toLowerCase(), port, fact);
   }
 
   /** Set the default SecureProtocolSocketFactory */
-  public void setDefaultFactory(SecureProtocolSocketFactory fact) {
+//HC3   public void setDefaultFactory(SecureProtocolSocketFactory fact) {
+  public void setDefaultFactory(LayeredConnectionSocketFactory fact) {
     defaultFact = fact;
   }
 
@@ -94,9 +95,12 @@ public class DispatchingSSLProtocolSocketFactory
    * @param port the port number
    * @return the SecureProtocolSocketFactory to use for this host,port
    */
-  SecureProtocolSocketFactory getFactory(String host, int port) {
-    SecureProtocolSocketFactory ret =
-      (SecureProtocolSocketFactory)hostmap.get(host.toLowerCase(), port);
+//HC3   SecureProtocolSocketFactory getFactory(String host, int port) {
+  LayeredConnectionSocketFactory getFactory(String host, int port) {
+//HC3     SecureProtocolSocketFactory ret =
+//HC3       (SecureProtocolSocketFactory)hostmap.get(host.toLowerCase(), port);
+      LayeredConnectionSocketFactory ret =
+        (LayeredConnectionSocketFactory)hostmap.get(host.toLowerCase(), port);
     if (ret != null) {
       log.debug2("getFactory(" + host + ", " + port + "): " + ret);
       return ret;
@@ -105,41 +109,66 @@ public class DispatchingSSLProtocolSocketFactory
     return defaultFact;
   }
 
-  public Socket createSocket(String host,
-			     int port,
-			     InetAddress clientHost,
-			     int clientPort)
-      throws IOException, UnknownHostException {
+//HC3   public Socket createSocket(String host,
+//HC3 			     int port,
+//HC3 			     InetAddress clientHost,
+//HC3 			     int clientPort)
+//HC3       throws IOException, UnknownHostException {
+//HC3
+//HC3     return getFactory(host, port).createSocket(host,
+//HC3 					       port,
+//HC3 					       clientHost,
+//HC3 					       clientPort);
+//HC3   }
 
-    return getFactory(host, port).createSocket(host,
-					       port,
-					       clientHost,
-					       clientPort);
+//HC3   public Socket createSocket(final String host,
+//HC3 			     final int port,
+//HC3 			     final InetAddress localAddress,
+//HC3 			     final int localPort,
+//HC3 			     final HttpConnectionParams params)
+//HC3       throws IOException, UnknownHostException, ConnectTimeoutException {
+//HC3     return getFactory(host, port).createSocket(host,
+//HC3 					             port,
+//HC3 					             localAddress,
+//HC3 					             localPort,
+//HC3 					             params);
+//HC3   }
+
+//HC3   public Socket createSocket(String host, int port)
+//HC3     throws IOException, UnknownHostException {
+//HC3     return getFactory(host, port).createSocket(host, port);
+//HC3   }
+
+//HC3   public Socket createSocket(Socket socket,
+//HC3 			     String host,
+//HC3 			     int port,
+//HC3 			     boolean autoClose)
+//HC3       throws IOException, UnknownHostException {
+//HC3     return getFactory(host, port).createSocket(socket, host, port, autoClose);
+//HC3   }
+
+  @Override
+  public Socket connectSocket(int connectTimeout, Socket socket,
+      HttpHost httpHost, InetSocketAddress remoteAddress,
+      InetSocketAddress localAddress, HttpContext context)
+      throws IOException {
+    return getFactory(httpHost.getHostName(), httpHost.getPort())
+	.connectSocket(connectTimeout, socket, httpHost, remoteAddress,
+	    localAddress, context);
   }
 
-  public Socket createSocket(final String host,
-			     final int port,
-			     final InetAddress localAddress,
-			     final int localPort,
-			     final HttpConnectionParams params)
-      throws IOException, UnknownHostException, ConnectTimeoutException {
-    return getFactory(host, port).createSocket(host,
-					       port,
-					       localAddress,
-					       localPort,
-					       params);
+  @Override
+  public Socket createSocket(HttpContext context) throws IOException {
+    HttpHost httpHost =
+	(HttpHost)context.getAttribute(HttpClientUrlConnection.SO_HTTP_HOST);
+    return getFactory(httpHost.getHostName(), httpHost.getPort())
+	.createSocket(context);
   }
 
-  public Socket createSocket(String host, int port)
-      throws IOException, UnknownHostException {
-    return getFactory(host, port).createSocket(host, port);
-  }
-
-  public Socket createSocket(Socket socket,
-			     String host,
-			     int port,
-			     boolean autoClose)
-      throws IOException, UnknownHostException {
-    return getFactory(host, port).createSocket(socket, host, port, autoClose);
+  @Override
+  public Socket createLayeredSocket(Socket socket, String host, int port,
+      HttpContext context) throws IOException, UnknownHostException {
+    return getFactory(host, port)
+	.createLayeredSocket(socket, host, port, context);
   }
 }

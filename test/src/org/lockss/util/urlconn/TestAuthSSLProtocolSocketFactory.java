@@ -37,8 +37,8 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 import javax.net.ssl.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 
 import org.lockss.daemon.*;
 import org.lockss.test.*;

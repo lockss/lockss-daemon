@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair;
 
-import org.apache.commons.httpclient.methods.StringRequestEntity;
-import org.apache.commons.httpclient.cookie.CookiePolicy;
+//HC3 import org.apache.commons.httpclient.methods.StringRequestEntity;
+//HC3 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.io.IOUtils;
 import org.jsoup.nodes.Node;
 import org.lockss.daemon.PluginException;

@@ -1,8 +1,6 @@
 /*
- * $Id: LockssDefaultProtocolSocketFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
- *
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,17 +31,20 @@ package org.lockss.util.urlconn;
 import java.io.*;
 import java.net.*;
 
-import org.apache.commons.httpclient.ConnectTimeoutException;
-import org.apache.commons.httpclient.params.HttpConnectionParams;
-import org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory;
-import org.lockss.util.*;
+//HC3 import org.apache.commons.httpclient.ConnectTimeoutException;
+//HC3 import org.apache.commons.httpclient.params.HttpConnectionParams;
+//HC3 import org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.protocol.HttpContext;
+//HC3 import org.lockss.util.*;
 
 /**
  * Extension of DefaultProtocolSocketFactory to set SO_KEEPALIVE, which
  * isn't handled by HttpConnection
  */
 public class LockssDefaultProtocolSocketFactory
-  extends DefaultProtocolSocketFactory {
+//HC3   extends DefaultProtocolSocketFactory {
+  extends PlainConnectionSocketFactory {
 
   /**
    * The factory singleton.
@@ -63,51 +64,69 @@ public class LockssDefaultProtocolSocketFactory
     super();
   }
 
-  /**
-   * This is the only factory method that handles params, thus the only one
-   * we need to override.
-   * @param host the host name/IP
-   * @param port the port on the host
-   * @param localAddress the local host name/IP to bind the socket to
-   * @param localPort the local port to bing the socket to
-   * @param params {@link HttpConnectionParams Http connection parameters}
-   * 
-   * @return Socket a new socket
-   * 
-   * @throws IOException if an I/O error occurs while creating the socket
-   * @throws UnknownHostException if the IP address of the host cannot be
-   * determined
-   * @throws ConnectTimeoutException if socket cannot be connected within
-   * the given time limit
-   */
-  public Socket createSocket(final String host, final int port,
-			     final InetAddress localAddress,
-			     final int localPort,
-			     final HttpConnectionParams params)
-      throws IOException, UnknownHostException, ConnectTimeoutException {
-    if (params == null) {
-      throw new IllegalArgumentException("Parameters may not be null");
+//HC3   /**
+//HC3    * This is the only factory method that handles params, thus the only one
+//HC3    * we need to override.
+//HC3    * @param host the host name/IP
+//HC3    * @param port the port on the host
+//HC3    * @param localAddress the local host name/IP to bind the socket to
+//HC3    * @param localPort the local port to bing the socket to
+//HC3    * @param params {@link HttpConnectionParams Http connection parameters}
+//HC3    * 
+//HC3    * @return Socket a new socket
+//HC3    * 
+//HC3    * @throws IOException if an I/O error occurs while creating the socket
+//HC3    * @throws UnknownHostException if the IP address of the host cannot be
+//HC3    * determined
+//HC3    * @throws ConnectTimeoutException if socket cannot be connected within
+//HC3    * the given time limit
+//HC3    */
+//HC3   public Socket createSocket(final String host, final int port,
+//HC3 			     final InetAddress localAddress,
+//HC3 			     final int localPort,
+//HC3 		             final HttpConnectionParams params)
+//HC3       throws IOException, UnknownHostException, ConnectTimeoutException {
+//HC3     if (params == null) {
+//HC3       throw new IllegalArgumentException("Parameters may not be null");
+//HC3     Socket sock = new Socket();
+//HC3     sock.bind(new InetSocketAddress(localAddress, localPort));
+//HC3     sock.setKeepAlive(params.getBooleanParameter(HttpClientUrlConnection.SO_KEEPALIVE,
+//HC3 	                                         false));
+//HC3     int timeout = params.getConnectionTimeout();
+//HC3     if (timeout == 0) {
+//HC3       sock.connect(new InetSocketAddress(host, port));
+//HC3     } else {
+//HC3       try {
+//HC3 	sock.connect(new InetSocketAddress(host, port), timeout);
+//HC3       } catch (SocketTimeoutException e) {
+//HC3         // Reproduce httpclient behavior - distinguish connect timeout from
+//HC3         // data timeout
+//HC3         String msg =
+//HC3           "The host did not accept the connection within timeout of " 
+//HC3           + timeout + " ms";
+//HC3         throw new ConnectTimeoutException(msg, e);
+//HC3       }
+//HC3     }
+//HC3     return sock;
+//HC3   }
+
+  @Override
+  public Socket createSocket(HttpContext context) throws IOException {
+    Socket socket = super.createSocket(context);
+ 
+    if (context == null) {
+      return socket;
     }
-    Socket sock = new Socket();
-    sock.bind(new InetSocketAddress(localAddress, localPort));
-    sock.setKeepAlive(params.getBooleanParameter(HttpClientUrlConnection.SO_KEEPALIVE,
-						 false));
-    int timeout = params.getConnectionTimeout();
-    if (timeout == 0) {
-      sock.connect(new InetSocketAddress(host, port));
-    } else {
-      try {
-	sock.connect(new InetSocketAddress(host, port), timeout);
-      } catch (SocketTimeoutException e) {
-	// Reproduce httpclient behavior - distinguish connect timeout from
-	// data timeout
-	String msg =
-	  "The host did not accept the connection within timeout of " 
-	  + timeout + " ms";
-	throw new ConnectTimeoutException(msg, e);
-      }
+
+    boolean keepAlive = false;
+    Boolean keepAliveAttr =
+	(Boolean)context.getAttribute(HttpClientUrlConnection.SO_KEEPALIVE);
+    if (keepAliveAttr != null) {
+      keepAlive = keepAliveAttr.booleanValue();
     }
-    return sock;
+
+    socket.setKeepAlive(keepAlive);
+    return socket;
   }
 
   /**

@@ -1,11 +1,6 @@
 /*
- * $Id$
- */
-/*
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,18 +55,22 @@ package org.lockss.util.urlconn;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.security.*;
 
-import org.apache.commons.httpclient.ConnectTimeoutException;
-import org.apache.commons.httpclient.HttpClientError;
-import org.apache.commons.httpclient.params.HttpConnectionParams;
-import org.apache.commons.httpclient.protocol.ControllerThreadSocketFactory;
-import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+//HC3 import org.apache.commons.httpclient.ConnectTimeoutException;
+//HC3 import org.apache.commons.httpclient.HttpClientError;
+//HC3 import org.apache.commons.httpclient.params.HttpConnectionParams;
+//HC3 import org.apache.commons.httpclient.protocol.ControllerThreadSocketFactory;
+//HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 import org.apache.commons.logging.Log; 
 import org.apache.commons.logging.LogFactory;
-//import org.apache.commons.httpclient.contrib.ssl.*;
+import org.apache.http.HttpHost;
+//HC3 import org.apache.commons.httpclient.contrib.ssl.*;
+import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
+import org.apache.http.protocol.HttpContext;
 
 import com.sun.net.ssl.SSLContext;
 import com.sun.net.ssl.TrustManager;
@@ -87,7 +86,8 @@ import org.lockss.daemon.*;
  */
 
 public class PermissiveSSLProtocolSocketFactory
-  implements SecureProtocolSocketFactory {
+//  implements SecureProtocolSocketFactory {
+  implements LayeredConnectionSocketFactory {
 
     public static PermissiveSSLProtocolSocketFactory INSTANCE =
       new PermissiveSSLProtocolSocketFactory();
@@ -122,7 +122,8 @@ public class PermissiveSSLProtocolSocketFactory
 	return context;
       } catch (Exception e) {
 	LOG.error(e.getMessage(), e);
-	throw new HttpClientError(e.toString());
+//HC3         throw new HttpClientError(e.toString());
+	throw new Error(e.toString());
       }
     }
 
@@ -133,92 +134,92 @@ public class PermissiveSSLProtocolSocketFactory
         return this.sslcontext;
     }
 
-    /**
-     * @see SecureProtocolSocketFactory#createSocket(java.lang.String,int,java.net.InetAddress,int)
-     */
-    public Socket createSocket(
-        String host,
-        int port,
-        InetAddress clientHost,
-        int clientPort)
-        throws IOException, UnknownHostException {
+//HC3     /**
+//HC3      * @see SecureProtocolSocketFactory#createSocket(java.lang.String,int,java.net.InetAddress,int)
+//HC3      */
+//HC3     public Socket createSocket(
+//HC3         String host,
+//HC3         int port,
+//HC3         InetAddress clientHost,
+//HC3         int clientPort)
+//HC3         throws IOException, UnknownHostException {
+//HC3 
+//HC3         return getSSLContext().getSocketFactory().createSocket(
+//HC3             host,
+//HC3             port,
+//HC3             clientHost,
+//HC3             clientPort
+//HC3         );
+//HC3     }
 
-        return getSSLContext().getSocketFactory().createSocket(
-            host,
-            port,
-            clientHost,
-            clientPort
-        );
-    }
+//HC3     /**
+//HC3      * Attempts to get a new socket connection to the given host within the given time limit.
+//HC3      * <p>
+//HC3      * To circumvent the limitations of older JREs that do not support connect timeout a 
+//HC3      * controller thread is executed. The controller thread attempts to create a new socket 
+//HC3      * within the given limit of time. If socket constructor does not return until the 
+//HC3      * timeout expires, the controller terminates and throws an {@link ConnectTimeoutException}
+//HC3      * </p>
+//HC3      *  
+//HC3      * @param host the host name/IP
+//HC3      * @param port the port on the host
+//HC3      * @param clientHost the local host name/IP to bind the socket to
+//HC3      * @param clientPort the port on the local machine
+//HC3      * @param params {@link HttpConnectionParams Http connection parameters}
+//HC3      * 
+//HC3      * @return Socket a new socket
+//HC3      * 
+//HC3      * @throws IOException if an I/O error occurs while creating the socket
+//HC3      * @throws UnknownHostException if the IP address of the host cannot be
+//HC3      * determined
+//HC3      */
+//HC3     public Socket createSocket(
+//HC3         final String host,
+//HC3         final int port,
+//HC3         final InetAddress localAddress,
+//HC3         final int localPort,
+//HC3         final HttpConnectionParams params
+//HC3     ) throws IOException, UnknownHostException, ConnectTimeoutException {
+//HC3         if (params == null) {
+//HC3             throw new IllegalArgumentException("Parameters may not be null");
+//HC3       }
+//HC3       int timeout = params.getConnectionTimeout();
+//HC3       if (timeout == 0) {
+//HC3 	return createSocket(host, port, localAddress, localPort);
+//HC3       } else {
+//HC3 	// To be eventually deprecated when migrated to Java 1.4 or above
+//HC3         return ControllerThreadSocketFactory.createSocket(
+//HC3                 this, host, port, localAddress, localPort, timeout);
+//HC3         }
+//HC3     }
 
-    /**
-     * Attempts to get a new socket connection to the given host within the given time limit.
-     * <p>
-     * To circumvent the limitations of older JREs that do not support connect timeout a 
-     * controller thread is executed. The controller thread attempts to create a new socket 
-     * within the given limit of time. If socket constructor does not return until the 
-     * timeout expires, the controller terminates and throws an {@link ConnectTimeoutException}
-     * </p>
-     *  
-     * @param host the host name/IP
-     * @param port the port on the host
-     * @param clientHost the local host name/IP to bind the socket to
-     * @param clientPort the port on the local machine
-     * @param params {@link HttpConnectionParams Http connection parameters}
-     * 
-     * @return Socket a new socket
-     * 
-     * @throws IOException if an I/O error occurs while creating the socket
-     * @throws UnknownHostException if the IP address of the host cannot be
-     * determined
-     */
-    public Socket createSocket(
-        final String host,
-        final int port,
-        final InetAddress localAddress,
-        final int localPort,
-        final HttpConnectionParams params
-    ) throws IOException, UnknownHostException, ConnectTimeoutException {
-        if (params == null) {
-            throw new IllegalArgumentException("Parameters may not be null");
-        }
-        int timeout = params.getConnectionTimeout();
-        if (timeout == 0) {
-            return createSocket(host, port, localAddress, localPort);
-        } else {
-            // To be eventually deprecated when migrated to Java 1.4 or above
-            return ControllerThreadSocketFactory.createSocket(
-                    this, host, port, localAddress, localPort, timeout);
-        }
-    }
+//HC3     /**
+//HC3      * @see SecureProtocolSocketFactory#createSocket(java.lang.String,int)
+//HC3      */
+//HC3     public Socket createSocket(String host, int port)
+//HC3         throws IOException, UnknownHostException {
+//HC3         return getSSLContext().getSocketFactory().createSocket(
+//HC3             host,
+//HC3             port
+//HC3         );
+//HC3     }
 
-    /**
-     * @see SecureProtocolSocketFactory#createSocket(java.lang.String,int)
-     */
-    public Socket createSocket(String host, int port)
-        throws IOException, UnknownHostException {
-        return getSSLContext().getSocketFactory().createSocket(
-            host,
-            port
-        );
-    }
-
-    /**
-     * @see SecureProtocolSocketFactory#createSocket(java.net.Socket,java.lang.String,int,boolean)
-     */
-    public Socket createSocket(
-        Socket socket,
-        String host,
-        int port,
-        boolean autoClose)
-        throws IOException, UnknownHostException {
-        return getSSLContext().getSocketFactory().createSocket(
-            socket,
-            host,
-            port,
-            autoClose
-        );
-    }
+//HC3     /**
+//HC3      * @see SecureProtocolSocketFactory#createSocket(java.net.Socket,java.lang.String,int,boolean)
+//HC3      */
+//HC3     public Socket createSocket(
+//HC3         Socket socket,
+//HC3         String host,
+//HC3         int port,
+//HC3         boolean autoClose)
+//HC3         throws IOException, UnknownHostException {
+//HC3         return getSSLContext().getSocketFactory().createSocket(
+//HC3             socket,
+//HC3             host,
+//HC3             port,
+//HC3             autoClose
+//HC3         );
+//HC3     }
 
     public boolean equals(Object obj) {
         return ((obj != null) && obj.getClass().equals(PermissiveSSLProtocolSocketFactory.class));
@@ -228,4 +229,25 @@ public class PermissiveSSLProtocolSocketFactory
         return PermissiveSSLProtocolSocketFactory.class.hashCode();
     }
 
+    @Override
+    public Socket connectSocket(int connectTimeout, Socket socket,
+	      HttpHost httpHost, InetSocketAddress remoteAddress,
+	      InetSocketAddress localAddress, HttpContext context)
+	      throws IOException {
+      // TODO: Implement it.
+      return null;
+    }
+
+    @Override
+    public Socket createSocket(HttpContext context) throws IOException {
+      // TODO: Implement it.
+      return null;
+    }
+
+    @Override
+    public Socket createLayeredSocket(Socket socket, String host, int port,
+	      HttpContext context) throws IOException, UnknownHostException {
+      // TODO: Implement it.
+      return null;
+    }
 }

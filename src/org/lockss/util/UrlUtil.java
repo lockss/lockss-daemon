@@ -1057,7 +1057,7 @@ public class UrlUtil {
 //      if (uri.isAbsoluteURI()) {
 	if (uri.isAbsolute()) {
           StringBuffer sb = new StringBuffer();
-          sb.append(uri.getScheme());
+          sb.append(uri.getScheme().toLowerCase());
           sb.append("://");
           sb.append(uri.getHost());
           sb.append(uri.getPath());
