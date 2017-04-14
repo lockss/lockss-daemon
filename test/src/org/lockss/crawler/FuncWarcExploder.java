@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,21 +31,16 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
-import org.lockss.crawler.FuncArcExploder2.MyCrawlRule;
-import org.lockss.crawler.FuncArcExploder2.MyExploderHelper;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
-import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
-import org.lockss.app.*;
 
 /**
  * Functional tests for the WARC file crawler.  It
@@ -290,7 +281,8 @@ public class FuncWarcExploder extends LockssTestCase {
     // SimulatedContentGenerator is changed, this number may have to
     // change.  NB - because the WARC files are compressed,  their
     // size varies randomly by a small amount.
-    long expected = 9394;
+//HC3    long expected = 9394;
+    long expected = 9230;
     long actual = AuUtil.getAuContentSize(sau, true);
     long error = expected - actual;
     log.debug("Expected " + expected + " actual " + actual);

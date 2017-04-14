@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,23 +29,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.*;
-
-import org.archive.io.*;
-import org.archive.io.arc.WriterPoolSettingsData;
 import org.archive.io.warc.*;
 import org.archive.uid.RecordIDGenerator;
 import org.archive.uid.UUIDGenerator;
 import org.archive.util.*;
 import org.archive.util.anvl.*;
 import static org.archive.io.warc.WARCConstants.*;
-
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
@@ -89,8 +79,8 @@ public class WarcExporter extends Exporter {
     props.put("created", ArchiveUtils.getLog14Date(TimeBase.nowMs()));
     props.put("description", au.getName());
     props.put("robots", "ignore");
-    props.put("http-header-user-agent", daemon.getUserAgent());
-    List metadata = new ArrayList<String>();
+    props.put("http-header-user-agent", LockssDaemon.getUserAgent());
+    List<String> metadata = new ArrayList<String>();
     for (Map.Entry ent : props.entrySet()) {
       String key = (String)ent.getKey();
       metadata.add((String)ent.getKey() + ": "
@@ -128,9 +118,16 @@ public class WarcExporter extends Exporter {
 
     long fetchTime =
       Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-    String timestamp = ArchiveUtils.getLog14Date(fetchTime);
+//HC3     String timestamp = ArchiveUtils.getLog14Date(fetchTime);
+    String timestamp = ArchiveUtils.get14DigitDate(fetchTime);
     InputStream contentIn = cu.getUnfilteredInputStream();
     try {
+      // Web Archive Commons now uses a properties file.
+      WARCRecordInfo wRInfo = new WARCRecordInfo();
+      wRInfo.setUrl(xlateFilename(url));
+      wRInfo.setCreate14DigitDate(timestamp);
+      wRInfo.setRecordId(new UUIDGenerator().getRecordID());
+      wRInfo.setExtraHeaders(headers);
       if (isResponse) {
 	String hdrString = getHttpResponseString(cu);
 	long size = contentSize + hdrString.length();
@@ -138,22 +135,36 @@ public class WarcExporter extends Exporter {
 	  new ReaderInputStream(new StringReader(hdrString));
 	InputStream concat = new SequenceInputStream(headerIn, contentIn);
 	try {
-	  ww.writeResponseRecord(xlateFilename(url),
-				 timestamp,
-				 HTTP_RESPONSE_MIMETYPE,
-				 new UUIDGenerator().getRecordID(),
-				 headers, concat, size);
+//HC3	  ww.writeResponseRecord(xlateFilename(url),
+//HC3				 timestamp,
+//HC3				 HTTP_RESPONSE_MIMETYPE,
+//HC3				 new UUIDGenerator().getRecordID(),
+//HC3				 headers, concat, size);
+	  wRInfo.setType(WARCRecordType.response);
+	  wRInfo.setMimetype(HTTP_RESPONSE_MIMETYPE);
+	  wRInfo.setContentStream(concat);
+	  wRInfo.setContentLength(size);
+	  ww.writeRecord(wRInfo);
 	} finally {
 	  IOUtil.safeClose(concat);
 	}
       } else {
 	String mimeType =
 	  HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
-	ww.writeResourceRecord(xlateFilename(url),
-			       timestamp,
-			       mimeType,
-			       headers, contentIn, contentSize);
+//HC3	ww.writeResourceRecord(xlateFilename(url),
+//HC3			       timestamp,
+//HC3			       mimeType,
+//HC3			       headers, contentIn, contentSize);
+	wRInfo.setType(WARCRecordType.resource);
+	wRInfo.setMimetype(mimeType);
+	wRInfo.setContentStream(contentIn);
+	wRInfo.setContentLength(contentSize);
+	ww.writeRecord(wRInfo);
       }
+      
+      // Web Archive Commons now requires this call to roll over to  the next
+      // file, if necessary.
+      ww.checkSize();
       File openFile = ww.getFile();
       if (openFile.toString().endsWith(WARCConstants.OCCUPIED_SUFFIX)) {
 	openFile =
@@ -164,9 +175,5 @@ public class WarcExporter extends Exporter {
     } finally {
       IOUtil.safeClose(contentIn);
     }
-
   }
-  
-
-
 }

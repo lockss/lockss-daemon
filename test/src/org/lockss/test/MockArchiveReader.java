@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +29,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.io.*;
-import java.math.*;
 import java.util.*;
 import org.archive.io.*;
-
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
@@ -272,8 +266,9 @@ public class MockArchiveReader extends ArchiveReader {
     protected java.lang.String getMimetype4Cdx(ArchiveRecordHeader h) {
       throw new UnsupportedOperationException("Not Implemented");
     }
-           
-    protected long getPosition() {
+
+//HC3     protected long getPosition() {
+    public long getPosition() {
       throw new UnsupportedOperationException("Not Implemented");
     }
            
@@ -325,7 +320,8 @@ public class MockArchiveReader extends ArchiveReader {
       throw new UnsupportedOperationException("Not Implemented");
     }
            
-    private void skip() {
+//HC3     private void skip() {
+    protected void skip() {
       throw new UnsupportedOperationException("Not Implemented");
     }
 
@@ -427,6 +423,11 @@ public class MockArchiveReader extends ArchiveReader {
       throw new UnsupportedOperationException("Not Implemented");
     }
     public String toString() {
+      throw new UnsupportedOperationException("Not Implemented");
+    }
+
+    @Override
+    public long getContentLength() {
       throw new UnsupportedOperationException("Not Implemented");
     }
   }

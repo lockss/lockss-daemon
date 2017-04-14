@@ -6,7 +6,7 @@
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -352,9 +352,11 @@ Args:
 <!--  <property name="bouncycastle.mail-old.jar" value="${lib}/bcmail-jdk14-132.jar" /> -->
 
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" />
+  <!-- property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" / -->
+  <property name="webarchive-commons.jar" value="${lib}/webarchive-commons-1.1.7-patch1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
-  <property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" />
+  <!-- property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" / -->
+  <property name="guava.jar" value="${lib}/guava-18.0.jar" />
 
   <!-- Database schema documentation. -->
   <property name="schemaSpy.jar" value="${lib}/schemaSpy_5.0.0.jar" />
@@ -539,9 +541,11 @@ Args:
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
     <!-- jars needed by the ArcCrawler -->
-    <pathelement path="${heritrix.jar}" />
+    <!-- pathelement path="${heritrix.jar}" / -->
+    <pathelement path="${webarchive-commons.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
-    <pathelement path="${heritrix-guava.jar}" />
+    <!-- pathelement path="${heritrix-guava.jar}" / -->
+    <pathelement path="${guava.jar}" />
     <pathelement path="${commons.beanutils.jar}" />
     <!-- Jars for I18N -->
     <pathelement path="${gettext.commons.jar}" />

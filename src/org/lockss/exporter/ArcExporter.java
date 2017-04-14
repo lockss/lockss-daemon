@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,13 +31,10 @@ package org.lockss.exporter;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import org.archive.io.*;
 import org.archive.io.arc.*;
-
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
@@ -114,6 +107,10 @@ public class ArcExporter extends Exporter {
 	aw.write(xlateFilename(url), cu.getContentType(),
 		 getHostIp(), fetchTime, cu.getContentSize(), contentIn);
       }
+      
+      // Web Archive Commons now requires this call to roll over to  the next
+      // file, if necessary.
+      aw.checkSize();
       File openFile = aw.getFile();
       if (openFile.toString().endsWith(ArchiveFileConstants.OCCUPIED_SUFFIX)) {
 	openFile =

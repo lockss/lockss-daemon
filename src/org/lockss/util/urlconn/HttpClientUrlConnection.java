@@ -29,8 +29,6 @@ package org.lockss.util.urlconn;
 
 import java.io.*;
 import java.net.ConnectException;
-import java.net.CookieHandler;
-import java.net.CookieManager;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
@@ -67,6 +65,7 @@ import org.apache.http.config.ConnectionConfig;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.config.SocketConfig;
+import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
@@ -282,11 +281,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
       if (diffs.contains(PARAM_HEADER_CHARSET)) {
 	String val = config.get(PARAM_HEADER_CHARSET, DEFAULT_HEADER_CHARSET);
-	log.debug3(DEBUG_HEADER + "val = " + val);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "val = " + val);
 
 //HC3         params.setParameter(HttpMethodParams.HTTP_ELEMENT_CHARSET, val);
 	charset = getCharset(val);
-	log.debug3(DEBUG_HEADER + "charset = " + charset);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "charset = " + charset);
       }
       ServerTrustLevel stl =
 	(ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
@@ -297,10 +296,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   static String getCookiePolicy(String policy) {
+    final String DEBUG_HEADER = "getCookiePolicy(): ";
     if (policy == null) {
       policy =
 	  CurrentConfig.getParam(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
     }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "policy = " + policy);
 
     if (Constants.COOKIE_POLICY_RFC_2109.equalsIgnoreCase(policy)) {
 //HC3       return CookiePolicy.RFC_2109;
@@ -407,8 +409,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     requestConfigBuilder = RequestConfig.custom();
 
-    if (log.isDebug3())
+    if (log.isDebug3()) {
       log.debug3(DEBUG_HEADER + "cookieStore = " + cookieStore);
+      log.debug3(DEBUG_HEADER + "cookiePolicy = " + cookiePolicy);
+    }
     if (cookieStore == null) {
       cookieStore = new BasicCookieStore();
       context.setCookieStore(cookieStore);
@@ -430,6 +434,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     } else {
       connManager = connectionPool.getHttpClientConnectionManager(methodCode);
     }
+
+    if(log.isDebug3()) log.debug3("connManager = "+ connManager);
   }
 
 //  private HttpMethod createMethod(int methodCode, String urlString)
@@ -618,31 +624,38 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3     } catch (ConnectTimeoutException /*| java.net.SocketTimeoutException*/ e) {
 //HC3       // Thrown by HttpClient if the connect timeout elapses before
 //HC3       // socket.connect() returns.
-    } catch (ClientProtocolException e) {
-      // Thrown by HttpClient4 for a variety of reasons.
-      // TODO: Do we want to rename it?
-      // Turn this into a non HttpClient-specific exception
-      throw new ConnectionTimeoutException("Host did not respond", e);
-      // XXX If socket.connect() returns an error because the underlying
-      // socket connect times out, the behavior is platform dependent.  On
-      // Linux, java.net.ConnectException is thrown (same as for connection
-      // refused, and distunguishable only by the exception message).  On
-      // OpenBSD, java.net.SocketException is thrown with a message like
-      // "errno: 22, error: Invalid argument for fd: 3".  In lieu of a way
-      // to reliably determine when to turn these into a
-      // ConnectionTimeoutException, the solution for now is to use
-      // java-level connect timeouts that are shorter than the underlying
-      // socket connect timeout.
+//HC3       // Turn this into a non HttpClient-specific exception
+//HC3       throw new ConnectionTimeoutException("Host did not respond", e);
+//HC3       // XXX If socket.connect() returns an error because the underlying
+//HC3       // socket connect times out, the behavior is platform dependent.  On
+//HC3       // Linux, java.net.ConnectException is thrown (same as for connection
+//HC3       // refused, and distunguishable only by the exception message).  On
+//HC3       // OpenBSD, java.net.SocketException is thrown with a message like
+//HC3       // "errno: 22, error: Invalid argument for fd: 3".  In lieu of a way
+//HC3       // to reliably determine when to turn these into a
+//HC3       // ConnectionTimeoutException, the solution for now is to use
+//HC3       // java-level connect timeouts that are shorter than the underlying
+//HC3       // socket connect timeout.
 //HC3     } catch (NoHttpResponseException e) {
 //HC3       // Thrown by HttpClient if the server closes the connection before
 //HC3       // sending a response.
 //HC3       // Turn this into a non HttpClient-specific exception
+//HC3       java.net.SocketException se =
+//HC3         new java.net.SocketException("Connection reset by peer");
+//HC3       se.initCause(e);
+//HC3       throw se;
     } catch (UnknownHostException uhe) {
       log.error("UnknownHostException caught", uhe);
       throw uhe;
     } catch (SocketTimeoutException ste) {
       log.error("SocketTimeoutException caught", ste);
       throw ste;
+    } catch (ConnectTimeoutException hcte) {
+      log.error("ConnectTimeoutException caught", hcte);
+      ConnectionTimeoutException cte =
+	  new ConnectionTimeoutException("Host did not respond");
+      cte.initCause(hcte);
+      throw cte;
     } catch (HttpHostConnectException hhce) {
       log.error("HttpHostConnectException caught", hhce);
       String message = hhce.getMessage();
@@ -659,10 +672,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     } catch (SocketException se) {
       log.error("SocketException caught", se);
       throw se;
-    } catch (IOException e) {
-      java.net.SocketException se =
-	new java.net.SocketException("Connection reset by peer");
-      se.initCause(e);
+    } catch (ClientProtocolException e) {
+      // Thrown by HttpClient4 for a variety of reasons.
+      // Turn this into a non HttpClient-specific exception
+      throw new ConnectionTimeoutException("Host did not respond", e);
+      // XXX If socket.connect() returns an error because the underlying
+      // socket connect times out, the behavior is platform dependent.  On
+      // Linux, java.net.ConnectException is thrown (same as for connection
+      // refused, and distunguishable only by the exception message).  On
+      // OpenBSD, java.net.SocketException is thrown with a message like
+      // "errno: 22, error: Invalid argument for fd: 3".  In lieu of a way
+      // to reliably determine when to turn these into a
+      // ConnectionTimeoutException, the solution for now is to use
+      // java-level connect timeouts that are shorter than the underlying
+      // socket connect timeout.
+    } catch (IOException ioe) {
+      log.error("IOException caught", ioe);
+      SocketException se = new SocketException("Connection reset by peer");
+      se.initCause(ioe);
       throw se;
     }
   }
@@ -1102,13 +1129,18 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    */
   public void release() {
     assertExecuted();
-    try {
-//HC3     method.releaseConnection();
-      client.close();
-      connectionPool.resetHttpClientConnectionManager();
-    } catch (IOException ioe) {
-      // Nothing to do.
-    }
+//HC3     try {
+//HC3       method.releaseConnection();
+//HC3     } catch (IOException ioe) {
+//HC3       // Nothing to do.
+//HC3     }
+    // TODO: Migrate to HttpClient 4.
+// TODO:     connectionPool.resetHttpClientConnectionManager();
+// TODO:     try {
+// TODO:       client.close();
+// TODO:     } catch (IOException ioe) {
+// TODO:       // Nothing to do.
+// TODO:     }
   }
 
   /**

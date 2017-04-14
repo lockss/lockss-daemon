@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,18 +32,14 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.atomic.*;
 import java.net.*;
-import java.text.*;
+import org.archive.format.warc.WARCConstants.WARCRecordType;
 import org.archive.io.*;
-import org.archive.io.arc.*;
 import org.archive.io.warc.*;
 import org.archive.uid.RecordIDGenerator;
 import org.archive.uid.UUIDGenerator;
 import org.archive.util.anvl.*;
 import org.archive.util.ArchiveUtils;
 import org.lockss.util.*;
-import org.lockss.test.*;
-import org.lockss.plugin.base.*;
-import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 
 /**
@@ -161,7 +153,8 @@ public class SimulatedWarcContentGenerator extends SimulatedContentGenerator {
         String uri = url.toString();
         String contentType = mimeType[mimeType.length-1];
         String hostIP = "127.0.0.1";
-        String timeStamp = ArchiveUtils.getLog14Date();
+//HC3         String timeStamp = ArchiveUtils.getLog14Date();
+        String timeStamp = ArchiveUtils.get14DigitDate();
         int recordLength = (int) f.length();
         InputStream is = new FileInputStream(f);
 
@@ -179,7 +172,18 @@ public class SimulatedWarcContentGenerator extends SimulatedContentGenerator {
         // ANVLRecord record = new ANVLRecord();
         // record.addLabelValue("foo", "bar");
         // TODO: implement request records.
-        aw.writeResourceRecord(uri, timeStamp, contentType, record, is, recordLength);
+//HC3         aw.writeResourceRecord(uri, timeStamp, contentType, record, is, recordLength);
+        // Web Archive Commons now uses a properties file.
+        WARCRecordInfo wRInfo = new WARCRecordInfo();
+        wRInfo.setType(WARCRecordType.resource);
+        wRInfo.setUrl(uri);
+        wRInfo.setCreate14DigitDate(timeStamp);
+        wRInfo.setMimetype(contentType);
+        wRInfo.setExtraHeaders(record);
+        wRInfo.setRecordId(new UUIDGenerator().getRecordID());
+        wRInfo.setContentStream(is);
+        wRInfo.setContentLength(recordLength);
+        aw.writeRecord(wRInfo);
         logger.debug3("Wrote to " + aw.getPosition() + ": Deleting " + fPath);
         if (kill) {
           f.delete();
