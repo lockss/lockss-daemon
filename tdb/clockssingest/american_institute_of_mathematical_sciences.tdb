@@ -18,7 +18,7 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < testing ; exists ; 2017 ; American Institute of Mathematical Sciences Source Content 2017 ; 2017 >
+    au < readySource ; crawling ; 2017 ; American Institute of Mathematical Sciences Source Content 2017 ; 2017 >
     
   }
 
