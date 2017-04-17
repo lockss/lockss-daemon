@@ -257,7 +257,7 @@
     au < finished ; finished ; 2014 ; Corpora Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Corpora Volume 10 ; 10 ; >
     au < crawling ; exists ; 2016 ; Corpora Volume 11 ; 11 ; >
-    au < expected ; exists ; 2017 ; Corpora Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2017 ; Corpora Volume 12 ; 12 ; >
 
   }
 
@@ -1468,14 +1468,14 @@
        au < exists ; exists ; 1997 ; Costume Volume 31 ; 31 ; >
        au < exists ; exists ; 1998 ; Costume Volume 32 ; 32 ; >
        au < exists ; exists ; 1999 ; Costume Volume 33 ; 33 ; >
-       au < exists ; exists ; 2000 ; Costume Volume 34 ; 34 ; >
-       au < exists ; exists ; 2001 ; Costume Volume 35 ; 35 ; >
-       au < exists ; exists ; 2002 ; Costume Volume 36 ; 36 ; >
-       au < exists ; exists ; 2003 ; Costume Volume 37 ; 37 ; >
-       au < exists ; exists ; 2004 ; Costume Volume 38 ; 38 ; >
-       au < exists ; exists ; 2005 ; Costume Volume 39 ; 39 ; >
-       au < exists ; exists ; 2006 ; Costume Volume 40 ; 40 ; >
-       au < exists ; exists ; 2007 ; Costume Volume 41 ; 41 ; >
+       au < manifest ; exists ; 2000 ; Costume Volume 34 ; 34 ; >
+       au < manifest ; exists ; 2001 ; Costume Volume 35 ; 35 ; >
+       au < manifest ; exists ; 2002 ; Costume Volume 36 ; 36 ; >
+       au < manifest ; exists ; 2003 ; Costume Volume 37 ; 37 ; >
+       au < manifest ; exists ; 2004 ; Costume Volume 38 ; 38 ; >
+       au < manifest ; exists ; 2005 ; Costume Volume 39 ; 39 ; >
+       au < manifest ; exists ; 2006 ; Costume Volume 40 ; 40 ; >
+       au < manifest ; exists ; 2007 ; Costume Volume 41 ; 41 ; >
        au < doNotProcess ; exists ; 2008 ; Costume Volume 42 ; 42 ; >
        au < doNotProcess ; exists ; 2009 ; Costume Volume 43 ; 43 ; >
        au < doNotProcess ; doNotProcess ; 2010 ; Costume Volume 44 ; 44 ; >
