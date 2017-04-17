@@ -70,6 +70,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Hydrology Research Volume 45 ; 45 ; >
     au < frozen ; exists ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
     au < crawling ; exists ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
+    au < expected ; exists ; 2017 ; Hydrology Research Volume 48 ; 48 ; >
 
   }
 
@@ -90,6 +91,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Water and Climate Change Volume 5 ; 5 ; >
     au < finished ; finished ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
+    au < expected ; exists ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; >
 
   }
 
@@ -370,6 +372,8 @@
     au < frozen ; exists ; 2015 ; Water Science and Technology Volume 72 ; 72 ; >
     au < crawling ; exists ; 2016 ; Water Science and Technology Volume 73 ; 73 ; >
     au < exists ; exists ; 2016 ; Water Science and Technology Volume 74 ; 74 ; >
+    au < exists ; exists ; 2017 ; Water Science and Technology Volume 75 ; 75 ; >
+    au < expected ; exists ; 2017 ; Water Science and Technology Volume 76 ; 76 ; >
 
   }
   

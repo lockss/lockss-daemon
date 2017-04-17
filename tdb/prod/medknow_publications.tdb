@@ -180,6 +180,7 @@
     au < released ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 >
     au < released ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 >
     au < released ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 >
+    au < expected ; 2017 ; Annals of Indian Academy of Neurology Volume 20 ; 2017 ; 20 >
 
   }
 
@@ -200,6 +201,7 @@
     au < released ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 >
     au < released ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 >
+    au < expected ; 2017 ; Annals of Maxillofacial Surgery Volume 7 ; 2017 ; 7 >
 
   }
 
@@ -4400,15 +4402,18 @@
   {
 
       title <
-        name = Asia Pacific Clinical and Translational Nervous System Diseases ;
+        name = Asia Pacific Journal of Clinical Trials: Nervous System Diseases ;
         issn = 2468-5577 ;
         eissn = 2455-7765
       >
-
-      param[journal_issn] = 2468-5577
+      #issns. journal changed name from Asia Pacific Clinical and Translational Nervous System Diseases
+      #issns. journal also changed issns, but is on the same website, same journal_issn, and same base_url.
+      #see http://www.sherpa.ac.uk/romeo/journals.php?la=en/&fIDnum=%7C&mode=advanced&id=89&letter=A
+      param[journal_issn] = 2542-3932
       param[base_url] = http://www.actnjournal.com/
 
-      au < manifest ; 2016 ; Asia Pacific Clinical and Translational Nervous System Diseases Volume 1 ; 2016 ; 1 >
+      au < exists ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 >
+      au < exists ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 >
 
   }
 
@@ -4602,15 +4607,18 @@
   {
 
       title <
-        name = Clinical and Translational Degenerative Diseases ;
+        name = Clinical Trials in Degenerative Diseases ;
         issn = 2468-5658 ;
         eissn = 2468-5666
       >
 
-      param[journal_issn] = 2468-5658
+      #changed names from Clinical and Translational Degenerative Diseases. Changed issns, but not url.
+      #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
+      param[journal_issn] = 2542-3975
       param[base_url] = http://www.clinicaltdd.com/
 
-      au < manifest ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 >
+      au < exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 >
+      au < exists ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 >
 
   }
 
@@ -4618,15 +4626,18 @@
   {
 
       title <
-        name = Clinical and Translational Orthopedics ;
+        name = Clinical Trials in Orthopedic Disorders ;
         issn = 2468-5674 ;
         eissn = 2468-564X
       >
 
-      param[journal_issn] = 2468-5674
+      #changed name from Clinical and Translational Orthopedics and changed issn, but not url.
+      #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
+      param[journal_issn] = 2542-4157
       param[base_url] = http://www.clinicalto.com/
 
-      au < manifest ; 2016 ; Clinical and Translational Orthopedics Volume 1 ; 2016 ; 1 >
+      au < exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 >
+      au < exists ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 >
 
   }
 
