@@ -293,7 +293,7 @@
       issnl = 2475-7799
     >
     
-      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      plugin = org.lockss.plugin.bepress.BerkeleyElectronicPressPlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = burgonsociety
