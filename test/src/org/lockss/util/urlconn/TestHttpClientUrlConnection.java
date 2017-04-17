@@ -56,8 +56,8 @@ import org.lockss.util.*;
 //HC3 import org.apache.commons.httpclient.cookie.CookiePolicy;
 //HC3 import org.apache.commons.httpclient.params.*;
 //HC3 import org.apache.commons.httpclient.protocol.*;
-import org.lockss.util.urlconn.HttpClientUrlConnection.LockssGetMethod;
-import org.lockss.util.urlconn.HttpClientUrlConnection.LockssGetMethodImpl;
+//HC3 import org.lockss.util.urlconn.HttpClientUrlConnection.LockssGetMethod;
+//HC3 import org.lockss.util.urlconn.HttpClientUrlConnection.LockssGetMethodImpl;
 
 /**
  * Test class for org.lockss.util.urlconn.HttpClientUrlConnection
@@ -66,7 +66,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHttpClientUrlConnection");
 
   MyMockHttpClient client;
-  MyMockGetMethod method;
+//HC3   MyMockGetMethod method;
   MyMockHttpClientUrlConnection conn;
   int newClientCtr;
   String urlString = "http://Test.Url/";
@@ -77,7 +77,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     super.setUp();
     client = new MyMockHttpClient();
     conn = newConn(urlString);
-    method = conn.getMockMethod();
+//HC3     method = conn.getMockMethod();
     context = HttpClientContext.create();
   }
 
@@ -147,18 +147,23 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(urlString, conn.getURL());
 //HC3     conn.setUserAgent("irving");
     conn.setRequestProperty("user-agent", "irving");
-    hdr = method.getRequestHeader("user-agent");
+//HC3     hdr = method.getRequestHeader("user-agent");
+    hdr = conn.getRequestHeader("user-agent");
     assertEquals("irving", hdr.getValue());
 
     conn.setRequestProperty("p2", "v7");
-    hdr = method.getRequestHeader("p2");
+//HC3     hdr = method.getRequestHeader("p2");
+    hdr = conn.getRequestHeader("p2");
     assertEquals("v7", hdr.getValue());
 
-    assertTrue(method.getFollowRedirects());
+//HC3     assertTrue(method.getFollowRedirects());
+    assertTrue(conn.getFollowRedirects());
     conn.setFollowRedirects(false);
-    assertFalse(method.getFollowRedirects());
+//HC3     assertFalse(method.getFollowRedirects());
+    assertFalse(conn.getFollowRedirects());
     conn.setFollowRedirects(true);
-    assertTrue(method.getFollowRedirects());
+//HC3     assertTrue(method.getFollowRedirects());
+    assertTrue(conn.getFollowRedirects());
   }
 
   public void testStateNotEx() throws Exception {
@@ -218,9 +223,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(201, conn.getResponseCode());
     Header hdr;
-    hdr = method.getRequestHeader("connection");
+//HC3     hdr = method.getRequestHeader("connection");
+    hdr = conn.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
+//HC3     hdr = method.getRequestHeader("accept");
+    hdr = conn.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 
   }
@@ -293,7 +300,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     // DispatchingSSLProtocolSocketFactory, so must use a unique host for
     // this test
     conn = newConn("http://another.host/");
-    method = conn.getMockMethod();
+//HC3     method = conn.getMockMethod();
 
     LockssSecureSocketFactory secureSockFact =
       new LockssSecureSocketFactory(null, null);
@@ -309,7 +316,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
-    method.setResponseStream(sis);
+//HC3     method.setResponseStream(sis);
+    conn.setResponseStream(sis);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -327,7 +335,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
-    method.setResponseStream(sis);
+//HC3     method.setResponseStream(sis);
+    conn.setResponseStream(sis);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -345,8 +354,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(200);
     String test = "this is some text to be compressssssed";
     InputStream sis = new GZIPpedInputStream(test);
-    method.setResponseStream(sis);
-    method.setResponseHeader("content-encoding", "gzip");
+//HC3     method.setResponseStream(sis);
+//HC3     method.setResponseHeader("content-encoding", "gzip");
+    conn.setResponseStream(sis);
+    conn.setResponseHeader("content-encoding", "gzip");
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -360,7 +371,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   public void testResponseStreamNull() throws Exception {
     client.setRes(200);
-    method.setResponseStream(null);
+//HC3     method.setResponseStream(null);
+    conn.setResponseStream(null);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -371,7 +383,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
-    method.setResponseStream(sis);
+//HC3     method.setResponseStream(sis);
+    conn.setResponseStream(sis);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -385,7 +398,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
-    method.setResponseStream(sis);
+//HC3     method.setResponseStream(sis);
+    conn.setResponseStream(sis);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
@@ -400,9 +414,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(202, conn.getResponseCode());
     Header hdr;
-    hdr = method.getRequestHeader("connection");
+//HC3     hdr = method.getRequestHeader("connection");
+    hdr = conn.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
+//HC3     hdr = method.getRequestHeader("accept");
+    hdr = conn.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 //HC3     HostConfiguration hc = client.getHostConfiguration();
     RequestConfig reqConfig = conn.getRequestConfig();
@@ -418,9 +434,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(202, conn.getResponseCode());
-    hdr = method.getRequestHeader("connection");
+//HC3     hdr = method.getRequestHeader("connection");
+    hdr = conn.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
+//HC3    hdr = method.getRequestHeader("accept");
+    hdr = conn.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 //HC3     hc = client.getHostConfiguration();
     reqConfig = conn.getRequestConfig();
@@ -434,11 +452,16 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void testResponse() throws Exception {
     String datestr = "Mon, 23 Feb 2004 00:28:11 GMT";
     client.setRes(201);
-    method.setResponseHeader("Date", datestr);
-    method.setResponseHeader("Content-Encoding", "text/html");
-    method.setResponseHeader("Content-type", "type1");
-    method.setStatusText("stext");
-    method.setResponseContentLength(3333);
+//HC3     method.setResponseHeader("Date", datestr);
+//HC3     method.setResponseHeader("Content-Encoding", "text/html");
+//HC3     method.setResponseHeader("Content-type", "type1");
+//HC3     method.setStatusText("stext");
+//HC3     method.setResponseContentLength(3333);
+    conn.setResponseHeader("Date", datestr);
+    conn.setResponseHeader("Content-Encoding", "text/html");
+    conn.setResponseHeader("Content-type", "type1");
+    conn.setStatusText("stext");
+    conn.setResponseContentLength(3333);
 
     conn.execute();
     assertEquals(201, conn.getResponseCode());
@@ -465,9 +488,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(202, conn.getResponseCode());
     Header hdr;
-    hdr = method.getRequestHeader("connection");
+//HC3     hdr = method.getRequestHeader("connection");
+    hdr = conn.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
+//HC3     hdr = method.getRequestHeader("accept");
+    hdr = conn.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 //HC3     HostConfiguration hc = client.getHostConfiguration();
 //HC3     assertEquals(InetAddress.getByName(local), hc.getLocalAddress());
@@ -479,9 +504,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(202, conn.getResponseCode());
-    hdr = method.getRequestHeader("connection");
+//HC3     hdr = method.getRequestHeader("connection");
+    hdr = conn.getRequestHeader("connection");
     assertEquals("keep-alive", hdr.getValue());
-    hdr = method.getRequestHeader("accept");
+//HC3     hdr = method.getRequestHeader("accept");
+    hdr = conn.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 //HC3     hc = client.getHostConfiguration();
 //HC3     assertEquals(null, hc.getLocalAddress());
@@ -522,13 +549,15 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
 //HC3     public int executeMethod(HttpMethod method)
 //HC3       throws IOException, HttpException  {
-    public int executeMethod() throws IOException {
+    public int executeMethod(int methodCode) throws IOException {
       if (executeException != null) {
 	throw executeException;
       }
       int mres = -1;
-      if (method instanceof MyMockGetMethod) {
-	mres = ((MyMockGetMethod)method).getRes();
+//HC3       if (method instanceof MyMockGetMethod) {
+//HC3 	mres = ((MyMockGetMethod)method).getRes();
+      if (methodCode == LockssUrlConnection.METHOD_GET) {
+	mres = res1;
       }
       return (mres < 0) ? res1 : mres;
     }
@@ -554,179 +583,169 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
 //HC3   class MyMockGetMethod extends MockHttpMethod
 //HC3     implements HttpClientUrlConnection.LockssGetMethod {
-  class MyMockGetMethod extends LockssGetMethodImpl implements LockssGetMethod {
-
-    String url;
-    HttpClientUrlConnection.LockssGetMethodImpl getMeth;
-    Properties respProps = new Properties();
-    String statusText;
-    InputStream respStream;
-    int contentLength = -1;
-    boolean released = false;
-    int res = -1;
+//HC3 
+//HC3     String url;
+//HC3     HttpClientUrlConnection.LockssGetMethodImpl getMeth;
+//HC3     Properties respProps = new Properties();
+//HC3     String statusText;
+//HC3     InputStream respStream;
+//HC3     int contentLength = -1;
+//HC3     boolean released = false;
+//HC3     int res = -1;
 //HC3     HttpMethodParams params = new HttpMethodParams();
-    HttpResponse response;
-
-    public MyMockGetMethod(String url) {
+//HC3     HttpResponse response;
+//HC3 
+//HC3     public MyMockGetMethod(String url) {
 //HC3       super();
-      super(url);
-      this.url = url;
-      getMeth = new HttpClientUrlConnection.LockssGetMethodImpl(url);
-    }
-
+//HC3       this.url = url;
+//HC3       getMeth = new HttpClientUrlConnection.LockssGetMethodImpl(url);
+//HC3     }
+//HC3 
 //HC3     public HttpMethodParams getParams() {
 //HC3       return params;
 //HC3     }
-
+//HC3
 //HC3     public void setParams(final HttpMethodParams params) {
 //HC3       this.params = params;
 //HC3     }
-
-    // this doesn't set the url in getMeth, but that isn't used for
-    // anything in testing
-    void setUrl(String url) {
-      this.url = url;
-    }
-
-    String getUrl() {
-      return url;
-    }
-
-    void setRes(int res) {
-      this.res = res;
-    }
-    int getRes() {
-      return res;
-    }
-
-    public String getPath() {
-      try {
+//HC3 
+//HC3     // this doesn't set the url in getMeth, but that isn't used for
+//HC3     // anything in testing
+//HC3     void setUrl(String url) {
+//HC3       this.url = url;
+//HC3     }
+//HC3 
+//HC3     String getUrl() {
+//HC3       return url;
+//HC3     }
+//HC3 
+//HC3     void setRes(int res) {
+//HC3       this.res = res;
+//HC3     }
+//HC3     int getRes() {
+//HC3       return res;
+//HC3     }
+//HC3 
+//HC3     public String getPath() {
+//HC3       try {
 //HC3 	org.apache.commons.httpclient.URI uri =
 //HC3 	  new org.apache.commons.httpclient.URI(url, false);
 //HC3 	return uri.getPath();
-	return new URL(url).getPath();
 //HC3       } catch(URIException e) {
 //HC3 	throw new RuntimeException("getPath couldn't create URI: " + e);
-      } catch(MalformedURLException e) {
-	throw new RuntimeException("getPath couldn't create URL: " + e);
-      }
-    }
-
-    public String getQueryString() {
-      try {
+//HC3     }
+//HC3 
+//HC3     public String getQueryString() {
+//HC3       try {
 //HC3 	org.apache.commons.httpclient.URI uri =
 //HC3 	  new org.apache.commons.httpclient.URI(url, false);
 //HC3 	return uri.getQuery();
-	return new URL(url).getQuery();
 //HC3       } catch(URIException e) {
 //HC3 	throw new RuntimeException("getQueryString couldn't create URI: " + e);
-      } catch(MalformedURLException e) {
-	throw new RuntimeException("getQueryString couldn't create URL: " + e);
-      }
-    }
-
+//HC3     }
+//HC3 
 //HC3     public void setRequestHeader(String headerName, String headerValue) {
 //HC3       getMeth.setRequestHeader(headerName, headerValue);
 //HC3     }
-
+//HC3 
 //HC3     public void setRequestHeader(Header header) {
 //HC3       getMeth.setRequestHeader(header.getName(), header.getValue());
 //HC3     }
-
-    public Header getRequestHeader(String headerName) {
+//HC3 
+//HC3     public Header getRequestHeader(String headerName) {
 //HC3       return getMeth.getRequestHeader(headerName);
-      return conn.getRequestBuilder().getFirstHeader(headerName);
-    }
-
+//HC3     }
+//HC3 
 //HC3     public void setFollowRedirects(boolean followRedirects) {
 //HC3       getMeth.setFollowRedirects(followRedirects);
 //HC3     }
-
-    public boolean getFollowRedirects() {
+//HC3 
+//HC3     public boolean getFollowRedirects() {
 //HC3       return getMeth.getFollowRedirects();
-      return conn.getFollowRedirects();
-    }
-
-    public String getStatusText() {
-      return statusText;
-    }
-
-    public void releaseConnection() {
-      released = true;
-    }
-
-    void setStatusText(String s) {
-      statusText = s;
-    }
-    void setResponseHeader(String name, String value) {
-      respProps.put(name.toLowerCase(), value);
-    }
-    public Header getResponseHeader(String headerName) {
-      String val = (String)respProps.get(headerName.toLowerCase());
-      log.debug(headerName + ": " + val);
-      if (val != null) {
+//HC3     }
+//HC3 
+//HC3     public String getStatusText() {
+//HC3       return statusText;
+//HC3     }
+//HC3 
+//HC3     public void releaseConnection() {
+//HC3       released = true;
+//HC3     }
+//HC3 
+//HC3     void setStatusText(String s) {
+//HC3       statusText = s;
+//HC3     }
+//HC3     void setResponseHeader(String name, String value) {
+//HC3       respProps.put(name.toLowerCase(), value);
+//HC3     }
+//HC3     public Header getResponseHeader(String headerName) {
+//HC3       String val = (String)respProps.get(headerName.toLowerCase());
+//HC3       log.debug(headerName + ": " + val);
+//HC3       if (val != null) {
 //HC3 	return new Header(headerName, val);
-	return new BasicHeader(headerName, val);
-      }
-      return null;
-    }
-    public Header[] getRequestHeaders() {
-      Header[] res = new Header[respProps.size()];
-      int ix = 0;
-      for (Iterator iter = respProps.keySet().iterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
+//HC3       }
+//HC3       return null;
+//HC3     }
+//HC3     public Header[] getRequestHeaders() {
+//HC3       Header[] res = new Header[respProps.size()];
+//HC3       int ix = 0;
+//HC3       for (Iterator iter = respProps.keySet().iterator(); iter.hasNext(); ) {
+//HC3 	String key = (String)iter.next();
 //HC3 	res[ix++] = new Header(key, (String)respProps.get(key));
-	res[ix++] = new BasicHeader(key, (String)respProps.get(key));
-      }
-      return res;
-    }
-
-    public Header[] getResponseHeaders() {
-      List keys = new ArrayList(respProps.keySet());
-      int n = keys.size();
-      Header[] hdrs = new Header[n];
-      for (int ix = 0; ix < n; ix++) {
-	String key = (String)keys.get(ix);
+//HC3       }
+//HC3       return res;
+//HC3     }
+//HC3 
+//HC3     public Header[] getResponseHeaders() {
+//HC3       List keys = new ArrayList(respProps.keySet());
+//HC3       int n = keys.size();
+//HC3       Header[] hdrs = new Header[n];
+//HC3       for (int ix = 0; ix < n; ix++) {
+//HC3 	String key = (String)keys.get(ix);
 //HC3 	hdrs[ix] = new Header(key, respProps.getProperty(key));
-	hdrs[ix] = new BasicHeader(key, respProps.getProperty(key));
-      }
-      return hdrs;
-    }
-
-    public long getResponseContentLength() {
-      return contentLength;
-    }
-    void setResponseContentLength(int l) {
-      contentLength = l;
-    }
+//HC3       }
+//HC3       return hdrs;
+//HC3     }
+//HC3 
+//HC3     public long getResponseContentLength() {
+//HC3       return contentLength;
+//HC3     }
+//HC3     void setResponseContentLength(int l) {
+//HC3       contentLength = l;
+//HC3     }
 //HC3     /** @deprecated */
 //HC3     public HostConfiguration getHostConfiguration() {
 //HC3       return new HostConfiguration();
 //HC3     }
-
-    public InputStream getResponseBodyAsStream() throws IOException {
-      return respStream;
-    }
-
-    public void setResponseStream(InputStream strm) {
-      respStream = strm;
-    }
-
-    public HttpResponse executeRequest(HttpUriRequest httpUriRequest,
-	HttpClientContext context) throws ClientProtocolException, IOException {
-      int mres = client.executeMethod();
-      mres = (mres < 0) ? 0 : mres;
-
-      StatusLine statusLine =
-	  new BasicStatusLine(HttpVersion.HTTP_1_1, mres, statusText);
-      response = new BasicHttpResponse(statusLine);
-      return response;
-    }
-  }
+//HC3 
+//HC3     public InputStream getResponseBodyAsStream() throws IOException {
+//HC3       return respStream;
+//HC3     }
+//HC3 
+//HC3     public void setResponseStream(InputStream strm) {
+//HC3       respStream = strm;
+//HC3     }
+//HC3 
+//HC3     public HttpResponse executeRequest(HttpUriRequest httpUriRequest,
+//HC3 	HttpClientContext context) throws ClientProtocolException, IOException {
+//HC3       int mres = client.executeMethod();
+//HC3       mres = (mres < 0) ? 0 : mres;
+//HC3 
+//HC3       StatusLine statusLine =
+//HC3 	  new BasicStatusLine(HttpVersion.HTTP_1_1, mres, statusText);
+//HC3       response = new BasicHttpResponse(statusLine);
+//HC3       return response;
+//HC3     }
+//HC3   }
 
   class MyMockHttpClientUrlConnection extends HttpClientUrlConnection {
-    MyMockGetMethod mockMeth;
-    List methods = new ArrayList();
+//HC3     MyMockGetMethod mockMeth;
+//HC3     List methods = new ArrayList();
+    Properties respProps = new Properties();
+    String statusText;
+    int contentLength = -1;
+    InputStream respStream;
+    HttpResponse response;
 
 //HC3     MyMockHttpClientUrlConnection(String urlString, MyMockHttpClient client)
     MyMockHttpClientUrlConnection(String urlString,
@@ -734,30 +753,28 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 	throws IOException {
 //HC3       super(urlString, client);
       super(urlString, clientContext);
-      mockMeth = new MyMockGetMethod(urlString);
+//HC3       mockMeth = new MyMockGetMethod(urlString);
     }
 //HC3     protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
-    protected LockssGetMethodImpl newLockssGetMethodImpl(String urlString) {
-      if (methods == null || methods.isEmpty()) {
-	mockMeth = new MyMockGetMethod(urlString);
-      } else {
-	mockMeth = (MyMockGetMethod)methods.remove(0);
-      }
-      mockMeth.setUrl(urlString);
-      return mockMeth;
-    }
-    MyMockGetMethod getMockMethod() {
-      return mockMeth;
-    }
+//HC3       if (methods == null || methods.isEmpty()) {
+//HC3 	mockMeth = new MyMockGetMethod(urlString);
+//HC3       } else {
+//HC3 	mockMeth = (MyMockGetMethod)methods.remove(0);
+//HC3       }
+//HC3       mockMeth.setUrl(urlString);
+//HC3       return mockMeth;
+//HC3     }
+//HC3     MyMockGetMethod getMockMethod() {
+//HC3       return mockMeth;
+//HC3     }
 
 //HC3     boolean getFollowRedirects() {
 //HC3       return mockMeth.getFollowRedirects();
 //HC3     }
 
 //HC3     void addMethod(HttpMethod nextMethod) {
-    void addMethod(HttpClientUrlConnection.LockssGetMethod nextMethod) {
-      methods.add(nextMethod);
-    }
+//HC3       methods.add(nextMethod);
+//HC3     }
 
     // TODO: Migrate to HttpClient 4.
 //HC3     ProtocolSocketFactory getDefaultSocketFactory() {
@@ -774,12 +791,20 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     @Override
     protected HttpResponse executeRequest(HttpUriRequest httpUriRequest,
   	HttpClientContext context) throws ClientProtocolException, IOException {
-      return mockMeth.executeRequest(httpUriRequest, context);
+//HC3       return mockMeth.executeRequest(httpUriRequest, context);
+      int mres = client.executeMethod(getMethodCode());
+      mres = (mres < 0) ? 0 : mres;
+
+      StatusLine statusLine =
+      new BasicStatusLine(HttpVersion.HTTP_1_1, mres, statusText);
+      response = new BasicHttpResponse(statusLine);
+      return response;
     }
 
     @Override
     public InputStream getResponseBodyAsStream() throws IOException {
-      return mockMeth.getResponseBodyAsStream();
+//HC3       return mockMeth.getResponseBodyAsStream();
+      return respStream;
     }
 
     @Override
@@ -790,26 +815,69 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     @Override
     public String getResponseMessage() {
       assertExecuted();
-      return mockMeth.response.getStatusLine().getReasonPhrase();
+//HC3       return mockMeth.response.getStatusLine().getReasonPhrase();
+      return response.getStatusLine().getReasonPhrase();
     }
 
     @Override
     public String getResponseHeaderValue(String name) {
       assertExecuted();
-      Header header = mockMeth.getResponseHeader(name);
+//HC3       Header header = mockMeth.getResponseHeader(name);
+      Header header = getResponseHeader(name);
       return (header != null) ? header.getValue() : null;
     }
 
     @Override
     public long getResponseContentLength() {
       assertExecuted();
-      return mockMeth.getResponseContentLength();
+//HC3       return mockMeth.getResponseContentLength();
+      return contentLength;
     }
 
     @Override
     protected Header[] getResponseHeaders() {
-      return mockMeth.getResponseHeaders();
+//HC3       return mockMeth.getResponseHeaders();
+      List<String> keys = (List<String>)new ArrayList(respProps.keySet());
+      int n = keys.size();
+      Header[] hdrs = new Header[n];
+
+      for (int ix = 0; ix < n; ix++) {
+	String key = (String)keys.get(ix);
+	hdrs[ix] = new BasicHeader(key, respProps.getProperty(key));
+      }
+
+      return hdrs;
+    }
+  
+    public Header getRequestHeader(String headerName) {
+      return getRequestBuilder().getFirstHeader(headerName);
+    }
+ 
+    public void setResponseStream(InputStream strm) {
+      respStream = strm;
+    }
+
+    void setResponseHeader(String name, String value) {
+      respProps.put(name.toLowerCase(), value);
+    }
+
+    void setStatusText(String s) {
+      statusText = s;
+    }
+
+    void setResponseContentLength(int l) {
+      contentLength = l;
+    }
+
+    public Header getResponseHeader(String headerName) {
+      String val = (String)respProps.get(headerName.toLowerCase());
+      log.debug(headerName + ": " + val);
+
+      if (val != null) {
+	return new BasicHeader(headerName, val);
+      }
+
+      return null;
     }
   }
-
 }

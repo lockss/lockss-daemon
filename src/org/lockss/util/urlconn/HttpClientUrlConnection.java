@@ -99,8 +99,8 @@ import org.apache.http.impl.cookie.BasicClientCookie;
 //HC3 import org.apache.commons.httpclient.util.*;
 //HC3 import org.apache.commons.httpclient.util.DateParseException;
 //HC3 import org.apache.commons.httpclient.util.DateUtil;
-import org.apache.commons.collections4.map.*;
-
+import org.apache.commons.collections4.MultiValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
@@ -235,7 +235,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "acceptHeader = " + acceptHeader);
 
-      Set<String> set = new HashSet();
+      Set<String> set = new HashSet<String>();
       for (String s : (List<String>)config.getList(PARAM_SINGLE_VALUED_HEADERS,
 						   DEFAULT_SINGLE_VALUED_HEADERS)) {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "s = " + s);
@@ -349,7 +349,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3   private HttpClient client;
   private CloseableHttpClient client;
 //HC3   private HttpMethod method;
-  private LockssMethodImpl method;
+//HC3   private LockssMethodImpl method;
   private int methodCode;
   private LockssUrlConnectionPool connectionPool;
   private int responseCode;
@@ -392,7 +392,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
 //HC3     this.client = client != null ? client : new HttpClient();
     this.methodCode = methodCode;
-    method = createMethod(methodCode, urlString);
+//HC3     method = createMethod(methodCode, urlString);
     this.connectionPool = connectionPool;
 
     reqBuilder = RequestBuilder.get().setUri(urlString);
@@ -438,37 +438,36 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if(log.isDebug3()) log.debug3("connManager = "+ connManager);
   }
 
-//  private HttpMethod createMethod(int methodCode, String urlString)
-  private LockssMethodImpl createMethod(int methodCode, String urlString)
-      throws IOException {
-    String u_str = urlString;
-    try {
-      if(log.isDebug2())
-        log.debug2("in:"+ urlString + " isAscii:"+ StringUtil.isAscii(urlString));
-      if(!StringUtil.isAscii(urlString)) {
-        if(log.isDebug2()) log.debug2("in:" + u_str);
-        u_str = UrlUtil.encodeUri(urlString, Constants.ENCODING_UTF_8);
-        if(log.isDebug2()) log.debug2("out:" + u_str);
-      }
-      switch (methodCode) {
-        case LockssUrlConnection.METHOD_GET:
-          return new LockssGetMethodImpl(u_str);
-        case LockssUrlConnection.METHOD_PROXY:
-          return new LockssProxyGetMethodImpl(u_str);
-        case LockssUrlConnection.METHOD_POST:
-          return new LockssPostMethodImpl(u_str);
-      }
-      throw new RuntimeException("Unknown url method: " + methodCode);
-    } catch (IllegalArgumentException e) {
-      // HttpMethodBase throws IllegalArgumentException on illegal URLs
-      // Canonicalize that to Java's MalformedURLException
-      throw newMalformedURLException(u_str, e);
-    } catch (IllegalStateException e) {
-      // HttpMethodBase throws IllegalArgumentException on illegal protocols
-      // Canonicalize that to Java's MalformedURLException
-      throw newMalformedURLException(urlString, e);
-    }
-  }
+//HC3   private HttpMethod createMethod(int methodCode, String urlString)
+//HC3       throws IOException {
+//HC3     String u_str = urlString;
+//HC3     try {
+//HC3       if(log.isDebug2())
+//HC3         log.debug2("in:"+ urlString + " isAscii:"+ StringUtil.isAscii(urlString));
+//HC3       if(!StringUtil.isAscii(urlString)) {
+//HC3         if(log.isDebug2()) log.debug2("in:" + u_str);
+//HC3         u_str = UrlUtil.encodeUri(urlString, Constants.ENCODING_UTF_8);
+//HC3         if(log.isDebug2()) log.debug2("out:" + u_str);
+//HC3       }
+//HC3       switch (methodCode) {
+//HC3         case LockssUrlConnection.METHOD_GET:
+//HC3           return new LockssGetMethodImpl(u_str);
+//HC3         case LockssUrlConnection.METHOD_PROXY:
+//HC3           return new LockssProxyGetMethodImpl(u_str);
+//HC3         case LockssUrlConnection.METHOD_POST:
+//HC3           return new LockssPostMethodImpl(u_str);
+//HC3       }
+//HC3       throw new RuntimeException("Unknown url method: " + methodCode);
+//HC3     } catch (IllegalArgumentException e) {
+//HC3       // HttpMethodBase throws IllegalArgumentException on illegal URLs
+//HC3       // Canonicalize that to Java's MalformedURLException
+//HC3       throw newMalformedURLException(u_str, e);
+//HC3     } catch (IllegalStateException e) {
+//HC3       // HttpMethodBase throws IllegalArgumentException on illegal protocols
+//HC3       // Canonicalize that to Java's MalformedURLException
+//HC3       throw newMalformedURLException(urlString, e);
+//HC3     }
+//HC3   }
 
   java.net.MalformedURLException newMalformedURLException(String msg,
         Throwable cause) {
@@ -487,9 +486,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3   }
 
 //HC3   protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
-  protected LockssGetMethodImpl newLockssGetMethodImpl(String urlString) {
-      return new LockssGetMethodImpl(urlString);
-  }
+//HC3       return new LockssGetMethodImpl(urlString);
+//HC3   }
 
   public boolean isHttp() {
     return true;
@@ -538,13 +536,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       isAuthenticatedServer = sockFact.requiresServerAuth();
     }
     isExecuted = true;
-    responseCode = executeOnce(method);
+//HC3     responseCode = executeOnce(method);
+    responseCode = executeOnce();
   }
 
 //HC3   private int executeOnce(HttpMethod method) throws IOException {
-  private int executeOnce(LockssMethodImpl method) throws IOException {
+  private int executeOnce() throws IOException {
     final String DEBUG_HEADER = "executeOnce(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "method = " + method);
 
     try {
       ConnectionConfig connConfig = connectionConfigBuilder.build();
@@ -859,7 +857,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3     if(method instanceof PostMethod) {
 //HC3       ((PostMethod) method).setRequestEntity(entity);
 //HC3     }
-    if(method instanceof LockssPostMethodImpl) {
+    if (methodCode == LockssUrlConnection.METHOD_POST) {
       reqBuilder.setEntity(entity);
     }
   }
@@ -1058,7 +1056,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public void storeResponseHeaderInto(Properties props, String prefix) {
     // store all header properties (this is the only way to iterate)
     // first collect all values for any repeated headers.
-    MultiValueMap<String,String> map = new MultiValueMap<String,String>();
+    MultiValuedMap<String,String> map =
+	new ArrayListValuedHashMap<String,String>();
 //HC3     Header[] headers = method.getResponseHeaders();
     Header[] headers = getResponseHeaders();
     for (int ix = 0; ix < headers.length; ix++) {
@@ -1081,7 +1080,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     // now combine multiple values into comma-separated string
     for (String key : map.keySet()) {
-      Collection<String> val = map.getCollection(key);
+      Collection<String> val = map.get(key);
       props.setProperty(key, ((val.size() > 1)
 			      ? StringUtil.separatedString(val, ",")
 			      : CollectionUtil.getAnElement(val)));
@@ -1185,67 +1184,67 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return charset;
   }
 
-  /** Common interface for our methods makes testing more convenient */
+  int getMethodCode() {
+    return methodCode;
+  }
+
+//HC3   /** Common interface for our methods makes testing more convenient */
 //HC3   interface LockssGetMethod extends HttpMethod {
-  interface LockssGetMethod {
 //HC3     long getResponseContentLength();
-  }
-
-  static abstract class LockssMethodImpl implements LockssGetMethod {
-    public LockssMethodImpl(String url) {
-    }
-  }
-
-  /** Same as GET method
-   */
-  static class LockssGetMethodImpl
+//HC3   }
+//HC3 
+//HC3   static abstract class LockssMethodImpl implements LockssGetMethod {
+//HC3     public LockssMethodImpl(String url) {
+//HC3     }
+//HC3   }
+//HC3 
+//HC3   /** Same as GET method
+//HC3    */
+//HC3   static class LockssGetMethodImpl
 //HC3       extends GetMethod implements LockssGetMethod {
-  extends LockssMethodImpl {
-
-    public LockssGetMethodImpl(String url) {
-      super(url);
-      // Establish our retry handler
-//       setMethodRetryHandler(getRetryHandler());
-    }
-  }
-
-  /**
-   * same as the POST method
-   */
+//HC3 
+//HC3     public LockssGetMethodImpl(String url) {
+//HC3       super(url);
+//HC3       // Establish our retry handler
+//HC3 //       setMethodRetryHandler(getRetryHandler());
+//HC3     }
+//HC3   }
+//HC3 
+//HC3   /**
+//HC3    * same as the POST method
+//HC3    */
 //HC3 interface LockssPostMethod extends HttpMethod {
-  interface LockssPostMethod {
 //HC3     long getResponseContentLength();
-  }
-
-  static class LockssPostMethodImpl
+//HC3   }
+//HC3
+//HC3  static class LockssPostMethodImpl
 //HC3     extends PostMethod implements LockssPostMethod {
-  extends LockssMethodImpl implements LockssPostMethod {
-
-    public LockssPostMethodImpl(String url) {
-      super(url);
-    }
-  }
-
-  /** Extends GET method to not add any default request headers
-   */
-  static class LockssProxyGetMethodImpl extends LockssGetMethodImpl {
-
-    public LockssProxyGetMethodImpl(String url) {
-      super(url);
-    }
-
+//HC3 
+//HC3     public LockssPostMethodImpl(String url) {
+//HC3       super(url);
+//HC3     }
+//HC3   }
+//HC3 
+//HC3   /** Extends GET method to not add any default request headers
+//HC3    */
+//HC3   static class LockssProxyGetMethodImpl extends LockssGetMethodImpl {
+//HC3 
+//HC3     public LockssProxyGetMethodImpl(String url) {
+//HC3       super(url);
+//HC3     }
+//HC3 
 //HC3     protected void addRequestHeaders(HttpState state, HttpConnection conn)
 //HC3 	throws IOException, HttpException {
 //HC3       // Suppress this - don't want any automatic header processing when
 //HC3       // acting as a proxy.
 //HC3     }
-  }
+//HC3   }
 
   /** Extension of ConnectionTimeoutException used as a wrapper for the
    * HttpClient-specific HttpConnection.ConnectionTimeoutException. */
   public class ConnectionTimeoutException
     extends LockssUrlConnection.ConnectionTimeoutException {
-
+    private static final long serialVersionUID = 388683456452307495L;
     public ConnectionTimeoutException(String msg) {
       super(msg);
     }
