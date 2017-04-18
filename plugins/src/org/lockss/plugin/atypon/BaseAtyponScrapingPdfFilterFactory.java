@@ -55,6 +55,7 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
   private static final String DEFAULT_CITED_BY_STRING = "This article has been cited by:";
   private static final String DEFAULT_DOWNLOAD_REGEX = "^Downloaded from ";
   private static final Pattern DEFAULT_DOWNLOAD_PATTERN = Pattern.compile(DEFAULT_DOWNLOAD_REGEX);
+  private static final Pattern DEFAULT_FRONT_PAGE_PATTERN = Pattern.compile("^^ *Download by:", Pattern.CASE_INSENSITIVE);
 
 
   /*
@@ -74,6 +75,9 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
     //remove any end pages before stepping through to remove download strips
     if (doRemoveCitedByPage()) {
       removeCitedByPage(pdfDocument);
+    }
+    if (doRemoveFrontPage()) {
+      removeFrontPage(pdfDocument);
     }
     if (doRemoveDownloadStrip()) {
       removeDownloadStrip(pdfDocument);
@@ -101,6 +105,21 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
   /* and set the correct string to use for this publisher if this default not right */
   public String getCitedByString() {
     return DEFAULT_CITED_BY_STRING;
+  }
+  
+  /*
+   * Front Page: with citation and downloaded by information
+   *  
+   * Default behavior for child plugins is NOT to try to  
+   * remove a frontpage 
+   * A child plugin can override this to turn it on
+   */
+  public boolean doRemoveFrontPage() {
+    return false;    
+  }
+  /* and set the correct pattern to identify a front page */
+  public Pattern getFrontPagePattern() {
+    return DEFAULT_FRONT_PAGE_PATTERN;
   }
 
   /*
@@ -132,6 +151,24 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
     }
   }
 
+  
+  /*
+   * For those publishers that provide one - remove any front page added 
+   * to PDF files based on the defined FrontPagePattern 
+   * Showing up in T&F but only from certain IP addresses...so sporadic
+   */
+  protected void removeFrontPage(PdfDocument pdfDocument)
+      throws PdfException {
+    if (pdfDocument.getNumberOfPages() > 0) {
+      PdfTokenStreamStateMachine worker = new FrontPageStateMachine(getFrontPagePattern());
+      worker.process(pdfDocument.getPage(0).getPageTokenStream());
+      if (worker.getResult()) {
+        pdfDocument.removePage(0);
+      }
+    }
+  }
+  
+  
   /*
    * DOWNLOAD STRIP ALONG EDGE OF EACH PAGE
    * 
@@ -239,6 +276,45 @@ public class BaseAtyponScrapingPdfFilterFactory extends ExtractingPdfFilterFacto
       }
     } 
 
+  }
+
+  
+  public static class FrontPageStateMachine extends PdfTokenStreamStateMachine {
+
+    /* set when this worker is created */
+    public static Pattern frontPagePattern;
+    
+    /* a version of the constructor to set the search string  - in the FORWARD DIRECTION*/
+    public FrontPageStateMachine(Pattern searchPattern) {
+      super();
+      frontPagePattern = searchPattern;
+    }
+      
+    @Override
+    public void state0() throws PdfException {
+      if (isBeginTextObject()) {
+        setState(1);
+      }
+    }
+    
+    @Override
+    public void state1() throws PdfException {
+      if (isShowTextFind(frontPagePattern) ||
+          isShowTextGlyphPositioningFind(frontPagePattern)) {
+        setState(2);
+      }
+      else if (isEndTextObject()) { 
+        setState(0);
+      }
+    }
+    
+    @Override
+    public void state2() throws PdfException {
+      if (isEndTextObject()) {
+        setResult(true);
+        stop(); 
+      }
+    }
   }
 
 }
