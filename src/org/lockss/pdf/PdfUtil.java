@@ -398,7 +398,7 @@ public class PdfUtil {
     if (pdfToken.isArray()) {
       sb.append("array:");
       for (PdfToken arrayToken : pdfToken.getArray()) {
-        prettyPrint(arrayToken);
+        prettyPrint(sb,arrayToken);
       }
     } else if (pdfToken.isBoolean()) {
       sb.append("boolean:");
@@ -414,7 +414,7 @@ public class PdfUtil {
         }
         sb.append(StringEscapeUtils.escapeJava(entry.getKey()));
         sb.append("=");
-        prettyPrint(entry.getValue());
+        prettyPrint(sb,entry.getValue());
       }
     } else if (pdfToken.isFloat()) {
       sb.append("float:");
