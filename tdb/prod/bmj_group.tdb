@@ -489,7 +489,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; BMJ Open Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Open Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Volume 5 ; 5 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; BMJ Open Volume 6 ; 6 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Open Volume 6 ; 6 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Volume 7 ; 7 >
 
   }
@@ -519,7 +519,7 @@
 
     param[base_url] = http://bmjophth.bmj.com/
 
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; BMJ Open Ophthalmology Volume 1 ; 1 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Open Ophthalmology Volume 1 ; 1 >
 
   }
   
@@ -936,8 +936,8 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; European Journal of Hospital Pharmacy: Science and Practice Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 >
-    au < bmj.BMJDrupalPlugin ; exists ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 >
 
   }
 

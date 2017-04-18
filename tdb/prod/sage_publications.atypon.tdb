@@ -3711,8 +3711,8 @@
 
         #param[base_url] = http://tbt.sagepub.com/
 
-        au < exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; tbtd >
-        au < exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; tbtd >
+        au < manifest ; 2006 ; The Bible Translator Volume 57 ; 57 ; tbtd >
+        au < manifest ; 2007 ; The Bible Translator Volume 58 ; 58 ; tbtd >
         au < doNotProcess ; 2008 ; The Bible Translator Volume 59 ; 59 ; tbtd >
         au < doNotProcess ; 2009 ; The Bible Translator Volume 60 ; 60 ; tbtd >
         au < doNotProcess ; 2010 ; The Bible Translator Volume 61 ; 61 ; tbtd >
@@ -3721,7 +3721,7 @@
         au < doNotProcess ; 2013 ; The Bible Translator Volume 64 ; 64 ; tbtd >
         au < doNotProcess ; 2014 ; The Bible Translator Volume 65 ; 65 ; tbtd >
         au < doNotProcess ; 2015 ; The Bible Translator Volume 66 ; 66 ; tbtd >
-        au < exists ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtd >
+        au < manifest ; 2016 ; The Bible Translator Volume 67 ; 67 ; tbtd >
 
       }
 
@@ -4937,65 +4937,65 @@
 
       #param[base_url] = http://cmr.sagepub.com/
 
-      au < exists ; 1958-1959 ; California Management Review Volume 1 ; 1 ; cmra >
-      au < exists ; 1959-1960 ; California Management Review Volume 2 ; 2 ; cmra >
-      au < exists ; 1960-1961 ; California Management Review Volume 3 ; 3 ; cmra >
-      au < exists ; 1961-1962 ; California Management Review Volume 4 ; 4 ; cmra >
-      au < exists ; 1962-1963 ; California Management Review Volume 5 ; 5 ; cmra >
-      au < exists ; 1963-1964 ; California Management Review Volume 6 ; 6 ; cmra >
-      au < exists ; 1964-1965 ; California Management Review Volume 7 ; 7 ; cmra >
-      au < exists ; 1965-1966 ; California Management Review Volume 8 ; 8 ; cmra >
-      au < exists ; 1966-1967 ; California Management Review Volume 9 ; 9 ; cmra >
-      au < exists ; 1967-1968 ; California Management Review Volume 10 ; 10 ; cmra >
-      au < exists ; 1968-1969 ; California Management Review Volume 11 ; 11 ; cmra >
-      au < exists ; 1969-1970 ; California Management Review Volume 12 ; 12 ; cmra >
-      au < exists ; 1970-1971 ; California Management Review Volume 13 ; 13 ; cmra >
-      au < exists ; 1971-1972 ; California Management Review Volume 14 ; 14 ; cmra >
-      au < exists ; 1972-1973 ; California Management Review Volume 15 ; 15 ; cmra >
-      au < exists ; 1973-1974 ; California Management Review Volume 16 ; 16 ; cmra >
-      au < exists ; 1974-1975 ; California Management Review Volume 17 ; 17 ; cmra >
-      au < exists ; 1975-1976 ; California Management Review Volume 18 ; 18 ; cmra >
-      au < exists ; 1976-1977 ; California Management Review Volume 19 ; 19 ; cmra >
-      au < exists ; 1977-1978 ; California Management Review Volume 20 ; 20 ; cmra >
-      au < exists ; 1978-1979 ; California Management Review Volume 21 ; 21 ; cmra >
-      au < exists ; 1979-1980 ; California Management Review Volume 22 ; 22 ; cmra >
-      au < exists ; 1980-1981 ; California Management Review Volume 23 ; 23 ; cmra >
-      au < exists ; 1981-1982 ; California Management Review Volume 24 ; 24 ; cmra >
-      au < exists ; 1982-1983 ; California Management Review Volume 25 ; 25 ; cmra >
-      au < exists ; 1983-1984 ; California Management Review Volume 26 ; 26 ; cmra >
-      au < exists ; 1984-1985 ; California Management Review Volume 27 ; 27 ; cmra >
-      au < exists ; 1985-1986 ; California Management Review Volume 28 ; 28 ; cmra >
-      au < exists ; 1986-1987 ; California Management Review Volume 29 ; 29 ; cmra >
-      au < exists ; 1987-1988 ; California Management Review Volume 30 ; 30 ; cmra >
-      au < exists ; 1988-1989 ; California Management Review Volume 31 ; 31 ; cmra >
-      au < exists ; 1989-1990 ; California Management Review Volume 32 ; 32 ; cmra >
-      au < exists ; 1990-1991 ; California Management Review Volume 33 ; 33 ; cmra >
-      au < exists ; 1991-1992 ; California Management Review Volume 34 ; 34 ; cmra >
-      au < exists ; 1992-1993 ; California Management Review Volume 35 ; 35 ; cmra >
-      au < exists ; 1993-1994 ; California Management Review Volume 36 ; 36 ; cmra >
-      au < exists ; 1994-1995 ; California Management Review Volume 37 ; 37 ; cmra >
-      au < exists ; 1995-1996 ; California Management Review Volume 38 ; 38 ; cmra >
-      au < exists ; 1996-1997 ; California Management Review Volume 39 ; 39 ; cmra >
-      au < exists ; 1997-1998 ; California Management Review Volume 40 ; 40 ; cmra >
-      au < exists ; 1998-1999 ; California Management Review Volume 41 ; 41 ; cmra >
-      au < exists ; 1999-2000 ; California Management Review Volume 42 ; 42 ; cmra >
-      au < exists ; 2000-2001 ; California Management Review Volume 43 ; 43 ; cmra >
-      au < exists ; 2001-2002 ; California Management Review Volume 44 ; 44 ; cmra >
-      au < exists ; 2002-2003 ; California Management Review Volume 45 ; 45 ; cmra >
-      au < exists ; 2003-2004 ; California Management Review Volume 46 ; 46 ; cmra >
-      au < exists ; 2004-2005 ; California Management Review Volume 47 ; 47 ; cmra >
-      au < exists ; 2005-2006 ; California Management Review Volume 48 ; 48 ; cmra >
-      au < exists ; 2006-2007 ; California Management Review Volume 49 ; 49 ; cmra >
-      au < exists ; 2007-2008 ; California Management Review Volume 50 ; 50 ; cmra >
-      au < exists ; 2008-2009 ; California Management Review Volume 51 ; 51 ; cmra >
-      au < exists ; 2009-2010 ; California Management Review Volume 52 ; 52 ; cmra >
-      au < exists ; 2010-2011 ; California Management Review Volume 53 ; 53 ; cmra >
-      au < exists ; 2011-2012 ; California Management Review Volume 54 ; 54 ; cmra >
-      au < exists ; 2012-2013 ; California Management Review Volume 55 ; 55 ; cmra >
-      au < exists ; 2013-2014 ; California Management Review Volume 56 ; 56 ; cmra >
-      au < exists ; 2014-2015 ; California Management Review Volume 57 ; 57 ; cmra >
-      au < exists ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra >
-      au < exists ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra >
+      au < manifest ; 1958-1959 ; California Management Review Volume 1 ; 1 ; cmra >
+      au < manifest ; 1959-1960 ; California Management Review Volume 2 ; 2 ; cmra >
+      au < manifest ; 1960-1961 ; California Management Review Volume 3 ; 3 ; cmra >
+      au < manifest ; 1961-1962 ; California Management Review Volume 4 ; 4 ; cmra >
+      au < manifest ; 1962-1963 ; California Management Review Volume 5 ; 5 ; cmra >
+      au < manifest ; 1963-1964 ; California Management Review Volume 6 ; 6 ; cmra >
+      au < manifest ; 1964-1965 ; California Management Review Volume 7 ; 7 ; cmra >
+      au < manifest ; 1965-1966 ; California Management Review Volume 8 ; 8 ; cmra >
+      au < manifest ; 1966-1967 ; California Management Review Volume 9 ; 9 ; cmra >
+      au < manifest ; 1967-1968 ; California Management Review Volume 10 ; 10 ; cmra >
+      au < manifest ; 1968-1969 ; California Management Review Volume 11 ; 11 ; cmra >
+      au < manifest ; 1969-1970 ; California Management Review Volume 12 ; 12 ; cmra >
+      au < manifest ; 1970-1971 ; California Management Review Volume 13 ; 13 ; cmra >
+      au < manifest ; 1971-1972 ; California Management Review Volume 14 ; 14 ; cmra >
+      au < manifest ; 1972-1973 ; California Management Review Volume 15 ; 15 ; cmra >
+      au < manifest ; 1973-1974 ; California Management Review Volume 16 ; 16 ; cmra >
+      au < manifest ; 1974-1975 ; California Management Review Volume 17 ; 17 ; cmra >
+      au < manifest ; 1975-1976 ; California Management Review Volume 18 ; 18 ; cmra >
+      au < manifest ; 1976-1977 ; California Management Review Volume 19 ; 19 ; cmra >
+      au < manifest ; 1977-1978 ; California Management Review Volume 20 ; 20 ; cmra >
+      au < manifest ; 1978-1979 ; California Management Review Volume 21 ; 21 ; cmra >
+      au < manifest ; 1979-1980 ; California Management Review Volume 22 ; 22 ; cmra >
+      au < manifest ; 1980-1981 ; California Management Review Volume 23 ; 23 ; cmra >
+      au < manifest ; 1981-1982 ; California Management Review Volume 24 ; 24 ; cmra >
+      au < manifest ; 1982-1983 ; California Management Review Volume 25 ; 25 ; cmra >
+      au < manifest ; 1983-1984 ; California Management Review Volume 26 ; 26 ; cmra >
+      au < manifest ; 1984-1985 ; California Management Review Volume 27 ; 27 ; cmra >
+      au < manifest ; 1985-1986 ; California Management Review Volume 28 ; 28 ; cmra >
+      au < manifest ; 1986-1987 ; California Management Review Volume 29 ; 29 ; cmra >
+      au < manifest ; 1987-1988 ; California Management Review Volume 30 ; 30 ; cmra >
+      au < manifest ; 1988-1989 ; California Management Review Volume 31 ; 31 ; cmra >
+      au < manifest ; 1989-1990 ; California Management Review Volume 32 ; 32 ; cmra >
+      au < manifest ; 1990-1991 ; California Management Review Volume 33 ; 33 ; cmra >
+      au < manifest ; 1991-1992 ; California Management Review Volume 34 ; 34 ; cmra >
+      au < manifest ; 1992-1993 ; California Management Review Volume 35 ; 35 ; cmra >
+      au < manifest ; 1993-1994 ; California Management Review Volume 36 ; 36 ; cmra >
+      au < manifest ; 1994-1995 ; California Management Review Volume 37 ; 37 ; cmra >
+      au < manifest ; 1995-1996 ; California Management Review Volume 38 ; 38 ; cmra >
+      au < manifest ; 1996-1997 ; California Management Review Volume 39 ; 39 ; cmra >
+      au < manifest ; 1997-1998 ; California Management Review Volume 40 ; 40 ; cmra >
+      au < manifest ; 1998-1999 ; California Management Review Volume 41 ; 41 ; cmra >
+      au < manifest ; 1999-2000 ; California Management Review Volume 42 ; 42 ; cmra >
+      au < manifest ; 2000-2001 ; California Management Review Volume 43 ; 43 ; cmra >
+      au < manifest ; 2001-2002 ; California Management Review Volume 44 ; 44 ; cmra >
+      au < manifest ; 2002-2003 ; California Management Review Volume 45 ; 45 ; cmra >
+      au < manifest ; 2003-2004 ; California Management Review Volume 46 ; 46 ; cmra >
+      au < manifest ; 2004-2005 ; California Management Review Volume 47 ; 47 ; cmra >
+      au < manifest ; 2005-2006 ; California Management Review Volume 48 ; 48 ; cmra >
+      au < manifest ; 2006-2007 ; California Management Review Volume 49 ; 49 ; cmra >
+      au < manifest ; 2007-2008 ; California Management Review Volume 50 ; 50 ; cmra >
+      au < manifest ; 2008-2009 ; California Management Review Volume 51 ; 51 ; cmra >
+      au < manifest ; 2009-2010 ; California Management Review Volume 52 ; 52 ; cmra >
+      au < manifest ; 2010-2011 ; California Management Review Volume 53 ; 53 ; cmra >
+      au < manifest ; 2011-2012 ; California Management Review Volume 54 ; 54 ; cmra >
+      au < manifest ; 2012-2013 ; California Management Review Volume 55 ; 55 ; cmra >
+      au < manifest ; 2013-2014 ; California Management Review Volume 56 ; 56 ; cmra >
+      au < manifest ; 2014-2015 ; California Management Review Volume 57 ; 57 ; cmra >
+      au < manifest ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra >
+      au < manifest ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra >
 
   }
  
@@ -12411,11 +12411,11 @@
 
       #param[base_url] = http://gam.sagepub.com/
 
-      au < exists ; 2012 ; Global Advances in Health and Medicine Volume 1 ; 1 ; gama >
-      au < exists ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama >
-      au < exists ; 2014 ; Global Advances in Health and Medicine Volume 3 ; 3 ; gama >
-      au < exists ; 2015 ; Global Advances in Health and Medicine Volume 4 ; 4 ; gama >
-      au < exists ; 2016 ; Global Advances in Health and Medicine Volume 5 ; 5 ; gama >
+      au < manifest ; 2012 ; Global Advances in Health and Medicine Volume 1 ; 1 ; gama >
+      au < manifest ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama >
+      au < manifest ; 2014 ; Global Advances in Health and Medicine Volume 3 ; 3 ; gama >
+      au < manifest ; 2015 ; Global Advances in Health and Medicine Volume 4 ; 4 ; gama >
+      au < manifest ; 2016 ; Global Advances in Health and Medicine Volume 5 ; 5 ; gama >
 
   }
 
@@ -36944,7 +36944,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Teaching of Psychology Volume 41 ; 41 ; topa >
         au < doNotProcess ; 2015 ; Teaching of Psychology Volume 42 ; 42 ; topa >
         au < manifest ; 2016 ; Teaching of Psychology Volume 43 ; 43 ; topa >
-        au < exists ; 2017 ; Teaching of Psychology Volume 44 ; 44 ; topa >
+        au < manifest ; 2017 ; Teaching of Psychology Volume 44 ; 44 ; topa >
 
       }
 
@@ -39779,11 +39779,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2009 ; Workplace Health & Safety Volume 57 ; 57 ; whsc >
       au < manifest ; 2010 ; Workplace Health & Safety Volume 58 ; 58 ; whsc >
       au < manifest ; 2011 ; Workplace Health & Safety Volume 59 ; 59 ; whsc >
-      au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; whsd >
-      au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; whsd >
+      au < manifest ; 2012 ; Workplace Health & Safety Volume 60 ; 60 ; whsd >
+      au < manifest ; 2013 ; Workplace Health & Safety Volume 61 ; 61 ; whsd >
       au < doNotProcess ; 2014 ; Workplace Health & Safety Volume 62 ; 62 ; whsd >
       au < doNotProcess ; 2015 ; Workplace Health & Safety Volume 63 ; 63 ; whsd >
-      au < exists ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; whsd >
+      au < manifest ; 2016 ; Workplace Health & Safety Volume 64 ; 64 ; whsd >
 
   }
 
@@ -44190,7 +44190,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2014 ; South East Asia Research Volume 22 ; 22 ; sera >
     au < doNotProcess ; 2015 ; South East Asia Research Volume 23 ; 23 ; sera >
     au < manifest ; 2016 ; South East Asia Research Volume 24 ; 24 ; sera >
-    au < exists ; 2017 ; South East Asia Research Volume 25 ; 25 ; sera >
+    au < manifest ; 2017 ; South East Asia Research Volume 25 ; 25 ; sera >
 
   }
 
