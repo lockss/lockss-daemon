@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>97</string>
+    <string>98</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>68</string>
+    <string>70</string>
   </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
@@ -143,27 +143,18 @@
     <string>plugin_au_config_user_msg</string>
     <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.tandfonline.com/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Taylor &amp; Francis.</string>
   </entry>
-  <!-- Candidate to be hoisted into BaseAtyponPlugin -->
-  <!-- For now, because T&F is so large and we're trying to clean up some agreements, do not inherit
-       generic:  base_host +
-           - /(css|img|js)Jawr/
-           - /templates/jsp/
-           - /sda/
-         at any depth a url ending with      
-           - .fp.png$ with optional numbered version
-           - .css or .js
+  <!-- For now, because T&F is so large and we're trying to clean up some agreements, add the following
+        ALL THOSE FROM BASE ATYPON plus...
          these ones should repair from peer to speed agreements on old aus, but should still be weighted
            - /action/downloadCitation?doi=... 
            - /<dir>/home/literatum/
    -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|sda/|.+[.]fp[.]png(_v[0-9]+)?$|.*\.(css|js)$|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=)</string>
+    <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
+    <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+    <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+    <string>([^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=)</string>
   </entry>
-  <entry>
-    <string>au_url_poll_result_weight</string>
-    <list>
-      <string>"://[^/]+/((css|img|js)Jawr/|templates/jsp/|sda/|.+[.]fp[.]png(_v[0-9]+)?$|.*\.(css|js)$)", 0</string>
-    </list>
-  </entry>
+  <!-- for now, au_url_poll_result_weight is just inherited from parent -->
 </map>

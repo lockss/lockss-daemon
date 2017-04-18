@@ -40,5 +40,9 @@ public class TafPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
   public boolean doRemoveAllDocumentInfo() {
     return true;
   }
+  @Override
+  public boolean doRemoveFrontPage() {
+    return true;
+  }
   
 }
