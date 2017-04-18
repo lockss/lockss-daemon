@@ -19,13 +19,13 @@
 
       param[journal_id] = bm
     
-      au < ready ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
-      au < ready ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
-      au < ready ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
+      au < releasing ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
+      au < releasing ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
+      au < releasing ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
       au < manifest ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
-      au < ready ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
+      au < releasing ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
       au < manifest ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
-      au < ready ; 2016 ; Beneficial Microbes Volume 7 ; 7 >
+      au < releasing ; 2016 ; Beneficial Microbes Volume 7 ; 7 >
 
     }
 
@@ -39,11 +39,11 @@
 
       param[journal_id] = cep
 
-      au < ready ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
+      au < releasing ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
       au < manifest ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 >
       au < manifest ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 >
       au < manifest ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
-      au < ready ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 >
+      au < releasing ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 >
 
     }
 
@@ -57,7 +57,7 @@
       param[journal_id] = jiff
 
       au < manifest ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
-      au < ready ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 >
+      au < releasing ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 >
 
     }
 
@@ -71,22 +71,22 @@
 
       param[journal_id] = jcns
 
-      au < ready ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 >
-      au < ready ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 >
-      au < ready ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 >
-      au < ready ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 >
-      au < ready ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 >
-      au < ready ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 >
-      au < ready ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 >
-      au < ready ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 >
-      au < ready ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 >
-      au < ready ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 >
-      au < ready ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 >
-      au < ready ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 >
+      au < releasing ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 >
+      au < releasing ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 >
+      au < releasing ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 >
+      au < releasing ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 >
+      au < releasing ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 >
+      au < releasing ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 >
+      au < releasing ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 >
+      au < releasing ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 >
+      au < releasing ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 >
+      au < releasing ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 >
+      au < releasing ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 >
+      au < releasing ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 >
       au < manifest ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 >
       au < manifest ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 >
       au < manifest ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 >
-      au < ready ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 >
+      au < releasing ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 >
 
     }
 
@@ -103,7 +103,7 @@
       au < manifest ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 >
       au < manifest ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 >
       au < manifest ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 >
-      au < ready ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 >
+      au < releasing ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 >
 
     }
 
@@ -117,15 +117,15 @@
 
       param[journal_id] = wmj
 
-      au < ready ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 >
-      au < ready ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 >
-      au < ready ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 >
-      au < ready ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 >
-      au < ready ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 >
+      au < releasing ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 >
+      au < releasing ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 >
+      au < releasing ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 >
+      au < releasing ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 >
+      au < releasing ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 >
       au < manifest ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 >
       au < manifest ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 >
       au < manifest ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 >
-      au < ready ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 >
+      au < releasing ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 >
 
     }
 

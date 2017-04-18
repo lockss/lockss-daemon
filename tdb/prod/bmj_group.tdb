@@ -443,7 +443,7 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
     au < bmj.BMJDrupalPlugin ; released ; 2011 ; BMJ Volume 342 ; 342 >
     au < bmj.BMJDrupalPlugin ; released ; 2011 ; BMJ Volume 343 ; 343 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2012 ; BMJ Volume 344 ; 344 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2012 ; BMJ Volume 344 ; 344 >
     au < bmj.BMJDrupalPlugin ; released ; 2012 ; BMJ Volume 345 ; 345 >
     au < bmj.BMJDrupalPlugin ; released ; 2013 ; BMJ Volume 346 ; 346 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 347 ; 347 >
@@ -451,10 +451,10 @@
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 349 ; 349 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Volume 350 ; 350 > #403 Forbidden
     au < bmj.BMJDrupalPlugin ; released ; 2015 ; BMJ Volume 351 ; 351 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 352 ; 352 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 353 ; 353 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 354 ; 354 >
-    au < bmj.BMJDrupalPlugin ; ready ; 2016 ; BMJ Volume 355 ; 355 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2016 ; BMJ Volume 352 ; 352 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2016 ; BMJ Volume 353 ; 353 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2016 ; BMJ Volume 354 ; 354 >
+    au < bmj.BMJDrupalPlugin ; releasing ; 2016 ; BMJ Volume 355 ; 355 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 356 ; 356 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Volume 357 ; 357 >
 
@@ -550,7 +550,7 @@
       au < HighWirePressH20Plugin ; released ; 2013-2014 ; BMJ Quality Improvement Reports Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; exists ; 2014 ; BMJ Quality Improvement Reports Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; exists ; 2015 ; BMJ Quality Improvement Reports Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; ready ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; releasing ; 2016 ; BMJ Quality Improvement Reports Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; exists ; 2017 ; BMJ Quality Improvement Reports Volume 6 ; 6 >
       
     }
