@@ -1336,7 +1336,7 @@ public class UrlUtil {
           clientContext = HttpClientContext.create();
         }
 //HC3         luc = new HttpClientUrlConnection(methodCode, urlString, client,
-        luc = new HttpClientUrlConnection(methodCode, urlString, clientContext,
+        luc = new HttpClientUrlConnection(methodCode, urlString, //clientContext,
             connectionPool);
       } else {
         luc = new JavaHttpUrlConnection(urlString);

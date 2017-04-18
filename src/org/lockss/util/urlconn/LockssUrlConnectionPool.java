@@ -178,34 +178,12 @@ public class LockssUrlConnectionPool {
 //HC3     return client;
 //HC3   }
 
-  private HttpClientContext setupNewHttpClientContext() {
+  protected HttpClientContext setupNewHttpClientContext() {
     final String DEBUG_HEADER = "setupNewHttpClientContext(): ";
-    HttpClientContext clientContext = newHttpClientContext();
+    HttpClientContext clientContext = HttpClientContext.create();
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "clientContext = " + clientContext);
     return clientContext;
-  }
-
-  /** Return (creating if necessary) an HttpClientConnectionManager */
-  protected HttpClientConnectionManager getHttpClientConnectionManager(
-      int methodCode) {
-    final String DEBUG_HEADER = "getHttpClientConnectionManager(): ";
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "hcConnManager = " + hcConnManager);
-    if (hcConnManager == null) {
-      hcConnManager = setupNewHttpClientConnectionManager(methodCode);
-    }
-    return hcConnManager;
-  }
-
-  private HttpClientConnectionManager setupNewHttpClientConnectionManager(
-      int methodCode) {
-    final String DEBUG_HEADER = "setupNewHttpClientConnectionManager(): ";
-    HttpClientConnectionManager clientConnectionManager =
-	newHttpClientConnectionManager(methodCode);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER
-	+ "clientConnectionManager = " + clientConnectionManager);
-    return clientConnectionManager;
   }
 
   /** Return the HttpClientConnectionManager */
@@ -213,8 +191,13 @@ public class LockssUrlConnectionPool {
     return hcConnManager;
   }
 
-  public void resetHttpClientConnectionManager() {
-    hcConnManager = null;
+  public HttpClientConnectionManager resetHttpClientConnectionManager() {
+    if (hcConnManager instanceof PoolingHttpClientConnectionManager) {
+      hcConnManager = new PoolingHttpClientConnectionManager();
+    } else {
+      hcConnManager = new BasicHttpClientConnectionManager();
+    }
+    return hcConnManager;
   }
 
 //HC3   private void setTimeouts(HttpConnectionManager cm) {
@@ -238,19 +221,6 @@ public class LockssUrlConnectionPool {
 //HC3   protected HttpClient newHttpClient() {
 //HC3     return new HttpClient();
 //HC3   }
-
-  protected HttpClientContext newHttpClientContext() {
-    return HttpClientContext.create();
-  }
-
-  protected HttpClientConnectionManager newHttpClientConnectionManager(
-      int methodCode) {
-    if (methodCode == LockssUrlConnection.METHOD_POST) {
-      return new PoolingHttpClientConnectionManager();
-    } else {
-      return new BasicHttpClientConnectionManager();
-    }
-  }
 
   private int shortenToInt(long n) {
     if (n <= Integer.MAX_VALUE && n >= Integer.MIN_VALUE) {

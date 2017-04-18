@@ -70,7 +70,6 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   MyMockHttpClientUrlConnection conn;
   int newClientCtr;
   String urlString = "http://Test.Url/";
-  HttpClientContext context;
   LockssUrlConnectionPool connectionPool;
 
   public void setUp() throws Exception {
@@ -78,7 +77,6 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client = new MyMockHttpClient();
     conn = newConn(urlString);
 //HC3     method = conn.getMockMethod();
-    context = HttpClientContext.create();
   }
 
   public void tearDown() throws Exception {
@@ -87,7 +85,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   MyMockHttpClientUrlConnection newConn(String url) throws IOException {
 //HC3     return new MyMockHttpClientUrlConnection(url, client);
     try {
-      return new MyMockHttpClientUrlConnection(url, context);
+      return new MyMockHttpClientUrlConnection(url);
     } catch (IllegalArgumentException iae) {
       throw new MalformedURLException(iae.getMessage());
     }
@@ -748,11 +746,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     HttpResponse response;
 
 //HC3     MyMockHttpClientUrlConnection(String urlString, MyMockHttpClient client)
-    MyMockHttpClientUrlConnection(String urlString,
-	HttpClientContext clientContext)
+    MyMockHttpClientUrlConnection(String urlString)
 	throws IOException {
 //HC3       super(urlString, client);
-      super(urlString, clientContext);
+      super(urlString);
 //HC3       mockMeth = new MyMockGetMethod(urlString);
     }
 //HC3     protected LockssGetMethod newLockssGetMethodImpl(String urlString) {

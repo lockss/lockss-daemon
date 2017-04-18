@@ -368,25 +368,23 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   /** Create a connection object, defaulting to GET method */
 //HC3   public HttpClientUrlConnection(String urlString, HttpClient client)
-  public HttpClientUrlConnection(String urlString,
-      HttpClientContext clientContext)
+  public HttpClientUrlConnection(String urlString)
       throws IOException {
 //HC3     this(LockssUrlConnection.METHOD_GET, urlString, client, null);
-    this(LockssUrlConnection.METHOD_GET, urlString, clientContext, null);
+    this(LockssUrlConnection.METHOD_GET, urlString, null);
   }
 
   /** Create a connection object, with specified method */
 //HC3   public HttpClientUrlConnection(int methodCode, String urlString,
 //HC3 	    HttpClient client, LockssUrlConnectionPool connectionPool)
   public HttpClientUrlConnection(int methodCode, String urlString,
-      HttpClientContext clientContext, LockssUrlConnectionPool connectionPool)
+      LockssUrlConnectionPool connectionPool)
 	  throws IOException {
     super(urlString);
     final String DEBUG_HEADER = "HttpClientUrlConnection(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "methodCode = " + methodCode);
       log.debug2(DEBUG_HEADER + "urlString = " + urlString);
-      log.debug2(DEBUG_HEADER + "clientContext = " + clientContext);
       log.debug2(DEBUG_HEADER + "connectionPool = " + connectionPool);
     }
 
@@ -400,10 +398,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     // Handle cookies.
     CookieStore cookieStore = null;
 
-    if (clientContext == null) {
+    if (connectionPool == null) {
       context = HttpClientContext.create();
     } else {
-      context = clientContext;
+      context = connectionPool.getHttpClientContext();
       cookieStore = context.getCookieStore();
     }
 
@@ -426,13 +424,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     connectionConfigBuilder.setCharset(charset);
 
     if (connectionPool == null) {
-      if (methodCode == LockssUrlConnection.METHOD_POST) {
-	connManager = new PoolingHttpClientConnectionManager();
-      } else {
-	connManager = new BasicHttpClientConnectionManager();
-      }
+      connManager = new BasicHttpClientConnectionManager();
     } else {
-      connManager = connectionPool.getHttpClientConnectionManager(methodCode);
+      connManager = connectionPool.getHttpClientConnectionManager();
     }
 
     if(log.isDebug3()) log.debug3("connManager = "+ connManager);

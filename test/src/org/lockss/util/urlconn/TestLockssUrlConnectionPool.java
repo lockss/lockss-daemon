@@ -175,7 +175,7 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
 
   class MyMockLockssUrlConnectionPool extends LockssUrlConnectionPool {
 //HC3     protected HttpClient newHttpClient() {
-    protected HttpClientContext newHttpClientContext() {
+    protected HttpClientContext setupNewHttpClientContext() {
       newClientCtr++;
 //       return super.newHttpClient();
 //HC3       return new MyMockHttpClient();
