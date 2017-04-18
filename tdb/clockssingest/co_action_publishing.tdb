@@ -684,25 +684,8 @@
 
     #param[base_url] = http://www.researchinlearningtechnology.net/
     param[journal_id] = zrlt20
+    #continues = 0968-7769
 
-    au < doNotProcess ; doNotProcess ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ;>
-    au < doNotProcess ; doNotProcess ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ;>
-    au < doNotProcess ; doNotProcess ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ;>
-    au < doNotProcess ; doNotProcess ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ;>
-    au < doNotProcess ; doNotProcess ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ;>
-    au < doNotProcess ; doNotProcess ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ;>
-    au < doNotProcess ; doNotProcess ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ;>
-    au < doNotProcess ; doNotProcess ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ;>
-    au < doNotProcess ; doNotProcess ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 21 ; 21 ; >
@@ -710,6 +693,37 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 24 ; 24 ; >
     au < manifest ; exists ; 2017 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 25 ; 25 ; >
+
+  {
+
+    title <
+      name = ALT-J: Research in Learning Technology ;
+      issn = 0968-7769 ;
+      eissn = 1741-1629 ;
+      issnl = 0968-7769
+    >
+
+    param[journal_id] = zrlt19
+    #continued_by = 2156-7069 
+
+    au < doNotProcess ; doNotProcess ; 1993 ; ALT-J: Research in Learning Technology Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; ALT-J: Research in Learning Technology Volume 2 ; 2 ;>
+    au < doNotProcess ; doNotProcess ; 1995 ; ALT-J: Research in Learning Technology Volume 3 ; 3 ;>
+    au < doNotProcess ; doNotProcess ; 1996 ; ALT-J: Research in Learning Technology Volume 4 ; 4 ;>
+    au < doNotProcess ; doNotProcess ; 1997 ; ALT-J: Research in Learning Technology Volume 5 ; 5 ;>
+    au < doNotProcess ; doNotProcess ; 1998 ; ALT-J: Research in Learning Technology Volume 6 ; 6 ;>
+    au < doNotProcess ; doNotProcess ; 1999 ; ALT-J: Research in Learning Technology Volume 7 ; 7 ;>
+    au < doNotProcess ; doNotProcess ; 2000 ; ALT-J: Research in Learning Technology Volume 8 ; 8 ;>
+    au < doNotProcess ; doNotProcess ; 2001 ; ALT-J: Research in Learning Technology Volume 9 ; 9 ;>
+    au < doNotProcess ; doNotProcess ; 2002 ; ALT-J: Research in Learning Technology Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; ALT-J: Research in Learning Technology Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; ALT-J: Research in Learning Technology Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; ALT-J: Research in Learning Technology Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; ALT-J: Research in Learning Technology Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; ALT-J: Research in Learning Technology Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; ALT-J: Research in Learning Technology Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; ALT-J: Research in Learning Technology Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; ALT-J: Research in Learning Technology Volume 18 ; 18 ; >
 
   }
 
