@@ -47,7 +47,7 @@ import org.lockss.util.*;
  * @author Thib Guicherd-Callin
  * @see PdfUtil#PREFIX_PDF_FILTER_FACTORY_HINT
  * @see PdfUtil#PDF_MIME_TYPE
- * @see DefinableArchivalUnit#SUFFIX_FILTER_FACTORY
+ * @see DefinableArchivalUnit#SUFFIX_HASH_FILTER_FACTORY
  */
 @Deprecated
 public class BasicPdfFilterFactory implements FilterFactory {

@@ -54,7 +54,7 @@ import org.xml.sax.*;
  * </p>
  * 
  * @since 1.68
- * @see http://www.w3.org/TR/xml-stylesheet/
+ * @see "http://www.w3.org/TR/xml-stylesheet/"
  */
 public class XmlLinkExtractor implements LinkExtractor {
 

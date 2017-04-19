@@ -53,7 +53,7 @@ import org.lockss.util.*;
  * 
  * @author Wendell Wilson
  * @author Thib Guicherd-Callin
- * @see http://refman.com/sites/rm/files/m/direct_export_ris.pdf
+ * @see "http://refman.com/sites/rm/files/m/direct_export_ris.pdf"
  */
 public class RisMetadataExtractor implements FileMetadataExtractor {
   
