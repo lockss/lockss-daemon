@@ -574,26 +574,19 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
-      InputStream uncIn = input;
       String contentEncoding =
 	headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
-      if (contentEncoding != null) {
-	if (log.isDebug3())
-	  log.debug3("Wrapping for login page checker Content-Encoding: " +
-		     contentEncoding);
-	try {
-	  uncIn = StreamUtil.getUncompressedInputStream(uncIn, contentEncoding);
-	  // Rewritten response is not encoded, and we don't know its length
-	  // (not that the login page checker is likely to care)
-	  // Don't modify the Properties that were passed in
-	  headers = CIProperties.fromProperties(headers);
-	  headers.remove(CachedUrl.PROPERTY_CONTENT_ENCODING);
-	  headers.remove("Content-Length");
-	} catch (UnsupportedEncodingException e) {
-	  log.warning("Unsupported Content-Encoding: " + contentEncoding +
-		      ", not decoding before checking for login page " +
-		      fetchUrl);
-	}
+      InputStream uncIn =
+	StreamUtil.getUncompressedInputStreamOrFallback(input,
+							contentEncoding,
+							fetchUrl);
+      if (uncIn != input) {
+	// Stream no longer has an encoding, and we don't know its length
+	// (not that the login page checker is likely to care).
+	// Don't modify the Properties that were passed in
+	headers = CIProperties.fromProperties(headers);
+	headers.remove(CachedUrl.PROPERTY_CONTENT_ENCODING);
+	headers.remove("Content-Length");
       }
 
       String charset = AuUtil.getCharsetOrDefault(uncachedProperties);

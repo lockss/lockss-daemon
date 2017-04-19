@@ -1213,15 +1213,16 @@ public class ServeContent extends LockssServlet {
       if (log.isDebug3())
 	log.debug3("Wrapping for login page checker Content-Encoding: " +
 		   contentEncoding);
-      try {
-	input = StreamUtil.getUncompressedInputStream(input, contentEncoding);
-	// Rewritten response is not encoded, and we don't know its length
+      InputStream uncin =
+	StreamUtil.getUncompressedInputStreamOrFallback(input,
+							contentEncoding,
+							url);
+      if (uncin != input) {
+	// Stream is no longer encoded, and we don't know its length
 	// (not that the login page checker is likely to care)
 	headers.remove(HttpFields.__ContentEncoding);
 	headers.remove(HttpFields.__ContentLength);
-      } catch (UnsupportedEncodingException e) {
-	log.warning("Unsupported Content-Encoding: " + contentEncoding +
-		    ", not decoding before checking for login page " + url);
+	input = uncin;
       }
     }
     // create reader for input stream
@@ -1334,17 +1335,16 @@ public class ServeContent extends LockssServlet {
       if (contentEncoding != null) {
         if (log.isDebug2())
           log.debug2("Wrapping Content-Encoding: " + contentEncoding);
-        try {
-          respStrm =
-              StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
-          // Rewritten response is not encoded, and we don't know its length
-          contentEncoding = null;
+	InputStream uncResp =
+	  StreamUtil.getUncompressedInputStreamOrFallback(respStrm,
+							  contentEncoding,
+							  url);
+	if (uncResp != respStrm) {
+	  // Uncompressed response is not encoded, and we don't know its length
+	  contentEncoding = null;
 	  responseContentLength = -1;
-        } catch (UnsupportedEncodingException e) {
-          log.warning("Unsupported Content-Encoding: " + contentEncoding +
-                      ", not rewriting " + url);
-          lrf = null;
-        }
+	  respStrm = uncResp;
+	}
       }
     }
     if (contentEncoding != null) {

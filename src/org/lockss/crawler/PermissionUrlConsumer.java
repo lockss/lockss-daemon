@@ -134,7 +134,9 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 
       // decompress if necessary
       InputStream is =
-	StreamUtil.getUncompressedInputStream(fudis, contentEncoding);
+	StreamUtil.getUncompressedInputStreamOrFallback(fudis,
+							contentEncoding,
+							fud.fetchUrl);
 
       // XXX Some PermissionCheckers close their stream.  This is a
       // workaround until they're fixed.

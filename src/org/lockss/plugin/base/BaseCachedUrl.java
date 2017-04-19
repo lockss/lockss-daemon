@@ -246,38 +246,12 @@ public class BaseCachedUrl implements CachedUrl {
   public InputStream getUncompressedInputStream(HashedInputStream.Hasher hasher) {
     InputStream in = getUnfilteredInputStream(hasher);;
     String contentEncoding = getProperty(PROPERTY_CONTENT_ENCODING);
-    if (StringUtil.isNullString(contentEncoding) ||
-	contentEncoding.equalsIgnoreCase("identity")) {
-      return in;
-    }
     // Daemon versions 1.67 and 1.68 decompressed on receipt but didn't
     // remove the Content-Encoding header.  If decompression fails return
     // the raw stream.
-    InputStream bin = new BufferedInputStream(in);
-    bin.mark(1024);
-    try {
-      InputStream res =
-	StreamUtil.getUncompressedInputStream(bin, contentEncoding);
-      if (contentEncoding.equalsIgnoreCase("deflate")) {
-	// InflaterInputStream doesn't throw on bad input until first byte
-	// is read.  (GZIPInputStream throws on construction.)
-	res = new BufferedInputStream(res);
-	res.mark(1);
-	res.read();
-	res.reset();
-      }
-      return res;
-    } catch (IOException e) {
-      logger.warning("Decompression failed, returning raw stream: " + getUrl(),
-		     e);
-      try {
-	bin.reset();
-	return bin;
-      } catch (IOException e2) {
-	logger.warning("Reset (after decompression error) failed", e2);
-	throw new RuntimeException("Internal error: please report \"Insufficient buffering for reset\".");
-      }
-    }
+    return StreamUtil.getUncompressedInputStreamOrFallback(in,
+							   contentEncoding,
+							   getUrl());
   }
 
   // Clients of CachedUrl expect InputStreams to support mark/reset

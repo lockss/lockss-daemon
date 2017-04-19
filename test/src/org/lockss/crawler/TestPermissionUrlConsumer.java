@@ -234,12 +234,8 @@ public abstract class TestPermissionUrlConsumer extends LockssTestCase {
       assertNull(muc1.getStoredContentBytes());
     }
 
-    // While BaseCachedUrl allows uncompressed content even with
-    // Content-Encoding: gzip (because some content got stored that way),
-    // PermissionUrlConsumer doesn't need to do that because its content is
-    // coming from the network.  Just documenting that behavior and the
-    // reason for it - it wouldn't hurt if PermissionUrlConsumer was
-    // adaptable like BaseCachedUrl.
+    // PermissionUrlConsumer now handles spurious Content-Encoding header
+    // on non-compressed response.
     public void testNotCompressedWithHdr() throws Exception {
       FetchedUrlData fud =
 	new FetchedUrlData(url1, url1,
@@ -249,12 +245,8 @@ public abstract class TestPermissionUrlConsumer extends LockssTestCase {
       PermissionUrlConsumerFactory pucf =
 	new PermissionUrlConsumerFactory(pMap);
       puc = (PermissionUrlConsumer)pucf.createUrlConsumer(mcf, fud);
-      try {
-	puc.consume();
-	fail("Shouldn have thrown ZipException");
-      } catch (java.util.zip.ZipException e) {
-      }
-      assertEquals(PermissionStatus.PERMISSION_UNCHECKED, pMap.getStatus(url1));
+      puc.consume();
+      assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
     }
 
   }

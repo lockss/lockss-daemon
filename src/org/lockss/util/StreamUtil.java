@@ -341,8 +341,8 @@ public class StreamUtil {
     }
   }
 
-  /** Return an InputStream that uncompresses the data on the input
-   * stream (normally an HTTP response stream)
+  /** Return an InputStream that uncompresses the data on the input stream
+   * (normally an HTTP response stream) according to the contentEncoding
    * @param instr raw InputStream
    * @param contentEncoding value of HTTP Content-Encoding: header
    * @return The wrapped stream, or the original stream if contentEncoding
@@ -367,6 +367,57 @@ public class StreamUtil {
       throw new UnsupportedEncodingException(contentEncoding);
     }
     return res;
+  }
+
+  /** Return an InputStream that uncompresses the data on the input stream
+   * (normally an HTTP response stream) according to the contentEncoding
+   * (see {@link #getUncompressedInputStream(InputStream, String)}).  If
+   * decompression fails (e.g., because instr stream wasn't actually
+   * compressed), a stream equivalent to (but not == to) the original
+   * stream is returned.  The client may test identity of the result to
+   * determine whether the characteristics of the stream *may* have changed.
+   * @param instr raw InputStream
+   * @param contentEncoding value of HTTP Content-Encoding: header
+   * @param label A string (e.g., URL) to include in the logged warning if
+   * decompression fails
+   * @return The wrapped stream, or the original stream if contentEncoding
+   * is null or "identity", or a new stream with the same content as the
+   * original if decompression fails.
+   */
+  public static InputStream
+    getUncompressedInputStreamOrFallback(InputStream instr,
+					 String contentEncoding,
+					 String label) {
+    if (StringUtil.isNullString(contentEncoding) ||
+	contentEncoding.equalsIgnoreCase("identity")) {
+      return instr;
+    }
+    InputStream bin = new BufferedInputStream(instr);
+    bin.mark(1024);
+    try {
+      InputStream res =
+	StreamUtil.getUncompressedInputStream(bin, contentEncoding);
+      if (contentEncoding.equalsIgnoreCase("deflate")) {
+	// InflaterInputStream doesn't throw on bad input until first byte
+	// is read.  (GZIPInputStream throws on construction.)
+	res = new BufferedInputStream(res);
+	res.mark(1);
+	res.read();
+	res.reset();
+      }
+      return res;
+    } catch (IOException e) {
+      log.warning("Decompression (" + contentEncoding +
+		  ") failed, returning raw stream: " + label,
+		  e);
+      try {
+	bin.reset();
+	return bin;
+      } catch (IOException e2) {
+	log.warning("Reset (after decompression error) failed", e2);
+	throw new RuntimeException("Internal error: please report \"Insufficient buffering for reset\".");
+      }
+    }
   }
 
   /** Return a Reader that reads from the InputStream.  If the specified

@@ -1344,6 +1344,25 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertTrue(loginPageChecker.wasCalled());
   }
 
+  public void testCacheLPCNotCompressedLoginPage() throws IOException {
+    StringLoginPageChecker loginPageChecker =
+      new StringLoginPageChecker("login string");
+    List<String> urls = ListUtil.list("http://example.com");
+    mau.setStartUrls(urls);
+    mau.setPermissionUrls(urls);
+    mau.setLoginPageChecker(loginPageChecker);
+    mau.setRefetchDepth(99);
+    fetcher.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+    fetcher._input = new StringInputStream("xxxlogin stringmxxx");
+    fetcher._headers = fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING, "gzip");
+    // should cache
+    try {
+      fetcher.fetch();
+      fail("Should have thrown a CacheException.PermissionException");
+    } catch (CacheException.PermissionException ex) {
+    }
+  }
+
   CIProperties fromArgs(String prop, String val) {
     CIProperties props = new CIProperties();
     props.put(prop, val);
@@ -1381,6 +1400,8 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertEquals(1, fetcher.getUncachedInputStreamCount);
   }
 
+  List<String> loginPages = new ArrayList<String>();
+
   class MyMockLoginPageChecker implements LoginPageChecker {
     private boolean wasCalled = false;
     private boolean isLoginPage;
@@ -1389,8 +1410,10 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       this.isLoginPage = isLoginPage;
     }
 
-    public boolean isLoginPage(Properties props, Reader reader) {
+    public boolean isLoginPage(Properties props, Reader reader)
+	throws IOException {
       wasCalled = true;
+      loginPages.add(StringUtil.fromReader(reader));
       return this.isLoginPage;
     }
 

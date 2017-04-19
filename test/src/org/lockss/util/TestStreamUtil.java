@@ -426,6 +426,48 @@ public class TestStreamUtil extends LockssTestCase {
     }
   }
 
+  public void testGetUncompressedInputStreamOrFallback(InputStream in)
+      throws IOException {
+    InputStream in1 =
+      StreamUtil.getUncompressedInputStreamOrFallback(in, "gzip", "msg1");
+    assertInputStreamMatchesString("foo bazz", in1);
+    InputStream in2 =
+      StreamUtil.getUncompressedInputStreamOrFallback(in, "deflate", "msg2");
+    assertSameBytes(in, in2);
+  }
+
+  public void testGetUncompressedInputStreamOrFallback(InputStream in,
+						       String encoding)
+      throws IOException {
+    InputStream in1 =
+      StreamUtil.getUncompressedInputStreamOrFallback(in, encoding, "msg1");
+    assertInputStreamMatchesString("foo bazz", in1);
+  }
+
+  public void testGetUncompressedInputStreamOrFallbackGzip1()
+      throws IOException {
+    testGetUncompressedInputStreamOrFallback(new StringInputStream("foo bazz"),
+					     "gzip");
+  }
+
+  public void testGetUncompressedInputStreamOrFallbackGzip2()
+      throws IOException {
+    testGetUncompressedInputStreamOrFallback(new GZIPpedInputStream("foo bazz"),
+					     "gzip");
+  }
+
+  public void testGetUncompressedInputStreamOrFallbackDeflate1()
+      throws IOException {
+    testGetUncompressedInputStreamOrFallback(new StringInputStream("foo bazz"),
+					     "deflate");
+  }
+
+  public void testGetUncompressedInputStreamOrFallbackDeflate2()
+      throws IOException {
+    testGetUncompressedInputStreamOrFallback(new DeflaterInputStream(new StringInputStream("foo bazz")),
+					     "deflate");
+  }
+
   public void testGetReader() {
     InputStream in = new StringInputStream("123");
     InputStreamReader rdr;
