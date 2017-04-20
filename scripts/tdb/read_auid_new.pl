@@ -481,25 +481,32 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "ClockssOJS2Plugin") {
-        #Url with permission statement
+       #Url with permission statement
         $url_m = sprintf("%sindex.php/%s/about/editorialPolicies",
             $param{base_url}, $param{journal_id});
         $man_url = uri_unescape($url_m);
         my $req_m = HTTP::Request->new(GET, $man_url);
         my $resp_m = $ua->request($req_m);
-        #Url with permission statement - Alternate. No index.php
+       #Url with permission statement - Alternate. No index.php
         $url_m_alt = sprintf("%s%s/about/editorialPolicies",
             $param{base_url}, $param{journal_id});
         $man_url_alt = uri_unescape($url_m_alt);
         my $req_m_alt = HTTP::Request->new(GET, $man_url_alt);
         #my $resp_m_alt = $ua->request($req_m_alt);
-        #Url with list of urls for issues
+       #Url with list of urls for issues
         $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
         $start_url = uri_unescape($url_s);
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
-        #For reporting at the end
+       #Url with list of urls for issues - Alternate. No index.php
+        $url_s_alt = sprintf("%s%s/gateway/lockss?year=%d",
+            $param{base_url}, $param{journal_id}, $param{year});
+        $start_url_alt = uri_unescape($url_s_alt);
+        my $req_s_alt = HTTP::Request->new(GET, $start_url_alt);
+        my $resp_s_alt = $ua->request($req_s_alt);
+       #For reporting at the end
+        #================================= with index.php
         $man_url = $start_url . " + " . $man_url ;
         if (($resp_s->is_success) && ($resp_m->is_success)) {
             my $man_contents = $resp_m->content;
@@ -516,6 +523,28 @@ while (my $line = <>) {
                 } elsif (($man_contents !~ m/$lockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
                     $result = "--NO_TAG--";
                 } elsif (($man_contents !~ m/\($param{year}\)/) && ($man_contents !~ m/: $param{year}/)) {
+                    $result = "--NO_YEAR--";
+                } else {
+                    $result = "--MYST--";
+                }
+            }
+        } else {
+            $result = "--REQ_FAIL--";
+        }
+        #======================= w/o index.php
+        $man_url = $start_url_alt . " + " . $man_url_alt ;
+        if (($result eq "--REQ_FAIL--") && ($resp_s_alt->is_success) && ($resp_m_alt->is_success)) {
+            my $man_contents_alt = $resp_m_alt->content;
+            my $start_contents_alt = $resp_s_alt->content;
+            if (defined($man_contents_alt) && defined($start_contents_alt) && (($man_contents_alt =~ m/$clockss_tag/) || ($man_contents_alt =~ m/$oa_tag/)) && (($start_contents_alt =~ m/\($param{year}\)/) || ($start_contents_alt =~ m/: $param{year}/))) {
+                $result = "Manifest"
+            } else {
+                #$result = "--NO_TAG--"
+                if (!defined($man_contents_alt) || !defined($start_contents_alt)) {
+                    $result = "--NO_CONT--";
+                } elsif (($man_contents_alt !~ m/$lockss_tag/) && ($man_contents_alt !~ m/$oa_tag/)) {
+                    $result = "--NO_TAG--";
+                } elsif (($man_contents_alt !~ m/\($param{year}\)/) && ($man_contents_alt !~ m/: $param{year}/)) {
                     $result = "--NO_YEAR--";
                 } else {
                     $result = "--MYST--";
