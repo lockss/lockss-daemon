@@ -22,9 +22,9 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = bridges
 
-      au < exists ; exists ; 2012 ; Clinical & Investigative Medicine Volume 1 ; 1 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Clinical & Investigative Medicine Volume 2 ; 2 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Clinical & Investigative Medicine Volume 3 ; 3 ; 2014 ; > 
+      au < manifest ; exists ; 2012 ; Clinical & Investigative Medicine Volume 1 ; 1 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Clinical & Investigative Medicine Volume 2 ; 2 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Clinical & Investigative Medicine Volume 3 ; 3 ; 2014 ; > 
 
     }
 
@@ -38,13 +38,13 @@
       param[base_url] = https://earlytheatre.org/
       param[journal_id] = earlytheatre
 
-      au < exists ; exists ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; > 
-      au < exists ; exists ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; > 
-      au < exists ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
+      au < manifest ; exists ; 2010 ; Early Theatre Volume 13 ; 13 ; 2010 ; > 
+      au < manifest ; exists ; 2011 ; Early Theatre Volume 14 ; 14 ; 2011 ; > 
+      au < manifest ; exists ; 2012 ; Early Theatre Volume 15 ; 15 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Early Theatre Volume 16 ; 16 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Early Theatre Volume 17 ; 17 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Early Theatre Volume 18 ; 18 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Early Theatre Volume 19 ; 19 ; 2016 ; > 
 
     }
 
@@ -58,13 +58,11 @@
       param[base_url] = https://energystudiesreview.ca/
       param[journal_id] = esr
 
-      au < exists ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
-      au < exists ; exists ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; > 
-      au < exists ; exists ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Energy Studies Review Volume 20 ; 20 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Energy Studies Review Volume 21 ; 21 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Energy Studies Review Volume 22 ; 22 ; 2016 ; > 
+      au < manifest ; exists ; 2010 ; Energy Studies Review Volume 17 ; 17 ; 2010 ; > 
+      au < manifest ; exists ; 2011 ; Energy Studies Review Volume 18 ; 18 ; 2011 ; > 
+      au < manifest ; exists ; 2012 ; Energy Studies Review Volume 19 ; 19 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Energy Studies Review Volume 20 ; 20 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Energy Studies Review Volume 21 ; 21 ; 2014 ; > 
 
     }
 
@@ -78,14 +76,14 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = globallabour
 
-      au < exists ; exists ; 2010 ; Global Labour Journal Volume 1 ; 1 ; 2010 ; > 
-      au < exists ; exists ; 2011 ; Global Labour Journal Volume 2 ; 2 ; 2011 ; > 
-      au < exists ; exists ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
-      au < exists ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
+      au < manifest ; exists ; 2010 ; Global Labour Journal Volume 1 ; 1 ; 2010 ; > 
+      au < manifest ; exists ; 2011 ; Global Labour Journal Volume 2 ; 2 ; 2011 ; > 
+      au < manifest ; exists ; 2012 ; Global Labour Journal Volume 3 ; 3 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Global Labour Journal Volume 4 ; 4 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Global Labour Journal Volume 5 ; 5 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Global Labour Journal Volume 6 ; 6 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Global Labour Journal Volume 7 ; 7 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; Global Labour Journal Volume 8 ; 8 ; 2017 ; > 
 
     }
 
@@ -99,11 +97,24 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = hro-ors
 
-      au < exists ; exists ; 2013 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 1 ; 1 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 3 ; 3 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 4 ; 4 ; 2016 ; > 
-      au < exists ; exists ; 2017 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 5 ; 5 ; 2017 ; > 
+      au < manifest ; exists ; 2013 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 1 ; 1 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 2 ; 2 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 3 ; 3 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 4 ; 4 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; Health Reform Observer – Observatoire des Réformes de Santé Volume 5 ; 5 ; 2017 ; > 
+
+    }
+
+    {
+
+      title < 
+        name = International Journal for Students as Partners
+      
+      >
+      param[base_url] = https://mulpress.mcmaster.ca/
+      param[journal_id] = ijsap
+
+      au < expected ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
 
     }
 
@@ -117,13 +128,13 @@
       param[base_url] = https://jhaponline.org/
       param[journal_id] = jhap
 
-      au < exists ; exists ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 ; > 
-      au < exists ; exists ; 2012 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 ; > 
-      au < exists ; exists ; 2013 ; Journal for the History of Analytical Philosophy Volume 3 ; 3 ; 2013 ; > 
-      au < exists ; exists ; 2014 ; Journal for the History of Analytical Philosophy Volume 4 ; 4 ; 2014 ; > 
-      au < exists ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; > 
-      au < exists ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; > 
-      au < exists ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; > 
+      au < manifest ; exists ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 ; 1 ; 2011 ; > 
+      au < manifest ; exists ; 2012 ; Journal for the History of Analytical Philosophy Volume 2 ; 2 ; 2012 ; > 
+      au < manifest ; exists ; 2013 ; Journal for the History of Analytical Philosophy Volume 3 ; 3 ; 2013 ; > 
+      au < manifest ; exists ; 2014 ; Journal for the History of Analytical Philosophy Volume 4 ; 4 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; Journal for the History of Analytical Philosophy Volume 5 ; 5 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; Journal for the History of Analytical Philosophy Volume 6 ; 6 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; Journal for the History of Analytical Philosophy Volume 7 ; 7 ; 2017 ; > 
 
     }
 
@@ -137,8 +148,10 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = jpc
       #appears that all journals are going into a single volume "0"
+      #see https://mulpress.mcmaster.ca/jpc/gateway/lockss
+      #see https://mulpress.mcmaster.ca/jpc/gateway/lockss?year=0
 
-      au < exists ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0000 ; > 
+      au < exists ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 
     }
 
@@ -171,10 +184,10 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = sophiejournal
 
-      au < exists ; exists ; 2011 ; The Sophie Journal Volume 1 ; 1 ; 2011 ; > 
-      au < exists ; exists ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; > 
-      au < exists ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
-      au < exists ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
+      au < manifest ; exists ; 2011 ; The Sophie Journal Volume 1 ; 1 ; 2011 ; > 
+      au < manifest ; exists ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; > 
+      au < manifest ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
+      au < manifest ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
 
     }
 
@@ -188,7 +201,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = texttechnology
 
-      au < exists ; exists ; 1991 ; TEXT Technology Volume 1 ; 1 ; 1991 ; > 
+      au < manifest ; exists ; 1991 ; TEXT Technology Volume 1 ; 1 ; 1991 ; > 
 
     }
 
