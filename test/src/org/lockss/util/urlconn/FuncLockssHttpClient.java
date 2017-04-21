@@ -605,11 +605,9 @@ public class FuncLockssHttpClient extends LockssTestCase {
     String req = th.getRequest(0);
     assertMatchesRE("^GET / HTTP/", req);
     assertNoHeaderLine("^Accept:", req);
-    // TODO: Migrate to HttpClient 4.
-// TODO: assertNoHeaderLine("^Connection:", req);
+    assertNoHeaderLine("^Connection:", req);
 //HC3    assertNoHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
-    // TODO: Migrate to HttpClient 4.
-// TODO: assertNoHeaderLine("^User-Agent: Apache-HttpClient", req);
+    assertNoHeaderLine("^User-Agent: Apache-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
     conn.release();
@@ -657,29 +655,29 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertEquals(1, th.getNumConnects());
   }
 
-  // TODO: Migrate to HttpClient 4.
-//TODO:   public void testCookieRFC2109() throws Exception {
-//TODO:     testCookie("RFC2109", false);
-//TODO:   }
+  public void testCookieRFC2109() throws Exception {
+    testCookie("RFC2109", false);
+  }
 
-  // TODO: Migrate to HttpClient 4.
-//TODO:   public void testCookieRFC2109A() throws Exception {
-//TODO:     testCookie("RFC2109", true);
-//TODO:   }
+  public void testCookieRFC2109A() throws Exception {
+    testCookie("RFC2109", true);
+  }
 
-  // TODO: Migrate to HttpClient 4.
-//TODO:  public void testCookieCompatibility() throws Exception {
-//TODO:    testCookie("COMPATIBILITY", false);
-//TODO:  }
+// TODO: Migrate to HttpClient 4?
+// In HttpClient 4, "COMPATIBILITY" means one header line, not overridable.
+//  public void testCookieCompatibility() throws Exception {
+//    testCookie("COMPATIBILITY", false);
+//  }
 
   public void testCookieCompatibilityA() throws Exception {
     testCookie("COMPATIBILITY", true);
   }
 
-  // TODO: Migrate to HttpClient 4.
-//TODO:   public void testCookieNetscape() throws Exception {
-//TODO:     testCookie("NETSCAPE", false);
-//TODO:   }
+// TODO: Migrate to HttpClient 4?
+//In HttpClient 4, "NETSCAPE" means one header line, not overridable.
+//  public void testCookieNetscape() throws Exception {
+//    testCookie("NETSCAPE", false);
+//  }
 
   public void testCookieNetscapeA() throws Exception {
     testCookie("NETSCAPE", true);
@@ -689,10 +687,9 @@ public class FuncLockssHttpClient extends LockssTestCase {
     testCookie("IGNORE", false);
   }
 
-  // TODO: Migrate to HttpClient 4.
-//TODO:   public void testCookieIgnoreA() throws Exception {
-//TODO:     testCookie("IGNORE", true);
-//TODO:   }
+  public void testCookieIgnoreA() throws Exception {
+    testCookie("IGNORE", true);
+  }
 
   public void testCookieDefault() throws Exception {
     testCookie("default", true);
@@ -702,7 +699,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
       throws Exception {
     Properties p = new Properties();
     if ("default".equals(policy)) {
-      policy = "compatibility";
+      policy = "COMPATIBILITY";
       singleHeader = true;
     } else {
       p.put(LockssUrlConnection.PARAM_COOKIE_POLICY, policy);
@@ -768,7 +765,11 @@ public class FuncLockssHttpClient extends LockssTestCase {
     if (policy.equalsIgnoreCase("ignore")) {
       assertNoHeaderLine("^Cookie:", req);
     } else if (singleHeader) {
-      assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, req);
+      if ("COMPATIBILITY".equals(policy) || "NETSCAPE".equals(policy)) {
+	assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, req);
+      } else {
+	assertHeaderLine("^Cookie: " + ver + c2 + "; " + c1, req);
+      }
     } else {
       assertHeaderLine("^Cookie: " + ver + c1, req);
       assertHeaderLine("^Cookie: " + ver + c2, req);

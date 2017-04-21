@@ -40,7 +40,9 @@ import org.lockss.util.*;
 //HC3 import org.apache.commons.httpclient.protocol.*;
 //HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.config.Registry;
 import org.apache.http.conn.HttpClientConnectionManager;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
 import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -61,12 +63,14 @@ public class LockssUrlConnectionPool {
   private int dataTimeout = -1;
 //HC3   private HttpConnectionManager hcConnManager =
 //HC3     new SimpleHttpConnectionManager();
-  private HttpClientConnectionManager hcConnManager =
-      new BasicHttpClientConnectionManager();
+  private HttpClientConnectionManager hcConnManager = null;
 //HC3  private SecureProtocolSocketFactory sockFact;
   private LayeredConnectionSocketFactory sockFact;
   private HttpClientContext context = null;
   private boolean keepAlive = false;
+  private boolean isMultithreaded = false;
+  private int maxTotalConnections = 1;
+  private int maxConnectionsPerHost = 1;
 
 //HC3   /** Return (creating if necessary) an HttpClient */
 //HC3   public HttpClient getHttpClient() {
@@ -89,28 +93,25 @@ public class LockssUrlConnectionPool {
   public void setMultiThreaded(int maxConn, int maxPerHost) {
 //HC3     MultiThreadedHttpConnectionManager cm =
 //HC3       new MultiThreadedHttpConnectionManager();
-    PoolingHttpClientConnectionManager cm =
-	new PoolingHttpClientConnectionManager();
 //HC3     HttpConnectionManagerParams params = cm.getParams();
 //HC3     params.setMaxTotalConnections(maxConn);
-    cm.setMaxTotal(maxConn);
+    maxTotalConnections = maxConn;
 //HC3     params.setDefaultMaxConnectionsPerHost(maxPerHost);
-    cm.setDefaultMaxPerRoute(maxPerHost);
+    maxConnectionsPerHost = maxPerHost;
 //HC3     setTimeouts(params);
-    hcConnManager = cm;
 //HC3     if (httpClient != null) {
 //HC3       httpClient.setHttpConnectionManager(cm);
 //HC3     }
+    isMultithreaded = true;
   }
 
   public void setSingleThreaded() {
 //HC3     HttpConnectionManager cm = new SimpleHttpConnectionManager();
-    HttpClientConnectionManager cm = new BasicHttpClientConnectionManager();
 //HC3     setTimeouts(cm);
-    hcConnManager = cm;
 //HC3     if (httpClient != null) {
 //HC3       httpClient.setHttpConnectionManager(cm);
 //HC3     }
+    isMultithreaded = false;
   }
 
   /** Set the maximum time to wait for the underlying socket connection to
@@ -168,7 +169,9 @@ public class LockssUrlConnectionPool {
    * you're done with the connection pool for a while. */
   public void closeIdleConnections(long idleTime) {
 //HC3     hcConnManager.closeIdleConnections(idleTime);
-    hcConnManager.closeIdleConnections(idleTime, TimeUnit.MILLISECONDS);
+    if (hcConnManager != null) {
+      hcConnManager.closeIdleConnections(idleTime, TimeUnit.MILLISECONDS);
+    }
   }
 
 //HC3   private HttpClient setupNewHttpClient() {
@@ -186,18 +189,47 @@ public class LockssUrlConnectionPool {
     return clientContext;
   }
 
-  /** Return the HttpClientConnectionManager */
-  public HttpClientConnectionManager getHttpClientConnectionManager() {
+//HC3   /** Return the HttpClientConnectionManager */
+//HC3   public HttpClientConnectionManager getHttpClientConnectionManager() {
+//HC3     return hcConnManager;
+//HC3   }
+
+  /** Return the HttpClientConnectionManager, creating it if it does not exist.
+   */
+  public HttpClientConnectionManager getHttpClientConnectionManager(
+      Registry<ConnectionSocketFactory> rcsf) {
+    if (hcConnManager == null) {
+      setupNewHttpClientConnectionManager(rcsf);
+    }
+
     return hcConnManager;
   }
 
-  public HttpClientConnectionManager resetHttpClientConnectionManager() {
-    if (hcConnManager instanceof PoolingHttpClientConnectionManager) {
-      hcConnManager = new PoolingHttpClientConnectionManager();
+  protected HttpClientConnectionManager setupNewHttpClientConnectionManager(
+      Registry<ConnectionSocketFactory> rcsf) {
+    if (isMultiThreaded()) {
+      PoolingHttpClientConnectionManager phcm = null;
+      if (rcsf == null) {
+	phcm = new PoolingHttpClientConnectionManager();
+      } else {
+	phcm = new PoolingHttpClientConnectionManager(rcsf);
+      }
+      phcm.setMaxTotal(getMaxTotalConnections());
+      phcm.setDefaultMaxPerRoute(getMaxConnectionsPerHost());
+      hcConnManager = phcm;
     } else {
-      hcConnManager = new BasicHttpClientConnectionManager();
+      if (rcsf == null) {
+	hcConnManager = new BasicHttpClientConnectionManager();
+      } else {
+	hcConnManager = new BasicHttpClientConnectionManager(rcsf);
+      }
     }
     return hcConnManager;
+  }
+
+  public HttpClientContext resetHttpClientContext() {
+    context = setupNewHttpClientContext();
+    return context;
   }
 
 //HC3   private void setTimeouts(HttpConnectionManager cm) {
@@ -221,6 +253,22 @@ public class LockssUrlConnectionPool {
 //HC3   protected HttpClient newHttpClient() {
 //HC3     return new HttpClient();
 //HC3   }
+
+  public void setHttpClientConnectionManager(HttpClientConnectionManager hccm) {
+    hcConnManager = hccm;
+  }
+
+  public boolean isMultiThreaded() {
+    return isMultithreaded;
+  }
+
+  public int getMaxTotalConnections() {
+    return maxTotalConnections;
+  }
+
+  public int getMaxConnectionsPerHost() {
+    return maxConnectionsPerHost;
+  }
 
   private int shortenToInt(long n) {
     if (n <= Integer.MAX_VALUE && n >= Integer.MIN_VALUE) {

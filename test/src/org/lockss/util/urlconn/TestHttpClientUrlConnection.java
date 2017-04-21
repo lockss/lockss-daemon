@@ -102,7 +102,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   public void testGetCookiePolicy() throws Exception {
 //HC3     assertEquals(CookiePolicy.RFC_2109,
-    assertEquals(CookieSpecs.DEFAULT,
+    assertEquals("rfc2109",
 		 getCookiePolicy(Constants.COOKIE_POLICY_RFC_2109));
 
 //HC3     assertEquals(CookiePolicy.NETSCAPE,
@@ -257,7 +257,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
-    assertClass(PermissiveSSLProtocolSocketFactory.class,
+//HC3     assertClass(PermissiveSSLProtocolSocketFactory.class,
+    assertClass(SSLConnectionSocketFactory.class,
  		conn.getDefaultSocketFactory());
   }
 
@@ -278,7 +279,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
-    assertClass(EasySSLProtocolSocketFactory.class,
+//HC3     assertClass(EasySSLProtocolSocketFactory.class,
+    assertClass(SSLConnectionSocketFactory.class,
  		conn.getDefaultSocketFactory());
   }
 
@@ -288,7 +290,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
-    assertClass(PermissiveSSLProtocolSocketFactory.class,
+//HC3     assertClass(PermissiveSSLProtocolSocketFactory.class,
+    assertClass(SSLConnectionSocketFactory.class,
 		conn.getDefaultSocketFactory());
 //        conn.getDefaultSocketFactory(ServerTrustLevel.Untrusted));
   }
@@ -773,16 +776,16 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 //HC3       methods.add(nextMethod);
 //HC3     }
 
-    // TODO: Migrate to HttpClient 4.
 //HC3     ProtocolSocketFactory getDefaultSocketFactory() {
     LayeredConnectionSocketFactory getDefaultSocketFactory() {
-      String host = url.getHost();
-      int port = url.getPort();
-      if (port <= 0) {
-	port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
-      }
-
-      return DISP_FACT.getFactory(host, port);
+//HC3       String host = url.getHost();
+//HC3       int port = url.getPort();
+//HC3       if (port <= 0) {
+//HC3         port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
+//HC3       }
+//
+//HC3       return DISP_FACT.getFactory(host, port);
+      return getSslConnectionFactory();
     }
 
     @Override
@@ -795,6 +798,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       StatusLine statusLine =
       new BasicStatusLine(HttpVersion.HTTP_1_1, mres, statusText);
       response = new BasicHttpResponse(statusLine);
+      setResponseCode(mres);
       return response;
     }
 
@@ -875,6 +879,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       }
 
       return null;
+    }
+
+    public LockssSecureSocketFactory getSecureSocketFactory() {
+      return sockFact;
     }
   }
 }

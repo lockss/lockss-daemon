@@ -55,17 +55,15 @@ package org.lockss.util.urlconn;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
 import java.security.*;
-import java.security.cert.*;
 import javax.net.ssl.*;
-
 //HC3 import org.apache.commons.httpclient.ConnectTimeoutException;
 //HC3 import org.apache.commons.httpclient.params.HttpConnectionParams;
 //HC3 import org.apache.commons.httpclient.protocol.ControllerThreadSocketFactory;
 //HC3 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
 import org.apache.http.HttpHost;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.protocol.HttpContext;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -139,13 +137,13 @@ public class AuthSSLProtocolSocketFactory
 
   public static final String DEFAULT_SSL_PROTOCOL = "SSL";
 
-  private LockssKeyStoreManager keystoreMgr;
   private String privateKeyStoreName;
   private String publicKeyStoreName;
   private String sslProtocol = DEFAULT_SSL_PROTOCOL;
   private SSLContext sslcontext = null;
   private boolean hasKeyManagers = false;
   private boolean hasTrustManagers = false;
+  private SSLConnectionSocketFactory sslCsf = null;
 
   /**
    * Constructor for AuthSSLProtocolSocketFactory.  Either a public
@@ -233,6 +231,7 @@ public class AuthSSLProtocolSocketFactory
   SSLContext getSSLContext() throws IOException {
     if (this.sslcontext == null) {
       this.sslcontext = createSSLContext();
+      sslCsf = new SSLConnectionSocketFactory(getSSLContext());
     }
     return this.sslcontext;
   }
@@ -303,6 +302,26 @@ public class AuthSSLProtocolSocketFactory
 //HC3 							   port, autoClose);
 //HC3   }
 
+  @Override
+  public Socket connectSocket(int connectTimeout, Socket socket,
+      HttpHost httpHost, InetSocketAddress remoteAddress,
+      InetSocketAddress localAddress, HttpContext context)
+      throws IOException {
+    return sslCsf.connectSocket(connectTimeout, socket, httpHost, remoteAddress,
+	localAddress, context);
+  }
+
+  @Override
+  public Socket createSocket(HttpContext context) throws IOException {
+    return sslCsf.createSocket(context);
+  }
+
+  @Override
+  public Socket createLayeredSocket(Socket socket, String host, int port,
+      HttpContext context) throws IOException, UnknownHostException {
+    return sslCsf.createLayeredSocket(socket, host, port, context);
+  }
+
   // for testing
   boolean hasKeyManagers() {
     return hasKeyManagers;
@@ -310,27 +329,5 @@ public class AuthSSLProtocolSocketFactory
 
   boolean hasTrustManagers() {
     return hasTrustManagers;
-  }
-
-  @Override
-  public Socket connectSocket(int connectTimeout, Socket socket,
-      HttpHost httpHost, InetSocketAddress remoteAddress,
-      InetSocketAddress localAddress, HttpContext context)
-      throws IOException {
-    // TODO: Implement it.
-    return null;
-  }
-
-  @Override
-  public Socket createSocket(HttpContext context) throws IOException {
-    // TODO: Implement it.
-    return null;
-  }
-
-  @Override
-  public Socket createLayeredSocket(Socket socket, String host, int port,
-      HttpContext context) throws IOException, UnknownHostException {
-    // TODO: Implement it.
-    return null;
   }
 }

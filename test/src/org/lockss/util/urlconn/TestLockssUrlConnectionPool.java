@@ -28,17 +28,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
-import java.io.*;
-import java.util.*;
-
+//import java.io.*;
+//import java.util.*;
+//HC3 import org.apache.commons.httpclient.*;
+//HC3 import org.apache.commons.httpclient.params.*;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.lockss.test.*;
-import org.lockss.util.*;
-//HC3 import org.apache.commons.httpclient.*;
-//HC3 import org.apache.commons.httpclient.params.*;
+//import org.lockss.util.*;
 
 /**
  * Test class for org.lockss.util.urlconn.LockssUrlConnectionPool
@@ -134,7 +133,7 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     pool.setMultiThreaded(8, 3);
 //HC3     HttpClient client = pool.getHttpClient();
 //HC3     HttpConnectionManager mgr = client.getHttpConnectionManager();
-    HttpClientConnectionManager mgr = pool.getHttpClientConnectionManager();
+    HttpClientConnectionManager mgr = pool.getHttpClientConnectionManager(null);
 //HC3     assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
     assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
 //HC3     MultiThreadedHttpConnectionManager mtm =

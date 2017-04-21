@@ -33,11 +33,13 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.nio.charset.Charset;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.*;
-
 import javax.net.ssl.SSLContext;
-
 //HC3 import org.apache.commons.httpclient.*;
 //HC3 import org.apache.commons.httpclient.Header;
 //HC3 import org.apache.commons.httpclient.HttpConnection;
@@ -62,6 +64,7 @@ import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.DateUtils;
 import org.apache.http.config.ConnectionConfig;
+import org.apache.http.config.Lookup;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.config.SocketConfig;
@@ -71,11 +74,16 @@ import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLContextBuilder;
+import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
+import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.client.methods.CloseableHttpResponse;
 //HC3 import org.apache.commons.httpclient.methods.GetMethod;
 //HC3 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.cookie.Cookie;
+import org.apache.http.cookie.CookieSpecProvider;
 import org.apache.http.cookie.SetCookie;
 //HC3 import org.apache.commons.httpclient.methods.RequestEntity;
 //HC3 import org.apache.commons.httpclient.params.*;
@@ -92,6 +100,14 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.impl.cookie.BasicClientCookie;
+import org.apache.http.impl.cookie.BestMatchSpecFactory;
+import org.apache.http.impl.cookie.BrowserCompatSpecFactory;
+import org.apache.http.impl.cookie.IgnoreSpecFactory;
+import org.apache.http.impl.cookie.NetscapeDraftSpecFactory;
+import org.apache.http.impl.cookie.RFC2109SpecFactory;
+import org.apache.http.impl.cookie.RFC2965SpecFactory;
+import org.apache.http.protocol.HttpProcessorBuilder;
+import org.apache.http.util.EntityUtils;
 //HC3 import org.apache.commons.httpclient.protocol.*;
 //HC3 import org.apache.commons.httpclient.protocol.Protocol;
 //HC3 import org.apache.commons.httpclient.protocol.SSLProtocolSocketFactory;
@@ -169,9 +185,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   // Protocol in the HostConfiguration - HttpClient.executeMethod()
   // overwrites it.  So we must communicate the per-host policies to a
   // global factory.
-  static DispatchingSSLProtocolSocketFactory DISP_FACT =
-    new DispatchingSSLProtocolSocketFactory();
-  static {
+//HC3   static DispatchingSSLProtocolSocketFactory DISP_FACT =
+//HC3     new DispatchingSSLProtocolSocketFactory();
+//HC3   static {
 //HC3     // Install our http factory
 //HC3     Protocol http_proto =
 //HC3       new Protocol("http",
@@ -182,15 +198,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3     // Install our https factory
 //HC3     Protocol https_proto = new Protocol("https", DISP_FACT, 443);
 //HC3     Protocol.registerProtocol("https", https_proto);
-    Registry<ConnectionSocketFactory> r =
-	RegistryBuilder.<ConnectionSocketFactory>create()
-	.register("http", LockssDefaultProtocolSocketFactory.getSocketFactory())
-	.register("https", DISP_FACT)
-	.build();
-    if (log.isDebug3()) log.debug3("static {} : r = " + r);
-
-    DISP_FACT.setDefaultFactory(getDefaultSocketFactory(DEFAULT_SERVER_TRUST_LEVEL));
-  }
+//HC3
+//HC3     DISP_FACT.setDefaultFactory(getDefaultSocketFactory(DEFAULT_SERVER_TRUST_LEVEL));
+//HC3   }
 
 //HC3   private static ServerTrustLevel serverTrustLevel;
   private static String acceptHeader = DEFAULT_ACCEPT_HEADER;
@@ -213,10 +223,49 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       }
       return new SSLConnectionSocketFactory(sslContext);
     case SelfSigned:
-      return new EasySSLProtocolSocketFactory();
+//HC3       return new EasySSLProtocolSocketFactory();
+      SSLConnectionSocketFactory easyCsf = null;
+      try {
+	SSLContextBuilder builder = new SSLContextBuilder();
+	builder.loadTrustMaterial(null, new TrustSelfSignedStrategy());
+	easyCsf = new SSLConnectionSocketFactory(builder.build(),
+	    SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+      } catch (NoSuchAlgorithmException e) {
+	// This could happen if the JVM does not have the appropriate security
+	// extensions.
+	throw new RuntimeException(e);
+      } catch (KeyStoreException e) {
+	throw new RuntimeException(e);
+      } catch (KeyManagementException e) {
+	throw new RuntimeException(e);
+      }
+      return easyCsf;
     case Untrusted:
     default:
-      return new PermissiveSSLProtocolSocketFactory();
+//HC3       return new PermissiveSSLProtocolSocketFactory();
+      SSLConnectionSocketFactory permissiveCsf = null;
+      try {
+	SSLContextBuilder builder = new SSLContextBuilder();
+	builder.loadTrustMaterial(null, new TrustStrategy() {
+	  @Override
+	  public boolean isTrusted(X509Certificate[] chain,
+	      String authType) throws CertificateException {
+	    return true;
+	  }
+        });
+
+	permissiveCsf = new SSLConnectionSocketFactory(builder.build(),
+	    SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+      } catch (NoSuchAlgorithmException e) {
+	// This could happen if the JVM does not have the appropriate security
+	// extensions.
+	throw new RuntimeException(e);
+      } catch (KeyStoreException e) {
+	throw new RuntimeException(e);
+      } catch (KeyManagementException e) {
+	throw new RuntimeException(e);
+      }
+      return permissiveCsf;
     }
   }
 
@@ -254,29 +303,30 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	cookiePolicy = getCookiePolicy(policy);
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "cookiePolicy = " + cookiePolicy);
-      }
 
-      if (diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
-	boolean val = config.getBoolean(PARAM_SINGLE_COOKIE_HEADER,
-					DEFAULT_SINGLE_COOKIE_HEADER);
-	log.debug3(DEBUG_HEADER + "val = " + val);
+	boolean val = DEFAULT_SINGLE_COOKIE_HEADER;
+
+	if (diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
+	  val = config.getBoolean(PARAM_SINGLE_COOKIE_HEADER,
+	      DEFAULT_SINGLE_COOKIE_HEADER);
+	  log.debug3(DEBUG_HEADER + "val = " + val);
 //HC3         params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
 //HC3 		   val);
-
-	if (val) {
-	  // Per http://mail-archives.apache.org/mod_mbox/hc-httpclient-users/201405.mbox/ajax/%3C1399818037.8345.0.camel%40ubuntu%3E
-	  //
-	  // > So to my understanding after reading the code for BrowserCompatSpec [0] is
-	  // > that when using the "CookieSpecs.BROWSER_COMPATIBILITY" when building the
-	  // > cookie spec the single cookie header policy is already in place?
-	  // >
-	  // >
-	  //
-	  // Yes, this is correct. 
-	  cookiePolicy = CookieSpecs.BROWSER_COMPATIBILITY;
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "cookiePolicy = " + cookiePolicy);
 	}
+
+        cookieSpecRegistry = RegistryBuilder.<CookieSpecProvider>create()
+            .register(CookieSpecs.BEST_MATCH,
+        	new BestMatchSpecFactory(null, val))
+            .register(CookieSpecs.STANDARD, new RFC2965SpecFactory(null, val))
+            .register(CookieSpecs.BROWSER_COMPATIBILITY,
+        	new BrowserCompatSpecFactory())
+            .register(CookieSpecs.NETSCAPE, new NetscapeDraftSpecFactory())
+            .register(CookieSpecs.IGNORE_COOKIES, new IgnoreSpecFactory())
+            .register("rfc2109", new RFC2109SpecFactory(null, val))
+            .register("rfc2965", new RFC2965SpecFactory(null, val))
+            .build();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "cookieSpecRegistry = " + cookieSpecRegistry);
       }
 
       if (diffs.contains(PARAM_HEADER_CHARSET)) {
@@ -287,11 +337,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	charset = getCharset(val);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "charset = " + charset);
       }
-      ServerTrustLevel stl =
-	(ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
-					 PARAM_SERVER_TRUST_LEVEL,
-					 DEFAULT_SERVER_TRUST_LEVEL);
-      DISP_FACT.setDefaultFactory(getDefaultSocketFactory(stl));
+//HC3       ServerTrustLevel stl =
+//HC3         (ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
+//HC3 					 PARAM_SERVER_TRUST_LEVEL,
+//HC3 					 DEFAULT_SERVER_TRUST_LEVEL);
+//HC3       DISP_FACT.setDefaultFactory(getDefaultSocketFactory(stl));
     }
   }
 
@@ -306,7 +356,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     if (Constants.COOKIE_POLICY_RFC_2109.equalsIgnoreCase(policy)) {
 //HC3       return CookiePolicy.RFC_2109;
-      return CookieSpecs.DEFAULT;
+      return "rfc2109";
     } else if (Constants.COOKIE_POLICY_NETSCAPE.equalsIgnoreCase(policy)) {
 //HC3       return CookiePolicy.NETSCAPE;
       return CookieSpecs.NETSCAPE;
@@ -353,7 +403,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private int methodCode;
   private LockssUrlConnectionPool connectionPool;
   private int responseCode;
-  private HttpResponse response;
+  private CloseableHttpResponse response;
   private RequestBuilder reqBuilder = null;
   private HttpUriRequest httpUriRequest = null;
   private HttpClientBuilder clientBuilder = null;
@@ -365,6 +415,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private ConnectionConfig.Builder connectionConfigBuilder = null;
   private HttpClientConnectionManager connManager = null;
   private boolean followRedirects = true;
+  private LayeredConnectionSocketFactory hcSockFact;
+  private static Lookup<CookieSpecProvider> cookieSpecRegistry;
 
   /** Create a connection object, defaulting to GET method */
 //HC3   public HttpClientUrlConnection(String urlString, HttpClient client)
@@ -422,14 +474,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     connectionConfigBuilder = ConnectionConfig.custom();
     connectionConfigBuilder.setCharset(charset);
-
-    if (connectionPool == null) {
-      connManager = new BasicHttpClientConnectionManager();
-    } else {
-      connManager = connectionPool.getHttpClientConnectionManager();
-    }
-
-    if(log.isDebug3()) log.debug3("connManager = "+ connManager);
   }
 
 //HC3   private HttpMethod createMethod(int methodCode, String urlString)
@@ -496,6 +540,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "methodCode = " + methodCode);
     if (methodCode != LockssUrlConnection.METHOD_PROXY) {
       mimicSunRequestHeaders();
+    } else {
+      clientBuilder.setHttpProcessor(HttpProcessorBuilder.create().build());
     }
 
 //HC3     HostConfiguration hostConfig = client.getHostConfiguration();
@@ -516,19 +562,42 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     if (sockFact != null) {
 //HC3       SecureProtocolSocketFactory hcSockFact =
-      LayeredConnectionSocketFactory hcSockFact =
-	sockFact.getHttpClientSecureProtocolSocketFactory();
-      String host = url.getHost();
-      int port = url.getPort();
-      if (port <= 0) {
-	port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
-      }
-      DISP_FACT.setFactory(host, port, hcSockFact);
+      hcSockFact =
+        sockFact.getHttpClientSecureProtocolSocketFactory();
+//HC3       String host = url.getHost();
+//HC3       int port = url.getPort();
+//HC3       if (port <= 0) {
+//HC3         port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
+//HC3       }
+//HC3       DISP_FACT.setFactory(host, port, hcSockFact);
       // XXX Would like to check after connection is made that cert check
       // was actually done, but there's no good way to get to the socket or
       // SSLContect, etc.
       isAuthenticatedServer = sockFact.requiresServerAuth();
+    } else {
+      ServerTrustLevel stl = (ServerTrustLevel)CurrentConfig.getCurrentConfig()
+	  .getEnum(ServerTrustLevel.class, PARAM_SERVER_TRUST_LEVEL,
+	      DEFAULT_SERVER_TRUST_LEVEL);
+      hcSockFact = getDefaultSocketFactory(stl);
     }
+
+    clientBuilder.setSSLSocketFactory(hcSockFact);
+
+    Registry<ConnectionSocketFactory> rcsf =
+	RegistryBuilder.<ConnectionSocketFactory>create()
+	.register("http", LockssDefaultProtocolSocketFactory.getSocketFactory())
+	.register("https", hcSockFact)
+	.build();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "rcsf = " + rcsf);
+
+    if (connectionPool == null) {
+      connManager = new BasicHttpClientConnectionManager(rcsf);
+    } else {
+      connManager = connectionPool.getHttpClientConnectionManager(rcsf);
+    }
+
+    if(log.isDebug3()) log.debug3(DEBUG_HEADER + "connManager = "+ connManager);
+
     isExecuted = true;
 //HC3     responseCode = executeOnce(method);
     responseCode = executeOnce();
@@ -586,6 +655,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reqConfig = " + reqConfig);
 
       clientBuilder.setConnectionManager(connManager)
+      .setDefaultCookieSpecRegistry(cookieSpecRegistry) 	
       .setDefaultSocketConfig(socketConfig).setDefaultRequestConfig(reqConfig);
 
       if (!followRedirects) {
@@ -606,13 +676,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	}
       }
 
-      response = executeRequest(httpUriRequest, context);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "response = " + response);
+      executeRequest(httpUriRequest, context);
 
       logContext(DEBUG_HEADER);
 
 //HC3       return client.executeMethod(method);
-      return response.getStatusLine().getStatusCode();
+      return responseCode;
 //HC3     } catch (ConnectTimeoutException /*| java.net.SocketTimeoutException*/ e) {
 //HC3       // Thrown by HttpClient if the connect timeout elapses before
 //HC3       // socket.connect() returns.
@@ -688,7 +757,15 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   protected HttpResponse executeRequest(HttpUriRequest httpUriRequest,
 	HttpClientContext context) throws ClientProtocolException, IOException {
-    return client.execute(httpUriRequest, context);
+    final String DEBUG_HEADER = "executeRequest(): ";
+    response = client.execute(httpUriRequest, context);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "response = " + response);
+
+    responseCode = response.getStatusLine().getStatusCode();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "responseCode = " + responseCode);
+
+    return response;
   }
 
   public boolean canProxy() {
@@ -901,6 +978,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public int getResponseCode() {
     assertExecuted();
     return responseCode;
+  }
+
+  protected void setResponseCode(int code) {
+    assertExecuted();
+    responseCode = code;
   }
 
   public String getResponseMessage() {
@@ -1121,19 +1203,27 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    * Release resources associated with this request.
    */
   public void release() {
+    final String DEBUG_HEADER = "release(): ";
     assertExecuted();
-//HC3     try {
+    try {
 //HC3       method.releaseConnection();
-//HC3     } catch (IOException ioe) {
-//HC3       // Nothing to do.
-//HC3     }
-    // TODO: Migrate to HttpClient 4.
-// TODO:     connectionPool.resetHttpClientConnectionManager();
-// TODO:     try {
-// TODO:       client.close();
-// TODO:     } catch (IOException ioe) {
-// TODO:       // Nothing to do.
-// TODO:     }
+      HttpEntity entity = response.getEntity();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entity = " + entity);
+
+      EntityUtils.consume(entity);
+    } catch (IOException ioe) {
+      // Nothing to do.
+      if (log.isDebug()) log.debug(DEBUG_HEADER
+	  + "Unexpected exception caught consuming response entity: ", ioe);
+    } finally {
+      try {
+	response.close();
+      } catch (IOException ioe) {
+	// Nothing to do.
+	if (log.isDebug()) log.debug(DEBUG_HEADER
+	    + "Unexpected exception caught closing response: ", ioe);
+      }
+    }
   }
 
   /**
@@ -1180,6 +1270,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   int getMethodCode() {
     return methodCode;
+  }
+
+  LayeredConnectionSocketFactory getSslConnectionFactory() {
+    return hcSockFact;
   }
 
 //HC3   /** Common interface for our methods makes testing more convenient */
