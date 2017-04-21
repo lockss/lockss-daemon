@@ -2,7 +2,7 @@
 
   publisher <
     name = Conservatory and Botanical Garden of the City of Geneva (CJBG) ;
-    info[contract] = 2014 ; 
+    info[contract] = 9999 ; 
     info[tester] = 5 ;
     info[poller] = 3
   >
@@ -20,14 +20,14 @@
 
       param[journal_id] = cand
       
-      au < manifest ; exists ; 2010 ; Candollea Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2011 ; Candollea Volume 66 ; 66 ; >
-      au < manifest ; exists ; 2012 ; Candollea Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2013 ; Candollea Volume 68 ; 68 ; >
-      au < frozen ; exists ; 2014 ; Candollea Volume 69 ; 69 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Candollea Volume 70 ; 70 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Candollea Volume 71 ; 71 ; >
-      au < manifest ; exists ; 2017 ; Candollea Volume 72 ; 72 ; >
+      au < doNotProcess ; exists ; 2010 ; Candollea Volume 65 ; 65 ; >
+      au < doNotProcess ; exists ; 2011 ; Candollea Volume 66 ; 66 ; >
+      au < doNotProcess ; exists ; 2012 ; Candollea Volume 67 ; 67 ; >
+      au < doNotProcess ; exists ; 2013 ; Candollea Volume 68 ; 68 ; >
+      au < superseded ; exists ; 2014 ; Candollea Volume 69 [superseded] ; 69 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; Candollea Volume 70 [superseded] ; 70 ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; Candollea Volume 71 [superseded] ; 71 ; >
+      au < doNotProcess ; exists ; 2017 ; Candollea Volume 72 ; 72 ; >
 
     }
 
