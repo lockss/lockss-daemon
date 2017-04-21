@@ -1,0 +1,158 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>prototype</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.anu.ClockssAnuPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>0</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Australian National University Press Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Australian National University Press Plugin (CLOCKSS), Base URL %s, ID %s", base_url, volume_issue_id</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s", base_url, volume_issue_id</string>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>(press(-files)?|style)\.anu\.edu\.au</string>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+      <string>http://press-files.anu.edu.au/</string>
+      <string>https://press-files.anu.edu.au/</string>
+      <string>http://style.anu.edu.au/</string>
+      <string>https://style.anu.edu.au/</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- start to landing page -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://([^.]+\.anu\.edu\.au)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
+      <string>2,"\?search="</string>
+      <string>1,"^https?://%s%s.*%s(/download)?", url_host(base_url), url_path(base_url), volume_issue_id</string>
+      <string>1,"^https?://%s%s(\?p=|node/)[0-9]+$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://press-files\.anu\.edu\.au/downloads/press/[^/]+/(pdf|html)/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://press-files.anu.edu.au/downloads/press/[^/]+/pdf/book\.pdf"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <!-- <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_dir</key>
+        <displayName>Journal Directory</displayName>
+        <description>Directory name for journal content (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr> -->
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_issue_id</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>100</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.anu.AnuUrlNormalizer</string>
+  </entry>
+<!--   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.anu.AnuHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.anu.AnuArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.anu.AnuArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.anu.AnuHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry> -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$"</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$", 0</string>
+    </list>
+  </entry>
+</map>
