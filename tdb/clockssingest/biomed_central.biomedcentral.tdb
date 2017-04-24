@@ -2513,7 +2513,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       # moved to iMedPub on 2014-12-31
 
       au < frozen ; exists ; 2008 ; International Archives of Medicine Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2009 ; International Archives of Medicine Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2009 ; International Archives of Medicine Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; International Archives of Medicine Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; International Archives of Medicine Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; International Archives of Medicine Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -2763,7 +2763,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Irish Veterinary Journal Volume 58 ; 58 ; >
       au < doNotProcess ; exists ; 2006 ; Irish Veterinary Journal Volume 59 ; 59 ; >
       au < doNotProcess ; exists ; 2007 ; Irish Veterinary Journal Volume 60 ; 60 ; >
-      au < frozen ; exists ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 ; >
+      au < finished ; manifest ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 ; reingest1.clockss.org:8082 >
@@ -3019,10 +3019,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 ; >
       au < frozen ; exists ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 ; >
       au < frozen ; exists ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 8 ; 8 ; >
       au < doNotProcess ; exists ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 ; >
@@ -3367,11 +3367,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; doNotProcess ; 2006 ; Journal of Molecular Signaling Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; Journal of Molecular Signaling Volume 2 ; 2 ; >
       au < finished ; manifest ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 ; >
       au < frozen ; exists ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
     }
 
@@ -3417,7 +3417,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2005 ; Journal of Negative Results in Biomedicine Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2006 ; Journal of Negative Results in Biomedicine Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Negative Results in Biomedicine Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -3510,7 +3510,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 ; >
       au < finished ; manifest ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 ; >
@@ -3950,7 +3950,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 1756-6606
 
       au < finished ; manifest ; 2008 ; Molecular Brain Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2009 ; Molecular Brain Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Molecular Brain Volume 3 ; 3 ; >
       au < finished ; frozen ; 2011 ; Molecular Brain Volume 4 ; 4 ; >
       au < frozen ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 ; >
@@ -4104,7 +4104,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2006 ; Neural Development Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Neural Development Volume 2 ; 2 ; >
       au < finished ; manifest ; 2008 ; Neural Development Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; Neural Development Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2009 ; Neural Development Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Neural Development Volume 5 ; 5 ; >
       au < finished ; frozen ; 2011 ; Neural Development Volume 6 ; 6 ; >
       au < finished ; manifest ; 2012 ; Neural Development Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -4998,7 +4998,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < frozen ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 ; >
       au < finished ; manifest ; 2011 ; Vascular Cell Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; Vascular Cell Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2013 ; Vascular Cell Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Vascular Cell Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Vascular Cell Volume 7 ; 7 ; >
 
