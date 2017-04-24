@@ -151,7 +151,7 @@
       #see https://mulpress.mcmaster.ca/jpc/gateway/lockss
       #see https://mulpress.mcmaster.ca/jpc/gateway/lockss?year=0
 
-      au < exists ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
+      au < manifest ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 
     }
 

@@ -96,7 +96,7 @@
     au < doNotProcess ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 ; >
     au < finished ; crawling ; 2015 ; Anesthesia: Essays and Researches Volume 9 ; 2015 ; 9 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Anesthesia: Essays and Researches Volume 10 ; 2016 ; 10 ; >
-    au < expected ; exists ; 2017 ; Anesthesia: Essays and Researches Volume 11 ; 2017 ; 11 ; >
+    au < manifest ; exists ; 2017 ; Anesthesia: Essays and Researches Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -122,7 +122,7 @@
     au < finished ; finished ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Annals of African Medicine Volume 14 ; 2015 ; 14 ; > #login page 
     au < crawling ; exists ; 2016 ; Annals of African Medicine Volume 15 ; 2016 ; 15 ; >
-    au < expected ; exists ; 2017 ; Annals of African Medicine Volume 16 ; 2017 ; 16 ; >
+    au < manifest ; exists ; 2017 ; Annals of African Medicine Volume 16 ; 2017 ; 16 ; >
 
   }
 
@@ -152,7 +152,7 @@
     au < finished ; crawling ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Annals of Cardiac Anaesthesia Volume 19 ; 2016 ; 19 ; >
-    au < expected ; exists ; 2017 ; Annals of Cardiac Anaesthesia Volume 20 ; 2017 ; 20 ; >
+    au < manifest ; exists ; 2017 ; Annals of Cardiac Anaesthesia Volume 20 ; 2017 ; 20 ; >
 
   }
 
@@ -186,7 +186,7 @@
     au < finished ; crawling ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 ; >
-    au < expected ; exists ; 2017 ; Annals of Indian Academy of Neurology Volume 20 ; 2017 ; 20 ; >
+    au < manifest ; exists ; 2017 ; Annals of Indian Academy of Neurology Volume 20 ; 2017 ; 20 ; >
 
   }
 
@@ -4433,8 +4433,8 @@
       param[journal_issn] = 2542-3932
       param[base_url] = http://www.actnjournal.com/
 
-      au < exists ; exists ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; >
-      au < exists ; exists ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; >
+      au < manifest ; exists ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; >
 
   }
 
@@ -4638,8 +4638,8 @@
       param[journal_issn] = 2542-3975
       param[base_url] = http://www.clinicaltdd.com/
 
-      au < exists ; exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; >
-      au < exists ; exists ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; >
+      au < manifest ; exists ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; >
 
   }
 
@@ -4657,8 +4657,8 @@
       param[journal_issn] = 2542-4157
       param[base_url] = http://www.clinicalto.com/
 
-      au < exists ; exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; >
-      au < exists ; exists ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; >
+      au < manifest ; exists ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; >
 
   }
 
