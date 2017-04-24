@@ -88,7 +88,7 @@
     >
 
     #param[base_url] = http://www.education-inquiry.net/
-    param[journal_id] = zedui20
+    param[journal_id] = zedu20
 
     au < exists ; 2010 ; Education Inquiry Volume 1 ; 1 >
     au < exists ; 2011 ; Education Inquiry Volume 2 ; 2 >
@@ -97,7 +97,7 @@
     au < exists ; 2014 ; Education Inquiry Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; Education Inquiry Volume 6 ; 6 >
     au < exists ; 2016 ; Education Inquiry Volume 7 ; 7 >
-    au < expected ; 2017 ; Education Inquiry Volume 8 ; 8 >
+    au < exists ; 2017 ; Education Inquiry Volume 8 ; 8 >
 
   }
 
@@ -158,12 +158,12 @@
     >
 
     #param[base_url] = http://www.ecrj.net/
-    param[journal_id] = zecrj20
+    param[journal_id] = zecr20
 
     au < exists ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 >
     au < doNotProcess ; 2015 ; European Clinical Respiratory Journal Volume 2 ; 2 >
-    au < expected ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 >
-    au < expected ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 >
+    au < exists ; 2016 ; European Clinical Respiratory Journal Volume 3 ; 3 >
+    au < exists ; 2017 ; European Clinical Respiratory Journal Volume 4 ; 4 >
 
   }
 
