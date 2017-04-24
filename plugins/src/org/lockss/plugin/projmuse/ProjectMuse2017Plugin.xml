@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -127,7 +127,7 @@
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.projmuse.ProjectMuseHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.projmuse.ProjectMuse2017HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -184,6 +184,13 @@
     <list>
       <string>"/article/[^/]+/pdfimage$", 0</string>
       <string>"[.](css|js)$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.projmuse.ProjectMuse2017HttpResponseHandler</string>
+      <string>javax.net.ssl.SSLHandshakeException=org.lockss.plugin.projmuse.ProjectMuse2017HttpResponseHandler</string>
     </list>
   </entry>
 </map>
