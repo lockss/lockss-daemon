@@ -91,6 +91,8 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttributeRegex("a", "class",
               "(abstract|fulltext|pdf.*)-link")),
       HtmlNodeFilters.tagWithAttribute("a", "id", "comments"),
+      // Extreme filtering
+      HtmlNodeFilters.tagWithAttribute("div", "id", "article-note"),
       
       // Contains one-time names inside the page
       HtmlNodeFilters.tagWithAttribute("a", "name"),
