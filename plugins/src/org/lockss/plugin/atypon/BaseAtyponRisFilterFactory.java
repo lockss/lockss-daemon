@@ -32,10 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
-/* 
- * Using a local version of RisFilterInputStream until the org.lockss.filter version is released
- * (probably 1.63).  Until then you cannot include org.lockss.filter or there will be ambiguity.
- */
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -115,7 +112,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
     }
   }
 
-  private RisFilterReader getRisFilterReader(String encoding, InputStream inBuf)
+  protected RisFilterReader getRisFilterReader(String encoding, InputStream inBuf)
       throws UnsupportedEncodingException {
     return new RisFilterReader(inBuf, encoding, "Y2");
   }

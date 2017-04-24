@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>68</string>
+    <string>71</string>
   </entry>  
   <entry>
     <string>au_name</string>
@@ -52,6 +52,15 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPdfFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MMRisFilterFactory</string>
+  </entry>
+<!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+  <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MMRisFilterFactory</string>
+  </entry>  
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyHtmlCrawlFilterFactory</string>

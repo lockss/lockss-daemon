@@ -60,7 +60,7 @@ public class TestMassachusettsMedicalSocietyRisFilterFactory extends LockssTestC
                   sb.append("TY  - JOUR");
                   sb.append("\nJO  - N Engl J Med");
                   sb.append("\nM3  - doi: 10.1056/NEJM197901183000301");
-                  sb.append("\nUR  - http://dx.doi.org/10.1056/NEJM197901183000301");
+                  //sb.append("\nUR  - http://dx.doi.org/10.1056/NEJM197901183000301");
                   sb.append("\n");
                   risDataFiltered = sb.toString();
           }
@@ -115,13 +115,14 @@ public class TestMassachusettsMedicalSocietyRisFilterFactory extends LockssTestC
                   sb.append("\nPB  - Massachusetts Medical Society");
                   sb.append("\nSN  - 0028-4793");
                   sb.append("\nM3  - doi: 10.1056/NEJMc0706528");
-                  sb.append("\nUR  - http://dx.doi.org/10.1056/NEJMc0706528");
+                  //sb.append("\nUR  - http://dx.doi.org/10.1056/NEJMc0706528");
                   sb.append("\nER  - ");
                   moreRisDataFiltered = sb.toString();
           }
         public void setUp() throws Exception {
                 super.setUp();
-                fact = new BaseAtyponRisFilterFactory();
+                //fact = new BaseAtyponRisFilterFactory();
+                fact = new MMRisFilterFactory();
                 mau = new MockArchivalUnit();
         }
         
