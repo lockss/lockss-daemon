@@ -365,8 +365,6 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
       InputStream actIn = fact.createFilteredInputStream(mau, 
           new StringInputStream(verticalLinesHtmlHash),
           Constants.DEFAULT_ENCODING);
-      //System.out.println(StringUtil.fromInputStream(actIn));
-      //System.out.println(verticalLinesHtmlHashFiltered);
       assertEquals(verticalLinesHtmlHashFiltered, StringUtil.fromInputStream(actIn));
 
       InputStream actIn2 = fact.createFilteredInputStream(mau, 
