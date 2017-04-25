@@ -276,7 +276,7 @@
     >
 
     #param[base_url] = http://www.circumpolarhealthjournal.net/
-    param[journal_id] = zijch20
+    param[journal_id] = zich20
     comment[issn] = volume 71, 2012
         
     au < doNotProcess ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 >
@@ -357,7 +357,7 @@
     >
 
     #param[base_url] = http://www.jchimp.net/
-    param[journal_id] = zjchimp20
+    param[journal_id] = zjch20
 
     au < doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 >
     au < doNotProcess ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 >
