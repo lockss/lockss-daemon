@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.springer.link.SpringerLinkJournalsContentValidator;
 
 public class TestRSC2014ResponseHandler extends LockssTestCase {
 
@@ -155,10 +154,9 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
     MyDefaultUrlCacher cacher = new MyDefaultUrlCacher(booksau, ud);
     try {
       cacher.storeContent();
-      //fail("storeContent() should have thrown WrongLength");
+      // WrongLength is mapped to Success;
     } catch (CacheException e) {
       fail("storeContent() shouldn't have thrown", e);
-      //        assertClass(CacheException.UnretryableException.class, e);
     }
     assertTrue(cacher.wasStored);
 
@@ -202,6 +200,7 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
     }catch (Exception e) {
       log.info(e.toString());
       // okay, fall-thru - we expected this to happen
+      assertClass(ContentValidationException.class, e);
     }
      
   }

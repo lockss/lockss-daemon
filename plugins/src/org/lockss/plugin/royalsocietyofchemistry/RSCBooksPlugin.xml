@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -130,9 +130,10 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <!--  thhis is okay - the map checks for the explicit class before going to the super class -->
+      <!--  this is okay - the map checks for the explicit class before going to the super class -->
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>      
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
+      <string>org.lockss.util.StreamUtil$InputException=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
       <string>400=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
     </list>
   </entry>

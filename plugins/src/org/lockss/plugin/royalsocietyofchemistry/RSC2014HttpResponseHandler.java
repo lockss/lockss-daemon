@@ -4,7 +4,7 @@
  *
  *
  *
- * Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ * Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
  * all rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,14 @@ package org.lockss.plugin.royalsocietyofchemistry
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
 import org.lockss.util.urlconn.CacheSuccess;
+import org.lockss.util.urlconn.CacheException.RetryableNetworkException_2_10S;
 
 public class RSC2014HttpResponseHandler implements CacheResultHandler {
   private static final Logger logger = Logger.getLogger(RSC2014HttpResponseHandler.class);
@@ -66,7 +68,6 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
     }
   }
-
   
   
   @Override
@@ -74,16 +75,53 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
     throws PluginException {
     logger.debug(ex.getMessage() + ": " + url);
     
+    // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
       logger.debug3("Ignoring Wrong length - storing file");
       // ignore and continue
       return new CacheSuccess();
-    } 
+    }
+    
+    // handle retryable exceptions ; URL MIME type mismatch for pages like 
+    //   http://pubs.rsc.org/en/content/articlepdf/2014/gc/c4gc90017k will never return good PDF content
+    if (ex instanceof ContentValidationException) {
+      logger.debug3("Warning - retry/no fail " + url);
+      // no store cache exception and continue
+      return new RetryableNoFailException_2_10S(ex);
+    }
+    
+    // Unmapped exception: org.lockss.util.StreamUtil$InputException: java.net.SocketTimeoutException: Read timed out
+    if (ex instanceof org.lockss.util.StreamUtil.InputException) {
+      logger.debug3("Warning - InputException " + url);
+      return new RetryableNoFailException_2_10S(ex);
+    }
+    
     // we should only get in her cases that we specifically map...be very unhappy
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException();
-
   }
-
-
+  
+  /** Retryable & no fail network error; two tries with 10 second delay */
+  protected static class RetryableNoFailException_2_10S
+    extends RetryableNetworkException_2_10S {
+    
+    public RetryableNoFailException_2_10S() {
+      super();
+    }
+    
+    public RetryableNoFailException_2_10S(String message) {
+      super(message);
+    }
+    
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNoFailException_2_10S(Exception e) {
+      super(e);
+    }
+    
+    public long getRetryDelay() {
+      return 10 * Constants.SECOND;
+    }
+    
+  }
+  
 }

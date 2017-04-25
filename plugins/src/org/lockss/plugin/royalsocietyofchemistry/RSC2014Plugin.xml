@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -200,9 +200,12 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <!--  this will work, the map checks for the specific exception before going to check super class -->
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
+        Make no store/no_fail due to html returned for PDF
+        we will count on polls to catch errors where no content was stored -->
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
+      <string>org.lockss.util.StreamUtil$InputException=org.lockss.plugin.royalsocietyofchemistry.RSC2014HttpResponseHandler</string>
     </list>
   </entry>
   <entry>
