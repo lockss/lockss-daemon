@@ -238,6 +238,16 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
         "onclick=\"newWindow(this.href);return false\">Web of Science</a> World ";
 
     private static final String servletLinkoutHtmlHashFiltered = " Hello World ";
+    
+    private static final String verticalLinesHtmlHash= 
+        "<p><a href=\"/servlet/linkout?suffix=r001&amp;dbid=16&amp;doi=10.1056%2FNEJMe1609835&amp;key=10.1016%2FS1470-2045%2814%2970442-5\" onclick=\"newWindow(this.href);return false\">CrossRef"+
+        "</a> | <a href=\"/servlet/linkout?suffix=r001&amp;dbid=128&amp;doi=10.1056%2FNEJMe1609835&amp;key=000344546400022\" onclick=\"newWindow(this.href);return false\">" +
+        "Web of Science</a> | <a href=\"/servlet/linkout?suffix=r001&amp;dbid=8&amp;doi=10.1056%2FNEJMe1609835&amp;key=25439696\" " +
+        "</a></p>"+
+        "";
+    private static final String verticalLinesHtmlHashFiltered= " <p> </p>";
+    private static final String verticalLinesHtmlHashEasy= "Hello | World";
+    private static final String verticalLinesHtmlHashEasyFiltered= "Hello World";
   
     public void testModifiedHtmlHashFiltering() throws Exception {
       InputStream actIn = fact.createFilteredInputStream(mau,
@@ -349,5 +359,20 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
           Constants.DEFAULT_ENCODING);
 
       assertEquals(servletLinkoutHtmlHashFiltered, StringUtil.fromInputStream(actIn));
+    }
+    
+    public void testVerticalLinesHashFiltering() throws Exception {
+      InputStream actIn = fact.createFilteredInputStream(mau, 
+          new StringInputStream(verticalLinesHtmlHash),
+          Constants.DEFAULT_ENCODING);
+      //System.out.println(StringUtil.fromInputStream(actIn));
+      //System.out.println(verticalLinesHtmlHashFiltered);
+      assertEquals(verticalLinesHtmlHashFiltered, StringUtil.fromInputStream(actIn));
+
+      InputStream actIn2 = fact.createFilteredInputStream(mau, 
+          new StringInputStream(verticalLinesHtmlHashEasy),
+          Constants.DEFAULT_ENCODING);
+      assertEquals(verticalLinesHtmlHashEasyFiltered, StringUtil.fromInputStream(actIn2));
+
     }
 }
