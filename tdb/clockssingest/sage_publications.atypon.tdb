@@ -41,13 +41,13 @@
       au < manifest ; exists ; 2009 ; Abstracts in Anthropology Volume 58 ; 58 ; aaxa ; >
       au < manifest ; exists ; 2009 ; Abstracts in Anthropology Volume 59 ; 59 ; aaxa ; >
       au < crawling ; exists ; 2010 ; Abstracts in Anthropology Volume 60 ; 60 ; aaxa ; >
-      au < ready ; exists ; 2010 ; Abstracts in Anthropology Volume 61 ; 61 ; aaxa ; >
-      au < ready ; exists ; 2011 ; Abstracts in Anthropology Volume 62 ; 62 ; aaxa ; >
+      au < crawling ; exists ; 2010 ; Abstracts in Anthropology Volume 61 ; 61 ; aaxa ; >
+      au < crawling ; exists ; 2011 ; Abstracts in Anthropology Volume 62 ; 62 ; aaxa ; >
       au < crawling ; exists ; 2011 ; Abstracts in Anthropology Volume 63 ; 63 ; aaxa ; >
       au < crawling ; exists ; 2012 ; Abstracts in Anthropology Volume 64 ; 64 ; aaxa ; >
       au < crawling ; exists ; 2012 ; Abstracts in Anthropology Volume 65 ; 65 ; aaxa ; >
       au < crawling ; exists ; 2013 ; Abstracts in Anthropology Volume 66 ; 66 ; aaxa ; >
-      au < ready ; exists ; 2013 ; Abstracts in Anthropology Volume 67 ; 67 ; aaxa ; >
+      au < crawling ; exists ; 2013 ; Abstracts in Anthropology Volume 67 ; 67 ; aaxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 ; aaxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 ; aaxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 ; aaxa ; >
@@ -692,7 +692,7 @@
 
       #param[base_url] = http://ero.sagepub.com/
 
-      au < ready ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; eroa ; >
+      au < crawling ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; eroa ; >
       au < crawling ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; eroa ; >
 
   }
@@ -799,8 +799,8 @@
       au < manifest ; exists ; 2007 ; Alexandria Volume 19 ; 19 ; alaa ; >
       au < manifest ; exists ; 2008 ; Alexandria Volume 20 ; 20 ; alaa ; >
       au < manifest ; exists ; 2009 ; Alexandria Volume 21 ; 21 ; alaa ; >
-      au < ready ; exists ; 2011 ; Alexandria Volume 22 ; 22 ; alaa ; >
-      au < ready ; exists ; 2012 ; Alexandria Volume 23 ; 23 ; alaa ; >
+      au < crawling ; exists ; 2011 ; Alexandria Volume 22 ; 22 ; alaa ; >
+      au < crawling ; exists ; 2012 ; Alexandria Volume 23 ; 23 ; alaa ; >
       au < crawling ; exists ; 2013 ; Alexandria Volume 24 ; 24 ; alaa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Alexandria Volume 25 ; 25 ; alaa ; >
       au < crawling ; exists ; 2016 ; Alexandria Volume 26 ; 26 ; alaa ; >
@@ -857,8 +857,8 @@
       au < manifest ; exists ; 2009 ; Alternative Law Journal Volume 34 ; 34 ; aljb ; >
       au < crawling ; exists ; 2010 ; Alternative Law Journal Volume 35 ; 35 ; aljb ; >
       au < crawling ; exists ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb ; >
-      au < ready ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
-      au < ready ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
+      au < crawling ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
+      au < crawling ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
       au < crawling ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
       au < crawling ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
       au < crawling ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; aljb ; >
@@ -967,10 +967,10 @@
       au < manifest ; exists ; 2009 ; The American Economist Volume 54 ; 54 ; aexb ; >
       au < crawling ; exists ; 2010 ; The American Economist Volume 55 ; 55 ; aexb ; >
       au < crawling ; exists ; 2011 ; The American Economist Volume 56 ; 56 ; aexb ; >
-      au < ready ; exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb ; >
-      au < ready ; exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb ; >
-      au < ready ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
-      au < ready ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
+      au < crawling ; exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb ; >
+      au < crawling ; exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb ; >
+      au < crawling ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
+      au < crawling ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
       au < crawling ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; aexb ; >
 
   }
@@ -1306,8 +1306,8 @@
       au < manifest ; exists ; 2007 ; American Journal of Law & Medicine Volume 33 ; 33 ; jlma ; >
       au < manifest ; exists ; 2008 ; American Journal of Law & Medicine Volume 34 ; 34 ; jlma ; >
       au < manifest ; exists ; 2009 ; American Journal of Law & Medicine Volume 35 ; 35 ; jlma ; >
-      au < ready ; exists ; 2010 ; American Journal of Law & Medicine Volume 36 ; 36 ; jlma ; >
-      au < ready ; exists ; 2011 ; American Journal of Law & Medicine Volume 37 ; 37 ; jlma ; >
+      au < crawling ; exists ; 2010 ; American Journal of Law & Medicine Volume 36 ; 36 ; jlma ; >
+      au < crawling ; exists ; 2011 ; American Journal of Law & Medicine Volume 37 ; 37 ; jlma ; >
       au < crawling ; exists ; 2012 ; American Journal of Law & Medicine Volume 38 ; 38 ; jlma ; >
       au < crawling ; exists ; 2013 ; American Journal of Law & Medicine Volume 39 ; 39 ; jlma ; >
       au < crawling ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; jlma ; >
@@ -2504,7 +2504,7 @@
       au < manifest ; exists ; 2008 ; Annals of Otology, Rhinology & Laryngology Volume 117 ; 117 ; aora ; >
       au < manifest ; exists ; 2009 ; Annals of Otology, Rhinology & Laryngology Volume 118 ; 118 ; aora ; >
       au < crawling ; exists ; 2010 ; Annals of Otology, Rhinology & Laryngology Volume 119 ; 119 ; aora ; >
-      au < ready ; exists ; 2011 ; Annals of Otology, Rhinology & Laryngology Volume 120 ; 120 ; aora ; >
+      au < crawling ; exists ; 2011 ; Annals of Otology, Rhinology & Laryngology Volume 120 ; 120 ; aora ; >
       au < crawling ; exists ; 2012 ; Annals of Otology, Rhinology & Laryngology Volume 121 ; 121 ; aora ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Annals of Otology, Rhinology & Laryngology Volume 122 ; 122 ; aora ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 ; aora ; >
@@ -2601,9 +2601,9 @@
       au < manifest ; exists ; 2008 ; The Antitrust Bulletin Volume 53 ; 53 ; abxa ; >
       au < manifest ; exists ; 2009 ; The Antitrust Bulletin Volume 54 ; 54 ; abxa ; >
       au < crawling ; exists ; 2010 ; The Antitrust Bulletin Volume 55 ; 55 ; abxa ; >
-      au < ready ; exists ; 2011 ; The Antitrust Bulletin Volume 56 ; 56 ; abxa ; >
-      au < ready ; exists ; 2012 ; The Antitrust Bulletin Volume 57 ; 57 ; abxa ; >
-      au < ready ; exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 ; abxa ; >
+      au < crawling ; exists ; 2011 ; The Antitrust Bulletin Volume 56 ; 56 ; abxa ; >
+      au < crawling ; exists ; 2012 ; The Antitrust Bulletin Volume 57 ; 57 ; abxa ; >
+      au < crawling ; exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 ; abxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 ; abxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 ; abxa ; >
       au < crawling ; exists ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 ; abxa ; >
@@ -2622,9 +2622,9 @@
       #content available from 1990 volume 1 to 2008 volume 19
 
       au < manifest ; exists ; 2008-2009 ; Antiviral Chemistry & Chemotherapy Volume 19 ; 19 ; avca ; >
-      au < ready ; exists ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 ; avca ; >
-      au < ready ; exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 ; avca ; >
-      au < ready ; exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 ; avca ; >
+      au < crawling ; exists ; 2009-2010 ; Antiviral Chemistry & Chemotherapy Volume 20 ; 20 ; avca ; >
+      au < crawling ; exists ; 2010-2011 ; Antiviral Chemistry & Chemotherapy Volume 21 ; 21 ; avca ; >
+      au < crawling ; exists ; 2011-2012 ; Antiviral Chemistry & Chemotherapy Volume 22 ; 22 ; avca ; >
       au < doNotProcess ; doNotProcess ; 2012-2014 ; Antiviral Chemistry & Chemotherapy Volume 23 ; 23 ; avca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Antiviral Chemistry & Chemotherapy Volume 24 ; 24 ; avca ; >
       au < manifest ; exists ; 2016 ; Antiviral Chemistry & Chemotherapy Volume 25 ; 25 ; avca ; >
@@ -2731,7 +2731,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Applied Psychological Measurement Volume 38 ; 38 ; apma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Psychological Measurement Volume 39 ; 39 ; apma ; >
       au < crawling ; exists ; 2016 ; Applied Psychological Measurement Volume 40 ; 40 ; apma ; >
-      au < ready ; exists ; 2017  ; Applied Psychological Measurement Volume 41 ; 41 ; apma ; >
+      au < crawling ; exists ; 2017  ; Applied Psychological Measurement Volume 41 ; 41 ; apma ; >
 
     }
 
@@ -2780,7 +2780,7 @@
       au < manifest ; exists ; 2009 ; Applied Spectroscopy Volume 63 ; 63 ; aspc ; >
       au < crawling ; exists ; 2010 ; Applied Spectroscopy Volume 64 ; 64 ; aspc ; >
       au < crawling ; exists ; 2011 ; Applied Spectroscopy Volume 65 ; 65 ; aspc ; >
-      au < ready ; exists ; 2012 ; Applied Spectroscopy Volume 66 ; 66 ; aspc ; >
+      au < crawling ; exists ; 2012 ; Applied Spectroscopy Volume 66 ; 66 ; aspc ; >
       au < crawling ; exists ; 2013 ; Applied Spectroscopy Volume 67 ; 67 ; aspc ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Applied Spectroscopy Volume 68 ; 68 ; aspc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Applied Spectroscopy Volume 69 ; 69 ; aspc ; >
@@ -2912,9 +2912,9 @@
       au < manifest ; exists ; 2008 ; Asian and Pacific Migration Journal Volume 17 ; 17 ; amja ; >
       au < manifest ; exists ; 2009 ; Asian and Pacific Migration Journal Volume 18 ; 18 ; amja ; >
       au < crawling ; exists ; 2010 ; Asian and Pacific Migration Journal Volume 19 ; 19 ; amja ; >
-      au < ready ; exists ; 2011 ; Asian and Pacific Migration Journal Volume 20 ; 20 ; amja ; >
-      au < ready ; exists ; 2012 ; Asian and Pacific Migration Journal Volume 21 ; 21 ; amja ; >
-      au < ready ; exists ; 2013 ; Asian and Pacific Migration Journal Volume 22 ; 22 ; amja ; >
+      au < crawling ; exists ; 2011 ; Asian and Pacific Migration Journal Volume 20 ; 20 ; amja ; >
+      au < crawling ; exists ; 2012 ; Asian and Pacific Migration Journal Volume 21 ; 21 ; amja ; >
+      au < crawling ; exists ; 2013 ; Asian and Pacific Migration Journal Volume 22 ; 22 ; amja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Asian and Pacific Migration Journal Volume 23 ; 23 ; amja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Asian and Pacific Migration Journal Volume 24 ; 24 ; amja ; >
       au < crawling ; exists ; 2016 ; Asian and Pacific Migration Journal Volume 25 ; 25 ; amja ; >
@@ -3210,7 +3210,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Assessment Volume 21 ; 21 ; asma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Assessment Volume 22 ; 22 ; asma ; >
       au < crawling ; exists ; 2016 ; Assessment Volume 23 ; 23 ; asma ; >
-      au < ready ; exists ; 2017  ; Assessment Volume 24 ; 24 ; asma ; >
+      au < crawling ; exists ; 2017  ; Assessment Volume 24 ; 24 ; asma ; >
 
     }
 
@@ -3267,7 +3267,7 @@
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; aeib ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; aeib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Assessment for Effective Intervention Volume 41 ; 41 ; aeib ; >
-      au < ready ; exists ; 2016-2017 ; Assessment for Effective Intervention Volume 42 ; 42 ; aeib ; >
+      au < crawling ; exists ; 2016-2017 ; Assessment for Effective Intervention Volume 42 ; 42 ; aeib ; >
 
     }
 
@@ -3978,7 +3978,7 @@
         au < manifest ; exists ; 2007 ; British Journal of Music Therapy Volume 21 ; 21 ; bjmb ; >
         au < manifest ; exists ; 2008 ; British Journal of Music Therapy Volume 22 ; 22 ; bjmb ; >
         au < manifest ; exists ; 2009 ; British Journal of Music Therapy Volume 23 ; 23 ; bjmb ; >
-        au < ready ; exists ; 2010 ; British Journal of Music Therapy Volume 24 ; 24 ; bjmb ; >
+        au < crawling ; exists ; 2010 ; British Journal of Music Therapy Volume 24 ; 24 ; bjmb ; >
         au < manifest ; exists ; 2011 ; British Journal of Music Therapy Volume 25 ; 25 ; bjmb ; >
         au < manifest ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; bjmb ; >
         au < manifest ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; bjmb ; >
