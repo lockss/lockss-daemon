@@ -6,6 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   implicit < status ; year ; name ; param[volume_name] >
+  #base_url change to http://subs.sae.org/e-journal-#, found at 04/25/2017
 
   {
   
@@ -18,15 +19,15 @@
     
     param[base_url] = http://saeaero.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Aerospace Volume 1 ; 1 >
-    au < released ; 2010 ; SAE International Journal of Aerospace Volume 2 ; 2 >
-    au < released ; 2010 ; SAE International Journal of Aerospace Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Aerospace Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Aerospace Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Aerospace Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Aerospace Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Aerospace Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Aerospace Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Aerospace Volume 1 ; 1 >
+    au < down ; 2010 ; SAE International Journal of Aerospace Volume 2 ; 2 >
+    au < down ; 2010 ; SAE International Journal of Aerospace Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Aerospace Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Aerospace Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Aerospace Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Aerospace Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Aerospace Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Aerospace Volume 9 ; 9 >
 
   }
 
@@ -41,11 +42,11 @@
     
     param[base_url] = http://saealtpow.saejournals.org/
     
-    au < released ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
-    au < released ; 2013 ; SAE International Journal of Alternative Powertrains Volume 2 ; 2 >
-    au < released ; 2014 ; SAE International Journal of Alternative Powertrains Volume 3 ; 3 >
-    au < released ; 2015 ; SAE International Journal of Alternative Powertrains Volume 4 ; 4 >
-    au < released ; 2016 ; SAE International Journal of Alternative Powertrains Volume 5 ; 5 >
+    au < down ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
+    au < down ; 2013 ; SAE International Journal of Alternative Powertrains Volume 2 ; 2 >
+    au < down ; 2014 ; SAE International Journal of Alternative Powertrains Volume 3 ; 3 >
+    au < down ; 2015 ; SAE International Journal of Alternative Powertrains Volume 4 ; 4 >
+    au < down ; 2016 ; SAE International Journal of Alternative Powertrains Volume 5 ; 5 >
 
   }
 
@@ -60,15 +61,15 @@
     
     param[base_url] = http://saecomveh.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Commercial Vehicles Volume 1 ; 1 >
-    au < released ; 2009-2010 ; SAE International Journal of Commercial Vehicles Volume 2 ; 2 >
-    au < released ; 2010 ; SAE International Journal of Commercial Vehicles Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Commercial Vehicles Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Commercial Vehicles Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Commercial Vehicles Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Commercial Vehicles Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Commercial Vehicles Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Commercial Vehicles Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Commercial Vehicles Volume 1 ; 1 >
+    au < down ; 2009-2010 ; SAE International Journal of Commercial Vehicles Volume 2 ; 2 >
+    au < down ; 2010 ; SAE International Journal of Commercial Vehicles Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Commercial Vehicles Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Commercial Vehicles Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Commercial Vehicles Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Commercial Vehicles Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Commercial Vehicles Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Commercial Vehicles Volume 9 ; 9 >
 
   }
 
@@ -83,15 +84,15 @@
     
     param[base_url] = http://saeeng.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Engines Volume 1 ; 1 >
-    au < released ; 2009-2010 ; SAE International Journal of Engines Volume 2 ; 2 >
-    au < released ; 2010-2011 ; SAE International Journal of Engines Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Engines Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Engines Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Engines Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Engines Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Engines Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Engines Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Engines Volume 1 ; 1 >
+    au < down ; 2009-2010 ; SAE International Journal of Engines Volume 2 ; 2 >
+    au < down ; 2010-2011 ; SAE International Journal of Engines Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Engines Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Engines Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Engines Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Engines Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Engines Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Engines Volume 9 ; 9 >
   
   }
 
@@ -106,15 +107,15 @@
     
     param[base_url] = http://saefuel.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Fuels and Lubricants Volume 1 ; 1 >
-    au < released ; 2009-2010 ; SAE International Journal of Fuels and Lubricants Volume 2 ; 2 >
-    au < released ; 2010-2011 ; SAE International Journal of Fuels and Lubricants Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Fuels and Lubricants Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Fuels and Lubricants Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Fuels and Lubricants Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Fuels and Lubricants Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Fuels and Lubricants Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Fuels and Lubricants Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Fuels and Lubricants Volume 1 ; 1 >
+    au < down ; 2009-2010 ; SAE International Journal of Fuels and Lubricants Volume 2 ; 2 >
+    au < down ; 2010-2011 ; SAE International Journal of Fuels and Lubricants Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Fuels and Lubricants Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Fuels and Lubricants Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Fuels and Lubricants Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Fuels and Lubricants Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Fuels and Lubricants Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Fuels and Lubricants Volume 9 ; 9 >
   
   }
 
@@ -129,15 +130,15 @@
     
     param[base_url] = http://saematman.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Materials and Manufacturing Volume 1 ; 1 >
-    au < released ; 2009-2010 ; SAE International Journal of Materials and Manufacturing Volume 2 ; 2 >
-    au < released ; 2010-2011 ; SAE International Journal of Materials and Manufacturing Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Materials and Manufacturing Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Materials and Manufacturing Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Materials and Manufacturing Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Materials and Manufacturing Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Materials and Manufacturing Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Materials and Manufacturing Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Materials and Manufacturing Volume 1 ; 1 >
+    au < down ; 2009-2010 ; SAE International Journal of Materials and Manufacturing Volume 2 ; 2 >
+    au < down ; 2010-2011 ; SAE International Journal of Materials and Manufacturing Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Materials and Manufacturing Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Materials and Manufacturing Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Materials and Manufacturing Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Materials and Manufacturing Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Materials and Manufacturing Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Materials and Manufacturing Volume 9 ; 9 >
   
   }
 
@@ -152,15 +153,15 @@
     
     param[base_url] = http://saepcelec.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 1 ; 1 >
-    au < released ; 2009 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 2 ; 2 >
-    au < released ; 2010 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 1 ; 1 >
+    au < down ; 2009 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 2 ; 2 >
+    au < down ; 2010 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Passenger Cars - Electronic and Electrical Systems Volume 9 ; 9 >
   
   }
 
@@ -175,15 +176,15 @@
     
     param[base_url] = http://saepcmech.saejournals.org/
     
-    au < released ; 2009 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 1 ; 1 >
-    au < released ; 2009-2010 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 2 ; 2 >
-    au < released ; 2010-2011 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 3 ; 3 >
-    au < released ; 2011 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 4 ; 4 >
-    au < released ; 2012 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 5 ; 5 >
-    au < released ; 2013 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 6 ; 6 >
-    au < released ; 2014 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 7 ; 7 >
-    au < released ; 2015 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 8 ; 8 >
-    au < released ; 2016 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 9 ; 9 >
+    au < down ; 2009 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 1 ; 1 >
+    au < down ; 2009-2010 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 2 ; 2 >
+    au < down ; 2010-2011 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 3 ; 3 >
+    au < down ; 2011 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 4 ; 4 >
+    au < down ; 2012 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 5 ; 5 >
+    au < down ; 2013 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 6 ; 6 >
+    au < down ; 2014 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 7 ; 7 >
+    au < down ; 2015 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 8 ; 8 >
+    au < down ; 2016 ; SAE International Journal of Passenger Cars - Mechanical Systems Volume 9 ; 9 >
   
   }
 
@@ -198,9 +199,9 @@
     param[base_url] = http://saetransaf.saejournals.org/
     
     au < exists ; 2013 ; SAE International Journal of Transportation Safety Volume 1 ; 1 >
-    au < released ; 2014 ; SAE International Journal of Transportation Safety Volume 2 ; 2 >
-    au < released ; 2015 ; SAE International Journal of Transportation Safety Volume 3 ; 3 >
-    au < released ; 2016 ; SAE International Journal of Transportation Safety Volume 4 ; 4 >
+    au < down ; 2014 ; SAE International Journal of Transportation Safety Volume 2 ; 2 >
+    au < down ; 2015 ; SAE International Journal of Transportation Safety Volume 3 ; 3 >
+    au < down ; 2016 ; SAE International Journal of Transportation Safety Volume 4 ; 4 >
     au < expected ; 2017 ; SAE International Journal of Transportation Safety Volume 5 ; 5 >
   
   }
