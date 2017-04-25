@@ -5,7 +5,7 @@
 date
 echo "-----------------------------"
 echo "-----------------------------"
-tpath="/home/$LOGNAME/tmp"
+tpath="~/$LOGNAME/tmp"
 mkdir -p $tpath
 numdiffAUs=20
 opt_tdb_file=""
