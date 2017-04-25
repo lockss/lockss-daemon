@@ -49,12 +49,12 @@
 
       attr[journal_id] = 155
 
-        au < testing ; 2000 ; Brookings Papers on Education Policy Volume 2000 ; 518 >
+        au < ready ; 2000 ; Brookings Papers on Education Policy Volume 2000 ; 518 >
         au < ready ; 2001 ; Brookings Papers on Education Policy Volume 2001 ; 519 >
         au < ready ; 2002 ; Brookings Papers on Education Policy Volume 2002 ; 520 >
         au < ready ; 2003 ; Brookings Papers on Education Policy Volume 2003 ; 809 >
         au < ready ; 2004 ; Brookings Papers on Education Policy Volume 2004 ; 2201 >
-        au < testing ; 2005 ; Brookings Papers on Education Policy Volume 2005 ; 2642 >
+        au < ready ; 2005 ; Brookings Papers on Education Policy Volume 2005 ; 2642 >
         au < ready ; 2006-2007 ; Brookings Papers on Education Policy Volume 2006-2007 ; 3366 >
 
     }
@@ -70,14 +70,14 @@
 
       attr[journal_id] = 26
 
-        au < testing ; 2000 ; Brookings Trade Forum Volume 2000 ; 96 >
+        au < ready ; 2000 ; Brookings Trade Forum Volume 2000 ; 96 >
         au < ready ; 2001 ; Brookings Trade Forum Volume 2001 ; 97 >
         au < ready ; 2002 ; Brookings Trade Forum Volume 2002 ; 801 >
-        au < testing ; 2003 ; Brookings Trade Forum Volume 2003 ; 2415 >
+        au < ready ; 2003 ; Brookings Trade Forum Volume 2003 ; 2415 >
         au < ready ; 2004 ; Brookings Trade Forum Volume 2004 ; 2644 >
         au < ready ; 2005 ; Brookings Trade Forum Volume 2005 ; 2970 >
-        au < testing ; 2006 ; Brookings Trade Forum Volume 2006 ; 3268 >
-        au < testing ; 2007 ; Brookings Trade Forum Volume 2007 ; 3775 >
+        au < ready ; 2006 ; Brookings Trade Forum Volume 2006 ; 3268 >
+        au < ready ; 2007 ; Brookings Trade Forum Volume 2007 ; 3775 >
         au < ready ; 2008 ; Brookings Trade Forum Volume 2008 ; 4388 >
 
     }
@@ -94,7 +94,7 @@
       attr[journal_id] = 157
 
         au < ready ; 2000 ; Brookings-Wharton Papers on Financial Services Volume 2000 ; 524 >
-        au < testing ; 2001 ; Brookings-Wharton Papers on Financial Services Volume 2001 ; 525 >
+        au < ready ; 2001 ; Brookings-Wharton Papers on Financial Services Volume 2001 ; 525 >
         au < ready ; 2002 ; Brookings-Wharton Papers on Financial Services Volume 2002 ; 728 >
         au < ready ; 2003 ; Brookings-Wharton Papers on Financial Services Volume 2003 ; 949 >
         au < ready ; 2004 ; Brookings-Wharton Papers on Financial Services Volume 2004 ; 2560 >
@@ -113,12 +113,12 @@
       attr[journal_id] = 202
 
         au < ready ; 2000 ; Brookings-Wharton Papers on Urban Affairs Volume 2000 ; 695 >
-        au < testing ; 2001 ; Brookings-Wharton Papers on Urban Affairs Volume 2001 ; 696 >
+        au < ready ; 2001 ; Brookings-Wharton Papers on Urban Affairs Volume 2001 ; 696 >
         au < ready ; 2002 ; Brookings-Wharton Papers on Urban Affairs Volume 2002 ; 697 >
-        au < testing ; 2003 ; Brookings-Wharton Papers on Urban Affairs Volume 2003 ; 961 >
-        au < testing ; 2004 ; Brookings-Wharton Papers on Urban Affairs Volume 2004 ; 2551 >
-        au < testing ; 2005 ; Brookings-Wharton Papers on Urban Affairs Volume 2005 ; 2915 >
-        au < testing ; 2006 ; Brookings-Wharton Papers on Urban Affairs Volume 2006 ; 3161 >
+        au < ready ; 2003 ; Brookings-Wharton Papers on Urban Affairs Volume 2003 ; 961 >
+        au < ready ; 2004 ; Brookings-Wharton Papers on Urban Affairs Volume 2004 ; 2551 >
+        au < ready ; 2005 ; Brookings-Wharton Papers on Urban Affairs Volume 2005 ; 2915 >
+        au < ready ; 2006 ; Brookings-Wharton Papers on Urban Affairs Volume 2006 ; 3161 >
         au < ready ; 2007 ; Brookings-Wharton Papers on Urban Affairs Volume 2007 ; 3454 >
         au < ready ; 2008 ; Brookings-Wharton Papers on Urban Affairs Volume 2008 ; 3992 >
         au < ready ; 2009 ; Brookings-Wharton Papers on Urban Affairs Volume 2009 ; 4422 >
@@ -141,12 +141,12 @@
         au < ready ; 2002-2003 ; Economía Volume 3 [2002-2003] ; 732 >
         au < ready ; 2003-2004 ; Economía Volume 4 [2003-2004] ; 1770 >
         au < ready ; 2004-2005 ; Economía Volume 5 [2004-2005] ; 2665 >
-        au < testing ; 2005-2006 ; Economía Volume 6 [2005-2006] ; 3020 >
-        au < testing ; 2006-2007 ; Economía Volume 7 [2006-2007] ; 3431 >
-        au < testing ; 2007-2008 ; Economía Volume 8 [2007-2008] ; 3733 >
-        au < testing ; 2008-2009 ; Economía Volume 9 [2008-2009] ; 4146 >
+        au < ready ; 2005-2006 ; Economía Volume 6 [2005-2006] ; 3020 >
+        au < ready ; 2006-2007 ; Economía Volume 7 [2006-2007] ; 3431 >
+        au < ready ; 2007-2008 ; Economía Volume 8 [2007-2008] ; 3733 >
+        au < ready ; 2008-2009 ; Economía Volume 9 [2008-2009] ; 4146 >
         au < ready ; 2009-2010 ; Economía Volume 10 [2009-2010] ; 5934 >
-        au < testing ; 2010-2011 ; Economía Volume 11 [2010-2011] ; 6914 >
+        au < ready ; 2010-2011 ; Economía Volume 11 [2010-2011] ; 6914 >
         au < ready ; 2010-2011 ; Economía Volume 12 [2010-2011] ; 7704 >
         au < ready ; 2013 ; Economía Volume 13 [2012-2013] ; 8462 >
         au < ready ; 2013-2014 ; Economía Volume 14 [2013-2014] ; 9336 >
