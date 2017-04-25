@@ -180,7 +180,7 @@
     au < released ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 >
     au < released ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 >
     au < released ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 >
-    au < expected ; 2017 ; Annals of Indian Academy of Neurology Volume 20 ; 2017 ; 20 >
+    au < manifest ; 2017 ; Annals of Indian Academy of Neurology Volume 20 ; 2017 ; 20 >
 
   }
 
@@ -4412,8 +4412,8 @@
       param[journal_issn] = 2542-3932
       param[base_url] = http://www.actnjournal.com/
 
-      au < exists ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 >
 
   }
 
@@ -4617,8 +4617,8 @@
       param[journal_issn] = 2542-3975
       param[base_url] = http://www.clinicaltdd.com/
 
-      au < exists ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 >
 
   }
 
@@ -4636,8 +4636,8 @@
       param[journal_issn] = 2542-4157
       param[base_url] = http://www.clinicalto.com/
 
-      au < exists ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 >
-      au < exists ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 >
+      au < manifest ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 >
+      au < manifest ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 >
 
   }
 
