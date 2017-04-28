@@ -87,6 +87,7 @@ public class BaseAtyponPdfFilterFactory extends SimplePdfFilterFactory {
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetMetadata();
     pdfDocument.unsetCreator();
+    pdfDocument.unsetLanguage();
     pdfDocument.unsetProducer();
     pdfDocument.unsetAuthor();
     pdfDocument.unsetTitle();
