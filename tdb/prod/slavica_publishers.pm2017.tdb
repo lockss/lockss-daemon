@@ -24,7 +24,7 @@
         au < manifest ; 2011 ; Journal of Slavic Linguistics Volume 19 [2011] ; 7566 >
         au < manifest ; 2012 ; Journal of Slavic Linguistics Volume 20 [2012] ; 8611 >
         au < manifest ; 2013 ; Journal of Slavic Linguistics Volume 21 [2013] ; 9275 >
-        au < manifest ; 2014 ; Journal of Slavic Linguistics Volume 22 [2014] ; 10089 >
+        au < testing ; 2014 ; Journal of Slavic Linguistics Volume 22 [2014] ; 10089 >
         au < manifest ; 2015 ; Journal of Slavic Linguistics Volume 23 [2015] ; 10694 >
         au < released ; 2016 ; Journal of Slavic Linguistics Volume 24 [2016] ; 11335 >
 
@@ -53,8 +53,8 @@
         au < manifest ; 2010 ; Kritika: Explorations in Russian and Eurasian History Volume 11 [2010 (New Series)] ; 5757 >
         au < manifest ; 2011 ; Kritika: Explorations in Russian and Eurasian History Volume 12 [2011 (New Series)] ; 6691 >
         au < manifest ; 2012 ; Kritika: Explorations in Russian and Eurasian History Volume 13 [2012 (New Series)] ; 8010 >
-        au < manifest ; 2013 ; Kritika: Explorations in Russian and Eurasian History Volume 14 [2013 (New Series)] ; 8801 >
-        au < manifest ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 [2014 (New Series)] ; 9731 >
+        au < testing ; 2013 ; Kritika: Explorations in Russian and Eurasian History Volume 14 [2013 (New Series)] ; 8801 >
+        au < testing ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 [2014 (New Series)] ; 9731 >
         au < ready ; 2015 ; Kritika: Explorations in Russian and Eurasian History  Volume 16 [2015 (New Series)] ; 10386 >
         au < released ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 17 [2016 (New Series)] ; 11013 >
         au < released ; 2016 ; Kritika: Explorations in Russian and Eurasian History Volume 18 [2016 (New Series)] ; 12447 >
@@ -71,7 +71,7 @@
       attr[journal_id] = 532
 
         au < manifest ; 2011 ; Pushkin Review Volume 14 [2011] ; 8078 >
-        au < manifest ; 2012 ; Pushkin Review Volume 15 [2012] ; 9271 >
+        au < testing ; 2012 ; Pushkin Review Volume 15 [2012] ; 9271 >
         au < manifest ; 2013-2014 ; Pushkin Review Volume 16-17, 2013-2014 ; 10202 >
 
     }
@@ -86,9 +86,9 @@
 
       attr[journal_id] = 585
 
-        au < manifest ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 [2012] ; 8106 >
+        au < testing ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 [2012] ; 8106 >
         au < manifest ; 2013 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 2 [2013] ; 9274 >
-        au < manifest ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 [2014] ; 9967 >
+        au < testing ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 [2014] ; 9967 >
         au < manifest ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 4 [2015] ; 10496 >
         au < released ; 2016 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 5 [2016] ; 11085 >
 
@@ -111,7 +111,7 @@
         au < manifest ; 2010 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 24 [2010] ; 8637 >
         au < manifest ; 2011 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 25 [2011] ; 9567 >
         au < manifest ; 2012 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 26 [2012] ; 10773 >
-        au < manifest ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 27 [2013] ; 11255 >
+        au < testing ; 2013 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 27 [2013] ; 11255 >
 
     }
 

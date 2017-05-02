@@ -46,7 +46,7 @@
         au < manifest ; 2011 ; Dissent Volume 58 [2011] ; 6681 >
         au < manifest ; 2012 ; Dissent Volume 59 [2012] ; 7874 >
         au < manifest ; 2013 ; Dissent Volume 60 [2013] ; 8642 >
-        au < manifest ; 2014 ; Dissent Volume 61 [2014] ; 9562 >
+        au < testing ; 2014 ; Dissent Volume 61 [2014] ; 9562 >
         au < manifest ; 2015 ; Dissent Volume 62 [2015] ; 10281 >
         au < released ; 2016 ; Dissent Volume 63 [2016] ; 10988 >
         au < manifest ; 2017 ; Dissent Volume 64 [2017] ; 12377 >
@@ -72,7 +72,7 @@
         au < manifest ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 [2009] ; 4109 >
         au < manifest ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 [2010] ; 5649 >
         au < manifest ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 [2011] ; 6536 >
-        au < manifest ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 [2012] ; 7857 >
+        au < testing ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 [2012] ; 7857 >
         au < manifest ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 [2013] ; 8632 >
         au < manifest ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 [2014] ; 9563 >
         au < ready ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 [2015] ; 10317 >
@@ -120,7 +120,7 @@
         au < manifest ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 [2010] ; 6361 >
         au < manifest ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 [2011] ; 6682 >
         au < manifest ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 [2012] ; 8012 >
-        au < manifest ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 [2013] ; 8756 >
+        au < testing ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 [2013] ; 8756 >
         au < manifest ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 [2014] ; 9628 >
         au < manifest ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 [2015] ; 10470 >
         au < released ; 2016 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 7 [2016] ; 11084 >
@@ -196,7 +196,7 @@
         au < manifest ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 [2010] ; 6178 >
         au < manifest ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 [2011] ; 7567 >
         au < manifest ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 [2012] ; 7859 >
-        au < manifest ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 [2013] ; 8634 >
+        au < testing ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 [2013] ; 8634 >
         au < manifest ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 [2014] ; 9560 >
         au < ready ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 [2015] ; 10288 >
         au < released ; 2016 ; Journal for Early Modern Cultural Studies Volume 16 [2016] ; 10991 >
@@ -213,7 +213,7 @@
 
       attr[journal_id] = 668
 
-        au < manifest ; 2015 ; Journal of Ecumenical Studies Volume 50 [2015] ; 10728 >
+        au < testing ; 2015 ; Journal of Ecumenical Studies Volume 50 [2015] ; 10728 >
         au < released ; 2016 ; Journal of Ecumenical Studies Volume 51 [2016] ; 11122 >
 
     }
@@ -271,7 +271,7 @@
         au < manifest ; 2010 ; Journal of the History of Ideas Volume 71 [2010] ; 5683 >
         au < manifest ; 2011 ; Journal of the History of Ideas Volume 72 [2011] ; 6638 >
         au < manifest ; 2012 ; Journal of the History of Ideas Volume 73 [2012] ; 7860 >
-        au < manifest ; 2013 ; Journal of the History of Ideas Volume 74 [2013] ; 8660 >
+        au < testing ; 2013 ; Journal of the History of Ideas Volume 74 [2013] ; 8660 >
         au < manifest ; 2014 ; Journal of the History of Ideas Volume 75 [2014] ; 9591 >
         au < manifest ; 2015 ; Journal of the History of Ideas Volume 76 [2015] ; 10320 >
         au < released ; 2016 ; Journal of the History of Ideas Volume 77 [2016] ; 10992 >
@@ -342,9 +342,9 @@
         au < manifest ; 2009 ; The Eighteenth Century Volume 50 [2009] ; 5818 >
         au < manifest ; 2010 ; The Eighteenth Century Volume 51 [2010] ; 6344 >
         au < manifest ; 2011 ; The Eighteenth Century Volume 52 [2011] ; 6838 >
-        au < manifest ; 2012 ; The Eighteenth Century Volume 53 [2012] ; 8045 >
+        au < testing ; 2012 ; The Eighteenth Century Volume 53 [2012] ; 8045 >
         au < manifest ; 2013 ; The Eighteenth Century Volume 54 [2013] ; 8815 >
-        au < manifest ; 2014 ; The Eighteenth Century Volume 55 [2014] ; 9737 >
+        au < testing ; 2014 ; The Eighteenth Century Volume 55 [2014] ; 9737 >
         au < manifest ; 2015 ; The Eighteenth Century Volume 56 [2015] ; 10466 >
         au < released ; 2016 ; The Eighteenth Century Volume 57 [2016] ; 11083 >
         au < manifest ; 2017 ; The Eighteenth Century Volume 58 [2017] ; 12463 >
