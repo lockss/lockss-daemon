@@ -26,8 +26,8 @@
      param[journal_issn] = 2050-4551
 
      au < doNotProcess ; doNotProcess ; 2009 ; Alexandria Volume 21 ; 21 ; >
-     au < finished ; finished ; 2011 ; Alexandria Volume 22 ; 22 ; >
-     au < finished ; finished ; 2012 ; Alexandria Volume 23 ; 23 ; >
+     au < superseded ; finished ; 2011 ; Alexandria Volume 22 [superseded] ; 22 ; >
+     au < superseded ; finished ; 2012 ; Alexandria Volume 23 [superseded] ; 23 ; >
      au < frozen ; exists ; 2013 ; Alexandria Volume 24 ; 24 ; >
      au < doNotProcess ; exists ; 2014 ; Alexandria Volume 25 ; 25 ; >
 
