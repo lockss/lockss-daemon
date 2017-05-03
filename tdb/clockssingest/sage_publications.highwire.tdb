@@ -795,7 +795,7 @@
     >
 
       param[base_url] = http://ero.sagepub.com/
-      pluginSuffix = ClockssHWDrupalPlugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
@@ -4103,7 +4103,7 @@
       eissn = 2053-9517 ;
       issnl = 2053-9517
     >
-      pluginSuffix = ClockssHWDrupalPlugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://bds.sagepub.com/
 
       au < doNotProcess ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
@@ -9459,7 +9459,7 @@
     >
 
       param[base_url] = http://dhj.sagepub.com/
-      pluginSuffix = ClockssHWDrupalPlugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2016 ; Digital Health Volume 2 ; 2 ; >
@@ -38117,7 +38117,7 @@
         eissn = 2053-1680
     >
 
-      pluginSuffix = ClockssHWDrupalPlugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://rap.sagepub.com/
 
       au < doNotProcess ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; >
@@ -38958,7 +38958,7 @@
 
         {
 
-          pluginSuffix = ClockssHWDrupalPlugin
+          pluginSuffix = ClockssHighWirePressH20Plugin
 
           au < doNotProcess ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < doNotProcess ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
