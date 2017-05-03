@@ -224,8 +224,8 @@
     
     au < released ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
     au < released ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
-    au < manifest ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
-    au < manifest ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
+    au < testing ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
+    au < testing ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
  
   }
   
@@ -241,21 +241,21 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     # see http://scholarworks.umass.edu/mot/all_issues.html
 
-    au < manifest ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
-    au < manifest ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
-    au < manifest ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
-    au < manifest ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
-    au < manifest ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
-    au < manifest ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
-    au < manifest ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
-    au < manifest ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
-    au < manifest ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
-    au < manifest ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
-    au < manifest ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
-    au < manifest ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
-    au < manifest ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
+    au < testing ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
+    au < testing ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
+    au < testing ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
+    au < testing ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
+    au < testing ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
+    au < testing ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
+    au < testing ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
+    au < testing ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
+    au < testing ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
+    au < testing ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
+    au < testing ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
+    au < testing ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
+    au < testing ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
     au < released ; 2014 ; 19 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
-    au < manifest ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
+    au < testing ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
  
   }
   
@@ -1605,23 +1605,23 @@
     param[collection] = nrc_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
-    au < manifest ; 1980 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
-    au < manifest ; 1982 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
-    au < manifest ; 1983 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
-    au < manifest ; 1984 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
-    au < manifest ; 1986 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
-    au < manifest ; 1988 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
-    au < manifest ; 1989 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
-    au < manifest ; 1990 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
-    au < manifest ; 1991 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
-    au < manifest ; 1992 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
-    au < manifest ; 1993 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
-    au < manifest ; 1994 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
-    au < manifest ; 1995 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
-    au < manifest ; 1996 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
-    au < manifest ; 1997 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
-    au < manifest ; 1998 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
-    au < manifest ; 1999 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
+    au < testing ; 1980 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
+    au < testing ; 1982 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
+    au < testing ; 1983 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
+    au < testing ; 1984 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
+    au < testing ; 1986 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
+    au < testing ; 1988 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
+    au < testing ; 1989 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
+    au < testing ; 1990 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
+    au < testing ; 1991 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
+    au < testing ; 1992 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
+    au < testing ; 1993 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
+    au < testing ; 1994 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
+    au < testing ; 1995 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
+    au < testing ; 1996 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
+    au < testing ; 1997 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
+    au < testing ; 1998 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
+    au < testing ; 1999 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
     au < notReady ; 2000 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
     au < notReady ; 2001 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2001 [abstracts only] ; 2001 ; abstracts >
     au < notReady ; 2002 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
@@ -2254,70 +2254,70 @@
     param[collection] = french_translators
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 1616 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1616 ; 1616 >
-    au < testing ; 1618 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1618 ; 1618 >
-    au < testing ; 1630 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1630 ; 1630 >
-    au < testing ; 1634 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1634 ; 1634 >
-    au < testing ; 1638 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1638 ; 1638 >
-    au < testing ; 1647 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1647 ; 1647 >
-    au < testing ; 1649 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1649 ; 1649 >
-    au < testing ; 1658 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1658 ; 1658 >
-    au < testing ; 1659 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1659 ; 1659 >
-    au < testing ; 1660 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1660 ; 1660 >
-    au < testing ; 1665 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1665 ; 1665 >
-    au < testing ; 1666 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1666 ; 1666 >
-    au < testing ; 1667 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1667 ; 1667 >
-    au < testing ; 1668 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1668 ; 1668 >
-    au < testing ; 1669 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1669 ; 1669 >
-    au < testing ; 1671 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1671 ; 1671 >
-    au < testing ; 1672 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1672 ; 1672 >
-    au < testing ; 1673 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1673 ; 1673 >
-    au < testing ; 1678 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1678 ; 1678 >
-    au < testing ; 1679 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1679 ; 1679 >
-    au < testing ; 1681 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1681 ; 1681 >
-    au < testing ; 1682 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1682 ; 1682 >
-    au < testing ; 1684 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1684 ; 1684 >
-    au < testing ; 1685 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1685 ; 1685 >
-    au < testing ; 1688 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1688 ; 1688 >
-    au < testing ; 1690 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1690 ; 1690 >
-    au < testing ; 1691 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1691 ; 1691 >
-    au < testing ; 1692 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1692 ; 1692 >
-    au < testing ; 1693 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1693 ; 1693 >
-    au < testing ; 1694 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1694 ; 1694 >
-    au < testing ; 1695 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1695 ; 1695 >
-    au < testing ; 1701 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1701 ; 1701 >
-    au < testing ; 1707 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1707 ; 1707 >
-    au < testing ; 1711 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1711 ; 1711 >
-    au < testing ; 1714 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1714 ; 1714 >
-    au < testing ; 1715 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1715 ; 1715 >
-    au < testing ; 1716 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1716 ; 1716 >
-    au < testing ; 1721 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1721 ; 1721 >
-    au < testing ; 1722 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1722 ; 1722 >
-    au < testing ; 1726 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1726 ; 1726 >
-    au < testing ; 1727 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1727 ; 1727 >
-    au < testing ; 1730 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1730 ; 1730 >
-    au < testing ; 1736 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1736 ; 1736 >
-    au < testing ; 1737 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1737 ; 1737 >
-    au < testing ; 1738 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1738 ; 1738 >
-    au < testing ; 1742 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1742 ; 1742 >
-    au < testing ; 1743 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1743 ; 1743 >
-    au < testing ; 1745 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1745 ; 1745 >
-    au < testing ; 1747 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1747 ; 1747 >
-    au < testing ; 1748 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1748 ; 1748 >
-    au < testing ; 1750 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1750 ; 1750 >
-    au < testing ; 1751 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1751 ; 1751 >
-    au < testing ; 1754 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1754 ; 1754 >
-    au < testing ; 1755 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1755 ; 1755 >
-    au < testing ; 1756 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1756 ; 1756 >
-    au < testing ; 1757 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1757 ; 1757 >
-    au < testing ; 1763 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1763 ; 1763 >
-    au < testing ; 1764 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1764 ; 1764 >
-    au < testing ; 1766 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1766 ; 1766 >
-    au < testing ; 1768 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1768 ; 1768 >
-    au < testing ; 1769 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1769 ; 1769 >
-    au < testing ; 1770 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1770 ; 1770 >
-    au < testing ; 1771 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1771 ; 1771 >
-    au < testing ; 1772 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1772 ; 1772 >
+    au < ready ; 1616 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1616 ; 1616 >
+    au < ready ; 1618 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1618 ; 1618 >
+    au < ready ; 1630 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1630 ; 1630 >
+    au < ready ; 1634 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1634 ; 1634 >
+    au < ready ; 1638 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1638 ; 1638 >
+    au < ready ; 1647 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1647 ; 1647 >
+    au < ready ; 1649 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1649 ; 1649 >
+    au < ready ; 1658 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1658 ; 1658 >
+    au < ready ; 1659 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1659 ; 1659 >
+    au < ready ; 1660 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1660 ; 1660 >
+    au < ready ; 1665 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1665 ; 1665 >
+    au < ready ; 1666 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1666 ; 1666 >
+    au < ready ; 1667 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1667 ; 1667 >
+    au < ready ; 1668 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1668 ; 1668 >
+    au < ready ; 1669 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1669 ; 1669 >
+    au < ready ; 1671 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1671 ; 1671 >
+    au < ready ; 1672 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1672 ; 1672 >
+    au < ready ; 1673 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1673 ; 1673 >
+    au < ready ; 1678 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1678 ; 1678 >
+    au < ready ; 1679 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1679 ; 1679 >
+    au < ready ; 1681 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1681 ; 1681 >
+    au < ready ; 1682 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1682 ; 1682 >
+    au < ready ; 1684 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1684 ; 1684 >
+    au < ready ; 1685 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1685 ; 1685 >
+    au < ready ; 1688 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1688 ; 1688 >
+    au < ready ; 1690 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1690 ; 1690 >
+    au < ready ; 1691 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1691 ; 1691 >
+    au < ready ; 1692 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1692 ; 1692 >
+    au < ready ; 1693 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1693 ; 1693 >
+    au < ready ; 1694 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1694 ; 1694 >
+    au < ready ; 1695 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1695 ; 1695 >
+    au < ready ; 1701 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1701 ; 1701 >
+    au < ready ; 1707 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1707 ; 1707 >
+    au < ready ; 1711 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1711 ; 1711 >
+    au < ready ; 1714 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1714 ; 1714 >
+    au < ready ; 1715 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1715 ; 1715 >
+    au < ready ; 1716 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1716 ; 1716 >
+    au < ready ; 1721 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1721 ; 1721 >
+    au < ready ; 1722 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1722 ; 1722 >
+    au < ready ; 1726 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1726 ; 1726 >
+    au < ready ; 1727 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1727 ; 1727 >
+    au < ready ; 1730 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1730 ; 1730 >
+    au < ready ; 1736 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1736 ; 1736 >
+    au < ready ; 1737 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1737 ; 1737 >
+    au < ready ; 1738 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1738 ; 1738 >
+    au < ready ; 1742 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1742 ; 1742 >
+    au < ready ; 1743 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1743 ; 1743 >
+    au < ready ; 1745 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1745 ; 1745 >
+    au < ready ; 1747 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1747 ; 1747 >
+    au < ready ; 1748 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1748 ; 1748 >
+    au < ready ; 1750 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1750 ; 1750 >
+    au < ready ; 1751 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1751 ; 1751 >
+    au < ready ; 1754 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1754 ; 1754 >
+    au < ready ; 1755 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1755 ; 1755 >
+    au < ready ; 1756 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1756 ; 1756 >
+    au < ready ; 1757 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1757 ; 1757 >
+    au < ready ; 1763 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1763 ; 1763 >
+    au < ready ; 1764 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1764 ; 1764 >
+    au < ready ; 1766 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1766 ; 1766 >
+    au < ready ; 1768 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1768 ; 1768 >
+    au < ready ; 1769 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1769 ; 1769 >
+    au < ready ; 1770 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1770 ; 1770 >
+    au < ready ; 1771 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1771 ; 1771 >
+    au < ready ; 1772 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1772 ; 1772 >
     au < notReady ; 1776 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1776 ; 1776 >
     au < released ; 1777 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1777 ; 1777 >
     au < released ; 1783 ; University of Massachusetts Amherst: French Translators, 1600-1800: An Online Anthology of Prefaces and Criticism 1783 ; 1783 >
