@@ -524,7 +524,7 @@
     >
 
     #param[base_url] = http://www.microbecolhealthdis.net/
-    param[journal_id] = zmehd20
+    param[journal_id] = zmeh20
 
     au < doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 >
     au < doNotProcess ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 >
@@ -553,7 +553,7 @@
     au < exists ; 2014 ; Microbial Ecology in Health and Disease Volume 25 ; 25 >
     au < doNotProcess ; 2015 ; Microbial Ecology in Health and Disease Volume 26 ; 26 >
     au < exists ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 >
-    au < expected ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 >
+    au < exists ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 >
 
   }
 
