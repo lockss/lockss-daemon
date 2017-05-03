@@ -178,6 +178,15 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "Connection: Keep-Alive\r\n" +
     "Content-Type: text/html\r\n";
 
+  static String RESP_200_PARTIAL_BODY =
+    "HTTP/1.1 200 OK\r\n" +
+    "Content-Length: 1000\r\n" +
+    "Keep-Alive: timeout=15, max=100\r\n" +
+    "Connection: Keep-Alive\r\n" +
+    "Content-Type: text/html\r\n" +
+    "\r\n" +
+    "<html><body>Partial body text";
+
   static String RESP_304 =
     "HTTP/1.1 304 Not Modified\r\n" +
     "Connection: Keep-Alive\r\n" +
@@ -252,6 +261,53 @@ public class FuncLockssHttpClient extends LockssTestCase {
     Pattern pat = RegexpUtil.uncheckedCompile(expPat,
 					      Perl5Compiler.MULTILINE_MASK);
     assertNotMatchesRE(pat, hdr);
+  }
+
+  public void testPartialHeaderResponse() throws Exception {
+    connectionPool.setDataTimeout(100);
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(RESP_200);
+    th.setMaxReads(10);
+    th.start();
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+                                    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      fail("Socket timeout should throw");
+    } catch (SocketTimeoutException ste) {
+      assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
+    }
+    th.stopServer();
+  }
+
+  public void testPartialBodyResponse() throws Exception {
+    connectionPool.setDataTimeout(100);
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200_PARTIAL_BODY));
+    //th.setMaxReads(1);
+    th.start();
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+                                    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      InputStream is = conn.getResponseInputStream();
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      byte[] buffer = new byte[1024];
+      int length;
+      while ((length = is.read(buffer)) != -1) {
+          baos.write(buffer, 0, length);
+      }
+      fail("Socket timeout should throw");
+    } catch (SocketTimeoutException ste) {
+      assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
+    }
+    th.stopServer();
   }
 
   // Do one complete GET operation
