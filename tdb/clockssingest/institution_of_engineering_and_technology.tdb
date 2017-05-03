@@ -3,12 +3,13 @@
   publisher <
     name = Institution of Engineering and Technology (IET) ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 3 ;
+    info[poller] = 3
   >
 
-    #plugin = needs.plugin
+    plugin = needs.plugin
     #Platform is pub2web
-    plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+    #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
      {
