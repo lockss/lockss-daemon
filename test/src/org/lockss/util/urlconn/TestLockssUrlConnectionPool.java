@@ -129,6 +129,67 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     assertFalse(RequestConfig.DEFAULT.isStaleConnectionCheckEnabled());
   }
 
+  public void testSingleThreaded() {
+    ConfigurationUtil.resetConfig();
+    HttpClientConnectionManager mgr = pool.getHttpClientConnectionManager(null);
+    assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+    assertFalse(pool.isMultiThreaded());
+
+    PoolingHttpClientConnectionManager mtm = null;
+    try {
+      mtm = (PoolingHttpClientConnectionManager)mgr;
+      assertEquals(1, mtm.getMaxTotal());
+      assertEquals(1, mtm.getDefaultMaxPerRoute());
+    } finally {
+      mtm.close();
+    }
+
+    ConfigurationUtil.addFromArgs(
+	LockssUrlConnectionPool.PARAM_MAX_TOTAL_CONNECTION_COUNT, "2");
+
+    pool.setHttpClientConnectionManager(null);
+    mgr = pool.getHttpClientConnectionManager(null);
+    assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+    assertFalse(pool.isMultiThreaded());
+
+    try {
+      mtm = (PoolingHttpClientConnectionManager)mgr;
+      assertEquals(2, mtm.getMaxTotal());
+      assertEquals(1, mtm.getDefaultMaxPerRoute());
+    } finally {
+      mtm.close();
+    }
+
+    pool.setHttpClientConnectionManager(null);
+    pool.setSingleThreaded();
+    mgr = pool.getHttpClientConnectionManager(null);
+    assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+    assertFalse(pool.isMultiThreaded());
+
+    try {
+      mtm = (PoolingHttpClientConnectionManager)mgr;
+      assertEquals(2, mtm.getMaxTotal());
+      assertEquals(1, mtm.getDefaultMaxPerRoute());
+    } finally {
+      mtm.close();
+    }
+
+    ConfigurationUtil.resetConfig();
+    pool.setHttpClientConnectionManager(null);
+    pool.setSingleThreaded();
+    mgr = pool.getHttpClientConnectionManager(null);
+    assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+    assertFalse(pool.isMultiThreaded());
+
+    try {
+      mtm = (PoolingHttpClientConnectionManager)mgr;
+      assertEquals(1, mtm.getMaxTotal());
+      assertEquals(1, mtm.getDefaultMaxPerRoute());
+    } finally {
+      mtm.close();
+    }
+  }
+
   public void testMultiThreaded() {
     pool.setMultiThreaded(8, 3);
 //HC3     HttpClient client = pool.getHttpClient();
@@ -136,6 +197,7 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     HttpClientConnectionManager mgr = pool.getHttpClientConnectionManager(null);
 //HC3     assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
     assertTrue(mgr instanceof PoolingHttpClientConnectionManager);
+    assertTrue(pool.isMultiThreaded());
 //HC3     MultiThreadedHttpConnectionManager mtm =
 //HC3       (MultiThreadedHttpConnectionManager)mgr;
     PoolingHttpClientConnectionManager mtm = null;

@@ -30,6 +30,7 @@ package org.lockss.util.urlconn;
 //HC3 import java.io.*;
 //HC3 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import org.lockss.config.CurrentConfig;
 import org.lockss.util.*;
 //HC3 import org.apache.commons.httpclient.*;
 //HC3 import org.apache.commons.httpclient.HttpConnectionManager;
@@ -44,7 +45,6 @@ import org.apache.http.config.Registry;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.LayeredConnectionSocketFactory;
-import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 /** Encapsulates connection sharing object(s) used by implementations of
@@ -57,6 +57,13 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
  */
 public class LockssUrlConnectionPool {
   private static Logger log = Logger.getLogger(LockssUrlConnectionPool.class);
+  /* The configuration parameter for the maximum number of total connections
+   * supported by this pool.
+   */
+  static final String PARAM_MAX_TOTAL_CONNECTION_COUNT =
+      LockssUrlConnection.PREFIX + "maxTotalConnections";
+  static final int DEFAULT_MAX_TOTAL_CONNECTION_COUNT = 1;
+
   /** HttpClient caches connections inside the HttpClient object */
 //HC3   private HttpClient httpClient;
   private int connectTimeout = -1;
@@ -69,7 +76,7 @@ public class LockssUrlConnectionPool {
   private HttpClientContext context = null;
   private boolean keepAlive = false;
   private boolean isMultithreaded = false;
-  private int maxTotalConnections = 1;
+  private int maxTotalConnections = DEFAULT_MAX_TOTAL_CONNECTION_COUNT;
   private int maxConnectionsPerHost = 1;
 
 //HC3   /** Return (creating if necessary) an HttpClient */
@@ -106,6 +113,10 @@ public class LockssUrlConnectionPool {
   }
 
   public void setSingleThreaded() {
+    maxTotalConnections = CurrentConfig.getCurrentConfig()
+	.getInt(PARAM_MAX_TOTAL_CONNECTION_COUNT,
+	    DEFAULT_MAX_TOTAL_CONNECTION_COUNT);
+    maxConnectionsPerHost = 1;
 //HC3     HttpConnectionManager cm = new SimpleHttpConnectionManager();
 //HC3     setTimeouts(cm);
 //HC3     if (httpClient != null) {
@@ -207,23 +218,23 @@ public class LockssUrlConnectionPool {
 
   protected HttpClientConnectionManager setupNewHttpClientConnectionManager(
       Registry<ConnectionSocketFactory> rcsf) {
-    if (isMultiThreaded()) {
-      PoolingHttpClientConnectionManager phcm = null;
-      if (rcsf == null) {
+    PoolingHttpClientConnectionManager phcm = null;
+    if (rcsf == null) {
 	phcm = new PoolingHttpClientConnectionManager();
-      } else {
-	phcm = new PoolingHttpClientConnectionManager(rcsf);
-      }
-      phcm.setMaxTotal(getMaxTotalConnections());
-      phcm.setDefaultMaxPerRoute(getMaxConnectionsPerHost());
-      hcConnManager = phcm;
     } else {
-      if (rcsf == null) {
-	hcConnManager = new BasicHttpClientConnectionManager();
-      } else {
-	hcConnManager = new BasicHttpClientConnectionManager(rcsf);
-      }
+	phcm = new PoolingHttpClientConnectionManager(rcsf);
     }
+
+    if (!isMultiThreaded()) {
+      maxTotalConnections = CurrentConfig.getCurrentConfig().getInt(
+	  PARAM_MAX_TOTAL_CONNECTION_COUNT, DEFAULT_MAX_TOTAL_CONNECTION_COUNT);
+      maxConnectionsPerHost = 1;
+    }
+
+    phcm.setMaxTotal(getMaxTotalConnections());
+    phcm.setDefaultMaxPerRoute(getMaxConnectionsPerHost());
+
+    hcConnManager = phcm;
     return hcConnManager;
   }
 
