@@ -22,7 +22,7 @@
   </entry>  
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -47,12 +47,16 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>120</string>
+    <string>121</string>
   </entry>  
   <entry>
     <string>au_start_url</string>
     <string>"%ssite/misc/archive.xhtml", base_url, volume_name</string>
   </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.sepm.SepmBooksLoginPageChecker</string>
+  </entry>  
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
