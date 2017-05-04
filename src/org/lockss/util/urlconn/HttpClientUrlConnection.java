@@ -1205,6 +1205,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public void release() {
     final String DEBUG_HEADER = "release(): ";
     assertExecuted();
+
+    if (response == null) {
+      return;
+    }
+
     try {
 //HC3       method.releaseConnection();
       HttpEntity entity = response.getEntity();

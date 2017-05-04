@@ -187,6 +187,12 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "\r\n" +
     "<html><body>Partial body text";
 
+  static String RESP_301 =
+    "HTTP/1.1 301 Moved Permanently\r\n" +
+    "Location: " + URL_NO_DOMAIN + "\r\n" +
+    "Content-Length: 0\r\n" +
+    "Content-Type: text/html\r\n";
+
   static String RESP_304 =
     "HTTP/1.1 304 Not Modified\r\n" +
     "Connection: Keep-Alive\r\n" +
@@ -709,6 +715,71 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn.release();
     th.stopServer();
     assertEquals(1, th.getNumConnects());
+  }
+
+  public void testRedirection() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_301));
+    th.setMaxReads(10);
+    th.start();
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      // Redirection is allowed by default.
+      fail("Redirecting to unknown host should throw");
+    } catch (UnknownHostException e) {
+    }
+
+    aborter.cancel();
+    conn.release();
+    th.stopServer();
+
+    th = new ServerThread(new ServerSocket(port));
+    th.setResponses(resp(RESP_301));
+    th.setMaxReads(10);
+    th.start();
+    connectionPool.setHttpClientConnectionManager(null);
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+	  localurl(port), connectionPool);
+    conn.setFollowRedirects(false);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req = th.getRequest(0);
+    assertMatchesRE("^GET / HTTP/", req);
+    // check for the standard default request headers
+    assertHeaderLine("^Accept:", req);
+    assertHeaderLine("^Connection:", req);
+    assertHeaderLine("^User-Agent: Apache-HttpClient", req);
+
+    // Check that the connection has not followed the redirect.
+    assertEquals(301, conn.getResponseCode());
+    assertEquals(URL_NO_DOMAIN, conn.getResponseHeaderValue("Location"));
+    conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+
+    th = new ServerThread(new ServerSocket(port));
+    th.setResponses(resp(RESP_301));
+    th.setMaxReads(10);
+    th.start();
+    try {
+      connectionPool.setHttpClientConnectionManager(null);
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				    localurl(port), connectionPool);
+      conn.setFollowRedirects(true);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      fail("Redirecting to unknown host should throw");
+    } catch (UnknownHostException e) {
+    }
+
+    conn.release();
+    th.stopServer();
   }
 
   public void testCookieRFC2109() throws Exception {
