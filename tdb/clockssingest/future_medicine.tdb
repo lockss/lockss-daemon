@@ -105,7 +105,7 @@
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 ; >
     au < finished ; finished ; 2012 ; Clinical Lipidology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Clinical Lipidology Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     
@@ -138,7 +138,7 @@
     param[journal_id] = cns
 
     au < frozen ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; CNS Oncology Volume 3 ; 3 ; >
     au < finished ; finished ; 2015 ; CNS Oncology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; CNS Oncology Volume 5 ; 5 ; >
@@ -209,7 +209,7 @@
     au < manifest ; exists ; 2010 ; Epigenomics Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Epigenomics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; Epigenomics Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2013 ; Epigenomics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Epigenomics Volume 5 ; 5 ; >
     au < finished ; finished ; 2014 ; Epigenomics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; Epigenomics Volume 7 ; 7 ; >
     au < crawling ; exists ; 2016 ; Epigenomics Volume 8 ; 8 ; >
@@ -714,7 +714,7 @@
     au < manifest ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; >
     au < finished ; finished ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; >
-    au < deepCrawl ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; >
     au < finished ; finished ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; >
     au < crawling ; exists ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; >
