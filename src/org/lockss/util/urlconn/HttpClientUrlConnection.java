@@ -733,20 +733,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     } catch (SocketException se) {
       log.error("SocketException caught", se);
       throw se;
-    } catch (ClientProtocolException e) {
-      // Thrown by HttpClient4 for a variety of reasons.
-      // Turn this into a non HttpClient-specific exception
-      throw new ConnectionTimeoutException("Host did not respond", e);
-      // XXX If socket.connect() returns an error because the underlying
-      // socket connect times out, the behavior is platform dependent.  On
-      // Linux, java.net.ConnectException is thrown (same as for connection
-      // refused, and distunguishable only by the exception message).  On
-      // OpenBSD, java.net.SocketException is thrown with a message like
-      // "errno: 22, error: Invalid argument for fd: 3".  In lieu of a way
-      // to reliably determine when to turn these into a
-      // ConnectionTimeoutException, the solution for now is to use
-      // java-level connect timeouts that are shorter than the underlying
-      // socket connect timeout.
+    } catch (ClientProtocolException cpe) {
+      log.error("ClientProtocolException caught", cpe);
+      throw cpe;
     } catch (IOException ioe) {
       log.error("IOException caught", ioe);
       SocketException se = new SocketException("Connection reset by peer");
@@ -1279,6 +1268,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   LayeredConnectionSocketFactory getSslConnectionFactory() {
     return hcSockFact;
+  }
+
+  HttpResponse getResponse() {
+    return response;
   }
 
 //HC3   /** Common interface for our methods makes testing more convenient */

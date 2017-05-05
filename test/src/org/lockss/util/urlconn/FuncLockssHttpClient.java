@@ -31,6 +31,9 @@ package org.lockss.util.urlconn;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.apache.http.ConnectionClosedException;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.util.EntityUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -178,6 +181,13 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "Connection: Keep-Alive\r\n" +
     "Content-Type: text/html\r\n";
 
+  static String RESP_200_PARTIAL_HDR =
+    "HTTP/1.1 200 OK\r\n" +
+    "Content-Length: 0\r\n" +
+    "Keep-Alive: timeout=15, max=100\r\n" +
+    "Connection: Keep-Alive\r\n" +
+    "Content-Ty";
+
   static String RESP_200_PARTIAL_BODY =
     "HTTP/1.1 200 OK\r\n" +
     "Content-Length: 1000\r\n" +
@@ -269,7 +279,27 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertNotMatchesRE(pat, hdr);
   }
 
-  public void testPartialHeaderResponse() throws Exception {
+  public void testPartialHeaderResponseClosing() throws Exception {
+    connectionPool.setDataTimeout(100);
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(RESP_200_PARTIAL_HDR);
+    th.setMaxReads(1);
+    th.start();
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+                                    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      fail("Socket timeout should throw");
+    } catch (ClientProtocolException cpe) {
+      assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
+    }
+    th.stopServer();
+  }
+
+  public void testPartialHeaderResponseTimeout() throws Exception {
     connectionPool.setDataTimeout(100);
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
@@ -289,26 +319,43 @@ public class FuncLockssHttpClient extends LockssTestCase {
     th.stopServer();
   }
 
-  public void testPartialBodyResponse() throws Exception {
+  public void testPartialBodyResponseClosing() throws Exception {
     connectionPool.setDataTimeout(100);
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
     th.setResponses(resp(RESP_200_PARTIAL_BODY));
-    //th.setMaxReads(1);
+    th.setMaxReads(1);
     th.start();
     try {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
                                     localurl(port), connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      InputStream is = conn.getResponseInputStream();
-      ByteArrayOutputStream baos = new ByteArrayOutputStream();
-      byte[] buffer = new byte[1024];
-      int length;
-      while ((length = is.read(buffer)) != -1) {
-          baos.write(buffer, 0, length);
-      }
+      EntityUtils.consume(((HttpClientUrlConnection)conn).getResponse()
+	  .getEntity());
+      fail("Connection closed should throw");
+    } catch (ConnectionClosedException cce) {
+      assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
+    }
+    th.stopServer();
+  }
+
+  public void testPartialBodyResponseTimeout() throws Exception {
+    connectionPool.setDataTimeout(100);
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200_PARTIAL_BODY));
+    th.setMaxReads(10);
+    th.start();
+    try {
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+                                    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+      conn.execute();
+      EntityUtils.consume(((HttpClientUrlConnection)conn).getResponse()
+	  .getEntity());
       fail("Socket timeout should throw");
     } catch (SocketTimeoutException ste) {
       assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
