@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Carl Grossman Publishers ;
+    info[contract] = 2017 ;
+    info[tester] = S
+  >
+
+
+  {
+  
+    title <
+      name = Carl Grossman Books Source Content
+    >
+    
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.clockss.carlgrossman.ClockssCarlGrossmanBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/carlgrossmann-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < expected ; exists ; 2017 ; Carl Grossman Books Source Content 2017 ; 2017 >
+    
+  }
+
+}
