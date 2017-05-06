@@ -948,9 +948,9 @@
     au < manifest ; exists ; 1999 ; Indian Journal of Endocrinology and Metabolism Volume 3 ; 1999 ; 3 ; >
     au < manifest ; exists ; 2000 ; Indian Journal of Endocrinology and Metabolism Volume 4 ; 2000 ; 4 ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Indian Journal of Endocrinology and Metabolism Volume 5 ; 2001 ; 5 ; >
-    au < exists ; exists ; 2004 ; Indian Journal of Endocrinology and Metabolism Volume 6 ; 2004 ; 6 ; >
+    au < manifest ; exists ; 2004 ; Indian Journal of Endocrinology and Metabolism Volume 6 ; 2004 ; 6 ; >
     au < doesNotExist ; doesNotExist ; 2003 ; Indian Journal of Endocrinology and Metabolism Volume 7 ; 2003 ; 7 ; >
-    au < exists ; exists ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 8 ; 2006 ; 8 ; >
+    au < manifest ; exists ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 8 ; 2006 ; 8 ; >
     au < doesNotExist ; doesNotExist ; 2005 ; Indian Journal of Endocrinology and Metabolism Volume 9 ; 2005 ; 9 ; >
     au < doesNotExist ; doesNotExist ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 10 ; 2006 ; 10 ; >
     au < manifest ; exists ; 2007 ; Indian Journal of Endocrinology and Metabolism Volume 11 ; 2007 ; 11 ; >
@@ -1218,14 +1218,14 @@
     param[base_url] = http://www.ijo.in/
     param[journal_issn] = 0301-4738
 
-    au < exists ; exists ; 1953 ; Indian Journal of Ophthalmology Volume 1 ; 1953 ; 1 ; >
-    au < exists ; exists ; 1954 ; Indian Journal of Ophthalmology Volume 2 ; 1954 ; 2 ; >
-    au < exists ; exists ; 1955 ; Indian Journal of Ophthalmology Volume 3 ; 1955 ; 3 ; >
-    au < exists ; exists ; 1956 ; Indian Journal of Ophthalmology Volume 4 ; 1956 ; 4 ; >
-    au < exists ; exists ; 1957 ; Indian Journal of Ophthalmology Volume 5 ; 1957 ; 5 ; >
-    au < exists ; exists ; 1958 ; Indian Journal of Ophthalmology Volume 6 ; 1958 ; 6 ; >
-    au < exists ; exists ; 1959 ; Indian Journal of Ophthalmology Volume 7 ; 1959 ; 7 ; >
-    au < exists ; exists ; 1960 ; Indian Journal of Ophthalmology Volume 8 ; 1960 ; 8 ; >
+    au < manifest ; exists ; 1953 ; Indian Journal of Ophthalmology Volume 1 ; 1953 ; 1 ; >
+    au < manifest ; exists ; 1954 ; Indian Journal of Ophthalmology Volume 2 ; 1954 ; 2 ; >
+    au < manifest ; exists ; 1955 ; Indian Journal of Ophthalmology Volume 3 ; 1955 ; 3 ; >
+    au < manifest ; exists ; 1956 ; Indian Journal of Ophthalmology Volume 4 ; 1956 ; 4 ; >
+    au < manifest ; exists ; 1957 ; Indian Journal of Ophthalmology Volume 5 ; 1957 ; 5 ; >
+    au < manifest ; exists ; 1958 ; Indian Journal of Ophthalmology Volume 6 ; 1958 ; 6 ; >
+    au < manifest ; exists ; 1959 ; Indian Journal of Ophthalmology Volume 7 ; 1959 ; 7 ; >
+    au < manifest ; exists ; 1960 ; Indian Journal of Ophthalmology Volume 8 ; 1960 ; 8 ; >
     au < manifest ; exists ; 1961 ; Indian Journal of Ophthalmology Volume 9 ; 1961 ; 9 ; >
     au < manifest ; exists ; 1962 ; Indian Journal of Ophthalmology Volume 10 ; 1962 ; 10 ; >
     au < manifest ; exists ; 1963 ; Indian Journal of Ophthalmology Volume 11 ; 1963 ; 11 ; >
@@ -1592,7 +1592,7 @@
 
     au < manifest ; exists ; 1949 ; Indian Journal of Psychiatry Volume 1 (1949) ; 1949 ; 1 ; >
     au < manifest ; exists ; 1950 ; Indian Journal of Psychiatry Volume 2 (1950) ; 1950 ; 2 ; >
-    au < exists ; exists ; 1952 ; Indian Journal of Psychiatry Volume 3 (1952) ; 1952 ; 3 ; >
+    au < manifest ; exists ; 1952 ; Indian Journal of Psychiatry Volume 3 (1952) ; 1952 ; 3 ; >
     au < manifest ; exists ; 1959 ; Indian Journal of Psychiatry Volume 1 (1959) ; 1959 ; 1 ; >
     au < manifest ; exists ; 1960 ; Indian Journal of Psychiatry Volume 2 (1960) ; 1960 ; 2 ; >
     au < manifest ; exists ; 1961 ; Indian Journal of Psychiatry Volume 3 (1961) ; 1961 ; 3 ; >
@@ -1824,7 +1824,7 @@
     au < manifest ; exists ; 1985 ; Indian Journal of Urology Volume 1 ; 1985 ; 1 ; >
     au < manifest ; exists ; 1986 ; Indian Journal of Urology Volume 2 ; 1986 ; 2 ; >
     au < manifest ; exists ; 1987 ; Indian Journal of Urology Volume 3 ; 1987 ; 3 ; >
-    au < exists ; exists ; 1987 ; Indian Journal of Urology Volume 4 ; 1987 ; 4 ; >
+    au < manifest ; exists ; 1987 ; Indian Journal of Urology Volume 4 ; 1987 ; 4 ; >
     au < doesNotExist ; doesNotExist ; 1989 ; Indian Journal of Urology Volume 5 ; 1989 ; 5 ; >
     au < doesNotExist ; doesNotExist ; 1990 ; Indian Journal of Urology Volume 6 ; 1990 ; 6 ; >
     au < doesNotExist ; doesNotExist ; 1991 ; Indian Journal of Urology Volume 7 ; 1991 ; 7 ; >
@@ -2482,7 +2482,7 @@
 
     au < finished ; finished ; 2011 ; Journal of Education and Ethics in Dentistry Volume 1 ; 2011 ; 1 ; >
     au < crawling ; exists ; 2012 ; Journal of Education and Ethics in Dentistry Volume 2 ; 2012 ; 2 ; >
-    au < exists ; exists ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; >
+    au < manifest ; exists ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; >
     au < manifest ; exists ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; >
 
@@ -3837,11 +3837,11 @@
     au < manifest ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 ; >
     au < crawling ; exists ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection and Environment Volume 35 ; 2012 ; 35 ; >
-    au < exists ; exists ; 2013 ; Radiation Protection and Environment Volume 36 ; 2013 ; 36 ; >
+    au < manifest ; exists ; 2013 ; Radiation Protection and Environment Volume 36 ; 2013 ; 36 ; >
     au < manifest ; exists ; 2014 ; Radiation Protection and Environment Volume 37 ; 2014 ; 37 ; >
     au < manifest ; exists ; 2015 ; Radiation Protection and Environment Volume 38 ; 2015 ; 38 ; >
-    au < exists ; exists ; 2016 ; Radiation Protection and Environment Volume 39 ; 2016 ; 39 ; >
-    au < exists ; exists ; 2017 ; Radiation Protection and Environment Volume 40 ; 2017 ; 40 ; >
+    au < manifest ; exists ; 2016 ; Radiation Protection and Environment Volume 39 ; 2016 ; 39 ; >
+    au < manifest ; exists ; 2017 ; Radiation Protection and Environment Volume 40 ; 2017 ; 40 ; >
 
   }
 
@@ -4427,14 +4427,14 @@
       param[journal_issn] = 2045-080X
       param[base_url] = http://www.archivepp.com/
 
-      au < exists ; exists ; 2010 ; Archives of Pharmacy Practice Volume 1 ; 2010 ; 1 ; >
-      au < exists ; exists ; 2011 ; Archives of Pharmacy Practice Volume 2 ; 2011 ; 2 ; >
-      au < exists ; exists ; 2012 ; Archives of Pharmacy Practice Volume 3 ; 2012 ; 3 ; >
-      au < exists ; exists ; 2013 ; Archives of Pharmacy Practice Volume 4 ; 2013 ; 4 ; >
+      au < manifest ; exists ; 2010 ; Archives of Pharmacy Practice Volume 1 ; 2010 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Archives of Pharmacy Practice Volume 2 ; 2011 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Archives of Pharmacy Practice Volume 3 ; 2012 ; 3 ; >
+      au < manifest ; exists ; 2013 ; Archives of Pharmacy Practice Volume 4 ; 2013 ; 4 ; >
       au < manifest ; exists ; 2014 ; Archives of Pharmacy Practice Volume 5 ; 2014 ; 5 ; >
       au < manifest ; exists ; 2015 ; Archives of Pharmacy Practice Volume 6 ; 2015 ; 6 ; >
-      au < exists ; exists ; 2016 ; Archives of Pharmacy Practice Volume 7 ; 2016 ; 7 ; >
-      au < exists ; exists ; 2017 ; Archives of Pharmacy Practice Volume 8 ; 2017 ; 8 ; >
+      au < manifest ; exists ; 2016 ; Archives of Pharmacy Practice Volume 7 ; 2016 ; 7 ; >
+      au < manifest ; exists ; 2017 ; Archives of Pharmacy Practice Volume 8 ; 2017 ; 8 ; >
 
   }
 
@@ -4694,11 +4694,11 @@
       param[journal_issn] = 2278-0513
       param[base_url] = http://www.ccij-online.org/
 
-      au < exists ; exists ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Clinical Cancer Investigation Journal Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Clinical Cancer Investigation Journal Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; Clinical Cancer Investigation Journal Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; Clinical Cancer Investigation Journal Volume 4 ; 2015 ; 4 ; >
-      au < exists ; exists ; 2016 ; Clinical Cancer Investigation Journal Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Clinical Cancer Investigation Journal Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -4768,11 +4768,11 @@
       param[journal_issn] = 2348-1471
       param[base_url] = http://www.dmrjournal.org/
 
-      au < exists ; exists ; 2013 ; Dentistry and Medical Research Volume 1 ; 2013 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Dentistry and Medical Research Volume 1 ; 2013 ; 1 ; >
       au < manifest ; exists ; 2014 ; Dentistry and Medical Research Volume 2 ; 2014 ; 2 ; >
       au < manifest ; exists ; 2015 ; Dentistry and Medical Research Volume 3 ; 2015 ; 3 ; >
-      au < exists ; exists ; 2016 ; Dentistry and Medical Research Volume 4 ; 2016 ; 4 ; >
-      au < exists ; exists ; 2017 ; Dentistry and Medical Research Volume 5 ; 2017 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Dentistry and Medical Research Volume 4 ; 2016 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Dentistry and Medical Research Volume 5 ; 2017 ; 5 ; >
 
   }
 
@@ -5076,11 +5076,11 @@
       param[journal_issn] = 1305-7456
       param[base_url] = http://www.eurjdent.com/
 
-      au < exists ; exists ; 2013 ; European Journal of Prosthodontics Volume 7 ; 2013 ; 7 ; >
+      au < manifest ; exists ; 2013 ; European Journal of Prosthodontics Volume 7 ; 2013 ; 7 ; >
       au < manifest ; exists ; 2014 ; European Journal of Prosthodontics Volume 8 ; 2014 ; 8 ; >
       au < manifest ; exists ; 2015 ; European Journal of Prosthodontics Volume 9 ; 2015 ; 9 ; >
-      au < exists ; exists ; 2016 ; European Journal of Prosthodontics Volume 10 ; 2016 ; 10 ; >
-      au < exists ; exists ; 2017 ; European Journal of Prosthodontics Volume 11 ; 2017 ; 11 ; >
+      au < manifest ; exists ; 2016 ; European Journal of Prosthodontics Volume 10 ; 2016 ; 10 ; >
+      au < manifest ; exists ; 2017 ; European Journal of Prosthodontics Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -5162,11 +5162,11 @@
       param[journal_issn] = 2321-449x
       param[base_url] = http://www.heartindia.net/
 
-      au < exists ; exists ; 2013 ; Heart India Volume 1 ; 2013 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Heart India Volume 1 ; 2013 ; 1 ; >
       au < manifest ; exists ; 2014 ; Heart India Volume 2 ; 2014 ; 2 ; >
       au < manifest ; exists ; 2015 ; Heart India Volume 3 ; 2015 ; 3 ; >
-      au < exists ; exists ; 2016 ; Heart India Volume 4 ; 2016 ; 4 ; >
-      au < exists ; exists ; 2017 ; Heart India Volume 5 ; 2017 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Heart India Volume 4 ; 2016 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Heart India Volume 5 ; 2017 ; 5 ; >
 
   }
 
@@ -5261,7 +5261,7 @@
 
       au < manifest ; exists ; 2014 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 1 ; 2014 ; 1 ; >
       au < manifest ; exists ; 2015 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 2 ; 2015 ; 2 ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 3 ; 2016 ; 3 ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 3 ; 2016 ; 3 ; >
 
   }
 
@@ -5311,18 +5311,18 @@
       param[journal_issn] = 0971-5916
       param[base_url] = http://www.ijmr.org.in/
 
-      au < exists ; exists ; 2011 ; Indian Journal of Medical Research Volume 133 ; 2011 ; 133 ; >
-      au < exists ; exists ; 2011 ; Indian Journal of Medical Research Volume 134 ; 2011 ; 134 ; >
-      au < exists ; exists ; 2012 ; Indian Journal of Medical Research Volume 135 ; 2012 ; 135 ; >
-      au < exists ; exists ; 2012 ; Indian Journal of Medical Research Volume 136 ; 2012 ; 136 ; >
-      au < exists ; exists ; 2013 ; Indian Journal of Medical Research Volume 137 ; 2013 ; 137 ; >
-      au < exists ; exists ; 2013 ; Indian Journal of Medical Research Volume 138 ; 2013 ; 138 ; >
+      au < manifest ; exists ; 2011 ; Indian Journal of Medical Research Volume 133 ; 2011 ; 133 ; >
+      au < manifest ; exists ; 2011 ; Indian Journal of Medical Research Volume 134 ; 2011 ; 134 ; >
+      au < manifest ; exists ; 2012 ; Indian Journal of Medical Research Volume 135 ; 2012 ; 135 ; >
+      au < manifest ; exists ; 2012 ; Indian Journal of Medical Research Volume 136 ; 2012 ; 136 ; >
+      au < manifest ; exists ; 2013 ; Indian Journal of Medical Research Volume 137 ; 2013 ; 137 ; >
+      au < manifest ; exists ; 2013 ; Indian Journal of Medical Research Volume 138 ; 2013 ; 138 ; >
       au < manifest ; exists ; 2014 ; Indian Journal of Medical Research Volume 139 ; 2014 ; 139 ; >
       au < manifest ; exists ; 2014 ; Indian Journal of Medical Research Volume 140 ; 2014 ; 140 ; >
       au < manifest ; exists ; 2015 ; Indian Journal of Medical Research Volume 141 ; 2015 ; 141 ; >
       au < manifest ; exists ; 2015 ; Indian Journal of Medical Research Volume 142 ; 2015 ; 142 ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Medical Research Volume 143 ; 2016 ; 143 ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Medical Research Volume 144 ; 2016 ; 144 ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Medical Research Volume 143 ; 2016 ; 143 ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Medical Research Volume 144 ; 2016 ; 144 ; >
 
   }
 
@@ -5561,11 +5561,11 @@
       param[journal_issn] = 2278-344X
       param[base_url] = http://www.ijhas.in/
 
-      au < exists ; exists ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; International Journal of Health & Allied Sciences Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; International Journal of Health & Allied Sciences Volume 4 ; 2015 ; 4 ; >
-      au < expected ; exists ; 2016 ; International Journal of Health & Allied Sciences Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Health & Allied Sciences Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -5829,12 +5829,12 @@
       au < manifest ; exists ; 2006 ; Journal of Clinical Sciences Volume 6 ; 2006 ; 6 ; >
       au < manifest ; exists ; 2007 ; Journal of Clinical Sciences Volume 7 ; 2007 ; 7 ; >
       au < manifest ; exists ; 2008 ; Journal of Clinical Sciences Volume 8 ; 2008 ; 8 ; >
-      au < exists ; exists ; 2012 ; Journal of Clinical Sciences Volume 9 ; 2012 ; 9 ; >
-      au < exists ; exists ; 2013 ; Journal of Clinical Sciences Volume 10 ; 2013 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Journal of Clinical Sciences Volume 9 ; 2012 ; 9 ; >
+      au < manifest ; exists ; 2013 ; Journal of Clinical Sciences Volume 10 ; 2013 ; 10 ; >
       au < manifest ; exists ; 2014 ; Journal of Clinical Sciences Volume 11 ; 2014 ; 11 ; >
       au < manifest ; exists ; 2015 ; Journal of Clinical Sciences Volume 12 ; 2015 ; 12 ; >
-      au < exists ; exists ; 2016 ; Journal of Clinical Sciences Volume 13 ; 2016 ; 13 ; >
-      au < exists ; exists ; 2017 ; Journal of Clinical Sciences Volume 14 ; 2017 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Journal of Clinical Sciences Volume 13 ; 2016 ; 13 ; >
+      au < manifest ; exists ; 2017 ; Journal of Clinical Sciences Volume 14 ; 2017 ; 14 ; >
 
   }
 
@@ -5950,12 +5950,12 @@
       param[journal_issn] = 2277-8632
       param[base_url] = http://www.jdrntruhs.org/
 
-      au < exists ; exists ; 2012 ; Journal of Dr. NTR University of Health Sciences Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; Journal of Dr. NTR University of Health Sciences Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Journal of Dr. NTR University of Health Sciences Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Journal of Dr. NTR University of Health Sciences Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; Journal of Dr. NTR University of Health Sciences Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; Journal of Dr. NTR University of Health Sciences Volume 4 ; 2015 ; 4 ; >
-      au < exists ; exists ; 2016 ; Journal of Dr. NTR University of Health Sciences Volume 5 ; 2016 ; 5 ; >
-      au < exists ; exists ; 2017 ; Journal of Dr. NTR University of Health Sciences Volume 6 ; 2017 ; 6 ; >
+      au < manifest ; exists ; 2016 ; Journal of Dr. NTR University of Health Sciences Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2017 ; Journal of Dr. NTR University of Health Sciences Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -6150,18 +6150,18 @@
       au < manifest ; exists ; 2003 ; Journal of Indian Association of Public Health Dentistry Volume 3 ; 2003 ; 3 ; >
       au < manifest ; exists ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2004 ; 4 ; >
       au < manifest ; exists ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2005 ; 5 ; >
-      au < exists ; exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2006 ; 4 ; >
-      au < exists ; exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2007 ; 5 ; >
-      au < exists ; exists ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2008 ; 6 ; >
-      au < exists ; exists ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2009 ; 7 ; >
-      au < exists ; exists ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2010 ; 8 ; >
-      au < exists ; exists ; 2011 ; Journal of Indian Association of Public Health Dentistry Volume 9 ; 2011 ; 9 ; >
-      au < exists ; exists ; 2012 ; Journal of Indian Association of Public Health Dentistry Volume 10 ; 2012 ; 10 ; >
-      au < exists ; exists ; 2013 ; Journal of Indian Association of Public Health Dentistry Volume 11 ; 2013 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2006 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2007 ; 5 ; >
+      au < manifest ; exists ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2008 ; 6 ; >
+      au < manifest ; exists ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2009 ; 7 ; >
+      au < manifest ; exists ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2010 ; 8 ; >
+      au < manifest ; exists ; 2011 ; Journal of Indian Association of Public Health Dentistry Volume 9 ; 2011 ; 9 ; >
+      au < manifest ; exists ; 2012 ; Journal of Indian Association of Public Health Dentistry Volume 10 ; 2012 ; 10 ; >
+      au < manifest ; exists ; 2013 ; Journal of Indian Association of Public Health Dentistry Volume 11 ; 2013 ; 11 ; >
       au < manifest ; exists ; 2014 ; Journal of Indian Association of Public Health Dentistry Volume 12 ; 2014 ; 12 ; >
       au < manifest ; exists ; 2015 ; Journal of Indian Association of Public Health Dentistry Volume 13 ; 2015 ; 13 ; >
-      au < exists ; exists ; 2016 ; Journal of Indian Association of Public Health Dentistry Volume 14 ; 2016 ; 14 ; >
-      au < exists ; exists ; 2017 ; Journal of Indian Association of Public Health Dentistry Volume 15 ; 2017 ; 15 ; >
+      au < manifest ; exists ; 2016 ; Journal of Indian Association of Public Health Dentistry Volume 14 ; 2016 ; 14 ; >
+      au < manifest ; exists ; 2017 ; Journal of Indian Association of Public Health Dentistry Volume 15 ; 2017 ; 15 ; >
 
   }
 
@@ -6509,12 +6509,12 @@
       param[journal_issn] = 2278-0203
       param[base_url] = http://www.jorthodsci.org/
 
-      au < exists ; exists ; 2012 ; Journal of Orthodontic Science Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; Journal of Orthodontic Science Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Journal of Orthodontic Science Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Journal of Orthodontic Science Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; Journal of Orthodontic Science Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; Journal of Orthodontic Science Volume 4 ; 2015 ; 4 ; >
-      au < exists ; exists ; 2016 ; Journal of Orthodontic Science Volume 5 ; 2016 ; 5 ; >
-      au < exists ; exists ; 2017 ; Journal of Orthodontic Science Volume 6 ; 2017 ; 6 ; >
+      au < manifest ; exists ; 2016 ; Journal of Orthodontic Science Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2017 ; Journal of Orthodontic Science Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -6601,12 +6601,12 @@
       param[journal_issn] = 2279-042X
       param[base_url] = http://www.jrpp.net/
 
-      au < exists ; exists ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Journal of Research in Pharmacy Practice Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Journal of Research in Pharmacy Practice Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; Journal of Research in Pharmacy Practice Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; Journal of Research in Pharmacy Practice Volume 4 ; 2015 ; 4 ; >
-      au < exists ; exists ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; >
-      au < exists ; exists ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; >
+      au < manifest ; exists ; 2016 ; Journal of Research in Pharmacy Practice Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2017 ; Journal of Research in Pharmacy Practice Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -7023,7 +7023,7 @@
 
       au < crawling ; exists ; 2013 ; Nigerian Journal of Surgical Research Volume 15 ; 2013 ; 15 ; >
       au < manifest ; exists ; 2015 ; Nigerian Journal of Surgical Research Volume 16 ; 2015 ; 16 ; >
-      au < exists ; exists ; 2016 ; Nigerian Journal of Surgical Research Volume 17 ; 2016 ; 17 ; >
+      au < manifest ; exists ; 2016 ; Nigerian Journal of Surgical Research Volume 17 ; 2016 ; 17 ; >
 
   }
 
@@ -7088,14 +7088,14 @@
       param[journal_issn] = 1947-2714
       param[base_url] = http://www.najms.org/
 
-      au < exists ; exists ; 2009 ; North American Journal of Medical Sciences Volume 1 ; 2009 ; 1 ; >
-      au < exists ; exists ; 2010 ; North American Journal of Medical Sciences Volume 2 ; 2010 ; 2 ; >
-      au < exists ; exists ; 2011 ; North American Journal of Medical Sciences Volume 3 ; 2011 ; 3 ; >
-      au < exists ; exists ; 2012 ; North American Journal of Medical Sciences Volume 4 ; 2012 ; 4 ; >
-      au < exists ; exists ; 2013 ; North American Journal of Medical Sciences Volume 5 ; 2013 ; 5 ; >
+      au < manifest ; exists ; 2009 ; North American Journal of Medical Sciences Volume 1 ; 2009 ; 1 ; >
+      au < manifest ; exists ; 2010 ; North American Journal of Medical Sciences Volume 2 ; 2010 ; 2 ; >
+      au < manifest ; exists ; 2011 ; North American Journal of Medical Sciences Volume 3 ; 2011 ; 3 ; >
+      au < manifest ; exists ; 2012 ; North American Journal of Medical Sciences Volume 4 ; 2012 ; 4 ; >
+      au < manifest ; exists ; 2013 ; North American Journal of Medical Sciences Volume 5 ; 2013 ; 5 ; >
       au < manifest ; exists ; 2014 ; North American Journal of Medical Sciences Volume 6 ; 2014 ; 6 ; >
       au < manifest ; exists ; 2015 ; North American Journal of Medical Sciences Volume 7 ; 2015 ; 7 ; >
-      au < exists ; exists ; 2016 ; North American Journal of Medical Sciences Volume 8 ; 2016 ; 8 ; >
+      au < manifest ; exists ; 2016 ; North American Journal of Medical Sciences Volume 8 ; 2016 ; 8 ; >
 
   }
 
@@ -7248,11 +7248,11 @@
       param[journal_issn] = 2278-0521
       param[base_url] = http://www.saudijhealthsci.org/
 
-      au < exists ; exists ; 2012 ; Saudi Journal for Health Sciences Volume 1 ; 2012 ; 1 ; >
-      au < exists ; exists ; 2013 ; Saudi Journal for Health Sciences Volume 2 ; 2013 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Saudi Journal for Health Sciences Volume 1 ; 2012 ; 1 ; >
+      au < manifest ; exists ; 2013 ; Saudi Journal for Health Sciences Volume 2 ; 2013 ; 2 ; >
       au < manifest ; exists ; 2014 ; Saudi Journal for Health Sciences Volume 3 ; 2014 ; 3 ; >
       au < manifest ; exists ; 2015 ; Saudi Journal for Health Sciences Volume 4 ; 2015 ; 4 ; >
-      au < exists ; exists ; 2016 ; Saudi Journal for Health Sciences Volume 5 ; 2016 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Saudi Journal for Health Sciences Volume 5 ; 2016 ; 5 ; >
 
   }
 
