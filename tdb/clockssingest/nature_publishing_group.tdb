@@ -82,7 +82,8 @@
     param[journal_id] = ajgsup
 
     au < crawling ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
-    au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; >
+    au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; > #informed Kim missing manifest RT8450
+    au < exists ; exists ; 2016 ; American Journal of Gastroenterology Supplements Volume 3 ; 2016 ; 3 ; > #informed Kim missing manifest RT8450
 
   }
 
@@ -934,8 +935,9 @@
     au < finished ; finished ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 ; >
     au < finished ; frozen ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 ; >
     au < finished ; finished ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2015 ; Genetics in Medicine Volume 17 ; 2015 ; 17 ; >
-    au < exists ; exists ; 2016 ; Genetics in Medicine Volume 18 ; 2016 ; 18 ; >
+    au < exists ; exists ; 2015 ; Genetics in Medicine Volume 17 ; 2015 ; 17 ; > #informed Kim missing manifest RT8450
+    au < exists ; exists ; 2016 ; Genetics in Medicine Volume 18 ; 2016 ; 18 ; > #informed Kim missing manifest RT8450
+    au < exists ; exists ; 2017 ; Genetics in Medicine Volume 19 ; 2017 ; 19 ; > #informed Kim missing manifest RT8450
 
   }
 
@@ -1865,9 +1867,9 @@
 
     param[journal_id] = leusup
 
-    au < exists ; exists ; 2012 ; Leukemia Supplements Volume 1 ; 2012 ; 1 ; >
-    au < exists ; exists ; 2013 ; Leukemia Supplements Volume 2 ; 2013 ; 2 ; >
-    au < exists ; exists ; 2014 ; Leukemia Supplements Volume 3 ; 2014 ; 3 ; >
+    au < exists ; exists ; 2012 ; Leukemia Supplements Volume 1 ; 2012 ; 1 ; > #informed Kim missing manifest RT8450
+    au < exists ; exists ; 2013 ; Leukemia Supplements Volume 2 ; 2013 ; 2 ; > #informed Kim missing manifest RT8450
+    au < exists ; exists ; 2014 ; Leukemia Supplements Volume 3 ; 2014 ; 3 ; > #informed Kim missing manifest RT8450
   }
 
   {

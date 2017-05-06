@@ -6,6 +6,8 @@
     info[tester] = 5 ;
     info[poller] = 2
   >
+  
+  #IOP moved to source plugin. All AUs down.
 
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
   param[base_url] = http://iopscience.iop.org/
@@ -38,8 +40,10 @@
     param[journal_issn] = 2053-1583
     comment[param] = eissn preferred
 
-    au < exists ; exists ; 2014 ; 2D Materials Volume 1 ; 1 ; > 
+    au < doNotProcess ; doNotProcess ; 2014 ; 2D Materials Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; 2D Materials Volume 2 ; 2 ; > 
+    au < doNotProcess ; doNotProcess ; 2016 ; 2D Materials Volume 3 ; 3 ; > 
+    au < doNotProcess ; doNotProcess ; 2017 ; 2D Materials Volume 4 ; 4 ; > 
 
   }
 
@@ -261,22 +265,22 @@
 
     param[journal_issn] = 1674-1056
 
-    au < exists ; exists ; 1992 ; Chinese Physics B Volume 1 ; 1 ; >
-    au < exists ; exists ; 1993 ; Chinese Physics B Volume 2 ; 2 ; >
-    au < exists ; exists ; 1994 ; Chinese Physics B Volume 3 ; 3 ; >
-    au < exists ; exists ; 1995 ; Chinese Physics B Volume 4 ; 4 ; >
-    au < exists ; exists ; 1996 ; Chinese Physics B Volume 5 ; 5 ; >
-    au < exists ; exists ; 1997 ; Chinese Physics B Volume 6 ; 6 ; >
-    au < exists ; exists ; 1998 ; Chinese Physics B Volume 7 ; 7 ; >
-    au < exists ; exists ; 1999 ; Chinese Physics B Volume 8 ; 8 ; >
-    au < exists ; exists ; 2000 ; Chinese Physics B Volume 9 ; 9 ; >
-    au < exists ; exists ; 2001 ; Chinese Physics B Volume 10 ; 10 ; >
-    au < exists ; exists ; 2002 ; Chinese Physics B Volume 11 ; 11 ; >
-    au < exists ; exists ; 2003 ; Chinese Physics B Volume 12 ; 12 ; >
-    au < exists ; exists ; 2004 ; Chinese Physics B Volume 13 ; 13 ; >
-    au < exists ; exists ; 2005 ; Chinese Physics B Volume 14 ; 14 ; >
-    au < exists ; exists ; 2006 ; Chinese Physics B Volume 15 ; 15 ; >
-    au < exists ; exists ; 2007 ; Chinese Physics B Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Chinese Physics B Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Chinese Physics B Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Chinese Physics B Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Chinese Physics B Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Chinese Physics B Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Chinese Physics B Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Chinese Physics B Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Chinese Physics B Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Chinese Physics B Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Chinese Physics B Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Chinese Physics B Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Chinese Physics B Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Chinese Physics B Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Chinese Physics B Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Chinese Physics B Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Chinese Physics B Volume 16 ; 16 ; >
     au < frozen ; exists ; 2008 ; Chinese Physics B Volume 17 ; 17 ; >
     au < finished ; finished ; 2009 ; Chinese Physics B Volume 18 ; 18 ; >
     au < frozen ; exists ; 2010 ; Chinese Physics B Volume 19 ; 19 ; >
@@ -1294,13 +1298,13 @@
 #    param[journal_issn] = 0150-536X
 #    comment[continues] = 0335-7368
 #
-#    au < exists ; exists ; 1970 ; Journal of Optics (1970-1998) Volume 1 ; 1 ; > 
-#    au < exists ; exists ; 1971 ; Journal of Optics (1970-1998) Volume 2 ; 2 ; > 
-#    au < exists ; exists ; 1972 ; Journal of Optics (1970-1998) Volume 3 ; 3 ; > 
-#    au < exists ; exists ; 1973 ; Journal of Optics (1970-1998) Volume 4 ; 4 ; > 
-#    au < exists ; exists ; 1974 ; Journal of Optics (1970-1998) Volume 5 ; 5 ; > 
-#    au < exists ; exists ; 1975 ; Journal of Optics (1970-1998) Volume 6 ; 6 ; > 
-#    au < exists ; exists ; 1976 ; Journal of Optics (1970-1998) Volume 7 ; 7 ; > 
+#    au < doNotProcess ; doNotProcess ; 1970 ; Journal of Optics (1970-1998) Volume 1 ; 1 ; > 
+#    au < doNotProcess ; doNotProcess ; 1971 ; Journal of Optics (1970-1998) Volume 2 ; 2 ; > 
+#    au < doNotProcess ; doNotProcess ; 1972 ; Journal of Optics (1970-1998) Volume 3 ; 3 ; > 
+#    au < doNotProcess ; doNotProcess ; 1973 ; Journal of Optics (1970-1998) Volume 4 ; 4 ; > 
+#    au < doNotProcess ; doNotProcess ; 1974 ; Journal of Optics (1970-1998) Volume 5 ; 5 ; > 
+#    au < doNotProcess ; doNotProcess ; 1975 ; Journal of Optics (1970-1998) Volume 6 ; 6 ; > 
+#    au < doNotProcess ; doNotProcess ; 1976 ; Journal of Optics (1970-1998) Volume 7 ; 7 ; > 
 #    au < doNotProcess ; doNotProcess ; 1977 ; Journal of Optics (1970-1998) Volume 8 ; 8 ; > 
 #    au < doNotProcess ; doNotProcess ; 1978 ; Journal of Optics (1970-1998) Volume 9 ; 9 ; > 
 #    au < doNotProcess ; doNotProcess ; 1979 ; Journal of Optics (1970-1998) Volume 10 ; 10 ; > 
@@ -2684,7 +2688,7 @@
     param[journal_issn] = 2053-1591
     comment[param] = eissn preferred
 
-    au < exists ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 ; > 
+    au < doNotProcess ; doNotProcess ; 2014 ; Materials Research Express Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Materials Research Express Volume 2 ; 2 ; > 
 
   }
