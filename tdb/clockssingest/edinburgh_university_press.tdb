@@ -849,6 +849,7 @@
      >
 
     param[journal_id] = more
+    #reported missing manifest pages. RT7030. April 13, 2017.
 
     au < exists ; exists ; 1980 ; Moreana Volume 16 ; 16 ; >
     au < exists ; exists ; 1980 ; Moreana Volume 17 ; 17 ; >

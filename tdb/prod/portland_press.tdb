@@ -600,7 +600,9 @@ comment[bj1] = no permission from publisher
     >
 
     param[base_url] = http://www.bioscirep.org/
+    # Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
     # manifest page at http://www.bioscirep.org/clockss-manifest/ppbioscirep_2015.html 
+    # Manifest page (usual) at http://www.bioscirep.org/lockss-manifest/vol_37_manifest.html
 
     au < doNotProcess ; 1981 ; Bioscience Reports Volume 1 ; 1 >
     au < doNotProcess ; 1982 ; Bioscience Reports Volume 2 ; 2 >
