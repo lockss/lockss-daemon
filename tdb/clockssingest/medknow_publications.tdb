@@ -2262,8 +2262,8 @@
     au < notReady ; exists ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; >
     au < notReady ; exists ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; >
     au < notReady ; exists ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; >
-    au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2014 ; 14 ; >
-    au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2015 ; 15 ; >
+    au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; >
+    au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; >
 
   }
 
@@ -5068,19 +5068,18 @@
   {
 
       title <
-        name = European Journal of Dentistry ;
-        issn = 1305-7456 ;
-        eissn = 1305-7464
+        name = European Journal of Prosthodontics ;
+        eissn = 2347-4610
       >
 
-      param[journal_issn] = 1305-7456
-      param[base_url] = http://www.eurjdent.com/
+      param[journal_issn] = 2347-4610
+      param[base_url] = http://www.eurjprosthodont.org/
 
-      au < manifest ; exists ; 2013 ; European Journal of Prosthodontics Volume 7 ; 2013 ; 7 ; >
-      au < manifest ; exists ; 2014 ; European Journal of Prosthodontics Volume 8 ; 2014 ; 8 ; >
-      au < manifest ; exists ; 2015 ; European Journal of Prosthodontics Volume 9 ; 2015 ; 9 ; >
-      au < manifest ; exists ; 2016 ; European Journal of Prosthodontics Volume 10 ; 2016 ; 10 ; >
-      au < manifest ; exists ; 2017 ; European Journal of Prosthodontics Volume 11 ; 2017 ; 11 ; >
+      au < exists ; exists ; 2013 ; European Journal of Prosthodontics Volume 7 ; 2013 ; 7 ; >
+      au < exists ; exists ; 2014 ; European Journal of Prosthodontics Volume 8 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2015 ; European Journal of Prosthodontics Volume 9 ; 2015 ; 9 ; >
+      au < exists ; exists ; 2016 ; European Journal of Prosthodontics Volume 10 ; 2016 ; 10 ; >
+      au < expected ; exists ; 2017 ; European Journal of Prosthodontics Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -6148,10 +6147,10 @@
 
       au < manifest ; exists ; 2002 ; Journal of Indian Association of Public Health Dentistry Volume 2 ; 2002 ; 2 ; >
       au < manifest ; exists ; 2003 ; Journal of Indian Association of Public Health Dentistry Volume 3 ; 2003 ; 3 ; >
-      au < manifest ; exists ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2004 ; 4 ; >
-      au < manifest ; exists ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2005 ; 5 ; >
-      au < manifest ; exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 ; 2006 ; 4 ; >
-      au < manifest ; exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 ; 2007 ; 5 ; >
+      au < manifest ; exists ; 2004 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2004] ; 2004 ; 4 ; >
+      au < manifest ; exists ; 2005 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2005] ; 2005 ; 5 ; >
+      au < manifest ; exists ; 2006 ; Journal of Indian Association of Public Health Dentistry Volume 4 [2006] ; 2006 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Journal of Indian Association of Public Health Dentistry Volume 5 [2007] ; 2007 ; 5 ; >
       au < manifest ; exists ; 2008 ; Journal of Indian Association of Public Health Dentistry Volume 6 ; 2008 ; 6 ; >
       au < manifest ; exists ; 2009 ; Journal of Indian Association of Public Health Dentistry Volume 7 ; 2009 ; 7 ; >
       au < manifest ; exists ; 2010 ; Journal of Indian Association of Public Health Dentistry Volume 8 ; 2010 ; 8 ; >
