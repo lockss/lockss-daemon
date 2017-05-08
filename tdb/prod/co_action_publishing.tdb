@@ -933,16 +933,31 @@
     >
 
     #param[base_url] = http://www.societyhealthvulnerability.net/
-    param[journal_id] = zshv20
+    param[journal_id] = zvgi20
+    #continues = 2000-8023
 
-    au < doNotProcess ; 2010 ; Society, Health & Vulnerability Volume 1 ; 1 >
-    au < doNotProcess ; 2011 ; Society, Health & Vulnerability Volume 2 ; 2 >
-    au < doNotProcess ; 2012 ; Society, Health & Vulnerability Volume 3 ; 3 >
-    au < exists ; 2013 ; Society, Health & Vulnerability Volume 4 ; 4 >
-    au < exists ; 2014 ; Society, Health & Vulnerability Volume 5 ; 5 >
     au < exists ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 >
     au < exists ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 >
-    au < expected ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 >
+    au < exists ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Vulnerable Groups & Inclusion ;
+      eissn = 2000-8023 ;
+      issnl = 2000-8023
+    >
+
+    param[journal_id] = zvgi19
+    #continued_by = 2002-1518
+
+    au < doNotProcess ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 >
+    au < doNotProcess ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 >
+    au < doNotProcess ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 >
+    au < exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 >
+    au < exists ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 >
 
   }
 
