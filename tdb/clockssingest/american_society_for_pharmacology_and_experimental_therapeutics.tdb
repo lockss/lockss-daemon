@@ -65,7 +65,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Drug Metabolism and Disposition Volume 42 ; 42 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Drug Metabolism and Disposition Volume 43 ; 43 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Drug Metabolism and Disposition Volume 44 [superseded] ; 44 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; >
     
   }
@@ -441,8 +441,8 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 [superseded] ; 356 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 [superseded] ; 357 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 [superseded] ; 358 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 ; >
