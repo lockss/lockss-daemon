@@ -1261,6 +1261,31 @@ while (my $line = <>) {
       $result = "--"
     }
     sleep(4);
+  } elsif ($plugin eq "ClockssIngentaBooksPlugin") {
+    $url = sprintf("%scontent/%s?format=clockss",
+      $param{base_url}, $param{book_isbn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      #manifest must have pub_id and art00001 - /content/bkpub/2ouatw/2016/00000001/00000001/art00001
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{publisher_id}\/[^"]+\/art00001/)) {
+        if ($man_contents =~ m/<TITLE>Ingenta Connect\s*(.*)\s*CLOCKSS MANIFEST PAGE<\/TITLE>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(4);    
 #  } elsif ($plugin eq "MetaPressPlugin") {
 #    $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s",
 #      $param{base_url}, $param{journal_issn}, $param{volume_name});
