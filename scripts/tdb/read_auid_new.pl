@@ -19,6 +19,7 @@ my $cc_by_tag = "href=\"https?://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
 my $bmc2_tag = "<span>Issues</span>";
 my $igi_tag = "/gateway/issue/";
+my $igi_book_tag = "/gateway/chapter/full-text";
 my $total_manifests = 0;
 my $total_missing = 0;
 my $total_missing_plugin = 0;
@@ -1456,6 +1457,77 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
+  } elsif ($plugin eq "IgiGlobalBooksPlugin") {
+  	#permission is different from start
+    $url = sprintf("%slockss/books.aspx",
+      $param{base_url});
+    $perm_url = uri_unescape($url);
+    #start_url for individual book
+    $url = sprintf("%sgateway/book/%s",
+      $param{base_url}, $param{volume});
+    $start_url = uri_unescape($url);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+    my $req_s = HTTP::Request->new(GET, $start_url);
+    my $resp_s = $ua->request($req_s);
+    if ($resp_p->is_success && $resp_s->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $start_contents = $resp_s->content;
+      if (defined($perm_contents) && (defined($start_contents)) && 
+      ($perm_contents =~ m/$lockss_tag/) && ($start_contents =~ m/$igi_book_tag/)) {
+        if ($start_contents =~ m/<TITLE>\s*(.*)\s*\| IGI Global\s*<\/TITLE>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest" ;
+        #for reporting at the end 
+        $man_url = $start_url
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssIgiGlobalBooksPlugin") {
+  	#permission is different from start
+    $url = sprintf("%slockss/books.aspx",
+      $param{base_url});
+    $perm_url = uri_unescape($url);
+    #start_url for individual book
+    $url = sprintf("%sgateway/book/%s",
+      $param{base_url}, $param{volume});
+    $start_url = uri_unescape($url);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+    my $req_s = HTTP::Request->new(GET, $start_url);
+    my $resp_s = $ua->request($req_s);
+    if ($resp_p->is_success && $resp_s->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $start_contents = $resp_s->content;
+      if (defined($perm_contents) && (defined($start_contents)) && 
+      ($perm_contents =~ m/$clockss_tag/) && ($start_contents =~ m/$igi_book_tag/)) {
+        if ($start_contents =~ m/<TITLE>\s*(.*)\s*\| IGI Global\s*<\/TITLE>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        }
+        $result = "Manifest" ;
+        #for reporting at the end 
+        $man_url = $start_url
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
 
 #  } elsif ($plugin eq "ClockssRoyalSocietyOfChemistryPlugin") {
 #    $url = sprintf("%spublishing/journals/lockss/?journalcode=%s&volume=%s&year=%d",
@@ -1665,7 +1737,7 @@ while (my $line = <>) {
           ($perm_contents =~ m/$cc_license_tag/) && 
           ($perm_contents =~ m/$cc_license_url/)) {
         if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
-          $vol_title = $1;
+            $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
             $vol_title = "\"" . $vol_title . "\"";
