@@ -1264,7 +1264,7 @@ while (my $line = <>) {
     sleep(4);
   } elsif ($plugin eq "ClockssIngentaBooksPlugin") {
     $url = sprintf("%scontent/%s?format=clockss",
-      $param{base_url}, $param{book_isbn}, $param{volume_name});
+      $param{base_url}, $param{book_isbn});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
