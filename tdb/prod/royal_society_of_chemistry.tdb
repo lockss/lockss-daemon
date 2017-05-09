@@ -1006,9 +1006,9 @@
       comment[years] = Published 2010-2016
       param[journal_code] = sc
 
-      au < releasing ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 >
+      au < released ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 >
-      au < releasing ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 >
+      au < released ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 >
       au < released ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 >
       au < released ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 >
       au < released ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 >
@@ -1087,7 +1087,7 @@
 
       au < manifest ; 2014 ; Environmental Science: Nano Volume 1 ; 1 ; 2014 >
       au < released ; 2015 ; Environmental Science: Nano Volume 2 ; 2 ; 2015 >
-      au < releasing ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 >
+      au < released ; 2016 ; Environmental Science: Nano Volume 3 ; 3 ; 2016 >
 
   }
 
@@ -1123,7 +1123,7 @@
       param[journal_code] = ew
 
       au < released ; 2015 ; Environmental Science: Water Research & Technology Volume 1 ; 1 ; 2015 >
-      au < releasing ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
+      au < released ; 2016 ; Environmental Science: Water Research & Technology Volume 2 ; 2 ; 2016 >
 
   }
 
@@ -1218,7 +1218,7 @@
       au < manifest ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 >
       au < released ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 >
-      au < releasing ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 >
+      au < released ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 >
       au < manifest ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 >
       au < manifest ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 >
       au < released ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 >
@@ -1372,7 +1372,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tc
 
-      au < releasing ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 >
+      au < released ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 >
       au < released ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 >
       au < released ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 >
       au < released ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 >
@@ -2386,7 +2386,7 @@
       au < manifest ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 >
       au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 >
       au < released ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 >
-      au < releasing ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
+      au < released ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 >
 
   }
 
@@ -2416,7 +2416,7 @@
       param[journal_code] = tx
 
       au < released ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 >
-      au < releasing ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 >
+      au < released ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 >
       au < released ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 >
       au < released ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 >
       au < released ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 >
