@@ -792,6 +792,54 @@
   {
 
     title <
+      name = Tellus ;
+      issn = 0040-2826 ;
+      eissn = 1600-0870 ;
+      issnl = 0040-2826
+    >
+
+    param[journal_id] = zela19
+    #continued_by = 1600-0870 & 1600-0889
+
+    au < doNotProcess ; 1949 ; Tellus Volume 1 ; 1 >
+    au < doNotProcess ; 1950 ; Tellus Volume 2 ; 2 >
+    au < doNotProcess ; 1951 ; Tellus Volume 3 ; 3 >
+    au < doNotProcess ; 1952 ; Tellus Volume 4 ; 4 >
+    au < doNotProcess ; 1953 ; Tellus Volume 5 ; 5 >
+    au < doNotProcess ; 1954 ; Tellus Volume 6 ; 6 >
+    au < doNotProcess ; 1955 ; Tellus Volume 7 ; 7 >
+    au < doNotProcess ; 1956 ; Tellus Volume 8 ; 8 >
+    au < doNotProcess ; 1957 ; Tellus Volume 9 ; 9 >
+    au < doNotProcess ; 1958 ; Tellus Volume 10 ; 10 >
+    au < doNotProcess ; 1959 ; Tellus Volume 11 ; 11 >
+    au < doNotProcess ; 1960 ; Tellus Volume 12 ; 12 >
+    au < doNotProcess ; 1961 ; Tellus Volume 13 ; 13 >
+    au < doNotProcess ; 1962 ; Tellus Volume 14 ; 14 >
+    au < doNotProcess ; 1963 ; Tellus Volume 15 ; 15 >
+    au < doNotProcess ; 1964 ; Tellus Volume 16 ; 16 >
+    au < doNotProcess ; 1965 ; Tellus Volume 17 ; 17 >
+    au < doNotProcess ; 1966 ; Tellus Volume 18 ; 18 >
+    au < doNotProcess ; 1967 ; Tellus Volume 19 ; 19 >
+    au < doNotProcess ; 1968 ; Tellus Volume 20 ; 20 >
+    au < doNotProcess ; 1969 ; Tellus Volume 21 ; 21 >
+    au < doNotProcess ; 1970 ; Tellus Volume 22 ; 22 >
+    au < doNotProcess ; 1971 ; Tellus Volume 23 ; 23 >
+    au < doNotProcess ; 1972 ; Tellus Volume 24 ; 24 >
+    au < doNotProcess ; 1973 ; Tellus Volume 25 ; 25 >
+    au < doNotProcess ; 1974 ; Tellus Volume 26 ; 26 >
+    au < doNotProcess ; 1975 ; Tellus Volume 27 ; 27 >
+    au < doNotProcess ; 1976 ; Tellus Volume 28 ; 28 >
+    au < doNotProcess ; 1977 ; Tellus Volume 29 ; 29 >
+    au < doNotProcess ; 1978 ; Tellus Volume 30 ; 30 >
+    au < doNotProcess ; 1979 ; Tellus Volume 31 ; 31 >
+    au < doNotProcess ; 1980 ; Tellus Volume 32 ; 32 >
+    au < doNotProcess ; 1981 ; Tellus Volume 33 ; 33 >
+    au < doNotProcess ; 1982 ; Tellus Volume 34 ; 34 >
+
+  }
+  {
+
+    title <
       name = Tellus A: Dynamic Meteorology and Oceanography ;
       issn = 0280-6495 ;
       eissn = 1600-0870 ;
@@ -799,42 +847,9 @@
     >
 
     #param[base_url] = http://www.tellusa.net/
-    param[journal_id] = ztellusa20
+    param[journal_id] = zela20
+    #continues = 0040-2826
     
-    au < doNotProcess ; 1949 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 >
-    au < doNotProcess ; 1950 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2 ; 2 >
-    au < doNotProcess ; 1951 ; Tellus A: Dynamic Meteorology and Oceanography Volume 3 ; 3 >
-    au < doNotProcess ; 1952 ; Tellus A: Dynamic Meteorology and Oceanography Volume 4 ; 4 >
-    au < doNotProcess ; 1953 ; Tellus A: Dynamic Meteorology and Oceanography Volume 5 ; 5 >
-    au < doNotProcess ; 1954 ; Tellus A: Dynamic Meteorology and Oceanography Volume 6 ; 6 >
-    au < doNotProcess ; 1955 ; Tellus A: Dynamic Meteorology and Oceanography Volume 7 ; 7 >
-    au < doNotProcess ; 1956 ; Tellus A: Dynamic Meteorology and Oceanography Volume 8 ; 8 >
-    au < doNotProcess ; 1957 ; Tellus A: Dynamic Meteorology and Oceanography Volume 9 ; 9 >
-    au < doNotProcess ; 1958 ; Tellus A: Dynamic Meteorology and Oceanography Volume 10 ; 10 >
-    au < doNotProcess ; 1959 ; Tellus A: Dynamic Meteorology and Oceanography Volume 11 ; 11 >
-    au < doNotProcess ; 1960 ; Tellus A: Dynamic Meteorology and Oceanography Volume 12 ; 12 >
-    au < doNotProcess ; 1961 ; Tellus A: Dynamic Meteorology and Oceanography Volume 13 ; 13 >
-    au < doNotProcess ; 1962 ; Tellus A: Dynamic Meteorology and Oceanography Volume 14 ; 14 >
-    au < doNotProcess ; 1963 ; Tellus A: Dynamic Meteorology and Oceanography Volume 15 ; 15 >
-    au < doNotProcess ; 1964 ; Tellus A: Dynamic Meteorology and Oceanography Volume 16 ; 16 >
-    au < doNotProcess ; 1965 ; Tellus A: Dynamic Meteorology and Oceanography Volume 17 ; 17 >
-    au < doNotProcess ; 1966 ; Tellus A: Dynamic Meteorology and Oceanography Volume 18 ; 18 >
-    au < doNotProcess ; 1967 ; Tellus A: Dynamic Meteorology and Oceanography Volume 19 ; 19 >
-    au < doNotProcess ; 1968 ; Tellus A: Dynamic Meteorology and Oceanography Volume 20 ; 20 >
-    au < doNotProcess ; 1969 ; Tellus A: Dynamic Meteorology and Oceanography Volume 21 ; 21 >
-    au < doNotProcess ; 1970 ; Tellus A: Dynamic Meteorology and Oceanography Volume 22 ; 22 >
-    au < doNotProcess ; 1971 ; Tellus A: Dynamic Meteorology and Oceanography Volume 23 ; 23 >
-    au < doNotProcess ; 1972 ; Tellus A: Dynamic Meteorology and Oceanography Volume 24 ; 24 >
-    au < doNotProcess ; 1973 ; Tellus A: Dynamic Meteorology and Oceanography Volume 25 ; 25 >
-    au < doNotProcess ; 1974 ; Tellus A: Dynamic Meteorology and Oceanography Volume 26 ; 26 >
-    au < doNotProcess ; 1975 ; Tellus A: Dynamic Meteorology and Oceanography Volume 27 ; 27 >
-    au < doNotProcess ; 1976 ; Tellus A: Dynamic Meteorology and Oceanography Volume 28 ; 28 >
-    au < doNotProcess ; 1977 ; Tellus A: Dynamic Meteorology and Oceanography Volume 29 ; 29 >
-    au < doNotProcess ; 1978 ; Tellus A: Dynamic Meteorology and Oceanography Volume 30 ; 30 >
-    au < doNotProcess ; 1979 ; Tellus A: Dynamic Meteorology and Oceanography Volume 31 ; 31 >
-    au < doNotProcess ; 1980 ; Tellus A: Dynamic Meteorology and Oceanography Volume 32 ; 32 >
-    au < doNotProcess ; 1981 ; Tellus A: Dynamic Meteorology and Oceanography Volume 33 ; 33 >
-    au < doNotProcess ; 1982 ; Tellus A: Dynamic Meteorology and Oceanography Volume 34 ; 34 >
     au < doNotProcess ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 >
     au < doNotProcess ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 >
     au < doNotProcess ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 >
@@ -869,7 +884,7 @@
     au < exists ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 >
     au < exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 >
-    au < expected ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
+    au < exists ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
 
   }
 
@@ -884,7 +899,8 @@
     
 
     #param[base_url] = http://www.tellusb.net/
-    param[journal_id] = tellusb
+    param[journal_id] = zelb20
+    #continues = 0040-2826
 
     au < doNotProcess ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 >
     au < doNotProcess ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 >
@@ -920,7 +936,7 @@
     au < exists ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 >
     au < exists ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 >
-    au < expected ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
+    au < exists ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
 
   }
 
