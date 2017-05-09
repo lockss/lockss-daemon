@@ -45,11 +45,11 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = http://www.19.bbk.ac.uk/
 
-      au < manifest ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 >
+      au < testing ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 >
       au < released ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 >
       au < released ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 >
       au < released ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 >
@@ -70,8 +70,8 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = http://www.asianetworkexchange.org/
 
-      au < manifest ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 >
+      au < testing ; 2008 ; 16 ; ASIANetwork Exchange Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 16-17 ; ASIANetwork Exchange Volume 2009 ; 2009 >
       au < released ; 2010 ; 17-18 ; ASIANetwork Exchange Volume 2010 ; 2010 >
       au < released ; 2011 ; 18-19 ; ASIANetwork Exchange Volume 2011 ; 2011 >
       au < released ; 2012 ; 19-20 ; ASIANetwork Exchange Volume 2012 ; 2012 >
@@ -150,7 +150,7 @@
       comment[publisher] = Open Library of the Humanities
       param[base_url] = http://www.mamsie.bbk.ac.uk/
 
-      au < manifest ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 >
+      au < testing ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 >
       au < released ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 >
       au < released ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 >
       au < released ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 >
@@ -198,8 +198,8 @@
       comment[publisher] = Stockholm University Press
       param[base_url] = http://www.designsforlearning.nu/
 
-      au < manifest ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 >
+      au < testing ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 >
       au < released ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 >
       au < released ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 >
@@ -274,7 +274,7 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.ancient-asia-journal.com/
 
-      au < manifest ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 >
+      au < testing ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 >
       au < released ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 >
       au < exists ; 2011 ; 3 ; Ancient Asia Volume 2011 ; 2011 >
       au < manifest ; 2012 ; 4 ; Ancient Asia Volume 2012 ; 2012 >
@@ -296,9 +296,9 @@
       param[base_url] = http://www.ai-journal.com/
 
       au < exists ; 2006 ; 1 ; Archaeology International Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 2 ; Archaeology International Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 3 ; Archaeology International Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 4 ; Archaeology International Volume 2009 ; 2009 >
+      au < testing ; 2007 ; 2 ; Archaeology International Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 3 ; Archaeology International Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 4 ; Archaeology International Volume 2009 ; 2009 >
       au < exists ; 2010 ; 5 ; Archaeology International Volume 2010 ; 2010 >
       au < manifest ; 2011 ; 6 ; Archaeology International Volume 2011 ; 2011 >
       au < manifest ; 2012 ; 7 ; Archaeology International Volume 2012 ; 2012 >
@@ -351,25 +351,25 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = http://www.archaeologybulletin.org/
 
-      au < manifest ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 >
+      au < testing ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 >
+      au < testing ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 >
+      au < testing ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 >
+      au < testing ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 >
+      au < testing ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 >
+      au < testing ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 >
+      au < testing ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 >
+      au < testing ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 >
+      au < testing ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 >
+      au < testing ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 >
       au < released ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 >
       au < manifest ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 >
       au < manifest ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 >
