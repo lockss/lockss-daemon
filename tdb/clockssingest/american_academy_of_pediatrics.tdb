@@ -387,7 +387,7 @@
       au < aap.ClockssAAPDrupalPlugin ; wanted ; exists ; 2014 ; Pediatrics Volume 134 ; 134 ; > #outside of crawl spec counting
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics Volume 135 ; 135 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics Volume 136 [superseded] ; 136 ; >
-      au < aap.ClockssAAPDrupalPlugin ; wanted ; exists ; 2015 ; Pediatrics Volume 136 ; 136 ; >
+      au < aap.ClockssAAPDrupalPlugin ; ready ; exists ; 2015 ; Pediatrics Volume 136 ; 136 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Pediatrics Volume 137 ; 137 ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2016 ; Pediatrics Volume 138 ; 138 ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2017 ; Pediatrics Volume 139 ; 139 ; >
