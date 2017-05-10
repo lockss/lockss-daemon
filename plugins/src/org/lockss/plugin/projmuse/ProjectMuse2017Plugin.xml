@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -140,7 +140,7 @@
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%slockss?vid=%s", base_url, resource_id</string>
+        <string>"%slockss?vid=%d", base_url, resource_id</string>
       </entry>
       <entry>
         <string>au_issue</string>
