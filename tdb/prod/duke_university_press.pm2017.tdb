@@ -48,12 +48,12 @@
 
       attr[journal_id] = 7
 
-        au < manifest ; 1999 ; American Literature Volume 71 [1999] ; 32 >
-        au < manifest ; 2000 ; American Literature Volume 72 [2000] ; 33 >
-        au < manifest ; 2001 ; American Literature Volume 73 [2001] ; 34 >
-        au < manifest ; 2002 ; American Literature Volume 74 [2002] ; 35 >
-        au < manifest ; 2003 ; American Literature Volume 75 [2003] ; 887 >
-        au < manifest ; 2004 ; American Literature Volume 76 [2004] ; 2474 >
+        au < testing ; 1999 ; American Literature Volume 71 [1999] ; 32 >
+        au < testing ; 2000 ; American Literature Volume 72 [2000] ; 33 >
+        au < testing ; 2001 ; American Literature Volume 73 [2001] ; 34 >
+        au < testing ; 2002 ; American Literature Volume 74 [2002] ; 35 >
+        au < testing ; 2003 ; American Literature Volume 75 [2003] ; 887 >
+        au < testing ; 2004 ; American Literature Volume 76 [2004] ; 2474 >
 
     }
     {
@@ -67,12 +67,12 @@
 
       attr[journal_id] = 16
 
-        au < manifest ; 1999 ; American Speech Volume 74 [1999] ; 61 >
-        au < manifest ; 2000 ; American Speech Volume 75 [2000] ; 62 >
-        au < manifest ; 2001 ; American Speech Volume 76 [2001] ; 63 >
-        au < manifest ; 2002 ; American Speech Volume 77 [2002] ; 64 >
-        au < manifest ; 2003 ; American Speech Volume 78 [2003] ; 863 >
-        au < manifest ; 2004 ; American Speech Volume 79 [2004] ; 2480 >
+        au < testing ; 1999 ; American Speech Volume 74 [1999] ; 61 >
+        au < testing ; 2000 ; American Speech Volume 75 [2000] ; 62 >
+        au < testing ; 2001 ; American Speech Volume 76 [2001] ; 63 >
+        au < testing ; 2002 ; American Speech Volume 77 [2002] ; 64 >
+        au < testing ; 2003 ; American Speech Volume 78 [2003] ; 863 >
+        au < testing ; 2004 ; American Speech Volume 79 [2004] ; 2480 >
 
     }
     {
