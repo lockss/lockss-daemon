@@ -86,11 +86,11 @@
 
       attr[journal_id] = 35
 
-        au < manifest ; 2000 ; Camera Obscura Volume 15 [2000 (43-45)] ; 122 >
-        au < manifest ; 2001 ; Camera Obscura Volume 16 [2001 (46-48)] ; 123 >
-        au < manifest ; 2002 ; Camera Obscura Volume 17 [2002 (49-51)] ; 124 >
-        au < manifest ; 2003 ; Camera Obscura Volume 18 [2003 (52-54)] ; 906 >
-        au < manifest ; 2004 ; Camera Obscura Volume 19 [2004 (55-57)] ; 2501 >
+        au < testing ; 2000 ; Camera Obscura Volume 15 [2000 (43-45)] ; 122 >
+        au < testing ; 2001 ; Camera Obscura Volume 16 [2001 (46-48)] ; 123 >
+        au < testing ; 2002 ; Camera Obscura Volume 17 [2002 (49-51)] ; 124 >
+        au < testing ; 2003 ; Camera Obscura Volume 18 [2003 (52-54)] ; 906 >
+        au < testing ; 2004 ; Camera Obscura Volume 19 [2004 (55-57)] ; 2501 >
 
     }
     {
