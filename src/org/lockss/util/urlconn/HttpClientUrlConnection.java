@@ -40,6 +40,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.*;
 import javax.net.ssl.SSLContext;
+import org.apache.http.ConnectionClosedException;
 //HC3 import org.apache.commons.httpclient.*;
 //HC3 import org.apache.commons.httpclient.Header;
 //HC3 import org.apache.commons.httpclient.HttpConnection;
@@ -730,12 +731,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	  new ConnectionTimeoutException("Host did not respond");
       cte.initCause(hhce);
       throw cte;
+    } catch (ClientProtocolException cpe) {
+      throw convertToPrematureCloseException(cpe);
     } catch (SocketException se) {
       log.error("SocketException caught", se);
       throw se;
-    } catch (ClientProtocolException cpe) {
-      log.error("ClientProtocolException caught", cpe);
-      throw cpe;
     } catch (IOException ioe) {
       log.error("IOException caught", ioe);
       SocketException se = new SocketException("Connection reset by peer");
@@ -1049,7 +1049,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 //HC3     }
 //HC3  
 //HC3     throw new UnsupportedOperationException(method.getClass().toString());
-    return response.getEntity().getContentLength();
+    return getResponseEntity().getContentLength();
   }
 
   public String getResponseContentType() {
@@ -1109,7 +1109,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       return null;
     }
 
-    HttpEntity entity = response.getEntity();
+    HttpEntity entity = getResponseEntity();
     if (entity == null) {
       log.debug2("Returning null input stream for null entity");
       return null;
@@ -1201,10 +1201,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     try {
 //HC3       method.releaseConnection();
-      HttpEntity entity = response.getEntity();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entity = " + entity);
-
-      EntityUtils.consume(entity);
+      consumeEntity();
     } catch (IOException ioe) {
       // Nothing to do.
       if (log.isDebug()) log.debug(DEBUG_HEADER
@@ -1274,6 +1271,40 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return response;
   }
 
+  HttpEntity getResponseEntity() {
+    if (response == null) {
+      return null;
+    }
+
+    return response.getEntity();
+  }
+
+  void consumeEntity() throws PrematureCloseException, IOException {
+    try {
+      EntityUtils.consume(getResponseEntity());
+    } catch (ConnectionClosedException cce) {
+      throw convertToPrematureCloseException(cce);
+    }
+  }
+
+  private PrematureCloseException convertToPrematureCloseException(Exception e)
+  {
+    log.error("Exception caught", e);
+    String message = e.getMessage();
+
+    if (StringUtil.isNullString(message) && e.getCause() != null) {
+      message = e.getCause().getMessage();
+    }
+
+    if (StringUtil.isNullString(message)) {
+      message = "Connection unexpectedly closed";
+    }
+
+    if (log.isDebug3()) log.debug3("message = " + message);
+
+    return new PrematureCloseException(message);
+  }
+
 //HC3   /** Common interface for our methods makes testing more convenient */
 //HC3   interface LockssGetMethod extends HttpMethod {
 //HC3     long getResponseContentLength();
@@ -1338,6 +1369,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       super(msg, t);
     }
     public ConnectionTimeoutException(Throwable t) {
+      super(t.getMessage(), t);
+    }
+  }
+
+  /** Extension of PrematureCloseException used as a wrapper for the
+   * HttpClient-specific exceptions
+   * org.apache.http.client.ClientProtocolException and
+   * org.apache.http.ConnectionClosedException. */
+  public class PrematureCloseException
+    extends LockssUrlConnection.PrematureCloseException {
+    private static final long serialVersionUID = 7998616416361070484L;
+    public PrematureCloseException(String msg) {
+      super(msg);
+    }
+    public PrematureCloseException(String msg, Throwable t) {
+      super(msg, t);
+    }
+    public PrematureCloseException(Throwable t) {
       super(t.getMessage(), t);
     }
   }

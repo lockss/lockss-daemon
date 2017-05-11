@@ -31,12 +31,10 @@ package org.lockss.util.urlconn;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import org.apache.http.ConnectionClosedException;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.util.EntityUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.HttpClientUrlConnection.PrematureCloseException;
 
 /**
  * Network tests for HttpClient, HttpClientUrlConnection,
@@ -292,8 +290,8 @@ public class FuncLockssHttpClient extends LockssTestCase {
                                     localurl(port), connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      fail("Socket timeout should throw");
-    } catch (ClientProtocolException cpe) {
+      fail("PrematureCloseException should throw");
+    } catch (PrematureCloseException pce) {
       assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
     }
     th.stopServer();
@@ -332,10 +330,9 @@ public class FuncLockssHttpClient extends LockssTestCase {
                                     localurl(port), connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      EntityUtils.consume(((HttpClientUrlConnection)conn).getResponse()
-	  .getEntity());
-      fail("Connection closed should throw");
-    } catch (ConnectionClosedException cce) {
+      ((HttpClientUrlConnection)conn).consumeEntity();
+      fail("PrematureCloseException should throw");
+    } catch (PrematureCloseException pce) {
       assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
     }
     th.stopServer();
@@ -354,8 +351,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
                                     localurl(port), connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      EntityUtils.consume(((HttpClientUrlConnection)conn).getResponse()
-	  .getEntity());
+      ((HttpClientUrlConnection)conn).consumeEntity();
       fail("Socket timeout should throw");
     } catch (SocketTimeoutException ste) {
       assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);

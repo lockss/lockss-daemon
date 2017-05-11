@@ -1,8 +1,6 @@
 /*
- * $Id$
- *
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +30,7 @@ package org.lockss.util.urlconn;
 
 import java.util.*;
 import java.io.*;
-
+import java.net.SocketException;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 
@@ -243,6 +241,7 @@ public interface LockssUrlConnection {
   /** Exception thrown by setProxy if the connection type doesn't support
    * proxying */
   static class CantProxyException extends IOException {
+    private static final long serialVersionUID = -1995661355524501684L;
     public CantProxyException(String msg) {
       super(msg);
     }
@@ -253,6 +252,7 @@ public interface LockssUrlConnection {
 
   /** Exception thrown if a timeout occured while opening the socket. */
   public class ConnectionTimeoutException extends IOException {
+    private static final long serialVersionUID = -1286704598947251874L;
     public ConnectionTimeoutException(String msg) {
       super(msg);
     }
@@ -261,6 +261,22 @@ public interface LockssUrlConnection {
       initCause(t);
     }
     public ConnectionTimeoutException(Throwable t) {
+      super();
+      initCause(t);
+    }
+  }
+
+  /** Exception thrown if the socket was closed prematurely. */
+  public class PrematureCloseException extends SocketException {
+    private static final long serialVersionUID = -4736730052492807985L;
+    public PrematureCloseException(String msg) {
+      super(msg);
+    }
+    public PrematureCloseException(String msg, Throwable t) {
+      super(msg);
+      initCause(t);
+    }
+    public PrematureCloseException(Throwable t) {
       super();
       initCause(t);
     }
