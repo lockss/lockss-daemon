@@ -56,13 +56,23 @@ public class AscoHtmlHashFilterFactory
         
         // page header: login, register, etc., and journal menu such as
         // subscribe, alerts, ...
- 
+        // subscribe, alerts, ...
+        HtmlNodeFilters.tagWithAttribute("header", "class", "page-header"),
         // page footer
-        // toc - Right column
-        // article right column
-
-        // invisible jump to form whose choice labels have changed
-
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageFooter"),
+        
+        // toc - middle column; right column is literatumAd
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-tools"),
+        // article right column; right column is literatumAd
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-tools"),
+        
+        //showCitationsPage just verify the articleList info
+        HtmlNodeFilters.allExceptSubtree(
+            HtmlNodeFilters.tagWithAttributeRegex(
+                "div", "class", "downloadCitationsWidget"),
+                HtmlNodeFilters.tagWithAttribute(
+                    "div", "class", "articleList")),        
+        
         // toc - article type seems to change and this isn't important
         HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleType"),
         // on full text and referenes page the ways to linkout to the reference get                                                                                                                   
