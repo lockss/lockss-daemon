@@ -7,7 +7,7 @@
 
   >
 
-    plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.asco.ClockssAscoJournalsPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     # waiting for this journal to move to clockss.
     
@@ -57,7 +57,7 @@
       au < exists ; exists ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 ; >
       au < exists ; exists ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 ; >
       au < exists ; exists ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; >
-      au < exists ; exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; >
+      au < testing ; exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; >
       au < exists ; exists ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; >
 
   }
@@ -73,7 +73,7 @@
       param[journal_id] = jgo
 
       au < exists ; exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; >
       au < exists ; exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; >
 
   }
@@ -99,7 +99,7 @@
       au < exists ; exists ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 ; >
       au < exists ; exists ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 ; >
       au < exists ; exists ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 ; >
-      au < exists ; exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; >
+      au < testing ; exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; >
       au < exists ; exists ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; >
 
   }
@@ -113,7 +113,7 @@
 
       param[journal_id] = cci
 
-      au < exists ; exists ; 2017 ; JCO Clinical Cancer lnformatics Volume 1 ; 1 ; >
+      au < testing ; exists ; 2017 ; JCO Clinical Cancer lnformatics Volume 1 ; 1 ; >
 
   }
 
@@ -126,7 +126,7 @@
 
       param[journal_id] = po
 
-      au < exists ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
+      au < testing ; exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; >
 
   }
 
