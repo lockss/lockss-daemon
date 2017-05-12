@@ -4,7 +4,7 @@
     info[down] = pending
   >
 
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.asco.AscoJournalsPlugin
     implicit < status ; year ; name ; param[volume_name] >
     # waiting for this journal to move to clockss.
     
@@ -71,7 +71,7 @@
 
       au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
       au < exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
-      au < exists ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
+      au < testing ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
 
   }
 
