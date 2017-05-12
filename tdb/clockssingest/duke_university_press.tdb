@@ -204,11 +204,11 @@
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 ; >
@@ -293,11 +293,11 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2002 ; Common Knowledge Volume 8 ; 8 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2003 ; Common Knowledge Volume 9 ; 9 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2003 ; Common Knowledge Volume 9 ; 9 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2004 ; Common Knowledge Volume 10 ; 10 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2005 ; Common Knowledge Volume 11 ; 11 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2006 ; Common Knowledge Volume 12 ; 12 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2007 ; Common Knowledge Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2006 ; Common Knowledge Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2007 ; Common Knowledge Volume 13 ; 13 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2008 ; Common Knowledge Volume 14 ; 14 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2009 ; Common Knowledge Volume 15 ; 15 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2010 ; Common Knowledge Volume 16 ; 16 ; >
@@ -328,12 +328,12 @@
       param[base_url] = http://complit.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2000 ; Comparative Literature Volume 52 ; 52 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2000 ; Comparative Literature Volume 52 ; 52 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2001 ; Comparative Literature Volume 53 ; 53 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2002 ; Comparative Literature Volume 54 ; 54 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2003 ; Comparative Literature Volume 55 ; 55 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2003 ; Comparative Literature Volume 55 ; 55 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2004 ; Comparative Literature Volume 56 ; 56 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2005 ; Comparative Literature Volume 57 ; 57 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2005 ; Comparative Literature Volume 57 ; 57 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; Comparative Literature Volume 58 ; 58 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2007 ; Comparative Literature Volume 59 ; 59 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2008 ; Comparative Literature Volume 60 ; 60 ; >
@@ -394,9 +394,9 @@
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 ; >
@@ -464,7 +464,7 @@
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 ; >
@@ -587,8 +587,8 @@
 
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2000 ; Ethnohistory Volume 47 ; 47 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2001 ; Ethnohistory Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2002 ; Ethnohistory Volume 49 ; 49 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2003 ; Ethnohistory Volume 50 ; 50 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2002 ; Ethnohistory Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2003 ; Ethnohistory Volume 50 ; 50 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2004 ; Ethnohistory Volume 51 ; 51 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2005 ; Ethnohistory Volume 52 ; 52 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; Ethnohistory Volume 53 ; 53 ; >
@@ -626,15 +626,15 @@
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2000 ; French Historical Studies Volume 23 ; 23 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2001 ; French Historical Studies Volume 24 ; 24 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2002 ; French Historical Studies Volume 25 ; 25 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2003 ; French Historical Studies Volume 26 ; 26 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2004 ; French Historical Studies Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2003 ; French Historical Studies Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2004 ; French Historical Studies Volume 27 ; 27 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2005 ; French Historical Studies Volume 28 ; 28 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; French Historical Studies Volume 29 ; 29 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2007 ; French Historical Studies Volume 30 ; 30 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2008 ; French Historical Studies Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2008 ; French Historical Studies Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2009 ; French Historical Studies Volume 32 ; 32 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2010 ; French Historical Studies Volume 33 ; 33 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2011 ; French Historical Studies Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2011 ; French Historical Studies Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; French Historical Studies Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; French Historical Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; French Historical Studies Volume 37 ; 37 ; >
@@ -668,7 +668,7 @@
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 ; >
-      au < ClockssHighWirePressH20Plugin ; ready ; exists ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 ; >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 ; >
       au < ClockssHighWirePressH20Plugin ; testing ; exists ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 ; >
