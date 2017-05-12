@@ -66,6 +66,8 @@ public class AscoHtmlHashFilterFactory
         // article right column; right column is literatumAd
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-tools"),
         
+        HtmlNodeFilters.tagWithAttribute("div", "class", "sectionJumpTo"),
+        
         //showCitationsPage just verify the articleList info
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttributeRegex(
