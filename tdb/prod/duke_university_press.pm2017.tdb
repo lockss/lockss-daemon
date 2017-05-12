@@ -22,12 +22,12 @@
         au < ready ; 1999 ; American Literary Scholarship Volume 1999 ; 40 >
         au < ready ; 2000 ; American Literary Scholarship Volume 2000 ; 41 >
         au < ready ; 2001 ; American Literary Scholarship Volume 2001 ; 953 >
-        au < testing ; 2002 ; American Literary Scholarship Volume 2002 ; 2537 >
+        au < ready ; 2002 ; American Literary Scholarship Volume 2002 ; 2537 >
         au < ready ; 2003 ; American Literary Scholarship Volume 2003 ; 2816 >
         au < ready ; 2004 ; American Literary Scholarship Volume 2004 ; 3136 >
         au < ready ; 2005 ; American Literary Scholarship Volume 2005 ; 3460 >
         au < ready ; 2006 ; American Literary Scholarship Volume 2006 ; 4013 >
-        au < testing ; 2007 ; American Literary Scholarship Volume 2007 ; 5648 >
+        au < ready ; 2007 ; American Literary Scholarship Volume 2007 ; 5648 >
         au < ready ; 2008 ; American Literary Scholarship Volume 2008 ; 6630 >
         au < ready ; 2009 ; American Literary Scholarship Volume 2009 ; 7570 >
         au < ready ; 2010 ; American Literary Scholarship Volume 2010 ; 8485 >
@@ -49,7 +49,7 @@
       attr[journal_id] = 7
 
         au < ready ; 1999 ; American Literature Volume 71 [1999] ; 32 >
-        au < testing ; 2000 ; American Literature Volume 72 [2000] ; 33 >
+        au < ready ; 2000 ; American Literature Volume 72 [2000] ; 33 >
         au < ready ; 2001 ; American Literature Volume 73 [2001] ; 34 >
         au < ready ; 2002 ; American Literature Volume 74 [2002] ; 35 >
         au < ready ; 2003 ; American Literature Volume 75 [2003] ; 887 >
@@ -69,7 +69,7 @@
 
         au < ready ; 1999 ; American Speech Volume 74 [1999] ; 61 >
         au < ready ; 2000 ; American Speech Volume 75 [2000] ; 62 >
-        au < testing ; 2001 ; American Speech Volume 76 [2001] ; 63 >
+        au < ready ; 2001 ; American Speech Volume 76 [2001] ; 63 >
         au < ready ; 2002 ; American Speech Volume 77 [2002] ; 64 >
         au < ready ; 2003 ; American Speech Volume 78 [2003] ; 863 >
         au < ready ; 2004 ; American Speech Volume 79 [2004] ; 2480 >
@@ -86,11 +86,11 @@
 
       attr[journal_id] = 35
 
-        au < testing ; 2000 ; Camera Obscura Volume 15 [2000 (43-45)] ; 122 >
-        au < testing ; 2001 ; Camera Obscura Volume 16 [2001 (46-48)] ; 123 >
-        au < testing ; 2002 ; Camera Obscura Volume 17 [2002 (49-51)] ; 124 >
-        au < testing ; 2003 ; Camera Obscura Volume 18 [2003 (52-54)] ; 906 >
-        au < testing ; 2004 ; Camera Obscura Volume 19 [2004 (55-57)] ; 2501 >
+        au < ready ; 2000 ; Camera Obscura Volume 15 [2000 (43-45)] ; 122 >
+        au < ready ; 2001 ; Camera Obscura Volume 16 [2001 (46-48)] ; 123 >
+        au < ready ; 2002 ; Camera Obscura Volume 17 [2002 (49-51)] ; 124 >
+        au < ready ; 2003 ; Camera Obscura Volume 18 [2003 (52-54)] ; 906 >
+        au < ready ; 2004 ; Camera Obscura Volume 19 [2004 (55-57)] ; 2501 >
 
     }
     {
@@ -104,22 +104,22 @@
 
       attr[journal_id] = 32
 
-        au < testing ; 2002 ; Common Knowledge Volume 8 [2002] ; 115 >
-        au < testing ; 2003 ; Common Knowledge Volume 9 [2003] ; 762 >
-        au < testing ; 2004 ; Common Knowledge Volume 10 [2004] ; 1720 >
-        au < testing ; 2005 ; Common Knowledge Volume 11 [2005] ; 2617 >
-        au < testing ; 2006 ; Common Knowledge Volume 12 [2006] ; 2896 >
-        au < testing ; 2007 ; Common Knowledge Volume 13 [2007] ; 3251 >
-        au < testing ; 2008 ; Common Knowledge Volume 14 [2008] ; 3529 >
-        au < testing ; 2009 ; Common Knowledge Volume 15 [2009] ; 4030 >
-        au < testing ; 2010 ; Common Knowledge Volume 16 [2010] ; 5687 >
-        au < testing ; 2011 ; Common Knowledge Volume 17 [2011] ; 6817 >
-        au < testing ; 2012 ; Common Knowledge Volume 18 [2012] ; 7929 >
-        au < testing ; 2013 ; Common Knowledge Volume 19 [2013] ; 8651 >
-        au < testing ; 2014 ; Common Knowledge Volume 20 [2014] ; 9566 >
-        au < testing ; 2015 ; Common Knowledge Volume 21 [2015] ; 10304 >
-        au < testing ; 2016 ; Common Knowledge Volume 22 [2016] ; 10875 >
-        au < testing ; 2017 ; Common Knowledge Volume 23 [2017] ; 12256 >
+        au < ready ; 2002 ; Common Knowledge Volume 8 [2002] ; 115 >
+        au < ready ; 2003 ; Common Knowledge Volume 9 [2003] ; 762 >
+        au < ready ; 2004 ; Common Knowledge Volume 10 [2004] ; 1720 >
+        au < ready ; 2005 ; Common Knowledge Volume 11 [2005] ; 2617 >
+        au < ready ; 2006 ; Common Knowledge Volume 12 [2006] ; 2896 >
+        au < ready ; 2007 ; Common Knowledge Volume 13 [2007] ; 3251 >
+        au < ready ; 2008 ; Common Knowledge Volume 14 [2008] ; 3529 >
+        au < ready ; 2009 ; Common Knowledge Volume 15 [2009] ; 4030 >
+        au < ready ; 2010 ; Common Knowledge Volume 16 [2010] ; 5687 >
+        au < ready ; 2011 ; Common Knowledge Volume 17 [2011] ; 6817 >
+        au < ready ; 2012 ; Common Knowledge Volume 18 [2012] ; 7929 >
+        au < ready ; 2013 ; Common Knowledge Volume 19 [2013] ; 8651 >
+        au < ready ; 2014 ; Common Knowledge Volume 20 [2014] ; 9566 >
+        au < ready ; 2015 ; Common Knowledge Volume 21 [2015] ; 10304 >
+        au < ready ; 2016 ; Common Knowledge Volume 22 [2016] ; 10875 >
+        au < ready ; 2017 ; Common Knowledge Volume 23 [2017] ; 12256 >
 
     }
     {
@@ -133,23 +133,23 @@
 
       attr[journal_id] = 256
 
-        au < testing ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 [2000] ; 2879 >
-        au < testing ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 [2001] ; 2880 >
-        au < testing ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 [2002] ; 2881 >
-        au < testing ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 [2003] ; 2882 >
-        au < testing ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 [2004] ; 2727 >
-        au < testing ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 [2005] ; 2817 >
-        au < testing ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 [2006] ; 3075 >
-        au < testing ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 [2007] ; 3393 >
-        au < testing ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 [2008] ; 3846 >
-        au < testing ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 [2009] ; 4183 >
-        au < testing ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 [2010] ; 5935 >
-        au < testing ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 [2011] ; 7357 >
-        au < testing ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 [2012] ; 8264 >
-        au < testing ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 [2013] ; 9058 >
-        au < testing ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [2014] ; 9993 >
-        au < testing ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [2015] ; 10613 >
-        au < testing ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 [2016] ; 11162 >
+        au < ready ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 [2000] ; 2879 >
+        au < ready ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 [2001] ; 2880 >
+        au < ready ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 [2002] ; 2881 >
+        au < ready ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 [2003] ; 2882 >
+        au < ready ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 [2004] ; 2727 >
+        au < ready ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 [2005] ; 2817 >
+        au < ready ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 [2006] ; 3075 >
+        au < ready ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 [2007] ; 3393 >
+        au < ready ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 [2008] ; 3846 >
+        au < ready ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 [2009] ; 4183 >
+        au < ready ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 [2010] ; 5935 >
+        au < ready ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 [2011] ; 7357 >
+        au < ready ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 [2012] ; 8264 >
+        au < ready ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 [2013] ; 9058 >
+        au < ready ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [2014] ; 9993 >
+        au < ready ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [2015] ; 10613 >
+        au < ready ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 [2016] ; 11162 >
 
     }
     {
@@ -163,18 +163,18 @@
 
       attr[journal_id] = 548
 
-        au < testing ; 2005 ; Cultural Politics Volume 1 [2005] ; 8171 >
-        au < testing ; 2006 ; Cultural Politics Volume 2 [2006] ; 8172 >
-        au < testing ; 2007 ; Cultural Politics Volume 3 [2007] ; 8173 >
-        au < testing ; 2008 ; Cultural Politics Volume 4 [2008] ; 8174 >
-        au < testing ; 2009 ; Cultural Politics Volume 5 [2009] ; 8175 >
-        au < testing ; 2010 ; Cultural Politics Volume 6 [2010] ; 8176 >
-        au < testing ; 2011 ; Cultural Politics Volume 7 [2011] ; 8177 >
-        au < testing ; 2012 ; Cultural Politics Volume 8 [2012] ; 8233 >
-        au < testing ; 2013 ; Cultural Politics Volume 9 [2013] ; 9059 >
-        au < testing ; 2014 ; Cultural Politics Volume 10 [2014] ; 9926 >
-        au < testing ; 2015 ; Cultural Politics Volume 11 [2015] ; 10565 >
-        au < testing ; 2016 ; Cultural Politics Volume 12 [2016] ; 11137 >
+        au < ready ; 2005 ; Cultural Politics Volume 1 [2005] ; 8171 >
+        au < ready ; 2006 ; Cultural Politics Volume 2 [2006] ; 8172 >
+        au < ready ; 2007 ; Cultural Politics Volume 3 [2007] ; 8173 >
+        au < ready ; 2008 ; Cultural Politics Volume 4 [2008] ; 8174 >
+        au < ready ; 2009 ; Cultural Politics Volume 5 [2009] ; 8175 >
+        au < ready ; 2010 ; Cultural Politics Volume 6 [2010] ; 8176 >
+        au < ready ; 2011 ; Cultural Politics Volume 7 [2011] ; 8177 >
+        au < ready ; 2012 ; Cultural Politics Volume 8 [2012] ; 8233 >
+        au < ready ; 2013 ; Cultural Politics Volume 9 [2013] ; 9059 >
+        au < ready ; 2014 ; Cultural Politics Volume 10 [2014] ; 9926 >
+        au < ready ; 2015 ; Cultural Politics Volume 11 [2015] ; 10565 >
+        au < ready ; 2016 ; Cultural Politics Volume 12 [2016] ; 11137 >
 
     }
     {
@@ -186,17 +186,17 @@
 
       attr[journal_id] = 543
 
-        au < manifest ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 [2007] ; 7448 >
-        au < manifest ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 [2008] ; 7449 >
-        au < manifest ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 [2009] ; 7450 >
-        au < manifest ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 [2010] ; 7451 >
-        au < manifest ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 [2011] ; 7376 >
-        au < manifest ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 [2012] ; 8232 >
-        au < manifest ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 [2013] ; 8895 >
-        au < manifest ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [2014] ; 9779 >
-        au < manifest ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [2015] ; 10477 >
-        au < manifest ; 2016 ; East Asian Science, Technology and Society: An International Journal Volume 10 [2016] ; 11002 >
-        au < manifest ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 [2017] ; 12370 >
+        au < testing ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 [2007] ; 7448 >
+        au < testing ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 [2008] ; 7449 >
+        au < testing ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 [2009] ; 7450 >
+        au < testing ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 [2010] ; 7451 >
+        au < testing ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 [2011] ; 7376 >
+        au < testing ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 [2012] ; 8232 >
+        au < testing ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 [2013] ; 8895 >
+        au < testing ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [2014] ; 9779 >
+        au < testing ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [2015] ; 10477 >
+        au < testing ; 2016 ; East Asian Science, Technology and Society: An International Journal Volume 10 [2016] ; 11002 >
+        au < testing ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 [2017] ; 12370 >
 
     }
     {
