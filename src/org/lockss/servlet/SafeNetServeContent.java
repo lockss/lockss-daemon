@@ -66,7 +66,14 @@ public class SafeNetServeContent extends ServeContent {
 
   private static final Logger log = Logger.getLogger(SafeNetServeContent.class);
 
+  // If true, scope can be 'mocked' from the URL parameters. This is for testing purposes, and should never be true in production
+  public static final String PARAM_EDIAUTH_MOCK_SCOPE = PREFIX + "mockScope";
+
   private static final String INSTITUTION_HEADER = "X-SafeNet-Institution";
+
+  public static final String INSTITUTION_SCOPE_SESSION_KEY = "scope";
+
+  private static boolean mockScope = false;
 
   private PublisherWorkflow workflow;
   private String institution;
@@ -97,6 +104,7 @@ public class SafeNetServeContent extends ServeContent {
                         Configuration.Differences diffs) {
       ServeContent.setConfig(config, oldConfig, diffs);
     if (diffs.contains(PREFIX)) {
+      mockScope = config.getBoolean(PARAM_EDIAUTH_MOCK_SCOPE, false);
     }
   }
 
@@ -109,6 +117,15 @@ public class SafeNetServeContent extends ServeContent {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
+
+    if ( mockScope ) {
+      String userInstScope = req.getParameter(INSTITUTION_SCOPE_SESSION_KEY);
+      if ( ! "".equals(userInstScope) ) {
+        log.warning("Setting scope from parameters:"+userInstScope+" This should not be done in production");
+        this.getSession().setAttribute(INSTITUTION_SCOPE_SESSION_KEY, userInstScope);
+      }
+    }
+
     updateInstitution();
 
     super.lockssHandleRequest();
@@ -199,6 +216,7 @@ public class SafeNetServeContent extends ServeContent {
 
   protected LockssUrlConnection openConnection(String url, LockssUrlConnectionPool pool) throws IOException {
     LockssUrlConnection conn = doOpenConnection(url, pool);
+    conn.addRequestProperty(INSTITUTION_HEADER, (String) getSession().getAttribute(INSTITUTION_SCOPE_SESSION_KEY));
     return conn;
   }
 
