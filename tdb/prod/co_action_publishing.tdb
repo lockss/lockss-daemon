@@ -880,11 +880,11 @@
     au < doNotProcess ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 >
     au < doNotProcess ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 >
     au < doNotProcess ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 >
-    au < exists ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 >
-    au < exists ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 >
+    au < manifest ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 >
+    au < manifest ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 >
-    au < exists ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 >
-    au < exists ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
+    au < manifest ; 2016 ; Tellus A: Dynamic Meteorology and Oceanography Volume 68 ; 68 >
+    au < manifest ; 2017 ; Tellus A: Dynamic Meteorology and Oceanography Volume 69 ; 69 >
 
   }
 
@@ -933,10 +933,10 @@
     au < doNotProcess ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 >
     au < doNotProcess ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 >
     au < doNotProcess ; 2013 ; Tellus B: Chemical and Physical Meteorology Volume 65 ; 65 >
-    au < exists ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 >
+    au < manifest ; 2014 ; Tellus B: Chemical and Physical Meteorology Volume 66 ; 66 >
     au < doNotProcess ; 2015 ; Tellus B: Chemical and Physical Meteorology Volume 67 ; 67 >
-    au < exists ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 >
-    au < exists ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
+    au < manifest ; 2016 ; Tellus B: Chemical and Physical Meteorology Volume 68 ; 68 >
+    au < manifest ; 2017 ; Tellus B: Chemical and Physical Meteorology Volume 69 ; 69 >
 
   }
 
@@ -952,8 +952,8 @@
     param[journal_id] = zvgi20
     #continues = 2000-8023
 
-    au < exists ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 >
-    au < exists ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 >
+    au < manifest ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 >
+    au < manifest ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 >
     au < manifest ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 >
 
   }
@@ -972,8 +972,8 @@
     au < doNotProcess ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 >
-    au < exists ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 >
-    au < exists ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 >
+    au < manifest ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 >
+    au < manifest ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 >
 
   }
 
