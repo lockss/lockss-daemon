@@ -90,8 +90,6 @@
     au < finished ; finished ; 2014 ; Intellectual Property Brief Issue 5 ; 5 ; >
     au < finished ; finished ; 2015 ; Intellectual Property Brief Issue 6 ; 6 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2016 ; Intellectual Property Brief Issue 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; Intellectual Property Brief Issue 8 ; 8 ; >
-    au < expected ; exists ; 2017 ; Intellectual Property Brief Issue 9 ; 9 ; >
 
   }
 
@@ -146,8 +144,8 @@
     au < finished ; finished ; 2012-2013 ; American University Law Review Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013-2014 ; American University Law Review Volume 63 ; 63 ; >
     au < finished ; finished ; 2014-2015 ; American University Law Review Volume 64 ; 64 ; >
-    au < expected ; exists ; 2015-2016 ; American University Law Review Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2016-2017 ; American University Law Review Volume 66 ; 66 ; >
+    au < doesNotExist ; doesNotExist ; 2015-2016 ; American University Law Review Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2017 ; American University Law Review Volume 66 ; 66 ; >
 
   }
 
@@ -205,8 +203,6 @@
     au < finished ; finished ; 2012 ; Legislation and Policy Brief Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; Legislation and Policy Brief Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Legislation and Policy Brief Volume 6 ; 6 ; >
-    au < expected ; exists ; 2015 ; Legislation and Policy Brief Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; Legislation and Policy Brief Volume 8 ; 8 ; >
 
   }
 
@@ -256,7 +252,6 @@
     au < finished ; finished ; 2014 ; Sustainable Development Law & Policy Volume 14 ; 14 ; >
     au < finished ; finished ; 2015 ; Sustainable Development Law & Policy Volume 15 ; 15 ; >
     au < expected ; exists ; 2016 ; Sustainable Development Law & Policy Volume 16 ; 16 ; >
-    au < expected ; exists ; 2017 ; Sustainable Development Law & Policy Volume 17 ; 17 ; >
 
   }
 
