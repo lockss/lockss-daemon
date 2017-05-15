@@ -114,7 +114,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = ijsap
 
-      au < expected ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
+      au < manifest ; exists ; 2017 ; International Journal for Students as Partners Volume 1 ; 1 ; 2017 ; > 
 
     }
 
