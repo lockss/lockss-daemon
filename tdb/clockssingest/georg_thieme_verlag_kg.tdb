@@ -4148,6 +4148,7 @@
    au < finished ; finished ; 2014 ; 2014 ; Planta Medica Volume 80 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 2015 ; Planta Medica Volume 81 ; 81 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 ; >
+   au < expected ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
 
   }
 
@@ -4162,6 +4163,7 @@
     comment[years] = 2016-current
 
    au < crawling ; exists ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 ; >
+   au < expected ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
 
   }
 
@@ -5456,7 +5458,6 @@
     >
     param[journal_id] = 10.1055/s-00032269
     #years = 2017-current
-    #First issue online will be available soon. 
 
     au < manifest ; exists ; 2017 ; 2017 ; SynOpen Volume 1 ; 1 ; >
 
