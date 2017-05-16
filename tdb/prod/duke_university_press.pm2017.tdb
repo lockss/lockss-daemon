@@ -264,12 +264,12 @@
 
       attr[journal_id] = 62
 
-        au < testing ; 1999 ; French Historical Studies Volume 22 [1999] ; 223 >
-        au < testing ; 2000 ; French Historical Studies Volume 23 [2000] ; 224 >
-        au < testing ; 2001 ; French Historical Studies Volume 24 [2001] ; 225 >
-        au < testing ; 2002 ; French Historical Studies Volume 25 [2002] ; 226 >
-        au < testing ; 2003 ; French Historical Studies Volume 26 [2003] ; 782 >
-        au < testing ; 2004 ; French Historical Studies Volume 27 [2004] ; 1755 >
+        au < ready ; 1999 ; French Historical Studies Volume 22 [1999] ; 223 >
+        au < ready ; 2000 ; French Historical Studies Volume 23 [2000] ; 224 >
+        au < ready ; 2001 ; French Historical Studies Volume 24 [2001] ; 225 >
+        au < ready ; 2002 ; French Historical Studies Volume 25 [2002] ; 226 >
+        au < ready ; 2003 ; French Historical Studies Volume 26 [2003] ; 782 >
+        au < ready ; 2004 ; French Historical Studies Volume 27 [2004] ; 1755 >
 
     }
     {
@@ -284,23 +284,23 @@
       attr[journal_id] = 67
 
         au < manifest ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 [1999] ; 232 >
-        au < manifest ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 [2000] ; 233 >
-        au < manifest ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 [2001] ; 234 >
-        au < manifest ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 [2002] ; 235 >
-        au < manifest ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 [2003] ; 868 >
-        au < manifest ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 [2003-2004] ; 1721 >
-        au < manifest ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 [2005] ; 2606 >
-        au < manifest ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 [2006] ; 2886 >
-        au < manifest ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 [2007] ; 3184 >
-        au < manifest ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 [2008] ; 3483 >
-        au < manifest ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 [2009] ; 4031 >
-        au < manifest ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 [2010] ; 5727 >
-        au < manifest ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 [2011] ; 6633 >
-        au < manifest ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 [2012] ; 7811 >
-        au < manifest ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 [2013] ; 8652 >
-        au < manifest ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 [2014] ; 9636 >
-        au < manifest ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 [2015] ; 10332 >
-        au < manifest ; 2016 ; GLQ: A Journal of Lesbian and Gay Studies Volume 22 [2016] ; 10856 >
+        au < testing ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 [2000] ; 233 >
+        au < testing ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 [2001] ; 234 >
+        au < testing ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 [2002] ; 235 >
+        au < testing ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 [2003] ; 868 >
+        au < testing ; 2003-2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 [2003-2004] ; 1721 >
+        au < testing ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 [2005] ; 2606 >
+        au < testing ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 [2006] ; 2886 >
+        au < testing ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 [2007] ; 3184 >
+        au < testing ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 [2008] ; 3483 >
+        au < testing ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 [2009] ; 4031 >
+        au < testing ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 [2010] ; 5727 >
+        au < testing ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 [2011] ; 6633 >
+        au < testing ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 [2012] ; 7811 >
+        au < testing ; 2013 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 [2013] ; 8652 >
+        au < testing ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 [2014] ; 9636 >
+        au < testing ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 [2015] ; 10332 >
+        au < testing ; 2016 ; GLQ: A Journal of Lesbian and Gay Studies Volume 22 [2016] ; 10856 >
         au < manifest ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 [2017] ; 12270 >
 
     }
