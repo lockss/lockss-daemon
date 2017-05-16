@@ -655,9 +655,9 @@ comment[bj1] = no permission from publisher
 
     param[base_url] = http://www.clinsci.org/
     
-    comment[notReady_V118] = 500 http://www.clinsci.org/cs/118/cs1180411.htm  
-    comment[v123] = 401 not authorized on content15 http://www.clinsci.org/cs/ev/123/0073/cs1230073_evtext03.htm 
-    # manifest page at http://www.clinsci.org/clockss-manifest/ppclinsci_2015.html 
+    # Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
+    # Manifest page (unusual) at http://www.clinsci.org/clockss-manifest/ppclinsci_2015.html 
+    # Manifest page (usual) at http://www.clinsci.org/lockss-manifest/vol_37_manifest.html
 
     au < doNotProcess ; 2000 ; Clinical Science Volume 98 ; 98 >
     au < doNotProcess ; 2000 ; Clinical Science Volume 99 ; 99 >
@@ -692,6 +692,7 @@ comment[bj1] = no permission from publisher
     au < exists ; 2015 ; Clinical Science Volume 128 ; 128 >
     au < exists ; 2015 ; Clinical Science Volume 129 ; 129 >
     au < exists ; 2016 ; Clinical Science Volume 130 ; 130 >
+    au < exists ; 2017 ; Clinical Science Volume 131 ; 131 >
         
   }
   

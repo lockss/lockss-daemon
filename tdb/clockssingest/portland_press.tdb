@@ -626,6 +626,8 @@
 
     param[base_url] = http://www.clinsci.org/
     # Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
+    # Manifest page (unusual) at http://www.clinsci.org/clockss-manifest/ppclinsci_2015.html 
+    # Manifest page (usual) at http://www.clinsci.org/lockss-manifest/vol_37_manifest.html
 
     au < exists ; exists ; 2000 ; Clinical Science Volume 98 ; 98 ; >
     au < exists ; exists ; 2000 ; Clinical Science Volume 99 ; 99 ; >
@@ -660,6 +662,7 @@
     au < exists ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
     au < exists ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
     au < exists ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; >
+    au < exists ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
 
   }
   
