@@ -315,12 +315,12 @@
 
       attr[journal_id] = 70
 
-        au < manifest ; 1999 ; Hispanic American Historical Review Volume 79 [1999] ; 237 >
-        au < manifest ; 2000 ; Hispanic American Historical Review Volume 80 [2000] ; 238 >
-        au < manifest ; 2001 ; Hispanic American Historical Review Volume 81 [2001] ; 239 >
-        au < manifest ; 2002 ; Hispanic American Historical Review Volume 82 [2002] ; 240 >
-        au < manifest ; 2003 ; Hispanic American Historical Review Volume 83 [2003] ; 800 >
-        au < manifest ; 2004 ; Hispanic American Historical Review Volume 84 [2004] ; 1772 >
+        au < testing ; 1999 ; Hispanic American Historical Review Volume 79 [1999] ; 237 >
+        au < testing ; 2000 ; Hispanic American Historical Review Volume 80 [2000] ; 238 >
+        au < testing ; 2001 ; Hispanic American Historical Review Volume 81 [2001] ; 239 >
+        au < testing ; 2002 ; Hispanic American Historical Review Volume 82 [2002] ; 240 >
+        au < testing ; 2003 ; Hispanic American Historical Review Volume 83 [2003] ; 800 >
+        au < testing ; 2004 ; Hispanic American Historical Review Volume 84 [2004] ; 1772 >
 
     }
     {
@@ -334,12 +334,12 @@
 
       attr[journal_id] = 75
 
-        au < manifest ; 1999 ; History of Political Economy Volume 31 [1999] ; 254 >
-        au < manifest ; 2000 ; History of Political Economy Volume 32 [2000] ; 255 >
-        au < manifest ; 2001 ; History of Political Economy Volume 33 [2001] ; 256 >
-        au < manifest ; 2002 ; History of Political Economy Volume 34 [2002] ; 257 >
-        au < manifest ; 2003 ; History of Political Economy Volume 35 [2003] ; 832 >
-        au < manifest ; 2004 ; History of Political Economy Volume 36 [2004] ; 2468 >
+        au < testing ; 1999 ; History of Political Economy Volume 31 [1999] ; 254 >
+        au < testing ; 2000 ; History of Political Economy Volume 32 [2000] ; 255 >
+        au < testing ; 2001 ; History of Political Economy Volume 33 [2001] ; 256 >
+        au < testing ; 2002 ; History of Political Economy Volume 34 [2002] ; 257 >
+        au < testing ; 2003 ; History of Political Economy Volume 35 [2003] ; 832 >
+        au < testing ; 2004 ; History of Political Economy Volume 36 [2004] ; 2468 >
 
     }
     {
@@ -353,8 +353,8 @@
 
       attr[journal_id] = 73
 
-        au < manifest ; 1999 ; Hopscotch: A Cultural Review Volume 1 [1999] ; 252 >
-        au < manifest ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 [2000-2001] ; 253 >
+        au < testing ; 1999 ; Hopscotch: A Cultural Review Volume 1 [1999] ; 252 >
+        au < testing ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 [2000-2001] ; 253 >
 
     }
     {
@@ -368,9 +368,9 @@
 
       attr[journal_id] = 659
 
-        au < manifest ; 2014 ; Journal of Chinese Literature and Culture Volume 1 [2014] ; 10279 >
-        au < manifest ; 2015 ; Journal of Chinese Literature and Culture Volume 2 [2015] ; 10766 >
-        au < manifest ; 2016 ; Journal of Chinese Literature and Culture Volume 3 [2016] ; 11212 >
+        au < testing ; 2014 ; Journal of Chinese Literature and Culture Volume 1 [2014] ; 10279 >
+        au < testing ; 2015 ; Journal of Chinese Literature and Culture Volume 2 [2015] ; 10766 >
+        au < testing ; 2016 ; Journal of Chinese Literature and Culture Volume 3 [2016] ; 11212 >
 
     }
     {
@@ -384,13 +384,13 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 [1999] ; 306 >
-        au < manifest ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 [2000] ; 307 >
-        au < manifest ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 [2001] ; 308 >
-        au < manifest ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 [2002] ; 309 >
-        au < manifest ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 [2003] ; 866 >
-        au < manifest ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 [2004] ; 1778 >
-        au < manifest ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 [2005] ; 3853 >
+        au < testing ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 [1999] ; 306 >
+        au < testing ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 [2000] ; 307 >
+        au < testing ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 [2001] ; 308 >
+        au < testing ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 [2002] ; 309 >
+        au < testing ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 [2003] ; 866 >
+        au < testing ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 [2004] ; 1778 >
+        au < testing ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 [2005] ; 3853 >
 
     }
     {
@@ -404,12 +404,12 @@
 
       attr[journal_id] = 95
 
-        au < manifest ; 1997 ; Journal of Medieval and Early Modern Studies Volume 27 [1997] ; 314 >
-        au < manifest ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 [2000] ; 315 >
-        au < manifest ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 [2001] ; 316 >
-        au < manifest ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 [2002] ; 317 >
-        au < manifest ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 [2003] ; 814 >
-        au < manifest ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [2004] ; 2427 >
+        au < testing ; 1997 ; Journal of Medieval and Early Modern Studies Volume 27 [1997] ; 314 >
+        au < testing ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 [2000] ; 315 >
+        au < testing ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 [2001] ; 316 >
+        au < testing ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 [2002] ; 317 >
+        au < testing ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 [2003] ; 814 >
+        au < testing ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [2004] ; 2427 >
 
     }
     {
@@ -423,12 +423,12 @@
 
       attr[journal_id] = 129
 
-        au < manifest ; 1999 ; MLQ: Modern Language Quarterly Volume 60 [1999] ; 444 >
-        au < manifest ; 2000 ; MLQ: Modern Language Quarterly Volume 61 [2000] ; 445 >
-        au < manifest ; 2001 ; MLQ: Modern Language Quarterly Volume 62 [2001] ; 446 >
-        au < manifest ; 2002 ; MLQ: Modern Language Quarterly Volume 63 [2002] ; 447 >
-        au < manifest ; 2003 ; MLQ: Modern Language Quarterly Volume 64 [2003] ; 821 >
-        au < manifest ; 2004 ; MLQ: Modern Language Quarterly Volume 65 [2004] ; 2422 >
+        au < testing ; 1999 ; MLQ: Modern Language Quarterly Volume 60 [1999] ; 444 >
+        au < testing ; 2000 ; MLQ: Modern Language Quarterly Volume 61 [2000] ; 445 >
+        au < testing ; 2001 ; MLQ: Modern Language Quarterly Volume 62 [2001] ; 446 >
+        au < testing ; 2002 ; MLQ: Modern Language Quarterly Volume 63 [2002] ; 447 >
+        au < testing ; 2003 ; MLQ: Modern Language Quarterly Volume 64 [2003] ; 821 >
+        au < testing ; 2004 ; MLQ: Modern Language Quarterly Volume 65 [2004] ; 2422 >
 
     }
     {
