@@ -836,8 +836,8 @@
 
       attr[journal_id] = 652
 
-        au < manifest ; 2015 ; Twentieth-Century Literature Volume 61 [2015] ; 10567 >
-        au < manifest ; 2016 ; Twentieth-Century Literature Volume 62 [2016] ; 11150 >
+        au < testing ; 2015 ; Twentieth-Century Literature Volume 61 [2015] ; 10567 >
+        au < testing ; 2016 ; Twentieth-Century Literature Volume 62 [2016] ; 11150 >
         au < manifest ; 2017 ; Twentieth-Century Literature Volume 63 [2017] ; 12475 >
 
     }
@@ -852,12 +852,12 @@
 
       attr[journal_id] = 21
 
-        au < manifest ; 1999 ; boundary 2 Volume 26 [1999] ; 75 >
-        au < manifest ; 2000 ; boundary 2 Volume 27 [2000] ; 76 >
-        au < manifest ; 2001 ; boundary 2 Volume 28 [2001] ; 77 >
-        au < manifest ; 2002 ; boundary 2 Volume 29 [2002] ; 78 >
-        au < manifest ; 2003 ; boundary 2 Volume 30 [2003] ; 888 >
-        au < manifest ; 2004 ; boundary 2 Volume 31 [2004] ; 2469 >
+        au < testing ; 1999 ; boundary 2 Volume 26 [1999] ; 75 >
+        au < testing ; 2000 ; boundary 2 Volume 27 [2000] ; 76 >
+        au < testing ; 2001 ; boundary 2 Volume 28 [2001] ; 77 >
+        au < testing ; 2002 ; boundary 2 Volume 29 [2002] ; 78 >
+        au < testing ; 2003 ; boundary 2 Volume 30 [2003] ; 888 >
+        au < testing ; 2004 ; boundary 2 Volume 31 [2004] ; 2469 >
 
     }
     {
@@ -871,12 +871,12 @@
 
       attr[journal_id] = 47
 
-        au < manifest ; 1998 ; differences: A Journal of Feminist Cultural Studies Volume 10 [1998] ; 163 >
-        au < manifest ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 11 [1999] ; 164 >
-        au < manifest ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 [2001] ; 165 >
-        au < manifest ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 [2002] ; 166 >
-        au < manifest ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 [2003] ; 936 >
-        au < manifest ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 [2004] ; 2492 >
+        au < testing ; 1998 ; differences: A Journal of Feminist Cultural Studies Volume 10 [1998] ; 163 >
+        au < testing ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 11 [1999] ; 164 >
+        au < testing ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 [2001] ; 165 >
+        au < testing ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 [2002] ; 166 >
+        au < testing ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 [2003] ; 936 >
+        au < testing ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 [2004] ; 2492 >
 
     }
     {
@@ -890,24 +890,24 @@
 
       attr[journal_id] = 162
 
-        au < manifest ; 1999 ; positions: east asia cultures critique Volume 7 [1999] ; 552 >
-        au < manifest ; 2000 ; positions: east asia cultures critique Volume 8 [2000] ; 553 >
-        au < manifest ; 2001 ; positions: east asia cultures critique Volume 9 [2001] ; 554 >
-        au < manifest ; 2002 ; positions: east asia cultures critique Volume 10 [2002] ; 555 >
-        au < manifest ; 2003 ; positions: east asia cultures critique Volume 11 [2003] ; 860 >
-        au < manifest ; 2004 ; positions: east asia cultures critique Volume 12 [2004] ; 2520 >
-        au < manifest ; 2005 ; positions: east asia cultures critique Volume 13 [2005] ; 2815 >
-        au < manifest ; 2006 ; positions: east asia cultures critique Volume 14 [2006] ; 3070 >
-        au < manifest ; 2007 ; positions: east asia cultures critique Volume 15 [2007] ; 3350 >
-        au < manifest ; 2008 ; positions: east asia cultures critique Volume 16 [2008] ; 3664 >
-        au < manifest ; 2009 ; positions: east asia cultures critique Volume 17 [2009] ; 4223 >
-        au < manifest ; 2010 ; positions: east asia cultures critique Volume 18 [2010] ; 5840 >
-        au < manifest ; 2011 ; positions: east asia cultures critique Volume 19 [2011] ; 6938 >
-        au < manifest ; 2012 ; positions: east asia cultures critique Volume 20 [2012] ; 8310 >
-        au < manifest ; 2013 ; positions: east asia cultures critique Volume 21 [2013] ; 8840 >
-        au < manifest ; 2014 ; positions: east asia cultures critique Volume 22 [2014] ; 9778 >
-        au < manifest ; 2015 ; positions: east asia cultures critique Volume 23 [2015] ; 10546 >
-        au < manifest ; 2016 ; positions: east asia cultures critique Volume 24 [2016] ; 11006 >
+        au < testing ; 1999 ; positions: east asia cultures critique Volume 7 [1999] ; 552 >
+        au < testing ; 2000 ; positions: east asia cultures critique Volume 8 [2000] ; 553 >
+        au < testing ; 2001 ; positions: east asia cultures critique Volume 9 [2001] ; 554 >
+        au < testing ; 2002 ; positions: east asia cultures critique Volume 10 [2002] ; 555 >
+        au < testing ; 2003 ; positions: east asia cultures critique Volume 11 [2003] ; 860 >
+        au < testing ; 2004 ; positions: east asia cultures critique Volume 12 [2004] ; 2520 >
+        au < testing ; 2005 ; positions: east asia cultures critique Volume 13 [2005] ; 2815 >
+        au < testing ; 2006 ; positions: east asia cultures critique Volume 14 [2006] ; 3070 >
+        au < testing ; 2007 ; positions: east asia cultures critique Volume 15 [2007] ; 3350 >
+        au < testing ; 2008 ; positions: east asia cultures critique Volume 16 [2008] ; 3664 >
+        au < testing ; 2009 ; positions: east asia cultures critique Volume 17 [2009] ; 4223 >
+        au < testing ; 2010 ; positions: east asia cultures critique Volume 18 [2010] ; 5840 >
+        au < testing ; 2011 ; positions: east asia cultures critique Volume 19 [2011] ; 6938 >
+        au < testing ; 2012 ; positions: east asia cultures critique Volume 20 [2012] ; 8310 >
+        au < testing ; 2013 ; positions: east asia cultures critique Volume 21 [2013] ; 8840 >
+        au < testing ; 2014 ; positions: east asia cultures critique Volume 22 [2014] ; 9778 >
+        au < testing ; 2015 ; positions: east asia cultures critique Volume 23 [2015] ; 10546 >
+        au < testing ; 2016 ; positions: east asia cultures critique Volume 24 [2016] ; 11006 >
         au < manifest ; 2017 ; positions: east asia cultures critique Volume 25 [2017] ; 12379 >
 
     }
