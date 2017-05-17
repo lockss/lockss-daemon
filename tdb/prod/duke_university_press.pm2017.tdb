@@ -773,12 +773,12 @@
 
       attr[journal_id] = 175
 
-        au < manifest ; 1999 ; The South Atlantic Quarterly Volume 98 [1999] ; 608 >
-        au < manifest ; 2000 ; The South Atlantic Quarterly Volume 99 [2000] ; 609 >
-        au < manifest ; 2001 ; The South Atlantic Quarterly Volume 100 [2001] ; 610 >
-        au < manifest ; 2002 ; The South Atlantic Quarterly Volume 101 [2002] ; 611 >
-        au < manifest ; 2003 ; The South Atlantic Quarterly Volume 102 [2003] ; 857 >
-        au < manifest ; 2004 ; The South Atlantic Quarterly Volume 103 [2004] ; 1756 >
+        au < testing ; 1999 ; The South Atlantic Quarterly Volume 98 [1999] ; 608 >
+        au < testing ; 2000 ; The South Atlantic Quarterly Volume 99 [2000] ; 609 >
+        au < testing ; 2001 ; The South Atlantic Quarterly Volume 100 [2001] ; 610 >
+        au < testing ; 2002 ; The South Atlantic Quarterly Volume 101 [2002] ; 611 >
+        au < testing ; 2003 ; The South Atlantic Quarterly Volume 102 [2003] ; 857 >
+        au < testing ; 2004 ; The South Atlantic Quarterly Volume 103 [2004] ; 1756 >
 
     }
     {
@@ -792,12 +792,12 @@
 
       attr[journal_id] = 195
 
-        au < manifest ; 1999 ; Theater Volume 29 [1999] ; 665 >
-        au < manifest ; 2000 ; Theater Volume 30 [2000] ; 666 >
-        au < manifest ; 2001 ; Theater Volume 31 [2001] ; 667 >
-        au < manifest ; 2002 ; Theater Volume 32 [2002] ; 668 >
-        au < manifest ; 2003 ; Theater Volume 33 [2003] ; 901 >
-        au < manifest ; 2004 ; Theater Volume 34 [2004] ; 2444 >
+        au < testing ; 1999 ; Theater Volume 29 [1999] ; 665 >
+        au < testing ; 2000 ; Theater Volume 30 [2000] ; 666 >
+        au < testing ; 2001 ; Theater Volume 31 [2001] ; 667 >
+        au < testing ; 2002 ; Theater Volume 32 [2002] ; 668 >
+        au < testing ; 2003 ; Theater Volume 33 [2003] ; 901 >
+        au < testing ; 2004 ; Theater Volume 34 [2004] ; 2444 >
 
     }
     {
@@ -811,17 +811,17 @@
 
       attr[journal_id] = 583
 
-        au < manifest ; 2006 ; Tikkun Volume 21 [2006] ; 10645 >
-        au < manifest ; 2007 ; Tikkun Volume 22 [2007] ; 10646 >
-        au < manifest ; 2008 ; Tikkun Volume 23 [2008] ; 10647 >
-        au < manifest ; 2009 ; Tikkun Volume 24 [2009] ; 10648 >
-        au < manifest ; 2010 ; Tikkun Volume 25 [2010] ; 10649 >
-        au < manifest ; 2011 ; Tikkun Volume 26 [2011] ; 8212 >
-        au < manifest ; 2012 ; Tikkun Volume 27 [2012] ; 8118 >
-        au < manifest ; 2013 ; Tikkun Volume 28 [2013] ; 8795 >
-        au < manifest ; 2014 ; Tikkun Volume 29 [2014] ; 9580 >
-        au < manifest ; 2015 ; Tikkun Volume 30 [2015] ; 10305 >
-        au < manifest ; 2016 ; Tikkun Volume 31 [2016] ; 10915 >
+        au < testing ; 2006 ; Tikkun Volume 21 [2006] ; 10645 >
+        au < testing ; 2007 ; Tikkun Volume 22 [2007] ; 10646 >
+        au < testing ; 2008 ; Tikkun Volume 23 [2008] ; 10647 >
+        au < testing ; 2009 ; Tikkun Volume 24 [2009] ; 10648 >
+        au < testing ; 2010 ; Tikkun Volume 25 [2010] ; 10649 >
+        au < testing ; 2011 ; Tikkun Volume 26 [2011] ; 8212 >
+        au < testing ; 2012 ; Tikkun Volume 27 [2012] ; 8118 >
+        au < testing ; 2013 ; Tikkun Volume 28 [2013] ; 8795 >
+        au < testing ; 2014 ; Tikkun Volume 29 [2014] ; 9580 >
+        au < testing ; 2015 ; Tikkun Volume 30 [2015] ; 10305 >
+        au < testing ; 2016 ; Tikkun Volume 31 [2016] ; 10915 >
         au < manifest ; 2017 ; Tikkun Volume 32 [2017] ; 12339 >
 
     }
