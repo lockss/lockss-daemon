@@ -721,7 +721,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     } catch (HttpHostConnectException hhce) {
       log.error("HttpHostConnectException caught", hhce);
       String message = hhce.getMessage();
-      if (message.endsWith("Connection refused")) {
+      if (message.contains("Connection refused")) {
 	ConnectException ce = new ConnectException("Connection refused");
 	ce.initCause(hhce);
 	throw ce;
