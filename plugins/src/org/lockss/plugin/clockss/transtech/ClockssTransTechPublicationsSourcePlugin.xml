@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,19 +41,23 @@
     <string>Trans Tech Publications Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>  
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- http://clockss-ingest.lockss.org/sourcefiles/iop-released/2015/20-10-2015/0004-637X.tar.gz -->
-      <string>"^%s%d/.+\.pdf$", base_url, year</string>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/transtech-released/2017/KEM/KEM_697_2016.zip -->
+      <string>"^%s%d/.+\.zip$", base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
