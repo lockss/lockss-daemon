@@ -129,9 +129,9 @@
 
       attr[journal_id] = 337
 
-        au < manifest ; 2006 ; Romanticism Volume 12 [2006] ; 3097 >
-        au < manifest ; 2007 ; Romanticism Volume 13 [2007] ; 3369 >
-        au < manifest ; 2008 ; Romanticism Volume 14 [2008] ; 3676 >
+        au < testing ; 2006 ; Romanticism Volume 12 [2006] ; 3097 >
+        au < testing ; 2007 ; Romanticism Volume 13 [2007] ; 3369 >
+        au < testing ; 2008 ; Romanticism Volume 14 [2008] ; 3676 >
 
     }
     {
@@ -145,9 +145,9 @@
 
       attr[journal_id] = 338
 
-        au < manifest ; 2006 ; The Scottish Historical Review Volume 85 [2006] ; 3095 >
-        au < manifest ; 2007 ; The Scottish Historical Review Volume 86 [2007] ; 3387 >
-        au < manifest ; 2008 ; The Scottish Historical Review Volume 87 [2008] ; 3675 >
+        au < testing ; 2006 ; The Scottish Historical Review Volume 85 [2006] ; 3095 >
+        au < testing ; 2007 ; The Scottish Historical Review Volume 86 [2007] ; 3387 >
+        au < testing ; 2008 ; The Scottish Historical Review Volume 87 [2008] ; 3675 >
 
     }
     {
@@ -161,9 +161,9 @@
 
       attr[journal_id] = 341
 
-        au < manifest ; 2006 ; Studies in World Christianity Volume 12 [2006] ; 3118 >
-        au < manifest ; 2007 ; Studies in World Christianity Volume 13 [2007] ; 3349 >
-        au < manifest ; 2008 ; Studies in World Christianity Volume 14 [2008] ; 3674 >
+        au < testing ; 2006 ; Studies in World Christianity Volume 12 [2006] ; 3118 >
+        au < testing ; 2007 ; Studies in World Christianity Volume 13 [2007] ; 3349 >
+        au < testing ; 2008 ; Studies in World Christianity Volume 14 [2008] ; 3674 >
 
     }
     {
@@ -177,8 +177,8 @@
 
       attr[journal_id] = 368
 
-        au < manifest ; 2007 ; The Innes Review Volume 58 [2007] ; 3457 >
-        au < manifest ; 2008 ; The Innes Review Volume 59 [2008] ; 3805 >
+        au < testing ; 2007 ; The Innes Review Volume 58 [2007] ; 3457 >
+        au < testing ; 2008 ; The Innes Review Volume 59 [2008] ; 3805 >
 
     }
     {
