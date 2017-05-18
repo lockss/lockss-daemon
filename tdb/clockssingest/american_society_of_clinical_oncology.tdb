@@ -23,6 +23,11 @@
 
       #param[base_url] = http://jco.ascopubs.org/
       param[journal_id] = jco
+      # NOT only abstract_only but supplemental issues can be  abstract_only (V34)
+      # and iterator only counts these articles if coverage depth is set
+      # this will work with both but we should consider "abstract_partial"
+      attr[au_coverage_depth] = abstracts
+      	      
 
       au < exists ; exists ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 ; >
       au < exists ; exists ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 ; >
