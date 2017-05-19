@@ -361,6 +361,17 @@ implements LinkExtractorFactory {
    *          ,{i:'S3F4',g:[{m:'s3-g4.gif',l:'s3-g4.jpeg',size:'37 kB'}]}
    *          ,{i:'S3F5',g:[{m:'s3-g5.gif',l:'s3-g5.jpeg',size:'28 kB'}]}
    *    ]}</script>
+   * variant seen in ASCO 5/19/2017 - note the addition of a "type:'fig'" as the 2nd element of array
+   * <script type="text/javascript">
+   * window.figureViewer=
+   *   {doi:'10.1200/JGO.2015.001677',
+   *   path:'/na101/home/literatum/publisher/asco/journals/content/jgo/2016/jgo.2015.2.issue-5/jgo.2015.001677/20161220',
+   *   figures:[{i:'F1',type:'fig',g:[{m:'jgo001677f1.gif',l:'jgo001677f1.jpeg',size:'412 KB'}]}
+   *         ,{i:'F2',type:'fig',g:[{m:'jgo001677f2.gif',l:'jgo001677f2.jpeg',size:'582 KB'}]}
+   *         ,{i:'F3',type:'fig',g:[{m:'jgo001677f3.gif',l:'jgo001677f3.jpeg',size:'644 KB'}]}
+   *  ]}</script>
+   *  <img alt="figure" src="/na101/home/literatum/publisher/asco/journals/content/jgo/2016/jgo.2015.2.issue-5/jgo.2015.001677/20161220/images/small/jgo001677f1.gif" />
+   *    
    *    
    * The in-line image is not included in the figureViewer arrays but will get
    * picked up by the base link extractor.
@@ -421,14 +432,21 @@ implements LinkExtractorFactory {
      * Allow for whitespace with use of '\\s*'
      * Use of Pattern.DOTALL to allow '.' to handle newlines
      * 
-     *  ONE FIGURE's DATA {i:'(figure ID)',g:[(figure data]}
-     *  group#1 is the figureID, group#2 is the figure data for that image
-     *   
+     *  ONE FIGURE's DATA is either
+     *  {i:'(figure ID)',g:[(figure data]}
+     *   or with type as second element (seen first in ASCO)
+     *  {i:'(figure ID)',type:'(type)',g:[(figure data]} 
+     *  
+     *  group#1 is the figureID, 
+     *  group#2 is the optional type data and (using non-capture group for making it optional) 
+     *  group#3 is the figure data for that image
      *  For clarity - here is a version of the regexp without white space bits
-     * "\\{i:'([^']+)',g:\\[\\{([^\\}\\]]+)\\}\\]\\}",
+     * "\\{i:'([^']+)',(?:type:'([^']+)',)?g:\\[\\{([^\\}\\]]+)\\}\\]\\}",
      */
     protected static final Pattern PATTERN_FIGUREDATA=
-        Pattern.compile("\\s*\\{\\s*i\\s*:\\s*'([^']+)'\\s*,\\s*g\\s*:\\s*\\[\\s*\\{([^\\}\\]]+)\\}\\s*\\]\\s*\\}",
+        Pattern.compile("\\s*\\{\\s*i\\s*:\\s*'([^']+)'\\s*," +
+                        "(?:\\s*type\\s*:\\s*'([^']+)'\\s*,)?" +
+        		"\\s*g\\s*:\\s*\\[\\s*\\{([^\\}\\]]+)\\}\\s*\\]\\s*\\}",
             Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     /*
      * 3. Size and filename for ONE image 
@@ -495,7 +513,7 @@ implements LinkExtractorFactory {
           while (figDataMat.find()) {
             // This will be the information for ONE of the displayed images
             // we don't use the figure ID
-            String figDataStr = figDataMat.group(2);
+            String figDataStr = figDataMat.group(3);
             log.debug3("figure data: " + figDataStr);
             //dataStr: m:'s3-g3.gif',l:'s3-g3.jpeg',size:'61 kB'
             Matcher imgMat = PATTERN_ONE_IMAGE.matcher(figDataStr);

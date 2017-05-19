@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.asco;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.AndFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
@@ -51,6 +52,16 @@ public class AscoHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     //toc center column
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-tools"),
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+    
+    // ASCO has a number of articles with in-line unlabelled links to other
+    // volumes. The WORST is here:
+    // http://ascopubs.org/doi/full/10.1200/JCO.2016.68.2146
+    // JCO-34 alone (a huge volume of 7000+ articles) had 136
+    // do not follow "doi/(abs|full)/" href when found within either full or abstract body
+    // div class of hlFld-Fulltext or hlFld-Abstrct, 
+    new AndFilter(
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "doi/(abs|full)/"),
+        HtmlNodeFilters.ancestor(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^hlFld-(Fulltext|Abstract)"))),    
 
   };
 
