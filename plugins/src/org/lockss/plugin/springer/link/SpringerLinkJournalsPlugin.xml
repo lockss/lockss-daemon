@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>38</string>
+    <string>39</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -201,6 +201,7 @@
       <string>"/(springerlink-)?static/.*\.(png|css|js|gif)$", 0</string>
       <string>"/article/[^/]+/[^/.]+/fulltext.html$", 0</string>
       <string>"^https://static-content\.springer\.com/cover/", 0</string>
+      <string>"auid=.*$", 0</string>
     </list>
   </entry>
 </map>

@@ -205,6 +205,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
   protected void populateUrlList() throws IOException {
 	AuState aus = AuUtil.getAuState(au);
 	urlList = new ArrayList<String>();
+    String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
 	//In order to query the metadata service less if this is a normal
 	//recrawl and we think the intial crawl was good just grab all the start 
 	//URLs from the AU
@@ -225,7 +226,6 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
 	    boolean siteWarning = false; // Flag to log the potential siteWarning only once
 	    int index = 1; // API numbers records starting with 1
 	    SpringerLinkPamLinkExtractor ple = new SpringerLinkPamLinkExtractor();
-	    String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
 	    
 	    // Query API until done
 	    while (!ple.isDone()) {
@@ -293,11 +293,13 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
 	      // Next batch of records
 	      index += records;
 	    }
-	    storeStartUrls(urlList, storeUrl);
-	    log.debug2(String.format("Ending with %d URLs", urlList.size()));
-	    if (log.isDebug3()) {
-	      log.debug3("Start URLs: " + urlList.toString());
-	    }
+	}
+	Collections.sort(urlList);
+	storeStartUrls(urlList, storeUrl);
+	log.debug2(String.format("Ending with %d URLs", urlList.size()));
+	if (log.isDebug3()) {
+		log.debug3("Start URLs: " + urlList.toString());
+	    
 	}
   }
 

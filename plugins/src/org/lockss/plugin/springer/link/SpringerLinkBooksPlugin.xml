@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -181,6 +181,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/static/.*\.(png|css|js|gif)$", 0</string>
+      <string>"auid=.*$", 0</string>
     </list>
   </entry>
 </map>
