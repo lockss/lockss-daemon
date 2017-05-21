@@ -26,6 +26,9 @@ while true ; do
       group="$2"
       echo "group=$group"
       shift; shift; continue;;
+    "-aj" )
+      ASPECTJ=1
+      shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
 	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
@@ -70,7 +73,12 @@ PROP_URL_LIST="-p $prop_url -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
-cp "${PROJECT_DIR}/lib/lockss.jar" lib
+if [ -z "$ASPECTJ" ]; then
+    cp "${PROJECT_DIR}/lib/lockss.jar" lib
+else
+    echo "Using lockss-rewoven.jar"
+    cp "${PROJECT_DIR}/lib/lockss-rewoven.jar" lib/lockss.jar
+fi
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 # Transform paths when running under cygwin

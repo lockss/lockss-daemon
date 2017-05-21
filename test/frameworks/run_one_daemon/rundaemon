@@ -45,6 +45,9 @@ while true ; do
     "-heap" )
       HEAP_ARG="$2"
       shift; shift; continue;;
+    "-aj" )
+      ASPECTJ=1
+      shift; continue;;
     "-1.6" )
       if [ -z "$JAVA_16_HOME" ] ; then
 	echo "-1.6 option requires JAVA_16_HOME to point to 1.6 install dir"
@@ -93,7 +96,13 @@ PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
-cp "${PROJECT_DIR}/lib/lockss.jar" lib
+
+if [ -z "$ASPECTJ" ]; then
+    cp "${PROJECT_DIR}/lib/lockss.jar" lib
+else
+    echo "Using lockss-rewoven.jar"
+    cp "${PROJECT_DIR}/lib/lockss-rewoven.jar" lib/lockss.jar
+fi
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 
