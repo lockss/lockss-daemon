@@ -448,9 +448,7 @@ Args:
   <property name="org.fishwife-jrugged-core.jar"
     value="${lib}/org.fishwife-jrugged-core.jar" />
   <property name="org.slf4j-slf4j-api.jar"
-  	value="${lib}/org.slf4j-slf4j-api.jar" />
-  <property name="org.slf4j-slf4j-log4j12.jar"
-  	value="${lib}/org.slf4j-slf4j-log4j12.jar" />
+    value="${lib}/slf4j-api-1.7.25.jar" />
   <property name="xmltooling-1.3.2.jar" value="${lib}/xmltooling-1.3.2.jar" />
 
   <property name="empty.db.parent.dir" value="${tmpdir}" />
@@ -596,8 +594,7 @@ Args:
     <pathelement path="${org.apache.santuario-xmlsec.jar}" />
     <pathelement path="${org.bouncycastle-pkix.jar}" />
     <pathelement path="${org.fishwife-jrugged-core.jar}" />
-  	<pathelement path="${org.slf4j-slf4j-api.jar}" />
-    <pathelement path="${org.slf4j-slf4j-log4j12.jar}" />
+    <pathelement path="${org.slf4j-slf4j-api.jar}" />
     <pathelement path="${xalan-serializer.jar}" />
     <pathelement path="${xml-resolver.jar}" />
     <pathelement path="${xmltooling-1.3.2.jar}" />
