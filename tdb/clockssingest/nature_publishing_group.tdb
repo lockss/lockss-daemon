@@ -649,7 +649,7 @@
     au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
     au < finished ; finished ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; >
-    au < expected ; exists ; 2017 ; Clinical & Translational Immunology Volume 6 ; 2017 ; 6 ; >
+    au < manifest ; exists ; 2017 ; Clinical & Translational Immunology Volume 6 ; 2017 ; 6 ; >
 
   }
 
@@ -1366,7 +1366,7 @@
     au < finished ; finished ; 2014 ; The ISME Journal Volume 8 ; 2014 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; The ISME Journal Volume 9 ; 2015 ; 9 ; >
     au < crawling ; exists ; 2016 ; The ISME Journal Volume 10 ; 2016 ; 10 ; >
-    au < expected ; exists ; 2017 ; The ISME Journal Volume 11 ; 2017 ; 11 ; >
+    au < manifest ; exists ; 2017 ; The ISME Journal Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -1960,7 +1960,7 @@
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
     au < crawling ; exists ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; >
-    au < expected ; exists ; 2017 ; Modern Pathology Volume 30 ; 2017 ; 30 ; >
+    au < manifest ; exists ; 2017 ; Modern Pathology Volume 30 ; 2017 ; 30 ; >
 
   }
 
@@ -2695,7 +2695,7 @@
     au < finished ; crawling ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; >
-    au < expected ; exists ; 2017 ; Nature Digest Volume 14 ; 2017 ; 14 ; >
+    au < manifest ; exists ; 2017 ; Nature Digest Volume 14 ; 2017 ; 14 ; >
 
   }
 

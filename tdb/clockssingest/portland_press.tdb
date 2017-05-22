@@ -629,40 +629,40 @@
     # Manifest page (unusual) at http://www.clinsci.org/clockss-manifest/ppclinsci_2015.html 
     # Manifest page (usual) at http://www.clinsci.org/lockss-manifest/vol_37_manifest.html
 
-    au < exists ; exists ; 2000 ; Clinical Science Volume 98 ; 98 ; >
-    au < exists ; exists ; 2000 ; Clinical Science Volume 99 ; 99 ; >
-    au < exists ; exists ; 2001 ; Clinical Science Volume 100 ; 100 ; >
-    au < exists ; exists ; 2001 ; Clinical Science Volume 101 ; 101 ; >
-    au < exists ; exists ; 2002 ; Clinical Science Volume 102 ; 102 ; >
-    au < exists ; exists ; 2002 ; Clinical Science Volume 103 ; 103 ; >
-    au < exists ; exists ; 2003 ; Clinical Science Volume 104 ; 104 ; >
-    au < exists ; exists ; 2003 ; Clinical Science Volume 105 ; 105 ; >
-    au < exists ; exists ; 2004 ; Clinical Science Volume 106 ; 106 ; >
-    au < exists ; exists ; 2004 ; Clinical Science Volume 107 ; 107 ; >
-    au < exists ; exists ; 2005 ; Clinical Science Volume 108 ; 108 ; >
-    au < exists ; exists ; 2005 ; Clinical Science Volume 109 ; 109 ; >
-    au < exists ; exists ; 2006 ; Clinical Science Volume 110 ; 110 ; >
-    au < exists ; exists ; 2006 ; Clinical Science Volume 111 ; 111 ; >
-    au < exists ; exists ; 2007 ; Clinical Science Volume 112 ; 112 ; >
-    au < exists ; exists ; 2007 ; Clinical Science Volume 113 ; 113 ; >
-    au < exists ; exists ; 2008 ; Clinical Science Volume 114 ; 114 ; >
-    au < exists ; exists ; 2008 ; Clinical Science Volume 115 ; 115 ; >
-    au < exists ; exists ; 2009 ; Clinical Science Volume 116 ; 116 ; >
-    au < exists ; exists ; 2009 ; Clinical Science Volume 117 ; 117 ; >
-    au < exists ; exists ; 2010 ; Clinical Science Volume 118 ; 118 ; >
-    au < exists ; exists ; 2010 ; Clinical Science Volume 119 ; 119 ; >
-    au < exists ; exists ; 2011 ; Clinical Science Volume 120 ; 120 ; >
-    au < exists ; exists ; 2011 ; Clinical Science Volume 121 ; 121 ; >
-    au < exists ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
-    au < exists ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
-    au < exists ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
-    au < exists ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
+    au < manifest ; exists ; 2000 ; Clinical Science Volume 98 ; 98 ; >
+    au < manifest ; exists ; 2000 ; Clinical Science Volume 99 ; 99 ; >
+    au < manifest ; exists ; 2001 ; Clinical Science Volume 100 ; 100 ; >
+    au < manifest ; exists ; 2001 ; Clinical Science Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2002 ; Clinical Science Volume 102 ; 102 ; >
+    au < manifest ; exists ; 2002 ; Clinical Science Volume 103 ; 103 ; >
+    au < manifest ; exists ; 2003 ; Clinical Science Volume 104 ; 104 ; >
+    au < manifest ; exists ; 2003 ; Clinical Science Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2004 ; Clinical Science Volume 106 ; 106 ; >
+    au < manifest ; exists ; 2004 ; Clinical Science Volume 107 ; 107 ; >
+    au < manifest ; exists ; 2005 ; Clinical Science Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2005 ; Clinical Science Volume 109 ; 109 ; >
+    au < manifest ; exists ; 2006 ; Clinical Science Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2006 ; Clinical Science Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2007 ; Clinical Science Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2007 ; Clinical Science Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2008 ; Clinical Science Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2008 ; Clinical Science Volume 115 ; 115 ; >
+    au < manifest ; exists ; 2009 ; Clinical Science Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2009 ; Clinical Science Volume 117 ; 117 ; >
+    au < manifest ; exists ; 2010 ; Clinical Science Volume 118 ; 118 ; >
+    au < manifest ; exists ; 2010 ; Clinical Science Volume 119 ; 119 ; >
+    au < manifest ; exists ; 2011 ; Clinical Science Volume 120 ; 120 ; >
+    au < manifest ; exists ; 2011 ; Clinical Science Volume 121 ; 121 ; >
+    au < manifest ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
+    au < manifest ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
+    au < manifest ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
+    au < manifest ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 ; >
-    au < exists ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
-    au < exists ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
-    au < exists ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; >
-    au < exists ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
+    au < manifest ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
+    au < manifest ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
+    au < manifest ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; >
+    au < manifest ; exists ; 2017 ; Clinical Science Volume 131 ; 131 ; >
 
   }
   
