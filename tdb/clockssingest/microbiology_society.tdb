@@ -222,8 +222,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; >
-      au < notReady ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; > #fetch error
-      au < manifest ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; >
+      au < testing ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; > #fetch error
+      au < testing ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; >
       au < expected ; exists ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; >
 
     }
@@ -748,7 +748,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; >
       au < testing ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
-      au < manifest ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; >
+      au < testing ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; >
       au < expected ; exists ; 2017 ; Journal of General Virology Volume 98 ; 98 ; >
 
     }
@@ -905,7 +905,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; >
       au < finished ; finished ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; >
+      au < testing ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; >
       au < expected ; exists ; 2017 ; Journal of Medical Microbiology Volume 66 ; 66 ; >
 
     }
@@ -927,7 +927,7 @@
 
       au < manifest ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 ; >
       au < finished ; finished ; 2015 ; JMM Case Reports Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; >
+      au < testing ; exists ; 2016 ; JMM Case Reports Volume 3 ; 3 ; >
       au < expected ; exists ; 2017 ; JMM Case Reports Volume 4 ; 4 ; >
 
     }
@@ -948,7 +948,7 @@
       param[journal_id] = mgen
 
       au < finished ; finished ; 2015 ; Microbial Genomics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; Microbial Genomics Volume 2 ; 2 ; >
       au < expected ; exists ; 2017 ; Microbial Genomics Volume 3 ; 3 ; >
 
     }
@@ -1023,7 +1023,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Microbiology Volume 159 ; 159 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Microbiology Volume 160 ; 160 ; >
       au < finished ; finished ; 2015 ; Microbiology Volume 161 ; 161 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; >
+      au < testing ; exists ; 2016 ; Microbiology Volume 162 ; 162 ; >
       au < expected ; exists ; 2017 ; Microbiology Volume 163 ; 163 ; >
 
     }
