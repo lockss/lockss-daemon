@@ -158,6 +158,7 @@ ArticleMetadataExtractorFactory {
       builder.addAspect(ABSTRACT_PATTERN,
           ABSTRACT_REPLACEMENT,
           ArticleFiles.ROLE_ABSTRACT,
+          ArticleFiles.ROLE_FULL_TEXT_HTML,
           ArticleFiles.ROLE_ARTICLE_METADATA);
     } else {
       // If this isn't an "abstracts only" AU, an abstract alone should not
@@ -188,9 +189,18 @@ ArticleMetadataExtractorFactory {
 
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ROLE_PDFPLUS);  
+    // For AUs that are all or partially abstract only, add in this option but
+    // leave the full-text as the priorities
+    if (isAbstractOnly(au)) {
+      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+          ArticleFiles.ROLE_FULL_TEXT_HTML,
+          ROLE_PDFPLUS,
+          ArticleFiles.ROLE_ABSTRACT);
+    } else {
+      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+          ArticleFiles.ROLE_FULL_TEXT_HTML,
+          ROLE_PDFPLUS);
+    }
 
     // The order in which we want to define what a PDF is 
     // if we only have PDFPLUS, that should become a FULL_TEXT_PDF
