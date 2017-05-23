@@ -1,6 +1,6 @@
 {
   publisher <
-    name = American Society of Clinical Oncology [PENDING] ;
+    name = American Society of Clinical Oncology ;
     info[down] = pending
   >
 
@@ -71,7 +71,7 @@
 
       au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
       au < exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
-      au < testing ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
+      au < ready ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
 
   }
 
