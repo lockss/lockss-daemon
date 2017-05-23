@@ -4018,19 +4018,19 @@
     param[base_url] = http://www.toxicologyinternational.com/
     param[journal_issn] = 0971-6580
 
-    au < manifest ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 >
-    au < manifest ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 >
-    au < manifest ; 2006 ; Toxicology International Volume 13 ; 2006 ; 13 >
-    au < manifest ; 2007 ; Toxicology International Volume 14 ; 2007 ; 14 >
-    au < manifest ; 2008 ; Toxicology International Volume 15 ; 2008 ; 15 >
-    au < manifest ; 2009 ; Toxicology International Volume 16 ; 2009 ; 16 >
-    au < manifest ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 >
-    au < released ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 >
-    au < released ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 >
-    au < released ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
-    au < released ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 >
-    au < released ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 >
-    au < exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 >
+    au < doNotProcess ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 >
+    au < doNotProcess ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 >
+    au < doNotProcess ; 2006 ; Toxicology International Volume 13 ; 2006 ; 13 >
+    au < doNotProcess ; 2007 ; Toxicology International Volume 14 ; 2007 ; 14 >
+    au < doNotProcess ; 2008 ; Toxicology International Volume 15 ; 2008 ; 15 >
+    au < doNotProcess ; 2009 ; Toxicology International Volume 16 ; 2009 ; 16 >
+    au < doNotProcess ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 >
+    au < down ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 >
+    au < down ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 >
+    au < down ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
+    au < down ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 >
+    au < down ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 >
+    au < doNotProcess ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 >
 
   }
   
