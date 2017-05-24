@@ -12,6 +12,7 @@
   plugin = org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagBooksPlugin
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[doi] ; name ; hidden[proxy] >
 
+  #Look for new books at https://www.thieme-connect.de/static-pages/online/thiemeconnectcomebooks_AllTitles.txt
 
   {
 
