@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<euclid_content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="euclid_content.xsd">
+  <content_type>journal_issue</content_type>
+  <export_timestamp>2017-03-24T17:55:09Z</export_timestamp>
+  <euclid_publication id="euclid.kjm" type="journal">
+    <publication_title>Journal of Mathematics of Kyoto University</publication_title>
+    <publication_id type="p-issn">0023-608X</publication_id>
+    <copyright_holder>Kyoto University</copyright_holder>
+  </euclid_publication>
+  <content>
+    <euclid_issue>
+      <header>
+        <issue_identifier>J. Math. Kyoto Univ., vol. 49, no. 1 (2009)</issue_identifier>
+        <timestamp>2017-03-24T17:55:09Z</timestamp>
+        <euclid_journal_id>euclid.kjm</euclid_journal_id>
+        <contact>
+          <contact_name>Project Euclid</contact_name>
+          <email>EUCLID-L@cornell.edu</email>
+          <phone>N/A</phone>
+        </contact>
+      </header>
+      <issue>
+        <issue_data>
+          <identifiers>
+            <identifier type="pii">JMKU04901</identifier>
+            <identifier type="pe">euclid.kjm/12987</identifier>
+          </identifiers>
+          <series order="2">JMKU</series>
+          <journal_vol_number>49</journal_vol_number>
+          <issue_number label="Number">1</issue_number>
+          <issue_publ_date iso8601="2009" type="print">2009</issue_publ_date>
+          <start_page>1</start_page>
+          <end_page>234</end_page>
+          <editorial_board>
+            <editor>
+              <name>
+                <given_name>Big</given_name>
+                <surname>Cheese</surname>
+              </name>
+            </editor>
+            <editor>
+              <name>
+                <given_name>Second</given_name>
+                <surname>Cheese</surname>
+              </name>
+            </editor>
+          </editorial_board>
+        </issue_data>
+        <record lang="EN" type="article">
+          <identifiers>
+            <identifier type="pii">JMKU0490101</identifier>
+            <identifier type="pe">euclid.kjm/98765</identifier>
+            <identifier type="mr">2531130</identifier>
+            <identifier type="doi">10.1215/kjm/98765</identifier>
+            <identifier type="zbl">1201.37077</identifier>
+          </identifiers>
+          <title lang="EN" type="main">This article has a two 
+            line title</title>
+          <author order="1">
+            <name>
+              <given_name>Sam</given_name>
+              <surname>Smith</surname>
+            </name>
+          </author>
+          <author order="2">
+            <name>
+              <given_name>Joe</given_name>
+              <surname>Bob</surname>
+            </name>
+          </author>
+          <abstract lang="EN">
+            <p>This paper is devoted to study.</p>
+          </abstract>
+          <subjects>
+            <subject lang="EN" rank="primary" scheme="msc2000">37F10</subject>
+            <subject lang="EN" rank="secondary" scheme="msc2000">30D05</subject>
+          </subjects>
+          <start_page>1</start_page>
+          <end_page>12</end_page>
+          <record_filename filetype="pdf">euclid.kjm_12344_1_12_pdf.pdf</record_filename>
+        </record>
+      </issue>
+    </euclid_issue>
+  </content>
+</euclid_content>

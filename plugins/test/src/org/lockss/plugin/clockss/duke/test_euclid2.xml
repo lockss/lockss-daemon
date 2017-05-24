@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<euclid_content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="euclid_content.xsd">
+  <content_type>journal_issue</content_type>
+  <export_timestamp>2017-03-24T17:54:35Z</export_timestamp>
+  <euclid_publication id="euclid.kjm" type="journal">
+    <publication_title>Kyoto Journal of Mathematics</publication_title>
+    <publication_id type="e-issn">2154-3321</publication_id>
+    <publication_id type="p-issn">2156-2261</publication_id>
+    <copyright_holder>Kyoto University</copyright_holder>
+  </euclid_publication>
+  <content>
+    <euclid_issue>
+      <header>
+        <issue_identifier>Kyoto J. Math., vol. 56, no. 1 (2016-04)</issue_identifier>
+        <timestamp>2017-03-24T17:54:35Z</timestamp>
+        <euclid_journal_id>euclid.kjm</euclid_journal_id>
+        <contact>
+          <contact_name>Project Euclid</contact_name>
+          <email>EUCLID-L@cornell.edu</email>
+          <phone>N/A</phone>
+        </contact>
+      </header>
+      <issue>
+        <issue_data>
+          <identifiers>
+            <identifier type="pii">kjm-2016</identifier>
+            <identifier type="pe">euclid.kjm/12344</identifier>
+          </identifiers>
+          <journal_vol_number>56</journal_vol_number>
+          <issue_number label="Number">1</issue_number>
+          <issue_publ_date iso8601="2016-04" type="print">April 2016</issue_publ_date>
+          <start_page>1</start_page>
+          <end_page>196</end_page>
+          <editorial_board>
+            <editor>
+              <role>Editor in Chief</role>
+              <name>
+                <given_name>Joe</given_name>
+                <surname>Editor</surname>
+              </name>
+              <affiliation>
+                <organization>Kyoto University</organization>
+              </affiliation>
+            </editor>
+            <editor>
+              <role>Editor in Chief</role>
+              <name>
+                <given_name>Other</given_name>
+                <surname>Editor</surname>
+              </name>
+              <affiliation>
+                <organization>Kyoto University</organization>
+              </affiliation>
+            </editor>
+          </editorial_board>
+        </issue_data>
+        <div label="Frontmatter">
+          <record lang="EN" type="frontmatter">
+            <identifiers>
+              <identifier type="pii">xyz</identifier>
+              <identifier type="pe">euclid.kjm/12344</identifier>
+            </identifiers>
+            <title lang="EN" type="main">Editorial Board</title>
+            <start_page/>
+            <end_page/>
+            <record_filename filetype="pdf"
+              >euclid.kjm_NA_NA_Record_01_pdf.pdf</record_filename>
+          </record>
+          <record lang="EN" type="frontmatter">
+            <identifiers>
+              <identifier type="pii">kjm561toc</identifier>
+              <identifier type="pe">euclid.kjm/12344</identifier>
+            </identifiers>
+            <title lang="EN" type="main">Table of Contents</title>
+            <start_page/>
+            <end_page/>
+            <record_filename filetype="pdf"
+              >euclid.kjm_NA_NA_Record_02_pdf.pdf</record_filename>
+          </record>
+        </div>
+        <div label="Articles">
+          <record lang="EN" type="article">
+            <identifiers>
+              <identifier type="doi">10.1215/a-b</identifier>
+              <identifier type="pii">a-b</identifier>
+              <identifier type="pe">euclid.kjm/12345</identifier>
+              <identifier type="mr">3479315</identifier>
+              <identifier type="zbl">1348.58013</identifier>
+            </identifiers>
+            <dates>
+              <date type="received" value="2014-10-14"/>
+              <date type="revised" value="2014-10-16"/>
+              <date type="accepted" value="2014-10-16"/>
+            </dates>
+            <title lang="EN" type="main">The article title on 
+              two lines</title>
+            <author order="1">
+              <name>
+                <given_name>Susan</given_name>
+                <surname>Writer</surname>
+              </name>
+              <email>x@y.z</email>
+            </author>
+            <author order="2">
+              <name>
+                <given_name>Other</given_name>
+                <surname>Writer</surname>
+              </name>
+              <email>p@q.jp</email>
+            </author>
+            <abstract lang="EN">
+              <p> Information goes here. </p>
+            </abstract>
+            <start_page>1</start_page>
+            <end_page>12</end_page>
+            <record_filename filetype="pdf">euclid.kjm_12344_1_12_pdf.pdf</record_filename>
+          </record>
+        </div>
+      </issue>
+    </euclid_issue>
+  </content>
+</euclid_content>
