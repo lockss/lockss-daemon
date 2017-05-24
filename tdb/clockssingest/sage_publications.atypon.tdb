@@ -2504,6 +2504,11 @@
       au < crawling ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; anna ; >
       au < crawling ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; anna ; >
       au < manifest ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 669 ; 669 ; anna ; >
+      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 670 ; 670 ; anna ; >
+      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 671 ; 671 ; anna ; >
+      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 672 ; 672 ; anna ; >
+      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 673 ; 673 ; anna ; >
+      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 674 ; 674 ; anna ; >
 
     }
 
@@ -4628,6 +4633,9 @@
       au < crawling ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; bmsa ; >
       au < crawling ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; bmsa ; >
       au < manifest ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 133 ; 133 ; bmsa ; >
+      au < manifest ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 134 ; 134 ; bmsa ; >
+      au < expected ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 135 ; 135 ; bmsa ; >
+      au < expected ; exists ; 2017 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 136 ; 136 ; bmsa ; >
 
     }
 
@@ -4950,7 +4958,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; caea ; >
       au < crawling ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; caea ; >
       au < crawling ; exists ; 2016 ; Cahiers Élisabéthains Volume 90 ; 90 ; caea ; >
-      au < crawling ; exists ; 2016 ; Cahiers Élisabéthains Volume 91 ; 91 ; caea ; >
+      au < crawling ; exists ; 2017 ; Cahiers Élisabéthains Volume 91 ; 91 ; caea ; >
       au < manifest ; exists ; 2017 ; Cahiers Élisabéthains Volume 92 ; 92 ; caea ; >
 
   }
@@ -5105,6 +5113,7 @@
       au < crawling ; exists ; 2014-2015 ; California Management Review Volume 57 ; 57 ; cmra ; >
       au < crawling ; exists ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra ; >
       au < manifest ; exists ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra ; >
+      au < expected ; exists ; 2017-2018 ; California Management Review Volume 60 ; 60 ; cmra ; >
 
   }
 
@@ -5857,6 +5866,7 @@
     au < doNotProcess ; doNotProcess ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 ; cala ; >
     au < doNotProcess ; doNotProcess ; 2015-2016 ; Christianity & Literature Volume 65 ; 65 ; cala ; >
     au < manifest ; exists ; 2016-2017 ; Christianity & Literature Volume 66 ; 66 ; cala ; >
+    au < expected ; exists ; 2017-2018 ; Christianity & Literature Volume 67 ; 67 ; cala ; >
 
   }
 
@@ -6560,6 +6570,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Communication Disorders Quarterly Volume 36 ; 36 ; cdqc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Communication Disorders Quarterly Volume 37 ; 37 ; cdqc ; >
       au < manifest ; exists ; 2016-2017 ; Communication Disorders Quarterly Volume 38 ; 38 ; cdqc ; >
+      au < expected ; exists ; 2017-2018 ; Communication Disorders Quarterly Volume 39 ; 39 ; cdqc ; >
 
     }
 
@@ -8618,6 +8629,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Currents in Biblical Research Volume 13 ; 13 ; cbib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Currents in Biblical Research Volume 14 ; 14 ; cbib ; >
       au < manifest ; exists ; 2016-2017 ; Currents in Biblical Research Volume 15 ; 15 ; cbib ; >
+      au < expected ; exists ; 2017-2018 ; Currents in Biblical Research Volume 16 ; 16 ; cbib ; >
 
     }
 
@@ -11385,6 +11397,8 @@
       #param[base_url] = http://eso.sagepub.com/
 
       au < crawling ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; esoa ; >
+      au < expected ; exists ; 2017 ; European Stroke Journal Volume 2 ; 2 ; esoa ; >
+
   }
 
   {
@@ -11595,6 +11609,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Exceptional Children Volume 81 ; 81 ; ecxc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Exceptional Children Volume 82 ; 82 ; ecxc ; >
       au < manifest ; exists ; 2016-2017 ; Exceptional Children Volume 83 ; 83 ; ecxc ; >
+      au < expected ; exists ; 2017-2018 ; Exceptional Children Volume 84 ; 84 ; ecxc ; >
 
   }
 
@@ -11963,6 +11978,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Feminist Theology Volume 23 ; 23 ; ftha ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Feminist Theology Volume 24 ; 24 ; ftha ; >
       au < manifest ; exists ; 2016-2017 ; Feminist Theology Volume 25 ; 25 ; ftha ; >
+      au < expected ; exists ; 2017-2018 ; Feminist Theology Volume 26 ; 26 ; ftha ; >
 
     }
 
@@ -12486,6 +12502,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; General Music Today Volume 28 ; 28 ; gmtb ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; General Music Today Volume 29 ; 29 ; gmtb ; >
       au < manifest ; exists ; 2016-2017 ; General Music Today Volume 30 ; 30 ; gmtb ; >
+      au < expected ; exists ; 2017-2018 ; General Music Today Volume 31 ; 31 ; gmtb ; >
 
     }
 
@@ -14894,6 +14911,8 @@
       #param[base_url] = http://jhd.sagepub.com/
 
       au < crawling ; exists ; 2016 ; Indian Journal of Human Development Volume 10 ; 10 ; jhda ; >
+      au < expected ; exists ; 2017 ; Indian Journal of Human Development Volume 11 ; 11 ; jhda ; >
+
   }
 
   {
@@ -14908,6 +14927,7 @@
       au < manifest ; exists ; 2005 ; Indian Journal of Public Administration Volume 51 ; 51 ; ipaa ; >
 
       au < manifest ; exists ; 2017 ; Indian Journal of Public Administration Volume 63 ; 63 ; ipaa ; >
+
   }
 
   {
@@ -15473,7 +15493,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; ahdb ; >
       au < crawling ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 ; ahdb ; >
       au < crawling ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 83 ; 83 ; ahdb ; >
-      au < crawling ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 84 ; 84 ; ahdb ; >
+      au < crawling ; exists ; 2017 ; The International Journal of Aging and Human Development Volume 84 ; 84 ; ahdb ; >
       au < manifest ; exists ; 2017 ; The International Journal of Aging and Human Development Volume 85 ; 85 ; ahdb ; >
 
   }
@@ -18015,6 +18035,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal for the Study of the Old Testament Volume 39 ; 39 ; jota ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal for the Study of the Old Testament Volume 40 ; 40 ; jota ; >
       au < crawling ; exists ; 2016-2017 ; Journal for the Study of the Old Testament Volume 41 ; 41 ; jota ; >
+      au < expected ; exists ; 2017-2018 ; Journal for the Study of the Old Testament Volume 42 ; 42 ; jota ; >
 
     }
 
@@ -22764,6 +22785,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Industrial Textiles Volume 44 ; 44 ; jitc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Industrial Textiles Volume 45 ; 45 ; jitc ; >
       au < crawling ; exists ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 ; jitc ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Industrial Textiles Volume 47 ; 47 ; jitc ; >
 
     }
 
@@ -28515,6 +28537,9 @@
       au < crawling ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; miad ; >
       au < crawling ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; miad ; >
       au < manifest ; exists ; 2017 ; Media International Australia Volume 162 ; 162 ; miad ; >
+      au < expected ; exists ; 2017 ; Media International Australia Volume 163 ; 163 ; miad ; >
+      au < expected ; exists ; 2017 ; Media International Australia Volume 164 ; 164 ; miad ; >
+      au < expected ; exists ; 2017 ; Media International Australia Volume 165 ; 165 ; miad ; >
 
   }
 
@@ -29811,6 +29836,9 @@
       au < crawling ; exists ; 2016 ; National Institute Economic Review Volume 237 ; 237 ; nera ; >
       au < crawling ; exists ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; nera ; >
       au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 239 ; 239 ; nera ; >
+      au < expected ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
+      au < expected ; exists ; 2017 ; National Institute Economic Review Volume 241 ; 241 ; nera ; >
+      au < expected ; exists ; 2017 ; National Institute Economic Review Volume 242 ; 242 ; nera ; >
 
     }
 
@@ -30605,7 +30633,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; omea ; >
       au < crawling ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; omea ; >
       au < crawling ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; omea ; >
-      au < crawling ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 74 ; 74 ; omea ; >
+      au < crawling ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 74 ; 74 ; omea ; >
       au < manifest ; exists ; 2017 ; OMEGA - Journal of Death and Dying Volume 75 ; 75 ; omea ; >
 
   }
@@ -31505,6 +31533,7 @@
         au < doNotProcess ; doNotProcess ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 ; pdka ; >
         au < doNotProcess ; doNotProcess ; 2015-2016 ; Phi Delta Kappan Volume 97 ; 97 ; pdka ; >
         au < manifest ; exists ; 2016-2017 ; Phi Delta Kappan Volume 98 ; 98 ; pdka ; >
+        au < expected ; exists ; 2017-2018 ; Phi Delta Kappan Volume 99 ; 99 ; pdka ; >
 
     }
 
@@ -39383,6 +39412,11 @@
       au < crawling ; exists ; 2016 ; Thesis Eleven Volume 136 ; 136 ; thea ; >
       au < crawling ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 138 ; 138 ; thea ; >
+      au < expected ; exists ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea ; >
+      au < expected ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
+      au < expected ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
+      au < expected ; exists ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea ; >
+      au < expected ; exists ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea ; >
 
     }
 
@@ -45342,11 +45376,12 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; pmsb ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; pmsb ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; pmsb ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; pmsb ; > 
+    au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; pmsb ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; pmsb ; >
     au < crawling ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; pmsb ; >
     au < crawling ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; pmsb ; >
     au < manifest ; exists ; 2017 ; Perceptual and Motor Skills Volume 124 ; 124 ; pmsb ; >
+    au < expected ; exists ; 2017 ; Perceptual and Motor Skills Volume 125 ; 125 ; pmsb ; >
 
   }
 
