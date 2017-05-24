@@ -51,6 +51,7 @@
     au < expected ; exists ; 2014 ; Against the Grain Volume 26 ; 26 ; >
     au < expected ; exists ; 2015 ; Against the Grain Volume 27 ; 27 ; > #embargoed 4 years.
     au < expected ; exists ; 2016 ; Against the Grain Volume 28 ; 28 ; > #embargoed 4 years.
+    au < expected ; exists ; 2017 ; Against the Grain Volume 29 ; 29 ; > #embargoed 4 years.
 
   }
   
@@ -84,6 +85,7 @@
     au < finished ; finished ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; >
     au < finished ; finished ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; >
+    au < expected ; exists ; 2017 ; CLCWeb: Comparative Literature and Culture Volume 19 ; 19 ; >
  
   }
 
@@ -104,7 +106,6 @@
     au < manifest ; exists ; 2011 ; Data Curation Profile Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; Data Curation Profile Volume 4 ; 4 ; >
     au < finished ; finished ; 2013 ; Data Curation Profile Volume 5 ; 5 ; >
-    au < expected ; exists ; 2016 ; Data Curation Profile Volume 6 ; 6 ; >
 
   }
   
@@ -130,6 +131,7 @@
     au < finished ; finished ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; >
     au < finished ; finished ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; >
+    au < expected ; exists ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; >
 
   }
   
@@ -151,6 +153,7 @@
     au < finished ; finished ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; Journal of Aviation Technology and Engineering Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Aviation Technology and Engineering Volume 6 ; 6 ; >
+    au < expected ; exists ; 2017 ; Journal of Aviation Technology and Engineering Volume 7 ; 7 ; >
 
   }
   
@@ -175,6 +178,7 @@
     au < finished ; finished ; 2013 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 ; >
     au < finished ; finished ; 2014 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 ; >
     au < crawling ; exists ; 2016 ; Journal of Human Performance in Extreme Environments Volume 13 ; 13 ; >
+    au < expected ; exists ; 2017 ; Journal of Human Performance in Extreme Environments Volume 14 ; 14 ; >
 
   }
 
@@ -196,6 +200,7 @@
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; >
+    au < expected ; exists ; 2017 ; Journal of Pre-College Engineering Education Research Volume 7 ; 7 ; >
     
   }
 
@@ -220,6 +225,7 @@
     au < finished ; finished ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 ; >
     au < finished ; finished ; 2015 ; Journal of Problem Solving Research Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; Journal of Problem Solving Research Volume 9 ; 9 ; >
+    au < expected ; exists ; 2017 ; Journal of Problem Solving Research Volume 10 ; 10 ; >
 
   }
   
@@ -246,6 +252,7 @@
     au < finished ; finished ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 ; >
     au < finished ; finished ; 2015 ; Journal of Southeast Asian American Education and Advancement Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; Journal of Southeast Asian American Education and Advancement Volume 11 ; 11 ; >
+    au < expected ; exists ; 2017 ; Journal of Southeast Asian American Education and Advancement Volume 12 ; 12 ; >
 
   }
 
