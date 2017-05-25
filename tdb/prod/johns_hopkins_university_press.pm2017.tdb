@@ -18,28 +18,28 @@
 
       attr[journal_id] = 1
 
-        au < manifest ; 1995 ; American Imago Volume 52 [1995] ; 1 >
-        au < manifest ; 1996 ; American Imago Volume 53 [1996] ; 2 >
-        au < manifest ; 1997 ; American Imago Volume 54 [1997] ; 3 >
-        au < manifest ; 1998 ; American Imago Volume 55 [1998] ; 4 >
-        au < manifest ; 1999 ; American Imago Volume 56 [1999] ; 5 >
-        au < manifest ; 2000 ; American Imago Volume 57 [2000] ; 6 >
-        au < manifest ; 2001 ; American Imago Volume 58 [2001] ; 7 >
-        au < manifest ; 2002 ; American Imago Volume 59 [2002] ; 8 >
-        au < manifest ; 2003 ; American Imago Volume 60 [2003] ; 894 >
-        au < manifest ; 2004 ; American Imago Volume 61 [2004] ; 2475 >
-        au < manifest ; 2005 ; American Imago Volume 62 [2005] ; 2747 >
-        au < manifest ; 2006 ; American Imago Volume 63 [2006] ; 3001 >
-        au < manifest ; 2007 ; American Imago Volume 64 [2007] ; 3361 >
-        au < manifest ; 2008 ; American Imago Volume 65 [2008] ; 3812 >
-        au < manifest ; 2009 ; American Imago Volume 66 [2009] ; 4309 >
-        au < manifest ; 2010 ; American Imago Volume 67 [2010] ; 6115 >
-        au < manifest ; 2011 ; American Imago Volume 68 [2011] ; 7546 >
-        au < manifest ; 2012 ; American Imago Volume 69 [2012] ; 8402 >
-        au < manifest ; 2013 ; American Imago Volume 70 [2013] ; 9047 >
-        au < manifest ; 2014 ; American Imago Volume 71 [2014] ; 9803 >
-        au < manifest ; 2015 ; American Imago Volume 72 [2015] ; 10509 >
-        au < manifest ; 2016 ; American Imago Volume 73 [2016] ; 11127 >
+        au < testing ; 1995 ; American Imago Volume 52 [1995] ; 1 >
+        au < testing ; 1996 ; American Imago Volume 53 [1996] ; 2 >
+        au < testing ; 1997 ; American Imago Volume 54 [1997] ; 3 >
+        au < testing ; 1998 ; American Imago Volume 55 [1998] ; 4 >
+        au < testing ; 1999 ; American Imago Volume 56 [1999] ; 5 >
+        au < testing ; 2000 ; American Imago Volume 57 [2000] ; 6 >
+        au < testing ; 2001 ; American Imago Volume 58 [2001] ; 7 >
+        au < testing ; 2002 ; American Imago Volume 59 [2002] ; 8 >
+        au < testing ; 2003 ; American Imago Volume 60 [2003] ; 894 >
+        au < testing ; 2004 ; American Imago Volume 61 [2004] ; 2475 >
+        au < testing ; 2005 ; American Imago Volume 62 [2005] ; 2747 >
+        au < testing ; 2006 ; American Imago Volume 63 [2006] ; 3001 >
+        au < testing ; 2007 ; American Imago Volume 64 [2007] ; 3361 >
+        au < testing ; 2008 ; American Imago Volume 65 [2008] ; 3812 >
+        au < testing ; 2009 ; American Imago Volume 66 [2009] ; 4309 >
+        au < testing ; 2010 ; American Imago Volume 67 [2010] ; 6115 >
+        au < testing ; 2011 ; American Imago Volume 68 [2011] ; 7546 >
+        au < testing ; 2012 ; American Imago Volume 69 [2012] ; 8402 >
+        au < testing ; 2013 ; American Imago Volume 70 [2013] ; 9047 >
+        au < testing ; 2014 ; American Imago Volume 71 [2014] ; 9803 >
+        au < testing ; 2015 ; American Imago Volume 72 [2015] ; 10509 >
+        au < testing ; 2016 ; American Imago Volume 73 [2016] ; 11127 >
 
     }
     {
@@ -53,23 +53,23 @@
 
       attr[journal_id] = 4
 
-        au < manifest ; 1996 ; American Jewish History Volume 84 [1996] ; 12 >
-        au < manifest ; 1997 ; American Jewish History Volume 85 [1997] ; 13 >
-        au < manifest ; 1998 ; American Jewish History Volume 86 [1998] ; 14 >
-        au < manifest ; 1999 ; American Jewish History Volume 87 [1999] ; 15 >
-        au < manifest ; 2000 ; American Jewish History Volume 88 [2000] ; 16 >
-        au < manifest ; 2001 ; American Jewish History Volume 89 [2001] ; 17 >
-        au < manifest ; 2002 ; American Jewish History Volume 90 [2002] ; 776 >
-        au < manifest ; 2003 ; American Jewish History Volume 91 [2003] ; 2548 >
-        au < manifest ; 2004 ; American Jewish History Volume 92 [2004] ; 2805 >
-        au < manifest ; 2007 ; American Jewish History Volume 93 [2007] ; 3423 >
-        au < manifest ; 2008 ; American Jewish History Volume 94 [2008] ; 4089 >
-        au < manifest ; 2009 ; American Jewish History Volume 95 [2009] ; 6216 >
-        au < manifest ; 2010 ; American Jewish History Volume 96 [2010] ; 8252 >
-        au < manifest ; 2013 ; American Jewish History Volume 97 [2013] ; 8497 >
-        au < manifest ; 2014 ; American Jewish History Volume 98 [2014] ; 9589 >
-        au < manifest ; 2015 ; American Jewish History Volume 99 [2015] ; 10285 >
-        au < manifest ; 2016 ; American Jewish History Volume 100 [2016] ; 10894 >
+        au < testing ; 1996 ; American Jewish History Volume 84 [1996] ; 12 >
+        au < testing ; 1997 ; American Jewish History Volume 85 [1997] ; 13 >
+        au < testing ; 1998 ; American Jewish History Volume 86 [1998] ; 14 >
+        au < testing ; 1999 ; American Jewish History Volume 87 [1999] ; 15 >
+        au < testing ; 2000 ; American Jewish History Volume 88 [2000] ; 16 >
+        au < testing ; 2001 ; American Jewish History Volume 89 [2001] ; 17 >
+        au < testing ; 2002 ; American Jewish History Volume 90 [2002] ; 776 >
+        au < testing ; 2003 ; American Jewish History Volume 91 [2003] ; 2548 >
+        au < testing ; 2004 ; American Jewish History Volume 92 [2004] ; 2805 >
+        au < testing ; 2007 ; American Jewish History Volume 93 [2007] ; 3423 >
+        au < testing ; 2008 ; American Jewish History Volume 94 [2008] ; 4089 >
+        au < testing ; 2009 ; American Jewish History Volume 95 [2009] ; 6216 >
+        au < testing ; 2010 ; American Jewish History Volume 96 [2010] ; 8252 >
+        au < testing ; 2013 ; American Jewish History Volume 97 [2013] ; 8497 >
+        au < testing ; 2014 ; American Jewish History Volume 98 [2014] ; 9589 >
+        au < testing ; 2015 ; American Jewish History Volume 99 [2015] ; 10285 >
+        au < testing ; 2016 ; American Jewish History Volume 100 [2016] ; 10894 >
         au < manifest ; 2017 ; American Jewish History Volume 101 [2017] ; 12269 >
 
     }
@@ -84,27 +84,27 @@
 
       attr[journal_id] = 5
 
-        au < manifest ; 1996 ; American Journal of Mathematics Volume 118 [1996] ; 18 >
-        au < manifest ; 1997 ; American Journal of Mathematics Volume 119 [1997] ; 19 >
-        au < manifest ; 1998 ; American Journal of Mathematics Volume 120 [1998] ; 20 >
-        au < manifest ; 1999 ; American Journal of Mathematics Volume 121 [1999] ; 21 >
-        au < manifest ; 2000 ; American Journal of Mathematics Volume 122 [2000] ; 22 >
-        au < manifest ; 2001 ; American Journal of Mathematics Volume 123 [2001] ; 23 >
-        au < manifest ; 2002 ; American Journal of Mathematics Volume 124 [2002] ; 24 >
-        au < manifest ; 2003 ; American Journal of Mathematics Volume 125 [2003] ; 785 >
-        au < manifest ; 2004 ; American Journal of Mathematics Volume 126 [2004] ; 1753 >
-        au < manifest ; 2005 ; American Journal of Mathematics Volume 127 [2005] ; 2635 >
-        au < manifest ; 2006 ; American Journal of Mathematics Volume 128 [2006] ; 2912 >
-        au < manifest ; 2007 ; American Journal of Mathematics Volume 129 [2007] ; 3231 >
-        au < manifest ; 2008 ; American Journal of Mathematics Volume 130 [2008] ; 3636 >
-        au < manifest ; 2009 ; American Journal of Mathematics Volume 131 [2009] ; 4140 >
-        au < manifest ; 2010 ; American Journal of Mathematics Volume 132 [2010] ; 5775 >
-        au < manifest ; 2011 ; American Journal of Mathematics Volume 133 [2011] ; 6799 >
-        au < manifest ; 2012 ; American Journal of Mathematics Volume 134 [2012] ; 7908 >
-        au < manifest ; 2013 ; American Journal of Mathematics Volume 135 [2013] ; 8728 >
-        au < manifest ; 2014 ; American Journal of Mathematics Volume 136 [2014] ; 9618 >
-        au < manifest ; 2015 ; American Journal of Mathematics Volume 137 [2015] ; 10380 >
-        au < manifest ; 2016 ; American Journal of Mathematics Volume 138 [2016] ; 10966 >
+        au < testing ; 1996 ; American Journal of Mathematics Volume 118 [1996] ; 18 >
+        au < testing ; 1997 ; American Journal of Mathematics Volume 119 [1997] ; 19 >
+        au < testing ; 1998 ; American Journal of Mathematics Volume 120 [1998] ; 20 >
+        au < testing ; 1999 ; American Journal of Mathematics Volume 121 [1999] ; 21 >
+        au < testing ; 2000 ; American Journal of Mathematics Volume 122 [2000] ; 22 >
+        au < testing ; 2001 ; American Journal of Mathematics Volume 123 [2001] ; 23 >
+        au < testing ; 2002 ; American Journal of Mathematics Volume 124 [2002] ; 24 >
+        au < testing ; 2003 ; American Journal of Mathematics Volume 125 [2003] ; 785 >
+        au < testing ; 2004 ; American Journal of Mathematics Volume 126 [2004] ; 1753 >
+        au < testing ; 2005 ; American Journal of Mathematics Volume 127 [2005] ; 2635 >
+        au < testing ; 2006 ; American Journal of Mathematics Volume 128 [2006] ; 2912 >
+        au < testing ; 2007 ; American Journal of Mathematics Volume 129 [2007] ; 3231 >
+        au < testing ; 2008 ; American Journal of Mathematics Volume 130 [2008] ; 3636 >
+        au < testing ; 2009 ; American Journal of Mathematics Volume 131 [2009] ; 4140 >
+        au < testing ; 2010 ; American Journal of Mathematics Volume 132 [2010] ; 5775 >
+        au < testing ; 2011 ; American Journal of Mathematics Volume 133 [2011] ; 6799 >
+        au < testing ; 2012 ; American Journal of Mathematics Volume 134 [2012] ; 7908 >
+        au < testing ; 2013 ; American Journal of Mathematics Volume 135 [2013] ; 8728 >
+        au < testing ; 2014 ; American Journal of Mathematics Volume 136 [2014] ; 9618 >
+        au < testing ; 2015 ; American Journal of Mathematics Volume 137 [2015] ; 10380 >
+        au < testing ; 2016 ; American Journal of Mathematics Volume 138 [2016] ; 10966 >
         au < manifest ; 2017 ; American Journal of Mathematics Volume 139 [2017] ; 12337 >
 
     }
@@ -119,27 +119,27 @@
 
       attr[journal_id] = 6
 
-        au < manifest ; 1996 ; American Journal of Philology Volume 117 [1996 (465-468)] ; 25 >
-        au < manifest ; 1997 ; American Journal of Philology Volume 118 [1997 (469-472)] ; 26 >
-        au < manifest ; 1998 ; American Journal of Philology Volume 119 [1998 (473-476)] ; 27 >
-        au < manifest ; 1999 ; American Journal of Philology Volume 120 [1999 (477-480)] ; 28 >
-        au < manifest ; 2000 ; American Journal of Philology Volume 121 [2000 (481-484)] ; 29 >
-        au < manifest ; 2001 ; American Journal of Philology Volume 122 [2001 (485-488)] ; 30 >
-        au < manifest ; 2002 ; American Journal of Philology Volume 123 [2002 (489-492)] ; 31 >
-        au < manifest ; 2003 ; American Journal of Philology Volume 124 [2003 (493-496)] ; 882 >
-        au < manifest ; 2004 ; American Journal of Philology Volume 125 [2004 (497-500)] ; 2454 >
-        au < manifest ; 2005 ; American Journal of Philology Volume 126 [2005 (501-504)] ; 2739 >
-        au < manifest ; 2006 ; American Journal of Philology Volume 127 [2006 (505-508)] ; 3029 >
-        au < manifest ; 2007 ; American Journal of Philology Volume 128 [2007 (509-512)] ; 3307 >
-        au < manifest ; 2008 ; American Journal of Philology Volume 129 [2008 (513-516)] ; 3705 >
-        au < manifest ; 2009 ; American Journal of Philology Volume 130 [2009 (517-520)] ; 4215 >
-        au < manifest ; 2010 ; American Journal of Philology Volume 131 [2010 (521-524)] ; 5778 >
-        au < manifest ; 2011 ; American Journal of Philology Volume 132 [2011 (525-529)] ; 7027 >
-        au < manifest ; 2012 ; American Journal of Philology Volume 133 [2012 (529-532)] ; 8166 >
-        au < manifest ; 2013 ; American Journal of Philology Volume 134 [2013 (533-536)] ; 8887 >
-        au < manifest ; 2014 ; American Journal of Philology Volume 135 [2014 (537-540)] ; 9823 >
-        au < manifest ; 2015 ; American Journal of Philology Volume 136 [2015 (541-544)] ; 10556 >
-        au < manifest ; 2016 ; American Journal of Philology Volume 137 [2016  (545-548)] ; 11169 >
+        au < testing ; 1996 ; American Journal of Philology Volume 117 [1996 (465-468)] ; 25 >
+        au < testing ; 1997 ; American Journal of Philology Volume 118 [1997 (469-472)] ; 26 >
+        au < testing ; 1998 ; American Journal of Philology Volume 119 [1998 (473-476)] ; 27 >
+        au < testing ; 1999 ; American Journal of Philology Volume 120 [1999 (477-480)] ; 28 >
+        au < testing ; 2000 ; American Journal of Philology Volume 121 [2000 (481-484)] ; 29 >
+        au < testing ; 2001 ; American Journal of Philology Volume 122 [2001 (485-488)] ; 30 >
+        au < testing ; 2002 ; American Journal of Philology Volume 123 [2002 (489-492)] ; 31 >
+        au < testing ; 2003 ; American Journal of Philology Volume 124 [2003 (493-496)] ; 882 >
+        au < testing ; 2004 ; American Journal of Philology Volume 125 [2004 (497-500)] ; 2454 >
+        au < testing ; 2005 ; American Journal of Philology Volume 126 [2005 (501-504)] ; 2739 >
+        au < testing ; 2006 ; American Journal of Philology Volume 127 [2006 (505-508)] ; 3029 >
+        au < testing ; 2007 ; American Journal of Philology Volume 128 [2007 (509-512)] ; 3307 >
+        au < testing ; 2008 ; American Journal of Philology Volume 129 [2008 (513-516)] ; 3705 >
+        au < testing ; 2009 ; American Journal of Philology Volume 130 [2009 (517-520)] ; 4215 >
+        au < testing ; 2010 ; American Journal of Philology Volume 131 [2010 (521-524)] ; 5778 >
+        au < testing ; 2011 ; American Journal of Philology Volume 132 [2011 (525-529)] ; 7027 >
+        au < testing ; 2012 ; American Journal of Philology Volume 133 [2012 (529-532)] ; 8166 >
+        au < testing ; 2013 ; American Journal of Philology Volume 134 [2013 (533-536)] ; 8887 >
+        au < testing ; 2014 ; American Journal of Philology Volume 135 [2014 (537-540)] ; 9823 >
+        au < testing ; 2015 ; American Journal of Philology Volume 136 [2015 (541-544)] ; 10556 >
+        au < testing ; 2016 ; American Journal of Philology Volume 137 [2016  (545-548)] ; 11169 >
 
     }
     {
@@ -153,27 +153,27 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 1996 ; American Quarterly Volume 48 [1996] ; 47 >
-        au < manifest ; 1997 ; American Quarterly Volume 49 [1997] ; 48 >
-        au < manifest ; 1998 ; American Quarterly Volume 50 [1998] ; 49 >
-        au < manifest ; 1999 ; American Quarterly Volume 51 [1999] ; 50 >
-        au < manifest ; 2000 ; American Quarterly Volume 52 [2000] ; 51 >
-        au < manifest ; 2001 ; American Quarterly Volume 53 [2001] ; 52 >
-        au < manifest ; 2002 ; American Quarterly Volume 54 [2002] ; 53 >
-        au < manifest ; 2003 ; American Quarterly Volume 55 [2003] ; 837 >
-        au < manifest ; 2004 ; American Quarterly Volume 56 [2004] ; 2439 >
-        au < manifest ; 2005 ; American Quarterly Volume 57 [2005] ; 2701 >
-        au < manifest ; 2006 ; American Quarterly Volume 58 [2006] ; 2998 >
-        au < manifest ; 2007 ; American Quarterly Volume 59 [2007] ; 3283 >
-        au < manifest ; 2008 ; American Quarterly Volume 60 [2008] ; 3653 >
-        au < manifest ; 2009 ; American Quarterly Volume 61 [2009] ; 4209 >
-        au < manifest ; 2010 ; American Quarterly Volume 62 [2010] ; 5812 >
-        au < manifest ; 2011 ; American Quarterly Volume 63 [2011] ; 6999 >
-        au < manifest ; 2012 ; American Quarterly Volume 64 [2012] ; 8158 >
-        au < manifest ; 2013 ; American Quarterly Volume 65 [2013] ; 8890 >
-        au < manifest ; 2014 ; American Quarterly Volume 66 [2014] ; 9800 >
-        au < manifest ; 2015 ; American Quarterly Volume 67 [2015] ; 10525 >
-        au < manifest ; 2016 ; American Quarterly Volume 68 [2016] ; 11114 >
+        au < testing ; 1996 ; American Quarterly Volume 48 [1996] ; 47 >
+        au < testing ; 1997 ; American Quarterly Volume 49 [1997] ; 48 >
+        au < testing ; 1998 ; American Quarterly Volume 50 [1998] ; 49 >
+        au < testing ; 1999 ; American Quarterly Volume 51 [1999] ; 50 >
+        au < testing ; 2000 ; American Quarterly Volume 52 [2000] ; 51 >
+        au < testing ; 2001 ; American Quarterly Volume 53 [2001] ; 52 >
+        au < testing ; 2002 ; American Quarterly Volume 54 [2002] ; 53 >
+        au < testing ; 2003 ; American Quarterly Volume 55 [2003] ; 837 >
+        au < testing ; 2004 ; American Quarterly Volume 56 [2004] ; 2439 >
+        au < testing ; 2005 ; American Quarterly Volume 57 [2005] ; 2701 >
+        au < testing ; 2006 ; American Quarterly Volume 58 [2006] ; 2998 >
+        au < testing ; 2007 ; American Quarterly Volume 59 [2007] ; 3283 >
+        au < testing ; 2008 ; American Quarterly Volume 60 [2008] ; 3653 >
+        au < testing ; 2009 ; American Quarterly Volume 61 [2009] ; 4209 >
+        au < testing ; 2010 ; American Quarterly Volume 62 [2010] ; 5812 >
+        au < testing ; 2011 ; American Quarterly Volume 63 [2011] ; 6999 >
+        au < testing ; 2012 ; American Quarterly Volume 64 [2012] ; 8158 >
+        au < testing ; 2013 ; American Quarterly Volume 65 [2013] ; 8890 >
+        au < testing ; 2014 ; American Quarterly Volume 66 [2014] ; 9800 >
+        au < testing ; 2015 ; American Quarterly Volume 67 [2015] ; 10525 >
+        au < testing ; 2016 ; American Quarterly Volume 68 [2016] ; 11114 >
         au < manifest ; 2017 ; American Quarterly Volume 69 [2017] ; 12516 >
 
     }
@@ -188,27 +188,27 @@
 
       attr[journal_id] = 14
 
-        au < manifest ; 1996 ; Arethusa Volume 29 [1996] ; 54 >
-        au < manifest ; 1997 ; Arethusa Volume 30 [1997] ; 55 >
-        au < manifest ; 1998 ; Arethusa Volume 31 [1998] ; 56 >
-        au < manifest ; 1999 ; Arethusa Volume 32 [1999] ; 57 >
-        au < manifest ; 2000 ; Arethusa Volume 33 [2000] ; 58 >
-        au < manifest ; 2001 ; Arethusa Volume 34 [2001] ; 59 >
-        au < manifest ; 2002 ; Arethusa Volume 35 [2002] ; 60 >
-        au < manifest ; 2003 ; Arethusa Volume 36 [2003] ; 790 >
-        au < manifest ; 2004 ; Arethusa Volume 37 [2004] ; 2507 >
-        au < manifest ; 2005 ; Arethusa Volume 38 [2005] ; 2646 >
-        au < manifest ; 2006 ; Arethusa Volume 39 [2006] ; 2932 >
-        au < manifest ; 2007 ; Arethusa Volume 40 [2007] ; 3212 >
-        au < manifest ; 2008 ; Arethusa Volume 41 [2008] ; 3666 >
-        au < manifest ; 2009 ; Arethusa Volume 42 [2009] ; 4046 >
-        au < manifest ; 2010 ; Arethusa Volume 43 [2010] ; 5693 >
-        au < manifest ; 2011 ; Arethusa Volume 44 [2011] ; 6654 >
-        au < manifest ; 2012 ; Arethusa Volume 45 [2012] ; 7992 >
-        au < manifest ; 2013 ; Arethusa Volume 46 [2013] ; 8725 >
-        au < manifest ; 2014 ; Arethusa Volume 47 [2014] ; 9623 >
-        au < manifest ; 2015 ; Arethusa Volume 48 [2015] ; 10283 >
-        au < manifest ; 2016 ; Arethusa Volume 49 [2016] ; 10909 >
+        au < testing ; 1996 ; Arethusa Volume 29 [1996] ; 54 >
+        au < testing ; 1997 ; Arethusa Volume 30 [1997] ; 55 >
+        au < testing ; 1998 ; Arethusa Volume 31 [1998] ; 56 >
+        au < testing ; 1999 ; Arethusa Volume 32 [1999] ; 57 >
+        au < testing ; 2000 ; Arethusa Volume 33 [2000] ; 58 >
+        au < testing ; 2001 ; Arethusa Volume 34 [2001] ; 59 >
+        au < testing ; 2002 ; Arethusa Volume 35 [2002] ; 60 >
+        au < testing ; 2003 ; Arethusa Volume 36 [2003] ; 790 >
+        au < testing ; 2004 ; Arethusa Volume 37 [2004] ; 2507 >
+        au < testing ; 2005 ; Arethusa Volume 38 [2005] ; 2646 >
+        au < testing ; 2006 ; Arethusa Volume 39 [2006] ; 2932 >
+        au < testing ; 2007 ; Arethusa Volume 40 [2007] ; 3212 >
+        au < testing ; 2008 ; Arethusa Volume 41 [2008] ; 3666 >
+        au < testing ; 2009 ; Arethusa Volume 42 [2009] ; 4046 >
+        au < testing ; 2010 ; Arethusa Volume 43 [2010] ; 5693 >
+        au < testing ; 2011 ; Arethusa Volume 44 [2011] ; 6654 >
+        au < testing ; 2012 ; Arethusa Volume 45 [2012] ; 7992 >
+        au < testing ; 2013 ; Arethusa Volume 46 [2013] ; 8725 >
+        au < testing ; 2014 ; Arethusa Volume 47 [2014] ; 9623 >
+        au < testing ; 2015 ; Arethusa Volume 48 [2015] ; 10283 >
+        au < testing ; 2016 ; Arethusa Volume 49 [2016] ; 10909 >
         au < manifest ; 2017 ; Arethusa Volume 50 [2017] ; 12304 >
 
     }
@@ -223,25 +223,25 @@
 
       attr[journal_id] = 23
 
-        au < manifest ; 1998 ; Book History Volume 1 [1998] ; 82 >
-        au < manifest ; 1999 ; Book History Volume 2 [1999] ; 83 >
-        au < manifest ; 2000 ; Book History Volume 3 [2000] ; 84 >
-        au < manifest ; 2001 ; Book History Volume 4 [2001] ; 85 >
-        au < manifest ; 2002 ; Book History Volume 5 [2002] ; 761 >
-        au < manifest ; 2003 ; Book History Volume 6 [2003] ; 1762 >
-        au < manifest ; 2004 ; Book History Volume 7 [2004] ; 2587 >
-        au < manifest ; 2005 ; Book History Volume 8 [2005] ; 2858 >
-        au < manifest ; 2006 ; Book History Volume 9 [2006] ; 3140 >
-        au < manifest ; 2007 ; Book History Volume 10 [2007] ; 3473 >
-        au < manifest ; 2008 ; Book History Volume 11 [2008] ; 3993 >
-        au < manifest ; 2009 ; Book History Volume 12 [2009] ; 4393 >
-        au < manifest ; 2010 ; Book History Volume 13 [2010] ; 6177 >
-        au < manifest ; 2011 ; Book History Volume 14 [2011] ; 7025 >
-        au < manifest ; 2012 ; Book History Volume 15 [2012] ; 8498 >
-        au < manifest ; 2013 ; Book History Volume 16 [2013] ; 9377 >
-        au < manifest ; 2014 ; Book History Volume 17 [2014] ; 10212 >
-        au < manifest ; 2015 ; Book History Volume 18 [2015] ; 10807 >
-        au < manifest ; 2016 ; Book History Volume 19 [2016] ; 12296 >
+        au < testing ; 1998 ; Book History Volume 1 [1998] ; 82 >
+        au < testing ; 1999 ; Book History Volume 2 [1999] ; 83 >
+        au < testing ; 2000 ; Book History Volume 3 [2000] ; 84 >
+        au < testing ; 2001 ; Book History Volume 4 [2001] ; 85 >
+        au < testing ; 2002 ; Book History Volume 5 [2002] ; 761 >
+        au < testing ; 2003 ; Book History Volume 6 [2003] ; 1762 >
+        au < testing ; 2004 ; Book History Volume 7 [2004] ; 2587 >
+        au < testing ; 2005 ; Book History Volume 8 [2005] ; 2858 >
+        au < testing ; 2006 ; Book History Volume 9 [2006] ; 3140 >
+        au < testing ; 2007 ; Book History Volume 10 [2007] ; 3473 >
+        au < testing ; 2008 ; Book History Volume 11 [2008] ; 3993 >
+        au < testing ; 2009 ; Book History Volume 12 [2009] ; 4393 >
+        au < testing ; 2010 ; Book History Volume 13 [2010] ; 6177 >
+        au < testing ; 2011 ; Book History Volume 14 [2011] ; 7025 >
+        au < testing ; 2012 ; Book History Volume 15 [2012] ; 8498 >
+        au < testing ; 2013 ; Book History Volume 16 [2013] ; 9377 >
+        au < testing ; 2014 ; Book History Volume 17 [2014] ; 10212 >
+        au < testing ; 2015 ; Book History Volume 18 [2015] ; 10807 >
+        au < testing ; 2016 ; Book History Volume 19 [2016] ; 12296 >
 
     }
     {
@@ -255,15 +255,15 @@
 
       attr[journal_id] = 409
 
-        au < manifest ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46 [2008] ; 4080 >
-        au < manifest ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47 [2009] ; 4081 >
-        au < manifest ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 [2010] ; 5746 >
-        au < manifest ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 [2011] ; 6776 >
-        au < manifest ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 [2012] ; 7928 >
-        au < manifest ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 [2013] ; 8713 >
-        au < manifest ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 [2014] ; 9765 >
-        au < manifest ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 [2015] ; 10385 >
-        au < manifest ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54 [2016] ; 10965 >
+        au < testing ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46 [2008] ; 4080 >
+        au < testing ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47 [2009] ; 4081 >
+        au < testing ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 [2010] ; 5746 >
+        au < testing ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 [2011] ; 6776 >
+        au < testing ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 [2012] ; 7928 >
+        au < testing ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 [2013] ; 8713 >
+        au < testing ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 [2014] ; 9765 >
+        au < testing ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 [2015] ; 10385 >
+        au < testing ; 2016 ; Bookbird: A Journal of International Children's Literature Volume 54 [2016] ; 10965 >
         au < manifest ; 2017 ; Bookbird: A Journal of International Children's Literature Volume 55 [2017] ; 12368 >
 
     }
@@ -278,17 +278,17 @@
 
       attr[journal_id] = 313
 
-        au < manifest ; 2005-2006 ; Bulletin of the Center for Children's Books Volume 59 [2005-2006] ; 2861 >
-        au < manifest ; 2006-2007 ; Bulletin of the Center for Children's Books Volume 60 [2006-2007] ; 3130 >
-        au < manifest ; 2007-2008 ; Bulletin of the Center for Children's Books Volume 61 [2007-2008] ; 3468 >
-        au < manifest ; 2008-2009 ; Bulletin of the Center for Children's Books Volume 62 [2008-2009] ; 3891 >
-        au < manifest ; 2009-2010 ; Bulletin of the Center for Children's Books Volume 63 [2009-2010] ; 4927 >
-        au < manifest ; 2010-2011 ; Bulletin of the Center for Children's Books Volume 64 [2010-2011] ; 6423 >
-        au < manifest ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 [2011-2012] ; 7552 >
-        au < manifest ; 2012-2013 ; Bulletin of the Center for Children's Books Volume 66 [2012-2013] ; 8445 >
-        au < manifest ; 2013-2014 ; Bulletin of the Center for Children's Books Volume 67 [2013-2014] ; 9279 >
-        au < manifest ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 [2014-2015] ; 10147 >
-        au < manifest ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69 [2015-2016] ; 10749 >
+        au < testing ; 2005-2006 ; Bulletin of the Center for Children's Books Volume 59 [2005-2006] ; 2861 >
+        au < testing ; 2006-2007 ; Bulletin of the Center for Children's Books Volume 60 [2006-2007] ; 3130 >
+        au < testing ; 2007-2008 ; Bulletin of the Center for Children's Books Volume 61 [2007-2008] ; 3468 >
+        au < testing ; 2008-2009 ; Bulletin of the Center for Children's Books Volume 62 [2008-2009] ; 3891 >
+        au < testing ; 2009-2010 ; Bulletin of the Center for Children's Books Volume 63 [2009-2010] ; 4927 >
+        au < testing ; 2010-2011 ; Bulletin of the Center for Children's Books Volume 64 [2010-2011] ; 6423 >
+        au < testing ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 [2011-2012] ; 7552 >
+        au < testing ; 2012-2013 ; Bulletin of the Center for Children's Books Volume 66 [2012-2013] ; 8445 >
+        au < testing ; 2013-2014 ; Bulletin of the Center for Children's Books Volume 67 [2013-2014] ; 9279 >
+        au < testing ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 [2014-2015] ; 10147 >
+        au < testing ; 2015-2016 ; Bulletin of the Center for Children's Books Volume 69 [2015-2016] ; 10749 >
         au < manifest ; 2016-2017 ; Bulletin of the Center for Children's Books Volume 70 [2016-2017] ; 11361 >
 
     }
@@ -303,27 +303,27 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 1996 ; Bulletin of the History of Medicine Volume 70 [1996] ; 86 >
-        au < manifest ; 1997 ; Bulletin of the History of Medicine Volume 71 [1997] ; 87 >
-        au < manifest ; 1998 ; Bulletin of the History of Medicine Volume 72 [1998] ; 88 >
-        au < manifest ; 1999 ; Bulletin of the History of Medicine Volume 73 [1999] ; 89 >
-        au < manifest ; 2000 ; Bulletin of the History of Medicine Volume 74 [2000] ; 90 >
-        au < manifest ; 2001 ; Bulletin of the History of Medicine Volume 75 [2001] ; 91 >
-        au < manifest ; 2002 ; Bulletin of the History of Medicine Volume 76 [2002] ; 92 >
-        au < manifest ; 2003 ; Bulletin of the History of Medicine Volume 77 [2003] ; 831 >
-        au < manifest ; 2004 ; Bulletin of the History of Medicine Volume 78 [2004] ; 2413 >
-        au < manifest ; 2005 ; Bulletin of the History of Medicine Volume 79 [2005] ; 2693 >
-        au < manifest ; 2006 ; Bulletin of the History of Medicine Volume 80 [2006] ; 2974 >
-        au < manifest ; 2007 ; Bulletin of the History of Medicine Volume 81 [2007] ; 3267 >
-        au < manifest ; 2008 ; Bulletin of the History of Medicine Volume 82 [2008] ; 3616 >
-        au < manifest ; 2009 ; Bulletin of the History of Medicine Volume 83 [2009] ; 4147 >
-        au < manifest ; 2010 ; Bulletin of the History of Medicine Volume 84 [2010] ; 5780 >
-        au < manifest ; 2011 ; Bulletin of the History of Medicine Volume 85 [2011] ; 6978 >
-        au < manifest ; 2012 ; Bulletin of the History of Medicine Volume 86 [2012] ; 8244 >
-        au < manifest ; 2013 ; Bulletin of the History of Medicine Volume 87 [2013] ; 8918 >
-        au < manifest ; 2014 ; Bulletin of the History of Medicine Volume 88 [2014] ; 9874 >
-        au < manifest ; 2015 ; Bulletin of the History of Medicine Volume 89 [2015] ; 10574 >
-        au < manifest ; 2016 ; Bulletin of the History of Medicine Volume 90 [2016] ; 11111 >
+        au < testing ; 1996 ; Bulletin of the History of Medicine Volume 70 [1996] ; 86 >
+        au < testing ; 1997 ; Bulletin of the History of Medicine Volume 71 [1997] ; 87 >
+        au < testing ; 1998 ; Bulletin of the History of Medicine Volume 72 [1998] ; 88 >
+        au < testing ; 1999 ; Bulletin of the History of Medicine Volume 73 [1999] ; 89 >
+        au < testing ; 2000 ; Bulletin of the History of Medicine Volume 74 [2000] ; 90 >
+        au < testing ; 2001 ; Bulletin of the History of Medicine Volume 75 [2001] ; 91 >
+        au < testing ; 2002 ; Bulletin of the History of Medicine Volume 76 [2002] ; 92 >
+        au < testing ; 2003 ; Bulletin of the History of Medicine Volume 77 [2003] ; 831 >
+        au < testing ; 2004 ; Bulletin of the History of Medicine Volume 78 [2004] ; 2413 >
+        au < testing ; 2005 ; Bulletin of the History of Medicine Volume 79 [2005] ; 2693 >
+        au < testing ; 2006 ; Bulletin of the History of Medicine Volume 80 [2006] ; 2974 >
+        au < testing ; 2007 ; Bulletin of the History of Medicine Volume 81 [2007] ; 3267 >
+        au < testing ; 2008 ; Bulletin of the History of Medicine Volume 82 [2008] ; 3616 >
+        au < testing ; 2009 ; Bulletin of the History of Medicine Volume 83 [2009] ; 4147 >
+        au < testing ; 2010 ; Bulletin of the History of Medicine Volume 84 [2010] ; 5780 >
+        au < testing ; 2011 ; Bulletin of the History of Medicine Volume 85 [2011] ; 6978 >
+        au < testing ; 2012 ; Bulletin of the History of Medicine Volume 86 [2012] ; 8244 >
+        au < testing ; 2013 ; Bulletin of the History of Medicine Volume 87 [2013] ; 8918 >
+        au < testing ; 2014 ; Bulletin of the History of Medicine Volume 88 [2014] ; 9874 >
+        au < testing ; 2015 ; Bulletin of the History of Medicine Volume 89 [2015] ; 10574 >
+        au < testing ; 2016 ; Bulletin of the History of Medicine Volume 90 [2016] ; 11111 >
         au < manifest ; 2017 ; Bulletin of the History of Medicine Volume 91 [2017] ; 12512 >
 
     }
@@ -335,10 +335,10 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2013 ; CEA Critic Volume 75 [2013] ; 8885 >
-        au < manifest ; 2014 ; CEA Critic Volume 76 [2014] ; 9801 >
-        au < manifest ; 2015 ; CEA Critic Volume 77 [2015] ; 10526 >
-        au < manifest ; 2016 ; CEA Critic Volume 78 [2016] ; 11276 >
+        au < testing ; 2013 ; CEA Critic Volume 75 [2013] ; 8885 >
+        au < testing ; 2014 ; CEA Critic Volume 76 [2014] ; 9801 >
+        au < testing ; 2015 ; CEA Critic Volume 77 [2015] ; 10526 >
+        au < testing ; 2016 ; CEA Critic Volume 78 [2016] ; 11276 >
         au < manifest ; 2017 ; CEA Critic Volume 79 [2017] ; 12514 >
 
     }
@@ -353,28 +353,28 @@
 
       attr[journal_id] = 27
 
-        au < manifest ; 1995 ; Callaloo Volume 18 [1995] ; 98 >
-        au < manifest ; 1996 ; Callaloo Volume 19 [1996] ; 99 >
-        au < manifest ; 1997 ; Callaloo Volume 20 [1997] ; 100 >
-        au < manifest ; 1998 ; Callaloo Volume 21 [1998] ; 101 >
-        au < manifest ; 1999 ; Callaloo Volume 22 [1999] ; 102 >
-        au < manifest ; 2000 ; Callaloo Volume 23 [2000] ; 103 >
-        au < manifest ; 2001 ; Callaloo Volume 24 [2001] ; 104 >
-        au < manifest ; 2002 ; Callaloo Volume 25 [2002] ; 105 >
-        au < manifest ; 2003 ; Callaloo Volume 26 [2003] ; 836 >
-        au < manifest ; 2004 ; Callaloo Volume 27 [2004] ; 2132 >
-        au < manifest ; 2005 ; Callaloo Volume 28 [2005] ; 2760 >
-        au < manifest ; 2006 ; Callaloo Volume 29 [2006] ; 3010 >
-        au < manifest ; 2007 ; Callaloo Volume 30 [2007] ; 3428 >
-        au < manifest ; 2008 ; Callaloo Volume 31 [2008] ; 3804 >
-        au < manifest ; 2009 ; Callaloo Volume 32 [2009] ; 4111 >
-        au < manifest ; 2010 ; Callaloo Volume 33 [2010] ; 5843 >
-        au < manifest ; 2011 ; Callaloo Volume 34 [2011] ; 6822 >
-        au < manifest ; 2012 ; Callaloo Volume 35 [2012] ; 8169 >
-        au < manifest ; 2013 ; Callaloo Volume 36 [2013] ; 9065 >
-        au < manifest ; 2014 ; Callaloo Volume 37 [2014] ; 9672 >
-        au < manifest ; 2015 ; Callaloo Volume 38 [2015] ; 10439 >
-        au < manifest ; 2016 ; Callaloo Volume 39 [2016] ; 11193 >
+        au < testing ; 1995 ; Callaloo Volume 18 [1995] ; 98 >
+        au < testing ; 1996 ; Callaloo Volume 19 [1996] ; 99 >
+        au < testing ; 1997 ; Callaloo Volume 20 [1997] ; 100 >
+        au < testing ; 1998 ; Callaloo Volume 21 [1998] ; 101 >
+        au < testing ; 1999 ; Callaloo Volume 22 [1999] ; 102 >
+        au < testing ; 2000 ; Callaloo Volume 23 [2000] ; 103 >
+        au < testing ; 2001 ; Callaloo Volume 24 [2001] ; 104 >
+        au < testing ; 2002 ; Callaloo Volume 25 [2002] ; 105 >
+        au < testing ; 2003 ; Callaloo Volume 26 [2003] ; 836 >
+        au < testing ; 2004 ; Callaloo Volume 27 [2004] ; 2132 >
+        au < testing ; 2005 ; Callaloo Volume 28 [2005] ; 2760 >
+        au < testing ; 2006 ; Callaloo Volume 29 [2006] ; 3010 >
+        au < testing ; 2007 ; Callaloo Volume 30 [2007] ; 3428 >
+        au < testing ; 2008 ; Callaloo Volume 31 [2008] ; 3804 >
+        au < testing ; 2009 ; Callaloo Volume 32 [2009] ; 4111 >
+        au < testing ; 2010 ; Callaloo Volume 33 [2010] ; 5843 >
+        au < testing ; 2011 ; Callaloo Volume 34 [2011] ; 6822 >
+        au < testing ; 2012 ; Callaloo Volume 35 [2012] ; 8169 >
+        au < testing ; 2013 ; Callaloo Volume 36 [2013] ; 9065 >
+        au < testing ; 2014 ; Callaloo Volume 37 [2014] ; 9672 >
+        au < testing ; 2015 ; Callaloo Volume 38 [2015] ; 10439 >
+        au < testing ; 2016 ; Callaloo Volume 39 [2016] ; 11193 >
 
     }
     {
@@ -388,50 +388,50 @@
 
       attr[journal_id] = 214
 
-        au < manifest ; 1972 ; Children's Literature Volume 1 [1972] ; 3948 >
-        au < manifest ; 1973 ; Children's Literature Volume 2 [1973] ; 3947 >
-        au < manifest ; 1974 ; Children's Literature Volume 3 [1974] ; 3946 >
-        au < manifest ; 1975 ; Children's Literature Volume 4 [1975] ; 3945 >
-        au < manifest ; 1976 ; Children's Literature Volume 5 [1976] ; 3944 >
-        au < manifest ; 1977 ; Children's Literature Volume 6 [1977] ; 3943 >
-        au < manifest ; 1978 ; Children's Literature Volume 7 [1978] ; 3942 >
-        au < manifest ; 1980 ; Children's Literature Volume 8 [1980] ; 3941 >
-        au < manifest ; 1981 ; Children's Literature Volume 9 [1981] ; 3940 >
-        au < manifest ; 1982 ; Children's Literature Volume 10 [1982] ; 3939 >
-        au < manifest ; 1983 ; Children's Literature Volume 11 [1983] ; 3938 >
-        au < manifest ; 1984 ; Children's Literature Volume 12 [1984] ; 3937 >
-        au < manifest ; 1985 ; Children's Literature Volume 13 [1985] ; 3936 >
-        au < manifest ; 1986 ; Children's Literature Volume 14 [1986] ; 3935 >
-        au < manifest ; 1987 ; Children's Literature Volume 15 [1987] ; 3934 >
-        au < manifest ; 1988 ; Children's Literature Volume 16 [1988] ; 3933 >
-        au < manifest ; 1989 ; Children's Literature Volume 17 [1989] ; 3932 >
-        au < manifest ; 1990 ; Children's Literature Volume 18 [1990] ; 3931 >
-        au < manifest ; 1991 ; Children's Literature Volume 19 [1991] ; 3930 >
-        au < manifest ; 1992 ; Children's Literature Volume 20 [1992] ; 3929 >
-        au < manifest ; 1993 ; Children's Literature Volume 21 [1993] ; 3928 >
-        au < manifest ; 1994 ; Children's Literature Volume 22 [1994] ; 3927 >
-        au < manifest ; 1995 ; Children's Literature Volume 23 [1995] ; 3926 >
-        au < manifest ; 1996 ; Children's Literature Volume 24 [1996] ; 3925 >
-        au < manifest ; 1997 ; Children's Literature Volume 25 [1997] ; 3924 >
-        au < manifest ; 1998 ; Children's Literature Volume 26 [1998] ; 3923 >
-        au < manifest ; 1999 ; Children's Literature Volume 27 [1999] ; 3922 >
-        au < manifest ; 2000 ; Children's Literature Volume 28 [2000] ; 3921 >
-        au < manifest ; 2001 ; Children's Literature Volume 29 [2001] ; 3920 >
-        au < manifest ; 2002 ; Children's Literature Volume 30 [2002] ; 3969 >
-        au < manifest ; 2003 ; Children's Literature Volume 31 [2003] ; 921 >
-        au < manifest ; 2004 ; Children's Literature Volume 32 [2004] ; 2499 >
-        au < manifest ; 2005 ; Children's Literature Volume 33 [2005] ; 2788 >
-        au < manifest ; 2006 ; Children's Literature Volume 34 [2006] ; 3049 >
-        au < manifest ; 2007 ; Children's Literature Volume 35 [2007] ; 3380 >
-        au < manifest ; 2008 ; Children's Literature Volume 36 [2008] ; 3762 >
-        au < manifest ; 2009 ; Children's Literature Volume 37 [2009] ; 4272 >
-        au < manifest ; 2010 ; Children's Literature Volume 38 [2010] ; 6159 >
-        au < manifest ; 2011 ; Children's Literature Volume 39 [2011] ; 7106 >
-        au < manifest ; 2012 ; Children's Literature Volume 40 [2012] ; 8335 >
-        au < manifest ; 2013 ; Children's Literature Volume 41 [2013] ; 9100 >
-        au < manifest ; 2014 ; Children's Literature Volume 42 [2014] ; 9998 >
-        au < manifest ; 2015 ; Children's Literature Volume 43 [2015] ; 10642 >
-        au < manifest ; 2016 ; Children's Literature Volume 44 [2016] ; 11235 >
+        au < testing ; 1972 ; Children's Literature Volume 1 [1972] ; 3948 >
+        au < testing ; 1973 ; Children's Literature Volume 2 [1973] ; 3947 >
+        au < testing ; 1974 ; Children's Literature Volume 3 [1974] ; 3946 >
+        au < testing ; 1975 ; Children's Literature Volume 4 [1975] ; 3945 >
+        au < testing ; 1976 ; Children's Literature Volume 5 [1976] ; 3944 >
+        au < testing ; 1977 ; Children's Literature Volume 6 [1977] ; 3943 >
+        au < testing ; 1978 ; Children's Literature Volume 7 [1978] ; 3942 >
+        au < testing ; 1980 ; Children's Literature Volume 8 [1980] ; 3941 >
+        au < testing ; 1981 ; Children's Literature Volume 9 [1981] ; 3940 >
+        au < testing ; 1982 ; Children's Literature Volume 10 [1982] ; 3939 >
+        au < testing ; 1983 ; Children's Literature Volume 11 [1983] ; 3938 >
+        au < testing ; 1984 ; Children's Literature Volume 12 [1984] ; 3937 >
+        au < testing ; 1985 ; Children's Literature Volume 13 [1985] ; 3936 >
+        au < testing ; 1986 ; Children's Literature Volume 14 [1986] ; 3935 >
+        au < testing ; 1987 ; Children's Literature Volume 15 [1987] ; 3934 >
+        au < testing ; 1988 ; Children's Literature Volume 16 [1988] ; 3933 >
+        au < testing ; 1989 ; Children's Literature Volume 17 [1989] ; 3932 >
+        au < testing ; 1990 ; Children's Literature Volume 18 [1990] ; 3931 >
+        au < testing ; 1991 ; Children's Literature Volume 19 [1991] ; 3930 >
+        au < testing ; 1992 ; Children's Literature Volume 20 [1992] ; 3929 >
+        au < testing ; 1993 ; Children's Literature Volume 21 [1993] ; 3928 >
+        au < testing ; 1994 ; Children's Literature Volume 22 [1994] ; 3927 >
+        au < testing ; 1995 ; Children's Literature Volume 23 [1995] ; 3926 >
+        au < testing ; 1996 ; Children's Literature Volume 24 [1996] ; 3925 >
+        au < testing ; 1997 ; Children's Literature Volume 25 [1997] ; 3924 >
+        au < testing ; 1998 ; Children's Literature Volume 26 [1998] ; 3923 >
+        au < testing ; 1999 ; Children's Literature Volume 27 [1999] ; 3922 >
+        au < testing ; 2000 ; Children's Literature Volume 28 [2000] ; 3921 >
+        au < testing ; 2001 ; Children's Literature Volume 29 [2001] ; 3920 >
+        au < testing ; 2002 ; Children's Literature Volume 30 [2002] ; 3969 >
+        au < testing ; 2003 ; Children's Literature Volume 31 [2003] ; 921 >
+        au < testing ; 2004 ; Children's Literature Volume 32 [2004] ; 2499 >
+        au < testing ; 2005 ; Children's Literature Volume 33 [2005] ; 2788 >
+        au < testing ; 2006 ; Children's Literature Volume 34 [2006] ; 3049 >
+        au < testing ; 2007 ; Children's Literature Volume 35 [2007] ; 3380 >
+        au < testing ; 2008 ; Children's Literature Volume 36 [2008] ; 3762 >
+        au < testing ; 2009 ; Children's Literature Volume 37 [2009] ; 4272 >
+        au < testing ; 2010 ; Children's Literature Volume 38 [2010] ; 6159 >
+        au < testing ; 2011 ; Children's Literature Volume 39 [2011] ; 7106 >
+        au < testing ; 2012 ; Children's Literature Volume 40 [2012] ; 8335 >
+        au < testing ; 2013 ; Children's Literature Volume 41 [2013] ; 9100 >
+        au < testing ; 2014 ; Children's Literature Volume 42 [2014] ; 9998 >
+        au < testing ; 2015 ; Children's Literature Volume 43 [2015] ; 10642 >
+        au < testing ; 2016 ; Children's Literature Volume 44 [2016] ; 11235 >
 
     }
     {
@@ -445,58 +445,58 @@
 
       attr[journal_id] = 301
 
-        au < manifest ; 1976-1977 ; Children's Literature Association Quarterly Volume 1 [1976-1977] ; 3990 >
-        au < manifest ; 1977 ; Children's Literature Association Quarterly Volume 2 [1977] ; 3989 >
-        au < manifest ; 1978 ; Children's Literature Association Quarterly 1978 ; 7731 >
-        au < manifest ; 1978-1979 ; Children's Literature Association Quarterly Volume 3 [1978-1979] ; 3988 >
-        au < manifest ; 1979 ; Children's Literature Association Quarterly Volume 4 [1979] ; 3987 >
-        au < manifest ; 1979 ; Children's Literature Association Quarterly 1979 ; 7722 >
-        au < manifest ; 1980 ; Children's Literature Association Quarterly Volume 5 [1980] ; 3986 >
-        au < manifest ; 1980 ; Children's Literature Association Quarterly 1980 ; 7732 >
-        au < manifest ; 1981 ; Children's Literature Association Quarterly Volume 6 [1981] ; 3985 >
-        au < manifest ; 1981 ; Children's Literature Association Quarterly 1981 ; 7733 >
-        au < manifest ; 1982 ; Children's Literature Association Quarterly Volume 7 [1982] ; 3984 >
-        au < manifest ; 1982 ; Children's Literature Association Quarterly 1982 ; 7741 >
-        au < manifest ; 1983 ; Children's Literature Association Quarterly Volume 8 [1983] ; 3983 >
-        au < manifest ; 1984-1985 ; Children's Literature Association Quarterly Volume 9 [1984-1985] ; 3982 >
-        au < manifest ; 1985 ; Children's Literature Association Quarterly Volume 10 [1985] ; 3981 >
-        au < manifest ; 1986 ; Children's Literature Association Quarterly 1986 ; 7734 >
-        au < manifest ; 1986-1987 ; Children's Literature Association Quarterly Volume 11 [1986-1987] ; 3980 >
-        au < manifest ; 1987 ; Children's Literature Association Quarterly Volume 12 [1987] ; 3979 >
-        au < manifest ; 1987 ; Children's Literature Association Quarterly 1987 ; 7735 >
-        au < manifest ; 1988 ; Children's Literature Association Quarterly Volume 13 [1988] ; 3978 >
-        au < manifest ; 1988 ; Children's Literature Association Quarterly 1988 ; 7736 >
-        au < manifest ; 1989 ; Children's Literature Association Quarterly Volume 14 [1989] ; 3977 >
-        au < manifest ; 1989 ; Children's Literature Association Quarterly 1989 ; 7737 >
-        au < manifest ; 1990 ; Children's Literature Association Quarterly Volume 15 [1990] ; 3976 >
-        au < manifest ; 1990 ; Children's Literature Association Quarterly 1990 ; 7738 >
-        au < manifest ; 1991 ; Children's Literature Association Quarterly Volume 16 [1991] ; 3975 >
-        au < manifest ; 1991 ; Children's Literature Association Quarterly 1991 ; 7742 >
-        au < manifest ; 1992 ; Children's Literature Association Quarterly Volume 17 [1992] ; 3974 >
-        au < manifest ; 1993 ; Children's Literature Association Quarterly Volume 18 [1993] ; 3973 >
-        au < manifest ; 1994 ; Children's Literature Association Quarterly Volume 19 [1994] ; 3972 >
-        au < manifest ; 1995 ; Children's Literature Association Quarterly Volume 20 [1995] ; 3971 >
-        au < manifest ; 1996 ; Children's Literature Association Quarterly Volume 21 [1996] ; 3968 >
-        au < manifest ; 1997 ; Children's Literature Association Quarterly Volume 22 [1997] ; 3967 >
-        au < manifest ; 1998 ; Children's Literature Association Quarterly Volume 23 [1998] ; 3966 >
-        au < manifest ; 1999 ; Children's Literature Association Quarterly Volume 24 [1999] ; 3965 >
-        au < manifest ; 2000 ; Children's Literature Association Quarterly Volume 25 [2000] ; 3964 >
-        au < manifest ; 2001 ; Children's Literature Association Quarterly Volume 26 [2001] ; 3963 >
-        au < manifest ; 2002 ; Children's Literature Association Quarterly Volume 27 [2002] ; 3962 >
-        au < manifest ; 2003 ; Children's Literature Association Quarterly Volume 28 [2003] ; 3961 >
-        au < manifest ; 2004 ; Children's Literature Association Quarterly Volume 29 [2004] ; 3960 >
-        au < manifest ; 2005 ; Children's Literature Association Quarterly Volume 30 [2005] ; 2809 >
-        au < manifest ; 2006 ; Children's Literature Association Quarterly Volume 31 [2006] ; 3067 >
-        au < manifest ; 2007 ; Children's Literature Association Quarterly Volume 32 [2007] ; 3291 >
-        au < manifest ; 2008 ; Children's Literature Association Quarterly Volume 33 [2008] ; 3617 >
-        au < manifest ; 2009 ; Children's Literature Association Quarterly Volume 34 [2009] ; 4135 >
-        au < manifest ; 2010 ; Children's Literature Association Quarterly Volume 35 [2010] ; 5756 >
-        au < manifest ; 2011 ; Children's Literature Association Quarterly Volume 36 [2011] ; 6833 >
-        au < manifest ; 2012 ; Children's Literature Association Quarterly Volume 37 [2012] ; 8105 >
-        au < manifest ; 2013 ; Children's Literature Association Quarterly Volume 38 [2013] ; 8799 >
-        au < manifest ; 2014 ; Children's Literature Association Quarterly Volume 39 [2014] ; 9747 >
-        au < manifest ; 2015 ; Children's Literature Association Quarterly Volume 40 [2015] ; 10434 >
-        au < manifest ; 2016 ; Children's Literature Association Quarterly Volume 41 [2016] ; 11008 >
+        au < testing ; 1976-1977 ; Children's Literature Association Quarterly Volume 1 [1976-1977] ; 3990 >
+        au < testing ; 1977 ; Children's Literature Association Quarterly Volume 2 [1977] ; 3989 >
+        au < testing ; 1978 ; Children's Literature Association Quarterly 1978 ; 7731 >
+        au < testing ; 1978-1979 ; Children's Literature Association Quarterly Volume 3 [1978-1979] ; 3988 >
+        au < testing ; 1979 ; Children's Literature Association Quarterly Volume 4 [1979] ; 3987 >
+        au < testing ; 1979 ; Children's Literature Association Quarterly 1979 ; 7722 >
+        au < testing ; 1980 ; Children's Literature Association Quarterly Volume 5 [1980] ; 3986 >
+        au < testing ; 1980 ; Children's Literature Association Quarterly 1980 ; 7732 >
+        au < testing ; 1981 ; Children's Literature Association Quarterly Volume 6 [1981] ; 3985 >
+        au < testing ; 1981 ; Children's Literature Association Quarterly 1981 ; 7733 >
+        au < testing ; 1982 ; Children's Literature Association Quarterly Volume 7 [1982] ; 3984 >
+        au < testing ; 1982 ; Children's Literature Association Quarterly 1982 ; 7741 >
+        au < testing ; 1983 ; Children's Literature Association Quarterly Volume 8 [1983] ; 3983 >
+        au < testing ; 1984-1985 ; Children's Literature Association Quarterly Volume 9 [1984-1985] ; 3982 >
+        au < testing ; 1985 ; Children's Literature Association Quarterly Volume 10 [1985] ; 3981 >
+        au < testing ; 1986 ; Children's Literature Association Quarterly 1986 ; 7734 >
+        au < testing ; 1986-1987 ; Children's Literature Association Quarterly Volume 11 [1986-1987] ; 3980 >
+        au < testing ; 1987 ; Children's Literature Association Quarterly Volume 12 [1987] ; 3979 >
+        au < testing ; 1987 ; Children's Literature Association Quarterly 1987 ; 7735 >
+        au < testing ; 1988 ; Children's Literature Association Quarterly Volume 13 [1988] ; 3978 >
+        au < testing ; 1988 ; Children's Literature Association Quarterly 1988 ; 7736 >
+        au < testing ; 1989 ; Children's Literature Association Quarterly Volume 14 [1989] ; 3977 >
+        au < testing ; 1989 ; Children's Literature Association Quarterly 1989 ; 7737 >
+        au < testing ; 1990 ; Children's Literature Association Quarterly Volume 15 [1990] ; 3976 >
+        au < testing ; 1990 ; Children's Literature Association Quarterly 1990 ; 7738 >
+        au < testing ; 1991 ; Children's Literature Association Quarterly Volume 16 [1991] ; 3975 >
+        au < testing ; 1991 ; Children's Literature Association Quarterly 1991 ; 7742 >
+        au < testing ; 1992 ; Children's Literature Association Quarterly Volume 17 [1992] ; 3974 >
+        au < testing ; 1993 ; Children's Literature Association Quarterly Volume 18 [1993] ; 3973 >
+        au < testing ; 1994 ; Children's Literature Association Quarterly Volume 19 [1994] ; 3972 >
+        au < testing ; 1995 ; Children's Literature Association Quarterly Volume 20 [1995] ; 3971 >
+        au < testing ; 1996 ; Children's Literature Association Quarterly Volume 21 [1996] ; 3968 >
+        au < testing ; 1997 ; Children's Literature Association Quarterly Volume 22 [1997] ; 3967 >
+        au < testing ; 1998 ; Children's Literature Association Quarterly Volume 23 [1998] ; 3966 >
+        au < testing ; 1999 ; Children's Literature Association Quarterly Volume 24 [1999] ; 3965 >
+        au < testing ; 2000 ; Children's Literature Association Quarterly Volume 25 [2000] ; 3964 >
+        au < testing ; 2001 ; Children's Literature Association Quarterly Volume 26 [2001] ; 3963 >
+        au < testing ; 2002 ; Children's Literature Association Quarterly Volume 27 [2002] ; 3962 >
+        au < testing ; 2003 ; Children's Literature Association Quarterly Volume 28 [2003] ; 3961 >
+        au < testing ; 2004 ; Children's Literature Association Quarterly Volume 29 [2004] ; 3960 >
+        au < testing ; 2005 ; Children's Literature Association Quarterly Volume 30 [2005] ; 2809 >
+        au < testing ; 2006 ; Children's Literature Association Quarterly Volume 31 [2006] ; 3067 >
+        au < testing ; 2007 ; Children's Literature Association Quarterly Volume 32 [2007] ; 3291 >
+        au < testing ; 2008 ; Children's Literature Association Quarterly Volume 33 [2008] ; 3617 >
+        au < testing ; 2009 ; Children's Literature Association Quarterly Volume 34 [2009] ; 4135 >
+        au < testing ; 2010 ; Children's Literature Association Quarterly Volume 35 [2010] ; 5756 >
+        au < testing ; 2011 ; Children's Literature Association Quarterly Volume 36 [2011] ; 6833 >
+        au < testing ; 2012 ; Children's Literature Association Quarterly Volume 37 [2012] ; 8105 >
+        au < testing ; 2013 ; Children's Literature Association Quarterly Volume 38 [2013] ; 8799 >
+        au < testing ; 2014 ; Children's Literature Association Quarterly Volume 39 [2014] ; 9747 >
+        au < testing ; 2015 ; Children's Literature Association Quarterly Volume 40 [2015] ; 10434 >
+        au < testing ; 2016 ; Children's Literature Association Quarterly Volume 41 [2016] ; 11008 >
         au < manifest ; 2017 ; Children's Literature Association Quarterly Volume 42 [2017] ; 12424 >
 
     }
@@ -511,13 +511,13 @@
 
       attr[journal_id] = 237
 
-        au < manifest ; 2003 ; Comparative Technology Transfer and Society Volume 1 [2003] ; 902 >
-        au < manifest ; 2004 ; Comparative Technology Transfer and Society Volume 2 [2004] ; 2447 >
-        au < manifest ; 2005 ; Comparative Technology Transfer and Society Volume 3 [2005] ; 2753 >
-        au < manifest ; 2006 ; Comparative Technology Transfer and Society Volume 4 [2006] ; 3031 >
-        au < manifest ; 2007 ; Comparative Technology Transfer and Society Volume 5 [2007] ; 3346 >
-        au < manifest ; 2008 ; Comparative Technology Transfer and Society Volume 6 [2008] ; 3793 >
-        au < manifest ; 2009 ; Comparative Technology Transfer and Society Volume 7 [2009] ; 4359 >
+        au < testing ; 2003 ; Comparative Technology Transfer and Society Volume 1 [2003] ; 902 >
+        au < testing ; 2004 ; Comparative Technology Transfer and Society Volume 2 [2004] ; 2447 >
+        au < testing ; 2005 ; Comparative Technology Transfer and Society Volume 3 [2005] ; 2753 >
+        au < testing ; 2006 ; Comparative Technology Transfer and Society Volume 4 [2006] ; 3031 >
+        au < testing ; 2007 ; Comparative Technology Transfer and Society Volume 5 [2007] ; 3346 >
+        au < testing ; 2008 ; Comparative Technology Transfer and Society Volume 6 [2008] ; 3793 >
+        au < testing ; 2009 ; Comparative Technology Transfer and Society Volume 7 [2009] ; 4359 >
 
     }
     {
@@ -531,30 +531,30 @@
 
       attr[journal_id] = 36
 
-        au < manifest ; 1993 ; Configurations Volume 1 [1993] ; 125 >
-        au < manifest ; 1994 ; Configurations Volume 2 [1994] ; 126 >
-        au < manifest ; 1995 ; Configurations Volume 3 [1995] ; 127 >
-        au < manifest ; 1996 ; Configurations Volume 4 [1996] ; 128 >
-        au < manifest ; 1997 ; Configurations Volume 5 [1997] ; 129 >
-        au < manifest ; 1998 ; Configurations Volume 6 [1998] ; 130 >
-        au < manifest ; 1999 ; Configurations Volume 7 [1999] ; 131 >
-        au < manifest ; 2000 ; Configurations Volume 8 [2000] ; 132 >
-        au < manifest ; 2001 ; Configurations Volume 9 [2001] ; 133 >
-        au < manifest ; 2002 ; Configurations Volume 10 [2002] ; 816 >
-        au < manifest ; 2003 ; Configurations Volume 11 [2003] ; 2448 >
-        au < manifest ; 2004 ; Configurations Volume 12 [2004] ; 2759 >
-        au < manifest ; 2005 ; Configurations Volume 13 [2005] ; 3336 >
-        au < manifest ; 2006 ; Configurations Volume 14 [2006] ; 3848 >
-        au < manifest ; 2007 ; Configurations Volume 15 [2007] ; 3949 >
-        au < manifest ; 2008 ; Configurations Volume 16 [2008] ; 4350 >
-        au < manifest ; 2009 ; Configurations Volume 17 [2009] ; 5753 >
-        au < manifest ; 2010 ; Configurations Volume 18 [2010] ; 6910 >
-        au < manifest ; 2011 ; Configurations Volume 19 [2011] ; 7854 >
-        au < manifest ; 2012 ; Configurations Volume 20 [2012] ; 8794 >
-        au < manifest ; 2013 ; Configurations Volume 21 [2013] ; 9282 >
-        au < manifest ; 2014 ; Configurations Volume 22 [2014] ; 10025 >
-        au < manifest ; 2015 ; Configurations Volume 23 [2015] ; 10476 >
-        au < manifest ; 2016 ; Configurations Volume 24 [2016] ; 10970 >
+        au < testing ; 1993 ; Configurations Volume 1 [1993] ; 125 >
+        au < testing ; 1994 ; Configurations Volume 2 [1994] ; 126 >
+        au < testing ; 1995 ; Configurations Volume 3 [1995] ; 127 >
+        au < testing ; 1996 ; Configurations Volume 4 [1996] ; 128 >
+        au < testing ; 1997 ; Configurations Volume 5 [1997] ; 129 >
+        au < testing ; 1998 ; Configurations Volume 6 [1998] ; 130 >
+        au < testing ; 1999 ; Configurations Volume 7 [1999] ; 131 >
+        au < testing ; 2000 ; Configurations Volume 8 [2000] ; 132 >
+        au < testing ; 2001 ; Configurations Volume 9 [2001] ; 133 >
+        au < testing ; 2002 ; Configurations Volume 10 [2002] ; 816 >
+        au < testing ; 2003 ; Configurations Volume 11 [2003] ; 2448 >
+        au < testing ; 2004 ; Configurations Volume 12 [2004] ; 2759 >
+        au < testing ; 2005 ; Configurations Volume 13 [2005] ; 3336 >
+        au < testing ; 2006 ; Configurations Volume 14 [2006] ; 3848 >
+        au < testing ; 2007 ; Configurations Volume 15 [2007] ; 3949 >
+        au < testing ; 2008 ; Configurations Volume 16 [2008] ; 4350 >
+        au < testing ; 2009 ; Configurations Volume 17 [2009] ; 5753 >
+        au < testing ; 2010 ; Configurations Volume 18 [2010] ; 6910 >
+        au < testing ; 2011 ; Configurations Volume 19 [2011] ; 7854 >
+        au < testing ; 2012 ; Configurations Volume 20 [2012] ; 8794 >
+        au < testing ; 2013 ; Configurations Volume 21 [2013] ; 9282 >
+        au < testing ; 2014 ; Configurations Volume 22 [2014] ; 10025 >
+        au < testing ; 2015 ; Configurations Volume 23 [2015] ; 10476 >
+        au < testing ; 2016 ; Configurations Volume 24 [2016] ; 10970 >
         au < manifest ; 2017 ; Configurations Volume 25 [2017] ; 12307 >
 
     }
@@ -569,8 +569,8 @@
 
       attr[journal_id] = 654
 
-        au < manifest ; 2015 ; Dickens Quarterly Volume 32 [2015] ; 10436 >
-        au < manifest ; 2016 ; Dickens Quarterly Volume 33 [2016] ; 11067 >
+        au < testing ; 2015 ; Dickens Quarterly Volume 32 [2015] ; 10436 >
+        au < testing ; 2016 ; Dickens Quarterly Volume 33 [2016] ; 11067 >
         au < manifest ; 2017 ; Dickens Quarterly Volume 34 [2017] ; 12461 >
 
     }
@@ -585,11 +585,11 @@
 
       attr[journal_id] = 550
 
-        au < manifest ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 [2012] ; 8392 >
-        au < manifest ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 [2013] ; 9152 >
-        au < manifest ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 [2014] ; 10097 >
-        au < manifest ; 2015 ; Digital Philology: A Journal of Medieval Cultures Volume 4 [2015] ; 10723 >
-        au < manifest ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5 [2016] ; 11233 >
+        au < testing ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 [2012] ; 8392 >
+        au < testing ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 [2013] ; 9152 >
+        au < testing ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 [2014] ; 10097 >
+        au < testing ; 2015 ; Digital Philology: A Journal of Medieval Cultures Volume 4 [2015] ; 10723 >
+        au < testing ; 2016 ; Digital Philology: A Journal of Medieval Cultures Volume 5 [2016] ; 11233 >
 
     }
     {
@@ -603,30 +603,30 @@
 
       attr[journal_id] = 58
 
-        au < manifest ; 1993 ; ELH Volume 60 [1993] ; 207 >
-        au < manifest ; 1994 ; ELH Volume 61 [1994] ; 208 >
-        au < manifest ; 1995 ; ELH Volume 62 [1995] ; 209 >
-        au < manifest ; 1996 ; ELH Volume 63 [1996] ; 210 >
-        au < manifest ; 1997 ; ELH Volume 64 [1997] ; 211 >
-        au < manifest ; 1998 ; ELH Volume 65 [1998] ; 212 >
-        au < manifest ; 1999 ; ELH Volume 66 [1999] ; 213 >
-        au < manifest ; 2000 ; ELH Volume 67 [2000] ; 214 >
-        au < manifest ; 2001 ; ELH Volume 68 [2001] ; 215 >
-        au < manifest ; 2002 ; ELH Volume 69 [2002] ; 216 >
-        au < manifest ; 2003 ; ELH Volume 70 [2003] ; 869 >
-        au < manifest ; 2004 ; ELH Volume 71 [2004] ; 2490 >
-        au < manifest ; 2005 ; ELH Volume 72 [2005] ; 2696 >
-        au < manifest ; 2006 ; ELH Volume 73 [2006] ; 2980 >
-        au < manifest ; 2007 ; ELH Volume 74 [2007] ; 3255 >
-        au < manifest ; 2008 ; ELH Volume 75 [2008] ; 3685 >
-        au < manifest ; 2009 ; ELH Volume 76 [2009] ; 4124 >
-        au < manifest ; 2010 ; ELH Volume 77 [2010] ; 5734 >
-        au < manifest ; 2011 ; ELH Volume 78 [2011] ; 6700 >
-        au < manifest ; 2012 ; ELH Volume 79 [2012] ; 8070 >
-        au < manifest ; 2013 ; ELH Volume 80 [2013] ; 8834 >
-        au < manifest ; 2014 ; ELH Volume 81 [2014] ; 9762 >
-        au < manifest ; 2015 ; ELH Volume 82 [2015] ; 10455 >
-        au < manifest ; 2016 ; ELH Volume 83 [2016] ; 11061 >
+        au < testing ; 1993 ; ELH Volume 60 [1993] ; 207 >
+        au < testing ; 1994 ; ELH Volume 61 [1994] ; 208 >
+        au < testing ; 1995 ; ELH Volume 62 [1995] ; 209 >
+        au < testing ; 1996 ; ELH Volume 63 [1996] ; 210 >
+        au < testing ; 1997 ; ELH Volume 64 [1997] ; 211 >
+        au < testing ; 1998 ; ELH Volume 65 [1998] ; 212 >
+        au < testing ; 1999 ; ELH Volume 66 [1999] ; 213 >
+        au < testing ; 2000 ; ELH Volume 67 [2000] ; 214 >
+        au < testing ; 2001 ; ELH Volume 68 [2001] ; 215 >
+        au < testing ; 2002 ; ELH Volume 69 [2002] ; 216 >
+        au < testing ; 2003 ; ELH Volume 70 [2003] ; 869 >
+        au < testing ; 2004 ; ELH Volume 71 [2004] ; 2490 >
+        au < testing ; 2005 ; ELH Volume 72 [2005] ; 2696 >
+        au < testing ; 2006 ; ELH Volume 73 [2006] ; 2980 >
+        au < testing ; 2007 ; ELH Volume 74 [2007] ; 3255 >
+        au < testing ; 2008 ; ELH Volume 75 [2008] ; 3685 >
+        au < testing ; 2009 ; ELH Volume 76 [2009] ; 4124 >
+        au < testing ; 2010 ; ELH Volume 77 [2010] ; 5734 >
+        au < testing ; 2011 ; ELH Volume 78 [2011] ; 6700 >
+        au < testing ; 2012 ; ELH Volume 79 [2012] ; 8070 >
+        au < testing ; 2013 ; ELH Volume 80 [2013] ; 8834 >
+        au < testing ; 2014 ; ELH Volume 81 [2014] ; 9762 >
+        au < testing ; 2015 ; ELH Volume 82 [2015] ; 10455 >
+        au < testing ; 2016 ; ELH Volume 83 [2016] ; 11061 >
         au < manifest ; 2017 ; ELH Volume 84 [2017] ; 12450 >
 
     }
@@ -641,28 +641,28 @@
 
       attr[journal_id] = 55
 
-        au < manifest ; 1995-1996 ; Eighteenth-Century Studies Volume 29 [1995-1996] ; 192 >
-        au < manifest ; 1996-1997 ; Eighteenth-Century Studies Volume 30 [1996-1997] ; 193 >
-        au < manifest ; 1997-1998 ; Eighteenth-Century Studies Volume 31 [1997-1998] ; 194 >
-        au < manifest ; 1998-1999 ; Eighteenth-Century Studies Volume 32 [1998-1999] ; 195 >
-        au < manifest ; 1999-2000 ; Eighteenth-Century Studies Volume 33 [1999-2000] ; 196 >
-        au < manifest ; 2000-2001 ; Eighteenth-Century Studies Volume 34 [2000-2001] ; 197 >
-        au < manifest ; 2001-2002 ; Eighteenth-Century Studies Volume 35 [2001-2002] ; 198 >
-        au < manifest ; 2002-2003 ; Eighteenth-Century Studies Volume 36 [2002-2003] ; 199 >
-        au < manifest ; 2003-2004 ; Eighteenth-Century Studies Volume 37 [2003-2004] ; 968 >
-        au < manifest ; 2004-2005 ; Eighteenth-Century Studies Volume 38 [2004-2005] ; 2582 >
-        au < manifest ; 2005-2006 ; Eighteenth-Century Studies Volume 39 [2005-2006] ; 2855 >
-        au < manifest ; 2006-2007 ; Eighteenth-Century Studies Volume 40 [2006-2007] ; 3145 >
-        au < manifest ; 2007-2008 ; Eighteenth-Century Studies Volume 41 [2007-2008] ; 3477 >
-        au < manifest ; 2008-2009 ; Eighteenth-Century Studies Volume 42 [2008-2009] ; 3898 >
-        au < manifest ; 2009-2010 ; Eighteenth-Century Studies Volume 43 [2009-2010] ; 4424 >
-        au < manifest ; 2010-2011 ; Eighteenth-Century Studies Volume 44 [2010-2011] ; 6429 >
-        au < manifest ; 2011-2012 ; Eighteenth-Century Studies Volume 45 [2011-2012] ; 7674 >
-        au < manifest ; 2012-2013 ; Eighteenth-Century Studies Volume 46 [2012-2013] ; 8513 >
-        au < manifest ; 2013-2014 ; Eighteenth-Century Studies Volume 47 [2013-2014] ; 9324 >
-        au < manifest ; 2014-2015 ; Eighteenth-Century Studies Volume 48 [2014-2015] ; 10197 >
-        au < manifest ; 2015-2016 ; Eighteenth-Century Studies Volume 49 [2015-2016] ; 10792 >
-        au < manifest ; 2016 ; Eighteenth-Century Studies Volume 50 [2016] ; 12156 >
+        au < testing ; 1995-1996 ; Eighteenth-Century Studies Volume 29 [1995-1996] ; 192 >
+        au < testing ; 1996-1997 ; Eighteenth-Century Studies Volume 30 [1996-1997] ; 193 >
+        au < testing ; 1997-1998 ; Eighteenth-Century Studies Volume 31 [1997-1998] ; 194 >
+        au < testing ; 1998-1999 ; Eighteenth-Century Studies Volume 32 [1998-1999] ; 195 >
+        au < testing ; 1999-2000 ; Eighteenth-Century Studies Volume 33 [1999-2000] ; 196 >
+        au < testing ; 2000-2001 ; Eighteenth-Century Studies Volume 34 [2000-2001] ; 197 >
+        au < testing ; 2001-2002 ; Eighteenth-Century Studies Volume 35 [2001-2002] ; 198 >
+        au < testing ; 2002-2003 ; Eighteenth-Century Studies Volume 36 [2002-2003] ; 199 >
+        au < testing ; 2003-2004 ; Eighteenth-Century Studies Volume 37 [2003-2004] ; 968 >
+        au < testing ; 2004-2005 ; Eighteenth-Century Studies Volume 38 [2004-2005] ; 2582 >
+        au < testing ; 2005-2006 ; Eighteenth-Century Studies Volume 39 [2005-2006] ; 2855 >
+        au < testing ; 2006-2007 ; Eighteenth-Century Studies Volume 40 [2006-2007] ; 3145 >
+        au < testing ; 2007-2008 ; Eighteenth-Century Studies Volume 41 [2007-2008] ; 3477 >
+        au < testing ; 2008-2009 ; Eighteenth-Century Studies Volume 42 [2008-2009] ; 3898 >
+        au < testing ; 2009-2010 ; Eighteenth-Century Studies Volume 43 [2009-2010] ; 4424 >
+        au < testing ; 2010-2011 ; Eighteenth-Century Studies Volume 44 [2010-2011] ; 6429 >
+        au < testing ; 2011-2012 ; Eighteenth-Century Studies Volume 45 [2011-2012] ; 7674 >
+        au < testing ; 2012-2013 ; Eighteenth-Century Studies Volume 46 [2012-2013] ; 8513 >
+        au < testing ; 2013-2014 ; Eighteenth-Century Studies Volume 47 [2013-2014] ; 9324 >
+        au < testing ; 2014-2015 ; Eighteenth-Century Studies Volume 48 [2014-2015] ; 10197 >
+        au < testing ; 2015-2016 ; Eighteenth-Century Studies Volume 49 [2015-2016] ; 10792 >
+        au < testing ; 2016 ; Eighteenth-Century Studies Volume 50 [2016] ; 12156 >
 
     }
     {
@@ -676,24 +676,24 @@
 
       attr[journal_id] = 146
 
-        au < manifest ; 1999 ; Feminist Formations Volume 11 [1999] ; 488 >
-        au < manifest ; 2000 ; Feminist Formations Volume 12 [2000] ; 489 >
-        au < manifest ; 2001 ; Feminist Formations Volume 13 [2001] ; 490 >
-        au < manifest ; 2002 ; Feminist Formations Volume 14 [2002] ; 491 >
-        au < manifest ; 2003 ; Feminist Formations Volume 15 [2003] ; 889 >
-        au < manifest ; 2004 ; Feminist Formations Volume 16 [2004] ; 2517 >
-        au < manifest ; 2005 ; Feminist Formations Volume 17 [2005] ; 2703 >
-        au < manifest ; 2006 ; Feminist Formations Volume 18 [2006] ; 2985 >
-        au < manifest ; 2007 ; Feminist Formations Volume 19 [2007] ; 3306 >
-        au < manifest ; 2008 ; Feminist Formations Volume 20 [2008] ; 3712 >
-        au < manifest ; 2009 ; Feminist Formations Volume 21 [2009] ; 4237 >
-        au < manifest ; 2010 ; Feminist Formations Volume 22 [2010] ; 5937 >
-        au < manifest ; 2011 ; Feminist Formations Volume 23 [2011] ; 7061 >
-        au < manifest ; 2012 ; Feminist Formations Volume 24 [2012] ; 8289 >
-        au < manifest ; 2013 ; Feminist Formations Volume 25 [2013] ; 8905 >
-        au < manifest ; 2014 ; Feminist Formations Volume 26 [2014] ; 9885 >
-        au < manifest ; 2015 ; Feminist Formations Volume 27 [2015] ; 10631 >
-        au < manifest ; 2016 ; Feminist Formations Volume 28 [2016] ; 11404 >
+        au < testing ; 1999 ; Feminist Formations Volume 11 [1999] ; 488 >
+        au < testing ; 2000 ; Feminist Formations Volume 12 [2000] ; 489 >
+        au < testing ; 2001 ; Feminist Formations Volume 13 [2001] ; 490 >
+        au < testing ; 2002 ; Feminist Formations Volume 14 [2002] ; 491 >
+        au < testing ; 2003 ; Feminist Formations Volume 15 [2003] ; 889 >
+        au < testing ; 2004 ; Feminist Formations Volume 16 [2004] ; 2517 >
+        au < testing ; 2005 ; Feminist Formations Volume 17 [2005] ; 2703 >
+        au < testing ; 2006 ; Feminist Formations Volume 18 [2006] ; 2985 >
+        au < testing ; 2007 ; Feminist Formations Volume 19 [2007] ; 3306 >
+        au < testing ; 2008 ; Feminist Formations Volume 20 [2008] ; 3712 >
+        au < testing ; 2009 ; Feminist Formations Volume 21 [2009] ; 4237 >
+        au < testing ; 2010 ; Feminist Formations Volume 22 [2010] ; 5937 >
+        au < testing ; 2011 ; Feminist Formations Volume 23 [2011] ; 7061 >
+        au < testing ; 2012 ; Feminist Formations Volume 24 [2012] ; 8289 >
+        au < testing ; 2013 ; Feminist Formations Volume 25 [2013] ; 8905 >
+        au < testing ; 2014 ; Feminist Formations Volume 26 [2014] ; 9885 >
+        au < testing ; 2015 ; Feminist Formations Volume 27 [2015] ; 10631 >
+        au < testing ; 2016 ; Feminist Formations Volume 28 [2016] ; 11404 >
 
     }
     {
@@ -707,11 +707,11 @@
 
       attr[journal_id] = 552
 
-        au < manifest ; 2012 ; German Studies Review Volume 35 [2012] ; 7994 >
-        au < manifest ; 2013 ; German Studies Review Volume 36 [2013] ; 8803 >
-        au < manifest ; 2014 ; German Studies Review Volume 37 [2014] ; 9750 >
-        au < manifest ; 2015 ; German Studies Review Volume 38 [2015] ; 10347 >
-        au < manifest ; 2016 ; German Studies Review Volume 39 [2016] ; 10981 >
+        au < testing ; 2012 ; German Studies Review Volume 35 [2012] ; 7994 >
+        au < testing ; 2013 ; German Studies Review Volume 36 [2013] ; 8803 >
+        au < testing ; 2014 ; German Studies Review Volume 37 [2014] ; 9750 >
+        au < testing ; 2015 ; German Studies Review Volume 38 [2015] ; 10347 >
+        au < testing ; 2016 ; German Studies Review Volume 39 [2016] ; 10981 >
         au < manifest ; 2017 ; German Studies Review Volume 40 [2017] ; 12407 >
 
     }
@@ -726,13 +726,13 @@
 
       attr[journal_id] = 472
 
-        au < manifest ; 2010 ; Hispania Volume 93 [2010] ; 5921 >
-        au < manifest ; 2011 ; Hispania Volume 94 [2011] ; 6781 >
-        au < manifest ; 2012 ; Hispania Volume 95 [2012] ; 8140 >
-        au < manifest ; 2013 ; Hispania Volume 96 [2013] ; 8853 >
-        au < manifest ; 2014 ; Hispania Volume 97 [2014] ; 9816 >
-        au < manifest ; 2015 ; Hispania Volume 98 [2015] ; 10503 >
-        au < manifest ; 2016 ; Hispania Volume 99 [2016] ; 11043 >
+        au < testing ; 2010 ; Hispania Volume 93 [2010] ; 5921 >
+        au < testing ; 2011 ; Hispania Volume 94 [2011] ; 6781 >
+        au < testing ; 2012 ; Hispania Volume 95 [2012] ; 8140 >
+        au < testing ; 2013 ; Hispania Volume 96 [2013] ; 8853 >
+        au < testing ; 2014 ; Hispania Volume 97 [2014] ; 9816 >
+        au < testing ; 2015 ; Hispania Volume 98 [2015] ; 10503 >
+        au < testing ; 2016 ; Hispania Volume 99 [2016] ; 11043 >
         au < manifest ; 2017 ; Hispania Volume 100 [2017] ; 12491 >
 
     }
@@ -747,20 +747,20 @@
 
       attr[journal_id] = 441
 
-        au < manifest ; 1999-2000 ; Historically Speaking Volume 1 [1999-2000] ; 7050 >
-        au < manifest ; 2000-2001 ; Historically Speaking Volume 2 [2000-2001] ; 7070 >
-        au < manifest ; 2001-2002 ; Historically Speaking Volume 3 [2001-2002] ; 7076 >
-        au < manifest ; 2002-2003 ; Historically Speaking Volume 4 [2002-2003] ; 7012 >
-        au < manifest ; 2003-2004 ; Historically Speaking Volume 5 [2003-2004] ; 7002 >
-        au < manifest ; 2004-2005 ; Historically Speaking Volume 6 [2004-2005] ; 6995 >
-        au < manifest ; 2005-2006 ; Historically Speaking Volume 7 [2005-2006] ; 6996 >
-        au < manifest ; 2006-2007 ; Historically Speaking Volume 8 [2006-2007] ; 6994 >
-        au < manifest ; 2007-2008 ; Historically Speaking Volume 9 [2007-2008] ; 6955 >
-        au < manifest ; 2009 ; Historically Speaking Volume 10 [2009] ; 4162 >
-        au < manifest ; 2010 ; Historically Speaking Volume 11 [2010] ; 5767 >
-        au < manifest ; 2011 ; Historically Speaking Volume 12 [2011] ; 6711 >
-        au < manifest ; 2012 ; Historically Speaking Volume 13 [2012] ; 7914 >
-        au < manifest ; 2013 ; Historically Speaking Volume 14 [2013] ; 8790 >
+        au < testing ; 1999-2000 ; Historically Speaking Volume 1 [1999-2000] ; 7050 >
+        au < testing ; 2000-2001 ; Historically Speaking Volume 2 [2000-2001] ; 7070 >
+        au < testing ; 2001-2002 ; Historically Speaking Volume 3 [2001-2002] ; 7076 >
+        au < testing ; 2002-2003 ; Historically Speaking Volume 4 [2002-2003] ; 7012 >
+        au < testing ; 2003-2004 ; Historically Speaking Volume 5 [2003-2004] ; 7002 >
+        au < testing ; 2004-2005 ; Historically Speaking Volume 6 [2004-2005] ; 6995 >
+        au < testing ; 2005-2006 ; Historically Speaking Volume 7 [2005-2006] ; 6996 >
+        au < testing ; 2006-2007 ; Historically Speaking Volume 8 [2006-2007] ; 6994 >
+        au < testing ; 2007-2008 ; Historically Speaking Volume 9 [2007-2008] ; 6955 >
+        au < testing ; 2009 ; Historically Speaking Volume 10 [2009] ; 4162 >
+        au < testing ; 2010 ; Historically Speaking Volume 11 [2010] ; 5767 >
+        au < testing ; 2011 ; Historically Speaking Volume 12 [2011] ; 6711 >
+        au < testing ; 2012 ; Historically Speaking Volume 13 [2012] ; 7914 >
+        au < testing ; 2013 ; Historically Speaking Volume 14 [2013] ; 8790 >
 
     }
     {
@@ -774,28 +774,28 @@
 
       attr[journal_id] = 77
 
-        au < manifest ; 1995 ; Human Rights Quarterly Volume 17 [1995] ; 259 >
-        au < manifest ; 1996 ; Human Rights Quarterly Volume 18 [1996] ; 260 >
-        au < manifest ; 1997 ; Human Rights Quarterly Volume 19 [1997] ; 261 >
-        au < manifest ; 1998 ; Human Rights Quarterly Volume 20 [1998] ; 262 >
-        au < manifest ; 1999 ; Human Rights Quarterly Volume 21 [1999] ; 263 >
-        au < manifest ; 2000 ; Human Rights Quarterly Volume 22 [2000] ; 264 >
-        au < manifest ; 2001 ; Human Rights Quarterly Volume 23 [2001] ; 265 >
-        au < manifest ; 2002 ; Human Rights Quarterly Volume 24 [2002] ; 266 >
-        au < manifest ; 2003 ; Human Rights Quarterly Volume 25 [2003] ; 797 >
-        au < manifest ; 2004 ; Human Rights Quarterly Volume 26 [2004] ; 1763 >
-        au < manifest ; 2005 ; Human Rights Quarterly Volume 27 [2005] ; 2660 >
-        au < manifest ; 2006 ; Human Rights Quarterly Volume 28 [2006] ; 2940 >
-        au < manifest ; 2007 ; Human Rights Quarterly Volume 29 [2007] ; 3219 >
-        au < manifest ; 2008 ; Human Rights Quarterly Volume 30 [2008] ; 3641 >
-        au < manifest ; 2009 ; Human Rights Quarterly Volume 31 [2009] ; 4072 >
-        au < manifest ; 2010 ; Human Rights Quarterly Volume 32 [2010] ; 5703 >
-        au < manifest ; 2011 ; Human Rights Quarterly Volume 33 [2011] ; 6732 >
-        au < manifest ; 2012 ; Human Rights Quarterly Volume 34 [2012] ; 8009 >
-        au < manifest ; 2013 ; Human Rights Quarterly Volume 35 [2013] ; 8751 >
-        au < manifest ; 2014 ; Human Rights Quarterly Volume 36 [2014] ; 9646 >
-        au < manifest ; 2015 ; Human Rights Quarterly Volume 37 [2015] ; 10382 >
-        au < manifest ; 2016 ; Human Rights Quarterly Volume 38 [2016] ; 10950 >
+        au < testing ; 1995 ; Human Rights Quarterly Volume 17 [1995] ; 259 >
+        au < testing ; 1996 ; Human Rights Quarterly Volume 18 [1996] ; 260 >
+        au < testing ; 1997 ; Human Rights Quarterly Volume 19 [1997] ; 261 >
+        au < testing ; 1998 ; Human Rights Quarterly Volume 20 [1998] ; 262 >
+        au < testing ; 1999 ; Human Rights Quarterly Volume 21 [1999] ; 263 >
+        au < testing ; 2000 ; Human Rights Quarterly Volume 22 [2000] ; 264 >
+        au < testing ; 2001 ; Human Rights Quarterly Volume 23 [2001] ; 265 >
+        au < testing ; 2002 ; Human Rights Quarterly Volume 24 [2002] ; 266 >
+        au < testing ; 2003 ; Human Rights Quarterly Volume 25 [2003] ; 797 >
+        au < testing ; 2004 ; Human Rights Quarterly Volume 26 [2004] ; 1763 >
+        au < testing ; 2005 ; Human Rights Quarterly Volume 27 [2005] ; 2660 >
+        au < testing ; 2006 ; Human Rights Quarterly Volume 28 [2006] ; 2940 >
+        au < testing ; 2007 ; Human Rights Quarterly Volume 29 [2007] ; 3219 >
+        au < testing ; 2008 ; Human Rights Quarterly Volume 30 [2008] ; 3641 >
+        au < testing ; 2009 ; Human Rights Quarterly Volume 31 [2009] ; 4072 >
+        au < testing ; 2010 ; Human Rights Quarterly Volume 32 [2010] ; 5703 >
+        au < testing ; 2011 ; Human Rights Quarterly Volume 33 [2011] ; 6732 >
+        au < testing ; 2012 ; Human Rights Quarterly Volume 34 [2012] ; 8009 >
+        au < testing ; 2013 ; Human Rights Quarterly Volume 35 [2013] ; 8751 >
+        au < testing ; 2014 ; Human Rights Quarterly Volume 36 [2014] ; 9646 >
+        au < testing ; 2015 ; Human Rights Quarterly Volume 37 [2015] ; 10382 >
+        au < testing ; 2016 ; Human Rights Quarterly Volume 38 [2016] ; 10950 >
         au < manifest ; 2017 ; Human Rights Quarterly Volume 39 [2017] ; 12355 >
 
     }
@@ -810,25 +810,25 @@
 
       attr[journal_id] = 86
 
-        au < manifest ; 1998 ; Journal of Asian American Studies Volume 1 [1998] ; 284 >
-        au < manifest ; 1999 ; Journal of Asian American Studies Volume 2 [1999] ; 285 >
-        au < manifest ; 2000 ; Journal of Asian American Studies Volume 3 [2000] ; 286 >
-        au < manifest ; 2001 ; Journal of Asian American Studies Volume 4 [2001] ; 287 >
-        au < manifest ; 2002 ; Journal of Asian American Studies Volume 5 [2002] ; 288 >
-        au < manifest ; 2003 ; Journal of Asian American Studies Volume 6 [2003] ; 1716 >
-        au < manifest ; 2004 ; Journal of Asian American Studies Volume 7 [2004] ; 2725 >
-        au < manifest ; 2005 ; Journal of Asian American Studies Volume 8 [2005] ; 2813 >
-        au < manifest ; 2006 ; Journal of Asian American Studies Volume 9 [2006] ; 3000 >
-        au < manifest ; 2007 ; Journal of Asian American Studies Volume 10 [2007] ; 3318 >
-        au < manifest ; 2008 ; Journal of Asian American Studies Volume 11 [2008] ; 3728 >
-        au < manifest ; 2009 ; Journal of Asian American Studies Volume 12 [2009] ; 4265 >
-        au < manifest ; 2010 ; Journal of Asian American Studies Volume 13 [2010] ; 5764 >
-        au < manifest ; 2011 ; Journal of Asian American Studies Volume 14 [2011] ; 6859 >
-        au < manifest ; 2012 ; Journal of Asian American Studies Volume 15 [2012] ; 8065 >
-        au < manifest ; 2013 ; Journal of Asian American Studies Volume 16 [2013] ; 8804 >
-        au < manifest ; 2014 ; Journal of Asian American Studies Volume 17 [2014] ; 9661 >
-        au < manifest ; 2015 ; Journal of Asian American Studies Volume 18 [2015] ; 10422 >
-        au < manifest ; 2016 ; Journal of Asian American Studies Volume 19 [2016] ; 11059 >
+        au < testing ; 1998 ; Journal of Asian American Studies Volume 1 [1998] ; 284 >
+        au < testing ; 1999 ; Journal of Asian American Studies Volume 2 [1999] ; 285 >
+        au < testing ; 2000 ; Journal of Asian American Studies Volume 3 [2000] ; 286 >
+        au < testing ; 2001 ; Journal of Asian American Studies Volume 4 [2001] ; 287 >
+        au < testing ; 2002 ; Journal of Asian American Studies Volume 5 [2002] ; 288 >
+        au < testing ; 2003 ; Journal of Asian American Studies Volume 6 [2003] ; 1716 >
+        au < testing ; 2004 ; Journal of Asian American Studies Volume 7 [2004] ; 2725 >
+        au < testing ; 2005 ; Journal of Asian American Studies Volume 8 [2005] ; 2813 >
+        au < testing ; 2006 ; Journal of Asian American Studies Volume 9 [2006] ; 3000 >
+        au < testing ; 2007 ; Journal of Asian American Studies Volume 10 [2007] ; 3318 >
+        au < testing ; 2008 ; Journal of Asian American Studies Volume 11 [2008] ; 3728 >
+        au < testing ; 2009 ; Journal of Asian American Studies Volume 12 [2009] ; 4265 >
+        au < testing ; 2010 ; Journal of Asian American Studies Volume 13 [2010] ; 5764 >
+        au < testing ; 2011 ; Journal of Asian American Studies Volume 14 [2011] ; 6859 >
+        au < testing ; 2012 ; Journal of Asian American Studies Volume 15 [2012] ; 8065 >
+        au < testing ; 2013 ; Journal of Asian American Studies Volume 16 [2013] ; 8804 >
+        au < testing ; 2014 ; Journal of Asian American Studies Volume 17 [2014] ; 9661 >
+        au < testing ; 2015 ; Journal of Asian American Studies Volume 18 [2015] ; 10422 >
+        au < testing ; 2016 ; Journal of Asian American Studies Volume 19 [2016] ; 11059 >
         au < manifest ; 2017 ; Journal of Asian American Studies Volume 20 [2017] ; 12342 >
 
     }
@@ -843,20 +843,20 @@
 
       attr[journal_id] = 238
 
-        au < manifest ; 2003 ; Journal of College Student Development Volume 44 [2003] ; 844 >
-        au < manifest ; 2004 ; Journal of College Student Development Volume 45 [2004] ; 2416 >
-        au < manifest ; 2005 ; Journal of College Student Development Volume 46 [2005] ; 2627 >
-        au < manifest ; 2006 ; Journal of College Student Development Volume 47 [2006] ; 2905 >
-        au < manifest ; 2007 ; Journal of College Student Development Volume 48 [2007] ; 3254 >
-        au < manifest ; 2008 ; Journal of College Student Development Volume 49 [2008] ; 3610 >
-        au < manifest ; 2009 ; Journal of College Student Development Volume 50 [2009] ; 4132 >
-        au < manifest ; 2010 ; Journal of College Student Development Volume 51 [2010] ; 5770 >
-        au < manifest ; 2011 ; Journal of College Student Development Volume 52 [2011] ; 6802 >
-        au < manifest ; 2012 ; Journal of College Student Development Volume 53 [2012] ; 7910 >
-        au < manifest ; 2013 ; Journal of College Student Development Volume 54 [2013] ; 8739 >
-        au < manifest ; 2014 ; Journal of College Student Development Volume 55 [2014] ; 9637 >
-        au < manifest ; 2015 ; Journal of College Student Development Volume 56 [2015] ; 10337 >
-        au < manifest ; 2016 ; Journal of College Student Development Volume 57 [2016] ; 10929 >
+        au < testing ; 2003 ; Journal of College Student Development Volume 44 [2003] ; 844 >
+        au < testing ; 2004 ; Journal of College Student Development Volume 45 [2004] ; 2416 >
+        au < testing ; 2005 ; Journal of College Student Development Volume 46 [2005] ; 2627 >
+        au < testing ; 2006 ; Journal of College Student Development Volume 47 [2006] ; 2905 >
+        au < testing ; 2007 ; Journal of College Student Development Volume 48 [2007] ; 3254 >
+        au < testing ; 2008 ; Journal of College Student Development Volume 49 [2008] ; 3610 >
+        au < testing ; 2009 ; Journal of College Student Development Volume 50 [2009] ; 4132 >
+        au < testing ; 2010 ; Journal of College Student Development Volume 51 [2010] ; 5770 >
+        au < testing ; 2011 ; Journal of College Student Development Volume 52 [2011] ; 6802 >
+        au < testing ; 2012 ; Journal of College Student Development Volume 53 [2012] ; 7910 >
+        au < testing ; 2013 ; Journal of College Student Development Volume 54 [2013] ; 8739 >
+        au < testing ; 2014 ; Journal of College Student Development Volume 55 [2014] ; 9637 >
+        au < testing ; 2015 ; Journal of College Student Development Volume 56 [2015] ; 10337 >
+        au < testing ; 2016 ; Journal of College Student Development Volume 57 [2016] ; 10929 >
         au < manifest ; 2017 ; Journal of College Student Development Volume 58 [2017] ; 12316 >
 
     }
@@ -869,23 +869,23 @@
 
       attr[journal_id] = 29
 
-        au < manifest ; 2000 ; Journal of Colonialism and Colonial History Volume 1 [2000] ; 109 >
-        au < manifest ; 2001 ; Journal of Colonialism and Colonial History Volume 2 [2001] ; 110 >
-        au < manifest ; 2002 ; Journal of Colonialism and Colonial History Volume 3 [2002] ; 111 >
-        au < manifest ; 2003 ; Journal of Colonialism and Colonial History Volume 4 [2003] ; 896 >
-        au < manifest ; 2004 ; Journal of Colonialism and Colonial History Volume 5 [2004] ; 2494 >
-        au < manifest ; 2005 ; Journal of Colonialism and Colonial History Volume 6 [2005] ; 2746 >
-        au < manifest ; 2006 ; Journal of Colonialism and Colonial History Volume 7 [2006] ; 3037 >
-        au < manifest ; 2007 ; Journal of Colonialism and Colonial History Volume 8 [2007] ; 3367 >
-        au < manifest ; 2008 ; Journal of Colonialism and Colonial History Volume 9 [2008] ; 3735 >
-        au < manifest ; 2009 ; Journal of Colonialism and Colonial History Volume 10 [2009] ; 4334 >
-        au < manifest ; 2010 ; Journal of Colonialism and Colonial History Volume 11 [2010] ; 6109 >
-        au < manifest ; 2011 ; Journal of Colonialism and Colonial History Volume 12 [2011] ; 7170 >
-        au < manifest ; 2012 ; Journal of Colonialism and Colonial History Volume 13 [2012] ; 8257 >
-        au < manifest ; 2013 ; Journal of Colonialism and Colonial History Volume 14 [2013] ; 8864 >
-        au < manifest ; 2014 ; Journal of Colonialism and Colonial History Volume 15 [2014] ; 9872 >
-        au < manifest ; 2015 ; Journal of Colonialism and Colonial History Volume 16 [2015] ; 10506 >
-        au < manifest ; 2016 ; Journal of Colonialism and Colonial History Volume 17 [2016] ; 11107 >
+        au < testing ; 2000 ; Journal of Colonialism and Colonial History Volume 1 [2000] ; 109 >
+        au < testing ; 2001 ; Journal of Colonialism and Colonial History Volume 2 [2001] ; 110 >
+        au < testing ; 2002 ; Journal of Colonialism and Colonial History Volume 3 [2002] ; 111 >
+        au < testing ; 2003 ; Journal of Colonialism and Colonial History Volume 4 [2003] ; 896 >
+        au < testing ; 2004 ; Journal of Colonialism and Colonial History Volume 5 [2004] ; 2494 >
+        au < testing ; 2005 ; Journal of Colonialism and Colonial History Volume 6 [2005] ; 2746 >
+        au < testing ; 2006 ; Journal of Colonialism and Colonial History Volume 7 [2006] ; 3037 >
+        au < testing ; 2007 ; Journal of Colonialism and Colonial History Volume 8 [2007] ; 3367 >
+        au < testing ; 2008 ; Journal of Colonialism and Colonial History Volume 9 [2008] ; 3735 >
+        au < testing ; 2009 ; Journal of Colonialism and Colonial History Volume 10 [2009] ; 4334 >
+        au < testing ; 2010 ; Journal of Colonialism and Colonial History Volume 11 [2010] ; 6109 >
+        au < testing ; 2011 ; Journal of Colonialism and Colonial History Volume 12 [2011] ; 7170 >
+        au < testing ; 2012 ; Journal of Colonialism and Colonial History Volume 13 [2012] ; 8257 >
+        au < testing ; 2013 ; Journal of Colonialism and Colonial History Volume 14 [2013] ; 8864 >
+        au < testing ; 2014 ; Journal of Colonialism and Colonial History Volume 15 [2014] ; 9872 >
+        au < testing ; 2015 ; Journal of Colonialism and Colonial History Volume 16 [2015] ; 10506 >
+        au < testing ; 2016 ; Journal of Colonialism and Colonial History Volume 17 [2016] ; 11107 >
 
     }
     {
@@ -899,33 +899,33 @@
 
       attr[journal_id] = 98
 
-        au < manifest ; 1990 ; Journal of Democracy Volume 1 [1990] ; 3585 >
-        au < manifest ; 1991 ; Journal of Democracy Volume 2 [1991] ; 3584 >
-        au < manifest ; 1992 ; Journal of Democracy Volume 3 [1992] ; 3583 >
-        au < manifest ; 1993 ; Journal of Democracy Volume 4 [1993] ; 3582 >
-        au < manifest ; 1994 ; Journal of Democracy Volume 5 [1994] ; 3581 >
-        au < manifest ; 1995 ; Journal of Democracy Volume 6 [1995] ; 323 >
-        au < manifest ; 1996 ; Journal of Democracy Volume 7 [1996] ; 324 >
-        au < manifest ; 1997 ; Journal of Democracy Volume 8 [1997] ; 325 >
-        au < manifest ; 1998 ; Journal of Democracy Volume 9 [1998] ; 326 >
-        au < manifest ; 1999 ; Journal of Democracy Volume 10 [1999] ; 327 >
-        au < manifest ; 2000 ; Journal of Democracy Volume 11 [2000] ; 328 >
-        au < manifest ; 2001 ; Journal of Democracy Volume 12 [2001] ; 329 >
-        au < manifest ; 2002 ; Journal of Democracy Volume 13 [2002] ; 330 >
-        au < manifest ; 2003 ; Journal of Democracy Volume 14 [2003] ; 786 >
-        au < manifest ; 2004 ; Journal of Democracy Volume 15 [2004] ; 1743 >
-        au < manifest ; 2005 ; Journal of Democracy Volume 16 [2005] ; 2625 >
-        au < manifest ; 2006 ; Journal of Democracy Volume 17 [2006] ; 2926 >
-        au < manifest ; 2007 ; Journal of Democracy Volume 18 [2007] ; 3204 >
-        au < manifest ; 2008 ; Journal of Democracy Volume 19 [2008] ; 3609 >
-        au < manifest ; 2009 ; Journal of Democracy Volume 20 [2009] ; 4106 >
-        au < manifest ; 2010 ; Journal of Democracy Volume 21 [2010] ; 5745 >
-        au < manifest ; 2011 ; Journal of Democracy Volume 22 [2011] ; 6773 >
-        au < manifest ; 2012 ; Journal of Democracy Volume 23 [2012] ; 7897 >
-        au < manifest ; 2013 ; Journal of Democracy Volume 24 [2013] ; 8667 >
-        au < manifest ; 2014 ; Journal of Democracy Volume 25 [2014] ; 9599 >
-        au < manifest ; 2015 ; Journal of Democracy Volume 26 [2015] ; 10294 >
-        au < manifest ; 2016 ; Journal of Democracy Volume 27 [2016] ; 10914 >
+        au < testing ; 1990 ; Journal of Democracy Volume 1 [1990] ; 3585 >
+        au < testing ; 1991 ; Journal of Democracy Volume 2 [1991] ; 3584 >
+        au < testing ; 1992 ; Journal of Democracy Volume 3 [1992] ; 3583 >
+        au < testing ; 1993 ; Journal of Democracy Volume 4 [1993] ; 3582 >
+        au < testing ; 1994 ; Journal of Democracy Volume 5 [1994] ; 3581 >
+        au < testing ; 1995 ; Journal of Democracy Volume 6 [1995] ; 323 >
+        au < testing ; 1996 ; Journal of Democracy Volume 7 [1996] ; 324 >
+        au < testing ; 1997 ; Journal of Democracy Volume 8 [1997] ; 325 >
+        au < testing ; 1998 ; Journal of Democracy Volume 9 [1998] ; 326 >
+        au < testing ; 1999 ; Journal of Democracy Volume 10 [1999] ; 327 >
+        au < testing ; 2000 ; Journal of Democracy Volume 11 [2000] ; 328 >
+        au < testing ; 2001 ; Journal of Democracy Volume 12 [2001] ; 329 >
+        au < testing ; 2002 ; Journal of Democracy Volume 13 [2002] ; 330 >
+        au < testing ; 2003 ; Journal of Democracy Volume 14 [2003] ; 786 >
+        au < testing ; 2004 ; Journal of Democracy Volume 15 [2004] ; 1743 >
+        au < testing ; 2005 ; Journal of Democracy Volume 16 [2005] ; 2625 >
+        au < testing ; 2006 ; Journal of Democracy Volume 17 [2006] ; 2926 >
+        au < testing ; 2007 ; Journal of Democracy Volume 18 [2007] ; 3204 >
+        au < testing ; 2008 ; Journal of Democracy Volume 19 [2008] ; 3609 >
+        au < testing ; 2009 ; Journal of Democracy Volume 20 [2009] ; 4106 >
+        au < testing ; 2010 ; Journal of Democracy Volume 21 [2010] ; 5745 >
+        au < testing ; 2011 ; Journal of Democracy Volume 22 [2011] ; 6773 >
+        au < testing ; 2012 ; Journal of Democracy Volume 23 [2012] ; 7897 >
+        au < testing ; 2013 ; Journal of Democracy Volume 24 [2013] ; 8667 >
+        au < testing ; 2014 ; Journal of Democracy Volume 25 [2014] ; 9599 >
+        au < testing ; 2015 ; Journal of Democracy Volume 26 [2015] ; 10294 >
+        au < testing ; 2016 ; Journal of Democracy Volume 27 [2016] ; 10914 >
         au < manifest ; 2017 ; Journal of Democracy Volume 28 [2017] ; 12286 >
 
     }
@@ -940,30 +940,30 @@
 
       attr[journal_id] = 50
 
-        au < manifest ; 1993 ; Journal of Early Christian Studies Volume 1 [1993] ; 3824 >
-        au < manifest ; 1994 ; Journal of Early Christian Studies Volume 2 [1994] ; 3823 >
-        au < manifest ; 1995 ; Journal of Early Christian Studies Volume 3 [1995] ; 3817 >
-        au < manifest ; 1996 ; Journal of Early Christian Studies Volume 4 [1996] ; 172 >
-        au < manifest ; 1997 ; Journal of Early Christian Studies Volume 5 [1997] ; 173 >
-        au < manifest ; 1998 ; Journal of Early Christian Studies Volume 6 [1998] ; 174 >
-        au < manifest ; 1999 ; Journal of Early Christian Studies Volume 7 [1999] ; 175 >
-        au < manifest ; 2000 ; Journal of Early Christian Studies Volume 8 [2000] ; 176 >
-        au < manifest ; 2001 ; Journal of Early Christian Studies Volume 9 [2001] ; 177 >
-        au < manifest ; 2002 ; Journal of Early Christian Studies Volume 10 [2002] ; 178 >
-        au < manifest ; 2003 ; Journal of Early Christian Studies Volume 11 [2003] ; 840 >
-        au < manifest ; 2004 ; Journal of Early Christian Studies Volume 12 [2004] ; 2429 >
-        au < manifest ; 2005 ; Journal of Early Christian Studies Volume 13 [2005] ; 2718 >
-        au < manifest ; 2006 ; Journal of Early Christian Studies Volume 14 [2006] ; 2984 >
-        au < manifest ; 2007 ; Journal of Early Christian Studies Volume 15 [2007] ; 3259 >
-        au < manifest ; 2008 ; Journal of Early Christian Studies Volume 16 [2008] ; 3710 >
-        au < manifest ; 2009 ; Journal of Early Christian Studies Volume 17 [2009] ; 4148 >
-        au < manifest ; 2010 ; Journal of Early Christian Studies Volume 18 [2010] ; 5755 >
-        au < manifest ; 2011 ; Journal of Early Christian Studies Volume 19 [2011] ; 6704 >
-        au < manifest ; 2012 ; Journal of Early Christian Studies Volume 20 [2012] ; 8114 >
-        au < manifest ; 2013 ; Journal of Early Christian Studies Volume 21 [2013] ; 8814 >
-        au < manifest ; 2014 ; Journal of Early Christian Studies Volume 22 [2014] ; 9758 >
-        au < manifest ; 2015 ; Journal of Early Christian Studies Volume 23 [2015] ; 10429 >
-        au < manifest ; 2016 ; Journal of Early Christian Studies Volume 24 [2016] ; 11027 >
+        au < testing ; 1993 ; Journal of Early Christian Studies Volume 1 [1993] ; 3824 >
+        au < testing ; 1994 ; Journal of Early Christian Studies Volume 2 [1994] ; 3823 >
+        au < testing ; 1995 ; Journal of Early Christian Studies Volume 3 [1995] ; 3817 >
+        au < testing ; 1996 ; Journal of Early Christian Studies Volume 4 [1996] ; 172 >
+        au < testing ; 1997 ; Journal of Early Christian Studies Volume 5 [1997] ; 173 >
+        au < testing ; 1998 ; Journal of Early Christian Studies Volume 6 [1998] ; 174 >
+        au < testing ; 1999 ; Journal of Early Christian Studies Volume 7 [1999] ; 175 >
+        au < testing ; 2000 ; Journal of Early Christian Studies Volume 8 [2000] ; 176 >
+        au < testing ; 2001 ; Journal of Early Christian Studies Volume 9 [2001] ; 177 >
+        au < testing ; 2002 ; Journal of Early Christian Studies Volume 10 [2002] ; 178 >
+        au < testing ; 2003 ; Journal of Early Christian Studies Volume 11 [2003] ; 840 >
+        au < testing ; 2004 ; Journal of Early Christian Studies Volume 12 [2004] ; 2429 >
+        au < testing ; 2005 ; Journal of Early Christian Studies Volume 13 [2005] ; 2718 >
+        au < testing ; 2006 ; Journal of Early Christian Studies Volume 14 [2006] ; 2984 >
+        au < testing ; 2007 ; Journal of Early Christian Studies Volume 15 [2007] ; 3259 >
+        au < testing ; 2008 ; Journal of Early Christian Studies Volume 16 [2008] ; 3710 >
+        au < testing ; 2009 ; Journal of Early Christian Studies Volume 17 [2009] ; 4148 >
+        au < testing ; 2010 ; Journal of Early Christian Studies Volume 18 [2010] ; 5755 >
+        au < testing ; 2011 ; Journal of Early Christian Studies Volume 19 [2011] ; 6704 >
+        au < testing ; 2012 ; Journal of Early Christian Studies Volume 20 [2012] ; 8114 >
+        au < testing ; 2013 ; Journal of Early Christian Studies Volume 21 [2013] ; 8814 >
+        au < testing ; 2014 ; Journal of Early Christian Studies Volume 22 [2014] ; 9758 >
+        au < testing ; 2015 ; Journal of Early Christian Studies Volume 23 [2015] ; 10429 >
+        au < testing ; 2016 ; Journal of Early Christian Studies Volume 24 [2016] ; 11027 >
         au < manifest ; 2017 ; Journal of Early Christian Studies Volume 25 [2017] ; 12445 >
 
     }
@@ -978,33 +978,33 @@
 
       attr[journal_id] = 278
 
-        au < manifest ; 1990-1991 ; Journal of Health Care for the Poor and Underserved Volume 1 [1990-1991] ; 4287 >
-        au < manifest ; 1991 ; Journal of Health Care for the Poor and Underserved Volume 2 [1991] ; 4286 >
-        au < manifest ; 1992 ; Journal of Health Care for the Poor and Underserved Volume 3 [1992] ; 4285 >
-        au < manifest ; 1993 ; Journal of Health Care for the Poor and Underserved Volume 4 [1993] ; 4284 >
-        au < manifest ; 1994 ; Journal of Health Care for the Poor and Underserved Volume 5 [1994] ; 4283 >
-        au < manifest ; 1995 ; Journal of Health Care for the Poor and Underserved Volume 6 [1995] ; 4282 >
-        au < manifest ; 1996 ; Journal of Health Care for the Poor and Underserved Volume 7 [1996] ; 4281 >
-        au < manifest ; 1997 ; Journal of Health Care for the Poor and Underserved Volume 8 [1997] ; 4280 >
-        au < manifest ; 1998 ; Journal of Health Care for the Poor and Underserved Volume 9 [1998] ; 4279 >
-        au < manifest ; 1999 ; Journal of Health Care for the Poor and Underserved Volume 10 [1999] ; 4278 >
-        au < manifest ; 2000 ; Journal of Health Care for the Poor and Underserved Volume 11 [2000] ; 4277 >
-        au < manifest ; 2001 ; Journal of Health Care for the Poor and Underserved Volume 12 [2001] ; 4276 >
-        au < manifest ; 2002 ; Journal of Health Care for the Poor and Underserved Volume 13 [2002] ; 4275 >
-        au < manifest ; 2003 ; Journal of Health Care for the Poor and Underserved Volume 14 [2003] ; 4274 >
-        au < manifest ; 2004 ; Journal of Health Care for the Poor and Underserved Volume 15 [2004] ; 2204 >
-        au < manifest ; 2005 ; Journal of Health Care for the Poor and Underserved Volume 16 [2005] ; 2686 >
-        au < manifest ; 2006 ; Journal of Health Care for the Poor and Underserved Volume 17 [2006] ; 2942 >
-        au < manifest ; 2007 ; Journal of Health Care for the Poor and Underserved Volume 18 [2007] ; 3250 >
-        au < manifest ; 2008 ; Journal of Health Care for the Poor and Underserved Volume 19 [2008] ; 3643 >
-        au < manifest ; 2009 ; Journal of Health Care for the Poor and Underserved Volume 20 [2009] ; 4105 >
-        au < manifest ; 2010 ; Journal of Health Care for the Poor and Underserved Volume 21 [2010] ; 5801 >
-        au < manifest ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22 [2011] ; 6774 >
-        au < manifest ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23 [2012] ; 8052 >
-        au < manifest ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24 [2013] ; 8737 >
-        au < manifest ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 [2014] ; 9638 >
-        au < manifest ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 [2015] ; 10421 >
-        au < manifest ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 [2016] ; 10921 >
+        au < testing ; 1990-1991 ; Journal of Health Care for the Poor and Underserved Volume 1 [1990-1991] ; 4287 >
+        au < testing ; 1991 ; Journal of Health Care for the Poor and Underserved Volume 2 [1991] ; 4286 >
+        au < testing ; 1992 ; Journal of Health Care for the Poor and Underserved Volume 3 [1992] ; 4285 >
+        au < testing ; 1993 ; Journal of Health Care for the Poor and Underserved Volume 4 [1993] ; 4284 >
+        au < testing ; 1994 ; Journal of Health Care for the Poor and Underserved Volume 5 [1994] ; 4283 >
+        au < testing ; 1995 ; Journal of Health Care for the Poor and Underserved Volume 6 [1995] ; 4282 >
+        au < testing ; 1996 ; Journal of Health Care for the Poor and Underserved Volume 7 [1996] ; 4281 >
+        au < testing ; 1997 ; Journal of Health Care for the Poor and Underserved Volume 8 [1997] ; 4280 >
+        au < testing ; 1998 ; Journal of Health Care for the Poor and Underserved Volume 9 [1998] ; 4279 >
+        au < testing ; 1999 ; Journal of Health Care for the Poor and Underserved Volume 10 [1999] ; 4278 >
+        au < testing ; 2000 ; Journal of Health Care for the Poor and Underserved Volume 11 [2000] ; 4277 >
+        au < testing ; 2001 ; Journal of Health Care for the Poor and Underserved Volume 12 [2001] ; 4276 >
+        au < testing ; 2002 ; Journal of Health Care for the Poor and Underserved Volume 13 [2002] ; 4275 >
+        au < testing ; 2003 ; Journal of Health Care for the Poor and Underserved Volume 14 [2003] ; 4274 >
+        au < testing ; 2004 ; Journal of Health Care for the Poor and Underserved Volume 15 [2004] ; 2204 >
+        au < testing ; 2005 ; Journal of Health Care for the Poor and Underserved Volume 16 [2005] ; 2686 >
+        au < testing ; 2006 ; Journal of Health Care for the Poor and Underserved Volume 17 [2006] ; 2942 >
+        au < testing ; 2007 ; Journal of Health Care for the Poor and Underserved Volume 18 [2007] ; 3250 >
+        au < testing ; 2008 ; Journal of Health Care for the Poor and Underserved Volume 19 [2008] ; 3643 >
+        au < testing ; 2009 ; Journal of Health Care for the Poor and Underserved Volume 20 [2009] ; 4105 >
+        au < testing ; 2010 ; Journal of Health Care for the Poor and Underserved Volume 21 [2010] ; 5801 >
+        au < testing ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22 [2011] ; 6774 >
+        au < testing ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23 [2012] ; 8052 >
+        au < testing ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24 [2013] ; 8737 >
+        au < testing ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 [2014] ; 9638 >
+        au < testing ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 [2015] ; 10421 >
+        au < testing ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 [2016] ; 10921 >
         au < manifest ; 2017 ; Journal of Health Care for the Poor and Underserved Volume 28 [2017] ; 12392 >
 
     }
@@ -1019,15 +1019,15 @@
 
       attr[journal_id] = 399
 
-        au < manifest ; 2008 ; Journal of Late Antiquity Volume 1 [2008] ; 3745 >
-        au < manifest ; 2009 ; Journal of Late Antiquity Volume 2 [2009] ; 4216 >
-        au < manifest ; 2010 ; Journal of Late Antiquity Volume 3 [2010] ; 5848 >
-        au < manifest ; 2011 ; Journal of Late Antiquity Volume 4 [2011] ; 7079 >
-        au < manifest ; 2012 ; Journal of Late Antiquity Volume 5 [2012] ; 8382 >
-        au < manifest ; 2013 ; Journal of Late Antiquity Volume 6 [2013] ; 9147 >
-        au < manifest ; 2014 ; Journal of Late Antiquity Volume 7 [2014] ; 10194 >
-        au < manifest ; 2015 ; Journal of Late Antiquity Volume 8 [2015] ; 10681 >
-        au < manifest ; 2016 ; Journal of Late Antiquity Volume 9 [2016] ; 11221 >
+        au < testing ; 2008 ; Journal of Late Antiquity Volume 1 [2008] ; 3745 >
+        au < testing ; 2009 ; Journal of Late Antiquity Volume 2 [2009] ; 4216 >
+        au < testing ; 2010 ; Journal of Late Antiquity Volume 3 [2010] ; 5848 >
+        au < testing ; 2011 ; Journal of Late Antiquity Volume 4 [2011] ; 7079 >
+        au < testing ; 2012 ; Journal of Late Antiquity Volume 5 [2012] ; 8382 >
+        au < testing ; 2013 ; Journal of Late Antiquity Volume 6 [2013] ; 9147 >
+        au < testing ; 2014 ; Journal of Late Antiquity Volume 7 [2014] ; 10194 >
+        au < testing ; 2015 ; Journal of Late Antiquity Volume 8 [2015] ; 10681 >
+        au < testing ; 2016 ; Journal of Late Antiquity Volume 9 [2016] ; 11221 >
 
     }
     {
@@ -1041,40 +1041,40 @@
 
       attr[journal_id] = 126
 
-        au < manifest ; 1983 ; Journal of Modern Greek Studies Volume 1 [1983] ; 4200 >
-        au < manifest ; 1984 ; Journal of Modern Greek Studies Volume 2 [1984] ; 4199 >
-        au < manifest ; 1985 ; Journal of Modern Greek Studies Volume 3 [1985] ; 4198 >
-        au < manifest ; 1986 ; Journal of Modern Greek Studies Volume 4 [1986 ] ; 4197 >
-        au < manifest ; 1987 ; Journal of Modern Greek Studies Volume 5 [1987] ; 4196 >
-        au < manifest ; 1988 ; Journal of Modern Greek Studies Volume 6 [1988] ; 4195 >
-        au < manifest ; 1989 ; Journal of Modern Greek Studies Volume 7 [1989] ; 4194 >
-        au < manifest ; 1990 ; Journal of Modern Greek Studies Volume 8 [1990] ; 4193 >
-        au < manifest ; 1991 ; Journal of Modern Greek Studies Volume 9 [1991] ; 4192 >
-        au < manifest ; 1992 ; Journal of Modern Greek Studies Volume 10 [1992] ; 4191 >
-        au < manifest ; 1993 ; Journal of Modern Greek Studies Volume 11 [1993] ; 4190 >
-        au < manifest ; 1994 ; Journal of Modern Greek Studies Volume 12 [1994] ; 4189 >
-        au < manifest ; 1995 ; Journal of Modern Greek Studies Volume 13 [1995] ; 4188 >
-        au < manifest ; 1996 ; Journal of Modern Greek Studies Volume 14 [1996] ; 421 >
-        au < manifest ; 1997 ; Journal of Modern Greek Studies Volume 15 [1997] ; 422 >
-        au < manifest ; 1998 ; Journal of Modern Greek Studies Volume 16 [1998] ; 423 >
-        au < manifest ; 1999 ; Journal of Modern Greek Studies Volume 17 [1999] ; 424 >
-        au < manifest ; 2000 ; Journal of Modern Greek Studies Volume 18 [2000] ; 425 >
-        au < manifest ; 2001 ; Journal of Modern Greek Studies Volume 19 [2001] ; 426 >
-        au < manifest ; 2002 ; Journal of Modern Greek Studies Volume 20 [2002] ; 427 >
-        au < manifest ; 2003 ; Journal of Modern Greek Studies Volume 21 [2003] ; 904 >
-        au < manifest ; 2004 ; Journal of Modern Greek Studies Volume 22 [2004] ; 2513 >
-        au < manifest ; 2005 ; Journal of Modern Greek Studies Volume 23 [2005] ; 2790 >
-        au < manifest ; 2006 ; Journal of Modern Greek Studies Volume 24 [2006] ; 3055 >
-        au < manifest ; 2007 ; Journal of Modern Greek Studies Volume 25 [2007] ; 3421 >
-        au < manifest ; 2008 ; Journal of Modern Greek Studies Volume 26 [2008] ; 3711 >
-        au < manifest ; 2009 ; Journal of Modern Greek Studies Volume 27 [2009] ; 4348 >
-        au < manifest ; 2010 ; Journal of Modern Greek Studies Volume 28 [2010] ; 6402 >
-        au < manifest ; 2011 ; Journal of Modern Greek Studies Volume 29 [2011] ; 7298 >
-        au < manifest ; 2012 ; Journal of Modern Greek Studies Volume 30 [2012] ; 8282 >
-        au < manifest ; 2013 ; Journal of Modern Greek Studies Volume 31 [2013] ; 9069 >
-        au < manifest ; 2014 ; Journal of Modern Greek Studies Volume 32 [2014] ; 10108 >
-        au < manifest ; 2015 ; Journal of Modern Greek Studies Volume 33 [2015] ; 10619 >
-        au < manifest ; 2016 ; Journal of Modern Greek Studies Volume 34 [2016] ; 11145 >
+        au < testing ; 1983 ; Journal of Modern Greek Studies Volume 1 [1983] ; 4200 >
+        au < testing ; 1984 ; Journal of Modern Greek Studies Volume 2 [1984] ; 4199 >
+        au < testing ; 1985 ; Journal of Modern Greek Studies Volume 3 [1985] ; 4198 >
+        au < testing ; 1986 ; Journal of Modern Greek Studies Volume 4 [1986 ] ; 4197 >
+        au < testing ; 1987 ; Journal of Modern Greek Studies Volume 5 [1987] ; 4196 >
+        au < testing ; 1988 ; Journal of Modern Greek Studies Volume 6 [1988] ; 4195 >
+        au < testing ; 1989 ; Journal of Modern Greek Studies Volume 7 [1989] ; 4194 >
+        au < testing ; 1990 ; Journal of Modern Greek Studies Volume 8 [1990] ; 4193 >
+        au < testing ; 1991 ; Journal of Modern Greek Studies Volume 9 [1991] ; 4192 >
+        au < testing ; 1992 ; Journal of Modern Greek Studies Volume 10 [1992] ; 4191 >
+        au < testing ; 1993 ; Journal of Modern Greek Studies Volume 11 [1993] ; 4190 >
+        au < testing ; 1994 ; Journal of Modern Greek Studies Volume 12 [1994] ; 4189 >
+        au < testing ; 1995 ; Journal of Modern Greek Studies Volume 13 [1995] ; 4188 >
+        au < testing ; 1996 ; Journal of Modern Greek Studies Volume 14 [1996] ; 421 >
+        au < testing ; 1997 ; Journal of Modern Greek Studies Volume 15 [1997] ; 422 >
+        au < testing ; 1998 ; Journal of Modern Greek Studies Volume 16 [1998] ; 423 >
+        au < testing ; 1999 ; Journal of Modern Greek Studies Volume 17 [1999] ; 424 >
+        au < testing ; 2000 ; Journal of Modern Greek Studies Volume 18 [2000] ; 425 >
+        au < testing ; 2001 ; Journal of Modern Greek Studies Volume 19 [2001] ; 426 >
+        au < testing ; 2002 ; Journal of Modern Greek Studies Volume 20 [2002] ; 427 >
+        au < testing ; 2003 ; Journal of Modern Greek Studies Volume 21 [2003] ; 904 >
+        au < testing ; 2004 ; Journal of Modern Greek Studies Volume 22 [2004] ; 2513 >
+        au < testing ; 2005 ; Journal of Modern Greek Studies Volume 23 [2005] ; 2790 >
+        au < testing ; 2006 ; Journal of Modern Greek Studies Volume 24 [2006] ; 3055 >
+        au < testing ; 2007 ; Journal of Modern Greek Studies Volume 25 [2007] ; 3421 >
+        au < testing ; 2008 ; Journal of Modern Greek Studies Volume 26 [2008] ; 3711 >
+        au < testing ; 2009 ; Journal of Modern Greek Studies Volume 27 [2009] ; 4348 >
+        au < testing ; 2010 ; Journal of Modern Greek Studies Volume 28 [2010] ; 6402 >
+        au < testing ; 2011 ; Journal of Modern Greek Studies Volume 29 [2011] ; 7298 >
+        au < testing ; 2012 ; Journal of Modern Greek Studies Volume 30 [2012] ; 8282 >
+        au < testing ; 2013 ; Journal of Modern Greek Studies Volume 31 [2013] ; 9069 >
+        au < testing ; 2014 ; Journal of Modern Greek Studies Volume 32 [2014] ; 10108 >
+        au < testing ; 2015 ; Journal of Modern Greek Studies Volume 33 [2015] ; 10619 >
+        au < testing ; 2016 ; Journal of Modern Greek Studies Volume 34 [2016] ; 11145 >
 
     }
     {
