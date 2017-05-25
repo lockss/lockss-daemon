@@ -50,15 +50,15 @@
     au < released ; 1917 ; The Egyptian 1917 ; de_1917 ; 1917 >
     au < released ; 1918 ; The Egyptian 1918 ; de_1918 ; 1918 >
     # None found for 1919-February 1920
-    au < exists ; 1921 ; The Egyptian January 1921 ; de_January1921 ; 1921 >
-    au < exists ; 1921 ; The Egyptian February 1921 ; de_February1921 ; 1921 >
+    au < doesNotExist ; 1921 ; The Egyptian January 1921 ; de_January1921 ; 1921 >
+    au < doesNotExist ; 1921 ; The Egyptian February 1921 ; de_February1921 ; 1921 >
     au < released ; 1921 ; The Egyptian March 1921 ; de_March1921 ; 1921 >
     au < released ; 1921 ; The Egyptian April 1921 ; de_April1921 ; 1921 >
     au < released ; 1921 ; The Egyptian May 1921 ; de_May1921 ; 1921 >
     au < released ; 1921 ; The Egyptian June 1921 ; de_June1921 ; 1921 >
-    au < exists ; 1921 ; The Egyptian July 1921 ; de_July1921 ; 1921 >
-    au < exists ; 1921 ; The Egyptian August 1921 ; de_August1921 ; 1921 >
-    au < exists ; 1921 ; The Egyptian September 1921 ; de_September1921 ; 1921 >
+    au < doesNotExist ; 1921 ; The Egyptian July 1921 ; de_July1921 ; 1921 >
+    au < doesNotExist ; 1921 ; The Egyptian August 1921 ; de_August1921 ; 1921 >
+    au < doesNotExist ; 1921 ; The Egyptian September 1921 ; de_September1921 ; 1921 >
     au < released ; 1921 ; The Egyptian October 1921 ; de_October1921 ; 1921 >
     au < released ; 1921 ; The Egyptian November 1921 ; de_November1921 ; 1921 >
     au < released ; 1921 ; The Egyptian December 1921 ; de_December1921 ; 1921 >
@@ -68,9 +68,9 @@
     au < released ; 1922 ; The Egyptian April 1922 ; de_April1922 ; 1922 >
     au < released ; 1922 ; The Egyptian May 1922 ; de_May1922 ; 1922 >
     au < released ; 1922 ; The Egyptian June 1922 ; de_June1922 ; 1922 >
-    au < exists ; 1922 ; The Egyptian July 1922 ; de_July1922 ; 1922 >
-    au < exists ; 1922 ; The Egyptian August 1922 ; de_August1922 ; 1922 >
-    au < exists ; 1922 ; The Egyptian September 1922 ; de_September1922 ; 1922 >
+    au < doesNotExist ; 1922 ; The Egyptian July 1922 ; de_July1922 ; 1922 >
+    au < doesNotExist ; 1922 ; The Egyptian August 1922 ; de_August1922 ; 1922 >
+    au < doesNotExist ; 1922 ; The Egyptian September 1922 ; de_September1922 ; 1922 >
     au < released ; 1922 ; The Egyptian October 1922 ; de_October1922 ; 1922 >
     au < released ; 1922 ; The Egyptian November 1922 ; de_November1922 ; 1922 >
     au < released ; 1922 ; The Egyptian December 1922 ; de_December1922 ; 1922 >
@@ -80,9 +80,9 @@
     au < released ; 1923 ; The Egyptian April 1923 ; de_April1923 ; 1923 >
     au < released ; 1923 ; The Egyptian May 1923 ; de_May1923 ; 1923 >
     au < released ; 1923 ; The Egyptian June 1923 ; de_June1923 ; 1923 >
-    au < exists ; 1923 ; The Egyptian July 1923 ; de_July1923 ; 1923 >
-    au < exists ; 1923 ; The Egyptian August 1923 ; de_August1923 ; 1923 >
-    au < exists ; 1923 ; The Egyptian September 1923 ; de_September1923 ; 1923 >
+    au < doesNotExist ; 1923 ; The Egyptian July 1923 ; de_July1923 ; 1923 >
+    au < doesNotExist ; 1923 ; The Egyptian August 1923 ; de_August1923 ; 1923 >
+    au < doesNotExist ; 1923 ; The Egyptian September 1923 ; de_September1923 ; 1923 >
     au < released ; 1923 ; The Egyptian October 1923 ; de_October1923 ; 1923 >
     au < released ; 1923 ; The Egyptian November 1923 ; de_November1923 ; 1923 >
     au < released ; 1923 ; The Egyptian December 1923 ; de_December1923 ; 1923 >
@@ -92,8 +92,8 @@
     au < released ; 1924 ; The Egyptian April 1924 ; de_April1924 ; 1924 >
     au < released ; 1924 ; The Egyptian May 1924 ; de_May1924 ; 1924 >
     au < released ; 1924 ; The Egyptian June 1924 ; de_June1924 ; 1924 >
-    au < exists ; 1924 ; The Egyptian July 1924 ; de_July1924 ; 1924 >
-    au < exists ; 1924 ; The Egyptian August 1924 ; de_August1924 ; 1924 >
+    au < doesNotExist ; 1924 ; The Egyptian July 1924 ; de_July1924 ; 1924 >
+    au < doesNotExist ; 1924 ; The Egyptian August 1924 ; de_August1924 ; 1924 >
     au < released ; 1924 ; The Egyptian September 1924 ; de_September1924 ; 1924 >
     au < released ; 1924 ; The Egyptian October 1924 ; de_October1924 ; 1924 >
     au < released ; 1924 ; The Egyptian November 1924 ; de_November1924 ; 1924 >
@@ -115,8 +115,8 @@
     au < released ; 1932 ; The Egyptian April 1932 ; de_April1932 ; 1932 >
     au < released ; 1932 ; The Egyptian May 1932 ; de_May1932 ; 1932 >
     au < released ; 1932 ; The Egyptian June 1932 ; de_June1932 ; 1932 >
-    au < exists ; 1932 ; The Egyptian July 1932 ; de_July1932 ; 1932 >
-    au < exists ; 1932 ; The Egyptian August 1932 ; de_August1932 ; 1932 >
+    au < doesNotExist ; 1932 ; The Egyptian July 1932 ; de_July1932 ; 1932 >
+    au < doesNotExist ; 1932 ; The Egyptian August 1932 ; de_August1932 ; 1932 >
     au < released ; 1932 ; The Egyptian September 1932 ; de_September1932 ; 1932 >
     au < released ; 1932 ; The Egyptian October 1932 ; de_October1932 ; 1932 >
     au < released ; 1932 ; The Egyptian November 1932 ; de_November1932 ; 1932 >
@@ -126,9 +126,9 @@
     au < released ; 1933 ; The Egyptian March 1933 ; de_March1933 ; 1933 >
     au < released ; 1933 ; The Egyptian April 1933 ; de_April1933 ; 1933 >
     au < released ; 1933 ; The Egyptian May 1933 ; de_May1933 ; 1933 >
-    au < exists ; 1933 ; The Egyptian June 1933 ; de_June1933 ; 1933 >
-    au < exists ; 1933 ; The Egyptian July 1933 ; de_July1933 ; 1933 >
-    au < exists ; 1933 ; The Egyptian August 1933 ; de_August1933 ; 1933 >
+    au < doesNotExist ; 1933 ; The Egyptian June 1933 ; de_June1933 ; 1933 >
+    au < doesNotExist ; 1933 ; The Egyptian July 1933 ; de_July1933 ; 1933 >
+    au < doesNotExist ; 1933 ; The Egyptian August 1933 ; de_August1933 ; 1933 >
     au < released ; 1933 ; The Egyptian September 1933 ; de_September1933 ; 1933 >
     au < released ; 1933 ; The Egyptian October 1933 ; de_October1933 ; 1933 >
     au < released ; 1933 ; The Egyptian November 1933 ; de_November1933 ; 1933 >
@@ -139,8 +139,8 @@
     au < released ; 1934 ; The Egyptian April 1934 ; de_April1934 ; 1934 >
     au < released ; 1934 ; The Egyptian May 1934 ; de_May1934 ; 1934 >
     au < released ; 1934 ; The Egyptian June 1934 ; de_June1934 ; 1934 >
-    au < exists ; 1934 ; The Egyptian July 1934 ; de_July1934 ; 1934 >
-    au < exists ; 1934 ; The Egyptian August 1934 ; de_August1934 ; 1934 >
+    au < doesNotExist ; 1934 ; The Egyptian July 1934 ; de_July1934 ; 1934 >
+    au < doesNotExist ; 1934 ; The Egyptian August 1934 ; de_August1934 ; 1934 >
     au < released ; 1934 ; The Egyptian September 1934 ; de_September1934 ; 1934 >
     au < released ; 1934 ; The Egyptian October 1934 ; de_October1934 ; 1934 >
     au < released ; 1934 ; The Egyptian November 1934 ; de_November1934 ; 1934 >
@@ -151,8 +151,8 @@
     au < released ; 1935 ; The Egyptian April 1935 ; de_April1935 ; 1935 >
     au < released ; 1935 ; The Egyptian May 1935 ; de_May1935 ; 1935 >
     au < released ; 1935 ; The Egyptian June 1935 ; de_June1935 ; 1935 >
-    au < exists ; 1935 ; The Egyptian July 1935 ; de_July1935 ; 1935 >
-    au < exists ; 1935 ; The Egyptian August 1935 ; de_August1935 ; 1935 >
+    au < doesNotExist ; 1935 ; The Egyptian July 1935 ; de_July1935 ; 1935 >
+    au < doesNotExist ; 1935 ; The Egyptian August 1935 ; de_August1935 ; 1935 >
     au < released ; 1935 ; The Egyptian September 1935 ; de_September1935 ; 1935 >
     au < released ; 1935 ; The Egyptian October 1935 ; de_October1935 ; 1935 >
     au < released ; 1935 ; The Egyptian November 1935 ; de_November1935 ; 1935 >
@@ -164,7 +164,7 @@
     au < released ; 1936 ; The Egyptian May 1936 ; de_May1936 ; 1936 >
     au < released ; 1936 ; The Egyptian June 1936 ; de_June1936 ; 1936 >
     au < released ; 1936 ; The Egyptian July 1936 ; de_July1936 ; 1936 >
-    au < exists ; 1936 ; The Egyptian August 1936 ; de_August1936 ; 1936 >
+    au < doesNotExist ; 1936 ; The Egyptian August 1936 ; de_August1936 ; 1936 >
     au < released ; 1936 ; The Egyptian September 1936 ; de_September1936 ; 1936 >
     au < released ; 1936 ; The Egyptian October 1936 ; de_October1936 ; 1936 >
     au < released ; 1936 ; The Egyptian November 1936 ; de_November1936 ; 1936 >
@@ -176,7 +176,7 @@
     au < released ; 1937 ; The Egyptian May 1937 ; de_May1937 ; 1937 >
     au < released ; 1937 ; The Egyptian June 1937 ; de_June1937 ; 1937 >
     au < released ; 1937 ; The Egyptian July 1937 ; de_July1937 ; 1937 >
-    au < exists ; 1937 ; The Egyptian August 1937 ; de_August1937 ; 1937 >
+    au < doesNotExist ; 1937 ; The Egyptian August 1937 ; de_August1937 ; 1937 >
     au < released ; 1937 ; The Egyptian September 1937 ; de_September1937 ; 1937 >
     au < released ; 1937 ; The Egyptian October 1937 ; de_October1937 ; 1937 >
     au < released ; 1937 ; The Egyptian November 1937 ; de_November1937 ; 1937 >
@@ -188,7 +188,7 @@
     au < released ; 1938 ; The Egyptian May 1938 ; de_May1938 ; 1938 >
     au < released ; 1938 ; The Egyptian June 1938 ; de_June1938 ; 1938 >
     au < released ; 1938 ; The Egyptian July 1938 ; de_July1938 ; 1938 >
-    au < exists ; 1938 ; The Egyptian August 1938 ; de_August1938 ; 1938 >
+    au < doesNotExist ; 1938 ; The Egyptian August 1938 ; de_August1938 ; 1938 >
     au < released ; 1938 ; The Egyptian September 1938 ; de_September1938 ; 1938 >
     au < released ; 1938 ; The Egyptian October 1938 ; de_October1938 ; 1938 >
     au < released ; 1938 ; The Egyptian November 1938 ; de_November1938 ; 1938 >
@@ -200,7 +200,7 @@
     au < released ; 1939 ; The Egyptian May 1939 ; de_May1939 ; 1939 >
     au < released ; 1939 ; The Egyptian June 1939 ; de_June1939 ; 1939 >
     au < released ; 1939 ; The Egyptian July 1939 ; de_July1939 ; 1939 >
-    au < exists ; 1939 ; The Egyptian August 1939 ; de_August1939 ; 1939 >
+    au < doesNotExist ; 1939 ; The Egyptian August 1939 ; de_August1939 ; 1939 >
     au < released ; 1939 ; The Egyptian September 1939 ; de_September1939 ; 1939 >
     au < released ; 1939 ; The Egyptian October 1939 ; de_October1939 ; 1939 >
     au < released ; 1939 ; The Egyptian November 1939 ; de_November1939 ; 1939 >
@@ -212,7 +212,7 @@
     au < released ; 1940 ; The Egyptian May 1940 ; de_May_1940 ; 1940 >
     au < released ; 1940 ; The Egyptian June 1940 ; de_June_1940 ; 1940 >
     au < released ; 1940 ; The Egyptian July 1940 ; de_July_1940 ; 1940 >
-    au < exists ; 1940 ; The Egyptian August 1940 ; de_August_1940 ; 1940 >
+    au < doesNotExist ; 1940 ; The Egyptian August 1940 ; de_August_1940 ; 1940 >
     au < released ; 1940 ; The Egyptian September 1940 ; de_September_1940 ; 1940 >
     au < released ; 1940 ; The Egyptian October 1940 ; de_October_1940 ; 1940 >
     au < released ; 1940 ; The Egyptian November 1940 ; de_November_1940 ; 1940 >
@@ -224,7 +224,7 @@
     au < released ; 1941 ; The Egyptian May 1941 ; de_May1941 ; 1941 >
     au < released ; 1941 ; The Egyptian June 1941 ; de_June1941 ; 1941 >
     au < released ; 1941 ; The Egyptian July 1941 ; de_July1941 ; 1941 >
-    au < exists ; 1941 ; The Egyptian August 1941 ; de_August1941 ; 1941 >
+    au < doesNotExist ; 1941 ; The Egyptian August 1941 ; de_August1941 ; 1941 >
     au < released ; 1941 ; The Egyptian September 1941 ; de_September1941 ; 1941 >
     au < released ; 1941 ; The Egyptian October 1941 ; de_October1941 ; 1941 >
     au < released ; 1941 ; The Egyptian November 1941 ; de_November1941 ; 1941 >
@@ -246,9 +246,9 @@
     au < released ; 1943 ; The Egyptian March 1943 ; de_March1943 ; 1943 >
     au < released ; 1943 ; The Egyptian April 1943 ; de_April1943 ; 1943 >
     au < released ; 1943 ; The Egyptian May 1943 ; de_May1943 ; 1943 >
-    au < exists ; 1943 ; The Egyptian June 1943 ; de_June1943 ; 1943 >
-    au < exists ; 1943 ; The Egyptian July 1943 ; de_July1943 ; 1943 >
-    au < exists ; 1943 ; The Egyptian August 1943 ; de_August1943 ; 1943 >
+    au < doesNotExist ; 1943 ; The Egyptian June 1943 ; de_June1943 ; 1943 >
+    au < doesNotExist ; 1943 ; The Egyptian July 1943 ; de_July1943 ; 1943 >
+    au < doesNotExist ; 1943 ; The Egyptian August 1943 ; de_August1943 ; 1943 >
     au < released ; 1943 ; The Egyptian September 1943 ; de_September1943 ; 1943 >
     au < released ; 1943 ; The Egyptian October 1943 ; de_October1943 ; 1943 >
     au < released ; 1943 ; The Egyptian November 1943 ; de_November1943 ; 1943 >
@@ -259,8 +259,8 @@
     au < released ; 1944 ; The Egyptian April 1944 ; de_April1944 ; 1944 >
     au < released ; 1944 ; The Egyptian May 1944 ; de_May1944 ; 1944 >
     au < released ; 1944 ; The Egyptian June 1944 ; de_June1944 ; 1944 >
-    au < exists ; 1944 ; The Egyptian July 1944 ; de_July1944 ; 1944 >
-    au < exists ; 1944 ; The Egyptian August 1944 ; de_August1944 ; 1944 >
+    au < doesNotExist ; 1944 ; The Egyptian July 1944 ; de_July1944 ; 1944 >
+    au < doesNotExist ; 1944 ; The Egyptian August 1944 ; de_August1944 ; 1944 >
     au < released ; 1944 ; The Egyptian September 1944 ; de_September1944 ; 1944 >
     au < released ; 1944 ; The Egyptian October 1944 ; de_October1944 ; 1944 >
     au < released ; 1944 ; The Egyptian November 1944 ; de_November1944 ; 1944 >
@@ -271,8 +271,8 @@
     au < released ; 1945 ; The Egyptian April 1945 ; de_April1945 ; 1945 >
     au < released ; 1945 ; The Egyptian May 1945 ; de_May1945 ; 1945 >
     au < released ; 1945 ; The Egyptian June 1945 ; de_June1945 ; 1945 >
-    au < exists ; 1945 ; The Egyptian July 1945 ; de_July1945 ; 1945 >
-    au < exists ; 1945 ; The Egyptian August 1945 ; de_August1945 ; 1945 >
+    au < doesNotExist ; 1945 ; The Egyptian July 1945 ; de_July1945 ; 1945 >
+    au < doesNotExist ; 1945 ; The Egyptian August 1945 ; de_August1945 ; 1945 >
     au < released ; 1945 ; The Egyptian September 1945 ; de_September1945 ; 1945 >
     au < released ; 1945 ; The Egyptian October 1945 ; de_October1945 ; 1945 >
     au < released ; 1945 ; The Egyptian November 1945 ; de_November1945 ; 1945 >
@@ -284,7 +284,7 @@
     au < released ; 1946 ; The Egyptian May 1946 ; de_May1946 ; 1946 >
     au < released ; 1946 ; The Egyptian June 1946 ; de_June1946 ; 1946 >
     au < released ; 1946 ; The Egyptian July 1946 ; de_July1946 ; 1946 >
-    au < exists ; 1946 ; The Egyptian August 1946 ; de_August1946 ; 1946 >
+    au < doesNotExist ; 1946 ; The Egyptian August 1946 ; de_August1946 ; 1946 >
     au < released ; 1946 ; The Egyptian September 1946 ; de_September1946 ; 1946 >
     au < released ; 1946 ; The Egyptian October 1946 ; de_October1946 ; 1946 >
     au < released ; 1946 ; The Egyptian November 1946 ; de_November1946 ; 1946 >
@@ -296,7 +296,7 @@
     au < released ; 1947 ; The Egyptian May 1947 ; de_May1947 ; 1947 >
     au < released ; 1947 ; The Egyptian June 1947 ; de_June1947 ; 1947 >
     au < released ; 1947 ; The Egyptian July 1947 ; de_July1947 ; 1947 >
-    au < exists ; 1947 ; The Egyptian August 1947 ; de_August1947 ; 1947 >
+    au < doesNotExist ; 1947 ; The Egyptian August 1947 ; de_August1947 ; 1947 >
     au < released ; 1947 ; The Egyptian September 1947 ; de_September1947 ; 1947 >
     au < released ; 1947 ; The Egyptian October 1947 ; de_October1947 ; 1947 >
     au < released ; 1947 ; The Egyptian November 1947 ; de_November1947 ; 1947 >
@@ -308,7 +308,7 @@
     au < released ; 1948 ; The Egyptian May 1948 ; de_May1948 ; 1948 >
     au < released ; 1948 ; The Egyptian June 1948 ; de_June1948 ; 1948 >
     au < released ; 1948 ; The Egyptian July 1948 ; de_July1948 ; 1948 >
-    au < exists ; 1948 ; The Egyptian August 1948 ; de_August1948 ; 1948 >
+    au < doesNotExist ; 1948 ; The Egyptian August 1948 ; de_August1948 ; 1948 >
     au < released ; 1948 ; The Egyptian September 1948 ; de_September1948 ; 1948 >
     au < released ; 1948 ; The Egyptian October 1948 ; de_October1948 ; 1948 >
     au < released ; 1948 ; The Egyptian November 1948 ; de_November1948 ; 1948 >
@@ -320,7 +320,7 @@
     au < released ; 1949 ; The Egyptian May 1949 ; de_May1949 ; 1949 >
     au < released ; 1949 ; The Egyptian June 1949 ; de_June1949 ; 1949 >
     au < released ; 1949 ; The Egyptian July 1949 ; de_July1949 ; 1949 >
-    au < exists ; 1949 ; The Egyptian August 1949 ; de_August1949 ; 1949 >
+    au < doesNotExist ; 1949 ; The Egyptian August 1949 ; de_August1949 ; 1949 >
     au < released ; 1949 ; The Egyptian September 1949 ; de_September1949 ; 1949 >
     au < released ; 1949 ; The Egyptian October 1949 ; de_October1949 ; 1949 >
     au < released ; 1949 ; The Egyptian November 1949 ; de_November1949 ; 1949 >
@@ -332,7 +332,7 @@
     au < released ; 1950 ; The Egyptian May 1950 ; de_May1950 ; 1950 >
     au < released ; 1950 ; The Egyptian June 1950 ; de_June1950 ; 1950 >
     au < released ; 1950 ; The Egyptian July 1950 ; de_July1950 ; 1950 >
-    au < exists ; 1950 ; The Egyptian August 1950 ; de_August1950 ; 1950 >
+    au < doesNotExist ; 1950 ; The Egyptian August 1950 ; de_August1950 ; 1950 >
     au < released ; 1950 ; The Egyptian September 1950 ; de_September1950 ; 1950 >
     au < released ; 1950 ; The Egyptian October 1950 ; de_October1950 ; 1950 >
     au < released ; 1950 ; The Egyptian November 1950 ; de_November1950 ; 1950 >
@@ -356,7 +356,7 @@
     au < released ; 1952 ; The Egyptian May 1952 ; de_May1952 ; 1952 >
     au < released ; 1952 ; The Egyptian June 1952 ; de_June1952 ; 1952 >
     au < released ; 1952 ; The Egyptian July 1952 ; de_July1952 ; 1952 >
-    au < exists ; 1952 ; The Egyptian August 1952 ; de_August1952 ; 1952 >
+    au < doesNotExist ; 1952 ; The Egyptian August 1952 ; de_August1952 ; 1952 >
     au < released ; 1952 ; The Egyptian September 1952 ; de_September1952 ; 1952 >
     au < released ; 1952 ; The Egyptian October 1952 ; de_October1952 ; 1952 >
     au < released ; 1952 ; The Egyptian November 1952 ; de_November1952 ; 1952 >
@@ -368,7 +368,7 @@
     au < released ; 1953 ; The Egyptian May 1953 ; de_May1953 ; 1953 >
     au < released ; 1953 ; The Egyptian June 1953 ; de_June1953 ; 1953 >
     au < released ; 1953 ; The Egyptian July 1953 ; de_July1953 ; 1953 >
-    au < exists ; 1953 ; The Egyptian August 1953 ; de_August1953 ; 1953 >
+    au < doesNotExist ; 1953 ; The Egyptian August 1953 ; de_August1953 ; 1953 >
     au < released ; 1953 ; The Egyptian September 1953 ; de_September1953 ; 1953 >
     au < released ; 1953 ; The Egyptian October 1953 ; de_October1953 ; 1953 >
     au < released ; 1953 ; The Egyptian November 1953 ; de_November1953 ; 1953 >
@@ -441,7 +441,7 @@
     au < released ; 1959 ; The Egyptian June 1959 ; de_June1959 ; 1959 >
     au < released ; 1959 ; The Egyptian July 1959 ; de_July1959 ; 1959 >
     au < released ; 1959 ; The Egyptian August 1959 ; de_August1959 ; 1959 >
-    au < exists ; 1959 ; The Egyptian September 1959 ; de_September1959 ; 1959 >
+    au < doesNotExist ; 1959 ; The Egyptian September 1959 ; de_September1959 ; 1959 >
     au < released ; 1959 ; The Egyptian October 1959 ; de_October1959 ; 1959 >
     au < released ; 1959 ; The Egyptian November 1959 ; de_November1959 ; 1959 >
     au < released ; 1959 ; The Egyptian December 1959 ; de_December1959 ; 1959 >
@@ -476,7 +476,7 @@
     au < released ; 1962 ; The Egyptian May 1962 ; de_May1962 ; 1962 >
     au < released ; 1962 ; The Egyptian June 1962 ; de_June1962 ; 1962 >
     au < released ; 1962 ; The Egyptian July 1962 ; de_July1962 ; 1962 >
-    au < exists ; 1962 ; The Egyptian August 1962 ; de_August1962 ; 1962 >
+    au < doesNotExist ; 1962 ; The Egyptian August 1962 ; de_August1962 ; 1962 >
     au < released ; 1962 ; The Egyptian September 1962 ; de_September1962 ; 1962 >
     au < released ; 1962 ; The Egyptian October 1962 ; de_October1962 ; 1962 >
     au < released ; 1962 ; The Egyptian November 1962 ; de_November1962 ; 1962 >
