@@ -2108,7 +2108,7 @@
     au < exists ; exists ; 2003 ; 9783137463023 ; 9783131854728 ; 10.1055/b-002-15438 ; Normalwerte in Wachstum und Entwicklung (9783131854728) ; >
     au < exists ; exists ; 2003 ; 9783131262219 ; 9783131916518 ; 10.1055/b-002-6231 ; Orthopädie und orthopädische Chirurgie: Becken, Hüfte (9783131916518) ; >
     au < exists ; exists ; 2003 ; 9781588901699 ; 9781604064339 ; 10.1055/b-002-43894 ; Otosclerosis and Stapedectomy (9781604064339) ; >
-    au < exists ; exists ; 2003 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783131834539) ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 9783136556030 ; 9783131834539 ; 10.1055/b-002-44923 ; Parodontologie (9783131834539) (duplicate); > #same doi, same eisbn, diff isbn & year.
     au < exists ; exists ; 2003 ; 9783131083425 ; 9783131875723 ; 10.1055/b-002-11353 ; Praktische Tropen- und Reisemedizin (9783131875723) ; >
     au < exists ; exists ; 2003 ; 9783135968063 ; 9783131914866 ; 10.1055/b-002-54090 ; Praxis der EKG-Auswertung (9783131914866) ; >
     au < exists ; exists ; 2003 ; 9783131378620 ; 9783131859129 ; 10.1055/b-002-29661 ; Psoriasis auf einen Blick (9783131859129) ; >
@@ -2527,9 +2527,8 @@
     au < exists ; exists ; 2009 ; 9783131179326 ; 9783131853622 ; 10.1055/b-001-3194 ; Schmerztherapie mit Lokalanästhetika (9783131853622) ; >
     au < exists ; exists ; 2009 ; 9783131175267 ; 9783132409460 ; 10.1055/b-004-134403 ; Sonographie der Säuglingshüfte und therapeutische Konsequenzen (9783132409460) ; >
     au < exists ; exists ; 2009 ; 9783131465023 ; 9783131870025 ; 10.1055/b-002-40822 ; Urologische Differenzialdiagnose (9783131870025) ; >
-    au < exists ; exists ; 2012 ; 9783131699831 ; 9783131834133 ; 10.1055/b-001-44 ; Ultraschalldiagnostik in Pädiatrie und Kinderchirurgie (9783131834133) ; >
-    au < exists ; exists ; 2013 ; 9783131585714 ; 9783131847515 ; 10.1055/b-002-57167 ; Chirurgie der Nasennebenhöhlen (9783131847515) ; >
-    au < exists ; exists ; 2013 ; 9783131406439 ; 9783131908032 ; 10.1055/b-002-23558 ; Praxis der Orthopädie und Unfallchirurgie (9783131908032) ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 9783131585714 ; 9783131847515 ; 10.1055/b-002-57167 ; Chirurgie der Nasennebenhöhlen (9783131847515) (duplicate); > #duplicate eisbn, name. Different doi, isbn.
+    au < doNotProcess ; doNotProcess ; 2013 ; 9783131406439 ; 9783131908032 ; 10.1055/b-002-23558 ; Praxis der Orthopädie und Unfallchirurgie (9783131908032) (duplicate) ; > #duplicate title/issn. Diff DOI
     au < exists ; exists ; 2015 ; 9783131383631 ; 9783131645630 ; 10.1055/b-004-140255 ; Abdominal Ultrasound: Step by Step (9783131645630) ; >
     au < exists ; exists ; 2015 ; 9781626233881 ; 9781626233898 ; 10.1055/b-004-129822 ; Atlas of Neurosurgical Techniques: Brain (9781626233898) ; >
     au < exists ; exists ; 2015 ; 9783131751812 ; 9783131751911 ; 10.1055/b-004-140247 ; Facial Nerve Disorders and Diseases: Diagnosis and Management (9783131751911) ; >
