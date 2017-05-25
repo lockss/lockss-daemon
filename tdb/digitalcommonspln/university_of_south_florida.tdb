@@ -565,7 +565,7 @@
     au < released ; 2011 ; University of South Florida Academic Resources Faculty and Staff Publications 2011 ; 2011 ; fulltext >
     au < released ; 2012 ; University of South Florida Academic Resources Faculty and Staff Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Academic Resources Faculty and Staff Publications 2013 ; 2013 ; fulltext >
-    au < testing ; 2016 ; University of South Florida Academic Resources Faculty and Staff Publications 2016 ; 2016 ; fulltext >
+    au < ready ; 2016 ; University of South Florida Academic Resources Faculty and Staff Publications 2016 ; 2016 ; fulltext >
     au < expected ; 2017 ; University of South Florida Academic Resources Faculty and Staff Publications 2017 ; 2017 ; fulltext >
 
   }
@@ -623,7 +623,7 @@
     au < released ; 2013 ; University of South Florida Academic Services Faculty and Staff Publications 2013 ; 2013 ; fulltext >
     au < released ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 ; 2014 ; fulltext >
     au < released ; 2015 ; University of South Florida Academic Services Faculty and Staff Publications 2015 ; 2015 ; fulltext >
-    au < testing ; 2016 ; University of South Florida Academic Services Faculty and Staff Publications 2016 ; 2016 ; fulltext >
+    au < ready ; 2016 ; University of South Florida Academic Services Faculty and Staff Publications 2016 ; 2016 ; fulltext >
     au < expected ; 2017 ; University of South Florida Academic Services Faculty and Staff Publications 2017 ; 2017 ; fulltext >
 
   }
@@ -1338,7 +1338,7 @@
     au < released ; 2013 ; University of South Florida Government and International Affairs Faculty Publications 2013 ; 2013 ; fulltext >
     au < released ; 2014 ; University of South Florida Government and International Affairs Faculty Publications 2014 ; 2014 ; fulltext >
     au < released ; 2015 ; University of South Florida Government and International Affairs Faculty Publications 2015 ; 2015 ; fulltext >
-    au < testing ; 2016 ; University of South Florida Government and International Affairs Faculty Publications 2016 ; 2016 ; fulltext >
+    au < ready ; 2016 ; University of South Florida Government and International Affairs Faculty Publications 2016 ; 2016 ; fulltext >
     au < expected ; 2017 ; University of South Florida Government and International Affairs Faculty Publications 2017 ; 2017 ; fulltext >
 
   }
@@ -2080,7 +2080,7 @@
     au < released ; 2012 ; University of South Florida Scholar Commons Projects and Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Scholar Commons Projects and Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Scholar Commons Projects and Publications 2014 ; 2014 >
-    au < testing ; 2016 ; University of South Florida Scholar Commons Projects and Publications 2016 ; 2016 >
+    au < ready ; 2016 ; University of South Florida Scholar Commons Projects and Publications 2016 ; 2016 >
     au < expected ; 2017 ; University of South Florida Scholar Commons Projects and Publications 2017 ; 2017 >
 
   }
@@ -2299,11 +2299,11 @@
     param[collection] = sg_exec_pubs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < released ; 2011 ; University of South Florida Student Government Executive Branch Publications 2011 ; 2011 >
-    au < released ; 2012 ; University of South Florida Student Government Executive Branch Publications 2012 ; 2012 >
-    au < released ; 2013 ; University of South Florida Student Government Executive Branch Publications 2013 ; 2013 >
-    au < released ; 2014 ; University of South Florida Student Government Executive Branch Publications 2014 ; 2014 >
-    au < testing ; 2015 ; University of South Florida Student Government Executive Branch Publications 2015 ; 2015 >
+    au < released ; 2011 ; University of South Florida Student Government Executive Branch Publications 2011 (52nd Term) ; 2011 >
+    au < released ; 2012 ; University of South Florida Student Government Executive Branch Publications 2012 (53rd Term) ; 2012 >
+    au < released ; 2013 ; University of South Florida Student Government Executive Branch Publications 2013 (54th Term) ; 2013 >
+    au < released ; 2014 ; University of South Florida Student Government Executive Branch Publications 2014 (54th Term) ; 2014 >
+    au < ready ; 2015 ; University of South Florida Student Government Executive Branch Publications 2015 (55th Term) ; 2015 >
 
   }
 
@@ -2321,7 +2321,6 @@
 
     au < released ; 2013 ; University of South Florida Student Government Judicial Branch Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Student Government Judicial Branch Publications 2014 ; 2014 >
-    au < testing ; 2015 ; University of South Florida Student Government Judicial Branch Publications 2015 ; 2015 >
 
   }
 
@@ -2342,7 +2341,7 @@
     au < released ; 2012 ; University of South Florida Student Government Legislative Branch Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Student Government Legislative Branch Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Student Government Legislative Branch Publications 2014 ; 2014 >
-    au < testing ; 2015 ; University of South Florida Student Government Legislative Branch Publications 2015 ; 2015 >
+    au < ready ; 2015 ; University of South Florida Student Government Legislative Branch Publications 2015 ; 2015 >
 
   }
 
@@ -2394,7 +2393,7 @@
     au < released ; 2012 ; University of South Florida Theatre and Dance Faculty Publications 2012 ; 2012 >
     au < released ; 2014 ; University of South Florida Theatre and Dance Faculty Publications 2014 ; 2014 >
     au < released ; 2015 ; University of South Florida Theatre and Dance Faculty Publications 2015 ; 2015 >
-    au < testing ; 2016 ; University of South Florida Theatre and Dance Faculty Publications 2016 ; 2016 >
+    au < ready ; 2016 ; University of South Florida Theatre and Dance Faculty Publications 2016 ; 2016 >
     au < expected ; 2017 ; University of South Florida Theatre and Dance Faculty Publications 2017 ; 2017 >
 
   }
@@ -2463,8 +2462,8 @@
     au < released ; 2013 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2014 ; 2014 >
     au < released ; 2015 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2015 ; 2015 >
-    au < testing ; 2016 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2016 ; 2016 >
-    au < expected ; 2017 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2017 ; 2017 >
+    au < ready ; 2016 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2016 ; 2016 >
+    au < exists ; 2017 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2017 ; 2017 >
 
   }
 

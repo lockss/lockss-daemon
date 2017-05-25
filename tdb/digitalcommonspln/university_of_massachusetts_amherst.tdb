@@ -224,8 +224,8 @@
     
     au < released ; 2010 ; 1 ; Landscapes of Violence Volume 1 ; 1 >
     au < released ; 2012 ; 2 ; Landscapes of Violence Volume 2 ; 2 >
-    au < testing ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
-    au < testing ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
+    au < ready ; 2015 ; 3 ; Landscapes of Violence Volume 3 ; 3 >
+    au < ready ; 2016 ; 4 ; Landscapes of Violence Volume 4 ; 4 >
  
   }
   
@@ -241,21 +241,21 @@
     implicit < status ; year ; volume ; name ; param[volume] >
     # see http://scholarworks.umass.edu/mot/all_issues.html
 
-    au < testing ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
-    au < testing ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
-    au < testing ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
-    au < testing ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
-    au < testing ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
-    au < testing ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
-    au < testing ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
-    au < testing ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
-    au < testing ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
-    au < testing ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
-    au < testing ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
-    au < testing ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
-    au < testing ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
+    au < ready ; 1994 ; 1 ; mOthertongue: A Multilingual Journal of the Arts Volume 1 ; 1 >
+    au < ready ; 1995 ; 2 ; mOthertongue: A Multilingual Journal of the Arts Volume 2 ; 2 >
+    au < ready ; 1996 ; 3 ; mOthertongue: A Multilingual Journal of the Arts Volume 3 ; 3 >
+    au < ready ; 1999 ; 6 ; mOthertongue: A Multilingual Journal of the Arts Volume 6 ; 6 >
+    au < ready ; 2000 ; 7 ; mOthertongue: A Multilingual Journal of the Arts Volume 7 ; 7 >
+    au < ready ; 2002 ; 8 ; mOthertongue: A Multilingual Journal of the Arts Volume 8 ; 8 >
+    au < ready ; 2003 ; 9 ; mOthertongue: A Multilingual Journal of the Arts Volume 9 ; 9 >
+    au < ready ; 2004 ; 10 ; mOthertongue: A Multilingual Journal of the Arts Volume 10 ; 10 >
+    au < ready ; 2007 ; 13 ; mOthertongue: A Multilingual Journal of the Arts Volume 13 ; 13 >
+    au < ready ; 2009 ; 15 ; mOthertongue: A Multilingual Journal of the Arts Volume 15 ; 15 >
+    au < ready ; 2010 ; 16 ; mOthertongue: A Multilingual Journal of the Arts Volume 16 ; 16 >
+    au < ready ; 2011 ; 17 ; mOthertongue: A Multilingual Journal of the Arts Volume 17 ; 17 >
+    au < ready ; 2012 ; 18 ; mOthertongue: A Multilingual Journal of the Arts Volume 18 ; 18 >
     au < released ; 2014 ; 19 ; mOthertongue: A Multilingual Journal of the Arts Volume 19 ; 19 >
-    au < testing ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
+    au < ready ; 2016 ; 21 ; mOthertongue: A Multilingual Journal of the Arts Volume 21 ; 21 >
  
   }
   
@@ -1604,24 +1604,25 @@
     param[collection_type] = ir_series
     param[collection] = nrc_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
+    #notReady -- no pdfs present
 
-    au < testing ; 1980 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
-    au < testing ; 1982 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
-    au < testing ; 1983 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
-    au < testing ; 1984 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
-    au < testing ; 1986 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
-    au < testing ; 1988 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
-    au < testing ; 1989 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
-    au < testing ; 1990 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
-    au < testing ; 1991 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
-    au < testing ; 1992 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
-    au < testing ; 1993 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
-    au < testing ; 1994 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
-    au < testing ; 1995 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
-    au < testing ; 1996 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
-    au < testing ; 1997 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
-    au < testing ; 1998 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
-    au < testing ; 1999 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
+    au < notReady ; 1980 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
+    au < notReady ; 1982 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
+    au < notReady ; 1983 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
+    au < notReady ; 1984 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
+    au < notReady ; 1986 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
+    au < notReady ; 1988 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
+    au < notReady ; 1989 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
+    au < notReady ; 1990 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
+    au < notReady ; 1991 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
+    au < notReady ; 1992 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
+    au < notReady ; 1993 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
+    au < notReady ; 1994 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
+    au < notReady ; 1995 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
+    au < notReady ; 1996 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
+    au < notReady ; 1997 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
+    au < notReady ; 1998 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
+    au < notReady ; 1999 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
     au < notReady ; 2000 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
     au < notReady ; 2001 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2001 [abstracts only] ; 2001 ; abstracts >
     au < notReady ; 2002 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
