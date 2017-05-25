@@ -586,7 +586,7 @@
       attr[journal_id] = 169
 
         au < ready ; 1999 ; Research in African Literatures Volume 30 [1999] ; 581 >
-        au < testing ; 2000 ; Research in African Literatures Volume 31 [2000] ; 582 >
+        au < ready ; 2000 ; Research in African Literatures Volume 31 [2000] ; 582 >
         au < testing ; 2001 ; Research in African Literatures Volume 32 [2001] ; 583 >
         au < ready ; 2002 ; Research in African Literatures Volume 33 [2002] ; 584 >
         au < ready ; 2003 ; Research in African Literatures Volume 34 [2003] ; 833 >
@@ -596,7 +596,7 @@
         au < ready ; 2007 ; Research in African Literatures Volume 38 [2007] ; 3215 >
         au < ready ; 2008 ; Research in African Literatures Volume 39 [2008] ; 3626 >
         au < ready ; 2009 ; Research in African Literatures Volume 40 [2009] ; 4125 >
-        au < testing ; 2010 ; Research in African Literatures Volume 41 [2010] ; 5807 >
+        au < ready ; 2010 ; Research in African Literatures Volume 41 [2010] ; 5807 >
         au < ready ; 2011 ; Research in African Literatures Volume 42 [2011] ; 6680 >
         au < ready ; 2012 ; Research in African Literatures Volume 43 [2012] ; 7998 >
         au < ready ; 2013 ; Research in African Literatures Volume 44 [2013] ; 8777 >
@@ -697,13 +697,13 @@
       attr[journal_id] = 343
 
         au < testing ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 [2005] ; 5898 >
-        au < testing ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 [2006] ; 3102 >
-        au < testing ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 [2007] ; 3345 >
+        au < ready ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 [2006] ; 3102 >
+        au < ready ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 [2007] ; 3345 >
         au < testing ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 [2008] ; 3750 >
         au < testing ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 [2009] ; 4374 >
         au < testing ; 2010 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 [2010] ; 6381 >
         au < testing ; 2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 47 [2011] ; 7351 >
-        au < testing ; 2012 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 48 [2012] ; 8337 >
+        au < ready ; 2012 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 48 [2012] ; 8337 >
         au < testing ; 2013 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 49 [2013] ; 9177 >
         au < testing ; 2014 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 50 [2014] ; 10053 >
         au < testing ; 2015 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 51 [2015] ; 10705 >
@@ -722,22 +722,22 @@
       attr[journal_id] = 197
 
         au < testing ; 2000 ; Transition Volume 9 [2000 (81-84)] ; 676 >
-        au < testing ; 2000-2001 ; Transition Volume 10 [2000-2001 (85-88)] ; 677 >
+        au < ready ; 2000-2001 ; Transition Volume 10 [2000-2001 (85-88)] ; 677 >
         au < testing ; 2002-2003 ; Transition Volume 12 [2002-2003] ; 3856 >
         au < testing ; 2004-2007 ; Transition Volume 13 [2004-2007] ; 3855 >
-        au < testing ; 2008 ; Transition Issue 98 [2008] ; 3854 >
-        au < testing ; 2008 ; Transition Issue 99 [2008] ; 4012 >
+        au < ready ; 2008 ; Transition Issue 98 [2008] ; 3854 >
+        au < ready ; 2008 ; Transition Issue 99 [2008] ; 4012 >
         au < testing ; 2009 ; Transition Issue 100 [2009] ; 4152 >
         au < testing ; 2009 ; Transition Issue 101 [2009] ; 4378 >
-        au < testing ; 2010 ; Transition Issue 102 [2010] ; 5800 >
+        au < ready ; 2010 ; Transition Issue 102 [2010] ; 5800 >
         au < testing ; 2010 ; Transition Issue 103 [2010] ; 6571 >
-        au < testing ; 2011 ; Transition Issue 104 [2011] ; 6800 >
-        au < testing ; 2011 ; Transition Issue 105 [2011] ; 7388 >
+        au < ready ; 2011 ; Transition Issue 104 [2011] ; 6800 >
+        au < ready ; 2011 ; Transition Issue 105 [2011] ; 7388 >
         au < testing ; 2011 ; Transition Issue 106 [2011] ; 7716 >
         au < testing ; 2012 ; Transition Issue 107 [2012] ; 7993 >
         au < testing ; 2012 ; Transition Issue 108 [2012] ; 8350 >
         au < testing ; 2012 ; Transition Issue 109 [2012] ; 8515 >
-        au < testing ; 2013 ; Transition Issue 110 [2013] ; 8872 >
+        au < ready ; 2013 ; Transition Issue 110 [2013] ; 8872 >
         au < testing ; 2013 ; Transition Issue 111 [2013] ; 9099 >
         au < testing ; 2013 ; Transition Issue 112 [2013] ; 9332 >
         au < testing ; 2014 ; Transition Issue 113 [2014] ; 9819 >
@@ -775,7 +775,7 @@
         au < testing ; 2010-2011 ; Victorian Studies Volume 53 [2010-2011] ; 7001 >
         au < testing ; 2011-2012 ; Victorian Studies Volume 54 [2011-2012] ; 8074 >
         au < testing ; 2012-2013 ; Victorian Studies Volume 55 [2012-2013] ; 8868 >
-        au < testing ; 2013-2014 ; Victorian Studies Volume 56 [2013-2014] ; 9864 >
+        au < ready ; 2013-2014 ; Victorian Studies Volume 56 [2013-2014] ; 9864 >
         au < testing ; 2014-2015 ; Victorian Studies Volume 57 [2014-2015] ; 10431 >
         au < testing ; 2015-2016 ; Victorian Studies Volume 58 [2015-2016] ; 11105 >
         au < manifest ; 2016-2017 ; Victorian Studies Volume 59 [2016-2017] ; 12444 >
@@ -799,7 +799,7 @@
         au < testing ; 2006-2007 ; e-Service Journal Volume 5 [2006-2007] ; 3470 >
         au < testing ; 2007-2009 ; e-Service Journal Volume 6 [2007-2009] ; 3810 >
         au < testing ; 2010 ; e-Service Journal Volume 7 [2010] ; 6422 >
-        au < testing ; 2011-2012 ; e-Service Journal Volume 8 [2011-2012] ; 8404 >
+        au < ready ; 2011-2012 ; e-Service Journal Volume 8 [2011-2012] ; 8404 >
         au < testing ; 2013-2014 ; e-Service Journal Volume 9 [2013-2014] ; 10080 >
         au < manifest ; 2016-2017 ; e-Service Journal Volume 10 [2016-2017] ; 12468 >
 
