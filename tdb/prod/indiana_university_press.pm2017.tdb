@@ -188,25 +188,25 @@
 
       attr[journal_id] = 0000
 
-        au < testing ; 1998 ; History & Memory Volume 10 [1998] ; 6123 >
-        au < testing ; 1999 ; History & Memory Volume 11 [1999] ; 241 >
+        au < ready ; 1998 ; History & Memory Volume 10 [1998] ; 6123 >
+        au < ready ; 1999 ; History & Memory Volume 11 [1999] ; 241 >
         au < ready ; 2000 ; History & Memory Volume 12 [2000] ; 242 >
-        au < testing ; 2001 ; History & Memory Volume 13 [2001] ; 243 >
-        au < testing ; 2002 ; History & Memory Volume 14 [2002] ; 733 >
-        au < testing ; 2003 ; History & Memory Volume 15 [2003] ; 950 >
-        au < testing ; 2004 ; History & Memory Volume 16 [2004] ; 2545 >
+        au < ready ; 2001 ; History & Memory Volume 13 [2001] ; 243 >
+        au < ready ; 2002 ; History & Memory Volume 14 [2002] ; 733 >
+        au < ready ; 2003 ; History & Memory Volume 15 [2003] ; 950 >
+        au < ready ; 2004 ; History & Memory Volume 16 [2004] ; 2545 >
         au < ready ; 2005 ; History & Memory Volume 17 [2005] ; 2830 >
-        au < testing ; 2006 ; History & Memory Volume 18 [2006] ; 3036 >
-        au < testing ; 2007 ; History & Memory Volume 19 [2007] ; 3347 >
-        au < testing ; 2008 ; History & Memory Volume 20 [2008] ; 3719 >
-        au < testing ; 2009 ; History & Memory Volume 21 [2009] ; 4246 >
-        au < testing ; 2010 ; History & Memory Volume 22 [2010] ; 5922 >
-        au < testing ; 2011 ; History & Memory Volume 23 [2011] ; 7005 >
-        au < testing ; 2012 ; History & Memory Volume 24 [2012] ; 8107 >
-        au < testing ; 2013 ; History & Memory Volume 25 [2013] ; 8841 >
-        au < testing ; 2014 ; History & Memory Volume 26 [2014] ; 9785 >
+        au < ready ; 2006 ; History & Memory Volume 18 [2006] ; 3036 >
+        au < ready ; 2007 ; History & Memory Volume 19 [2007] ; 3347 >
+        au < ready ; 2008 ; History & Memory Volume 20 [2008] ; 3719 >
+        au < ready ; 2009 ; History & Memory Volume 21 [2009] ; 4246 >
+        au < ready ; 2010 ; History & Memory Volume 22 [2010] ; 5922 >
+        au < ready ; 2011 ; History & Memory Volume 23 [2011] ; 7005 >
+        au < ready ; 2012 ; History & Memory Volume 24 [2012] ; 8107 >
+        au < ready ; 2013 ; History & Memory Volume 25 [2013] ; 8841 >
+        au < ready ; 2014 ; History & Memory Volume 26 [2014] ; 9785 >
         au < ready ; 2015 ; History & Memory Volume 27 [2015] ; 10493 >
-        au < testing ; 2016 ; History & Memory Volume 28 [2016] ; 11054 >
+        au < ready ; 2016 ; History & Memory Volume 28 [2016] ; 11054 >
         au < manifest ; 2017 ; History & Memory Volume 29 [2017] ; 12511 >
 
     }
@@ -569,11 +569,11 @@
 
       attr[journal_id] = 430
 
-        au < testing ; 2007 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 1 [2007] ; 5018 >
-        au < testing ; 2008 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 2 [2008] ; 4019 >
-        au < testing ; 2009 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 3 [2009] ; 5730 >
-        au < testing ; 2010 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 4 [2010] ; 6863 >
-        au < testing ; 2011 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 5 [2011] ; 7855 >
+        au < ready ; 2007 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 1 [2007] ; 5018 >
+        au < ready ; 2008 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 2 [2008] ; 4019 >
+        au < ready ; 2009 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 3 [2009] ; 5730 >
+        au < ready ; 2010 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 4 [2010] ; 6863 >
+        au < ready ; 2011 ; Race/Ethnicity: Multidisciplinary Global Contexts Volume 5 [2011] ; 7855 >
 
     }
     {
@@ -588,20 +588,20 @@
         au < ready ; 1999 ; Research in African Literatures Volume 30 [1999] ; 581 >
         au < testing ; 2000 ; Research in African Literatures Volume 31 [2000] ; 582 >
         au < testing ; 2001 ; Research in African Literatures Volume 32 [2001] ; 583 >
-        au < testing ; 2002 ; Research in African Literatures Volume 33 [2002] ; 584 >
-        au < testing ; 2003 ; Research in African Literatures Volume 34 [2003] ; 833 >
-        au < testing ; 2004 ; Research in African Literatures Volume 35 [2004] ; 2446 >
-        au < testing ; 2005 ; Research in African Literatures Volume 36 [2005] ; 2645 >
-        au < testing ; 2006 ; Research in African Literatures Volume 37 [2006] ; 2897 >
+        au < ready ; 2002 ; Research in African Literatures Volume 33 [2002] ; 584 >
+        au < ready ; 2003 ; Research in African Literatures Volume 34 [2003] ; 833 >
+        au < ready ; 2004 ; Research in African Literatures Volume 35 [2004] ; 2446 >
+        au < ready ; 2005 ; Research in African Literatures Volume 36 [2005] ; 2645 >
+        au < ready ; 2006 ; Research in African Literatures Volume 37 [2006] ; 2897 >
         au < ready ; 2007 ; Research in African Literatures Volume 38 [2007] ; 3215 >
-        au < testing ; 2008 ; Research in African Literatures Volume 39 [2008] ; 3626 >
-        au < testing ; 2009 ; Research in African Literatures Volume 40 [2009] ; 4125 >
+        au < ready ; 2008 ; Research in African Literatures Volume 39 [2008] ; 3626 >
+        au < ready ; 2009 ; Research in African Literatures Volume 40 [2009] ; 4125 >
         au < testing ; 2010 ; Research in African Literatures Volume 41 [2010] ; 5807 >
-        au < testing ; 2011 ; Research in African Literatures Volume 42 [2011] ; 6680 >
-        au < testing ; 2012 ; Research in African Literatures Volume 43 [2012] ; 7998 >
-        au < testing ; 2013 ; Research in African Literatures Volume 44 [2013] ; 8777 >
-        au < testing ; 2014 ; Research in African Literatures Volume 45 [2014] ; 9753 >
-        au < testing ; 2015 ; Research in African Literatures Volume 46 [2015] ; 10372 >
+        au < ready ; 2011 ; Research in African Literatures Volume 42 [2011] ; 6680 >
+        au < ready ; 2012 ; Research in African Literatures Volume 43 [2012] ; 7998 >
+        au < ready ; 2013 ; Research in African Literatures Volume 44 [2013] ; 8777 >
+        au < ready ; 2014 ; Research in African Literatures Volume 45 [2014] ; 9753 >
+        au < ready ; 2015 ; Research in African Literatures Volume 46 [2015] ; 10372 >
         au < ready ; 2016 ; Research in African Literatures Volume 47 [2016] ; 11028 >
 
     }
@@ -619,7 +619,7 @@
         au < ready ; 2012-2013 ; Spectrum: A Journal on Black Men Volume 1 [2012-2013] ; 8488 >
         au < ready ; 2013-2014 ; Spectrum: A Journal on Black Men Volume 2 [2013-2014] ; 9354 >
         au < ready ; 2014-2015 ; Spectrum: A Journal on Black Men Volume 3 [2014-2015] ; 10236 >
-        au < testing ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 [2015-2016] ; 11104 >
+        au < ready ; 2015-2016 ; Spectrum: A Journal on Black Men Volume 4 [2015-2016] ; 11104 >
         au < ready ; 2016 ; Spectrum: A Journal on Black Men Volume 5 [2016] ; 12159 >
 
     }
@@ -634,9 +634,9 @@
 
       attr[journal_id] = 606
 
-        au < testing ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 [2013] ; 8899 >
+        au < ready ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 [2013] ; 8899 >
         au < ready ; 2014 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 2 [2014] ; 9764 >
-        au < testing ; 2015 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 3 [2015] ; 10555 >
+        au < ready ; 2015 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 3 [2015] ; 10555 >
 
     }
     {
@@ -650,14 +650,14 @@
 
       attr[journal_id] = 392
 
-        au < testing ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 [2006] ; 4005 >
-        au < testing ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 [2007] ; 4004 >
+        au < ready ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 [2006] ; 4005 >
+        au < ready ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 [2007] ; 4004 >
         au < ready ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 [2008] ; 3840 >
         au < ready ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 [2009] ; 4391 >
-        au < testing ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 [2010] ; 6945 >
+        au < ready ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 [2010] ; 6945 >
         au < ready ; 2011 ; Textual Cultures: Texts, Contexts, Interpretation Volume 6 [2011] ; 7588 >
-        au < testing ; 2012 ; Textual Cultures: Texts, Contexts, Interpretation Volume 7 [2012] ; 8640 >
-        au < testing ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 8 [2013] ; 9676 >
+        au < ready ; 2012 ; Textual Cultures: Texts, Contexts, Interpretation Volume 7 [2012] ; 8640 >
+        au < ready ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 8 [2013] ; 9676 >
         au < ready ; 2014-2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 [2014-2015] ; 10835 >
         au < ready ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 [2016] ; 12244 >
 
