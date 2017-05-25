@@ -181,15 +181,30 @@
        name = Acta Radiologica Short Reports ;
        eissn =  2047-9816
      >
-
+       
+       #changed names from "Short Reports" (V1-4) to "Open" (V4-present)
        #param[base_url] = http://arr.sagepub.com/
 
        au < crawling ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; arra ; >
        au < doNotProcess ; doNotProcess ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 ; arra ; >
        au < doNotProcess ; doNotProcess ; 2014 ; Acta Radiologica Short Reports Volume 3 ; 3 ; arra ; >
        au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Short Reports Volume 4 ; 4 ; arra ; >
-       au < crawling ; exists ; 2016 ; Acta Radiologica Short Reports Volume 5 ; 5 ; arrb ; >
-       au < manifest ; exists ; 2017 ; Acta Radiologica Short Reports Volume 6 ; 6 ; arrb ; >
+
+  }
+
+     {
+
+     title <
+       name = Acta Radiologica Open ;
+       eissn =  2058-4601
+     >
+
+       #changed names from "Short Reports" (V1-4) to "Open" (V4-present)
+       #param[base_url] = http://arr.sagepub.com/
+
+       au < doNotProcess ; doNotProcess ; 2015 ; Acta Radiologica Open Volume 4 ; 4 ; arrb ; >
+       au < crawling ; exists ; 2016 ; Acta Radiologica Open Volume 5 ; 5 ; arrb ; >
+       au < manifest ; exists ; 2017 ; Acta Radiologica Open Volume 6 ; 6 ; arrb ; >
 
   }
 
@@ -3354,6 +3369,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Assessment for Effective Intervention Volume 40 ; 40 ; aeib ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Assessment for Effective Intervention Volume 41 ; 41 ; aeib ; >
       au < crawling ; exists ; 2016-2017 ; Assessment for Effective Intervention Volume 42 ; 42 ; aeib ; >
+      au < expected ; exists ; 2017-2018 ; Assessment for Effective Intervention Volume 43 ; 43 ; aeib ; >
 
     }
 
@@ -3784,6 +3800,7 @@
         au < crawling ; exists ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda ; >
         au < crawling ; exists ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda ; >
         au < manifest ; exists ; 2016-2017 ; Behavioral Disorders Volume 42 ; 42 ; bhda ; >
+        au < expected ; exists ; 2017-2018 ; Behavioral Disorders Volume 43 ; 43 ; bhda ; >
 
   }
 
@@ -8469,6 +8486,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; cbaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; cbaa ; >
       au < manifest ; exists ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; cbaa ; >
+      au < expected ; exists ; 2017-2018 ; A Current Bibliography on African Affairs Volume 50 ; 50 ; cbaa ; >
 
   }
 
@@ -11751,6 +11769,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; The Expository Times Volume 126 ; 126 ; exta ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; The Expository Times Volume 127 ; 127 ; exta ; >
       au < manifest ; exists ; 2016-2017 ; The Expository Times Volume 128 ; 128 ; exta ; >
+      au < expected ; exists ; 2017-2018 ; The Expository Times Volume 129 ; 129 ; exta ; >
 
   }
 
@@ -13573,6 +13592,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; HERD: Health Environments Research & Design Journal Volume 8 ; 8 ; hera ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; HERD: Health Environments Research & Design Journal Volume 9 ; 9 ; hera ; >
       au < manifest ; exists ; 2016-2017 ; HERD: Health Environments Research & Design Journal Volume 10 ; 10 ; hera ; >
+      au < expected ; exists ; 2017-2018 ; HERD: Health Environments Research & Design Journal Volume 11 ; 11 ; hera ; >
 
   }
 
@@ -14580,6 +14600,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; icaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; icaa ; >
       au < manifest ; exists ; 2016-2017 ; Imagination, Cognition and Personality Volume 36 ; 36 ; icaa ; >
+      au < expected ; exists ; 2017-2018 ; Imagination, Cognition and Personality Volume 37 ; 37 ; icaa ; >
 
   }
 
@@ -17070,6 +17091,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 ; qcha ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; International Quarterly of Community Health Education Volume 36 ; 36 ; qcha ; >
       au < manifest ; exists ; 2016-2017 ; International Quarterly of Community Health Education Volume 37 ; 37 ; qcha ; >
+      au < expected ; exists ; 2017-2018 ; International Quarterly of Community Health Education Volume 38 ; 38 ; qcha ; >
 
   }
 
@@ -17695,6 +17717,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Intervention in School and Clinic Volume 50 ; 50 ; iscc ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Intervention in School and Clinic Volume 51 ; 51 ; iscc ; >
       au < manifest ; exists ; 2016-2017 ; Intervention in School and Clinic Volume 52 ; 52 ; iscc ; >
+      au < expected ; exists ; 2017-2018 ; Intervention in School and Clinic Volume 53 ; 53 ; iscc ; >
 
     }
 
@@ -17975,6 +17998,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal for the Study of the New Testament Volume 37 ; 37 ; jnta ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal for the Study of the New Testament Volume 38 ; 38 ; jnta ; >
       au < manifest ; exists ; 2016-2017 ; Journal for the Study of the New Testament Volume 39 ; 39 ; jnta ; >
+      au < expected ; exists ; 2017-2018 ; Journal for the Study of the New Testament Volume 40 ; 40 ; jnta ; >
 
     }
 
@@ -18081,6 +18105,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal for the Study of the Pseudepigrapha Volume 24 ; 24 ; jspa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal for the Study of the Pseudepigrapha Volume 25 ; 25 ; jspa ; >
       au < manifest ; exists ; 2016-2017 ; Journal for the Study of the Pseudepigrapha Volume 26 ; 26 ; jspa ; >
+      au < expected ; exists ; 2017-2018 ; Journal for the Study of the Pseudepigrapha Volume 27 ; 27 ; jspa ; >
 
     }
 
@@ -18735,6 +18760,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 ; jbaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Biomaterials Applications Volume 30 ; 30 ; jbaa ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 ; jbaa ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Biomaterials Applications Volume 32 ; 32 ; jbaa ; >
 
     }
 
@@ -18960,6 +18986,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; jend ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; jend ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; jend ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Building Physics Volume 41 ; 41 ; jend ; >
 
   }
 
@@ -21076,6 +21103,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 ; etsa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 ; etsa ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 ; etsa ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Educational Technology Systems Volume 46 ; 46 ; etsa ; >
 
   }
 
@@ -21931,6 +21959,7 @@
       au < crawling ; exists ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema ; >
       au < doesNotExist ; doesNotExist ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
       au < manifest ; exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema ; >
+      au < expected ; exists ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema ; >
 
   }
 
@@ -22342,6 +22371,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; jhrb ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; jhrb ; >
       au < crawling ; exists ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; jhrb ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Historical Research in Music Education Volume 39 ; 39 ; jhrb ; >
 
    }
 
@@ -24109,6 +24139,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Music Teacher Education Volume 24 ; 24 ; jmta ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Music Teacher Education Volume 25 ; 25 ; jmta ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Music Teacher Education Volume 26 ; 26 ; jmta ; >
+      au < expected ; exists ; 2017-2018 ; Journal of Music Teacher Education Volume 27 ; 27 ; jmta ; >
 
     }
 
@@ -34536,6 +34567,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 ; rcba ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Rehabilitation Counseling Bulletin Volume 59 ; 59 ; rcba ; >
       au < manifest ; exists ; 2016-2017 ; Rehabilitation Counseling Bulletin Volume 60 ; 60 ; rcba ; >
+      au < expected ; exists ; 2017-2018 ; Rehabilitation Counseling Bulletin Volume 61 ; 61 ; rcba ; >
 
     }
 
@@ -38064,6 +38096,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; tcxa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; TEACHING Exceptional Children Volume 48 ; 48 ; tcxa ; >
       au < crawling ; exists ; 2016-2017 ; TEACHING Exceptional Children Volume 49 ; 49 ; tcxa ; >
+      au < expected ; exists ; 2017-2018 ; TEACHING Exceptional Children Volume 50 ; 50 ; tcxa ; >
 
   }
 
