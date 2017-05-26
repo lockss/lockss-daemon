@@ -6,6 +6,9 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] >
+    
+    #do not include http://collabra.org/ ; COLLABRA ; issn = 2376-6832 
+    
 
   {
 
@@ -1463,32 +1466,6 @@
       au < released ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 >
       au < released ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 >
       au < released ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 >
-
-  }
-
-}
-
-{
-  publisher <
-    name = University of California Press
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] >
-
-  {
-
-      title <
-        name = COLLABRA ;
-        issn = 2376-6832 
-    >
-
-      comment[publisher] = University of California Press
-      param[base_url] = http://collabra.org/
-
-      au < manifest ; 2015 ; 1 ; COLLABRA Volume 1 ; 2015 >
-      au < manifest ; 2016 ; 2 ; COLLABRA Volume 2 ; 2016 >
 
   }
 

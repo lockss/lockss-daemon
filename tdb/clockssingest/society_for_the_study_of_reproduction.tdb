@@ -15,13 +15,13 @@
       eissn = 1529-7268
     >
 
-    plugin = org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin
+    plugin = org.lockss.plugin.silverchair.ClockssOupSilverchairPlugin
     implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
     param[base_url] = https://academic.oup.com/
     #param[base_url] = http://www.biolreprod.org/
     #moved to OUP
 
-    param[resource_id] = biolreprod
+    param[journal_id] = biolreprod
 
     au < exists ; exists ; 2015 ; Biology of Reproduction Volume 92-93 ; 2015 ; >
     au < exists ; exists ; 2016 ; Biology of Reproduction Volume 94-95 ; 2016 ; >

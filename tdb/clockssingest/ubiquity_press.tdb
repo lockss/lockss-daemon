@@ -228,22 +228,21 @@
 
   }
 
-# This journal is not in the contract.
-#  {
-#
-#      title <
-#        name = Karib: Nordic Journal for Caribbean Studies ;
-#        eissn = 2387-6743
-#      >
-#
-#      comment[publisher] = Stockholm University Press
-#      param[base_url] = http://www.karib.no/
-#
-#      au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; >
-#      au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; >
-#
-#  }
-#
+  {
+
+      title <
+        name = Karib: Nordic Journal for Caribbean Studies ;
+        eissn = 2387-6743
+      >
+
+      comment[publisher] = Stockholm University Press
+      param[base_url] = http://www.karib.no/
+
+      au < exists ; exists ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2015 ; 2015 ; >
+
+  }
+
   {
 
       title <
