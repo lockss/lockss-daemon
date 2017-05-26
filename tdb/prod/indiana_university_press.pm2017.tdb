@@ -587,7 +587,7 @@
 
         au < ready ; 1999 ; Research in African Literatures Volume 30 [1999] ; 581 >
         au < ready ; 2000 ; Research in African Literatures Volume 31 [2000] ; 582 >
-        au < testing ; 2001 ; Research in African Literatures Volume 32 [2001] ; 583 >
+        au < ready ; 2001 ; Research in African Literatures Volume 32 [2001] ; 583 >
         au < ready ; 2002 ; Research in African Literatures Volume 33 [2002] ; 584 >
         au < ready ; 2003 ; Research in African Literatures Volume 34 [2003] ; 833 >
         au < ready ; 2004 ; Research in African Literatures Volume 35 [2004] ; 2446 >
@@ -680,7 +680,7 @@
         au < testing ; 2011 ; The Global South Volume 5 [2011] ; 7549 >
         au < testing ; 2012 ; The Global South Volume 6 [2012] ; 8492 >
         au < testing ; 2013 ; The Global South Volume 7 [2013] ; 9683 >
-        au < testing ; 2014 ; The Global South Volume 8 [2014] ; 10608 >
+        au < ready ; 2014 ; The Global South Volume 8 [2014] ; 10608 >
         au < testing ; 2015 ; The Global South Volume 9 [2015] ; 11287 >
         au < testing ; 2016 ; The Global South Volume 10 [2016] ; 12413 >
 
@@ -733,9 +733,9 @@
         au < testing ; 2010 ; Transition Issue 103 [2010] ; 6571 >
         au < ready ; 2011 ; Transition Issue 104 [2011] ; 6800 >
         au < ready ; 2011 ; Transition Issue 105 [2011] ; 7388 >
-        au < testing ; 2011 ; Transition Issue 106 [2011] ; 7716 >
+        au < ready ; 2011 ; Transition Issue 106 [2011] ; 7716 >
         au < testing ; 2012 ; Transition Issue 107 [2012] ; 7993 >
-        au < testing ; 2012 ; Transition Issue 108 [2012] ; 8350 >
+        au < ready ; 2012 ; Transition Issue 108 [2012] ; 8350 >
         au < testing ; 2012 ; Transition Issue 109 [2012] ; 8515 >
         au < ready ; 2013 ; Transition Issue 110 [2013] ; 8872 >
         au < testing ; 2013 ; Transition Issue 111 [2013] ; 9099 >
@@ -743,7 +743,7 @@
         au < testing ; 2014 ; Transition Issue 113 [2014] ; 9819 >
         au < testing ; 2014 ; Transition Issue 114 [2014] ; 10104 >
         au < testing ; 2014 ; Transition Issue 115 [2014] ; 10203 >
-        au < testing ; 2014 ; Transition Issue 116 [2014] ; 10234 >
+        au < ready ; 2014 ; Transition Issue 116 [2014] ; 10234 >
         au < testing ; 2015 ; Transition Issue 117 [2015] ; 10563 >
         au < testing ; 2015 ; Transition Issue 118 [2015] ; 10789 >
         au < testing ; 2016 ; Transition Issue 119 [2016] ; 11134 >
@@ -762,17 +762,17 @@
       attr[journal_id] = 203
 
         au < testing ; 1999-2000 ; Victorian Studies Volume 42 [1999-2000] ; 698 >
-        au < testing ; 2000-2001 ; Victorian Studies Volume 43 [2000-2001] ; 699 >
+        au < ready ; 2000-2001 ; Victorian Studies Volume 43 [2000-2001] ; 699 >
         au < testing ; 2001-2002 ; Victorian Studies Volume 44 [2001-2002] ; 700 >
-        au < testing ; 2002-2003 ; Victorian Studies Volume 45 [2002-2003] ; 933 >
+        au < ready ; 2002-2003 ; Victorian Studies Volume 45 [2002-2003] ; 933 >
         au < testing ; 2003-2004 ; Victorian Studies Volume 46 [2003-2004] ; 2464 >
-        au < testing ; 2004-2005 ; Victorian Studies Volume 47 [2004-2005] ; 2722 >
-        au < testing ; 2005 ; Victorian Studies Volume 48 [2005] ; 2997 >
+        au < ready ; 2004-2005 ; Victorian Studies Volume 47 [2004-2005] ; 2722 >
+        au < ready ; 2005 ; Victorian Studies Volume 48 [2005] ; 2997 >
         au < testing ; 2006-2007 ; Victorian Studies Volume 49 [2006-2007] ; 3344 >
         au < testing ; 2007-2008 ; Victorian Studies Volume 50 [2007-2008] ; 3665 >
-        au < testing ; 2008-2009 ; Victorian Studies Volume 51 [2008-2009] ; 4213 >
+        au < ready ; 2008-2009 ; Victorian Studies Volume 51 [2008-2009] ; 4213 >
         au < testing ; 2009-2010 ; Victorian Studies Volume 52 [2009-2010] ; 5851 >
-        au < testing ; 2010-2011 ; Victorian Studies Volume 53 [2010-2011] ; 7001 >
+        au < ready ; 2010-2011 ; Victorian Studies Volume 53 [2010-2011] ; 7001 >
         au < testing ; 2011-2012 ; Victorian Studies Volume 54 [2011-2012] ; 8074 >
         au < testing ; 2012-2013 ; Victorian Studies Volume 55 [2012-2013] ; 8868 >
         au < ready ; 2013-2014 ; Victorian Studies Volume 56 [2013-2014] ; 9864 >
@@ -796,11 +796,11 @@
         au < testing ; 2002-2003 ; e-Service Journal Volume 2 [2002-2003] ; 823 >
         au < testing ; 2003-2004 ; e-Service Journal Volume 3 [2003-2004] ; 2524 >
         au < testing ; 2005-2006 ; e-Service Journal Volume 4 [2005-2006] ; 2953 >
-        au < testing ; 2006-2007 ; e-Service Journal Volume 5 [2006-2007] ; 3470 >
-        au < testing ; 2007-2009 ; e-Service Journal Volume 6 [2007-2009] ; 3810 >
-        au < testing ; 2010 ; e-Service Journal Volume 7 [2010] ; 6422 >
+        au < ready ; 2006-2007 ; e-Service Journal Volume 5 [2006-2007] ; 3470 >
+        au < ready ; 2007-2009 ; e-Service Journal Volume 6 [2007-2009] ; 3810 >
+        au < ready ; 2010 ; e-Service Journal Volume 7 [2010] ; 6422 >
         au < ready ; 2011-2012 ; e-Service Journal Volume 8 [2011-2012] ; 8404 >
-        au < testing ; 2013-2014 ; e-Service Journal Volume 9 [2013-2014] ; 10080 >
+        au < ready ; 2013-2014 ; e-Service Journal Volume 9 [2013-2014] ; 10080 >
         au < manifest ; 2016-2017 ; e-Service Journal Volume 10 [2016-2017] ; 12468 >
 
     }
