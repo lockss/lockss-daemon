@@ -123,7 +123,7 @@
 
     # Hypothetical resource_id: 174
     param[resource_id] = 174
-    param[journal_id] = oncology
+    param[journal_id] = jamaoncology
     
     au < wanted ; exists ; 2015 ; JAMA Oncology Volume 1 ; 2015 ; >
     au < wanted ; exists ; 2016 ; JAMA Oncology Volume 2 ; 2016 ; >
