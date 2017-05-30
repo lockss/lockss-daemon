@@ -4739,7 +4739,7 @@
       au < finished ; finished ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
       au < finished ; finished ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; >
       au < finished ; finished ; 2015 ; Bulletin of Science, Technology & Society Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Bulletin of Science, Technology & Society Volume 36 ; 36 ; >
+      au < superseded ; exists ; 2016 ; Bulletin of Science, Technology & Society Volume 36 [superseded] ; 36 ; >
 
     }
 
@@ -9736,7 +9736,7 @@
       param[base_url] = http://tdr.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; >
+      au < superseded ; exists ; 2016 ; The Downside Review Volume 134 [superseded] ; 134 ; >
 
   }
 
@@ -12342,7 +12342,7 @@
       au < finished ; finished ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
       au < finished ; finished ; 2014 ; Evaluation Review Volume 38 ; 38 ; >
       au < finished ; finished ; 2015 ; Evaluation Review Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Evaluation Review Volume 40 ; 40 ; >
+      au < superseded ; exists ; 2016 ; Evaluation Review Volume 40 [superseded] ; 40 ; >
 
     }
 
@@ -13731,7 +13731,7 @@
       param[base_url] = http://gch.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2016 ; Global Media and China Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2016 ; Global Media and China Volume 1 [superseded] ; 1 ; >
 
   }
 
@@ -15966,7 +15966,7 @@
       au < finished ; finished ; 2013 ; Indian Historical Review Volume 40 ; 40 ; >
       au < finished ; finished ; 2014 ; Indian Historical Review Volume 41 ; 41 ; >
       au < finished ; finished ; 2015 ; Indian Historical Review Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Indian Historical Review Volume 43 ; 43 ; >
+      au < superseded ; exists ; 2016 ; Indian Historical Review Volume 43 [superseded] ; 43 ; >
 
   }
 
@@ -21866,7 +21866,7 @@
       au < finished ; finished ; 2013 ; Journal of Consumer Culture Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Journal of Consumer Culture Volume 14 ; 14 ; >
       au < finished ; finished ; 2015 ; Journal of Consumer Culture Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Journal of Consumer Culture Volume 16 ; 16 ; >
+      au < superseded ; exists ; 2016 ; Journal of Consumer Culture Volume 16 [superseded] ; 16 ; >
 
     }
 
@@ -22523,7 +22523,7 @@
       param[base_url] = http://jdp.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2016 ; Journal of Development Policy and Practice Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2016 ; Journal of Development Policy and Practice Volume 1 [superseded] ; 1 ; >
 
   }
 
@@ -25965,7 +25965,7 @@
       au < finished ; finished ; 2013 ; Journal of Literacy Research Volume 45 ; 45 ; >
       au < finished ; finished ; 2014 ; Journal of Literacy Research Volume 46 ; 46 ; >
       au < finished ; finished ; 2015 ; Journal of Literacy Research Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Journal of Literacy Research Volume 48 ; 48 ; >
+      au < superseded ; exists ; 2016 ; Journal of Literacy Research Volume 48 [superseded] ; 48 ; >
 
   }
 
@@ -27141,7 +27141,7 @@
       au < frozen ; exists ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; >
       au < finished ; finished ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; >
+      au < superseded ; exists ; 2016 ; Journal of Planning Literature Volume 31 [superseded] ; 31 ; >
 
     }
 
@@ -31423,7 +31423,7 @@
       au < finished ; finished ; 2015 ; Media International Australia Volume 157 ; 157 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Media International Australia Volume 158 ; 158 ; >
       au < doNotProcess ; exists ; 2016 ; Media International Australia Volume 159 ; 159 ; >
-      au < frozen ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; >
+      au < superseded ; exists ; 2016 ; Media International Australia Volume 160 [superseded] ; 160 ; >
       au < doNotProcess ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; >
 
   }
@@ -32179,7 +32179,6 @@
       au < finished ; finished ; 2014 ; Multiple Sclerosis Journal Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Multiple Sclerosis Journal Volume 21 ; 21 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Multiple Sclerosis Journal Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 ; > #link to supplement, but content doesn't exist.
 
     }
 
@@ -32873,7 +32872,7 @@
       au < finished ; finished ; 2015 ; National Institute Economic Review Volume 234 ; 234 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; National Institute Economic Review Volume 235 ; 235 ; >
       au < doNotProcess ; exists ; 2016 ; National Institute Economic Review Volume 236 ; 236 ; >
-      au < frozen ; exists ; 2016 ; National Institute Economic Review Volume 237 ; 237 ; >
+      au < superseded ; exists ; 2016 ; National Institute Economic Review Volume 237 [superseded] ; 237 ; >
       au < doNotProcess ; exists ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; >
 
     }
@@ -33246,7 +33245,7 @@
       au < finished ; finished ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
       au < finished ; finished ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
       au < finished ; finished ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Noise & Vibration Worldwide Volume 47 ; 47 ; >
+      au < superseded ; exists ; 2016 ; Noise & Vibration Worldwide Volume 47 [superseded] ; 47 ; >
 
   }
 
@@ -35025,7 +35024,7 @@
       au < finished ; finished ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 ; >
       au < finished ; finished ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 ; >
+      au < superseded ; exists ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 [superseded] ; 17 ; >
 
     }
 
@@ -43793,7 +43792,7 @@
       param[base_url] = http://too.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < frozen ; exists ; 2016 ; Translational Research in Oral Oncology Volume 1 ; 1 ; >
+      au < superseded ; exists ; 2016 ; Translational Research in Oral Oncology Volume 1 [superseded] ; 1 ; >
 
   }
 
@@ -44065,7 +44064,7 @@
       au < finished ; finished ; 2013 ; Update: Applications of Research in Music Education Volume 32 ; 32 ; >
       au < finished ; finished ; 2014 ; Update: Applications of Research in Music Education Volume 33 ; 33 ; >
       au < frozen ; exists ; 2015 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 ; 35 ; >
+      au < superseded ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 [superseded] ; 35 ; >
 
     }
 
@@ -46330,7 +46329,7 @@
       au < finished ; finished ; 2013 ; Sociological Methodology Volume 43 ; 43 ; >
       au < finished ; finished ; 2014 ; Sociological Methodology Volume 44 ; 44 ; >
       au < finished ; finished ; 2015 ; Sociological Methodology Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Sociological Methodology Volume 46 ; 46 ; >
+      au < superseded ; exists ; 2016 ; Sociological Methodology Volume 46 [superseded] ; 46 ; >
 
     }
 
@@ -46626,7 +46625,7 @@
     au < finished ; finished ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; >
     au < finished ; finished ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; >
+    au < superseded ; exists ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 [superseded] ; 12 ; >
 
     }
 
@@ -49046,7 +49045,7 @@
       au < finished ; finished ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
       au < finished ; finished ; 2014 ; Scottish Medical Journal Volume 59 ; 59 ; >
       au < finished ; finished ; 2015 ; Scottish Medical Journal Volume 60 ; 60 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; Scottish Medical Journal Volume 61 ; 61 ; >
+      au < superseded ; exists ; 2016 ; Scottish Medical Journal Volume 61 [superseded] ; 61 ; >
 
     }
 
@@ -49463,7 +49462,7 @@
     au < finished ; finished ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; reingest5.clockss.org:8082 > 
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
-    au < frozen ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; >
+    au < superseded ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 [superseded] ; 123 ; >
 
   }
 }

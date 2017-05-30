@@ -22957,7 +22957,6 @@
     
     {
 
-
       au < manifest ; exists ; 1997 ; Journal of Intellectual Disabilities Volume 1 ; 1 ; jlda ; >
       au < manifest ; exists ; 1998 ; Journal of Intellectual Disabilities Volume 2 ; 2 ; jlda ; >
       au < manifest ; exists ; 1999 ; Journal of Intellectual Disabilities Volume 3 ; 3 ; jlda ; >
@@ -29224,7 +29223,6 @@
     
     {
 
-
       au < manifest ; exists ; 1995-1996 ; Multiple Sclerosis Journal Volume 1 ; 1 ; msja ; >
       au < manifest ; exists ; 1996-1997 ; Multiple Sclerosis Journal Volume 2 ; 2 ; msja ; >
       au < manifest ; exists ; 1997 ; Multiple Sclerosis Journal Volume 3 ; 3 ; msja ; >
@@ -29247,7 +29245,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Multiple Sclerosis Journal Volume 20 ; 20 ; msja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Multiple Sclerosis Journal Volume 21 ; 21 ; msja ; >
       au < crawling ; exists ; 2016 ; Multiple Sclerosis Journal Volume 22 ; 22 ; msja ; >
-      au < doNotProcess ; doNotProcess ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 ; msja ; > #link to supplement, but content doesn't exist.
+      au < expected ; exists ; 2017 ; Multiple Sclerosis Journal Volume 23 ; 23 ; msja ; >
 
     }
 
@@ -30981,6 +30979,7 @@
       au < crawling ; exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 ; otoj ; >
       au < crawling ; exists ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 ; otoj ; >
       au < manifest ; exists ; 2017 ; Otolaryngology -- Head and Neck Surgery Volume 156 ; 156 ; otoj ; >
+      au < expected ; exists ; 2017 ; Otolaryngology -- Head and Neck Surgery Volume 157 ; 157 ; otoj ; >
 
     }
 
@@ -34851,6 +34850,7 @@
       au < crawling ; exists ; 2016 ; Research in Education Volume 95 ; 95 ; riea ; >
       au < crawling ; exists ; 2016 ; Research in Education Volume 96 ; 96 ; riea ; >
       au < expected ; exists ; 2017 ; Research in Education Volume 97 ; 97 ; riea ; >
+      au < expected ; exists ; 2017 ; Research in Education Volume 98 ; 98 ; riea ; >
 
   }
 
@@ -45276,6 +45276,7 @@
     au < crawling ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; prxa ; >
     au < crawling ; exists ; 2016 ; Psychological Reports Volume 119 ; 119 ; prxa ; >
     au < manifest ; exists ; 2017 ; Psychological Reports Volume 120 ; 120 ; prxa ; >
+    au < expected ; exists ; 2017 ; Psychological Reports Volume 121 ; 121 ; prxa ; >
     
   }
 
