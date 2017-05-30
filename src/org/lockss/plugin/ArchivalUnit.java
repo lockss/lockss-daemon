@@ -467,10 +467,13 @@ public interface ArchivalUnit {
   public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url);
   
   /**
-   * Return URLs suitable to browsing the AU.  Defaults to start URLs
+   * Return URLs suitable for browsing the AU.  Defaults to start URLs
    * unless plugin sets (@value
    * DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY} to the name of a {@link
-   * UrlGeneratorFactory}
+   * UrlGeneratorFactory}.  Plugins that synthesize and store index pages
+   * should include their URLs as access URLs only if they actually exist:
+   * as they don't exist on the publisher, they're useful for browsing only
+   * if they exist locally.
    */
   public Collection<String> getAccessUrls();
 
