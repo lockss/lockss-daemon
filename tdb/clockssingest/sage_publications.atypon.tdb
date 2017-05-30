@@ -2519,8 +2519,8 @@
       au < crawling ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; anna ; >
       au < crawling ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; anna ; >
       au < manifest ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 669 ; 669 ; anna ; >
-      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 670 ; 670 ; anna ; >
-      au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 671 ; 671 ; anna ; >
+      au < manifest ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 670 ; 670 ; anna ; >
+      au < manifest ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 671 ; 671 ; anna ; >
       au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 672 ; 672 ; anna ; >
       au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 673 ; 673 ; anna ; >
       au < expected ; exists ; 2017 ; The Annals of the American Academy of Political and Social Science Volume 674 ; 674 ; anna ; >
@@ -8299,7 +8299,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; cdya ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Cultural Dynamics Volume 27 ; 27 ; cdya ; >
       au < crawling ; exists ; 2016 ; Cultural Dynamics Volume 28 ; 28 ; cdya ; >
-      au < expected ; exists ; 2017 ; Cultural Dynamics Volume 29 ; 29 ; cdya ; >
+      au < manifest ; exists ; 2017 ; Cultural Dynamics Volume 29 ; 29 ; cdya ; >
 
     }
 
@@ -11415,7 +11415,7 @@
       #param[base_url] = http://eso.sagepub.com/
 
       au < crawling ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; esoa ; >
-      au < expected ; exists ; 2017 ; European Stroke Journal Volume 2 ; 2 ; esoa ; >
+      au < manifest ; exists ; 2017 ; European Stroke Journal Volume 2 ; 2 ; esoa ; >
 
   }
 
@@ -20553,7 +20553,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Developing Societies Volume 30 ; 30 ; jdsb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Developing Societies Volume 31 ; 31 ; jdsb ; >
       au < crawling ; exists ; 2016 ; Journal of Developing Societies Volume 32 ; 32 ; jdsb ; >
-      au < expected ; exists ; 2017 ; Journal of Developing Societies Volume 33 ; 33 ; jdsb ; >
+      au < manifest ; exists ; 2017 ; Journal of Developing Societies Volume 33 ; 33 ; jdsb ; >
 
     }
 
@@ -20676,7 +20676,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Disability Policy Studies Volume 25 ; 25 ; dpsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Disability Policy Studies Volume 26 ; 26 ; dpsa ; >
       au < crawling ; exists ; 2016 ; Journal of Disability Policy Studies Volume 27 ; 27 ; dpsa ; >
-      au < expected ; exists ; 2017 ; Journal of Disability Policy Studies Volume 28 ; 28 ; dpsa ; >
+      au < manifest ; exists ; 2017 ; Journal of Disability Policy Studies Volume 28 ; 28 ; dpsa ; >
 
     }
 
@@ -21928,11 +21928,11 @@
     #param[base_url] = http://gem.sagepub.com/
 
       au < manifest ; exists ; 1985-1986 ; Journal of General Management Volume 11 ; 11 ; gema ; >
-      au < exists ; exists ; 1986-1987 ; Journal of General Management Volume 12 ; 12 ; gema ; >
-      au < exists ; exists ; 1987-1988 ; Journal of General Management Volume 13 ; 13 ; gema ; >
-      au < exists ; exists ; 1988-1989 ; Journal of General Management Volume 14 ; 14 ; gema ; >
-      au < exists ; exists ; 1989-1990 ; Journal of General Management Volume 15 ; 15 ; gema ; >
-      au < exists ; exists ; 1990-1991 ; Journal of General Management Volume 16 ; 16 ; gema ; >
+      au < manifest ; exists ; 1986-1987 ; Journal of General Management Volume 12 ; 12 ; gema ; >
+      au < manifest ; exists ; 1987-1988 ; Journal of General Management Volume 13 ; 13 ; gema ; >
+      au < manifest ; exists ; 1988-1989 ; Journal of General Management Volume 14 ; 14 ; gema ; >
+      au < manifest ; exists ; 1989-1990 ; Journal of General Management Volume 15 ; 15 ; gema ; >
+      au < manifest ; exists ; 1990-1991 ; Journal of General Management Volume 16 ; 16 ; gema ; >
       au < manifest ; exists ; 1991-1992 ; Journal of General Management Volume 17 ; 17 ; gema ; >
       au < manifest ; exists ; 1992-1993 ; Journal of General Management Volume 18 ; 18 ; gema ; >
       au < manifest ; exists ; 1993-1994 ; Journal of General Management Volume 19 ; 19 ; gema ; >
@@ -21944,20 +21944,20 @@
       au < manifest ; exists ; 1999-2000 ; Journal of General Management Volume 25 ; 25 ; gema ; >
       au < manifest ; exists ; 2000-2001 ; Journal of General Management Volume 26 ; 26 ; gema ; >
       au < manifest ; exists ; 2001-2002 ; Journal of General Management Volume 27 ; 27 ; gema ; >
-      au < exists ; exists ; 2002-2003 ; Journal of General Management Volume 28 ; 28 ; gema ; >
-      au < exists ; exists ; 2003-2004 ; Journal of General Management Volume 29 ; 29 ; gema ; >
-      au < exists ; exists ; 2004-2005 ; Journal of General Management Volume 30 ; 30 ; gema ; >
+      au < manifest ; exists ; 2002-2003 ; Journal of General Management Volume 28 ; 28 ; gema ; >
+      au < manifest ; exists ; 2003-2004 ; Journal of General Management Volume 29 ; 29 ; gema ; >
+      au < manifest ; exists ; 2004-2005 ; Journal of General Management Volume 30 ; 30 ; gema ; >
       au < manifest ; exists ; 2005-2006 ; Journal of General Management Volume 31 ; 31 ; gema ; >
       au < manifest ; exists ; 2006-2007 ; Journal of General Management Volume 32 ; 32 ; gema ; >
       au < manifest ; exists ; 2007-2008 ; Journal of General Management Volume 33 ; 33 ; gema ; >
       au < manifest ; exists ; 2008-2009 ; Journal of General Management Volume 34 ; 34 ; gema ; >
-      au < exists ; exists ; 2009-2010 ; Journal of General Management Volume 35 ; 35 ; gema ; >
-      au < exists ; exists ; 2010-2011 ; Journal of General Management Volume 36 ; 36 ; gema ; >
+      au < manifest ; exists ; 2009-2010 ; Journal of General Management Volume 35 ; 35 ; gema ; >
+      au < manifest ; exists ; 2010-2011 ; Journal of General Management Volume 36 ; 36 ; gema ; >
       au < manifest ; exists ; 2011-2012 ; Journal of General Management Volume 37 ; 37 ; gema ; >
       au < manifest ; exists ; 2012-2013 ; Journal of General Management Volume 38 ; 38 ; gema ; >
       au < manifest ; exists ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema ; >
       au < crawling ; exists ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema ; >
-      au < exists ; exists ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
+      au < manifest ; exists ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
       au < manifest ; exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema ; >
       au < expected ; exists ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema ; >
 
@@ -25696,7 +25696,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of South Asian Development Volume 9 ; 9 ; sada ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of South Asian Development Volume 10 ; 10 ; sada ; >
       au < crawling ; exists ; 2016 ; Journal of South Asian Development Volume 11 ; 11 ; sada ; >
-      au < expected ; exists ; 2017 ; Journal of South Asian Development Volume 12 ; 12 ; sada ; >
+      au < manifest ; exists ; 2017 ; Journal of South Asian Development Volume 12 ; 12 ; sada ; >
 
     }
 
@@ -28568,7 +28568,7 @@
       au < crawling ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; miad ; >
       au < crawling ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; miad ; >
       au < manifest ; exists ; 2017 ; Media International Australia Volume 162 ; 162 ; miad ; >
-      au < expected ; exists ; 2017 ; Media International Australia Volume 163 ; 163 ; miad ; >
+      au < manifest ; exists ; 2017 ; Media International Australia Volume 163 ; 163 ; miad ; >
       au < expected ; exists ; 2017 ; Media International Australia Volume 164 ; 164 ; miad ; >
       au < expected ; exists ; 2017 ; Media International Australia Volume 165 ; 165 ; miad ; >
 
@@ -29867,7 +29867,7 @@
       au < crawling ; exists ; 2016 ; National Institute Economic Review Volume 237 ; 237 ; nera ; >
       au < crawling ; exists ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; nera ; >
       au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 239 ; 239 ; nera ; >
-      au < expected ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
+      au < manifest ; exists ; 2017 ; National Institute Economic Review Volume 240 ; 240 ; nera ; >
       au < expected ; exists ; 2017 ; National Institute Economic Review Volume 241 ; 241 ; nera ; >
       au < expected ; exists ; 2017 ; National Institute Economic Review Volume 242 ; 242 ; nera ; >
 
@@ -30062,7 +30062,7 @@
       au < crawling ; exists ; 2014 ; New Journal of European Criminal Law Volume 5 ; 5 ; njea ; >
       au < crawling ; exists ; 2015 ; New Journal of European Criminal Law Volume 6 ; 6 ; njea ; >
       au < crawling ; exists ; 2016 ; New Journal of European Criminal Law Volume 7 ; 7 ; njea ; >
-      au < expected ; exists ; 2017 ; New Journal of European Criminal Law Volume 8 ; 8 ; njea ; >
+      au < manifest ; exists ; 2017 ; New Journal of European Criminal Law Volume 8 ; 8 ; njea ; >
 
   }
 
@@ -35290,7 +35290,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Review of Market Integration Volume 5 ; 5 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Review of Market Integration Volume 6 ; 6 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Review of Market Integration Volume 7 ; 7 ; rmia ; >
-      au < expected ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
+      au < manifest ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
       au < expected ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
 
     }
@@ -35549,7 +35549,7 @@
       au < manifest ; exists ; 2014 ; Rural Special Education Quarterly Volume 33 ; 33 ; rsqa ; >
       au < manifest ; exists ; 2015 ; Rural Special Education Quarterly Volume 34 ; 34 ; rsqa ; >
       au < manifest ; exists ; 2016 ; Rural Special Education Quarterly Volume 35 ; 35 ; rsqa ; >
-      au < expected ; exists ; 2017 ; Rural Special Education Quarterly Volume 36 ; 36 ; rsqa ; >
+      au < manifest ; exists ; 2017 ; Rural Special Education Quarterly Volume 36 ; 36 ; rsqa ; >
 
     }
 
@@ -37315,7 +37315,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 ; bmca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; South Asian Journal of Business and Management Cases Volume 4 ; 4 ; bmca ; >
       au < crawling ; exists ; 2016 ; South Asian Journal of Business and Management Cases Volume 5 ; 5 ; bmca ; >
-      au < expected ; exists ; 2017 ; South Asian Journal of Business and Management Cases Volume 6 ; 6 ; bmca ; >
+      au < manifest ; exists ; 2017 ; South Asian Journal of Business and Management Cases Volume 6 ; 6 ; bmca ; >
 
     }
 
@@ -39445,7 +39445,7 @@
       au < crawling ; exists ; 2016 ; Thesis Eleven Volume 136 ; 136 ; thea ; >
       au < crawling ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 138 ; 138 ; thea ; >
-      au < expected ; exists ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea ; >
+      au < manifest ; exists ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea ; >
@@ -45110,7 +45110,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Women's Health Volume 10 ; 10 ; whea ; >
       au < superseded ; exists ; 2015 ; Women's Health Volume 11 [superseded] ; 11 ; whea ; >
       au < crawling ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; whea ; >
-      au < expected ; exists ; 2017 ; Women's Health Volume 13 ; 13 ; whea ; >
+      au < manifest ; exists ; 2017 ; Women's Health Volume 13 ; 13 ; whea ; >
 
   }
 
