@@ -4,7 +4,7 @@
     name = International Union of Crystallography ;
     info[contract] = 2010 ;
     info[tester] = 7 ;
-    info[poller] = 7
+    info[poller] = 3
   >
   
   plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
@@ -200,6 +200,17 @@
     au < crawling ; exists ; 2016 ; 3 ; IUCrJ Volume 3 December ; 2016-12 ; >
 
     au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 January ; 2017-01 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 February ; 2017-02 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 March ; 2017-03 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 April ; 2017-04 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 May ; 2017-05 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 June ; 2017-06 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 July ; 2017-07 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 August ; 2017-08 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 September ; 2017-09 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 October ; 2017-10 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 November ; 2017-11 ; >
+    au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 December ; 2017-12 ; >
 
   }
 }
