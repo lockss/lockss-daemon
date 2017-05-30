@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 
 import java.net.*;
 import java.util.*;
+import java.io.IOException;
 
 import org.apache.commons.collections.*;
 import org.apache.oro.text.regex.*;
@@ -736,6 +737,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
       ret = new BaseCrawlSeed(this);
     }
     return ret;
+  }
+
+  @Override
+  public Collection<String> getAccessUrls() {
+    UrlGenerator gen = getDefinablePlugin().getUrlGenerator(this);
+    if (gen != null) {
+      try {
+	return gen.getUrls(this);
+      } catch (PluginException | IOException e) {
+	log.warning("Error generating access URLs, using start URLs instead",
+		    e);
+	return getStartUrls();
+      }
+    } else {
+      return super.getAccessUrls();
+    }
   }
 
   public List<PermissionChecker> makePermissionCheckers() {

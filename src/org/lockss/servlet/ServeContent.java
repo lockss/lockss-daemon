@@ -636,10 +636,10 @@ public class ServeContent extends LockssServlet {
           resp.sendRedirect(sb.toString());
           return;
         }
-	// If open URL resultion fails fall back to first start page
+	// If open URL resolution fails fall back to first start page
         au = pluginMgr.getAuFromId(auid);
 	if (au != null) {
-	  Collection<String> starts = au.getStartUrls();
+	  Collection<String> starts = au.getAccessUrls();
 	  if (!starts.isEmpty()) {
 	    url = starts.iterator().next();
 	    handleUrlRequest();

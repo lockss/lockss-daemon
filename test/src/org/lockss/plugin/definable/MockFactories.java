@@ -161,7 +161,26 @@ public class MockFactories {
     public CrawlSeed createCrawlSeed(CrawlerFacade crawlFacade) {
       return null;
     }
+  }
 
+  public static class AccessUrlFact implements UrlGeneratorFactory {
+
+    @Override
+    public UrlGenerator createUrlGenerator(ArchivalUnit au) {
+      return new MyAccessUrlGenerator(ListUtil.list("uuu_uuu"));
+    }
+  }
+
+  private static class MyAccessUrlGenerator implements UrlGenerator {
+    List res;
+    MyAccessUrlGenerator(List res) {
+      this.res = res;
+    }
+    @Override
+    public Collection<String> getUrls(ArchivalUnit au)
+	throws PluginException, IOException {
+      return res;
+    }
   }
 
   private static final Set SUBSTANCE_TYPES = SetUtil.set("application/pdf",

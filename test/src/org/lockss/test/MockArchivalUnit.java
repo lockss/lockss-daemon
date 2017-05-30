@@ -104,6 +104,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List<String> requestHeaders = new ArrayList<String>();
   private Collection<String> startUrls;
   private Collection<String> permUrls;
+  private Collection<String> accessUrls;
   private LoginPageChecker loginPageChecker;
   private boolean shouldRefetchOnCookies = true;
   
@@ -406,6 +407,10 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.startUrls = startUrls;
   }
   
+  public void setAccessUrls(Collection<String> accessUrls) {
+    this.accessUrls = accessUrls;
+  }
+
   public void setPermissionUrls(Collection<String> urls) {
     this.permUrls = urls;
   }
@@ -798,6 +803,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   @Override
   public Collection<String> getStartUrls() {
     return startUrls;
+  }
+
+  @Override
+  public Collection<String> getAccessUrls() {
+    return accessUrls != null ? accessUrls : startUrls;
   }
 
   @Override

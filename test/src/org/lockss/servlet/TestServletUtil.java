@@ -76,23 +76,35 @@ public class TestServletUtil extends LockssTestCase {
   }
 
   public void testManifestIndexNotStarted() throws Exception {
-    testManifestIndex(false);
+    testManifestIndex(false, false);
   }
 
   public void testManifestIndex() throws Exception {
-    testManifestIndex(true);
+    testManifestIndex(true, false);
   }
 
-  public void testManifestIndex(boolean started) throws Exception {
+  public void testManifestIndexAccessUrl() throws Exception {
+    testManifestIndex(true, true);
+  }
+
+  public void testManifestIndex(boolean started, boolean useAccessUrls)
+      throws Exception {
     MockLockssDaemon daemon = getMockLockssDaemon();
     daemon.setAusStarted(started);
     daemon.getPluginManager().setLoadablePluginsReady(started);
 
-    String m1 = "http://foo.bar/manifest1.html";
-    String m2 = "http://foo.bax/manifest2.html";
     String au1 = "Journal of Journalistics 1776";
     String au2 = "xyz";
+
+    String m1 = "http://foo.bar/manifest1.html";
+    String m1a = "http://foo.bar/access1.html";
+    String m2 = "http://foo.bax/manifest2.html";
     MockArchivalUnit mau = setUpAu(au1, m1, 1000);
+    if (useAccessUrls) {
+      mau.setAccessUrls(ListUtil.list(m1a));
+    } else {
+      m1a = m1;
+    }
 
     mau = setUpAu(au2, m2, -1);
 
@@ -116,7 +128,7 @@ public class TestServletUtil extends LockssTestCase {
       "<th align=left>Manifest</th></tr>" +
       "<tr><td align=\"left\">" + au1 + "</td.*>" + spacer +
       "<td align=\"left\">" +
-      "<a href=\"" + m1 + "\">" + m1 + "</a></td></tr>" +
+      "<a href=\"" + m1a + "\">" + m1a + "</a></td></tr>" +
       "<tr><td align=\"left\">" + au2 + "</td>" + spacer +
       "<td align=\"left\">" +
       "<a href=\"" + m2 + "\">" + m2 + "</a> \\(not fully collected\\)" +

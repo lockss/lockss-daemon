@@ -722,6 +722,10 @@ public class NullPlugin {
       return null;
     }
 
+    public Collection<String> getAccessUrls() {
+      return null;
+    }
+
     public Collection<String> getPermissionUrls() {
       return null;
     }

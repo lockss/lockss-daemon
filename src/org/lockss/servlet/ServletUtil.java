@@ -2082,7 +2082,7 @@ public class ServletUtil {
       tbl.newCell("width=8");
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
-	Collection<String> urls = au.getStartUrls();
+	Collection<String> urls = au.getAccessUrls();
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
 	  tbl.add(xform.transformUrl(url, au));

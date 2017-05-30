@@ -466,6 +466,14 @@ public interface ArchivalUnit {
   
   public UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url);
   
+  /**
+   * Return URLs suitable to browsing the AU.  Defaults to start URLs
+   * unless plugin sets (@value
+   * DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY} to the name of a {@link
+   * UrlGeneratorFactory}
+   */
+  public Collection<String> getAccessUrls();
+
   public boolean inCrawlWindow();
   
   public List<PermissionChecker> makePermissionCheckers();

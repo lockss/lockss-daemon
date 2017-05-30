@@ -418,6 +418,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return getStartUrls();
   }
   
+  @Override
+  public Collection<String> getAccessUrls() {
+    return getStartUrls();
+  }
+
   void addUrlParamStems(Set toSet) {
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       if (descr.getTypeEnum() == AuParamType.Url) {

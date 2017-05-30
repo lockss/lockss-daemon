@@ -113,6 +113,9 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_CRAWL_SEED_FACTORY = 
     "plugin_crawl_seed_factory";
   
+  public static final String KEY_PLUGIN_ACCESS_URL_FACTORY =
+    "plugin_access_url_factory";
+
   public static final String KEY_PLUGIN_URL_FETCHER_FACTORY = 
     "plugin_url_fetcher_factory";
   
@@ -1036,6 +1039,22 @@ public class DefinablePlugin extends BasePlugin {
     return crawlSeedFactory;
   }
   
+  protected UrlGeneratorFactory urlGenFactory = null;
+
+  protected UrlGeneratorFactory getUrlGeneratorFactory() {
+    if (urlGenFactory == null) {
+      String factClass =
+	definitionMap.getString(DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY,
+				null);
+      if (factClass != null) {
+	urlGenFactory =
+    	(UrlGeneratorFactory)newAuxClass(factClass, UrlGeneratorFactory.class);
+      }
+    }
+
+    return urlGenFactory;
+  }
+
   protected UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
 	UrlFetcherFactory fact = getUrlFetcherFactory();
 	  if (fact == null) {
@@ -1070,6 +1089,14 @@ public class DefinablePlugin extends BasePlugin {
     return fact.createCrawlSeed(crawlFacade);
   }
   
+  protected UrlGenerator getUrlGenerator(ArchivalUnit au) {
+    UrlGeneratorFactory fact = getUrlGeneratorFactory();
+    if (fact == null) {
+      return null;
+    }
+    return fact.createUrlGenerator(au);
+  }
+
   protected UrlConsumerFactory urlConsumerFactory = null;
 
   protected UrlConsumerFactory getUrlConsumerFactory() {
