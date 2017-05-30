@@ -4228,7 +4228,7 @@
     au < finished ; crawling ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; World Journal of Nuclear Medicine Volume 14 ; 2015 ; 14 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; World Journal of Nuclear Medicine Volume 15 ; 2016 ; 15 ; >
-    au < expected ; exists ; 2017 ; World Journal of Nuclear Medicine Volume 16 ; 2017 ; 16 ; >
+    au < manifest ; exists ; 2017 ; World Journal of Nuclear Medicine Volume 16 ; 2017 ; 16 ; >
 
   }
 
@@ -4623,7 +4623,7 @@
 
       au < notReady ; exists ; 2015 ; Benha Medical Journal Volume 32 ; 2015 ; 32 ; > # no permission page see http://www.bmfj.eg.net/lockss.txt 
       au < crawling ; exists ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; >
-      au < expected ; exists ; 2017 ; Benha Medical Journal Volume 34 ; 2017 ; 34 ; >
+      au < manifest ; exists ; 2017 ; Benha Medical Journal Volume 34 ; 2017 ; 34 ; >
 
   }
 
@@ -5082,7 +5082,7 @@
       param[base_url] = http://www.endodontologyonweb.org/
 
       au < crawling ; exists ; 2016 ; Endodontology Volume 28 ; 2016 ; 28 ; >
-      au < expected ; exists ; 2017 ; Endodontology Volume 29 ; 2017 ; 29 ; >
+      au < manifest ; exists ; 2017 ; Endodontology Volume 29 ; 2017 ; 29 ; >
 
   }
 
@@ -7855,7 +7855,7 @@
       param[base_url] = http://www.tjogonline.com/
 
       au < crawling ; exists ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; >
-      au < expected ; exists ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; >
+      au < manifest ; exists ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; >
 
   }
 

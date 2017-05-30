@@ -54,8 +54,8 @@
       au < doNotProcess ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
       au < doNotProcess ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
       au < doNotProcess ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
-      au < exists ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
-      au < exists ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 >
+      au < manifest ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
+      au < manifest ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 >
 
   }
 
@@ -69,8 +69,8 @@
       #param[base_url] = http://jgo.ascopubs.org/ 
       param[journal_id] = jgo
 
-      au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
-      au < exists ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
+      au < manifest ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
+      au < manifest ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
       au < ready ; 2017 ; Journal of Global Oncology Volume 3 ; 3 >
 
   }
@@ -96,8 +96,8 @@
       au < doNotProcess ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 >
       au < doNotProcess ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 >
       au < doNotProcess ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 >
-      au < exists ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
-      au < exists ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 >
+      au < manifest ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
+      au < manifest ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 >
 
   }
 
@@ -110,7 +110,7 @@
 
       param[journal_id] = cci
 
-      au < exists ; 2017 ; JCO Clinical Cancer lnformatics Volume 1 ; 1 >
+      au < manifest ; 2017 ; JCO Clinical Cancer lnformatics Volume 1 ; 1 >
 
   }
 
@@ -123,7 +123,7 @@
 
       param[journal_id] = po
 
-      au < exists ; 2017 ; JCO Precision Oncology Volume 1 ; 1 >
+      au < manifest ; 2017 ; JCO Precision Oncology Volume 1 ; 1 >
 
   }
 
