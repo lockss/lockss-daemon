@@ -5711,6 +5711,7 @@
       au < crawling ; exists ; 2016 ; International Journal of Materials and Product Technology Volume 52 ; 52 ; >
       au < crawling ; exists ; 2016 ; International Journal of Materials and Product Technology Volume 53 ; 53 ; >
       au < manifest ; exists ; 2017 ; International Journal of Materials and Product Technology Volume 54 ; 54 ; >
+      au < expected ; exists ; 2017 ; International Journal of Materials and Product Technology Volume 55 ; 55 ; >
 
     }
 
@@ -5756,7 +5757,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; > #volume 7 issue 3 & 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Materials Engineering Innovation Volume 8 ; 8 ; >
 
     }
@@ -5804,6 +5805,7 @@
       au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 ; >
       au < crawling ; exists ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 ; >
       au < manifest ; exists ; 2017 ; International Journal of Mathematics in Operational Research Volume 10 ; 10 ; >
+      au < expected ; exists ; 2017 ; International Journal of Mathematics in Operational Research Volume 11 ; 11 ; >
 
     }
 
@@ -5820,7 +5822,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mechanisms and Robotic Systems Volume 1 ; 1 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2016 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 ; > #volume 3 issue 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 ; >
 
     }
@@ -5840,7 +5842,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Mechatronics and Automation Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Mechatronics and Automation Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 ; >
-      au < finished ; finished ; 2015 ; International Journal of Mechatronics and Automation Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < crawling ; down ; 2015-2016 ; International Journal of Mechatronics and Automation Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2017 ; International Journal of Mechatronics and Automation Volume 6 ; 6 ; >
 
     }
@@ -5975,7 +5977,7 @@
 
       param[journal_id] = ijmrm
 
-      au < crawling ; down ; 2014-2016 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < crawling ; down ; 2014-2016 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 ; reingest5.clockss.org:8082 > #volume 1 issue 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Migration and Residential Mobility Volume 2 ; 2 ; >
 
     }
@@ -6094,7 +6096,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; > #volume 6 issue 3 & 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; >
 
     }
@@ -6137,6 +6139,7 @@
       au < crawling ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 25 ; 25 ; >
       au < crawling ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 26 ; 26 ; >
       au < manifest ; exists ; 2017 ; International Journal of Modelling, Identification and Control Volume 27 ; 27 ; >
+      au < expected ; exists ; 2017 ; International Journal of Modelling, Identification and Control Volume 28 ; 28 ; >
 
     }
 
@@ -6234,7 +6237,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < crawling ; down ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < crawling ; down ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 ; reingest3.clockss.org:8083 > #volume 6 issue 3 & 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Nano and Biomaterials Volume 7 ; 7 ; >
 
     }

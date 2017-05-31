@@ -5729,6 +5729,7 @@
       au < released ; 2016 ; International Journal of Materials and Product Technology Volume 52 ; 52 >
       au < released ; 2016 ; International Journal of Materials and Product Technology Volume 53 ; 53 >
       au < manifest ; 2017 ; International Journal of Materials and Product Technology Volume 54 ; 54 >
+      au < expected ; 2017 ; International Journal of Materials and Product Technology Volume 55 ; 55 >
 
     }
 
@@ -5774,7 +5775,7 @@
       au < manifest ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 >
       au < released ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 >
-      au < released ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 >
+      au < released ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 > #volume 7 issue 3 & 4 not online yet
       au < expected ; 2017 ; International Journal of Materials Engineering Innovation Volume 8 ; 8 >
 
     }
@@ -5822,6 +5823,7 @@
       au < released ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 >
       au < released ; 2016 ; International Journal of Mathematics in Operational Research Volume 9 ; 9 >
       au < manifest ; 2017 ; International Journal of Mathematics in Operational Research Volume 10 ; 10 >
+      au < expected ; 2017 ; International Journal of Mathematics in Operational Research Volume 11 ; 11 >
 
     }
 
@@ -5838,7 +5840,7 @@
 
       au < doNotProcess ; 2013 ; International Journal of Mechanisms and Robotic Systems Volume 1 ; 1 >
       au < released ; 2014-2015 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 >
-      au < released ; 2016 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 >
+      au < released ; 2016-2017 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 > #volume 3 issue 4 not online yet
       au < expected ; 2017 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 >
 
     }
@@ -5858,9 +5860,8 @@
       au < doNotProcess ; 2012 ; International Journal of Mechatronics and Automation Volume 2 ; 2 >
       au < manifest ; 2013 ; International Journal of Mechatronics and Automation Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 >
-      au < released ; 2015 ; International Journal of Mechatronics and Automation Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Mechatronics and Automation Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Mechatronics and Automation Volume 7 ; 7 >
+      au < released ; 2015-2016 ; International Journal of Mechatronics and Automation Volume 5 ; 5 >
+      au < expected ; 2017 ; International Journal of Mechatronics and Automation Volume 6 ; 6 >
 
     }
 
@@ -5994,9 +5995,8 @@
 
       param[journal_id] = ijmrm
 
-      au < released ; 2014-2015 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 >
-      au < expected ; 2016 ; International Journal of Migration and Residential Mobility Volume 2 ; 2 >
-      au < expected ; 2017 ; International Journal of Migration and Residential Mobility Volume 3 ; 3 >
+      au < released ; 2014-2016 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 >  #volume 1 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Migration and Residential Mobility Volume 2 ; 2 >
 
     }
 
@@ -6114,7 +6114,7 @@
       au < manifest ; 2013 ; International Journal of Modelling in Operations Management Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Modelling in Operations Management Volume 4 ; 4 >
       au < released ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 >
-      au < released ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 >
+      au < released ; 2016 ; International Journal of Modelling in Operations Management Volume 6 ; 6 > #volume 6 issue 3 & 4 not online yet
       au < expected ; 2017 ; International Journal of Modelling in Operations Management Volume 7 ; 7 >
 
     }
@@ -6157,6 +6157,7 @@
       au < released ; 2016 ; International Journal of Modelling, Identification and Control Volume 25 ; 25 >
       au < released ; 2016 ; International Journal of Modelling, Identification and Control Volume 26 ; 26 >
       au < manifest ; 2017 ; International Journal of Modelling, Identification and Control Volume 27 ; 27 >
+      au < expected ; 2017 ; International Journal of Modelling, Identification and Control Volume 28 ; 28 >
 
     }
 
@@ -6172,8 +6173,7 @@
       param[journal_id] = ijme
       # title is not yet published up on 4/11/2013
 
-      au < expected ; 2016 ; International Journal of Molecular Engineering Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Molecular Engineering Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Molecular Engineering Volume 1 ; 1 >
 
     }
 
@@ -6255,9 +6255,8 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Nano and Biomaterials Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; International Journal of Nano and Biomaterials Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Nano and Biomaterials Volume 5 ; 5 >
-      au < released ; 2015 ; International Journal of Nano and Biomaterials Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Nano and Biomaterials Volume 7 ; 7 >
-      au < expected ; 2017 ; International Journal of Nano and Biomaterials Volume 8 ; 8 >
+      au < released ; 2015-2016 ; International Journal of Nano and Biomaterials Volume 6 ; 6 > #volume 6 issue 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Nano and Biomaterials Volume 7 ; 7 >
 
     }
 
