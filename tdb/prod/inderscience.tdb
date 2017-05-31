@@ -4216,6 +4216,7 @@
       au < released ; 2016 ; International Journal of Industrial and Systems Engineering Volume 24 ; 24 >
       au < manifest ; 2017 ; International Journal of Industrial and Systems Engineering Volume 25 ; 25 >
       au < manifest ; 2017 ; International Journal of Industrial and Systems Engineering Volume 26 ; 26 >
+      au < expected ; 2017 ; International Journal of Industrial and Systems Engineering Volume 27 ; 27 >
 
     }
 
@@ -4342,9 +4343,8 @@
       au < doNotProcess ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 >
       au < doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 >
       au < released ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 >
-      au < released ; 2015-2016 ; International Journal of Information and Operations Management Education Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Information and Operations Management Education Volume 7 ; 7 >
-      au < expected ; 2017 ; International Journal of Information and Operations Management Education Volume 8 ; 8 >
+      au < released ; 2015-2016 ; International Journal of Information and Operations Management Education Volume 6 ; 6 > #volume 6 issue 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Information and Operations Management Education Volume 7 ; 7 >
 
     }
 
@@ -4380,9 +4380,8 @@
       au < doNotProcess ; 2007 ; International Journal of Information Quality Volume 1 ; 1 >
       au < doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 >
       au < released ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 >
-      au < released ; 2015-2016 ; International Journal of Information Quality Volume 4 ; 4 >
-      au < expected ; 2016 ; International Journal of Information Quality Volume 5 ; 5 >
-      au < expected ; 2017 ; International Journal of Information Quality Volume 6 ; 6 >
+      au < released ; 2015-2016 ; International Journal of Information Quality Volume 4 ; 4 > #volume 4 issue 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Information Quality Volume 5 ; 5 >
 
     }
 
@@ -4404,7 +4403,8 @@
       au < doNotProcess ; 2011 ; International Journal of Information Systems and Change Management Volume 5 ; 5 >
       au < manifest ; 2012-2013 ; International Journal of Information Systems and Change Management Volume 6 ; 6 >
       au < released ; 2014-2015 ; International Journal of Information Systems and Change Management Volume 7 ; 7 >
-      au < manifest ; 2016-2017 ; International Journal of Information Systems and Change Management Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Information Systems and Change Management Volume 8 ; 8 >
+      au < expected ; 2017 ; International Journal of Information Systems and Change Management Volume 9 ; 9 >
 
     }
 
@@ -4419,9 +4419,8 @@
 
       param[journal_id] = ijisam
 
-      au < released ; 2014-2015 ; International Journal of Information Systems and Management Volume 1 ; 1 >
-      au < expected ; 2016 ; International Journal of Information Systems and Management Volume 2 ; 2 >
-      au < expected ; 2017 ; International Journal of Information Systems and Management Volume 3 ; 3 >
+      au < released ; 2014-2015 ; International Journal of Information Systems and Management Volume 1 ; 1 > #volume 1 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Information Systems and Management Volume 2 ; 2 >
 
     }
 
@@ -4468,8 +4467,7 @@
 
       au < doNotProcess ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 >
       au < released ; 2012-2013 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
-      au < released ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 >
-      au < expected ; 2016-2017 ; International Journal of Information Technology, Communications and Convergence Volume 4 ; 4 >
+      au < released ; 2014-2015 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 > #volume 3 issue 3 & 4 not online yet
 
     }
 
@@ -4525,7 +4523,7 @@
       au < doNotProcess ; 2012 ; International Journal of Innovation and Regional Development Volume 4 ; 4 >
       au < released ; 2013-2014 ; International Journal of Innovation and Regional Development Volume 5 ; 5 >
       au < released ; 2015 ; International Journal of Innovation and Regional Development Volume 6 ; 6 >
-      au < released ; 2016 ; International Journal of Innovation and Regional Development Volume 7 ; 7 >
+      au < released ; 2016 ; International Journal of Innovation and Regional Development Volume 7 ; 7 > #volume 7 issue 4 not online yet
       au < expected ; 2017 ; International Journal of Innovation and Regional Development Volume 8 ; 8 >
 
     }
@@ -4607,7 +4605,7 @@
 
       param[journal_id] = ijit
 
-      au < released ; 2011-2014 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
+      au < released ; 2011-2015 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
 
     }
 
@@ -4631,7 +4629,7 @@
       au < doNotProcess ; 2012 ; International Journal of Integrated Supply Management Volume 7 ; 7 >
       au < manifest ; 2013 ; International Journal of Integrated Supply Management Volume 8 ; 8 >
       au < released ; 2014-2015 ; International Journal of Integrated Supply Management Volume 9 ; 9 >
-      au < manifest ; 2016-2017 ; International Journal of Integrated Supply Management Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Integrated Supply Management Volume 10 ; 10 >
       au < manifest ; 2017 ; International Journal of Integrated Supply Management Volume 11 ; 11 >
 
     }
@@ -4655,7 +4653,7 @@
       au < manifest ; 2013 ; International Journal of Intellectual Property Management Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Intellectual Property Management Volume 7 ; 7 >
       au < released ; 2015 ; International Journal of Intellectual Property Management Volume 8 ; 8 >
-      au < released ; 2016 ; International Journal of Intellectual Property Management Volume 9 ; 9 >
+      au < released ; 2016 ; International Journal of Intellectual Property Management Volume 9 ; 9 > #volume 9 issue 2, 3 & 4 not online yet
       au < expected ; 2017 ; International Journal of Intellectual Property Management Volume 10 ; 10 >
 
     }
@@ -4675,7 +4673,7 @@
       au < doNotProcess ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
       au < doNotProcess ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < doNotProcess ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
-      au < released ; 2012-2014 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
+      au < released ; 2012-2015 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
 
     }
 
@@ -4712,8 +4710,7 @@
       au < doNotProcess ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 >
       au < released ; 2013-2014 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
       au < released ; 2015-2016 ; International Journal of Intelligent Enterprise Volume 3 ; 3 >
-      au < expected ; 2016 ; International Journal of Intelligent Enterprise Volume 4 ; 4 >
-      au < expected ; 2017 ; International Journal of Intelligent Enterprise Volume 5 ; 5 >
+      au < expected ; 2017 ; International Journal of Intelligent Enterprise Volume 4 ; 4 >
 
     }
 
@@ -4736,9 +4733,8 @@
       au < doNotProcess ; 2012 ; International Journal of Intelligent Information and Database Systems Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Intelligent Information and Database Systems Volume 7 ; 7 >
       au < released ; 2014 ; International Journal of Intelligent Information and Database Systems Volume 8 ; 8 >
-      au < released ; 2015 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Intelligent Information and Database Systems Volume 10 ; 10 >
-      au < expected ; 2017 ; International Journal of Intelligent Information and Database Systems Volume 11 ; 11 >
+      au < released ; 2015-2016 ; International Journal of Intelligent Information and Database Systems Volume 9 ; 9 >
+      au < expected ; 2017 ; International Journal of Intelligent Information and Database Systems Volume 10 ; 10 >
 
     }
 
@@ -4788,8 +4784,6 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Intercultural Information Management Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Intercultural Information Management Volume 4 ; 4 >
       au < released ; 2015 ; International Journal of Intercultural Information Management Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Intercultural Information Management Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Intercultural Information Management Volume 7 ; 7 >
 
     }
 
@@ -4829,9 +4823,8 @@
       au < doNotProcess ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 >
       au < doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 >
       au < released ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
-      au < released ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 >
-      au < expected ; 2016 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 >
-      au < expected ; 2017 ; International Journal of Internet Manufacturing and Services Volume 6 ; 6 >
+      au < released ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 > #volume 4 issue 2, 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 >
 
     }
 
@@ -4901,9 +4894,8 @@
       au < doNotProcess ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 >
       au < released ; 2013-2014 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 >
-      au < released ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Internet Technology and Secured Transactions Volume 7 ; 7 >
-      au < expected ; 2017 ; International Journal of Internet Technology and Secured Transactions Volume 8 ; 8 >
+      au < released ; 2015-2016 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
+      au < expected ; 2017 ; International Journal of Internet Technology and Secured Transactions Volume 7 ; 7 >
 
     }
 
@@ -4920,7 +4912,8 @@
 
       au < doNotProcess ; 2008-2011 ; International Journal of Inventory Research Volume 1 ; 1 >
       au < released ; 2013-2015 ; International Journal of Inventory Research Volume 2 ; 2 >
-      au < manifest ; 2016-2017 ; International Journal of Inventory Research Volume 3 ; 3 >
+      au < manifest ; 2016 ; International Journal of Inventory Research Volume 3 ; 3 >
+      au < expected ; 2017 ; International Journal of Inventory Research Volume 4 ; 4 >
 
     }
 
@@ -4936,7 +4929,7 @@
       param[journal_id] = ijimb
 
       au < released ; 2015-2016 ; International Journal of Islamic Marketing and Branding Volume 1 ; 1 >
-      au < manifest ; 2016-2017 ; International Journal of Islamic Marketing and Branding Volume 2 ; 2 >
+      au < manifest ; 2017-2018 ; International Journal of Islamic Marketing and Branding Volume 2 ; 2 >
 
     }
 
@@ -4961,7 +4954,7 @@
       au < doNotProcess ; 2012 ; International Journal of Knowledge and Learning Volume 8 ; 8 >
       au < released ; 2014 ; International Journal of Knowledge and Learning Volume 9 ; 9 >
       au < released ; 2015 ; International Journal of Knowledge and Learning Volume 10 ; 10 >
-      au < released ; 2016 ; International Journal of Knowledge and Learning Volume 11 ; 11 >
+      au < released ; 2016 ; International Journal of Knowledge and Learning Volume 11 ; 11 > #volume 11 issue 4 not online yet
       au < expected ; 2017 ; International Journal of Knowledge and Learning Volume 12 ; 12 >
 
     }
@@ -4981,9 +4974,8 @@
       au < doNotProcess ; 2011 ; International Journal of Knowledge and Web Intelligence Volume 2 ; 2 >
       au < manifest ; 2012 ; International Journal of Knowledge and Web Intelligence Volume 3 ;3 >
       au < manifest ; 2013 ; International Journal of Knowledge and Web Intelligence Volume 4 ; 4 >
-      au < released ; 2014-2016 ; International Journal of Knowledge and Web Intelligence Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Knowledge and Web Intelligence Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Knowledge and Web Intelligence Volume 7 ; 7 >
+      au < released ; 2014-2016 ; International Journal of Knowledge and Web Intelligence Volume 5 ; 5 > #volume 5 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Knowledge and Web Intelligence Volume 6 ; 6 >
 
     }
 
@@ -5042,9 +5034,8 @@
       au < doNotProcess ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 >
       au < doNotProcess ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 >
       au < released ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 >
-      au < released ; 2015-2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 7 ; 7 >
+      au < released ; 2015-2016 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 > #volume 5 issue 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 6 ; 6 >
 
     }
 
