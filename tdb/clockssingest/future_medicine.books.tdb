@@ -10,6 +10,7 @@
   plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureScienceBooksPlugin
   param[base_url] = http://www.futuremedicine.com/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >
+  attr[shift] = xyz
 
   {
 
@@ -174,7 +175,7 @@
     au < finished ; finished ; 2015 ; 978-1-78084-581-4 ; 978-1-78084-579-1 ; 9781780845791 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 1) ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 978-1-78084-584-5 ; 978-1-78084-582-1 ; 9781780845821 ; Hodgkin and Non-Hodgkin Lymphomas Seen through Their Microenvironment: Impact on Diagnosis, Prognosis and Innovative Therapy (Volume 2) ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ;  ; 978-1-78084-423-7 ; 9781780844237 ; Advances in Bladder Cancer Management ; >
-    au < crawling ; exists ; 2016 ;  ; 978-1-78084-489-3 ; 9781780844893 ; Contemporary Approaches to Upper Respiratory Tract Infections ; >
+    au < testing ; exists ; 2016 ;  ; 978-1-78084-489-3 ; 9781780844893 ; Contemporary Approaches to Upper Respiratory Tract Infections ; >
     
   }
 
