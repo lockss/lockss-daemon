@@ -5095,7 +5095,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Learning and Change Volume 6 ; 6 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Learning and Change Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015-2016 ; International Journal of Learning and Change Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Learning and Change Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2017-2018 ; International Journal of Learning and Change Volume 9 ; 9 ; >
 
     }
 
@@ -5184,7 +5184,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Leisure and Tourism Marketing Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Leisure and Tourism Marketing Volume 3 ; 3 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Leisure and Tourism Marketing Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; International Journal of Leisure and Tourism Marketing Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2016-2017 ; International Journal of Leisure and Tourism Marketing Volume 5 ; 5 ; > #volume 5 issue 2, 3 & 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Leisure and Tourism Marketing Volume 6 ; 6 ; >
 
     }
@@ -5222,6 +5222,8 @@
       param[journal_id] = ijlcpe
 
       au < finished ; finished ; 2012-2014 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < exists ; exists ; 2016-2017 ; International Journal of Lifecycle Performance Engineering Volume 2 ; 2 ; > #volume 2 issue 3 & 4 not online yet
+      au < expected ; exists ; 2017 ; International Journal of Lifecycle Performance Engineering Volume 3 ; 3 ; >
 
     }
 
@@ -5283,6 +5285,8 @@
       au < crawling ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 24 ; 24 ; >
       au < crawling ; exists ; 2016 ; International Journal of Logistics Systems and Management Volume 25 ; 25 ; >
       au < manifest ; exists ; 2017 ; International Journal of Logistics Systems and Management Volume 26 ; 26 ; >
+      au < expected ; exists ; 2017 ; International Journal of Logistics Systems and Management Volume 27 ; 27 ; >
+      au < expected ; exists ; 2017 ; International Journal of Logistics Systems and Management Volume 28 ; 28 ; >
 
     }
 
@@ -5307,7 +5311,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Low Radiation Volume 9 ; 9 ; >
       # below au was incorrectly moved to production too early - take it down until year span over
-      au < crawling ; down ; 2015-2016 ; International Journal of Low Radiation Volume 10 ; 10 ; >
+      au < crawling ; down ; 2015-2016 ; International Journal of Low Radiation Volume 10 ; 10 ; > #volume 10 issue 4 not online yet
       au < expected ; exists ; 2017 ; International Journal of Low Radiation Volume 11 ; 11 ; >
 
     }
@@ -5458,9 +5462,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Management Concepts and Philosophy Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Management Concepts and Philosophy Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; International Journal of Management Concepts and Philosophy Volume 8 ; 8 ; >
-      au < finished ; finished ; 2015 ; International Journal of Management Concepts and Philosophy Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; International Journal of Management Concepts and Philosophy Volume 10 ; 10 ; >
-      au < expected ; exists ; 2017 ; International Journal of Management Concepts and Philosophy Volume 11 ; 11 ; >
+      au < finished ; finished ; 2015-2016 ; International Journal of Management Concepts and Philosophy Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < crawling ; exists ; 2017 ; International Journal of Management Concepts and Philosophy Volume 10 ; 10 ; >
 
     }
 
@@ -5475,7 +5478,8 @@
 
       param[journal_id] = ijmd
 
-      au < doNotProcess ; doNotProcess ; 2011-2013 ; International Journal of Management Development Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 ; >
+      au < expected ; exists ; 2017 ; International Journal of Management Development Volume 2 ; 2 ; >
 
     }
 
