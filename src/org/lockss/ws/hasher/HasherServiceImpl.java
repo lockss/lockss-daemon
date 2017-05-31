@@ -93,6 +93,13 @@ public class HasherServiceImpl implements HasherService {
       } else {
 	params.setExcludeSuspectVersions(excludeSuspectVersions.booleanValue());
       }
+      
+      Boolean includeWeight = wsParams.isIncludeWeight();
+      if (includeWeight == null) {
+        params.setIncludeWeight(false);
+      } else {
+        params.setIncludeWeight(includeWeight.booleanValue());
+      }
 
       params.setHashType(wsParams.getHashType());
       params.setLower(wsParams.getLower());
@@ -193,6 +200,13 @@ public class HasherServiceImpl implements HasherService {
 	params.setExcludeSuspectVersions(false);
       } else {
 	params.setExcludeSuspectVersions(excludeSuspectVersions.booleanValue());
+      }
+      
+      Boolean includeWeight = wsParams.isIncludeWeight();
+      if (includeWeight == null) {
+        params.setIncludeWeight(false);
+      } else {
+        params.setIncludeWeight(includeWeight.booleanValue());
       }
 
       params.setHashType(wsParams.getHashType());

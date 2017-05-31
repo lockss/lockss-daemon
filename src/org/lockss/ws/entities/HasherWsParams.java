@@ -41,6 +41,7 @@ public class HasherWsParams {
   private String upper;
   private Boolean recordFilteredStream;
   private Boolean excludeSuspectVersions;
+  private Boolean includeWeight;
   private String algorithm;
   private String hashType;
   private String resultEncoding;
@@ -69,6 +70,19 @@ public class HasherWsParams {
   }
   public void setUrl(String url) {
     this.url = url;
+  }
+  
+  /**
+   * Provides the URL to be hashed.
+   * 
+   * @return Boolean whether to include hash weight
+   */
+  public Boolean isIncludeWeight() {
+    return includeWeight;
+  }
+
+  public void setIncludeWeight(Boolean includeWeight) {
+    this.includeWeight= includeWeight;
   }
 
   /**
