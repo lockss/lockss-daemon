@@ -62,7 +62,6 @@
       <string>1,"^%spubs/journals/%s/v_%s", base_url, journal_id, volume_name</string>
       <string>1,"^%spubs/journals/%s(/)?$", base_url, journal_id</string>
       <string>1,"^%spubs/journals/(%s|download)/a_[0-9]+$", base_url, journal_id</string>
-      <string>2,"^%sinfo/", download_url</string>
       <string>1,"^%s(download/)?\?a=[0-9]+$", download_url</string>
     </list>
   </entry>
