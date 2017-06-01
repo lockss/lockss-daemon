@@ -6306,7 +6306,7 @@
       au < manifest ; 2013 ; International Journal of Nanoparticles Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Nanoparticles Volume 7 ; 7 >
       au < released ; 2015 ; International Journal of Nanoparticles Volume 8 ; 8 >
-      au < released ; 2016 ; International Journal of Nanoparticles Volume 9 ; 9 >
+      au < released ; 2016 ; International Journal of Nanoparticles Volume 9 ; 9 > #volume 9 issue 2, 3 & 4 not online yet
       au < expected ; 2017 ; International Journal of Nanoparticles Volume 10 ; 10 >
 
     }
@@ -6349,11 +6349,9 @@
       >
 
       param[journal_id] = ijns
-      # title is not yet published, 9/19/2013
 
-      au < released ; 2015 ; International Journal of Network Science Volume 1 ; 1 >
-      au < expected ; 2016 ; International Journal of Network Science Volume 2 ; 2 >
-      au < expected ; 2017 ; International Journal of Network Science Volume 3 ; 3 >
+      au < released ; 2016-2017 ; International Journal of Network Science Volume 1 ; 1 >
+      au < expected ; 2017 ; International Journal of Network Science Volume 2 ; 2 >
 
     }
 
@@ -6383,10 +6381,8 @@
       au < manifest ; 2013 ; International Journal of Networking and Virtual Organisations Volume 13 ; 13 >
       au < released ; 2014 ; International Journal of Networking and Virtual Organisations Volume 14 ; 14 >
       au < released ; 2015 ; International Journal of Networking and Virtual Organisations Volume 15 ; 15 >
-      au < released ; 2015 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 >
-      au < manifest ; 2016 ; International Journal of Networking and Virtual Organisations Volume 17 ; 17 >
-      au < expected ; 2016 ; International Journal of Networking and Virtual Organisations Volume 18 ; 18 >
-      au < expected ; 2017 ; International Journal of Networking and Virtual Organisations Volume 19 ; 19 >
+      au < released ; 2016 ; International Journal of Networking and Virtual Organisations Volume 16 ; 16 >
+      au < manifest ; 2017 ; International Journal of Networking and Virtual Organisations Volume 17 ; 17 >
 
     }
 
@@ -6485,6 +6481,7 @@
       au < doNotProcess ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 >
       au < doNotProcess ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 >
       au < released ; 2013-2014 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
+      au < exists ; 2017 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
 
     }
 
@@ -6518,8 +6515,7 @@
       param[journal_id] = ijnss
       # title is not yet published on 4/11/2013
 
-      au < expected ; 2016 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Nuclear Safety and Security Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
 
     }
 
@@ -6563,6 +6559,8 @@
       au < released ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 >
       au < released ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 13 ; 13 >
       au < manifest ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 14 ; 14 >
+      au < expected ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 15 ; 15 >
+      au < expected ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 16 ; 16 >
 
     }
 
@@ -6605,6 +6603,8 @@
       au < released ; 2016 ; International Journal of Operational Research Volume 26 ; 26 >
       au < released ; 2016 ; International Journal of Operational Research Volume 27 ; 27 >
       au < manifest ; 2017 ; International Journal of Operational Research Volume 28 ; 28 >
+      au < expected ; 2017 ; International Journal of Operational Research Volume 29 ; 29 >
+      au < expected ; 2017 ; International Journal of Operational Research Volume 30 ; 30 >
 
     }
 
@@ -6622,7 +6622,8 @@
       au < doNotProcess ; 2010-2011 ; International Journal of Organisational Design and Engineering Volume 1 ; 1 >
       au < doNotProcess ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 >
       au < released ; 2013-2014 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
-      au < manifest ; 2016-2017 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 >
+      au < manifest ; 2016 ; International Journal of Organisational Design and Engineering Volume 4 ; 4 >
+      au < expected ; 2017 ; International Journal of Organisational Design and Engineering Volume 5 ; 5 >
 
     }
 
@@ -6638,7 +6639,8 @@
       param[journal_id] = ijpe
 
       au < released ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
-      au < manifest ; 2016-2017 ; International Journal of Petroleum Engineering Volume 2 ; 2 >
+      au < manifest ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Petroleum Engineering Volume 3 ; 3 >
 
     }
 
@@ -6654,8 +6656,7 @@
       param[journal_id] = ijplp
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2016 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Physiotherapy and Life Physics Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
     }
 
@@ -6671,9 +6672,8 @@
       param[journal_id] = ijps
 
       au < doNotProcess ; 2011-2013 ; International Journal of Planning and Scheduling Volume 1 ; 1 >
-      au < released ; 2014-2015 ; International Journal of Planning and Scheduling Volume 2 ; 2 >
-      au < expected ; 2016 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Planning and Scheduling Volume 4 ; 4 >
+      au < released ; 2014-2016 ; International Journal of Planning and Scheduling Volume 2 ; 2 > #volume 2 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
 
     }
 
@@ -6730,9 +6730,8 @@
       au < doNotProcess ; 2010-2012 ; International Journal of Postharvest Technology and Innovation Volume 2 ; 2 >
       au < manifest ; 2013 ; International Journal of Postharvest Technology and Innovation Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Postharvest Technology and Innovation Volume 4 ; 4 >
-      au < released ; 2015 ; International Journal of Postharvest Technology and Innovation Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Postharvest Technology and Innovation Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Postharvest Technology and Innovation Volume 7 ; 7 >
+      au < released ; 2015-2016 ; International Journal of Postharvest Technology and Innovation Volume 5 ; 5 > #volume 5 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Postharvest Technology and Innovation Volume 6 ; 6 >
 
     }
 
@@ -6776,8 +6775,7 @@
       au < manifest ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Power Electronics Volume 6 ; 6 >
       au < released ; 2015 ; International Journal of Power Electronics Volume 7 ; 7 >
-      au < released ; 2016 ; International Journal of Power Electronics Volume 8 ; 8 >
-      au < expected ; 2017 ; International Journal of Power Electronics Volume 9 ; 9 >
+      au < released ; 2016-2017 ; International Journal of Power Electronics Volume 8 ; 8 >
 
     }
 
@@ -6841,8 +6839,7 @@
       au < manifest ; 2013 ; International Journal of Private Law Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Private Law Volume 7 ; 7 >
       au < released ; 2015 ; International Journal of Private Law Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Private Law Volume 9 ; 9 >
-      au < expected ; 2017 ; International Journal of Private Law Volume 10 ; 10 >
+      au < expected ; 2017 ; International Journal of Private Law Volume 9 ; 9 >
 
     }
 
@@ -6881,8 +6878,7 @@
       au < doNotProcess ; 2009-2011 ; International Journal of Process Systems Engineering Volume 1 ; 1 >
       au < released ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 >
       au < released ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 >
-      au < released ; 2016 ; International Journal of Process Systems Engineering Volume 4 ; 4 >
-      au < expected ; 2017 ; International Journal of Process Systems Engineering Volume 5 ; 5 >
+      au < released ; 2016-2017 ; International Journal of Process Systems Engineering Volume 4 ; 4 > #volume 4 issue 2, 3 & 4 not online yet
 
     }
 
@@ -6982,8 +6978,7 @@
       param[journal_id] = ijpsq
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2016 ; International Journal of Product Sound Quality Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Product Sound Quality Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Product Sound Quality Volume 1 ; 1 >
 
     }
 
@@ -7018,6 +7013,8 @@
       au < released ; 2016 ; International Journal of Productivity and Quality Management Volume 18 ; 18 >
       au < released ; 2016 ; International Journal of Productivity and Quality Management Volume 19 ; 19 >
       au < manifest ; 2017 ; International Journal of Productivity and Quality Management Volume 20 ; 20 >
+      au < expected ; 2017 ; International Journal of Productivity and Quality Management Volume 21 ; 21 >
+      au < expected ; 2017 ; International Journal of Productivity and Quality Management Volume 22 ; 22 >
 
     }
 
@@ -7104,9 +7101,8 @@
       param[journal_id] = ijpspm
 
       au < doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 >
-      au < released ; 2012-2015 ; International Journal of Public Sector Performance Management Volume 2 ; 2 >
-      au < manifest ; 2016 ; International Journal of Public Sector Performance Management Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Public Sector Performance Management Volume 4 ; 4 >
+      au < released ; 2012-2016 ; International Journal of Public Sector Performance Management Volume 2 ; 2 >
+      au < manifest ; 2017-2018 ; International Journal of Public Sector Performance Management Volume 3 ; 3 >
 
     }
 
@@ -7123,7 +7119,7 @@
 
       au < doNotProcess ; 2009-2011 ; International Journal of Quality and Innovation Volume 1 ; 1 >
       au < released ; 2012-2014 ; International Journal of Quality and Innovation Volume 2 ; 2 >
-      au < manifest ; 2016-2017 ; International Journal of Quality and Innovation Volume 3 ; 3 >
+      au < manifest ; 2016-2017 ; International Journal of Quality and Innovation Volume 3 ; 3 > #volume 3 issue 2, 3 & 4 not online yet
 
     }
 
@@ -7143,8 +7139,7 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Quality Engineering and Technology Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Quality Engineering and Technology Volume 4 ; 4 >
       au < released ; 2015 ; International Journal of Quality Engineering and Technology Volume 5 ; 5 >
-      au < released ; 2016 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Quality Engineering and Technology Volume 7 ; 7 >
+      au < released ; 2016-2017 ; International Journal of Quality Engineering and Technology Volume 6 ; 6 > #volume 6 issue 3 & 4 not online yet
 
     }
 
@@ -7160,10 +7155,9 @@
       param[journal_id] = ijqre
 
       au < manifest ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 >
-      au < released ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 >
-      au < released ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 >
-      au < expected ; 2016 ; International Journal of Quantitative Research in Education Volume 4 ; 4 >
-      au < expected ; 2017 ; International Journal of Quantitative Research in Education Volume 5 ; 5 >
+      au < released ; 2014-2015 ; International Journal of Quantitative Research in Education Volume 2 ; 2 >
+      au < released ; 2016 ; International Journal of Quantitative Research in Education Volume 3 ; 3 >
+      au < expected ; 2017 ; International Journal of Quantitative Research in Education Volume 4 ; 4 >
 
     }
 
@@ -7182,8 +7176,7 @@
       au < doNotProcess ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 >
       au < doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 >
       au < released ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 >
-      au < expected ; 2016 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 >
-      au < expected ; 2017 ; International Journal of Radio Frequency Identification Technology and Applications Volume 6 ; 6 >
+      au < expected ; 2017 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 ; 5 >
 
     }
 
@@ -7203,8 +7196,7 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 >
       au < released ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 >
-      au < released ; 2016 ; International Journal of Rapid Manufacturing Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Rapid Manufacturing Volume 7 ; 7 >
+      au < released ; 2016-2017 ; International Journal of Rapid Manufacturing Volume 6 ; 6 >
 
     }
 
@@ -7251,7 +7243,7 @@
       au < manifest ; 2013 ; International Journal of Reliability and Safety Volume 7 ; 7 >
       au < released ; 2014 ; International Journal of Reliability and Safety Volume 8 ; 8 >
       au < released ; 2015 ; International Journal of Reliability and Safety Volume 9 ; 9 >
-      au < released ; 2016 ; International Journal of Reliability and Safety Volume 10 ; 10 >
+      au < released ; 2016 ; International Journal of Reliability and Safety Volume 10 ; 10 > #volume 10 issue 4 not online yet
       au < expected ; 2017 ; International Journal of Reliability and Safety Volume 11 ; 11 >
 
     }
@@ -7268,8 +7260,7 @@
       param[journal_id] = ijrem
       # title is not yet published on 9/26/2013
 
-      au < expected ; 2016 ; International Journal of Remanufacturing Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Remanufacturing Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Remanufacturing Volume 1 ; 1 >
 
     }
 
@@ -7314,7 +7305,8 @@
       au < doNotProcess ; 2012 ; International Journal of Revenue Management Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 >
       au < released ; 2014-2015 ; International Journal of Revenue Management Volume 8 ; 8 >
-      au < manifest ; 2016-2017 ; International Journal of Revenue Management Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Revenue Management Volume 9 ; 9 >
+      au < exists ; 2017 ; International Journal of Revenue Management Volume 10 ; 10 >
 
     }
 
@@ -7427,6 +7419,8 @@
       au < released ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 >
       au < released ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 >
       au < manifest ; 2017 ; International Journal of Sensor Networks Volume 23 ; 23 >
+      au < expected ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 >
+      au < expected ; 2017 ; International Journal of Sensor Networks Volume 25 ; 25 >
 
     }
 
@@ -7442,9 +7436,8 @@
       param[journal_id] = ijscom
 
       au < released ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
-      au < released ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 >
-      au < expected ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Service and Computing Oriented Manufacturing Volume 4 ; 4 >
+      au < released ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 >
 
     }
 
@@ -7485,6 +7478,8 @@
       au < released ; 2016 ; International Journal of Services and Operations Management Volume 24 ; 24 >
       au < released ; 2016 ; International Journal of Services and Operations Management Volume 25 ; 25 >
       au < manifest ; 2017 ; International Journal of Services and Operations Management Volume 26 ; 26 >
+      au < expected ; 2017 ; International Journal of Services and Operations Management Volume 27 ; 27 >
+      au < expected ; 2017 ; International Journal of Services and Operations Management Volume 28 ; 28 >
 
     }
 
@@ -7532,7 +7527,7 @@
       au < doNotProcess ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 >
       au < doNotProcess ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 >
       au < doNotProcess ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 >
-      au < manifest ; 2013 ; International Journal of Services Operations and Informatics Volume 8 ; 8 >
+      au < manifest ; 2013-2017 ; International Journal of Services Operations and Informatics Volume 8 ; 8 >
 
     }
 
@@ -7552,8 +7547,7 @@
       au < doNotProcess ; 2010 ; International Journal of Services Sciences Volume 3 ; 3 >
       au < doNotProcess ; 2011-2012 ; International Journal of Services Sciences Volume 4 ; 4 >
       au < released ; 2013-2015 ; International Journal of Services Sciences Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Services Sciences Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Services Sciences Volume 7 ; 7 >
+      au < expected ; 2017 ; International Journal of Services Sciences Volume 6 ; 6 >
 
     }
 
@@ -7611,9 +7605,8 @@
       au < doNotProcess ; 2012 ; International Journal of Services, Economics and Management Volume 4 ; 4 >
       au < manifest ; 2013 ; International Journal of Services, Economics and Management Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Services, Economics and Management Volume 6 ; 6 >
-      au < released ; 2015 ; International Journal of Services, Economics and Management Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Services, Economics and Management Volume 8 ; 8 >
-      au < expected ; 2017 ; International Journal of Services, Economics and Management Volume 9 ; 9 >
+      au < released ; 2015-2016 ; International Journal of Services, Economics and Management Volume 7 ; 7 >
+      au < expected ; 2017 ; International Journal of Services, Economics and Management Volume 8 ; 8 >
 
     }
 
@@ -7710,8 +7703,7 @@
       au < doNotProcess ; 2012 ; International Journal of Six Sigma and Competitive Advantage Volume 7 ; 7 >
       au < released ; 2013-2014 ; International Journal of Six Sigma and Competitive Advantage Volume 8 ; 8 >
       au < released ; 2015 ; International Journal of Six Sigma and Competitive Advantage Volume 9 ; 9 >
-      au < released ; 2016 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 >
-      au < expected ; 2017 ; International Journal of Six Sigma and Competitive Advantage Volume 11 ; 11 >
+      au < released ; 2016-2017 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 > #volume 10 issue 3 & 4 not online yet
 
     }
 
@@ -7760,7 +7752,7 @@
       au < doNotProcess ; 2011-2012 ; International Journal of Social Entrepreneurship and Innovation Volume 1 ; 1 >
       au < manifest ; 2013 ; International Journal of Social Entrepreneurship and Innovation Volume 2 ; 2 >
       au < released ; 2014-2015 ; International Journal of Social Entrepreneurship and Innovation Volume 3 ; 3 >
-      au < manifest ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 >
+      au < manifest ; 2016-2017 ; International Journal of Social Entrepreneurship and Innovation Volume 4 ; 4 > #volume 4 issue 4 not online yet
 
     }
 
@@ -7776,9 +7768,8 @@
       param[journal_id] = ijsnm
 
       au < released ; 2012-2013 ; International Journal of Social Network Mining Volume 1 ; 1 >
-      au < released ; 2015 ; International Journal of Social Network Mining Volume 2 ; 2 >
-      au < expected ; 2016 ; International Journal of Social Network Mining Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Social Network Mining Volume 4 ; 4 >
+      au < released ; 2015-2016 ; International Journal of Social Network Mining Volume 2 ; 2 >#volume 2 issue 4 not online yet
+      au < expected ; 2017 ; International Journal of Social Network Mining Volume 3 ; 3 >
 
     }
 
@@ -7817,8 +7808,7 @@
       param[journal_id] = ijseta
 
       au < released ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 >
-      au < expected ; 2016 ; International Journal of Software Engineering, Technology and Applications Volume 2 ; 2 >
-      au < expected ; 2017 ; International Journal of Software Engineering, Technology and Applications Volume 3 ; 3 >
+      au < expected ; 2017 ; International Journal of Software Engineering, Technology and Applications Volume 2 ; 2 >
 
     }
 
@@ -7857,8 +7847,7 @@
       au < doNotProcess ; 2013 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
       au < released ; 2014 ; International Journal of Space Science and Engineering Volume 2 ; 2 >
       au < released ; 2015 ; International Journal of Space Science and Engineering Volume 3 ; 3 >
-      au < released ; 2016 ; International Journal of Space Science and Engineering Volume 4 ; 4 >
-      au < expected ; 2017 ; International Journal of Space Science and Engineering Volume 5 ; 5 >
+      au < released ; 2016-2017 ; International Journal of Space Science and Engineering Volume 4 ; 4 > #volume 4 issue 3 & 4 not online yet
 
     }
 
@@ -7931,8 +7920,7 @@
       au < doNotProcess ; 2012 ; International Journal of Strategic Change Management Volume 4 ; 4 >
       au < released ; 2013-2014 ; International Journal of Strategic Change Management Volume 5 ; 5 >
       au < released ; 2015 ; International Journal of Strategic Change Management Volume 6 ; 6 >
-      au < released ; 2016 ; International Journal of Strategic Change Management Volume 7 ; 7 >
-      au < expected ; 2017 ; International Journal of Strategic Change Management Volume 8 ; 8 >
+      au < released ; 2016-2017 ; International Journal of Strategic Change Management Volume 7 ; 7 > #volume 7 issue 2, 3 & 4 not online yet
 
     }
 
@@ -7949,8 +7937,7 @@
 
       au < doNotProcess ; 2012-2013 ; International Journal of Strategic Engineering Asset Management Volume 1 ; 1 >
       au < released ; 2014-2015 ; International Journal of Strategic Engineering Asset Management Volume 2 ; 2 >
-      au < released ; 2016 ; International Journal of Strategic Engineering Asset Management Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Strategic Engineering Asset Management Volume 4 ; 4 >
+      au < released ; 2016-2017 ; International Journal of Strategic Engineering Asset Management Volume 3 ; 3 > #volume 3 issue 2, 3 & 4 not online yet
 
     }
 
@@ -7990,8 +7977,7 @@
 
       param[journal_id] = ijsrpsd
 
-      au < expected ; 2016 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 >
-      au < expected ; 2017 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 2 ; 2 >
+      au < expected ; 2017 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 >
 
     }
 
@@ -8033,8 +8019,7 @@
 
       au < doNotProcess ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
       au < released ; 2012-2014 ; International Journal of Sustainable Design Volume 2 ; 2 >
-      au < released ; 2016 ; International Journal of Sustainable Design Volume 3 ; 3 >
-      au < expected ; 2017 ; International Journal of Sustainable Design Volume 4 ; 4 >
+      au < released ; 2016-2017 ; International Journal of Sustainable Design Volume 3 ; 3 > #volume 3 issue 2, 3 & 4 not online yet
 
     }
 
@@ -8109,8 +8094,7 @@
       au < doNotProcess ; 2008-2009 ; International Journal of Sustainable Manufacturing Volume 1 ; 1 >
       au < doNotProcess ; 2010-2012 ; International Journal of Sustainable Manufacturing Volume 2 ; 2 >
       au < released ; 2013-2015 ; International Journal of Sustainable Manufacturing Volume 3 ; 3 >
-      au < expected ; 2016 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 >
-      au < expected ; 2017 ; International Journal of Sustainable Manufacturing Volume 5 ; 5 >
+      au < expected ; 2017 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 >
 
     }
 
@@ -8127,7 +8111,7 @@
 
       au < released ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 >
       au < released ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 >
-      au < expected ; 2016-2017 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 >
+      au < expected ; 2017 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 >
 
     }
 
@@ -8169,9 +8153,8 @@
       au < doNotProcess ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
       au < doNotProcess ; 2011-2012 ; International Journal of Sustainable Strategic Management Volume 3 ; 3 >
       au < released ; 2013-2014 ; International Journal of Sustainable Strategic Management Volume 4 ; 4 >
-      au < released ; 2015 ; International Journal of Sustainable Strategic Management Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Sustainable Strategic Management Volume 6 ; 6 >
-      au < expected ; 2017 ; International Journal of Sustainable Strategic Management Volume 7 ; 7 >
+      au < released ; 2015-2016 ; International Journal of Sustainable Strategic Management Volume 5 ; 5 > #volume 5 issue 3 & 4 not online yet
+      au < expected ; 2017 ; International Journal of Sustainable Strategic Management Volume 6 ; 6 >
 
     }
 
@@ -8225,7 +8208,8 @@
 
       param[journal_id] = ijscip
 
-      au < doNotProcess ; 2012-2014 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
+      au < exists ; 2012-2015 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
+      au < exists ; 2017 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 >
 
     }
 
