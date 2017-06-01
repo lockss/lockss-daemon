@@ -628,7 +628,7 @@ while (my $line = <>) {
             $result = "--"
         }
         sleep(4);
-
+        
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
         #printf("%s\n",decode_entities($tmp));
@@ -652,6 +652,50 @@ while (my $line = <>) {
             $result = "--"
         }
         sleep(4);
+        
+  } elsif ($plugin eq "GeorgThiemeVerlagBooksPlugin") {
+        $url = sprintf("%sproducts/ebooks/book/%s",
+          $param{base_url}, $param{doi});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
+            if (defined($man_contents) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
+                 if ($man_contents =~ m/<h1 class="productTitle">(.*)<\/h1>/si) {               
+                    $vol_title = $1
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(4);                
+        
+  } elsif ($plugin eq "ClockssGeorgThiemeVerlagBooksPlugin") {
+        $url = sprintf("%sproducts/ebooks/book/%s",
+          $param{base_url}, $param{doi});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        #printf("response: %s", $resp->status_line);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/products\/ebooks\/pdf/)) {
+                if ($man_contents =~ m/<h1 class="productTitle">(.*)<\/h1>/si) {               
+                    $vol_title = $1
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(4);        
 
   } elsif (($plugin eq "TaylorAndFrancisPlugin") ||
            ($plugin eq "GenericAtyponPlugin") ||
