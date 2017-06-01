@@ -6296,7 +6296,7 @@
       au < finished ; finished ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 ; >
       au < zapped ; finished ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 ; >
       au < finished ; finished ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2013 ; International Journal of Services Operations and Informatics Volume 8 ; 8 ; >
+      au < superseded ; exists ; 2013 ; International Journal of Services Operations and Informatics Volume 8 [superseded] ; 8 ; >
 
     }
 
@@ -6880,7 +6880,7 @@
 
       param[journal_issn] = 1759-9342
       
-      au < finished ; crawling ; 2012-2014 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 ; >
+      au < superseded ; superseded ; 2012-2014 ; International Journal of Systems Control and Information Processing Volume 1 [superseded] ; 1 ; >
 
     }
 
