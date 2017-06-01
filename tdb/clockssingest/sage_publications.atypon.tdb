@@ -919,7 +919,7 @@
       au < crawling ; exists ; 2011 ; Alternative Law Journal Volume 36 ; 36 ; aljb ; >
       au < crawling ; exists ; 2012 ; Alternative Law Journal Volume 37 ; 37 ; aljb ; >
       au < crawling ; exists ; 2013 ; Alternative Law Journal Volume 38 ; 38 ; aljb ; >
-      au < crawling ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
+      au < frozen ; exists ; 2014 ; Alternative Law Journal Volume 39 ; 39 ; aljb ; >
       au < crawling ; exists ; 2015 ; Alternative Law Journal Volume 40 ; 40 ; aljb ; >
       au < frozen ; exists ; 2016 ; Alternative Law Journal Volume 41 ; 41 ; aljb ; >
       au < expected ; exists ; 2017 ; Alternative Law Journal Volume 42 ; 42 ; aljb ; >
@@ -1031,7 +1031,7 @@
       au < crawling ; exists ; 2011 ; The American Economist Volume 56 ; 56 ; aexb ; >
       au < crawling ; exists ; 2012 ; The American Economist Volume 57 ; 57 ; aexb ; >
       au < crawling ; exists ; 2013 ; The American Economist Volume 58 ; 58 ; aexb ; >
-      au < crawling ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
+      au < frozen ; exists ; 2014 ; The American Economist Volume 59 ; 59 ; aexb ; >
       au < crawling ; exists ; 2015 ; The American Economist Volume 60 ; 60 ; aexb ; >
       au < frozen ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; aexb ; >
       au < manifest ; exists ; 2017 ; The American Economist Volume 62 ; 62 ; aexb ; >
@@ -1379,7 +1379,7 @@
       au < crawling ; exists ; 2011 ; American Journal of Law & Medicine Volume 37 ; 37 ; jlma ; >
       au < crawling ; exists ; 2012 ; American Journal of Law & Medicine Volume 38 ; 38 ; jlma ; >
       au < crawling ; exists ; 2013 ; American Journal of Law & Medicine Volume 39 ; 39 ; jlma ; >
-      au < crawling ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; jlma ; >
+      au < frozen ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; jlma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; jlma ; >
       au < frozen ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; jlma ; >
       au < expected ; exists ; 2017 ; American Journal of Law & Medicine Volume 43 ; 43 ; jlma ; >
@@ -3926,7 +3926,7 @@
     >
       #param[base_url] = http://bds.sagepub.com/
 
-      au < crawling ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; bdsa ; >
+      au < frozen ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; bdsa ; >
       au < frozen ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; bdsa ; >
       au < frozen ; exists ; 2016 ; Big Data & Society Volume 3 ; 3 ; bdsa ; >
       au < manifest ; exists ; 2017 ; Big Data & Society Volume 4 ; 4 ; bdsa ; >
