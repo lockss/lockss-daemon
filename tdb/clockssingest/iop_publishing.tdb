@@ -521,7 +521,6 @@
     >
 
     param[journal_issn] = 1748-9326
-    comment[ingNotReady] = crawl failed, Fetch error - access denied, RU4441
 
     au < doNotProcess ; doNotProcess ; 2006 ; Environmental Research Letters Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2007 ; Environmental Research Letters Volume 2 ; 2 ; > 
@@ -1186,7 +1185,6 @@
 
     param[journal_issn] = 0960-1317
     comment[param] = print issn preferred
-    comment[ingNotReady] = 403 Forbidden fetch error, RU4518
 
     au < doNotProcess ; doNotProcess ; 1991 ; Journal of Micromechanics and Microengineering Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 1992 ; Journal of Micromechanics and Microengineering Volume 2 ; 2 ; > 
@@ -1743,7 +1741,6 @@
     param[journal_issn] = 0954-3899
     comment[param] = print issn preferred
     comment[continues] = 0305-4616
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics G: Nuclear and Particle Physics Volume 15 ; 15 ; > 
     au < doNotProcess ; doNotProcess ; 1990 ; Journal of Physics G: Nuclear and Particle Physics Volume 16 ; 16 ; > 
@@ -1815,7 +1812,6 @@
 
     param[journal_issn] = 0953-8984
     comment[param] = print issn preferred
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 1989 ; Journal of Physics: Condensed Matter Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 1990 ; Journal of Physics: Condensed Matter Volume 2 ; 2 ; > 
@@ -1858,8 +1854,6 @@
 
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
-    comment[ingNotReady170] = crawl failure
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Physics: Conference Series Volume 2 ; 2 ; >
@@ -2594,7 +2588,6 @@
     >
     
     param[journal_issn] = 1742-5468
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2004 ; 2004 ; > 
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Statistical Mechanics: Theory and Experiment Volume 2005 ; 2005 ; > 
@@ -2704,7 +2697,6 @@
 
     param[journal_issn] = 0957-0233
     comment[param] = print issn preferred
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 1990 ; Measurement Science and Technology Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 1991 ; Measurement Science and Technology Volume 2 ; 2 ; > 
@@ -2907,7 +2899,6 @@
     >
     
     param[journal_issn] = 1367-2630
-    comment[ingNotReady] = crawl failure
 
     au < doNotProcess ; doNotProcess ; 1999 ; New Journal of Physics Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2000 ; New Journal of Physics Volume 2 ; 2 ; > 
@@ -3224,7 +3215,6 @@
 
     param[journal_issn] = 0031-9120
     comment[param] = print issn preferred
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 1966 ; Physics Education Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 1967 ; Physics Education Volume 2 ; 2 ; > 
@@ -3290,7 +3280,6 @@
 
     param[journal_issn] = 0031-9155
     comment[param] = print issn preferred
-    comment[ingNotReady] = low agreement
 
     au < doNotProcess ; doNotProcess ; 1956 ; Physics in Medicine and Biology Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 1957 ; Physics in Medicine and Biology Volume 2 ; 2 ; > 
@@ -3468,7 +3457,6 @@
     param[journal_issn] = 0741-3335
     comment[param] = print issn preferred 
     comment[continues] = 0032-1028
-    comment[ingNotReady] = low agreement
  
     au < doNotProcess ; doNotProcess ; 1984 ; Plasma Physics and Controlled Fusion Volume 26 ; 26 ; > 
     au < doNotProcess ; doNotProcess ; 1985 ; Plasma Physics and Controlled Fusion Volume 27 ; 27 ; > 
