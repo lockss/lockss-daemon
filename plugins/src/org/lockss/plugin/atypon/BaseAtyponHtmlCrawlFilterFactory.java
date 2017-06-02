@@ -115,6 +115,9 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div",  "class", "references"),
     // ASCE
     HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
+    // T&F: <ul class=\"references numeric-ordered-list\" id=\"references-Section\">
+    HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "^references"),
+    HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
     //maney, future-science (also in child...will remove later)
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
 

@@ -69,6 +69,25 @@ public class TestTafHtmlCrawlFilterFactory extends LockssTestCase {
           "</span>";
   private static final String notesFiltered = 
       "";
+  
+  private static final String ref=
+      "<ul class=\"references numeric-ordered-list\" id=\"references-Section\">" +
+          "<h2 id=\"figures\">References</h2>" +
+          "<li id=\"CIT0007\">" +
+          "<span>" +
+          "<span class=\"hlFld-ContribAuthor\">Forsyth, <span class=\"NLM+given-names\">A.</span>" +
+          "</span> (<span class=\"NLM+year\">2001</span>). <i>" +
+          "Planning Example</i> " +
+          "<a href=\"http://www.tandfonline.com/doi/pdf/10.1080/2\" target=\"_blank\">http://www.tandfonline.com/doi/pdf/10.1080/2</a>" +
+          "<div class=\"xlinks-container\">" +
+          "</div> <div class=\"googleScholar-container\">" +
+          "</div>" +
+          "</span>" +
+          "</li>" +
+          "</ul>";   
+  private static final String refFiltered=
+      "";      
+  
 
   /*
    *  Compare Html and HtmlHashFiltered
@@ -83,6 +102,12 @@ public class TestTafHtmlCrawlFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(notes), Constants.DEFAULT_ENCODING);
     assertEquals(notesFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testRef() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(ref), Constants.DEFAULT_ENCODING);
+    assertEquals(refFiltered, StringUtil.fromInputStream(actIn));
   }
   
 

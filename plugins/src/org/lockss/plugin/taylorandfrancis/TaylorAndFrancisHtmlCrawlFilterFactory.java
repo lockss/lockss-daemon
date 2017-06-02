@@ -47,7 +47,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
   static NodeFilter[] filters = new NodeFilter[]{
-    
+        
     /*******based on analysis on 3/31/17*****************/
     // found overcrawling due to new section at the bottom of full-text called "Notes" with
     // live links to references AND the same live links in spans used for scrollable overlays.
@@ -92,7 +92,9 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlF
     // full page with references in a list at the bottom - some with direct links, see
     //example: http://www.tandfonline.com/doi/full/10.1080/09064702.2012.670665#.U0weNlXC02c
     // reference #20
-    HtmlNodeFilters.tagWithAttribute("ul",  "class", "references"),     
+    // modified to be regex on 6/2/17 to handle ul class="references other word" id="references-Section"
+    // see http://www.tandfonline.com/doi/full/10.1080/12265934.2016.1182053
+    HtmlNodeFilters.tagWithAttributeRegex("ul",  "class", "^references"),     
     // if has "doi/mlt" will crawl filter out - but remove in case it doesn't
     HtmlNodeFilters.tagWithAttribute("li",  "class", "relatedArticleLink"),     
 
