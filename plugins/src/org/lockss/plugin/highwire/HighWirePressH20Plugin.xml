@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>121</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -178,7 +178,7 @@
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>title_attribute:highwire_crawl_pool:HighWire</string>
+    <string>title_attribute:highwire_crawl_pool:HighWireClassic</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

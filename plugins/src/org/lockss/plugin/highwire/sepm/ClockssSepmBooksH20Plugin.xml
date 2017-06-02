@@ -19,10 +19,10 @@
   <entry>
     <string>au_name</string>
     <string>"SEPM Books Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>  
+  </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -47,8 +47,8 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>121</string>
-  </entry>  
+    <string>122</string>
+  </entry>
   <entry>
     <string>au_start_url</string>
     <string>"%ssite/misc/archive.xhtml", base_url, volume_name</string>
@@ -135,19 +135,6 @@
     <string>org.lockss.plugin.highwire.sepm.SepmBooksRisMetadataExtractorFactory</string>
    </entry>
   </map>
-  </entry>    
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
-    <string>au_mime_rate_limiter_map</string>
-    <map>
-      <entry>
-        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3000</string>
-      </entry>
-    </map>
   </entry>
   <entry>
     <string>clockss_override</string>
