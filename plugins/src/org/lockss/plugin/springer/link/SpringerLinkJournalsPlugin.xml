@@ -33,8 +33,9 @@
     </map>
   </entry>
   <entry>
+  <!--  urlGenerator not yet deployed -->
     <string>required_daemon_version</string>
-    <string>1.70.0</string>
+    <string>1.73.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -80,7 +81,7 @@
     <string>au_name</string>
     <string>"SpringerLink Journals Plugin, Base URL %s, Download URL %s, eISSN %s, Volume %s", base_url, download_url, journal_eissn, volume_name</string>
   </entry>
-  <!-- overrides parents start url, but not used by crawl seed -->
+  <!-- CrawlSeed takes precedence but leave it in for safety in case daemon expects it somewhere -->
   <entry>
     <string>au_start_url</string>
     <string>"%s/lockss.txt", base_url</string>
@@ -122,6 +123,10 @@
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkJournalsCrawlSeedFactory</string>
   </entry>
+  <entry>
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkAccessUrlFactory</string>
+  </entry>    
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
