@@ -20,16 +20,16 @@
     
       attr[journal_id] = 347
 
-        au < testing ; 2003 ; JASEAN Economic Bulletin Volume 20 [2003] ; 6186 >
+        au < ready ; 2003 ; JASEAN Economic Bulletin Volume 20 [2003] ; 6186 >
         au < testing ; 2004 ; JASEAN Economic Bulletin Volume 21 [2004] ; 6185 >
         au < ready ; 2005 ; JASEAN Economic Bulletin Volume 22 [2005] ; 6184 >
-        au < testing ; 2006 ; JASEAN Economic Bulletin Volume 23 [2006] ; 3171 >
+        au < ready ; 2006 ; JASEAN Economic Bulletin Volume 23 [2006] ; 3171 >
         au < ready ; 2007 ; JASEAN Economic Bulletin Volume 24 [2007] ; 3403 >
         au < testing ; 2008 ; JASEAN Economic Bulletin Volume 25 [2008] ; 3849 >
         au < ready ; 2009 ; JASEAN Economic Bulletin Volume 26 [2009] ; 4335 >
         au < ready ; 2010 ; JASEAN Economic Bulletin Volume 27 [2010] ; 6162 >
         au < ready ; 2011 ; JASEAN Economic Bulletin Volume 28 [2011] ; 7116 >
-        au < testing ; 2012 ; JASEAN Economic Bulletin Volume 29 [2012] ; 8188 >
+        au < ready ; 2012 ; JASEAN Economic Bulletin Volume 29 [2012] ; 8188 >
 
     }
     {
@@ -51,11 +51,11 @@
         au < ready ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 [2008] ; 3789 >
         au < testing ; 2009 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 [2009] ; 4316 >
         au < ready ; 2010 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 32 [2010] ; 6163 >
-        au < testing ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 [2011] ; 7085 >
+        au < ready ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 [2011] ; 7085 >
         au < ready ; 2012 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 34 [2012] ; 8111 >
         au < ready ; 2013 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 35 [2013] ; 9087 >
         au < testing ; 2014 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 36 [2014] ; 10026 >
-        au < testing ; 2015 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 37 [2015] ; 10588 >
+        au < ready ; 2015 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 37 [2015] ; 10588 >
         au < ready ; 2016 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 38 [2016] ; 11141 >
 
     }
@@ -71,9 +71,9 @@
       attr[journal_id] = 347
       #2003-2012 are listed under JASEAN Economic Bulletin 0217-4472
 
-        au < testing ; 2013 ; Journal of Southeast Asian Economies (JSEAE) Volume 30 [2013] ; 9200 >
+        au < ready ; 2013 ; Journal of Southeast Asian Economies (JSEAE) Volume 30 [2013] ; 9200 >
         au < ready ; 2014 ; Journal of Southeast Asian Economies (JSEAE) Volume 31 [2014] ; 9982 >
-        au < testing ; 2015 ; Journal of Southeast Asian Economies (JSEAE) Volume 32 [2015] ; 10587 >
+        au < ready ; 2015 ; Journal of Southeast Asian Economies (JSEAE) Volume 32 [2015] ; 10587 >
         au < testing ; 2016 ; Journal of Southeast Asian Economies (JSEAE) Volume 33 [2016] ; 11138 >
 
     }
@@ -88,19 +88,19 @@
 
       attr[journal_id] = 352
 
-        au < testing ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 [2003] ; 6190 >
+        au < ready ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 [2003] ; 6190 >
         au < ready ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 [2004] ; 6189 >
         au < ready ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 [2005] ; 6188 >
         au < ready ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 [2006] ; 3170 >
         au < ready ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 [2007] ; 3360 >
-        au < testing ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 [2008] ; 3838 >
+        au < ready ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 [2008] ; 3838 >
         au < ready ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 [2009] ; 4315 >
         au < testing ; 2010 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 25 [2010] ; 6164 >
         au < ready ; 2011 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 26 [2011] ; 7119 >
         au < testing ; 2012 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 27 [2012] ; 8187 >
         au < testing ; 2013 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 28 [2013] ; 8925 >
         au < testing ; 2014 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 29 [2014] ; 9804 >
-        au < testing ; 2015 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 30 [2015] ; 10498 >
+        au < ready ; 2015 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 30 [2015] ; 10498 >
         au < ready ; 2016 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 31 [2016] ; 11124 >
 
     }
@@ -113,20 +113,20 @@
 
       attr[journal_id] = 462
 
-        au < testing ; 2003 ; Southeast Asian Affairs Volume 2003 ; 6183 >
-        au < testing ; 2004 ; Southeast Asian Affairs Volume 2004 ; 6182 >
+        au < ready ; 2003 ; Southeast Asian Affairs Volume 2003 ; 6183 >
+        au < ready ; 2004 ; Southeast Asian Affairs Volume 2004 ; 6182 >
         au < ready ; 2005 ; Southeast Asian Affairs Volume 2005 ; 6181 >
         au < testing ; 2006 ; Southeast Asian Affairs Volume 2006 ; 6180 >
         au < testing ; 2007 ; Southeast Asian Affairs Volume 2007 ; 6179 >
         au < ready ; 2008 ; Southeast Asian Affairs Volume 2008 ; 4095 >
-        au < testing ; 2009 ; Southeast Asian Affairs Volume 2009 ; 5783 >
+        au < ready ; 2009 ; Southeast Asian Affairs Volume 2009 ; 5783 >
         au < ready ; 2010 ; Southeast Asian Affairs Volume 2010 ; 7122 >
-        au < testing ; 2011 ; Southeast Asian Affairs Volume 2011 ; 8456 >
-        au < testing ; 2012 ; Southeast Asian Affairs Volume 2012 ; 8457 >
-        au < testing ; 2013 ; Southeast Asian Affairs Volume 2013 ; 9201 >
-        au < testing ; 2014 ; Southeast Asian Affairs Volume 2014 ; 10121 >
+        au < ready ; 2011 ; Southeast Asian Affairs Volume 2011 ; 8456 >
+        au < ready ; 2012 ; Southeast Asian Affairs Volume 2012 ; 8457 >
+        au < ready ; 2013 ; Southeast Asian Affairs Volume 2013 ; 9201 >
+        au < ready ; 2014 ; Southeast Asian Affairs Volume 2014 ; 10121 >
         au < ready ; 2015 ; Southeast Asian Affairs Volume 2015 ; 10654 >
-        au < testing ; 2016 ; Southeast Asian Affairs Volume 2016 ; 11338 >
+        au < ready ; 2016 ; Southeast Asian Affairs Volume 2016 ; 11338 >
 
     }
 
