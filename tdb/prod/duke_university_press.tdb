@@ -906,14 +906,14 @@
       param[base_url] = http://environmentalhumanities.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Environmental Humanities Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Environmental Humanities Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 2013 ; Environmental Humanities Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Environmental Humanities Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; Environmental Humanities Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; Environmental Humanities Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; Environmental Humanities Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2016 ; Environmental Humanities Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Environmental Humanities Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; Environmental Humanities Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 2013 ; Environmental Humanities Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Environmental Humanities Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 2014 ; Environmental Humanities Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 2015 ; Environmental Humanities Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 2015 ; Environmental Humanities Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 2016 ; Environmental Humanities Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; expected ; 2017 ; Environmental Humanities Volume 9 ; 9 >
 
   }
