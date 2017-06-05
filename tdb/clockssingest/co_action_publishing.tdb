@@ -43,7 +43,7 @@
     >
 
     #param[base_url] = http://www.childlitaesthetics.net/
-    param[journal_id] = zblft20
+    param[journal_id] = zblf20
 
     au < doNotProcess ; doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; >
@@ -179,7 +179,7 @@
     
     {
       #param[base_url] = http://www.ejpt.net/
-      param[journal_id] = zejpt20
+      param[journal_id] = zept20
       # includes supplements
       # V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
 
@@ -379,7 +379,7 @@
     >
 
     #param[base_url] = http://www.jecme.eu/
-    param[journal_id] = zjecme20
+    param[journal_id] = zjec20
 
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; >
@@ -594,7 +594,7 @@
 
     comment[continues] = 2000-5121
     #param[base_url] = http://www.nanoreviewsexperiments.net/
-    param[journal_id] = znano20
+    param[journal_id] = zano20
 
     au < doNotProcess ; doNotProcess ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; >
     au < expected ; exists ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; >
@@ -631,7 +631,7 @@
     >
 
     #param[base_url] = http://www.polarresearch.net/
-    param[journal_id] = zpolar20
+    param[journal_id] = zpor20
 
     au < doNotProcess ; doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 ; >
     au < doNotProcess ; doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 ; >
