@@ -16,11 +16,11 @@
 
       attr[journal_id] = 535
 
-        au < ready ; 2011 ; Levinas Studies Volume 6 [2011] ; 9349 >
-        au < ready ; 2012 ; Levinas Studies Volume 7 [2012] ; 9350 >
-        au < ready ; 2013 ; Levinas Studies Volume 8 [2013] ; 9351 >
-        au < ready ; 2014 ; Levinas Studies Volume 9 [2014] ; 10486 >
-        au < ready ; 2015 ; Levinas Studies Volume 10 [2015] ; 12198 >
+        au < releasing ; 2011 ; Levinas Studies Volume 6 [2011] ; 9349 >
+        au < releasing ; 2012 ; Levinas Studies Volume 7 [2012] ; 9350 >
+        au < releasing ; 2013 ; Levinas Studies Volume 8 [2013] ; 9351 >
+        au < releasing ; 2014 ; Levinas Studies Volume 9 [2014] ; 10486 >
+        au < releasing ; 2015 ; Levinas Studies Volume 10 [2015] ; 12198 >
 
     }
     {
@@ -32,10 +32,10 @@
 
       attr[journal_id] = 570
 
-        au < ready ; 2012 ; Milton Studies Volume 53 [2012] ; 9352 >
-        au < ready ; 2013 ; Milton Studies Volume 54 [2013] ; 9770 >
-        au < ready ; 2014 ; Milton Studies Volume 55 [2014] ; 10488 >
-        au < ready ; 2015 ; Milton Studies Volume 56 [2015] ; 11015 >
+        au < releasing ; 2012 ; Milton Studies Volume 53 [2012] ; 9352 >
+        au < releasing ; 2013 ; Milton Studies Volume 54 [2013] ; 9770 >
+        au < releasing ; 2014 ; Milton Studies Volume 55 [2014] ; 10488 >
+        au < releasing ; 2015 ; Milton Studies Volume 56 [2015] ; 11015 >
 
     }
 

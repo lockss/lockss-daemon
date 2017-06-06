@@ -488,7 +488,7 @@
 
       attr[journal_id] = 551
 
-        au < ready ; 2012 ; Eugene O'Neill Review Volume 33 [2012] ; 8098 >
+        au < releasing ; 2012 ; Eugene O'Neill Review Volume 33 [2012] ; 8098 >
         au < released ; 2013 ; Eugene O'Neill Review Volume 34 [2013] ; 8832 >
         au < released ; 2014 ; Eugene O'Neill Review Volume 35 [2014] ; 9756 >
         au < released ; 2015 ; Eugene O'Neill Review Volume 36 [2015] ; 10519 >
@@ -686,7 +686,7 @@
 
         au < testing ; 2012 ; Transportation Journal Volume 51 [2012] ; 7930 >
         au < testing ; 2013 ; Transportation Journal Volume 52 [2013] ; 8705 >
-        au < ready ; 2014 ; Transportation Journal Volume 53 [2014] ; 9602 >
+        au < releasing ; 2014 ; Transportation Journal Volume 53 [2014] ; 9602 >
         au < released ; 2015 ; Transportation Journal Volume 54 [2015] ; 10346 >
         au < released ; 2016 ; Transportation Journal Volume 55 [2016] ; 10902 >
         au < testing ; 2017 ; Transportation Journal Volume 56 [2017] ; 12327 >
@@ -705,11 +705,11 @@
 
         au < testing ; 2010 ; Utopian Studies Volume 21 [2010] ; 6336 >
         au < testing ; 2011 ; Utopian Studies Volume 22 [2011] ; 6816 >
-        au < ready ; 2012 ; Utopian Studies Volume 23 [2012] ; 8246 >
+        au < releasing ; 2012 ; Utopian Studies Volume 23 [2012] ; 8246 >
         au < testing ; 2013 ; Utopian Studies Volume 24 [2013] ; 8938 >
-        au < ready ; 2014 ; Utopian Studies Volume 25 [2014] ; 9903 >
-        au < ready ; 2015 ; Utopian Studies Volume 26 [2015] ; 10562 >
-        au < ready ; 2016 ; Utopian Studies Volume 27 [2016] ; 11048 >
+        au < releasing ; 2014 ; Utopian Studies Volume 25 [2014] ; 9903 >
+        au < releasing ; 2015 ; Utopian Studies Volume 26 [2015] ; 10562 >
+        au < releasing ; 2016 ; Utopian Studies Volume 27 [2016] ; 11048 >
 
     }
 
