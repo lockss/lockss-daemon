@@ -1769,8 +1769,9 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection] = tow
     implicit < status ; year ; name ; param[collection_theme] >  
+    #for a single conference in 2014. The only file of substance is a campus map: http://scholarcommons.usf.edu/cgi/viewcontent.cgi?article=1000&context=tow
 
-    au < testing ; 2014 ; University of South Florida Modern Warfare's Complexity and the Human Dimension Conference: Information ; Information >
+    au < doNotProcess ; 2014 ; University of South Florida Modern Warfare's Complexity and the Human Dimension Conference: Information ; Information >
 
   }
 
@@ -1800,8 +1801,9 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection] = nckms_2013
     implicit < status ; year ; name ; param[collection_theme] >  
+    #A single meeting, with a nice selection of complete articles.
 
-    au < testing ; 2013 ; University of South Florida National Cave and Karst Management Symposium 2013: Proceedings ; Proceedings >
+    au < ready ; 2013 ; University of South Florida National Cave and Karst Management Symposium 2013: Proceedings ; Proceedings >
 
   }
 
@@ -1998,8 +2000,9 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection] = race_place
     implicit < status ; year ; name ; param[collection_theme] >  
+    #a single workshop. Only files of substance are a short and long program listing, including abstracts.
 
-    au < testing ; 2013 ; University of South Florida Race and Place Conference 2014 ; 2014 >
+    au < ready ; 2013 ; University of South Florida Race and Place Conference 2014 [abstracts only] ; 2014 >
 
   }
 
@@ -2210,9 +2213,10 @@
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection] = tles_sealevel
-    implicit < status ; year ; name ; param[collection_theme] >  
+    implicit < status ; year ; name ; param[collection_theme] >
+    #single workshop. Presentations are posted to a different base_url. Only file of substance is an area map. http://scholarcommons.usf.edu/cgi/viewcontent.cgi?article=1001&context=tles_sealevel
 
-    au < testing ; 2012 ; University of South Florida Sea Level Changes Workshop 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; University of South Florida Sea Level Changes Workshop 2012 ; 2012 >
 
   }
 
@@ -2408,8 +2412,9 @@
     param[base_url] = http://scholarcommons.usf.edu/
     param[collection] = ur_symposium
     implicit < status ; year ; name ; param[collection_theme] >  
+    #a single meeting. Files of substance are abstracts.
 
-    au < testing ; 2011 ; University of South Florida Undergraduate Research Symposium and Celebration 2011 ; 2011 >
+    au < ready ; 2011 ; University of South Florida Undergraduate Research Symposium and Celebration 2011 [Abstracts only] ; 2011 >
     #done
 
   }
