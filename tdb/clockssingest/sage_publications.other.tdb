@@ -282,5 +282,26 @@
       au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
 
     }
+    
+  {
+
+    title <
+      name = Canadian Journal of Nursing Research ;
+      issn = 0844-5621 ;
+      eissn = 1705-7051
+    >
+
+    
+    # This file-transfer content is for (only) volumes 45-47 of this journal
+    # later volumes are hosted on Atypon and are being harvested
+    
+    plugin = org.lockss.plugin.clockss.sage.ClockssSageJatsSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sage-cjnr-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2017 ; Canadian Journal of Nursing Research Source Content 2017 ; 2017 >
+
+  }
 
 }
