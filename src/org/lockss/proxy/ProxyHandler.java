@@ -96,10 +96,6 @@ public class ProxyHandler extends AbstractHttpHandler {
     Configuration.PREFIX + "proxy.audit503UntilAusStarted";
   static final boolean DEFAULT_AUDIT_503_UNTIL_AUS_STARTED = true;
 
-  static final String PARAM_PROCESS_FORMS =
-      Configuration.PREFIX + "proxy.handleFormPost";
-  static final boolean DEFAULT_PROCESS_FORMS = false;
-
   /** https requests are tunneled through CONNECT on same host so appear to
    * come from loopback addr.  To report correct request address, CONNECT
    * method records source addr in a map keyed by port number of the
@@ -122,7 +118,6 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean auditProxy = false;
   private boolean auditIndex = false;
   private boolean audit503UntilAusStarted = DEFAULT_AUDIT_503_UNTIL_AUS_STARTED;
-  private boolean handleFormPost = DEFAULT_PROCESS_FORMS;
   private String connectHost;
   private int connectPort = -1;
   private int sslListenPort = -1;
@@ -145,8 +140,6 @@ public class ProxyHandler extends AbstractHttpHandler {
       config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
 			DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
 
-    handleFormPost = config.getBoolean(PARAM_PROCESS_FORMS,
-				       DEFAULT_PROCESS_FORMS);
     hostname = PlatformUtil.getLocalHostname();
 
     int connectMapSize = config.getInt(PARAM_LOOPBACK_CONNECT_MAP_MAX,
@@ -187,11 +180,6 @@ public class ProxyHandler extends AbstractHttpHandler {
    * will never be proxied */
   public void setFromCacheOnly(boolean flg) {
     neverProxy = flg;
-  }
-
-  public void setHandleFormPost(boolean flg)
-  {
-    handleFormPost =flg;
   }
 
   /** Set the address to which CONNECT requests will connect, ignoring the
@@ -385,7 +373,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     //
     // This logic is similar to logic in ServeContent.
     //TODO -- CTG: we need to determine the mime type and dispatch based on it
-    if (HttpRequest.__POST.equals(request.getMethod()) && handleFormPost) {
+    if (HttpRequest.__POST.equals(request.getMethod()) &&
+	proxyMgr.isHandleFormPost()) {
       log.debug3("POST request found!");
       // We don't have any way to know order from request headers instead to
       // so we just sort the elements.

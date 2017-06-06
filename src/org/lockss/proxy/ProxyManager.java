@@ -121,6 +121,11 @@ public class ProxyManager extends BaseProxyManager {
     PREFIX + "minimallyEncodeUrls";
   static final boolean DEFAULT_MINIMALLY_ENCODE_URLS = true;
 
+  /** If true, process POST requests to derive the URL under which the
+   * content would have been stored by a forms-aware crawler */
+  static final String PARAM_PROCESS_FORMS = PREFIX + "handleFormPost";
+  static final boolean DEFAULT_PROCESS_FORMS = false;
+
   /** If true, when content is served from the cache, the response headers
    * originally served with the content will be included in the response
    * (except for those normally not forwarded by proxies). */
@@ -292,6 +297,7 @@ public class ProxyManager extends BaseProxyManager {
   private int paramAccessLogLevel = -1;
   private boolean paramAccessAlertsEnabled = DEFAULT_ACCESS_ALERTS_ENABLED;
   private boolean paramMinimallyEncodeUrls = DEFAULT_MINIMALLY_ENCODE_URLS;
+  private boolean paramHandleFormPost = DEFAULT_PROCESS_FORMS;
   private boolean paramLogReqStart = DEFAULT_LOG_REQUEST_START;
   private boolean paramExcludeLockssUserAgentFromCounter =
     DEFAULT_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER;
@@ -340,6 +346,8 @@ public class ProxyManager extends BaseProxyManager {
       paramMinimallyEncodeUrls =
 	config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
 			  DEFAULT_MINIMALLY_ENCODE_URLS);
+      paramHandleFormPost = config.getBoolean(PARAM_PROCESS_FORMS,
+					      DEFAULT_PROCESS_FORMS);
       paramIncludeLockssAuditProperties =
 	config.getBoolean(PARAM_INCLUDE_LOCKSS_AUDIT_PROPS,
 			  DEFAULT_INCLUDE_LOCKSS_AUDIT_PROPS);
@@ -657,6 +665,10 @@ public class ProxyManager extends BaseProxyManager {
 
   public boolean isMinimallyEncodeUrls() {
     return paramMinimallyEncodeUrls;
+  }
+
+  public boolean isHandleFormPost() {
+    return paramHandleFormPost;
   }
 
   public boolean isLogReqStart() {
