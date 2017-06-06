@@ -70,9 +70,9 @@
     param[base_url] = http://www.interventions.onlinejacc.org/
 
     au < HWDrupalPlugin ; manifest ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
-    au < HWDrupalPlugin ; exists ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
-    au < HWDrupalPlugin ; exists ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
-    au < HWDrupalPlugin ; exists ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 >
+    au < HWDrupalPlugin ; manifest ; 2014 ; JACC: Cardiovascular Interventions Volume 7 ; 7 >
+    au < HWDrupalPlugin ; manifest ; 2015 ; JACC: Cardiovascular Interventions Volume 8 ; 8 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; JACC: Cardiovascular Interventions Volume 9 ; 9 >
     au < HWDrupalPlugin ; exists ; 2017 ; JACC: Cardiovascular Interventions Volume 10 ; 10 >
     }
 
@@ -156,14 +156,14 @@
     {
     param[base_url] = http://www.onlinejacc.org/
 
-    au < HWDrupalPlugin ; exists ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 >
-    au < HWDrupalPlugin ; exists ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
-    au < HWDrupalPlugin ; exists ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
-    au < HWDrupalPlugin ; exists ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
+    au < HWDrupalPlugin ; manifest ; 2012 ; Journal of the American College of Cardiology Volume 60 ; 60 >
+    au < HWDrupalPlugin ; manifest ; 2013 ; Journal of the American College of Cardiology Volume 61 ; 61 >
+    au < HWDrupalPlugin ; manifest ; 2013 ; Journal of the American College of Cardiology Volume 62 ; 62 >
+    au < HWDrupalPlugin ; manifest ; 2014 ; Journal of the American College of Cardiology Volume 63 ; 63 >
+    au < HWDrupalPlugin ; manifest ; 2014 ; Journal of the American College of Cardiology Volume 64 ; 64 >
+    au < HWDrupalPlugin ; manifest ; 2015 ; Journal of the American College of Cardiology Volume 65 ; 65 >
+    au < HWDrupalPlugin ; manifest ; 2015 ; Journal of the American College of Cardiology Volume 66 ; 66 >
+    au < HWDrupalPlugin ; manifest ; 2016 ; Journal of the American College of Cardiology Volume 67 ; 67 >
     au < HWDrupalPlugin ; exists ; 2016 ; Journal of the American College of Cardiology Volume 68 ; 68 >
     au < HWDrupalPlugin ; exists ; 2017 ; Journal of the American College of Cardiology Volume 69 ; 69 >
     au < HWDrupalPlugin ; expected ; 2017 ; Journal of the American College of Cardiology Volume 70 ; 70 >

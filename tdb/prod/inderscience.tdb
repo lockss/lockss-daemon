@@ -3342,7 +3342,7 @@
       au < doNotProcess ; 2004-2005 ; International Journal of Environment, Workplace and Employment Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; International Journal of Environment, Workplace and Employment Volume 2 ; 2 >
       au < doNotProcess ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 >
-      au < exists ; 2008-2016 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 > #volume 4 issue 3 & 4 not online yet
+      au < manifest ; 2008-2016 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 > #volume 4 issue 3 & 4 not online yet
 
     }
 
@@ -5303,7 +5303,7 @@
       au < released ; 2016 ; International Journal of Logistics Systems and Management Volume 24 ; 24 >
       au < released ; 2016 ; International Journal of Logistics Systems and Management Volume 25 ; 25 >
       au < manifest ; 2017 ; International Journal of Logistics Systems and Management Volume 26 ; 26 >
-      au < expected ; 2017 ; International Journal of Logistics Systems and Management Volume 27 ; 27 >
+      au < manifest ; 2017 ; International Journal of Logistics Systems and Management Volume 27 ; 27 >
       au < expected ; 2017 ; International Journal of Logistics Systems and Management Volume 28 ; 28 >
 
     }
@@ -5495,7 +5495,7 @@
 
       param[journal_id] = ijmd
 
-      au < exists ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 >
+      au < manifest ; 2011-2016 ; International Journal of Management Development Volume 1 ; 1 >
       au < expected ; 2017 ; International Journal of Management Development Volume 2 ; 2 >
 
     }
@@ -6481,7 +6481,7 @@
       au < doNotProcess ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 >
       au < doNotProcess ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 >
       au < released ; 2013-2014 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 >
-      au < exists ; 2017 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
+      au < manifest ; 2017 ; International Journal of Nuclear Knowledge Management Volume 7 ; 7 >
 
     }
 
@@ -6559,7 +6559,7 @@
       au < released ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 >
       au < released ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 13 ; 13 >
       au < manifest ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 14 ; 14 >
-      au < expected ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 15 ; 15 >
+      au < manifest ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 15 ; 15 >
       au < expected ; 2017 ; International Journal of Oil, Gas and Coal Technology Volume 16 ; 16 >
 
     }
@@ -6603,7 +6603,7 @@
       au < released ; 2016 ; International Journal of Operational Research Volume 26 ; 26 >
       au < released ; 2016 ; International Journal of Operational Research Volume 27 ; 27 >
       au < manifest ; 2017 ; International Journal of Operational Research Volume 28 ; 28 >
-      au < expected ; 2017 ; International Journal of Operational Research Volume 29 ; 29 >
+      au < manifest ; 2017 ; International Journal of Operational Research Volume 29 ; 29 >
       au < expected ; 2017 ; International Journal of Operational Research Volume 30 ; 30 >
 
     }
@@ -7013,7 +7013,7 @@
       au < released ; 2016 ; International Journal of Productivity and Quality Management Volume 18 ; 18 >
       au < released ; 2016 ; International Journal of Productivity and Quality Management Volume 19 ; 19 >
       au < manifest ; 2017 ; International Journal of Productivity and Quality Management Volume 20 ; 20 >
-      au < expected ; 2017 ; International Journal of Productivity and Quality Management Volume 21 ; 21 >
+      au < manifest ; 2017 ; International Journal of Productivity and Quality Management Volume 21 ; 21 >
       au < expected ; 2017 ; International Journal of Productivity and Quality Management Volume 22 ; 22 >
 
     }
@@ -7306,7 +7306,7 @@
       au < manifest ; 2013 ; International Journal of Revenue Management Volume 7 ; 7 >
       au < released ; 2014-2015 ; International Journal of Revenue Management Volume 8 ; 8 >
       au < manifest ; 2016 ; International Journal of Revenue Management Volume 9 ; 9 >
-      au < exists ; 2017 ; International Journal of Revenue Management Volume 10 ; 10 >
+      au < manifest ; 2017 ; International Journal of Revenue Management Volume 10 ; 10 >
 
     }
 
@@ -7419,7 +7419,7 @@
       au < released ; 2016 ; International Journal of Sensor Networks Volume 21 ; 21 >
       au < released ; 2016 ; International Journal of Sensor Networks Volume 22 ; 22 >
       au < manifest ; 2017 ; International Journal of Sensor Networks Volume 23 ; 23 >
-      au < expected ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 >
+      au < manifest ; 2017 ; International Journal of Sensor Networks Volume 24 ; 24 >
       au < expected ; 2017 ; International Journal of Sensor Networks Volume 25 ; 25 >
 
     }
@@ -7478,7 +7478,7 @@
       au < released ; 2016 ; International Journal of Services and Operations Management Volume 24 ; 24 >
       au < released ; 2016 ; International Journal of Services and Operations Management Volume 25 ; 25 >
       au < manifest ; 2017 ; International Journal of Services and Operations Management Volume 26 ; 26 >
-      au < expected ; 2017 ; International Journal of Services and Operations Management Volume 27 ; 27 >
+      au < manifest ; 2017 ; International Journal of Services and Operations Management Volume 27 ; 27 >
       au < expected ; 2017 ; International Journal of Services and Operations Management Volume 28 ; 28 >
 
     }
@@ -8208,8 +8208,8 @@
 
       param[journal_id] = ijscip
 
-      au < exists ; 2012-2015 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
-      au < exists ; 2017 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 >
+      au < manifest ; 2012-2015 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
+      au < manifest ; 2017 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 >
 
     }
 
@@ -8293,7 +8293,7 @@
       au < manifest ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 >
       au < released ; 2014-2015 ; International Journal of Technological Learning, Innovation and Development Volume 7 ; 7 >
       au < manifest ; 2016 ; International Journal of Technological Learning, Innovation and Development Volume 8 ; 8 >
-      au < exists ; 2017 ; International Journal of Technological Learning, Innovation and Development Volume 9 ; 9 >
+      au < manifest ; 2017 ; International Journal of Technological Learning, Innovation and Development Volume 9 ; 9 >
 
     }
 
@@ -8451,7 +8451,7 @@
       au < released ; 2016 ; International Journal of Technology Management Volume 71 ; 71 >
       au < released ; 2016 ; International Journal of Technology Management Volume 72 ; 72 >
       au < manifest ; 2017 ; International Journal of Technology Management Volume 73 ; 73 >
-      au < expected ; 2017 ; International Journal of Technology Management Volume 74 ; 74 >
+      au < manifest ; 2017 ; International Journal of Technology Management Volume 74 ; 74 >
       au < expected ; 2017 ; International Journal of Technology Management Volume 75 ; 75 >
 
     }
