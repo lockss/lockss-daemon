@@ -37,7 +37,6 @@ package org.lockss.plugin.royalsocietyofchemistry
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 import org.lockss.util.urlconn.CacheException;
@@ -118,8 +117,10 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
       super(e);
     }
     
-    public long getRetryDelay() {
-      return 10 * Constants.SECOND;
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
     }
     
   }
