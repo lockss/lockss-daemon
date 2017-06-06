@@ -224,7 +224,9 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     // permission page/start url
     shouldCacheTest(ROOT_URL + "products/ejournals/issues/" + JOURNAL_ID + "/2013", true, au);  
     // toc page for an issue
-    shouldCacheTest(ROOT_URL + "products/ejournals/issue/" + "10.1055/s-003-26177", true, au);  
+    shouldCacheTest(ROOT_URL + "products/ejournals/issue/" + "10.1055/s-003-26177", true, au);
+    shouldCacheTest(ROOT_URL + "products/ejournals/issue/" + "10.1055/s-003-26177/grouping/045721/10.1055/s-00000058", true, au);
+    shouldCacheTest(ROOT_URL + "products/ejournals/confauthlist/issue/" + "10.1055/s-003-26177/grouping/045721/10.1055/s-00000058", true, au);
     // article files
     // https://www.thieme-connect.de/products/ejournals/issues/10.1055/s-00000001/2013
     // https://www.thieme-connect.de/products/ejournals/issue/10.1055/s-003-26177
