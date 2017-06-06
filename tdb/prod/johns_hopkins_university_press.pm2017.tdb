@@ -68,8 +68,8 @@
         au < ready ; 2010 ; American Jewish History Volume 96 [2010] ; 8252 >
         au < ready ; 2013 ; American Jewish History Volume 97 [2013] ; 8497 >
         au < ready ; 2014 ; American Jewish History Volume 98 [2014] ; 9589 >
-        au < testing ; 2015 ; American Jewish History Volume 99 [2015] ; 10285 >
-        au < testing ; 2016 ; American Jewish History Volume 100 [2016] ; 10894 >
+        au < ready ; 2015 ; American Jewish History Volume 99 [2015] ; 10285 >
+        au < ready ; 2016 ; American Jewish History Volume 100 [2016] ; 10894 >
         au < manifest ; 2017 ; American Jewish History Volume 101 [2017] ; 12269 >
 
     }
@@ -125,7 +125,7 @@
         au < ready ; 1999 ; American Journal of Philology Volume 120 [1999 (477-480)] ; 28 >
         au < ready ; 2000 ; American Journal of Philology Volume 121 [2000 (481-484)] ; 29 >
         au < ready ; 2001 ; American Journal of Philology Volume 122 [2001 (485-488)] ; 30 >
-        au < testing ; 2002 ; American Journal of Philology Volume 123 [2002 (489-492)] ; 31 >
+        au < ready ; 2002 ; American Journal of Philology Volume 123 [2002 (489-492)] ; 31 >
         au < ready ; 2003 ; American Journal of Philology Volume 124 [2003 (493-496)] ; 882 >
         au < ready ; 2004 ; American Journal of Philology Volume 125 [2004 (497-500)] ; 2454 >
         au < ready ; 2005 ; American Journal of Philology Volume 126 [2005 (501-504)] ; 2739 >
@@ -138,7 +138,7 @@
         au < testing ; 2012 ; American Journal of Philology Volume 133 [2012 (529-532)] ; 8166 >
         au < ready ; 2013 ; American Journal of Philology Volume 134 [2013 (533-536)] ; 8887 >
         au < testing ; 2014 ; American Journal of Philology Volume 135 [2014 (537-540)] ; 9823 >
-        au < testing ; 2015 ; American Journal of Philology Volume 136 [2015 (541-544)] ; 10556 >
+        au < ready ; 2015 ; American Journal of Philology Volume 136 [2015 (541-544)] ; 10556 >
         au < ready ; 2016 ; American Journal of Philology Volume 137 [2016  (545-548)] ; 11169 >
 
     }
@@ -158,12 +158,12 @@
         au < ready ; 1998 ; American Quarterly Volume 50 [1998] ; 49 >
         au < ready ; 1999 ; American Quarterly Volume 51 [1999] ; 50 >
         au < ready ; 2000 ; American Quarterly Volume 52 [2000] ; 51 >
-        au < testing ; 2001 ; American Quarterly Volume 53 [2001] ; 52 >
+        au < ready ; 2001 ; American Quarterly Volume 53 [2001] ; 52 >
         au < ready ; 2002 ; American Quarterly Volume 54 [2002] ; 53 >
         au < ready ; 2003 ; American Quarterly Volume 55 [2003] ; 837 >
         au < testing ; 2004 ; American Quarterly Volume 56 [2004] ; 2439 >
         au < ready ; 2005 ; American Quarterly Volume 57 [2005] ; 2701 >
-        au < testing ; 2006 ; American Quarterly Volume 58 [2006] ; 2998 >
+        au < ready ; 2006 ; American Quarterly Volume 58 [2006] ; 2998 >
         au < ready ; 2007 ; American Quarterly Volume 59 [2007] ; 3283 >
         au < ready ; 2008 ; American Quarterly Volume 60 [2008] ; 3653 >
         au < testing ; 2009 ; American Quarterly Volume 61 [2009] ; 4209 >
@@ -198,7 +198,7 @@
         au < ready ; 2003 ; Arethusa Volume 36 [2003] ; 790 >
         au < ready ; 2004 ; Arethusa Volume 37 [2004] ; 2507 >
         au < ready ; 2005 ; Arethusa Volume 38 [2005] ; 2646 >
-        au < testing ; 2006 ; Arethusa Volume 39 [2006] ; 2932 >
+        au < ready ; 2006 ; Arethusa Volume 39 [2006] ; 2932 >
         au < ready ; 2007 ; Arethusa Volume 40 [2007] ; 3212 >
         au < ready ; 2008 ; Arethusa Volume 41 [2008] ; 3666 >
         au < ready ; 2009 ; Arethusa Volume 42 [2009] ; 4046 >
@@ -278,7 +278,7 @@
 
       attr[journal_id] = 313
 
-        au < testing ; 2005-2006 ; Bulletin of the Center for Children's Books Volume 59 [2005-2006] ; 2861 >
+        au < ready ; 2005-2006 ; Bulletin of the Center for Children's Books Volume 59 [2005-2006] ; 2861 >
         au < ready ; 2006-2007 ; Bulletin of the Center for Children's Books Volume 60 [2006-2007] ; 3130 >
         au < ready ; 2007-2008 ; Bulletin of the Center for Children's Books Volume 61 [2007-2008] ; 3468 >
         au < ready ; 2008-2009 ; Bulletin of the Center for Children's Books Volume 62 [2008-2009] ; 3891 >
@@ -323,7 +323,7 @@
         au < ready ; 2013 ; Bulletin of the History of Medicine Volume 87 [2013] ; 8918 >
         au < ready ; 2014 ; Bulletin of the History of Medicine Volume 88 [2014] ; 9874 >
         au < ready ; 2015 ; Bulletin of the History of Medicine Volume 89 [2015] ; 10574 >
-        au < testing ; 2016 ; Bulletin of the History of Medicine Volume 90 [2016] ; 11111 >
+        au < ready ; 2016 ; Bulletin of the History of Medicine Volume 90 [2016] ; 11111 >
         au < manifest ; 2017 ; Bulletin of the History of Medicine Volume 91 [2017] ; 12512 >
 
     }
@@ -353,7 +353,7 @@
 
       attr[journal_id] = 27
 
-        au < testing ; 1995 ; Callaloo Volume 18 [1995] ; 98 >
+        au < ready ; 1995 ; Callaloo Volume 18 [1995] ; 98 >
         au < ready ; 1996 ; Callaloo Volume 19 [1996] ; 99 >
         au < ready ; 1997 ; Callaloo Volume 20 [1997] ; 100 >
         au < ready ; 1998 ; Callaloo Volume 21 [1998] ; 101 >
@@ -449,7 +449,7 @@
         au < ready ; 1977 ; Children's Literature Association Quarterly Volume 2 [1977] ; 3989 >
         au < ready ; 1978 ; Children's Literature Association Quarterly 1978 ; 7731 >
         au < ready ; 1978-1979 ; Children's Literature Association Quarterly Volume 3 [1978-1979] ; 3988 >
-        au < testing ; 1979 ; Children's Literature Association Quarterly Volume 4 [1979] ; 3987 >
+        au < ready ; 1979 ; Children's Literature Association Quarterly Volume 4 [1979] ; 3987 >
         au < ready ; 1979 ; Children's Literature Association Quarterly 1979 ; 7722 >
         au < ready ; 1980 ; Children's Literature Association Quarterly Volume 5 [1980] ; 3986 >
         au < ready ; 1980 ; Children's Literature Association Quarterly 1980 ; 7732 >
@@ -482,12 +482,12 @@
         au < ready ; 1999 ; Children's Literature Association Quarterly Volume 24 [1999] ; 3965 >
         au < ready ; 2000 ; Children's Literature Association Quarterly Volume 25 [2000] ; 3964 >
         au < ready ; 2001 ; Children's Literature Association Quarterly Volume 26 [2001] ; 3963 >
-        au < testing ; 2002 ; Children's Literature Association Quarterly Volume 27 [2002] ; 3962 >
+        au < ready ; 2002 ; Children's Literature Association Quarterly Volume 27 [2002] ; 3962 >
         au < ready ; 2003 ; Children's Literature Association Quarterly Volume 28 [2003] ; 3961 >
         au < ready ; 2004 ; Children's Literature Association Quarterly Volume 29 [2004] ; 3960 >
         au < ready ; 2005 ; Children's Literature Association Quarterly Volume 30 [2005] ; 2809 >
         au < ready ; 2006 ; Children's Literature Association Quarterly Volume 31 [2006] ; 3067 >
-        au < testing ; 2007 ; Children's Literature Association Quarterly Volume 32 [2007] ; 3291 >
+        au < ready ; 2007 ; Children's Literature Association Quarterly Volume 32 [2007] ; 3291 >
         au < testing ; 2008 ; Children's Literature Association Quarterly Volume 33 [2008] ; 3617 >
         au < ready ; 2009 ; Children's Literature Association Quarterly Volume 34 [2009] ; 4135 >
         au < ready ; 2010 ; Children's Literature Association Quarterly Volume 35 [2010] ; 5756 >
@@ -846,7 +846,7 @@
         au < ready ; 2003 ; Journal of College Student Development Volume 44 [2003] ; 844 >
         au < ready ; 2004 ; Journal of College Student Development Volume 45 [2004] ; 2416 >
         au < ready ; 2005 ; Journal of College Student Development Volume 46 [2005] ; 2627 >
-        au < testing ; 2006 ; Journal of College Student Development Volume 47 [2006] ; 2905 >
+        au < ready ; 2006 ; Journal of College Student Development Volume 47 [2006] ; 2905 >
         au < ready ; 2007 ; Journal of College Student Development Volume 48 [2007] ; 3254 >
         au < ready ; 2008 ; Journal of College Student Development Volume 49 [2008] ; 3610 >
         au < ready ; 2009 ; Journal of College Student Development Volume 50 [2009] ; 4132 >
@@ -871,7 +871,7 @@
 
         au < ready ; 2000 ; Journal of Colonialism and Colonial History Volume 1 [2000] ; 109 >
         au < ready ; 2001 ; Journal of Colonialism and Colonial History Volume 2 [2001] ; 110 >
-        au < testing ; 2002 ; Journal of Colonialism and Colonial History Volume 3 [2002] ; 111 >
+        au < ready ; 2002 ; Journal of Colonialism and Colonial History Volume 3 [2002] ; 111 >
         au < ready ; 2003 ; Journal of Colonialism and Colonial History Volume 4 [2003] ; 896 >
         au < ready ; 2004 ; Journal of Colonialism and Colonial History Volume 5 [2004] ; 2494 >
         au < ready ; 2005 ; Journal of Colonialism and Colonial History Volume 6 [2005] ; 2746 >
@@ -960,7 +960,7 @@
         au < ready ; 2010 ; Journal of Early Christian Studies Volume 18 [2010] ; 5755 >
         au < ready ; 2011 ; Journal of Early Christian Studies Volume 19 [2011] ; 6704 >
         au < ready ; 2012 ; Journal of Early Christian Studies Volume 20 [2012] ; 8114 >
-        au < testing ; 2013 ; Journal of Early Christian Studies Volume 21 [2013] ; 8814 >
+        au < ready ; 2013 ; Journal of Early Christian Studies Volume 21 [2013] ; 8814 >
         au < ready ; 2014 ; Journal of Early Christian Studies Volume 22 [2014] ; 9758 >
         au < ready ; 2015 ; Journal of Early Christian Studies Volume 23 [2015] ; 10429 >
         au < ready ; 2016 ; Journal of Early Christian Studies Volume 24 [2016] ; 11027 >
@@ -1046,7 +1046,7 @@
         au < ready ; 1985 ; Journal of Modern Greek Studies Volume 3 [1985] ; 4198 >
         au < ready ; 1986 ; Journal of Modern Greek Studies Volume 4 [1986 ] ; 4197 >
         au < ready ; 1987 ; Journal of Modern Greek Studies Volume 5 [1987] ; 4196 >
-        au < testing ; 1988 ; Journal of Modern Greek Studies Volume 6 [1988] ; 4195 >
+        au < ready ; 1988 ; Journal of Modern Greek Studies Volume 6 [1988] ; 4195 >
         au < ready ; 1989 ; Journal of Modern Greek Studies Volume 7 [1989] ; 4194 >
         au < ready ; 1990 ; Journal of Modern Greek Studies Volume 8 [1990] ; 4193 >
         au < ready ; 1991 ; Journal of Modern Greek Studies Volume 9 [1991] ; 4192 >
@@ -1061,7 +1061,7 @@
         au < ready ; 2000 ; Journal of Modern Greek Studies Volume 18 [2000] ; 425 >
         au < ready ; 2001 ; Journal of Modern Greek Studies Volume 19 [2001] ; 426 >
         au < ready ; 2002 ; Journal of Modern Greek Studies Volume 20 [2002] ; 427 >
-        au < testing ; 2003 ; Journal of Modern Greek Studies Volume 21 [2003] ; 904 >
+        au < ready ; 2003 ; Journal of Modern Greek Studies Volume 21 [2003] ; 904 >
         au < ready ; 2004 ; Journal of Modern Greek Studies Volume 22 [2004] ; 2513 >
         au < ready ; 2005 ; Journal of Modern Greek Studies Volume 23 [2005] ; 2790 >
         au < ready ; 2006 ; Journal of Modern Greek Studies Volume 24 [2006] ; 3055 >
@@ -1088,7 +1088,7 @@
 
       attr[journal_id] = 100
 
-        au < testing ; 1989-1990 ; Journal of Women's History Volume 1 [1989-1990] ; 4994 >
+        au < ready ; 1989-1990 ; Journal of Women's History Volume 1 [1989-1990] ; 4994 >
         au < testing ; 1990-1991 ; Journal of Women's History Volume 2 [1990-1991] ; 4993 >
         au < testing ; 1991-1992 ; Journal of Women's History Volume 3 [1991-1992] ; 4992 >
         au < testing ; 1992-1993 ; Journal of Women's History Volume 4 [1992-1993] ; 4991 >
@@ -1147,7 +1147,7 @@
         au < testing ; 1977 ; Journal of the History of Philosophy Volume 15 [1977] ; 3552 >
         au < testing ; 1978 ; Journal of the History of Philosophy Volume 16 [1978] ; 3551 >
         au < testing ; 1979 ; Journal of the History of Philosophy Volume 17 [1979] ; 3550 >
-        au < testing ; 1980 ; Journal of the History of Philosophy Volume 18 [1980] ; 3549 >
+        au < ready ; 1980 ; Journal of the History of Philosophy Volume 18 [1980] ; 3549 >
         au < testing ; 1981 ; Journal of the History of Philosophy Volume 19 [1981] ; 3548 >
         au < testing ; 1982 ; Journal of the History of Philosophy Volume 20 [1982] ; 3547 >
         au < testing ; 1983 ; Journal of the History of Philosophy Volume 21 [1983] ; 3546 >
@@ -1159,7 +1159,7 @@
         au < testing ; 1989 ; Journal of the History of Philosophy Volume 27 [1989] ; 3540 >
         au < testing ; 1990 ; Journal of the History of Philosophy Volume 28 [1990] ; 3539 >
         au < testing ; 1991 ; Journal of the History of Philosophy Volume 29 [1991] ; 3538 >
-        au < testing ; 1992 ; Journal of the History of Philosophy Volume 30 [1992] ; 3537 >
+        au < ready ; 1992 ; Journal of the History of Philosophy Volume 30 [1992] ; 3537 >
         au < testing ; 1993 ; Journal of the History of Philosophy Volume 31 [1993] ; 3536 >
         au < testing ; 1994 ; Journal of the History of Philosophy Volume 32 [1994] ; 3535 >
         au < testing ; 1995 ; Journal of the History of Philosophy Volume 33 [1995] ; 3534 >
@@ -1253,7 +1253,7 @@
         au < testing ; 1999 ; L'Esprit Créateur Volume 39 [1999] ; 4207 >
         au < testing ; 2000 ; L'Esprit Créateur Volume 40 [2000] ; 4206 >
         au < testing ; 2001 ; L'Esprit Créateur Volume 41 [2001] ; 4205 >
-        au < testing ; 2002 ; L'Esprit Créateur Volume 42 [2002] ; 4204 >
+        au < ready ; 2002 ; L'Esprit Créateur Volume 42 [2002] ; 4204 >
         au < testing ; 2003 ; L'Esprit Créateur Volume 43 [2003] ; 4203 >
         au < testing ; 2004 ; L'Esprit Créateur Volume 44 [2004] ; 4201 >
         au < testing ; 2005 ; L'Esprit Créateur Volume 45 [2005] ; 4202 >
@@ -1262,7 +1262,7 @@
         au < testing ; 2008 ; L'Esprit Créateur Volume 48 [2008] ; 3693 >
         au < testing ; 2009 ; L'Esprit Créateur Volume 49 [2009] ; 4249 >
         au < testing ; 2010 ; L'Esprit Créateur Volume 50 [2010] ; 5944 >
-        au < testing ; 2011 ; L'Esprit Créateur Volume 51 [2011] ; 6872 >
+        au < ready ; 2011 ; L'Esprit Créateur Volume 51 [2011] ; 6872 >
         au < testing ; 2012 ; L'Esprit Créateur Volume 52 [2012] ; 8149 >
         au < testing ; 2013 ; L'Esprit Créateur Volume 53 [2013] ; 9071 >
         au < testing ; 2014 ; L'Esprit Créateur Volume 54 [2014] ; 9745 >
@@ -1315,7 +1315,7 @@
         au < testing ; 2011 ; Late Imperial China Volume 32 [2011] ; 7327 >
         au < testing ; 2012 ; Late Imperial China Volume 33 [2012] ; 8386 >
         au < testing ; 2013 ; Late Imperial China Volume 34 [2013] ; 9151 >
-        au < testing ; 2014 ; Late Imperial China Volume 35 [2014] ; 10064 >
+        au < ready ; 2014 ; Late Imperial China Volume 35 [2014] ; 10064 >
         au < testing ; 2015 ; Late Imperial China Volume 36 [2015] ; 10686 >
         au < testing ; 2016 ; Late Imperial China Volume 37 [2016] ; 11268 >
 
@@ -1389,18 +1389,18 @@
       attr[journal_id] = 118
 
         au < testing ; 1982 ; Literature and Medicine Volume 1 [1982] ; 5897 >
-        au < testing ; 1983 ; Literature and Medicine Volume 2 [1983] ; 5896 >
+        au < ready ; 1983 ; Literature and Medicine Volume 2 [1983] ; 5896 >
         au < testing ; 1984 ; Literature and Medicine Volume 3 [1984] ; 5895 >
         au < testing ; 1985 ; Literature and Medicine Volume 4 [1985] ; 5894 >
         au < testing ; 1986 ; Literature and Medicine Volume 5 [1986] ; 5893 >
-        au < testing ; 1987 ; Literature and Medicine Volume 6 [1987] ; 5892 >
+        au < ready ; 1987 ; Literature and Medicine Volume 6 [1987] ; 5892 >
         au < testing ; 1988 ; Literature and Medicine Volume 7 [1988] ; 5891 >
         au < testing ; 1989 ; Literature and Medicine Volume 8 [1989] ; 5890 >
         au < testing ; 1990 ; Literature and Medicine Volume 9 [1990] ; 5889 >
         au < testing ; 1991 ; Literature and Medicine Volume 10 [1991] ; 5888 >
-        au < testing ; 1992 ; Literature and Medicine Volume 11 [1992] ; 5887 >
+        au < ready ; 1992 ; Literature and Medicine Volume 11 [1992] ; 5887 >
         au < testing ; 1993 ; Literature and Medicine Volume 12 [1993] ; 5886 >
-        au < testing ; 1994 ; Literature and Medicine Volume 13 [1994] ; 5860 >
+        au < ready ; 1994 ; Literature and Medicine Volume 13 [1994] ; 5860 >
         au < testing ; 1995 ; Literature and Medicine Volume 14 [1995] ; 387 >
         au < testing ; 1996 ; Literature and Medicine Volume 15 [1996] ; 388 >
         au < testing ; 1997 ; Literature and Medicine Volume 16 [1997] ; 389 >
@@ -1445,7 +1445,7 @@
         au < testing ; 1992 ; MFS Modern Fiction Studies Volume 38 [1992] ; 3818 >
         au < testing ; 1993 ; MFS Modern Fiction Studies Volume 39 [1993] ; 3816 >
         au < testing ; 1994 ; MFS Modern Fiction Studies Volume 40 [1994] ; 412 >
-        au < testing ; 1995 ; MFS Modern Fiction Studies Volume 41 [1995] ; 413 >
+        au < ready ; 1995 ; MFS Modern Fiction Studies Volume 41 [1995] ; 413 >
         au < testing ; 1996 ; MFS Modern Fiction Studies Volume 42 [1996] ; 414 >
         au < testing ; 1997 ; MFS Modern Fiction Studies Volume 43 [1997] ; 415 >
         au < testing ; 1998 ; MFS Modern Fiction Studies Volume 44 [1998] ; 416 >
@@ -1454,7 +1454,7 @@
         au < testing ; 2001 ; MFS Modern Fiction Studies Volume 47 [2001] ; 419 >
         au < testing ; 2002 ; MFS Modern Fiction Studies Volume 48 [2002] ; 420 >
         au < testing ; 2003 ; MFS Modern Fiction Studies Volume 49 [2003] ; 874 >
-        au < testing ; 2004 ; MFS Modern Fiction Studies Volume 50 [2004] ; 2459 >
+        au < ready ; 2004 ; MFS Modern Fiction Studies Volume 50 [2004] ; 2459 >
         au < testing ; 2005 ; MFS Modern Fiction Studies Volume 51 [2005] ; 2715 >
         au < testing ; 2006 ; MFS Modern Fiction Studies Volume 52 [2006] ; 3030 >
         au < testing ; 2007 ; MFS Modern Fiction Studies Volume 53 [2007] ; 3324 >
@@ -1493,7 +1493,7 @@
         au < testing ; 2003 ; MLN Volume 118 [2003] ; 875 >
         au < testing ; 2004 ; MLN Volume 119 [2004] ; 2428 >
         au < testing ; 2005 ; MLN Volume 120 [2005] ; 2697 >
-        au < testing ; 2006 ; MLN Volume 121 [2006] ; 2982 >
+        au < ready ; 2006 ; MLN Volume 121 [2006] ; 2982 >
         au < testing ; 2007 ; MLN Volume 122 [2007] ; 3317 >
         au < testing ; 2008 ; MLN Volume 123 [2008] ; 3652 >
         au < testing ; 2009 ; MLN Volume 124 [2009] ; 4179 >
@@ -1521,7 +1521,7 @@
         au < testing ; 1997 ; Milton Quarterly Volume 31 [1997] ; 459 >
         au < testing ; 1998 ; Milton Quarterly Volume 32 [1998] ; 460 >
         au < testing ; 1999 ; Milton Quarterly Volume 33 [1999] ; 461 >
-        au < testing ; 2000 ; Milton Quarterly Volume 34 [2000] ; 462 >
+        au < ready ; 2000 ; Milton Quarterly Volume 34 [2000] ; 462 >
 
     }
     {
@@ -1542,7 +1542,7 @@
         au < testing ; 1998 ; Modernism/modernity Volume 5 [1998] ; 452 >
         au < testing ; 1999 ; Modernism/modernity Volume 6 [1999] ; 453 >
         au < testing ; 2000 ; Modernism/modernity Volume 7 [2000] ; 454 >
-        au < testing ; 2001 ; Modernism/modernity Volume 8 [2001] ; 455 >
+        au < ready ; 2001 ; Modernism/modernity Volume 8 [2001] ; 455 >
         au < testing ; 2002 ; Modernism/modernity Volume 9 [2002] ; 456 >
         au < testing ; 2003 ; Modernism/modernity Volume 10 [2003] ; 796 >
         au < testing ; 2004 ; Modernism/modernity Volume 11 [2004] ; 2426 >
@@ -1550,7 +1550,7 @@
         au < testing ; 2006 ; Modernism/modernity Volume 13 [2006] ; 2900 >
         au < testing ; 2007 ; Modernism/modernity Volume 14 [2007] ; 3205 >
         au < testing ; 2008 ; Modernism/modernity Volume 15 [2008] ; 3619 >
-        au < testing ; 2009 ; Modernism/modernity Volume 16 [2009] ; 4050 >
+        au < ready ; 2009 ; Modernism/modernity Volume 16 [2009] ; 4050 >
         au < testing ; 2010 ; Modernism/modernity Volume 17 [2010] ; 5766 >
         au < testing ; 2011 ; Modernism/modernity Volume 18 [2011] ; 6813 >
         au < testing ; 2012 ; Modernism/modernity Volume 19 [2012] ; 8318 >
@@ -1607,11 +1607,11 @@
 
         au < testing ; 1995 ; New Literary History Volume 26 [1995] ; 477 >
         au < testing ; 1996 ; New Literary History Volume 27 [1996] ; 478 >
-        au < testing ; 1997 ; New Literary History Volume 28 [1997] ; 479 >
+        au < ready ; 1997 ; New Literary History Volume 28 [1997] ; 479 >
         au < testing ; 1998 ; New Literary History Volume 29 [1998] ; 480 >
         au < testing ; 1999 ; New Literary History Volume 30 [1999] ; 481 >
         au < testing ; 2000 ; New Literary History Volume 31 [2000] ; 482 >
-        au < testing ; 2001 ; New Literary History Volume 32 [2001] ; 483 >
+        au < ready ; 2001 ; New Literary History Volume 32 [2001] ; 483 >
         au < testing ; 2002 ; New Literary History Volume 33 [2002] ; 484 >
         au < testing ; 2003 ; New Literary History Volume 34 [2003] ; 825 >
         au < testing ; 2004 ; New Literary History Volume 35 [2004] ; 2481 >
@@ -1690,7 +1690,7 @@
         au < testing ; 1977 ; Perspectives in Biology and Medicine Volume 20 [1977] ; 6304 >
         au < testing ; 1978 ; Perspectives in Biology and Medicine Volume 21 [1978] ; 6303 >
         au < testing ; 1979 ; Perspectives in Biology and Medicine Volume 22 [1979] ; 6302 >
-        au < testing ; 1980 ; Perspectives in Biology and Medicine Volume 23 [1980] ; 6301 >
+        au < ready ; 1980 ; Perspectives in Biology and Medicine Volume 23 [1980] ; 6301 >
         au < testing ; 1981 ; Perspectives in Biology and Medicine Volume 24 [1981] ; 6300 >
         au < testing ; 1982 ; Perspectives in Biology and Medicine Volume 25 [1982] ; 6170 >
         au < testing ; 1983 ; Perspectives in Biology and Medicine Volume 26 [1983] ; 6299 >
@@ -1700,8 +1700,8 @@
         au < testing ; 1987 ; Perspectives in Biology and Medicine Volume 30 [1987] ; 6295 >
         au < testing ; 1988 ; Perspectives in Biology and Medicine Volume 31 [1988] ; 6294 >
         au < testing ; 1989 ; Perspectives in Biology and Medicine Volume 32 [1989] ; 6293 >
-        au < testing ; 1990 ; Perspectives in Biology and Medicine Volume 33 [1990] ; 6292 >
-        au < testing ; 1991 ; Perspectives in Biology and Medicine Volume 34 [1991] ; 6291 >
+        au < ready ; 1990 ; Perspectives in Biology and Medicine Volume 33 [1990] ; 6292 >
+        au < ready ; 1991 ; Perspectives in Biology and Medicine Volume 34 [1991] ; 6291 >
         au < testing ; 1992 ; Perspectives in Biology and Medicine Volume 35 [1992] ; 6290 >
         au < testing ; 1993 ; Perspectives in Biology and Medicine Volume 36 [1993] ; 6289 >
         au < testing ; 1994 ; Perspectives in Biology and Medicine Volume 37 [1994] ; 6288 >
@@ -1709,22 +1709,22 @@
         au < testing ; 1996 ; Perspectives in Biology and Medicine Volume 39 [1996] ; 6286 >
         au < testing ; 1997 ; Perspectives in Biology and Medicine Volume 40 [1997] ; 6285 >
         au < testing ; 1998 ; Perspectives in Biology and Medicine Volume 41 [1998] ; 6284 >
-        au < testing ; 1999 ; Perspectives in Biology and Medicine Volume 42 [1999] ; 6283 >
-        au < testing ; 2000 ; Perspectives in Biology and Medicine Volume 43 [2000] ; 509 >
+        au < ready ; 1999 ; Perspectives in Biology and Medicine Volume 42 [1999] ; 6283 >
+        au < ready ; 2000 ; Perspectives in Biology and Medicine Volume 43 [2000] ; 509 >
         au < testing ; 2001 ; Perspectives in Biology and Medicine Volume 44 [2001] ; 510 >
         au < testing ; 2002 ; Perspectives in Biology and Medicine Volume 45 [2002] ; 511 >
         au < testing ; 2003 ; Perspectives in Biology and Medicine Volume 46 [2003] ; 791 >
         au < testing ; 2004 ; Perspectives in Biology and Medicine Volume 47 [2004] ; 1741 >
         au < testing ; 2005 ; Perspectives in Biology and Medicine Volume 48 [2005] ; 2622 >
         au < testing ; 2006 ; Perspectives in Biology and Medicine Volume 49 [2006] ; 2916 >
-        au < testing ; 2007 ; Perspectives in Biology and Medicine Volume 50 [2007] ; 3206 >
+        au < ready ; 2007 ; Perspectives in Biology and Medicine Volume 50 [2007] ; 3206 >
         au < testing ; 2008 ; Perspectives in Biology and Medicine Volume 51 [2008] ; 3515 >
         au < testing ; 2009 ; Perspectives in Biology and Medicine Volume 52 [2009] ; 4079 >
         au < testing ; 2010 ; Perspectives in Biology and Medicine Volume 53 [2010] ; 5754 >
         au < testing ; 2011 ; Perspectives in Biology and Medicine Volume 54 [2011] ; 6688 >
         au < testing ; 2012 ; Perspectives in Biology and Medicine Volume 55 [2012] ; 8060 >
-        au < testing ; 2013 ; Perspectives in Biology and Medicine Volume 56 [2013] ; 9106 >
-        au < testing ; 2014 ; Perspectives in Biology and Medicine Volume 57 [2014] ; 10207 >
+        au < ready ; 2013 ; Perspectives in Biology and Medicine Volume 56 [2013] ; 9106 >
+        au < ready ; 2014 ; Perspectives in Biology and Medicine Volume 57 [2014] ; 10207 >
         au < testing ; 2015 ; Perspectives in Biology and Medicine Volume 58 [2015] ; 10848 >
         au < testing ; 2016 ; Perspectives in Biology and Medicine Volume 59 [2016] ; 11344 >
 
