@@ -929,9 +929,9 @@
       comment[years] = Published 2010-2016
       param[journal_code] = cy
 
-      au < crawling ; exists ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; >
+      au < frozen ; exists ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; >
@@ -968,10 +968,10 @@
       comment[years] = Published 2010-2016
       param[journal_code] = sc
 
-      au < crawling ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
+      au < frozen ; exists ; 2010 ; Chemical Science Volume 1 ; 1 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; Chemical Science Volume 2 ; 2 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Chemical Science Volume 3 ; 3 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Chemical Science Volume 4 ; 4 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Chemical Science Volume 5 ; 5 ; 2014 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Chemical Science Volume 6 ; 6 ; 2015 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Chemical Science Volume 7 ; 7 ; 2016 ; >
@@ -1177,10 +1177,10 @@
       comment[years] = Published 2010-2016
       param[journal_code] = fo
 
-      au < crawling ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
+      au < frozen ; exists ; 2010 ; Food & Function Volume 1 ; 1 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; Food & Function Volume 2 ; 2 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Food & Function Volume 3 ; 3 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Food & Function Volume 4 ; 4 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Food & Function Volume 5 ; 5 ; 2014 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Food & Function Volume 6 ; 6 ; 2015 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Food & Function Volume 7 ; 7 ; 2016 ; >
@@ -1297,7 +1297,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = ta
 
-      au < crawling ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; >
@@ -1316,7 +1316,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tb
 
-      au < crawling ; exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 1 ; 1 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 2 ; 2 ; 2014 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 3 ; 3 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 4 ; 4 ; 2016 ; >
@@ -1335,7 +1335,7 @@
       comment[years] = Published 2013-2016
       param[journal_code] = tc
 
-      au < crawling ; exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 1 ; 1 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2015 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 3 ; 3 ; 2015 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 4 ; 4 ; 2016 ; >
@@ -1951,9 +1951,9 @@
       param[journal_code] = md
 
       au < crawling ; exists ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; >
+      au < frozen ; exists ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; >
       au < frozen ; exists ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2016 ; MedChemComm Volume 7 ; 7 ; 2016 ; >
@@ -2061,12 +2061,12 @@
       comment[years] = Published 2010-2016
       param[journal_code] = py
 
-      au < crawling ; exists ; 2010 ; Polymer Chemistry Volume 1 ; 1 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 ; >
+      au < frozen ; exists ; 2010 ; Polymer Chemistry Volume 1 ; 1 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; Polymer Chemistry Volume 2 ; 2 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Polymer Chemistry Volume 3 ; 3 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Polymer Chemistry Volume 4 ; 4 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Polymer Chemistry Volume 5 ; 5 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Polymer Chemistry Volume 6 ; 6 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Polymer Chemistry Volume 7 ; 7 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Polymer Chemistry Volume 8 ; 8 ; 2017 ; >
 
@@ -2313,11 +2313,11 @@
       comment[years] = Published 2011-2016
       param[journal_code] = ra
 
-      au < crawling ; exists ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; >
+      au < frozen ; exists ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; >
       au < frozen ; exists ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; >
       au < manifest ; exists ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; >
 
@@ -2347,10 +2347,10 @@
 
       param[journal_code] = tx
 
-      au < crawling ; exists ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
+      au < frozen ; exists ; 2012 ; Toxicology Research Volume 1 ; 1 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Toxicology Research Volume 6 ; 6 ; 2017 ; >
 

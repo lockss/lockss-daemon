@@ -1344,7 +1344,7 @@
     # quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
-    au < crawling ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 ; >
+    au < frozen ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 ; >
     au < frozen ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issues 1-3 ; 02 ; >
     au < finished ; finished ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issue 4 ; 2 ; >
     au < frozen ; exists ; 2015 ; Journal of Unmanned Vehicle Systems Volume 3 ; 3 ; >
@@ -1376,10 +1376,10 @@
     au < manifest ; exists ; 2009 ; Canadian Journal of Animal Science Volume 89 ; 89 ; >
     au < manifest ; exists ; 2010 ; Canadian Journal of Animal Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2011 ; Canadian Journal of Animal Science Volume 91 ; 91 ; >
-    au < crawling ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 ; >
+    au < frozen ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 ; >
+    au < frozen ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Animal Science Volume 94 ; 94 ; >
-    au < crawling ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; >
+    au < frozen ; exists ; 2015 ; Canadian Journal of Animal Science Volume 95 ; 95 ; >
     au < manifest ; exists ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 96 ; >
     au < manifest ; exists ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 97 ; >
 
@@ -1408,10 +1408,10 @@
     au < manifest ; exists ; 2009 ; Canadian Journal of Plant Science Volume 89 ; 89 ; >
     au < manifest ; exists ; 2010 ; Canadian Journal of Plant Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2011 ; Canadian Journal of Plant Science Volume 91 ; 91 ; >
-    au < crawling ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 ; >
+    au < frozen ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 ; >
+    au < frozen ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Plant Science Volume 94 ; 94 ; >
-    au < crawling ; exists ; 2015 ; Canadian Journal of Plant Science Volume 95 ; 95 ; >
+    au < frozen ; exists ; 2015 ; Canadian Journal of Plant Science Volume 95 ; 95 ; >
     au < testing ; exists ; 2016 ; Canadian Journal of Plant Science Volume 96 ; 96 ; >
     au < manifest ; exists ; 2017 ; Canadian Journal of Plant Science Volume 97 ; 97 ; >
 
@@ -1440,10 +1440,10 @@
     au < manifest ; exists ; 2009 ; Canadian Journal of Soil Science Volume 89 ; 89 ; >
     au < manifest ; exists ; 2010 ; Canadian Journal of Soil Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 2011 ; Canadian Journal of Soil Science Volume 91 ; 91 ; >
-    au < crawling ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 ; >
-    au < crawling ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 ; >
+    au < frozen ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 ; >
+    au < frozen ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 ; >
     au < frozen ; exists ; 2014 ; Canadian Journal of Soil Science Volume 94 ; 94 ; >
-    au < crawling ; exists ; 2015 ; Canadian Journal of Soil Science Volume 95 ; 95 ; >
+    au < frozen ; exists ; 2015 ; Canadian Journal of Soil Science Volume 95 ; 95 ; >
     au < testing ; exists ; 2016 ; Canadian Journal of Soil Science Volume 96 ; 96 ; >
     au < manifest ; exists ; 2017 ; Canadian Journal of Soil Science Volume 97 ; 97 ; >
 
@@ -1489,7 +1489,7 @@
     param[journal_id] = as
     #2015 to present
 
-    au < crawling ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2015 ; Arctic Science Volume 1 ; 1 ; >
     au < manifest ; exists ; 2016 ; Arctic Science Volume 2 ; 2 ; >
     au < manifest ; exists ; 2017 ; Arctic Science Volume 3 ; 3 ; >
 
