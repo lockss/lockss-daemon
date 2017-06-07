@@ -81,6 +81,12 @@ public class BaseCachedUrl implements CachedUrl {
   public static final String PARAM_INCLUDED_ONLY = PREFIX + "includedOnly";
   static final boolean DEFAULT_INCLUDED_ONLY = true;
 
+  /** Check raw Content-Type property in addition to X-Lockss-content-type.
+   * Disable only for backward compatibility. */
+  public static final String PARAM_USE_RAW_CONTENT_TYPE =
+    PREFIX + "useRawContentType";
+  public static final boolean DEFAULT_USE_RAW_CONTENT_TYPE = true;
+
   public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
 
 
@@ -273,6 +279,11 @@ public class BaseCachedUrl implements CachedUrl {
     CIProperties props = getProperties();
     if (props != null) {
       res = props.getProperty(PROPERTY_CONTENT_TYPE);
+    }
+    if (res == null &&
+	CurrentConfig.getBooleanParam(PARAM_USE_RAW_CONTENT_TYPE,
+				      DEFAULT_USE_RAW_CONTENT_TYPE)) {
+      res = props.getProperty("Content-Type");
     }
     if (res != null) {
       return res;

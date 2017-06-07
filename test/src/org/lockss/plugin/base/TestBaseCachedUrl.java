@@ -60,6 +60,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
   String url1 = "http://www.example.com/testDir/leaf1";
   String url2 = "http://www.example.com/testDir/leaf2";
   String url3 = "http://www.example.com/testDir/leaf3";
+  String url4 = "http://www.example.com/testDir/leaf4";
   String urlparent = "http://www.example.com/testDir";
   String content1 = "test content 1";
   String content2 = "test content 2 longer";
@@ -631,6 +632,38 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
       cu = getTestCu(url3);
       assertEquals(0, cu.getContentSize());
+    }
+
+    public void testGetContentType() throws Exception {
+      createLeaf(url1, content1, null);
+      createLeaf(url2, content2,
+		 fromArgs("X-Lockss-content-type", "application/nim"));
+      createLeaf(url3, "", fromArgs("Content-Type", "text/ugly"));
+      createLeaf(url4, content2,
+		 fromArgs("Content-Type", "foo/bar",
+			  "X-Lockss-content-type", "bar/foo"));
+
+      assertEquals(null, getTestCu(url1).getContentType());
+      assertEquals("application/nim", getTestCu(url2).getContentType());
+      assertEquals("text/ugly", getTestCu(url3).getContentType());
+      assertEquals("bar/foo", getTestCu(url4).getContentType());
+    }
+
+    public void testGetContentTypeCompat() throws Exception {
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_USE_RAW_CONTENT_TYPE,
+				    "false");
+      createLeaf(url1, content1, null);
+      createLeaf(url2, content2,
+		 fromArgs("X-Lockss-content-type", "application/nim"));
+      createLeaf(url3, "", fromArgs("Content-Type", "text/ugly"));
+      createLeaf(url4, content2,
+		 fromArgs("Content-Type", "foo/bar",
+			  "X-Lockss-content-type", "bar/foo"));
+
+      assertEquals(null, getTestCu(url1).getContentType());
+      assertEquals("application/nim", getTestCu(url2).getContentType());
+      assertEquals(null, getTestCu(url3).getContentType());
+      assertEquals("bar/foo", getTestCu(url4).getContentType());
     }
 
     public void testGetProperties() throws Exception {
