@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,7 +139,7 @@ public class OpenUrlResolver {
   public static final int DEFAULT_MAX_PUBLISHERS_PER_ARTICLE = 10;
 
   
-  private static final class FeatureEntry {
+  static final class FeatureEntry {
     final String auFeatureKey;
     final OpenUrlInfo.ResolvedTo resolvedTo;
     
@@ -165,7 +165,7 @@ public class OpenUrlResolver {
    * is the order they will be tried, from article, to issue, to volume, 
    * to title, to publisher.
    */
-  private static final FeatureEntry[] auJournalFeatures = {
+  static final FeatureEntry[] auJournalFeatures = {
 //    FEATURE_URLS + "/au_abstract",
     new FeatureEntry(FEATURE_URLS + "/au_article",OpenUrlInfo.ResolvedTo.ARTICLE),
     new FeatureEntry(FEATURE_URLS + "/au_issue", OpenUrlInfo.ResolvedTo.ISSUE),
@@ -2025,13 +2025,15 @@ public class OpenUrlResolver {
   /**
    * Get the URL for the specified key from the plugin.
    * @param plugin the plugin
-   * @param pluginKeys the plugin keys
-   * @param paramMap the param map
-   * @return the URL for the specified key
+   * @param pluginEntries array of FeatureEntry to try
+   * @param paramMap parameters for feature printfs
+   * @return OpenUrlInfo for the first FeatureEntry that evaluates without
+   * error
    */
   @Loggable(value = Loggable.TRACE, prepend = true)
-  private OpenUrlInfo
-  	getPluginUrl(Plugin plugin, FeatureEntry[] pluginEntries, TypedEntryMap paramMap) {
+  OpenUrlInfo getPluginUrl(Plugin plugin,
+			   FeatureEntry[] pluginEntries,
+			   TypedEntryMap paramMap) {
     ExternalizableMap map;
 
     // get printf pattern for pluginKey property
@@ -2121,18 +2123,48 @@ public class OpenUrlResolver {
       
       for (String s : printfStrings) {
         String url = null;
-        s = StringEscapeUtils.unescapeHtml4(s);
-        try {
-          List<String> urls = converter.getUrlList(s);
-          if ((urls != null) && !urls.isEmpty()) {
-            // if multiple urls match, the first one will do
-            url = urls.get(0);
-          } 
-        } catch (Throwable ex) {
-          log.debug("invalid  conversion for " + s, ex);
-          continue;
-        }
-            
+
+	// terminal value in maps may be a string, printf string or the
+	// name of a FeatureUrlHelperFactory
+	FeatureUrlHelper helper = null;
+	if (!s.startsWith("\"")) {
+	  try {
+	    FeatureUrlHelperFactory fact =
+	      plugin.newAuxClass(s, FeatureUrlHelperFactory.class);
+	    if (fact != null) {
+	      helper = fact.createFeatureUrlHelper(plugin);
+	    }
+	  } catch (Exception e) {
+	    log.error("Can't create FeatureUrlHelper for " +
+		      plugin.getPluginName(), e);
+	  }
+	}
+	if (helper != null) {
+	  try {
+	    List<String> urls = helper.getUrls(plugin, paramMap);
+	    if ((urls != null) && !urls.isEmpty()) {
+	      // if multiple urls match, the first one will do
+	      url = urls.get(0);
+	    } 
+	  } catch (PluginException |
+		   RuntimeException |
+		   IOException e) {
+	    log.error("Error in FeatureUrlHelper(" + plugin + ", " + paramMap,
+		      e);
+	  }
+	} else {
+	  s = StringEscapeUtils.unescapeHtml4(s);
+	  try {
+	    List<String> urls = converter.getUrlList(s);
+	    if ((urls != null) && !urls.isEmpty()) {
+	      // if multiple urls match, the first one will do
+	      url = urls.get(0);
+	    } 
+	  } catch (Throwable ex) {
+	    log.debug("invalid  conversion for " + s, ex);
+	    continue;
+	  }
+	}            
         // validate URL: either it's cached, or it can be reached
         if (!StringUtil.isNullString(url)) {
           log.debug3("Resolving from url: " + url);

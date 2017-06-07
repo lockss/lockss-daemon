@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,13 +42,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.metadata.MetadataManager;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.PluginTestUtil;
-import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrl;
 import org.lockss.plugin.simulated.*;
 import org.lockss.util.*;
@@ -71,7 +61,7 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
-  private OpenUrlResolver openUrlResolver;
+  OpenUrlResolver openUrlResolver;
   private DbManager dbManager;
 
   /** set of AUs reindexed by the MetadataManager */
@@ -611,6 +601,45 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
       ExternalizableMap map = new ExternalizableMap();
       map.putString("au_start_url", "\"%splugin3/%s\", base_url, year");
       return map;
+    }
+  }
+
+  public static class MySimulatedPlugin4 extends MySimulatedPlugin {
+    public MySimulatedPlugin4() {
+    }
+
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("au_start_url", "\"%splugin0/%s\", base_url, volume");
+      Map<String,Object> map1 = new HashMap<String,Object>();
+      map.putMap("au_feature_urls", map1);
+      map1.put("au_volume", MyFeatureHelperFactory.class.getName());
+      map1.put("au_issue", "\"%splugin0/%s/%s/toc\", base_url, volume, issue");
+      map1.put("au_title", "\"%splugin0/toc\", base_url");
+      return map;
+    }
+  }
+  
+  public static class MyFeatureHelperFactory
+    implements FeatureUrlHelperFactory {
+    public FeatureUrlHelper createFeatureUrlHelper(Plugin plug) {
+      return new MyFeatureHelper();
+    }
+  }
+
+  public static class MyFeatureHelper implements FeatureUrlHelper {
+    public List<String> getUrls(Plugin plug, TypedEntryMap paramMap) 
+	throws PluginException, IOException {
+      String action = paramMap.getString("action", "def1");
+      switch (action) {
+      case "throw": throw new PluginException.InvalidDefinition("test");
+      case "null": return null;
+      case "one": return ListUtil.list("http://resolved.to/url1");
+      case "two": return ListUtil.list("http://resolved.to/url2",
+				       "http://resolved.to/url3");
+      case "error": paramMap.getString("no param, will throw");
+      }
+      return null;
     }
   }
 
@@ -1173,6 +1202,34 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
   public static class TestOpenUrlResolverWithTdb extends TestOpenUrlResolver {
     public boolean useMetadataDatabase() {
       return false;
+    }
+
+    public void testFeatureHelper() {
+      Plugin plugin = new MySimulatedPlugin4();
+      TypedEntryMap map = new TypedEntryMap();
+      OpenUrlResolver.FeatureEntry[] feats = OpenUrlResolver.auJournalFeatures;
+      map.putString("action", "throw");
+      assertSame(OpenUrlResolver.OPEN_URL_INFO_NONE,
+		 openUrlResolver.getPluginUrl(plugin, feats, map));
+
+      map.putString("action", "error");
+      assertSame(OpenUrlResolver.OPEN_URL_INFO_NONE,
+		 openUrlResolver.getPluginUrl(plugin, feats, map));
+
+      map.putString("action", "one");
+      OpenUrlResolver.OpenUrlInfo resolved =
+	openUrlResolver.getPluginUrl(plugin, feats, map);
+      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+      assertEquals("http://resolved.to/url1", resolved.getResolvedUrl());
+
+      map.putString("action", "two");
+      resolved = openUrlResolver.getPluginUrl(plugin, feats, map);
+      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+      assertEquals("http://resolved.to/url2", resolved.getResolvedUrl());
+
+      map.putString("action", "null");
+      assertSame(OpenUrlResolver.OPEN_URL_INFO_NONE,
+		 openUrlResolver.getPluginUrl(plugin, feats, map));
     }
   }
 

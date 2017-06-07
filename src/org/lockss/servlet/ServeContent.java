@@ -549,6 +549,7 @@ public class ServeContent extends LockssServlet {
         helper.sortKeyValues();
         org.mortbay.util.URI postUri =
             new org.mortbay.util.URI(helper.toEncodedString());
+	log.debug2("POST URL: " + postUri);
         // We only want to override the post request by proxy if we cached it during crawling.
         CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
         if (cu != null) {
@@ -1537,10 +1538,20 @@ public class ServeContent extends LockssServlet {
     try {
       if (lrf == null || (isMementoRequest() && !rewriteMementoResponses)) {
         // No rewriting, set length and copy
+	if (log.isDebug3()) {
+	  if (lrf == null) {
+	    log.debug2("Not rewriting, no LinkRewriterFactory: " + url);
+	  } else {
+	    log.debug2("Not rewriting, memento request: " + url);
+	  }
+	}
         setContentLength(length);
         outStr = resp.getOutputStream();
         StreamUtil.copy(original, outStr);
       } else {
+	if (log.isDebug2()) {
+	  log.debug2("Rewriting: " + url);
+	}
         try {
           rewritten =
               lrf.createLinkRewriter(mimeType,
