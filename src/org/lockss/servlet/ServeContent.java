@@ -598,7 +598,7 @@ public class ServeContent extends LockssServlet {
 
     // perform special handling for an OpenUrl
     try {
-      OpenUrlInfo resolved = OpenUrlResolver.noOpenUrlInfo;
+      OpenUrlInfo resolved = OpenUrlResolver.OPEN_URL_INFO_NONE;
 
       // If any params, pass them all to OpenUrl resolver
       Map<String,String> pmap = getParamsAsMap();
