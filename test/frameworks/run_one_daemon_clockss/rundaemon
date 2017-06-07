@@ -35,19 +35,8 @@ while true ; do
     "-heap" )
       HEAP_ARG="$2"
       shift; shift; continue;;
-    "-aj" )
+    "-aj" | "-aspectj" | "-rewoven" )
       ASPECTJ=1
-      shift; continue;;
-    "-1.6" )
-      if [ -z "$JAVA_16_HOME" ] ; then
-	echo "-1.6 option requires JAVA_16_HOME to point to 1.6 install dir"
-	exit 1;
-      fi
-      JAVA_HOME="${JAVA_16_HOME}"
-      export JAVA_HOME
-      PATH="$JAVA_HOME/bin:$PATH"
-      export PATH
-      echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
     "-1.7" )
       if [ -z "$JAVA_17_HOME" ] ; then
@@ -55,6 +44,17 @@ while true ; do
 	exit 1;
       fi
       JAVA_HOME="${JAVA_17_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    "-1.8" )
+      if [ -z "$JAVA_18_HOME" ] ; then
+	echo "-1.8 option requires JAVA_18_HOME to point to 1.8 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_18_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
