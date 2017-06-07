@@ -492,7 +492,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   Map<String,List<String>> featureUrlMap;
 
-  /** Return URLs expanded from au_feature_urls. */
+  /** Return URLs expanded from au_feature_urls.
+   *
+   * XXX This is unused.  OpenUrlResolver processes au_feature_urls
+   * directly, as those printfs refer to params other than AU config
+   * params and can't be processed in the normal way. */
   public List<String> getAuFeatureUrls(String auFeature) {
     if (featureUrlMap == null) {
       featureUrlMap = makeAuFeatureUrlMap();
