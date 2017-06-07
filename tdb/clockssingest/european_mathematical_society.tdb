@@ -42,7 +42,7 @@
     
     au < manifest ; exists ; 2014 ; Annales de l’Institut Henri Poincaré D Volume 1 ; 1 ; >
     au < crawling ; exists ; 2015 ; Annales de l’Institut Henri Poincaré D Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 ; >
     au < manifest ; exists ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; >
     
   }
@@ -78,7 +78,7 @@
     au < manifest ; exists ; 2013 ; Commentarii Mathematici Helvetici Volume 88 ; 88 ; >
     au < manifest ; exists ; 2014 ; Commentarii Mathematici Helvetici Volume 89 ; 89 ; >
     au < crawling ; exists ; 2015 ; Commentarii Mathematici Helvetici Volume 90 ; 90 ; >
-    au < crawling ; exists ; 2016 ; Commentarii Mathematici Helvetici Volume 91 ; 91 ; >
+    au < frozen ; exists ; 2016 ; Commentarii Mathematici Helvetici Volume 91 ; 91 ; >
     au < manifest ; exists ; 2017 ; Commentarii Mathematici Helvetici Volume 92 ; 92 ; >
     
   }
@@ -114,7 +114,7 @@
     au < manifest ; exists ; 2013 ; Elemente der Mathematik Volume 68 ; 68 ; >
     au < manifest ; exists ; 2014 ; Elemente der Mathematik Volume 69 ; 69 ; >
     au < crawling ; exists ; 2015 ; Elemente der Mathematik Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; >
+    au < frozen ; exists ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; >
     au < manifest ; exists ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
     
   }
@@ -133,7 +133,7 @@
     
     au < manifest ; exists ; 2014 ; EMS Surveys in Mathematical Sciences Volume 1 ; 1 ; >
     au < crawling ; exists ; 2015 ; EMS Surveys in Mathematical Sciences Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; EMS Surveys in Mathematical Sciences Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2016 ; EMS Surveys in Mathematical Sciences Volume 3 ; 3 ; >
     au < manifest ; exists ; 2017 ; EMS Surveys in Mathematical Sciences Volume 4 ; 4 ; >
     
   }
@@ -159,7 +159,7 @@
     au < manifest ; exists ; 2013 ; Groups, Geometry, and Dynamics Volume 7 ; 7 ; >
     au < manifest ; exists ; 2014 ; Groups, Geometry, and Dynamics Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; Groups, Geometry, and Dynamics Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2016 ; Groups, Geometry, and Dynamics Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2016 ; Groups, Geometry, and Dynamics Volume 10 ; 10 ; >
     au < manifest ; exists ; 2017 ; Groups, Geometry, and Dynamics Volume 11 ; 11 ; >
     
   }
@@ -193,7 +193,7 @@
     au < manifest ; exists ; 2013 ; Interfaces and Free Boundaries Volume 15 ; 15 ; >
     au < manifest ; exists ; 2014 ; Interfaces and Free Boundaries Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; Interfaces and Free Boundaries Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2016 ; Interfaces and Free Boundaries Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2016 ; Interfaces and Free Boundaries Volume 18 ; 18 ; >
     au < manifest ; exists ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; >
     
   }
@@ -228,7 +228,7 @@
     
     au < manifest ; exists ; 2014 ; Journal of Fractal Geometry Volume 1 ; 1 ; >
     au < crawling ; exists ; 2015 ; Journal of Fractal Geometry Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2016 ; Journal of Fractal Geometry Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2016 ; Journal of Fractal Geometry Volume 3 ; 3 ; >
     au < manifest ; exists ; 2017 ; Journal of Fractal Geometry Volume 4 ; 4 ; >
     
   }
@@ -254,7 +254,7 @@
     au < manifest ; exists ; 2013 ; Journal of Noncommutative Geometry Volume 7 ; 7 ; >
     au < manifest ; exists ; 2014 ; Journal of Noncommutative Geometry Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; Journal of Noncommutative Geometry Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2016 ; Journal of Noncommutative Geometry Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2016 ; Journal of Noncommutative Geometry Volume 10 ; 10 ; >
     au < manifest ; exists ; 2017 ; Journal of Noncommutative Geometry Volume 11 ; 11 ; >
     
   }
@@ -276,7 +276,7 @@
     au < manifest ; exists ; 2013 ; Journal of Spectral Theory Volume 3 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Spectral Theory Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Spectral Theory Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2016 ; Journal of Spectral Theory Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2016 ; Journal of Spectral Theory Volume 6 ; 6 ; >
     au < manifest ; exists ; 2017 ; Journal of Spectral Theory Volume 7 ; 7 ; >
     
   }
@@ -310,7 +310,7 @@
     au < manifest ; exists ; 2013 ; Journal of the European Mathematical Society Volume 15 ; 15 ; >
     au < manifest ; exists ; 2014 ; Journal of the European Mathematical Society Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; Journal of the European Mathematical Society Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2016 ; Journal of the European Mathematical Society Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2016 ; Journal of the European Mathematical Society Volume 18 ; 18 ; >
     au < manifest ; exists ; 2017 ; Journal of the European Mathematical Society Volume 19 ; 19 ; >
     
   }
@@ -334,7 +334,7 @@
     au < manifest ; exists ; 2013 ; L’Enseignement Mathématique Volume 59 ; 59 ; >
     au < manifest ; exists ; 2014 ; L’Enseignement Mathématique Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; L’Enseignement Mathématique Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 ; >
     au < expected ; exists ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 ; >
     
   }
@@ -360,7 +360,7 @@
     au < manifest ; exists ; 2013 ; Portugaliae Mathematica Volume 70 ; 70 ; >
     au < manifest ; exists ; 2014 ; Portugaliae Mathematica Volume 71 ; 71 ; >
     au < crawling ; exists ; 2015 ; Portugaliae Mathematica Volume 72 ; 72 ; >
-    au < crawling ; exists ; 2016 ; Portugaliae Mathematica Volume 73 ; 73 ; >
+    au < frozen ; exists ; 2016 ; Portugaliae Mathematica Volume 73 ; 73 ; >
     au < manifest ; exists ; 2017 ; Portugaliae Mathematica Volume 74 ; 74 ; >
     
   }
@@ -428,7 +428,7 @@
     au < manifest ; exists ; 2013 ; Publications of the Research Institute for Mathematical Sciences Volume 49 ; 49 ; >
     au < manifest ; exists ; 2014 ; Publications of the Research Institute for Mathematical Sciences Volume 50 ; 50 ; >
     au < crawling ; exists ; 2015 ; Publications of the Research Institute for Mathematical Sciences Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2016 ; Publications of the Research Institute for Mathematical Sciences Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2016 ; Publications of the Research Institute for Mathematical Sciences Volume 52 ; 52 ; >
     au < manifest ; exists ; 2017 ; Publications of the Research Institute for Mathematical Sciences Volume 53 ; 53 ; >
     
   }
@@ -451,7 +451,7 @@
     au < crawling ; exists ; 2013 ; Quantum Topology Volume 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Quantum Topology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Quantum Topology Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2016 ; Quantum Topology Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2016 ; Quantum Topology Volume 7 ; 7 ; >
     au < manifest ; exists ; 2017 ; Quantum Topology Volume 8 ; 8 ; >
     
   }
@@ -513,7 +513,7 @@
     au < manifest ; exists ; 2013 ; Rendiconti Lincei - Matematica e Applicazioni Volume 24 ; 24 ; >
     au < manifest ; exists ; 2014 ; Rendiconti Lincei - Matematica e Applicazioni Volume 25 ; 25 ; >
     au < crawling ; exists ; 2015 ; Rendiconti Lincei - Matematica e Applicazioni Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2016 ; Rendiconti Lincei - Matematica e Applicazioni Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2016 ; Rendiconti Lincei - Matematica e Applicazioni Volume 27 ; 27 ; >
     au < manifest ; exists ; 2017 ; Rendiconti Lincei - Matematica e Applicazioni Volume 28 ; 28 ; >
     
   }
@@ -561,7 +561,7 @@
     au < manifest ; exists ; 2013 ; Revista Matemática Iberoamericana Volume 29 ; 29 ; >
     au < manifest ; exists ; 2014 ; Revista Matemática Iberoamericana Volume 30 ; 30 ; >
     au < crawling ; exists ; 2015 ; Revista Matemática Iberoamericana Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2016 ; Revista Matemática Iberoamericana Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2016 ; Revista Matemática Iberoamericana Volume 32 ; 32 ; >
     au < manifest ; exists ; 2017 ; Revista Matemática Iberoamericana Volume 33 ; 33 ; >
     
   }
@@ -612,7 +612,7 @@
     au < manifest ; exists ; 2013 ; Zeitschrift für Analysis und ihre Anwendungen Volume 32 ; 32 ; >
     au < manifest ; exists ; 2014 ; Zeitschrift für Analysis und ihre Anwendungen Volume 33 ; 33 ; >
     au < crawling ; exists ; 2015 ; Zeitschrift für Analysis und ihre Anwendungen Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2016 ; Zeitschrift für Analysis und ihre Anwendungen Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2016 ; Zeitschrift für Analysis und ihre Anwendungen Volume 35 ; 35 ; >
     au < manifest ; exists ; 2017 ; Zeitschrift für Analysis und ihre Anwendungen Volume 36 ; 36 ; >
     
   }

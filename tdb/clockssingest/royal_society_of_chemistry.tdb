@@ -2332,7 +2332,7 @@
 
       param[journal_code] = re
 
-      au < crawling ; exists ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Reaction Chemistry & Engineering Volume 1 ; 1 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; >
 
   }
@@ -2351,7 +2351,7 @@
       au < crawling ; exists ; 2013 ; Toxicology Research Volume 2 ; 2 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Toxicology Research Volume 3 ; 3 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Toxicology Research Volume 4 ; 4 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Toxicology Research Volume 5 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Toxicology Research Volume 6 ; 6 ; 2017 ; >
 
   }
