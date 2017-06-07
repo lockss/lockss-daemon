@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 
 
 public class InternationalUnionOfCrystallographyHtmlMetadataExtractorFactory 
@@ -96,7 +97,23 @@ public class InternationalUnionOfCrystallographyHtmlMetadataExtractorFactory
         throws IOException {
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);    	  
+      am.cook(tagMap);      
+      //PostCook cleanup
+      //If citation_doi missing, try dc.identifier: doi:10.1107/S160053680905394X
+      if (am.get(MetadataField.FIELD_DOI) == null) {
+        if (am.getRaw("dc.identifier") != null) {
+          // this will remove the protocol "doi"" if it is there; probably don't need to check for !null 
+          am.put(MetadataField.FIELD_DOI, am.getRaw("dc.identifier") );
+        }
+      }
+      //If the citation_issue isn't there, get the issue from the prism.number
+      //because the TDB version wil have leading 0
+      if (am.get(MetadataField.FIELD_ISSUE) == null) {
+        if (am.getRaw("prism.number") != null) {
+          // probably don't need to check for !null - would just ignore? 
+          am.put(MetadataField.FIELD_ISSUE, am.getRaw("prism.number") );
+        }
+      }
       emitter.emitMetadata(cu, am);
     }
   }
