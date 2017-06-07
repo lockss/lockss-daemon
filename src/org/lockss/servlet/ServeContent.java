@@ -185,18 +185,18 @@ public class ServeContent extends LockssServlet {
   /** Determines how original URLs are represented in ServeContent URLs.
    */
   public static enum RewriteStyle {
-    /** Encode the origianl URL as a query arg in the ServeContent URL */
+    /** Encode the original URL as a query arg in the ServeContent URL */
     QueryArg,
-    /** Append the origianl URL to the ServeContent URL as extra path info. */
+    /** Append the original URL to the ServeContent URL as extra path info. */
     PathInfo,
   }
 
   /** Determines how original URLs are represented in ServeContent URLs.
    * Can be set to one of:
    *  <ul>
-   *   <li><tt>QueryArg</tt>: The origianl URL is encoded as a query arg
+   *   <li><tt>QueryArg</tt>: The original URL is encoded as a query arg
    *   in the ServeContent URL.</li>
-   *   <li><tt>PathInfo</tt>: The origianl URL is appended to the
+   *   <li><tt>PathInfo</tt>: The original URL is appended to the
    *   ServeContent URL as extra path info.
    */
   public static final String PARAM_REWRITE_STYLE =
@@ -225,6 +225,12 @@ public class ServeContent extends LockssServlet {
   static final String PARAM_MINIMALLY_ENCODE_URLS =
       PREFIX + "minimallyEncodeUrlArg";
   static final boolean DEFAULT_MINIMALLY_ENCODE_URLS = true;
+
+  /** When rewriting a page that was redirected elsewhere, use the final
+   * URL in the redirect chain as the base URL. */
+  static final String PARAM_USE_REDIRECTED_BASE_URL =
+      PREFIX + "useRedirectedBaseUrl";
+  static final boolean DEFAULT_USE_REDIRECTED_BASE_URL = true;
 
   /** If true, the url arg to ServeContent will be normalized before being
    * looked up. */
@@ -287,6 +293,7 @@ public class ServeContent extends LockssServlet {
   private static boolean normalizeForwardedUrl =
     DEFAULT_NORMALIZE_FORWARDED_URL;
   private static boolean minimallyEncodeUrl = DEFAULT_MINIMALLY_ENCODE_URLS;
+  private static boolean useRedirectedBaseUrl = DEFAULT_USE_REDIRECTED_BASE_URL;
   private static List<String> excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List<String> includePlugins = DEFAULT_INCLUDE_PLUGINS;
   private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
@@ -306,7 +313,11 @@ public class ServeContent extends LockssServlet {
   private String url;
   private String cuUrl;	// CU's url (might differ from incoming url due to
 			// normalizaton)
-  private String versionStr; // non-null iff handling a (possibly-invalid) Memento request
+  private String baseUrl; // The base URL to use for resolving relative
+			  // links when rewriting.  If redirected, this is
+			  // the URL from which the content was served.
+  private String versionStr; // non-null iff handling a (possibly-invalid)
+			     // Memento request
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
@@ -385,6 +396,9 @@ public class ServeContent extends LockssServlet {
       
       minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
           DEFAULT_MINIMALLY_ENCODE_URLS);
+      useRedirectedBaseUrl =
+	config.getBoolean(PARAM_USE_REDIRECTED_BASE_URL,
+			  DEFAULT_USE_REDIRECTED_BASE_URL);
       neverProxy = config.getBoolean(PARAM_NEVER_PROXY,
           DEFAULT_NEVER_PROXY);
       maxBufferedRewrite = config.getInt(PARAM_MAX_BUFFERED_REWRITE,
@@ -738,7 +752,11 @@ public class ServeContent extends LockssServlet {
         logAccess("AU not present, 404");
         return;
       }
-
+      if (cu != null && useRedirectedBaseUrl) {
+	baseUrl = PluginUtil.getBaseUrl(cu);
+      } else {
+	baseUrl = url;
+      }
       if (au != null) {
         handleAuRequest();
       } else {
@@ -1285,7 +1303,8 @@ public class ServeContent extends LockssServlet {
    * @param conn the connection
    * @throws IOException if cannot read content
    */
-  protected void serveFromPublisher(LockssUrlConnection conn) throws IOException {
+  protected void serveFromPublisher(LockssUrlConnection conn)
+      throws IOException {
     String ctype = conn.getResponseContentType();
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
     log.debug2(  "Serving publisher content for: " + url
@@ -1553,12 +1572,18 @@ public class ServeContent extends LockssServlet {
 	  log.debug2("Rewriting: " + url);
 	}
         try {
+	  if (baseUrl == null) {
+	    baseUrl = url;
+	  }
+	  if (!baseUrl.equals(url)) {
+	    log.debug("Rewriting " + url + " using base URL " + baseUrl);
+	  }
           rewritten =
               lrf.createLinkRewriter(mimeType,
                   au,
                   original,
                   charset,
-                  url,
+                  baseUrl,
 		  makeLinkTransform());
         } catch (PluginException e) {
           log.error("Can't create link rewriter, not rewriting", e);
