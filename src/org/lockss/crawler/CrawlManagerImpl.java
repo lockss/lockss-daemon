@@ -1249,9 +1249,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  // Prevent the warning below from being output excessively, in case issue
+  // 5335 still isn't fixed.
+  long msgCounter = 0;
+
   void handReqToPool(CrawlReq req) {
     if (!req.isActive()) {
-      logger.warning("Inactive req: " + req);
+      if (msgCounter++ < 100) {
+	logger.warning("Inactive req: " + req);
+      } else if ((msgCounter % 1000000) == 0) {
+	logger.warning("Inactive req (rpt " + msgCounter + "): " + req);
+      }
+      removeAuFromQueues(req.getAuId()); // insurance
       return;
     }
 
@@ -1698,8 +1707,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   // Force queues to be rebuilt. Overkill, but easy and this hardly
   // ever happens
   void removeAuFromQueues(ArchivalUnit au) {
+    removeAuFromQueues(au.getAuId()); 
+ }
+
+  // Force queues to be rebuilt. Overkill, but easy and this hardly
+  // ever happens
+  void removeAuFromQueues(String auid) {
     synchronized (highPriorityCrawlRequests) {
-      highPriorityCrawlRequests.remove(au.getAuId());
+      highPriorityCrawlRequests.remove(auid);
     }
     forceQueueRebuild();
   }
@@ -1799,11 +1814,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	return null;
       }
       CrawlReq bestReq = (CrawlReq)finalSort.first();
-      if (bestReq.rateKey != null) {
-	sharedRateReqs.removeMapping(bestReq.rateKey, bestReq);
-      } else {
-	unsharedRateReqs.remove(bestReq);
-      }
+      sharedRateReqs.removeMapping(bestReq.getRateKey(), bestReq);
+      unsharedRateReqs.remove(bestReq);
       logger.debug3("nextReqFromBuiltQueue: " + bestReq);
       return bestReq;
     }
@@ -1924,7 +1936,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	      }
 	      if (req.priority > MIN_CRAWL_PRIORITY) {
 		ausEligibleCrawl++;
-		String rateKey = au.getFetchRateLimiterKey();
+		String rateKey = req.getRateKey();
 		if (rateKey == null) {
 		  unsharedRateReqs.add(req);
 		  incrPoolEligible(UNSHARED_RATE_KEY);

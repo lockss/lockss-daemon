@@ -44,7 +44,7 @@ public class CrawlReq {
   Object cookie;
   ActivityRegulator.Lock lock;
   private AuState aus = null;
-  Object rateKey;
+  String rateKey;
   int priority = 0;
   int refetchDepth = -1;
 
@@ -114,7 +114,7 @@ public class CrawlReq {
     return aus;
   }
 
-  public Object getRateKey() {
+  public String getRateKey() {
     return rateKey;
   }
 
