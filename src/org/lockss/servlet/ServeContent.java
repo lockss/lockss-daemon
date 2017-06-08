@@ -421,6 +421,9 @@ public class ServeContent extends LockssServlet {
     if (res && explicitAu != null) {
       pluginMgr.promoteAuInSearchSets(explicitAu);
     }
+    if(log.isDebug2()) {
+      log.debug2("isInCache: " + res + ", cu: " + (cu != null) + ", hasContent: " + (cu != null && cu.hasContent()) + ", explicitAu: " + (explicitAu != null));
+    }
     return res;
   }
 
