@@ -1950,7 +1950,7 @@
       comment[years] = Published 2010-2016
       param[journal_code] = md
 
-      au < crawling ; exists ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; >
+      au < frozen ; exists ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; >
       au < frozen ; exists ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; >
       au < frozen ; exists ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; >
       au < frozen ; exists ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; >
