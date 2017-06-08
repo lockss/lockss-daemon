@@ -704,9 +704,9 @@
       au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract only] ; 11 ; >
       au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract only] ; 12 ; >
       au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract only] ; 13 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 ; >
       }
 
       au < finished ; finished ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; reingest5.clockss.org:8082 >
@@ -1098,7 +1098,7 @@
       au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 ; >
       au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 ; >
       au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 ; >
@@ -1439,8 +1439,8 @@
       au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 ; >
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; >
