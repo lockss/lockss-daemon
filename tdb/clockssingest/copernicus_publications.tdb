@@ -64,7 +64,7 @@
       au < finished ; finished ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; >
 
    }
@@ -119,7 +119,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; >
 
    }
@@ -135,7 +135,7 @@
       param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
 
       au < finished ; finished ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; >
 
    }
@@ -176,7 +176,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 ; >
       au < finished ; finished ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; >
 
    }
@@ -217,7 +217,7 @@
       param[base_url] = http://www.arch-anim-breed.net/
 
       au < finished ; finished ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; >
 
       }
@@ -287,7 +287,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; >
 
    }
@@ -338,7 +338,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; >
       au < frozen ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; >
 
    }
@@ -386,7 +386,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; >
 
    }
@@ -437,7 +437,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; >
 
    }
@@ -484,7 +484,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; >
 
    }
@@ -523,7 +523,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; >
 
    }
@@ -560,7 +560,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; >
 
    }
@@ -601,7 +601,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; >
 
    }
@@ -711,7 +711,7 @@
 
       au < finished ; finished ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; >
 
    }
@@ -817,7 +817,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; >
 
    }
@@ -858,7 +858,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; >
 
    }
@@ -897,7 +897,7 @@
       au < finished ; finished ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Geothermal Energy Science Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Geothermal Energy Science Volume 4 ; 4 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Geothermal Energy Science Volume 5 ; 5 ; >
 
    }
@@ -918,7 +918,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; >
       au < manifest ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; >
 
    }
@@ -952,7 +952,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 ; >
       au < finished ; finished ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; >
 
    }
@@ -1405,7 +1405,7 @@
       au < finished ; finished ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 370 ; 370 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; >
       au < frozen ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 372 ; 372 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; >
       au < manifest ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; >
       au < expected ; exists ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; >
@@ -1481,7 +1481,7 @@
       param[home_url] = http://www.soil-journal.net/
 
       au < finished ; finished ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; >
       au < manifest ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; >
 
    }
@@ -1517,7 +1517,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
       au < manifest ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; >
 
    }
@@ -1592,7 +1592,7 @@
       au < deepCrawl ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
       au < finished ; finished ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; >
+      au < deepCrawl ; exists ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; >
       au < manifest ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; >
 
    }

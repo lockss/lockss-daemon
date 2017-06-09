@@ -34,7 +34,7 @@
     # See https://dl.sciencesocieties.org/publications/ael
     param[journal_id] = ael
 
-    au < crawling ; exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; >
     au < manifest ; exists ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; >
 
   }
@@ -64,7 +64,7 @@
     au < finished ; finished ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
     au < finished ; finished ; 2015 ; Agronomy Journal Volume 107 ; 107 ; reingest5.clockss.org:8082 > #malformed url. 403 error
-    au < crawling ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
+    au < deepCrawl ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
     au < manifest ; exists ; 2017 ; Agronomy Journal Volume 109 ; 109 ; >
 
   }
@@ -93,7 +93,7 @@
     au < finished ; finished ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
     au < manifest ; exists ; 2017 ; Crops & Soils Magazine Volume 50 ; 50 ; >
 
   }
@@ -122,7 +122,7 @@
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < finished ; finished ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
-    au < crawling ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
     au < manifest ; exists ; 2017 ; Crop Science Volume 57 ; 57 ; >
 
   }
@@ -151,7 +151,7 @@
     au < finished ; finished ; 2013 ; CSA News Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; CSA News Volume 59 ; 59 ; >
     au < finished ; finished ; 2015 ; CSA News Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
+    au < deepCrawl ; exists ; 2016 ; CSA News Volume 61 ; 61 ; >
     au < manifest ; exists ; 2017 ; CSA News Volume 62 ; 62 ; >
 
   }
@@ -181,7 +181,7 @@
     au < finished ; finished ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 ; >
     au < manifest ; exists ; 2017 ; Journal of Environmental Quality Volume 46 ; 46 ; >
 
   }
@@ -253,7 +253,7 @@
     au < finished ; finished ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
     au < finished ; finished ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; >
     au < manifest ; exists ; 2017 ; Natural Sciences Education Volume 46 ; 46 ; >
 
   }
@@ -278,7 +278,7 @@
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
     au < frozen ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
     au < frozen ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2016 ; The Plant Genome Volume 9 ; 9 ; >
     au < manifest ; exists ; 2017 ; The Plant Genome Volume 10 ; 10 ; >
 
   }
@@ -336,7 +336,7 @@
     au < finished ; finished ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
+    au < deepCrawl ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
     au < manifest ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
 
   }
@@ -365,7 +365,7 @@
     au < finished ; finished ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; >
     au < manifest ; exists ; 2017 ; Vadose Zone Journal Volume 16 ; 16 ; >
 
   }
