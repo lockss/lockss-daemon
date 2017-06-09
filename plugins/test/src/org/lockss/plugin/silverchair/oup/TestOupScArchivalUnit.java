@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.silverchair.oup;
 
-import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 
@@ -95,7 +94,6 @@ public class TestOupScArchivalUnit extends LockssTestCase {
   
   public void testCheckSubstanceRules() throws Exception {
     boolean found;
-    URL base = new URL(ROOT_URL);
     ArchivalUnit jsAu = makeAu("ptj","2012");
     PatternMatcher matcher = RegexpUtil.getMatcher();   
     List<Pattern> patList = jsAu.makeSubstanceUrlPatterns();
@@ -120,6 +118,52 @@ log.setLevel("debug3");
       }
       assertEquals(false,found);
     }
+  }
+  
+  // Test the crawl rules for plugin
+  public void testShouldCacheProperPages() throws Exception {
+    ArchivalUnit au = makeAu("database","2015");
+    theDaemon.getLockssRepository(au);
+    // Test for pages that should get crawled
+    
+    // toc page for an issue
+    shouldCacheTest(ROOT_URL + "database/issue/volume/2015", true, au);
+    shouldCacheTest(ROOT_URL + "database/list-of-issues/2015", true, au);
+    
+    // article files
+    shouldCacheTest(ROOT_URL + "database/article/2433123/ProtoBug-functional-families-from-the-complete", true, au);
+    shouldCacheTest(ROOT_URL + "database/article-abstract/2433123/ProtoBug-functional-families-from-the-complete", true, au);
+    shouldCacheTest(ROOT_URL + "database/article-pdf/doi/10.1093/database/bau122/7298443/bau122.pdf", true, au);
+    
+    
+    shouldCacheTest(ROOT_URL + "database/downloadcitation/2433123?format=ris", true, au);
+    shouldCacheTest(ROOT_URL + "data/sitebuilderassetsoriginals/images/database/database_feature_panel.jpg", true, au);
+    shouldCacheTest(ROOT_URL + "UI/app/img/apple-touch-icon.png", true, au);
+    shouldCacheTest(ROOT_URL + "UI/app/img/favicon-16x16.png", true, au);
+    shouldCacheTest(ROOT_URL + "UI/app/img/favicon.ico", true, au);
+    shouldCacheTest(ROOT_URL + "UI/app/img/safari-pinned-tab.svg", true, au);
+    
+    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", true, au);
+    shouldCacheTest("https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css", true, au);
+    shouldCacheTest("https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700,700italic%7CSource+Sans+Pro:400,400italic,700,700italic", true, au);
+    shouldCacheTest("https://fonts.gstatic.com/s/merriweather/v15/EYh7Vl4ywhowqULgRdYwICxQL91WRy8t8mPvAX_dIgA.ttf", true, au);
+    shouldCacheTest("https://fonts.gstatic.com/s/sourcesanspro/v10/fpTVHK8qsXbIeTHTrnQH6Edtd7Dq2ZflsctMEexj2lw.ttf", true, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/file/UI/app/fonts/icomoon-10c8cce3e34f3a0fe0d722e3ee322184b824f902.ttf?2wsrjz", true, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/cassette.axd/script/92f525bab295d0ffa6f942402d5f7034757b1440/OupCookiePolicyJS", true, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/CSS/database/Site1329903961.css", true, au);
+    
+    // images with expiration are not preserved
+    shouldCacheTest(ROOT_URL + "DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav086/5/bav086f3bp.gif?Expires=1497052403&Signature=FO4epi~mvkHGSxWQ__&Key-Pair-Id=APKAIUCZBIA4Q&sec=83749777&ar=2433219&xsltPath=~/UI/app/XSLT&imagename=", false, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav032/5/bav032f1p.gif?Expires=1497075372&Signature=eJ85Ld6h~aVw__&Key-Pair-Id=APLVPAVW3Q&sec=83747373&ar=2433164&xsltPath=~/UI/app/XSLT&imagename=", false, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
+    
+    // should not get crawled - LOCKSS
+    shouldCacheTest("http://lockss.stanford.edu", false, au);
+  }
+  
+  private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
+    log.info ("shouldCacheTest url: " + url);
+    assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
 }

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,9 +75,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!--  -->
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org)/"</string>
-      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=$", url_host(base_url)</string>
+      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=", url_host(base_url)</string>
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
       <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue)/(volume/)?([0-9i]+|doi).*(?!/www\.)", url_host(base_url), journal_id</string>
