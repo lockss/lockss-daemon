@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -53,7 +53,7 @@
   <entry>
     <string>au_permission_url</string>
       <list>
-        <string>"%s%s/index.html", base_url, volume_name</string>
+        <string>"%sindex.html",base_url</string>
         <string>"%sindex.html",home_url</string> 
       </list>
   </entry>
