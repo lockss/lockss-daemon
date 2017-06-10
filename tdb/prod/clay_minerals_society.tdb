@@ -35,7 +35,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Clays and Clay Minerals Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; down ; 2015 ; Clays and Clay Minerals Volume 63 ; 63 >
     au < gsw.GSWDrupalPlugin ; released ; 2016 ; Clays and Clay Minerals Volume 64 ; 64 >
-    au < gsw.GSWDrupalPlugin ; doNotProcess ; 2017 ; Clays and Clay Minerals Volume 65 ; 65 >
+    au < gsw.GSWDrupalPlugin ; exists ; 2017 ; Clays and Clay Minerals Volume 65 ; 65 >
 
   }
 

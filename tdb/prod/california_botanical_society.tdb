@@ -12,7 +12,6 @@
       issnl = 0024-9637
     >
 
-    
     {
 
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
@@ -32,11 +31,10 @@
       au < released ; 2014 ; Madroño Volume 61 ; 61 >
       au < released ; 2015 ; Madroño Volume 62 ; 62 >
       au < released ; 2016 ; Madroño Volume 63 ; 63 >
+      au < expected ; 2017 ; Madroño Volume 64 ; 64 >
       
- }
+   }
 
   }
 
 }    
-      
-      
