@@ -1027,6 +1027,7 @@
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; >
 
    }
 
@@ -1145,8 +1146,8 @@
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W3 ; XL-3-W3 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-1/W5 ; XL-1-W5 ; >
       au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-2/W4 ; XL-2-W4 ; >
+      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W8 ; XL-5-W8 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XL-3/W4 ; XL-3-W4 ; >
-      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XL-5/W8 ; XL-5-W8 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B1 ; XLI-B1 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B2 ; XLI-B2 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B3 ; XLI-B3 ; >
@@ -1155,9 +1156,13 @@
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B6 ; XLI-B6 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B7 ; XLI-B7 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B8 ; XLI-B8 ; >
-      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W1 ; XLII-2-W1 ; >
-      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W2 ; XLII-2-W2 ; >
       au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-4/W1 ; XLII-4-W1 ; >
+      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 ; >
+      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W2 ; XLII-2-W2 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W3 ; XLII-2-W3 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W4 ; XLII-2-W4 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-5/W1 ; XLII-5-W1 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 ; >
 
      }
    }
@@ -1551,6 +1556,7 @@
       attr[journal_id] = SMSPS
       param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
       param[home_url] = http://www.stephan-mueller-special-publication-series.net/
+      # no publication after 2009
 
       au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; >
       au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >

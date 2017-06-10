@@ -64,6 +64,7 @@
       au < released ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
       au < released ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
       au < manifest ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 >
+      au < expected ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 >
     
    }
     
@@ -91,6 +92,7 @@
       au < released ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 >
       au < released ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 >
       au < manifest ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 >
+      au < expected ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 >
     
    }
     
@@ -117,6 +119,7 @@
       au < released ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
       au < released ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
       au < manifest ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 >
+      au < expected ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 >
     
    }
     
@@ -132,6 +135,7 @@
 
       au < released ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
       au < manifest ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 >
+      au < expected ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 >
 
    }
 
@@ -172,6 +176,7 @@
       au < released ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
       au < released ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
       au < manifest ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 >
+      au < expected ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 >
     
    }
     
@@ -211,6 +216,7 @@
 
       au < released ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
       au < manifest ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 >
+      au < expected ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 >
 
       }
 
@@ -225,10 +231,10 @@
       attr[journal_id] = ap
       param[base_url] = http://www.astra-proc.net/
       param[home_url] = http://www.astra-proceedings.net/
+      # no publication after 2015
 
       au < released ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
       au < released ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
-      au < expected ; 2016 ; 2016 ; ASTRA Proceedings Volume 3 ; 3 >
 
    }
     
@@ -280,6 +286,7 @@
       au < released ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
       au < released ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
       au < manifest ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 >
+      au < expected ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 >
     
    }
     
@@ -330,6 +337,7 @@
       au < released ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
       au < released ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
       au < manifest ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 >
+      au < expected ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 >
     
    }
     
@@ -376,7 +384,8 @@
       au < released ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
       au < released ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
       au < released ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
-      au < manifest  ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 >
+      au < manifest ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 >
+      au < expected ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 >
     
    }
     
@@ -427,6 +436,7 @@
       au < released ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
       au < released ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
       au < manifest ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 >
+      au < expected ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 >
     
    }
     
@@ -473,6 +483,7 @@
       au < released ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
       au < released ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
       au < manifest ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 >
+      au < expected ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 >
     
    }
     
@@ -511,6 +522,7 @@
       au < released ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
       au < released ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
       au < manifest ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 >
+      au < expected ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 >
     
    }
     
@@ -547,6 +559,7 @@
       au < released ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
       au < released ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
       au < manifest ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 >
+      au < expected ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 >
     
    }
     
@@ -587,6 +600,7 @@
       au < released ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
       au < released ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
       au < manifest ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 >
+      au < expected ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 >
     
    }
     
@@ -620,6 +634,7 @@
       attr[journal_id] = eE
       param[base_url] = http://www.electronic-earth.net/
       param[home_url] = http://www.electronic-earth.net/
+      #stopped in summer 2009
 
       au < released ; 2006 ; 2006 ; eEarth Volume 1 ; 1 >
       au < released ; 2007 ; 2007 ; eEarth Volume 2 ; 2 >
@@ -654,6 +669,7 @@
       attr[journal_id] = FACTS
       param[base_url] = http://www.field-actions-sci-rep.net/
       param[home_url] = http://www.field-actions-science-reports.net/
+      # move to http://factsreports.revues.org
 
       au < released ; 2008 ; 2008 ; Field Actions Science Reports Volume 1 ; 1 >
       au < released ; 2009 ; 2009 ; Field Actions Science Reports Volume 2 ; 2 >
@@ -694,6 +710,7 @@
       au < released ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
       au < released ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
       au < manifest ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 >
+      au < expected ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 >
     
    }
     
@@ -778,6 +795,7 @@
       au < released ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
       au < released ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
       au < manifest ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 >
+      au < expected ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 >
     
    }
     
@@ -796,6 +814,7 @@
       au < released ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
       au < released ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
       au < manifest ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 >
+      au < expected ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 >
     
    }
    
@@ -1003,6 +1022,8 @@
       au < exists ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 >
       au < exists ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 >
       au < exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 >
+      au < exists ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 >
+      au < exists ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 >
     
    }
 
@@ -1120,6 +1141,13 @@
       au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B6 ; XLI-B6 >
       au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B7 ; XLI-B7 >
       au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B8 ; XLI-B8 >
+      au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-4/W1 ; XLII-4-W1 >
+      au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 >
+      au < exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W2 ; XLII-2-W2 >
+      au < exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W3 ; XLII-2-W3 >
+      au < exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W4 ; XLII-2-W4 >
+      au < exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-5/W1 ; XLII-5-W1 >
+      au < exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 >
 
      }
    }
@@ -1414,6 +1442,7 @@
 
       au < released ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
       au < manifest  ; 2016 ; 2016 ; SOIL Volume 2 ; 2 >
+      au < expected  ; 2017 ; 2017 ; SOIL Volume 3 ; 3 >
 
    }
 
@@ -1482,6 +1511,7 @@
       attr[journal_id] = SMSPS
       param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
       param[home_url] = http://www.stephan-mueller-special-publication-series.net/
+      # no publication after 2009
 
       au < released ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 >
       au < released ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 >
@@ -1498,6 +1528,7 @@
       attr[journal_id] = SAPIENS
       param[base_url] = http://www.surv-perspect-integr-environ-soc.net/
       param[home_url] = http://www.surveys-and-perspectives-integrating-environment-and-society.net/
+      # move to http://sapiens.revues.org
 
       au < released ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society Volume 1 ; 1 >
     
@@ -1522,7 +1553,7 @@
       au < released ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
       au < released ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
       au < released ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
-      au < manifest  ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 >
+      au < manifest ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 >
       au < manifest ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 >
     
    }
