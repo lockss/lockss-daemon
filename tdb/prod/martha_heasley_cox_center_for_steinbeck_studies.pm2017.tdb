@@ -18,12 +18,12 @@
 
       attr[journal_id] = 377
 
-        au < manifest ; 2006 ; Steinbeck Review Volume 3 [2006] ; 3417 >
-        au < manifest ; 2007 ; Steinbeck Review Volume 4 [2007] ; 3742 >
-        au < manifest ; 2013 ; Steinbeck Review Volume 10 [2013] ; 9206 >
-        au < manifest ; 2014 ; Steinbeck Review Volume 11 [2014] ; 10050 >
-        au < manifest ; 2015 ; Steinbeck Review Volume 12 [2015] ; 10660 >
-        au < manifest ; 2016 ; Steinbeck Review Volume 13 [2016] ; 11272 >
+        au < testing ; 2006 ; Steinbeck Review Volume 3 [2006] ; 3417 >
+        au < testing ; 2007 ; Steinbeck Review Volume 4 [2007] ; 3742 >
+        au < testing ; 2013 ; Steinbeck Review Volume 10 [2013] ; 9206 >
+        au < testing ; 2014 ; Steinbeck Review Volume 11 [2014] ; 10050 >
+        au < testing ; 2015 ; Steinbeck Review Volume 12 [2015] ; 10660 >
+        au < testing ; 2016 ; Steinbeck Review Volume 13 [2016] ; 11272 >
 
     }
     {
@@ -37,8 +37,8 @@
 
       attr[journal_id] = 274
 
-        au < manifest ; 2004 ; Steinbeck Studies Volume 15 [2004] ; 2571 >
-        au < manifest ; 2005 ; Steinbeck Studies Volume 16 [2005] ; 3310 >
+        au < testing ; 2004 ; Steinbeck Studies Volume 15 [2004] ; 2571 >
+        au < testing ; 2005 ; Steinbeck Studies Volume 16 [2005] ; 3310 >
 
     }
 

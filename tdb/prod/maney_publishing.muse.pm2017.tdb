@@ -18,9 +18,9 @@
 
       attr[journal_id] = 328
 
-        au < manifest ; 2005 ; Italian Culture Volume 23 [2005] ; 3156 >
-        au < manifest ; 2006-2007 ; Italian Culture Volume 24-25 [2006-2007] ; 3480 >
-        au < manifest ; 2008 ; Italian Culture Volume 26 [2008] ; 3906 >
+        au < testing ; 2005 ; Italian Culture Volume 23 [2005] ; 3156 >
+        au < testing ; 2006-2007 ; Italian Culture Volume 24-25 [2006-2007] ; 3480 >
+        au < testing ; 2008 ; Italian Culture Volume 26 [2008] ; 3906 >
 
     }
     {
@@ -34,11 +34,11 @@
 
       attr[journal_id] = 390
 
-        au < manifest ; 2007-2008 ; Twentieth-Century China Volume 33 [2007-2008] ; 3699 >
-        au < manifest ; 2008-2009 ; Twentieth-Century China Volume 34 [2008-2009] ; 4187 >
-        au < manifest ; 2009-2010 ; Twentieth-Century China Volume 35 [2009-2010] ; 5928 >
-        au < manifest ; 2015 ; Twentieth-Century China Volume 40 [2015] ; 12226 >
-        au < manifest ; 2016 ; Twentieth-Century China Volume 41 [2016] ; 12227 >
+        au < testing ; 2007-2008 ; Twentieth-Century China Volume 33 [2007-2008] ; 3699 >
+        au < testing ; 2008-2009 ; Twentieth-Century China Volume 34 [2008-2009] ; 4187 >
+        au < testing ; 2009-2010 ; Twentieth-Century China Volume 35 [2009-2010] ; 5928 >
+        au < testing ; 2015 ; Twentieth-Century China Volume 40 [2015] ; 12226 >
+        au < testing ; 2016 ; Twentieth-Century China Volume 41 [2016] ; 12227 >
         au < manifest ; 2017 ; Twentieth-Century China Volume 42 [2017] ; 12404 >
 
     }
