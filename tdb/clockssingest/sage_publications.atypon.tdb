@@ -26711,7 +26711,7 @@
       au < crawling ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 ; jthc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Transport History Volume 36 ; 36 ; jthc ; >
       au < crawling ; exists ; 2016 ; The Journal of Transport History Volume 37 ; 37 ; jthc ; >
-      au < expected ; exists ; 2017 ; The Journal of Transport History Volume 38 ; 38 ; jthc ; >
+      au < manifest ; exists ; 2017 ; The Journal of Transport History Volume 38 ; 38 ; jthc ; >
 
   }
 
@@ -30277,7 +30277,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; nvwa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; nvwa ; >
       au < crawling ; exists ; 2016 ; Noise & Vibration Worldwide Volume 47 ; 47 ; nvwa ; >
-      au < expected ; exists ; 2017 ; Noise & Vibration Worldwide Volume 48 ; 48 ; nvwa ; >
+      au < manifest ; exists ; 2017 ; Noise & Vibration Worldwide Volume 48 ; 48 ; nvwa ; >
 
   }
 
@@ -31871,7 +31871,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 ; ppna ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; ppna ; >
       au < crawling ; exists ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 ; ppna ; >
-      au < expected ; exists ; 2017 ; Policy, Politics, & Nursing Practice Volume 18 ; 18 ; ppna ; >
+      au < manifest ; exists ; 2017 ; Policy, Politics, & Nursing Practice Volume 18 ; 18 ; ppna ; >
 
     }
 
@@ -39447,7 +39447,7 @@
       au < crawling ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 138 ; 138 ; thea ; >
       au < manifest ; exists ; 2017 ; Thesis Eleven Volume 139 ; 139 ; thea ; >
-      au < expected ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
+      au < manifest ; exists ; 2017 ; Thesis Eleven Volume 140 ; 140 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 141 ; 141 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 142 ; 142 ; thea ; >
       au < expected ; exists ; 2017 ; Thesis Eleven Volume 143 ; 143 ; thea ; >
@@ -43457,7 +43457,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; South Asian Journal of Macroeconomics and Public Finance Volume 3 ; 3 ; smpa ; >
     au < doNotProcess ; doNotProcess ; 2015 ; South Asian Journal of Macroeconomics and Public Finance Volume 4 ; 4 ; smpa ; >
     au < crawling ; exists ; 2016 ; South Asian Journal of Macroeconomics and Public Finance Volume 5 ; 5 ; smpa ; >
-    au < expected ; exists ; 2017 ; South Asian Journal of Macroeconomics and Public Finance Volume 6 ; 6 ; smpa ; >
+    au < manifest ; exists ; 2017 ; South Asian Journal of Macroeconomics and Public Finance Volume 6 ; 6 ; smpa ; >
 
     }
 
@@ -44220,7 +44220,7 @@
         #param[base_url] = http://icp.sagepub.com/
         comment[continues] = 2040-4026
 
-        au < exists ; exists ; 2008 ; International Journal of Care Coordination Volume 12 ; 12 ; icpc ; >
+        au < manifest ; exists ; 2008 ; International Journal of Care Coordination Volume 12 ; 12 ; icpc ; >
         au < manifest ; exists ; 2009 ; International Journal of Care Coordination Volume 13 ; 13 ; icpd ; >
         au < manifest ; exists ; 2010 ; International Journal of Care Coordination Volume 14 ; 14 ; icpd ; >
         au < manifest ; exists ; 2011 ; International Journal of Care Coordination Volume 15 ; 15 ; icpd ; >
