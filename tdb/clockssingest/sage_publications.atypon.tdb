@@ -44245,6 +44245,7 @@
 
         #param[base_url] = http://icp.sagepub.com/
         comment[continued_by] = 2053-4354
+        # dooNotProcess, name changed after 2007
 
         au < manifest ; exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 ; icpa ; >
         au < manifest ; exists ; 1998 ; International Journal of Care Pathways Volume 2 ; 2 ; icpb ; >
@@ -44257,11 +44258,11 @@
         au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; icpc ; >
         au < exists ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; icpc ; >
         au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; icpc ; >
-        au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; icpc ; >
-        au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; icpc ; >
-        au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; icpc ; >
-        au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; icpc ; >
-        au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; icpc ; >
+        #au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; icpc ; >
+        #au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; icpc ; >
+        #au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; icpc ; >
+        #au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; icpc ; >
+        #au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; icpc ; >
 
       }
 
