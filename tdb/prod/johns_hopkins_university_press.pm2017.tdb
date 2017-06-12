@@ -1237,16 +1237,16 @@
 
       attr[journal_id] = 333
 
-        au < testing ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
-        au < testing ; 1987 ; L'Esprit Créateur Volume 27 [1987] ; 9443 >
-        au < testing ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
-        au < testing ; 1989 ; L'Esprit Créateur Volume 29 [1989] ; 9445 >
-        au < testing ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
-        au < testing ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
-        au < testing ; 1992 ; L'Esprit Créateur Volume 32 [1992] ; 9448 >
-        au < testing ; 1993 ; L'Esprit Créateur Volume 33 [1993] ; 9449 >
-        au < testing ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
-        au < testing ; 1995 ; L'Esprit Créateur Volume 35 [1995] ; 9451 >
+        au < doesNotExist ; 1986 ; L'Esprit Créateur Volume 26 [1986] ; 9442 >
+        au < doesNotExist ; 1987 ; L'Esprit Créateur Volume 27 [1987] ; 9443 >
+        au < doesNotExist ; 1988 ; L'Esprit Créateur Volume 28 [1988] ; 9444 >
+        au < doesNotExist ; 1989 ; L'Esprit Créateur Volume 29 [1989] ; 9445 >
+        au < doesNotExist ; 1990 ; L'Esprit Créateur Volume 30 [1990] ; 9446 >
+        au < doesNotExist ; 1991 ; L'Esprit Créateur Volume 31 [1991] ; 9447 >
+        au < doesNotExist ; 1992 ; L'Esprit Créateur Volume 32 [1992] ; 9448 >
+        au < doesNotExist ; 1993 ; L'Esprit Créateur Volume 33 [1993] ; 9449 >
+        au < doesNotExist ; 1994 ; L'Esprit Créateur Volume 34 [1994] ; 9450 >
+        au < doesNotExist ; 1995 ; L'Esprit Créateur Volume 35 [1995] ; 9451 >
         au < ready ; 1996 ; L'Esprit Créateur Volume 36 [1996] ; 4340 >
         au < testing ; 1997 ; L'Esprit Créateur Volume 37 [1997] ; 4339 >
         au < testing ; 1998 ; L'Esprit Créateur Volume 38 [1998] ; 4208 >
