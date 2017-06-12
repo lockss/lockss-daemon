@@ -26,7 +26,7 @@
         au < ready ; 2006 ; CR: The New Centennial Review Volume 6 [2006] ; 3080 >
         au < ready ; 2007 ; CR: The New Centennial Review Volume 7 [2007] ; 3481 >
         au < ready ; 2008 ; CR: The New Centennial Review Volume 8 [2008] ; 3919 >
-        au < testing ; 2009 ; CR: The New Centennial Review Volume 9 [2009] ; 4411 >
+        au < ready ; 2009 ; CR: The New Centennial Review Volume 9 [2009] ; 4411 >
         au < ready ; 2010 ; CR: The New Centennial Review Volume 10 [2010] ; 6434 >
         au < ready ; 2011 ; CR: The New Centennial Review Volume 11 [2011] ; 7935 >
         au < testing ; 2012 ; CR: The New Centennial Review Volume 12 [2012] ; 8517 >
@@ -49,8 +49,8 @@
 
         au < ready ; 1994 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 1 [Spring 1994] ; 5984 >
         au < testing ; 1995 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 2 [Spring 1995] ; 5983 >
-        au < testing ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 [Spring 1996] ; 5982 >
-        au < testing ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 [Spring 1997] ; 5981 >
+        au < ready ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 [Spring 1996] ; 5982 >
+        au < ready ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 [Spring 1997] ; 5981 >
         au < ready ; 1998 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 5 [Spring 1998] ; 5980 >
         au < ready ; 1999 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 6 [Spring 1999] ; 5979 >
         au < ready ; 2000 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 7 [Spring 2000] ; 5978 >
@@ -59,7 +59,7 @@
         au < testing ; 2003 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 10 [Spring 2003] ; 5975 >
         au < testing ; 2004 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 11 [Spring 2004] ; 5974 >
         au < ready ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 12-13 [2005-2006] ; 3787 >
-        au < testing ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 14 [2007] ; 3720 >
+        au < ready ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 14 [2007] ; 3720 >
         au < testing ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 [2008-2009] ; 4349 >
         au < ready ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 [2010] ; 6338 >
         au < testing ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 [2011] ; 6979 >
@@ -91,13 +91,13 @@
         au < ready ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 [2006] ; 3060 >
         au < ready ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 [2007] ; 3376 >
         au < ready ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 [2008] ; 3755 >
-        au < testing ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 [2009] ; 4222 >
+        au < ready ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 [2009] ; 4222 >
         au < ready ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 [2010] ; 5773 >
         au < ready ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 [2011] ; 6715 >
         au < ready ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 [2012] ; 8161 >
         au < ready ; 2013 ; Fourth Genre: Explorations in Nonfiction Volume 15 [2013] ; 8835 >
         au < testing ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 [2014] ; 9685 >
-        au < testing ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 [2015] ; 10404 >
+        au < ready ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 [2015] ; 10404 >
         au < ready ; 2016 ; Fourth Genre: Explorations in Nonfiction Volume 18 [2016] ; 11123 >
         au < manifest ; 2017 ; Fourth Genre: Explorations in Nonfiction Volume 19 [2017] ; 12411 >
 
@@ -119,10 +119,10 @@
         au < ready ; 2003 ; French Colonial History Volume 4 [2003] ; 905 >
         au < ready ; 2004 ; French Colonial History Volume 5 [2004] ; 2510 >
         au < testing ; 2005 ; French Colonial History Volume 6 [2005] ; 2859 >
-        au < testing ; 2006 ; French Colonial History Volume 7 [2006] ; 3100 >
+        au < ready ; 2006 ; French Colonial History Volume 7 [2006] ; 3100 >
         au < ready ; 2007 ; French Colonial History Volume 8 [2007] ; 3384 >
         au < ready ; 2008 ; French Colonial History Volume 9 [2008] ; 3754 >
-        au < testing ; 2009 ; French Colonial History Volume 10 [2009] ; 4366 >
+        au < ready ; 2009 ; French Colonial History Volume 10 [2009] ; 4366 >
         au < testing ; 2010 ; French Colonial History Volume 11 [2010] ; 5750 >
         au < ready ; 2011 ; French Colonial History Volume 12 [2011] ; 7233 >
         au < ready ; 2012 ; French Colonial History Volume 13 [2012] ; 8280 >
@@ -194,7 +194,7 @@
 
       attr[journal_id] = 639
 
-        au < testing ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue [Fall 2013] ; 9435 >
+        au < ready ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue [Fall 2013] ; 9435 >
         au < ready ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 [2014] ; 9675 >
         au < ready ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 [2015] ; 10424 >
         au < ready ; 2016 ; QED: A Journal in GLBTQ Worldmaking Volume 3 [2016] ; 11155 >
@@ -215,8 +215,8 @@
         au < testing ; 2004 ; Red Cedar Review Volume 39 [2004] ; 6043 >
         au < testing ; 2005 ; Red Cedar Review Volume 40 [2005] ; 2839 >
         au < ready ; 2006 ; Red Cedar Review Volume 41 [2006] ; 3066 >
-        au < testing ; 2007 ; Red Cedar Review Volume 42 [2007] ; 3434 >
-        au < testing ; 2008 ; Red Cedar Review Volume 43 [2008] ; 3756 >
+        au < ready ; 2007 ; Red Cedar Review Volume 42 [2007] ; 3434 >
+        au < ready ; 2008 ; Red Cedar Review Volume 43 [2008] ; 3756 >
         au < ready ; 2009 ; Red Cedar Review Volume 44 [2009] ; 4416 >
         au < ready ; 2010 ; Red Cedar Review Volume 45 [2010] ; 5838 >
         au < ready ; 2011 ; Red Cedar Review Volume 46 [2011] ; 6823 >
