@@ -33,10 +33,10 @@
       attr[journal_id] = 0000
 
         au < manifest ; 2009 ; Anthropological Linguistics Volume 51 [2009] ; 5771 >
-        au < manifest ; 2010 ; Anthropological Linguistics Volume 52 [2010] ; 6635 >
-        au < manifest ; 2011 ; Anthropological Linguistics Volume 53 [2011] ; 7844 >
+        au < testing ; 2010 ; Anthropological Linguistics Volume 52 [2010] ; 6635 >
+        au < testing ; 2011 ; Anthropological Linguistics Volume 53 [2011] ; 7844 >
         au < released ; 2012 ; Anthropological Linguistics Volume 54 [2012] ; 8598 >
-        au < manifest ; 2013 ; Anthropological Linguistics Volume 55 [2013] ; 9541 >
+        au < testing ; 2013 ; Anthropological Linguistics Volume 55 [2013] ; 9541 >
         au < released ; 2014 ; Anthropological Linguistics Volume 56 [2014] ; 10423 >
         au < released ; 2015 ; Anthropological Linguistics Volume 57 [2015] ; 11005 >
         au < released ; 2016 ; Anthropological Linguistics Volume 58 [2016] ; 12247 >
@@ -55,10 +55,10 @@
 
         au < manifest ; 2008 ; Collaborative Anthropologies Volume 1 [2008] ; 5704 >
         au < manifest ; 2009 ; Collaborative Anthropologies Volume 2 [2009] ; 5790 >
-        au < manifest ; 2010 ; Collaborative Anthropologies Volume 3 [2010] ; 6563 >
-        au < manifest ; 2011 ; Collaborative Anthropologies Volume 4 [2011] ; 7829 >
-        au < manifest ; 2012 ; Collaborative Anthropologies Volume 5 [2012] ; 8557 >
-        au < manifest ; 2013 ; Collaborative Anthropologies Volume 6 [2013] ; 9673 >
+        au < testing ; 2010 ; Collaborative Anthropologies Volume 3 [2010] ; 6563 >
+        au < testing ; 2011 ; Collaborative Anthropologies Volume 4 [2011] ; 7829 >
+        au < testing ; 2012 ; Collaborative Anthropologies Volume 5 [2012] ; 8557 >
+        au < testing ; 2013 ; Collaborative Anthropologies Volume 6 [2013] ; 9673 >
         au < released ; 2014-2015 ; Collaborative Anthropologies Volume 7 [2014-2015] ; 10400 >
         au < released ; 2015-2016 ; Collaborative Anthropologies Volume 8 [2015-2016] ; 12426 >
 
@@ -83,10 +83,10 @@
         au < manifest ; 2007 ; French Forum Volume 32 [2007] ; 3635 >
         au < manifest ; 2008 ; French Forum Volume 33 [2008] ; 4000 >
         au < manifest ; 2009 ; French Forum Volume 34 [2009] ; 4419 >
-        au < manifest ; 2010 ; French Forum Volume 35 [2010] ; 6167 >
-        au < manifest ; 2011 ; French Forum Volume 36 [2011] ; 7438 >
+        au < testing ; 2010 ; French Forum Volume 35 [2010] ; 6167 >
+        au < testing ; 2011 ; French Forum Volume 36 [2011] ; 7438 >
         au < released ; 2012 ; French Forum Volume 37 [2012] ; 8503 >
-        au < manifest ; 2013 ; French Forum Volume 38 [2013] ; 9326 >
+        au < testing ; 2013 ; French Forum Volume 38 [2013] ; 9326 >
         au < released ; 2014 ; French Forum Volume 39 [2014] ; 10105 >
         au < released ; 2015 ; French Forum Volume 40 [2015] ; 10668 >
         au < released ; 2016-2017 ; French Forum Volume 41 [2016-2017] ; 12358 >
@@ -112,8 +112,8 @@
         au < manifest ; 2007 ; Frontiers: A Journal of Women Studies Volume 28 [2007] ; 3426 >
         au < manifest ; 2008 ; Frontiers: A Journal of Women Studies Volume 29 [2008] ; 3741 >
         au < manifest ; 2009 ; Frontiers: A Journal of Women Studies Volume 30 [2009] ; 4257 >
-        au < manifest ; 2010 ; Frontiers: A Journal of Women Studies Volume 31 [2010] ; 5673 >
-        au < manifest ; 2011 ; Frontiers: A Journal of Women Studies Volume 32 [2011] ; 7293 >
+        au < testing ; 2010 ; Frontiers: A Journal of Women Studies Volume 31 [2010] ; 5673 >
+        au < testing ; 2011 ; Frontiers: A Journal of Women Studies Volume 32 [2011] ; 7293 >
         au < released ; 2012 ; Frontiers: A Journal of Women Studies Volume 33 [2012] ; 8239 >
         au < released ; 2013 ; Frontiers: A Journal of Women Studies Volume 34 [2013] ; 8886 >
         au < released ; 2014 ; Frontiers: A Journal of Women Studies Volume 35 [2014] ; 9829 >
@@ -136,7 +136,7 @@
         au < released ; 2015 ; Gettysburg Magazine Number 53 [July 2015] ; 10709 >
         au < released ; 2016 ; Gettysburg Magazine Number 54 [January 2016] ; 10883 >
         au < released ; 2016 ; Gettysburg Magazine Number 55 [July 2016] ; 11336 >
-        au < manifest ; 2017 ; Gettysburg Magazine Number 56 [January 2017] ; 12414 >
+        au < testing ; 2017 ; Gettysburg Magazine Number 56 [January 2017] ; 12414 >
 
     }
     {
@@ -153,7 +153,7 @@
         au < released ; 2014 ; Great Plains Quarterly Volume 34 [2014] ; 9642 >
         au < released ; 2015 ; Great Plains Quarterly Volume 35 [2015] ; 10387 >
         au < released ; 2016 ; Great Plains Quarterly Volume 36 [2016] ; 10974 >
-        au < manifest ; 2017 ; Great Plains Quarterly Volume 37 [2017] ; 12372 >
+        au < testing ; 2017 ; Great Plains Quarterly Volume 37 [2017] ; 12372 >
 
     }
     {
@@ -188,8 +188,8 @@
         au < manifest ; 2007 ; Histories of Anthropology Annual Volume 3 [2007] ; 3997 >
         au < manifest ; 2008 ; Histories of Anthropology Annual Volume 4 [2008] ; 3959 >
         au < manifest ; 2009 ; Histories of Anthropology Annual Volume 5 [2009] ; 4932 >
-        au < manifest ; 2010 ; Histories of Anthropology Annual Volume 6 [2010] ; 6488 >
-        au < manifest ; 2011 ; Histories of Anthropology Annual Volume 7 [2011] ; 7823 >
+        au < testing ; 2010 ; Histories of Anthropology Annual Volume 6 [2010] ; 6488 >
+        au < testing ; 2011 ; Histories of Anthropology Annual Volume 7 [2011] ; 7823 >
 
     }
     {
