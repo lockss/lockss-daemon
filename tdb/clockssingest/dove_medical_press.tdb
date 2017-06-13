@@ -360,7 +360,7 @@
     au < finished ; crawling ; 2013 ; Advances and Applications in Bioinformatics and Chemistry Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Advances and Applications in Bioinformatics and Chemistry Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances and Applications in Bioinformatics and Chemistry Volume 8 ; 8 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Advances and Applications in Bioinformatics and Chemistry Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Advances and Applications in Bioinformatics and Chemistry Volume 10 ; 10 ; 2017 ; >
     
   }
@@ -469,7 +469,7 @@
     au < finished ; crawling ; 2013 ; Journal of Receptor, Ligand and Channel Research Volume 6 ; 6 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Journal of Receptor, Ligand and Channel Research Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Journal of Receptor, Ligand and Channel Research Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Journal of Receptor, Ligand and Channel Research Volume 9 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Journal of Receptor, Ligand and Channel Research Volume 10 ; 10 ; 2017 ; >
     
   }
@@ -1115,7 +1115,7 @@
     au < finished ; crawling ; 2013 ; Virus Adaptation and Treatment Volume 5 ; 5 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Virus Adaptation and Treatment Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Virus Adaptation and Treatment Volume 7 ; 7 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Virus Adaptation and Treatment Volume 8 ; 8 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Virus Adaptation and Treatment Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2017 ; Virus Adaptation and Treatment Volume 9 ; 9 ; 2017 ; >
     
   }
@@ -1151,7 +1151,7 @@
     param[journal_id] = 62
 
     au < finished ; finished ; 2015 ; International Journal of High Throughput Screening Volume 5 ; 5 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; International Journal of High Throughput Screening Volume 6 ; 6 ; 2016 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2017 ; International Journal of High Throughput Screening Volume 7 ; 7 ; 2017 ; >
 
   }
@@ -1213,7 +1213,7 @@
     au < finished ; crawling ; 2013 ; Journal of Experimental Pharmacology Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Experimental Pharmacology Volume 6 ; 6 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Experimental Pharmacology Volume 7 ; 7 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Journal of Experimental Pharmacology Volume 8 ; 8 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Journal of Experimental Pharmacology Volume 8 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Journal of Experimental Pharmacology Volume 9 ; 9 ; 2017 ; >
     
   }
@@ -1565,7 +1565,7 @@
     au < finished ; crawling ; 2013 ; Open Access Animal Physiology Volume 4 ; 4 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Open Access Animal Physiology Volume 5 ; 5 ; 2014 ; >
     au < finished ; finished ; 2015 ; Open Access Animal Physiology Volume 6 ; 6 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Open Access Animal Physiology Volume 7 ; 7 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Open Access Animal Physiology Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2017 ; Open Access Animal Physiology Volume 8 ; 8 ; 2017 ; >
     
   }
@@ -2284,7 +2284,7 @@
     au < finished ; crawling ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 1 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Reports in Theoretical Chemistry Volume 2 ; 2 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Reports in Theoretical Chemistry Volume 3 ; 3 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Reports in Theoretical Chemistry Volume 4 ; 4 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Reports in Theoretical Chemistry Volume 4 ; 4 ; 2016 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Reports in Theoretical Chemistry Volume 5 ; 5 ; 2017 ; >
    
   }
@@ -2484,7 +2484,7 @@
     au < doesNotExist ; doesNotExist ; 2013 ; Journal of Biorepository Science for Applied Medicine Volume 2 ; 2 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Biorepository Science for Applied Medicine Volume 3 ; 3 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Biorepository Science for Applied Medicine Volume 4 ; 4 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Journal of Biorepository Science for Applied Medicine Volume 5 ; 5 ; 2016 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Journal of Biorepository Science for Applied Medicine Volume 6 ; 6 ; 2017 ; >
    
   }
@@ -2637,7 +2637,7 @@
     au < finished ; crawling ; 2013 ; Journal of Vascular Diagnostics and Interventions Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Vascular Diagnostics and Interventions Volume 2 ; 2 ; 2014 ; >
     au < finished ; finished ; 2015 ; Journal of Vascular Diagnostics and Interventions Volume 3 ; 3 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Journal of Vascular Diagnostics and Interventions Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2017 ; Journal of Vascular Diagnostics and Interventions Volume 5 ; 5 ; 2017 ; >
    
   }
@@ -2668,7 +2668,7 @@
 
     au < finished ; finished ; 2014 ; Robotic Surgery: Research and Reviews Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Robotic Surgery: Research and Reviews Volume 2 ; 2 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; Robotic Surgery: Research and Reviews Volume 3 ; 3 ; 2016 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2017 ; Robotic Surgery: Research and Reviews Volume 4 ; 4 ; 2017 ; >
 
   }
