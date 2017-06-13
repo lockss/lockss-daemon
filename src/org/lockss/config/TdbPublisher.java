@@ -45,6 +45,8 @@ import org.lockss.util.*;
  * @author  Philip Gust
  * @version $Id$
  */
+import com.jcabi.aspects.*;
+@Loggable(value = Loggable.TRACE, prepend = true)
 public class TdbPublisher {
   /**
    * Set up logger
