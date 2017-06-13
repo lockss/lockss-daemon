@@ -507,6 +507,11 @@ public class ServeContent extends LockssServlet {
     String auid = null;
     String pathInfo = req.getPathInfo();
 
+    // If true, redirect auid-only request to OpenURL for that content.
+    // (This is what the Serve AU link has historically done.)  If false,
+    // serve just the access page(s) for the specific AU
+    boolean useOpenUrlForAuid = false;
+
     if (pathInfo != null && pathInfo.length() >= 1) {
       String query = req.getQueryString();
       if (query != null) {
@@ -517,6 +522,7 @@ public class ServeContent extends LockssServlet {
     } else {
       url = getParameter("url");
       auid = getParameter("auid");
+      useOpenUrlForAuid = Boolean.parseBoolean(getParameter("use_openurl"));
     }
     versionStr = getParameter("version");
 
@@ -620,6 +626,7 @@ public class ServeContent extends LockssServlet {
       if (!pmap.isEmpty()) {
         if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
         resolved = openUrlResolver.resolveOpenUrl(pmap);
+	log.debug3("Resolved to: " + resolved);
         requestType = AccessLogType.OpenUrl;
       }
 
@@ -639,6 +646,12 @@ public class ServeContent extends LockssServlet {
         return;
       }
 
+      if (!useOpenUrlForAuid) {
+	if (serveFromAuid(auid)) {
+	  return;
+	}
+
+      }
       // redirect to the OpenURL corresponding to the specified auid;
       // ensures that the corresponding OpenURL is available to the client.
       if (auid != null) {
@@ -652,14 +665,8 @@ public class ServeContent extends LockssServlet {
           return;
         }
 	// If open URL resolution fails fall back to first start page
-        au = pluginMgr.getAuFromId(auid);
-	if (au != null) {
-	  Collection<String> starts = au.getAccessUrls();
-	  if (!starts.isEmpty()) {
-	    url = starts.iterator().next();
-	    handleUrlRequest();
-	    return;
-	  }
+	if (serveFromAuid(auid)) {
+	  return;
 	}
       }
 
@@ -673,6 +680,19 @@ public class ServeContent extends LockssServlet {
     displayIndexPage();
     requestType = AccessLogType.None;
     logAccess("200 index page");
+  }
+
+  boolean serveFromAuid(String auid) throws IOException {
+    au = pluginMgr.getAuFromId(auid);
+    if (au != null) {
+      Collection<String> starts = au.getAccessUrls();
+      if (!starts.isEmpty()) {
+	url = starts.iterator().next();
+	handleUrlRequest();
+	return true;
+      }
+    }
+    return false;
   }
 
   /**

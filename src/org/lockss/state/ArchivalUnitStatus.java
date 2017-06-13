@@ -775,6 +775,8 @@ public class ArchivalUnitStatus
 
   static class AuStatus extends PerAuTable {
 
+    static final String FOOT_SERVE_AU_VS_CONTENT = "Serve AU serves this AU.  Serve Content constructs an OpenURL query from the bibliographic information for this AU in the title database, which may result in a choice of AUs if the content is available from more than one source.";
+
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("NodeName", "Node Url",
                            ColumnDescriptor.TYPE_STRING),
@@ -1219,13 +1221,27 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  audef));
-      Object sclink =
+      List serveLinks = new ArrayList();
+
+      Object saulink =
 	new StatusTable.SrvLink("Serve AU",
 				AdminServletManager.SERVLET_SERVE_CONTENT,
 				PropUtil.fromArgs("auid", au.getAuId()));
-      res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  sclink));
+      serveLinks.add(saulink);
+
+      Object sclink =
+	new StatusTable.SrvLink("Serve Content",
+				AdminServletManager.SERVLET_SERVE_CONTENT,
+				PropUtil.fromArgs("auid", au.getAuId(),
+						  "use_openurl", "true"));
+
+      serveLinks.add(", ");
+      serveLinks.add(sclink);
+      StatusTable.SummaryInfo serveSum =
+	new StatusTable.SummaryInfo(null, ColumnDescriptor.TYPE_STRING,
+				    serveLinks);
+      serveSum.setValueFootnote(FOOT_SERVE_AU_VS_CONTENT);
+      res.add(serveSum);
 
       List peerLinks = new ArrayList();
       peerLinks.add(PeerRepair.makeAuRef("Repair candidates", au.getAuId()));
