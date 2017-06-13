@@ -69,7 +69,7 @@ public class TestOupScHtmlHashFilterFactory extends LockssTestCase {
       "</div>\n" + 
       "</div>";
   
-  private static final String withoutLinksComments = "<div class=\"article-body\"> Hello World More Text </div>";
+  private static final String withoutLinksComments = "<div> Hello World More Text </div>";
   
   /*
    */

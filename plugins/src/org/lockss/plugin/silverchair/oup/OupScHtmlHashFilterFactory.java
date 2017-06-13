@@ -34,12 +34,18 @@ package org.lockss.plugin.silverchair.oup;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Vector;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CountingInputStream;
+import org.htmlparser.Attribute;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -57,7 +63,44 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-
+    
+    // HTML transform to remove generated attributes like <a href="...?Expires">
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
+              try {
+                if ("a".equals(tagName) ||
+                    "div".equals(tagName) ||
+                    "img".equals(tagName)) {
+                  Attribute a = tag.getAttributeEx(tagName);
+                  Vector<Attribute> v = new Vector<Attribute>();
+                  v.add(a);
+                  if (tag.isEmptyXmlTag()) {
+                    Attribute end = tag.getAttributeEx("/");
+                    v.add(end);
+                  }
+                  tag.setAttributesEx(v);
+                }
+                super.visitTag(tag);
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
+    };
+    
     InputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
@@ -77,12 +120,13 @@ public class OupScHtmlHashFilterFactory implements FilterFactory {
     	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comment"),
     		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "graphic-wrap"),
-    	  }))
+    	  })),
+    	  xform
       )
     );
     
     Reader reader = FilterUtil.getReader(filtered, encoding);
-  
+    
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
     InputStream ret =  new ReaderInputStream(whiteSpaceFilter);
