@@ -91,6 +91,10 @@ public class RemoteApi
     PREFIX + "backupStreamMarkSize";
   static final int DEFAULT_BACKUP_STREAM_MARK_SIZE = 10000;
 
+  /** If true, include down AUs in Add AUs. */
+  static final String PARAM_INCLUDE_DOWN_AUS = PREFIX + "includeDownAus";
+  static final boolean DEFAULT_INCLUDE_DOWN_AUS = false;
+
   static final String BACK_FILE_PROPS = "cacheprops";
   static final String BACK_FILE_AU_PROPS = "auprops";
   static final String BACK_FILE_AGREE_MAP = "idagreement";
@@ -126,6 +130,7 @@ public class RemoteApi
   private int paramBackupStreamMarkSize = DEFAULT_BACKUP_STREAM_MARK_SIZE;
   private String paramBackupFileDotExtension =
     makeExtension(DEFAULT_BACKUP_FILE_EXTENSION);
+  private boolean paramIncludeDownAus = DEFAULT_INCLUDE_DOWN_AUS;
 
   // cache for proxy objects
   private ReferenceMap auProxies = new ReferenceMap(ReferenceMap.WEAK,
@@ -156,6 +161,8 @@ public class RemoteApi
       paramBackupFileDotExtension =
 	makeExtension(config.get(PARAM_BACKUP_FILE_EXTENSION,
 				 DEFAULT_BACKUP_FILE_EXTENSION));
+      paramIncludeDownAus =
+	config.getBoolean(PARAM_INCLUDE_DOWN_AUS, DEFAULT_INCLUDE_DOWN_AUS);
     }
   }
 
@@ -1245,7 +1252,7 @@ public class RemoteApi
   private BatchAuStatus findAusInSetsToAdd(BatchAuStatus bas, Iterator iter) {
     while (iter.hasNext()) {
       TitleConfig tc = (TitleConfig)iter.next();
-      if (AuUtil.isPubDown(tc)) {
+      if (!paramIncludeDownAus && AuUtil.isPubDown(tc)) {
 	// Don't offer to add titles that aren't available anymore.  (This
 	// does not affect restore or reactivate)
 	continue;
