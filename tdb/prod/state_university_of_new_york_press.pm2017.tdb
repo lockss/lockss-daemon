@@ -15,9 +15,9 @@
 
       attr[journal_id] = 608
 
-        au < testing ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy 2010 ; 8708 >
-        au < testing ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy 2011 ; 8709 >
-        au < testing ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy 2012 ; 8791 >
+        au < ready ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy 2010 ; 8708 >
+        au < ready ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy 2011 ; 8709 >
+        au < ready ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy 2012 ; 8791 >
         au < released ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy 2013 ; 10213 >
 
     }
@@ -32,7 +32,7 @@
 
       attr[journal_id] = 634
 
-        au < testing ; 2013 ; Journal of Japanese Philosophy Volume 1 [2013] ; 10158 >
+        au < ready ; 2013 ; Journal of Japanese Philosophy Volume 1 [2013] ; 10158 >
         au < released ; 2014 ; Journal of Japanese Philosophy Volume 2 [2014] ; 10263 >
         au < released ; 2015 ; Journal of Japanese Philosophy Volume 3 [2015] ; 10843 >
         au < released ; 2016 ; Journal of Japanese Philosophy Volume 4 [2016] ; 12242 >
@@ -49,9 +49,9 @@
 
       attr[journal_id] = 580
 
-        au < testing ; 2011 ; Mediaevalia Volume 32 [2011] ; 8228 >
-        au < testing ; 2012 ; Mediaevalia Volume 33 [2012] ; 8932 >
-        au < testing ; 2013 ; Mediaevalia Volume 34 [2013] ; 10178 >
+        au < ready ; 2011 ; Mediaevalia Volume 32 [2011] ; 8228 >
+        au < ready ; 2012 ; Mediaevalia Volume 33 [2012] ; 8932 >
+        au < ready ; 2013 ; Mediaevalia Volume 34 [2013] ; 10178 >
         au < released ; 2014 ; Mediaevalia Volume 35 [2014] ; 10795 >
         au < released ; 2015-2016 ; Mediaevalia Volume 36/37, 2015-2016 ; 11364 >
 
@@ -67,8 +67,8 @@
 
       attr[journal_id] = 609
 
-        au < testing ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 [2012] ; 8710 >
-        au < testing ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 [2013] ; 8931 >
+        au < ready ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 [2012] ; 8710 >
+        au < ready ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 [2013] ; 8931 >
         au < released ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 [2014] ; 9924 >
         au < released ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4 [2015] ; 10612 >
         au < released ; 2016 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 5 [2016] ; 12185 >
@@ -85,9 +85,9 @@
 
       attr[journal_id] = 581
 
-        au < testing ; 2011 ; philoSOPHIA Volume 1 ; 8344 >
-        au < testing ; 2012 ; philoSOPHIA Volume 2 ; 8468 >
-        au < testing ; 2013 ; philoSOPHIA Volume 3 ; 9260 >
+        au < ready ; 2011 ; philoSOPHIA Volume 1 ; 8344 >
+        au < ready ; 2012 ; philoSOPHIA Volume 2 ; 8468 >
+        au < ready ; 2013 ; philoSOPHIA Volume 3 ; 9260 >
         au < released ; 2014 ; philoSOPHIA Volume 4 [2014] ; 10093 >
         au < released ; 2015 ; philoSOPHIA Volume 5 [2015] ; 10661 >
         au < released ; 2016 ; philoSOPHIA Volume 6 [2016] ; 11343 >
