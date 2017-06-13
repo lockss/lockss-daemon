@@ -37,39 +37,26 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.TypedEntryMap;
 
 /**
- * Interface for plugin auxilliary class to assist with feature URL and
- * access URL resolution.  Set <code>plugin_access_url_factory</code>
- * and/or value in <code>au_feature_urls</code> map to name of factory
- * implementing {@link FeatureUrlHelperFactory}.<br>Plugins should
- * generally extend {@link BaseFeatureUrlHelper} rather than implement this
- * interface in order to retain binary compatibility in case methods are
- * added to the interface. */
-public interface FeatureUrlHelper {
+ * Base class for FeatureUrlHelper.  Plugins should extend this rather than
+ * implement the {@link FeatureUrlHelper} interface in order to retain
+ * binary compatibility in case methods are added to the interface. */
+public class BaseFeatureUrlHelper implements FeatureUrlHelper {
 
-  /** Compute the URL(s) to access a feature of a publication.
-   * @param au the AU, or null if no matching AU is configured
-   * @param plugin the Plugin
-   * @param itemType an {@link OpenUrlResolver.OpenUrlInfo#ResolvedTo}
-   * describing the type of item desired.  This is the key in the
-   * au_feature_urls map that's being tried
-   * @param paramMap param map containing properties and AU config params
-   *   from TdbAu, plus possibly <code>issn</code>, <code>eissn</code>,
-   *   <code>feature_key</code>, <code>volume</code>,
-   *   <code>volume_str</code>, <code>volume_name</code>,
-   *   <code>year</code>, <code>au_short_year</code>, <code>issue</code>,
-   *   <code>article</code>, <code>page</code>, <code>item</code> (article
-   *   number).
-   * @return a list of URLs that can be used to access the named feature
-   * type in the au, or null to indicate that no such URL exists
-   */
+  /** {@inheritDoc}
+   * Default implementation returns null */
+  @Override
   public List<String> getFeatureUrls(ArchivalUnit au,
 				     OpenUrlResolver.OpenUrlInfo.ResolvedTo itemType,
 				     TypedEntryMap paramMap) 
-      throws PluginException, IOException;
+      throws PluginException, IOException {
+    return null;
+  }
 
-  /** Compute URL(s) to access an AU.
-   * @param au the AU
-   * @return a list of URLs that can be used to access (browse) the AU */
+  /** {@inheritDoc}
+   * Default implementation returns null */
+  @Override
   public Collection<String> getAccessUrls(ArchivalUnit au) 
-      throws PluginException, IOException;
+      throws PluginException, IOException {
+    return null;
+  }
 }

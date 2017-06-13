@@ -102,6 +102,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Series[10.0135/12345678]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]_1");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin3");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://publisher1.title3.org/");
     tdbProps.setProperty("attributes.year", "1999");
@@ -113,6 +115,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Series[10.0135/12345678]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]_2");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin3");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://publisher2.title3.org/");
     tdbProps.setProperty("attributes.year", "1999");
@@ -124,6 +128,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Series[Manual of Clinical Psychopharmacology]");
     tdbProps.setProperty("attributes.publisher", "Publisher[Manual of Clinical Psychopharmacology]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin2");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://www.title2.org/");
     tdbProps.setProperty("attributes.year", "1993");
@@ -138,6 +144,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.2468/24681357]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.2468/24681357]_1");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin1");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://publisher1.title1.org/");
     tdb.addTdbAuFromProperties(tdbProps);
@@ -151,6 +159,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.2468/24681357]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.2468/24681357]_2");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin1");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://publisher2.title1.org/");
     tdb.addTdbAuFromProperties(tdbProps);
@@ -162,6 +172,8 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.4321/13572468]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.4321/13572468]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin0");
+    tdbProps.setProperty("param.0.key", "root");
+    tdbProps.setProperty("param.0.value", "/root");
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://www.title0.org/");
     tdb.addTdbAuFromProperties(tdbProps);
@@ -620,6 +632,9 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     }
   }
   
+  static List helperFeatureItems = new ArrayList();
+  static List helperFeatureParams = new ArrayList();
+
   public static class MyFeatureHelperFactory
     implements FeatureUrlHelperFactory {
     public FeatureUrlHelper createFeatureUrlHelper(Plugin plug) {
@@ -627,12 +642,20 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
     }
   }
 
-  public static class MyFeatureHelper implements FeatureUrlHelper {
-    public List<String> getUrls(Plugin plug, TypedEntryMap paramMap) 
+  public static class MyFeatureHelper extends BaseFeatureUrlHelper {
+    private List items;
+
+    @Override
+    public List<String> getFeatureUrls(ArchivalUnit au,
+				       OpenUrlResolver.OpenUrlInfo.ResolvedTo itemType,
+				       TypedEntryMap paramMap) 
 	throws PluginException, IOException {
       String action = paramMap.getString("action", "def1");
+      helperFeatureItems.add(itemType);
+      helperFeatureParams.add(paramMap);
       switch (action) {
-      case "throw": throw new PluginException.InvalidDefinition("test");
+      case "throw":
+	throw new PluginException.InvalidDefinition("expected exception");
       case "null": return null;
       case "one": return ListUtil.list("http://resolved.to/url1");
       case "two": return ListUtil.list("http://resolved.to/url2",
@@ -1211,6 +1234,9 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
       map.putString("action", "throw");
       assertSame(OpenUrlResolver.OPEN_URL_INFO_NONE,
 		 openUrlResolver.getPluginUrl(plugin, feats, map));
+      assertEquals(ListUtil.list(OpenUrlInfo.ResolvedTo.VOLUME),
+		   helperFeatureItems);
+      assertEquals(ListUtil.list(map), helperFeatureParams);
 
       map.putString("action", "error");
       assertSame(OpenUrlResolver.OPEN_URL_INFO_NONE,

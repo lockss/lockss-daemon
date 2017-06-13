@@ -1039,20 +1039,20 @@ public class DefinablePlugin extends BasePlugin {
     return crawlSeedFactory;
   }
   
-  protected UrlGeneratorFactory urlGenFactory = null;
+  protected FeatureUrlHelperFactory featHelperFact = null;
 
-  protected UrlGeneratorFactory getUrlGeneratorFactory() {
-    if (urlGenFactory == null) {
+  protected FeatureUrlHelperFactory getFeatureUrlHelperFactory() {
+    if (featHelperFact == null) {
       String factClass =
 	definitionMap.getString(DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY,
 				null);
       if (factClass != null) {
-	urlGenFactory =
-    	(UrlGeneratorFactory)newAuxClass(factClass, UrlGeneratorFactory.class);
+	featHelperFact =
+    	(FeatureUrlHelperFactory)newAuxClass(factClass, FeatureUrlHelperFactory.class);
       }
     }
 
-    return urlGenFactory;
+    return featHelperFact;
   }
 
   protected UrlFetcher makeUrlFetcher(CrawlerFacade facade, String url) {
@@ -1089,12 +1089,12 @@ public class DefinablePlugin extends BasePlugin {
     return fact.createCrawlSeed(crawlFacade);
   }
   
-  protected UrlGenerator getUrlGenerator(ArchivalUnit au) {
-    UrlGeneratorFactory fact = getUrlGeneratorFactory();
+  protected FeatureUrlHelper getFeatureUrlHelper(ArchivalUnit au) {
+    FeatureUrlHelperFactory fact = getFeatureUrlHelperFactory();
     if (fact == null) {
       return null;
     }
-    return fact.createUrlGenerator(au);
+    return fact.createFeatureUrlHelper(au.getPlugin());
   }
 
   protected UrlConsumerFactory urlConsumerFactory = null;

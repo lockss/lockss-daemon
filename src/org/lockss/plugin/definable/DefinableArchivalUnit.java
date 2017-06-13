@@ -745,10 +745,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   @Override
   public Collection<String> getAccessUrls() {
-    UrlGenerator gen = getDefinablePlugin().getUrlGenerator(this);
-    if (gen != null) {
+    FeatureUrlHelper helper = getDefinablePlugin().getFeatureUrlHelper(this);
+    if (helper != null) {
       try {
-	return gen.getUrls(this);
+	return helper.getAccessUrls(this);
       } catch (PluginException | IOException e) {
 	log.warning("Error generating access URLs, using start URLs instead",
 		    e);

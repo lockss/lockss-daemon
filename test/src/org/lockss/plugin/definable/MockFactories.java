@@ -163,21 +163,21 @@ public class MockFactories {
     }
   }
 
-  public static class AccessUrlFact implements UrlGeneratorFactory {
+  public static class FeatureUrlHelperFact implements FeatureUrlHelperFactory {
 
     @Override
-    public UrlGenerator createUrlGenerator(ArchivalUnit au) {
-      return new MyAccessUrlGenerator(ListUtil.list("uuu_uuu"));
+    public FeatureUrlHelper createFeatureUrlHelper(Plugin plug) {
+      return new MyFeatureUrlHelper(ListUtil.list("uuu_uuu"));
     }
   }
 
-  private static class MyAccessUrlGenerator implements UrlGenerator {
+  private static class MyFeatureUrlHelper extends BaseFeatureUrlHelper {
     List res;
-    MyAccessUrlGenerator(List res) {
+    MyFeatureUrlHelper(List res) {
       this.res = res;
     }
     @Override
-    public Collection<String> getUrls(ArchivalUnit au)
+    public Collection<String> getAccessUrls(ArchivalUnit au)
 	throws PluginException, IOException {
       return res;
     }

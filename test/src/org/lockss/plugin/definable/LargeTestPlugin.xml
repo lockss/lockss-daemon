@@ -212,7 +212,7 @@
   </entry>
   <entry>
     <string>plugin_access_url_factory</string>
-    <string>org.lockss.plugin.definable.MockFactories$AccessUrlFact</string>
+    <string>org.lockss.plugin.definable.MockFactories$FeatureUrlHelperFact</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>

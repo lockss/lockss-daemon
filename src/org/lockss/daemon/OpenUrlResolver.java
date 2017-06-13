@@ -139,6 +139,12 @@ public class OpenUrlResolver {
   public static final int DEFAULT_MAX_PUBLISHERS_PER_ARTICLE = 10;
 
   
+  public static String PARAM_NEVER_PROXY =
+    org.lockss.servlet.ServeContent.PARAM_NEVER_PROXY;
+  public static boolean DEFAULT_NEVER_PROXY =
+    org.lockss.servlet. ServeContent.DEFAULT_NEVER_PROXY;
+
+
   static final class FeatureEntry {
     final String auFeatureKey;
     final OpenUrlInfo.ResolvedTo resolvedTo;
@@ -1096,6 +1102,13 @@ public class OpenUrlResolver {
    * @return a resolved URL
    */
   String resolveUrl(String aUrl, String auProxySpec) { // protected for testing
+    if (isNeverProxy()) {
+      if (pluginMgr.findCachedUrl(aUrl) != null) {
+	return aUrl;
+      } else {
+	return null;
+      }
+    }
     String url = aUrl;
     try {
       final LockssUrlConnectionPool connectionPool =
@@ -1196,7 +1209,7 @@ public class OpenUrlResolver {
     // (not for OAICrawlSpec or other types of CrawlSpec)
     ArchivalUnit au = pluginMgr.getAuFromId(auid);
     if (au != null) {
-      Collection<String> urls = au.getStartUrls();
+      Collection<String> urls = au.getAccessUrls();
       if (urls.size() > 0) {
         return "rft_id=" + urls.iterator().next();
       }
@@ -1601,6 +1614,12 @@ public class OpenUrlResolver {
     
   }
   
+  // Doesn't account for noproxy query param in ServeContent request
+  static private boolean isNeverProxy() {
+    return ConfigManager.getCurrentConfig().getBoolean(PARAM_NEVER_PROXY,
+						       DEFAULT_NEVER_PROXY);
+  }
+
   /** 
    * Resolve query if a single URL matches.
    * 
@@ -1667,6 +1686,7 @@ public class OpenUrlResolver {
       } catch (ParseException ex) {}
     }
 
+    log.debug3("resolveJournalFromTdbAus: year=" + year + ": " + tdbAus);
     // list of AUs that match volume and year specified
     ArrayList<TdbAu> foundTdbAuList = new ArrayList<TdbAu>();
     
@@ -1700,6 +1720,8 @@ public class OpenUrlResolver {
       
       foundTdbAuList.add(tdbAu);
     }
+
+    log.debug3("foundTdbAuList: " + foundTdbAuList);
 
     // look for URL that is cached from list of matching AUs
     for (TdbAu tdbau : foundTdbAuList) {
@@ -1857,7 +1879,7 @@ public class OpenUrlResolver {
 
     OpenUrlInfo resolved = null;
     if (plugin != null) {
-      log.debug3(  "getting issue url for plugin: " 
+      log.debug3(  "getting book feature url for plugin: " 
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
       TypedEntryMap paramMap = getParamMap(plugin, tdbau);
@@ -1891,7 +1913,7 @@ public class OpenUrlResolver {
         paramMap.setMapElement("eisbn", eisbn);
       }
       
-      resolved = getBookUrl(plugin, paramMap);
+      resolved = getBookUrl(tdbau, plugin, paramMap);
       if (resolved.isResolved()) {
         resolved.resolvedBibliographicItem = tdbau;
         log.debug3("Resolved book url from plugin: " + resolved.resolvedUrl);
@@ -1904,18 +1926,28 @@ public class OpenUrlResolver {
     
 
   /**
-   * Gets the book URL for a DefinablePlugin and parameter definitions.
+   * Find the most specific bool feature URL that can be determined from
+   * the supplied parameters.
+   * @param tdbAu TdbAu describing AU to be accessed
    * @param plugin the plugin
-   * @param paramMap the param map
-   * @return the issue URL
+   * @param paramMap param map containing properties and AU config params
+   *   from TdbAu, plus possibly <code>issn</code>, <code>eissn</code>,
+   *   <code>feature_key</code>, <code>volume</code>,
+   *   <code>volume_str</code>, <code>volume_name</code>,
+   *   <code>year</code>, <code>au_short_year</code>, <code>issue</code>,
+   *   <code>article</code>, <code>page</code>, <code>item</code> (article
+   *   number).
+   * @return a feature URL
    */
   @Loggable(value = Loggable.TRACE, prepend = true)
-  private OpenUrlInfo getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
-    OpenUrlInfo resolved = getPluginUrl(plugin, auBookAuFeatures, paramMap);
+  public OpenUrlInfo getBookUrl(TdbAu tdbAu, Plugin plugin,
+				TypedEntryMap paramMap) {
+    OpenUrlInfo resolved = getPluginUrl(tdbAu, plugin,
+					auBookAuFeatures, paramMap);
     return resolved;
   }
 
-  /**
+  /* *
    * Gets the issue URL for an AU indicated by the DefinablePlugin 
    * and parameter definitions specified by the TdbAu.
    * 
@@ -1954,12 +1986,12 @@ public class OpenUrlResolver {
 
     OpenUrlInfo resolved = OPEN_URL_INFO_NONE;
     if (plugin != null) {
-      log.debug3(  "getting issue url for plugin: " 
-                 + plugin.getClass().getName());
+      log.debug3("getting journal feature url for plugin: " 
+		 + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
       // add volume with type and spelling of existing element
-  	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
-  	  paramMap.setMapElement("volume", volumeName);
+      TypedEntryMap paramMap = getParamMap(plugin, tdbau);
+      paramMap.setMapElement("volume", volumeName);
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
@@ -1987,7 +2019,7 @@ public class OpenUrlResolver {
       // AU_FEATURE_KEY selects feature from a map of values
       // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
-      resolved = getJournalUrl(plugin, paramMap);
+      resolved = getJournalUrl(tdbau, plugin, paramMap);
       if (resolved.isResolved()) {
         if (resolved.resolvedTo == OpenUrlInfo.ResolvedTo.TITLE) {
           // create bibliographic item with only title properties
@@ -2012,16 +2044,33 @@ public class OpenUrlResolver {
   }
     
   /**
-   * Get the issueURL for the plugin.
+   * Find the most specific journal feature URL that can be determined from
+   * the supplied parameters.
+   * @param tdbAu TdbAu describing AU to be accessed
    * @param plugin the plugin
-   * @param paramMap the param map
-   * @return the issue URL
+   * @param paramMap param map containing properties and AU config params
+   *   from TdbAu, plus possibly <code>issn</code>, <code>eissn</code>,
+   *   <code>feature_key</code>, <code>volume</code>,
+   *   <code>volume_str</code>, <code>volume_name</code>,
+   *   <code>year</code>, <code>au_short_year</code>, <code>issue</code>,
+   *   <code>article</code>, <code>page</code>, <code>item</code> (article
+   *   number).
+   * @return a feature URL
    */
-  private OpenUrlInfo getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
-    OpenUrlInfo resolved = getPluginUrl(plugin, auJournalFeatures, paramMap);
+  public OpenUrlInfo getJournalUrl(TdbAu tdbAu,
+				   Plugin plugin,
+				   TypedEntryMap paramMap) { 
+    OpenUrlInfo resolved = getPluginUrl(tdbAu, plugin,
+					auJournalFeatures, paramMap);
     return resolved;
   }
   
+  public OpenUrlInfo getPluginUrl(Plugin plugin,
+				  FeatureEntry[] pluginEntries,
+				  TypedEntryMap paramMap) {
+    return getPluginUrl(null, plugin, pluginEntries, paramMap);
+  }
+
   /**
    * Get the URL for the specified key from the plugin.
    * @param plugin the plugin
@@ -2031,9 +2080,15 @@ public class OpenUrlResolver {
    * error
    */
   @Loggable(value = Loggable.TRACE, prepend = true)
-  OpenUrlInfo getPluginUrl(Plugin plugin,
+  OpenUrlInfo getPluginUrl(TdbAu tdbAu,
+			   Plugin plugin,
 			   FeatureEntry[] pluginEntries,
 			   TypedEntryMap paramMap) {
+    ArchivalUnit au = null;
+    if (tdbAu != null) {
+      String auid = tdbAu.getAuId(pluginMgr);
+      au = pluginMgr.getAuFromId(auid);
+    }
     ExternalizableMap map;
 
     // get printf pattern for pluginKey property
@@ -2141,7 +2196,9 @@ public class OpenUrlResolver {
 	}
 	if (helper != null) {
 	  try {
-	    List<String> urls = helper.getUrls(plugin, paramMap);
+	    List<String> urls = helper.getFeatureUrls(au,
+						      pluginEntry.resolvedTo,
+						      paramMap);
 	    if ((urls != null) && !urls.isEmpty()) {
 	      // if multiple urls match, the first one will do
 	      url = urls.get(0);

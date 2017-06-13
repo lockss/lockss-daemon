@@ -33,6 +33,7 @@ package org.lockss.exporter.biblio;
 
 import java.util.Arrays;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.builder.*;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 
@@ -531,5 +532,19 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (publicationType != null ? publicationType.hashCode() : 0);
     result = 31 * result + (coverageDepth != null ? coverageDepth.hashCode() : 0);
     return result;
+  }
+
+  public String toString() {
+    return new ReflectionToStringBuilder(this,
+					 ToStringStyle.SHORT_PREFIX_STYLE) {
+      @Override
+	protected boolean accept(java.lang.reflect.Field field) {
+	try {
+	  return super.accept(field) && field.get(getObject()) != null;
+	} catch (IllegalAccessException e) {
+	  return super.accept(field);
+	}
+      }
+    }.toString();
   }
 }

@@ -2082,6 +2082,7 @@ public class ServletUtil {
       tbl.newCell("width=8");
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
+      try {
 	Collection<String> urls = au.getAccessUrls();
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
@@ -2093,6 +2094,9 @@ public class ServletUtil {
 	    tbl.add("<br>");
 	  }
 	}
+      } catch (RuntimeException e) {
+	tbl.add("Plugin error: " + e.getMessage());
+      }
     }
     return tbl;
   }

@@ -664,24 +664,22 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 cau.getStartUrls());
     assertEquals(cau.getStartUrls(), cau.getAccessUrls());
 
-    defMap.putString(DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY, MyAccessUrlGeneratorFactory.class.getName());
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_ACCESS_URL_FACTORY, MyFeatureUrlHelperFactory.class.getName());
     assertEquals(ListUtil.list("http://access_url"), cau.getAccessUrls());
 
   }
 
-  public static class MyAccessUrlGeneratorFactory
-    implements UrlGeneratorFactory {
+  public static class MyFeatureUrlHelperFactory
+    implements FeatureUrlHelperFactory {
     @Override
-    public UrlGenerator createUrlGenerator(ArchivalUnit au) {
-      return new MyAccessUrlGenerator(au);
+    public FeatureUrlHelper createFeatureUrlHelper(Plugin plug) {
+      return new MyFeatureUrlHelper();
     }
   }
 
-  private static class MyAccessUrlGenerator implements UrlGenerator {
-    MyAccessUrlGenerator(ArchivalUnit au) {
-    }
+  private static class MyFeatureUrlHelper extends BaseFeatureUrlHelper {
     @Override
-    public Collection<String> getUrls(ArchivalUnit au)
+    public Collection<String> getAccessUrls(ArchivalUnit au)
 	throws PluginException, IOException {
       return ListUtil.list("http://access_url");
     }
