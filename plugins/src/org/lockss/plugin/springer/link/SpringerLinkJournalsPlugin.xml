@@ -87,6 +87,16 @@
     <string>"%s/lockss.txt", base_url</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+      <!--  we don't want this to default to start_url because we need the synthetic url -->
+        <string>au_volume</string>
+        <string>org.lockss.plugin.springer.link.SpringerLinkFeatureUrlHelperFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", to_http(base_url)</string>
@@ -124,8 +134,8 @@
     <string>org.lockss.plugin.springer.link.SpringerLinkJournalsCrawlSeedFactory</string>
   </entry>
   <entry>
-    <string>xxx_plugin_access_url_factory</string>
-    <string>org.lockss.plugin.springer.link.SpringerLinkAccessUrlFactory</string>
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.springer.link.SpringerLinkFeatureUrlHelperFactory</string>
   </entry>    
   <entry>
     <string>au_url_normalizer</string>
