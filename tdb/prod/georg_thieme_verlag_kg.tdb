@@ -2544,7 +2544,7 @@
 
     au < manifest ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
     au < ready ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 >
-    au < expected ; 2017 ; 2017 ; Journal of Knee Surgery Reports Volume 2 ; 2 >
+    au < expected ; 2017 ; 2017 ; Journal of Knee Surgery Reports Volume 3 ; 3 >
 
   }
 
@@ -2558,7 +2558,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000180
-    comment[years] = 2012-current
+    comment[years] = 2012-2014
     # combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
     comment[1] = Minimally Invasive Neurosurgery was merged with this journal
 
@@ -2577,7 +2577,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000181
-    comment[years] = 2012-current
+    comment[years] = 2012-2014
     # under the umbrella title Journal of Neurological Surgery which combines several old titles
 
     au < manifest ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 73 ; 73 >
@@ -2625,6 +2625,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Biochemistry Volume 4 ; 4 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Biochemistry Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Biochemistry Volume 6 ; 6 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Biochemistry Volume 7 ; 7 >
 
   }
 
@@ -2645,6 +2646,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Epilepsy Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Epilepsy Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Epilepsy Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Epilepsy Volume 6 ; 6 >
 
   }
 
@@ -2665,6 +2667,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Genetics Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Genetics Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Genetics Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Genetics Volume 6 ; 6 >
 
   }
 
@@ -2691,6 +2694,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Infectious Diseases Volume 9 ; 9 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Infectious Diseases Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Infectious Diseases Volume 11 ; 11 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Infectious Diseases Volume 12 ; 12 >
 
   }
 
@@ -2711,6 +2715,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Intensive Care Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Intensive Care Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Intensive Care Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Intensive Care Volume 6 ; 6 >
 
   }
 
@@ -2740,6 +2745,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Neurology Volume 12 ; 12 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Neurology Volume 13 ; 13 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Neurology Volume 14 ; 14 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Neurology Volume 15 ; 15 >
 
   }
 
@@ -2760,6 +2766,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Pediatric Neuroradiology Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Journal of Pediatric Neuroradiology Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Pediatric Neuroradiology Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Journal of Pediatric Neuroradiology Volume 6 ; 6 >
 
   }
 
@@ -2808,6 +2815,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 30 ; 30 >
     au < manifest ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Volume 32 ; 32 >
+    au < expected ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Volume 33 ; 33 >
 
   }
 
@@ -2825,6 +2833,7 @@
     comment[years] = 2016-current
 
     au < released ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 >
+    au < expected ; 2017 ; 2017 ; Journal of Reconstructive Microsurgery Open Volume 2 ; 2 >
 
   }
 
@@ -2845,6 +2854,7 @@
     au < manifest ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Journal of Wrist Surgery Volume 6 ; 6 >
 
   }
 
@@ -2865,7 +2875,7 @@
     au < manifest ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 5 ; 5 >
-
+    au < expected ; 2017 ; 2017 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 6 ; 6 >
 
   }
 
@@ -2892,6 +2902,7 @@
     au < manifest ; 2014 ; 2014 ; Kardiologie up2date Volume 10 ; 10 >
     au < manifest ; 2015 ; 2015 ; Kardiologie up2date Volume 11 ; 11 >
     au < released ; 2016 ; 2016 ; Kardiologie up2date Volume 12 ; 12 >
+    au < expected ; 2017 ; 2017 ; Kardiologie up2date Volume 13 ; 13 >
 
   }
 
@@ -2916,6 +2927,7 @@
     au < manifest ; 2014 ; 2014 ; kleintier konkret Volume 17 ; 17 >
     au < manifest ; 2015 ; 2015 ; kleintier konkret Volume 18 ; 18 >
     au < released ; 2016 ; 2016 ; kleintier konkret Volume 19 ; 19 >
+    au < expected ; 2017 ; 2017 ; kleintier konkret Volume 20 ; 20 >
 
   }
 
@@ -2944,6 +2956,7 @@
     au < manifest ; 2014 ; 2014 ; Klinikarzt Der Volume 43 ; 43 >
     au < manifest ; 2015 ; 2015 ; Klinikarzt Der Volume 44 ; 44 >
     au < released ; 2016 ; 2016 ; Klinikarzt Der Volume 45 ; 45 >
+    au < expected ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 >
 
   }
 
@@ -2995,6 +3008,7 @@
     au < manifest ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 231 ; 231 >
     au < manifest ; 2015 ; 2015 ; Klinische Monatsblätter für Augenheilkunde Volume 232 ; 232 >
     au < released ; 2016 ; 2016 ; Klinische Monatsblätter für Augenheilkunde Volume 233 ; 233 >
+    au < expected ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 >
 
   }
 
@@ -3048,6 +3062,7 @@
     au < manifest ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 45 ; 45 >
     au < manifest ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 46 ; 46 >
     au < released ; 2016 ; 2016 ; Klinische Neurophysiologie Volume 47 ; 47 >
+    au < expected ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 >
 
   }
 
@@ -3099,6 +3114,7 @@
     au < manifest ; 2014 ; 2014 ; Klinische Pädiatrie Volume 226 ; 226 >
     au < manifest ; 2015 ; 2015 ; Klinische Pädiatrie Volume 227 ; 227 >
     au < released ; 2016 ; 2016 ; Klinische Pädiatrie Volume 228 ; 228 >
+    au < expected ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 >
 
   }
 
@@ -3152,6 +3168,7 @@
     au < manifest ; 2014 ; 2014 ; Krankenhaushygiene up2date Volume 9 ; 9 >
     au < manifest ; 2015 ; 2015 ; Krankenhaushygiene up2date Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Krankenhaushygiene up2date Volume 11 ; 11 >
+    au < expected ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 >
 
   }
 
@@ -3225,6 +3242,7 @@
     au < manifest ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 93 ; 93 >
     au < manifest ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 94 ; 94 >
     au < released ; 2016 ; 2016 ; Laryngo-Rhino-Otologie Volume 95 ; 95 >
+    au < expected ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 >
 
   }
 
@@ -3245,6 +3263,7 @@
     au < manifest ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 4 ; 4 >
     au < manifest ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 6 ; 6 >
+    au < expected ; 2017 ; 2017 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 7 ; 7 >
 
   }
 
@@ -3272,6 +3291,7 @@
     au < manifest ; 2014 ; 2014 ; manuelletherapie Volume 18 ; 18 >
     au < manifest ; 2015 ; 2015 ; manuelletherapie Volume 19 ; 19 >
     au < released ; 2016 ; 2016 ; manuelletherapie Volume 20 ; 20 >
+    au < expected ; 2017 ; 2017 ; manuelletherapie Volume 21 ; 21 >
 
   }
 
@@ -3376,6 +3396,7 @@
     au < manifest ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 >
     au < manifest ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; Neonatologie Scan Volume 4 ; 4 >
+    au < expected ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 >
 
   }
 
@@ -3395,6 +3416,7 @@
     au < manifest ; 2014 ; 2014 ; Neurochirurgie Scan Volume 2 ; 2 >
     au < manifest ; 2015 ; 2015 ; Neurochirurgie Scan Volume 3 ; 3 >
     au < released ; 2016 ; 2016 ; Neurochirurgie Scan Volume 4 ; 4 >
+    au < expected ; 2017 ; 2017 ; Neurochirurgie Scan Volume 5 ; 5 >
 
   }
 
@@ -3447,6 +3469,7 @@
     au < manifest ; 2014 ; 2014 ; Neuropediatrics Volume 45 ; 45 >
     au < manifest ; 2015 ; 2015 ; Neuropediatrics Volume 46 ; 46 >
     au < released ; 2016 ; 2016 ; Neuropediatrics Volume 47 ; 47 >
+    au < expected ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 >
 
   }
 
@@ -3468,6 +3491,7 @@
     au < manifest ; 2014 ; 2014 ; Neuroradiologie Scan Volume 4 ; 4 >
     au < manifest ; 2015 ; 2015 ; Neuroradiologie Scan Volume 5 ; 5 >
     au < released ; 2016 ; 2016 ; Neuroradiologie Scan Volume 6 ; 6 >
+    au < expected ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 >
 
   }
 
@@ -3490,6 +3514,7 @@
     au < manifest ; 2014 ; 2014 ; neuroreha Volume 6 ; 6 >
     au < manifest ; 2015 ; 2015 ; neuroreha Volume 7 ; 7 >
     au < released ; 2016 ; 2016 ; neuroreha Volume 8 ; 8 >
+    au < expected ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 >
 
   }
 
@@ -3522,6 +3547,7 @@
     au < manifest ; 2014 ; 2014 ; Notarzt Der Volume 30 ; 30 >
     au < manifest ; 2015 ; 2015 ; Notarzt Der Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; Notarzt Der Volume 32 ; 32 >
+    au < expected ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 >
 
   }
 
@@ -3534,7 +3560,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000123
-    comment[years] = 2013-current
+    comment[years] = 2004-2009
 
     au < doNotProcess ; 2004 ; 2004 ; Notfall & Hausarztmedizin Volume 30 ; 30 >
     au < doNotProcess ; 2005 ; 2005 ; Notfall & Hausarztmedizin Volume 31 ; 31 >
@@ -3598,6 +3624,7 @@
     au < manifest ; 2014 ; 2014 ; Notfallmedizin up2date Volume 9 ; 9 >
     au < manifest ; 2015 ; 2015 ; Notfallmedizin up2date Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Notfallmedizin up2date Volume 11 ; 11 >
+    au < expected ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 >
 
   }
 
@@ -3627,6 +3654,7 @@
     au < manifest ; 2014 ; 2014 ; Der Nuklearmediziner Volume 37 ; 37 >
     au < manifest ; 2015 ; 2015 ; Der Nuklearmediziner Volume 38 ; 38 >
     au < released ; 2016 ; 2016 ; Der Nuklearmediziner Volume 39 ; 39 >
+    au < expected ; 2017 ; 2017 ; Der Nuklearmediziner Volume 40 ; 40 >
 
   }
 
@@ -3658,6 +3686,7 @@
     au < manifest ; 2014 ; 2014 ; OP-Journal Volume 30 ; 30 >
     au < manifest ; 2015 ; 2015 ; OP-Journal Volume 31 ; 31 >
     au < released ; 2016 ; 2016 ; OP-Journal Volume 32 ; 32 >
+    au < expected ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 >
 
   }
 
@@ -3678,6 +3707,7 @@
     au < manifest ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 3 ; 3 >
     au < manifest ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 4 ; 4 >
     au < released ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 5 ; 5 >
+    au < expected ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 6 ; 6 >
 
   }
 
@@ -3702,7 +3732,8 @@
     au < manifest ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 8 ; 8 >
     au < manifest ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 9 ; 9 >
     au < manifest ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie up2date Volume 10 ; 10 >
-    au < released ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 11-12 ; 11-12 >
+    au < released ; 2016 ; 2016 ; Orthopädie und Unfallchirurgie up2date Volume 11 ; 11 >
+    au < exists ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 >
 
   }
 
@@ -3789,6 +3820,7 @@
     au < manifest ; 2014 ; 2014 ; Pädiatrie up2date Volume 9 ; 9 >
     au < manifest ; 2015 ; 2015 ; Pädiatrie up2date Volume 10 ; 10 >
     au < released ; 2016 ; 2016 ; Pädiatrie up2date Volume 11 ; 11 >
+    au < expected ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 >
 
   }
 
@@ -3833,6 +3865,7 @@
     au < manifest ; 2014 ; 2014 ; pferde spiegel Volume 17 ; 17 >
     au < manifest ; 2015 ; 2015 ; pferde spiegel Volume 18 ; 18 >
     au < released ; 2016 ; 2016 ; pferde spiegel Volume 19 ; 19 >
+    au < expected ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 >
 
   }
 
@@ -3897,6 +3930,7 @@
     au < manifest ; 2014 ; 2014 ; Pharmacopsychiatry Volume 47 ; 47 >
     au < manifest ; 2015 ; 2015 ; Pharmacopsychiatry Volume 48 ; 48 >
     au < released ; 2016 ; 2016 ; Pharmacopsychiatry Volume 49 ; 49 >
+    au < expected ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 >
 
   }
 
@@ -3937,6 +3971,7 @@
     au < manifest ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 24 ; 24 >
     au < manifest ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 25 ; 25 >
     au < released ; 2016 ; 2016 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 26 ; 26 >
+    au < expected ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 >
 
   }
 
@@ -3958,6 +3993,7 @@
     au < manifest ; 2014 ; 2014 ; physiopraxis Volume 12 ; 12 >
     au < released ; 2015 ; 2015 ; physiopraxis Volume 13 ; 13 >
     au < released ; 2016 ; 2016 ; physiopraxis Volume 14 ; 14 >
+    au < expected ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 >
 
   }
 
@@ -3984,6 +4020,7 @@
     au < manifest ; 2014 ; 2014 ; physioscience Volume 10 ; 10 >
     au < manifest ; 2015 ; 2015 ; physioscience Volume 11 ; 11 >
     au < released ; 2016 ; 2016 ; physioscience Volume 12 ; 12 >
+    au < expected ; 2017 ; 2017 ; physioscience Volume 13 ; 13 >
 
   }
 
@@ -4015,6 +4052,7 @@
     au < manifest ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 15 ; 15 >
     au < manifest ; 2015 ; 2015 ; PiD - Psychotherapie im Dialog Volume 16 ; 16 >
     au < released ; 2016 ; 2016 ; PiD - Psychotherapie im Dialog Volume 17 ; 17 >
+    au < expected ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 >
 
   }
 
@@ -4118,6 +4156,7 @@
    au < manifest ; 2014 ; 2014 ; Planta Medica Volume 80 ; 80 >
    au < manifest ; 2015 ; 2015 ; Planta Medica Volume 81 ; 81 >
    au < released ; 2016 ; 2016 ; Planta Medica Volume 82 ; 82 >
+   au < expected ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 >
 
   }
 
@@ -4132,6 +4171,7 @@
     comment[years] = 2016-current
 
    au < released ; 2016 ; 2016 ; Planta Medica International Open Volume 1 ; 1 >
+   au < expected ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 >
 
   }
 
@@ -4148,6 +4188,7 @@
    au < manifest ; 2014 ; 2014 ; Planta Medica Letters Volume 1 ; 1 >
    au < manifest ; 2015 ; 2015 ; Planta Medica Letters Volume 2 ; 2 >
    au < released ; 2016 ; 2016 ; Planta Medica Letters Volume 3 ; 3 >
+   au < expected ; 2017 ; 2017 ; Planta Medica Letters Volume 4 ; 4 >
 
   }
 
@@ -4180,6 +4221,7 @@
    au < manifest ; 2014 ; 2014 ; Pneumologie Volume 68 ; 68 >
    au < manifest ; 2015 ; 2015 ; Pneumologie Volume 69 ; 69 >
    au < released ; 2016 ; 2016 ; Pneumologie Volume 70 ; 70 >
+   au < expected ; 2017 ; 2017 ; Pneumologie Volume 71 ; 71 >
 
   }
 
@@ -4211,6 +4253,7 @@
    au < manifest ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 64 ; 64 >
    au < manifest ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 65 ; 65 >
    au < released ; 2016 ; 2016 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 66 ; 66 >
+   au < expected ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 >
 
   }
 
@@ -4230,6 +4273,7 @@
     au < manifest ; 2014 ; 2014 ; PSYCH up2date Volume 8 ; 8 >
     au < manifest ; 2015 ; 2015 ; PSYCH up2date Volume 9 ; 9 >
     au < released ; 2016 ; 2016 ; PSYCH up2date Volume 10 ; 10 >
+    au < expected ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 >
 
   }
 
