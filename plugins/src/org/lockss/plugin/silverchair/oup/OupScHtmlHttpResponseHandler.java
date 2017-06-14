@@ -88,7 +88,7 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
     logger.debug(ex.getMessage() + ": " + url);
-    return new CacheException.RetrySameUrlException(ex.getMessage());
+    return new ScRetryableNetworkException(ex);
   }
 
 }

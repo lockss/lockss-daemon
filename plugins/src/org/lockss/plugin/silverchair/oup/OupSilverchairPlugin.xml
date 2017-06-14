@@ -3,13 +3,14 @@
     <string>plugin_status</string>
     <string>development</string>
   </entry>
+  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.silverchair.oup.OupSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -27,6 +28,11 @@
         <string>6</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+     <!-- no store content validation -->
+    <string>1.72.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -106,6 +112,11 @@
     <string>host:base_url</string>
   </entry>
   <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.silverchair.oup.OupScContentValidator$Factory</string>
+  </entry>
+  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.silverchair.oup.OupScHtmlCrawlFilterFactory</string>
   </entry>
@@ -156,6 +167,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
     </list>
@@ -178,5 +190,5 @@
       <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
       <string>"https?://fonts.googleapis.com/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
     </list>
-  </entry> 
+  </entry>
 </map>
