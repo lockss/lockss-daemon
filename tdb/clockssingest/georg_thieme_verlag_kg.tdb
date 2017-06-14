@@ -283,8 +283,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Aktuelle Trauatologie Volume 35 ; 35 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aktuelle Trauatologie Volume 36 ; 36 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Trauatologie Volume 37 ; 37 ; >
-    au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Trauatologie Volume 38 ; 38 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Aktuelle Trauatologie Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Trauatologie Volume 38 ; 38 ; > #doesNotExist
 
    }
 
@@ -763,10 +762,10 @@
     title <
       name = Current Research: Concussion ;
       eissn = 2368-0539 ;
-      doi = 10.1055/s-007-33324
+      doi = 10.1055/s-00032321
 
     >
-    param[journal_id] = 10.1055/s-007-33324
+    param[journal_id] = 10.1055/s-00032321
     #years = 2017-current
 
     au < exists ; exists ; 2017 ; 2017 ; Current Research: Concussion Volume 4 ; 4 ; >
@@ -2091,9 +2090,9 @@
     param[journal_id] = 10.1055/s-00028728
     comment[years] =  2012-current
 
-   au < frozen ; exists ; 2012 ; 2012 ; Indian Journal of Neurosurgery 1 ; 1 ; >
-   au < frozen ; exists ; 2013 ; 2013 ; Indian Journal of Neurosurgery 2 ; 2 ; >
-   au < frozen ; exists ; 2014 ; 2014 ; Indian Journal of Neurosurgery 3 ; 3 ; >
+   au < frozen ; exists ; 2012 ; 2012 ; Indian Journal of Neurosurgery Volume 1 ; 1 ; >
+   au < frozen ; exists ; 2013 ; 2013 ; Indian Journal of Neurosurgery Volume 2 ; 2 ; >
+   au < frozen ; exists ; 2014 ; 2014 ; Indian Journal of Neurosurgery Volume 3 ; 3 ; >
    au < finished ; finished ; 2015 ; 2015 ; Indian Journal of Neurosurgery Volume 4 ; 4 ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2016 ; 2016 ; Indian Journal of Neurosurgery Volume 5 ; 5 ; >
    au < manifest ; exists ; 2017 ; 2017 ; Indian Journal of Neurosurgery Volume 6 ; 6 ; >
@@ -2105,12 +2104,18 @@
       name = Indian Journal of Neurotrauma ;
       issn = 0973-0508 ;
       eissn = 2213-3739 ;
-      doi = 10.1055/s-005-29445
+      doi = 10.1055/s-00029202
 
     >
     param[journal_id] = 10.1055/s-00029202
-    comment[years] =  2015-current
+    comment[years] =  2004-current
 
+   au < exists ; exists ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 ; >
+   au < exists ; exists ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 ; >
+   au < exists ; exists ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 ; >
+   au < exists ; exists ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 ; >
+   au < exists ; exists ; 2008 ; 2008 ; Indian Journal of Neurotrauma Volume 5 ; 5 ; >
+   au < exists ; exists ; 2009 ; 2009 ; Indian Journal of Neurotrauma Volume 6 ; 6 ; >
    au < exists ; exists ; 2010 ; 2010 ; Indian Journal of Neurotrauma Volume 7 ; 7 ; >
    au < exists ; exists ; 2011 ; 2011 ; Indian Journal of Neurotrauma Volume 8 ; 8 ; >
    au < exists ; exists ; 2012 ; 2012 ; Indian Journal of Neurotrauma Volume 9 ; 9 ; >
