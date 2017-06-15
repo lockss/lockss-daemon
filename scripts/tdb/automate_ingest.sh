@@ -6,12 +6,12 @@ t="/home/$LOGNAME/tmp"
 echo "###Ready highwire" > $t/tmp_HW
 ./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "highwire" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v oxfordjournals | shuf >> $t/tmp_HW
 #Manifest
-#echo "###Manifest Sage 2016" >> $t/tmp_HW
-#./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year is "2016" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.tdb | shuf >> $t/tmp_HW
-#echo "###Manifest Sage 2015" >> $t/tmp_HW
-#./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year is "2015" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.tdb | shuf >> $t/tmp_HW
-#echo "###Manifest Sage 2014" >> $t/tmp_HW
-#./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year ~ "2014" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.tdb | shuf >> $t/tmp_HW
+echo "###Manifest Sage 2016" >> $t/tmp_HW
+./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year ~ "2016$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_HW
+echo "###Manifest Sage 2015" >> $t/tmp_HW
+./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year ~ "2015$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_HW
+echo "###Manifest Sage 2014" >> $t/tmp_HW
+./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year ~ "2014$" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.atypon.tdb | shuf >> $t/tmp_HW
 #echo "###Manifest Sage 2013" >> $t/tmp_HW
 #./scripts/tdb/tdbout -MT -a -Q 'plugin ~ "highwire" and year ~ "2013" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/sage_publications.tdb | shuf >> $t/tmp_HW
 #echo "###Manifest Sage 2012" >> $t/tmp_HW
