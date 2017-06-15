@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -42,7 +42,8 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/journal-issues.aspx?issn=%s&amp;volume=%s", base_url, journal_issn, volume</string>
+    <string>"%slockss/journal-issues.aspx?issn=%s&amp;volume=%s", to_http(base_url), journal_issn, volume</string>
+    <string>"%slockss/journal-issues.aspx?issn=%s&amp;volume=%s", to_https(base_url), journal_issn, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -60,14 +61,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,"^%smembership/login", base_url</string>
-      <string>2,"(/App_Master){2}", base_url</string>
-      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", base_url</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sgateway/contentowned/articles[.]aspx", base_url</string>
-      <string>1,"^%sgateway/(issue|article(/full-text-(pdf|html))?)/[0-9]+$", base_url</string>
-      <string>1,"^%spdf[.]aspx[?]", base_url</string>
-      <string>1,"^%sviewtitle[.]aspx[?]titleid=[0-9]+$", base_url</string>
+      <string>2,"^https?://%s/membership/login", url_host(base_url)</string>
+      <string>2,"(/App_Master){2}"</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/lockss/journal-issues\.aspx\?issn=%s&amp;volume=%s", url_host(base_url), journal_issn, volume</string>
+      <string>1,"^https?://%s/gateway/contentowned/articles[.]aspx", url_host(base_url)</string>
+      <string>1,"^https?://%s/gateway/(issue|article(/full-text-(pdf|html))?)/[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/pdf[.]aspx[?]", url_host(base_url)</string>
+      <string>1,"^https?://%s/viewtitle[.]aspx[?]titleid=[0-9]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -101,6 +103,14 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+    <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalHttpToHttpsUrlFetcherFactory</string>
+  </entry>  
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalLoginPageChecker</string>

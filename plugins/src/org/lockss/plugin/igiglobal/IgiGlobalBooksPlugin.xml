@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -39,11 +39,13 @@
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>"%slockss/books.aspx", base_url</string>
+    <string>"%slockss/books.aspx", to_http(base_url)</string>
+    <string>"%slockss/books.aspx", to_https(base_url)</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sgateway/book/%s", base_url, volume</string>
+    <string>"%sgateway/book/%s", to_http(base_url), volume</string>
+    <string>"%sgateway/book/%s", to_https(base_url), volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -63,10 +65,11 @@
 -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", base_url</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sgateway/chapter(/full-text-pdf|/full-text-html)?/[0-9]+$", base_url</string>
-      <string>1,"^%spdf[.]aspx[?]", base_url</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/gateway/book/%s$", url_host(base_url),volume</string>
+      <string>1,"^https?://%s/gateway/chapter(/full-text-pdf|/full-text-html)?/[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/pdf[.]aspx[?]", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -108,9 +111,9 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sgateway/chapter/full-text-html/[0-9]+$", base_url</string>
-      <string>"^%sgateway/chapter/full-text-pdf/[0-9]+$", base_url</string>
-      <string>"^%spdf[.]aspx[?]", base_url</string>
+      <string>"^https?://%s/gateway/chapter/full-text-html/[0-9]+$", url_host(base_url)</string>
+      <string>"^https?://%s/gateway/chapter/full-text-pdf/[0-9]+$", url_host(base_url)</string>
+      <string>"^https?://%s/pdf[.]aspx[?]", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

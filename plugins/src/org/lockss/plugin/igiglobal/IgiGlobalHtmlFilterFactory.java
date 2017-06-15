@@ -166,8 +166,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
 
     // Remove all inner tag content
     Reader noTagFilter = new HtmlTagFilter(new StringFilter(FilterUtil.getReader(filteredStream, encoding), "<", " <"), new TagPair("<", ">"));
-    
-    Reader noWhiteSpace = new WhiteSpaceFilter(noTagFilter);
+    Reader httpFilter = new StringFilter(noTagFilter, "http:", "https:");
+    Reader noWhiteSpace = new WhiteSpaceFilter(httpFilter);
     
     // Do WhiteSpaceFilter
     return new ReaderInputStream(noWhiteSpace);
