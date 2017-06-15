@@ -34,6 +34,11 @@ public  class IUCrOaiFeatureUrlHelperFactory implements FeatureUrlHelperFactory 
                                        OpenUrlResolver.OpenUrlInfo.ResolvedTo itemType,
                                        TypedEntryMap paramMap) 
         throws PluginException, IOException {
+      
+      // this can get called with a null au from OpenUrlResolver
+      if (au == null) {
+        return null;
+      }
       if (itemType == OpenUrlResolver.OpenUrlInfo.ResolvedTo.VOLUME) {
         String baseUrl = au.getConfiguration().get("script_url");
         String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
@@ -48,6 +53,9 @@ public  class IUCrOaiFeatureUrlHelperFactory implements FeatureUrlHelperFactory 
     public Collection<String> getAccessUrls(ArchivalUnit au) 
         throws PluginException, IOException {
       
+      if (au == null) {
+          return null;
+      }
       // return the synthetic url  
       String baseUrl = au.getConfiguration().get("script_url");
       String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());

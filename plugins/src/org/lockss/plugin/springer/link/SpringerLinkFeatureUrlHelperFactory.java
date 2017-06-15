@@ -32,17 +32,26 @@ public  class SpringerLinkFeatureUrlHelperFactory implements FeatureUrlHelperFac
     @Override
     public Collection<String> getAccessUrls(ArchivalUnit au) 
         throws PluginException, IOException {
-    // return the synthetic url  
-    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
-    return (ListUtil.list(storeUrl));
-  }
+
+      if (au == null) {
+        return null;
+      }
+      // return the synthetic url  
+      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+      return (ListUtil.list(storeUrl));
+    }
     
     @Override
     public List<String> getFeatureUrls(ArchivalUnit au,
                                        OpenUrlResolver.OpenUrlInfo.ResolvedTo itemType,
                                        TypedEntryMap paramMap) 
         throws PluginException, IOException {
+      
+      // This can actually get called with null AU from OpenUrlResolver
+      if (au == null) {
+        return null;
+      }
       if (itemType == OpenUrlResolver.OpenUrlInfo.ResolvedTo.VOLUME) {
         String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
         String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
