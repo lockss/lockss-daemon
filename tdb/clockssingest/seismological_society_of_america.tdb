@@ -102,7 +102,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Bulletin of the Seismological Society of America Volume 79 ; 79 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1990 ; Bulletin of the Seismological Society of America Volume 80 ; 80 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1991 ; Bulletin of the Seismological Society of America Volume 81 ; 81 ; >
-      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 1992 ; Bulletin of the Seismological Society of America Volume 82 ; 82 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1992 ; Bulletin of the Seismological Society of America Volume 82 ; 82 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1993 ; Bulletin of the Seismological Society of America Volume 83 ; 83 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1994 ; Bulletin of the Seismological Society of America Volume 84 ; 84 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1995 ; Bulletin of the Seismological Society of America Volume 85 ; 85 ; >
@@ -141,12 +141,12 @@
 
     param[base_url] = http://srl.geoscienceworld.org/
 
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1929-1930 ; Seismological Research Letters Volume 1 ; 1 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1929-1930 ; Seismological Research Letters Volume 1 ; 1 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1930-1931 ; Seismological Research Letters Volume 2 ; 2 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1931-1932 ; Seismological Research Letters Volume 3 ; 3 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1932-1933 ; Seismological Research Letters Volume 4 ; 4 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1933-1934 ; Seismological Research Letters Volume 5 ; 5 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1934-1935 ; Seismological Research Letters Volume 6 ; 6 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1934-1935 ; Seismological Research Letters Volume 6 ; 6 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1935-1936 ; Seismological Research Letters Volume 7 ; 7 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1936-1937 ; Seismological Research Letters Volume 8 ; 8 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1937-1938 ; Seismological Research Letters Volume 9 ; 9 ; >
@@ -158,7 +158,7 @@
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1943-1944 ; Seismological Research Letters Volume 15 ; 15 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1944-1945 ; Seismological Research Letters Volume 16 ; 16 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1945-1946 ; Seismological Research Letters Volume 17 ; 17 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1946-1947 ; Seismological Research Letters Volume 18 ; 18 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1946-1947 ; Seismological Research Letters Volume 18 ; 18 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1947-1948 ; Seismological Research Letters Volume 19 ; 19 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1948-1949 ; Seismological Research Letters Volume 20 ; 20 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1950 ; Seismological Research Letters Volume 21 ; 21 ; >
@@ -167,7 +167,7 @@
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1953 ; Seismological Research Letters Volume 24 ; 24 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1954 ; Seismological Research Letters Volume 25 ; 25 ; >
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1955 ; Seismological Research Letters Volume 26 ; 26 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1956 ; Seismological Research Letters Volume 27 ; 27 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1956 ; Seismological Research Letters Volume 27 ; 27 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1957 ; Seismological Research Letters Volume 28 ; 28 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1958 ; Seismological Research Letters Volume 29 ; 29 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1959 ; Seismological Research Letters Volume 30 ; 30 ; >
@@ -179,7 +179,7 @@
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1965 ; Seismological Research Letters Volume 36 ; 36 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1966 ; Seismological Research Letters Volume 37 ; 37 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1967 ; Seismological Research Letters Volume 38 ; 38 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1968 ; Seismological Research Letters Volume 39 ; 39 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1968 ; Seismological Research Letters Volume 39 ; 39 ; >
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1969 ; Seismological Research Letters Volume 40 ; 40 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1970 ; Seismological Research Letters Volume 41 ; 41 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1971 ; Seismological Research Letters Volume 42 ; 42 ; >
@@ -188,14 +188,14 @@
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1974 ; Seismological Research Letters Volume 45 ; 45 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1975 ; Seismological Research Letters Volume 46 ; 46 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1976 ; Seismological Research Letters Volume 47 ; 47 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1977 ; Seismological Research Letters Volume 48 ; 48 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1977 ; Seismological Research Letters Volume 48 ; 48 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1978-1979 ; Seismological Research Letters Volume 49 ; 49 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1979 ; Seismological Research Letters Volume 50 ; 50 ; >
     au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1980 ; Seismological Research Letters Volume 51 ; 51 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1981 ; Seismological Research Letters Volume 52 ; 52 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1982 ; Seismological Research Letters Volume 53 ; 53 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1983 ; Seismological Research Letters Volume 54 ; 54 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; crawling ; exists ; 1984 ; Seismological Research Letters Volume 55 ; 55 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1984 ; Seismological Research Letters Volume 55 ; 55 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1985 ; Seismological Research Letters Volume 56 ; 56 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1986 ; Seismological Research Letters Volume 57 ; 57 ; >
     au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 1987 ; Seismological Research Letters Volume 58 ; 58 ; >

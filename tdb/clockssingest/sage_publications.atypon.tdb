@@ -3795,7 +3795,7 @@
         au < doesNotExist ; doesNotExist ; 2009-2010 ; Behavioral Disorders Volume 35 ; 35 ; bhda ; >
         au < doesNotExist ; doesNotExist ; 2010-2011 ; Behavioral Disorders Volume 36 ; 36 ; bhda ; >
         au < crawling ; exists ; 2011-2012 ; Behavioral Disorders Volume 37 ; 37 ; bhda ; >
-        au < crawling ; exists ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda ; >
+        au < frozen ; exists ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda ; >
         au < crawling ; exists ; 2013-2014 ; Behavioral Disorders Volume 39 ; 39 ; bhda ; >
         au < crawling ; exists ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda ; >
         au < crawling ; exists ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda ; >
@@ -8449,7 +8449,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Culture & Psychology Volume 19 ; 19 ; capa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Culture & Psychology Volume 20 ; 20 ; capa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Culture & Psychology Volume 21 ; 21 ; capa ; >
-      au < crawling ; exists ; 2016 ; Culture & Psychology Volume 22 ; 22 ; capa ; >
+      au < frozen ; exists ; 2016 ; Culture & Psychology Volume 22 ; 22 ; capa ; >
       au < manifest ; exists ; 2017 ; Culture & Psychology Volume 23 ; 23 ; capa ; >
 
     }
@@ -10582,7 +10582,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Ethnography Volume 14 ; 14 ; etha ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Ethnography Volume 15 ; 15 ; etha ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Ethnography Volume 16 ; 16 ; etha ; >
-      au < crawling ; exists ; 2016 ; Ethnography Volume 17 ; 17 ; etha ; >
+      au < frozen ; exists ; 2016 ; Ethnography Volume 17 ; 17 ; etha ; >
       au < manifest ; exists ; 2017 ; Ethnography Volume 18 ; 18 ; etha ; >
 
     }
@@ -11321,7 +11321,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; European Physical Education Review Volume 19 ; 19 ; epea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; European Physical Education Review Volume 20 ; 20 ; epea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; European Physical Education Review Volume 21 ; 21 ; epea ; >
-      au < crawling ; exists ; 2016 ; European Physical Education Review Volume 22 ; 22 ; epea ; >
+      au < frozen ; exists ; 2016 ; European Physical Education Review Volume 22 ; 22 ; epea ; >
       au < manifest ; exists ; 2017 ; European Physical Education Review Volume 23 ; 23 ; epea ; >
 
     }
@@ -19029,7 +19029,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Business and Technical Communication Volume 27 ; 27 ; jbtb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Business and Technical Communication Volume 28 ; 28 ; jbtb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Business and Technical Communication Volume 29 ; 29 ; jbtb ; >
-      au < crawling ; exists ; 2016 ; Journal of Business and Technical Communication Volume 30 ; 30 ; jbtb ; >
+      au < frozen ; exists ; 2016 ; Journal of Business and Technical Communication Volume 30 ; 30 ; jbtb ; >
       au < manifest ; exists ; 2017  ; Journal of Business and Technical Communication Volume 31 ; 31 ; jbtb ; >
 
     }
@@ -23571,7 +23571,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Librarianship and Information Science Volume 45 ; 45 ; lisb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Librarianship and Information Science Volume 46 ; 46 ; lisb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Librarianship and Information Science Volume 47 ; 47 ; lisb ; >
-      au < crawling ; exists ; 2016 ; Journal of Librarianship and Information Science Volume 48 ; 48 ; lisb ; >
+      au < frozen ; exists ; 2016 ; Journal of Librarianship and Information Science Volume 48 ; 48 ; lisb ; >
       au < manifest ; exists ; 2017 ; Journal of Librarianship and Information Science Volume 49 ; 49 ; lisb ; >
 
     }
@@ -24362,7 +24362,7 @@
 
       #param[base_url] = http://jpx.sagepub.com/
 
-      au < crawling ; exists ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; jpxa ; >
+      au < frozen ; exists ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; jpxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Patient Experience Volume 2 ; 2 ; jpxa ; >
       au < frozen ; exists ; 2016 ; Journal of Patient Experience Volume 3 ; 3 ; jpxa ; >
       au < manifest ; exists ; 2017 ; Journal of Patient Experience Volume 4 ; 4 ; jpxa ; >
@@ -33205,7 +33205,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 227 ; 227 ; pinb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 228 ; 228 ; pinb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 229 ; 229 ; pinb ; >
-      au < crawling ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 230 ; 230 ; pinb ; >
+      au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 230 ; 230 ; pinb ; >
       au < manifest ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 231 ; 231 ; pinb ; >
 
     }
@@ -40523,7 +40523,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Vascular Medicine Volume 18 ; 18 ; vmjc ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Vascular Medicine Volume 19 ; 19 ; vmjc ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Vascular Medicine Volume 20 ; 20 ; vmjc ; >
-      au < crawling ; exists ; 2016 ; Vascular Medicine Volume 21 ; 21 ; vmjc ; >
+      au < frozen ; exists ; 2016 ; Vascular Medicine Volume 21 ; 21 ; vmjc ; >
       au < manifest ; exists ; 2017 ; Vascular Medicine Volume 22 ; 22 ; vmjc ; >
 
 
@@ -41267,7 +41267,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Young Volume 21 ; 21 ; youa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Young Volume 22 ; 22 ; youa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Young Volume 23 ; 23 ; youa ; >
-      au < crawling ; exists ; 2016 ; Young Volume 24 ; 24 ; youa ; >
+      au < frozen ; exists ; 2016 ; Young Volume 24 ; 24 ; youa ; >
       au < manifest ; exists ; 2017 ; Young Volume 25 ; 25 ; youa ; >
 
 
