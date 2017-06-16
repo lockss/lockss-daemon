@@ -114,6 +114,10 @@
   <entry>
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalHttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalUrlNormalizer</string>
   </entry>    
   <entry>
     <string>au_login_page_checker</string>
