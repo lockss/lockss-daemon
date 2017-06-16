@@ -16,6 +16,10 @@
     <string>18</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.70.2</string> <!-- content validation -->
+  </entry>  
+  <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
@@ -44,8 +48,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sgateway/book/%s", to_http(base_url), volume</string>
-    <string>"%sgateway/book/%s", to_https(base_url), volume</string>
+    <string>"%sgateway/book/%s", base_url, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -105,15 +108,23 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>  
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalHttpToHttpsUrlFetcherFactory</string>
+  </entry>    
+  <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalLoginPageChecker</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/gateway/chapter/full-text-html/[0-9]+$", url_host(base_url)</string>
-      <string>"^https?://%s/gateway/chapter/full-text-pdf/[0-9]+$", url_host(base_url)</string>
-      <string>"^https?://%s/pdf[.]aspx[?]", url_host(base_url)</string>
+      <string>"^%sgateway/chapter/full-text-html/[0-9]+$", base_url</string>
+      <string>"^%sgateway/chapter/full-text-pdf/[0-9]+$", base_url</string>
+      <string>"^%spdf[.]aspx[?]", base_url</string>
     </list>
   </entry>
   <entry>

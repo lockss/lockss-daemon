@@ -43,7 +43,12 @@ import org.lockss.util.Logger;
  * This might be temporary, but the change from http to https also causes the addition of a repeat of the 
  * issn & volume args on the start_url
  * https://www.igi-global.com/lockss/journal-issues.aspx?issn=2156-1796&volume=5&issn=2156-1796&volume=5
- * which breaks support for the transition. Normalize off the extra args
+
+ * as well as arg patterns on a few others:
+ * https://www.igi-global.com/pdf.aspx?tid=179548&ptid=132074&ctid=15&t=Masthead&tid=179548&ptid=132074&ctid=15&t=Masthead
+ * became:
+ * https://www.igi-global.com/pdf.aspx?tid=179548&ptid=132074&ctid=15&t=Masthead&tid=179548&ptid=132074&ctid=15&t=Masthead
+ *  * which breaks support for the transition. Normalize off the extra args when they're a duplicate
  */
 
 public class IgiGlobalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
@@ -52,8 +57,15 @@ public class IgiGlobalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   protected static final String SUFFIX = "&accesstype=";
   protected static final String SUFFIX1 = "?v=";
-  private  static final Pattern REPEAT_START_PATTERN = 
-      Pattern.compile("(lockss/journal-issues\\.aspx\\?(issn=[^&]+)(&volume=[^&]+))(&\\2\\3)", Pattern.CASE_INSENSITIVE);
+  //generalize 
+  //.aspx?x=foo&x=foo
+  //.aspx?x=foo&y=blah&x=foo&y=blah
+  //.aspx?x=foo&y=bla&z=baz&x=foo&y=blah&z=baz
+  //.aspx?(1st set)&(repeat first set)
+  //([^=]+=[^&]+(&[^=]+=[^&]+)*)
+  private  static final Pattern REPEAT_ARG_PATTERN =
+      Pattern.compile("(\\.aspx\\?([^=]+=[^&]+(?:&[^=]+=[^&]+)*))&\\2", Pattern.CASE_INSENSITIVE);
+     // Pattern.compile("(\\.aspx\\?([^=]+=[^&]+)(&volume=[^&]+))(&\\2\\3)", Pattern.CASE_INSENSITIVE);
 
   public String normalizeUrl(String url,
                              ArchivalUnit au)
@@ -61,7 +73,7 @@ public class IgiGlobalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     
     //moving from htttp to https - duplicate arguments on start_url - remove them
     // this will continue to work even once igi ceases to do this
-    String returnString = REPEAT_START_PATTERN.matcher(url).replaceFirst("$1");
+    String returnString = REPEAT_ARG_PATTERN.matcher(url).replaceFirst("$1");
     if (!returnString.equals(url)) {    
       log.debug3("normalized redirected http start url: " + returnString);      
       return returnString;
