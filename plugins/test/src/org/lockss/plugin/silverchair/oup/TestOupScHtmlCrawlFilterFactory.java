@@ -1,0 +1,68 @@
+/*  $Id$
+ 
+ Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+
+ all rights reserved.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+
+ */
+
+package org.lockss.plugin.silverchair.oup;
+
+import java.io.InputStream;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.Constants;
+import org.lockss.util.StringUtil;
+
+public class TestOupScHtmlCrawlFilterFactory extends LockssTestCase {
+  private OupScHtmlCrawlFilterFactory fact;
+  private MockArchivalUnit mau;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    fact = new OupScHtmlCrawlFilterFactory();
+  }
+  
+  private static final String anchor = 
+      "<h2>Notes</h2>\n" +
+          "<div class=\"master-header\">mh</div>\n" +
+          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/front-matter.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>" +
+          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/toc.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>" +
+          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/10.1093_treephys_tpw073/3/TPW073SupplementaryData.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>\n" +
+          "<a class=\"prev\">Previous</a>\n";
+  private static final String anchorFiltered = 
+      "<h2>Notes</h2>\n\n\n\n";
+  
+  /*
+   *  Compare Html and HtmlHashFiltered
+   */
+  public void testAnchor() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(anchor), Constants.DEFAULT_ENCODING);
+    assertEquals(anchorFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+
+}

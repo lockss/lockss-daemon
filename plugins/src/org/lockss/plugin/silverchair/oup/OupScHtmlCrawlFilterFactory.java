@@ -49,17 +49,21 @@ public class OupScHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    
+    String regexStr = "/backfile/Content_public/Journal/[^?]+(?<=(toc|matter|suppl[^.]{0,20}|advertising)[.]pdf)[?]Expires=[^&amp;]+&amp;Signature=[^&amp;]+&amp;Key-Pair-Id=.+$";
+    
     return new HtmlFilterInputStream(
         
-      in,
-      encoding,
-    	  HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
-    		  HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
-    	  })
+        in,
+        encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(new NodeFilter[] {
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", regexStr),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "prev"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "next"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "master-header"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "InfoColumn"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+        })
       )
     );
   }
