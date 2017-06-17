@@ -859,9 +859,9 @@
       au < manifest ; exists ; 2011 ; AlterNative: An International Journal of Indigenous Peoples Volume 7 ; 7 ; alna ; >
       au < manifest ; exists ; 2012 ; AlterNative: An International Journal of Indigenous Peoples Volume 8 ; 8 ; alna ; >
       au < manifest ; exists ; 2013 ; AlterNative: An International Journal of Indigenous Peoples Volume 9 ; 9 ; alna ; >
-      au < manifest ; exists ; 2014 ; AlterNative: An International Journal of Indigenous Peoples Volume 10 ; 10 ; alna ; >
-      au < manifest ; exists ; 2015 ; AlterNative: An International Journal of Indigenous Peoples Volume 11 ; 11 ; alna ; >
-      au < manifest ; exists ; 2016 ; AlterNative: An International Journal of Indigenous Peoples Volume 12 ; 12 ; alna ; >
+      au < crawling ; exists ; 2014 ; AlterNative: An International Journal of Indigenous Peoples Volume 10 ; 10 ; alna ; >
+      au < crawling ; exists ; 2015 ; AlterNative: An International Journal of Indigenous Peoples Volume 11 ; 11 ; alna ; >
+      au < crawling ; exists ; 2016 ; AlterNative: An International Journal of Indigenous Peoples Volume 12 ; 12 ; alna ; >
       au < manifest ; exists ; 2017 ; AlterNative: An International Journal of Indigenous Peoples Volume 13 ; 13 ; alna ; >
 
   }
@@ -1153,7 +1153,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Alzheimer's Disease and Other Dementias Volume 28 ; 28 ; ajae ; >
       au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Alzheimer's Disease and Other Dementias Volume 29 ; 29 ; ajae ; >
       au < doNotProcess ; doNotProcess ; 2015 ; American Journal of Alzheimer's Disease and Other Dementias Volume 30 ; 30 ; ajae ; >
-      au < manifest ; exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; ajae ; >
+      au < crawling ; exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; ajae ; >
       au < manifest ; exists ; 2017 ; American Journal of Alzheimer's Disease and Other Dementias Volume 32 ; 32 ; ajae ; >
 
     }
@@ -3816,7 +3816,7 @@
 
         au < manifest ; exists ; 2011-2012 ; Beyond Behavior Volume 21 ; 21 ; bbxa ; >
         au < manifest ; exists ; 2012-2013 ; Beyond Behavior Volume 22 ; 22 ; bbxa ; >
-        au < manifest ; exists ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa ; >
+        au < crawling ; exists ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa ; >
         au < crawling ; exists ; 2015 ; Beyond Behavior Volume 24 ; 24 ; bbxa ; >
         au < crawling ; exists ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa ; >
         au < manifest ; exists ; 2017 ; Beyond Behavior Volume 26 ; 26 ; bbxa ; >
@@ -4922,7 +4922,7 @@
       #param[base_url] = http://bpr.sagepub.com/
 
       au < manifest ; exists ; 2012-2013 ; Business Perspectives and Research Volume 1 ; 1 ; bpra ; >
-      au < manifest ; exists ; 2013-2014 ; Business Perspectives and Research Volume 2 ; 2 ; bpra ; >
+      au < crawling ; exists ; 2013-2014 ; Business Perspectives and Research Volume 2 ; 2 ; bpra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Business Perspectives and Research Volume 3 ; 3 ; bpra ; >
       au < frozen ; exists ; 2016 ; Business Perspectives and Research Volume 4 ; 4 ; bpra ; >
       au < manifest ; exists ; 2017 ; Business Perspectives and Research Volume 5 ; 5 ; bpra ; >
@@ -8482,7 +8482,7 @@
       au < manifest ; exists ; 2010-2011 ; A Current Bibliography on African Affairs Volume 43 ; 43 ; cbaa ; >
       au < manifest ; exists ; 2011-2012 ; A Current Bibliography on African Affairs Volume 44 ; 44 ; cbaa ; >
       au < manifest ; exists ; 2012-2013 ; A Current Bibliography on African Affairs Volume 45 ; 45 ; cbaa ; >
-      au < manifest ; exists ; 2013-2014 ; A Current Bibliography on African Affairs Volume 46 ; 46 ; cbaa ; >
+      au < crawling ; exists ; 2013-2014 ; A Current Bibliography on African Affairs Volume 46 ; 46 ; cbaa ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; cbaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; cbaa ; >
       au < manifest ; exists ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; cbaa ; >
@@ -21950,9 +21950,9 @@
       au < manifest ; exists ; 2010-2011 ; Journal of General Management Volume 36 ; 36 ; gema ; >
       au < manifest ; exists ; 2011-2012 ; Journal of General Management Volume 37 ; 37 ; gema ; >
       au < manifest ; exists ; 2012-2013 ; Journal of General Management Volume 38 ; 38 ; gema ; >
-      au < manifest ; exists ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema ; >
+      au < crawling ; exists ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema ; >
       au < crawling ; exists ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema ; >
-      au < manifest ; exists ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
+      au < crawling ; exists ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema ; >
       au < manifest ; exists ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema ; >
       au < expected ; exists ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema ; >
 
@@ -32419,7 +32419,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; The Prison Journal Volume 93 ; 93 ; tpjd ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Prison Journal Volume 94 ; 94 ; tpjd ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Prison Journal Volume 95 ; 95 ; tpjd ; >
-      au < manifest ; exists ; 2016 ; The Prison Journal Volume 96 ; 96 ; tpjd ; >
+      au < crawling ; exists ; 2016 ; The Prison Journal Volume 96 ; 96 ; tpjd ; >
       au < manifest ; exists ; 2017 ; The Prison Journal Volume 97 ; 97 ; tpjd ; >
 
     }
@@ -32561,7 +32561,7 @@
         au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; proe ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 ; proe ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 ; proe ; >
-        au < manifest ; exists ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; proe ; >
+        au < crawling ; exists ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; proe ; >
         au < expected ; exists ; 2017 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 61 ; 61 ; proe ; >
 
       }
@@ -33887,9 +33887,9 @@
       au < manifest ; exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg ; >
       au < manifest ; exists ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg ; >
       au < manifest ; exists ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg ; >
-      au < manifest ; exists ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg ; >
-      au < manifest ; exists ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg ; >
-      au < manifest ; exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg ; >
+      au < crawling ; exists ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg ; >
+      au < crawling ; exists ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg ; >
+      au < crawling ; exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg ; >
       au < manifest ; exists ; 2017 ; Public Health Reports Volume 132 ; 132 ; phrg ; >
 
   }
@@ -35292,7 +35292,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Review of Market Integration Volume 5 ; 5 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Review of Market Integration Volume 6 ; 6 ; rmia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Review of Market Integration Volume 7 ; 7 ; rmia ; >
-      au < manifest ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
+      au < crawling ; exists ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia ; >
       au < expected ; exists ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia ; >
 
     }
@@ -35548,9 +35548,9 @@
       au < manifest ; exists ; 2011 ; Rural Special Education Quarterly Volume 30 ; 30 ; rsqa ; >
       au < manifest ; exists ; 2012 ; Rural Special Education Quarterly Volume 31 ; 31 ; rsqa ; >
       au < manifest ; exists ; 2013 ; Rural Special Education Quarterly Volume 32 ; 32 ; rsqa ; >
-      au < manifest ; exists ; 2014 ; Rural Special Education Quarterly Volume 33 ; 33 ; rsqa ; >
-      au < manifest ; exists ; 2015 ; Rural Special Education Quarterly Volume 34 ; 34 ; rsqa ; >
-      au < manifest ; exists ; 2016 ; Rural Special Education Quarterly Volume 35 ; 35 ; rsqa ; >
+      au < crawling ; exists ; 2014 ; Rural Special Education Quarterly Volume 33 ; 33 ; rsqa ; >
+      au < crawling ; exists ; 2015 ; Rural Special Education Quarterly Volume 34 ; 34 ; rsqa ; >
+      au < crawling ; exists ; 2016 ; Rural Special Education Quarterly Volume 35 ; 35 ; rsqa ; >
       au < manifest ; exists ; 2017 ; Rural Special Education Quarterly Volume 36 ; 36 ; rsqa ; >
 
     }
@@ -35921,7 +35921,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 ; sthd ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Science, Technology & Human Values Volume 39 ; 39 ; sthd ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Science, Technology & Human Values Volume 40 ; 40 ; sthd ; >
-      au < manifest ; exists ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 ; sthd ; >
+      au < crawling ; exists ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 ; sthd ; >
       au < manifest ; exists ; 2017 ; Science, Technology & Human Values Volume 42 ; 42 ; sthd ; >
 
     }
@@ -36718,7 +36718,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Social Science Computer Review Volume 31 ; 31 ; ssce ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Social Science Computer Review Volume 32 ; 32 ; ssce ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Social Science Computer Review Volume 33 ; 33 ; ssce ; >
-      au < manifest ; exists ; 2016 ; Social Science Computer Review Volume 34 ; 34 ; ssce ; >
+      au < crawling ; exists ; 2016 ; Social Science Computer Review Volume 34 ; 34 ; ssce ; >
       au < manifest ; exists ; 2017 ; Social Science Computer Review Volume 35 ; 35 ; ssce ; >
 
     }
@@ -39859,7 +39859,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Transcultural Psychiatry Volume 50 ; 50 ; tpse ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Transcultural Psychiatry Volume 51 ; 51 ; tpse ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Transcultural Psychiatry Volume 52 ; 52 ; tpse ; >
-      au < manifest ; exists ; 2016 ; Transcultural Psychiatry Volume 53 ; 53 ; tpse ; >
+      au < crawling ; exists ; 2016 ; Transcultural Psychiatry Volume 53 ; 53 ; tpse ; >
       au < manifest ; exists ; 2017 ; Transcultural Psychiatry Volume 54 ; 54 ; tpse ; >
 
     }
@@ -40120,7 +40120,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Trends in Amplification Volume 17 ; 17 ; tiaa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Trends in Amplification Volume 18 ; 18 ; tiab ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Trends in Amplification Volume 19 ; 19 ; tiab ; >
-      au < manifest ; exists ; 2016 ; Trends in Amplification Volume 20 ; 20 ; tiab ; >
+      au < crawling ; exists ; 2016 ; Trends in Amplification Volume 20 ; 20 ; tiab ; >
       au < manifest ; exists ; 2017 ; Trends in Amplification Volume 21 ; 21 ; tiab ; >
 
     }
@@ -41143,7 +41143,7 @@
 
       #param[base_url] = http://waf.sagepub.com/
 
-      au < manifest ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj ; >
+      au < crawling ; exists ; 2016 ; World Affairs Volume 179 ; 179 ; wafj ; >
       au < expected ; exists ; 2017 ; World Affairs Volume 180 ; 180 ; wafj ; >
 
   }
@@ -44227,7 +44227,7 @@
         au < manifest ; exists ; 2012 ; International Journal of Care Coordination Volume 16 ; 16 ; icpd ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; icpe ; >
         au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; icpe ; >
-        au < manifest ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; icpe ; >
+        au < crawling ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; icpe ; >
         au < expected ; exists ; 2017 ; International Journal of Care Coordination Volume 20 ; 20 ; icpe ; >
 
     }
