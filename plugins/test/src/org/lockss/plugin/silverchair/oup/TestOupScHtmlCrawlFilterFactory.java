@@ -48,12 +48,9 @@ public class TestOupScHtmlCrawlFilterFactory extends LockssTestCase {
   private static final String anchor = 
       "<h2>Notes</h2>\n" +
           "<div class=\"master-header\">mh</div>\n" +
-          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/front-matter.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>" +
-          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/toc.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>" +
-          "<a href=\"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/treephys/36/12/10.1093_treephys_tpw073/3/TPW073SupplementaryData.pdf?Expires=1497736459&amp;Signature=XfFzeWegw__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q\">ss</a>\n" +
           "<a class=\"prev\">Previous</a>\n";
   private static final String anchorFiltered = 
-      "<h2>Notes</h2>\n\n\n\n";
+      "<h2>Notes</h2>\n\n\n";
   
   /*
    *  Compare Html and HtmlHashFiltered

@@ -156,6 +156,11 @@ log.setLevel("debug3");
     shouldCacheTest(ROOT_URL + "DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav086/5/bav086f3bp.gif?Expires=1497052403&Signature=FO4epi~mvkHGSxWQ__&Key-Pair-Id=APKAIUCZBIA4Q&sec=83749777&ar=2433219&xsltPath=~/UI/app/XSLT&imagename=", false, au);
     shouldCacheTest("https://oup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bav032/5/bav032f1p.gif?Expires=1497075372&Signature=eJ85Ld6h~aVw__&Key-Pair-Id=APLVPAVW3Q&sec=83747373&ar=2433164&xsltPath=~/UI/app/XSLT&imagename=", false, au);
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
+    // toc, front-matter, et al PDFs with expiration are not preserved
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/toc.pdf" +
+        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/front-matter.pdf" +
+        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
     
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
