@@ -42,7 +42,7 @@
     >
 
     #param[base_url] = http://www.childlitaesthetics.net/
-    param[journal_id] = zblft20
+    param[journal_id] = zblf20
 
     au < doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 >
@@ -176,7 +176,7 @@
     >
     
     #param[base_url] = http://www.eurojnlofpsychotraumatol.net/
-    param[journal_id] = zejpt20
+    param[journal_id] = zjec20
     
     # European Journal of Psychotraumatology [Supplements] are all in this title. 
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
@@ -377,7 +377,7 @@
     >
 
     #param[base_url] = http://www.jecme.eu/
-    param[journal_id] = zjecme20
+    param[journal_id] = zjec20
 
     au < exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 >
     au < exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 >
@@ -588,7 +588,7 @@
 
     comment[continues] = 2000-5121
     #param[base_url] = http://www.nanoreviewsexperiments.net/
-    param[journal_id] = znano20
+    param[journal_id] = zano20
 
     au < exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 >
     au < expected ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 >
@@ -626,7 +626,7 @@
     >
     
     #param[base_url] = http://www.polarresearch.net/
-    param[journal_id] = zpolar20
+    param[journal_id] = zpor20
 
     au < doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 >
     au < doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 >
