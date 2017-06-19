@@ -5804,7 +5804,7 @@
       #param[base_url] = http://csd.sagepub.com/
 
       au < frozen ; exists ; 2016 ; Chinese Sociological Dialogue Volume 1 ; 1 ; csda ; >
-      au < expected ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
+      au < manifest ; exists ; 2017 ; Chinese Sociological Dialogue Volume 2 ; 2 ; csda ; >
 
   }
 
@@ -11284,7 +11284,7 @@
       au < crawling ; exists ; 2014 ; European Labour Law Journal Volume 5 ; 5 ; ella ; >
       au < crawling ; exists ; 2015 ; European Labour Law Journal Volume 6 ; 6 ; ella ; >
       au < crawling ; exists ; 2016 ; European Labour Law Journal Volume 7 ; 7 ; ella ; >
-      au < expected ; exists ; 2017 ; European Labour Law Journal Volume 8 ; 8 ; ella ; >
+      au < manifest ; exists ; 2017 ; European Labour Law Journal Volume 8 ; 8 ; ella ; >
 
   }
 
@@ -18756,7 +18756,7 @@
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 ; jbaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Journal of Biomaterials Applications Volume 30 ; 30 ; jbaa ; >
       au < manifest ; exists ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 ; jbaa ; >
-      au < expected ; exists ; 2017-2018 ; Journal of Biomaterials Applications Volume 32 ; 32 ; jbaa ; >
+      au < manifest ; exists ; 2017-2018 ; Journal of Biomaterials Applications Volume 32 ; 32 ; jbaa ; >
 
     }
 
@@ -28739,7 +28739,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Medical Law International Volume 14 ; 14 ; mlia ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Medical Law International Volume 15 ; 15 ; mlia ; >
         au < frozen ; exists ; 2016 ; Medical Law International Volume 16 ; 16 ; mlia ; >
-        au < expected ; exists ; 2017 ; Medical Law International Volume 17 ; 17 ; mlia ; >
+        au < manifest ; exists ; 2017 ; Medical Law International Volume 17 ; 17 ; mlia ; >
 
       }
 
@@ -44228,7 +44228,7 @@
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; icpe ; >
         au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; icpe ; >
         au < crawling ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; icpe ; >
-        au < expected ; exists ; 2017 ; International Journal of Care Coordination Volume 20 ; 20 ; icpe ; >
+        au < manifest ; exists ; 2017 ; International Journal of Care Coordination Volume 20 ; 20 ; icpe ; >
 
     }
 

@@ -52,7 +52,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 ; >
-    au < expected ; exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 ; >
 
   }
     
@@ -188,9 +188,9 @@
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; >
-      au < exists ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 ; >
-      au < expected ; exists ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 ; >
 
     }
   }
@@ -386,7 +386,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 ; >
-    au < expected ; exists ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 ; >
 
   }
 
@@ -597,7 +597,7 @@
     param[journal_id] = zano20
 
     au < doNotProcess ; doNotProcess ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; >
-    au < expected ; exists ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; >
   }
 
   {
@@ -668,7 +668,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; >
-    au < expected ; exists ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; >
 
   }
 
