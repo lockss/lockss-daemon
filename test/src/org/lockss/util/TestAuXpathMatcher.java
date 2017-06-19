@@ -55,6 +55,9 @@ public class TestAuXpathMatcher extends LockssTestCase {
   private Tdb tdb;
 
   private void setUpTdb() throws Tdb.TdbException {
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_FQDN,
+				  "my.host47.example.com");
+
     // set title database properties
     Properties p1 = new Properties();
     p1.put("title", "It's");
@@ -81,6 +84,7 @@ public class TestAuXpathMatcher extends LockssTestCase {
     p2.put("param.2.value", "2012");
     p2.put("attributes.attr1", "av111");
     p2.put("attributes.year", "2014");
+    p2.put("attributes.pollerhost", ConfigManager.getPlatformHostname());
     
     Tdb tdb = new Tdb();
     tau1 = tdb.addTdbAuFromProperties(p1);
@@ -103,7 +107,7 @@ public class TestAuXpathMatcher extends LockssTestCase {
 
   private void logVal(ArchivalUnit au, String xpath) {
     AuXpathMatcher aux = AuXpathMatcher.create("[" + xpath + "]");
-    log.debug("foo: " + aux.eval(au));
+    log.debug(xpath + ": " + aux.eval(au));
   }
 
   private static String ABC = "[tdbAu/publicationTitle='jtitle aabc']";
@@ -132,6 +136,12 @@ public class TestAuXpathMatcher extends LockssTestCase {
 
     assertMatch(au1, "[pluginId='org.lockss.test.MockPlugin']");
     assertMatch(au1, "[RE:isMatchRe(pluginId, 'MockPlugin')]");
+
+//     logVal(au2, "tdbAu/attrs/pollerhost");
+//     logVal(au2, "$myhost");
+    assertMatch(au2, "[tdbAu/attrs/pollerhost = $myhost]");
+    assertNotMatch(au2, "[tdbAu/attrs/pollerhost = 'not.my.host']");
+    assertNotMatch(au1, "[tdbAu/attrs/pollerhost = $myhost]");
   }
 
 }

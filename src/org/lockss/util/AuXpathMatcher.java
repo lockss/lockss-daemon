@@ -66,13 +66,14 @@ import org.lockss.plugin.*;
  * <li><code>tdbAu/issn</code></li>
  * <li>...</li>
  * </ul>
-
-
-
-
-
+ *
+ * In addition, the following variables are available:<ul>
+ * <li><code>$myhost</code> - the value of {@value
+ * org.lockss.config.ConfigManager#PARAM_PLATFORM_FQDN}
+ * </ul>
  */
 public class AuXpathMatcher {
+  private static final Logger log = Logger.getLogger(AuXpathMatcher.class);
 
   // static context used to predefine RE class functions, and to compile
   // xpath in constructor
@@ -109,9 +110,17 @@ public class AuXpathMatcher {
   /** Return true if the XPath predicate returns true when applied to the
    * AU */
   public boolean isMatch(AuXpathAccessor auxa) {
-    JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
+    JXPathContext context = newContext(sharedContext, auxa);
     Iterator iter = expr.iteratePointers(context);
     return iter.hasNext();
+  }
+
+  private JXPathContext newContext(JXPathContext sharedContext,
+				   AuXpathAccessor auxa) {
+    JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
+    context.getVariables().declareVariable("myhost",
+					   ConfigManager.getPlatformHostname());
+    return context;
   }
 
   public String getXpath() {
@@ -147,7 +156,7 @@ public class AuXpathMatcher {
  
   /** Return the object located by the XPath.  Useful for debugging. */
   public Object eval(AuXpathAccessor auxa) {
-    JXPathContext context = JXPathContext.newContext(sharedContext, auxa);
+    JXPathContext context = newContext(sharedContext, auxa);
     return context.getValue("" + xpath.substring(1, xpath.length()-1));
   }
 
