@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>75</string>
+    <string>76</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -215,10 +215,9 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <!-- Invalid content-type file. Captures cases like html returned instead of PDF 
-        Make no store/no_fail due to html returned for PDF
-        we will count on polls to catch errors where no content was stored -->
+      <!-- Invalid content-type file. Captures cases like html returned instead of PDF; store but no fail - leaves a hole --> 
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
