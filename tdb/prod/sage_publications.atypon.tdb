@@ -3781,10 +3781,10 @@
         au < doesNotExist ; 2009-2010 ; Behavioral Disorders Volume 35 ; 35 ; bhda >
         au < doesNotExist ; 2010-2011 ; Behavioral Disorders Volume 36 ; 36 ; bhda >
         au < released ; 2011-2012 ; Behavioral Disorders Volume 37 ; 37 ; bhda >
-        au < manifest ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda >
+        au < ready ; 2012-2013 ; Behavioral Disorders Volume 38 ; 38 ; bhda >
         au < released ; 2013-2014 ; Behavioral Disorders Volume 39 ; 39 ; bhda >
-        au < manifest ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda >
-        au < manifest ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda >
+        au < ready ; 2014-2015 ; Behavioral Disorders Volume 40 ; 40 ; bhda >
+        au < ready ; 2015-2016 ; Behavioral Disorders Volume 41 ; 41 ; bhda >
         au < manifest ; 2016-2017 ; Behavioral Disorders Volume 42 ; 42 ; bhda >
         au < expected ; 2017-2018 ; Behavioral Disorders Volume 43 ; 43 ; bhda >
 
@@ -3802,9 +3802,9 @@
 
         au < manifest ; 2011-2012 ; Beyond Behavior Volume 21 ; 21 ; bbxa >
         au < manifest ; 2012-2013 ; Beyond Behavior Volume 22 ; 22 ; bbxa >
-        au < manifest ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa >
+        au < ready ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa >
         au < released ; 2015 ; Beyond Behavior Volume 24 ; 24 ; bbxa >
-        au < manifest ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa >
+        au < ready ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa >
         au < manifest ; 2017 ; Beyond Behavior Volume 26 ; 26 ; bbxa >
 
   }
@@ -4263,7 +4263,7 @@
       au < manifest ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; bpia >
       au < manifest ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; bpia >
       au < manifest ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; bpia >
-      au < manifest ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; bpia >
+      au < ready ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; bpia >
       au < manifest ; 2017 ; The British Journal of Politics and International Relations Volume 19 ; 19 ; bpia >
 
     }
@@ -5536,7 +5536,7 @@
         au < doNotProcess ; 2013 ; Child Language Teaching and Therapy Volume 29 ; 29 ; clta >
         au < doNotProcess ; 2014 ; Child Language Teaching and Therapy Volume 30 ; 30 ; clta >
         au < doNotProcess ; 2015 ; Child Language Teaching and Therapy Volume 31 ; 31 ; clta >
-        au < manifest ; 2016 ; Child Language Teaching and Therapy Volume 32 ; 32 ; clta >
+        au < ready ; 2016 ; Child Language Teaching and Therapy Volume 32 ; 32 ; clta >
         au < manifest ; 2017 ; Child Language Teaching and Therapy Volume 33 ; 33 ; clta >
 
       }
@@ -5773,7 +5773,7 @@
     #param[base_url] = http://chs.sagepub.com/
 
     au < doNotProcess ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; chsa >
-    au < manifest ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; chsa >
+    au < ready ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; chsa >
     au < manifest ; 2017 ; Chinese Journal of Sociology Volume 3 ; 3 ; chsa >
 
   }
@@ -6887,7 +6887,7 @@
       au < manifest ; 2013 ; Competition and Regulation in Network Industries Volume 14 ; 14 ; crna >
       au < released ; 2014 ; Competition and Regulation in Network Industries Volume 15 ; 15 ; crna >
       au < released ; 2015 ; Competition and Regulation in Network Industries Volume 16 ; 16 ; crna >
-      au < manifest ; 2016 ; Competition and Regulation in Network Industries Volume 17 ; 17 ; crna >
+      au < ready ; 2016 ; Competition and Regulation in Network Industries Volume 17 ; 17 ; crna >
       au < expected ; 2017 ; Competition and Regulation in Network Industries Volume 18 ; 18 ; crna >
 
   }
@@ -8065,7 +8065,7 @@
         au < doNotProcess ; 2013 ; Critical Sociology Volume 39 ; 39 ; crsb >
         au < doNotProcess ; 2014 ; Critical Sociology Volume 40 ; 40 ; crsb >
         au < doNotProcess ; 2015 ; Critical Sociology Volume 41 ; 41 ; crsb >
-        au < manifest ; 2016 ; Critical Sociology Volume 42 ; 42 ; crsb >
+        au < ready ; 2016 ; Critical Sociology Volume 42 ; 42 ; crsb >
         au < manifest ; 2017 ; Critical Sociology Volume 43 ; 43 ; crsb >
 
       }
@@ -8303,7 +8303,7 @@
         au < doNotProcess ; 2013 ; Cultural Geographies Volume 20 ; 20 ; cgjb >
         au < doNotProcess ; 2014 ; Cultural Geographies Volume 21 ; 21 ; cgjb >
         au < doNotProcess ; 2015 ; Cultural Geographies Volume 22 ; 22 ; cgjb >
-        au < manifest ; 2016 ; Cultural Geographies Volume 23 ; 23 ; cgjb >
+        au < ready ; 2016 ; Cultural Geographies Volume 23 ; 23 ; cgjb >
         au < manifest ; 2017 ; Cultural Geographies Volume 24 ; 24 ; cgjb >
 
       }
@@ -8568,7 +8568,7 @@
         au < doNotProcess ; 2013 ; Current Sociology Volume 61 ; 61 ; csia >
         au < doNotProcess ; 2014 ; Current Sociology Volume 62 ; 62 ; csia >
         au < doNotProcess ; 2015 ; Current Sociology Volume 63 ; 63 ; csia >
-        au < manifest ; 2016 ; Current Sociology Volume 64 ; 64 ; csia >
+        au < ready ; 2016 ; Current Sociology Volume 64 ; 64 ; csia >
         au < manifest ; 2017 ; Current Sociology Volume 65 ; 65 ; csia >
 
       }
@@ -8983,7 +8983,7 @@
       au < manifest ; 2013 ; Dose-Response Volume 11 ; 11 ; dosb >
       au < doNotProcess ; 2014 ; Dose-Response Volume 12 ; 12 ; dosb >
       au < doNotProcess ; 2015 ; Dose-Response Volume 13 ; 13 ; dosb >
-      au < manifest ; 2016 ; Dose-Response Volume 14 ; 14 ; dosb >
+      au < ready ; 2016 ; Dose-Response Volume 14 ; 14 ; dosb >
       au < manifest ; 2017 ; Dose-Response Volume 15 ; 15 ; dosb >
 
   }
@@ -9129,7 +9129,7 @@
       au < manifest ; 2011 ; The Downside Review Volume 129 ; 129 ; tdra >
       au < manifest ; 2012 ; The Downside Review Volume 130 ; 130 ; tdra >
       au < manifest ; 2013 ; The Downside Review Volume 131 ; 131 ; tdra >
-      au < manifest ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra >
+      au < ready ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra >
       au < released ; 2015 ; The Downside Review Volume 133 ; 133 ; tdra >
       au < released ; 2016 ; The Downside Review Volume 134 ; 134 ; tdra >
       au < manifest ; 2017 ; The Downside Review Volume 135 ; 135 ; tdra >
@@ -9215,7 +9215,7 @@
         au < doNotProcess ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; dijc >
         au < doNotProcess ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 ; dijc >
         au < doNotProcess ; 2015 ; Therapeutic Innovation & Regulatory Science Volume 49 ; 49 ; dijc >
-        au < manifest ; 2016 ; Therapeutic Innovation & Regulatory Science Volume 50 ; 50 ; dijc >
+        au < ready ; 2016 ; Therapeutic Innovation & Regulatory Science Volume 50 ; 50 ; dijc >
         au < manifest ; 2017 ; Therapeutic Innovation & Regulatory Science Volume 51 ; 51 ; dijc >
 
       }
@@ -9290,7 +9290,7 @@
         au < doNotProcess ; 2013 ; East European Politics & Societies Volume 27 ; 27 ; eepa >
         au < doNotProcess ; 2014 ; East European Politics & Societies Volume 28 ; 28 ; eepa >
         au < doNotProcess ; 2015 ; East European Politics & Societies Volume 29 ; 29 ; eepa >
-        au < manifest ; 2016 ; East European Politics & Societies Volume 30 ; 30 ; eepa >
+        au < ready ; 2016 ; East European Politics & Societies Volume 30 ; 30 ; eepa >
         au < manifest ; 2017 ; East European Politics & Societies Volume 31 ; 31 ; eepa >
 
       }
@@ -9549,7 +9549,7 @@
         au < doNotProcess ; 2013 ; Education, Citizenship and Social Justice Volume 8 ; 8 ; esja >
         au < doNotProcess ; 2014 ; Education, Citizenship and Social Justice Volume 9 ; 9 ; esja >
         au < doNotProcess ; 2015 ; Education, Citizenship and Social Justice Volume 10 ; 10 ; esja >
-        au < manifest ; 2016 ; Education, Citizenship and Social Justice Volume 11 ; 11 ; esja >
+        au < ready ; 2016 ; Education, Citizenship and Social Justice Volume 11 ; 11 ; esja >
         au < manifest ; 2017 ; Education, Citizenship and Social Justice Volume 12 ; 12 ; esja >
 
       }
@@ -10068,7 +10068,7 @@
       au < manifest ; 2013 ; Empirical Studies of the Arts Volume 31 ; 31 ; arta >
       au < doNotProcess ; 2014 ; Empirical Studies of the Arts Volume 32 ; 32 ; arta >
       au < doNotProcess ; 2015 ; Empirical Studies of the Arts Volume 33 ; 33 ; arta >
-      au < manifest ; 2016 ; Empirical Studies of the Arts Volume 34 ; 34 ; arta >
+      au < ready ; 2016 ; Empirical Studies of the Arts Volume 34 ; 34 ; arta >
       au < manifest ; 2017 ; Empirical Studies of the Arts Volume 35 ; 35 ; arta >
 
     }
@@ -10266,7 +10266,7 @@
       au < doNotProcess ; 2013 ; Environment and Planning B: Planning and Design Volume 40 ; 40 ; epba >
       au < doNotProcess ; 2014 ; Environment and Planning B: Planning and Design Volume 41 ; 41 ; epba >
       au < doNotProcess ; 2015 ; Environment and Planning B: Planning and Design Volume 42 ; 42 ; epba >
-      au < manifest ; 2016 ; Environment and Planning B: Planning and Design Volume 43 ; 43 ; epba >
+      au < ready ; 2016 ; Environment and Planning B: Planning and Design Volume 43 ; 43 ; epba >
       au < expected ; 2017 ; Environment and Planning B: Planning and Design Volume 44 ; 44 ; epba >
 
   }
@@ -10931,7 +10931,7 @@
         au < doNotProcess ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; ejda >
         au < doNotProcess ; 2014 ; European Journal of Industrial Relations Volume 20 ; 20 ; ejda >
         au < doNotProcess ; 2015 ; European Journal of Industrial Relations Volume 21 ; 21 ; ejda >
-        au < manifest ; 2016 ; European Journal of Industrial Relations Volume 22 ; 22 ; ejda >
+        au < ready ; 2016 ; European Journal of Industrial Relations Volume 22 ; 22 ; ejda >
         au < manifest ; 2017 ; European Journal of Industrial Relations Volume 23 ; 23 ; ejda >
 
       }
@@ -11036,7 +11036,7 @@
       au < manifest ; 2012 ; European Journal of Mass Spectrometry Volume 18 ; 18 ; emsa >
       au < manifest ; 2013 ; European Journal of Mass Spectrometry Volume 19 ; 19 ; emsa >
       au < released ; 2014 ; European Journal of Mass Spectrometry Volume 20 ; 20 ; emsa >
-      au < manifest ; 2015 ; European Journal of Mass Spectrometry Volume 21 ; 21 ; emsa >
+      au < ready ; 2015 ; European Journal of Mass Spectrometry Volume 21 ; 21 ; emsa >
       au < released ; 2016 ; European Journal of Mass Spectrometry Volume 22 ; 22 ; emsa >
       au < manifest ; 2017 ; European Journal of Mass Spectrometry Volume 23 ; 23 ; emsa >
 
@@ -11264,7 +11264,7 @@
         au < doNotProcess ; 2013 ; European Physical Education Review Volume 19 ; 19 ; epea >
         au < doNotProcess ; 2014 ; European Physical Education Review Volume 20 ; 20 ; epea >
         au < doNotProcess ; 2015 ; European Physical Education Review Volume 21 ; 21 ; epea >
-        au < manifest ; 2016 ; European Physical Education Review Volume 22 ; 22 ; epea >
+        au < ready ; 2016 ; European Physical Education Review Volume 22 ; 22 ; epea >
         au < manifest ; 2017 ; European Physical Education Review Volume 23 ; 23 ; epea >
 
       }
@@ -12372,7 +12372,7 @@
         au < doNotProcess ; 2013 ; Gender & Society Volume 27 ; 27 ; gasa >
         au < doNotProcess ; 2014 ; Gender & Society Volume 28 ; 28 ; gasa >
         au < doNotProcess ; 2015 ; Gender & Society Volume 29 ; 29 ; gasa >
-        au < manifest ; 2016 ; Gender & Society Volume 30 ; 30 ; gasa >
+        au < ready ; 2016 ; Gender & Society Volume 30 ; 30 ; gasa >
         au < manifest ; 2017 ; Gender & Society Volume 31 ; 31 ; gasa >
 
       }
@@ -12550,7 +12550,7 @@
       #param[base_url] = http://ggm.sagepub.com/
 
       au < doNotProcess ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; ggma >
-      au < manifest ; 2016 ; Gerontology and Geriatric Medicine Volume 2 ; 2 ; ggma >
+      au < ready ; 2016 ; Gerontology and Geriatric Medicine Volume 2 ; 2 ; ggma >
       au < manifest ; 2017 ; Gerontology and Geriatric Medicine Volume 3 ; 3 ; ggma >
 
   }
@@ -12864,7 +12864,7 @@
         au < doNotProcess ; 2013 ; Global Journal of Emerging Market Economies Volume 5 ; 5 ; emea >
         au < doNotProcess ; 2014 ; Global Journal of Emerging Market Economies Volume 6 ; 6 ; emea >
         au < doNotProcess ; 2015 ; Global Journal of Emerging Market Economies Volume 7 ; 7 ; emea >
-        au < manifest ; 2016 ; Global Journal of Emerging Market Economies Volume 8 ; 8 ; emea >
+        au < ready ; 2016 ; Global Journal of Emerging Market Economies Volume 8 ; 8 ; emea >
         au < expected ; 2017 ; Global Journal of Emerging Market Economies Volume 9 ; 9 ; emea >
 
       }
@@ -13130,7 +13130,7 @@
         au < doNotProcess ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 ; gpia >
         au < doNotProcess ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 ; gpia >
         au < doNotProcess ; 2015 ; Group Processes & Intergroup Relations Volume 18 ; 18 ; gpia >
-        au < manifest ; 2016 ; Group Processes & Intergroup Relations Volume 19 ; 19 ; gpia >
+        au < ready ; 2016 ; Group Processes & Intergroup Relations Volume 19 ; 19 ; gpia >
         au < manifest ; 2017 ; Group Processes & Intergroup Relations Volume 20 ; 20 ; gpia >
 
       }
@@ -13439,7 +13439,7 @@
       au < manifest ; 2013 ; Irish Economic and Social History Volume 40 ; 40 ; iesa >
       au < doNotProcess ; 2014 ; Irish Economic and Social History Volume 41 ; 41 ; iesa >
       au < doNotProcess ; 2015 ; Irish Economic and Social History Volume 42 ; 42 ; iesa >
-      au < manifest ; 2016 ; Irish Economic and Social History Volume 43 ; 43 ; iesa >
+      au < ready ; 2016 ; Irish Economic and Social History Volume 43 ; 43 ; iesa >
       au < expected ; 2017 ; Irish Economic and Social History Volume 44 ; 44 ; iesa >
 
   }
@@ -15355,9 +15355,9 @@
       au < doNotProcess ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; inqa >
       au < doNotProcess ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; inqa >
       au < doNotProcess ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; inqa >
-      au < manifest ; 2014 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 51 ; 51 ; inqa >
+      au < ready ; 2014 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 51 ; 51 ; inqa >
       au < released ; 2015 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 52 ; 52 ; inqa >
-      au < manifest ; 2016 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 53 ; 53 ; inqa >
+      au < ready ; 2016 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 53 ; 53 ; inqa >
       au < manifest ; 2017 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 54 ; 54 ; inqa >
 
     }
@@ -15651,7 +15651,7 @@
       au < manifest ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; jaea >
       au < doNotProcess ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 ; jaea >
       au < doNotProcess ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 ; jaea >
-      au < manifest ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; jaea >
+      au < ready ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; jaea >
       au < manifest ; 2017 ; International Journal of Aeroacoustics Volume 16 ; 16 ; jaea >
 
     }
@@ -15700,7 +15700,7 @@
       au < doNotProcess ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; ahdb >
       au < doNotProcess ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; ahdb >
       au < released ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 ; ahdb >
-      au < manifest ; 2016 ; The International Journal of Aging and Human Development Volume 83 ; 83 ; ahdb >
+      au < ready ; 2016 ; The International Journal of Aging and Human Development Volume 83 ; 83 ; ahdb >
       au < manifest ; 2016 ; The International Journal of Aging and Human Development Volume 84 ; 84 ; ahdb >
       au < manifest ; 2017 ; The International Journal of Aging and Human Development Volume 85 ; 85 ; ahdb >
 
@@ -16188,7 +16188,7 @@
         au < manifest ; 2013 ; International Journal of Health Services Volume 43 ; 43 ; joha >
         au < doNotProcess ; 2014 ; International Journal of Health Services Volume 44 ; 44 ; joha >
         au < doNotProcess ; 2015 ; International Journal of Health Services Volume 45 ; 45 ; joha >
-        au < manifest ; 2016 ; International Journal of Health Services Volume 46 ; 46 ; joha >
+        au < ready ; 2016 ; International Journal of Health Services Volume 46 ; 46 ; joha >
         au < manifest ; 2017 ; International Journal of Health Services Volume 47 ; 47 ; joha >
 
   }
@@ -16517,7 +16517,7 @@
         au < doNotProcess ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 ; ijoe >
         au < doNotProcess ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; ijoe >
         au < doNotProcess ; 2015 ; International Journal of Offender Therapy and Comparative Criminology Volume 59 ; 59 ; ijoe >
-        au < manifest ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoe >
+        au < ready ; 2016 ; International Journal of Offender Therapy and Comparative Criminology Volume 60 ; 60 ; ijoe >
         au < manifest ; 2017 ; International Journal of Offender Therapy and Comparative Criminology Volume 61 ; 61 ; ijoe >
 
       }
@@ -17101,7 +17101,7 @@
         au < doNotProcess ; 2013 ; International Relations Volume 27 ; 27 ; ireb >
         au < doNotProcess ; 2014 ; International Relations Volume 28 ; 28 ; ireb >
         au < doNotProcess ; 2015 ; International Relations Volume 29 ; 29 ; ireb >
-        au < manifest ; 2016 ; International Relations Volume 30 ; 30 ; ireb >
+        au < ready ; 2016 ; International Relations Volume 30 ; 30 ; ireb >
         au < manifest ; 2017 ; International Relations Volume 31 ; 31 ; ireb >
 
       }
@@ -18060,7 +18060,7 @@
       au < manifest ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; acta >
       au < manifest ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; acta >
       au < manifest ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; acta >
-      au < manifest ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; acta >
+      au < ready ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; acta >
       au < doNotProcess ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 ; acta >
       au < released ; 2016 ; Journal of Algorithms & Computational Technology Volume 10 ; 10 ; acta >
       au < manifest ; 2017 ; Journal of Algorithms & Computational Technology Volume 11 ; 11 ; acta >
@@ -18272,7 +18272,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < doNotProcess ; 2014 ; Journal of Asian Security and International Affairs Volume 1 ; 1 ; aiaa >
         au < doNotProcess ; 2015 ; Journal of Asian Security and International Affairs Volume 2 ; 2 ; aiaa >
-        au < manifest ; 2016 ; Journal of Asian Security and International Affairs Volume 3 ; 3 ; aiaa >
+        au < ready ; 2016 ; Journal of Asian Security and International Affairs Volume 3 ; 3 ; aiaa >
         au < manifest ; 2017 ; Journal of Asian Security and International Affairs Volume 4 ; 4 ; aiaa >
 
     }
@@ -19057,7 +19057,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Career Assessment Volume 21 ; 21 ; jcaa >
         au < doNotProcess ; 2014 ; Journal of Career Assessment Volume 22 ; 22 ; jcaa >
         au < doNotProcess ; 2015 ; Journal of Career Assessment Volume 23 ; 23 ; jcaa >
-        au < manifest ; 2016 ; Journal of Career Assessment Volume 24 ; 24 ; jcaa >
+        au < ready ; 2016 ; Journal of Career Assessment Volume 24 ; 24 ; jcaa >
         au < manifest ; 2017 ; Journal of Career Assessment Volume 25 ; 25 ; jcaa >
 
       }
@@ -19685,7 +19685,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Composite Materials Volume 47 ; 47 ; jcma >
         au < doNotProcess ; 2014 ; Journal of COmposite Materials Volume 48 ; 48 ; jcma >
         au < doNotProcess ; 2015 ; Journal of COmposite Materials Volume 49 ; 49 ; jcma >
-        au < manifest ; 2016 ; Journal of COmposite Materials Volume 50 ; 50 ; jcma >
+        au < ready ; 2016 ; Journal of COmposite Materials Volume 50 ; 50 ; jcma >
         au < manifest ; 2017 ; Journal of COmposite Materials Volume 51 ; 51 ; jcma >
 
       }
@@ -20652,7 +20652,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Early Intervention Volume 35 ; 35 ; jeib >
         au < doNotProcess ; 2014 ; Journal of Early Intervention Volume 36 ; 36 ; jeib >
         au < doNotProcess ; 2015 ; Journal of Early Intervention Volume 37 ; 37 ; jeib >
-        au < manifest ; 2016 ; Journal of Early Intervention Volume 38 ; 38 ; jeib >
+        au < ready ; 2016 ; Journal of Early Intervention Volume 38 ; 38 ; jeib >
         au < manifest ; 2017 ; Journal of Early Intervention Volume 39 ; 39 ; jeib >
 
       }
@@ -20821,7 +20821,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doNotProcess ; 2014 ; Journal of Educational Computing Research Volume 51 ; 51 ; jeca >
       au < doNotProcess ; 2015 ; Journal of Educational Computing Research Volume 52 ; 52 ; jeca >
       au < doNotProcess ; 2015 ; Journal of Educational Computing Research Volume 53 ; 53 ; jeca >
-      au < manifest ; 2016 ; Journal of Educational Computing Research Volume 54 ; 54 ; jeca >
+      au < ready ; 2016 ; Journal of Educational Computing Research Volume 54 ; 54 ; jeca >
       au < manifest ; 2017 ; Journal of Educational Computing Research Volume 55 ; 55 ; jeca >
 
   }
@@ -20876,7 +20876,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2011 ; The Journal of Egyptian Archaeology Volume 97 ; 97 ; egaa >
       au < manifest ; 2012 ; The Journal of Egyptian Archaeology Volume 98 ; 98 ; egaa >
       au < manifest ; 2013 ; The Journal of Egyptian Archaeology Volume 99 ; 99 ; egaa >
-      au < manifest ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa >
+      au < ready ; 2014 ; The Journal of Egyptian Archaeology Volume 100 ; 100 ; egaa >
       au < released ; 2015 ; The Journal of Egyptian Archaeology Volume 101 ; 101 ; egaa >
 
   }
@@ -21223,7 +21223,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Entrepreneurship Volume 22 ; 22 ; joea >
         au < doNotProcess ; 2014 ; Journal of Entrepreneurship Volume 23 ; 23 ; joea >
         au < doNotProcess ; 2015 ; Journal of Entrepreneurship Volume 24 ; 24 ; joea >
-        au < manifest ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 ; joea >
+        au < ready ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 ; joea >
         au < manifest ; 2017 ; Journal of Entrepreneurship Volume 26 ; 26 ; joea >
 
       }
@@ -21775,7 +21775,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2011-2012 ; Journal of General Management Volume 37 ; 37 ; gema >
       au < manifest ; 2012-2013 ; Journal of General Management Volume 38 ; 38 ; gema >
       au < manifest ; 2013-2014 ; Journal of General Management Volume 39 ; 39 ; gema >
-      au < manifest ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema >
+      au < ready ; 2014-2015 ; Journal of General Management Volume 40 ; 40 ; gema >
       au < manifest ; 2015-2016 ; Journal of General Management Volume 41 ; 41 ; gema >
       au < manifest ; 2016-2017 ; Journal of General Management Volume 42 ; 42 ; gema >
       au < expected ; 2017-2018 ; Journal of General Management Volume 43 ; 43 ; gema >
@@ -21921,7 +21921,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Health Management Volume 15 ; 15 ; jhma >
         au < doNotProcess ; 2014 ; Journal of Health Management Volume 16 ; 16 ; jhma >
         au < doNotProcess ; 2015 ; Journal of Health Management Volume 17 ; 17 ; jhma >
-        au < manifest ; 2016 ; Journal of Health Management Volume 18 ; 18 ; jhma >
+        au < ready ; 2016 ; Journal of Health Management Volume 18 ; 18 ; jhma >
         au < manifest ; 2017 ; Journal of Health Management Volume 19 ; 19 ; jhma >
 
       }
@@ -23210,7 +23210,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Leadership & Organizational Studies Volume 20 ; 20 ; jlob >
         au < doNotProcess ; 2014 ; Journal of Leadership & Organizational Studies Volume 21 ; 21 ; jlob >
         au < doNotProcess ; 2015 ; Journal of Leadership & Organizational Studies Volume 22 ; 22 ; jlob >
-        au < manifest ; 2016 ; Journal of Leadership & Organizational Studies Volume 23 ; 23 ; jlob >
+        au < ready ; 2016 ; Journal of Leadership & Organizational Studies Volume 23 ; 23 ; jlob >
         au < manifest ; 2017 ; Journal of Leadership & Organizational Studies Volume 24 ; 24 ; jlob >
 
       }
@@ -23496,7 +23496,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Macromarketing Volume 33 ; 33 ; jmka >
         au < doNotProcess ; 2014 ; Journal of Macromarketing Volume 34 ; 34 ; jmka >
         au < doNotProcess ; 2015 ; Journal of Macromarketing Volume 35 ; 35 ; jmka >
-        au < manifest ; 2016 ; Journal of Macromarketing Volume 36 ; 36 ; jmka >
+        au < ready ; 2016 ; Journal of Macromarketing Volume 36 ; 36 ; jmka >
         au < manifest ; 2017 ; Journal of Macromarketing Volume 37 ; 37 ; jmka >
 
       }
@@ -23978,7 +23978,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Oncology Pharmacy Practice Volume 19 ; 19 ; oppa >
         au < doNotProcess ; 2014 ; Journal of Oncology Pharmacy Practice Volume 20 ; 20 ; oppa >
         au < doNotProcess ; 2015 ; Journal of Oncology Pharmacy Practice Volume 21 ; 21 ; oppa >
-        au < manifest ; 2016 ; Journal of Oncology Pharmacy Practice Volume 22 ; 22 ; oppa >
+        au < ready ; 2016 ; Journal of Oncology Pharmacy Practice Volume 22 ; 22 ; oppa >
         au < manifest ; 2017 ; Journal of Oncology Pharmacy Practice Volume 23 ; 23 ; oppa >
 
       }
@@ -24025,7 +24025,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://pal.sagepub.com/
 
-      au < manifest ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala >
+      au < ready ; 2015 ; Journal of Palliative Care Volume 31 ; 31 ; pala >
 
   }
 
@@ -24188,7 +24188,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 ; pcca >
       au < doNotProcess ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 ; pcca >
       au < doNotProcess ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 ; pcca >
-      au < manifest ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 ; pcca >
+      au < ready ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 ; pcca >
       au < manifest ; 2017 ; Journal of Pastoral Care & Counseling Volume 71 ; 71 ; pcca >
 
     }
@@ -24203,7 +24203,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://jpx.sagepub.com/
 
-      au < manifest ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; jpxa >
+      au < ready ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; jpxa >
       au < doNotProcess ; 2015 ; Journal of Patient Experience Volume 2 ; 2 ; jpxa >
       au < released ; 2016 ; Journal of Patient Experience Volume 3 ; 3 ; jpxa >
       au < manifest ; 2017 ; Journal of Patient Experience Volume 4 ; 4 ; jpxa >
@@ -24477,7 +24477,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; jpla >
         au < doNotProcess ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; jpla >
         au < doNotProcess ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; jpla >
-        au < manifest ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jpla >
+        au < ready ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; jpla >
         au < expected ; 2017 ; Journal of Planning Literature Volume 32 ; 32 ; jpla >
 
       }
@@ -24565,7 +24565,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Positive Behavior Interventions Volume 15 ; 15 ; pbia >
         au < doNotProcess ; 2014 ; Journal of Positive Behavior Interventions Volume 16 ; 16 ; pbia >
         au < doNotProcess ; 2015 ; Journal of Positive Behavior Interventions Volume 17 ; 17 ; pbia >
-        au < manifest ; 2016 ; Journal of Positive Behavior Interventions Volume 18 ; 18 ; pbia >
+        au < ready ; 2016 ; Journal of Positive Behavior Interventions Volume 18 ; 18 ; pbia >
         au < manifest ; 2017 ; Journal of Positive Behavior Interventions Volume 19 ; 19 ; pbia >
 
       }
@@ -24868,7 +24868,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Research in Crime and Delinquency Volume 50 ; 50 ; jrca >
         au < doNotProcess ; 2014 ; Journal of Research in Crime and Delinquency Volume 51 ; 51 ; jrca >
         au < doNotProcess ; 2015 ; Journal of Research in Crime and Delinquency Volume 52 ; 52 ; jrca >
-        au < manifest ; 2016 ; Journal of Research in Crime and Delinquency Volume 53 ; 53 ; jrca >
+        au < ready ; 2016 ; Journal of Research in Crime and Delinquency Volume 53 ; 53 ; jrca >
         au < manifest ; 2017 ; Journal of Research in Crime and Delinquency Volume 54 ; 54 ; jrca >
 
       }
@@ -25216,7 +25216,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Social and Personal Relationships Volume 30 ; 30 ; spra >
         au < doNotProcess ; 2014 ; Journal of Social and Personal Relationships Volume 31 ; 31 ; spra >
         au < doNotProcess ; 2015 ; Journal of Social and Personal Relationships Volume 32 ; 32 ; spra >
-        au < manifest ; 2016 ; Journal of Social and Personal Relationships Volume 33 ; 33 ; spra >
+        au < ready ; 2016 ; Journal of Social and Personal Relationships Volume 33 ; 33 ; spra >
         au < manifest ; 2017 ; Journal of Social and Personal Relationships Volume 34 ; 34 ; spra >
 
       }
@@ -26610,7 +26610,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of Transformative Education Volume 11 ; 11 ; jtda >
         au < doNotProcess ; 2014 ; Journal of Transformative Education Volume 12 ; 12 ; jtda >
         au < doNotProcess ; 2015 ; Journal of Transformative Education Volume 13 ; 13 ; jtda >
-        au < manifest ; 2016 ; Journal of Transformative Education Volume 14 ; 14 ; jtda >
+        au < ready ; 2016 ; Journal of Transformative Education Volume 14 ; 14 ; jtda >
         au < manifest ; 2017 ; Journal of Transformative Education Volume 15 ; 15 ; jtda >
 
       }
@@ -28064,7 +28064,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Management in Education Volume 27 ; 27 ; miea >
         au < doNotProcess ; 2014 ; Management in Education Volume 28 ; 28 ; miea >
         au < doNotProcess ; 2015 ; Management in Education Volume 29 ; 29 ; miea >
-        au < manifest ; 2016 ; Management in Education Volume 30 ; 30 ; miea >
+        au < ready ; 2016 ; Management in Education Volume 30 ; 30 ; miea >
         au < manifest ; 2017 ; Management in Education Volume 31 ; 31 ; miea >
 
       }
@@ -28488,14 +28488,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2014 ; Media International Australia Volume 150 ; 150 ; miad >
       au < manifest ; 2014 ; Media International Australia Volume 151 ; 151 ; miad >
       au < manifest ; 2014 ; Media International Australia Volume 152 ; 152 ; miad >
-      au < manifest ; 2014 ; Media International Australia Volume 153 ; 153 ; miad >
+      au < ready ; 2014 ; Media International Australia Volume 153 ; 153 ; miad >
       au < manifest ; 2015 ; Media International Australia Volume 154 ; 154 ; miad >
       au < doNotProcess ; 2015 ; Media International Australia Volume 155 ; 155 ; miad >
       au < manifest ; 2015 ; Media International Australia Volume 156 ; 156 ; miad >
       au < manifest ; 2015 ; Media International Australia Volume 157 ; 157 ; miad >
-      au < manifest ; 2016 ; Media International Australia Volume 158 ; 158 ; miad >
+      au < ready ; 2016 ; Media International Australia Volume 158 ; 158 ; miad >
       au < released ; 2016 ; Media International Australia Volume 159 ; 159 ; miad >
-      au < manifest ; 2016 ; Media International Australia Volume 160 ; 160 ; miad >
+      au < ready ; 2016 ; Media International Australia Volume 160 ; 160 ; miad >
       au < released ; 2016 ; Media International Australia Volume 161 ; 161 ; miad >
       au < manifest ; 2017 ; Media International Australia Volume 162 ; 162 ; miad >
 
@@ -28869,7 +28869,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Memory Studies Volume 6 ; 6 ; mssa >
         au < doNotProcess ; 2014 ; Memory Studies Volume 7 ; 7 ; mssa >
         au < doNotProcess ; 2015 ; Memory Studies Volume 8 ; 8 ; mssa >
-        au < manifest ; 2016 ; Memory Studies Volume 9 ; 9 ; mssa >
+        au < ready ; 2016 ; Memory Studies Volume 9 ; 9 ; mssa >
         au < manifest ; 2017 ; Memory Studies Volume 10 ; 10 ; mssa >
 
       }
@@ -29338,7 +29338,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Musicae Scientiae Volume 17 ; 17 ; msxa >
         au < doNotProcess ; 2014 ; Musicae Scientiae Volume 18 ; 18 ; msxa >
         au < doNotProcess ; 2015 ; Musicae Scientiae Volume 19 ; 19 ; msxa >
-        au < manifest ; 2016 ; Musicae Scientiae Volume 20 ; 20 ; msxa >
+        au < ready ; 2016 ; Musicae Scientiae Volume 20 ; 20 ; msxa >
         au < manifest ; 2017 ; Musicae Scientiae Volume 21 ; 21 ; msxa >
 
       }
@@ -29407,7 +29407,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; NASN School Nurse Volume 28 ; 28 ; nasb >
         au < doNotProcess ; 2014 ; NASN School Nurse Volume 29 ; 29 ; nasb >
         au < doNotProcess ; 2015 ; NASN School Nurse Volume 30 ; 30 ; nasb >
-        au < manifest ; 2016 ; NASN School Nurse Volume 31 ; 31 ; nasb >
+        au < ready ; 2016 ; NASN School Nurse Volume 31 ; 31 ; nasb >
         au < manifest ; 2017 ; NASN School Nurse Volume 32 ; 32 ; nasb >
 
       }
@@ -29980,7 +29980,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2011 ; New Journal of European Criminal Law Volume 2 ; 2 ; njea >
       au < manifest ; 2012 ; New Journal of European Criminal Law Volume 3 ; 3 ; njea >
       au < manifest ; 2013 ; New Journal of European Criminal Law Volume 4 ; 4 ; njea >
-      au < manifest ; 2014 ; New Journal of European Criminal Law Volume 5 ; 5 ; njea >
+      au < ready ; 2014 ; New Journal of European Criminal Law Volume 5 ; 5 ; njea >
       au < released ; 2015 ; New Journal of European Criminal Law Volume 6 ; 6 ; njea >
       au < manifest ; 2016 ; New Journal of European Criminal Law Volume 7 ; 7 ; njea >
       au < manifest ; 2017 ; New Journal of European Criminal Law Volume 8 ; 8 ; njea >
@@ -30004,7 +30004,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; New Labor Forum Volume 22 ; 22 ; nlfa >
         au < doNotProcess ; 2014 ; New Labor Forum Volume 23 ; 23 ; nlfa >
         au < doNotProcess ; 2015 ; New Labor Forum Volume 24 ; 24 ; nlfa >
-        au < manifest ; 2016 ; New Labor Forum Volume 25 ; 25 ; nlfa >
+        au < ready ; 2016 ; New Labor Forum Volume 25 ; 25 ; nlfa >
         au < manifest ; 2017 ; New Labor Forum Volume 26 ; 26 ; nlfa >
 
     }
@@ -30105,7 +30105,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2013 ; Newspaper Research Journal Volume 34 ; 34 ; nrja >
       au < released ; 2014 ; Newspaper Research Journal Volume 35 ; 35 ; nrja >
       au < doNotProcess ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; nrja >
-      au < manifest ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; nrja >
+      au < ready ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; nrja >
       au < manifest ; 2017 ; Newspaper Research Journal Volume 38 ; 38 ; nrja >
 
     }
@@ -30171,8 +30171,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2011 ; NIR news Volume 22 ; 22 ; nira >
       au < manifest ; 2012 ; NIR news Volume 23 ; 23 ; nira >
       au < manifest ; 2013 ; NIR news Volume 24 ; 24 ; nira >
-      au < manifest ; 2014 ; NIR news Volume 25 ; 25 ; nira >
-      au < manifest ; 2015 ; NIR news Volume 26 ; 26 ; nira >
+      au < ready ; 2014 ; NIR news Volume 25 ; 25 ; nira >
+      au < ready ; 2015 ; NIR news Volume 26 ; 26 ; nira >
       au < released ; 2016 ; NIR news Volume 27 ; 27 ; nira >
       au < manifest ; 2017 ; NIR news Volume 28 ; 28 ; nira >
 
@@ -30320,7 +30320,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         #param[base_url] = http://nad.sagepub.com/
 
         au < manifest ; 2014 ; Nordic Studies on Alcohol and Drugs Volume 31 ; 31 ; nada >
-        au < manifest ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada >
+        au < ready ; 2015 ; Nordic Studies on Alcohol and Drugs Volume 32 ; 32 ; nada >
         au < released ; 2016 ; Nordic Studies on Alcohol and Drugs Volume 33 ; 33 ; nada >
         au < manifest ; 2017 ; Nordic Studies on Alcohol and Drugs Volume 34 ; 34 ; nada >
 
@@ -30900,7 +30900,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 ; otoj >
         au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 ; otoj >
         au < doNotProcess ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 ; otoj >
-        au < manifest ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 ; otoj >
+        au < ready ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 ; otoj >
         au < released ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 ; otoj >
         au < manifest ; 2017 ; Otolaryngology -- Head and Neck Surgery Volume 156 ; 156 ; otoj >
 
@@ -31179,7 +31179,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Personality and Social Psychology Bulletin Volume 39 ; 39 ; pspc >
         au < doNotProcess ; 2014 ; Personality and Social Psychology Bulletin Volume 40 ; 40 ; pspc >
         au < doNotProcess ; 2015 ; Personality and Social Psychology Bulletin Volume 41 ; 41 ; pspc >
-        au < manifest ; 2016 ; Personality and Social Psychology Bulletin Volume 42 ; 42 ; pspc >
+        au < ready ; 2016 ; Personality and Social Psychology Bulletin Volume 42 ; 42 ; pspc >
         au < manifest ; 2017 ; Personality and Social Psychology Bulletin Volume 43 ; 43 ; pspc >
 
       }
@@ -31491,7 +31491,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2013 ; Plastic Surgery Volume 21 ; 21 ; psga >
       au < released ; 2014 ; Plastic Surgery Volume 22 ; 22 ; psga >
       au < released ; 2015 ; Plastic Surgery Volume 23 ; 23 ; psga >
-      au < manifest ; 2016 ; Plastic Surgery Volume 24 ; 24 ; psga >
+      au < ready ; 2016 ; Plastic Surgery Volume 24 ; 24 ; psga >
       au < manifest ; 2017 ; Plastic Surgery Volume 25 ; 25 ; psga >
 
   }
@@ -31505,7 +31505,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://pcs.sagepub.com/
 
-      au < manifest ; 2015 ; Plastic Surgery Case Studies Volume 1 ; 1 ; pcsa >
+      au < ready ; 2015 ; Plastic Surgery Case Studies Volume 1 ; 1 ; pcsa >
       au < released ; 2016 ; Plastic Surgery Case Studies Volume 2 ; 2 ; pcsa >
       au < manifest ; 2017 ; Plastic Surgery Case Studies Volume 3 ; 3 ; pcsa >
 
@@ -31654,7 +31654,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
   
         au < doNotProcess ; 2014 ; Policy Insights from the Behavioral and Brain Sciences Volume 1 ; 1 ; bbsa >
         au < doNotProcess ; 2015 ; Policy Insights from the Behavioral and Brain Sciences Volume 2 ; 2 ; bbsa >
-        au < manifest ; 2016 ; Policy Insights from the Behavioral and Brain Sciences Volume 3 ; 3 ; bbsa >
+        au < ready ; 2016 ; Policy Insights from the Behavioral and Brain Sciences Volume 3 ; 3 ; bbsa >
         au < manifest ; 2017 ; Policy Insights from the Behavioral and Brain Sciences Volume 4 ; 4 ; bbsa >
   
     }
@@ -32231,7 +32231,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Probation Journal Volume 60 ; 60 ; prbb >
         au < doNotProcess ; 2014 ; Probation Journal Volume 61 ; 61 ; prbb >
         au < doNotProcess ; 2015 ; Probation Journal Volume 62 ; 62 ; prbb >
-        au < manifest ; 2016 ; Probation Journal Volume 63 ; 63 ; prbb >
+        au < ready ; 2016 ; Probation Journal Volume 63 ; 63 ; prbb >
         au < manifest ; 2017 ; Probation Journal Volume 64 ; 64 ; prbb >
 
       }
@@ -32699,7 +32699,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 227 ; 227 ; pihb >
         au < doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 228 ; 228 ; pihb >
         au < doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 229 ; 229 ; pihb >
-        au < manifest ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 230 ; 230 ; pihb >
+        au < ready ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 230 ; 230 ; pihb >
         au < manifest ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 231 ; 231 ; pihb >
 
       }
@@ -32890,7 +32890,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 227 ; 227 ; pima >
         au < doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 228 ; 228 ; pima >
         au < doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 229 ; 229 ; pima >
-        au < manifest ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 230 ; 230 ; pima >
+        au < ready ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 230 ; 230 ; pima >
         au < manifest ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 231 ; 231 ; pima >
 
       }
@@ -33184,7 +33184,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; pitb >
         au < manifest ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; pitb >
         au < manifest ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; pitb >
-        au < manifest ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; pitb >
+        au < ready ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; pitb >
         au < manifest ; 2017 ; Progress in Transplantation Volume 27 ; 27 ; pitb >
   
     }
@@ -33697,7 +33697,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Public Policy and Administration Volume 28 ; 28 ; ppaa >
         au < doNotProcess ; 2014 ; Public Policy and Administration Volume 29 ; 29 ; ppaa >
         au < doNotProcess ; 2015 ; Public Policy and Administration Volume 30 ; 30 ; ppaa >
-        au < manifest ; 2016 ; Public Policy and Administration Volume 31 ; 31 ; ppaa >
+        au < ready ; 2016 ; Public Policy and Administration Volume 31 ; 31 ; ppaa >
         au < manifest ; 2017 ; Public Policy and Administration Volume 32 ; 32 ; ppaa >
 
       }
@@ -33764,7 +33764,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Public Understanding of Science Volume 22 ; 22 ; pusa >
         au < doNotProcess ; 2014 ; Public Understanding of Science Volume 23 ; 23 ; pusa >
         au < doNotProcess ; 2015 ; Public Understanding of Science Volume 24 ; 24 ; pusa >
-        au < manifest ; 2016 ; Public Understanding of Science Volume 25 ; 25 ; pusa >
+        au < ready ; 2016 ; Public Understanding of Science Volume 25 ; 25 ; pusa >
         au < manifest ; 2017 ; Public Understanding of Science Volume 26 ; 26 ; pusa >
 
       }
@@ -33860,7 +33860,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Punishment & Society Volume 15 ; 15 ; puna >
         au < doNotProcess ; 2014 ; Punishment & Society Volume 16 ; 16 ; puna >
         au < doNotProcess ; 2015 ; Punishment & Society Volume 17 ; 17 ; puna >
-        au < manifest ; 2016 ; Punishment & Society Volume 18 ; 18 ; puna >
+        au < ready ; 2016 ; Punishment & Society Volume 18 ; 18 ; puna >
         au < manifest ; 2017 ; Punishment & Society Volume 19 ; 19 ; puna >
 
       }
@@ -34427,7 +34427,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         #param[base_url] = http://rap.sagepub.com/
 
-        au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 ; rapa >
+        au < ready ; 2014 ; Research & Politics Volume 1 ; 1 ; rapa >
         au < released ; 2015 ; Research & Politics Volume 2 ; 2 ; rapa >
         au < released ; 2016 ; Research & Politics Volume 3 ; 3 ; rapa >
         au < manifest ; 2017 ; Research & Politics Volume 4 ; 4 ; rapa >
@@ -34967,7 +34967,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Review of Market Integration Volume 5 ; 5 ; rmia >
         au < doNotProcess ; 2014 ; Review of Market Integration Volume 6 ; 6 ; rmia >
         au < doNotProcess ; 2015 ; Review of Market Integration Volume 7 ; 7 ; rmia >
-        au < manifest ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia >
+        au < ready ; 2016 ; Review of Market Integration Volume 8 ; 8 ; rmia >
         au < expected ; 2017 ; Review of Market Integration Volume 9 ; 9 ; rmia >
 
       }
@@ -35320,7 +35320,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Scandinavian Journal of Public Health Volume 41 ; 41 ; sjpa >
         au < doNotProcess ; 2014 ; Scandinavian Journal of Public Health Volume 42 ; 42 ; sjpa >
         au < doNotProcess ; 2015 ; Scandinavian Journal of Public Health Volume 43 ; 43 ; sjpa >
-        au < manifest ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpa >
+        au < ready ; 2016 ; Scandinavian Journal of Public Health Volume 44 ; 44 ; sjpa >
         au < expected ; 2017 ; Scandinavian Journal of Public Health Volume 45 ; 45 ; sjpa >
 
       }
@@ -35351,7 +35351,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < doNotProcess ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; sjsb >
       au < doNotProcess ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 ; sjsb >
       au < doNotProcess ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 ; sjsb >
-      au < manifest ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 ; sjsb >
+      au < ready ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 ; sjsb >
       au < manifest ; 2017 ; Scandinavian Journal of Surgery Volume 106 ; 106 ; sjsb >
 
     }
@@ -35733,7 +35733,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 17 ; 17 ; scva >
         au < doNotProcess ; 2014 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 18 ; 18 ; scva >
         au < doNotProcess ; 2015 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 19 ; 19 ; scva >
-        au < manifest ; 2016 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 20 ; 20 ; scva >
+        au < ready ; 2016 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 20 ; 20 ; scva >
         au < manifest ; 2017 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 21 ; 21 ; scva >
 
       }
@@ -36228,7 +36228,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Social Compass Volume 60 ; 60 ; scpa >
         au < doNotProcess ; 2014 ; Social Compass Volume 61 ; 61 ; scpa >
         au < doNotProcess ; 2015 ; Social Compass Volume 62 ; 62 ; scpa >
-        au < manifest ; 2016 ; Social Compass Volume 63 ; 63 ; scpa >
+        au < ready ; 2016 ; Social Compass Volume 63 ; 63 ; scpa >
         au < manifest ; 2017 ; Social Compass Volume 64 ; 64 ; scpa >
 
       }
@@ -36735,7 +36735,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       #param[base_url] = http://som.sagepub.com/
 
-      au < manifest ; 2016 ; The Sociological Review Monographs Volume 64 ; 64 ; soma >
+      au < ready ; 2016 ; The Sociological Review Monographs Volume 64 ; 64 ; soma >
       au < manifest ; 2017 ; The Sociological Review Monographs Volume 65 ; 65 ; soma >
 
   }
@@ -37261,7 +37261,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Statistical Methods in Medical Research Volume 22 ; 22 ; smma >
         au < doNotProcess ; 2014 ; Statistical Methods in Medical Research Volume 23 ; 23 ; smma >
         au < doNotProcess ; 2015 ; Statistical Methods in Medical Research Volume 24 ; 24 ; smma >
-        au < manifest ; 2016 ; Statistical Methods in Medical Research Volume 25 ; 25 ; smma >
+        au < ready ; 2016 ; Statistical Methods in Medical Research Volume 25 ; 25 ; smma >
         au < manifest ; 2017 ; Statistical Methods in Medical Research Volume 26 ; 26 ; smma >
 
       }
@@ -37461,7 +37461,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Studies in History Volume 29 ; 29 ; siha >
         au < doNotProcess ; 2014 ; Studies in History Volume 30 ; 30 ; siha >
         au < doNotProcess ; 2015 ; Studies in History Volume 31 ; 31 ; siha >
-        au < manifest ; 2016 ; Studies in History Volume 32 ; 32 ; siha >
+        au < ready ; 2016 ; Studies in History Volume 32 ; 32 ; siha >
         au < manifest ; 2017 ; Studies in History Volume 33 ; 33 ; siha >
 
       }
@@ -37483,7 +37483,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; inpa >
         au < doNotProcess ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; inpa >
         au < doNotProcess ; 2015 ; Studies in Indian Politics Volume 3 ; 3 ; inpa >
-        au < manifest ; 2016 ; Studies in Indian Politics Volume 4 ; 4 ; inpa >
+        au < ready ; 2016 ; Studies in Indian Politics Volume 4 ; 4 ; inpa >
         au < manifest ; 2017 ; Studies in Indian Politics Volume 5 ; 5 ; inpa >
 
       }
@@ -37585,7 +37585,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Studies in Religion/Sciences Religieuses Volume 42 ; 42 ; sira >
         au < doNotProcess ; 2014 ; Studies in Religion/Sciences Religieuses Volume 43 ; 43 ; sira >
         au < doNotProcess ; 2015 ; Studies in Religion/Sciences Religieuses Volume 44 ; 44 ; sira >
-        au < manifest ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 ; sira >
+        au < ready ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 ; sira >
         au < manifest ; 2017 ; Studies in Religion/Sciences Religieuses Volume 46 ; 46 ; sira >
 
       }
@@ -37861,7 +37861,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Teaching Public Administration Volume 31 ; 31 ; tpaa >
         au < doNotProcess ; 2014 ; Teaching Public Administration Volume 32 ; 32 ; tpaa >
         au < doNotProcess ; 2015 ; Teaching Public Administration Volume 33 ; 33 ; tpaa >
-        au < manifest ; 2016 ; Teaching Public Administration Volume 34 ; 34 ; tpaa >
+        au < ready ; 2016 ; Teaching Public Administration Volume 34 ; 34 ; tpaa >
         au < manifest ; 2017 ; Teaching Public Administration Volume 35 ; 35 ; tpaa >
 
       }
@@ -38062,7 +38062,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Textile Research Journal Volume 83 ; 83 ; trjc >
         au < doNotProcess ; 2014 ; Textile Research Journal Volume 84 ; 84 ; trjc >
         au < doNotProcess ; 2015 ; Textile Research Journal Volume 85 ; 85 ; trjc >
-        au < manifest ; 2016 ; Textile Research Journal Volume 86 ; 86 ; trjc >
+        au < ready ; 2016 ; Textile Research Journal Volume 86 ; 86 ; trjc >
         au < manifest ; 2017 ; Textile Research Journal Volume 87 ; 87 ; trjc >
 
       }
@@ -38637,7 +38637,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Therapeutic Advances in Drug Safety Volume 4 ; 4 ; tawa >
         au < doNotProcess ; 2014 ; Therapeutic Advances in Drug Safety Volume 5 ; 5 ; tawa >
         au < manifest ; 2015 ; Therapeutic Advances in Drug Safety Volume 6 ; 6 ; tawa >
-        au < manifest ; 2016 ; Therapeutic Advances in Drug Safety Volume 7 ; 7 ; tawa >
+        au < ready ; 2016 ; Therapeutic Advances in Drug Safety Volume 7 ; 7 ; tawa >
         au < manifest ; 2017 ; Therapeutic Advances in Drug Safety Volume 8 ; 8 ; tawa >
 
       }
@@ -38791,7 +38791,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 ; taba >
         au < doNotProcess ; 2014 ; Therapeutic Advances in Musculoskeletal Disease Volume 6 ; 6 ; taba >
         au < doNotProcess ; 2015 ; Therapeutic Advances in Musculoskeletal Disease Volume 7 ; 7 ; taba >
-        au < manifest ; 2016 ; Therapeutic Advances in Musculoskeletal Disease Volume 8 ; 8 ; taba >
+        au < ready ; 2016 ; Therapeutic Advances in Musculoskeletal Disease Volume 8 ; 8 ; taba >
         au < manifest ; 2017 ; Therapeutic Advances in Musculoskeletal Disease Volume 9 ; 9 ; taba >
 
       }
@@ -39567,7 +39567,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Transformation: An International Journal of Holistic Mission Studies Volume 30 ; 30 ; trna >
         au < doNotProcess ; 2014 ; Transformation: An International Journal of Holistic Mission Studies Volume 31 ; 31 ; trna >
         au < doNotProcess ; 2015 ; Transformation: An International Journal of Holistic Mission Studies Volume 32 ; 32 ; trna >
-        au < manifest ; 2016 ; Transformation: An International Journal of Holistic Mission Studies Volume 33 ; 33 ; trna >
+        au < ready ; 2016 ; Transformation: An International Journal of Holistic Mission Studies Volume 33 ; 33 ; trna >
         au < manifest ; 2017 ; Transformation: An International Journal of Holistic Mission Studies Volume 34 ; 34 ; trna >
 
       }
@@ -39874,7 +39874,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Urban Affairs Review Volume 49 ; 49 ; uarb >
         au < doNotProcess ; 2014 ; Urban Affairs Review Volume 50 ; 50 ; uarb >
         au < doNotProcess ; 2015 ; Urban Affairs Review Volume 51 ; 51 ; uarb >
-        au < manifest ; 2016 ; Urban Affairs Review Volume 52 ; 52 ; uarb >
+        au < ready ; 2016 ; Urban Affairs Review Volume 52 ; 52 ; uarb >
         au < manifest ; 2017 ; Urban Affairs Review Volume 53 ; 53 ; uarb >
 
       }
@@ -40386,7 +40386,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; War in History Volume 20 ; 20 ; wiha >
         au < doNotProcess ; 2014 ; War in History Volume 21 ; 21 ; wiha >
         au < doNotProcess ; 2015 ; War in History Volume 22 ; 22 ; wiha >
-        au < manifest ; 2016 ; War in History Volume 23 ; 23 ; wiha >
+        au < ready ; 2016 ; War in History Volume 23 ; 23 ; wiha >
         au < manifest ; 2017 ; War in History Volume 24 ; 24 ; wiha >
 
       }
@@ -40951,7 +40951,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Youth & Society Volume 45 ; 45 ; yasa >
         au < doNotProcess ; 2014 ; Youth & Society Volume 46 ; 46 ; yasa >
         au < doNotProcess ; 2015 ; Youth & Society Volume 47 ; 47 ; yasa >
-        au < manifest ; 2016 ; Youth & Society Volume 48 ; 48 ; yasa >
+        au < ready ; 2016 ; Youth & Society Volume 48 ; 48 ; yasa >
         au < manifest ; 2017 ; Youth & Society Volume 49 ; 49 ; yasa >
 
       }
@@ -41998,7 +41998,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; visa >
         au < doNotProcess ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 ; visa >
         au < doNotProcess ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; visa >
-        au < manifest ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; visa >
+        au < ready ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; visa >
         au < manifest ; 2017 ; Vision: The Journal of Business Perspective Volume 21 ; 21 ; visa >
 
       }
@@ -42173,7 +42173,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; abrb >
     au < doNotProcess ; 2014 ; Asia-Pacific Journal of Management Research and Innovation Volume 10 ; 10 ; abrb >
     au < doNotProcess ; 2015 ; Asia-Pacific Journal of Management Research and Innovation Volume 11 ; 11 ; abrb >
-    au < manifest ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; abrb >
+    au < ready ; 2016 ; Asia-Pacific Journal of Management Research and Innovation Volume 12 ; 12 ; abrb >
     au < expected ; 2017 ; Asia-Pacific Journal of Management Research and Innovation Volume 13 ; 13 ; abrb >
 
     }
@@ -43053,7 +43053,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < doNotProcess ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; uega >
     au < doNotProcess ; 2014 ; United European Gastroenterology Journal Volume 2 ; 2 ; uega >
     au < doNotProcess ; 2015 ; United European Gastroenterology Journal Volume 3 ; 3 ; uega >
-    au < manifest ; 2016 ; United European Gastroenterology Journal Volume 4 ; 4 ; uega >
+    au < ready ; 2016 ; United European Gastroenterology Journal Volume 4 ; 4 ; uega >
     au < manifest ; 2017 ; United European Gastroenterology Journal Volume 5 ; 5 ; uega >
 
     }
@@ -43263,7 +43263,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Acta Radiologica Volume 54 ; 54 ; acra >
         au < doNotProcess ; 2014 ; Acta Radiologica Volume 55 ; 55 ; acra >
         au < doNotProcess ; 2015 ; Acta Radiologica Volume 56 ; 56 ; acra >
-        au < manifest ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acra >
+        au < ready ; 2016 ; Acta Radiologica Volume 57 ; 57 ; acra >
         au < expected ; 2017 ; Acta Radiologica Volume 58 ; 58 ; acra >
 
       }
@@ -44273,7 +44273,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 ; jrsb >
         au < doNotProcess ; 2014 ; Journal of the Royal Society of Medicine Volume 107 ; 107 ; jrsb >
         au < doNotProcess ; 2015 ; Journal of the Royal Society of Medicine Volume 108 ; 108 ; jrsb >
-        au < manifest ; 2016 ; Journal of the Royal Society of Medicine Volume 109 ; 109 ; jrsb >
+        au < ready ; 2016 ; Journal of the Royal Society of Medicine Volume 109 ; 109 ; jrsb >
         au < manifest ; 2017 ; Journal of the Royal Society of Medicine Volume 110 ; 110 ; jrsb >
 
       }
@@ -44488,7 +44488,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < doNotProcess ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; minc >
         au < doNotProcess ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; minc >
-        au < manifest ; 2016 ; Post Reproductive Health Volume 22 ; 22 ; minc >
+        au < ready ; 2016 ; Post Reproductive Health Volume 22 ; 22 ; minc >
         au < manifest ; 2017 ; Post Reproductive Health Volume 23 ; 23 ; minc >
 
     }
@@ -44704,7 +44704,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < manifest ; 2013 ; Comprehensive Psychology Volume 2 ; 2 ; copa >
     au < manifest ; 2014 ; Comprehensive Psychology Volume 3 ; 3 ; copa >
     au < manifest ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; copa >
-    au < manifest ; 2016 ; Comprehensive Psychology Volume 5 ; 5 ; copa >
+    au < ready ; 2016 ; Comprehensive Psychology Volume 5 ; 5 ; copa >
     au < expected ; 2017 ; Comprehensive Psychology Volume 6 ; 6 ; copa >
 
   }
@@ -45012,7 +45012,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     au < manifest ; 2012 ; Pediatric and Developmental Pathology Volume 15 ; 15 ; pdpa >
     au < manifest ; 2013 ; Pediatric and Developmental Pathology Volume 16 ; 16 ; pdpa >
     au < released ; 2014 ; Pediatric and Developmental Pathology Volume 17 ; 17 ; pdpa >
-    au < manifest ; 2015 ; Pediatric and Developmental Pathology Volume 18 ; 18 ; pdpa >
+    au < ready ; 2015 ; Pediatric and Developmental Pathology Volume 18 ; 18 ; pdpa >
     au < released ; 2016 ; Pediatric and Developmental Pathology Volume 19 ; 19 ; pdpa >
     au < manifest ; 2017 ; Pediatric and Developmental Pathology Volume 20 ; 20 ; pdpa >
     
@@ -45071,7 +45071,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; obma >
         au < manifest ; 2014 ; Obstetric Medicine Volume 7 ; 7 ; obma >
         au < manifest ; 2015 ; Obstetric Medicine Volume 8 ; 8 ; obma >
-        au < manifest ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; obma >
+        au < ready ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; obma >
         au < manifest ; 2017 ; Obstetric Medicine Volume 10 ; 10 ; obma >
 
     }
