@@ -96,6 +96,18 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       isInAu = ( 
           ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
               (StringUtils.contains(normFoundTitle,normAuTitle))) ); 
+
+      // last chance... cover weird cases, such as when the publisher mistakenly
+      // converts multi-byte in to ? in their text output
+      if (!isInAu) {
+        log.debug3("one last attempt to match");
+        String rawTextAuTitle = generateRawTitle(normAuTitle);
+        String rawTextFoundTitle = generateRawTitle(normFoundTitle);
+        log.debug3("raw AuTitle: " + rawTextAuTitle);
+        log.debug3("raw foundTitle: " + rawTextFoundTitle);
+        isInAu =( ( (StringUtils.contains(rawTextAuTitle,rawTextFoundTitle)) || 
+            (StringUtils.contains(rawTextFoundTitle,rawTextAuTitle))) );
+      }
     }
 
     if (isInAu) {
@@ -120,6 +132,9 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     normalizeMap.put("\u2014", "-"); //em-dash to hyphen
     normalizeMap.put("\u201c", "\""); //ldquo to basic quote
     normalizeMap.put("\u201d", "\""); //rdquo to basic quote
+    normalizeMap.put("'", ""); //apostrophe to nothing - remove T'ang --> Tang
+    normalizeMap.put("\u2018", ""); //single left quote to nothing - remove
+    normalizeMap.put("\u2019", ""); //single right quote (apostrophe alternative) to nothing - remove
   }  
   /* To maximize the chance of finding matching titles normalize out stylistic
    * differences as much as possible, eg
@@ -152,6 +167,27 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     return outTitle;
   }
   
+  /*
+   * A last ditch effort to avoid false negatives due to odd characters
+   * It is assumed it will already have gone through normalizeTitle which lets us make
+   * assumptions
+   * remove spaces
+   * remove ?,-,:,"
+   * 'this is a text:title-for "questions"?' in to
+   * 'thisisatextitleforquestions'
+   * \W  == non-word character [^a-zA-z0-9]
+   * 
+   */
+  public static String generateRawTitle(String inTitle) {
+    String outTitle;
+    if (inTitle == null) return null;
+
+    //reduce interior multiple space characters to only one
+    //outTitle = inTitle.replaceAll("(\\s|\"|\\?|-|:)", "");
+    outTitle = inTitle.replaceAll("\\W", "");
+    return outTitle;
+  }
+    
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
