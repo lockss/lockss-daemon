@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - see PD-1577</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -33,7 +33,7 @@
     <string>International Union of Crystallography OAI Plugin</string>
   </entry>
   <entry>
-  <!--  urlGenerator, not yet deployed - will need 1.73.0 -->
+  <!--  FeatureUrlGenerator, not yet deployed - will need 1.73.0 -->
     <string>required_daemon_version</string>
     <string>1.68.0</string>
   </entry>
