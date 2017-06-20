@@ -5128,7 +5128,7 @@
       au < crawling ; exists ; 2012-2013 ; California Management Review Volume 55 ; 55 ; cmra ; >
       au < crawling ; exists ; 2013-2014 ; California Management Review Volume 56 ; 56 ; cmra ; >
       au < frozen ; exists ; 2014-2015 ; California Management Review Volume 57 ; 57 ; cmra ; >
-      au < crawling ; exists ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra ; >
+      au < frozen ; exists ; 2015-2016 ; California Management Review Volume 58 ; 58 ; cmra ; >
       au < manifest ; exists ; 2016-2017 ; California Management Review Volume 59 ; 59 ; cmra ; >
       au < expected ; exists ; 2017-2018 ; California Management Review Volume 60 ; 60 ; cmra ; >
 
@@ -5946,7 +5946,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Chronic Respiratory Disease Volume 10 ; 10 ; crda ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Chronic Respiratory Disease Volume 11 ; 11 ; crda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Chronic Respiratory Disease Volume 12 ; 12 ; crda ; >
-      au < crawling ; exists ; 2016 ; Chronic Respiratory Disease Volume 13 ; 13 ; crda ; >
+      au < frozen ; exists ; 2016 ; Chronic Respiratory Disease Volume 13 ; 13 ; crda ; >
       au < manifest ; exists ; 2017 ; Chronic Respiratory Disease Volume 14 ; 14 ; crda ; >
 
     }
@@ -6777,7 +6777,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Comparative Political Studies Volume 46 ; 46 ; cpsa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Comparative Political Studies Volume 47 ; 47 ; cpsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Comparative Political Studies Volume 48 ; 48 ; cpsa ; >
-      au < crawling ; exists ; 2016 ; Comparative Political Studies Volume 49 ; 49 ; cpsa ; >
+      au < frozen ; exists ; 2016 ; Comparative Political Studies Volume 49 ; 49 ; cpsa ; >
       au < manifest ; exists ; 2017  ; Comparative Political Studies Volume 50 ; 50 ; cpsa ; >
 
     }
@@ -7279,7 +7279,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Contexts Volume 12 ; 12 ; ctxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Contexts Volume 13 ; 13 ; ctxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Contexts Volume 14 ; 14 ; ctxa ; >
-      au < crawling ; exists ; 2016 ; Contexts Volume 15 ; 15 ; ctxa ; >
+      au < frozen ; exists ; 2016 ; Contexts Volume 15 ; 15 ; ctxa ; >
       au < manifest ; exists ; 2017 ; Contexts Volume 16 ; 16 ; ctxa ; >
 
   }
@@ -9182,7 +9182,7 @@
       au < manifest ; exists ; 2011 ; The Downside Review Volume 129 ; 129 ; tdra ; >
       au < crawling ; exists ; 2012 ; The Downside Review Volume 130 ; 130 ; tdra ; >
       au < manifest ; exists ; 2013 ; The Downside Review Volume 131 ; 131 ; tdra ; >
-      au < crawling ; exists ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra ; >
+      au < frozen ; exists ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra ; >
       au < frozen ; exists ; 2015 ; The Downside Review Volume 133 ; 133 ; tdra ; >
       au < crawling ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; tdra ; >
       au < manifest ; exists ; 2017 ; The Downside Review Volume 135 ; 135 ; tdra ; >
@@ -9670,7 +9670,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Educational Administration Quarterly Volume 49 ; 49 ; eaqa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Educational Administration Quarterly Volume 50 ; 50 ; eaqa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Educational Administration Quarterly Volume 51 ; 51 ; eaqa ; >
-      au < crawling ; exists ; 2016 ; Educational Administration Quarterly Volume 52 ; 52 ; eaqa ; >
+      au < frozen ; exists ; 2016 ; Educational Administration Quarterly Volume 52 ; 52 ; eaqa ; >
       au < manifest ; exists ; 2017 ; Educational Administration Quarterly Volume 53 ; 53 ; eaqa ; >
 
     }
@@ -9766,7 +9766,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Educational and Psychological Measurement Volume 73 ; 73 ; epma ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Educational and Psychological Measurement Volume 74 ; 74 ; epma ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Educational and Psychological Measurement Volume 75 ; 75 ; epma ; >
-      au < crawling ; exists ; 2016 ; Educational and Psychological Measurement Volume 76 ; 76 ; epma ; >
+      au < frozen ; exists ; 2016 ; Educational and Psychological Measurement Volume 76 ; 76 ; epma ; >
       au < manifest ; exists ; 2017 ; Educational and Psychological Measurement Volume 77 ; 77 ; epma ; >
 
     }
@@ -10048,7 +10048,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Electronic News Volume 7 ; 7 ; enxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Electronic News Volume 8 ; 8 ; enxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Electronic News Volume 9 ; 9 ; enxa ; >
-      au < crawling ; exists ; 2016 ; Electronic News Volume 10 ; 10 ; enxa ; >
+      au < frozen ; exists ; 2016 ; Electronic News Volume 10 ; 10 ; enxa ; >
       au < manifest ; exists ; 2017 ; Electronic News Volume 11 ; 11 ; enxa ; >
 
     }
@@ -11414,7 +11414,7 @@
 
       #param[base_url] = http://eso.sagepub.com/
 
-      au < crawling ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; esoa ; >
+      au < frozen ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; esoa ; >
       au < manifest ; exists ; 2017 ; European Stroke Journal Volume 2 ; 2 ; esoa ; >
 
   }
@@ -14730,7 +14730,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; India Quarterly: A Journal of International Affairs Volume 69 ; 69 ; iqqa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; India Quarterly: A Journal of International Affairs Volume 70 ; 70 ; iqqa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; India Quarterly: A Journal of International Affairs Volume 71 ; 71 ; iqqa ; >
-      au < crawling ; exists ; 2016 ; India Quarterly: A Journal of International Affairs Volume 72 ; 72 ; iqqa ; >
+      au < frozen ; exists ; 2016 ; India Quarterly: A Journal of International Affairs Volume 72 ; 72 ; iqqa ; >
       au < manifest ; exists ; 2017 ; India Quarterly: A Journal of International Affairs Volume 73 ; 73 ; iqqa ; >
 
     }
@@ -14986,7 +14986,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Indoor and Built Environment Volume 22 ; 22 ; ibeb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Indoor and Built Environment Volume 23 ; 23 ; ibeb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Indoor and Built Environment Volume 24 ; 24 ; ibeb ; >
-      au < crawling ; exists ; 2016 ; Indoor and Built Environment Volume 25 ; 25 ; ibeb ; >
+      au < frozen ; exists ; 2016 ; Indoor and Built Environment Volume 25 ; 25 ; ibeb ; >
       au < manifest ; exists ; 2017 ; Indoor and Built Environment Volume 26 ; 26 ; ibeb ; >
 
     }
@@ -16262,7 +16262,7 @@
         au < manifest ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; mava ; >
         au < crawling ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; mava ; >
         au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 ; mava ; >
-        au < crawling ; exists ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 ; mava ; >
+        au < frozen ; exists ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 ; mava ; >
         au < manifest ; exists ; 2017 ; International Journal of Micro Air Vehicles Volume 9 ; 9 ; mava ; >
 
   }
@@ -26962,7 +26962,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Veterinary Diagnostic Investigation Volume 25 ; 25 ; vdia ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Veterinary Diagnostic Investigation Volume 26 ; 26 ; vdia ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Veterinary Diagnostic Investigation Volume 27 ; 27 ; vdia ; >
-      au < crawling ; exists ; 2016 ; Journal of Veterinary Diagnostic Investigation Volume 28 ; 28 ; vdia ; >
+      au < frozen ; exists ; 2016 ; Journal of Veterinary Diagnostic Investigation Volume 28 ; 28 ; vdia ; >
       au < manifest ; exists ; 2017 ; Journal of Veterinary Diagnostic Investigation Volume 29 ; 29 ; vdia ; >
 
     }
@@ -27361,7 +27361,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Labor Studies Journal Volume 38 ; 38 ; lsja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Labor Studies Journal Volume 39 ; 39 ; lsja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Labor Studies Journal Volume 40 ; 40 ; lsja ; >
-      au < crawling ; exists ; 2016 ; Labor Studies Journal Volume 41 ; 41 ; lsja ; >
+      au < frozen ; exists ; 2016 ; Labor Studies Journal Volume 41 ; 41 ; lsja ; >
       au < manifest ; exists ; 2017 ; Labor Studies Journal Volume 42 ; 42 ; lsja ; >
 
     }
@@ -32632,7 +32632,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 227 ; 227 ; piac ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 228 ; 228 ; piac ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 229 ; 229 ; piac ; >
-      au < crawling ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 230 ; 230 ; piac ; >
+      au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 230 ; 230 ; piac ; >
       au < manifest ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 231 ; 231 ; piac ; >
 
     }
@@ -33260,7 +33260,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 227 ; 227 ; pipa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 228 ; 228 ; pipa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 229 ; 229 ; pipa ; >
-      au < crawling ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 ; pipa ; >
+      au < frozen ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 ; pipa ; >
       au < manifest ; exists ; 2017 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 231 ; 231 ; pipa ; >
 
   }
@@ -35582,7 +35582,7 @@
           au < manifest ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; sgoa ; >
           au < crawling ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; sgoa ; >
           au < crawling ; exists ; 2015 ; Sage Open Volume 5 ; 5 ; sgoa ; >
-          au < crawling ; exists ; 2016 ; Sage Open Volume 6 ; 6 ; sgoa ; >
+          au < frozen ; exists ; 2016 ; Sage Open Volume 6 ; 6 ; sgoa ; >
           au < manifest ; exists ; 2017 ; Sage Open Volume 7 ; 7 ; sgoa ; >
 
         }
@@ -35973,7 +35973,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Second Language Research Volume 29 ; 29 ; slrb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Second Language Research Volume 30 ; 30 ; slrb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Second Language Research Volume 31 ; 31 ; slrb ; >
-      au < crawling ; exists ; 2016 ; Second Language Research Volume 32 ; 32 ; slrb ; >
+      au < frozen ; exists ; 2016 ; Second Language Research Volume 32 ; 32 ; slrb ; >
       au < manifest ; exists ; 2017 ; Second Language Research Volume 33 ; 33 ; slrb ; >
 
     }
@@ -38805,7 +38805,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Theoretical Criminology Volume 17 ; 17 ; tcra ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Theoretical Criminology Volume 18 ; 18 ; tcra ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Theoretical Criminology Volume 19 ; 19 ; tcra ; >
-      au < crawling ; exists ; 2016 ; Theoretical Criminology Volume 20 ; 20 ; tcra ; >
+      au < frozen ; exists ; 2016 ; Theoretical Criminology Volume 20 ; 20 ; tcra ; >
       au < manifest ; exists ; 2017 ; Theoretical Criminology Volume 21 ; 21 ; tcra ; >
 
     }
