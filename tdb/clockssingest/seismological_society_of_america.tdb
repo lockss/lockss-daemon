@@ -228,7 +228,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Seismological Research Letters Volume 85 ; 85 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Seismological Research Letters Volume 86 [superseded] ; 86 ; >
     au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Seismological Research Letters Volume 86 ; 86 ; reingest1.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; deepCrawl ; exists ; 2016 ; Seismological Research Letters Volume 87 ; 87 ; >
+    au < gsw.ClockssGSWDrupalPlugin ; frozen ; exists ; 2016 ; Seismological Research Letters Volume 87 ; 87 ; >
     au < gsw.ClockssGSWDrupalPlugin ; doNotProcess ; exists ; 2017 ; Seismological Research Letters Volume 88 ; 88 ; >
 
   }
