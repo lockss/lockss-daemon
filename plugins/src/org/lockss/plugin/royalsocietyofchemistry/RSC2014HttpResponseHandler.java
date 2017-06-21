@@ -42,15 +42,15 @@ import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
-import org.lockss.util.urlconn.CacheSuccess;
 import org.lockss.util.urlconn.CacheException.RetryableNetworkException_2_10S;
+import org.lockss.util.urlconn.CacheSuccess;
 
 public class RSC2014HttpResponseHandler implements CacheResultHandler {
-  private static final Logger logger = Logger.getLogger(RSC2014HttpResponseHandler.class);
+  private static final Logger log = Logger.getLogger(RSC2014HttpResponseHandler.class);
 
   @Override
   public void init(final CacheResultMap map) throws PluginException {
-    logger.warning("Unexpected call to init()");
+    log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to RSC2014HttpResponseHandler.init()");
 
   }
@@ -58,12 +58,12 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
   // currently this is only called on 400 codes by the books plugin
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, int responseCode) throws PluginException {
-    logger.debug(responseCode + ": " + url);
+    log.debug(responseCode + ": " + url);
     switch (responseCode) {
       case 400:
           return new CacheException.RetrySameUrlException();
       default:
-        logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
+        log.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
     }
   }
@@ -72,31 +72,37 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
-    logger.debug(ex.getMessage() + ": " + url);
+    log.debug(ex.getMessage() + ": " + url);
     
     // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
-      logger.debug3("Ignoring Wrong length - storing file");
-      // ignore and continue
-      return new CacheSuccess();
+      if (url.contains("pdf/")) {
+        log.warning("Wrong length - not storing file " + url);
+        // retry and no store cache exception
+        return new RetryableNoFailException_2_10S(ex);
+      } else {
+        log.debug3("Ignoring Wrong length - storing file");
+        // ignore and continue
+        return new CacheSuccess();
+      }
     }
     
     // handle retryable exceptions ; URL MIME type mismatch for pages like 
     //   http://pubs.rsc.org/en/content/articlepdf/2014/gc/c4gc90017k will never return good PDF content
     if (ex instanceof ContentValidationException) {
-      logger.debug3("Warning - retry/no fail " + url);
-      // no store cache exception and continue
+      log.warning("Warning - retry/no fail/no store " + url);
+      // retry and no store cache exception
       return new RetryableNoFailException_2_10S(ex);
     }
     
-    // Unmapped exception: org.lockss.util.StreamUtil$InputException: java.net.SocketTimeoutException: Read timed out
+    // org.lockss.util.StreamUtil$InputException: java.net.SocketTimeoutException: Read timed out
     if (ex instanceof org.lockss.util.StreamUtil.InputException) {
-      logger.debug3("Warning - InputException " + url);
+      log.warning("Warning - InputException " + url);
       return new RetryableNoFailException_2_10S(ex);
     }
     
     // we should only get in her cases that we specifically map...be very unhappy
-    logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
+    log.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException();
   }
   
@@ -121,6 +127,7 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
     protected void setAttributes() {
       super.setAttributes();
       attributeBits.clear(ATTRIBUTE_FAIL);
+      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
     
   }

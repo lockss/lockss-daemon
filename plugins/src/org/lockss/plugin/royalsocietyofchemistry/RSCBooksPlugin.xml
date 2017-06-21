@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,8 +34,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-   <!--  for content validation-->    
-    <string>1.70.2</string>
+    <!-- for no store exception-->
+    <string>1.72.0</string>
   </entry>
   <entry>
     <string>au_name</string>
