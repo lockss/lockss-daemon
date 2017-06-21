@@ -213,4 +213,46 @@
     au < expected ; exists ; 2017 ; 4 ; IUCrJ Volume 4 December ; 2017-12 ; >
 
   }
+  
+ {
+  
+    title <
+      name =  IUCrData ;
+      eissn = 2414-3146 ;
+      issnl = 2414-3146
+    >
+    
+    # param of date is a year-month published date in the form yyyy-mm. Not all months have material published
+    # Issues are Volume 1, Part1,2,3 etc. Parts do not correspond with month published.
+    
+    param[au_oai_set] = iucrdata
+
+    au < testing ; exists ; 2016 ; 1 ; IUCrData Volume 1 January ; 2016-01 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 February ; 2016-02 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 March ; 2016-03 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 April ; 2016-04 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 May ; 2016-05 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 June ; 2016-06 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 July ; 2016-07 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 August ; 2016-08 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 September ; 2016-09 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 October ; 2016-10 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 November ; 2016-11 ; >
+    au < expected ; exists ; 2016 ; 1 ; IUCrData Volume 1 December ; 2016-12 ; >
+    
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 January ; 2017-01 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 February ; 2017-02 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 March ; 2017-03 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 April ; 2017-04 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 May ; 2017-05 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 June ; 2017-06 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 July ; 2017-07 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 August ; 2017-08 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 September ; 2017-09 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 October ; 2017-10 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 November ; 2017-11 ; >
+    au < expected ; exists ; 2017 ; 2 ; IUCrData Volume 2 December ; 2017-12 ; >
+    
+
+  }  
 }
