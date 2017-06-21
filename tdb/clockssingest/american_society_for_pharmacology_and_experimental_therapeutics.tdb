@@ -443,8 +443,8 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 [superseded] ; 358 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; >
     au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; manifest ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; reingest5.clockss.org:8082 >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; manifest ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 ; >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 361 ; 361 ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 362 ; 362 ; >
@@ -578,9 +578,9 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Molecular Pharmacology Volume 87 ; 87 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Molecular Pharmacology Volume 88 ; 88 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Molecular Pharmacology Volume 89 [superseded] ; 89 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Molecular Pharmacology Volume 89 ; 89 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; manifest ; 2016 ; Molecular Pharmacology Volume 89 ; 89 ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Molecular Pharmacology Volume 90 [superseded] ; 90 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Molecular Pharmacology Volume 90 ; 90 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; manifest ; 2016 ; Molecular Pharmacology Volume 90 ; 90 ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Molecular Pharmacology Volume 91 ; 91 ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2017 ; Molecular Pharmacology Volume 92 ; 92 ; >
     
@@ -665,7 +665,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pharmacological Reviews Volume 66 ; 66 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pharmacological Reviews Volume 67 ; 67 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; Pharmacological Reviews Volume 68 [superseded] ; 68 ; >
-    au < aspet.ClockssASPETDrupalPlugin ; frozen ; exists ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; >
+    au < aspet.ClockssASPETDrupalPlugin ; finished ; manifest ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; >
     
   }
