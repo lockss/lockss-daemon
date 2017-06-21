@@ -47,14 +47,15 @@ import org.lockss.util.urlconn.CacheSuccess;
 
 public class RSC2014HttpResponseHandler implements CacheResultHandler {
   private static final Logger log = Logger.getLogger(RSC2014HttpResponseHandler.class);
-
+  
   @Override
+  @Deprecated
   public void init(final CacheResultMap map) throws PluginException {
     log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to RSC2014HttpResponseHandler.init()");
-
+    
   }
-
+  
   // currently this is only called on 400 codes by the books plugin
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, int responseCode) throws PluginException {
