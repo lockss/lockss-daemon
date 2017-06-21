@@ -33,13 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.util.List;
 
 import javax.servlet.*;
 
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.extractor.*;
+import org.lockss.filter.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -53,21 +56,25 @@ public class ListObjects extends LockssServlet {
   private static final Logger log = Logger.getLogger(ListObjects.class);
 
   private String auid;
+  private String url;
   
   private ArchivalUnit au;
 
   private PluginManager pluginMgr;
+  private CrawlManager crawlMgr;
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
     au = null;
     auid = null;
+    url = null;
     super.resetLocals();
   }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
+    crawlMgr = getLockssDaemon().getCrawlManager();
   }
 
   /**
@@ -91,6 +98,7 @@ public class ListObjects extends LockssServlet {
     } else {
       // all others need au
       auid = getParameter("auid");
+      url = getParameter("url");
       au = pluginMgr.getAuFromId(auid);
       if (au == null) {
 	displayError("No such AU: " + auid);
@@ -122,6 +130,8 @@ public class ListObjects extends LockssServlet {
 	new DoiList().execute();
       } else if (type.equalsIgnoreCase("metadata")) {
 	new MetadataList().execute();
+      } else if (type.equalsIgnoreCase("extracturls")) {
+	new ExtractUrlsList().execute();
       } else {
 	displayError("Unknown list type: " + type);
 	return;
@@ -728,4 +738,116 @@ public class ListObjects extends LockssServlet {
     
   }
   
+  /** Display list of URLs that link extractor finds in file */
+  class ExtractUrlsList extends BaseList {
+
+    void doBody() throws IOException {
+      if (url == null) {
+	wrtr.println("URL must be specified");
+	isError = true;
+	return;
+      }
+      CachedUrl cu = au.makeCachedUrl(url);
+      if (!cu.hasContent()) {
+	wrtr.println("No content: " + url);
+	isError = true;
+	return;
+      }
+      LinkExtractor extractor = au.getLinkExtractor(cu.getContentType());
+      if (extractor == null) {
+	wrtr.println("No link extractor for content type: " +
+		     cu.getContentType());
+	isError = true;
+	return;
+      }
+
+      InputStream in = null;
+      try {
+	CharsetUtil.InputStreamAndCharset isc =
+	  CharsetUtil.getCharsetStream(cu);
+	String charset = isc.getCharset();
+	in = isc.getInStream();
+
+	in = FilterUtil.getCrawlFilteredStream(au, in, charset,
+					       cu.getContentType());
+	MyLinkExtractorCallback cb = new MyLinkExtractorCallback(cu);
+	extractor.extractUrls(au, in, charset, PluginUtil.getBaseUrl(cu), cb);
+
+	for (String eurl : cb.getExtractedUrls()) {
+	  String excl = null;
+	  try {
+	    if (!au.shouldBeCached(eurl)) {
+	      excl = "Excluded";
+	    } else {
+	      if (crawlMgr != null &&
+		  crawlMgr.isGloballyExcludedUrl(au, eurl)) {
+		excl = "Globally excluded";
+	      }
+	    }
+	    if (excl == null) {
+	      wrtr.println(eurl);
+	      itemCnt++;
+	    } else {
+	      wrtr.println(eurl + "\t" + excl);
+	    }
+	  } finally {
+	    AuUtil.safeRelease(cu);
+	  }
+	}
+
+      } catch (PluginException | IOException e) {
+	String msg = "Plugin LinkExtractor error";
+	log.error(msg, e);
+	wrtr.println(msg + ": " + e.toString());
+	isError = true;
+      } finally {
+	IOUtil.safeClose(in);
+      }
+
+    }
+
+    void printHeader() {
+      wrtr.println("# URLs extracted from " + url + " in " + au.getName());
+    }
+
+    String unitName() {
+      return "Extracted URL";
+    }
+
+  }
+
+  class MyLinkExtractorCallback implements LinkExtractor.Callback {
+    TreeSet<String> foundUrls = new TreeSet<String>();
+    ArchivalUnit au;
+    CachedUrl cu;
+
+    public MyLinkExtractorCallback(CachedUrl cu) {
+      this.au = cu.getArchivalUnit();
+      this.cu = cu;
+    }
+
+    public Collection<String> getExtractedUrls() {
+      return foundUrls;
+    }
+
+    public void foundLink(String eurl) {
+      if (!BaseCrawler.isSupportedUrlProtocol(url)) {
+	return;
+      }
+      try {
+	String normUrl = UrlUtil.normalizeUrl(eurl, au);
+	if (normUrl.equals(eurl)) {
+	  if (log.isDebug3()) log.debug3("Self reference to " + url);
+	  return;
+	}
+	foundUrls.add(normUrl);
+      } catch (MalformedURLException e) {
+	//XXX what exactly does this log want to tell?
+	log.warning("Normalizing", e);
+      } catch (PluginBehaviorException e) {
+	log.warning("Normalizing", e);
+      }
+    }
+  }
+
 }
