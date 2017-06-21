@@ -40,6 +40,7 @@ import java.util.regex.Pattern;
 
 import org.mortbay.http.*;
 import org.mortbay.html.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
@@ -208,7 +209,7 @@ public class ViewContent extends LockssServlet {
     tbl.newCell("align=left");
     tbl.add("AU:");
     tbl.newCell("align=left");
-    tbl.add(au.getName());
+    tbl.add(getAuLink(au));
     tbl.newRow();
     tbl.newCell("align=left");
     tbl.add("URL:&nbsp;");
@@ -297,6 +298,21 @@ public class ViewContent extends LockssServlet {
 	lnk.attribute("target", "CuMeta");
       }
       tbl.add(lnk);
+
+      CachedUrl cu = au.makeCachedUrl(url);
+      if (cu.hasContent()) {
+	if (au.getLinkExtractor(cu.getContentType()) != null) {
+	  tbl.newRow();
+	  tbl.newCell("align=left");
+	  Link extrlnk =
+	    new Link(srvURL(AdminServletManager.SERVLET_LIST_OBJECTS,
+			    PropUtil.fromArgs("type", "extracturls",
+					      "auid", au.getAuId(),
+					      "url", url)),
+		     "Extract URLs");
+	  tbl.add(extrlnk);
+	}
+      }
     }
 
     page.add(tbl);
@@ -388,5 +404,12 @@ public class ViewContent extends LockssServlet {
     comp.add("</font></center><br>");
     page.add(comp);
     endPage(page);
+  }
+
+  Link getAuLink(ArchivalUnit au) {
+    return new Link(srvURL(AdminServletManager.SERVLET_DAEMON_STATUS,
+			   PropUtil.fromArgs("table", ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+					     "key", au.getAuId())),
+		    au.getName());
   }
 }
