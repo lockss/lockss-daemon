@@ -59,6 +59,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	static final String JOURNAL_ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
 	static final String VOLUME_NUMBER_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 	private final String BASE_URL = "http://www.example.com/";
+        private final String BASE_URL2 = "https://www.example.com/";
 	private final String VOLUME = "21";
 	private final String JOURNAL_ISSN = "1546-2234";
 	private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
@@ -166,13 +167,14 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 
 	  public void testStartUrlConstruction() throws Exception {
 	    String expectedStartUrl = BASE_URL + "lockss/journal-issues.aspx?issn=" + JOURNAL_ISSN + "&volume=" + VOLUME;
+            String expectedStartUrl2 = BASE_URL2 + "lockss/journal-issues.aspx?issn=" + JOURNAL_ISSN + "&volume=" + VOLUME;
 	    ArchivalUnit au = createAu();
-	    assertEquals(ListUtil.list(expectedStartUrl), au.getStartUrls());
+	    assertSameElements(ListUtil.list(expectedStartUrl, expectedStartUrl2), au.getStartUrls());
 	  }
 
 	  public void testGetUrlStems() throws Exception {
 	    ArchivalUnit au = createAu();
-	    assertEquals(ListUtil.list(BASE_URL), au.getUrlStems());
+	    assertSameElements(ListUtil.list(BASE_URL, BASE_URL2), au.getUrlStems());
 	  }
 
 	  public void testShouldDoNewContentCrawlTooEarly() throws Exception {
