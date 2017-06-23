@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -43,8 +43,10 @@
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>"%slockss/books.aspx", to_http(base_url)</string>
-    <string>"%slockss/books.aspx", to_https(base_url)</string>
+      <list>
+	<string>"%slockss/books.aspx", to_http(base_url)</string>
+	<string>"%slockss/books.aspx", to_https(base_url)</string>
+      </list>
   </entry>
   <entry>
     <string>au_start_url</string>
