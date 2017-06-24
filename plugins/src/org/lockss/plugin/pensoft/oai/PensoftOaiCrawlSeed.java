@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
 import org.lockss.util.CIProperties;
@@ -144,17 +145,17 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   }
   
   protected String findRecordArticleLink(Record rec) { 
-	  MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
-	  List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
-	  if(idTags != null && !idTags.isEmpty()) {
-		  for(String value : idTags) {
-			  if(value.startsWith(baseUrl)) {
-				  logger.debug("To Follow: " + value);
-				  return value;
-			  }
-		  }
-	  }
-	  return null;
+    MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
+    List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
+    if(idTags != null && !idTags.isEmpty()) {
+      for(String value : idTags) {
+        if (AuUtil.normalizeHttpHttpsFromBaseUrl(au, value).startsWith(baseUrl)) {
+          logger.debug("To Follow: " + value);
+          return value;
+        }
+      }
+    }
+    return null;
   }
   
   

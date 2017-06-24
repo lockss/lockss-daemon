@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -49,23 +49,33 @@
     <string>"%s", base_url</string>
   </entry>
   <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=)?$", url_host(base_url)</string>
-      <string>1,"^%s(articles|article_preview)\.php\?id=[0-9]+$", base_url</string>
-      <string>1,"^%sauid=.*$", base_url</string>
-      <string>1,"^%slib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
-      <string>1,"^%slib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/(articles|article_preview)\.php\?id=[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/article/[0-9]+/download/pdf/$", url_host(base_url)</string>
+      <string>1,"^https?://%s/oai\.php\?verb=ListRecords&amp;(set=%s|resumptionToken=)", url_host(base_url), au_oai_set</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%slib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
+      <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", url_host(base_url)</string>
+      <string>"^https?://%s/article/[0-9]+/download/pdf/$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -99,6 +109,18 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
