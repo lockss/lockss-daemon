@@ -171,12 +171,13 @@
 
     title <
       name = European Journal of Psychotraumatology (EJPT) ;
+      issn = 2000-8198 ;
       eissn = 2000-8066 ;
-      issnl = 2000-8066
+      issnl = 2000-8198
     >
     
     #param[base_url] = http://www.eurojnlofpsychotraumatol.net/
-    param[journal_id] = zjec20
+    param[journal_id] = zept20
     
     # European Journal of Psychotraumatology [Supplements] are all in this title. 
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
