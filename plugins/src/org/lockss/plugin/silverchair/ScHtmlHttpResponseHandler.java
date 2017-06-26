@@ -4,7 +4,7 @@
  *
  *
  *
- * Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ * Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
  * all rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,6 @@ package org.lockss.plugin.silverchair;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 import org.lockss.util.urlconn.CacheException;
@@ -71,31 +70,28 @@ public class ScHtmlHttpResponseHandler implements CacheResultHandler {
     return new ScRetryableNetworkException(ex);
   }
 
-  public static class ScRetryableNetworkException extends CacheException.RetryableNetworkException_3 {
+  public static class ScRetryableNetworkException extends CacheException.RetryableNetworkException_3_10S {
     
     public ScRetryableNetworkException() {
       super();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
 
     public ScRetryableNetworkException(String message) {
       super(message);
-      attributeBits.clear(ATTRIBUTE_FAIL);
-      attributeBits.set(ATTRIBUTE_NO_STORE);
     }
 
     /** Create this if details of causal exception are more relevant. */
     public ScRetryableNetworkException(Exception e) {
       super(e);
+    }
+    
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
       attributeBits.clear(ATTRIBUTE_FAIL);
       attributeBits.set(ATTRIBUTE_NO_STORE);
     }
-
-    public long getRetryDelay() {
-      return 3 * Constants.MINUTE;
-    }
-
+    
   }
-
+  
 }

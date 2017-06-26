@@ -169,7 +169,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>403=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>
       <string>500=org.lockss.plugin.silverchair.oup.OupScHtmlHttpResponseHandler</string>

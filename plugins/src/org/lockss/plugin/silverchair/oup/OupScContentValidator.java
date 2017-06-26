@@ -61,7 +61,7 @@ public class OupScContentValidator {
           StringUtil.endsWithIgnoreCase(url, RIS_EXT)) {
         throw new ContentValidationException("URL MIME type mismatch");
       } else {
-        if (true) // check for small size first
+        if (true) // XXX check for small size first
         try {
           if (StringUtil.containsString(new InputStreamReader(cu.getUnfilteredInputStream(), cu.getEncoding()), MAINTENANCE_STRING)) {
             throw new ContentValidationException("Found maintenance page");

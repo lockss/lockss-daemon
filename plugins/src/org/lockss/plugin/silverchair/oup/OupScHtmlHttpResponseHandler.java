@@ -38,30 +38,31 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ContentValidationException;
 import org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler.ScRetryableNetworkException;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
+import org.lockss.util.urlconn.CacheSuccess;
 
 public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
-  private static final Logger logger = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
+  private static final Logger log = Logger.getLogger(OupScHtmlHttpResponseHandler.class);
   
   protected static final Pattern NON_FATAL_PAT = 
 	      Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff|pdf)$");
 
   @Override
   public void init(final CacheResultMap map) throws PluginException {
-    logger.warning("Unexpected call to init()");
+    log.warning("Unexpected call to init()");
     throw new UnsupportedOperationException("Unexpected call to ScHttpResponseHandler.init()");
 
   }
 
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final int code) throws PluginException {
-    logger.debug(code + ": " + url);
+    log.debug(code + ": " + url);
     Matcher mat = NON_FATAL_PAT.matcher(url);
     switch (code) {
       case 403:
@@ -79,7 +80,7 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetrySameUrlException("500 Internal server error");
         }
       default:
-        logger.warning("Unexpected responseCode (" + code + ") in handleResult(): AU " + au.getName() + "; URL " + url);
+        log.warning("Unexpected responseCode (" + code + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + code + ")");
     }
   }
@@ -87,8 +88,31 @@ public class OupScHtmlHttpResponseHandler implements CacheResultHandler {
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
-    logger.debug(ex.getMessage() + ": " + url);
+    log.debug(ex.getMessage() + ": " + url);
+    
+    // this checks for the specific exceptions before going to the general case and retry
+    if (ex instanceof ContentValidationException.WrongLength) {
+      if (url.contains("pdf/")) {
+        log.warning("Wrong length - not storing file " + url);
+        // retry and no store cache exception
+        return new ScRetryableNetworkException(ex);
+      } else {
+        log.debug3("Ignoring Wrong length - storing file");
+        // ignore and continue
+        return new CacheSuccess();
+      }
+    }
+    
+    // handle retryable exceptions ; URL MIME type mismatch 
+    if (ex instanceof ContentValidationException) {
+      log.warning("Warning - retry/no fail/no store " + url);
+      // retry and no store cache exception
+      return new ScRetryableNetworkException(ex);
+    }
+    
+    // we should only get in her cases that we specifically map, report and retry/no fail/no store
+    log.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     return new ScRetryableNetworkException(ex);
   }
-
+  
 }
