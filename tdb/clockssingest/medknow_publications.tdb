@@ -207,7 +207,7 @@
     au < finished ; crawling ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 ; >
-    au < expected ; exists ; 2017 ; Annals of Maxillofacial Surgery Volume 7 ; 2017 ; 7 ; >
+    au < manifest ; exists ; 2017 ; Annals of Maxillofacial Surgery Volume 7 ; 2017 ; 7 ; >
 
   }
 
@@ -4885,7 +4885,7 @@
 
       au < frozen ; exists ; 2015 ; Digital Medicine Volume 1 ; 2015 ; 1 ; >
       au < deepCrawl ; exists ; 2016 ; Digital Medicine Volume 2 ; 2016 ; 2 ; >
-      au < expected ; exists ; 2017 ; Digital Medicine Volume 3 ; 2017 ; 3 ; >
+      au < manifest ; exists ; 2017 ; Digital Medicine Volume 3 ; 2017 ; 3 ; >
 
   }
 
@@ -5694,7 +5694,7 @@
       param[base_url] = http://www.ijhronline.org/
 
       au < frozen ; exists ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; >
-      au < expected ; exists ; 2017 ; International Journal of Heart Rhythm Volume 2 ; 2017 ; 2 ; >
+      au < manifest ; exists ; 2017 ; International Journal of Heart Rhythm Volume 2 ; 2017 ; 2 ; >
 
   }
 
@@ -5990,7 +5990,7 @@
       au < frozen ; exists ; 2014 ; Journal of Dental Lasers Volume 8 ; 2014 ; 8 ; >
       au < frozen ; exists ; 2015 ; Journal of Dental Lasers Volume 9 ; 2015 ; 9 ; >
       au < frozen ; exists ; 2016 ; Journal of Dental Lasers Volume 10 ; 2016 ; 10 ; >
-      au < expected ; exists ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; >
+      au < manifest ; exists ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; >
 
   }
 
@@ -6118,7 +6118,7 @@
       au < frozen ; exists ; 2014 ; Journal of Geriatric Mental Health Volume 1 ; 2014 ; 1 ; >
       au < frozen ; exists ; 2015 ; Journal of Geriatric Mental Health Volume 2 ; 2015 ; 2 ; >
       au < frozen ; exists ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; >
-      au < expected ; exists ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; >
 
   }
 
@@ -7224,7 +7224,7 @@
       au < frozen ; exists ; 2014 ; Pigment International Volume 1 ; 2014 ; 1 ; >
       au < frozen ; exists ; 2015 ; Pigment International Volume 2 ; 2015 ; 2 ; >
       au < frozen ; exists ; 2016 ; Pigment International Volume 3 ; 2016 ; 3 ; >
-      au < expected ; exists ; 2017 ; Pigment International Volume 4 ; 2017 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Pigment International Volume 4 ; 2017 ; 4 ; >
 
   }
 
