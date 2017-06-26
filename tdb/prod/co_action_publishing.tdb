@@ -48,10 +48,10 @@
     au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 >
     au < doNotProcess ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 >
-    au < exists ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 >
+    au < manifest ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 6 ; 6 >
-    au < exists ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 >
-    au < exists ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 >
+    au < manifest ; 2016 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 7 ; 7 >
+    au < manifest ; 2017 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 8 ; 8 >
 
   }
 
@@ -591,8 +591,8 @@
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = zano20
 
-    au < exists ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 >
-    au < expected ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 >
+    au < manifest ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 >
+    au < manifest ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 >
 
   }
 
@@ -661,10 +661,10 @@
     au < doNotProcess ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 >
     au < doNotProcess ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 >
     au < doNotProcess ; 2013 ; Polar Research [including Supplements] Volume 32 ; 32 >
-    au < exists ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 >
+    au < manifest ; 2014 ; Polar Research [including Supplements] Volume 33 ; 33 >
     au < doNotProcess ; 2015 ; Polar Research [including Supplements] Volume 34 ; 34 >
-    au < exists ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 >
-    au < expected ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 >
+    au < manifest ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 >
+    au < manifest ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 >
 
   }
 
