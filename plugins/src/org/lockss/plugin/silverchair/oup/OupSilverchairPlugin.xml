@@ -10,14 +10,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -82,7 +82,9 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org)/"</string>
-      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/(?=.+(toc|matter|suppl[^.]{0,20}|advertising)[.]pdf)[^?]+\?Expires=", url_host(base_url)</string>
+      <!-- The following excludes toc, matter, and supplement PDF links with dynamic Expires args 
+           that could not be handled by UrlConsumer (did not redirect from "normal" link) -->
+      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/(?=.+(toc|matter|supp[^?]{0,20}|advertising)[.]pdf)[^?]+\?Expires=", url_host(base_url)</string>
       <string>2,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=", url_host(base_url)</string>
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
