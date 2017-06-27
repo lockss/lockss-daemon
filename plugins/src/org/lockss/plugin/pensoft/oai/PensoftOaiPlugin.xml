@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -34,7 +34,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.70.0</string>
+    <!-- for no store exception-->
+    <string>1.72.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -46,7 +47,10 @@
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%s", base_url</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_additional_url_stems</string>
