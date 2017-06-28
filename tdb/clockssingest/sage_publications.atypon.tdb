@@ -5451,6 +5451,66 @@
   {
 
     title <
+      name = Cell Medicine ;
+      eissn = 2155-1790
+    >
+
+    #param[base_url] = http://cmm.sagepub.com/
+
+      au < exists ; exists ; 2010 ; Cell Medicine Volume 1 ; 1 ; cmma ; >
+      au < exists ; exists ; 2011 ; Cell Medicine Volume 2 ; 2 ; cmma ; >
+      au < exists ; exists ; 2012 ; Cell Medicine Volume 3 ; 3 ; cmma ; >
+      au < exists ; exists ; 2012 ; Cell Medicine Volume 4 ; 4 ; cmma ; >
+      au < exists ; exists ; 2013 ; Cell Medicine Volume 5 ; 5 ; cmma ; >
+      au < exists ; exists ; 2014 ; Cell Medicine Volume 6 ; 6 ; cmma ; >
+      au < exists ; exists ; 2015 ; Cell Medicine Volume 7 ; 7 ; cmma ; >
+      au < exists ; exists ; 2016 ; Cell Medicine Volume 8 ; 8 ; cmma ; >
+      au < exists ; exists ; 2017 ; Cell Medicine Volume 9 ; 9 ; cmma ; >
+
+  }
+
+  {
+
+    title <
+      name = Cell Transplantation ;
+      issn = 0963-6897 ;
+      eissn = 1555-3892
+    >
+
+    #param[base_url] = http://cll.sagepub.com/
+
+      au < exists ; exists ; 1992 ; Cell Transplantation Volume 1 ; 1 ; clla ; >
+      au < exists ; exists ; 1993 ; Cell Transplantation Volume 2 ; 2 ; clla ; >
+      au < exists ; exists ; 1994 ; Cell Transplantation Volume 3 ; 3 ; clla ; >
+      au < exists ; exists ; 1995 ; Cell Transplantation Volume 4 ; 4 ; clla ; >
+      au < exists ; exists ; 1996 ; Cell Transplantation Volume 5 ; 5 ; clla ; >
+      au < exists ; exists ; 1997 ; Cell Transplantation Volume 6 ; 6 ; clla ; >
+      au < exists ; exists ; 1998 ; Cell Transplantation Volume 7 ; 7 ; clla ; >
+      au < exists ; exists ; 1999 ; Cell Transplantation Volume 8 ; 8 ; clla ; >
+      au < exists ; exists ; 2000 ; Cell Transplantation Volume 9 ; 9 ; clla ; >
+      au < exists ; exists ; 2001 ; Cell Transplantation Volume 10 ; 10 ; clla ; >
+      au < exists ; exists ; 2002 ; Cell Transplantation Volume 11 ; 11 ; clla ; >
+      au < exists ; exists ; 2003 ; Cell Transplantation Volume 12 ; 12 ; clla ; >
+      au < exists ; exists ; 2004 ; Cell Transplantation Volume 13 ; 13 ; clla ; >
+      au < exists ; exists ; 2005 ; Cell Transplantation Volume 14 ; 14 ; clla ; >
+      au < exists ; exists ; 2006 ; Cell Transplantation Volume 15 ; 15 ; clla ; >
+      au < exists ; exists ; 2007 ; Cell Transplantation Volume 16 ; 16 ; clla ; >
+      au < exists ; exists ; 2008 ; Cell Transplantation Volume 17 ; 17 ; clla ; >
+      au < exists ; exists ; 2009 ; Cell Transplantation Volume 18 ; 18 ; clla ; >
+      au < exists ; exists ; 2010 ; Cell Transplantation Volume 19 ; 19 ; clla ; >
+      au < exists ; exists ; 2011 ; Cell Transplantation Volume 20 ; 20 ; clla ; >
+      au < exists ; exists ; 2012 ; Cell Transplantation Volume 21 ; 21 ; clla ; >
+      au < exists ; exists ; 2013 ; Cell Transplantation Volume 22 ; 22 ; clla ; >
+      au < exists ; exists ; 2014 ; Cell Transplantation Volume 23 ; 23 ; clla ; >
+      au < exists ; exists ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla ; >
+      au < exists ; exists ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla ; >
+      au < exists ; exists ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla ; >
+
+  }
+
+  {
+
+    title <
       name = Cephalalgia ;
       issn = 0333-1024 ;
       eissn = 1468-2982
@@ -5459,7 +5519,6 @@
     #param[base_url] = http://cep.sagepub.com/
 
     {
-
 
       au < manifest ; exists ; 1981 ; Cephalalgia Volume 1 ; 1 ; cepa ; >
       au < manifest ; exists ; 1982 ; Cephalalgia Volume 2 ; 2 ; cepa ; >
@@ -14064,6 +14123,20 @@
   {
 
     title <
+      name = Hospital Pharmacy ;
+      issn = 0018-5787 ;
+      eissn = 1945-1253
+    >
+
+    #param[base_url] = http://hpx.sagepub.com/
+
+      au < exists ; exists ; 2017 ; Hospital Pharmacy Volume 52 ; 52 ; hpxa ; >
+
+  }
+
+  {
+
+    title <
       name = Human & Experimental Toxicology ;
       issn = 0960-3271 ;
       eissn = 1477-0903
@@ -14073,7 +14146,6 @@
 
     
     {
-
 
       au < manifest ; exists ; 1981 ; Human & Experimental Toxicology Volume 1 ; 1 ; heta ; >
       au < manifest ; exists ; 1983 ; Human & Experimental Toxicology Volume 2 ; 2 ; heta ; >
