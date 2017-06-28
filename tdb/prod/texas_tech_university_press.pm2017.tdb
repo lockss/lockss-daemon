@@ -21,10 +21,10 @@
         au < manifest ; 2007 ; Conradiana Volume 39 [2007] ; 3414 >
         au < manifest ; 2008 ; Conradiana Volume 40 [2008] ; 3508 >
         au < manifest ; 2009 ; Conradiana Volume 41 [2009] ; 6351 >
-        au < releasing ; 2010 ; Conradiana Volume 42 [2010] ; 7610 >
-        au < releasing ; 2011 ; Conradiana Volume 43 [2011] ; 9556 >
-        au < releasing ; 2012 ; Conradiana Volume 44 [2012] ; 9863 >
-        au < releasing ; 2013 ; Conradiana Volume 45 [2013] ; 10231 >
+        au < released ; 2010 ; Conradiana Volume 42 [2010] ; 7610 >
+        au < released ; 2011 ; Conradiana Volume 43 [2011] ; 9556 >
+        au < released ; 2012 ; Conradiana Volume 44 [2012] ; 9863 >
+        au < released ; 2013 ; Conradiana Volume 45 [2013] ; 10231 >
         au < released ; 2014 ; Conradiana Volume 46 [2014] ; 10838 >
 
     }
@@ -42,10 +42,10 @@
         au < manifest ; 2007 ; Helios Volume 34 [2007] ; 3440 >
         au < manifest ; 2008 ; Helios Volume 35 [2008] ; 3578 >
         au < manifest ; 2009 ; Helios Volume 36 [2009] ; 5695 >
-        au < releasing ; 2010 ; Helios Volume 37 [2010] ; 6678 >
-        au < releasing ; 2011 ; Helios Volume 38 [2011] ; 7612 >
-        au < releasing ; 2012 ; Helios Volume 39 [2012] ; 9582 >
-        au < releasing ; 2013 ; Helios Volume 40 [2013] ; 9583 >
+        au < released ; 2010 ; Helios Volume 37 [2010] ; 6678 >
+        au < released ; 2011 ; Helios Volume 38 [2011] ; 7612 >
+        au < released ; 2012 ; Helios Volume 39 [2012] ; 9582 >
+        au < released ; 2013 ; Helios Volume 40 [2013] ; 9583 >
         au < released ; 2014 ; Helios Volume 41 [2014] ; 10031 >
         au < released ; 2015 ; Helios Volume 42 [2015] ; 10753 >
         au < released ; 2016 ; Helios Volume 43 [2016] ; 11396 >
@@ -63,10 +63,10 @@
       attr[journal_id] = 428
 
         au < manifest ; 2009 ; Intertexts Volume 13 [2009] ; 6363 >
-        au < releasing ; 2010 ; Intertexts Volume 14 [2010] ; 6574 >
-        au < releasing ; 2011 ; Intertexts Volume 15 [2011] ; 7632 >
-        au < releasing ; 2012 ; Intertexts Volume 16 [2012] ; 8605 >
-        au < releasing ; 2013 ; Intertexts Volume 17 [2013] ; 9581 >
+        au < released ; 2010 ; Intertexts Volume 14 [2010] ; 6574 >
+        au < released ; 2011 ; Intertexts Volume 15 [2011] ; 7632 >
+        au < released ; 2012 ; Intertexts Volume 16 [2012] ; 8605 >
+        au < released ; 2013 ; Intertexts Volume 17 [2013] ; 9581 >
         au < released ; 2014 ; Intertexts Volume 18 [2014] ; 10169 >
         au < released ; 2015 ; Intertexts Volume 19 [2015] ; 11427 >
 
@@ -86,7 +86,7 @@
         au < manifest ; 2007 ; William Carlos Williams Review Volume 27 [2007] ; 3598 >
         au < manifest ; 2008 ; William Carlos Williams Review Volume 28 [2008] ; 7250 >
         au < manifest ; 2009 ; William Carlos Williams Review Volume 29 [2009] ; 8440 >
-        au < releasing ; 2013 ; William Carlos Williams Review Volume 30 [2013] ; 9571 >
+        au < released ; 2013 ; William Carlos Williams Review Volume 30 [2013] ; 9571 >
         au < released ; 2014 ; William Carlos Williams Review Volume 31 [2014] ; 10166 >
         au < released ; 2015 ; William Carlos Williams Review Volume 32 [2015] ; 12239 >
         au < released ; 2016 ; William Carlos Williams Review Volume 33 [2016] ; 12238 >
