@@ -604,8 +604,8 @@
     au < manifest ; exists ; 2011 ; Bioscience Reports Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Bioscience Reports Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Bioscience Reports Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2014 ; Bioscience Reports Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; >
+    au < ready ; exists ; 2014 ; Bioscience Reports Volume 34 ; 34 ; >
+    au < ready ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; >
     au < testing ; exists ; 2016 ; Bioscience Reports Volume 36 ; 36 ; >
     au < manifest ; exists ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
 
@@ -649,10 +649,10 @@
     au < manifest ; exists ; 2010 ; Clinical Science Volume 119 ; 119 ; >
     au < manifest ; exists ; 2011 ; Clinical Science Volume 120 ; 120 ; >
     au < manifest ; exists ; 2011 ; Clinical Science Volume 121 ; 121 ; >
-    au < manifest ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
-    au < manifest ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
-    au < manifest ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
+    au < ready ; exists ; 2012 ; Clinical Science Volume 122 ; 122 ; >
+    au < ready ; exists ; 2012 ; Clinical Science Volume 123 ; 123 ; >
+    au < ready ; exists ; 2013 ; Clinical Science Volume 124 ; 124 ; >
+    au < ready ; exists ; 2013 ; Clinical Science Volume 125 ; 125 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 126 ; 126 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Science Volume 127 ; 127 ; >
     au < manifest ; exists ; 2015 ; Clinical Science Volume 128 ; 128 ; >
