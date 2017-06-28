@@ -30574,31 +30574,32 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
         #param[base_url] = http://ncp.sagepub.com/
+        # move to Wiley Blackwell in 2018
 
-        au < manifest ; 1986 ; Nutrition in Clinical Practice Volume 1 ; 1 ; ncpa >
-        au < manifest ; 1987 ; Nutrition in Clinical Practice Volume 2 ; 2 ; ncpa >
-        au < manifest ; 1988 ; Nutrition in Clinical Practice Volume 3 ; 3 ; ncpa >
-        au < manifest ; 1989 ; Nutrition in Clinical Practice Volume 4 ; 4 ; ncpa >
-        au < manifest ; 1990 ; Nutrition in Clinical Practice Volume 5 ; 5 ; ncpa >
-        au < manifest ; 1991 ; Nutrition in Clinical Practice Volume 6 ; 6 ; ncpa >
-        au < manifest ; 1992 ; Nutrition in Clinical Practice Volume 7 ; 7 ; ncpa >
-        au < manifest ; 1993 ; Nutrition in Clinical Practice Volume 8 ; 8 ; ncpa >
-        au < manifest ; 1994 ; Nutrition in Clinical Practice Volume 9 ; 9 ; ncpa >
-        au < manifest ; 1995 ; Nutrition in Clinical Practice Volume 10 ; 10 ; ncpa >
-        au < manifest ; 1996 ; Nutrition in Clinical Practice Volume 11 ; 11 ; ncpa >
-        au < manifest ; 1997 ; Nutrition in Clinical Practice Volume 12 ; 12 ; ncpa >
-        au < manifest ; 1998 ; Nutrition in Clinical Practice Volume 13 ; 13 ; ncpa >
-        au < manifest ; 1999 ; Nutrition in Clinical Practice Volume 14 ; 14 ; ncpa >
-        au < manifest ; 2000 ; Nutrition in Clinical Practice Volume 15 ; 15 ; ncpa >
-        au < manifest ; 2001 ; Nutrition in Clinical Practice Volume 16 ; 16 ; ncpa >
-        au < manifest ; 2002 ; Nutrition in Clinical Practice Volume 17 ; 17 ; ncpa >
-        au < manifest ; 2003 ; Nutrition in Clinical Practice Volume 18 ; 18 ; ncpa >
-        au < manifest ; 2004 ; Nutrition in Clinical Practice Volume 19 ; 19 ; ncpa >
-        au < manifest ; 2005 ; Nutrition in Clinical Practice Volume 20 ; 20 ; ncpa >
-        au < manifest ; 2006 ; Nutrition in Clinical Practice Volume 21 ; 21 ; ncpa >
-        au < manifest ; 2007 ; Nutrition in Clinical Practice Volume 22 ; 22 ; ncpa >
-        au < manifest ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 ; ncpa >
-        au < manifest ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; ncpa >
+        au < testing ; 1986 ; Nutrition in Clinical Practice Volume 1 ; 1 ; ncpa >
+        au < testing ; 1987 ; Nutrition in Clinical Practice Volume 2 ; 2 ; ncpa >
+        au < testing ; 1988 ; Nutrition in Clinical Practice Volume 3 ; 3 ; ncpa >
+        au < testing ; 1989 ; Nutrition in Clinical Practice Volume 4 ; 4 ; ncpa >
+        au < testing ; 1990 ; Nutrition in Clinical Practice Volume 5 ; 5 ; ncpa >
+        au < testing ; 1991 ; Nutrition in Clinical Practice Volume 6 ; 6 ; ncpa >
+        au < testing ; 1992 ; Nutrition in Clinical Practice Volume 7 ; 7 ; ncpa >
+        au < testing ; 1993 ; Nutrition in Clinical Practice Volume 8 ; 8 ; ncpa >
+        au < testing ; 1994 ; Nutrition in Clinical Practice Volume 9 ; 9 ; ncpa >
+        au < testing ; 1995 ; Nutrition in Clinical Practice Volume 10 ; 10 ; ncpa >
+        au < testing ; 1996 ; Nutrition in Clinical Practice Volume 11 ; 11 ; ncpa >
+        au < testing ; 1997 ; Nutrition in Clinical Practice Volume 12 ; 12 ; ncpa >
+        au < testing ; 1998 ; Nutrition in Clinical Practice Volume 13 ; 13 ; ncpa >
+        au < testing ; 1999 ; Nutrition in Clinical Practice Volume 14 ; 14 ; ncpa >
+        au < testing ; 2000 ; Nutrition in Clinical Practice Volume 15 ; 15 ; ncpa >
+        au < testing ; 2001 ; Nutrition in Clinical Practice Volume 16 ; 16 ; ncpa >
+        au < testing ; 2002 ; Nutrition in Clinical Practice Volume 17 ; 17 ; ncpa >
+        au < testing ; 2003 ; Nutrition in Clinical Practice Volume 18 ; 18 ; ncpa >
+        au < testing ; 2004 ; Nutrition in Clinical Practice Volume 19 ; 19 ; ncpa >
+        au < testing ; 2005 ; Nutrition in Clinical Practice Volume 20 ; 20 ; ncpa >
+        au < testing ; 2006 ; Nutrition in Clinical Practice Volume 21 ; 21 ; ncpa >
+        au < testing ; 2007 ; Nutrition in Clinical Practice Volume 22 ; 22 ; ncpa >
+        au < testing ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 ; ncpa >
+        au < testing ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; ncpa >
         au < doNotProcess ; 2010 ; Nutrition in Clinical Practice Volume 25 ; 25 ; ncpa >
         au < doNotProcess ; 2011 ; Nutrition in Clinical Practice Volume 26 ; 26 ; ncpa >
         au < doNotProcess ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; ncpa >
