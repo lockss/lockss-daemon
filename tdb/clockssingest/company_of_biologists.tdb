@@ -184,7 +184,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Development Volume 140 ; 140 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Development Volume 141 ; 141 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2015 ; Development Volume 142 ; 142 ; reingest2.clockss.org:8085 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2016 ; Development Volume 143 ; 143 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2016 ; Development Volume 143 ; 143 ; reingest4.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 2017 ; Development Volume 144 ; 144 ; >
 
   }
@@ -208,7 +208,7 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; >
 
   }
@@ -380,7 +380,7 @@
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; finished ; finished ; 2015 ; Journal of Cell Science Volume 128 ; 128 ; reingest2.clockss.org:8085 >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2016 ; Journal of Cell Science Volume 129 ; 129 ; reingest1.clockss.org:8082 >
     au < biologists.ClockssBiologistsDrupalPlugin ; manifest ; exists ; 2017 ; Journal of Cell Science Volume 130 ; 130 ; >
 
   }
