@@ -12,8 +12,6 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[publisher_id] = mmso
     implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
-    
-    #still no permission pages. 5/5/2017
 
   {
     title <
