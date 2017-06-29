@@ -15496,7 +15496,7 @@
       au < manifest ; exists ; 2005 ; International Journal of Advanced Robotic Systems Volume 2 ; 2 ; arxa ; >
       au < manifest ; exists ; 2006 ; International Journal of Advanced Robotic Systems Volume 3 ; 3 ; arxa ; >
       au < manifest ; exists ; 2007 ; International Journal of Advanced Robotic Systems Volume 4 ; 4 ; arxa ; >
-      au < testing ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; arxa ; >
+      au < ready ; exists ; 2008 ; International Journal of Advanced Robotic Systems Volume 5 ; 5 ; arxa ; >
       au < crawling ; exists ; 2009 ; International Journal of Advanced Robotic Systems Volume 6 ; 6 ; arxa ; >
       au < manifest ; exists ; 2010 ; International Journal of Advanced Robotic Systems Volume 7 ; 7 ; arxa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Advanced Robotic Systems Volume 8 ; 8 ; arxa ; >
@@ -15989,7 +15989,7 @@
         au < manifest ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 ; 1 ; dsna ; >
         au < manifest ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 ; 2 ; dsna ; >
         au < manifest ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 ; 3 ; dsna ; >
-        au < testing ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 ; 4 ; dsna ; >
+        au < ready ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 ; 4 ; dsna ; >
         au < manifest ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 ; 5 ; dsna ; >
         au < manifest ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 6 ; 6 ; dsna ; >
         au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 ; dsna ; >
@@ -16515,7 +16515,7 @@
       au < manifest ; exists ; 2005 ; International Journal of Police Science & Management Volume 7 ; 7 ; psma ; >
       au < manifest ; exists ; 2006 ; International Journal of Police Science & Management Volume 8 ; 8 ; psma ; >
       au < manifest ; exists ; 2007 ; International Journal of Police Science & Management Volume 9 ; 9 ; psma ; >
-      au < testing ; exists ; 2008 ; International Journal of Police Science & Management Volume 10 ; 10 ; psma ; >
+      au < ready ; exists ; 2008 ; International Journal of Police Science & Management Volume 10 ; 10 ; psma ; >
       au < manifest ; exists ; 2009 ; International Journal of Police Science & Management Volume 11 ; 11 ; psma ; >
       au < manifest ; exists ; 2010 ; International Journal of Police Science & Management Volume 12 ; 12 ; psma ; >
       au < manifest ; exists ; 2011 ; International Journal of Police Science & Management Volume 13 ; 13 ; psma ; >
@@ -16610,7 +16610,7 @@
       au < manifest ; exists ; 2005 ; The International Journal of Psychiatry in Medicine Volume 35 ; 35 ; ijpb ; >
       au < manifest ; exists ; 2006 ; The International Journal of Psychiatry in Medicine Volume 36 ; 36 ; ijpb ; >
       au < manifest ; exists ; 2007 ; The International Journal of Psychiatry in Medicine Volume 37 ; 37 ; ijpb ; >
-      au < testing ; exists ; 2008 ; The International Journal of Psychiatry in Medicine Volume 38 ; 38 ; ijpb ; >
+      au < ready ; exists ; 2008 ; The International Journal of Psychiatry in Medicine Volume 38 ; 38 ; ijpb ; >
       au < manifest ; exists ; 2009 ; The International Journal of Psychiatry in Medicine Volume 39 ; 39 ; ijpb ; >
       au < manifest ; exists ; 2010 ; The International Journal of Psychiatry in Medicine Volume 40 ; 40 ; ijpb ; >
       au < manifest ; exists ; 2011 ; The International Journal of Psychiatry in Medicine Volume 41 ; 41 ; ijpb ; >
@@ -16866,7 +16866,7 @@
 
       au < manifest ; exists ; 2006 ; International Journal of Sports Science & Coaching Volume 1 ; 1 ; spoa ; >
       au < manifest ; exists ; 2007 ; International Journal of Sports Science & Coaching Volume 2 ; 2 ; spoa ; >
-      au < testing ; exists ; 2008 ; International Journal of Sports Science & Coaching Volume 3 ; 3 ; spoa ; >
+      au < ready ; exists ; 2008 ; International Journal of Sports Science & Coaching Volume 3 ; 3 ; spoa ; >
       au < manifest ; exists ; 2009 ; International Journal of Sports Science & Coaching Volume 4 ; 4 ; spoa ; >
       au < manifest ; exists ; 2010 ; International Journal of Sports Science & Coaching Volume 5 ; 5 ; spoa ; >
       au < manifest ; exists ; 2011 ; International Journal of Sports Science & Coaching Volume 6 ; 6 ; spoa ; >
@@ -16913,7 +16913,7 @@
 
       au < manifest ; exists ; 2006 ; International Journal of Stroke Volume 1 ; 1 ; wsoa ; >
       au < manifest ; exists ; 2007 ; International Journal of Stroke Volume 2 ; 2 ; wsoa ; >
-      au < testing ; exists ; 2008 ; International Journal of Stroke Volume 3 ; 3 ; wsoa ; >
+      au < ready ; exists ; 2008 ; International Journal of Stroke Volume 3 ; 3 ; wsoa ; >
       au < manifest ; exists ; 2009 ; International Journal of Stroke Volume 4 ; 4 ; wsoa ; >
       au < manifest ; exists ; 2010 ; International Journal of Stroke Volume 5 ; 5 ; wsoa ; >
       au < manifest ; exists ; 2011 ; International Journal of Stroke Volume 6 ; 6 ; wsoa ; >
@@ -17814,7 +17814,7 @@
       au < manifest ; exists ; 2005 ; Interventional Neuroradiology Volume 11 ; 11 ; inea ; >
       au < manifest ; exists ; 2006 ; Interventional Neuroradiology Volume 12 ; 12 ; inea ; >
       au < manifest ; exists ; 2007 ; Interventional Neuroradiology Volume 13 ; 13 ; inea ; >
-      au < testing ; exists ; 2008 ; Interventional Neuroradiology Volume 14 ; 14 ; inea ; >
+      au < ready ; exists ; 2008 ; Interventional Neuroradiology Volume 14 ; 14 ; inea ; >
       au < manifest ; exists ; 2009 ; Interventional Neuroradiology Volume 15 ; 15 ; inea ; >
       au < manifest ; exists ; 2010 ; Interventional Neuroradiology Volume 16 ; 16 ; inea ; >
       au < manifest ; exists ; 2011 ; Interventional Neuroradiology Volume 17 ; 17 ; inea ; >
@@ -17838,7 +17838,7 @@
       #param[base_url] = http://ies.sagepub.com/
 
       au < manifest ; exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 ; iesa ; >
-      au < testing ; exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 ; iesa ; >
+      au < ready ; exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 ; iesa ; >
       au < crawling ; exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 ; iesa ; >
       au < manifest ; exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 ; iesa ; >
       au < manifest ; exists ; 2011 ; Irish Economic and Social History Volume 38 ; 38 ; iesa ; >
@@ -18295,7 +18295,7 @@
       au < manifest ; exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 ; adua ; >
       au < manifest ; exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 ; adua ; >
       au < manifest ; exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; adua ; >
-      au < testing ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; adua ; >
+      au < ready ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; adua ; >
       au < crawling ; exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 ; adua ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; adua ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; adua ; >
@@ -18406,7 +18406,7 @@
       #param[base_url] = http://act.sagepub.com/
 
       au < manifest ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; acta ; >
-      au < testing ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; acta ; >
+      au < ready ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; acta ; >
       au < manifest ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 ; acta ; >
       au < manifest ; exists ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 ; acta ; >
       au < manifest ; exists ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; acta ; >
@@ -19682,7 +19682,7 @@
       au < manifest ; exists ; 2005 ; Journal of College Student Retention: Research, Theory & Practice Volume 7 ; 7 ; csra ; >
       au < manifest ; exists ; 2006 ; Journal of College Student Retention: Research, Theory & Practice Volume 8 ; 8 ; csra ; >
       au < manifest ; exists ; 2007 ; Journal of College Student Retention: Research, Theory & Practice Volume 9 ; 9 ; csra ; >
-      au < testing ; exists ; 2008 ; Journal of College Student Retention: Research, Theory & Practice Volume 10 ; 10 ; csra ; >
+      au < ready ; exists ; 2008 ; Journal of College Student Retention: Research, Theory & Practice Volume 10 ; 10 ; csra ; >
       au < manifest ; exists ; 2009 ; Journal of College Student Retention: Research, Theory & Practice Volume 11 ; 11 ; csra ; >
       au < manifest ; exists ; 2010 ; Journal of College Student Retention: Research, Theory & Practice Volume 12 ; 12 ; csra ; >
       au < manifest ; exists ; 2011 ; Journal of College Student Retention: Research, Theory & Practice Volume 13 ; 13 ; csra ; >
@@ -20416,7 +20416,7 @@
 
       au < manifest ; exists ; 2006 ; Journal of Cutaneous Medicine and Surgery Volume 10 ; 10 ; cmsa ; >
       au < manifest ; exists ; 2007 ; Journal of Cutaneous Medicine and Surgery Volume 11 ; 11 ; cmsa ; >
-      au < testing ; exists ; 2008 ; Journal of Cutaneous Medicine and Surgery Volume 12 ; 12 ; cmsa ; >
+      au < ready ; exists ; 2008 ; Journal of Cutaneous Medicine and Surgery Volume 12 ; 12 ; cmsa ; >
       au < manifest ; exists ; 2009 ; Journal of Cutaneous Medicine and Surgery Volume 13 ; 13 ; cmsa ; >
       au < manifest ; exists ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 ; cmsa ; >
       au < manifest ; exists ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 ; cmsa ; >
@@ -20771,7 +20771,7 @@
       au < manifest ; exists ; 2005 ; Journal of Drug Education Volume 35 ; 35 ; drea ; >
       au < manifest ; exists ; 2006 ; Journal of Drug Education Volume 36 ; 36 ; drea ; >
       au < manifest ; exists ; 2007 ; Journal of Drug Education Volume 37 ; 37 ; drea ; >
-      au < testing ; exists ; 2008 ; Journal of Drug Education Volume 38 ; 38 ; drea ; >
+      au < ready ; exists ; 2008 ; Journal of Drug Education Volume 38 ; 38 ; drea ; >
       au < manifest ; exists ; 2009 ; Journal of Drug Education Volume 39 ; 39 ; drea ; >
       au < manifest ; exists ; 2010 ; Journal of Drug Education Volume 40 ; 40 ; drea ; >
       au < manifest ; exists ; 2011 ; Journal of Drug Education Volume 41 ; 41 ; drea ; >
@@ -21120,8 +21120,8 @@
       au < manifest ; exists ; 2006 ; Journal of Educational Computing Research Volume 35 ; 35 ; jeca ; >
       au < manifest ; exists ; 2007 ; Journal of Educational Computing Research Volume 36 ; 36 ; jeca ; >
       au < manifest ; exists ; 2007 ; Journal of Educational Computing Research Volume 37 ; 37 ; jeca ; >
-      au < testing ; exists ; 2008 ; Journal of Educational Computing Research Volume 38 ; 38 ; jeca ; >
-      au < testing ; exists ; 2008 ; Journal of Educational Computing Research Volume 39 ; 39 ; jeca ; >
+      au < ready ; exists ; 2008 ; Journal of Educational Computing Research Volume 38 ; 38 ; jeca ; >
+      au < ready ; exists ; 2008 ; Journal of Educational Computing Research Volume 39 ; 39 ; jeca ; >
       au < manifest ; exists ; 2009 ; Journal of Educational Computing Research Volume 40 ; 40 ; jeca ; >
       au < manifest ; exists ; 2009 ; Journal of Educational Computing Research Volume 41 ; 41 ; jeca ; >
       au < manifest ; exists ; 2010 ; Journal of Educational Computing Research Volume 42 ; 42 ; jeca ; >
@@ -21185,7 +21185,7 @@
       #param[base_url] = http://ega.sagepub.com/
 
       au < manifest ; exists ; 2007 ; The Journal of Egyptian Archaeology Volume 93 ; 93 ; egaa ; >
-      au < testing ; exists ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa ; >
+      au < ready ; exists ; 2008 ; The Journal of Egyptian Archaeology Volume 94 ; 94 ; egaa ; >
       au < manifest ; exists ; 2009 ; The Journal of Egyptian Archaeology Volume 95 ; 95 ; egaa ; >
       au < manifest ; exists ; 2010 ; The Journal of Egyptian Archaeology Volume 96 ; 96 ; egaa ; >
       au < manifest ; exists ; 2011 ; The Journal of Egyptian Archaeology Volume 97 ; 97 ; egaa ; >
@@ -21361,7 +21361,7 @@
       au < manifest ; exists ; 2005 ; Journal of Endovascular Therapy Volume 12 ; 12 ; jeta ; >
       au < manifest ; exists ; 2006 ; Journal of Endovascular Therapy Volume 13 ; 13 ; jeta ; >
       au < manifest ; exists ; 2007 ; Journal of Endovascular Therapy Volume 14 ; 14 ; jeta ; >
-      au < testing ; exists ; 2008 ; Journal of Endovascular Therapy Volume 15 ; 15 ; jeta ; >
+      au < ready ; exists ; 2008 ; Journal of Endovascular Therapy Volume 15 ; 15 ; jeta ; >
       au < manifest ; exists ; 2009 ; Journal of Endovascular Therapy Volume 16 ; 16 ; jeta ; >
       au < manifest ; exists ; 2010 ; Journal of Endovascular Therapy Volume 17 ; 17 ; jeta ; >
       au < manifest ; exists ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 ; jeta ; >
@@ -23162,7 +23162,7 @@
       au < manifest ; exists ; 2005 ; Journal of the Intensive Care Society Volume 6 ; 6 ; inca ; >
       au < manifest ; exists ; 2006 ; Journal of the Intensive Care Society Volume 7 ; 7 ; inca ; >
       au < manifest ; exists ; 2007 ; Journal of the Intensive Care Society Volume 8 ; 8 ; inca ; >
-      au < testing ; exists ; 2008 ; Journal of the Intensive Care Society Volume 9 ; 9 ; inca ; >
+      au < ready ; exists ; 2008 ; Journal of the Intensive Care Society Volume 9 ; 9 ; inca ; >
       au < manifest ; exists ; 2009 ; Journal of the Intensive Care Society Volume 10 ; 10 ; inca ; >
       au < crawling ; exists ; 2010 ; Journal of the Intensive Care Society Volume 11 ; 11 ; inca ; >
       au < crawling ; exists ; 2011 ; Journal of the Intensive Care Society Volume 12 ; 12 ; inca ; >
@@ -23229,7 +23229,7 @@
     au < manifest ; exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 ; ipta ; >
     au < manifest ; exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 ; ipta ; >
     au < manifest ; exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 ; ipta ; >
-    au < testing ; exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 ; iptb ; >
+    au < ready ; exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 ; iptb ; >
     au < manifest ; exists ; 2009 ; Journal of International Political Theory Volume 5 ; 5 ; iptb ; >
     au < manifest ; exists ; 2010 ; Journal of International Political Theory Volume 6 ; 6 ; iptb ; >
     au < manifest ; exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 ; iptb ; >
@@ -23731,7 +23731,7 @@
       au < manifest ; exists ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 ; lfna ; >
       au < manifest ; exists ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 ; lfna ; >
       au < manifest ; exists ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 ; lfna ; >
-      au < testing ; exists ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 ; lfna ; >
+      au < ready ; exists ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 ; lfna ; >
       au < manifest ; exists ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 ; lfna ; >
       au < manifest ; exists ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 ; lfna ; >
       au < manifest ; exists ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 ; lfna ; >
@@ -24236,7 +24236,7 @@
       au < manifest ; exists ; 2005 ; Journal of Near Infrared Spectroscopy Volume 13 ; 13 ; jnsa ; >
       au < manifest ; exists ; 2006 ; Journal of Near Infrared Spectroscopy Volume 14 ; 14 ; jnsa ; >
       au < manifest ; exists ; 2007 ; Journal of Near Infrared Spectroscopy Volume 15 ; 15 ; jnsa ; >
-      au < testing ; exists ; 2008 ; Journal of Near Infrared Spectroscopy Volume 16 ; 16 ; jnsa ; >
+      au < ready ; exists ; 2008 ; Journal of Near Infrared Spectroscopy Volume 16 ; 16 ; jnsa ; >
       au < manifest ; exists ; 2009 ; Journal of Near Infrared Spectroscopy Volume 17 ; 17 ; jnsa ; >
       au < manifest ; exists ; 2010 ; Journal of Near Infrared Spectroscopy Volume 18 ; 18 ; jnsa ; >
       au < manifest ; exists ; 2011 ; Journal of Near Infrared Spectroscopy Volume 19 ; 19 ; jnsa ; >
@@ -24306,7 +24306,7 @@
       au < manifest ; exists ; 2005 ; Journal of Orthopaedic Surgery Volume 13 ; 13 ; osja ; >
       au < manifest ; exists ; 2006 ; Journal of Orthopaedic Surgery Volume 14 ; 14 ; osja ; >
       au < manifest ; exists ; 2007 ; Journal of Orthopaedic Surgery Volume 15 ; 15 ; osja ; >
-      au < testing ; exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 ; osja ; >
+      au < ready ; exists ; 2008 ; Journal of Orthopaedic Surgery Volume 16 ; 16 ; osja ; >
       au < manifest ; exists ; 2009 ; Journal of Orthopaedic Surgery Volume 17 ; 17 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Orthopaedic Surgery Volume 18 ; 18 ; osja ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Orthopaedic Surgery Volume 19 ; 19 ; osja ; >
@@ -24411,7 +24411,7 @@
       au < manifest ; exists ; 2005 ; Journal of Pastoral Care & Counseling Volume 59 ; 59 ; pcca ; >
       au < manifest ; exists ; 2006 ; Journal of Pastoral Care & Counseling Volume 60 ; 60 ; pcca ; >
       au < manifest ; exists ; 2007 ; Journal of Pastoral Care & Counseling Volume 61 ; 61 ; pcca ; >
-      au < testing ; exists ; 2008 ; Journal of Pastoral Care & Counseling Volume 62 ; 62 ; pcca ; >
+      au < ready ; exists ; 2008 ; Journal of Pastoral Care & Counseling Volume 62 ; 62 ; pcca ; >
       au < manifest ; exists ; 2009 ; Journal of Pastoral Care & Counseling Volume 63 ; 63 ; pcca ; >
       au < manifest ; exists ; 2010 ; Journal of Pastoral Care & Counseling Volume 64 ; 64 ; pcca ; >
       au < manifest ; exists ; 2011 ; Journal of Pastoral Care & Counseling Volume 65 ; 65 ; pcca ; >
@@ -24933,7 +24933,7 @@
       au < manifest ; exists ; 2005 ; The Journal of Psychiatry & Law Volume 33 ; 33 ; plxa ; >
       au < manifest ; exists ; 2006 ; The Journal of Psychiatry & Law Volume 34 ; 34 ; plxa ; >
       au < manifest ; exists ; 2007 ; The Journal of Psychiatry & Law Volume 35 ; 35 ; plxa ; >
-      au < testing ; exists ; 2008 ; The Journal of Psychiatry & Law Volume 36 ; 36 ; plxa ; >
+      au < ready ; exists ; 2008 ; The Journal of Psychiatry & Law Volume 36 ; 36 ; plxa ; >
       au < manifest ; exists ; 2009 ; The Journal of Psychiatry & Law Volume 37 ; 37 ; plxa ; >
       au < crawling ; exists ; 2010 ; The Journal of Psychiatry & Law Volume 38 ; 38 ; plxa ; >
       au < manifest ; exists ; 2011 ; The Journal of Psychiatry & Law Volume 39 ; 39 ; plxa ; >
@@ -26400,7 +26400,7 @@
       au < manifest ; exists ; 2005 ; Journal for the History of Astronomy Volume 36 ; 36 ; jhaa ; >
       au < manifest ; exists ; 2006 ; Journal for the History of Astronomy Volume 37 ; 37 ; jhaa ; >
       au < manifest ; exists ; 2007 ; Journal for the History of Astronomy Volume 38 ; 38 ; jhaa ; >
-      au < testing ; exists ; 2008 ; Journal for the History of Astronomy Volume 39 ; 39 ; jhaa ; >
+      au < ready ; exists ; 2008 ; Journal for the History of Astronomy Volume 39 ; 39 ; jhaa ; >
       au < manifest ; exists ; 2009 ; Journal for the History of Astronomy Volume 40 ; 40 ; jhaa ; >
       au < manifest ; exists ; 2010 ; Journal for the History of Astronomy Volume 41 ; 41 ; jhaa ; >
       au < manifest ; exists ; 2011 ; Journal for the History of Astronomy Volume 42 ; 42 ; jhaa ; >
@@ -26774,7 +26774,7 @@
       au < manifest ; exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 ; jthc ; >
       au < manifest ; exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 ; jthc ; >
       au < manifest ; exists ; 2007 ; The Journal of Transport History Volume 28 ; 28 ; jthc ; >
-      au < testing ; exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 ; jthc ; >
+      au < ready ; exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 ; jthc ; >
       au < manifest ; exists ; 2009 ; The Journal of Transport History Volume 30 ; 30 ; jthc ; >
       au < manifest ; exists ; 2010 ; The Journal of Transport History Volume 31 ; 31 ; jthc ; >
       au < manifest ; exists ; 2011 ; The Journal of Transport History Volume 32 ; 32 ; jthc ; >
@@ -26982,7 +26982,7 @@
       au < manifest ; exists ; 2005 ; Journal of Veterinary Dentistry Volume 22 ; 22 ; jovb ; >
       au < manifest ; exists ; 2006 ; Journal of Veterinary Dentistry Volume 23 ; 23 ; jovb ; >
       au < manifest ; exists ; 2007 ; Journal of Veterinary Dentistry Volume 24 ; 24 ; jovb ; >
-      au < testing ; exists ; 2008 ; Journal of Veterinary Dentistry Volume 25 ; 25 ; jovb ; >
+      au < ready ; exists ; 2008 ; Journal of Veterinary Dentistry Volume 25 ; 25 ; jovb ; >
       au < manifest ; exists ; 2009 ; Journal of Veterinary Dentistry Volume 26 ; 26 ; jovb ; >
       au < manifest ; exists ; 2010 ; Journal of Veterinary Dentistry Volume 27 ; 27 ; jovb ; >
       au < manifest ; exists ; 2011 ; Journal of Veterinary Dentistry Volume 28 ; 28 ; jovb ; >
@@ -27389,7 +27389,7 @@
       au < manifest ; exists ; 2005 ; Justice Research and Policy Volume 7 ; 7 ; jrxa ; >
       au < manifest ; exists ; 2006 ; Justice Research and Policy Volume 8 ; 8 ; jrxa ; >
       au < manifest ; exists ; 2007 ; Justice Research and Policy Volume 9 ; 9 ; jrxa ; >
-      au < testing ; exists ; 2008 ; Justice Research and Policy Volume 10 ; 10 ; jrxa ; >
+      au < ready ; exists ; 2008 ; Justice Research and Policy Volume 10 ; 10 ; jrxa ; >
       au < crawling ; exists ; 2009 ; Justice Research and Policy Volume 11 ; 11 ; jrxa ; >
       au < manifest ; exists ; 2010 ; Justice Research and Policy Volume 12 ; 12 ; jrxa ; >
       au < manifest ; exists ; 2011 ; Justice Research and Policy Volume 13 ; 13 ; jrxa ; >
@@ -28033,7 +28033,7 @@
       au < manifest ; exists ; 2005 ; Maastricht Journal of European and Comparative Law Volume 12 ; 12 ; maaa ; >
       au < manifest ; exists ; 2006 ; Maastricht Journal of European and Comparative Law Volume 13 ; 13 ; maaa ; >
       au < manifest ; exists ; 2007 ; Maastricht Journal of European and Comparative Law Volume 14 ; 14 ; maaa ; >
-      au < testing ; exists ; 2008 ; Maastricht Journal of European and Comparative Law Volume 15 ; 15 ; maaa ; >
+      au < ready ; exists ; 2008 ; Maastricht Journal of European and Comparative Law Volume 15 ; 15 ; maaa ; >
       au < manifest ; exists ; 2009 ; Maastricht Journal of European and Comparative Law Volume 16 ; 16 ; maaa ; >
       au < manifest ; exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa ; >
       au < crawling ; exists ; 2011 ; Maastricht Journal of European and Comparative Law Volume 18 ; 18 ; maaa ; >
@@ -28600,7 +28600,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Media International Australia Volume 126 ; 126 ; miad ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Media International Australia Volume 127 ; 127 ; miad ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Media International Australia Volume 128 ; 128 ; miad ; >
-      au < testing ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; miad ; >
+      au < ready ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; miad ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Media International Australia Volume 130 ; 130 ; miad ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Media International Australia Volume 131 ; 131 ; miad ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Media International Australia Volume 132 ; 132 ; miad ; >
@@ -29064,7 +29064,7 @@
       au < manifest ; exists ; 2005 ; Metamorphosis Volume 4 ; 4 ; meta ; >
       au < manifest ; exists ; 2006 ; Metamorphosis Volume 5 ; 5 ; meta ; >
       au < manifest ; exists ; 2007 ; Metamorphosis Volume 6 ; 6 ; meta ; >
-      au < testing ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; meta ; >
+      au < ready ; exists ; 2008 ; Metamorphosis Volume 7 ; 7 ; meta ; >
       au < manifest ; exists ; 2009 ; Metamorphosis Volume 8 ; 8 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Metamorphosis Volume 9 ; 9 ; meta ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Metamorphosis Volume 10 ; 10 ; meta ; >
@@ -29239,7 +29239,7 @@
       au < manifest ; exists ; 2005 ; Molecular Imaging Volume 4 ; 4 ; mixa ; >
       au < manifest ; exists ; 2006 ; Molecular Imaging Volume 5 ; 5 ; mixa ; >
       au < manifest ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; mixa ; >
-      au < testing ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; mixa ; >
+      au < ready ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; mixa ; >
       au < manifest ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Molecular Imaging Volume 9 ; 9 ; mixa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Molecular Imaging Volume 10 ; 10 ; mixa ; >
@@ -30008,7 +30008,7 @@
       au < manifest ; exists ; 2005 ; The Neuroradiology Journal Volume 18 ; 18 ; neua ; >
       au < manifest ; exists ; 2006 ; The Neuroradiology Journal Volume 19 ; 19 ; neua ; >
       au < manifest ; exists ; 2007 ; The Neuroradiology Journal Volume 20 ; 20 ; neub ; >
-      au < testing ; exists ; 2008 ; The Neuroradiology Journal Volume 21 ; 21 ; neub ; >
+      au < ready ; exists ; 2008 ; The Neuroradiology Journal Volume 21 ; 21 ; neub ; >
       au < crawling ; exists ; 2009 ; The Neuroradiology Journal Volume 22 ; 22 ; neub ; >
       au < manifest ; exists ; 2010 ; The Neuroradiology Journal Volume 23 ; 23 ; neub ; >
       au < manifest ; exists ; 2011 ; The Neuroradiology Journal Volume 24 ; 24 ; neub ; >
@@ -30208,7 +30208,7 @@
       au < manifest ; exists ; 2005 ; New Solutions Volume 15 ; 15 ; newa ; >
       au < manifest ; exists ; 2006 ; New Solutions Volume 16 ; 16 ; newa ; >
       au < manifest ; exists ; 2007 ; New Solutions Volume 17 ; 17 ; newa ; >
-      au < testing ; exists ; 2008 ; New Solutions Volume 18 ; 18 ; newa ; >
+      au < ready ; exists ; 2008 ; New Solutions Volume 18 ; 18 ; newa ; >
       au < manifest ; exists ; 2009 ; New Solutions Volume 19 ; 19 ; newa ; >
       au < manifest ; exists ; 2010 ; New Solutions Volume 20 ; 20 ; newa ; >
       au < manifest ; exists ; 2011 ; New Solutions Volume 21 ; 21 ; newa ; >
@@ -30240,7 +30240,7 @@
       au < manifest ; exists ; 2005 ; Newspaper Research Journal Volume 26 ; 26 ; nrja ; >
       au < manifest ; exists ; 2006 ; Newspaper Research Journal Volume 27 ; 27 ; nrja ; >
       au < manifest ; exists ; 2007 ; Newspaper Research Journal Volume 28 ; 28 ; nrja ; >
-      au < testing ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; nrja ; >
+      au < ready ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; nrja ; >
       au < manifest ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; nrja ; >
       au < manifest ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; nrja ; >
       au < manifest ; exists ; 2011 ; Newspaper Research Journal Volume 32 ; 32 ; nrja ; >
@@ -30308,7 +30308,7 @@
       au < manifest ; exists ; 2005 ; NIR news Volume 16 ; 16 ; nira ; >
       au < manifest ; exists ; 2006 ; NIR news Volume 17 ; 17 ; nira ; >
       au < manifest ; exists ; 2007 ; NIR news Volume 18 ; 18 ; nira ; >
-      au < testing ; exists ; 2008 ; NIR news Volume 19 ; 19 ; nira ; >
+      au < ready ; exists ; 2008 ; NIR news Volume 19 ; 19 ; nira ; >
       au < crawling ; exists ; 2009 ; NIR news Volume 20 ; 20 ; nira ; >
       au < manifest ; exists ; 2010 ; NIR news Volume 21 ; 21 ; nira ; >
       au < manifest ; exists ; 2011 ; NIR news Volume 22 ; 22 ; nira ; >
@@ -30437,7 +30437,7 @@
         au < manifest ; exists ; 2005 ; Nordic Journal of Nursing Research Volume 25 ; 25 ; njna ; >
         au < manifest ; exists ; 2006 ; Nordic Journal of Nursing Research Volume 26 ; 26 ; njna ; >
         au < manifest ; exists ; 2007 ; Nordic Journal of Nursing Research Volume 27 ; 27 ; njna ; >
-        au < testing ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njna ; >
+        au < ready ; exists ; 2008 ; Nordic Journal of Nursing Research Volume 28 ; 28 ; njna ; >
         au < manifest ; exists ; 2009 ; Nordic Journal of Nursing Research Volume 29 ; 29 ; njna ; >
         au < manifest ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njna ; >
         au < manifest ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njna ; >
@@ -30485,7 +30485,7 @@
       au < manifest ; exists ; 2005 ; North American Archaeologist Volume 26 ; 26 ; naaa ; >
       au < manifest ; exists ; 2006 ; North American Archaeologist Volume 27 ; 27 ; naaa ; >
       au < manifest ; exists ; 2007 ; North American Archaeologist Volume 28 ; 28 ; naaa ; >
-      au < testing ; exists ; 2008 ; North American Archaeologist Volume 29 ; 29 ; naaa ; >
+      au < ready ; exists ; 2008 ; North American Archaeologist Volume 29 ; 29 ; naaa ; >
       au < manifest ; exists ; 2009 ; North American Archaeologist Volume 30 ; 30 ; naaa ; >
       au < manifest ; exists ; 2010 ; North American Archaeologist Volume 31 ; 31 ; naaa ; >
       au < manifest ; exists ; 2011 ; North American Archaeologist Volume 32 ; 32 ; naaa ; >
@@ -30710,7 +30710,7 @@
       au < manifest ; exists ; 2006-2007 ; OMEGA - Journal of Death and Dying Volume 54 ; 54 ; omea ; >
       au < manifest ; exists ; 2007 ; OMEGA - Journal of Death and Dying Volume 55 ; 55 ; omea ; >
       au < manifest ; exists ; 2007-2008 ; OMEGA - Journal of Death and Dying Volume 56 ; 56 ; omea ; >
-      au < testing ; exists ; 2008 ; OMEGA - Journal of Death and Dying Volume 57 ; 57 ; omea ; >
+      au < ready ; exists ; 2008 ; OMEGA - Journal of Death and Dying Volume 57 ; 57 ; omea ; >
       au < manifest ; exists ; 2008-2009 ; OMEGA - Journal of Death and Dying Volume 58 ; 58 ; omea ; >
       au < manifest ; exists ; 2009 ; OMEGA - Journal of Death and Dying Volume 59 ; 59 ; omea ; >
       au < manifest ; exists ; 2009-2010 ; OMEGA - Journal of Death and Dying Volume 60 ; 60 ; omea ; >
@@ -30770,7 +30770,7 @@
         au < manifest ; exists ; 2005 ; OTJR: Occupation, Participation and Health Volume 25 ; 25 ; otjb ; >
         au < manifest ; exists ; 2006 ; OTJR: Occupation, Participation and Health Volume 26 ; 26 ; otjb ; >
         au < manifest ; exists ; 2007 ; OTJR: Occupation, Participation and Health Volume 27 ; 27 ; otjb ; >
-        au < testing ; exists ; 2008 ; OTJR: Occupation, Participation and Health Volume 28 ; 28 ; otjb ; >
+        au < ready ; exists ; 2008 ; OTJR: Occupation, Participation and Health Volume 28 ; 28 ; otjb ; >
         au < manifest ; exists ; 2009 ; OTJR: Occupation, Participation and Health Volume 29 ; 29 ; otjb ; >
         au < manifest ; exists ; 2010 ; OTJR: Occupation, Participation and Health Volume 30 ; 30 ; otjb ; >
         au < crawling ; exists ; 2011 ; OTJR: Occupation, Participation and Health Volume 31 ; 31 ; otjb ; >
@@ -31119,7 +31119,7 @@
       au < manifest ; exists ; 2005 ; Paradigm Volume 9 ; 9 ; para ; >
       au < manifest ; exists ; 2006 ; Paradigm Volume 10 ; 10 ; para ; >
       au < manifest ; exists ; 2007 ; Paradigm Volume 11 ; 11 ; para ; >
-      au < testing ; exists ; 2008 ; Paradigm Volume 12 ; 12 ; para ; >
+      au < ready ; exists ; 2008 ; Paradigm Volume 12 ; 12 ; para ; >
       au < manifest ; exists ; 2009 ; Paradigm Volume 13 ; 13 ; para ; >
       au < manifest ; exists ; 2010 ; Paradigm Volume 14 ; 14 ; para ; >
       au < manifest ; exists ; 2011 ; Paradigm Volume 15 ; 15 ; para ; >
@@ -31857,7 +31857,7 @@
       au < manifest ; exists ; 2005 ; The Police Journal: Theory, Practice and Principles Volume 78 ; 78 ; pjxa ; >
       au < manifest ; exists ; 2006 ; The Police Journal: Theory, Practice and Principles Volume 79 ; 79 ; pjxa ; >
       au < manifest ; exists ; 2007 ; The Police Journal: Theory, Practice and Principles Volume 80 ; 80 ; pjxa ; >
-      au < testing ; exists ; 2008 ; The Police Journal: Theory, Practice and Principles Volume 81 ; 81 ; pjxa ; >
+      au < ready ; exists ; 2008 ; The Police Journal: Theory, Practice and Principles Volume 81 ; 81 ; pjxa ; >
       au < manifest ; exists ; 2009 ; The Police Journal: Theory, Practice and Principles Volume 82 ; 82 ; pjxa ; >
       au < manifest ; exists ; 2010 ; The Police Journal: Theory, Practice and Principles Volume 83 ; 83 ; pjxa ; >
       au < crawling ; exists ; 2011 ; The Police Journal: Theory, Practice and Principles Volume 84 ; 84 ; pjxa ; >
@@ -33747,7 +33747,7 @@
       au < manifest ; exists ; 2004-2005 ; Psychology Learning & Teaching Volume 4 ; 4 ; plja ; >
       au < manifest ; exists ; 2005-2006 ; Psychology Learning & Teaching Volume 5 ; 5 ; plja ; >
       au < manifest ; exists ; 2007 ; Psychology Learning & Teaching Volume 6 ; 6 ; plja ; >
-      au < testing ; exists ; 2008 ; Psychology Learning & Teaching Volume 7 ; 7 ; plja ; >
+      au < ready ; exists ; 2008 ; Psychology Learning & Teaching Volume 7 ; 7 ; plja ; >
       au < manifest ; exists ; 2009 ; Psychology Learning & Teaching Volume 8 ; 8 ; plja ; >
       au < manifest ; exists ; 2010 ; Psychology Learning & Teaching Volume 9 ; 9 ; plja ; >
       au < manifest ; exists ; 2011 ; Psychology Learning & Teaching Volume 10 ; 10 ; plja ; >
@@ -34862,7 +34862,7 @@
       
       au < manifest ; exists ; 2006 ; Research in Comparative and International Education Volume 1 ; 1 ; rcia ; >
       au < manifest ; exists ; 2007 ; Research in Comparative and International Education Volume 2 ; 2 ; rcia ; >
-      au < testing ; exists ; 2008 ; Research in Comparative and International Education Volume 3 ; 3 ; rcia ; >
+      au < ready ; exists ; 2008 ; Research in Comparative and International Education Volume 3 ; 3 ; rcia ; >
       au < crawling ; exists ; 2009 ; Research in Comparative and International Education Volume 4 ; 4 ; rcia ; >
       au < manifest ; exists ; 2010 ; Research in Comparative and International Education Volume 5 ; 5 ; rcia ; >
       au < manifest ; exists ; 2011 ; Research in Comparative and International Education Volume 6 ; 6 ; rcia ; >
@@ -34903,8 +34903,8 @@
       au < manifest ; exists ; 2006 ; Research in Education Volume 76 ; 76 ; riea ; >
       au < manifest ; exists ; 2007 ; Research in Education Volume 77 ; 77 ; riea ; >
       au < manifest ; exists ; 2007 ; Research in Education Volume 78 ; 78 ; riea ; >
-      au < testing ; exists ; 2008 ; Research in Education Volume 79 ; 79 ; riea ; >
-      au < testing ; exists ; 2008 ; Research in Education Volume 80 ; 80 ; riea ; >
+      au < ready ; exists ; 2008 ; Research in Education Volume 79 ; 79 ; riea ; >
+      au < ready ; exists ; 2008 ; Research in Education Volume 80 ; 80 ; riea ; >
       au < manifest ; exists ; 2009 ; Research in Education Volume 81 ; 81 ; riea ; >
       au < manifest ; exists ; 2009 ; Research in Education Volume 82 ; 82 ; riea ; >
       au < manifest ; exists ; 2010 ; Research in Education Volume 83 ; 83 ; riea ; >
@@ -35223,7 +35223,7 @@
     au < manifest ; exists ; 2005 ; Review & Expositor Volume 102 ; 102 ; raeb ; >
     au < manifest ; exists ; 2006 ; Review & Expositor Volume 103 ; 103 ; raeb ; >
     au < manifest ; exists ; 2007 ; Review & Expositor Volume 104 ; 104 ; raeb ; >
-    au < testing ; exists ; 2008 ; Review & Expositor Volume 105 ; 105 ; raeb ; >
+    au < ready ; exists ; 2008 ; Review & Expositor Volume 105 ; 105 ; raeb ; >
     au < manifest ; exists ; 2009 ; Review & Expositor Volume 106 ; 106 ; raeb ; >
     au < manifest ; exists ; 2010 ; Review & Expositor Volume 107 ; 107 ; raeb ; >
     au < manifest ; exists ; 2011 ; Review & Expositor Volume 108 ; 108 ; raeb ; >
@@ -35612,7 +35612,7 @@
       au < manifest ; exists ; 2005 ; Rural Special Education Quarterly Volume 24 ; 24 ; rsqa ; >
       au < manifest ; exists ; 2006 ; Rural Special Education Quarterly Volume 25 ; 25 ; rsqa ; >
       au < manifest ; exists ; 2007 ; Rural Special Education Quarterly Volume 26 ; 26 ; rsqa ; >
-      au < testing ; exists ; 2008 ; Rural Special Education Quarterly Volume 27 ; 27 ; rsqa ; >
+      au < ready ; exists ; 2008 ; Rural Special Education Quarterly Volume 27 ; 27 ; rsqa ; >
       au < manifest ; exists ; 2009 ; Rural Special Education Quarterly Volume 28 ; 28 ; rsqa ; >
       au < manifest ; exists ; 2010 ; Rural Special Education Quarterly Volume 29 ; 29 ; rsqa ; >
       au < manifest ; exists ; 2011 ; Rural Special Education Quarterly Volume 30 ; 30 ; rsqa ; >
@@ -35754,7 +35754,7 @@
     au < manifest ; exists ; 2005 ; Scandinavian Journal of Surgery Volume 94 ; 94 ; sjsb ; >
     au < manifest ; exists ; 2006 ; Scandinavian Journal of Surgery Volume 95 ; 95 ; sjsb ; >
     au < manifest ; exists ; 2007 ; Scandinavian Journal of Surgery Volume 96 ; 96 ; sjsb ; >
-    au < testing ; exists ; 2008 ; Scandinavian Journal of Surgery Volume 97 ; 97 ; sjsb ; >
+    au < ready ; exists ; 2008 ; Scandinavian Journal of Surgery Volume 97 ; 97 ; sjsb ; >
     au < manifest ; exists ; 2009 ; Scandinavian Journal of Surgery Volume 98 ; 98 ; sjsb ; >
     au < manifest ; exists ; 2010 ; Scandinavian Journal of Surgery Volume 99 ; 99 ; sjsb ; >
     au < manifest ; exists ; 2011 ; Scandinavian Journal of Surgery Volume 100 ; 100 ; sjsb ; >
@@ -38218,7 +38218,7 @@
       au < manifest ; exists ; 2005 ; Teaching of Psychology Volume 32 ; 32 ; topa ; >
       au < manifest ; exists ; 2006 ; Teaching of Psychology Volume 33 ; 33 ; topa ; >
       au < manifest ; exists ; 2007 ; Teaching of Psychology Volume 34 ; 34 ; topa ; >
-      au < testing ; exists ; 2008 ; Teaching of Psychology Volume 35 ; 35 ; topa ; >
+      au < ready ; exists ; 2008 ; Teaching of Psychology Volume 35 ; 35 ; topa ; >
       au < manifest ; exists ; 2009 ; Teaching of Psychology Volume 36 ; 36 ; topa ; >
       au < manifest ; exists ; 2010 ; Teaching of Psychology Volume 37 ; 37 ; topa ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; topa ; >
@@ -38333,7 +38333,7 @@
       au < manifest ; exists ; 2005 ; Technology in Cancer Research & Treatment Volume 4 ; 4 ; tcta ; >
       au < manifest ; exists ; 2006 ; Technology in Cancer Research & Treatment Volume 5 ; 5 ; tcta ; >
       au < manifest ; exists ; 2007 ; Technology in Cancer Research & Treatment Volume 6 ; 6 ; tcta ; >
-      au < testing ; exists ; 2008 ; Technology in Cancer Research & Treatment Volume 7 ; 7 ; tcta ; >
+      au < ready ; exists ; 2008 ; Technology in Cancer Research & Treatment Volume 7 ; 7 ; tcta ; >
       au < manifest ; exists ; 2009 ; Technology in Cancer Research & Treatment Volume 8 ; 8 ; tcta ; >
       au < crawling ; exists ; 2010 ; Technology in Cancer Research & Treatment Volume 9 ; 9 ; tcta ; >
       au < manifest ; exists ; 2011 ; Technology in Cancer Research & Treatment Volume 10 ; 10 ; tcta ; >
