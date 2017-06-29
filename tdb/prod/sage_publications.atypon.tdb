@@ -24187,39 +24187,40 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
         #param[base_url] = http://pen.sagepub.com/
+        # move to Wiley Blackwell in 2018
 
-        au < manifest ; 1977 ; Journal of Parenteral and Enteral Nutrition Volume 1 ; 1 ; pena >
-        au < manifest ; 1978 ; Journal of Parenteral and Enteral Nutrition Volume 2 ; 2 ; pena >
-        au < manifest ; 1979 ; Journal of Parenteral and Enteral Nutrition Volume 3 ; 3 ; pena >
-        au < manifest ; 1980 ; Journal of Parenteral and Enteral Nutrition Volume 4 ; 4 ; pena >
-        au < manifest ; 1981 ; Journal of Parenteral and Enteral Nutrition Volume 5 ; 5 ; pena >
-        au < manifest ; 1982 ; Journal of Parenteral and Enteral Nutrition Volume 6 ; 6 ; pena >
-        au < manifest ; 1983 ; Journal of Parenteral and Enteral Nutrition Volume 7 ; 7 ; pena >
-        au < manifest ; 1984 ; Journal of Parenteral and Enteral Nutrition Volume 8 ; 8 ; pena >
-        au < manifest ; 1985 ; Journal of Parenteral and Enteral Nutrition Volume 9 ; 9 ; pena >
-        au < manifest ; 1986 ; Journal of Parenteral and Enteral Nutrition Volume 10 ; 10 ; pena >
-        au < manifest ; 1987 ; Journal of Parenteral and Enteral Nutrition Volume 11 ; 11 ; pena >
-        au < manifest ; 1988 ; Journal of Parenteral and Enteral Nutrition Volume 12 ; 12 ; pena >
-        au < manifest ; 1989 ; Journal of Parenteral and Enteral Nutrition Volume 13 ; 13 ; pena >
-        au < manifest ; 1990 ; Journal of Parenteral and Enteral Nutrition Volume 14 ; 14 ; pena >
-        au < manifest ; 1991 ; Journal of Parenteral and Enteral Nutrition Volume 15 ; 15 ; pena >
-        au < manifest ; 1992 ; Journal of Parenteral and Enteral Nutrition Volume 16 ; 16 ; pena >
-        au < manifest ; 1993 ; Journal of Parenteral and Enteral Nutrition Volume 17 ; 17 ; pena >
-        au < manifest ; 1994 ; Journal of Parenteral and Enteral Nutrition Volume 18 ; 18 ; pena >
-        au < manifest ; 1995 ; Journal of Parenteral and Enteral Nutrition Volume 19 ; 19 ; pena >
-        au < manifest ; 1996 ; Journal of Parenteral and Enteral Nutrition Volume 20 ; 20 ; pena >
-        au < manifest ; 1997 ; Journal of Parenteral and Enteral Nutrition Volume 21 ; 21 ; pena >
-        au < manifest ; 1998 ; Journal of Parenteral and Enteral Nutrition Volume 22 ; 22 ; pena >
-        au < manifest ; 1999 ; Journal of Parenteral and Enteral Nutrition Volume 23 ; 23 ; pena >
-        au < manifest ; 2000 ; Journal of Parenteral and Enteral Nutrition Volume 24 ; 24 ; pena >
-        au < manifest ; 2001 ; Journal of Parenteral and Enteral Nutrition Volume 25 ; 25 ; pena >
-        au < manifest ; 2002 ; Journal of Parenteral and Enteral Nutrition Volume 26 ; 26 ; pena >
-        au < manifest ; 2003 ; Journal of Parenteral and Enteral Nutrition Volume 27 ; 27 ; pena >
-        au < manifest ; 2004 ; Journal of Parenteral and Enteral Nutrition Volume 28 ; 28 ; pena >
-        au < manifest ; 2005 ; Journal of Parenteral and Enteral Nutrition Volume 29 ; 29 ; pena >
-        au < manifest ; 2006 ; Journal of Parenteral and Enteral Nutrition Volume 30 ; 30 ; pena >
-        au < manifest ; 2007 ; Journal of Parenteral and Enteral Nutrition Volume 31 ; 31 ; pena >
-        au < manifest ; 2008 ; Journal of Parenteral and Enteral Nutrition Volume 32 ; 32 ; pena >
+        au < testing ; 1977 ; Journal of Parenteral and Enteral Nutrition Volume 1 ; 1 ; pena >
+        au < testing ; 1978 ; Journal of Parenteral and Enteral Nutrition Volume 2 ; 2 ; pena >
+        au < testing ; 1979 ; Journal of Parenteral and Enteral Nutrition Volume 3 ; 3 ; pena >
+        au < testing ; 1980 ; Journal of Parenteral and Enteral Nutrition Volume 4 ; 4 ; pena >
+        au < testing ; 1981 ; Journal of Parenteral and Enteral Nutrition Volume 5 ; 5 ; pena >
+        au < testing ; 1982 ; Journal of Parenteral and Enteral Nutrition Volume 6 ; 6 ; pena >
+        au < testing ; 1983 ; Journal of Parenteral and Enteral Nutrition Volume 7 ; 7 ; pena >
+        au < testing ; 1984 ; Journal of Parenteral and Enteral Nutrition Volume 8 ; 8 ; pena >
+        au < testing ; 1985 ; Journal of Parenteral and Enteral Nutrition Volume 9 ; 9 ; pena >
+        au < testing ; 1986 ; Journal of Parenteral and Enteral Nutrition Volume 10 ; 10 ; pena >
+        au < testing ; 1987 ; Journal of Parenteral and Enteral Nutrition Volume 11 ; 11 ; pena >
+        au < testing ; 1988 ; Journal of Parenteral and Enteral Nutrition Volume 12 ; 12 ; pena >
+        au < testing ; 1989 ; Journal of Parenteral and Enteral Nutrition Volume 13 ; 13 ; pena >
+        au < testing ; 1990 ; Journal of Parenteral and Enteral Nutrition Volume 14 ; 14 ; pena >
+        au < testing ; 1991 ; Journal of Parenteral and Enteral Nutrition Volume 15 ; 15 ; pena >
+        au < testing ; 1992 ; Journal of Parenteral and Enteral Nutrition Volume 16 ; 16 ; pena >
+        au < testing ; 1993 ; Journal of Parenteral and Enteral Nutrition Volume 17 ; 17 ; pena >
+        au < testing ; 1994 ; Journal of Parenteral and Enteral Nutrition Volume 18 ; 18 ; pena >
+        au < testing ; 1995 ; Journal of Parenteral and Enteral Nutrition Volume 19 ; 19 ; pena >
+        au < testing ; 1996 ; Journal of Parenteral and Enteral Nutrition Volume 20 ; 20 ; pena >
+        au < testing ; 1997 ; Journal of Parenteral and Enteral Nutrition Volume 21 ; 21 ; pena >
+        au < testing ; 1998 ; Journal of Parenteral and Enteral Nutrition Volume 22 ; 22 ; pena >
+        au < testing ; 1999 ; Journal of Parenteral and Enteral Nutrition Volume 23 ; 23 ; pena >
+        au < testing ; 2000 ; Journal of Parenteral and Enteral Nutrition Volume 24 ; 24 ; pena >
+        au < testing ; 2001 ; Journal of Parenteral and Enteral Nutrition Volume 25 ; 25 ; pena >
+        au < testing ; 2002 ; Journal of Parenteral and Enteral Nutrition Volume 26 ; 26 ; pena >
+        au < testing ; 2003 ; Journal of Parenteral and Enteral Nutrition Volume 27 ; 27 ; pena >
+        au < testing ; 2004 ; Journal of Parenteral and Enteral Nutrition Volume 28 ; 28 ; pena >
+        au < testing ; 2005 ; Journal of Parenteral and Enteral Nutrition Volume 29 ; 29 ; pena >
+        au < testing ; 2006 ; Journal of Parenteral and Enteral Nutrition Volume 30 ; 30 ; pena >
+        au < testing ; 2007 ; Journal of Parenteral and Enteral Nutrition Volume 31 ; 31 ; pena >
+        au < testing ; 2008 ; Journal of Parenteral and Enteral Nutrition Volume 32 ; 32 ; pena >
         au < doNotProcess ; 2009 ; Journal of Parenteral and Enteral Nutrition Volume 33 ; 33 ; pena >
         au < doNotProcess ; 2010 ; Journal of Parenteral and Enteral Nutrition Volume 34 ; 34 ; pena >
         au < doNotProcess ; 2011 ; Journal of Parenteral and Enteral Nutrition Volume 35 ; 35 ; pena >
