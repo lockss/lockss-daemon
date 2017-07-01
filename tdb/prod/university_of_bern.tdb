@@ -1,0 +1,82 @@
+{
+  publisher <
+    name = University of Bern
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique ;
+        eissn = 2297-9069
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch
+      param[journal_id] = iw
+
+      au < exists ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
+      au < expected ; 2017 ; 8 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2017 ; 2017 ; >
+
+  }
+
+  {
+
+      title <
+        name = itw : im dialog -- Forschungen zum Gegenwartstheater ;
+        eissn = 2297-6523
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch
+      param[journal_id] = itwid
+
+      au < exists ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
+      au < expected ; 2017 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2017 ; 2017 ; >
+
+  }
+
+  {
+
+      title <
+        name = Jahrbuch Diakonie Schweiz ;
+        eissn = 2504-3994
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch
+      param[journal_id] = JDS
+
+      au < expected ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Eye Movement Research ;
+        eissn = 1995-8692
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch
+      param[journal_id] = JEMR
+
+      au < exists ; 2013 ; 1 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 2 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 3 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 4 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
+      au < expected ; 2017 ; 5 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
+
+  }
+
+}
