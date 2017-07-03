@@ -186,11 +186,11 @@
     au < doNotProcess ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 >
     au < doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 >
-    au < exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 >
-    au < exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 >
-    au < exists ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 >
-    au < expected ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 >
-    au < expected ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 >
+    au < manifest ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 >
+    au < manifest ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 >
+    au < manifest ; 2015 ; European Journal of Psychotraumatology [including Supplements] Volume 6 ; 6 >
+    au < manifest ; 2016 ; European Journal of Psychotraumatology [including Supplements] Volume 7 ; 7 >
+    au < manifest ; 2017 ; European Journal of Psychotraumatology [including Supplements] Volume 8 ; 8 >
 
   }
   
@@ -380,12 +380,12 @@
     #param[base_url] = http://www.jecme.eu/
     param[journal_id] = zjec20
 
-    au < exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 >
-    au < exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 >
-    au < exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 >
+    au < manifest ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 >
+    au < manifest ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 >
+    au < manifest ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 >
     au < doNotProcess ; 2015 ; Journal of European Continuing Medical Education Volume 4 ; 4 >
-    au < exists ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 >
-    au < expected ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 >
+    au < manifest ; 2016 ; Journal of European Continuing Medical Education Volume 5 ; 5 >
+    au < manifest ; 2017 ; Journal of European Continuing Medical Education Volume 6 ; 6 >
 
   }
 

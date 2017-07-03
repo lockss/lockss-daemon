@@ -5447,15 +5447,15 @@
   
       #param[base_url] = http://cmm.sagepub.com/
   
-        au < exists ; 2010 ; Cell Medicine Volume 1 ; 1 ; cmma >
-        au < exists ; 2011 ; Cell Medicine Volume 2 ; 2 ; cmma >
-        au < exists ; 2012 ; Cell Medicine Volume 3 ; 3 ; cmma >
-        au < exists ; 2012 ; Cell Medicine Volume 4 ; 4 ; cmma >
-        au < exists ; 2013 ; Cell Medicine Volume 5 ; 5 ; cmma >
-        au < exists ; 2014 ; Cell Medicine Volume 6 ; 6 ; cmma >
-        au < exists ; 2015 ; Cell Medicine Volume 7 ; 7 ; cmma >
-        au < exists ; 2016 ; Cell Medicine Volume 8 ; 8 ; cmma >
-        au < exists ; 2017 ; Cell Medicine Volume 9 ; 9 ; cmma >
+        au < manifest ; 2010 ; Cell Medicine Volume 1 ; 1 ; cmma >
+        au < manifest ; 2011 ; Cell Medicine Volume 2 ; 2 ; cmma >
+        au < manifest ; 2012 ; Cell Medicine Volume 3 ; 3 ; cmma >
+        au < manifest ; 2012 ; Cell Medicine Volume 4 ; 4 ; cmma >
+        au < manifest ; 2013 ; Cell Medicine Volume 5 ; 5 ; cmma >
+        au < manifest ; 2014 ; Cell Medicine Volume 6 ; 6 ; cmma >
+        au < manifest ; 2015 ; Cell Medicine Volume 7 ; 7 ; cmma >
+        au < manifest ; 2016 ; Cell Medicine Volume 8 ; 8 ; cmma >
+        au < manifest ; 2017 ; Cell Medicine Volume 9 ; 9 ; cmma >
   
     }
 
@@ -5469,32 +5469,32 @@
   
       #param[base_url] = http://cll.sagepub.com/
   
-        au < exists ; 1992 ; Cell Transplantation Volume 1 ; 1 ; clla >
-        au < exists ; 1993 ; Cell Transplantation Volume 2 ; 2 ; clla >
-        au < exists ; 1994 ; Cell Transplantation Volume 3 ; 3 ; clla >
-        au < exists ; 1995 ; Cell Transplantation Volume 4 ; 4 ; clla >
-        au < exists ; 1996 ; Cell Transplantation Volume 5 ; 5 ; clla >
-        au < exists ; 1997 ; Cell Transplantation Volume 6 ; 6 ; clla >
-        au < exists ; 1998 ; Cell Transplantation Volume 7 ; 7 ; clla >
-        au < exists ; 1999 ; Cell Transplantation Volume 8 ; 8 ; clla >
-        au < exists ; 2000 ; Cell Transplantation Volume 9 ; 9 ; clla >
-        au < exists ; 2001 ; Cell Transplantation Volume 10 ; 10 ; clla >
-        au < exists ; 2002 ; Cell Transplantation Volume 11 ; 11 ; clla >
-        au < exists ; 2003 ; Cell Transplantation Volume 12 ; 12 ; clla >
-        au < exists ; 2004 ; Cell Transplantation Volume 13 ; 13 ; clla >
-        au < exists ; 2005 ; Cell Transplantation Volume 14 ; 14 ; clla >
-        au < exists ; 2006 ; Cell Transplantation Volume 15 ; 15 ; clla >
-        au < exists ; 2007 ; Cell Transplantation Volume 16 ; 16 ; clla >
-        au < exists ; 2008 ; Cell Transplantation Volume 17 ; 17 ; clla >
-        au < exists ; 2009 ; Cell Transplantation Volume 18 ; 18 ; clla >
-        au < exists ; 2010 ; Cell Transplantation Volume 19 ; 19 ; clla >
-        au < exists ; 2011 ; Cell Transplantation Volume 20 ; 20 ; clla >
-        au < exists ; 2012 ; Cell Transplantation Volume 21 ; 21 ; clla >
-        au < exists ; 2013 ; Cell Transplantation Volume 22 ; 22 ; clla >
-        au < exists ; 2014 ; Cell Transplantation Volume 23 ; 23 ; clla >
-        au < exists ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla >
-        au < exists ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla >
-        au < exists ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla >
+        au < manifest ; 1992 ; Cell Transplantation Volume 1 ; 1 ; clla >
+        au < manifest ; 1993 ; Cell Transplantation Volume 2 ; 2 ; clla >
+        au < manifest ; 1994 ; Cell Transplantation Volume 3 ; 3 ; clla >
+        au < manifest ; 1995 ; Cell Transplantation Volume 4 ; 4 ; clla >
+        au < manifest ; 1996 ; Cell Transplantation Volume 5 ; 5 ; clla >
+        au < manifest ; 1997 ; Cell Transplantation Volume 6 ; 6 ; clla >
+        au < manifest ; 1998 ; Cell Transplantation Volume 7 ; 7 ; clla >
+        au < manifest ; 1999 ; Cell Transplantation Volume 8 ; 8 ; clla >
+        au < manifest ; 2000 ; Cell Transplantation Volume 9 ; 9 ; clla >
+        au < manifest ; 2001 ; Cell Transplantation Volume 10 ; 10 ; clla >
+        au < manifest ; 2002 ; Cell Transplantation Volume 11 ; 11 ; clla >
+        au < manifest ; 2003 ; Cell Transplantation Volume 12 ; 12 ; clla >
+        au < manifest ; 2004 ; Cell Transplantation Volume 13 ; 13 ; clla >
+        au < manifest ; 2005 ; Cell Transplantation Volume 14 ; 14 ; clla >
+        au < manifest ; 2006 ; Cell Transplantation Volume 15 ; 15 ; clla >
+        au < manifest ; 2007 ; Cell Transplantation Volume 16 ; 16 ; clla >
+        au < manifest ; 2008 ; Cell Transplantation Volume 17 ; 17 ; clla >
+        au < manifest ; 2009 ; Cell Transplantation Volume 18 ; 18 ; clla >
+        au < manifest ; 2010 ; Cell Transplantation Volume 19 ; 19 ; clla >
+        au < manifest ; 2011 ; Cell Transplantation Volume 20 ; 20 ; clla >
+        au < manifest ; 2012 ; Cell Transplantation Volume 21 ; 21 ; clla >
+        au < manifest ; 2013 ; Cell Transplantation Volume 22 ; 22 ; clla >
+        au < manifest ; 2014 ; Cell Transplantation Volume 23 ; 23 ; clla >
+        au < manifest ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla >
+        au < manifest ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla >
+        au < manifest ; 2017 ; Cell Transplantation Volume 26 ; 26 ; clla >
   
     }
 
@@ -10072,7 +10072,7 @@
 
       au < doNotProcess ; 2015 ; Emerging Economy Studies Volume 1 ; 1 ; emia >
       au < released ; 2016 ; Emerging Economy Studies Volume 2 ; 2 ; emia >
-      au < expected ; 2017 ; Emerging Economy Studies Volume 3 ; 3 ; emia >
+      au < manifest ; 2017 ; Emerging Economy Studies Volume 3 ; 3 ; emia >
 
   }
 
@@ -14405,7 +14405,7 @@
   
       #param[base_url] = http://hpx.sagepub.com/
   
-        au < exists ; 2017 ; Hospital Pharmacy Volume 52 ; 52 ; hpxa >
+        au < manifest ; 2017 ; Hospital Pharmacy Volume 52 ; 52 ; hpxa >
   
     }
 
@@ -15107,7 +15107,7 @@
         au < doNotProcess ; 2014 ; Indian Historical Review Volume 41 ; 41 ; ihra >
         au < doNotProcess ; 2015 ; Indian Historical Review Volume 42 ; 42 ; ihra >
         au < released ; 2016 ; Indian Historical Review Volume 43 ; 43 ; ihra >
-        au < expected ; 2017 ; Indian Historical Review Volume 44 ; 44 ; ihra >
+        au < manifest ; 2017 ; Indian Historical Review Volume 44 ; 44 ; ihra >
 
     }
 
@@ -18781,7 +18781,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; jend >
         au < manifest ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; jend >
         au < manifest ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; jend >
-        au < expected ; 2017-2018 ; Journal of Building Physics Volume 41 ; 41 ; jend >
+        au < manifest ; 2017-2018 ; Journal of Building Physics Volume 41 ; 41 ; jend >
 
       }
 
@@ -29014,7 +29014,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2014 ; Metamorphosis Volume 13 ; 13 ; meta >
         au < manifest ; 2015 ; Metamorphosis Volume 14 ; 14 ; meta >
         au < released ; 2016 ; Metamorphosis Volume 15 ; 15 ; meta >
-        au < expected ; 2017 ; Metamorphosis Volume 16 ; 16 ; meta >
+        au < manifest ; 2017 ; Metamorphosis Volume 16 ; 16 ; meta >
 
     }
 
@@ -34169,7 +34169,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Race & Class Volume 56 ; 56 ; racb >
         au < doNotProcess ; 2015 ; Race & Class Volume 57 ; 57 ; racb >
         au < released ; 2016 ; Race & Class Volume 58 ; 58 ; racb >
-        au < expected ; 2017 ; Race & Class Volume 59 ; 59 ; racb >
+        au < manifest ; 2017 ; Race & Class Volume 59 ; 59 ; racb >
 
       }
 
@@ -34607,7 +34607,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < released ; 2015 ; Research in Education Volume 94 ; 94 ; riea >
       au < released ; 2016 ; Research in Education Volume 95 ; 95 ; riea >
       au < released ; 2016 ; Research in Education Volume 96 ; 96 ; riea >
-      au < expected ; 2017 ; Research in Education Volume 97 ; 97 ; riea >
+      au < manifest ; 2017 ; Research in Education Volume 97 ; 97 ; riea >
 
     }
 
@@ -37582,7 +37582,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; mica >
         au < doNotProcess ; 2015 ; Studies in Microeconomics Volume 3 ; 3 ; mica >
         au < released ; 2016 ; Studies in Microeconomics Volume 4 ; 4 ; mica >
-        au < expected ; 2017 ; Studies in Microeconomics Volume 5 ; 5 ; mica >
+        au < manifest ; 2017 ; Studies in Microeconomics Volume 5 ; 5 ; mica >
 
       }
 

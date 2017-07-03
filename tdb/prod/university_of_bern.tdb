@@ -17,13 +17,13 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = iw
 
-      au < exists ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
+      au < manifest ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
       au < exists ; 2011 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2011 ; 2011 ; >
-      au < exists ; 2012 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
+      au < manifest ; 2012 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
       au < exists ; 2013 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
+      au < manifest ; 2014 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
       au < exists ; 2015 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2015 ; 2015 ; >
-      au < exists ; 2016 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
+      au < manifest ; 2016 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
       au < expected ; 2017 ; 8 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2017 ; 2017 ; >
 
   }
@@ -39,8 +39,8 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = itwid
 
-      au < exists ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
-      au < exists ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
+      au < manifest ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
       au < expected ; 2017 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2017 ; 2017 ; >
 
   }
@@ -56,7 +56,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JDS
 
-      au < expected ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
+      au < manifest ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
 
   }
 
@@ -71,11 +71,11 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JEMR
 
-      au < exists ; 2013 ; 1 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
-      au < exists ; 2014 ; 2 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
-      au < exists ; 2015 ; 3 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
-      au < exists ; 2016 ; 4 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
-      au < expected ; 2017 ; 5 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
+      au < manifest ; 2013 ; 1 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 2 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 4 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 5 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
 
   }
 
