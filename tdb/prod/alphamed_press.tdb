@@ -37,25 +37,4 @@
 
   }
 
-  {
-    title <
-      name = Stem Cells: Translational Medicine ;
-      issn = 2157-6564 ;
-      eissn = 2157-6580 ;
-      issnl = 2157-6564
-    >
-    
-    param[base_url] = http://stemcellstm.alphamedpress.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = Login page
-
-    au < notReady ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
-    au < exists ; 2013 ; Stem Cells: Translational Medicine Volume 2 ; 2 >
-    au < exists ; 2014 ; Stem Cells: Translational Medicine Volume 3 ; 3 >
-    au < exists ; 2015 ; Stem Cells: Translational Medicine Volume 4 ; 4 >
-    au < exists ; 2016 ; Stem Cells: Translational Medicine Volume 5 ; 5 >
-
-  }
-  
 }
