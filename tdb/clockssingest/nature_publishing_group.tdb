@@ -28,7 +28,7 @@
     au < zapped ; finished ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 ; >
     au < finished ; finished ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 ; >
     au < finished ; frozen ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 ; >
-    au < finished ; frozen ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
+    au < finished ; finished ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; finished ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
     au < finished ; finished ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
@@ -289,7 +289,7 @@
     au < frozen ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 ; >
     au < finished ; frozen ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 ; >
     au < finished ; frozen ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 ; >
-    au < finished ; frozen ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
+    au < finished ; finished ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
     au < finished ; frozen ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 ; >
     au < finished ; finished ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
     au < finished ; finished ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
@@ -519,7 +519,7 @@
     param[journal_id] = cddis
 
     au < finished ; frozen ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 ; >
-    au < finished ; frozen ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 ; >
+    au < finished ; finished ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 ; >
     au < finished ; finished ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 ; >
     au < deepCrawl ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 ; >
     au < finished ; finished ; 2014 ; Cell Death & Disease Volume 5 ; 2014 ; 5 ; >
@@ -577,7 +577,7 @@
     au < finished ; frozen ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 ; >
     au < finished ; finished ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 ; >
-    au < finished ; frozen ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
+    au < finished ; finished ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
     au < frozen ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 ; >
     au < finished ; finished ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
@@ -1224,7 +1224,7 @@
     au < zapped ; finished ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 ; >
     au < finished ; frozen ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 ; >
     au < finished ; finished ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 ; >
-    au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
+    au < finished ; finished ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
     au < finished ; finished ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 ; >
     au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
@@ -1336,7 +1336,7 @@
 
     au < finished ; finished ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 ; >
     au < finished ; finished ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 ; >
-    au < finished ; frozen ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 ; >
+    au < finished ; finished ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 ; >
     au < finished ; finished ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 ; >
     au < finished ; finished ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 ; >
     au < finished ; finished ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 ; reingest1.clockss.org:8082 >
@@ -1810,7 +1810,7 @@
     #moved to Elsevier
     param[journal_id] = kisup
 
-    au < finished ; frozen ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 ; >
+    au < finished ; finished ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 ; >
     au < frozen ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 ; >
     au < frozen ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 ; >
 
@@ -1853,7 +1853,7 @@
     au < finished ; finished ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 ; >
     au < finished ; frozen ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 ; >
     au < finished ; frozen ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 ; >
-    au < finished ; frozen ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 ; >
+    au < finished ; finished ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 ; >
     au < deepCrawl ; exists ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 ; >
     au < finished ; finished ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 ; >
@@ -2041,7 +2041,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Molecular Therapy Volume 13 (2006) ; 2006 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Molecular Therapy Volume 14 (2006) ; 2006 ; 14 ; >
     au < manifest ; exists ; 2007 ; Molecular Therapy Volume 15 ; 2007 ; 15 ; >
-    au < finished ; frozen ; 2008 ; Molecular Therapy Volume 16 ; 2008 ; 16 ; >
+    au < finished ; finished ; 2008 ; Molecular Therapy Volume 16 ; 2008 ; 16 ; >
     au < finished ; finished ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 ; >
     au < finished ; frozen ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 ; >
     au < finished ; frozen ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 ; >
@@ -3815,10 +3815,10 @@
     au < manifest ; exists ; 2006 ; The Pharmacogenomics Journal Volume 6 ; 2006 ; 6 ; >
     au < manifest ; exists ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 ; >
     au < zapped ; finished ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 ; >
-    au < finished ; frozen ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 ; >
+    au < finished ; finished ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 ; >
     au < finished ; frozen ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 ; >
     au < finished ; frozen ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 ; >
-    au < finished ; frozen ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 ; >
+    au < finished ; finished ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 ; >
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; finished ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
     au < deepCrawl ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
@@ -4087,7 +4087,7 @@
     au < zapped ; finished ; 2009 ; Vital Volume 6 (2009) ; 2009 ; 6 ; >
     au < zapped ; finished ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 ; >
     au < finished ; finished ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 ; >
-    au < finished ; frozen ; 2011 ; Vital Volume 8 ; 2011 ; 8 ; >
+    au < finished ; finished ; 2011 ; Vital Volume 8 ; 2011 ; 8 ; >
     au < zapped ; finished ; 2011 ; Vital Volume 9 (2011) ; 2011 ; 9 ; >
     au < finished ; frozen ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 ; >
     au < finished ; finished ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 ; >
