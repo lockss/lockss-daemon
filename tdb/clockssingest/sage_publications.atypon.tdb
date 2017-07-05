@@ -15728,7 +15728,8 @@
       #param[base_url] = http://ice.sagepub.com/
       comment[merged_from] = 1366-5456 and 0021-9657
       
-      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 ; icec ; >
+      #merged from 1366-5456 and 0021-9657
+      au < exists ; exists ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 ; icec ; >
       au < frozen ; exists ; 2016 ; International Journal of Christianity and Education Volume 20 ; 20 ; icec ; >
       au < manifest ; exists ; 2017 ; International Journal of Christianity and Education Volume 21 ; 21 ; icec ; >
       
@@ -15745,21 +15746,25 @@
       #param[base_url] = http://ice.sagepub.com/
       comment[merged_into] = 2056-9971
       
-      au < manifest ; exists ; 2001 ; Journal of Education and Christian Belief Volume 5 ; 5 ; icea ; >
-      au < manifest ; exists ; 2002 ; Journal of Education and Christian Belief Volume 6 ; 6 ; icea ; >
-      au < manifest ; exists ; 2003 ; Journal of Education and Christian Belief Volume 7 ; 7 ; icea ; >
-      au < manifest ; exists ; 2004 ; Journal of Education and Christian Belief Volume 8 ; 8 ; icea ; >
-      au < manifest ; exists ; 2005 ; Journal of Education and Christian Belief Volume 9 ; 9 ; icea ; >
-      au < manifest ; exists ; 2006 ; Journal of Education and Christian Belief Volume 10 ; 10 ; icea ; >
-      au < manifest ; exists ; 2007 ; Journal of Education and Christian Belief Volume 11 ; 11 ; icea ; >
-      au < testing ; exists ; 2008 ; Journal of Education and Christian Belief Volume 12 ; 12 ; icea ; >
-      au < crawling ; exists ; 2009 ; Journal of Education and Christian Belief Volume 13 ; 13 ; icea ; >
-      au < manifest ; exists ; 2010 ; Journal of Education and Christian Belief Volume 14 ; 14 ; icea ; >
-      au < manifest ; exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 ; icea ; >
-      au < manifest ; exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 ; icea ; >
-      au < manifest ; exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 ; icea ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 ; icea ; >
-
+      au < exists ; exists ; 1997 ; Journal of Education and Christian Belief Volume os-1 ; os-1 ; iceb ; >
+      au < exists ; exists ; 1998 ; Journal of Education and Christian Belief Volume os-2 ; os-2 ; iceb ; >
+      au < exists ; exists ; 1999 ; Journal of Education and Christian Belief Volume os-3 ; os-3 ; iceb ; >
+      au < exists ; exists ; 2000 ; Journal of Education and Christian Belief Volume os-4 ; os-4 ; iceb ; >
+      au < exists ; exists ; 2001 ; Journal of Education and Christian Belief Volume os-5 ; os-5 ; iceb ; >
+      au < exists ; exists ; 2002 ; Journal of Education and Christian Belief Volume os-6 ; os-6 ; iceb ; >
+      au < exists ; exists ; 2003 ; Journal of Education and Christian Belief Volume os-7 ; os-7 ; iceb ; >
+      au < exists ; exists ; 2004 ; Journal of Education and Christian Belief Volume os-8 ; os-8 ; iceb ; >
+      au < exists ; exists ; 2005 ; Journal of Education and Christian Belief Volume os-9 ; os-9 ; iceb ; >
+      au < exists ; exists ; 2006 ; Journal of Education and Christian Belief Volume os-10 ; os-10 ; iceb ; >
+      au < exists ; exists ; 2007 ; Journal of Education and Christian Belief Volume os-11 ; os-11 ; iceb ; >
+      au < exists ; exists ; 2008 ; Journal of Education and Christian Belief Volume os-12 ; os-12 ; iceb ; >
+      au < exists ; exists ; 2009 ; Journal of Education and Christian Belief Volume os-13 ; os-13 ; iceb ; >
+      au < exists ; exists ; 2010 ; Journal of Education and Christian Belief Volume os-14 ; os-14 ; iceb ; >
+      au < exists ; exists ; 2011 ; Journal of Education and Christian Belief Volume os-15 ; os-15 ; iceb ; >
+      au < exists ; exists ; 2012 ; Journal of Education and Christian Belief Volume os-16 ; os-16 ; iceb ; >
+      au < exists ; exists ; 2013 ; Journal of Education and Christian Belief Volume os-17 ; os-17 ; iceb ; >
+      au < exists ; exists ; 2014 ; Journal of Education and Christian Belief Volume os-18 ; os-18 ; iceb ; >
+      #became International Journal of Christianity and Education 
   }
 
   {
@@ -15772,8 +15777,14 @@
 
       #param[base_url] = http://ice.sagepub.com/
       comment[merged_into] = 2056-9971
-      # content available 1974 volume 17, missing content from 1975 to 2000
       
+      au < crawling ; exists ; 1970 ; Journal of Christian Education Volume 13 ; 13 ; icea ; >
+      au < exists ; exists ; 1971 ; Journal of Christian Education Volume 14 ; 14 ; icea ; >
+      au < exists ; exists ; 1972 ; Journal of Christian Education Volume 15 ; 15 ; icea ; >
+      au < exists ; exists ; 1973 ; Journal of Christian Education Volume 16 ; 16 ; icea ; >
+      
+      au < exists ; exists ; 1999 ; Journal of Christian Education Volume 42 ; 42 ; icea ; >
+      au < exists ; exists ; 2000 ; Journal of Christian Education Volume 43 ; 43 ; icea ; >
       au < manifest ; exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 ; icea ; >
       au < manifest ; exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 ; icea ; >
       au < manifest ; exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 ; icea ; >
@@ -15786,7 +15797,8 @@
       au < manifest ; exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 ; icea ; >
       au < manifest ; exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 ; icea ; >
       au < crawling ; exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 ; icea ; >
-      
+      #became International Journal of Christianity and Education 
+
   }
 
   {
