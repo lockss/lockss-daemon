@@ -2,10 +2,12 @@
   publisher <
     name = SEPM Society for Sedimentary Geology ;
     info[contract] = 2014 ;
-    info[back] = 2012 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 6
   >
+  
+  #Moving to SC fall 2017 with GSW
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
@@ -88,24 +90,24 @@
       au < manifest ; exists ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 ; >
       au < manifest ; exists ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 ; >
       au < manifest ; exists ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 ; >
-      au < manifest ; exists ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 ; >
-      au < manifest ; exists ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 ; >
-      au < manifest ; exists ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 ; >
-      au < manifest ; exists ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 ; >
-      au < manifest ; exists ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 ; >
-      au < manifest ; exists ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 ; >
-      au < manifest ; exists ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 ; >
-      au < manifest ; exists ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 ; >
-      au < manifest ; exists ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 ; >
-      au < manifest ; exists ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 ; >
-      au < manifest ; exists ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 ; >
-      au < manifest ; exists ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 ; >
+      au < testing ; exists ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 ; >
+      au < testing ; exists ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 ; >
+      au < testing ; exists ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 ; >
+      au < testing ; exists ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 ; >
+      au < testing ; exists ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 ; >
+      au < testing ; exists ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 ; >
+      au < testing ; exists ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 ; >
+      au < testing ; exists ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 ; >
+      au < testing ; exists ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 ; >
+      au < testing ; exists ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 ; >
+      au < testing ; exists ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 ; >
+      au < testing ; exists ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 ; >
       au < frozen ; exists ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 ; >
       au < frozen ; exists ; 2013 ; Journal of Sedimentary Research Volume 83 ; 83 ; >
       au < deepCrawl ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 ; >
       au < deepCrawl ; exists ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 ; >
       au < crawling ; exists ; 2016 ; Journal of Sedimentary Research Volume 86 ; 86 ; >
-      au < manifest ; exists ; 2017 ; Journal of Sedimentary Research Volume 87 ; 87 ; >
+      au < testing ; exists ; 2017 ; Journal of Sedimentary Research Volume 87 ; 87 ; >
 
   }
 
@@ -132,24 +134,24 @@
       au < manifest ; exists ; 1997 ; PALAIOS Volume 12 ; 12 ; >
       au < manifest ; exists ; 1998 ; PALAIOS Volume 13 ; 13 ; >
       au < manifest ; exists ; 1999 ; PALAIOS Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2000 ; PALAIOS Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2001 ; PALAIOS Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2002 ; PALAIOS Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2003 ; PALAIOS Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2004 ; PALAIOS Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2005 ; PALAIOS Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2006 ; PALAIOS Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2007 ; PALAIOS Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2008 ; PALAIOS Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2009 ; PALAIOS Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2010 ; PALAIOS Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2011 ; PALAIOS Volume 26 ; 26 ; >
+      au < testing ; exists ; 2000 ; PALAIOS Volume 15 ; 15 ; >
+      au < testing ; exists ; 2001 ; PALAIOS Volume 16 ; 16 ; >
+      au < testing ; exists ; 2002 ; PALAIOS Volume 17 ; 17 ; >
+      au < testing ; exists ; 2003 ; PALAIOS Volume 18 ; 18 ; >
+      au < testing ; exists ; 2004 ; PALAIOS Volume 19 ; 19 ; >
+      au < testing ; exists ; 2005 ; PALAIOS Volume 20 ; 20 ; >
+      au < testing ; exists ; 2006 ; PALAIOS Volume 21 ; 21 ; >
+      au < testing ; exists ; 2007 ; PALAIOS Volume 22 ; 22 ; >
+      au < testing ; exists ; 2008 ; PALAIOS Volume 23 ; 23 ; >
+      au < testing ; exists ; 2009 ; PALAIOS Volume 24 ; 24 ; >
+      au < testing ; exists ; 2010 ; PALAIOS Volume 25 ; 25 ; >
+      au < testing ; exists ; 2011 ; PALAIOS Volume 26 ; 26 ; >
       au < frozen ; exists ; 2012 ; PALAIOS Volume 27 ; 27 ; >
       au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 ; >
       au < frozen ; exists ; 2015 ; PALAIOS Volume 30 ; 30 ; >
       au < deepCrawl ; exists ; 2016 ; PALAIOS Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2017 ; PALAIOS Volume 32 ; 32 ; >
+      au < testing ; exists ; 2017 ; PALAIOS Volume 32 ; 32 ; >
 
   }
 
