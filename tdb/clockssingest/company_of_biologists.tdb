@@ -167,7 +167,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1996 ; Development Volume 123 ; 123 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1997 ; Development Volume 124 ; 124 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1998 ; Development Volume 125 ; 125 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 1999 ; Development Volume 126 ; 126 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 1999 ; Development Volume 126 ; 126 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2000 ; Development Volume 127 ; 127 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Development Volume 128 ; 128 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Development Volume 129 ; 129 ; >
@@ -598,9 +598,9 @@
     au < biologists.ClockssBiologistsDrupalPlugin ; exists ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; exists ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; >
-    au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; >
+    au < biologists.ClockssBiologistsDrupalPlugin ; finished ; manifest ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; reingest3.clockss.org:8083 >
     au < biologists.ClockssBiologistsDrupalPlugin ; frozen ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; >
     au < biologists.ClockssBiologistsDrupalPlugin ; notReady ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; > #Probe url: http://jeb.biologists.org/content/207/25/v.2.long outside of crawl spec counting
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 ; >
