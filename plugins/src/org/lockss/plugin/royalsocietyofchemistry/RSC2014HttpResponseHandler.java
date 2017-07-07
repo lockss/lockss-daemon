@@ -73,7 +73,6 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, final Exception ex)
     throws PluginException {
-    log.debug(ex.getMessage() + ": " + url);
     
     // this checks for the specific exceptions before going to the general case and retry
     if (ex instanceof ContentValidationException.WrongLength) {
@@ -82,7 +81,7 @@ public class RSC2014HttpResponseHandler implements CacheResultHandler {
         // retry and no store cache exception
         return new RetryableNoFailException_2_10S(ex);
       } else {
-        log.debug3("Ignoring Wrong length - storing file");
+        log.debug("Ignoring Wrong length - storing file");
         // ignore and continue
         return new CacheSuccess();
       }

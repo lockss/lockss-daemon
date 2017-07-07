@@ -46,7 +46,10 @@ import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -118,12 +121,19 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "navigation"),
         // Contains images that can change
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "https?://[^/]+/pubs-core/"),
+        // remove abstract links which disappeared from content crawled more recently
+        HtmlNodeFilters.tagWithAttribute("div", "class", "absract_links"),
+        // more aggressive filtering, the next step would be to remove all remaining tags
+        HtmlNodeFilters.comment(),
+        HtmlNodeFilters.tag("noscript"),
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    // add a space before the start tag "<", then whitespace filter
+    Reader addSpaceFReader = new StringFilter(filteredReader, "<", " <");
+    return new ReaderInputStream(new WhiteSpaceFilter(addSpaceFReader));
   }
   
 }

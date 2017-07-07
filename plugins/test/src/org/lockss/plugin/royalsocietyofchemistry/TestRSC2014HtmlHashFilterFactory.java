@@ -50,7 +50,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  private static final String withScript = "<html>" +
+  private static final String withScript = "" +
+      "<html>" +
       "  	<head>" +
       "<script type=\"text/javascript\">\n" + 
       "  var _gaq = _gaq || [];\n" + 
@@ -60,7 +61,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "<script type=\"text/javascript\" src=\"/camcos/etc/cover.js\"></script>" +
       "</html>";
   
-  private static final String withoutScript = "<html>" +
+  private static final String withoutScript = " " +
+      "<html>" +
       " " +
       "</html>";
   
@@ -82,10 +84,10 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "</html>";
   
   private static final String withoutStuff = "" +
-      "<html>" +
-      "<body> " +
-      "</body>" +
-      "</html>";
+      " <html>" +
+      " <body>" +
+      " </body>" +
+      " </html>";
   
   private static final String withLinks = "" +
       "A. A, A. K, H. S, and R. A, Native changes in <span class=\"italic\">Bacillus subtilis</span>" +
@@ -98,18 +100,20 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "title=\"Link via OpenURL Resolver\"><img src=\"http://pubs.rsc.org/en\"></a>.";
   
   private static final String withoutLinks = "" +
-      "A. A, A. K, H. S, and R. A, Native changes in <span>Bacillus subtilis</span>" +
-      ", <span>Jnl.</span>, year, <span>2</span>(1), 80 87" +
-      "<a>Left</a><a><img src=\"http://pubs.rsc.org/en\"></a>.";
+      "A. A, A. K, H. S, and R. A, Native changes in <span>Bacillus subtilis </span>" +
+      ", <span>Jnl. </span>, year, <span>2 </span>(1), 80 87" +
+      " <a>Left </a> <a> <img src=\"http://pubs.rsc.org/en\"> </a>.";
   
-  private static final String withNav = "<html>\n" +
+  private static final String withNav = "" +
+      "<html>\n" +
       " <div id=\"top\" class=\"navigation\" style=\"color: rgb(0, 0, 0);\">\n" + 
       "  <h1>\nGap in\n</h1>\n" + 
       "  <div class=\"open_access\">\n</div>" +
       " </div>" +
       "</html>";
   
-  private static final String withoutNav = "<html>" +
+  private static final String withoutNav = " " +
+      "<html>" +
       " " +
       "</html>";
   
@@ -118,7 +122,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "<span id=\"1\" />" +
       "</body></html>";
   
-  private static final String noError = "" +
+  private static final String noError = " " +
       "<html><body>" +
       "<span/>" +
       "</body></html>";
