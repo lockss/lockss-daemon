@@ -82,7 +82,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
 
@@ -132,8 +132,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Interface Focus Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Interface Focus Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Interface Focus Volume 4 ; 4 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2014 ; Interface Focus Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Interface Focus Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Interface Focus Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Interface Focus Volume 7 ; 7 ; >
 
@@ -246,8 +246,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
     
@@ -266,7 +266,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Open Biology Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Open Biology Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2013 ; Open Biology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Open Biology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -480,7 +480,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; reingest2.clockss.org:8085 >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
 
@@ -689,7 +689,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; reingest4.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
 
@@ -1291,7 +1291,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 ; >
     au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 ; >
     au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
-    au < rsp.ClockssRSPDrupalPlugin ; frozen ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; finished ; manifest ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; reingest5.clockss.org:8082 >
     au < rsp.ClockssRSPDrupalPlugin ; manifest ; exists ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
 
