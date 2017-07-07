@@ -2355,7 +2355,7 @@
     param[base_url] = http://www.clinicalimagingscience.org/
     param[journal_issn] = 2156-7514 
     # different format from other journals. Issues are accessed individually by clicking http://www.clinicalimagingscience.org/browse.asp
-    # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
+    # instead of by a listing like this: http://www.clinicalimagingscience.org/backissues.asp
     # has a lockss permission statement http://www.clinicalimagingscience.org/lockss.txt
 
     au < notReady ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 >
@@ -2570,6 +2570,7 @@
     au < released ; 2014 ; Journal of Emergencies, Trauma, and Shock Volume 7 ; 2014 ; 7 >
     au < released ; 2015 ; Journal of Emergencies, Trauma, and Shock Volume 8 ; 2015 ; 8 >
     au < released ; 2016 ; Journal of Emergencies, Trauma, and Shock Volume 9 ; 2016 ; 9 >
+    au < expected ; 2017 ; Journal of Emergencies, Trauma, and Shock Volume 10 ; 2017 ; 10 >
 
   }
 
@@ -2589,7 +2590,6 @@
     au < released ; 2013 ; Journal of Engineering and Technology Volume 3 ; 2013 ; 3 >
     au < released ; 2014 ; Journal of Engineering and Technology Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Journal of Engineering and Technology Volume 5 ; 2015 ; 5 >
-    au < exists ; 2016 ; Journal of Engineering and Technology Volume 6 ; 2016 ; 6 >
 
   }
 
@@ -2627,6 +2627,7 @@
     au < released ; 2014 ; Journal of Family and Community Medicine Volume 21 ; 2014 ; 21 >
     au < released ; 2015 ; Journal of Family and Community Medicine Volume 22 ; 2015 ; 22 >
     au < released ; 2016 ; Journal of Family and Community Medicine Volume 23 ; 2016 ; 23 >
+    au < expected ; 2017 ; Journal of Family and Community Medicine Volume 24 ; 2017 ; 24 >
 
   }
 
@@ -2646,6 +2647,7 @@
     au < released ; 2014 ; Journal of Family Medicine and Primary Care Volume 3 ; 2014 ; 3 >
     au < released ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 >
     au < released ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 >
+    au < expected ; 2017 ; Journal of Family Medicine and Primary Care Volume 6 ; 2017 ; 6 >
 
   }
 
@@ -2668,6 +2670,7 @@
     au < released ; 2014 ; Journal of Forensic Dental Sciences Volume 6 ; 2014 ; 6 >
     au < released ; 2015 ; Journal of Forensic Dental Sciences Volume 7 ; 2015 ; 7 >
     au < released ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 >
+    au < expected ; 2017 ; Journal of Forensic Dental Sciences Volume 9 ; 2017 ; 9 >
 
   }
 
@@ -2690,6 +2693,7 @@
     au < released ; 2014 ; Journal of Global Infectious Diseases Volume 6 ; 2014 ; 6 >
     au < released ; 2015 ; Journal of Global Infectious Diseases Volume 7 ; 2015 ; 7 >
     au < released ; 2016 ; Journal of Global Infectious Diseases Volume 8 ; 2016 ; 8 >
+    au < expected ; 2017 ; Journal of Global Infectious Diseases Volume 9 ; 2017 ; 9 >
 
   }
 
@@ -2729,6 +2733,7 @@
     au < released ; 2014 ; Journal of Human Reproductive Sciences Volume 7 ; 2014 ; 7 >
     au < released ; 2015 ; Journal of Human Reproductive Sciences Volume 8 ; 2015 ; 8 >
     au < released ; 2016 ; Journal of Human Reproductive Sciences Volume 9 ; 2016 ; 9 >
+    au < expected ; 2017 ; Journal of Human Reproductive Sciences Volume 10 ; 2017 ; 10 >
 
   }
 
@@ -2764,6 +2769,7 @@
     au < released ; 2014 ; Journal of Indian Association of Pediatric Surgeons Volume 19 ; 2014 ; 19 >
     au < released ; 2015 ; Journal of Indian Association of Pediatric Surgeons Volume 20 ; 2015 ; 20 >
     au < released ; 2016 ; Journal of Indian Association of Pediatric Surgeons Volume 21 ; 2016 ; 21 >
+    au < expected ; 2017 ; Journal of Indian Association of Pediatric Surgeons Volume 22 ; 2017 ; 22 >
 
   }
 
@@ -2799,6 +2805,7 @@
     au < released ; 2014 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 32 ; 2014 ; 32 >
     au < released ; 2015 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 33 ; 2015 ; 33 >
     au < released ; 2016 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 34 ; 2016 ; 34 >
+    au < expected ; 2017 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 35 ; 2017 ; 35 >
 
   }
 
@@ -2822,6 +2829,7 @@
     au < released ; 2014 ; Journal of Indian Society of Periodontology Volume 18 ; 2014 ; 18 >
     au < released ; 2015 ; Journal of Indian Society of Periodontology Volume 19 ; 2015 ; 19 >
     au < released ; 2016 ; Journal of Indian Society of Periodontology Volume 20 ; 2016 ; 20 >
+    au < expected ; 2017 ; Journal of Indian Society of Periodontology Volume 21 ; 2017 ; 21 >
 
   }
 
@@ -2862,6 +2870,7 @@
     au < released ; 2014 ; Journal of International Society of Preventive and Community Dentistry Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Journal of International Society of Preventive and Community Dentistry Volume 5 ; 2015 ; 5 >
     au < released ; 2016 ; Journal of International Society of Preventive and Community Dentistry Volume 6 ; 2016 ; 6 >
+    au < expected ; 2017 ; Journal of International Society of Preventive and Community Dentistry Volume 7 ; 2017 ; 7 >
 
   }
     
@@ -2884,6 +2893,7 @@
     au < released ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 2014 ; 6 >
     au < released ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 2015 ; 7 >
     au < released ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 2016 ; 8 >
+    au < expected ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 2017 ; 9 >
 
   }
     
@@ -2904,6 +2914,7 @@
     au < released ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 >
     au < manifest ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 >
+    au < expected ; 2017 ; Journal of Laryngology and Voice Volume 7 ; 2017 ; 7 >
 
   }
 
@@ -2957,6 +2968,7 @@
     au < released ; 2014 ; Journal of Medical Physics Volume 39 ; 2014 ; 39 >
     au < released ; 2015 ; Journal of Medical Physics Volume 40 ; 2015 ; 40 >
     au < released ; 2016 ; Journal of Medical Physics Volume 41 ; 2016 ; 41 >
+    au < expected ; 2017 ; Journal of Medical Physics Volume 42 ; 2017 ; 42 >
 
   }
 
@@ -2995,6 +3007,7 @@
     au < released ; 2014 ; Journal of Mid-life Health Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Mid-life Health Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Journal of Mid-life Health Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; Journal of Mid-life Health Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3021,6 +3034,7 @@
     au < released ; 2014 ; Journal of Minimal Access Surgery Volume 10 ; 2014 ; 10 >
     au < released ; 2015 ; Journal of Minimal Access Surgery Volume 11 ; 2015 ; 11 >
     au < released ; 2016 ; Journal of Minimal Access Surgery Volume 12 ; 2016 ; 12 >
+    au < expected ; 2017 ; Journal of Minimal Access Surgery Volume 13 ; 2017 ; 13 >
 
   }
 
@@ -3061,6 +3075,7 @@
     au < released ; 2014 ; Journal of Natural Science, Biology and Medicine Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Natural Science, Biology and Medicine Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Journal of Natural Science, Biology and Medicine Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; Journal of Natural Science, Biology and Medicine Volume 8 ; 2017 ; 8 >
 
   }
   
@@ -3102,6 +3117,7 @@
     au < released ; 2014 ; Journal of Obstetric Anaesthesia and Critical Care Volume 4 ; 2014 ; 4 >
     au < released ; 2015 ; Journal of Obstetric Anaesthesia and Critical Care Volume 5 ; 2015 ; 5 >
     au < released ; 2016 ; Journal of Obstetric Anaesthesia and Critical Care Volume 6 ; 2016 ; 6 >
+    au < expected ; 2017 ; Journal of Obstetric Anaesthesia and Critical Care Volume 7 ; 2017 ; 7 >
 
   }
       
@@ -3130,6 +3146,7 @@
     au < released ; 2014 ; Journal of Oral and Maxillofacial Pathology Volume 18 ; 2014 ; 18 >
     au < released ; 2015 ; Journal of Oral and Maxillofacial Pathology Volume 19 ; 2015 ; 19 >
     au < released ; 2016 ; Journal of Oral and Maxillofacial Pathology Volume 20 ; 2016 ; 20 >
+    au < expected ; 2017 ; Journal of Oral and Maxillofacial Pathology Volume 21 ; 2017 ; 21 >
 
   }
       
@@ -3143,14 +3160,17 @@
 
     param[base_url] = http://www.jpathinformatics.org/
     param[journal_issn] = 2153-3539
+    # different format from other journals. Issues are accessed individually by clicking http://www.jpathinformatics.org/browse.asp
+    # instead of by a listing like this: http://www.jpathinformatics.org/backissues.asp
 
-    au < exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 >
-    au < exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 >
-    au < exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 >
-    au < exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 >
-    au < exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 >
-    au < exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 >
-    au < exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 >
+    au < notReady ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 >
+    au < notReady ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 >
+    au < notReady ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 >
+    au < notReady ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 >
+    au < notReady ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 >
+    au < notReady ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 >
+    au < notReady ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 >
+    au < notReady ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3176,6 +3196,7 @@
     au < released ; 2014 ; Journal of Pediatric Neurosciences Volume 9 ; 2014 ; 9 >
     au < released ; 2015 ; Journal of Pediatric Neurosciences Volume 10 ; 2015 ; 10 >
     au < released ; 2016 ; Journal of Pediatric Neurosciences Volume 11 ; 2016 ; 11 >
+    au < expected ; 2017 ; Journal of Pediatric Neurosciences Volume 12 ; 2017 ; 12 >
 
   }
 
@@ -3197,6 +3218,7 @@
     au < released ; 2014 ; Journal of Pharmaceutical Negative Results Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Pharmaceutical Negative Results Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Journal of Pharmaceutical Negative Results Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; Journal of Pharmaceutical Negative Results Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3218,6 +3240,7 @@
     au < released ; 2014 ; Journal of Pharmacology and Pharmacotherapeutics Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Pharmacology and Pharmacotherapeutics Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Journal of Pharmacology and Pharmacotherapeutics Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; Journal of Pharmacology and Pharmacotherapeutics Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3240,6 +3263,7 @@
     au < released ; 2014 ; Journal of Pharmacy and Bioallied Sciences Volume 6 ; 2014 ; 6 >
     au < released ; 2015 ; Journal of Pharmacy and Bioallied Sciences Volume 7 ; 2015 ; 7 >
     au < released ; 2016 ; Journal of Pharmacy and Bioallied Sciences Volume 8 ; 2016 ; 8 >
+    au < expected ; 2017 ; Journal of Pharmacy and Bioallied Sciences Volume 9 ; 2017 ; 9 >
 
   }
 
@@ -3295,6 +3319,7 @@
     au < released ; 2014 ; Journal of Postgraduate Medicine Volume 60 ; 2014 ; 60 >
     au < released ; 2015 ; Journal of Postgraduate Medicine Volume 61 ; 2015 ; 61 >
     au < released ; 2016 ; Journal of Postgraduate Medicine Volume 62 ; 2016 ; 62 >
+    au < expected ; 2017 ; Journal of Postgraduate Medicine Volume 63 ; 2017 ; 63 >
 
   }
 
@@ -3363,6 +3388,7 @@
     au < released ; 2012 ; Journal of Surgical Technique and Case Report Volume 4 ; 2012 ; 4 >
     au < released ; 2013 ; Journal of Surgical Technique and Case Report Volume 5 ; 2013 ; 5 >
     au < released ; 2014 ; Journal of Surgical Technique and Case Report Volume 6 ; 2014 ; 6 >
+    au < exists ; 2015 ; Journal of Surgical Technique and Case Report Volume 7 ; 2015 ; 7 >
 
   }
 
@@ -3381,6 +3407,11 @@
     au < manifest ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 >
     au < released ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 >
     au < released ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 >
+    au < exists ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2012 ; 5 >
+    au < exists ; 2014 ; Journal of the International Clinical Dental Research Organization Volume 6 ; 2012 ; 6 >
+    au < exists ; 2015 ; Journal of the International Clinical Dental Research Organization Volume 7 ; 2012 ; 7 >
+    au < exists ; 2016 ; Journal of the International Clinical Dental Research Organization Volume 8 ; 2012 ; 8 >
+    au < exists ; 2017 ; Journal of the International Clinical Dental Research Organization Volume 9 ; 2012 ; 9 >
 
   }
     
@@ -3449,6 +3480,7 @@
     au < released ; 2014 ; Lung India Volume 31 ; 2014 ; 31 >
     au < released ; 2015 ; Lung India Volume 32 ; 2015 ; 32 >
     au < released ; 2016 ; Lung India Volume 33 ; 2016 ; 33 >
+    au < expected ; 2017 ; Lung India Volume 34 ; 2017 ; 34 >
 
   }
     
@@ -3486,6 +3518,7 @@
     au < manifest ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 >
     au < manifest ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 >
     au < manifest ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 >
+    au < expected ; 2017 ; Medical Law Cases - For Doctors Volume 10 ; 2017 ; 10 >
 
   }
 
@@ -3514,6 +3547,7 @@
     au < released ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 >
     au < released ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 >
     au < released ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 >
+    au < expected ; 2017 ; Mens Sana Monographs Volume 15 ; 2017 ; 15 >
 
   }
 
@@ -3538,6 +3572,7 @@
     au < released ; 2014 ; Middle East African Journal of Ophthalmology Volume 21 ; 2014 ; 21 >
     au < released ; 2015 ; Middle East African Journal of Ophthalmology Volume 22 ; 2015 ; 22 >
     au < released ; 2016 ; Middle East African Journal of Ophthalmology Volume 23 ; 2016 ; 23 >
+    au < expected ; 2017 ; Middle East African Journal of Ophthalmology Volume 24 ; 2017 ; 24 >
 
   }
 
@@ -3559,6 +3594,7 @@
     au < released ; 2014 ; National Journal of Maxillofacial Surgery Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; National Journal of Maxillofacial Surgery Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; National Journal of Maxillofacial Surgery Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; National Journal of Maxillofacial Surgery Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3597,6 +3633,7 @@
     au < released ; 2014 ; Neurology India Volume 62 ; 2014 ; 62 >
     au < released ; 2015 ; Neurology India Volume 63 ; 2015 ; 63 >
     au < released ; 2016 ; Neurology India Volume 64 ; 2016 ; 64 >
+    au < expected ; 2017 ; Neurology India Volume 65 ; 2017 ; 65 >
 
   }
 
@@ -3623,6 +3660,7 @@
     au < released ; 2014 ; Nigerian Journal of Clinical Practice Volume 17 ; 2014 ; 17 >
     au < released ; 2015 ; Nigerian Journal of Clinical Practice Volume 18 ; 2015 ; 18 >
     au < released ; 2016 ; Nigerian Journal of Clinical Practice Volume 19 ; 2016 ; 19 >
+    au < expected ; 2017 ; Nigerian Journal of Clinical Practice Volume 20 ; 2017 ; 20 >
 
   }
 
@@ -3645,6 +3683,7 @@
     au < released ; 2014 ; Nigerian Journal of Surgery Volume 20 ; 2014 ; 20 >
     au < released ; 2015 ; Nigerian Journal of Surgery Volume 21 ; 2015 ; 21 >
     au < released ; 2016 ; Nigerian Journal of Surgery Volume 22 ; 2016 ; 22 >
+    au < expected ; 2017 ; Nigerian Journal of Surgery Volume 23 ; 2017 ; 23 >
 
   }
 
@@ -3667,6 +3706,7 @@
     au < released ; 2014 ; Nigerian Medical Journal Volume 55 ; 2014 ; 55 >
     au < released ; 2015 ; Nigerian Medical Journal Volume 56 ; 2015 ; 56 >
     au < released ; 2016 ; Nigerian Medical Journal Volume 57 ; 2016 ; 57 >
+    au < expected ; 2017 ; Nigerian Medical Journal Volume 58 ; 2017 ; 58 >
 
   }
 
@@ -3699,6 +3739,7 @@
     au < released ; 2014 ; Noise and Health Volume 16 ; 2014 ; 16 >
     au < released ; 2015 ; Noise and Health Volume 17 ; 2015 ; 17 >
     au < released ; 2016 ; Noise and Health Volume 18 ; 2016 ; 18 >
+    au < expected ; 2017 ; Noise and Health Volume 19 ; 2017 ; 19 >
 
   }
 
@@ -3722,6 +3763,7 @@
     au < released ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 >
     au < released ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 >
     au < released ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 >
+    au < expected ; 2017 ; Oman Journal of Ophthalmology Volume 10 ; 2017 ; 10 >
 
   }
 
@@ -3743,6 +3785,7 @@
     au < released ; 2014 ; Perspectives in Clinical Research Volume 5 ; 2014 ; 5 >
     au < released ; 2015 ; Perspectives in Clinical Research Volume 6 ; 2015 ; 6 >
     au < released ; 2016 ; Perspectives in Clinical Research Volume 7 ; 2016 ; 7 >
+    au < expected ; 2017 ; Perspectives in Clinical Research Volume 8 ; 2017 ; 8 >
 
   }
 
@@ -3789,6 +3832,7 @@
     au < released ; 2014 ; Pharmacognosy Magazine Volume 10 ; 2014 ; 10 >
     au < released ; 2015 ; Pharmacognosy Magazine Volume 11 ; 2015 ; 11 >
     au < released ; 2016 ; Pharmacognosy Magazine Volume 12 ; 2016 ; 12 >
+    au < expected ; 2017 ; Pharmacognosy Magazine Volume 13 ; 2017 ; 13 >
 
   }
 
@@ -3811,6 +3855,7 @@
     au < released ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 >
     au < released ; 2015 ; Pharmacognosy Research Volume 7 ; 2015 ; 7 >
     au < released ; 2016 ; Pharmacognosy Research Volume 8 ; 2016 ; 8 >
+    au < expected ; 2017 ; Pharmacognosy Research Volume 9 ; 2017 ; 9 >
 
   }  
 
@@ -3835,6 +3880,7 @@
     au < released ; 2014 ; Pharmacognosy Reviews Volume 8 ; 2014 ; 8 >
     au < released ; 2015 ; Pharmacognosy Reviews Volume 9 ; 2015 ; 9 >
     au < released ; 2016 ; Pharmacognosy Reviews Volume 10 ; 2016 ; 10 >
+    au < expected ; 2017 ; Pharmacognosy Reviews Volume 11 ; 2017 ; 11 >
 
   }  
 
@@ -3961,6 +4007,7 @@
     au < released ; 2014 ; Saudi Journal of Anaesthesia Volume 8 ; 2014 ; 8 >
     au < released ; 2015 ; Saudi Journal of Anaesthesia Volume 9 ; 2015 ; 9 >
     au < released ; 2016 ; Saudi Journal of Anaesthesia Volume 10 ; 2016 ; 10 >
+    au < expected ; 2017 ; Saudi Journal of Anaesthesia Volume 11 ; 2017 ; 11 >
 
   }
     
@@ -3981,6 +4028,7 @@
     au < released ; 2014 ; Saudi Journal of Kidney Diseases and Transplantation Volume 25 ; 2014 ; 25 >
     au < released ; 2015 ; Saudi Journal of Kidney Diseases and Transplantation Volume 26 ; 2015 ; 26 >
     au < released ; 2016 ; Saudi Journal of Kidney Diseases and Transplantation Volume 27 ; 2016 ; 27 >
+    au < expected ; 2017 ; Saudi Journal of Kidney Diseases and Transplantation Volume 28 ; 2017 ; 28 >
 
   }
 
@@ -4017,6 +4065,7 @@
     au < released ; 2014 ; Saudi Journal of Gastroenterology Volume 20 ; 2014 ; 20 >
     au < released ; 2015 ; Saudi Journal of Gastroenterology Volume 21 ; 2015 ; 21 >
     au < released ; 2016 ; Saudi Journal of Gastroenterology Volume 22 ; 2016 ; 22 >
+    au < expected ; 2017 ; Saudi Journal of Gastroenterology Volume 23 ; 2017 ; 23 >
 
   }
     
@@ -4097,6 +4146,7 @@
 
     param[base_url] = http://www.toxicologyinternational.com/
     param[journal_issn] = 0971-6580
+    #webpage down
 
     au < doNotProcess ; 2004 ; Toxicology International Volume 11 ; 2004 ; 11 >
     au < doNotProcess ; 2005 ; Toxicology International Volume 12 ; 2005 ; 12 >
