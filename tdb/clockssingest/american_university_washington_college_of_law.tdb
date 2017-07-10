@@ -89,7 +89,6 @@
     au < finished ; finished ; 2013 ; Intellectual Property Brief Issue 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Intellectual Property Brief Issue 5 ; 5 ; >
     au < finished ; finished ; 2015 ; Intellectual Property Brief Issue 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2016 ; Intellectual Property Brief Issue 7 ; 7 ; >
 
   }
 
@@ -108,7 +107,7 @@
     au < finished ; finished ; 2014 ; American University Labor & Employment Law Forum Volume 4 ; 4 ; >
     au < finished ; finished ; 2015 ; American University Labor & Employment Law Forum Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; American University Labor & Employment Law Forum Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2017 ; American University Labor & Employment Law Forum Volume 7 ; 7 ; >
+    au < testing ; exists ; 2017 ; American University Labor & Employment Law Forum Volume 7 ; 7 ; >
 
   }
 
@@ -145,7 +144,7 @@
     au < finished ; finished ; 2013-2014 ; American University Law Review Volume 63 ; 63 ; >
     au < finished ; finished ; 2014-2015 ; American University Law Review Volume 64 ; 64 ; >
     au < doesNotExist ; doesNotExist ; 2015-2016 ; American University Law Review Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2017 ; American University Law Review Volume 66 ; 66 ; >
+    au < testing ; exists ; 2017 ; American University Law Review Volume 66 ; 66 ; >
 
   }
 
@@ -251,7 +250,6 @@
     au < finished ; finished ; 2012 ; Sustainable Development Law & Policy Volume 13 ; 13 ; >
     au < finished ; finished ; 2014 ; Sustainable Development Law & Policy Volume 14 ; 14 ; >
     au < finished ; finished ; 2015 ; Sustainable Development Law & Policy Volume 15 ; 15 ; >
-    au < expected ; exists ; 2016 ; Sustainable Development Law & Policy Volume 16 ; 16 ; >
 
   }
 
