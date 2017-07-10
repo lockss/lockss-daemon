@@ -9364,4 +9364,570 @@
 
     }
 
+  {
+
+      title <
+        name = EuroMed Journal of Management ;
+        issn = 2055-1703 ;
+        eissn = 2055-1711
+      >
+
+      param[journal_id] = emjm
+
+      au < exists ; exists ; 2005 ; EuroMed Journal of Management Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2006 ; EuroMed Journal of Management Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2007 ; EuroMed Journal of Management Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2008 ; EuroMed Journal of Management Volume 4 ; 4 ;  >
+      au < exists ; exists ; 2009 ; EuroMed Journal of Management Volume 5 ; 5 ;  >
+      au < exists ; exists ; 2010 ; EuroMed Journal of Management Volume 6 ; 6 ;  >
+      au < exists ; exists ; 2011 ; EuroMed Journal of Management Volume 7 ; 7 ;  >
+      au < exists ; exists ; 2012 ; EuroMed Journal of Management Volume 8 ; 8 ;  >
+      au < exists ; exists ; 2013 ; EuroMed Journal of Management Volume 9 ; 9 ;  >
+      au < exists ; exists ; 2014 ; EuroMed Journal of Management Volume 10 ; 10 ;  >
+      au < exists ; exists ; 2015 ; EuroMed Journal of Management Volume 11 ; 11 ;  >
+      au < exists ; exists ; 2016 ; EuroMed Journal of Management Volume 12 ; 12 ;  >
+      au < expected ; exists ; 2017 ; EuroMed Journal of Management Volume 13 ; 13 ;  >
+
+  }
+
+  {
+
+      title <
+        name = Asian Journal of Management Science and Applications ;
+        issn = 2049-8683 ;
+        eissn = 2049-8691
+      >
+
+      param[journal_id] = ajmsa
+
+      au < exists ; exists ; 2013 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; Asian Journal of Management Science and Applications Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; Asian Journal of Management Science and Applications Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Bonds and Derivatives ;
+        issn = 2050-2281 ;
+        eissn = 2050-229X
+      >
+
+      param[journal_id] = ijbd
+
+      au < exists ; exists ; 2013 ; International Journal of Bonds and Derivatives Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; International Journal of Bonds and Derivatives Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Bonds and Derivatives Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Bonds and Derivatives Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Bonds and Derivatives Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Circuits and Architecture Design ;
+        issn = 2051-7025 ;
+        eissn = 2051-7033
+      >
+
+      param[journal_id] = ijcad
+
+      au < exists ; exists ; 2013 ; International Journal of Circuits and Architecture Design Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; International Journal of Circuits and Architecture Design Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Circuits and Architecture Design Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Circuits and Architecture Design Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Circuits and Architecture Design Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Qualitative Research in Services ;
+        issn = 2051-0500 ;
+        eissn = 2051-0519
+      >
+
+      param[journal_id] = ijqrs
+
+      au < exists ; exists ; 2013 ; International Journal of Qualitative Research in Services Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; International Journal of Qualitative Research in Services Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Qualitative Research in Services Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Qualitative Research in Services Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Qualitative Research in Services Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Social Media and Interactive Learning Environments ;
+        issn = 2050-3954 ;
+        eissn = 2050-3962
+      >
+
+      param[journal_id] = ijsmile
+
+      au < exists ; exists ; 2013 ; International Journal of Social Media and Interactive Learning Environments Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; International Journal of Social Media and Interactive Learning Environments Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Social Media and Interactive Learning Environments Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Social Media and Interactive Learning Environments Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Social Media and Interactive Learning Environments Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = Middle East Journal of Management ;
+        issn = 2050-3636 ;
+        eissn = 2050-3644
+      >
+
+      param[journal_id] = mejm
+
+      au < exists ; exists ; 2013 ; Middle East Journal of Management Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; Middle East Journal of Management Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; Middle East Journal of Management Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; Middle East Journal of Management Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; Middle East Journal of Management Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Human Rights and Constitutional Studies ;
+        issn = 2050-103X ;
+        eissn = 2050-1048
+      >
+
+      param[journal_id] = ijhrcs
+
+      au < exists ; exists ; 2013 ; International Journal of Human Rights and Constitutional Studies Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2014 ; International Journal of Human Rights and Constitutional Studies Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Human Rights and Constitutional Studies Volume 3 ; 3 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Automotive Composites ;
+        issn = 2051-8218 ;
+        eissn = 2051-8226
+      >
+
+      param[journal_id] = ijautoc
+
+      au < exists ; exists ; 2014 ; International Journal of Automotive Composites Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Automotive Composites Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Automotive Composites Volume 3 ; 3 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Automotive Composites Volume 4 ; 4 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Hospitality and Event Management ;
+        issn = 2050-0483 ;
+        eissn = 2050-0491
+      >
+
+      param[journal_id] = ijhem
+
+      au < exists ; exists ; 2014 ; International Journal of Hospitality and Event Management Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Hospitality and Event Management Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Hospitality and Event Management Volume 3 ; 3 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Hospitality and Event Management Volume 4 ; 4 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Supply Chain and Operations Resilience ;
+        issn = 2052-868X ;
+        eissn = 2052-8698
+      >
+
+      param[journal_id] = ijscor
+
+      au < exists ; exists ; 2014 ; International Journal of Supply Chain and Operations Resilience Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Supply Chain and Operations Resilience Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Supply Chain and Operations Resilience Volume 3 ; 3 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Supply Chain and Operations Resilience Volume 4 ; 4 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Sustainable Aviation ;
+        issn = 2050-0467 ;
+        eissn = 2050-0475
+      >
+
+      param[journal_id] = ijsa
+
+      au < exists ; exists ; 2014 ; International Journal of Sustainable Aviation Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2015 ; International Journal of Sustainable Aviation Volume 2 ; 2 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Sustainable Aviation Volume 3 ; 3 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Sustainable Aviation Volume 4 ; 4 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Decision Support Systems ;
+        issn = 2050-6988 ;
+        eissn = 2050-6996
+      >
+
+      param[journal_id] = ijdss
+
+      au < exists ; exists ; 2015 ; International Journal of Decision Support Systems Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Decision Support Systems Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Decision Support Systems Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Higher Education and Sustainability ;
+        issn = 2056-4023 ;
+        eissn = 2056-4031
+      >
+
+      param[journal_id] = ijhes
+
+      au < exists ; exists ; 2015 ; International Journal of Higher Education and Sustainability Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Higher Education and Sustainability Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Markets and Business Systems ;
+        issn = 2056-4112 ;
+        eissn = 2056-4120
+      >
+
+      param[journal_id] = ijmabs
+
+      au < exists ; exists ; 2015 ; International Journal of Markets and Business Systems Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Markets and Business Systems Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Markets and Business Systems Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Supply Chain and Inventory Management ;
+        issn = 2054-099X ;
+        eissn = 2054-1007
+      >
+
+      param[journal_id] = ijscim
+
+      au < exists ; exists ; 2015 ; International Journal of Supply Chain and Inventory Management Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Sustainable Agricultural Management and Informatics ;
+        issn = 2054-5819 ;
+        eissn = 2054-5827
+      >
+
+      param[journal_id] = ijsami
+
+      au < exists ; exists ; 2015 ; International Journal of Sustainable Agricultural Management and Informatics Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Sustainable Agricultural Management and Informatics Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Sustainable Agricultural Management and Informatics Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Telemedicine and Clinical Practices ;
+        issn = 2052-8434 ;
+        eissn = 2052-8442
+      >
+
+      param[journal_id] = ijtmcp
+
+      au < exists ; exists ; 2015 ; International Journal of Telemedicine and Clinical Practices Volume 1 ; 1 ;  >
+      au < exists ; exists ; 2016 ; International Journal of Telemedicine and Clinical Practices Volume 2 ; 2 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Telemedicine and Clinical Practices Volume 3 ; 3 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Business Intelligence and Systems Engineering ;
+        issn = 2051-5847 ;
+        eissn = 2051-5855
+      >
+
+      param[journal_id] = ijbise
+
+      au < exists ; exists ; 2016 ; International Journal of Business Intelligence and Systems Engineering Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Business Intelligence and Systems Engineering Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Competitiveness ;
+        issn = 2056-9432 ;
+        eissn = 2056-9440
+      >
+
+      param[journal_id] = ijc
+
+      au < exists ; exists ; 2016 ; International Journal of Competitiveness Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Competitiveness Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Corporate Strategy and Social Responsibility ;
+        issn = 2054-8079 ;
+        eissn = 2054-8087
+      >
+
+      param[journal_id] = ijcssr
+
+      au < exists ; exists ; 2016 ; International Journal of Corporate Strategy and Social Responsibility Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Corporate Strategy and Social Responsibility Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Export Marketing ;
+        issn = 2059-089X ;
+        eissn = 2059-0903
+      >
+
+      param[journal_id] = ijexportm
+
+      au < exists ; exists ; 2016 ; International Journal of Export Marketing Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Export Marketing Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Multinational Corporation Strategy ;
+        issn = 2059-1047 ;
+        eissn = 2059-1055
+      >
+
+      param[journal_id] = ijmcs
+
+      au < exists ; exists ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Multivariate Data Analysis ;
+        issn = 2396-8303 ;
+        eissn = 2396-8311
+      >
+
+      param[journal_id] = ijmda
+
+      au < exists ; exists ; 2016 ; International Journal of Multivariate Data Analysis Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Multivariate Data Analysis Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Smart Grid and Green Communications ;
+        issn = 2052-2002 ;
+        eissn = 2052-2010
+      >
+
+      param[journal_id] = ijsggc
+
+      au < exists ; exists ; 2016 ; International Journal of Smart Grid and Green Communications Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Smart Grid and Green Communications Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Smart Technology and Learning ;
+        issn = 2056-404X ;
+        eissn = 2056-4058
+      >
+
+      param[journal_id] = ijsmarttl
+
+      au < exists ; exists ; 2016 ; International Journal of Smart Technology and Learning Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Smart Technology and Learning Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Soft Computing and Networking ;
+        issn = 2052-8450 ;
+        eissn = 2052-8469
+      >
+
+      param[journal_id] = ijscn
+
+      au < exists ; exists ; 2016 ; International Journal of Soft Computing and Networking Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Soft Computing and Networking Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Spatial, Temporal and Multimedia Information Systems ;
+        issn = 2052-3556 ;
+        eissn = 2052-3564
+      >
+
+      param[journal_id] = ijstmis
+
+      au < exists ; exists ; 2016 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Earthquake and Impact Engineering ;
+        issn = 2397-9372 ;
+        eissn = 2397-9380
+      >
+
+      param[journal_id] = ijeie
+
+      au < exists ; exists ; 2016 ; International Journal of Earthquake and Impact Engineering Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Financial Innovation in Banking ;
+        issn = 2055-6780 ;
+        eissn = 2055-6799
+      >
+
+      param[journal_id] = ijfib
+
+      au < exists ; exists ; 2016 ; International Journal of Financial Innovation in Banking Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2017 ; International Journal of Financial Innovation in Banking Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Additive and Subtractive Materials Manufacturing ;
+        issn = 2057-4975 ;
+        eissn = 2057-4983
+      >
+
+      param[journal_id] = ijasmm
+
+      au < expected ; exists ; 2017 ; International Journal of Additive and Subtractive Materials Manufacturing Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Bibliometrics in Business and Management ;
+        issn = 2057-0538 ;
+        eissn = 2057-0546
+      >
+
+      param[journal_id] = ijbbm
+
+      au < expected ; exists ; 2017 ; International Journal of Bibliometrics in Business and Management Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Research, Innovation and Commercialisation ;
+        issn = 2051-9931 ;
+        eissn = 2051-994X
+      >
+
+      param[journal_id] = ijric
+
+      au < expected ; exists ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Sustainable Real Estate and Construction Economics ;
+        issn = 2059-7770 ;
+        eissn = 2059-7789
+      >
+
+      param[journal_id] = ijsrece
+
+      au < expected ; exists ; 2017 ; International Journal of Sustainable Real Estate and Construction Economics Volume 1 ; 1 ;  >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Intelligent Systems Design and Computing ;
+        issn = 2052-8477 ;
+        eissn = 2052-8485
+      >
+
+      param[journal_id] = ijisdc
+
+      au < expected ; exists ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ;  >
+
+  }
+  
 }
