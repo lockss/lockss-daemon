@@ -208,9 +208,14 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
   
   public void testHttpToHttpsNormalization() throws Exception {
     UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
+    UrlNormalizer https_normalizer = new BaseAtyponHttpHttpsUrlNormalizer();
 
     assertEquals("http://www.baseatypon.com/clockss/foo/3/index.html",
+        https_normalizer.normalizeUrl("https://www.baseatypon.com/clockss/foo/3/index.html", m_mau));
+    
+    assertNotEquals("http://www.baseatypon.com/clockss/foo/3/index.html",
         normalizer.normalizeUrl("https://www.baseatypon.com/clockss/foo/3/index.html", m_mau));
+    
   }
 
 }

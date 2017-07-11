@@ -264,14 +264,14 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       combinedFiltered = new HtmlFilterInputStream(in, encoding,
           new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform_spanID));
     }
-    if (!doTagRemovalFiltering() && !doWS) {
+    if (!doTagRemovalFiltering() && !doWS && !doHttpsConversion()) {
       // already done, return without converting back to a reader
       return combinedFiltered;
     }
     
     /* 
      * optional additional processing - 
-     *    removal of all tags and/or removal of WS
+     *    removal of all tags and/or removal of WS & https conversion
      */
     Reader tagFilter = FilterUtil.getReader(combinedFiltered, encoding);
     // if removing both tags and WS, add a space before each tag
@@ -280,6 +280,9 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     } 
     if (doTagRemovalFiltering()) {
       tagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
+    }
+    if (doHttpsConversion()) {
+      tagFilter = new StringFilter(tagFilter, "http:", "https:");
     }
     if (doWS) {
       // first subsitute plain white space for &nbsp;   
@@ -338,8 +341,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // It doesn't matter if it changes http to http unnecessarily for hash purposes
     Reader freader;
     if (doHttpsConversion()) {
-      Reader httpFilter = FilterUtil.getReader(combinedFiltered, encoding);
-      freader = new StringFilter(httpFilter, "http:", "https:");
+      freader = FilterUtil.getReader(combinedFiltered, encoding);
+      freader = new StringFilter(freader, "http:", "https:");
     } else {
       freader = FilterUtil.getReader(combinedFiltered, encoding);
     }

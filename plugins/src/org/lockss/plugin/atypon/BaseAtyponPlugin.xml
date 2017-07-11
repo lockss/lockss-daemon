@@ -50,11 +50,7 @@
   <entry>
     <string>au_start_url</string>
 <!-- the TOC for a specific year (volume) is on a lockss page.The final number is any issue # from that volume, or index -->
-<!--  now seeing https in some of the publishers so add support for redirect -->
-      <list>
-        <string>"%slockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
-        <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
-      </list>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -193,15 +189,6 @@
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
   </entry>
-<!--  support http to https redirection -->
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
-  </entry>  
   <entry>
 <!--  this is actually used to look for redirection  -->  
     <string>plugin_substance_predicate_factory</string>

@@ -90,8 +90,8 @@ public class TestTaylorAndFrancisUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.example.com/foo/bar//baz",
                  normalizer.normalizeUrl("http://www.example.com/foo//bar//baz", m_mau));
     //
-    //assertEquals("https://www.example.com/foo",
-    //             normalizer.normalizeUrl("https://www.example.com//foo", m_mau));
+    assertEquals("https://www.example.com/foo",
+                 normalizer.normalizeUrl("https://www.example.com//foo", m_mau));
     assertEquals("ftp://www.example.com/foo",
                  normalizer.normalizeUrl("ftp://www.example.com//foo", m_mau));
     

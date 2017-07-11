@@ -27,7 +27,7 @@
     <string>au_name</string>
     <string>"American Institute of Aeronautics and Astronautics Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
-    <entry>
+  <entry>
     <string>au_start_url</string>
     <list>
       <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>

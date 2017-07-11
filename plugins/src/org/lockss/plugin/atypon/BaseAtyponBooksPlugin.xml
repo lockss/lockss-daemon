@@ -49,10 +49,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-      <list>
-        <string>"%slockss/eisbn/%s", to_http(base_url), book_eisbn</string>
-        <string>"%slockss/eisbn/%s", to_https(base_url), book_eisbn</string>
-      </list>
+    <string>"%slockss/eisbn/%s", base_url, book_eisbn</string>
   </entry>
   <entry>
   <!-- manifest to book landing page with chapters -->
@@ -134,15 +131,6 @@
       	<string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
-<!--  support http to https redirection -->
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
-  </entry>   
   <entry>
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
