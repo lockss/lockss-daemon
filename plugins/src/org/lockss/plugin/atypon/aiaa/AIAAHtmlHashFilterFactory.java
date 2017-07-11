@@ -86,6 +86,11 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
   public boolean doWSFiltering() {
     return true;
   }
+  
+  @Override
+  public boolean doHttpsConversion() {
+    return true;
+  }
 
 }
 

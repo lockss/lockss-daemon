@@ -336,8 +336,13 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     }
     // as Atyon publishers move to https this will support them. 
     // It doesn't matter if it changes http to http unnecessarily for hash purposes
-    Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
-    Reader httpFilter = new StringFilter(reader, "http:", "https:");
+    Reader freader;
+    if (doHttpsConversion()) {
+      Reader httpFilter = FilterUtil.getReader(combinedFiltered, encoding);
+      freader = new StringFilter(httpFilter, "http:", "https:");
+    } else {
+      freader = FilterUtil.getReader(combinedFiltered, encoding);
+    }
     if (doWSFiltering()) {
       // first subsitute plain white space for &nbsp;                                                                                                  
       // add spaces before all "<"
@@ -347,11 +352,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
           {"&nbsp;", " "},
           {"<", " <"},
       };
-      Reader NBSPFilter = StringFilter.makeNestedFilter(httpFilter,
+      Reader NBSPFilter = StringFilter.makeNestedFilter(freader,
           unifySpaces, false);
       return new ReaderInputStream(new WhiteSpaceFilter(NBSPFilter)); 
     } else { 
-      return new ReaderInputStream(httpFilter);
+      return new ReaderInputStream(freader);
     }
   }
 
@@ -413,6 +418,16 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * default is false;
    */
   public boolean doTagRemovalFiltering() {
+    return false;
+  }
+  
+  /*
+   * BaseAtypon children can turn on/off extra levels of filtering
+   * by overriding the getting/setter methods.
+   * The BaseAtypon filter will query this method and if it is true,
+   * will turn all http to https as part of handling an http to https conversion
+   */
+  public boolean doHttpsConversion() {
     return false;
   }
 
