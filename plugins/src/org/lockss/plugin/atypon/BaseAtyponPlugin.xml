@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>76</string>
+    <string>77</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -50,7 +50,11 @@
   <entry>
     <string>au_start_url</string>
 <!-- the TOC for a specific year (volume) is on a lockss page.The final number is any issue # from that volume, or index -->
-    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+<!--  now seeing https in some of the publishers so add support for redirect -->
+      <list>
+        <string>"%slockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
+        <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+      </list>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -62,7 +66,7 @@
       <!--  it is okay to use issue even though it's not a param, it is provided by the query -->
       <entry>
         <string>au_issue</string>
-        <string>"%stoc/%s/%s/%s"", base_url, journal_id, volume_name, issue</string>
+        <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
       </entry>  
       <!--  we don't need au_volume as it will default to au_start_url -->
     </map>
@@ -110,22 +114,22 @@
     massmedical and t&f have a number of additions 
      -->
     <list>
-      <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
-      <string>2,"^%sdoi/.*/googleAnalyticsPlugin\.js$", base_url</string>
-      <string>2,"^%s.*/www\.tandf\.co\.uk/", base_url</string>
+      <string>2,"^https?://%s/imgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
+      <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
-      <string>1,"^%sna[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
-      <string>1,"^%stoc/%s(\.[0-9]+)?/%s($|/)", base_url, journal_id, volume_name</string>
-      <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
-      <string>2,"^%sdoi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", base_url</string>  
-      <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", base_url</string>
-      <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>          
-      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
-      <string>1,"^%saction/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", base_url</string>
+      <string>1,"^https?://%s/na[0-9]+/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", url_host(base_url), journal_id</string>   
+      <string>1,"^https?://%s/toc/%s(\.[0-9]+)?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
+      <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>  
+      <string>1,"^https?://%s/doi/(pdf|pdfplus|full|abs|ref|suppl|figure|video[^/]+)/[0-9.]+/", url_host(base_url)</string>
+      <string>2,"^https?://%s/action/showFullPopup\?doi=.*&amp;id=$", url_host(base_url)</string>          
+      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string> 
+      <string>1,"^https?://%s/action/downloadTable\?(doi=.+&amp;id=[^&amp;]+|id=.+&amp;doi=[^&amp;]+)(&amp;downloadType=[^&amp;]+)?$", url_host(base_url)</string>
       <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->          
-      <string>1,"^%saction/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
+      <string>1,"^https?://%s/action/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
     </list>
   </entry>
   <!--  tandf is serving pdf files of this form (tables) without mime-type -->
@@ -169,7 +173,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      	<string>"^%sdoi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+      	<string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -188,6 +192,15 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
+  </entry>
+<!--  support http to https redirection -->
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
   </entry>  
   <entry>
 <!--  this is actually used to look for redirection  -->  

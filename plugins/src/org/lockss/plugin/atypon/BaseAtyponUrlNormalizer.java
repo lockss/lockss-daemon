@@ -39,7 +39,7 @@ import org.lockss.util.StringUtil;
  * Removes cookiset and handles cleanup of the citation download URLs
  * probably sufficient as is for most Atypon children 
  */
-public class BaseAtyponUrlNormalizer implements UrlNormalizer {
+public class BaseAtyponUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static Logger log = 
       Logger.getLogger(BaseAtyponUrlNormalizer.class);
   protected static final String SUFFIX = "?cookieSet=1";
@@ -81,7 +81,7 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   private static final String ID_ARG = "id";
 
 
-  public String normalizeUrl(String url, ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
 
     // This originated in T&F, BioOne and BloomsburyQ but useful to avoid malformed URLs

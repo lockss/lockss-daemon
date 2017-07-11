@@ -334,6 +334,10 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilterTransform.exclude(new OrFilter(allExcludeNodes)))
         );
     }
+    // as Atyon publishers move to https this will support them. 
+    // It doesn't matter if it changes http to http unnecessarily for hash purposes
+    Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
+    Reader httpFilter = new StringFilter(reader, "http:", "https:");
     if (doWSFiltering()) {
       // first subsitute plain white space for &nbsp;                                                                                                  
       // add spaces before all "<"
@@ -343,12 +347,11 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
           {"&nbsp;", " "},
           {"<", " <"},
       };
-      Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
-      Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
+      Reader NBSPFilter = StringFilter.makeNestedFilter(httpFilter,
           unifySpaces, false);
       return new ReaderInputStream(new WhiteSpaceFilter(NBSPFilter)); 
     } else { 
-      return combinedFiltered;
+      return new ReaderInputStream(httpFilter);
     }
   }
 

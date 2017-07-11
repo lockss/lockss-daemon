@@ -371,9 +371,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     // 4 digit
-    String expected = ROOT_URL+"lockss/xxxx/123/index.html";
+    String expected1 = ROOT_URL+"lockss/xxxx/123/index.html";
+    String expected2 = UrlUtil.replaceScheme(expected1, "http", "https");
     DefinableArchivalUnit ABAu = makeAu(url, 123, "xxxx");
-    assertEquals(ListUtil.list(expected), ABAu.getStartUrls());
+    assertEquals(ListUtil.list(expected1, expected2), ABAu.getStartUrls());
   }
 
   public void testShouldNotCachePageFromOtherSite() throws Exception {

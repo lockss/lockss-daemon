@@ -38,6 +38,7 @@ import org.jsoup.nodes.Node;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.atypon.BaseAtyponHtmlLinkExtractorFactory;
 import org.lockss.util.Logger;
 
@@ -98,6 +99,7 @@ extends BaseAtyponHtmlLinkExtractorFactory {
           Matcher hrefMat = SUBMIT_ARTICLES_PATTERN.matcher(node.attr(HREF_NAME));
           if ( (hrefMat.find() && hrefMat.group(2).contains(CIT_FORMATS_ACTION))) {
             String newUrl =  doiMat.group(1) + CIT_FORMATS_ACTION + "?doi=" + doiMat.group(3) + "/" + doiMat.group(4);
+            newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("Generated citation download url: " + newUrl);
             cb.foundLink(newUrl);
             tagDone = true;

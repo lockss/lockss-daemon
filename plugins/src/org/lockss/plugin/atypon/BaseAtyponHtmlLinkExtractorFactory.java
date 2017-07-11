@@ -53,6 +53,7 @@ import org.lockss.extractor.JsoupHtmlLinkExtractor.ScriptTagLinkExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.SimpleTagLinkExtractor;
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.SetUtil;
 import org.lockss.util.StringUtil;
@@ -300,6 +301,7 @@ implements LinkExtractorFactory {
                 }
                 // we have an id and a doi, generate the link
                 String newUrl = base_url + ACTION_SHOWFULL + idAttr + DOI_ARG + doiVal;
+                newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
                 log.debug3("new URL: " + newUrl);
                 cb.foundLink(newUrl);
                 // if it was this, no need to do anything further with this link
@@ -329,6 +331,7 @@ implements LinkExtractorFactory {
             } else {
               newUrl = base_url + ACTION_SHOWPOP + idVal + DOI_ARG + doiVal;
             }
+            newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("new URL: " + newUrl);
             cb.foundLink(newUrl);
             // if it was a popRef, no other link extraction needed
@@ -522,6 +525,7 @@ implements LinkExtractorFactory {
               String imgtype = imgMat.group(1);
               String imgFN = imgMat.group(2);
               String newUrl = base_url + imgPathSt + getSizePath(imgtype) + imgFN;
+              newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);              
               log.debug3("new URL: " + newUrl);
               cb.foundLink(newUrl);
             }

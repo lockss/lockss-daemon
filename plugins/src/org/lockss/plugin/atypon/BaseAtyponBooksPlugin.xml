@@ -11,14 +11,14 @@
     <string>plugin_name</string>
     <string>Base Atypon Books Plugin</string>
   </entry>
-<!--  full figure/table extraction support in JSoup -->  
+<!--  http to https support -->  
   <entry>
     <string>required_daemon_version</string>
-    <string>1.67.0</string>
+    <string>1.70.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -49,7 +49,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/eisbn/%s", base_url, book_eisbn</string>
+      <list>
+        <string>"%slockss/eisbn/%s", to_http(base_url), book_eisbn</string>
+        <string>"%slockss/eisbn/%s", to_https(base_url), book_eisbn</string>
+      </list>
   </entry>
   <entry>
   <!-- manifest to book landing page with chapters -->
@@ -76,13 +79,13 @@
      -->
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", url_host(base_url)</string>
-      <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
+      <string>1,"^https?://%s/na101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", url_host(base_url), book_eisbn</string>   
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
-      <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
-      <string>1,"^%sdoi/book/[0-9.]+/", base_url</string>
-      <string>1,"^%sdoi/(abs|full|pdf|pdfplus|ref)/[0-9.]+/", base_url</string>
-      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
-      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
+      <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/(abs|full|pdf|pdfplus|ref)/[0-9.]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
+      <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string> 
     </list>
   </entry>
   <entry>
@@ -128,9 +131,18 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      	<string>"^%sdoi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", base_url</string>
+      	<string>"^https?://%s/doi/(pdf|pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
+<!--  support http to https redirection -->
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>   
   <entry>
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponSubstancePredicateFactory</string>
@@ -214,6 +226,7 @@
         Make no store/no_fail due to html returned for http://caseconnector.jbjs.org/content/2/2/e16
         we will count on polls to catch errors where no content was stored -->
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.atypon.BaseAtyponHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

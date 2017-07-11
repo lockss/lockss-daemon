@@ -45,6 +45,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.UrlUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.TypedEntryMap;
 
@@ -347,7 +348,8 @@ public class BaseAtyponMetadataUtil {
       /*matches() is anchored so must create complete pattern or else use .finds() */
       /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
       String base_url = cu.getArchivalUnit().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-      String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^?&]+)$";
+      String base_host = UrlUtil.stripProtocol(base_url);
+      String patternString = "^https?://" + base_host + "doi/[^/]+/([^/]+)/([^?&]+)$";
       Pattern METADATA_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
       String url = cu.getUrl();
       Matcher mat = METADATA_PATTERN.matcher(url);    
