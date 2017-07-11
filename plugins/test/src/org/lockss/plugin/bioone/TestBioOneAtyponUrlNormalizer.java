@@ -32,44 +32,69 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bioone;
 
+import java.util.Properties;
+
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
 
 public class TestBioOneAtyponUrlNormalizer extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
+  private MockArchivalUnit m_mau;
+
+  
+  @Override
+  public void setUp() throws Exception {
+    super.setUp();
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "3");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(JID_KEY, "foo");
+
+    Configuration config = ConfigurationUtil.fromProps(props);
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
+    }
+  
 
   public void testNormalizeUrl() throws Exception {
     UrlNormalizer normalizer = new BioOneAtyponUrlNormalizer();
     // No change expected
     assertEquals("http://www.example.com/foo",
-                 normalizer.normalizeUrl("http://www.example.com/foo", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo", m_mau));
     assertEquals("http://www.example.com/foo?",
-                 normalizer.normalizeUrl("http://www.example.com/foo?", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?", m_mau));
     assertEquals("http://www.example.com/foo?nothinghappens",
-                 normalizer.normalizeUrl("http://www.example.com/foo?nothinghappens", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?nothinghappens", m_mau));
     
     // Remove the right suffixes
     assertEquals("http://www.example.com/foo",
-                 normalizer.normalizeUrl("http://www.example.com/foo?cookieSet=1", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?cookieSet=1", m_mau));
     assertEquals("http://www.example.com/foo",
-                 normalizer.normalizeUrl("http://www.example.com/foo?prevSearch=", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo?prevSearch=", m_mau));
     assertEquals("http://www.example.com/foo",
-            normalizer.normalizeUrl("http://www.example.com/foo?seq=512", null));
+            normalizer.normalizeUrl("http://www.example.com/foo?seq=512", m_mau));
     
     // Remove the first double slash (other than that of http:// or similar)
     assertEquals("http://www.example.com/foo",
-                 normalizer.normalizeUrl("http://www.example.com//foo", null));
+                 normalizer.normalizeUrl("http://www.example.com//foo", m_mau));
     assertEquals("http://www.example.com/foo/bar",
-                 normalizer.normalizeUrl("http://www.example.com/foo/bar", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo/bar", m_mau));
     assertEquals("http://www.example.com/nothinghappens/",
-                 normalizer.normalizeUrl("http://www.example.com/nothinghappens/", null));
+                 normalizer.normalizeUrl("http://www.example.com/nothinghappens/", m_mau));
     assertEquals("http://www.example.com/foo/",
-                 normalizer.normalizeUrl("http://www.example.com/foo//", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo//", m_mau));
     assertEquals("http://www.example.com/foo/bar//baz",
-                 normalizer.normalizeUrl("http://www.example.com/foo//bar//baz", null));
-    assertEquals("https://www.example.com/foo",
-                 normalizer.normalizeUrl("https://www.example.com//foo", null));
+                 normalizer.normalizeUrl("http://www.example.com/foo//bar//baz", m_mau));
+    //assertEquals("https://www.example.com/foo",
+    //             normalizer.normalizeUrl("https://www.example.com//foo", m_mau));
     assertEquals("ftp://www.example.com/foo",
-                 normalizer.normalizeUrl("ftp://www.example.com//foo", null));
+                 normalizer.normalizeUrl("ftp://www.example.com//foo", m_mau));
   }
   
 
