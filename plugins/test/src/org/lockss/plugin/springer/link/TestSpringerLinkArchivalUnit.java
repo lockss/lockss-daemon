@@ -69,13 +69,13 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
   
   static final String baseRepairList[] =
     {
-        "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
+        "/(springerlink-)?static/.*\\.(png|css|js|gif|ico)$",
         "^https://static-content\\.springer\\.com/cover/",
     };
   
   static final String journalRepairList[] =
     {
-        "/(springerlink-)?static/.*\\.(png|css|js|gif)$",
+        "/(springerlink-)?static/.*\\.(png|css|js|gif|ico)$",
         "/article/[^/]+/[^/\\.]+/fulltext\\.html$",
         "^https://static-content\\.springer\\.com/cover/",
     };
@@ -213,7 +213,9 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
       BASE_URL+"static/js/webtrekk/webtrekk_v3.js",
       BASE_URL+"springerlink-static/1057859635/js/main.js",
       BASE_URL+"springerlink-static/625140479/css/styles.css",
-      BASE_URL+"static/201606100928-13/sites/link/images/apple-touch-icon-72x72-precomposed.png"
+      BASE_URL+"static/201606100928-13/sites/link/images/apple-touch-icon-72x72-precomposed.png",
+      BASE_URL+"springerlink-static/123456789/images/favicon/favicon.ico"
+      
      );
     List <String> repairList1 = ListUtil.list(   
         PERMITTED_HOST_URL+"cover/journal/11356/20/3.jpg"
@@ -225,9 +227,10 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
       m0 = p0.matcher(urlString);
       assertEquals(true, m0.find());
     }
+    
     p0 = Pattern.compile(baseRepairList[1]);
     for (String urlString : repairList1) {
-      m0 = p0.matcher(urlString);
+      m0 = p0.matcher(urlString);      
       assertEquals(true, m0.find());
     }
     
