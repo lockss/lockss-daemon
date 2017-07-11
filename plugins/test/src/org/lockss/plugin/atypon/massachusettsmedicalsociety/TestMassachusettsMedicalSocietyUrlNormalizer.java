@@ -28,24 +28,49 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.massachusettsmedicalsociety;
 
+import java.util.Properties;
+
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 
 /*
  * UrlNormalizer removes ?cookieSet=1 suffix
  */
 public class TestMassachusettsMedicalSocietyUrlNormalizer extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
+  private MockArchivalUnit m_mau;
+
+  
+  @Override
+  public void setUp() throws Exception {
+    super.setUp();
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "3");
+    props.setProperty(BASE_URL_KEY, "http://www.www.nejm.org/");
+    props.setProperty(JID_KEY, "foo");
+
+    Configuration config = ConfigurationUtil.fromProps(props);
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
+    }
+
 
   public void testUrlNormalizer() throws Exception { 
     
     UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
     assertEquals("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004",
-                 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004", null));
+                 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004", m_mau));
     assertEquals("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004",
-                 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004?cookieSet=1", null));
+                 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004?cookieSet=1", m_mau));
     assertEquals("http://www.nejm.org/action/downloadCitation?doi=10.1056%2FNEJMc073037&format=bibTex&include=cit",
-                 normalizer.normalizeUrl("http://www.nejm.org/action/downloadCitation?format=bibTex&doi=10.1056%2FNEJMc073037&include=cit&direct=checked", null));
+                 normalizer.normalizeUrl("http://www.nejm.org/action/downloadCitation?format=bibTex&doi=10.1056%2FNEJMc073037&include=cit&direct=checked", m_mau));
   }
   
 }
