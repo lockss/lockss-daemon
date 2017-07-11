@@ -67,7 +67,8 @@ public class IgiGlobalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
       Pattern.compile("(\\.aspx\\?([^=]+=[^&]+(?:&[^=]+=[^&]+)*))&\\2", Pattern.CASE_INSENSITIVE);
      // Pattern.compile("(\\.aspx\\?([^=]+=[^&]+)(&volume=[^&]+))(&\\2\\3)", Pattern.CASE_INSENSITIVE);
 
-  public String normalizeUrl(String url,
+  @Override
+  public String additionalNormalization(String url,
                              ArchivalUnit au)
       throws PluginException {
     

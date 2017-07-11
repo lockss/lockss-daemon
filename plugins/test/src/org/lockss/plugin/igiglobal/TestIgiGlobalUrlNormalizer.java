@@ -28,21 +28,46 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.igiglobal;
 
+import java.util.Properties;
+
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
 /*
  * UrlNormalizer removes &accesstype=.* suffixes
  */
 public class TestIgiGlobalUrlNormalizer extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
+  private MockArchivalUnit m_mau;
+
+  
+  @Override
+  public void setUp() throws Exception {
+    super.setUp();
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "3");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(ISSN_KEY, "1234-5432");
+
+    Configuration config = ConfigurationUtil.fromProps(props);
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
+    }
+
 
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new IgiGlobalUrlNormalizer();
     assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx",
-    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?v=12314", null));
+    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?v=12314", m_mau));
     assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&true=true",
-    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&true=true", null));
+    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&true=true", m_mau));
     assertEquals("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667",
-    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&accesstype=infosci", null));
+    			 normalizer.normalizeUrl("http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55667&accesstype=infosci", m_mau));
   }
   
 }
