@@ -51,7 +51,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>67</string>
+    <string>68</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -153,7 +153,7 @@
       <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?(\.toc)?$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
             page may also contain roman numerals, dot, & number (iii.2)  -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only)|)$", url_host(base_url)</string>
       <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
       <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-data|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
       <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
@@ -225,7 +225,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:(bmj|[ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
       <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     </list>
   </entry>
