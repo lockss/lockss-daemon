@@ -61,10 +61,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "<script type=\"text/javascript\" src=\"/camcos/etc/cover.js\"></script>" +
       "</html>";
   
-  private static final String withoutScript = " " +
-      "<html>" +
-      " " +
-      "</html>";
+  private static final String withoutScript = " ";
   
   private static final String withStuff = "" +
       "<html lang=\"en\" xml:lang=\"en\" xmlns:rsc=\"urn:rsc.org\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:art=\"http://www.rsc.org/schema/rscart38\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:epub=\"http://www.idpf.org/2007/ops\">" +
@@ -83,11 +80,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "</body>" +
       "</html>";
   
-  private static final String withoutStuff = "" +
-      " <html>" +
-      " <body>" +
-      " </body>" +
-      " </html>";
+  private static final String withoutStuff = " ";
   
   private static final String withLinks = "" +
       "A. A, A. K, H. S, and R. A, Native changes in <span class=\"italic\">Bacillus subtilis</span>" +
@@ -100,9 +93,9 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "title=\"Link via OpenURL Resolver\"><img src=\"http://pubs.rsc.org/en\"></a>.";
   
   private static final String withoutLinks = "" +
-      "A. A, A. K, H. S, and R. A, Native changes in <span>Bacillus subtilis </span>" +
-      ", <span>Jnl. </span>, year, <span>2 </span>(1), 80 87" +
-      " <a>Left </a> <a> <img src=\"http://pubs.rsc.org/en\"> </a>.";
+      "A. A, A. K, H. S, and R. A, Native changes in Bacillus subtilis " +
+      ", Jnl. , year, 2 (1), 80 87" +
+      " Left .";
   
   private static final String withNav = "" +
       "<html>\n" +
@@ -112,10 +105,7 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       " </div>" +
       "</html>";
   
-  private static final String withoutNav = " " +
-      "<html>" +
-      " " +
-      "</html>";
+  private static final String withoutNav = " ";
   
   private static final String genError = "" +
       "<html><body>" +

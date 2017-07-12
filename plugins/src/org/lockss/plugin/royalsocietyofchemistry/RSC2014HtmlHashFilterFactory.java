@@ -124,6 +124,7 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         // remove abstract links which disappeared from content crawled more recently
         HtmlNodeFilters.tagWithAttribute("div", "class", "absract_links"),
         // more aggressive filtering, the next step would be to remove all remaining tags
+        HtmlNodeFilters.tagWithAttribute("div", "class", "page_anchor"),
         HtmlNodeFilters.comment(),
         HtmlNodeFilters.tag("noscript"),
     };
@@ -131,9 +132,9 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    // add a space before the start tag "<", then whitespace filter
-    Reader addSpaceFReader = new StringFilter(filteredReader, "<", " <");
-    return new ReaderInputStream(new WhiteSpaceFilter(addSpaceFReader));
+    // add a space before the tag "<", then remove from "<" to ">"
+    Reader addFilteredReader = new HtmlTagFilter(new StringFilter(filteredReader,"<", " <"), new TagPair("<",">"));
+    return new ReaderInputStream(new WhiteSpaceFilter(addFilteredReader));
   }
   
 }
