@@ -157,7 +157,7 @@
     au < finished ; finished ; 2014 ; Advances in Agriculture Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Agriculture Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Advances in Agriculture Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Agriculture Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Agriculture Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -509,7 +509,7 @@
     au < finished ; finished ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in Electrical Engineering Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Advances in Electrical Engineering Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Electrical Engineering Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Electrical Engineering Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -1001,7 +1001,7 @@
     au < finished ; finished ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Advances in Operations Research Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Advances in Operations Research Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Operations Research Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Operations Research Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -1024,7 +1024,7 @@
     au < deepCrawl ; exists ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 ; >
     au < finished ; finished ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; Advances in Optical Technologies Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in Optical Technologies Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in Optical Technologies Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -1063,7 +1063,7 @@
     au < finished ; finished ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Advances in OptoElectronics Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; Advances in OptoElectronics Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Advances in OptoElectronics Volume 2017 ; 2017 ; 2017 ; >
 
   }
  

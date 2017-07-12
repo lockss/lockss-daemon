@@ -139,7 +139,7 @@
       au < finished ; finished ; 2014 ; British Journal of Radiology Volume 87 ; 87 ; >
       au < frozen ; exists ; 2015 ; British Journal of Radiology Volume 88 ; 88 ; >
       au < frozen ; exists ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; > #Error parsing page
-      au < ready ; exists ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; > #Error parsing page
+      au < crawling ; exists ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; > #Error parsing page
       
     }
     
@@ -161,7 +161,7 @@
 
       au < finished ; crawling ; 2015 ; BJR|case reports Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 ; >
-      au < ready ; exists ; 2017 ; BJR|case reports Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2017 ; BJR|case reports Volume 3 ; 3 ; >
 
   }
 
@@ -240,7 +240,7 @@
       au < frozen ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
       au < finished ; finished ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
-      au < ready ; exists ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
 
     }
 

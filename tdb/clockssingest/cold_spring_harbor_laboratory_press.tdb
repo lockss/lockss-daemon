@@ -23,9 +23,9 @@
 
       param[base_url] = http://molecularcasestudies.cshlp.org/
 
-      au < ready ; exists ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; >
-      au < ready ; exists ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 ; >
-      au < ready ; exists ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; >
 
     }
 
@@ -51,7 +51,7 @@
       au < frozen ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 ; >
       au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 ; >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Perspectives in Biology Volume 8 ; 8 ; >
-      au < ready ; exists ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2017 ; Cold Spring Harbor Perspectives in Biology Volume 9 ; 9 ; >
 
     }
     
@@ -105,7 +105,7 @@
       au < finished ; finished ; 2014 ; Cold Spring Harbor Protocols Volume 2014 ; 2014 ; >
       au < deepCrawl ; exists ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; >
       au < deepCrawl ; exists ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; >
       
     }
     
@@ -256,7 +256,7 @@
       au < finished ; finished ; 2014 ; Genes & Development Volume 28 ; 28 ; >
       au < frozen ; exists ; 2015 ; Genes & Development Volume 29 ; 29 ; >
       au < deepCrawl ; exists ; 2016 ; Genes & Development Volume 30 ; 30 ; >
-      au < ready ; exists ; 2017 ; Genes & Development Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2017 ; Genes & Development Volume 31 ; 31 ; >
 
     }
 
@@ -301,7 +301,7 @@
       au < finished ; finished ; 2014 ; Genome Research Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2015 ; Genome Research Volume 25 ; 25 ; >
       au < deepCrawl ; exists ; 2016 ; Genome Research Volume 26 ; 26 ; >
-      au < ready ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2017 ; Genome Research Volume 27 ; 27 ; >
 
     }
 
@@ -343,7 +343,7 @@
       au < finished ; finished ; 2014 ; Learning & Memory Volume 21 ; 21 ; >
       au < frozen ; exists ; 2015 ; Learning & Memory Volume 22 ; 22 ; >
       au < deepCrawl ; exists ; 2016 ; Learning & Memory Volume 23 ; 23 ; >
-      au < ready ; exists ; 2017 ; Learning & Memory Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2017 ; Learning & Memory Volume 24 ; 24 ; >
 
     }
 
