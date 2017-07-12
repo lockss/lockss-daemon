@@ -54,7 +54,9 @@ public class PensoftOaiHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
       throws IOException {
     
     String url = UrlUtil.stripProtocol(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    // Do NOT extract links from home page
+    // Do NOT extract links from home page, as this lead to 
+    // over-crawling from current article links on that page
+    // The journal home page is the permission page, so it is needed
     if (srcUrl.endsWith(url)) {
       return;
     }
