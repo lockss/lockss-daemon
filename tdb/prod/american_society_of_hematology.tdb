@@ -158,14 +158,14 @@
       param[base_url] = http://www.bloodjournal.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < ash.ASHDrupalPlugin ; testing ; 2013 ; Blood Volume 121 ; 121 >
-      au < ash.ASHDrupalPlugin ; testing ; 2013 ; Blood Volume 122 ; 122 >
-      au < ash.ASHDrupalPlugin ; testing ; 2014 ; Blood Volume 123 ; 123 >
-      au < ash.ASHDrupalPlugin ; testing ; 2014 ; Blood Volume 124 ; 124 >
-      au < ash.ASHDrupalPlugin ; testing ; 2015 ; Blood Volume 125 ; 125 >
-      au < ash.ASHDrupalPlugin ; testing ; 2015 ; Blood Volume 126 ; 126 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2016 ; Blood Volume 127 ; 127 >
-      au < ash.ASHDrupalPlugin ; manifest ; 2016 ; Blood Volume 128 ; 128 >
+      au < ash.ASHDrupalPlugin ; notReady ; 2013 ; Blood Volume 121 ; 121 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2013 ; Blood Volume 122 ; 122 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2014 ; Blood Volume 123 ; 123 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2014 ; Blood Volume 124 ; 124 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2015 ; Blood Volume 125 ; 125 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2015 ; Blood Volume 126 ; 126 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2016 ; Blood Volume 127 ; 127 ># subscription error. See HW Salesforce
+      au < ash.ASHDrupalPlugin ; notReady ; 2016 ; Blood Volume 128 ; 128 ># subscription error. See HW Salesforce
       au < ash.ASHDrupalPlugin ; manifest ; 2017 ; Blood Volume 129 ; 129 >
       au < ash.ASHDrupalPlugin ; manifest ; 2017 ; Blood Volume 130 ; 130 >
 
@@ -202,7 +202,7 @@
     au < released ; 2013 ; Hematology: ASH Education Program Book Volume 2013 ; 2013 >
     au < released ; 2014 ; Hematology: ASH Education Program Book Volume 2014 ; 2014 >
     au < released ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
-    au < testing ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
+    au < notReady ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 > # subscription error. See HW Salesforce
     au < expected ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
 
   }
