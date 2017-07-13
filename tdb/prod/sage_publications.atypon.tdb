@@ -3335,7 +3335,7 @@
         au < manifest ; 1995-1996 ; Assessment for Effective Intervention Volume 21 ; 21 ; aeia >
         au < manifest ; 1996-1997 ; Assessment for Effective Intervention Volume 22 ; 22 ; aeia >
         au < manifest ; 1997-1998 ; Assessment for Effective Intervention Volume 23 ; 23 ; aeia >
-        au < doesNotExist ; 0 ; Assessment for Effective Intervention Volume 24 ; 24 ; aeia >
+        au < exists ; 1999 ; Assessment for Effective Intervention Volume 24 ; 24 ; aeia >
         au < manifest ; 1999-2000 ; Assessment for Effective Intervention Volume 25 ; 25 ; aeia >
         au < manifest ; 2000-2001 ; Assessment for Effective Intervention Volume 26 ; 26 ; aeib >
         au < manifest ; 2001-2002 ; Assessment for Effective Intervention Volume 27 ; 27 ; aeib >
@@ -4730,7 +4730,7 @@
         au < manifest ; 1977-1978 ; Business & Society Volume 18 ; 18 ; basa >
         au < manifest ; 1978-1980 ; Business & Society Volume 19 ; 19 ; basa >
         au < manifest ; 1981 ; Business & Society Volume 20 ; 20 ; basa >
-        au < doesNotExist ; 0 ; Business & Society Volume 21 ; 21 ; basa >
+        au < exists ; 1982 ; Business & Society Volume 21 ; 21 ; basa >
         au < manifest ; 1983 ; Business & Society Volume 22 ; 22 ; basa >
         au < manifest ; 1984 ; Business & Society Volume 23 ; 23 ; basa >
         au < manifest ; 1985 ; Business & Society Volume 24 ; 24 ; basa >
@@ -30594,7 +30594,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < ready ; 2000 ; Nutrition in Clinical Practice Volume 15 ; 15 ; ncpa >
         au < ready ; 2001 ; Nutrition in Clinical Practice Volume 16 ; 16 ; ncpa >
         au < ready ; 2002 ; Nutrition in Clinical Practice Volume 17 ; 17 ; ncpa >
-        au < testing ; 2003 ; Nutrition in Clinical Practice Volume 18 ; 18 ; ncpa >
+        au < ready ; 2003 ; Nutrition in Clinical Practice Volume 18 ; 18 ; ncpa >
         au < ready ; 2004 ; Nutrition in Clinical Practice Volume 19 ; 19 ; ncpa >
         au < ready ; 2005 ; Nutrition in Clinical Practice Volume 20 ; 20 ; ncpa >
         au < ready ; 2006 ; Nutrition in Clinical Practice Volume 21 ; 21 ; ncpa >
@@ -35318,7 +35318,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
           au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 ; sgoa >
           au < manifest ; 2013 ; Sage Open Volume 3 ; 3 ; sgoa >
           au < released ; 2014 ; Sage Open Volume 4 ; 4 ; sgoa >
-          au < testing ; 2015 ; Sage Open Volume 5 ; 5 ; sgoa >
+          au < exists ; 2015 ; Sage Open Volume 5 ; 5 ; sgoa >
           au < released ; 2016 ; Sage Open Volume 6 ; 6 ; sgoa >
           au < manifest ; 2017 ; Sage Open Volume 7 ; 7 ; sgoa >
 
