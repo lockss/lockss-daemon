@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,19 +45,32 @@ import org.lockss.util.Logger;
 // files that end in .xml at some level below the root directory. 
 // The metadata extraction will be customized by publisher plugin but will use
 // the xml files provided by this article iterator
+// A child plugin can adapt this by changing the getIncludePatternTemplate and getExcludeSubTreePattern
+// Zip and Tar are variants based off this iterator.
 //
 public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger(SourceXmlArticleIteratorFactory.class);
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final String XML_REPLACEMENT = "/$1.xml";
-  
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //could handle any number of subdirectories under the year so long as end in .xml
-  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
+  protected static final String ALL_XML_PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";  
+
+  // Be sure to exclude all nested archives in case supplemental data is provided this way
+  // the default for unpacked deliveries is all archives; override for zip/tar deliveries
+  protected static final Pattern NESTED_ARCHIVE_PATTERN = 
+      Pattern.compile(".*/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+          Pattern.CASE_INSENSITIVE);
+      
+  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.xml";
+  // There will not always be a 1:1 PDF relationship, but when there is use that as the
+  // full-text CU. 
+  private static final String PDF_REPLACEMENT = "/$1.pdf";
+
+
   //
-  // The source content structure looks like this:
+  // The non-archive source content structure looks like this:
   // <root_location>/<year>/<possible subdirectories>/<STUFF>
   //     where STUFF is a series of files:  <name>.pdf, <name>.epub &
   //    as well as a some number of <othername(s)>.xml which provide the metadata
@@ -72,7 +85,9 @@ public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, 
     // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
-                    .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+                    .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
+                    .setExcludeSubTreePattern(getExcludeSubTreePattern())
+                    .setVisitArchiveMembers(getIsArchive())); 
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
     // ultimately the metadata extractor needs to set the entire facet map 
@@ -81,10 +96,42 @@ public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, 
     builder.addAspect(XML_PATTERN,
                       XML_REPLACEMENT,
                       ArticleFiles.ROLE_ARTICLE_METADATA);
+ 
+    // While we can't identify articles that are *just* PDF which is why they
+    // can't trigger an articlefiles by themselves, we can identify them
+    // by replacement and they should be the full text CU.
+    builder.addAspect(PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    //Now set the order for the full text cu
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // though if it comes to this it won't emit    
 
     return builder.getSubTreeArticleIterator();
   }
   
+  // NOTE - for a child to create their own version of this. 
+  // This does not work to limit the match of the include, except when 
+  // the urls are "below" the pattern - intended for subtree
+  // A child might use this to limit entire subtrees - default is to avoid
+  // descending in to nested archive files (eg suplementary data)
+  protected Pattern getExcludeSubTreePattern() {
+    return NESTED_ARCHIVE_PATTERN;
+  }
+
+  // NOTE - for a child to create their own version of this
+  // Most likely use is to limit which XML files should be used for article iteration
+  // since excluding is limited to subtrees, just create more limiting regex pattern
+  // to identify the appropriate xml files
+  protected String getIncludePatternTemplate() {
+    return ALL_XML_PATTERN_TEMPLATE;
+  }
+  
+  // NOTE - for a child to create their own version of this
+  // indicates if the iterator should descend in to archives (for tar/zip deliveries)
+  protected boolean getIsArchive() {
+    return false;
+  }
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {

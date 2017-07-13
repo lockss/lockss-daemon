@@ -41,17 +41,17 @@ import org.lockss.util.Logger;
 // want to iterate on files within the zipped file that end in .xml at some 
 // level below the root directory. 
 //
-public class SourceZipXmlArticleIteratorFactory extends SourceXmlArticleIteratorFactory {
+public class SourceTarXmlArticleIteratorFactory extends SourceXmlArticleIteratorFactory {
 
-  protected static Logger log = Logger.getLogger(SourceZipXmlArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(SourceTarXmlArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE = 
-      "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.tar!/.*\\.xml$\", base_url, year";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
-      Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+      Pattern.compile(".*/[^/]+\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);
 
   protected Pattern getExcludeSubTreePattern() {

@@ -283,6 +283,8 @@ implements SourceXmlSchemaHelper {
   private static String JATS_ameta =  "front/article-meta";
   
   private static String JATS_jtitle = JATS_jmeta + "/journal-title-group";
+  public static String JATS_jid_pubmed = JATS_jmeta + "/journal-id[@journal-id-type = \"pubmed\"]";
+  public static String JATS_jid_publisher = JATS_jmeta + "/journal-id[@journal-id-type = \"publisher\"]";
   // early versions of JATS (2.2 see CambridgePress) have title/subtitle as
   // direct journal-meta children 
   private static String JATS_jtitle_early = JATS_jmeta + "/journal-title";
@@ -328,6 +330,9 @@ implements SourceXmlSchemaHelper {
     // only in earlier versions
     JATS_articleMap.put(JATS_jtitle_early, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_jsubtitle_early, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_jid_pubmed, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_jid_publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+    
 
     JATS_articleMap.put(JATS_issn, JATS_ISSN_VALUE);
     JATS_articleMap.put(JATS_pissn, JATS_ISSN_VALUE);
