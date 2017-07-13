@@ -15,8 +15,8 @@
 
       attr[journal_id] = 648
 
-        au < manifest ; 2013 ; Asian Journal of English Language Teaching Volume 23 [2013] ; 9674 >
-        au < manifest ; 2014 ; Asian Journal of English Language Teaching Volume 24 [2014] ; 10246 >
+        au < testing ; 2013 ; Asian Journal of English Language Teaching Volume 23 [2013] ; 9674 >
+        au < testing ; 2014 ; Asian Journal of English Language Teaching Volume 24 [2014] ; 10246 >
 
     }
     {
@@ -27,10 +27,10 @@
 
       attr[journal_id] = 621
 
-        au < manifest ; 2013 ; China Review Volume 13 [2013] ; 9063 >
-        au < manifest ; 2014 ; China Review Volume 14 [2014] ; 9893 >
-        au < manifest ; 2015 ; China Review Volume 15 [2015] ; 10596 >
-        au < manifest ; 2016 ; China Review Volume 16 [2016] ; 10960 >
+        au < testing ; 2013 ; China Review Volume 13 [2013] ; 9063 >
+        au < testing ; 2014 ; China Review Volume 14 [2014] ; 9893 >
+        au < testing ; 2015 ; China Review Volume 15 [2015] ; 10596 >
+        au < testing ; 2016 ; China Review Volume 16 [2016] ; 10960 >
         au < manifest ; 2017 ; China Review Volume 17 [2017] ; 12432 >
 
     }
@@ -42,8 +42,8 @@
 
       attr[journal_id] = 0000
 
-        au < manifest ; 2015 ; Journal of Chinese Linguistics Volume 43 [2015] ; 10606 >
-        au < manifest ; 2016 ; Journal of Chinese Linguistics Volume 44 [2016] ; 10961 >
+        au < testing ; 2015 ; Journal of Chinese Linguistics Volume 43 [2015] ; 10606 >
+        au < testing ; 2016 ; Journal of Chinese Linguistics Volume 44 [2016] ; 10961 >
         au < manifest ; 2017 ; Journal of Chinese Linguistics Volume 45 [2017] ; 12476 >
 
     }
