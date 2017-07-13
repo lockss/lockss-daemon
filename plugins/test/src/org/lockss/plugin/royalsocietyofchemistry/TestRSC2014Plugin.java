@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2017 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,8 +34,13 @@ package org.lockss.plugin.royalsocietyofchemistry;
 
 import java.net.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.test.*;
+import org.lockss.util.ListUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -52,6 +57,14 @@ public class TestRSC2014Plugin extends LockssTestCase {
   static final String JOURNAL_CODE_KEY = "journal_code";
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  
+  static final String GRAPHICS_URL = "http://sod-a.img-cdn.com/";
+  // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/royalsocietyofchemistry/RSC2014Plugin.xml
+  // <string>"%spubs-core/", graphics_url</string>
+  // Note diff: the funky escaped chars, there is probably a call to do the conversion
+  // if it changes in the plugin, you will likely need to change the test, so verify
+  static final String REPAIR_FROM_PEER_REGEXP = "http\\:\\/\\/sod\\-a\\.img\\-cdn\\.com\\/" + "pubs-core/";
+  
   
   private DefinablePlugin plugin;
   
@@ -79,7 +92,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
     props.setProperty(RESOLVER_URL_KEY, "http://xlink.example.com/");
-    props.setProperty(GRAPHICS_URL_KEY, "http://img.example.com/");
+    props.setProperty(GRAPHICS_URL_KEY, GRAPHICS_URL);
     props.setProperty(BASE_URL2_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_CODE_KEY, "an");
     props.setProperty(VOLUME_NAME_KEY, "123");
@@ -124,7 +137,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
     props.setProperty(RESOLVER_URL_KEY, "http://xlink.example.com/");
-    props.setProperty(GRAPHICS_URL_KEY, "http://img.example.com/");
+    props.setProperty(GRAPHICS_URL_KEY, GRAPHICS_URL);
     props.setProperty(BASE_URL2_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_CODE_KEY, "an");
     props.setProperty(VOLUME_NAME_KEY, "123");
@@ -148,7 +161,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
     props.setProperty(RESOLVER_URL_KEY, "http://xlink.example.com/");
-    props.setProperty(GRAPHICS_URL_KEY, "http://img.example.com/");
+    props.setProperty(GRAPHICS_URL_KEY, GRAPHICS_URL);
     props.setProperty(BASE_URL2_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_CODE_KEY, "an");
     props.setProperty(VOLUME_NAME_KEY, "123");
@@ -175,6 +188,49 @@ public class TestRSC2014Plugin extends LockssTestCase {
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
         instanceof org.lockss.plugin.royalsocietyofchemistry.RSC2014ArticleIteratorFactory);
+  }
+  
+  
+  public void testPollSpecial() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
+    props.setProperty(RESOLVER_URL_KEY, "http://xlink.example.com/");
+    props.setProperty(GRAPHICS_URL_KEY, GRAPHICS_URL);
+    props.setProperty(BASE_URL2_KEY, "http://www.example.com/");
+    props.setProperty(JOURNAL_CODE_KEY, "an");
+    props.setProperty(VOLUME_NAME_KEY, "123");
+    props.setProperty(YEAR_KEY, "2013");
+    
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(ListUtil.list(
+        REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    
+    List <String> repairList = ListUtil.list(
+        GRAPHICS_URL + "pubs-core/2017.0.57/content/NewImages/CCBY-NC.png",
+        GRAPHICS_URL + "pubs-core/2016/js/9.3.2/lib/functional.min.js",
+        GRAPHICS_URL + "pubs-core/2017.0.57/content/stylesheets/mobileStyle.css");
+    Pattern p = Pattern.compile(REPAIR_FROM_PEER_REGEXP);
+    for (String urlString : repairList) {
+      Matcher m = p.matcher(urlString);
+      assertEquals(urlString, true, m.find());
+    }
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString = "http://pubs.example.com/img/close-icon.png";
+    Matcher m = p.matcher(notString);
+    assertEquals(false, m.find());
+    
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+    }
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
   
 }
