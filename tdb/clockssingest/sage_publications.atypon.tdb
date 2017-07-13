@@ -3815,7 +3815,7 @@
         #param[base_url] = http://bbx.sagepub.com/
 
         au < manifest ; exists ; 2011-2012 ; Beyond Behavior Volume 21 ; 21 ; bbxa ; >
-        au < manifest ; exists ; 2012-2013 ; Beyond Behavior Volume 22 ; 22 ; bbxa ; >
+        au < crawling ; exists ; 2012-2013 ; Beyond Behavior Volume 22 ; 22 ; bbxa ; >
         au < crawling ; exists ; 2013-2014 ; Beyond Behavior Volume 23 ; 23 ; bbxa ; >
         au < frozen ; exists ; 2015 ; Beyond Behavior Volume 24 ; 24 ; bbxa ; >
         au < frozen ; exists ; 2016 ; Beyond Behavior Volume 25 ; 25 ; bbxa ; >
@@ -4096,7 +4096,7 @@
         au < frozen ; exists ; 2010 ; British Journal of Music Therapy Volume 24 ; 24 ; bjmb ; >
         au < manifest ; exists ; 2011 ; British Journal of Music Therapy Volume 25 ; 25 ; bjmb ; >
         au < manifest ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; bjmb ; >
-        au < manifest ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; bjmb ; >
+        au < crawling ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; bjmb ; >
         au < frozen ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; bjmb ; >
         au < doNotProcess ; doNotProcess ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; bjmb ; >
         au < frozen ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; bjmb ; >
@@ -4383,7 +4383,7 @@
       au < manifest ; exists ; 2010 ; Building Acoustics Volume 17 ; 17 ; buaa ; >
       au < manifest ; exists ; 2011 ; Building Acoustics Volume 18 ; 18 ; buaa ; >
       au < manifest ; exists ; 2012 ; Building Acoustics Volume 19 ; 19 ; buaa ; >
-      au < manifest ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 ; buaa ; >
+      au < crawling ; exists ; 2013 ; Building Acoustics Volume 20 ; 20 ; buaa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Building Acoustics Volume 21 ; 21 ; buaa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Building Acoustics Volume 22 ; 22 ; buaa ; >
       au < frozen ; exists ; 2016 ; Building Acoustics Volume 23 ; 23 ; buaa ; >
@@ -5500,7 +5500,7 @@
       au < manifest ; exists ; 2010 ; Cell Transplantation Volume 19 ; 19 ; clla ; >
       au < manifest ; exists ; 2011 ; Cell Transplantation Volume 20 ; 20 ; clla ; >
       au < manifest ; exists ; 2012 ; Cell Transplantation Volume 21 ; 21 ; clla ; >
-      au < manifest ; exists ; 2013 ; Cell Transplantation Volume 22 ; 22 ; clla ; >
+      au < crawling ; exists ; 2013 ; Cell Transplantation Volume 22 ; 22 ; clla ; >
       au < crawling ; exists ; 2014 ; Cell Transplantation Volume 23 ; 23 ; clla ; >
       au < crawling ; exists ; 2015 ; Cell Transplantation Volume 24 ; 24 ; clla ; >
       au < crawling ; exists ; 2016 ; Cell Transplantation Volume 25 ; 25 ; clla ; >
@@ -9092,7 +9092,7 @@
       au < crawling ; exists ; 2010 ; Dose-Response Volume 8 ; 8 ; dosb ; >
       au < frozen ; exists ; 2011 ; Dose-Response Volume 9 ; 9 ; dosb ; >
       au < manifest ; exists ; 2012 ; Dose-Response Volume 10 ; 10 ; dosb ; >
-      au < manifest ; exists ; 2013 ; Dose-Response Volume 11 ; 11 ; dosb ; >
+      au < crawling ; exists ; 2013 ; Dose-Response Volume 11 ; 11 ; dosb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Dose-Response Volume 12 ; 12 ; dosb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Dose-Response Volume 13 ; 13 ; dosb ; >
       au < frozen ; exists ; 2016 ; Dose-Response Volume 14 ; 14 ; dosb ; >
@@ -9240,7 +9240,7 @@
       au < manifest ; exists ; 2010 ; The Downside Review Volume 128 ; 128 ; tdra ; >
       au < manifest ; exists ; 2011 ; The Downside Review Volume 129 ; 129 ; tdra ; >
       au < crawling ; exists ; 2012 ; The Downside Review Volume 130 ; 130 ; tdra ; >
-      au < manifest ; exists ; 2013 ; The Downside Review Volume 131 ; 131 ; tdra ; >
+      au < crawling ; exists ; 2013 ; The Downside Review Volume 131 ; 131 ; tdra ; >
       au < frozen ; exists ; 2014 ; The Downside Review Volume 132 ; 132 ; tdra ; >
       au < frozen ; exists ; 2015 ; The Downside Review Volume 133 ; 133 ; tdra ; >
       au < crawling ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; tdra ; >
@@ -10244,7 +10244,7 @@
       au < crawling ; exists ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 ; eeaa ; >
       au < manifest ; exists ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 ; eeaa ; >
       au < manifest ; exists ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 ; eeaa ; >
-      au < manifest ; exists ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; eeaa ; >
+      au < crawling ; exists ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; eeaa ; >
       au < crawling ; exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 ; eeaa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 ; eeaa ; >
       au < frozen ; exists ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 ; eeaa ; >
@@ -11154,7 +11154,7 @@
       au < manifest ; exists ; 2010 ; European Journal of Mass Spectrometry Volume 16 ; 16 ; emsa ; >
       au < manifest ; exists ; 2011 ; European Journal of Mass Spectrometry Volume 17 ; 17 ; emsa ; >
       au < manifest ; exists ; 2012 ; European Journal of Mass Spectrometry Volume 18 ; 18 ; emsa ; >
-      au < manifest ; exists ; 2013 ; European Journal of Mass Spectrometry Volume 19 ; 19 ; emsa ; >
+      au < crawling ; exists ; 2013 ; European Journal of Mass Spectrometry Volume 19 ; 19 ; emsa ; >
       au < frozen ; exists ; 2014 ; European Journal of Mass Spectrometry Volume 20 ; 20 ; emsa ; >
       au < crawling ; exists ; 2015 ; European Journal of Mass Spectrometry Volume 21 ; 21 ; emsa ; >
       au < crawling ; exists ; 2016 ; European Journal of Mass Spectrometry Volume 22 ; 22 ; emsa ; >
@@ -11339,7 +11339,7 @@
       au < manifest ; exists ; 2010 ; European Labour Law Journal Volume 1 ; 1 ; ella ; >
       au < manifest ; exists ; 2011 ; European Labour Law Journal Volume 2 ; 2 ; ella ; >
       au < manifest ; exists ; 2012 ; European Labour Law Journal Volume 3 ; 3 ; ella ; >
-      au < manifest ; exists ; 2013 ; European Labour Law Journal Volume 4 ; 4 ; ella ; >
+      au < crawling ; exists ; 2013 ; European Labour Law Journal Volume 4 ; 4 ; ella ; >
       au < frozen ; exists ; 2014 ; European Labour Law Journal Volume 5 ; 5 ; ella ; >
       au < crawling ; exists ; 2015 ; European Labour Law Journal Volume 6 ; 6 ; ella ; >
       au < frozen ; exists ; 2016 ; European Labour Law Journal Volume 7 ; 7 ; ella ; >
@@ -12822,7 +12822,7 @@
       #param[base_url] = http://gam.sagepub.com/
 
       au < manifest ; exists ; 2012 ; Global Advances in Health and Medicine Volume 1 ; 1 ; gama ; >
-      au < manifest ; exists ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama ; >
+      au < crawling ; exists ; 2013 ; Global Advances in Health and Medicine Volume 2 ; 2 ; gama ; >
       au < frozen ; exists ; 2014 ; Global Advances in Health and Medicine Volume 3 ; 3 ; gama ; >
       au < crawling ; exists ; 2015 ; Global Advances in Health and Medicine Volume 4 ; 4 ; gama ; >
       au < frozen ; exists ; 2016 ; Global Advances in Health and Medicine Volume 5 ; 5 ; gama ; >
@@ -12894,7 +12894,7 @@
 
       au < manifest ; exists ; 2011 ; Global Spine Journal Volume 1 ; 1 ; gsja ; >
       au < manifest ; exists ; 2012 ; Global Spine Journal Volume 2 ; 2 ; gsja ; >
-      au < manifest ; exists ; 2013 ; Global Spine Journal Volume 3 ; 3 ; gsja ; >
+      au < crawling ; exists ; 2013 ; Global Spine Journal Volume 3 ; 3 ; gsja ; >
       au < crawling ; exists ; 2014 ; Global Spine Journal Volume 4 ; 4 ; gsja ; >
       au < frozen ; exists ; 2015 ; Global Spine Journal Volume 5 ; 5 ; gsja ; >
       au < frozen ; exists ; 2016 ; Global Spine Journal Volume 6 ; 6 ; gsja ; >
@@ -12913,7 +12913,7 @@
 
       au < manifest ; exists ; 2011 ; Global Studies of Childhood Volume 1 ; 1 ; gsca ; >
       au < manifest ; exists ; 2012 ; Global Studies of Childhood Volume 2 ; 2 ; gsca ; >
-      au < manifest ; exists ; 2013 ; Global Studies of Childhood Volume 3 ; 3 ; gsca ; >
+      au < crawling ; exists ; 2013 ; Global Studies of Childhood Volume 3 ; 3 ; gsca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Global Studies of Childhood Volume 4 ; 4 ; gsca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Global Studies of Childhood Volume 5 ; 5 ; gsca ; >
       au < crawling ; exists ; 2016 ; Global Studies of Childhood Volume 6 ; 6 ; gsca ; >
@@ -14665,7 +14665,7 @@
       au < manifest ; exists ; 2009-2010 ; Imagination, Cognition and Personality Volume 29 ; 29 ; icaa ; >
       au < manifest ; exists ; 2010-2011 ; Imagination, Cognition and Personality Volume 30 ; 30 ; icaa ; >
       au < manifest ; exists ; 2011-2012 ; Imagination, Cognition and Personality Volume 31 ; 31 ; icaa ; >
-      au < manifest ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; icaa ; >
+      au < crawling ; exists ; 2012-2013 ; Imagination, Cognition and Personality Volume 32 ; 32 ; icaa ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Imagination, Cognition and Personality Volume 33 ; 33 ; icaa ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Imagination, Cognition and Personality Volume 34 ; 34 ; icaa ; >
       au < doNotProcess ; doNotProcess ; 2015-2016 ; Imagination, Cognition and Personality Volume 35 ; 35 ; icaa ; >
@@ -15530,7 +15530,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; jaea ; >
       au < manifest ; exists ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; jaea ; >
       au < manifest ; exists ; 2012 ; International Journal of Aeroacoustics Volume 11 ; 11 ; jaea ; >
-      au < manifest ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; jaea ; >
+      au < crawling ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; jaea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 ; jaea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 ; jaea ; >
       au < frozen ; exists ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; jaea ; >
@@ -15576,7 +15576,7 @@
       au < manifest ; exists ; 2012 ; The International Journal of Aging and Human Development Volume 74 ; 74 ; ahdb ; >
       au < manifest ; exists ; 2012 ; The International Journal of Aging and Human Development Volume 75 ; 75 ; ahdb ; >
       au < frozen ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 76 ; 76 ; ahdb ; >
-      au < manifest ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; ahdb ; >
+      au < crawling ; exists ; 2013 ; The International Journal of Aging and Human Development Volume 77 ; 77 ; ahdb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; ahdb ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; ahdb ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; ahdb ; >
@@ -16037,7 +16037,7 @@
      au < manifest ; exists ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 ; ijea ; >
      au < manifest ; exists ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 ; ijea ; >
      au < manifest ; exists ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 ; ijea ; >
-     au < manifest ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; ijea ; >
+     au < crawling ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; ijea ; >
      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; ijea ; >
      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; ijea ; >
      au < frozen ; exists ; 2016 ; International Journal of Electrical Engineering Education Volume 53 ; 53 ; ijea ; >
@@ -16122,7 +16122,7 @@
       au < manifest ; exists ; 2010 ; The International Journal of Evidence & Proof Volume 14 ; 14 ; epja ; >
       au < manifest ; exists ; 2011 ; The International Journal of Evidence & Proof Volume 15 ; 15 ; epja ; >
       au < manifest ; exists ; 2012 ; The International Journal of Evidence & Proof Volume 16 ; 16 ; epja ; >
-      au < manifest ; exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 ; epja ; >
+      au < crawling ; exists ; 2013 ; The International Journal of Evidence & Proof Volume 17 ; 17 ; epja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Evidence & Proof Volume 18 ; 18 ; epja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Evidence & Proof Volume 19 ; 19 ; epja ; >
       au < frozen ; exists ; 2016 ; The International Journal of Evidence & Proof Volume 20 ; 20 ; epja ; >
@@ -16154,7 +16154,7 @@
         au < manifest ; exists ; 2010 ; International Journal of Health Services Volume 40 ; 40 ; joha ; >
         au < manifest ; exists ; 2011 ; International Journal of Health Services Volume 41 ; 41 ; joha ; >
         au < manifest ; exists ; 2012 ; International Journal of Health Services Volume 42 ; 42 ; joha ; >
-        au < manifest ; exists ; 2013 ; International Journal of Health Services Volume 43 ; 43 ; joha ; >
+        au < crawling ; exists ; 2013 ; International Journal of Health Services Volume 43 ; 43 ; joha ; >
         au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Health Services Volume 44 ; 44 ; joha ; >
         au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Health Services Volume 45 ; 45 ; joha ; >
         au < frozen ; exists ; 2016 ; International Journal of Health Services Volume 46 ; 46 ; joha ; >
@@ -16173,7 +16173,7 @@
       #param[base_url] = http://hde.sagepub.com/
 
       au < manifest ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; hdea ; >
-      au < manifest ; exists ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; hdea ; >
+      au < crawling ; exists ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; hdea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 ; hdea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 ; hdea ; >
       au < expected ; exists ; 2017 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 ; hdea ; >
@@ -16427,7 +16427,7 @@
       au < manifest ; exists ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 ; ocsa ; >
       au < manifest ; exists ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 ; ocsa ; >
       au < manifest ; exists ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 ; ocsa ; >
-      au < manifest ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; ocsa ; >
+      au < crawling ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; ocsa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 ; ocsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 ; ocsa ; >
       au < frozen ; exists ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 ; ocsa ; >
@@ -16594,7 +16594,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 ; prsa ; >
       au < manifest ; exists ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 ; prsa ; >
       au < manifest ; exists ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; prsa ; >
-      au < manifest ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; prsa ; >
+      au < crawling ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; prsa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 ; prsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 ; prsa ; >
       au < crawling ; exists ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 ; prsa ; >
@@ -16883,7 +16883,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Sports Science & Coaching Volume 5 ; 5 ; spoa ; >
       au < manifest ; exists ; 2011 ; International Journal of Sports Science & Coaching Volume 6 ; 6 ; spoa ; >
       au < manifest ; exists ; 2012 ; International Journal of Sports Science & Coaching Volume 7 ; 7 ; spoa ; >
-      au < manifest ; exists ; 2013 ; International Journal of Sports Science & Coaching Volume 8 ; 8 ; spoa ; >
+      au < crawling ; exists ; 2013 ; International Journal of Sports Science & Coaching Volume 8 ; 8 ; spoa ; >
       au < crawling ; exists ; 2014 ; International Journal of Sports Science & Coaching Volume 9 ; 9 ; spoa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Sports Science & Coaching Volume 10 ; 10 ; spoa ; >
       au < frozen ; exists ; 2016 ; International Journal of Sports Science & Coaching Volume 11 ; 11 ; spoa ; >
@@ -16905,7 +16905,7 @@
       au < manifest ; exists ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; scda ; >
       au < manifest ; exists ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; scda ; >
       au < manifest ; exists ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; scda ; >
-      au < manifest ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; scda ; >
+      au < crawling ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; scda ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 ; scda ; >
       au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 ; scda ; >
       au < crawling ; exists ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 ; scda ; >
@@ -20341,7 +20341,7 @@
     au < manifest ; exists ; 2010 ; The Journal of Criminal Law Volume 74 ; 74 ; clja ; >
     au < manifest ; exists ; 2011 ; The Journal of Criminal Law Volume 75 ; 75 ; clja ; >
     au < manifest ; exists ; 2012 ; The Journal of Criminal Law Volume 76 ; 76 ; clja ; >
-    au < manifest ; exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 ; clja ; >
+    au < crawling ; exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 ; clja ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 ; clja ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Criminal Law Volume 79 ; 79 ; clja ; >
     au < frozen ; exists ; 2016 ; The Journal of Criminal Law Volume 80 ; 80 ; clja ; >
@@ -20433,7 +20433,7 @@
       au < manifest ; exists ; 2010 ; Journal of Cutaneous Medicine and Surgery Volume 14 ; 14 ; cmsa ; >
       au < manifest ; exists ; 2011 ; Journal of Cutaneous Medicine and Surgery Volume 15 ; 15 ; cmsa ; >
       au < manifest ; exists ; 2012 ; Journal of Cutaneous Medicine and Surgery Volume 16 ; 16 ; cmsa ; >
-      au < manifest ; exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; cmsa ; >
+      au < crawling ; exists ; 2013 ; Journal of Cutaneous Medicine and Surgery Volume 17 ; 17 ; cmsa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cutaneous Medicine and Surgery Volume 18 ; 18 ; cmsa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cutaneous Medicine and Surgery Volume 19 ; 19 ; cmsa ; >
       au < frozen ; exists ; 2016 ; Journal of Cutaneous Medicine and Surgery Volume 20 ; 20 ; cmsa ; >
@@ -20788,7 +20788,7 @@
       au < manifest ; exists ; 2010 ; Journal of Drug Education Volume 40 ; 40 ; drea ; >
       au < manifest ; exists ; 2011 ; Journal of Drug Education Volume 41 ; 41 ; drea ; >
       au < manifest ; exists ; 2012 ; Journal of Drug Education Volume 42 ; 42 ; drea ; >
-      au < manifest ; exists ; 2013 ; Journal of Drug Education Volume 43 ; 43 ; drea ; >
+      au < crawling ; exists ; 2013 ; Journal of Drug Education Volume 43 ; 43 ; drea ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Drug Education Volume 44 ; 44 ; drea ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Drug Education Volume 45 ; 45 ; drea ; >
       au < manifest ; exists ; 2017 ; Journal of Drug Education Volume 46 ; 46 ; drea ; >
@@ -21143,7 +21143,7 @@
       au < manifest ; exists ; 2012 ; Journal of Educational Computing Research Volume 46 ; 46 ; jeca ; >
       au < manifest ; exists ; 2012 ; Journal of Educational Computing Research Volume 47 ; 47 ; jeca ; >
       au < crawling ; exists ; 2013 ; Journal of Educational Computing Research Volume 48 ; 48 ; jeca ; >
-      au < manifest ; exists ; 2013 ; Journal of Educational Computing Research Volume 49 ; 49 ; jeca ; >
+      au < crawling ; exists ; 2013 ; Journal of Educational Computing Research Volume 49 ; 49 ; jeca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Computing Research Volume 50 ; 50 ; jeca ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Computing Research Volume 51 ; 51 ; jeca ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Educational Computing Research Volume 52 ; 52 ; jeca ; >
@@ -21378,7 +21378,7 @@
       au < manifest ; exists ; 2010 ; Journal of Endovascular Therapy Volume 17 ; 17 ; jeta ; >
       au < manifest ; exists ; 2011 ; Journal of Endovascular Therapy Volume 18 ; 18 ; jeta ; >
       au < manifest ; exists ; 2012 ; Journal of Endovascular Therapy Volume 19 ; 19 ; jeta ; >
-      au < manifest ; exists ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; jeta ; >
+      au < crawling ; exists ; 2013 ; Journal of Endovascular Therapy Volume 20 ; 20 ; jeta ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Endovascular Therapy Volume 21 ; 21 ; jeta ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Endovascular Therapy Volume 22 ; 22 ; jeta ; >
       au < frozen ; exists ; 2016 ; Journal of Endovascular Therapy Volume 23 ; 23 ; jeta ; >
@@ -24253,7 +24253,7 @@
       au < manifest ; exists ; 2010 ; Journal of Near Infrared Spectroscopy Volume 18 ; 18 ; jnsa ; >
       au < manifest ; exists ; 2011 ; Journal of Near Infrared Spectroscopy Volume 19 ; 19 ; jnsa ; >
       au < manifest ; exists ; 2012 ; Journal of Near Infrared Spectroscopy Volume 20 ; 20 ; jnsa ; >
-      au < manifest ; exists ; 2013 ; Journal of Near Infrared Spectroscopy Volume 21 ; 21 ; jnsa ; >
+      au < crawling ; exists ; 2013 ; Journal of Near Infrared Spectroscopy Volume 21 ; 21 ; jnsa ; >
       au < frozen ; exists ; 2014 ; Journal of Near Infrared Spectroscopy Volume 22 ; 22 ; jnsa ; >
       au < frozen ; exists ; 2015 ; Journal of Near Infrared Spectroscopy Volume 23 ; 23 ; jnsa ; >
       au < crawling ; exists ; 2016 ; Journal of Near Infrared Spectroscopy Volume 24 ; 24 ; jnsa ; >
@@ -28050,7 +28050,7 @@
       au < manifest ; exists ; 2010 ; Maastricht Journal of European and Comparative Law Volume 17 ; 17 ; maaa ; >
       au < frozen ; exists ; 2011 ; Maastricht Journal of European and Comparative Law Volume 18 ; 18 ; maaa ; >
       au < manifest ; exists ; 2012 ; Maastricht Journal of European and Comparative Law Volume 19 ; 19 ; maaa ; >
-      au < manifest ; exists ; 2013 ; Maastricht Journal of European and Comparative Law Volume 20 ; 20 ; maaa ; >
+      au < crawling ; exists ; 2013 ; Maastricht Journal of European and Comparative Law Volume 20 ; 20 ; maaa ; >
       au < crawling ; exists ; 2014 ; Maastricht Journal of European and Comparative Law Volume 21 ; 21 ; maaa ; >
       au < frozen ; exists ; 2015 ; Maastricht Journal of European and Comparative Law Volume 22 ; 22 ; maaa ; >
       au < frozen ; exists ; 2016 ; Maastricht Journal of European and Comparative Law Volume 23 ; 23 ; maaa ; >
@@ -30025,7 +30025,7 @@
       au < manifest ; exists ; 2010 ; The Neuroradiology Journal Volume 23 ; 23 ; neub ; >
       au < manifest ; exists ; 2011 ; The Neuroradiology Journal Volume 24 ; 24 ; neub ; >
       au < manifest ; exists ; 2012 ; The Neuroradiology Journal Volume 25 ; 25 ; neub ; >
-      au < manifest ; exists ; 2013 ; The Neuroradiology Journal Volume 26 ; 26 ; neub ; >
+      au < crawling ; exists ; 2013 ; The Neuroradiology Journal Volume 26 ; 26 ; neub ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Neuroradiology Journal Volume 27 ; 27 ; neub ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Neuroradiology Journal Volume 28 ; 28 ; neub ; >
       au < frozen ; exists ; 2016 ; The Neuroradiology Journal Volume 29 ; 29 ; neub ; >
@@ -30454,7 +30454,7 @@
         au < manifest ; exists ; 2010 ; Nordic Journal of Nursing Research Volume 30 ; 30 ; njna ; >
         au < manifest ; exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 ; njna ; >
         au < manifest ; exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 ; njna ; >
-        au < manifest ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njna ; >
+        au < crawling ; exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 ; njna ; >
         au < doNotProcess ; doNotProcess ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 ; njna ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 ; njna ; >
         au < frozen ; exists ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 ; njna ; >
@@ -31874,7 +31874,7 @@
       au < manifest ; exists ; 2010 ; The Police Journal: Theory, Practice and Principles Volume 83 ; 83 ; pjxa ; >
       au < frozen ; exists ; 2011 ; The Police Journal: Theory, Practice and Principles Volume 84 ; 84 ; pjxa ; >
       au < manifest ; exists ; 2012 ; The Police Journal: Theory, Practice and Principles Volume 85 ; 85 ; pjxa ; >
-      au < manifest ; exists ; 2013 ; The Police Journal: Theory, Practice and Principles Volume 86 ; 86 ; pjxa ; >
+      au < crawling ; exists ; 2013 ; The Police Journal: Theory, Practice and Principles Volume 86 ; 86 ; pjxa ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Police Journal: Theory, Practice and Principles Volume 87 ; 87 ; pjxa ; >
       au < doNotProcess ; doNotProcess ; 2015 ; The Police Journal: Theory, Practice and Principles Volume 88 ; 88 ; pjxa ; >
       au < crawling ; exists ; 2016 ; The Police Journal: Theory, Practice and Principles Volume 89 ; 89 ; pjxa ; >
@@ -33764,7 +33764,7 @@
       au < manifest ; exists ; 2010 ; Psychology Learning & Teaching Volume 9 ; 9 ; plja ; >
       au < manifest ; exists ; 2011 ; Psychology Learning & Teaching Volume 10 ; 10 ; plja ; >
       au < manifest ; exists ; 2012 ; Psychology Learning & Teaching Volume 11 ; 11 ; plja ; >
-      au < manifest ; exists ; 2013 ; Psychology Learning & Teaching Volume 12 ; 12 ; plja ; >
+      au < crawling ; exists ; 2013 ; Psychology Learning & Teaching Volume 12 ; 12 ; plja ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Psychology Learning & Teaching Volume 13 ; 13 ; plja ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Psychology Learning & Teaching Volume 14 ; 14 ; plja ; >
       au < frozen ; exists ; 2016 ; Psychology Learning & Teaching Volume 15 ; 15 ; plja ; >
@@ -33968,7 +33968,7 @@
       au < manifest ; exists ; 2010 ; Public Health Reports Volume 125 ; 125 ; phrg ; >
       au < manifest ; exists ; 2011 ; Public Health Reports Volume 126 ; 126 ; phrg ; >
       au < manifest ; exists ; 2012 ; Public Health Reports Volume 127 ; 127 ; phrg ; >
-      au < manifest ; exists ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg ; >
+      au < crawling ; exists ; 2013 ; Public Health Reports Volume 128 ; 128 ; phrg ; >
       au < crawling ; exists ; 2014 ; Public Health Reports Volume 129 ; 129 ; phrg ; >
       au < crawling ; exists ; 2015 ; Public Health Reports Volume 130 ; 130 ; phrg ; >
       au < crawling ; exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; phrg ; >
@@ -40748,7 +40748,7 @@
       au < manifest ; exists ; 2010 ; Vikalpa Volume 35 ; 35 ; vika ; >
       au < manifest ; exists ; 2011 ; Vikalpa Volume 36 ; 36 ; vika ; >
       au < manifest ; exists ; 2012 ; Vikalpa Volume 37 ; 37 ; vika ; >
-      au < manifest ; exists ; 2013 ; Vikalpa Volume 38 ; 38 ; vika ; >
+      au < crawling ; exists ; 2013 ; Vikalpa Volume 38 ; 38 ; vika ; >
       au < frozen ; exists ; 2014 ; Vikalpa Volume 39 ; 39 ; vika ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Vikalpa Volume 40 ; 40 ; vika ; >
       au < frozen ; exists ; 2016 ; Vikalpa Volume 41 ; 41 ; vika ; >
@@ -45525,7 +45525,7 @@
     au < manifest ; exists ; 2010 ; Pediatric and Developmental Pathology Volume 13 ; 13 ; pdpa ; >
     au < manifest ; exists ; 2011 ; Pediatric and Developmental Pathology Volume 14 ; 14 ; pdpa ; >
     au < crawling ; exists ; 2012 ; Pediatric and Developmental Pathology Volume 15 ; 15 ; pdpa ; >
-    au < manifest ; exists ; 2013 ; Pediatric and Developmental Pathology Volume 16 ; 16 ; pdpa ; >
+    au < crawling ; exists ; 2013 ; Pediatric and Developmental Pathology Volume 16 ; 16 ; pdpa ; >
     au < frozen ; exists ; 2014 ; Pediatric and Developmental Pathology Volume 17 ; 17 ; pdpa ; >
     au < frozen ; exists ; 2015 ; Pediatric and Developmental Pathology Volume 18 ; 18 ; pdpa ; >
     au < crawling ; exists ; 2016 ; Pediatric and Developmental Pathology Volume 19 ; 19 ; pdpa ; >
