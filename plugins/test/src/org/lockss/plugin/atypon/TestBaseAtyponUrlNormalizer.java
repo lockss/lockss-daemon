@@ -212,6 +212,9 @@ public class TestBaseAtyponUrlNormalizer extends LockssTestCase {
 
     assertEquals("http://www.baseatypon.com/clockss/foo/3/index.html",
         https_normalizer.normalizeUrl("https://www.baseatypon.com/clockss/foo/3/index.html", m_mau));
+
+    assertEquals("http://www.baseatypon.com/action/showCitFormats?doi=10.2514%2F1.C032918",
+        https_normalizer.normalizeUrl("https://www.baseatypon.com/action/showCitFormats?doi=10.2514%2F1.C032918", m_mau));
     
     assertNotEquals("http://www.baseatypon.com/clockss/foo/3/index.html",
         normalizer.normalizeUrl("https://www.baseatypon.com/clockss/foo/3/index.html", m_mau));

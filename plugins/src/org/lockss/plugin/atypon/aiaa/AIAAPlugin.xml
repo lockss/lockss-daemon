@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->  
   <entry>
@@ -56,11 +56,11 @@
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>  
 <!-- end changes for https conversion -->    
   <entry>
