@@ -514,13 +514,13 @@ comment[bj1] = no permission from publisher
     au < released ; 2015 ; Biochemical Journal Volume 471 ; 471 >
     au < released ; 2015 ; Biochemical Journal Volume 472 ; 472 >
     au < released ; 2016 ; Biochemical Journal Volume 473 ; 473 >
-    au < released ; 2016 ; Biochemical Journal Volume 474 ; 474 >
-    au < expected ; 2016 ; Biochemical Journal Volume 475 ; 475 >
-    au < expected ; 2016 ; Biochemical Journal Volume 476 ; 476 >
-    au < expected ; 2016 ; Biochemical Journal Volume 477 ; 477 >
-    au < expected ; 2016 ; Biochemical Journal Volume 478 ; 478 >
-    au < expected ; 2016 ; Biochemical Journal Volume 479 ; 479 >
-    au < expected ; 2016 ; Biochemical Journal Volume 480 ; 480 >
+    au < released ; 2017 ; Biochemical Journal Volume 474 ; 474 >
+    au < expected ; 2017 ; Biochemical Journal Volume 475 ; 475 >
+    au < expected ; 2017 ; Biochemical Journal Volume 476 ; 476 >
+    au < expected ; 2017 ; Biochemical Journal Volume 477 ; 477 >
+    au < expected ; 2017 ; Biochemical Journal Volume 478 ; 478 >
+    au < expected ; 2017 ; Biochemical Journal Volume 479 ; 479 >
+    au < expected ; 2017 ; Biochemical Journal Volume 480 ; 480 >
 
   }
   
@@ -587,6 +587,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2014 ; Biochemical Society Transactions Volume 42 ; 42 >
     au < released ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 >
     au < exists ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 >
+    au < expected ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 >
     
   }
   
@@ -791,6 +792,7 @@ comment[bj1] = no permission from publisher
     param[base_url] = http://www.neuronalsignaling.org/
 
     au < exists ; 2016 ; Neuronal Signaling Volume 1 ; 1 >
+    au < expected ; 2017 ; Neuronal Signaling Volume 2 ; 2 >
 
   }
 
