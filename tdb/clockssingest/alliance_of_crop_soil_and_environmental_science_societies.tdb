@@ -35,7 +35,7 @@
     param[journal_id] = ael
 
     au < deepCrawl ; exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; >
-    au < ready ; exists ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; >
 
   }
 
@@ -208,7 +208,7 @@
     au < finished ; finished ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 ; >
-    au < ready ; exists ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2017 ; Journal of Plant Registrations Volume 11 ; 11 ; >
 
   }
 
@@ -335,7 +335,7 @@
     au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >
-    au < ready ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
+    au < crawling ; exists ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; >
 
   }
 

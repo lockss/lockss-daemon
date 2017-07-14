@@ -25,7 +25,7 @@
     param[journal_id] = jamacardiology
     
     au < finished ; crawling ; 2016 ; JAMA Cardiology Volume 1 ; 2016 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; JAMA Cardiology Volume 2 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Cardiology Volume 2 ; 2017 ; >
   
   }
 
@@ -169,7 +169,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; >
     
   }
 
@@ -190,7 +190,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
     au < finished ; crawling ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; >
     
   }
 
