@@ -26,6 +26,7 @@
     au < released ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 >
     au < released ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 >
+    au < expected ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 >
 
    }
 
@@ -49,6 +50,7 @@
     au < released ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 >
+    au < expected ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 >
 
    }
 
@@ -71,6 +73,7 @@
     au < released ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 >
     au < released ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 >
+    au < expected ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 >
 
    }
 
@@ -88,6 +91,7 @@
      au < released ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 >
      au < released ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 >
      au < manifest ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 >
+     au < expected ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 >
 
    }
    
@@ -126,6 +130,7 @@
     au < released ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 54-69 ; Journal of Hymenoptera Research Volume 2017 ; 2017 >
 
    }
 
@@ -146,7 +151,8 @@
     au < released ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 >
     au < released ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 12-14 ; MycoKeys Volume 2016 ; 2016 >
+    au < manifest ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 19-25 ; MycoKeys Volume 2017 ; 2017 >
 
    }
 
@@ -164,7 +170,8 @@
     au < manifest ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 >
     au < released ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 >
     au < released ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 >
-    au < exists ; 2016 ; 14-17 ; Nature Conservation Volume 2016 ; 2016 >
+    au < exists ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 17-19 ; Nature Conservation Volume 2017 ; 2017 >
 
    }
 
@@ -186,6 +193,7 @@
     au < released ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 >
     au < released ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 >
 
    }
 
@@ -204,6 +212,7 @@
     au < manifest ; 2014 ; 37 ; Nota Lepidopterologica Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 >
+    au < expected ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 >
     
    }
 
@@ -225,7 +234,8 @@
     au < manifest ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 >
     au < manifest ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; 58-757 ; PhytoKeys Volume 2016 ; 2016 >
+    au < manifest ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 76-83 ; PhytoKeys Volume 2017 ; 2017 >
 
    }
 
@@ -247,6 +257,8 @@
     au < released ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 >
     au < released ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 17-19 ; Subterranean Biology Volume 2016 ; 2016 >
+    au < manifest ; 2016 ; 17-20 ; Subterranean Biology Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 21-24 ; Subterranean Biology Volume 2017 ; 2017 >
 
    }
 
@@ -271,6 +283,7 @@
     au < manifest ; 2014 ; 367-468 ; ZooKeys Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 642-685 ; ZooKeys Volume 2017 ; 2017 >
 
    }
    
@@ -289,6 +302,7 @@
     au < released ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 >
     au < manifest ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 >
     au < manifest ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 >
+    au < exists ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 >
 
     }
 
