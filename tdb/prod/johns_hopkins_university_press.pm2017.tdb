@@ -1923,31 +1923,32 @@
 
       attr[journal_id] = 168
 
-        au < manifest ; 1995 ; Reviews in American History Volume 23 [1995] ; 573 >
-        au < manifest ; 1996 ; Reviews in American History Volume 24 [1996] ; 574 >
-        au < manifest ; 1997 ; Reviews in American History Volume 25 [1997] ; 575 >
-        au < manifest ; 1998 ; Reviews in American History Volume 26 [1998] ; 576 >
-        au < manifest ; 1999 ; Reviews in American History Volume 27 [1999] ; 577 >
-        au < manifest ; 2000 ; Reviews in American History Volume 28 [2000] ; 578 >
-        au < manifest ; 2001 ; Reviews in American History Volume 29 [2001] ; 579 >
-        au < manifest ; 2002 ; Reviews in American History Volume 30 [2002] ; 580 >
-        au < manifest ; 2003 ; Reviews in American History Volume 31 [2003] ; 852 >
-        au < manifest ; 2004 ; Reviews in American History Volume 32 [2004] ; 2442 >
-        au < manifest ; 2005 ; Reviews in American History Volume 33 [2005] ; 2700 >
-        au < manifest ; 2006 ; Reviews in American History Volume 34 [2006] ; 2996 >
-        au < manifest ; 2007 ; Reviews in American History Volume 35 [2007] ; 3296 >
-        au < manifest ; 2008 ; Reviews in American History Volume 36 [2008] ; 3654 >
-        au < manifest ; 2009 ; Reviews in American History Volume 37 [2009] ; 4168 >
-        au < manifest ; 2010 ; Reviews in American History Volume 38 [2010] ; 5795 >
-        au < manifest ; 2011 ; Reviews in American History Volume 39 [2011] ; 6891 >
-        au < manifest ; 2012 ; Reviews in American History Volume 40 [2012] ; 8122 >
-        au < manifest ; 2013 ; Reviews in American History Volume 41 [2013] ; 8826 >
-        au < manifest ; 2014 ; Reviews in American History Volume 42 [2014] ; 9766 >
-        au < manifest ; 2015 ; Reviews in American History Volume 43 [2015] ; 10459 >
-        au < manifest ; 2016 ; Reviews in American History Volume 44 [2016] ; 11060 >
+        au < testing ; 1995 ; Reviews in American History Volume 23 [1995] ; 573 >
+        au < testing ; 1996 ; Reviews in American History Volume 24 [1996] ; 574 >
+        au < testing ; 1997 ; Reviews in American History Volume 25 [1997] ; 575 >
+        au < testing ; 1998 ; Reviews in American History Volume 26 [1998] ; 576 >
+        au < testing ; 1999 ; Reviews in American History Volume 27 [1999] ; 577 >
+        au < testing ; 2000 ; Reviews in American History Volume 28 [2000] ; 578 >
+        au < testing ; 2001 ; Reviews in American History Volume 29 [2001] ; 579 >
+        au < testing ; 2002 ; Reviews in American History Volume 30 [2002] ; 580 >
+        au < testing ; 2003 ; Reviews in American History Volume 31 [2003] ; 852 >
+        au < testing ; 2004 ; Reviews in American History Volume 32 [2004] ; 2442 >
+        au < testing ; 2005 ; Reviews in American History Volume 33 [2005] ; 2700 >
+        au < testing ; 2006 ; Reviews in American History Volume 34 [2006] ; 2996 >
+        au < testing ; 2007 ; Reviews in American History Volume 35 [2007] ; 3296 >
+        au < testing ; 2008 ; Reviews in American History Volume 36 [2008] ; 3654 >
+        au < testing ; 2009 ; Reviews in American History Volume 37 [2009] ; 4168 >
+        au < testing ; 2010 ; Reviews in American History Volume 38 [2010] ; 5795 >
+        au < testing ; 2011 ; Reviews in American History Volume 39 [2011] ; 6891 >
+        au < testing ; 2012 ; Reviews in American History Volume 40 [2012] ; 8122 >
+        au < testing ; 2013 ; Reviews in American History Volume 41 [2013] ; 8826 >
+        au < testing ; 2014 ; Reviews in American History Volume 42 [2014] ; 9766 >
+        au < testing ; 2015 ; Reviews in American History Volume 43 [2015] ; 10459 >
+        au < testing ; 2016 ; Reviews in American History Volume 44 [2016] ; 11060 >
         au < manifest ; 2017 ; Reviews in American History Volume 45 [2017] ; 12446 >
 
     }
+    
     {
     title <
       name = SAIS Review ;
@@ -1960,6 +1961,7 @@
         #NONE OF THIS  TITLE FOUND - Changed to title below and PMuse lists under that title on volume info
 
     }
+    
     {
     title <
       name = SAIS Review of International Affairs ;
@@ -1969,44 +1971,45 @@
 
       attr[journal_id] = 174
 
-        au < manifest ; 1981 ; SAIS Review of International Affairs Volume 1 [1981] ; 7317 >
-        au < manifest ; 1982 ; SAIS Review of International Affairs Volume 2 [1982] ; 7318 >
-        au < manifest ; 1982 ; SAIS Review of International Affairs Volume 3 [1982] ; 7324 >
-        au < manifest ; 1984 ; SAIS Review of International Affairs Volume 4 [1984] ; 7320 >
-        au < manifest ; 1985 ; SAIS Review of International Affairs Volume 5 [1985] ; 7321 >
-        au < manifest ; 1986 ; SAIS Review of International Affairs Volume 6 [1986] ; 7322 >
-        au < manifest ; 1987 ; SAIS Review of International Affairs Volume 7 [1987] ; 7288 >
-        au < manifest ; 1988 ; SAIS Review of International Affairs Volume 8 [1988] ; 7289 >
-        au < manifest ; 1989 ; SAIS Review of International Affairs Volume 9 [1989] ; 7299 >
-        au < manifest ; 1990 ; SAIS Review of International Affairs Volume 10 [1990] ; 7301 >
-        au < manifest ; 1991 ; SAIS Review of International Affairs Volume 11 [1991] ; 7311 >
-        au < manifest ; 1992 ; SAIS Review of International Affairs Volume 12 [1992] ; 7230 >
-        au < manifest ; 1993 ; SAIS Review of International Affairs Volume 13 [1993] ; 7312 >
-        au < manifest ; 1994 ; SAIS Review of International Affairs Volume 14 [1994] ; 7313 >
-        au < manifest ; 1995 ; SAIS Review of International Affairs Volume 15 [1995] ; 600 >
-        au < manifest ; 1996 ; SAIS Review of International Affairs Volume 16 [1996] ; 601 >
-        au < manifest ; 1997 ; SAIS Review of International Affairs Volume 17 [1997] ; 602 >
-        au < manifest ; 1998 ; SAIS Review of International Affairs Volume 18 [1998] ; 603 >
-        au < manifest ; 1999 ; SAIS Review of International Affairs Volume 19 [1999] ; 604 >
-        au < manifest ; 2000 ; SAIS Review of International Affairs Volume 20 [2000] ; 605 >
-        au < manifest ; 2001 ; SAIS Review of International Affairs Volume 21 [2001] ; 606 >
-        au < manifest ; 2002 ; SAIS Review of International Affairs Volume 22 [2002] ; 607 >
-        au < manifest ; 2003 ; SAIS Review of International Affairs Volume 23 [2003] ; 843 >
-        au < manifest ; 2004 ; SAIS Review of International Affairs Volume 24 [2004] ; 2430 >
-        au < manifest ; 2005 ; SAIS Review of International Affairs Volume 25 [2005] ; 2750 >
-        au < manifest ; 2006 ; SAIS Review of International Affairs Volume 26 [2006] ; 3047 >
-        au < manifest ; 2007 ; SAIS Review of International Affairs Volume 27 [2007] ; 3294 >
-        au < manifest ; 2008 ; SAIS Review of International Affairs Volume 28 [2008] ; 3620 >
-        au < manifest ; 2009 ; SAIS Review of International Affairs Volume 29 [2009] ; 4341 >
-        au < manifest ; 2010 ; SAIS Review of International Affairs Volume 30 [2010] ; 5938 >
-        au < manifest ; 2011 ; SAIS Review of International Affairs Volume 31 [2011] ; 6948 >
-        au < manifest ; 2012 ; SAIS Review of International Affairs Volume 32 [2012] ; 8284 >
-        au < manifest ; 2013 ; SAIS Review of International Affairs Volume 33 [2013] ; 9170 >
-        au < manifest ; 2014 ; SAIS Review of International Affairs Volume 34 [2014] ; 10056 >
-        au < manifest ; 2015 ; SAIS Review of International Affairs Volume 35 [2015] ; 10636 >
-        au < manifest ; 2016 ; SAIS Review of International Affairs Volume 36 [2016] ; 11301 >
+        au < testing ; 1981 ; SAIS Review of International Affairs Volume 1 [1981] ; 7317 >
+        au < testing ; 1982 ; SAIS Review of International Affairs Volume 2 [1982] ; 7318 >
+        au < testing ; 1982 ; SAIS Review of International Affairs Volume 3 [1982] ; 7324 >
+        au < testing ; 1984 ; SAIS Review of International Affairs Volume 4 [1984] ; 7320 >
+        au < testing ; 1985 ; SAIS Review of International Affairs Volume 5 [1985] ; 7321 >
+        au < testing ; 1986 ; SAIS Review of International Affairs Volume 6 [1986] ; 7322 >
+        au < testing ; 1987 ; SAIS Review of International Affairs Volume 7 [1987] ; 7288 >
+        au < testing ; 1988 ; SAIS Review of International Affairs Volume 8 [1988] ; 7289 >
+        au < testing ; 1989 ; SAIS Review of International Affairs Volume 9 [1989] ; 7299 >
+        au < testing ; 1990 ; SAIS Review of International Affairs Volume 10 [1990] ; 7301 >
+        au < testing ; 1991 ; SAIS Review of International Affairs Volume 11 [1991] ; 7311 >
+        au < testing ; 1992 ; SAIS Review of International Affairs Volume 12 [1992] ; 7230 >
+        au < testing ; 1993 ; SAIS Review of International Affairs Volume 13 [1993] ; 7312 >
+        au < testing ; 1994 ; SAIS Review of International Affairs Volume 14 [1994] ; 7313 >
+        au < testing ; 1995 ; SAIS Review of International Affairs Volume 15 [1995] ; 600 >
+        au < testing ; 1996 ; SAIS Review of International Affairs Volume 16 [1996] ; 601 >
+        au < testing ; 1997 ; SAIS Review of International Affairs Volume 17 [1997] ; 602 >
+        au < testing ; 1998 ; SAIS Review of International Affairs Volume 18 [1998] ; 603 >
+        au < testing ; 1999 ; SAIS Review of International Affairs Volume 19 [1999] ; 604 >
+        au < testing ; 2000 ; SAIS Review of International Affairs Volume 20 [2000] ; 605 >
+        au < testing ; 2001 ; SAIS Review of International Affairs Volume 21 [2001] ; 606 >
+        au < testing ; 2002 ; SAIS Review of International Affairs Volume 22 [2002] ; 607 >
+        au < testing ; 2003 ; SAIS Review of International Affairs Volume 23 [2003] ; 843 >
+        au < testing ; 2004 ; SAIS Review of International Affairs Volume 24 [2004] ; 2430 >
+        au < testing ; 2005 ; SAIS Review of International Affairs Volume 25 [2005] ; 2750 >
+        au < testing ; 2006 ; SAIS Review of International Affairs Volume 26 [2006] ; 3047 >
+        au < testing ; 2007 ; SAIS Review of International Affairs Volume 27 [2007] ; 3294 >
+        au < testing ; 2008 ; SAIS Review of International Affairs Volume 28 [2008] ; 3620 >
+        au < testing ; 2009 ; SAIS Review of International Affairs Volume 29 [2009] ; 4341 >
+        au < testing ; 2010 ; SAIS Review of International Affairs Volume 30 [2010] ; 5938 >
+        au < testing ; 2011 ; SAIS Review of International Affairs Volume 31 [2011] ; 6948 >
+        au < testing ; 2012 ; SAIS Review of International Affairs Volume 32 [2012] ; 8284 >
+        au < testing ; 2013 ; SAIS Review of International Affairs Volume 33 [2013] ; 9170 >
+        au < testing ; 2014 ; SAIS Review of International Affairs Volume 34 [2014] ; 10056 >
+        au < testing ; 2015 ; SAIS Review of International Affairs Volume 35 [2015] ; 10636 >
+        au < testing ; 2016 ; SAIS Review of International Affairs Volume 36 [2016] ; 11301 >
 
     }
+    
     {
     title <
       name = SEL Studies in English Literature 1500-1900 ;
@@ -2018,27 +2021,28 @@
 
       attr[journal_id] = 178
 
-        au < manifest ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 [1999] ; 617 >
-        au < manifest ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 [2000] ; 618 >
-        au < manifest ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41 [2001] ; 619 >
-        au < manifest ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42 [2002] ; 620 >
-        au < manifest ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43 [2003] ; 803 >
-        au < manifest ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44 [2004] ; 1788 >
-        au < manifest ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45 [2005] ; 2669 >
-        au < manifest ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46 [2006] ; 2983 >
-        au < manifest ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 [2007] ; 3232 >
-        au < manifest ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 [2008] ; 3571 >
-        au < manifest ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 [2009] ; 4078 >
-        au < manifest ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50 [2010] ; 5726 >
-        au < manifest ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 [2011] ; 6692 >
-        au < manifest ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 [2012] ; 8069 >
-        au < manifest ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53 [2013] ; 8884 >
-        au < manifest ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 [2014] ; 9741 >
-        au < manifest ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 [2015] ; 10432 >
-        au < manifest ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 [2016] ; 11030 >
+        au < testing ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 [1999] ; 617 >
+        au < testing ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 [2000] ; 618 >
+        au < testing ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41 [2001] ; 619 >
+        au < testing ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42 [2002] ; 620 >
+        au < testing ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43 [2003] ; 803 >
+        au < testing ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44 [2004] ; 1788 >
+        au < testing ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45 [2005] ; 2669 >
+        au < testing ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46 [2006] ; 2983 >
+        au < testing ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 [2007] ; 3232 >
+        au < testing ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 [2008] ; 3571 >
+        au < testing ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 [2009] ; 4078 >
+        au < testing ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50 [2010] ; 5726 >
+        au < testing ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 [2011] ; 6692 >
+        au < testing ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 [2012] ; 8069 >
+        au < testing ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53 [2013] ; 8884 >
+        au < testing ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 [2014] ; 9741 >
+        au < testing ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 [2015] ; 10432 >
+        au < testing ; 2016 ; SEL Studies in English Literature 1500-1900 Volume 56 [2016] ; 11030 >
         au < manifest ; 2017 ; SEL Studies in English Literature 1500-1900 Volume 57 [2017] ; 12381 >
 
     }
+    
     {
     title <
       name = Sewanee Review ;
@@ -2050,19 +2054,20 @@
 
       attr[journal_id] = 367
 
-        au < manifest ; 2007 ; Sewanee Review Volume 115 [2007] ; 3325 >
-        au < manifest ; 2008 ; Sewanee Review Volume 116 [2008] ; 3657 >
-        au < manifest ; 2009 ; Sewanee Review Volume 117 [2009] ; 4178 >
-        au < manifest ; 2010 ; Sewanee Review Volume 118 [2010] ; 5814 >
-        au < manifest ; 2011 ; Sewanee Review Volume 119 [2011] ; 6892 >
-        au < manifest ; 2012 ; Sewanee Review Volume 120 [2012] ; 8016 >
-        au < manifest ; 2013 ; Sewanee Review Volume 121 [2013] ; 8740 >
-        au < manifest ; 2014 ; Sewanee Review Volume 122 [2014] ; 9664 >
-        au < manifest ; 2015 ; Sewanee Review Volume 123 [2015] ; 10384 >
-        au < manifest ; 2016 ; Sewanee Review Volume 124 [2016] ; 11070 >
+        au < testing ; 2007 ; Sewanee Review Volume 115 [2007] ; 3325 >
+        au < testing ; 2008 ; Sewanee Review Volume 116 [2008] ; 3657 >
+        au < testing ; 2009 ; Sewanee Review Volume 117 [2009] ; 4178 >
+        au < testing ; 2010 ; Sewanee Review Volume 118 [2010] ; 5814 >
+        au < testing ; 2011 ; Sewanee Review Volume 119 [2011] ; 6892 >
+        au < testing ; 2012 ; Sewanee Review Volume 120 [2012] ; 8016 >
+        au < testing ; 2013 ; Sewanee Review Volume 121 [2013] ; 8740 >
+        au < testing ; 2014 ; Sewanee Review Volume 122 [2014] ; 9664 >
+        au < testing ; 2015 ; Sewanee Review Volume 123 [2015] ; 10384 >
+        au < testing ; 2016 ; Sewanee Review Volume 124 [2016] ; 11070 >
         au < manifest ; 2017 ; Sewanee Review Volume 125 [2017] ; 12349 >
 
     }
+    
     {
     title <
       name = Shakespeare Bulletin ;
@@ -2074,20 +2079,21 @@
 
       attr[journal_id] = 339
 
-        au < manifest ; 2006 ; Shakespeare Bulletin Volume 24 [2006] ; 3033 >
-        au < manifest ; 2007 ; Shakespeare Bulletin Volume 25 [2007] ; 3315 >
-        au < manifest ; 2008 ; Shakespeare Bulletin Volume 26 [2008] ; 3655 >
-        au < manifest ; 2009 ; Shakespeare Bulletin Volume 27 [2009] ; 4164 >
-        au < manifest ; 2010 ; Shakespeare Bulletin Volume 28 [2010] ; 5809 >
-        au < manifest ; 2011 ; Shakespeare Bulletin Volume 29 [2011] ; 6940 >
-        au < manifest ; 2012 ; Shakespeare Bulletin Volume 30 [2012] ; 8251 >
-        au < manifest ; 2013 ; Shakespeare Bulletin Volume 31 [2013] ; 8915 >
-        au < manifest ; 2014 ; Shakespeare Bulletin Volume 32 [2014] ; 9830 >
-        au < manifest ; 2015 ; Shakespeare Bulletin Volume 33 [2015] ; 10458 >
-        au < manifest ; 2016 ; Shakespeare Bulletin Volume 34 [2016] ; 11088 >
+        au < testing ; 2006 ; Shakespeare Bulletin Volume 24 [2006] ; 3033 >
+        au < testing ; 2007 ; Shakespeare Bulletin Volume 25 [2007] ; 3315 >
+        au < testing ; 2008 ; Shakespeare Bulletin Volume 26 [2008] ; 3655 >
+        au < testing ; 2009 ; Shakespeare Bulletin Volume 27 [2009] ; 4164 >
+        au < testing ; 2010 ; Shakespeare Bulletin Volume 28 [2010] ; 5809 >
+        au < testing ; 2011 ; Shakespeare Bulletin Volume 29 [2011] ; 6940 >
+        au < testing ; 2012 ; Shakespeare Bulletin Volume 30 [2012] ; 8251 >
+        au < testing ; 2013 ; Shakespeare Bulletin Volume 31 [2013] ; 8915 >
+        au < testing ; 2014 ; Shakespeare Bulletin Volume 32 [2014] ; 9830 >
+        au < testing ; 2015 ; Shakespeare Bulletin Volume 33 [2015] ; 10458 >
+        au < testing ; 2016 ; Shakespeare Bulletin Volume 34 [2016] ; 11088 >
         au < manifest ; 2017 ; Shakespeare Bulletin Volume 35 [2017] ; 12436 >
 
     }
+    
     {
     title <
       name = Shakespeare Quarterly ;
@@ -2099,24 +2105,25 @@
 
       attr[journal_id] = 182
 
-        au < manifest ; 2001 ; Shakespeare Quarterly Volume 52 [2001] ; 628 >
-        au < manifest ; 2002 ; Shakespeare Quarterly Volume 53 [2002] ; 629 >
-        au < manifest ; 2003 ; Shakespeare Quarterly Volume 54 [2003] ; 944 >
-        au < manifest ; 2004 ; Shakespeare Quarterly Volume 55 [2004] ; 2557 >
-        au < manifest ; 2005 ; Shakespeare Quarterly Volume 56 [2005] ; 2841 >
-        au < manifest ; 2006 ; Shakespeare Quarterly Volume 57 [2006] ; 3052 >
-        au < manifest ; 2007 ; Shakespeare Quarterly Volume 58 [2007] ; 3313 >
-        au < manifest ; 2008 ; Shakespeare Quarterly Volume 59 [2008] ; 3694 >
-        au < manifest ; 2009 ; Shakespeare Quarterly Volume 60 [2009] ; 4239 >
-        au < manifest ; 2010 ; Shakespeare Quarterly Volume 61 [2010] ; 5878 >
-        au < manifest ; 2011 ; Shakespeare Quarterly Volume 62 [2011] ; 6985 >
-        au < manifest ; 2012 ; Shakespeare Quarterly Volume 63 [2012] ; 8185 >
-        au < manifest ; 2013 ; Shakespeare Quarterly Volume 64 [2013] ; 8934 >
-        au < manifest ; 2014 ; Shakespeare Quarterly Volume 65 [2014] ; 9909 >
-        au < manifest ; 2015 ; Shakespeare Quarterly Volume 66 [2015] ; 10516 >
-        au < manifest ; 2016 ; Shakespeare Quarterly Volume 67 [2016] ; 11354 >
+        au < testing ; 2001 ; Shakespeare Quarterly Volume 52 [2001] ; 628 >
+        au < testing ; 2002 ; Shakespeare Quarterly Volume 53 [2002] ; 629 >
+        au < testing ; 2003 ; Shakespeare Quarterly Volume 54 [2003] ; 944 >
+        au < testing ; 2004 ; Shakespeare Quarterly Volume 55 [2004] ; 2557 >
+        au < testing ; 2005 ; Shakespeare Quarterly Volume 56 [2005] ; 2841 >
+        au < testing ; 2006 ; Shakespeare Quarterly Volume 57 [2006] ; 3052 >
+        au < testing ; 2007 ; Shakespeare Quarterly Volume 58 [2007] ; 3313 >
+        au < testing ; 2008 ; Shakespeare Quarterly Volume 59 [2008] ; 3694 >
+        au < testing ; 2009 ; Shakespeare Quarterly Volume 60 [2009] ; 4239 >
+        au < testing ; 2010 ; Shakespeare Quarterly Volume 61 [2010] ; 5878 >
+        au < testing ; 2011 ; Shakespeare Quarterly Volume 62 [2011] ; 6985 >
+        au < testing ; 2012 ; Shakespeare Quarterly Volume 63 [2012] ; 8185 >
+        au < testing ; 2013 ; Shakespeare Quarterly Volume 64 [2013] ; 8934 >
+        au < testing ; 2014 ; Shakespeare Quarterly Volume 65 [2014] ; 9909 >
+        au < testing ; 2015 ; Shakespeare Quarterly Volume 66 [2015] ; 10516 >
+        au < testing ; 2016 ; Shakespeare Quarterly Volume 67 [2016] ; 11354 >
 
     }
+    
     {
     title <
       name = Sirena: poesia, arte y critica ;
@@ -2128,14 +2135,15 @@
 
       attr[journal_id] = 307
 
-        au < manifest ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2712 >
-        au < manifest ; 2006 ; Sirena: poesia, arte y critica 2006 ; 2950 >
-        au < manifest ; 2007 ; Sirena: poesia, arte y critica 2007 ; 3269 >
-        au < manifest ; 2008 ; Sirena: poesia, arte y critica 2008 ; 3695 >
-        au < manifest ; 2009 ; Sirena: poesia, arte y critica 2009 ; 4310 >
-        au < manifest ; 2010 ; Sirena: poesia, arte y critica 2010 ; 5900 >
+        au < testing ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2712 >
+        au < testing ; 2006 ; Sirena: poesia, arte y critica 2006 ; 2950 >
+        au < testing ; 2007 ; Sirena: poesia, arte y critica 2007 ; 3269 >
+        au < testing ; 2008 ; Sirena: poesia, arte y critica 2008 ; 3695 >
+        au < testing ; 2009 ; Sirena: poesia, arte y critica 2009 ; 4310 >
+        au < testing ; 2010 ; Sirena: poesia, arte y critica 2010 ; 5900 >
 
     }
+    
     {
     title <
       name = Social Research: An International Quarterly ;
@@ -2147,23 +2155,24 @@
 
       attr[journal_id] = 644
 
-        au < manifest ; 2002 ; Social Research: An International Quarterly Volume 69 [2002] ; 10208 >
-        au < manifest ; 2003 ; Social Research: An International Quarterly Volume 70 [2003] ; 10209 >
-        au < manifest ; 2004 ; Social Research: An International Quarterly Volume 71 [2004] ; 9479 >
-        au < manifest ; 2005 ; Social Research: An International Quarterly Volume 72 [2005] ; 9480 >
-        au < manifest ; 2006 ; Social Research: An International Quarterly Volume 73 [2006] ; 9481 >
-        au < manifest ; 2007 ; Social Research: An International Quarterly Volume 74 [2007] ; 9482 >
-        au < manifest ; 2008 ; Social Research: An International Quarterly Volume 75 [2008] ; 9483 >
-        au < manifest ; 2009 ; Social Research: An International Quarterly Volume 76 [2009] ; 9484 >
-        au < manifest ; 2010 ; Social Research: An International Quarterly Volume 77 [2010] ; 9486 >
-        au < manifest ; 2011 ; Social Research: An International Quarterly Volume 78 [2011] ; 9489 >
-        au < manifest ; 2012 ; Social Research: An International Quarterly Volume 79 [2012] ; 9490 >
-        au < manifest ; 2013 ; Social Research: An International Quarterly Volume 80 [2013] ; 9491 >
-        au < manifest ; 2014 ; Social Research: An International Quarterly Volume 81 [2014] ; 9904 >
-        au < manifest ; 2015 ; Social Research: An International Quarterly Volume 82 [2015] ; 10528 >
-        au < manifest ; 2016 ; Social Research: An International Quarterly Volume 83 [2016] ; 11254 >
+        au < testing ; 2002 ; Social Research: An International Quarterly Volume 69 [2002] ; 10208 >
+        au < testing ; 2003 ; Social Research: An International Quarterly Volume 70 [2003] ; 10209 >
+        au < testing ; 2004 ; Social Research: An International Quarterly Volume 71 [2004] ; 9479 >
+        au < testing ; 2005 ; Social Research: An International Quarterly Volume 72 [2005] ; 9480 >
+        au < testing ; 2006 ; Social Research: An International Quarterly Volume 73 [2006] ; 9481 >
+        au < testing ; 2007 ; Social Research: An International Quarterly Volume 74 [2007] ; 9482 >
+        au < testing ; 2008 ; Social Research: An International Quarterly Volume 75 [2008] ; 9483 >
+        au < testing ; 2009 ; Social Research: An International Quarterly Volume 76 [2009] ; 9484 >
+        au < testing ; 2010 ; Social Research: An International Quarterly Volume 77 [2010] ; 9486 >
+        au < testing ; 2011 ; Social Research: An International Quarterly Volume 78 [2011] ; 9489 >
+        au < testing ; 2012 ; Social Research: An International Quarterly Volume 79 [2012] ; 9490 >
+        au < testing ; 2013 ; Social Research: An International Quarterly Volume 80 [2013] ; 9491 >
+        au < testing ; 2014 ; Social Research: An International Quarterly Volume 81 [2014] ; 9904 >
+        au < testing ; 2015 ; Social Research: An International Quarterly Volume 82 [2015] ; 10528 >
+        au < testing ; 2016 ; Social Research: An International Quarterly Volume 83 [2016] ; 11254 >
 
     }
+    
     {
     title <
       name = South Central Review ;
